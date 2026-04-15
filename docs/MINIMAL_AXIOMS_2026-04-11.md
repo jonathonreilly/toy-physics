@@ -40,38 +40,29 @@ Retained current consequences:
   [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
 - retained gravity and topology stack as captured in the publication package
 
-## Current Bounded Support Packages Built On The Same Stack
+## Current Promoted Quantitative Package Built On The Same Stack
 
-### Renormalized `y_t` / `alpha_s`
+The current canonical promoted package is:
 
-The current canonical bounded package is:
-
-- [YT_ZERO_IMPORT_CLOSURE_NOTE.md](YT_ZERO_IMPORT_CLOSURE_NOTE.md)
-- [YT_BOUNDARY_THEOREM.md](YT_BOUNDARY_THEOREM.md)
-- [YT_EFT_BRIDGE_THEOREM.md](YT_EFT_BRIDGE_THEOREM.md)
-- [ALPHA_S_DERIVED_NOTE.md](ALPHA_S_DERIVED_NOTE.md)
-- [YT_VERTEX_POWER_DERIVATION.md](YT_VERTEX_POWER_DERIVATION.md)
-- [YT_GAUGE_CROSSOVER_THEOREM.md](YT_GAUGE_CROSSOVER_THEOREM.md)
+- [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
+- [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md)
+- [YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md)
+- [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
+- [YT_QFP_INSENSITIVITY_THEOREM.md](YT_QFP_INSENSITIVITY_THEOREM.md)
+- [HIGGS_MASS_FROM_AXIOM_NOTE.md](HIGGS_MASS_FROM_AXIOM_NOTE.md)
 
 Safe current result:
 
-- retained `v`
-- bounded `alpha_s(M_Z) = 0.1181`
-- bounded zero-input `m_t = 169.4 GeV`
-- bounded import-allowed companion `m_t = 171.0 GeV`
-
-### Higgs
-
-The current canonical bounded package is:
-
-- [HIGGS_MASS_DERIVED_NOTE.md](HIGGS_MASS_DERIVED_NOTE.md)
-- [HIGGS_MECHANISM_NOTE.md](HIGGS_MECHANISM_NOTE.md)
-- [HIGGS_FROM_LATTICE_NOTE.md](HIGGS_FROM_LATTICE_NOTE.md)
-
-Safe current result:
-
-- the Higgs mechanism is derived
-- exact `m_H` closure is not yet on the retained surface
+- retained `v = 246.28 GeV`
+- promoted `alpha_s(M_Z) = 0.1181`
+- promoted `sin^2(theta_W)(M_Z) = 0.2306`
+- promoted `1/alpha_EM(M_Z) = 127.67`
+- promoted `g_1(v) = 0.4644`
+- promoted `g_2(v) = 0.6480`
+- promoted `y_t(v) = 0.9176`
+- promoted `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
+- promoted `m_H = 119.8 GeV` (2-loop), `129.7 GeV` (full 3-loop boundary)
+- promoted vacuum stability: absolutely stable
 
 ## Mathematical Infrastructure Versus Physical Inputs
 
@@ -90,6 +81,6 @@ publication matrix and derivation / validation map control that promotion.
 
 - not a route-history document
 - not a replacement for the publication matrix
-- not a claim that DM, `y_t`, CKM, or Higgs are all closed
+- not a claim that DM or CKM are already closed
 - not permission to route reviewers through stale side notes instead of the
   canonical package

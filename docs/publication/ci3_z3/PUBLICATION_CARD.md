@@ -1,74 +1,50 @@
 # Publication Card
 
-**Status:** internal publication-planning memo  
-**Paper state:** retained theorem core, bounded companion portfolio, three live gates
+**Status:** current flagship package card
+**Paper state:** retained theorem core plus promoted quantitative prediction
+package, with bounded companions and two remaining live gates
 
 ## Retained Core
 
 - weak-field gravity from the Poisson / Newton chain
 - weak-field WEP and time dilation
-- restricted strong-field closure on the current finite-rank class
+- restricted strong-field gravity closure on the current star-supported
+  finite-rank class
+- full discrete `3+1` GR on the direct-universal project route
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`
-- electroweak hierarchy / `v = 245.080424447914 GeV`
 - retained `S^3` compactification / topology closure
-- full-framework one-generation closure
-- three-generation matter structure
+- full-framework one-generation matter closure
+- retained three-generation matter structure
 - exact `I_3 = 0`
 - exact CPT
 
-## Current Bounded EW / `y_t` / Higgs Component Card
+## Promoted Prediction Card
 
-Retained anchor:
+Canonical authority:
 
-- electroweak hierarchy / `v`
+- [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
 
-Bounded zero-input package:
-
-- `alpha_s(M_Z) = 0.1181`
-- `m_t = 169.4 GeV`
-- boundary endpoint theorem
-- EFT bridge theorem
-- vertex-power support theorem
-
-Bounded import-allowed companion:
-
-- `m_t = 171.0 GeV`
-
-Bounded Higgs package:
-
-- Higgs mechanism derived
-- exact `m_H` still open
-
-Canonical local authority stack:
-
-- [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](../../OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
-- [YT_ZERO_IMPORT_CLOSURE_NOTE.md](../../YT_ZERO_IMPORT_CLOSURE_NOTE.md)
-- [YT_BOUNDARY_THEOREM.md](../../YT_BOUNDARY_THEOREM.md)
-- [YT_EFT_BRIDGE_THEOREM.md](../../YT_EFT_BRIDGE_THEOREM.md)
-- [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md)
-- [YT_VERTEX_POWER_DERIVATION.md](../../YT_VERTEX_POWER_DERIVATION.md)
-- [YT_GAUGE_CROSSOVER_THEOREM.md](../../YT_GAUGE_CROSSOVER_THEOREM.md)
-- [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md)
-- [HIGGS_MECHANISM_NOTE.md](../../HIGGS_MECHANISM_NOTE.md)
-- [HIGGS_FROM_LATTICE_NOTE.md](../../HIGGS_FROM_LATTICE_NOTE.md)
-
-## Other Bounded Portfolio Rows
-
-- DM ratio `R = 5.48` vs `5.47`
-- CKM magnitude package
-- cosmology companions
-- sharp companion predictions
+| Observable | Predicted | Observed | Deviation | Status |
+|---|---:|---:|---:|---|
+| `v` | `246.28 GeV` | `246.22 GeV` | `+0.03%` | DERIVED |
+| `alpha_s(M_Z)` | `0.1181` | `0.1179` | `+0.14%` | DERIVED |
+| `sin^2(theta_W)` | `0.2306` | `0.2312` | `-0.26%` | DERIVED |
+| `1/alpha_EM` | `127.67` | `127.95` | `-0.22%` | DERIVED |
+| `g_1(v)` | `0.4644` | `0.4640` | `+0.08%` | DERIVED |
+| `g_2(v)` | `0.6480` | `0.6463` | `+0.26%` | DERIVED |
+| `y_t(v)` | `0.9176` | `~0.917` | `+0.06%` | DERIVED |
+| `m_t(pole)` | `172.57-173.10 GeV` | `172.69 GeV` | `within 0.24%` | DERIVED |
+| `m_H` | `119.8 GeV` (2-loop), `129.7 GeV` (full 3-loop) | `125.25 GeV` | `bracket / +3.5% boundary` | DERIVED |
+| Vacuum | `Absolutely stable` | `metastable in SM` | `qualitative prediction` | DERIVED |
 
 ## Remaining Live Gates
 
 1. DM relic mapping
-2. renormalized `y_t`
-3. CKM / quantitative flavor closure
+2. CKM / quantitative flavor closure
 
 ## Rule
 
-Every component listed on this card must also be visible in the matrix,
-ledger, atlas, and results index. The card is a summary, not a parallel
-authority surface.
+Every component on this card must also appear in the matrix, claims table,
+quantitative summary, derivation / validation map, atlas, and results index.

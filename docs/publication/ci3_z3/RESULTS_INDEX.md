@@ -36,17 +36,16 @@ Use alongside:
 | exact `I_3 = 0` | [I3_ZERO_EXACT_THEOREM_NOTE.md](../../I3_ZERO_EXACT_THEOREM_NOTE.md) | [frontier_born_rule_derived.py](../../../scripts/frontier_born_rule_derived.py) |
 | exact CPT | [CPT_EXACT_NOTE.md](../../CPT_EXACT_NOTE.md) | [frontier_cpt_exact.py](../../../scripts/frontier_cpt_exact.py) |
 
-## Bounded EW / `y_t` / Higgs Component Package
+## Promoted YT / EW / Higgs Component Package
 
 | Component | Note | Runner |
 |---|---|---|
-| retained hierarchy anchor `v` | [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](../../OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md) | [frontier_hierarchy_observable_principle_from_axiom.py](../../../scripts/frontier_hierarchy_observable_principle_from_axiom.py) |
-| zero-input `y_t` authority | [YT_ZERO_IMPORT_CLOSURE_NOTE.md](../../YT_ZERO_IMPORT_CLOSURE_NOTE.md) | [frontier_yt_2loop_chain.py](../../../scripts/frontier_yt_2loop_chain.py) |
-| `y_t` endpoint theorem | [YT_BOUNDARY_THEOREM.md](../../YT_BOUNDARY_THEOREM.md) | [frontier_yt_boundary_consistency.py](../../../scripts/frontier_yt_boundary_consistency.py) |
-| `y_t` EFT bridge theorem | [YT_EFT_BRIDGE_THEOREM.md](../../YT_EFT_BRIDGE_THEOREM.md) | [frontier_yt_eft_bridge.py](../../../scripts/frontier_yt_eft_bridge.py) |
-| zero-input `alpha_s(M_Z)` support | [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md), [YT_VERTEX_POWER_DERIVATION.md](../../YT_VERTEX_POWER_DERIVATION.md) | [frontier_alpha_s_determination.py](../../../scripts/frontier_alpha_s_determination.py), [frontier_vertex_power.py](../../../scripts/frontier_vertex_power.py) |
-| import-allowed top-mass companion | [YT_GAUGE_CROSSOVER_THEOREM.md](../../YT_GAUGE_CROSSOVER_THEOREM.md) | [frontier_yt_gauge_crossover_theorem.py](../../../scripts/frontier_yt_gauge_crossover_theorem.py) |
-| Higgs bounded authority | [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md), [HIGGS_MECHANISM_NOTE.md](../../HIGGS_MECHANISM_NOTE.md), [HIGGS_FROM_LATTICE_NOTE.md](../../HIGGS_FROM_LATTICE_NOTE.md) | [frontier_higgs_mass_derived.py](../../../scripts/frontier_higgs_mass_derived.py) |
+| complete prediction chain | [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md) | [frontier_complete_prediction_chain.py](../../../scripts/frontier_complete_prediction_chain.py) |
+| color-factor support `R_conn = 8/9` | [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md) | [frontier_color_projection_mc.py](../../../scripts/frontier_color_projection_mc.py) |
+| EW normalization package | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md) | [frontier_complete_prediction_chain.py](../../../scripts/frontier_complete_prediction_chain.py), [frontier_yt_ew_coupling_derivation.py](../../../scripts/frontier_yt_ew_coupling_derivation.py) |
+| Yukawa / top package | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) | [frontier_yt_color_projection_correction.py](../../../scripts/frontier_yt_color_projection_correction.py) |
+| QFP robustness support | [YT_QFP_INSENSITIVITY_THEOREM.md](../../YT_QFP_INSENSITIVITY_THEOREM.md) | [frontier_yt_qfp_insensitivity.py](../../../scripts/frontier_yt_qfp_insensitivity.py) |
+| Higgs / vacuum package | [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md), [HIGGS_MASS_FROM_AXIOM_NOTE.md](../../HIGGS_MASS_FROM_AXIOM_NOTE.md) | [frontier_complete_prediction_chain.py](../../../scripts/frontier_complete_prediction_chain.py), [frontier_higgs_buttazzo_calibration.py](../../../scripts/frontier_higgs_buttazzo_calibration.py) |
 
 ## Other Bounded Companion Families
 

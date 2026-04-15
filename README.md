@@ -46,40 +46,34 @@ it is not the default review surface.
 - exact `I_3 = 0`
 - exact CPT on the free staggered lattice
 
-## Current Bounded YT / EW / Higgs Package
+## Promoted YT / EW / Higgs Package
 
-The current canonical bounded support stack is:
+The current canonical quantitative authority stack is:
 
-- retained EW hierarchy authority:
-  [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
-- bounded zero-import `y_t` authority:
-  [YT_ZERO_IMPORT_CLOSURE_NOTE.md](docs/YT_ZERO_IMPORT_CLOSURE_NOTE.md)
-- bounded zero-import support theorems:
-  [YT_BOUNDARY_THEOREM.md](docs/YT_BOUNDARY_THEOREM.md),
-  [YT_EFT_BRIDGE_THEOREM.md](docs/YT_EFT_BRIDGE_THEOREM.md),
-  [ALPHA_S_DERIVED_NOTE.md](docs/ALPHA_S_DERIVED_NOTE.md),
-  [YT_VERTEX_POWER_DERIVATION.md](docs/YT_VERTEX_POWER_DERIVATION.md)
-- import-allowed bounded companion:
-  [YT_GAUGE_CROSSOVER_THEOREM.md](docs/YT_GAUGE_CROSSOVER_THEOREM.md)
-- bounded Higgs support stack:
-  [HIGGS_MASS_DERIVED_NOTE.md](docs/HIGGS_MASS_DERIVED_NOTE.md),
-  [HIGGS_MECHANISM_NOTE.md](docs/HIGGS_MECHANISM_NOTE.md),
-  [HIGGS_FROM_LATTICE_NOTE.md](docs/HIGGS_FROM_LATTICE_NOTE.md)
+- [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](docs/COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
+- [RCONN_DERIVED_NOTE.md](docs/RCONN_DERIVED_NOTE.md)
+- [YT_EW_COLOR_PROJECTION_THEOREM.md](docs/YT_EW_COLOR_PROJECTION_THEOREM.md)
+- [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](docs/YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
+- [YT_QFP_INSENSITIVITY_THEOREM.md](docs/YT_QFP_INSENSITIVITY_THEOREM.md)
+- [HIGGS_MASS_FROM_AXIOM_NOTE.md](docs/HIGGS_MASS_FROM_AXIOM_NOTE.md)
 
-That package currently supports the following safe statements:
+That package now supports the following promoted statements:
 
-- `v = 245.080424447914 GeV` is retained on the exact minimal hierarchy block
-- the current strongest zero-input low-energy route gives
-  `alpha_s(M_Z) = 0.1181`
-- the current strongest zero-input top-mass route gives `m_t = 169.4 GeV`
-- the numerically stronger import-allowed companion gives `m_t = 171.0 GeV`
-- the Higgs mechanism is derived, but exact `m_H` closure remains open
+- `v = 246.28 GeV`
+- `alpha_s(M_Z) = 0.1181`
+- `sin^2(theta_W)(M_Z) = 0.2306`
+- `1/alpha_EM(M_Z) = 127.67`
+- `g_1(v) = 0.4644`
+- `g_2(v) = 0.6480`
+- `y_t(v) = 0.9176`
+- `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
+- `m_H = 119.8 GeV` (2-loop), `129.7 GeV` (full 3-loop boundary)
+- vacuum stability: absolutely stable
 
 ## Live Gates
 
 1. DM relic mapping
-2. renormalized `y_t` matching
-3. CKM / quantitative flavor closure
+2. CKM / quantitative flavor closure
 
 ## Review Rule
 

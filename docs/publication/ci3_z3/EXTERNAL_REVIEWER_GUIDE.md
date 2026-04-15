@@ -37,28 +37,29 @@ The current package is:
 - exact `I_3 = 0`
 - exact CPT
 
-## Current Bounded EW / `y_t` / Higgs Package
+## Promoted YT / EW / Higgs Package
 
-Review this stack as one component package:
+Review this stack as one promoted quantitative package:
 
-1. [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](../../OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
-2. [YT_ZERO_IMPORT_CLOSURE_NOTE.md](../../YT_ZERO_IMPORT_CLOSURE_NOTE.md)
-3. [YT_BOUNDARY_THEOREM.md](../../YT_BOUNDARY_THEOREM.md)
-4. [YT_EFT_BRIDGE_THEOREM.md](../../YT_EFT_BRIDGE_THEOREM.md)
-5. [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md)
-6. [YT_VERTEX_POWER_DERIVATION.md](../../YT_VERTEX_POWER_DERIVATION.md)
-7. [YT_GAUGE_CROSSOVER_THEOREM.md](../../YT_GAUGE_CROSSOVER_THEOREM.md)
-8. [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md)
-9. [HIGGS_MECHANISM_NOTE.md](../../HIGGS_MECHANISM_NOTE.md)
-10. [HIGGS_FROM_LATTICE_NOTE.md](../../HIGGS_FROM_LATTICE_NOTE.md)
+1. [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
+2. [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md)
+3. [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md)
+4. [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
+5. [YT_QFP_INSENSITIVITY_THEOREM.md](../../YT_QFP_INSENSITIVITY_THEOREM.md)
+6. [HIGGS_MASS_FROM_AXIOM_NOTE.md](../../HIGGS_MASS_FROM_AXIOM_NOTE.md)
 
-Current safe statements from that stack:
+Current promoted statements from that stack:
 
-- retained `v`
-- bounded zero-input `alpha_s(M_Z) = 0.1181`
-- bounded zero-input `m_t = 169.4 GeV`
-- bounded import-allowed `m_t = 171.0 GeV`
-- Higgs mechanism derived; exact mass still bounded/open
+- `v = 246.28 GeV`
+- `alpha_s(M_Z) = 0.1181`
+- `sin^2(theta_W)(M_Z) = 0.2306`
+- `1/alpha_EM(M_Z) = 127.67`
+- `g_1(v) = 0.4644`
+- `g_2(v) = 0.6480`
+- `y_t(v) = 0.9176`
+- `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
+- `m_H = 119.8 GeV` (2-loop), `129.7 GeV` (full 3-loop boundary)
+- vacuum stability: absolutely stable
 
 ## Other Bounded Families
 
@@ -70,10 +71,7 @@ Current safe statements from that stack:
 ## What Is Still Open
 
 1. DM relic mapping
-2. renormalized `y_t` matching
-3. CKM / quantitative flavor closure
-
-Exact Higgs-mass closure also remains outside the retained flagship surface.
+2. CKM / quantitative flavor closure
 
 ## Read The Package In Order
 

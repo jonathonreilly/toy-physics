@@ -9,51 +9,48 @@ Use this package instead of browsing raw repo chronology.
 
 1. [External reviewer guide](./EXTERNAL_REVIEWER_GUIDE.md)
 2. [Publication state](../../CI3_Z3_PUBLICATION_STATE_2026-04-12.md)
-3. [Publication matrix](./PUBLICATION_MATRIX.md)
-4. [Quantitative summary table](./QUANTITATIVE_SUMMARY_TABLE.md)
-5. [Claims table](./CLAIMS_TABLE.md)
-6. [Derivation atlas](./DERIVATION_ATLAS.md)
-7. [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
-8. [Full claim ledger](./FULL_CLAIM_LEDGER.md)
-9. [Frozen-out registry](./FROZEN_OUT_REGISTRY.md)
-10. [Results index](./RESULTS_INDEX.md)
+3. [Publication card](./PUBLICATION_CARD.md)
+4. [Publication matrix](./PUBLICATION_MATRIX.md)
+5. [Quantitative summary table](./QUANTITATIVE_SUMMARY_TABLE.md)
+6. [Claims table](./CLAIMS_TABLE.md)
+7. [Derivation atlas](./DERIVATION_ATLAS.md)
+8. [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
+9. [Full claim ledger](./FULL_CLAIM_LEDGER.md)
+10. [Frozen-out registry](./FROZEN_OUT_REGISTRY.md)
+11. [Results index](./RESULTS_INDEX.md)
 
 ## Current Package Shape
 
 The package has four layers:
 
 1. retained theorem core
-2. bounded observation-facing portfolio
-3. three live flagship gates
-4. frozen-out but documented families
+2. promoted YT / EW / Higgs quantitative package
+3. bounded observation-facing portfolio
+4. two remaining live gates plus frozen-out route history
 
-## Current Bounded EW / `y_t` / Higgs Component Package
+## Promoted YT / EW / Higgs Package
 
 The current canonical component stack is:
 
-- retained EW hierarchy authority:
-  [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](../../OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
-- bounded zero-input `y_t` authority:
-  [YT_ZERO_IMPORT_CLOSURE_NOTE.md](../../YT_ZERO_IMPORT_CLOSURE_NOTE.md)
-- bounded support theorems:
-  [YT_BOUNDARY_THEOREM.md](../../YT_BOUNDARY_THEOREM.md),
-  [YT_EFT_BRIDGE_THEOREM.md](../../YT_EFT_BRIDGE_THEOREM.md),
-  [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md),
-  [YT_VERTEX_POWER_DERIVATION.md](../../YT_VERTEX_POWER_DERIVATION.md)
-- import-allowed bounded companion:
-  [YT_GAUGE_CROSSOVER_THEOREM.md](../../YT_GAUGE_CROSSOVER_THEOREM.md)
-- bounded Higgs support stack:
-  [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md),
-  [HIGGS_MECHANISM_NOTE.md](../../HIGGS_MECHANISM_NOTE.md),
-  [HIGGS_FROM_LATTICE_NOTE.md](../../HIGGS_FROM_LATTICE_NOTE.md)
+- [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
+- [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md)
+- [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md)
+- [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
+- [YT_QFP_INSENSITIVITY_THEOREM.md](../../YT_QFP_INSENSITIVITY_THEOREM.md)
+- [HIGGS_MASS_FROM_AXIOM_NOTE.md](../../HIGGS_MASS_FROM_AXIOM_NOTE.md)
 
-Current safe package-level statements:
+Current promoted package-level statements:
 
-- retained `v = 245.080424447914 GeV`
-- bounded zero-input `alpha_s(M_Z) = 0.1181`
-- bounded zero-input `m_t = 169.4 GeV`
-- bounded import-allowed `m_t = 171.0 GeV`
-- Higgs mechanism derived; exact `m_H` still open
+- `v = 246.28 GeV`
+- `alpha_s(M_Z) = 0.1181`
+- `sin^2(theta_W)(M_Z) = 0.2306`
+- `1/alpha_EM(M_Z) = 127.67`
+- `g_1(v) = 0.4644`
+- `g_2(v) = 0.6480`
+- `y_t(v) = 0.9176`
+- `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
+- `m_H = 119.8 GeV` (2-loop), `129.7 GeV` (full 3-loop boundary)
+- vacuum stability: absolutely stable
 
 ## Package Rules
 

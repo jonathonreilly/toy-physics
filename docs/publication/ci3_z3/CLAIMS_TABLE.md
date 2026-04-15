@@ -55,6 +55,16 @@ pinned numerical evaluation on the current `u_0` / plaquette surface.
 | exact CPT on the free staggered lattice | retained exact companion | main text or Extended Data | [CPT_EXACT_NOTE.md](../../CPT_EXACT_NOTE.md) | [frontier_cpt_exact.py](../../../scripts/frontier_cpt_exact.py) (even periodic lattices only) |
 | single-axiom Hilbert/locality reduction | SI framing only | SI / framing box | [SINGLE_AXIOM_HILBERT_NOTE.md](../../SINGLE_AXIOM_HILBERT_NOTE.md), [SINGLE_AXIOM_INFORMATION_NOTE.md](../../SINGLE_AXIOM_INFORMATION_NOTE.md) | [frontier_single_axiom_hilbert.py](../../../scripts/frontier_single_axiom_hilbert.py), [frontier_single_axiom_information.py](../../../scripts/frontier_single_axiom_information.py) |
 
+## Promoted quantitative package
+
+| Claim | Status | Placement | Authority | Primary runner |
+|---|---|---|---|---|
+| complete YT / EW / Higgs / vacuum chain from one axiom plus one computed plaquette | promoted quantitative package | main text / quantitative section | [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md) | [frontier_complete_prediction_chain.py](../../../scripts/frontier_complete_prediction_chain.py), [frontier_yt_zero_import_chain.py](../../../scripts/frontier_yt_zero_import_chain.py), [frontier_yt_color_projection_correction.py](../../../scripts/frontier_yt_color_projection_correction.py), [frontier_higgs_buttazzo_calibration.py](../../../scripts/frontier_higgs_buttazzo_calibration.py) |
+| `v = 246.28 GeV`, `alpha_s(M_Z) = 0.1181`, `sin^2(theta_W) = 0.2306`, `1/alpha_EM = 127.67` | promoted quantitative package | quantitative table | [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md) | [frontier_complete_prediction_chain.py](../../../scripts/frontier_complete_prediction_chain.py), [frontier_yt_zero_import_chain.py](../../../scripts/frontier_yt_zero_import_chain.py) |
+| `g_1(v) = 0.4644`, `g_2(v) = 0.6480` | promoted quantitative package | quantitative table / SI | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md) | [frontier_complete_prediction_chain.py](../../../scripts/frontier_complete_prediction_chain.py), [frontier_yt_ew_coupling_derivation.py](../../../scripts/frontier_yt_ew_coupling_derivation.py) |
+| `y_t(v) = 0.9176`, `m_t(pole) = 172.57-173.10 GeV` | promoted quantitative package | quantitative table | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) | [frontier_yt_color_projection_correction.py](../../../scripts/frontier_yt_color_projection_correction.py) |
+| `m_H = 119.8 GeV` (2-loop), `129.7 GeV` (full 3-loop boundary), absolute vacuum stability | promoted quantitative package | quantitative table / discussion | [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md), [HIGGS_MASS_FROM_AXIOM_NOTE.md](../../HIGGS_MASS_FROM_AXIOM_NOTE.md) | [frontier_complete_prediction_chain.py](../../../scripts/frontier_complete_prediction_chain.py), [frontier_higgs_buttazzo_calibration.py](../../../scripts/frontier_higgs_buttazzo_calibration.py) |
+
 ## Bounded companions
 
 These lanes are intentionally kept out of the retained publication surface.
@@ -66,10 +76,8 @@ cleanly or closed.
 | weak-field GR-signature companions beyond Newton/Poisson/WEP/time-dilation | bounded | arXiv / SI only | [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md) `F06` |
 | continuum / unrestricted GR beyond the project's discrete `3+1` route, and comparison to more canonical external continuum weak/measure formulations beyond the chosen external smooth FE/Galerkin realization of the exact discrete project-native PL weak Gaussian Sobolev completion | bounded | arXiv / SI only | [UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md](../../UNIVERSAL_GR_CURVATURE_LOCALIZATION_BLOCKER_NOTE.md), [UNIVERSAL_QG_CONTINUUM_BRIDGE_REDUCTION_NOTE.md](../../UNIVERSAL_QG_CONTINUUM_BRIDGE_REDUCTION_NOTE.md) |
 | direct lattice DM contact enhancement and bounded relic chain | bounded | arXiv / SI only | [DM_RELIC_PAPER_NOTE.md](../../DM_RELIC_PAPER_NOTE.md), [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md) `F01` |
-| renormalized `y_t` / `\alpha_s` component package | bounded | arXiv / SI only | [YT_ZERO_IMPORT_CLOSURE_NOTE.md](../../YT_ZERO_IMPORT_CLOSURE_NOTE.md), [YT_BOUNDARY_THEOREM.md](../../YT_BOUNDARY_THEOREM.md), [YT_EFT_BRIDGE_THEOREM.md](../../YT_EFT_BRIDGE_THEOREM.md), [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md), [YT_VERTEX_POWER_DERIVATION.md](../../YT_VERTEX_POWER_DERIVATION.md), [YT_GAUGE_CROSSOVER_THEOREM.md](../../YT_GAUGE_CROSSOVER_THEOREM.md) |
 | CKM / Higgs `Z_3` route | bounded | arXiv / SI only | [CABIBBO_BOUND_NOTE.md](../../CABIBBO_BOUND_NOTE.md), [CKM_MASS_BASIS_NNI_NOTE.md](../../CKM_MASS_BASIS_NNI_NOTE.md), [JARLSKOG_PHASE_BOUND_NOTE.md](../../JARLSKOG_PHASE_BOUND_NOTE.md) |
 | cosmology windows (`w=-1`, graviton mass, `Omega_Lambda`, `n_s`) | bounded / conditional | arXiv companion only | [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md), [PRIMORDIAL_SPECTRUM_NOTE.md](../../PRIMORDIAL_SPECTRUM_NOTE.md), [DARK_ENERGY_EOS_NOTE.md](../../DARK_ENERGY_EOS_NOTE.md), [GRAVITON_MASS_DERIVED_NOTE.md](../../GRAVITON_MASS_DERIVED_NOTE.md) |
-| Higgs mechanism / bounded Coleman-Weinberg mass lane | bounded | arXiv companion only | [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md), [HIGGS_MECHANISM_NOTE.md](../../HIGGS_MECHANISM_NOTE.md), [HIGGS_FROM_LATTICE_NOTE.md](../../HIGGS_FROM_LATTICE_NOTE.md) |
 | proton lifetime | bounded sharp prediction | arXiv companion only | [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md) |
 | Lorentz-violation cubic fingerprint | bounded sharp prediction | arXiv companion only | [LORENTZ_VIOLATION_DERIVED_NOTE.md](../../LORENTZ_VIOLATION_DERIVED_NOTE.md) |
 | BH entropy / RT ratio | bounded companion | arXiv companion only | [BH_ENTROPY_DERIVED_NOTE.md](../../BH_ENTROPY_DERIVED_NOTE.md) |
@@ -84,8 +92,7 @@ family is documented in [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md).
 ## Open paper gates
 
 1. DM relic mapping
-2. renormalized `y_t` matching
-3. CKM / quantitative flavor closure
+2. CKM / quantitative flavor closure
 
 ## Packaging rule
 

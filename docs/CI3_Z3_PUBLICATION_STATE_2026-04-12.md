@@ -114,24 +114,26 @@ current publication surface and must stay visible through the matrix and
 ledger:
 
 - DM ratio `R = 5.48` vs `5.47`
-- zero-import `\alpha_s(M_Z) = 0.1181`
-- zero-import `m_t = 169.4 GeV` on the current 2-loop bounded route
-- best import-allowed `m_t = 171.0 GeV`
+- promoted `\alpha_s(M_Z) = 0.1181`
+- promoted EW normalization package: `sin^2(theta_W) = 0.2306`,
+  `1/\alpha_{EM} = 127.67`, `g_1(v) = 0.4644`, `g_2(v) = 0.6480`
+- promoted `y_t(v) = 0.9176`
+- promoted `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
+- promoted Higgs / vacuum package: `m_H = 119.8 GeV` (2-loop),
+  `129.7 GeV` (full 3-loop boundary), absolute vacuum stability
 - CKM magnitude package with strong `|V_us|`, `|V_cb|`, `|V_ub|`
 - Cabibbo and partial Jarlskog companions
 - `\Omega_\Lambda`, `n_s`, `w = -1`, and `\Lambda` cosmology companions
 - Higgs, BH-entropy, proton-lifetime, Lorentz, and monopole companions
 
-The current bounded EW / `y_t` / Higgs component stack on `main` is:
+The current promoted YT / EW / Higgs component stack on `main` is:
 
-- [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
-- [YT_ZERO_IMPORT_CLOSURE_NOTE.md](YT_ZERO_IMPORT_CLOSURE_NOTE.md)
-- [YT_BOUNDARY_THEOREM.md](YT_BOUNDARY_THEOREM.md)
-- [YT_EFT_BRIDGE_THEOREM.md](YT_EFT_BRIDGE_THEOREM.md)
-- [ALPHA_S_DERIVED_NOTE.md](ALPHA_S_DERIVED_NOTE.md)
-- [YT_VERTEX_POWER_DERIVATION.md](YT_VERTEX_POWER_DERIVATION.md)
-- [YT_GAUGE_CROSSOVER_THEOREM.md](YT_GAUGE_CROSSOVER_THEOREM.md)
-- [HIGGS_MASS_DERIVED_NOTE.md](HIGGS_MASS_DERIVED_NOTE.md)
+- [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
+- [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md)
+- [YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md)
+- [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
+- [YT_QFP_INSENSITIVITY_THEOREM.md](YT_QFP_INSENSITIVITY_THEOREM.md)
+- [HIGGS_MASS_FROM_AXIOM_NOTE.md](HIGGS_MASS_FROM_AXIOM_NOTE.md)
 
 ## Exact supporting theorems now safe to carry
 
@@ -171,8 +173,7 @@ surface:
 The remaining live paper gates are:
 
 1. DM relic mapping
-2. renormalized `y_t` matching
-3. CKM / quantitative flavor closure
+2. CKM / quantitative flavor closure
 
 Those are the only live flagship gates. Everything else in the package should
 now be legible as either retained, bounded, or explicitly frozen-out.
@@ -181,8 +182,7 @@ Recent Claude work and direct Codex review materially narrowed the attack
 surface. The audit bar now remains:
 
 - DM relic mapping: still bounded even after Stosszahlansatz / Friedmann tightening
-- renormalized `y_t`: still bounded even after the coupling-map theorem and
-  the 2-loop zero-import chain
+- renormalized `y_t`: promoted on the complete prediction chain
 - CKM: still bounded even after NNI / coefficient / `c_23` work
 
 ## Honest bounded lanes
@@ -204,7 +204,8 @@ section, but they are not yet retained closure:
 - CKM/Higgs `Z_3` selection arguments
 - gauge-coupling normalization notes
 - cosmology companions such as `w = -1`, graviton mass, `Omega_Lambda`, `n_s`
-- Higgs mass / Coleman-Weinberg notes (`m_H` still bounded even though `v` is now derived)
+- older Higgs mass / Coleman-Weinberg route notes now superseded by the
+  complete prediction chain
 - proton lifetime, Lorentz-violation, BH-entropy, gravitational-decoherence,
   magnetic-monopole, and GW-echo companion predictions
 
@@ -214,10 +215,10 @@ The matrix and registry now explicitly track the major families that are not
 part of the retained flagship core:
 
 - DM quantitative companion portfolio
-- `y_t` / `\alpha_s` quantitative companion portfolio
+- superseded YT / Higgs route-history stack
 - CKM / flavor quantitative companion portfolio
 - cosmology companion portfolio
-- Higgs and mass-spectrum portfolio
+- sharp companion predictions
 - gravity companions beyond retained weak-field plus restricted strong-field package
 - sharp companion predictions
 - branch-local inventories and stale strategy docs
@@ -236,7 +237,8 @@ matrix or registry rather than in branch-local notes only.
 The full claim ledger now also tracks the overnight companion claims that are
 scientifically relevant but not part of the flagship backbone:
 
-- electroweak hierarchy / `v` closure together with the still-bounded Higgs-mass lane
+- electroweak hierarchy / `v` closure together with the promoted YT / EW /
+  Higgs quantitative package
 - proton lifetime
 - Lorentz-violation cubic fingerprint
 - BH entropy / RT ratio

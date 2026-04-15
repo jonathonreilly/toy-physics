@@ -108,13 +108,13 @@ external reviewer will ask about them whether or not they are retained.
 | Cosmological constant `\Lambda` | bounded/conditional | depends on retained topology plus additional cosmology identification | [COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md](../../COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md) | matrix row `Cosmological constant \`\Lambda\``, `F04` |
 | graviton mass `m_g` | bounded/conditional | sharp conditional prediction, but still depends on retained `S^3` plus observed `H_0` | [GRAVITON_MASS_DERIVED_NOTE.md](../../GRAVITON_MASS_DERIVED_NOTE.md) | matrix row `graviton mass \`m_g\``, `F04` |
 
-### `y_t` / `\alpha_s` portfolio
+### Promoted YT / EW / Higgs package
 
 | Quantity / lane | Current decision | Why not promoted | Primary authority | Matrix / freeze reference |
 |---|---|---|---|---|
-| `\alpha_s(M_Z)` zero-import route | bounded | numerically strong, but the package still keeps the low-energy transfer inside the open `y_t` lane; the operator-counting and coupling-map support are captured separately inside the component stack | [YT_ZERO_IMPORT_CLOSURE_NOTE.md](../../YT_ZERO_IMPORT_CLOSURE_NOTE.md), [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md), [YT_VERTEX_POWER_DERIVATION.md](../../YT_VERTEX_POWER_DERIVATION.md) | matrix row `\alpha_s(M_Z) zero-import route`, `F02` |
-| top mass `m_t` zero-import route | bounded | the zero-input route is materially stronger, but the package still treats the endpoint theorem and EFT bridge as bounded support on one open lane rather than as final closure | [YT_ZERO_IMPORT_CLOSURE_NOTE.md](../../YT_ZERO_IMPORT_CLOSURE_NOTE.md), [YT_BOUNDARY_THEOREM.md](../../YT_BOUNDARY_THEOREM.md), [YT_EFT_BRIDGE_THEOREM.md](../../YT_EFT_BRIDGE_THEOREM.md) | matrix row `top mass \`m_t\` zero-import route`, `F02` |
-| top mass `m_t` import-allowed route | bounded | closer numerically, but still depends on imported matching coefficients | [YT_GAUGE_CROSSOVER_THEOREM.md](../../YT_GAUGE_CROSSOVER_THEOREM.md) | matrix row `top mass \`m_t\` import-allowed route`, `F02` |
+| complete prediction chain | promoted | one canonical quantitative chain now replaces the older bounded stack | [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md) | matrix row `complete prediction chain`, n/a |
+| EW normalization package | promoted | now promoted with the complete chain rather than left as a bounded component stack | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md) | matrix row `EW normalization package`, n/a |
+| Yukawa / top package | promoted | `y_t` and `m_t` are now carried as promoted quantitative rows | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) | matrix row `Yukawa / top package`, n/a |
 
 ### Flavor / CKM portfolio
 
@@ -128,7 +128,7 @@ external reviewer will ask about them whether or not they are retained.
 
 | Quantity / lane | Current decision | Why not promoted | Primary authority | Matrix / freeze reference |
 |---|---|---|---|---|
-| Higgs mass `m_H` | open/bounded | the Higgs mechanism is derived and structurally natural, but the exact mass package is still not closed and still depends on the accepted `y_t` route | [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md), [HIGGS_MECHANISM_NOTE.md](../../HIGGS_MECHANISM_NOTE.md), [HIGGS_FROM_LATTICE_NOTE.md](../../HIGGS_FROM_LATTICE_NOTE.md) | matrix row `Higgs mass \`m_H\``, `F05` |
+| Higgs / vacuum package | promoted quantitative package | now carried by the complete prediction chain and auxiliary Higgs note rather than a bounded Higgs lane | [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md), [HIGGS_MASS_FROM_AXIOM_NOTE.md](../../HIGGS_MASS_FROM_AXIOM_NOTE.md) | matrix row `Higgs / vacuum package`, n/a |
 | Bekenstein-Hawking entropy | bounded companion | useful companion signal, not part of flagship theorem spine | [BH_ENTROPY_DERIVED_NOTE.md](../../BH_ENTROPY_DERIVED_NOTE.md) | matrix row `Bekenstein-Hawking entropy`, `F07` |
 | gravitational decoherence | bounded companion | concrete BMV-class benchmark prediction, but still companion-only and unmeasured | [GRAV_DECOHERENCE_DERIVED_NOTE.md](../../GRAV_DECOHERENCE_DERIVED_NOTE.md) | matrix row `gravitational decoherence`, `F07` |
 | Proton lifetime | bounded sharp prediction | later companion or appendix material, not flagship core | [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md) | matrix row `Proton lifetime`, `F07` |
@@ -144,7 +144,6 @@ These rows correspond to Section C of
 | Gate | Current best read | Why still open | Main authority |
 |---|---|---|---|
 | DM relic mapping | structural ratio is strong, full relic bridge still bounded | graph-to-relic transport and normalization closure still missing | [DM_RELIC_PAPER_NOTE.md](../../DM_RELIC_PAPER_NOTE.md), [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md) |
-| Renormalized `y_t` matching | zero-import 2-loop route plus import-allowed crossover route, with explicit support theorems and bounded Higgs dependency | the lane is materially narrower, but the package still keeps the endpoint theorem, EFT bridge, zero-input `alpha_s`, import-allowed crossover, and Higgs lane as one open component family rather than as a retained closure | [YT_ZERO_IMPORT_CLOSURE_NOTE.md](../../YT_ZERO_IMPORT_CLOSURE_NOTE.md), [YT_BOUNDARY_THEOREM.md](../../YT_BOUNDARY_THEOREM.md), [YT_EFT_BRIDGE_THEOREM.md](../../YT_EFT_BRIDGE_THEOREM.md), [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md), [YT_VERTEX_POWER_DERIVATION.md](../../YT_VERTEX_POWER_DERIVATION.md), [YT_GAUGE_CROSSOVER_THEOREM.md](../../YT_GAUGE_CROSSOVER_THEOREM.md), [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md), [HIGGS_MECHANISM_NOTE.md](../../HIGGS_MECHANISM_NOTE.md), [HIGGS_FROM_LATTICE_NOTE.md](../../HIGGS_FROM_LATTICE_NOTE.md) |
 | CKM / quantitative flavor | some bounded matches are strong | coefficient and phase closure still absent | [CKM_MASS_BASIS_NNI_NOTE.md](../../CKM_MASS_BASIS_NNI_NOTE.md), [JARLSKOG_PHASE_BOUND_NOTE.md](../../JARLSKOG_PHASE_BOUND_NOTE.md) |
 
 ## 5. Frozen-out families aligned to the matrix
@@ -156,10 +155,9 @@ These rows correspond to Section D of
 | Frozen family | Current decision | Why frozen out | Registry ref |
 |---|---|---|---|
 | DM quantitative companion portfolio | frozen-out of flagship core | bounded relic bridge even though several numbers are strong | `F01` |
-| `y_t` / `\alpha_s` quantitative companion portfolio | frozen-out of flagship core | still one of the three live gates | `F02` |
 | CKM / flavor quantitative portfolio | frozen-out of flagship core | still one of the three live gates | `F03` |
 | cosmology companion portfolio | frozen-out of flagship core | conditional/bounded companion layer | `F04` |
-| Higgs and mass-spectrum portfolio | frozen-out of flagship core | not closed even though `v` is now retained | `F05` |
+| superseded YT / Higgs route-history stack | frozen-out as authority | useful for audit, unsafe as publication authority after promotion | `F05` |
 | continuum / unrestricted GR beyond the project's discrete `3+1` route | frozen-out of flagship core | the discrete route is promoted, the chosen external smooth FE/Galerkin weak/measure realization is also promoted on the QG side, but stronger continuum/canonical interpretation beyond that route remains a separate theorem question | `F06` |
 | sharp companion predictions | frozen-out of flagship core | scientifically useful, but companion-paper or appendix material | `F07` |
 | branch-local inventories and stale strategy docs | frozen-out as authority | useful for capture, unsafe as publication authority | `F08` |

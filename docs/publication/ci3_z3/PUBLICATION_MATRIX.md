@@ -27,7 +27,8 @@ Use this file together with:
 | Local package surface | Main contribution to publication package | Capture status |
 |---|---|---|
 | retained local authority notes | current theorem core and retained manuscript-facing rows | fully captured |
-| bounded local authority notes | current EW / `y_t` / Higgs, DM, CKM, cosmology, and sharp companion rows | captured through bounded or frozen-out rows |
+| promoted quantitative authority notes | current YT / EW / Higgs / vacuum package | fully captured |
+| bounded local authority notes | DM, CKM, cosmology, and sharp companion rows | captured through bounded or frozen-out rows |
 | local historical notes and inventories | route history and planning material | captured as superseded or non-authority history |
 
 ## A. Promoted retained publication core
@@ -59,7 +60,7 @@ Use this file together with:
 | Exact support theorem | `I_3 = 0` | exact no-third-order-interference theorem | promoted | zero-input structural | main text / ED | [I3_ZERO_EXACT_THEOREM_NOTE.md](../../I3_ZERO_EXACT_THEOREM_NOTE.md) | `frontier_born_rule_derived.py` |
 | Exact support theorem | CPT | exact free staggered-lattice CPT | promoted | zero-input structural | main text / ED | [CPT_EXACT_NOTE.md](../../CPT_EXACT_NOTE.md) | `frontier_cpt_exact.py` |
 
-## B. Observation-facing quantitative portfolio
+## B. Promoted quantitative package
 
 These rows are intentionally broader than the retained theorem core. They are
 publication-relevant because reviewers will ask about them even when they are
@@ -67,18 +68,19 @@ not promoted.
 
 | Quantity / lane | Workstream | Framework result | Observation / comparator | Status | Import class | Current publication decision | Authority / best source | Frozen-out ref |
 |---|---|---|---|---|---|---|---|---|
+| complete prediction chain | YT / EW / Higgs / vacuum | one canonical quantitative chain | package authority | promoted | one computed lattice input + derived running | promoted package | [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md) | n/a |
+| `\alpha_s(M_Z)` | YT / EW package | `0.1181` | `0.1179` | promoted | one computed lattice input + derived running | promoted package | [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md) | n/a |
+| EW normalization package | YT / EW package | `sin^2(theta_W)=0.2306`, `1/\alpha_{EM}=127.67`, `g_1(v)=0.4644`, `g_2(v)=0.6480` | observed values | promoted | one computed lattice input + derived running | promoted package | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md), [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md) | n/a |
+| Yukawa / top package | YT package | `y_t(v)=0.9176`, `m_t(pole)=172.57/173.10 GeV` | `~0.917`, `172.69 GeV` | promoted | one computed lattice input + derived running | promoted package | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) | n/a |
+| Higgs / vacuum package | Higgs package | `m_H=119.8/129.7 GeV`, absolute vacuum stability | `125.25 GeV`, SM metastability comparator | promoted | one computed lattice input + derived running | promoted package | [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md), [HIGGS_MASS_FROM_AXIOM_NOTE.md](../../HIGGS_MASS_FROM_AXIOM_NOTE.md) | n/a |
 | Dark matter ratio `R` | DM relic chain | `5.48` | `5.47` | bounded | one-parameter + imported perturbative pieces | arXiv companion only | [DM_RELIC_PAPER_NOTE.md](../../DM_RELIC_PAPER_NOTE.md) | `F01` |
 | `\Omega_\Lambda` conditional chain | cosmology from `R` | `0.686` | `0.685` | bounded/conditional | observed `\eta` + flatness + bounded `R` | arXiv companion only | [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md) | `F01`, `F04` |
-| `\alpha_s(M_Z)` zero-import route | `y_t` / `\alpha_s` chain | `0.1181` | `0.1179` | bounded | zero-input chain, still bounded by review | review-only until closure | [YT_ZERO_IMPORT_CLOSURE_NOTE.md](../../YT_ZERO_IMPORT_CLOSURE_NOTE.md), [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md), [YT_VERTEX_POWER_DERIVATION.md](../../YT_VERTEX_POWER_DERIVATION.md) | `F02` |
-| top mass `m_t` zero-import route | `y_t` / `\alpha_s` chain | `169.4 GeV` | `172.69 GeV` | bounded | zero-input 2-loop chain, still bounded | review-only until closure | [YT_ZERO_IMPORT_CLOSURE_NOTE.md](../../YT_ZERO_IMPORT_CLOSURE_NOTE.md), [YT_BOUNDARY_THEOREM.md](../../YT_BOUNDARY_THEOREM.md), [YT_EFT_BRIDGE_THEOREM.md](../../YT_EFT_BRIDGE_THEOREM.md) | `F02` |
-| top mass `m_t` import-allowed route | gauge crossover route | `171.0 GeV` | `173.0 +/- 0.6 GeV` | bounded | imported matching coefficients | arXiv bounded appendix only | [YT_GAUGE_CROSSOVER_THEOREM.md](../../YT_GAUGE_CROSSOVER_THEOREM.md) | `F02` |
 | CKM magnitudes | mass-basis NNI route | `|V_us|=0.2251`, `|V_cb|=0.0420`, `|V_ub|=0.00435` | PDG values `0.2243`, `0.0422`, `0.00382` | bounded | framework + bounded coefficient route | arXiv bounded appendix only | [CABIBBO_BOUND_NOTE.md](../../CABIBBO_BOUND_NOTE.md), [CKM_MASS_BASIS_NNI_NOTE.md](../../CKM_MASS_BASIS_NNI_NOTE.md) | `F03` |
 | Jarlskog invariant | Z3 CP phase route | `3.145 x 10^-5` | `3.08 x 10^-5` | bounded / partial | derived phase + observed angles | bounded companion only | [JARLSKOG_PHASE_BOUND_NOTE.md](../../JARLSKOG_PHASE_BOUND_NOTE.md) | `F03` |
 | Spectral tilt `n_s` | graph-growth cosmology | `0.9667` | `0.9649 +/- 0.0042` | bounded/conditional | growth-model assumptions | arXiv companion only | [PRIMORDIAL_SPECTRUM_NOTE.md](../../PRIMORDIAL_SPECTRUM_NOTE.md) | `F04` |
 | Dark energy EOS `w` | spectral-gap cosmology | `w = -1` exactly | observationally near `-1` | bounded/conditional | topology/cosmology dependent | arXiv companion only | [DARK_ENERGY_EOS_NOTE.md](../../DARK_ENERGY_EOS_NOTE.md) | `F04` |
 | Cosmological constant `\Lambda` | spectral-gap cosmology | `1.59 x 10^-52 m^-2` | `1.09 x 10^-52 m^-2` | bounded/conditional | depends on `S^3` / Hubble-scale identification | arXiv companion only | [COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md](../../COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md) | `F04` |
 | graviton mass `m_g` | `S^3` / topology cosmology | `3.52 x 10^-33 eV` | strongest current bound `m_g < 1.76 x 10^-23 eV` | bounded/conditional | conditional on retained `S^3` + observed `H_0` | arXiv companion only | [GRAVITON_MASS_DERIVED_NOTE.md](../../GRAVITON_MASS_DERIVED_NOTE.md) | `F04` |
-| Higgs mass `m_H` | Higgs / CW lane | mechanism derived; exact mass bounded | `125 GeV` | open/bounded | multiple remaining assumptions and route ambiguity | not for flagship promotion | [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md), [HIGGS_MECHANISM_NOTE.md](../../HIGGS_MECHANISM_NOTE.md), [HIGGS_FROM_LATTICE_NOTE.md](../../HIGGS_FROM_LATTICE_NOTE.md) | `F05` |
 | Bekenstein-Hawking entropy | BH entropy companion | `S/S_max = 0.2364` (`5.4%` from `1/4`) | BH area law target | bounded | companion identification layer | arXiv companion only | [BH_ENTROPY_DERIVED_NOTE.md](../../BH_ENTROPY_DERIVED_NOTE.md) | `F07` |
 | gravitational decoherence | BMV-class gravity companion | `\gamma = 0.253 Hz`, `\Phi_{ent} = 12.4 rad` (BMV benchmark) | no direct measurement yet; benchmark budget `\gamma_{tot} < 0.5 Hz` | bounded | derived gravity chain + experimental benchmark geometry | later companion or arXiv appendix | [GRAV_DECOHERENCE_DERIVED_NOTE.md](../../GRAV_DECOHERENCE_DERIVED_NOTE.md) | `F07` |
 | Proton lifetime | proton decay companion | `\tau_p ~ 4 x 10^47 yr` | lower bounds only | bounded sharp prediction | imported EFT decay-rate layer | later companion or arXiv appendix | [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md) | `F07` |
@@ -91,7 +93,6 @@ not promoted.
 | Gate | Best current read | Status | Main blocker | Best current branch / authority |
 |---|---|---|---|---|
 | DM relic mapping | structural ratio is strong; full relic bridge still bounded | open | graph-to-relic transport / normalization closure | [DM_RELIC_PAPER_NOTE.md](../../DM_RELIC_PAPER_NOTE.md), [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md) |
-| Renormalized `y_t` matching | zero-import 2-loop route now reaches `m_t = 169.4 GeV`; import-allowed route stays near `171 GeV` | open | current canonical component stack still keeps the low-energy bridge bounded and the Higgs lane non-final | [YT_ZERO_IMPORT_CLOSURE_NOTE.md](../../YT_ZERO_IMPORT_CLOSURE_NOTE.md), [YT_BOUNDARY_THEOREM.md](../../YT_BOUNDARY_THEOREM.md), [YT_EFT_BRIDGE_THEOREM.md](../../YT_EFT_BRIDGE_THEOREM.md), [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md), [YT_VERTEX_POWER_DERIVATION.md](../../YT_VERTEX_POWER_DERIVATION.md), [YT_GAUGE_CROSSOVER_THEOREM.md](../../YT_GAUGE_CROSSOVER_THEOREM.md), [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md), [HIGGS_MECHANISM_NOTE.md](../../HIGGS_MECHANISM_NOTE.md), [HIGGS_FROM_LATTICE_NOTE.md](../../HIGGS_FROM_LATTICE_NOTE.md) |
 | CKM / quantitative flavor | some bounded magnitude matches are strong; phase/ab initio closure still absent | open | quantitative coefficient and phase closure | [CABIBBO_BOUND_NOTE.md](../../CABIBBO_BOUND_NOTE.md), [CKM_MASS_BASIS_NNI_NOTE.md](../../CKM_MASS_BASIS_NNI_NOTE.md), [JARLSKOG_PHASE_BOUND_NOTE.md](../../JARLSKOG_PHASE_BOUND_NOTE.md) |
 
 ## D. Workstreams intentionally frozen out of the flagship paper
@@ -99,10 +100,9 @@ not promoted.
 | Workstream family | Why not in flagship paper | Registry entry |
 |---|---|---|
 | DM quantitative companion portfolio | bounded relic bridge | `F01` |
-| `y_t` / `\alpha_s` quantitative companion portfolio | still a live gate | `F02` |
 | CKM / flavor quantitative companion portfolio | still a live gate | `F03` |
 | cosmology companion portfolio | conditional / bounded | `F04` |
-| Higgs and mass-spectrum portfolio | not closed | `F05` |
+| superseded YT / Higgs route-history stack | historical only; replaced by the complete prediction chain | `F05` |
 | continuum / unrestricted gravity beyond the project's discrete `3+1` route, plus comparison to more canonical external continuum weak/measure formulations beyond the chosen external smooth FE/Galerkin realization of the exact discrete project-native PL weak Gaussian Sobolev completion | bounded / later-paper material | `F06` |
 | sharp companion predictions (proton, Lorentz, BH, decoherence, monopole, null-echo phenomenology) | companion-only material | `F07` |
 | branch-local inventories and stale strategy docs | inventory only, not authority | `F08` |

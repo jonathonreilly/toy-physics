@@ -1,6 +1,6 @@
 # Frozen-Out Registry
 
-**Date:** 2026-04-14  
+**Date:** 2026-04-15
 **Purpose:** explicit registry of significant work that exists in the repo but
 is not promoted into the current flagship paper surface.
 
@@ -39,38 +39,34 @@ mapping still depends on bounded transport / normalization steps.
 - internalize the remaining graph-to-relic bridge
 - retire the remaining imported/assumed transport ingredients
 
-### `F02` Renormalized `y_t` / `\alpha_s` portfolio
+### `F02` Superseded YT / EW / Higgs route-history stack
 
-**Status:** frozen out of the retained paper core; still one of the three live gates.  
-**Why frozen out:** the lane is materially stronger, but the current best
-results remain bounded.
+**Status:** frozen out as publication authority; retained only as route history.
+**Why frozen out:** the old bounded `y_t` / `\alpha_s` and pre-final Higgs notes
+were superseded by the complete prediction chain and its support stack.
 
 **Captured work:**
 
-- import-allowed `m_t \approx 171 GeV`
-- zero-import 2-loop chain with `\alpha_s(M_Z) = 0.1181`, `m_t = 169.4 GeV`
-- hierarchy-linked gauge and vertex matching work
-- explicit endpoint and EFT-bridge support theorems for the zero-input route
+- earlier zero-import `m_t = 169.4 GeV` route
+- import-allowed `m_t \approx 171 GeV` companion route
+- earlier bounded EW-normalization route notes
+- pre-final Higgs/CW route notes that no longer define the promoted package
 
 **Primary sources:**
 
-- [YT_ZERO_IMPORT_CLOSURE_NOTE.md](../../YT_ZERO_IMPORT_CLOSURE_NOTE.md)
-- [YT_BOUNDARY_THEOREM.md](../../YT_BOUNDARY_THEOREM.md)
-- [YT_EFT_BRIDGE_THEOREM.md](../../YT_EFT_BRIDGE_THEOREM.md)
-- [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md)
-- [YT_VERTEX_POWER_DERIVATION.md](../../YT_VERTEX_POWER_DERIVATION.md)
-- [YT_GAUGE_CROSSOVER_THEOREM.md](../../YT_GAUGE_CROSSOVER_THEOREM.md)
+- [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
+- superseded note history such as `YT_ZERO_IMPORT_CLOSURE_NOTE.md`,
+  `YT_BOUNDARY_THEOREM.md`, `YT_EFT_BRIDGE_THEOREM.md`,
+  `ALPHA_S_DERIVED_NOTE.md`, `YT_VERTEX_POWER_DERIVATION.md`,
+  `YT_GAUGE_CROSSOVER_THEOREM.md`
 
 **Needed to unfreeze:**
 
-- replace the current bounded component stack with one same-surface closure
-  authority
-- remove the remaining low-energy bridge ambiguity between the bounded
-  zero-input and import-allowed readings
+- nothing; this family is kept as history rather than a live promotion target
 
 ### `F03` CKM / flavor quantitative portfolio
 
-**Status:** frozen out of the retained paper core; still one of the three live gates.  
+**Status:** frozen out of the retained paper core; still one of the two live gates.
 **Why frozen out:** quantitative flavor is not closed even though some bounded
 matches are strong.
 
@@ -123,16 +119,16 @@ beyond the retained flagship backbone.
 - same-surface derivation of the remaining cosmology bridges
 - removal of conditional input dependence where applicable
 
-### `F05` Higgs and mass-spectrum portfolio
+### `F05` Higgs and mass-spectrum companions beyond the promoted package
 
 **Status:** frozen out of the retained paper core.  
-**Why frozen out:** `v` is now promoted, but `m_H = 125 GeV` and the broader
-mass-spectrum program remain bounded.
+**Why frozen out:** the promoted package now carries the accepted Higgs /
+vacuum rows, but the broader mass-spectrum and neutrino programs remain outside
+the flagship spine.
 
 **Captured work:**
 
-- Higgs / Coleman-Weinberg lane
-- Higgs mechanism support note and bounded quantitative support note
+- Higgs mechanism support notes beyond the promoted package card
 - neutrino hierarchy / spectrum notes
 - generation-hierarchy and mass-spectrum notes
 
@@ -144,8 +140,8 @@ mass-spectrum program remain bounded.
 
 **Needed to unfreeze:**
 
-- first-principles exact Higgs-mass derivation
-- same-surface mass-spectrum closure after the accepted `y_t` route is final
+- same-surface mass-spectrum closure beyond the promoted package
+- accepted neutrino closure if that program is later promoted
 
 ### `F06` Gravity companions beyond the retained core
 
