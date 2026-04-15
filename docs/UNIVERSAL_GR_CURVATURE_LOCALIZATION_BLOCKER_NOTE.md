@@ -42,7 +42,7 @@ That isotropic operator-identification step has now been discharged by
 
 The live remaining object is now smaller still:
 
-> nonlinear completion beyond the exact isotropic quadratic surface.
+> widening beyond the invariant background family `diag(a,b,b,b)`.
 
 ## What is exact already
 
@@ -130,19 +130,18 @@ The present data now determine much more than before:
 
 What they still do not yet prove is:
 
-1. nonlinear completion beyond the quadratic Hessian/slice-generator glue;
-2. widening beyond the invariant background family `diag(a,b,b,b)`.
+1. widening beyond the invariant background family `diag(a,b,b,b)`.
 
 ## Minimal missing primitive
 
 The smallest honest missing object is now:
 
-> a nonlinear completion principle that lifts the exact isotropic quadratic
-> glue operator beyond Hessian order on `PL S^3 x R`.
+> an extension principle that lifts the exact invariant-family nonlinear
+> closure beyond the `SO(3)`-invariant background family.
 
-Equivalently, the missing primitive is no longer a frame bundle and no longer
-an isotropic block-operator identification law. It is the nonlinear
-completion law beyond the exact quadratic/invariant surface.
+Equivalently, the missing primitive is no longer a frame bundle, no longer an
+isotropic block-operator identification law, and no longer invariant-family
+nonlinear completion. It is the widening law beyond the invariant family.
 
 ## Honest status
 
@@ -155,6 +154,7 @@ The current direct universal route is:
 - exact at the invariant-background Schur-localization level
 - exact at the local isotropic supermetric-normal-form level
 - exact at the isotropic quadratic Einstein/Regge glue-operator level
-- still open only beyond that, at nonlinear completion / wider-background extension
+- exact at the invariant-family nonlinear completion level
+- still open only beyond that, at wider-background extension
 
 That is the sharpest disciplined statement available on the current atlas.
