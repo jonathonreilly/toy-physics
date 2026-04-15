@@ -71,7 +71,8 @@ Current quantitative statuses:
 - retained EW normalization package:
   `sin^2(theta_W)(M_Z) = 0.2306`,
   `1/alpha_EM(M_Z) = 127.67`
-- promoted CKM no-import closure package:
+- promoted CKM atlas/axiom closure package
+  (no quark-mass or fitted CKM inputs; canonical CMT `alpha_s(v)` input):
   `|V_us| = 0.22727`,
   `|V_cb| = 0.04217`,
   `|V_ub| = 0.003913`,
@@ -87,7 +88,7 @@ Current quantitative statuses:
 ## Other Bounded Families
 
 - DM ratio and relic companions
-- promoted CKM no-import closure package, with older Cabibbo / NNI / partial Jarlskog notes retained only as route history
+- promoted CKM atlas/axiom closure package, with older Cabibbo / NNI / partial Jarlskog notes retained only as route history
 - cosmology companions
 - individual companion lanes
 

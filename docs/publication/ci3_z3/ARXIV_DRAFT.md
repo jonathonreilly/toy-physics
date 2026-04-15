@@ -22,8 +22,9 @@ compactification / topology closure, one-generation matter closure, retained
 three-generation matter structure, exact `I_3 = 0`, exact CPT, emergent
 Lorentz invariance with first anisotropic correction at dimension 6, and exact
 strong CP / `\theta_eff = 0` on the retained action surface. The current quantitative package retains
-`\alpha_s(M_Z)` and electroweak normalization lanes, promotes a no-import CKM
-closure package, and keeps top-Yukawa/top-mass, Higgs/vacuum, and cosmology as
+`\alpha_s(M_Z)` and electroweak normalization lanes, promotes an atlas/axiom
+CKM closure package with no quark-mass or fitted-CKM inputs, and keeps
+top-Yukawa/top-mass, Higgs/vacuum, and cosmology as
 bounded companions. The single live flagship gate is dark-matter relic
 mapping. We present the retained claim surface, separate exact from bounded
 results, and state the public reproducibility surface that supports the
@@ -57,8 +58,9 @@ program. The direct-universal gravity route now closes as exact full discrete
 `3+1` GR on the project route. The QG/continuum chain now closes on a chosen
 canonical textbook target. Strong CP is exact on the axiom-determined action
 surface. Confinement is promoted as an exact structural theorem with a bounded
-string-tension readout. CKM is promoted as a no-import closure package rather
-than a bounded flavor lane. The only live flagship gate left is dark-matter
+string-tension readout. CKM is promoted as an atlas/axiom closure package with
+canonical CMT `\alpha_s(v)` input and no quark-mass or fitted-CKM derivation
+inputs, rather than a bounded flavor lane. The only live flagship gate left is dark-matter
 relic mapping.
 
 The correct reading of the manuscript is therefore no longer “promising
@@ -298,9 +300,11 @@ coincidences.” They are the current retained quantitative component stack.
 ### 5.3 CKM closure package
 
 Flavor is no longer an open flagship gate. The current package carries a
-promoted no-import CKM closure route with the canonical CMT coupling, exact
-atlas counts, exact projector structure, exact bilinear tensor slot, exact
-`Z_3` source, and exact Schur cascade. The promoted package reports:
+promoted atlas/axiom CKM closure route with canonical CMT `\alpha_s(v)` as
+the quantitative coupling input, exact atlas counts, exact projector
+structure, exact bilinear tensor slot, exact `Z_3` source, and exact Schur
+cascade. No quark masses or fitted CKM observables are used as derivation
+inputs. The promoted package reports:
 
 - `|V_us| = 0.22727`
 - `|V_cb| = 0.04217`
@@ -308,7 +312,11 @@ atlas counts, exact projector structure, exact bilinear tensor slot, exact
 - `\delta = 65.905^\circ`
 - `J = 3.331 \times 10^{-5}`.
 
-This is the controlling CKM theorem surface in the current manuscript.
+The observation-facing comparison should be read against the coherent
+angle package rather than the standalone scalar `J` comparator, because the
+theorem package fixes the full phase-dressed matrix rather than only the
+scalar-support readout. This is the controlling CKM theorem surface in the
+current manuscript.
 Older Cabibbo, mass-basis NNI, and partial-Jarlskog routes remain history
 rather than live flavor authority.
 
@@ -408,7 +416,8 @@ What is now genuinely retained is broad:
 - emergent Lorentz invariance with first anisotropic correction at dimension 6;
 - exact strong CP / `\theta_eff = 0` on the retained action surface;
 - retained `\alpha_s` and EW normalization lanes;
-- promoted no-import CKM closure.
+- promoted atlas/axiom CKM closure with canonical CMT `\alpha_s(v)` input and
+  no quark-mass or fitted-CKM derivation inputs.
 
 What remains bounded is explicit:
 

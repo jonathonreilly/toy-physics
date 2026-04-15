@@ -9,7 +9,7 @@ The current package is:
 
 1. a retained theorem core
 2. retained standalone quantitative lanes for `alpha_s` and EW normalization
-3. promoted CKM closure plus bounded Yukawa/top and Higgs/vacuum lanes
+3. promoted CKM atlas/axiom closure plus bounded Yukawa/top and Higgs/vacuum lanes
 4. a bounded observation-facing portfolio and a frozen-out registry for
    important excluded families
 
@@ -104,7 +104,8 @@ Current status from that stack:
   `g_2(v) = 0.6480`
 - bounded `y_t(v) = 0.9176`
 - bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
-- promoted CKM no-import closure package:
+- promoted CKM atlas/axiom closure package
+  (no quark-mass or fitted CKM inputs; canonical CMT `alpha_s(v)` input):
   `|V_us| = 0.22727`,
   `|V_cb| = 0.04217`,
   `|V_ub| = 0.003913`,

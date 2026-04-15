@@ -68,7 +68,8 @@ Current package status:
   `g_2(v) = 0.6480`
 - bounded `y_t(v) = 0.9176`
 - bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
-- promoted CKM no-import closure package:
+- promoted CKM atlas/axiom closure package
+  (no quark-mass or fitted CKM inputs; canonical CMT `alpha_s(v)` input):
   `|V_us| = 0.22727`,
   `|V_cb| = 0.04217`,
   `|V_ub| = 0.003913`,
@@ -193,7 +194,7 @@ Observation-facing bounded portfolio:
 - zero-import `\alpha_s(M_Z) = 0.1181`
 - best import-allowed `m_t = 171.0 GeV`
 - zero-import `m_t = 169.4 GeV` on the current 2-loop bounded route
-- promoted CKM no-import closure package with full sharp `|V_us|`, `|V_cb|`, `|V_ub|`, `\delta`, and `J`
+- promoted CKM atlas/axiom closure package with full sharp `|V_us|`, `|V_cb|`, `|V_ub|`, `\delta`, and `J`, no quark-mass or fitted CKM observables in the derivation, and canonical CMT `\alpha_s(v)` as the quantitative coupling input
 - cosmology companions such as `\Omega_\Lambda`, `n_s`, `w = -1`
 - Higgs and individual companion lanes
 
