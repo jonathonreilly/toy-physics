@@ -54,40 +54,33 @@ those surfaces.
 
 **Problem**
 
-- The manuscript still leads with a very broad “exact quantum-gravity bridge”
-  story:
-  - [ARXIV_DRAFT.md](./ARXIV_DRAFT.md)
-- The package-level positioning note still contains a stale contradiction on
-  Lorentz emergence:
-  - [CONTINUUM_IDENTIFICATION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/CONTINUUM_IDENTIFICATION_NOTE.md)
-- The current story still invites the “Gaussian consistency check on a fixed
-  background” reading.
+- This item was previously a live submission blocker because the manuscript and
+  front-door package language read broader than the actual chosen-target
+  theorem surface.
 
 **Action**
 
-- Keep the internal theorem chain.
-- Narrow the paper claim to:
-  - exact discrete `3+1` gravity route on the project surface
-  - exact Gaussian/weak-form/continuum-identification chain on the chosen
-    canonical target
-- Stop using broad phrases that sound like unrestricted background-independent
-  QG.
-- Add one explicit sentence that this is a fixed discrete route, not a
-  sum-over-geometries program.
-- Repair the stale Lorentz statement in
-  [CONTINUUM_IDENTIFICATION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/CONTINUUM_IDENTIFICATION_NOTE.md).
-- Add one consolidated proof-sketch appendix/section pointer for the chain so
-  the paper does not read like 13 repo links standing in for an argument.
+- Resolved on `main`:
+  - the paper claim is now stated as exact discrete `3+1` gravity on the
+    project route plus exact Gaussian/weak-form/continuum identification on
+    one chosen canonical textbook target
+  - broad blanket “all continuum packaging” wording has been removed from the
+    live paper/front-door surfaces
+  - the stale Lorentz contradiction in
+    [CONTINUUM_IDENTIFICATION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/CONTINUUM_IDENTIFICATION_NOTE.md)
+    is fixed
+- Remaining optional hardening:
+  - add one compact proof-sketch appendix/section pointer for the gravity/QG
+    chain so the manuscript does not read like repo links standing in for an
+    argument
 
 **Files to edit**
 
-- [ARXIV_DRAFT.md](./ARXIV_DRAFT.md)
-- [README.md](/Users/jonreilly/Projects/Physics/README.md)
-- [publication README](./README.md)
-- [EXTERNAL_REVIEWER_GUIDE.md](./EXTERNAL_REVIEWER_GUIDE.md)
-- [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
-- [FULL_CLAIM_LEDGER.md](./FULL_CLAIM_LEDGER.md)
-- [CONTINUUM_IDENTIFICATION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/CONTINUUM_IDENTIFICATION_NOTE.md)
+- [ARXIV_DRAFT.md](./ARXIV_DRAFT.md) (done)
+- [CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md](/Users/jonreilly/Projects/Physics/docs/CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md) (done)
+- [REVIEWER_SUMMARY.md](/Users/jonreilly/Projects/Physics/docs/REVIEWER_SUMMARY.md) (done)
+- [EXTERNAL_REVIEWER_GUIDE.md](./EXTERNAL_REVIEWER_GUIDE.md) (done)
+- [CONTINUUM_IDENTIFICATION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/CONTINUUM_IDENTIFICATION_NOTE.md) (done)
 
 ### 3. Strong CP
 

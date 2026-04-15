@@ -125,8 +125,9 @@ canonical hierarchy surface.
 
 **Current public posture**
 
-- the theorem chain is real, but the paper voice still packages it in a way
-  that invites “Gaussian consistency check on a chosen target” criticism
+- the theorem chain is real
+- the paper/front-door package now state it as exact on the chosen canonical
+  textbook target, not as a blanket claim about every continuum realization
 
 Representative surfaces:
 
@@ -148,14 +149,15 @@ Primary evidence:
 
 **Adjustment class**
 
-- mostly manuscript/story adjustment, not a missing theorem on the retained
-  route
+- repo/manuscript cleanup resolved on `main`; no missing theorem on the
+  retained route
 
 **Why**
 
-The internal notes are more disciplined than the paper voice. The story layer
-still overreads the exact route as broader than the chosen-target theorem
-surface.
+The internal notes and the public paper/front-door surfaces now line up: exact
+discrete `3+1` GR on the project route, and exact QG / continuum closure on
+one chosen canonical textbook target. The remaining work here is optional
+presentation hardening, not claim-surface repair.
 
 ### C. Strong CP
 
