@@ -21,8 +21,8 @@ Those are already in hand on the project’s discrete route.
 The unresolved step is now:
 
 > a smooth / external continuum-equivalence interpretation theorem for the
-> exact project-native PL Gaussian completion determined by the inverse-limit
-> family.
+> exact project-native PL `H^1`-type weak Gaussian / Dirichlet system
+> determined by the inverse-limit family.
 
 That is the cleanest honest formulation of the remaining stronger continuum
 bridge.
@@ -42,7 +42,9 @@ The direct-universal route already supplies:
 6. exact inverse-limit Gaussian cylinder closure on that canonical net;
 7. exact abstract Gaussian / Cameron-Martin completion determined by that
    inverse-limit family;
-8. exact project-native PL field realization of that Gaussian completion.
+8. exact project-native PL field realization of that Gaussian completion;
+9. exact project-native PL weak/Dirichlet-form closure on that same net;
+10. exact project-native PL `H^1`-type Sobolev interface on that same net.
 
 So the current branch no longer lacks a gravity law, a stationary family, or a
 finite partition bridge on its own discrete setting.
@@ -65,8 +67,8 @@ integrating out fine modes keeps the family inside the same Gaussian class and
 is associative under repeated coarse-graining.
 
 So the live remaining issue is narrower still: how to interpret the exact
-project-native PL Gaussian completion produced by that discrete refinement net
-as a stronger continuum measure / solution theorem.
+project-native PL `H^1`-type weak Gaussian / Dirichlet system produced by that
+discrete refinement net as a stronger continuum measure / solution theorem.
 
 That is the precise continuum-interpretation frontier now.
 
@@ -84,8 +86,12 @@ the right object:
 - **not** missing inverse-limit existence on the discrete route;
 - **not** missing abstract Gaussian completion of that inverse-limit family;
 - **not** missing project-native PL field realization of that limit object;
+- **not** missing project-native weak/Dirichlet-form structure on that PL
+  carrier;
+- **not** missing project-native `H^1`-type weak-field carrier on that PL
+  route;
 - **but** a smooth / external continuum-equivalence theorem for that now-closed
-  discrete project-native PL limit object.
+  discrete project-native PL weak Sobolev limit object.
 
 That is real progress because it tells us what still has to be built, and what
 no longer needs to be rediscovered.

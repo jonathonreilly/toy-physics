@@ -34,6 +34,12 @@ The current flagship package is not “everything in the repo.” It is:
 - exact project-native PL field realization for that same canonical discrete
   QG family
   - authority: [UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md](../../UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md)
+- exact project-native PL weak/Dirichlet-form closure for that same canonical
+  discrete QG family
+  - authority: [UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md](../../UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md)
+- exact project-native PL `H^1`-type Sobolev interface for that same canonical
+  discrete QG family
+  - authority: [UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md](../../UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md)
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`
@@ -93,7 +99,7 @@ Also still open:
 - Higgs mass `m_H`
 - full nonlinear GR in full generality
 - continuum / smooth-equivalence interpretation beyond the exact discrete
-  project-native PL Gaussian completion
+  project-native PL weak Gaussian Sobolev completion
 - several companion phenomenology bridges
 
 ## Read this package in order

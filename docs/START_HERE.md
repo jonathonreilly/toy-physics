@@ -79,7 +79,10 @@ The current flagship publication package is:
   family, exact inverse-limit Gaussian cylinder closure for that same
   canonical discrete family, exact abstract Gaussian / Cameron-Martin
   completion for that same canonical discrete family, exact project-native PL
-  field realization for that same canonical discrete family, retained `S^3`,
+  field realization for that same canonical discrete family, exact
+  project-native PL weak/Dirichlet-form closure for that same canonical
+  discrete family, exact project-native PL `H^1`-type Sobolev interface for
+  that same canonical discrete family, retained `S^3`,
   one-generation closure, three-generation structure, exact `I_3 = 0`, exact
   CPT
   - partition authority: [UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md](UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
@@ -87,6 +90,8 @@ The current flagship publication package is:
   - inverse-limit authority: [UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md](UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md)
   - completion authority: [UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md](UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md)
   - PL-interface authority: [UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md](UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md)
+  - weak-form authority: [UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md](UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md)
+  - Sobolev authority: [UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md](UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md)
 - bounded observation-facing portfolio: DM ratio, `alpha_s`, `m_t`, CKM
   magnitudes, cosmology companions, bounded Higgs lane, and sharp companion
   predictions

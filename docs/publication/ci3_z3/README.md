@@ -100,6 +100,12 @@ Retained backbone:
 - exact project-native PL field realization for that same canonical discrete
   QG family
   - authority: [UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md](../../UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md)
+- exact project-native PL weak/Dirichlet-form closure for that same canonical
+  discrete QG family
+  - authority: [UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md](../../UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md)
+- exact project-native PL `H^1`-type Sobolev interface for that same canonical
+  discrete QG family
+  - authority: [UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md](../../UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md)
 - exact native `Cl(3)` / `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`
@@ -138,6 +144,12 @@ Reviewer-facing framing notes:
 - the exact project-native PL field realization is now also closed on that
   same route; the remaining stronger issue is now external smooth-field
   equivalence beyond that PL limit object.
+- the exact project-native PL weak/Dirichlet system is now also closed on that
+  same route; the remaining stronger issue is now external smooth weak-form /
+  measure equivalence beyond that PL weak limit object.
+- the exact project-native PL `H^1`-type Sobolev carrier is now also closed on
+  that same route; the remaining stronger issue is now external smooth
+  Sobolev / measure equivalence beyond that PL weak Sobolev limit object.
 - the paper is positioned against other discrete/unification programs only at a
   compact framing level; it is not trying to be a survey.
 

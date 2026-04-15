@@ -142,6 +142,32 @@ Primary authority:
 
 - [UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md)
 
+### 9. Project-native PL weak-form closure
+
+The same PL field carrier now also supports one exact coercive weak/Dirichlet
+system on the refinement net:
+
+- exact bilinear form and source functional on each finite PL space
+- exact stationary weak equation
+- exact Schur compatibility of the coarse weak problem
+
+Primary authority:
+
+- [UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md)
+
+### 10. Project-native PL Sobolev interface
+
+The same exact PL weak/Dirichlet system now also has a canonical first-order
+weak-field carrier on the refinement net:
+
+- exact continuous PL field realization on each simplicial level
+- refinement-invariant `H^1`-type norm for the same underlying PL field
+- exact project-native first-order weak-field carrier for the Gaussian system
+
+Primary authority:
+
+- [UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md)
+
 ## Exact claim boundaries
 
 The current gravity route supports the following exact wording:
@@ -160,12 +186,14 @@ separate statement. The partition, Schur, refinement, inverse-limit, and
 abstract-completion theorems sharpen that remaining issue: the discrete route
 already has exact finite-dimensional projective closure, an exact canonical
 barycentric-dyadic refinement net, an exact inverse-limit Gaussian cylinder
-family, an exact abstract Gaussian completion, and an exact project-native PL
-field realization, so the remaining issue is now a smooth / external
-continuum-equivalence theorem, not a missing local gravity theorem,
-UV-finiteness problem, missing geometric refinement structure, missing
-inverse-limit object, missing abstract limit object, or missing project-native
-field carrier.
+family, an exact abstract Gaussian completion, an exact project-native PL
+field realization, and an exact project-native PL weak/Dirichlet system, so
+an exact project-native PL `H^1`-type carrier, so the remaining issue is now a
+smooth / external continuum-equivalence theorem, not a missing local gravity
+theorem, UV-finiteness problem, missing geometric refinement structure,
+missing inverse-limit object, missing abstract limit object, missing
+project-native field carrier, missing project-native weak structure, or
+missing project-native Sobolev carrier.
 
 ## What a reviewer should take away
 

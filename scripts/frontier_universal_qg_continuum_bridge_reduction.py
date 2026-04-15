@@ -12,9 +12,10 @@ more useful negative/positive split:
 
 So the remaining continuum question is no longer UV, local operator closure,
 missing discrete refinement-net structure, missing inverse-limit existence,
-missing abstract Gaussian completion, or missing project-native PL carrier. It
-is the stronger smooth / external continuum-equivalence theorem beyond that
-exact discrete PL limit object.
+missing abstract Gaussian completion, missing project-native PL carrier,
+missing project-native weak/Dirichlet structure, or missing project-native
+Sobolev interface. It is the stronger smooth / external continuum-equivalence
+theorem beyond that exact discrete PL weak Sobolev limit object.
 """
 
 from __future__ import annotations
@@ -68,6 +69,8 @@ def main() -> int:
     refine_text = (DOCS / "UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md").read_text(encoding="utf-8")
     completion_text = (DOCS / "UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md").read_text(encoding="utf-8")
     pl_text = (DOCS / "UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md").read_text(encoding="utf-8")
+    weak_text = (DOCS / "UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md").read_text(encoding="utf-8")
+    sobolev_text = (DOCS / "UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md").read_text(encoding="utf-8")
 
     rng = np.random.default_rng(211)
     max_factorization_err = 0.0
@@ -99,14 +102,16 @@ def main() -> int:
         )
 
     record(
-        "the repo already has exact discrete global GR closure, exact atlas patching, exact UV-finite partition density, the exact canonical refinement net, the exact abstract Gaussian completion, and the exact project-native PL carrier",
+        "the repo already has exact discrete global GR closure, exact atlas patching, exact UV-finite partition density, the exact canonical refinement net, the exact abstract Gaussian completion, the exact project-native PL carrier, the exact project-native weak-form closure, and the exact project-native Sobolev interface",
         "full discrete `3+1` gr" in gr_text.lower()
         and "global stationary section" in atlas_text.lower()
         and "uv-finite" in qg_text.lower()
         and "canonical geometric refinement net" in refine_text.lower()
         and "abstract gaussian" in completion_text.lower()
-        and "piecewise-linear" in pl_text.lower(),
-        "the remaining issue is downstream of exact discrete GR, exact finite partition density, exact geometric refinement structure, exact abstract Gaussian completion, and exact PL realization, not upstream of them",
+        and "piecewise-linear" in pl_text.lower()
+        and "weak/dirichlet" in weak_text.lower()
+        and "h^1" in sobolev_text.lower(),
+        "the remaining issue is downstream of exact discrete GR, exact finite partition density, exact geometric refinement structure, exact abstract Gaussian completion, exact PL realization, exact weak-form closure, and exact Sobolev interface, not upstream of them",
     )
     record(
         "the local partition family is finite and positive on sampled positive-background Gaussian slices",
@@ -124,9 +129,9 @@ def main() -> int:
         f"max log-additivity error={max_log_additivity_err:.3e}",
     )
     record(
-        "the remaining continuum issue is therefore a smooth / external continuum-equivalence theorem, not a local UV-divergence, missing-refinement, missing-inverse-limit theorem, missing-abstract-completion theorem, or missing-PL-carrier theorem",
+        "the remaining continuum issue is therefore a smooth / external continuum-equivalence theorem, not a local UV-divergence, missing-refinement, missing-inverse-limit theorem, missing-abstract-completion theorem, missing-PL-carrier theorem, missing-weak-form theorem, or missing-Sobolev-interface theorem",
         max_factorization_err < 1e-10 and max_log_additivity_err < 1e-12,
-        "once exact finite densities patch on finite atlases, factorize on independent blocks, sit on the canonical barycentric-dyadic refinement net, determine one abstract Gaussian completion, and admit one project-native PL carrier, the unresolved step is the stronger continuum interpretation of that discrete PL limit object",
+        "once exact finite densities patch on finite atlases, factorize on independent blocks, sit on the canonical barycentric-dyadic refinement net, determine one abstract Gaussian completion, admit one project-native PL carrier, close one exact project-native weak/Dirichlet system, and admit one exact project-native H1-type interface, the unresolved step is the stronger continuum interpretation of that discrete PL weak Sobolev limit object",
     )
 
     print("UNIVERSAL QG CONTINUUM BRIDGE REDUCTION")
@@ -139,10 +144,12 @@ def main() -> int:
     print(
         "The remaining stronger continuum/QG question is now reduced to a "
         "smooth / external continuum-equivalence theorem for the exact "
-        "discrete project-native PL Gaussian limit object. It is no longer a "
+        "discrete project-native PL weak Gaussian Sobolev limit object. It is "
+        "no longer a "
         "missing UV finiteness, local operator-closure, geometric "
         "refinement-net, inverse-limit-existence, abstract-completion, or "
-        "project-native PL-carrier issue on the project route."
+        "project-native PL-carrier, weak-form, or Sobolev-interface issue on "
+        "the project route."
     )
 
     print("\n" + "=" * 78)

@@ -61,6 +61,16 @@ The current gravity package has three layers:
      discrete family
    - authority: [UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md)
 
+9. **Direct-universal PL weak-form closure**
+   - exact project-native coercive weak/Dirichlet system on that same
+     canonical discrete family
+   - authority: [UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md)
+
+10. **Direct-universal PL Sobolev interface**
+   - exact project-native first-order weak-field carrier on that same
+     canonical discrete family
+   - authority: [UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md)
+
 ## Exact claim boundaries
 
 The package can safely say:
@@ -91,8 +101,12 @@ The partition and refinement theorems sharpen that remaining issue:
 - exact abstract Gaussian completion is also now in hand on that same route
 - exact project-native PL field realization is also now in hand on that same
   route
+- exact project-native PL weak/Dirichlet system is also now in hand on that
+  same route
+- exact project-native PL `H^1`-type Sobolev carrier is also now in hand on
+  that same route
 - it is now specifically a smooth / external continuum-equivalence theorem for
-  that exact discrete project-native PL limit object
+  that exact discrete project-native PL weak Sobolev limit object
 
 ## Where this sits in the package
 

@@ -69,6 +69,8 @@ These rows correspond to Section A of
 | inverse-limit Gaussian cylinder closure on the project route | promoted exact companion | the canonical barycentric-dyadic discrete family now closes as a consistent inverse-limit Gaussian cylinder system with compatible stationary section and refinement-independent cylindrical observables | [UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md](../../UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md) |
 | abstract Gaussian / Cameron-Martin completion on the project route | promoted exact companion | the exact inverse-limit Gaussian cylinder family already determines a refinement-independent covariance bilinear form, compatible stationary mean functional, and one abstract Gaussian limit object on the project route | [UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md](../../UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md) |
 | project-native PL field realization on the project route | promoted exact companion | the exact abstract Gaussian limit object already has a canonical piecewise-linear field realization on the canonical barycentric-dyadic `PL S^3 x R` net | [UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md](../../UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md) |
+| project-native PL weak/Dirichlet-form closure on the project route | promoted exact companion | the exact project-native PL carrier already supports a canonical coercive weak/Dirichlet form and exact stationary weak equation compatible with Schur coarse-graining | [UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md](../../UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md) |
+| project-native PL `H^1`-type Sobolev interface on the project route | promoted exact companion | the exact project-native PL weak/Dirichlet system already has a canonical first-order weak-field carrier with refinement-invariant energy on the canonical barycentric-dyadic `PL S^3 x R` net | [UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md](../../UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md) |
 
 ### Gauge and matter structure
 
@@ -157,7 +159,7 @@ These rows correspond to Section D of
 | CKM / flavor quantitative portfolio | frozen-out of flagship core | still one of the three live gates | `F03` |
 | cosmology companion portfolio | frozen-out of flagship core | conditional/bounded companion layer | `F04` |
 | Higgs and mass-spectrum portfolio | frozen-out of flagship core | not closed even though `v` is now retained | `F05` |
-| continuum / unrestricted GR beyond the project's discrete `3+1` route | frozen-out of flagship core | the discrete route is promoted, but the continuum interpretation beyond that route remains a separate theorem question; on the QG side the analogous remaining issue is now the smooth / external continuum-equivalence interpretation beyond the exact discrete project-native PL Gaussian completion | `F06` |
+| continuum / unrestricted GR beyond the project's discrete `3+1` route | frozen-out of flagship core | the discrete route is promoted, but the continuum interpretation beyond that route remains a separate theorem question; on the QG side the analogous remaining issue is now the smooth / external continuum-equivalence interpretation beyond the exact discrete project-native PL weak Gaussian Sobolev completion | `F06` |
 | sharp companion predictions | frozen-out of flagship core | scientifically useful, but companion-paper or appendix material | `F07` |
 | branch-local inventories and stale strategy docs | frozen-out as authority | useful for capture, unsafe as publication authority | `F08` |
 

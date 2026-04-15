@@ -77,6 +77,12 @@ Retained core:
 - exact project-native PL field realization for that same canonical discrete
   QG family
   - authority: [UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md](docs/UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md)
+- exact project-native PL weak/Dirichlet-form closure for that same canonical
+  discrete QG family
+  - authority: [UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md](docs/UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md)
+- exact project-native PL `H^1`-type Sobolev interface for that same
+  canonical discrete QG family
+  - authority: [UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md](docs/UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md)
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`
