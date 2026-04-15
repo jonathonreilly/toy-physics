@@ -27,6 +27,7 @@ Use this file to find the current canonical note/runner pair on `main`.
 | QFP bounded-support theorem | [YT_QFP_INSENSITIVITY_THEOREM.md](YT_QFP_INSENSITIVITY_THEOREM.md) | `frontier_yt_qfp_insensitivity.py` |
 | bounded Higgs / vacuum | [HIGGS_VACUUM_PROMOTED_NOTE.md](HIGGS_VACUUM_PROMOTED_NOTE.md) | `frontier_higgs_mass_full_3loop.py`, `frontier_yt_color_projection_correction.py`, `frontier_direct_yt_extraction.py` |
 | promoted CKM closure | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) | `frontier_ckm_atlas_axiom_closure.py`, `frontier_ckm_no_import_audit.py` |
+| bounded CKM neutron-EDM lane | [CKM_NEUTRON_EDM_BOUND_NOTE.md](CKM_NEUTRON_EDM_BOUND_NOTE.md) | `frontier_ckm_neutron_edm_bound.py` |
 
 ## Remaining Live Gates
 

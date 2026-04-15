@@ -251,10 +251,12 @@ configurations as an explicit audit.
 
 ## What Remains Open
 
-1. **Neutron EDM prediction.** The framework predicts θ_eff = 0, hence
-   d_n = 0 from QCD. Any nonzero d_n would come from higher-order weak
-   effects (CKM phase). Quantifying the CKM contribution to d_n is a
-   separate bounded lane.
+1. **Neutron EDM bounded lane.** The framework predicts θ_eff = 0, hence
+   d_n = 0 from QCD on the retained surface. The surviving CKM-only estimate
+   is now tracked separately in
+   [CKM_NEUTRON_EDM_BOUND_NOTE.md](CKM_NEUTRON_EDM_BOUND_NOTE.md)
+   as a bounded lane using the promoted CKM package plus a standard
+   EFT bridge.
 
 2. **Lattice instanton measure.** While the partition sum
    Z = Σ_Q Z_Q is established, the detailed instanton measure Z_Q on
@@ -285,8 +287,9 @@ surface tightly enough to remove a bare strong-sector CP phase there.
 ## Experimental Predictions
 
 1. **θ_eff = 0 exactly.** No CP violation in the strong sector.
-2. **Neutron EDM from QCD: d_n = 0.** Any measured d_n arises from
-   higher-order weak effects only.
+2. **Neutron EDM from QCD: d_n = 0.** The current bounded CKM-only
+   estimate is `d_n ~ 8 x 10^-33 e cm`; any observed neutron EDM is therefore
+   not sourced by a bare strong-sector `θ` on the retained action surface.
 3. **No bare strong-sector CP phase on the retained action surface.**
    Any additional axion-style extension would be extra structure beyond the
    theorem proved here.
