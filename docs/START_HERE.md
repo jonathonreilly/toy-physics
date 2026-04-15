@@ -76,11 +76,17 @@ The current flagship publication package is:
   `PL S^3 x R`, exact UV-finite partition-density family whose
   mean/stationary sector is that same discrete GR family, exact canonical
   barycentric-dyadic refinement net for that same discrete density/section
-  family, retained `S^3`,
+  family, exact inverse-limit Gaussian cylinder closure for that same
+  canonical discrete family, exact abstract Gaussian / Cameron-Martin
+  completion for that same canonical discrete family, exact project-native PL
+  field realization for that same canonical discrete family, retained `S^3`,
   one-generation closure, three-generation structure, exact `I_3 = 0`, exact
   CPT
   - partition authority: [UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md](UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
   - refinement-net authority: [UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md](UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)
+  - inverse-limit authority: [UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md](UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md)
+  - completion authority: [UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md](UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md)
+  - PL-interface authority: [UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md](UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md)
 - bounded observation-facing portfolio: DM ratio, `alpha_s`, `m_t`, CKM
   magnitudes, cosmology companions, bounded Higgs lane, and sharp companion
   predictions

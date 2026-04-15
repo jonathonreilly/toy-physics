@@ -68,6 +68,15 @@ Retained core:
 - exact canonical geometric barycentric-dyadic refinement net for that same
   discrete partition-density and stationary-section family
   - authority: [UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md](docs/UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)
+- exact inverse-limit Gaussian cylinder closure for that same canonical
+  discrete QG family
+  - authority: [UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md](docs/UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md)
+- exact abstract Gaussian / Cameron-Martin completion for that same canonical
+  discrete QG family
+  - authority: [UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md](docs/UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md)
+- exact project-native PL field realization for that same canonical discrete
+  QG family
+  - authority: [UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md](docs/UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md)
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`

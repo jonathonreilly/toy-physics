@@ -25,6 +25,15 @@ The current flagship package is not “everything in the repo.” It is:
 - exact canonical geometric barycentric-dyadic refinement net for that same
   discrete partition-density and stationary-section family
   - authority: [UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md](../../UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)
+- exact inverse-limit Gaussian cylinder closure for that same canonical
+  discrete QG family
+  - authority: [UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md](../../UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md)
+- exact abstract Gaussian / Cameron-Martin completion for that same canonical
+  discrete QG family
+  - authority: [UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md](../../UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md)
+- exact project-native PL field realization for that same canonical discrete
+  QG family
+  - authority: [UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md](../../UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md)
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`
@@ -70,8 +79,8 @@ also be read on the project’s own discrete route: it gives a finite
 partition-density family whose semiclassical/stationary sector is that same
 discrete GR family. The new canonical refinement-net theorem closes the
 discrete geometric organization of that family as well. What still remains is a
-stronger inverse-limit / continuum-interpretation theorem, not missing discrete
-refinement structure.
+stronger smooth / external continuum-equivalence theorem, not missing discrete
+refinement structure or inverse-limit existence.
 
 ## What is still open
 
@@ -83,8 +92,8 @@ Also still open:
 
 - Higgs mass `m_H`
 - full nonlinear GR in full generality
-- continuum / inverse-limit interpretation beyond the exact discrete
-  barycentric-dyadic refinement family
+- continuum / smooth-equivalence interpretation beyond the exact discrete
+  project-native PL Gaussian completion
 - several companion phenomenology bridges
 
 ## Read this package in order

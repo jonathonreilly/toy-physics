@@ -44,6 +44,23 @@ The current gravity package has three layers:
    - exact Schur/projective pushforward already lives on the same net
    - authority: [UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)
 
+6. **Direct-universal inverse-limit closure**
+   - exact projective-limit Gaussian cylinder family on that same canonical
+     discrete net
+   - exact compatible stationary section across the net
+   - cylindrical linear and quadratic observables are refinement-independent
+   - authority: [UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md)
+
+7. **Direct-universal abstract Gaussian completion**
+   - exact abstract Gaussian / Cameron-Martin completion of that same
+     canonical discrete family
+   - authority: [UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md)
+
+8. **Direct-universal PL field interface**
+   - exact project-native PL field realization of that same canonical
+     discrete family
+   - authority: [UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md)
+
 ## Exact claim boundaries
 
 The package can safely say:
@@ -70,8 +87,12 @@ The partition and refinement theorems sharpen that remaining issue:
   coarse-graining
 - the canonical geometric barycentric-dyadic refinement net is also now in
   hand on `PL S^3 x R`
-- it is now specifically an inverse-limit / continuum-interpretation theorem
-  for that exact discrete projective family
+- exact inverse-limit Gaussian closure is also now in hand on that net
+- exact abstract Gaussian completion is also now in hand on that same route
+- exact project-native PL field realization is also now in hand on that same
+  route
+- it is now specifically a smooth / external continuum-equivalence theorem for
+  that exact discrete project-native PL limit object
 
 ## Where this sits in the package
 

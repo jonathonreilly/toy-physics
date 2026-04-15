@@ -102,6 +102,46 @@ Primary authority:
 
 - [UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)
 
+### 6. Inverse-limit Gaussian cylinder closure
+
+The same canonical net now also closes as an actual inverse-limit object on the
+project route:
+
+- exact projective-limit Gaussian cylinder family
+- exact compatible stationary section on that family
+- refinement-independence of cylindrical linear and quadratic observables
+
+Primary authority:
+
+- [UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md)
+
+### 7. Abstract Gaussian completion
+
+The same exact inverse-limit family now also determines one abstract Gaussian /
+Cameron-Martin completion on the project route:
+
+- refinement-independent covariance bilinear form on cylindrical observables
+- compatible stationary mean functional
+- exact pre-Hilbert quotient and completion
+
+Primary authority:
+
+- [UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md)
+
+### 8. Project-native PL field interface
+
+The same Gaussian limit object now also has a canonical project-native
+piecewise-linear field realization on the refinement net:
+
+- exact nested PL field spaces on the canonical barycentric-dyadic net
+- exact associative prolongation
+- exact realization of cylindrical observables as refinement-equivalence
+  classes of PL fields
+
+Primary authority:
+
+- [UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md)
+
 ## Exact claim boundaries
 
 The current gravity route supports the following exact wording:
@@ -116,12 +156,16 @@ continuum interpretation theorem is proved.
 
 Do not collapse the discrete-route theorem into a generic continuum GR claim.
 The discrete route is exact on its own terms; the continuum identification is a
-separate statement. The partition, Schur, and refinement theorems sharpen that
-remaining issue: the discrete route already has exact finite-dimensional
-projective closure and an exact canonical barycentric-dyadic refinement net, so
-the remaining issue is now an inverse-limit / continuum-interpretation theorem,
-not a missing local gravity theorem, UV-finiteness problem, or missing
-geometric refinement structure.
+separate statement. The partition, Schur, refinement, inverse-limit, and
+abstract-completion theorems sharpen that remaining issue: the discrete route
+already has exact finite-dimensional projective closure, an exact canonical
+barycentric-dyadic refinement net, an exact inverse-limit Gaussian cylinder
+family, an exact abstract Gaussian completion, and an exact project-native PL
+field realization, so the remaining issue is now a smooth / external
+continuum-equivalence theorem, not a missing local gravity theorem,
+UV-finiteness problem, missing geometric refinement structure, missing
+inverse-limit object, missing abstract limit object, or missing project-native
+field carrier.
 
 ## What a reviewer should take away
 

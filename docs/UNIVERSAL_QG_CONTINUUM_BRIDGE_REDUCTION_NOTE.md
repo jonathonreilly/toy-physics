@@ -20,8 +20,9 @@ Those are already in hand on the project’s discrete route.
 
 The unresolved step is now:
 
-> an inverse-limit / continuum-equivalence interpretation theorem for the
-> canonical discrete barycentric-dyadic refinement family.
+> a smooth / external continuum-equivalence interpretation theorem for the
+> exact project-native PL Gaussian completion determined by the inverse-limit
+> family.
 
 That is the cleanest honest formulation of the remaining stronger continuum
 bridge.
@@ -37,7 +38,11 @@ The direct-universal route already supplies:
    discrete route;
 4. exact identification of the partition mean/stationary sector with the
    discrete GR stationary family;
-5. exact canonical geometric refinement net on `PL S^3 x R`.
+5. exact canonical geometric refinement net on `PL S^3 x R`;
+6. exact inverse-limit Gaussian cylinder closure on that canonical net;
+7. exact abstract Gaussian / Cameron-Martin completion determined by that
+   inverse-limit family;
+8. exact project-native PL field realization of that Gaussian completion.
 
 So the current branch no longer lacks a gravity law, a stationary family, or a
 finite partition bridge on its own discrete setting.
@@ -60,8 +65,8 @@ integrating out fine modes keeps the family inside the same Gaussian class and
 is associative under repeated coarse-graining.
 
 So the live remaining issue is narrower still: how to interpret the exact
-canonical inverse/projective family produced by that discrete refinement net as
-a stronger continuum measure / solution theorem.
+project-native PL Gaussian completion produced by that discrete refinement net
+as a stronger continuum measure / solution theorem.
 
 That is the precise continuum-interpretation frontier now.
 
@@ -76,8 +81,11 @@ the right object:
 - **not** missing local gravity dynamics;
 - **not** missing local semiclassical bridge;
 - **not** missing geometric refinement-net structure on the discrete route;
-- **but** an inverse-limit / continuum-equivalence theorem for that now-closed
-  discrete projective family.
+- **not** missing inverse-limit existence on the discrete route;
+- **not** missing abstract Gaussian completion of that inverse-limit family;
+- **not** missing project-native PL field realization of that limit object;
+- **but** a smooth / external continuum-equivalence theorem for that now-closed
+  discrete project-native PL limit object.
 
 That is real progress because it tells us what still has to be built, and what
 no longer needs to be rediscovered.

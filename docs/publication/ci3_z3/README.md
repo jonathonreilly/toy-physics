@@ -91,6 +91,15 @@ Retained backbone:
 - exact canonical geometric barycentric-dyadic refinement net for that same
   discrete partition-density and stationary-section family
   - authority: [UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md](../../UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)
+- exact inverse-limit Gaussian cylinder closure for that same canonical
+  discrete QG family
+  - authority: [UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md](../../UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md)
+- exact abstract Gaussian / Cameron-Martin completion for that same canonical
+  discrete QG family
+  - authority: [UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md](../../UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md)
+- exact project-native PL field realization for that same canonical discrete
+  QG family
+  - authority: [UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md](../../UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md)
 - exact native `Cl(3)` / `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`
@@ -120,6 +129,15 @@ Reviewer-facing framing notes:
 - the QG bridge now also has its canonical geometric refinement net on the
   discrete route; the remaining stronger issue is inverse-limit /
   continuum-interpretation, not missing discrete refinement structure.
+- the inverse-limit Gaussian cylinder family is now also closed on the
+  discrete route; the remaining stronger issue is external continuum /
+  smooth equivalence, not existence of the limit object itself.
+- the exact abstract Gaussian / Cameron-Martin completion is now also closed
+  on that same route; the remaining stronger issue is geometric
+  smooth/external identification of that abstract limit object.
+- the exact project-native PL field realization is now also closed on that
+  same route; the remaining stronger issue is now external smooth-field
+  equivalence beyond that PL limit object.
 - the paper is positioned against other discrete/unification programs only at a
   compact framing level; it is not trying to be a survey.
 
