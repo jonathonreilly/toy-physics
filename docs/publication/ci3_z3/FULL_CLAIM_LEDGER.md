@@ -65,6 +65,7 @@ These rows correspond to Section A of
 | restricted strong-field closure | promoted restricted theorem | exact on the current star-supported finite-rank class under the static conformal bridge; important enough to retain, but still source-class restricted | [RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md](../../RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md) |
 | full discrete `3+1` GR on the project route | promoted exact theorem | exact global Lorentzian Einstein/Regge stationary action family on `PL S^3 x R`; this is the direct-universal capstone on the discrete route | [UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md](../../UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md), [UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md](../../UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md), [UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md](../../UNIVERSAL_GR_LORENTZIAN_SIGNATURE_EXTENSION_NOTE.md) |
 | UV-finite partition-density family on the project route | promoted exact companion | the direct-universal GR action already defines an exact finite-dimensional partition-density family on the project’s discrete `3+1` route, and its mean/stationary sector is exactly the same discrete Einstein/Regge stationary family | [UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md](../../UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md) |
+| canonical geometric refinement net on the project route | promoted exact companion | the exact discrete partition-density and stationary-section family now sits on a canonical barycentric-dyadic refinement net on `PL S^3 x R`, so the remaining stronger continuum/QG issue is an inverse-limit / interpretation theorem rather than missing geometric refinement structure | [UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md](../../UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md) |
 
 ### Gauge and matter structure
 
@@ -153,7 +154,7 @@ These rows correspond to Section D of
 | CKM / flavor quantitative portfolio | frozen-out of flagship core | still one of the three live gates | `F03` |
 | cosmology companion portfolio | frozen-out of flagship core | conditional/bounded companion layer | `F04` |
 | Higgs and mass-spectrum portfolio | frozen-out of flagship core | not closed even though `v` is now retained | `F05` |
-| continuum / unrestricted GR beyond the project's discrete `3+1` route | frozen-out of flagship core | the discrete route is promoted, but the continuum interpretation beyond that route remains a separate theorem question | `F06` |
+| continuum / unrestricted GR beyond the project's discrete `3+1` route | frozen-out of flagship core | the discrete route is promoted, but the continuum interpretation beyond that route remains a separate theorem question; on the QG side the analogous remaining issue is now the inverse-limit / continuum-equivalence interpretation beyond the exact discrete refinement family | `F06` |
 | sharp companion predictions | frozen-out of flagship core | scientifically useful, but companion-paper or appendix material | `F07` |
 | branch-local inventories and stale strategy docs | frozen-out as authority | useful for capture, unsafe as publication authority | `F08` |
 

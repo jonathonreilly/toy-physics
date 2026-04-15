@@ -65,6 +65,9 @@ Retained core:
 - exact UV-finite partition-density family on that same discrete `3+1` route,
   whose mean/stationary sector reproduces the discrete GR family
   - authority: [UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md](docs/UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
+- exact canonical geometric barycentric-dyadic refinement net for that same
+  discrete partition-density and stationary-section family
+  - authority: [UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md](docs/UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`

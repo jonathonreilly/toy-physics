@@ -11,8 +11,9 @@ This runner pushes the continuum-bridge program one real step forward:
     exact once a refinement/coarsening map is chosen.
 
 What remains after this theorem is no longer generic projective compatibility.
-It is the construction of a canonical geometric refinement net on the actual
-`PL S^3 x R` atlas family.
+That step has now been discharged by the canonical barycentric-dyadic
+refinement-net theorem. So the remaining stronger issue is the inverse-limit /
+continuum interpretation beyond that exact discrete projective family.
 """
 
 from __future__ import annotations
@@ -122,6 +123,7 @@ def main() -> int:
     qg_text = (DOCS / "UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md").read_text(encoding="utf-8")
     cont_text = (DOCS / "UNIVERSAL_QG_CONTINUUM_BRIDGE_REDUCTION_NOTE.md").read_text(encoding="utf-8")
     gr_text = (DOCS / "UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md").read_text(encoding="utf-8")
+    refine_text = (DOCS / "UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md").read_text(encoding="utf-8")
 
     lambda_r = np.array(
         [
@@ -191,11 +193,12 @@ def main() -> int:
         max_associativity_err = max(max_associativity_err, assoc_err)
 
     record(
-        "the repo already has exact discrete GR, exact UV-finite partition density, and the continuum bridge reduced to a projective theorem",
+        "the repo already has exact discrete GR, exact UV-finite partition density, and the continuum bridge reduced past algebraic projective closure",
         "uv-finite" in qg_text.lower()
-        and "projective-system theorem" in cont_text.lower()
+        and "inverse-limit" in cont_text.lower()
+        and "canonical geometric refinement net" in refine_text.lower()
         and "full discrete `3+1` gr" in gr_text.lower(),
-        "this theorem starts from already-closed discrete GR plus the finite partition bridge",
+        "this theorem starts from already-closed discrete GR plus the finite partition bridge and now sits below the refinement-net theorem",
     )
     record(
         "Schur marginalization keeps the coarse family inside the same finite Gaussian partition class",
@@ -236,9 +239,10 @@ def main() -> int:
     )
     print(
         "The remaining continuum/QG issue is therefore no longer projective "
-        "compatibility in the algebraic sense. It is the construction of a "
-        "canonical geometric refinement/coarsening net on the actual "
-        "PL S^3 x R atlas family."
+        "compatibility in the algebraic sense. And it is no longer the "
+        "construction of the discrete geometric refinement net either. The "
+        "remaining stronger issue is the inverse-limit / continuum "
+        "interpretation beyond that exact discrete projective family."
     )
 
     print("\n" + "=" * 78)

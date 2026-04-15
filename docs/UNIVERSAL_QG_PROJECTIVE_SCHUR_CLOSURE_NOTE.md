@@ -21,7 +21,7 @@ So the remaining continuum/QG issue is no longer:
 
 Those are now exact.
 
-The remaining issue is narrower:
+The remaining issue was narrower:
 
 > construct a canonical geometric refinement/coarsening net on the actual
 > discrete spacetime atlas `PL S^3 x R`.
@@ -109,12 +109,13 @@ projective-system theorem problem.
 After this theorem, that is too weak. The algebraic projective closure is now
 already available.
 
-The remaining frontier is specifically geometric:
+That geometric refinement-net step has now been discharged by the canonical
+barycentric-dyadic refinement theorem. The remaining frontier is therefore one
+level higher:
 
-- define the actual refinement/coarsening maps on the `PL S^3 x R` atlas;
-- prove they are canonical/natural for the project route;
-- then organize the exact discrete partition densities and stationary sections
-  into that geometric directed system.
+- interpret the resulting exact discrete projective family as an inverse-limit
+  / continuum measure theorem;
+- and show what continuum-equivalence statement is justified, if any.
 
 ## Honest status
 
@@ -126,5 +127,7 @@ It does prove that the current direct-universal route is now exact at:
 - UV-finite partition-density closure;
 - Schur/projective coarse-graining closure.
 
-So the remaining gap is not algebraic compatibility. It is the construction of
-the geometric refinement net itself.
+So the remaining gap is not algebraic compatibility. And it is no longer the
+construction of the geometric refinement net itself. It is the stronger
+inverse-limit / continuum-interpretation theorem beyond that now-closed
+discrete net.

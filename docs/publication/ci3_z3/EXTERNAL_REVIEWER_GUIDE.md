@@ -22,6 +22,9 @@ The current flagship package is not “everything in the repo.” It is:
 - exact UV-finite partition-density family on that same discrete `3+1` route,
   whose mean/stationary sector reproduces the Einstein/Regge stationary family
   - authority: [UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md](../../UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
+- exact canonical geometric barycentric-dyadic refinement net for that same
+  discrete partition-density and stationary-section family
+  - authority: [UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md](../../UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`
@@ -65,7 +68,10 @@ is exact full discrete `3+1` GR on the project route, not an unqualified
 continuum-equivalence statement. The new UV-finite partition theorem should
 also be read on the project’s own discrete route: it gives a finite
 partition-density family whose semiclassical/stationary sector is that same
-discrete GR family, not yet a mature continuum sum-over-geometries theorem.
+discrete GR family. The new canonical refinement-net theorem closes the
+discrete geometric organization of that family as well. What still remains is a
+stronger inverse-limit / continuum-interpretation theorem, not missing discrete
+refinement structure.
 
 ## What is still open
 
@@ -77,6 +83,8 @@ Also still open:
 
 - Higgs mass `m_H`
 - full nonlinear GR in full generality
+- continuum / inverse-limit interpretation beyond the exact discrete
+  barycentric-dyadic refinement family
 - several companion phenomenology bridges
 
 ## Read this package in order

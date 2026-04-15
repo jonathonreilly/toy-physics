@@ -123,5 +123,7 @@ What this does **not** yet claim:
 
 So this is best read as an exact **discrete semiclassical quantum-gravity
 closure step**, not yet the last word on continuum quantum gravity. The
-remaining stronger bridge is now specifically a canonical geometric
-refinement/coarsening theorem on the actual `PL S^3 x R` atlas family.
+canonical geometric refinement/coarsening theorem on the actual `PL S^3 x R`
+atlas family has now also been discharged, so the remaining stronger bridge is
+an inverse-limit / continuum-interpretation theorem for that exact discrete
+projective family.

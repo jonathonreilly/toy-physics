@@ -86,6 +86,22 @@ Primary authority:
 
 - [UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
 
+### 5. Canonical geometric refinement net
+
+The same discrete route now also has the missing geometric refinement
+organization:
+
+- canonical barycentric refinement of the minimal spatial `PL S^3` boundary
+  complex
+- canonical dyadic subdivision on finite time slabs
+- exact pullback of local stationary sections and partition densities on that
+  atlas family
+- exact compatibility with the already-proved Schur/projective pushforward
+
+Primary authority:
+
+- [UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)
+
 ## Exact claim boundaries
 
 The current gravity route supports the following exact wording:
@@ -100,11 +116,12 @@ continuum interpretation theorem is proved.
 
 Do not collapse the discrete-route theorem into a generic continuum GR claim.
 The discrete route is exact on its own terms; the continuum identification is a
-separate statement. The new partition bridge sharpens that remaining issue:
-finite-dimensional Schur/projective closure is already exact, so the remaining
-issue is now a canonical geometric refinement / projective-system theorem for
-the exact discrete density and stationary family, not a missing local gravity
-theorem or UV finiteness problem.
+separate statement. The partition, Schur, and refinement theorems sharpen that
+remaining issue: the discrete route already has exact finite-dimensional
+projective closure and an exact canonical barycentric-dyadic refinement net, so
+the remaining issue is now an inverse-limit / continuum-interpretation theorem,
+not a missing local gravity theorem, UV-finiteness problem, or missing
+geometric refinement structure.
 
 ## What a reviewer should take away
 

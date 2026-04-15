@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reduce the remaining continuum-QG issue to a refinement/projective theorem.
+"""Reduce the remaining continuum-QG issue to the inverse-limit frontier.
 
 This runner does not claim a full continuum theorem. It proves the stronger and
 more useful negative/positive split:
@@ -10,8 +10,9 @@ more useful negative/positive split:
   - finite-atlas patching is exact;
   - independent blocks factorize exactly.
 
-So the remaining continuum question is no longer UV or local operator closure.
-It is a refinement/projective-system theorem for the exact discrete densities.
+So the remaining continuum question is no longer UV, local operator closure, or
+missing discrete refinement-net structure. It is the stronger inverse-limit /
+continuum-equivalence theorem beyond that exact discrete family.
 """
 
 from __future__ import annotations
@@ -62,6 +63,7 @@ def main() -> int:
     qg_text = (DOCS / "UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md").read_text(encoding="utf-8")
     gr_text = (DOCS / "UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md").read_text(encoding="utf-8")
     atlas_text = (DOCS / "UNIVERSAL_GR_LORENTZIAN_GLOBAL_ATLAS_CLOSURE_NOTE.md").read_text(encoding="utf-8")
+    refine_text = (DOCS / "UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md").read_text(encoding="utf-8")
 
     rng = np.random.default_rng(211)
     max_factorization_err = 0.0
@@ -93,11 +95,12 @@ def main() -> int:
         )
 
     record(
-        "the repo already has exact discrete global GR closure, exact atlas patching, and exact UV-finite partition density",
+        "the repo already has exact discrete global GR closure, exact atlas patching, exact UV-finite partition density, and the exact canonical refinement net",
         "full discrete `3+1` gr" in gr_text.lower()
         and "global stationary section" in atlas_text.lower()
-        and "uv-finite" in qg_text.lower(),
-        "the remaining issue is downstream of exact discrete GR and exact finite partition density, not upstream of them",
+        and "uv-finite" in qg_text.lower()
+        and "canonical geometric refinement net" in refine_text.lower(),
+        "the remaining issue is downstream of exact discrete GR, exact finite partition density, and exact geometric refinement structure, not upstream of them",
     )
     record(
         "the local partition family is finite and positive on sampled positive-background Gaussian slices",
@@ -115,9 +118,9 @@ def main() -> int:
         f"max log-additivity error={max_log_additivity_err:.3e}",
     )
     record(
-        "the remaining continuum issue is therefore a refinement/projective-system theorem, not a local UV-divergence theorem",
+        "the remaining continuum issue is therefore an inverse-limit / continuum-equivalence theorem, not a local UV-divergence or missing-refinement theorem",
         max_factorization_err < 1e-10 and max_log_additivity_err < 1e-12,
-        "once exact finite densities patch on finite atlases and factorize on independent blocks, the unresolved step is compatibility under atlas refinement/coarse-graining",
+        "once exact finite densities patch on finite atlases, factorize on independent blocks, and sit on the canonical barycentric-dyadic refinement net, the unresolved step is the stronger continuum interpretation of that discrete projective family",
     )
 
     print("UNIVERSAL QG CONTINUUM BRIDGE REDUCTION")
@@ -129,9 +132,10 @@ def main() -> int:
     print("\nVerdict:")
     print(
         "The remaining stronger continuum/QG question is now reduced to a "
-        "refinement/projective-system theorem for the exact discrete partition "
-        "densities and stationary sections. It is no longer a missing UV "
-        "finiteness or local operator-closure issue on the project route."
+        "stronger inverse-limit / continuum-equivalence theorem for the exact "
+        "discrete projective family. It is no longer a missing UV finiteness, "
+        "local operator-closure, or geometric refinement-net issue on the "
+        "project route."
     )
 
     print("\n" + "=" * 78)

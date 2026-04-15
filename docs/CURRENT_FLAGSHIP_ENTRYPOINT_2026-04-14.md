@@ -51,6 +51,9 @@ belongs on the current flagship surface.
 - exact UV-finite partition-density family on the same discrete `3+1` route,
   with mean/stationary sector equal to that Einstein/Regge family
   - authority: [UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
+- exact canonical geometric barycentric-dyadic refinement net for that same
+  discrete partition-density and stationary-section family
+  - authority: [UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`

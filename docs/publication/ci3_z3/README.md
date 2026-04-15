@@ -22,7 +22,7 @@ If you are new to the repo, read these first:
    - claim-level evidence contract for retained manuscript-facing claims
 9. [Gravity publication package summary](./GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md)
    - compact gravity ladder and exact gravity claim boundary on the current package
-   - includes the UV-finite partition-density bridge from the direct-universal action to the discrete GR stationary family
+   - includes the UV-finite partition-density bridge and the canonical geometric refinement net from the direct-universal route
 10. [Running package issues](./RUNNING_PACKAGE_ISSUES_2026-04-14.md)
 
 That path makes four things explicit:
@@ -88,6 +88,9 @@ Retained backbone:
 - exact UV-finite partition-density family on the same discrete `3+1` route,
   with mean/stationary sector equal to that Einstein/Regge family
   - authority: [UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md](../../UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
+- exact canonical geometric barycentric-dyadic refinement net for that same
+  discrete partition-density and stationary-section family
+  - authority: [UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md](../../UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)
 - exact native `Cl(3)` / `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`
@@ -114,6 +117,9 @@ Reviewer-facing framing notes:
   local fixed point in the audited operator family.
 - the gravity capstone is now full discrete `3+1` GR on the project route;
   do not silently upgrade that to an unqualified continuum-GR claim.
+- the QG bridge now also has its canonical geometric refinement net on the
+  discrete route; the remaining stronger issue is inverse-limit /
+  continuum-interpretation, not missing discrete refinement structure.
 - the paper is positioned against other discrete/unification programs only at a
   compact framing level; it is not trying to be a survey.
 

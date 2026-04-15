@@ -36,6 +36,14 @@ The current gravity package has three layers:
    - strongest current quantum-gravity-style bridge on the project route
    - authority: [UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
 
+5. **Direct-universal canonical refinement net**
+   - exact barycentric spatial plus dyadic time refinement net on the same
+     discrete `PL S^3 x R` route
+   - local partition densities and stationary sections pull back exactly on
+     that net
+   - exact Schur/projective pushforward already lives on the same net
+   - authority: [UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)
+
 ## Exact claim boundaries
 
 The package can safely say:
@@ -55,13 +63,15 @@ If the manuscript wants the stronger continuum statement, that must be handled
 as a separate interpretation theorem, not as an automatic corollary of the
 discrete route.
 
-The new partition-density bridge sharpens that remaining issue:
+The partition and refinement theorems sharpen that remaining issue:
 
 - it is no longer a UV-finiteness or local gravity-law problem
 - exact Schur/projective closure is already in hand under finite-dimensional
   coarse-graining
-- it is now specifically a canonical geometric refinement / projective-system
-  theorem for the exact discrete density and stationary family
+- the canonical geometric barycentric-dyadic refinement net is also now in
+  hand on `PL S^3 x R`
+- it is now specifically an inverse-limit / continuum-interpretation theorem
+  for that exact discrete projective family
 
 ## Where this sits in the package
 
