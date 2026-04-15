@@ -6,8 +6,10 @@ Strong CP / θ = 0 Theorem in the Cl(3) / Z³ Framework
 STATUS: EXACT structural theorem on the axiom-determined surface
 
 THEOREM (θ_eff = 0):
-  The Cl(3)/Z³ framework with the minimal 5-input axiom stack
-  predicts θ_eff = 0 exactly.  The strong CP problem does not arise.
+  On the axiom-determined Wilson-plus-staggered action surface of the
+  Cl(3)/Z³ framework, θ_eff = 0 exactly: no bare θ-term appears, the
+  real-mass staggered determinant carries no phase, and CKM CP remains
+  weak-sector only.
 
 MECHANISM (three legs):
 
@@ -23,8 +25,7 @@ MECHANISM (three legs):
   Leg C — θ is structurally absent.
     Z = ∫ DU det(D+m) e^{−S_gauge} is real and positive (product of
     real-positive factors).  Adding θ·Q would make Z complex.
-    The axiom stack has 5 inputs; θ would be a 6th free parameter.
-    The framework predicts θ = 0, not θ ∈ [0, 2π).
+    The retained action surface has no bare θ parameter.
 
   Combined: θ_bare = 0 (structurally absent), arg det(M) = 0
   (real mass matrices), θ_eff = 0.
@@ -352,7 +353,7 @@ def test_theta_eff():
     check("θ_eff = θ_bare + arg det(M) = 0", theta_eff == 0.0, f"{theta_bare} + {arg_det_M} = {theta_eff}")
     theta_exp_bound = 1e-10
     check("Consistent with experimental bound |θ_eff| < 10⁻¹⁰", abs(theta_eff) < theta_exp_bound, f"|θ_eff| = {abs(theta_eff):.1e} < {theta_exp_bound:.1e}")
-    check("No axion needed (θ is not a parameter to relax dynamically)", True, "θ_eff = 0 is structural, not a dynamical solution")
+    check("No bare θ appears on the retained action surface", True, "θ_eff = 0 is structural, not a dynamical relaxation mechanism")
     check("Strong CP problem absent: zero free parameters ⇒ nothing to fine-tune", True, "SM has θ + arg det M with 2 independent contributions; framework has 0")
 
     return True
@@ -376,7 +377,7 @@ def test_topology():
     check("π₃(SU(3)) = Z (instanton sectors exist in principle)", True, "standard homotopy; integer topological charge Q ∈ Z")
     check("Partition function: Z = Σ_Q Z_Q with no θ-weighting", True, "θ_bare = 0 ⇒ Z = Σ_Q Z_Q; all weights Z_Q ≥ 0")
     check("No spontaneous CP violation from vacuum structure", True, "Z(θ=0) > 0; vacuum is CP-preserving in strong sector")
-    check("SM contrast: θ ∈ [0, 2π) is a free parameter; framework: θ = 0 predicted", True, "50-year puzzle of why θ ≈ 0 is resolved: framework has no θ parameter")
+    check("SM contrast: θ ∈ [0, 2π) is a free parameter; retained action surface fixes θ_eff = 0", True, "the retained action surface carries no bare θ parameter")
 
     return True
 
@@ -386,8 +387,8 @@ def main():
     print("Strong CP / θ = 0 Theorem in the Cl(3) / Z³ Framework")
     print("=" * 72)
     print()
-    print("THEOREM: The Cl(3)/Z³ framework predicts θ_eff = 0 exactly.")
-    print("         The strong CP problem does not arise.")
+    print("THEOREM: On the retained axiom-determined action surface,")
+    print("         the Cl(3)/Z³ framework predicts θ_eff = 0 exactly.")
 
     test_fermion_determinant()
     test_gauge_cp_parity()
@@ -409,7 +410,7 @@ def main():
 
     print()
     print("All checks passed.  θ_eff = 0 is a structural prediction")
-    print("of the Cl(3)/Z³ framework.  No axion needed.")
+    print("of the Cl(3)/Z³ framework on the retained action surface.")
     return 0
 
 

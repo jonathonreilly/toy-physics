@@ -99,7 +99,7 @@ Use alongside:
   - three-generation matter structure
   - exact `I_3 = 0` and CPT as compact supporting theorems
   - emergent Lorentz invariance with first anisotropic correction at dimension 6 and unique cubic-harmonic `\ell = 4` signature
-  - exact strong CP / `theta_eff = 0`
+  - exact strong CP / `theta_eff = 0` on the retained action surface
   - promoted CKM no-import closure package as part of the quantitative manuscript surface
 - Public package companions / appendices:
   - bounded weak-field GR companions beyond Newton / Poisson / WEP / time-dilation

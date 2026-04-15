@@ -7,9 +7,10 @@
 ## Theorem
 
 **Theorem (θ_eff = 0).**
-The Cl(3)/Z³ framework with the minimal 5-input axiom stack predicts
-θ_eff = 0 exactly. The strong CP problem does not arise. No axion is
-needed.
+On the axiom-determined Wilson-plus-staggered action surface of the
+Cl(3)/Z³ framework, `θ_eff = 0` exactly: the retained action carries no
+bare `θ` term, the real-mass staggered determinant carries no phase, and CKM
+CP remains weak-sector only.
 
 ## The Standard Strong CP Problem
 
@@ -71,7 +72,7 @@ appears.
 
 Therefore: θ_bare = 0.
 
-### Leg C: θ is structurally absent from the axiom-determined action
+### Leg C: no bare `θ` term appears on the axiom-determined action surface
 
 The minimal axiom stack has exactly 5 inputs:
 
@@ -82,17 +83,16 @@ The minimal axiom stack has exactly 5 inputs:
 5. Canonical normalization: g_bare = 1, plaquette / u₀ surface
 
 Axiom 5 fully determines the gauge action. Axiom 3 fully determines the
-fermion action. Both are real. Adding θ ∈ [0, 2π) to the action would
-require a 6th input that is not in the stack. The framework predicts
-θ = 0, not θ as a tunable parameter.
+fermion action. Both are real. On this retained action surface there is no
+bare `θ` parameter to tune.
 
-The key point is not merely that θ is "unmentioned" — it is that the
-axiom-determined action is uniquely the Wilson plaquette (real) plus
-staggered-Dirac partition (real). A θ-term would require either a
-complex mass term (violating the reality of the staggered action, Leg A)
-or an imaginary topological term iθQ (violating the reality of the
-gauge weight, Leg B). Both are structurally excluded by the real-positive
-partition function, not merely omitted from a parameter list.
+The key point is not merely that `θ` is "unmentioned" — it is that the
+retained action is uniquely the Wilson plaquette (real) plus the
+staggered-Dirac partition (real). A bare `θ` term would require either a
+complex mass term (violating the reality of the staggered action, Leg A) or
+an imaginary topological term `iθQ` (violating the reality of the gauge
+weight, Leg B). On the retained action surface, both are excluded by the
+real-positive partition function.
 
 The partition function is:
 
@@ -102,15 +102,16 @@ Every factor is real and positive:
 - det(D + m) > 0 (Leg A)
 - e^{−S_gauge} > 0 (Leg B)
 
-Therefore Z > 0 is real and positive. A θ-term Z(θ) = ∫ DU det(D + m)
+Therefore Z > 0 is real and positive. A θ-term `Z(θ) = ∫ DU det(D + m)
 e^{−S_gauge + iθQ} would make Z complex for θ ≠ 0, contradicting the
-real-positive structure.
+real-positive structure of the retained action surface.
 
 ### Combined result
 
     θ_eff = θ_bare + arg det(M_u M_d) = 0 + 0 = 0
 
-This is a structural prediction, not a dynamical relaxation mechanism.
+This is an action-surface structural prediction, not a dynamical relaxation
+mechanism.
 
 ## Relation to CKM CP Violation
 
@@ -201,7 +202,7 @@ occurs from the vacuum structure.
 
 8. θ_bare = 0 because the gauge action is fully axiom-determined
 9. arg det(M) = 0 because the staggered mass is real
-10. θ_eff = 0 as a structural prediction
+10. θ_eff = 0 on the retained action surface
 11. CP violation is confined to the weak sector via CKM
 
 ## What Remains Open
@@ -215,36 +216,36 @@ occurs from the vacuum structure.
    Z = Σ_Q Z_Q is established, the detailed instanton measure Z_Q on
    the physical S³ lattice is not computed here.
 
-3. **Axion exclusion.** The framework predicts θ = 0 without an axion.
-   If the framework is correct, the axion does not exist (or at least is
-   not needed for strong CP). This is a testable prediction against
-   axion search experiments.
+3. **Axion necessity beyond the retained action surface.** The theorem here is
+   only that the retained action surface already gives `θ_eff = 0`. Whether
+   broader axion-model exclusion follows is a separate question, not part of
+   this theorem.
 
 ## How This Changes The Paper
 
-This is a clean structural result that solves a 50-year-old problem.
+This is a clean structural result on the retained action surface.
 The statement is:
 
 > The Cl(3)/Z³ framework predicts θ_eff = 0 as a structural
 > consequence of the axiom-determined action. The staggered Dirac
 > operator is anti-Hermitian with real mass, giving a real positive
 > fermion determinant. The Wilson plaquette gauge action is CP-even.
-> No θ-parameter exists in the framework — it would be a 6th free
-> parameter beyond the minimal 5-input axiom stack. The strong CP
-> problem does not arise. CP violation occurs exclusively in the weak
-> sector through the discrete Z₃ source that generates the CKM phase.
+> No bare θ-term appears on that retained action surface, and CP
+> violation occurs exclusively in the weak sector through the discrete
+> Z₃ source that generates the CKM phase.
 
 This belongs in the main text alongside the exact CPT result. It
-strengthens the paper's case that the framework resolves known
-fine-tuning problems by having zero free parameters.
+strengthens the paper's case that the framework fixes the retained action
+surface tightly enough to remove a bare strong-sector CP phase there.
 
 ## Experimental Predictions
 
 1. **θ_eff = 0 exactly.** No CP violation in the strong sector.
 2. **Neutron EDM from QCD: d_n = 0.** Any measured d_n arises from
    higher-order weak effects only.
-3. **No QCD axion.** The strong CP problem is resolved structurally;
-   the Peccei-Quinn mechanism is not needed.
+3. **No bare strong-sector CP phase on the retained action surface.**
+   Any additional axion-style extension would be extra structure beyond the
+   theorem proved here.
 
 ## Commands Run
 

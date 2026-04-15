@@ -111,7 +111,7 @@ The current retained backbone is:
   - `T = 0` confinement is structural on that gauge sector
   - bounded `sqrt(sigma) ≈ 465 MeV` follows through retained `alpha_s`
     plus the low-energy EFT bridge
-- strong CP / `θ_eff = 0` structural closure:
+- strong CP / `θ_eff = 0` structural closure on the retained action surface:
   - the axiom-determined Wilson-plus-staggered action leaves no bare `θ`
   - the real-mass staggered determinant carries no phase
   - CKM CP remains confined to the weak sector
@@ -168,7 +168,7 @@ surface:
   the safe statement is exact pairwise interference on the accepted Hilbert
   probability surface.
 - exact CPT theorem for the free staggered `Cl(3)` lattice
-- exact strong CP / `θ_eff = 0` theorem on the axiom-determined action surface
+- exact strong CP / `θ_eff = 0` theorem on the retained axiom-determined action surface
 - exact native cubic `SU(2)` algebra
 - exact graph-first `su(3)` commutant closure on the retained selector surface
 - exact `T = 0` confinement of the graph-first `SU(3)` gauge sector, with

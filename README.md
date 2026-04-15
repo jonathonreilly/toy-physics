@@ -89,7 +89,7 @@ For the package-level continuum positioning across gravity and gauge, use
 - exact `I_3 = 0`
 - exact CPT on the free staggered lattice
 - emergent Lorentz invariance with first anisotropic correction at dimension 6 and unique cubic-harmonic `\ell = 4` signature; on the retained hierarchy surface the correction is `(E/M_{Pl})^2` suppressed
-- exact strong CP / `theta_eff = 0` on the axiom-determined action surface
+- exact strong CP / `theta_eff = 0` on the retained axiom-determined action surface
 
 ## Quantitative Component Stack
 

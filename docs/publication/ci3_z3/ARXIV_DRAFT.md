@@ -21,7 +21,7 @@ framework carries exact native `SU(2)`, graph-first structural `SU(3)`, exact
 compactification / topology closure, one-generation matter closure, retained
 three-generation matter structure, exact `I_3 = 0`, exact CPT, emergent
 Lorentz invariance with first anisotropic correction at dimension 6, and exact
-strong CP / `\theta_eff = 0`. The current quantitative package retains
+strong CP / `\theta_eff = 0` on the retained action surface. The current quantitative package retains
 `\alpha_s(M_Z)` and electroweak normalization lanes, promotes a no-import CKM
 closure package, and keeps top-Yukawa/top-mass, Higgs/vacuum, and cosmology as
 bounded companions. The single live flagship gate is dark-matter relic
@@ -248,7 +248,7 @@ no bare `\theta` parameter there, the staggered determinant is real and
 positive for real masses, and CKM CP remains weak-sector only. The safe public
 statement is:
 
-> `\theta_eff = 0` on the axiom-determined action surface.
+> `\theta_eff = 0` on the retained axiom-determined action surface.
 
 This is a genuine promoted row, not a bounded companion.
 
@@ -406,7 +406,7 @@ What is now genuinely retained is broad:
 - exact `I_3 = 0`;
 - exact CPT;
 - emergent Lorentz invariance with first anisotropic correction at dimension 6;
-- exact strong CP / `\theta_eff = 0`;
+- exact strong CP / `\theta_eff = 0` on the retained action surface;
 - retained `\alpha_s` and EW normalization lanes;
 - promoted no-import CKM closure.
 

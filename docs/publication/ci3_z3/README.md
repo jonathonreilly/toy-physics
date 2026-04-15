@@ -162,7 +162,7 @@ Retained backbone:
 - exact `I_3 = 0` theorem on the Hilbert surface
 - exact CPT theorem on the free staggered lattice
 - emergent Lorentz invariance with first anisotropic correction at dimension 6 and unique cubic-harmonic `\ell = 4` signature; on the retained hierarchy surface the correction is `(E/M_{Pl})^2` suppressed
-- exact strong CP / `theta_eff = 0` theorem on the axiom-determined action surface
+- exact strong CP / `theta_eff = 0` theorem on the retained axiom-determined action surface
 
 Reviewer-facing framing notes:
 
