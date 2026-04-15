@@ -137,7 +137,7 @@ conventions is packaged separately and does not modify the theorem stack.
 - DM ratio and relic companions
 - older bounded CKM mass-basis / Cabibbo / partial Jarlskog route history
 - cosmology companions
-- sharp companion predictions
+- individual companion lanes
 
 ## What Is Still Open
 

@@ -195,7 +195,7 @@ Observation-facing bounded portfolio:
 - zero-import `m_t = 169.4 GeV` on the current 2-loop bounded route
 - promoted CKM no-import closure package with full sharp `|V_us|`, `|V_cb|`, `|V_ub|`, `\delta`, and `J`
 - cosmology companions such as `\Omega_\Lambda`, `n_s`, `w = -1`
-- Higgs and sharp companion predictions
+- Higgs and individual companion lanes
 
 Live high-impact gates:
 

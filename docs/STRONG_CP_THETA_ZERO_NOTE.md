@@ -71,7 +71,7 @@ appears.
 
 Therefore: θ_bare = 0.
 
-### Leg C: θ is structurally absent from the axiom stack
+### Leg C: θ is structurally absent from the axiom-determined action
 
 The minimal axiom stack has exactly 5 inputs:
 
@@ -85,6 +85,14 @@ Axiom 5 fully determines the gauge action. Axiom 3 fully determines the
 fermion action. Both are real. Adding θ ∈ [0, 2π) to the action would
 require a 6th input that is not in the stack. The framework predicts
 θ = 0, not θ as a tunable parameter.
+
+The key point is not merely that θ is "unmentioned" — it is that the
+axiom-determined action is uniquely the Wilson plaquette (real) plus
+staggered-Dirac partition (real). A θ-term would require either a
+complex mass term (violating the reality of the staggered action, Leg A)
+or an imaginary topological term iθQ (violating the reality of the
+gauge weight, Leg B). Both are structurally excluded by the real-positive
+partition function, not merely omitted from a parameter list.
 
 The partition function is:
 
@@ -128,20 +136,46 @@ a strong-sector θ because:
 2. Mass eigenvalues remain real and positive → arg det(M) = 0
 3. The color sector (commutant) is structurally blind to the weak phase
 
+## Chiral Rotation Argument
+
+In the Standard Model, the strong CP problem involves basis freedom:
+a chiral rotation ψ → e^{iαγ₅} ψ can shift phase between θ_QCD and
+arg det(M). The physical quantity θ_eff = θ_QCD + arg det(M) is
+basis-independent, but the individual contributions are not.
+
+In the Cl(3)/Z³ framework, this basis freedom does not exist because:
+
+1. The staggered mass term m ψ̄ψ is real (H is real, all η_μ are real)
+2. A chiral rotation would introduce a complex mass m e^{iα}, making
+   the action complex
+3. A complex action would violate the real-positive partition function
+   established in Legs A and B
+4. Therefore: no chiral rotation is available to redistribute phase
+   between the mass term and the gauge sector
+
+The reality of the staggered action is not a basis choice — it is a
+structural property of the Cl(3)/Z³ framework (real Hamiltonian, real
+staggered phases). The framework has no axial U(1) phase freedom.
+
 ## Extension to the Interacting Theory
 
 The free-field CP result (CPT_EXACT_NOTE.md: [CP, H_free] = 0,
-PASS = 53, FAIL = 0 on L = 4, 6, 8) extends to the interacting theory:
+PASS = 53, FAIL = 0 on L = 4, 6, 8) extends to the interacting theory
+at tree level:
 
 1. Gauge action S_gauge is CP-even (Re Tr U_P is CP-even)
 2. Fermion-gauge coupling S_f is CP-even (real staggered phases η_μ,
    covariant CP transform of U_μ)
 3. Full action S = S_gauge + S_f is CP-even at tree level
-4. CP-even action generates only CP-even effective operators at all
-   loop orders
 
-This partially closes open item 1 of CPT_EXACT_NOTE.md for the CP
-sector.
+The standard argument that CP-even actions generate only CP-even
+effective operators applies, but an explicit one-loop verification
+in the full gauge+fermion theory is not computed here. This is a
+companion-level open item, not a gap in the θ = 0 argument (which
+rests on the real-positive partition function, not on loop-level CP).
+
+This partially addresses open item 1 of CPT_EXACT_NOTE.md for the CP
+sector. A full one-loop computation would close it completely.
 
 ## S³ Topology
 
@@ -214,7 +248,7 @@ fine-tuning problems by having zero free parameters.
 
 ## Commands Run
 
-```text
+```
 python3 scripts/frontier_strong_cp_theta_zero.py
 # Exit code: 0
 # PASS=56  FAIL=0

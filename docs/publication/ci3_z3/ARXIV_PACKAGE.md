@@ -33,7 +33,7 @@ Other bounded component families:
 
 - DM relic mapping
 - cosmology companions
-- sharp companion predictions
+- individual companion lanes
 
 Promoted quantitative package additions:
 

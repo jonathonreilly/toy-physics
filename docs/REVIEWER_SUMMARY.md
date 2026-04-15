@@ -89,7 +89,7 @@ Current quantitative statuses:
 - DM ratio and relic companions
 - promoted CKM no-import closure package, with older Cabibbo / NNI / partial Jarlskog notes retained only as route history
 - cosmology companions
-- sharp companion predictions
+- individual companion lanes
 
 ## Open Gates
 

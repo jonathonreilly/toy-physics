@@ -29,7 +29,7 @@ Use this file together with:
 |---|---|---|
 | retained local authority notes | current theorem core and retained manuscript-facing rows | fully captured |
 | quantitative authority notes | current `alpha_s`, EW, Yukawa/top, and Higgs/vacuum lanes | fully captured |
-| bounded local authority notes | DM, CKM, cosmology, and sharp companion rows | captured through bounded or frozen-out rows |
+| bounded local authority notes | DM, CKM, cosmology, and individually tracked companion rows | captured through bounded or frozen-out rows |
 | local historical notes and inventories | route history and planning material | captured as superseded or non-authority history |
 
 ## A. Promoted retained publication core
@@ -92,11 +92,12 @@ qualifiers explicitly.
 | Dark energy EOS `w` | spectral-gap cosmology | `w = -1` exactly | observationally near `-1` | bounded/conditional | same fixed-gap vacuum-scale route as `\Lambda`; not a separate cosmology blocker | arXiv companion only | [DARK_ENERGY_EOS_NOTE.md](../../DARK_ENERGY_EOS_NOTE.md), [COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md](../../COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md) | `F04` |
 | Cosmological constant `\Lambda` | spectral-gap cosmology | `1.59 x 10^-52 m^-2` | `1.09 x 10^-52 m^-2` | bounded/conditional | exact retained `S^3` spectral-gap coefficient, with remaining cosmology-scale identification still conditional | arXiv companion only | [COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md](../../COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md), [COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md](../../COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md) | `F04` |
 | graviton mass `m_g` | `S^3` / topology cosmology | `3.52 x 10^-33 eV` | strongest current bound `m_g < 1.76 x 10^-23 eV` | bounded/conditional | same fixed `1/R^2` vacuum/topology scale; still uses observed present cosmology for the numeric value | arXiv companion only | [GRAVITON_MASS_DERIVED_NOTE.md](../../GRAVITON_MASS_DERIVED_NOTE.md), [COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md](../../COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md) | `F04` |
-| Bekenstein-Hawking entropy | BH entropy companion | `S/S_max = 0.2364` (`5.4%` from `1/4`) | BH area law target | bounded | companion identification layer | arXiv companion only | [BH_ENTROPY_DERIVED_NOTE.md](../../BH_ENTROPY_DERIVED_NOTE.md) | `F07` |
-| gravitational decoherence | BMV-class gravity companion | `\gamma = 0.253 Hz`, `\Phi_{ent} = 12.4 rad` (BMV benchmark) | no direct measurement yet; benchmark budget `\gamma_{tot} < 0.5 Hz` | bounded | derived gravity chain + experimental benchmark geometry | later companion or arXiv appendix | [GRAV_DECOHERENCE_DERIVED_NOTE.md](../../GRAV_DECOHERENCE_DERIVED_NOTE.md) | `F07` |
-| Proton lifetime | proton decay companion | `\tau_p ~ 4 x 10^47 yr` | lower bounds only | bounded sharp prediction | imported EFT decay-rate layer | later companion or arXiv appendix | [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md) | `F07` |
-| Magnetic monopole mass | monopole companion | `1.43 M_{Pl}` | lower bounds only | bounded sharp prediction | companion phenomenology | later companion or arXiv appendix | [MONOPOLE_DERIVED_NOTE.md](../../MONOPOLE_DERIVED_NOTE.md) | `F07` |
-| GW echo null result | frozen-star / echo companion | no detectable echoes; the evanescent barrier drives coherent return effectively to zero | full-catalog stack remains null (`0.41 sigma` frozen-star, `1.29 sigma` Abedi-style) | bounded / off-scope companion | strong-field compact-object identification layer | later companion paper only | [GW_ECHO_NULL_RESULT_NOTE.md](../../GW_ECHO_NULL_RESULT_NOTE.md) | `F07` |
+| Bekenstein-Hawking entropy | BH entropy companion | `S/S_max = 0.2364` (`5.4%` from `1/4`) | BH area law target | bounded companion lane | companion identification layer | arXiv companion only | [BH_ENTROPY_DERIVED_NOTE.md](../../BH_ENTROPY_DERIVED_NOTE.md) | n/a |
+| gravitational decoherence | BMV-class gravity companion | `\gamma = 0.253 Hz`, `\Phi_{ent} = 12.4 rad` (BMV benchmark) | no direct measurement yet; benchmark budget `\gamma_{tot} < 0.5 Hz` | bounded companion lane | derived gravity chain + experimental benchmark geometry | later companion or arXiv appendix | [GRAV_DECOHERENCE_DERIVED_NOTE.md](../../GRAV_DECOHERENCE_DERIVED_NOTE.md) | n/a |
+| Proton lifetime | proton decay companion | `\tau_p ~ 4 x 10^47 yr` | lower bounds only | bounded companion lane | imported EFT decay-rate layer | later companion or arXiv appendix | [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md) | n/a |
+| Vacuum critical stability | Higgs-vacuum companion | critical-stability boundary on the current `\lambda(M_Pl)=0` route | Standard Model metastability comparator | bounded companion lane | inherits the bounded framework-side `y_t` / Higgs route | later companion or arXiv appendix | [VACUUM_CRITICAL_STABILITY_NOTE.md](../../VACUUM_CRITICAL_STABILITY_NOTE.md) | n/a |
+| Magnetic monopole mass | monopole companion | `1.43 M_{Pl}` | lower bounds only | bounded companion lane | companion phenomenology | later companion or arXiv appendix | [MONOPOLE_DERIVED_NOTE.md](../../MONOPOLE_DERIVED_NOTE.md) | n/a |
+| GW echo null result | frozen-star / echo companion | no detectable echoes; the evanescent barrier drives coherent return effectively to zero | full-catalog stack remains null (`0.41 sigma` frozen-star, `1.29 sigma` Abedi-style) | bounded / off-scope companion lane | strong-field compact-object identification layer | later companion paper only | [GW_ECHO_NULL_RESULT_NOTE.md](../../GW_ECHO_NULL_RESULT_NOTE.md) | n/a |
 
 ## C. Live flagship gates
 
@@ -113,7 +114,6 @@ qualifiers explicitly.
 | cosmology companion portfolio | conditional / bounded | `F04` |
 | Higgs and mass-spectrum companions beyond the promoted package | not part of the flagship spine | `F05` |
 | gravity companions beyond the retained core | bounded / later-paper material | `F06` |
-| sharp companion predictions (proton, Lorentz, BH, decoherence, monopole, null-echo phenomenology) | companion-only material | `F07` |
 | branch-local inventories and stale strategy docs | inventory only, not authority | `F08` |
 
 ## Matrix rule

@@ -134,7 +134,7 @@ ledger:
 - promoted CKM no-import closure package with full sharp `|V_us|`, `|V_cb|`, `|V_ub|`, `\delta`, and `J`
 - older bounded Cabibbo / NNI / partial Jarlskog notes retained only as route history
 - `\Omega_\Lambda`, `n_s`, `w = -1`, and `\Lambda` cosmology companions
-- Higgs, BH-entropy, proton-lifetime, Lorentz, and monopole companions
+- vacuum-critical-stability, BH-entropy, proton-lifetime, gravitational-decoherence, and monopole companions
 
 The current quantitative component stack on `main` is:
 
@@ -231,9 +231,8 @@ part of the retained flagship core:
 - superseded YT / Higgs route-history stack
 - CKM / flavor quantitative companion portfolio
 - cosmology companion portfolio
-- sharp companion predictions
+- individual companion lanes
 - gravity companions beyond retained weak-field plus restricted strong-field package
-- sharp companion predictions
 - branch-local inventories and stale strategy docs
 
 The package-control docs now make that split operational:

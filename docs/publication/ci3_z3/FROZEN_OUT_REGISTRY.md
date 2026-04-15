@@ -172,34 +172,6 @@ are still bounded.
 
 - full tensor-valued matching/completion theorem for general strong-field GR
 
-### `F07` Companion sharp predictions
-
-**Status:** frozen out of the flagship paper; later companion / arXiv appendix only.  
-**Why frozen out:** these are interesting, often sharp, and sometimes
-publication-worthy on their own, but they are not part of the flagship theorem
-spine.
-
-**Captured work:**
-
-- proton lifetime
-- BH entropy / RT ratio
-- gravitational decoherence
-- magnetic monopole mass
-- GW echo null result
-
-**Primary sources:**
-
-- [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md)
-- [LORENTZ_VIOLATION_DERIVED_NOTE.md](../../LORENTZ_VIOLATION_DERIVED_NOTE.md)
-- [BH_ENTROPY_DERIVED_NOTE.md](../../BH_ENTROPY_DERIVED_NOTE.md)
-- [GRAV_DECOHERENCE_DERIVED_NOTE.md](../../GRAV_DECOHERENCE_DERIVED_NOTE.md)
-- [MONOPOLE_DERIVED_NOTE.md](../../MONOPOLE_DERIVED_NOTE.md)
-- [GW_ECHO_NULL_RESULT_NOTE.md](../../GW_ECHO_NULL_RESULT_NOTE.md)
-
-**Needed to unfreeze:**
-
-- companion-paper decision plus explicit import-class framing
-
 ### `F08` Branch-local inventories and stale strategy docs
 
 **Status:** frozen out as publication authority; retained only as branch-local inventory.  

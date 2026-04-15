@@ -143,7 +143,7 @@ Current package status:
 - cosmology companions, now organized around one fixed-gap vacuum scale
   (`Lambda`, `w = -1`, graviton mass) plus the remaining matter bridge behind
   present-day `Omega_Lambda`
-- sharp companion predictions such as proton lifetime,
+- individual companion lanes such as proton lifetime,
   BH entropy, graviton decoherence, monopole mass
 
 ## Live Gates
