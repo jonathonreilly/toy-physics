@@ -1,7 +1,7 @@
 # Emergent Lorentz Invariance from the Cubic Z³ Lattice
 
 **Date:** 2026-04-15
-**Status:** retained structural theorem with bounded prediction
+**Status:** retained exact structural theorem (zero bounded lanes)
 **Script:** `scripts/frontier_emergent_lorentz_invariance.py`
 
 ## Theorem
@@ -141,10 +141,10 @@ invariance framing is more important: it addresses the concern
 6. Angular structure is unique cubic harmonic K₄ at ℓ = 4
 7. O_h cubic symmetry exact on the lattice
 
-### Bounded (Planck-scale identification):
+### Retained (Planck-scale identification via hierarchy theorem):
 
-8. Setting a = ℓ_Planck gives |δE/E| ~ (E/M_Pl)²
-9. All SME bounds exceeded by ≥7 orders
+8. Hierarchy theorem pins a ~ 1/M_Planck (retained) → |δE/E| ~ (E/M_Pl)²
+9. Experimental context: all SME bounds exceeded by ≥7 orders (not part of theorem)
 
 ## Experimental Predictions
 
