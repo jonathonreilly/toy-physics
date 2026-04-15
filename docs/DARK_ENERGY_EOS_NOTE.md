@@ -15,7 +15,7 @@ only. Not on the retained flagship claim surface.
 
 1. Spacetime = graph with S^3 spatial topology
 2. Dark energy = spectral gap of graph Laplacian: Lambda = lambda_1(S^3) = 3/R^2
-3. R = Hubble radius at graph formation, **fixed** thereafter
+3. R = fixed de Sitter / vacuum curvature radius, **fixed** thereafter
 4. Lambda is a true constant => rho_Lambda = const => w = -1
 
 ## Key Results
@@ -64,9 +64,9 @@ The spectral gap is topologically protected:
 
 ### Coincidence Problem (Part 6)
 
-Lambda = 3/R_H^2 gives Omega_Lambda = O(1) **by construction**.
-The coincidence is not a problem: the graph size IS the Hubble radius.
-The precise value Omega_Lambda = 0.685 reflects matter content (Omega_m = 0.315).
+Lambda = 3/R_Lambda^2 fixes the vacuum scale.
+The present-day fraction Omega_Lambda = H_inf^2/H_0^2 then reflects matter
+content rather than a second independent Lambda problem.
 
 ### Numerical Verification (Part 8)
 
@@ -88,7 +88,8 @@ If any experiment detects w != -1 at > 5 sigma, the framework's identification L
 
 ## Connection to Other Results
 
-- **CC prediction:** `frontier_cosmological_constant_spectral_gap.py` derives the canonical bounded/conditional `Lambda = 3/R_H^2` companion on `S^3`
+- **CC prediction:** `frontier_cosmological_constant_spectral_gap.py` derives the canonical bounded/conditional fixed-gap `Lambda = 3/R^2` companion on `S^3`
+- **scale reduction:** `frontier_cosmology_scale_identification.py` shows that `Lambda`, `w=-1`, and present-day `Omega_Lambda` reduce to one fixed-gap plus matter-content story
 - **Omega_Lambda:** `frontier_omega_lambda_derivation.py` addresses coincidence problem
 - **Expansion:** `frontier_cosmological_expansion.py` tests graph growth -> expansion
 

@@ -59,7 +59,7 @@ def main() -> int:
         (
             "Hubble-radius form",
             math.isclose(lambda_pred, lambda_pred_h0, rel_tol=1e-15, abs_tol=0.0),
-            "Lambda_pred = 3/R_H^2 = 3 H_0^2 / c^2 exactly",
+            "the pure de Sitter present-epoch comparison satisfies Lambda_pred = 3/R_H^2 = 3 H_0^2 / c^2 exactly",
         ),
         (
             "positive finite prediction",
@@ -94,7 +94,7 @@ def main() -> int:
     print()
     print("Interpretation")
     print("- Exact internal step: on retained S^3, lambda_1 = 3/R^2.")
-    print("- Conditional cosmology step: identifying R with a Hubble-scale radius.")
+    print("- Present-epoch comparison step: compare the fixed vacuum scale to H_0.")
     print("- The remaining O(1) factor is the same matter-fraction issue seen in Omega_Lambda.")
     print("- This runner is the canonical positive spectral-gap companion, not the vacuum-energy audit.")
     print()

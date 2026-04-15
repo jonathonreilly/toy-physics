@@ -7,9 +7,9 @@ QUESTION: Does the framework predict w = -1 exactly, or are there
 corrections? What does DESI (2024-2026) data say?
 
 FRAMEWORK RECAP:
-  Lambda = lambda_1(S^3) = 3/R_H^2
+  Lambda = lambda_1(S^3) = 3/R^2
   where lambda_1 is the first nonzero eigenvalue of the Laplacian on S^3
-  and R_H = c/H_0 is the Hubble radius.
+  and the fixed vacuum scale is the de Sitter curvature radius R = c/H_inf.
 
   This is a CONSTANT for fixed topology and fixed R. But:
     (a) Lattice discretization gives corrections ~ (a/L)^2
@@ -485,16 +485,16 @@ def part6_coincidence():
     """
     The cosmic coincidence: why is Omega_Lambda ~ Omega_m NOW?
 
-    In the framework:
-      Lambda = 3/R_f^2 where R_f is the graph formation scale.
-      R_f ~ c/H_0 (from the CC calculation).
+    On the cleaned cosmology lane:
+      Lambda = 3/R_Lambda^2 where R_Lambda is the fixed de Sitter/vacuum scale.
+      H_inf = c/R_Lambda, so Lambda = 3 H_inf^2/c^2.
 
-    This means Lambda ~ H_0^2/c^2, which is DEFINED to give
-    Omega_Lambda = O(1) today. The coincidence is built into
-    the framework: the graph size IS the Hubble radius.
+    Therefore
+      Omega_Lambda = Lambda c^2/(3 H_0^2) = H_inf^2/H_0^2.
 
-    But why? Because the graph was formed at the cosmological horizon.
-    The causal structure of the universe sets the graph size.
+    So the O(1) present-day value is not a second Lambda mystery.
+    It is the present-vs-asymptotic vacuum fraction, i.e. a matter-content
+    question.
     """
     print("\n" + "=" * 72)
     print("PART 6: The Coincidence Problem")
@@ -520,21 +520,10 @@ def part6_coincidence():
 
     # The coincidence in the framework
     print(f"\n  Framework explanation:")
-    print(f"    Lambda = 3/R_f^2 with R_f set by causal horizon at formation")
-    print(f"    The Hubble radius R_H = c/H evolves:")
-    print(f"      Matter era: R_H ~ t ~ a^(3/2)")
-    print(f"      Lambda era: R_H -> c/H_inf = const (de Sitter)")
-    print(f"    The graph formed when R_H reached its maximum growth rate,")
-    print(f"    which is near the matter-Lambda transition.")
-
-    # The natural timescale for graph formation
-    # If the graph forms at the epoch when the expansion rate H*R = c,
-    # this defines a unique moment
-    print(f"\n  Graph formation epoch:")
-    print(f"    The graph 'crystallizes' when the universe reaches")
-    print(f"    thermodynamic equilibrium at cosmological scales.")
-    print(f"    In de Sitter, the Hubble horizon is FIXED: R_H = c/H_inf.")
-    print(f"    The graph's spatial extent is set by this fixed horizon.")
+    print(f"    Fixed vacuum scale: Lambda = 3/R_Lambda^2")
+    print(f"    De Sitter relation: H_inf = c/R_Lambda")
+    print(f"    Present-day fraction: Omega_Lambda = H_inf^2/H_0^2")
+    print(f"    So the remaining nontrivial bridge is Omega_m, not Lambda.")
 
     # The de Sitter temperature
     T_dS = hbar * H_0 / (2 * math.pi * 1.38e-23)  # Kelvin
@@ -549,11 +538,11 @@ def part6_coincidence():
         OL_a = OL / E2
         print(f"    a = {a:6.3f}  (z = {1/a - 1:8.2f}):  Omega_Lambda = {OL_a:.6f}")
 
-    print(f"\n  RESULT: The coincidence is not a problem in the framework.")
-    print(f"  Lambda = 3/R_H^2 is set by the causal horizon, which IS")
-    print(f"  the Hubble radius. By construction, Lambda * R_H^2 = 3,")
-    print(f"  giving Omega_Lambda = O(1). The precise value 0.685")
-    print(f"  depends on the matter content (Omega_m = 0.315).")
+    print(f"\n  RESULT: The coincidence is reduced, not duplicated.")
+    print(f"  Lambda fixes the asymptotic vacuum scale R_Lambda and H_inf.")
+    print(f"  Present-day Omega_Lambda is then H_inf^2/H_0^2.")
+    print(f"  The precise value 0.685 therefore depends on matter content")
+    print(f"  (Omega_m = 0.315), not on a second independent Lambda input.")
 
     return {"a_eq": a_eq, "z_eq": z_eq, "t_eq_Gyr": t_eq/Gyr}
 
@@ -798,7 +787,7 @@ def synthesis():
     1. Spacetime is a graph with S^3 spatial topology
     2. Dark energy = spectral gap of the graph Laplacian
        Lambda = lambda_1(S^3) = 3/R^2
-    3. R = Hubble radius at formation, FIXED thereafter
+    3. R = fixed vacuum/de Sitter scale, FIXED thereafter
     4. Lambda is a TRUE constant => w = -1 EXACTLY
 
   CORRECTIONS:
@@ -814,8 +803,10 @@ def synthesis():
     4. No dark energy clustering, no EDE, no phantom crossing
 
   COINCIDENCE PROBLEM:
-    Lambda = 3/R_H^2 by construction => Omega_Lambda = O(1) today
-    The precise value 0.685 depends on matter content, not Lambda
+    Lambda fixes the asymptotic de Sitter scale H_inf = c/R
+    Present-day Omega_Lambda = H_inf^2/H_0^2
+    The precise value 0.685 therefore depends on matter content, not a
+    second independent Lambda mechanism
 
   FALSIFIABILITY:
     If any experiment detects w != -1 at > 5 sigma:
@@ -876,8 +867,9 @@ def main():
     DESI measures w != -1 at > 5 sigma => framework falsified
     DESI converges to w = -1 => consistent (not uniquely confirmed)
 
-  The cosmic coincidence (Omega_Lambda ~ Omega_m today) is natural:
-  Lambda = 3/R_H^2 gives Omega_Lambda = O(1) by construction.
+  The cosmic coincidence is reduced to matter content:
+  Lambda fixes the asymptotic de Sitter scale, and present-day
+  Omega_Lambda is the ratio H_inf^2/H_0^2.
 """)
 
 

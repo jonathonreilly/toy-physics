@@ -118,7 +118,8 @@ beyond the retained flagship backbone.
 
 **Needed to unfreeze:**
 
-- same-surface derivation of the remaining cosmology bridges
+- same-surface derivation of the remaining cosmological scale bridge
+- closure of the matter-content bridge behind present-day `\Omega_\Lambda`
 - removal of conditional input dependence where applicable
 
 ### `F05` Higgs and mass-spectrum companions beyond the promoted package

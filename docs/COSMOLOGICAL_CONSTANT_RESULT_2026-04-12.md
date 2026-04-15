@@ -14,10 +14,17 @@ is
 
 `lambda_1(S^3_R) = 3 / R^2`.
 
-If the cosmological radius is identified with a Hubble-scale radius
-`R = c / H_0`, the framework gives the bounded/conditional companion value
+If the vacuum scale is identified with the de Sitter curvature radius
+`R_Lambda = c / H_inf`, the same-surface relation is
 
-`Lambda_pred = 3 H_0^2 / c^2 = 1.59 x 10^-52 m^-2`.
+`Lambda = 3 H_inf^2 / c^2`.
+
+The older present-epoch comparison
+
+`Lambda_pred = 3 H_0^2 / c^2 = 1.59 x 10^-52 m^-2`
+
+is therefore the pure de Sitter limit `H_inf = H_0`, not the general mixed
+matter-vacuum relation.
 
 Against the current observational comparator
 
@@ -41,8 +48,8 @@ than the usual UV-vacuum `10^122` catastrophe.
 ### Still conditional
 
 1. The cosmological radius identification is not yet derived on the same
-   theorem surface. The current companion uses the observed Hubble scale:
-   `R = c / H_0`, or equivalently a nearby formation-scale version.
+   theorem surface. The current companion now distinguishes the vacuum/de
+   Sitter scale `R_Lambda = c/H_inf` from the observed present scale `c/H_0`.
 2. The remaining `O(1)` factor is the same matter-fraction issue that appears
    in the bounded `Omega_Lambda` chain:
    [OMEGA_LAMBDA_DERIVATION_NOTE.md](./OMEGA_LAMBDA_DERIVATION_NOTE.md).
@@ -68,14 +75,15 @@ The framework changes the object being identified as `Lambda`:
 | Standard UV picture | Current companion route |
 |---|---|
 | vacuum-energy sum | spectral gap of the retained spatial graph/topology |
-| UV-cutoff dominated | IR/geometric scale dominated |
-| misses by `10^122` | lands at an `O(1)` ratio |
+| UV-cutoff dominated | IR/geometric vacuum-scale dominated |
+| misses by `10^122` | reduces to an `O(1)` matter-fraction comparison |
 
 The clean current claim is therefore:
 
 > on the retained `S^3` surface, the framework supplies a bounded/conditional
-> IR-geometric cosmological-constant companion with exact coefficient `3`
-> and Hubble-scale value `3 H_0^2 / c^2`.
+> IR-geometric cosmological-constant companion with exact coefficient `3`,
+> exact vacuum-scale relation `Lambda = 3 H_inf^2 / c^2`, and a present-epoch
+> `O(1)` matter-fraction comparison to `H_0`.
 
 ## Relationship To Other Cosmology Companions
 
@@ -84,6 +92,9 @@ The clean current claim is therefore:
 - [OMEGA_LAMBDA_DERIVATION_NOTE.md](./OMEGA_LAMBDA_DERIVATION_NOTE.md):
   matter fraction and flatness convert the same mechanism into the bounded
   `Omega_Lambda` chain
+- [COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md](./COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md):
+  unifies the vacuum scale, `w = -1`, and present-day `Omega_Lambda`
+  reduction on one cosmology-lane surface
 - [GRAVITON_MASS_DERIVED_NOTE.md](./GRAVITON_MASS_DERIVED_NOTE.md):
   the graviton-mass companion reuses the same `1/R^2` spectral/topological
   structure
