@@ -1,7 +1,7 @@
 # `y_t` Bridge UV Class Uniqueness Note
 
-**Date:** 2026-04-15  
-**Status:** bounded support note  
+**Date:** 2026-04-15
+**Status:** bounded support note
 **Primary runner:** `scripts/frontier_yt_bridge_uv_class_uniqueness.py`
 
 ## Role

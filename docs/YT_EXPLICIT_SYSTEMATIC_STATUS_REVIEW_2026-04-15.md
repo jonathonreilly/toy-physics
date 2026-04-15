@@ -1,7 +1,7 @@
 # YT Bound Status Review
 
-**Date:** 2026-04-15  
-**Branch:** `codex/yt-unbounded-main-package-2026-04-15`  
+**Date:** 2026-04-15
+**Branch:** `codex/yt-unbounded-main-package-2026-04-15`
 **Scope:** reviewer-grade analysis of the live `y_t` lane on the current branch
 after the new bridge stack
 
@@ -37,20 +37,20 @@ So the current state is:
 The following are the strongest live results on this branch that should be
 treated as theorem-grade or near-theorem-grade:
 
-1. **Lattice-scale ratio theorem**  
+1. **Lattice-scale ratio theorem**
    `y_t / g_s = 1 / sqrt(6)` from the `Cl(3)` trace identity.
 
-2. **Boundary selection theorem**  
+2. **Boundary selection theorem**
    the physical crossover endpoint is `v`, not `M_Pl`.
 
-3. **QFP insensitivity theorem**  
+3. **QFP insensitivity theorem**
    the backward-Ward transport is stable to bounded coefficient changes at the
    few-percent level.
 
-4. **One-shot gauge-crossover companion no-go**  
+4. **One-shot gauge-crossover companion no-go**
    the self-consistent one-shot route does not close the lane by itself.
 
-5. **Leading-order selector explanation**  
+5. **Leading-order selector explanation**
    the bridge Hessian note explains why the exact interacting bridge induces a
    positive local quadratic selector on the forced UV window at leading order.
 

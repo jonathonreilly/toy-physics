@@ -1,7 +1,7 @@
 # `y_t` Explicit Systematic Budget Note
 
-**Date:** 2026-04-15  
-**Status:** branch authority for `derived with explicit systematic` wording  
+**Date:** 2026-04-15
+**Status:** branch authority for `derived with explicit systematic` wording
 **Primary runner:** `scripts/frontier_yt_explicit_systematic_budget.py`
 
 ## Role

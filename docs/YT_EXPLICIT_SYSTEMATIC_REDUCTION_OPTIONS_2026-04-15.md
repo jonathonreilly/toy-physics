@@ -1,7 +1,7 @@
 # YT Bound Reduction Options
 
-**Date:** 2026-04-15  
-**Branch:** `codex/yt-unbounded-main-package-2026-04-15`  
+**Date:** 2026-04-15
+**Branch:** `codex/yt-unbounded-main-package-2026-04-15`
 **Purpose:** list the concrete routes by which the live `y_t` lane could move
 from the current explicit bounded bridge budget to a narrower bound or to
 `derived with explicit systematic`

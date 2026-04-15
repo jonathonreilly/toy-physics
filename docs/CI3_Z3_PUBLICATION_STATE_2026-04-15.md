@@ -1,6 +1,6 @@
 # CI(3) / Z^3 Publication State
 
-**Date:** 2026-04-14  
+**Date:** 2026-04-14
 **Status:** main-branch publication authority for the current flagship paper surface
 
 ## Framework sentence
