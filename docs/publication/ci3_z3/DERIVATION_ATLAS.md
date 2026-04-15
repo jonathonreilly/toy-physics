@@ -16,6 +16,10 @@ Use this file when the question is:
 - what is the safe claim boundary of that subderivation?
 - which note/runner is the canonical authority on `main`?
 
+For one-place reusable numeric values on `main`, use:
+
+- [USABLE_DERIVED_VALUES_INDEX.md](./USABLE_DERIVED_VALUES_INDEX.md)
+
 For paper claims and release evidence, use:
 
 - [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
@@ -197,6 +201,12 @@ forward explicitly.
 | Tool / subderivation | Safe statement | Status / import class | Reusable for | Authority | Primary runner |
 |---|---|---|---|---|---|
 | Optional textbook-convention comparison | packaging-only comparison against alternate textbook gauge-fixings, normalizations, and presentation conventions; does not alter the closed canonical textbook continuum target | packaging-only; not a theorem | reviewer-facing convention comparison, manuscript appendix wording | [UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md](../../UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md) | n/a |
+
+## J. Atlas helper indexes
+
+| Tool / subderivation | Safe statement | Status / import class | Reusable for | Authority | Primary runner |
+|---|---|---|---|---|---|
+| Usable derived values index | canonical numeric values on `main` with claim class, import class, and authority are listed in one place for downstream reuse | packaging helper; not a theorem | repo-wide numeric reuse, cleanup, manuscript consistency, future lane construction | [USABLE_DERIVED_VALUES_INDEX.md](./USABLE_DERIVED_VALUES_INDEX.md) | n/a |
 
 ## Atlas rule
 
