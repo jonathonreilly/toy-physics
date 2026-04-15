@@ -249,6 +249,23 @@ configurations as an explicit audit.
 12. θ_eff = 0 on the retained action surface
 13. CP violation is confined to the weak sector via CKM
 
+## External Consistency Support
+
+These items strengthen the interpretation of the retained theorem surface, but
+they are **not** promoted here as new framework-native closure theorems.
+
+1. **Vafa-Witten consistency support.** The retained strong sector is
+   vector-like and uses a real-positive fermion determinant, so the
+   Vafa-Witten no-spontaneous-CP-breaking argument is consistent with the
+   retained `θ_eff = 0` surface.
+
+2. **Topological-sector consistency support.** In a confining large-volume
+   regime, the standard extensive-free-energy argument gives Gaussian sector
+   weights `Z_Q / Z_0 ~ exp(-Q^2 / (2 χ_t V))`. This is consistent with the
+   retained `θ = 0` minimum, but the project does **not** yet claim a
+   framework-native derivation of the full `Z_Q` measure on the physical
+   `S^3` lattice.
+
 ## What Remains Open
 
 1. **Neutron EDM bounded lane.** The framework predicts θ_eff = 0, hence
@@ -262,7 +279,12 @@ configurations as an explicit audit.
    Z = Σ_Q Z_Q is established, the detailed instanton measure Z_Q on
    the physical S³ lattice is not computed here.
 
-3. **Axion necessity beyond the retained action surface.** The theorem here is
+3. **Radiative / chiral closure beyond support level.** The current repo has
+   strong consistency support for radiative stability of the retained
+   `θ_eff = 0` surface, but it does not yet promote a framework-native
+   interacting chiral/anomaly closure theorem.
+
+4. **Axion necessity beyond the retained action surface.** The theorem here is
    only that the retained action surface already gives `θ_eff = 0`. Whether
    broader axion-model exclusion follows is a separate question, not part of
    this theorem.
@@ -293,6 +315,16 @@ surface tightly enough to remove a bare strong-sector CP phase there.
 3. **No bare strong-sector CP phase on the retained action surface.**
    Any additional axion-style extension would be extra structure beyond the
    theorem proved here.
+
+## References
+
+- Vafa, C. and Witten, E. (1984). *Restrictions on Symmetry Breaking in
+  Vector-Like Gauge Theories*, PRL 53, 535.
+- Leutwyler, H. and Smilga, A. (1992). *Spectrum of Dirac operator and role of
+  winding number in QCD*, PRD 46, 5607.
+- Witten, E. (1979). *Current algebra theorems for the U(1) Goldstone boson*,
+  Nucl. Phys. B 156, 269.
+- Veneziano, G. (1979). *U(1) without instantons*, Nucl. Phys. B 159, 213.
 
 ## Commands Run
 

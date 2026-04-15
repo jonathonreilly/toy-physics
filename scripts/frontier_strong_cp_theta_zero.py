@@ -38,7 +38,7 @@ RELATION TO CKM CP VIOLATION:
   because the mass eigenvalues remain real and positive.
 
 PStack experiment: frontier-strong-cp-theta-zero
-Self-contained: numpy only.
+Repo-local: numpy plus canonical plaquette constants.
 """
 
 from __future__ import annotations
@@ -48,6 +48,17 @@ import numpy as np
 from canonical_plaquette_surface import CANONICAL_ALPHA_BARE, CANONICAL_ALPHA_S_V, CANONICAL_PLAQUETTE, CANONICAL_U0
 
 np.set_printoptions(precision=10, linewidth=120, suppress=True)
+
+
+def safe_slogdet(M):
+    """np.linalg.slogdet with overflow warnings suppressed.
+
+    The sign / phase is the quantity of interest for the θ = 0 audit.
+    Large matrices with small mass can produce harmless overflow in log|det|.
+    """
+    with np.errstate(divide="ignore", over="ignore", invalid="ignore"):
+        return np.linalg.slogdet(M)
+
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
@@ -280,7 +291,7 @@ def test_fermion_determinant(L_values=(4,)):
         max_real = np.max(np.abs(eigs_free.real))
         check(f"L={L} free D has purely imaginary eigenvalues", max_real < 1e-12, f"max |Re(eig)| = {max_real:.2e}")
 
-        sign_f, logdet_f = np.linalg.slogdet(D_free + mass * np.eye(N))
+        sign_f, logdet_f = safe_slogdet(D_free + mass * np.eye(N))
         det_phase = np.angle(sign_f)
         check(f"L={L} free det(D + mI) is real positive", abs(det_phase) < 1e-12, f"phase = {det_phase:.2e}, log|det| = {logdet_f:.4f}")
 
@@ -295,13 +306,13 @@ def test_fermion_determinant(L_values=(4,)):
             max_real_g = np.max(np.abs(eigs_g.real))
             check(f"L={L} gauge cfg {cfg}: D[U] has purely imaginary eigenvalues", max_real_g < 1e-10, f"max |Re(eig)| = {max_real_g:.2e}")
 
-            sign_g, _ = np.linalg.slogdet(D_rand + mass * np.eye(N))
+            sign_g, _ = safe_slogdet(D_rand + mass * np.eye(N))
             phase_g = np.angle(sign_g)
             check(f"L={L} gauge cfg {cfg}: det(D[U] + mI) is real positive", abs(phase_g) < 1e-10, f"phase = {phase_g:.2e}")
 
         theta_test = 0.3
         m_complex = mass * np.exp(1j * theta_test)
-        sign_c, _ = np.linalg.slogdet(D_free + m_complex * np.eye(N))
+        sign_c, _ = safe_slogdet(D_free + m_complex * np.eye(N))
         phase_c = np.angle(sign_c)
         check(f"L={L} complex mass (θ={theta_test}): det acquires nontrivial phase", abs(phase_c) > 0.01, f"phase = {phase_c:.4f} (nonzero confirms θ ≠ 0 breaks reality)")
 
@@ -527,7 +538,7 @@ def test_3p1_extension():
         antiherm = float(np.max(np.abs(D + D.conj().T)))
         max_antiherm = max(max_antiherm, antiherm)
 
-        sign, _ = np.linalg.slogdet(D + mass * np.eye(D.shape[0]))
+        sign, _ = safe_slogdet(D + mass * np.eye(D.shape[0]))
         phase = abs(float(np.angle(sign)))
         max_phase = max(max_phase, phase)
 
