@@ -16,8 +16,8 @@ submission without re-litigating claim status at the last minute.
 - every bounded lane is labeled `bounded` in both the manuscript and GitHub
 - no stale review packet or pitch memo is linked as science authority
 - every stale-authority family is either quarantined in
-  [STALE_AUTHORITY_AUDIT_2026-04-14.md](./STALE_AUTHORITY_AUDIT_2026-04-14.md)
-  or documented in [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md)
+  [STALE_AUTHORITY_AUDIT_2026-04-14.md](../../work_history/publication/STALE_AUTHORITY_AUDIT_2026-04-14.md)
+  or documented in [Historical frozen-out registry](../../work_history/publication/FROZEN_OUT_REGISTRY.md)
 
 ## 2. Public arXiv package
 

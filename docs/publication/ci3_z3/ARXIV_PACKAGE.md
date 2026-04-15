@@ -15,7 +15,6 @@ live-gate bookkeeping.
 - [Derivation atlas](./DERIVATION_ATLAS.md)
 - [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
 - [Full claim ledger](./FULL_CLAIM_LEDGER.md)
-- [Frozen-out registry](./FROZEN_OUT_REGISTRY.md)
 - [Results index](./RESULTS_INDEX.md)
 
 Retained core notes and runners.
@@ -26,8 +25,8 @@ Current quantitative component package:
 - [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md)
 - [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
-- [YT_QFP_INSENSITIVITY_THEOREM.md](../../YT_QFP_INSENSITIVITY_THEOREM.md)
-- [HIGGS_VACUUM_PROMOTED_NOTE.md](../../HIGGS_VACUUM_PROMOTED_NOTE.md)
+- [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md](../../YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)
+- [HIGGS_VACUUM_BOUNDED_NOTE.md](../../HIGGS_VACUUM_BOUNDED_NOTE.md)
 
 Other bounded component families:
 
@@ -38,6 +37,11 @@ Other bounded component families:
 Promoted quantitative package additions:
 
 - CKM no-import closure
+
+Optional historical context:
+
+- [Historical frozen-out registry](../../work_history/publication/FROZEN_OUT_REGISTRY.md)
+- [Historical remote-branch audit](../../work_history/publication/REMOTE_BRANCH_AUDIT_2026-04-14.md)
 
 ## Exclude Or Quarantine
 

@@ -1,6 +1,8 @@
-# Frozen-Out Registry
+# Historical Frozen-Out Registry
 
 **Date:** 2026-04-15
+**Status:** historical publication registry; not part of the live front-door
+read path
 **Purpose:** explicit registry of significant work that exists in the repo but
 is not promoted into the current flagship paper surface.
 

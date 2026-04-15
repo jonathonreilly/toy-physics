@@ -11,6 +11,11 @@ Use this order on `main`:
 7. [Derivation / validation map](publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
 8. [Derivation atlas](publication/ci3_z3/DERIVATION_ATLAS.md)
 
+If you want historical route material after that, use the explicit history
+bucket:
+
+- [work_history/README.md](work_history/README.md)
+
 For framework assumptions, read the one-axiom reduction notes first:
 
 - [SINGLE_AXIOM_INFORMATION_NOTE.md](SINGLE_AXIOM_INFORMATION_NOTE.md)
@@ -42,8 +47,8 @@ If you are checking the quantitative lanes directly, use:
 - [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md)
 - [YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
-- [YT_QFP_INSENSITIVITY_THEOREM.md](YT_QFP_INSENSITIVITY_THEOREM.md)
-- [HIGGS_VACUUM_PROMOTED_NOTE.md](HIGGS_VACUUM_PROMOTED_NOTE.md)
+- [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md](YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)
+- [HIGGS_VACUUM_BOUNDED_NOTE.md](HIGGS_VACUUM_BOUNDED_NOTE.md)
 
 If you want the shortest publication-facing inventory of what the framework
 already predicts beyond the retained theorem core, use:

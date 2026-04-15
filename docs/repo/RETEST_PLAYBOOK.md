@@ -11,7 +11,7 @@ Current rerun-required bug ledger:
 
 Before rerunning anything, identify the lane in:
 
-- [`docs/repo/LANE_STATUS_BOARD.md`](LANE_STATUS_BOARD.md)
+- [`docs/work_history/repo/LANE_STATUS_BOARD.md`](../work_history/repo/LANE_STATUS_BOARD.md)
 
 Do not start from filenames alone. The same bug class can mean different
 things on:
@@ -105,7 +105,7 @@ If a bug changes a retained claim, update all affected surfaces:
 - lane note for the runner
 - [`docs/FULL_TEST_MATRIX_2026-04-10.md`](../FULL_TEST_MATRIX_2026-04-10.md)
 - [`docs/SESSION_SYNTHESIS_2026-04-10_FINAL.md`](../SESSION_SYNTHESIS_2026-04-10_FINAL.md)
-- [`docs/repo/LANE_STATUS_BOARD.md`](LANE_STATUS_BOARD.md)
+- [`docs/work_history/repo/LANE_STATUS_BOARD.md`](../work_history/repo/LANE_STATUS_BOARD.md)
 - [`docs/repo/LANE_REGISTRY.yaml`](LANE_REGISTRY.yaml)
 
 Also update these when the bug is sign-related:

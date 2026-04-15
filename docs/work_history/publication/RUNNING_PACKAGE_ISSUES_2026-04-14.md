@@ -1,7 +1,8 @@
-# Running Package Issues
+# Historical Running Package Issues
 
 **Date:** 2026-04-14  
-**Purpose:** live consistency register for publication/package mismatches found
+**Status:** historical package-audit log; not part of the live authority path
+**Purpose:** consistency register for publication/package mismatches found
 during the main-branch audit.
 
 This file records package issues whether they are already fixed here or still

@@ -1,7 +1,7 @@
 # Color-Singlet Projection Correction to y_t
 
 **Date:** 2026-04-14
-**Status:** BOUNDED quantitative lane -- zero SM imports, but inherits an approximately `3%` QFP/RGE-surrogate systematic from [YT_QFP_INSENSITIVITY_THEOREM.md](./YT_QFP_INSENSITIVITY_THEOREM.md)
+**Status:** BOUNDED quantitative lane -- zero SM imports, but inherits an approximately `3%` QFP/RGE-surrogate systematic from [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md](./YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)
 **Script:** `scripts/frontier_yt_color_projection_correction.py` (7/7 PASS)
 
 ---

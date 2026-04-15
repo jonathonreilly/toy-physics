@@ -41,7 +41,7 @@ unless the package links to them directly.
 | [DERIVATION_ATLAS.md](./DERIVATION_ATLAS.md) | reusable theorem / subderivation toolbox |
 | [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md) | retained evidence contract plus bounded live-gate capture |
 | [RESULTS_INDEX.md](./RESULTS_INDEX.md) | note / runner map for captured components |
-| [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md) | explicit registry of excluded families |
+| [Historical frozen-out registry](../../work_history/publication/FROZEN_OUT_REGISTRY.md) | explicit registry of excluded families |
 
 ## Promotion Rule For New Science
 
@@ -56,7 +56,7 @@ Any newly landed component should enter the package in this order:
 5. if it belongs to a bounded live-gate stack, add every required component to:
    [DERIVATION_ATLAS.md](./DERIVATION_ATLAS.md) and
    [RESULTS_INDEX.md](./RESULTS_INDEX.md)
-6. if it stays excluded, update [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md)
+6. if it stays excluded, update [Historical frozen-out registry](../../work_history/publication/FROZEN_OUT_REGISTRY.md)
 7. only then update manuscript prose
 
 ## Replacement Rule

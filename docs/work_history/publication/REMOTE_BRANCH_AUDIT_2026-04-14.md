@@ -1,6 +1,8 @@
-# Remote Branch Audit
+# Historical Remote Branch Audit
 
 **Date:** 2026-04-14  
+**Status:** historical branch-capture audit; not part of the live front-door
+authority path
 **Scope:** repo-wide publication audit across all current remote branches and
 live workstreams.
 

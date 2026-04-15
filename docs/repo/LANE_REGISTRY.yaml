@@ -1,7 +1,7 @@
 version: "2026-04-11"
 default_entrypoints:
   - docs/START_HERE.md
-  - docs/repo/LANE_STATUS_BOARD.md
+  - docs/work_history/repo/LANE_STATUS_BOARD.md
   - docs/CANONICAL_HARNESS_INDEX.md
   - docs/repo/RETEST_PLAYBOOK.md
 lanes:

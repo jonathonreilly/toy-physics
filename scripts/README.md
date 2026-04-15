@@ -44,6 +44,6 @@ That is the fastest way to know:
 - Do not assume a top-level script is canonical just because it exists.
 - Check:
   - [`docs/CANONICAL_HARNESS_INDEX.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/CANONICAL_HARNESS_INDEX.md)
-  - [`docs/repo/LANE_STATUS_BOARD.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/repo/LANE_STATUS_BOARD.md)
+  - [`docs/repo/LANE_STATUS_BOARD.md`](/Users/jonreilly/Projects/Physics/docs/work_history/repo/LANE_STATUS_BOARD.md)
 - If a bug affects semantics, use:
   - [`docs/repo/RETEST_PLAYBOOK.md`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/docs/repo/RETEST_PLAYBOOK.md)

@@ -152,7 +152,7 @@ Lambda is genuinely negligible for the y_t prediction.
 ## Part 4: QFP Insensitivity Theorem (Supporting Evidence)
 
 The quasi-fixed-point insensitivity theorem
-(`docs/YT_QFP_INSENSITIVITY_THEOREM.md`, 14/14 PASS) proves that
+(`docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`, 14/14 PASS) proves that
 the backward Ward prediction y_t(v) = 0.973 is robust against all
 sources of UV and EW uncertainty.
 
@@ -207,7 +207,7 @@ lattice RG / taste-staircase evolution"
    against modifications of the running above v. Any flow sharing the
    same SU(3) group structure, QFP topology, gauge anchor alpha_s(v),
    and Ward BC gives the same y_t(v) within the sensitivity budget.
-   [YT_QFP_INSENSITIVITY_THEOREM.md, 14/14 PASS]
+   [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md, 14/14 PASS]
 
 4. **EW Coupling Derivation**: g_1(v) derived (zero imports, +27%).
    g_2(v) blocked by Landau pole (needs SU(2) non-perturbative matching).

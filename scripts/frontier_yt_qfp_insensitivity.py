@@ -31,7 +31,7 @@ RESOLUTION:
         ANY reasonable interpolation satisfying the Ward BC and gauge
         anchor gives the same y_t(v) within bounded uncertainty.
 
-Authority note: docs/YT_QFP_INSENSITIVITY_THEOREM.md
+Authority note: docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md
 Self-contained: numpy + scipy only.
 PStack experiment: yt-qfp-insensitivity
 """

@@ -29,8 +29,13 @@ Framework statement:
 10. [Derivation atlas](./DERIVATION_ATLAS.md)
 11. [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
 12. [Full claim ledger](./FULL_CLAIM_LEDGER.md)
-13. [Frozen-out registry](./FROZEN_OUT_REGISTRY.md)
-14. [Results index](./RESULTS_INDEX.md)
+13. [Results index](./RESULTS_INDEX.md)
+
+## Optional History Bucket
+
+- [Historical frozen-out registry](../../work_history/publication/FROZEN_OUT_REGISTRY.md)
+- [Historical remote-branch audit](../../work_history/publication/REMOTE_BRANCH_AUDIT_2026-04-14.md)
+- [Historical stale-authority audit](../../work_history/publication/STALE_AUTHORITY_AUDIT_2026-04-14.md)
 
 For one-note gravity/gauge continuum positioning across the current package,
 use [CONTINUUM_IDENTIFICATION_NOTE.md](../../CONTINUUM_IDENTIFICATION_NOTE.md).
@@ -65,8 +70,8 @@ The current canonical quantitative stack is modular:
 - [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md)
 - [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
-- [YT_QFP_INSENSITIVITY_THEOREM.md](../../YT_QFP_INSENSITIVITY_THEOREM.md)
-- [HIGGS_VACUUM_PROMOTED_NOTE.md](../../HIGGS_VACUUM_PROMOTED_NOTE.md)
+- [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md](../../YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)
+- [HIGGS_VACUUM_BOUNDED_NOTE.md](../../HIGGS_VACUUM_BOUNDED_NOTE.md)
 - [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
 
 Current package status:

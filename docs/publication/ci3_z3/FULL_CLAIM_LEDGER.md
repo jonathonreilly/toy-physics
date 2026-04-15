@@ -15,7 +15,7 @@ Use this file together with:
 
 - [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
 - [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
-- [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md)
+- [Historical frozen-out registry](../../work_history/publication/FROZEN_OUT_REGISTRY.md)
 - [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
 - [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
 - [PUBLICATION_CONTROL_PLANE.md](./PUBLICATION_CONTROL_PLANE.md)
@@ -86,7 +86,7 @@ These rows correspond to Section A of
 
 | Claim family | Current decision | Why it is retained | Primary authority |
 |---|---|---|---|
-| exact native `SU(2)` | promoted | exact weak algebra on the cubic Clifford surface | [BOUNDED_NATIVE_GAUGE_NOTE.md](../../BOUNDED_NATIVE_GAUGE_NOTE.md) |
+| exact native `SU(2)` | promoted | exact weak algebra on the cubic Clifford surface | [NATIVE_GAUGE_CLOSURE_NOTE.md](../../NATIVE_GAUGE_CLOSURE_NOTE.md) |
 | graph-first structural `SU(3)` | promoted | selector + commutant closure now defines the safe `SU(3)` statement; selector is unique up to graph automorphism | [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](../../GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) |
 | `SU(3)` confinement / `\sqrt{\sigma}` | promoted structural theorem + bounded quantitative prediction | graph-first `SU(3)` at canonical `g_bare^2 = 1` gives Wilson `beta = 6`; `T = 0` confinement is structural on that gauge sector, and the bounded string-tension readout is `\sqrt{\sigma} \approx 465 MeV` through the retained `\alpha_s` lane plus the standard low-energy EFT bridge | [CONFINEMENT_STRING_TENSION_NOTE.md](../../CONFINEMENT_STRING_TENSION_NOTE.md) |
 | left-handed charge matching | promoted corollary | safe selected-axis charge surface on the retained graph-first package | [LEFT_HANDED_CHARGE_MATCHING_NOTE.md](../../LEFT_HANDED_CHARGE_MATCHING_NOTE.md) |
@@ -138,7 +138,7 @@ external reviewer will ask about them whether or not they are retained.
 
 | Quantity / lane | Current decision | Why not promoted | Primary authority | Matrix / freeze reference |
 |---|---|---|---|---|
-| Higgs / vacuum package | bounded quantitative lane | mechanism derived and the framework-native 3-loop Higgs computation now exists, but exact mass and vacuum readout still inherit the bounded Yukawa / QFP route | [HIGGS_VACUUM_PROMOTED_NOTE.md](../../HIGGS_VACUUM_PROMOTED_NOTE.md) | matrix row `Higgs / vacuum package`, n/a |
+| Higgs / vacuum package | bounded quantitative lane | mechanism derived and the framework-native 3-loop Higgs computation now exists, but exact mass and vacuum readout still inherit the bounded Yukawa / QFP route | [HIGGS_VACUUM_BOUNDED_NOTE.md](../../HIGGS_VACUUM_BOUNDED_NOTE.md) | matrix row `Higgs / vacuum package`, n/a |
 | Bekenstein-Hawking entropy | bounded companion lane | useful companion signal, not part of flagship theorem spine | [BH_ENTROPY_DERIVED_NOTE.md](../../BH_ENTROPY_DERIVED_NOTE.md) | matrix row `Bekenstein-Hawking entropy` |
 | gravitational decoherence | bounded companion lane | concrete BMV-class benchmark prediction, but still companion-only and unmeasured | [GRAV_DECOHERENCE_DERIVED_NOTE.md](../../GRAV_DECOHERENCE_DERIVED_NOTE.md) | matrix row `gravitational decoherence` |
 | CKM neutron EDM bounded lane | bounded secondary lane | observable consequence of retained `\theta_eff = 0` plus promoted CKM closure, but still bridge-conditioned by standard EFT estimates | [CKM_NEUTRON_EDM_BOUND_NOTE.md](../../CKM_NEUTRON_EDM_BOUND_NOTE.md) | matrix row `CKM neutron EDM bounded lane` |
@@ -160,7 +160,7 @@ These rows correspond to Section C of
 
 These rows correspond to Section D of
 [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md) and the family details in
-[FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md).
+[Historical frozen-out registry](../../work_history/publication/FROZEN_OUT_REGISTRY.md).
 
 | Frozen family | Current decision | Why frozen out | Registry ref |
 |---|---|---|---|

@@ -21,6 +21,10 @@ The front door on `main` is the current publication package plus the canonical
 authority notes it points to. Older lane history may remain in the repo, but
 it is not the default review surface.
 
+Historical material now lives under
+[docs/work_history/README.md](docs/work_history/README.md) and is optional
+context, not part of the live reviewer path.
+
 The package should also be read as already predictive, not merely as a cleaned
 theorem inventory. In addition to the retained exact core and retained
 quantitative lanes, `main` already carries a bounded secondary prediction
@@ -109,8 +113,8 @@ The current canonical quantitative stack is modular:
 - [RCONN_DERIVED_NOTE.md](docs/RCONN_DERIVED_NOTE.md)
 - [YT_EW_COLOR_PROJECTION_THEOREM.md](docs/YT_EW_COLOR_PROJECTION_THEOREM.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](docs/YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
-- [YT_QFP_INSENSITIVITY_THEOREM.md](docs/YT_QFP_INSENSITIVITY_THEOREM.md)
-- [HIGGS_VACUUM_PROMOTED_NOTE.md](docs/HIGGS_VACUUM_PROMOTED_NOTE.md)
+- [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md](docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)
+- [HIGGS_VACUUM_BOUNDED_NOTE.md](docs/HIGGS_VACUUM_BOUNDED_NOTE.md)
 
 That component stack now carries the following live statuses:
 

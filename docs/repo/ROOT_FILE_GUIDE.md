@@ -33,4 +33,4 @@ If you are looking for physics state, do **not** start from the root files
 above other than `README.md`. Start from:
 
 - [`docs/START_HERE.md`](../START_HERE.md)
-- [`docs/repo/LANE_STATUS_BOARD.md`](LANE_STATUS_BOARD.md)
+- [`docs/work_history/repo/LANE_STATUS_BOARD.md`](../work_history/repo/LANE_STATUS_BOARD.md)

@@ -165,7 +165,7 @@ The 1.84% deficit in m_t could indicate (a) missing 3-loop corrections in the ba
 - `docs/YT_ZERO_IMPORT_CLOSURE_NOTE.md` -- earlier incomplete closure attempt
 - `docs/YT_EW_COUPLING_BRIDGE_NOTE.md` -- taste threshold development
 - `docs/YT_EW_COLOR_PROJECTION_THEOREM.md` -- color projection factor (absorbed here)
-- `docs/YT_QFP_INSENSITIVITY_THEOREM.md` -- QFP analysis (absorbed here)
+- `docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md` -- QFP analysis (absorbed here)
 - `docs/YT_CLEAN_DERIVATION_NOTE.md` -- earlier clean attempt
 - `docs/YT_FULL_CLOSURE_NOTE.md` -- earlier closure attempt
 - `docs/YT_FLAGSHIP_CLOSURE_NOTE.md` -- earlier attempt

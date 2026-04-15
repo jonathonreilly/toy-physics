@@ -28,7 +28,6 @@ package.
 - `docs/publication/ci3_z3/`
   - active flagship paper surface
 - `docs/work_history/`
-  - historical program map
-- the rest of `docs/`
-  - mixed retained history, bounded lanes, and archival notes that should be
-    treated as supporting material until curated
+  - explicit historical bucket
+- the live review surface should point here only for optional historical
+  context, not as part of the primary read path

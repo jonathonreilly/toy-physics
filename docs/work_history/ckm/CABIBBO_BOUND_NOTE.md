@@ -1,7 +1,7 @@
-# Cabibbo Bound Note
+# Historical Cabibbo Bound Note
 
 **Date:** 2026-04-14  
-**Status:** BOUNDED COMPANION  
+**Status:** historical bounded CKM route note
 **Script:** `scripts/frontier_ckm_mass_basis_nni.py`
 
 ## Summary

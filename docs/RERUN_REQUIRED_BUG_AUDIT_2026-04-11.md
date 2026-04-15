@@ -7,7 +7,7 @@ Use this together with:
 
 - [`docs/CODE_REVIEW_LAST_WEEK_2026-04-11.md`](CODE_REVIEW_LAST_WEEK_2026-04-11.md)
 - [`docs/repo/RETEST_PLAYBOOK.md`](repo/RETEST_PLAYBOOK.md)
-- [`docs/repo/LANE_STATUS_BOARD.md`](repo/LANE_STATUS_BOARD.md)
+- [`docs/repo/LANE_STATUS_BOARD.md`](work_history/repo/LANE_STATUS_BOARD.md)
 
 ## A. Fix And Rerun On The Same Lane
 

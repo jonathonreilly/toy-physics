@@ -4,9 +4,9 @@
 surface is split:
 
 - Cabibbo bounded companion:
-  [../CABIBBO_BOUND_NOTE.md](../CABIBBO_BOUND_NOTE.md)
+  [../CABIBBO_BOUND_NOTE.md](ckm/CABIBBO_BOUND_NOTE.md)
 - Jarlskog bounded companion:
-  [../JARLSKOG_PHASE_BOUND_NOTE.md](../JARLSKOG_PHASE_BOUND_NOTE.md)
+  [../JARLSKOG_PHASE_BOUND_NOTE.md](ckm/JARLSKOG_PHASE_BOUND_NOTE.md)
 
 # Cabibbo Angle and Jarlskog Invariant -- Derived vs Fitted
 

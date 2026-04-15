@@ -1,4 +1,4 @@
-# y_t Quasi-Fixed-Point Insensitivity Bound
+# y_t Quasi-Fixed-Point Insensitivity Support Note
 
 **Date:** 2026-04-14
 **Status:** bounded support

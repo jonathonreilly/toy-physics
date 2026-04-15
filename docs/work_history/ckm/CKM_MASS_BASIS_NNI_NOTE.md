@@ -1,6 +1,6 @@
-# CKM Mass-Basis NNI: V_ub from Schur Complement + Mass-Ratio Suppression
+# Historical CKM Mass-Basis NNI Note: V_ub from Schur Complement + Mass-Ratio Suppression
 
-**Status**: BOUNDED -- V_ub closed to 1.14x PDG via mass-eigenvalue NNI normalization
+**Status**: historical bounded CKM route note -- V_ub closed to 1.14x PDG via mass-eigenvalue NNI normalization
 **Depends on**: `CKM_SCHUR_COMPLEMENT_THEOREM`, `CKM_WOLFENSTEIN_CASCADE_THEOREM`, `EWSB_GENERATION_CASCADE`
 **Script**: `scripts/frontier_ckm_mass_basis_nni.py`
 

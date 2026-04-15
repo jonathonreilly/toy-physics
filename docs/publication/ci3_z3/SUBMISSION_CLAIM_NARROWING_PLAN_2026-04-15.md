@@ -183,7 +183,7 @@ those surfaces.
 - The package currently presents very sharp central-value matches while also
   admitting a `~3%` inherited surrogate systematic:
   - [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
-  - [HIGGS_VACUUM_PROMOTED_NOTE.md](/Users/jonreilly/Projects/Physics/docs/HIGGS_VACUUM_PROMOTED_NOTE.md)
+  - [HIGGS_VACUUM_BOUNDED_NOTE.md](/Users/jonreilly/Projects/Physics/docs/HIGGS_VACUUM_BOUNDED_NOTE.md)
 
 **Action**
 

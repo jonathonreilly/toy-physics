@@ -126,7 +126,7 @@ GRAVITY_CHAIN = [
 # =============================================================================
 
 GAUGE_CHAIN_NOTES = [
-    ("BOUNDED_NATIVE_GAUGE_NOTE", "exact native SU(2) from Cl(3)"),
+    ("NATIVE_GAUGE_CLOSURE_NOTE", "exact native SU(2) from Cl(3)"),
     ("GRAPH_FIRST_SELECTOR_DERIVATION_NOTE", "graph-first axis selector"),
     ("GRAPH_FIRST_SU3_INTEGRATION_NOTE", "structural SU(3) closure"),
     ("LEFT_HANDED_CHARGE_MATCHING_NOTE", "left-handed charge matching"),

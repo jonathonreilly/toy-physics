@@ -119,8 +119,8 @@ The current canonical quantitative stack is modular:
 - [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md)
 - [YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
-- [YT_QFP_INSENSITIVITY_THEOREM.md](YT_QFP_INSENSITIVITY_THEOREM.md)
-- [HIGGS_VACUUM_PROMOTED_NOTE.md](HIGGS_VACUUM_PROMOTED_NOTE.md)
+- [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md](YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)
+- [HIGGS_VACUUM_BOUNDED_NOTE.md](HIGGS_VACUUM_BOUNDED_NOTE.md)
 - [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
 
 Current package status:
@@ -179,9 +179,14 @@ Start with:
 If you want the package internals after that, use:
 
 - [publication/ci3_z3/FULL_CLAIM_LEDGER.md](publication/ci3_z3/FULL_CLAIM_LEDGER.md)
-- [publication/ci3_z3/FROZEN_OUT_REGISTRY.md](publication/ci3_z3/FROZEN_OUT_REGISTRY.md)
 - [publication/ci3_z3/RESULTS_INDEX.md](publication/ci3_z3/RESULTS_INDEX.md)
 - [publication/ci3_z3/PUBLICATION_CONTROL_PLANE.md](publication/ci3_z3/PUBLICATION_CONTROL_PLANE.md)
+
+For optional historical context, use:
+
+- [Historical frozen-out registry](work_history/publication/FROZEN_OUT_REGISTRY.md)
+- [Historical remote-branch audit](work_history/publication/REMOTE_BRANCH_AUDIT_2026-04-14.md)
+- [Historical lane status board](work_history/repo/LANE_STATUS_BOARD.md)
 
 ## Front-Door Rule
 

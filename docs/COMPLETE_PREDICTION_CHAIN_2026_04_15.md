@@ -416,7 +416,7 @@ do not cite for current status):
 - `YT_COLOR_PROJECTION_CORRECTION_NOTE.md` -- color correction to y_t
 - `YT_EW_COLOR_PROJECTION_THEOREM.md` -- color projection for EW couplings
 - `YT_EW_COUPLING_BRIDGE_NOTE.md` -- taste threshold development
-- `YT_QFP_INSENSITIVITY_THEOREM.md` -- QFP robustness analysis
+- `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md` -- QFP robustness analysis
 - `YT_ZERO_IMPORT_CLOSURE_NOTE.md` -- earlier incomplete closure attempt
 - `YT_GAUGE_CROSSOVER_THEOREM.md` -- gauge crossover analysis
 - `YT_VERTEX_POWER_DERIVATION.md` -- CMT vertex power derivation

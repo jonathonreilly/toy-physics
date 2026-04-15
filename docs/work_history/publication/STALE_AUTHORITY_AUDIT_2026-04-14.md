@@ -1,4 +1,4 @@
-# Stale Authority Audit
+# Historical Stale Authority Audit
 
 **Date:** 2026-04-14  
 **Purpose:** quarantine stale or misleading authority surfaces outside the

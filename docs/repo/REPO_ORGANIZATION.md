@@ -58,13 +58,13 @@ still landing. The fix is a stable control plane:
 
 ## Navigation Files
 
-- [`docs/repo/LANE_STATUS_BOARD.md`](LANE_STATUS_BOARD.md)
+- [`docs/work_history/repo/LANE_STATUS_BOARD.md`](../work_history/repo/LANE_STATUS_BOARD.md)
   - where each lane across the whole repo sits now
 - [`docs/CANONICAL_HARNESS_INDEX.md`](../CANONICAL_HARNESS_INDEX.md)
   - which scripts to rerun first
 - [`docs/lanes/README.md`](../lanes/README.md)
   - lane-by-lane manifests for the full repo
-- [`docs/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md`](../POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md)
+- [`docs/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md`](../work_history/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md)
   - cumulative paper-seed / discovery ledger
 - [`docs/PUBLICATION_DISCOVERY_AUDIT_2026-04-11.md`](../PUBLICATION_DISCOVERY_AUDIT_2026-04-11.md)
   - current lane-by-lane critical audit of what is genuinely safe to treat as a paper candidate
@@ -96,7 +96,7 @@ When a new runner lands:
 1. Decide which lane it belongs to.
 2. Add or update its retained note if the result is promotable.
 3. Update the relevant lane entry in:
-   - [`docs/repo/LANE_STATUS_BOARD.md`](LANE_STATUS_BOARD.md)
+   - [`docs/work_history/repo/LANE_STATUS_BOARD.md`](../work_history/repo/LANE_STATUS_BOARD.md)
    - [`docs/repo/LANE_REGISTRY.yaml`](LANE_REGISTRY.yaml)
 4. If the result changes the retained program surface, also update:
    - [`docs/FULL_TEST_MATRIX_2026-04-10.md`](../FULL_TEST_MATRIX_2026-04-10.md)

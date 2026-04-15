@@ -101,7 +101,7 @@ def main() -> None:
     print("  RCONN_DERIVED_NOTE.md")
     print("  YT_EW_COLOR_PROJECTION_THEOREM.md")
     print("  YT_COLOR_PROJECTION_CORRECTION_NOTE.md")
-    print("  YT_QFP_INSENSITIVITY_THEOREM.md")
+    print("  YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md")
     print("  HIGGS_MASS_FROM_AXIOM_NOTE.md")
     print()
     print("Status: promoted package on main")

@@ -1,7 +1,7 @@
-# Jarlskog Phase Bound Note
+# Historical Jarlskog Phase Bound Note
 
 **Date:** 2026-04-14  
-**Status:** BOUNDED PARTIAL PREDICTION  
+**Status:** historical bounded CKM route note
 **Script:** `scripts/frontier_jarlskog_derived.py`
 
 ## Summary

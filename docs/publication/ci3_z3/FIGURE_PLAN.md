@@ -95,7 +95,7 @@ Companion captions live in [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md).
 
 - purpose: preserve route history without confusing it for the promoted CKM package
 - source notes:
-  - [CABIBBO_BOUND_NOTE.md](../../CABIBBO_BOUND_NOTE.md)
-  - [CKM_MASS_BASIS_NNI_NOTE.md](../../CKM_MASS_BASIS_NNI_NOTE.md)
-  - [JARLSKOG_PHASE_BOUND_NOTE.md](../../JARLSKOG_PHASE_BOUND_NOTE.md)
+  - [CABIBBO_BOUND_NOTE.md](../../work_history/ckm/CABIBBO_BOUND_NOTE.md)
+  - [CKM_MASS_BASIS_NNI_NOTE.md](../../work_history/ckm/CKM_MASS_BASIS_NNI_NOTE.md)
+  - [JARLSKOG_PHASE_BOUND_NOTE.md](../../work_history/ckm/JARLSKOG_PHASE_BOUND_NOTE.md)
 - status: optional history/comparison figure only; do not present as the live flavor authority

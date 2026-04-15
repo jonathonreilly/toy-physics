@@ -5,9 +5,9 @@
 
 Audited against `origin/main`:
 
-- [`docs/repo/LANE_STATUS_BOARD.md`](repo/LANE_STATUS_BOARD.md)
+- [`docs/repo/LANE_STATUS_BOARD.md`](work_history/repo/LANE_STATUS_BOARD.md)
 - [`docs/CANONICAL_HARNESS_INDEX.md`](CANONICAL_HARNESS_INDEX.md)
-- [`docs/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md`](POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md)
+- [`docs/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md`](work_history/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md)
 - [`docs/PUBLICATION_DISCOVERY_AUDIT_2026-04-11.md`](PUBLICATION_DISCOVERY_AUDIT_2026-04-11.md)
 - [`docs/CLAUDE_FRONTIER_RETAIN_AUDIT_2026-04-11.md`](CLAUDE_FRONTIER_RETAIN_AUDIT_2026-04-11.md)
 
@@ -28,7 +28,7 @@ What is aligned across the audited docs:
 
 ### 1. One dangling reference remained in the publication ledger
 
-[`docs/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md`](POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md) entry `D30` previously pointed to a note that was not present on `main`.
+[`docs/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md`](work_history/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md) entry `D30` previously pointed to a note that was not present on `main`.
 
 This integration pass fixes the ledger so `D30` now cites only the retained
 Anderson/eigenvalue note actually present on `main`.
@@ -51,6 +51,6 @@ The repo baseline should therefore be read as:
 This audit no longer blocks `main`, but it does not imply the whole repo is
 fully normalized. For reruns, prefer:
 
-- [`docs/repo/LANE_STATUS_BOARD.md`](repo/LANE_STATUS_BOARD.md)
+- [`docs/repo/LANE_STATUS_BOARD.md`](work_history/repo/LANE_STATUS_BOARD.md)
 - [`docs/CANONICAL_HARNESS_INDEX.md`](CANONICAL_HARNESS_INDEX.md)
 - [`docs/MAIN_REVISIT_SWEEP_2026-04-11.md`](MAIN_REVISIT_SWEEP_2026-04-11.md)

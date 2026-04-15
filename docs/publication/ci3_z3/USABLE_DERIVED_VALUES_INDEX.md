@@ -67,7 +67,7 @@ These are usable, but only with their qualifiers attached.
 | `y_t(v)` | `0.9176` | bounded / derived | zero SM imports, bounded surrogate systematic | bounded Yukawa/Higgs lane reuse only | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) |
 | `m_t(pole)` 2-loop | `172.57 GeV` | bounded / derived | inherits bounded `y_t` lane | bounded top-mass reuse only | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) |
 | `m_t(pole)` 3-loop | `173.10 GeV` | bounded / derived | inherits bounded `y_t` lane | bounded top-mass reuse only | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) |
-| `m_H` framework-side 3-loop | `125.3 GeV` | bounded / derived | inherits bounded `y_t` lane | bounded Higgs/vacuum reuse only | [HIGGS_VACUUM_PROMOTED_NOTE.md](../../HIGGS_VACUUM_PROMOTED_NOTE.md) |
+| `m_H` framework-side 3-loop | `125.3 GeV` | bounded / derived | inherits bounded `y_t` lane | bounded Higgs/vacuum reuse only | [HIGGS_VACUUM_BOUNDED_NOTE.md](../../HIGGS_VACUUM_BOUNDED_NOTE.md) |
 | `sqrt(sigma)` | `465 MeV` | bounded / derived | retained `alpha_s` + EFT bridge | bounded confinement phenomenology only | [CONFINEMENT_STRING_TENSION_NOTE.md](../../CONFINEMENT_STRING_TENSION_NOTE.md) |
 
 ## Rule for downstream work

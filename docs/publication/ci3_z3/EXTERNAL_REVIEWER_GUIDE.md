@@ -10,7 +10,7 @@ The current package is:
 1. a retained theorem core
 2. retained standalone quantitative lanes for `alpha_s` and EW normalization
 3. promoted CKM atlas/axiom closure plus bounded Yukawa/top and Higgs/vacuum lanes
-4. a bounded prediction surface and a frozen-out registry for
+4. a bounded prediction surface plus an explicit history bucket for
    important excluded families
 
 For framework counting, read the public package as a one-axiom program:
@@ -106,8 +106,8 @@ Review this as a modular component stack:
 2. color-factor support: [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md)
 3. EW normalization: [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md)
 4. Yukawa / top closure: [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
-5. QFP robustness support: [YT_QFP_INSENSITIVITY_THEOREM.md](../../YT_QFP_INSENSITIVITY_THEOREM.md)
-6. Higgs / vacuum: [HIGGS_VACUUM_PROMOTED_NOTE.md](../../HIGGS_VACUUM_PROMOTED_NOTE.md)
+5. QFP robustness support: [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md](../../YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)
+6. Higgs / vacuum: [HIGGS_VACUUM_BOUNDED_NOTE.md](../../HIGGS_VACUUM_BOUNDED_NOTE.md)
 7. CKM closure: [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
 8. three-generation / chirality boundary:
    [THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md](../../THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md)
@@ -179,12 +179,18 @@ conventions is packaged separately and does not modify the theorem stack.
 6. [DERIVATION_ATLAS.md](./DERIVATION_ATLAS.md)
 7. [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
 8. [FULL_CLAIM_LEDGER.md](./FULL_CLAIM_LEDGER.md)
-9. [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md)
+9. [Results index](./RESULTS_INDEX.md)
+
+## Optional Historical Context
+
+- [Historical frozen-out registry](../../work_history/publication/FROZEN_OUT_REGISTRY.md)
+- [Historical remote-branch audit](../../work_history/publication/REMOTE_BRANCH_AUDIT_2026-04-14.md)
 
 ## Review Rule
 
 - If a result is not in the matrix, it is not publication-captured.
 - If it is in the matrix but not in the claims table, it is not retained.
-- If it is important but excluded, it should appear in the frozen-out registry.
+- If it is important but excluded, it should appear in the historical
+  frozen-out registry.
 - If you are editing rather than reviewing, use
   [PUBLICATION_CONTROL_PLANE.md](./PUBLICATION_CONTROL_PLANE.md).

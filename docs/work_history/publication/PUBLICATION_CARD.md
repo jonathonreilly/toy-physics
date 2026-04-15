@@ -1,4 +1,4 @@
-# Publication Card
+# Historical Publication Card
 
 **Status:** historical promotion artifact; not a front-door authority surface
 **Paper state:** retained theorem core plus promoted quantitative prediction

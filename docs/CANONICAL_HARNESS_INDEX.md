@@ -8,7 +8,7 @@ Use this file to find the current canonical note/runner pair on `main`.
 |---|---|---|
 | weak-field gravity | [CI3_Z3_PUBLICATION_STATE_2026-04-15.md](CI3_Z3_PUBLICATION_STATE_2026-04-15.md) | `frontier_self_consistent_field_equation.py`, `frontier_poisson_exhaustive_uniqueness.py`, `frontier_newton_derived.py` |
 | restricted strong-field gravity | [RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md](RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md) | `frontier_oh_static_constraint_lift.py`, `frontier_oh_schur_boundary_action.py`, `frontier_star_supported_bridge_class.py` |
-| exact native `SU(2)` | [BOUNDED_NATIVE_GAUGE_NOTE.md](BOUNDED_NATIVE_GAUGE_NOTE.md) | `frontier_non_abelian_gauge.py` |
+| exact native `SU(2)` | [NATIVE_GAUGE_CLOSURE_NOTE.md](NATIVE_GAUGE_CLOSURE_NOTE.md) | `frontier_non_abelian_gauge.py` |
 | graph-first structural `SU(3)` | [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) | `frontier_graph_first_su3_integration.py` |
 | `SU(3)` confinement / string tension | [CONFINEMENT_STRING_TENSION_NOTE.md](CONFINEMENT_STRING_TENSION_NOTE.md) | `frontier_confinement_string_tension.py` |
 | anomaly-forced `3+1` | [ANOMALY_FORCES_TIME_THEOREM.md](ANOMALY_FORCES_TIME_THEOREM.md) | `frontier_anomaly_forces_time.py` |
@@ -24,8 +24,8 @@ Use this file to find the current canonical note/runner pair on `main`.
 | color factor `R_conn = 8/9` | [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md) | `frontier_color_projection_mc.py` |
 | retained EW normalization | [YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md) | `frontier_complete_prediction_chain.py`, `frontier_color_projection_mc.py` |
 | bounded Yukawa / top | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](YT_COLOR_PROJECTION_CORRECTION_NOTE.md), [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md) | `frontier_yt_color_projection_correction.py`, `frontier_color_projection_mc.py` |
-| QFP bounded-support theorem | [YT_QFP_INSENSITIVITY_THEOREM.md](YT_QFP_INSENSITIVITY_THEOREM.md) | `frontier_yt_qfp_insensitivity.py` |
-| bounded Higgs / vacuum | [HIGGS_VACUUM_PROMOTED_NOTE.md](HIGGS_VACUUM_PROMOTED_NOTE.md) | `frontier_higgs_mass_full_3loop.py`, `frontier_yt_color_projection_correction.py`, `frontier_direct_yt_extraction.py` |
+| QFP bounded-support theorem | [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md](YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md) | `frontier_yt_qfp_insensitivity.py` |
+| bounded Higgs / vacuum | [HIGGS_VACUUM_BOUNDED_NOTE.md](HIGGS_VACUUM_BOUNDED_NOTE.md) | `frontier_higgs_mass_full_3loop.py`, `frontier_yt_color_projection_correction.py`, `frontier_direct_yt_extraction.py` |
 | promoted CKM closure | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) | `frontier_ckm_atlas_axiom_closure.py`, `frontier_ckm_no_import_audit.py` |
 | bounded CKM neutron-EDM lane | [CKM_NEUTRON_EDM_BOUND_NOTE.md](CKM_NEUTRON_EDM_BOUND_NOTE.md) | `frontier_ckm_neutron_edm_bound.py` |
 

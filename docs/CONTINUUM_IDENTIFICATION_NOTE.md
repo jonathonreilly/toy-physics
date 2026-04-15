@@ -79,7 +79,7 @@ and one bounded bridge.
 The graph-first commutant construction derives SU(3) × SU(2) × U(1)
 from the taste cube of Cl(3) on Z³:
 
-- Exact native SU(2) from cubic Cl(3) (BOUNDED_NATIVE_GAUGE_NOTE)
+- Exact native SU(2) from cubic Cl(3) (NATIVE_GAUGE_CLOSURE_NOTE)
 - Graph-first structural SU(3) closure (GRAPH_FIRST_SU3_INTEGRATION_NOTE)
 - Left-handed +1/3 / −1 charge matching (LEFT_HANDED_CHARGE_MATCHING_NOTE)
 
