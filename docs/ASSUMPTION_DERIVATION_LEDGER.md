@@ -20,9 +20,9 @@ derived quantitative rows, and still-open companion lanes.
 | hierarchy / `v` theorem | derived | `v = 246.282818290129 GeV` is retained on the hierarchy lane; it is not part of the separate quantitative component stack. |
 | `R_conn = 8/9` color factor | derived | Canonical authority is [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md); it is not a fit knob. |
 | EW normalization package | derived / retained quantitative lane | `sin^2(theta_W)`, `1/alpha_EM`, `g_1(v)`, and `g_2(v)` form a standalone retained EW lane. |
-| renormalized `y_t` endpoint | bounded / derived | `y_t(v) = 0.9176` is a zero-import central value, but it inherits an approximately `3%` QFP/RGE-surrogate systematic. |
-| top pole mass package | bounded / derived | `m_t(pole) = 172.57 GeV` (2-loop) and `173.10 GeV` (3-loop) inherit the bounded `y_t` systematic. |
-| Higgs CW/stability package | bounded | the mechanism, `lambda(M_Pl)=0` boundary, and framework-native full 3-loop Higgs implementation now exist; exact `m_H` and vacuum stability remain bounded only because they inherit the bounded `y_t` / QFP route. |
+| renormalized `y_t` endpoint | derived with explicit systematic | `y_t(v) = 0.9176` is a zero-import central value with explicit package-native exact-bridge systematics: `0.7123842%` higher-order local tail plus `0.5023669%` conservative nonlocal tail (`0.04262215%` support-tight), for total `1.2147511%` conservative or `0.75500635%` support-tight. |
+| top pole mass package | derived with explicit systematic | `m_t(pole) = 172.57 GeV` (2-loop) and `173.10 GeV` (3-loop) inherit the explicit `y_t` exact-bridge systematic. |
+| Higgs CW/stability package | derived with inherited explicit systematic | the mechanism, `lambda(M_Pl)=0` boundary, and framework-native full 3-loop Higgs implementation now exist; exact `m_H` and vacuum stability inherit the explicit `y_t` exact-bridge systematic on this branch. |
 | DM relic mapping | bounded/open | Strong bounded companions remain, but the relic bridge is still not closed. |
 | CKM quantitative closure | derived / promoted quantitative package | The canonical atlas/axiom no-import closure is promoted on `main`; older Cabibbo / mass-basis / partial-Jarlskog routes remain route history only. |
 

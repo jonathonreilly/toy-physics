@@ -1,7 +1,9 @@
 # Color-Singlet Projection Correction to y_t
 
 **Date:** 2026-04-14
-**Status:** BOUNDED quantitative lane -- zero SM imports, but inherits an approximately `3%` QFP/RGE-surrogate systematic from [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md](./YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)
+**Status:** DERIVED with explicit systematic -- zero SM imports, with an
+explicit package-native bridge budget of `1.2147511%` conservative
+(`0.75500635%` support-tight) on the current branch support stack
 **Script:** `scripts/frontier_yt_color_projection_correction.py` (7/7 PASS)
 
 ---
@@ -23,9 +25,12 @@ from the Cl(3) axiom (frontier_color_projection_mc.py), now applied
 to the scalar channel rather than the EW vacuum polarization.
 
 The color-projection correction itself is derived. The full low-energy
-`y_t(v)` / `m_t(pole)` lane remains bounded because the backward Ward transfer
-above `v` uses an EFT surrogate whose error is only bounded, not eliminated,
-by the QFP theorem.
+`y_t(v)` / `m_t(pole)` lane is now best read on this branch as derived with
+explicit systematic. On the current branch, the residual transport
+uncertainty is narrowed to an explicit endpoint budget of `1.2147511%`
+conservative or `0.75500635%` support-tight around the local selector, and
+the broad scanned constructive family plus branch-scale microscopic
+admissibility are now closed at the intrinsic Schur-class level.
 
 ---
 
@@ -40,9 +45,11 @@ With the correction applied and proper MSbar-to-pole conversion:
 | m_H(2-loop, lam=0)    | 119.77 GeV | 125.25 GeV | -4.37%   |
 | alpha_s(M_Z)           | 0.1181     | 0.1179     | +0.14%   |
 
-These central values are the current package readout, but they carry an
-approximately `3%` inherited systematic from the backward Ward / QFP
-surrogate above `v`.
+These central values are the current package readout, but they carry the
+explicit branch-local transport budget:
+
+- `1.2147511%` conservative
+- `0.75500635%` support-tight on the current viable family average
 
 Improvement from the correction:
 

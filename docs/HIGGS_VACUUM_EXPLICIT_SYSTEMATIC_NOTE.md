@@ -1,14 +1,14 @@
-# Higgs / Vacuum Bounded Authority
+# Higgs / Vacuum Authority
 
 **Date:** 2026-04-15
-**Status:** bounded quantitative lane on `main`
+**Status:** derived with inherited explicit systematic quantitative lane on this branch
 **Primary runners:** `scripts/frontier_higgs_mass_full_3loop.py`,
 `scripts/frontier_yt_color_projection_correction.py`
 **Boundary-support runner:** `scripts/frontier_direct_yt_extraction.py`
 
 ## Authority Role
 
-This note is the standalone authority for the bounded Higgs / vacuum lane on
+This note is the standalone authority for the Higgs / vacuum lane on
 the current package surface.
 
 It is separate from:
@@ -34,8 +34,9 @@ Using the current accepted package inputs:
 - `m_H(full 3-loop framework-side route) = 125.3 GeV`
 - vacuum stability is qualitatively favorable on the same route
 
-These rows remain `BOUNDED` on `main` only because they inherit the bounded
-`y_t` / QFP route. The remaining Higgs blocker is no longer “missing
+These rows are now best read as `DERIVED WITH INHERITED EXPLICIT SYSTEMATIC`
+because they inherit the explicit `y_t` bridge budget on the current branch
+support stack. The remaining Higgs blocker is no longer “missing
 framework-native 3-loop implementation.”
 
 ## Component Structure
@@ -50,8 +51,8 @@ framework-native 3-loop implementation.”
    framework-side value:
    `m_H = 125.3 GeV`
 4. On that same route, the vacuum readout stays qualitatively favorable, but
-   it remains bounded because the lane still inherits the bounded Yukawa/QFP
-   route.
+   it remains systematic-limited because the lane still inherits the explicit
+   Yukawa bridge budget.
 
 ## Supporting Notes
 
@@ -65,9 +66,10 @@ framework-native 3-loop implementation.”
 - `m_H(2-loop corrected-input route) = 119.77 GeV`
 - `m_H(full 3-loop framework-side route) = 125.3 GeV`
 - observed comparator: `125.25 GeV`
-- inherited Higgs band from bounded `y_t`: `115.2-135.3 GeV`
-- vacuum prediction: qualitatively favorable, but bounded through the `y_t`
-  lane
+- inherited Higgs band from explicit-systematic `y_t`: `121.2-129.3 GeV`
+  conservative, `122.8-127.8 GeV` support-tight
+- vacuum prediction: qualitatively favorable, with inherited explicit
+  systematic through the `y_t` lane
 
 Primary reruns:
 

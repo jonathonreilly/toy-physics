@@ -14,8 +14,8 @@ readout extracted from the current Higgs / vacuum package.
 It is separate from:
 
 - the retained hierarchy / `v` lane
-- the broader bounded Higgs / vacuum package note
-- the Yukawa / top lane that still controls the quantitative bound
+- the broader Higgs / vacuum explicit-systematic package note
+- the Yukawa / top lane that still controls the quantitative systematic
 
 ## Safe Statement
 
@@ -24,14 +24,14 @@ condition is
 
 `lambda(M_Pl) = 0`.
 
-Combined with the current bounded framework-side Yukawa lane and the direct
+Combined with the current explicit-systematic framework-side Yukawa lane and the direct
 full 3-loop Higgs/vacuum running now present on `main`, the electroweak vacuum
 lands on the critical-stability side of the usual Standard Model metastability
 comparison surface rather than deep in a metastable regime.
 
 This remains a **bounded companion prediction**, not a retained flagship row,
-because the numerical vacuum readout still inherits the bounded `y_t` / QFP
-route.
+because the numerical vacuum readout still inherits the explicit `y_t`
+systematic on the current route.
 
 ## What Is Exact On The Current Surface
 
@@ -42,7 +42,7 @@ route.
 
 ## What Is Still Bounded
 
-- the quantitative vacuum readout still inherits the bounded Yukawa / top lane
+- the quantitative vacuum readout still inherits the explicit-systematic Yukawa / top lane
 - the package does not yet promote vacuum critical stability as an independent
   retained theorem separate from the bounded Higgs package
 
@@ -64,7 +64,7 @@ tension with the framework route.
 
 ## Supporting Notes
 
-- [HIGGS_VACUUM_BOUNDED_NOTE.md](./HIGGS_VACUUM_BOUNDED_NOTE.md)
+- [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](./HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md)
 - [HIGGS_MASS_DERIVED_NOTE.md](./HIGGS_MASS_DERIVED_NOTE.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](./YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
 
@@ -72,7 +72,7 @@ tension with the framework route.
 
 - current package boundary condition: `lambda(M_Pl) = 0`
 - full 3-loop framework-side Higgs runner exists and is live on `main`
-- vacuum stability remains bounded through the same Yukawa / top route that
+- vacuum stability remains bounded through the same explicit-systematic Yukawa / top route that
   controls the current Higgs package
 
 Primary reruns:

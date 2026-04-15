@@ -3,12 +3,12 @@
 ## Question
 
 After implementing the full 3-loop Higgs runner directly, what still keeps the
-Higgs lane bounded?
+Higgs lane from being fully unbounded?
 
 ## Final reviewer answer
 
-The canonical Higgs posture remains `BOUNDED`, but the bound is now much
-narrower than before.
+The canonical Higgs posture is now `DERIVED WITH INHERITED EXPLICIT
+SYSTEMATIC`, and that inherited systematic is much narrower than before.
 
 The framework now supports all of the following:
 
@@ -22,7 +22,7 @@ The framework now supports all of the following:
 | Buttazzo-style calibrated-fit dependence is required | NO |
 
 What is **not** yet unbounded is the exact numerical Higgs claim by itself,
-because the Higgs lane still inherits the bounded `y_t(v)` route.
+because the Higgs lane still inherits the explicit `y_t(v)` systematic.
 
 ## Canonical retained claim
 
@@ -34,15 +34,16 @@ The paper-safe Higgs claim is now:
   Buttazzo-style parametric fit
 - for the current accepted central input `y_t(v) = 0.918`, that runner gives
   `m_H ~= 125.3 GeV`
-- the exact Higgs lane is still `BOUNDED` only because the accepted `y_t`
-  route carries an inherited `~3%` QFP / backward-Ward systematic
+- the exact Higgs lane is derived with inherited explicit systematic because
+  the accepted `y_t` route carries an inherited explicit bridge budget of `1.2147511%`
+  conservative (`0.75500635%` support-tight)
 
 ## What changed
 
 The old Higgs bound had two distinct pieces:
 
 1. the branch lacked a complete direct 3-loop Higgs implementation
-2. the accepted `y_t(v)` route was still bounded
+2. the accepted `y_t(v)` route still carried an explicit systematic
 
 The new runner
 [scripts/frontier_higgs_mass_full_3loop.py](../scripts/frontier_higgs_mass_full_3loop.py)
@@ -50,8 +51,8 @@ removes blocker (1). It computes the Higgs mass directly from the framework
 boundary condition `lambda(M_Pl) = 0` using the full 3-loop SM RGE system and
 current framework-side low-energy inputs.
 
-So the remaining Higgs boundedness is no longer “missing Higgs machinery.”
-It is inherited from the still-bounded `y_t` lane.
+So the remaining Higgs systematic is no longer “missing Higgs machinery.”
+It is inherited from the explicit `y_t` lane.
 
 ## Current numerical posture
 
@@ -59,8 +60,10 @@ For the current central input `y_t(v) = 0.918`, the full 3-loop Higgs runner
 gives:
 
 - `m_H ~= 125.3 GeV` with no parametric fit
-- an inherited Higgs band of roughly `115.2-135.3 GeV` if the `y_t` route is
-  varied by the current `~3%` QFP systematic
+- an inherited Higgs band of roughly `121.2-129.3 GeV` under the current
+  conservative `1.2147511%` `y_t` bridge budget
+- a support-tight Higgs band of roughly `122.8-127.8 GeV` under the current
+  `0.75500635%` viable-family-average budget
 
 That means the honest Higgs read is:
 
@@ -80,7 +83,7 @@ Only two scientific cautions remain.
    for all scales inherits that same systematic.
 
 So the correct current claim is not “Higgs still lacks a real computation.”
-It is “Higgs is conditionally closed at 3-loop on the accepted bounded `y_t`
+It is “Higgs is conditionally closed at 3-loop on the accepted explicit-systematic `y_t`
 route.”
 
 ## Current route inventory
@@ -115,10 +118,11 @@ a reader asks what the Higgs lane currently claims.
 - `lambda(M_Pl) = 0` is a framework-native Higgs boundary condition
 - the repo now contains a direct full 3-loop Higgs computation with no
   Buttazzo-style calibrated-fit dependence
-- the remaining Higgs bound is inherited from the bounded `y_t` lane
+- the remaining Higgs systematic is inherited from the explicit `y_t` lane
 
 **Cannot claim**
 
 - the Higgs lane is unbounded independently of `y_t`
-- vacuum stability is unbounded while `y_t` still carries the QFP bound
+- vacuum stability is unbounded while `y_t` still carries the bounded bridge
+  budget
 - older lattice-CW or partial-Higgs notes as if they were the live authority
