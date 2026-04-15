@@ -42,8 +42,8 @@ That isotropic operator-identification step has now been discharged by
 
 The live remaining object is now smaller still:
 
-> a stronger global unrestricted-GR solution-class / interpretation theorem
-> beyond the exact positive-background local closure family.
+> a stronger interpretation theorem beyond the exact discrete global
+> Lorentzian closure already supported on `PL S^3 x R`.
 
 ## What is exact already
 
@@ -138,14 +138,15 @@ What they still do not yet prove is:
 
 The smallest honest missing object is now:
 
-> a stronger global solution / interpretation theorem that upgrades the exact
-> positive-background local closure family into a full unrestricted GR statement.
+> a stronger interpretation theorem that upgrades the exact discrete global
+> Lorentzian closure into whatever still stricter notion of “full GR” one
+> wants beyond the project’s `PL S^3 x R` Einstein/Regge setting.
 
 Equivalently, the missing primitive is no longer a frame bundle, no longer an
 isotropic block-operator identification law, no longer invariant-family
-nonlinear completion, no longer widening beyond the invariant family, and no
-longer just a local operator-family theorem. It is the stronger global theorem
-beyond the exact local positive-background closure.
+nonlinear completion, no longer widening beyond the invariant family, no
+longer merely a local operator-family theorem, and no longer merely a global
+finite-atlas closure theorem.
 
 ## Honest status
 
@@ -161,6 +162,11 @@ The current direct universal route is:
 - exact at the invariant-family nonlinear completion level
 - exact at the positive-background extension level
 - exact at the positive-background local closure level
-- still open only beyond that, at stronger global unrestricted-GR solution-class / interpretation level
+- exact at the Lorentzian signature-class local closure level
+- exact at the Lorentzian finite-atlas global closure level
+- exact at the discrete global closure level recorded in
+  [UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md](/private/tmp/physics-review-active/docs/UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md)
+- still open only beyond that, at a stricter interpretation theorem beyond the
+  exact discrete global closure
 
 That is the sharpest disciplined statement available on the current atlas.
