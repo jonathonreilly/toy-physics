@@ -73,7 +73,8 @@ Three framing points matter for reading the retained core:
 - CKM magnitude package with strong `|V_us|`, `|V_cb|`, `|V_ub|` agreement
 - Cabibbo and partial Jarlskog matches
 - cosmology companions such as `\Omega_\Lambda`, `n_s`, `w = -1`
-- Higgs, proton-lifetime, Lorentz-violation, BH-entropy, monopole companions
+- bounded Higgs lane (mechanism derived; exact mass still open), proton-
+  lifetime, Lorentz-violation, BH-entropy, monopole companions
 
 These are real results, but they are **not** all promoted into the retained
 paper core.

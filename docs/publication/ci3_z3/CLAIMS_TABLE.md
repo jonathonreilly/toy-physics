@@ -69,7 +69,7 @@ cleanly or closed.
 | renormalized `y_t` bridge | bounded | arXiv / SI only | [YT_ZERO_IMPORT_CLOSURE_NOTE.md](../../YT_ZERO_IMPORT_CLOSURE_NOTE.md), [YT_GAUGE_CROSSOVER_THEOREM.md](../../YT_GAUGE_CROSSOVER_THEOREM.md) |
 | CKM / Higgs `Z_3` route | bounded | arXiv / SI only | [CABIBBO_BOUND_NOTE.md](../../CABIBBO_BOUND_NOTE.md), [CKM_MASS_BASIS_NNI_NOTE.md](../../CKM_MASS_BASIS_NNI_NOTE.md), [JARLSKOG_PHASE_BOUND_NOTE.md](../../JARLSKOG_PHASE_BOUND_NOTE.md) |
 | cosmology windows (`w=-1`, graviton mass, `Omega_Lambda`, `n_s`) | bounded / conditional | arXiv companion only | [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md), [PRIMORDIAL_SPECTRUM_NOTE.md](../../PRIMORDIAL_SPECTRUM_NOTE.md), [DARK_ENERGY_EOS_NOTE.md](../../DARK_ENERGY_EOS_NOTE.md), [GRAVITON_MASS_DERIVED_NOTE.md](../../GRAVITON_MASS_DERIVED_NOTE.md) |
-| Higgs mass / Coleman-Weinberg mass lane (`m_H = 125 GeV`) | bounded | arXiv companion only | [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md) |
+| Higgs mechanism / bounded Coleman-Weinberg mass lane | bounded | arXiv companion only | [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md) |
 | proton lifetime | bounded sharp prediction | arXiv companion only | [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md) |
 | Lorentz-violation cubic fingerprint | bounded sharp prediction | arXiv companion only | [LORENTZ_VIOLATION_DERIVED_NOTE.md](../../LORENTZ_VIOLATION_DERIVED_NOTE.md) |
 | BH entropy / RT ratio | bounded companion | arXiv companion only | [BH_ENTROPY_DERIVED_NOTE.md](../../BH_ENTROPY_DERIVED_NOTE.md) |

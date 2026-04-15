@@ -34,7 +34,7 @@ The current gravity package has three layers:
      `3+1` route
    - mean/stationary sector equals the same Einstein/Regge stationary family
    - strongest current quantum-gravity-style bridge on the project route
-   - authority: [UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
+  - authority: [UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md](../../UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
 
 5. **Direct-universal canonical refinement net**
    - exact barycentric spatial plus dyadic time refinement net on the same
@@ -42,7 +42,7 @@ The current gravity package has three layers:
    - local partition densities and stationary sections pull back exactly on
      that net
    - exact Schur/projective pushforward already lives on the same net
-   - authority: [UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)
+  - authority: [UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md](../../UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)
 
 6. **Direct-universal inverse-limit closure**
    - exact projective-limit Gaussian cylinder family on that same canonical
@@ -112,11 +112,11 @@ The partition and refinement theorems sharpen that remaining issue:
 
 Use this summary to orient the package documents:
 
-- [EXTERNAL_REVIEWER_GUIDE.md](/Users/jonreilly/Projects/Physics/docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md)
-- [PUBLICATION_CONTROL_PLANE.md](/Users/jonreilly/Projects/Physics/docs/publication/ci3_z3/PUBLICATION_CONTROL_PLANE.md)
-- [CLAIMS_TABLE.md](/Users/jonreilly/Projects/Physics/docs/publication/ci3_z3/CLAIMS_TABLE.md)
-- [DERIVATION_VALIDATION_MAP.md](/Users/jonreilly/Projects/Physics/docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
-- [PUBLICATION_MATRIX.md](/Users/jonreilly/Projects/Physics/docs/publication/ci3_z3/PUBLICATION_MATRIX.md)
+- [EXTERNAL_REVIEWER_GUIDE.md](./EXTERNAL_REVIEWER_GUIDE.md)
+- [PUBLICATION_CONTROL_PLANE.md](./PUBLICATION_CONTROL_PLANE.md)
+- [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
+- [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
+- [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
 
 ## Reviewer-safe phrasing
 

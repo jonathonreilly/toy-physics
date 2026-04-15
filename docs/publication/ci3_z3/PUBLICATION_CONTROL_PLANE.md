@@ -68,6 +68,7 @@ Canonical files:
 | [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md) | reviewer-facing prediction/observation table |
 | [RESULTS_INDEX.md](./RESULTS_INDEX.md) | manuscript section to note/runner map |
 | [GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md](./GRAVITY_PUBLICATION_PACKAGE_SUMMARY_2026-04-15.md) | compact gravity-package overview and theorem ladder |
+| [CLAIM_PROMOTION_CHECKLIST.md](./CLAIM_PROMOTION_CHECKLIST.md) | reviewer checklist for promoting new science into the package without drift |
 | [REPRODUCIBILITY_FREEZE_2026-04-14.md](./REPRODUCIBILITY_FREEZE_2026-04-14.md) | current pinned release slice |
 | [STALE_AUTHORITY_AUDIT_2026-04-14.md](./STALE_AUTHORITY_AUDIT_2026-04-14.md) | quarantine list for stale authority |
 | [NATURE_PACKAGE.md](./NATURE_PACKAGE.md) | letter package rule set |
@@ -89,7 +90,9 @@ this order:
    - [RESULTS_INDEX.md](./RESULTS_INDEX.md)
 5. if important but excluded, add or update the family in
    [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md)
-6. only then update manuscript prose
+6. run the reviewer checklist in
+   [CLAIM_PROMOTION_CHECKLIST.md](./CLAIM_PROMOTION_CHECKLIST.md)
+7. only then update manuscript prose
 
 ## 4. Hard-gate policy for new science
 
@@ -103,6 +106,8 @@ No new science result should enter the package out of order.
   [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md).
 - No draft-only promotion. Update the matrix and ledger before updating the
   drafts.
+- No promotion without a note/runner audit. Use
+  [CLAIM_PROMOTION_CHECKLIST.md](./CLAIM_PROMOTION_CHECKLIST.md).
 
 ## 5. Reviewer-safety rules
 

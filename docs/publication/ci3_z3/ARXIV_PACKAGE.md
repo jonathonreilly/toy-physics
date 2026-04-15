@@ -39,7 +39,8 @@ The arXiv package should also make the broader scope obvious to a new reader:
   - `m_t`
   - CKM magnitude package
   - cosmology companions
-  - Higgs and sharp companion predictions
+  - bounded Higgs lane (mechanism derived; exact mass still open) and sharp
+    companion predictions
 - negative-result notes that block overclaiming
 - claims table and reproduce guide
 

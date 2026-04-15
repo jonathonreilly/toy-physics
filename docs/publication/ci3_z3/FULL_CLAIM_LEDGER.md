@@ -128,7 +128,7 @@ external reviewer will ask about them whether or not they are retained.
 
 | Quantity / lane | Current decision | Why not promoted | Primary authority | Matrix / freeze reference |
 |---|---|---|---|---|
-| Higgs mass `m_H` | open/bounded | `v` is now retained, but the Higgs mass package is still not closed | [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md) | matrix row `Higgs mass \`m_H\``, `F05` |
+| Higgs mass `m_H` | open/bounded | the Higgs mechanism is derived and structurally natural, but the exact mass package is still not closed | [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md) | matrix row `Higgs mass \`m_H\``, `F05` |
 | Bekenstein-Hawking entropy | bounded companion | useful companion signal, not part of flagship theorem spine | [BH_ENTROPY_DERIVED_NOTE.md](../../BH_ENTROPY_DERIVED_NOTE.md) | matrix row `Bekenstein-Hawking entropy`, `F07` |
 | gravitational decoherence | bounded companion | concrete BMV-class benchmark prediction, but still companion-only and unmeasured | [GRAV_DECOHERENCE_DERIVED_NOTE.md](../../GRAV_DECOHERENCE_DERIVED_NOTE.md) | matrix row `gravitational decoherence`, `F07` |
 | Proton lifetime | bounded sharp prediction | later companion or appendix material, not flagship core | [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md) | matrix row `Proton lifetime`, `F07` |

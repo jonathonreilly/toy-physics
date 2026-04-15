@@ -53,28 +53,28 @@ belongs on the current flagship surface.
   identification remains separate
 - exact UV-finite partition-density family on the same discrete `3+1` route,
   with mean/stationary sector equal to that Einstein/Regge family
-  - authority: [UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
+  - authority: [UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md](UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
 - exact canonical geometric barycentric-dyadic refinement net for that same
   discrete partition-density and stationary-section family
-  - authority: [UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)
+  - authority: [UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md](UNIVERSAL_QG_CANONICAL_REFINEMENT_NET_NOTE.md)
 - exact inverse-limit Gaussian cylinder closure for that same canonical
   discrete QG family
-  - authority: [UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md)
+  - authority: [UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md](UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md)
 - exact abstract Gaussian / Cameron-Martin completion for that same canonical
   discrete QG family
-  - authority: [UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md)
+  - authority: [UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md](UNIVERSAL_QG_ABSTRACT_GAUSSIAN_COMPLETION_NOTE.md)
 - exact project-native PL field realization for that same canonical discrete
   QG family
-  - authority: [UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md)
+  - authority: [UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md](UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md)
 - exact project-native PL weak/Dirichlet-form closure for that same canonical
   discrete QG family
-  - authority: [UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md)
+  - authority: [UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md](UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md)
 - exact project-native PL `H^1`-type Sobolev interface for that same
   canonical discrete QG family
-  - authority: [UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md)
+  - authority: [UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md](UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md)
 - exact external FE/Galerkin smooth weak-field and Gaussian measure
   equivalence for that same canonical discrete QG family
-  - authority: [UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md)
+  - authority: [UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md](UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md)
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`
@@ -94,7 +94,8 @@ belongs on the current flagship surface.
 - CKM magnitude package
 - Cabibbo and partial Jarlskog companions
 - cosmology companions such as `Omega_Lambda`, `n_s`, `w = -1`, `Lambda`
-- bounded Higgs lane and sharp companion predictions
+- bounded Higgs lane (mechanism derived; exact mass still open) and sharp
+  companion predictions
 
 These results matter and should be visible, but they are **not all promoted**
 into the retained flagship surface.

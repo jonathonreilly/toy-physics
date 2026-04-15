@@ -1,124 +1,94 @@
-# Higgs Mass: Derivation Status (Honest Assessment)
+# Higgs Mass: Canonical Authority Boundary
 
 ## Question
 
-Can the framework derive m_H = 125 GeV from first principles via the
-Coleman-Weinberg mechanism, or does m_H require SM couplings as input?
+Can the framework honestly promote a non-import Higgs mass derivation, or is
+the Higgs lane still bounded?
 
-## Three-Tier Answer
+## Final reviewer answer
 
-### Tier 1: FULLY DERIVED (zero free parameters)
+The canonical Higgs posture remains `BOUNDED`.
 
-These results follow from the lattice axioms alone (Cl(3) on Z^3):
+The framework does derive the Higgs mechanism itself:
 
-| Result | Source | Status |
-|--------|--------|--------|
-| CW mechanism triggers EWSB | Taste condensate = Higgs field | DERIVED |
-| Hierarchy problem resolved | Lambda = pi/a is physical, Delta ~ O(1) | DERIVED |
-| EWSB with O(1) bare parameters | No fine-tuning needed | DERIVED |
-| Gauge group SU(2)_L x U(1)_Y | Cl(3) taste algebra | DERIVED |
-| Particle DOF count (n_i) | Taste doubling on Z^3 | DERIVED |
-| sin^2(theta_W) = 3/8 at M_Planck | Cl(3) GUT relation | DERIVED |
-| alpha_V = 0.092 at M_Planck | V-scheme plaquette action | DERIVED |
-| m_Z/m_W = 1/cos(theta_W) | Pure gauge structure | DERIVED |
+| Result | Status |
+|---|---|
+| taste condensate acts as the Higgs field | DERIVED |
+| lattice Coleman-Weinberg electroweak symmetry breaking occurs naturally | DERIVED |
+| the hierarchy problem is removed because the cutoff is physical (`pi/a`) | DERIVED |
+| the Higgs sector is quantitatively constrained | DERIVED |
 
-The CW mechanism is the framework's NATURAL Higgs mechanism. No elementary
-scalar is postulated -- the Higgs field IS the taste condensate, and SSB
-is dynamically driven by quantum corrections with the lattice providing the
-physical UV cutoff.
+What is **not** derived today is the exact numerical claim
+`m_H = 125.25 GeV`.
 
-The hierarchy problem is resolved because the cutoff IS the lattice spacing
-(= Planck scale). The Barbieri-Giudice fine-tuning measure is Delta ~ 0.5,
-compared to Delta ~ 10^34 in the continuum SM with a Planck cutoff.
+## Canonical retained claim
 
-### Tier 2: BOUNDED (one free parameter)
+The paper-safe Higgs claim is:
 
-Given the derived gauge couplings, the CW potential gives m_H/m_W as a
-SPECIFIC FUNCTION of y_t (the top Yukawa coupling):
+- the framework gives a natural lattice Coleman-Weinberg origin of EWSB
+- the hierarchy problem is removed structurally by the physical lattice cutoff
+- the Higgs sector is quantitatively constrained
+- the observed Higgs mass is consistent with the framework at bounded,
+  not final, precision
 
-    m_H/m_W = f_CW(y_t; g, g', Lambda)
+## Why exact Higgs closure is still blocked
 
-This is a genuine prediction: the framework reduces the Higgs sector from
-2 free parameters (mu^2, lambda) to 1 (y_t). The CW curve gives:
+Three scientific blockers remain.
 
-- For y_t ~ 0.5-1.0: m_H/m_W ~ 1.5-2.5 (lattice a=1)
-- For y_t ~ 1.0 (observed): m_H/m_W ~ 1.85 (19% above SM value 1.56)
-- The ratio decreases toward the SM value as lattice spacing decreases
+1. The Higgs output depends strongly on the accepted `y_t(v)` route.
+   The old Ward route (`y_t(v) ~= 0.973`) and newer corrected or comparison
+   routes move `m_H` materially across the current scripts.
+2. The branch contains several incompatible Higgs stories:
+   older `m_H ~= 149-152 GeV` lattice-CW routes, the bounded `~120 GeV`
+   corrected-`y_t` companion route discussed elsewhere, and diagnostic scripts
+   that still sit nearer `~144 GeV`.
+3. There is no complete non-import higher-order Higgs implementation yet.
+   The remaining runners are still mechanism studies, bounded companions,
+   or historical diagnostics rather than a closed flagship mass derivation.
 
-The top Yukawa is bounded by the IR quasi-fixed-point:
+## Current route inventory
 
-    y_t* = sqrt(2/9 * (8*g_s^2 + 9/4*g^2 + 17/12*g'^2)) ~ 1.7
+### Canonical authority
 
-This is the right order of magnitude but 70% above the observed y_t = 0.994.
+- [scripts/frontier_higgs_mass_derived.py](../scripts/frontier_higgs_mass_derived.py)
+  remains the primary honest Higgs-boundary runner.
+  Its job is to establish the derived Higgs mechanism and the bounded claim
+  boundary, not to claim exact `125 GeV` closure.
 
-### Tier 3: REQUIRES SM INPUT (consistency check)
+### Supporting Higgs surfaces
 
-The exact numerical value m_H = 125 GeV cannot be derived without:
+- [HIGGS_MECHANISM_NOTE.md](./HIGGS_MECHANISM_NOTE.md)
+  mechanism-level support only
+- [HIGGS_FROM_LATTICE_NOTE.md](./HIGGS_FROM_LATTICE_NOTE.md)
+  bounded / historical quantitative support only
+- [HIGGS_MASS_NOTE.md](./HIGGS_MASS_NOTE.md)
+  historical numerical CW note only
 
-1. **y_t = 0.994** -- not predicted (only bounded by fixed point)
-2. **Exact g, g' at M_Z** -- Cl(3) gives sin^2(theta_W) = 3/8 at M_Planck,
-   but running to M_Z with SM RGEs gives ~40% deviations (the standard
-   non-unification problem, which needs threshold corrections to resolve)
-3. **2-loop CW corrections** -- the 1-loop CW gives m_H/m_W ~ 1.85 with
-   SM couplings, 19% above the SM value; 2-loop corrections would reduce this
+These notes are useful context, but they should not outrank this note when a
+reader asks what the Higgs lane currently claims.
 
-## Key Results
+## Paper-safe framing
 
-### SSB is generic, not fine-tuned
+**Can claim**
 
-The CW mechanism triggers SSB for >50% of O(1) bare mass values.
-This is not a coincidence or tuning -- it is a structural consequence
-of the lattice UV cutoff bounding the quantum corrections.
+- the Higgs mechanism emerges naturally from the lattice
+- the hierarchy problem is solved structurally
+- the framework gives bounded quantitative Higgs routes
+- the exact Higgs mass is not yet a closed flagship derivation
 
-### The hierarchy problem IS resolved
+**Cannot claim**
 
-| Framework | Cutoff | BG Fine-tuning Delta |
-|-----------|--------|---------------------|
-| SM (TeV) | 10^3 GeV | 4 |
-| SM (GUT) | 10^16 GeV | 4 x 10^26 |
-| SM (Planck) | 10^19 GeV | 6 x 10^32 |
-| **Lattice** | **pi/a ~ 3** | **~0.5** |
+- `m_H = 125.25 GeV` derived from first principles
+- one unique final Higgs route from the current branch
+- older lattice-CW mechanism notes as if they were the live authority
 
-### m_H/m_W converges to SM with decreasing lattice spacing
+## Main promotion rule
 
-| a | Lambda | m_H/m_W | m_H (GeV) |
-|---|--------|---------|-----------|
-| 2.0 | 1.57 | 2.18 | 175 |
-| 1.0 | 3.14 | 1.85 | 149 |
-| 0.5 | 6.28 | 1.64 | 132 |
+If Higgs material is promoted from this branch, promote only:
 
-At a = 0.5, m_H/m_W = 1.64 is within 5% of the SM value 1.56.
+- this note
+- the refreshed boundary runner
+- the minimum supporting mechanism notes needed to defend the bounded posture
 
-## What This Means for the Paper
-
-**CAN claim:**
-- The Higgs mechanism emerges from the lattice (CW, no elementary scalar)
-- The hierarchy problem is solved (cutoff = Planck, Delta ~ O(1))
-- m_H is of the right order of magnitude
-- m_H/m_W converges toward the SM as lattice spacing decreases
-
-**CANNOT claim:**
-- m_H = 125 GeV derived from first principles
-- y_t predicted (only bounded)
-- Complete gauge coupling unification (threshold corrections needed)
-
-**Recommended framing:**
-"The Coleman-Weinberg mechanism on the lattice provides a natural origin
-for electroweak symmetry breaking, resolves the hierarchy problem, and
-predicts m_H/m_W as a function of a single parameter (y_t). The observed
-Higgs mass is consistent with the framework."
-
-## Roadmap to Full Derivation
-
-1. Compute Planck-scale threshold corrections to gauge RGE
-   => fixes g, g' at M_Z
-2. Determine y_t from 2-loop IR fixed point + lattice matching
-   => pins y_t to ~20%
-3. Compute 2-loop CW potential on the lattice
-   => refines m_H/m_W to ~5%
-4. Show lambda_bare and m^2_bare are radiatively stable at O(1)
-   => completes naturalness argument
-
-## Script
-
-`scripts/frontier_higgs_mass_derived.py` -- self-contained, numpy + scipy only.
+Do not promote overlapping historical Higgs attempts as if they were the
+current canonical authority.
