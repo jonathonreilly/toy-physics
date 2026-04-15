@@ -17,10 +17,12 @@ On the gravity route, the direct-universal branch now closes as an exact global
 Lorentzian Einstein/Regge stationary action family on discrete `3+1`
 spacetime `PL S^3 x R`. On the QG/continuum side, the exact project-native PL
 weak Gaussian Sobolev completion is now also identified with the canonical
-textbook weak/Gaussian object and with the chosen smooth global weak
-gravitational stationary/Gaussian solution class on the same route. The
-remaining stronger continuum/QG issue is stricter textbook geometric/action
-comparison beyond that already-closed weak/Gaussian level.
+textbook weak/Gaussian object, the chosen smooth global weak gravitational
+stationary/Gaussian solution class, the same project-native smooth
+geometric/action family, the canonical textbook Einstein-Hilbert-style
+geometric/action family, and one canonical textbook continuum gravitational
+weak/stationary action family on the same route. What remains beyond that is
+only optional comparison against alternative textbook packaging conventions.
 
 This repo is too large to understand by browsing filenames. There are two
 reading modes:
@@ -101,7 +103,8 @@ The current flagship publication package is:
   finite-atlas gravitational stationary-family identification, exact smooth
   global weak gravitational stationary/Gaussian solution class on the chosen
   smooth realization, exact canonical smooth gravitational weak/measure
-  equivalence on that same realization, retained `S^3`,
+  equivalence on that same realization, exact canonical smooth
+  geometric/action equivalence on that same realization, retained `S^3`,
   one-generation closure, three-generation structure, exact `I_3 = 0`, exact
   CPT
 - bounded observation-facing portfolio: DM ratio, `alpha_s`, `m_t`, CKM

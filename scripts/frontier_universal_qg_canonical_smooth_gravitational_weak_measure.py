@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Canonical smooth gravitational weak/measure equivalence for the QG route.
 
-This is the capstone combination step after global smooth solution-class
-closure:
+This is the capstone weak/Gaussian combination step after global smooth
+solution-class closure:
 
   - the route already has one canonical textbook weak/Gaussian object;
   - the route already has one smooth global weak gravitational
@@ -11,8 +11,10 @@ closure:
     another chosen target, but the same canonical textbook weak/Gaussian
     object expressed in smooth gravitational coordinates.
 
-What remains after this theorem is no longer weak/Gaussian continuum closure,
-but only stronger textbook geometric/action comparison beyond that level.
+What remains after this theorem is no longer weak/Gaussian continuum closure.
+The next theorems close the project-native smooth geometric/action comparison,
+the canonical textbook geometric/action comparison, and the canonical textbook
+continuum gravitational closure built on this step.
 """
 
 from __future__ import annotations

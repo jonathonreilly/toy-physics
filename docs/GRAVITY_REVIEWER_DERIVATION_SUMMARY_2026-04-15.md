@@ -230,14 +230,16 @@ The current gravity route supports the following exact wording:
 - “exact restricted strong-field closure on the star-supported finite-rank class”
 - “weak-field gravity through the Poisson / Newton chain”
 
-It does **not** support the stronger textbook Einstein-Hilbert / geometric
-action wording unless a separate comparison theorem is proved.
+It now also supports the chosen canonical textbook continuum gravitational
+wording on the authority path.
 
-Do not collapse the direct-universal route into a stronger textbook action
-claim than the authority path actually closes. The discrete route plus its
-weak/Gaussian continuum bridge are exact on their own terms; the remaining
-separate issue is stricter textbook geometric/action comparison beyond that
-already-closed weak/Gaussian level.
+Do not collapse the direct-universal route into a stronger external continuum
+action claim than the authority path actually closes. The discrete route plus
+its weak/Gaussian continuum bridge, project-native smooth geometric/action
+family, canonical textbook geometric/action family, and canonical textbook
+continuum gravitational closure are exact on their own terms; what remains
+separate is only optional comparison against alternative textbook packaging
+conventions.
 
 ## What a reviewer should take away
 

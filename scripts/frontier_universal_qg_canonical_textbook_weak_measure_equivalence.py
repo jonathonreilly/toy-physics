@@ -15,8 +15,8 @@ equivalence:
 
 What remains after this theorem is not weak/measure canonicalization. Later
 notes close the smooth local/global weak/Gaussian gravitational
-identifications built on this step. The live stronger issue is now stricter
-textbook geometric/action comparison beyond that level.
+identifications, the textbook geometric/action comparison, and the canonical
+textbook continuum gravitational closure built on this step.
 """
 
 from __future__ import annotations
@@ -176,14 +176,14 @@ def main() -> int:
         f"max covariance-pairing error={max_cov_pair_err:.3e}, max weak-operator spectral error={max_spec_err:.3e}",
     )
     record(
-        "the remaining stronger issue is therefore not canonical textbook weak/measure equivalence, but stricter textbook geometric/action comparison beyond the already-closed smooth weak/Gaussian gravitational route",
+        "the remaining stronger issue is therefore not canonical textbook weak/measure equivalence, but only later textbook geometric/action and continuum-gravitational closures already discharged elsewhere on the branch",
         min_g_eig > 0.0
         and min_a_eig > 0.0
         and max_energy_err < 1e-10
         and max_solution_err < 1e-10
         and max_cov_pair_err < 1e-10
         and max_spec_err < 1e-10,
-        "the exact discrete route already determines one canonical textbook closed-coercive weak Sobolev / Gaussian cylinder object; later notes close the smooth gravitational weak/Gaussian identifications built on it, so the live stronger issue is now stricter textbook geometric/action comparison",
+        "the exact discrete route already determines one canonical textbook closed-coercive weak Sobolev / Gaussian cylinder object; later notes close the smooth gravitational weak/Gaussian identifications, the geometric/action comparison, and the canonical textbook continuum gravitational target built on it",
     )
 
     print("UNIVERSAL QG CANONICAL TEXTBOOK WEAK/MEASURE EQUIVALENCE")

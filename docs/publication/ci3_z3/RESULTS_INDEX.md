@@ -31,6 +31,9 @@ Use alongside:
 | Smooth finite-atlas gravitational stationary-family identification | [UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_ATLAS_NOTE.md](../../UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_ATLAS_NOTE.md) | [frontier_universal_qg_smooth_gravitational_global_atlas_identification.py](../../../scripts/frontier_universal_qg_smooth_gravitational_global_atlas_identification.py) |
 | Smooth global weak gravitational stationary/Gaussian solution class | [UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md](../../UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md) | [frontier_universal_qg_smooth_gravitational_global_solution_class.py](../../../scripts/frontier_universal_qg_smooth_gravitational_global_solution_class.py) |
 | Canonical smooth gravitational weak/measure equivalence | [UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md](../../UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md) | [frontier_universal_qg_canonical_smooth_gravitational_weak_measure.py](../../../scripts/frontier_universal_qg_canonical_smooth_gravitational_weak_measure.py) |
+| Canonical smooth geometric/action equivalence | [UNIVERSAL_QG_CANONICAL_SMOOTH_GEOMETRIC_ACTION_NOTE.md](../../UNIVERSAL_QG_CANONICAL_SMOOTH_GEOMETRIC_ACTION_NOTE.md) | [frontier_universal_qg_canonical_smooth_geometric_action.py](../../../scripts/frontier_universal_qg_canonical_smooth_geometric_action.py) |
+| Canonical textbook Einstein-Hilbert-style geometric/action equivalence | [UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md](../../UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md) | [frontier_universal_qg_canonical_textbook_geometric_action_equivalence.py](../../../scripts/frontier_universal_qg_canonical_textbook_geometric_action_equivalence.py) |
+| Canonical textbook continuum gravitational closure | [UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md](../../UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md) | [frontier_universal_qg_canonical_textbook_continuum_gr_closure.py](../../../scripts/frontier_universal_qg_canonical_textbook_continuum_gr_closure.py) |
 | Exact native `SU(2)` | [BOUNDED_NATIVE_GAUGE_NOTE.md](../../BOUNDED_NATIVE_GAUGE_NOTE.md) | [frontier_non_abelian_gauge.py](../../../scripts/frontier_non_abelian_gauge.py) |
 | Graph-first structural `SU(3)` | [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](../../GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) | [frontier_graph_first_su3_integration.py](../../../scripts/frontier_graph_first_su3_integration.py) |
 | Anomaly-forced `3+1` | [ANOMALY_FORCES_TIME_THEOREM.md](../../ANOMALY_FORCES_TIME_THEOREM.md) | [frontier_anomaly_forces_time.py](../../../scripts/frontier_anomaly_forces_time.py) |
@@ -77,8 +80,11 @@ Use alongside:
     discrete QG family
   - smooth local gravitational weak/Gaussian identification, smooth
     finite-atlas gravitational patching, smooth global weak gravitational
-    stationary/Gaussian solution class, and canonical smooth weak/measure
-    equivalence on the chosen realization
+    stationary/Gaussian solution class, canonical smooth weak/measure
+    equivalence, canonical smooth geometric/action equivalence, canonical
+    textbook Einstein-Hilbert-style geometric/action equivalence, and
+    canonical textbook continuum gravitational closure on the chosen
+    realization
   - exact native `SU(2)`
   - graph-first structural `SU(3)`
   - `3+1` closure
@@ -89,8 +95,6 @@ Use alongside:
   - exact `I_3 = 0` and CPT as compact supporting theorems
 - SI / arXiv:
   - bounded weak-field GR companions beyond Newton / Poisson / WEP / time-dilation
-  - stricter textbook geometric/action comparison beyond the already-closed
-    canonical smooth weak/Gaussian gravitational route
   - derivation chains
   - bounded phenomenology
   - three live-gate notes and negative results

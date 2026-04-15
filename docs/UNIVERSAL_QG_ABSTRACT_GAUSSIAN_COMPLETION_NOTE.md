@@ -97,5 +97,7 @@ This note still does **not** prove:
 It does prove that the exact discrete route already determines the abstract
 Gaussian limit object those stronger interpretations would need to identify.
 Later notes then carry that object through the chosen smooth global
-weak/Gaussian gravitational realization; what remains after the full chain is
-the stricter textbook geometric/action comparison beyond that level.
+weak/Gaussian gravitational realization, the textbook geometric/action
+comparison, and the canonical textbook continuum gravitational closure; what
+remains after the full chain is only optional comparison against alternative
+textbook packaging conventions.

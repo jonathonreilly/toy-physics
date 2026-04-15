@@ -134,7 +134,7 @@ def main() -> int:
     record(
         "the exact inverse-limit Gaussian cylinder family is already closed on the canonical refinement net",
         "inverse-limit gaussian cylinder" in inv_text
-        and "stricter textbook geometric/action comparison" in cont_text,
+        and "canonical textbook continuum gravitational" in cont_text,
         "this theorem starts from the exact projective-limit Gaussian family already present on the discrete route",
     )
     record(
@@ -153,9 +153,9 @@ def main() -> int:
         f"min covariance eigenvalue={min_cov_eig:.6e}, min sampled cylindrical norm={min_cov_norm:.6e}",
     )
     record(
-        "the remaining stronger issue is therefore not existence of the abstract Gaussian completion, but stricter textbook geometric/action comparison beyond the already-closed weak/Gaussian route",
+        "the remaining stronger issue is therefore not existence of the abstract Gaussian completion, but only later textbook geometric/action and continuum-gravitational closures already discharged elsewhere on the branch",
         max_cov_form_err < 1e-10 and max_mean_form_err < 1e-10 and min_cov_eig > 0.0,
-        "the exact discrete route already determines one abstract Gaussian/Cameron-Martin completion with a compatible mean functional; later notes close the smooth weak/Gaussian identifications, so the live stronger issue is now stricter textbook geometric/action comparison",
+        "the exact discrete route already determines one abstract Gaussian/Cameron-Martin completion with a compatible mean functional; later notes close the smooth weak/Gaussian identifications, the geometric/action comparison, and the canonical textbook continuum gravitational closure built on this step",
     )
 
     print("UNIVERSAL QG ABSTRACT GAUSSIAN COMPLETION")
@@ -176,8 +176,11 @@ def main() -> int:
     print(
         "So the remaining stronger continuum issue is not existence of the "
         "abstract limit object. Later notes already close the smooth "
-        "weak/Gaussian identifications built on it; the live frontier is now "
-        "stricter textbook geometric/action comparison beyond that level."
+        "weak/Gaussian identifications built on it, the project-native "
+        "smooth geometric/action comparison, and the canonical textbook "
+        "continuum gravitational closure; what remains beyond that is only "
+        "optional comparison against alternative textbook packaging "
+        "conventions."
     )
 
     print("\n" + "=" * 78)

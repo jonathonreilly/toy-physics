@@ -13,8 +13,8 @@ weak/measure equivalence:
 
 What remains after this theorem is not local smooth gravitational
 identification. Later notes close the finite-atlas and global smooth
-weak/Gaussian gravitational route built on this step. The live stronger issue
-is now stricter textbook geometric/action comparison beyond that level.
+weak/Gaussian gravitational route, the textbook geometric/action comparison,
+and the canonical textbook continuum gravitational closure built on this step.
 """
 
 from __future__ import annotations
@@ -159,14 +159,14 @@ def main() -> int:
         f"max completion identity error={max_completion_err:.3e}",
     )
     record(
-        "the remaining stronger issue is therefore not local smooth gravitational identification, but stricter textbook geometric/action comparison beyond the already-closed canonical smooth weak/Gaussian route",
+        "the remaining stronger issue is therefore not local smooth gravitational identification, but only later geometric/action and continuum-gravitational closures already discharged elsewhere on the branch",
         lambda_min > 0.0
         and min_op_eig > 0.0
         and max_weak_residual < 1e-12
         and max_stationary_err < 1e-12
         and max_cov_err < 1e-12
         and max_completion_err < 1e-12,
-        "the canonical textbook weak/Gaussian object is already exactly the positive-background local gravitational object; later notes close the finite-atlas and global smooth weak/Gaussian route built on this step, so the live stronger issue is now stricter textbook geometric/action comparison",
+        "the canonical textbook weak/Gaussian object is already exactly the positive-background local gravitational object; later notes close the finite-atlas and global smooth weak/Gaussian route, the geometric/action comparison, and the continuum gravitational closure built on this step",
     )
 
     print("UNIVERSAL QG SMOOTH GRAVITATIONAL LOCAL IDENTIFICATION")

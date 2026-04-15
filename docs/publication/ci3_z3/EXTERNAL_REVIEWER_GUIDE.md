@@ -43,6 +43,15 @@ The current package is:
 - exact canonical smooth gravitational weak/measure equivalence on the chosen
   smooth realization
   - authority: [UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md](../../UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md)
+- exact canonical smooth geometric/action equivalence on the chosen smooth
+  realization
+  - authority: [UNIVERSAL_QG_CANONICAL_SMOOTH_GEOMETRIC_ACTION_NOTE.md](../../UNIVERSAL_QG_CANONICAL_SMOOTH_GEOMETRIC_ACTION_NOTE.md)
+- exact canonical textbook Einstein-Hilbert-style geometric/action
+  equivalence on the chosen smooth realization
+  - authority: [UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md](../../UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md)
+- exact canonical textbook continuum gravitational closure on the chosen
+  smooth realization
+  - authority: [UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md](../../UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md)
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`
@@ -86,10 +95,12 @@ stronger now: the UV-finite partition family, canonical refinement net,
 inverse-limit closure, abstract Gaussian completion, project-native PL
 field/weak/Sobolev structures, canonical textbook weak/measure object, smooth
 local and finite-atlas gravitational identifications, smooth global weak
-gravitational solution class, and canonical smooth weak/measure equivalence on
-the chosen realization are all exact on the authority path. What still remains
-is only a stricter textbook geometric/action comparison beyond that
-already-closed weak/Gaussian level.
+gravitational solution class, canonical smooth weak/measure equivalence, and
+canonical smooth geometric/action equivalence, canonical textbook
+Einstein-Hilbert-style geometric/action equivalence, and canonical textbook
+continuum gravitational closure on the chosen realization are all exact on the
+authority path. What still remains is only optional comparison against
+alternative textbook packaging conventions.
 
 ## Other Bounded Families
 
@@ -107,8 +118,6 @@ already-closed weak/Gaussian level.
 Exact Higgs-mass closure also remains outside the retained flagship surface.
 
 - Higgs mass `m_H`
-- stricter textbook geometric/action comparison beyond the already-closed
-  canonical smooth weak/Gaussian gravitational equivalence
 - several companion phenomenology bridges
 
 ## Read The Package In Order

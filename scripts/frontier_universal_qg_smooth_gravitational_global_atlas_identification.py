@@ -14,8 +14,8 @@ identification:
 
 What remains after this theorem is not finite-atlas smooth identification.
 Later notes close the global smooth weak/Gaussian solution class and canonical
-smooth weak/measure equivalence built on this step. The live stronger issue is
-now stricter textbook geometric/action comparison beyond that level.
+smooth weak/measure equivalence, the textbook geometric/action comparison, and
+the canonical textbook continuum gravitational closure built on this step.
 """
 
 from __future__ import annotations
@@ -182,9 +182,9 @@ def main() -> int:
         f"overlap covariance-family mismatch={cov_err:.3e}",
     )
     record(
-        "the remaining stronger issue is therefore not finite-atlas smooth gravitational identification, but stricter textbook geometric/action comparison beyond the already-closed canonical smooth weak/Gaussian route",
+        "the remaining stronger issue is therefore not finite-atlas smooth gravitational identification, but only later geometric/action and continuum-gravitational closures already discharged elsewhere on the branch",
         overlap_err < 1e-12 and action_err < 1e-12 and stationary_err < 1e-12 and cov_err < 1e-12,
-        "the canonical textbook weak/Gaussian object already patches as the same finite-atlas smooth gravitational stationary family; later notes close the global smooth weak/Gaussian solution class and canonical smooth weak/measure equivalence built on this step, so the live stronger issue is now stricter textbook geometric/action comparison",
+        "the canonical textbook weak/Gaussian object already patches as the same finite-atlas smooth gravitational stationary family; later notes close the global smooth weak/Gaussian solution class, canonical smooth weak/measure equivalence, the geometric/action comparison, and the continuum gravitational closure built on this step",
     )
 
     print("UNIVERSAL QG SMOOTH GRAVITATIONAL GLOBAL ATLAS IDENTIFICATION")

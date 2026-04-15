@@ -26,10 +26,12 @@ On the gravity side, the direct-universal route now closes as an exact global
 Lorentzian Einstein/Regge stationary action family on discrete `3+1`
 spacetime `PL S^3 x R`. On the QG/continuum side, the exact project-native PL
 weak Gaussian Sobolev completion is now also identified with the canonical
-textbook weak/Gaussian object and with the chosen smooth global weak
-gravitational stationary/Gaussian solution class on the same route. The
-remaining stronger continuum/QG issue is stricter textbook geometric/action
-comparison beyond that already-closed weak/Gaussian level.
+textbook weak/Gaussian object, the chosen smooth global weak gravitational
+stationary/Gaussian solution class, the same project-native smooth
+geometric/action family, the canonical textbook Einstein-Hilbert-style
+geometric/action family, and one canonical textbook continuum gravitational
+weak/stationary action family on the same route. What remains beyond that is
+only optional comparison against alternative textbook packaging conventions.
 
 ## Retained Core
 
@@ -56,6 +58,12 @@ comparison beyond that already-closed weak/Gaussian level.
 - exact smooth global weak gravitational stationary/Gaussian solution class on
   the chosen smooth realization
 - exact canonical smooth gravitational weak/measure equivalence on the chosen
+  smooth realization
+- exact canonical smooth geometric/action equivalence on the chosen smooth
+  realization
+- exact canonical textbook Einstein-Hilbert-style geometric/action equivalence
+  on the chosen smooth realization
+- exact canonical textbook continuum gravitational closure on the chosen
   smooth realization
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
