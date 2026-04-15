@@ -263,11 +263,28 @@ boundary. In the SM itself, the lambda(M_Pl) = 0 boundary condition
 with the OBSERVED m_t and alpha_s also gives m_H ~ 129.6 GeV. The
 framework reproduces this structural feature exactly.
 
-The 3.5% offset from the stability boundary is a property of the
-perturbative series (2-loop vs 3-loop convergence) and threshold
-matching, not a framework-specific deficiency.
+### 7.4 Prediction: absolute vacuum stability
 
-### 7.4 Alternative route: direct formula
+The framework predicts that the electroweak vacuum is **absolutely
+stable**. With the derived y_t(v) = 0.918 (slightly below the SM
+value of ~0.935 at mu = m_t), the quartic coupling lambda remains
+positive at ALL scales from M_Pl down to v:
+
+    lambda(mu) > 0   for all  v < mu < M_Pl
+
+This contrasts with the SM, where the observed couplings give lambda
+crossing zero at mu ~ 10^{6.4} GeV (vacuum metastability). The
+framework resolves this: the slightly lower y_t keeps lambda positive
+throughout the full running range.
+
+This is a falsifiable prediction. If future measurements shift
+y_t upward (or m_t upward), the framework's stability prediction
+could be tested against the SM's metastability.
+
+The lambda running profile is computed in `frontier_higgs_mass_stability.py`
+and saved to `scripts/lambda_running_profile.dat`.
+
+### 7.5 Alternative route: direct formula
 
 From the taste-sector generating functional (HIGGS_MASS_FROM_AXIOM_NOTE):
 
@@ -484,14 +501,20 @@ computed number (<P> = 0.5934):
 | y_t(v) | 0.9176 | ~0.917 | +0.06% | DERIVED |
 | m_H (2-loop) [GeV] | 119.8 | 125.25 | -4.4% | DERIVED |
 | m_H (full 3-loop) [GeV] | 129.7 | 125.25 | +3.5% | DERIVED |
+| Vacuum stability | Absolutely stable | (metastable in SM) | PREDICTION | DERIVED |
 
 Seven independent observables (v, alpha_s, sin^2(theta_W), 1/alpha_EM,
-y_t, m_t, m_H) predicted from one axiom and one computed number.
+y_t, m_t, m_H) plus one qualitative prediction (vacuum stability)
+from one axiom and one computed number.
 m_t and m_H are each shown at two loop orders bracketing the observed value.
 All within 4% of experiment, five within 0.3%.
 
 The SM has no prediction for m_H (it is a free parameter). The framework
 predicts m_H = 129.7 GeV from the axiom alone. The 3.5% deviation is a
 falsifiable prediction.
+
+The framework also predicts absolute vacuum stability (lambda > 0 at all
+scales), contrasting with the SM's metastability. This is a qualitative
+prediction testable by precision measurements of m_t and alpha_s.
 
 No free parameters. No fits. No imports.
