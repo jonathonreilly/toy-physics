@@ -42,7 +42,8 @@ That isotropic operator-identification step has now been discharged by
 
 The live remaining object is now smaller still:
 
-> widening beyond the invariant background family `diag(a,b,b,b)`.
+> a stronger global solution-class / interpretation theorem beyond the exact
+> positive-background operator family.
 
 ## What is exact already
 
@@ -130,18 +131,20 @@ The present data now determine much more than before:
 
 What they still do not yet prove is:
 
-1. widening beyond the invariant background family `diag(a,b,b,b)`.
+1. a stronger global solution-class / interpretation theorem beyond the exact
+   positive-background operator family.
 
 ## Minimal missing primitive
 
 The smallest honest missing object is now:
 
-> an extension principle that lifts the exact invariant-family nonlinear
-> closure beyond the `SO(3)`-invariant background family.
+> a stronger global solution / interpretation theorem that upgrades the exact
+> positive-background operator family into a full unrestricted GR statement.
 
 Equivalently, the missing primitive is no longer a frame bundle, no longer an
-isotropic block-operator identification law, and no longer invariant-family
-nonlinear completion. It is the widening law beyond the invariant family.
+isotropic block-operator identification law, no longer invariant-family
+nonlinear completion, and no longer widening beyond the invariant family.
+It is the stronger global theorem beyond the exact local operator family.
 
 ## Honest status
 
@@ -155,6 +158,7 @@ The current direct universal route is:
 - exact at the local isotropic supermetric-normal-form level
 - exact at the isotropic quadratic Einstein/Regge glue-operator level
 - exact at the invariant-family nonlinear completion level
-- still open only beyond that, at wider-background extension
+- exact at the positive-background extension level
+- still open only beyond that, at stronger global solution-class / interpretation level
 
 That is the sharpest disciplined statement available on the current atlas.
