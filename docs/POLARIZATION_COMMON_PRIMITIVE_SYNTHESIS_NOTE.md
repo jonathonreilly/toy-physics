@@ -179,3 +179,11 @@ The exact common primitive to pursue is:
 > a covariant `3+1` polarization-frame / projector bundle with an invariant
 > `A1` core, support-side and curvature-side specializations, and a
 > distinguished connection that canonicalizes the complement of `Pi_A1`.
+
+After the support/universal glue reduction, this can be stated more sharply:
+
+> the exact shared obstruction is the last `SO(2)` angle on the dark
+> complement plane.
+
+So the primitive family has already collapsed from a fully generic bundle
+question to an angle-fixing question.

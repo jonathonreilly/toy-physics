@@ -118,6 +118,15 @@ Equivalently:
 That means the current atlas supports a reducible bundle candidate, not a full
 canonical bundle with a uniquely determined `\nabla_R`.
 
+The later glue audit sharpens this further. Once the exact support-side bright
+axis is imposed together with the universal `Pi_A1` core, the common connected
+residual gauge is no longer the full universal `SO(3)` orbit. It reduces to:
+
+`SO(2)`.
+
+So the remaining common obstruction is already one-angle, not a wholly
+arbitrary complement bundle.
+
 ## Candidate status
 
 The common bundle candidate now has the strongest possible exact core the
@@ -130,6 +139,10 @@ current atlas can supply:
 What remains missing for full canonical closure is a distinguished connection
 that canonically extends `Pi_A1` over the complementary `E \oplus T1`
 channels.
+
+More sharply, after the glue reduction the remaining missing object is:
+
+> an angle-sensitive primitive that fixes the last `SO(2)` dark-plane freedom.
 
 ## Compatibility requirements
 
@@ -162,4 +175,6 @@ with the block-connection prototype
 `nabla_R^cand := nabla_A1 \oplus nabla_B \oplus nabla_O`.
 
 This is the sharpest common-bundle object the current atlas supports, but it
-is still a candidate because the complement of `Pi_A1` remains frame-dependent.
+is still a candidate because the complement of `Pi_A1` remains noncanonical.
+After the exact glue reduction, the unresolved connected freedom is a single
+dark-plane `SO(2)` angle.
