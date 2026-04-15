@@ -7,15 +7,16 @@ This repository is not presently organized around the older toy-model or DAG
 exploration surfaces. The current review target is a `Cl(3)` on `Z^3`
 framework package with a retained theorem core, retained standalone
 quantitative lanes, bounded Yukawa/Higgs lanes, a bounded companion
-portfolio, and two explicitly open gates.
+portfolio, and one explicitly open flagship gate.
 
 ## Current Read Order
 
 1. [CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md](CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md)
-2. [publication/ci3_z3/README.md](publication/ci3_z3/README.md)
-3. [publication/ci3_z3/PUBLICATION_MATRIX.md](publication/ci3_z3/PUBLICATION_MATRIX.md)
-4. [publication/ci3_z3/DERIVATION_ATLAS.md](publication/ci3_z3/DERIVATION_ATLAS.md)
-5. [publication/ci3_z3/DERIVATION_VALIDATION_MAP.md](publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
+2. [publication/ci3_z3/ARXIV_DRAFT.md](publication/ci3_z3/ARXIV_DRAFT.md)
+3. [publication/ci3_z3/README.md](publication/ci3_z3/README.md)
+4. [publication/ci3_z3/PUBLICATION_MATRIX.md](publication/ci3_z3/PUBLICATION_MATRIX.md)
+5. [publication/ci3_z3/DERIVATION_ATLAS.md](publication/ci3_z3/DERIVATION_ATLAS.md)
+6. [publication/ci3_z3/DERIVATION_VALIDATION_MAP.md](publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
 
 For the package-level gravity/gauge continuum positioning synthesis, use
 [CONTINUUM_IDENTIFICATION_NOTE.md](CONTINUUM_IDENTIFICATION_NOTE.md).
@@ -50,6 +51,7 @@ Canonical quantitative stack:
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
 - [YT_QFP_INSENSITIVITY_THEOREM.md](YT_QFP_INSENSITIVITY_THEOREM.md)
 - [HIGGS_VACUUM_PROMOTED_NOTE.md](HIGGS_VACUUM_PROMOTED_NOTE.md)
+- [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
 
 Current quantitative statuses:
 
@@ -57,6 +59,12 @@ Current quantitative statuses:
 - retained EW normalization package:
   `sin^2(theta_W)(M_Z) = 0.2306`,
   `1/alpha_EM(M_Z) = 127.67`
+- promoted CKM no-import closure package:
+  `|V_us| = 0.22727`,
+  `|V_cb| = 0.04217`,
+  `|V_ub| = 0.003913`,
+  `delta = 65.905 deg`,
+  `J = 3.331 x 10^-5`
 - bounded `y_t(v) = 0.9176`
 - bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
 - bounded Higgs / vacuum package:

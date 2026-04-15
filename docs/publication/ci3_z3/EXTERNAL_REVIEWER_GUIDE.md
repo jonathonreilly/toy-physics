@@ -9,7 +9,7 @@ The current package is:
 
 1. a retained theorem core
 2. retained standalone quantitative lanes for `alpha_s` and EW normalization
-3. bounded Yukawa/top and Higgs/vacuum lanes
+3. promoted CKM closure plus bounded Yukawa/top and Higgs/vacuum lanes
 4. a bounded observation-facing portfolio and a frozen-out registry for
    important excluded families
 
@@ -133,19 +133,17 @@ conventions is packaged separately and does not modify the theorem stack.
 
 1. DM relic mapping
 
-- Higgs mass `m_H`
-- several companion phenomenology bridges
-
 ## Read The Package In Order
 
-1. [CI3_Z3_PUBLICATION_STATE_2026-04-12.md](../../CI3_Z3_PUBLICATION_STATE_2026-04-12.md)
-2. [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
-3. [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
-4. [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
-5. [DERIVATION_ATLAS.md](./DERIVATION_ATLAS.md)
-6. [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
-7. [FULL_CLAIM_LEDGER.md](./FULL_CLAIM_LEDGER.md)
-8. [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md)
+1. [ARXIV_DRAFT.md](./ARXIV_DRAFT.md)
+2. [CI3_Z3_PUBLICATION_STATE_2026-04-12.md](../../CI3_Z3_PUBLICATION_STATE_2026-04-12.md)
+3. [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
+4. [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
+5. [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
+6. [DERIVATION_ATLAS.md](./DERIVATION_ATLAS.md)
+7. [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
+8. [FULL_CLAIM_LEDGER.md](./FULL_CLAIM_LEDGER.md)
+9. [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md)
 
 ## Review Rule
 

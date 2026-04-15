@@ -2,8 +2,9 @@
 
 ## Goal
 
-Use the same retained backbone as the Nature package, but carry the full
-bounded component stacks, supporting notes, and explicit live-gate bookkeeping.
+Use the retained backbone as the public manuscript surface on `main`, while
+carrying the full bounded component stacks, supporting notes, and explicit
+live-gate bookkeeping.
 
 ## Include
 
@@ -31,9 +32,12 @@ Current quantitative component package:
 Other bounded component families:
 
 - DM relic mapping
-- CKM / flavor
 - cosmology companions
 - sharp companion predictions
+
+Promoted quantitative package additions:
+
+- CKM no-import closure
 
 ## Exclude Or Quarantine
 
@@ -46,3 +50,6 @@ Other bounded component families:
 The arXiv package may be longer, not looser. Every bounded lane must end with
 its actual current status and must not outrun the matrix or derivation /
 validation map.
+
+Journal-specific condensation is now a private downstream packaging task, not a
+public competing draft surface in this repo.

@@ -6,7 +6,7 @@
 This file answers one question:
 
 > what should be done, in order, so the package is clean and stable before
-> arXiv and Nature submission?
+> public arXiv release and any downstream private journal adaptation?
 
 ## Phase 1. Lock the authority surface
 
@@ -32,19 +32,18 @@ This file answers one question:
 
 ## Phase 3. Normalize manuscript structure
 
-### Nature
+### Public arXiv manuscript
 
 - retained core only
 - derived `v` as the closed quantitative flagship result
 - weak-field gravity plus restricted strong-field companion
 - one disciplined paragraph on live gates
 
-### arXiv
+### Private journal adaptation
 
-- same retained core
-- explicit bounded quantitative portfolio
-- explicit frozen-out families
-- explicit negative results and no-go results
+- derived from the public arXiv surface
+- shorter presentation where needed
+- no competing public draft on `main`
 
 ## Phase 4. Add the missing reviewer-facing tables
 
@@ -74,7 +73,7 @@ This file answers one question:
 
 ## Phase 7. Fold in late scientific closures cleanly
 
-When DM / `y_t` / CKM or other lanes advance:
+When DM or other live lanes advance:
 
 1. update science authority note + runner
 2. classify in matrix

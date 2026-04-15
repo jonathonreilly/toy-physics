@@ -58,9 +58,9 @@ Use alongside:
 | QFP robustness support | [YT_QFP_INSENSITIVITY_THEOREM.md](../../YT_QFP_INSENSITIVITY_THEOREM.md) | [frontier_yt_qfp_insensitivity.py](../../../scripts/frontier_yt_qfp_insensitivity.py) |
 | bounded Higgs / vacuum package | [HIGGS_VACUUM_PROMOTED_NOTE.md](../../HIGGS_VACUUM_PROMOTED_NOTE.md) | [frontier_higgs_mass_full_3loop.py](../../../scripts/frontier_higgs_mass_full_3loop.py), [frontier_yt_color_projection_correction.py](../../../scripts/frontier_yt_color_projection_correction.py), [frontier_direct_yt_extraction.py](../../../scripts/frontier_direct_yt_extraction.py) |
 
-## Main Text Vs SI Split
+## Public Manuscript Mapping
 
-- Nature main text:
+- Public arXiv draft:
   - framework statement
   - weak-field gravity through the Poisson / Newton chain
   - weak-field WEP and time dilation as compact corollaries on that same
@@ -97,11 +97,13 @@ Use alongside:
   - full-framework one-generation closure
   - three-generation matter structure
   - exact `I_3 = 0` and CPT as compact supporting theorems
-- SI / arXiv:
+  - exact strong CP / `theta_eff = 0`
+  - promoted CKM no-import closure package as part of the quantitative manuscript surface
+- Public package companions / appendices:
   - bounded weak-field GR companions beyond Newton / Poisson / WEP / time-dilation
   - derivation chains
   - bounded phenomenology
-  - three live-gate notes and negative results
+  - one live-gate note and negative results
 
 ## Other Bounded Companion Families
 

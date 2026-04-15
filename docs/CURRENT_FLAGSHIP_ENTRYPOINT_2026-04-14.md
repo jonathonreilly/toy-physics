@@ -23,6 +23,13 @@ The current flagship package has four layers:
 The package is therefore not "everything in the repo," and it is not older
 route history.
 
+The public manuscript surface is now arXiv-first:
+
+- [publication/ci3_z3/ARXIV_DRAFT.md](publication/ci3_z3/ARXIV_DRAFT.md)
+
+Journal-specific packaging is now a private downstream adaptation rather than a
+public competing draft surface on `main`.
+
 On the gravity side, the direct-universal route now closes as an exact global
 Lorentzian Einstein/Regge stationary action family on discrete `3+1`
 spacetime `PL S^3 x R`. On the QG/continuum side, the exact project-native PL
@@ -132,6 +139,7 @@ Current package status:
 
 Start with:
 
+- [publication/ci3_z3/ARXIV_DRAFT.md](publication/ci3_z3/ARXIV_DRAFT.md)
 - [publication/ci3_z3/README.md](publication/ci3_z3/README.md)
 - [publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md](publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md)
 - [publication/ci3_z3/PUBLICATION_MATRIX.md](publication/ci3_z3/PUBLICATION_MATRIX.md)

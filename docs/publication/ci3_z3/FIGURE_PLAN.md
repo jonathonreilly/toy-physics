@@ -6,7 +6,7 @@ companions belong in the first public package.
 
 Companion captions live in [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md).
 
-## Nature letter figure set
+## Core arXiv figure set
 
 ### Figure 1. Framework and derivation map
 
@@ -93,9 +93,9 @@ Companion captions live in [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md).
 
 ### Figure A3. Bounded CKM lane
 
-- purpose: show route-pruning and the remaining Higgs `Z_3` obstruction
+- purpose: preserve route history without confusing it for the promoted CKM package
 - source notes:
   - [CABIBBO_BOUND_NOTE.md](../../CABIBBO_BOUND_NOTE.md)
   - [CKM_MASS_BASIS_NNI_NOTE.md](../../CKM_MASS_BASIS_NNI_NOTE.md)
   - [JARLSKOG_PHASE_BOUND_NOTE.md](../../JARLSKOG_PHASE_BOUND_NOTE.md)
-- status: hold until CKM work stops moving
+- status: optional history/comparison figure only; do not present as the live flavor authority

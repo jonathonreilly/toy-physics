@@ -13,11 +13,12 @@ it is not the default review surface.
 ## Start Here For The Current Package
 
 1. [Current flagship entrypoint](docs/CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md)
-2. [Publication package README](docs/publication/ci3_z3/README.md)
-3. [External reviewer guide](docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md)
-4. [Publication matrix](docs/publication/ci3_z3/PUBLICATION_MATRIX.md)
-5. [Derivation atlas](docs/publication/ci3_z3/DERIVATION_ATLAS.md)
-6. [Derivation / validation map](docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
+2. [Public arXiv draft](docs/publication/ci3_z3/ARXIV_DRAFT.md)
+3. [Publication package README](docs/publication/ci3_z3/README.md)
+4. [External reviewer guide](docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md)
+5. [Publication matrix](docs/publication/ci3_z3/PUBLICATION_MATRIX.md)
+6. [Derivation atlas](docs/publication/ci3_z3/DERIVATION_ATLAS.md)
+7. [Derivation / validation map](docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
 
 The direct-universal gravity route now closes as an exact global Lorentzian
 Einstein/Regge stationary action family on discrete `3+1` spacetime

@@ -3,7 +3,7 @@
 These are first-pass publication captions aligned to
 [FIGURE_PLAN.md](./FIGURE_PLAN.md). They are intentionally claim-disciplined.
 
-## Nature letter
+## Core arXiv draft
 
 ### Figure 1. Retained derivation backbone
 
@@ -13,8 +13,8 @@ Poisson/Newton chain together with weak-field WEP and time dilation, exact
 native `SU(2)`, graph-first structural `SU(3)`, anomaly-forced `3+1`, a
 retained `S^3` compactification / topology closure, a full-framework
 one-generation closure, and a retained three-generation matter structure. The
-three remaining live bridges are shown separately as
-bounded/open lanes rather than folded into the main claim.
+remaining live DM bridge is shown separately as a bounded/open lane rather than
+folded into the main claim.
 
 ### Figure 2. Graph-first structural `SU(3)`
 
@@ -74,6 +74,7 @@ continuum-running chain are not yet fully internal to the framework.
 
 ### Figure A3. Bounded CKM lane
 
-Current flavor work supplies route-pruning, direct negative results, and bounded
-EWSB structure. The figure should make clear that the lane remains bounded and
-that the quantitative CKM hierarchy is not yet promoted to a theorem.
+This is route-history material only. The live flavor authority is now the
+promoted no-import CKM closure package. If included at all, this figure should
+explain how earlier Cabibbo / mass-basis / partial-Jarlskog lanes were pruned
+or superseded without competing with the canonical CKM package.

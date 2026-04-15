@@ -19,22 +19,20 @@ submission without re-litigating claim status at the last minute.
   [STALE_AUTHORITY_AUDIT_2026-04-14.md](./STALE_AUTHORITY_AUDIT_2026-04-14.md)
   or documented in [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md)
 
-## 2. Nature package
+## 2. Public arXiv package
 
 - keep the main text on the retained backbone only
-- state the three live gates in one disciplined paragraph
+- state the one live flagship gate in one disciplined paragraph
 - move exact `I_3 = 0` and CPT to compact support or Extended Data if space is tight
-- keep DM, renormalized `y_t`, and CKM out of the core claim stack
+- keep DM and bounded renormalized `y_t` out of the core claim stack
 - ensure title, abstract, and discussion do not say or imply “full closure”
 
-## 3. arXiv package
+## 3. Private journal adaptation
 
-- use the same backbone as the letter
-- add derivation scaffolding and negative results
-- include retained topology notes for `S^3`
-- include bounded notes for the three live gates
-- include exact supporting theorems and honest bounded companions
-- preserve route-pruning and obstruction notes that prevent overclaiming
+- derive from the public arXiv package rather than maintaining a competing public draft
+- shorten presentation without changing the claim surface
+- keep exact supporting theorems and honest bounded companions private if venue format requires it
+- do not create a second public authority surface on `main`
 
 ## 4. GitHub surface
 
@@ -66,11 +64,11 @@ submission without re-litigating claim status at the last minute.
 - record exact runner versions and expected pass summaries
 - regenerate manuscript figures from pinned data
 - proofread title, abstract, and conclusion against the claims table
-- confirm the three live gates are still described honestly if they remain open
+- confirm the one live flagship gate is still described honestly if it remains open
 
-## 7. If the three gates close before submission
+## 7. If the remaining live gate closes before submission
 
 - update [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
-- update [NATURE_DRAFT.md](./NATURE_DRAFT.md) and [ARXIV_DRAFT.md](./ARXIV_DRAFT.md)
+- update [ARXIV_DRAFT.md](./ARXIV_DRAFT.md)
 - promote the newly retained note+runner pairs into the results index
 - tighten the abstract and discussion only after the claim ledger changes

@@ -1,286 +1,418 @@
-# Physics from `Cl(3)` on `Z^3`
+# Physics from `Cl(3)` on `Z^3`:
+# discrete `3+1` gravity, gauge structure, matter closure, and the current quantitative package
 
 ## Abstract
 
-We present the current retained theorem surface of the `Cl(3)` on `Z^3`
-framework. The main claim is not that every phenomenological lane is already
-closed, but that a broad structural backbone now survives direct audit on one
-discrete theory: weak-field gravity through the Poisson/Newton chain, exact
-native `SU(2)`, graph-first structural `SU(3)`, anomaly-forced `3+1`, a
-retained `S^3` compactification / topology closure, a full-framework
-one-generation Standard Model closure, a derived electroweak hierarchy theorem
-whose pinned evaluation on the exact minimal `3+1` block yields the
-electroweak scale, and a retained three-generation matter structure. We also
-retain exact supporting theorems for vanishing third-order interference
-(`I_3 = 0`) on the Hilbert surface and exact CPT on the free staggered
-lattice. We separate this retained backbone from bounded phenomenology and
-from three still-live bridge problems: dark-matter relic mapping, renormalized
-top-Yukawa matching, and quantitative flavor closure.
+We study the hypothesis that `Cl(3)` on the cubic lattice `Z^3` is the
+physical theory and ask how much known physics survives direct audit on that
+exact discrete surface. On the retained theorem surface, the framework carries
+weak-field gravity through Poisson self-consistency and the lattice
+Green-function Newton law together with weak-field weak equivalence principle
+and time dilation; a restricted strong-field theorem on the exact
+star-supported finite-rank class; an exact discrete global Lorentzian
+Einstein/Regge stationary-action family on `PL S^3 x R`; an exact
+quantum-gravity bridge through UV-finite partition densities, canonical
+refinement, inverse-limit Gaussian completion, project-native PL weak/Sobolev
+closure, and canonical textbook continuum gravitational identification on the
+chosen smooth target; exact native `SU(2)`; graph-first structural `SU(3)`;
+exact `T = 0` confinement of the graph-first `SU(3)` sector with bounded
+`\sqrt{\sigma} \approx 465 MeV`; anomaly-forced `3+1`; retained `S^3`
+compactification / topology closure; one-generation matter closure; retained
+three-generation matter structure; a derived electroweak hierarchy theorem
+whose pinned evaluation yields `v = 245.080424447914 GeV`; exact `I_3 = 0`;
+exact CPT; exact strong CP / `\theta_eff = 0`; retained `\alpha_s(M_Z)` and
+EW normalization lanes; and a promoted no-import CKM closure package. The live
+remaining flagship gate is now dark-matter relic mapping. The top-Yukawa,
+Higgs/vacuum, cosmology, and other phenomenology rows remain package-captured
+but bounded.
 
 ## 1. Introduction
 
-This manuscript is the arXiv-length companion to the flagship letter. Its job
-is not to widen the claim surface, but to make the theorem stack explicit,
-preserve bounded phenomenology honestly, and keep the negative results that stop
-the project from drifting into overclaim.
+The present manuscript is the public arXiv-facing paper for the current
+`main` package. Its job is not to widen the claim surface beyond what the
+repository actually supports. Its job is to make the retained theorem stack,
+promoted quantitative lanes, bounded companion portfolio, and remaining open
+gate legible in one place.
 
-The full branch-audited publication capture is now explicit:
+The framework sentence is:
 
-- retained flagship claims live in [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
-- the full quantitative and workstream portfolio lives in
-  [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
-- the reviewer-facing quantitative rows are summarized in
-  [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
-- intentionally excluded families live in
-  [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md)
-- the package architecture itself lives in
-  [PUBLICATION_CONTROL_PLANE.md](./PUBLICATION_CONTROL_PLANE.md)
+> We take `Cl(3)` on `Z^3` as the physical theory. Everything else on the
+> public paper surface is either retained, bounded, or explicitly open.
 
-The working framework sentence is:
+That sentence is narrower than a universal “everything is solved” pitch and
+stronger than a mere regulator statement. The lattice is not being treated as
+temporary scaffolding for a different continuum theory. The paper instead asks
+what survives direct audit on the exact discrete surface and then keeps only
+those rows.
 
-> We take `Cl(3)` on `Z^3` as the physical theory. Everything else is derived.
+The current package is matrix-driven. The manuscript-facing claim surface lives
+in [CLAIMS_TABLE.md](./CLAIMS_TABLE.md). The full science inventory, including
+bounded and frozen-out families, lives in
+[PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md). The reusable theorem/tool
+inventory lives in [DERIVATION_ATLAS.md](./DERIVATION_ATLAS.md). The paired
+evidence contract lives in
+[DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md). This draft is
+written to stay inside those surfaces rather than outrun them.
 
-That sentence should not be confused with a claim that every downstream bridge
-is already finished. The correct reading is that the retained backbone now lives
-on one exact discrete surface, while bounded and open lanes are reported with
-their actual audited status.
+Relative to earlier package states, several important changes matter:
 
-The current paper also conditions some phenomenology on a small explicit set
-of external inputs, but they are now cosmological only:
-`T_CMB = 2.7255 K` and `H_0 = 67.4 km/s/Mpc`, which specify the universe /
-epoch being matched. The electroweak scale is no longer treated as an external
-datum on the current paper surface. On the exact minimal hierarchy block, the
-axiom-native scalar observable principle derived from the finite Grassmann
-Gaussian fixes the hierarchy normalization and yields
-`v = 245.080424447914 GeV`, within `0.4628%` of the measured electroweak
-scale, without electroweak input.
+- the direct-universal gravity route is now closed as exact full discrete
+  `3+1` GR on the project route;
+- the QG/continuum bridge is now closed on the chosen canonical textbook
+  target;
+- strong CP is now exact on the axiom-determined action surface;
+- confinement is now promoted as an exact structural theorem with a bounded
+  string-tension readout;
+- CKM is now a promoted no-import closure package rather than a bounded flavor
+  lane;
+- the only live flagship gate left is dark-matter relic mapping.
 
-The appropriate positioning against other discrete or unification programs is
-compact, not encyclopedic. This work should be read as a graph-first retained
-backbone on a single audited `Cl(3)` / `Z^3` surface, not as a claim to absorb
-every regulator-based lattice program, every algebraic discrete program, or
-every continuum unification framework.
+The correct reading of the paper is therefore no longer “promising framework
+with many open bridges.” It is “broad retained discrete backbone with one live
+flagship gate and several bounded companion phenomenology packages.”
 
-## 2. Retained Framework Surface
+## 2. Framework and Claim Surface
 
-### 2.1 Weak-field gravity from the Poisson / Newton chain
+The retained framework surface now has four layers:
 
-The gravity claim that currently clears the audit bar is weak-field and
-specific. On the retained lattice surface, Poisson is the unique
-self-consistent local field equation in the audited operator family, and the
-lattice Green's function on `Z^3` yields the inverse-square Newton law. On the
-same retained action surface, weak equivalence principle and weak-field
-gravitational time dilation are now also safe as derived corollaries. This is
-the correct flagship gravity statement.
+1. retained theorem core;
+2. retained standalone quantitative lanes;
+3. bounded quantitative and phenomenological companions;
+4. one live flagship gate.
 
-Here the self-consistency principle should be read literally: within the
-audited local operator family, Poisson is the unique fixed point compatible
-with the retained action and symmetry constraints. It is not being introduced
-as an extra phenomenological axiom.
+The paper should not mix those layers. Exact and promoted rows belong in the
+main derivation spine. Bounded rows belong in explicitly labeled quantitative
+or companion sections. The single live gate should be stated plainly rather
+than hidden inside prose.
 
-Broader GR-signature notes still mix exact, bounded, and conditional steps.
-Conformal-metric, geodesic, and light-bending results therefore remain in the
-bounded sections rather than in the retained backbone.
+The current public package does still condition some observation-facing rows on
+explicit cosmological boundary data:
 
-Separately, the current review package now supports a retained restricted
-strong-field theorem: on the exact star-supported finite-rank shell class, the
-framework has an exact shell source, a unique same-charge bridge, an exact
-local static-constraint lift, and an exact microscopic Schur boundary action.
-This is not promoted as full nonlinear GR, but it is strong enough to retain
-as an Extended Data / theorem-box result with its source-class qualifier intact.
+- `T_CMB = 2.7255 K`
+- `H_0 = 67.4 km/s/Mpc`.
 
-### 2.2 Exact native `SU(2)`
+Those are not inputs to the retained structural core. They are the current
+epoch-selection inputs for the bounded cosmology companion portfolio. By
+contrast, the electroweak scale is no longer an external datum on the current
+paper surface. The retained hierarchy theorem fixes the exact minimal-block
+source-response structure internally, and the quoted numerical value is the
+pinned evaluation on the current plaquette / `u_0` surface.
 
-The cubic `Cl(3)` bivectors close exactly into the weak algebra. This remains
-the strongest native gauge statement on the framework surface and does not rely
-on downstream phenomenology.
+## 3. Gravity and the QG/Continuum Chain
 
-### 2.3 Graph-first structural `SU(3)`
+### 3.1 Weak-field gravity
 
-The safe `SU(3)` statement is graph-first. A selector on the canonical
-cube-shift graph chooses a weak axis directly on the graph; on that selected
-surface the graph fibers carry weak `su(2)`, the residual cubic swap produces
-the `3 \oplus 1` split, and the joint commutant carries structural
-`su(3) \oplus u(1)`. The reviewer-facing uniqueness statement is that the
-canonical selector is fixed up to graph automorphism on the audited graph
-family; alternative selector families fail the same charge and commutant
-audit, so the graph-first `SU(3)` claim is not an arbitrary choice of basis.
+The weak-field gravity backbone remains the first retained gravity result.
+Within the audited local operator family, Poisson is the unique
+self-consistent fixed point, and the lattice Green function on `Z^3` yields
+the inverse-square Newton law. On that same retained action surface,
+weak-field WEP and weak-field gravitational time dilation survive as derived
+corollaries.
 
-On that same selected-axis surface, the framework also retains left-handed
-`+1/3` / `-1` charge matching. The abelian factor should still be described
-carefully outside the anomaly-complete one-generation branch; the safe statement
-here is retained left-handed matching, not unrestricted hypercharge closure.
+The safe statement is exact and narrow:
 
-### 2.4 Anomaly-forced `3+1`
+- weak-field gravity through the Poisson / Newton chain is retained;
+- weak-field WEP and time dilation are retained corollaries on that surface;
+- broader weak-field GR-signature rows beyond those remain bounded unless
+  separately promoted.
 
-The spatial graph by itself fixes the left-handed surface but does not provide
-chirality. The anomaly-forces-time theorem closes the `3+1` lane on the
-single-clock codimension-1 surface: chirality requires even total dimension,
-while multi-time continuations conflict with the framework’s one-clock state
-semantics. The paper-safe claim is therefore that the framework selects `3+1`.
+### 3.2 Restricted strong-field closure
 
-### 2.5 Full-framework one-generation closure
+The current package also retains a restricted strong-field theorem. On the
+exact star-supported finite-rank shell class under the static conformal bridge,
+the shell source, same-charge bridge, local static-constraint lift, and
+microscopic Schur boundary action close exactly.
 
-Once the temporal direction is derived, chirality is available. The spatial
-graph fixes the left-handed gauge and matter structure, and anomaly cancellation
-fixes the right-handed singlet completion on the Standard Model branch. That is
-the current one-generation closure surface.
+This is not being sold as unrestricted nonlinear GR. It is a theorem on an
+explicit source/bridge class. It belongs in the retained package because the
+class is exact and the closure is exact, but the qualifier matters.
 
-### 2.6 Electroweak hierarchy / `v` scale
+### 3.3 Full discrete `3+1` GR
 
-The electroweak hierarchy is now retained on the same exact minimal block.
-On the APBC hierarchy block, the determinant exponent is exactly
-`16 = 2 x 2^3`, spatial APBC is selected by finiteness of the intensive
-`3+1` scalar observable, and the remaining observable-map gap is removed by the
-new source-response theorem: the finite Grassmann Gaussian makes `|Z|`
-multiplicative on independent subsystems, so `log|Z|` is the unique additive
-CPT-even scalar generator, and local scalar observables are its source-response
-coefficients. The resulting curvature kernel depends only on the
-sign/conjugation-invariant temporal weight `sin^2 omega`, so the unique
-minimal resolved orbit is `L_t = 4`. The exact theorem is the minimal-block
-source-response structure; the quoted number is the pinned evaluation on the
-current `u_0` / plaquette surface. This gives
-`v = 245.080424447914 GeV`, `0.4628%` below `246.22 GeV`, without electroweak
-input.
+The direct-universal route is now the gravity capstone on the project route.
+The discrete theory closes as an exact global Lorentzian Einstein/Regge
+stationary-action family on `PL S^3 x R`. This is the correct flagship gravity
+claim on the current repo surface.
 
-What remains bounded is not the hierarchy / `v` lane, but the physical Higgs
-mass `m_H = 125 GeV`.
+The phrase “GR” in this package means General Relativity on the project’s
+discrete `3+1` route. The strongest exact theorem is the discrete-global one,
+not an unqualified continuum statement detached from the discrete theory that
+actually generated it.
 
-### 2.7 Three-generation matter structure
+### 3.4 UV-finite QG and the continuum bridge
 
-The exact orbit algebra `8 = 1 + 1 + 3 + 3` remains central. On the present
-framework surface the lattice is physical rather than a regulator, so the three
-triplet sectors are retained as physical species structure within the theory.
-They are not regulator degeneracies that disappear under continuum removal; the
-same selector and charge audit that fixes the retained gauge surface also keeps
-the triplet structure visible, so the family structure is part of the ontology
-rather than a taste artifact.
-What remains bounded is detailed fermion-mass hierarchy and quantitative flavor
-data, not the existence of three species itself.
+The quantum-gravity/continuum chain is no longer an aspiration. It is now a
+closed theorem stack on the chosen canonical target. The exact chain includes:
 
-### 2.8 Retained `S^3` compactification / topology closure
+1. UV-finite partition-density family whose mean/stationary sector is the
+   discrete `3+1` Einstein/Regge family;
+2. canonical barycentric-dyadic refinement net on `PL S^3 x R`;
+3. inverse-limit Gaussian cylinder closure;
+4. abstract Gaussian / Cameron-Martin completion;
+5. project-native PL field realization;
+6. project-native PL weak/Dirichlet closure;
+7. project-native PL `H^1`-type Sobolev interface;
+8. external FE/Galerkin weak/measure equivalence for a chosen smooth target;
+9. canonical textbook weak/measure equivalence;
+10. smooth local, finite-atlas, and global weak gravitational identification;
+11. canonical smooth geometric/action equivalence;
+12. canonical textbook Einstein-Hilbert-style geometric/action equivalence;
+13. canonical textbook continuum gravitational closure on the chosen smooth
+    realization.
 
-The current topology result is no longer a tentative appendix claim. On the
-accepted paper bar, the cone-cap family closes the compactification/classification
-route strongly enough to retain `PL S^3` as part of the framework surface. The
-key point for the manuscript is that `S^3` itself is no longer one of the live
-flagship gates. What remains bounded are downstream cosmology companions that
-consume the retained topology result, not the topology claim itself.
+This stack is exact on the chosen canonical target. The package-level gravity /
+gauge continuum positioning note then states the correct combined posture:
 
-## 3. Exact Supporting Theorems
+- gravity: exact on the chosen canonical textbook target;
+- gauge: positioned through the retained structural plus universality/EFT
+  bridge, not by an analogous exact 19-step theorem chain.
 
-### 3.1 Exact `I_3 = 0`
+### 3.5 What is still not claimed
 
-The retained exact interference statement is that third-order interference
-vanishes identically once amplitudes add linearly and probabilities are
-quadratic on the Hilbert surface. This should be carried as an exact `I_3 = 0`
-theorem, not as a loose full Born-rule claim.
+The gravity lane is materially stronger than it was before, but the safe paper
+wording still matters. The package is not claiming every broader gravity-like
+companion row as retained. Weak-field companion signatures beyond the promoted
+Newton/Poisson/WEP/time-dilation set, and broader gravity companions outside
+the retained core, remain frozen out of the flagship paper surface.
 
-### 3.2 Exact CPT
+## 4. Gauge Structure, Matter, and Exact Support Theorems
 
-The free staggered `Cl(3)` lattice is exactly CPT invariant. This is a clean
-finite-lattice theorem on the retained framework surface. The open step is the
-interacting extension, not the free theorem itself.
+### 4.1 Exact native `SU(2)`
 
-## 4. Bounded but Important Lanes
+The Clifford bivectors close exactly into the weak algebra on the cubic
+surface. This remains the cleanest native gauge statement in the framework and
+does not depend on downstream phenomenology.
 
-### 4.0 Residual weak-field GR companions beyond Newton/Poisson/WEP/time dilation
+### 4.2 Graph-first structural `SU(3)`
 
-The current gravity audit now splits this cleanly. WEP and weak-field time
-dilation are retained corollaries of the derived action on the retained
-Poisson/Newton surface. Conformal-metric, geodesic, and light-bending notes
-are still important, but they remain bounded companions rather than part of the
-paper-safe retained backbone.
+The safe color statement is graph-first. A selector on the canonical
+cube-shift graph fixes a weak axis. On that selected surface, the graph fibers
+carry weak `su(2)`, the residual swap of the remaining axes produces the
+`3 \oplus 1` split, and the joint commutant carries structural
+`su(3) \oplus u(1)`. The selector is unique up to graph automorphism on the
+audited graph family.
 
-### 4.1 Residual topology companions after retained `S^3` closure
+This graph-first closure is the correct public authority surface. Older
+commutant-only or looser selector narratives are route history, not the current
+paper claim.
 
-Retaining `S^3` does not automatically retain every topology-driven cosmology
-corollary. Spectral, cosmological-constant, and other downstream companions
-should still be treated claim-by-claim. The correct arXiv posture is therefore
-to carry `S^3` itself as retained while keeping its dependent cosmology chains
-honestly bounded unless their own bridge steps are closed.
+### 4.3 Charge matching and one-generation matter closure
 
-### 4.2 Dark-matter relic mapping
+On the selected-axis surface, the abelian factor carries retained left-handed
+`+1/3` / `-1` charge matching. This is the safe public charge statement on the
+graph-first package.
 
-The direct lattice contact-enhancement and Sommerfeld structure are now real,
-and the coarse-graining story is stronger. The full relic mapping still remains
-bounded because the Boltzmann/Stosszahlansatz step, normalization choices, and
-cosmology bridge are not yet entirely internal to the framework.
+The one-generation matter story then becomes full-framework rather than purely
+spatial. The spatial graph fixes the left-handed gauge/matter surface.
+Anomaly-forced time supplies chirality through single-clock `3+1`. Anomaly
+cancellation then fixes the right-handed completion on the Standard Model
+branch. That is the retained one-generation closure theorem.
 
-### 4.3 Renormalized `y_t`
+### 4.4 Retained three-generation matter structure
 
-The UV theorem surface is stronger than before: the exact algebraic relation is
-retained and `Cl(3)` preservation under block-spin RG is exact. The remaining
-gap is the low-energy bridge: scheme conversion, Planck-scale coupling chain,
-and lattice-to-continuum matching remain bounded rather than exact.
+The exact orbit algebra `8 = 1 + 1 + 3 + 3` remains central. Because the
+lattice is treated as physical rather than as a disposable regulator, the
+triplet sectors are retained as physical species structure rather than taste
+noise to be divided away. The safe paper claim is retained three-generation
+matter structure. Detailed inter-family hierarchy and flavor numerics are
+separate questions.
 
-### 4.4 Flavor and CKM
+### 4.5 Exact `I_3 = 0` and exact CPT
 
-The current CKM work provides real route-pruning, direct negative results, and
-bounded EWSB-based structure. It does not yet provide a quantitative CKM
-theorem.
+Two exact support theorems remain important and compact:
 
-## 5. Negative Results That Matter
+- exact `I_3 = 0` / no third-order interference on the Hilbert surface;
+- exact CPT on the free staggered lattice.
 
-The arXiv version should keep the negative results visible:
+These are not decorative extras. They certify that the same discrete framework
+supports both the gauge/matter backbone and nontrivial exact consistency
+theorems.
 
-- generation hierarchy is not closed just because a modeled `1+1+1` split can be written down
-- the topology lane is not closed just because cone-cap attacks look plausible
-- the DM lane is not closed just because coarse-graining looks physically reasonable
-- the renormalized `y_t` lane is not closed just because one RG sub-theorem lands
-- CKM is not closed just because one structural flavor mechanism produces a bounded pattern
+### 4.6 Strong CP
 
-These negatives are part of what makes the retained backbone credible.
+Strong CP is now retained as an exact structural theorem on the
+axiom-determined Wilson-plus-staggered action surface. The framework carries
+no bare `\theta` parameter there, the staggered determinant is real and
+positive for real masses, and CKM CP remains weak-sector only. The safe public
+statement is:
 
-## 6. Reproducibility Surface
+> `\theta_eff = 0` on the axiom-determined action surface.
 
-The arXiv version should point directly to the curated publication package:
+This is a genuine promoted row, not a bounded companion.
 
-- [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
-- [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
-- [RESULTS_INDEX.md](./RESULTS_INDEX.md)
-- [REPRODUCE.md](./REPRODUCE.md)
-- [SUBMISSION_CHECKLIST.md](./SUBMISSION_CHECKLIST.md)
-- [FIGURE_PLAN.md](./FIGURE_PLAN.md)
+### 4.7 Confinement
 
-Every retained or bounded statement in the manuscript should map to one note and
-one primary runner through those documents, with the claim-level evidence
-contract recorded in [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md).
+The graph-first `SU(3)` gauge sector now also carries an exact `T = 0`
+confinement theorem. The bounded quantitative companion on top of that is the
+string-tension readout
 
-## 7. Package Rule
+- `\sqrt{\sigma} \approx 465 MeV`
 
-This version is allowed to be longer, not looser. Every bounded section should
-end with its actual current status and should not silently outrun
-[CLAIMS_TABLE.md](./CLAIMS_TABLE.md). Stale review packets, pitch decks, and
-duplicated closure notes that disagree with the audited state should remain out
-of the publication path.
+from the retained `\alpha_s` lane plus the standard low-energy EFT bridge.
+The structural theorem is exact; the numeric string-tension row remains
+bounded by that bridge.
 
-## 8. Figure and Appendix Structure
+## 5. Hierarchy and the Quantitative Package
 
-The main manuscript should carry the retained theorem chain and exact supporting
-theorems. Bounded lanes should move into explicit subsections or appendices:
+### 5.1 Hierarchy / `v`
 
-- topology appendix
-- dark-matter appendix
-- renormalized `y_t` appendix
-- flavor / CKM appendix
-- exact-support appendix for `I_3 = 0` and CPT if needed
+The electroweak hierarchy lane is retained on the exact minimal `3+1` block.
+The finite Grassmann Gaussian makes `\log|Z|` the unique additive CPT-even
+scalar generator on that surface, and the resulting source-response theorem
+fixes the hierarchy kernel. The pinned evaluation on the current plaquette /
+`u_0` surface gives
 
-The canonical figure inventory is [FIGURE_PLAN.md](./FIGURE_PLAN.md).
+- `v = 245.080424447914 GeV`
 
-## 9. Conclusion
+which is `0.4628%` low relative to `246.22 GeV`.
+
+The important package distinction is that the exact theorem is the
+source-response structure on the minimal block. The quoted number is the pinned
+evaluation on the current package surface, not a separate fitted datum.
+
+### 5.2 Retained standalone quantitative lanes
+
+The current retained standalone quantitative lanes are:
+
+- `\alpha_s(M_Z) = 0.1181`
+- `\sin^2\theta_W(M_Z) = 0.2306`
+- `1/\alpha_{EM}(M_Z) = 127.67`
+- `g_1(v) = 0.4644`
+- `g_2(v) = 0.6480`
+
+These rows are package-grade. They are no longer merely “promising numerical
+coincidences.” They are the current retained quantitative component stack.
+
+### 5.3 CKM closure package
+
+Flavor is no longer an open flagship gate. The current package carries a
+promoted no-import CKM closure route with the canonical CMT coupling, exact
+atlas counts, exact projector structure, exact bilinear tensor slot, exact
+`Z_3` source, and exact Schur cascade. The promoted package reports:
+
+- `|V_us| = 0.22727`
+- `|V_cb| = 0.04217`
+- `|V_ub| = 0.003913`
+- `\delta = 65.905^\circ`
+- `J = 3.331 \times 10^{-5}`.
+
+This is now the controlling CKM authority surface on `main`. Older Cabibbo,
+mass-basis NNI, and partial-Jarlskog notes remain route history only.
+
+### 5.4 Bounded Yukawa / top and Higgs/vacuum rows
+
+The top-Yukawa / top-mass lane is still bounded, not retained. The current
+package surface is:
+
+- `y_t(v) = 0.9176`
+- `m_t(pole) = 172.57 GeV` (2-loop)
+- `m_t(pole) = 173.10 GeV` (3-loop)
+
+with an inherited `~3%` QFP/RGE-surrogate systematic.
+
+The Higgs/vacuum package is also still bounded, even though the framework-side
+3-loop Higgs computation exists:
+
+- `m_H = 119.8 GeV` on the corrected-input 2-loop support route
+- `m_H = 125.3 GeV` on the framework-side 3-loop route
+
+The key point is not whether the central number can be made near the observed
+one. The key point is whether the whole route is closed on the same exact
+surface. It is not yet. The bounded label stays.
+
+## 6. Bounded Companions and the Remaining Live Gate
+
+### 6.1 The live gate: dark-matter relic mapping
+
+The only remaining live flagship gate is dark-matter relic mapping. There is
+real structural progress in the direct lattice contact-enhancement and relic
+lane, but the graph-to-relic transport/normalization bridge is still not
+closed at the package bar. That is why DM stays open even though several
+individual numbers are promising.
+
+### 6.2 Cosmology companions
+
+The cosmology lane is now cleaner than before and no longer needs to be
+treated as several unrelated blockers. `\Lambda`, `w = -1`, and the present
+`\Omega_\Lambda` row reduce to one fixed-gap vacuum/de Sitter scale plus the
+remaining matter-content bridge. That is useful, but the cosmology family is
+still bounded/conditional on the current public package surface.
+
+### 6.3 Other companions
+
+The repo also keeps several companion or discriminator rows outside the
+retained flagship surface:
+
+- proton lifetime;
+- Lorentz-violation fingerprint;
+- Bekenstein-Hawking entropy companion;
+- gravitational decoherence;
+- monopole mass;
+- other later-paper phenomenology.
+
+These rows matter for the broader program, but they are not required for the
+main arXiv paper to be coherent.
+
+## 7. Reproducibility and Public Repo Surface
+
+The public entrypoint is the curated publication package, not raw repo
+chronology. The correct read order is:
+
+1. [README.md](../../../README.md)
+2. [README.md](./README.md)
+3. [EXTERNAL_REVIEWER_GUIDE.md](./EXTERNAL_REVIEWER_GUIDE.md)
+4. [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
+5. [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
+6. [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
+7. [DERIVATION_ATLAS.md](./DERIVATION_ATLAS.md)
+8. [RESULTS_INDEX.md](./RESULTS_INDEX.md)
+9. [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
+10. [FROZEN_OUT_REGISTRY.md](./FROZEN_OUT_REGISTRY.md).
+
+The package-level gravity/gauge continuum positioning layer is now collected in
+[CONTINUUM_IDENTIFICATION_NOTE.md](../../CONTINUUM_IDENTIFICATION_NOTE.md).
+
+The arXiv draft is allowed to be longer than a journal letter, but it is not
+allowed to be looser than the package. Every retained row here must appear in
+the claims table and derivation/validation map. Every bounded row here must be
+labeled bounded in both the manuscript and the repo package.
+
+## 8. Conclusion
 
 The current state of the project is no longer that of a promising discrete toy
-model, but it is also not yet a fully closed unification paper. The retained
-backbone is broad and nontrivial: weak-field gravity through the Poisson/Newton
-chain together with weak-field WEP and time dilation, exact native `SU(2)`,
-graph-first structural `SU(3)`, anomaly-forced `3+1`, a full-framework
-one-generation Standard Model closure, a derived electroweak hierarchy / `v`
-scale on the exact minimal hierarchy block, and a retained three-generation
-matter structure. Exact `I_3 = 0` and exact CPT strengthen the same framework
-surface.
+model, but it is also not a claim that every downstream bridge has closed.
 
-The remaining bridge problems are explicit: dark-matter relic mapping,
-renormalized `y_t`, and quantitative flavor closure. They should stay explicit.
-That is the correct arXiv posture and the strongest way to make the retained
-theorem surface legible to hostile readers.
+What is now genuinely retained is broad:
+
+- weak-field gravity through the Poisson / Newton chain with WEP and time
+  dilation;
+- restricted strong-field closure on an exact source/bridge class;
+- full discrete `3+1` GR on the project route;
+- exact QG/continuum bridge closure on the chosen canonical textbook target;
+- exact native `SU(2)`;
+- graph-first structural `SU(3)`;
+- exact `T = 0` confinement with bounded string tension;
+- anomaly-forced `3+1`;
+- retained `S^3` topology closure;
+- one-generation matter closure;
+- retained three-generation matter structure;
+- retained hierarchy / `v`;
+- exact `I_3 = 0`;
+- exact CPT;
+- exact strong CP / `\theta_eff = 0`;
+- retained `\alpha_s` and EW normalization lanes;
+- promoted no-import CKM closure.
+
+What remains bounded is explicit:
+
+- top-Yukawa / top-pole matching;
+- Higgs/vacuum closure;
+- cosmology companions;
+- broader phenomenology companions.
+
+What remains genuinely open as a flagship gate is also explicit:
+
+- dark-matter relic mapping.
+
+That is the correct arXiv posture: broad exact discrete backbone, honest
+bounded companions, one live gate, and no silent overclaim.

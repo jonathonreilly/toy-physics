@@ -7,16 +7,17 @@ Use this package instead of browsing raw repo chronology.
 
 ## External Reviewer Read Order
 
-1. [External reviewer guide](./EXTERNAL_REVIEWER_GUIDE.md)
-2. [Publication state](../../CI3_Z3_PUBLICATION_STATE_2026-04-12.md)
-3. [Publication matrix](./PUBLICATION_MATRIX.md)
-4. [Quantitative summary table](./QUANTITATIVE_SUMMARY_TABLE.md)
-5. [Claims table](./CLAIMS_TABLE.md)
-6. [Derivation atlas](./DERIVATION_ATLAS.md)
-7. [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
-8. [Full claim ledger](./FULL_CLAIM_LEDGER.md)
-9. [Frozen-out registry](./FROZEN_OUT_REGISTRY.md)
-10. [Results index](./RESULTS_INDEX.md)
+1. [Public arXiv draft](./ARXIV_DRAFT.md)
+2. [External reviewer guide](./EXTERNAL_REVIEWER_GUIDE.md)
+3. [Publication state](../../CI3_Z3_PUBLICATION_STATE_2026-04-12.md)
+4. [Publication matrix](./PUBLICATION_MATRIX.md)
+5. [Quantitative summary table](./QUANTITATIVE_SUMMARY_TABLE.md)
+6. [Claims table](./CLAIMS_TABLE.md)
+7. [Derivation atlas](./DERIVATION_ATLAS.md)
+8. [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
+9. [Full claim ledger](./FULL_CLAIM_LEDGER.md)
+10. [Frozen-out registry](./FROZEN_OUT_REGISTRY.md)
+11. [Results index](./RESULTS_INDEX.md)
 
 For one-note gravity/gauge continuum positioning across the current package,
 use [CONTINUUM_IDENTIFICATION_NOTE.md](../../CONTINUUM_IDENTIFICATION_NOTE.md).
@@ -31,6 +32,10 @@ The package has four layers:
 4. bounded observation-facing portfolio plus live gates and frozen-out route
    history
 
+The public manuscript surface on `main` is now arXiv-first. Journal-specific
+packaging is private and is not kept as a competing public draft in this
+directory.
+
 ## Current Quantitative Component Stack
 
 The current canonical quantitative stack is modular:
@@ -41,6 +46,7 @@ The current canonical quantitative stack is modular:
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
 - [YT_QFP_INSENSITIVITY_THEOREM.md](../../YT_QFP_INSENSITIVITY_THEOREM.md)
 - [HIGGS_VACUUM_PROMOTED_NOTE.md](../../HIGGS_VACUUM_PROMOTED_NOTE.md)
+- [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
 
 Current package status:
 
@@ -52,6 +58,12 @@ Current package status:
   `g_2(v) = 0.6480`
 - bounded `y_t(v) = 0.9176`
 - bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
+- promoted CKM no-import closure package:
+  `|V_us| = 0.22727`,
+  `|V_cb| = 0.04217`,
+  `|V_ub| = 0.003913`,
+  `delta = 65.905 deg`,
+  `J = 3.331 x 10^-5`
 - bounded Higgs / vacuum package:
   `m_H = 119.8 GeV` (2-loop support route),
   `125.3 GeV` (framework-side 3-loop route),
