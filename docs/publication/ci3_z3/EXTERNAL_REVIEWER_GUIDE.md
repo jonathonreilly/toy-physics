@@ -77,6 +77,10 @@ For the package-level gravity/gauge continuum positioning synthesis, use
 - retained `S^3` compactification / topology closure
 - full-framework one-generation matter closure
 - retained three-generation matter structure
+- reviewer-facing three-generation / chirality boundary:
+  physical-lattice species structure + no-rooting in Hamiltonian `Cl(3)` +
+  anomaly-forced full-framework chirality, not a conventional regulator
+  loophole
 - exact `I_3 = 0`
 - exact CPT
 - emergent Lorentz invariance with first anisotropic correction at dimension 6 and unique cubic-harmonic `\ell = 4` signature; on the retained hierarchy surface the correction is `(E/M_{Pl})^2` suppressed
@@ -93,6 +97,8 @@ Review this as a modular component stack:
 5. QFP robustness support: [YT_QFP_INSENSITIVITY_THEOREM.md](../../YT_QFP_INSENSITIVITY_THEOREM.md)
 6. Higgs / vacuum: [HIGGS_VACUUM_PROMOTED_NOTE.md](../../HIGGS_VACUUM_PROMOTED_NOTE.md)
 7. CKM closure: [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
+8. three-generation / chirality boundary:
+   [THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md](../../THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md)
 
 Current status from that stack:
 

@@ -34,11 +34,18 @@ This is the safe retained statement used in the current paper package.
 The retained statement is structural, not maximal:
 
 - retained: physical three-generation structure in the framework
+- retained: reviewer-facing physical-lattice / no-rooting boundary for the
+  triplet sectors
 - not retained: full quantitative flavor closure
 - not retained: a first-principles `1+1+1` mass hierarchy
+- not retained: a pure-spatial chiral-regulator theorem divorced from the
+  anomaly-forced time step
 
 That remaining work belongs to the CKM / flavor gate, not to the three-generation
 closure itself.
+
+For the clean reviewer-facing chirality / anti-rooting boundary, see
+[THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md](./THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md).
 
 ## Validation
 

@@ -86,6 +86,8 @@ For the package-level continuum positioning across gravity and gauge, use
 - retained `S^3` compactification / topology closure
 - full-framework one-generation matter closure
 - retained three-generation matter structure
+  via the physical-lattice / no-rooting boundary and anomaly-forced
+  full-framework chirality
 - exact `I_3 = 0`
 - exact CPT on the free staggered lattice
 - emergent Lorentz invariance with first anisotropic correction at dimension 6 and unique cubic-harmonic `\ell = 4` signature; on the retained hierarchy surface the correction is `(E/M_{Pl})^2` suppressed

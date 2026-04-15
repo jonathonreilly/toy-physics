@@ -210,8 +210,12 @@ The exact orbit algebra `8 = 1 + 1 + 3 + 3` remains central. Because the
 lattice is treated as physical rather than as a disposable regulator, the
 triplet sectors are retained as physical species structure rather than taste
 noise to be divided away. The safe paper claim is retained three-generation
-matter structure. Detailed inter-family hierarchy and flavor numerics are
-separate questions.
+matter structure. This is not a claim that a conventional rooted staggered
+regulator has evaded Nielsen-Ninomiya. On the framework surface, rooting is
+undefined in Hamiltonian `Cl(3)` on `Z^3`, and chirality is supplied only in
+the full framework through anomaly-forced time and the one-generation closure
+theorem. Detailed inter-family hierarchy and flavor numerics are separate
+questions.
 
 ### 4.5 Exact `I_3 = 0` and exact CPT
 

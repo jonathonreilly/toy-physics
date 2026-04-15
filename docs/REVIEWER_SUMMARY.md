@@ -81,6 +81,11 @@ Current quantitative statuses:
   `|V_ub| = 0.003913`,
   `delta = 65.905 deg`,
   `J = 3.331 x 10^-5`
+- retained three-generation matter structure is a physical-lattice claim, not
+  a conventional rooting workaround: the triplet sectors are retained as
+  species structure because rooting is undefined in Hamiltonian `Cl(3)` on
+  `Z^3`, and chirality is supplied only on the full-framework anomaly-forced
+  `3+1` surface
 - bounded `y_t(v) = 0.9176`
 - bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
   with the current `~3%` QFP/RGE-surrogate systematic carried explicitly by
