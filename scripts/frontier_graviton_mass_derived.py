@@ -499,11 +499,11 @@ def print_summary(m_g_eV):
   STATUS: BOUNDED PREDICTION
   --------------------------
 
-  The derivation is exact given S^3 topology with R = R_Hubble.
+  The derivation is exact given the retained S^3 topology surface with
+  R = R_Hubble.
   The prediction is bounded because:
-    - S^3 topology is not yet derived from first principles (topology
-      lane is still open per review.md)
-    - R = c/H_0 identification uses observed Hubble constant
+    - R = c/H_0 identification uses the observed Hubble constant
+      on the current cosmology companion surface
     - Observational comparison is model-dependent (screening assumptions)
 """)
 

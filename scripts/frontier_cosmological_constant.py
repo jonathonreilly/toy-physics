@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Cosmological Constant from Graph Vacuum Energy
-================================================
+Exploratory cosmological-constant vacuum-energy audit
+=====================================================
 
 THE PROBLEM:
   Observed: Lambda_obs ~ 10^{-122} in Planck units
@@ -37,6 +37,10 @@ FIVE APPROACHES:
      On the lattice: G ~ a^2, rho_vac ~ 1/a^4 => Lambda ~ 1/a^2.
      For Lambda_obs ~ 10^{-122}: a ~ 10^{61} l_Planck ~ 10^{26} m ~ Hubble radius.
      This would mean the lattice spacing IS the cosmological horizon.
+
+This script is not the canonical positive cosmological-constant theorem
+surface. It is the broad vacuum-energy audit / negative-result surface behind
+`COSMOLOGICAL_CONSTANT_VACUUM_ENERGY_AUDIT_NOTE.md`.
 
 BOUNDED CLAIMS — only what the numerics can support.
 """

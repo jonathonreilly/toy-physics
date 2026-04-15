@@ -103,6 +103,11 @@ Use alongside:
 | Component | Note | Runner |
 |---|---|---|
 | DM ratio / relic package | [DM_RELIC_PAPER_NOTE.md](../../DM_RELIC_PAPER_NOTE.md) | [frontier_dm_relic_paper.py](../../../scripts/frontier_dm_relic_paper.py) |
+| Cosmological-constant spectral-gap companion | [COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md](../../COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md) | [frontier_cosmological_constant_spectral_gap.py](../../../scripts/frontier_cosmological_constant_spectral_gap.py) |
+| Cosmological-constant vacuum-energy audit | [COSMOLOGICAL_CONSTANT_VACUUM_ENERGY_AUDIT_NOTE.md](../../COSMOLOGICAL_CONSTANT_VACUUM_ENERGY_AUDIT_NOTE.md) | [frontier_cosmological_constant.py](../../../scripts/frontier_cosmological_constant.py) |
+| Dark-energy EOS companion | [DARK_ENERGY_EOS_NOTE.md](../../DARK_ENERGY_EOS_NOTE.md) | [frontier_dark_energy_eos.py](../../../scripts/frontier_dark_energy_eos.py) |
+| Conditional `Omega_Lambda` chain | [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md) | [frontier_omega_lambda_derivation.py](../../../scripts/frontier_omega_lambda_derivation.py) |
+| Graviton-mass companion | [GRAVITON_MASS_DERIVED_NOTE.md](../../GRAVITON_MASS_DERIVED_NOTE.md) | [frontier_graviton_mass_derived.py](../../../scripts/frontier_graviton_mass_derived.py) |
 
 ## Promoted Quantitative Packages
 

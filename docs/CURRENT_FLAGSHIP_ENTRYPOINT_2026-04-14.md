@@ -113,7 +113,8 @@ Current package status:
 
 - DM ratio and relic companions
 - older bounded CKM mass-basis / Cabibbo / partial Jarlskog route history
-- cosmology companions such as `Omega_Lambda`, `n_s`, `w = -1`, `Lambda`
+- cosmology companions such as the `Lambda` spectral-gap companion, `w = -1`,
+  `Omega_Lambda`, `n_s`, and the graviton-mass companion
 - sharp companion predictions such as proton lifetime, Lorentz fingerprint,
   BH entropy, graviton decoherence, monopole mass
 

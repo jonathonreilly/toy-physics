@@ -113,7 +113,7 @@ external reviewer will ask about them whether or not they are retained.
 | `\Omega_\Lambda` conditional chain | bounded/conditional | depends on observed `\eta`, flatness, and bounded DM chain | [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md) | matrix row `\Omega_\Lambda conditional chain`, `F01`, `F04` |
 | Spectral tilt `n_s` | bounded/conditional | cosmology bridge remains conditional | [PRIMORDIAL_SPECTRUM_NOTE.md](../../PRIMORDIAL_SPECTRUM_NOTE.md) | matrix row `Spectral tilt \`n_s\``, `F04` |
 | Dark energy EOS `w` | bounded/conditional | interesting but topology/cosmology dependent | [DARK_ENERGY_EOS_NOTE.md](../../DARK_ENERGY_EOS_NOTE.md) | matrix row `Dark energy EOS \`w\``, `F04` |
-| Cosmological constant `\Lambda` | bounded/conditional | depends on retained topology plus additional cosmology identification | [COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md](../../COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md) | matrix row `Cosmological constant \`\Lambda\``, `F04` |
+| Cosmological constant `\Lambda` | bounded/conditional | exact retained-topology spectral-gap coefficient, but the cosmological radius identification remains conditional | [COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md](../../COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md) | matrix row `Cosmological constant \`\Lambda\``, `F04` |
 | graviton mass `m_g` | bounded/conditional | sharp conditional prediction, but still depends on retained `S^3` plus observed `H_0` | [GRAVITON_MASS_DERIVED_NOTE.md](../../GRAVITON_MASS_DERIVED_NOTE.md) | matrix row `graviton mass \`m_g\``, `F04` |
 
 ### Quantitative component stack
@@ -161,7 +161,7 @@ These rows correspond to Section D of
 |---|---|---|---|
 | DM quantitative companion portfolio | frozen-out of flagship core | bounded relic bridge even though several numbers are strong | `F01` |
 | superseded YT / EW / Higgs route-history stack | frozen-out as authority | useful for audit, unsafe as publication authority after the promoted quantitative package landed on `main` | `F02` |
-| CKM / flavor quantitative portfolio | frozen-out of flagship core | still one of the live flagship gates | `F03` |
+| older CKM bounded route-history portfolio | frozen-out as superseded authority | retained only as route history after the promoted CKM closure package landed on `main` | `F03` |
 | cosmology companion portfolio | frozen-out of flagship core | conditional/bounded companion layer | `F04` |
 | Higgs and mass-spectrum companions beyond the promoted package | frozen-out of flagship core | the promoted Higgs/vacuum package is live, but the broader mass-spectrum and neutrino programs remain outside the flagship spine | `F05` |
 | gravity companions beyond the retained core | frozen-out of flagship core | weak-field GR-signature companions and broader non-flagship gravity phenomenology remain outside the flagship core even though the direct-universal discrete GR and canonical textbook continuum-QG route are now promoted | `F06` |

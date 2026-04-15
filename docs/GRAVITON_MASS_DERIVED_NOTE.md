@@ -20,8 +20,7 @@ not apply and the m -> 0 limit is smooth.
 
 ## Assumptions
 
-1. Spatial topology is S^3 (topology lane is still open/bounded per
-   review.md -- this derivation is conditional on S^3).
+1. Spatial topology is the retained `S^3` topology closure on `main`.
 2. S^3 radius R = c/H_0 (Hubble radius). This uses the observed
    value H_0 = 67.4 km/s/Mpc.
 3. The graviton is described by TT perturbations of the metric, with
@@ -53,12 +52,12 @@ not apply and the m -> 0 limit is smooth.
 
 ## What Remains Open
 
-1. **S^3 topology itself is not derived.** The topology lane is still
-   bounded/open (review.md item 2). This derivation is conditional.
-2. **R = c/H_0 is an input**, not derived from the framework.
-3. **The vDVZ argument** is qualitative. A full proof that topological
+1. **R = c/H_0 is an input**, not derived on the same theorem surface.
+   This is the same cosmology-scale identification used by the current
+   bounded/conditional `Lambda` companion.
+2. **The vDVZ argument** is qualitative. A full proof that topological
    mass avoids the discontinuity at the quantum level is not provided.
-4. **Detectability**: the prediction is 10^10 below current bounds.
+3. **Detectability**: the prediction is 10^10 below current bounds.
    No near-term experiment can test this.
 
 ## Derivation
@@ -152,11 +151,12 @@ It cannot upgrade the S^3 lane to closed. If S^3 is eventually derived:
 - The prediction is unfalsifiable with current technology but sets the
   framework apart from generic massive gravity models.
 
-Safe paper use: conditional prediction in the S^3 section, clearly labeled
-as depending on the topology assumption.
+Safe paper use: conditional prediction in the cosmology/topology companion
+section, clearly labeled as depending on the Hubble-scale radius
+identification.
 
-Unsafe: presenting this as a derived prediction of the framework when S^3
-itself is not yet derived.
+Unsafe: presenting this as a fully internal cosmology derivation rather than
+a retained-topology companion with one observed cosmological scale input.
 
 ## Commands Run
 

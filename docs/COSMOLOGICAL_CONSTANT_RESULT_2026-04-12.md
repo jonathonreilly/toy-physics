@@ -1,102 +1,104 @@
-# Cosmological Constant — Framework Prediction vs Observation
+# Cosmological Constant — Spectral-Gap Companion
 
-**Date:** 2026-04-12
-**Status:** Strongest distinctive prediction. Ready for review.
+**Date:** 2026-04-12  
+**Status:** bounded/conditional cosmology companion. Canonical positive
+`Lambda` surface on `main`.
 
 **Current publication disposition:** bounded/conditional cosmology companion
 only. Not on the retained flagship claim surface.
 
-## The Problem
+## Safe Theorem Surface
 
-The cosmological constant Λ is the worst prediction in physics:
-- QFT vacuum energy predicts Λ ~ M_Pl⁴/ℏ³c³ ~ 10⁷⁰ m⁻²
-- Observed: Λ_obs = 1.09 × 10⁻⁵² m⁻²
-- Discrepancy: 10¹²² (the "worst prediction in physics")
+On the retained `S^3` topology surface, the lowest scalar Laplacian eigenvalue
+is
 
-In GR, Λ is a free parameter — it must be measured, not predicted.
+`lambda_1(S^3_R) = 3 / R^2`.
 
-## The Framework Prediction
+If the cosmological radius is identified with a Hubble-scale radius
+`R = c / H_0`, the framework gives the bounded/conditional companion value
 
-**Λ is the lowest eigenvalue of the graph Laplacian.**
+`Lambda_pred = 3 H_0^2 / c^2 = 1.59 x 10^-52 m^-2`.
 
-On a 3-sphere (S³) of radius R:
-  λ_min = 3/R²
+Against the current observational comparator
 
-Setting R = R_Hubble = c/H₀:
-  Λ_pred = 3 H₀²/c²
+`Lambda_obs = 1.11 x 10^-52 m^-2`,
 
-This gives:
-  Λ_pred = 1.59 × 10⁻⁵² m⁻²
-  Λ_obs  = 1.09 × 10⁻⁵² m⁻²
+the ratio is `Lambda_pred / Lambda_obs ~ 1.44`, i.e. an `O(1)` match rather
+than the usual UV-vacuum `10^122` catastrophe.
 
-  **Ratio: Λ_pred/Λ_obs = 1.46**
+## What Is Exact vs Conditional
 
-Zero free parameters. The coefficient C = 3 is unique to d = 3 spatial
-dimensions (the first eigenvalue of the Laplacian on S^d is d/R²).
+### Exact on the retained internal surface
 
-## Why This Works
+1. The coefficient `3` is the exact `d = 3` first-eigenvalue coefficient on
+   `S^3`.
+2. The spectral-gap identification is IR/geometric:
+   `Lambda = lambda_1(S^3_R) = 3 / R^2`.
+3. The same spectral-gap mechanism is the one used by the bounded dark-energy
+   EOS companion:
+   [DARK_ENERGY_EOS_NOTE.md](./DARK_ENERGY_EOS_NOTE.md).
 
-The framework resolves the CC problem by changing WHAT Λ IS:
+### Still conditional
 
-| Standard QFT | This framework |
+1. The cosmological radius identification is not yet derived on the same
+   theorem surface. The current companion uses the observed Hubble scale:
+   `R = c / H_0`, or equivalently a nearby formation-scale version.
+2. The remaining `O(1)` factor is the same matter-fraction issue that appears
+   in the bounded `Omega_Lambda` chain:
+   [OMEGA_LAMBDA_DERIVATION_NOTE.md](./OMEGA_LAMBDA_DERIVATION_NOTE.md).
+3. This is not yet a full FRW / expansion-history derivation.
+
+## What This Is Not
+
+This is **not** the claim that finite lattice vacuum-energy sums automatically
+solve the cosmological-constant problem.
+
+That broader vacuum-energy audit is recorded separately in
+[COSMOLOGICAL_CONSTANT_VACUUM_ENERGY_AUDIT_NOTE.md](./COSMOLOGICAL_CONSTANT_VACUUM_ENERGY_AUDIT_NOTE.md)
+with
+[frontier_cosmological_constant.py](../scripts/frontier_cosmological_constant.py).
+
+That audit is useful because it rules out the wrong mechanism. The controlling
+positive companion surface is the `S^3` spectral-gap route.
+
+## Interpretation
+
+The framework changes the object being identified as `Lambda`:
+
+| Standard UV picture | Current companion route |
 |---|---|
-| Λ = sum of zero-point energies (UV) | Λ = spectral gap of graph (IR) |
-| Depends on UV cutoff (M_Planck) | Depends on IR scale (R_Hubble) |
-| Gets 10¹²² wrong | Gets factor 1.46 |
+| vacuum-energy sum | spectral gap of the retained spatial graph/topology |
+| UV-cutoff dominated | IR/geometric scale dominated |
+| misses by `10^122` | lands at an `O(1)` ratio |
 
-The mechanism: on a finite graph, the Laplacian has a gap between
-zero and the first nonzero eigenvalue. This gap IS the cosmological
-constant. It scales as 1/R² where R is the graph diameter.
+The clean current claim is therefore:
 
-## The Remaining Factor 1.46
+> on the retained `S^3` surface, the framework supplies a bounded/conditional
+> IR-geometric cosmological-constant companion with exact coefficient `3`
+> and Hubble-scale value `3 H_0^2 / c^2`.
 
-The predicted Ω_Λ = 1.0 (pure de Sitter).
-The observed Ω_Λ = 0.685.
-The ratio 1/0.685 = 1.46.
+## Relationship To Other Cosmology Companions
 
-This factor requires knowing the matter content of the universe
-(Ω_m = 0.315), which is particle physics input. The framework
-predicts the VACUUM contribution correctly; the matter fraction
-is additional information.
-
-## Comparison to Other Approaches
-
-| Approach | Λ_pred/Λ_obs | Free parameters |
-|---|---|---|
-| QFT vacuum energy | 10¹²² | 0 (but wrong) |
-| SUSY cancellation | 10²³ | several |
-| Anthropic (Weinberg 1987) | ~10 | landscape |
-| Holographic (CKN 1999) | O(1) | 0 |
-| Causal sets (Sorkin 1997) | O(1) | 0 |
-| **This framework** | **1.46** | **0** |
-
-## What This IS and ISN'T
-
-**IS:**
-- A zero-parameter prediction within 46% of the most precisely measured
-  cosmological parameter
-- A resolution of the CC problem at the mechanism level (IR not UV)
-- Distinctive: GR has Λ as free; the framework predicts it
-- The coefficient C = 3 is specific to d = 3 (additional d = 3 selection)
-
-**ISN'T:**
-- A prediction of Ω_Λ (requires matter content)
-- A prediction of H₀ (requires independent measurement)
-- A full cosmological model (no dynamics, no expansion history)
-- Better than O(1) precision (the factor 1.46 is unexplained)
+- [DARK_ENERGY_EOS_NOTE.md](./DARK_ENERGY_EOS_NOTE.md):
+  fixed spectral gap implies `w = -1` exactly on the same conditional route
+- [OMEGA_LAMBDA_DERIVATION_NOTE.md](./OMEGA_LAMBDA_DERIVATION_NOTE.md):
+  matter fraction and flatness convert the same mechanism into the bounded
+  `Omega_Lambda` chain
+- [GRAVITON_MASS_DERIVED_NOTE.md](./GRAVITON_MASS_DERIVED_NOTE.md):
+  the graviton-mass companion reuses the same `1/R^2` spectral/topological
+  structure
 
 ## Falsifiability
 
-The prediction Λ ~ 3/R_H² is falsifiable:
-- If Ω_Λ evolves with time (w ≠ -1), the spectral gap mechanism
-  would need to be dynamic
-- If dark energy is quintessence (not cosmological constant), the
-  framework's prediction breaks
-- Current data: w = -1.03 ± 0.03 (Planck+DESI), consistent
+The clean failure modes are:
 
-## Scripts
+- if dark energy is not a cosmological constant (`w != -1`) on the final
+  cosmology surface, the fixed spectral-gap identification fails
+- if the relevant cosmological radius is shown not to be Hubble/formation
+  scale on the same route, this companion must be revised
 
-- `scripts/cosmological_constant_test.py` — four derivation paths
-- `logs/2026-04-12-cosmological_constant_test.txt` — full output
-- `scripts/frontier_uv_ir_cosmological.py` — 7-test UV-IR investigation
-- `scripts/frontier_cc_value.py` — earlier CC value computation
+## Canonical Validation
+
+- [frontier_cosmological_constant_spectral_gap.py](../scripts/frontier_cosmological_constant_spectral_gap.py)
+- [frontier_dark_energy_eos.py](../scripts/frontier_dark_energy_eos.py)
+- [frontier_omega_lambda_derivation.py](../scripts/frontier_omega_lambda_derivation.py)

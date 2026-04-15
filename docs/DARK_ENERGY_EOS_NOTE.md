@@ -88,7 +88,7 @@ If any experiment detects w != -1 at > 5 sigma, the framework's identification L
 
 ## Connection to Other Results
 
-- **CC prediction:** `frontier_cc_factor15.py` derives Lambda = 3/R_H^2 on S^3
+- **CC prediction:** `frontier_cosmological_constant_spectral_gap.py` derives the canonical bounded/conditional `Lambda = 3/R_H^2` companion on `S^3`
 - **Omega_Lambda:** `frontier_omega_lambda_derivation.py` addresses coincidence problem
 - **Expansion:** `frontier_cosmological_expansion.py` tests graph growth -> expansion
 
