@@ -58,6 +58,8 @@ The current package is:
   - packaging-only; not part of the theorem stack
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
+- exact `T = 0` confinement of the graph-first `SU(3)` gauge sector, with
+  bounded `sqrt(sigma) ≈ 465 MeV`
 - anomaly-forced `3+1`
 - retained electroweak hierarchy / `v = 245.080424447914 GeV`
 - retained `S^3` compactification / topology closure

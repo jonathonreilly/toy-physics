@@ -7,6 +7,7 @@ remaining bounded companions
 | Quantity / lane | Predicted / framework result | Observed / comparator | Error / comparison | Status | Qualifier | Primary authority |
 |---|---|---|---|---|---|---|
 | `alpha_s(M_Z)` | `0.1181` | `0.1179` | `+0.14%` | retained / derived | one computed plaquette input, all else derived | [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md) |
+| `SU(3)` string tension `\sqrt{\sigma}` | `465 MeV` | `440 ± 20 MeV` | `+5.6%` | retained structural / bounded quantitative | `T = 0` confinement is structural on the graph-first `SU(3)` gauge sector; the numeric `\sqrt{\sigma}` row is bounded through retained `\alpha_s` plus the low-energy EFT bridge and screening correction | [CONFINEMENT_STRING_TENSION_NOTE.md](../../CONFINEMENT_STRING_TENSION_NOTE.md) |
 | `sin^2(theta_W)(M_Z)` | `0.2306` | `0.2312` | `-0.26%` | retained / derived | standalone EW lane; one computed plaquette input, all else derived | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md) |
 | `1/alpha_EM(M_Z)` | `127.67` | `127.95` | `-0.22%` | retained / derived | standalone EW lane; one computed plaquette input, all else derived | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md) |
 | `g_1(v)` | `0.4644` | `0.4640` | `+0.08%` | retained / derived | standalone EW lane; one computed plaquette input, all else derived | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md) |

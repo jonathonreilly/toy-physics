@@ -127,6 +127,8 @@ Retained backbone:
   - authority: [UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md](../../UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md)
 - exact native `Cl(3)` / `SU(2)`
 - graph-first structural `SU(3)`
+- exact `T = 0` confinement of the graph-first `SU(3)` gauge sector, with
+  bounded `sqrt(sigma) ≈ 465 MeV`
 - anomaly-forced `3+1`
 - electroweak hierarchy / `v`
 - retained `S^3` compactification / topology closure

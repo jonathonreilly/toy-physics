@@ -68,6 +68,8 @@ only optional comparison against alternative textbook packaging conventions.
   smooth realization
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
+- exact `T = 0` confinement of the graph-first `SU(3)` gauge sector, with
+  bounded `sqrt(sigma) ≈ 465 MeV`
 - anomaly-forced `3+1`
 - retained electroweak hierarchy / `v`
 - retained `S^3` compactification / topology closure

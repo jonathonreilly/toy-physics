@@ -15,6 +15,7 @@ derived quantitative rows, and still-open companion lanes.
 | `M_Pl` as UV cutoff | assumed framework scale | Treated as the framework cutoff, not fitted from the SM. |
 | SU(3) plaquette `<P> = 0.5934` at `beta = 6` | computed from the axiom | The complete prediction chain uses one computed lattice input, not an experimental import. |
 | exact structural gauge/matter backbone | derived | `SU(3) x SU(2) x U(1)`, three generations, anomaly-forced `3+1`, and the retained matter structure are package-grade. |
+| `SU(3)` confinement / `\sqrt{\sigma}` | derived / retained structural theorem + bounded quantitative prediction | `T = 0` confinement is structural on the graph-first `SU(3)` gauge sector at canonical `g_bare^2 = 1`; the bounded `\sqrt{\sigma} \approx 465 MeV` readout uses the retained `\alpha_s` lane plus the standard low-energy EFT bridge. |
 | strong CP / `θ_eff = 0` | derived / retained exact structural theorem | The axiom-determined Wilson-plus-staggered action leaves no bare `θ`, and the real-mass staggered determinant carries no phase. |
 | hierarchy / `v` theorem | derived | `v = 245.080424447914 GeV` is retained on the hierarchy lane; it is not part of the separate quantitative component stack. |
 | `R_conn = 8/9` color factor | derived | Canonical authority is [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md); it is not a fit knob. |

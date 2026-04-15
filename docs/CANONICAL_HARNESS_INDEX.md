@@ -10,6 +10,7 @@ Use this file to find the current canonical note/runner pair on `main`.
 | restricted strong-field gravity | [RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md](RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md) | `frontier_oh_static_constraint_lift.py`, `frontier_oh_schur_boundary_action.py`, `frontier_star_supported_bridge_class.py` |
 | exact native `SU(2)` | [BOUNDED_NATIVE_GAUGE_NOTE.md](BOUNDED_NATIVE_GAUGE_NOTE.md) | `frontier_non_abelian_gauge.py` |
 | graph-first structural `SU(3)` | [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) | `frontier_graph_first_su3_integration.py` |
+| `SU(3)` confinement / string tension | [CONFINEMENT_STRING_TENSION_NOTE.md](CONFINEMENT_STRING_TENSION_NOTE.md) | `frontier_confinement_string_tension.py` |
 | anomaly-forced `3+1` | [ANOMALY_FORCES_TIME_THEOREM.md](ANOMALY_FORCES_TIME_THEOREM.md) | `frontier_anomaly_forces_time.py` |
 | `S^3` compactification | [S3_GENERAL_R_DERIVATION_NOTE.md](S3_GENERAL_R_DERIVATION_NOTE.md), [S3_CAP_UNIQUENESS_NOTE.md](S3_CAP_UNIQUENESS_NOTE.md) | `frontier_s3_boundary_link_theorem.py`, `frontier_s3_general_r.py`, `frontier_s3_cap_uniqueness.py` |
 | strong CP / `θ_eff = 0` | [STRONG_CP_THETA_ZERO_NOTE.md](STRONG_CP_THETA_ZERO_NOTE.md) | `frontier_strong_cp_theta_zero.py` |
