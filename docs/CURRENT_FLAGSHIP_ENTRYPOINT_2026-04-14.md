@@ -10,17 +10,19 @@ The package has one framework sentence:
 > We take `Cl(3)` on `Z^3` as the physical theory. Everything else on the
 > current paper surface is either retained, bounded, or explicitly open.
 
-Framework-count convention for reviewers:
+Framework statement for reviewers:
 
-- the deepest reduction claim is the one-axiom story in
-  [SINGLE_AXIOM_INFORMATION_NOTE.md](SINGLE_AXIOM_INFORMATION_NOTE.md) and
+- the framework is presented as a one-axiom program on the current reduction
+  surface:
+  [SINGLE_AXIOM_INFORMATION_NOTE.md](SINGLE_AXIOM_INFORMATION_NOTE.md),
   [SINGLE_AXIOM_HILBERT_NOTE.md](SINGLE_AXIOM_HILBERT_NOTE.md)
-- the current publication package is audited on the five accepted operational
-  inputs listed in [MINIMAL_AXIOMS_2026-04-11.md](MINIMAL_AXIOMS_2026-04-11.md)
+- the separate memo
+  [MINIMAL_AXIOMS_2026-04-11.md](MINIMAL_AXIOMS_2026-04-11.md)
+  records the accepted operational package boundary used to audit the current
+  public lanes on `main`
 
-These are not competing counts. The package should be read as: one underlying
-structural axiom, five accepted package-level inputs on the current audited
-surface.
+That memo is implementation-facing package hygiene, not a competing foundation
+count.
 
 ## What The Current Package Is
 

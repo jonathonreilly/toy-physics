@@ -13,16 +13,14 @@ The current package is:
 4. a bounded observation-facing portfolio and a frozen-out registry for
    important excluded families
 
-For axiom counting, do not mix route-history conventions. The package uses:
+For framework counting, read the public package as a one-axiom program:
 
-- one underlying structural axiom in the reduction notes
-  [SINGLE_AXIOM_INFORMATION_NOTE.md](../../SINGLE_AXIOM_INFORMATION_NOTE.md),
-  [SINGLE_AXIOM_HILBERT_NOTE.md](../../SINGLE_AXIOM_HILBERT_NOTE.md)
-- five accepted operational inputs on the current audited package surface
-  [MINIMAL_AXIOMS_2026-04-11.md](../../MINIMAL_AXIOMS_2026-04-11.md)
+- [SINGLE_AXIOM_INFORMATION_NOTE.md](../../SINGLE_AXIOM_INFORMATION_NOTE.md)
+- [SINGLE_AXIOM_HILBERT_NOTE.md](../../SINGLE_AXIOM_HILBERT_NOTE.md)
 
-The current public package should therefore be read as one reduction claim plus
-one explicit operational input boundary, not as two contradictory frameworks.
+Use [MINIMAL_AXIOMS_2026-04-11.md](../../MINIMAL_AXIOMS_2026-04-11.md) only as
+the operational package-boundary memo for the current audited implementation
+surface.
 
 For the package-level gravity/gauge continuum positioning synthesis, use
 [CONTINUUM_IDENTIFICATION_NOTE.md](../../CONTINUUM_IDENTIFICATION_NOTE.md).
