@@ -40,6 +40,9 @@ The current flagship package is not “everything in the repo.” It is:
 - exact project-native PL `H^1`-type Sobolev interface for that same canonical
   discrete QG family
   - authority: [UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md](../../UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md)
+- exact external FE/Galerkin smooth weak-field and Gaussian measure
+  equivalence for that same canonical discrete QG family
+  - authority: [UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md](../../UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md)
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`
@@ -85,8 +88,9 @@ also be read on the project’s own discrete route: it gives a finite
 partition-density family whose semiclassical/stationary sector is that same
 discrete GR family. The new canonical refinement-net theorem closes the
 discrete geometric organization of that family as well. What still remains is a
-stronger smooth / external continuum-equivalence theorem, not missing discrete
-refinement structure or inverse-limit existence.
+stronger comparison to more canonical textbook continuum targets, not missing
+discrete refinement structure, inverse-limit existence, or a chosen external
+smooth weak/measure formulation.
 
 ## What is still open
 
@@ -98,8 +102,9 @@ Also still open:
 
 - Higgs mass `m_H`
 - full nonlinear GR in full generality
-- continuum / smooth-equivalence interpretation beyond the exact discrete
-  project-native PL weak Gaussian Sobolev completion
+- comparison to more canonical external continuum weak/measure formulations
+  beyond the chosen external smooth FE/Galerkin realization of the exact
+  discrete project-native PL weak Gaussian Sobolev completion
 - several companion phenomenology bridges
 
 ## Read this package in order

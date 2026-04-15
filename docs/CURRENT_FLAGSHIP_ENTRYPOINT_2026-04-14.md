@@ -19,7 +19,10 @@ for external reading.
 On the gravity side, the direct-universal route now closes as an exact global
 Lorentzian Einstein/Regge stationary action family on discrete `3+1`
 spacetime `PL S^3 x R`. That counts as full discrete `3+1` GR on the project
-route; continuum identification remains a separate interpretation step.
+route. On the QG/continuum side, the exact project-native PL weak Gaussian
+Sobolev completion is also identified with a chosen external smooth Sobolev
+weak-field and Gaussian measure formulation at the FE/Galerkin cylinder level;
+stronger canonical textbook continuum identification remains separate.
 
 Status labels used below:
 
@@ -69,6 +72,9 @@ belongs on the current flagship surface.
 - exact project-native PL `H^1`-type Sobolev interface for that same
   canonical discrete QG family
   - authority: [UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md)
+- exact external FE/Galerkin smooth weak-field and Gaussian measure
+  equivalence for that same canonical discrete QG family
+  - authority: [UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md](/Users/jonreilly/Projects/Physics/docs/UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md)
 - exact native `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`

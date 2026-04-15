@@ -29,6 +29,7 @@ For the reviewer-facing prediction/observation rows, use
 | Project-native PL field realization for the discrete QG bridge | [UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md](../../UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md) | [frontier_universal_qg_pl_field_interface.py](../../../scripts/frontier_universal_qg_pl_field_interface.py) |
 | Project-native PL weak/Dirichlet-form closure for the discrete QG bridge | [UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md](../../UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md) | [frontier_universal_qg_pl_weak_form.py](../../../scripts/frontier_universal_qg_pl_weak_form.py) |
 | Project-native PL `H^1`-type Sobolev interface for the discrete QG bridge | [UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md](../../UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md) | [frontier_universal_qg_pl_sobolev_interface.py](../../../scripts/frontier_universal_qg_pl_sobolev_interface.py) |
+| External FE/Galerkin smooth weak-field and Gaussian measure equivalence for the discrete QG bridge | [UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md](../../UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md) | [frontier_universal_qg_external_fe_smooth_equivalence.py](../../../scripts/frontier_universal_qg_external_fe_smooth_equivalence.py) |
 | Native gauge algebra | [BOUNDED_NATIVE_GAUGE_NOTE.md](../../BOUNDED_NATIVE_GAUGE_NOTE.md) | [frontier_non_abelian_gauge.py](../../../scripts/frontier_non_abelian_gauge.py) |
 | Graph-first structural `SU(3)` | [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](../../GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) | [frontier_graph_first_su3_integration.py](../../../scripts/frontier_graph_first_su3_integration.py) |
 | Left-handed charge matching on selected-axis surface | [LEFT_HANDED_CHARGE_MATCHING_NOTE.md](../../LEFT_HANDED_CHARGE_MATCHING_NOTE.md) | [frontier_graph_first_su3_integration.py](../../../scripts/frontier_graph_first_su3_integration.py) |
@@ -58,6 +59,8 @@ For the reviewer-facing prediction/observation rows, use
     discrete partition-density and stationary-section family
   - inverse-limit Gaussian cylinder closure for that same canonical discrete
     QG family
+  - external FE/Galerkin smooth weak-field and Gaussian measure equivalence
+    for that same canonical discrete QG family
   - exact native `SU(2)`
   - graph-first structural `SU(3)`
   - selected-axis left-handed charge matching as a corollary
@@ -70,6 +73,8 @@ For the reviewer-facing prediction/observation rows, use
 - SI / arXiv:
   - bounded weak-field GR companions beyond Newton / Poisson / WEP / time-dilation
   - continuum / unrestricted GR beyond the project's discrete route
+  - comparison to more canonical external continuum weak/measure formulations
+    beyond the chosen external smooth FE/Galerkin realization
   - derivation chains
   - bounded phenomenology
   - three live-gate notes and negative results

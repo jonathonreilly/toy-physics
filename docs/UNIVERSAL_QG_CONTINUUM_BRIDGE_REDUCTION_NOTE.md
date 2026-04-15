@@ -20,7 +20,9 @@ Those are already in hand on the project’s discrete route.
 
 The unresolved step is now:
 
-> a smooth / external continuum-equivalence interpretation theorem for the
+> comparison / canonicalization against more standard external continuum
+> weak-field and Gaussian-measure formulations, beyond the already-closed
+> chosen external FE/Galerkin smooth Sobolev weak Gaussian realization of the
 > exact project-native PL `H^1`-type weak Gaussian / Dirichlet system
 > determined by the inverse-limit family.
 
@@ -44,7 +46,9 @@ The direct-universal route already supplies:
    inverse-limit family;
 8. exact project-native PL field realization of that Gaussian completion;
 9. exact project-native PL weak/Dirichlet-form closure on that same net;
-10. exact project-native PL `H^1`-type Sobolev interface on that same net.
+10. exact project-native PL `H^1`-type Sobolev interface on that same net;
+11. exact external FE/Galerkin smooth weak-field and Gaussian measure
+    equivalence for one chosen external smooth target.
 
 So the current branch no longer lacks a gravity law, a stationary family, or a
 finite partition bridge on its own discrete setting.
@@ -66,9 +70,10 @@ The algebraic Schur/projective closure step has now also been discharged:
 integrating out fine modes keeps the family inside the same Gaussian class and
 is associative under repeated coarse-graining.
 
-So the live remaining issue is narrower still: how to interpret the exact
-project-native PL `H^1`-type weak Gaussian / Dirichlet system produced by that
-discrete refinement net as a stronger continuum measure / solution theorem.
+So the live remaining issue is narrower still: how to compare the exact chosen
+external FE/Galerkin smooth weak Gaussian realization of the project-native PL
+`H^1`-type weak Gaussian / Dirichlet system to more canonical textbook
+continuum weak-field and Gaussian-measure formulations.
 
 That is the precise continuum-interpretation frontier now.
 
@@ -90,8 +95,11 @@ the right object:
   carrier;
 - **not** missing project-native `H^1`-type weak-field carrier on that PL
   route;
-- **but** a smooth / external continuum-equivalence theorem for that now-closed
-  discrete project-native PL weak Sobolev limit object.
+- **not** missing a chosen external smooth weak-field / Gaussian-measure
+  formulation for that now-closed discrete project-native PL weak Sobolev
+  limit object;
+- **but** comparison / canonicalization against more standard external
+  continuum weak-field and Gaussian-measure targets.
 
 That is real progress because it tells us what still has to be built, and what
 no longer needs to be rediscovered.

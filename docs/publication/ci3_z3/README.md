@@ -106,6 +106,9 @@ Retained backbone:
 - exact project-native PL `H^1`-type Sobolev interface for that same canonical
   discrete QG family
   - authority: [UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md](../../UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md)
+- exact external FE/Galerkin smooth weak-field and Gaussian measure
+  equivalence for that same canonical discrete QG family
+  - authority: [UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md](../../UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md)
 - exact native `Cl(3)` / `SU(2)`
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`
@@ -142,14 +145,20 @@ Reviewer-facing framing notes:
   on that same route; the remaining stronger issue is geometric
   smooth/external identification of that abstract limit object.
 - the exact project-native PL field realization is now also closed on that
-  same route; the remaining stronger issue is now external smooth-field
-  equivalence beyond that PL limit object.
+  same route; the remaining stronger issue is now comparison to more canonical
+  external continuum targets beyond that PL limit object.
 - the exact project-native PL weak/Dirichlet system is now also closed on that
-  same route; the remaining stronger issue is now external smooth weak-form /
-  measure equivalence beyond that PL weak limit object.
+  same route; the remaining stronger issue is now comparison to more canonical
+  external continuum weak-field / measure targets beyond that PL weak limit
+  object.
 - the exact project-native PL `H^1`-type Sobolev carrier is now also closed on
-  that same route; the remaining stronger issue is now external smooth
-  Sobolev / measure equivalence beyond that PL weak Sobolev limit object.
+  that same route; the remaining stronger issue is now comparison to more
+  canonical external continuum Sobolev / measure targets beyond that PL weak
+  Sobolev limit object.
+- the exact chosen external smooth FE/Galerkin weak-field / measure
+  formulation is now also closed on that same route; the remaining stronger
+  issue is comparison to more canonical textbook continuum targets, not
+  existence of any external smooth weak/measure realization at all.
 - the paper is positioned against other discrete/unification programs only at a
   compact framing level; it is not trying to be a survey.
 

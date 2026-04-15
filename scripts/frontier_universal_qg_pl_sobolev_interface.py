@@ -9,8 +9,9 @@ This runner proves the next honest structural step after PL weak-form closure:
   - therefore the project-native PL ladder already sits inside one exact
     project-native first-order weak-field carrier.
 
-What remains after this theorem is only external smooth Sobolev/measure
-identification.
+What remains after this theorem is only comparison to more canonical external
+continuum Sobolev/measure targets beyond one chosen external smooth
+realization.
 """
 
 from __future__ import annotations
@@ -155,11 +156,11 @@ def main() -> int:
         "the canonical barycentric-dyadic refinement net already supplies one project-native first-order weak-field interface for the Gaussian/Dirichlet system",
     )
     record(
-        "the remaining stronger issue is therefore external smooth Sobolev/measure identification, not missing project-native Sobolev carrier",
+        "the remaining stronger issue is therefore comparison to more canonical external continuum Sobolev/measure targets, not missing project-native Sobolev carrier",
         "project-native pl weak" in cont_text.lower()
         and max_field_err < 1e-12
         and max_h1_err < 1e-12,
-        "the exact discrete route already has a project-native H1-type weak-field carrier; what remains is identification with an external smooth Sobolev / measure formulation",
+        "the exact discrete route already has a project-native H1-type weak-field carrier and a chosen external smooth FE/Galerkin realization; what remains is comparison to more canonical external continuum Sobolev / measure formulations",
     )
 
     print("UNIVERSAL QG PL SOBOLEV INTERFACE")
@@ -173,7 +174,8 @@ def main() -> int:
         "The exact project-native PL weak/Dirichlet system already has a "
         "canonical H1-type field-space interface on the refinement net. So "
         "the remaining stronger continuum issue is not missing a project-native "
-        "Sobolev carrier, but external smooth Sobolev/measure identification."
+        "Sobolev carrier, but comparison to more canonical external continuum "
+        "Sobolev/measure targets."
     )
 
     print("\n" + "=" * 78)

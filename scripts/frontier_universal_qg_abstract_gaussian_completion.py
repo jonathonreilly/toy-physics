@@ -13,7 +13,7 @@ step:
     that same cylindrical space.
 
 What remains after this theorem is not existence of the abstract limit object,
-but geometric identification with an external smooth continuum field space.
+but comparison to more canonical external continuum field / measure targets.
 """
 
 from __future__ import annotations
@@ -65,8 +65,8 @@ def schur_reduce(k_op: np.ndarray, j: np.ndarray, keep: int) -> tuple[np.ndarray
 
 
 def main() -> int:
-    inv_text = (DOCS / "UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md").read_text(encoding="utf-8")
-    cont_text = (DOCS / "UNIVERSAL_QG_CONTINUUM_BRIDGE_REDUCTION_NOTE.md").read_text(encoding="utf-8")
+    inv_text = (DOCS / "UNIVERSAL_QG_INVERSE_LIMIT_CLOSURE_NOTE.md").read_text(encoding="utf-8").lower()
+    cont_text = (DOCS / "UNIVERSAL_QG_CONTINUUM_BRIDGE_REDUCTION_NOTE.md").read_text(encoding="utf-8").lower()
 
     rng = np.random.default_rng(902)
 
@@ -131,8 +131,8 @@ def main() -> int:
 
     record(
         "the exact inverse-limit Gaussian cylinder family is already closed on the canonical refinement net",
-        "inverse-limit Gaussian cylinder" in inv_text
-        and "continuum-equivalence" in cont_text,
+        "inverse-limit gaussian cylinder" in inv_text
+        and "canonicalization" in cont_text,
         "this theorem starts from the exact projective-limit Gaussian family already present on the discrete route",
     )
     record(
@@ -151,9 +151,9 @@ def main() -> int:
         f"min covariance eigenvalue={min_cov_eig:.6e}, min sampled cylindrical norm={min_cov_norm:.6e}",
     )
     record(
-        "the remaining stronger issue is therefore geometric identification of the exact abstract Gaussian completion, not existence of the limit object",
+        "the remaining stronger issue is therefore comparison of the exact abstract Gaussian completion to more canonical external continuum field/measure targets, not existence of the limit object",
         max_cov_form_err < 1e-10 and max_mean_form_err < 1e-10 and min_cov_eig > 0.0,
-        "the exact discrete route already determines one abstract Gaussian/Cameron-Martin completion with a compatible mean functional; what remains is identification with an external smooth continuum field space",
+        "the exact discrete route already determines one abstract Gaussian/Cameron-Martin completion with a compatible mean functional; what remains is comparison to more canonical external continuum field / measure formulations",
     )
 
     print("UNIVERSAL QG ABSTRACT GAUSSIAN COMPLETION")
@@ -173,8 +173,8 @@ def main() -> int:
     )
     print(
         "So the remaining stronger continuum issue is not existence of the "
-        "abstract limit object. It is the geometric identification of that "
-        "object with an external smooth continuum field formulation."
+        "abstract limit object. It is comparison of that object to more "
+        "canonical external continuum field / measure formulations."
     )
 
     print("\n" + "=" * 78)

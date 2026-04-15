@@ -19,10 +19,11 @@ Concretely:
   Sobolev/energy carrier for the weak Gaussian system.
 
 So the remaining stronger issue is not missing a project-native weak or
-Sobolev field space. It is now:
+Sobolev field space, or absence of one chosen external smooth Sobolev /
+measure realization. It is now:
 
-> identify that exact project-native PL `H^1`-type weak Gaussian system with
-> an external smooth Sobolev / measure formulation.
+> compare that exact project-native PL `H^1`-type weak Gaussian system to more
+> canonical external continuum Sobolev / measure formulations.
 
 ## Exact setup
 
@@ -67,8 +68,8 @@ Before this theorem, the strongest honest statement was:
 After this theorem, that becomes sharper:
 
 > the route already has its project-native `H^1`-type weak-field carrier; what
-> remains is only identification with an external smooth Sobolev / measure
-> formulation.
+> remains is only comparison with more canonical external smooth Sobolev /
+> measure formulations.
 
 So the frontier is no longer missing:
 
@@ -76,7 +77,8 @@ So the frontier is no longer missing:
 - a project-native weak/Dirichlet system;
 - a project-native first-order weak-field (`H^1`-type) interface.
 
-It is external smooth equivalence.
+It is comparison to more canonical external continuum targets beyond one chosen
+external smooth Sobolev / measure formulation.
 
 ## Honest status
 
@@ -84,7 +86,7 @@ This note still does **not** prove:
 
 - equivalence to a standard smooth Sobolev space on an external manifold;
 - convergence to a specific smooth weak Einstein or Gaussian measure problem;
-- a full external continuum GR-QG theorem.
+- a stronger canonical / textbook external continuum GR-QG theorem.
 
 It does prove that the exact discrete route already determines its own
 project-native first-order weak-field carrier.

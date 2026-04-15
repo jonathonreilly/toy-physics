@@ -11,7 +11,9 @@ interface:
     space.
 
 So the route already has a project-native PL weak/Dirichlet-form system. What
-remains is only external smooth-field identification of that weak system.
+remains is only comparison to more canonical external continuum weak-field /
+measure targets beyond one chosen external smooth realization of that weak
+system.
 """
 
 from __future__ import annotations
@@ -177,14 +179,14 @@ def main() -> int:
         f"max stationary projection error={max_stationary_proj_err:.3e}, max energy consistency error={energy_consistency_err:.3e}",
     )
     record(
-        "the remaining stronger issue is therefore external smooth weak-form identification, not missing project-native weak structure",
+        "the remaining stronger issue is therefore comparison to more canonical external continuum weak-form targets, not missing project-native weak structure",
         "project-native pl weak sobolev" in cont_text.lower()
         and prolong_assoc_err < 1e-12
         and min_eig > 0.0
         and max_weak_residual < 1e-10
         and max_stationary_proj_err < 1e-10
         and energy_consistency_err < 1e-10,
-        "the exact discrete route already has a canonical project-native PL weak/Dirichlet-form system; what remains is its identification with an external smooth weak continuum theory",
+        "the exact discrete route already has a canonical project-native PL weak/Dirichlet-form system and a chosen external smooth FE/Galerkin realization; what remains is comparison to more canonical external continuum weak-field / measure theories",
     )
 
     print("UNIVERSAL QG PL WEAK-FORM CLOSURE")
@@ -201,7 +203,7 @@ def main() -> int:
         "canonical coercive weak/Dirichlet form and exact stationary weak "
         "equation on the refinement net. So the remaining stronger continuum "
         "issue is not missing project-native variational structure, but "
-        "external smooth weak-form identification."
+        "comparison to more canonical external continuum weak-form targets."
     )
 
     print("\n" + "=" * 78)

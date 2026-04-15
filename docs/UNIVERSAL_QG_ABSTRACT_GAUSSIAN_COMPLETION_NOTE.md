@@ -23,8 +23,8 @@ well-defined abstract continuum-style Gaussian object. It does.
 
 The remaining stronger issue is now:
 
-> identify that exact abstract Gaussian completion with an external smooth
-> continuum field space / continuum GR-QG interpretation.
+> compare that exact abstract Gaussian completion to more canonical external
+> continuum field / measure formulations and continuum GR-QG interpretations.
 
 ## Exact setup
 

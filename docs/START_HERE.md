@@ -15,8 +15,11 @@ still open.
 
 On the gravity route, the direct-universal branch now closes as an exact
 global Lorentzian Einstein/Regge stationary action family on discrete `3+1`
-spacetime `PL S^3 x R`. That is full discrete `3+1` GR on the project route;
-continuum identification remains a separate interpretation step.
+spacetime `PL S^3 x R`. That is full discrete `3+1` GR on the project route.
+On the QG/continuum side, the exact project-native PL weak Gaussian Sobolev
+completion is also identified with a chosen external smooth Sobolev weak-field
+and Gaussian measure formulation at the FE/Galerkin cylinder level; stronger
+canonical textbook continuum identification remains separate.
 
 This repo is too large to understand by browsing filenames. There are two
 different entry modes:
@@ -82,7 +85,9 @@ The current flagship publication package is:
   field realization for that same canonical discrete family, exact
   project-native PL weak/Dirichlet-form closure for that same canonical
   discrete family, exact project-native PL `H^1`-type Sobolev interface for
-  that same canonical discrete family, retained `S^3`,
+  that same canonical discrete family, exact external FE/Galerkin smooth
+  weak-field and Gaussian measure equivalence for that same canonical
+  discrete family, retained `S^3`,
   one-generation closure, three-generation structure, exact `I_3 = 0`, exact
   CPT
   - partition authority: [UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md](UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md)
@@ -92,6 +97,7 @@ The current flagship publication package is:
   - PL-interface authority: [UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md](UNIVERSAL_QG_PL_FIELD_INTERFACE_NOTE.md)
   - weak-form authority: [UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md](UNIVERSAL_QG_PL_WEAK_FORM_NOTE.md)
   - Sobolev authority: [UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md](UNIVERSAL_QG_PL_SOBOLEV_INTERFACE_NOTE.md)
+  - external FE/smooth authority: [UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md](UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md)
 - bounded observation-facing portfolio: DM ratio, `alpha_s`, `m_t`, CKM
   magnitudes, cosmology companions, bounded Higgs lane, and sharp companion
   predictions

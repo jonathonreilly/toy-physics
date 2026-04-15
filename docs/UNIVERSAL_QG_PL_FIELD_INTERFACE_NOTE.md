@@ -22,11 +22,11 @@ Specifically:
   project-native PL field carrier.
 
 So the remaining stronger issue is no longer existence of the abstract limit
-object or absence of a project-native continuum carrier. The remaining stronger
-issue is now:
+object, absence of a project-native continuum carrier, or absence of one chosen
+external smooth weak/measure realization. The remaining stronger issue is now:
 
-> identify that exact PL Gaussian completion with an external smooth continuum
-> field / continuum GR-QG formulation.
+> compare that exact PL Gaussian completion to more canonical external
+> continuum field / measure formulations and GR-QG interpretations.
 
 ## Exact setup
 
@@ -73,11 +73,12 @@ Before this theorem, the strongest honest statement was:
 After this theorem, that becomes sharper:
 
 > the route already has a canonical project-native PL field realization of that
-> exact Gaussian completion; what remains is only identification with an
-> external smooth continuum field space.
+> exact Gaussian completion; what remains is only comparison with more
+> canonical external continuum field / measure targets.
 
 So the frontier is no longer abstract existence or missing project-native
-continuum carrier. It is external smooth equivalence.
+continuum carrier. It is comparison to more canonical external continuum
+targets beyond one chosen external smooth weak/measure formulation.
 
 ## Honest status
 
@@ -85,7 +86,7 @@ This note still does **not** prove:
 
 - equivalence to a standard smooth continuum path integral;
 - convergence to a particular Sobolev / distributional continuum field space;
-- a full external smooth continuum GR-QG theorem.
+- a stronger canonical / textbook external continuum GR-QG theorem.
 
 It does prove that the exact discrete route already determines its own
 canonical PL continuum carrier for the Gaussian limit object.

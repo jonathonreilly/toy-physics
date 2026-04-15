@@ -11,8 +11,9 @@ completion:
     classes of PL fields on the project's own simplicial spacetime.
 
 Combined with the abstract Gaussian completion theorem, the route therefore
-already has a project-native PL Gaussian completion. What remains is external
-smooth continuum identification.
+already has a project-native PL Gaussian completion. What remains is
+comparison to more canonical external continuum field / measure targets
+beyond one chosen external smooth realization.
 """
 
 from __future__ import annotations
@@ -138,13 +139,13 @@ def main() -> int:
         f"max linear observable mismatch={max_linear_obs_err:.3e}, max quadratic observable mismatch={max_quadratic_obs_err:.3e}",
     )
     record(
-        "the remaining stronger issue is therefore external smooth-field identification, not missing project-native continuum carrier",
+        "the remaining stronger issue is therefore comparison to more canonical external continuum field/measure targets, not missing project-native continuum carrier",
         "abstract gaussian" in cont_text.lower()
         and assoc_err < 1e-12
         and max_interp_err < 1e-12
         and max_linear_obs_err < 1e-12
         and max_quadratic_obs_err < 1e-12,
-        "the exact discrete route already has a canonical PL realization of its Gaussian limit object; what remains is identification with an external smooth continuum field space",
+        "the exact discrete route already has a canonical PL realization of its Gaussian limit object and a chosen external smooth FE/Galerkin realization; what remains is comparison to more canonical external continuum field / measure targets",
     )
 
     print("UNIVERSAL QG PL FIELD INTERFACE")
@@ -160,7 +161,8 @@ def main() -> int:
         "barycentric-dyadic net already has a canonical project-native "
         "piecewise-linear field realization. So the remaining stronger "
         "continuum issue is not missing abstract existence or missing "
-        "project-native carrier, but external smooth-field identification."
+        "project-native carrier, but comparison to more canonical external "
+        "continuum field / measure targets."
     )
 
     print("\n" + "=" * 78)

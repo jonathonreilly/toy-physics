@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reduce the remaining continuum-QG issue to the smooth-equivalence frontier.
+"""Reduce the remaining continuum-QG issue to the canonical-comparison frontier.
 
 This runner does not claim a full continuum theorem. It proves the stronger and
 more useful negative/positive split:
@@ -13,9 +13,10 @@ more useful negative/positive split:
 So the remaining continuum question is no longer UV, local operator closure,
 missing discrete refinement-net structure, missing inverse-limit existence,
 missing abstract Gaussian completion, missing project-native PL carrier,
-missing project-native weak/Dirichlet structure, or missing project-native
-Sobolev interface. It is the stronger smooth / external continuum-equivalence
-theorem beyond that exact discrete PL weak Sobolev limit object.
+missing project-native weak/Dirichlet structure, missing project-native
+Sobolev interface, or missing a chosen external smooth weak/measure
+realization. It is the stronger comparison / canonicalization question beyond
+that exact discrete PL weak Sobolev limit object.
 """
 
 from __future__ import annotations
@@ -129,9 +130,9 @@ def main() -> int:
         f"max log-additivity error={max_log_additivity_err:.3e}",
     )
     record(
-        "the remaining continuum issue is therefore a smooth / external continuum-equivalence theorem, not a local UV-divergence, missing-refinement, missing-inverse-limit theorem, missing-abstract-completion theorem, missing-PL-carrier theorem, missing-weak-form theorem, or missing-Sobolev-interface theorem",
+        "the remaining continuum issue is therefore comparison / canonicalization against more standard external continuum targets, not a local UV-divergence, missing-refinement, missing-inverse-limit theorem, missing-abstract-completion theorem, missing-PL-carrier theorem, missing-weak-form theorem, missing-Sobolev-interface theorem, or missing chosen external smooth weak/measure formulation",
         max_factorization_err < 1e-10 and max_log_additivity_err < 1e-12,
-        "once exact finite densities patch on finite atlases, factorize on independent blocks, sit on the canonical barycentric-dyadic refinement net, determine one abstract Gaussian completion, admit one project-native PL carrier, close one exact project-native weak/Dirichlet system, and admit one exact project-native H1-type interface, the unresolved step is the stronger continuum interpretation of that discrete PL weak Sobolev limit object",
+        "once exact finite densities patch on finite atlases, factorize on independent blocks, sit on the canonical barycentric-dyadic refinement net, determine one abstract Gaussian completion, admit one project-native PL carrier, close one exact project-native weak/Dirichlet system, admit one exact project-native H1-type interface, and admit one chosen external smooth FE/Galerkin weak/measure realization, the unresolved step is comparison to more canonical textbook continuum targets",
     )
 
     print("UNIVERSAL QG CONTINUUM BRIDGE REDUCTION")
@@ -142,14 +143,14 @@ def main() -> int:
 
     print("\nVerdict:")
     print(
-        "The remaining stronger continuum/QG question is now reduced to a "
-        "smooth / external continuum-equivalence theorem for the exact "
-        "discrete project-native PL weak Gaussian Sobolev limit object. It is "
-        "no longer a "
+        "The remaining stronger continuum/QG question is now reduced to "
+        "comparison / canonicalization against more canonical external "
+        "continuum targets for the exact discrete project-native PL weak "
+        "Gaussian Sobolev limit object. It is no longer a "
         "missing UV finiteness, local operator-closure, geometric "
         "refinement-net, inverse-limit-existence, abstract-completion, or "
-        "project-native PL-carrier, weak-form, or Sobolev-interface issue on "
-        "the project route."
+        "project-native PL-carrier, weak-form, Sobolev-interface, or chosen "
+        "external smooth weak/measure issue on the project route."
     )
 
     print("\n" + "=" * 78)

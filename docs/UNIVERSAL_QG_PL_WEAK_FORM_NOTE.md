@@ -23,10 +23,11 @@ Concretely:
 - therefore the PL ladder is already an exact project-native weak-form system.
 
 So the remaining stronger issue is no longer missing variational or weak-form
-structure on the project route. It is now:
+structure on the project route, or absence of one chosen external smooth
+weak-field / measure realization. It is now:
 
-> identify that exact project-native PL weak Gaussian/Dirichlet system with an
-> external smooth weak-field / measure formulation.
+> compare that exact project-native PL weak Gaussian/Dirichlet system to more
+> canonical external continuum weak-field / measure formulations.
 
 ## Exact setup
 
@@ -93,7 +94,8 @@ So the frontier is no longer missing:
 - a project-native Gaussian limit object;
 - a project-native weak variational structure.
 
-It is external smooth equivalence.
+It is comparison to more canonical external continuum targets beyond one chosen
+external smooth weak-field / measure formulation.
 
 ## Honest status
 
@@ -101,7 +103,7 @@ This note still does **not** prove:
 
 - equivalence to a specific smooth Sobolev weak formulation;
 - convergence to a particular external differential operator;
-- a full external continuum GR-QG theorem.
+- a stronger canonical / textbook external continuum GR-QG theorem.
 
 It does prove that the exact discrete route already determines its own
 project-native PL weak Gaussian / Dirichlet system.
