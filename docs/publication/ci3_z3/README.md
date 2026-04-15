@@ -23,12 +23,14 @@ Framework statement:
 4. [Prediction surface](./PREDICTION_SURFACE_2026-04-15.md)
 5. [Publication matrix](./PUBLICATION_MATRIX.md)
 6. [Quantitative summary table](./QUANTITATIVE_SUMMARY_TABLE.md)
-7. [Claims table](./CLAIMS_TABLE.md)
-8. [Derivation atlas](./DERIVATION_ATLAS.md)
-9. [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
-10. [Full claim ledger](./FULL_CLAIM_LEDGER.md)
-11. [Frozen-out registry](./FROZEN_OUT_REGISTRY.md)
-12. [Results index](./RESULTS_INDEX.md)
+7. [Inputs and qualifiers](./INPUTS_AND_QUALIFIERS_NOTE.md)
+8. [What this paper does not claim](./WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
+9. [Claims table](./CLAIMS_TABLE.md)
+10. [Derivation atlas](./DERIVATION_ATLAS.md)
+11. [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
+12. [Full claim ledger](./FULL_CLAIM_LEDGER.md)
+13. [Frozen-out registry](./FROZEN_OUT_REGISTRY.md)
+14. [Results index](./RESULTS_INDEX.md)
 
 For one-note gravity/gauge continuum positioning across the current package,
 use [CONTINUUM_IDENTIFICATION_NOTE.md](../../CONTINUUM_IDENTIFICATION_NOTE.md).
@@ -50,6 +52,10 @@ directory.
 The package is also already predictive in a reviewer-facing sense. For the
 shortest summary of what is already predicted on `main`, use
 [PREDICTION_SURFACE_2026-04-15.md](./PREDICTION_SURFACE_2026-04-15.md).
+For the explicit package boundary, use:
+
+- [INPUTS_AND_QUALIFIERS_NOTE.md](./INPUTS_AND_QUALIFIERS_NOTE.md)
+- [WHAT_THIS_PAPER_DOES_NOT_CLAIM.md](./WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
 
 ## Current Quantitative Component Stack
 

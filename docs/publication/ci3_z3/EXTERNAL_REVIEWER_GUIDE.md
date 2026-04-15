@@ -32,6 +32,10 @@ every possible smooth or continuum packaging has been closed.
 Read the package as already predictive, not merely retrospective. For the
 short publication-facing list of what is already predicted on `main`, use
 [PREDICTION_SURFACE_2026-04-15.md](./PREDICTION_SURFACE_2026-04-15.md).
+For the explicit package boundary, use:
+
+- [INPUTS_AND_QUALIFIERS_NOTE.md](./INPUTS_AND_QUALIFIERS_NOTE.md)
+- [WHAT_THIS_PAPER_DOES_NOT_CLAIM.md](./WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
 
 ## Retained Core
 

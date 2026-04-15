@@ -419,6 +419,16 @@ atlas, and the quantitative summary table. Those files are not meant to
 replace the paper’s scientific argument. They are the audit surface that makes
 the retained/bounded split explicit and reproducible.
 
+The remaining submission-hardening work is not more prediction hunting. It is
+explicit boundary documentation: one package note for inputs and qualifiers,
+one package note for what the paper does not claim, and optionally one compact
+gravity/QG proof-sketch appendix inside the manuscript.
+
+The current package notes for those first two jobs are:
+
+- [INPUTS_AND_QUALIFIERS_NOTE.md](./INPUTS_AND_QUALIFIERS_NOTE.md)
+- [WHAT_THIS_PAPER_DOES_NOT_CLAIM.md](./WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
+
 The package-level gravity/gauge continuum positioning layer is collected in
 [CONTINUUM_IDENTIFICATION_NOTE.md](../../CONTINUUM_IDENTIFICATION_NOTE.md), and
 the public entrypoint is the curated publication package rather than raw repo
