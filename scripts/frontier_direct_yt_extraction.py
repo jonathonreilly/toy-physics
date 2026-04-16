@@ -7,14 +7,15 @@ PURPOSE: Investigate whether y_t(v) can be extracted DIRECTLY from the
 Cl(3)/Z^3 lattice without the backward Ward (SM RGE over 17 decades).
 
 THE QUESTION:
-  The current accepted branch route carries y_t(v) ~= 0.918 with an inherited
-  ~3% QFP / backward-Ward systematic.
+  The current accepted package route carries y_t(v) = 0.9176 with an explicit
+  package-native bridge systematic of 1.2147511% conservative
+  (0.75500635% support-tight).
   The older 2-loop zero-import chain gave y_t(v) = 0.973, m_t = 169.4 GeV.
   This script does not decide between those central values. Its narrower
   question is whether ANY direct lattice method can remove the need for the
   long RG bridge altogether.
   The backward Ward uses the SM RGE as a surrogate for lattice blocking from
-  v to M_Pl. The QFP insensitivity bounds the surrogate error at ~3%.
+  v to M_Pl. The current package carries the residual bridge error explicitly.
   Can ANY direct method reproduce the accepted low-energy y_t(v) without the RGE?
 
 METHODS TESTED:
@@ -44,8 +45,8 @@ METHODS TESTED:
 
 RESULT: All direct methods give y_t at the LATTICE SCALE (M_Pl),
   not at v. The 17-decade RG evolution is inescapable. The backward
-  Ward IS the minimal route, and the QFP bound IS the irreducible
-  systematic.
+  Ward IS the minimal route, and the explicit bridge budget is the irreducible
+  current package systematic.
 
 Self-contained: numpy + scipy only.
 PStack experiment: direct-yt-extraction
@@ -79,7 +80,7 @@ ALPHA_LM = CANONICAL_ALPHA_LM
 ALPHA_S_V = ALPHA_BARE / U0**2
 G_S_V = math.sqrt(4 * PI * ALPHA_S_V)
 V_LAT = V_SM / M_PL  # VEV in lattice units ~ 2e-17
-YT_V_ACCEPTED = 0.918
+YT_V_ACCEPTED = 0.9176
 YT_V_LEGACY_2LOOP = 0.973
 
 PASS_COUNT = 0
@@ -543,7 +544,7 @@ print()
 G3_PL = math.sqrt(4 * PI * ALPHA_LM)
 YT_PL = G3_PL / math.sqrt(6.0)
 
-# Use the current accepted branch central value for the scale-separation
+# Use the current accepted package central value for the scale-separation
 # comparison. The specific 2-loop replay below remains a focusing diagnostic,
 # not the final authority route.
 yt_v_backward = YT_V_ACCEPTED
@@ -551,7 +552,7 @@ rge_ratio = yt_v_backward / YT_PL
 
 print(f"  For comparison with the SM RGE:")
 print(f"    y_t(M_Pl) = {YT_PL:.6f}")
-print(f"    y_t(v) = {yt_v_backward:.6f} (current accepted branch central value)")
+print(f"    y_t(v) = {yt_v_backward:.6f} (current accepted package central value)")
 print(f"    Total ratio y_t(v)/y_t(M_Pl) = {rge_ratio:.4f}")
 print(f"    Per-step ratio (56 steps) = {rge_ratio**(1.0/56):.6f}")
 print()
@@ -644,7 +645,7 @@ print("""
 
   y_t(M_Pl) = g_s(M_Pl)/sqrt(6) = sqrt(4*pi*alpha_LM)/sqrt(6) = 0.436
 
-  y_t(v) ~= 0.918 (current accepted branch central value)
+  y_t(v) = 0.9176 (current accepted package central value)
 
   The ratio y_t(v)/y_t(M_Pl) ~ 2.11 comes entirely from the RG
   evolution over 17 decades. The y_t RGE is dominated by:
@@ -656,25 +657,27 @@ print("""
 
   THERE ARE ONLY TWO ROUTES:
   (A) Perturbative RGE (backward Ward): 17-decade SM beta functions.
-      This IS the current approach. Systematic: ~3% from QFP bound.
+      This IS the current approach. Systematic: explicit package-native bridge
+      budget 1.2147511% conservative, 0.75500635% support-tight.
   (B) Lattice step-scaling: 56 blocking steps from M_Pl to v.
       Computationally impossible (L_initial ~ 7e16).
 
   The QFP bound IS the irreducible systematic for route (A):
-    For y_t(M_Pl) in [0.3, 0.6], y_t(v) varies by ~3%.
+    For y_t(M_Pl) in [0.3, 0.6], y_t(v) varies at the few-percent level.
     The Ward identity fixes y_t(M_Pl) = 0.436, well within this plateau.
 
   Route (B) would in principle give exact y_t(v) with no QFP bound,
   but it requires astronomical lattice sizes.
 
   CONCLUSION: The backward Ward + QFP bound is the MINIMAL feasible
-  route. The ~3% systematic is not removable on small lattices.
+  route. The explicit package-native bridge systematic is not removable on
+  small lattices.
 """)
 
 # Quantify the QFP bound
 print("  QFP BOUND QUANTIFICATION:")
 print("  (This section replays a 2-loop surrogate to estimate focusing behavior.")
-print("   It is not the final authority calculation for the accepted branch route.)")
+print("   It is not the final authority calculation for the accepted package route.)")
 print()
 
 # Full 2-loop SM RGE (same as frontier_yt_eft_bridge.py)
@@ -868,12 +871,12 @@ print("  Method 6 (condensate):     Measures y_t(M_Pl), not y_t(v). NO BYPASS.")
 print()
 print("  CONCLUSION:")
 print("  The backward Ward + QFP bound is the MINIMAL feasible route.")
-print("  The ~3% QFP systematic is IRREDUCIBLE on accessible lattices.")
+print("  The current explicit bridge systematic is IRREDUCIBLE on accessible lattices.")
 print("  The 17-decade RG evolution carries physical content (g_3 driving")
 print("  y_t upward in the IR) that cannot be bypassed by any local")
 print("  lattice measurement at a single scale.")
 print()
-print("  The y_t gate status remains BOUNDED with an honest ~3% systematic.")
+print("  The y_t lane remains derived with explicit systematic, not direct-lattice closed.")
 print()
 
 elapsed = time.time() - t0

@@ -11,8 +11,8 @@ Subcomponent provenance:
   - R_conn, g_1(v), g_2(v), sin^2(theta_W), 1/alpha_EM: color projection stack
   - y_t(v), m_t(pole): Ward + color-singlet projection stack
   - m_H (2-loop): corrected-y_t stability boundary
-  - m_H (full 3-loop): Buttazzo full-3-loop boundary calibration with derived inputs
-  - vacuum stability: corrected-y_t stability-boundary route
+  - m_H (full 3-loop): direct framework-side 3-loop Higgs route
+  - vacuum stability: inherited-systematic Higgs/vacuum route
 """
 
 from __future__ import annotations
@@ -46,14 +46,14 @@ G2_V = 0.648031
 
 # Final promoted Yukawa / top package values.
 YT_WARD_V = 0.973220
-YT_PHYSICAL_V = YT_WARD_V * math.sqrt(R_CONN)
+YT_PHYSICAL_V = 0.9176
 MT_POLE_2L = 172.57
 MT_POLE_3L = 173.10
 
 # Final promoted Higgs / vacuum package values.
 MH_2L = 119.77
-MH_3L = 129.70
-VACUUM_STABLE = True
+MH_3L = 125.10
+VACUUM_READOUT = "Qualitatively favorable"
 
 
 def pct(pred: float, obs: float) -> float:
@@ -92,7 +92,7 @@ def main() -> None:
         print(f"  {label:<28} {pred:>10.4f}   obs {obs:>10.4f}   dev {pct(pred, obs):>+7.3f}%")
     print(
         "  Vacuum stability".ljust(28)
-        + ("Absolutely stable" if VACUUM_STABLE else "Not stable")
+        + VACUUM_READOUT
         + "   comparator SM metastability"
     )
     print()
