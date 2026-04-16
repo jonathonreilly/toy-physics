@@ -1,157 +1,137 @@
-# Bell Inequality Violation Derived from the Lattice Propagator
+# Bell Inequality Violation from the Local Tensor Product Axiom
 
 **Date:** 2026-04-16
-**Status:** BOUNDED-RETAINED — structural theorem + gravitational Bell violation
+**Status:** BOUNDED-RETAINED — CHSH violation with proper local bipartition
 **Script:** `scripts/frontier_bell_inequality.py`
-**Runtime:** ~4 seconds
+**Runtime:** < 1 second
 
-## Results
+## Result
 
-| Part | Test | |S| | Classical bound | Bell violation? |
+Starting from a product state on the 4-site staggered lattice, the
+framework's own Hamiltonian (staggered hopping + periodic Poisson gravity)
+dynamically produces maximal CHSH Bell violation:
+
+| Route | |S| | Classical bound | Tsirelson | Parameters |
 |---|---|---|---|---|
-| A | Structural: singlet on sublattice Pauli algebra | 2.828 | 2.0 | YES (Tsirelson saturated) |
-| B | Free-fermion ground state | 1.69 | 2.0 | no (too weakly entangled) |
-| C | Propagator-evolved singlet (t=0 to 0.4) | 2.83 -> 2.09 | 2.0 | YES (persists to t=0.4) |
-| D | Gravitationally interacting ground state | 2.23 | 2.0 | YES (28% of Tsirelson) |
+| Dynamical (product -> evolve) | **2.828** | 2.0 | 2.828 (saturated) | m=0.5, G=10, t=6.0 |
+| Ground state | **2.051** | 2.0 | — | m=0.5, G=20 |
+
+## Valid Alice/Bob factorization
+
+The framework axiom (`SINGLE_AXIOM_HILBERT_NOTE`) is a local tensor
+product Hilbert space H = H_0 ⊗ H_1 ⊗ H_2 ⊗ H_3. This provides the
+Bell factorization directly:
+
+- **Alice** owns factors {0, 1} (one even-odd site pair)
+- **Bob** owns factors {2, 3} (one even-odd site pair, spatially separated)
+- **[O_A, O_B] = 0** is automatic from the tensor product structure
+
+Verified explicitly:
+
+| Check | Result |
+|---|---|
+| [Z_A, Z_B] = 0 | True |
+| [Z_A, X_B] = 0 | True |
+| [X_A, Z_B] = 0 | True |
+| [X_A, X_B] = 0 | True |
+| Z_A^2 = X_A^2 = I | True |
+| {Z_A, X_A} = 0 | True |
+| Z_B^2 = X_B^2 = I | True |
+| {Z_B, X_B} = 0 | True |
 
 ## Derivation chain
-
-Every ingredient traces to `Cl(3)` on `Z^3`:
 
 ```
 Cl(3) on Z^3 (framework axiom)
   |
-  +---> Z^d bipartite structure (intrinsic to cubic lattice)
+  +---> local tensor product Hilbert space (SINGLE_AXIOM_HILBERT_NOTE)
   |       |
-  |       +---> sublattice parity Z = (-1)^x (eigenvalues +/-1)
-  |       +---> pair-hop X (swap within even-odd pairs, eigenvalues +/-1)
-  |       +---> Z^2 = X^2 = I, {Z,X} = 0  --> PAULI ALGEBRA
-  |       +---> verified N = 4, 6, 8, 10, 20, 50, 100
+  |       +---> Alice = factors {0,1}, Bob = factors {2,3}
+  |       +---> [O_A, O_B] = 0 (automatic)
   |
-  +---> staggered fermions (Kogut-Susskind from Cl(3))
+  +---> sublattice parity Z = (-1)^x on each pair -> Alice/Bob qubits
+  +---> pair-hop X on each pair -> measurement angle rotation
+  +---> {Z, X} = 0, Z^2 = X^2 = I -> Pauli algebra per party
+  |
+  +---> staggered Hamiltonian (hopping + Dirac mass)
+  +---> periodic Poisson coupling (D5, self-consistent field)
   |       |
-  |       +---> Pauli exclusion forces antisymmetric wavefunction
-  |       +---> two fermions on adjacent sites -> unique antisymmetric state
-  |       +---> staggered Hamiltonian: hopping + Dirac mass m*(-1)^x
+  |       +---> product initial state
+  |       +---> dynamics create entanglement across Alice-Bob cut
+  |       +---> CHSH = 2*sqrt(2) at t = 6.0
   |
-  +---> Poisson gravitational coupling (D5, self-consistency)
-  |       |
-  |       +---> interacting ground state is more strongly entangled
-  |       +---> ground state CHSH > 2 at G >= 20
-  |
-  +---> unitary propagator (A2)
-          |
-          +---> preserves Bell violation during singlet spreading
-          +---> violation persists t = 0 to t = 0.4
+  +---> ground state with Poisson coupling
+          +---> CHSH = 2.051 at G = 20
 ```
 
-## Part A: Structural theorem
+## Protocol
 
-The staggered lattice carries a native Pauli algebra on every adjacent
-even-odd pair:
+1. **Lattice:** 4 sites, periodic BC, staggered mass m = 0.5
+2. **Interaction:** periodic Poisson Green's function, G = 10
+3. **Initial state:** product |Alice on site 0⟩ ⊗ |Bob on site 2⟩
+4. **Evolution:** staggered Hamiltonian with Poisson coupling in the
+   Alice-1-Bob-1 sector (proper tensor product factorization)
+5. **Measurement:** local sublattice Pauli operators per party
+6. **Result:** |S| = 2.828 at t = 6.0 (Tsirelson saturated)
 
-| Property | Value | Required |
-|---|---|---|
-| Z eigenvalues | {+1, -1} | yes |
-| X eigenvalues | {+1, -1} | yes |
-| Z^2 = I | True | yes |
-| X^2 = I | True | yes |
-| {Z, X} = 0 | True | yes |
+## What is framework-native
 
-The singlet on this algebra gives E(0, theta) = -cos(theta) to machine
-precision and CHSH |S| = 2*sqrt(2) (Tsirelson bound saturated).
+| Ingredient | Origin |
+|---|---|
+| Local tensor product H | framework axiom (SINGLE_AXIOM_HILBERT_NOTE) |
+| Alice/Bob spatial separation | disjoint factors of the tensor product |
+| [O_A, O_B] = 0 | automatic from tensor product |
+| Sublattice parity Z | intrinsic to Z^d bipartite structure |
+| Pair-hop X | Z^d nearest-neighbor connectivity |
+| Pauli algebra {Z, X} = 0 | verified on the lattice |
+| Staggered Hamiltonian | Kogut-Susskind from Cl(3) |
+| Periodic Poisson coupling | D5 (self-consistent propagator + field) |
+| Product initial state | no entanglement inserted |
 
-The Pauli algebra is size-independent (verified N = 4 to 100).
+## Parameter dependence
 
-## Part B: Free-fermion ground state (honest negative)
+The dynamical violation exists across a wide range:
 
-The 2-fermion ground state of the free staggered Hamiltonian does NOT
-produce CHSH > 2. Maximum |S| = 1.99 at m/t = 10 (N=8). Free-fermion
-Slater determinants have insufficient entanglement for Bell violation
-with these measurement operators.
-
-This is an honest negative — free fermions are too weakly correlated.
-
-## Part C: Propagator-evolved singlet
-
-Starting from two fermions localized on adjacent center sites. The
-initial localization is a choice of initial condition; the antisymmetric
-wavefunction is forced by Pauli exclusion:
-
-| t | |S| | % Tsirelson | Wavefunction spread (IPR) |
+| mass | G | Best |S| | Best time |
 |---|---|---|---|
-| 0.000 | 2.828 | 100% | 1.00 |
-| 0.100 | 2.773 | 93% | 1.04 |
-| 0.250 | 2.503 | 61% | 1.27 |
-| 0.400 | 2.092 | 11% | 1.76 |
-| 0.500 | 1.798 | — | 2.24 |
+| 0.5 | 10 | 2.828 | 6.0 |
+| 0.5 | 20 | 2.823 | 1.1 |
+| 1.0 | 20 | 2.822 | 3.2 |
+| 2.0 | 20 | 2.443 | 1.0 |
+| 5.0 | 50 | 2.091 | 7.5 |
 
-The violation persists as the wavefunction spreads across ~2 sites.
-At IPR > 2, the correlations dilute below the Bell threshold.
-
-## Part D: Gravitationally interacting ground state
-
-With the framework's native Poisson gravitational coupling G*V(|x1-x2|),
-the ground state entanglement is enhanced:
-
-| G | |S| | Bell violation? | % Tsirelson |
-|---|---|---|---|
-| 0 | 1.69 | no | — |
-| 10 | 1.69 | no | — |
-| 15 | 1.99 | no | — |
-| 20 | 2.10 | YES | 12% |
-| 50 | 2.21 | YES | 26% |
-| 100 | 2.23 | YES | 28% |
-| 200 | 2.23 | YES | 28% |
-
-The gravitational interaction pushes the ground state past the classical
-CHSH bound. The violation saturates at |S| ~ 2.23 (28% of Tsirelson)
-for strong coupling. All operators have verified eigenvalues +/-1 and
-the Horodecki bound is respected (|S| < 2*sqrt(2)).
-
-Framework origin: the Poisson coupling is derived from self-consistency
-of the propagator + field (D5 in the axiom chain). It is the same
-gravitational interaction used throughout the framework.
-
-## What is NOT imported
-
-- No external spin or polarization degree of freedom
-- No hand-inserted entanglement in Parts B and D (ground states from
-  Hamiltonian dynamics). Part C uses a localized initial condition
-  with forced antisymmetry.
-- No external measurement apparatus (Z and X are lattice-intrinsic)
-- No tuned parameters (the violation exists across a range of G, m, N)
+At G = 0 (no gravity), |S| reaches exactly 2.000 (the classical bound)
+but does not exceed it. The Bell violation requires the gravitational
+interaction — confirming that the framework's Poisson coupling is the
+entanglement source.
 
 ## Honest boundaries
 
-- Part B (free fermions): no violation. Bell violation requires
-  interaction — the free staggered Hamiltonian alone is insufficient.
-- Part C: violation decays as wavefunction spreads. The propagator
-  preserves violation for a finite time window, not indefinitely.
-- Part D: violation requires G >= 20 (moderate to strong coupling).
-  At weak coupling (G < 15), the ground state is too close to the
-  free-fermion limit.
-- The measurement operators (full-lattice Z and X) do not implement
-  spatial separation between Alice and Bob. This is a structural
-  derivation, not a Bell experiment protocol.
+- The lattice is 4 sites (the minimal Bell configuration). Scaling to
+  larger lattices has not been tested in this script.
+- The sector restriction (Alice-1-Bob-1) excludes leaking amplitude.
+  On the full unrestricted lattice, the sector weight and the effect
+  of cross-boundary hopping need further study.
+- The Poisson Green's function used is the 1D periodic form. The
+  retained 3D surface (Z^3 Poisson/Newton) has not been tested here.
+- The Tsirelson saturation at G=10 occurs at a specific evolution time
+  (t=6.0). The violation oscillates with time; it is not a steady state.
 
-## Impact
+## What this adds
 
-This completes the quantum nonlocality chain:
+This completes the quantum nonlocality chain with a valid Bell test:
 
-```
-axioms -> complex amplitudes -> superposition -> entanglement
-       -> Bell violation -> quantum nonlocality
-```
+- **Local tensor product** → proper Alice/Bob factorization
+- **Commuting local algebras** → [O_A, O_B] = 0 verified
+- **Framework dynamics** → product state → CHSH = 2√2
+- **Gravitational interaction** → the entanglement source is Poisson coupling
 
-Previously the framework had:
-- Born rule I_3 = 0 (quantum interference)
-- Gravitational entanglement (BMV-like, delta_S > 0)
+Previously retained:
+- Born rule I_3 = 0 (pairwise interference)
+- Gravitational entanglement (BMV-like, δS > 0)
 
-Now it also has:
-- CHSH Bell violation from intrinsic lattice operators
-- Violation from the framework's own gravitational dynamics
-- Tsirelson bound saturation on the structural surface
+Now also retained:
+- CHSH Bell violation with proper local bipartition
 
 ## Reproducibility
 
@@ -159,4 +139,4 @@ Now it also has:
 python3 scripts/frontier_bell_inequality.py
 ```
 
-Runtime: ~4 seconds. Requires numpy, scipy.
+Runtime: < 1 second. Requires numpy, scipy.
