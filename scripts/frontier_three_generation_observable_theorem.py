@@ -10,6 +10,13 @@ THEOREM (Observable no-collapse):
   pairwise inequivalent physical sectors of the Hamiltonian observable
   algebra.
 
+  Admissible collapse maps are linear surjections Q : H_hw=1 -> H_red that
+  intertwine the exact retained translation algebra:
+
+      Q T_mu = T'_mu Q   for mu in {x, y, z}
+
+  for some quotient representation T'_mu on H_red.
+
   1. The exact lattice translations act on the hw=1 sector by three distinct
      joint characters:
          X1 : (-1, +1, +1)
@@ -76,6 +83,22 @@ def build_translation_operators() -> dict[str, np.ndarray]:
         "Ty": np.diag([+1.0, -1.0, +1.0]),
         "Tz": np.diag([+1.0, +1.0, -1.0]),
     }
+
+
+def translation_commutant_basis(ops: dict[str, np.ndarray]) -> list[np.ndarray]:
+    """Basis for the commutant of the exact retained translation algebra."""
+    dim = 3
+    constraints = []
+    eye = np.eye(dim, dtype=complex)
+    for op in ops.values():
+        constraints.append(np.kron(op.T, eye) - np.kron(eye, op))
+    mat = np.vstack(constraints)
+    _, svals, vh = np.linalg.svd(mat, full_matrices=True)
+    tol = 1e-10 * max(1.0, svals[0]) if len(svals) else 1e-10
+    null_vecs = [vh[i] for i, sval in enumerate(svals) if sval < tol]
+    for i in range(len(svals), vh.shape[0]):
+        null_vecs.append(vh[i])
+    return [vec.reshape(dim, dim) for vec in null_vecs]
 
 
 def joint_projector(chars: tuple[int, int, int], ops: dict[str, np.ndarray]) -> np.ndarray:
@@ -181,6 +204,29 @@ def part1_translation_observable_algebra() -> dict[str, np.ndarray]:
         len(set(sector_chars.values())) == 3,
     )
 
+    comm_basis = translation_commutant_basis(ops)
+    check(
+        "translation commutant on H_hw=1 has dimension 3",
+        len(comm_basis) == 3,
+        f"dim = {len(comm_basis)}",
+    )
+
+    basis_projectors = {
+        "X1": np.diag([1.0, 0.0, 0.0]),
+        "X2": np.diag([0.0, 1.0, 0.0]),
+        "X3": np.diag([0.0, 0.0, 1.0]),
+    }
+    span_mat = np.stack([m.reshape(-1) for m in comm_basis], axis=1)
+    for name, proj_target in basis_projectors.items():
+        coeffs, *_ = np.linalg.lstsq(span_mat, proj_target.reshape(-1), rcond=None)
+        recon = sum(coeff * basis for coeff, basis in zip(coeffs, comm_basis))
+        err = np.linalg.norm(recon - proj_target)
+        check(
+            f"sector projector {name} lies in the exact translation commutant",
+            err < 1e-12,
+            f"reconstruction error = {err:.2e}",
+        )
+
     nonzero_char_triples = []
     for chars in product((-1, +1), repeat=3):
         proj = joint_projector(chars, ops)
@@ -200,11 +246,6 @@ def part1_translation_observable_algebra() -> dict[str, np.ndarray]:
         f"nonzero = {sorted(nonzero_char_triples)}",
     )
 
-    basis_projectors = {
-        "X1": np.diag([1.0, 0.0, 0.0]),
-        "X2": np.diag([0.0, 1.0, 0.0]),
-        "X3": np.diag([0.0, 0.0, 1.0]),
-    }
     for name, chars in sector_chars.items():
         proj = joint_projector(chars, ops)
         err = np.linalg.norm(proj - basis_projectors[name])
@@ -224,7 +265,8 @@ def part1_translation_observable_algebra() -> dict[str, np.ndarray]:
     print()
     print("  Consequence:")
     print("    the translation observable algebra already separates X1, X2, X3")
-    print("    exactly on the retained hw=1 surface.")
+    print("    exactly on the retained hw=1 surface, and its commutant is")
+    print("    exhausted by the three sector projectors.")
     print()
 
     return ops
@@ -268,6 +310,8 @@ def part2_no_collapse_quotients(ops: dict[str, np.ndarray]) -> None:
 
     print()
     print("  Exact quotient theorem:")
+    print("    admissible quotient maps are defined here by exact translation")
+    print("    intertwining Q T_mu = T'_mu Q on the retained hw=1 surface.")
     print("    every translation-compatible 3->2 quotient has a one-dimensional")
     print("    invariant kernel; the exhaustive joint-character scan above shows")
     print("    the only invariant lines are X1, X2, X3 themselves.")

@@ -59,6 +59,38 @@ This theorem uses only current retained package ingredients:
 No observed quark masses, fitted generation labels, or new continuum flavor
 assumptions are introduced here.
 
+## Assumptions and dependency boundary
+
+This note is exact **on a stated retained package surface**. Its assumptions
+should be read narrowly:
+
+1. **Physical-lattice reading.**
+   The `hw=1` triplet is retained as physical sector structure on the same
+   physical-lattice surface used throughout the current matter package.
+2. **Admissible collapse maps.**
+   A putative reduction to fewer than three sectors is called admissible only
+   if it is a linear surjection
+
+   `Q : H_hw=1 -> H_red`
+
+   that intertwines the exact retained translation algebra:
+
+   `Q T_mu = T'_mu Q`, for `mu in {x,y,z}`,
+
+   for some quotient representation `T'_mu` on `H_red`.
+3. **Flavor witness surface.**
+   The contradiction to two sectors uses the already promoted CKM package as
+   the retained flavor witness. This note does **not** re-derive that package;
+   it uses only the exact retained fact that the package gives `J > 0`.
+
+So the theorem is:
+
+- exact as a no-collapse theorem on the retained observable surface
+- dependent on the promoted CKM package only through the witness statement
+  `J > 0`
+- not a standalone replacement for the CKM closure note or the physical-lattice
+  boundary note
+
 ## Theorem statement
 
 > **Three-Generation Observable No-Collapse Theorem.**
@@ -69,8 +101,10 @@ assumptions are introduced here.
 > - `X2 : (+1, -1, +1)`
 > - `X3 : (+1, +1, -1)`.
 >
-> Hence the translation observable algebra has exact rank-1 projectors onto
-> the three sectors. Any translation-compatible quotient from `H_hw=1` to a
+> Hence the retained translation commutant on `H_hw=1` has dimension `3` and
+> is exhausted by the three sector projectors. In particular, the translation
+> observable algebra has exact rank-1 projectors onto the three sectors. Any
+> translation-compatible quotient from `H_hw=1` to a
 > two-dimensional quotient space must have a one-dimensional invariant kernel,
 > and the only such invariant lines are `span(X1)`, `span(X2)`, `span(X3)`.
 > Therefore a legal `3 -> 2` quotient can only delete one whole sector; it
@@ -103,6 +137,11 @@ For a sign triple `(s_x, s_y, s_z)`, the joint projector is
 Only three sign triples give nonzero projectors, and they are exactly the
 rank-1 projectors onto `X1`, `X2`, `X3`.
 
+Equivalently, the commutant of `{T_x, T_y, T_z}` inside `End(H_hw=1)` has
+dimension `3` and is spanned by those three rank-1 projectors. There are no
+off-diagonal inter-sector intertwiners inside the exact retained translation
+algebra.
+
 ### 3. Quotient classification
 
 Any translation-compatible quotient must have translation-invariant kernel.
@@ -110,6 +149,11 @@ Because the only common translation eigenlines are the three sector lines,
 every legal `3 -> 2` quotient can only delete one sector. Identification
 kernels such as `X1 - X2` are not translation-invariant and therefore do not
 define legal observable quotients.
+
+This is the exact place where the admissibility definition matters: the theorem
+does not classify arbitrary nonlinear or non-observable identifications. It
+classifies reductions that preserve the exact retained translation algebra of
+the physical sector.
 
 ### 4. Two-generation CP witness vanishes
 
@@ -160,6 +204,10 @@ This note does **not** claim:
 - a complete neutrino-generation closure
 
 Those remain separate tasks.
+
+It also does **not** claim a theorem about arbitrary sector-relabeling maps
+outside the retained observable-algebra surface. The theorem is specifically
+about admissible observable-preserving reductions.
 
 ## Paper-safe wording
 
