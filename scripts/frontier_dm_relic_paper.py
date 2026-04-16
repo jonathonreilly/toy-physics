@@ -1,16 +1,21 @@
 #!/usr/bin/env python3
 """
-DM Relic Paper Note: Bounded Consistency Window
-================================================
+DM Relic Paper Note: Legacy Bounded Cross-Check
+===============================================
 
 Paper-safe script for the DM relic mapping lane.
 
-STATUS: BOUNDED (one-parameter consistency window)
+STATUS: LEGACY BOUNDED CROSS-CHECK (not current authority)
 
 This script computes R = Omega_DM / Omega_b from the Cl(3) lattice
-structure and explicitly separates:
+structure on the older provenance surface and explicitly separates:
   - EXACT checks (group theory, Hamming weights -- always pass)
-  - BOUNDED checks (require g_bare = 1 assumption, imported formulas)
+  - BOUNDED checks (require older `g_bare = 1` framing and imported formulas)
+
+The branch no longer treats this script as its flagship DM authority. The
+newer direct-observable and gauge-rigidity notes supersede the old
+"one-parameter window" framing. Use this script only as a historical
+bounded cross-check.
 
 It does NOT claim "DM relic abundance derived from the lattice axioms alone."
 
@@ -512,10 +517,12 @@ log()
 total_pass = n_pass_exact + n_pass_bounded
 total_fail = n_fail_exact + n_fail_bounded
 
-log(f"  LANE STATUS: BOUNDED (one-parameter consistency window)")
-log(f"  R = {R_final:.2f} +/- {R_final*0.056:.2f} at g_bare = 1")
+log(f"  SCRIPT STATUS: LEGACY BOUNDED CROSS-CHECK")
+log(f"  Historical output on the old surface: R = {R_final:.2f} +/- {R_final*0.056:.2f} at g_bare = 1")
 log(f"  R_obs = {R_OBS:.2f} (0.2% match)")
-log(f"  Provenance: 7 NATIVE, 5 DERIVED, 1 ASSUMED, 2 IMPORTED")
+log(f"  Historical provenance: 7 NATIVE, 5 DERIVED, 1 ASSUMED, 2 IMPORTED")
+log(f"  Current branch-safe paper surface: R(eta), not this old one-parameter window")
+log(f"  Current authority: DM_RELIC_PAPER_NOTE.md + DM_DIRECT_OBSERVABLE_EXECUTION_NOTE_2026-04-14.md")
 log()
 
 # Write log
