@@ -45,6 +45,10 @@ surface derived from the sole axiom `Cl(3)` on `Z^3`.
   [PMNS_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md](./PMNS_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md)
 - Sole-axiom `hw=1` source-transfer boundary:
   [PMNS_SOLE_AXIOM_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md](./PMNS_SOLE_AXIOM_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md)
+- Twisted flux / transfer holonomy boundary:
+  [PMNS_TWISTED_FLUX_TRANSFER_HOLONOMY_BOUNDARY_NOTE.md](./PMNS_TWISTED_FLUX_TRANSFER_HOLONOMY_BOUNDARY_NOTE.md)
+- Anomaly-forced `3+1` retarded transport / projection boundary:
+  [PMNS_ANOMALY_FORCED_3PLUS1_RETARDED_TRANSPORT_PROJECTION_BOUNDARY_NOTE.md](./PMNS_ANOMALY_FORCED_3PLUS1_RETARDED_TRANSPORT_PROJECTION_BOUNDARY_NOTE.md)
 
 ## Current Exact Endpoint
 There are now two exact endpoints, and they must be kept separate.
@@ -137,6 +141,12 @@ nontrivial retained PMNS values.
 - Exact sole-axiom `hw=1` source-transfer boundary showing that the canonical
   native source-inserted / graph-first-transferred pack stays trivial and is
   rejected by the retained PMNS closure stack
+- Exact twisted-flux / transfer holonomy theorem showing that this route
+  recovers `(xbar, ybar, phi)` exactly but still leaves a `2`-real kernel on
+  the reduced graph-first oriented-cycle family
+- Exact anomaly-forced `3+1` retarded transport / projection boundary showing
+  that the lift is nontrivial upstairs but projects back to the same free
+  retained pack
 
 ## What Is Not Yet Claimed
 This packet does **not** claim full sole-axiom neutrino closure from
@@ -149,9 +159,12 @@ endpoint explicit in one place: the current exact bank fixes the retained PMNS
 carrier and its native observables, but not a unique value on the reduced
 graph-first cycle channel. The newest route attacks sharpen the next step:
 graph-first frame-fixing and projected-commutant data are not enough by
-themselves, and even the canonical sole-axiom `hw=1` source-inserted /
-graph-first-transferred pack stays trivial. So the current exact bank no longer
-has a live retained PMNS-side loophole on this lane.
+themselves; the canonical sole-axiom `hw=1` source-inserted /
+graph-first-transferred pack stays trivial; twisted flux holonomy improves the
+native value law only to `(xbar, ybar, phi)` and still leaves a `2`-real
+kernel; and the anomaly-forced `3+1` retarded lift dies under retained
+projection. So the current exact bank no longer has a live retained PMNS-side
+loophole on this lane.
 
 ## Representative Runners
 - [frontier_pmns_full_microscopic_operator_to_pair.py](/Users/jonBridger/Toy%20Physics-neutrino-majorana/scripts/frontier_pmns_full_microscopic_operator_to_pair.py)
@@ -172,3 +185,5 @@ has a live retained PMNS-side loophole on this lane.
 - [frontier_pmns_graph_commutant_cycle_value_boundary.py](../scripts/frontier_pmns_graph_commutant_cycle_value_boundary.py)
 - [frontier_pmns_hw1_source_transfer_boundary.py](../scripts/frontier_pmns_hw1_source_transfer_boundary.py)
 - [frontier_pmns_sole_axiom_hw1_source_transfer_boundary.py](../scripts/frontier_pmns_sole_axiom_hw1_source_transfer_boundary.py)
+- [frontier_pmns_twisted_flux_transfer_holonomy_boundary.py](../scripts/frontier_pmns_twisted_flux_transfer_holonomy_boundary.py)
+- [frontier_pmns_anomaly_forced_3plus1_retarded_transport_projection_boundary.py](../scripts/frontier_pmns_anomaly_forced_3plus1_retarded_transport_projection_boundary.py)

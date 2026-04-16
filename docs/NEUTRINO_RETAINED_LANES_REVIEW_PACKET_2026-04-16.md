@@ -51,6 +51,10 @@ explicitly closed in:
   - the `hw=1` source-transfer pack closes the retained PMNS lane once
     supplied, but the canonical sole-axiom source-inserted / graph-first-
     transferred pack stays trivial and is rejected too
+  - twisted flux holonomy recovers `(xbar, ybar, phi)` exactly but still leaves
+    a `2`-real kernel on the reduced cycle family
+  - the anomaly-forced `3+1` retarded lift is nontrivial upstairs but projects
+    back to the same free retained pack
 - So this lane is reviewer-ready as:
   - a positive retained-lane closure package on the lower-level
     transport/response chain, and
