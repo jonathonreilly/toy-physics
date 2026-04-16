@@ -11,40 +11,48 @@ Keywords: discrete gravity, lattice gauge theory, Clifford algebra, CKM, strong 
 
 ## Abstract
 
-We study the hypothesis that $Cl(3)$ on the cubic lattice $Z^3$ is the
-physical theory and ask which parts of high-energy physics survive direct audit
-on that exact discrete surface. On the retained theorem surface, the framework
-yields weak-field gravity through Poisson self-consistency and the lattice
-Green-function Newton law together with weak-field weak equivalence principle
-and time dilation; a restricted strong-field closure on an exact
-star-supported finite-rank class; an exact discrete Lorentzian
-Einstein-Regge stationary-action family on $PL\,S^3 \times \mathbb{R}$; and an
-exact quantum-gravity/continuum identification chain on one chosen canonical
-textbook target. On the gauge and matter side, the same framework carries exact
-native $SU(2)$, graph-first structural $SU(3)$, exact $T=0$ confinement of the
-graph-first $SU(3)$ sector with bounded $\sqrt{\sigma}\approx 465\,\mathrm{MeV}$,
-anomaly-forced $3+1$, retained $S^3$ topology closure, one-generation matter
-closure, retained three-generation matter structure, exact $I_3=0$, exact CPT,
-emergent Lorentz invariance with first anisotropic correction at dimension $6$,
-and exact strong CP in the form $\theta_{\mathrm{eff}}=0$ on the retained action
-surface. The current quantitative package retains $\alpha_s(M_Z)$ and
-electroweak normalization lanes, promotes an algebraic CKM atlas/axiom closure
-package with no quark-mass or fitted-CKM inputs, and carries Yukawa/top and
-Higgs/vacuum rows with explicit inherited systematics. The package also already
-contains a bounded prediction surface, including proton lifetime, CKM neutron
-EDM, vacuum critical stability, and benchmark gravitational decoherence. The
-single live flagship gate is dark-matter relic mapping. We state the retained
-claim surface, separate exact from bounded results, and present the public
-reproducibility surface that supports the current package.
+We ask whether $Cl(3)$ on the cubic lattice $Z^3$ can be treated as the
+physical theory rather than as a temporary regulator, and we retain only those
+rows that survive direct audit on that exact discrete surface. The retained
+core is already broad. On the gravity side, the framework yields Poisson/Newton
+weak-field gravity with weak-field weak equivalence principle and time
+dilation, a restricted strong-field closure on an exact finite-rank class, an
+exact discrete Lorentzian Einstein-Regge stationary-action family on
+$PL\,S^3 \times \mathbb{R}$, and an exact quantum-gravity/continuum
+identification chain on one chosen canonical textbook target. On the gauge and
+matter side, the same framework carries exact native $SU(2)$, graph-first
+structural $SU(3)$, anomaly-forced $3+1$, retained $S^3$ topology closure,
+retained three-generation matter structure, exact $I_3=0$, exact CPT, emergent
+Lorentz invariance with first anisotropic correction at dimension $6$, exact
+strong CP in the form $\theta_{\mathrm{eff}}=0$ on the retained action surface,
+and exact $T=0$ confinement of the graph-first $SU(3)$ sector with bounded
+$\sqrt{\sigma}\approx 465\,\mathrm{MeV}$. Quantitatively, the current package
+gives the canonical hierarchy evaluation
+$v=246.282818290129\,\mathrm{GeV}$, retains
+$\alpha_s(M_Z)=0.1181$ and electroweak normalization lanes, promotes an
+algebraic CKM atlas/axiom closure package with no quark-mass or fitted-CKM
+inputs, and carries Yukawa/top and Higgs/vacuum rows with explicit inherited
+systematics. The package is already predictive beyond retrospective comparison:
+it contains bounded proton-lifetime, CKM neutron-EDM, vacuum-criticality, and
+benchmark gravitational-decoherence lanes. Dark-matter relic mapping is the
+sole remaining live flagship gate. The paper separates exact, promoted,
+bounded, and open rows and pairs them with a public reproducibility surface.
 
 ## 1. Introduction
 
-Ambitious unification programs often fail at the level of claim discipline
-rather than local mechanism: structural theorems, numerical lanes, and open
-bridges are mixed together until it is no longer clear what has actually been
-shown. This paper takes the opposite approach. We assume only that $Cl(3)$ on
-$Z^3$ is physical, then retain only those rows that survive direct audit on
-that exact discrete surface.
+The central question of this paper is not whether a discrete framework can
+imitate isolated pieces of known physics, but whether one exact discrete
+surface can carry a nontrivial fraction of gravity, gauge structure, matter,
+and quantitative phenomenology without being treated as disposable
+scaffolding. We take that question literally. The framework is $Cl(3)$ on
+$Z^3$, treated as physical rather than as a regulator, and we retain only those
+rows that survive direct audit on that exact surface.
+
+Ambitious unification programs often fail less because a local mechanism is
+missing than because claim boundaries dissolve: structural theorems, numerical
+lanes, and open bridges are mixed together until it is no longer clear what
+has actually been shown. This paper takes the opposite approach. Every row is
+explicitly retained, bounded, or open.
 
 The framework sentence is therefore simple:
 
@@ -57,24 +65,23 @@ not temporary scaffolding for a different continuum theory; it is the exact
 surface on which the audit is performed. The paper asks what survives on that
 surface and keeps only those rows.
 
-Several shifts distinguish the current package from earlier states of the
+Several shifts make the present manuscript different from earlier states of the
 program. The direct-universal gravity route now closes as exact full discrete
-$3+1$ general relativity on the project route. The quantum-gravity/continuum
-chain now closes on a chosen canonical textbook target; that is a
-chosen-target identification theorem, not a blanket statement about every
-possible continuum completion. Strong CP is exact on the axiom-determined
-action surface. Confinement is promoted as an exact structural theorem with a
-bounded string-tension readout. CKM is promoted as a canonical atlas/tensor
-closure package with canonical CMT $\alpha_s(v)$ input and no quark-mass or
-fitted-CKM derivation inputs. The package is also already predictive beyond
-the retained theorem spine: it carries bounded secondary predictions rather
-than only retrospective comparisons. The only live flagship gate left is dark
-matter relic mapping.
+$3+1$ general relativity on the project route. The QG/continuum chain closes on
+one chosen canonical textbook target; that is a chosen-target identification
+theorem, not a blanket claim about every possible continuum completion. Strong
+CP is exact on the retained action surface. Confinement is promoted as an exact
+structural theorem with a bounded string-tension readout. CKM is promoted as a
+canonical atlas/tensor closure package with canonical CMT $\alpha_s(v)$ input
+and no quark-mass or fitted-CKM derivation inputs. The package is already
+predictive beyond the theorem spine: it carries bounded secondary predictions,
+not only retrospective matches. The only live flagship gate left is dark matter
+relic mapping.
 
 The right reading of the manuscript is therefore no longer “promising
-framework with many open bridges.” It is “broad retained discrete backbone,
-promoted quantitative support where the package actually closes, a bounded
-prediction surface where it does not, and one live flagship gate.”
+framework with many open bridges.” It is “one discrete framework that already
+supports a broad exact backbone, a promoted quantitative stack, a bounded but
+real prediction surface, and one clearly identified flagship gate.”
 
 ## 2. Framework, Inputs, and Claim Boundary
 
@@ -197,15 +204,25 @@ detached from the discrete theory that generated it.
 
 ### 3.4 UV-finite QG and the chosen-target continuum bridge
 
-The quantum-gravity/continuum chain is no longer an aspiration. It is now a
-closed theorem stack on one chosen canonical textbook target for the project
-route. The exact chain includes:
+The quantum-gravity/continuum chain is no longer an aspiration. It is closed on
+one chosen canonical textbook target for the project route. The easiest way to
+read the result is as four conceptual moves rather than as thirteen isolated
+paper notes.
 
-1. a UV-finite partition-density family whose mean/stationary sector is the
-   discrete $3+1$ Einstein-Regge family;
-2. canonical barycentric-dyadic refinement on $PL\,S^3 \times \mathbb{R}$;
+First, the same exact family that closes the discrete Einstein-Regge sector
+also closes a UV-finite partition-density family whose mean/stationary sector
+is that discrete $3+1$ gravity surface. Second, canonical barycentric-dyadic
+refinement pushes that family into inverse-limit Gaussian cylinder closure and
+abstract Gaussian/Cameron-Martin completion [15]. Third, the completed family
+is realized natively on the project side as a PL field / weak / Sobolev
+package. Fourth, one chosen external FE/Galerkin bridge identifies that same
+family with a canonical textbook smooth weak/geometric/action target. The full
+detailed stack remains:
+
+1. UV-finite partition-density closure with discrete Einstein-Regge mean sector;
+2. canonical refinement on $PL\,S^3 \times \mathbb{R}$;
 3. inverse-limit Gaussian cylinder closure;
-4. abstract Gaussian/Cameron-Martin completion [15];
+4. abstract Gaussian/Cameron-Martin completion;
 5. project-native PL field realization;
 6. project-native PL weak/Dirichlet closure;
 7. project-native PL $H^1$-type Sobolev closure;
@@ -483,8 +500,9 @@ readout. This is the controlling CKM theorem surface in the current manuscript
 
 ### 5.4 Explicit-systematic Yukawa/top and inherited-systematic Higgs/vacuum
 
-The top-Yukawa/top-mass lane is no longer best described as generically
-bounded by a loose surrogate. The current package surface is
+The top-Yukawa/top-mass lane now has a clean main authority surface with an
+explicit transport budget rather than a vague surrogate caveat. The current
+package surface is
 
 - $y_t(v)=0.9176$,
 - canonical $m_t^{\mathrm{pole}} = 173.10\,\mathrm{GeV}$ on the framework-side
@@ -492,25 +510,24 @@ bounded by a loose surrogate. The current package surface is
 - retained support route $m_t^{\mathrm{pole}} = 172.57\,\mathrm{GeV}$ on the
   corrected-input $2$-loop route,
 
-with an explicit package-native bridge budget of $1.2147511\%$ conservative
-and $0.75500635\%$ support-tight. The right status is therefore
-derived-with-explicit-systematic rather than a generic bounded lane.
+with an explicit package-native bridge budget of $1.2147511\%$ conservative and
+$0.75500635\%$ support-tight. The right status is therefore
+derived-with-explicit-systematic rather than generically bounded.
 
-The Higgs/vacuum package is then derived with inherited explicit systematic on
-that same authority surface:
+The Higgs/vacuum package then inherits that same explicit budget:
 
 - canonical $m_H = 125.1\,\mathrm{GeV}$ on the framework-side $3$-loop route;
 - retained support route $m_H = 119.8\,\mathrm{GeV}$ on the corrected-input
   $2$-loop route;
 - vacuum stability qualitatively favorable on the same route.
 
-The key point is not whether a central value can be brought near the observed
-number. The key point is whether the whole route is closed on one authority
-surface. It is not yet unbounded, because the Higgs/vacuum lane still inherits
-the explicit Yukawa bridge budget. But the remaining limitation is now explicit
-and localized rather than vague. The comparison surface is therefore the
-standard near-critical Standard Model literature [13,14], not a claim that the
-framework has already removed every transport systematic.
+The important point is not merely that the central values are competitive. It
+is that the whole route is now stated on one authority surface with one named
+budget. The Higgs/vacuum lane is still not unbounded, because it inherits the
+explicit Yukawa bridge uncertainty. But the remaining limitation is now
+explicit and localized rather than diffuse. The comparison surface is therefore
+the standard near-critical Standard Model literature [13,14], not a claim that
+the framework has already removed every transport systematic.
 
 ## 6. Prediction Surface and the Remaining Live Gate
 
@@ -519,14 +536,20 @@ begins only after the remaining open bridge closes.
 
 ### 6.1 Retained and promoted quantitative outputs
 
-Already on the live manuscript surface are:
+The fastest way to read the quantitative package is Table 1.
 
-- $v = 246.282818290129\,\mathrm{GeV}$;
-- $\alpha_s(M_Z)=0.1181$;
-- the electroweak normalization package;
-- the promoted algebraic CKM package;
-- the confinement readout $\sqrt{\sigma}\approx 465\,\mathrm{MeV}$ on top of
-  the exact structural theorem.
+| Row | Canonical output | Status on current paper surface |
+| --- | --- | --- |
+| Electroweak scale | $v = 246.282818290129\,\mathrm{GeV}$ | exact theorem + canonical same-surface evaluation |
+| Strong coupling | $\alpha_s(M_Z)=0.1181$ | retained standalone quantitative lane |
+| Electroweak normalization | $g_1(v)=0.4644$, $g_2(v)=0.6480$ | retained standalone quantitative lane |
+| CKM | $|V_{us}|=0.22727$, $|V_{cb}|=0.04217$, $|V_{ub}|=0.003913$ | promoted algebraic closure package |
+| Top sector | $y_t(v)=0.9176$, $m_t^{\mathrm{pole}}=173.10\,\mathrm{GeV}$ | derived with explicit systematic |
+| Higgs sector | $m_H=125.1\,\mathrm{GeV}$ | derived with inherited explicit systematic |
+| Confinement readout | $\sqrt{\sigma}\approx 465\,\mathrm{MeV}$ | bounded quantitative readout on exact structural theorem |
+
+**Table 1.** Main retained and promoted quantitative outputs on the current
+paper surface.
 
 ### 6.2 Bounded secondary predictions already carried by the package
 
@@ -577,68 +600,51 @@ The practical rule is simple: every retained row in the manuscript must also
 appear as retained in the package, and every bounded row in the manuscript must
 carry the same bounded qualifier there.
 
-### 7.1 AI-assisted workflow and accountability
+### 7.1 Disclosure and accountability
 
 This work was developed with extensive use of generative AI tools, especially
-Claude (Anthropic) and GPT-based OpenAI systems, including Codex. Claude
-assisted with a large fraction of the derivational drafting, computational
-verification infrastructure, and package/manuscript organization. GPT-based
-tooling assisted with repository integration, claim-surface audit, additional
-verification passes, code-native schematic figure generation, and manuscript
-execution. The author conceived and directed the research program, selected
-$Cl(3)$ on $Z^3$ as the foundational surface, chose derivation targets,
-evaluated and accepted or rejected proposed results, fixed the claim boundary,
-and is solely responsible for all scientific claims, interpretations, code,
-figures, and manuscript text. The AI systems are disclosed research tools
-rather than authors; accountability remains human.
+Claude (Anthropic) and GPT-based OpenAI systems, including Codex. Those tools
+assisted with derivational drafting, verification infrastructure, repository
+integration, code-native figure generation, and manuscript execution. The
+author conceived and directed the research program, selected $Cl(3)$ on $Z^3$
+as the foundational surface, chose derivation targets, accepted or rejected
+proposed results, fixed the claim boundary, and is solely responsible for all
+scientific claims, interpretations, code, figures, and manuscript text. The AI
+systems are disclosed research tools rather than authors; accountability
+remains human.
 
 A package-level disclosure version of the same statement is recorded in
 [AI_ASSISTANCE_AND_ACCOUNTABILITY_NOTE.md](./AI_ASSISTANCE_AND_ACCOUNTABILITY_NOTE.md).
 
 ## 8. Conclusion
 
-The current state of the project is no longer that of a promising discrete toy
-model, but it is also not a claim that every downstream bridge has closed.
+The central claim of this paper is no longer speculative. On the retained
+$Cl(3)$ on $Z^3$ surface, one exact discrete framework already carries a broad
+gravity backbone, gauge and matter structure, nontrivial exact support
+theorems, promoted quantitative outputs, and a bounded but genuine prediction
+surface.
 
-What is now genuinely retained is broad:
+The gravity side is no longer just weak-field: it now includes exact full
+discrete $3+1$ gravity on the project route and exact continuum/QG
+identification on one chosen canonical textbook target. The gauge and matter
+side is no longer just structural algebra: it includes anomaly-forced $3+1$,
+retained three-generation structure, exact strong CP on the retained action
+surface, exact confinement, emergent Lorentz invariance, and a promoted
+algebraic CKM closure package. The quantitative side is no longer just a set of
+promising near-misses: it contains a canonical same-surface electroweak-scale
+evaluation, retained electroweak and strong-coupling lanes, and explicit
+Yukawa/Higgs authority surfaces with named systematics. The package is already
+predictive beyond retrospective comparison through proton lifetime, CKM neutron
+EDM, vacuum criticality, and benchmark gravitational decoherence.
 
-- weak-field gravity through the Poisson/Newton chain with WEP and time
-  dilation;
-- restricted strong-field closure on an exact source/bridge class;
-- full discrete $3+1$ general relativity on the project route;
-- exact QG/continuum bridge closure on the chosen canonical textbook target;
-- exact native $SU(2)$;
-- graph-first structural $SU(3)$;
-- exact $T=0$ confinement with bounded string tension;
-- anomaly-forced $3+1$;
-- retained $S^3$ topology closure;
-- one-generation matter closure;
-- retained three-generation matter structure;
-- retained hierarchy/$v$;
-- exact $I_3=0$;
-- exact CPT;
-- emergent Lorentz invariance with first anisotropic correction at dimension $6$;
-- exact strong CP in the form $\theta_{\mathrm{eff}}=0$ on the retained action
-  surface;
-- retained $\alpha_s$ and electroweak normalization lanes;
-- promoted algebraic CKM closure on the canonical tensor/projector surface.
-
-What remains bounded is equally explicit:
-
-- Yukawa/top transport;
-- Higgs/vacuum closure through inherited systematics;
-- cosmology companions;
-- bounded secondary predictions such as proton lifetime, CKM neutron EDM,
-  vacuum critical stability, and benchmark gravitational decoherence.
-
-What remains genuinely open as a flagship gate is also explicit:
-
-- dark-matter relic mapping.
-
-That is the correct arXiv posture: broad exact discrete backbone, promoted
-quantitative support where the package actually closes, honest bounded
-secondary predictions where it does not, one live flagship gate, and no silent
-overclaim.
+The remaining flagship gap is explicit rather than hidden: dark-matter relic
+mapping. That open bridge matters, but it does not erase the rows that are
+already closed. The correct arXiv posture is therefore not “everything is
+solved,” and not “interesting toy model awaiting future work.” It is “one
+discrete framework already carries a large exact backbone, a promoted
+quantitative stack, and a bounded prediction surface, with one major flagship
+gate still open.” If that claim is wrong, it is wrong specifically and
+publicly. If it is right, it deserves direct technical evaluation.
 
 ## Appendix A. Compact Proof Sketches
 
