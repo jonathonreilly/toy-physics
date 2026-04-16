@@ -31,6 +31,7 @@ Use this file to find the current canonical note/runner pair on `main`.
 | promoted CKM closure | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) | `frontier_ckm_atlas_axiom_closure.py`, `frontier_ckm_no_import_audit.py` |
 | bounded CKM neutron-EDM lane | [CKM_NEUTRON_EDM_BOUND_NOTE.md](CKM_NEUTRON_EDM_BOUND_NOTE.md) | `frontier_ckm_neutron_edm_bound.py` |
 | bounded down-type mass-ratio CKM-dual lane | [DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md](DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md), [CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md](CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md) | `frontier_mass_ratio_ckm_dual.py`, `frontier_ckm_five_sixths_bridge_support.py` |
+| taste-scalar isotropy theorem | [TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md](TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md) | `frontier_taste_scalar_isotropy.py` |
 
 ## Remaining Live Gates
 
