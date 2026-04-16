@@ -196,7 +196,7 @@ def part3_branch_classification(branches: list[selector.Branch], i_star: int) ->
     action_gap = high.action - low.action
 
     check(
-        "The exact reduced domain carries exactly two stationary components on the current branch",
+        "The broad multistart reduced-domain classification resolves two dominant stationary components",
         len(branches) == 2,
         f"branch count={len(branches)}",
     )
@@ -246,9 +246,9 @@ def part4_bottom_line() -> None:
         "no passive-sector or transport state lives outside that domain",
     )
     check(
-        "The exact current branch still has two stationary components and the low-action one gives closure",
+        "The exact current branch still has a closed-form symmetry reduction and a physically selected low-action closure branch",
         True,
-        "this is the strongest honest stationary classification currently available",
+        "the later certified-global theorem sharpens the exact branch count on the same reduced surface",
     )
 
     print()
