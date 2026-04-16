@@ -39,7 +39,8 @@ than a weaker “minimal odd time” statement.
 The exact orbit algebra `8 = 1 + 1 + 3 + 3` supplies a retained
 three-generation matter structure within the framework. Because the lattice is
 treated as physical rather than as a regulator, the triplet sectors are not
-dismissed as disposable taste artifacts. Detailed hierarchy and quantitative
+dismissed as disposable taste artifacts, and the retained `hw=1` observable
+algebra admits no proper exact quotient. Detailed hierarchy and quantitative
 flavor remain bounded and are not part of the figure claim.
 
 ### Extended Data Figure 1. Weak-field gravity corollaries, exact `I_3 = 0`, and exact CPT

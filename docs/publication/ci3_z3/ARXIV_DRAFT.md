@@ -324,11 +324,28 @@ temporary regulator, the triplet sectors are retained as physical species
 structure rather than taste noise to be divided away. The safe paper claim is
 retained three-generation matter structure.
 
-This is not a claim that a conventional rooted staggered regulator has evaded
-Nielsen-Ninomiya [8]. On the framework surface, rooting is undefined in
-Hamiltonian $Cl(3)$ on $Z^3$, and chirality is supplied only in the full
-framework through anomaly-forced time and the one-generation closure theorem.
-Detailed inter-family hierarchy and flavor numerics are separate questions.
+The retained-generation surface is now tighter than a bare orbit count.
+Translations separate the three `hw=1` sectors by exact joint characters, so
+they define exact rank-1 projectors `P_1,P_2,P_3`; together with the induced
+corner cycle `C_{3[111]}` they generate the full retained observable algebra
+
+$$
+\mathcal A_{\mathrm{gen}}
+  = \langle P_1, P_2, P_3, C_{3[111]} \rangle
+  = M_3(\mathbb C).
+$$
+
+Therefore no proper exact quotient, rooting, or reduction can preserve the
+retained generation algebra on that `hw=1` triplet. This closes the
+three-generation claim on the retained generation surface itself, while
+leaving the physical-lattice premise explicit.
+
+This is still not a claim that a conventional rooted staggered regulator has
+evaded Nielsen-Ninomiya [8]. On the framework surface, rooting is undefined in
+Hamiltonian $Cl(3)$ on $Z^3$, the retained `hw=1` observable algebra admits no
+proper exact quotient, and chirality is supplied only in the full framework
+through anomaly-forced time and the one-generation closure theorem. Detailed
+inter-family hierarchy and flavor numerics are separate questions.
 
 Figure 4 shows the exact orbit structure together with the physical-lattice
 interpretation that sets the paper’s three-generation claim boundary.
@@ -336,7 +353,8 @@ interpretation that sets the paper’s three-generation claim boundary.
 ![Figure 4. Three-generation matter structure](./figures/figure4_three_generation_structure.svg)
 
 *Figure 4. Three-generation matter structure. The exact orbit algebra
-$8=1+1+3+3$ supplies a retained generation count, while the physical-lattice,
+$8=1+1+3+3$ supplies the retained generation count, the retained `hw=1`
+observable algebra admits no proper exact quotient, and the physical-lattice,
 no-rooting, and anomaly-forced-chirality boundary keeps the claim narrower than
 a conventional lattice-regulator loophole theorem.*
 

@@ -14,6 +14,8 @@ python3 scripts/frontier_anomaly_forces_time.py
 python3 scripts/frontier_right_handed_sector.py
 python3 scripts/frontier_generation_fermi_point.py
 python3 scripts/frontier_generation_rooting_undefined.py
+python3 scripts/frontier_three_generation_observable_theorem.py
+python3 scripts/frontier_physical_lattice_necessity.py
 python3 scripts/frontier_generation_axiom_boundary.py
 python3 scripts/frontier_cpt_exact.py
 python3 scripts/frontier_born_rule_derived.py

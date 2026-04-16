@@ -107,7 +107,9 @@ The current retained backbone is:
   - predicted `v = 246.282818290129 GeV`
 - three-generation matter closure in the framework:
   - exact orbit algebra `8 = 1 + 1 + 3 + 3`
-  - physical species structure on the lattice surface
+  - exact retained `hw=1` observable algebra / no-proper-quotient closure
+  - physical species structure on the lattice surface, with the
+    physical-lattice premise still explicit
 - confinement on the graph-first `SU(3)` gauge surface:
   - canonical `g_bare^2 = 1` gives Wilson `beta = 6.0`
   - `T = 0` confinement is structural on that gauge sector

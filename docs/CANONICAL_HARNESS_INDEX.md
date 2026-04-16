@@ -13,6 +13,8 @@ Use this file to find the current canonical note/runner pair on `main`.
 | `SU(3)` confinement / string tension | [CONFINEMENT_STRING_TENSION_NOTE.md](CONFINEMENT_STRING_TENSION_NOTE.md) | `frontier_confinement_string_tension.py` |
 | anomaly-forced `3+1` | [ANOMALY_FORCES_TIME_THEOREM.md](ANOMALY_FORCES_TIME_THEOREM.md) | `frontier_anomaly_forces_time.py` |
 | `S^3` compactification | [S3_GENERAL_R_DERIVATION_NOTE.md](S3_GENERAL_R_DERIVATION_NOTE.md), [S3_CAP_UNIQUENESS_NOTE.md](S3_CAP_UNIQUENESS_NOTE.md) | `frontier_s3_boundary_link_theorem.py`, `frontier_s3_general_r.py`, `frontier_s3_cap_uniqueness.py` |
+| one-generation matter closure | [ONE_GENERATION_MATTER_CLOSURE_NOTE.md](ONE_GENERATION_MATTER_CLOSURE_NOTE.md) | `frontier_right_handed_sector.py`, `frontier_anomaly_forces_time.py` |
+| three-generation matter structure | [THREE_GENERATION_STRUCTURE_NOTE.md](THREE_GENERATION_STRUCTURE_NOTE.md), [THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md](THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md), [PHYSICAL_LATTICE_NECESSITY_NOTE.md](PHYSICAL_LATTICE_NECESSITY_NOTE.md), [THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md](THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md) | `frontier_generation_fermi_point.py`, `frontier_generation_rooting_undefined.py`, `frontier_three_generation_observable_theorem.py`, `frontier_physical_lattice_necessity.py`, `frontier_generation_axiom_boundary.py`, `frontier_anomaly_forces_time.py` |
 | strong CP / `θ_eff = 0` on the retained action surface | [STRONG_CP_THETA_ZERO_NOTE.md](STRONG_CP_THETA_ZERO_NOTE.md) | `frontier_strong_cp_theta_zero.py` |
 | continuum identification synthesis | [CONTINUUM_IDENTIFICATION_NOTE.md](CONTINUUM_IDENTIFICATION_NOTE.md) | `frontier_continuum_identification_audit.py` |
 

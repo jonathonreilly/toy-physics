@@ -41,11 +41,13 @@ Companion captions live in [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md).
 
 ### Figure 4. Three-generation matter structure
 
-- purpose: display exact orbit structure `8 = 1 + 1 + 3 + 3` and the physical-lattice interpretation
-- source note: [THREE_GENERATION_STRUCTURE_NOTE.md](../../THREE_GENERATION_STRUCTURE_NOTE.md)
+- purpose: display exact orbit structure `8 = 1 + 1 + 3 + 3`, the retained `hw=1` no-proper-quotient closure, and the physical-lattice interpretation
+- source note: [THREE_GENERATION_STRUCTURE_NOTE.md](../../THREE_GENERATION_STRUCTURE_NOTE.md), [THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md](../../THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md), [PHYSICAL_LATTICE_NECESSITY_NOTE.md](../../PHYSICAL_LATTICE_NECESSITY_NOTE.md)
 - source runners:
   - [frontier_generation_fermi_point.py](../../../scripts/frontier_generation_fermi_point.py)
   - [frontier_generation_rooting_undefined.py](../../../scripts/frontier_generation_rooting_undefined.py)
+  - [frontier_three_generation_observable_theorem.py](../../../scripts/frontier_three_generation_observable_theorem.py)
+  - [frontier_physical_lattice_necessity.py](../../../scripts/frontier_physical_lattice_necessity.py)
   - [frontier_generation_axiom_boundary.py](../../../scripts/frontier_generation_axiom_boundary.py)
 - manuscript asset: [figure4_three_generation_structure.svg](./figures/figure4_three_generation_structure.svg)
 - status: landed in arXiv draft

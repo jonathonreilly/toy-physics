@@ -55,7 +55,8 @@ continuum packaging.
 - retained electroweak hierarchy / `v`
 - retained `S^3` compactification / topology closure
 - full-framework one-generation matter closure
-- retained three-generation matter structure
+- retained three-generation matter structure, with exact retained-generation
+  no-proper-quotient closure on the physical-lattice surface
 - exact `I_3 = 0`
 - exact CPT
 - emergent Lorentz invariance with first anisotropic correction at dimension 6 and unique cubic-harmonic `\ell = 4` signature; on the retained hierarchy surface the correction is `(E/M_{Pl})^2` suppressed
@@ -93,8 +94,10 @@ Current quantitative statuses:
 - retained three-generation matter structure is a physical-lattice claim, not
   a conventional rooting workaround: the triplet sectors are retained as
   species structure because rooting is undefined in Hamiltonian `Cl(3)` on
-  `Z^3`, and chirality is supplied only on the full-framework anomaly-forced
-  `3+1` surface
+  `Z^3`, the retained `hw=1` observable algebra is irreducible, no proper
+  exact quotient/rooting survives on that retained surface, and chirality is
+  supplied only on the full-framework anomaly-forced `3+1` surface; the
+  physical-lattice premise itself remains explicit
 - derived-with-explicit-systematic `y_t(v) = 0.9176`
 - derived-with-explicit-systematic canonical `m_t(pole) = 173.10 GeV` (3-loop),
   with retained `172.57 GeV` (2-loop) support

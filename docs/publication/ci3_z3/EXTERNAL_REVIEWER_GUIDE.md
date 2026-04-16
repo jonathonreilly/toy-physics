@@ -48,6 +48,7 @@ For the explicit package boundary, use:
   exact native `SU(2)`, graph-first structural `SU(3)`, anomaly-forced `3+1`,
   retained `S^3` topology closure, one-generation closure, retained
   three-generation structure on the physical-lattice / no-rooting boundary,
+  with an exact retained `hw=1` observable no-proper-quotient theorem,
   exact `I_3 = 0`, exact CPT, emergent Lorentz invariance, and retained full
   strong-CP closure / `theta_eff = 0` on the retained action surface
 - confinement:
@@ -55,8 +56,8 @@ For the explicit package boundary, use:
   bounded `sqrt(sigma) ≈ 465 MeV`
 - reviewer-facing three-generation / chirality boundary:
   physical-lattice species structure + no-rooting in Hamiltonian `Cl(3)` +
-  anomaly-forced full-framework chirality, not a conventional regulator
-  loophole theorem
+  exact retained-generation no-proper-quotient closure + anomaly-forced
+  full-framework chirality, not a conventional regulator loophole theorem
 
 The main gravity framing point is simple: the capstone claim is exact full
 discrete `3+1` GR on the project route together with exact chosen-target
@@ -76,7 +77,11 @@ Review this as a modular component stack:
    [YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md](../../YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md)
 6. Higgs / vacuum: [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](../../HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md)
 7. CKM closure: [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
-8. three-generation / chirality boundary:
+8. three-generation observable closure:
+   [THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md](../../THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md)
+9. physical-lattice necessity boundary:
+   [PHYSICAL_LATTICE_NECESSITY_NOTE.md](../../PHYSICAL_LATTICE_NECESSITY_NOTE.md)
+10. three-generation / chirality boundary:
    [THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md](../../THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md)
 
 Current status from that stack:
@@ -102,6 +107,11 @@ Current status from that stack:
   `|V_ub| = 0.003913`,
   `delta = 65.905 deg`,
   `J = 3.331 x 10^-5`
+- retained three-generation matter structure is now closed on the retained
+  generation surface: the exact orbit algebra `8 = 1 + 1 + 3 + 3` survives as
+  physical species structure, the retained `hw=1` observable algebra is
+  irreducible, and no proper exact quotient/rooting survives there; the
+  physical-lattice premise itself remains explicit
 - derived-with-inherited-explicit-systematic Higgs / vacuum package:
   canonical `m_H = 125.1 GeV` (framework-side 3-loop route),
   with retained `119.8 GeV` (2-loop support route),
