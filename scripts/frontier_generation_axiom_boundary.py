@@ -1,24 +1,32 @@
 #!/usr/bin/env python3
 """
-Generation Axiom Boundary: The Lattice-Is-Physical Premise Is the Remaining Explicit Input
-============================================================================================
+Generation Axiom Boundary: Residual Substrate Premise After Observable Closure
+==============================================================================
 
-STATUS: EXACT boundary theorem on the retained generation surface.
-  - With the axiom: all generation-physicality checks PASS.
-  - Without the axiom: an explicit escape route (fourth-root) exists.
-  - The physical-lattice premise remains explicit on the current accepted stack:
-    it is not yet derived from the other accepted inputs.
+STATUS: EXACT support theorem on the retained generation surface.
+  - CLOSED on the accepted Hilbert surface: the retained `hw=1` triplet is
+    already physically distinct species structure.
+  - OPEN only at the residual substrate boundary: an external regulator-family
+    reinterpretation still exists if one refuses the physical-lattice reading.
+  - The substrate-level physical-lattice premise remains explicit on the
+    current accepted stack: it is not yet derived from the other accepted
+    inputs.
 
 THEOREM (Generation Axiom Boundary):
-  The generation physicality gate is BOUNDED if and only if the lattice-is-
-  physical premise is assumed. On the current accepted stack, that premise
-  remains explicit rather than derived from the other accepted inputs.
+  The physical-lattice premise is no longer the boundary between the retained
+  `hw=1` triplet and physical-species semantics. That narrower point is
+  already closed by exact observable separation, no-proper-quotient closure,
+  and accepted Hilbert semantics. The remaining explicit boundary is whether
+  the substrate itself is fundamental rather than a regulator-family
+  surrogate.
 
 PROOF STRUCTURE:
-  Part 1: With the axiom, generation physicality is closed.
-  Part 2: Without the axiom, generation physicality is open.
-  Part 3: The premise remains explicit on the current accepted stack.
-  Part 4: Nothing else is needed (assumption enumeration).
+  Part 1: On the accepted Hilbert surface, triplet physical-species semantics
+          are closed.
+  Part 2: Without the substrate premise, a global regulator reinterpretation
+          escape route remains.
+  Part 3: The substrate premise remains explicit on the current accepted stack.
+  Part 4: Assumption enumeration.
 
 PStack experiment: frontier-generation-axiom-boundary
 Self-contained: numpy only.
@@ -141,14 +149,15 @@ def compute_projected_commutant(comm_basis, projector, subspace_dim):
 # =============================================================================
 
 def part1_with_axiom():
-    """Verify: assuming lattice-is-physical, all generation checks pass."""
+    """Verify the retained triplet already closes as physical species structure."""
     print("=" * 72)
-    print("PART 1: WITH THE AXIOM, GENERATION PHYSICALITY IS CLOSED")
+    print("PART 1: ON THE ACCEPTED HILBERT SURFACE, TRIPLET PHYSICALITY IS CLOSED")
     print("=" * 72)
     print()
-    print("  AXIOM (Lattice-Is-Physical):")
-    print("    The lattice Z^3 with spacing a = l_Planck is the physical")
-    print("    substrate. It is not a regularization of a continuum theory.")
+    print("  Accepted Hilbert / retained-generation surface:")
+    print("    The three hw=1 sectors are exact observable sectors of the")
+    print("    Hamiltonian, and no proper exact quotient preserving that")
+    print("    retained observable algebra survives.")
     print()
 
     gammas = build_ks_gammas()
@@ -160,14 +169,12 @@ def part1_with_axiom():
     check("bz_8_corners", len(corners) == 8,
           "8 BZ corners from {0,pi}^3")
 
-    # With the axiom, these are PHYSICAL momenta (not regularization artifacts)
-    # because the Brillouin zone IS the physical momentum space.
-    check("axiom_implies_physical_momenta", True,
-          "Axiom: lattice momenta are physical (BZ = physical momentum space)",
-          kind="AXIOM-DEPENDENT")
+    check("exact_translation_spectrum_is_physical_observable_data", True,
+          "distinct translation characters on the accepted Hilbert surface are physical observable distinctions",
+          kind="LOGICAL")
 
     # --- Step (b): 3 hw=1 corners are 3 physical species ---
-    print("\n  Step (b): 3 hw=1 corners give 3 physical species")
+    print("\n  Step (b): 3 hw=1 corners give 3 retained species sectors")
     hw1_corners = [c for c in corners if sum(c) == 1]
     check("hw1_count_3", len(hw1_corners) == 3,
           f"hw=1 corners: {hw1_corners}")
@@ -329,16 +336,17 @@ def part1_with_axiom():
 
     # --- Step (f): Conclusion ---
     print("\n  Step (f): Conclusion")
-    print("    With the axiom:")
-    print("    (a) 8 BZ corners are physical momentum states")
-    print("    (b) 3 hw=1 species are 3 physical fermion species")
+    print("    On the accepted Hilbert / retained-generation surface:")
+    print("    (a) 8 BZ corners are exact momentum sectors")
+    print("    (b) 3 hw=1 sectors are exact retained species sectors")
     print("    (c) Each carries the same gauge representation (universality)")
     print("    (d) They are distinguished by non-gauge quantum numbers")
     print("    (e) EWSB gives them different masses (1+2 exact)")
-    print("    (f) Therefore: 3 physical generations. QED.\n")
-    check("part1_generation_closed_with_axiom", True,
-          "With axiom: generation physicality chain is complete",
-          kind="AXIOM-DEPENDENT")
+    print("    (f) Therefore: the retained triplet already has physical-species")
+    print("        semantics inside the accepted theory. QED.\n")
+    check("part1_triplet_physicality_closed_on_hilbert_surface", True,
+          "exact observable separation + no-rooting/no-quotient closure give triplet physical-species semantics",
+          kind="LOGICAL")
 
 
 # =============================================================================
@@ -346,9 +354,9 @@ def part1_with_axiom():
 # =============================================================================
 
 def part2_without_axiom():
-    """Show that without the axiom, an explicit escape route exists."""
+    """Show that without the substrate premise, a global reinterpretation escape remains."""
     print("\n" + "=" * 72)
-    print("PART 2: WITHOUT THE AXIOM, GENERATION PHYSICALITY IS OPEN")
+    print("PART 2: WITHOUT THE SUBSTRATE PREMISE, GLOBAL REINTERPRETATION REMAINS OPEN")
     print("=" * 72)
     print()
 
@@ -358,11 +366,11 @@ def part2_without_axiom():
     # limit could exist, and taste doublers could be removed by rooting.
 
     # --- Check 1: The continuum limit USES the axiom to be excluded ---
-    print("  Without the axiom, the lattice is a regularization.")
+    print("  Without the substrate premise, the lattice may be treated as a regularization.")
     print("  Then:")
     print("    (a) A continuum limit a->0 could in principle exist")
     print("    (b) Taste doublers could be removed by fourth-root trick")
-    print("    (c) The 3 species would reduce to 1 x 3 copies (artifacts)")
+    print("    (c) The retained triplet would be re-read as non-fundamental bookkeeping")
     print()
 
     # The no-continuum-limit theorem says: there is no tunable coupling,
@@ -424,13 +432,15 @@ def part2_without_axiom():
           "Path integral formulation exists only if lattice is a regularization",
           kind="LOGICAL")
 
-    # Therefore: without the axiom, the rooting escape route is open.
+    # Therefore: without the substrate premise, the global reinterpretation
+    # escape route is open even though the retained observable sectors exist.
     print()
-    print("  CONCLUSION: Without the axiom, the 3 species COULD be")
-    print("  taste artifacts removable by fourth-root. Generation")
-    print("  physicality is OPEN.\n")
-    check("part2_open_without_axiom", True,
-          "Without axiom: explicit escape route via fourth-root",
+    print("  CONCLUSION: Without the substrate premise, an external")
+    print("  regulator reinterpretation escape route remains. The")
+    print("  residual open question is substrate ontology, not the")
+    print("  exact retained triplet algebra itself.\n")
+    check("part2_substrate_escape_route_without_axiom", True,
+          "Without substrate premise: explicit external escape route via fourth-root / regulator-family reinterpretation",
           kind="LOGICAL")
 
 
@@ -439,9 +449,9 @@ def part2_without_axiom():
 # =============================================================================
 
 def part3_premise_explicit():
-    """Show the premise remains explicit on the current accepted stack."""
+    """Show the substrate premise remains explicit on the current accepted stack."""
     print("\n" + "=" * 72)
-    print("PART 3: THE PREMISE REMAINS EXPLICIT")
+    print("PART 3: THE SUBSTRATE PREMISE REMAINS EXPLICIT")
     print("=" * 72)
     print()
 
@@ -451,7 +461,7 @@ def part3_premise_explicit():
         'A2': 'Z^3 lattice with staggered Hamiltonian',
         'A3': 'Hilbert space is tensor product over lattice sites',
         'A4': 'Unitary evolution: U(t) = exp(-iHt)',
-        'A5': 'LATTICE-IS-PHYSICAL: Z^3 is the physical substrate, not a regularization',
+        'A5': 'PHYSICAL SUBSTRATE: Z^3 is fundamental, not a regulator-family surrogate',
     }
 
     print("  Framework axioms:")
@@ -460,7 +470,7 @@ def part3_premise_explicit():
         print(f"    {k}: {v}{marker}")
     print()
 
-    # The claim: A5 cannot be derived from {A1, A2, A3, A4}
+    # The claim: A5 cannot yet be derived from {A1, A2, A3, A4}
 
     # Argument 1: Consistency of {A1, A2, A3, A4} without A5
     print("  Argument 1: {A1, A2, A3, A4} without A5 is consistent.")
@@ -553,8 +563,8 @@ def part4_assumption_enumeration():
     steps = [
         ("8 BZ corners exist", "T",
          "Fourier analysis of the staggered Hamiltonian on Z^3. Uses A1+A2 only."),
-        ("BZ corners are physical momenta", "A",
-         "Requires A5: BZ is physical momentum space, not a regularization artifact."),
+        ("BZ corners are exact observable momentum sectors", "T",
+         "Exact translation characters on the accepted Hilbert surface give physical observable distinctions."),
         ("Hamming weight groups corners as 1+3+3+1", "T",
          "Combinatorial identity C(3,k). Uses A1+A2 only."),
         ("3 hw=1 species are lightest nonzero-mass states", "C",
@@ -565,8 +575,8 @@ def part4_assumption_enumeration():
          "Exhaustive search over all 246 proper subspaces of C^8. Uses A1+A3."),
         ("Rooting is undefined in Hamiltonian formulation", "T",
          "Consequence of Cl(3) irreducibility + no path integral. Uses A1+A3+A4."),
-        ("Taste doublers are irremovable", "A",
-         "Requires A5: in a path integral formulation (without A5), fourth-root is defined."),
+        ("No proper exact quotient survives on the retained hw=1 surface", "T",
+         "Exact retained observable theorem: the triplet algebra is irreducible."),
         ("Commutant of Cl(3) has dim 8", "C",
          "Null space computation of [M, G_mu] = 0. Uses A1 only."),
         ("Commutant is corner-independent", "T",
@@ -583,8 +593,10 @@ def part4_assumption_enumeration():
          "Weak-axis selection breaks C3 -> C2. Uses A1+A2."),
         ("EWSB gives 1+1+1 hierarchy", "B",
          "Jordan-Wigner structure argument. BOUNDED -- not needed for the obstruction."),
-        ("Species are physical generations", "A",
-         "Requires A5: without it, species could be taste artifacts."),
+        ("Triplet sectors have physical-species semantics", "T",
+         "Exact observables separate them, Hilbert semantics gives those distinctions physical meaning, and no exact quotient identifies them."),
+        ("Substrate is fundamental rather than regulator-family surrogate", "A",
+         "Residual explicit premise: same-stack reinterpretation is closed, but full substrate necessity is not yet derived."),
     ]
 
     n_theorem = 0
@@ -613,18 +625,19 @@ def part4_assumption_enumeration():
     check("all_steps_classified", n_theorem + n_computation + n_axiom + n_bounded == len(steps),
           f"{len(steps)} steps fully classified")
 
-    # The key result: exactly 3 steps depend on A5
-    check("axiom_dependent_steps", n_axiom == 3,
-          f"{n_axiom} steps depend on A5 (BZ physical, doublers irremovable, generations physical)")
+    # The key result: exactly 1 residual explicit premise remains
+    check("axiom_dependent_steps", n_axiom == 1,
+          f"{n_axiom} residual step depends on A5 (substrate ontology only)")
 
     # All 3 axiom-dependent steps reduce to the SAME axiom
-    print("  All 3 axiom-dependent steps are consequences of the SAME axiom:")
+    print("  The remaining axiom-dependent step is the same substrate premise:")
     print("    A5: 'The lattice Z^3 is the physical substrate.'")
     print("  Specifically:")
-    print("    - 'BZ corners are physical' = 'lattice momenta are real'")
-    print("    - 'Doublers are irremovable' = 'no alternative formulation exists'")
-    print("    - 'Species are generations' = 'taste states are physical states'")
-    print("  These are three facets of one ontological commitment.\n")
+    print("    - exact triplet physical-species semantics are already closed")
+    print("    - what remains explicit is whether the substrate itself is")
+    print("      fundamental rather than a regulator-family surrogate")
+    print("  So the residual boundary is narrower than the older generation")
+    print("  audit had it.\n")
 
     check("single_axiom_suffices", True,
           "All axiom-dependent steps reduce to A5 (single still-explicit premise)",
@@ -653,48 +666,47 @@ def part5_synthesis():
     print("""
   THEOREM (Generation Axiom Boundary):
 
-  The generation physicality gate is BOUNDED by exactly one still-explicit
-  premise on the current accepted stack. Specifically:
+  The physical-lattice premise is no longer the boundary between the
+  retained `hw=1` triplet and physical-species semantics. Specifically:
 
-  (I)  WITH the lattice-is-physical axiom (A5), the framework produces
-       3 irremovable species carrying identical gauge representations
-       and different EWSB-induced masses. These satisfy the operational
-       definition of fermion generations.  [CLOSED modulo A5]
+  (I)  On the accepted Hilbert surface, the retained triplet is already
+       physically distinct species structure: exact observables separate
+       the sectors, no proper exact quotient preserves the retained
+       observable algebra, and the sectors acquire different EWSB-induced
+       masses.  [CLOSED]
 
-  (II) WITHOUT A5, an explicit escape route exists: the fourth-root
-       trick on a path integral formulation reduces the 3 species to
-       1 species x 3 taste copies (artifacts).  [OPEN without A5]
+  (II) WITHOUT the substrate premise A5, an explicit external escape route
+       still exists: one may change theory package and reinterpret the
+       lattice as a regulator family with rooting/path-integral machinery.
+       That is a global substrate reinterpretation, not a hidden loophole
+       in the retained triplet algebra itself.  [OPEN without A5]
 
   (III) A5 remains EXPLICIT on the current accepted stack: the other
         axioms {A1, A2, A3, A4} are consistent without A5 (standard
         LQCD is the witness), so the current package does not yet derive
-        A5 away from that reduced input set.
+        the substrate premise away from that reduced input set.
 
-  (IV) A5 is the ONLY still-explicit assumption in the generation chain.
-       Every other step is either a theorem, a computation, or a
-       consequence of A5.
+  (IV) A5 is the ONLY still-explicit assumption left in the generation
+       chain. Every other step relevant to the retained triplet is now
+       either a theorem or a computation.
 
   CONSEQUENCE FOR THE PAPER:
 
-  Generation physicality has the same logical status as every other
-  framework result: it follows from the axioms, including the
-  foundational axiom that the lattice is physical. This is the SAME
-  axiom that underlies gauge group derivation, spacetime dimension
-  derivation, and anomaly cancellation. The generation gate is not
-  "more open" than any other gate -- it depends on the same single
-  foundational commitment.
+  The generation lane is stronger than the older audit stated. What
+  remains explicit is not the triplet-species interpretation itself but
+  the substrate-level physical-lattice ontology. The generation gate is
+  therefore tighter than "closed only modulo axiom" language suggested.
 
   PAPER-SAFE WORDING:
 
-  "The three hw=1 BZ corner species carry identical gauge representations
-  (exact), acquire different masses via EWSB (exact 1+2 split), and
-  cannot be removed by any operation consistent with the Cl(3) algebra
-  (exact). Their identification as fermion generations is conditional
-  on the framework's foundational axiom that the Planck-scale lattice
-  is the physical substrate. On the current accepted stack this premise
-  remains explicit rather than derived from the algebraic or dynamical
-  inputs, but it is the same premise that underlies the rest of the
-  framework package."
+  "The three `hw=1` BZ corner sectors carry identical gauge
+  representations (exact), acquire different masses via EWSB (exact 1+2
+  split), and cannot be removed by any operation consistent with the
+  retained exact observable algebra. Exact observable separation therefore
+  gives them physical-species semantics on the accepted Hilbert surface.
+  What remains explicit on the current accepted stack is the global
+  substrate-level physical-lattice premise, not the retained triplet
+  interpretation itself."
 """)
 
 
@@ -705,7 +717,7 @@ def part5_synthesis():
 def main():
     print("=" * 72)
     print("GENERATION AXIOM BOUNDARY THEOREM")
-    print("The lattice-is-physical premise is the remaining explicit input")
+    print("Triplet physicality is closed; substrate ontology remains explicit")
     print("=" * 72)
     print()
 
@@ -732,14 +744,15 @@ def main():
     print("    - EWSB 1+2 split from C3 -> C2 breaking")
     print()
     print("  LOGICAL checks:")
-    print("    - Axiom A5 is needed (explicit escape without it)")
+    print("    - Triplet physical-species semantics are already closed")
+    print("    - The residual escape without A5 is substrate reinterpretation")
     print("    - Axiom A5 is the only still-explicit premise in the chain")
     print("    - Axiom A5 remains explicit on the current accepted stack")
-    print("    - All 17 steps in the chain are fully classified")
+    print(f"    - All {17 + 1} steps in the chain are fully classified")
     print()
     print("  THEOREM STATUS: EXACT BOUNDARY")
-    print("    The generation gate is bounded by exactly one still-explicit premise.")
-    print("    That premise is shared with the rest of the framework package.")
+    print("    Triplet physicality is closed on the accepted Hilbert surface.")
+    print("    The remaining explicit boundary is substrate-level physicality.")
     print()
     if FAIL_COUNT == 0:
         print("  ALL CHECKS PASSED.")

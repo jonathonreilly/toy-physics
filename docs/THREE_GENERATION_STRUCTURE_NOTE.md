@@ -14,8 +14,11 @@ The framework retains a three-generation matter structure on the physical-lattic
 - rooting is not a well-defined operation in Hamiltonian `Cl(3)` on `Z^3`
 - the retained `hw=1` triplet carries an exact irreducible retained generation
   algebra, so no proper exact quotient survives on that surface
-- with the framework's physical-lattice axiom, the triplet sectors are treated
-  as physical species structure rather than disposable taste artifacts
+- exact observable-sector semantics on the accepted Hilbert surface already
+  force the retained `hw=1` triplet to be physically distinct species
+  structure within the accepted theory
+- what remains explicit is the substrate-level physical-lattice premise,
+  not the triplet-species interpretation itself
 
 This is the safe retained statement used in the current paper package.
 
@@ -30,17 +33,21 @@ This is the safe retained statement used in the current paper package.
 3. `frontier_three_generation_observable_theorem.py` proves that the retained
    `hw=1` triplet already carries the full exact retained generation algebra
    `M_3(C)`, so no proper exact quotient exists even before flavor.
-4. `frontier_generation_axiom_boundary.py` isolates the only non-derived
-   premise in the physical interpretation: once the lattice-is-physical axiom
-   is accepted, the triplet sectors are physical species structure in the theory.
-5. `frontier_physical_lattice_necessity.py` closes the narrower but important
+4. `frontier_physical_lattice_necessity.py` now closes the narrower but
+   important semantics step that exact observable separation + no proper exact
+   quotient + accepted Hilbert semantics already force the retained `hw=1`
+   triplet to be physically distinct species sectors of the accepted theory.
+5. `frontier_generation_axiom_boundary.py` now isolates the only non-derived
+   residual premise in the physical interpretation: the substrate-level
+   physical-lattice reading.
+6. `frontier_physical_lattice_necessity.py` also closes the fixed-stack/fixed-surface
    boundary result that regulator reinterpretation is not an equivalent reading
    of the same accepted framework stack and cannot preserve the accepted fixed
    quantitative surface; it also closes the stronger statement that no
    nontrivial regulator-style family preserves both accepted live invariants
    `alpha_s(v)` and `v`, and therefore that the physical-lattice reading is
    forced once the retained package contract is imposed. It still leaves the
-   physical-lattice premise itself explicit rather than derived.
+   substrate-level physical-lattice premise itself explicit rather than derived.
 
 ## Boundary
 
@@ -56,7 +63,8 @@ The retained statement is structural, not maximal:
 
 The remaining open work now belongs to:
 
-- full axiom-internal derivation of the global physical-lattice boundary
+- full axiom-internal derivation of the global substrate-level
+  physical-lattice boundary
 - generation hierarchy / flavor structure
 - full chirality / mass-spectrum tasks beyond the retained generation surface
 

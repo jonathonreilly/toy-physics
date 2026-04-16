@@ -102,8 +102,10 @@ Current quantitative statuses:
   regulator-style family preserving both accepted `alpha_s(v)` and `v`
   survives on that accepted surface, so on the retained package contract the
   physical-lattice reading is forced as the unique surviving interpretation,
-  and chirality is supplied only on the full-framework anomaly-forced `3+1`
-  surface; the physical-lattice premise itself remains explicit
+  exact observable-sector semantics already force the retained triplet to be
+  physically distinct species structure on the accepted Hilbert surface, and
+  chirality is supplied only on the full-framework anomaly-forced `3+1`
+  surface; the residual explicit premise is substrate-level physicality
 - derived-with-explicit-systematic `y_t(v) = 0.9176`
 - derived-with-explicit-systematic canonical `m_t(pole) = 173.10 GeV` (3-loop),
   with retained `172.57 GeV` (2-loop) support

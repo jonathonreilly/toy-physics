@@ -319,10 +319,12 @@ $$
 8 = 1 + 1 + 3 + 3 \tag{6}
 $$
 
-remains central. Because the lattice is treated as physical rather than as a
-temporary regulator, the triplet sectors are retained as physical species
-structure rather than taste noise to be divided away. The safe paper claim is
-retained three-generation matter structure.
+remains central. The triplet sectors are no longer retained as physical
+species structure merely by declaration. Exact observable separation on the
+accepted Hilbert surface already gives them physical-species semantics, while
+the residual explicit premise concerns substrate-level physicality rather than
+the triplet interpretation itself. The safe paper claim is retained
+three-generation matter structure.
 
 The retained-generation surface is now tighter than a bare orbit count.
 Translations separate the three `hw=1` sectors by exact joint characters, so
@@ -337,8 +339,11 @@ $$
 
 Therefore no proper exact quotient, rooting, or reduction can preserve the
 retained generation algebra on that `hw=1` triplet. This closes the
-three-generation claim on the retained generation surface itself, while
-leaving the physical-lattice premise explicit.
+three-generation claim on the retained generation surface itself. Exact
+translation observables already separate the retained triplet as physically
+distinct sectors on the accepted Hilbert surface, so the remaining explicit
+premise is substrate-level physicality rather than the triplet interpretation
+itself.
 
 This is still not a claim that a conventional rooted staggered regulator has
 evaded Nielsen-Ninomiya [8]. On the framework surface, rooting is undefined in

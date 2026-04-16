@@ -15,7 +15,8 @@ three-generation / chirality boundary on the current package surface
 The framework's retained matter claim is:
 
 - exact `8 = 1 + 1 + 3 + 3` orbit structure on the physical `Z^3` surface
-- the `hw = 1` triplet is retained as physical species structure
+- the `hw = 1` triplet is retained as physically distinct species structure on
+  the accepted Hilbert surface
 - rooting is not a well-defined operation in Hamiltonian `Cl(3)` on `Z^3`
 - the retained `hw=1` triplet already carries an exact irreducible generation
   algebra, so no proper exact quotient survives on that retained surface
@@ -30,8 +31,9 @@ This is the safe reviewer-facing boundary for the current paper.
 ### Claimed
 
 1. The Brillouin-zone corner algebra is exact and gives `1 + 1 + 3 + 3`.
-2. On the framework surface, the lattice is physical rather than a disposable
-   regulator.
+2. On the accepted Hilbert surface, exact observable separation plus
+   no-proper-quotient closure already force the retained `hw=1` triplet to be
+   physically distinct species structure.
 3. In this Hamiltonian `Cl(3)` formulation, rooting / taste-removal is
    undefined as an allowed operation.
 4. On the retained generation surface, the exact operator algebra is
@@ -48,7 +50,7 @@ This is the safe reviewer-facing boundary for the current paper.
 1. A conventional fourth-root resolution inside regulator staggered LQCD.
 2. A theorem that a purely spatial local chiral lattice regulator evades
    Nielsen-Ninomiya on its usual hypothesis surface.
-3. A full axiom-internal removal of the physical-lattice premise.
+3. A full axiom-internal removal of the substrate-level physical-lattice premise.
 4. A full flavor-hierarchy or mass-spectrum closure from the generation note
    alone.
 
@@ -80,11 +82,12 @@ It is claiming a different theory surface.
    isolates the physical-lattice axiom boundary.
 4. [PHYSICAL_LATTICE_NECESSITY_NOTE.md](./PHYSICAL_LATTICE_NECESSITY_NOTE.md)
    closes the no-same-stack / no-same-surface regulator reinterpretation
-   boundary, and also the stronger loophole that a nontrivial regulator-style
-   family could preserve both accepted live invariants `alpha_s(v)` and `v`,
-   so on the retained package contract the physical-lattice reading is forced
-   as the unique surviving interpretation, while keeping the physical-lattice
-   premise itself explicit.
+   boundary, closes the narrower observable-species semantics step on the
+   accepted Hilbert surface, and also the stronger loophole that a nontrivial
+   regulator-style family could preserve both accepted live invariants
+   `alpha_s(v)` and `v`, so on the retained package contract the
+   physical-lattice reading is forced as the unique surviving interpretation,
+   while keeping the substrate-level physical-lattice premise itself explicit.
 5. [ONE_GENERATION_MATTER_CLOSURE_NOTE.md](./ONE_GENERATION_MATTER_CLOSURE_NOTE.md)
    carries the full-framework chirality / right-handed completion claim.
 6. [ANOMALY_FORCES_TIME_THEOREM.md](./ANOMALY_FORCES_TIME_THEOREM.md)
@@ -97,13 +100,14 @@ It is claiming a different theory surface.
 > + 3`; rooting is not a well-defined operation in Hamiltonian `Cl(3)` on
 > `Z^3`; and the retained `hw=1` triplet already carries an exact irreducible
 > generation algebra, so no proper exact quotient survives on that retained
-> surface. Regulator reinterpretation is not an equivalent reading of the same
-> accepted framework stack because it requires extra continuum/rooting/RG
-> structure not present there. The triplet sectors are therefore retained as
-> physical species structure rather than taste artifacts on the framework
-> surface. Chirality is not claimed on the pure spatial surface alone, but in
-> the full framework through anomaly-forced time and the one-generation
-> matter-closure theorem.
+> surface. Exact translation observables therefore separate the triplet sectors
+> as physically distinct species on the accepted Hilbert surface. Regulator
+> reinterpretation is not an equivalent reading of the same accepted framework
+> stack because it requires extra continuum/rooting/RG structure not present
+> there. The still-explicit premise is the substrate-level physical-lattice
+> reading, not the triplet-species semantics themselves. Chirality is not
+> claimed on the pure spatial surface alone, but in the full framework through
+> anomaly-forced time and the one-generation matter-closure theorem.
 
 ## Validation
 

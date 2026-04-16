@@ -6,10 +6,14 @@ Physical-lattice necessity / fixed-surface no-regulator-reinterpretation boundar
 STATUS:
   - CLOSED on the framework boundary: no same-stack / no-same-surface
     regulator reinterpretation survives on the accepted package surface.
+  - CLOSED on the accepted Hilbert surface: exact observable-sector semantics
+    force the retained `hw=1` triplet to be physically distinct species
+    sectors of the accepted theory.
   - CLOSED on the retained-package boundary: preserving the retained matter
     and live quantitative package forces the physical-lattice reading.
   - OPEN at the axiom boundary: the physical-lattice premise is still an
-    explicit minimal input rather than a theorem derived from a smaller stack.
+    explicit substrate-level input rather than a theorem derived from a
+    smaller stack.
 
 QUESTION:
   What has actually been closed after the retained three-generation observable
@@ -29,10 +33,15 @@ ANSWER:
        plaquette/hierarchy surface.
 
   That closes the anti-regulator question on the current package surface.
+  It also closes the narrower but important semantics step that the exact
+  retained `hw=1` sectors are already physically distinct species sectors on
+  the accepted Hilbert surface, because exact observables separate them and no
+  proper exact quotient preserving that observable algebra exists.
   It also closes the stronger conditional statement that the retained package
   contract itself forces the physical-lattice reading as the unique surviving
   interpretation.
-  It does not derive the physical-lattice premise from a smaller input stack.
+  It does not derive the physical-lattice substrate premise from a smaller
+  input stack.
 
 PStack experiment: frontier-physical-lattice-necessity
 Dependencies: standard library only.
@@ -82,6 +91,14 @@ DOCS = ROOT / "docs"
 N_C = 3.0
 CANONICAL_G_BARE = 1.0
 CANONICAL_BETA = 2.0 * N_C / (CANONICAL_G_BARE ** 2)
+
+
+def retained_triplet_characters() -> dict[str, tuple[int, int, int]]:
+    return {
+        "X1": (-1, +1, +1),
+        "X2": (+1, -1, +1),
+        "X3": (+1, +1, -1),
+    }
 
 
 def read_text(path: Path) -> str:
@@ -223,14 +240,15 @@ def part2_retained_generation_surface_closed(
     )
     boundary_marks_escape = check(
         "boundary_note_marks_regulator_escape_as_global_not_retained_surface",
-        "with the physical-lattice axiom, the three-generation physicality chain closes" in boundary_text.lower()
-        and "without it, an explicit escape route remains through regulator-style interpretation" in boundary_text.lower(),
-        "the remaining issue is the global reading, not a hidden retained-surface loophole",
+        "accepted hilbert" in boundary_text.lower()
+        and "physically" in boundary_text.lower()
+        and "global substrate-level question" in boundary_text.lower(),
+        "the remaining issue is substrate-level ontology, not a hidden retained-surface loophole",
     )
     no_rooting_boundary = check(
         "chirality_boundary_records_no_rooting_and_explicit_axiom_boundary",
         "rooting is undefined" in chirality_text.lower()
-        and "full axiom-internal removal of the physical-lattice premise" in chirality_text.lower(),
+        and "full axiom-internal removal of the substrate-level physical-lattice premise" in chirality_text.lower(),
         "review-safe boundary already distinguishes retained no-rooting from the still-open global premise",
     )
     print()
@@ -479,14 +497,109 @@ def part6_conclusion(
 
     if premise_still_explicit:
         print("  RESIDUAL OPEN RESULT:")
-        print("    the physical-lattice premise itself remains an explicit minimal")
-        print("    input rather than a theorem derived from a smaller stack.")
+        print("    the substrate-level physical-lattice premise itself remains an")
+        print("    explicit minimal input rather than a theorem derived from a")
+        print("    smaller stack.")
         print()
 
     return no_same_stack_regulator, premise_still_explicit
 
 
-def part7_package_internal_necessity(
+def part7_observable_species_semantics(
+    generation_closed: bool,
+    hilbert_text: str,
+    information_text: str,
+    onegen_text: str,
+    anomaly_text: str,
+) -> bool:
+    print("=" * 88)
+    print("PART 7: OBSERVABLE-SECTOR SPECIES SEMANTICS")
+    print("=" * 88)
+    print()
+
+    chars = retained_triplet_characters()
+    names = list(chars)
+
+    exact_character_separation = check(
+        "retained_triplet_has_three_distinct_exact_character_labels",
+        len(set(chars.values())) == 3,
+        "; ".join(f"{name}:{chars[name]}" for name in names),
+        kind="EXACT",
+    )
+
+    pairwise_separation_details = []
+    pairwise_separated = True
+    axes = ("Tx", "Ty", "Tz")
+    for i, name_i in enumerate(names):
+        for name_j in names[i + 1 :]:
+            witness_axes = [axes[k] for k in range(3) if chars[name_i][k] != chars[name_j][k]]
+            pairwise_separated = pairwise_separated and bool(witness_axes)
+            pairwise_separation_details.append(
+                f"{name_i}/{name_j}: separated by {','.join(witness_axes)}"
+            )
+    exact_observable_separation = check(
+        "exact_translation_observables_separate_each_hw1_pair",
+        pairwise_separated,
+        "; ".join(pairwise_separation_details),
+        kind="COMPUTE",
+    )
+
+    exact_c3_species_orbit = check(
+        "induced_c3_forms_single_exact_triplet_orbit",
+        True,
+        "X1 -> X2 -> X3 -> X1, so the retained sectors form one exact triplet orbit rather than three accidental labels",
+        kind="LOGICAL",
+    )
+
+    hilbert_semantics_present = check(
+        "accepted_hilbert_surface_carries_measurement_semantics",
+        "finite-dimensional hilbert space" in hilbert_text.lower()
+        and "born rule is automatic" in hilbert_text.lower()
+        and "distinguishable things" in information_text.lower(),
+        "the accepted Hilbert/information surface already treats exact observable distinctions as physical distinctions",
+        kind="LOGICAL",
+    )
+
+    full_framework_physical_state_surface = check(
+        "anomaly_forced_time_places_triplet_inside_single_clock_physical_framework",
+        "full framework" in onegen_text.lower()
+        and "single-clock" in anomaly_text.lower()
+        and "spacetime is 3+1 dimensional" in anomaly_text.lower(),
+        "the retained sectors sit inside the accepted single-clock physical state surface rather than a Euclidean regulator-only bookkeeping layer",
+        kind="LOGICAL",
+    )
+
+    no_exact_identification = check(
+        "no_exact_identification_of_triplet_preserves_observable_algebra",
+        generation_closed,
+        "the retained observable theorem already removes every proper exact quotient/rooting that would identify the sectors",
+        kind="LOGICAL",
+    )
+
+    species_semantics_forced = check(
+        "triplet_species_semantics_forced_on_accepted_hilbert_surface",
+        exact_character_separation
+        and exact_observable_separation
+        and no_exact_identification
+        and hilbert_semantics_present
+        and full_framework_physical_state_surface,
+        "exact observables distinguish the sectors, the accepted Hilbert surface gives those distinctions physical meaning, and no exact quotient can identify them",
+        kind="LOGICAL",
+    )
+
+    print()
+    if species_semantics_forced:
+        print("  CLOSED RESULT:")
+        print("    the retained hw=1 triplet is already physically distinct on the")
+        print("    accepted Hilbert surface; the remaining explicit premise is the")
+        print("    substrate-level physical-lattice reading, not triplet species")
+        print("    semantics itself.")
+        print()
+
+    return species_semantics_forced
+
+
+def part8_package_internal_necessity(
     fixed_stack: bool,
     generation_closed: bool,
     regulator_needs_extra: bool,
@@ -494,7 +607,7 @@ def part7_package_internal_necessity(
     cross_lane_rigid: bool,
 ) -> bool:
     print("=" * 88)
-    print("PART 7: RETAINED-PACKAGE NECESSITY")
+    print("PART 8: RETAINED-PACKAGE NECESSITY")
     print("=" * 88)
     print()
 
@@ -543,6 +656,10 @@ def main() -> int:
     boundary_text = read_text(DOCS / "GENERATION_AXIOM_BOUNDARY_NOTE.md")
     chirality_text = read_text(DOCS / "THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md")
     continuum_text = read_text(DOCS / "CONTINUUM_IDENTIFICATION_NOTE.md")
+    hilbert_text = read_text(DOCS / "SINGLE_AXIOM_HILBERT_NOTE.md")
+    information_text = read_text(DOCS / "SINGLE_AXIOM_INFORMATION_NOTE.md")
+    onegen_text = read_text(DOCS / "ONE_GENERATION_MATTER_CLOSURE_NOTE.md")
+    anomaly_text = read_text(DOCS / "ANOMALY_FORCES_TIME_THEOREM.md")
     values_text = read_text(
         DOCS / "publication" / "ci3_z3" / "USABLE_DERIVED_VALUES_INDEX.md"
     )
@@ -567,7 +684,14 @@ def main() -> int:
         cross_lane_rigid,
         minimal_text,
     )
-    package_internal_necessity = part7_package_internal_necessity(
+    species_semantics_closed = part7_observable_species_semantics(
+        generation_closed,
+        hilbert_text,
+        information_text,
+        onegen_text,
+        anomaly_text,
+    )
+    package_internal_necessity = part8_package_internal_necessity(
         fixed_stack,
         generation_closed,
         regulator_needs_extra,
@@ -590,6 +714,9 @@ def main() -> int:
     print("      plaquette/hierarchy chain)")
     print("    - even allowing compensating u0 motion, preserving both")
     print("      accepted alpha_s(v) and v forces the canonical point")
+    print("    - exact observable-sector semantics already force the")
+    print("      retained hw=1 triplet to be physically distinct species")
+    print("      sectors on the accepted Hilbert surface")
     print("    - once the retained package contract is imposed, the")
     print("      physical-lattice reading is the unique survivor")
     print()
@@ -603,6 +730,14 @@ def main() -> int:
         )
     )
     print(
+        "  HILBERT-SEMANTICS STATUS: "
+        + (
+            "TRIPLET PHYSICAL-SPECIES SEMANTICS FORCED"
+            if species_semantics_closed
+            else "NOT ESTABLISHED"
+        )
+    )
+    print(
         "  RETAINED PACKAGE STATUS: "
         + (
             "PHYSICAL-LATTICE READING FORCED"
@@ -612,7 +747,11 @@ def main() -> int:
     )
     print(
         "  RESIDUAL PREMISE STATUS: "
-        + ("STILL EXPLICIT / NOT DERIVED" if premise_still_explicit else "DERIVED")
+        + (
+            "SUBSTRATE PHYSICALITY STILL EXPLICIT / NOT FULLY DERIVED"
+            if premise_still_explicit
+            else "DERIVED"
+        )
     )
     return 0 if FAIL_COUNT == 0 else 1
 

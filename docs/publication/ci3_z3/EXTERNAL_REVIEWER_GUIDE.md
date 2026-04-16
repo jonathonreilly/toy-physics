@@ -47,7 +47,7 @@ For the explicit package boundary, use:
 - gauge and matter:
   exact native `SU(2)`, graph-first structural `SU(3)`, anomaly-forced `3+1`,
   retained `S^3` topology closure, one-generation closure, retained
-  three-generation structure on the physical-lattice / no-rooting boundary,
+  three-generation structure on the no-rooting / residual substrate boundary,
   with an exact retained `hw=1` observable no-proper-quotient theorem,
   exact `I_3 = 0`, exact CPT, emergent Lorentz invariance, and retained full
   strong-CP closure / `theta_eff = 0` on the retained action surface
@@ -111,7 +111,9 @@ Current status from that stack:
 - retained three-generation matter structure is now closed on the retained
   generation surface: the exact orbit algebra `8 = 1 + 1 + 3 + 3` survives as
   physical species structure, the retained `hw=1` observable algebra is
-  irreducible, no proper exact quotient/rooting survives there, and
+  irreducible, no proper exact quotient/rooting survives there, exact
+  observable-sector semantics already force the retained triplet to be
+  physically distinct species sectors on the accepted Hilbert surface, and
   same-stack / same-surface regulator reinterpretation is blocked because it
   requires extra continuum/rooting/RG structure absent from the accepted
   framework stack and cannot preserve the accepted canonical quantitative surface
@@ -119,7 +121,7 @@ Current status from that stack:
   regulator-style family preserving both accepted `alpha_s(v)` and `v` is
   trivial at the canonical point; on that retained package contract the
   physical-lattice reading is the unique surviving interpretation, while the
-  physical-lattice premise itself remains explicit
+  remaining explicit premise is substrate-level physicality
 - derived-with-inherited-explicit-systematic Higgs / vacuum package:
   canonical `m_H = 125.1 GeV` (framework-side 3-loop route),
   with retained `119.8 GeV` (2-loop support route),
