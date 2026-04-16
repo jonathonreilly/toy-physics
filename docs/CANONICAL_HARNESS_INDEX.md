@@ -22,7 +22,7 @@ Use this file to find the current canonical note/runner pair on `main`.
 
 | lane | authority | primary runner |
 |---|---|---|
-| plaquette scalar-bridge theorem stack | [GAUGE_VACUUM_PLAQUETTE_BRIDGE_THEOREM_NOTE.md](GAUGE_VACUUM_PLAQUETTE_BRIDGE_THEOREM_NOTE.md), [SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md](SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md) | `frontier_gauge_vacuum_plaquette_bridge_theorem.py`, `frontier_scalar_3plus1_temporal_ratio.py` |
+| plaquette scalar-bridge support stack | [GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md](GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md), [GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md](GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md), [GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md](GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md), [SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md](SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md) | `frontier_gauge_vacuum_plaquette_bridge_support.py`, `frontier_gauge_scalar_temporal_completion_theorem.py`, `frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`, `frontier_scalar_3plus1_temporal_ratio.py` |
 | retained `alpha_s` | [ALPHA_S_DERIVED_NOTE.md](ALPHA_S_DERIVED_NOTE.md) | `frontier_yt_zero_import_chain.py` |
 | color factor `R_conn = 8/9` | [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md) | `frontier_color_projection_mc.py` |
 | retained EW normalization | [YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md) | `frontier_complete_prediction_chain.py`, `frontier_color_projection_mc.py` |

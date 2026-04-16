@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
 """
-Gauge-vacuum plaquette scalar-bridge theorem.
+Gauge-vacuum plaquette scalar-bridge support stack.
 
-This script closes the last bridge by combining:
-1. exact local Wilson one-plaquette source-response
-2. exact scalar 3+1 endpoint ratio
-3. exact plaquette four-link coupling map
-4. exact 3+1 incidence factor
+This script records the exact local/source/coupling ingredients and the sharp
+current analytic plaquette candidate without promoting the full physical-vacuum
+bridge insertion as a theorem.
 """
 
 from __future__ import annotations
@@ -118,6 +116,12 @@ def source_response_generator(beta: float, j: float) -> float:
     return math.log(zp) - math.log(z0)
 
 
+def two_block_source_response_generator(beta: float, j: float) -> float:
+    zp, _ = partition_from_bessel(beta + j)
+    z0, _ = partition_from_bessel(beta)
+    return math.log((zp * zp) / (z0 * z0))
+
+
 def source_derivative_from_generator(beta: float, step: float = FINITE_DIFF_STEP) -> float:
     return (source_response_generator(beta, step) - source_response_generator(beta, -step)) / (2.0 * step)
 
@@ -191,7 +195,7 @@ def main() -> int:
     p_eff, mode_eff = plaquette_from_bessel(beta_eff)
 
     w1 = source_response_generator(bare_beta, 0.037)
-    w2 = 2.0 * w1
+    w2 = two_block_source_response_generator(bare_beta, 0.037)
 
     rng = np.random.default_rng(7)
     links = [random_su3(rng) for _ in range(4)]
@@ -206,7 +210,7 @@ def main() -> int:
             wrong_devs.append(abs(p_scaled / (u0**2) - p_ref))
 
     print("=" * 78)
-    print("GAUGE-VACUUM PLAQUETTE SCALAR-BRIDGE THEOREM")
+    print("GAUGE-VACUUM PLAQUETTE SCALAR-BRIDGE SUPPORT")
     print("=" * 78)
     print()
     print("Local Wilson source-response")
@@ -223,7 +227,7 @@ def main() -> int:
     print(f"  max |P(u0 V)/u0^4 - P(V)|           = {max(scale_devs):.3e}")
     print(f"  max |P(u0 V)/u0^2 - P(V)|           = {max(wrong_devs):.3e}")
     print()
-    print("Closure output")
+    print("Support candidate output")
     print(f"  Gamma_coord                         = {fmt(coord)}")
     print(f"  beta_eff                            = {fmt(beta_eff)}")
     print(f"  P(6)                                = {fmt(p_eff)}   (mode cutoff m = {mode_eff})")
@@ -231,65 +235,59 @@ def main() -> int:
     print(f"  closure minus canonical             = {p_eff - CANONICAL_PLAQUETTE:+.12f}")
     print()
 
-    theorem_checks: list[tuple[bool, str]] = []
-    theorem_checks.append(
+    exact_checks: list[tuple[bool, str]] = []
+    exact_checks.append(
         check_close("local plaquette equals local Wilson source derivative", p_bare, p_bare_src, 1.0e-9)
     )
-    theorem_checks.append(
+    exact_checks.append(
         check_true(
             "local Wilson generator is additive on independent blocks",
             abs((w1 + w1) - w2) < 1.0e-15,
             f"|W1+W1-W2| = {abs((w1 + w1) - w2):.3e}",
         )
     )
-    theorem_checks.append(check_close("Bessel/Weyl agreement at beta=6", p_bare, p_bare_weyl, 1.0e-12))
-    theorem_checks.append(check_close("scalar 3+1 completion ratio", ratio, 2.0 / math.sqrt(3.0), 1.0e-15))
-    theorem_checks.append(
+    exact_checks.append(check_close("Bessel/Weyl agreement at beta=6", p_bare, p_bare_weyl, 1.0e-12))
+    exact_checks.append(check_close("scalar 3+1 completion ratio", ratio, 2.0 / math.sqrt(3.0), 1.0e-15))
+    exact_checks.append(
         check_true(
             "plaquette four-link coupling map is exact",
             max(scale_devs) < 1.0e-12,
             f"max scaling deviation = {max(scale_devs):.3e}",
         )
     )
-    theorem_checks.append(
+    exact_checks.append(
+        check_close("3+1 incidence factor", coord, 1.5, 1.0e-15)
+    )
+
+    support_checks: list[tuple[bool, str]] = []
+    support_checks.append(
         check_true(
             "no lower link power preserves the plaquette coupling map",
             max(wrong_devs) > 1.0e-2,
             f"max wrong-power deviation = {max(wrong_devs):.3e}",
         )
     )
-    theorem_checks.append(check_close("3+1 incidence factor", coord, 1.5, 1.0e-15))
-    theorem_checks.append(
-        check_close(
-            "bridge theorem gives the analytic plaquette value",
-            p_eff,
-            plaquette_from_bessel(beta_eff)[0],
-            1.0e-15,
-        )
-    )
-
-    compute_checks: list[tuple[bool, str]] = []
-    compute_checks.append(
+    support_checks.append(
         check_true(
-            "analytic plaquette value stays near the historical canonical surface",
+            "candidate plaquette value stays near the historical canonical surface",
             abs(p_eff - CANONICAL_PLAQUETTE) < 2.0e-4,
             f"|P(6) - P_can| = {abs(p_eff - CANONICAL_PLAQUETTE):.6e} < 2e-4",
         )
     )
 
-    theorem_pass = 0
-    compute_pass = 0
+    exact_pass = 0
+    support_pass = 0
     print("Checks")
-    for ok, msg in theorem_checks:
+    for ok, msg in exact_checks:
         print(" ", msg)
-        theorem_pass += int(ok)
-    for ok, msg in compute_checks:
+        exact_pass += int(ok)
+    for ok, msg in support_checks:
         print(" ", msg)
-        compute_pass += int(ok)
+        support_pass += int(ok)
 
-    fail = (len(theorem_checks) - theorem_pass) + (len(compute_checks) - compute_pass)
+    fail = (len(exact_checks) - exact_pass) + (len(support_checks) - support_pass)
     print()
-    print(f"SUMMARY: THEOREM PASS={theorem_pass} COMPUTE PASS={compute_pass} FAIL={fail}")
+    print(f"SUMMARY: EXACT PASS={exact_pass} SUPPORT={support_pass} FAIL={fail}")
     return 0 if fail == 0 else 1
 
 

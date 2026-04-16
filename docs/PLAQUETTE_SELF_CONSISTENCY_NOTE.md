@@ -1,7 +1,7 @@
 # Plaquette Self-Consistency: `<P>` as a Derived Same-Surface Constant
 
 **Date:** 2026-04-15  
-**Status:** retained evaluation theorem (no free parameter), with exact bridge theorem support
+**Status:** retained evaluation theorem (no free parameter), with exact bridge-support stack
 **Script:** `scripts/frontier_plaquette_self_consistency.py`
 
 ## Claim
@@ -81,33 +81,48 @@ The runner checks:
 4. perturbative-window sanity checks
 5. downstream consistency of `u_0` and `alpha_s(v)`
 
-## Exact bridge theorem support on `main`
+## Exact bridge-support stack on `main`
 
-The live repo now also carries the exact bridge theorem ingredients:
+The live repo now also carries a materially stronger exact support stack:
 
 - exact local `SU(3)` one-plaquette block
+- exact accepted Wilson gauge-source temporal completion theorem
 - exact scalar `3+1` bridge endpoint ratio
   `A_inf / A_2 = 2 / sqrt(3)`
 - exact plaquette four-link coupling map
   `P(U) = u_0^4 P(V)`
 - exact `3+1` plaquette/link incidence factor `6 / 4 = 3 / 2`
+- exact obstruction to the naive constant-lift law
+  `P(beta) = P_1plaq(beta * (3/2) * (2 / sqrt(3))^(1/4))`
 
-Those ingredients close the last insertion bridge and give
+Those ingredients sharply narrow the last insertion bridge and give the current
+best analytic candidate
 
 `P(6) = 0.593530679977098`.
 
 This sits only `1.3068e-4` (`0.022%`) above the current canonical same-surface value
 `0.5934`, so it materially strengthens the plaquette lane.
 
-Current authorities for that theorem stack:
+Current authorities for that support stack:
 
-- [GAUGE_VACUUM_PLAQUETTE_BRIDGE_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_BRIDGE_THEOREM_NOTE.md)
+- [GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md)
+- [GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md](./GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md)
+- [GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md)
 - [SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md](./SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md)
 
 Current support runners:
 
-- `scripts/frontier_gauge_vacuum_plaquette_bridge_theorem.py`
+- `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`
+- `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`
+- `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`
 - `scripts/frontier_scalar_3plus1_temporal_ratio.py`
+
+The honest live read is now sharper than before:
+
+- the exact class-level bridge ingredients are real
+- the simplest constant multiplicative effective-coupling lift is ruled out
+- so the remaining analytic target is a nontrivial `beta`-dependent
+  full-vacuum reduction law, not the old constant-lift ansatz
 
 ## Safe Reuse Rule
 
@@ -126,12 +141,14 @@ with the understanding that the number is:
 
 ## Scope
 
-This note does **not** by itself migrate the full repo-wide numeric package from
-the historical same-surface value `0.5934` to the analytic bridge value above.
-That is an implementation sweep, not a remaining theorem gap.
+This note does **not** by itself upgrade the plaquette to a fully analytic
+physical-vacuum theorem on the live package. It does not migrate the full
+repo-wide numeric package from the historical same-surface value `0.5934` to
+the analytic support value above.
 
 It claims the narrower and sufficient point needed by the package:
 
-> the plaquette is a uniquely determined observable of the retained theory, and
+> the plaquette is a uniquely determined observable of the retained theory,
 > Monte Carlo is same-surface evaluation of that observable rather than
-> parameter fitting.
+> parameter fitting, and the exact bridge-support stack materially narrows the
+> remaining analytic insertion gap without yet closing it.
