@@ -1,8 +1,8 @@
 # Gauge-Vacuum Plaquette Scalar-Bridge Support
 
 **Date:** 2026-04-16
-**Status:** exact local/source/coupling support stack; the final physical-vacuum insertion remains support-level
-**Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`
+**Status:** exact local/source/class-level support stack; the final physical-vacuum reduction remains support-level
+**Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`, `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`
 
 ## Question
 
@@ -19,8 +19,9 @@ What is exact now:
    The one-plaquette expectation is exactly the source derivative of the local
    Wilson scalar generator
    `W_loc(j) = log Z_1plaq(beta+j) - log Z_1plaq(beta)`.
-2. **Exact scalar `3+1` bridge ratio.**
-   On the minimal APBC `3+1` scalar bridge,
+2. **Exact accepted gauge-source temporal completion law.**
+   On the accepted Wilson nearest-neighbor local bosonic scalar gauge-source
+   class, the normalized endpoint ratio is exactly
    `A_inf / A_2 = 2 / sqrt(3)`.
 3. **Exact plaquette four-link coupling map.**
    Under a uniform link rescaling one has the exact algebraic identity
@@ -52,20 +53,29 @@ Its source derivative is exactly the local plaquette expectation:
 So the plaquette is exactly the local bosonic scalar source-response
 coefficient of the Wilson block.
 
-## Exact support piece 2: scalar `3+1` bridge ratio
+## Exact support piece 2: accepted gauge-source temporal completion law
 
-On the minimal APBC `3+1` scalar bridge:
+The bridge factor is no longer tied only to one chosen scalar toy kernel.
 
-- `A_2 = 1 / 8`
-- `A_inf = 1 / (4 sqrt(3))`
-- `A_inf / A_2 = 2 / sqrt(3)`
+On the accepted Wilson nearest-neighbor plaquette surface:
 
-Authority:
+- one common source weight across the six plaquette orientations induces equal
+  directional coefficients on `x,y,z,t`;
+- on the minimal APBC `L_s = 2` spatial cube, every accepted local bosonic
+  scalar gauge source therefore reduces exactly to
+  `K_O(omega) = 3w (3 + sin^2 omega)`;
+- so the normalized endpoint ratio is universal on the accepted gauge-source
+  class:
+  `A_inf / A_2 = 2 / sqrt(3)`.
 
+Authorities:
+
+- [GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md](./GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md)
 - [SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md](./SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md)
 
-This closes the exact scalar bridge ratio. It does **not** by itself decide how
-that ratio must lift a specific interacting gauge observable.
+This closes the class-level temporal bridge. It still does **not** by itself
+reduce the full interacting gauge-vacuum observable to the local one-plaquette
+response.
 
 ## Exact support piece 3: plaquette four-link coupling map
 
@@ -100,12 +110,12 @@ Therefore
 
 `Gamma_coord = 6 / 4 = 3 / 2`.
 
-Again, this is exact combinatorics. What remains open is the unique insertion
+Again, this is exact combinatorics. What remains open is the unique reduction
 law taking this factor into the full interacting plaquette expectation.
 
 ## Current best analytic candidate
 
-If one composes the exact local/source/coupling pieces above, the sharp current
+If one composes the exact local/source/class-level pieces above, the sharp current
 analytic candidate is
 
 `beta_eff = beta * (3/2) * (2 / sqrt(3))^(1/4)`
@@ -125,23 +135,23 @@ value `0.5934`, so it is a very strong support candidate.
 
 ## Remaining gap
 
-The remaining theorem-grade gap is:
+The remaining theorem-grade gap is now narrower:
 
-> why the physical interacting gauge-vacuum plaquette must inherit the scalar
-> bridge with that specific observable-level insertion law, rather than merely
-> being sharply supported by it.
+> why the physical interacting gauge-vacuum plaquette expectation is exactly
+> the local Wilson source-response evaluated at the completed effective
+> coupling, rather than merely being sharply supported by that reduction.
 
 Until that step is closed, the live package should keep the plaquette as:
 
-- exact local/source/coupling support stack plus
+- exact local/source/class-level support stack plus
 - canonical same-surface evaluated value on the live quantitative surface
 
 ## Honest status on `main`
 
 Current clean read:
 
-- exact local/source/coupling ingredients: closed
-- physical-vacuum bridge insertion: support-level
+- exact local/source/class-level ingredients: closed
+- physical-vacuum reduction to the local one-plaquette response: support-level
 - canonical plaquette on the live package: still `0.5934`
 
 So there is **not** yet a basis for repo-wide numeric migration or for removing
@@ -152,10 +162,12 @@ lanes.
 
 ```bash
 python3 scripts/frontier_scalar_3plus1_temporal_ratio.py
+python3 scripts/frontier_gauge_scalar_temporal_completion_theorem.py
 python3 scripts/frontier_gauge_vacuum_plaquette_bridge_support.py
 ```
 
 Expected summary:
 
 - scalar ratio runner: `EXACT PASS=4 SUPPORT=1 FAIL=0`
+- gauge scalar completion runner: `PASS=8 FAIL=0`
 - bridge support runner: `EXACT PASS=6 SUPPORT=2 FAIL=0`

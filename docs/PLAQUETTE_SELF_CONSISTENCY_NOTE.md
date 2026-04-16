@@ -86,6 +86,7 @@ The runner checks:
 The live repo now also carries a materially stronger exact support stack:
 
 - exact local `SU(3)` one-plaquette block
+- exact accepted Wilson gauge-source temporal completion theorem
 - exact scalar `3+1` bridge endpoint ratio
   `A_inf / A_2 = 2 / sqrt(3)`
 - exact plaquette four-link coupling map
@@ -103,11 +104,13 @@ This sits only `1.3068e-4` (`0.022%`) above the current canonical same-surface v
 Current authorities for that support stack:
 
 - [GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md)
+- [GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md](./GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md)
 - [SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md](./SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md)
 
 Current support runners:
 
 - `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`
+- `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`
 - `scripts/frontier_scalar_3plus1_temporal_ratio.py`
 
 ## Safe Reuse Rule
