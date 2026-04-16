@@ -37,8 +37,8 @@ This is the safe retained statement used in the current paper package.
    boundary result that regulator reinterpretation is not an equivalent reading
    of the same accepted framework stack and cannot preserve the accepted fixed
    quantitative surface; it also closes the stronger statement that no
-   nontrivial regulator-style line of constant physics preserves the accepted
-   package invariants. It still leaves the physical-lattice premise itself
+   nontrivial regulator-style family preserves both accepted live invariants
+   `alpha_s(v)` and `v`. It still leaves the physical-lattice premise itself
    explicit rather than derived.
 
 ## Boundary

@@ -49,9 +49,10 @@ More precisely:
   - Wilson `beta = 6`,
   - the accepted same-surface plaquette theorem at `beta = 6`,
   - the downstream plaquette / `u_0` / `alpha_s(v)` / `v` chain.
-- on the accepted canonical `u_0` surface, any regulator-style line of
-  constant physics that tries to preserve the live package invariants is
-  trivial: it collapses to the single point `beta = 6`.
+- even if one allows compensating `u_0` motion, any regulator-style family
+  that tries to preserve the live package invariants `alpha_s(v)` and `v`
+  is trivial: it collapses to the single canonical point
+  `beta = 6`, `u_0 = u_{0,\mathrm{can}}`.
 
 Therefore regulator reinterpretation is **not** a mere restatement of the
 accepted framework. It is a different theory package obtained by adjoining
@@ -107,10 +108,10 @@ preserve the current quantitative package surface.
 >
 > Therefore any regulator reading requires adjoining extra structure not
 > licensed by that stack, and any regulator-family deformation leaves the
-> accepted canonical quantitative surface. Moreover, any regulator-style
-> line of constant physics preserving the accepted package invariants is
-> trivial at `beta = 6`. It is not an equivalent reading of the same accepted
-> framework surface.
+> accepted canonical quantitative surface. Moreover, preserving the accepted
+> live package invariants `alpha_s(v)` and `v` forces the canonical point
+> `beta = 6`, `u_0 = u_{0,\mathrm{can}}`. It is not an equivalent reading of
+> the same accepted framework surface.
 
 ## Proof skeleton
 
@@ -180,42 +181,61 @@ accepted result is the same-surface plaquette theorem on the retained `beta=6`
 surface. Once a continuum family is introduced, the accepted package is no
 longer being read on that fixed quantitative surface.
 
-### 5. Any package-preserving line of constant physics is trivial
+### 5. Cross-lane invariant preservation collapses to the canonical point
 
-The boundary can be sharpened further. On the accepted canonical `u_0`
-surface,
+The boundary can be sharpened further without freezing `u_0` by hand.
+Write
 
-`alpha_s(v; beta) = alpha_bare(beta) / u_0^2`,
+`x = alpha_bare(beta) / alpha_bare(6) = 6 / beta`,
 
-so relative to the accepted point one has
+`y = u_0 / u_{0,\mathrm{can}}`.
 
-`alpha_s(v; beta) / alpha_s(v; 6) = 6 / beta`.
+Then the two accepted live package invariants scale as
 
-Likewise the retained hierarchy package uses
-
-`alpha_LM(beta) = alpha_bare(beta) / u_0`
+`alpha_s(v) / alpha_s(v)_{can} = x / y^2`,
 
 and
 
-`v(beta) / v(6) = (alpha_LM(beta) / alpha_LM(6))^16 = (6 / beta)^16`.
+`v / v_can = (x / y)^16`.
 
-Therefore:
+If a regulator-style family is required to preserve **both** accepted
+invariants, then one must have
 
-- preserving the accepted `alpha_s(v)` already forces `beta = 6`;
-- preserving the accepted `v` already forces `beta = 6`;
-- preserving both accepted package invariants leaves no nontrivial regulator
-  family at all.
+`x / y^2 = 1`,
 
-So even if one grants the regulator language, the only regulator-style line of
-constant physics that preserves the accepted live package invariants is the
-trivial family concentrated at the accepted point itself.
+and
+
+`(x / y)^16 = 1`.
+
+The second equation gives `x = y` on the positive canonical surface, and then
+the first gives `y = 1`, hence `x = 1`. Therefore
+
+- `u_0 = u_{0,\mathrm{can}}`,
+- `alpha_bare = alpha_{bare,\mathrm{can}}`,
+- `beta = 6`.
+
+So there is no nontrivial regulator-style family preserving both live package
+invariants. The only preserving family is the trivial point itself.
+
+As a corollary, on the accepted canonical `u_0` surface one recovers the
+sharper one-parameter formulas
+
+`alpha_s(v; beta) / alpha_s(v; 6) = 6 / beta`,
+
+and
+
+`v(beta) / v(6) = (6 / beta)^16`.
+
+Those make the same conclusion visually obvious, but the stronger result is
+the two-invariant collapse above.
 
 ### 6. Therefore the regulator reading is not the same theory
 
 Because the accepted stack is fixed and the regulator reading requires added
 structure while also leaving the accepted canonical quantitative surface, the
 regulator reading is not a mere change of words. It is a different theory
-package, and any package-preserving family collapses to the trivial point.
+package, and any family preserving the accepted `alpha_s(v)` and `v` invariants
+collapses to the trivial canonical point.
 
 This closes the anti-regulator question on the current package surface:
 
@@ -231,8 +251,9 @@ This note now closes a stronger exact point than the older audit did:
 - regulator reinterpretation is not same-stack equivalent;
 - regulator-family deformation is not same-surface equivalent on the accepted
   canonical quantitative chain;
-- any regulator-style line of constant physics preserving the accepted live
-  package invariants is trivial at `beta = 6`;
+- any regulator-style family preserving the accepted live package invariants
+  `alpha_s(v)` and `v` is trivial at the canonical point
+  `beta = 6`, `u_0 = u_{0,\mathrm{can}}`;
 - the retained three-generation matter result is no longer vulnerable to a
   same-stack quotient/rooting reinterpretation.
 
@@ -263,10 +284,13 @@ reusable across:
 - any future lane that depends on the physical-lattice reading of the retained
   matter/gauge surface.
 
-It also exposes a reusable fixed-surface subtool:
+It also exposes reusable fixed-surface subtools:
 
-- no nontrivial package-preserving line of constant physics on the accepted
-  canonical `u_0` / hierarchy surface.
+- no nontrivial regulator-style family preserving accepted `alpha_s(v)` and
+  `v`;
+- the one-parameter corollary that on the canonical `u_0` surface,
+  `alpha_s(v; beta) / alpha_s(v; 6) = 6 / beta` and
+  `v(beta) / v(6) = (6 / beta)^16`.
 
 If a future theorem derives the physical-lattice premise itself from a smaller
 accepted stack, this note should then be upgraded from boundary theorem to

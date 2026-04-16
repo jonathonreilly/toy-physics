@@ -80,7 +80,8 @@ It is claiming a different theory surface.
    isolates the physical-lattice axiom boundary.
 4. [PHYSICAL_LATTICE_NECESSITY_NOTE.md](./PHYSICAL_LATTICE_NECESSITY_NOTE.md)
    closes the no-same-stack / no-same-surface regulator reinterpretation
-   boundary, and also the nontrivial package-preserving LCP family loophole,
+   boundary, and also the stronger loophole that a nontrivial regulator-style
+   family could preserve both accepted live invariants `alpha_s(v)` and `v`,
    while keeping the physical-lattice premise itself explicit.
 5. [ONE_GENERATION_MATTER_CLOSURE_NOTE.md](./ONE_GENERATION_MATTER_CLOSURE_NOTE.md)
    carries the full-framework chirality / right-handed completion claim.

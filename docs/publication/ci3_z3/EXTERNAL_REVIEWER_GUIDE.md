@@ -115,9 +115,10 @@ Current status from that stack:
   same-stack / same-surface regulator reinterpretation is blocked because it
   requires extra continuum/rooting/RG structure absent from the accepted
   framework stack and cannot preserve the accepted canonical quantitative surface
-  (`g_bare = 1`, `beta = 6`, plaquette/hierarchy chain), and any regulator-style
-  line of constant physics preserving the accepted package invariants is
-  trivial at `beta = 6`; the physical-lattice premise itself remains explicit
+  (`g_bare = 1`, `beta = 6`, plaquette/hierarchy chain), and any
+  regulator-style family preserving both accepted `alpha_s(v)` and `v` is
+  trivial at the canonical point; the physical-lattice premise itself remains
+  explicit
 - derived-with-inherited-explicit-systematic Higgs / vacuum package:
   canonical `m_H = 125.1 GeV` (framework-side 3-loop route),
   with retained `119.8 GeV` (2-loop support route),

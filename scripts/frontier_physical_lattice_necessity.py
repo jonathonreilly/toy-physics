@@ -112,6 +112,18 @@ def hierarchy_v_ratio_from_beta_on_canonical_u0(beta: float) -> float:
     return (alpha_lm_from_beta_on_canonical_u0(beta) / CANONICAL_ALPHA_LM) ** 16
 
 
+def alpha_bare_ratio(beta: float) -> float:
+    return alpha_bare_from_beta(beta) / CANONICAL_ALPHA_BARE
+
+
+def alpha_s_ratio(beta: float, u0: float) -> float:
+    return alpha_bare_ratio(beta) / ((u0 / CANONICAL_U0) ** 2)
+
+
+def v_ratio(beta: float, u0: float) -> float:
+    return (alpha_bare_ratio(beta) / (u0 / CANONICAL_U0)) ** 16
+
+
 def part1_fixed_accepted_stack(minimal_text: str, plaquette_text: str) -> bool:
     print("=" * 88)
     print("PART 1: THE ACCEPTED STACK IS A FIXED THEORY SURFACE")
@@ -337,9 +349,9 @@ def part4_fixed_surface_rigidity(
     )
 
 
-def part5_trivial_package_preserving_family() -> bool:
+def part5_cross_lane_invariant_rigidity() -> bool:
     print("=" * 88)
-    print("PART 5: PACKAGE-PRESERVING LINE-OF-CONSTANT-PHYSICS TRIVIALITY")
+    print("PART 5: CROSS-LANE INVARIANT RIGIDITY")
     print("=" * 88)
     print()
 
@@ -355,39 +367,54 @@ def part5_trivial_package_preserving_family() -> bool:
     )
 
     sample_betas = [5.8, 6.2]
-    family_breaks_package = True
+    preserving_alpha_s_breaks_v = True
+    preserving_v_breaks_alpha_s = True
     details = []
     for beta in sample_betas:
-        alpha_s_val = alpha_s_v_from_beta_on_canonical_u0(beta)
-        v_ratio = hierarchy_v_ratio_from_beta_on_canonical_u0(beta)
+        x = alpha_bare_ratio(beta)
+        u0_preserve_alpha_s = CANONICAL_U0 * math.sqrt(x)
+        u0_preserve_v = CANONICAL_U0 * x
+        alpha_s_val = alpha_s_ratio(beta, u0_preserve_alpha_s)
+        v_val = v_ratio(beta, u0_preserve_alpha_s)
+        alpha_s_from_v_branch = alpha_s_ratio(beta, u0_preserve_v)
         details.append(
-            f"beta={beta:.1f}: alpha_s(v)={alpha_s_val:.12f}, "
-            f"alpha_s/alpha_s_can={alpha_s_val / CANONICAL_ALPHA_S_V:.6f}, "
-            f"v/v_can={v_ratio:.6f}"
+            f"beta={beta:.1f}: preserve alpha_s -> u0={u0_preserve_alpha_s:.12f}, "
+            f"alpha_s/alpha_s_can={alpha_s_val:.6f}, v/v_can={v_val:.6f}; "
+            f"preserve v -> u0={u0_preserve_v:.12f}, alpha_s/alpha_s_can={alpha_s_from_v_branch:.6f}"
         )
-        family_breaks_package = family_breaks_package and abs(alpha_s_val - CANONICAL_ALPHA_S_V) > 1e-12
-        family_breaks_package = family_breaks_package and abs(v_ratio - 1.0) > 1e-9
+        preserving_alpha_s_breaks_v = preserving_alpha_s_breaks_v and abs(alpha_s_val - 1.0) < 1e-12
+        preserving_alpha_s_breaks_v = preserving_alpha_s_breaks_v and abs(v_val - 1.0) > 1e-9
+        preserving_v_breaks_alpha_s = preserving_v_breaks_alpha_s and abs(v_ratio(beta, u0_preserve_v) - 1.0) < 1e-12
+        preserving_v_breaks_alpha_s = preserving_v_breaks_alpha_s and abs(alpha_s_from_v_branch - 1.0) > 1e-9
 
-    sample_family_not_constant = check(
-        "sample_beta_family_breaks_alpha_s_and_v_invariants",
-        family_breaks_package,
+    no_single_compensating_family = check(
+        "sample_compensating_families_cannot_preserve_both_alpha_s_and_v",
+        preserving_alpha_s_breaks_v and preserving_v_breaks_alpha_s,
         "; ".join(details),
         kind="COMPUTE",
     )
 
-    exact_triviality = check(
-        "only_beta6_preserves_canonical_alpha_s_and_v",
+    exact_two_invariant_collapse = check(
+        "preserving_alpha_s_and_v_forces_canonical_beta_and_u0",
+        True,
+        "If alpha_s/alpha_s_can = x/y^2 = 1 and v/v_can = (x/y)^16 = 1, then x=y and x=y^2, hence y=1 and x=1; therefore u0=u0_can and beta=6",
+        kind="LOGICAL",
+    )
+
+    canonical_u0_surface_corollary = check(
+        "canonical_u0_surface_recovers_trivial_beta_family",
         abs((6.0 / CANONICAL_BETA) - 1.0) < 1e-15
-        and all(abs((6.0 / beta) - 1.0) > 1e-12 for beta in sample_betas),
-        "on the canonical u0 surface, alpha_s(v; beta)/alpha_s(v;6) = 6/beta and v(beta)/v(6) = (6/beta)^16",
+        and all(abs(hierarchy_v_ratio_from_beta_on_canonical_u0(beta) - 1.0) > 1e-9 for beta in sample_betas),
+        "on the canonical u0 surface, alpha_s(v; beta)/alpha_s(v; 6) = 6/beta and v(beta)/v(6) = (6/beta)^16",
     )
 
     print()
     return (
         canonical_alpha_s_match
         and canonical_v_ratio
-        and sample_family_not_constant
-        and exact_triviality
+        and no_single_compensating_family
+        and exact_two_invariant_collapse
+        and canonical_u0_surface_corollary
     )
 
 
@@ -396,7 +423,7 @@ def part6_conclusion(
     generation_closed: bool,
     regulator_needs_extra: bool,
     fixed_surface_rigid: bool,
-    trivial_package_family: bool,
+    cross_lane_rigid: bool,
     minimal_text: str,
 ) -> tuple[bool, bool]:
     print("=" * 88)
@@ -409,14 +436,14 @@ def part6_conclusion(
         and generation_closed
         and regulator_needs_extra
         and fixed_surface_rigid
-        and trivial_package_family
+        and cross_lane_rigid
     )
     premise_still_explicit = "4. **Physical-lattice reading:**" in minimal_text
 
     check(
         "no_same_stack_regulator_reinterpretation",
         no_same_stack_regulator,
-        "regulator reinterpretation requires extra structure, cannot preserve the accepted fixed quantitative surface, and admits no nontrivial package-preserving family",
+        "regulator reinterpretation requires extra structure, cannot preserve the accepted fixed quantitative surface, and cannot preserve both accepted alpha_s(v) and v except at the canonical point",
     )
     check(
         "physical_lattice_premise_still_explicit_minimal_input",
@@ -475,13 +502,13 @@ def main() -> int:
     fixed_surface_rigid = part4_fixed_surface_rigidity(
         minimal_text, plaquette_text, values_text
     )
-    trivial_package_family = part5_trivial_package_preserving_family()
+    cross_lane_rigid = part5_cross_lane_invariant_rigidity()
     no_same_stack_regulator, premise_still_explicit = part6_conclusion(
         fixed_stack,
         generation_closed,
         regulator_needs_extra,
         fixed_surface_rigid,
-        trivial_package_family,
+        cross_lane_rigid,
         minimal_text,
     )
 
@@ -498,8 +525,8 @@ def main() -> int:
     print("    - any regulator-family deformation also leaves the accepted")
     print("      canonical quantitative surface (`g_bare = 1`, `beta = 6`,")
     print("      plaquette/hierarchy chain)")
-    print("    - any line of constant physics preserving the accepted package")
-    print("      invariants is trivial at `beta = 6`")
+    print("    - even allowing compensating u0 motion, preserving both")
+    print("      accepted alpha_s(v) and v forces the canonical point")
     print()
     print(f"  TOTAL: PASS = {PASS_COUNT}, FAIL = {FAIL_COUNT}")
     print(

@@ -99,9 +99,10 @@ Current quantitative statuses:
   regulator reinterpretation is blocked because it requires extra
   continuum/rooting/RG structure absent from the accepted framework stack and
   cannot preserve the accepted canonical quantitative surface, no nontrivial
-  package-preserving LCP family survives on that accepted surface, and
-  chirality is supplied only on the full-framework anomaly-forced `3+1`
-  surface; the physical-lattice premise itself remains explicit
+  regulator-style family preserving both accepted `alpha_s(v)` and `v`
+  survives on that accepted surface, and chirality is supplied only on the
+  full-framework anomaly-forced `3+1` surface; the physical-lattice premise
+  itself remains explicit
 - derived-with-explicit-systematic `y_t(v) = 0.9176`
 - derived-with-explicit-systematic canonical `m_t(pole) = 173.10 GeV` (3-loop),
   with retained `172.57 GeV` (2-loop) support
