@@ -56,6 +56,8 @@ recorded in
 The APBC / bosonic-bilinear thermal order-parameter uniqueness result is
 recorded in
 [BARYOGENESIS_THERMAL_ORDER_PARAMETER_UNIQUENESS_NOTE.md](./BARYOGENESIS_THERMAL_ORDER_PARAMETER_UNIQUENESS_NOTE.md).
+The resulting route-class pivot is recorded in
+[BARYOGENESIS_NONPERTURBATIVE_ROUTE_PIVOT_NOTE.md](./BARYOGENESIS_NONPERTURBATIVE_ROUTE_PIVOT_NOTE.md).
 
 It does **not** claim a first-principles computation of the electroweak phase
 transition, sphaleron rate, or baryon transport coefficients.
@@ -130,6 +132,13 @@ The scalar-side part of that object is now much sharper than before:
 - the APBC / bosonic-bilinear selector stack does yield a genuine finite-`T`
   order-parameter surface, but only as a unique normalization/selection lane
   of the same Higgs order parameter rather than as a new scalar family
+- even after granting the largest exact APBC endpoint normalization to the
+  matched one-doublet package on the old scalar-cubic bookkeeping, the
+  perturbative same-surface scalar route still remains below half of the old
+  target
+- so on current `main`, any live baryogenesis closure route is necessarily a
+  genuinely nonperturbative electroweak transition / sphaleron / transport
+  route
 - the remaining scalar-side question is therefore not just screening by
   itself, but whether there is additional same-surface bosonic structure or
   genuinely different finite-`T` dynamics beyond the old route-history ansatz
@@ -219,6 +228,7 @@ This note does **not** claim:
 - [BARYOGENESIS_SELECTOR_MULTIPLICITY_SCREENING_NOTE.md](./BARYOGENESIS_SELECTOR_MULTIPLICITY_SCREENING_NOTE.md)
 - [BARYOGENESIS_HIGGS_DOUBLET_MULTIPLICITY_NOTE.md](./BARYOGENESIS_HIGGS_DOUBLET_MULTIPLICITY_NOTE.md)
 - [BARYOGENESIS_OLD_ROUTE_SURFACE_NO_GO_NOTE.md](./BARYOGENESIS_OLD_ROUTE_SURFACE_NO_GO_NOTE.md)
+- [BARYOGENESIS_NONPERTURBATIVE_ROUTE_PIVOT_NOTE.md](./BARYOGENESIS_NONPERTURBATIVE_ROUTE_PIVOT_NOTE.md)
 - [BARYOGENESIS_THERMAL_ORDER_PARAMETER_UNIQUENESS_NOTE.md](./BARYOGENESIS_THERMAL_ORDER_PARAMETER_UNIQUENESS_NOTE.md)
 - [frontier_baryogenesis_ewpt_washout_target.py](./../scripts/frontier_baryogenesis_ewpt_washout_target.py)
 - [frontier_baryogenesis_finite_t_reduction.py](./../scripts/frontier_baryogenesis_finite_t_reduction.py)

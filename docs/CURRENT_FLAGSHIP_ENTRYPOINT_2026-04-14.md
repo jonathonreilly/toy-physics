@@ -91,6 +91,8 @@ packaging.
   [BARYOGENESIS_OLD_ROUTE_SURFACE_NO_GO_NOTE.md](BARYOGENESIS_OLD_ROUTE_SURFACE_NO_GO_NOTE.md)
   and the APBC thermal-order-parameter uniqueness result recorded in
   [BARYOGENESIS_THERMAL_ORDER_PARAMETER_UNIQUENESS_NOTE.md](BARYOGENESIS_THERMAL_ORDER_PARAMETER_UNIQUENESS_NOTE.md)
+  and the resulting current-surface route pivot recorded in
+  [BARYOGENESIS_NONPERTURBATIVE_ROUTE_PIVOT_NOTE.md](BARYOGENESIS_NONPERTURBATIVE_ROUTE_PIVOT_NOTE.md)
 - bounded secondary predictions already on `main`, including proton lifetime,
   CKM neutron EDM, vacuum critical stability, benchmark gravitational
   decoherence, BH entropy, and monopole mass
