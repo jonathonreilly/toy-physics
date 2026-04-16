@@ -196,6 +196,11 @@ The complementary same-surface reduction of the sphaleron-survival stage is
 recorded in
 [BARYOGENESIS_KSPH_SINGLE_ACTIVE_LANE_NOTE.md](./BARYOGENESIS_KSPH_SINGLE_ACTIVE_LANE_NOTE.md),
 which shows that `K_sph` lives on one exact washout-active `B+L` charge lane.
+Those three stage-specific one-lane reductions compose further into the single
+coupled-history reduction recorded in
+[BARYOGENESIS_SINGLE_HISTORY_COMPOSITION_NOTE.md](./BARYOGENESIS_SINGLE_HISTORY_COMPOSITION_NOTE.md),
+which shows that the whole open electroweak object reduces to
+`K_NP = F_NP[χ(τ)]`.
 
 ## Validation
 

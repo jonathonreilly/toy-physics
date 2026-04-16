@@ -230,6 +230,9 @@ def part3_eta_bridge(j: float) -> None:
     ksph_note = (DOCS / "BARYOGENESIS_KSPH_SINGLE_ACTIVE_LANE_NOTE.md").read_text(
         encoding="utf-8"
     )
+    comp_note = (DOCS / "BARYOGENESIS_SINGLE_HISTORY_COMPOSITION_NOTE.md").read_text(
+        encoding="utf-8"
+    )
     omega_note = (DOCS / "OMEGA_LAMBDA_DERIVATION_NOTE.md").read_text(encoding="utf-8")
     omega_runner = (ROOT / "scripts" / "frontier_omega_lambda_derivation.py").read_text(encoding="utf-8")
 
@@ -270,6 +273,10 @@ def part3_eta_bridge(j: float) -> None:
         "`K_sph = F_sph[q_+(τ)]`" in ksph_note,
     )
     check(
+        "single-history composition note records K_NP = F_NP[chi(tau)]",
+        "`K_NP = F_NP[χ(τ)]`" in comp_note,
+    )
+    check(
         "closure-gate note points to the K_EWPT reduction note",
         "BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md" in baryo_note,
     )
@@ -281,17 +288,21 @@ def part3_eta_bridge(j: float) -> None:
         "closure-gate note points to the K_sph reduction note",
         "BARYOGENESIS_KSPH_SINGLE_ACTIVE_LANE_NOTE.md" in baryo_note,
     )
+    check(
+        "closure-gate note points to the single-history composition note",
+        "BARYOGENESIS_SINGLE_HISTORY_COMPOSITION_NOTE.md" in baryo_note,
+    )
 
     info(
         "open baryogenesis object",
-        "the exact three-stage electroweak object K_EWPT * K_tr * K_sph multiplying the exact weak-flavor source J, with K_EWPT reduced to one retained scalar thermal history lane, K_tr reduced to one left-handed active-density lane, and K_sph reduced to one retained active charge-history lane",
+        "the exact coupled-history object J * F_NP[chi(tau)], equivalently the exact three-stage electroweak object K_EWPT * K_tr * K_sph, with each stage reduced to a retained one-lane functional",
     )
     print()
     print("  Consequence:")
     print("    The observed eta does not require a new source of B or CP violation.")
-    print("    It requires the missing three-stage electroweak object")
-    print("    K_EWPT * K_tr * K_sph in the exact factorized bridge")
-    print("    eta = J * K_EWPT * K_tr * K_sph.")
+    print("    It requires the missing coupled-history functional")
+    print("    F_NP[chi(tau)] in the exact factorized bridge")
+    print("    eta = J * F_NP[chi(tau)].")
     print()
 
 
@@ -316,9 +327,9 @@ def main() -> int:
     print("  RESULT:")
     print("    - electroweak B+L violation is already structurally present")
     print("    - weak-sector CP violation is already quantitatively present")
-    print("    - the remaining missing object is the exact three-stage")
-    print("      electroweak object K_EWPT * K_tr * K_sph in the")
-    print("      factorized bridge eta = J * K_EWPT * K_tr * K_sph")
+    print("    - the remaining missing object is the exact coupled-history")
+    print("      functional F_NP[chi(tau)] in the factorized bridge")
+    print("      eta = J * F_NP[chi(tau)]")
     print()
     print(f"  TOTAL: PASS = {PASS}, FAIL = {FAIL}")
     return 0 if FAIL == 0 else 1

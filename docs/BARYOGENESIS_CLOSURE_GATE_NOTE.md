@@ -73,6 +73,9 @@ density lane is recorded in
 The sphaleron-survival-stage reduction to one exact washout-active charge lane
 is recorded in
 [BARYOGENESIS_KSPH_SINGLE_ACTIVE_LANE_NOTE.md](./BARYOGENESIS_KSPH_SINGLE_ACTIVE_LANE_NOTE.md).
+The resulting coupled one-history composition of the full electroweak object
+is recorded in
+[BARYOGENESIS_SINGLE_HISTORY_COMPOSITION_NOTE.md](./BARYOGENESIS_SINGLE_HISTORY_COMPOSITION_NOTE.md).
 
 It does **not** claim a first-principles computation of the electroweak phase
 transition, sphaleron rate, or baryon transport coefficients.
@@ -168,14 +171,17 @@ The scalar-side part of that object is now much sharper than before:
 - the sphaleron-survival stage `K_sph` likewise reduces to one real
   functional of one unique washout-active `B+L` charge history lane after
   quotienting out the exact protected `B-L` spectator direction
+- because those three lanes form the retained causal chain
+  `χ(τ) -> ℓ_L(τ) -> q_+(τ)`, the full electroweak object now reduces further
+  to one composite functional `K_NP = F_NP[χ(τ)]`
 - the remaining scalar-side question is therefore not just screening by
   itself, but whether there is additional same-surface bosonic structure or
   genuinely different finite-`T` dynamics beyond the old route-history ansatz
 
 It is cleaner to say:
 
-> baryogenesis currently reduces to one open electroweak transition/transport
-> gate
+> baryogenesis currently reduces to one open coupled-history functional
+> `F_NP[χ(τ)]` on the retained scalar source lane
 
 than to pretend the lane is either already closed or still missing all three
 Sakharov ingredients.
@@ -194,7 +200,7 @@ This number is **not** itself a theorem of baryogenesis dynamics. It is a
 bookkeeping normalization:
 
 - the framework already supplies a weak CP invariant of order `1e-5`
-- the missing electroweak transition / transport bridge must convert that
+- the missing coupled-history functional `F_NP[χ(τ)]` must convert that
   source into the final asymmetry with a net efficiency of order `1e-5`
 
 That is the correct scale of the remaining gap on the current package surface.
@@ -235,7 +241,7 @@ Answer:
 - not baryon violation
 - not weak CP violation
 - not the one-generation / `3+1` matter scaffold
-- only the electroweak transition / transport computation
+- only the one coupled-history electroweak functional `F_NP[χ(τ)]`
 
 ## What this does not close
 
@@ -263,6 +269,7 @@ This note does **not** claim:
 - [BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md](./BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md)
 - [BARYOGENESIS_KTR_SINGLE_LEFT_HANDED_LANE_NOTE.md](./BARYOGENESIS_KTR_SINGLE_LEFT_HANDED_LANE_NOTE.md)
 - [BARYOGENESIS_KSPH_SINGLE_ACTIVE_LANE_NOTE.md](./BARYOGENESIS_KSPH_SINGLE_ACTIVE_LANE_NOTE.md)
+- [BARYOGENESIS_SINGLE_HISTORY_COMPOSITION_NOTE.md](./BARYOGENESIS_SINGLE_HISTORY_COMPOSITION_NOTE.md)
 - [BARYOGENESIS_THERMAL_ORDER_PARAMETER_UNIQUENESS_NOTE.md](./BARYOGENESIS_THERMAL_ORDER_PARAMETER_UNIQUENESS_NOTE.md)
 - [frontier_baryogenesis_ewpt_washout_target.py](./../scripts/frontier_baryogenesis_ewpt_washout_target.py)
 - [frontier_baryogenesis_finite_t_reduction.py](./../scripts/frontier_baryogenesis_finite_t_reduction.py)
@@ -275,6 +282,7 @@ This note does **not** claim:
 - [frontier_baryogenesis_kewpt_single_order_parameter.py](./../scripts/frontier_baryogenesis_kewpt_single_order_parameter.py)
 - [frontier_baryogenesis_ktr_single_left_handed_lane.py](./../scripts/frontier_baryogenesis_ktr_single_left_handed_lane.py)
 - [frontier_baryogenesis_ksph_single_active_lane.py](./../scripts/frontier_baryogenesis_ksph_single_active_lane.py)
+- [frontier_baryogenesis_single_history_composition.py](./../scripts/frontier_baryogenesis_single_history_composition.py)
 - [frontier_baryogenesis_thermal_order_parameter_uniqueness.py](./../scripts/frontier_baryogenesis_thermal_order_parameter_uniqueness.py)
 - [frontier_omega_lambda_derivation.py](./../scripts/frontier_omega_lambda_derivation.py)
 
@@ -294,5 +302,7 @@ Current runner state:
 - `frontier_baryogenesis_ktr_single_left_handed_lane.py`: expected `PASS>0`,
   `FAIL=0`
 - `frontier_baryogenesis_ksph_single_active_lane.py`: expected `PASS>0`,
+  `FAIL=0`
+- `frontier_baryogenesis_single_history_composition.py`: expected `PASS>0`,
   `FAIL=0`
 - `frontier_omega_lambda_derivation.py`: existing bounded cosmology companion
