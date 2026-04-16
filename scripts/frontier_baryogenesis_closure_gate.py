@@ -218,6 +218,9 @@ def part3_eta_bridge(j: float) -> None:
     factor_note = (DOCS / "BARYOGENESIS_JARLSKOG_FACTORIZATION_NOTE.md").read_text(
         encoding="utf-8"
     )
+    stage_note = (DOCS / "BARYOGENESIS_KNP_STAGE_DECOMPOSITION_NOTE.md").read_text(
+        encoding="utf-8"
+    )
     omega_note = (DOCS / "OMEGA_LAMBDA_DERIVATION_NOTE.md").read_text(encoding="utf-8")
     omega_runner = (ROOT / "scripts" / "frontier_omega_lambda_derivation.py").read_text(encoding="utf-8")
 
@@ -241,16 +244,21 @@ def part3_eta_bridge(j: float) -> None:
         "factorization note records the target K_NP = eta / J",
         "`K_NP,target = η_obs / J = 1.837341e-5`" in factor_note,
     )
+    check(
+        "stage-decomposition note records K_NP = K_EWPT * K_tr * K_sph",
+        "`K_NP = K_EWPT * K_tr * K_sph`" in stage_note,
+    )
 
     info(
         "open baryogenesis object",
-        "the real CP-even nonperturbative electroweak functional K_NP multiplying the exact weak-flavor source J",
+        "the exact three-stage electroweak object K_EWPT * K_tr * K_sph multiplying the exact weak-flavor source J",
     )
     print()
     print("  Consequence:")
     print("    The observed eta does not require a new source of B or CP violation.")
-    print("    It requires the missing nonperturbative electroweak functional K_NP")
-    print("    in the exact factorized bridge eta = J * K_NP.")
+    print("    It requires the missing three-stage electroweak object")
+    print("    K_EWPT * K_tr * K_sph in the exact factorized bridge")
+    print("    eta = J * K_EWPT * K_tr * K_sph.")
     print()
 
 
@@ -275,9 +283,9 @@ def main() -> int:
     print("  RESULT:")
     print("    - electroweak B+L violation is already structurally present")
     print("    - weak-sector CP violation is already quantitatively present")
-    print("    - the remaining missing object is the real nonperturbative")
-    print("      electroweak functional K_NP in the factorized bridge")
-    print("      eta = J * K_NP")
+    print("    - the remaining missing object is the exact three-stage")
+    print("      electroweak object K_EWPT * K_tr * K_sph in the")
+    print("      factorized bridge eta = J * K_EWPT * K_tr * K_sph")
     print()
     print(f"  TOTAL: PASS = {PASS}, FAIL = {FAIL}")
     return 0 if FAIL == 0 else 1

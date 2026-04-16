@@ -163,6 +163,11 @@ This note is the next exact step:
 
 - it proves the open bridge has the exact factorized flavor form `η = J * K_NP`
 
+The next same-surface reduction step is recorded in
+[BARYOGENESIS_KNP_STAGE_DECOMPOSITION_NOTE.md](./BARYOGENESIS_KNP_STAGE_DECOMPOSITION_NOTE.md),
+which decomposes the remaining electroweak object as
+`K_NP = K_EWPT * K_tr * K_sph`.
+
 ## Validation
 
 - [frontier_baryogenesis_jarlskog_factorization.py](./../scripts/frontier_baryogenesis_jarlskog_factorization.py)
