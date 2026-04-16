@@ -28,7 +28,7 @@ Use this file when the question is:
 
 | Quantity | Canonical value on `main` | Claim class | Import class | Safe reuse | Authority |
 |---|---:|---|---|---|---|
-| plaquette `<P>` | `0.5934` | same-surface evaluated / derived | same-surface evaluated constant; analytic support candidate exists but is not yet canonical | tadpole improvement, coupling map, hierarchy baseline | [PLAQUETTE_SELF_CONSISTENCY_NOTE.md](../../PLAQUETTE_SELF_CONSISTENCY_NOTE.md), [GAUGE_VACUUM_PLAQUETTE_ANALYTIC_SUPPORT_NOTE.md](../../GAUGE_VACUUM_PLAQUETTE_ANALYTIC_SUPPORT_NOTE.md) |
+| plaquette `<P>` | `0.5934` | same-surface evaluated / derived | current canonical package value; exact bridge theorem now exists, but repo-wide numeric migration is still pending | tadpole improvement, coupling map, hierarchy baseline | [PLAQUETTE_SELF_CONSISTENCY_NOTE.md](../../PLAQUETTE_SELF_CONSISTENCY_NOTE.md), [GAUGE_VACUUM_PLAQUETTE_BRIDGE_THEOREM_NOTE.md](../../GAUGE_VACUUM_PLAQUETTE_BRIDGE_THEOREM_NOTE.md) |
 | `u_0 = <P>^{1/4}` | `0.877681381199` | retained / derived | same-surface plaquette derivative | coupling map, hierarchy, EW, Yukawa | [PLAQUETTE_SELF_CONSISTENCY_NOTE.md](../../PLAQUETTE_SELF_CONSISTENCY_NOTE.md) |
 | `alpha_LM` | `0.0906678360173` | retained / derived | same-surface plaquette derivative | hierarchy baseline, taste thresholds, Planck-to-IR running | [PLAQUETTE_SELF_CONSISTENCY_NOTE.md](../../PLAQUETTE_SELF_CONSISTENCY_NOTE.md) |
 | `R_conn` | `8/9 = 0.888888888889` | derived / retained support | zero-input structural at leading order + bounded `O(1/N_c^4)` correction | EW color projection, Yukawa color projection, taste weights | [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md) |
@@ -42,13 +42,12 @@ Use this file when the question is:
 
 Analytic plaquette support on `main`:
 
-- [GAUGE_VACUUM_PLAQUETTE_ANALYTIC_SUPPORT_NOTE.md](../../GAUGE_VACUUM_PLAQUETTE_ANALYTIC_SUPPORT_NOTE.md)
+- [GAUGE_VACUUM_PLAQUETTE_BRIDGE_THEOREM_NOTE.md](../../GAUGE_VACUUM_PLAQUETTE_BRIDGE_THEOREM_NOTE.md)
 - [SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md](../../SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md)
 
-Those notes provide the bridge-conditioned candidate
-`P_cand(6) = 0.593530679977098`, but the canonical reusable plaquette value
-remains `<P> = 0.5934` until the final local-to-vacuum insertion theorem is
-closed.
+Those notes now provide the exact bridge theorem value
+`P(6) = 0.593530679977098`, but the canonical reusable plaquette value remains
+`<P> = 0.5934` until the downstream numeric migration sweep is done.
 
 | Quantity | Canonical value on `main` | Claim class | Import class | Safe reuse | Authority |
 |---|---:|---|---|---|---|

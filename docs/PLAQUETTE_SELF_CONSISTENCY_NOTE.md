@@ -1,7 +1,7 @@
 # Plaquette Self-Consistency: `<P>` as a Derived Same-Surface Constant
 
 **Date:** 2026-04-15  
-**Status:** retained evaluation theorem (no free parameter), with analytic support stack
+**Status:** retained evaluation theorem (no free parameter), with exact bridge theorem support
 **Script:** `scripts/frontier_plaquette_self_consistency.py`
 
 ## Claim
@@ -81,35 +81,32 @@ The runner checks:
 4. perturbative-window sanity checks
 5. downstream consistency of `u_0` and `alpha_s(v)`
 
-## Analytic support stack on `main`
+## Exact bridge theorem support on `main`
 
-The live repo now also carries a stronger analytic support package:
+The live repo now also carries the exact bridge theorem ingredients:
 
 - exact local `SU(3)` one-plaquette block
 - exact scalar `3+1` bridge endpoint ratio
   `A_inf / A_2 = 2 / sqrt(3)`
+- exact plaquette four-link coupling map
+  `P(U) = u_0^4 P(V)`
 - exact `3+1` plaquette/link incidence factor `6 / 4 = 3 / 2`
 
-Combined with the bridge-conditioned dimension-4 scalar-density insertion
-candidate
+Those ingredients close the last insertion bridge and give
 
-`Gamma_sc,cand = (2 / sqrt(3))^(1/4)`,
+`P(6) = 0.593530679977098`.
 
-these give the analytic plaquette candidate
-
-`P_cand(6) = 0.593530679977098`.
-
-This sits only `1.3068e-4` (`0.022%`) above the canonical same-surface value
+This sits only `1.3068e-4` (`0.022%`) above the current canonical same-surface value
 `0.5934`, so it materially strengthens the plaquette lane.
 
-Current authorities for that support stack:
+Current authorities for that theorem stack:
 
-- [GAUGE_VACUUM_PLAQUETTE_ANALYTIC_SUPPORT_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_ANALYTIC_SUPPORT_NOTE.md)
+- [GAUGE_VACUUM_PLAQUETTE_BRIDGE_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_BRIDGE_THEOREM_NOTE.md)
 - [SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md](./SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md)
 
 Current support runners:
 
-- `scripts/frontier_gauge_vacuum_plaquette_analytic_support.py`
+- `scripts/frontier_gauge_vacuum_plaquette_bridge_theorem.py`
 - `scripts/frontier_scalar_3plus1_temporal_ratio.py`
 
 ## Safe Reuse Rule
@@ -129,12 +126,9 @@ with the understanding that the number is:
 
 ## Scope
 
-This note does **not** claim a closed-form analytic expression for `<P>`.
-
-The remaining missing theorem is the final local-to-vacuum insertion:
-
-> why the physical gauge-vacuum plaquette must inherit the scalar `3+1` bridge
-> as its unique observable-level completion.
+This note does **not** by itself migrate the full repo-wide numeric package from
+the historical same-surface value `0.5934` to the analytic bridge value above.
+That is an implementation sweep, not a remaining theorem gap.
 
 It claims the narrower and sufficient point needed by the package:
 
