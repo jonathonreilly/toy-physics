@@ -30,8 +30,11 @@ the exact target balance is
 
 `S_src[χ] - I_damp[χ] = log(η_obs / J) = -10.904606206411`.
 
-This note does **not** derive `S_src` or `I_damp`. It derives the exact
-balance law they must satisfy.
+This note derives the exact balance law the surviving source and damping
+pieces must satisfy. On the current package surface the downstream source-side
+reduction is recorded in
+[BARYOGENESIS_SOURCE_PULLBACK_NOTE.md](./BARYOGENESIS_SOURCE_PULLBACK_NOTE.md),
+which identifies `S_src[χ] = W[J_χ]`.
 
 ## What is already fixed upstream
 
@@ -150,7 +153,7 @@ Answer:
 
 This note does **not** derive:
 
-- the source logarithm `S_src[χ]`
+- the explicit same-surface source lift `χ -> J_χ`
 - the damping functional `I_damp[χ]`
 - the scalar history `χ(τ)`
 - the final first-principles `η`
@@ -171,6 +174,11 @@ This note is the next exact step:
 
 - it turns the surviving positive-branch problem into one exact logarithmic
   balance between source and damping.
+
+The next exact source-side reduction is recorded in
+[BARYOGENESIS_SOURCE_PULLBACK_NOTE.md](./BARYOGENESIS_SOURCE_PULLBACK_NOTE.md),
+which identifies the surviving source logarithm as the pullback of the exact
+scalar generator.
 
 ## Validation
 

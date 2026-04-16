@@ -239,6 +239,9 @@ def part3_eta_bridge(j: float) -> None:
     balance_note = (DOCS / "BARYOGENESIS_SOURCE_DAMPING_BALANCE_NOTE.md").read_text(
         encoding="utf-8"
     )
+    pullback_note = (DOCS / "BARYOGENESIS_SOURCE_PULLBACK_NOTE.md").read_text(
+        encoding="utf-8"
+    )
     omega_note = (DOCS / "OMEGA_LAMBDA_DERIVATION_NOTE.md").read_text(encoding="utf-8")
     omega_runner = (ROOT / "scripts" / "frontier_omega_lambda_derivation.py").read_text(encoding="utf-8")
 
@@ -302,6 +305,18 @@ def part3_eta_bridge(j: float) -> None:
         and "`S_src[χ] - I_damp[χ] = log(η_obs / J) = -10.904606206411`" in balance_note,
     )
     check(
+        "source-pullback note records S_src[chi] = W[J_chi]",
+        "`S_src[χ] = W[J_χ]`" in pullback_note,
+    )
+    check(
+        "source-pullback note records F_EWPT[chi] = exp[W[J_chi]]",
+        "`F_EWPT[χ] = exp[W[J_χ]]`" in pullback_note,
+    )
+    check(
+        "source-pullback note records the sharpened source law eta = J * exp[W[J_chi] - I_damp[chi]]",
+        "`η = J * exp[W[J_χ] - I_damp[χ]]`" in pullback_note,
+    )
+    check(
         "closure-gate note points to the K_EWPT reduction note",
         "BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md" in baryo_note,
     )
@@ -325,10 +340,22 @@ def part3_eta_bridge(j: float) -> None:
         "closure-gate note points to the source-damping balance note",
         "BARYOGENESIS_SOURCE_DAMPING_BALANCE_NOTE.md" in baryo_note,
     )
+    check(
+        "closure-gate note points to the source-pullback note",
+        "BARYOGENESIS_SOURCE_PULLBACK_NOTE.md" in baryo_note,
+    )
+    check(
+        "closure-gate note records the exact source pullback S_src[chi] = W[J_chi]",
+        "`S_src[χ] = W[J_χ] = log|det(D+J_χ)| - log|det D|`" in baryo_note,
+    )
+    check(
+        "closure-gate note records the sharpened positive-branch bridge eta = J * exp[W[J_chi] - I_damp[chi]]",
+        "`η = J * exp[W[J_χ] - I_damp[χ]]`" in baryo_note,
+    )
 
     info(
         "open baryogenesis object",
-        "the exact coupled-history object J * F_NP[chi(tau)], sharpened on the viable positive branch to J * exp[S_src[chi] - I_damp[chi]], with one source logarithm and one damping functional still open",
+        "the exact coupled-history object J * F_NP[chi(tau)], sharpened on the viable positive branch to J * exp[W[J_chi] - I_damp[chi]], so the source law is fixed and the remaining openness sits in the same-surface source lift/history and the damping functional",
     )
     print()
     print("  Consequence:")
@@ -336,6 +363,9 @@ def part3_eta_bridge(j: float) -> None:
     print("    It requires the missing coupled-history functional")
     print("    F_NP[chi(tau)] in the exact factorized bridge")
     print("    eta = J * F_NP[chi(tau)].")
+    print("    On the viable positive branch, the source side is already fixed by")
+    print("    the exact scalar generator W[J]; what remains open is the retained")
+    print("    source lift/history and the damping functional.")
     print()
 
 
@@ -363,6 +393,8 @@ def main() -> int:
     print("    - the remaining missing object is the exact coupled-history")
     print("      functional F_NP[chi(tau)] in the factorized bridge")
     print("      eta = J * F_NP[chi(tau)]")
+    print("    - on the viable positive branch this is already sharpened to")
+    print("      eta = J * exp[W[J_chi] - I_damp[chi]]")
     print()
     print(f"  TOTAL: PASS = {PASS}, FAIL = {FAIL}")
     return 0 if FAIL == 0 else 1

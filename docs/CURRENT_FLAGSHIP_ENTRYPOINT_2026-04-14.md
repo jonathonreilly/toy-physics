@@ -116,6 +116,9 @@ packaging.
   and the resulting exact logarithmic balance between source and damping
   recorded in
   [BARYOGENESIS_SOURCE_DAMPING_BALANCE_NOTE.md](BARYOGENESIS_SOURCE_DAMPING_BALANCE_NOTE.md)
+  and the resulting exact source-side pullback to the unique lattice scalar
+  generator recorded in
+  [BARYOGENESIS_SOURCE_PULLBACK_NOTE.md](BARYOGENESIS_SOURCE_PULLBACK_NOTE.md)
 - bounded secondary predictions already on `main`, including proton lifetime,
   CKM neutron EDM, vacuum critical stability, benchmark gravitational
   decoherence, BH entropy, and monopole mass

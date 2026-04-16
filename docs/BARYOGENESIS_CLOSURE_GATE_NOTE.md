@@ -193,6 +193,14 @@ The scalar-side part of that object is now much sharper than before:
   `η = J * exp[S_src[χ] - I_damp[χ]]`
   with fixed retained target
   `S_src[χ] - I_damp[χ] = log(η_obs / J) = -10.904606206411`
+- the source logarithm in that balance is no longer a separate open law:
+  on the retained same-surface scalar lift `χ -> J_χ`, it is exactly the
+  pullback of the unique lattice scalar generator
+  `S_src[χ] = W[J_χ] = log|det(D+J_χ)| - log|det D|`
+  so the positive-branch bridge sharpens further to
+  `η = J * exp[W[J_χ] - I_damp[χ]]`
+  as recorded in
+  [BARYOGENESIS_SOURCE_PULLBACK_NOTE.md](./BARYOGENESIS_SOURCE_PULLBACK_NOTE.md)
 - the remaining scalar-side question is therefore not just screening by
   itself, but whether there is additional same-surface bosonic structure or
   genuinely different finite-`T` dynamics beyond the old route-history ansatz
@@ -201,6 +209,11 @@ It is cleaner to say:
 
 > baryogenesis currently reduces to one open coupled-history functional
 > `F_NP[χ(τ)]` on the retained scalar source lane
+
+and, on the viable positive branch, more sharply:
+
+> baryogenesis currently reduces to one exact source-generator pullback
+> `W[J_χ]` and one open damping functional `I_damp[χ]`
 
 than to pretend the lane is either already closed or still missing all three
 Sakharov ingredients.
