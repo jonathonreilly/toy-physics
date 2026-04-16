@@ -7,14 +7,15 @@
 
 ## Result
 
-Starting from a product state on the 4-site staggered lattice, the
-framework's own Hamiltonian (staggered hopping + periodic Poisson gravity)
-dynamically produces maximal CHSH Bell violation:
+Starting from a product state on a 4-site staggered lattice, the
+framework's Poisson gravitational coupling dynamically produces CHSH
+Bell violation with proper local bipartition:
 
-| Route | |S| | Classical bound | Tsirelson | Parameters |
+| Route | |S| | Classical bound | Tsirelson (2.828) | Parameters |
 |---|---|---|---|---|
-| Dynamical (product -> evolve) | **2.828** | 2.0 | 2.828 (saturated) | m=0.5, G=10, t=6.0 |
-| Ground state | **2.051** | 2.0 | — | m=0.5, G=20 |
+| Dynamical (product -> evolve) | **2.828** | 2.0 | 99.99% | m=0.5, G=10, t=6.0 |
+| Ground state | **2.051** | 2.0 | 6.2% | m=0.5, G=20 |
+| G=0 null control | **2.000** | 2.0 | 0% (no violation) | any m |
 
 ## Valid Alice/Bob factorization
 
@@ -57,8 +58,10 @@ Cl(3) on Z^3 (framework axiom)
   +---> periodic Poisson coupling (D5, self-consistent field)
   |       |
   |       +---> product initial state
+  |       +---> Poisson coupling is the ONLY Alice-Bob link
+  |       |     (cross-boundary hopping excluded in sector)
   |       +---> dynamics create entanglement across Alice-Bob cut
-  |       +---> CHSH = 2*sqrt(2) at t = 6.0
+  |       +---> CHSH -> 2*sqrt(2) at t = 6.0
   |
   +---> ground state with Poisson coupling
           +---> CHSH = 2.051 at G = 20
@@ -72,7 +75,7 @@ Cl(3) on Z^3 (framework axiom)
 4. **Evolution:** staggered Hamiltonian with Poisson coupling in the
    Alice-1-Bob-1 sector (proper tensor product factorization)
 5. **Measurement:** local sublattice Pauli operators per party
-6. **Result:** |S| = 2.828 at t = 6.0 (Tsirelson saturated)
+6. **Result:** |S| = 2.828 at t = 6.0 (99.99% of Tsirelson bound)
 
 ## What is framework-native
 
@@ -107,31 +110,46 @@ entanglement source.
 
 ## Honest boundaries
 
-- The lattice is 4 sites (the minimal Bell configuration). Scaling to
-  larger lattices has not been tested in this script.
-- The sector restriction (Alice-1-Bob-1) excludes leaking amplitude.
-  On the full unrestricted lattice, the sector weight and the effect
-  of cross-boundary hopping need further study.
-- The Poisson Green's function used is the 1D periodic form. The
-  retained 3D surface (Z^3 Poisson/Newton) has not been tested here.
-- The Tsirelson saturation at G=10 occurs at a specific evolution time
-  (t=6.0). The violation oscillates with time; it is not a steady state.
+- **Minimal lattice:** 4 sites (the minimal Bell configuration). Scaling
+  to larger lattices has not been tested.
+- **Sector restriction:** the Alice-1-Bob-1 sector excludes cross-boundary
+  hopping (site 1↔2, site 3↔0). This is physically analogous to a Bell
+  test where particles stay in their respective labs. The Poisson
+  interaction is the ONLY Alice-Bob coupling in this sector.
+- **1D periodic, not Z^3:** the Poisson Green's function is the 1D
+  periodic form (D5 applied to Z^1). The retained publication surface
+  uses Z^3 with 1/r Poisson/Newton. The 1D result is framework-native
+  (D5 holds on any graph) but not on the publication surface.
+- **Effective Ising model:** in the sector, the Poisson coupling reduces
+  to an Ising interaction J*σ_z^A ⊗ σ_z^B with J = -G/16. The dynamics
+  are those of the transverse-field Ising model, which is well-known to
+  produce entanglement. The framework contribution is deriving J from the
+  Poisson Green's function.
+- **Time-dependent:** the dynamical violation oscillates; it is not a
+  steady state. The near-Tsirelson value at t=6.0 is a peak, not an
+  equilibrium.
+- **The ground-state violation is modest** (|S| = 2.051, 6% of Tsirelson)
+  and occurs only at moderate-to-strong coupling (G ≥ 5).
 
 ## What this adds
 
-This completes the quantum nonlocality chain with a valid Bell test:
+Demonstrates CHSH Bell violation with a valid local bipartition on
+a minimal lattice, using framework-native ingredients:
 
 - **Local tensor product** → proper Alice/Bob factorization
 - **Commuting local algebras** → [O_A, O_B] = 0 verified
-- **Framework dynamics** → product state → CHSH = 2√2
-- **Gravitational interaction** → the entanglement source is Poisson coupling
+- **Framework dynamics** → product state → CHSH near 2√2
+- **Gravitational interaction** → Poisson coupling is the sole
+  entanglement source (G=0 gives exactly |S|=2, no violation)
 
 Previously retained:
 - Born rule I_3 = 0 (pairwise interference)
 - Gravitational entanglement (BMV-like, δS > 0)
 
-Now also retained:
-- CHSH Bell violation with proper local bipartition
+This result adds:
+- Explicit CHSH Bell violation with proper local bipartition
+- Identification of Poisson coupling as the Bell-violation mechanism
+- G=0 → |S|=2.000 null control confirming gravity is required
 
 ## Reproducibility
 

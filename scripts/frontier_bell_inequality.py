@@ -17,10 +17,11 @@ Bell test construction:
     commute by construction.
   - Alice's qubit: the sublattice Pauli algebra on her pair (Z_A, X_A).
   - Bob's qubit: the sublattice Pauli algebra on his pair (Z_B, X_B).
-  - The nearest-neighbor Hamiltonian couples Alice's and Bob's regions
-    through the boundary link (site 1 -> site 2), creating entanglement.
-  - Gravitational interaction (Poisson coupling) provides additional
-    entanglement through the self-consistent field.
+  - In the fixed-particle-number sector, cross-boundary hopping is
+    excluded (fermions stay in their party's region). The ONLY coupling
+    between Alice and Bob is the Poisson gravitational interaction.
+  - At G=0, |S| = 2.000 exactly (classical bound, no violation).
+  - At G>0, the Poisson coupling creates entanglement -> |S| > 2.
 
 Protocol:
   1. Prepare a product state (one fermion per party, each on even site)
