@@ -61,8 +61,9 @@ question:
 
 Any further positive closure would require:
 
-- genuinely new dynamics, or
-- a further admitted extension
+- genuinely new dynamics selecting nontrivial values on the native
+  `C3`-character holonomy family, or
+- a further admitted extension beyond the current exact bank
 
 ## Verification
 

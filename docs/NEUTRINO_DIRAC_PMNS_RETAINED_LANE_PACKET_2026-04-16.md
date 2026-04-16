@@ -49,6 +49,8 @@ surface derived from the sole axiom `Cl(3)` on `Z^3`.
   [PMNS_TWISTED_FLUX_TRANSFER_HOLONOMY_BOUNDARY_NOTE.md](./PMNS_TWISTED_FLUX_TRANSFER_HOLONOMY_BOUNDARY_NOTE.md)
 - Three-flux holonomy closure:
   [PMNS_THREE_FLUX_HOLONOMY_CLOSURE_NOTE.md](./PMNS_THREE_FLUX_HOLONOMY_CLOSURE_NOTE.md)
+- Exact `C3`-character holonomy closure:
+  [PMNS_C3_CHARACTER_HOLONOMY_CLOSURE_NOTE.md](./PMNS_C3_CHARACTER_HOLONOMY_CLOSURE_NOTE.md)
 - Anomaly-forced `3+1` retarded transport / projection boundary:
   [PMNS_ANOMALY_FORCED_3PLUS1_RETARDED_TRANSPORT_PROJECTION_BOUNDARY_NOTE.md](./PMNS_ANOMALY_FORCED_3PLUS1_RETARDED_TRANSPORT_PROJECTION_BOUNDARY_NOTE.md)
 
@@ -146,9 +148,12 @@ nontrivial retained PMNS values.
 - Exact twisted-flux / transfer holonomy theorem showing that this route
   recovers `(xbar, ybar, phi)` exactly but still leaves a `2`-real kernel on
   the reduced graph-first oriented-cycle family
-- Exact three-flux holonomy closure theorem showing that a generic three-flux
+- Exact three-flux holonomy closure theorem showing that a three-holonomy
   family removes that `2`-real kernel and reconstructs the reduced cycle
   values `(u,v,w)` exactly
+- Exact `C3`-character holonomy closure theorem showing that the exact
+  coordinate-cycle symmetry already supplies a canonical native three-mode
+  holonomy family, so the reduced cycle values close on an exact native route
 - Exact anomaly-forced `3+1` retarded transport / projection boundary showing
   that the lift is nontrivial upstairs but projects back to the same free
   retained pack
@@ -166,12 +171,13 @@ graph-first cycle channel. The newest route attacks sharpen the next step:
 graph-first frame-fixing and projected-commutant data are not enough by
 themselves; the canonical sole-axiom `hw=1` source-inserted /
 graph-first-transferred pack stays trivial; one-angle twisted flux holonomy
-improves the native value law only to `(xbar, ybar, phi)`; a generic
-three-flux family then closes the reduced cycle values `(u,v,w)` exactly on
-that route; and the anomaly-forced `3+1` retarded lift dies under retained
+improves the native value law only to `(xbar, ybar, phi)`; the exact `C3`
+character triple then closes the reduced cycle values `(u,v,w)` on a native
+route; and the anomaly-forced `3+1` retarded lift dies under retained
 projection. So the current exact bank no longer has a live retained PMNS-side
-loophole on this lane, but full sole-axiom closure is still not claimed because
-that three-flux family is not yet derived from `Cl(3)` on `Z^3` alone.
+loophole on this lane. Full sole-axiom closure is still not claimed because
+the sole axiom still does not produce nontrivial values on that native
+character-holonomy family.
 
 ## Representative Runners
 - [frontier_pmns_full_microscopic_operator_to_pair.py](/Users/jonBridger/Toy%20Physics-neutrino-majorana/scripts/frontier_pmns_full_microscopic_operator_to_pair.py)
@@ -194,4 +200,5 @@ that three-flux family is not yet derived from `Cl(3)` on `Z^3` alone.
 - [frontier_pmns_sole_axiom_hw1_source_transfer_boundary.py](../scripts/frontier_pmns_sole_axiom_hw1_source_transfer_boundary.py)
 - [frontier_pmns_twisted_flux_transfer_holonomy_boundary.py](../scripts/frontier_pmns_twisted_flux_transfer_holonomy_boundary.py)
 - [frontier_pmns_three_flux_holonomy_closure.py](../scripts/frontier_pmns_three_flux_holonomy_closure.py)
+- [frontier_pmns_c3_character_holonomy_closure.py](../scripts/frontier_pmns_c3_character_holonomy_closure.py)
 - [frontier_pmns_anomaly_forced_3plus1_retarded_transport_projection_boundary.py](../scripts/frontier_pmns_anomaly_forced_3plus1_retarded_transport_projection_boundary.py)

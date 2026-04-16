@@ -60,15 +60,20 @@ So:
 This upgrades the twisted-flux route from a partial value law to a positive
 closure route on the reduced PMNS cycle family.
 
+It is now strengthened further by
+[PMNS_C3_CHARACTER_HOLONOMY_CLOSURE_NOTE.md](./PMNS_C3_CHARACTER_HOLONOMY_CLOSURE_NOTE.md),
+which shows that the exact `C3` character triple already supplies a canonical
+native three-mode holonomy family. So the result below can now be read in two
+ways:
+
+- as a generic three-flux closure theorem, and
+- more strongly, as a native `C3`-character closure theorem on the retained
+  graph-first cycle frame.
+
 It does **not** by itself prove full sole-axiom neutrino closure from
-`Cl(3)` on `Z^3` alone. It proves something narrower and useful:
-
-- once a generic three-flux family is admitted on the graph-first cycle frame,
-  the reduced PMNS cycle values close exactly.
-
-So the remaining blocker is no longer the reduced cycle values on that route.
-It is whether that three-flux family is itself derived from the sole axiom or
-must be treated as a further admitted extension.
+`Cl(3)` on `Z^3` alone. What remains blocked after the stronger `C3`-character
+upgrade is no longer the readout family itself, but the sole-axiom production
+of **nontrivial values** on that native family.
 
 ## Verification
 
