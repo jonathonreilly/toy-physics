@@ -1,102 +1,84 @@
 # Nature-Grade Index — Session Contribution
 
 **Branch:** `claude/main-derived`
-**Date:** 2026-04-16
+**Date:** 2026-04-16 (post-3x-check)
+**Bar:** strictly unbounded
 
-Only work produced by me this session. Existing framework content on
-`origin/main` is not duplicated here.
-
-## Positive airtight derivations
+## Single surviving claim
 
 ### P1. K_R Tensor Carrier Vanishes on A1 Backgrounds
 
-The tensor carrier K_R defined on the seven-site star support has
-components that are inner products with non-A1 S_3 irrep basis vectors
-(E and T1). By Schur orthogonality, K_R(q) = 0 identically for any q
-in the A1 subspace.
+**Theorem:** On the seven-site star support carrying an S_3 representation
+that decomposes as 2·A1 + E + T1, the tensor carrier
+```
+K_R(q) = (u_E(q), u_T(q), δ_A1(q)·u_E(q), δ_A1(q)·u_T(q))
+```
+with u_E(q) = ⟨E_x, q⟩ and u_T(q) = ⟨T1_x, q⟩ satisfies
+```
+K_R(q) = 0 for all q ∈ A1 subspace.
+```
 
-- Note: `KR_A1_VANISHING_DERIVED_NOTE.md`
-- Runner: `frontier_KR_A1_vanishing_proof.py`
-- Status: PROVED (30/30 PASS)
-- Method: explicit construction of the 7-dim S_3 decomposition +
-  Schur orthogonality theorem
-- Scope: proves K_R(A1) = 0 algebraically; any downstream application
-  of this vanishing (e.g., in CKM |V_ub| amplitude selection) is a
-  separate claim and is NOT in this note.
+**Proof:** Schur orthogonality. Distinct S_3 irreps are orthogonal as
+submodules. E_x ∈ E irrep and T1_x ∈ T1 irrep, both disjoint from A1.
+Therefore u_E(q) = u_T(q) = 0 for any q ∈ A1, which makes all four
+components of K_R zero.
 
-### P2. Rank-1 + Rank-(n-1) Projector Algebra
+**Status:** unbounded pure-math theorem.
 
-For any n-dim Hilbert space C^n, the rank-1 projector onto a unit
-vector and the rank-(n-1) projector onto its complement satisfy
-standard completeness, idempotency, and trace identities:
-- Tr(P_1) = 1, Tr(P_(n-1)) = n-1
-- weight_1 = 1/n, weight_(n-1) = (n-1)/n
-- P_1 + P_(n-1) = I_n
+**Note:** `KR_A1_VANISHING_DERIVED_NOTE.md`
+**Runner:** `frontier_KR_A1_vanishing_proof.py` — 30/30 PASS
 
-- Note: `PROJECTOR_ALGEBRA_DERIVED_NOTE.md`
-- Runner: `frontier_projector_algebra.py`
-- Status: PROVED (25/25 PASS)
-- Scope caveat: the note proves ONLY the algebra. Identification of
-  the weight 1/6 with the UT CP phase cos²(δ) = 1/6 is a STRUCTURAL
-  claim and is NOT proved here. The note flags this caveat explicitly.
+## Claims removed during triple-check
 
-## Clean negative results
+### P2 (projector algebra) — REMOVED (trivial)
 
-### N1. V_sel-Fermion Coupling Gives Wrong Mass Structure
+Rank-1 + rank-(n-1) projector weights = 1/n and (n-1)/n. Pure textbook
+linear algebra. Removed because the theorem in isolation provides no
+physics content; its value depended on a downstream identification
+(with UT CP phase cos²(δ) = 1/6) that was explicitly disclaimed.
 
-Derive closed-form: the natural coupling L_int = y Σ_i φ_i ψ̄ S_i ψ at
-EWSB vacuum (0, 0, v), under the constraint removing the flat axis-3
-mode, generates an effective hw=1 mass matrix with eigenvalues
-{2α, α, 0} where α = y²/(64v²)². This is a 2+1 pattern with one
-massless state, NOT the observed SM three-generation hierarchy.
+### N1 (V_sel-fermion mass matrix) — REMOVED (derivation gap)
 
-- Note: `NEGATIVE_VSEL_WRONG_MASS_STRUCTURE.md`
-- Method: closed-form algebra (matrix element derivation + eigenvalue
-  computation)
-- Status: RIGOROUS NEGATIVE — natural minimal V_sel-fermion coupling
-  insufficient for SM mass structure
+Claimed eigenvalue structure {2α, α, 0} for the hw=1 sector from one-
+loop δφ self-energy. Error: with diagonal δφ propagators
+Π_{ij} = δ_{ij}/m²_i at the EWSB vacuum, off-diagonal contributions
+vanish (since S_i² = I gives only diagonal delta_{ab} contributions).
+The eigenvalue claim is not rigorously derived from the stated
+mechanism.
 
-### N2. y_t = g_s/√6 Not Derivable from Standard Ward Identities
+### N2 (y_t = g_s/√6 not derivable) — REMOVED (scope-bounded)
 
-Four standard algebraic derivation attempts fail:
-1. Gauge Ward identity — doesn't relate y_t to g_s
-2. Chiral Ward identity — gives anomaly, not coupling ratio
-3. Clebsch-Gordan on Q_L = (2, 3) — gives y_t = g_s/√2, wrong
-4. Gauge-Yukawa universality on quark block — gives y_t = 2g_s, wrong
+Claimed no derivation via four standard Ward-identity / CG /
+universality methods. Removed because the scope "within four standard
+methods" is itself a bridge — a reviewer can always posit a fifth
+non-standard approach that might yield √6.
 
-None produces the framework's claimed √6 factor.
+## What this branch is, honestly
 
-- Note: `NEGATIVE_YT_SQRT_6_NOT_DERIVED.md`
-- Method: explicit algebraic attempt along four standard routes
-- Status: RIGOROUS NEGATIVE within standard machinery; doesn't rule
-  out non-standard mechanisms (compositeness, etc.), which would
-  require a separate derivation program.
+One small unbounded lemma. Not a flagship submission.
+
+## What this branch is NOT
+
+- Not a CKM derivation
+- Not a Yukawa / mass derivation
+- Not a replacement for existing main content
+- Not sufficient for Nature-grade submission on its own merit
+
+## Existing main content (not duplicated here)
+
+- CMT partition identity
+- V_sel EWSB selector derivation (63/63 PASS on main)
+- Anomaly-forced 3+1
+- Native SU(2), graph-first SU(3)
+- Three-generation observable algebra
+- Discrete 3+1 GR + UV-finite QG chain
+- CPT, I_3=0, emergent Lorentz
+- Recent plaquette work (separate review track)
+
+These stand on their own and are not affected by this branch.
 
 ## Reviewer verification
 
 ```bash
-python3 scripts/frontier_KR_A1_vanishing_proof.py       # PASS=30
-python3 scripts/frontier_projector_algebra.py           # PASS=25
+python3 scripts/frontier_KR_A1_vanishing_proof.py  # PASS=30 FAIL=0
 ```
-
-Exit 0 on success, nonzero otherwise.
-
-## Relation to the broader framework
-
-The existing framework on `origin/main` contains many already-airtight
-results (CMT partition identity, V_sel EWSB selector, anomaly-forced
-3+1, native SU(2), graph-first SU(3), three-generation observable
-algebra, physical-lattice invariants, discrete 3+1 GR on the project
-route, UV-finite QG chain, CPT, I_3=0, emergent Lorentz, etc.). This
-branch does not touch or reference those — they stand on their own.
-
-My contributions add two small theorems (P1, P2) as building blocks
-and two clean negatives (N1, N2) that identify where the framework's
-Yukawa/mass/CKM sector currently rests on structural identifications
-rather than rigorous derivations.
-
-## What this branch is NOT
-
-Not a flagship paper. Not a CKM derivation. Not a fermion mass
-derivation. Not a replacement for the main-repo work. A narrow,
-reviewer-hardened session contribution.
