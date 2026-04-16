@@ -58,6 +58,7 @@ For the explicit package boundary, use:
   physical-lattice species structure + no-rooting in Hamiltonian `Cl(3)` +
   exact retained-generation no-proper-quotient closure + anomaly-forced
   full-framework chirality, not a conventional regulator loophole theorem
+  and not an equivalent regulator reading of the same accepted stack
 
 The main gravity framing point is simple: the capstone claim is exact full
 discrete `3+1` GR on the project route together with exact chosen-target
@@ -110,8 +111,10 @@ Current status from that stack:
 - retained three-generation matter structure is now closed on the retained
   generation surface: the exact orbit algebra `8 = 1 + 1 + 3 + 3` survives as
   physical species structure, the retained `hw=1` observable algebra is
-  irreducible, and no proper exact quotient/rooting survives there; the
-  physical-lattice premise itself remains explicit
+  irreducible, no proper exact quotient/rooting survives there, and
+  same-stack regulator reinterpretation is blocked because it requires extra
+  continuum/rooting/RG structure absent from the accepted framework stack;
+  the physical-lattice premise itself remains explicit
 - derived-with-inherited-explicit-systematic Higgs / vacuum package:
   canonical `m_H = 125.1 GeV` (framework-side 3-loop route),
   with retained `119.8 GeV` (2-loop support route),

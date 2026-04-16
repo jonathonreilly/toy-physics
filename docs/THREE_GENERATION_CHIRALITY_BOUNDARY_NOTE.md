@@ -39,6 +39,9 @@ This is the safe reviewer-facing boundary for the current paper.
 5. The full-framework chirality claim is carried by anomaly-forced time and
    the one-generation matter-closure theorem, not by a purely spatial
    projection argument.
+6. Regulator reinterpretation is not an equivalent reading of the same
+   accepted framework stack; it requires extra continuum / rooting /
+   renormalization structure not present in that stack.
 
 ### Not claimed
 
@@ -75,9 +78,12 @@ It is claiming a different theory surface.
    carries the exact retained-generation no-proper-quotient theorem.
 3. [GENERATION_AXIOM_BOUNDARY_NOTE.md](./GENERATION_AXIOM_BOUNDARY_NOTE.md)
    isolates the physical-lattice axiom boundary.
-4. [ONE_GENERATION_MATTER_CLOSURE_NOTE.md](./ONE_GENERATION_MATTER_CLOSURE_NOTE.md)
+4. [PHYSICAL_LATTICE_NECESSITY_NOTE.md](./PHYSICAL_LATTICE_NECESSITY_NOTE.md)
+   closes the no-same-stack regulator reinterpretation boundary while keeping
+   the physical-lattice premise itself explicit.
+5. [ONE_GENERATION_MATTER_CLOSURE_NOTE.md](./ONE_GENERATION_MATTER_CLOSURE_NOTE.md)
    carries the full-framework chirality / right-handed completion claim.
-5. [ANOMALY_FORCES_TIME_THEOREM.md](./ANOMALY_FORCES_TIME_THEOREM.md)
+6. [ANOMALY_FORCES_TIME_THEOREM.md](./ANOMALY_FORCES_TIME_THEOREM.md)
    supplies the single-clock `3+1` and chirality step.
 
 ## Paper-safe wording
@@ -87,10 +93,13 @@ It is claiming a different theory surface.
 > + 3`; rooting is not a well-defined operation in Hamiltonian `Cl(3)` on
 > `Z^3`; and the retained `hw=1` triplet already carries an exact irreducible
 > generation algebra, so no proper exact quotient survives on that retained
-> surface. The triplet sectors are therefore retained as physical species
-> structure rather than taste artifacts on the framework surface. Chirality is
-> not claimed on the pure spatial surface alone, but in the full framework
-> through anomaly-forced time and the one-generation matter-closure theorem.
+> surface. Regulator reinterpretation is not an equivalent reading of the same
+> accepted framework stack because it requires extra continuum/rooting/RG
+> structure not present there. The triplet sectors are therefore retained as
+> physical species structure rather than taste artifacts on the framework
+> surface. Chirality is not claimed on the pure spatial surface alone, but in
+> the full framework through anomaly-forced time and the one-generation
+> matter-closure theorem.
 
 ## Validation
 
@@ -98,6 +107,7 @@ It is claiming a different theory surface.
 - [frontier_generation_rooting_undefined.py](./../scripts/frontier_generation_rooting_undefined.py)
 - [frontier_three_generation_observable_theorem.py](./../scripts/frontier_three_generation_observable_theorem.py)
 - [frontier_generation_axiom_boundary.py](./../scripts/frontier_generation_axiom_boundary.py)
+- [frontier_physical_lattice_necessity.py](./../scripts/frontier_physical_lattice_necessity.py)
 - [frontier_anomaly_forces_time.py](./../scripts/frontier_anomaly_forces_time.py)
 
 Current main-branch runner state:
@@ -106,3 +116,4 @@ Current main-branch runner state:
 - `frontier_generation_rooting_undefined.py`: `PASS=37`, `FAIL=0`
 - `frontier_three_generation_observable_theorem.py`: `PASS=47`, `FAIL=0`
 - `frontier_generation_axiom_boundary.py`: `PASS=31`, `FAIL=0`
+- `frontier_physical_lattice_necessity.py`: closed no-same-stack regulator reinterpretation; residual premise necessity still explicit

@@ -344,8 +344,12 @@ This is still not a claim that a conventional rooted staggered regulator has
 evaded Nielsen-Ninomiya [8]. On the framework surface, rooting is undefined in
 Hamiltonian $Cl(3)$ on $Z^3$, the retained `hw=1` observable algebra admits no
 proper exact quotient, and chirality is supplied only in the full framework
-through anomaly-forced time and the one-generation closure theorem. Detailed
-inter-family hierarchy and flavor numerics are separate questions.
+through anomaly-forced time and the one-generation closure theorem. On the
+accepted stack this is also not an equivalent regulator reading of the same
+theory, because a regulator reinterpretation requires an added continuum
+family, rooting machinery, and an external RG/EFT layer not present in that
+stack. Detailed inter-family hierarchy and flavor numerics are separate
+questions.
 
 Figure 4 shows the exact orbit structure together with the physical-lattice
 interpretation that sets the paper’s three-generation claim boundary.

@@ -33,6 +33,10 @@ This is the safe retained statement used in the current paper package.
 4. `frontier_generation_axiom_boundary.py` isolates the only non-derived
    premise in the physical interpretation: once the lattice-is-physical axiom
    is accepted, the triplet sectors are physical species structure in the theory.
+5. `frontier_physical_lattice_necessity.py` closes the narrower but important
+   boundary result that regulator reinterpretation is not an equivalent reading
+   of the same accepted framework stack; it still leaves the physical-lattice
+   premise itself explicit rather than derived.
 
 ## Boundary
 
@@ -48,7 +52,7 @@ The retained statement is structural, not maximal:
 
 The remaining open work now belongs to:
 
-- the global physical-lattice boundary
+- full axiom-internal derivation of the global physical-lattice boundary
 - generation hierarchy / flavor structure
 - full chirality / mass-spectrum tasks beyond the retained generation surface
 
@@ -56,6 +60,8 @@ For the clean reviewer-facing chirality / anti-rooting boundary, see
 [THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md](./THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md).
 For the exact retained-generation algebra theorem, see
 [THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md](./THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md).
+For the exact no-same-stack regulator reinterpretation closure, see
+[PHYSICAL_LATTICE_NECESSITY_NOTE.md](./PHYSICAL_LATTICE_NECESSITY_NOTE.md).
 
 ## Validation
 
@@ -63,6 +69,7 @@ For the exact retained-generation algebra theorem, see
 - [frontier_generation_rooting_undefined.py](./../scripts/frontier_generation_rooting_undefined.py)
 - [frontier_generation_axiom_boundary.py](./../scripts/frontier_generation_axiom_boundary.py)
 - [frontier_three_generation_observable_theorem.py](./../scripts/frontier_three_generation_observable_theorem.py)
+- [frontier_physical_lattice_necessity.py](./../scripts/frontier_physical_lattice_necessity.py)
 
 Current main-branch runner state:
 
@@ -70,3 +77,4 @@ Current main-branch runner state:
 - `frontier_generation_rooting_undefined.py`: `PASS=37`, `FAIL=0`
 - `frontier_generation_axiom_boundary.py`: `PASS=31`, `FAIL=0`
 - `frontier_three_generation_observable_theorem.py`: `PASS=47`, `FAIL=0`
+- `frontier_physical_lattice_necessity.py`: closed no-same-stack regulator reinterpretation; residual premise necessity still explicit
