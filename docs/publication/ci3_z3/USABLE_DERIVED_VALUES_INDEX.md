@@ -28,14 +28,14 @@ Use this file when the question is:
 
 | Quantity | Canonical value on `main` | Claim class | Import class | Safe reuse | Authority |
 |---|---:|---|---|---|---|
-| plaquette `<P>` | `0.5934` | same-surface evaluated / derived | current canonical package value; exact bridge-support stack now includes the accepted Wilson gauge-source temporal-completion theorem, the exact distinct-shell theorem for connected plaquette shells, and an exact obstruction to the naive constant-lift law, but the mixed repeated-plaquette cumulants and exact higher-order `beta_eff` coefficients are not closed and repo-wide numeric migration is therefore not justified yet | tadpole improvement, coupling map, hierarchy baseline | [PLAQUETTE_SELF_CONSISTENCY_NOTE.md](../../PLAQUETTE_SELF_CONSISTENCY_NOTE.md), [GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md](../../GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md), [GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md](../../GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md), [GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md](../../GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md), [GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md](../../GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md) |
+| plaquette `<P>` | `0.5934` | same-surface evaluated / derived | current canonical package value; exact bridge-support stack now includes the accepted Wilson gauge-source temporal-completion theorem, the exact distinct-shell theorem, the exact mixed repeated-plaquette audit and first nonlinear `beta_eff` coefficient, and an exact obstruction to the naive constant-lift law, but the full nonperturbative `beta`-dependent reduction at `beta = 6` is still not closed and repo-wide numeric migration is therefore not justified yet | tadpole improvement, coupling map, hierarchy baseline | [PLAQUETTE_SELF_CONSISTENCY_NOTE.md](../../PLAQUETTE_SELF_CONSISTENCY_NOTE.md), [GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md](../../GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md), [GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md](../../GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md), [GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md](../../GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md), [GAUGE_VACUUM_PLAQUETTE_MIXED_CUMULANT_AUDIT_NOTE.md](../../GAUGE_VACUUM_PLAQUETTE_MIXED_CUMULANT_AUDIT_NOTE.md), [GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md](../../GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md) |
 | `u_0 = <P>^{1/4}` | `0.877681381199` | retained / derived | same-surface plaquette derivative | coupling map, hierarchy, EW, Yukawa | [PLAQUETTE_SELF_CONSISTENCY_NOTE.md](../../PLAQUETTE_SELF_CONSISTENCY_NOTE.md) |
 | `alpha_LM` | `0.0906678360173` | retained / derived | same-surface plaquette derivative | hierarchy baseline, taste thresholds, Planck-to-IR running | [PLAQUETTE_SELF_CONSISTENCY_NOTE.md](../../PLAQUETTE_SELF_CONSISTENCY_NOTE.md) |
 | `R_conn` | `8/9 = 0.888888888889` | derived / retained support | zero-input structural at leading order + bounded `O(1/N_c^4)` correction | EW color projection, Yukawa color projection, taste weights | [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md) |
 | `sqrt(R_conn)` | `sqrt(8/9) = 0.942809041582` | derived / retained support | zero-input structural at leading order + bounded `O(1/N_c^4)` correction propagated through the square root | Yukawa color projection, top/Higgs support lanes | [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md), [YUKAWA_COLOR_PROJECTION_THEOREM.md](../../YUKAWA_COLOR_PROJECTION_THEOREM.md) |
 | APBC selector factor | `(7/8)^(1/4) = 0.967168210134` | exact / structural | zero-input structural | hierarchy selector and pre/post-selector normalization | [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](../../OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md), [HIERARCHY_BOSONIC_BILINEAR_SELECTOR_NOTE.md](../../HIERARCHY_BOSONIC_BILINEAR_SELECTOR_NOTE.md) |
 | pre-selector hierarchy baseline `M_Pl * alpha_LM^16` | `254.643210673818 GeV` | retained / derived | same-surface plaquette derivative + framework `M_Pl` | hierarchy support analyses and endpoint comparisons | [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](../../OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md) |
-| electroweak scale `v` | `246.282818290129 GeV` | retained / derived | same-surface plaquette derivative + framework `M_Pl` | canonical EW scale across the repo | [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](../../OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md), [YT_ZERO_IMPORT_CHAIN_NOTE.md](../../YT_ZERO_IMPORT_CHAIN_NOTE.md) |
+| electroweak scale `v` | `246.282818290129 GeV` | retained / derived | same-surface plaquette derivative + framework `M_Pl` | canonical EW scale across the repo | [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](../../OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md) |
 | `alpha_s(v)` | `0.103303816122` | retained / derived | same-surface plaquette derivative | strong-coupling lane, CKM, confinement, Yukawa/Higgs support | [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md), [PLAQUETTE_SELF_CONSISTENCY_NOTE.md](../../PLAQUETTE_SELF_CONSISTENCY_NOTE.md) |
 
 ## B. Retained EW normalization package
@@ -44,14 +44,17 @@ Analytic plaquette support on `main`:
 
 - [GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md](../../GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md)
 - [GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md](../../GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md)
+- [GAUGE_VACUUM_PLAQUETTE_MIXED_CUMULANT_AUDIT_NOTE.md](../../GAUGE_VACUUM_PLAQUETTE_MIXED_CUMULANT_AUDIT_NOTE.md)
 - [GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md](../../GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md)
 - [SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md](../../SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md)
 
 Those notes now provide a sharp analytic support candidate
 `P_cand(6) = 0.593530679977098`, but the canonical reusable plaquette value
-remains `<P> = 0.5934` because the naive constant-lift law is now ruled out and
-the final physical-vacuum reduction is still an open `beta`-dependent theorem
-rather than a closed exact route.
+remains `<P> = 0.5934` because the naive constant-lift law is ruled out and,
+although the onset theorem
+`beta_eff(beta) = beta + beta^5 / 26244 + O(beta^6)` is now exact, the final
+physical-vacuum reduction at `beta = 6` is still an open nonperturbative
+`beta`-dependent theorem rather than a closed exact route.
 
 | Quantity | Canonical value on `main` | Claim class | Import class | Safe reuse | Authority |
 |---|---:|---|---|---|---|
@@ -77,10 +80,10 @@ These are usable, but only with their qualifiers attached.
 
 | Quantity | Canonical value on `main` | Claim class | Import class | Safe reuse | Authority |
 |---|---:|---|---|---|---|
-| `y_t(v)` | `0.9176` | derived with explicit systematic | zero SM imports, explicit package-native bridge budget | YT/top/Higgs reuse with the named budget carried explicitly | [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](../../YT_ZERO_IMPORT_AUTHORITY_NOTE.md), [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) |
-| `m_t(pole)` 2-loop | `172.57 GeV` | derived with explicit systematic | inherits explicit `y_t` budget | top-mass reuse with the named budget carried explicitly | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) |
-| `m_t(pole)` 3-loop | `173.10 GeV` | derived with explicit systematic | inherits explicit `y_t` budget | top-mass reuse with the named budget carried explicitly | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) |
-| `m_H` framework-side 3-loop | `125.1 GeV` | derived with inherited explicit systematic | inherits explicit `y_t` budget | Higgs/vacuum reuse with inherited `y_t` budget carried explicitly | [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](../../HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md) |
+| `y_t(v)` | `0.9176` | bounded / conditional | zero SM imports on the downstream readout; accepted lattice-scale `1/sqrt(6)` boundary plus explicit downstream transport budget | YT/top/Higgs reuse only with the accepted boundary and bounded qualifier carried explicitly | [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](../../YT_ZERO_IMPORT_AUTHORITY_NOTE.md), [YT_SQRT6_BOUNDARY_STATUS_NOTE.md](../../YT_SQRT6_BOUNDARY_STATUS_NOTE.md) |
+| `m_t(pole)` 2-loop | `172.57 GeV` | bounded / conditional | inherits the bounded `y_t` boundary and transport budget | top-mass reuse only with the bounded qualifier carried explicitly | [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](../../YT_ZERO_IMPORT_AUTHORITY_NOTE.md), [YT_TRANSPORT_BUDGET_NOTE.md](../../YT_TRANSPORT_BUDGET_NOTE.md) |
+| `m_t(pole)` 3-loop | `173.10 GeV` | bounded / conditional | inherits the bounded `y_t` boundary and transport budget | top-mass reuse only with the bounded qualifier carried explicitly | [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](../../YT_ZERO_IMPORT_AUTHORITY_NOTE.md), [YT_TRANSPORT_BUDGET_NOTE.md](../../YT_TRANSPORT_BUDGET_NOTE.md) |
+| `m_H` framework-side 3-loop | `125.1 GeV` | bounded / conditional | inherits the bounded `y_t` boundary and transport budget | Higgs/vacuum reuse only with the bounded qualifier carried explicitly | [HIGGS_VACUUM_BOUNDED_STATUS_NOTE.md](../../HIGGS_VACUUM_BOUNDED_STATUS_NOTE.md), [HIGGS_MASS_BOUNDARY_NOTE.md](../../HIGGS_MASS_BOUNDARY_NOTE.md) |
 | `sqrt(sigma)` | `465 MeV` | bounded / derived | retained `alpha_s` + EFT bridge | bounded confinement phenomenology only | [CONFINEMENT_STRING_TENSION_NOTE.md](../../CONFINEMENT_STRING_TENSION_NOTE.md) |
 
 ## Rule for downstream work

@@ -174,9 +174,9 @@ def main() -> int:
         detail="any connected closed vacuum shell contains a seed plaquette plus at least five others, and the cube boundary realizes size six",
     )
     check(
-        "this exact distinct-shell result does not yet close the full beta_eff law",
+        "this exact distinct-shell result is the geometric input rather than the full beta_eff law",
         True,
-        detail="mixed repeated-plaquette connected-cumulant terms still need a separate audit",
+        detail="the later mixed-cumulant audit closes the onset coefficient, but the full nonperturbative reduction remains open",
         bucket="SUPPORT",
     )
 

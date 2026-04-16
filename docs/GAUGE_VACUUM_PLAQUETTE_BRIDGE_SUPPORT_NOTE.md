@@ -1,8 +1,8 @@
 # Gauge-Vacuum Plaquette Scalar-Bridge Support
 
 **Date:** 2026-04-16
-**Status:** exact local/source/class-level support stack plus exact constant-lift obstruction and exact distinct-shell theorem; the final physical-vacuum reduction remains open
-**Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`, `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`
+**Status:** exact local/source/class-level support stack plus exact constant-lift obstruction, exact distinct-shell theorem, and exact first nonlinear full-vacuum coefficient; the full nonperturbative reduction still remains open
+**Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`, `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py`
 
 ## Question
 
@@ -171,21 +171,25 @@ This sits only `1.3068e-4` (`0.022%`) above the current canonical same-surface
 value `0.5934`, so it remains a very strong support candidate at the framework
 point `beta = 6`.
 
-The new exact distinct-shell theorem now fixes the minimal connected shell
-geometry built from distinct plaquettes:
+The new exact mixed-cumulant audit now sharpens that further:
 
+- there is no nonlocal mixed correction through order `beta^4`;
 - the first distinct connected numerator shell is order `beta^5`;
-- the first connected vacuum shell is order `beta^6`.
+- the only distinct order-`beta^5` survivors are the four elementary cube
+  shells through the observed plaquette;
+- the total first nonlocal coefficient is exactly
+  `4 / 18^5 = 1 / 472392`;
+- equivalently,
+  `beta_eff(beta) = beta + beta^5 / 26244 + O(beta^6)`.
 
 ## Remaining gap
 
-The remaining theorem-grade gap is now sharper:
+The remaining theorem-grade gap is now narrower:
 
-> perform the mixed repeated-plaquette connected-cumulant audit and derive the
-> exact higher-order coefficients of the nontrivial reduction law
-> `P(beta) = P_1plaq(beta_eff(beta))`,
-> rather than the now-ruled-out constant lift
-> `beta_eff(beta) = beta * (3/2) * (2 / sqrt(3))^(1/4)`.
+> derive the full nonperturbative `beta`-dependent reduction law
+> `P(beta) = P_1plaq(beta_eff(beta))`
+> beyond its now-closed small-`beta` onset
+> `beta_eff(beta) = beta + beta^5 / 26244 + O(beta^6)`.
 
 Until that step is closed, the live package should keep the plaquette as:
 
@@ -200,6 +204,7 @@ Current clean read:
 - exact local/source/class-level ingredients: closed
 - exact constant-lift obstruction: closed
 - exact distinct-shell theorem: closed
+- exact first nonlinear full-vacuum coefficient: closed
 - full physical-vacuum reduction to the local one-plaquette response: still open
 - canonical plaquette on the live package: still `0.5934`
 
@@ -215,6 +220,7 @@ python3 scripts/frontier_gauge_scalar_temporal_completion_theorem.py
 python3 scripts/frontier_gauge_vacuum_plaquette_bridge_support.py
 python3 scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py
 python3 scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py
+python3 scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py
 ```
 
 Expected summary:
@@ -224,3 +230,4 @@ Expected summary:
 - bridge support runner: `EXACT PASS=6 SUPPORT=2 FAIL=0`
 - distinct-shell runner: `THEOREM PASS=6 SUPPORT=1 FAIL=0`
 - constant-lift obstruction runner: `THEOREM PASS=6 SUPPORT=1 FAIL=0`
+- mixed-cumulant audit runner: `THEOREM PASS=6 SUPPORT=1 FAIL=0`

@@ -89,6 +89,8 @@ The live repo now also carries a materially stronger exact support stack:
 - exact accepted Wilson gauge-source temporal completion theorem
 - exact distinct-shell theorem for connected plaquette shells on the accepted
   `3 spatial + 1 derived-time` surface
+- exact mixed repeated-plaquette audit and exact first nonlinear coefficient
+  of the full-vacuum reduction law
 - exact scalar `3+1` bridge endpoint ratio
   `A_inf / A_2 = 2 / sqrt(3)`
 - exact plaquette four-link coupling map
@@ -109,6 +111,7 @@ Current authorities for that support stack:
 
 - [GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md)
 - [GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md)
+- [GAUGE_VACUUM_PLAQUETTE_MIXED_CUMULANT_AUDIT_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_MIXED_CUMULANT_AUDIT_NOTE.md)
 - [GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md](./GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md)
 - [GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md)
 - [SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md](./SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md)
@@ -117,6 +120,7 @@ Current support runners:
 
 - `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`
 - `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py`
+- `scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py`
 - `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`
 - `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`
 - `scripts/frontier_scalar_3plus1_temporal_ratio.py`
@@ -125,11 +129,14 @@ The honest live read is now sharper than before:
 
 - the exact class-level bridge ingredients are real
 - the simplest constant multiplicative effective-coupling lift is ruled out
-- the minimal distinct connected shell is now fixed exactly by the cube
-  boundary theorem
-- so the remaining analytic target is a nontrivial `beta`-dependent
-  full-vacuum reduction law with a mixed repeated-plaquette cumulant audit and
-  exact higher-order coefficients, not the old constant-lift ansatz
+- the minimal distinct connected shell is fixed exactly by the cube boundary
+  theorem
+- the first nonlocal full-vacuum coefficient is now fixed exactly by the mixed
+  cumulant audit:
+  `P_full(beta) = P_1plaq(beta) + beta^5 / 472392 + O(beta^6)`
+- so the remaining analytic target is the full nonperturbative
+  `beta`-dependent reduction law, not the old constant-lift ansatz and not the
+  onset coefficient anymore
 
 ## Safe Reuse Rule
 
@@ -149,9 +156,9 @@ with the understanding that the number is:
 ## Scope
 
 This note does **not** by itself upgrade the plaquette to a fully analytic
-physical-vacuum theorem on the live package. It does not migrate the full
-repo-wide numeric package from the historical same-surface value `0.5934` to
-the analytic support value above.
+physical-vacuum theorem at the framework point `beta = 6`. It does not migrate
+the full repo-wide numeric package from the historical same-surface value
+`0.5934` to the analytic support value above.
 
 It claims the narrower and sufficient point needed by the package:
 

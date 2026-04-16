@@ -23,9 +23,9 @@ Equivalently:
   plaquettes;
 - the first connected vacuum shell uses six action plaquettes.
 
-This is a real reusable theorem, but it is **not** yet a full theorem for the
-first nonlinear term of `beta_eff(beta)`, because mixed repeated-plaquette
-clusters still need a connected-cumulant audit.
+This is a real reusable theorem, but it is **not** by itself the full onset
+theorem for `beta_eff(beta)`. That next step is now carried separately by
+[GAUGE_VACUUM_PLAQUETTE_MIXED_CUMULANT_AUDIT_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_MIXED_CUMULANT_AUDIT_NOTE.md).
 
 ## Theorem 1: the minimal distinct shell around a marked plaquette is the cube boundary
 
@@ -76,13 +76,13 @@ So the first connected vacuum shell is order `beta^6`.
 ## What this does not close
 
 - the full analytic reduction law `P_full(beta) = P_1plaq(beta_eff(beta))`
-- the first actual nonlinear coefficient of `beta_eff(beta)`
+- the full nonperturbative continuation of `beta_eff(beta)` to `beta = 6`
 - repo-wide replacement of the current canonical same-surface plaquette value
 
 The open coefficient problem is therefore sharper, but it is still open:
 
-> perform the mixed repeated-plaquette connected-cumulant audit and derive the
-> first genuine higher-order coefficient of the full-vacuum reduction law.
+> extend the now-closed onset theorem beyond its first exact nonlinear
+> coefficient and derive the full nonperturbative reduction law at `beta = 6`.
 
 ## Commands run
 

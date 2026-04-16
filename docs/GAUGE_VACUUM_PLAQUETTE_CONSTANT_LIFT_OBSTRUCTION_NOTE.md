@@ -127,11 +127,10 @@ The remaining exact target is now sharper:
 
 > derive a nontrivial `beta`-dependent reduction law
 > `P(beta) = P_1plaq(beta_eff(beta))`
-> with
-> `beta_eff'(0) = 1`
-> and with the current bridge stack still explaining why
-> `beta_eff(6)` lies close to
-> `6 * (3/2) * (2 / sqrt(3))^(1/4)`.
+> beyond its now-closed onset
+> `beta_eff(beta) = beta + beta^5 / 26244 + O(beta^6)`
+> and with the current bridge stack still explaining the full
+> nonperturbative continuation to `beta = 6`.
 
 ## Why this is useful
 
