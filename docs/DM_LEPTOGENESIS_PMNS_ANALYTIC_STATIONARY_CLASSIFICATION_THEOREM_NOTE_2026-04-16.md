@@ -93,7 +93,8 @@ a real KKT problem on the exact reduced surface.
 
 The existing exact reduced-surface theorem already proves that the admissible
 PMNS-assisted `N_e` closure domain is exactly the fixed native seed surface.
-On that reduced domain, the exact stationary classification is:
+On that reduced domain, the broad multistart stationary classification used in
+this theorem resolves:
 
 - one low-action branch
 - one higher-action branch
@@ -118,9 +119,15 @@ The explicit branch representatives on the current exact branch are:
   - `delta ~ 0`
   - `eta / eta_obs = (1.0, 0.94763529, 0.95876001)`
 
-The action gap remains finite:
+The action gap in this broad multistart pair remains finite:
 
 - `ΔS > 0.5`
+
+Later certified-global work on the same reduced surface sharpens the total
+stationary branch count to `3`, while preserving the same physical low-action
+selector branch as the unique global minimum. That stronger theorem does not
+change the analytic reductions proved here; it only strengthens the global
+counting/minimality statement.
 
 ## What this theorem does and does not claim
 
@@ -129,8 +136,8 @@ This theorem does claim:
 - a closed-form reduction of the selector problem to the exact real KKT
   system on the reduced surface
 - exact analytic parity reduction in \(\delta\)
-- exact classification of the stationary components already present on the
-  reduced surface
+- exact broad multistart classification of the dominant stationary components
+  on the reduced surface
 
 This theorem does **not** separately claim:
 

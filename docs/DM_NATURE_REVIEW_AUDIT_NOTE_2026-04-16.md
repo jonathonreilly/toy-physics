@@ -32,7 +32,7 @@ So the branch now has a real end-to-end constructive closure route.
 
 ## Nature-grade uniqueness status
 
-The new reduction-exhaustion theorem changes the scope of the old caveat.
+The review situation is now materially stronger.
 
 What is now closed exactly:
 
@@ -40,21 +40,31 @@ What is now closed exactly:
   domain, the fixed native `N_e` seed surface
 - the active chart is exact and surjective on that surface
 - the `eta` map factors exactly through that surface
+- the certified global selector theorem now gives a finite stationary set on
+  that exact reduced domain and proves the low-action closure branch is the
+  unique global minimum on it
 
 So the older review question
 
 > do we need a separate theorem about components beyond the exact reduced
 > surface?
 
-is now answered **no** for the scoped `N_e` closure claim. There is no larger
-admissible PMNS-assisted search space outside that reduced surface.
+is answered **no** for the scoped `N_e` closure claim, and the stronger
+same-surface uniqueness/minimality question is also now answered positively.
 
-What is still true:
+The strengthened exact picture is:
 
-- the selector theorem on that exact surface is branch-global by constrained
-  multistart scan plus finite action-gap separation
-- it is not a separate closed-form analytic classification of every stationary
-  component on that same surface
+- the admissible PMNS-assisted domain is the fixed native `N_e` seed surface
+- the certified reduced-surface optimization finds three stationary closure
+  branches on that domain
+- the low branch is the unique global minimum
+- the next branch is separated by a finite action gap
+
+What is still *not* claimed:
+
+- a separate closed-form algebraic elimination theorem for every symbolic
+  stationary component in the abstract beyond the certified reduced-surface
+  global-minimum theorem
 
 ## Review verdict
 
@@ -65,30 +75,23 @@ an end-to-end constructive framework result.
 
 ### Nature-grade verdict
 
-If the intended claim is only:
+If the intended claim is:
 
 > the PMNS-assisted `N_e` closure problem is fully reduced and internally
 > closed on its exact admissible domain,
 
 then the current branch is already strong enough.
 
-If the intended claim is the stronger one:
+If the intended claim is the still-stronger one:
 
-> the sole axiom `Cl(3)` on `Z^3` forces one unique PMNS-assisted DM closure
-> point with no remaining branch-global caveat,
+> there is a closed-form analytic elimination of every symbolic stationary
+> component on that same reduced surface,
 
-then one more theorem would still strengthen the package:
+then the package still does not claim that.
 
-- either an analytic all-components uniqueness theorem on the fixed `N_e` seed
-  surface itself
-- or a certified global optimization theorem on that exact surface whose
-  hypotheses are proved inside the framework
-
-Without that, the strongest perfectly honest wording is:
-
-> the refreshed branch has an exact effective-action selector and a unique
-> lowest-action closure branch on the exact reduced surface under the current
-> constrained branch scan.
+But that is now stronger than the Nature-grade closure need. The physically
+relevant uniqueness/minimality statement on the exact admissible domain is
+already certified.
 
 ## Recommendation
 
@@ -98,9 +101,9 @@ The package is strongest if it says both:
 
 1. the old exact one-flavor `5.297x` miss is gone on the PMNS-assisted closure
    branch
-2. the older “beyond the reduced surface” loophole is closed, and the only
-   remaining review-sensitive issue is whether the selector branch uniqueness
-   on that exact surface should be promoted from branch-scanned to fully
-   analytic/global
+2. the older “beyond the reduced surface” loophole is closed, and the
+   reduced-surface selector is now globally certified there
 
-That is the honest Nature-grade boundary.
+The only remaining stronger ask is aesthetic: a prettier fully symbolic
+stationary elimination theorem, not a missing uniqueness/minimality result for
+the closure claim itself.

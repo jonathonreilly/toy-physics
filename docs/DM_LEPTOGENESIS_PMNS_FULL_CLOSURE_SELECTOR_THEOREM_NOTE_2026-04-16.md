@@ -21,12 +21,17 @@ branch?
 Yes, on the current refreshed branch.
 
 Broad multistart enumeration of exact closure starts on the fixed native `N_e`
-seed surface yields exactly two stationary closure branches:
+seed surface yields two dominant stationary closure branches:
 
 1. a low-action branch
 2. a high-action branch
 
 These are separated by a finite action gap.
+
+Later strengthened work on the same branch certifies the exact reduced-surface
+global minimum directly and reveals one additional higher-action stationary
+branch beyond this broad multistart pair. That stronger theorem does not
+change the physical selector branch; it only sharpens the global branch count.
 
 So the PMNS-assisted selector is now branch-global on the refreshed branch:
 
@@ -59,8 +64,10 @@ So the action gap is finite and large:
 
 - `ΔS > 0.5`
 
-The low-action branch is therefore not just a local branch. On the current
-multistart constrained scan, it is the unique physical selector branch.
+The low-action branch is therefore not just a local branch. On the broad
+multistart constrained scan, it is the unique physical selector branch; the
+later certified-global theorem strengthens this to a unique global minimum on
+the exact reduced surface.
 
 ## What this closes
 
@@ -91,10 +98,10 @@ So the old `5.3x` miss is gone on the full-closure selector branch.
 
 ## Scope
 
-This theorem is branch-global on the refreshed DM branch. It does not claim an
-independent analytic classification of all possible disconnected components
-beyond the search domain already covered by the exact fixed-seed parameter
-surface.
+This theorem is branch-global in the broad multistart sense on the refreshed
+DM branch. It does not claim an independent analytic classification of all
+possible disconnected components on the exact reduced surface, and it is
+superseded on that stronger point by the later certified-global theorem.
 
 But on the branch actually used for the DM closure program, the selector caveat
 is now removed.
