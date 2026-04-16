@@ -69,4 +69,4 @@ Current main-branch runner state:
 - `frontier_generation_fermi_point.py`: `EXACT PASS=7`, `BOUNDED PASS=1`
 - `frontier_generation_rooting_undefined.py`: `PASS=37`, `FAIL=0`
 - `frontier_generation_axiom_boundary.py`: `PASS=31`, `FAIL=0`
-- `frontier_three_generation_observable_theorem.py`: `PASS=42`, `FAIL=0`
+- `frontier_three_generation_observable_theorem.py`: `PASS=47`, `FAIL=0`

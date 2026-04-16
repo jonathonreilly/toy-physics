@@ -42,7 +42,6 @@ Dependencies: numpy only.
 from __future__ import annotations
 
 import sys
-from itertools import product
 
 import numpy as np
 
@@ -101,9 +100,65 @@ def build_translation_operators() -> dict[str, np.ndarray]:
     }
 
 
-def build_c3_operator() -> np.ndarray:
+def build_full_taste_c3_operator() -> np.ndarray:
     """
-    Exact cyclic corner map induced by C3[111] on the retained basis.
+    Exact C3[111] taste transformation on the full 8-state taste space.
+    """
+    alphas = [(a1, a2, a3) for a1 in range(2) for a2 in range(2) for a3 in range(2)]
+    alpha_idx = {a: i for i, a in enumerate(alphas)}
+    op = np.zeros((8, 8), dtype=complex)
+    for a1, a2, a3 in alphas:
+        source = (a1, a2, a3)
+        target = (a3, a1, a2)
+        eps = (-1) ** ((a1 + a2) * a3)
+        op[alpha_idx[target], alpha_idx[source]] = eps
+    return op
+
+
+def staggered_h_antiherm(k_vec: np.ndarray) -> np.ndarray:
+    """Anti-Hermitian staggered Hamiltonian in the 8-site unit-cell basis."""
+    alphas = [(a1, a2, a3) for a1 in range(2) for a2 in range(2) for a3 in range(2)]
+    alpha_idx = {a: i for i, a in enumerate(alphas)}
+    ham = np.zeros((8, 8), dtype=complex)
+    for alpha in alphas:
+        idx = alpha_idx[alpha]
+        a1, a2, a3 = alpha
+        for mu in range(3):
+            if mu == 0:
+                eta = 1.0
+            elif mu == 1:
+                eta = (-1.0) ** a1
+            else:
+                eta = (-1.0) ** (a1 + a2)
+            beta = list(alpha)
+            beta[mu] = 1 - beta[mu]
+            beta = tuple(beta)
+            jdx = alpha_idx[beta]
+            phase = np.exp(1j * k_vec[mu]) if alpha[mu] == 1 else 1.0
+            ham[idx, jdx] += 0.5 * eta * phase
+            ham[jdx, idx] -= 0.5 * eta * np.conj(phase)
+    return ham
+
+
+def retained_sector_subspaces() -> dict[str, np.ndarray]:
+    """Exact +1 eigenspaces at the three hw=1 X points on the full taste space."""
+    x_points = {
+        "X1": np.array([np.pi, 0.0, 0.0]),
+        "X2": np.array([0.0, np.pi, 0.0]),
+        "X3": np.array([0.0, 0.0, np.pi]),
+    }
+    sectors: dict[str, np.ndarray] = {}
+    for name, k_vec in x_points.items():
+        h_herm = 1j * staggered_h_antiherm(k_vec)
+        evals, evecs = np.linalg.eigh(h_herm)
+        mask = np.isclose(evals, 1.0, atol=1e-12)
+        sectors[name] = evecs[:, mask]
+    return sectors
+
+
+def build_induced_retained_c3() -> np.ndarray:
+    """
+    Exact induced cyclic corner map on the retained sector labels.
 
       X1 -> X2 -> X3 -> X1
     """
@@ -204,7 +259,8 @@ def part1_retained_operator_surface() -> tuple[dict[str, np.ndarray], np.ndarray
     print()
 
     translations = build_translation_operators()
-    c3 = build_c3_operator()
+    full_c3 = build_full_taste_c3_operator()
+    c3 = build_induced_retained_c3()
     ident = np.eye(3, dtype=complex)
     basis_vectors = {
         "X1": np.array([1.0, 0.0, 0.0], dtype=complex),
@@ -228,6 +284,20 @@ def part1_retained_operator_surface() -> tuple[dict[str, np.ndarray], np.ndarray
         "three hw=1 sectors carry pairwise distinct translation characters",
         len(set(sector_chars.values())) == 3,
     )
+    check("full taste C3[111] is unitary", np.linalg.norm(full_c3.conj().T @ full_c3 - np.eye(8)) < 1e-12)
+    check("full taste C3[111] has order 3", np.linalg.norm(full_c3 @ full_c3 @ full_c3 - np.eye(8)) < 1e-12)
+
+    sectors = retained_sector_subspaces()
+    cycle_targets = [("X1", "X2"), ("X2", "X3"), ("X3", "X1")]
+    for source, target in cycle_targets:
+        overlap = sectors[target].conj().T @ full_c3 @ sectors[source]
+        svals = np.linalg.svd(overlap, compute_uv=False)
+        check(
+            f"full C3[111] maps {source} to {target}",
+            np.allclose(svals, np.ones(4), atol=1e-10),
+            f"singular values = {np.round(svals, 6)}",
+        )
+
     check("C3 is unitary on H_hw=1", np.linalg.norm(c3.conj().T @ c3 - ident) < 1e-12)
     check("C3 has exact order 3", np.linalg.norm(c3 @ c3 @ c3 - ident) < 1e-12)
     check("C3 maps X1 to X2", np.linalg.norm(c3 @ basis_vectors["X1"] - basis_vectors["X2"]) < 1e-12)
@@ -265,7 +335,8 @@ def part1_retained_operator_surface() -> tuple[dict[str, np.ndarray], np.ndarray
     print()
     print("  Consequence:")
     print("    Tx, Ty, Tz separate X1, X2, X3 exactly, while C3 carries the")
-    print("    retained cyclic relation between the three sectors.")
+    print("    retained cyclic relation between the three sectors, derived")
+    print("    from the exact full-space C3[111] taste action.")
     print()
 
     return translations, c3, projectors
@@ -282,6 +353,9 @@ def part2_observable_descent_lemma(
     print("  Lemma:")
     print("    if a quotient Q preserves an exact retained operator O, then")
     print("    O descends to the quotient iff ker(Q) is O-invariant.")
+    print("    Proof: QO = O'Q implies Q(Ov)=0 for v in ker(Q), so ker(Q) is")
+    print("    invariant. Conversely, if ker(Q) is invariant, define O'[v] = [Ov]")
+    print("    on H_hw=1 / ker(Q); invariance makes this well-defined and unique.")
     print()
 
     e1 = np.array([1.0, 0.0, 0.0], dtype=complex)
