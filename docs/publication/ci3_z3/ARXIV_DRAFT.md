@@ -348,7 +348,9 @@ through anomaly-forced time and the one-generation closure theorem. On the
 accepted stack this is also not an equivalent regulator reading of the same
 theory, because a regulator reinterpretation requires an added continuum
 family, rooting machinery, and an external RG/EFT layer not present in that
-stack. Detailed inter-family hierarchy and flavor numerics are separate
+stack, and it cannot preserve the accepted canonical quantitative surface
+`g_{\mathrm{bare}}=1`, `\beta=6`, and the same-surface plaquette/hierarchy
+chain. Detailed inter-family hierarchy and flavor numerics are separate
 questions.
 
 Figure 4 shows the exact orbit structure together with the physical-lattice

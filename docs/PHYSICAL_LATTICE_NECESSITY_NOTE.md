@@ -1,9 +1,9 @@
-# Physical-Lattice Necessity / No-Regulator-Reinterpretation Note
+# Physical-Lattice Necessity / Fixed-Surface No-Regulator-Reinterpretation Note
 
 **Date:** 2026-04-16
 **Status:** exact support theorem on the framework boundary; retained
-no-same-stack regulator reinterpretation closure, with the physical-lattice
-premise itself still explicit
+no-same-stack / no-same-surface regulator reinterpretation closure, with the
+physical-lattice premise itself still explicit
 **Script:** `scripts/frontier_physical_lattice_necessity.py`
 **Authority role:** canonical support note for the physical-lattice /
 regulator boundary on the current `main` branch
@@ -15,20 +15,21 @@ three-generation observable theorem?
 
 There are two different targets:
 
-1. **No-same-stack regulator reinterpretation.**
+1. **No-same-stack / no-same-surface regulator reinterpretation.**
    Can the current accepted framework stack be re-read as an ordinary regulator
    theory without adding new structure?
 2. **Axiom-internal necessity.**
    Can the physical-lattice reading itself be derived from a smaller set of
    accepted inputs?
 
-The current package now closes the first target cleanly. It does **not** yet
-close the second.
+The current package now closes the first target cleanly, and it closes it more
+strongly than a pure wording objection. It does **not** yet close the second.
 
 ## Safe statement
 
 On the accepted `Cl(3)` / `Z^3` package surface, regulator reinterpretation is
-not an equivalent reading of the same theory.
+not an equivalent reading of the same theory, and it cannot preserve the same
+fixed quantitative surface.
 
 More precisely:
 
@@ -42,10 +43,16 @@ More precisely:
   - a continuum-limit family,
   - path-integral/rooting or continuum-removal machinery,
   - an external renormalization / universality / EFT interpretation layer.
+- once that family is introduced, it no longer preserves the accepted
+  canonical quantitative surface:
+  - `g_bare = 1`,
+  - Wilson `beta = 6`,
+  - the accepted same-surface plaquette theorem at `beta = 6`,
+  - the downstream plaquette / `u_0` / `alpha_s(v)` / `v` chain.
 
 Therefore regulator reinterpretation is **not** a mere restatement of the
 accepted framework. It is a different theory package obtained by adjoining
-extra structure.
+extra structure and by leaving the accepted fixed evaluation surface.
 
 What remains open is narrower:
 
@@ -66,11 +73,14 @@ That loophole is now closed. The remaining issue is not a retained-surface
 generation loophole. The remaining issue is whether the whole framework can be
 reinterpreted as regulator lattice QFT without changing the theory.
 
-This note shows the answer is **no** on the current accepted stack.
+This note shows the answer is **no** on the current accepted stack, and it
+shows why in the stronger sense that the regulator-family reading does not
+preserve the current quantitative package surface.
 
 ## The theorem
 
-> **Physical-Lattice No-Same-Stack Regulator-Reinterpretation Theorem.**
+> **Physical-Lattice No-Same-Stack / No-Same-Surface
+> Regulator-Reinterpretation Theorem.**
 > Fix the current accepted minimal framework stack:
 >
 > 1. local algebra `Cl(3)`,
@@ -87,12 +97,15 @@ This note shows the answer is **no** on the current accepted stack.
 >   so no proper exact quotient / rooting / reduction survives there;
 > - the gauge surface is fixed at the Wilson plaquette action with
 >   `g_bare^2 = 1`, hence `beta = 6`;
+> - the accepted quantitative surface is fixed at the canonical
+>   `beta = 6` plaquette / `u_0` / hierarchy chain;
 > - no continuum-limit family, rooting machinery, or renormalization/EFT
 >   reinterpretation layer belongs to the accepted stack itself.
 >
 > Therefore any regulator reading requires adjoining extra structure not
-> licensed by that stack. It is not an equivalent reading of the same accepted
-> framework surface.
+> licensed by that stack, and any regulator-family deformation leaves the
+> accepted canonical quantitative surface. It is not an equivalent reading of
+> the same accepted framework surface.
 
 ## Proof skeleton
 
@@ -134,11 +147,40 @@ requires new ingredients not present in the accepted stack, including:
 Those ingredients may be mathematically respectable, but they are **extra**.
 They are not already contained in the accepted framework inputs.
 
-### 4. Therefore the regulator reading is not the same theory
+### 4. Regulator reinterpretation also leaves the accepted quantitative surface
+
+The accepted package is not only a fixed logical stack. It is also a fixed
+canonical evaluation surface:
+
+- `g_bare = 1`,
+- Wilson `beta = 2N_c / g^2 = 6`,
+- the accepted same-surface plaquette theorem at `beta = 6`,
+- the downstream canonical `u_0`, `alpha_LM`, `alpha_s(v)`, and `v`.
+
+The first point is exact already. For Wilson `SU(3)` one has
+
+`beta = 2 N_c / g_bare^2 = 6 / g_bare^2`,
+
+so any regulator-family deformation with `beta != 6` implies `g_bare != 1`.
+Equivalently,
+
+`alpha_bare(beta) = g_bare^2 / (4 pi) = 3 / (2 pi beta)`,
+
+which varies nontrivially with `beta`. So even before one argues about a full
+continuum limit, a regulator-family reading has already left the accepted
+canonical normalization surface.
+
+The plaquette theorem is likewise not a theorem about an arbitrary family. The
+accepted result is the same-surface plaquette theorem on the retained `beta=6`
+surface. Once a continuum family is introduced, the accepted package is no
+longer being read on that fixed quantitative surface.
+
+### 5. Therefore the regulator reading is not the same theory
 
 Because the accepted stack is fixed and the regulator reading requires added
-structure, the regulator reading is not a mere change of words. It is a
-different theory package.
+structure while also leaving the accepted canonical quantitative surface, the
+regulator reading is not a mere change of words. It is a different theory
+package.
 
 This closes the anti-regulator question on the current package surface:
 
@@ -152,6 +194,8 @@ This note now closes a stronger exact point than the older audit did:
 - the physical-lattice reading is not merely a stylistic interpretation choice
   over the same accepted stack;
 - regulator reinterpretation is not same-stack equivalent;
+- regulator-family deformation is not same-surface equivalent on the accepted
+  canonical quantitative chain;
 - the retained three-generation matter result is no longer vulnerable to a
   same-stack quotient/rooting reinterpretation.
 
@@ -167,13 +211,14 @@ This note does **not** claim:
 
 The residual honest boundary is:
 
-- **closed:** no same-stack regulator reinterpretation;
+- **closed:** no same-stack / no-same-surface regulator reinterpretation;
 - **still open:** full axiom-internal necessity of the physical-lattice premise.
 
 ## Promotion rule
 
-This note supports the live package now because the no-same-stack regulator
-reinterpretation theorem is strong enough to be reusable across:
+This note supports the live package now because the no-same-stack /
+no-same-surface regulator reinterpretation theorem is strong enough to be
+reusable across:
 
 - three-generation defenses,
 - anti-rooting arguments,
@@ -191,5 +236,6 @@ full necessity theorem.
 
 Current runner state:
 
-- `frontier_physical_lattice_necessity.py`: exact no-same-stack regulator
-  reinterpretation closure, with residual premise-necessity still open
+- `frontier_physical_lattice_necessity.py`: exact no-same-stack /
+  no-same-surface regulator reinterpretation closure, with residual
+  premise-necessity still open

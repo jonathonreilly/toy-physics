@@ -79,8 +79,8 @@ It is claiming a different theory surface.
 3. [GENERATION_AXIOM_BOUNDARY_NOTE.md](./GENERATION_AXIOM_BOUNDARY_NOTE.md)
    isolates the physical-lattice axiom boundary.
 4. [PHYSICAL_LATTICE_NECESSITY_NOTE.md](./PHYSICAL_LATTICE_NECESSITY_NOTE.md)
-   closes the no-same-stack regulator reinterpretation boundary while keeping
-   the physical-lattice premise itself explicit.
+   closes the no-same-stack / no-same-surface regulator reinterpretation
+   boundary while keeping the physical-lattice premise itself explicit.
 5. [ONE_GENERATION_MATTER_CLOSURE_NOTE.md](./ONE_GENERATION_MATTER_CLOSURE_NOTE.md)
    carries the full-framework chirality / right-handed completion claim.
 6. [ANOMALY_FORCES_TIME_THEOREM.md](./ANOMALY_FORCES_TIME_THEOREM.md)
@@ -116,4 +116,6 @@ Current main-branch runner state:
 - `frontier_generation_rooting_undefined.py`: `PASS=37`, `FAIL=0`
 - `frontier_three_generation_observable_theorem.py`: `PASS=47`, `FAIL=0`
 - `frontier_generation_axiom_boundary.py`: `PASS=31`, `FAIL=0`
-- `frontier_physical_lattice_necessity.py`: closed no-same-stack regulator reinterpretation; residual premise necessity still explicit
+- `frontier_physical_lattice_necessity.py`: closed no-same-stack /
+  no-same-surface regulator reinterpretation; residual premise necessity still
+  explicit

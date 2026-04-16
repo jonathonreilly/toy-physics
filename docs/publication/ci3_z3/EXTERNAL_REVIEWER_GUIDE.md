@@ -112,9 +112,11 @@ Current status from that stack:
   generation surface: the exact orbit algebra `8 = 1 + 1 + 3 + 3` survives as
   physical species structure, the retained `hw=1` observable algebra is
   irreducible, no proper exact quotient/rooting survives there, and
-  same-stack regulator reinterpretation is blocked because it requires extra
-  continuum/rooting/RG structure absent from the accepted framework stack;
-  the physical-lattice premise itself remains explicit
+  same-stack / same-surface regulator reinterpretation is blocked because it
+  requires extra continuum/rooting/RG structure absent from the accepted
+  framework stack and cannot preserve the accepted canonical quantitative surface
+  (`g_bare = 1`, `beta = 6`, plaquette/hierarchy chain); the physical-lattice
+  premise itself remains explicit
 - derived-with-inherited-explicit-systematic Higgs / vacuum package:
   canonical `m_H = 125.1 GeV` (framework-side 3-loop route),
   with retained `119.8 GeV` (2-loop support route),

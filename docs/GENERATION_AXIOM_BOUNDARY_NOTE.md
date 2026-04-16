@@ -34,7 +34,7 @@ It is directly reusable for:
 - anti-rooting / physical-lattice arguments
 - reviewer-facing taste-artifact objections
 - future flavor and mass-hierarchy work that builds on the triplet sectors
-- no-same-stack regulator-reinterpretation arguments
+- no-same-stack / no-same-surface regulator-reinterpretation arguments
 
 ## Relation to the retained matter stack
 
@@ -57,8 +57,9 @@ The clean current division of labor is:
 - [THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md](./THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md):
   exact retained-generation no-proper-quotient theorem
 - [PHYSICAL_LATTICE_NECESSITY_NOTE.md](./PHYSICAL_LATTICE_NECESSITY_NOTE.md):
-  exact no-same-stack regulator reinterpretation closure, while keeping the
-  physical-lattice premise itself explicit rather than derived
+  exact no-same-stack / no-same-surface regulator reinterpretation closure,
+  while keeping the physical-lattice premise itself explicit rather than
+  derived
 
 ## Validation
 
