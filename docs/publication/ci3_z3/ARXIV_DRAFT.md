@@ -551,6 +551,24 @@ The practical rule is simple: every retained row in the manuscript must also
 appear as retained in the package, and every bounded row in the manuscript must
 carry the same bounded qualifier there.
 
+### 7.1 AI-assisted workflow and accountability
+
+This work was developed with extensive use of generative AI tools, especially
+Claude (Anthropic) and GPT-based OpenAI systems, including Codex. Claude
+assisted with a large fraction of the derivational drafting, computational
+verification infrastructure, and package/manuscript organization. GPT-based
+tooling assisted with repository integration, claim-surface audit, additional
+verification passes, code-native schematic figure generation, and manuscript
+execution. The author conceived and directed the research program, selected
+$Cl(3)$ on $Z^3$ as the foundational surface, chose derivation targets,
+evaluated and accepted or rejected proposed results, fixed the claim boundary,
+and is solely responsible for all scientific claims, interpretations, code,
+figures, and manuscript text. The AI systems are disclosed research tools
+rather than authors; accountability remains human.
+
+A package-level disclosure version of the same statement is recorded in
+[AI_ASSISTANCE_AND_ACCOUNTABILITY_NOTE.md](./AI_ASSISTANCE_AND_ACCOUNTABILITY_NOTE.md).
+
 ## 8. Conclusion
 
 The current state of the project is no longer that of a promising discrete toy

@@ -39,9 +39,10 @@ for the shortest publication-facing summary.
 3. [Publication package README](docs/publication/ci3_z3/README.md)
 4. [External reviewer guide](docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md)
 5. [Prediction surface](docs/publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md)
-6. [Publication matrix](docs/publication/ci3_z3/PUBLICATION_MATRIX.md)
-7. [Derivation atlas](docs/publication/ci3_z3/DERIVATION_ATLAS.md)
-8. [Derivation / validation map](docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
+6. [AI assistance and accountability](docs/publication/ci3_z3/AI_ASSISTANCE_AND_ACCOUNTABILITY_NOTE.md)
+7. [Publication matrix](docs/publication/ci3_z3/PUBLICATION_MATRIX.md)
+8. [Derivation atlas](docs/publication/ci3_z3/DERIVATION_ATLAS.md)
+9. [Derivation / validation map](docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
 
 The direct-universal gravity route now closes as an exact global Lorentzian
 Einstein/Regge stationary action family on discrete `3+1` spacetime

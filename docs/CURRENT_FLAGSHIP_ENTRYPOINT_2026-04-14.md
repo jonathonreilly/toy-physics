@@ -44,6 +44,7 @@ publication-facing prediction inventory, use
 The public manuscript surface is now arXiv-first:
 
 - [publication/ci3_z3/ARXIV_DRAFT.md](publication/ci3_z3/ARXIV_DRAFT.md)
+- [publication/ci3_z3/AI_ASSISTANCE_AND_ACCOUNTABILITY_NOTE.md](publication/ci3_z3/AI_ASSISTANCE_AND_ACCOUNTABILITY_NOTE.md)
 
 Journal-specific packaging is now a private downstream adaptation rather than a
 public competing draft surface on `main`.

@@ -25,11 +25,12 @@ Framework statement:
 6. [Quantitative summary table](./QUANTITATIVE_SUMMARY_TABLE.md)
 7. [Inputs and qualifiers](./INPUTS_AND_QUALIFIERS_NOTE.md)
 8. [What this paper does not claim](./WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
-9. [Claims table](./CLAIMS_TABLE.md)
-10. [Derivation atlas](./DERIVATION_ATLAS.md)
-11. [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
-12. [Full claim ledger](./FULL_CLAIM_LEDGER.md)
-13. [Results index](./RESULTS_INDEX.md)
+9. [AI assistance and accountability](./AI_ASSISTANCE_AND_ACCOUNTABILITY_NOTE.md)
+10. [Claims table](./CLAIMS_TABLE.md)
+11. [Derivation atlas](./DERIVATION_ATLAS.md)
+12. [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
+13. [Full claim ledger](./FULL_CLAIM_LEDGER.md)
+14. [Results index](./RESULTS_INDEX.md)
 
 ## Optional History Bucket
 
@@ -61,6 +62,7 @@ For the explicit package boundary, use:
 
 - [INPUTS_AND_QUALIFIERS_NOTE.md](./INPUTS_AND_QUALIFIERS_NOTE.md)
 - [WHAT_THIS_PAPER_DOES_NOT_CLAIM.md](./WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
+- [AI_ASSISTANCE_AND_ACCOUNTABILITY_NOTE.md](./AI_ASSISTANCE_AND_ACCOUNTABILITY_NOTE.md)
 
 ## Current Quantitative Component Stack
 
