@@ -112,10 +112,16 @@ The scalar-side part of that object is now much sharper than before:
   `kappa_sel = 6 lambda_H`
 - the exact real selector manifold by itself gives only two orthogonal scalar
   modes and therefore only about half the required cubic enhancement
-- the current Higgs/CW surface already supplies a same-surface `n=4`
-  Higgs-doublet completion (`1` radial Higgs + `3` Goldstones)
-- so the remaining scalar-side open factor is no longer multiplicity itself,
-  but whether screening stays milder than about `5%` to `6%`
+- the current Higgs/CW surface does supply a same-surface Higgs doublet with
+  `1` radial mode plus `3` Goldstones, but the exact selector coefficient
+  matches only the radial mode while the Goldstones are lighter by a factor
+  `3` in `kappa`
+- so the matched one-doublet scalar package reaches only about `41%` of the
+  old target before screening on the current imported one-loop scalar-cubic
+  ansatz
+- the remaining scalar-side question is therefore not just screening by
+  itself, but whether there is additional same-surface bosonic structure or
+  genuinely different finite-`T` dynamics beyond the old route-history ansatz
 
 It is cleaner to say:
 

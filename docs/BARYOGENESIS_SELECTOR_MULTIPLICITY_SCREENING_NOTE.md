@@ -112,8 +112,10 @@ finite-`T` theory supplies both:
    `n_eff = 4`
 2. a screening penalty smaller than about `5%` to `6%`
 
-The current Higgs/CW surface already supplies a same-surface candidate for
-that `n_eff = 4` completion. It is recorded in
+The current Higgs/CW surface does supply one derived Higgs doublet with
+`1+3` scalar content, but the matching boundary note shows that this does
+**not** by itself justify reusing the selector coefficient across all four
+modes. That boundary is recorded in
 [BARYOGENESIS_HIGGS_DOUBLET_MULTIPLICITY_NOTE.md](./BARYOGENESIS_HIGGS_DOUBLET_MULTIPLICITY_NOTE.md).
 
 ## Why this matters

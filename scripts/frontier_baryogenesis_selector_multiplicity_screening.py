@@ -166,8 +166,11 @@ def main() -> int:
     print("      scalar modes")
     print("    - with the derived selector portal, that covers only about half")
     print("      of the required finite-T enhancement")
-    print("    - any surviving old route therefore needs an additional doubling")
-    print("      mechanism and screening milder than about five to six percent")
+    print("    - a route-history n=4 rescue would still need screening milder")
+    print("      than about five to six percent")
+    print("    - the separate Higgs-doublet matching-boundary note now shows")
+    print("      that the current one-doublet 1+3 scalar package does not")
+    print("      realize that naive n=4 selector rescue")
     print()
     print(f"  TOTAL: PASS = {PASS}, FAIL = {FAIL}")
     return 0 if FAIL == 0 else 1
