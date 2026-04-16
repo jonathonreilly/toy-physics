@@ -183,20 +183,21 @@ def part4_the_runner_surface_now_has_an_exact_denominator_divide() -> None:
     print("=" * 88)
 
     reduced = read("scripts/frontier_dm_leptogenesis.py")
-    exact_source = read("scripts/frontier_dm_leptogenesis_exact_source_diagnostic.py")
     exact_kernel = read("scripts/frontier_dm_leptogenesis_exact_kernel_closure.py")
+    full_axiom = read("scripts/frontier_dm_leptogenesis_full_axiom_closure.py")
+    full_axiom_note = read("docs/DM_LEPTOGENESIS_FULL_AXIOM_CLOSURE_NOTE_2026-04-16.md")
 
     check(
         "The old reduced runner still states (Y^dag Y)11 = y0^2 on the reduced Z3 texture benchmark",
         "(Y^dag Y)_{11} = y_0^2" in reduced,
     )
     check(
-        "The exact-source diagnostic already identified the remaining issue as the missing thermal / projection law",
-        "missing diagonal normalization / thermal projection law" in exact_source,
-    )
-    check(
         "The refreshed exact-kernel runner now inserts the explicit /K00 denominator",
         "/ k00" in exact_kernel and "K00   = 2" in exact_kernel,
+    )
+    check(
+        "The final theorem-native closure runner keeps K00 explicit on the authority path",
+        "physical denominator as K00 = 2" in full_axiom and "exact projection law `K00 = 2`" in full_axiom_note,
     )
 
 
