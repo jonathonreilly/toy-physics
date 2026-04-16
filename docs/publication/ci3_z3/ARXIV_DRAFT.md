@@ -15,28 +15,25 @@ We ask whether $Cl(3)$ on the cubic lattice $Z^3$ can be treated as the
 physical theory rather than as a temporary regulator, and we retain only those
 rows that survive direct audit on that exact discrete surface. The retained
 core is already broad. On the gravity side, the framework yields Poisson/Newton
-weak-field gravity with weak-field weak equivalence principle and time
-dilation, a restricted strong-field closure on an exact finite-rank class, an
-exact discrete Lorentzian Einstein-Regge stationary-action family on
+weak-field gravity, a restricted strong-field closure on an exact finite-rank
+class, exact full discrete $3+1$ Einstein-Regge gravity on
 $PL\,S^3 \times \mathbb{R}$, and an exact quantum-gravity/continuum
 identification chain on one chosen canonical textbook target. On the gauge and
 matter side, the same framework carries exact native $SU(2)$, graph-first
-structural $SU(3)$, anomaly-forced $3+1$, retained $S^3$ topology closure,
-retained three-generation matter structure, exact $I_3=0$, exact CPT, emergent
-Lorentz invariance with first anisotropic correction at dimension $6$, exact
-strong CP in the form $\theta_{\mathrm{eff}}=0$ on the retained action surface,
-and exact $T=0$ confinement of the graph-first $SU(3)$ sector with bounded
-$\sqrt{\sigma}\approx 465\,\mathrm{MeV}$. Quantitatively, the current package
-gives the canonical hierarchy evaluation
+structural $SU(3)$, anomaly-forced $3+1$, retained three-generation matter
+structure, exact $I_3=0$, exact CPT, emergent Lorentz invariance, exact strong
+CP in the form $\theta_{\mathrm{eff}}=0$ on the retained action surface, and
+exact $T=0$ confinement with bounded $\sqrt{\sigma}\approx 465\,\mathrm{MeV}$.
+Quantitatively, the current package gives the canonical hierarchy evaluation
 $v=246.282818290129\,\mathrm{GeV}$, retains
 $\alpha_s(M_Z)=0.1181$ and electroweak normalization lanes, promotes an
 algebraic CKM atlas/axiom closure package with no quark-mass or fitted-CKM
 inputs, and carries Yukawa/top and Higgs/vacuum rows with explicit inherited
-systematics. The package is already predictive beyond retrospective comparison:
-it contains bounded proton-lifetime, CKM neutron-EDM, vacuum-criticality, and
-benchmark gravitational-decoherence lanes. Dark-matter relic mapping is the
-sole remaining live flagship gate. The paper separates exact, promoted,
-bounded, and open rows and pairs them with a public reproducibility surface.
+systematics. The package is already predictive beyond retrospective comparison,
+including proton lifetime, CKM neutron EDM, vacuum criticality, and benchmark
+gravitational decoherence. Dark-matter relic mapping is the sole remaining live
+flagship gate. The paper separates exact, promoted, bounded, and open rows and
+pairs them with a public reproducibility surface.
 
 ## 1. Introduction
 
@@ -395,7 +392,7 @@ Vafa-Witten sign discipline [10].
 ### 4.6 Confinement
 
 The graph-first $SU(3)$ gauge sector now also carries an exact $T=0$
-confinement theorem. The bounded quantitative companion on top of that is the
+confinement theorem. The bounded quantitative readout on top of that is the
 string-tension readout
 
 $$

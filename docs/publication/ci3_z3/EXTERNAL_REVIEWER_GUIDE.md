@@ -9,9 +9,9 @@ The current package is:
 
 1. a retained theorem core
 2. retained standalone quantitative lanes for `alpha_s` and EW normalization
-3. promoted CKM atlas/axiom closure plus bounded Yukawa/top and Higgs/vacuum lanes
-4. a bounded prediction surface plus an explicit history bucket for
-   important excluded families
+3. promoted CKM atlas/axiom closure plus derived-with-explicit-systematic Yukawa/top and derived-with-inherited-explicit-systematic Higgs/vacuum lanes
+4. a bounded prediction surface plus an explicit history bucket for important
+   excluded families
 
 For framework counting, read the public package as a one-axiom program:
 
@@ -22,12 +22,11 @@ Use [MINIMAL_AXIOMS_2026-04-11.md](../../MINIMAL_AXIOMS_2026-04-11.md) only as
 the operational package-boundary memo for the current audited implementation
 surface.
 
-For the package-level gravity/gauge continuum positioning synthesis, use
-[CONTINUUM_IDENTIFICATION_NOTE.md](../../CONTINUUM_IDENTIFICATION_NOTE.md).
-
 Read the gravity/QG side as exact on the discrete project route and on one
 chosen canonical textbook continuum target. The package is not asserting that
-every possible smooth or continuum packaging has been closed.
+every possible smooth or continuum packaging has been closed. For the
+package-level positioning synthesis, use
+[CONTINUUM_IDENTIFICATION_NOTE.md](../../CONTINUUM_IDENTIFICATION_NOTE.md).
 
 Read the package as already predictive, not merely retrospective. For the
 short publication-facing list of what is already predicted on `main`, use
@@ -40,64 +39,29 @@ For the explicit package boundary, use:
 
 ## Retained Core
 
-- weak-field gravity through the Poisson / Newton chain
-- weak-field WEP and time dilation on that retained gravity surface
-- restricted strong-field closure on the current finite-rank class
-- full discrete `3+1` GR on the direct-universal project route
-- exact UV-finite partition-density companion on that route
-- exact canonical refinement-net companion on that route
-- exact inverse-limit Gaussian cylinder closure on that route
-- exact abstract Gaussian / Cameron-Martin completion on that route
-- exact project-native PL field realization on that route
-- exact project-native PL weak/Dirichlet-form closure on that route
-- exact project-native PL `H^1`-type Sobolev interface on that route
-- exact external FE/Galerkin smooth weak-field and Gaussian measure
-  equivalence for that same canonical discrete QG family
-  - authority: [UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md](../../UNIVERSAL_QG_EXTERNAL_FE_SMOOTH_EQUIVALENCE_NOTE.md)
-- exact canonical textbook weak/measure equivalence for that same canonical
-  discrete QG family
-  - authority: [UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md](../../UNIVERSAL_QG_CANONICAL_TEXTBOOK_WEAK_MEASURE_EQUIVALENCE_NOTE.md)
-- exact smooth local gravitational weak/Gaussian identification on the
-  positive-background class
-  - authority: [UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md](../../UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_LOCAL_IDENTIFICATION_NOTE.md)
-- exact smooth finite-atlas gravitational stationary-family identification on
-  the chosen smooth realization
-  - authority: [UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_ATLAS_NOTE.md](../../UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_ATLAS_NOTE.md)
-- exact smooth global weak gravitational stationary/Gaussian solution class on
-  the chosen smooth realization
-  - authority: [UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md](../../UNIVERSAL_QG_SMOOTH_GRAVITATIONAL_GLOBAL_SOLUTION_CLASS_NOTE.md)
-- exact canonical smooth gravitational weak/measure equivalence on the chosen
-  smooth realization
-  - authority: [UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md](../../UNIVERSAL_QG_CANONICAL_SMOOTH_GRAVITATIONAL_WEAK_MEASURE_NOTE.md)
-- exact canonical smooth geometric/action equivalence on the chosen smooth
-  realization
-  - authority: [UNIVERSAL_QG_CANONICAL_SMOOTH_GEOMETRIC_ACTION_NOTE.md](../../UNIVERSAL_QG_CANONICAL_SMOOTH_GEOMETRIC_ACTION_NOTE.md)
-- exact canonical textbook Einstein-Hilbert-style geometric/action
-  equivalence on the chosen smooth realization
-  - authority: [UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md](../../UNIVERSAL_QG_CANONICAL_TEXTBOOK_GEOMETRIC_ACTION_EQUIVALENCE_NOTE.md)
-- exact canonical textbook continuum gravitational closure on the chosen
-  smooth realization
-  - authority: [UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md](../../UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md)
-- optional comparison against alternative textbook packaging conventions
-  - authority: [UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md](../../UNIVERSAL_QG_OPTIONAL_TEXTBOOK_COMPARISON_NOTE.md)
-  - packaging-only; not part of the theorem stack
-- exact native `SU(2)`
-- graph-first structural `SU(3)`
-- exact `T = 0` confinement of the graph-first `SU(3)` gauge sector, with
+- gravity:
+  weak-field Poisson/Newton with WEP and time dilation, restricted
+  strong-field closure on the current finite-rank class, exact full discrete
+  `3+1` GR on the direct-universal project route, and exact QG/continuum
+  closure on one chosen canonical textbook target
+- gauge and matter:
+  exact native `SU(2)`, graph-first structural `SU(3)`, anomaly-forced `3+1`,
+  retained `S^3` topology closure, one-generation closure, retained
+  three-generation structure on the physical-lattice / no-rooting boundary,
+  exact `I_3 = 0`, exact CPT, emergent Lorentz invariance, and exact strong CP
+  / `theta_eff = 0` on the retained action surface
+- confinement:
+  exact `T = 0` confinement of the graph-first `SU(3)` gauge sector, with
   bounded `sqrt(sigma) ≈ 465 MeV`
-- anomaly-forced `3+1`
-- retained electroweak hierarchy / `v = 246.282818290129 GeV`
-- retained `S^3` compactification / topology closure
-- full-framework one-generation matter closure
-- retained three-generation matter structure
 - reviewer-facing three-generation / chirality boundary:
   physical-lattice species structure + no-rooting in Hamiltonian `Cl(3)` +
   anomaly-forced full-framework chirality, not a conventional regulator
-  loophole
-- exact `I_3 = 0`
-- exact CPT
-- emergent Lorentz invariance with first anisotropic correction at dimension 6 and unique cubic-harmonic `\ell = 4` signature; on the retained hierarchy surface the correction is `(E/M_{Pl})^2` suppressed
-- exact strong CP / `theta_eff = 0` on the retained action surface, now with an explicit `3+1` APBC determinant-positivity audit and an exact fermion-effective-action spectral audit in the retained support stack
+  loophole theorem
+
+The main gravity framing point is simple: the capstone claim is exact full
+discrete `3+1` GR on the project route together with exact chosen-target
+continuum closure. Do not silently upgrade that to an unrestricted
+all-continuum claim.
 
 ## Quantitative Component Stack
 
@@ -129,8 +93,8 @@ Current status from that stack:
 - derived-with-explicit-systematic `y_t(v) = 0.9176`
 - derived-with-explicit-systematic canonical `m_t(pole) = 173.10 GeV` (3-loop),
   with retained `172.57 GeV` (2-loop) support
-  with the current explicit bridge budget of `1.2147511%` conservative
-  (`0.75500635%` support-tight) carried by the Yukawa/top lane
+  and an explicit bridge budget of `1.2147511%` conservative
+  (`0.75500635%` support-tight)
 - promoted CKM atlas/axiom closure package
   (no quark-mass or fitted CKM inputs; canonical CMT `alpha_s(v)` input):
   `|V_us| = 0.22727`,
@@ -143,28 +107,11 @@ Current status from that stack:
   with retained `119.8 GeV` (2-loop support route),
   vacuum-stability readout inherited from the explicit `y_t` systematic
 
-The most important gravity companion point is also framed carefully: the
-paper's gravity self-consistency claim is that Poisson is the unique local
-fixed point in the audited operator family; restricted strong-field closure is
-exact on the star-supported finite-rank class; and the capstone gravity claim
-is exact full discrete `3+1` GR on the project route, not an unqualified
-continuum-Einstein-Hilbert claim. The QG/continuum chain is also substantially
-stronger now: the UV-finite partition family, canonical refinement net,
-inverse-limit closure, abstract Gaussian completion, project-native PL
-field/weak/Sobolev structures, canonical textbook weak/measure object, smooth
-local and finite-atlas gravitational identifications, smooth global weak
-gravitational solution class, canonical smooth weak/measure equivalence, and
-canonical smooth geometric/action equivalence, canonical textbook
-Einstein-Hilbert-style geometric/action equivalence, and canonical textbook
-continuum gravitational closure on the chosen realization are all exact on the
-authority path. Any optional comparison against alternative textbook
-conventions is packaged separately and does not modify the theorem stack.
-
 ## Bounded Prediction Surface
 
-- DM ratio and relic companions
+- DM ratio and relic bounded family
 - older bounded CKM mass-basis / Cabibbo / partial Jarlskog route history
-- cosmology companions
+- cosmology bounded family
 - bounded secondary predictions already on `main`, including proton lifetime,
   CKM neutron EDM, vacuum critical stability, benchmark gravitational
   decoherence, and monopole mass
@@ -183,7 +130,7 @@ conventions is packaged separately and does not modify the theorem stack.
 6. [DERIVATION_ATLAS.md](./DERIVATION_ATLAS.md)
 7. [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
 8. [FULL_CLAIM_LEDGER.md](./FULL_CLAIM_LEDGER.md)
-9. [Results index](./RESULTS_INDEX.md)
+9. [RESULTS_INDEX.md](./RESULTS_INDEX.md)
 
 ## Optional Historical Context
 
@@ -192,9 +139,9 @@ conventions is packaged separately and does not modify the theorem stack.
 
 ## Review Rule
 
-- If a result is not in the matrix, it is not publication-captured.
-- If it is in the matrix but not in the claims table, it is not retained.
-- If it is important but excluded, it should appear in the historical
-  frozen-out registry.
-- If you are editing rather than reviewing, use
-  [PUBLICATION_CONTROL_PLANE.md](./PUBLICATION_CONTROL_PLANE.md).
+- if a result is not in the matrix, it is not publication-captured
+- if it is in the matrix but not in the claims table, it is not retained
+- if it is important but excluded, it should appear in the historical
+  frozen-out registry
+- if you are editing rather than reviewing, use
+  [PUBLICATION_CONTROL_PLANE.md](./PUBLICATION_CONTROL_PLANE.md)
