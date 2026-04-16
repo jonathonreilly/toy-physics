@@ -23,9 +23,9 @@ Use this file to find the current canonical note/runner pair on `main`.
 | retained `alpha_s` | [ALPHA_S_DERIVED_NOTE.md](ALPHA_S_DERIVED_NOTE.md) | `frontier_yt_zero_import_chain.py` |
 | color factor `R_conn = 8/9` | [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md) | `frontier_color_projection_mc.py` |
 | retained EW normalization | [YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md) | `frontier_complete_prediction_chain.py`, `frontier_color_projection_mc.py` |
-| bounded Yukawa / top | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](YT_COLOR_PROJECTION_CORRECTION_NOTE.md), [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md) | `frontier_yt_color_projection_correction.py`, `frontier_color_projection_mc.py` |
+| derived-with-explicit-systematic Yukawa / top | [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](YT_ZERO_IMPORT_AUTHORITY_NOTE.md), [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](YT_COLOR_PROJECTION_CORRECTION_NOTE.md), [YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md](YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md) | `frontier_yt_color_projection_correction.py`, `frontier_yt_explicit_systematic_budget.py`, `frontier_yt_exact_interacting_bridge_transport.py` |
 | QFP bounded-support theorem | [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md](YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md) | `frontier_yt_qfp_insensitivity.py` |
-| bounded Higgs / vacuum | [HIGGS_VACUUM_BOUNDED_NOTE.md](HIGGS_VACUUM_BOUNDED_NOTE.md) | `frontier_higgs_mass_full_3loop.py`, `frontier_yt_color_projection_correction.py`, `frontier_direct_yt_extraction.py` |
+| derived-with-inherited-explicit-systematic Higgs / vacuum | [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md), [HIGGS_MASS_DERIVED_NOTE.md](HIGGS_MASS_DERIVED_NOTE.md) | `frontier_higgs_mass_full_3loop.py`, `frontier_yt_color_projection_correction.py`, `frontier_yt_explicit_systematic_budget.py`, `frontier_direct_yt_extraction.py` |
 | promoted CKM closure | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) | `frontier_ckm_atlas_axiom_closure.py`, `frontier_ckm_no_import_audit.py` |
 | bounded CKM neutron-EDM lane | [CKM_NEUTRON_EDM_BOUND_NOTE.md](CKM_NEUTRON_EDM_BOUND_NOTE.md) | `frontier_ckm_neutron_edm_bound.py` |
 

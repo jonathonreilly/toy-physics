@@ -1,7 +1,9 @@
 # Color-Singlet Projection Correction to y_t
 
-**Date:** 2026-04-14
-**Status:** BOUNDED quantitative lane -- zero SM imports, but inherits an approximately `3%` QFP/RGE-surrogate systematic from [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md](./YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)
+**Date:** 2026-04-15
+**Status:** DERIVED with explicit systematic -- zero SM imports, with an
+explicit package-native bridge budget of `1.2147511%` conservative
+(`0.75500635%` support-tight) on the current package support stack
 **Script:** `scripts/frontier_yt_color_projection_correction.py` (7/7 PASS)
 
 ---
@@ -16,16 +18,19 @@ of the composite scalar (Higgs = taste condensate):
     y_t(physical) = y_t(Ward) * sqrt(R_conn)
                    = y_t(Ward) * sqrt(8/9)
                    = 0.973 * 0.9428
-                   = 0.918
+                   = 0.9176
 
 This is the SAME R_conn = (N_c^2 - 1)/N_c^2 = 8/9 already computed
 from the Cl(3) axiom (frontier_color_projection_mc.py), now applied
 to the scalar channel rather than the EW vacuum polarization.
 
 The color-projection correction itself is derived. The full low-energy
-`y_t(v)` / `m_t(pole)` lane remains bounded because the backward Ward transfer
-above `v` uses an EFT surrogate whose error is only bounded, not eliminated,
-by the QFP theorem.
+`y_t(v)` / `m_t(pole)` lane is now best read on the current package as derived with
+explicit systematic. On the current package, the residual transport
+uncertainty is narrowed to an explicit endpoint budget of `1.2147511%`
+conservative or `0.75500635%` support-tight around the local selector, and
+the broad scanned constructive family plus current-package microscopic
+admissibility are now closed at the intrinsic Schur-class level.
 
 ---
 
@@ -40,9 +45,11 @@ With the correction applied and proper MSbar-to-pole conversion:
 | m_H(2-loop, lam=0)    | 119.77 GeV | 125.25 GeV | -4.37%   |
 | alpha_s(M_Z)           | 0.1181     | 0.1179     | +0.14%   |
 
-These central values are the current package readout, but they carry an
-approximately `3%` inherited systematic from the backward Ward / QFP
-surrogate above `v`.
+These central values are the current package readout, but they carry the
+explicit package-native transport budget:
+
+- `1.2147511%` conservative
+- `0.75500635%` support-tight on the current viable family average
 
 Improvement from the correction:
 
@@ -208,10 +215,10 @@ The two corrections are structurally independent:
 4. Both can be applied simultaneously without contradiction
 
 Numerical verification:
-- y_t(v) with color projection only:     0.918
+- y_t(v) with color projection only:     0.9176
 - y_t(v) with Ward matching only:        0.981
 - y_t(v) with BOTH corrections:          0.925
-- These are additive (not redundant): 0.925 != 0.918
+- These are additive (not redundant): 0.925 != 0.9176
 
 With both corrections: m_t(pole, 2-loop) = 173.9 GeV (+0.70%).
 
@@ -250,7 +257,7 @@ Results with corrected y_t:
 With the corrected y_t, the stability boundary condition lambda(M_Pl) = 0
 gives:
 
-    y_t(v) = 0.918 --> lambda(v) = 0.118 --> m_H = 119.8 GeV (-4.4%)
+    y_t(v) = 0.9176 --> lambda(v) = 0.118 --> m_H = 119.8 GeV (-4.4%)
 
 compared to uncorrected:
 
@@ -314,7 +321,7 @@ The complete y_t chain from Cl(3) axioms to m_t(pole):
     Backward Ward: y_t(v) = 0.973       [2-loop SM RGE]
        |
        v
-    Color projection: y_t(phys) = 0.918  [sqrt(8/9) from R_conn]
+    Color projection: y_t(phys) = 0.9176  [sqrt(8/9) from R_conn]
        |
        v
     RGE: y_t(m_t) = 0.936               [2-loop running v -> m_t]
@@ -337,7 +344,7 @@ Every step traces to the axiom. Zero free parameters. Zero imports.
 | Ward BC: y_t(M_Pl) = 0.436       | 0.4358     | DERIVED  | y_t/g_s = 1/sqrt(6)              |
 | y_t(v) [Ward] = 0.973            | 0.9732     | DERIVED  | backward Ward scan               |
 | sqrt(8/9) correction             | 0.9428     | DERIVED  | scalar Z_phi (this note)          |
-| y_t(v) [physical] = 0.918        | 0.9176     | DERIVED  | Ward * sqrt(8/9)                  |
+| y_t(v) [physical] = 0.9176       | 0.9176     | DERIVED  | Ward * sqrt(8/9)                  |
 | m_t(pole, 2-loop) = 172.57 GeV   | 172.57     | DERIVED  | MSbar-to-pole conversion          |
 | m_H(2-loop) = 119.8 GeV          | 119.77     | DERIVED  | lambda(M_Pl) = 0 stability       |
 | alpha_s(M_Z) = 0.1181            | 0.1181     | DERIVED  | 2-loop QCD running                |

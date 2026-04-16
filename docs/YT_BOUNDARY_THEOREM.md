@@ -5,14 +5,14 @@
 **Script:** `scripts/frontier_yt_boundary_consistency.py`
 
 **Authority role:** This theorem is part of the current zero-import authority
-surface together with `docs/YT_ZERO_IMPORT_CLOSURE_NOTE.md`. It resolves the
+surface together with `docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md`. It resolves the
 old `g_3(M_Pl)_SM` versus `g_lattice` mismatch objection, but it does **not**
 by itself close the renormalized `y_t` lane.
 
 **2026-04-15 authority correction:** this note resolves the endpoint /
 domain-separation objection, but its worked numerical example still follows
 the older 2-loop branch chain (`y_t(v) = 0.973`, `m_t = 169.4 GeV`).
-The current branch boundary remains:
+The current package boundary remains:
 
 - `y_t` is still bounded by the backward-Ward / QFP surrogate at `~3%`
 - direct lattice extraction does not yet provide a feasible low-energy bypass
@@ -236,7 +236,7 @@ This theorem fixes the endpoint question:
 
 The theorem supports the current bounded authority stack together with:
 
-- [YT_ZERO_IMPORT_CLOSURE_NOTE.md](./YT_ZERO_IMPORT_CLOSURE_NOTE.md)
+- [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](./YT_ZERO_IMPORT_AUTHORITY_NOTE.md)
 - [YT_EFT_BRIDGE_THEOREM.md](./YT_EFT_BRIDGE_THEOREM.md)
 
 The lane still stays bounded because the full low-energy transfer is not yet

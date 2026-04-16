@@ -46,7 +46,7 @@ The package has four layers:
 
 1. retained theorem core
 2. retained standalone quantitative lanes (`alpha_s`, EW normalization)
-3. bounded Yukawa/top and Higgs/vacuum lanes
+3. derived-with-explicit-systematic Yukawa/top and derived-with-inherited-explicit-systematic Higgs/vacuum lanes
 4. bounded prediction surface plus live gates and frozen-out route
    history
 
@@ -69,9 +69,10 @@ The current canonical quantitative stack is modular:
 - [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md)
 - [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md)
 - [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md)
+- [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](../../YT_ZERO_IMPORT_AUTHORITY_NOTE.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
-- [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md](../../YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)
-- [HIGGS_VACUUM_BOUNDED_NOTE.md](../../HIGGS_VACUUM_BOUNDED_NOTE.md)
+- [YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md](../../YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md)
+- [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](../../HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md)
 - [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
 
 Current package status:
@@ -85,10 +86,11 @@ Current package status:
   where `alpha_s(v)` comes from the same-surface plaquette chain,
   `g_1(v), g_2(v)` use derived `R_conn = 8/9` support, and the `M_Z`
   rows use the retained running bridge
-- bounded `y_t(v) = 0.9176`
-- bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
-  with the current `~3%` QFP/RGE-surrogate systematic carried explicitly by
-  the Yukawa/top lane
+- derived-with-explicit-systematic `y_t(v) = 0.9176`
+- derived-with-explicit-systematic canonical `m_t(pole) = 173.10 GeV` (3-loop),
+  with retained `172.57 GeV` (2-loop) support
+  with the current explicit bridge budget of `1.2147511%` conservative
+  (`0.75500635%` support-tight) carried by the Yukawa/top lane
 - promoted CKM atlas/axiom closure package
   (no quark-mass or fitted CKM inputs; canonical CMT `alpha_s(v)` input):
   `|V_us| = 0.22727`,
@@ -96,10 +98,10 @@ Current package status:
   `|V_ub| = 0.003913`,
   `delta = 65.905 deg`,
   `J = 3.331 x 10^-5`
-- bounded Higgs / vacuum package:
-  `m_H = 119.8 GeV` (2-loop support route),
-  `125.3 GeV` (framework-side 3-loop route),
-  bounded vacuum-stability readout inherited from the bounded `y_t` / QFP lane
+- derived-with-inherited-explicit-systematic Higgs / vacuum package:
+  canonical `m_H = 125.1 GeV` (framework-side 3-loop route),
+  with retained `119.8 GeV` (2-loop support route),
+  vacuum-stability readout inherited from the explicit `y_t` systematic
 
 ## Package Rules
 
@@ -215,11 +217,11 @@ Bounded prediction surface:
 
 - DM ratio `R = 5.48` vs `5.47`
 - zero-import `\alpha_s(M_Z) = 0.1181`
-- bounded top package:
+- derived-with-explicit-systematic top package:
   `y_t(v) = 0.9176`,
-  `m_t(pole) = 172.57 GeV` (2-loop),
-  `173.10 GeV` (3-loop),
-  with the current `~3%` QFP/RGE-surrogate systematic
+  canonical `m_t(pole) = 173.10 GeV` (3-loop),
+  with retained `172.57 GeV` (2-loop) support and an explicit bridge budget
+  of `1.2147511%` conservative (`0.75500635%` support-tight)
 - promoted CKM atlas/axiom closure package with full sharp `|V_us|`, `|V_cb|`, `|V_ub|`, `\delta`, and `J`, no quark-mass or fitted CKM observables in the derivation, and canonical CMT `\alpha_s(v)` as the quantitative coupling input
 - cosmology companions such as `\Omega_\Lambda`, `n_s`, `w = -1`
 - sharp bounded secondary predictions already on `main`:

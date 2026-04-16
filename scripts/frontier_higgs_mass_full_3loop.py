@@ -13,11 +13,11 @@ THE DERIVATION:
 
   The key science question is not whether the Higgs lane becomes fully exact
   by itself; it is whether the missing 3-loop implementation is the dominant
-  remaining source of boundedness.
+  remaining source of explicit inherited systematic.
 
   If the 3-loop implementation is correct, then the old calibrated-fit import
-  can be removed. The remaining Higgs bound is inherited from the bounded
-  `y_t(v)` route, not from a missing Higgs-loop computation.
+  can be removed. The remaining Higgs systematic is inherited from the
+  explicit-systematic `y_t(v)` route, not from a missing Higgs-loop computation.
 
   The 3-loop terms produce a LARGE shift because of massive cancellations
   among ~200 individual contributions. Implementing only "dominant" terms
@@ -30,7 +30,8 @@ BETA FUNCTIONS (all terms to 3-loop):
   2-loop quartic: Ford, Jack, Jones (1992); Luo, Wang, Xiao (2003)
 
 FRAMEWORK INPUTS:
-  y_t(v) = 0.918 (derived central value, but still bounded by the QFP route)
+  y_t(v) = 0.9176 (derived central value, but still carrying the explicit
+  package-native bridge budget)
   g_2 = 0.648, g_1 = 0.464, alpha_s = 0.1033
   v = 246.28 GeV, M_Pl = 1.22e19
 
@@ -82,7 +83,9 @@ ALPHA_LM = CANONICAL_ALPHA_LM
 ALPHA_S_V_DERIVED = ALPHA_BARE / U0**2  # = 0.1033
 C_APBC = (7.0 / 8.0) ** 0.25
 V_DERIVED = M_PL * C_APBC * ALPHA_LM**16
-YT_V_DERIVED = 0.918         # From Ward identity + 2-loop running
+YT_V_DERIVED = 0.9176        # Canonical current central value from the YT authority path
+YT_REL_BOUND_CONSERVATIVE = 0.012147511
+YT_REL_BOUND_SUPPORT_TIGHT = 0.0075500635
 
 # SM couplings at M_Z for cross-check
 ALPHA_1_MZ_GUT = (5.0 / 3.0) * ALPHA_EM_MZ / (1.0 - SIN2_TW_MZ)
@@ -923,7 +926,7 @@ def part3_framework_prediction():
 
     Framework inputs (derived from Cl(3) on Z^3):
       alpha_s(v) = 0.1033  (lattice mean-field, vertex scheme)
-      y_t(v) = 0.918       (backward Ward identity + 2-loop running)
+      y_t(v) = 0.9176      (canonical current YT central value)
       g_2(v) = 0.648       (from alpha_s via sin^2(theta_W) running)
       g_1(v) = 0.464       (GUT normalized, from EW)
       v = 246.28 GeV       (hierarchy theorem)
@@ -939,7 +942,7 @@ def part3_framework_prediction():
     g1_fw = 0.464     # GUT-normalized U(1)
     g2_fw = 0.648     # SU(2)
     g3_fw = np.sqrt(4 * PI * ALPHA_S_V_DERIVED)  # from alpha_s = 0.1033
-    yt_fw = 0.918     # Derived y_t(v)
+    yt_fw = YT_V_DERIVED     # Derived y_t(v)
 
     print(f"\n  Framework-derived couplings at v = {V_DERIVED} GeV:")
     print(f"    g_1(v) = {g1_fw:.4f}  [GUT normalized]")
@@ -1024,7 +1027,7 @@ def part4_sensitivity(fw_results_3loop):
     g1_base = 0.464
     g2_base = 0.648
     g3_base = np.sqrt(4 * PI * ALPHA_S_V_DERIVED)
-    yt_base = 0.918
+    yt_base = YT_V_DERIVED
 
     t_v = np.log(V_DERIVED)
     t_pl = np.log(M_PL)
@@ -1053,7 +1056,7 @@ def part4_sensitivity(fw_results_3loop):
     print(f"  {'y_t':>8s} {'m_H (GeV)':>12s} {'delta_mH':>10s}")
     print(f"  {'-'*8} {'-'*12} {'-'*10}")
 
-    yt_values = [0.90, 0.91, 0.918, 0.93, 0.94, 0.95, 0.96, 0.97, 0.98, 0.99, 1.00]
+    yt_values = [0.90, 0.91, YT_V_DERIVED, 0.93, 0.94, 0.95, 0.96, 0.97, 0.98, 0.99, 1.00]
     for yt in yt_values:
         try:
             m_h = compute_mh(g1_base, g2_base, g3_base, yt)
@@ -1103,24 +1106,38 @@ def part4_sensitivity(fw_results_3loop):
         print(f"  Inversion failed: {e}")
         report("yt-inversion", False, "Could not find y_t for m_H = 125")
 
-    # Explicit inherited y_t systematic band from the bounded QFP route.
-    print(f"\n  --- Inherited Higgs band from bounded y_t route ---")
-    yt_low = yt_base * 0.97
-    yt_high = yt_base * 1.03
-    mh_low = compute_mh(g1_base, g2_base, g3_base, yt_low)
-    mh_high = compute_mh(g1_base, g2_base, g3_base, yt_high)
+    # Explicit inherited y_t systematic bands from the explicit bridge budget.
+    print(f"\n  --- Inherited Higgs band from explicit-systematic y_t route ---")
+    yt_low_cons = yt_base * (1.0 - YT_REL_BOUND_CONSERVATIVE)
+    yt_high_cons = yt_base * (1.0 + YT_REL_BOUND_CONSERVATIVE)
+    yt_low_tight = yt_base * (1.0 - YT_REL_BOUND_SUPPORT_TIGHT)
+    yt_high_tight = yt_base * (1.0 + YT_REL_BOUND_SUPPORT_TIGHT)
+    mh_low_cons = compute_mh(g1_base, g2_base, g3_base, yt_low_cons)
+    mh_high_cons = compute_mh(g1_base, g2_base, g3_base, yt_high_cons)
+    mh_low_tight = compute_mh(g1_base, g2_base, g3_base, yt_low_tight)
+    mh_high_tight = compute_mh(g1_base, g2_base, g3_base, yt_high_tight)
     print(f"  y_t(v) central = {yt_base:.4f}")
-    print(f"  y_t(v) band    = [{yt_low:.4f}, {yt_high:.4f}]  (±3%)")
-    print(f"  m_H band       = [{mh_low:.1f}, {mh_high:.1f}] GeV")
-    print(f"  This is the remaining Higgs boundedness after removing the")
+    print(
+        f"  y_t(v) band    = [{yt_low_cons:.4f}, {yt_high_cons:.4f}]  "
+        f"(±{YT_REL_BOUND_CONSERVATIVE * 100:.6f}% conservative)"
+    )
+    print(f"  m_H band       = [{mh_low_cons:.1f}, {mh_high_cons:.1f}] GeV")
+    print(
+        f"  y_t(v) tight   = [{yt_low_tight:.4f}, {yt_high_tight:.4f}]  "
+        f"(±{YT_REL_BOUND_SUPPORT_TIGHT * 100:.6f}% support-tight)"
+    )
+    print(f"  m_H tight      = [{mh_low_tight:.1f}, {mh_high_tight:.1f}] GeV")
+    print(f"  This is the remaining Higgs inherited systematic after removing the")
     print(f"  Buttazzo-style calibration import.")
 
     return {
         "mh_base": m_h_base,
         "yt_base": yt_base,
         "yt_target_for_125": yt_target if 'yt_target' in locals() else None,
-        "mh_band_from_yt_bound": (mh_low, mh_high),
-        "yt_band": (yt_low, yt_high),
+        "mh_band_from_yt_bound_conservative": (mh_low_cons, mh_high_cons),
+        "yt_band_conservative": (yt_low_cons, yt_high_cons),
+        "mh_band_from_yt_bound_support_tight": (mh_low_tight, mh_high_tight),
+        "yt_band_support_tight": (yt_low_tight, yt_high_tight),
     }
 
 
@@ -1147,13 +1164,13 @@ def part5_authority_summary(sm_results, fw_results, sensitivity):
        parametric fit
     5. All input couplings from framework:
        - alpha_s(v) = 0.1033 from lattice mean-field
-       - y_t(v) = 0.918 from backward Ward identity
+       - y_t(v) = 0.9176 from the current YT authority path
        - g_2, g_1 from EW sector
        - v = 246.28 GeV from hierarchy theorem
 
   WHAT THIS SCRIPT DOES NOT CLOSE:
-    - It does not remove the bounded status of the y_t route itself.
-    - Therefore the exact Higgs mass still inherits the bounded y_t lane.
+    - It does not remove the explicit systematic carried by the y_t route itself.
+    - Therefore the exact Higgs mass still inherits the explicit-systematic y_t lane.
 
   RESULT:
 """)
@@ -1167,10 +1184,20 @@ def part5_authority_summary(sm_results, fw_results, sensitivity):
         print(f"    Status: {'PASS' if within else 'FAIL'} "
               f"(need within +/- 5%)")
         if sensitivity:
-            mh_low, mh_high = sensitivity["mh_band_from_yt_bound"]
-            yt_low, yt_high = sensitivity["yt_band"]
-            print(f"    Inherited y_t band     = [{yt_low:.4f}, {yt_high:.4f}]")
-            print(f"    Inherited m_H band     = [{mh_low:.1f}, {mh_high:.1f}] GeV")
+            mh_low_cons, mh_high_cons = sensitivity["mh_band_from_yt_bound_conservative"]
+            yt_low_cons, yt_high_cons = sensitivity["yt_band_conservative"]
+            mh_low_tight, mh_high_tight = sensitivity["mh_band_from_yt_bound_support_tight"]
+            yt_low_tight, yt_high_tight = sensitivity["yt_band_support_tight"]
+            print(
+                f"    Inherited y_t band     = [{yt_low_cons:.4f}, {yt_high_cons:.4f}] "
+                f"(conservative)"
+            )
+            print(f"    Inherited m_H band     = [{mh_low_cons:.1f}, {mh_high_cons:.1f}] GeV")
+            print(
+                f"    Inherited y_t tight    = [{yt_low_tight:.4f}, {yt_high_tight:.4f}] "
+                f"(support-tight)"
+            )
+            print(f"    Inherited m_H tight    = [{mh_low_tight:.1f}, {mh_high_tight:.1f}] GeV")
 
     if 3 in sm_results:
         r_sm = sm_results[3]
@@ -1195,7 +1222,7 @@ def part5_authority_summary(sm_results, fw_results, sensitivity):
     print()
     print("  Honest authority boundary:")
     print("    - the Buttazzo-style calibrated-fit import is no longer needed")
-    print("    - the remaining Higgs bound is inherited from the bounded y_t lane")
+    print("    - the remaining Higgs systematic is inherited from the explicit-systematic y_t lane")
 
 
 # ============================================================================

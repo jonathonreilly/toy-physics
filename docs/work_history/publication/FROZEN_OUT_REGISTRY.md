@@ -57,7 +57,7 @@ were superseded by the complete prediction chain and its support stack.
 **Primary sources:**
 
 - [COMPLETE_PREDICTION_CHAIN_2026_04_15.md](../../COMPLETE_PREDICTION_CHAIN_2026_04_15.md)
-- superseded note history such as `YT_ZERO_IMPORT_CLOSURE_NOTE.md`,
+- superseded note history such as `YT_ZERO_IMPORT_AUTHORITY_NOTE.md`,
   `YT_BOUNDARY_THEOREM.md`, `YT_EFT_BRIDGE_THEOREM.md`,
   `ALPHA_S_DERIVED_NOTE.md`, `YT_VERTEX_POWER_DERIVATION.md`,
   `YT_GAUGE_CROSSOVER_THEOREM.md`

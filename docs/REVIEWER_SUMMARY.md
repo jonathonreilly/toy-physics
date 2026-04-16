@@ -65,9 +65,10 @@ Canonical quantitative stack:
 - [ALPHA_S_DERIVED_NOTE.md](ALPHA_S_DERIVED_NOTE.md)
 - [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md)
 - [YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md)
+- [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](YT_ZERO_IMPORT_AUTHORITY_NOTE.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
-- [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md](YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)
-- [HIGGS_VACUUM_BOUNDED_NOTE.md](HIGGS_VACUUM_BOUNDED_NOTE.md)
+- [YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md](YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md)
+- [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md)
 - [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
 
 Current quantitative statuses:
@@ -91,14 +92,15 @@ Current quantitative statuses:
   species structure because rooting is undefined in Hamiltonian `Cl(3)` on
   `Z^3`, and chirality is supplied only on the full-framework anomaly-forced
   `3+1` surface
-- bounded `y_t(v) = 0.9176`
-- bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
-  with the current `~3%` QFP/RGE-surrogate systematic carried explicitly by
-  the Yukawa/top lane
-- bounded Higgs / vacuum package:
-  `m_H = 119.8 GeV` (2-loop support route),
-  `125.3 GeV` (framework-side 3-loop route),
-  bounded vacuum-stability readout inherited from the bounded `y_t` / QFP lane
+- derived-with-explicit-systematic `y_t(v) = 0.9176`
+- derived-with-explicit-systematic canonical `m_t(pole) = 173.10 GeV` (3-loop),
+  with retained `172.57 GeV` (2-loop) support
+  with the current explicit bridge budget of `1.2147511%` conservative
+  (`0.75500635%` support-tight) carried by the Yukawa/top lane
+- derived-with-inherited-explicit-systematic Higgs / vacuum package:
+  canonical `m_H = 125.1 GeV` (framework-side 3-loop route),
+  with retained `119.8 GeV` (2-loop support route),
+  vacuum-stability readout inherited from the explicit `y_t` systematic
 
 ## Bounded Prediction Surface
 

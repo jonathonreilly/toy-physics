@@ -1,6 +1,6 @@
 # Publication Matrix
 
-**Date:** 2026-04-14  
+**Date:** 2026-04-15
 **Purpose:** one canonical publication-capture table for the current flagship
 paper package.
 
@@ -83,8 +83,8 @@ qualifiers explicitly.
 |---|---|---|---|---|---|---|---|---|
 | `\alpha_s(M_Z)` | strong-coupling lane | `0.1181` | `0.1179` | retained | same-surface plaquette derivative + one-decade running bridge | retained standalone quantitative lane | [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md) | n/a |
 | EW normalization package | EW lane | framework-scale `g_1(v)=0.4644`, `g_2(v)=0.6480`; retained bridge values `sin^2(theta_W)=0.2306`, `1/\alpha_{EM}=127.67` | observed values | retained | same-surface plaquette derivative + derived `R_conn` support + running bridge for the `M_Z` rows | retained standalone quantitative lane | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md), [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md) | n/a |
-| Yukawa / top package | YT package | `y_t(v)=0.9176`, `m_t(pole)=172.57/173.10 GeV` | `~0.917`, `172.69 GeV` | bounded | same-surface plaquette derivative + derived running | bounded quantitative lane; zero SM imports, but `~3%` QFP surrogate systematic | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) | n/a |
-| Higgs / vacuum package | Higgs package | `m_H=119.8 GeV` (2-loop support route), `125.3 GeV` (framework-side 3-loop route), qualitative vacuum stability | `125.25 GeV`, SM metastability comparator | bounded | same-surface plaquette derivative + derived running | bounded quantitative lane; mechanism derived and framework-native 3-loop Higgs implementation exists, but the package still inherits the bounded `y_t` / QFP route | [HIGGS_VACUUM_BOUNDED_NOTE.md](../../HIGGS_VACUUM_BOUNDED_NOTE.md) | n/a |
+| Yukawa / top package | YT package | `y_t(v)=0.9176`, `m_t(pole)=172.57/173.10 GeV` | `~0.917`, `172.69 GeV` | derived with explicit systematic | same-surface plaquette derivative + derived running + explicit bridge-budget stack | derived-with-explicit-systematic quantitative lane; zero SM imports, with current package-native transport budget `1.2147511%` conservative / `0.75500635%` support-tight | [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](../../YT_ZERO_IMPORT_AUTHORITY_NOTE.md), [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) | n/a |
+| Higgs / vacuum package | Higgs package | `m_H=119.8 GeV` (2-loop support route), `125.1 GeV` (framework-side 3-loop route), qualitative vacuum stability | `125.25 GeV`, SM metastability comparator | derived with inherited explicit systematic | same-surface plaquette derivative + derived running + inherited Yukawa budget | derived-with-inherited-explicit-systematic quantitative lane; mechanism derived and framework-native 3-loop Higgs implementation exists, with the remaining quantitative systematic inherited from the explicit `y_t` transport budget | [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](../../HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md) | n/a |
 | Dark matter ratio `R` | DM relic chain | `5.48` | `5.47` | bounded | one-parameter + imported perturbative pieces | arXiv companion only | [DM_RELIC_PAPER_NOTE.md](../../DM_RELIC_PAPER_NOTE.md) | `F01` |
 | `\Omega_\Lambda` conditional chain | cosmology from `R` | `0.686` | `0.685` | bounded/conditional | observed `\eta` + flatness + bounded `R`; after scale reduction, the remaining blocker is matter content | arXiv companion only | [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md), [COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md](../../COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md) | `F01`, `F04` |
 | CKM closure package | atlas/axiom closure route with no quark-mass or fitted-CKM inputs | `|V_us|=0.22727`, `|V_cb|=0.04217`, `|V_ub|=0.003913`, `\delta=65.905^\circ`, `J=3.331 x 10^-5` | PDG magnitudes `0.2243`, `0.0422`, `0.00394`; coherent angle package `\delta=65.5^\circ`, `J_{recon}=3.304 x 10^-5` | closed | canonical CMT `\alpha_s(v)` as the quantitative coupling input + exact atlas counts `{2,3,6}` + exact `1/6` projector + exact bilinear tensor carrier `K_R` + exact `Z_3` source + exact Schur cascade | promoted quantitative package / SI theorem box | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) | n/a |
@@ -96,13 +96,13 @@ qualifiers explicitly.
 | gravitational decoherence | BMV-class gravity companion | `\gamma = 0.253 Hz`, `\Phi_{ent} = 12.4 rad` (BMV benchmark) | no direct measurement yet; benchmark budget `\gamma_{tot} < 0.5 Hz` | bounded companion lane | derived gravity chain + experimental benchmark geometry | later companion or arXiv appendix | [GRAV_DECOHERENCE_DERIVED_NOTE.md](../../GRAV_DECOHERENCE_DERIVED_NOTE.md) | n/a |
 | CKM neutron EDM bounded lane | strong-CP / flavor secondary lane | `d_n(CKM) ~ 8 x 10^-33 e cm` on the retained `\theta_eff = 0` surface | current bound `|d_n| < 1.8 x 10^-26 e cm` | bounded secondary lane | retained strong-CP theorem + promoted CKM closure + standard EFT bridge | later appendix or secondary paper | [CKM_NEUTRON_EDM_BOUND_NOTE.md](../../CKM_NEUTRON_EDM_BOUND_NOTE.md) | n/a |
 | Proton lifetime | proton decay companion | `\tau_p ~ 4 x 10^47 yr` | lower bounds only | bounded companion lane | imported EFT decay-rate layer | later companion or arXiv appendix | [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md) | n/a |
-| Vacuum critical stability | Higgs-vacuum companion | critical-stability boundary on the current `\lambda(M_Pl)=0` route | Standard Model metastability comparator | bounded companion lane | inherits the bounded framework-side `y_t` / Higgs route | later companion or arXiv appendix | [VACUUM_CRITICAL_STABILITY_NOTE.md](../../VACUUM_CRITICAL_STABILITY_NOTE.md) | n/a |
+| Vacuum critical stability | Higgs-vacuum secondary lane | critical-stability boundary on the current `\lambda(M_Pl)=0` route | Standard Model metastability comparator | bounded secondary lane | inherits the explicit-systematic framework-side `y_t` / Higgs route | later companion or arXiv appendix | [VACUUM_CRITICAL_STABILITY_NOTE.md](../../VACUUM_CRITICAL_STABILITY_NOTE.md) | n/a |
 | Magnetic monopole mass | monopole companion | `1.43 M_{Pl}` | lower bounds only | bounded companion lane | companion phenomenology | later companion or arXiv appendix | [MONOPOLE_DERIVED_NOTE.md](../../MONOPOLE_DERIVED_NOTE.md) | n/a |
 | GW echo null result | frozen-star / echo companion | no detectable echoes; the evanescent barrier drives coherent return effectively to zero | full-catalog stack remains null (`0.41 sigma` frozen-star, `1.29 sigma` Abedi-style) | bounded / off-scope companion lane | strong-field compact-object identification layer | later companion paper only | [GW_ECHO_NULL_RESULT_NOTE.md](../../GW_ECHO_NULL_RESULT_NOTE.md) | n/a |
 
 ## C. Live flagship gates
 
-| Gate | Best current read | Status | Main blocker | Best current branch / authority |
+| Gate | Best current read | Status | Main blocker | Best current authority |
 |---|---|---|---|---|
 | DM relic mapping | structural ratio is strong; full relic bridge still bounded | open | graph-to-relic transport / normalization closure | [DM_RELIC_PAPER_NOTE.md](../../DM_RELIC_PAPER_NOTE.md), [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md) |
 ## D. Workstreams intentionally frozen out of the flagship paper
@@ -115,7 +115,7 @@ qualifiers explicitly.
 | cosmology companion portfolio | conditional / bounded | `F04` |
 | Higgs and mass-spectrum companions beyond the promoted package | not part of the flagship spine | `F05` |
 | gravity companions beyond the retained core | bounded / later-paper material | `F06` |
-| branch-local inventories and stale strategy docs | inventory only, not authority | `F08` |
+| historical inventories and stale strategy docs | inventory only, not authority | `F08` |
 
 ## Matrix rule
 

@@ -11,13 +11,13 @@ This document is the current publication-facing state for that framework. It
 supersedes older narrower retain audits where they conflict with the present
 paper surface.
 
-The package now also carries a branch-audited publication-capture layer:
+The package now also carries a publication-capture layer:
 
 - [publication/ci3_z3/PUBLICATION_MATRIX.md](publication/ci3_z3/PUBLICATION_MATRIX.md)
 - [publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md](publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md)
 - [publication/ci3_z3/PUBLICATION_CONTROL_PLANE.md](publication/ci3_z3/PUBLICATION_CONTROL_PLANE.md)
 
-Those files exist so no branch-local result family is silently lost between the
+Those files exist so no result family is silently lost between the
 retained theorem core and the broader bounded portfolio.
 
 Historical capture context now lives in the history bucket:
@@ -136,13 +136,15 @@ ledger:
   where `alpha_s(v)` comes from the same-surface plaquette chain,
   `g_1(v), g_2(v)` use derived `R_conn = 8/9` support, and the `M_Z`
   rows use the retained running bridge
-- bounded `y_t(v) = 0.9176`
-- bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
-  with the current `~3%` QFP/RGE-surrogate systematic carried explicitly by
-  the Yukawa/top lane
-- bounded Higgs / vacuum package: `m_H = 119.8 GeV` (2-loop support route),
-  `125.3 GeV` (framework-side 3-loop route), bounded vacuum-stability readout
-  inherited from the bounded `y_t` / QFP lane
+- derived-with-explicit-systematic `y_t(v) = 0.9176`
+- derived-with-explicit-systematic canonical `m_t(pole) = 173.10 GeV` (3-loop),
+  with retained `172.57 GeV` (2-loop) support
+  with the current explicit bridge budget of `1.2147511%` conservative
+  (`0.75500635%` support-tight) carried by the Yukawa/top lane
+- derived-with-inherited-explicit-systematic Higgs / vacuum package:
+  canonical `m_H = 125.1 GeV` (framework-side 3-loop route), with retained
+  `119.8 GeV` (2-loop support route); vacuum-stability readout inherited from
+  the explicit `y_t` systematic
 - promoted CKM no-import closure package with full sharp `|V_us|`, `|V_cb|`, `|V_ub|`, `\delta`, and `J`
 - older bounded Cabibbo / NNI / partial Jarlskog notes retained only as route history
 - `\Omega_\Lambda`, `n_s`, `w = -1`, and `\Lambda` cosmology companions
@@ -153,9 +155,10 @@ The current quantitative component stack on `main` is:
 - [ALPHA_S_DERIVED_NOTE.md](ALPHA_S_DERIVED_NOTE.md)
 - [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md)
 - [YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md)
+- [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](YT_ZERO_IMPORT_AUTHORITY_NOTE.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
-- [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md](YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)
-- [HIGGS_VACUUM_BOUNDED_NOTE.md](HIGGS_VACUUM_BOUNDED_NOTE.md)
+- [YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md](YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md)
+- [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md)
 
 ## Exact supporting theorems now safe to carry
 
@@ -238,7 +241,7 @@ part of the retained flagship core:
 - cosmology companion portfolio
 - individual bounded secondary lanes
 - gravity companions beyond retained weak-field plus restricted strong-field package
-- branch-local inventories and stale strategy docs
+- historical inventories and stale strategy docs
 
 The package-control docs now make that split operational:
 
@@ -247,7 +250,7 @@ The package-control docs now make that split operational:
 - [publication/ci3_z3/SUBMISSION_SEQUENCE_2026-04-14.md](publication/ci3_z3/SUBMISSION_SEQUENCE_2026-04-14.md)
 
 If a reviewer asks “what happened to X?”, the answer should now live in the
-matrix or registry rather than in branch-local notes only.
+matrix or registry rather than in historical notes only.
 
 ## Overnight audit additions tracked in the ledger
 
@@ -273,9 +276,9 @@ For the flagship paper:
 - the external-input split must stay explicit:
   - `T_CMB` and `H_0` are cosmological boundary conditions
   - `v` is now internally derived on the exact minimal hierarchy block
-- the three live gates must remain explicitly open or bounded
+- the remaining live gate must remain explicitly open
 - no note or script may promote a bounded lane to `CLOSED` unless the theorem
-  survives direct Codex review on this branch
+  survives direct Codex review on `main`
 
 ## Promotion rule for `main`
 

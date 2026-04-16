@@ -1,6 +1,6 @@
 # Reproduce Guide
 
-Run these from the repo root on this branch.
+Run these from the repo root on `main`.
 
 ## Core retained runners
 

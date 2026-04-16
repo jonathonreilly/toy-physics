@@ -1,14 +1,14 @@
-# Higgs / Vacuum Bounded Authority
+# Higgs / Vacuum Authority
 
 **Date:** 2026-04-15
-**Status:** bounded quantitative lane on `main`
+**Status:** derived with inherited explicit systematic quantitative lane on the current package
 **Primary runners:** `scripts/frontier_higgs_mass_full_3loop.py`,
 `scripts/frontier_yt_color_projection_correction.py`
 **Boundary-support runner:** `scripts/frontier_direct_yt_extraction.py`
 
 ## Authority Role
 
-This note is the standalone authority for the bounded Higgs / vacuum lane on
+This note is the standalone authority for the Higgs / vacuum lane on
 the current package surface.
 
 It is separate from:
@@ -30,12 +30,15 @@ computation with no Buttazzo-style calibrated-fit dependence.
 
 Using the current accepted package inputs:
 
-- `m_H(2-loop corrected-input route) = 119.8 GeV`
-- `m_H(full 3-loop framework-side route) = 125.3 GeV`
+- canonical framework-side central value:
+  `m_H(full 3-loop framework-side route) = 125.1 GeV`
+- retained support route:
+  `m_H(2-loop corrected-input route) = 119.8 GeV`
 - vacuum stability is qualitatively favorable on the same route
 
-These rows remain `BOUNDED` on `main` only because they inherit the bounded
-`y_t` / QFP route. The remaining Higgs blocker is no longer “missing
+These rows are now best read as `DERIVED WITH INHERITED EXPLICIT SYSTEMATIC`
+because they inherit the explicit `y_t` bridge budget on the current package
+support stack. The remaining Higgs blocker is no longer “missing
 framework-native 3-loop implementation.”
 
 ## Component Structure
@@ -46,28 +49,31 @@ framework-native 3-loop implementation.”
 2. The corrected Yukawa/color-projection route shifts the 2-loop CW/stability
    result to:
    `m_H(2-loop) = 119.8 GeV`
-3. The direct full 3-loop Higgs runner now computes the current central
+3. The direct full 3-loop Higgs runner now computes the canonical current
    framework-side value:
-   `m_H = 125.3 GeV`
+   `m_H = 125.1 GeV`
 4. On that same route, the vacuum readout stays qualitatively favorable, but
-   it remains bounded because the lane still inherits the bounded Yukawa/QFP
-   route.
+   it remains systematic-limited because the lane still inherits the explicit
+   Yukawa bridge budget.
 
 ## Supporting Notes
 
 - [HIGGS_MASS_DERIVED_NOTE.md](./HIGGS_MASS_DERIVED_NOTE.md)
 - [HIGGS_MASS_FROM_AXIOM_NOTE.md](./HIGGS_MASS_FROM_AXIOM_NOTE.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](./YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
-- [YT_FLAGSHIP_CLOSURE_NOTE.md](./YT_FLAGSHIP_CLOSURE_NOTE.md)
+- [YT_FLAGSHIP_BOUNDARY_NOTE.md](./YT_FLAGSHIP_BOUNDARY_NOTE.md)
 
 ## Validation Snapshot
 
-- `m_H(2-loop corrected-input route) = 119.77 GeV`
-- `m_H(full 3-loop framework-side route) = 125.3 GeV`
+- canonical framework-side central value:
+  `m_H(full 3-loop framework-side route) = 125.1 GeV`
+- retained support route:
+  `m_H(2-loop corrected-input route) = 119.77 GeV`
 - observed comparator: `125.25 GeV`
-- inherited Higgs band from bounded `y_t`: `115.2-135.3 GeV`
-- vacuum prediction: qualitatively favorable, but bounded through the `y_t`
-  lane
+- inherited Higgs band from explicit-systematic `y_t`: `121.1-129.2 GeV`
+  conservative, `122.6-127.7 GeV` support-tight
+- vacuum prediction: qualitatively favorable, with inherited explicit
+  systematic through the `y_t` lane
 
 Primary reruns:
 

@@ -126,7 +126,7 @@ external reviewer will ask about them whether or not they are retained.
 |---|---|---|---|---|
 | `alpha_s(M_Z)` | retained quantitative lane | standalone strong-coupling lane on `main` | [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md) | matrix row `\alpha_s(M_Z)`, n/a |
 | EW normalization package | retained quantitative lane | standalone EW lane on `main`; independent of the Yukawa/Higgs chain | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md) | matrix row `EW normalization package`, n/a |
-| Yukawa / top package | bounded quantitative lane | zero SM imports, but still carries an approximately `3%` QFP/RGE-surrogate systematic | [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) | matrix row `Yukawa / top package`, n/a |
+| Yukawa / top package | derived-with-explicit-systematic quantitative lane | zero SM imports; the remaining quantitative uncertainty is now the explicit package-native bridge budget `1.2147511%` conservative / `0.75500635%` support-tight rather than a generic open surrogate caveat | [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](../../YT_ZERO_IMPORT_AUTHORITY_NOTE.md), [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md) | matrix row `Yukawa / top package`, n/a |
 
 ### Flavor / CKM portfolio
 
@@ -138,12 +138,12 @@ external reviewer will ask about them whether or not they are retained.
 
 | Quantity / lane | Current decision | Why not promoted | Primary authority | Matrix / freeze reference |
 |---|---|---|---|---|
-| Higgs / vacuum package | bounded quantitative lane | mechanism derived and the framework-native 3-loop Higgs computation now exists, but exact mass and vacuum readout still inherit the bounded Yukawa / QFP route | [HIGGS_VACUUM_BOUNDED_NOTE.md](../../HIGGS_VACUUM_BOUNDED_NOTE.md) | matrix row `Higgs / vacuum package`, n/a |
+| Higgs / vacuum package | derived-with-inherited-explicit-systematic quantitative lane | mechanism derived and the framework-native 3-loop Higgs computation now exists; the remaining quantitative uncertainty is inherited from the explicit Yukawa bridge budget | [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](../../HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md) | matrix row `Higgs / vacuum package`, n/a |
 | Bekenstein-Hawking entropy | bounded companion lane | useful companion signal, not part of flagship theorem spine | [BH_ENTROPY_DERIVED_NOTE.md](../../BH_ENTROPY_DERIVED_NOTE.md) | matrix row `Bekenstein-Hawking entropy` |
 | gravitational decoherence | bounded companion lane | concrete BMV-class benchmark prediction, but still companion-only and unmeasured | [GRAV_DECOHERENCE_DERIVED_NOTE.md](../../GRAV_DECOHERENCE_DERIVED_NOTE.md) | matrix row `gravitational decoherence` |
 | CKM neutron EDM bounded lane | bounded secondary lane | observable consequence of retained `\theta_eff = 0` plus promoted CKM closure, but still bridge-conditioned by standard EFT estimates | [CKM_NEUTRON_EDM_BOUND_NOTE.md](../../CKM_NEUTRON_EDM_BOUND_NOTE.md) | matrix row `CKM neutron EDM bounded lane` |
 | Proton lifetime | bounded companion lane | later companion or appendix material, not flagship core | [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md) | matrix row `Proton lifetime` |
-| Vacuum critical stability | bounded companion lane | extracted from the bounded Higgs / vacuum package and useful as a discriminator, but still inherits the bounded Yukawa / Higgs route | [VACUUM_CRITICAL_STABILITY_NOTE.md](../../VACUUM_CRITICAL_STABILITY_NOTE.md) | matrix row `Vacuum critical stability` |
+| Vacuum critical stability | bounded secondary lane | extracted from the explicit-systematic Higgs / vacuum package and useful as a discriminator, but still inherits the explicit Yukawa / Higgs route | [VACUUM_CRITICAL_STABILITY_NOTE.md](../../VACUUM_CRITICAL_STABILITY_NOTE.md) | matrix row `Vacuum critical stability` |
 | Magnetic monopole mass | bounded companion lane | imported phenomenology layer still present | [MONOPOLE_DERIVED_NOTE.md](../../MONOPOLE_DERIVED_NOTE.md) | matrix row `Magnetic monopole mass` |
 | GW echo null result | bounded / off-scope companion lane | later work resolved the compact-object echo question to observational silence rather than a positive timing prediction; this remains companion-only material | [GW_ECHO_NULL_RESULT_NOTE.md](../../GW_ECHO_NULL_RESULT_NOTE.md) | matrix row `GW echo null result` |
 
@@ -170,7 +170,7 @@ These rows correspond to Section D of
 | cosmology companion portfolio | frozen-out of flagship core | conditional/bounded companion layer | `F04` |
 | Higgs and mass-spectrum companions beyond the promoted package | frozen-out of flagship core | the promoted Higgs/vacuum package is live, but the broader mass-spectrum and neutrino programs remain outside the flagship spine | `F05` |
 | gravity companions beyond the retained core | frozen-out of flagship core | weak-field GR-signature companions and broader non-flagship gravity phenomenology remain outside the flagship core even though the direct-universal discrete GR and canonical textbook continuum-QG route are now promoted | `F06` |
-| branch-local inventories and stale strategy docs | frozen-out as authority | useful for capture, unsafe as publication authority | `F08` |
+| historical inventories and stale strategy docs | frozen-out as authority | useful for capture, unsafe as publication authority | `F08` |
 
 ## 6. Historical and stale surfaces not to confuse with the matrix
 
@@ -183,7 +183,7 @@ paper authority path.
 | older bounded-only `S^3` notes before the general-`R` / cap-uniqueness harmonization | historical | useful route history, no longer the controlling topology authority |
 | older full-closure notes for DM, `y_t`, CKM, gauge normalization | stale / not-for-paper | routinely promoted bounded sub-results too aggressively |
 | misnamed “Born rule derived” surfaces | stale naming | safe claim is exact `I_3 = 0`, not a standalone derivation of the full Born rule |
-| branch-local scorecards and inventories | inventory only | helpful for capture, not safe manuscript authority |
+| historical scorecards and inventories | inventory only | helpful for capture, not safe manuscript authority |
 
 ## 7. Ledger rule
 

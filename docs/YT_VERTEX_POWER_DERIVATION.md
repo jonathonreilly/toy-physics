@@ -12,7 +12,7 @@ by the bounded zero-input `y_t` / `alpha_s` package.
 Use it together with:
 
 - [ALPHA_S_DERIVED_NOTE.md](./ALPHA_S_DERIVED_NOTE.md)
-- [YT_ZERO_IMPORT_CLOSURE_NOTE.md](./YT_ZERO_IMPORT_CLOSURE_NOTE.md)
+- [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](./YT_ZERO_IMPORT_AUTHORITY_NOTE.md)
 
 It does not by itself close the renormalized `y_t` lane.
 

@@ -39,7 +39,7 @@ RESULT:
   alpha_s(M_Z) = 0.1181 (+0.2%)
 
 Authority note: docs/YT_EFT_BRIDGE_THEOREM.md
-Supporting notes: docs/YT_BOUNDARY_THEOREM.md, docs/YT_ZERO_IMPORT_CLOSURE_NOTE.md
+Supporting notes: docs/YT_BOUNDARY_THEOREM.md, docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md
 
 Self-contained: numpy + scipy only.
 PStack experiment: yt-eft-bridge

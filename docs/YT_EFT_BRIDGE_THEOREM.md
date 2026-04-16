@@ -17,7 +17,7 @@ It does **not** close the full `y_t` lane by itself. Its job is narrower:
 
 Use this note together with:
 
-- [YT_ZERO_IMPORT_CLOSURE_NOTE.md](./YT_ZERO_IMPORT_CLOSURE_NOTE.md)
+- [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](./YT_ZERO_IMPORT_AUTHORITY_NOTE.md)
 - [YT_BOUNDARY_THEOREM.md](./YT_BOUNDARY_THEOREM.md)
 
 ## Safe statement

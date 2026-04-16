@@ -11,7 +11,7 @@ zero-input `y_t` package.
 
 It is not the primary zero-input authority. Use it together with:
 
-- [YT_ZERO_IMPORT_CLOSURE_NOTE.md](./YT_ZERO_IMPORT_CLOSURE_NOTE.md)
+- [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](./YT_ZERO_IMPORT_AUTHORITY_NOTE.md)
 - [YT_BOUNDARY_THEOREM.md](./YT_BOUNDARY_THEOREM.md)
 
 ## Safe Statement

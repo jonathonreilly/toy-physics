@@ -788,7 +788,7 @@ log()
 
 yt_scan = [
     ("y_t = 0.973 (Ward, no correction)", 0.973),
-    ("y_t = 0.918 (Ward * sqrt(8/9))", yt_v_physical),
+    ("y_t = 0.9176 (Ward * sqrt(8/9))", yt_v_physical),
     ("y_t = 0.979 (Ward + lattice matching)", 0.979),
     ("y_t = 0.923 (matched + sqrt(8/9))", 0.979 * SQRT_R_CONN),
     ("y_t = 0.992 (SM observed)", 0.992),

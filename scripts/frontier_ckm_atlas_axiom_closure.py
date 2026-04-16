@@ -3,11 +3,11 @@
 CKM Atlas/Axiom No-Import Closure
 =================================
 
-STATUS: branch-local closure route with canonical CMT coupling and an exact
+STATUS: package-native closure route with canonical CMT coupling and an exact
 tensor-slot theorem for 1->3 mixing.
 
 This route does not reuse the old mass-input CKM formulas. It closes CKM on a
-strict no-import surface by combining only branch-local exact/derived inputs:
+strict no-import surface by combining only package-native exact/derived inputs:
 
   1. canonical alpha_s(v) from the coupling-map theorem on the plaquette surface
   2. the exact EWSB 1+2 split (one weak corner, residual color pair)
@@ -124,7 +124,7 @@ def j_from_angles(s12: float, s23: float, s13: float, delta: float) -> float:
 
 PI = math.pi
 
-# Framework inputs: branch-local exact/derived surfaces
+# Framework inputs: package-native exact/derived surfaces
 PLAQ_MC = CANONICAL_PLAQUETTE
 M_PLANCK = 1.2209e19
 SELECTOR_CORRECTION = (7.0 / 8.0) ** 0.25

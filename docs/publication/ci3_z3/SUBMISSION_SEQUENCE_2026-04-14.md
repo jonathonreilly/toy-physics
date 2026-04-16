@@ -58,7 +58,7 @@ This file answers one question:
 ## Phase 5. Clean stale authority
 
 1. rewrite or quarantine old closure-language notes
-2. do not allow branch-local scorecards to outrank the matrix
+2. do not allow local scorecards to outrank the matrix
 3. keep stale review packets out of the manuscript path
 4. maintain [STALE_AUTHORITY_AUDIT_2026-04-14.md](../../work_history/publication/STALE_AUTHORITY_AUDIT_2026-04-14.md)
 

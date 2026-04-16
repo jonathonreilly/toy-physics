@@ -806,13 +806,13 @@ log("""
     - The backward extrapolation to M_Pl is a mathematical BC transfer.
 
   Current authority surface:
-    - YT_ZERO_IMPORT_CLOSURE_NOTE.md: BOUNDED (zero imports)
+    - YT_ZERO_IMPORT_AUTHORITY_NOTE.md: BOUNDED (zero imports)
     - frontier_yt_2loop_chain.py: 2-loop chain with Ward BC
     - frontier_yt_boundary_consistency.py: this script (boundary theorem)
     - YT_BOUNDARY_THEOREM.md: the formal statement
 
   Stale notes that overstate closure (Codex instruction):
-    - YT_FLAGSHIP_CLOSURE_NOTE.md: overstates closure
+    - YT_FLAGSHIP_BOUNDARY_NOTE.md: overstates closure
     - YT_BOUNDARY_RESOLUTION_NOTE.md: uses stale split-boundary approach
 
   These should be updated to reference the boundary selection theorem

@@ -26,7 +26,7 @@ authority.
 
 Examples:
 
-- `claude/youthful-neumann: YT_FLAGSHIP_CLOSURE_NOTE.md`
+- `claude/youthful-neumann: YT_FLAGSHIP_BOUNDARY_NOTE.md`
 - `claude/youthful-neumann: YT_FULL_CLOSURE_NOTE.md`
 - `claude/youthful-neumann: DM_FLAGSHIP_CLOSURE_NOTE.md`
 - `claude/youthful-neumann: CKM_FULL_CLOSURE_NOTE.md`

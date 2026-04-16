@@ -347,26 +347,32 @@ current manuscript.
 Older Cabibbo, mass-basis NNI, and partial-Jarlskog routes remain history
 rather than live flavor authority.
 
-### 5.4 Bounded Yukawa / top and Higgs/vacuum rows
+### 5.4 Explicit-Systematic Yukawa / Top And Higgs/Vacuum Rows
 
-The top-Yukawa / top-mass lane is still bounded, not retained. The current
-package surface is:
+The top-Yukawa / top-mass lane is no longer best described as generically
+bounded by a loose QFP surrogate. The current package surface is:
 
 - `y_t(v) = 0.9176`
-- `m_t(pole) = 172.57 GeV` (2-loop)
-- `m_t(pole) = 173.10 GeV` (3-loop)
+- canonical `m_t(pole) = 173.10 GeV` (3-loop)
+- retained support route `m_t(pole) = 172.57 GeV` (2-loop)
 
-with an inherited `~3%` QFP/RGE-surrogate systematic.
+with an explicit package-native bridge budget of `1.2147511%` conservative and
+`0.75500635%` support-tight. That budget is carried by the exact-bridge tail
+analysis on the current authority path, so the right status is
+derived-with-explicit-systematic rather than a generic bounded lane.
 
-The Higgs/vacuum package is also still bounded, even though the framework-side
-3-loop Higgs computation exists:
+The Higgs/vacuum package is then derived with inherited explicit systematic on
+that same authority surface:
 
-- `m_H = 119.8 GeV` on the corrected-input 2-loop support route
-- `m_H = 125.3 GeV` on the framework-side 3-loop route
+- canonical `m_H = 125.1 GeV` on the framework-side 3-loop route
+- retained support route `m_H = 119.8 GeV` on the corrected-input 2-loop route
 
 The key point is not whether the central number can be made near the observed
 one. The key point is whether the whole route is closed on the same exact
-surface. It is not yet. The bounded label stays.
+surface. It is not yet unbounded, because the quantitative Higgs/vacuum lane
+still inherits the explicit `y_t` transport budget. What changed is that the
+remaining limitation is now explicit and localized rather than a vague missing
+machinery caveat.
 
 ## 6. Bounded Prediction Surface and the Remaining Live Gate
 

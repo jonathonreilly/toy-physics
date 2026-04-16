@@ -155,23 +155,23 @@ The 1.84% deficit in m_t could indicate (a) missing 3-loop corrections in the ba
 
 ## 7. Authority
 
-**Canonical references for the y_t gate:**
+**Canonical references for the y_t lane:**
 - This note: `docs/YT_ZERO_IMPORT_CHAIN_NOTE.md`
 - Script: `scripts/frontier_yt_zero_import_chain.py`
 
 **Superseded notes** (historical record only, do not cite for current status):
 - `docs/YT_EFT_BRIDGE_THEOREM.md` -- backward Ward with imported EW couplings
 - `docs/YT_BOUNDARY_THEOREM.md` -- Ward identity derivation (absorbed here)
-- `docs/YT_ZERO_IMPORT_CLOSURE_NOTE.md` -- earlier incomplete closure attempt
+- `docs/YT_ZERO_IMPORT_AUTHORITY_NOTE.md` -- earlier incomplete closure attempt
 - `docs/YT_EW_COUPLING_BRIDGE_NOTE.md` -- taste threshold development
 - `docs/YT_EW_COLOR_PROJECTION_THEOREM.md` -- color projection factor (absorbed here)
 - `docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md` -- QFP analysis (absorbed here)
 - `docs/YT_CLEAN_DERIVATION_NOTE.md` -- earlier clean attempt
 - `docs/YT_FULL_CLOSURE_NOTE.md` -- earlier closure attempt
-- `docs/YT_FLAGSHIP_CLOSURE_NOTE.md` -- earlier attempt
+- `docs/YT_FLAGSHIP_BOUNDARY_NOTE.md` -- earlier attempt
 - All other `docs/YT_*.md` files
 
-**Supporting scripts** (historical for the y_t gate; the standalone EW lane now
+**Supporting scripts** (historical for the y_t lane; the standalone EW lane now
 uses its own package carrier):
 - `scripts/frontier_yt_eft_bridge.py` -- original backward Ward
 - `scripts/frontier_yt_ew_coupling_derivation.py` -- EW running, normalization, and taste-threshold support scan
