@@ -121,9 +121,10 @@ def link1_eta():
 
     Framework status: CONDITIONAL / IMPORTED.
     The current main-branch baryogenesis gate note isolates the missing
-    electroweak transition / transport computation.  Older route history
+    electroweak transition / transport computation. Older route history
     carried eta ~ 6e-10 conditionally on v(T_c)/T_c ~ 0.52 from the
-    taste-scalar EWPT.
+    taste-scalar EWPT, but that implementation is no longer live on the
+    current package surface.
     For this chain, we import eta from Planck.
     """
     print("=" * 72)
@@ -142,11 +143,11 @@ def link1_eta():
     # Three Sakharov conditions:
     #   1. B violation: SU(2) sphalerons (derived gauge structure)
     #   2. CP violation: Z_3 phase -> delta_CP = 2pi/3, J ~ 3.1e-5
-    #   3. Out-of-equilibrium: taste-scalar EWPT with v/T ~ 0.52
+    #   3. Historical route anchor: taste-scalar EWPT with v/T ~ 0.52
     #
-    # The conditional estimate gives eta ~ 6e-10 at v/T = 0.52.
-    # The v/T value is natural for the 2HDM-like taste scalar spectrum
-    # but requires non-perturbative lattice confirmation.
+    # The older conditional estimate gave eta ~ 6e-10 at v/T = 0.52.
+    # That implementation is now route history only; the current package does
+    # not contain a live same-surface 2HDM-like taste-scalar route.
 
     delta_CP_Z3 = 2.0 * math.pi / 3.0
     sin_delta = math.sin(delta_CP_Z3)
@@ -157,11 +158,11 @@ def link1_eta():
     print(f"    CP phase from Z_3:     delta = 2pi/3 = {delta_CP_Z3:.4f} rad")
     print(f"    sin(delta):            {sin_delta:.4f}")
     print(f"    CP source:             S_CP ~ y_t^2 sin(d) / 4pi^2 = {S_CP:.4f}")
-    print(f"    Required v/T:          ~0.52 (partial washout regime)")
+    print(f"    Historical v/T anchor: ~0.52 (partial washout regime)")
     print()
 
     bounded("eta from baryogenesis",
-            "conditional on v(T_c)/T_c ~ 0.52; imported from observation for this chain")
+            "historical route anchor only; old taste-scalar implementation is not live on current main, eta imported from observation for this chain")
 
     print()
     return eta
@@ -593,8 +594,8 @@ def honest_accounting():
     print()
     print(f"  IMPORTED (from observation):")
     print(f"    - eta = 6.12e-10 (baryon-to-photon ratio)")
-    print(f"      -> conditionally derivable from baryogenesis with v/T ~ 0.52")
-    print(f"      -> not yet first-principles; requires lattice EWPT computation")
+    print(f"      -> older v/T ~ 0.52 route is route history only")
+    print(f"      -> not yet first-principles; requires new EWPT/transport closure")
     print()
     print(f"  STANDARD PHYSICS (no free parameters given eta):")
     print(f"    - BBN: eta -> Omega_b")
@@ -607,7 +608,7 @@ def honest_accounting():
     print(f"      BBN + R + flatness, all derived/standard")
     print(f"    Full first-principles: ONE bounded parameter")
     print(f"      alpha_GUT in [0.03, 0.05] from unification")
-    print(f"      (eta still requires lattice EWPT confirmation)")
+    print(f"      (eta still requires a new EWPT/transport closure)")
     print()
 
     info("The chain Omega_b(obs) -> R(derived) -> Omega_Lambda is a genuine",

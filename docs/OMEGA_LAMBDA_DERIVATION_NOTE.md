@@ -24,7 +24,9 @@ Each link:
 1. **eta = 6.12e-10**: imported from Planck 2018 (the live baryogenesis gate
    is now isolated in [BARYOGENESIS_CLOSURE_GATE_NOTE.md](./BARYOGENESIS_CLOSURE_GATE_NOTE.md);
    the older `v(T_c)/T_c ~ 0.52` target remains bounded route history, not a
-   retained first-principles result)
+   retained first-principles result, and the old taste-scalar implementation
+   is not live on the current package surface; see
+   [BARYOGENESIS_OLD_ROUTE_SURFACE_NO_GO_NOTE.md](./BARYOGENESIS_OLD_ROUTE_SURFACE_NO_GO_NOTE.md))
 2. **Omega_b = 0.0492**: standard BBN, zero free parameters given eta
 3. **R = 5.38**: derived from taste structure (R_base = 31/9 = 3.444)
    plus Sommerfeld correction (S_vis/S_dark ~ 1.56)

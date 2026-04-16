@@ -117,6 +117,8 @@ The current Higgs/CW surface does supply one derived Higgs doublet with
 **not** by itself justify reusing the selector coefficient across all four
 modes. That boundary is recorded in
 [BARYOGENESIS_HIGGS_DOUBLET_MULTIPLICITY_NOTE.md](./BARYOGENESIS_HIGGS_DOUBLET_MULTIPLICITY_NOTE.md).
+The resulting current-surface no-go for the old route is recorded in
+[BARYOGENESIS_OLD_ROUTE_SURFACE_NO_GO_NOTE.md](./BARYOGENESIS_OLD_ROUTE_SURFACE_NO_GO_NOTE.md).
 
 ## Why this matters
 

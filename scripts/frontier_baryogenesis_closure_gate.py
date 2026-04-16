@@ -222,12 +222,12 @@ def part3_eta_bridge(j: float) -> None:
         "eta imported from observation" in omega_note,
     )
     check(
-        "cosmology runner still records the historical EWPT target v/T ~ 0.52",
-        "Required v/T:          ~0.52" in omega_runner,
+        "cosmology runner now records the historical v/T route anchor explicitly",
+        "Historical v/T anchor: ~0.52" in omega_runner,
     )
     check(
-        "cosmology runner still records the missing lattice-EWPT confirmation",
-        "requires lattice EWPT confirmation" in omega_runner,
+        "cosmology runner records that the old taste-scalar route is not live on current main",
+        "old taste-scalar implementation is not live on current main" in omega_runner,
     )
 
     info(

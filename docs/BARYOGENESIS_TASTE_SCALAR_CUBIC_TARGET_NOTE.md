@@ -101,6 +101,11 @@ So the old route does **not** require a huge or absurd coupling. But it does
 require an honest order-1 scalar portal. A weak quartic-scale coupling is not
 enough.
 
+On the current package surface, however, that minimal 2HDM-like interpretation
+is no longer a live same-surface route. The current-surface no-go is recorded
+in
+[BARYOGENESIS_OLD_ROUTE_SURFACE_NO_GO_NOTE.md](./BARYOGENESIS_OLD_ROUTE_SURFACE_NO_GO_NOTE.md).
+
 ## Why multiplicity alone is not enough
 
 If the extra doublet had only Higgs-quartic-scale coupling

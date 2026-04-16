@@ -87,6 +87,8 @@ packaging.
   [BARYOGENESIS_SELECTOR_MULTIPLICITY_SCREENING_NOTE.md](BARYOGENESIS_SELECTOR_MULTIPLICITY_SCREENING_NOTE.md)
   and the Higgs-doublet matching boundary recorded in
   [BARYOGENESIS_HIGGS_DOUBLET_MULTIPLICITY_NOTE.md](BARYOGENESIS_HIGGS_DOUBLET_MULTIPLICITY_NOTE.md)
+  and the current-surface no-go for the old route recorded in
+  [BARYOGENESIS_OLD_ROUTE_SURFACE_NO_GO_NOTE.md](BARYOGENESIS_OLD_ROUTE_SURFACE_NO_GO_NOTE.md)
 - bounded secondary predictions already on `main`, including proton lifetime,
   CKM neutron EDM, vacuum critical stability, benchmark gravitational
   decoherence, BH entropy, and monopole mass
