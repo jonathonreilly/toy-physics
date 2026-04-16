@@ -224,12 +224,13 @@ not just local lane wins.
   - **still open, but materially narrowed**
   - the exact `h = 0.25` compact `top3` branch now has both repeated-update
     persistence and weak-field response on the same nearby family under one
-    retained blended readout
+    retained blended readout, and that branch now survives most of a second
+    transfer ring too
   - the retained ordered family still supports broad-surrogate steering rather
     than a persistent-mass object
 - What would count as the next real upgrade:
-  - one transfer or escalation beyond the current nearby exact-family compact-
-    object neighborhood
+  - one stronger multi-stage persistence / inertial-response probe on the
+    stable widened exact-family `top3` branch
   - or a stronger architecture-level no-go that closes the search for the
     current family
 
@@ -512,22 +513,28 @@ remaining testable and review-safe.
       positive on the exact `h = 0.25` family
     - one retained blended readout now keeps that `top3` object admissible on
       the full `6/6` tested nearby exact-family cases
+    - the same branch then survives on `4/5` second-ring cases
+    - the first strong outer boundary is now mapped on the inward-source side
+      between `source_z = 1.25` and `1.50`
     - the bottleneck is no longer source-object shrinkage or the local
       broad-versus-adaptive readout split
-    - it is now broader transfer and full inertial-response closure
+    - it is now wider-family robustness and full inertial-response closure
   - Deliverables:
-    - one transfer or escalation beyond the current nearby exact-family
-      compact-object neighborhood
+    - one stronger multi-stage persistence / inertial-response probe on the
+      stable widened `top3` branch
     - or one bounded negative strong enough to freeze the compact-object
-      response lane as a local exact-family positive only
+      response lane as a widened local exact-family positive only
   - New update:
     - a blended broad/adaptive readout now resolves the earlier complementary
       split on the tested nearby family
     - `top3` is admissible on `6/6` nearby cases under that single readout
+    - `top3` is also admissible on `4/5` second-ring cases
     - `top2` remains bounded and opens only on `length7`
+    - the widened branch stays closed on inward source rows `0.75`, `1.00`,
+      and `1.25`, then reopens at `1.50`
     - fixed windows/tapers remain closed
-    - the live question is now whether this compact-object response law leaves
-      the current nearby exact-family neighborhood at all
+    - the live question is now whether the widened branch also survives a
+      stronger multi-stage persistence / inertial-response check
 
 3. **Geometry-transfer discriminator / generated-family recovery**
    - Best upside:
