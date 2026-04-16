@@ -44,6 +44,12 @@ explicitly closed in:
 - the retained full-neutrino sole-axiom question is therefore closed
   negatively as well: the sole axiom does not furnish a full positive retained
   neutrino realization on the current bank
+- three fresh axiom-first route attacks now sharpen the next move:
+  - graph-first cycle frame support fixes the canonical oriented-cycle basis
+  - graph-native projected-commutant data still do not select the reduced
+    cycle values
+  - the `hw=1` source-transfer pack is the strongest positive interface and the
+    sharpest remaining target to derive from the sole axiom
 - So this lane is reviewer-ready as:
   - a positive retained-lane closure package on the lower-level
     transport/response chain, and

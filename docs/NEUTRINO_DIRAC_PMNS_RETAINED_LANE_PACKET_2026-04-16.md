@@ -37,6 +37,12 @@ surface derived from the sole axiom `Cl(3)` on `Z^3`.
   [PMNS_CURRENT_BANK_VALUE_SELECTION_NOGO_NOTE.md](./PMNS_CURRENT_BANK_VALUE_SELECTION_NOGO_NOTE.md)
 - Full retained-neutrino sole-axiom boundary:
   [NEUTRINO_SOLE_AXIOM_FULL_CLOSURE_BOUNDARY_NOTE.md](./NEUTRINO_SOLE_AXIOM_FULL_CLOSURE_BOUNDARY_NOTE.md)
+- Graph-first cycle frame support:
+  [PMNS_GRAPH_FIRST_CYCLE_FRAME_SUPPORT_NOTE.md](./PMNS_GRAPH_FIRST_CYCLE_FRAME_SUPPORT_NOTE.md)
+- Graph-native projected-commutant cycle-value boundary:
+  [PMNS_GRAPH_COMMUTANT_CYCLE_VALUE_BOUNDARY_NOTE.md](./PMNS_GRAPH_COMMUTANT_CYCLE_VALUE_BOUNDARY_NOTE.md)
+- `hw=1` source-transfer boundary:
+  [PMNS_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md](./PMNS_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md)
 
 ## Current Exact Endpoint
 There are now two exact endpoints, and they must be kept separate.
@@ -120,6 +126,13 @@ nontrivial retained PMNS values.
 - Exact current-bank closeout theorem showing the sole axiom, retained scalar
   routes, and reduced graph-first cycle lane still do not furnish a positive
   value-selection law
+- Exact graph-first frame-support theorem fixing the canonical oriented-cycle
+  basis `E12,E23,E31`
+- Exact graph-native projected-commutant boundary showing that route fixes the
+  selector bundle `(tau,q)` but still not the reduced-cycle values
+- Exact `hw=1` source-transfer boundary showing that, once supplied, the
+  source/transfer pack closes the retained PMNS lane, and that this pack is now
+  the sharpest remaining positive target
 
 ## What Is Not Yet Claimed
 This packet does **not** claim full sole-axiom neutrino closure from
@@ -130,7 +143,10 @@ is now reduced to a clean exact nonselection boundary for the current bank, not
 a hidden structural ambiguity. The new current-bank closeout theorem makes that
 endpoint explicit in one place: the current exact bank fixes the retained PMNS
 carrier and its native observables, but not a unique value on the reduced
-graph-first cycle channel.
+graph-first cycle channel. The newest route attacks sharpen the next step:
+graph-first frame-fixing and projected-commutant data are not enough by
+themselves, while the `hw=1` source-transfer pack is the strongest positive
+interface currently known.
 
 ## Representative Runners
 - [frontier_pmns_full_microscopic_operator_to_pair.py](/Users/jonBridger/Toy%20Physics-neutrino-majorana/scripts/frontier_pmns_full_microscopic_operator_to_pair.py)
@@ -147,3 +163,6 @@ graph-first cycle channel.
 - [frontier_pmns_oriented_cycle_selection_structure.py](/Users/jonBridger/Toy%20Physics-neutrino-majorana/scripts/frontier_pmns_oriented_cycle_selection_structure.py)
 - [frontier_pmns_oriented_cycle_reduced_channel_nonselection.py](/Users/jonBridger/Toy%20Physics-neutrino-majorana/scripts/frontier_pmns_oriented_cycle_reduced_channel_nonselection.py)
 - [frontier_pmns_current_bank_value_selection_nogo.py](../scripts/frontier_pmns_current_bank_value_selection_nogo.py)
+- [frontier_pmns_graph_first_cycle_frame_support.py](../scripts/frontier_pmns_graph_first_cycle_frame_support.py)
+- [frontier_pmns_graph_commutant_cycle_value_boundary.py](../scripts/frontier_pmns_graph_commutant_cycle_value_boundary.py)
+- [frontier_pmns_hw1_source_transfer_boundary.py](../scripts/frontier_pmns_hw1_source_transfer_boundary.py)
