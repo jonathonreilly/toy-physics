@@ -1,22 +1,23 @@
 #!/usr/bin/env python3
 """
-Generation Axiom Boundary: The Lattice-Is-Physical Axiom Is Necessary and Sufficient
-=====================================================================================
+Generation Axiom Boundary: The Lattice-Is-Physical Premise Is the Remaining Explicit Input
+============================================================================================
 
-STATUS: EXACT obstruction theorem.
+STATUS: EXACT boundary theorem on the retained generation surface.
   - With the axiom: all generation-physicality checks PASS.
   - Without the axiom: an explicit escape route (fourth-root) exists.
-  - The axiom is irreducible: every other assumption in the chain is derived.
+  - The physical-lattice premise remains explicit on the current accepted stack:
+    it is not yet derived from the other accepted inputs.
 
 THEOREM (Generation Axiom Boundary):
   The generation physicality gate is BOUNDED if and only if the lattice-is-
-  physical axiom is assumed. This axiom is irreducible: no mathematical
-  theorem derivable from the other axioms can close the gap.
+  physical premise is assumed. On the current accepted stack, that premise
+  remains explicit rather than derived from the other accepted inputs.
 
 PROOF STRUCTURE:
   Part 1: With the axiom, generation physicality is closed.
   Part 2: Without the axiom, generation physicality is open.
-  Part 3: The axiom is irreducible.
+  Part 3: The premise remains explicit on the current accepted stack.
   Part 4: Nothing else is needed (assumption enumeration).
 
 PStack experiment: frontier-generation-axiom-boundary
@@ -434,13 +435,13 @@ def part2_without_axiom():
 
 
 # =============================================================================
-# PART 3: THE AXIOM IS IRREDUCIBLE
+# PART 3: THE PREMISE REMAINS EXPLICIT
 # =============================================================================
 
-def part3_axiom_irreducible():
-    """Show the axiom cannot be derived from other framework axioms."""
+def part3_premise_explicit():
+    """Show the premise remains explicit on the current accepted stack."""
     print("\n" + "=" * 72)
-    print("PART 3: THE AXIOM IS IRREDUCIBLE")
+    print("PART 3: THE PREMISE REMAINS EXPLICIT")
     print("=" * 72)
     print()
 
@@ -626,7 +627,7 @@ def part4_assumption_enumeration():
     print("  These are three facets of one ontological commitment.\n")
 
     check("single_axiom_suffices", True,
-          "All axiom-dependent steps reduce to A5 (single irreducible axiom)",
+          "All axiom-dependent steps reduce to A5 (single still-explicit premise)",
           kind="LOGICAL")
 
     # No other non-derived assumption
@@ -652,8 +653,8 @@ def part5_synthesis():
     print("""
   THEOREM (Generation Axiom Boundary):
 
-  The generation physicality gate is BOUNDED by exactly one irreducible
-  axiom. Specifically:
+  The generation physicality gate is BOUNDED by exactly one still-explicit
+  premise on the current accepted stack. Specifically:
 
   (I)  WITH the lattice-is-physical axiom (A5), the framework produces
        3 irremovable species carrying identical gauge representations
@@ -664,11 +665,12 @@ def part5_synthesis():
        trick on a path integral formulation reduces the 3 species to
        1 species x 3 taste copies (artifacts).  [OPEN without A5]
 
-  (III) A5 is IRREDUCIBLE: it cannot be derived from the other axioms
-        {A1, A2, A3, A4}, because those axioms are consistent without
-        A5 (standard LQCD is the witness).
+  (III) A5 remains EXPLICIT on the current accepted stack: the other
+        axioms {A1, A2, A3, A4} are consistent without A5 (standard
+        LQCD is the witness), so the current package does not yet derive
+        A5 away from that reduced input set.
 
-  (IV) A5 is the ONLY non-derived assumption in the generation chain.
+  (IV) A5 is the ONLY still-explicit assumption in the generation chain.
        Every other step is either a theorem, a computation, or a
        consequence of A5.
 
@@ -689,9 +691,10 @@ def part5_synthesis():
   cannot be removed by any operation consistent with the Cl(3) algebra
   (exact). Their identification as fermion generations is conditional
   on the framework's foundational axiom that the Planck-scale lattice
-  is the physical substrate. This axiom is irreducible: it cannot be
-  derived from the algebraic or dynamical axioms, but it is the same
-  axiom that underlies all other framework predictions."
+  is the physical substrate. On the current accepted stack this premise
+  remains explicit rather than derived from the algebraic or dynamical
+  inputs, but it is the same premise that underlies the rest of the
+  framework package."
 """)
 
 
@@ -702,13 +705,13 @@ def part5_synthesis():
 def main():
     print("=" * 72)
     print("GENERATION AXIOM BOUNDARY THEOREM")
-    print("The lattice-is-physical axiom is necessary and sufficient")
+    print("The lattice-is-physical premise is the remaining explicit input")
     print("=" * 72)
     print()
 
     part1_with_axiom()
     part2_without_axiom()
-    part3_axiom_irreducible()
+    part3_premise_explicit()
     part4_assumption_enumeration()
     part5_synthesis()
 
@@ -730,13 +733,13 @@ def main():
     print()
     print("  LOGICAL checks:")
     print("    - Axiom A5 is needed (explicit escape without it)")
-    print("    - Axiom A5 suffices (all other steps derived)")
-    print("    - Axiom A5 is irreducible (LQCD is the consistency witness)")
+    print("    - Axiom A5 is the only still-explicit premise in the chain")
+    print("    - Axiom A5 remains explicit on the current accepted stack")
     print("    - All 17 steps in the chain are fully classified")
     print()
-    print("  THEOREM STATUS: EXACT OBSTRUCTION")
-    print("    The generation gate is bounded by exactly one irreducible axiom.")
-    print("    This axiom is shared with all other framework predictions.")
+    print("  THEOREM STATUS: EXACT BOUNDARY")
+    print("    The generation gate is bounded by exactly one still-explicit premise.")
+    print("    That premise is shared with the rest of the framework package.")
     print()
     if FAIL_COUNT == 0:
         print("  ALL CHECKS PASSED.")

@@ -55,14 +55,18 @@ from canonical_plaquette_surface import (
 
 
 PASS_COUNT = 0
+SUPPORT_COUNT = 0
 FAIL_COUNT = 0
 
 
-def check(name: str, condition: bool, detail: str = "", kind: str = "EXACT") -> bool:
-    global PASS_COUNT, FAIL_COUNT
+def check(name: str, condition: bool, detail: str = "", kind: str = "SUPPORT") -> bool:
+    global PASS_COUNT, SUPPORT_COUNT, FAIL_COUNT
     status = "PASS" if condition else "FAIL"
     if condition:
-        PASS_COUNT += 1
+        if kind in {"EXACT", "COMPUTE"}:
+            PASS_COUNT += 1
+        else:
+            SUPPORT_COUNT += 1
     else:
         FAIL_COUNT += 1
     tag = f" [{kind}]" if kind != "EXACT" else ""
@@ -171,6 +175,7 @@ def part1_fixed_accepted_stack(minimal_text: str, plaquette_text: str) -> bool:
         "fixed_gauge_surface_beta6",
         "`beta = 6`" in plaquette_text.lower() and "`g_bare^2 = 1`" in plaquette_text,
         "Wilson gauge surface is fixed at g_bare^2 = 1, beta = 6",
+        kind="EXACT",
     )
     no_continuum_family = check(
         "continuum_limit_family_absent_from_accepted_stack",
@@ -298,6 +303,7 @@ def part4_fixed_surface_rigidity(
         abs(CANONICAL_BETA - 6.0) < 1e-12
         and abs(alpha_bare_from_beta(CANONICAL_BETA) - CANONICAL_ALPHA_BARE) < 1e-12,
         f"g_bare = {CANONICAL_G_BARE:.1f} gives beta = {CANONICAL_BETA:.1f} and alpha_bare = {CANONICAL_ALPHA_BARE:.12f}",
+        kind="EXACT",
     )
     plaquette_surface_fixed = check(
         "accepted_plaquette_theorem_is_beta6_specific",
@@ -341,6 +347,7 @@ def part4_fixed_surface_rigidity(
         "alpha_bare_varies_nontrivially_with_beta",
         abs((-3.0 / (2.0 * math.pi * (CANONICAL_BETA ** 2)))) > 1e-12,
         "alpha_bare(beta) = 3/(2 pi beta), so any beta-family deformation changes the bare-coupling surface",
+        kind="EXACT",
     )
 
     print()
@@ -364,11 +371,13 @@ def part5_cross_lane_invariant_rigidity() -> bool:
         "canonical_alpha_s_formula_matches_live_surface",
         abs(alpha_s_v_from_beta_on_canonical_u0(CANONICAL_BETA) - CANONICAL_ALPHA_S_V) < 1e-15,
         f"alpha_s(v; beta=6, u0_can) = {alpha_s_v_from_beta_on_canonical_u0(CANONICAL_BETA):.12f}",
+        kind="EXACT",
     )
     canonical_v_ratio = check(
         "canonical_hierarchy_ratio_normalized_at_beta6",
         abs(hierarchy_v_ratio_from_beta_on_canonical_u0(CANONICAL_BETA) - 1.0) < 1e-15,
         "v(beta=6) / v(beta=6) = 1 exactly on the accepted canonical surface",
+        kind="EXACT",
     )
 
     sample_betas = [5.8, 6.2]
@@ -411,6 +420,7 @@ def part5_cross_lane_invariant_rigidity() -> bool:
         abs((6.0 / CANONICAL_BETA) - 1.0) < 1e-15
         and all(abs(hierarchy_v_ratio_from_beta_on_canonical_u0(beta) - 1.0) > 1e-9 for beta in sample_betas),
         "on the canonical u0 surface, alpha_s(v; beta)/alpha_s(v; 6) = 6/beta and v(beta)/v(6) = (6/beta)^16",
+        kind="EXACT",
     )
 
     print()
@@ -583,7 +593,7 @@ def main() -> int:
     print("    - once the retained package contract is imposed, the")
     print("      physical-lattice reading is the unique survivor")
     print()
-    print(f"  TOTAL: PASS = {PASS_COUNT}, FAIL = {FAIL_COUNT}")
+    print(f"  THEOREM/COMPUTE PASS = {PASS_COUNT}, SUPPORT = {SUPPORT_COUNT}, FAIL = {FAIL_COUNT}")
     print(
         "  CLOSED STATUS: "
         + (

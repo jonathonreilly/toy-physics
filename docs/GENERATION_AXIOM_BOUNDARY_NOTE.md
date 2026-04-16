@@ -16,7 +16,7 @@ More precisely:
 
 - with the physical-lattice axiom, the three-generation physicality chain closes
 - without it, an explicit escape route remains through regulator-style interpretation
-- that axiom is irreducible: it is not derivable from the other algebraic and dynamical axioms
+- that axiom remains explicit on the current accepted stack: it is not yet derived from the other accepted algebraic and dynamical inputs
 - the newer
   [PHYSICAL_LATTICE_NECESSITY_NOTE.md](./PHYSICAL_LATTICE_NECESSITY_NOTE.md)
   now closes the stronger retained-package point that this regulator reading is
@@ -55,7 +55,7 @@ clean and reusable.
 The clean current division of labor is:
 
 - this note:
-  with-axiom / without-axiom boundary and irreducibility of the physical-lattice premise
+  with-axiom / without-axiom boundary and the still-explicit status of the physical-lattice premise
 - [THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md](./THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md):
   exact retained-generation no-proper-quotient theorem
 - [PHYSICAL_LATTICE_NECESSITY_NOTE.md](./PHYSICAL_LATTICE_NECESSITY_NOTE.md):
