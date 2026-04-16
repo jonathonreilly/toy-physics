@@ -30,24 +30,31 @@ branch:
 
 So the branch now has a real end-to-end constructive closure route.
 
-## The one remaining Nature-grade caveat
+## Nature-grade uniqueness status
 
-The last selector theorem on the PMNS-assisted `N_e` route is currently
-**branch-global by constrained multistart scan**, not by a separate analytic
-classification of all stationary components on the fixed seed surface.
+The new reduction-exhaustion theorem changes the scope of the old caveat.
 
-More precisely:
+What is now closed exactly:
 
-- the relative-action theorem is exact at the effective-action reduction level
-- the selector theorem finds exactly two stationary closure branches on the
-  fixed native `N_e` seed surface under the current multistart constrained scan
-- one branch has strictly lower action and gives exact closure
+- the PMNS-assisted `N_e` closure problem factors through one exact reduced
+  domain, the fixed native `N_e` seed surface
+- the active chart is exact and surjective on that surface
+- the `eta` map factors exactly through that surface
 
-That is a strong branch-level result, but it is not the same thing as:
+So the older review question
 
-> a closed-form analytic uniqueness theorem proving that no additional
-> disconnected stationary closure components exist anywhere on the full exact
-> seed surface beyond those found by the constrained scan.
+> do we need a separate theorem about components beyond the exact reduced
+> surface?
+
+is now answered **no** for the scoped `N_e` closure claim. There is no larger
+admissible PMNS-assisted search space outside that reduced surface.
+
+What is still true:
+
+- the selector theorem on that exact surface is branch-global by constrained
+  multistart scan plus finite action-gap separation
+- it is not a separate closed-form analytic classification of every stationary
+  component on that same surface
 
 ## Review verdict
 
@@ -58,7 +65,14 @@ an end-to-end constructive framework result.
 
 ### Nature-grade verdict
 
-If the intended claim is:
+If the intended claim is only:
+
+> the PMNS-assisted `N_e` closure problem is fully reduced and internally
+> closed on its exact admissible domain,
+
+then the current branch is already strong enough.
+
+If the intended claim is the stronger one:
 
 > the sole axiom `Cl(3)` on `Z^3` forces one unique PMNS-assisted DM closure
 > point with no remaining branch-global caveat,
@@ -66,14 +80,15 @@ If the intended claim is:
 then one more theorem would still strengthen the package:
 
 - either an analytic all-components uniqueness theorem on the fixed `N_e` seed
-  surface
+  surface itself
 - or a certified global optimization theorem on that exact surface whose
   hypotheses are proved inside the framework
 
 Without that, the strongest perfectly honest wording is:
 
 > the refreshed branch has an exact effective-action selector and a unique
-> lowest-action closure branch on the current exact constrained branch scan.
+> lowest-action closure branch on the exact reduced surface under the current
+> constrained branch scan.
 
 ## Recommendation
 
@@ -83,8 +98,9 @@ The package is strongest if it says both:
 
 1. the old exact one-flavor `5.297x` miss is gone on the PMNS-assisted closure
    branch
-2. the remaining review-sensitive issue is no longer physics content or a live
-   placeholder, but only whether the selector branch uniqueness should be
-   promoted from branch-scanned to fully analytic/global
+2. the older “beyond the reduced surface” loophole is closed, and the only
+   remaining review-sensitive issue is whether the selector branch uniqueness
+   on that exact surface should be promoted from branch-scanned to fully
+   analytic/global
 
 That is the honest Nature-grade boundary.
