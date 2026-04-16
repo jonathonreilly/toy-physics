@@ -144,7 +144,7 @@ def part1_enumerate_stationary_branches() -> tuple[int, list[Branch]]:
     branches = cluster_solutions(sols, i_star)
 
     check(
-        "The current fixed-seed closure surface yields exactly two stationary branches under broad multistart enumeration",
+        "The current fixed-seed closure surface yields two dominant stationary branches under broad multistart enumeration",
         len(branches) == 2,
         f"branch count={len(branches)}, sampled solves={len(sols)}",
     )
@@ -154,9 +154,9 @@ def part1_enumerate_stationary_branches() -> tuple[int, list[Branch]]:
         f"etas={np.round(branches[0].etas, 12)}",
     )
     check(
-        "The two branches are separated by a finite action gap",
+        "The broad-multistart dominant pair is separated by a finite action gap",
         (branches[1].action - branches[0].action) > 0.5,
-        f"ΔS={branches[1].action - branches[0].action:.12f}",
+        f"ΔS_pair={branches[1].action - branches[0].action:.12f}",
     )
 
     print()
@@ -219,11 +219,14 @@ def main() -> int:
     print("RESULT")
     print("=" * 88)
     print("  Branch-global closure result:")
-    print("    - the fixed native N_e seed surface carries exactly two stationary")
-    print("      closure branches on the current multistart constrained scan")
-    print("    - one branch is separated by a finite action gap and is the unique")
-    print("      lowest-action branch")
+    print("    - the current broad multistart constrained scan resolves two dominant")
+    print("      stationary closure branches on the fixed native N_e seed surface")
+    print("    - the low branch is separated from the higher dominant branch by a")
+    print("      finite action gap")
     print("    - that branch gives exact eta/eta_obs = 1 on the favored column")
+    print("    - the later certified-global theorem sharpens the exact reduced-surface")
+    print("      stationary set to three branches and proves the same low branch is")
+    print("      the unique global minimum")
     print()
     print("  So the PMNS-assisted N_e route is now full-stack closed on the")
     print("  refreshed branch.")
