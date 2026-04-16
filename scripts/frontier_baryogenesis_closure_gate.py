@@ -242,6 +242,9 @@ def part3_eta_bridge(j: float) -> None:
     pullback_note = (DOCS / "BARYOGENESIS_SOURCE_PULLBACK_NOTE.md").read_text(
         encoding="utf-8"
     )
+    homog_note = (DOCS / "BARYOGENESIS_HOMOGENEOUS_SOURCE_LIFT_NOTE.md").read_text(
+        encoding="utf-8"
+    )
     omega_note = (DOCS / "OMEGA_LAMBDA_DERIVATION_NOTE.md").read_text(encoding="utf-8")
     omega_runner = (ROOT / "scripts" / "frontier_omega_lambda_derivation.py").read_text(encoding="utf-8")
 
@@ -317,6 +320,14 @@ def part3_eta_bridge(j: float) -> None:
         "`η = J * exp[W[J_χ] - I_damp[χ]]`" in pullback_note,
     )
     check(
+        "homogeneous-source-lift note records J_chi = j(chi) I",
+        "`J_χ = j(χ) I`" in homog_note,
+    )
+    check(
+        "homogeneous-source-lift note records the sharpened bridge eta = J * exp[W(j(chi) I) - I_damp[chi]]",
+        "`η = J * exp[W(j(χ) I) - I_damp[χ]]`" in homog_note,
+    )
+    check(
         "closure-gate note points to the K_EWPT reduction note",
         "BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md" in baryo_note,
     )
@@ -345,6 +356,10 @@ def part3_eta_bridge(j: float) -> None:
         "BARYOGENESIS_SOURCE_PULLBACK_NOTE.md" in baryo_note,
     )
     check(
+        "closure-gate note points to the homogeneous-source-lift note",
+        "BARYOGENESIS_HOMOGENEOUS_SOURCE_LIFT_NOTE.md" in baryo_note,
+    )
+    check(
         "closure-gate note records the exact source pullback S_src[chi] = W[J_chi]",
         "`S_src[χ] = W[J_χ] = log|det(D+J_χ)| - log|det D|`" in baryo_note,
     )
@@ -352,10 +367,18 @@ def part3_eta_bridge(j: float) -> None:
         "closure-gate note records the sharpened positive-branch bridge eta = J * exp[W[J_chi] - I_damp[chi]]",
         "`η = J * exp[W[J_χ] - I_damp[χ]]`" in baryo_note,
     )
+    check(
+        "closure-gate note records the homogeneous lift J_chi = j(chi) I",
+        "`J_χ = j(χ) I`" in baryo_note,
+    )
+    check(
+        "closure-gate note records the sharpened homogeneous-lift bridge eta = J * exp[W(j(chi) I) - I_damp[chi]]",
+        "`η = J * exp[W(j(χ) I) - I_damp[χ]]`" in baryo_note,
+    )
 
     info(
         "open baryogenesis object",
-        "the exact coupled-history object J * F_NP[chi(tau)], sharpened on the viable positive branch to J * exp[W[J_chi] - I_damp[chi]], so the source law is fixed and the remaining openness sits in the same-surface source lift/history and the damping functional",
+        "the exact coupled-history object J * F_NP[chi(tau)], sharpened on the viable positive branch to J * exp[W(j(chi) I) - I_damp[chi]], so the source law and source geometry are fixed and the remaining openness sits in the scalar reparameterization / history and the damping functional",
     )
     print()
     print("  Consequence:")
@@ -364,8 +387,9 @@ def part3_eta_bridge(j: float) -> None:
     print("    F_NP[chi(tau)] in the exact factorized bridge")
     print("    eta = J * F_NP[chi(tau)].")
     print("    On the viable positive branch, the source side is already fixed by")
-    print("    the exact scalar generator W[J]; what remains open is the retained")
-    print("    source lift/history and the damping functional.")
+    print("    the exact scalar generator W[J] and the exact homogeneous source")
+    print("    family J_chi = j(chi) I; what remains open is the scalar")
+    print("    reparameterization / history and the damping functional.")
     print()
 
 
@@ -394,7 +418,7 @@ def main() -> int:
     print("      functional F_NP[chi(tau)] in the factorized bridge")
     print("      eta = J * F_NP[chi(tau)]")
     print("    - on the viable positive branch this is already sharpened to")
-    print("      eta = J * exp[W[J_chi] - I_damp[chi]]")
+    print("      eta = J * exp[W(j(chi) I) - I_damp[chi]]")
     print()
     print(f"  TOTAL: PASS = {PASS}, FAIL = {FAIL}")
     return 0 if FAIL == 0 else 1

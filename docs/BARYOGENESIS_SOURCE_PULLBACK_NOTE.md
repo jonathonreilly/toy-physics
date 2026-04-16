@@ -28,9 +28,12 @@ So on the viable positive branch the baryogenesis bridge sharpens further to
 
 `η = J * exp[W[J_χ] - I_damp[χ]]`.
 
-This note does **not** derive the explicit lift `χ -> J_χ` or the damping
-functional `I_damp[χ]`. It removes the remaining ambiguity that baryogenesis
-needs a separate source observable principle.
+This note does **not** derive the damping functional `I_damp[χ]`, and it does
+not yet derive the scalar reparameterization inside the retained source lift.
+The next exact reduction on the current surface is recorded in
+[BARYOGENESIS_HOMOGENEOUS_SOURCE_LIFT_NOTE.md](./BARYOGENESIS_HOMOGENEOUS_SOURCE_LIFT_NOTE.md),
+which shows that the lift itself collapses to the homogeneous family
+`J_χ = j(χ) I`.
 
 ## What is already fixed upstream
 
@@ -83,8 +86,8 @@ sharper exact bridge
 `η = J * exp[W[J_χ] - I_damp[χ]]`.
 
 So the current source-side open content is no longer “find a source law.”
-The source law is fixed. The remaining open source-side content is the
-same-surface lift `χ -> J_χ`.
+The source law is fixed. The remaining open source-side content is only the
+scalar reparameterization inside the homogeneous lift `J_χ = j(χ) I`.
 
 ## Exact homogeneous slice family
 
@@ -149,7 +152,7 @@ Answer:
 
 This note does **not** derive:
 
-- the explicit same-surface source lift `χ -> J_χ`
+- the scalar reparameterization `j(χ)` inside the homogeneous lift
 - the damping functional `I_damp[χ]`
 - the scalar history `χ(τ)`
 - the final first-principles `η`.
@@ -157,8 +160,8 @@ This note does **not** derive:
 So baryogenesis remains open.
 
 But the source side is now reduced one step further: the observable law is
-exactly fixed, and the remaining openness is localized to the lift/history and
-damping data.
+exactly fixed, and the remaining openness is localized to the scalar
+reparameterization / history data and the damping functional.
 
 ## Relation to the existing baryogenesis notes
 
@@ -174,6 +177,10 @@ This note is the next exact reduction:
 
 - it identifies the source logarithm in that balance as the pullback of the
   exact lattice scalar generator.
+
+The next exact source-geometry reduction is recorded in
+[BARYOGENESIS_HOMOGENEOUS_SOURCE_LIFT_NOTE.md](./BARYOGENESIS_HOMOGENEOUS_SOURCE_LIFT_NOTE.md),
+which shows that the retained source lift itself is exactly homogeneous.
 
 ## Validation
 

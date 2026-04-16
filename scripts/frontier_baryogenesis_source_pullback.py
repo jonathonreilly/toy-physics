@@ -241,6 +241,9 @@ def main() -> int:
     pullback_note = (DOCS / "BARYOGENESIS_SOURCE_PULLBACK_NOTE.md").read_text(
         encoding="utf-8"
     )
+    homog_note = (DOCS / "BARYOGENESIS_HOMOGENEOUS_SOURCE_LIFT_NOTE.md").read_text(
+        encoding="utf-8"
+    )
     gate_note = (DOCS / "BARYOGENESIS_CLOSURE_GATE_NOTE.md").read_text(
         encoding="utf-8"
     )
@@ -263,6 +266,14 @@ def main() -> int:
     check(
         "source-pullback note records the sharpened bridge eta = J * exp[W[J_chi] - I_damp[chi]]",
         "`η = J * exp[W[J_χ] - I_damp[χ]]`" in pullback_note,
+    )
+    check(
+        "source-pullback note points to the homogeneous-source-lift note",
+        "BARYOGENESIS_HOMOGENEOUS_SOURCE_LIFT_NOTE.md" in pullback_note,
+    )
+    check(
+        "homogeneous-source-lift note records J_chi = j(chi) I",
+        "`J_χ = j(χ) I`" in homog_note,
     )
     check(
         "closure-gate note records the source pullback",
@@ -292,7 +303,8 @@ def main() -> int:
     print("      S_src[chi] = W[J_chi]")
     print("    - the positive-branch bridge sharpens to")
     print("      eta = J * exp[W[J_chi] - I_damp[chi]]")
-    print("    - the remaining source-side openness is the explicit lift/history,")
+    print("    - after the homogeneous-lift reduction, the remaining source-side")
+    print("      openness is only the scalar reparameterization / history,")
     print("      not the observable law itself")
     print()
     print(f"  TOTAL: PASS = {PASS}, FAIL = {FAIL}")
