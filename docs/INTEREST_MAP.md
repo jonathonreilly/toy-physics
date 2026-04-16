@@ -486,9 +486,10 @@ The main upward pressures since the first cut are:
     reduction, which keeps one small strong-field-generated-geometry lane open
 - the persistent-object lane is now slightly stronger too:
   a compact `top-3` repeated-update source object is genuinely smaller than the
-  earlier broad quasi-persistent control and still keeps `4/4` `TOWARD` with
-  `F~M = 1.00`; the remaining bottleneck is now detector/readout localization
-  rather than source-object localization alone
+  earlier broad quasi-persistent control, now transfers across a nearby exact-
+  family neighborhood, and now also carries a stable weak-field response on the
+  tested nearby family; the remaining bottleneck is readout-dependent transfer,
+  not source-object localization alone
 - a follow-up readout-localization probe now closes the detector side as a
   bounded negative: a peak-centered `3x3` window shrinks detector support a
   lot, but it only captures a tiny fraction of the detector mass and loses the
