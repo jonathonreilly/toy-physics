@@ -36,6 +36,8 @@ The closure-gate note says what is still missing qualitatively:
 - only the EWPT / transport bridge
 
 This note says what that missing bridge must do numerically.
+The exact flavor-factorized form of that bridge is recorded in
+[BARYOGENESIS_JARLSKOG_FACTORIZATION_NOTE.md](./BARYOGENESIS_JARLSKOG_FACTORIZATION_NOTE.md).
 
 The next derivation-side reduction step is now recorded in
 [BARYOGENESIS_FINITE_T_REDUCTION_NOTE.md](./BARYOGENESIS_FINITE_T_REDUCTION_NOTE.md).

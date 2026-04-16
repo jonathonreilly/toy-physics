@@ -214,6 +214,10 @@ def part3_eta_bridge(j: float) -> None:
         f"Omega_b(BBN) = {omega_b:.6f}",
     )
 
+    baryo_note = (DOCS / "BARYOGENESIS_CLOSURE_GATE_NOTE.md").read_text(encoding="utf-8")
+    factor_note = (DOCS / "BARYOGENESIS_JARLSKOG_FACTORIZATION_NOTE.md").read_text(
+        encoding="utf-8"
+    )
     omega_note = (DOCS / "OMEGA_LAMBDA_DERIVATION_NOTE.md").read_text(encoding="utf-8")
     omega_runner = (ROOT / "scripts" / "frontier_omega_lambda_derivation.py").read_text(encoding="utf-8")
 
@@ -229,15 +233,24 @@ def part3_eta_bridge(j: float) -> None:
         "cosmology runner records that the old taste-scalar route is not live on current main",
         "old taste-scalar implementation is not live on current main" in omega_runner,
     )
+    check(
+        "closure-gate note records the exact weak-flavor reduction eta = J * K_NP",
+        "`η = J * K_NP`" in baryo_note,
+    )
+    check(
+        "factorization note records the target K_NP = eta / J",
+        "`K_NP,target = η_obs / J = 1.837341e-5`" in factor_note,
+    )
 
     info(
         "open baryogenesis object",
-        "same-surface EWPT strength + sphaleron transport / washout computation",
+        "the real CP-even nonperturbative electroweak functional K_NP multiplying the exact weak-flavor source J",
     )
     print()
     print("  Consequence:")
     print("    The observed eta does not require a new source of B or CP violation.")
-    print("    It requires the missing electroweak transition / transport bridge.")
+    print("    It requires the missing nonperturbative electroweak functional K_NP")
+    print("    in the exact factorized bridge eta = J * K_NP.")
     print()
 
 
@@ -262,8 +275,9 @@ def main() -> int:
     print("  RESULT:")
     print("    - electroweak B+L violation is already structurally present")
     print("    - weak-sector CP violation is already quantitatively present")
-    print("    - the remaining missing object is the EWPT/transport bridge that")
-    print("      converts that source into eta = 6.12e-10")
+    print("    - the remaining missing object is the real nonperturbative")
+    print("      electroweak functional K_NP in the factorized bridge")
+    print("      eta = J * K_NP")
     print()
     print(f"  TOTAL: PASS = {PASS}, FAIL = {FAIL}")
     return 0 if FAIL == 0 else 1

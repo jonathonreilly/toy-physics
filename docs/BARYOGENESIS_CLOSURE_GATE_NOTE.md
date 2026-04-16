@@ -58,6 +58,9 @@ recorded in
 [BARYOGENESIS_THERMAL_ORDER_PARAMETER_UNIQUENESS_NOTE.md](./BARYOGENESIS_THERMAL_ORDER_PARAMETER_UNIQUENESS_NOTE.md).
 The resulting route-class pivot is recorded in
 [BARYOGENESIS_NONPERTURBATIVE_ROUTE_PIVOT_NOTE.md](./BARYOGENESIS_NONPERTURBATIVE_ROUTE_PIVOT_NOTE.md).
+The resulting exact weak-flavor reduction
+`η = J * K_NP` is recorded in
+[BARYOGENESIS_JARLSKOG_FACTORIZATION_NOTE.md](./BARYOGENESIS_JARLSKOG_FACTORIZATION_NOTE.md).
 
 It does **not** claim a first-principles computation of the electroweak phase
 transition, sphaleron rate, or baryon transport coefficients.
@@ -139,6 +142,9 @@ The scalar-side part of that object is now much sharper than before:
 - so on current `main`, any live baryogenesis closure route is necessarily a
   genuinely nonperturbative electroweak transition / sphaleron / transport
   route
+- within that surviving route class, the weak-flavor dependence collapses
+  exactly to the promoted CKM Jarlskog invariant `J`, so the only remaining
+  open object is one real nonperturbative electroweak functional `K_NP`
 - the remaining scalar-side question is therefore not just screening by
   itself, but whether there is additional same-surface bosonic structure or
   genuinely different finite-`T` dynamics beyond the old route-history ansatz
@@ -229,6 +235,7 @@ This note does **not** claim:
 - [BARYOGENESIS_HIGGS_DOUBLET_MULTIPLICITY_NOTE.md](./BARYOGENESIS_HIGGS_DOUBLET_MULTIPLICITY_NOTE.md)
 - [BARYOGENESIS_OLD_ROUTE_SURFACE_NO_GO_NOTE.md](./BARYOGENESIS_OLD_ROUTE_SURFACE_NO_GO_NOTE.md)
 - [BARYOGENESIS_NONPERTURBATIVE_ROUTE_PIVOT_NOTE.md](./BARYOGENESIS_NONPERTURBATIVE_ROUTE_PIVOT_NOTE.md)
+- [BARYOGENESIS_JARLSKOG_FACTORIZATION_NOTE.md](./BARYOGENESIS_JARLSKOG_FACTORIZATION_NOTE.md)
 - [BARYOGENESIS_THERMAL_ORDER_PARAMETER_UNIQUENESS_NOTE.md](./BARYOGENESIS_THERMAL_ORDER_PARAMETER_UNIQUENESS_NOTE.md)
 - [frontier_baryogenesis_ewpt_washout_target.py](./../scripts/frontier_baryogenesis_ewpt_washout_target.py)
 - [frontier_baryogenesis_finite_t_reduction.py](./../scripts/frontier_baryogenesis_finite_t_reduction.py)
