@@ -33,6 +33,8 @@ surface derived from the sole axiom `Cl(3)` on `Z^3`.
   [PMNS_ORIENTED_CYCLE_SELECTION_STRUCTURE_NOTE.md](/Users/jonBridger/Toy%20Physics-neutrino-majorana/docs/PMNS_ORIENTED_CYCLE_SELECTION_STRUCTURE_NOTE.md)
 - Oriented cycle reduced-channel nonselection:
   [PMNS_ORIENTED_CYCLE_REDUCED_CHANNEL_NONSELECTION_NOTE.md](/Users/jonBridger/Toy%20Physics-neutrino-majorana/docs/PMNS_ORIENTED_CYCLE_REDUCED_CHANNEL_NONSELECTION_NOTE.md)
+- Current-bank value-selection no-go closeout:
+  [PMNS_CURRENT_BANK_VALUE_SELECTION_NOGO_NOTE.md](./PMNS_CURRENT_BANK_VALUE_SELECTION_NOGO_NOTE.md)
 
 ## Current Exact Endpoint
 There are now two exact endpoints, and they must be kept separate.
@@ -113,6 +115,9 @@ nontrivial retained PMNS values.
 - Exact selection-structure reduction on that oriented cycle channel
 - Exact negative closeout theorem on the graph-first reduced oriented-cycle
   value-selection problem
+- Exact current-bank closeout theorem showing the sole axiom, retained scalar
+  routes, and reduced graph-first cycle lane still do not furnish a positive
+  value-selection law
 
 ## What Is Not Yet Claimed
 This packet does **not** claim full sole-axiom neutrino closure from
@@ -120,7 +125,10 @@ This packet does **not** claim full sole-axiom neutrino closure from
 derived, and they are too trivial to realize the retained PMNS lane. So the
 sole-axiom endpoint is negative on this retained lane. The oriented-cycle lane
 is now reduced to a clean exact nonselection boundary for the current bank, not
-a hidden structural ambiguity.
+a hidden structural ambiguity. The new current-bank closeout theorem makes that
+endpoint explicit in one place: the current exact bank fixes the retained PMNS
+carrier and its native observables, but not a unique value on the reduced
+graph-first cycle channel.
 
 ## Representative Runners
 - [frontier_pmns_full_microscopic_operator_to_pair.py](/Users/jonBridger/Toy%20Physics-neutrino-majorana/scripts/frontier_pmns_full_microscopic_operator_to_pair.py)
@@ -136,3 +144,4 @@ a hidden structural ambiguity.
 - [frontier_pmns_oriented_cycle_channel_value_law.py](/Users/jonBridger/Toy%20Physics-neutrino-majorana/scripts/frontier_pmns_oriented_cycle_channel_value_law.py)
 - [frontier_pmns_oriented_cycle_selection_structure.py](/Users/jonBridger/Toy%20Physics-neutrino-majorana/scripts/frontier_pmns_oriented_cycle_selection_structure.py)
 - [frontier_pmns_oriented_cycle_reduced_channel_nonselection.py](/Users/jonBridger/Toy%20Physics-neutrino-majorana/scripts/frontier_pmns_oriented_cycle_reduced_channel_nonselection.py)
+- [frontier_pmns_current_bank_value_selection_nogo.py](../scripts/frontier_pmns_current_bank_value_selection_nogo.py)
