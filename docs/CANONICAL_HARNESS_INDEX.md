@@ -41,4 +41,4 @@ Use this file to find the current canonical note/runner pair on `main`.
 
 | lane | authority | primary runner |
 |---|---|---|
-| baryogenesis / `η` closure gate | [BARYOGENESIS_CLOSURE_GATE_NOTE.md](BARYOGENESIS_CLOSURE_GATE_NOTE.md) | `frontier_baryogenesis_closure_gate.py` |
+| baryogenesis / `η` closure gate | [BARYOGENESIS_CLOSURE_GATE_NOTE.md](BARYOGENESIS_CLOSURE_GATE_NOTE.md), [BARYOGENESIS_EWPT_WASHOUT_TARGET_NOTE.md](BARYOGENESIS_EWPT_WASHOUT_TARGET_NOTE.md) | `frontier_baryogenesis_closure_gate.py`, `frontier_baryogenesis_ewpt_washout_target.py` |
