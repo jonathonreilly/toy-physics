@@ -41,6 +41,15 @@ It is also already predictive beyond the retained theorem spine. For the
 publication-facing prediction inventory, use
 [publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md](publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md).
 
+Fast reviewer path after this page:
+
+1. [publication/ci3_z3/ARXIV_DRAFT.md](publication/ci3_z3/ARXIV_DRAFT.md)
+2. [publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md](publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md)
+3. [publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md](publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md)
+4. [publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md](publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
+5. [publication/ci3_z3/AI_ASSISTANCE_AND_ACCOUNTABILITY_NOTE.md](publication/ci3_z3/AI_ASSISTANCE_AND_ACCOUNTABILITY_NOTE.md)
+6. [publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md](publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md)
+
 The public manuscript surface is now arXiv-first:
 
 - [publication/ci3_z3/ARXIV_DRAFT.md](publication/ci3_z3/ARXIV_DRAFT.md)

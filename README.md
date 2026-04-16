@@ -36,13 +36,15 @@ for the shortest publication-facing summary.
 
 1. [Current flagship entrypoint](docs/CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md)
 2. [Public arXiv draft](docs/publication/ci3_z3/ARXIV_DRAFT.md)
-3. [Publication package README](docs/publication/ci3_z3/README.md)
-4. [External reviewer guide](docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md)
-5. [Prediction surface](docs/publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md)
+3. [Prediction surface](docs/publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md)
+4. [Inputs and qualifiers](docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md)
+5. [What this paper does not claim](docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
 6. [AI assistance and accountability](docs/publication/ci3_z3/AI_ASSISTANCE_AND_ACCOUNTABILITY_NOTE.md)
-7. [Publication matrix](docs/publication/ci3_z3/PUBLICATION_MATRIX.md)
-8. [Derivation atlas](docs/publication/ci3_z3/DERIVATION_ATLAS.md)
-9. [Derivation / validation map](docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
+7. [External reviewer guide](docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md)
+8. [Publication package README](docs/publication/ci3_z3/README.md)
+9. [Publication matrix](docs/publication/ci3_z3/PUBLICATION_MATRIX.md)
+10. [Derivation atlas](docs/publication/ci3_z3/DERIVATION_ATLAS.md)
+11. [Derivation / validation map](docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
 
 The direct-universal gravity route now closes as an exact global Lorentzian
 Einstein/Regge stationary action family on discrete `3+1` spacetime

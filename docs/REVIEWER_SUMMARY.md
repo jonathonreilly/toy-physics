@@ -24,11 +24,14 @@ not a second foundation.
 
 1. [CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md](CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md)
 2. [publication/ci3_z3/ARXIV_DRAFT.md](publication/ci3_z3/ARXIV_DRAFT.md)
-3. [publication/ci3_z3/README.md](publication/ci3_z3/README.md)
-4. [publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md](publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md)
-5. [publication/ci3_z3/PUBLICATION_MATRIX.md](publication/ci3_z3/PUBLICATION_MATRIX.md)
-6. [publication/ci3_z3/DERIVATION_ATLAS.md](publication/ci3_z3/DERIVATION_ATLAS.md)
-7. [publication/ci3_z3/DERIVATION_VALIDATION_MAP.md](publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
+3. [publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md](publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md)
+4. [publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md](publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md)
+5. [publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md](publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
+6. [publication/ci3_z3/AI_ASSISTANCE_AND_ACCOUNTABILITY_NOTE.md](publication/ci3_z3/AI_ASSISTANCE_AND_ACCOUNTABILITY_NOTE.md)
+7. [publication/ci3_z3/README.md](publication/ci3_z3/README.md)
+8. [publication/ci3_z3/PUBLICATION_MATRIX.md](publication/ci3_z3/PUBLICATION_MATRIX.md)
+9. [publication/ci3_z3/DERIVATION_ATLAS.md](publication/ci3_z3/DERIVATION_ATLAS.md)
+10. [publication/ci3_z3/DERIVATION_VALIDATION_MAP.md](publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
 
 For the package-level gravity/gauge continuum positioning synthesis, use
 [CONTINUUM_IDENTIFICATION_NOTE.md](CONTINUUM_IDENTIFICATION_NOTE.md).

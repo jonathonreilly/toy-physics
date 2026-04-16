@@ -6,10 +6,18 @@ Use the retained backbone as the public manuscript surface on `main`, while
 carrying the full bounded component stacks, supporting notes, and explicit
 live-gate bookkeeping.
 
+The goal is an arXiv-first paper that is self-contained, reviewer-legible, and
+strong enough to drive any later journal invitation/adaptation. It is not a
+Nature-first public package.
+
 ## Include
 
 - [External reviewer guide](./EXTERNAL_REVIEWER_GUIDE.md)
 - [arXiv draft](./ARXIV_DRAFT.md)
+- [Prediction surface](./PREDICTION_SURFACE_2026-04-15.md)
+- [Inputs and qualifiers](./INPUTS_AND_QUALIFIERS_NOTE.md)
+- [What this paper does not claim](./WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
+- [AI assistance and accountability](./AI_ASSISTANCE_AND_ACCOUNTABILITY_NOTE.md)
 - [Publication matrix](./PUBLICATION_MATRIX.md)
 - [Quantitative summary table](./QUANTITATIVE_SUMMARY_TABLE.md)
 - [Derivation atlas](./DERIVATION_ATLAS.md)

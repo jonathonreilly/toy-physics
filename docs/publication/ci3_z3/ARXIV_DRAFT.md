@@ -1,6 +1,14 @@
 # Physics from $Cl(3)$ on $Z^3$:
 # discrete $3+1$ gravity, gauge structure, matter closure, and quantitative tests
 
+**Jonathon Reilly**
+
+Contact: `jonathonreilly@gmail.com`
+
+Public arXiv-first draft, April 15, 2026
+
+Keywords: discrete gravity, lattice gauge theory, Clifford algebra, CKM, strong CP, confinement
+
 ## Abstract
 
 We study the hypothesis that $Cl(3)$ on the cubic lattice $Z^3$ is the
@@ -114,6 +122,8 @@ The paper does **not** claim:
 - full interacting gauge-sector/topological closure of strong CP beyond the
   retained action surface;
 - closure of the dark-matter relic bridge.
+
+Figure 1 gives the high-level package map used throughout the paper.
 
 ![Figure 1. Retained derivation backbone](./figures/figure1_retained_backbone.svg)
 
@@ -234,6 +244,9 @@ $$
 This graph-first closure is the present theorem surface. Older commutant-only
 or looser selector narratives are route history, not the current paper claim.
 
+Figure 2 gives the graph-first selector logic as a visual summary of that
+algebraic closure.
+
 ![Figure 2. Graph-first structural SU(3) closure](./figures/figure2_graph_first_su3.svg)
 
 *Figure 2. Graph-first structural $SU(3)$ closure. The selector fixes the weak
@@ -270,6 +283,9 @@ single-clock codimension-$1$ evolution requirement excludes multi-time
 continuations [7]. The resulting one-generation closure is therefore
 full-framework rather than purely spatial.
 
+Figure 3 compresses the anomaly-to-time derivation into the single argument
+path used on the retained paper surface.
+
 ![Figure 3. Anomaly-forced 3+1](./figures/figure3_anomaly_forced_3plus1.svg)
 
 *Figure 3. Anomaly-forced $3+1$. The left-handed starting point is anomalous,
@@ -295,6 +311,9 @@ Nielsen-Ninomiya [8]. On the framework surface, rooting is undefined in
 Hamiltonian $Cl(3)$ on $Z^3$, and chirality is supplied only in the full
 framework through anomaly-forced time and the one-generation closure theorem.
 Detailed inter-family hierarchy and flavor numerics are separate questions.
+
+Figure 4 shows the exact orbit structure together with the physical-lattice
+interpretation that sets the paper’s three-generation claim boundary.
 
 ![Figure 4. Three-generation matter structure](./figures/figure4_three_generation_structure.svg)
 
