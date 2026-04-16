@@ -212,7 +212,7 @@ def part3_branch_classification(branches: list[selector.Branch], i_star: int) ->
     )
 
     print()
-    print("  stationary components on the exact reduced surface:")
+    print("  dominant stationary components resolved by broad multistart on the exact reduced surface:")
     for idx, branch in enumerate(branches):
         x, y, delta = stat.rel.build_active_from_params(branch.representative)
         print(f"  component {idx}:")
@@ -225,9 +225,9 @@ def part3_branch_classification(branches: list[selector.Branch], i_star: int) ->
     print()
     print("  analytic classification:")
     print("    - the stationary system is reduced exactly to the real slice by delta-evenness")
-    print("    - on the exact reduced surface there are two real stationary components")
-    print("    - the lower-action component is the unique physical selector branch")
-    print("    - the higher-action component is separated by a finite action gap")
+    print("    - broad multistart on the exact reduced surface resolves two dominant real stationary components")
+    print("    - the lower-action component is the unique physical selector branch within that dominant pair")
+    print("    - the later certified-global theorem sharpens the total reduced-surface branch count to three")
 
 
 def part4_bottom_line() -> None:
@@ -254,7 +254,7 @@ def part4_bottom_line() -> None:
     print()
     print("  Honest scope:")
     print("    - closed-form structural reduction: yes")
-    print("    - exact branch classification on the reduced surface: yes")
+    print("    - exact broad-multistart dominant-branch classification on the reduced surface: yes")
     print("    - separate global analytic elimination of every conceivable stationary")
     print("      component in the abstract: not claimed here")
 
