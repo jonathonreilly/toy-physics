@@ -460,7 +460,8 @@ non-perturbative MC computation. Status: BOUNDED.
 
 The structural machinery is strong:
 - V_us = sqrt(m_d/m_s) to 0.31% (Gatto-Sartori-Tonin relation)
-- V_cb = (m_s/m_b)^{5/6} to 0.23% (C_F - T_F theorem)
+- bounded `5/6` bridge support gives `V_cb = (m_s/m_b)^{5/6}` to `0.23%` on
+  the threshold-local self-scale comparator; full bridge/scale closure remains open
 - delta_CP = 2pi/3 (exact, from Z_3)
 - Schur cascade: c_13 = c_12 * c_23 (exact, from NNI structure)
 

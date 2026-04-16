@@ -605,8 +605,9 @@ explicitly:
   $d_n^{\mathrm{CKM}} \sim 8\times 10^{-33}\,e\,\mathrm{cm}$;
 - down-type flavor-mass CKM-dual lane:
   $m_d/m_s = 0.05165$, $m_s/m_b = 0.02239$, and $m_d/m_b = 0.001156$
-  against the PDG mixed-scale comparator, with the same-scale interpretation
-  of the $5/6$ bridge still open;
+  against the threshold-local PDG self-scale comparator
+  $m_s(2\,\mathrm{GeV})/m_b(m_b)$, with theorem-grade closure of the exact
+  $5/6$ scale surface still open;
 - vacuum critical stability on the current $\lambda(M_{\mathrm{Pl}})=0$ route;
 - benchmark gravitational decoherence at the original BMV geometry:
   $\gamma_{\mathrm{grav}}=0.253\,\mathrm{Hz}$ and

@@ -81,7 +81,7 @@ current authority note exists.
 
 | Claim | Manuscript placement | Derivation authority | Validation path | Release artifact |
 |---|---|---|---|---|
-| Down-type mass-ratio CKM-dual lane | bounded prediction section / appendix | [DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md](../../DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md) | [frontier_mass_ratio_ckm_dual.py](../../../scripts/frontier_mass_ratio_ckm_dual.py) | `logs/review/mass_ratio_ckm_dual_*`; promoted CKM closure plus GST and bounded `5/6` mass-ratio bridge, with the mixed-scale versus same-scale qualifier explicit |
+| Down-type mass-ratio CKM-dual lane | bounded prediction section / appendix | [DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md](../../DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md), [CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md](../../CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md) | [frontier_mass_ratio_ckm_dual.py](../../../scripts/frontier_mass_ratio_ckm_dual.py), [frontier_ckm_five_sixths_bridge_support.py](../../../scripts/frontier_ckm_five_sixths_bridge_support.py) | `logs/review/mass_ratio_ckm_dual_*`; promoted CKM closure plus GST and bounded `5/6` bridge support, with threshold-local self-scale comparator support explicit |
 
 ## Live gates and strongest current evidence
 

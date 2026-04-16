@@ -16,9 +16,10 @@ Safe claim:
   No observed quark masses are used as derivation inputs.
 
 Important qualifier:
-  The lane is numerically strongest against the PDG mixed-scale comparator
-  m_s(2 GeV) / m_b(m_b). The same-scale interpretation of the 5/6 bridge
-  remains open, so this is bounded rather than retained.
+  The lane is numerically strongest on the threshold-local self-scale
+  comparator m_s(2 GeV) / m_b(m_b). Theorem-grade derivation of the exact
+  5/6 bridge and exact scale-selection rule remains open, so this is bounded
+  rather than retained.
 """
 
 from __future__ import annotations
@@ -157,17 +158,17 @@ def part3_down_type_dual(v_us: float, v_cb: float, exponent: float) -> tuple[flo
         f"m_d/m_b = {r_db:.8f}",
     )
     check(
-        "m_d/m_s matches mixed-scale PDG ratio within 5%",
+        "m_d/m_s matches the threshold-local self-scale comparator within 5%",
         abs(dev_ds) < 5.0,
         f"dev = {dev_ds:+.2f}%",
     )
     check(
-        "m_s/m_b matches mixed-scale PDG ratio within 1%",
+        "m_s/m_b matches the threshold-local self-scale comparator within 1%",
         abs(dev_sb) < 1.0,
         f"dev = {dev_sb:+.2f}%",
     )
     check(
-        "m_d/m_b matches mixed-scale PDG ratio within 5%",
+        "m_d/m_b matches the threshold-local self-scale comparator within 5%",
         abs(dev_db) < 5.0,
         f"dev = {dev_db:+.2f}%",
     )
@@ -205,7 +206,7 @@ def part4_closed_forms(r_ds: float, r_sb: float, r_db: float) -> None:
         f"diff = {abs(r_db - r_db_expanded):.2e}",
     )
     check(
-        "All three down-type ratios stay within 5% of mixed-scale PDG comparators",
+        "All three down-type ratios stay within 5% of the threshold-local self-scale comparators",
         max(
             abs((r_ds - R_DS_OBS) / R_DS_OBS * 100.0),
             abs((r_sb - R_SB_OBS) / R_SB_OBS * 100.0),
@@ -226,15 +227,21 @@ def part5_scale_qualifier(r_sb: float) -> None:
 
     m_s_at_mb = M_S_OBS * (alpha_s_mb / alpha_s_2gev) ** gamma_over
     r_sb_same = m_s_at_mb / M_B_OBS
+    transport = (alpha_s_2gev / alpha_s_mb) ** gamma_over
+    r_sb_from_obs_vcb = V_CB_OBS ** (6.0 / 5.0)
 
     dev_mixed = (r_sb - R_SB_OBS) / R_SB_OBS * 100.0
     dev_same = (r_sb - r_sb_same) / r_sb_same * 100.0
+    dev_bridge_intrinsic = (r_sb_from_obs_vcb - R_SB_OBS) / R_SB_OBS * 100.0
 
     print(f"\n  mixed-scale  m_s(2 GeV)/m_b(m_b) = {R_SB_OBS:.6f}")
     print(f"  same-scale   m_s(m_b)/m_b(m_b)   = {r_sb_same:.6f}")
+    print(f"  transport    [alpha_s(2 GeV)/alpha_s(m_b)]^(12/25) = {transport:.6f}")
     print(f"  prediction                         = {r_sb:.6f}")
+    print(f"  observed |V_cb| -> m_s/m_b         = {r_sb_from_obs_vcb:.6f}")
     print(f"  mixed-scale deviation              = {dev_mixed:+.2f}%")
     print(f"  same-scale deviation               = {dev_same:+.2f}%")
+    print(f"  bridge-only deviation              = {dev_bridge_intrinsic:+.2f}%")
 
     check(
         "Mixed-scale comparator is numerically closer than same-scale comparator",
@@ -250,6 +257,16 @@ def part5_scale_qualifier(r_sb: float) -> None:
         "Mixed-scale comparator remains within 1%",
         abs(dev_mixed) < 1.0,
         f"mixed-scale dev = {dev_mixed:+.2f}%",
+    )
+    check(
+        "Mixed-scale ratio equals same-scale ratio times one-loop transport factor",
+        abs(R_SB_OBS - r_sb_same * transport) < 1e-12,
+        f"diff = {abs(R_SB_OBS - r_sb_same * transport):.2e}",
+    )
+    check(
+        "Observed |V_cb| mapped through the 5/6 bridge stays within 1% of the self-scale comparator",
+        abs(dev_bridge_intrinsic) < 1.0,
+        f"bridge-only dev = {dev_bridge_intrinsic:+.2f}%",
     )
 
 
@@ -295,11 +312,11 @@ def main() -> int:
     print("\n" + "=" * 72)
     print("SUMMARY")
     print("=" * 72)
-    print(f"  m_d/m_s = {r_ds:.6f}  (PDG mixed-scale: {R_DS_OBS:.6f})")
-    print(f"  m_s/m_b = {r_sb:.6f}  (PDG mixed-scale: {R_SB_OBS:.6f})")
-    print(f"  m_d/m_b = {r_db:.6f}  (PDG mixed-scale: {R_DB_OBS:.6f})")
+    print(f"  m_d/m_s = {r_ds:.6f}  (self-scale comparator: {R_DS_OBS:.6f})")
+    print(f"  m_s/m_b = {r_sb:.6f}  (self-scale comparator: {R_SB_OBS:.6f})")
+    print(f"  m_d/m_b = {r_db:.6f}  (self-scale comparator: {R_DB_OBS:.6f})")
     print("  Status: bounded secondary flavor-mass lane")
-    print("  Live qualifier: same-scale interpretation of the 5/6 bridge remains open")
+    print("  Live qualifier: threshold-local self-scale comparator supported; theorem-grade scale closure remains open")
     print("\n" + "=" * 72)
     print(f"  TOTAL: PASS={PASS_COUNT}, FAIL={FAIL_COUNT}")
     print("=" * 72)

@@ -78,9 +78,10 @@ carried by the current package.
   - `m_d/m_s = 0.05165`
   - `m_s/m_b = 0.02239`
   - `m_d/m_b = 0.001156`
-  - current comparator: PDG mixed-scale down-type mass ratios
+  - current comparator: threshold-local self-scale down-type mass ratios
   - qualifier:
-    same-scale interpretation of the `5/6` bridge remains open
+    threshold-local self-scale comparison is supported, but theorem-grade
+    scale closure of the `5/6` bridge remains open
   - authority:
     [DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md](../../DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md)
 - vacuum critical stability:

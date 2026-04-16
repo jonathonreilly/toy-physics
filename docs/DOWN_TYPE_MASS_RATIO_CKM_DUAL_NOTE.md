@@ -22,6 +22,9 @@ two bridge steps outside the exact internal core:
 - the standard leading-order GST relation for `|V_us|`
 - the `|V_cb| = (m_s/m_b)^(5/6)` mass-ratio bridge
 
+Both bridges now have explicit current-`main` support notes. The lane is still
+bounded because neither bridge is yet promoted to the retained theorem core.
+
 The lane is still useful. It converts the promoted CKM package into a reusable
 down-type flavor-mass tool that can support later `y_b`, flavor-hierarchy, and
 flavor-dependent cosmology / baryogenesis work.
@@ -46,9 +49,13 @@ flavor-dependent cosmology / baryogenesis work.
 - GST:
   `|V_us| = sqrt(m_d/m_s)`
   as the standard leading-order NNI texture relation
+  - support:
+    [CKM_FROM_MASS_HIERARCHY_NOTE.md](./CKM_FROM_MASS_HIERARCHY_NOTE.md)
 - `5/6` bridge:
   `|V_cb| = (m_s/m_b)^(C_F - T_F)`
   used here as a bounded flavor-mass bridge rather than a retained theorem
+  - support:
+    [CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md](./CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md)
 
 ## Down-type formulas
 
@@ -84,13 +91,14 @@ $$
 
 Using the canonical current `main` value `alpha_s(v) = 0.103303816122`:
 
-| Ratio | Predicted | PDG mixed-scale comparator | Deviation |
+| Ratio | Predicted | threshold-local self-scale comparator | Deviation |
 |---|---|---|---|
 | `m_d/m_s` | `0.05165` | `0.05000` | `+3.3%` |
 | `m_s/m_b` | `0.02239` | `0.02234` | `+0.2%` |
 | `m_d/m_b` | `0.001156` | `0.001117` | `+3.5%` |
 
-The quoted PDG comparison uses the usual mixed-scale convention:
+The quoted comparison uses the usual threshold-local PDG self-scale
+convention:
 
 - `m_d(2 GeV) = 4.67 MeV`
 - `m_s(2 GeV) = 93.4 MeV`
@@ -98,7 +106,7 @@ The quoted PDG comparison uses the usual mixed-scale convention:
 
 ## Scale qualifier
 
-The best numerical agreement is with the PDG mixed-scale comparator
+The live comparison surface is the threshold-local self-scale comparator
 `m_s(2 GeV)/m_b(m_b)`.
 
 If `m_s` is run to the common scale `m_b` using 1-loop QCD running, the same
@@ -108,11 +116,23 @@ formula gives
 - framework prediction `0.02239`
 - deviation `+15.0%`
 
-That means the current lane does **not** explain why the mixed-scale comparator
-is the right comparison surface. The safe statement is therefore:
+The two comparison surfaces are related by the standard one-loop transport law
 
-- the bounded lane matches the PDG mixed-scale convention well
-- the same-scale interpretation of the `5/6` bridge remains open
+$$
+\frac{m_s(2\,\mathrm{GeV})}{m_b(m_b)}
+=
+\frac{m_s(m_b)}{m_b(m_b)}
+\left[\frac{\alpha_s(2\,\mathrm{GeV})}{\alpha_s(m_b)}\right]^{12/25},
+$$
+
+with transport factor `1.14747` on the current observation surface.
+
+So the sharper current safe statement is:
+
+- the bounded lane matches the threshold-local self-scale comparator well;
+- forcing a common-scale read removes a material transport factor and gives the
+  larger mismatch;
+- theorem-grade closure of the exact scale-selection rule remains open.
 
 ## What this buys
 
@@ -123,6 +143,8 @@ It does provide a clean reusable bridge:
 - promoted CKM closure
 - canonical `alpha_s(v)`
 - exact SU(3) constants
+- GST support
+- bounded `5/6` bridge support
 - bounded down-type flavor-mass extraction
 
 That is useful downstream for:
@@ -137,7 +159,7 @@ That is useful downstream for:
 - a retained or theorem-grade derivation of GST from the framework
 - a retained or theorem-grade derivation of the `5/6` mass-ratio bridge on the
   full framework surface
-- resolution of the mixed-scale versus same-scale ambiguity
+- theorem-grade closure of the exact scale-selection rule for `m_s/m_b`
 - closure of the absolute bottom scale (`m_b` or `y_b`)
 - closure of the up-type or charged-lepton mass sectors from this note
 
@@ -149,16 +171,23 @@ Run:
 python3 scripts/frontier_mass_ratio_ckm_dual.py
 ```
 
-Current expected result on `main`:
+Current expected results on `main`:
 
-- `PASS=18`
-- `FAIL=0`
+- `frontier_mass_ratio_ckm_dual.py`: `PASS=23 FAIL=0`
+- `frontier_ckm_five_sixths_bridge_support.py`: `EXACT PASS=5`, `BOUNDED PASS=7`, `FAIL=0`
 
-The runner verifies:
+The primary lane runner verifies:
 
 - the promoted CKM input formulas
 - exact `C_F - T_F = 5/6`
 - the bounded down-type dual extraction
 - the algebraic closed forms
-- the mixed-scale versus same-scale qualifier
+- the threshold-local self-scale versus same-scale qualifier
 - mild sensitivity to the canonical `alpha_s(v)` value
+
+The support runner verifies:
+
+- the exact `5/6` `SU(3)` identity
+- bounded `m_s/m_b` extraction from `|V_cb|`
+- one-loop transport from same-scale to threshold-local self-scale comparator
+- exact multiplicative decomposition of the remaining `m_s/m_b` deviation
