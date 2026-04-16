@@ -17,10 +17,12 @@ that are ready for reviewer intake without promoting anything to `main`:
 - Exact reduction from full microscopic `D` to the PMNS-relevant microscopic
   pair is in place.
 - Exact downstream closure from that pair is in place.
-- The retained last mile is no longer generic. It is now the four-real active
-  orbit-breaking source `(xi_1, xi_2, rho_1, rho_2)`.
-- So this lane is reviewer-ready as a strong exact reduction/interface package,
-  but not yet as full sole-axiom neutrino closure.
+- The historical retained last mile is no longer generic. It reduced to the
+  four-real active orbit-breaking source `(xi_1, xi_2, rho_1, rho_2)`, and
+  that source is now itself closed on the lower-level active transport chain.
+- So this lane is reviewer-ready as a strong retained-lane closure package on
+  the lower-level transport/response chain, but not yet as full sole-axiom
+  neutrino closure.
 
 ### Majorana lane
 - The retained Majorana path remains closed negatively.

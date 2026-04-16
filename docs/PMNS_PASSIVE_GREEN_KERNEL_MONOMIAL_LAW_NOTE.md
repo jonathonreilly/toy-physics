@@ -1,37 +1,29 @@
-# PMNS Passive Green-Kernel Monomial Interface
+# PMNS Passive Green-Kernel Monomial Law
 
 ## Question
 
-If an independently computed projected Green-kernel on the passive `hw=1`
-monomial block is supplied, what does it determine?
+If the passive projected Green-kernel is supplied through lower-level passive
+source-response columns, what does it determine?
 
 ## Exact Result
 
-Yes.
+The lower-level passive response columns determine the passive projected kernel
+exactly. That projected kernel determines the passive monomial block exactly,
+and the derived passive block determines:
 
-For the passive triplet block
+- the offset `q` through the native support-moment law
+- the passive coefficient triple through conjugation by `P_q^dag`
 
-`D_pass = diag(a_1,a_2,a_3) P_q`
+So the passive monomial data are exactly closed on the lower-level response
+chain by:
 
-the projected resolvent
-
-`G_λ^pass = (I - λ D_pass)^(-1)`
-
-recovers `D_pass` exactly, since
-
-`D_pass = (I - (G_λ^pass)^(-1)) / λ`.
-
-The already native support-moment law fixes the offset `q`, and conjugation by
-`P_q^dag` then fixes the passive coefficient triple:
-
-`diag(a_1,a_2,a_3) = D_pass P_q^dag`.
-
-So the passive monomial value interface is exactly closed by the passive
-projected Green kernel together with the native support-moment selector for
-`q`.
+- passive response columns
+- passive projected kernel
+- native support-moment selector for `q`
 
 ## Boundary
 
-This note does not derive the passive projected kernel itself from lower-level
-`Cl(3)` on `Z^3` dynamics. It is blind to the active microscopic block and to
-the sector orientation bit. It closes the passive monomial data only.
+This note does not derive the passive response columns themselves from
+`Cl(3)` on `Z^3` alone. It is blind to the active microscopic block and to the
+sector orientation bit. It closes the passive monomial data only on the
+lower-level response chain.
