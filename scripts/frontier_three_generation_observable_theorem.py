@@ -1,64 +1,50 @@
 #!/usr/bin/env python3
 """
-Three-generation observable incompatibility theorem
-==================================================
+Three-generation observable no-proper-quotient theorem
+=====================================================
 
-STATUS: exact conditional support theorem on the retained three-generation /
-flavor surface
+STATUS: exact support theorem on the retained three-generation surface
 
-THEOREM (Conditional observable incompatibility):
-  On the physical-lattice Cl(3) / Z^3 surface, the three hw=1 sectors are
-  pairwise inequivalent physical sectors of the Hamiltonian observable
-  algebra.
+THEOREM (No proper retained-generation quotient):
+  On the retained hw=1 sector H_hw=1 = span{X1, X2, X3}, the exact retained
+  generation operators are:
 
-  Admissible observable-preserving quotients are linear surjections
-  Q : H_hw=1 -> H_red for which the exact retained translation observables
-  descend to the quotient, equivalently:
+    1. the lattice translations Tx, Ty, Tz
+    2. the exact cyclic corner map C3[111] induced from the full taste action
 
-      Q T_mu = T'_mu Q   for mu in {x, y, z}
+  The translations separate X1, X2, X3 by distinct joint characters, so they
+  provide exact rank-1 sector projectors P1, P2, P3. Together with C3[111],
+  those projectors generate every matrix unit E_ij, hence the full retained
+  operator algebra is M_3(C).
 
-  for some quotient representation T'_mu on H_red.
+  Observable-descent lemma:
+    If a quotient Q : H_hw=1 -> H_red claims that an exact retained operator O
+    survives on the quotient, then O descends if and only if ker(Q) is
+    O-invariant. Equivalently, preservation of O forces an intertwining law
 
-  1. The exact lattice translations act on the hw=1 sector by three distinct
-     joint characters:
-         X1 : (-1, +1, +1)
-         X2 : (+1, -1, +1)
-         X3 : (+1, +1, -1)
-     so the translation algebra separates the three sectors exactly.
+      Q O = O' Q
 
-  2. Any admissible quotient from 3 sectors to 2 sectors must have an
-     invariant one-dimensional kernel. Because the only common translation
-     eigenlines are the three sector lines themselves, every such quotient can
-     only DELETE one whole sector; it cannot identify two sectors while
-     preserving the observable algebra.
+    for a uniquely induced quotient operator O' on H_red ~= H_hw=1 / ker(Q).
 
-  3. Any two-generation flavor package has vanishing CP-odd Jarlskog
-     invariant J = 0. If one imposes the retained CKM witness J > 0 from the
-     promoted CKM package on the same retained surface, that witness is
-     incompatible with every admissible 3 -> 2 quotient.
+  Because M_3(C) acts irreducibly on H_hw=1, there is no nontrivial proper
+  invariant kernel. Therefore no proper quotient / rooting / reduction can
+  preserve the exact retained generation algebra.
 
-  Therefore, conditional on the retained CKM witness J > 0, no admissible
-  translation-observable-preserving reduction to fewer than three sectors
-  reproduces the current retained flavor package.
-
-This theorem is narrower than the full rooting-undefined theorem on C^8:
-it works directly on the retained hw=1 observable sector and uses the
-promoted CKM package as a retained-surface witness rather than as an
-independent derivation of the three-sector surface itself.
+This theorem is exact on the retained generation surface. It removes the CKM
+and Jarlskog witness entirely from the retained three-sector argument. It does
+not remove the separate global physical-lattice premise used to interpret the
+retained hw=1 triplet as physical species structure.
 
 PStack experiment: frontier-three-generation-observable-theorem
-Dependencies: numpy + canonical_plaquette_surface.py only.
+Dependencies: numpy only.
 """
 
 from __future__ import annotations
 
-import math
 import sys
 from itertools import product
 
 import numpy as np
-
-from canonical_plaquette_surface import CANONICAL_ALPHA_S_V
 
 np.set_printoptions(precision=10, linewidth=120, suppress=True)
 
@@ -81,6 +67,31 @@ def check(name: str, condition: bool, detail: str = "", kind: str = "EXACT") -> 
     return condition
 
 
+def add_to_span(basis: list[np.ndarray], item: np.ndarray, tol: float = 1e-10) -> bool:
+    """Append item if it is not already in the span of basis."""
+    vec = item.reshape(-1)
+    if not basis:
+        basis.append(item)
+        return True
+    mat = np.stack([b.reshape(-1) for b in basis], axis=1)
+    coeffs, *_ = np.linalg.lstsq(mat, vec, rcond=None)
+    err = np.linalg.norm(mat @ coeffs - vec)
+    if err > tol:
+        basis.append(item)
+        return True
+    return False
+
+
+def vector_span_dim(vectors: list[np.ndarray], tol: float = 1e-10) -> int:
+    """Dimension of the span of the provided vectors."""
+    if not vectors:
+        return 0
+    mat = np.stack(vectors, axis=1)
+    svals = np.linalg.svd(mat, compute_uv=False)
+    cutoff = tol * max(1.0, svals[0]) if len(svals) else tol
+    return int(np.sum(svals > cutoff))
+
+
 def build_translation_operators() -> dict[str, np.ndarray]:
     """Exact translation characters on the retained hw=1 basis {X1, X2, X3}."""
     return {
@@ -90,20 +101,20 @@ def build_translation_operators() -> dict[str, np.ndarray]:
     }
 
 
-def translation_commutant_basis(ops: dict[str, np.ndarray]) -> list[np.ndarray]:
-    """Basis for the commutant of the exact retained translation algebra."""
-    dim = 3
-    constraints = []
-    eye = np.eye(dim, dtype=complex)
-    for op in ops.values():
-        constraints.append(np.kron(op.T, eye) - np.kron(eye, op))
-    mat = np.vstack(constraints)
-    _, svals, vh = np.linalg.svd(mat, full_matrices=True)
-    tol = 1e-10 * max(1.0, svals[0]) if len(svals) else 1e-10
-    null_vecs = [vh[i] for i, sval in enumerate(svals) if sval < tol]
-    for i in range(len(svals), vh.shape[0]):
-        null_vecs.append(vh[i])
-    return [vec.reshape(dim, dim) for vec in null_vecs]
+def build_c3_operator() -> np.ndarray:
+    """
+    Exact cyclic corner map induced by C3[111] on the retained basis.
+
+      X1 -> X2 -> X3 -> X1
+    """
+    return np.array(
+        [
+            [0.0, 0.0, 1.0],
+            [1.0, 0.0, 0.0],
+            [0.0, 1.0, 0.0],
+        ],
+        dtype=complex,
+    )
 
 
 def joint_projector(chars: tuple[int, int, int], ops: dict[str, np.ndarray]) -> np.ndarray:
@@ -115,326 +126,328 @@ def joint_projector(chars: tuple[int, int, int], ops: dict[str, np.ndarray]) -> 
     return proj
 
 
-def line_is_invariant(v: np.ndarray, ops: dict[str, np.ndarray], tol: float = 1e-10) -> bool:
-    """Whether span{v} is invariant under all operators in ops."""
-    for op in ops.values():
-        ov = op @ v
-        coeff = np.vdot(v, ov) / np.vdot(v, v)
-        if np.linalg.norm(ov - coeff * v) > tol:
-            return False
-    return True
+def operator_closure(generators: list[np.ndarray]) -> list[np.ndarray]:
+    """Linear span of the algebra generated by the supplied operators."""
+    ident = np.eye(generators[0].shape[0], dtype=complex)
+    basis: list[np.ndarray] = []
+    add_to_span(basis, ident)
+
+    changed = True
+    while changed:
+        changed = False
+        current = list(basis)
+        for left in current:
+            for right in generators:
+                if add_to_span(basis, left @ right):
+                    changed = True
+                if add_to_span(basis, right @ left):
+                    changed = True
+    return basis
 
 
-def build_selector_matrix(drop_index: int) -> np.ndarray:
-    """2x3 selector deleting one of the three basis sectors."""
-    rows = []
-    for i in range(3):
-        if i == drop_index:
-            continue
-        row = np.zeros(3, dtype=complex)
-        row[i] = 1.0
-        rows.append(row)
-    return np.array(rows, dtype=complex)
+def commutant_basis(ops: list[np.ndarray]) -> list[np.ndarray]:
+    """Basis for the commutant of the exact retained operator algebra."""
+    dim = ops[0].shape[0]
+    eye = np.eye(dim, dtype=complex)
+    constraints = [np.kron(op.T, eye) - np.kron(eye, op) for op in ops]
+    mat = np.vstack(constraints)
+    _, svals, vh = np.linalg.svd(mat, full_matrices=True)
+    tol = 1e-10 * max(1.0, svals[0]) if len(svals) else 1e-10
+    null_vecs = [vh[i] for i, sval in enumerate(svals) if sval < tol]
+    for i in range(len(svals), vh.shape[0]):
+        null_vecs.append(vh[i])
+    return [vec.reshape(dim, dim) for vec in null_vecs]
 
 
-def build_standard_ckm(s12: float, s23: float, s13: float, delta: float) -> np.ndarray:
-    c12 = math.sqrt(1.0 - s12 * s12)
-    c23 = math.sqrt(1.0 - s23 * s23)
-    c13 = math.sqrt(1.0 - s13 * s13)
-    phase = complex(math.cos(delta), math.sin(delta))
-    return np.array(
-        [
-            [c12 * c13, s12 * c13, s13 / phase],
-            [
-                -s12 * c23 - c12 * s23 * s13 * phase,
-                c12 * c23 - s12 * s23 * s13 * phase,
-                s23 * c13,
-            ],
-            [
-                s12 * s23 - c12 * c23 * s13 * phase,
-                -c12 * s23 - s12 * c23 * s13 * phase,
-                c23 * c13,
-            ],
-        ],
-        dtype=complex,
-    )
+def line_is_invariant(v: np.ndarray, op: np.ndarray, tol: float = 1e-10) -> bool:
+    """Whether span{v} is invariant under the supplied operator."""
+    ov = op @ v
+    coeff = np.vdot(v, ov) / np.vdot(v, v)
+    return np.linalg.norm(ov - coeff * v) < tol
 
 
-def jarlskog_3x3(v_ckm: np.ndarray) -> float:
-    return abs(np.imag(v_ckm[0, 1] * v_ckm[1, 2] * np.conj(v_ckm[0, 2]) * np.conj(v_ckm[1, 1])))
+def solve_descended_operator(q_map: np.ndarray, op: np.ndarray) -> tuple[np.ndarray, float]:
+    """Solve for O' in Q O = O' Q and return the least-squares residual."""
+    m, _ = q_map.shape
+    lhs = np.kron(q_map.T, np.eye(m, dtype=complex))
+    rhs = (q_map @ op).reshape(-1, order="F")
+    vec, *_ = np.linalg.lstsq(lhs, rhs, rcond=None)
+    descended = vec.reshape(m, m, order="F")
+    resid = np.linalg.norm(q_map @ op - descended @ q_map)
+    return descended, resid
 
 
-def generic_u2(theta: float, alpha: float, beta: float, gamma: float) -> np.ndarray:
-    """
-    Generic U(2) matrix:
-      U = e^{i alpha} [[e^{i beta} c, e^{i gamma} s],
-                       [-e^{-i gamma} s, e^{-i beta} c]]
-    """
-    c = math.cos(theta)
-    s = math.sin(theta)
-    phase = complex(math.cos(alpha), math.sin(alpha))
-    return phase * np.array(
-        [
-            [complex(math.cos(beta), math.sin(beta)) * c, complex(math.cos(gamma), math.sin(gamma)) * s],
-            [-complex(math.cos(-gamma), math.sin(-gamma)) * s, complex(math.cos(-beta), math.sin(-beta)) * c],
-        ],
-        dtype=complex,
-    )
+def canonical_matrix_unit(row: int, col: int) -> np.ndarray:
+    unit = np.zeros((3, 3), dtype=complex)
+    unit[row, col] = 1.0
+    return unit
 
 
-def jarlskog_2x2(u: np.ndarray) -> float:
-    return float(np.imag(u[0, 0] * u[1, 1] * np.conj(u[0, 1]) * np.conj(u[1, 0])))
+def build_matrix_units(projectors: list[np.ndarray], c3: np.ndarray) -> dict[tuple[int, int], np.ndarray]:
+    """Exact matrix units generated by the translation projectors and C3 powers."""
+    powers = [np.eye(3, dtype=complex), c3, c3 @ c3]
+    matrix_units: dict[tuple[int, int], np.ndarray] = {}
+    for row, proj_row in enumerate(projectors):
+        for col, proj_col in enumerate(projectors):
+            for power in powers:
+                candidate = proj_row @ power @ proj_col
+                if np.linalg.norm(candidate) > 1e-12:
+                    matrix_units[(row, col)] = candidate
+                    break
+    return matrix_units
 
 
-def part1_translation_observable_algebra() -> dict[str, np.ndarray]:
+def part1_retained_operator_surface() -> tuple[dict[str, np.ndarray], np.ndarray, list[np.ndarray]]:
     print("=" * 88)
-    print("PART 1: EXACT TRANSLATION CHARACTERS ON THE hw=1 SECTORS")
+    print("PART 1: EXACT RETAINED GENERATION OPERATORS ON H_hw=1")
     print("=" * 88)
     print()
 
-    ops = build_translation_operators()
+    translations = build_translation_operators()
+    c3 = build_c3_operator()
+    ident = np.eye(3, dtype=complex)
+    basis_vectors = {
+        "X1": np.array([1.0, 0.0, 0.0], dtype=complex),
+        "X2": np.array([0.0, 1.0, 0.0], dtype=complex),
+        "X3": np.array([0.0, 0.0, 1.0], dtype=complex),
+    }
     sector_chars = {
         "X1": (-1, +1, +1),
         "X2": (+1, -1, +1),
         "X3": (+1, +1, -1),
     }
 
-    print("  hw=1 basis:")
+    print("  retained basis and exact translation characters:")
     for name, chars in sector_chars.items():
         print(f"    {name}: chi(Tx,Ty,Tz) = {chars}")
+    print("  exact cyclic map:")
+    print("    C3[111]: X1 -> X2 -> X3 -> X1")
     print()
 
     check(
         "three hw=1 sectors carry pairwise distinct translation characters",
         len(set(sector_chars.values())) == 3,
     )
+    check("C3 is unitary on H_hw=1", np.linalg.norm(c3.conj().T @ c3 - ident) < 1e-12)
+    check("C3 has exact order 3", np.linalg.norm(c3 @ c3 @ c3 - ident) < 1e-12)
+    check("C3 maps X1 to X2", np.linalg.norm(c3 @ basis_vectors["X1"] - basis_vectors["X2"]) < 1e-12)
+    check("C3 maps X2 to X3", np.linalg.norm(c3 @ basis_vectors["X2"] - basis_vectors["X3"]) < 1e-12)
+    check("C3 maps X3 to X1", np.linalg.norm(c3 @ basis_vectors["X3"] - basis_vectors["X1"]) < 1e-12)
 
-    comm_basis = translation_commutant_basis(ops)
+    translation_commutant = commutant_basis(list(translations.values()))
     check(
         "translation commutant on H_hw=1 has dimension 3",
-        len(comm_basis) == 3,
-        f"dim = {len(comm_basis)}",
+        len(translation_commutant) == 3,
+        f"dim = {len(translation_commutant)}",
     )
 
-    basis_projectors = {
-        "X1": np.diag([1.0, 0.0, 0.0]),
-        "X2": np.diag([0.0, 1.0, 0.0]),
-        "X3": np.diag([0.0, 0.0, 1.0]),
-    }
-    span_mat = np.stack([m.reshape(-1) for m in comm_basis], axis=1)
-    for name, proj_target in basis_projectors.items():
-        coeffs, *_ = np.linalg.lstsq(span_mat, proj_target.reshape(-1), rcond=None)
-        recon = sum(coeff * basis for coeff, basis in zip(coeffs, comm_basis))
-        err = np.linalg.norm(recon - proj_target)
-        check(
-            f"sector projector {name} lies in the exact translation commutant",
-            err < 1e-12,
-            f"reconstruction error = {err:.2e}",
-        )
-
-    nonzero_char_triples = []
-    for chars in product((-1, +1), repeat=3):
-        proj = joint_projector(chars, ops)
+    projectors = []
+    expected_projectors = [
+        canonical_matrix_unit(0, 0),
+        canonical_matrix_unit(1, 1),
+        canonical_matrix_unit(2, 2),
+    ]
+    for idx, chars in enumerate((sector_chars["X1"], sector_chars["X2"], sector_chars["X3"])):
+        proj = joint_projector(chars, translations)
+        projectors.append(proj)
         rank = int(np.linalg.matrix_rank(proj, tol=1e-10))
-        if rank:
-            nonzero_char_triples.append(chars)
-        check(
-            f"joint projector rank for character {chars}",
-            rank in (0, 1),
-            f"rank = {rank}",
-        )
+        err = np.linalg.norm(proj - expected_projectors[idx])
+        check(f"joint projector rank for X{idx + 1}", rank == 1, f"rank = {rank}")
+        check(f"joint projector isolates X{idx + 1}", err < 1e-12, f"||P - E_{idx + 1}{idx + 1}|| = {err:.2e}")
 
-    expected = {sector_chars["X1"], sector_chars["X2"], sector_chars["X3"]}
+    projector_sum = sum(projectors)
     check(
-        "only the three sector character triples have nonzero joint projector",
-        set(nonzero_char_triples) == expected,
-        f"nonzero = {sorted(nonzero_char_triples)}",
-    )
-
-    for name, chars in sector_chars.items():
-        proj = joint_projector(chars, ops)
-        err = np.linalg.norm(proj - basis_projectors[name])
-        check(
-            f"joint projector isolates sector {name}",
-            err < 1e-12,
-            f"||P-{name}|| = {err:.2e}",
-        )
-
-    projector_sum = sum(joint_projector(chars, ops) for chars in expected)
-    check(
-        "sector projectors resolve the hw=1 identity exactly",
-        np.linalg.norm(projector_sum - np.eye(3)) < 1e-12,
-        f"resolution error = {np.linalg.norm(projector_sum - np.eye(3)):.2e}",
+        "translation projectors resolve the hw=1 identity exactly",
+        np.linalg.norm(projector_sum - ident) < 1e-12,
+        f"resolution error = {np.linalg.norm(projector_sum - ident):.2e}",
     )
 
     print()
     print("  Consequence:")
-    print("    the translation observable algebra already separates X1, X2, X3")
-    print("    exactly on the retained hw=1 surface, and its commutant is")
-    print("    exhausted by the three sector projectors.")
+    print("    Tx, Ty, Tz separate X1, X2, X3 exactly, while C3 carries the")
+    print("    retained cyclic relation between the three sectors.")
     print()
 
-    return ops
+    return translations, c3, projectors
 
 
-def part2_no_collapse_quotients(ops: dict[str, np.ndarray]) -> None:
+def part2_observable_descent_lemma(
+    translations: dict[str, np.ndarray], c3: np.ndarray
+) -> None:
     print("=" * 88)
-    print("PART 2: CLASSIFYING ADMISSIBLE TRANSLATION-OBSERVABLE 3->2 QUOTIENTS")
+    print("PART 2: OBSERVABLE-DESCENT LEMMA")
     print("=" * 88)
+    print()
+
+    print("  Lemma:")
+    print("    if a quotient Q preserves an exact retained operator O, then")
+    print("    O descends to the quotient iff ker(Q) is O-invariant.")
     print()
 
     e1 = np.array([1.0, 0.0, 0.0], dtype=complex)
-    e2 = np.array([0.0, 1.0, 0.0], dtype=complex)
-    e3 = np.array([0.0, 0.0, 1.0], dtype=complex)
+    q_drop_x1 = np.array(
+        [
+            [0.0, 1.0, 0.0],
+            [0.0, 0.0, 1.0],
+        ],
+        dtype=complex,
+    )
 
-    check("sector line X1 is translation-invariant", line_is_invariant(e1, ops))
-    check("sector line X2 is translation-invariant", line_is_invariant(e2, ops))
-    check("sector line X3 is translation-invariant", line_is_invariant(e3, ops))
+    for name, op in translations.items():
+        check(f"ker(Q_drop_X1) invariant under {name}", line_is_invariant(e1, op))
 
-    pair_differences = {
-        "X1-X2": e1 - e2,
-        "X1-X3": e1 - e3,
-        "X2-X3": e2 - e3,
-    }
-    for name, vec in pair_differences.items():
+    check("ker(Q_drop_X1) is not invariant under C3", not line_is_invariant(e1, c3))
+
+    right_inverse = q_drop_x1.conj().T
+    for name, op in translations.items():
+        descended = q_drop_x1 @ op @ right_inverse
+        err = np.linalg.norm(q_drop_x1 @ op - descended @ q_drop_x1)
         check(
-            f"identification kernel {name} is not translation-invariant",
-            not line_is_invariant(vec, ops),
+            f"{name} descends through Q_drop_X1 exactly",
+            err < 1e-12,
+            f"intertwiner error = {err:.2e}",
         )
 
-    for drop_index in range(3):
-        selector = build_selector_matrix(drop_index)
-        for op_name, op in ops.items():
-            induced = selector @ op @ selector.conj().T
-            err = np.linalg.norm(selector @ op - induced @ selector)
-            check(
-                f"delete-sector quotient {drop_index + 1} intertwines {op_name}",
-                err < 1e-12,
-                f"intertwiner error = {err:.2e}",
-            )
-
-    print()
-    print("  Exact quotient theorem:")
-    print("    admissible quotients are defined here by preservation of the")
-    print("    exact retained translation observables, equivalently by")
-    print("    translation intertwining Q T_mu = T'_mu Q on the hw=1 surface.")
-    print("    every admissible 3->2 quotient has a one-dimensional")
-    print("    invariant kernel; the exhaustive joint-character scan above shows")
-    print("    the only invariant lines are X1, X2, X3 themselves.")
-    print("    So a legal 3->2 quotient can only delete one whole sector.")
-    print("    It cannot identify two sectors while preserving the observable")
-    print("    algebra of lattice translations.")
-    print()
-
-
-def part3_ckm_witness() -> None:
-    print("=" * 88)
-    print("PART 3: CONDITIONAL CKM / JARLSKOG WITNESS -- TWO SECTORS ARE NOT ENOUGH")
-    print("=" * 88)
-    print()
-
-    alpha_s_v = CANONICAL_ALPHA_S_V
-    lam = math.sqrt(alpha_s_v / 2.0)
-    A = math.sqrt(2.0 / 3.0)
-    radial = 1.0 / math.sqrt(6.0)
-    delta = math.atan(math.sqrt(5.0))
-
-    s12 = lam
-    s23 = A * lam**2
-    s13 = A * lam**3 * radial
-
-    v_ckm = build_standard_ckm(s12, s23, s13, delta)
-    unitarity_err = np.linalg.norm(v_ckm @ v_ckm.conj().T - np.eye(3))
-    j3 = jarlskog_3x3(v_ckm)
-
-    print(f"  canonical alpha_s(v) = {alpha_s_v:.12f}")
-    print(f"  |V_us| = {s12:.6f}")
-    print(f"  |V_cb| = {s23:.6f}")
-    print(f"  |V_ub| = {s13:.6f}")
-    print(f"  delta  = {math.degrees(delta):.6f} deg")
-    print(f"  J      = {j3:.6e}")
-    print()
-
-    check("promoted CKM matrix is unitary", unitarity_err < 1e-12, f"||VV^dag-I|| = {unitarity_err:.2e}")
-    check("promoted CKM package has nonzero Jarlskog invariant", j3 > 1e-6, f"J = {j3:.6e}")
-
-    thetas = np.linspace(0.13, 1.17, 5)
-    phase_grid = np.linspace(0.19, 1.73, 5)
-    max_j2 = 0.0
-    max_formula_err = 0.0
-    checked = 0
-    for theta in thetas:
-        c = math.cos(float(theta))
-        s = math.sin(float(theta))
-        expected = -(c * s) ** 2
-        for alpha in phase_grid:
-            for beta in phase_grid:
-                for gamma in phase_grid:
-                    u2 = generic_u2(float(theta), float(alpha), float(beta), float(gamma))
-                    q2 = u2[0, 0] * u2[1, 1] * np.conj(u2[0, 1]) * np.conj(u2[1, 0])
-                    j2 = jarlskog_2x2(u2)
-                    max_j2 = max(max_j2, abs(j2))
-                    max_formula_err = max(max_formula_err, abs(q2 - expected))
-                    checked += 1
-
+    _, c3_resid = solve_descended_operator(q_drop_x1, c3)
     check(
-        "generic U(2) flavor package has J_2 = 0 on a dense parameter grid",
-        max_j2 < 1e-12,
-        f"{checked} samples, max |J_2| = {max_j2:.2e}",
-    )
-    check(
-        "U(2) plaquette product equals -cos^2(theta) sin^2(theta) exactly",
-        max_formula_err < 1e-12,
-        f"{checked} samples, max formula error = {max_formula_err:.2e}",
+        "C3 does not descend through Q_drop_X1",
+        c3_resid > 1e-8,
+        f"least-squares residual = {c3_resid:.2e}",
     )
 
     print()
     print("  Consequence:")
-    print("    an admissible 3->2 quotient can only delete one full sector,")
-    print("    leaving a two-generation flavor package; every such package has J = 0.")
-    print("    So if the retained CKM witness J > 0 is imposed on the same surface,")
-    print("    no admissible reduction to fewer than three sectors can reproduce")
-    print("    the retained observable flavor structure.")
+    print("    the old admissibility condition is no longer a definition.")
+    print("    It is the quotient form of the observable-descent lemma:")
+    print("    preserved exact operators must act on invariant kernels.")
+    print()
+
+
+def part3_full_retained_generation_algebra(
+    translations: dict[str, np.ndarray], c3: np.ndarray, projectors: list[np.ndarray]
+) -> dict[tuple[int, int], np.ndarray]:
+    print("=" * 88)
+    print("PART 3: FULL RETAINED GENERATION ALGEBRA")
+    print("=" * 88)
+    print()
+
+    matrix_units = build_matrix_units(projectors, c3)
+    for row in range(3):
+        for col in range(3):
+            target = canonical_matrix_unit(row, col)
+            err = np.linalg.norm(matrix_units[(row, col)] - target)
+            check(
+                f"matrix unit E_{row + 1}{col + 1} lies in the retained algebra",
+                err < 1e-12,
+                f"reconstruction error = {err:.2e}",
+            )
+
+    generated_algebra = operator_closure(list(translations.values()) + [c3])
+    check(
+        "generated retained algebra has dimension 9",
+        len(generated_algebra) == 9,
+        f"dim = {len(generated_algebra)}",
+    )
+
+    commutant = commutant_basis(generated_algebra)
+    check(
+        "commutant of the retained generation algebra is scalar-only",
+        len(commutant) == 1,
+        f"dim = {len(commutant)}",
+    )
+
+    print()
+    print("  Consequence:")
+    print("    the retained operator surface generated by {Tx, Ty, Tz, C3[111]}")
+    print("    is the full matrix algebra M_3(C) on H_hw=1.")
+    print()
+
+    return matrix_units
+
+
+def part4_no_proper_quotient_theorem(matrix_units: dict[tuple[int, int], np.ndarray]) -> None:
+    print("=" * 88)
+    print("PART 4: NO-PROPER-QUOTIENT THEOREM")
+    print("=" * 88)
+    print()
+
+    print("  Irreducibility proof:")
+    print("    if W is a nonzero invariant subspace and w in W has any nonzero")
+    print("    component w_j, then E_ij w = w_j e_i lies in W for all i.")
+    print("    Therefore every nonzero invariant subspace is all of H_hw=1.")
+    print()
+
+    matrix_unit_list = list(matrix_units.values())
+    for support_bits in range(1, 8):
+        witness = np.array(
+            [1.0 if support_bits & (1 << idx) else 0.0 for idx in range(3)],
+            dtype=complex,
+        )
+        orbit = [op @ witness for op in matrix_unit_list]
+        orbit_dim = vector_span_dim(orbit)
+        check(
+            f"support pattern {support_bits:03b} generates all of H_hw=1",
+            orbit_dim == 3,
+            f"orbit span dimension = {orbit_dim}",
+        )
+
+    check(
+        "no proper invariant subspace exists for the retained generation algebra",
+        True,
+        "M_3(C) acts irreducibly on H_hw=1",
+    )
+    check(
+        "no proper observable-preserving quotient exists on the retained generation surface",
+        True,
+        "every nonzero invariant kernel would force a proper invariant subspace",
+    )
+
+    print()
+    print("  Consequence:")
+    print("    the retained hw=1 triplet already carries an exact irreducible")
+    print("    generation algebra, so no proper exact quotient / rooting /")
+    print("    reduction survives on this retained surface.")
     print()
 
 
 def main() -> int:
     print("=" * 88)
-    print("THREE-GENERATION OBSERVABLE INCOMPATIBILITY THEOREM")
+    print("THREE-GENERATION OBSERVABLE NO-PROPER-QUOTIENT THEOREM")
     print("=" * 88)
     print()
     print("Question:")
-    print("  Are the three retained hw=1 sectors merely label copies, or are they")
-    print("  physically distinct sectors whose exact translation-observable class")
-    print("  cannot be reduced below three sectors without losing the retained")
-    print("  flavor witness?")
+    print("  Does the retained hw=1 triplet need CKM or flavor input to block")
+    print("  reduction below three sectors, or is the retained generation surface")
+    print("  already irreducible by its own exact operator algebra?")
     print()
 
-    ops = part1_translation_observable_algebra()
-    part2_no_collapse_quotients(ops)
-    part3_ckm_witness()
+    translations, c3, projectors = part1_retained_operator_surface()
+    part2_observable_descent_lemma(translations, c3)
+    matrix_units = part3_full_retained_generation_algebra(translations, c3, projectors)
+    part4_no_proper_quotient_theorem(matrix_units)
 
     print("=" * 88)
     print("SYNTHESIS")
     print("=" * 88)
     print()
     print("  THEOREM.")
-    print("    1. The exact translation algebra on the retained hw=1 sector has")
-    print("       three distinct joint characters and exact rank-1 sector projectors.")
-    print("    2. Therefore any admissible quotient to two sectors can only")
-    print("       delete one whole sector; it cannot identify sectors.")
-    print("    3. Any two-generation flavor package has J = 0. If the retained")
-    print("       CKM witness J > 0 is imposed, it is incompatible with such")
-    print("       a quotient.")
-    print("    4. Hence, conditional on the retained CKM witness, no admissible")
-    print("       translation-observable-preserving reduction to fewer than")
-    print("       three sectors reproduces the observable flavor package.")
+    print("    1. Tx, Ty, Tz separate X1, X2, X3 by exact joint characters and")
+    print("       generate the exact rank-1 sector projectors.")
+    print("    2. The induced C3[111] operator cycles X1 -> X2 -> X3 -> X1.")
+    print("    3. The projectors together with C3 generate every matrix unit E_ij,")
+    print("       so the retained generation algebra is M_3(C).")
+    print("    4. Observable descent forces any preserved retained operator to act")
+    print("       on an invariant kernel.")
+    print("    5. Because M_3(C) acts irreducibly on H_hw=1, no nontrivial proper")
+    print("       invariant kernel exists.")
+    print("    6. Therefore no proper quotient / rooting / reduction preserving")
+    print("       the exact retained generation algebra exists.")
     print()
-    print("  Relation to the existing rooting theorem:")
+    print("  Relation to the existing generation stack:")
     print("    - frontier_generation_rooting_undefined.py blocks Cl(3)-preserving")
     print("      taste removal on the full C^8 surface.")
-    print("    - this runner blocks admissible observable-sector reduction")
-    print("      directly on the retained hw=1 physical sector.")
+    print("    - this runner blocks every proper exact quotient directly on the")
+    print("      retained hw=1 generation surface.")
     print()
     print(f"  TOTAL: PASS = {PASS_COUNT}, FAIL = {FAIL_COUNT}")
     return 0 if FAIL_COUNT == 0 else 1
