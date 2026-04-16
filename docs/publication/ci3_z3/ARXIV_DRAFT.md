@@ -68,10 +68,10 @@ bounded string-tension readout. CKM is promoted as a canonical atlas/tensor
 closure package with canonical CMT $\alpha_s(v)$ input and no quark-mass or
 fitted-CKM derivation inputs. The package is also already predictive beyond
 the retained theorem spine: it carries bounded secondary predictions rather
-than only retrospective comparisons. The only live flagship gate left is
-dark-matter relic mapping.
+than only retrospective comparisons. The only live flagship gate left is dark
+matter relic mapping.
 
-The correct reading of the manuscript is therefore no longer “promising
+The right reading of the manuscript is therefore no longer “promising
 framework with many open bridges.” It is “broad retained discrete backbone,
 promoted quantitative support where the package actually closes, a bounded
 prediction surface where it does not, and one live flagship gate.”
@@ -222,6 +222,10 @@ classification background [2,3]. What matters for the present paper is the
 claim boundary: this stack is exact on the chosen canonical target. It is not a
 claim that every possible smooth or continuum packaging of gravity has been
 closed.
+
+Extended Data Figure 1 collects the compact weak-field support theorems, and
+Extended Data Figure 2 packages the retained $S^3$ topology closure without
+expanding the main text.
 
 ## 4. Gauge Structure, Matter, and Exact Support Theorems
 
@@ -542,6 +546,10 @@ These are not retained theorem-core rows, and they are not being sold as fully
 promoted flagship claims. But they are real prediction surfaces already
 carried by the package.
 
+Figure A2 summarizes the current Yukawa/top transport lane together with its
+explicit systematic budget. Figure A3 records the older bounded CKM route
+history separately from the live promoted algebraic CKM package.
+
 ### 6.3 The remaining live gate
 
 The only remaining live flagship gate is dark-matter relic mapping. There is
@@ -562,9 +570,8 @@ This manuscript is paired with a public reproducibility package rather than a
 single supplementary PDF. The package contains the claim surface, the
 derivation/validation map, the full publication matrix, the reusable theorem
 atlas, the quantitative summary table, the inputs-and-qualifiers note, and the
-non-claims note. Those files are not meant to replace the paper’s scientific
-argument. They are the audit surface that makes the retained/bounded split
-explicit and reproducible.
+non-claims note. Those files do not replace the paper’s scientific argument;
+they make the retained/bounded split explicit and reproducible.
 
 The practical rule is simple: every retained row in the manuscript must also
 appear as retained in the package, and every bounded row in the manuscript must
@@ -687,6 +694,45 @@ Expanding $W[J]$ on the exact minimal block yields the previously isolated
 hierarchy kernel, while the temporal APBC selector gives the $(7/8)^{1/4}$
 factor. The quoted value of $v$ is the canonical same-surface evaluation of
 that exact theorem on the live plaquette chain.
+
+## Appendix B. Supplementary Figures
+
+### B.1 Extended Data Figure 1
+
+![Extended Data Figure 1. Weak-field support theorems](./figures/extended_data_1_support_theorems.svg)
+
+*Extended Data Figure 1. Weak-field gravity corollaries, exact $I_3=0$, and
+exact CPT as compact support results on the same retained discrete surface.*
+
+### B.2 Extended Data Figure 2
+
+![Extended Data Figure 2. Retained S3 topology closure](./figures/extended_data_2_s3_topology.svg)
+
+*Extended Data Figure 2. Cone-cap and boundary-link constructions on the
+retained route to $PL\,S^3$ compactification / topology closure.*
+
+### B.3 Figure A2
+
+![Figure A2. Derived-with-systematic Yukawa and Higgs transport lane](./figures/figureA2_bounded_yt_lane.svg)
+
+*Figure A2. Exact UV support, explicit low-energy transport budget, and the
+derived-with-systematic Yukawa/top plus inherited-systematic Higgs/vacuum
+outputs on the current package surface.*
+
+### B.4 Figure A3
+
+![Figure A3. Historical bounded CKM route history](./figures/figureA3_ckm_route_history.svg)
+
+*Figure A3. Historical bounded CKM route history only. The live flavor
+authority is the promoted algebraic atlas/axiom closure package, not the older
+Cabibbo, mass-basis NNI, or partial-Jarlskog routes.*
+
+### B.5 Figure A1 status
+
+The DM lane figure is intentionally omitted from this frozen manuscript pass.
+Its purpose is to display what is exact, derived, and bounded in the relic
+chain, but that language should track the live DM gate rather than get ahead
+of it.
 
 ## References
 

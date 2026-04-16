@@ -2,7 +2,7 @@
 
 These are publication captions aligned to
 [FIGURE_PLAN.md](./FIGURE_PLAN.md). They are intentionally claim-disciplined.
-The four core arXiv schematics now exist as live manuscript assets in
+The current arXiv figure set now exists as live manuscript assets in
 [`./figures/`](./figures/).
 
 ## Core arXiv draft
@@ -52,7 +52,7 @@ on the Hilbert surface (`I_3=0`), and the free staggered `Cl(3)` lattice is
 exactly CPT invariant. These results strengthen the retained backbone without
 widening the main paper claim.
 
-## arXiv companion figures
+## arXiv secondary figures
 
 ### Extended Data Figure 2. Retained `S^3` compactification / topology closure
 
@@ -71,8 +71,9 @@ closed.
 ### Figure A2. Bounded renormalized `y_t`
 
 The UV algebraic theorem and `Cl(3)` preservation under block-spin RG are
-retained. The low-energy bridge remains bounded because the matching and
-continuum-running chain are not yet fully internal to the framework.
+retained. The low-energy bridge remains systematic-limited because the
+matching and continuum-running chain are still carried by the explicit bridge
+budget rather than by a zero-systematic theorem.
 
 ### Figure A3. Bounded CKM lane
 

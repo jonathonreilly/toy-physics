@@ -2,7 +2,7 @@
 
 This is the current manuscript figure map. It is intentionally conservative:
 only figures that strengthen the retained backbone or cleanly illustrate bounded
-companions belong in the first public package.
+secondary lanes belong in the first public package.
 
 Companion captions live in [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md).
 
@@ -62,7 +62,8 @@ Companion captions live in [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md).
   - [frontier_broad_gravity.py](../../../scripts/frontier_broad_gravity.py)
   - [frontier_born_rule_derived.py](../../../scripts/frontier_born_rule_derived.py)
   - [frontier_cpt_exact.py](../../../scripts/frontier_cpt_exact.py)
-- status: optional depending on venue length
+- manuscript asset: [extended_data_1_support_theorems.svg](./figures/extended_data_1_support_theorems.svg)
+- status: landed in arXiv appendix
 
 ### Extended Data candidate. Retained `S^3` compactification / topology closure
 
@@ -75,9 +76,10 @@ Companion captions live in [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md).
   - [frontier_s3_boundary_link_theorem.py](../../../scripts/frontier_s3_boundary_link_theorem.py)
   - [frontier_s3_cap_uniqueness.py](../../../scripts/frontier_s3_cap_uniqueness.py)
   - [frontier_s3_general_r.py](../../../scripts/frontier_s3_general_r.py)
-- status: optional depending on venue length
+- manuscript asset: [extended_data_2_s3_topology.svg](./figures/extended_data_2_s3_topology.svg)
+- status: landed in arXiv appendix
 
-## arXiv-only companion figures
+## arXiv-only secondary figures
 
 ### Figure A1. Bounded DM lane
 
@@ -93,7 +95,8 @@ Companion captions live in [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md).
 - source notes:
   - [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](../../YT_ZERO_IMPORT_AUTHORITY_NOTE.md)
   - [YT_GAUGE_CROSSOVER_THEOREM.md](../../YT_GAUGE_CROSSOVER_THEOREM.md)
-- status: wait until `y_t` language stabilizes
+- manuscript asset: [figureA2_bounded_yt_lane.svg](./figures/figureA2_bounded_yt_lane.svg)
+- status: landed in arXiv appendix
 
 ### Figure A3. Bounded CKM lane
 
@@ -102,4 +105,5 @@ Companion captions live in [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md).
   - [CABIBBO_BOUND_NOTE.md](../../work_history/ckm/CABIBBO_BOUND_NOTE.md)
   - [CKM_MASS_BASIS_NNI_NOTE.md](../../work_history/ckm/CKM_MASS_BASIS_NNI_NOTE.md)
   - [JARLSKOG_PHASE_BOUND_NOTE.md](../../work_history/ckm/JARLSKOG_PHASE_BOUND_NOTE.md)
-- status: optional history/comparison figure only; do not present as the live flavor authority
+- manuscript asset: [figureA3_ckm_route_history.svg](./figures/figureA3_ckm_route_history.svg)
+- status: landed in arXiv appendix as explicit route history only

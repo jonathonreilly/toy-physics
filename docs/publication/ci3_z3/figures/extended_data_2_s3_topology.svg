@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Extended Data Figure 2. S3 compactification and topology closure</title>
+  <desc id="desc">Schematic of the cone-cap family, boundary-link structure, and retained route to PL S3 compactification/topology closure.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#355c7d"/>
+    </marker>
+    <style>
+      .bg { fill: #f8f5ef; }
+      .title { font: 700 28px Georgia, serif; fill: #1f2a44; }
+      .label { font: 600 20px Helvetica, Arial, sans-serif; fill: #1f2a44; }
+      .body { font: 16px Helvetica, Arial, sans-serif; fill: #243447; }
+      .box { stroke: #355c7d; stroke-width: 2.5; rx: 16; ry: 16; }
+      .step { fill: #e7f0f4; }
+      .step2 { fill: #f1ead8; }
+      .step3 { fill: #e5f1e8; }
+      .arrow { stroke: #355c7d; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .curve { fill: none; stroke: #355c7d; stroke-width: 3; }
+    </style>
+  </defs>
+  <rect class="bg" x="0" y="0" width="1200" height="760"/>
+  <text class="title" x="600" y="46" text-anchor="middle">Extended Data Figure 2. Retained $S^3$ Compactification / Topology Closure</text>
+
+  <rect class="box step" x="85" y="140" width="280" height="240"/>
+  <text class="label" x="225" y="182" text-anchor="middle">Cone-cap family</text>
+  <path class="curve" d="M160 320 L225 220 L290 320" />
+  <path class="curve" d="M145 335 Q225 265 305 335" />
+  <text class="body" x="225" y="360" text-anchor="middle">capped complexes on the retained route</text>
+
+  <line class="arrow" x1="365" y1="260" x2="500" y2="260"/>
+
+  <rect class="box step2" x="515" y="140" width="280" height="240"/>
+  <text class="label" x="655" y="182" text-anchor="middle">Boundary-link structure</text>
+  <circle class="curve" cx="655" cy="270" r="56"/>
+  <path class="curve" d="M599 270 L711 270" />
+  <path class="curve" d="M655 214 L655 326" />
+  <text class="body" x="655" y="360" text-anchor="middle">simply connected capped link data</text>
+
+  <line class="arrow" x1="795" y1="260" x2="935" y2="260"/>
+
+  <rect class="box step3" x="950" y="140" width="170" height="240"/>
+  <text class="label" x="1035" y="182" text-anchor="middle">$PL\,S^3$</text>
+  <circle class="curve" cx="1035" cy="250" r="58"/>
+  <path class="curve" d="M977 250 Q1035 195 1093 250" />
+  <text class="body" x="1035" y="338" text-anchor="middle">retained topology closure</text>
+
+  <rect class="box step" x="260" y="500" width="680" height="120"/>
+  <text class="label" x="600" y="540" text-anchor="middle">Safe paper claim</text>
+  <text class="body" x="600" y="575" text-anchor="middle">The retained route closes the topology/compactification lane on the accepted paper bar:</text>
+  <text class="body" x="600" y="602" text-anchor="middle">cone-cap constructions + boundary-link structure + capped simply connected classification give $PL\,S^3$.</text>
+</svg>
