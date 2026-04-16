@@ -8,6 +8,11 @@ that are ready for reviewer intake without promoting anything to `main`:
 - Dirac / PMNS retained lane
 - Majorana retained lane
 
+The current sole-axiom top-to-bottom status on those retained lanes is now
+explicitly closed in:
+
+- [NEUTRINO_SOLE_AXIOM_FULL_CLOSURE_BOUNDARY_NOTE.md](./NEUTRINO_SOLE_AXIOM_FULL_CLOSURE_BOUNDARY_NOTE.md)
+
 ## Lane Packets
 - [NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md](/Users/jonBridger/Toy%20Physics-neutrino-majorana/docs/NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md)
 - [NEUTRINO_MAJORANA_RETAINED_LANE_PACKET_2026-04-16.md](/Users/jonBridger/Toy%20Physics-neutrino-majorana/docs/NEUTRINO_MAJORANA_RETAINED_LANE_PACKET_2026-04-16.md)
@@ -36,6 +41,9 @@ that are ready for reviewer intake without promoting anything to `main`:
     `c_1 = conjugate(c_3)`, `c_2 real`
   - the current exact bank still does not select a unique point on that
     reduced channel; that last value-selection problem now closes negatively
+- the retained full-neutrino sole-axiom question is therefore closed
+  negatively as well: the sole axiom does not furnish a full positive retained
+  neutrino realization on the current bank
 - So this lane is reviewer-ready as:
   - a positive retained-lane closure package on the lower-level
     transport/response chain, and

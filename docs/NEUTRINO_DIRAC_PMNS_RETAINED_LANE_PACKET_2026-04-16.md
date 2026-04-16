@@ -35,6 +35,8 @@ surface derived from the sole axiom `Cl(3)` on `Z^3`.
   [PMNS_ORIENTED_CYCLE_REDUCED_CHANNEL_NONSELECTION_NOTE.md](/Users/jonBridger/Toy%20Physics-neutrino-majorana/docs/PMNS_ORIENTED_CYCLE_REDUCED_CHANNEL_NONSELECTION_NOTE.md)
 - Current-bank value-selection no-go closeout:
   [PMNS_CURRENT_BANK_VALUE_SELECTION_NOGO_NOTE.md](./PMNS_CURRENT_BANK_VALUE_SELECTION_NOGO_NOTE.md)
+- Full retained-neutrino sole-axiom boundary:
+  [NEUTRINO_SOLE_AXIOM_FULL_CLOSURE_BOUNDARY_NOTE.md](./NEUTRINO_SOLE_AXIOM_FULL_CLOSURE_BOUNDARY_NOTE.md)
 
 ## Current Exact Endpoint
 There are now two exact endpoints, and they must be kept separate.
