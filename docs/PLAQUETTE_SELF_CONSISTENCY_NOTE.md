@@ -92,6 +92,8 @@ The live repo now also carries a materially stronger exact support stack:
 - exact plaquette four-link coupling map
   `P(U) = u_0^4 P(V)`
 - exact `3+1` plaquette/link incidence factor `6 / 4 = 3 / 2`
+- exact obstruction to the naive constant-lift law
+  `P(beta) = P_1plaq(beta * (3/2) * (2 / sqrt(3))^(1/4))`
 
 Those ingredients sharply narrow the last insertion bridge and give the current
 best analytic candidate
@@ -105,13 +107,22 @@ Current authorities for that support stack:
 
 - [GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md)
 - [GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md](./GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md)
+- [GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md)
 - [SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md](./SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md)
 
 Current support runners:
 
 - `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`
 - `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`
+- `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`
 - `scripts/frontier_scalar_3plus1_temporal_ratio.py`
+
+The honest live read is now sharper than before:
+
+- the exact class-level bridge ingredients are real
+- the simplest constant multiplicative effective-coupling lift is ruled out
+- so the remaining analytic target is a nontrivial `beta`-dependent
+  full-vacuum reduction law, not the old constant-lift ansatz
 
 ## Safe Reuse Rule
 

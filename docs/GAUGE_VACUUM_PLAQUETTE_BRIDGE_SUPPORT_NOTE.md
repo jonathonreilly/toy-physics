@@ -1,8 +1,8 @@
 # Gauge-Vacuum Plaquette Scalar-Bridge Support
 
 **Date:** 2026-04-16
-**Status:** exact local/source/class-level support stack; the final physical-vacuum reduction remains support-level
-**Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`, `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`
+**Status:** exact local/source/class-level support stack plus exact constant-lift obstruction; the final physical-vacuum reduction remains open
+**Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`, `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`
 
 ## Question
 
@@ -33,8 +33,19 @@ What is **not** closed by those facts alone is the final physical statement
 
 `P(beta) = P_1plaq(beta * (3/2) * (2 / sqrt(3))^(1/4))`
 
-for the interacting gauge vacuum. That last observable-level insertion is still
-a sharp support candidate rather than a theorem-grade derivation.
+for the interacting gauge vacuum.
+
+In fact, the live repo now proves that this exact **constant-lift** law cannot
+hold on the full interacting Wilson surface, because the full-vacuum
+strong-coupling slope is exactly `1/18` while the constant-lift ansatz would
+force the slope to be
+
+`[(3/2) (2 / sqrt(3))^(1/4)] / 18`.
+
+So the remaining open object is not a generic missing lift anymore. It is a
+more specific target:
+
+> derive a nontrivial `beta`-dependent full-vacuum reduction law.
 
 ## Exact support piece 1: local Wilson source-response
 
@@ -113,6 +124,32 @@ Therefore
 Again, this is exact combinatorics. What remains open is the unique reduction
 law taking this factor into the full interacting plaquette expectation.
 
+## Exact obstruction to the naive constant-lift law
+
+The live repo now also carries an exact obstruction theorem:
+
+- [GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md)
+
+The exact facts are:
+
+- the full interacting Wilson plaquette has strong-coupling slope
+  `P(beta) = beta / 18 + O(beta^2)`;
+- the local one-plaquette block also has slope `beta / 18 + O(beta^2)`;
+- therefore any exact constant-lift law
+  `P(beta) = P_1plaq(Gamma beta)`
+  must have `Gamma = 1`.
+
+Since the bridge candidate uses
+
+`Gamma_cand = (3/2) (2 / sqrt(3))^(1/4) = 1.554921974442116`,
+
+that constant-lift law is ruled out exactly.
+
+So the bridge stack now supports two honest statements at once:
+
+1. the class-level temporal bridge is exact;
+2. the naive constant multiplicative lift is not the full interacting answer.
+
 ## Current best analytic candidate
 
 If one composes the exact local/source/class-level pieces above, the sharp current
@@ -131,19 +168,23 @@ At the framework point `beta = 6`:
 - `u_0,cand = P_cand^(1/4) = 0.877729698485538`
 
 This sits only `1.3068e-4` (`0.022%`) above the current canonical same-surface
-value `0.5934`, so it is a very strong support candidate.
+value `0.5934`, so it remains a very strong support candidate at the framework
+point `beta = 6`.
 
 ## Remaining gap
 
-The remaining theorem-grade gap is now narrower:
+The remaining theorem-grade gap is now sharper:
 
-> why the physical interacting gauge-vacuum plaquette expectation is exactly
-> the local Wilson source-response evaluated at the completed effective
-> coupling, rather than merely being sharply supported by that reduction.
+> derive a nontrivial `beta`-dependent reduction law
+> `P(beta) = P_1plaq(beta_eff(beta))`
+> with `beta_eff'(0) = 1`,
+> rather than the now-ruled-out constant lift
+> `beta_eff(beta) = beta * (3/2) * (2 / sqrt(3))^(1/4)`.
 
 Until that step is closed, the live package should keep the plaquette as:
 
 - exact local/source/class-level support stack plus
+- exact obstruction to the naive constant-lift law plus
 - canonical same-surface evaluated value on the live quantitative surface
 
 ## Honest status on `main`
@@ -151,7 +192,8 @@ Until that step is closed, the live package should keep the plaquette as:
 Current clean read:
 
 - exact local/source/class-level ingredients: closed
-- physical-vacuum reduction to the local one-plaquette response: support-level
+- exact constant-lift obstruction: closed
+- full physical-vacuum reduction to the local one-plaquette response: still open
 - canonical plaquette on the live package: still `0.5934`
 
 So there is **not** yet a basis for repo-wide numeric migration or for removing
@@ -164,6 +206,7 @@ lanes.
 python3 scripts/frontier_scalar_3plus1_temporal_ratio.py
 python3 scripts/frontier_gauge_scalar_temporal_completion_theorem.py
 python3 scripts/frontier_gauge_vacuum_plaquette_bridge_support.py
+python3 scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py
 ```
 
 Expected summary:
@@ -171,3 +214,4 @@ Expected summary:
 - scalar ratio runner: `EXACT PASS=4 SUPPORT=1 FAIL=0`
 - gauge scalar completion runner: `PASS=8 FAIL=0`
 - bridge support runner: `EXACT PASS=6 SUPPORT=2 FAIL=0`
+- constant-lift obstruction runner: `THEOREM PASS=6 SUPPORT=1 FAIL=0`
