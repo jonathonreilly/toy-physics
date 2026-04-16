@@ -3,8 +3,10 @@
 ## Status
 
 **BOUNDED** -- Omega_Lambda = 0.686 is predicted with 0.2% accuracy given
-observed Omega_b.  The chain uses one derived quantity (R) with zero
-additional free parameters.  Eta is imported from observation.
+observed Omega_b. The chain uses one derived quantity (R) with zero
+additional free parameters. Eta is still not promoted as a live derived row,
+but the current DM gate now provides nontrivial exact/support structure rather
+than leaving eta completely route-less.
 
 **Current publication disposition:** bounded/conditional cosmology companion
 only. Not on the retained flagship claim surface.
@@ -21,10 +23,12 @@ The full chain:
 
 Each link:
 
-1. **eta = 6.12e-10**: imported from Planck 2018. The older taste-scalar EWPT
-   route is no longer a live support surface; the current exact taste-block
-   theorem only yields a bounded scalar-only estimate `v(T_c)/T_c = 0.3079`,
-   so eta is not currently conditionally derived here.
+1. **eta = 6.12e-10**: still imported from Planck 2018 on this cosmology
+   chain. However, the current DM gate no longer leaves eta unsupported:
+   the exact one-flavor theorem-native transport branch gives
+   `eta/eta_obs = 0.1888`, and reduced-surface PMNS support recovers a
+   low-action branch with `eta/eta_obs = 1`. That support stack is not yet
+   promoted as live theorem-grade closure, so eta remains imported here.
 2. **Omega_b = 0.0492**: standard BBN, zero free parameters given eta
 3. **R = 5.38**: derived from taste structure (R_base = 31/9 = 3.444)
    plus Sommerfeld correction (S_vis/S_dark ~ 1.56)
@@ -34,10 +38,14 @@ Each link:
 
 ## Assumptions
 
-1. **eta imported from observation** -- the current live taste-block theorem
-   only gives a bounded scalar-only estimate `v/T = 0.3079`, which is not a
-   first-principles baryogenesis closure. Eta therefore remains imported on
-   this chain.
+1. **eta imported from observation** -- the old taste-scalar EWPT route is no
+   longer the right support story. The current live DM lane gives:
+   - exact one-flavor theorem-native transport:
+     `eta/eta_obs = 0.1888`
+   - reduced-surface PMNS support:
+     `eta/eta_obs = 1`
+   This is materially stronger than a pure import, but the selector /
+   normalization closure is still open, so eta remains imported on this chain.
 
 2. **R derivation bounded by alpha_GUT** -- the Sommerfeld correction
    depends on alpha_GUT in [0.03, 0.05].  Within this range, R varies
@@ -78,8 +86,10 @@ Numerical results (using BBN-calibrated Omega_b):
 1. **Eta from first principles** -- the current live taste-block theorem gives
    only a bounded scalar-only estimate `v(T_c)/T_c = 0.3079`, so the old
    taste-scalar EWPT baryogenesis route is not currently a closure path.
-   If eta is later derived on a stronger baryogenesis surface, the entire pie
-   chart becomes parameter-free.
+   The active eta route is now the DM leptogenesis gate:
+   exact one-flavor transport reaches `0.1888`, while reduced-surface PMNS
+   support reaches `1.0`. If that gate is promoted from support/open status to
+   live closure, the entire pie chart becomes parameter-free.
 
 2. **Alpha_GUT from the framework** -- the Sommerfeld correction uses
    alpha_GUT as a bounded input.  If gauge coupling unification is
@@ -103,7 +113,8 @@ bounded result for the paper:
   Sommerfeld enhancement.
 
 - **Not safe**: Claiming Omega_Lambda is derived from first principles.
-  Eta is still imported.
+  Eta is still imported on the live cosmology surface, even though the current
+  DM gate now provides much stronger support than before.
 
 - **Paper placement**: This belongs in the cosmological predictions
   section as a conditional chain.  The honest framing is: "the framework

@@ -25,8 +25,9 @@ KEY RESULT:
     R = R_base * S_vis/S_dark (Sommerfeld correction from QCD)
 
   The older taste-scalar EWPT baryogenesis route is no longer a live support
-  surface. The current exact taste-block theorem only gives a bounded
-  scalar-only estimate v(T_c)/T_c = 0.3079, so eta remains imported here.
+  surface. Eta still remains imported here, but the current DM gate now gives
+  real support: the exact one-flavor theorem-native transport branch yields
+  eta/eta_obs = 0.1888 and reduced-surface PMNS support reaches eta/eta_obs = 1.
 
 HONEST ACCOUNTING:
   - eta is imported (not yet first-principles)
@@ -119,10 +120,12 @@ def link1_eta():
     """
     The baryon-to-photon ratio eta = n_B / n_gamma.
 
-    Framework status: IMPORTED.
-    The current live taste-block theorem gives only a bounded scalar-only
-    estimate v(T_c)/T_c = 0.3079, not a first-principles baryogenesis closure.
-    For this chain, we therefore import eta from Planck.
+    Framework status: IMPORTED with live DM-gate support.
+    The old taste-scalar EWPT route is no longer the active eta story.
+    The current DM lane gives exact one-flavor transport eta/eta_obs = 0.1888
+    and reduced-surface PMNS support eta/eta_obs = 1, but not yet a promoted
+    theorem-grade closure. For this chain, we therefore still import eta from
+    Planck.
     """
     print("=" * 72)
     print("LINK 1: Baryon-to-photon ratio eta")
@@ -134,14 +137,12 @@ def link1_eta():
     print(f"  eta_obs = {eta:.2e}  (Planck 2018, from CMB + BBN)")
     print()
 
-    # Older taste-scalar baryogenesis sketch (now demoted)
-    # From BARYOGENESIS_NOTE.md:
-    # Three Sakharov conditions:
-    #   1. B violation: SU(2) sphalerons (derived gauge structure)
-    #   2. CP violation: Z_3 phase -> delta_CP = 2pi/3, J ~ 3.1e-5
-    #   3. Out-of-equilibrium: still open. The current live taste-block theorem
-    #      only gives a bounded scalar-only estimate v/T = 0.3079, which is too
-    #      weak to support a baryogenesis closure claim on this route.
+    # Current status:
+    #   - the old taste-scalar EWPT route is demoted
+    #   - the live eta support path is now the DM leptogenesis gate
+    #   - exact one-flavor transport yields eta/eta_obs = 0.1888
+    #   - reduced-surface PMNS support reaches eta/eta_obs = 1
+    #   - selector / normalization closure is still open
 
     delta_CP_Z3 = 2.0 * math.pi / 3.0
     sin_delta = math.sin(delta_CP_Z3)
@@ -152,11 +153,13 @@ def link1_eta():
     print(f"    CP phase from Z_3:     delta = 2pi/3 = {delta_CP_Z3:.4f} rad")
     print(f"    sin(delta):            {sin_delta:.4f}")
     print(f"    CP source:             S_CP ~ y_t^2 sin(d) / 4pi^2 = {S_CP:.4f}")
-    print(f"    Current live scalar-only v/T estimate: 0.3079")
+    print(f"    Current live DM exact branch:      eta/eta_obs = 0.1888")
+    print(f"    Current PMNS support branch:       eta/eta_obs = 1.0")
+    print(f"    Old scalar-only taste estimate:    v/T = 0.3079  [not closure]")
     print()
 
     bounded("eta from baryogenesis",
-            "taste-scalar route no longer supports a live closure claim; imported from observation for this chain")
+            "DM gate materially strengthens eta support, but live theorem-grade closure is still open; imported from observation for this chain")
 
     print()
     return eta
@@ -588,8 +591,9 @@ def honest_accounting():
     print()
     print(f"  IMPORTED (from observation):")
     print(f"    - eta = 6.12e-10 (baryon-to-photon ratio)")
-    print(f"      -> not currently derived from baryogenesis on the live taste-scalar surface")
-    print(f"      -> not yet first-principles; requires lattice EWPT computation")
+    print(f"      -> exact DM one-flavor transport gives eta/eta_obs = 0.1888")
+    print(f"      -> PMNS reduced-surface support reaches eta/eta_obs = 1")
+    print(f"      -> still not promoted to live theorem-grade closure on this chain")
     print()
     print(f"  STANDARD PHYSICS (no free parameters given eta):")
     print(f"    - BBN: eta -> Omega_b")
