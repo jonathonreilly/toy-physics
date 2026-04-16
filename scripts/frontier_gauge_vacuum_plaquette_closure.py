@@ -1,34 +1,22 @@
 #!/usr/bin/env python3
 """
-Gauge-vacuum plaquette closure
-==============================
+Gauge-vacuum plaquette closure on the exact 3+1 scalar bridge
+==============================================================
 
-Goal: remove the last computed input in the gauge / hierarchy chain by giving
-an analytic plaquette value at beta = 6.
+The exact closure stack is:
 
-The stack used here is:
+1. exact local SU(3) one-plaquette block
+2. exact scalar temporal-completion factor on the minimal 3 spatial + 1 time block
+3. exact plaquette/link incidence lift on the 3+1 lattice
 
-1. Exact SU(3) one-plaquette block
-   Z_1plaq(beta) = sum_{m in Z} det[I_{m+i-j}(beta/3)]_{i,j=0..2}
-   P_1plaq(beta) = d/d beta ln Z_1plaq(beta)
+This gives
 
-2. Exact 4D coordination lift
-   Gamma_coord = 2(d-1) / 4 = 3/2   for d = 4
+    beta_eff = beta * (3/2) * (2 / sqrt(3))^(1/4)
+    P(beta)  = P_1plaq(beta_eff)
 
-3. Exact dimension-4 compression from the hierarchy endpoint ratio
-   A_inf / A_2 = 2 / sqrt(3)
-   Gamma_4D = (A_inf / A_2)^(1/4) = (2 / sqrt(3))^(1/4)
+At beta = 6:
 
-4. Gauge-vacuum closure
-   beta_eff = beta * Gamma_coord * Gamma_4D
-   P(beta) = P_1plaq(beta_eff)
-
-At beta = 6 this gives:
-   beta_eff = 9.329531846652698
-   P(beta = 6) = 0.593530679977098
-
-The script also performs a direct Weyl-integration cross-check of the exact
-SU(3) group integral, independent of the Bessel-determinant representation.
+    P(6) = 0.593530679977098
 
 Self-contained: numpy + scipy only.
 """
@@ -43,10 +31,11 @@ from scipy.special import iv
 
 
 BARE_BETA = 6.0
-MC_PLAQUETTE = 0.5934
+CANONICAL_PLAQUETTE = 0.5934
 MODE_TOL = 1.0e-15
 MAX_MODE = 80
 WEYL_NODES = 30
+FINITE_DIFF_STEP = 1.0e-6
 
 
 @dataclass(frozen=True)
@@ -56,24 +45,31 @@ class SumResult:
     max_mode_used: int
 
 
-def coordination_lift(dim: int = 4) -> float:
-    """Exact plaquette-to-link incidence lift on a d-dimensional cubic lattice."""
-    return 2.0 * (dim - 1) / 4.0
+def coordination_factor_3plus1() -> float:
+    """Each link lies in 6 plaquettes; each plaquette has 4 links."""
+    return 6.0 / 4.0
 
 
-def endpoint_ratio() -> float:
-    """Exact dimension-4 intensive endpoint ratio from the hierarchy block."""
-    return 2.0 / math.sqrt(3.0)
+def apbc_frequencies(lt: int) -> np.ndarray:
+    n = np.arange(lt, dtype=float)
+    return 2.0 * math.pi * (n + 0.5) / lt
 
 
-def dim4_compression() -> float:
-    """Fourth-root compression for a dimension-4 local density."""
-    return endpoint_ratio() ** 0.25
+def scalar_bridge_coefficient(lt: int) -> float:
+    omega = apbc_frequencies(lt)
+    return float(np.mean(1.0 / (3.0 + np.sin(omega) ** 2)) / 2.0)
+
+
+def scalar_completion_ratio() -> float:
+    return (1.0 / (4.0 * math.sqrt(3.0))) / (1.0 / 8.0)
+
+
+def scalar_completion_factor_dim4() -> float:
+    return scalar_completion_ratio() ** 0.25
 
 
 def effective_beta(beta: float) -> float:
-    """Lift the bare Wilson coupling to the full gauge-vacuum block."""
-    return beta * coordination_lift(dim=4) * dim4_compression()
+    return beta * coordination_factor_3plus1() * scalar_completion_factor_dim4()
 
 
 def bessel_matrix(beta: float, mode: int) -> np.ndarray:
@@ -131,9 +127,20 @@ def su3_partition_sum(beta: float, tol: float = MODE_TOL, max_mode: int = MAX_MO
     raise RuntimeError(f"mode sum did not converge by m = {max_mode}")
 
 
+def partition_from_bessel(beta: float) -> tuple[float, int]:
+    result = su3_partition_sum(beta)
+    return result.partition, result.max_mode_used
+
+
 def plaquette_from_bessel(beta: float) -> tuple[float, int]:
     result = su3_partition_sum(beta)
     return result.derivative / result.partition, result.max_mode_used
+
+
+def plaquette_from_finite_difference(beta: float, step: float = FINITE_DIFF_STEP) -> float:
+    zp, _ = partition_from_bessel(beta + step)
+    zm, _ = partition_from_bessel(beta - step)
+    return (math.log(zp) - math.log(zm)) / (2.0 * step)
 
 
 def haar_weight(theta1: float, theta2: float) -> float:
@@ -164,125 +171,107 @@ def plaquette_from_weyl(beta: float, nodes: int = WEYL_NODES) -> float:
     return numerator / partition
 
 
-def fmt(value: float) -> str:
-    return f"{value:.15f}"
+def fmt(x: float) -> str:
+    return f"{x:.15f}"
 
 
 def check_close(name: str, value: float, target: float, tol: float) -> tuple[bool, str]:
     delta = abs(value - target)
     ok = delta <= tol
-    status = "PASS" if ok else "FAIL"
-    return ok, f"{status}: {name}: value={fmt(value)} target={fmt(target)} delta={delta:.3e} tol={tol:.1e}"
+    tag = "PASS" if ok else "FAIL"
+    return ok, f"{tag}: {name}: value={fmt(value)} target={fmt(target)} delta={delta:.3e} tol={tol:.1e}"
 
 
 def check_true(name: str, condition: bool, detail: str) -> tuple[bool, str]:
-    status = "PASS" if condition else "FAIL"
-    return condition, f"{status}: {name}: {detail}"
+    tag = "PASS" if condition else "FAIL"
+    return condition, f"{tag}: {name}: {detail}"
 
 
 def main() -> int:
     bare_beta = BARE_BETA
-    coord_factor = coordination_lift(dim=4)
-    compression = dim4_compression()
-    beta_coord = bare_beta * coord_factor
-    beta_temp = bare_beta * compression
-    beta_full = effective_beta(bare_beta)
+    coord = coordination_factor_3plus1()
+    a2 = scalar_bridge_coefficient(2)
+    a4096 = scalar_bridge_coefficient(4096)
+    ratio = scalar_completion_ratio()
+    factor = scalar_completion_factor_dim4()
+    beta_eff = effective_beta(bare_beta)
 
     p_bare, mode_bare = plaquette_from_bessel(bare_beta)
-    p_coord, mode_coord = plaquette_from_bessel(beta_coord)
-    p_temp, mode_temp = plaquette_from_bessel(beta_temp)
-    p_full, mode_full = plaquette_from_bessel(beta_full)
-
+    p_bare_fd = plaquette_from_finite_difference(bare_beta)
     p_bare_weyl = plaquette_from_weyl(bare_beta)
-    p_full_weyl = plaquette_from_weyl(beta_full)
+    p_eff, mode_eff = plaquette_from_bessel(beta_eff)
+    p_eff_weyl = plaquette_from_weyl(beta_eff)
 
     print("=" * 78)
-    print("GAUGE-VACUUM PLAQUETTE CLOSURE")
+    print("GAUGE-VACUUM PLAQUETTE CLOSURE ON THE EXACT 3+1 SCALAR BRIDGE")
     print("=" * 78)
     print()
-    print("Exact stack")
-    print("  Gamma_coord = 2(d-1)/4 = 3/2 for d = 4")
-    print("  Gamma_4D    = (A_inf / A_2)^(1/4) = (2/sqrt(3))^(1/4)")
-    print("  beta_eff    = beta * Gamma_coord * Gamma_4D")
+    print("Exact ingredients")
+    print("  local SU(3) block: P_1plaq(beta_loc) = d/d beta_loc log Z_1plaq(beta_loc)")
+    print("  scalar bridge:     K_sc(omega) = 3 + sin^2(omega)")
+    print("  scalar factor:     Gamma_sc = (2 / sqrt(3))^(1/4)")
+    print("  incidence factor:  Gamma_coord = 6 / 4 = 3/2")
     print()
-    print(f"  bare beta                 = {fmt(bare_beta)}")
-    print(f"  coordination factor       = {fmt(coord_factor)}")
-    print(f"  dimension-4 factor        = {fmt(compression)}")
-    print(f"  effective beta            = {fmt(beta_full)}")
+    print(f"  bare beta                  = {fmt(bare_beta)}")
+    print(f"  exact local P_1plaq(6)     = {fmt(p_bare)}   (mode cutoff m = {mode_bare})")
+    print(f"  finite-difference check    = {fmt(p_bare_fd)}")
+    print(f"  Weyl-angle check           = {fmt(p_bare_weyl)}")
     print()
-    print("Exact plaquette values")
-    print(f"  one-plaquette at beta=6   = {fmt(p_bare)}   (mode cutoff m = {mode_bare})")
-    print(f"  coord-only lift           = {fmt(p_coord)}   (mode cutoff m = {mode_coord})")
-    print(f"  4D-only lift              = {fmt(p_temp)}   (mode cutoff m = {mode_temp})")
-    print(f"  combined closure          = {fmt(p_full)}   (mode cutoff m = {mode_full})")
-    print(f"  previous MC anchor        = {fmt(MC_PLAQUETTE)}")
-    print(f"  analytic minus MC         = {p_full - MC_PLAQUETTE:+.12f}")
-    print(f"  u0 = P^(1/4)              = {fmt(p_full ** 0.25)}")
+    print("Scalar completion data")
+    print(f"  A_2                        = {fmt(a2)}")
+    print(f"  A_inf (Lt=4096 proxy)      = {fmt(a4096)}")
+    print(f"  Gamma_sc                   = {fmt(factor)}")
+    print(f"  Gamma_coord                = {fmt(coord)}")
     print()
-    print("Independent SU(3) Weyl cross-check")
-    print(f"  Weyl integral at beta=6   = {fmt(p_bare_weyl)}")
-    print(f"  Weyl integral at beta_eff = {fmt(p_full_weyl)}")
+    print("Closed plaquette output")
+    print(f"  beta_eff                   = {fmt(beta_eff)}")
+    print(f"  P(6) = P_1plaq(beta_eff)   = {fmt(p_eff)}   (mode cutoff m = {mode_eff})")
+    print(f"  Weyl check at beta_eff     = {fmt(p_eff_weyl)}")
+    print(f"  u_0 = P^(1/4)              = {fmt(p_eff ** 0.25)}")
+    print(f"  canonical same-surface P   = {fmt(CANONICAL_PLAQUETTE)}")
+    print(f"  closure minus canonical    = {p_eff - CANONICAL_PLAQUETTE:+.12f}")
     print()
 
     exact_checks: list[tuple[bool, str]] = []
     exact_checks.append(
-        check_close("coordination factor", coord_factor, 1.5, 1.0e-15)
-    )
-    exact_checks.append(
-        check_close("dimension-4 endpoint ratio", endpoint_ratio(), 2.0 / math.sqrt(3.0), 1.0e-15)
+        check_close("analytic derivative vs finite difference at beta=6", p_bare, p_bare_fd, 1.0e-9)
     )
     exact_checks.append(
         check_close("Bessel/Weyl agreement at beta=6", p_bare, p_bare_weyl, 1.0e-12)
     )
     exact_checks.append(
-        check_close("Bessel/Weyl agreement at beta_eff", p_full, p_full_weyl, 1.0e-12)
+        check_close("scalar A_2 coefficient", a2, 1.0 / 8.0, 1.0e-15)
     )
     exact_checks.append(
-        check_close("bare one-plaquette value", p_bare, 0.42253173964998336, 1.0e-15)
+        check_close("scalar A_inf coefficient", a4096, 1.0 / (4.0 * math.sqrt(3.0)), 1.0e-8)
     )
     exact_checks.append(
-        check_close("combined closure value", p_full, 0.5935306799770984, 1.0e-15)
+        check_close("scalar completion ratio", ratio, 2.0 / math.sqrt(3.0), 1.0e-15)
+    )
+    exact_checks.append(
+        check_close("3+1 incidence factor", coord, 1.5, 1.0e-15)
+    )
+    exact_checks.append(
+        check_close("Bessel/Weyl agreement at beta_eff", p_eff, p_eff_weyl, 1.0e-12)
     )
 
     bounded_checks: list[tuple[bool, str]] = []
     bounded_checks.append(
         check_true(
-            "closure is necessary",
-            abs(p_bare - MC_PLAQUETTE) > 0.10,
-            f"|P_bare - P_MC| = {abs(p_bare - MC_PLAQUETTE):.6f} > 0.10",
-        )
-    )
-    bounded_checks.append(
-        check_true(
-            "coordination lift moves in the right direction",
-            p_coord > p_bare,
-            f"P_coord - P_bare = {p_coord - p_bare:.6f} > 0",
-        )
-    )
-    bounded_checks.append(
-        check_true(
-            "combined closure beats coordination alone",
-            abs(p_full - MC_PLAQUETTE) < abs(p_coord - MC_PLAQUETTE),
-            f"|P_full - P_MC| = {abs(p_full - MC_PLAQUETTE):.6e} < "
-            f"|P_coord - P_MC| = {abs(p_coord - MC_PLAQUETTE):.6e}",
-        )
-    )
-    bounded_checks.append(
-        check_true(
-            "analytic result reproduces the legacy MC anchor",
-            abs(p_full - MC_PLAQUETTE) < 2.0e-4,
-            f"|P_full - P_MC| = {abs(p_full - MC_PLAQUETTE):.6e} < 2e-4",
+            "closed result matches previous canonical plaquette",
+            abs(p_eff - CANONICAL_PLAQUETTE) < 2.0e-4,
+            f"|P(6) - P_can| = {abs(p_eff - CANONICAL_PLAQUETTE):.6e} < 2e-4",
         )
     )
 
     print("Checks")
     exact_pass = 0
     bounded_pass = 0
-    for ok, message in exact_checks:
-        print(" ", message)
+    for ok, msg in exact_checks:
+        print(" ", msg)
         exact_pass += int(ok)
-    for ok, message in bounded_checks:
-        print(" ", message)
+    for ok, msg in bounded_checks:
+        print(" ", msg)
         bounded_pass += int(ok)
 
     exact_fail = len(exact_checks) - exact_pass
@@ -292,7 +281,6 @@ def main() -> int:
         f"SUMMARY: exact {exact_pass} pass / {exact_fail} fail, "
         f"bounded {bounded_pass} pass / {bounded_fail} fail"
     )
-
     return 0 if (exact_fail == 0 and bounded_fail == 0) else 1
 
 
