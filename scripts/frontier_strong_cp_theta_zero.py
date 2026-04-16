@@ -459,7 +459,12 @@ def test_leg_b_chiral_basis_non_generation():
 
     expected_real = [0.0, np.pi]
     real_match = all(any(abs(a - b) < 1e-12 for b in real_preserving) for a in expected_real) and len(real_preserving) == len(expected_real)
-    check("Only α ∈ πZ preserves a real mass operator on the retained action class", real_match, "real-preserving α on grid = {0, π}")
+    check(
+        "Sampled axial grid only preserves a real mass operator at α ∈ {0, π}",
+        real_match,
+        "grid audit matches the exact m(cos α I + i sin α ε) formula",
+        bucket="COMPUTE",
+    )
 
     M_probe = rotated_mass_operator(mass, alpha_probe, eps_mat)
     imag_mass = np.max(np.abs(M_probe.imag))
@@ -558,11 +563,11 @@ def test_weak_sector_separation():
     check("|det(V_CKM)| = 1", abs(abs(det_V) - 1.0) < 1e-10, f"|det V| = {abs(det_V):.12f}")
 
     y_t = 0.9176
-    check("Retained Yukawa/top lane keeps the quark masses real and positive", y_t > 0 and np.isreal(y_t), f"y_t = {y_t}")
+    check("Retained Yukawa/top lane keeps the quark masses real and positive", y_t > 0 and np.isreal(y_t), f"y_t = {y_t}", bucket="COMPUTE")
     M_u = np.diag([2.2e-3, 1.27, 173.10])
     M_d = np.diag([4.7e-3, 9.6e-2, 4.18])
     arg_det_md = abs(float(np.angle(np.linalg.det(M_u @ M_d))))
-    check("arg det(M_u M_d) = 0 on an explicit positive-mass quark surface", arg_det_md < 1e-12, f"|arg det| = {arg_det_md:.2e}")
+    check("arg det(M_u M_d) = 0 on an explicit positive-mass quark surface", arg_det_md < 1e-12, f"|arg det| = {arg_det_md:.2e}", bucket="COMPUTE")
 
 
 def test_leg_c_effective_action_cp_even():
@@ -580,7 +585,7 @@ def test_leg_c_effective_action_cp_even():
 
     check(f"Retained action surface has {len(axioms)} accepted inputs", len(axioms) == 5, "; ".join(f"({i+1}) {a}" for i, a in enumerate(axioms)))
     check("Canonical normalization fixes Wilson β = 6", abs(beta - 6.0) < 1e-12, f"β = {beta:.12f}")
-    check("Retained action class carries no bare θ slot", "theta" not in action_slots, f"slots = {sorted(action_slots)}")
+    support("No bare θ slot is present in the retained action-class definition", f"slots = {sorted(action_slots)}")
 
     L_s = 4
     L_t = 4
@@ -657,23 +662,25 @@ def test_leg_d_topological_sector_positivity():
     bound_violation = np.max(abs_z - z0)
     min_residual = np.min(free_energy - f0)
 
-    check("Sampled topological-family weights are strictly positive", np.min(positive_weights) > 0.0, f"min shifted weight = {np.min(positive_weights):.3e}", bucket="COMPUTE")
+    check("Sampled positive-weight Q-weighted family is strictly positive", np.min(positive_weights) > 0.0, f"min shifted weight = {np.min(positive_weights):.3e}", bucket="COMPUTE")
     check("Sampled positive-weight θ-sum obeys |Z(θ)| <= Z(0)", bound_violation < 1e-10, f"max (|Z|-Z0) = {bound_violation:.2e}", bucket="COMPUTE")
-    check("Sampled free energy is minimized at θ = 0", min_residual > -1e-10, f"min(F(θ)-F(0)) = {min_residual:.2e}", bucket="COMPUTE")
+    check("Sampled θ-sum free energy is minimized at θ = 0", min_residual > -1e-10, f"min(F(θ)-F(0)) = {min_residual:.2e}", bucket="COMPUTE")
 
 
 def test_combined_theta_eff():
     print("\n=== COMBINED RESULT: θ_eff = 0 ===\n")
 
     theta_bare = 0.0
-    arg_det_M = 0.0
+    M_u = np.diag([2.2e-3, 1.27, 173.10])
+    M_d = np.diag([4.7e-3, 9.6e-2, 4.18])
+    arg_det_M = float(np.angle(np.linalg.det(M_u @ M_d)))
     theta_eff = theta_bare + arg_det_M
     theta_exp_bound = 1e-10
 
-    check("θ_bare = 0 on the retained action surface", theta_bare == 0.0, "no bare θ slot appears in the retained Wilson-plus-staggered action")
-    check("arg det(M_u M_d) = 0 on the retained real-mass surface", arg_det_M == 0.0, "the retained quark-mass surface stays real and positive")
-    check("θ_eff = θ_bare + arg det(M_u M_d) = 0", theta_eff == 0.0, f"{theta_bare} + {arg_det_M} = {theta_eff}")
-    check("Retained-framework closure is consistent with the neutron-EDM bound", abs(theta_eff) < theta_exp_bound, f"|θ_eff| = {abs(theta_eff):.1e} < {theta_exp_bound:.1e}")
+    support("θ_bare = 0 is taken from the retained action-class definition", "no bare θ slot appears in the retained Wilson-plus-staggered action")
+    check("Explicit positive-mass quark surface gives arg det(M_u M_d) = 0", abs(arg_det_M) < 1e-12, f"|arg det| = {abs(arg_det_M):.2e}", bucket="COMPUTE")
+    check("Combined retained-surface synthesis gives θ_eff = 0", abs(theta_eff) < 1e-12, f"{theta_bare} + {arg_det_M} = {theta_eff}", bucket="COMPUTE")
+    check("Retained-framework closure is consistent with the neutron-EDM bound", abs(theta_eff) < theta_exp_bound, f"|θ_eff| = {abs(theta_eff):.1e} < {theta_exp_bound:.1e}", bucket="COMPUTE")
 
 
 def main():

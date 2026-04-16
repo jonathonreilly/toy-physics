@@ -183,9 +183,10 @@ closed-form first-principles expression for the detailed lattice measure
 `Z_Q`. Positivity of the sector weights is enough.
 
 The runner mirrors this mechanism with a sampled retained `3+1`
-positive-weight family:
+positive-weight `Q`-weighted family rather than a literal computed exact
+sector decomposition:
 
-- sampled retained weights are strictly positive,
+- sampled retained positive weights are strictly positive,
 - the sampled `θ`-sum obeys `|Z(θ)| <= Z(0)`,
 - the sampled free energy is minimized at `θ = 0`.
 
@@ -232,7 +233,7 @@ This is now a **full strong-CP closure package on the retained action surface**.
 
 ### Exact theorem-grade statements
 
-1. the retained action class has 5 accepted inputs and no bare `θ` slot,
+1. the retained action class has 5 accepted inputs,
 2. canonical normalization fixes the Wilson gauge coupling at `β = 6`,
 3. `ε^2 = I`,
 4. `U_α = exp(i α ε/2)` is unitary,
@@ -241,11 +242,22 @@ This is now a **full strong-CP closure package on the retained action surface**.
 7. only `α ∈ πZ` preserves a real mass operator on the retained action class,
 8. the selected-axis weak `su(2)` closes exactly,
 9. the joint commutant has dimension `10 = gl(3) ⊕ gl(1)`,
-10. `Z_3` has only discrete cube-root eigenvalues,
-11. `|det V_CKM| = 1`,
-12. `arg det(M_u M_d) = 0` on an explicit positive-mass quark surface,
-13. `θ_bare = 0` on the retained action surface,
-14. `θ_eff = 0`.
+10. the `Z_3` weak-sector source does not commute with the selected-axis
+    `SU(2)`,
+11. `Z_3` has only discrete cube-root eigenvalues,
+12. `|det V_CKM| = 1`,
+13. positive retained sector weights imply `|Z(θ)| <= Z(0)`, hence
+    `F(θ)` is minimized at `θ = 0`.
+
+### Accepted-surface definitions used by the closure
+
+1. no bare `θ` slot appears in the retained Wilson-plus-staggered action
+   class,
+2. therefore `θ_bare = 0` on that retained action surface.
+
+These are part of the accepted action-surface definition. They are load-bearing
+for the closure claim, but the runner counts them as support/definition items
+rather than standalone theorem passes.
 
 ### Retained-surface compute checks
 
@@ -256,15 +268,18 @@ This is now a **full strong-CP closure package on the retained action surface**.
 5. sampled exact `±λ` pairing of `iD`,
 6. sampled `Im Γ_f = 0`,
 7. sampled agreement between the spectral phase and the determinant phase,
-8. explicit nontrivial axial rotation exits the retained scalar-mass action
+8. sampled axial-grid audit matches the exact statement that only `α ∈ πZ`
+   preserves a real mass operator,
+9. explicit nontrivial axial rotation exits the retained scalar-mass action
    class,
-9. the only admissible retained-surface axial endpoints keep zero determinant
-   phase,
-10. sampled retained effective action is real,
-11. linkwise complex conjugation preserves the full retained effective action,
-12. sampled retained topological-family weights are positive,
-13. the sampled `θ`-sum obeys `|Z(θ)| <= Z(0)`,
-14. the sampled retained free energy is minimized at `θ = 0`.
+10. the only admissible retained-surface axial endpoints keep zero determinant
+    phase,
+11. explicit positive-mass quark-surface audit gives `arg det(M_u M_d)=0`,
+12. sampled retained effective action is real,
+13. linkwise complex conjugation preserves the full retained effective action,
+14. sampled retained positive-weight `Q`-weighted family obeys
+    `|Z(θ)| <= Z(0)`,
+15. the sampled retained free energy is minimized at `θ = 0`.
 
 ### Support only
 
@@ -335,7 +350,7 @@ The safe paper sentence is:
 ```bash
 python3 scripts/frontier_strong_cp_theta_zero.py
 # Exit code: 0
-# THEOREM PASS=21  FAIL=0
-# RETAINED-SURFACE COMPUTE PASS=24  FAIL=0
-# SUPPORT=2
+# THEOREM PASS=13  FAIL=0
+# RETAINED-SURFACE COMPUTE PASS=30  FAIL=0
+# SUPPORT=4
 ```

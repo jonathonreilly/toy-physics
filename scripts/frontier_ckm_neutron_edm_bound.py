@@ -5,7 +5,7 @@ CKM neutron-EDM bounded lane on the retained θ_eff = 0 surface
 
 STATUS: bounded lane on `main`
 
-This script does not upgrade the strong-CP theorem itself. It takes:
+This script does not upgrade the retained strong-CP closure package itself. It takes:
 
   1. θ_eff = 0 on the retained strong-CP action surface
   2. the promoted CKM closure package
@@ -48,7 +48,7 @@ def main() -> int:
     print("=" * 72)
     print()
 
-    # Strong-CP theorem surface: the QCD theta contribution vanishes.
+    # Retained strong-CP closure surface: the QCD theta contribution vanishes.
     theta_eff = 0.0
     dn_per_theta = 2.4e-16  # e cm, lattice-QCD headline scale
     dn_qcd = theta_eff * dn_per_theta

@@ -79,7 +79,7 @@ bridge layer beyond the exact structural core.
 - bounded string tension readout:
   - exact confinement theorem plus low-energy EFT bridge
 - CKM neutron EDM:
-  - retained strong-CP theorem + promoted CKM package + EFT bridge
+  - retained strong-CP closure package + promoted CKM package + EFT bridge
 - proton lifetime:
   - exact operator content + imported dimension-6 EFT decay-rate bridge
 - cosmology windows:

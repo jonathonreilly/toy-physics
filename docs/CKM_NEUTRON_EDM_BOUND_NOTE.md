@@ -6,17 +6,17 @@
 
 ## Role
 
-This note is the observable follow-up lane to the retained strong-CP theorem.
+This note is the observable follow-up lane to the retained strong-CP closure package.
 
-It does **not** broaden the theorem in
+It does **not** broaden the closure in
 [STRONG_CP_THETA_ZERO_NOTE.md](STRONG_CP_THETA_ZERO_NOTE.md). The retained
-theorem remains:
+core result remains:
 
 - `\theta_eff = 0` on the axiom-determined Wilson-plus-staggered action surface
 - no bare `\theta` appears there
 - CKM CP remains weak-sector only
 
-This companion asks the next concrete question:
+This lane asks the next concrete question:
 
 > if the QCD `\theta` contribution vanishes on that retained surface, what is
 > the surviving CKM-only scale for the neutron EDM?
@@ -25,7 +25,7 @@ This companion asks the next concrete question:
 
 The estimate uses two ingredients:
 
-1. **Retained strong-CP theorem**
+1. **Retained strong-CP closure package**
    - `d_n(QCD) = 0` because `\theta_eff = 0` on the retained action surface
    - authority:
      [STRONG_CP_THETA_ZERO_NOTE.md](STRONG_CP_THETA_ZERO_NOTE.md)
@@ -70,7 +70,7 @@ What this lane supports:
 
 What this lane does **not** support:
 
-- a new exact strong-CP theorem
+- a new exact strong-CP closure theorem beyond the retained action-surface note
 - a first-principles lattice computation of the neutron EDM matrix elements
 - a radiative or chiral master theorem beyond the retained action-surface note
 
