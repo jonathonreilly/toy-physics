@@ -115,7 +115,7 @@ qualifiers explicitly.
 | superseded YT / EW / Higgs route-history stack | historical only; replaced by the promoted quantitative package and complete prediction chain | `F02` |
 | older CKM bounded route-history portfolio | superseded by the promoted CKM closure package | `F03` |
 | cosmology companion portfolio | conditional / bounded | `F04` |
-| Higgs and mass-spectrum companions beyond the promoted package | not part of the flagship spine | `F05` |
+| Higgs, mass-spectrum, and partial neutrino programs beyond the promoted package | not part of the flagship spine; a curated neutrino boundary/support packet is now live on `main`, but it is still outside the manuscript surface | `F05` |
 | gravity companions beyond the retained core | bounded / later-paper material | `F06` |
 | historical inventories and stale strategy docs | inventory only, not authority | `F08` |
 

@@ -145,6 +145,14 @@ Current status from that stack:
 
 1. DM flagship gate
 
+Outside the flagship paper surface, a curated neutrino boundary/support packet
+is now also live on `main`:
+
+- [NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md](../../NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md)
+
+It is useful for atlas/review purposes, but it is not being promoted here as a
+retained manuscript lane.
+
 ## Read The Package In Order
 
 1. [ARXIV_DRAFT.md](./ARXIV_DRAFT.md)

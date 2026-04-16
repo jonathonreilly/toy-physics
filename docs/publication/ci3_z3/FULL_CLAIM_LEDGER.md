@@ -170,7 +170,7 @@ These rows correspond to Section D of
 | superseded YT / EW / Higgs route-history stack | frozen-out as authority | useful for audit, unsafe as publication authority after the promoted quantitative package landed on `main` | `F02` |
 | older CKM bounded route-history portfolio | frozen-out as superseded authority | retained only as route history after the promoted CKM closure package landed on `main` | `F03` |
 | cosmology companion portfolio | frozen-out of flagship core | conditional/bounded companion layer | `F04` |
-| Higgs and mass-spectrum companions beyond the promoted package | frozen-out of flagship core | the promoted Higgs/vacuum package is live, but the broader mass-spectrum and neutrino programs remain outside the flagship spine | `F05` |
+| Higgs, mass-spectrum, and partial neutrino programs beyond the promoted package | frozen-out of flagship core | the promoted Higgs/vacuum package is live, and a curated neutrino boundary/support packet is now live on `main`, but the broader mass-spectrum and neutrino programs remain outside the flagship spine | `F05` |
 | gravity companions beyond the retained core | frozen-out of flagship core | weak-field GR-signature companions and broader non-flagship gravity phenomenology remain outside the flagship core even though the direct-universal discrete GR and canonical textbook continuum-QG route are now promoted | `F06` |
 | historical inventories and stale strategy docs | frozen-out as authority | useful for capture, unsafe as publication authority | `F08` |
 

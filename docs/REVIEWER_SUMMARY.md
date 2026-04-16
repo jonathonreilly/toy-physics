@@ -134,6 +134,14 @@ Current quantitative statuses:
 
 1. DM flagship gate
 
+Outside the flagship spine, a curated neutrino boundary/support packet is now
+also live on `main`:
+
+- [NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md](NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md)
+
+It is useful for the atlas and later lane work, but it is not promoted as a
+flagship manuscript claim surface.
+
 ## Review Rule
 
 - If a result is not in the publication matrix, it is not package-captured.

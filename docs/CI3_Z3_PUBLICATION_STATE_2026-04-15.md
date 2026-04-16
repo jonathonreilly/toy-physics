@@ -209,6 +209,14 @@ The remaining live paper gates are:
 
 1. DM flagship gate
 
+Outside the flagship paper core, a live partial neutrino boundary/support
+packet is now also on `main`:
+
+- [NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md](NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md)
+
+That packet is atlas-worthy and repo-live, but it is not promoted as a
+flagship manuscript lane.
+
 Those are the only live flagship gates. Everything else in the package should
 now be legible as either retained, bounded, or explicitly frozen-out.
 

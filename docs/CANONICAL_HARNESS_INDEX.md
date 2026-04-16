@@ -33,6 +33,12 @@ Use this file to find the current canonical note/runner pair on `main`.
 | bounded CKM neutron-EDM lane | [CKM_NEUTRON_EDM_BOUND_NOTE.md](CKM_NEUTRON_EDM_BOUND_NOTE.md) | `frontier_ckm_neutron_edm_bound.py` |
 | bounded down-type mass-ratio CKM-dual lane | [DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md](DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md), [CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md](CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md) | `frontier_mass_ratio_ckm_dual.py`, `frontier_ckm_five_sixths_bridge_support.py` |
 
+## Live Science Outside Flagship Core
+
+| lane | authority | primary runner |
+|---|---|---|
+| retained neutrino boundary/support packet | [NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md](NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md), [NEUTRINO_SOLE_AXIOM_FULL_CLOSURE_BOUNDARY_NOTE.md](NEUTRINO_SOLE_AXIOM_FULL_CLOSURE_BOUNDARY_NOTE.md), [NEUTRINO_MAJORANA_LOWER_LEVEL_PAIRING_NOGO_NOTE.md](NEUTRINO_MAJORANA_LOWER_LEVEL_PAIRING_NOGO_NOTE.md) | `frontier_pmns_lower_level_end_to_end_closure.py`, `frontier_pmns_oriented_cycle_channel_value_law.py`, `frontier_pmns_current_bank_value_selection_nogo.py`, `frontier_neutrino_majorana_lower_level_pairing_nogo.py`, `frontier_neutrino_sole_axiom_full_closure_boundary.py` |
+
 ## Remaining Live Gates
 
 | lane | authority | primary runner |
