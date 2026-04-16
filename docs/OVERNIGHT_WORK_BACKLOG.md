@@ -509,18 +509,21 @@ remaining testable and review-safe.
      - the compact `top-3` repeated-update source object is now a real bounded
        positive on the exact `h = 0.25` family
      - the bottleneck is no longer source-object shrinkage alone
-     - it is now detector/readout localization and inertial-response closure
+     - it is now readout-dependent transfer and full inertial-response closure
    - Deliverables:
-     - one detector/readout localization or inertial-response probe on top of
-       the compact repeated-update object
-     - or one bounded negative strong enough to freeze the compact repeated-
-       update object as the real limit on this family
+     - one small readout-boundary or blended-readout probe on top of the
+       compact repeated-update object
+     - or one bounded negative strong enough to freeze the compact-object
+       response lane as the real limit on this family
    - New update:
      - a dynamical adaptive readout now preserves `TOWARD` and near-linear
        `F~M` while shrinking support materially
      - fixed windows/tapers remain closed
-     - the live question is now whether a stronger adaptive readout can turn
-       that bridge into a real closure
+     - the new inertial probe now says the transferable `top3` object carries a
+       stable weak-field response too, but the broad and adaptive readouts miss
+       on complementary nearby rows
+     - the live question is now whether one retained readout architecture can
+       cover both sides of that split
 
 3. **Geometry-transfer discriminator / generated-family recovery**
    - Best upside:
