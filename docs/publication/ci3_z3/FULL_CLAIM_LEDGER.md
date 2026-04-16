@@ -133,6 +133,7 @@ external reviewer will ask about them whether or not they are retained.
 | Quantity / lane | Current decision | Why not promoted | Primary authority | Matrix / freeze reference |
 |---|---|---|---|---|
 | CKM closure package | closed promoted quantitative package | atlas/axiom CKM package is now carried by canonical CMT `\alpha_s(v)` as the quantitative coupling input, exact atlas counts, exact `1/6` projector, exact bilinear tensor carrier `K_R`, exact `Z_3` source, and exact Schur cascade; no quark masses or fitted CKM observables enter the derivation, and older bounded Cabibbo/NNI/Jarlskog notes are superseded as authority | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) | matrix row `CKM closure package`, n/a |
+| Down-type mass-ratio CKM-dual lane | bounded secondary flavor-mass lane | promoted CKM closure plus canonical `\alpha_s(v)` and exact SU(3) constants already give a clean down-type flavor-mass extraction without observed-mass inputs, but the lane still depends on the GST bridge and the bounded `5/6` mass-ratio bridge, and the same-scale interpretation of `m_s/m_b` remains open | [DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md](../../DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md) | matrix row `Down-type mass-ratio CKM-dual lane` |
 
 ### Higgs and individual companion lanes
 

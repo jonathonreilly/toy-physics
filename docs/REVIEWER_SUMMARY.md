@@ -123,8 +123,8 @@ Current quantitative statuses:
 - promoted CKM atlas/axiom closure package, with older Cabibbo / NNI / partial Jarlskog notes retained only as route history
 - cosmology companions
 - bounded secondary predictions already on `main`, including proton lifetime,
-  CKM neutron EDM, vacuum critical stability, benchmark gravitational
-  decoherence, and monopole mass
+  CKM neutron EDM, down-type flavor-mass CKM-dual ratios, vacuum critical
+  stability, benchmark gravitational decoherence, and monopole mass
 
 ## Open Gates
 

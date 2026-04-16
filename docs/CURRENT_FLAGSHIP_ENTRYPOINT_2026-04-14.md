@@ -59,8 +59,9 @@ Fast reviewer path after this page:
   derived-with-explicit-systematic Yukawa/top, and
   derived-with-inherited-explicit-systematic Higgs/vacuum
 - bounded prediction surface:
-  proton lifetime, CKM neutron EDM, vacuum critical stability, benchmark
-  gravitational decoherence, and bounded cosmology rows
+  proton lifetime, CKM neutron EDM, down-type flavor-mass CKM-dual ratios,
+  vacuum critical stability, benchmark gravitational decoherence, and bounded
+  cosmology rows
 
 For the one-note gravity/gauge continuum positioning layer, use
 [CONTINUUM_IDENTIFICATION_NOTE.md](CONTINUUM_IDENTIFICATION_NOTE.md). The
@@ -76,8 +77,8 @@ packaging.
   (`Lambda`, `w = -1`, graviton mass) plus the remaining matter bridge behind
   present-day `Omega_Lambda`
 - bounded secondary predictions already on `main`, including proton lifetime,
-  CKM neutron EDM, vacuum critical stability, benchmark gravitational
-  decoherence, BH entropy, and monopole mass
+  CKM neutron EDM, down-type flavor-mass CKM-dual ratios, vacuum critical
+  stability, benchmark gravitational decoherence, BH entropy, and monopole mass
 
 ## Live Gate
 

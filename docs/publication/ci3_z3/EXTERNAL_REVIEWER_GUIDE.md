@@ -134,8 +134,8 @@ Current status from that stack:
 - older bounded CKM mass-basis / Cabibbo / partial Jarlskog route history
 - cosmology bounded family
 - bounded secondary predictions already on `main`, including proton lifetime,
-  CKM neutron EDM, vacuum critical stability, benchmark gravitational
-  decoherence, and monopole mass
+  CKM neutron EDM, down-type flavor-mass CKM-dual ratios, vacuum critical
+  stability, benchmark gravitational decoherence, and monopole mass
 
 ## What Is Still Open
 

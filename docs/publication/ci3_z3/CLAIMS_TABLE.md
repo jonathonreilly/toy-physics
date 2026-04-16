@@ -102,6 +102,7 @@ cleanly or closed.
 | proton lifetime | bounded companion prediction | arXiv companion only | [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md) |
 | vacuum critical stability | bounded companion prediction | arXiv companion only | [VACUUM_CRITICAL_STABILITY_NOTE.md](../../VACUUM_CRITICAL_STABILITY_NOTE.md) |
 | CKM neutron EDM bounded lane | bounded secondary prediction | arXiv appendix only | [CKM_NEUTRON_EDM_BOUND_NOTE.md](../../CKM_NEUTRON_EDM_BOUND_NOTE.md) |
+| down-type mass-ratio CKM-dual lane | bounded secondary flavor-mass prediction | bounded prediction section / arXiv appendix | [DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md](../../DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md) |
 | BH entropy / RT ratio | bounded companion | arXiv companion only | [BH_ENTROPY_DERIVED_NOTE.md](../../BH_ENTROPY_DERIVED_NOTE.md) |
 | gravitational decoherence | bounded companion | arXiv companion only | [GRAV_DECOHERENCE_DERIVED_NOTE.md](../../GRAV_DECOHERENCE_DERIVED_NOTE.md) |
 | magnetic monopole mass | bounded companion prediction | arXiv companion only | [MONOPOLE_DERIVED_NOTE.md](../../MONOPOLE_DERIVED_NOTE.md) |

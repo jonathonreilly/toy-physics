@@ -74,6 +74,15 @@ carried by the current package.
   - `d_n(CKM) ~ 8 x 10^-33 e cm`
   - authority:
     [CKM_NEUTRON_EDM_BOUND_NOTE.md](../../CKM_NEUTRON_EDM_BOUND_NOTE.md)
+- down-type flavor-mass CKM-dual lane:
+  - `m_d/m_s = 0.05165`
+  - `m_s/m_b = 0.02239`
+  - `m_d/m_b = 0.001156`
+  - current comparator: PDG mixed-scale down-type mass ratios
+  - qualifier:
+    same-scale interpretation of the `5/6` bridge remains open
+  - authority:
+    [DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md](../../DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md)
 - vacuum critical stability:
   - the current `lambda(M_Pl) = 0` route lands on the critical /
     non-metastable side of the usual Standard Model comparison surface

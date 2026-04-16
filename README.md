@@ -47,8 +47,9 @@ context, not part of the live reviewer path.
   derived-with-explicit-systematic Yukawa/top, and
   derived-with-inherited-explicit-systematic Higgs/vacuum
 - bounded prediction surface:
-  proton lifetime, CKM neutron EDM, vacuum critical stability, benchmark
-  gravitational decoherence, and bounded cosmology rows
+  proton lifetime, CKM neutron EDM, down-type flavor-mass CKM-dual ratios,
+  vacuum critical stability, benchmark gravitational decoherence, and bounded
+  cosmology rows
 - one live flagship gate:
   DM relic mapping
 

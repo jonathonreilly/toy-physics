@@ -229,9 +229,9 @@ section, but they are not yet retained closure:
 - cosmology companions such as `w = -1`, graviton mass, `Omega_Lambda`, `n_s`
 - older Higgs mass / Coleman-Weinberg route notes now superseded by the
   complete prediction chain
-- proton lifetime, vacuum-critical-stability, BH-entropy,
-  gravitational-decoherence, magnetic-monopole, and GW-echo companion
-  predictions
+- proton lifetime, vacuum-critical-stability, down-type flavor-mass CKM-dual
+  ratios, BH-entropy, gravitational-decoherence, magnetic-monopole, and
+  GW-echo companion predictions
 
 ## Frozen-out work families
 
@@ -263,6 +263,7 @@ scientifically relevant but not part of the flagship backbone:
 - electroweak hierarchy / `v` closure together with the promoted YT / EW /
   Higgs quantitative package
 - proton lifetime
+- down-type flavor-mass CKM-dual ratios
 - Lorentz-violation cubic fingerprint
 - BH entropy / RT ratio
 - gravitational decoherence

@@ -80,6 +80,10 @@ bridge layer beyond the exact structural core.
   - exact confinement theorem plus low-energy EFT bridge
 - CKM neutron EDM:
   - retained strong-CP closure package + promoted CKM package + EFT bridge
+- down-type CKM-dual mass ratios:
+  - promoted CKM closure + GST + bounded `5/6` mass-ratio bridge; no observed
+    masses as derivation inputs, but the same-scale interpretation of
+    `m_s/m_b` remains open
 - proton lifetime:
   - exact operator content + imported dimension-6 EFT decay-rate bridge
 - cosmology windows:
@@ -96,6 +100,7 @@ theorem core.
 - bounded secondary prediction surface:
   - proton lifetime
   - CKM neutron EDM
+  - down-type CKM-dual mass ratios
   - vacuum critical stability
   - benchmark gravitational decoherence
   - monopole mass
