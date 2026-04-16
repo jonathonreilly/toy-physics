@@ -20,21 +20,24 @@ Companion captions live in [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md).
   - one-generation closure
   - three-generation matter structure
 - source: manuscript synthesis, not a numerical runner
-- status: schematic needed
+- manuscript asset: [figure1_retained_backbone.svg](./figures/figure1_retained_backbone.svg)
+- status: landed in arXiv draft
 
 ### Figure 2. Graph-first `SU(3)` closure
 
 - purpose: show selector, weak axis, residual swap, and `3 ⊕ 1` split
 - source note: [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](../../GRAPH_FIRST_SU3_INTEGRATION_NOTE.md)
 - source runner: [frontier_graph_first_su3_integration.py](../../../scripts/frontier_graph_first_su3_integration.py)
-- status: data available, publication figure not yet drawn
+- manuscript asset: [figure2_graph_first_su3.svg](./figures/figure2_graph_first_su3.svg)
+- status: landed in arXiv draft
 
 ### Figure 3. Anomaly-forced `3+1`
 
 - purpose: show the closure chain from left-handed anomaly to single-clock `3+1`
 - source note: [ANOMALY_FORCES_TIME_THEOREM.md](../../ANOMALY_FORCES_TIME_THEOREM.md)
 - source runner: [frontier_anomaly_forces_time.py](../../../scripts/frontier_anomaly_forces_time.py)
-- status: summary figure needed
+- manuscript asset: [figure3_anomaly_forced_3plus1.svg](./figures/figure3_anomaly_forced_3plus1.svg)
+- status: landed in arXiv draft
 
 ### Figure 4. Three-generation matter structure
 
@@ -44,7 +47,8 @@ Companion captions live in [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md).
   - [frontier_generation_fermi_point.py](../../../scripts/frontier_generation_fermi_point.py)
   - [frontier_generation_rooting_undefined.py](../../../scripts/frontier_generation_rooting_undefined.py)
   - [frontier_generation_axiom_boundary.py](../../../scripts/frontier_generation_axiom_boundary.py)
-- status: concept figure needed; do not use old overclaiming hierarchy plots
+- manuscript asset: [figure4_three_generation_structure.svg](./figures/figure4_three_generation_structure.svg)
+- status: landed in arXiv draft
 
 ### Extended Data candidate. Weak-field gravity corollaries plus exact `I_3 = 0` and CPT
 

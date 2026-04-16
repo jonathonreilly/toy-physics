@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Graph-first SU(3) closure</title>
+  <desc id="desc">Schematic of the graph-first structural SU(3) closure: cube-shift graph, selector, weak axis, residual swap, and 3 plus 1 split.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2a5b6f"/>
+    </marker>
+    <style>
+      .bg { fill: #f8f6f1; }
+      .title { font: 700 30px Georgia, serif; fill: #1f2a44; }
+      .label { font: 600 20px Helvetica, Arial, sans-serif; fill: #1f2a44; }
+      .body { font: 16px Helvetica, Arial, sans-serif; fill: #243447; }
+      .axis { stroke: #2a5b6f; stroke-width: 5; fill: none; }
+      .weak { stroke: #c45b3c; }
+      .node { fill: #ffffff; stroke: #2a5b6f; stroke-width: 2; }
+      .box { fill: #e8f1f4; stroke: #2a5b6f; stroke-width: 2.5; rx: 16; ry: 16; }
+      .box2 { fill: #f2ead8; stroke: #2a5b6f; stroke-width: 2.5; rx: 16; ry: 16; }
+      .arrow { stroke: #2a5b6f; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .dash { stroke-dasharray: 8 6; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="760"/>
+  <text class="title" x="600" y="50" text-anchor="middle">Figure 2. Graph-first Structural SU(3) Closure</text>
+
+  <text class="label" x="205" y="110" text-anchor="middle">Canonical cube-shift graph</text>
+  <circle class="node" cx="135" cy="170" r="16"/>
+  <circle class="node" cx="275" cy="170" r="16"/>
+  <circle class="node" cx="135" cy="310" r="16"/>
+  <circle class="node" cx="275" cy="310" r="16"/>
+  <circle class="node" cx="185" cy="220" r="16"/>
+  <circle class="node" cx="325" cy="220" r="16"/>
+  <circle class="node" cx="185" cy="360" r="16"/>
+  <circle class="node" cx="325" cy="360" r="16"/>
+
+  <line class="axis" x1="135" y1="170" x2="275" y2="170"/>
+  <line class="axis" x1="135" y1="310" x2="275" y2="310"/>
+  <line class="axis" x1="185" y1="220" x2="325" y2="220"/>
+  <line class="axis" x1="185" y1="360" x2="325" y2="360"/>
+  <line class="axis" x1="135" y1="170" x2="135" y2="310"/>
+  <line class="axis" x1="275" y1="170" x2="275" y2="310"/>
+  <line class="axis" x1="185" y1="220" x2="185" y2="360"/>
+  <line class="axis" x1="325" y1="220" x2="325" y2="360"/>
+  <line class="axis" x1="135" y1="170" x2="185" y2="220"/>
+  <line class="axis" x1="275" y1="170" x2="325" y2="220"/>
+  <line class="axis" x1="135" y1="310" x2="185" y2="360"/>
+  <line class="axis" x1="275" y1="310" x2="325" y2="360"/>
+
+  <line class="axis weak" x1="100" y1="390" x2="360" y2="120"/>
+  <text class="body" x="250" y="135">selector fixes the weak axis</text>
+
+  <line class="arrow" x1="385" y1="245" x2="505" y2="245"/>
+
+  <rect class="box" x="520" y="150" width="220" height="190"/>
+  <text class="label" x="630" y="190" text-anchor="middle">Selected surface</text>
+  <text class="body" x="630" y="225" text-anchor="middle">graph fibers carry weak su(2)</text>
+  <text class="body" x="630" y="255" text-anchor="middle">residual swap acts on the two</text>
+  <text class="body" x="630" y="282" text-anchor="middle">non-selected axes</text>
+  <text class="body" x="630" y="312" text-anchor="middle">color statement is graph-first,</text>
+  <text class="body" x="630" y="339" text-anchor="middle">not commutant-only</text>
+
+  <line class="arrow" x1="740" y1="245" x2="870" y2="245"/>
+
+  <rect class="box2" x="885" y="120" width="240" height="250"/>
+  <text class="label" x="1005" y="165" text-anchor="middle">Residual algebra</text>
+  <text class="body" x="1005" y="205" text-anchor="middle">remaining-axis swap</text>
+  <text class="body" x="1005" y="232" text-anchor="middle">produces the 3 + 1 split</text>
+  <text class="body" x="1005" y="275" text-anchor="middle">joint commutant carries</text>
+  <text class="body" x="1005" y="305" text-anchor="middle">su(3) + u(1)</text>
+  <text class="body" x="1005" y="338" text-anchor="middle">selector unique up to graph</text>
+  <text class="body" x="1005" y="365" text-anchor="middle">automorphism</text>
+
+  <rect class="box" x="275" y="500" width="650" height="150"/>
+  <text class="label" x="600" y="540" text-anchor="middle">Safe paper claim</text>
+  <text class="body" x="600" y="575" text-anchor="middle">A selector on the cube-shift graph fixes a weak axis; the selected surface carries weak su(2),</text>
+  <text class="body" x="600" y="603" text-anchor="middle">the residual swap yields the 3 + 1 split, and the joint commutant carries structural su(3) + u(1).</text>
+</svg>

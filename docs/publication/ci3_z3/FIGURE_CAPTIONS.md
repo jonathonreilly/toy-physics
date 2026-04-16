@@ -1,7 +1,9 @@
 # Figure Captions
 
-These are first-pass publication captions aligned to
+These are publication captions aligned to
 [FIGURE_PLAN.md](./FIGURE_PLAN.md). They are intentionally claim-disciplined.
+The four core arXiv schematics now exist as live manuscript assets in
+[`./figures/`](./figures/).
 
 ## Core arXiv draft
 
