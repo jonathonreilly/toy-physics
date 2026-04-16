@@ -112,6 +112,10 @@ finite-`T` theory supplies both:
    `n_eff = 4`
 2. a screening penalty smaller than about `5%` to `6%`
 
+The current Higgs/CW surface already supplies a same-surface candidate for
+that `n_eff = 4` completion. It is recorded in
+[BARYOGENESIS_HIGGS_DOUBLET_MULTIPLICITY_NOTE.md](./BARYOGENESIS_HIGGS_DOUBLET_MULTIPLICITY_NOTE.md).
+
 ## Why this matters
 
 This is a substantial narrowing of the baryogenesis lane.
@@ -161,6 +165,7 @@ This note does **not** yet determine:
 
 - [frontier_baryogenesis_selector_multiplicity_screening.py](./../scripts/frontier_baryogenesis_selector_multiplicity_screening.py)
 - [BARYOGENESIS_SELECTOR_PORTAL_NOTE.md](./BARYOGENESIS_SELECTOR_PORTAL_NOTE.md)
+- [BARYOGENESIS_HIGGS_DOUBLET_MULTIPLICITY_NOTE.md](./BARYOGENESIS_HIGGS_DOUBLET_MULTIPLICITY_NOTE.md)
 
 Current runner state:
 

@@ -47,6 +47,9 @@ The graph-first selector derivation of the relevant portal scale is recorded in
 [BARYOGENESIS_SELECTOR_PORTAL_NOTE.md](./BARYOGENESIS_SELECTOR_PORTAL_NOTE.md).
 The resulting multiplicity / screening boundary is recorded in
 [BARYOGENESIS_SELECTOR_MULTIPLICITY_SCREENING_NOTE.md](./BARYOGENESIS_SELECTOR_MULTIPLICITY_SCREENING_NOTE.md).
+The same-surface Higgs-doublet completion of the required `n=4` scalar
+multiplicity is recorded in
+[BARYOGENESIS_HIGGS_DOUBLET_MULTIPLICITY_NOTE.md](./BARYOGENESIS_HIGGS_DOUBLET_MULTIPLICITY_NOTE.md).
 
 It does **not** claim a first-principles computation of the electroweak phase
 transition, sphaleron rate, or baryon transport coefficients.
@@ -109,8 +112,10 @@ The scalar-side part of that object is now much sharper than before:
   `kappa_sel = 6 lambda_H`
 - the exact real selector manifold by itself gives only two orthogonal scalar
   modes and therefore only about half the required cubic enhancement
-- any surviving old taste-scalar route must therefore realize an additional
-  effective doubling mechanism with screening milder than about `5%` to `6%`
+- the current Higgs/CW surface already supplies a same-surface `n=4`
+  Higgs-doublet completion (`1` radial Higgs + `3` Goldstones)
+- so the remaining scalar-side open factor is no longer multiplicity itself,
+  but whether screening stays milder than about `5%` to `6%`
 
 It is cleaner to say:
 
@@ -195,11 +200,13 @@ This note does **not** claim:
 - [BARYOGENESIS_TASTE_SCALAR_CUBIC_TARGET_NOTE.md](./BARYOGENESIS_TASTE_SCALAR_CUBIC_TARGET_NOTE.md)
 - [BARYOGENESIS_SELECTOR_PORTAL_NOTE.md](./BARYOGENESIS_SELECTOR_PORTAL_NOTE.md)
 - [BARYOGENESIS_SELECTOR_MULTIPLICITY_SCREENING_NOTE.md](./BARYOGENESIS_SELECTOR_MULTIPLICITY_SCREENING_NOTE.md)
+- [BARYOGENESIS_HIGGS_DOUBLET_MULTIPLICITY_NOTE.md](./BARYOGENESIS_HIGGS_DOUBLET_MULTIPLICITY_NOTE.md)
 - [frontier_baryogenesis_ewpt_washout_target.py](./../scripts/frontier_baryogenesis_ewpt_washout_target.py)
 - [frontier_baryogenesis_finite_t_reduction.py](./../scripts/frontier_baryogenesis_finite_t_reduction.py)
 - [frontier_baryogenesis_taste_scalar_cubic_target.py](./../scripts/frontier_baryogenesis_taste_scalar_cubic_target.py)
 - [frontier_baryogenesis_selector_portal.py](./../scripts/frontier_baryogenesis_selector_portal.py)
 - [frontier_baryogenesis_selector_multiplicity_screening.py](./../scripts/frontier_baryogenesis_selector_multiplicity_screening.py)
+- [frontier_baryogenesis_higgs_doublet_multiplicity.py](./../scripts/frontier_baryogenesis_higgs_doublet_multiplicity.py)
 - [frontier_omega_lambda_derivation.py](./../scripts/frontier_omega_lambda_derivation.py)
 
 Current runner state:
@@ -210,4 +217,5 @@ Current runner state:
 - `frontier_baryogenesis_taste_scalar_cubic_target.py`: expected `PASS>0`, `FAIL=0`
 - `frontier_baryogenesis_selector_portal.py`: expected `PASS>0`, `FAIL=0`
 - `frontier_baryogenesis_selector_multiplicity_screening.py`: expected `PASS>0`, `FAIL=0`
+- `frontier_baryogenesis_higgs_doublet_multiplicity.py`: expected `PASS>0`, `FAIL=0`
 - `frontier_omega_lambda_derivation.py`: existing bounded cosmology companion
