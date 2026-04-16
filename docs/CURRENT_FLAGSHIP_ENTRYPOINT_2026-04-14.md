@@ -83,6 +83,8 @@ packaging.
   [BARYOGENESIS_TASTE_SCALAR_CUBIC_TARGET_NOTE.md](BARYOGENESIS_TASTE_SCALAR_CUBIC_TARGET_NOTE.md)
   and the same-surface selector portal relation recorded in
   [BARYOGENESIS_SELECTOR_PORTAL_NOTE.md](BARYOGENESIS_SELECTOR_PORTAL_NOTE.md)
+  and its multiplicity / screening boundary recorded in
+  [BARYOGENESIS_SELECTOR_MULTIPLICITY_SCREENING_NOTE.md](BARYOGENESIS_SELECTOR_MULTIPLICITY_SCREENING_NOTE.md)
 - bounded secondary predictions already on `main`, including proton lifetime,
   CKM neutron EDM, vacuum critical stability, benchmark gravitational
   decoherence, BH entropy, and monopole mass

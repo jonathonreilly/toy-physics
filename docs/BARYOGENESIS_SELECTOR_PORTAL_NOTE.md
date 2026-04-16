@@ -139,6 +139,10 @@ Even better, the slight overshoot is in the correct direction:
 So the exact selector portal is not too small. It is slightly stronger than
 the unscreened target, which is the favorable side of the comparison.
 
+The exact multiplicity / screening consequence of that statement is now
+recorded in
+[BARYOGENESIS_SELECTOR_MULTIPLICITY_SCREENING_NOTE.md](./BARYOGENESIS_SELECTOR_MULTIPLICITY_SCREENING_NOTE.md).
+
 ## Conditional minimal-doublet interpretation
 
 The selector note does **not** yet prove the multiplicity of the finite-`T`
@@ -190,6 +194,7 @@ So the open baryogenesis question is now narrower:
 - [frontier_baryogenesis_selector_portal.py](./../scripts/frontier_baryogenesis_selector_portal.py)
 - [BARYOGENESIS_TASTE_SCALAR_CUBIC_TARGET_NOTE.md](./BARYOGENESIS_TASTE_SCALAR_CUBIC_TARGET_NOTE.md)
 - [GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md](./GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md)
+- [BARYOGENESIS_SELECTOR_MULTIPLICITY_SCREENING_NOTE.md](./BARYOGENESIS_SELECTOR_MULTIPLICITY_SCREENING_NOTE.md)
 
 Current runner state:
 
