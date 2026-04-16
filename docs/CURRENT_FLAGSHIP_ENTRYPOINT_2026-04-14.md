@@ -101,6 +101,9 @@ packaging.
   and the transition-stage reduction to one scalar thermal history lane
   recorded in
   [BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md](BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md)
+  and the transport-stage reduction to one left-handed active density lane
+  recorded in
+  [BARYOGENESIS_KTR_SINGLE_LEFT_HANDED_LANE_NOTE.md](BARYOGENESIS_KTR_SINGLE_LEFT_HANDED_LANE_NOTE.md)
   and the sphaleron-survival-stage reduction to one active charge lane
   recorded in
   [BARYOGENESIS_KSPH_SINGLE_ACTIVE_LANE_NOTE.md](BARYOGENESIS_KSPH_SINGLE_ACTIVE_LANE_NOTE.md)

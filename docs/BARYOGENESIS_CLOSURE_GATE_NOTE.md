@@ -67,6 +67,9 @@ The resulting exact electroweak-stage decomposition
 The transition-stage reduction to one exact scalar thermal history lane is
 recorded in
 [BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md](./BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md).
+The transport-stage reduction to one exact left-handed electroweak-active
+density lane is recorded in
+[BARYOGENESIS_KTR_SINGLE_LEFT_HANDED_LANE_NOTE.md](./BARYOGENESIS_KTR_SINGLE_LEFT_HANDED_LANE_NOTE.md).
 The sphaleron-survival-stage reduction to one exact washout-active charge lane
 is recorded in
 [BARYOGENESIS_KSPH_SINGLE_ACTIVE_LANE_NOTE.md](./BARYOGENESIS_KSPH_SINGLE_ACTIVE_LANE_NOTE.md).
@@ -159,6 +162,9 @@ The scalar-side part of that object is now much sharper than before:
 - the transition-history stage `K_EWPT` itself now reduces to one real
   functional of one unique scalar thermal order-parameter history on the
   retained APBC/Higgs lane
+- the transport stage `K_tr` likewise reduces to one real functional of one
+  unique left-handed electroweak-active density history after quotienting out
+  the exact right-handed singlet spectator sector
 - the sphaleron-survival stage `K_sph` likewise reduces to one real
   functional of one unique washout-active `B+L` charge history lane after
   quotienting out the exact protected `B-L` spectator direction
@@ -255,6 +261,7 @@ This note does **not** claim:
 - [BARYOGENESIS_JARLSKOG_FACTORIZATION_NOTE.md](./BARYOGENESIS_JARLSKOG_FACTORIZATION_NOTE.md)
 - [BARYOGENESIS_KNP_STAGE_DECOMPOSITION_NOTE.md](./BARYOGENESIS_KNP_STAGE_DECOMPOSITION_NOTE.md)
 - [BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md](./BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md)
+- [BARYOGENESIS_KTR_SINGLE_LEFT_HANDED_LANE_NOTE.md](./BARYOGENESIS_KTR_SINGLE_LEFT_HANDED_LANE_NOTE.md)
 - [BARYOGENESIS_KSPH_SINGLE_ACTIVE_LANE_NOTE.md](./BARYOGENESIS_KSPH_SINGLE_ACTIVE_LANE_NOTE.md)
 - [BARYOGENESIS_THERMAL_ORDER_PARAMETER_UNIQUENESS_NOTE.md](./BARYOGENESIS_THERMAL_ORDER_PARAMETER_UNIQUENESS_NOTE.md)
 - [frontier_baryogenesis_ewpt_washout_target.py](./../scripts/frontier_baryogenesis_ewpt_washout_target.py)
@@ -266,6 +273,7 @@ This note does **not** claim:
 - [frontier_baryogenesis_old_route_surface_no_go.py](./../scripts/frontier_baryogenesis_old_route_surface_no_go.py)
 - [frontier_baryogenesis_knp_stage_decomposition.py](./../scripts/frontier_baryogenesis_knp_stage_decomposition.py)
 - [frontier_baryogenesis_kewpt_single_order_parameter.py](./../scripts/frontier_baryogenesis_kewpt_single_order_parameter.py)
+- [frontier_baryogenesis_ktr_single_left_handed_lane.py](./../scripts/frontier_baryogenesis_ktr_single_left_handed_lane.py)
 - [frontier_baryogenesis_ksph_single_active_lane.py](./../scripts/frontier_baryogenesis_ksph_single_active_lane.py)
 - [frontier_baryogenesis_thermal_order_parameter_uniqueness.py](./../scripts/frontier_baryogenesis_thermal_order_parameter_uniqueness.py)
 - [frontier_omega_lambda_derivation.py](./../scripts/frontier_omega_lambda_derivation.py)
@@ -282,6 +290,8 @@ Current runner state:
 - `frontier_baryogenesis_knp_stage_decomposition.py`: expected `PASS>0`,
   `FAIL=0`
 - `frontier_baryogenesis_kewpt_single_order_parameter.py`: expected `PASS>0`,
+  `FAIL=0`
+- `frontier_baryogenesis_ktr_single_left_handed_lane.py`: expected `PASS>0`,
   `FAIL=0`
 - `frontier_baryogenesis_ksph_single_active_lane.py`: expected `PASS>0`,
   `FAIL=0`
