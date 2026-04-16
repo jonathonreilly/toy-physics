@@ -171,9 +171,11 @@ The scalar-side part of that object is now much sharper than before:
 - the sphaleron-survival stage `K_sph` likewise reduces to one real
   functional of one unique washout-active `B+L` charge history lane after
   quotienting out the exact protected `B-L` spectator direction
-- because those three lanes form the retained causal chain
-  `χ(τ) -> ℓ_L(τ) -> q_+(τ)`, the full electroweak object now reduces further
-  to one composite functional `K_NP = F_NP[χ(τ)]`
+- because those three lanes form the retained operator-history chain
+  `χ(τ) -> ρ_χ(τ) -> ℓ_L(τ) -> Q_{ℓ_L}(τ) -> q_+(τ)`, with exact downstream
+  quotient extractors `ℓ_L(τ) = Tr(P_L ρ_χ(τ)) / 8` and
+  `q_+(τ) = Tr(Q_{ℓ_L}(τ)) / 4`, the full electroweak object now reduces
+  further to one composite functional `K_NP = F_NP[χ(τ)]`
 - the remaining scalar-side question is therefore not just screening by
   itself, but whether there is additional same-surface bosonic structure or
   genuinely different finite-`T` dynamics beyond the old route-history ansatz

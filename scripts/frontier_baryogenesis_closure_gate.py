@@ -277,6 +277,14 @@ def part3_eta_bridge(j: float) -> None:
         "`K_NP = F_NP[χ(τ)]`" in comp_note,
     )
     check(
+        "single-history composition note records the exact left-handed quotient extractor",
+        "`Π_L[ρ](τ) := Tr(P_L ρ(τ)) / 8 = ℓ_L(τ)`" in comp_note,
+    )
+    check(
+        "single-history composition note records the exact active-charge quotient extractor",
+        "`Π_+[Q](τ) := Tr(Q(τ)) / 4 = q_+(τ)`" in comp_note,
+    )
+    check(
         "closure-gate note points to the K_EWPT reduction note",
         "BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md" in baryo_note,
     )
@@ -295,7 +303,7 @@ def part3_eta_bridge(j: float) -> None:
 
     info(
         "open baryogenesis object",
-        "the exact coupled-history object J * F_NP[chi(tau)], equivalently the exact three-stage electroweak object K_EWPT * K_tr * K_sph, with each stage reduced to a retained one-lane functional",
+        "the exact coupled-history object J * F_NP[chi(tau)], equivalently the exact three-stage electroweak object K_EWPT * K_tr * K_sph, with exact downstream quotient extractors and only the response histories still open",
     )
     print()
     print("  Consequence:")

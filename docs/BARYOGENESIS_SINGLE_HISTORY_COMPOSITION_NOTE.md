@@ -1,7 +1,7 @@
 # Baryogenesis Single-History Composition Note
 
 **Date:** 2026-04-16
-**Status:** exact current-surface coupled-history reduction with bounded target on `main`
+**Status:** exact current-surface coupled-history reduction with explicit quotient extractors and bounded target on `main`
 **Script:** `scripts/frontier_baryogenesis_single_history_composition.py`
 
 ## Safe statement
@@ -16,19 +16,26 @@ causal chain of retained quotient surfaces,
 - `K_tr = F_tr[ℓ_L(τ)]`
 - `K_sph = F_sph[q_+(τ)]`
 
+and because the downstream active coordinates admit exact quotient extractors
+on their retained operator-history surfaces,
+
+- `Π_L[ρ](τ) := Tr(P_L ρ(τ)) / 8 = ℓ_L(τ)`
+- `Π_+[Q](τ) := Tr(Q(τ)) / 4 = q_+(τ)`
+
 the full nonperturbative electroweak object reduces exactly to one composite
 functional of one retained scalar history lane:
 
 `K_NP = F_NP[χ(τ)]`
 
-with
+with the exact quotient-extractor factorization
 
-`F_NP[χ] := F_EWPT[χ] * F_tr[T_L[χ]] * F_sph[T_+[T_L[χ]]]`
+- `T_L = Π_L ∘ R_L`
+- `T_+ = Π_+ ∘ R_+`
 
-for the exact one-lane pushforwards
+where the still-open response histories are
 
-- `T_L : χ -> ℓ_L`
-- `T_+ : ℓ_L -> q_+`.
+- `ρ_χ := R_L[χ]`
+- `Q_{ℓ_L} := R_+[Π_L[ρ_χ]]`.
 
 So the full baryogenesis bridge can be written as
 
@@ -61,23 +68,62 @@ The current package already fixes:
 
 5. the causal stage ordering
 
-   `χ(τ) -> ℓ_L(τ) -> q_+(τ)`.
+   `χ(τ) -> ρ_χ(τ) -> ℓ_L(τ) -> Q_{ℓ_L}(τ) -> q_+(τ)`.
 
 Those ingredients are enough to collapse the full open electroweak object to
 one composite functional on the scalar source lane.
+
+## Exact quotient extractors
+
+The transport-stage reduction already fixes the chirality-resolved operator
+history surface:
+
+`ρ_χ(τ) = ℓ_L(τ) P_L + r_R(τ) P_R`.
+
+Since
+
+- `P_L P_R = 0`
+- `Tr P_L = 8`
+
+the active left-handed lane is extracted exactly by
+
+`Π_L[ρ](τ) := Tr(P_L ρ(τ)) / Tr P_L = Tr(P_L ρ(τ)) / 8 = ℓ_L(τ)`.
+
+So the exact downstream map from the response history to the retained
+left-handed lane is
+
+`T_L = Π_L ∘ R_L`.
+
+Likewise the sphaleron-stage reduction already fixes the charge-plane operator
+history surface:
+
+`Q_{ℓ_L}(τ) = q_+(τ) (B+L) + q_-(τ) (B-L)`.
+
+Since
+
+- `Tr(B+L) = 4`
+- `Tr(B-L) = 0`
+
+the washout-active lane is extracted exactly by
+
+`Π_+[Q](τ) := Tr(Q(τ)) / Tr(B+L) = Tr(Q(τ)) / 4 = q_+(τ)`.
+
+So the exact downstream map from the charge-plane response history to the
+retained active washout lane is
+
+`T_+ = Π_+ ∘ R_+`.
 
 ## Exact coupled-history composition
 
 The retained one-lane stage notes already say:
 
-- the transition history produces the left-handed active source lane
-- the transport stage acts on that left-handed active lane
-- the sphaleron-survival stage acts on the resulting washout-active charge lane
-
-So there are exact one-lane pushforwards
-
-- `T_L[χ] = ℓ_L`
-- `T_+[ℓ_L] = q_+`.
+- the transition history produces a chirality-resolved response history
+  `ρ_χ`
+- the transport stage acts only on its exact active quotient coordinate
+  `Π_L[ρ_χ] = ℓ_L`
+- the downstream charge-plane history is `Q_{ℓ_L}`
+- the sphaleron-survival stage acts only on its exact active quotient
+  coordinate `Π_+[Q_{ℓ_L}] = q_+`.
 
 Substituting the three stage reductions into
 
@@ -85,11 +131,11 @@ Substituting the three stage reductions into
 
 gives immediately
 
-`K_NP = F_EWPT[χ] * F_tr[T_L[χ]] * F_sph[T_+[T_L[χ]]]`.
+`K_NP = F_EWPT[χ] * F_tr[Π_L[ρ_χ]] * F_sph[Π_+[Q_{ℓ_L}]]`.
 
 Define the composite one-lane functional
 
-`F_NP[χ] := F_EWPT[χ] * F_tr[T_L[χ]] * F_sph[T_+[T_L[χ]]]`.
+`F_NP[χ] := F_EWPT[χ] * F_tr[Π_L[ρ_χ]] * F_sph[Π_+[Q_{ℓ_L}]]`.
 
 Then exactly on the current retained surface
 
@@ -118,7 +164,7 @@ each on its own one-lane surface.
 This note removes the remaining ambiguity that those functionals might still
 be independent open objects. They are not independent on the retained current
 surface, because the downstream lanes are exact quotient images of the
-upstream one.
+upstream operator histories.
 
 So the whole open electroweak baryogenesis object is one composite functional
 on the single retained scalar source history lane.
@@ -152,13 +198,16 @@ Answer:
 - one composite one-lane functional
 - `K_NP = F_NP[χ(τ)]`
 - hence `η = J * F_NP[χ(τ)]`
+- with exact downstream active-coordinate extractors
+  `Π_L[ρ](τ) = Tr(P_L ρ(τ)) / 8`
+  and `Π_+[Q](τ) = Tr(Q(τ)) / 4`
 
 ## What remains open
 
 This note does **not** derive:
 
 - the scalar history `χ(τ)`
-- the pushforwards `T_L` and `T_+` in explicit first-principles form
+- the response histories `R_L` and `R_+` in explicit first-principles form
 - the composite functional `F_NP`
 - the final first-principles `η`
 

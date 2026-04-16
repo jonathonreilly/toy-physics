@@ -2,22 +2,20 @@
 """
 Baryogenesis single-history composition on the current main package surface.
 
-This runner packages the next exact reduction after the three stage-specific
-one-lane theorems:
+This runner replaces the earlier illustrative pushforward maps with the exact
+current-surface quotient extractors that are already fixed upstream:
 
-  K_EWPT = F_EWPT[chi(tau)]
-  K_tr   = F_tr[ell_L(tau)]
-  K_sph  = F_sph[q_+(tau)]
+  ell_L(tau) = Tr(P_L rho(tau)) / 8
+  q_+(tau)   = Tr(Q(tau)) / 4
 
-Because the stages form a causal one-lane chain chi -> ell_L -> q_+, the full
-electroweak baryogenesis object reduces to one composite one-lane functional:
-
-  K_NP = F_NP[chi(tau)].
+So the coupled-history reduction is now phrased in the strongest honest way:
+the downstream active coordinates are extracted exactly from the stage-generated
+operator histories, while the response maps that generate those operator
+histories remain open.
 """
 
 from __future__ import annotations
 
-import math
 from pathlib import Path
 
 import numpy as np
@@ -32,6 +30,11 @@ FAIL = 0
 ETA_OBS = 6.12e-10
 J_PROMOTED = 3.330901e-5
 K_NP_TARGET = ETA_OBS / J_PROMOTED
+
+I2 = np.eye(2, dtype=complex)
+SX = np.array([[0, 1], [1, 0]], dtype=complex)
+SZ = np.array([[1, 0], [0, -1]], dtype=complex)
+TASTE_STATES = [(a, b, c) for a in (0, 1) for b in (0, 1) for c in (0, 1)]
 
 
 def check(name: str, ok: bool, detail: str = "") -> None:
@@ -53,53 +56,32 @@ def info(name: str, detail: str = "") -> None:
         print(f"         {detail}")
 
 
-def T_L(chi: np.ndarray) -> np.ndarray:
-    # Representative one-lane pushforward from scalar source history to
-    # left-handed active-density history. The theorem needs only that it maps
-    # scalar history to scalar history, not this particular form.
-    chi = np.asarray(chi, dtype=float)
-    return np.cumsum(chi) / np.max(np.cumsum(chi))
+def kron4(a: np.ndarray, b: np.ndarray, c: np.ndarray, d: np.ndarray) -> np.ndarray:
+    return np.kron(a, np.kron(b, np.kron(c, d)))
 
 
-def T_plus(ell_l: np.ndarray) -> np.ndarray:
-    # Representative one-lane pushforward from left-handed active-density
-    # history to washout-active charge history.
-    ell_l = np.asarray(ell_l, dtype=float)
-    rolled = np.roll(ell_l, 1)
-    return 0.5 * (ell_l + rolled)
+def hamming_weight(state: tuple[int, int, int]) -> int:
+    return sum(state)
 
 
-def F_EWPT(chi: np.ndarray) -> float:
-    return float(np.mean(np.maximum(chi, 0.0)) / 20.0)
+def baryon_and_lepton_operators() -> tuple[np.ndarray, np.ndarray]:
+    baryon = np.zeros((8, 8), dtype=complex)
+    lepton = np.zeros((8, 8), dtype=complex)
+    for idx, state in enumerate(TASTE_STATES):
+        hw = hamming_weight(state)
+        if hw in (1, 2):
+            baryon[idx, idx] = 1.0 / 3.0
+        else:
+            lepton[idx, idx] = 1.0
+    return baryon, lepton
 
 
-def F_tr(ell_l: np.ndarray) -> float:
-    ell_l = np.asarray(ell_l, dtype=float)
-    return float(np.min(ell_l) / np.max(ell_l))
+def left_active_coordinate(rho: np.ndarray, p_l: np.ndarray) -> float:
+    return float(np.trace(p_l @ rho).real / np.trace(p_l).real)
 
 
-def F_sph(q_plus: np.ndarray) -> float:
-    q_plus = np.asarray(q_plus, dtype=float)
-    mean_q = float(np.mean(q_plus))
-    return mean_q / (1.0 + mean_q)
-
-
-def F_tr_lifted(ell_l: np.ndarray, r_r: np.ndarray) -> float:
-    # Exact quotient idea: right-handed spectator data do not enter.
-    _ = np.asarray(r_r, dtype=float)
-    return F_tr(ell_l)
-
-
-def F_sph_lifted(q_plus: np.ndarray, q_minus: np.ndarray) -> float:
-    # Exact quotient idea: the protected spectator lane q_- does not enter.
-    _ = np.asarray(q_minus, dtype=float)
-    return F_sph(q_plus)
-
-
-def F_NP(chi: np.ndarray) -> float:
-    ell_l = T_L(chi)
-    q_plus = T_plus(ell_l)
-    return F_EWPT(chi) * F_tr(ell_l) * F_sph(q_plus)
+def active_charge_coordinate(q_op: np.ndarray, b_plus_l: np.ndarray) -> float:
+    return float(np.trace(q_op).real / np.trace(b_plus_l).real)
 
 
 def main() -> int:
@@ -108,9 +90,8 @@ def main() -> int:
     print("=" * 80)
     print()
     print("Question:")
-    print("  After the three one-lane stage reductions, is the open electroweak")
-    print("  baryogenesis object still three independent open functionals, or")
-    print("  one coupled-history functional on one scalar lane?")
+    print("  Can the current coupled-history reduction be stated with exact")
+    print("  operator extractors instead of illustrative placeholder maps?")
     print()
 
     print("=" * 80)
@@ -118,6 +99,9 @@ def main() -> int:
     print("=" * 80)
     print()
 
+    comp_note = (
+        DOCS / "BARYOGENESIS_SINGLE_HISTORY_COMPOSITION_NOTE.md"
+    ).read_text(encoding="utf-8")
     kewpt_note = (DOCS / "BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md").read_text(
         encoding="utf-8"
     )
@@ -127,9 +111,6 @@ def main() -> int:
     ksph_note = (DOCS / "BARYOGENESIS_KSPH_SINGLE_ACTIVE_LANE_NOTE.md").read_text(
         encoding="utf-8"
     )
-    comp_note = (
-        DOCS / "BARYOGENESIS_SINGLE_HISTORY_COMPOSITION_NOTE.md"
-    ).read_text(encoding="utf-8")
 
     check(
         "K_EWPT note records K_EWPT = F_EWPT[chi(tau)]",
@@ -144,121 +125,172 @@ def main() -> int:
         "`K_sph = F_sph[q_+(τ)]`" in ksph_note,
     )
     check(
-        "single-history composition note records K_NP = F_NP[chi(tau)]",
+        "single-history note records the exact left-handed quotient extractor",
+        "`Π_L[ρ](τ) := Tr(P_L ρ(τ)) / 8 = ℓ_L(τ)`" in comp_note,
+    )
+    check(
+        "single-history note records the exact active-charge quotient extractor",
+        "`Π_+[Q](τ) := Tr(Q(τ)) / 4 = q_+(τ)`" in comp_note,
+    )
+    check(
+        "single-history note records T_L = Pi_L o R_L",
+        "`T_L = Π_L ∘ R_L`" in comp_note,
+    )
+    check(
+        "single-history note records T_+ = Pi_+ o R_+",
+        "`T_+ = Π_+ ∘ R_+`" in comp_note,
+    )
+    check(
+        "single-history note still records K_NP = F_NP[chi(tau)]",
         "`K_NP = F_NP[χ(τ)]`" in comp_note,
     )
     check(
-        "single-history composition note records eta = J * F_NP[chi(tau)]",
+        "single-history note still records eta = J * F_NP[chi(tau)]",
         "`η = J * F_NP[χ(τ)]`" in comp_note,
     )
     info(
         "composition meaning",
-        "the stage-specific one-lane reductions now compose into one coupled-history reduction of the full open electroweak baryogenesis object",
+        "the exact content is now the quotient extraction of the downstream active coordinates; the stage response maps themselves remain open",
     )
     print()
 
     print("=" * 80)
-    print("PART 2: ONE-LANE COMPOSITION ALGEBRA")
+    print("PART 2: EXACT LEFT-HANDED QUOTIENT EXTRACTOR")
     print("=" * 80)
     print()
 
-    histories = [
-        np.array([1.0, 1.1, 0.9, 1.05, 1.0], dtype=float),
-        np.array([0.8, 1.0, 1.2, 1.1, 0.95], dtype=float),
-    ]
-    for idx, chi in enumerate(histories, start=1):
-        ell_l = T_L(chi)
-        q_plus = T_plus(ell_l)
-        stage_product = F_EWPT(chi) * F_tr(ell_l) * F_sph(q_plus)
-        composite = F_NP(chi)
-
-        check(
-            f"sample history {idx} keeps chi as a one-lane scalar history",
-            chi.ndim == 1,
-            f"len(chi) = {len(chi)}",
-        )
-        check(
-            f"sample history {idx} pushes forward to one left-handed lane",
-            ell_l.ndim == 1 and ell_l.shape == chi.shape,
-            f"len(ell_L) = {len(ell_l)}",
-        )
-        check(
-            f"sample history {idx} pushes forward to one active-charge lane",
-            q_plus.ndim == 1 and q_plus.shape == chi.shape,
-            f"len(q_+) = {len(q_plus)}",
-        )
-        check(
-            f"sample history {idx} composite one-lane functional matches the staged product",
-            abs(stage_product - composite) < 1e-15,
-            f"K_NP = {composite:.6e}",
-        )
-
-    info(
-        "algebraic consequence",
-        "once the downstream stage inputs are one-lane pushforwards of the upstream lane, the staged product is exactly one composite functional on chi",
-    )
-    print()
-
-    print("=" * 80)
-    print("PART 3: QUOTIENT INVARIANCE OF THE DOWNSTREAM STAGES")
-    print("=" * 80)
-    print()
-
-    chi = histories[0]
-    ell_l = T_L(chi)
-    q_plus = T_plus(ell_l)
-    r_r_a = np.array([0.0, 0.2, -0.1, 0.3, 0.1], dtype=float)
-    r_r_b = np.array([0.6, -0.4, 0.2, -0.2, 0.5], dtype=float)
-    q_minus_a = np.array([0.1, -0.1, 0.2, -0.2, 0.1], dtype=float)
-    q_minus_b = np.array([-0.3, 0.4, -0.1, 0.2, -0.2], dtype=float)
-
-    ktr_a = F_tr_lifted(ell_l, r_r_a)
-    ktr_b = F_tr_lifted(ell_l, r_r_b)
-    ksph_a = F_sph_lifted(q_plus, q_minus_a)
-    ksph_b = F_sph_lifted(q_plus, q_minus_b)
+    i16 = np.eye(16, dtype=complex)
+    g0 = kron4(SZ, SZ, SZ, SX)
+    g1 = kron4(SX, I2, I2, I2)
+    g2 = kron4(SZ, SX, I2, I2)
+    g3 = kron4(SZ, SZ, SX, I2)
+    g5 = g0 @ g1 @ g2 @ g3
+    p_l = (i16 + g5) / 2.0
+    p_r = (i16 - g5) / 2.0
 
     check(
-        "changing the right-handed spectator history leaves K_tr unchanged",
-        abs(ktr_a - ktr_b) < 1e-15,
-        f"K_tr = {ktr_a:.6e}",
+        "Tr(P_L) = 8 on the retained 4D chirality surface",
+        abs(np.trace(p_l).real - 8.0) < 1e-12,
+        f"Tr(P_L) = {np.trace(p_l).real:.1f}",
     )
     check(
-        "changing the protected q_- spectator history leaves K_sph unchanged",
-        abs(ksph_a - ksph_b) < 1e-15,
-        f"K_sph = {ksph_a:.6e}",
+        "P_L and P_R remain orthogonal projectors",
+        np.linalg.norm(p_l @ p_r) < 1e-12 and np.linalg.norm(p_l @ p_l - p_l) < 1e-12,
+    )
+
+    ell_hist = np.array([0.4, 0.6, 0.8, 0.5, 0.3], dtype=float)
+    rr_hist = np.array([0.2, -0.1, 0.4, 0.0, -0.3], dtype=float)
+    recovered_ell = []
+    for ell_l, r_r in zip(ell_hist, rr_hist):
+        rho = ell_l * p_l + r_r * p_r
+        recovered_ell.append(left_active_coordinate(rho, p_l))
+
+    recovered_ell = np.array(recovered_ell, dtype=float)
+    check(
+        "Pi_L[rho] = Tr(P_L rho)/8 recovers the exact active left-handed coordinate history",
+        np.max(np.abs(recovered_ell - ell_hist)) < 1e-12,
+        f"max |ell_rec - ell| = {np.max(np.abs(recovered_ell - ell_hist)):.2e}",
+    )
+
+    rr_hist_alt = np.array([-0.5, 0.7, -0.2, 0.9, 0.1], dtype=float)
+    recovered_ell_alt = []
+    for ell_l, r_r in zip(ell_hist, rr_hist_alt):
+        rho = ell_l * p_l + r_r * p_r
+        recovered_ell_alt.append(left_active_coordinate(rho, p_l))
+
+    recovered_ell_alt = np.array(recovered_ell_alt, dtype=float)
+    check(
+        "Pi_L[rho] is insensitive to right-handed spectator histories",
+        np.max(np.abs(recovered_ell_alt - ell_hist)) < 1e-12,
+        f"max |ell_rec_alt - ell| = {np.max(np.abs(recovered_ell_alt - ell_hist)):.2e}",
     )
     info(
-        "quotient meaning",
-        "the downstream stage functionals are insensitive to their spectator lanes, so the full composition really does live on the active one-lane chain",
+        "left-handed extractor meaning",
+        "the only exact downstream transport coordinate on the current surface is obtained by the chirality projector quotient, not by a guessed scalar-to-density map",
     )
     print()
 
     print("=" * 80)
-    print("PART 4: TARGET NORMALIZATION")
+    print("PART 3: EXACT ACTIVE-CHARGE QUOTIENT EXTRACTOR")
     print("=" * 80)
     print()
 
-    print(f"  K_NP,target = eta_obs / J = {K_NP_TARGET:.6e}")
-    print()
+    baryon, lepton = baryon_and_lepton_operators()
+    b_plus_l = baryon + lepton
+    b_minus_l = baryon - lepton
 
     check(
-        "single-history target equals the existing K_NP target",
-        abs(K_NP_TARGET - 1.837341e-5) < 1e-11,
-        f"F_NP,target = {K_NP_TARGET:.6e}",
+        "Tr(B+L) = 4 on the retained charge plane",
+        abs(np.trace(b_plus_l).real - 4.0) < 1e-12,
+        f"Tr(B+L) = {np.trace(b_plus_l).real:.1f}",
     )
     check(
-        "eta = J * F_NP,target reconstructs the observed baryon asymmetry",
-        abs(J_PROMOTED * K_NP_TARGET - ETA_OBS) < 1e-20,
-        f"eta = {J_PROMOTED * K_NP_TARGET:.6e}",
+        "Tr(B-L) = 0 on the retained charge plane",
+        abs(np.trace(b_minus_l).real) < 1e-12,
+        f"Tr(B-L) = {np.trace(b_minus_l).real:.1e}",
+    )
+
+    q_plus_hist = np.array([0.3, 0.5, 0.2, 0.7, 0.4], dtype=float)
+    q_minus_hist = np.array([0.2, -0.3, 0.1, 0.0, -0.4], dtype=float)
+    recovered_q_plus = []
+    for q_plus, q_minus in zip(q_plus_hist, q_minus_hist):
+        q_op = q_plus * b_plus_l + q_minus * b_minus_l
+        recovered_q_plus.append(active_charge_coordinate(q_op, b_plus_l))
+
+    recovered_q_plus = np.array(recovered_q_plus, dtype=float)
+    check(
+        "Pi_+[Q] = Tr(Q)/4 recovers the exact washout-active charge history",
+        np.max(np.abs(recovered_q_plus - q_plus_hist)) < 1e-12,
+        f"max |q+_rec - q+| = {np.max(np.abs(recovered_q_plus - q_plus_hist)):.2e}",
+    )
+
+    q_minus_hist_alt = np.array([-0.6, 0.2, -0.2, 0.4, 0.8], dtype=float)
+    recovered_q_plus_alt = []
+    for q_plus, q_minus in zip(q_plus_hist, q_minus_hist_alt):
+        q_op = q_plus * b_plus_l + q_minus * b_minus_l
+        recovered_q_plus_alt.append(active_charge_coordinate(q_op, b_plus_l))
+
+    recovered_q_plus_alt = np.array(recovered_q_plus_alt, dtype=float)
+    check(
+        "Pi_+[Q] is insensitive to the protected B-L spectator history",
+        np.max(np.abs(recovered_q_plus_alt - q_plus_hist)) < 1e-12,
+        f"max |q+_rec_alt - q+| = {np.max(np.abs(recovered_q_plus_alt - q_plus_hist)):.2e}",
     )
     info(
-        "remaining task",
-        "the current package no longer needs three independent electroweak baryogenesis computations; it needs one nonperturbative evaluation of F_NP[chi]",
+        "active-charge extractor meaning",
+        "the exact sphaleron-active coordinate is the trace quotient on the B/L plane, not a guessed transport-to-washout averaging rule",
     )
     print()
 
     print("=" * 80)
-    print("PART 5: NOTE / ATLAS INTEGRATION")
+    print("PART 4: EXACT COUPLED-HISTORY COMPOSITION BOUNDARY")
+    print("=" * 80)
+    print()
+
+    check(
+        "single-history note records the response-history lift rho_chi(tau) = ell_L(tau) P_L + r_R(tau) P_R",
+        "`ρ_χ(τ) = ℓ_L(τ) P_L + r_R(τ) P_R`" in comp_note,
+    )
+    check(
+        "single-history note records the charge-plane lift Q_ell(tau) = q_+(tau)(B+L) + q_-(tau)(B-L)",
+        "`Q_{ℓ_L}(τ) = q_+(τ) (B+L) + q_-(τ) (B-L)`" in comp_note,
+    )
+    check(
+        "single-history note records the exact composed functional through the response lifts and quotient extractors",
+        "`F_NP[χ] := F_EWPT[χ] * F_tr[Π_L[ρ_χ]] * F_sph[Π_+[Q_{ℓ_L}]]`" in comp_note,
+    )
+    check(
+        "single-history note records rho_chi = R_L[chi] and Q_ell = R_+[Pi_L[rho_chi]]",
+        "`ρ_χ := R_L[χ]`" in comp_note and "`Q_{ℓ_L} := R_+[Π_L[ρ_χ]]`" in comp_note,
+    )
+    info(
+        "composition consequence",
+        "the exact downstream maps are now explicit quotient extractors; the only open content is the operator response history generated upstream on each stage surface",
+    )
+    print()
+
+    print("=" * 80)
+    print("PART 5: TARGET NORMALIZATION AND PACKAGE INTEGRATION")
     print("=" * 80)
     print()
 
@@ -274,6 +306,19 @@ def main() -> int:
         encoding="utf-8"
     )
 
+    print(f"  K_NP,target = eta_obs / J = {K_NP_TARGET:.6e}")
+    print()
+
+    check(
+        "single-history target equals the existing K_NP target",
+        abs(K_NP_TARGET - 1.837341e-5) < 1e-11,
+        f"F_NP,target = {K_NP_TARGET:.6e}",
+    )
+    check(
+        "eta = J * F_NP,target reconstructs the observed baryon asymmetry",
+        abs(J_PROMOTED * K_NP_TARGET - ETA_OBS) < 1e-20,
+        f"eta = {J_PROMOTED * K_NP_TARGET:.6e}",
+    )
     check(
         "closure-gate note points to the single-history composition note",
         "BARYOGENESIS_SINGLE_HISTORY_COMPOSITION_NOTE.md" in gate_note,
@@ -294,21 +339,25 @@ def main() -> int:
         "current flagship entrypoint points to the single-history composition note",
         "BARYOGENESIS_SINGLE_HISTORY_COMPOSITION_NOTE.md" in flagship,
     )
-
+    info(
+        "remaining task",
+        "the current package no longer hides the downstream maps behind ad hoc examples; what remains open is the first-principles derivation or evaluation of the response histories R_L and R_+ and the resulting coupled functional F_NP[chi]",
+    )
     print()
+
     print("=" * 80)
     print("SYNTHESIS")
     print("=" * 80)
     print()
     print("  RESULT:")
-    print("    - the three one-lane stage reductions compose exactly into one")
-    print("      coupled-history functional on the retained scalar source lane")
-    print("      K_NP = F_NP[chi(tau)]")
-    print("    - the full baryogenesis bridge on current main is therefore")
-    print("      eta = J * F_NP[chi(tau)]")
-    print("    - what remains open is one nonperturbative evaluation of one")
-    print("      coupled-history functional, not three unrelated electroweak")
-    print("      mechanism guesses")
+    print("    - the coupled-history reduction is now expressed with exact")
+    print("      quotient extractors")
+    print("      ell_L(tau) = Tr(P_L rho(tau)) / 8")
+    print("      q_+(tau)   = Tr(Q(tau)) / 4")
+    print("    - the placeholder sample maps have been removed")
+    print("    - what remains open is not the quotient geometry but the")
+    print("      response-history maps and the final coupled functional")
+    print("      F_NP[chi(tau)]")
     print()
     print(f"  TOTAL: PASS = {PASS}, FAIL = {FAIL}")
     return 0 if FAIL == 0 else 1
