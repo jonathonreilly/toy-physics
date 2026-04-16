@@ -1,94 +1,84 @@
-# Derived Science: Nature-Grade Airtight Results
+# Derived Science — Session Contribution
 
-**Branch:** `claude/main-derived` (derived from origin/main)
+**Branch:** `claude/main-derived`
 **Date:** 2026-04-16
-**Bar:** every item here is either a pure-math theorem, a partition-function
-identity, or a rigorous negative result that has been tested against
-adversarial review.
 
-This is NOT the full research program. It is the subset that currently
-passes the Nature-grade bar — things that would survive a hostile
-reviewer who demands proofs without imports or structural identifications.
+This branch contains **only the work produced in this session** that passes
+a hostile-reviewer bar: pure-math theorems or clean negative results with
+no imports, no structural identifications, no crutches.
 
-## What this branch contains
+Existing framework results (CMT, V_sel EWSB, anomaly-forced 3+1, etc.) are
+already on `origin/main` with their own authority notes and runners and are
+NOT duplicated here.
 
-### AIRTIGHT POSITIVES
+## Airtight positives (produced this session)
 
 | # | Claim | Authority | Runner | Status |
 |---|---|---|---|---|
-| 1 | Coupling Map Theorem α_s(v) = α_bare/u₀² | `YT_VERTEX_POWER_DERIVATION.md` | `frontier_vertex_power.py` | existing on main |
-| 2 | EWSB selector V_sel = 32 Σ_{i<j} φ_i² φ_j² derived from trace identities | `GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md` | `frontier_graph_first_selector_derivation.py` | 63/63 PASS |
-| 3 | K_R tensor carrier vanishes on A1 backgrounds via Schur S_3 orthogonality | `KR_A1_VANISHING_DERIVED_NOTE.md` | `frontier_KR_A1_vanishing_proof.py` | 30/30 PASS |
-| 4 | Z₃ rank-1+rank-(n-1) projector algebra: weights 1/n and (n-1)/n | `PROJECTOR_ALGEBRA_DERIVED_NOTE.md` | `frontier_projector_algebra.py` | 25/25 PASS with scope caveats |
-| 5 | Single-plaquette SU(3) ⟨P⟩_1(β) exact via Haar integration (all β) | `PLAQUETTE_SINGLE_EXACT_NOTE.md` | `frontier_plaquette_single_exact.py` | rigorous |
-| 6 | Gauge-vacuum plaquette scalar-bridge theorem (closes 3+1 route: ⟨P⟩(β)=⟨P⟩_1plaq(β_eff)) | `GAUGE_VACUUM_PLAQUETTE_BRIDGE_THEOREM_NOTE.md` (on main) + `PLAQUETTE_ANALYTIC_DERIVATION_NOTE.md` | `frontier_gauge_vacuum_plaquette_bridge_theorem.py`, `frontier_scalar_3plus1_temporal_ratio.py` | THEOREM PASS=8, SUPPORT PASS=5, numeric migration pending |
+| 1 | K_R tensor carrier vanishes on A1 backgrounds via Schur S₃ orthogonality | `KR_A1_VANISHING_DERIVED_NOTE.md` | `frontier_KR_A1_vanishing_proof.py` | 30/30 PASS |
+| 2 | Rank-1 + rank-(n-1) projector algebra: weights 1/n and (n-1)/n | `PROJECTOR_ALGEBRA_DERIVED_NOTE.md` | `frontier_projector_algebra.py` | 25/25 PASS with scope caveat |
 
-### AIRTIGHT NEGATIVES (clean obstructions)
+## Clean negative results (produced this session)
 
-| # | Claim | Authority | Status |
+| # | Claim | Authority | Method |
 |---|---|---|---|
-| N2 | V_sel-fermion coupling does NOT produce SM three-generation mass structure | `NEGATIVE_VSEL_WRONG_MASS_STRUCTURE.md` | eigenvalues {2α, α, 0} |
-| N3 | y_t = g_s/√6 not derivable from gauge/chiral Ward identities, CG, or universality | `NEGATIVE_YT_SQRT_6_NOT_DERIVED.md` | four derivation attempts fail |
+| N1 | V_sel-fermion coupling does NOT produce SM three-generation mass structure | `NEGATIVE_VSEL_WRONG_MASS_STRUCTURE.md` | closed-form eigenvalue derivation |
+| N2 | y_t = g_s/√6 not derivable from gauge/chiral Ward identities, CG, or gauge-Yukawa universality | `NEGATIVE_YT_SQRT_6_NOT_DERIVED.md` | four attempted algebraic derivations, all fail |
 
-(N1 retracted: main's gauge-vacuum scalar-bridge theorem closes the ⟨P⟩
-theorem gap on the chosen 3+1 route. See PLAQUETTE_ANALYTIC_DERIVATION_NOTE.md.)
+## Out of scope (not included in this branch)
 
-### FROM EXISTING MAIN (already airtight, not duplicated here)
+- Existing framework content already on main (CMT, V_sel EWSB selector,
+  anomaly-forced 3+1, native SU(2), graph-first SU(3), three-generation
+  observable algebra, CPT, I_3=0, discrete 3+1 GR, UV-finite QG chain, etc.)
+- Anything related to the plaquette ⟨P⟩ derivation on main
+  (that work is not mine and is currently under separate review)
+- CKM numerical predictions (conjectures, not rigorous derivations)
+- Yukawa / fermion mass hierarchy predictions
+- All structural-identification claims explored during session
 
-These are already on main at Nature grade:
-- Anomaly-forced 3+1 dimensionality theorem
-- Native SU(2) bivector closure
-- Graph-first structural SU(3) selector closure
-- Three-generation observable algebra theorem
-- Physical-lattice invariant theorems
-- Full discrete 3+1 GR on project route
-- UV-finite QG chain
-- Exact native gauge closures
-- CPT, I_3=0, emergent Lorentz theorems
+## Reviewer verification
 
-## What this branch does NOT contain
+```bash
+python3 scripts/frontier_KR_A1_vanishing_proof.py     # expect PASS=30
+python3 scripts/frontier_projector_algebra.py         # expect PASS=25
+```
 
-Not included (fails the bar):
+Both scripts terminate with nonzero exit on any failure.
 
-1. **CKM atlas numerical predictions** (|V_us|=√(α_s/2), |V_cb|=α_s/√6, etc.)
-   — these use y_t = g_s/√6 (conjecture) + structural identifications.
-2. **Fermion mass hierarchy predictions** (m_u/m_c = α_s²/(2π), etc.)
-   — these depend on Fritzsch relation (imported from SM) + H1 hypothesis.
-3. **Higgs mass / top mass predictions** — inherit the y_t conjecture.
-4. **"Cabibbo angle from lattice" and related structural-identification notes**.
-5. **H1 phase identification cos(α_12) = α_LM** — explicit hypothesis.
-6. **Wolfenstein A from color projector** — by-analogy argument.
-7. **NNI texture as consequence** — uses imported GST relation.
+## What this branch establishes
 
-All of the above have strong numerical agreement with PDG, but none
-is rigorously derived from Cl(3) on Z³ axioms alone. They are available
-for future research but should not be promoted without derivation.
+**Positively:**
+- Two small but genuinely rigorous theorems: K_R vanishes on A1 (Schur
+  orthogonality), and the projector-weight formula for a rank-1+rank-(n-1)
+  decomposition (weights 1/n and (n-1)/n).
+- Neither is load-bearing for the flagship CKM/mass claims; both are
+  clean pure-math building blocks.
 
-## How to read this branch
+**Negatively:**
+- The natural V_sel-fermion coupling, analyzed algebraically, gives the
+  wrong fermion mass structure (eigenvalues {2α, α, 0} instead of three
+  hierarchical masses).
+- The "y_t = g_s/√6" Ward identity cited as foundational is not derivable
+  from any of the four standard routes (gauge Ward, chiral Ward, Clebsch-
+  Gordan on Q_L, gauge-Yukawa universality). Either a non-standard
+  mechanism exists or the identity should be labeled as a postulate.
 
-Start with `NATURE_GRADE_INDEX.md` for the structured entry point.
+Together these narrow the framework's airtight domain: the gauge/EWSB/
+anomaly sector on main remains airtight, but the Yukawa/CKM/fermion-mass
+sector needs further research before it can make rigorous claims.
 
-For reviewers:
-- Each positive claim has a runner that verifies it
-- Each negative claim has a proof of obstruction
-- No claim here depends on "structural identification," "by analogy,"
-  "natural normalization," or imported SM formulas
+## Scope caveats (important)
 
-## Where the framework sits (honest assessment)
+- Positive #2 (projector algebra) proves ONLY the weight formula; the
+  downstream identification with the Unitarity Triangle CP phase
+  cos²(δ) = 1/6 is a separate structural claim and is NOT proved here.
+- Negative N2 establishes only that STANDARD Ward-identity routes fail.
+  It does not rule out non-standard mechanisms.
 
-**Airtight domain (Nature-grade):**
-- Gauge/algebraic structure (SU(2), SU(3), anomaly-forced 3+1)
-- EWSB mechanism (V_sel with zero free parameters)
-- Partition-function identities (CMT)
-- Specific exact theorems (CPT, I_3, K_R A1, projector algebra)
+## What's NOT claimed
 
-**Open research domain (not in this branch):**
-- Quantitative CKM magnitudes
-- Fermion mass spectrum (all generations)
-- Higgs/top mass predictions with rigorous chain
-- Phase structure (CP, mixing phases)
-
-**Session work preserved on:** `claude/stoic-almeida` branch (includes
-all investigation, structural identifications, failed derivations, and
-the full audit trail). That branch is where further research builds;
-this branch is what gets reviewed.
+- No claim to derive CKM, fermion masses, Higgs mass, top mass, or any
+  quantitative PDG match from first principles.
+- No claim about the plaquette ⟨P⟩ value — that work is not mine.
+- No claim that the two positive theorems (K_R-A1 vanishing, projector
+  algebra) are load-bearing for a full ToE derivation.
