@@ -67,6 +67,9 @@ an open problem in lattice QCD.
 
 ## What this note does NOT prove
 
-1. ⟨P⟩_4D(β=6) ≠ ⟨P⟩_1(β=6). This is used to establish the separate
-   rigorous obstruction (see `NEGATIVE_PLAQUETTE_NO_ANALYTIC.md`).
-2. Any analytic value for ⟨P⟩_4D(β=6). That remains open.
+1. ⟨P⟩_4D(β=6) ≠ ⟨P⟩_1(β=6). The gap between 0.78185 (single-plaquette)
+   and the 4D lattice value is bridged by the gauge-vacuum scalar-bridge
+   theorem on main (see `PLAQUETTE_ANALYTIC_DERIVATION_NOTE.md`):
+   ⟨P⟩(β) = ⟨P⟩_1plaq(β · (3/2) · (2/√3)^(1/4)).
+2. The analytic value for ⟨P⟩_4D(β=6) on the 3+1 scalar-bridge route is
+   0.59353... (derived from the bridge + this single-plaquette evaluation).

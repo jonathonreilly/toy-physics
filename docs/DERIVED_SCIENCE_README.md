@@ -20,15 +20,18 @@ reviewer who demands proofs without imports or structural identifications.
 | 2 | EWSB selector V_sel = 32 Σ_{i<j} φ_i² φ_j² derived from trace identities | `GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md` | `frontier_graph_first_selector_derivation.py` | 63/63 PASS |
 | 3 | K_R tensor carrier vanishes on A1 backgrounds via Schur S_3 orthogonality | `KR_A1_VANISHING_DERIVED_NOTE.md` | `frontier_KR_A1_vanishing_proof.py` | 30/30 PASS |
 | 4 | Z₃ rank-1+rank-(n-1) projector algebra: weights 1/n and (n-1)/n | `PROJECTOR_ALGEBRA_DERIVED_NOTE.md` | `frontier_projector_algebra.py` | 25/25 PASS with scope caveats |
-| 5 | Single-plaquette SU(3) ⟨P⟩ at β=6 exact: 0.78185 via Haar integration | `PLAQUETTE_SINGLE_EXACT_NOTE.md` | `frontier_plaquette_single_exact.py` | rigorous |
+| 5 | Single-plaquette SU(3) ⟨P⟩_1(β) exact via Haar integration (all β) | `PLAQUETTE_SINGLE_EXACT_NOTE.md` | `frontier_plaquette_single_exact.py` | rigorous |
+| 6 | Gauge-vacuum plaquette scalar-bridge theorem (closes 3+1 route: ⟨P⟩(β)=⟨P⟩_1plaq(β_eff)) | `GAUGE_VACUUM_PLAQUETTE_BRIDGE_THEOREM_NOTE.md` (on main) + `PLAQUETTE_ANALYTIC_DERIVATION_NOTE.md` | `frontier_gauge_vacuum_plaquette_bridge_theorem.py`, `frontier_scalar_3plus1_temporal_ratio.py` | THEOREM PASS=8, SUPPORT PASS=5, numeric migration pending |
 
 ### AIRTIGHT NEGATIVES (clean obstructions)
 
 | # | Claim | Authority | Status |
 |---|---|---|---|
-| N1 | ⟨P⟩ = 0.5934 at β=6 on 4D lattice cannot be derived analytically | `NEGATIVE_PLAQUETTE_NO_ANALYTIC.md` | three methods, all fail |
 | N2 | V_sel-fermion coupling does NOT produce SM three-generation mass structure | `NEGATIVE_VSEL_WRONG_MASS_STRUCTURE.md` | eigenvalues {2α, α, 0} |
 | N3 | y_t = g_s/√6 not derivable from gauge/chiral Ward identities, CG, or universality | `NEGATIVE_YT_SQRT_6_NOT_DERIVED.md` | four derivation attempts fail |
+
+(N1 retracted: main's gauge-vacuum scalar-bridge theorem closes the ⟨P⟩
+theorem gap on the chosen 3+1 route. See PLAQUETTE_ANALYTIC_DERIVATION_NOTE.md.)
 
 ### FROM EXISTING MAIN (already airtight, not duplicated here)
 

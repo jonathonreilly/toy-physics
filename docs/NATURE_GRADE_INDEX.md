@@ -38,23 +38,28 @@ Weights 1/n and (n-1)/n for C^n decomposition.
 - Runner: `frontier_projector_algebra.py` — 25/25 PASS
 - Status: PROVED (algebra only; UT identification caveat documented)
 
-### P5. Single-Plaquette SU(3) ⟨P⟩ Exact
+### P5. Single-Plaquette SU(3) ⟨P⟩_1(β) Exact
 
-⟨P⟩_1(β=6) = 0.78185 via Haar integration.
+⟨P⟩_1(β=6) = 0.78185 via Haar integration (all β).
 
 - Authority: `PLAQUETTE_SINGLE_EXACT_NOTE.md`
 - Runner: `frontier_plaquette_single_exact.py`
 - Status: PROVED (numerical quadrature of closed-form integral;
   leading β/6 and 4/(3β) verified)
 
+### P6. Gauge-Vacuum Plaquette Scalar-Bridge Theorem
+
+⟨P⟩(β) = ⟨P⟩_1plaq(β_eff) with β_eff = β · (3/2) · (2/√3)^(1/4), on
+the chosen 3+1 scalar-bridge route.
+
+- Authority: `GAUGE_VACUUM_PLAQUETTE_BRIDGE_THEOREM_NOTE.md` (on main)
+- Supplement: `PLAQUETTE_ANALYTIC_DERIVATION_NOTE.md` (in this branch)
+- Runners: `frontier_scalar_3plus1_temporal_ratio.py` (EXACT 4/4 + 1)
+  and `frontier_gauge_vacuum_plaquette_bridge_theorem.py` (THEOREM 8/8 + COMPUTE 1/1)
+- Status: theorem closed on main; numeric migration across downstream
+  lanes pending.
+
 ## Clean negative results
-
-### N1. ⟨P⟩_4D(β=6) Not Analytically Derivable
-
-- Authority: `NEGATIVE_PLAQUETTE_NO_ANALYTIC.md`
-- Method: three methods (strong-coupling, weak-coupling, single-plaq
-  exact) all fail to converge to 0.5934
-- Status: RIGOROUS OBSTRUCTION (β=6 is in the crossover region)
 
 ### N2. V_sel-Fermion Coupling Gives Wrong Mass Structure
 
