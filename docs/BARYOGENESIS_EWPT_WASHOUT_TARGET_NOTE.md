@@ -37,6 +37,9 @@ The closure-gate note says what is still missing qualitatively:
 
 This note says what that missing bridge must do numerically.
 
+The next derivation-side reduction step is now recorded in
+[BARYOGENESIS_FINITE_T_REDUCTION_NOTE.md](./BARYOGENESIS_FINITE_T_REDUCTION_NOTE.md).
+
 ## Exact input surface
 
 The target uses only quantities already fixed on the current package surface:
@@ -108,6 +111,11 @@ This target note upgrades the baryogenesis lane in one specific way:
 That is materially tighter. It tells future work exactly what to compute and
 what number the result must reproduce.
 
+The finite-`T` reduction note then asks the sharper follow-up question:
+
+> what finite-temperature control ratio does the already-promoted zero-`T`
+> package imply before any genuine same-surface EWPT computation is done?
+
 ## Relation to cosmology
 
 The bounded cosmology companion already uses
@@ -146,6 +154,7 @@ This note does **not** claim:
 ## Validation
 
 - [frontier_baryogenesis_ewpt_washout_target.py](./../scripts/frontier_baryogenesis_ewpt_washout_target.py)
+- [BARYOGENESIS_FINITE_T_REDUCTION_NOTE.md](./BARYOGENESIS_FINITE_T_REDUCTION_NOTE.md)
 
 Current runner state:
 
