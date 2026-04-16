@@ -1,7 +1,7 @@
 # Plaquette Self-Consistency: `<P>` as a Derived Same-Surface Constant
 
 **Date:** 2026-04-15  
-**Status:** retained evaluation theorem (no free parameter)  
+**Status:** retained evaluation theorem (no free parameter), with analytic support stack
 **Script:** `scripts/frontier_plaquette_self_consistency.py`
 
 ## Claim
@@ -81,6 +81,37 @@ The runner checks:
 4. perturbative-window sanity checks
 5. downstream consistency of `u_0` and `alpha_s(v)`
 
+## Analytic support stack on `main`
+
+The live repo now also carries a stronger analytic support package:
+
+- exact local `SU(3)` one-plaquette block
+- exact scalar `3+1` bridge endpoint ratio
+  `A_inf / A_2 = 2 / sqrt(3)`
+- exact `3+1` plaquette/link incidence factor `6 / 4 = 3 / 2`
+
+Combined with the bridge-conditioned dimension-4 scalar-density insertion
+candidate
+
+`Gamma_sc,cand = (2 / sqrt(3))^(1/4)`,
+
+these give the analytic plaquette candidate
+
+`P_cand(6) = 0.593530679977098`.
+
+This sits only `1.3068e-4` (`0.022%`) above the canonical same-surface value
+`0.5934`, so it materially strengthens the plaquette lane.
+
+Current authorities for that support stack:
+
+- [GAUGE_VACUUM_PLAQUETTE_ANALYTIC_SUPPORT_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_ANALYTIC_SUPPORT_NOTE.md)
+- [SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md](./SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md)
+
+Current support runners:
+
+- `scripts/frontier_gauge_vacuum_plaquette_analytic_support.py`
+- `scripts/frontier_scalar_3plus1_temporal_ratio.py`
+
 ## Safe Reuse Rule
 
 Downstream lanes may safely treat the following as canonical same-surface
@@ -100,9 +131,13 @@ with the understanding that the number is:
 
 This note does **not** claim a closed-form analytic expression for `<P>`.
 
+The remaining missing theorem is the final local-to-vacuum insertion:
+
+> why the physical gauge-vacuum plaquette must inherit the scalar `3+1` bridge
+> as its unique observable-level completion.
+
 It claims the narrower and sufficient point needed by the package:
 
 > the plaquette is a uniquely determined observable of the retained theory, and
 > Monte Carlo is same-surface evaluation of that observable rather than
 > parameter fitting.
-
