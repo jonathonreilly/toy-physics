@@ -20,9 +20,12 @@ that are ready for reviewer intake without promoting anything to `main`:
 - The historical retained last mile is no longer generic. It reduced to the
   four-real active orbit-breaking source `(xi_1, xi_2, rho_1, rho_2)`, and
   that source is now itself closed on the lower-level active transport chain.
-- So this lane is reviewer-ready as a strong retained-lane closure package on
-  the lower-level transport/response chain, but not yet as full sole-axiom
-  neutrino closure.
+- The sole axiom itself now gives the trivial free lower-level response
+  profiles, and those do not realize the one-sided retained PMNS class.
+- So this lane is reviewer-ready as:
+  - a positive retained-lane closure package on the lower-level
+    transport/response chain, and
+  - a negative sole-axiom boundary theorem on that same retained lane.
 
 ### Majorana lane
 - The retained Majorana path remains closed negatively.

@@ -19,11 +19,15 @@ surface derived from the sole axiom `Cl(3)` on `Z^3`.
   [PMNS_MICROSCOPIC_D_FOUR_REAL_LAST_MILE_NOTE.md](/Users/jonBridger/Toy%20Physics-neutrino-majorana/docs/PMNS_MICROSCOPIC_D_FOUR_REAL_LAST_MILE_NOTE.md)
 - And finally closed on the lower-level active transport chain:
   [PMNS_ACTIVE_FOUR_REAL_SOURCE_FROM_TRANSPORT_NOTE.md](/Users/jonBridger/Toy%20Physics-neutrino-majorana/docs/PMNS_ACTIVE_FOUR_REAL_SOURCE_FROM_TRANSPORT_NOTE.md)
+- Sole-axiom lower-level response-profile boundary:
+  [PMNS_SOLE_AXIOM_RESPONSE_PROFILE_BOUNDARY_NOTE.md](/Users/jonBridger/Toy%20Physics-neutrino-majorana/docs/PMNS_SOLE_AXIOM_RESPONSE_PROFILE_BOUNDARY_NOTE.md)
 
 ## Current Exact Endpoint
-On the lower-level retained transport / response chain, the Dirac / PMNS lane
-is closed. The historical last-mile reductions still matter because they show
-what had to be fixed:
+There are now two exact endpoints, and they must be kept separate.
+
+### Lower-level retained transport / response chain
+On that chain, the Dirac / PMNS lane is closed. The historical last-mile
+reductions still matter because they show what had to be fixed:
 
 - `tau`
 - `q`
@@ -36,6 +40,17 @@ The new point is that the active four-real source is no longer an extra open
 object once the non-averaged lower-level active transport / response profile is
 derived. It is exactly the centered non-averaged part of that active profile.
 
+### Sole axiom `Cl(3)` on `Z^3` alone
+At the sole-axiom layer, the derived lower-level response profiles are only the
+trivial free profiles:
+
+- active profile = identity response profile
+- passive profile = scalar resolvent response profile
+- derived pair = `(I_3, I_3)`
+
+Those profiles do **not** realize a one-sided minimal PMNS class, so the
+retained PMNS lane does not close from the sole axiom alone.
+
 ## What Is Closed
 - Exact reduction from full microscopic `D` to `(D_0^trip, D_-^trip)`
 - Exact downstream recovery of branch, sheet, `H_nu`, `H_e`, masses, and PMNS
@@ -43,13 +58,14 @@ derived. It is exactly the centered non-averaged part of that active profile.
 - Exact elimination of the passive moduli as an independent last-mile object
 - Exact elimination of the active four-real source as an independent lower-level
   theorem target once the active transport / response profile is available
+- Exact derivation of the sole-axiom lower-level response profiles themselves
+  as the trivial free profiles
 
 ## What Is Not Yet Claimed
 This packet does **not** claim full sole-axiom neutrino closure from
-`Cl(3)` on `Z^3` alone. The remaining open object is the derivation of the
-relevant lower-level active/passive transport or response profiles from the
-sole axiom itself, rather than the extraction of PMNS data once those profiles
-are available.
+`Cl(3)` on `Z^3` alone. The sole-axiom lower-level response profiles are now
+derived, and they are too trivial to realize the retained PMNS lane. So the
+sole-axiom endpoint is negative on this retained lane.
 
 ## Representative Runners
 - [frontier_pmns_full_microscopic_operator_to_pair.py](/Users/jonBridger/Toy%20Physics-neutrino-majorana/scripts/frontier_pmns_full_microscopic_operator_to_pair.py)
@@ -58,3 +74,4 @@ are available.
 - [frontier_pmns_microscopic_d_seven_real_last_mile.py](/Users/jonBridger/Toy%20Physics-neutrino-majorana/scripts/frontier_pmns_microscopic_d_seven_real_last_mile.py)
 - [frontier_pmns_microscopic_d_four_real_last_mile.py](/Users/jonBridger/Toy%20Physics-neutrino-majorana/scripts/frontier_pmns_microscopic_d_four_real_last_mile.py)
 - [frontier_pmns_active_four_real_source_from_transport.py](/Users/jonBridger/Toy%20Physics-neutrino-majorana/scripts/frontier_pmns_active_four_real_source_from_transport.py)
+- [frontier_pmns_sole_axiom_response_profile_boundary.py](/Users/jonBridger/Toy%20Physics-neutrino-majorana/scripts/frontier_pmns_sole_axiom_response_profile_boundary.py)
