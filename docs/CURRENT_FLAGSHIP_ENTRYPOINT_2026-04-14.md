@@ -74,7 +74,9 @@ packaging.
 - older bounded CKM mass-basis / Cabibbo / partial Jarlskog route history
 - cosmology bounded family, organized around one fixed-gap vacuum scale
   (`Lambda`, `w = -1`, graviton mass) plus the remaining matter bridge behind
-  present-day `Omega_Lambda`
+  present-day `Omega_Lambda`, now with an explicit
+  [BARYOGENESIS_CLOSURE_GATE_NOTE.md](BARYOGENESIS_CLOSURE_GATE_NOTE.md)
+  isolating the missing `η` bridge
 - bounded secondary predictions already on `main`, including proton lifetime,
   CKM neutron EDM, vacuum critical stability, benchmark gravitational
   decoherence, BH entropy, and monopole mass

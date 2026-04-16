@@ -36,3 +36,9 @@ Use this file to find the current canonical note/runner pair on `main`.
 | lane | authority | primary runner |
 |---|---|---|
 | DM relic mapping | [DM_RELIC_PAPER_NOTE.md](DM_RELIC_PAPER_NOTE.md) | `frontier_dm_relic_paper.py` |
+
+## Bounded Companion Gates
+
+| lane | authority | primary runner |
+|---|---|---|
+| baryogenesis / `η` closure gate | [BARYOGENESIS_CLOSURE_GATE_NOTE.md](BARYOGENESIS_CLOSURE_GATE_NOTE.md) | `frontier_baryogenesis_closure_gate.py` |

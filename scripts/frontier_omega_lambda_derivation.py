@@ -24,8 +24,9 @@ KEY RESULT:
     R_base = (3/5) * [C_2(3)*8 + C_2(2)*3] / [C_2(2)*3] = 31/9 = 3.444
     R = R_base * S_vis/S_dark (Sommerfeld correction from QCD)
 
-  The baryogenesis derivation of eta is CONDITIONAL on v(T_c)/T_c ~ 0.52
-  from the taste-scalar EWPT.  This is documented honestly.
+  The baryogenesis lane is still open.  The current main-branch gate note is
+  docs/BARYOGENESIS_CLOSURE_GATE_NOTE.md; the older v(T_c)/T_c ~ 0.52 target
+  remains bounded route history rather than a retained same-surface theorem.
 
 HONEST ACCOUNTING:
   - eta is imported (not yet first-principles)
@@ -119,8 +120,10 @@ def link1_eta():
     The baryon-to-photon ratio eta = n_B / n_gamma.
 
     Framework status: CONDITIONAL / IMPORTED.
-    The baryogenesis calculation (BARYOGENESIS_NOTE.md) gives eta ~ 6e-10
-    conditional on v(T_c)/T_c ~ 0.52 from the taste-scalar EWPT.
+    The current main-branch baryogenesis gate note isolates the missing
+    electroweak transition / transport computation.  Older route history
+    carried eta ~ 6e-10 conditionally on v(T_c)/T_c ~ 0.52 from the
+    taste-scalar EWPT.
     For this chain, we import eta from Planck.
     """
     print("=" * 72)
@@ -134,7 +137,8 @@ def link1_eta():
     print()
 
     # Framework baryogenesis estimate (conditional)
-    # From BARYOGENESIS_NOTE.md:
+    # From the older bounded route history summarized by the new
+    # BARYOGENESIS_CLOSURE_GATE_NOTE.md:
     # Three Sakharov conditions:
     #   1. B violation: SU(2) sphalerons (derived gauge structure)
     #   2. CP violation: Z_3 phase -> delta_CP = 2pi/3, J ~ 3.1e-5
