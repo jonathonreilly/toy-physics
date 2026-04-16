@@ -61,8 +61,10 @@ question:
 
 Any further positive closure would require:
 
-- genuinely new dynamics selecting nontrivial values on the native
-  `C3`-character holonomy family, or
+- genuinely new dynamics selecting nonzero nontrivial `C3` character
+  amplitude on the retained `hw=1` PMNS response family and generating a
+  genuinely off-diagonal charge-`2` Nambu primitive on the doubled `nu_R`
+  line, or
 - a further admitted extension beyond the current exact bank
 
 ## Verification

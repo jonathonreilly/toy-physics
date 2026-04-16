@@ -56,6 +56,9 @@ explicitly closed in:
   - the exact `C3` character triple closes `(u,v,w)` exactly on a native
     route, so the remaining blocker is no longer the holonomy family itself
     but the sole-axiom production of nontrivial values on that family
+  - more sharply still, the exact missing PMNS object is now just one complex
+    nontrivial `C3` character amplitude `chi`; the current sole-axiom
+    free/source-transfer/scalar routes all force `chi = 0`
   - the anomaly-forced `3+1` retarded lift is nontrivial upstairs but projects
     back to the same free retained pack
 - So this lane is reviewer-ready as:
@@ -69,6 +72,9 @@ explicitly closed in:
 - The retained Majorana path remains closed negatively.
 - The lower-level pairing/Nambu layer strengthens that negative result on the
   present charge-preserving retained surface.
+- More sharply, the sole-axiom `nu_R` transfer/response family is only scalar,
+  so it never generates the off-diagonal charge-`2` primitive Majorana would
+  need on the doubled `nu_R` line.
 
 ## Current Review Standard
 This packet is packaged for reviewer intake, not for automatic promotion to

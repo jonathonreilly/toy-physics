@@ -51,6 +51,8 @@ surface derived from the sole axiom `Cl(3)` on `Z^3`.
   [PMNS_THREE_FLUX_HOLONOMY_CLOSURE_NOTE.md](./PMNS_THREE_FLUX_HOLONOMY_CLOSURE_NOTE.md)
 - Exact `C3`-character holonomy closure:
   [PMNS_C3_CHARACTER_HOLONOMY_CLOSURE_NOTE.md](./PMNS_C3_CHARACTER_HOLONOMY_CLOSURE_NOTE.md)
+- Exact `C3` character-mode reduction of the remaining blocker:
+  [PMNS_C3_CHARACTER_MODE_REDUCTION_NOTE.md](./PMNS_C3_CHARACTER_MODE_REDUCTION_NOTE.md)
 - Anomaly-forced `3+1` retarded transport / projection boundary:
   [PMNS_ANOMALY_FORCED_3PLUS1_RETARDED_TRANSPORT_PROJECTION_BOUNDARY_NOTE.md](./PMNS_ANOMALY_FORCED_3PLUS1_RETARDED_TRANSPORT_PROJECTION_BOUNDARY_NOTE.md)
 
@@ -154,6 +156,10 @@ nontrivial retained PMNS values.
 - Exact `C3`-character holonomy closure theorem showing that the exact
   coordinate-cycle symmetry already supplies a canonical native three-mode
   holonomy family, so the reduced cycle values close on an exact native route
+- Exact `C3` character-mode reduction theorem showing that the remaining PMNS
+  blocker is not a generic `3`-real family anymore, but one real trivial mode
+  `w` plus one complex nontrivial character amplitude `chi`, with the current
+  sole-axiom free/source-transfer/scalar routes all forcing `chi = 0`
 - Exact anomaly-forced `3+1` retarded transport / projection boundary showing
   that the lift is nontrivial upstairs but projects back to the same free
   retained pack
@@ -177,7 +183,9 @@ route; and the anomaly-forced `3+1` retarded lift dies under retained
 projection. So the current exact bank no longer has a live retained PMNS-side
 loophole on this lane. Full sole-axiom closure is still not claimed because
 the sole axiom still does not produce nontrivial values on that native
-character-holonomy family.
+character-holonomy family. More sharply: the exact missing PMNS object is now
+just a sole-axiom law producing nonzero nontrivial `C3` character amplitude
+`chi` on the retained `hw=1` response family.
 
 ## Representative Runners
 - [frontier_pmns_full_microscopic_operator_to_pair.py](/Users/jonBridger/Toy%20Physics-neutrino-majorana/scripts/frontier_pmns_full_microscopic_operator_to_pair.py)
@@ -201,4 +209,5 @@ character-holonomy family.
 - [frontier_pmns_twisted_flux_transfer_holonomy_boundary.py](../scripts/frontier_pmns_twisted_flux_transfer_holonomy_boundary.py)
 - [frontier_pmns_three_flux_holonomy_closure.py](../scripts/frontier_pmns_three_flux_holonomy_closure.py)
 - [frontier_pmns_c3_character_holonomy_closure.py](../scripts/frontier_pmns_c3_character_holonomy_closure.py)
+- [frontier_pmns_c3_character_mode_reduction.py](../scripts/frontier_pmns_c3_character_mode_reduction.py)
 - [frontier_pmns_anomaly_forced_3plus1_retarded_transport_projection_boundary.py](../scripts/frontier_pmns_anomaly_forced_3plus1_retarded_transport_projection_boundary.py)
