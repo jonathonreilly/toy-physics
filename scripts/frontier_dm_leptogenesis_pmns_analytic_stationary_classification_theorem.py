@@ -32,7 +32,7 @@ import sys
 
 import numpy as np
 
-import frontier_dm_leptogenesis_pmns_full_closure_selector_theorem as selector
+import frontier_dm_leptogenesis_pmns_multistart_selector_support as selector
 import frontier_dm_leptogenesis_pmns_relative_action_stationarity_theorem as stat
 from frontier_dm_leptogenesis_pmns_projector_interface import canonical_h
 

@@ -96,7 +96,7 @@ Current package status:
 
 ## Other Bounded Families
 
-- DM ratio and relic bounded family
+- DM flagship gate, with exact transport-chain progress and stronger PMNS reduced-surface support
 - older bounded CKM mass-basis / Cabibbo / partial Jarlskog route history
 - cosmology bounded family such as `\Omega_\Lambda`, `n_s`, `w = -1`
 - bounded secondary predictions already on `main`:

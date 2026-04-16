@@ -71,7 +71,7 @@ packaging.
 
 ## Other Bounded Families
 
-- DM ratio and relic bounded family
+- DM flagship gate, with exact transport-chain progress and stronger PMNS reduced-surface support
 - older bounded CKM mass-basis / Cabibbo / partial Jarlskog route history
 - cosmology bounded family, organized around one fixed-gap vacuum scale
   (`Lambda`, `w = -1`, graviton mass) plus the remaining matter bridge behind
@@ -82,7 +82,7 @@ packaging.
 
 ## Live Gate
 
-1. DM relic mapping
+1. DM flagship gate
 
 ## Where The Package Lives
 

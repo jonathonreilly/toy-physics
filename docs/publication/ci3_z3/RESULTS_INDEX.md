@@ -111,7 +111,7 @@ Use alongside:
 
 | Component | Note | Runner |
 |---|---|---|
-| DM ratio / relic package | [DM_RELIC_PAPER_NOTE.md](../../DM_RELIC_PAPER_NOTE.md) | [frontier_dm_relic_paper.py](../../../scripts/frontier_dm_relic_paper.py) |
+| DM flagship gate status | [DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md](../../DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md) | [frontier_dm_leptogenesis_transport_status.py](../../../scripts/frontier_dm_leptogenesis_transport_status.py) |
 | Cosmological-constant spectral-gap companion | [COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md](../../COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md) | [frontier_cosmological_constant_spectral_gap.py](../../../scripts/frontier_cosmological_constant_spectral_gap.py) |
 | Cosmology scale identification and reduction | [COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md](../../COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md) | [frontier_cosmology_scale_identification.py](../../../scripts/frontier_cosmology_scale_identification.py) |
 | Cosmological-constant vacuum-energy audit | [COSMOLOGICAL_CONSTANT_VACUUM_ENERGY_AUDIT_NOTE.md](../../COSMOLOGICAL_CONSTANT_VACUUM_ENERGY_AUDIT_NOTE.md) | [frontier_cosmological_constant.py](../../../scripts/frontier_cosmological_constant.py) |

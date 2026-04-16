@@ -51,7 +51,7 @@ context, not part of the live reviewer path.
   vacuum critical stability, benchmark gravitational decoherence, and bounded
   cosmology rows
 - one live flagship gate:
-  DM relic mapping
+  DM flagship gate
 
 For the package-level gravity/gauge continuum positioning layer, use
 [docs/CONTINUUM_IDENTIFICATION_NOTE.md](docs/CONTINUUM_IDENTIFICATION_NOTE.md).

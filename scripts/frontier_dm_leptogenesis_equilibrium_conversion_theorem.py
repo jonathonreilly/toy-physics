@@ -156,11 +156,7 @@ def part4_the_entire_equilibrium_conversion_prefactor_is_closed() -> None:
         abs(pref - 0.02746433893974878) < 1e-15,
         f"(s/n_gamma)*d_N={pref:.15f}",
     )
-    check(
-        "So neither 7.04 nor d_th remain benchmark ingredients on the authority path",
-        True,
-        "both are now theorem-grade equilibrium counting outputs",
-    )
+    print("  [INFO] Neither 7.04 nor d_th remains a benchmark ingredient on this authority path.")
 
 
 def main() -> int:

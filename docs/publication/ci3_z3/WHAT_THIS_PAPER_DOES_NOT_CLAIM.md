@@ -61,7 +61,7 @@ The current package keeps:
 - bounded Yukawa/top;
 - bounded Higgs/vacuum;
 - bounded/conditional cosmology;
-- one live flagship gate: DM relic mapping.
+- one live flagship gate: DM flagship gate.
 
 ## 5. Prediction boundary
 

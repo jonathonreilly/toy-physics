@@ -158,11 +158,7 @@ def part4_the_transport_profile_is_exactly_the_current_eh_equals_one_branch() ->
         max_err < 1e-12,
         f"max E_H error={max_err:.3e}",
     )
-    check(
-        "So the current direct transport solver already sits on the exact theorem-native radiation branch",
-        True,
-        "the old reference-expansion placeholder is now identified with exact H_rad(T)",
-    )
+    print("  [INFO] The current direct transport solver therefore sits on the exact theorem-native radiation branch.")
 
 
 def main() -> int:

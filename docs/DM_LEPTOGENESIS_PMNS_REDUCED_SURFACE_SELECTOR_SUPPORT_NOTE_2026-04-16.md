@@ -1,7 +1,7 @@
-# DM Leptogenesis PMNS Certified Global Selector Theorem
+# DM Leptogenesis PMNS Reduced-Surface Selector Support
 
-**Date:** 2026-04-16  
-**Script:** `scripts/frontier_dm_leptogenesis_pmns_certified_global_selector_theorem.py`  
+**Date:** 2026-04-16
+**Script:** `scripts/frontier_dm_leptogenesis_pmns_reduced_surface_selector_support.py`
 **Framework convention:** “axiom” means only `Cl(3)` on `Z^3`
 
 ## Question
@@ -12,7 +12,8 @@ The remaining review question was whether that lower-action branch can be
 certified as the unique global minimum on the exact reduced domain by a more
 exhaustive optimization argument, rather than just a branch scan.
 
-This note answers that exact question on the reduced surface only.
+This note answers that question on the reduced surface only, but it is kept as
+strong optimization support rather than a live theorem-grade certification.
 
 ## What the reduced domain is
 
@@ -32,19 +33,20 @@ This chart is exact and surjective onto the fixed native `N_e` seed surface.
 So a global optimization over this compact chart is already a global
 optimization over the admissible PMNS-assisted closure domain.
 
-## What is certified
+## What is supported
 
-The theorem runner performs two independent exhaustive searches on that exact
-compact chart:
+The runner performs a deterministic compact-chart search plus local polishing
+on that exact compact chart.
 
 1. a deterministic compact-chart lattice cover with constrained local
    minimization;
 2. a direct branch-polishing pass on the converged stationary representatives.
 
-The searches agree on the same branch set. The exact result is:
+The searches recover the same three reduced-surface branches already seen on
+the refreshed branch. The support result is:
 
 - three stationary closure branches on the reduced surface
-- one branch is the unique lowest-action branch
+- one branch is the lowest-action branch in the current reduced-surface search
 - the lower branch closes the favored column exactly
 - the lower branch is separated from the next branch by a finite action gap
 
@@ -75,29 +77,20 @@ So the finite action gap is:
 
 `Delta S_min = 0.001812374006`
 
-## Nature-grade scope
+## Scope
 
-This theorem is the stronger Nature-grade statement requested for the reduced
-surface:
+This file is kept as **support** rather than live theorem authority because
+the current deterministic search still uses previously known branch anchors and
+local polishing. So the safe live statement is:
 
-- it certifies global uniqueness/minimality of the lower closure branch on the
-  exact admissible PMNS-assisted domain
-- it does not rely on a weaker random multistart scan alone
-- it does **not** claim a separate closed-form analytic classification of every
-  symbolic stationary component; that is a stronger theorem than needed here
-
-In particular, the earlier question
-
-> "Have we also proved a stronger all-possible-components analytic uniqueness
-> theorem beyond the exact closure surface we reduced to?"
-
-is now answered for the reduced-surface claim: no separate larger-domain
-uniqueness theorem is needed, because the exact admissible domain is already
-the reduced surface, and the lower branch is certified globally minimal on
-that domain.
+- the reduced-surface search support consistently recovers a three-branch
+  stationary set with the same low-action branch
+- the low branch remains separated by a finite action gap
+- this materially strengthens the PMNS-assisted route
+- it is not yet promoted here as a theorem-grade global selector certificate
 
 ## Command
 
 ```bash
-python3 scripts/frontier_dm_leptogenesis_pmns_certified_global_selector_theorem.py
+python3 scripts/frontier_dm_leptogenesis_pmns_reduced_surface_selector_support.py
 ```

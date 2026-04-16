@@ -184,7 +184,7 @@ def part4_the_runner_surface_now_has_an_exact_denominator_divide() -> None:
 
     reduced = read("scripts/frontier_dm_leptogenesis.py")
     exact_kernel = read("scripts/frontier_dm_leptogenesis_exact_kernel_closure.py")
-    full_axiom = read("scripts/frontier_dm_leptogenesis_full_axiom_closure.py")
+    full_axiom = read("scripts/frontier_dm_leptogenesis_transport_status.py")
     full_axiom_note = read("docs/DM_LEPTOGENESIS_FULL_AXIOM_CLOSURE_NOTE_2026-04-16.md")
 
     check(

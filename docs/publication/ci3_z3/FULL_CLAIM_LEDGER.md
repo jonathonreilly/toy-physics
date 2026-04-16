@@ -113,7 +113,7 @@ external reviewer will ask about them whether or not they are retained.
 
 | Quantity / lane | Current decision | Why not promoted | Primary authority | Matrix / freeze reference |
 |---|---|---|---|---|
-| Dark matter ratio `R` | bounded | structurally strong, but still tied to bounded relic/transport bridge | [DM_RELIC_PAPER_NOTE.md](../../DM_RELIC_PAPER_NOTE.md) | matrix row `Dark matter ratio \`R\``, `F01` |
+| DM transport / PMNS gate status | open | exact transport chain is closed and reduced-surface PMNS support is stronger, but the final DM quantitative closure is still open | [DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md](../../DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md), [DM_LEPTOGENESIS_PMNS_REDUCTION_EXHAUSTION_THEOREM_NOTE_2026-04-16.md](../../DM_LEPTOGENESIS_PMNS_REDUCTION_EXHAUSTION_THEOREM_NOTE_2026-04-16.md), [DM_LEPTOGENESIS_PMNS_REDUCED_SURFACE_SELECTOR_SUPPORT_NOTE_2026-04-16.md](../../DM_LEPTOGENESIS_PMNS_REDUCED_SURFACE_SELECTOR_SUPPORT_NOTE_2026-04-16.md) | matrix row `DM transport / PMNS gate status` |
 | `\Omega_\Lambda` conditional chain | bounded/conditional | after the fixed-gap/de-Sitter scale reduction, the remaining blocker is present matter content, so this row is now primarily the DM/matter bridge question | [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md), [COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md](../../COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md) | matrix row `\Omega_\Lambda conditional chain`, `F01`, `F04` |
 | Spectral tilt `n_s` | bounded/conditional | cosmology bridge remains conditional | [PRIMORDIAL_SPECTRUM_NOTE.md](../../PRIMORDIAL_SPECTRUM_NOTE.md) | matrix row `Spectral tilt \`n_s\``, `F04` |
 | Dark energy EOS `w` | bounded/conditional | now best read as the EOS face of the same fixed-gap vacuum-scale route rather than a separate blocker | [DARK_ENERGY_EOS_NOTE.md](../../DARK_ENERGY_EOS_NOTE.md), [COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md](../../COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md) | matrix row `Dark energy EOS \`w\``, `F04` |
@@ -155,7 +155,7 @@ These rows correspond to Section C of
 
 | Gate | Current best read | Why still open | Main authority |
 |---|---|---|---|
-| DM relic mapping | structural ratio is strong, full relic bridge still bounded | graph-to-relic transport and normalization closure still missing | [DM_RELIC_PAPER_NOTE.md](../../DM_RELIC_PAPER_NOTE.md), [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md) |
+| DM flagship gate | exact transport chain closed; reduced-surface PMNS support strengthened; final DM quantitative closure still open | theorem-grade PMNS selector closure and final DM normalization / mapping remain open | [DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md](../../DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md), [DM_LEPTOGENESIS_PMNS_REDUCTION_EXHAUSTION_THEOREM_NOTE_2026-04-16.md](../../DM_LEPTOGENESIS_PMNS_REDUCTION_EXHAUSTION_THEOREM_NOTE_2026-04-16.md), [DM_LEPTOGENESIS_PMNS_REDUCED_SURFACE_SELECTOR_SUPPORT_NOTE_2026-04-16.md](../../DM_LEPTOGENESIS_PMNS_REDUCED_SURFACE_SELECTOR_SUPPORT_NOTE_2026-04-16.md), [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md) |
 
 ## 5. Frozen-out families aligned to the matrix
 

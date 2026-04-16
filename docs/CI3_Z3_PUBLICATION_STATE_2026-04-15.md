@@ -204,7 +204,7 @@ surface:
 
 The remaining live paper gates are:
 
-1. DM relic mapping
+1. DM flagship gate
 
 Those are the only live flagship gates. Everything else in the package should
 now be legible as either retained, bounded, or explicitly frozen-out.
@@ -302,5 +302,5 @@ batches:
 > infrastructure, a full-framework one-generation Standard Model closure, a
 > derived electroweak hierarchy / `v` scale on the exact minimal hierarchy
 > block, and a retained three-generation matter structure in the same
-> framework. The remaining live paper gates are DM relic mapping, renormalized
+> framework. The remaining live paper gates are the DM flagship gate, renormalized
 > `y_t`, and quantitative flavor closure.

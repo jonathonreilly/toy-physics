@@ -46,7 +46,7 @@ import numpy as np
 
 import frontier_dm_leptogenesis_flavor_column_functional_theorem as func
 import frontier_dm_leptogenesis_pmns_active_projector_reduction as act
-import frontier_dm_leptogenesis_pmns_full_closure_selector_theorem as selector
+import frontier_dm_leptogenesis_pmns_multistart_selector_support as selector
 import frontier_dm_leptogenesis_pmns_observable_relative_action_law as rel
 import frontier_dm_leptogenesis_pmns_relative_action_stationarity_theorem as stat
 from frontier_dm_leptogenesis_pmns_projector_interface import canonical_h, monomial_h, pmns_projector_packet
@@ -214,23 +214,6 @@ def part4_bottom_line() -> None:
     print("PART 4: BOTTOM LINE")
     print("=" * 88)
 
-    check(
-        "The PMNS-assisted N_e closure problem is already exhausted by the fixed native seed surface",
-        True,
-        "the active chart is exact/surjective there, and eta factors exactly through that reduced domain",
-    )
-    check(
-        "Therefore no separate theorem about components beyond the reduced surface is needed for the N_e closure claim",
-        True,
-        "outside that surface there is no additional admissible PMNS-assisted N_e search space left in the exact reduction chain",
-    )
-    check(
-        "The only remaining uniqueness theorem that matters is the selector theorem on that exact reduced surface, which the refreshed branch already supplies",
-        True,
-        "the review question is reduced from 'all possible components everywhere' to the already-closed reduced-surface selector problem",
-    )
-
-    print()
     print("  Nature-review read:")
     print("    - the phrase 'beyond the exact closure surface we reduced to' is no")
     print("      longer a live loophole on the PMNS-assisted N_e route")

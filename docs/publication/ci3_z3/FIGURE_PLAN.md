@@ -87,7 +87,7 @@ Companion captions live in [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md).
 
 - purpose: show what is exact, derived, and bounded in the DM relic chain
 - source notes:
-  - [DM_RELIC_PAPER_NOTE.md](../../DM_RELIC_PAPER_NOTE.md)
+  - [DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md](../../DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md)
   - [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md)
 - status: wait until DM language stabilizes
 

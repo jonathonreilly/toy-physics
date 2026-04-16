@@ -58,4 +58,4 @@ already predicts beyond the retained theorem core, use:
 
 Remaining live gates are now:
 
-1. DM relic mapping
+1. DM flagship gate

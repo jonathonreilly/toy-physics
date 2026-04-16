@@ -39,7 +39,7 @@ Current quantitative component package:
 
 Other bounded component families:
 
-- DM relic mapping
+- DM flagship gate
 - cosmology companions
 - individual companion lanes
 

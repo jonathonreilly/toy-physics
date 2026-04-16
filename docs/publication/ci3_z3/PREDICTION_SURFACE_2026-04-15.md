@@ -140,7 +140,7 @@ Authority:
 
 The main missing flagship prediction remains:
 
-- full DM relic mapping
+- full DM flagship-gate closure
 
 That is the one live gate because it blocks the strongest matter/cosmology
 promotion path. It does not erase the rest of the prediction surface.

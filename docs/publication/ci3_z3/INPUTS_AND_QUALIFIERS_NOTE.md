@@ -113,7 +113,7 @@ theorem core.
 
 The one live flagship gate is:
 
-- DM relic mapping
+- DM flagship gate
 
 That is the current missing flagship prediction bridge. It does not erase the
 rest of the retained or bounded prediction surface.

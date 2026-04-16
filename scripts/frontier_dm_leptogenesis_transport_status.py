@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-DM leptogenesis full axiom closure runner.
+DM leptogenesis transport status runner.
 
 Framework convention:
   "axiom" means only the single framework axiom Cl(3) on Z^3.
 
 Purpose:
-  Collect the refreshed exact theorem-native leptogenesis chain on the latest
-  main-derived branch and state the final end state honestly.
+  Collect the exact transport-side subtheorems that now hold on the refreshed
+  branch and state the current live DM gate status honestly.
 """
 
 from __future__ import annotations
@@ -25,15 +25,16 @@ from dm_leptogenesis_exact_common import (
     kappa_axiom_reference,
 )
 
-PASS_COUNT = 0
+THEOREM_PASS = 0
+SUPPORT = 0
 FAIL_COUNT = 0
 
 
 def check(name: str, condition: bool, detail: str = "") -> bool:
-    global PASS_COUNT, FAIL_COUNT
+    global THEOREM_PASS, FAIL_COUNT
     status = "PASS" if condition else "FAIL"
     if condition:
-        PASS_COUNT += 1
+        THEOREM_PASS += 1
     else:
         FAIL_COUNT += 1
     msg = f"  [{status}] {name}"
@@ -80,7 +81,7 @@ def part1_exact_source_projection_and_kernel() -> dict[str, float]:
 
 def part2_exact_equilibrium_bookkeeping_and_hrad_are_now_closed() -> None:
     print("\n" + "=" * 88)
-    print("PART 2: THE EXACT EQUILIBRIUM BOOKKEEPING AND H_rad(T) ARE NOW CLOSED")
+    print("PART 2: EXACT EQUILIBRIUM BOOKKEEPING AND H_rad(T)")
     print("=" * 88)
 
     pkg = exact_package()
@@ -97,19 +98,14 @@ def part2_exact_equilibrium_bookkeeping_and_hrad_are_now_closed() -> None:
         f"d_N={D_THERMAL_EXACT:.15f}",
     )
     check(
-        "So eta[H] = (s/n_gamma) * C_sph * d_N * epsilon_1 * kappa_axiom[H]",
-        True,
-        f"bookkeeping prefactor={pref:.12e}",
-    )
-    check(
         "The exact radiation expansion law is H_rad(T) = sqrt(4*pi^3*g_*/45) * T^2 / M_Pl",
         abs(h_rad_exact(pkg.M1) / (H_RAD_COEFFICIENT_EXACT * pkg.M1 * pkg.M1) - 1.0) < 1e-15,
         f"H/T^2={H_RAD_COEFFICIENT_EXACT:.16e}",
     )
     check(
-        "The exact radiation branch therefore has normalized profile E_H(z) = 1",
-        True,
-        "the old reference-expansion branch is now the exact theorem-native branch",
+        "The exact radiation branch has normalized profile E_H(z) = 1",
+        abs(h_rad_exact(pkg.M1 / 2.0) / (H_RAD_COEFFICIENT_EXACT * (pkg.M1 / 2.0) ** 2) - 1.0) < 1e-15,
+        "same T^2 law implies the normalized branch is exactly unity",
     )
 
     print()
@@ -117,6 +113,7 @@ def part2_exact_equilibrium_bookkeeping_and_hrad_are_now_closed() -> None:
     print(f"  d_N = {D_THERMAL_EXACT:.15f}")
     print(f"  (s/n_gamma) * C_sph * d_N = {pref:.12e}")
     print(f"  H_rad(T)/T^2 = {H_RAD_COEFFICIENT_EXACT:.16e}")
+    print("  eta[H] uses the exact prefactor above on the theorem-native radiation branch.")
 
 
 def part3_direct_transport_integral_on_the_exact_radiation_branch() -> tuple[float, float]:
@@ -154,36 +151,32 @@ def part3_direct_transport_integral_on_the_exact_radiation_branch() -> tuple[flo
 
 
 def part4_final_end_state(eta_ratio_direct: float) -> None:
+    global SUPPORT
     print("\n" + "=" * 88)
     print("PART 4: FINAL END STATE")
     print("=" * 88)
 
-    check(
-        "The branch now qualifies as FULL THEOREM CLOSURE from Cl(3) on Z^3 alone",
-        True,
-        f"exact theorem-native eta/eta_obs={eta_ratio_direct:.12f}",
+    SUPPORT += 1
+    print(
+        "  [SUPPORT] The exact transport chain is now internal on the one-flavor radiation branch"
+        f"  (eta/eta_obs={eta_ratio_direct:.12f})"
     )
-    check(
-        "No non-axiom transport ingredient remains on the authority path",
-        True,
-        "H_rad(T), equilibrium bookkeeping, and direct transport are all theorem-native",
-    )
-    check(
-        "The exact theorem-native closure lands below the observed asymmetry rather than on it",
-        True,
-        f"prediction / observation = {eta_ratio_direct:.12f}",
+    SUPPORT += 1
+    print(
+        "  [SUPPORT] The live DM gate stays open because the theorem-native branch undershoots"
+        f" observation by {1.0 / eta_ratio_direct:.6f}x"
     )
 
     print()
-    print("  END STATE: FULL THEOREM CLOSURE")
-    print("  Exact theorem-native prediction on the branch:")
+    print("  END STATE: EXACT TRANSPORT CHAIN CLOSED; DM GATE OPEN")
+    print("  Exact theorem-native prediction on the one-flavor branch:")
     print(f"    eta/eta_obs = {eta_ratio_direct:.12f}")
     print("  This closes the transport law but numerically undershoots observation.")
 
 
 def main() -> int:
     print("=" * 88)
-    print("DM LEPTOGENESIS FULL AXIOM CLOSURE")
+    print("DM LEPTOGENESIS TRANSPORT STATUS")
     print("=" * 88)
 
     part1_exact_source_projection_and_kernel()
@@ -192,7 +185,7 @@ def main() -> int:
     part4_final_end_state(eta_ratio_direct)
 
     print("\n" + "=" * 88)
-    print(f"SUMMARY: PASS={PASS_COUNT} FAIL={FAIL_COUNT}")
+    print(f"SUMMARY: THEOREM PASS={THEOREM_PASS} SUPPORT={SUPPORT} FAIL={FAIL_COUNT}")
     print("=" * 88)
     return 0 if FAIL_COUNT == 0 else 1
 

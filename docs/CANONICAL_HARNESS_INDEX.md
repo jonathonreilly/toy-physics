@@ -36,4 +36,4 @@ Use this file to find the current canonical note/runner pair on `main`.
 
 | lane | authority | primary runner |
 |---|---|---|
-| DM relic mapping | [DM_RELIC_PAPER_NOTE.md](DM_RELIC_PAPER_NOTE.md) | `frontier_dm_relic_paper.py` |
+| DM flagship gate | [DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md](DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md) | `frontier_dm_leptogenesis_transport_status.py` |

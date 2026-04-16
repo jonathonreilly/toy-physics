@@ -119,7 +119,7 @@ Current quantitative statuses:
 
 ## Bounded Prediction Surface
 
-- DM ratio and relic companions
+- DM flagship gate, with exact transport-chain progress and stronger PMNS reduced-surface support
 - promoted CKM atlas/axiom closure package, with older Cabibbo / NNI / partial Jarlskog notes retained only as route history
 - cosmology companions
 - bounded secondary predictions already on `main`, including proton lifetime,
@@ -128,7 +128,7 @@ Current quantitative statuses:
 
 ## Open Gates
 
-1. DM relic mapping
+1. DM flagship gate
 
 ## Review Rule
 

@@ -1,26 +1,25 @@
 #!/usr/bin/env python3
 """
-DM leptogenesis PMNS certified global selector theorem.
+DM leptogenesis PMNS reduced-surface selector support.
 
 Framework convention:
   "axiom" means only Cl(3) on Z^3.
 
 Purpose:
-  Upgrade the current PMNS-assisted N_e selector from a multistart branch scan
-  to a certified exhaustive optimization on the exact fixed native N_e seed
-  surface.
+  Strengthen the PMNS-assisted N_e selector story on the exact fixed native N_e
+  seed surface with a deterministic reduced-surface search plus local
+  polishing.
 
-Exact claim scope:
+Live claim scope:
   - the admissible PMNS-assisted closure domain is already reduced to the fixed
     native N_e seed surface by the prior reduction-exhaustion theorem;
   - on that exact reduced domain, this runner performs a deterministic
     exhaustive compact-chart search, and verifies that the reduced surface
     carries a finite stationary-branch set with a unique lowest-action branch;
-  - the lower-action branch is the unique global minimum on the reduced
-    surface, with a finite action gap to the next branch;
-  - this is a certified global-optimization argument on the reduced surface,
-    not a separate closed-form analytic classification of every stationary
-    component.
+  - the lower-action branch is recovered as the lowest-action branch on the
+    reduced surface, with a finite action gap to the next branch;
+  - this is strong reduced-surface optimization support, not a live theorem-
+    grade global-minimum certificate.
 """
 
 from __future__ import annotations
@@ -252,7 +251,7 @@ def global_search_candidates() -> list[np.ndarray]:
             break
 
     if len(cluster_solutions(candidates)) < 2:
-        # One last deterministic micro-cover around the already-certified
+        # One last deterministic micro-cover around the already-known
         # low/high branch anchors, used only if the coarse cover is not enough.
         for anchor in (LOW_CHART_REF, HIGH_CHART_REF):
             for du1, du2, dv1, dv2 in product([-0.03, 0.0, 0.03], repeat=4):
@@ -344,7 +343,7 @@ def certify_global_minimum(branches: list[Branch]) -> None:
         f"ΔS={min_gap:.12f}",
     )
     check(
-        "The lower branch is the unique global minimum on the exact reduced surface",
+        "The lower branch is the unique lowest-action branch in the current reduced-surface search",
         mid.action > low.action and high.action > low.action,
         f"branch actions={[round(branch.action, 12) for branch in branches]}",
     )
@@ -385,7 +384,7 @@ def certify_global_minimum(branches: list[Branch]) -> None:
 
 def main() -> int:
     print("=" * 88)
-    print("DM LEPTOGENESIS PMNS CERTIFIED GLOBAL SELECTOR THEOREM")
+    print("DM LEPTOGENESIS PMNS REDUCED-SURFACE SELECTOR SUPPORT")
     print("=" * 88)
     print()
     print("Framework convention:")
@@ -393,12 +392,12 @@ def main() -> int:
     print()
     print("Question:")
     print("  On the exact reduced PMNS-assisted N_e seed surface, can the lowest-action")
-    print("  closure branch be certified globally unique by an exhaustive optimization")
-    print("  argument rather than a mere multistart scan?")
+    print("  closure branch be recovered robustly on the reduced surface by a")
+    print("  deterministic compact-chart search plus local polishing?")
     print()
     print("Scope:")
     print("  The reduction-exhaustion theorem already eliminates all components beyond")
-    print("  the reduced N_e seed surface. This theorem only certifies global")
+    print("  the reduced N_e seed surface. This runner tests reduced-surface")
     print("  uniqueness/minimality on that exact reduced surface.")
 
     branches = certified_branch_search()
@@ -407,17 +406,16 @@ def main() -> int:
     print("\n" + "=" * 88)
     print("RESULT")
     print("=" * 88)
-    print("  Certified reduced-surface result:")
+    print("  Reduced-surface support result:")
     print("    - exhaustive compact-chart optimization gives a finite set of")
     print("      three stationary closure branches on the exact reduced domain")
-    print("    - the lower branch is the unique global minimum on that surface")
+    print("    - the lower branch is recovered as the lowest-action branch on that surface")
     print("    - the finite action gap to the next branch is > 1e-3")
     print("    - the lower branch closes the favored column exactly")
     print()
-    print("  This is the stronger Nature-grade statement requested for the reduced")
-    print("  surface. It does not claim a separate closed-form classification of every")
-    print("  symbolic stationary component; it certifies global minimality on the exact")
-    print("  admissible domain already isolated by the reduction theorem.")
+    print("  This is strong reduced-surface optimization support. The live authority")
+    print("  path still keeps it below theorem-grade promotion because the current")
+    print("  search uses known branch anchors and local polishing.")
     print()
     print(f"PASS={PASS_COUNT}  FAIL={FAIL_COUNT}")
     return 1 if FAIL_COUNT else 0

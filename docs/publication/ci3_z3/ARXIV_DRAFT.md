@@ -623,11 +623,12 @@ history separately from the live promoted algebraic CKM package.
 
 ### 6.3 The remaining live gate
 
-The only remaining live flagship gate is dark-matter relic mapping. There is
-real structural progress in the direct lattice contact-enhancement and relic
-lane, but the graph-to-relic transport/normalization bridge is still not
-closed at the package bar. That is why dark matter stays open even though
-several individual numbers are promising.
+The only remaining live flagship gate is the dark-matter closure package. The
+exact one-flavor leptogenesis transport chain is now internally closed on the
+theorem-native radiation branch, and the PMNS-assisted `N_e` repair now has a
+much stronger reduced-surface support stack. But the final theorem-grade
+selector closure and full quantitative DM mapping are still not promoted at
+the package bar. That is why dark matter stays open.
 
 The cosmology family is now cleaner than before and no longer needs to be
 treated as several unrelated blockers. $\Lambda$, $w=-1$, and the present
@@ -789,9 +790,9 @@ Cabibbo, mass-basis NNI, or partial-Jarlskog routes.*
 ### B.5 Figure A1 status
 
 The DM lane figure is intentionally omitted from this frozen manuscript pass.
-Its purpose is to display what is exact, derived, and bounded in the relic
-chain, but that language should track the live DM gate rather than get ahead
-of it.
+Its purpose is to display what is exact, derived, bounded, and still open in
+the DM gate, but that language should track the live curated transport/PMNS
+status rather than get ahead of it.
 
 ## References
 

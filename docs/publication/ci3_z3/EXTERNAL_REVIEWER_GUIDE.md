@@ -130,7 +130,7 @@ Current status from that stack:
 
 ## Bounded Prediction Surface
 
-- DM ratio and relic bounded family
+- DM flagship gate, with exact transport-chain progress and stronger PMNS reduced-surface support
 - older bounded CKM mass-basis / Cabibbo / partial Jarlskog route history
 - cosmology bounded family
 - bounded secondary predictions already on `main`, including proton lifetime,
@@ -139,7 +139,7 @@ Current status from that stack:
 
 ## What Is Still Open
 
-1. DM relic mapping
+1. DM flagship gate
 
 ## Read The Package In Order
 
