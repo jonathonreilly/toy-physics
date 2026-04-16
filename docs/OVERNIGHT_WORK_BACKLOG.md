@@ -225,12 +225,14 @@ not just local lane wins.
   - the exact `h = 0.25` compact `top3` branch now has both repeated-update
     persistence and weak-field response on the same nearby family under one
     retained blended readout, and that branch now survives most of a second
-    transfer ring too
+    transfer ring too; the stronger multistage escalation now says it survives
+    only as a compression-stabilized transfer object, not an honest
+    self-maintaining persistent object
   - the retained ordered family still supports broad-surrogate steering rather
     than a persistent-mass object
 - What would count as the next real upgrade:
-  - one stronger multi-stage persistence / inertial-response probe on the
-    stable widened exact-family `top3` branch
+  - one object architecture that survives the same multistage test without
+    per-segment recompression
   - or a stronger architecture-level no-go that closes the search for the
     current family
 
@@ -516,12 +518,16 @@ remaining testable and review-safe.
     - the same branch then survives on `4/5` second-ring cases
     - the first strong outer boundary is now mapped on the inward-source side
       between `source_z = 1.25` and `1.50`
+    - the stronger multistage escalation is now also frozen:
+      carry and `kappa` stay exact across chained segments, but the branch
+      still re-expands off honest `top3` support inside each segment
     - the bottleneck is no longer source-object shrinkage or the local
       broad-versus-adaptive readout split
-    - it is now wider-family robustness and full inertial-response closure
+    - it is now a self-maintaining object architecture and full
+      inertial-response closure
   - Deliverables:
-    - one stronger multi-stage persistence / inertial-response probe on the
-      stable widened `top3` branch
+    - one different object architecture that can survive the same multistage
+      bar without per-segment recompression
     - or one bounded negative strong enough to freeze the compact-object
       response lane as a widened local exact-family positive only
   - New update:
@@ -532,9 +538,12 @@ remaining testable and review-safe.
     - `top2` remains bounded and opens only on `length7`
     - the widened branch stays closed on inward source rows `0.75`, `1.00`,
       and `1.25`, then reopens at `1.50`
+    - the multistage probe is `0/5` at the honest persistence bar:
+      compressed carry and `kappa` are exact, but stage-2 / stage-3 overlap
+      stays below `0.90`
     - fixed windows/tapers remain closed
-    - the live question is now whether the widened branch also survives a
-      stronger multi-stage persistence / inertial-response check
+    - the live question is now whether a different object architecture, not
+      another small tuning pass on `top3`, can survive the same bar
 
 3. **Geometry-transfer discriminator / generated-family recovery**
    - Best upside:

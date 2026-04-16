@@ -265,7 +265,9 @@ Nobel-scale score.
     compact exact-lattice `top-3` object has both repeated-update persistence
     and weak-field response on the same nearby family under one retained
     blended readout, with that same branch now surviving most of a second ring
-    before hitting a mapped inward-source boundary
+    before hitting a mapped inward-source boundary; the stronger multistage
+    escalation then closes as a bounded negative because the branch needs
+    per-segment recompression back to `top3`
   - Missing: a direction-robust widened regime and a true persistent
     inertial-mass law rather than one bounded exact-lattice local branch;
     Gaussian packet + uniform force is now a closed negative route rather than
@@ -495,8 +497,11 @@ The main upward pressures since the first cut are:
   family neighborhood, carries a stable weak-field response on that family,
   admits one retained blended readout that passes on the full `6/6` tested
   nearby cases, and then survives on `4/5` second-ring cases before closing on
-  a mapped inward-source boundary; the remaining bottleneck is now broader
-  transfer and persistent-mass closure, not source-object localization or a
+  a mapped inward-source boundary; the stronger multistage escalation is now
+  also frozen as a bounded negative, because the branch keeps perfect
+  compressed carry and stable response but still re-expands off the honest
+  `top-3` support during each segment; the remaining bottleneck is therefore a
+  self-maintaining object architecture, not source-object localization or a
   local readout split alone
 - a follow-up readout-localization probe now closes the detector side as a
   bounded negative: a peak-centered `3x3` window shrinks detector support a
@@ -564,8 +569,9 @@ The biggest score movers are:
    - the latest compact-object result is stronger:
      one retained blended readout now transfers across the nearby exact-family
      `top-3` lane and survives most of a second ring too, so the remaining gap
-     is no longer local detector/readout closure but wider-family transfer,
-     directional robustness, and true persistent inertial closure
+     is no longer local detector/readout closure; the multistage probe says the
+     real remaining blocker is a self-maintaining object law rather than a
+     compression-stabilized transfer object
 
 4. **A real grown-family causal or trapping-field observable**
    - strongest improvement to:
