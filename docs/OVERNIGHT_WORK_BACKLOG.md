@@ -221,13 +221,15 @@ not just local lane wins.
 ### Goal 3. Persistent inertial objects
 
 - Current state:
-  - **still open**
-  - the lane is now better diagnosed, not more closed
+  - **still open, but materially narrowed**
+  - the exact `h = 0.25` compact `top3` branch now has both repeated-update
+    persistence and weak-field response on the same nearby family under one
+    retained blended readout
   - the retained ordered family still supports broad-surrogate steering rather
     than a persistent-mass object
 - What would count as the next real upgrade:
-  - one object class whose persistence and inertial response are both measured
-    on the same family
+  - one transfer or escalation beyond the current nearby exact-family compact-
+    object neighborhood
   - or a stronger architecture-level no-go that closes the search for the
     current family
 
@@ -502,28 +504,30 @@ remaining testable and review-safe.
        lattice without losing the weak-field gates
 
 2. **Persistent / quasi-persistent inertial objects**
-   - Best upside:
-     - closes the biggest open internal physics step after the test-particle
-       and source-resolved exact-field lanes
-   - New narrowing:
-     - the compact `top-3` repeated-update source object is now a real bounded
-       positive on the exact `h = 0.25` family
-     - the bottleneck is no longer source-object shrinkage alone
-     - it is now readout-dependent transfer and full inertial-response closure
-   - Deliverables:
-     - one small readout-boundary or blended-readout probe on top of the
-       compact repeated-update object
-     - or one bounded negative strong enough to freeze the compact-object
-       response lane as the real limit on this family
-   - New update:
-     - a dynamical adaptive readout now preserves `TOWARD` and near-linear
-       `F~M` while shrinking support materially
-     - fixed windows/tapers remain closed
-     - the new inertial probe now says the transferable `top3` object carries a
-       stable weak-field response too, but the broad and adaptive readouts miss
-       on complementary nearby rows
-     - the live question is now whether one retained readout architecture can
-       cover both sides of that split
+  - Best upside:
+    - closes the biggest open internal physics step after the test-particle
+      and source-resolved exact-field lanes
+  - New narrowing:
+    - the compact `top-3` repeated-update source object is now a real bounded
+      positive on the exact `h = 0.25` family
+    - one retained blended readout now keeps that `top3` object admissible on
+      the full `6/6` tested nearby exact-family cases
+    - the bottleneck is no longer source-object shrinkage or the local
+      broad-versus-adaptive readout split
+    - it is now broader transfer and full inertial-response closure
+  - Deliverables:
+    - one transfer or escalation beyond the current nearby exact-family
+      compact-object neighborhood
+    - or one bounded negative strong enough to freeze the compact-object
+      response lane as a local exact-family positive only
+  - New update:
+    - a blended broad/adaptive readout now resolves the earlier complementary
+      split on the tested nearby family
+    - `top3` is admissible on `6/6` nearby cases under that single readout
+    - `top2` remains bounded and opens only on `length7`
+    - fixed windows/tapers remain closed
+    - the live question is now whether this compact-object response law leaves
+      the current nearby exact-family neighborhood at all
 
 3. **Geometry-transfer discriminator / generated-family recovery**
    - Best upside:

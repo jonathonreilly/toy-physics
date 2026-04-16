@@ -41,7 +41,7 @@ from scripts.persistent_object_adaptive_readout_probe import (  # noqa: E402
     _centroid_from_probs,
     _detector_probs,
 )
-from scripts.persistent_object_compact_transfer_sweep import (  # noqa: E402
+from scripts.persistent_object_compact_shared import (  # noqa: E402
     ALPHA_BAND,
     FIELD_TARGET_MAX,
     GREEN_EPS,
@@ -53,6 +53,7 @@ from scripts.persistent_object_compact_transfer_sweep import (  # noqa: E402
     _field_abs_max,
     _fit_power,
     _green_field_layers,
+    _mean,
     _normalize_weights,
     _source_cluster_nodes,
     _support_eff,
@@ -108,10 +109,6 @@ OBJECT_MODES = (
     ("top2", 2),
     ("top3", 3),
 )
-
-
-def _mean(values: list[float]) -> float:
-    return sum(values) / len(values) if values else math.nan
 
 
 def _support_frac(norm_probs: list[float]) -> float:

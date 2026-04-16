@@ -258,13 +258,17 @@ Nobel-scale score.
   - Missing: a cleaner universal vector sector and broader portability of the
     non-scalar branches beyond the current core
 
-- `0.8/10` A true inertial-object / persistent-mass sector
+- `1.5/10` A true inertial-object / persistent-mass sector
   - Current: detector-readable packet memory and broad-surrogate steering are
-    still real narrower positives, but the first direct Gaussian packet
-    matter/inertial closure attempt is a decisive retained negative
-  - Missing: one object class whose persistence and inertial response are both
-    measurable on the same family; Gaussian packet + uniform force is now a
-    closed negative route rather than a near miss
+    still real narrower positives, the first direct Gaussian packet
+    matter/inertial closure attempt is a decisive retained negative, and now a
+    compact exact-lattice `top-3` object has both repeated-update persistence
+    and weak-field response on the same nearby family under one retained
+    blended readout
+  - Missing: transfer beyond the nearby exact-family neighborhood and a true
+    persistent inertial-mass law rather than one bounded exact-lattice local
+    regime; Gaussian packet + uniform force is now a closed negative route
+    rather than a near miss
 
 - `7.8/10` Stronger bridge to known physics without inflation
   - Current: weak-field gravity-like response, scalar sign-law
@@ -484,12 +488,14 @@ The main upward pressures since the first cut are:
     it says an absorptive / complex-action-style knob can produce a real escape
     observable on a retained grown row while preserving exact `gamma = 0`
     reduction, which keeps one small strong-field-generated-geometry lane open
-- the persistent-object lane is now slightly stronger too:
+- the persistent-object lane is now stronger again:
   a compact `top-3` repeated-update source object is genuinely smaller than the
-  earlier broad quasi-persistent control, now transfers across a nearby exact-
-  family neighborhood, and now also carries a stable weak-field response on the
-  tested nearby family; the remaining bottleneck is readout-dependent transfer,
-  not source-object localization alone
+  earlier broad quasi-persistent control, transfers across a nearby exact-
+  family neighborhood, carries a stable weak-field response on that family,
+  and now admits one retained blended readout that passes on the full `6/6`
+  tested nearby cases; the remaining bottleneck is broader transfer and
+  persistent-mass closure, not source-object localization or a local readout
+  split alone
 - a follow-up readout-localization probe now closes the detector side as a
   bounded negative: a peak-centered `3x3` window shrinks detector support a
   lot, but it only captures a tiny fraction of the detector mass and loses the
@@ -553,9 +559,11 @@ The biggest score movers are:
      - careful-paper credibility
    - because it is still the biggest open internal physics gap after the
      test-particle and exact-lattice source lanes
-   - the latest source-object result is positive, and the adaptive readout
-     now shows the detector side is not frozen absolutely, but the remaining
-     gap is still detector/readout closure rather than source localization
+   - the latest compact-object result is stronger:
+     one retained blended readout now transfers across the nearby exact-family
+     `top-3` lane, so the remaining gap is broader-family transfer and true
+     persistent inertial closure rather than detector/readout closure on the
+     current local family
 
 4. **A real grown-family causal or trapping-field observable**
    - strongest improvement to:
