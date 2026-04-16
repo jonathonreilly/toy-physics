@@ -48,8 +48,9 @@ explicitly closed in:
   - graph-first cycle frame support fixes the canonical oriented-cycle basis
   - graph-native projected-commutant data still do not select the reduced
     cycle values
-  - the `hw=1` source-transfer pack is the strongest positive interface and the
-    sharpest remaining target to derive from the sole axiom
+  - the `hw=1` source-transfer pack closes the retained PMNS lane once
+    supplied, but the canonical sole-axiom source-inserted / graph-first-
+    transferred pack stays trivial and is rejected too
 - So this lane is reviewer-ready as:
   - a positive retained-lane closure package on the lower-level
     transport/response chain, and

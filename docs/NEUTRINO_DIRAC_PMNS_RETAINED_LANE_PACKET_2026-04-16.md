@@ -43,6 +43,8 @@ surface derived from the sole axiom `Cl(3)` on `Z^3`.
   [PMNS_GRAPH_COMMUTANT_CYCLE_VALUE_BOUNDARY_NOTE.md](./PMNS_GRAPH_COMMUTANT_CYCLE_VALUE_BOUNDARY_NOTE.md)
 - `hw=1` source-transfer boundary:
   [PMNS_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md](./PMNS_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md)
+- Sole-axiom `hw=1` source-transfer boundary:
+  [PMNS_SOLE_AXIOM_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md](./PMNS_SOLE_AXIOM_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md)
 
 ## Current Exact Endpoint
 There are now two exact endpoints, and they must be kept separate.
@@ -131,8 +133,10 @@ nontrivial retained PMNS values.
 - Exact graph-native projected-commutant boundary showing that route fixes the
   selector bundle `(tau,q)` but still not the reduced-cycle values
 - Exact `hw=1` source-transfer boundary showing that, once supplied, the
-  source/transfer pack closes the retained PMNS lane, and that this pack is now
-  the sharpest remaining positive target
+  source/transfer pack closes the retained PMNS lane
+- Exact sole-axiom `hw=1` source-transfer boundary showing that the canonical
+  native source-inserted / graph-first-transferred pack stays trivial and is
+  rejected by the retained PMNS closure stack
 
 ## What Is Not Yet Claimed
 This packet does **not** claim full sole-axiom neutrino closure from
@@ -145,8 +149,9 @@ endpoint explicit in one place: the current exact bank fixes the retained PMNS
 carrier and its native observables, but not a unique value on the reduced
 graph-first cycle channel. The newest route attacks sharpen the next step:
 graph-first frame-fixing and projected-commutant data are not enough by
-themselves, while the `hw=1` source-transfer pack is the strongest positive
-interface currently known.
+themselves, and even the canonical sole-axiom `hw=1` source-inserted /
+graph-first-transferred pack stays trivial. So the current exact bank no longer
+has a live retained PMNS-side loophole on this lane.
 
 ## Representative Runners
 - [frontier_pmns_full_microscopic_operator_to_pair.py](/Users/jonBridger/Toy%20Physics-neutrino-majorana/scripts/frontier_pmns_full_microscopic_operator_to_pair.py)
@@ -166,3 +171,4 @@ interface currently known.
 - [frontier_pmns_graph_first_cycle_frame_support.py](../scripts/frontier_pmns_graph_first_cycle_frame_support.py)
 - [frontier_pmns_graph_commutant_cycle_value_boundary.py](../scripts/frontier_pmns_graph_commutant_cycle_value_boundary.py)
 - [frontier_pmns_hw1_source_transfer_boundary.py](../scripts/frontier_pmns_hw1_source_transfer_boundary.py)
+- [frontier_pmns_sole_axiom_hw1_source_transfer_boundary.py](../scripts/frontier_pmns_sole_axiom_hw1_source_transfer_boundary.py)

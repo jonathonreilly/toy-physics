@@ -15,6 +15,8 @@ The current science branch now closes that question exactly.
 On the retained Dirac/PMNS side:
 
 - the sole axiom yields only the trivial free lower-level response profiles
+- even the canonical sole-axiom `hw=1` source-inserted / graph-first-
+  transferred pack stays trivial
 - retained scalar deformation routes remain too small
 - the only surviving positive carrier is the graph-first reduced oriented
   forward-cycle channel
@@ -38,11 +40,13 @@ The theorem bundles the current exact endpoints into one retained-neutrino
 closeout:
 
 1. Sole-axiom lower-level PMNS response profiles are the trivial free ones.
-2. Retained scalar deformation routes stay diagonal/scalar and are rejected by
+2. Even the strongest canonical sole-axiom `hw=1` source/transfer pack stays
+   trivial and is rejected by the retained PMNS closure stack.
+3. Retained scalar deformation routes stay diagonal/scalar and are rejected by
    the one-sided PMNS closure stack.
-3. The graph-first reduced oriented-cycle carrier is real and exact, but the
+4. The graph-first reduced oriented-cycle carrier is real and exact, but the
    current exact bank does not furnish a value-selection law on it.
-4. The retained lower-level charge-preserving Majorana response layer has zero
+5. The retained lower-level charge-preserving Majorana response layer has zero
    anomalous block.
 
 ## Consequence
