@@ -1,21 +1,30 @@
 # Plaquette Self-Consistency: `<P>` as a Derived Same-Surface Constant
 
 **Date:** 2026-04-15  
-**Status:** retained evaluation theorem (no free parameter)  
+**Status:** retained same-surface law + evaluation theorem (no free parameter)  
 **Script:** `scripts/frontier_plaquette_self_consistency.py`
 
 ## Claim
 
 The plaquette expectation
 
-`<P>(beta = 6, SU(3), 4D) ~= 0.5934`
+`<P>(beta = 6, SU(3), 3+1) ~= 0.5934`
 
 is a uniquely determined observable of the axiom-defined partition function on
 the retained graph-first `SU(3)` Wilson-plaquette evaluation surface. It is not
 a fit parameter and it is not an experimental import.
 
-Computing the number requires non-perturbative evaluation. That is evaluation
-of a derived quantity, not introduction of a free degree of freedom.
+The exact finite-`beta` law is now also known on that same finite periodic
+surface: `docs/CHARACTER_INTERTWINER_FOAM_LAW_NOTE.md` derives `<P>` as an
+exact absolutely convergent `SU(3)` character/intertwiner foam ratio.
+`docs/POISSONIZED_OCCUPATION_INTERTWINER_COMPRESSION_NOTE.md` then rewrites
+that exact infinite-carrier law as an exact Poissonized plaquette
+occupation/intertwiner law with finite local alphabets after truncation and
+explicit normalized-law tail bounds.
+
+Computing the number still requires non-perturbative evaluation of that exact
+law. That is evaluation of a derived quantity, not introduction of a free
+degree of freedom.
 
 ## Why This Matters
 
@@ -30,7 +39,8 @@ The review-safe point is:
 
 - `<P>` is not an externally chosen knob
 - `<P>` is not a hidden fit parameter
-- `<P>` is a same-surface evaluated observable of the retained theory
+- `<P>` is an analytically derived same-surface observable of the retained
+  theory
 
 ## Argument
 
@@ -57,6 +67,11 @@ The average plaquette is
 Since `Z(beta)` is well-defined, `<P>` is a unique observable of the same
 partition function. There is no independent freedom to choose it.
 
+On the retained finite periodic `3+1` surface, the partition function and
+anchored plaquette numerator also admit exact absolutely convergent
+character/intertwiner foam sums, so the observable now has an explicit analytic
+representation rather than only an implicit integral definition.
+
 ### 3. No phase-transition ambiguity is present at `beta = 6` on symmetric `L^4`
 
 The deconfining transition in `SU(3)` lattice gauge theory is a finite-
@@ -64,12 +79,12 @@ temperature transition on asymmetric lattices, not a bulk transition on
 symmetric `L^4` lattices. So the plaquette on the symmetric `L^4` surface is
 the smooth same-phase observable that the framework actually uses.
 
-### 4. Monte Carlo evaluates the observable; it does not parameterize it
+### 4. Monte Carlo evaluates the exact same-surface law; it does not parameterize it
 
 Monte Carlo is the numerical evaluation method for this partition-function
 expectation value, exactly as numerical quadrature evaluates an analytically
-defined integral. The computation is non-perturbative, but the quantity is
-still framework-derived.
+defined integral or an exact convergent series. The computation is
+non-perturbative, but the quantity is still framework-derived.
 
 ## Verification Surface
 
@@ -98,11 +113,12 @@ with the understanding that the number is:
 
 ## Scope
 
-This note does **not** claim a closed-form analytic expression for `<P>`.
+This note does **not** claim a compact closed-form analytic expression for
+`<P>`.
 
 It claims the narrower and sufficient point needed by the package:
 
-> the plaquette is a uniquely determined observable of the retained theory, and
-> Monte Carlo is same-surface evaluation of that observable rather than
-> parameter fitting.
-
+> the plaquette is a uniquely determined observable of the retained theory,
+> it now has an exact finite-periodic-lattice character/intertwiner foam law on
+> that same surface, and Monte Carlo is same-surface evaluation of that
+> observable rather than parameter fitting.
