@@ -21,8 +21,10 @@ The full chain:
 
 Each link:
 
-1. **eta = 6.12e-10**: imported from Planck 2018 (conditionally derivable
-   from baryogenesis with v(T_c)/T_c ~ 0.52, but not yet first-principles)
+1. **eta = 6.12e-10**: imported from Planck 2018. The older taste-scalar EWPT
+   route is no longer a live support surface; the current exact taste-block
+   theorem only yields a bounded scalar-only estimate `v(T_c)/T_c = 0.3079`,
+   so eta is not currently conditionally derived here.
 2. **Omega_b = 0.0492**: standard BBN, zero free parameters given eta
 3. **R = 5.38**: derived from taste structure (R_base = 31/9 = 3.444)
    plus Sommerfeld correction (S_vis/S_dark ~ 1.56)
@@ -32,9 +34,10 @@ Each link:
 
 ## Assumptions
 
-1. **eta imported from observation** -- the baryogenesis calculation gives
-   eta ~ 6e-10 conditionally on v/T ~ 0.52 from the taste-scalar EWPT,
-   but this has not been confirmed by non-perturbative lattice computation.
+1. **eta imported from observation** -- the current live taste-block theorem
+   only gives a bounded scalar-only estimate `v/T = 0.3079`, which is not a
+   first-principles baryogenesis closure. Eta therefore remains imported on
+   this chain.
 
 2. **R derivation bounded by alpha_GUT** -- the Sommerfeld correction
    depends on alpha_GUT in [0.03, 0.05].  Within this range, R varies
@@ -72,10 +75,11 @@ Numerical results (using BBN-calibrated Omega_b):
 
 ## What Remains Open
 
-1. **Eta from first principles** -- the baryogenesis calculation is
-   conditional on v(T_c)/T_c ~ 0.52.  A non-perturbative lattice
-   computation of the taste-scalar EWPT is needed to close this link.
-   If eta is derived, the entire pie chart becomes parameter-free.
+1. **Eta from first principles** -- the current live taste-block theorem gives
+   only a bounded scalar-only estimate `v(T_c)/T_c = 0.3079`, so the old
+   taste-scalar EWPT baryogenesis route is not currently a closure path.
+   If eta is later derived on a stronger baryogenesis surface, the entire pie
+   chart becomes parameter-free.
 
 2. **Alpha_GUT from the framework** -- the Sommerfeld correction uses
    alpha_GUT as a bounded input.  If gauge coupling unification is

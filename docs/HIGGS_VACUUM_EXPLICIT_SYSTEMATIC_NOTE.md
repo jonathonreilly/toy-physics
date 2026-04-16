@@ -22,6 +22,13 @@ The direct taste-sector formula in
 [HIGGS_MASS_FROM_AXIOM_NOTE.md](./HIGGS_MASS_FROM_AXIOM_NOTE.md) remains a
 supporting auxiliary derivation. It is not the lane summary by itself.
 
+The exact taste-block Coleman-Weinberg isotropy theorem in
+[TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md](./TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md)
+is also part of the current support stack. It does not unbound the Higgs lane
+by itself, but it does close one exact question about the taste block: the
+fermion Coleman-Weinberg Hessian cannot split the Higgs-direction curvature
+from the two orthogonal taste directions at the retained axis-aligned minimum.
+
 ## Safe Statement
 
 The framework derives the Higgs mechanism and the composite-Higgs boundary
@@ -55,11 +62,18 @@ framework-native 3-loop implementation.”
 4. On that same route, the vacuum readout stays qualitatively favorable, but
    it remains systematic-limited because the lane still inherits the explicit
    Yukawa bridge budget.
+5. The exact taste-block Coleman-Weinberg isotropy theorem closes the
+   fermion-CW part of the Higgs/taste splitting question. On the current
+   bounded gauge-only split model, this supports a near-degenerate taste-scalar
+   pair at `m_taste = 124.91 GeV` and a scalar-only thermal-cubic estimate
+   `v_c/T_c = 0.3079`. Those are bounded downstream consequences, not promoted
+   quantitative Higgs rows.
 
 ## Supporting Notes
 
 - [HIGGS_MASS_DERIVED_NOTE.md](./HIGGS_MASS_DERIVED_NOTE.md)
 - [HIGGS_MASS_FROM_AXIOM_NOTE.md](./HIGGS_MASS_FROM_AXIOM_NOTE.md)
+- [TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md](./TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](./YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
 - [YT_FLAGSHIP_BOUNDARY_NOTE.md](./YT_FLAGSHIP_BOUNDARY_NOTE.md)
 

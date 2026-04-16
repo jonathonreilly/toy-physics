@@ -572,6 +572,20 @@ explicit and localized rather than diffuse. The comparison surface is therefore
 the standard near-critical Standard Model literature [13,14], not a claim that
 the framework has already removed every transport systematic.
 
+An additional exact support theorem now closes one cleaner question on the same
+taste block. The one-loop fermion Coleman-Weinberg Hessian is isotropic at the
+retained axis-aligned electroweak minimum, so the fermion-CW sector alone
+cannot split the Higgs direction from the two orthogonal taste directions.
+Using the current bounded gauge-only split model then gives a near-degenerate
+taste-scalar pair at
+$m_{\mathrm{taste}} = 124.91\,\mathrm{GeV}$,
+about $0.19\,\mathrm{GeV}$ below the Higgs, together with a scalar-only
+thermal-cubic estimate
+$v_c/T_c = 0.3079$.
+We keep those consequences bounded, because they use the exact isotropy theorem
+plus a restricted one-loop gauge-splitting and finite-temperature model rather
+than a full nonperturbative electroweak-transition closure.
+
 ## 6. Prediction Surface and the Remaining Live Gate
 
 The framework is already predictive; the paper should not read as if prediction
@@ -609,6 +623,10 @@ explicitly:
   $m_s(2\,\mathrm{GeV})/m_b(m_b)$, with theorem-grade closure of the exact
   $5/6$ scale surface still open;
 - vacuum critical stability on the current $\lambda(M_{\mathrm{Pl}})=0$ route;
+- taste-scalar near-degeneracy companion:
+  exact taste-block fermion-CW isotropy plus bounded gauge-only split gives
+  $m_{\mathrm{taste}} = 124.91\,\mathrm{GeV}$, with scalar-only
+  $v_c/T_c = 0.3079$;
 - benchmark gravitational decoherence at the original BMV geometry:
   $\gamma_{\mathrm{grav}}=0.253\,\mathrm{Hz}$ and
   $\Phi_{\mathrm{ent}}=12.4\,\mathrm{rad}$.

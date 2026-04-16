@@ -105,6 +105,7 @@ theorem core.
   - CKM neutron EDM
   - down-type CKM-dual mass ratios
   - vacuum critical stability
+  - taste-scalar near-degeneracy
   - benchmark gravitational decoherence
   - monopole mass
   - Bekenstein-Hawking entropy comparison

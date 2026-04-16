@@ -148,6 +148,9 @@ ledger:
   canonical `m_H = 125.1 GeV` (framework-side 3-loop route), with retained
   `119.8 GeV` (2-loop support route); vacuum-stability readout inherited from
   the explicit `y_t` systematic
+- exact taste-block fermion-CW isotropy support theorem with bounded
+  taste-scalar near-degeneracy companion:
+  `m_taste = 124.91 GeV`, scalar-only `v_c/T_c = 0.3079`
 - promoted CKM no-import closure package with full sharp `|V_us|`, `|V_cb|`, `|V_ub|`, `\delta`, and `J`
 - older bounded Cabibbo / NNI / partial Jarlskog notes retained only as route history
 - `\Omega_\Lambda`, `n_s`, `w = -1`, and `\Lambda` cosmology companions
@@ -230,8 +233,9 @@ section, but they are not yet retained closure:
 - older Higgs mass / Coleman-Weinberg route notes now superseded by the
   complete prediction chain
 - proton lifetime, vacuum-critical-stability, down-type flavor-mass CKM-dual
-  ratios, BH-entropy, gravitational-decoherence, magnetic-monopole, and
-  GW-echo companion predictions
+  ratios, taste-scalar near-degeneracy, BH-entropy,
+  gravitational-decoherence, magnetic-monopole, and GW-echo companion
+  predictions
 
 ## Frozen-out work families
 
@@ -264,6 +268,7 @@ scientifically relevant but not part of the flagship backbone:
   Higgs quantitative package
 - proton lifetime
 - down-type flavor-mass CKM-dual ratios
+- taste-scalar near-degeneracy
 - Lorentz-violation cubic fingerprint
 - BH entropy / RT ratio
 - gravitational decoherence

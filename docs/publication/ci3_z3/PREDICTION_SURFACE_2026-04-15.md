@@ -89,6 +89,12 @@ carried by the current package.
     non-metastable side of the usual Standard Model comparison surface
   - authority:
     [VACUUM_CRITICAL_STABILITY_NOTE.md](../../VACUUM_CRITICAL_STABILITY_NOTE.md)
+- taste-scalar near-degeneracy companion:
+  - exact taste-block fermion-CW isotropy plus bounded gauge-only split gives
+    `m_taste = 124.91 GeV`
+  - scalar-only thermal-cubic estimate gives `v_c/T_c = 0.3079`
+  - authority:
+    [TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md](../../TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md)
 - benchmark gravitational decoherence:
   - at the original BMV geometry:
     - `gamma_grav = 0.253 Hz`

@@ -54,6 +54,27 @@ current framework-side low-energy inputs.
 So the remaining Higgs systematic is no longer “missing Higgs machinery.”
 It is inherited from the explicit `y_t` lane.
 
+## Taste-scalar support theorem
+
+The current Higgs support stack also contains one exact taste-block theorem:
+[TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md](./TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md).
+
+That theorem shows that the one-loop fermion Coleman-Weinberg Hessian on the
+retained taste block is isotropic at the axis-aligned electroweak minimum, so
+the fermion-CW sector alone cannot split the Higgs direction from the two
+orthogonal taste directions.
+
+On the current bounded gauge-only split model this gives a near-degenerate
+taste-scalar pair at
+
+- `m_taste = 124.91 GeV`
+
+with a scalar-only thermal-cubic estimate `v_c/T_c = 0.3079`.
+
+This is useful support for Higgs/taste bookkeeping and downstream EWPT work,
+but it does not change the canonical Higgs claim itself. The promoted Higgs row
+remains `m_H = 125.1 GeV` with inherited explicit `y_t` systematic.
+
 ## Current numerical posture
 
 For the current central input `y_t(v) = 0.9176`, the full 3-loop Higgs runner

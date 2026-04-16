@@ -116,6 +116,9 @@ Current quantitative statuses:
   canonical `m_H = 125.1 GeV` (framework-side 3-loop route),
   with retained `119.8 GeV` (2-loop support route),
   vacuum-stability readout inherited from the explicit `y_t` systematic
+- exact taste-block fermion-CW isotropy support theorem with bounded
+  taste-scalar near-degeneracy companion:
+  `m_taste = 124.91 GeV`, scalar-only `v_c/T_c = 0.3079`
 
 ## Bounded Prediction Surface
 
@@ -124,7 +127,8 @@ Current quantitative statuses:
 - cosmology companions
 - bounded secondary predictions already on `main`, including proton lifetime,
   CKM neutron EDM, down-type flavor-mass CKM-dual ratios, vacuum critical
-  stability, benchmark gravitational decoherence, and monopole mass
+  stability, taste-scalar near-degeneracy, benchmark gravitational
+  decoherence, and monopole mass
 
 ## Open Gates
 
