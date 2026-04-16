@@ -350,8 +350,9 @@ theory, because a regulator reinterpretation requires an added continuum
 family, rooting machinery, and an external RG/EFT layer not present in that
 stack, and it cannot preserve the accepted canonical quantitative surface
 `g_{\mathrm{bare}}=1`, `\beta=6`, and the same-surface plaquette/hierarchy
-chain. Detailed inter-family hierarchy and flavor numerics are separate
-questions.
+chain. On that accepted surface, any regulator-style line of constant physics
+preserving the live package invariants is trivial at `\beta=6`. Detailed
+inter-family hierarchy and flavor numerics are separate questions.
 
 Figure 4 shows the exact orbit structure together with the physical-lattice
 interpretation that sets the paper’s three-generation claim boundary.

@@ -36,7 +36,9 @@ This is the safe retained statement used in the current paper package.
 5. `frontier_physical_lattice_necessity.py` closes the narrower but important
    boundary result that regulator reinterpretation is not an equivalent reading
    of the same accepted framework stack and cannot preserve the accepted fixed
-   quantitative surface; it still leaves the physical-lattice premise itself
+   quantitative surface; it also closes the stronger statement that no
+   nontrivial regulator-style line of constant physics preserves the accepted
+   package invariants. It still leaves the physical-lattice premise itself
    explicit rather than derived.
 
 ## Boundary
