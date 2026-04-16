@@ -48,8 +48,8 @@ For the explicit package boundary, use:
   exact native `SU(2)`, graph-first structural `SU(3)`, anomaly-forced `3+1`,
   retained `S^3` topology closure, one-generation closure, retained
   three-generation structure on the physical-lattice / no-rooting boundary,
-  exact `I_3 = 0`, exact CPT, emergent Lorentz invariance, and exact strong CP
-  / `theta_eff = 0` on the retained action surface
+  exact `I_3 = 0`, exact CPT, emergent Lorentz invariance, and retained full
+  strong-CP closure / `theta_eff = 0` on the retained action surface
 - confinement:
   exact `T = 0` confinement of the graph-first `SU(3)` gauge sector, with
   bounded `sqrt(sigma) ≈ 465 MeV`

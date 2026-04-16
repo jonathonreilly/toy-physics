@@ -92,7 +92,7 @@ These rows correspond to Section A of
 | left-handed charge matching | promoted corollary | safe selected-axis charge surface on the retained graph-first package | [LEFT_HANDED_CHARGE_MATCHING_NOTE.md](../../LEFT_HANDED_CHARGE_MATCHING_NOTE.md) |
 | one-generation closure | promoted | anomaly-complete right-handed completion now survives direct audit | [ONE_GENERATION_MATTER_CLOSURE_NOTE.md](../../ONE_GENERATION_MATTER_CLOSURE_NOTE.md) |
 | three-generation structure | promoted | exact orbit algebra `8 = 1 + 1 + 3 + 3` is retained as physical species structure, not as a taste artifact | [THREE_GENERATION_STRUCTURE_NOTE.md](../../THREE_GENERATION_STRUCTURE_NOTE.md) |
-| strong CP / `θ_eff = 0` | promoted exact structural theorem | on the retained axiom-determined Wilson-plus-staggered action surface, no bare `θ` appears, the real-mass staggered determinant carries no phase, CKM CP remains weak-sector only, and the retained support stack now includes both an explicit `3+1` APBC determinant-positivity audit and an exact fermion-effective-action spectral audit with vanishing CP-odd phase | [STRONG_CP_THETA_ZERO_NOTE.md](../../STRONG_CP_THETA_ZERO_NOTE.md) |
+| strong CP / retained full closure at `θ_eff = 0` | promoted retained-surface full closure | on the retained axiom-determined Wilson-plus-staggered action surface, no bare `θ` appears, no admissible axial rephasing survives inside the retained action class, exact fermion integration generates no strong-sector CP phase, positive topological-sector weights force the free-energy minimum to `θ = 0`, and CKM CP remains weak-sector only | [STRONG_CP_THETA_ZERO_NOTE.md](../../STRONG_CP_THETA_ZERO_NOTE.md) |
 
 ### Electroweak hierarchy and exact companions
 

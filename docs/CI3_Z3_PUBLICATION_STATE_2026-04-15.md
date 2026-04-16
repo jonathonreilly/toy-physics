@@ -118,7 +118,7 @@ The current retained backbone is:
     `(E/M_Pl)^2`-suppressed
   - the cubic-harmonic `\ell = 4` structure is exact on the retained theorem
     surface
-- strong CP / `θ_eff = 0` structural closure on the retained action surface:
+- strong CP / retained full closure at `θ_eff = 0` on the retained action surface:
   - the axiom-determined Wilson-plus-staggered action leaves no bare `θ`
   - the real-mass staggered determinant carries no phase
   - CKM CP remains confined to the weak sector
@@ -183,7 +183,7 @@ surface:
   the safe statement is exact pairwise interference on the accepted Hilbert
   probability surface.
 - exact CPT theorem for the free staggered `Cl(3)` lattice
-- exact strong CP / `θ_eff = 0` theorem on the retained axiom-determined action surface
+- retained full strong-CP closure / `θ_eff = 0` theorem on the retained axiom-determined action surface
 - exact native cubic `SU(2)` algebra
 - exact graph-first `su(3)` commutant closure on the retained selector surface
 - exact `T = 0` confinement of the graph-first `SU(3)` gauge sector, with

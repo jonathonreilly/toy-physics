@@ -1,16 +1,28 @@
-# Strong CP / θ = 0 Theorem
+# Strong CP / θ = 0 Full Closure on the Retained Action Surface
 
-**Date:** 2026-04-15
-**Status:** retained exact structural theorem on the axiom-determined surface
+**Date:** 2026-04-16
+**Status:** retained full strong-CP closure on the retained axiom-determined
+action surface
 **Script:** `scripts/frontier_strong_cp_theta_zero.py`
 
 ## Theorem
 
-**Theorem (θ_eff = 0).**
-On the axiom-determined Wilson-plus-staggered action surface of the
-Cl(3)/Z³ framework, `θ_eff = 0` exactly: the retained action carries no
-bare `θ` term, the real-mass staggered determinant carries no phase, and CKM
-CP remains weak-sector only.
+**Theorem (retained-framework full strong-CP closure).**
+On the retained Wilson-plus-staggered action surface of the `Cl(3)/Z^3`
+framework,
+
+    θ_eff = θ_QCD + arg det(M_u M_d) = 0
+
+with no surviving loophole from:
+
+1. fermion determinant / exact fermion-effective-action phase,
+2. admissible axial or chiral basis rephasing inside the retained action class,
+3. strong-sector phase generation when the fermions are integrated out, or
+4. positive-weight topological-sector weighting away from `θ = 0`.
+
+This is a **retained-action-surface** closure theorem. It is not a claim about
+every continuum formulation, every regulator, or axion-model exclusion beyond
+that retained surface.
 
 ## The Standard Strong CP Problem
 
@@ -18,345 +30,295 @@ In the Standard Model, the effective QCD vacuum angle is
 
     θ_eff = θ_QCD + arg det(M_u M_d)
 
-where θ_QCD is the bare vacuum angle in the gluon action and
-arg det(M_u M_d) is the phase of the quark mass matrix determinant.
-Both contributions are independent free parameters, generically O(1),
-yet experiment constrains |θ_eff| < 10⁻¹⁰ from the neutron electric
-dipole moment bound.
+where `θ_QCD` is the bare vacuum angle in the gluon action and
+`arg det(M_u M_d)` is the phase of the quark-mass determinant. Both are
+independent free parameters, generically `O(1)`, while experiment requires
 
-This unexplained cancellation is the strong CP problem (50 years open).
+    |θ_eff| < 10^-10
 
-## How the Framework Resolves It
+from the neutron electric dipole moment bound.
 
-The resolution has three legs, each independently necessary and jointly
-sufficient.
+The question here is narrower and sharper: on the retained
+Wilson-plus-staggered `Cl(3)/Z^3` action surface, does any strong-sector CP
+phase survive at all?
 
-### Leg A: Fermion determinant is real and positive
+## Four Closure Legs
 
-The staggered Dirac operator D on Z³ with SU(3) gauge links satisfies:
+### Leg A: Fermion phase closure
 
-1. D is anti-Hermitian: D† = −D (verified numerically to 0.00e+00 on
-   L = 4 with free and random gauge configurations).
-2. Eigenvalues of D are purely imaginary: {iλ_k} with λ_k real.
-3. Eigenvalues of D + mI are m ± iλ_k, coming in conjugate pairs.
-4. det(D + mI) = Π_k (m² + λ_k²) > 0 for any m > 0.
+The staggered Dirac operator `D[U]` on the retained lattice surface is
+anti-Hermitian:
 
-The fermion determinant carries no complex phase. Verified numerically:
+    D† = -D.
 
-- Free field (L = 4): det phase = 0.00e+00 (exactly zero)
-- Gauged (L = 4, 3 random SU(3) configs): det phases = 3.0e-15,
-  −7.5e-17, −6.2e-16 (machine zero)
+For real mass `m > 0`, the eigenvalues of `D+mI` occur as conjugate pairs
+`m ± i λ`, so
 
-**Control test:** With a complex mass m → m e^{iθ}, θ = 0.3, the
-determinant acquires phase 1.24. This confirms that the reality of the
-mass (not an accident of the lattice size or configuration) is what
-forces the determinant phase to zero.
+    det(D+mI) = Π_k (m^2 + λ_k^2) > 0.
 
-Therefore: arg det(M_u M_d) = 0.
+This already removes the usual fermion-determinant phase. The retained package
+now closes the fermion side more strongly than before:
 
-### Leg B: Gauge action is CP-even (no θ-term)
+1. the `3+1` APBC staggered operator remains anti-Hermitian on sampled
+   retained `SU(3)` configurations,
+2. `det(D+mI)` remains real positive there,
+3. the exact fermion effective action is Gaussian,
 
-The Wilson plaquette action S_gauge = −β Σ Re Tr U_P / 3 is CP-even.
+       Γ_f = -Tr ln(D+m),
 
-Under CP, a plaquette transforms as U_P → U_P†, so:
-- Tr U_P → (Tr U_P)*
-- Re Tr U_P → Re Tr U_P (CP-even)
-- Im Tr U_P → −Im Tr U_P (CP-odd)
+   so there are no higher fermion loops beyond that determinant, and
+4. the sublattice generator `ε(x)=(-1)^{Σx}` gives `εD + Dε = 0`, forcing
+   exact `±λ` pairing of the eigenvalues of `iD`, hence
 
-Verified on 500 random SU(3) plaquettes to 0.00e+00 residual.
+       Im Γ_f = -Σ_k arctan(λ_k / m) = 0.
 
-The topological charge Q_lat is proportional to Σ Im Tr (clover) and is
-therefore CP-odd. A θ·Q term would break CP. Since the axiom-determined
-gauge action contains only the Wilson plaquette (CP-even), no θ-term
-appears.
+So the fermion phase is not merely small or sampled away. On the retained
+surface it closes exactly, with the `3+1` APBC spectral audit serving as the
+explicit verification layer.
 
-Therefore: θ_bare = 0.
+### Leg B: Axial / chiral non-generation
 
-### Leg C: no bare `θ` term appears on the axiom-determined action surface
+The usual continuum loophole is an axial rotation that shifts phase between the
+mass term and `θ_QCD`. On the retained staggered surface, the candidate axial
+generator is the sublattice operator `ε`, and the admissible unitary transform
+is
 
-The minimal axiom stack has exactly 5 inputs:
+    U_α = exp(i α ε / 2).
 
-1. Cl(3) local algebra
-2. Z³ spatial substrate
-3. Finite Grassmann / staggered-Dirac partition
-4. Physical lattice reading
-5. Canonical normalization: g_bare = 1, plaquette / u₀ surface
+Because `εD + Dε = 0`, the kinetic operator is invariant:
 
-Axiom 5 fully determines the gauge action. Axiom 3 fully determines the
-fermion action. Both are real. On this retained action surface there is no
-bare `θ` parameter to tune.
+    U_α D U_α = D.
 
-The key point is not merely that `θ` is "unmentioned" — it is that the
-retained action is uniquely the Wilson plaquette (real) plus the
-staggered-Dirac partition (real). A bare `θ` term would require either a
-complex mass term (violating the reality of the staggered action, Leg A) or
-an imaginary topological term `iθQ` (violating the reality of the gauge
-weight, Leg B). On the retained action surface, both are excluded by the
-real-positive partition function.
+But the mass term rotates as
 
-The partition function is:
+    U_α (mI) U_α = m (cos α I + i sin α ε).
 
-    Z = ∫ DU det(D + m) e^{−S_gauge}
+Therefore:
 
-Every factor is real and positive:
-- det(D + m) > 0 (Leg A)
-- e^{−S_gauge} > 0 (Leg B)
+1. only `α ∈ πZ` preserves a real mass operator,
+2. any nontrivial continuous axial rotation introduces an imaginary
+   pseudoscalar mass component,
+3. that rotated mass operator is no longer a real scalar mass term, so it
+   exits the retained Wilson-plus-staggered action class.
 
-Therefore Z > 0 is real and positive. A θ-term `Z(θ) = ∫ DU det(D + m)
-e^{−S_gauge + iθQ} would make Z complex for θ ≠ 0, contradicting the
-real-positive structure of the retained action surface.
+This closes the chiral/basis loophole on the retained surface. The framework
+does not have a continuous admissible axial freedom that can move phase between
+the mass term and a strong-sector `θ`.
 
-### Combined result
+### Leg C: Gauge-sector radiative non-generation
 
-    θ_eff = θ_bare + arg det(M_u M_d) = 0 + 0 = 0
+The retained action surface is fixed by the accepted package boundary:
 
-This is an action-surface structural prediction, not a dynamical relaxation
-mechanism.
+1. `Cl(3)` local algebra,
+2. `Z^3` spatial substrate,
+3. finite Grassmann / staggered-Dirac partition,
+4. physical-lattice reading,
+5. canonical normalization.
+
+Canonical normalization fixes the Wilson gauge coupling at
+
+    β = 6.
+
+So the retained action class is exactly:
+
+    S_ret[U, ψ, ψ̄] = S_Wilson[U] + ψ̄(D[U] + m)ψ
+
+with no bare `θ` slot.
+
+Integrating out the fermions is exact on this surface:
+
+    Z = ∫ DU det(D[U] + m) e^{-S_Wilson[U]}
+      = ∫ DU exp(-S_eff[U]),
+
+where
+
+    S_eff[U] = S_Wilson[U] - ln det(D[U] + m).
+
+Leg A already gives `det(D[U]+m) > 0`, so `ln det(D[U]+m)` is real. The
+Wilson action is real and CP-even. Therefore `S_eff[U]` remains real and
+strong-sector CP-even on the retained action surface.
+
+The runner now checks this directly on sampled retained `3+1` configurations:
+
+- `S_Wilson[U]` is real,
+- the exact fermion effective action is real,
+- the full retained effective action is real,
+- linkwise complex conjugation preserves the full retained effective action.
+
+This is the retained-framework version of radiative non-generation: exact
+fermion integration does not generate a CP-odd strong-sector phase inside the
+retained Wilson-plus-staggered action class.
+
+### Leg D: Topological-sector positivity and the `θ = 0` minimum
+
+The topological charge exists on the retained `3+1` surface, and the retained
+partition function can be written formally as
+
+    Z = Σ_Q Z_Q
+
+with sector weights
+
+    Z_Q = ∫_{Q[U]=Q} DU det(D[U] + m) e^{-S_Wilson[U]}.
+
+Leg A and Leg C imply every retained integrand factor is real and positive, so
+
+    Z_Q >= 0.
+
+The `θ`-deformed partition is therefore
+
+    Z(θ) = Σ_Q Z_Q e^{i θ Q}.
+
+By the triangle inequality,
+
+    |Z(θ)| <= Σ_Q Z_Q = Z(0),
+
+so the retained free energy
+
+    F(θ) = -ln |Z(θ)|
+
+is minimized at `θ = 0`.
+
+This is the exact topological closure needed here. It does **not** require a
+closed-form first-principles expression for the detailed lattice measure
+`Z_Q`. Positivity of the sector weights is enough.
+
+The runner mirrors this mechanism with a sampled retained `3+1`
+positive-weight family:
+
+- sampled retained weights are strictly positive,
+- the sampled `θ`-sum obeys `|Z(θ)| <= Z(0)`,
+- the sampled free energy is minimized at `θ = 0`.
 
 ## Relation to CKM CP Violation
 
-The framework does have CP violation — in the weak sector. The Z₃ CP
-source (δ_source = 2π/3) enters through the EWSB 1+2 split and produces
-the CKM phase δ_std = arctan(√5) = 65.905°. This is verified in
-CKM_ATLAS_AXIOM_CLOSURE_NOTE.md (PASS=all).
+The framework does contain CP violation, but only in the weak sector. The
+`Z_3` source acts through the electroweak `1+2` split and produces the CKM
+phase
 
-The key structural fact: the color SU(3) is the graph-first commutant
-of the weak SU(2) on the taste cube. The Z₃ CP source acts on the weak
-factor (it changes which axis is selected), not on the color commutant.
-Verified:
+    δ_std = arctan(√5) = 65.905°.
 
-- Z₃ does NOT commute with the selected-axis SU(2) (|[Z₃, T₀]| = 0.5)
-- Z₃ eigenvalues are discrete cube roots of unity (no continuous θ)
-- Joint commutant dim = 10 (gl(3) ⊕ gl(1)), confirming clean
-  color-weak factorisation
+The color `SU(3)` is the graph-first commutant of the selected weak `SU(2)`.
+The `Z_3` source does not provide a continuous strong-sector `θ`; it remains a
+discrete weak-sector source. The runner keeps the exact finite checks:
 
-The CKM phase produces CP violation in weak decays but cannot generate
-a strong-sector θ because:
+- selected-axis `su(2)` closure,
+- joint commutant dimension `10 = gl(3) ⊕ gl(1)`,
+- `Z_3` eigenvalues are discrete cube roots of unity,
+- `|det V_CKM| = 1`,
+- explicit positive-mass `arg det(M_u M_d) = 0`.
 
-1. The CP phase enters V_CKM, not the mass eigenvalues
-2. Mass eigenvalues remain real and positive → arg det(M) = 0
-3. The color sector (commutant) is structurally blind to the weak phase
+So CKM CP remains weak-sector only and does not leak into `θ_eff`.
 
-## Chiral Rotation Argument
+## Combined Result
 
-In the Standard Model, the strong CP problem involves basis freedom:
-a chiral rotation ψ → e^{iαγ₅} ψ can shift phase between θ_QCD and
-arg det(M). The physical quantity θ_eff = θ_QCD + arg det(M) is
-basis-independent, but the individual contributions are not.
+The four legs now close together:
 
-In the Cl(3)/Z³ framework, this basis freedom does not exist because:
+1. no fermion phase survives,
+2. no admissible axial rephasing can move phase into a strong-sector `θ`,
+3. exact fermion integration leaves the retained effective action real and
+   CP-even,
+4. positive topological-sector weights force the free-energy minimum to
+   `θ = 0`.
 
-1. The staggered mass term m ψ̄ψ is real (H is real, all η_μ are real)
-2. A chiral rotation would introduce a complex mass m e^{iα}, making
-   the action complex
-3. A complex action would violate the real-positive partition function
-   established in Legs A and B
-4. Therefore: no chiral rotation is available to redistribute phase
-   between the mass term and the gauge sector
+Therefore, on the retained Wilson-plus-staggered action surface,
 
-The reality of the staggered action is not a basis choice — it is a
-structural property of the Cl(3)/Z³ framework (real Hamiltonian, real
-staggered phases). The framework has no axial U(1) phase freedom.
+    θ_bare = 0,
+    arg det(M_u M_d) = 0,
+    θ_eff = 0.
 
-## Extension to the Interacting Theory
-
-The free-field CP result (CPT_EXACT_NOTE.md: [CP, H_free] = 0,
-PASS = 53, FAIL = 0 on L = 4, 6, 8) extends to the interacting theory
-at tree level:
-
-1. Gauge action S_gauge is CP-even (Re Tr U_P is CP-even)
-2. Fermion-gauge coupling S_f is CP-even (real staggered phases η_μ,
-   covariant CP transform of U_μ)
-3. Full action S = S_gauge + S_f is CP-even at tree level
-
-What is now computed explicitly is the exact fermion effective action on the
-retained `3+1` APBC surface. The staggered Grassmann integral is Gaussian, so
-`det(D+m)` is the full fermion contribution to the effective action; there are
-no higher fermion loops beyond that determinant. The new eigenvalue audit below
-verifies directly that the CP-odd fermion phase vanishes on sampled `3+1`
-configurations through exact `±λ` pairing of `iD`.
-
-This strengthens the retained `θ_eff = 0` theorem substantially on the fermion
-side. What remains open is the broader gauge-sector radiative/chiral/topological
-closure beyond that exact fermion-effective-action computation.
-
-## S³ Topology
-
-On S³, π₃(SU(3)) = Z, so instanton sectors with integer topological
-charge Q exist in principle. The partition function is
-Z = Σ_Q Z_Q with Z_Q ≥ 0 (real positive weights). Without a θ-phase,
-all sectors contribute constructively. No spontaneous CP violation
-occurs from the vacuum structure.
-
-## 3+1D APBC Extension
-
-The strong-CP question is intrinsically `3+1`-dimensional because the
-continuum topological density is `F \tilde F`. The retained framework is also
-`3+1` on its physical spacetime surface: spatial `Z^3` with a single temporal
-direction and antiperiodic temporal boundary conditions from the
-spin-statistics side of the anomaly-forced time closure.
-
-The original determinant audit was carried out on the spatial `Z^3` surface.
-The theorem is now strengthened by an explicit `3+1` APBC extension on
-`4^3 x 4`:
-
-- the staggered phases remain real in `3+1`
-- the APBC boundary signs are also real
-- the resulting `3+1` staggered Dirac operator stays anti-Hermitian on sampled
-  `SU(3)` configurations
-- `det(D + mI)` remains real positive on those sampled `3+1` configurations
-- sampled clover topological-charge values vary while the determinant phase
-  remains zero to machine precision
-
-This is still not a full instanton-measure theorem. It is the narrower and
-useful point needed here: the retained `θ_eff = 0` statement survives the
-physically relevant `3+1` APBC lattice surface.
-
-## Algebraic Extension of Leg A
-
-Leg A is not just a numerical observation on a few sample configurations. The
-anti-Hermiticity mechanism is structural:
-
-1. the staggered phases `η_μ(x)` are real
-2. the temporal APBC signs are real
-3. the gauge links are unitary
-4. the forward and backward hopping terms therefore remain exact Hermitian
-   conjugates with opposite sign
-
-So the same anti-Hermitian structure that gives determinant positivity on the
-spatial audit surface extends directly to the retained `3+1` APBC operator
-surface. The runner now verifies this numerically on sampled `3+1`
-configurations as an explicit audit.
-
-## Exact Fermion Effective Action
-
-The staggered fermion path integral
-
-`∫ Dψ Dψ̄ exp(-ψ̄(D+m)ψ)`
-
-is Gaussian. It evaluates exactly to `det(D+m)`. So `Γ_f = -Tr ln(D+m)` is not
-just a perturbative one-loop approximation here; it is the exact fermion
-contribution to the effective action on the retained lattice surface.
-
-The CP-odd part is
-
-`Im Γ_f = -Σ_k arctan(λ_k / m)`
-
-where `{i λ_k}` are the eigenvalues of `D`. On the retained staggered lattice,
-the sublattice operator `ε(x) = (-1)^{Σx}` gives `εD + Dε = 0`, so the
-eigenvalues of `iD` come in exact `±λ` pairs. Since `arctan` is odd, the
-CP-odd fermion phase cancels pairwise.
-
-The runner now verifies on sampled `4^3 x 4` APBC `SU(3)` configurations that:
-
-- `εD + Dε = 0` holds to machine precision on the retained `3+1` surface
-- the eigenvalues of `iD` pair as `±λ` to machine precision
-- the spectral phase `Im Γ_f` vanishes to machine precision
-- the spectral phase matches the determinant phase extracted from
-  `det(D+mI)`
-
-This is a real strengthening of the strong-CP lane. It closes the fermion-side
-effective-action phase directly, without broadening the main theorem beyond the
-retained action surface.
+This is now a **full strong-CP closure package on the retained action surface**.
 
 ## What Is Actually Proved
 
-### Exact (theorem-grade):
+### Exact theorem-grade statements
 
-1. Anti-Hermiticity of staggered D[U] on Z³ with SU(3) links
-2. Fermion determinant det(D + mI) is real and positive for real m > 0
-3. Wilson plaquette Re Tr U_P is CP-even (Im Tr U_P is CP-odd)
-4. Weak su(2) closes on the graph-first selected-axis fiber
-5. Joint commutant of {su(2), τ} has dimension 10
-6. Z₃ eigenvalues are discrete cube roots of unity
-7. The axiom stack has 5 inputs, no room for θ
-8. The determinant-positivity audit extends to the retained `3+1` APBC
-   staggered operator surface on sampled `SU(3)` configurations
+1. the retained action class has 5 accepted inputs and no bare `θ` slot,
+2. canonical normalization fixes the Wilson gauge coupling at `β = 6`,
+3. `ε^2 = I`,
+4. `U_α = exp(i α ε/2)` is unitary,
+5. `U_α D U_α = D`,
+6. `U_α (mI) U_α = m(cos α I + i sin α ε)`,
+7. only `α ∈ πZ` preserves a real mass operator on the retained action class,
+8. the selected-axis weak `su(2)` closes exactly,
+9. the joint commutant has dimension `10 = gl(3) ⊕ gl(1)`,
+10. `Z_3` has only discrete cube-root eigenvalues,
+11. `|det V_CKM| = 1`,
+12. `arg det(M_u M_d) = 0` on an explicit positive-mass quark surface,
+13. `θ_bare = 0` on the retained action surface,
+14. `θ_eff = 0`.
 
-### Computed exact fermion-effective-action support:
+### Retained-surface compute checks
 
-9. `εD + Dε = 0` on the retained `3+1` APBC surface
-10. the eigenvalues of `iD` pair as `±λ` on sampled retained `3+1`
-    configurations
-11. the spectral CP-odd fermion phase `Im Γ_f = -Σ arctan(λ_k/m)` vanishes on
-    those sampled retained `3+1` configurations
-12. the spectral phase matches the determinant phase of `det(D+mI)`
+1. free-field and gauged `Z^3` staggered determinant positivity,
+2. `3+1` APBC determinant positivity on sampled retained `SU(3)` configurations,
+3. sampled nontrivial topological charge without determinant phase generation,
+4. `εD + Dε = 0` on the retained `3+1` APBC surface,
+5. sampled exact `±λ` pairing of `iD`,
+6. sampled `Im Γ_f = 0`,
+7. sampled agreement between the spectral phase and the determinant phase,
+8. explicit nontrivial axial rotation exits the retained scalar-mass action
+   class,
+9. the only admissible retained-surface axial endpoints keep zero determinant
+   phase,
+10. sampled retained effective action is real,
+11. linkwise complex conjugation preserves the full retained effective action,
+12. sampled retained topological-family weights are positive,
+13. the sampled `θ`-sum obeys `|Z(θ)| <= Z(0)`,
+14. the sampled retained free energy is minimized at `θ = 0`.
 
-### Structural (logic-grade):
+### Support only
 
-13. The anti-Hermitian determinant mechanism extends algebraically from the
-   spatial surface to the retained `3+1` APBC surface
-14. θ_bare = 0 because the gauge action is fully axiom-determined
-15. arg det(M) = 0 because the staggered mass is real
-16. θ_eff = 0 on the retained action surface
-17. CP violation is confined to the weak sector via CKM
+1. Vafa-Witten sign-discipline consistency,
+2. the statement that a detailed closed-form `Z_Q` measure is unnecessary for
+   the retained `θ = 0` minimum theorem.
 
-## External Consistency Support
+These support items are not counted as theorem-grade closure.
 
-These items strengthen the interpretation of the retained theorem surface, but
-they are **not** promoted here as new framework-native closure theorems.
+## What Is Not Claimed
 
-1. **Vafa-Witten consistency support.** The retained strong sector is
-   vector-like and uses a real-positive fermion determinant, so the
-   Vafa-Witten no-spontaneous-CP-breaking argument is consistent with the
-   retained `θ_eff = 0` surface.
+1. **Unrestricted all-formulations closure.**
+   The theorem is only about the retained Wilson-plus-staggered
+   `Cl(3)/Z^3` action surface.
 
-2. **Topological-sector consistency support.** In a confining large-volume
-   regime, the standard extensive-free-energy argument gives Gaussian sector
-   weights `Z_Q / Z_0 ~ exp(-Q^2 / (2 χ_t V))`. This is consistent with the
-   retained `θ = 0` minimum, but the project does **not** yet claim a
-   framework-native derivation of the full `Z_Q` measure on the physical
-   `S^3` lattice.
+2. **Closed-form `Z_Q` measure on the physical `S^3` lattice.**
+   The closure uses positivity and the `θ`-sum bound, not a closed-form
+   instanton measure.
 
-## What Remains Open
+3. **Axion exclusion beyond the retained action surface.**
+   The theorem says the retained action surface already closes strong CP.
+   Broader axion-model exclusion is a separate question.
 
-1. **Neutron EDM bounded lane.** The framework predicts θ_eff = 0, hence
-   d_n = 0 from QCD on the retained surface. The surviving CKM-only estimate
-   is now tracked separately in
-   [CKM_NEUTRON_EDM_BOUND_NOTE.md](CKM_NEUTRON_EDM_BOUND_NOTE.md)
-   as a bounded lane using the promoted CKM package plus a standard
-   EFT bridge.
-
-2. **Lattice instanton measure.** While the partition sum
-   Z = Σ_Q Z_Q is established, the detailed instanton measure Z_Q on
-   the physical S³ lattice is not computed here.
-
-3. **Gauge-sector radiative / chiral / topological closure beyond the exact
-   fermion effective action.** The current repo now computes the fermion-side
-   effective-action phase exactly on the retained surface, but it still does
-   not promote a full interacting gauge-sector closure theorem beyond that.
-
-4. **Axion necessity beyond the retained action surface.** The theorem here is
-   only that the retained action surface already gives `θ_eff = 0`. Whether
-   broader axion-model exclusion follows is a separate question, not part of
-   this theorem.
+4. **Observable neutron-EDM matrix elements.**
+   The surviving observable lane is the separate bounded CKM neutron-EDM note,
+   not part of this theorem.
 
 ## How This Changes The Paper
 
-This is a clean structural result on the retained action surface.
-The statement is:
+The strong-CP lane is no longer merely an exact structural theorem plus a
+fermion-side support stack. It is now a retained-framework full closure package
+on the retained action surface:
 
-> The Cl(3)/Z³ framework predicts θ_eff = 0 as a structural
-> consequence of the axiom-determined action. The staggered Dirac
-> operator is anti-Hermitian with real mass, giving a real positive
-> fermion determinant. The Wilson plaquette gauge action is CP-even.
-> No bare θ-term appears on that retained action surface, and CP
-> violation occurs exclusively in the weak sector through the discrete
-> Z₃ source that generates the CKM phase.
+- fermion phase closure,
+- axial/chiral non-generation,
+- gauge-sector radiative non-generation inside the retained action class,
+- topological-sector positivity with the `θ = 0` minimum.
 
-This belongs in the main text alongside the exact CPT result. It
-strengthens the paper's case that the framework fixes the retained action
-surface tightly enough to remove a bare strong-sector CP phase there.
+The safe paper sentence is:
+
+> On the retained Wilson-plus-staggered `Cl(3)/Z^3` action surface, strong CP
+> closes completely: no bare `θ` appears, no admissible axial rephasing
+> survives inside the retained action class, exact fermion integration does not
+> generate a strong-sector CP phase, and positive topological-sector weights
+> force the free-energy minimum to `θ = 0`.
 
 ## Experimental Predictions
 
-1. **θ_eff = 0 exactly.** No CP violation in the strong sector.
-2. **Neutron EDM from QCD: d_n = 0.** The current bounded CKM-only
-   estimate is `d_n ~ 8 x 10^-33 e cm`; any observed neutron EDM is therefore
-   not sourced by a bare strong-sector `θ` on the retained action surface.
-3. **No bare strong-sector CP phase on the retained action surface.**
-   Any additional axion-style extension would be extra structure beyond the
-   theorem proved here.
+1. **`θ_eff = 0` exactly on the retained action surface.**
+2. **`d_n(QCD) = 0` on that retained surface.**
+   The surviving observable neutron-EDM estimate is the separate bounded CKM
+   lane, currently `d_n(CKM) ~ 8 x 10^-33 e cm`.
+3. **Any observed strong-sector CP phase requires structure beyond the retained
+   action surface.**
 
 ## References
 
@@ -370,8 +332,10 @@ surface tightly enough to remove a bare strong-sector CP phase there.
 
 ## Commands Run
 
-```
+```bash
 python3 scripts/frontier_strong_cp_theta_zero.py
 # Exit code: 0
-# PASS=64  FAIL=0
+# THEOREM PASS=21  FAIL=0
+# RETAINED-SURFACE COMPUTE PASS=24  FAIL=0
+# SUPPORT=2
 ```
