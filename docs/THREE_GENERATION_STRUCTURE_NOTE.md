@@ -38,8 +38,9 @@ This is the safe retained statement used in the current paper package.
    of the same accepted framework stack and cannot preserve the accepted fixed
    quantitative surface; it also closes the stronger statement that no
    nontrivial regulator-style family preserves both accepted live invariants
-   `alpha_s(v)` and `v`. It still leaves the physical-lattice premise itself
-   explicit rather than derived.
+   `alpha_s(v)` and `v`, and therefore that the physical-lattice reading is
+   forced once the retained package contract is imposed. It still leaves the
+   physical-lattice premise itself explicit rather than derived.
 
 ## Boundary
 

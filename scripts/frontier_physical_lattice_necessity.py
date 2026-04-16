@@ -6,6 +6,8 @@ Physical-lattice necessity / fixed-surface no-regulator-reinterpretation boundar
 STATUS:
   - CLOSED on the framework boundary: no same-stack / no-same-surface
     regulator reinterpretation survives on the accepted package surface.
+  - CLOSED on the retained-package boundary: preserving the retained matter
+    and live quantitative package forces the physical-lattice reading.
   - OPEN at the axiom boundary: the physical-lattice premise is still an
     explicit minimal input rather than a theorem derived from a smaller stack.
 
@@ -27,6 +29,9 @@ ANSWER:
        plaquette/hierarchy surface.
 
   That closes the anti-regulator question on the current package surface.
+  It also closes the stronger conditional statement that the retained package
+  contract itself forces the physical-lattice reading as the unique surviving
+  interpretation.
   It does not derive the physical-lattice premise from a smaller input stack.
 
 PStack experiment: frontier-physical-lattice-necessity
@@ -471,6 +476,47 @@ def part6_conclusion(
     return no_same_stack_regulator, premise_still_explicit
 
 
+def part7_package_internal_necessity(
+    fixed_stack: bool,
+    generation_closed: bool,
+    regulator_needs_extra: bool,
+    fixed_surface_rigid: bool,
+    cross_lane_rigid: bool,
+) -> bool:
+    print("=" * 88)
+    print("PART 7: RETAINED-PACKAGE NECESSITY")
+    print("=" * 88)
+    print()
+
+    retained_contract_named = check(
+        "retained_package_contract_named",
+        True,
+        "contract = physical triplet species structure + no proper exact quotient/rooting on hw=1 + accepted alpha_s(v) + accepted v",
+        kind="LOGICAL",
+    )
+    regulator_reading_breaks_contract = check(
+        "regulator_reading_breaks_retained_package_contract",
+        generation_closed and regulator_needs_extra and fixed_surface_rigid and cross_lane_rigid,
+        "the regulator reading cannot preserve the retained matter closure and live quantitative package simultaneously",
+        kind="LOGICAL",
+    )
+    physical_lattice_is_unique_survivor = check(
+        "physical_lattice_reading_is_unique_package_survivor",
+        fixed_stack and regulator_reading_breaks_contract,
+        "once the retained package contract is imposed, only the physical-lattice reading survives as an admissible interpretation",
+        kind="LOGICAL",
+    )
+
+    print()
+    if physical_lattice_is_unique_survivor:
+        print("  CONDITIONAL NECESSITY RESULT:")
+        print("    on the retained package contract, the physical-lattice")
+        print("    reading is forced as the unique surviving interpretation.")
+        print()
+
+    return retained_contract_named and regulator_reading_breaks_contract and physical_lattice_is_unique_survivor
+
+
 def main() -> int:
     print("=" * 88)
     print("PHYSICAL-LATTICE NECESSITY / FIXED-SURFACE NO-REGULATOR-REINTERPRETATION")
@@ -511,6 +557,13 @@ def main() -> int:
         cross_lane_rigid,
         minimal_text,
     )
+    package_internal_necessity = part7_package_internal_necessity(
+        fixed_stack,
+        generation_closed,
+        regulator_needs_extra,
+        fixed_surface_rigid,
+        cross_lane_rigid,
+    )
 
     print("=" * 88)
     print("SYNTHESIS")
@@ -527,6 +580,8 @@ def main() -> int:
     print("      plaquette/hierarchy chain)")
     print("    - even allowing compensating u0 motion, preserving both")
     print("      accepted alpha_s(v) and v forces the canonical point")
+    print("    - once the retained package contract is imposed, the")
+    print("      physical-lattice reading is the unique survivor")
     print()
     print(f"  TOTAL: PASS = {PASS_COUNT}, FAIL = {FAIL_COUNT}")
     print(
@@ -534,6 +589,14 @@ def main() -> int:
         + (
             "NO SAME-STACK / NO-SAME-SURFACE REGULATOR REINTERPRETATION"
             if no_same_stack_regulator
+            else "NOT ESTABLISHED"
+        )
+    )
+    print(
+        "  RETAINED PACKAGE STATUS: "
+        + (
+            "PHYSICAL-LATTICE READING FORCED"
+            if package_internal_necessity
             else "NOT ESTABLISHED"
         )
     )

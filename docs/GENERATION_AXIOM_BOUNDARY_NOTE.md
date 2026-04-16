@@ -19,8 +19,10 @@ More precisely:
 - that axiom is irreducible: it is not derivable from the other algebraic and dynamical axioms
 - the newer
   [PHYSICAL_LATTICE_NECESSITY_NOTE.md](./PHYSICAL_LATTICE_NECESSITY_NOTE.md)
-  now closes the narrower but important point that this regulator reading is
-  **not** an equivalent reading of the same accepted framework stack
+  now closes the stronger retained-package point that this regulator reading is
+  **not** an equivalent reading of the same accepted framework stack and that,
+  once the retained matter closure plus live `alpha_s(v)`/`v` package are
+  imposed, the physical-lattice reading is the unique surviving interpretation
 
 ## Why this belongs in the toolbox
 
@@ -58,8 +60,8 @@ The clean current division of labor is:
   exact retained-generation no-proper-quotient theorem
 - [PHYSICAL_LATTICE_NECESSITY_NOTE.md](./PHYSICAL_LATTICE_NECESSITY_NOTE.md):
   exact no-same-stack / no-same-surface regulator reinterpretation closure,
-  while keeping the physical-lattice premise itself explicit rather than
-  derived
+  plus retained-package conditional necessity, while keeping the
+  physical-lattice premise itself explicit rather than derived
 
 ## Validation
 

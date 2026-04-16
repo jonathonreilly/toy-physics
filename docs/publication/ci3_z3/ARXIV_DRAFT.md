@@ -352,8 +352,9 @@ stack, and it cannot preserve the accepted canonical quantitative surface
 `g_{\mathrm{bare}}=1`, `\beta=6`, and the same-surface plaquette/hierarchy
 chain. More strongly, even allowing compensating `u_0` motion, any
 regulator-style family preserving both accepted `\alpha_s(v)` and `v`
-collapses to the canonical point. Detailed inter-family hierarchy and flavor
-numerics are separate questions.
+collapses to the canonical point. So on the retained package contract the
+physical-lattice reading is the unique surviving interpretation. Detailed
+inter-family hierarchy and flavor numerics are separate questions.
 
 Figure 4 shows the exact orbit structure together with the physical-lattice
 interpretation that sets the paper’s three-generation claim boundary.

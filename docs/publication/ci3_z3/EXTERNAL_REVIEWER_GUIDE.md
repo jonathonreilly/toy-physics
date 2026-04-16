@@ -117,8 +117,9 @@ Current status from that stack:
   framework stack and cannot preserve the accepted canonical quantitative surface
   (`g_bare = 1`, `beta = 6`, plaquette/hierarchy chain), and any
   regulator-style family preserving both accepted `alpha_s(v)` and `v` is
-  trivial at the canonical point; the physical-lattice premise itself remains
-  explicit
+  trivial at the canonical point; on that retained package contract the
+  physical-lattice reading is the unique surviving interpretation, while the
+  physical-lattice premise itself remains explicit
 - derived-with-inherited-explicit-systematic Higgs / vacuum package:
   canonical `m_H = 125.1 GeV` (framework-side 3-loop route),
   with retained `119.8 GeV` (2-loop support route),

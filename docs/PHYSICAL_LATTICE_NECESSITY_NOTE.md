@@ -2,8 +2,9 @@
 
 **Date:** 2026-04-16
 **Status:** exact support theorem on the framework boundary; retained
-no-same-stack / no-same-surface regulator reinterpretation closure, with the
-physical-lattice premise itself still explicit
+no-same-stack / no-same-surface regulator reinterpretation closure, plus
+retained-package conditional necessity, with the physical-lattice premise
+itself still explicit
 **Script:** `scripts/frontier_physical_lattice_necessity.py`
 **Authority role:** canonical support note for the physical-lattice /
 regulator boundary on the current `main` branch
@@ -18,12 +19,17 @@ There are two different targets:
 1. **No-same-stack / no-same-surface regulator reinterpretation.**
    Can the current accepted framework stack be re-read as an ordinary regulator
    theory without adding new structure?
-2. **Axiom-internal necessity.**
+2. **Retained-package necessity.**
+   If the retained matter closure and live quantitative package are required to
+   stay true, is the physical-lattice reading then forced as the unique
+   surviving interpretation?
+3. **Axiom-internal necessity.**
    Can the physical-lattice reading itself be derived from a smaller set of
    accepted inputs?
 
-The current package now closes the first target cleanly, and it closes it more
-strongly than a pure wording objection. It does **not** yet close the second.
+The current package now closes the first target cleanly, and it closes the
+second conditionally on the retained package contract. It does **not** yet
+close the third.
 
 ## Safe statement
 
@@ -58,6 +64,16 @@ Therefore regulator reinterpretation is **not** a mere restatement of the
 accepted framework. It is a different theory package obtained by adjoining
 extra structure and by leaving the accepted fixed evaluation surface.
 
+Moreover, once the retained package contract is imposed
+
+- physical triplet species structure,
+- no proper exact quotient/rooting on the retained `hw=1` generation surface,
+- accepted `alpha_s(v)`,
+- accepted `v`,
+
+the physical-lattice reading is the unique surviving interpretation on the
+current package surface.
+
 What remains open is narrower:
 
 - the physical-lattice reading is still a minimal framework input;
@@ -79,7 +95,10 @@ reinterpreted as regulator lattice QFT without changing the theory.
 
 This note shows the answer is **no** on the current accepted stack, and it
 shows why in the stronger sense that the regulator-family reading does not
-preserve the current quantitative package surface.
+preserve the current quantitative package surface. It also upgrades the
+physical-lattice reading from a bare premise to a retained-package necessity
+statement: once the live retained package is fixed, no alternative surviving
+interpretation remains.
 
 ## The theorem
 
@@ -110,8 +129,9 @@ preserve the current quantitative package surface.
 > licensed by that stack, and any regulator-family deformation leaves the
 > accepted canonical quantitative surface. Moreover, preserving the accepted
 > live package invariants `alpha_s(v)` and `v` forces the canonical point
-> `beta = 6`, `u_0 = u_{0,\mathrm{can}}`. It is not an equivalent reading of
-> the same accepted framework surface.
+> `beta = 6`, `u_0 = u_{0,\mathrm{can}}`. So on the retained package contract,
+> the physical-lattice reading is the unique surviving interpretation. It is
+> not an equivalent reading of the same accepted framework surface.
 
 ## Proof skeleton
 
@@ -242,6 +262,31 @@ This closes the anti-regulator question on the current package surface:
 > the framework cannot be dismissed as “just ordinary regulator lattice QFT”
 > without first changing its input stack.
 
+### 7. Retained-package conditional necessity
+
+The stronger consequence is not yet a derivation from a smaller axiom set, but
+it is still a real necessity theorem.
+
+If one requires the current retained package contract
+
+- physical `hw=1` triplet species structure,
+- no proper exact quotient/rooting on the retained generation surface,
+- accepted `alpha_s(v)`,
+- accepted `v`,
+
+then the regulator reading does not survive. The previous sections show:
+
+- it requires extra continuum/rooting/RG structure;
+- it leaves the accepted fixed quantitative surface;
+- even with compensating `u_0` motion, it cannot preserve both accepted live
+  invariants `alpha_s(v)` and `v` except at the canonical point.
+
+Therefore the physical-lattice reading is forced as the unique surviving
+interpretation **on the retained package contract**.
+
+That is stronger than an objection handler. It is a conditional necessity
+result on the current package surface.
+
 ## What this closes
 
 This note now closes a stronger exact point than the older audit did:
@@ -254,6 +299,8 @@ This note now closes a stronger exact point than the older audit did:
 - any regulator-style family preserving the accepted live package invariants
   `alpha_s(v)` and `v` is trivial at the canonical point
   `beta = 6`, `u_0 = u_{0,\mathrm{can}}`;
+- once the retained matter closure and live quantitative package are imposed,
+  the physical-lattice reading is the unique surviving interpretation;
 - the retained three-generation matter result is no longer vulnerable to a
   same-stack quotient/rooting reinterpretation.
 
@@ -270,6 +317,8 @@ This note does **not** claim:
 The residual honest boundary is:
 
 - **closed:** no same-stack / no-same-surface regulator reinterpretation;
+- **closed:** retained-package conditional necessity of the physical-lattice
+  reading;
 - **still open:** full axiom-internal necessity of the physical-lattice premise.
 
 ## Promotion rule
@@ -291,6 +340,9 @@ It also exposes reusable fixed-surface subtools:
 - the one-parameter corollary that on the canonical `u_0` surface,
   `alpha_s(v; beta) / alpha_s(v; 6) = 6 / beta` and
   `v(beta) / v(6) = (6 / beta)^16`.
+- the retained-package necessity statement that the physical-lattice reading is
+  the unique surviving interpretation once the retained package contract is
+  imposed.
 
 If a future theorem derives the physical-lattice premise itself from a smaller
 accepted stack, this note should then be upgraded from boundary theorem to
