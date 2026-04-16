@@ -258,7 +258,7 @@ Nobel-scale score.
   - Missing: a cleaner universal vector sector and broader portability of the
     non-scalar branches beyond the current core
 
-- `3.0/10` A true inertial-object / persistent-mass sector
+- `4.0/10` A true inertial-object / persistent-mass sector
   - Current: detector-readable packet memory and broad-surrogate steering are
     still real narrower positives, the first direct Gaussian packet
     matter/inertial closure attempt is a decisive retained negative, and now a
@@ -267,10 +267,12 @@ Nobel-scale score.
     blended readout, with that same branch now surviving most of a second ring
     before hitting a mapped inward-source boundary; the stronger multistage
     floor sweep now says `top3` was too narrow and `top4` is the first
-    self-maintaining multistage floor on the stable widened branch
-  - Missing: transfer of that `top4` multistage floor across the widened local
-    pocket and a true persistent inertial-mass law rather than one bounded
-    exact-lattice local branch;
+    self-maintaining multistage floor on the stable widened branch, and the
+    new transfer sweep says that `top4` floor survives on `11/13` widened-
+    pocket rows with only a residual inward-source boundary
+  - Missing: full local-pocket universality and transfer beyond the current
+    widened pocket, plus a true persistent inertial-mass law rather than one
+    bounded exact-lattice local branch;
     Gaussian packet + uniform force is now a closed negative route rather than
     a near miss
 
@@ -500,8 +502,10 @@ The main upward pressures since the first cut are:
   nearby cases, and then survives on `4/5` second-ring cases before closing on
   a mapped inward-source boundary; the multistage floor sweep then sharpens the
   route further: `top3` is too narrow, but `top4` is the first self-maintaining
-  multistage floor on the stable widened branch; the remaining bottleneck is
-  now transfer of that multistage `top4` floor across the wider local pocket,
+  multistage floor on the stable widened branch; the new transfer sweep then
+  upgrades that again: the `top4` floor is open on `11/13` widened-pocket rows,
+  with only the deepest inward-source rows still closed; the remaining
+  bottleneck is now full local-pocket universality and beyond-pocket transfer,
   not source-object localization or a local readout split alone
 - a follow-up readout-localization probe now closes the detector side as a
   bounded negative: a peak-centered `3x3` window shrinks detector support a
@@ -570,8 +574,9 @@ The biggest score movers are:
      one retained blended readout now transfers across the nearby exact-family
      `top-3` lane and survives most of a second ring too; the multistage floor
      sweep then says `top4` is already a self-maintaining floor on the stable
-     widened branch, so the remaining gap is wider-pocket transfer of that
-     floor and eventual closure, not the existence of a multistage object law
+     widened branch, and the new transfer sweep says that floor survives across
+     most of the widened local pocket, so the remaining gap is local-pocket
+     universality, beyond-pocket transfer, and eventual closure
 
 4. **A real grown-family causal or trapping-field observable**
    - strongest improvement to:

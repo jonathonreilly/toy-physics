@@ -227,11 +227,12 @@ not just local lane wins.
     retained blended readout, and that branch now survives most of a second
     transfer ring too; the multistage floor sweep now says `top3` was too
     narrow and `top4` is already a self-maintaining multistage floor on the
-    stable widened branch
+    stable widened branch; the new transfer sweep says that floor now survives
+    across most of the widened local pocket too
   - the retained ordered family still supports broad-surrogate steering rather
     than a persistent-mass object
 - What would count as the next real upgrade:
-  - one `top4` multistage transfer sweep across the widened local pocket
+  - one farther transfer sweep beyond the current widened local pocket
   - or a stronger architecture-level no-go that closes the search for the
     current family
 
@@ -520,14 +521,17 @@ remaining testable and review-safe.
     - the stronger multistage floor sweep sharpens that result:
       `top3` fails the honest multistage bar, but `top4` is already the first
       self-maintaining multistage floor on the stable widened rows
+    - the new transfer sweep sharpens that one more step:
+      the `top4` floor is open on `11/13` widened-pocket rows and the inward
+      boundary has moved to between `source_z = 1.00` and `1.25`
     - the bottleneck is no longer source-object shrinkage or the local
       broad-versus-adaptive readout split
-    - it is now transfer of the `top4` multistage floor across the wider local
-      pocket and full inertial-response closure
+    - it is now full local-pocket universality, beyond-pocket transfer, and
+      full inertial-response closure
   - Deliverables:
-    - one `top4` multistage transfer sweep across the widened local pocket
+    - one farther transfer sweep beyond the current widened local pocket
     - or one bounded negative strong enough to freeze the compact-object
-      response lane as a stable-branch multistage positive only
+      response lane as a widened-pocket multistage positive only
   - New update:
     - a blended broad/adaptive readout now resolves the earlier complementary
       split on the tested nearby family
@@ -539,9 +543,13 @@ remaining testable and review-safe.
     - the multistage floor result is now:
       `top3 = 0/5`, `top4 = 5/5`, `top5 = 5/5`, `top6 = 5/5`
     - so `top4` is the first honest self-maintaining multistage floor
+    - the multistage transfer result is now:
+      `top4 = 11/13` across the widened local pocket
+    - only `source0.75` and `source1.00` remain closed
     - fixed windows/tapers remain closed
-    - the live question is now whether that `top4` floor transfers across the
-      widened local pocket rather than only on the stable subset
+    - the live question is now whether that `top4` floor leaves the current
+      widened pocket at all, or whether the inward-source boundary is the real
+      local limit
 
 3. **Geometry-transfer discriminator / generated-family recovery**
    - Best upside:
