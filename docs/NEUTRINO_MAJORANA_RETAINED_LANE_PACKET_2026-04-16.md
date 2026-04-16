@@ -17,6 +17,8 @@ surface, still under the sole axiom `Cl(3)` on `Z^3`.
   - [NEUTRINO_MAJORANA_LOWER_LEVEL_PAIRING_NOGO_NOTE.md](/Users/jonBridger/Toy%20Physics-neutrino-majorana/docs/NEUTRINO_MAJORANA_LOWER_LEVEL_PAIRING_NOGO_NOTE.md)
 - `nu_R` transfer-character boundary:
   - [NEUTRINO_MAJORANA_NUR_CHARACTER_BOUNDARY_NOTE.md](./NEUTRINO_MAJORANA_NUR_CHARACTER_BOUNDARY_NOTE.md)
+- `nu_R` charge-`2` primitive reduction:
+  - [NEUTRINO_MAJORANA_NUR_CHARGE2_PRIMITIVE_REDUCTION_NOTE.md](./NEUTRINO_MAJORANA_NUR_CHARGE2_PRIMITIVE_REDUCTION_NOTE.md)
 
 ## Current Exact Endpoint
 The retained Majorana lane does not reopen on the lower-level charge-preserving
@@ -29,6 +31,9 @@ So the current exact result is stronger than the older retained-grammar zero:
 - and, more sharply, the whole sole-axiom `nu_R` transfer/response family is
   only scalar, so it does not generate the off-diagonal charge-`2` primitive
   Majorana would need
+- and more sharply still, if a retained Majorana reopening ever exists, it has
+  already reduced to one rephasing-reduced amplitude `mu` in the canonical
+  normal form `mu J_2`
 
 ## What Is Closed
 - The retained one-generation and three-generation Majorana lanes are closed
@@ -36,6 +41,8 @@ So the current exact result is stronger than the older retained-grammar zero:
 - The lower-level response layer strengthens that negative result
 - The exact missing Majorana object is now narrowed further to a genuinely
   new off-diagonal charge-`2` Nambu primitive on the doubled `nu_R` line
+- More sharply, that missing primitive has already reduced to one real
+  amplitude `mu`
 
 ## What Is Not Yet Claimed
 This packet does **not** claim a global impossibility theorem beyond the present
@@ -45,3 +52,4 @@ non-charge-preserving extension is ruled out.
 ## Representative Runner
 - [frontier_neutrino_majorana_lower_level_pairing_nogo.py](/Users/jonBridger/Toy%20Physics-neutrino-majorana/scripts/frontier_neutrino_majorana_lower_level_pairing_nogo.py)
 - [frontier_neutrino_majorana_nur_character_boundary.py](../scripts/frontier_neutrino_majorana_nur_character_boundary.py)
+- [frontier_neutrino_majorana_nur_charge2_primitive_reduction.py](../scripts/frontier_neutrino_majorana_nur_charge2_primitive_reduction.py)

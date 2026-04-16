@@ -48,6 +48,9 @@ closeout:
    current exact bank does not furnish a value-selection law on it.
 5. The retained lower-level charge-preserving Majorana response layer has zero
    anomalous block.
+6. More sharply, the full remaining last mile is now exactly the pair
+   `(J_chi, mu)`, where `J_chi` is the native PMNS nontrivial `C3` current and
+   `mu` is the rephasing-reduced Majorana charge-`2` amplitude.
 
 ## Consequence
 

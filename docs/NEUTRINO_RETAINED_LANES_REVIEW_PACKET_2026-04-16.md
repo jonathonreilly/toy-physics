@@ -12,6 +12,7 @@ The current sole-axiom top-to-bottom status on those retained lanes is now
 explicitly closed in:
 
 - [NEUTRINO_SOLE_AXIOM_FULL_CLOSURE_BOUNDARY_NOTE.md](./NEUTRINO_SOLE_AXIOM_FULL_CLOSURE_BOUNDARY_NOTE.md)
+- [NEUTRINO_TWO_AMPLITUDE_LAST_MILE_REDUCTION_NOTE.md](./NEUTRINO_TWO_AMPLITUDE_LAST_MILE_REDUCTION_NOTE.md)
 
 ## Lane Packets
 - [NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md](/Users/jonBridger/Toy%20Physics-neutrino-majorana/docs/NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md)
@@ -75,6 +76,13 @@ explicitly closed in:
 - More sharply, the sole-axiom `nu_R` transfer/response family is only scalar,
   so it never generates the off-diagonal charge-`2` primitive Majorana would
   need on the doubled `nu_R` line.
+
+### Unified last mile
+- The full retained-neutrino last mile is now reduced exactly to the pair
+  `(J_chi, mu)`:
+  - `J_chi` = PMNS native nontrivial `C3` current
+  - `mu` = Majorana rephasing-reduced charge-`2` amplitude
+- The current exact bank sets both to zero on the retained sole-axiom routes.
 
 ## Current Review Standard
 This packet is packaged for reviewer intake, not for automatic promotion to

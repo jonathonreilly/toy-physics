@@ -53,6 +53,8 @@ surface derived from the sole axiom `Cl(3)` on `Z^3`.
   [PMNS_C3_CHARACTER_HOLONOMY_CLOSURE_NOTE.md](./PMNS_C3_CHARACTER_HOLONOMY_CLOSURE_NOTE.md)
 - Exact `C3` character-mode reduction of the remaining blocker:
   [PMNS_C3_CHARACTER_MODE_REDUCTION_NOTE.md](./PMNS_C3_CHARACTER_MODE_REDUCTION_NOTE.md)
+- Exact native nontrivial-character current boundary:
+  [PMNS_C3_NONTRIVIAL_CURRENT_BOUNDARY_NOTE.md](./PMNS_C3_NONTRIVIAL_CURRENT_BOUNDARY_NOTE.md)
 - Anomaly-forced `3+1` retarded transport / projection boundary:
   [PMNS_ANOMALY_FORCED_3PLUS1_RETARDED_TRANSPORT_PROJECTION_BOUNDARY_NOTE.md](./PMNS_ANOMALY_FORCED_3PLUS1_RETARDED_TRANSPORT_PROJECTION_BOUNDARY_NOTE.md)
 
@@ -160,6 +162,9 @@ nontrivial retained PMNS values.
   blocker is not a generic `3`-real family anymore, but one real trivial mode
   `w` plus one complex nontrivial character amplitude `chi`, with the current
   sole-axiom free/source-transfer/scalar routes all forcing `chi = 0`
+- Exact native current boundary theorem showing that the PMNS blocker is
+  equivalently one complex native current `J_chi`, with the same current bank
+  routes forcing `J_chi = 0`
 - Exact anomaly-forced `3+1` retarded transport / projection boundary showing
   that the lift is nontrivial upstairs but projects back to the same free
   retained pack
@@ -185,7 +190,8 @@ loophole on this lane. Full sole-axiom closure is still not claimed because
 the sole axiom still does not produce nontrivial values on that native
 character-holonomy family. More sharply: the exact missing PMNS object is now
 just a sole-axiom law producing nonzero nontrivial `C3` character amplitude
-`chi` on the retained `hw=1` response family.
+`chi`, equivalently nonzero native current `J_chi`, on the retained `hw=1`
+response family.
 
 ## Representative Runners
 - [frontier_pmns_full_microscopic_operator_to_pair.py](/Users/jonBridger/Toy%20Physics-neutrino-majorana/scripts/frontier_pmns_full_microscopic_operator_to_pair.py)
@@ -210,4 +216,5 @@ just a sole-axiom law producing nonzero nontrivial `C3` character amplitude
 - [frontier_pmns_three_flux_holonomy_closure.py](../scripts/frontier_pmns_three_flux_holonomy_closure.py)
 - [frontier_pmns_c3_character_holonomy_closure.py](../scripts/frontier_pmns_c3_character_holonomy_closure.py)
 - [frontier_pmns_c3_character_mode_reduction.py](../scripts/frontier_pmns_c3_character_mode_reduction.py)
+- [frontier_pmns_c3_nontrivial_current_boundary.py](../scripts/frontier_pmns_c3_nontrivial_current_boundary.py)
 - [frontier_pmns_anomaly_forced_3plus1_retarded_transport_projection_boundary.py](../scripts/frontier_pmns_anomaly_forced_3plus1_retarded_transport_projection_boundary.py)
