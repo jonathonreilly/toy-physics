@@ -52,7 +52,8 @@ explicitly closed in:
     supplied, but the canonical sole-axiom source-inserted / graph-first-
     transferred pack stays trivial and is rejected too
   - twisted flux holonomy recovers `(xbar, ybar, phi)` exactly but still leaves
-    a `2`-real kernel on the reduced cycle family
+    a `2`-real kernel on the reduced cycle family, while a generic three-flux
+    family closes `(u,v,w)` exactly on that route
   - the anomaly-forced `3+1` retarded lift is nontrivial upstairs but projects
     back to the same free retained pack
 - So this lane is reviewer-ready as:
