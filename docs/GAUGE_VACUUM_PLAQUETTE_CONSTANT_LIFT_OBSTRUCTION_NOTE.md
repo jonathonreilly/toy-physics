@@ -129,8 +129,7 @@ The remaining exact target is now sharper:
 > `P(beta) = P_1plaq(beta_eff(beta))`
 > beyond its now-closed onset
 > `beta_eff(beta) = beta + beta^5 / 26244 + O(beta^6)`
-> and with the current bridge stack still explaining the full
-> nonperturbative continuation to `beta = 6`.
+> and close its explicit nonperturbative continuation to `beta = 6`.
 
 ## Why this is useful
 
@@ -143,8 +142,9 @@ The live package no longer has to say merely:
 It can now say more sharply:
 
 > the exact class-level bridge is closed, the naive constant-lift law is
-> ruled out, and the remaining open object is a nontrivial `beta`-dependent
-> full-vacuum reduction law.
+> ruled out, the existence/uniqueness of the implicit reduction law is now
+> also closed on the finite Wilson evaluation surface, and the remaining open
+> object is its explicit nonperturbative form at `beta = 6`.
 
 ## Command
 

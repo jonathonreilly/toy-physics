@@ -1,8 +1,8 @@
 # Gauge-Vacuum Plaquette Scalar-Bridge Support
 
 **Date:** 2026-04-16
-**Status:** exact local/source/class-level support stack plus exact constant-lift obstruction, exact distinct-shell theorem, and exact first nonlinear full-vacuum coefficient; the full nonperturbative reduction still remains open
-**Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`, `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py`
+**Status:** exact local/source/class-level support stack plus exact constant-lift obstruction, exact distinct-shell theorem, exact first nonlinear full-vacuum coefficient, and exact implicit reduction-law existence/uniqueness theorem; the explicit nonperturbative form at `beta = 6` still remains open
+**Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`, `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py`, `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py`
 
 ## Question
 
@@ -42,10 +42,11 @@ force the slope to be
 
 `[(3/2) (2 / sqrt(3))^(1/4)] / 18`.
 
-So the remaining open object is not a generic missing lift anymore. It is a
-more specific target:
+So the remaining open object is not a generic missing lift anymore. It is now a
+still narrower target:
 
-> derive a nontrivial `beta`-dependent full-vacuum reduction law.
+> derive an explicit nonperturbative characterization of the now-proved
+> implicit reduction law at the framework point `beta = 6`.
 
 ## Exact support piece 1: local Wilson source-response
 
@@ -182,13 +183,26 @@ The new exact mixed-cumulant audit now sharpens that further:
 - equivalently,
   `beta_eff(beta) = beta + beta^5 / 26244 + O(beta^6)`.
 
+And the new exact reduction-existence theorem sharpens the structural picture
+again:
+
+- on every finite periodic Wilson `L^4` evaluation surface, there is a unique
+  exact implicit reduction law
+  `P_L(beta) = P_1plaq(beta_eff,L(beta))`;
+- that law is analytic and strictly increasing on the finite Wilson surface;
+- the canonical same-surface plaquette therefore has a unique implicit
+  nonperturbative reduction parameter
+  `beta_eff^can = 9.326167920875534`.
+
 ## Remaining gap
 
 The remaining theorem-grade gap is now narrower:
 
-> derive the full nonperturbative `beta`-dependent reduction law
+> derive the explicit nonperturbative form of the now-proved implicit
+> reduction law
 > `P(beta) = P_1plaq(beta_eff(beta))`
-> beyond its now-closed small-`beta` onset
+> at the framework point `beta = 6`,
+> beyond its now-closed onset
 > `beta_eff(beta) = beta + beta^5 / 26244 + O(beta^6)`.
 
 Until that step is closed, the live package should keep the plaquette as:
@@ -205,7 +219,8 @@ Current clean read:
 - exact constant-lift obstruction: closed
 - exact distinct-shell theorem: closed
 - exact first nonlinear full-vacuum coefficient: closed
-- full physical-vacuum reduction to the local one-plaquette response: still open
+- exact implicit finite-surface reduction-law existence/uniqueness: closed
+- explicit nonperturbative physical-vacuum reduction at `beta = 6`: still open
 - canonical plaquette on the live package: still `0.5934`
 
 So there is **not** yet a basis for repo-wide numeric migration or for removing
@@ -221,6 +236,7 @@ python3 scripts/frontier_gauge_vacuum_plaquette_bridge_support.py
 python3 scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py
 python3 scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py
 python3 scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py
+python3 scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py
 ```
 
 Expected summary:
@@ -231,3 +247,4 @@ Expected summary:
 - distinct-shell runner: `THEOREM PASS=6 SUPPORT=1 FAIL=0`
 - constant-lift obstruction runner: `THEOREM PASS=6 SUPPORT=1 FAIL=0`
 - mixed-cumulant audit runner: `THEOREM PASS=6 SUPPORT=1 FAIL=0`
+- reduction-existence runner: `THEOREM PASS=4 SUPPORT=4 FAIL=0`
