@@ -64,6 +64,9 @@ The resulting exact weak-flavor reduction
 The resulting exact electroweak-stage decomposition
 `K_NP = K_EWPT * K_tr * K_sph` is recorded in
 [BARYOGENESIS_KNP_STAGE_DECOMPOSITION_NOTE.md](./BARYOGENESIS_KNP_STAGE_DECOMPOSITION_NOTE.md).
+The transition-stage reduction to one exact scalar thermal history lane is
+recorded in
+[BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md](./BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md).
 
 It does **not** claim a first-principles computation of the electroweak phase
 transition, sphaleron rate, or baryon transport coefficients.
@@ -150,6 +153,9 @@ The scalar-side part of that object is now much sharper than before:
   open object is one real nonperturbative electroweak functional `K_NP`
 - that remaining electroweak functional now decomposes exactly into the three
   same-surface stage factors `K_EWPT * K_tr * K_sph`
+- the transition-history stage `K_EWPT` itself now reduces to one real
+  functional of one unique scalar thermal order-parameter history on the
+  retained APBC/Higgs lane
 - the remaining scalar-side question is therefore not just screening by
   itself, but whether there is additional same-surface bosonic structure or
   genuinely different finite-`T` dynamics beyond the old route-history ansatz
@@ -242,6 +248,7 @@ This note does **not** claim:
 - [BARYOGENESIS_NONPERTURBATIVE_ROUTE_PIVOT_NOTE.md](./BARYOGENESIS_NONPERTURBATIVE_ROUTE_PIVOT_NOTE.md)
 - [BARYOGENESIS_JARLSKOG_FACTORIZATION_NOTE.md](./BARYOGENESIS_JARLSKOG_FACTORIZATION_NOTE.md)
 - [BARYOGENESIS_KNP_STAGE_DECOMPOSITION_NOTE.md](./BARYOGENESIS_KNP_STAGE_DECOMPOSITION_NOTE.md)
+- [BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md](./BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md)
 - [BARYOGENESIS_THERMAL_ORDER_PARAMETER_UNIQUENESS_NOTE.md](./BARYOGENESIS_THERMAL_ORDER_PARAMETER_UNIQUENESS_NOTE.md)
 - [frontier_baryogenesis_ewpt_washout_target.py](./../scripts/frontier_baryogenesis_ewpt_washout_target.py)
 - [frontier_baryogenesis_finite_t_reduction.py](./../scripts/frontier_baryogenesis_finite_t_reduction.py)
@@ -251,6 +258,7 @@ This note does **not** claim:
 - [frontier_baryogenesis_higgs_doublet_multiplicity.py](./../scripts/frontier_baryogenesis_higgs_doublet_multiplicity.py)
 - [frontier_baryogenesis_old_route_surface_no_go.py](./../scripts/frontier_baryogenesis_old_route_surface_no_go.py)
 - [frontier_baryogenesis_knp_stage_decomposition.py](./../scripts/frontier_baryogenesis_knp_stage_decomposition.py)
+- [frontier_baryogenesis_kewpt_single_order_parameter.py](./../scripts/frontier_baryogenesis_kewpt_single_order_parameter.py)
 - [frontier_baryogenesis_thermal_order_parameter_uniqueness.py](./../scripts/frontier_baryogenesis_thermal_order_parameter_uniqueness.py)
 - [frontier_omega_lambda_derivation.py](./../scripts/frontier_omega_lambda_derivation.py)
 
@@ -264,5 +272,7 @@ Current runner state:
 - `frontier_baryogenesis_selector_multiplicity_screening.py`: expected `PASS>0`, `FAIL=0`
 - `frontier_baryogenesis_higgs_doublet_multiplicity.py`: expected `PASS>0`, `FAIL=0`
 - `frontier_baryogenesis_knp_stage_decomposition.py`: expected `PASS>0`,
+  `FAIL=0`
+- `frontier_baryogenesis_kewpt_single_order_parameter.py`: expected `PASS>0`,
   `FAIL=0`
 - `frontier_omega_lambda_derivation.py`: existing bounded cosmology companion

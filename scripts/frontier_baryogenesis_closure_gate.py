@@ -221,6 +221,9 @@ def part3_eta_bridge(j: float) -> None:
     stage_note = (DOCS / "BARYOGENESIS_KNP_STAGE_DECOMPOSITION_NOTE.md").read_text(
         encoding="utf-8"
     )
+    kewpt_note = (DOCS / "BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md").read_text(
+        encoding="utf-8"
+    )
     omega_note = (DOCS / "OMEGA_LAMBDA_DERIVATION_NOTE.md").read_text(encoding="utf-8")
     omega_runner = (ROOT / "scripts" / "frontier_omega_lambda_derivation.py").read_text(encoding="utf-8")
 
@@ -248,10 +251,18 @@ def part3_eta_bridge(j: float) -> None:
         "stage-decomposition note records K_NP = K_EWPT * K_tr * K_sph",
         "`K_NP = K_EWPT * K_tr * K_sph`" in stage_note,
     )
+    check(
+        "K_EWPT reduction note records the single scalar history functional",
+        "`K_EWPT = F_EWPT[χ(τ)]`" in kewpt_note,
+    )
+    check(
+        "closure-gate note points to the K_EWPT reduction note",
+        "BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md" in baryo_note,
+    )
 
     info(
         "open baryogenesis object",
-        "the exact three-stage electroweak object K_EWPT * K_tr * K_sph multiplying the exact weak-flavor source J",
+        "the exact three-stage electroweak object K_EWPT * K_tr * K_sph multiplying the exact weak-flavor source J, with K_EWPT reduced to one retained scalar thermal history lane",
     )
     print()
     print("  Consequence:")

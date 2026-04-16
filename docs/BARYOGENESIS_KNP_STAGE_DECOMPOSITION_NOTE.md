@@ -186,6 +186,10 @@ supports.
 - this note isolates the exact electroweak-stage decomposition of the
   remaining functional `K_NP`
 
+The next same-surface reduction of the transition-history stage is recorded in
+[BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md](./BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md),
+which shows that `K_EWPT` lives on one exact scalar thermal history lane.
+
 ## Validation
 
 - [frontier_baryogenesis_knp_stage_decomposition.py](./../scripts/frontier_baryogenesis_knp_stage_decomposition.py)

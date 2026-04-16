@@ -98,6 +98,9 @@ packaging.
   and the exact stage decomposition of the remaining electroweak object
   recorded in
   [BARYOGENESIS_KNP_STAGE_DECOMPOSITION_NOTE.md](BARYOGENESIS_KNP_STAGE_DECOMPOSITION_NOTE.md)
+  and the transition-stage reduction to one scalar thermal history lane
+  recorded in
+  [BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md](BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md)
 - bounded secondary predictions already on `main`, including proton lifetime,
   CKM neutron EDM, vacuum critical stability, benchmark gravitational
   decoherence, BH entropy, and monopole mass
