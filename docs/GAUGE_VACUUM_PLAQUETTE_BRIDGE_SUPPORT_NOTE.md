@@ -1,8 +1,8 @@
 # Gauge-Vacuum Plaquette Scalar-Bridge Support
 
 **Date:** 2026-04-16
-**Status:** exact local/source/class-level support stack plus exact constant-lift obstruction; the final physical-vacuum reduction remains open
-**Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`, `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`
+**Status:** exact local/source/class-level support stack plus exact constant-lift obstruction and exact distinct-shell theorem; the final physical-vacuum reduction remains open
+**Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`, `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`
 
 ## Question
 
@@ -171,13 +171,19 @@ This sits only `1.3068e-4` (`0.022%`) above the current canonical same-surface
 value `0.5934`, so it remains a very strong support candidate at the framework
 point `beta = 6`.
 
+The new exact distinct-shell theorem now fixes the minimal connected shell
+geometry built from distinct plaquettes:
+
+- the first distinct connected numerator shell is order `beta^5`;
+- the first connected vacuum shell is order `beta^6`.
+
 ## Remaining gap
 
 The remaining theorem-grade gap is now sharper:
 
-> derive a nontrivial `beta`-dependent reduction law
-> `P(beta) = P_1plaq(beta_eff(beta))`
-> with `beta_eff'(0) = 1`,
+> perform the mixed repeated-plaquette connected-cumulant audit and derive the
+> exact higher-order coefficients of the nontrivial reduction law
+> `P(beta) = P_1plaq(beta_eff(beta))`,
 > rather than the now-ruled-out constant lift
 > `beta_eff(beta) = beta * (3/2) * (2 / sqrt(3))^(1/4)`.
 
@@ -193,6 +199,7 @@ Current clean read:
 
 - exact local/source/class-level ingredients: closed
 - exact constant-lift obstruction: closed
+- exact distinct-shell theorem: closed
 - full physical-vacuum reduction to the local one-plaquette response: still open
 - canonical plaquette on the live package: still `0.5934`
 
@@ -206,6 +213,7 @@ lanes.
 python3 scripts/frontier_scalar_3plus1_temporal_ratio.py
 python3 scripts/frontier_gauge_scalar_temporal_completion_theorem.py
 python3 scripts/frontier_gauge_vacuum_plaquette_bridge_support.py
+python3 scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py
 python3 scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py
 ```
 
@@ -214,4 +222,5 @@ Expected summary:
 - scalar ratio runner: `EXACT PASS=4 SUPPORT=1 FAIL=0`
 - gauge scalar completion runner: `PASS=8 FAIL=0`
 - bridge support runner: `EXACT PASS=6 SUPPORT=2 FAIL=0`
+- distinct-shell runner: `THEOREM PASS=6 SUPPORT=1 FAIL=0`
 - constant-lift obstruction runner: `THEOREM PASS=6 SUPPORT=1 FAIL=0`

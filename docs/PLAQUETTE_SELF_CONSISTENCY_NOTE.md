@@ -87,6 +87,8 @@ The live repo now also carries a materially stronger exact support stack:
 
 - exact local `SU(3)` one-plaquette block
 - exact accepted Wilson gauge-source temporal completion theorem
+- exact distinct-shell theorem for connected plaquette shells on the accepted
+  `3 spatial + 1 derived-time` surface
 - exact scalar `3+1` bridge endpoint ratio
   `A_inf / A_2 = 2 / sqrt(3)`
 - exact plaquette four-link coupling map
@@ -106,6 +108,7 @@ This sits only `1.3068e-4` (`0.022%`) above the current canonical same-surface v
 Current authorities for that support stack:
 
 - [GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md)
+- [GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md)
 - [GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md](./GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md)
 - [GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md)
 - [SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md](./SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md)
@@ -113,6 +116,7 @@ Current authorities for that support stack:
 Current support runners:
 
 - `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`
+- `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py`
 - `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`
 - `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`
 - `scripts/frontier_scalar_3plus1_temporal_ratio.py`
@@ -121,8 +125,11 @@ The honest live read is now sharper than before:
 
 - the exact class-level bridge ingredients are real
 - the simplest constant multiplicative effective-coupling lift is ruled out
+- the minimal distinct connected shell is now fixed exactly by the cube
+  boundary theorem
 - so the remaining analytic target is a nontrivial `beta`-dependent
-  full-vacuum reduction law, not the old constant-lift ansatz
+  full-vacuum reduction law with a mixed repeated-plaquette cumulant audit and
+  exact higher-order coefficients, not the old constant-lift ansatz
 
 ## Safe Reuse Rule
 
