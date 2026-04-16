@@ -3,9 +3,9 @@
 **Date:** 2026-04-16
 **Status:** exact support theorem on the framework boundary; retained
 no-same-stack / no-same-surface regulator reinterpretation closure, exact
-retained observable-species semantics on the accepted Hilbert surface, plus
-retained-package conditional necessity, with the substrate-level
-physical-lattice premise itself still explicit
+retained observable-species semantics on the accepted Hilbert surface,
+retained-package conditional necessity, and accepted one-axiom substrate
+necessity
 **Script:** `scripts/frontier_physical_lattice_necessity.py`
 **Authority role:** canonical support note for the physical-lattice /
 regulator boundary on the current `main` branch
@@ -32,9 +32,10 @@ There are four different targets:
    Can the physical-lattice reading itself be derived from a smaller set of
    accepted inputs?
 
-The current package now closes the first target cleanly, and it closes the
-second on the accepted Hilbert surface, and it closes the third conditionally
-on the retained package contract. It does **not** yet close the fourth.
+The current package now closes the first target cleanly, it closes the second
+on the accepted Hilbert surface, it closes the third conditionally on the
+retained package contract, and it now closes the fourth on the accepted
+one-axiom Hilbert/locality/information surface.
 
 ## Safe statement
 
@@ -90,11 +91,15 @@ Moreover, once the retained package contract is imposed
 the physical-lattice reading is the unique surviving interpretation on the
 current package surface.
 
-What remains open is narrower:
+What remains narrow is not a live theorem gap but a scoping point:
 
-- the substrate-level physical-lattice reading is still a minimal framework
-  input;
-- it has not yet been derived from a smaller axiom set.
+- the live minimal stack no longer lists the physical-lattice reading as a
+  separate input item;
+- the older reduced-stack witness still records why that point once appeared
+  explicitly in the operational memo;
+- the stronger necessity statement uses the accepted one-axiom
+  Hilbert/locality/information surface, not `Cl(3)` plus staggered dynamics
+  in isolation.
 
 ## Why this matters
 
@@ -126,8 +131,7 @@ interpretation remains.
 > 1. local algebra `Cl(3)`,
 > 2. spatial substrate `Z^3`,
 > 3. finite local Grassmann / staggered-Dirac dynamics,
-> 4. physical-lattice reading,
-> 5. fixed canonical normalization/evaluation surface (`g_bare = 1`,
+> 4. fixed canonical normalization/evaluation surface (`g_bare = 1`,
 >    accepted plaquette / `u_0` surface, and minimal APBC hierarchy block where
 >    applicable).
 >
@@ -310,14 +314,15 @@ theorem already shows that no proper exact quotient/rooting/reduction
 preserving the retained generation algebra exists.
 
 Therefore the retained `hw=1` triplet already carries physical-species
-semantics on the accepted Hilbert surface. The still-explicit premise is not
-“are these three sectors physically distinct inside the accepted theory?” but
-“is the substrate itself fundamental rather than a regulator-family surrogate?”
+semantics on the accepted Hilbert surface. That closes the species-semantics
+step before the later one-axiom substrate-necessity upgrade; the remaining
+question at this stage is only whether the substrate itself is fundamental
+rather than a regulator-family surrogate.
 
 ### 8. Retained-package conditional necessity
 
-The stronger consequence is not yet a derivation from a smaller axiom set, but
-it is still a real necessity theorem.
+The next stronger consequence is a real necessity theorem on the retained
+package contract.
 
 If one requires the current retained package contract
 
@@ -339,6 +344,37 @@ interpretation **on the retained package contract**.
 That is stronger than an objection handler. It is a conditional necessity
 result on the current package surface.
 
+### 9. One-axiom substrate necessity
+
+The final step uses the accepted one-axiom framework reduction rather than the
+older reduced-stack witness as the load-bearing semantics surface.
+
+The accepted one-axiom Hilbert/locality note says:
+
+- the graph emerges as the interaction support of the Hamiltonian;
+- locality and spatial structure are the tensor-product factorization itself.
+
+The accepted one-axiom information-flow note says:
+
+- graph and unitary are one irreducible physical object;
+- one cannot have unitarity without a substrate;
+- changing the graph changes the physics.
+
+So on the accepted one-axiom framework surface, the graph is not an auxiliary
+discretization layer waiting to be removed. It is already part of the physical
+state-space structure.
+
+Specializing that accepted framework to the current package gives:
+
+- the graph is `Z^3`;
+- the local algebra is `Cl(3)`;
+- the retained `hw=1` sectors already have physical-species semantics;
+- no same-stack / no-same-surface regulator reinterpretation survives.
+
+Therefore the substrate-level physical-lattice reading is no longer a separate
+live premise on the accepted one-axiom framework surface. It is forced by the
+framework reduction plus the no-regulator-equivalence theorem.
+
 ## What this closes
 
 This note now closes a stronger exact point than the older audit did:
@@ -355,6 +391,9 @@ This note now closes a stronger exact point than the older audit did:
   `beta = 6`, `u_0 = u_{0,\mathrm{can}}`;
 - once the retained matter closure and live quantitative package are imposed,
   the physical-lattice reading is the unique surviving interpretation;
+- on the accepted one-axiom Hilbert/locality/information surface, the
+  physical-lattice substrate reading itself is derived rather than separately
+  postulated;
 - the retained three-generation matter result is no longer vulnerable to a
   same-stack quotient/rooting reinterpretation.
 
@@ -362,21 +401,25 @@ This note now closes a stronger exact point than the older audit did:
 
 This note does **not** claim:
 
-- that the physical-lattice premise has been derived from a smaller axiom set;
+- that `Cl(3)` plus staggered dynamics alone, without the accepted one-axiom
+  Hilbert/locality/information surface, suffices to derive substrate
+  physicality;
 - that every possible regulator or continuum theory is mathematically
   inconsistent;
 - that the package has no bounded universality/EFT bridge layers anywhere;
 - that all continuum questions are absorbed into the physical-lattice theorem.
 
-The residual honest boundary is:
+The honest boundary is now:
 
 - **closed:** no same-stack / no-same-surface regulator reinterpretation;
 - **closed:** triplet physical-species semantics on the accepted Hilbert
   surface;
 - **closed:** retained-package conditional necessity of the physical-lattice
   reading;
-- **still open:** full axiom-internal necessity of the substrate-level
-  physical-lattice premise.
+- **closed:** substrate-level physical-lattice reading on the accepted
+  one-axiom framework surface;
+- **still scoped:** the derivation uses the accepted one-axiom framework
+  reduction, not only the older reduced-stack witness.
 
 ## Promotion rule
 
@@ -400,10 +443,9 @@ It also exposes reusable fixed-surface subtools:
 - the retained-package necessity statement that the physical-lattice reading is
   the unique surviving interpretation once the retained package contract is
   imposed.
-
-If a future theorem derives the physical-lattice premise itself from a smaller
-accepted stack, this note should then be upgraded from boundary theorem to
-full necessity theorem.
+- the one-axiom substrate-necessity statement that the graph/locality object is
+  already physical on the accepted Hilbert/information surface, so the
+  specialization to `Cl(3)` on `Z^3` forces substrate physicality.
 
 ## Validation
 
@@ -415,5 +457,5 @@ Current runner state:
   `THEOREM/COMPUTE PASS=10`, `SUPPORT=31`, `FAIL=0`;
   exact no-same-stack / no-same-surface regulator reinterpretation closure,
   exact retained observable-species semantics on the accepted Hilbert surface,
-  retained-package conditional necessity, and residual substrate premise still
-  explicit
+  retained-package conditional necessity, and accepted one-axiom substrate
+  necessity

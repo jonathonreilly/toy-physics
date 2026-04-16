@@ -218,8 +218,9 @@ reduction loophole, not the separate global framework boundary.
 > together by the exact induced `C3[111]` cycle. Those operators generate the
 > full matrix algebra on the retained triplet, so the retained generation
 > surface is irreducible and admits no proper exact quotient. This sharpens the
-> three-generation defense before any flavor input is used, while leaving the
-> physical-lattice premise itself explicit.
+> three-generation defense before any flavor input is used. The stronger
+> one-axiom substrate-necessity result now lives separately in
+> [PHYSICAL_LATTICE_NECESSITY_NOTE.md](./PHYSICAL_LATTICE_NECESSITY_NOTE.md).
 
 ## Validation
 

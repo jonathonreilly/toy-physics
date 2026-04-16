@@ -108,8 +108,9 @@ The current retained backbone is:
 - three-generation matter closure in the framework:
   - exact orbit algebra `8 = 1 + 1 + 3 + 3`
   - exact retained `hw=1` observable algebra / no-proper-quotient closure
-  - physical species structure on the lattice surface, with the
-    triplet species semantics derived on accepted Hilbert surface; substrate-level physical-lattice premise still explicit
+  - physical species structure on the lattice surface, with triplet species
+    semantics derived on the accepted Hilbert surface and substrate
+    physicality forced on the accepted one-axiom framework surface
 - confinement on the graph-first `SU(3)` gauge surface:
   - canonical `g_bare^2 = 1` gives Wilson `beta = 6.0`
   - `T = 0` confinement is structural on that gauge sector

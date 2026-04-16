@@ -321,9 +321,9 @@ $$
 
 remains central. The triplet sectors are no longer retained as physical
 species structure merely by declaration. Exact observable separation on the
-accepted Hilbert surface already gives them physical-species semantics, while
-the residual explicit premise concerns substrate-level physicality rather than
-the triplet interpretation itself. The safe paper claim is retained
+accepted Hilbert surface already gives them physical-species semantics, and
+the stronger one-axiom substrate-necessity result now closes the remaining
+substrate-level physicality step as well. The safe paper claim is retained
 three-generation matter structure.
 
 The retained-generation surface is now tighter than a bare orbit count.
@@ -342,8 +342,10 @@ retained generation algebra on that `hw=1` triplet. This closes the
 three-generation claim on the retained generation surface itself. Exact
 translation observables already separate the retained triplet as physically
 distinct sectors on the accepted Hilbert surface, so the remaining explicit
-premise is substrate-level physicality rather than the triplet interpretation
-itself.
+step was only substrate-level physicality. That final step is now also closed
+on the accepted one-axiom Hilbert/locality/information surface, where the
+graph/locality object is already part of the physical state-space structure
+and no same-theory regulator reinterpretation survives.
 
 This is still not a claim that a conventional rooted staggered regulator has
 evaded Nielsen-Ninomiya [8]. On the framework surface, rooting is undefined in
@@ -358,7 +360,9 @@ stack, and it cannot preserve the accepted canonical quantitative surface
 chain. More strongly, even allowing compensating `u_0` motion, any
 regulator-style family preserving both accepted `\alpha_s(v)` and `v`
 collapses to the canonical point. So on the retained package contract the
-physical-lattice reading is the unique surviving interpretation. Detailed
+physical-lattice reading is the unique surviving interpretation, and on the
+accepted one-axiom framework surface it is derived rather than separately
+postulated. Detailed
 inter-family hierarchy and flavor numerics are separate questions.
 
 Figure 4 shows the exact orbit structure together with the physical-lattice

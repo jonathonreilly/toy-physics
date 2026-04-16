@@ -31,9 +31,10 @@ THEOREM (No proper retained-generation quotient):
   preserve the exact retained generation algebra.
 
 This theorem is exact on the retained generation surface. It removes the CKM
-and Jarlskog witness entirely from the retained three-sector argument. It does
-not remove the separate global physical-lattice premise used to interpret the
-retained hw=1 triplet as physical species structure.
+and Jarlskog witness entirely from the retained three-sector argument. The
+stronger global substrate-necessity step now lives separately in
+frontier_physical_lattice_necessity rather than in this retained-generation
+algebra theorem itself.
 
 PStack experiment: frontier-three-generation-observable-theorem
 Dependencies: numpy only.

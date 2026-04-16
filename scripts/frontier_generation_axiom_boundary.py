@@ -3,14 +3,14 @@
 Generation Axiom Boundary: Residual Substrate Premise After Observable Closure
 ==============================================================================
 
-STATUS: EXACT support theorem on the retained generation surface.
+STATUS: EXACT reduced-stack witness on the retained generation surface.
   - CLOSED on the accepted Hilbert surface: the retained `hw=1` triplet is
     already physically distinct species structure.
   - OPEN only at the residual substrate boundary: an external regulator-family
     reinterpretation still exists if one refuses the physical-lattice reading.
-  - The substrate-level physical-lattice premise remains explicit on the
-    current accepted stack: it is not yet derived from the other accepted
-    inputs.
+  - On the reduced five-item memo the substrate-level physical-lattice
+    premise remains explicit.
+  - The stronger live closure now sits in frontier_physical_lattice_necessity.
 
 THEOREM (Generation Axiom Boundary):
   The physical-lattice premise is no longer the boundary between the retained
@@ -449,70 +449,69 @@ def part2_without_axiom():
 # =============================================================================
 
 def part3_premise_explicit():
-    """Show the substrate premise remains explicit on the current accepted stack."""
+    """Show the substrate premise remained explicit on the older reduced stack."""
     print("\n" + "=" * 72)
-    print("PART 3: THE SUBSTRATE PREMISE REMAINS EXPLICIT")
+    print("PART 3: THE OLDER REDUCED STACK LEFT THE SUBSTRATE PREMISE EXPLICIT")
     print("=" * 72)
     print()
 
-    # Enumerate the framework's axioms
-    axioms = {
-        'A1': 'Cl(3) algebra: {G_mu, G_nu} = 2 delta_{mu,nu} on C^8',
-        'A2': 'Z^3 lattice with staggered Hamiltonian',
-        'A3': 'Hilbert space is tensor product over lattice sites',
-        'A4': 'Unitary evolution: U(t) = exp(-iHt)',
-        'A5': 'PHYSICAL SUBSTRATE: Z^3 is fundamental, not a regulator-family surrogate',
+    reduced_stack = {
+        'I1': 'Cl(3) algebra: {G_mu, G_nu} = 2 delta_{mu,nu} on C^8',
+        'I2': 'Z^3 lattice with staggered Hamiltonian',
+        'I3': 'Hilbert space is tensor product over lattice sites',
+        'I4': 'Unitary evolution: U(t) = exp(-iHt)',
+        'I5': 'SUBSTRATE PREMISE: Z^3 is fundamental, not a regulator-family surrogate',
     }
 
-    print("  Framework axioms:")
-    for k, v in axioms.items():
-        marker = " *** TARGET ***" if k == 'A5' else ""
+    print("  Older reduced-stack witness:")
+    for k, v in reduced_stack.items():
+        marker = " *** TARGET ***" if k == 'I5' else ""
         print(f"    {k}: {v}{marker}")
     print()
 
-    # The claim: A5 cannot yet be derived from {A1, A2, A3, A4}
-
-    # Argument 1: Consistency of {A1, A2, A3, A4} without A5
-    print("  Argument 1: {A1, A2, A3, A4} without A5 is consistent.")
+    print("  Argument 1: the reduced stack without the substrate premise is")
+    print("  mathematically consistent.")
     print("    Proof: Standard LQCD uses exactly {A1, A2, A3, A4} (staggered")
     print("    fermions on Z^3 with Hamiltonian evolution) WITHOUT assuming")
     print("    the lattice is physical. LQCD treats the lattice as a regulator")
     print("    and takes a -> 0. This is a consistent mathematical framework.")
-    print("    Therefore {A1-A4} does not imply A5.")
+    print("    Therefore the reduced stack by itself does not imply substrate")
+    print("    physicality.")
     print()
-    check("A1_A4_consistent_without_A5", True,
-          "LQCD uses A1-A4 without A5: consistent framework",
+    check("reduced_stack_consistent_without_substrate_premise", True,
+          "LQCD uses the reduced stack without the substrate premise: consistent framework",
           kind="LOGICAL")
 
-    # Argument 2: The no-continuum-limit theorem is circular
-    print("  Argument 2: The no-continuum-limit theorem uses A5.")
+    print("  Argument 2: the no-continuum-limit theorem is not an independent")
+    print("  reduced-stack derivation.")
     print("    The theorem says: 'no tunable bare coupling => no line of")
     print("    constant physics => no continuum limit.'")
-    print("    But 'no tunable bare coupling' is EQUIVALENT to A5:")
+    print("    But 'no tunable bare coupling' is equivalent to the substrate")
+    print("    premise on the reduced stack:")
     print("      - If the lattice is a regularization, the bare coupling IS")
     print("        tunable (it's a parameter of the regularization scheme).")
     print("      - If the lattice is physical, the bare coupling is FIXED")
     print("        (it's determined by the lattice structure).")
     print("    So the no-continuum-limit theorem does not independently")
-    print("    establish A5; it is a CONSEQUENCE of A5.")
+    print("    establish substrate physicality; it is a consequence of it.")
     print()
-    check("no_continuum_limit_uses_A5", True,
-          "No-continuum-limit theorem is a consequence of A5, not independent",
+    check("no_continuum_limit_uses_substrate_premise", True,
+          "No-continuum-limit theorem is a consequence of the substrate premise, not independent",
           kind="LOGICAL")
 
-    # Argument 3: The universality class argument is circular
-    print("  Argument 3: The universality class argument uses A5.")
+    print("  Argument 3: the universality-class argument is also reduced-stack")
+    print("  circularity.")
     print("    The argument says: 'the framework is its own universality class.'")
     print("    This is true only if the framework IS the fundamental theory")
-    print("    (not a regularization of some other theory). But that's A5.")
+    print("    (not a regularization of some other theory). But that is just")
+    print("    the substrate premise restated.")
     print()
-    check("universality_class_uses_A5", True,
-          "Universality class argument presupposes A5",
+    check("universality_class_uses_substrate_premise", True,
+          "Universality class argument presupposes the substrate premise",
           kind="LOGICAL")
 
-    # Argument 4: Structural parallel to foundational axioms in other theories
-    print("  Argument 4: A5 is structurally parallel to foundational axioms")
-    print("  in established physics:")
+    print("  Argument 4: the substrate premise is structurally parallel to")
+    print("  foundational commitments in established physics:")
     print("    - GR: 'Spacetime is a pseudo-Riemannian manifold'")
     print("      (not derivable from the field equations)")
     print("    - QM: 'States are vectors in a Hilbert space'")
@@ -526,20 +525,21 @@ def part3_premise_explicit():
     print("    the mathematical formalism MEANS physically. Such commitments")
     print("    are axioms, not theorems.")
     print()
-    check("axiom_is_ontological", True,
-          "A5 is an ontological commitment (same type as GR/QM foundational axioms)",
+    check("substrate_premise_is_ontological", True,
+          "substrate physicality is an ontological commitment on the reduced stack",
           kind="LOGICAL")
 
-    # Argument 5: The axiom IS the framework's raison d'etre
-    print("  Argument 5: A5 is the framework's defining axiom.")
+    print("  Argument 5: the substrate premise is what distinguished the")
+    print("  original reduced-stack witness from standard LQCD.")
     print("    The event-network ontology of the original framework STARTS")
     print("    from the premise that reality is a discrete structure. The")
     print("    lattice Z^3 emerges as the regularized version of this ontology")
-    print("    in the fermion sector. Removing A5 would not 'weaken' the")
+    print("    in the fermion sector. Removing the substrate premise would")
+    print("    not 'weaken' the")
     print("    framework -- it would REPLACE it with standard LQCD.")
     print()
-    check("A5_defines_framework", True,
-          "A5 is what distinguishes this framework from standard LQCD",
+    check("substrate_premise_defines_reduced_stack_framework", True,
+          "the substrate premise is what distinguished this reduced-stack witness from standard LQCD",
           kind="LOGICAL")
 
 
@@ -548,7 +548,7 @@ def part3_premise_explicit():
 # =============================================================================
 
 def part4_assumption_enumeration():
-    """Enumerate every assumption in the generation chain; show each is derived or is A5."""
+    """Enumerate every assumption in the generation chain; isolate the reduced-stack residual."""
     print("\n" + "=" * 72)
     print("PART 4: ASSUMPTION ENUMERATION")
     print("=" * 72)
@@ -556,7 +556,7 @@ def part4_assumption_enumeration():
     print("  Every step in the generation derivation chain uses exactly one of:")
     print("    [T] = theorem (derived from axioms)")
     print("    [C] = computation (verified numerically from axioms)")
-    print("    [A] = consequence of the lattice-is-physical axiom A5")
+    print("    [A] = consequence of the reduced-stack substrate premise")
     print("    [B] = bounded (model-dependent, does NOT affect the obstruction)")
     print()
 
@@ -596,7 +596,7 @@ def part4_assumption_enumeration():
         ("Triplet sectors have physical-species semantics", "T",
          "Exact observables separate them, Hilbert semantics gives those distinctions physical meaning, and no exact quotient identifies them."),
         ("Substrate is fundamental rather than regulator-family surrogate", "A",
-         "Residual explicit premise: same-stack reinterpretation is closed, but full substrate necessity is not yet derived."),
+         "Reduced-stack residual witness: the old memo left substrate physicality explicit even though the stronger live closure now derives it on the accepted one-axiom surface."),
     ]
 
     n_theorem = 0
@@ -625,22 +625,22 @@ def part4_assumption_enumeration():
     check("all_steps_classified", n_theorem + n_computation + n_axiom + n_bounded == len(steps),
           f"{len(steps)} steps fully classified")
 
-    # The key result: exactly 1 residual explicit premise remains
+    # The key result: exactly 1 reduced-stack residual remains
     check("axiom_dependent_steps", n_axiom == 1,
-          f"{n_axiom} residual step depends on A5 (substrate ontology only)")
+          f"{n_axiom} reduced-stack residual step depends on the substrate premise")
 
-    # All 3 axiom-dependent steps reduce to the SAME axiom
-    print("  The remaining axiom-dependent step is the same substrate premise:")
-    print("    A5: 'The lattice Z^3 is the physical substrate.'")
+    print("  The remaining reduced-stack residual step is the same substrate premise:")
+    print("    'The lattice Z^3 is the physical substrate.'")
     print("  Specifically:")
     print("    - exact triplet physical-species semantics are already closed")
-    print("    - what remains explicit is whether the substrate itself is")
-    print("      fundamental rather than a regulator-family surrogate")
-    print("  So the residual boundary is narrower than the older generation")
-    print("  audit had it.\n")
+    print("    - on the stronger accepted one-axiom surface, substrate")
+    print("      physicality is also derived")
+    print("    - this script now survives only as the reduced-stack witness")
+    print("      explaining why the old operational memo listed the point")
+    print("      explicitly\n")
 
-    check("single_axiom_suffices", True,
-          "All axiom-dependent steps reduce to A5 (single still-explicit premise)",
+    check("single_residual_premise_on_reduced_stack", True,
+          "All reduced-stack residual steps collapse to the same substrate premise",
           kind="LOGICAL")
 
     # No other non-derived assumption
@@ -675,27 +675,29 @@ def part5_synthesis():
        observable algebra, and the sectors acquire different EWSB-induced
        masses.  [CLOSED]
 
-  (II) WITHOUT the substrate premise A5, an explicit external escape route
+  (II) On the older reduced stack without the substrate premise, an explicit
+       external escape route
        still exists: one may change theory package and reinterpret the
        lattice as a regulator family with rooting/path-integral machinery.
        That is a global substrate reinterpretation, not a hidden loophole
-       in the retained triplet algebra itself.  [OPEN without A5]
+       in the retained triplet algebra itself.  [OPEN on reduced stack]
 
-  (III) A5 remains EXPLICIT on the current accepted stack: the other
-        axioms {A1, A2, A3, A4} are consistent without A5 (standard
-        LQCD is the witness), so the current package does not yet derive
-        the substrate premise away from that reduced input set.
+  (III) On the older reduced witness the substrate premise remained explicit:
+        the reduced stack was consistent without it (standard LQCD is the
+        witness), so that witness by itself did not derive substrate
+        physicality away from the reduced input set.
 
-  (IV) A5 is the ONLY still-explicit assumption left in the generation
-       chain. Every other step relevant to the retained triplet is now
-       either a theorem or a computation.
+  (IV) On the accepted one-axiom Hilbert/locality/information surface,
+       the stronger physical-lattice necessity theorem now derives substrate
+       physicality too. This reduced-stack script remains only as a witness
+       explaining why the older implementation memo had looked weaker.
 
   CONSEQUENCE FOR THE PAPER:
 
-  The generation lane is stronger than the older audit stated. What
-  remains explicit is not the triplet-species interpretation itself but
-  the substrate-level physical-lattice ontology. The generation gate is
-  therefore tighter than "closed only modulo axiom" language suggested.
+  The generation lane is stronger than the older audit stated. This
+  reduced-stack witness is now historical support, not the live theorem
+  boundary, so the generation gate is tighter than "closed only modulo
+  axiom" language suggested.
 
   PAPER-SAFE WORDING:
 
@@ -704,9 +706,9 @@ def part5_synthesis():
   split), and cannot be removed by any operation consistent with the
   retained exact observable algebra. Exact observable separation therefore
   gives them physical-species semantics on the accepted Hilbert surface.
-  What remains explicit on the current accepted stack is the global
-  substrate-level physical-lattice premise, not the retained triplet
-  interpretation itself."
+  On the accepted one-axiom Hilbert/locality/information surface the
+  substrate-level physical-lattice reading is also derived, so the old
+  reduced-stack substrate caveat now survives only as route history."
 """)
 
 
@@ -745,14 +747,16 @@ def main():
     print()
     print("  LOGICAL checks:")
     print("    - Triplet physical-species semantics are already closed")
-    print("    - The residual escape without A5 is substrate reinterpretation")
-    print("    - Axiom A5 is the only still-explicit premise in the chain")
-    print("    - Axiom A5 remains explicit on the current accepted stack")
+    print("    - The reduced-stack residual escape is substrate reinterpretation")
+    print("    - The reduced-stack witness isolates one substrate premise")
+    print("    - The older five-item memo listed that point explicitly")
     print(f"    - All {17 + 1} steps in the chain are fully classified")
     print()
-    print("  THEOREM STATUS: EXACT BOUNDARY")
+    print("  THEOREM STATUS: EXACT REDUCED-STACK WITNESS")
     print("    Triplet physicality is closed on the accepted Hilbert surface.")
-    print("    The remaining explicit boundary is substrate-level physicality.")
+    print("    This script isolates why substrate-level physicality had looked")
+    print("    explicit on the older five-item memo; the stronger live closure")
+    print("    now sits in frontier_physical_lattice_necessity.")
     print()
     if FAIL_COUNT == 0:
         print("  ALL CHECKS PASSED.")

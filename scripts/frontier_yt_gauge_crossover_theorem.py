@@ -11,7 +11,8 @@ THE KEY INSIGHT:
   (YT_SCHEME_INDEPENDENCE_THEOREM.md). The question is: what EFFECTIVE
   low-energy coupling g_3^eff shares the same boundary as y_t?
 
-  On the Cl(3)/Z^3 lattice, g_bare = 1 (axiom A5). But the continuum SM
+  On the Cl(3)/Z^3 lattice, g_bare = 1 on the accepted physical-lattice
+  normalization surface. But the continuum SM
   uses MSbar couplings. The crossover map is the FINITE, ONE-SHOT matching
   from the lattice scheme to MSbar at mu = 1/a = M_Planck.
 
@@ -431,7 +432,7 @@ print("response and the Ward identity exactly, the entire crossover reduces")
 print("to the scheme conversion: lattice (plaquette) -> V-scheme -> MSbar.")
 print()
 print("Chain:")
-print("  g_bare = 1  (axiom A5)")
+print("  g_bare = 1  (accepted physical-lattice normalization surface)")
 print("  -> alpha_plaq = 0.092  (plaquette measurement)")
 print("  -> alpha_V ~ alpha_plaq  (sub-percent shift)")
 print("  -> alpha_MSbar = alpha_V / (1 + r_1 * alpha_V / pi)")
@@ -515,7 +516,7 @@ print("-" * 78)
 print()
 print("  THE ONE-SHOT FINITE CROSSOVER MAP:")
 print()
-print("  Input:  g_bare = 1 on Cl(3)/Z^3  (axiom A5)")
+print("  Input:  g_bare = 1 on Cl(3)/Z^3  (accepted physical-lattice normalization surface)")
 print("          alpha_plaq = 0.092         (plaquette measurement)")
 print()
 print("  Step 1: Feshbach projection onto physical taste sector")
@@ -789,7 +790,7 @@ print()
 print("  THEOREM (One-Shot Feshbach Matching / Gauge Crossover Map).")
 print()
 print("  Given the Cl(3) lattice Hamiltonian on Z^3 with g_bare = 1")
-print("  (axiom A5) and the plaquette coupling alpha_plaq = 0.092,")
+print("  (accepted physical-lattice normalization surface) and the plaquette coupling alpha_plaq = 0.092,")
 print("  the crossover from the lattice scheme to MSbar at mu = M_Pl")
 print("  is a finite, one-shot matching:")
 print()

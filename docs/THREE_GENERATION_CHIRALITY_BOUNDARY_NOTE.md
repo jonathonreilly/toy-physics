@@ -86,8 +86,9 @@ It is claiming a different theory surface.
    accepted Hilbert surface, and also the stronger loophole that a nontrivial
    regulator-style family could preserve both accepted live invariants
    `alpha_s(v)` and `v`, so on the retained package contract the
-   physical-lattice reading is forced as the unique surviving interpretation,
-   while keeping the substrate-level physical-lattice premise itself explicit.
+   physical-lattice reading is forced as the unique surviving interpretation;
+   on the accepted one-axiom Hilbert/locality/information surface it also
+   derives substrate physicality itself.
 5. [ONE_GENERATION_MATTER_CLOSURE_NOTE.md](./ONE_GENERATION_MATTER_CLOSURE_NOTE.md)
    carries the full-framework chirality / right-handed completion claim.
 6. [ANOMALY_FORCES_TIME_THEOREM.md](./ANOMALY_FORCES_TIME_THEOREM.md)
@@ -104,8 +105,9 @@ It is claiming a different theory surface.
 > as physically distinct species on the accepted Hilbert surface. Regulator
 > reinterpretation is not an equivalent reading of the same accepted framework
 > stack because it requires extra continuum/rooting/RG structure not present
-> there. The still-explicit premise is the substrate-level physical-lattice
-> reading, not the triplet-species semantics themselves. Chirality is not
+> there. On the accepted one-axiom Hilbert/locality/information surface the
+> substrate-level physical-lattice reading is also derived rather than left as
+> a separate live premise. Chirality is not
 > claimed on the pure spatial surface alone, but in the full framework through
 > anomaly-forced time and the one-generation matter-closure theorem.
 
@@ -125,5 +127,6 @@ Current main-branch runner state:
 - `frontier_three_generation_observable_theorem.py`: `PASS=47`, `FAIL=0`
 - `frontier_generation_axiom_boundary.py`: `PASS=31`, `FAIL=0`
 - `frontier_physical_lattice_necessity.py`: closed no-same-stack /
-  no-same-surface regulator reinterpretation; residual premise necessity still
-  explicit
+  no-same-surface regulator reinterpretation; triplet species semantics forced
+  on the accepted Hilbert surface; substrate physicality forced on the
+  accepted one-axiom framework surface

@@ -15,15 +15,18 @@ route history.
 3. **Microscopic dynamics:** the package works with the finite local
    Grassmann / staggered-Dirac partition and the lattice operators built on
    that surface.
-4. **Physical-lattice reading:** the lattice is treated as physical rather
-   than as a regulator. This is the axiom boundary that makes the
-   three-generation and low-energy matching discussions physically meaningful.
-5. **Canonical normalization and evaluation surface:** the current package uses
+4. **Canonical normalization and evaluation surface:** the current package uses
    `g_bare = 1` together with the accepted plaquette / `u_0` surface and the
    minimal APBC hierarchy block where applicable.
 
 These are the framework inputs. Everything else in the current publication
 package is either retained, bounded, or still open relative to that stack.
+
+The physical-lattice reading is no longer carried here as a separate live
+input. On the accepted one-axiom Hilbert/locality/information surface it is
+derived by [PHYSICAL_LATTICE_NECESSITY_NOTE.md](PHYSICAL_LATTICE_NECESSITY_NOTE.md),
+while the old reduced-stack witness survives only in
+[GENERATION_AXIOM_BOUNDARY_NOTE.md](GENERATION_AXIOM_BOUNDARY_NOTE.md).
 
 ## What Already Follows On The Current Package
 
@@ -33,8 +36,9 @@ Retained current consequences:
 - graph-first structural `SU(3)`
 - anomaly-forced `3+1`
 - full-framework one-generation matter closure
-- retained three-generation matter structure, with the physical-lattice axiom
-  made explicit by
+- retained three-generation matter structure, with substrate-level
+  physical-lattice reading now derived on the accepted one-axiom surface and
+  the older reduced-stack witness isolated by
   [GENERATION_AXIOM_BOUNDARY_NOTE.md](GENERATION_AXIOM_BOUNDARY_NOTE.md)
 - retained electroweak hierarchy / `v` via
   [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)

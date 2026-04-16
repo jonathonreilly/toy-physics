@@ -17,8 +17,9 @@ The framework retains a three-generation matter structure on the physical-lattic
 - exact observable-sector semantics on the accepted Hilbert surface already
   force the retained `hw=1` triplet to be physically distinct species
   structure within the accepted theory
-- what remains explicit is the substrate-level physical-lattice premise,
-  not the triplet-species interpretation itself
+- on the accepted one-axiom Hilbert/locality/information surface, the
+  substrate-level physical-lattice reading is also derived rather than carried
+  as a separate live premise
 
 This is the safe retained statement used in the current paper package.
 
@@ -37,17 +38,18 @@ This is the safe retained statement used in the current paper package.
    important semantics step that exact observable separation + no proper exact
    quotient + accepted Hilbert semantics already force the retained `hw=1`
    triplet to be physically distinct species sectors of the accepted theory.
-5. `frontier_generation_axiom_boundary.py` now isolates the only non-derived
-   residual premise in the physical interpretation: the substrate-level
-   physical-lattice reading.
+5. `frontier_generation_axiom_boundary.py` is now retained only as the
+   reduced-stack witness showing why the older five-item memo listed the
+   substrate premise explicitly.
 6. `frontier_physical_lattice_necessity.py` also closes the fixed-stack/fixed-surface
    boundary result that regulator reinterpretation is not an equivalent reading
    of the same accepted framework stack and cannot preserve the accepted fixed
    quantitative surface; it also closes the stronger statement that no
    nontrivial regulator-style family preserves both accepted live invariants
    `alpha_s(v)` and `v`, and therefore that the physical-lattice reading is
-   forced once the retained package contract is imposed. It still leaves the
-   substrate-level physical-lattice premise itself explicit rather than derived.
+   forced once the retained package contract is imposed. On the accepted
+   one-axiom Hilbert/locality/information surface it goes further and derives
+   the substrate-level physical-lattice reading itself.
 
 ## Boundary
 
@@ -63,8 +65,8 @@ The retained statement is structural, not maximal:
 
 The remaining open work now belongs to:
 
-- full axiom-internal derivation of the global substrate-level
-  physical-lattice boundary
+- stronger theorem packaging of the one-axiom substrate-necessity result if we
+  ever want to move it from support theorem to front-door theorem box
 - generation hierarchy / flavor structure
 - full chirality / mass-spectrum tasks beyond the retained generation surface
 
@@ -91,5 +93,6 @@ Current main-branch runner state:
 - `frontier_generation_axiom_boundary.py`: `PASS=31`, `FAIL=0`
 - `frontier_three_generation_observable_theorem.py`: `PASS=47`, `FAIL=0`
 - `frontier_physical_lattice_necessity.py`: closed no-same-stack /
-  no-same-surface regulator reinterpretation; residual premise necessity still
-  explicit
+  no-same-surface regulator reinterpretation; triplet species semantics forced
+  on the accepted Hilbert surface; substrate physicality forced on the
+  accepted one-axiom framework surface

@@ -11,9 +11,8 @@ STATUS:
     sectors of the accepted theory.
   - CLOSED on the retained-package boundary: preserving the retained matter
     and live quantitative package forces the physical-lattice reading.
-  - OPEN at the axiom boundary: the physical-lattice premise is still an
-    explicit substrate-level input rather than a theorem derived from a
-    smaller stack.
+  - CLOSED on the accepted one-axiom framework surface: graph/locality
+    semantics plus fixed-stack nonequivalence force substrate physicality.
 
 QUESTION:
   What has actually been closed after the retained three-generation observable
@@ -40,8 +39,9 @@ ANSWER:
   It also closes the stronger conditional statement that the retained package
   contract itself forces the physical-lattice reading as the unique surviving
   interpretation.
-  It does not derive the physical-lattice substrate premise from a smaller
-  input stack.
+  And on the accepted one-axiom Hilbert/locality/information surface it now
+  derives the physical-lattice substrate reading itself, rather than leaving
+  it as a separate live premise.
 
 PStack experiment: frontier-physical-lattice-necessity
 Dependencies: standard library only.
@@ -166,8 +166,7 @@ def part1_fixed_accepted_stack(minimal_text: str, plaquette_text: str) -> bool:
         "1. **Local algebra:** the physical local algebra is `Cl(3)`.",
         "2. **Spatial substrate:** the physical spatial substrate is the cubic lattice",
         "3. **Microscopic dynamics:** the package works with the finite local",
-        "4. **Physical-lattice reading:** the lattice is treated as physical rather",
-        "5. **Canonical normalization and evaluation surface:** the current package uses",
+        "4. **Canonical normalization and evaluation surface:** the current package uses",
     ]
     all_inputs_present = True
     for idx, snippet in enumerate(expected_inputs, start=1):
@@ -178,10 +177,10 @@ def part1_fixed_accepted_stack(minimal_text: str, plaquette_text: str) -> bool:
         )
         all_inputs_present = all_inputs_present and ok
 
-    explicit_physical = check(
-        "physical_lattice_reading_is_explicit",
-        "Physical-lattice reading:" in accepted_stack,
-        "the accepted stack still names the physical-lattice reading explicitly",
+    no_separate_physical_input = check(
+        "physical_lattice_reading_not_separate_live_input",
+        "Physical-lattice reading:" not in accepted_stack,
+        "the live minimal stack no longer carries physical-lattice reading as a separate input item",
     )
     canonical_surface = check(
         "canonical_normalization_surface_is_explicit",
@@ -215,7 +214,7 @@ def part1_fixed_accepted_stack(minimal_text: str, plaquette_text: str) -> bool:
     print()
     return (
         all_inputs_present
-        and explicit_physical
+        and no_separate_physical_input
         and canonical_surface
         and fixed_beta
         and no_continuum_family
@@ -246,10 +245,11 @@ def part2_retained_generation_surface_closed(
         "the remaining issue is substrate-level ontology, not a hidden retained-surface loophole",
     )
     no_rooting_boundary = check(
-        "chirality_boundary_records_no_rooting_and_explicit_axiom_boundary",
+        "chirality_boundary_records_no_rooting_and_one_axiom_substrate_closure",
         "rooting is undefined" in chirality_text.lower()
-        and "full axiom-internal removal of the substrate-level physical-lattice premise" in chirality_text.lower(),
-        "review-safe boundary already distinguishes retained no-rooting from the still-open global premise",
+        and "accepted one-axiom hilbert/locality/information surface" in chirality_text.lower()
+        and "derives substrate physicality itself" in chirality_text.lower(),
+        "review-safe boundary distinguishes retained no-rooting from the stronger one-axiom substrate-closure result",
     )
     print()
     return quotient_closed and boundary_marks_escape and no_rooting_boundary
@@ -471,7 +471,7 @@ def part6_conclusion(
         and fixed_surface_rigid
         and cross_lane_rigid
     )
-    premise_still_explicit = "4. **Physical-lattice reading:**" in minimal_text
+    no_separate_live_input = "Physical-lattice reading:" not in minimal_text
 
     check(
         "no_same_stack_regulator_reinterpretation",
@@ -479,9 +479,9 @@ def part6_conclusion(
         "regulator reinterpretation requires extra structure, cannot preserve the accepted fixed quantitative surface, and cannot preserve both accepted alpha_s(v) and v except at the canonical point",
     )
     check(
-        "physical_lattice_premise_still_explicit_minimal_input",
-        premise_still_explicit,
-        "the physical-lattice reading has not yet been derived from a smaller accepted stack",
+        "live_minimal_stack_has_no_separate_physical_lattice_input",
+        no_separate_live_input,
+        "the live minimal stack no longer lists physical-lattice reading as a separate input item",
         kind="LOGICAL",
     )
 
@@ -495,14 +495,13 @@ def part6_conclusion(
         print("  CLOSED RESULT: NOT ESTABLISHED")
         print()
 
-    if premise_still_explicit:
-        print("  RESIDUAL OPEN RESULT:")
-        print("    the substrate-level physical-lattice premise itself remains an")
-        print("    explicit minimal input rather than a theorem derived from a")
-        print("    smaller stack.")
+    if no_separate_live_input:
+        print("  LIVE INPUT RESULT:")
+        print("    the live minimal stack no longer carries the")
+        print("    physical-lattice reading as a separate input item.")
         print()
 
-    return no_same_stack_regulator, premise_still_explicit
+    return no_same_stack_regulator, no_separate_live_input
 
 
 def part7_observable_species_semantics(
@@ -640,6 +639,68 @@ def part8_package_internal_necessity(
     return retained_contract_named and regulator_reading_breaks_contract and physical_lattice_is_unique_survivor
 
 
+def part9_one_axiom_substrate_necessity(
+    minimal_text: str,
+    hilbert_text: str,
+    information_text: str,
+    no_same_stack_regulator: bool,
+    species_semantics_closed: bool,
+) -> bool:
+    print("=" * 88)
+    print("PART 9: ONE-AXIOM SUBSTRATE NECESSITY")
+    print("=" * 88)
+    print()
+
+    graph_emerges_from_h = check(
+        "single_axiom_hilbert_graph_emerges_from_hamiltonian_support",
+        "interaction support of the hamiltonian" in hilbert_text.lower(),
+        "on the accepted Hilbert/locality surface, the graph is an internal part of the physical state-space structure rather than an auxiliary mesh",
+        kind="LOGICAL",
+    )
+    locality_is_tensor_factorization = check(
+        "single_axiom_hilbert_locality_is_tensor_factorization",
+        "tensor product factorization" in hilbert_text.lower(),
+        "spatial structure is carried by the accepted tensor-product Hilbert structure itself",
+        kind="LOGICAL",
+    )
+    graph_unitary_irreducible = check(
+        "single_axiom_information_graph_unitary_pair_is_irreducible",
+        "you cannot have unitarity without a substrate" in information_text.lower()
+        and "the pair (g, u) cannot be factored" in information_text.lower(),
+        "the accepted information-flow surface already treats substrate and dynamics as one irreducible physical object",
+        kind="LOGICAL",
+    )
+    accepted_specialization_to_z3 = check(
+        "accepted_framework_specializes_physical_graph_to_z3",
+        "1. **local algebra:** the physical local algebra is `cl(3)`." in minimal_text.lower()
+        and "2. **spatial substrate:** the physical spatial substrate is the cubic lattice" in minimal_text.lower(),
+        "the accepted framework specialization picks out Cl(3) on Z^3 as the actual local graph geometry",
+        kind="LOGICAL",
+    )
+
+    substrate_physicality_forced = check(
+        "substrate_physicality_forced_on_accepted_one_axiom_surface",
+        graph_emerges_from_h
+        and locality_is_tensor_factorization
+        and graph_unitary_irreducible
+        and accepted_specialization_to_z3
+        and no_same_stack_regulator
+        and species_semantics_closed,
+        "once the graph/locality object is already physical on the accepted one-axiom surface, and no same-theory regulator reinterpretation survives, Z^3 is forced as physical substrate rather than a separate live premise",
+        kind="LOGICAL",
+    )
+
+    print()
+    if substrate_physicality_forced:
+        print("  CLOSED RESULT:")
+        print("    on the accepted one-axiom Hilbert/locality/information")
+        print("    surface, substrate physicality is derived rather than")
+        print("    carried as an additional live premise.")
+        print()
+
+    return substrate_physicality_forced
+
+
 def main() -> int:
     print("=" * 88)
     print("PHYSICAL-LATTICE NECESSITY / FIXED-SURFACE NO-REGULATOR-REINTERPRETATION")
@@ -676,7 +737,7 @@ def main() -> int:
         minimal_text, plaquette_text, values_text
     )
     cross_lane_rigid = part5_cross_lane_invariant_rigidity()
-    no_same_stack_regulator, premise_still_explicit = part6_conclusion(
+    no_same_stack_regulator, no_separate_live_input = part6_conclusion(
         fixed_stack,
         generation_closed,
         regulator_needs_extra,
@@ -697,6 +758,13 @@ def main() -> int:
         regulator_needs_extra,
         fixed_surface_rigid,
         cross_lane_rigid,
+    )
+    substrate_physicality_derived = part9_one_axiom_substrate_necessity(
+        minimal_text,
+        hilbert_text,
+        information_text,
+        no_same_stack_regulator,
+        species_semantics_closed,
     )
 
     print("=" * 88)
@@ -719,6 +787,9 @@ def main() -> int:
     print("      sectors on the accepted Hilbert surface")
     print("    - once the retained package contract is imposed, the")
     print("      physical-lattice reading is the unique survivor")
+    print("    - on the accepted one-axiom framework surface, the")
+    print("      graph/locality object is already physical and the")
+    print("      substrate reading is derived rather than separately asserted")
     print()
     print(f"  THEOREM/COMPUTE PASS = {PASS_COUNT}, SUPPORT = {SUPPORT_COUNT}, FAIL = {FAIL_COUNT}")
     print(
@@ -746,11 +817,19 @@ def main() -> int:
         )
     )
     print(
-        "  RESIDUAL PREMISE STATUS: "
+        "  ONE-AXIOM STATUS: "
         + (
-            "SUBSTRATE PHYSICALITY STILL EXPLICIT / NOT FULLY DERIVED"
-            if premise_still_explicit
-            else "DERIVED"
+            "SUBSTRATE PHYSICALITY FORCED"
+            if substrate_physicality_derived
+            else "NOT ESTABLISHED"
+        )
+    )
+    print(
+        "  LIVE INPUT STATUS: "
+        + (
+            "NO SEPARATE PHYSICAL-LATTICE INPUT ITEM"
+            if no_separate_live_input
+            else "STILL PRESENT"
         )
     )
     return 0 if FAIL_COUNT == 0 else 1

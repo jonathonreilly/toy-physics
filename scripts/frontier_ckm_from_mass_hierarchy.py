@@ -240,8 +240,8 @@ def part_A_gst_relations():
           f"m_d/m_b = {V_ub_est:.6f} vs PDG {V_UB_PDG}, ratio = {V_ub_est/V_UB_PDG:.2f}",
           kind="BOUNDED")
 
-    # A5. HIERARCHY ORDERING is exact
-    print(f"\n  A5. Hierarchy ordering:")
+    # Step 5. HIERARCHY ORDERING is exact
+    print(f"\n  Step 5. Hierarchy ordering:")
     print(f"    |V_us| ~ sqrt(m_d/m_s) = {gst_V_us:.4f}")
     print(f"    |V_cb| ~ m_s/m_b       = {term_down_23:.4f}")
     print(f"    |V_ub| ~ m_d/m_b       = {V_ub_est:.6f}")
