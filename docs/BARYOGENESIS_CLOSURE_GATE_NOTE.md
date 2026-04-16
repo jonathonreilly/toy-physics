@@ -53,6 +53,9 @@ multiplicity is recorded in
 The resulting current-surface no-go against the old 2HDM-like route is
 recorded in
 [BARYOGENESIS_OLD_ROUTE_SURFACE_NO_GO_NOTE.md](./BARYOGENESIS_OLD_ROUTE_SURFACE_NO_GO_NOTE.md).
+The APBC / bosonic-bilinear thermal order-parameter uniqueness result is
+recorded in
+[BARYOGENESIS_THERMAL_ORDER_PARAMETER_UNIQUENESS_NOTE.md](./BARYOGENESIS_THERMAL_ORDER_PARAMETER_UNIQUENESS_NOTE.md).
 
 It does **not** claim a first-principles computation of the electroweak phase
 transition, sphaleron rate, or baryon transport coefficients.
@@ -124,6 +127,9 @@ The scalar-side part of that object is now much sharper than before:
   ansatz
 - the old 2HDM-like taste-scalar route is therefore not a live same-surface
   route on current `main`
+- the APBC / bosonic-bilinear selector stack does yield a genuine finite-`T`
+  order-parameter surface, but only as a unique normalization/selection lane
+  of the same Higgs order parameter rather than as a new scalar family
 - the remaining scalar-side question is therefore not just screening by
   itself, but whether there is additional same-surface bosonic structure or
   genuinely different finite-`T` dynamics beyond the old route-history ansatz
@@ -213,6 +219,7 @@ This note does **not** claim:
 - [BARYOGENESIS_SELECTOR_MULTIPLICITY_SCREENING_NOTE.md](./BARYOGENESIS_SELECTOR_MULTIPLICITY_SCREENING_NOTE.md)
 - [BARYOGENESIS_HIGGS_DOUBLET_MULTIPLICITY_NOTE.md](./BARYOGENESIS_HIGGS_DOUBLET_MULTIPLICITY_NOTE.md)
 - [BARYOGENESIS_OLD_ROUTE_SURFACE_NO_GO_NOTE.md](./BARYOGENESIS_OLD_ROUTE_SURFACE_NO_GO_NOTE.md)
+- [BARYOGENESIS_THERMAL_ORDER_PARAMETER_UNIQUENESS_NOTE.md](./BARYOGENESIS_THERMAL_ORDER_PARAMETER_UNIQUENESS_NOTE.md)
 - [frontier_baryogenesis_ewpt_washout_target.py](./../scripts/frontier_baryogenesis_ewpt_washout_target.py)
 - [frontier_baryogenesis_finite_t_reduction.py](./../scripts/frontier_baryogenesis_finite_t_reduction.py)
 - [frontier_baryogenesis_taste_scalar_cubic_target.py](./../scripts/frontier_baryogenesis_taste_scalar_cubic_target.py)
@@ -220,6 +227,7 @@ This note does **not** claim:
 - [frontier_baryogenesis_selector_multiplicity_screening.py](./../scripts/frontier_baryogenesis_selector_multiplicity_screening.py)
 - [frontier_baryogenesis_higgs_doublet_multiplicity.py](./../scripts/frontier_baryogenesis_higgs_doublet_multiplicity.py)
 - [frontier_baryogenesis_old_route_surface_no_go.py](./../scripts/frontier_baryogenesis_old_route_surface_no_go.py)
+- [frontier_baryogenesis_thermal_order_parameter_uniqueness.py](./../scripts/frontier_baryogenesis_thermal_order_parameter_uniqueness.py)
 - [frontier_omega_lambda_derivation.py](./../scripts/frontier_omega_lambda_derivation.py)
 
 Current runner state:

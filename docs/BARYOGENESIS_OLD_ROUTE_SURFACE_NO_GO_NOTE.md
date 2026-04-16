@@ -109,6 +109,8 @@ It is now:
 This note is the next logical step:
 
 - on the current authority surface, the old route is no longer live
+- the APBC rescue hatch is separately closed in
+  [BARYOGENESIS_THERMAL_ORDER_PARAMETER_UNIQUENESS_NOTE.md](./BARYOGENESIS_THERMAL_ORDER_PARAMETER_UNIQUENESS_NOTE.md)
 
 ## Validation
 
