@@ -76,7 +76,11 @@ packaging.
   (`Lambda`, `w = -1`, graviton mass) plus the remaining matter bridge behind
   present-day `Omega_Lambda`, now with an explicit
   [BARYOGENESIS_CLOSURE_GATE_NOTE.md](BARYOGENESIS_CLOSURE_GATE_NOTE.md)
-  isolating the missing `η` bridge
+  isolating the missing `η` bridge and with the current derivation-side
+  sharpening recorded in
+  [BARYOGENESIS_FINITE_T_REDUCTION_NOTE.md](BARYOGENESIS_FINITE_T_REDUCTION_NOTE.md)
+  and
+  [BARYOGENESIS_TASTE_SCALAR_CUBIC_TARGET_NOTE.md](BARYOGENESIS_TASTE_SCALAR_CUBIC_TARGET_NOTE.md)
 - bounded secondary predictions already on `main`, including proton lifetime,
   CKM neutron EDM, vacuum critical stability, benchmark gravitational
   decoherence, BH entropy, and monopole mass

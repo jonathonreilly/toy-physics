@@ -81,6 +81,11 @@ It would require at least one of:
 
 That is already a meaningful derivation-side discriminator.
 
+The next scalar-sector refinement of that discriminator is recorded in
+[BARYOGENESIS_TASTE_SCALAR_CUBIC_TARGET_NOTE.md](./BARYOGENESIS_TASTE_SCALAR_CUBIC_TARGET_NOTE.md),
+which converts the missing enhancement into an explicit portal/multiplicity
+target for any 2HDM-like taste-scalar completion.
+
 ## Why this is useful
 
 This note turns the vague EWPT task
@@ -140,6 +145,7 @@ This note does **not** claim:
 
 - [frontier_baryogenesis_finite_t_reduction.py](./../scripts/frontier_baryogenesis_finite_t_reduction.py)
 - [BARYOGENESIS_EWPT_WASHOUT_TARGET_NOTE.md](./BARYOGENESIS_EWPT_WASHOUT_TARGET_NOTE.md)
+- [BARYOGENESIS_TASTE_SCALAR_CUBIC_TARGET_NOTE.md](./BARYOGENESIS_TASTE_SCALAR_CUBIC_TARGET_NOTE.md)
 
 Current runner state:
 
