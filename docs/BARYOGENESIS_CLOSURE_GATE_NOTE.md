@@ -76,6 +76,9 @@ is recorded in
 The resulting coupled one-history composition of the full electroweak object
 is recorded in
 [BARYOGENESIS_SINGLE_HISTORY_COMPOSITION_NOTE.md](./BARYOGENESIS_SINGLE_HISTORY_COMPOSITION_NOTE.md).
+The resulting contractive / additive-penalty form of the transport and
+washout sector on the viable positive branch is recorded in
+[BARYOGENESIS_EFFICIENCY_PENALTY_NOTE.md](./BARYOGENESIS_EFFICIENCY_PENALTY_NOTE.md).
 
 It does **not** claim a first-principles computation of the electroweak phase
 transition, sphaleron rate, or baryon transport coefficients.
@@ -176,6 +179,12 @@ The scalar-side part of that object is now much sharper than before:
   quotient extractors `ℓ_L(τ) = Tr(P_L ρ_χ(τ)) / 8` and
   `q_+(τ) = Tr(Q_{ℓ_L}(τ)) / 4`, the full electroweak object now reduces
   further to one composite functional `K_NP = F_NP[χ(τ)]`
+- on the viable positive branch, the transport and sphaleron-survival stages
+  are exact contractive efficiencies, so the coupled-history functional can
+  be written more sharply as
+  `F_NP[χ] = F_EWPT[χ] * exp[-I_tr[χ] - I_sph[χ]]`
+  or equivalently
+  `F_NP[χ] = F_EWPT[χ] * exp[-I_damp[χ]]`
 - the remaining scalar-side question is therefore not just screening by
   itself, but whether there is additional same-surface bosonic structure or
   genuinely different finite-`T` dynamics beyond the old route-history ansatz

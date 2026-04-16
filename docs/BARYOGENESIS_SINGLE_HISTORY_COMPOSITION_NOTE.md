@@ -202,6 +202,13 @@ Answer:
   `Π_L[ρ](τ) = Tr(P_L ρ(τ)) / 8`
   and `Π_+[Q](τ) = Tr(Q(τ)) / 4`
 
+On the viable positive branch, the next exact reduction is recorded in
+[BARYOGENESIS_EFFICIENCY_PENALTY_NOTE.md](./BARYOGENESIS_EFFICIENCY_PENALTY_NOTE.md),
+which shows that the transport / washout part of this coupled-history
+functional contributes only through nonnegative additive penalties:
+
+`F_NP[χ] = F_EWPT[χ] * exp[-I_tr[χ] - I_sph[χ]]`.
+
 ## What remains open
 
 This note does **not** derive:
@@ -231,6 +238,10 @@ This note is the next exact reduction:
 
 - the whole open electroweak baryogenesis object now lives on one coupled
   scalar history lane
+
+The next exact reduction on the viable nonzero branch is recorded in
+[BARYOGENESIS_EFFICIENCY_PENALTY_NOTE.md](./BARYOGENESIS_EFFICIENCY_PENALTY_NOTE.md),
+which rewrites the transport / washout part as an additive penalty.
 
 ## Validation
 

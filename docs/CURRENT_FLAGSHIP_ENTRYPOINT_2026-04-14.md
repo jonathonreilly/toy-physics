@@ -110,6 +110,9 @@ packaging.
   and the resulting single-history composition of the full electroweak object
   recorded in
   [BARYOGENESIS_SINGLE_HISTORY_COMPOSITION_NOTE.md](BARYOGENESIS_SINGLE_HISTORY_COMPOSITION_NOTE.md)
+  and the resulting additive penalty form of the transport / washout sector
+  recorded in
+  [BARYOGENESIS_EFFICIENCY_PENALTY_NOTE.md](BARYOGENESIS_EFFICIENCY_PENALTY_NOTE.md)
 - bounded secondary predictions already on `main`, including proton lifetime,
   CKM neutron EDM, vacuum critical stability, benchmark gravitational
   decoherence, BH entropy, and monopole mass

@@ -233,6 +233,9 @@ def part3_eta_bridge(j: float) -> None:
     comp_note = (DOCS / "BARYOGENESIS_SINGLE_HISTORY_COMPOSITION_NOTE.md").read_text(
         encoding="utf-8"
     )
+    penalty_note = (DOCS / "BARYOGENESIS_EFFICIENCY_PENALTY_NOTE.md").read_text(
+        encoding="utf-8"
+    )
     omega_note = (DOCS / "OMEGA_LAMBDA_DERIVATION_NOTE.md").read_text(encoding="utf-8")
     omega_runner = (ROOT / "scripts" / "frontier_omega_lambda_derivation.py").read_text(encoding="utf-8")
 
@@ -285,6 +288,12 @@ def part3_eta_bridge(j: float) -> None:
         "`Π_+[Q](τ) := Tr(Q(τ)) / 4 = q_+(τ)`" in comp_note,
     )
     check(
+        "efficiency-penalty note records the additive penalty form",
+        "`K_NP = K_EWPT * exp[-I_tr - I_sph]`" in penalty_note
+        and "`F_NP[χ] = F_EWPT[χ] * exp[-I_tr[χ] - I_sph[χ]]`" in penalty_note
+        and "`F_NP[χ] = F_EWPT[χ] * exp[-I_damp[χ]]`" in penalty_note,
+    )
+    check(
         "closure-gate note points to the K_EWPT reduction note",
         "BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md" in baryo_note,
     )
@@ -300,10 +309,14 @@ def part3_eta_bridge(j: float) -> None:
         "closure-gate note points to the single-history composition note",
         "BARYOGENESIS_SINGLE_HISTORY_COMPOSITION_NOTE.md" in baryo_note,
     )
+    check(
+        "closure-gate note points to the efficiency-penalty note",
+        "BARYOGENESIS_EFFICIENCY_PENALTY_NOTE.md" in baryo_note,
+    )
 
     info(
         "open baryogenesis object",
-        "the exact coupled-history object J * F_NP[chi(tau)], equivalently the exact three-stage electroweak object K_EWPT * K_tr * K_sph, with exact downstream quotient extractors and only the response histories still open",
+        "the exact coupled-history object J * F_NP[chi(tau)], sharpened on the viable positive branch to J * F_EWPT[chi(tau)] * exp[-I_damp[chi]], with only one source functional and one damping functional still open",
     )
     print()
     print("  Consequence:")
