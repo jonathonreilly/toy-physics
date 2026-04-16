@@ -16,6 +16,7 @@ The remaining question is stronger:
 
 from __future__ import annotations
 
+import argparse
 import math
 import os
 import sys
@@ -104,7 +105,7 @@ def _free_centroid_for_blend(lat: m.Lattice3D) -> float:
     return sum(p * lat.pos[det_start + i][2] for i, p in enumerate(probs)) / total
 
 
-def _run_case(case: Case) -> CaseResult:
+def _run_case(case: Case, top_keep: int = TOP_KEEP) -> CaseResult:
     lat = m.Lattice3D.build(case.phys_l, case.phys_w, H)
     source_nodes = _source_cluster_nodes(lat, case.source_z)
     ref_raw = _green_field_layers(
@@ -154,7 +155,7 @@ def _run_case(case: Case) -> CaseResult:
                     )
 
                 prev_weights = weights[:]
-                weights = _topk_weights(source_probs, TOP_KEEP)
+                weights = _topk_weights(source_probs, top_keep)
 
             if prev_stage_final is not None:
                 stage_carry[stage - 1].append(_overlap(prev_stage_final, weights))
@@ -209,13 +210,19 @@ def _run_case(case: Case) -> CaseResult:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--top-keep", type=int, default=TOP_KEEP, help="Compact object width to retain per update.")
+    args = parser.parse_args()
+
     t0 = time.time()
     print("=" * 134)
-    print("PERSISTENT OBJECT TOP3 MULTI-STAGE PROBE")
-    print("  widened exact-lattice top3 branch under the retained blended readout across chained sourced-response segments")
+    print("PERSISTENT OBJECT MULTI-STAGE PROBE")
+    print(
+        "  widened exact-lattice compact branch under the retained blended readout across chained sourced-response segments"
+    )
     print("=" * 134)
     print(
-        f"h={H}, top_keep={TOP_KEEP}, blend={BLEND:.2f}, updates/segment={N_UPDATES}, segments={N_STAGES}, "
+        f"h={H}, top_keep={args.top_keep}, blend={BLEND:.2f}, updates/segment={N_UPDATES}, segments={N_STAGES}, "
         f"strengths={SOURCE_STRENGTHS}"
     )
     print(
@@ -227,7 +234,7 @@ def main() -> None:
 
     passes = 0
     for case in CASES:
-        row = _run_case(case)
+        row = _run_case(case, args.top_keep)
         passes += int(row.admissible)
         alpha_str = "[" + ",".join(
             f"{alpha:.2f}" if alpha is not None else "n/a" for alpha in row.stage_alpha
@@ -255,7 +262,7 @@ def main() -> None:
 
     total_cases = len(CASES)
     print("SUMMARY")
-    print(f"  top3 multistage-admissible on {passes}/{total_cases} stable widened-regime cases")
+    print(f"  top{args.top_keep} multistage-admissible on {passes}/{total_cases} stable widened-regime cases")
     print()
     print("SAFE READ")
     print("  - If top3 stays admissible here, the widened local branch survives chained sourced-response segments as the same compact-object family.")

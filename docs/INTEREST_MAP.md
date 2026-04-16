@@ -258,7 +258,7 @@ Nobel-scale score.
   - Missing: a cleaner universal vector sector and broader portability of the
     non-scalar branches beyond the current core
 
-- `2.0/10` A true inertial-object / persistent-mass sector
+- `3.0/10` A true inertial-object / persistent-mass sector
   - Current: detector-readable packet memory and broad-surrogate steering are
     still real narrower positives, the first direct Gaussian packet
     matter/inertial closure attempt is a decisive retained negative, and now a
@@ -266,10 +266,11 @@ Nobel-scale score.
     and weak-field response on the same nearby family under one retained
     blended readout, with that same branch now surviving most of a second ring
     before hitting a mapped inward-source boundary; the stronger multistage
-    escalation then closes as a bounded negative because the branch needs
-    per-segment recompression back to `top3`
-  - Missing: a direction-robust widened regime and a true persistent
-    inertial-mass law rather than one bounded exact-lattice local branch;
+    floor sweep now says `top3` was too narrow and `top4` is the first
+    self-maintaining multistage floor on the stable widened branch
+  - Missing: transfer of that `top4` multistage floor across the widened local
+    pocket and a true persistent inertial-mass law rather than one bounded
+    exact-lattice local branch;
     Gaussian packet + uniform force is now a closed negative route rather than
     a near miss
 
@@ -497,12 +498,11 @@ The main upward pressures since the first cut are:
   family neighborhood, carries a stable weak-field response on that family,
   admits one retained blended readout that passes on the full `6/6` tested
   nearby cases, and then survives on `4/5` second-ring cases before closing on
-  a mapped inward-source boundary; the stronger multistage escalation is now
-  also frozen as a bounded negative, because the branch keeps perfect
-  compressed carry and stable response but still re-expands off the honest
-  `top-3` support during each segment; the remaining bottleneck is therefore a
-  self-maintaining object architecture, not source-object localization or a
-  local readout split alone
+  a mapped inward-source boundary; the multistage floor sweep then sharpens the
+  route further: `top3` is too narrow, but `top4` is the first self-maintaining
+  multistage floor on the stable widened branch; the remaining bottleneck is
+  now transfer of that multistage `top4` floor across the wider local pocket,
+  not source-object localization or a local readout split alone
 - a follow-up readout-localization probe now closes the detector side as a
   bounded negative: a peak-centered `3x3` window shrinks detector support a
   lot, but it only captures a tiny fraction of the detector mass and loses the
@@ -568,10 +568,10 @@ The biggest score movers are:
      test-particle and exact-lattice source lanes
    - the latest compact-object result is stronger:
      one retained blended readout now transfers across the nearby exact-family
-     `top-3` lane and survives most of a second ring too, so the remaining gap
-     is no longer local detector/readout closure; the multistage probe says the
-     real remaining blocker is a self-maintaining object law rather than a
-     compression-stabilized transfer object
+     `top-3` lane and survives most of a second ring too; the multistage floor
+     sweep then says `top4` is already a self-maintaining floor on the stable
+     widened branch, so the remaining gap is wider-pocket transfer of that
+     floor and eventual closure, not the existence of a multistage object law
 
 4. **A real grown-family causal or trapping-field observable**
    - strongest improvement to:
