@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
 """
-Three-generation observable no-collapse theorem
-==============================================
+Three-generation observable incompatibility theorem
+==================================================
 
-STATUS: exact support theorem on the retained three-generation / flavor surface
+STATUS: exact conditional support theorem on the retained three-generation /
+flavor surface
 
-THEOREM (Observable no-collapse):
+THEOREM (Conditional observable incompatibility):
   On the physical-lattice Cl(3) / Z^3 surface, the three hw=1 sectors are
   pairwise inequivalent physical sectors of the Hamiltonian observable
   algebra.
 
-  Admissible collapse maps are linear surjections Q : H_hw=1 -> H_red that
-  intertwine the exact retained translation algebra:
+  Admissible observable-preserving quotients are linear surjections
+  Q : H_hw=1 -> H_red for which the exact retained translation observables
+  descend to the quotient, equivalently:
 
       Q T_mu = T'_mu Q   for mu in {x, y, z}
 
@@ -24,22 +26,25 @@ THEOREM (Observable no-collapse):
          X3 : (+1, +1, -1)
      so the translation algebra separates the three sectors exactly.
 
-  2. Any translation-compatible quotient from 3 sectors to 2 sectors must
-     have an invariant one-dimensional kernel. Because the only common
-     translation eigenlines are the three sector lines themselves, every such
-     quotient can only DELETE one whole sector; it cannot identify two sectors
-     while preserving the observable algebra.
+  2. Any admissible quotient from 3 sectors to 2 sectors must have an
+     invariant one-dimensional kernel. Because the only common translation
+     eigenlines are the three sector lines themselves, every such quotient can
+     only DELETE one whole sector; it cannot identify two sectors while
+     preserving the observable algebra.
 
   3. Any two-generation flavor package has vanishing CP-odd Jarlskog
-     invariant J = 0, while the promoted CKM package on the retained surface
-     has J > 0.
+     invariant J = 0. If one imposes the retained CKM witness J > 0 from the
+     promoted CKM package on the same retained surface, that witness is
+     incompatible with every admissible 3 -> 2 quotient.
 
-  Therefore no consistent reduction / rooting / projection to fewer than three
-  sectors preserves the current observable flavor package.
+  Therefore, conditional on the retained CKM witness J > 0, no admissible
+  translation-observable-preserving reduction to fewer than three sectors
+  reproduces the current retained flavor package.
 
 This theorem is narrower than the full rooting-undefined theorem on C^8:
 it works directly on the retained hw=1 observable sector and uses the
-promoted CKM package as the physical witness that the third sector is needed.
+promoted CKM package as a retained-surface witness rather than as an
+independent derivation of the three-sector surface itself.
 
 PStack experiment: frontier-three-generation-observable-theorem
 Dependencies: numpy + canonical_plaquette_surface.py only.
@@ -274,7 +279,7 @@ def part1_translation_observable_algebra() -> dict[str, np.ndarray]:
 
 def part2_no_collapse_quotients(ops: dict[str, np.ndarray]) -> None:
     print("=" * 88)
-    print("PART 2: CLASSIFYING TRANSLATION-COMPATIBLE 3->2 QUOTIENTS")
+    print("PART 2: CLASSIFYING ADMISSIBLE TRANSLATION-OBSERVABLE 3->2 QUOTIENTS")
     print("=" * 88)
     print()
 
@@ -310,9 +315,10 @@ def part2_no_collapse_quotients(ops: dict[str, np.ndarray]) -> None:
 
     print()
     print("  Exact quotient theorem:")
-    print("    admissible quotient maps are defined here by exact translation")
-    print("    intertwining Q T_mu = T'_mu Q on the retained hw=1 surface.")
-    print("    every translation-compatible 3->2 quotient has a one-dimensional")
+    print("    admissible quotients are defined here by preservation of the")
+    print("    exact retained translation observables, equivalently by")
+    print("    translation intertwining Q T_mu = T'_mu Q on the hw=1 surface.")
+    print("    every admissible 3->2 quotient has a one-dimensional")
     print("    invariant kernel; the exhaustive joint-character scan above shows")
     print("    the only invariant lines are X1, X2, X3 themselves.")
     print("    So a legal 3->2 quotient can only delete one whole sector.")
@@ -323,7 +329,7 @@ def part2_no_collapse_quotients(ops: dict[str, np.ndarray]) -> None:
 
 def part3_ckm_witness() -> None:
     print("=" * 88)
-    print("PART 3: CKM / JARLSKOG WITNESS -- TWO SECTORS ARE NOT ENOUGH")
+    print("PART 3: CONDITIONAL CKM / JARLSKOG WITNESS -- TWO SECTORS ARE NOT ENOUGH")
     print("=" * 88)
     print()
 
@@ -384,23 +390,24 @@ def part3_ckm_witness() -> None:
 
     print()
     print("  Consequence:")
-    print("    a translation-compatible 3->2 quotient can only delete one full sector,")
-    print("    leaving a two-generation flavor package; but every two-generation")
-    print("    package has J = 0, while the retained CKM package has J > 0.")
-    print("    So no reduction to fewer than three sectors preserves the current")
-    print("    observable flavor structure.")
+    print("    an admissible 3->2 quotient can only delete one full sector,")
+    print("    leaving a two-generation flavor package; every such package has J = 0.")
+    print("    So if the retained CKM witness J > 0 is imposed on the same surface,")
+    print("    no admissible reduction to fewer than three sectors can reproduce")
+    print("    the retained observable flavor structure.")
     print()
 
 
 def main() -> int:
     print("=" * 88)
-    print("THREE-GENERATION OBSERVABLE NO-COLLAPSE THEOREM")
+    print("THREE-GENERATION OBSERVABLE INCOMPATIBILITY THEOREM")
     print("=" * 88)
     print()
     print("Question:")
     print("  Are the three retained hw=1 sectors merely label copies, or are they")
-    print("  physically distinct sectors that cannot be collapsed without destroying")
-    print("  the observable flavor package?")
+    print("  physically distinct sectors whose exact translation-observable class")
+    print("  cannot be reduced below three sectors without losing the retained")
+    print("  flavor witness?")
     print()
 
     ops = part1_translation_observable_algebra()
@@ -414,18 +421,20 @@ def main() -> int:
     print("  THEOREM.")
     print("    1. The exact translation algebra on the retained hw=1 sector has")
     print("       three distinct joint characters and exact rank-1 sector projectors.")
-    print("    2. Therefore any translation-compatible quotient to two sectors can")
-    print("       only delete one whole sector; it cannot identify sectors.")
-    print("    3. Any two-generation flavor package has J = 0, but the retained")
-    print("       CKM package has J > 0.")
-    print("    4. Hence no consistent reduction / rooting / projection to fewer than")
-    print("       three sectors preserves the observable flavor package.")
+    print("    2. Therefore any admissible quotient to two sectors can only")
+    print("       delete one whole sector; it cannot identify sectors.")
+    print("    3. Any two-generation flavor package has J = 0. If the retained")
+    print("       CKM witness J > 0 is imposed, it is incompatible with such")
+    print("       a quotient.")
+    print("    4. Hence, conditional on the retained CKM witness, no admissible")
+    print("       translation-observable-preserving reduction to fewer than")
+    print("       three sectors reproduces the observable flavor package.")
     print()
     print("  Relation to the existing rooting theorem:")
     print("    - frontier_generation_rooting_undefined.py blocks Cl(3)-preserving")
     print("      taste removal on the full C^8 surface.")
-    print("    - this runner blocks observable flavor collapse directly on the")
-    print("      retained hw=1 physical sector.")
+    print("    - this runner blocks admissible observable-sector reduction")
+    print("      directly on the retained hw=1 physical sector.")
     print()
     print(f"  TOTAL: PASS = {PASS_COUNT}, FAIL = {FAIL_COUNT}")
     return 0 if FAIL_COUNT == 0 else 1
