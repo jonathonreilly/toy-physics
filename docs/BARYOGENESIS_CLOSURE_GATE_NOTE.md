@@ -79,6 +79,9 @@ is recorded in
 The resulting contractive / additive-penalty form of the transport and
 washout sector on the viable positive branch is recorded in
 [BARYOGENESIS_EFFICIENCY_PENALTY_NOTE.md](./BARYOGENESIS_EFFICIENCY_PENALTY_NOTE.md).
+The resulting exact logarithmic balance between source and damping is recorded
+in
+[BARYOGENESIS_SOURCE_DAMPING_BALANCE_NOTE.md](./BARYOGENESIS_SOURCE_DAMPING_BALANCE_NOTE.md).
 
 It does **not** claim a first-principles computation of the electroweak phase
 transition, sphaleron rate, or baryon transport coefficients.
@@ -185,6 +188,11 @@ The scalar-side part of that object is now much sharper than before:
   `F_NP[χ] = F_EWPT[χ] * exp[-I_tr[χ] - I_sph[χ]]`
   or equivalently
   `F_NP[χ] = F_EWPT[χ] * exp[-I_damp[χ]]`
+- equivalently the surviving positive-branch baryogenesis problem is the exact
+  logarithmic balance
+  `η = J * exp[S_src[χ] - I_damp[χ]]`
+  with fixed retained target
+  `S_src[χ] - I_damp[χ] = log(η_obs / J) = -10.904606206411`
 - the remaining scalar-side question is therefore not just screening by
   itself, but whether there is additional same-surface bosonic structure or
   genuinely different finite-`T` dynamics beyond the old route-history ansatz

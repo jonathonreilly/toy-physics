@@ -236,6 +236,9 @@ def part3_eta_bridge(j: float) -> None:
     penalty_note = (DOCS / "BARYOGENESIS_EFFICIENCY_PENALTY_NOTE.md").read_text(
         encoding="utf-8"
     )
+    balance_note = (DOCS / "BARYOGENESIS_SOURCE_DAMPING_BALANCE_NOTE.md").read_text(
+        encoding="utf-8"
+    )
     omega_note = (DOCS / "OMEGA_LAMBDA_DERIVATION_NOTE.md").read_text(encoding="utf-8")
     omega_runner = (ROOT / "scripts" / "frontier_omega_lambda_derivation.py").read_text(encoding="utf-8")
 
@@ -294,6 +297,11 @@ def part3_eta_bridge(j: float) -> None:
         and "`F_NP[χ] = F_EWPT[χ] * exp[-I_damp[χ]]`" in penalty_note,
     )
     check(
+        "source-damping balance note records the exact logarithmic balance",
+        "`η = J * exp[S_src[χ] - I_damp[χ]]`" in balance_note
+        and "`S_src[χ] - I_damp[χ] = log(η_obs / J) = -10.904606206411`" in balance_note,
+    )
+    check(
         "closure-gate note points to the K_EWPT reduction note",
         "BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md" in baryo_note,
     )
@@ -313,10 +321,14 @@ def part3_eta_bridge(j: float) -> None:
         "closure-gate note points to the efficiency-penalty note",
         "BARYOGENESIS_EFFICIENCY_PENALTY_NOTE.md" in baryo_note,
     )
+    check(
+        "closure-gate note points to the source-damping balance note",
+        "BARYOGENESIS_SOURCE_DAMPING_BALANCE_NOTE.md" in baryo_note,
+    )
 
     info(
         "open baryogenesis object",
-        "the exact coupled-history object J * F_NP[chi(tau)], sharpened on the viable positive branch to J * F_EWPT[chi(tau)] * exp[-I_damp[chi]], with only one source functional and one damping functional still open",
+        "the exact coupled-history object J * F_NP[chi(tau)], sharpened on the viable positive branch to J * exp[S_src[chi] - I_damp[chi]], with one source logarithm and one damping functional still open",
     )
     print()
     print("  Consequence:")
