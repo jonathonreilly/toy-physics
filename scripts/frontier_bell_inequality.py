@@ -13,8 +13,9 @@ Every ingredient traces to Cl(3) on Z^3:
 
 Parts:
   A. Structural: sublattice Pauli algebra verified, singlet saturates Tsirelson
-  B. Ground state: 2-fermion ground state of staggered H gives CHSH > 2
+  B. Free ground state: honest negative — Slater determinant too weakly entangled
   C. Propagator: singlet evolved under staggered H, track CHSH vs time
+  D. Gravitational: interacting ground state crosses Bell threshold
 
 PStack experiment: frontier-bell-inequality
 """
@@ -82,51 +83,18 @@ def slater_correlator(phi1, phi2, O_a, O_b):
     return np.real(M11 * N22 + M22 * N11 - M12 * N21 - M21 * N12) / 2
 
 
-def compute_chsh(phi1, phi2, Z, X):
-    """Find optimal CHSH value by sweeping measurement angles.
-
-    Returns (S_best, angles) where S_best is the maximum |S| found.
-    """
-    best_S = 0.0
-    best_angles = None
-
-    # Fine grid search
-    angles = np.linspace(0, math.pi, 37)  # 5-degree steps
-    for a in angles:
-        for ap in angles:
-            # For each (a, a'), optimal b is between a and a'
-            # but sweep anyway for robustness
-            for b in angles:
-                bp_candidates = [b + math.pi / 2, b - math.pi / 2]
-                for bp in bp_candidates:
-                    O_a = measurement_op(Z, X, a)
-                    O_ap = measurement_op(Z, X, ap)
-                    O_b = measurement_op(Z, X, b)
-                    O_bp = measurement_op(Z, X, bp)
-
-                    Eab = slater_correlator(phi1, phi2, O_a, O_b)
-                    Eabp = slater_correlator(phi1, phi2, O_a, O_bp)
-                    Eapb = slater_correlator(phi1, phi2, O_ap, O_b)
-                    Eapbp = slater_correlator(phi1, phi2, O_ap, O_bp)
-
-                    S = Eab - Eabp + Eapb + Eapbp
-                    if abs(S) > abs(best_S):
-                        best_S = S
-                        best_angles = (a, ap, b, bp)
-
-    return best_S, best_angles
-
-
 def fast_chsh(phi1, phi2, Z, X):
     """Compute optimal CHSH using the Horodecki formula.
 
-    For any 2-qubit state, the maximum CHSH value is:
+    For a Slater determinant of 2 orbitals, the 2-particle state is
+    effectively a 2-qubit state in the orbital basis. The Horodecki
+    formula gives the optimal CHSH:
       S_max = 2 * sqrt(lambda_1 + lambda_2)
-    where lambda_1, lambda_2 are the two largest eigenvalues of T^T T,
-    and T_ij = Tr(rho * sigma_i x sigma_j) is the correlation matrix.
+    where lambda_i are the two largest eigenvalues of T^T T,
+    and T_ij is the 2-orbital correlation matrix.
 
-    For our Slater determinant, we compute the 3x3 correlation matrix
-    in the orbital-space {Z, X, Y=iZX} basis, then apply Horodecki.
+    This applies to Parts A-C (Slater determinants). Part D uses
+    the same correlator formula on the full interacting ground state.
     """
     # Precompute matrix elements in the orbital basis
     Zm = np.array([
@@ -304,8 +272,8 @@ def part_c(n=8, mass=1.0):
     print("PART C: PROPAGATOR-EVOLVED BELL VIOLATION")
     print("=" * 72)
     print()
-    print(f"N={n}, mass={mass}. Initial: singlet at center (Pauli exclusion).")
-    print("Evolved under staggered Hamiltonian. Track CHSH vs time.")
+    print(f"N={n}, mass={mass}. Initial: two fermions on adjacent center sites.")
+    print("Antisymmetric wavefunction (Pauli exclusion). Evolved under staggered H.")
     print()
 
     H = staggered_hamiltonian(n, mass=mass)
@@ -373,9 +341,6 @@ def part_d(n=8, mass=1.0):
     Framework origin: the Poisson interaction is derived from
     self-consistency of the propagator + field (D5 in the axiom chain).
     """
-    from scipy.sparse.linalg import spsolve
-    from scipy.sparse import diags
-
     print()
     print("=" * 72)
     print("PART D: GRAVITATIONAL GROUND STATE — INTERACTING BELL")

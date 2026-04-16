@@ -1,7 +1,7 @@
 # Bell Inequality Violation Derived from the Lattice Propagator
 
 **Date:** 2026-04-16
-**Status:** BOUNDED-RETAINED — four independent surfaces, all clean
+**Status:** BOUNDED-RETAINED — structural theorem + gravitational Bell violation
 **Script:** `scripts/frontier_bell_inequality.py`
 **Runtime:** ~4 seconds
 
@@ -31,7 +31,7 @@ Cl(3) on Z^3 (framework axiom)
   +---> staggered fermions (Kogut-Susskind from Cl(3))
   |       |
   |       +---> Pauli exclusion forces antisymmetric wavefunction
-  |       +---> two fermions on adjacent sites -> singlet (not hand-inserted)
+  |       +---> two fermions on adjacent sites -> unique antisymmetric state
   |       +---> staggered Hamiltonian: hopping + Dirac mass m*(-1)^x
   |
   +---> Poisson gravitational coupling (D5, self-consistency)
@@ -74,8 +74,9 @@ This is an honest negative — free fermions are too weakly correlated.
 
 ## Part C: Propagator-evolved singlet
 
-Starting from the singlet at adjacent center sites (forced by Pauli
-exclusion — not hand-inserted):
+Starting from two fermions localized on adjacent center sites. The
+initial localization is a choice of initial condition; the antisymmetric
+wavefunction is forced by Pauli exclusion:
 
 | t | |S| | % Tsirelson | Wavefunction spread (IPR) |
 |---|---|---|---|
@@ -115,8 +116,9 @@ gravitational interaction used throughout the framework.
 ## What is NOT imported
 
 - No external spin or polarization degree of freedom
-- No hand-inserted entanglement (singlet from Pauli exclusion, or
-  ground state from Hamiltonian dynamics)
+- No hand-inserted entanglement in Parts B and D (ground states from
+  Hamiltonian dynamics). Part C uses a localized initial condition
+  with forced antisymmetry.
 - No external measurement apparatus (Z and X are lattice-intrinsic)
 - No tuned parameters (the violation exists across a range of G, m, N)
 
