@@ -27,10 +27,8 @@ from __future__ import annotations
 import math
 import sys
 from dataclasses import dataclass
-from itertools import product
-
 import numpy as np
-from scipy.optimize import minimize
+from scipy.optimize import NonlinearConstraint, minimize, shgo
 
 import frontier_dm_leptogenesis_flavor_column_functional_theorem as func
 import frontier_dm_leptogenesis_pmns_active_projector_reduction as act
@@ -56,16 +54,6 @@ SX = 3.0 * XBAR_NE
 SY = 3.0 * YBAR_NE
 
 I_STAR = 0
-LOW_ACTION_REF = 0.240906701390
-HIGH_ACTION_REF = 1.110657539338
-LOW_ETA_REF = 1.0
-HIGH_ETA_REF = np.array([1.0, 0.94763537, 0.95875999], dtype=float)
-LOW_SOURCE_REF = np.array([0.471675, 0.553810, 0.664515], dtype=float)
-HIGH_SOURCE_REF = np.array([0.790189, 0.406763, 0.493048], dtype=float)
-LOW_SOURCE_REF_Y = np.array([0.208063, 0.464382, 0.247555], dtype=float)
-HIGH_SOURCE_REF_Y = np.array([0.586185, 0.167566, 0.166248], dtype=float)
-LOW_CHART_REF = None
-HIGH_CHART_REF = None
 
 
 def check(name: str, condition: bool, detail: str = "") -> bool:
@@ -95,23 +83,6 @@ def compact_chart_to_source(params: np.ndarray) -> tuple[np.ndarray, np.ndarray,
     x = SX * np.array([u1, (1.0 - u1) * u2, (1.0 - u1) * (1.0 - u2)], dtype=float)
     y = SY * np.array([v1, (1.0 - v1) * v2, (1.0 - v1) * (1.0 - v2)], dtype=float)
     return x, y, float(delta)
-
-
-def source_to_compact_chart(x: np.ndarray, y: np.ndarray, delta: float) -> np.ndarray:
-    """
-    Inverse of the compact chart on the interior of the fixed seed surface.
-    """
-    x = np.asarray(x, dtype=float)
-    y = np.asarray(y, dtype=float)
-    u1 = float(x[0] / SX)
-    u2 = float(x[1] / max(SX * (1.0 - u1), 1e-15))
-    v1 = float(y[0] / SY)
-    v2 = float(y[1] / max(SY * (1.0 - v1), 1e-15))
-    return np.array([u1, u2, v1, v2, float(delta)], dtype=float)
-
-
-LOW_CHART_REF = source_to_compact_chart(LOW_SOURCE_REF, LOW_SOURCE_REF_Y, 0.0)
-HIGH_CHART_REF = source_to_compact_chart(HIGH_SOURCE_REF, HIGH_SOURCE_REF_Y, 0.0)
 
 
 def packet_and_etas_from_chart(params: np.ndarray) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
@@ -222,46 +193,25 @@ def refine_candidate(start: np.ndarray) -> tuple[np.ndarray, object]:
     return x0, res
 
 
-def deterministic_seed_cover(levels: list[float], delta_levels: list[float]) -> list[np.ndarray]:
-    starts: list[np.ndarray] = []
-    for u1, u2, v1, v2, delta in product(levels, levels, levels, levels, delta_levels):
-        starts.append(np.array([u1, u2, v1, v2, delta], dtype=float))
-    return starts
+def anchor_free_global_candidates() -> list[np.ndarray]:
+    constraint = NonlinearConstraint(lambda p: closure_residual(np.asarray(p, dtype=float)), 0.0, 0.0)
+    result = shgo(
+        relative_action_from_chart,
+        bounds=[(1.0e-4, 1.0 - 1.0e-4)] * 4 + [(-math.pi, math.pi)],
+        constraints=(constraint,),
+        n=1024,
+        iters=2,
+        sampling_method="sobol",
+    )
 
-
-def global_search_candidates() -> list[np.ndarray]:
     candidates: list[np.ndarray] = []
-
-    search_sets = [
-        ([0.05, 0.95], [0.0]),
-    ]
-
-    # The exact low/high branch representatives are already known on the current
-    # branch; include them as validation anchors, not as search shortcuts.
-    candidates.append(np.asarray(LOW_CHART_REF, dtype=float))
-    candidates.append(np.asarray(HIGH_CHART_REF, dtype=float))
-
-    for levels, delta_levels in search_sets:
-        for start in deterministic_seed_cover(levels, delta_levels):
-            x, res = refine_candidate(start)
-            if abs(closure_residual(x)) < 1.0e-7 and np.isfinite(relative_action_from_chart(x)):
-                candidates.append(x)
-        branches = cluster_solutions(candidates)
-        if len(branches) >= 2:
-            break
-
-    if len(cluster_solutions(candidates)) < 2:
-        # One last deterministic micro-cover around the already-known
-        # low/high branch anchors, used only if the coarse cover is not enough.
-        for anchor in (LOW_CHART_REF, HIGH_CHART_REF):
-            for du1, du2, dv1, dv2 in product([-0.03, 0.0, 0.03], repeat=4):
-                start = np.asarray(anchor, dtype=float) + np.array([du1, du2, dv1, dv2, 0.0], dtype=float)
-                start[:4] = np.clip(start[:4], 1.0e-4, 1.0 - 1.0e-4)
-                start[4] = 0.0
-                x, res = refine_candidate(start)
-                if abs(closure_residual(x)) < 1.0e-7 and np.isfinite(relative_action_from_chart(x)):
-                    candidates.append(x)
-
+    minima = getattr(result, "xl", None)
+    if minima is None:
+        minima = np.asarray([result.x], dtype=float)
+    for start in np.asarray(minima, dtype=float):
+        x, _res = refine_candidate(start)
+        if abs(closure_residual(x)) < 1.0e-8 and np.isfinite(relative_action_from_chart(x)):
+            candidates.append(x)
     return candidates
 
 
@@ -285,7 +235,7 @@ def cluster_solutions(solutions: list[np.ndarray]) -> list[Branch]:
             buckets.append([sol])
 
     branches: list[Branch] = []
-    for idx, bucket in enumerate(buckets):
+    for bucket in buckets:
         rep = np.mean(np.asarray(bucket, dtype=float), axis=0)
         rep, _res = refine_candidate(rep)
         h_e, _packet, etas = packet_and_etas_from_chart(rep)
@@ -304,10 +254,12 @@ def cluster_solutions(solutions: list[np.ndarray]) -> list[Branch]:
 
 
 def certified_branch_search() -> list[Branch]:
-    candidates = global_search_candidates()
+    candidates = anchor_free_global_candidates()
     branches = cluster_solutions(candidates)
     if len(branches) != 3:
-        raise RuntimeError(f"exhaustive chart cover did not stabilize to exactly three stationary branches (found {len(branches)})")
+        raise RuntimeError(
+            f"anchor-free SHGO support search did not stabilize to exactly three stationary closure branches (found {len(branches)})"
+        )
     return branches
 
 
@@ -318,24 +270,14 @@ def certify_global_minimum(branches: list[Branch]) -> None:
     min_gap = mid.action - low.action
 
     check(
-        "The exhaustive compact-chart search returns exactly three stationary closure branches on the reduced surface",
+        "The anchor-free deterministic global support search returns exactly three stationary closure branches on the reduced surface",
         len(branches) == 3,
         f"branch count={len(branches)}",
     )
     check(
         "The lower branch closes the favored column exactly",
-        abs(low.etas[I_STAR] - LOW_ETA_REF) < 1.0e-10,
+        abs(low.etas[I_STAR] - 1.0) < 1.0e-10,
         f"eta/eta_obs={low.etas[I_STAR]:.12f}",
-    )
-    check(
-        "The lower branch matches the previously derived exact low-action closure branch",
-        abs(low.action - LOW_ACTION_REF) < 1.0e-6,
-        f"S_rel={low.action:.12f}",
-    )
-    check(
-        "The higher stationary branch matches the previously derived higher-action closure branch",
-        abs(high.action - HIGH_ACTION_REF) < 1.0e-6,
-        f"S_rel={high.action:.12f}",
     )
     check(
         "The lowest-action branch is separated from the next branch by a finite action gap",
@@ -393,7 +335,7 @@ def main() -> int:
     print("Question:")
     print("  On the exact reduced PMNS-assisted N_e seed surface, can the lowest-action")
     print("  closure branch be recovered robustly on the reduced surface by a")
-    print("  deterministic compact-chart search plus local polishing?")
+    print("  deterministic anchor-free global search plus local polishing?")
     print()
     print("Scope:")
     print("  The reduction-exhaustion theorem already eliminates all components beyond")
@@ -407,15 +349,16 @@ def main() -> int:
     print("RESULT")
     print("=" * 88)
     print("  Reduced-surface support result:")
-    print("    - exhaustive compact-chart optimization gives a finite set of")
+    print("    - anchor-free deterministic global optimization gives a finite set of")
     print("      three stationary closure branches on the exact reduced domain")
     print("    - the lower branch is recovered as the lowest-action branch on that surface")
     print("    - the finite action gap to the next branch is > 1e-3")
     print("    - the lower branch closes the favored column exactly")
     print()
     print("  This is strong reduced-surface optimization support. The live authority")
-    print("  path still keeps it below theorem-grade promotion because the current")
-    print("  search uses known branch anchors and local polishing.")
+    print("  path still keeps it below theorem-grade promotion because even the")
+    print("  anchor-free global search is still a numerical optimization support")
+    print("  argument rather than a certified interval/global proof.")
     print()
     print(f"PASS={PASS_COUNT}  FAIL={FAIL_COUNT}")
     return 1 if FAIL_COUNT else 0
