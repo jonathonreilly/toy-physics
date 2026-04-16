@@ -73,6 +73,10 @@ On the current promoted package surface this gives:
 
 That is the exact one-loop scalar-cubic target implied by the current package.
 
+The same-surface selector derivation of the relevant portal scale is now
+recorded in
+[BARYOGENESIS_SELECTOR_PORTAL_NOTE.md](./BARYOGENESIS_SELECTOR_PORTAL_NOTE.md).
+
 ## Minimal 2HDM-like interpretation
 
 The old route history described the target as natural for a "2HDM-like
@@ -114,6 +118,14 @@ So the old route can only work if the taste-scalar sector is not merely
 "present," but coupled to the order parameter substantially more strongly than
 the Higgs quartic itself.
 
+The new selector-portal note shows that the exact graph-first quartic surface
+does in fact generate an order-1 portal:
+
+`kappa_sel = 6 lambda_H ~= 0.71 - 0.77`
+
+which lands almost exactly on this target window before screening effects are
+included.
+
 ## Important caution
 
 This target is optimistic.
@@ -152,6 +164,7 @@ This note does **not** claim:
 
 - [frontier_baryogenesis_taste_scalar_cubic_target.py](./../scripts/frontier_baryogenesis_taste_scalar_cubic_target.py)
 - [BARYOGENESIS_FINITE_T_REDUCTION_NOTE.md](./BARYOGENESIS_FINITE_T_REDUCTION_NOTE.md)
+- [BARYOGENESIS_SELECTOR_PORTAL_NOTE.md](./BARYOGENESIS_SELECTOR_PORTAL_NOTE.md)
 
 Current runner state:
 

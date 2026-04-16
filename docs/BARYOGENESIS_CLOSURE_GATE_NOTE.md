@@ -43,6 +43,8 @@ The next derivation-side reduction of that target is recorded in
 [BARYOGENESIS_FINITE_T_REDUCTION_NOTE.md](./BARYOGENESIS_FINITE_T_REDUCTION_NOTE.md).
 The next same-surface scalar-sector target is recorded in
 [BARYOGENESIS_TASTE_SCALAR_CUBIC_TARGET_NOTE.md](./BARYOGENESIS_TASTE_SCALAR_CUBIC_TARGET_NOTE.md).
+The graph-first selector derivation of the relevant portal scale is recorded in
+[BARYOGENESIS_SELECTOR_PORTAL_NOTE.md](./BARYOGENESIS_SELECTOR_PORTAL_NOTE.md).
 
 It does **not** claim a first-principles computation of the electroweak phase
 transition, sphaleron rate, or baryon transport coefficients.
@@ -180,9 +182,11 @@ This note does **not** claim:
 - [BARYOGENESIS_EWPT_WASHOUT_TARGET_NOTE.md](./BARYOGENESIS_EWPT_WASHOUT_TARGET_NOTE.md)
 - [BARYOGENESIS_FINITE_T_REDUCTION_NOTE.md](./BARYOGENESIS_FINITE_T_REDUCTION_NOTE.md)
 - [BARYOGENESIS_TASTE_SCALAR_CUBIC_TARGET_NOTE.md](./BARYOGENESIS_TASTE_SCALAR_CUBIC_TARGET_NOTE.md)
+- [BARYOGENESIS_SELECTOR_PORTAL_NOTE.md](./BARYOGENESIS_SELECTOR_PORTAL_NOTE.md)
 - [frontier_baryogenesis_ewpt_washout_target.py](./../scripts/frontier_baryogenesis_ewpt_washout_target.py)
 - [frontier_baryogenesis_finite_t_reduction.py](./../scripts/frontier_baryogenesis_finite_t_reduction.py)
 - [frontier_baryogenesis_taste_scalar_cubic_target.py](./../scripts/frontier_baryogenesis_taste_scalar_cubic_target.py)
+- [frontier_baryogenesis_selector_portal.py](./../scripts/frontier_baryogenesis_selector_portal.py)
 - [frontier_omega_lambda_derivation.py](./../scripts/frontier_omega_lambda_derivation.py)
 
 Current runner state:
@@ -191,4 +195,5 @@ Current runner state:
 - `frontier_baryogenesis_ewpt_washout_target.py`: expected `PASS>0`, `FAIL=0`
 - `frontier_baryogenesis_finite_t_reduction.py`: expected `PASS>0`, `FAIL=0`
 - `frontier_baryogenesis_taste_scalar_cubic_target.py`: expected `PASS>0`, `FAIL=0`
+- `frontier_baryogenesis_selector_portal.py`: expected `PASS>0`, `FAIL=0`
 - `frontier_omega_lambda_derivation.py`: existing bounded cosmology companion
