@@ -189,6 +189,10 @@ supports.
 The next same-surface reduction of the transition-history stage is recorded in
 [BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md](./BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md),
 which shows that `K_EWPT` lives on one exact scalar thermal history lane.
+The complementary same-surface reduction of the sphaleron-survival stage is
+recorded in
+[BARYOGENESIS_KSPH_SINGLE_ACTIVE_LANE_NOTE.md](./BARYOGENESIS_KSPH_SINGLE_ACTIVE_LANE_NOTE.md),
+which shows that `K_sph` lives on one exact washout-active `B+L` charge lane.
 
 ## Validation
 

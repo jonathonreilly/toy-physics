@@ -101,6 +101,9 @@ packaging.
   and the transition-stage reduction to one scalar thermal history lane
   recorded in
   [BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md](BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md)
+  and the sphaleron-survival-stage reduction to one active charge lane
+  recorded in
+  [BARYOGENESIS_KSPH_SINGLE_ACTIVE_LANE_NOTE.md](BARYOGENESIS_KSPH_SINGLE_ACTIVE_LANE_NOTE.md)
 - bounded secondary predictions already on `main`, including proton lifetime,
   CKM neutron EDM, vacuum critical stability, benchmark gravitational
   decoherence, BH entropy, and monopole mass

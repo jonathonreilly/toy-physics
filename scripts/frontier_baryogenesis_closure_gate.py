@@ -224,6 +224,9 @@ def part3_eta_bridge(j: float) -> None:
     kewpt_note = (DOCS / "BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md").read_text(
         encoding="utf-8"
     )
+    ksph_note = (DOCS / "BARYOGENESIS_KSPH_SINGLE_ACTIVE_LANE_NOTE.md").read_text(
+        encoding="utf-8"
+    )
     omega_note = (DOCS / "OMEGA_LAMBDA_DERIVATION_NOTE.md").read_text(encoding="utf-8")
     omega_runner = (ROOT / "scripts" / "frontier_omega_lambda_derivation.py").read_text(encoding="utf-8")
 
@@ -256,13 +259,21 @@ def part3_eta_bridge(j: float) -> None:
         "`K_EWPT = F_EWPT[χ(τ)]`" in kewpt_note,
     )
     check(
+        "K_sph reduction note records the single active-lane functional",
+        "`K_sph = F_sph[q_+(τ)]`" in ksph_note,
+    )
+    check(
         "closure-gate note points to the K_EWPT reduction note",
         "BARYOGENESIS_KEWPT_SINGLE_ORDER_PARAMETER_NOTE.md" in baryo_note,
+    )
+    check(
+        "closure-gate note points to the K_sph reduction note",
+        "BARYOGENESIS_KSPH_SINGLE_ACTIVE_LANE_NOTE.md" in baryo_note,
     )
 
     info(
         "open baryogenesis object",
-        "the exact three-stage electroweak object K_EWPT * K_tr * K_sph multiplying the exact weak-flavor source J, with K_EWPT reduced to one retained scalar thermal history lane",
+        "the exact three-stage electroweak object K_EWPT * K_tr * K_sph multiplying the exact weak-flavor source J, with K_EWPT reduced to one retained scalar thermal history lane and K_sph reduced to one retained active charge-history lane",
     )
     print()
     print("  Consequence:")
