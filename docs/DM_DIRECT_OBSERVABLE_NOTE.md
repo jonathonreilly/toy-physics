@@ -1,6 +1,7 @@
 # R Is a Direct Observable of H, Not a Chain Through g -> alpha_s -> sigma_v
 
 **Date:** 2026-04-13
+**Branch:** `claude/youthful-neumann`
 **Scripts:** `scripts/frontier_dm_sigma_v_lattice.py`
 **Lane:** DM relic mapping
 **Resolves:** DM Blocker 1 (g_bare = 1 invariance question)
@@ -16,6 +17,11 @@ on a false premise: that the DM relic ratio R depends on a "coupling
 constant" as a separate parameter. It does not. R is a direct observable
 of the Hamiltonian H. The coupling is not an input to R -- it is an
 intermediate label humans apply to a property of H.
+
+This note addresses the **downstream invariance** question only:
+does the same fixed `H` determine the same `sigma_v` and `R`? The newer
+no-free-parameter response to the harder normalization objection lives in
+[G_BARE_RIGIDITY_THEOREM_NOTE.md](/Users/jonBridger/Toy%20Physics-dm/docs/G_BARE_RIGIDITY_THEOREM_NOTE.md:1).
 
 ---
 
@@ -156,10 +162,11 @@ is its leading-order approximation.
 
 ## What This Achieves
 
-1. **Eliminates the normalization gap.** The blocker asked whether g = 1
-   in H invariantly determines sigma_v. Route B shows sigma_v depends on
-   H directly, not on a separately defined coupling. The gap does not
-   exist.
+1. **Eliminates the downstream invariance gap.** The blocker asked whether
+   the fixed `H` invariantly determines `sigma_v`. Route B shows `sigma_v`
+   depends on `H` directly, not on a separately defined coupling.
+   The harder no-free-parameter question is handled, if at all, by the
+   later rigidity-theorem route.
 
 2. **Reduces the bounded input to one.** The only input that remains
    bounded is: why is the framework Cl(3) on Z^3 with H = sum eta_ij U_ij
@@ -176,9 +183,10 @@ is its leading-order approximation.
 
 ## What This Does NOT Achieve
 
-1. **Does not derive H from more primitive principles.** Why coefficient 1
-   and not some other value? This is not answered. It is the same question
-   as "why this theory?" -- a foundational commitment.
+1. **Does not, by itself, prove no-free-parameter gauge normalization.**
+   Why coefficient 1 and not some other value? This note alone does not
+   answer that. It only shows that, once `H` is fixed, the later
+   annihilation observable is fixed.
 
 2. **Does not close the cosmological cancellation.** The ratio
    R = Omega_DM / Omega_b involves cosmological factors (H(T), g_*, etc.)
@@ -208,9 +216,10 @@ The question "is g = 1 invariantly the same coupling that enters sigma_v?"
 dissolves: g = 1 does not enter sigma_v at all. H enters sigma_v, and
 g = 1 is part of what makes H what it is.
 
-The DM lane remains BOUNDED. The irreducible bounded input is the
-framework commitment H = sum eta_ij U_ij, not a coupling-constant
-ambiguity.
+The DM lane remains BOUNDED. This note removes the downstream
+coupling-ambiguity objection after `H` is fixed. The remaining harder
+question is whether the branch has a theorem-grade reason that the
+canonical gauge normalization contains no independent bare parameter.
 
 ---
 

@@ -1,0 +1,179 @@
+# Gauge-Normalization Rigidity Theorem
+
+**Date:** 2026-04-14  
+**Branch:** `codex/dm-across-the-line`  
+**Script:** `scripts/frontier_g_bare_rigidity_theorem.py`
+
+---
+
+## Status
+
+**FORMAL THEOREM CANDIDATE**
+
+This note attacks the real remaining `g_bare` objection at the correct level.
+It does **not** claim a dynamical fixed-point derivation of `g = 1`. Instead,
+it proves a sharper statement:
+
+> once the gauge algebra is derived as a **concrete compact subalgebra of**
+> `End(V)`, and the Hilbert-space metric on `V` is fixed by the axioms,
+> there is no independent scalar gauge-normalization freedom left.
+
+In that sense, `g_bare = 1` is not a fitted parameter and not a separate
+physical input. It is the canonical coordinate choice on the already-derived
+operator algebra.
+
+This is the theorem-grade response to the old objection
+"you can always rescale `A -> A/g`."
+
+---
+
+## What This Uses
+
+This note is downstream of the retained gauge-algebra surface:
+
+1. **Concrete taste Hilbert space**
+   - `V = C^8` from the Kawamoto-Smit / hypercube construction
+   - the Hilbert-space inner product is part of the framework axioms
+
+2. **Derived gauge algebra**
+   - `su(3)` appears as the compact semisimple commutant in `End(V)`
+   - see [SU3_CANONICAL_CLOSURE_NOTE.md](/Users/jonBridger/Toy%20Physics-dm/docs/SU3_CANONICAL_CLOSURE_NOTE.md:1)
+   - formal commutant proof in [SU3_FORMAL_THEOREM_NOTE.md](/Users/jonBridger/Toy%20Physics-dm/docs/SU3_FORMAL_THEOREM_NOTE.md:1)
+
+3. **Unitary Hamiltonian framework**
+   - the physical theory is the Hamiltonian/operator theory, not a path-integral
+     regulator with an independent bare-action coefficient
+
+The theorem therefore does **not** start from an abstract continuum gauge field
+with an arbitrary coupling. It starts from the concrete operator algebra that
+the framework already claims to derive.
+
+---
+
+## Theorem
+
+**Theorem (Gauge-normalization rigidity).**
+
+Let `g_conc = su(3) subset End(V)` be the concrete compact semisimple gauge
+algebra derived on the taste Hilbert space `V`, with `V` carrying its fixed
+Hilbert-space inner product. Then:
+
+1. The Hilbert-space inner product induces a fixed Hilbert-Schmidt trace form
+   on `End(V)`, hence on `g_conc`.
+
+2. On the canonical triplet block, there exists an orthonormal Hermitian
+   traceless basis `{T_a}` satisfying
+
+   `Tr(T_a T_b) = delta_ab / 2`
+
+   and the quadratic Casimir is fixed:
+
+   `sum_a T_a T_a = (4/3) I_3`.
+
+3. The allowed ambiguity in `{T_a}` is orthogonal basis rotation inside the
+   fixed trace form. Such rotations preserve both the trace Gram matrix and
+   the Casimir.
+
+4. A uniform scalar dilation `T_a -> lambda T_a` with `lambda != 1` is **not**
+   an allowed ambiguity of the canonical normalization, because it changes the
+   fixed trace form and the fixed Casimir.
+
+5. Therefore the physical gauge connection is the operator-valued one-form
+
+   `A_op = sum_a A^a T_a`
+
+   and the holonomy is
+
+   `U = exp(i A_op a) = exp(i A^a T_a a)`.
+
+   In the canonical normalized basis there is no independent multiplicative
+   bare coupling. Standard notation rewrites this as `g_bare = 1`.
+
+---
+
+## Why This Answers The Old Objection
+
+The old objection was:
+
+> "You can always rescale `A -> A/g`; so `g = 1` is just convention."
+
+The correct reply is now:
+
+1. The theory’s physical object is **not** an abstract coefficient list
+   `A^a` by itself. It is the concrete operator
+
+   `A_op = sum_a A^a T_a in g_conc subset End(V)`.
+
+2. Once the generator basis `{T_a}` is canonically normalized by the fixed
+   Hilbert-space trace form, there is no further scalar ambiguity in the
+   generators.
+
+3. Writing `A_op = sum_a (g A^a) T_a` is only a coordinate re-labeling of the
+   coefficients of the same operator. It does **not** introduce a new physical
+   parameter of the theory.
+
+So the theorem does not say "dynamics selected the magical number `1`."
+It says something stronger and cleaner:
+
+> the framework has **no independent bare coupling parameter** at this stage.
+
+That is why `g_bare = 1` is the correct canonical statement.
+
+---
+
+## What The Script Checks
+
+The companion script verifies:
+
+1. the canonical `su(3)` generators really lie in the derived commutant
+2. the canonical trace normalization on the triplet block:
+   - `Tr(T_a T_b) = delta_ab / 2`
+3. the canonical Casimir:
+   - `sum_a T_a T_a = (4/3) I_3`
+4. orthogonal basis rotations preserve these invariants
+5. scalar dilations change these invariants
+6. the scalar `g` can always be absorbed into the coefficient vector of the
+   operator `A_op`, showing it is coordinate redundancy rather than a new
+   physical parameter
+
+---
+
+## What This Does And Does Not Close
+
+### What it closes
+
+- the specific objection that `g = 1` is merely an arbitrary absorbed-coupling
+  convention
+- the idea that there remains a hidden one-parameter scalar normalization
+  freedom in the derived gauge algebra
+
+### What it does not close
+
+- the full DM relic lane by itself
+- the baryon denominator / `eta` issue
+- the secondary `k = 0` / radiation-era wording issues
+- any dynamical running or continuum EFT story
+
+This is a gauge-normalization theorem, not the whole DM closure.
+
+---
+
+## Paper-Safe Claim
+
+> The framework does not contain a free bare gauge-coupling parameter at the
+> Hamiltonian level. Once the `su(3)` gauge algebra is derived as a concrete
+> compact subalgebra of the taste-space operator algebra, the Hilbert-space
+> trace form fixes the canonical generator normalization up to orthogonal
+> basis rotation. In that canonical basis, the lattice holonomy is
+> `U = exp(i A^a T_a a)`, so the standard notation corresponds to
+> `g_bare = 1`.
+
+---
+
+## Commands
+
+```bash
+python3 scripts/frontier_g_bare_rigidity_theorem.py
+```
+
+Expected result: all checks pass.
