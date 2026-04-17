@@ -1,7 +1,7 @@
-# CKM Neutron-EDM Bounded Lane
+# CKM Neutron-EDM Corollary and Bounded Prediction
 
 **Date:** 2026-04-15
-**Status:** bounded lane on `main`
+**Status:** retained structural corollary + bounded quantitative prediction on `main`
 **Script:** `scripts/frontier_ckm_neutron_edm_bound.py`
 
 ## Role
@@ -35,11 +35,29 @@ The estimate uses two ingredients:
    - authority:
      [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
 
-It then applies a **standard EFT bridge** for the short-distance and
-long-distance CKM neutron-EDM scalings. So this is a bounded lane, not an
-exact theorem row.
+These two package-grade inputs already close the structural corollary:
 
-## Current Estimate
+- on the retained `\theta_eff = 0` surface, `d_n(QCD) = 0` exactly
+- therefore the surviving neutron EDM is a **CKM-only** observable
+
+The note then applies a **standard EFT bridge** for the short-distance and
+long-distance CKM neutron-EDM scalings. That quantitative continuation remains
+bounded, not theorem-grade.
+
+## What Is Retained Exactly
+
+On the retained action surface plus the promoted CKM closure package, the repo
+now supports the following exact corollary:
+
+> `d_n(QCD) = 0` exactly on the retained `\theta_eff = 0` surface, so the
+> surviving neutron EDM is CKM-only.
+
+This is not a new strong-CP theorem beyond
+[STRONG_CP_THETA_ZERO_NOTE.md](STRONG_CP_THETA_ZERO_NOTE.md). It is the direct
+observable corollary obtained by combining that retained strong-CP closure with
+the promoted CKM atlas/axiom package.
+
+## Bounded Quantitative Continuation
 
 Using the framework CKM package:
 
@@ -65,6 +83,7 @@ What this lane supports:
 
 - on the retained `\theta_eff = 0` surface, the neutron EDM is a **CKM-only**
   observable
+- equivalently, `d_n(QCD) = 0` exactly on that retained surface
 - a standard short/long-distance EFT bridge puts that CKM-only scale near
   `10^-32 - 10^-33 e cm`
 
@@ -76,12 +95,16 @@ What this lane does **not** support:
 
 ## How It Fits the Package
 
-This is a bounded secondary lane, similar in status to proton lifetime,
-gravitational decoherence, and vacuum critical stability:
+This note now has the same dual-status architecture as the confinement /
+string-tension row:
 
-- scientifically useful
-- reviewer-relevant
-- not part of the retained flagship theorem core
+- retained structural corollary:
+  `d_n(QCD) = 0` and neutron EDM is CKM-only on the retained surface
+- bounded quantitative continuation:
+  `d_n(CKM) ~ 10^-32 - 10^-33 e cm` through the standard EFT bridge
+
+So the exact corollary is package-grade, while the numeric prediction remains a
+secondary bounded consequence.
 
 ## Commands Run
 

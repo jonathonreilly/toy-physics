@@ -304,8 +304,10 @@ These support items are not counted as theorem-grade closure.
    Broader axion-model exclusion is a separate question.
 
 4. **Observable neutron-EDM matrix elements.**
-   The surviving observable lane is the separate bounded CKM neutron-EDM note,
-   not part of this theorem.
+   The surviving observable lane is the separate CKM neutron-EDM corollary /
+   bounded-prediction note: the exact corollary `d_n(QCD) = 0` and
+   CKM-only structure follow from this theorem plus promoted CKM closure, while
+   the numerical `d_n(CKM)` scale remains EFT-bridged.
 
 ## How This Changes The Paper
 
@@ -330,8 +332,9 @@ The safe paper sentence is:
 
 1. **`θ_eff = 0` exactly on the retained action surface.**
 2. **`d_n(QCD) = 0` on that retained surface.**
-   The surviving observable neutron-EDM estimate is the separate bounded CKM
-   lane, currently `d_n(CKM) ~ 8 x 10^-33 e cm`.
+   The surviving observable neutron-EDM estimate is the separate CKM-only
+   corollary / bounded quantitative lane, currently
+   `d_n(CKM) ~ 8 x 10^-33 e cm`.
 3. **Any observed strong-sector CP phase requires structure beyond the retained
    action surface.**
 

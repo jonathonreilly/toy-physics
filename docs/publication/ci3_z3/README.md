@@ -137,10 +137,11 @@ Current package status:
   boundary remains
 - older bounded CKM mass-basis / Cabibbo / partial Jarlskog route history
 - cosmology bounded family such as `\Omega_\Lambda`, `n_s`, `w = -1`
-- bounded secondary predictions already on `main`:
-  proton lifetime, CKM neutron EDM, down-type flavor-mass CKM-dual ratios,
-  vacuum critical stability, taste-scalar near-degeneracy, benchmark
-  gravitational decoherence
+- bounded secondary predictions already on `main`, plus the CKM-only
+  neutron-EDM corollary with bounded continuation:
+  proton lifetime, down-type flavor-mass CKM-dual ratios, vacuum critical
+  stability, taste-scalar near-degeneracy, benchmark gravitational
+  decoherence
 
 ## Package Rules
 

@@ -86,8 +86,10 @@ bridge layer beyond the exact structural core.
   - same-surface derived framework values plus the retained running bridge
 - bounded string tension readout:
   - exact confinement theorem plus low-energy EFT bridge
-- CKM neutron EDM:
-  - retained strong-CP closure package + promoted CKM package + EFT bridge
+- CKM-only neutron-EDM corollary + bounded continuation:
+  - retained strong-CP closure package + promoted CKM package
+  - exact corollary `d_n(QCD) = 0` on the retained surface; EFT bridge only
+    for the bounded `d_n(CKM)` number
 - down-type CKM-dual mass ratios:
   - promoted CKM closure + GST + bounded `5/6` mass-ratio bridge; no observed
     masses as derivation inputs
@@ -112,13 +114,14 @@ theorem core.
 - cosmology lanes
 - bounded secondary prediction surface:
   - proton lifetime
-  - CKM neutron EDM
   - down-type CKM-dual mass ratios
   - vacuum critical stability
   - taste-scalar near-degeneracy
   - benchmark gravitational decoherence
   - monopole mass
   - Bekenstein-Hawking entropy comparison
+- dual-status corollary surface:
+  - CKM-only neutron EDM with bounded `d_n(CKM)` continuation
 
 ## 7. Live gate
 

@@ -70,8 +70,9 @@ carried by the current package.
     lifetime scale would strongly disfavor the framework route
   - authority:
     [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md)
-- CKM neutron EDM on the retained `theta_eff = 0` surface:
-  - `d_n(CKM) ~ 8 x 10^-33 e cm`
+- CKM-only neutron-EDM corollary on the retained `theta_eff = 0` surface:
+  - exactly, `d_n(QCD) = 0` and the surviving neutron EDM is CKM-only
+  - bounded continuation: `d_n(CKM) ~ 8 x 10^-33 e cm`
   - authority:
     [CKM_NEUTRON_EDM_BOUND_NOTE.md](../../CKM_NEUTRON_EDM_BOUND_NOTE.md)
 - down-type flavor-mass CKM-dual lane:

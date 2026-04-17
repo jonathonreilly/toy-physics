@@ -184,7 +184,7 @@ Use alongside:
 | Conditional `Omega_Lambda` chain | [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md) | [frontier_omega_lambda_derivation.py](../../../scripts/frontier_omega_lambda_derivation.py) |
 | Graviton-mass companion | [GRAVITON_MASS_DERIVED_NOTE.md](../../GRAVITON_MASS_DERIVED_NOTE.md) | [frontier_graviton_mass_derived.py](../../../scripts/frontier_graviton_mass_derived.py) |
 | Gravitational decoherence companion | [GRAV_DECOHERENCE_DERIVED_NOTE.md](../../GRAV_DECOHERENCE_DERIVED_NOTE.md) | [frontier_grav_decoherence_derived.py](../../../scripts/frontier_grav_decoherence_derived.py) |
-| CKM neutron-EDM bounded lane | [CKM_NEUTRON_EDM_BOUND_NOTE.md](../../CKM_NEUTRON_EDM_BOUND_NOTE.md) | [frontier_ckm_neutron_edm_bound.py](../../../scripts/frontier_ckm_neutron_edm_bound.py) |
+| CKM-only neutron-EDM corollary + bounded prediction | [CKM_NEUTRON_EDM_BOUND_NOTE.md](../../CKM_NEUTRON_EDM_BOUND_NOTE.md) | [frontier_ckm_neutron_edm_bound.py](../../../scripts/frontier_ckm_neutron_edm_bound.py) |
 | down-type mass-ratio CKM-dual lane | [DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md](../../DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md) | [frontier_mass_ratio_ckm_dual.py](../../../scripts/frontier_mass_ratio_ckm_dual.py) |
 | taste-scalar near-degeneracy companion | [TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md](../../TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md) | [frontier_taste_scalar_isotropy.py](../../../scripts/frontier_taste_scalar_isotropy.py) |
 | Proton-lifetime companion | [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md) | [frontier_proton_lifetime_derived.py](../../../scripts/frontier_proton_lifetime_derived.py) |

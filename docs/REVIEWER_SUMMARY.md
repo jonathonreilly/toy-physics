@@ -135,10 +135,10 @@ Current quantitative statuses:
 - DM flagship gate, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, exact constructive `eta/eta_obs = 1` existence on the fixed native `N_e` seed surface, and a remaining right-sensitive microscopic selector-law / current-bank DM-mapping gap
 - promoted CKM atlas/axiom closure package, with older Cabibbo / NNI / partial Jarlskog notes retained only as route history
 - cosmology companions
-- bounded secondary predictions already on `main`, including proton lifetime,
-  CKM neutron EDM, down-type flavor-mass CKM-dual ratios, vacuum critical
-  stability, taste-scalar near-degeneracy, benchmark gravitational
-  decoherence, and monopole mass
+- bounded secondary predictions already on `main`, plus the CKM-only
+  neutron-EDM corollary with bounded continuation: proton lifetime, down-type
+  flavor-mass CKM-dual ratios, vacuum critical stability, taste-scalar
+  near-degeneracy, benchmark gravitational decoherence, and monopole mass
 
 ## Open Gates
 

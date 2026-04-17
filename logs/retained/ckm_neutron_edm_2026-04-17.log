@@ -1,0 +1,23 @@
+========================================================================
+CKM neutron-EDM corollary and bounded prediction
+========================================================================
+
+  [PASS] QCD theta contribution vanishes on the retained surface  (θ_eff = 0 → d_n(QCD) = 0)
+  [PASS] Framework Jarlskog matches promoted CKM package  (J = 3.3311e-05)
+  Short-distance estimate: 4.95e-33 e·cm
+  Long-distance estimate:  7.71e-33 e·cm
+  [PASS] Surviving neutron EDM is CKM-only on the retained surface  (strong-sector piece vanishes, nonzero CKM estimate survives)
+  [PASS] CKM-only neutron EDM lies on the expected EFT scale  (d_n(CKM) ≈ 7.71e-33 e·cm)
+  [PASS] CKM-only estimate is well below the current bound  (prediction/bound ≈ 4.28e-07)
+
+========================================================================
+SUMMARY: PASS=5  FAIL=0
+========================================================================
+
+Retained structural corollary:
+  d_n(QCD) = 0 exactly on the retained θ_eff = 0 surface
+  the surviving neutron EDM is CKM-only
+
+Bounded quantitative continuation:
+  d_n(CKM) ≈ 7.7e-33 e·cm
+  import class: promoted CKM closure + standard EFT bridge

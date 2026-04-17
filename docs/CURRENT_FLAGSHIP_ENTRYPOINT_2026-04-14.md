@@ -67,10 +67,10 @@ Fast reviewer path after this page:
   strict-review verdict `TRUE_NO_PREDICTION`; this is compatibility with the
   observed charged-lepton hierarchy, not a retained framework derivation of
   Koide
-- bounded prediction surface:
-  proton lifetime, CKM neutron EDM, down-type flavor-mass CKM-dual ratios,
-  vacuum critical stability, benchmark gravitational decoherence, and bounded
-  cosmology rows
+- bounded prediction surface plus one dual-status flavor corollary:
+  proton lifetime, the CKM-only neutron-EDM corollary with bounded
+  continuation, down-type flavor-mass CKM-dual ratios, vacuum critical
+  stability, benchmark gravitational decoherence, and bounded cosmology rows
 
 For the one-note gravity/gauge continuum positioning layer, use
 [CONTINUUM_IDENTIFICATION_NOTE.md](CONTINUUM_IDENTIFICATION_NOTE.md). The
@@ -88,9 +88,10 @@ packaging.
 - cosmology bounded family, organized around one fixed-gap vacuum scale
   (`Lambda`, `w = -1`, graviton mass) plus the remaining matter bridge behind
   present-day `Omega_Lambda`
-- bounded secondary predictions already on `main`, including proton lifetime,
-  CKM neutron EDM, down-type flavor-mass CKM-dual ratios, vacuum critical
-  stability, benchmark gravitational decoherence, BH entropy, and monopole mass
+- bounded secondary predictions already on `main`, plus the CKM-only
+  neutron-EDM corollary with bounded continuation: proton lifetime, down-type
+  flavor-mass CKM-dual ratios, vacuum critical stability, benchmark
+  gravitational decoherence, BH entropy, and monopole mass
 
 ## Live Gate
 

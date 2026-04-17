@@ -35,8 +35,9 @@ quark-mass or fitted-CKM inputs, and carries derived Yukawa/top and Higgs/
 vacuum rows whose current precision caveat is standard-method continuation on
 the primary route rather than a framework-native bridge qualifier.
 The package is already predictive beyond retrospective comparison,
-including proton lifetime, CKM neutron EDM, vacuum criticality, and benchmark
-gravitational decoherence. Dark-matter relic mapping is the sole remaining live
+including proton lifetime, the CKM-only neutron-EDM corollary with bounded
+continuation, vacuum criticality, and benchmark gravitational decoherence.
+Dark-matter relic mapping is the sole remaining live
 flagship gate. The paper separates exact, promoted, bounded, and open rows and
 pairs them with a public reproducibility surface.
 
@@ -645,14 +646,17 @@ The fastest way to read the quantitative package is Table 1.
 **Table 1.** Main retained and promoted quantitative outputs on the current
 paper surface.
 
-### 6.2 Bounded secondary predictions already carried by the package
+### 6.2 Bounded secondary predictions and one dual-status corollary already carried by the package
 
 The package also already carries bounded secondary predictions worth stating
-explicitly:
+explicitly, plus one retained-structural / bounded-quantitative flavor
+corollary:
 
 - proton lifetime:
   $\tau_p \sim 4\times 10^{47}\,\mathrm{yr}$;
-- CKM neutron EDM on the retained $\theta_{\mathrm{eff}}=0$ surface:
+- CKM-only neutron EDM on the retained $\theta_{\mathrm{eff}}=0$ surface:
+  exactly, $d_n^{\mathrm{QCD}}=0$ and the surviving neutron-EDM signal is
+  CKM-only; bounded continuation gives
   $d_n^{\mathrm{CKM}} \sim 8\times 10^{-33}\,e\,\mathrm{cm}$;
 - down-type flavor-mass CKM-dual lane:
   $m_d/m_s = 0.05165$, $m_s/m_b = 0.02239$, and $m_d/m_b = 0.001156$
@@ -750,8 +754,9 @@ algebraic CKM closure package. The quantitative side is no longer just a set of
 promising near-misses: it contains a canonical same-surface electroweak-scale
 evaluation, retained electroweak and strong-coupling lanes, and bounded
 Yukawa/Higgs authority surfaces with named downstream budgets. The package is already
-predictive beyond retrospective comparison through proton lifetime, CKM neutron
-EDM, vacuum criticality, and benchmark gravitational decoherence.
+predictive beyond retrospective comparison through proton lifetime, the CKM-only
+neutron-EDM corollary with bounded continuation, vacuum criticality, and benchmark
+gravitational decoherence.
 
 The remaining flagship gap is explicit rather than hidden: dark-matter relic
 mapping. That open bridge matters, but it does not erase the rows that are

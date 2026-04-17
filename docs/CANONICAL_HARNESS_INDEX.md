@@ -32,7 +32,7 @@ Use this file to find the current canonical note/runner pair on `main`.
 | derived Higgs / vacuum | [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md), [HIGGS_MASS_DERIVED_NOTE.md](HIGGS_MASS_DERIVED_NOTE.md) | `frontier_higgs_mass_full_3loop.py`, `frontier_yt_color_projection_correction.py`, `frontier_yt_explicit_systematic_budget.py`, `frontier_direct_yt_extraction.py` |
 | taste-scalar CW isotropy support theorem | [TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md](TASTE_SCALAR_ISOTROPY_THEOREM_NOTE.md) | `frontier_taste_scalar_isotropy.py` |
 | promoted CKM closure | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) | `frontier_ckm_atlas_axiom_closure.py`, `frontier_ckm_no_import_audit.py` |
-| bounded CKM neutron-EDM lane | [CKM_NEUTRON_EDM_BOUND_NOTE.md](CKM_NEUTRON_EDM_BOUND_NOTE.md) | `frontier_ckm_neutron_edm_bound.py` |
+| CKM-only neutron-EDM corollary + bounded prediction | [CKM_NEUTRON_EDM_BOUND_NOTE.md](CKM_NEUTRON_EDM_BOUND_NOTE.md) | `frontier_ckm_neutron_edm_bound.py` |
 | bounded down-type mass-ratio CKM-dual lane | [DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md](DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md), [CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md](CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md) | `frontier_mass_ratio_ckm_dual.py`, `frontier_ckm_five_sixths_bridge_support.py` |
 
 ## Live Science Outside Flagship Core

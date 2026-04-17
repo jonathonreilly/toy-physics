@@ -1,17 +1,21 @@
 #!/usr/bin/env python3
 """
-CKM neutron-EDM bounded lane on the retained θ_eff = 0 surface
-=============================================================
+CKM neutron-EDM corollary and bounded prediction
+================================================
 
-STATUS: bounded lane on `main`
+STATUS: retained structural corollary + bounded quantitative prediction
 
 This script does not upgrade the retained strong-CP closure package itself. It takes:
 
   1. θ_eff = 0 on the retained strong-CP action surface
   2. the promoted CKM closure package
 
-and combines them with standard short-distance and long-distance EFT
-scalings to estimate the surviving CKM contribution to the neutron EDM.
+and combines them into:
+
+  - an exact structural corollary on the retained surface:
+      d_n(QCD) = 0 and the surviving neutron EDM is CKM-only
+  - a bounded quantitative continuation from standard short-/long-distance EFT:
+      d_n(CKM) ~ 10^-32 - 10^-33 e cm
 
 Import class:
   framework CKM closure + standard hadronic/EW EFT bridge
@@ -44,7 +48,7 @@ def check(name: str, condition: bool, detail: str = "") -> bool:
 
 def main() -> int:
     print("=" * 72)
-    print("CKM neutron-EDM bounded lane on the retained θ_eff = 0 surface")
+    print("CKM neutron-EDM corollary and bounded prediction")
     print("=" * 72)
     print()
 
@@ -96,6 +100,9 @@ def main() -> int:
     print(f"  Long-distance estimate:  {dn_ld_ecm:.2e} e·cm")
 
     dn_ckm = max(dn_sd_ecm, dn_ld_ecm)
+    check("Surviving neutron EDM is CKM-only on the retained surface",
+          dn_qcd == 0.0 and dn_ckm > 0.0,
+          "strong-sector piece vanishes, nonzero CKM estimate survives")
     check("CKM-only neutron EDM lies on the expected EFT scale",
           1e-35 < dn_ckm < 1e-29,
           f"d_n(CKM) ≈ {dn_ckm:.2e} e·cm")
@@ -110,7 +117,11 @@ def main() -> int:
     print(f"SUMMARY: PASS={PASS_COUNT}  FAIL={FAIL_COUNT}")
     print("=" * 72)
     print()
-    print("Bounded secondary-lane result:")
+    print("Retained structural corollary:")
+    print("  d_n(QCD) = 0 exactly on the retained θ_eff = 0 surface")
+    print("  the surviving neutron EDM is CKM-only")
+    print()
+    print("Bounded quantitative continuation:")
     print(f"  d_n(CKM) ≈ {dn_ckm:.1e} e·cm")
     print("  import class: promoted CKM closure + standard EFT bridge")
     return 0 if FAIL_COUNT == 0 else 1
