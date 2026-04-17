@@ -1,8 +1,8 @@
 # Gauge-Vacuum Plaquette Scalar-Bridge Support
 
 **Date:** 2026-04-16
-**Status:** exact local/source/class-level support stack plus exact constant-lift obstruction, exact distinct-shell theorem, exact first nonlinear full-vacuum coefficient, exact implicit reduction-law existence/uniqueness theorem, exact nonperturbative susceptibility-flow theorem, exact connected-hierarchy theorem, exact infinite-hierarchy obstruction, exact equivalent spectral generating object, exact framework-point underdetermination theorem, exact transfer-operator / character-recurrence realization, exact Perron-state reduction theorem, exact source-sector matrix-element factorization theorem, exact local/environment factorization theorem, exact residual-environment identification theorem, exact spatial-environment character-measure theorem, exact spatial-environment transfer theorem, and exact Perron/Jacobi underdetermination theorem inside that sharpened class; the remaining open object is explicit `beta = 6` spatial-transfer matrix-element / Perron data for `Z_6^env` beyond the already-fixed normalized mixed-kernel local factor
-**Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`, `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py`, `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_framework_point_underdetermination.py`, `scripts/frontier_gauge_vacuum_plaquette_transfer_operator_character_recurrence.py`, `scripts/frontier_gauge_vacuum_plaquette_perron_reduction_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_source_sector_matrix_element_factorization.py`, `scripts/frontier_gauge_vacuum_plaquette_local_environment_factorization.py`, `scripts/frontier_gauge_vacuum_plaquette_residual_environment_identification.py`, `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_character_measure.py`, `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py`, `scripts/frontier_gauge_vacuum_plaquette_perron_jacobi_underdetermination.py`
+**Status:** exact local/source/class-level support stack plus exact constant-lift obstruction, exact distinct-shell theorem, exact first nonlinear full-vacuum coefficient, exact implicit reduction-law existence/uniqueness theorem, exact nonperturbative susceptibility-flow theorem, exact connected-hierarchy theorem, exact infinite-hierarchy obstruction, exact equivalent spectral generating object, exact framework-point underdetermination theorem, exact transfer-operator / character-recurrence realization, exact Perron-state reduction theorem, exact source-sector matrix-element factorization theorem, exact local/environment factorization theorem, exact residual-environment identification theorem, exact spatial-environment character-measure theorem, exact spatial-environment structural transfer theorem, exact spatial-environment tensor-transfer theorem, and exact Perron/Jacobi underdetermination theorem inside that sharpened class; the remaining open object is the explicit `beta = 6` tensor-transfer Perron / boundary data for `Z_6^env` beyond the already-fixed normalized mixed-kernel local factor
+**Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`, `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py`, `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_framework_point_underdetermination.py`, `scripts/frontier_gauge_vacuum_plaquette_transfer_operator_character_recurrence.py`, `scripts/frontier_gauge_vacuum_plaquette_perron_reduction_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_source_sector_matrix_element_factorization.py`, `scripts/frontier_gauge_vacuum_plaquette_local_environment_factorization.py`, `scripts/frontier_gauge_vacuum_plaquette_residual_environment_identification.py`, `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_character_measure.py`, `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py`, `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_tensor_transfer.py`, `scripts/frontier_gauge_vacuum_plaquette_perron_jacobi_underdetermination.py`
 
 ## Question
 
@@ -328,8 +328,11 @@ one step further:
 - the residual source-sector environment operator is exactly the normalized
   boundary character measure `C_(Z_6^env)` of the unmarked spatial Wilson
   environment with the marked plaquette holonomy held fixed;
+- the exact spatial-environment tensor-transfer theorem then closes that these
+  remaining boundary amplitudes lie in one explicit Wilson-coefficient /
+  `SU(3)`-intertwiner tensor-transfer class;
 - the remaining target is therefore no longer an abstract operator `R_6^env`,
-  but the explicit boundary character coefficients `rho_(p,q)(6)` of
+  but the explicit `beta = 6` tensor-transfer Perron / boundary data of
   `Z_6^env`.
 
 And the updated exact Perron/Jacobi underdetermination theorem closes the next
@@ -402,6 +405,7 @@ Current clean read:
 - exact Perron-state reduction: closed
 - exact source-sector matrix-element factorization at `beta = 6`: closed
 - exact local/environment factorization: closed
+- exact spatial-environment tensor-transfer class: closed
 - exact Perron/Jacobi underdetermination inside that factorized class: closed
 - explicit residual source-sector environment / physical-vacuum reduction:
   still open
@@ -447,4 +451,5 @@ Expected summary:
 - Perron-reduction runner: `THEOREM PASS=5 SUPPORT=3 FAIL=0`
 - source-sector matrix-element factorization runner: `THEOREM PASS=4 SUPPORT=3 FAIL=0`
 - local/environment factorization runner: `THEOREM PASS=4 SUPPORT=3 FAIL=0`
+- spatial-environment tensor-transfer runner: `THEOREM PASS=4 SUPPORT=3 FAIL=0`
 - Perron/Jacobi underdetermination runner: `THEOREM PASS=4 SUPPORT=3 FAIL=0`

@@ -1,10 +1,10 @@
 # Gauge-Vacuum Plaquette Spatial Environment Transfer Theorem
 
 **Date:** 2026-04-17
-**Status:** exact spatial-environment transfer theorem on the accepted Wilson
-`3 spatial + 1 derived-time` surface; the remaining plaquette datum is the
-explicit `beta = 6` matrix-element / Perron data of one positive spatial
-transfer operator, not an arbitrary boundary character sequence
+**Status:** exact spatial-environment structural transfer theorem on the
+accepted Wilson `3 spatial + 1 derived-time` surface; the script is a finite
+class-sector witness, while the fully constructive matrix-element packet now
+passes through the explicit tensor-transfer theorem
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py`
 
 ## Question
@@ -46,7 +46,8 @@ So the remaining framework-point target is narrower than before:
 > explicitly identify the `beta = 6` matrix elements of the spatial
 > environment transfer operator, equivalently the `beta = 6` Perron / boundary
 > data of `S_6^env`, rather than treating `rho_(p,q)(6)` as a generic free
-> positive character sequence.
+> positive character sequence; the stronger explicit local matrix-element class
+> is now carried by the tensor-transfer theorem.
 
 ## Setup
 
@@ -165,6 +166,17 @@ operator class from which those coefficients must arise.
   fully included
 - analytic closure of canonical `P(6)`
 - repo-wide repinning of the canonical plaquette
+
+## Script boundary
+
+The theorem above is structural. The companion runner is only a finite
+class-sector witness for positivity, conjugation symmetry, and boundary-state
+compatibility on a truncated transfer example. It is not itself the explicit
+`beta = 6` spatial environment solve.
+
+The fully explicit local matrix-element class is now carried separately by:
+
+- [GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md)
 
 ## Commands run
 
