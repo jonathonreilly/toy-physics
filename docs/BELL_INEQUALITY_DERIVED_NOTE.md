@@ -317,8 +317,9 @@ That approach had two issues:
 2. **Sector projection** (post-selection onto the Alice-1-Bob-1 sector)
    introduced a loophole.
 
-The current approach resolves both by using distinguishable taste
-species on C^N (x) C^N, where commutativity is automatic and no
+The current approach resolves both by using distinguishable fermion
+species on C^N (x) C^N, with KS taste retained only as the internal
+measurement algebra, so commutativity is automatic and no
 post-selection is needed.
 
 ## What this adds to the publication surface
