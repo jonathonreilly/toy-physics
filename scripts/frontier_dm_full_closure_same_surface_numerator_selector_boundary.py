@@ -37,7 +37,7 @@ from dm_full_closure_minimal_reduced_cycle_extension_map_common import (
     omega_b_from_eta,
     plaquette_supported_alpha_short_distance,
 )
-from dm_full_closure_same_surface_thermal_support_common import converged_same_surface_ratio
+from dm_full_closure_same_surface_thermal_support_common import certified_same_surface_ratio_bounds
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
@@ -82,38 +82,42 @@ def part1_exact_current_bank_endpoints() -> tuple[float, float]:
     return alpha_lo, alpha_hi
 
 
-def part2_distinct_dm_support_outputs(alpha_lo: float, alpha_hi: float) -> tuple[float, float, float, float]:
+def part2_distinct_dm_certified_outputs(alpha_lo: float, alpha_hi: float) -> tuple[float, float, float, float]:
     print("\n" + "=" * 88)
-    print("PART 2: DISTINCT DM SUPPORT OUTPUTS")
+    print("PART 2: DISTINCT CERTIFIED DM OUTPUTS")
     print("=" * 88)
 
-    r_lo = float(converged_same_surface_ratio(alpha_lo))
-    r_hi = float(converged_same_surface_ratio(alpha_hi))
+    r_lo_lo, r_lo_hi, att_lo, rep_lo = certified_same_surface_ratio_bounds(alpha_lo)
+    r_hi_lo, r_hi_hi, att_hi, rep_hi = certified_same_surface_ratio_bounds(alpha_hi)
     omega_b = float(omega_b_from_eta(ETA_OBS))
-    omega_dm_lo = r_lo * omega_b
-    omega_dm_hi = r_hi * omega_b
+    omega_dm_lo_lo = r_lo_lo * omega_b
+    omega_dm_lo_hi = r_lo_hi * omega_b
+    omega_dm_hi_lo = r_hi_lo * omega_b
+    omega_dm_hi_hi = r_hi_hi * omega_b
 
     check(
-        "The exact current-bank endpoints induce distinct DM ratio values on the corrected continuum support map",
-        r_hi > r_lo,
-        f"R_lo={r_lo:.12f}, R_hi={r_hi:.12f}",
+        "The exact current-bank endpoints induce disjoint certified DM ratio intervals",
+        r_lo_hi < r_hi_lo,
+        f"R_lo=[{r_lo_lo:.12f}, {r_lo_hi:.12f}], R_hi=[{r_hi_lo:.12f}, {r_hi_hi:.12f}]",
     )
     check(
-        "They therefore induce distinct DM density values even after eta is fixed",
-        omega_dm_hi > omega_dm_lo,
-        f"Omega_DM_lo={omega_dm_lo:.12f}, Omega_DM_hi={omega_dm_hi:.12f}",
+        "They therefore induce disjoint certified DM density intervals even after eta is fixed",
+        omega_dm_lo_hi < omega_dm_hi_lo,
+        f"Omega_DM_lo=[{omega_dm_lo_lo:.12f}, {omega_dm_lo_hi:.12f}], Omega_DM_hi=[{omega_dm_hi_lo:.12f}, {omega_dm_hi_hi:.12f}]",
     )
 
     print()
-    print(f"  R_lo       = {r_lo:.12f}")
-    print(f"  R_hi       = {r_hi:.12f}")
+    print(f"  R_lo       = [{r_lo_lo:.12f}, {r_lo_hi:.12f}]")
+    print(f"  R_hi       = [{r_hi_lo:.12f}, {r_hi_hi:.12f}]")
     print(f"  Omega_b    = {omega_b:.12f}")
-    print(f"  Omega_DM_lo= {omega_dm_lo:.12f}")
-    print(f"  Omega_DM_hi= {omega_dm_hi:.12f}")
-    return r_lo, r_hi, omega_dm_lo, omega_dm_hi
+    print(f"  Omega_DM_lo= [{omega_dm_lo_lo:.12f}, {omega_dm_lo_hi:.12f}]")
+    print(f"  Omega_DM_hi= [{omega_dm_hi_lo:.12f}, {omega_dm_hi_hi:.12f}]")
+    print(f"  trunc_lo   = (N_att={att_lo}, N_rep={rep_lo})")
+    print(f"  trunc_hi   = (N_att={att_hi}, N_rep={rep_hi})")
+    return r_lo_hi, r_hi_lo, omega_dm_lo_hi, omega_dm_hi_lo
 
 
-def part3_no_current_bank_selector(alpha_lo: float, alpha_hi: float, r_lo: float, r_hi: float) -> None:
+def part3_no_current_bank_selector(alpha_lo: float, alpha_hi: float, r_lo_hi: float, r_hi_lo: float) -> None:
     print("\n" + "=" * 88)
     print("PART 3: NO CURRENT-BANK SELECTOR")
     print("=" * 88)
@@ -125,7 +129,7 @@ def part3_no_current_bank_selector(alpha_lo: float, alpha_hi: float, r_lo: float
     )
     check(
         "Common annihilation-coefficient cancellation does not select between the exact endpoints",
-        r_hi > r_lo,
+        r_hi_lo > r_lo_hi,
         "cancellation reduces the ratio dependence to the selected coupling but does not pick the coupling",
     )
     check(
@@ -148,8 +152,8 @@ def main() -> int:
     print("=" * 88)
 
     alpha_lo, alpha_hi = part1_exact_current_bank_endpoints()
-    r_lo, r_hi, _omega_dm_lo, _omega_dm_hi = part2_distinct_dm_support_outputs(alpha_lo, alpha_hi)
-    part3_no_current_bank_selector(alpha_lo, alpha_hi, r_lo, r_hi)
+    r_lo_hi, r_hi_lo, _omega_dm_lo_hi, _omega_dm_hi_lo = part2_distinct_dm_certified_outputs(alpha_lo, alpha_hi)
+    part3_no_current_bank_selector(alpha_lo, alpha_hi, r_lo_hi, r_hi_lo)
 
     print("\n" + "=" * 88)
     print(f"SUMMARY: PASS={PASS_COUNT} FAIL={FAIL_COUNT}")

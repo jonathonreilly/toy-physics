@@ -41,9 +41,9 @@ The converged selector differs materially from both:
 
 - current-bank DM selector closure: still no
 - one-scalar admitted DM family: still yes
-- selector law on that family:
-  - positive support from the converged thermal evaluator
-  - not theorem-grade exact yet
+- this file remains a convergence/sanity check on the corrected continuum evaluator
+- the theorem-grade promotion now lives in
+  [DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_BOUNDING_THEOREM_NOTE_2026-04-17.md](/Users/jonBridger/Toy%20Physics/.codex/dm-thermal-review/docs/DM_FULL_CLOSURE_SAME_SURFACE_THERMAL_BOUNDING_THEOREM_NOTE_2026-04-17.md:1)
 
 ## Command
 

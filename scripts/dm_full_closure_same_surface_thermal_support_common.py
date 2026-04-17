@@ -181,3 +181,73 @@ def same_surface_ratio_bounds(alpha_s: float, attractive_terms: int = 60, repuls
     r_lo = R_BASE_MP * ((8 * mp.mpf(s1_lo) + mp.mpf(s8_lo)) / 9)
     r_hi = R_BASE_MP * ((8 * mp.mpf(s1_hi) + mp.mpf(s8_hi)) / 9)
     return float(r_lo), float(r_hi)
+
+
+@lru_cache(maxsize=None)
+def certified_same_surface_ratio_bounds(
+    alpha_s: float,
+    tol: float = 1.0e-10,
+    attractive_terms: int = 60,
+    repulsive_terms: int = 600,
+    max_terms: int = 76800,
+) -> tuple[float, float, int, int]:
+    """Rigorous same-surface ratio enclosure refined to a target width.
+
+    The lower/upper bounds come from exact positive-series partial sums plus
+    exact tail inequalities, so increasing the truncation only tightens the
+    enclosure. This function doubles the truncation depths until the requested
+    ratio-width target is met or the configured cap is reached.
+    """
+
+    att = int(attractive_terms)
+    rep = int(repulsive_terms)
+    lo, hi = same_surface_ratio_bounds(alpha_s, attractive_terms=att, repulsive_terms=rep)
+
+    while hi - lo > tol and (att < max_terms or rep < max_terms):
+        att = min(2 * att, max_terms)
+        rep = min(2 * rep, max_terms)
+        lo, hi = same_surface_ratio_bounds(alpha_s, attractive_terms=att, repulsive_terms=rep)
+
+    return float(lo), float(hi), att, rep
+
+
+def certified_sigma_interval(
+    omega_b: float | None = None,
+    ratio_tol: float = 1.0e-10,
+    initial_radius: float = 1.0e-6,
+    max_radius: float = 0.25,
+) -> tuple[float, float, float, float, float, float]:
+    """Rigorous enclosure of the unique same-surface admitted-family selector.
+
+    Uses the exact monotonicity theorem plus certified ratio bounds at two
+    enclosing sigma values. The converged support root is used only as a guide
+    for where to start the bracket search; the returned interval is certified
+    entirely by exact series/tail enclosures.
+    """
+
+    if omega_b is None:
+        omega_b = float(omega_b_from_eta(ETA_OBS))
+
+    target_ratio = float(OMEGA_DM_OBS / omega_b)
+    sigma_guess, _alpha_guess, _ratio_guess = converged_sigma_root(omega_b)
+    radius = float(initial_radius)
+
+    while radius <= max_radius:
+        sigma_lo = max(0.0, sigma_guess - radius)
+        sigma_hi = min(1.0, sigma_guess + radius)
+        alpha_lo = alpha_sigma(sigma_lo)
+        alpha_hi = alpha_sigma(sigma_hi)
+        r_lo_lo, r_lo_hi, _att_lo, _rep_lo = certified_same_surface_ratio_bounds(alpha_lo, tol=ratio_tol)
+        r_hi_lo, r_hi_hi, _att_hi, _rep_hi = certified_same_surface_ratio_bounds(alpha_hi, tol=ratio_tol)
+        if r_lo_hi < target_ratio < r_hi_lo:
+            return (
+                float(sigma_lo),
+                float(sigma_hi),
+                float(alpha_lo),
+                float(alpha_hi),
+                float(r_lo_hi),
+                float(r_hi_lo),
+            )
+        radius *= 2.0
+
+    raise ValueError("Could not certify a unique sigma interval on the admitted same-surface family")

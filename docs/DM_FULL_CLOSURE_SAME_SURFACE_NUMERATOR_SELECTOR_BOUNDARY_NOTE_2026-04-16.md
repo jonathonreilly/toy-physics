@@ -18,16 +18,16 @@ The current exact DM bank gives two exact same-surface endpoint observables:
 - `alpha_lo = alpha_LM = alpha_bare/u_0 = 0.090667836017286`
 - `alpha_hi = alpha_short = -log(P_1)/c_1 = 0.092264992618360`
 
-Those exact endpoints induce distinct DM outputs on the corrected continuum
-support map:
+Those exact endpoints induce distinct certified DM outputs on the corrected
+same-surface thermal map:
 
-- `R_lo = 5.442019867924`
-- `R_hi = 5.482855571931`
+- `R(alpha_lo) in [5.442019867867, 5.442019867931]`
+- `R(alpha_hi) in [5.482855571890, 5.482855571936]`
 
 and therefore
 
-- `Omega_DM_lo = 0.267709052541`
-- `Omega_DM_hi = 0.269717881596`
+- `Omega_DM(alpha_lo) in [0.267709052538, 0.267709052541]`
+- `Omega_DM(alpha_hi) in [0.269717881594, 0.269717881596]`
 
 So the current bank gives an interval, not a selector.
 
@@ -37,8 +37,8 @@ The same-surface DM lane already has:
 
 1. exact endpoint observables;
 2. an exact structural prefactor `R_base = 31/9`;
-3. a corrected continuum same-surface support map that sends those endpoints to distinct
-   outputs.
+3. a certified same-surface thermal evaluation/bounding result that sends those
+   endpoints to distinct outputs.
 
 What it does **not** have is any further exact scale-selection law on that DM
 lane. So there is no theorem-grade current-bank selector closure.
@@ -49,8 +49,10 @@ The current-bank DM selector question is now settled:
 
 - **current bank:** no selector closure
 - **next honest science target:** theorem-grade evaluation or bounding of the
-  same-surface thermal map, not a claim that the current bank already selects
-  a unique numerator value
+  current-bank DM lane is now satisfied on this branch
+- **remaining honest science target:** whether the current bank itself can
+  supply a selector, or whether the one-scalar DM-side family must remain an
+  admitted extension
 
 ## Command
 
