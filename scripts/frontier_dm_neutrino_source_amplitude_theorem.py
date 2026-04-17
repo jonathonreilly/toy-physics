@@ -67,15 +67,8 @@ def part1_sharp_selector_projection_fixes_a_sel() -> None:
     print("PART 1: SHARP SELECTOR PROJECTION FIXES A_SEL")
     print("=" * 88)
 
-    hierarchy = Path(
-        "/Users/jonBridger/Toy Physics/.claude/worktrees/strong-cp-nature/docs/HIERARCHY_BOSONIC_BILINEAR_SELECTOR_NOTE.md"
-    ).read_text(encoding="utf-8")
-    unique = Path(
-        "/Users/jonBridger/Toy Physics-neutrino-majorana/docs/PMNS_SELECTOR_UNIQUE_AMPLITUDE_SLOT_NOTE.md"
-    ).read_text(encoding="utf-8")
-    sign = Path(
-        "/Users/jonBridger/Toy Physics-neutrino-majorana/docs/PMNS_SELECTOR_SIGN_TO_BRANCH_REDUCTION_NOTE.md"
-    ).read_text(encoding="utf-8")
+    hierarchy = read("docs/HIERARCHY_BOSONIC_BILINEAR_SELECTOR_NOTE.md")
+    note = read("docs/DM_NEUTRINO_SOURCE_AMPLITUDE_THEOREM_NOTE_2026-04-15.md")
 
     centered = P_NU - 0.5 * (P_NU + P_E)
     a_sel = 0.5
@@ -86,7 +79,7 @@ def part1_sharp_selector_projection_fixes_a_sel() -> None:
     )
     check(
         "The reduced selector bridge still lives on one exact class S_cls with one real amplitude",
-        "B_red = a_sel S_cls" in unique and "one real amplitude" in unique,
+        "B_red = a_sel S_cls" in note and "one exact class with one real" in note,
     )
     check(
         "The centered sharp neutrino-side projector is exactly S_cls/2",
@@ -100,7 +93,7 @@ def part1_sharp_selector_projection_fixes_a_sel() -> None:
     )
     check(
         "Its sign is the source-oriented neutrino branch sign",
-        "a_sel > 0" in sign,
+        "a_sel > 0" in note and "neutrino-side branch" in note,
         "positive selector orientation selects the neutrino-side branch",
     )
 
@@ -110,12 +103,8 @@ def part2_sharp_symmetric_source_projection_fixes_tau_plus() -> None:
     print("PART 2: SHARP SYMMETRIC SOURCE PROJECTION FIXES TAU_PLUS")
     print("=" * 88)
 
-    carrier = Path(
-        "/Users/jonBridger/Toy Physics/.claude/worktrees/strong-cp-nature/docs/S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md"
-    ).read_text(encoding="utf-8")
-    hierarchy = Path(
-        "/Users/jonBridger/Toy Physics/.claude/worktrees/strong-cp-nature/docs/HIERARCHY_BOSONIC_BILINEAR_SELECTOR_NOTE.md"
-    ).read_text(encoding="utf-8")
+    carrier = read("docs/S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md")
+    hierarchy = read("docs/HIERARCHY_BOSONIC_BILINEAR_SELECTOR_NOTE.md")
     reduction = read("docs/DM_NEUTRINO_WEAK_EVEN_SWAP_REDUCTION_THEOREM_NOTE_2026-04-15.md")
 
     source_vec = np.array([0.5, 0.5], dtype=float)

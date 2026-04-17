@@ -38,7 +38,7 @@ The package has four layers:
 
 1. retained theorem core
 2. retained standalone quantitative lanes (`alpha_s`, EW normalization)
-3. derived-with-explicit-systematic Yukawa/top and derived-with-inherited-explicit-systematic Higgs/vacuum lanes
+3. bounded Yukawa/top and bounded Higgs/vacuum lanes
 4. bounded prediction surface plus live gates and frozen-out route history
 
 The public manuscript surface on `main` is arXiv-first. Journal-specific
@@ -61,10 +61,12 @@ The current canonical quantitative stack is modular:
 - [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md)
 - [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md)
 - [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](../../YT_ZERO_IMPORT_AUTHORITY_NOTE.md)
+- [YT_SQRT6_BOUNDARY_STATUS_NOTE.md](../../YT_SQRT6_BOUNDARY_STATUS_NOTE.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
-- [YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md](../../YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md)
-- [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](../../HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md)
+- [YT_TRANSPORT_BUDGET_NOTE.md](../../YT_TRANSPORT_BUDGET_NOTE.md)
+- [HIGGS_VACUUM_BOUNDED_STATUS_NOTE.md](../../HIGGS_VACUUM_BOUNDED_STATUS_NOTE.md)
 - [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
+- [KR_A1_VANISHING_SUPPORT_NOTE.md](../../KR_A1_VANISHING_SUPPORT_NOTE.md)
 
 Current package status:
 
@@ -77,11 +79,12 @@ Current package status:
   where `alpha_s(v)` comes from the same-surface plaquette chain,
   `g_1(v), g_2(v)` use derived `R_conn = 8/9` support, and the `M_Z`
   rows use the retained running bridge
-- derived-with-explicit-systematic `y_t(v) = 0.9176`
-- derived-with-explicit-systematic canonical `m_t(pole) = 173.10 GeV` (3-loop),
+- bounded `y_t(v) = 0.9176`, conditional on the accepted lattice-scale
+  `y_t / g_s = 1/sqrt(6)` boundary
+- bounded canonical `m_t(pole) = 173.10 GeV` (3-loop),
   with retained `172.57 GeV` (2-loop) support
-  with the current explicit bridge budget of `1.2147511%` conservative
-  (`0.75500635%` support-tight) carried by the Yukawa/top lane
+  and explicit downstream transport budget `1.2147511%` conservative
+  (`0.75500635%` support-tight)
 - promoted CKM atlas/axiom closure package
   (no quark-mass or fitted CKM inputs; canonical CMT `alpha_s(v)` input):
   `|V_us| = 0.22727`,
@@ -89,17 +92,23 @@ Current package status:
   `|V_ub| = 0.003913`,
   `delta = 65.905 deg`,
   `J = 3.331 x 10^-5`
-- derived-with-inherited-explicit-systematic Higgs / vacuum package:
+- exact CKM carrier-side support theorem:
+  `K_R(q) = 0` for every pure `A1` background on the seven-site support block
+  via [KR_A1_VANISHING_SUPPORT_NOTE.md](../../KR_A1_VANISHING_SUPPORT_NOTE.md)
+- bounded Higgs / vacuum package:
   canonical `m_H = 125.1 GeV` (framework-side 3-loop route),
   with retained `119.8 GeV` (2-loop support route),
-  vacuum-stability readout inherited from the explicit `y_t` systematic
+  vacuum-stability readout inherited from the bounded `y_t` lane
 - exact taste-block fermion-CW isotropy support theorem with bounded
   taste-scalar near-degeneracy companion:
   `m_taste = 124.91 GeV`, scalar-only `v_c/T_c = 0.3079`
 
 ## Other Bounded Families
 
-- DM flagship gate, with exact transport-chain progress and stronger PMNS reduced-surface support
+- DM flagship gate, with exact transport-chain progress, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, and a PMNS constructive sign chamber that exists but whose current selector families are CP-blind
+- curated neutrino boundary/support packet on `main`, with exact current-stack
+  Majorana zero law, exact mass reduction to the Dirac lane, and exact
+  last-mile reduction to `(J_chi, mu)`; still outside the manuscript surface
 - older bounded CKM mass-basis / Cabibbo / partial Jarlskog route history
 - cosmology bounded family such as `\Omega_\Lambda`, `n_s`, `w = -1`
 - bounded secondary predictions already on `main`:

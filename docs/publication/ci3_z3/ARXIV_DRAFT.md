@@ -28,8 +28,9 @@ Quantitatively, the current package gives the canonical hierarchy evaluation
 $v=246.282818290129\,\mathrm{GeV}$, retains
 $\alpha_s(M_Z)=0.1181$ and electroweak normalization lanes, promotes an
 algebraic CKM atlas/axiom closure package with no quark-mass or fitted-CKM
-inputs, and carries Yukawa/top and Higgs/vacuum rows with explicit inherited
-systematics. The package is already predictive beyond retrospective comparison,
+inputs, and carries bounded Yukawa/top and Higgs/vacuum rows whose downstream
+transport budget is explicit once the accepted lattice-scale boundary is fixed.
+The package is already predictive beyond retrospective comparison,
 including proton lifetime, CKM neutron EDM, vacuum criticality, and benchmark
 gravitational decoherence. Dark-matter relic mapping is the sole remaining live
 flagship gate. The paper separates exact, promoted, bounded, and open rows and
@@ -519,6 +520,13 @@ quantitative coupling input, exact atlas counts, exact projector structure,
 exact bilinear tensor slot, exact $Z_3$ source, and exact Schur cascade. No
 quark masses or fitted CKM observables are used as derivation inputs.
 
+One exact carrier-side subtheorem on that surface is now isolated cleanly: on
+the seven-site support block, the bilinear carrier
+$K_R(q) = (u_E(q), u_T(q), \delta_{A1}(q)u_E(q), \delta_{A1}(q)u_T(q))$
+vanishes for every pure $A1$ background $q$. This is a standalone support
+theorem used by the tensor-slot argument, not a replacement for the full CKM
+closure package.
+
 The load-bearing formulas are
 
 $$
@@ -541,11 +549,16 @@ package fixes the full phase-dressed matrix rather than only the scalar
 readout. This is the controlling CKM theorem surface in the current manuscript
 [11,12].
 
-### 5.4 Explicit-systematic Yukawa/top and inherited-systematic Higgs/vacuum
+### 5.4 Bounded Yukawa/top and bounded Higgs/vacuum
 
-The top-Yukawa/top-mass lane now has a clean main authority surface with an
-explicit transport budget rather than a vague surrogate caveat. The current
-package surface is
+The top-Yukawa/top-mass lane now has a cleaner authority surface than before,
+but it is still not a retained or derived manuscript row. The current package
+does not yet treat the lattice-scale
+$y_t/g_s = 1/\sqrt{6}$
+boundary as a fully closed theorem on the manuscript surface. Instead, it
+treats that ratio as an accepted working boundary and then carries the
+downstream transport budget explicitly. On that current package surface the
+bounded readout is
 
 - $y_t(v)=0.9176$,
 - canonical $m_t^{\mathrm{pole}} = 173.10\,\mathrm{GeV}$ on the framework-side
@@ -554,8 +567,11 @@ package surface is
   corrected-input $2$-loop route,
 
 with an explicit package-native bridge budget of $1.2147511\%$ conservative and
-$0.75500635\%$ support-tight. The right status is therefore
-derived-with-explicit-systematic rather than generically bounded.
+$0.75500635\%$ support-tight.
+
+Those numbers are strong and zero-import on the downstream readout, but the
+current package still classifies the lane as bounded because the exact
+lattice-scale Yukawa/gauge normalization is not yet closed at manuscript bar.
 
 The Higgs/vacuum package then inherits that same explicit budget:
 
@@ -566,11 +582,11 @@ The Higgs/vacuum package then inherits that same explicit budget:
 
 The important point is not merely that the central values are competitive. It
 is that the whole route is now stated on one authority surface with one named
-budget. The Higgs/vacuum lane is still not unbounded, because it inherits the
-explicit Yukawa bridge uncertainty. But the remaining limitation is now
-explicit and localized rather than diffuse. The comparison surface is therefore
-the standard near-critical Standard Model literature [13,14], not a claim that
-the framework has already removed every transport systematic.
+budget and one explicit boundary note. The Higgs/vacuum lane is likewise still
+bounded, because it inherits the bounded Yukawa/top boundary rather than
+standing alone as a retained quantitative theorem row. The comparison surface
+is therefore the standard near-critical Standard Model literature [13,14], not
+a claim that the framework has already removed every quantitative caveat.
 
 An additional exact support theorem now closes one cleaner question on the same
 taste block. The one-loop fermion Coleman-Weinberg Hessian is isotropic at the
@@ -601,8 +617,8 @@ The fastest way to read the quantitative package is Table 1.
 | Strong coupling | $\alpha_s(M_Z)=0.1181$ | retained standalone quantitative lane |
 | Electroweak normalization | $g_1(v)=0.4644$, $g_2(v)=0.6480$ | retained standalone quantitative lane |
 | CKM | $|V_{us}|=0.22727$, $|V_{cb}|=0.04217$, $|V_{ub}|=0.003913$ | promoted algebraic closure package |
-| Top sector | $y_t(v)=0.9176$, $m_t^{\mathrm{pole}}=173.10\,\mathrm{GeV}$ | derived with explicit systematic |
-| Higgs sector | $m_H=125.1\,\mathrm{GeV}$ | derived with inherited explicit systematic |
+| Top sector | $y_t(v)=0.9176$, $m_t^{\mathrm{pole}}=173.10\,\mathrm{GeV}$ | bounded |
+| Higgs sector | $m_H=125.1\,\mathrm{GeV}$ | bounded |
 | Confinement readout | $\sqrt{\sigma}\approx 465\,\mathrm{MeV}$ | bounded quantitative readout on exact structural theorem |
 
 **Table 1.** Main retained and promoted quantitative outputs on the current
@@ -643,10 +659,15 @@ history separately from the live promoted algebraic CKM package.
 
 The only remaining live flagship gate is the dark-matter closure package. The
 exact one-flavor leptogenesis transport chain is now internally closed on the
-theorem-native radiation branch, and the PMNS-assisted `N_e` repair now has a
-much stronger reduced-surface support stack. But the final theorem-grade
-selector closure and full quantitative DM mapping are still not promoted at
-the package bar. That is why dark matter stays open.
+theorem-native radiation branch. On the PMNS-assisted side, the projected-source
+constructive sign chamber is now known to be nonempty and already transport
+competitive, but the current selector families remain `delta`-even and hence
+CP-sheet blind. On the source-oriented side, the exact support stack now
+reduces the remaining `H`-side object all the way to the right-sensitive
+`2`-real `Z_3` doublet-block law and closes negatively at the current-bank
+level there. But the final theorem-grade microscopic selector closure and full
+quantitative DM mapping are still not promoted at the package bar. That is why
+dark matter stays open.
 
 The cosmology family is now cleaner than before and no longer needs to be
 treated as several unrelated blockers. $\Lambda$, $w=-1$, and the present
@@ -699,8 +720,8 @@ retained three-generation structure, retained full strong-CP closure on the
 retained action surface, exact confinement, emergent Lorentz invariance, and a promoted
 algebraic CKM closure package. The quantitative side is no longer just a set of
 promising near-misses: it contains a canonical same-surface electroweak-scale
-evaluation, retained electroweak and strong-coupling lanes, and explicit
-Yukawa/Higgs authority surfaces with named systematics. The package is already
+evaluation, retained electroweak and strong-coupling lanes, and bounded
+Yukawa/Higgs authority surfaces with named downstream budgets. The package is already
 predictive beyond retrospective comparison through proton lifetime, CKM neutron
 EDM, vacuum criticality, and benchmark gravitational decoherence.
 
@@ -791,11 +812,11 @@ retained route to $PL\,S^3$ compactification / topology closure.*
 
 ### B.3 Figure A2
 
-![Figure A2. Derived-with-systematic Yukawa and Higgs transport lane](./figures/figureA2_bounded_yt_lane.svg)
+![Figure A2. Bounded Yukawa and Higgs transport lane](./figures/figureA2_bounded_yt_lane.svg)
 
 *Figure A2. Exact UV support, explicit low-energy transport budget, and the
-derived-with-systematic Yukawa/top plus inherited-systematic Higgs/vacuum
-outputs on the current package surface.*
+bounded Yukawa/top plus bounded Higgs/vacuum outputs on the current package
+surface.*
 
 ### B.4 Figure A3
 
@@ -811,6 +832,11 @@ The DM lane figure is intentionally omitted from this frozen manuscript pass.
 Its purpose is to display what is exact, derived, bounded, and still open in
 the DM gate, but that language should track the live curated transport/PMNS
 status rather than get ahead of it.
+
+A separate neutrino retained-lane reviewer packet is live on `main` outside
+this manuscript core. Its exact sole-axiom endpoint is a negative boundary:
+the current retained bank reduces the remaining neutrino frontier to the pair
+`(J_chi, mu)` and sets both to zero on the currently retained routes.
 
 ## References
 

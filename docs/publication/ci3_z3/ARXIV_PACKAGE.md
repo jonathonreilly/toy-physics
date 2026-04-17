@@ -33,13 +33,18 @@ Current quantitative component package:
 - [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md)
 - [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md)
 - [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](../../YT_ZERO_IMPORT_AUTHORITY_NOTE.md)
+- [YT_SQRT6_BOUNDARY_STATUS_NOTE.md](../../YT_SQRT6_BOUNDARY_STATUS_NOTE.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
-- [YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md](../../YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md)
-- [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](../../HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md)
+- [YT_TRANSPORT_BUDGET_NOTE.md](../../YT_TRANSPORT_BUDGET_NOTE.md)
+- [HIGGS_VACUUM_BOUNDED_STATUS_NOTE.md](../../HIGGS_VACUUM_BOUNDED_STATUS_NOTE.md)
 
 Other bounded component families:
 
-- DM flagship gate
+- DM flagship gate, with exact transport closure, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, and a PMNS constructive sign chamber that exists but whose current selector families are CP-blind
+- curated neutrino boundary/support packet on `main`, with exact current-stack
+  Majorana zero law, exact mass reduction to the Dirac lane, and exact
+  retained-neutrino last-mile reduction to `(J_chi, mu)`; outside the
+  manuscript claim surface
 - cosmology companions
 - individual companion lanes
 

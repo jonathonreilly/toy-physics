@@ -79,7 +79,8 @@ def part1_axiom_means_only_cl3_on_z3() -> None:
 
     check(
         "The framework sentence states the single physical theory is Cl(3) on Z^3",
-        "We take `Cl(3)` on `Z^3` as the physical theory. Everything else is derived." in flagship,
+        "We take `Cl(3)` on `Z^3` as the physical theory. Everything else is"
+        in flagship,
     )
     check(
         "The transfer-class theorem is a derived structural theorem on top of that single axiom",

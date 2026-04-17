@@ -42,7 +42,6 @@ This note sharpens:
 
 - [DM_NEUTRINO_POSTCANONICAL_POLAR_SECTION_NOTE_2026-04-15.md](./DM_NEUTRINO_POSTCANONICAL_POLAR_SECTION_NOTE_2026-04-15.md)
 - [DM_NEUTRINO_POLAR_ALIGNED_CORE_NO_GO_NOTE_2026-04-15.md](./DM_NEUTRINO_POLAR_ALIGNED_CORE_NO_GO_NOTE_2026-04-15.md)
-- [PMNS_EWSB_RESIDUAL_Z2_HERMITIAN_CORE_NOTE.md](/Users/jonBridger/Toy%20Physics-neutrino-majorana/docs/PMNS_EWSB_RESIDUAL_Z2_HERMITIAN_CORE_NOTE.md:1)
 
 The positive-polar-section note makes the bridge intrinsic from `H`. This note
 computes that bridge exactly on the active Hermitian grammar.

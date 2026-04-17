@@ -70,9 +70,10 @@ Canonical quantitative stack:
 - [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md)
 - [YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md)
 - [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](YT_ZERO_IMPORT_AUTHORITY_NOTE.md)
+- [YT_SQRT6_BOUNDARY_STATUS_NOTE.md](YT_SQRT6_BOUNDARY_STATUS_NOTE.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
-- [YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md](YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md)
-- [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md)
+- [YT_TRANSPORT_BUDGET_NOTE.md](YT_TRANSPORT_BUDGET_NOTE.md)
+- [HIGGS_VACUUM_BOUNDED_STATUS_NOTE.md](HIGGS_VACUUM_BOUNDED_STATUS_NOTE.md)
 - [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
 
 Current quantitative statuses:
@@ -107,22 +108,23 @@ Current quantitative statuses:
   chirality is supplied only on the full-framework anomaly-forced `3+1`
   surface; on the accepted one-axiom Hilbert/locality/information surface the
   substrate-level physical-lattice reading is also derived
-- derived-with-explicit-systematic `y_t(v) = 0.9176`
-- derived-with-explicit-systematic canonical `m_t(pole) = 173.10 GeV` (3-loop),
+- bounded `y_t(v) = 0.9176`, conditional on the accepted lattice-scale
+  `y_t / g_s = 1/sqrt(6)` boundary
+- bounded canonical `m_t(pole) = 173.10 GeV` (3-loop),
   with retained `172.57 GeV` (2-loop) support
-  with the current explicit bridge budget of `1.2147511%` conservative
-  (`0.75500635%` support-tight) carried by the Yukawa/top lane
-- derived-with-inherited-explicit-systematic Higgs / vacuum package:
+  and explicit downstream transport budget `1.2147511%` conservative
+  (`0.75500635%` support-tight)
+- bounded Higgs / vacuum package:
   canonical `m_H = 125.1 GeV` (framework-side 3-loop route),
   with retained `119.8 GeV` (2-loop support route),
-  vacuum-stability readout inherited from the explicit `y_t` systematic
+  vacuum-stability readout inherited from the bounded `y_t` lane
 - exact taste-block fermion-CW isotropy support theorem with bounded
   taste-scalar near-degeneracy companion:
   `m_taste = 124.91 GeV`, scalar-only `v_c/T_c = 0.3079`
 
 ## Bounded Prediction Surface
 
-- DM flagship gate, with exact transport-chain progress and stronger PMNS reduced-surface support
+- DM flagship gate, with exact transport-chain progress, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, and a PMNS constructive sign chamber that exists but whose current selector families are CP-blind
 - promoted CKM atlas/axiom closure package, with older Cabibbo / NNI / partial Jarlskog notes retained only as route history
 - cosmology companions
 - bounded secondary predictions already on `main`, including proton lifetime,

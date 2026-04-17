@@ -30,7 +30,7 @@ The current flagship package has four layers:
 
 1. retained theorem core
 2. retained standalone quantitative lanes (`alpha_s`, EW normalization)
-3. derived-with-explicit-systematic Yukawa/top and derived-with-inherited-explicit-systematic Higgs/vacuum lanes
+3. bounded Yukawa/top and bounded Higgs/vacuum lanes
 4. bounded prediction surface plus one live gate and an explicit history bucket
 
 Fast reviewer path after this page:
@@ -56,8 +56,7 @@ Fast reviewer path after this page:
 - quantitative stack:
   retained `alpha_s(M_Z) = 0.1181`, retained EW normalization, canonical
   `v = 246.282818290129 GeV`, promoted CKM atlas/axiom closure,
-  derived-with-explicit-systematic Yukawa/top, and
-  derived-with-inherited-explicit-systematic Higgs/vacuum
+  bounded Yukawa/top, and bounded Higgs/vacuum
 - bounded prediction surface:
   proton lifetime, CKM neutron EDM, down-type flavor-mass CKM-dual ratios,
   vacuum critical stability, benchmark gravitational decoherence, and bounded
@@ -71,7 +70,7 @@ packaging.
 
 ## Other Bounded Families
 
-- DM flagship gate, with exact transport-chain progress and stronger PMNS reduced-surface support
+- DM flagship gate, with exact transport-chain progress, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, and a PMNS constructive sign chamber that exists but whose current selector families are CP-blind
 - older bounded CKM mass-basis / Cabibbo / partial Jarlskog route history
 - cosmology bounded family, organized around one fixed-gap vacuum scale
   (`Lambda`, `w = -1`, graviton mass) plus the remaining matter bridge behind

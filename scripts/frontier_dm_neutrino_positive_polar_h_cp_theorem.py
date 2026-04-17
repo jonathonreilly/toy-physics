@@ -208,7 +208,7 @@ def part4_bank_records_the_cp_formula_endpoint() -> None:
 
     note = read("docs/DM_NEUTRINO_POSITIVE_POLAR_H_CP_THEOREM_NOTE_2026-04-15.md")
     atlas = read("docs/publication/ci3_z3/DERIVATION_ATLAS.md")
-    blocker = read("docs/DM_NEUTRINO_YUKAWA_BLOCKER_NOTE_2026-04-14.md")
+    source_surface = read("docs/DM_NEUTRINO_EXACT_H_SOURCE_SURFACE_THEOREM_NOTE_2026-04-16.md")
 
     check(
         "The new note states the exact cp1 / cp2 formulas",
@@ -219,8 +219,8 @@ def part4_bank_records_the_cp_formula_endpoint() -> None:
         "| DM neutrino positive-polar Hermitian CP theorem |" in atlas,
     )
     check(
-        "The blocker note now points at the exact H-side phase and coefficient law",
-        "sin(phi)" in blocker or "breaking slots away from" in blocker,
+        "The downstream source-surface note now uses the exact H-side phase and coefficient law",
+        "positive-polar" in source_surface and "Hermitian meaning" in source_surface and "B1" in source_surface and "B2" in source_surface,
     )
 
     print()

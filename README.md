@@ -44,14 +44,19 @@ context, not part of the live reviewer path.
 - retained and promoted quantitative stack:
   canonical `v = 246.282818290129 GeV`, retained `alpha_s(M_Z) = 0.1181`,
   retained EW normalization, promoted CKM atlas/axiom closure,
-  derived-with-explicit-systematic Yukawa/top, and
-  derived-with-inherited-explicit-systematic Higgs/vacuum
+  bounded Yukawa/top, and bounded Higgs/vacuum
 - bounded prediction surface:
   proton lifetime, CKM neutron EDM, down-type flavor-mass CKM-dual ratios,
   vacuum critical stability, benchmark gravitational decoherence, and bounded
   cosmology rows
+- curated neutrino boundary/support packet outside the flagship core:
+  exact current-stack Majorana zero law, exact mass reduction to the Dirac
+  lane, exact PMNS selector/current-stack zero law, and exact last-mile
+  reduction to `(J_chi, mu)`
 - one live flagship gate:
-  DM flagship gate
+  DM flagship gate, with exact transport closure, source-side reduction all
+  the way to the `2`-real `Z_3` doublet-block law, and a PMNS constructive
+  sign chamber that exists but is not yet microscopically selected
 
 For the package-level gravity/gauge continuum positioning layer, use
 [docs/CONTINUUM_IDENTIFICATION_NOTE.md](docs/CONTINUUM_IDENTIFICATION_NOTE.md).
