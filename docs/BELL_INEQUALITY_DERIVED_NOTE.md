@@ -1,4 +1,4 @@
-# Bell Inequality (CHSH) Violation from Cl(3) KS Taste Decomposition
+# Bell Inequality (CHSH) Violation with Explicit Cl(3) Taste Measurements
 
 **Date:** 2026-04-16
 **Status:** RETAINED
@@ -7,58 +7,61 @@
 
 ## Claim
 
-CHSH Bell violation with a tensor product factorization
-C^N ⊗ C^N on the KS coarse-grained physical cell lattice of Z^d,
-where the two tensor factors are two specific taste eigenstates from
-the Kogut-Susskind spin-taste decomposition of the staggered Dirac
-fermion. The Poisson gravitational coupling between these two taste
-species provides the entanglement source. No post-selection, no
-sector restriction, full Hilbert space.
+CHSH Bell violation on a tensor product Hilbert space C^N ⊗ C^N with:
 
-## KS taste decomposition → tensor product factorization
+- **Tensor factors = two distinguishable fermion species** (two flavors
+  from the framework's retained multi-flavor content — different
+  generations, flavors, or colors). The tensor product is genuine and
+  the commutation [O_A, O_B] = 0 is automatic for single-species
+  operators.
+- **Measurements = explicit Cl(3) taste operators** built from the
+  Kogut-Susskind spin-taste decomposition (Part 1 of the runner
+  constructs them in the (cell, taste) basis and verifies the
+  identification with the site-basis sublattice parity and pair-hop
+  at machine precision).
+- **Entanglement source = periodic Poisson coupling** (D5) between the
+  two species. G=0 null control gives |S| = 2.000 exactly on every
+  lattice.
 
-The framework treats the KS spin-taste decomposition as standard
-staggered-fermion technology (see `FLAGSHIP_PAPER_CONTRIBUTION_STATEMENT_NOTE.md`
-line 99: *"The KS spin-taste decomposition is standard staggered-fermion
-technology"*). This decomposition is the explicit mechanism that gives
-the two tensor factors:
+## What IS explicitly derived
 
-1. **Coarse-graining.** On the Z^d staggered lattice, group every 2^d
-   sites into a "physical cell." For d=3, this is a 2×2×2 block of 8
-   sites. The coarse-grained lattice has spacing 2 on the original
-   staggered lattice.
+1. **KS spin-taste decomposition.** Each single-particle staggered
+   lattice C^N factors as C^{N_cells} ⊗ C^{2^d} under the KS block
+   decomposition (2^d sites per physical cell, 2^d taste states per
+   cell). Site coordinates (x_1, ..., x_d) decompose as
+   x_μ = 2·X_μ + η_μ with X ∈ cells, η ∈ {0,1}^d the taste bits.
 
-2. **2^d tastes per cell.** Each physical cell carries a 2^d-dimensional
-   taste space indexed by (η_1, ..., η_d) ∈ {0,1}^d — the 2^d corners
-   of the block. This is the Cl(3) taste structure.
+2. **Cl(3) taste operators ξ_μ.** Constructed explicitly on the 2^d
+   taste space per cell as σ-matrices on the taste qubits. The function
+   `build_cell_taste_operator` in the runner builds I_cells ⊗ (Pauli
+   product on taste qubits) in the full site basis.
 
-3. **Cl(3) taste algebra.** The taste operators ξ_μ = σ_x on the μ-th
-   taste qubit generate the Cl(3) Clifford algebra acting on each cell's
-   taste space.
+3. **Z = I_cells ⊗ ξ_5.** The site-basis sublattice parity operator
+   equals the explicit KS taste operator ξ_5 = σ_z ⊗ σ_z ⊗ ... ⊗ σ_z
+   (product of σ_z on all d taste qubits). Verified at machine precision
+   in Part 1 of the runner for d = 1, 2, 3.
 
-4. **Taste-preserving kinetic term.** Nearest-neighbor hopping between
-   adjacent physical cells (distance 2 on the original staggered
-   lattice) preserves the taste label. Within-cell hops (distance 1)
-   change taste.
+4. **X = I_cells ⊗ ξ_last.** The site-basis pair-hop operator equals
+   the explicit KS taste operator ξ_last = I ⊗ ... ⊗ I ⊗ σ_x
+   (σ_x on the last taste qubit only). Verified at machine precision.
 
-5. **Two specific taste species.** Pick two taste eigenstates, e.g.,
-   |t_A⟩ = |0...0⟩ and |t_B⟩ = |1...1⟩. These are orthogonal eigenstates
-   of the full taste parity operator ξ_5 = ξ_1 ξ_2 ... ξ_d. Each species'
-   single-particle Hilbert space is C^{N_cells} (the space of positions
-   on the physical cell lattice).
+5. **Pauli algebra {Z, X} = 0.** Follows from σ_z σ_x = -σ_x σ_z on
+   the shared taste qubit. Also verified directly at machine precision.
 
-6. **Tensor product bipartition.** Two particles, one in each taste
-   species, live in C^{N_cells} ⊗ C^{N_cells}. [O_A, O_B] = 0 is
-   automatic: Alice's operators act on the first factor (her taste's
-   position Hilbert space), Bob's on the second.
+6. **Tensor product bipartition.** From SINGLE_AXIOM_HILBERT_NOTE; two
+   distinguishable species give automatic [O_A ⊗ I, I ⊗ O_B] = 0.
 
-**In the script:** the "lattice" of size N=4 (1D), 4×4 (2D), 4×4×4 (3D)
-IS the coarse-grained physical cell lattice. The tensor factors are
-two specific taste species from the Cl(3) KS decomposition. The
-measurement operators Z = diag((-1)^{X+Y+Z}) and X = pair-hop are
-explicit Cl(3) taste operators on each species' position Hilbert space
-(Z is the physical-cell sublattice parity; X generates the cell-level
-Cl(3) rotation).
+## What is NOT claimed
+
+- The bipartition is NOT obtained by projecting onto taste eigenstates
+  of a single species. Each species carries its full 2^d-dim taste
+  Hilbert space per cell; the bipartition comes from the two species
+  being different particles.
+- H1 is NOT a taste-projected kinetic operator. H1 is the full
+  staggered Dirac Hamiltonian (hopping + mass), which does mix tastes.
+  What is taste-preserving is each species' IDENTITY (Alice stays
+  Alice); taste measurements on a single species' full Hilbert space
+  are well-defined regardless of the internal taste dynamics.
 
 ## Derivation chain
 
@@ -78,12 +81,14 @@ A2 Cl(3) (Clifford algebra)
   |
   +--> KS spin-taste decomposition (standard staggered-fermion tech)
          |
-         +--> 2^d taste eigenstates per physical cell
-         +--> taste algebra: ξ_μ = σ_x on the μ-th taste qubit (Cl(3))
-         +--> pick |t_A⟩, |t_B⟩ orthogonal eigenstates of ξ_5
-         +--> Alice = particle in taste |t_A⟩, position ∈ C^{N_cells}
-         +--> Bob = particle in taste |t_B⟩, position ∈ C^{N_cells}
-         +--> tensor product H_A (x) H_B = C^{N_cells} (x) C^{N_cells}
+         +--> single-particle C^N = C^{N_cells} ⊗ C^{2^d}
+         +--> taste algebra Cl(3): ξ_μ = Pauli on μ-th taste qubit
+         +--> site-basis Z == I_cells ⊗ ξ_5 (verified in Part 1)
+         +--> site-basis X == I_cells ⊗ ξ_last (verified in Part 1)
+         |
+         +--> two distinguishable fermion species (different flavors)
+         +--> tensor product H_A ⊗ H_B = C^N ⊗ C^N
+         +--> [ξ_μ^A ⊗ I, I ⊗ ξ_ν^B] = 0 (automatic, tensor product)
                 |                         (SINGLE_AXIOM_HILBERT_NOTE)
                 |
                 +--> [O_A (x) I, I (x) O_B] = 0  AUTOMATIC
@@ -244,46 +249,62 @@ remains separable regardless of mass or lattice geometry.
 - Does not address the detection loophole or any experimental
   considerations.
 
-## How the taste identification closes the gap
+## How the gap is closed
 
-An earlier version of this note flagged an open gap: the tensor
-factors were not explicitly derived from Cl(3) taste operators.
-This section records the closure.
+The reviewer's concern was that the runner did not construct the
+Cl(3) taste structure explicitly — Z and X were position-basis
+operators, not taste operators. This is now closed.
 
-The Kogut-Susskind (KS) spin-taste decomposition is standard
-staggered-fermion technology retained in the framework (see
-`FLAGSHIP_PAPER_CONTRIBUTION_STATEMENT_NOTE.md` line 99). Under this
-decomposition, the single-component c(x) field on the Z^d staggered
-lattice is reorganized onto a coarse-grained physical-cell lattice
-of spacing 2, where each cell carries a 2^d-dimensional taste space.
+**The closure is in the IDENTIFICATION, verified numerically.**
+Part 1 of the runner now calls `taste_identity_check`, which:
 
-- The taste qubits form the Cl(3) algebra via ξ_μ = σ_x on the μ-th
-  taste qubit.
-- Taste eigenstates |t⟩ = |η_1 η_2 ... η_d⟩ form an orthonormal basis.
-- Two orthogonal eigenstates |t_A⟩ = |0...0⟩ and |t_B⟩ = |1...1⟩
-  define two distinguishable species.
-- Each species has a position Hilbert space C^{N_cells} on the
-  coarse-grained lattice.
-- Two-species Hilbert space: C^{N_cells} ⊗ C^{N_cells}.
-- [O_A, O_B] = 0 automatic from the tensor product.
-- Nearest-neighbor hops on the coarse-grained lattice preserve taste
-  (they correspond to distance-2 hops on the original staggered
-  lattice, which are in the same taste sector).
-- Within-cell hops (distance 1 on the original staggered lattice)
-  change taste and do not appear in the species-preserving dynamics.
-- The measurement operators Z (sublattice parity on cells) and X
-  (pair-hop on cells) are Cl(3) taste operators on each species'
-  position Hilbert space.
+1. Explicitly constructs the (cell, taste) factorization of each
+   single-particle Hilbert space, using x_μ = 2·X_μ + η_μ to
+   decompose each site coordinate into a cell coordinate X_μ and
+   a taste bit η_μ ∈ {0,1}.
 
-In the script, the lattice variable `n` represents the number of
-physical cells, NOT the raw staggered sites. For the 3D 4×4×4 case,
-this is a 4×4×4 coarse-grained lattice corresponding to an 8×8×8
-original staggered lattice. Each tensor factor is the position
-Hilbert space of a particle in a specific taste eigenstate.
+2. Builds the KS taste operators as I_cells ⊗ (Pauli product on
+   taste qubits) via `build_cell_taste_operator`.
 
-The gap is closed: the bipartition is derived from the KS taste
-decomposition, each factor is identified with a specific taste
-eigenstate, and the measurement operators are Cl(3) taste operators.
+3. Compares the site-basis Z and X operators to the explicit taste
+   operators ξ_5 and ξ_last, verifying equality at machine
+   precision on 1D (N=8), 2D (4×4), and 3D (4×4×4).
+
+Output from the current runner:
+
+```
+1D N=8 KS taste identification:
+  Z == I_cells ⊗ ξ_5  (ξ_5 = σ_z⊗...⊗σ_z on 1 taste qubits):  PASS
+  X == I_cells ⊗ ξ_last (σ_x on last taste qubit only):       PASS
+2D 4x4 KS taste identification:
+  Z == I_cells ⊗ ξ_5  (ξ_5 = σ_z⊗...⊗σ_z on 2 taste qubits):  PASS
+  X == I_cells ⊗ ξ_last (σ_x on last taste qubit only):       PASS
+3D 4x4x4 KS taste identification:
+  Z == I_cells ⊗ ξ_5  (ξ_5 = σ_z⊗...⊗σ_z on 3 taste qubits):  PASS
+  X == I_cells ⊗ ξ_last (σ_x on last taste qubit only):       PASS
+```
+
+**The tensor bipartition is between two distinguishable fermion
+species (flavors), not between two taste eigenstates of one species.**
+This is the honest identification:
+
+- Species A: flavor 1 fermion on the full staggered lattice
+- Species B: flavor 2 fermion on the full staggered lattice
+- Each species' single-particle space is C^N = C^{N_cells} ⊗ C^{2^d}
+- Tensor product: C^N ⊗ C^N
+- [O_A ⊗ I, I ⊗ O_B] = 0 for any species-A and species-B operators
+- Measurement operators used (Z, X) are Cl(3) taste operators acting
+  within each species' taste factor
+
+The framework retains multiple distinguishable fermion species
+(quark flavors, lepton flavors, three generations, three colors —
+see the retained gauge and matter closure). Any two such species
+provide the tensor factors required for this construction.
+
+The gap is closed: the Cl(3) taste operators ξ_5 and ξ_last are
+explicitly constructed in code, and the site-basis Z and X operators
+used in the CHSH computation are verified to equal these taste
+operators at machine precision on every tested lattice.
 
 ## Comparison with previous approach
 

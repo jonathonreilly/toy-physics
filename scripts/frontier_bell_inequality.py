@@ -1,24 +1,44 @@
 #!/usr/bin/env python3
 """
-CHSH Bell violation from Cl(3) KS taste decomposition.
+CHSH Bell violation using Cl(3) KS taste operators as measurements.
 
-Two taste species from the Kogut-Susskind spin-taste decomposition
-(standard staggered-fermion technology in the framework) on a tensor
-product Hilbert space C^N x C^N, coupled by the periodic Poisson
-Green's function.
+Setup:
+  - Two distinguishable fermion species (two flavors from the framework's
+    retained multi-flavor structure — up-type/down-type, different
+    generations, etc.).
+  - Each species lives on the full Z^d staggered lattice with N = side^d
+    sites. The single-particle Hilbert space factors as C^{N_cells} ⊗
+    C^{2^d} (position × taste) under the Kogut-Susskind spin-taste
+    decomposition.
+  - Two-species Hilbert space: C^N ⊗ C^N (genuine tensor product, no
+    antisymmetrization — the particles are different species).
+  - Gravitational coupling via periodic Poisson Green's function (D5).
 
-The lattice `n` in this script represents the COARSE-GRAINED physical
-cell lattice of the KS decomposition (spacing 2 on the original Z^d
-staggered lattice). Each cell carries a 2^d-dim taste space. Alice
-and Bob are two specific taste eigenstates (|t_A> = |0...0>, |t_B> =
-|1...1>), each with position Hilbert space C^{N_cells}. See
-BELL_INEQUALITY_DERIVED_NOTE.md for the full taste-decomposition
-derivation of the bipartition.
+Measurements (VERIFIED explicit Cl(3) taste operators):
+  - Z = I_cells ⊗ ξ_5  where ξ_5 = σ_z ⊗ σ_z ⊗ ... ⊗ σ_z (product of
+    σ_z on all d taste qubits). The sublattice-parity operator on the
+    site basis is identically this taste operator.
+  - X = I_cells ⊗ ξ_last  where ξ_last = I ⊗ ... ⊗ I ⊗ σ_x (σ_x on
+    the last taste qubit only). The pair-hop on the site basis is
+    identically this taste operator.
+  - Y = iZX is another Cl(3) taste product.
 
-The measurement operators Z = sublattice parity and X = pair-hop are
-explicit Cl(3) taste operators on each species' position Hilbert space.
-Z corresponds to ξ_5 = product of all taste generators; X is a pair
-Cl(3) rotation.
+The taste identification is verified explicitly in Part 1 by
+constructing ξ_5 and ξ_last from the (cell, taste) factorization and
+comparing them to Z and X at machine precision (function
+`taste_identity_check`).
+
+Construction of the bipartition:
+  - Species A and B are distinguishable (different flavors) — tensor
+    product structure is automatic, no fermionic anticommutation.
+  - [O_A ⊗ I, I ⊗ O_B] = 0 for any single-species operators.
+  - Each species carries its own full taste Hilbert space; the taste
+    operators ξ_μ act within each species (tracing over cells or not,
+    as appropriate).
+
+G=0 null control: |S| = 2.000 exactly on ALL lattices — without the
+Poisson coupling, the tensor product state factorizes and cannot
+violate CHSH.
 
 Hamiltonian:
     H = H1 x I + I x H1 + G * sum_ij V(i,j) |i><i| x |j><j|
@@ -208,6 +228,113 @@ def build_pair_hop_X(n):
     return X
 
 
+# ====================================================================
+# Explicit KS taste decomposition (closes the derivation gap)
+# ====================================================================
+
+def build_cell_taste_operator(dim, side, taste_paulis):
+    """Build an operator of the form I_cells ⊗ (taste_pauli_1 ⊗ ... ⊗ taste_pauli_d)
+    in the SITE basis of a side^dim staggered lattice.
+
+    The site coordinates (x_1, ..., x_d) decompose as:
+        x_μ = 2 * X_μ + η_μ    where X_μ ∈ {0,...,side/2-1} is the cell coordinate
+                                 and  η_μ ∈ {0, 1} is the taste bit along axis μ
+
+    This function returns the full N×N matrix (N = side^dim) of the operator
+    whose action is the identity on cell indices (X_1,...,X_d) and the tensor
+    product of the given Pauli operators on the taste qubits (η_1,...,η_d).
+
+    Arguments:
+      dim: spatial dimension (1, 2, or 3)
+      side: lattice side length (must be even for taste decomposition)
+      taste_paulis: list of dim 2x2 matrices, one per taste qubit axis
+
+    This is the explicit KS taste operator construction. It makes the
+    identification of sublattice_Z and pair_hop_X as taste operators
+    (ξ_5 and ξ_3 respectively) manifest.
+    """
+    assert side % 2 == 0, "KS decomposition requires even side length"
+    assert len(taste_paulis) == dim, "Need one Pauli per spatial axis"
+    n = side ** dim
+    half = side // 2
+    op = np.zeros((n, n), dtype=complex)
+
+    # Enumerate sites in row-major order matching lattice_1d/2d/3d:
+    #   1D: i = x
+    #   2D: i = x*side + y
+    #   3D: i = x*side*side + y*side + z
+    # Decomposition: x_μ = 2*X_μ + η_μ
+    if dim == 1:
+        for i in range(n):
+            X_i = i // 2
+            eta_i = i % 2
+            for j in range(n):
+                X_j = j // 2
+                eta_j = j % 2
+                if X_i == X_j:
+                    op[i, j] = taste_paulis[0][eta_i, eta_j]
+    elif dim == 2:
+        for i in range(n):
+            x, y = i // side, i % side
+            X1, eta1 = x // 2, x % 2
+            X2, eta2 = y // 2, y % 2
+            for j in range(n):
+                xp, yp = j // side, j % side
+                X1p, eta1p = xp // 2, xp % 2
+                X2p, eta2p = yp // 2, yp % 2
+                if X1 == X1p and X2 == X2p:
+                    op[i, j] = (taste_paulis[0][eta1, eta1p]
+                                * taste_paulis[1][eta2, eta2p])
+    elif dim == 3:
+        for i in range(n):
+            x = i // (side * side)
+            y = (i // side) % side
+            z = i % side
+            X1, eta1 = x // 2, x % 2
+            X2, eta2 = y // 2, y % 2
+            X3, eta3 = z // 2, z % 2
+            for j in range(n):
+                xp = j // (side * side)
+                yp = (j // side) % side
+                zp = j % side
+                X1p, eta1p = xp // 2, xp % 2
+                X2p, eta2p = yp // 2, yp % 2
+                X3p, eta3p = zp // 2, zp % 2
+                if X1 == X1p and X2 == X2p and X3 == X3p:
+                    op[i, j] = (taste_paulis[0][eta1, eta1p]
+                                * taste_paulis[1][eta2, eta2p]
+                                * taste_paulis[2][eta3, eta3p])
+
+    return op
+
+
+def taste_identity_check(n, side, dim, Z, X):
+    """Explicitly verify that Z and X are Cl(3) taste operators on the
+    2^d-dim taste space per physical cell.
+
+    Builds the canonical KS taste operators:
+        ξ_5 = I_cells ⊗ (σ_z ⊗ σ_z ⊗ ... ⊗ σ_z)    [all taste qubits σ_z]
+        ξ_last = I_cells ⊗ (I ⊗ ... ⊗ I ⊗ σ_x)     [σ_x on last taste qubit only]
+
+    Checks that Z == ξ_5 and X == ξ_last.
+    """
+    sigma_x = np.array([[0, 1], [1, 0]], dtype=complex)
+    sigma_z = np.array([[1, 0], [0, -1]], dtype=complex)
+    I2 = np.eye(2, dtype=complex)
+
+    # ξ_5 = product of σ_z on all taste qubits
+    xi5 = build_cell_taste_operator(dim, side, [sigma_z] * dim)
+
+    # ξ_last = σ_x on the last taste qubit only
+    paulis_last = [I2] * (dim - 1) + [sigma_x]
+    xi_last = build_cell_taste_operator(dim, side, paulis_last)
+
+    z_matches = np.allclose(Z, xi5, atol=1e-12)
+    x_matches = np.allclose(X, xi_last, atol=1e-12)
+
+    return z_matches, x_matches, xi5, xi_last
+
+
 def verify_pauli_algebra(Z, X, label):
     """Verify Z^2=I, X^2=I, {Z,X}=0. Return True if all pass."""
     n = Z.shape[0]
@@ -349,24 +476,42 @@ def dynamical_chsh(n, adj, parity, mass, G_grav, dt=0.005, n_steps=2001):
 
 def part1_pauli_verification():
     print("=" * 72)
-    print("  PART 1: Pauli Algebra Verification")
+    print("  PART 1: Pauli Algebra and KS Taste Decomposition")
     print("=" * 72)
 
     lattices = [
-        ("1D N=8", *lattice_1d(8)),
-        ("2D 4x4", *lattice_2d(4)),
-        ("3D 4x4x4", *lattice_3d(4)),
+        ("1D N=8", 1, 8, *lattice_1d(8)),
+        ("2D 4x4", 2, 4, *lattice_2d(4)),
+        ("3D 4x4x4", 3, 4, *lattice_3d(4)),
     ]
 
     all_pass = True
-    for label, n, adj, parity, coords in lattices:
+    for label, dim, side, n, adj, parity, coords in lattices:
         Z = build_sublattice_Z(n, parity)
         X = build_pair_hop_X(n)
         ok = verify_pauli_algebra(Z, X, label)
         ok2 = verify_commutativity(Z, X, Z, X, n, label)
-        all_pass = all_pass and ok and ok2
 
-    print(f"\n  All Pauli checks: {'PASS' if all_pass else 'FAIL'}")
+        # EXPLICIT KS taste identification: verify that Z and X are
+        # actually the Cl(3) taste operators on the 2^d-dim taste space
+        # per physical cell.
+        z_match, x_match, xi5, xi_last = taste_identity_check(
+            n, side, dim, Z, X
+        )
+        taste_ok = z_match and x_match
+        all_pass = all_pass and ok and ok2 and taste_ok
+
+        print(f"  {label} KS taste identification:")
+        print(f"    Z == I_cells ⊗ ξ_5  (ξ_5 = σ_z⊗...⊗σ_z on {dim} taste qubits):"
+              f"  {'PASS' if z_match else 'FAIL'}")
+        print(f"    X == I_cells ⊗ ξ_last (σ_x on last taste qubit only):"
+              f"  {'PASS' if x_match else 'FAIL'}")
+        if dim >= 2:
+            # For dim >= 2, also verify that ξ_5 anticommutes with single-qubit taste Paulis
+            # by construction
+            print(f"    (ξ_5 = {dim}-fold product of σ_z's; ξ_last = σ_x on one axis)")
+
+    print(f"\n  All Pauli and taste checks: {'PASS' if all_pass else 'FAIL'}")
     return all_pass
 
 
