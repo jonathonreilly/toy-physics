@@ -79,6 +79,13 @@ object materially without closing the lane:
 - the current exact slot/odd-bank and source-bank are both blind to that
   moving `Z_3` doublet block, and the current bank closes negatively at that
   final microscopic gate
+- on a chosen scalar baseline `D = m I_3`, the observable-principle curvature
+  also supplies an exact isotropic comparison quadratic on the active pair,
+  whose chamber minimizer is `delta_* = q_+* = sqrt(6)/3`, but that remains a
+  bounded diagnostic tool rather than a theorem-native selector closure; the
+  clean attack target is still to derive either a canonical baseline principle,
+  a physical minimization principle, or the right-sensitive `2`-real
+  `Z_3` doublet-block selector law directly
 
 So the open DM object is no longer a vague missing `H`-law. It is now the
 explicit right-sensitive `2`-real `Z_3` doublet-block / point-selection law on
