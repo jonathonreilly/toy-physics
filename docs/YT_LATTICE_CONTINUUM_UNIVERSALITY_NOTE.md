@@ -83,33 +83,58 @@ framework's specific surface.
 
 ---
 
-## Why the legacy "surrogate" framing was conservative, not load-bearing
+## Status of the universality argument on this specific surface
 
 The Schur-bridge stack was constructed BEFORE the Ward identity at M_Pl
-had a clean independent derivation (i.e., before the Ward branch). At
-that time, the scalar-singlet boundary condition `y_t/g_s = 1/√6` was
-quoted as a "Cl(3) trace identity" without an operator-side derivation
-matching the OGE-side Feynman-rule computation.
-
-In that historical context, the cautious move was to treat the entire
-`v → M_Pl` flow as needing an independently retained transport theorem,
-because the boundary condition itself was structurally weaker. The
+had a clean independent derivation. In that historical context, the
 backward-Ward / Schur-coarse-bridge construction was the framework's
-attempt to provide that transport theorem directly, with explicit
+attempt to provide a retained transport theorem directly, with explicit
 endpoint-budget control.
 
-Now that the Ward branch closes the boundary-condition derivation
-(operator-side via H_unit matrix element + OGE-side via D12 + S2,
-verified consistent in Block 11 of the Ward runner), the historical
-need for a framework-native transport theorem has been discharged.
-The "true lattice blocking flow" between `v` and `M_Pl` reduces to
-standard continuum SM RGE at scales below the cutoff, by the standard
-universality argument above.
+Now that the Ward branch closes the boundary-condition derivation, the
+question is whether the standard universality argument above can be
+appealed to for the v → M_Pl transport instead of carrying a framework-
+native transport theorem.
+
+**Honest characterization.** The argument that the framework's specific
+canonical surface satisfies the standard universality premises (table
+above) is a **proposal asking the reviewer to accept by analogy**, not
+a framework-internal continuum-limit theorem proved on this surface.
+
+What is actually shown in this note:
+
+- ✓ The standard Wilsonian-universality result is textbook material for
+  asymptotically free lattice gauge theories.
+- ✓ The framework's specific surface satisfies the listed standard
+  premises (asymptotic freedom, fixed regulator, Wilsonian-block
+  compatibility, etc.).
+- ✗ The application to this specific composite-Higgs surface is NOT
+  proved here; it is an appeal to the general universality result.
+- ✗ No framework-internal continuum-limit theorem on the canonical
+  Wilson-staggered surface at β = 6 with composite-Higgs D9 is provided
+  by this note.
+
+**What this means for the proposal.** The case for P2 is therefore that
+the standard universality argument applies to this surface BY ANALOGY
+WITH STANDARD LATTICE QCD, not because a framework-internal
+continuum-limit theorem has been proved.
+
+If the reviewer accepts this — i.e., accepts the standard universality
+argument as background methodology for any reasonable asymptotically-
+free lattice gauge theory satisfying the listed premises — then P2
+holds and the supersession proposal proceeds.
+
+If the reviewer requires a framework-internal continuum-limit theorem
+on this specific surface (e.g., a Symanzik-improvement-style explicit
+analysis on the composite-Higgs Wilson-staggered surface), then this
+note does NOT provide that, the methodological gap is NOT discharged
+on this branch, and the supersession case stalls pending that work.
 
 The Schur-bridge stack remains a perfectly valid INDEPENDENT derivation
-that reaches the same `y_t(v)` value through different machinery; its
-0.71% local + 0.50% nonlocal residuals are now the cross-check budget,
-not the load-bearing systematic on the package.
+that reaches `y_t(v)` through different machinery, regardless of which
+way the reviewer rules on P2. Its 0.71% local + 0.50% nonlocal
+residuals stay valid as bridge-path residuals; the question is only
+whether they remain the package's load-bearing systematic.
 
 ---
 
@@ -155,18 +180,32 @@ specific surface.
 
 ---
 
-## Bottom line
+## Bottom line (honest)
 
-If P2 is accepted:
+If the reviewer accepts P2 as a standard-methodology appeal:
 
 > The continuum limit of the framework's canonical Wilson-staggered
 > surface at `β = 6` with composite-Higgs D9 is described, at scales
 > `v ≪ M_Pl`, by the standard SM continuum action with matched
-> renormalized couplings. SM RGE running between any two such scales
-> is the correct continuum description (not a surrogate). Residual
-> uncertainties are standard SM-RGE truncation + standard lattice-
-> discretization corrections, both quantified in the companion budget
-> note as sub-percent.
+> renormalized couplings — by appeal to the standard Wilsonian
+> universality result for asymptotically free lattice gauge theories
+> satisfying the listed premises. The application to this specific
+> composite-Higgs surface is by analogy with standard lattice QCD,
+> not from a framework-internal continuum-limit theorem proved here.
+> Residual uncertainties on the Ward primary path are quantified in
+> the companion budget note as ~1.95% (1-loop matching + RGE),
+> numerically comparable to the legacy bridge budget.
 
-This is the methodological move that retires the legacy 1.21% bridge
-budget as the load-bearing systematic on the package primary path.
+This is the methodological move the proposal asks the reviewer to
+make. It retires the framework-native explicit-systematic wording in
+favor of standard SM perturbative-residual wording. It does NOT claim
+a tighter quantitative budget (the companion note shows the budget is
+comparable, not smaller). It does NOT prove a framework-internal
+continuum-limit theorem on this surface.
+
+If the reviewer rejects this appeal — i.e., requires that the
+framework prove its own continuum-limit theorem before any standard
+universality argument can be cited for this surface — then the
+proposal fails on P2 and the existing wording stays. That is a
+legitimate reviewer position and the proposal does not attempt to
+preempt it.

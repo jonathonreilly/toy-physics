@@ -10,8 +10,8 @@ current published status until reviewer agreement is recorded.**
 
 **Supporting material (companion notes on this branch, no authority
 status of their own):**
-- [`YT_WARD_PATH_UNCERTAINTY_BUDGET_NOTE.md`](./YT_WARD_PATH_UNCERTAINTY_BUDGET_NOTE.md) — quantitative budget for `δ y_t(v)` on the Ward primary path (target ~0.6% standard / ~2.0% conservative-incl-NLO)
-- [`YT_LATTICE_CONTINUUM_UNIVERSALITY_NOTE.md`](./YT_LATTICE_CONTINUUM_UNIVERSALITY_NOTE.md) — methodological argument that SM RGE is the correct continuum-limit description (P2 supporting material)
+- [`YT_WARD_PATH_UNCERTAINTY_BUDGET_NOTE.md`](./YT_WARD_PATH_UNCERTAINTY_BUDGET_NOTE.md) — quantitative budget for `δ y_t(v)` on the Ward primary path. **Honest result: the Ward-path budget at current 1-loop work is ~1.95%, numerically comparable to the legacy 1.21% bridge budget, NOT materially tighter.** The supersession case rests on methodological character of the residual, not on a numerical reduction.
+- [`YT_LATTICE_CONTINUUM_UNIVERSALITY_NOTE.md`](./YT_LATTICE_CONTINUUM_UNIVERSALITY_NOTE.md) — methodological argument that SM RGE is the correct continuum-limit description by appeal to standard Wilsonian universality. **Honest characterization: this is an appeal-by-analogy to standard lattice QCD, NOT a framework-internal continuum-limit theorem proved on the framework's specific composite-Higgs surface.**
 
 ---
 
@@ -31,15 +31,23 @@ move from
 
 to
 
-> **DERIVED**, with sub-percent uncertainty inherited from standard SM
-> RGE truncation + standard lattice-discretization corrections (no
-> framework-native explicit systematic).
+> **DERIVED**, with the residual uncertainty (~1.95% at current 1-loop
+> work) carried as standard SM-RGE truncation + standard lattice 1-loop
+> matching, both standard published methodologies. No framework-native
+> explicit-systematic qualifier.
 
 The proposal does NOT ask the reviewer to accept any new theorem
 beyond what is already on the Ward branch. It asks only for a
-**status / authority-path realignment**: which of the two existing
-independent derivations should the package treat as primary, and
-which as cross-check.
+**methodological realignment**: replace a framework-native
+explicit-systematic budget with a comparable-magnitude budget of
+standard-method type.
+
+**The proposal does NOT claim a tighter quantitative budget on the
+primary path.** At current 1-loop work, the Ward-path budget is
+numerically comparable to the legacy bridge budget. The
+supersession case rests on the methodological character of the
+residual, not on a numerical reduction. A tighter Ward-path budget
+would require NNLO lattice matching, which is out of scope.
 
 ---
 

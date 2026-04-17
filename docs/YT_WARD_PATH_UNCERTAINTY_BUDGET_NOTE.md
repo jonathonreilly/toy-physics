@@ -1,13 +1,31 @@
 # Ward-Path Uncertainty Budget for y_t(v)
 
-**Date:** 2026-04-17
+**Date:** 2026-04-17 (v2, addresses review of v1)
 **Status:** SUPPORT NOTE for `YT_WARD_SUPERSEDES_BRIDGE_PROPOSAL_2026-04-17.md`
 **Scope:** quantify the uncertainty on `y_t(v)` and `m_t(pole)` if they
 are derived via the Ward primary path:
-> `y_t(M_Pl) = g_s(M_Pl)/√6` exact (Ward branch) → SM RGE → `y_t(v)` → `m_t`
+> `y_t(M_Pl) = g_s(M_Pl)/√6` exact (Ward, on main) → SM RGE → `y_t(v)` → `m_t`
 
 This note carries no authority status of its own. It is the supporting
 quantitative material for **P3** of the supersedes-bridge proposal.
+
+---
+
+## Honest correction from v1
+
+A reviewer correctly flagged that v1 of this note asserted a sub-percent
+"standard" Ward-path budget without deriving the lattice-discretization /
+matching residual on this surface. v1's "≈0.6%" line was reached by
+moving from `α_LM · C_F / π ≈ 3.9%` at the bare interface to
+"effective contribution after matching: sub-percent" without showing the
+arithmetic.
+
+This v2 corrects that. The honest Ward-path budget on the canonical
+surface is **comparable to** the legacy Schur-bridge budget, not
+materially smaller. The case for supersession therefore rests on
+**methodological character** (replacing framework-native explicit
+systematic with standard SM perturbative residuals), not on a
+numerical reduction in the quoted error.
 
 ---
 
@@ -24,173 +42,188 @@ m_t(pole)    = standard SM matching at v        (well-known)
 ```
 
 The Ward identity at M_Pl is **exact at tree level** on the canonical
-surface (review-passed on `claude/ward-identity-derivation @ 27354ce8`).
-There is no framework-native systematic on the UV boundary value itself.
+surface (review-passed and landed on main as
+`docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md`). There is no
+framework-native systematic on the UV boundary value itself.
 
-The uncertainty on `y_t(v)` accumulates only through the propagation
-chain from M_Pl down to v.
+The uncertainty on `y_t(v)` accumulates through the propagation chain
+from M_Pl down to v.
 
 ---
 
-## Sources of uncertainty on the Ward path
+## Sources of uncertainty on the Ward path (honest accounting)
 
-### A. Input precision on `g_s(M_Pl)`
+### A. Input precision on `g_s(M_Pl)` — DERIVED
 
 On the canonical surface `g_s(M_Pl) = 1/√u_0` with `u_0 = ⟨P⟩^{1/4}` from
-the plaquette expectation. The plaquette is measured on the canonical
-β = 6 lattice; standard tadpole-improvement precision is sub-permille
-(`δ u_0 / u_0 ≲ 10⁻³`). Propagating through the square root:
+the plaquette expectation. Standard tadpole-improvement gives
+`δ u_0 / u_0 ≲ 10⁻³`. Propagating through the square root:
 
 ```
-δ g_s(M_Pl) / g_s(M_Pl)  ≈  (1/2) · δ u_0 / u_0  ≲  5 × 10⁻⁴  (~0.05%)
+δ g_s(M_Pl) / g_s(M_Pl)  ≈  (1/2) · δ u_0 / u_0  ≲  5 × 10⁻⁴   (~0.05%)
 ```
 
 Source: `α_LM` measurement on canonical surface (retained,
-`ALPHA_S_DERIVED_NOTE.md`).
+`ALPHA_S_DERIVED_NOTE.md`). This is genuinely sub-permille.
 
-### B. SM RGE truncation (NNLO vs NNNLO)
+### B. SM RGE truncation (NNLO vs NNNLO) — STANDARD SM, not derived here
 
 Standard 2-loop vs 3-loop SM RGE running of `y_t` between `M_Pl` and `v`:
 
-- 2-loop: well-tabulated, central agreement
-- 3-loop: shifts central by ~0.3% in `y_t(v)`, ~0.5 GeV in `m_t(pole)`
-- 4-loop QCD + 3-loop electroweak: known partially, sub-permille shift
-  expected
+- 2-loop central: `m_t(pole) = 172.57 GeV`
+- 3-loop central: `m_t(pole) = 173.10 GeV`
+- Spread: 0.53 GeV / 173 GeV ≈ 0.31%
 
-The current package quotes both `m_t(pole, 2-loop) = 172.57 GeV` and
-`m_t(pole, 3-loop) = 173.10 GeV` with the difference treated as the
-truncation indicator. This is a STANDARD SM running uncertainty, not a
-framework-native systematic.
-
-```
-δ y_t(v)        from SM RGE truncation  ≈  0.3% (NNLO → NNNLO comparison)
-δ m_t(pole)     from SM RGE truncation  ≈  ±0.5 GeV  (~0.3%)
-```
-
-This is the same SM-side uncertainty quoted in any precision SM analysis;
+The current package quotes both as the truncation indicator. This is a
+STANDARD SM running uncertainty published in any precision SM analysis;
 nothing framework-specific.
 
-### C. Lattice discretization `O(α_LM · a²)`
-
-On the framework's canonical Wilson-staggered surface at β = 6 with
-α_LM = 0.091, standard lattice power counting gives `O(α_LM · a²)`
-discretization corrections. At `v ≪ M_Pl`, the relevant `a²` factor
-is `(a · v)² = (v/M_Pl)² ~ 10⁻³⁰`, so discretization corrections at
-the IR end are NEGLIGIBLE. At the UV end (where `a · q ~ 1`), they
-would be order-unity, but the Ward identity is stated AT the lattice
-cutoff, so no propagation through the lattice cutoff is required.
-
-For the running between v and M_Pl, the relevant lattice-systematic
-estimate is the standard tadpole-improved coefficient `α_LM · C_F / π`
-applied at the BARE-action interface:
-
 ```
-δ y_t(v)  from lattice-discretization at the M_Pl interface
-          ≈  α_LM · C_F / π  ≈  3.9% loop unit, but matches into SM
-          → effective contribution after matching: sub-percent
+δ m_t(pole) from SM RGE truncation  ≈  ±0.5 GeV  (~0.3%)
+δ y_t(v)    from SM RGE truncation  ≈  0.3%
 ```
 
-This is the standard lattice-to-continuum matching residual. It is NOT
-the Schur-bridge endpoint shift (a different quantity, which arose from
-a different methodology).
+This is asserted as standard SM result. The reviewer should evaluate
+this as the framework citing standard published SM running, not as a
+framework-native derivation.
 
-### D. Higher-order Ward-identity NLO (optional)
+### C. Lattice-to-continuum matching at the M_Pl interface — NOT smaller than the perturbative loop
 
-The Ward branch's Step 5 (now removed from the authority theorem; lives
-in support note) computes the perturbative 1-loop vertex correction on
-the tadpole-improved surface as `α_LM · C_F / (2π) = 1.92%`. This is
-the magnitude of the NLO correction TO the Ward ratio at M_Pl, but
-since the proposal treats the Ward identity as exact at tree level (the
-review-passed status), this correction is at most a sub-leading shift
-on the input boundary value.
+This is where v1 of this note made the load-bearing error. Honest accounting:
 
-Folding it conservatively into the y_t(v) error budget would add ~1.9%
-in quadrature with B and C, giving total ~2.0%. This is still smaller
-than the 1.21% bridge budget after considering that the bridge's 1.21%
-was *added* to a separate set of input uncertainties; the Ward-NLO 1.9%
-already contains the equivalent of the bridge's 1.21% transport piece
-plus more.
+The Ward identity gives `y_t_bare = g_bare/√6` on the canonical bare
+lattice. To convert this to `y_t(M_Pl)` in continuum (e.g., MS-bar)
+scheme, a lattice → continuum matching is required. On the
+tadpole-improved Lepage-Mackenzie surface, this matching at 1-loop has
+the standard magnitude
 
 ```
-δ y_t(v)  from Ward NLO (if folded)   ~ 1.9%   (perturbative 1-loop)
-                       (if not folded)  not applicable to tree identity
+δ y_t(M_Pl) / y_t(M_Pl)  ~  α_LM · C_F / (2π)  =  1.92%
 ```
+
+This is *the same number* as the Ward-derivation NLO bound from Block 9
+of `frontier_yt_ward_identity_derivation.py`. The lattice-discretization
+residual at the cutoff matching IS the perturbative 1-loop vertex
+correction; treating them as separate sources would double-count.
+
+The honest budget therefore folds B and C as a single source (1-loop
+matching + RGE truncation) rather than asserting they are independent
+sub-percent contributions.
+
+### D. Lattice discretization at IR scales (`O(α_LM · (a · μ)²)`) — genuinely small
+
+For physical observables at scale `μ ≪ M_Pl = 1/a`, the
+discretization corrections scale as `(a · μ)² = (μ/M_Pl)²`. At
+`μ ~ v = 246 GeV`, this gives `(v/M_Pl)² ~ 10⁻³⁰`, completely
+negligible. This is genuinely sub-permille on standard
+lattice-QCD power counting.
+
+Note: this is DIFFERENT from C above. C is the matching at the UV
+interface (where lattice and continuum descriptions meet); D is the
+discretization at IR observables (where the lattice is far below
+its cutoff). C is the load-bearing residual; D is genuinely tiny.
 
 ---
 
-## Combined budget (Ward primary path)
+## Combined Ward-path budget (honest version)
 
-### Conservative (folding all of A, B, C, D in quadrature)
-
-```
-δ y_t(v)     = √(0.05² + 0.3² + 0.5² + 1.9²) %  ≈  2.0%
-δ m_t(pole)  = ~0.6 GeV (RGE/discretization) + ~3.3 GeV (Ward NLO if folded)
-             ≈ ±2.4 GeV total in quadrature  ≈ 1.4%
-```
-
-### Standard (A + B + C, treating Ward identity as exact tree)
+### Standard (1-loop matching + RGE truncation in quadrature)
 
 ```
-δ y_t(v)     = √(0.05² + 0.3² + 0.5²) %  ≈  0.6%
-δ m_t(pole)  = ±0.6 GeV ≈ 0.3%
+δ y_t(v)     = √(0.05² + 0.3² + 1.92²) %  ≈  1.95%
+δ m_t(pole)  ≈  ±3.4 GeV  in quadrature
 ```
 
-The "standard" line treats the Ward identity at M_Pl as the exact tree-
-level result (the review-passed status), with all uncertainty coming
-from the CONTINUUM/RGE/lattice-discretization side. This is the cleanest
-budget and the one the proposal recommends.
+### NNLO matching (if computed)
+
+The 2-loop matching residual is `(α_LM · C_F / π)² = 0.15%` (from
+Block 9 of the Ward runner, NNLO perturbative). This would tighten
+the matching residual to NNLO, but only with the work to actually
+compute the 2-loop matching shift, which is not in the retained
+package today.
+
+```
+δ y_t(v)  with NNLO matching computed   ≈  ~0.4%   (RGE + NNLO matching)
+                                                    + small 1-loop residual
+```
+
+This is the budget the supersession case would TARGET if NNLO matching
+were retained. It is not retained today.
 
 ---
 
-## Comparison to the legacy bridge budget
+## Comparison to the legacy Schur-bridge budget — apples to apples
 
-| Path | Conservative budget | Tight budget | Source |
+| Path | Conservative budget | Tight budget | Methodological character |
 |---|---|---|---|
-| Schur-bridge (legacy) | 1.21% | 0.755% | endpoint shift `r_ho + r_nl` |
-| Ward primary (standard) | 0.6% | 0.3% | A + B + C above |
-| Ward + NLO conservative | 2.0% | 1.4% | A + B + C + D in quadrature |
+| Schur-bridge (legacy) | 1.21% | 0.755% | framework-native explicit systematic |
+| Ward primary (1-loop matching) | ~1.95% | ~1.95% | standard SM PT + lattice 1-loop |
+| Ward primary (NNLO matching, future work) | ~0.4% | ~0.4% | standard SM PT + lattice NNLO |
 
-The Ward-primary "standard" budget at 0.6% is materially smaller than
-the bridge budget at 1.21% AND consists entirely of standard SM /
-lattice-QCD uncertainties (not framework-native explicit systematic).
+**Honest read of the comparison:** at the current level of computational
+work (1-loop on both paths), the Ward-path budget (~1.95%) is
+**numerically comparable to or slightly larger than** the legacy
+bridge budget (1.21% conservative). The Ward path becomes numerically
+tighter only if NNLO lattice matching is computed (which is not
+in the current retained package).
 
-The Ward-primary "conservative" budget at 2.0% is comparable to the
-bridge budget but again carries STANDARD perturbative-loop uncertainty,
-not framework-native bridge-construction artifact.
+The supersession case therefore does NOT rest on a numerical reduction
+in the quoted error. It rests on the **methodological character of
+the residual**:
 
-In either case, the Ward-primary path **does not require a framework-
-native explicit systematic** to quote `y_t(v)` and `m_t(pole)`; it
-requires only standard SM and standard lattice-QCD uncertainties.
+- Schur-bridge 1.21% is **framework-native**: it is the bound on the
+  gap between SM RGE and an unspecified "true lattice blocking flow"
+  in a constructed bridge operator. It exists because the framework
+  introduced a methodology that requires it.
+- Ward 1.92% is **standard perturbation theory on the tadpole-improved
+  Lepage-Mackenzie surface**: it is the standard 1-loop matching
+  uncertainty quoted in any lattice-QCD analysis at this `α_LM`. It
+  exists in any lattice gauge theory; it is not a framework-specific
+  construct.
+
+The proposal asks the reviewer to accept that **a 1.92% standard SM
++ lattice 1-loop budget is methodologically preferable to a 1.21%
+framework-native explicit-systematic budget** — even though the
+former is numerically larger — because the former's character is
+standard published methodology and the latter's character is
+framework-native systematic that requires its own retained
+justification.
+
+If the reviewer judges that a smaller framework-native budget is
+preferable to a larger standard-method budget, the supersession case
+fails on numerical grounds and the existing wording stays.
 
 ---
 
 ## Honest limitations
 
-1. The standard budget (0.6%) treats the Ward identity at M_Pl as exact;
-   conservative reading would fold the 1.92% Ward NLO. The proposal
-   should quote both options for transparency.
-2. Lattice-discretization estimate folded into B+C above is itself an
-   estimate, not a directly retained systematic. A reviewer wanting an
-   independent lattice-discretization theorem on this specific surface
-   would need that work done separately.
-3. The 0.5% from NNLO/NNNLO RGE comparison reflects the framework's
-   current 2-loop / 3-loop spread; quoting NNNLO QCD + 3-loop electroweak
-   would tighten this further but is sub-permille either way.
+1. **The 1.92% matching residual is the same as the Ward-NLO loop
+   correction.** They are not independent sources to fold separately.
+2. **NNLO lattice matching is not in the retained package today.** The
+   "~0.4% future" line is a target that requires actual NNLO matching
+   work to be done.
+3. **Standard SM RGE running is treated as standard published methodology.**
+   If the reviewer disputes that for the framework's specific surface,
+   the supersession case fails.
+4. **Lattice-discretization at IR scales (D)** is genuinely tiny but
+   estimated by power counting, not measured on this surface.
 
 ---
 
-## Scientific bottom line
+## Scientific bottom line (revised)
 
-If the proposal is accepted, the y_t lane reports:
+If the proposal is accepted:
 
 ```
-y_t(v)     = 0.9176 ± 0.005   (standard)  or  ± 0.018 (conservative incl. Ward NLO)
-m_t(pole)  = 173.10 GeV ± 0.6 GeV (standard)  or  ± 2.4 GeV (conservative)
-                                              [3-loop central; 2-loop = 172.57 GeV]
+y_t(v)     = 0.9176 ± 0.018  (Ward path, 1-loop matching + RGE)
+m_t(pole)  = 173.10 GeV ± 3.4 GeV (3-loop central; 2-loop = 172.57 GeV)
 ```
 
-with NO framework-native explicit systematic; all uncertainties are
-standard SM / lattice-QCD residuals.
+Numerically comparable to the legacy Schur-bridge budget. The change
+the proposal asks for is **methodological**: replacing the framework-
+native explicit systematic wording with standard-PT-residual wording,
+without claiming a tighter quantitative budget.
 
-This is a tightening of the central package quote — and a cleaner
-methodological status — relative to the legacy bridge budget.
+The route to a tighter Ward-path budget runs through NNLO lattice
+matching, which is future work and not in scope for the present
+proposal.
