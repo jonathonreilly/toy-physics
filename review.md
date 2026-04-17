@@ -2,123 +2,189 @@
 
 ## Current Call
 
-This branch is now in materially better shape than the earlier CL3 submissions.
+This branch now contains **two different CL3 stories**:
 
-Current disposition:
+- the earlier `cl3-minimality-conditional-support-2026-04-17.md`, which is a
+  coherent support / consistency note on the retained cubic surface
+- the new `native-su2-tightness-forces-ds3-2026-04-17.md`, which tries to
+  upgrade `d_s = 3` to retained closure
 
-- **not retained G16 closure**
-- **yes as a conditional/support note on the retained cubic surface**
-- **the latest remote tip is scientifically fine at that support-note bar**
+My current disposition is therefore:
 
-So the best current outcome is:
+- **No** as retained G16 / axiom-depth closure
+- **Yes** as a support-note package, if the new retained-grade overclaim is
+  removed or downgraded
 
-- land this as a **conditional minimality / consistency support note**
-- do **not** present it as first-principles closure of `d_s = 3`
+So the branch is **not ready to land as a retained closure** in its current
+state, but it still contains a scientifically useful support note.
 
 ## Replay Status
 
 - `python3 -m py_compile scripts/frontier_cl3_minimality.py` passes
 - `python3 scripts/frontier_cl3_minimality.py` ends with
   `THEOREM_PASS=50 SUPPORT_PASS=32 FAIL=0`
+- `python3 -m py_compile scripts/frontier_native_su2_tightness.py` passes
+- `python3 scripts/frontier_native_su2_tightness.py` ends with
+  `THEOREM_PASS=19 SUPPORT_PASS=16 FAIL=0`
 
-The new remote tip `b150c644` is a small runner-docstring alignment commit on top
-of the substantive v4 theorem work. The branch replays cleanly.
+The issue is **not** arithmetic or syntax. The issue is that the new
+`native-su2-tightness` theorem certifies a premise that is stronger than the
+retained authority it cites.
 
-## What Is Now In Good Shape
+## Main Blocker
 
-The main issues from the earlier reviews have been addressed at the support-note
-level:
+### The new retained closure hinges on a stronger premise than the retained native-SU(2) authority actually proves
 
-1. the note no longer overclaims axiom-depth closure
-2. the matrix-level `Cl(3; C) = M_2(C) ⊕ M_2(C)` / `Cl^+(3) ≅ M_2(C)` runner
-   story is explicit
-3. the `spin(n)` / `so(n)` language is corrected
-4. the stale runner-summary mismatch is gone
-5. the four-generation section is no longer just residual counting plus an
-   `n = 3` citation; it now gives an actual family-wide algebra construction on
-   the scoped cubic odd-`n` comparison family
+The new note says:
 
-In particular, the present Part F does more than the earlier branch:
+> the retained native-SU(2) theorem asserts that the Clifford bivectors close
+> exactly into the weak SU(2) algebra ... the set of all bivectors is exactly
+> the SU(2) weak-gauge Lie algebra, with no bivector left over and no selector
+> required to pick them out
 
-- the `n` translation operators produce `n` distinct joint sign patterns on the
-  `hw=1` sector
-- those patterns give rank-1 projectors `P_i`
-- the cyclic axis-permutation operator supplies the needed off-diagonal moves
-- `P_i C^k P_j` generates the full matrix-unit basis
-- the resulting algebra is `M_n(C)`, hence irreducible
+and then rewrites that as
 
-At the scope actually claimed in the note, that is a coherent support-level
-four-generation no-go on the cubic odd-`n` comparison family.
+> `spin(n) = su(2)` as Lie algebras
 
-## One Remaining Cleanup
+That is the load-bearing step of the new retained-grade derivation.
 
-I do not see a new scientific blocker on the latest remote tip, but there is
-still one wording cleanup that would make the claim boundary tighter.
+But the cited retained authority
+`docs/NATIVE_GAUGE_CLOSURE_NOTE.md` does **not** currently prove that stronger
+statement at comparison-family scope. What it actually says is:
 
-### The four-generation theorem is not literally “comparison-level-only”
+- on the **cubic `Z^3` surface**
+- `Cl(3)` in taste space
+- **contains** an `su(2)` subalgebra
 
-The note still says:
+Specifically, the current retained authority says:
 
-> the four-generation exclusion below is comparison-level-only
+- `Cl(3) contains su(2) subalgebra -> SU(2) gauge symmetry`
+- `Cl(3) on Z^3 produces exact SU(2)`
 
-But the same note also says, correctly, that the theorem is being read on the
-cubic `Cl(n)/Z^n` family **with the retained `hw`-orbit-is-physical-species
-semantics**.
+That is a theorem on the retained `Cl(3)` / `Z^3` surface. It is **not yet**
+the general comparison-family theorem:
 
-That means the clean wording is:
+- for arbitrary `Cl(n)`,
+- all bivectors are weak,
+- with no selector,
+- therefore `spin(n) = su(2)`
 
-- comparison-family theorem
-- under the retained `hw`-orbit semantics
+The new note itself more or less admits this in the non-circularity section:
 
-not a completely semantics-free comparison theorem.
+> if a reviewer rejects the re-reading ... this note has only moved the
+> circularity one step back
 
-This is **not** a scientific blocker at the support-note bar, because the scope
-section already says the right thing. It is just worth aligning the dependency
-table prose with the actual scope statement so reviewers do not think you are
-claiming more abstraction-independence than you really are.
+That is the right self-assessment. This is still an **interpretive upgrade** of
+the retained theorem, not a retained theorem already on `main`.
+
+So the branch has not yet proved retained closure of `d_s = 3`. It has proposed
+a new stronger theorem that would *if separately retained* imply `d_s = 3`.
+
+## Runner Weakness
+
+### The new runner certifies the dimensional-matching theorem only after assuming the strengthened premise
+
+The new runner is internally consistent, but it does not verify the actual
+scientific gap.
+
+It begins by taking as its theorem statement:
+
+> `spin(n) = su(2)`
+
+and then checks:
+
+- the unique solution of `n(n-1)/2 = 3`
+- explicit `spin(3) = su(2)`
+- dimension mismatch for `n >= 4`
+- a printed non-circularity audit
+
+That is fine **if** `spin(n) = su(2)` were already an accepted retained input.
+But the branch is using the runner to support the claim that the retained
+native-gauge note already implies that input. The runner does **not** verify
+that implication.
+
+In particular:
+
+- it does not parse or reconstruct the existing retained native gauge theorem
+- it does not show that the current `Cl(3)` / `Z^3` proof separates its
+  Lie-algebra content from its cubic-surface content
+- it does not certify the "no selector / all bivectors" reading as a retained
+  theorem on the `Cl(n)` comparison family
+- its non-circularity section is largely a printed audit plus unconditional
+  `True` checks, not an independent certification of the strengthened premise
+
+So `19 THEOREM / 16 SUPPORT / 0 FAIL` is evidence for the algebra **after
+assuming** the upgraded premise, not evidence that the current retained stack
+already proves that premise.
 
 ## Best Outcome From Here
 
 ### Best immediate outcome
 
-Land this as a **support / consistency note**.
+Do **not** land this as retained closure.
 
-That gives you:
+Instead:
 
-- an honest answer to “why `Cl(3)` rather than nearby `Cl(n)` options?”
-- a concrete matrix-level Clifford verification
-- a scoped four-generation incompatibility theorem on the cubic odd-`n`
-  comparison family
-- no false claim that the framework has solved the axiom-depth `d_s = 3`
-  question
+1. keep the earlier `cl3-minimality-conditional-support-2026-04-17.md` as the
+   canonical CL3 note if you want to land something now
+2. downgrade `native-su2-tightness-forces-ds3-2026-04-17.md` to a
+   speculative / support-grade route note
+3. explicitly state that the new theorem depends on a stronger
+   "canonical no-selector" reading that is **not yet separately retained**
 
-### Best small edit before landing
+That yields an honest support-note package with a promising future route, but no
+false retained claim.
 
-Change the “comparison-level-only” sentence to something like:
+### What would actually get this to retained
 
-> The four-generation exclusion below is a comparison-family theorem on the
-> cubic odd-`n` surface, read under the retained `hw`-orbit-is-physical-species
-> semantics.
+You need a **separate retained theorem** establishing the upgraded native-gauge
+premise itself.
 
-That would make the boundary language match the theorem’s actual scope.
+Concretely, the branch would need to prove something like:
 
-### Best long-term outcome
+> The native weak-gauge closure is not merely that `Cl(3)` on `Z^3` contains an
+> `su(2)` subalgebra, but that the framework's weak-gauge closure principle is
+> canonically selector-free and identifies the full Clifford bivector Lie
+> algebra with the weak algebra at comparison-family scope.
 
-If you later want true retained closure of G16, that is still a separate
-program:
+Only after that theorem is separately established can you legitimately run the
+dimension-matching step
 
-1. derive `n = 3` non-circularly
-2. do not rely on the retained cubic `8 = 1 + 1 + 3 + 3` surface as the
-   selector
+> `spin(n) = su(2)` -> `n(n-1)/2 = 3` -> `n = 3`
 
-This branch is not trying to do that anymore, which is the right call.
+as a retained closure theorem.
+
+And the runner would then need to verify **that** stronger theorem, not just the
+downstream dimension count.
+
+### Best possible retained-grade path
+
+If you want to pursue retained closure, the clean decomposition is:
+
+1. **Native-gauge scope theorem**
+   prove that the retained native-SU(2) authority really has a
+   comparison-family, selector-free reading
+2. **Tightness theorem**
+   once that is retained, the dimension match to `n = 3` is trivial
+3. **Generation corollary**
+   keep the old cubic / `hw` semantics chain as downstream support-level
+   generation-count packaging unless you separately derive those semantics too
+
+Without step 1, the current branch is still below retained bar.
 
 ## Bottom Line
 
 My current call:
 
-- **No** as retained G16 closure
-- **Yes** as a conditional/support note
-- **Recommended action:** land it at that support-note status, with one small
-  claim-boundary wording cleanup if you want the cleanest reviewer-facing
+- **No** as retained G16 / `d_s = 3` closure
+- **Yes** as a support-note package if the new overclaim is downgraded
+
+The branch's real scientific value right now is:
+
+- a solid conditional minimality / consistency note on the retained cubic
   surface
+- plus a potentially interesting future route:
+  "if canonical selector-free native SU(2) can be retained separately, then
+  `d_s = 3` follows immediately by Lie-algebra dimensional matching"
+
+That is useful. It is just not yet the same thing as a retained proof.
