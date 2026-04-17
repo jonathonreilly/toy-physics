@@ -132,7 +132,13 @@ across the `Cl(n)/Z^n` candidate family for any odd `n ≥ 1`) or
 Theorems proved in this note only use comparison-level premises;
 downstream premises are invoked only where the note explicitly labels
 a result as "conditional on the retained interpretation." The
-four-generation exclusion below is comparison-level-only.
+four-generation exclusion below is a **comparison-family theorem** on
+the cubic odd-`n` surface, proved family-wide for the cubic `Cl(n)/Z^n`
+Clifford + translation + cyclic-permutation algebra, **read under the
+retained `hw`-orbit-is-physical-species semantics** (i.e., the
+identification of the `hw=1` sector with physical generation content).
+It is not a semantics-free theorem: if physical species are assigned by
+a different invariant, the exclusion does not apply.
 
 ## The Three Framework Requirements
 
