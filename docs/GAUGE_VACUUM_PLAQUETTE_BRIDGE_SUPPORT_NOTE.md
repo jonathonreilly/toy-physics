@@ -1,8 +1,8 @@
 # Gauge-Vacuum Plaquette Scalar-Bridge Support
 
 **Date:** 2026-04-16
-**Status:** exact local/source/class-level support stack plus exact constant-lift obstruction, exact distinct-shell theorem, exact first nonlinear full-vacuum coefficient, and exact implicit reduction-law existence/uniqueness theorem; the explicit nonperturbative form at `beta = 6` still remains open
-**Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`, `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py`, `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py`
+**Status:** exact local/source/class-level support stack plus exact constant-lift obstruction, exact distinct-shell theorem, exact first nonlinear full-vacuum coefficient, exact implicit reduction-law existence/uniqueness theorem, and exact nonperturbative susceptibility-flow theorem; the explicit connected Wilson susceptibility profile at `beta = 6` still remains open
+**Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`, `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py`, `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py`
 
 ## Question
 
@@ -45,8 +45,9 @@ force the slope to be
 So the remaining open object is not a generic missing lift anymore. It is now a
 still narrower target:
 
-> derive an explicit nonperturbative characterization of the now-proved
-> implicit reduction law at the framework point `beta = 6`.
+> derive the explicit connected Wilson plaquette susceptibility profile at the
+> framework point `beta = 6`, which would close the explicit nonperturbative
+> reduction law.
 
 ## Exact support piece 1: local Wilson source-response
 
@@ -194,11 +195,23 @@ again:
   nonperturbative reduction parameter
   `beta_eff^can = 9.326167920875534`.
 
+And the new exact susceptibility-flow theorem sharpens the structural picture
+again:
+
+- the exact implicit reduction law is governed by the nonperturbative flow
+  equation
+  `beta_eff,L'(beta) = chi_L(beta) / chi_1plaq(beta_eff,L(beta))`;
+- equivalently,
+  `beta_eff,L(beta) = P_1plaq^(-1)(integral_0^beta chi_L(s) ds)`;
+- the first nonlocal susceptibility correction is exact:
+  `chi_L(beta) - chi_1plaq(beta) = 5 beta^4 / 472392 + O(beta^5)`.
+
 ## Remaining gap
 
 The remaining theorem-grade gap is now narrower:
 
-> derive the explicit nonperturbative form of the now-proved implicit
+> derive the explicit connected Wilson susceptibility profile and therefore the
+> explicit nonperturbative form of the now-proved implicit
 > reduction law
 > `P(beta) = P_1plaq(beta_eff(beta))`
 > at the framework point `beta = 6`,
@@ -220,6 +233,7 @@ Current clean read:
 - exact distinct-shell theorem: closed
 - exact first nonlinear full-vacuum coefficient: closed
 - exact implicit finite-surface reduction-law existence/uniqueness: closed
+- exact nonperturbative susceptibility-flow law: closed
 - explicit nonperturbative physical-vacuum reduction at `beta = 6`: still open
 - canonical plaquette on the live package: still `0.5934`
 
@@ -237,6 +251,7 @@ python3 scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py
 python3 scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py
 python3 scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py
 python3 scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py
+python3 scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py
 ```
 
 Expected summary:
@@ -248,3 +263,4 @@ Expected summary:
 - constant-lift obstruction runner: `THEOREM PASS=6 SUPPORT=1 FAIL=0`
 - mixed-cumulant audit runner: `THEOREM PASS=6 SUPPORT=1 FAIL=0`
 - reduction-existence runner: `THEOREM PASS=4 SUPPORT=4 FAIL=0`
+- susceptibility-flow runner: `THEOREM PASS=5 SUPPORT=3 FAIL=0`

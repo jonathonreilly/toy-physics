@@ -93,6 +93,8 @@ The live repo now also carries a materially stronger exact support stack:
   of the full-vacuum reduction law
 - exact implicit reduction-law existence/uniqueness theorem on the finite
   Wilson evaluation surface
+- exact nonperturbative susceptibility-flow theorem for the implicit reduction
+  law
 - exact scalar `3+1` bridge endpoint ratio
   `A_inf / A_2 = 2 / sqrt(3)`
 - exact plaquette four-link coupling map
@@ -115,6 +117,7 @@ Current authorities for that support stack:
 - [GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_DISTINCT_SHELL_THEOREM_NOTE.md)
 - [GAUGE_VACUUM_PLAQUETTE_MIXED_CUMULANT_AUDIT_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_MIXED_CUMULANT_AUDIT_NOTE.md)
 - [GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md)
+- [GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md)
 - [GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md](./GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md)
 - [GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md)
 - [SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md](./SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md)
@@ -125,6 +128,7 @@ Current support runners:
 - `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py`
 - `scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py`
 - `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py`
+- `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py`
 - `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`
 - `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`
 - `scripts/frontier_scalar_3plus1_temporal_ratio.py`
@@ -140,9 +144,12 @@ The honest live read is now sharper than before:
   `P_full(beta) = P_1plaq(beta) + beta^5 / 472392 + O(beta^6)`
 - the exact implicit reduction law on the finite Wilson evaluation surface is
   now also closed and unique
-- so the remaining analytic target is the explicit nonperturbative form of that
-  reduction law at `beta = 6`, not the old constant-lift ansatz, not the onset
-  coefficient, and not reduction-law existence itself
+- the exact nonperturbative susceptibility-flow law for that implicit reduction
+  is now also closed
+- so the remaining analytic target is the explicit connected susceptibility
+  profile and therefore the explicit nonperturbative form of that reduction law
+  at `beta = 6`, not the old constant-lift ansatz, not the onset coefficient,
+  and not reduction-law existence or transport itself
 
 ## Safe Reuse Rule
 
