@@ -1,7 +1,7 @@
 # Gauge-Vacuum Plaquette Source-Sector Matrix-Element Factorization Theorem
 
 **Date:** 2026-04-17
-**Status:** exact source-sector factorization theorem on the finite Wilson `3 spatial + 1 derived-time` source surface; the exact diagonal mixed-kernel character coefficients at `beta = 6` still remain open
+**Status:** exact source-sector factorization theorem on the finite Wilson `3 spatial + 1 derived-time` source surface; the exact diagonal mixed-kernel character coefficients at `beta = 6` are now locally factored, but the residual environment-response sequence still remains open
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_source_sector_matrix_element_factorization.py`
 
 ## Question
@@ -41,9 +41,11 @@ This closes the previously open “explicit source-sector matrix element” step
 
 What remains open is narrower:
 
-> identify the exact positive diagonal coefficient sequence `kappa_(p,q)(6)`,
-> equivalently the exact compressed mixed-kernel coefficients, and therefore
-> the exact Perron state of this now-explicit factorized operator.
+> identify the residual environment-response sequence inside
+> `kappa_(p,q)(6) = a_(p,q)(6)^4 epsilon_(p,q)(6)`,
+> after the exact local Wilson marked-link factor `a_(p,q)(6)^4` is removed,
+> and therefore the exact Perron state of this now-explicit factorized
+> operator.
 
 ## Setup
 
@@ -137,6 +139,14 @@ It is now exactly:
 - the positive diagonal coefficient sequence `kappa_(p,q)(6)`,
 - or equivalently the Perron state of `exp(3 J) D_6 exp(3 J)`.
 
+The new local/environment factorization theorem on `main` sharpens that one
+step further:
+
+- the exact four marked-link Wilson contribution is explicit:
+  `kappa_(p,q)(6) = a_(p,q)(6)^4 epsilon_(p,q)(6)`;
+- so the remaining open object is the residual environment-response sequence
+  `epsilon_(p,q)(6)`, not the whole mixed-kernel coefficient stack.
+
 That is the sharply reduced constructive target.
 
 ## What this closes
@@ -150,7 +160,8 @@ That is the sharply reduced constructive target.
 
 ## What this does not close
 
-- explicit values of the diagonal coefficients `kappa_(p,q)(6)`
+- explicit values of the residual environment-response coefficients
+  `epsilon_(p,q)(6)`
 - explicit `beta = 6` Perron moments or Jacobi coefficients
 - analytic closure of canonical `P(6)`
 - repo-wide repinning of the canonical plaquette

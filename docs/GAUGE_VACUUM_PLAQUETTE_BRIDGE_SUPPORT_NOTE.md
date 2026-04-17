@@ -1,8 +1,8 @@
 # Gauge-Vacuum Plaquette Scalar-Bridge Support
 
 **Date:** 2026-04-16
-**Status:** exact local/source/class-level support stack plus exact constant-lift obstruction, exact distinct-shell theorem, exact first nonlinear full-vacuum coefficient, exact implicit reduction-law existence/uniqueness theorem, exact nonperturbative susceptibility-flow theorem, exact connected-hierarchy theorem, exact infinite-hierarchy obstruction, exact equivalent spectral generating object, exact framework-point underdetermination theorem, exact transfer-operator / character-recurrence realization, exact Perron-state reduction theorem, exact source-sector matrix-element factorization theorem, and exact Perron/Jacobi underdetermination theorem inside that narrowed factorized class; the remaining open object is the exact positive diagonal mixed-kernel character-coefficient sequence `kappa_(p,q)(6)` and its Perron data
-**Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`, `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py`, `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_framework_point_underdetermination.py`, `scripts/frontier_gauge_vacuum_plaquette_transfer_operator_character_recurrence.py`, `scripts/frontier_gauge_vacuum_plaquette_perron_reduction_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_source_sector_matrix_element_factorization.py`, `scripts/frontier_gauge_vacuum_plaquette_perron_jacobi_underdetermination.py`
+**Status:** exact local/source/class-level support stack plus exact constant-lift obstruction, exact distinct-shell theorem, exact first nonlinear full-vacuum coefficient, exact implicit reduction-law existence/uniqueness theorem, exact nonperturbative susceptibility-flow theorem, exact connected-hierarchy theorem, exact infinite-hierarchy obstruction, exact equivalent spectral generating object, exact framework-point underdetermination theorem, exact transfer-operator / character-recurrence realization, exact Perron-state reduction theorem, exact source-sector matrix-element factorization theorem, exact local/environment factorization theorem, and exact Perron/Jacobi underdetermination theorem inside that sharpened class; the remaining open object is the residual environment-response sequence after the exact local Wilson marked-link factor is removed
+**Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`, `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py`, `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_framework_point_underdetermination.py`, `scripts/frontier_gauge_vacuum_plaquette_transfer_operator_character_recurrence.py`, `scripts/frontier_gauge_vacuum_plaquette_perron_reduction_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_source_sector_matrix_element_factorization.py`, `scripts/frontier_gauge_vacuum_plaquette_local_environment_factorization.py`, `scripts/frontier_gauge_vacuum_plaquette_perron_jacobi_underdetermination.py`
 
 ## Question
 
@@ -47,10 +47,10 @@ stack now closes the connected hierarchy, the spectral generating object, the
 operator realization, the Perron reduction, and the exact factorized
 source-sector matrix law. The still narrower target is now:
 
-> identify the exact positive diagonal mixed-kernel character-coefficient
-> sequence `kappa_(p,q)(6)` in
-> `T_src(6) = exp(3 J) D_6 exp(3 J)`,
-> equivalently the exact Perron state / moments of that factorized operator,
+> identify the residual environment-response sequence `epsilon_(p,q)(6)` in
+> `kappa_(p,q)(6) = a_(p,q)(6)^4 epsilon_(p,q)(6)`,
+> equivalently the exact Perron state / moments of
+> `exp(3 J) D_6^loc E_6 exp(3 J)`,
 > and thereby the explicit nonperturbative reduction law at the framework point
 > `beta = 6`.
 
@@ -290,6 +290,24 @@ next constructive step:
   explicit:
   `T_src(6) = exp(3 J) D_6 exp(3 J)`.
 
+And the new exact local/environment factorization theorem sharpens that one
+step further:
+
+- in temporal gauge, the mixed one-step Wilson kernel factorizes exactly over
+  the spatial links;
+- the one-link Wilson class function contributes one exact local convolution
+  eigenvalue `a_(p,q)(beta)` on each irrep `(p,q)`;
+- because the marked plaquette loop contains exactly four links, the exact
+  local marked-link factor on the plaquette character sector is
+  `a_(p,q)(beta)^4`;
+- therefore the full mixed-kernel coefficients factor as
+  `kappa_(p,q)(beta) = a_(p,q)(beta)^4 epsilon_(p,q)(beta)`.
+
+So the remaining open object is no longer the whole mixed-kernel coefficient
+sequence. The exact local Wilson marked-link contribution is explicit; the
+still-open piece is only the residual environment-response sequence
+`epsilon_(p,q)(6)`.
+
 And the updated exact Perron/Jacobi underdetermination theorem closes the next
 review question too:
 
@@ -297,32 +315,33 @@ review question too:
 - the exact transfer-operator / character-recurrence realization,
 - the exact Perron-state reduction,
 - the exact source-sector matrix-element factorization,
+- the exact local Wilson marked-link factor,
 - and the exact conjugation-symmetry reduction of the Perron state
 
 still do **not** force unique `beta = 6` Perron moments or symmetry-reduced
 Jacobi coefficients;
-- even inside the now-explicit factorized class
-  `T_src(6) = exp(3 J) D_6 exp(3 J)`, distinct admissible positive
-  conjugation-symmetric diagonal coefficient sequences `D_6` can still induce
+- even after stripping off the exact local factor inside the now-explicit
+  factorized class
+  `T_src(6) = exp(3 J) D_6^loc E_6 exp(3 J)`, distinct admissible positive
+  conjugation-symmetric residual environment sequences `E_6` can still induce
   different Perron measures for the same `J`.
 
 So the remaining gap is now no longer abstract generating-object existence, no
 longer operator-level realization, and no longer just “find Perron/Jacobi
 data.” It is:
 
-- the explicit positive diagonal mixed-kernel character-coefficient sequence
-  `kappa_(p,q)(6)`,
+- the explicit residual environment-response sequence `epsilon_(p,q)(6)`,
 - equivalently an exact `beta = 6` Perron eigenvector construction for the
-  now-explicit factorized operator `exp(3 J) D_6 exp(3 J)`.
+  now-explicit factorized operator `exp(3 J) D_6^loc E_6 exp(3 J)`.
 
 ## Remaining gap
 
 The remaining theorem-grade gap is now narrower:
 
-> explicitly identify the exact positive diagonal mixed-kernel
-> character-coefficient sequence `kappa_(p,q)(6)` on the now-explicit
+> explicitly identify the residual environment-response sequence
+> `epsilon_(p,q)(6)` on the now-explicit
 > factorized source sector
-> `T_src(6) = exp(3 J) D_6 exp(3 J)`,
+> `T_src(6) = exp(3 J) D_6^loc E_6 exp(3 J)`,
 > equivalently the exact Perron eigenvector / spectral measure of that
 > factorized operator,
 > and thereby the explicit nonperturbative form of the already-proved implicit
@@ -352,8 +371,9 @@ Current clean read:
 - exact transfer-operator / character-recurrence realization: closed
 - exact Perron-state reduction: closed
 - exact source-sector matrix-element factorization at `beta = 6`: closed
+- exact local/environment factorization: closed
 - exact Perron/Jacobi underdetermination inside that factorized class: closed
-- explicit `kappa_(p,q)(6)` / physical-vacuum reduction: still open
+- explicit `epsilon_(p,q)(6)` / physical-vacuum reduction: still open
 - canonical plaquette on the live package: still `0.5934`
 
 So there is **not** yet a basis for repo-wide numeric migration or for removing
@@ -376,6 +396,7 @@ python3 scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.p
 python3 scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py
 python3 scripts/frontier_gauge_vacuum_plaquette_perron_reduction_theorem.py
 python3 scripts/frontier_gauge_vacuum_plaquette_source_sector_matrix_element_factorization.py
+python3 scripts/frontier_gauge_vacuum_plaquette_local_environment_factorization.py
 python3 scripts/frontier_gauge_vacuum_plaquette_perron_jacobi_underdetermination.py
 ```
 
@@ -394,4 +415,5 @@ Expected summary:
 - spectral-measure runner: `THEOREM PASS=6 SUPPORT=2 FAIL=0`
 - Perron-reduction runner: `THEOREM PASS=5 SUPPORT=3 FAIL=0`
 - source-sector matrix-element factorization runner: `THEOREM PASS=4 SUPPORT=3 FAIL=0`
+- local/environment factorization runner: `THEOREM PASS=4 SUPPORT=3 FAIL=0`
 - Perron/Jacobi underdetermination runner: `THEOREM PASS=4 SUPPORT=3 FAIL=0`
