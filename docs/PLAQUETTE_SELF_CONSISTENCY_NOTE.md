@@ -99,6 +99,9 @@ The live repo now also carries a materially stronger exact support stack:
 - exact obstruction to any finite-order connected-hierarchy truncation
 - exact compact plaquette spectral-measure generating object for the full
   finite Wilson hierarchy
+- exact framework-point underdetermination theorem showing that the current
+  closed jet and structure theorems still do not force a unique analytic
+  `P(6)`
 - exact scalar `3+1` bridge endpoint ratio
   `A_inf / A_2 = 2 / sqrt(3)`
 - exact plaquette four-link coupling map
@@ -125,6 +128,7 @@ Current authorities for that support stack:
 - [GAUGE_VACUUM_PLAQUETTE_CONNECTED_HIERARCHY_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_CONNECTED_HIERARCHY_THEOREM_NOTE.md)
 - [GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md)
 - [GAUGE_VACUUM_PLAQUETTE_SPECTRAL_MEASURE_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_SPECTRAL_MEASURE_THEOREM_NOTE.md)
+- [GAUGE_VACUUM_PLAQUETTE_FRAMEWORK_POINT_UNDERDETERMINATION_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_FRAMEWORK_POINT_UNDERDETERMINATION_NOTE.md)
 - [GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md](./GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md)
 - [GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md)
 - [SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md](./SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md)
@@ -139,6 +143,7 @@ Current support runners:
 - `scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py`
 - `scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py`
 - `scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py`
+- `scripts/frontier_gauge_vacuum_plaquette_framework_point_underdetermination.py`
 - `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`
 - `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`
 - `scripts/frontier_scalar_3plus1_temporal_ratio.py`
@@ -161,11 +166,14 @@ The honest live read is now sharper than before:
 - no exact finite-order connected-hierarchy truncation can close that object
 - the exact equivalent generating object is now also closed as one compact
   plaquette spectral measure on each finite Wilson surface
+- the current exact jet and structural theorems still do **not** determine a
+  unique analytic framework-point value `P(6)`
 - so the remaining analytic target is explicit identification of that
   nonpolynomial generating object and therefore the explicit nonperturbative
   form of that reduction law at `beta = 6`, not the old constant-lift ansatz,
   not the onset coefficient, and not reduction-law existence, transport,
-  hierarchy identification, or generating-object existence itself
+  hierarchy identification, generating-object existence, or the finite-jet
+  underdetermination question itself
 
 ## Safe Reuse Rule
 
