@@ -125,18 +125,39 @@ expected behavior of any reasonable lattice gauge theory at scales much
 below its cutoff. The framework's specific Wilson-staggered surface at
 β = 6 with composite-Higgs D9 satisfies the standard premises.
 
-Under this view the uncertainty on `y_t(v)` decomposes as:
+Under this view the uncertainty on `y_t(v)` at current 1-loop work
+decomposes as (full accounting in
+[`YT_WARD_PATH_UNCERTAINTY_BUDGET_NOTE.md`](./YT_WARD_PATH_UNCERTAINTY_BUDGET_NOTE.md)):
 
 | Source | Magnitude | Type |
 |---|---|---|
 | `g_s(M_Pl)` precision (input to Ward) | sub-permille | retained, from `α_LM = α_bare / u_0` |
 | SM RGE truncation (NNLO → NNNLO) | ≈ 0.3% | standard SM (not framework-native) |
-| lattice discretization `O(α_LM · a²)` | sub-percent | standard lattice QCD |
-| **TOTAL** | **≈ 0.3–0.5%** | none of it framework-native explicit systematic |
+| Lattice → continuum 1-loop matching at the M_Pl interface | ≈ 1.92% | standard lattice PT (`α_LM · C_F / (2 π)` on the tadpole-improved surface) |
+| Lattice discretization at IR scales `O(α_LM · (v/M_Pl)²)` | ~10⁻³⁰ | negligible |
+| **TOTAL in quadrature** | **≈ 1.95%** | all standard-method, none framework-native explicit systematic |
 
-This is materially smaller than the 1.21% Schur-bridge budget, AND it is a
-genuinely different KIND of uncertainty: standard published-method residuals,
-not framework-native bridge-construction artifacts.
+**Honest framing.** The Ward-path budget at current 1-loop work is
+**numerically comparable to** the legacy 1.21% bridge budget, NOT
+materially smaller. The case for supersession therefore does NOT rest
+on a numerical reduction in the quoted error.
+
+The case rests on **methodological character of the residual**:
+
+- Schur-bridge 1.21% is **framework-native** — the bound on the gap
+  between SM RGE and an unspecified "true lattice blocking flow" in a
+  constructed bridge operator. It exists because the framework
+  introduced a methodology that requires it.
+- Ward 1.95% is **standard lattice PT + standard SM RGE truncation** —
+  the standard 1-loop matching uncertainty quoted in any lattice-QCD
+  analysis at this `α_LM`. It exists in any lattice gauge theory; it
+  is not a framework-specific construct.
+
+The reviewer is asked to judge whether replacing a 1.21%
+framework-native budget with a comparable-magnitude (~1.95%)
+standard-method budget is desirable. **A tighter Ward-path budget is
+reachable only with NNLO lattice matching, which is future work and
+explicitly out of scope for the present proposal.**
 
 ---
 
