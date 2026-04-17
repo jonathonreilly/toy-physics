@@ -35,14 +35,21 @@ Checks:
   Part E  Bott periodicity cross-check for Cl(n; C) dimension and
           A (+) A structure for odd n.
 
-  Part F  Four-generation exclusion theorem on the cubic Cl(n)/Z^n
-          odd-n comparison family (with retained hw-orbit semantics):
+  Part F  Family-wide four-generation exclusion theorem on the cubic
+          Cl(n)/Z^n odd-n comparison family (with hw-orbit semantics):
           |hw=1| = C(n,1) = n combined with anomaly-forced odd-n parity
-          structurally excludes exactly-four generations, with residual
-          species unremovable by the retained no-proper-quotient
-          theorem. Scope: this comparison family only; does not cover
-          non-cubic lattices or embeddings with different species-
-          assignment semantics.
+          structurally excludes exactly-four generations. Stage 2 builds
+          the hw=1 observable algebra explicitly for n in {3, 5, 7, 9,
+          11, 13}, verifies it equals M_n(C) (rank-1 sector projectors
+          P_i, cyclic C_n permutation, matrix units E_{ij} of full rank
+          n^2), and numerically tests irreducibility. Stage 4 documents
+          that the construction is parameter-free in n, extending the
+          no-proper-quotient property to arbitrary odd n via the same
+          algebraic argument. Residual hw=1 species for odd n >= 5 are
+          therefore unremovable at family scope, not by extrapolation
+          from the n=3 retained theorem. Scope: this cubic comparison
+          family only; does not cover non-cubic lattices or embeddings
+          with different species-assignment semantics.
 
 Authority note: .claude/science/derivations/cl3-minimality-conditional-support-2026-04-17.md
 """
