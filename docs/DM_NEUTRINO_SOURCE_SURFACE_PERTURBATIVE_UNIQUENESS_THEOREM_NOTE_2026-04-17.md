@@ -1,7 +1,7 @@
 # Perturbative-Scale Uniqueness Tightening of the PMNS-as-f(H) Closure
 
 **Date:** 2026-04-17
-**Status:** tightening of the the PMNS-closure theorem closure to Nature-reviewer-grade.
+**Status:** tightening of the closure to Nature-reviewer-grade.
 Closes four adversarial review issues (basin non-uniqueness, permutation
 non-uniqueness, U_e = I citation chain, δ_CP framing) and states the
 θ_23 upper-octant conditionality as a falsifiable retained structural
@@ -13,7 +13,7 @@ prediction.
 
 ## Purpose
 
-the PMNS-closure theorem's PMNS-as-f(H) closure theorem pinned
+the PMNS-as-f(H) closure theorem pinned
 `(m_*, δ_*, q_+*) = (0.657061, 0.933806, 0.715042)` via direct
 diagonalisation of the retained affine Hermitian
 `H(m, δ, q_+) = H_base + m T_m + δ T_δ + q_+ T_q` and the PDG 2024 PMNS
@@ -21,23 +21,23 @@ central values. A first-pass adversarial review surfaced four issues that
 had to be tightened before Nature reviewer handoff:
 
 1. **Basin non-uniqueness (Critical).** Multi-start over a widened box
-  `[-5, 10]^3` reveals a second in-chamber chi-squared = 0 basin at
-  `(28.0, 20.7, 5.0)` under the same hierarchy-pairing permutation
-  `σ = (2, 1, 0)`. That basin reproduces the three observational angles
-  to machine precision but gives `sin(δ_CP) = +0.554` — OPPOSITE sign to
-  Basin 1.
+ `[-5, 10]^3` reveals a second in-chamber chi-squared = 0 basin at
+ `(28.0, 20.7, 5.0)` under the same hierarchy-pairing permutation
+ `σ = (2, 1, 0)`. That basin reproduces the three observational angles
+ to machine precision but gives `sin(δ_CP) = +0.554` — OPPOSITE sign to
+ Basin 1.
 
 2. **Permutation non-uniqueness (Critical).** A second hierarchy-pairing
-  permutation `σ = (2, 0, 1)` also admits an in-chamber basin at
-  `(21.1, 12.7, 2.1)` with `sin(δ_CP) = -0.419` — a third distinct
-  δ_CP candidate.
+ permutation `σ = (2, 0, 1)` also admits an in-chamber basin at
+ `(21.1, 12.7, 2.1)` with `sin(δ_CP) = -0.419` — a third distinct
+ δ_CP candidate.
 
-3. **U_e = I citation gap (Medium).** the PMNS-closure theorem cited the Dirac-bridge
-  theorem for `U_e = I`, but that chain goes through the second-order
-  effective Yukawa whose normalisation is still open.
+3. **U_e = I citation gap (Medium).** The PMNS-closure theorem cited the Dirac-bridge
+ theorem for `U_e = I`, but that chain goes through the second-order
+ effective Yukawa whose normalisation is still open.
 
 4. **δ_CP framing (Medium).** The "3 inputs → 4 outputs" framing
-  oversold the dimensional content of the map.
+ oversold the dimensional content of the map.
 
 A separate **Serious** issue (SERIOUS 3, θ_23 octant fragility) is also
 resolved here: the chamber constraint fails for `s₂₃² <` a sharp
@@ -88,7 +88,7 @@ content.
 The cascading Cauchy-Schwarz inequality gives
 
 ```
-rho(D^{-1} J) ≤ ‖D^{-1}‖_op ‖J‖_op  ≤  ‖D^{-1}‖_op ‖J‖_F,
+rho(D^{-1} J) ≤ ‖D^{-1}‖_op ‖J‖_op ≤ ‖D^{-1}‖_op ‖J‖_F,
 ```
 
 so the **necessary** retained discipline on "J is a perturbation of D"
@@ -132,14 +132,14 @@ Let `χ²(m, δ, q₊; s₂₃²_target) = (s₁₂² − 0.307)² + (s₁₃² 
 
 ```
 s₂₃²_crit := inf { s₂₃²_target : there exists (m, δ, q₊) with
-                   χ² = 0 and q₊ + δ ≥ sqrt(8/3) }.
+     χ² = 0 and q₊ + δ ≥ sqrt(8/3) }.
 ```
 
 Numerically (binary search, runner Part 5, 24 bisection steps, fsolve
 verification, 40 restart budget per target):
 
 ```
-  s₂₃²_crit = 0.540863 ± 10^{-6}
+ s₂₃²_crit = 0.540863 ± 10^{-6}
 ```
 
 with a SHARP chamber-boundary transition: at `s₂₃²_crit` the pinning
@@ -151,7 +151,7 @@ point sits exactly on the chamber wall `q₊ + δ = sqrt(8/3)`, and for
 value of `sin²θ_23` satisfies
 
 ```
- sin²θ_23 > 0.5409     (upper octant).
+ sin²θ_23 > 0.5409  (upper octant).
 ```
 
 Current observational status:
@@ -169,7 +169,7 @@ GENUINE FALSIFIABLE STRUCTURAL PREDICTION:
 > **Prediction (θ_23 upper-octant).** The measured `sin²θ_23` must
 > satisfy `sin²θ_23 > 0.5409`. A measurement firmly establishing
 > `sin²θ_23 ≤ 0.5409` would FALSIFY the PMNS-as-f(H) retained closure
-> at the the PMNS-closure theorem pinning.
+> at the closure pinning.
 
 This is testable at JUNO (reactor θ_12 / θ_13 precision + shape), DUNE
 (θ_23 precision via muon-neutrino disappearance), and Hyper-Kamiokande
@@ -191,7 +191,7 @@ Per
 with retained three-generation Z_3 charges
 
 ```
-q_L = (0, +1, -1),  q_R = (0, -1, +1)
+q_L = (0, +1, -1), q_R = (0, -1, +1)
 ```
 
 and a single retained Higgs doublet carrying definite Z_3 charge
@@ -235,9 +235,9 @@ introduced by the current tightening; it is made explicit here so the
 reviewer can see that the full chain
 
 ```
-  retained-Z_3-charges + (q_H = 0, SM-canonical)
-    ⟹ Y_e diagonal in axis basis
-    ⟹ U_e = I
+ retained-Z_3-charges + (q_H = 0, SM-canonical)
+ ⟹ Y_e diagonal in axis basis
+ ⟹ U_e = I
 ```
 
 is retained-grade MODULO the documented `q_H = 0` phenomenological
@@ -263,7 +263,7 @@ The fourth coordinate `δ_CP` is **not an independent degree of
 freedom on `M_F`**: the runner numerically verifies that at Basin 1
 
 ```
- ∂δ_CP / ∂x_k  ∈  span{ ∂s₁₂² / ∂x_k, ∂s₁₃² / ∂x_k, ∂s₂₃² / ∂x_k }
+ ∂δ_CP / ∂x_k ∈ span{ ∂s₁₂² / ∂x_k, ∂s₁₃² / ∂x_k, ∂s₂₃² / ∂x_k }
 ```
 
 with residual `1.1e-16` (machine precision). So `δ_CP` at the
@@ -291,7 +291,7 @@ should be replaced in all downstream language by the 3-manifold framing.
 
 ## Relationship to the omnibus closure
 
-This note TIGHTENS rather than replaces the the PMNS-closure theorem closure:
+This note TIGHTENS rather than replaces the closure:
 
 - The pinned point `(m_*, δ_*, q_+*) = (0.657061, 0.933806, 0.715042)`
  is unchanged.
@@ -350,22 +350,22 @@ Expected: `PASS = 37, FAIL = 0`.
 ### What this note positively claims
 
 1. **Perturbative-scale uniqueness.** Among all in-chamber χ²=0 basins
-  across all 6 hierarchy-pairing row permutations, EXACTLY ONE
-  satisfies the retained perturbative-scale criterion
-  `‖J‖_{F,op} ≤ ‖H_base‖_{F,op}`. That basin is the PMNS-closure theorem
-  Basin 1 at σ=(2,1,0).
+ across all 6 hierarchy-pairing row permutations, EXACTLY ONE
+ satisfies the retained perturbative-scale criterion
+ `‖J‖_{F,op} ≤ ‖H_base‖_{F,op}`. That basin is the PMNS-closure theorem
+ Basin 1 at σ=(2,1,0).
 
 2. **θ_23 upper-octant conditionality.** The closure's chamber
-  constraint forces `sin²θ_23 > 0.540863` as a sharp falsifiable
-  structural prediction, testable at JUNO / DUNE / Hyper-K.
+ constraint forces `sin²θ_23 > 0.540863` as a sharp falsifiable
+ structural prediction, testable at JUNO / DUNE / Hyper-K.
 
 3. **U_e = I via the trichotomy.** The q_H = 0 branch of the retained
-  Z_3 trichotomy forces `Y_e` diagonal in the axis basis and hence
-  `U_e = I`. This chain replaces the Dirac-bridge chain as the
-  primary route for `U_e = I`.
+ Z_3 trichotomy forces `Y_e` diagonal in the axis basis and hence
+ `U_e = I`. This chain replaces the Dirac-bridge chain as the
+ primary route for `U_e = I`.
 
 4. **δ_CP framing.** δ_CP is a falsifiable CONSEQUENCE on a 3-
-  manifold in R^4, not an over-determined check of a 3-to-4 map.
+ manifold in R^4, not an over-determined check of a 3-to-4 map.
 
 ### What this note does NOT claim
 
@@ -399,31 +399,31 @@ Expected: `PASS = 37, FAIL = 0`.
 ## Why this is Nature-reviewer-grade
 
 1. **The basin non-uniqueness is OWNED.** Three in-chamber basins are
-  enumerated explicitly in the paper, not hidden; the
-  perturbative-scale criterion that selects Basin 1 is stated as a
-  retained lemma and verified numerically at machine precision.
+ enumerated explicitly in the paper, not hidden; the
+ perturbative-scale criterion that selects Basin 1 is stated as a
+ retained lemma and verified numerically at machine precision.
 
 2. **The permutation non-uniqueness is OWNED.** The σ=(2,0,1) basin
-  is enumerated alongside the σ=(2,1,0) basins and shown to fail
-  the perturbative-scale criterion by a factor > 10.
+ is enumerated alongside the σ=(2,1,0) basins and shown to fail
+ the perturbative-scale criterion by a factor > 10.
 
 3. **The θ_23 upper-octant prediction is OWNED.** The sharp
-  threshold `s₂₃²_crit = 0.5409` is stated as a falsifiable
-  structural prediction, with specific experimental discriminators
-  (JUNO/DUNE/Hyper-K).
+ threshold `s₂₃²_crit = 0.5409` is stated as a falsifiable
+ structural prediction, with specific experimental discriminators
+ (JUNO/DUNE/Hyper-K).
 
 4. **The `U_e = I` chain is UPGRADED.** The open-ingredient
-  Dirac-bridge chain is replaced with the closed trichotomy +
-  `q_H = 0` chain; the `q_H = 0` phenomenological input is made
-  explicit.
+ Dirac-bridge chain is replaced with the closed trichotomy +
+ `q_H = 0` chain; the `q_H = 0` phenomenological input is made
+ explicit.
 
 5. **The δ_CP framing is CORRECTED.** 3-manifold dimensional
-  framing replaces the over-determined-check framing.
+ framing replaces the over-determined-check framing.
 
 6. **The Taylor-convergence honest boundary is OWNED.** The strong
-  Taylor-convergence criterion is stated AND verified to NOT hold at
-  any basin, and the scale criterion is stated as the retained
-  discipline. Basin 1's `ρ ≈ 1.285` is documented, not concealed.
+ Taylor-convergence criterion is stated AND verified to NOT hold at
+ any basin, and the scale criterion is stated as the retained
+ discipline. Basin 1's `ρ ≈ 1.285` is documented, not concealed.
 
 All five adversarial review issues are addressed with explicit
 retained theorems and runner-verified numerical content at

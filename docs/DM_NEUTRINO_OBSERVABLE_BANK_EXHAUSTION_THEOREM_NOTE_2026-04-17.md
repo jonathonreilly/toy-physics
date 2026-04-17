@@ -1,4 +1,4 @@
-# the observable-bank exhaustion theorem Observable-Bank-Extension — Atlas Exhaustion (Obstruction + New-Gap)
+# Observable-Bank Exhaustion — Atlas Exhaustion Theorem (Obstruction + New-Gap)
 
 **Date:** 2026-04-17
 **Status:** OBSTRUCTION + NEW-GAP (the selector gate remains OPEN)
@@ -8,7 +8,7 @@
 
 ## Scope and discipline
 
-the observable-bank exhaustion theorem attempts to close the selector `Z_3` doublet-block selector law by
+This note attempts to close the selector law on the `Z_3` doublet block by
 **extending the observable bank** beyond the currently-exhausted
 transport/source/slot/CP bank. Specifically: the runner searches the
 retained DM/neutrino/flavor/PMNS/cosmology atlas for a physical
@@ -53,18 +53,18 @@ pin `(delta_*, q_+*)` on the chamber.
 families:
 
 1. **Gauge-sector observables** (e.g. `R = Omega_DM/Omega_B ~ 5.48` via
-  `alpha_plaq` from the `Cl(3)` normalization `g_bare = 1`, and all
-  `Omega_X` quantities derived from it). None reads the neutrino
-  doublet block.
+ `alpha_plaq` from the `Cl(3)` normalization `g_bare = 1`, and all
+ `Omega_X` quantities derived from it). None reads the neutrino
+ doublet block.
 
 2. **Leptogenesis/neutrino observables via the source package**
-  (`eta/eta_obs`, `m_3 = y_nu_eff^2 v^2 / M_1`, atmospheric
-  `Dm^2_31 = 2.539e-3 eV^2`). All factor through
-  `(gamma, E1, E2, K00) in B_frozen`. Chamber-blind by the retained
-  blindness theorem.
+ (`eta/eta_obs`, `m_3 = y_nu_eff^2 v^2 / M_1`, atmospheric
+ `Dm^2_31 = 2.539e-3 eV^2`). All factor through
+ `(gamma, E1, E2, K00) in B_frozen`. Chamber-blind by the retained
+ blindness theorem.
 
 3. **CP / slot observables** (`cp1, cp2, a_*, b_*, T_slot`). All frozen
-  on the active sheet by the intrinsic-slot and CP theorems.
+ on the active sheet by the intrinsic-slot and CP theorems.
 
 Items not yet closed on the atlas (PMNS angles `theta_ij`, solar gap
 `Dm^2_21`, muon `g-2`, LFV) have **no atlas-retained observational
@@ -78,7 +78,7 @@ derivation. QED.
 | O1 | `R = Omega_DM/Omega_B` (5.48 vs 5.47) | Y | **N** | N | Y | no |
 | O2 | `m_DM` (DM particle mass) | Y | **N** | N | Y | no |
 | O3 | Atmospheric `Dm^2_31` via `m_3` | Y | **N** | N | Y | no |
-| O4 | PMNS `theta_12, theta_13, theta_23` | **N** | Y | Y | **N** | no |
+| O4 | PMNS `θ_12, θ_13, θ_23` | **N** | Y | Y | **N** | no |
 | O5 | DM direct/indirect `sigma` | Y | **N** | N | Y | no |
 | O6 | Muon `g-2`, LFV | N | N | N | Y | no |
 | O7 | Neutrino mass scale (see-saw) | Y | **N** | N | Y | no |
@@ -134,7 +134,7 @@ achieves `eta/eta_obs = 1` on a 5-real parameter space
 `(xbar, ybar, x_close, y_close, delta_PMNS)`, not on the 2-real
 `(delta, q_+)` chamber. The image of the PMNS route on the active sheet
 projects through the frozen `B_frozen` bank and is chamber-blind. The
-Selector Physics-Validation runner already verifies this.
+transport chamber-blindness runner already verifies this.
 
 ## The CASE 3 new-gap: pure `H`-reader invariants
 
@@ -167,7 +167,7 @@ observational target.
 ## Narrower-gap statement
 
 **Before this note:** selector was known to be open by the obstruction
-theorems (the info-geometric selection obstruction info-geom, the cubic variational selection obstruction Z_3 cubic, the Z_3 parity-split theorem holonomy,
+theorems (info-geom, cubic variational, holonomy,
 parity-mixing functional-selection ambiguity) and by the Physics-
 Validation chamber-constancy of `eta/eta_obs`. The remaining open object
 was described as "a selector that couples to a bank-unblinded observable
@@ -188,10 +188,10 @@ exactly three explicit promotion lanes:
  varying `H`-reader invariant as the physical selector objective, and
  whose chamber minimum (or critical point) is the physical
  `(delta_*, q_+*)`. This is the (G-Var) / functional-selection
- ambiguity track already flagged in the info-geometric selection obstruction and the parity-mixing note.
+ ambiguity track already flagged in the info-geometric selection obstruction and the parity-mixing selection obstruction.
 
 - **(P3) Atlas extension of neutrino phenomenology.** Promote PMNS
- angles `theta_12, theta_13, theta_23` and/or the solar gap
+ angles `θ_12, θ_13, θ_23` and/or the solar gap
  `Dm^2_21` to retained, and derive their atlas form as a function of
  `H(m, delta, q_+)` — after which the observed values of those PMNS
  quantities level-set `(delta_*, q_+*)`. This is the largest-scope
@@ -203,21 +203,21 @@ No other lane closes selector on the current retained atlas.
 ## What this note establishes positively
 
 1. **Atlas-exhaustion theorem (retained-atlas-native).** Every
-  observable in the retained atlas with an atlas-grade observational
-  value factors through the frozen-on-chamber bank `B_frozen`. Chamber-
-  blind by the blindness theorem.
+ observable in the retained atlas with an atlas-grade observational
+ value factors through the frozen-on-chamber bank `B_frozen`. Chamber-
+ blind by the blindness theorem.
 
 2. **Observable-by-observable survey (O1..O8).** Each of the eight
-  candidate observable classes is classified against the four criteria
-  (retained, `f(H)`, varies, observational). Joint intersection is
-  EMPTY.
+ candidate observable classes is classified against the four criteria
+ (retained, `f(H)`, varies, observational). Joint intersection is
+ EMPTY.
 
 3. **Pure `H`-reader scalars classified.** The axiom-grade invariants
-  `{det(H), Tr(H^2), ||K_doublet||_F^2}` are chamber-varying but lack
-  atlas-retained observational targets. Explicit CASE 3 new-gap.
+ `{det(H), Tr(H^2), ||K_doublet||_F^2}` are chamber-varying but lack
+ atlas-retained observational targets. Explicit CASE 3 new-gap.
 
 4. **Three explicit promotion lanes (P1, P2, P3).** The the selector gate open object
-  is now stratified. Any future selector attempt must choose one.
+ is now stratified. Any future selector attempt must choose one.
 
 ## Runner-verified content
 
@@ -272,12 +272,12 @@ No new axioms. No invented observable. No selector promotion.
 ## Position on publication surface
 
 This note is **not** flagship publication-grade on its own. It is a
-**structural obstruction + narrower-gap stratification** of the the selector gate open
+**structural obstruction + narrower-gap stratification** of the selector gate open
 object:
 
 - atlas obstruction row in
  [DERIVATION_ATLAS.md](./publication/ci3_z3/DERIVATION_ATLAS.md)
- under the DM neutrino source-surface family, sibling to the info-geometric selection obstruction/B/C,
+ under the DM neutrino source-surface family, sibling to the info-geometric / cubic-variational / parity-split obstructions,
  parity-mixing F1, and Physics-Validation.
 - The DM flagship gate stays **open**.
 - The observable-bank-extension lane is now classified as CASE 3 + CASE

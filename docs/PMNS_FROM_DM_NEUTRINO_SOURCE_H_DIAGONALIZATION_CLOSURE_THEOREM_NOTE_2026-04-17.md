@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-17
 **Status:** POSITIVE CLOSURE of selector on the live DM-neutrino source-oriented sheet,
-via the P3 lane identified in the the observable-bank exhaustion theorem observable-bank exhaustion note.
+via the P3 lane identified in the observable-bank exhaustion theorem.
 PMNS mixing angles are promoted to retained on the chamber.
 **Script:** `scripts/frontier_pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem.py`
 **Runner:** `PASS = 43, FAIL = 0`
@@ -34,16 +34,16 @@ tightening is carried by three companion notes:
 
 ## Summary
 
-The the observable-bank exhaustion theorem exhaustion theorem
+The observable-bank exhaustion theorem
 [DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17](./DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md)
 stratified the remaining the selector gate open object into exactly three lanes
 `(P1, P2, P3)`. This note builds **P3** explicitly.
 
-**Main theorem.** The PMNS mixing angles `(theta_12, theta_13, theta_23,
+**Main theorem.** The PMNS mixing angles `(θ_12, θ_13, θ_23,
 delta_CP)` admit an explicit retained-atlas-native closed-form map
 
 ```
-(m, delta, q_+) --> (sin^2 theta_12, sin^2 theta_13, sin^2 theta_23, delta_CP)
+(m, delta, q_+) --> (sin^2 θ_12, sin^2 θ_13, sin^2 θ_23, delta_CP)
 ```
 
 obtained by direct diagonalization of the retained affine Hermitian
@@ -54,7 +54,7 @@ everywhere in the chamber `q_+ >= sqrt(8/3) - delta`.
 central observational values
 
 ```
-sin^2 theta_12 = 0.307,  sin^2 theta_13 = 0.0218,  sin^2 theta_23 = 0.545
+sin^2 θ_12 = 0.307, sin^2 θ_13 = 0.0218, sin^2 θ_23 = 0.545
 ```
 
 has a **unique** chamber solution
@@ -77,16 +77,16 @@ Disagreement with future measurements falsifies the construction, not
 merely the pinned point. At the pinned point:
 
 ```
-sin(delta_CP)  = -0.9874
-delta_CP    = -80.88 deg (equivalently +279.12 deg)
-|Jarlskog|   =  0.0328
+sin(delta_CP) = -0.9874
+delta_CP = -80.88 deg (equivalently +279.12 deg)
+|Jarlskog| = 0.0328
 ```
 
 in the T2K-preferred lower octant and consistent with the observational
 `|J|` band.
 
 **Observational consistency.** All nine entries of `|U_PMNS|` at the pinned
-point lie inside the NuFit 5.3 3-sigma ranges (normal ordering). the selector gate closes
+point lie inside the NuFit 5.3 3-sigma ranges (normal ordering). The selector gate closes
 positively on the chamber.
 
 ## Retained inputs
@@ -127,12 +127,12 @@ with
 
 ```
 H_base = [[0, E1, -E1 - i gamma],
-     [E1, 0, -E2],
-     [-E1 + i gamma, -E2, 0]],
-T_m   = [[1, 0, 0], [0, 0, 1], [0, 1, 0]],
+  [E1, 0, -E2],
+  [-E1 + i gamma, -E2, 0]],
+T_m = [[1, 0, 0], [0, 0, 1], [0, 1, 0]],
 T_delta = [[0, -1, 1], [-1, 1, 0], [1, 0, -1]],
-T_q   = [[0, 1, 1], [1, 0, 1], [1, 1, 0]],
-gamma  = 1/2, E1 = sqrt(8/3), E2 = sqrt(8)/3.
+T_q = [[0, 1, 1], [1, 0, 1], [1, 1, 0]],
+gamma = 1/2, E1 = sqrt(8/3), E2 = sqrt(8)/3.
 ```
 
 `H` is Hermitian by construction (verified at all five the observable-bank exhaustion theorem
@@ -147,7 +147,7 @@ bridge), which is diagonal in the generation axis basis
 basis coincides with the axis basis:
 
 ```
-U_e = I_3  (in the axis basis of H_hw=1).
+U_e = I_3 (in the axis basis of H_hw=1).
 ```
 
 ### 3. The neutrino basis from `H`
@@ -163,9 +163,9 @@ The PMNS matrix is `U_PMNS = U_e^dag U_nu = U_nu`, followed by the
 canonical row permutation
 
 ```
-sigma_hier = (2, 1, 0)   # electron <-> largest H-eigenvalue row,
-              # muon   <-> middle,
-              # tau   <-> smallest
+sigma_hier = (2, 1, 0) # electron <-> largest H-eigenvalue row,
+    # muon <-> middle,
+    # tau <-> smallest
 ```
 
 which is the unique row permutation that produces observationally
@@ -181,9 +181,9 @@ U_PMNS(m, delta, q_+) = P_{sigma_hier} · (eigenvectors of H in ascending eigenv
 Mixing angles are extracted in the standard PDG convention:
 
 ```
-|U_e3|^2 = sin^2 theta_13,
-|U_e2|^2 = sin^2 theta_12 cos^2 theta_13,
-|U_mu3|^2 = sin^2 theta_23 cos^2 theta_13,
+|U_e3|^2 = sin^2 θ_13,
+|U_e2|^2 = sin^2 θ_12 cos^2 θ_13,
+|U_mu3|^2 = sin^2 θ_23 cos^2 θ_13,
 ```
 
 and the CP phase from the Jarlskog invariant
@@ -195,7 +195,7 @@ J = Im(U_e1 U_e2^* U_mu1^* U_mu2)
 
 ## Retained chamber-blindness checks
 
-The runner verifies at the five the observable-bank exhaustion theorem candidate points `A..E` that
+The runner verifies at the five candidate points `A..E` that
 
 ```
 K[0, 1] = a_* = 0.16993211 + 1.19280904 i, |a_*| = 1.2048528262,
@@ -215,34 +215,34 @@ The runner evaluates the map at the five the observable-bank exhaustion theorem 
 
 | Candidate | `(m, δ, q_+)` | `s12^2` | `s13^2` | `s23^2` | `sin δ_CP` |
 |-----------|---------------|---------|---------|---------|-----------|
-| A Schur-Q    | `(0.500, 0.8165, 0.8165)` | 0.5576 | 0.0191 | 0.5429 | -0.958 |
-| B det-crit   | `(0.613, 0.964, 1.552)`  | 0.4624 | 0.1053 | 0.5459 | -0.974 |
-| C Tr(H^2)-bdy  | `(0.385, 1.268, 0.365)`  | 0.0885 | 0.0107 | 0.7427 | +0.712 |
-| D K12 char   | `(0.000, 0.800, 1.000)`  | 0.8116 | 0.0126 | 0.5952 | -0.205 |
-| E par-mix F1  | `(0.6285, 1.146, 0.487)`  | 0.1020 | 0.0123 | 0.6116 | -0.624 |
+| A Schur-Q | `(0.500, 0.8165, 0.8165)` | 0.5576 | 0.0191 | 0.5429 | -0.958 |
+| B det-crit | `(0.613, 0.964, 1.552)` | 0.4624 | 0.1053 | 0.5459 | -0.974 |
+| C Tr(H^2)-bdy | `(0.385, 1.268, 0.365)` | 0.0885 | 0.0107 | 0.7427 | +0.712 |
+| D K12 char | `(0.000, 0.800, 1.000)` | 0.8116 | 0.0126 | 0.5952 | -0.205 |
+| E par-mix F1 | `(0.6285, 1.146, 0.487)` | 0.1020 | 0.0123 | 0.6116 | -0.624 |
 
 The angles **genuinely vary** across the chamber
 (spread ~0.7 for `s12^2`, ~0.1 for `s13^2`, ~0.2 for `s23^2`). This is
 the retained-atlas-native `f(H)` chamber-varying observable that closes
-the the observable-bank exhaustion theorem CASE 4 obstruction on the P3 lane.
+the observable-bank exhaustion theorem CASE 4 obstruction on the P3 lane.
 
 ## The pinning theorem
 
 **Theorem (the selector closure via PMNS observational constraints).** The system
 
 ```
-|U_e2(m, delta, q_+)|^2 / cos^2 theta_13 = sin^2 theta_12(obs) = 0.307,
-|U_e3(m, delta, q_+)|^2         = sin^2 theta_13(obs) = 0.0218,
-|U_mu3(m, delta, q_+)|^2 / cos^2 theta_13 = sin^2 theta_23(obs) = 0.545,
+|U_e2(m, delta, q_+)|^2 / cos^2 θ_13 = sin^2 θ_12(obs) = 0.307,
+|U_e3(m, delta, q_+)|^2   = sin^2 θ_13(obs) = 0.0218,
+|U_mu3(m, delta, q_+)|^2 / cos^2 θ_13 = sin^2 θ_23(obs) = 0.545,
 ```
 
 has a unique solution **in the perturbative regime** on the chamber
 `q_+ >= sqrt(8/3) - delta`:
 
 ```
-m_*   = 0.657061342210,
+m_* = 0.657061342210,
 delta_* = 0.933806343759,
-q_+*   = 0.715042329587.
+q_+* = 0.715042329587.
 ```
 
 **Proof sketch.** The map `(m, delta, q_+) -> (s12^2, s13^2, s23^2)` is a
@@ -269,8 +269,8 @@ source-response expansion and are therefore excluded.
 
 ```
 q_+* + delta_* = 1.6489,
-sqrt(8/3)    = 1.6330,
-distance    = 0.0159 (interior).
+sqrt(8/3) = 1.6330,
+distance = 0.0159 (interior).
 ```
 
 ## Physics cross-checks
@@ -281,8 +281,8 @@ At the pinned point,
 
 ```
 |U_PMNS| = [0.8233, 0.5480, 0.1476]
-      [0.3704, 0.5742, 0.7301]
-      [0.4300, 0.6083, 0.6671]
+  [0.3704, 0.5742, 0.7301]
+  [0.4300, 0.6083, 0.6671]
 ```
 
 Every entry lies inside the NuFit 5.3 NO 3-sigma range
@@ -303,7 +303,7 @@ every prior retained candidate on the chamber:
 
 The closest prior candidate (A, Schur-Q) lies 0.155 away — well outside
 any numerical tolerance. The PMNS pinning is **inequivalent to every
-prior retained variational candidate**, consistent with the the observable-bank exhaustion theorem
+prior retained variational candidate**, consistent with the observable-bank exhaustion theorem
 narrower-gap statement that no prior candidate was observationally
 selected.
 
@@ -341,7 +341,7 @@ see [NEUTRINO_MAJORANA_RETAINED_LANE_PACKET_2026-04-16.md](./NEUTRINO_MAJORANA_R
 As a side-effect of the closure:
 
 **Theorem (PMNS promotion to retained on the chamber).** The PMNS mixing
-angles `(theta_12, theta_13, theta_23, delta_CP)` are elevated from
+angles `(θ_12, θ_13, θ_23, delta_CP)` are elevated from
 atlas-open to retained as `f(H(m, delta, q_+))` on the live source-
 oriented sheet. The closed form is the eigenbasis unitary of the retained
 affine `H` in the axis basis, row-permuted by the retained hierarchy
@@ -349,7 +349,7 @@ pairing `sigma_hier = (2, 1, 0)`.
 
 This unlocks the downstream flavor / cosmology / leptogenesis
 consequences that were previously blocked by PMNS atlas-openness (per
-the the observable-bank exhaustion theorem narrow-gap statement): with PMNS retained, every
+the observable-bank exhaustion theorem narrow-gap statement): with PMNS retained, every
 downstream observable that routes through PMNS on the atlas is now
 level-set against the chamber pin.
 

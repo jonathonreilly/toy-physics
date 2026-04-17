@@ -1,4 +1,4 @@
-# the microscopic-polynomial impossibility theorem: Microscopic Axiom-Level Silence Theorem on (delta, q_+)
+# Microscopic-Polynomial Impossibility Theorem — Axiom-Level Silence on (delta, q_+)
 
 **Date:** 2026-04-17
 **Status:** OBSTRUCTION (CASE 3) -- microscopic-silence impossibility theorem
@@ -7,13 +7,13 @@
 
 ## Scope and discipline
 
-Five previous attacks on the selector right-sensitive 2-real selector law
+Five previous attacks on the right-sensitive 2-real selector law
 `(delta_*, q_+*)` on the live DM-neutrino source-oriented sheet all
 operated WITHIN the reduced `(delta, q_+)` chart:
 
-- the info-geometric selection obstruction (info-geometric variational): quadratic unanimity but cubic splitting
-- the cubic variational selection obstruction (Z_3 cubic variational): m-dependent or singular
-- the Z_3 parity-split theorem (parity-split microscopic functionals): parity-definite 1D obstruction
+- the info-geometric route (variational): quadratic unanimity but cubic splitting
+- the Z_3 cubic variational route: m-dependent or singular
+- the Z_3 parity-split route: parity-definite 1D obstruction
 - Physics-validation: transport chain chamber-blind
 - Parity-mixing Frobenius: multiple inequivalent candidates, functional ambiguity
 
@@ -189,8 +189,8 @@ only through the pair `(delta^2, q_+)`.
 **Examples.** Different retained local polynomial functionals select
 DIFFERENT chamber extrema:
 
-- `Tr(H^2)` chamber-boundary minimum: `(1.2679, 0.3651)` (the Z_3 parity-split theorem-b)
-- `det(H)` chamber-interior stationary point: `(0.9644, 1.5524)` (the Z_3 parity-split theorem-a)
+- `Tr(H^2)` chamber-boundary minimum: `(1.2679, 0.3651)` ((b))
+- `det(H)` chamber-interior stationary point: `(0.9644, 1.5524)` ((a))
 - Schur-Q (`= 6(delta^2 + q_+^2) / m^2`) chamber-boundary minimum:
  `(sqrt(6)/3, sqrt(6)/3)` (Schur baseline + minimum-coupling selector)
 - Frobenius `||K_doublet||_F^2` chamber-boundary minimum:
@@ -202,7 +202,7 @@ translation / heat-kernel / spectral) but fail to agree.
 **Proof.** Theorem 4 establishes that every polynomial retained
 microscopic functional reduces to a function of `(delta^2, q_+)`.
 Theorem 3 fixes the structure of the reduction. The cited candidate
-points were computed in the the info-geometric selection obstruction/B/C/parity-mixing notes. The runner
+points were computed in the info-geometric selection obstruction/B/C/parity-mixing notes. The runner
 Part 6 verifies their pairwise distinctness and the universality of the
 delta-evenness property.
 
@@ -229,7 +229,7 @@ a principle is not known.
 **(beta)** TRANSPORT / HOLONOMY consistency across the full `Z^3`
 lattice, not just the retained `H_hw=1` 3D surface. This would require
 a new theorem relating the full lattice Dirac operator's holonomy to
-the reduced `(delta, q_+)` pair. the Z_3 parity-split theorem holonomy attempts on the
+the reduced `(delta, q_+)` pair. holonomy attempts on the
 retained surface did not close; a full-lattice route is open but
 speculative.
 
@@ -287,21 +287,21 @@ with local content.
 After this theorem, the live paths to close selector reduce to exactly:
 
 1. **Sole-axiom derivation of a nonlocal selector** (information-
-  geometric / variational). This requires either a retained proof that
-  the "minimum-information source law" is axiom-native (currently
-  flagged post-axiom), or discovery of a new axiom-native nonlocal
-  principle on the retained stack.
+ geometric / variational). This requires either a retained proof that
+ the "minimum-information source law" is axiom-native (currently
+ flagged post-axiom), or discovery of a new axiom-native nonlocal
+ principle on the retained stack.
 
 2. **Full-Z^3 transport / holonomy closure.** Any candidate theorem
-  that extends beyond the retained `H_hw=1` 3D surface to the full
-  `Z^3` lattice could introduce structure that pins the gauge. This
-  is open territory.
+ that extends beyond the retained `H_hw=1` 3D surface to the full
+ `Z^3` lattice could introduce structure that pins the gauge. This
+ is open territory.
 
 3. **Physics-validation-driven identification.** If exactly one of the
-  retained candidate points `(Schur-Q, det(H), Tr(H^2), F1, K_12)`
-  is consistent with `eta / eta_obs = 1` and neutrino masses, it
-  becomes a candidate-closure-pending-derivation. This is a
-  physics-validation route, not a theorem-grade derivation.
+ retained candidate points `(Schur-Q, det(H), Tr(H^2), F1, K_12)`
+ is consistent with `eta / eta_obs = 1` and neutrino masses, it
+ becomes a candidate-closure-pending-derivation. This is a
+ physics-validation route, not a theorem-grade derivation.
 
 ## Atlas position
 

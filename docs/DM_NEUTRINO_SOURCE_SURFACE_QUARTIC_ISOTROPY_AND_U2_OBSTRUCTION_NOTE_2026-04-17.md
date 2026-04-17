@@ -1,4 +1,4 @@
-# (the U(2)-invariance+quartic-isotropy obstruction theorem) — Frobenius Uniqueness + Full-W at Physically-Forced m + Quartic Extension
+# Quartic-Isotropy Identity + U(2)-Invariance Obstruction — Frobenius Uniqueness + Full-W at Physically-Forced m + Quartic Extension
 
 **Date:** 2026-04-17
 **Status:** **three new obstruction theorems** + strictly narrowed gap; one conditional closure candidate gated on an unretained axiom
@@ -8,14 +8,14 @@
 ## Scope and discipline
 
 The selector Z_3 doublet-block selector gate has two surviving sub-obstructions
-on the `` integration branch:
+on the integration branch:
 
 - **(P1) parity-mixing functional-selection ambiguity** (F1 vs F2 vs F3
  disagree)
-- **(P2) the cubic variational selection obstruction m-dependence** of the full observable-principle generator
+- **(P2) m-dependence in the cubic variational obstruction** of the full observable-principle generator
  `W[J_act] = log|det(D + J_act)| − log|det(D)|` at scalar baseline
 
-This note pursues the three attack lines specified in the the quartic-isotropy+U(2) obstruction
+This note pursues the three attack lines specified in the quartic-isotropy+U(2) obstruction
 mission and records a definite result on each.
 
 ## Setup (retained theorem-grade, no new axioms)
@@ -76,11 +76,11 @@ Different `(A, B)` in the PD cone produce DIFFERENT chamber-boundary
 minimizers `delta_*`. The runner computes five concrete examples:
 
 ```
-(A, B) = (+1.00, -2.00)  delta_* = 1.146177  <-- F1 (Frobenius)
-(A, B) = (+1.00, -1.00)  delta_* ≈ 1.204
-(A, B) = (+2.00, -3.00)  delta_* ≈ 1.190
-(A, B) = (+0.50, -1.00)  delta_* ≈ 1.244
-(A, B) = (+3.00, -0.50)  delta_* ≈ 1.299
+(A, B) = (+1.00, -2.00) delta_* = 1.146177 <-- F1 (Frobenius)
+(A, B) = (+1.00, -1.00) delta_* ≈ 1.204
+(A, B) = (+2.00, -3.00) delta_* ≈ 1.190
+(A, B) = (+0.50, -1.00) delta_* ≈ 1.244
+(A, B) = (+3.00, -0.50) delta_* ≈ 1.299
 ```
 
 All five are PD, coercive, U(2)-invariant, and quadratic — yet they select
@@ -130,20 +130,20 @@ the chamber-boundary extremum of `W(m; delta, sqrt(8/3) − delta)` in
 - **m-dependent** (the argmax `delta` varies non-trivially across the
  candidate list, std > 0.1);
 - **NOT at any of the five ledger candidates** (Schur-Q sqrt(6)/3, F1
- sqrt(6)/2 − sqrt(2)/18, the Z_3 parity-split theorem-a 0.9644, the Z_3 parity-split theorem-b 1.2679, the Z_3 parity-split theorem-c
+ sqrt(6)/2 − sqrt(2)/18 (F1), (a) 0.9644, (b) 1.2679, (c)
  0.8000), to tolerance 1e-3;
 - **chamber-interior joint minima land on the det=0 singular boundary**,
- confirming the cubic variational selection obstruction (B) at fixed m in a stronger form (not only joint
+ confirming the cubic variational obstruction (B) at fixed m in a stronger form (not only joint
  (m, delta) stationarity, but also fixed-m interior optimization).
 
 **Illustrative table from the runner** (boundary argmax δ, 8 candidate m
 values):
 ```
- m            m value   argmax δ   argmin δ
- m = 4sqrt(2)/9 (F1)   0.628539  1.272862   0.367656
- m = sqrt(2)       1.414214  1.530898   0.080079
- m = 2sqrt(6)/3 (CP1)  1.632993  1.632993   0.000000
- m = 5          5.000000  0.628944   -1.232410
+ m   m value argmax δ argmin δ
+ m = 4sqrt(2)/9 (F1) 0.628539 1.272862 0.367656
+ m = sqrt(2)  1.414214 1.530898 0.080079
+ m = 2sqrt(6)/3 (CP1) 1.632993 1.632993 0.000000
+ m = 5   5.000000 0.628944 -1.232410
  ...
 ```
 
@@ -152,38 +152,38 @@ At `m = 4 sqrt(2)/9` (F1's own m-value), the boundary argmax is
 choosing the F1 m does not promote F1 to a full-W extremum.
 
 **Corollary.** Fixing `m` at a physically-forced value does not close the
-the cubic variational selection obstruction m-dependence obstruction. the cubic variational selection obstruction obstructed the joint `(m, delta)`
+the cubic variational m-dependence obstruction. The cubic variational obstruction ruled out the joint `(m, delta)`
 stationarity; this note obstructs the fixed-`m` restriction for every
 physically-natural `m` candidate tested.
 
 **Claim label for Line 2.** *New obstruction theorem.* **Not a theorem-grade
-closure of the the cubic variational selection obstruction m-dependence.**
+closure of the cubic variational m-dependence.**
 
 ## Line 3 — Quartic extension of the observable principle
 
 **Hypothesis.** The 4th-order Taylor term of `W` at scalar baseline, built
 from `Tr((D^{-1} J_act)^4)`, might carry additional parity-mixing content
-beyond the the cubic variational selection obstruction-obstructed cubic, possibly producing a unique chamber
+beyond cubic-variational-obstructed cubic, possibly producing a unique chamber
 extremum when combined with the quadratic and cubic.
 
 ### Theorem (Line-3 quartic-isotropy)
 
 On the active pair `(T_delta, T_q)`:
 ```
-Tr(J_act^2) = 6 (delta^2 + q_+^2)          [isotropic]
-Tr(J_act^3) = 6 (q_+^3 − 3 delta^2 q_+) = 6 Re(w^3)  [parity-mixing]
-Tr(J_act^4) = 18 (delta^2 + q_+^2)^2         [isotropic]
+Tr(J_act^2) = 6 (delta^2 + q_+^2)   [isotropic]
+Tr(J_act^3) = 6 (q_+^3 − 3 delta^2 q_+) = 6 Re(w^3) [parity-mixing]
+Tr(J_act^4) = 18 (delta^2 + q_+^2)^2   [isotropic]
 ```
 
 **Corollary.** `Tr(J_act^4) = (1/2) [Tr(J_act^2)]^2` is **exactly the square
 of the quadratic**, hence isotropic in `(delta, q_+)`. The quartic term of
 the observable-principle Taylor expansion at scalar baseline adds NO new
-parity-mixing information beyond the (the cubic variational selection obstruction-obstructed) cubic.
+parity-mixing information beyond the (cubic-variational-obstructed) cubic.
 
 Explicit expansion of `W` at `D = m I_3`:
 ```
 W(m, delta, q_+) = −(1/2 m^2) Tr(J^2) + (1/3 m^3) Tr(J^3) − (1/4 m^4) Tr(J^4) + O(J^5)
-          = − 3 r^2 / m^2 + 2 Re(w^3) / m^3 − 9 r^4 / (2 m^4) + O(r^5)
+   = − 3 r^2 / m^2 + 2 Re(w^3) / m^3 − 9 r^4 / (2 m^4) + O(r^5)
 ```
 with `r^2 = delta^2 + q_+^2`. Only the cubic is parity-mixing; the
 quadratic and quartic are purely isotropic in `r^2`.
@@ -191,13 +191,13 @@ quadratic and quartic are purely isotropic in `r^2`.
 **Higher even orders.** The runner verifies (sanity check) that `Tr(J^6)`
 is NOT delta↔q_+ swap invariant, so the sextic DOES carry parity-mixing
 content. But the sextic and beyond are NOT "the next natural invariant"
-for axiom-native closure — they are also the cubic variational selection obstruction-obstructed in their
+for axiom-native closure — they are also cubic-variational-obstructed in their
 cubic content because they inherit the same m-dependence structure of
 `log|det|` expanded order by order.
 
 **Claim label for Line 3.** *New obstruction theorem.* The
 parity-mixing content of the observable-principle Taylor expansion at
-scalar baseline is concentrated at cubic order (the cubic variational selection obstruction-obstructed);
+scalar baseline is concentrated at cubic order (cubic-variational-obstructed);
 quartic is isotropic; higher orders carry parity-mixing but also carry
 m-dependence.
 
@@ -218,22 +218,22 @@ m-dependence.
 ## What this note strictly NEWLY CLOSES
 
 1. **Parity-mixing quadratic ambiguity class is characterized as a 2-parameter
-  family.** Prior to this note, the parity-mixing ambiguity was "three
-  natural invariants F1, F2, F3 disagree." This note shows the full
-  U(2)-invariant quadratic cone is a 2-parameter family, not just three
-  discrete choices. The ambiguity is a genuine continuum, and PD +
-  coercivity + U(2) gauge do not collapse it.
-2. **Fixed-m m-dependence is a distinct obstruction from the cubic variational selection obstruction (B).**
-  the cubic variational selection obstruction obstructed the joint `(m, delta)` stationarity; this note
-  obstructs the natural weaker problem of fixed-m single-variable
-  extremization. No physically-forced `m` succeeds.
+ family.** Prior to this note, the parity-mixing ambiguity was "three
+ natural invariants F1, F2, F3 disagree." This note shows the full
+ U(2)-invariant quadratic cone is a 2-parameter family, not just three
+ discrete choices. The ambiguity is a genuine continuum, and PD +
+ coercivity + U(2) gauge do not collapse it.
+2. **Fixed-m m-dependence is a distinct obstruction from the cubic variational obstruction (B).**
+ the cubic variational obstruction ruled out the joint `(m, delta)` stationarity; this note
+ obstructs the natural weaker problem of fixed-m single-variable
+ extremization. No physically-forced `m` succeeds.
 3. **Quartic-isotropy theorem.** `Tr(J_act^4) = 18 r^4` is exactly
-  `(1/2) Tr(J_act^2)^2`. This is a new structural identity pinning the
-  quartic term of the observable principle at scalar baseline.
+ `(1/2) Tr(J_act^2)^2`. This is a new structural identity pinning the
+ quartic term of the observable principle at scalar baseline.
 4. **Conditional closure gate identified for Line 1.** `U(2)_L × U(2)_R`
-  independent unitary invariance would uniquely pin F1 among quadratic
-  invariants. Future work can attempt to derive this axiom from
-  `Cl(3)/Z^3`; a failed attempt would further narrow the gap.
+ independent unitary invariance would uniquely pin F1 among quadratic
+ invariants. Future work can attempt to derive this axiom from
+ `Cl(3)/Z^3`; a failed attempt would further narrow the gap.
 
 ## What this note does NOT do
 
@@ -266,26 +266,26 @@ No new axioms are introduced.
 
 **Before this note (after Paths A, B, C + parity-mixing note):**
 ```
-(G-Var)    still requires selection axiom (the info-geometric selection obstruction leading-quadratic)
-(G-Non-Var)  parity-mixing sub-route produces F1 candidate
-        but F1 vs F2 vs F3 disagreement is an ambiguity
-        (three discrete choices)
-the cubic variational selection obstruction     m-dependent boundary extremum / joint CPs singular
-Quartic     untested
+(G-Var) still requires selection axiom (info-geometric leading-quadratic)
+(G-Non-Var) parity-mixing sub-route produces F1 candidate
+  but F1 vs F2 vs F3 disagreement is an ambiguity
+  (three discrete choices)
+cubic variational obstruction: m-dependent boundary extremum / joint CPs singular
+Quartic  untested
 ```
 
 **After this note:**
 ```
-(G-Var)    unchanged
-(G-Non-Var)  parity-mixing quadratic ambiguity is a 2-parameter
-        U(2)-invariant PD cone, NOT just {F1, F2, F3}; F1 not
-        uniquely pinned by PD + coercivity + gauge + quadratic;
-        CONDITIONAL gate: U(2)_L x U(2)_R bifundamental
-        invariance, NOT currently retained
-the cubic variational selection obstruction     fixed-m restriction also m-dependent and never lands at
-        a ledger candidate (new obstruction)
-Quartic    Tr(J^4) at scalar baseline is (1/2) Tr(J^2)^2 — isotropic
-        (NEW theorem); no new parity-mixing at quartic order
+(G-Var) unchanged
+(G-Non-Var) parity-mixing quadratic ambiguity is a 2-parameter
+  U(2)-invariant PD cone, NOT just {F1, F2, F3}; F1 not
+  uniquely pinned by PD + coercivity + gauge + quadratic;
+  CONDITIONAL gate: U(2)_L x U(2)_R bifundamental
+  invariance, NOT currently retained
+cubic variational obstruction: fixed-m restriction also m-dependent and never lands at
+  a ledger candidate (new obstruction)
+Quartic Tr(J^4) at scalar baseline is (1/2) Tr(J^2)^2 — isotropic
+  (NEW theorem); no new parity-mixing at quartic order
 ```
 
 ## Position on publication surface

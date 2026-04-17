@@ -38,7 +38,7 @@ with every retained generator is a scalar. Hermiticity restricts the scalar
 to `R`, giving
 
 ```
-D = m I_3,  m in R.
+D = m I_3, m in R.
 ```
 
 Hence the axiom-native zero-source baseline on `H_hw=1` is the scalar
@@ -133,16 +133,16 @@ For `J_act = delta T_delta + q_+ T_q` and the scalar baseline `D = m I_3`,
 
 ```
 det(m I + delta T_delta + q_+ T_q)
-  = m^3 - 3 m (delta^2 + q_+^2) + 2 q_+ (q_+^2 - 3 delta^2)
-  = m^3 - 3 m |w|^2 + 2 Re(w^3),   w = q_+ + i delta
+ = m^3 - 3 m (delta^2 + q_+^2) + 2 q_+ (q_+^2 - 3 delta^2)
+ = m^3 - 3 m |w|^2 + 2 Re(w^3), w = q_+ + i delta
 ```
 
 and this equals the determinant of the explicit `Z_3` circulant
 
 ```
-[ m  w  w* ]
-[ w* m  w ]
-[ w  w* m ].
+[ m w w* ]
+[ w* m w ]
+[ w w* m ].
 ```
 
 The cubic term `2 Re(w^3)` breaks the `w -> -w` symmetry to an exact
@@ -158,56 +158,56 @@ the cubic-sensitive direction, but by itself it is not a selector law.
 The formal argument:
 
 1. **Generators are exact and real.** By the three-generation observable
-  theorem, `P_1, P_2, P_3` are exact rank-1 sector projectors on `H_hw=1`
-  with `P_1 + P_2 + P_3 = I_3`, and `C_3[111]` cycles them:
-  `C_3 P_i C_3^{-1} = P_{i+1}` (mod 3). All four generators are real `3x3`.
+ theorem, `P_1, P_2, P_3` are exact rank-1 sector projectors on `H_hw=1`
+ with `P_1 + P_2 + P_3 = I_3`, and `C_3[111]` cycles them:
+ `C_3 P_i C_3^{-1} = P_{i+1}` (mod 3). All four generators are real `3x3`.
 
 2. **R-algebra equals `M_3(R)`.** Products of the generators (together
-  with `C_3^2`) R-span all of `M_3(R)`. The runner verifies this
-  numerically: iterative linear-independence closure gives exactly 9
-  basis elements.
+ with `C_3^2`) R-span all of `M_3(R)`. The runner verifies this
+ numerically: iterative linear-independence closure gives exactly 9
+ basis elements.
 
 3. **Absolute irreducibility on `C^3`.** `M_3(R)` embeds in `M_3(C)` as
-  a real form; it acts absolutely irreducibly on `C^3` iff the only
-  `C`-linear commutant is scalar. The runner verifies this by solving
-  `[A, G] = 0` for `A in M_3(C)` and each generator `G in {P_i, C_3}`;
-  the `C`-nullspace has dimension 1 and is spanned by `I_3`.
+ a real form; it acts absolutely irreducibly on `C^3` iff the only
+ `C`-linear commutant is scalar. The runner verifies this by solving
+ `[A, G] = 0` for `A in M_3(C)` and each generator `G in {P_i, C_3}`;
+ the `C`-nullspace has dimension 1 and is spanned by `I_3`.
 
 4. **Schur's lemma over `C`.** Any `D : C^3 -> C^3` that commutes with
-  the retained generators is `c I_3` for some `c in C`.
+ the retained generators is `c I_3` for some `c in C`.
 
 5. **Hermiticity restricts `c in R`.** A Hermitian `D = c I_3` has
-  `D^dagger = bar{c} I_3 = c I_3`, forcing `c = bar{c}`, i.e. `c in R`.
-  Denote this real scalar `m`.
+ `D^dagger = bar{c} I_3 = c I_3`, forcing `c = bar{c}`, i.e. `c in R`.
+ Denote this real scalar `m`.
 
 6. **Observable-principle evaluation at `D = m I_3`.** The axiom-native
-  generator is
+ generator is
 
-  ```
-  W[J_act] = log|det(m I + J_act)| - log|det(m I)|
-      = log|1 - 3|w|^2/m^2 + 2 Re(w^3)/m^3|.
-  ```
+ ```
+ W[J_act] = log|det(m I + J_act)| - log|det(m I)|
+  = log|1 - 3|w|^2/m^2 + 2 Re(w^3)/m^3|.
+ ```
 
 7. **Zero-source curvature.** Expanding `W` to second order in `J_act`
-  at the origin gives
+ at the origin gives
 
-  ```
-  W[J_act] = - 3 |w|^2 / m^2 + O(|w|^3 / m^3),
-  ```
+ ```
+ W[J_act] = - 3 |w|^2 / m^2 + O(|w|^3 / m^3),
+ ```
 
-  whose Hessian bilinear is `K(X, Y) = (1/m^2) Tr(X Y)`. Using
-  `Tr(T_delta^2) = Tr(T_q^2) = 6` and `Tr(T_delta T_q) = 0`:
+ whose Hessian bilinear is `K(X, Y) = (1/m^2) Tr(X Y)`. Using
+ `Tr(T_delta^2) = Tr(T_q^2) = 6` and `Tr(T_delta T_q) = 0`:
 
-  ```
-  Q(delta, q_+) = - d^2 W = 6 (delta^2 + q_+^2) / m^2.
-  ```
+ ```
+ Q(delta, q_+) = - d^2 W = 6 (delta^2 + q_+^2) / m^2.
+ ```
 
-  The runner checks the Hessian bilinear numerically at four values of
-  `m` and confirms the closed form.
+ The runner checks the Hessian bilinear numerically at four values of
+ `m` and confirms the closed form.
 
 8. **Chamber-boundary minimum.** On the exact chamber boundary
-  `q_+ = sqrt(8/3) - delta`, the unconstrained minimum of
-  `delta^2 + q_+^2` is at `delta = q_+ = sqrt(8/3)/2 = sqrt(6)/3`.
+ `q_+ = sqrt(8/3) - delta`, the unconstrained minimum of
+ `delta^2 + q_+^2` is at `delta = q_+ = sqrt(8/3)/2 = sqrt(6)/3`.
 
 Steps 1–5 establish the Schur theorem. Steps 6–7 record the
 theorem-native curvature. Step 8 records the chamber minimum that the

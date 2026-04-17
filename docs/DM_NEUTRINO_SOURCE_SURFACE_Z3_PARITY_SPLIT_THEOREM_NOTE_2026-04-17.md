@@ -1,4 +1,4 @@
-# the Z_3 parity-split theorem: Microscopic Holonomy / Z_3-Parity Selector Attempt
+# Z_3 Parity-Split Theorem — Microscopic Holonomy Selector Attempt
 
 **Date:** 2026-04-17
 **Status:** OBSTRUCTION + NARROWER-GAP + CROSS-CHECK-CANDIDATE
@@ -24,8 +24,8 @@ The outcome is **not** a closure. It is:
  `(delta, q_+)` that **disagrees** with the Schur-Q variational candidate
  `(sqrt(6)/3, sqrt(6)/3)`.
 
-The DM flagship gate remains **open**. the selector gate is not closed. Neither the
-Schur-Q variational candidate nor any the Z_3 parity-split theorem microscopic candidate is
+The DM flagship gate remains **open**. The selector gate is not closed. Neither the
+Schur-Q variational candidate nor any microscopic candidate is
 promoted to theorem-grade.
 
 ## Theorem 1 (retained-atlas-native): Z_3-parity decomposition
@@ -36,8 +36,8 @@ promoted to theorem-grade.
 conjugation average and `anti(X) = X - sym(X)` denote the residual. Then:
 
 ```
-sym(T_q)   = T_q,     anti(T_q)   = 0
-sym(T_delta) = 0,      anti(T_delta) = T_delta
+sym(T_q) = T_q,  anti(T_q) = 0
+sym(T_delta) = 0,  anti(T_delta) = T_delta
 ```
 
 and `T_m` has nonzero components in both parity sectors.
@@ -85,14 +85,14 @@ The runner verifies the two constancy statements numerically:
 **Claim label.** *Retained-atlas-native theorem.* No new axiom. Elementary
 consequence of Theorem 1.
 
-**Corollary (the the Z_3 parity-split theorem structural obstruction).** Any microscopic
+**Corollary (Z_3 parity-split structural obstruction).** Any microscopic
 selector law for `(delta, q_+)` that is formulated via a single
 Z_3-parity-definite scalar (circulant-only or anti-circulant-only
 functional) **cannot close the gap**. It necessarily leaves one of the
-two active coordinates free. the Z_3 parity-split theorem is therefore forced to use an
+two active coordinates free. any selector is therefore forced to use an
 invariant that mixes both parity sectors.
 
-## the Z_3 parity-split theorem cross-checks along mixed invariants
+## Cross-checks along mixed invariants
 
 The natural mixed invariants that couple `delta` and `q_+` on the affine
 sheet are tested in Part 3 of the runner. All three candidates are
@@ -138,14 +138,14 @@ This does **not** fix `q_+` (the condition is `q_+`-independent).
 ### Comparison with the Schur-Q variational candidate
 
 ```
-Schur-Q variational (the cubic variational selection obstruction):  (delta, q_+) = (sqrt(6)/3, sqrt(6)/3)
-                       ~= (0.816497, 0.816497)
-the Z_3 parity-split theorem-a det(H) stationary:   (delta, q_+) ~= (0.964443, 1.552431)
-the Z_3 parity-split theorem-b Tr(H^2) on boundary:  (delta, q_+) ~= (1.267881, 0.365112)
-the Z_3 parity-split theorem-c K_12 char-match:    delta    ~= 0.799987 (q_+ free)
+Schur-Q variational candidate: (delta, q_+) = (sqrt(6)/3, sqrt(6)/3)
+      ~= (0.816497, 0.816497)
+(a) det(H) stationary: (delta, q_+) ~= (0.964443, 1.552431)
+(b) Tr(H^2) on boundary: (delta, q_+) ~= (1.267881, 0.365112)
+(c) K_12 char-match: delta ~= 0.799987 (q_+ free)
 ```
 
-**All three the Z_3 parity-split theorem candidates disagree with the Schur-Q variational
+**All three microscopic candidates disagree with the Schur-Q variational
 candidate.** No microscopic Z_3-parity-mixing invariant tested here
 reproduces `(sqrt(6)/3, sqrt(6)/3)`.
 
@@ -155,7 +155,7 @@ obvious candidates do not.
 
 ## Narrowed gap statement
 
-Before this note, the the Z_3 parity-split theorem direction was open and unexplored. After
+Before this note, the microscopic-holonomy direction was open and unexplored. After
 this note:
 
 **Negative results (hard):**
@@ -198,14 +198,14 @@ gives `eta / eta_obs ~= 0.189` at the Schur-Q chamber minimum
 (variational candidate). The PMNS-assisted route is required to reach
 `eta / eta_obs = 1`.
 
-A genuine closure via the Z_3 parity-split theorem-a (`det(H)` stationary) would predict a
+A genuine closure via (a) (`det(H)` stationary) would predict a
 significantly different `(delta, q_+)`. Evaluating the DM transport
 chain at `(m_det, delta_det, q_det) ~= (0.613, 0.964, 1.552)` is the
 natural next experiment: if `eta / eta_obs` lands closer to 1 at the
 det critical point than at the Schur minimum, that would be a
 compelling **new selector candidate** that deserves theorem-grade
 pursuit in its own right. If it lands further from 1, the det-
-stationarity candidate is ruled out on physical grounds and the Z_3 parity-split theorem is
+stationarity candidate is ruled out on physical grounds and the Z_3 parity-split route is
 simply obstructed.
 
 This physical cross-check is recorded here as a **follow-up discipline
@@ -236,7 +236,7 @@ No new axioms are introduced in this note.
 - that selector is closed
 - that the DM flagship gate is closed
 - that the Schur-Q variational candidate has been promoted to theorem-
- native by the Z_3 parity-split theorem (it has not; the the Z_3 parity-split theorem cross-check actively
+ native by the Z_3 parity-split theorem (it has not; the Z_3 parity-split theorem cross-check actively
  disagrees)
 - that the det-stationary point is the physical `(delta, q_+)` (it is a
  cross-check candidate, not a selector theorem)

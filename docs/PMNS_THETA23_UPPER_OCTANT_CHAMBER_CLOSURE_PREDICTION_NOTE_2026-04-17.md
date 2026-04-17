@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-17
 **Status:** RETAINED-GRADE PREDICTION — a falsifiable consequence of the
-the PMNS-closure theorem PMNS-as-f(H) closure, derived from the retained H-diagonalization
+the PMNS-as-f(H) closure, derived from the retained H-diagonalization
 map alone.
 **Script:** `scripts/frontier_pmns_theta23_upper_octant_chamber_closure_prediction.py`
 **Runner:** `PASS = 31, FAIL = 0`
@@ -11,12 +11,12 @@ map alone.
 
 ## Summary
 
-An adversarial input-sensitivity test on the the PMNS-closure theorem pinning (fixing
-`sin^2 theta_12 = 0.307` and `sin^2 theta_13 = 0.0218` at their PDG 2024
-central values, then varying `sin^2 theta_23`) reveals a **critical
+An adversarial input-sensitivity test on the closure pinning (fixing
+`sin^2 θ_12 = 0.307` and `sin^2 θ_13 = 0.0218` at their PDG 2024
+central values, then varying `sin^2 θ_23`) reveals a **critical
 threshold** in the inverse problem:
 
-- For `s_23^2 >= s_23^2_min`, the the PMNS-closure theorem map admits a unique chamber-
+- For `s_23^2 >= s_23^2_min`, the PMNS-closure map admits a unique chamber-
  interior inverse image.
 - For `s_23^2 < s_23^2_min`, the unique fsolve root sits OUTSIDE the
  chamber (`q_+ + δ < sqrt(8/3)`); no chamber closure exists.
@@ -25,12 +25,12 @@ This is not a fragility of the closure; it is a **structural feature** of the
 retained H-diagonalization map. Below threshold, the geometric chamber that
 carries the retained affine `H` does not contain an observationally-
 consistent point. We sharpen this into a falsifiable retained prediction of
-the the selector closure.
+the selector closure.
 
 **Main result.** At PDG 2024 central `(s_12^2, s_13^2) = (0.307, 0.0218)`,
 
 ```
-s_23^2_min = 0.540970 . . .  (bracketed brentq to 12 digits)
+s_23^2_min = 0.540970 . . . (bracketed brentq to 12 digits)
 ```
 
 At this threshold the pinned `(δ, q_+)` saturates the chamber boundary
@@ -54,13 +54,13 @@ point of the rectangle.
 **Retained prediction (falsifiable).**
 ```
 Selector chamber closure ADMITS a solution only if
-  s_23^2 >= s_23^2_min(s_12^2, s_13^2)
-    ≥ 0.5335  (for any (s_12^2, s_13^2) inside the NuFit 5.3 3σ box)
-    ≈ 0.5410  (at PDG 2024 central (0.307, 0.0218))
+ s_23^2 >= s_23^2_min(s_12^2, s_13^2)
+ ≥ 0.5335 (for any (s_12^2, s_13^2) inside the NuFit 5.3 3σ box)
+ ≈ 0.5410 (at PDG 2024 central (0.307, 0.0218))
 ```
 
-Since the threshold surface lies entirely above `0.5`, the the selector closure
-**predicts `theta_23` in the UPPER octant**. This is falsifiable by
+Since the threshold surface lies entirely above `0.5`, the selector closure
+**predicts `θ_23` in the UPPER octant**. This is falsifiable by
 JUNO / DUNE / Hyper-Kamiokande over the next few years.
 
 **Schur-Q coincidence.** The Schur-Q variational candidate
@@ -81,7 +81,7 @@ happen to share the same defining equation.
 
 All retained at the time of writing:
 
-- The the PMNS-closure theorem retained PMNS-as-f(H) map
+- The PMNS-closure retained PMNS-as-f(H) map
  [PMNS_FROM_DM_NEUTRINO_SOURCE_H_DIAGONALIZATION_CLOSURE_THEOREM_NOTE_2026-04-17.md](./PMNS_FROM_DM_NEUTRINO_SOURCE_H_DIAGONALIZATION_CLOSURE_THEOREM_NOTE_2026-04-17.md)
  and its underlying retained chain (affine chart theorem, chamber theorem,
  Z_3 doublet-block point-selection, current-bank blindness, Dirac-bridge,
@@ -89,7 +89,7 @@ All retained at the time of writing:
 - The chamber `q_+ >= sqrt(8/3) − δ` from the retained half-plane theorem
  [DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md](./DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md).
 - The Schur-Q candidate point `δ = q_+ = sqrt(6)/3` as a retained landmark
- from the the info-geometric selection obstruction/B information-geometric obstruction tour.
+ from the information-geometric obstruction tour.
 
 No new axiom or post-axiom selector is introduced. The prediction is
 purely a sharpened consequence of the retained PMNS-as-f(H) map plus the
@@ -97,11 +97,11 @@ retained chamber constraint.
 
 ## The threshold as a structural feature
 
-The the PMNS-closure theorem map `Φ : (m, δ, q_+) → (s_12^2, s_13^2, s_23^2)` is a
+The the PMNS-closure map `Φ : (m, δ, q_+) → (s_12^2, s_13^2, s_23^2)` is a
 smooth map from the (open) 3-manifold `R × {(δ, q_+) : q_+ + δ > sqrt(8/3)}`
 to an open subset of the unit cube. Its inverse image over a fixed
 observational triple `(o_12, o_13, o_23)` is generically a discrete set of
-points (the the PMNS-closure theorem 60-seed multi-start found a unique one).
+points (the PMNS-closure 60-seed multi-start found a unique one).
 
 As we move the target triple inside the image, the inverse image moves
 continuously. When the target triple approaches the boundary of the image,
@@ -149,7 +149,7 @@ At PDG 2024 central `(0.307, 0.0218)` the threshold is `0.540970`.
 
 | Input triple | `(m, δ, q_+)` | chamber dist | closure |
 |---|---|---:|---|
-| PDG 2024 central `(0.307, 0.0218, 0.545)` | `(0.6571, 0.9338, 0.7150)` | +0.0159 | YES (the PMNS-closure theorem pin) |
+| PDG 2024 central `(0.307, 0.0218, 0.545)` | `(0.6571, 0.9338, 0.7150)` | +0.0159 | YES (PMNS-closure pin) |
 | NuFit 5.3 NO UO best-fit `(0.307, 0.0218, 0.568)` | `(0.5302, 0.9693, 0.7749)` | +0.1112 | YES |
 | NuFit 5.3 NO LO 3σ alt `(0.307, 0.0218, 0.445)` | `(1.1588, 0.8486, 0.4795)` | −0.3049 | **NO** |
 
@@ -162,10 +162,10 @@ The Schur-Q candidate
 ```
 (δ_S, q_+S) = (sqrt(6)/3, sqrt(6)/3)
 ```
-arose in the the info-geometric selection obstruction / the cubic variational selection obstruction information-geometric obstruction tour as a
+arose in the information-geometric obstruction tour as a
 retained symmetric variational landmark: it is the unique chamber point where
 the `C^1` shared quadratic minimum of all natural info-geometric functionals
-lives (Quadratic Unanimity Theorem, the observable-bank exhaustion theorem Candidate A). The Schur-Q
+lives (Quadratic Unanimity Theorem, Candidate A). The Schur-Q
 point has the numerical property
 ```
 δ_S + q_+S = 2 sqrt(6)/3 = sqrt(8/3)
@@ -185,18 +185,18 @@ they occupy the same 1-parameter chamber-boundary ridge.
 This is a **structural coincidence** with two independent interpretations:
 
 1. **Schur-Q interpretation.** The Schur-Q symmetric variational minimum
-  is the `δ = q_+` specialization of the generic `C^1` minimum of all
-  info-geometric functionals. The chamber boundary `q_+ + δ = sqrt(8/3)` is
-  the 1-parameter locus that contains it.
+ is the `δ = q_+` specialization of the generic `C^1` minimum of all
+ info-geometric functionals. The chamber boundary `q_+ + δ = sqrt(8/3)` is
+ the 1-parameter locus that contains it.
 
-2. **PMNS-pinning interpretation.** The the PMNS-closure theorem inverse image
-  approaches the chamber boundary as the observational triple approaches
-  the boundary of the image of `Φ`. The chamber boundary is the only
-  locus where the inverse degenerates.
+2. **PMNS-pinning interpretation.** The PMNS-closure inverse image
+ approaches the chamber boundary as the observational triple approaches
+ the boundary of the image of `Φ`. The chamber boundary is the only
+ locus where the inverse degenerates.
 
 Both interpretations point to the same locus `q_+ + δ = sqrt(8/3)`. This
-is analytically significant: the retained variational route (the info-geometric selection obstruction/B/E) and
-the retained observational route (the PMNS-closure theorem) meet on a common boundary
+is analytically significant: the retained variational route (the info-geom / cubic-variational / parity-mixing obstructions) and
+the retained observational route meet on a common boundary
 structure. Whether this is a deep algebraic coincidence or a superficial
 Numerik accident is not settled by this note. We record it as a structural
 observation tying together two independent retained landmarks.
@@ -216,15 +216,15 @@ share the chamber-boundary line with the PMNS chamber-closure threshold.
 ## Formal statement of the retained prediction
 
 **Retained prediction (selector-gate θ_23 upper-octant).** Given the retained
-the PMNS-closure theorem PMNS-as-f(H) closure and the retained chamber
+the PMNS-as-f(H) closure and the retained chamber
 `q_+ + δ ≥ sqrt(8/3)`, the selector inverse problem
 
 ```
 (m, δ, q_+) ∈ chamber,
-Φ(m, δ, q_+) = (sin^2 theta_12, sin^2 theta_13, sin^2 theta_23)_obs,
+Φ(m, δ, q_+) = (sin^2 θ_12, sin^2 θ_13, sin^2 θ_23)_obs,
 ```
 
-admits a solution iff `sin^2 theta_23 ≥ s_23^2_min(sin^2 theta_12, sin^2 theta_13)`,
+admits a solution iff `sin^2 θ_23 ≥ s_23^2_min(sin^2 θ_12, sin^2 θ_13)`,
 where
 ```
 s_23^2_min : (PDG range of s_12^2) × (PDG range of s_13^2) → (0.5, 1)
@@ -234,16 +234,16 @@ is a smooth function with range in the upper octant. Over the NuFit 5.3 NO
 at PDG 2024 central `(0.307, 0.0218)`, `s_23^2_min = 0.540970`.
 
 **Corollary (θ_23 upper-octant).** The selector chamber closure requires
-`sin^2 theta_23` in the **upper octant** (`> 0.5`).
+`sin^2 θ_23` in the **upper octant** (`> 0.5`).
 
 **Falsification criteria (retained-grade).**
-- A future global fit settling on `sin^2 theta_23 < 0.5` at `>3σ`
- UNCONDITIONALLY FALSIFIES the the selector closure (since the threshold surface is
+- A future global fit settling on `sin^2 θ_23 < 0.5` at `>3σ`
+ UNCONDITIONALLY FALSIFIES the selector closure (since the threshold surface is
  entirely above `0.5`).
-- A future global fit with `sin^2 theta_23 < 0.534` at `>3σ` falsifies the
+- A future global fit with `sin^2 θ_23 < 0.534` at `>3σ` falsifies the
  the selector closure at PDG central `(s_12^2, s_13^2)` (since the minimum threshold
  over the 3σ rectangle on `(s_12^2, s_13^2)` is `0.5335`).
-- The current NuFit 5.3 NO best-fit `sin^2 theta_23 = 0.568` is consistent
+- The current NuFit 5.3 NO best-fit `sin^2 θ_23 = 0.568` is consistent
  with the prediction at `2.7σ` margin
  (`0.568 − 0.5410 = 0.027 > 1σ_NuFit ≈ 0.013`).
 
@@ -278,18 +278,18 @@ tested by the **Hyper-K + DUNE + JUNO combined fit** by the early 2030s.
 ### What this note positively claims
 
 1. **Retained-grade prediction** (not an obstruction). Derived purely from
-  the retained H-diagonalization map (the PMNS-closure theorem) and the retained chamber
-  constraint. No new axiom; no new selector principle.
+ the retained H-diagonalization map and the retained chamber
+ constraint. No new axiom; no new selector principle.
 2. **Exact threshold** `s_23^2_min(0.307, 0.0218) = 0.540970` at PDG 2024
-  central (12-digit brentq convergence; runner-verified).
+ central (12-digit brentq convergence; runner-verified).
 3. **Threshold surface range** `[0.5335, 0.5476]` over the NuFit 5.3 NO 3σ
-  rectangle on `(s_12^2, s_13^2)`.
+ rectangle on `(s_12^2, s_13^2)`.
 4. **θ_23 upper-octant** is the selector prediction. Lower octant at `>3σ` would
-  falsify the selector closure unconditionally.
+ falsify the selector closure unconditionally.
 5. **Chamber-boundary / Schur-Q coincidence.** Both the variational Schur-Q
-  candidate `(δ, q_+) = (sqrt(6)/3, sqrt(6)/3)` and the PMNS-pinning
-  chamber-closure threshold lie on the same chamber-boundary line
-  `q_+ + δ = sqrt(8/3)`.
+ candidate `(δ, q_+) = (sqrt(6)/3, sqrt(6)/3)` and the PMNS-pinning
+ chamber-closure threshold lie on the same chamber-boundary line
+ `q_+ + δ = sqrt(8/3)`.
 
 ### What this note does not claim
 
@@ -308,7 +308,7 @@ tested by the **Hyper-K + DUNE + JUNO combined fit** by the early 2030s.
 Short-form one-paragraph statement suitable for inclusion in
 `DM_FLAGSHIP_CLOSURE_REVIEW_NOTE_2026-04-17.md` or the ARXIV_DRAFT:
 
-> **θ_23 upper-octant retained prediction (the theta_23-upper-octant prediction).** The the PMNS-closure theorem
+> **θ_23 upper-octant retained prediction the θ_23 upper-octant prediction.** The the PMNS-closure theorem
 > PMNS-as-f(H) closure has a structural threshold: at PDG 2024 central
 > `(s_12^2, s_13^2) = (0.307, 0.0218)`, the selector chamber closure admits a
 > solution only for `s_23^2 ≥ 0.5410`; across the NuFit 5.3 NO 3σ
@@ -320,7 +320,7 @@ Short-form one-paragraph statement suitable for inclusion in
 > therefore **predicts θ_23 in the upper octant**; resolution of the
 > θ_23 octant at JUNO / Hyper-Kamiokande / DUNE over the next several
 > years provides a direct test. A `>3σ` lower-octant determination would
-> unconditionally falsify the the selector closure.
+> unconditionally falsify the selector closure.
 
 ## Runner
 

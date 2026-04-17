@@ -1,4 +1,4 @@
-# the info-geometric selection obstruction: Information-Geometric Selector — Obstruction + Narrowed-Gap
+# Information-Geometric Selector — Obstruction + Narrowed-Gap
 
 **Date:** 2026-04-17
 **Status:** obstruction theorem + narrowed gap (NOT a closure of the selector gate)
@@ -15,8 +15,8 @@ selector. It produces:
 2. a **Cubic Splitting Obstruction Theorem** (sole-axiom + already-retained stack)
 3. a **structural obstruction** for the full information-geometric route
 4. a precise **narrowed-gap** statement splitting the open object into
-  a variational sub-gap `(G-Var)` and a non-variational sub-gap
-  `(G-Non-Var)`
+ a variational sub-gap `(G-Var)` and a non-variational sub-gap
+ `(G-Non-Var)`
 
 Nothing in this note is promoted to theorem-grade beyond what the
 retained atlas already supports. The "minimum-information selector" in
@@ -59,8 +59,8 @@ functionals on the active 2-plane `{J_act(delta, q_+)}`:
 ```
 F_1(delta, q_+) := -W[J_act]
 F_2(delta, q_+) := 2 D_KL( N(0, (m I + J_act)^{-1}) || N(0, (m I)^{-1}) )
-F_3(delta, q_+) := g_F(J_act, J_act)    (Fisher metric at J=0)
-F_4(delta, q_+) := Tr(J_act^2) / m^2    (Frobenius squared distance)
+F_3(delta, q_+) := g_F(J_act, J_act) (Fisher metric at J=0)
+F_4(delta, q_+) := Tr(J_act^2) / m^2 (Frobenius squared distance)
 ```
 
 Each `F_i` has a Taylor expansion around `J_act = 0` whose leading
@@ -88,38 +88,38 @@ Frobenius perpendicular-foot construction coincide.
 ### Proof
 
 1. The retained generators satisfy `Tr(T_delta^2) = Tr(T_q^2) = 6` and
-  `Tr(T_delta T_q) = 0`. This is a sole-axiom computation (the generators
-  are atlas-fixed real matrices).
+ `Tr(T_delta T_q) = 0`. This is a sole-axiom computation (the generators
+ are atlas-fixed real matrices).
 
 2. `F_4`: immediate from (1). Hessian on the 2-plane is
-  `2 * diag(Tr(T_delta^2), Tr(T_q^2))/m^2 = (12/m^2) I_2`; one gets
-  `F_4 = 6(d^2 + q^2)/m^2`.
+ `2 * diag(Tr(T_delta^2), Tr(T_q^2))/m^2 = (12/m^2) I_2`; one gets
+ `F_4 = 6(d^2 + q^2)/m^2`.
 
 3. `F_1`: expand `W[J] = log|det(mI + J)/det(mI)|` at `J = 0`. Writing
-  `J = (1/m) X` with small `X` and using `log det(I + X) = Tr(X) - (1/2) Tr(X^2) + ...`:
-  `W = -(1/2) Tr((J/m)^2) + O(J^3/m^3) = -3(d^2 + q^2)/m^2 + ...`.
-  Hence `F_1 = -W = 3(d^2+q^2)/m^2 + O(...)`.
+ `J = (1/m) X` with small `X` and using `log det(I + X) = Tr(X) - (1/2) Tr(X^2) + ...`:
+ `W = -(1/2) Tr((J/m)^2) + O(J^3/m^3) = -3(d^2 + q^2)/m^2 + ...`.
+ Hence `F_1 = -W = 3(d^2+q^2)/m^2 + O(...)`.
 
 4. `F_3`: Fisher information at a parametric family with log-likelihood
-  generator `W` is `g_F = -Hess(W)`. From (3),
-  `g_F(J_act, J_act) = 6(d^2 + q^2)/m^2`, matching `F_4`.
+ generator `W` is `g_F = -Hess(W)`. From (3),
+ `g_F(J_act, J_act) = 6(d^2 + q^2)/m^2`, matching `F_4`.
 
 5. `F_2`: for a multivariate Gaussian pair with `Sigma_0 = (m I)^{-1}` and
-  `Sigma_J = (m I + J)^{-1}` (real symmetric `J`), the small-`J` expansion
-  is `2 D_KL = (1/2) Tr((J/m)^2) + O(J^3/m^3) = 3(d^2 + q^2)/m^2 + ...`;
-  numerical verification gives the constant factor `c_2 = 9` (the
-  Hessian of `2 D_KL` is `18/m^2 * I_2` on the 2-plane). [Value depends
-  on normalization convention; what matters is isotropy, not the
-  coefficient.]
+ `Sigma_J = (m I + J)^{-1}` (real symmetric `J`), the small-`J` expansion
+ is `2 D_KL = (1/2) Tr((J/m)^2) + O(J^3/m^3) = 3(d^2 + q^2)/m^2 + ...`;
+ numerical verification gives the constant factor `c_2 = 9` (the
+ Hessian of `2 D_KL` is `18/m^2 * I_2` on the 2-plane). [Value depends
+ on normalization convention; what matters is isotropy, not the
+ coefficient.]
 
 6. All four quadratics are of the form `c_i (d^2 + q_+^2)` with `c_i > 0`.
-  On the chamber boundary `q_+ = sqrt(8/3) - delta`, every such function
-  is strictly convex in `delta` with minimum at
-  `delta = (sqrt(8/3))/2 = sqrt(6)/3`, giving
-  `q_+ = sqrt(8/3) - sqrt(6)/3 = sqrt(6)/3`. This is the foot of
-  perpendicular from the origin to the boundary line in the standard
-  Euclidean `(delta, q_+)` metric, which equals the Fisher metric at
-  `J = 0` up to a positive scalar.
+ On the chamber boundary `q_+ = sqrt(8/3) - delta`, every such function
+ is strictly convex in `delta` with minimum at
+ `delta = (sqrt(8/3))/2 = sqrt(6)/3`, giving
+ `q_+ = sqrt(8/3) - sqrt(6)/3 = sqrt(6)/3`. This is the foot of
+ perpendicular from the origin to the boundary line in the standard
+ Euclidean `(delta, q_+)` metric, which equals the Fisher metric at
+ `J = 0` up to a positive scalar.
 
 ## Theorem B (Cubic Splitting Obstruction)
 
@@ -128,8 +128,8 @@ Frobenius perpendicular-foot construction coincide.
 retained generators on the active 2-plane are
 
 ```
-Tr(T_delta^3)   = 0
-Tr(T_q^3)     = 6
+Tr(T_delta^3) = 0
+Tr(T_q^3)  = 6
 Tr(T_delta^2 T_q) = -6
 Tr(T_delta T_q^2) = 0
 ```
@@ -184,7 +184,7 @@ principle. Formally:
  introduces an axiom not present in the retained stack.
 
 **Consequence.** The information-geometric selector route cannot close
-the the selector gap sole-axiom. The missing ingredient is a source-selection
+the selector gap sole-axiom. The missing ingredient is a source-selection
 axiom.
 
 ## Narrowed-gap statement
@@ -200,10 +200,10 @@ an unspecified single missing ingredient.
 **After this note.** The the selector gap splits precisely into two sub-objects:
 
 ```
-(G-Var)    variational selection axiom fixing a canonical
-       information-geometric functional on the chamber
-(G-Non-Var)  non-variational axiom directly selecting a chamber point
-       (holonomy, transport, microscopic consistency)
+(G-Var) variational selection axiom fixing a canonical
+  information-geometric functional on the chamber
+(G-Non-Var) non-variational axiom directly selecting a chamber point
+  (holonomy, transport, microscopic consistency)
 ```
 
 Theorems A and B characterize `(G-Var)` completely:
@@ -269,7 +269,7 @@ Expected: `PASS = 26, FAIL = 0`.
 ## Position on publication surface
 
 This note is **not** publication-grade on its own. It is a claim-surface
-advance of the the selector gap structure from
+advance of the selector gap structure from
 
 ```
 "selector principle open (single object)"

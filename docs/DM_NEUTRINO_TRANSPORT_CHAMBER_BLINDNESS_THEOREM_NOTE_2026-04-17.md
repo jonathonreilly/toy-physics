@@ -1,4 +1,4 @@
-# Physics Validation — eta/eta_obs at Z_3 Doublet-Block Selector Candidates
+# Transport Chamber-Blindness Theorem — eta/eta_obs at Z_3 Doublet-Block Selector Candidates
 
 **Date:** 2026-04-17
 **Status:** NARROWER-GAP + STRUCTURAL FACTORISATION + NO-PHYSICS-SELECTOR
@@ -10,8 +10,8 @@
 The the selector gate, on the integrati, carries:
 
 - one partial-closure theorem (Schur baseline forces `D = m I_3`),
-- three obstruction / cross-check theorems (the info-geometric selection obstruction information-geometric,
- the cubic variational selection obstruction Z_3 cubic variational, the Z_3 parity-split theorem holonomy).
+- three obstruction / cross-check theorems (information-geometric,
+ cubic variational, holonomy / Z_3 parity-split).
 
 Collectively these retain FOUR candidate `(delta, q_+)` selector points (or
 curves) on the chamber `q_+ >= sqrt(8/3) - delta`:
@@ -19,7 +19,7 @@ curves) on the chamber `q_+ >= sqrt(8/3) - delta`:
 | Candidate | `(m, delta, q_+)` | Source |
 |-----------|-------------------|--------|
 | A | `(0.5, sqrt(6)/3, sqrt(6)/3)` | Schur-Q chamber-boundary minimum |
-| B | `(0.613372, 0.964443, 1.552431)` | the Z_3 parity-split theorem `det(H)` chamber-interior critical point |
+| B | `(0.613372, 0.964443, 1.552431)` | `det(H)` chamber-interior critical point |
 | C | `(0.385132, 1.267881, 0.365112)` | the Z_3 parity-split theorem `Tr(H^2)` chamber-boundary minimum |
 | D | `delta ~ 0.800, q_+ free` | the Z_3 parity-split theorem `K_12` character-match (a curve) |
 
@@ -58,10 +58,10 @@ In particular:
 source-package observables `(gamma, E1, E2, K00, cp1, cp2)`:
 
 ```
-kappa_axiom  = kappa_axiom(k_decay),
-k_decay    = m_tilde / m_star,   m_tilde = K00 Y0^2 V_EW^2 / m1 * 1e9,
-epsilon_1   = (Y0^2 / 8 pi) (cp1 f(x23) + cp2 f(x3)) / K00,
-cp1 = - 2 gamma E1 / 3,  cp2 = 2 gamma E2 / 3.
+kappa_axiom = kappa_axiom(k_decay),
+k_decay = m_tilde / m_star, m_tilde = K00 Y0^2 V_EW^2 / m1 * 1e9,
+epsilon_1 = (Y0^2 / 8 pi) (cp1 f(x23) + cp2 f(x3)) / K00,
+cp1 = - 2 gamma E1 / 3, cp2 = 2 gamma E2 / 3.
 ```
 
 By the retained atlas theorem
@@ -86,7 +86,7 @@ Pulls `eta/eta_obs` directly from the retained
 `kappa_axiom_reference()`, reproducing
 
 ```
-eta / eta_obs = 0.188785929502,  epsilon_1 = 7.178e-08,
+eta / eta_obs = 0.188785929502, epsilon_1 = 7.178e-08,
 kappa_axiom = 0.004829545291.
 ```
 
@@ -99,9 +99,9 @@ candidates reproduce the retained absolute values
 
 ```
 |gamma| = 0.5,
-|E1|   = sqrt(8/3) = 1.632993...,
-|cp1|  = 0.544331...,
-|cp2|  = 0.314269... .
+|E1| = sqrt(8/3) = 1.632993...,
+|cp1| = 0.544331...,
+|cp2| = 0.314269... .
 ```
 
 The CP-sheet branch sign of `gamma` can flip under the
@@ -115,10 +115,10 @@ On a 25x25 grid with `(delta, q_+)` in `[-1.5, 1.8] x [-1.0, 2.0]`
 restricted to `q_+ + delta >= sqrt(8/3)`, the runner confirms
 
 ```
-max | |gamma|  - 1/2      | ~ 1.7e-16
-max | |cp1|   - |cp1|_retained | ~ 1.2e-15
-max | |cp2|   - |cp2|_retained | ~ 2.6e-15
-eta/eta_obs spread on chamber  = 0  (to machine precision)
+max | |gamma| - 1/2  | ~ 1.7e-16
+max | |cp1| - |cp1|_retained | ~ 1.2e-15
+max | |cp2| - |cp2|_retained | ~ 2.6e-15
+eta/eta_obs spread on chamber = 0 (to machine precision)
 eta/eta_obs never reaches 1 on the chamber.
 ```
 
@@ -132,12 +132,12 @@ chain itself does not re-read `E1` from `H`; it uses the atlas-fixed
 ### Part 4 — Candidate table and verdict
 
 ```
-Candidate |  (delta, q_+)       | eta/eta_obs   | closes (==1)?
+Candidate | (delta, q_+)  | eta/eta_obs | closes (==1)?
 ----------+------------------------------+------------------+---------------
-  A   | ( 0.816497, 0.816497)    | 0.188785929502 |  NO
-  B   | ( 0.964443, 1.552431)    | 0.188785929502 |  NO
-  C   | ( 1.267881, 0.365112)    | 0.188785929502 |  NO
-  D   | ( 0.799987, 1.000000)    | 0.188785929502 |  NO
+ A | ( 0.816497, 0.816497) | 0.188785929502 | NO
+ B | ( 0.964443, 1.552431) | 0.188785929502 | NO
+ C | ( 1.267881, 0.365112) | 0.188785929502 | NO
+ D | ( 0.799987, 1.000000) | 0.188785929502 | NO
 ```
 
 ### Part 5 — Structural factorisation record
@@ -155,7 +155,7 @@ achieves `eta / eta_obs = 1` on an **off-seed** `5`-real source on the
 PMNS-assisted `N_e` route, with parameters
 
 ```
-(xbar, ybar)  = (0.5633, 0.3067),
+(xbar, ybar) = (0.5633, 0.3067),
 x_close ~ (0.13, 1.41, 0.15),
 y_close ~ (0.29, 0.20, 0.43),
 delta_PMNS ~ -2.04 .
@@ -183,20 +183,20 @@ observable that the current bank is **not** blind to. The already-
 identified candidates for such an observable are:
 
 1. **Right-sensitive cubic structure.** The Z_3 circulant norm form
-  `m^3 - 3 m |w|^2 + 2 Re(w^3)` contains an exact right-sensitive
-  cubic term `2 Re(w^3)` with `w = q_+ + i delta`. Any selector that
-  reads this cubic (rather than the bank's blind quadratic invariants)
-  would escape the blindness theorem.
+ `m^3 - 3 m |w|^2 + 2 Re(w^3)` contains an exact right-sensitive
+ cubic term `2 Re(w^3)` with `w = q_+ + i delta`. Any selector that
+ reads this cubic (rather than the bank's blind quadratic invariants)
+ would escape the blindness theorem.
 
 2. **Independent microscopic consistency condition.** A
-  holonomy/transport condition on `H` that is not a function of
-  `sym(H)` or `anti(H)` alone (the Z_3 parity-split theorem Theorem 2 obstruction) and does
-  not factor through the bank-invariants.
+ holonomy/transport condition on `H` that is not a function of
+ `sym(H)` or `anti(H)` alone (parity-split Theorem 2 obstruction) and does
+ not factor through the bank-invariants.
 
 3. **PMNS-assisted lift.** Treat the `(delta, q_+)` chamber as a
-  spectator of a larger source-surface problem that includes the PMNS
-  phase and off-seed `5`-real source; the witness at `eta/eta_obs = 1`
-  lives on that larger surface.
+ spectator of a larger source-surface problem that includes the PMNS
+ phase and off-seed `5`-real source; the witness at `eta/eta_obs = 1`
+ lives on that larger surface.
 
 None of 1/2/3 is closed by the present note. The note's unique
 contribution is the **negative** structural result that the existing
@@ -213,7 +213,7 @@ transport chain is blind to the chamber.
 - The DM flagship gate stays **open**.
 - The Schur-baseline partial closure, the three the info-geometric selection obstruction/B/C obstruction
  theorems, and this physics-validation obstruction together delimit
- the the selector gate open object as: *a selector that couples to a bank-unblinded
+ the selector gate open object as: *a selector that couples to a bank-unblinded
  observable on the chamber*.
 
 ## Atlas inputs used
