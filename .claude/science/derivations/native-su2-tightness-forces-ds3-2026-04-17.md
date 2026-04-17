@@ -6,37 +6,55 @@
 
 ## Status
 
-PROPOSED-FOR-RETAINED — new theorem + verification runner.
+PROPOSED-FOR-RETAINED — tightness corollary of the family-scope
+uniqueness theorem.
 
-**The reviewer's blocker (2026-04-17 feedback) has been addressed** by
-the companion note
-`.claude/science/derivations/native-gauge-scope-theorem-2026-04-17.md`,
-which establishes the "canonical no-selector" reading as a separate
-retention-grade theorem rather than an interpretive claim. That note
-proves the retained `S_k = -(i/2) Γ_i Γ_j` line in
-`scripts/frontier_non_abelian_gauge.py:257-259` is literally the
-recipe "gauge generators := Clifford bivectors of Cl(n)", which is
-selector-free by construction (all bivectors used, none dropped) and
-comparison-family-scoped via the standard chiral-matrix construction.
+**The reviewer's two successive blockers have been addressed** by
+two separate companion notes:
 
-This tightness note then applies the Lie-algebra dimensional-matching
-step to that newly-retained premise:
+1. **Scope theorem** — `native-gauge-scope-theorem-2026-04-17.md`
+   shows the retained `S_k = -(i/2) Γ_i Γ_j` construction at `n = 3`
+   (line 257-259 of `scripts/frontier_non_abelian_gauge.py`) is
+   literally the recipe "gauge generators := bivectors of Cl(n)"
+   and that this recipe is a comparison-family construction.
 
-- retained native-gauge scope theorem: `S_k = bivectors of Cl(n)`,
-  selector-free, comparison-family-scoped,
-- standard Clifford-algebra bivector counting
-  `dim Λ²(R^n) = n(n-1)/2` (mathematical fact),
-- `dim(su(2)) = 3` as a Lie algebra (mathematical fact).
+2. **Family-scope uniqueness theorem** —
+   `native-gauge-family-uniqueness-2026-04-17.md` upgrades that
+   scope result from admissible extension to forced uniqueness:
+   under the admissibility conditions
+   - (A1) reduction at `n = 3` to the retained bivector sector,
+   - (A2) `O(n)`-covariance,
+   - (A3) commutator closure,
+   - (A4) grade-homogeneity (functoriality),
+   - (A5) no external selector,
+   the weak-gauge generator space is **forced** to be the full
+   bivector sector `V_n = Λ²(R^n)` for all `n ≥ 1`, with no proper
+   subset admissible (by `O(n)`-irreducibility of `Λ²(R^n)`) and no
+   mixed-grade alternative satisfying reduction. The `Γ_k` for
+   arbitrary `n` are derived from the framework's own
+   graph/η-phase/taste rules on `Z^n`, not from textbook Clifford
+   machinery.
 
-Together these force `n = 3` uniquely. The primitive shift from the
-earlier axiom reading is:
+With uniqueness in place, this tightness note is a short corollary:
+
+- retained family-scope uniqueness: `V_n = Λ²(R^n)` with
+  `dim V_n = n(n-1)/2` (now a forced theorem).
+- observed weak gauge Lie algebra `su(2)` has dimension 3.
+- therefore `n(n-1)/2 = 3`, i.e., `n = 3` uniquely.
+
+The primitive shift from the earlier axiom reading is:
 
 - previously: `d_s = 3` on `Z³` as axiom (A1).
-- now: `d_s = 3` as derived from (retained native-gauge scope) +
-  (observed weak SU(2) gauge group) + (Lie-algebra dimensional matching).
+- now: `d_s = 3` derived from (family-scope uniqueness theorem) +
+  (observed weak SU(2) gauge group) + (standard Lie-algebra dimension
+  counting).
 
 The chain is retention-eligible at the spatial-dimension axiom-depth
-scope.
+scope. The reviewer's prescribed 5-step program is now executed in
+full: uniqueness theorem (prescribed step 1), framework-rule-derived
+`Γ_k` (step 2), no-go on proper subsets (step 3), runner certifies
+uniqueness directly (step 4), and the tightness theorem as a short
+corollary (step 5, this note).
 
 ## The Problem And What This Note Actually Tries To Do
 
