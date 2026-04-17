@@ -1,0 +1,25 @@
+====================================================================================================
+LENSING ADJOINT KERNEL PROBE
+====================================================================================================
+T_phys=15  H=0.35  NL=43  PW=6  k_phase=7.143  beta=5.000
+seed=0  drift=0.20  restore=0.70
+x_src=4.900  detector_x=14.700  cz_free=+0.173376  T0=6.121569e-02
+b_values=[3.0, 4.0, 5.0, 6.0]
+
+Exact kernel identity:
+  kubo = Σ_l K_l
+  K_l = 2 Re Σ_{edges into layer l} lambda_j * A_i * U_ij
+
+   b  kubo(sum K_l)    kubo(ref)        |Δ|   peak_x  abs_ctr    abs_w  |K| in [xsrc±5]   |K| left/right
+ 3.0      -0.034338          n/a        n/a    5.950    6.835    3.018            0.837        0.30/0.74
+     top signed layers: x=4.90:-2.768e-03  x=4.55:-2.419e-03  x=6.30:-2.054e-03  x=5.25:-1.789e-03  x=1.75:-1.774e-03  x=3.85:-1.743e-03
+ 4.0      -0.027640          n/a        n/a    6.300    7.018    3.116            0.815        0.29/0.75
+     top signed layers: x=4.90:-2.048e-03  x=4.55:-1.819e-03  x=6.30:-1.570e-03  x=1.75:-1.537e-03  x=3.85:-1.334e-03  x=5.25:-1.250e-03
+ 5.0      -0.023081          n/a        n/a    6.650    7.156    3.183            0.797        0.28/0.75
+     top signed layers: x=4.90:-1.606e-03  x=4.55:-1.444e-03  x=1.75:-1.336e-03  x=6.30:-1.266e-03  x=3.85:-1.076e-03  x=5.25:-9.356e-04
+ 6.0      -0.019810          n/a        n/a    6.650    7.261    3.231            0.783        0.28/0.76
+     top signed layers: x=4.90:-1.317e-03  x=4.55:-1.194e-03  x=1.75:-1.171e-03  x=6.30:-1.057e-03  x=3.85:-8.996e-04  x=4.20:-7.476e-04
+
+Interpretation:
+  - If |K| is compact around x_src with a narrow width, a centered finite-path surrogate is plausible.
+  - If |K| is broad or strongly skewed, the slope is coming from the full adjoint-weighted wave response.

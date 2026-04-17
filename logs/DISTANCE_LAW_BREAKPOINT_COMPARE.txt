@@ -1,0 +1,24 @@
+# Distance Law Breakpoint Compare
+
+This note isolates which architecture features preserve or break the near-Newtonian distance tail across the retained families.
+
+| family | retained row | architecture feature | alpha | direction | class |
+| --- | --- | --- | ---: | --- | --- |
+| Grown family 1 | drift=0.20, restore=0.70 | open directed grown transport | -0.962 | 5/5 TOWARD | preserve |
+| Grown family 2 | drift=0.05, restore=0.30 | independent open grown transport | -0.947 | 5/5 TOWARD | preserve |
+| Alt-connectivity | drift=0.20, seed=0 | parity-tapered shell routing + dense fallback | -0.952 | 0/5 TOWARD | break |
+| Third family | drift=0.20, seed=2 | deeper branch structure / cross-quadrant load balancing | -2.161 | 0/5 TOWARD | break |
+| Fourth family | drift=0.00, seed=0 | quadrant-reflection symmetry | -1.190 | 0/5 TOWARD | break |
+| Fifth family radial | drift=0.05, seed=0 | radial-shell confinement / over-locked transport | -0.313 | 5/5 TOWARD | boundary |
+
+Breakpoint classifier:
+The tail survives only when the architecture keeps open directed transport without shell-locking, reflection closure, or deep branch rotation.
+
+Break features:
+- parity-tapered shell routing plus dense fallback rotates the response away
+- deeper branch structure steepens the tail and kills the retained sign
+- quadrant-reflection symmetry cancels the long-tail bias
+- radial-shell confinement preserves direction but over-locks transport and flattens the exponent
+
+Safe read:
+the distance tail is a stricter subset than the signed-control invariant; it is portable across the first two grown families, but the newer families split into break or boundary cases depending on transport symmetry

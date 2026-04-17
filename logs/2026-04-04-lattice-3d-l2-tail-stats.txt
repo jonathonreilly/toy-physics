@@ -1,0 +1,22 @@
+================================================================================================
+3D INVERSE-SQUARE TAIL STATISTICS
+  Review-safe tail probe for the exploratory 1/L^2 branch.
+  Same family, same barrier geometry, same action, h=0.25.
+================================================================================================
+
+================================================================================================
+3D 1/L^2 tail stats at h=0.25  width=8
+  nodes=207,025  layers=49  span=12
+  barrier: Born=3.75e-15  k0=+0.000000  dTV=0.358  read=ATTRACTIVE
+  barrier centroid=+0.032020  P_near=+0.004119  bias=+0.535366
+  no-barrier rows:
+    z= 4  centroid=+0.049373  P_near=+0.004422  bias=+0.795766  read=ATTRACTIVE
+    z= 5  centroid=+0.046445  P_near=+0.003459  bias=+0.765371  read=ATTRACTIVE
+    z= 6  centroid=+0.040248  P_near=+0.001309  bias=+0.719169  read=ATTRACTIVE
+    z= 7  centroid=+0.035067  P_near=+0.000651  bias=+0.668926  read=ATTRACTIVE
+    z= 8  centroid=+0.030697  P_near=+0.000357  bias=+0.627323  read=ATTRACTIVE
+  tail fit: peak@z=4  n_tail=5  exponent=b^(-0.70)  R^2=0.955
+
+Comparison:
+  width=8: n_tail=5  exponent=-0.70  R^2=0.955
+  verdict: single-width probe; compare against the prior width-6 baseline log

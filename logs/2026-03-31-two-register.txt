@@ -1,0 +1,79 @@
+======================================================================
+TWO-REGISTER DECOHERENCE
+  P(det) = Σ_env |ψ(det,env)|² (partial trace)
+======================================================================
+
+  env_mode = 'fine':
+    seed     grav   V_2reg    V_coh   V_drop  attr  dcoh  all3
+    ----------------------------------------------------
+       0    -0.17    0.989    0.986   -0.002     n     n     n
+       1    +0.58    0.989    0.997   +0.008     Y     n     n
+       2    -2.54    0.998    0.997   -0.001     n     n     n
+       3    +1.12    0.953    0.978   +0.024     Y     Y     Y
+       4    -1.15    0.999    1.000   +0.000     n     n     n
+       5    -4.24    0.946    0.997   +0.051     n     Y     n
+       6    -0.51    1.000    1.000   -0.000     n     n     n
+       7    -0.40    0.998    0.993   -0.005     n     n     n
+       8    -0.21    0.968    0.998   +0.030     n     Y     n
+       9    -0.13    0.827    0.971   +0.144     n     Y     n
+      10    -0.10    0.977    0.993   +0.016     n     n     n
+      11    +2.51    1.000    1.000   +0.000     Y     n     n
+    ---
+    G:3/12 I:12/12 D:4/12 ALL:1/12
+
+
+  env_mode = 'binary':
+    seed     grav   V_2reg    V_coh   V_drop  attr  dcoh  all3
+    ----------------------------------------------------
+       0    -0.21    0.986    0.986   +0.000     n     n     n
+       1    +2.68    0.997    0.997   +0.000     Y     n     n
+       2    -0.43    0.998    0.997   -0.001     n     n     n
+       3    +2.04    0.972    0.978   +0.006     Y     n     n
+       4    +0.86    1.000    1.000   +0.000     Y     n     n
+       5    -0.62    0.997    0.997   -0.000     n     n     n
+       6    -0.51    1.000    1.000   +0.000     n     n     n
+       7    +0.09    0.993    0.993   -0.000     Y     n     n
+       8    +0.93    0.905    0.998   +0.092     Y     Y     Y
+       9    +0.45    0.970    0.971   +0.001     Y     n     n
+      10    +0.35    0.993    0.993   +0.000     Y     n     n
+      11    +2.80    1.000    1.000   +0.000     Y     n     n
+    ---
+    G:8/12 I:12/12 D:1/12 ALL:1/12
+
+
+  env_mode = 'ybin':
+    seed     grav   V_2reg    V_coh   V_drop  attr  dcoh  all3
+    ----------------------------------------------------
+       0    -0.25    0.985    0.986   +0.001     n     n     n
+       1    +1.39    0.997    0.997   +0.000     Y     n     n
+       2    -0.61    0.997    0.997   -0.000     n     n     n
+       3    +2.37    0.978    0.978   -0.000     Y     n     n
+       4    +0.52    1.000    1.000   +0.000     Y     n     n
+       5    -1.56    0.997    0.997   +0.000     n     n     n
+       6    -0.21    1.000    1.000   -0.000     n     n     n
+       7    -0.09    0.995    0.993   -0.002     n     n     n
+       8    +0.28    0.998    0.998   +0.000     Y     n     n
+       9    +0.33    0.963    0.971   +0.007     Y     n     n
+      10    +0.19    0.993    0.993   -0.000     Y     n     n
+      11    +2.76    1.000    1.000   -0.000     Y     n     n
+    ---
+    G:7/12 I:12/12 D:0/12 ALL:0/12
+
+
+
+======================================================================
+MECHANISM
+======================================================================
+
+The environment register tags amplitude by which mass node it
+last interacted with. Paths from different slits that pass
+through different mass nodes get different env labels.
+The partial trace (Σ_env |ψ(det,env)|²) removes cross-slit
+interference for paths that went through different mass nodes.
+
+This is endogenous: the mass nodes ARE the environment.
+No external noise. No averaging over realizations.
+The decoherence is structural — it comes from the entanglement
+between system (detector position) and environment (mass node).
+
+TEST COMPLETE

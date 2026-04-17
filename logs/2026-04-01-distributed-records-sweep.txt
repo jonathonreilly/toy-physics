@@ -1,0 +1,29 @@
+DISTRIBUTED RECORDS: MAX_RECORDS sweep
+
+  MAX_RECORDS = 1:
+       N    purity   n_rec
+    ----------------------
+       8    0.5690      69
+      12    0.8898      77
+      18    0.8627      80
+
+  MAX_RECORDS = 2:
+       N    purity   n_rec
+    ----------------------
+       8    0.5413     332
+      12    0.9393     428
+      18    0.9080     497
+
+  MAX_RECORDS = 3:
+       N    purity   n_rec
+    ----------------------
+       8    0.5413     332
+      12    0.9607    1166
+      18    0.9426    1934
+
+CONCLUSION: More record depth makes decoherence WORSE at N>8.
+Amplitude concentrates in fewer dominant records on larger graphs.
+The N=8→N=12 transition is where path diversity overwhelms record
+diversity, regardless of MAX_RECORDS. Central limit effect.
+
+VERDICT: distributed per-edge records are NOT the decoherence fix.

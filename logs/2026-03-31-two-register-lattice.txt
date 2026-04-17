@@ -1,0 +1,31 @@
+  k=1.0: V_free=0.0000
+  k=2.0: V_free=0.9873
+  k=3.0: V_free=0.0000
+  k=4.0: V_free=0.0000
+  k=6.0: V_free=0.0000
+
+======================================================================
+TWO-REGISTER DECOHERENCE ON RECTANGULAR LATTICE
+  Grid: 50x31, barrier at x=20, det at x=40
+  Mass at x=21, y=-2..2 (between slits)
+  Corrected propagator (1/L^p)
+======================================================================
+
+  env_mode='fine': V_coh=0.9972, V_2reg=0.9972, V_drop=-0.0000
+  env_mode='binary': V_coh=0.9972, V_2reg=0.9972, V_drop=-0.0000
+  env_mode='ybin': V_coh=0.9972, V_2reg=0.9975, V_drop=-0.0003
+
+  Gravity: free_cy=0.00, mass_cy=-0.07, shift=-0.07
+
+SWEEP: mass x-offset from barrier
+  x_off    V_coh   V_fine   V_drop
+  ------------------------------
+      1   0.9972   0.9972  -0.0000
+      2   1.0000   1.0000  +0.0000
+      3   0.9618   0.9551  +0.0066
+      4   0.9968   0.9969  -0.0000
+      5   0.9998   0.9998  +0.0000
+      8   0.9968   0.9970  -0.0002
+     10   0.9912   0.9913  -0.0001
+
+TEST COMPLETE

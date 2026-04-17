@@ -1,0 +1,23 @@
+ANGLE² β SWEEP: optimal β for V + gravity scaling
+
+      β       V    R@12    R@25  grav_pass  V_pass  both
+  ----------------------------------------------
+    0.5   0.974  +0.724  +0.554          n       Y     n
+    0.8   0.998  +0.465  +0.507          Y       Y     Y   ← OPTIMAL
+    1.0   0.496  +0.358  +0.656          Y       n     n
+    1.2   0.367  +0.298  +0.893          Y       n     n
+    1.5   0.322  +0.248  +0.951          Y       n     n
+    1.7   0.299  +0.229  +0.803          Y       n     n
+    2.0   0.544  +0.219  +0.847          Y       Y     Y
+    2.5   0.630  +0.226  +0.335          Y       Y     Y
+    3.0   0.788  +0.221  +0.184          Y       Y     Y
+
+OPTIMAL: β=0.8
+  V = 0.998 (strong interference)
+  R@25 = +0.51 > R@12 = +0.47 (gravity does not collapse)
+  Scale-free (angle-based, embedding-independent)
+
+The V-gravity trade-off is narrow. β=0.8 is the strongest-margin
+tradeoff: high V with gravity still passing. Several larger β values
+also satisfy the current V/gravity guards, but with much weaker
+visibility margin or weaker retained gravity response.

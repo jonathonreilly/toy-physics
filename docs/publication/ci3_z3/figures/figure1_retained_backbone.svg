@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Retained derivation backbone</title>
+  <desc id="desc">Schematic overview of the retained backbone from Cl(3) on Z^3 to gravity, gauge, matter, quantitative lanes, and the remaining dark-matter gate.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#355c7d"/>
+    </marker>
+    <style>
+      .bg { fill: #f7f5ef; }
+      .title { font: 700 30px Georgia, serif; fill: #1f2a44; }
+      .label { font: 600 20px Helvetica, Arial, sans-serif; fill: #1f2a44; }
+      .body { font: 16px Helvetica, Arial, sans-serif; fill: #243447; }
+      .box { stroke: #355c7d; stroke-width: 2.5; rx: 18; ry: 18; }
+      .core { fill: #e8f1f4; }
+      .gravity { fill: #f1e6d6; }
+      .gauge { fill: #e0efe7; }
+      .matter { fill: #efe4f1; }
+      .quant { fill: #f6efd8; }
+      .gate { fill: #fff3ee; stroke-dasharray: 8 6; }
+      .arrow { stroke: #355c7d; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="760"/>
+  <text class="title" x="600" y="50" text-anchor="middle">Figure 1. Retained Derivation Backbone</text>
+
+  <rect class="box core" x="410" y="90" width="380" height="120"/>
+  <text class="label" x="600" y="135" text-anchor="middle">One-axiom framework surface</text>
+  <text class="body" x="600" y="165" text-anchor="middle">Cl(3) on Z^3 as the physical theory</text>
+  <text class="body" x="600" y="192" text-anchor="middle">Exact discrete audit; retained, bounded, or explicitly open</text>
+
+  <line class="arrow" x1="600" y1="210" x2="600" y2="275"/>
+
+  <rect class="box gravity" x="60" y="300" width="250" height="210"/>
+  <text class="label" x="185" y="340" text-anchor="middle">Gravity / QG</text>
+  <text class="body" x="185" y="375" text-anchor="middle">Poisson/Newton + WEP + time dilation</text>
+  <text class="body" x="185" y="402" text-anchor="middle">restricted strong-field theorem</text>
+  <text class="body" x="185" y="429" text-anchor="middle">exact discrete 3+1 GR on PL S^3 x R</text>
+  <text class="body" x="185" y="456" text-anchor="middle">chosen-target QG/continuum closure</text>
+
+  <rect class="box gauge" x="340" y="300" width="250" height="210"/>
+  <text class="label" x="465" y="340" text-anchor="middle">Gauge structure</text>
+  <text class="body" x="465" y="375" text-anchor="middle">exact native SU(2)</text>
+  <text class="body" x="465" y="402" text-anchor="middle">graph-first structural SU(3)</text>
+  <text class="body" x="465" y="429" text-anchor="middle">exact T = 0 confinement theorem</text>
+  <text class="body" x="465" y="456" text-anchor="middle">strong CP: theta_eff = 0 on action surface</text>
+
+  <rect class="box matter" x="610" y="300" width="250" height="210"/>
+  <text class="label" x="735" y="340" text-anchor="middle">Matter structure</text>
+  <text class="body" x="735" y="375" text-anchor="middle">anomaly-forced 3+1</text>
+  <text class="body" x="735" y="402" text-anchor="middle">one-generation closure</text>
+  <text class="body" x="735" y="429" text-anchor="middle">three-generation physical species structure</text>
+  <text class="body" x="735" y="456" text-anchor="middle">exact I3 = 0, exact CPT, emergent Lorentz</text>
+
+  <rect class="box quant" x="890" y="300" width="250" height="210"/>
+  <text class="label" x="1015" y="340" text-anchor="middle">Quantitative package</text>
+  <text class="body" x="1015" y="375" text-anchor="middle">v, alpha_s, EW normalization</text>
+  <text class="body" x="1015" y="402" text-anchor="middle">promoted CKM atlas/axiom package</text>
+  <text class="body" x="1015" y="429" text-anchor="middle">derived-with-systematic top and Higgs</text>
+  <text class="body" x="1015" y="456" text-anchor="middle">bounded secondary prediction surface</text>
+
+  <line class="arrow" x1="600" y1="275" x2="185" y2="300"/>
+  <line class="arrow" x1="600" y1="275" x2="465" y2="300"/>
+  <line class="arrow" x1="600" y1="275" x2="735" y2="300"/>
+  <line class="arrow" x1="600" y1="275" x2="1015" y2="300"/>
+
+  <rect class="box gate" x="410" y="565" width="380" height="120"/>
+  <text class="label" x="600" y="610" text-anchor="middle">Single live flagship gate</text>
+  <text class="body" x="600" y="640" text-anchor="middle">Dark-matter relic mapping and the matter/cosmology bridge</text>
+  <text class="body" x="600" y="667" text-anchor="middle">Everything else on the page is retained, derived, bounded, or historical</text>
+
+  <line class="arrow" x1="1015" y1="510" x2="735" y2="565"/>
+  <line class="arrow" x1="735" y1="510" x2="640" y2="565"/>
+</svg>

@@ -1,0 +1,50 @@
+low-overlap helper-fix delta summary started 2026-03-29T21:17:00
+
+Low-Overlap Helper-Fix Delta Summary
+====================================
+helper_fix=thread true pack_name through generated-family build_rows_with_trees(...) evaluation
+changed_code=/Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_exact_law_generated_ensemble_transfer_check.py
+
+rerun_scope_completed=
+- finished non-base first-hit probes:
+  - large:ultra|mega
+  - large:giga
+  - large:tera
+  - large:peta
+  - large:exa
+  - mirror:ultra|mega
+  - mirror:giga|tera
+  - mirror:peta
+  - mirror:exa
+- /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_large_exa_exhausted_slice_compare.py
+- /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_mid_anchor_translation_compare.py --mode full-wall
+- /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_packet_neighborhood_compare.py
+
+rerun_scope_stopped=
+- /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_beyond_ceiling_nonrect_sweep.py
+  - stopped after the full nine first-hit guardrails matched in substance, because the aggregate zero-row conclusion was already implied and the run was consuming the whole turn
+- /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_generated_non_guarded_pair_compare.py
+  - base-only control; stopped because the helper seam only affected non-base pack routing
+
+what_changed=
+- the helper seam was real: non-base generated-family rows had been evaluated with pack_name="base"
+- no rerun changed the non-base science in substance
+- added follow-on topology translation:
+  - /Users/jonreilly/Projects/Physics/scripts/pocket_wrap_suppressor_low_overlap_order_parameter_late_branch_packet_topology_translation.py
+  - /Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-packet-topology-translation.txt
+
+what_stayed_the_same=
+- all nine finished non-base first-hit probes kept the same scanned_nonrect_combinations counts and still reported first_nonrect_row=none
+- helper-fixed large:exa exhausted-slice compare differed only by timestamps
+- helper-fixed full exhausted-wall mid-anchor translation compare differed only by timestamps
+- helper-fixed full packet-neighborhood compare differed only by timestamps
+
+non_base_first_hit_appears=no
+exhausted_wall_conclusion_holds=yes
+
+follow_on_translation=
+- the late branch repairs the exhausted seven-support mid packet by inserting one four-incident flank hinge
+- that hinge touches:
+  - two same-column neighbors
+  - two inward neighbors
+- so the local repair is one vertical flank-ladder restoration plus two inward bridge-bridge closures into the packet interior

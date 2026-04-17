@@ -1,0 +1,44 @@
+======================================================================
+VECTOR SECTOR: CIRCULAR ORBIT HARNESS
+R=4.0, s=0.004, NL=30
+======================================================================
+
+1. EXACT NULLS
+  s=0:  dy=+0.000000e+00, dz=+0.000000e+00
+  f=0 CCW: dy=+1.686239e-02, dz=-3.188120e-04
+  f=0 CW:  dy=+1.686239e-02, dz=-3.188120e-04
+  f=0 dz diff: +0.000000e+00
+
+2. FREQUENCY SWEEP (vector dy, dz)
+    freq     dy_CCW     dz_CCW      dy_CW      dz_CW   flip
+    0.01  +0.013622  +0.003631  +0.014747  -0.004868    YES
+    0.02  +0.008993  +0.006964  +0.010404  -0.008384    YES
+    0.03  +0.004577  +0.009554  +0.005662  -0.010501    YES
+    0.05  -0.003011  +0.010485  -0.002370  -0.009674    YES
+    0.07  -0.006622  +0.005564  -0.005807  -0.004059    YES
+    0.10  -0.006344  +0.000712  -0.006003  +0.001112     no
+
+3. PHASE-AVERAGED HANDEDNESS at f=0.02
+  <dz>_CCW = +0.000499
+  <dz>_CW  = +0.000486
+  diff: +0.000012
+
+4. FIRST-HARMONIC (lock-in) READOUT
+  DC: +0.000012
+  1H amplitude: 0.018419
+  ratio 1H/DC: 1529
+
+5. f-ODDNESS (+f vs -f, direction=+1)
+  f=0.01: dz(+f)=+0.003631, dz(-f)=-0.004868, flip=YES
+  f=0.02: dz(+f)=+0.006964, dz(-f)=-0.008384, flip=YES
+  f=0.05: dz(+f)=+0.010485, dz(-f)=-0.009674, flip=YES
+
+6. TIME-ORDER CONTROL at f=0.02
+  CCW (normal):    dz = +0.006964
+  CW (normal):     dz = -0.008384
+  CCW (time-rev):  dz = +0.011769
+
+7. FAMILY PORTABILITY at f=0.02
+  Fam1: dz_CCW=+0.006045, dz_CW=-0.008444, flip=YES
+  Fam2: dz_CCW=+0.006014, dz_CW=-0.008814, flip=YES
+  Fam3: dz_CCW=+0.006811, dz_CW=-0.008176, flip=YES

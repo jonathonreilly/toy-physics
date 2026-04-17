@@ -1,0 +1,59 @@
+========================================================================
+SUPERPOSITION DECOMPOSITION
+========================================================================
+
+========================================================================
+TEST 1: FIELD SUPERPOSITION — field(A+B) vs field(A) + field(B)
+========================================================================
+
+  Max |field_both - field_sum|: 0.0284478396 at (15, 6)
+  Mean |diff| / mean |field|: 0.0366532557
+  Nodes with |diff| > 0.001: 855
+
+  RESULT: Field superposition FAILS.
+  Max deviation: 0.028448
+
+  Top 10 deviations:
+    (15, 6): both=0.630477 sum=0.658925 diff=-0.028448
+    (25, -6): both=0.630477 sum=0.658925 diff=-0.028448
+    (15, 7): both=0.639402 sum=0.666100 diff=-0.026697
+    (25, -7): both=0.639402 sum=0.666100 diff=-0.026697
+    (25, -5): both=0.530748 sum=0.555033 diff=-0.024285
+    (15, 5): both=0.530748 sum=0.555033 diff=-0.024285
+    (25, -8): both=0.608079 sum=0.631274 diff=-0.023196
+    (15, 8): both=0.608079 sum=0.631274 diff=-0.023196
+    (24, -6): both=0.497831 sum=0.518901 diff=-0.021070
+    (16, 6): both=0.497831 sum=0.518901 diff=-0.021070
+
+========================================================================
+TEST 2: ACTION along a FIXED path in different fields
+========================================================================
+
+  If we trace the SAME path through field(A+B) and field(A)+field(B),
+  do we get the same action? (Removes path-optimization nonlinearity)
+
+  Path: optimal in combined field (path_both)
+  Action in field_both:       23.844883
+  Action in field_sum:        23.645915
+  Difference:                 0.1989674969
+
+  RESULT: Same path, DIFFERENT action. Field nonlinearity contributes.
+
+========================================================================
+TEST 3: PATH OPTIMIZATION contribution to superposition failure
+========================================================================
+
+  Optimal paths (each in its own field):
+    ad_1 = -12.247217
+    ad_2 = -12.247217
+    ad_sum = -24.494434
+    ad_both = -16.155117
+    deviation = 8.339317 (-51.6%)
+
+  Same path (path_both) in individual fields:
+    ad_1_on_pathboth = -12.247217
+    ad_2_on_pathboth = -12.247217
+    ad_sum_on_pathboth = -24.494434
+    ad_both = -16.155117
+
+DECOMPOSITION COMPLETE

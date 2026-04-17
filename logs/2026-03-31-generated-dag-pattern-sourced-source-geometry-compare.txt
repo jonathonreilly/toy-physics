@@ -1,0 +1,21 @@
+================================================================================
+GENERATED DAG PATTERN-SOURCED SOURCE GEOMETRY COMPARE
+================================================================================
+Rows: 150 viable-source mover trials on neighbor_radius=2.5, coupling=3.000
+
+positive_shift: total=64 mean_shift=4.4431 mean_source_signed_side=0.2809 mean_source_x_lead=0.5589 mean_union=194.94 mean_field_on_seed=0.9029
+nonpositive_shift: total=86 mean_shift=-3.9950 mean_source_signed_side=0.3721 mean_source_x_lead=1.1904 mean_union=209.05 mean_field_on_seed=0.9275
+
+Positive-shift counts by config:
+  dense-25: 15
+  long-30: 15
+  sparse-25: 16
+  wide-15: 18
+
+best source_signed_side threshold: source_signed_side <= -6.2800 (accuracy=0.5733)
+best source_x_lead threshold: source_x_lead <= -3.2642 (accuracy=0.6000)
+best source_union_size threshold: source_union_size <= 91.0000 (accuracy=0.6133)
+best mean_field_on_seed threshold: mean_field_on_seed <= 1.0000 (accuracy=0.6067)
+
+Interpretation:
+  If negative-shift rows still keep the source centroid on the intended side with a similar forward lead, then the current pattern-sourced result is not a simple placement failure. It means the mover responds differently to a broad late-phase source field than to the earlier static-mass proxy.

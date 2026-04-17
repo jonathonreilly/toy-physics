@@ -1,0 +1,22 @@
+====================================================================================
+SOURCE-DRIVEN FIELD RECOVERY SWEEP
+  weak-field calibration sweep on the exact 3D lattice
+====================================================================================
+telegraph parameters: c=0.45, damp=0.35
+source strengths: (0.001, 0.002, 0.004, 0.008)
+
+target max   toward      F~M  largest delta
+------------------------------------------------
+     0.001     4/4    0.997  +3.180396e-03
+     0.002     4/4    0.994  +6.314115e-03
+     0.005     4/4    0.985  +1.543423e-02
+     0.010     4/4    0.968  +2.969381e-02
+     0.020     4/4    0.934  +5.468048e-02
+     0.040     4/4    0.855  +9.073752e-02
+     0.080     4/4    0.642  +1.105259e-01
+
+SAFE READ
+  the minimal source-driven field has a real weak-field recovery pocket
+  when the calibrated dynamic field stays small
+  as the field calibration grows, the mass exponent drifts away from 1
+  so the architecture is not dead, but it is calibration-sensitive

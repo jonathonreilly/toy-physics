@@ -1,0 +1,46 @@
+==============================================================================
+FIXED-SOURCE GEOMETRY SANITY
+  Compare retained and denser families with distinct b windows
+==============================================================================
+
+  seeds: 24
+  fixed mass count: 8
+  k-band: (3.0, 5.0, 7.0)
+
+==============================================================================
+RETAINED FAMILY
+==============================================================================
+  accepted seed maps: 24
+  mean adjacent-window overlap: 0.781
+  b= 1: shift=-0.0862, t=-0.19, samples=2
+  b= 2: FAIL
+  b= 3: FAIL
+  b= 4: FAIL
+  b= 5: FAIL
+  b= 6: FAIL
+  b= 7: FAIL
+  b= 8: FAIL
+  b=10: shift=-1.0266, t=-1.28, samples=8
+  Fit: insufficient positive points
+
+==============================================================================
+DENSER FAMILY
+==============================================================================
+  accepted seed maps: 24
+  mean adjacent-window overlap: 0.712
+  b= 1: shift=-2.6636, t=+0.00, samples=1
+  b= 2: FAIL
+  b= 3: FAIL
+  b= 4: FAIL
+  b= 5: shift=+1.9419, t=+0.00, samples=1
+  b= 6: FAIL
+  b= 7: FAIL
+  b= 8: FAIL
+  b=10: shift=+0.0090, t=+0.01, samples=22
+  Fit: insufficient positive points
+
+Interpretation:
+  If the improved exponent is real, it should survive only when the
+  mass windows are distinct enough that nearby b values do not reuse
+  nearly identical nodes.
+==============================================================================

@@ -1,0 +1,23 @@
+======================================================================
+LEVEL B PROXY: FRESH-ANCILLA ENCOUNTER-COUNT ON REAL DAGs
+  Propagator: 1/L^p × exp(-0.8×θ²)
+  Env: encounter count only (lossy proxy, not slot-resolved ancillas)
+  α = 0.79
+======================================================================
+
+     N  n_mass   n_enc    pur_fa  pur_node    fa_off
+  ------------------------------------------------
+     8       5       1    0.9994    0.7703    1.0000
+    12      13       2    0.9612    0.7862    1.0000
+    18      23       3    0.9344    0.8223    1.0000
+    25      23       4    0.9573    0.7905    1.0000
+
+pur_fa = encounter-count proxy for fresh ancillas
+pur_node = node-label env (comparison)
+fa_off = no coupling (should be ~1.0)
+n_enc = max encounter count reached
+
+Interpret carefully: this is NOT a faithful Level B replay of
+the Level A fresh-ancilla law, only an encounter-count proxy.
+
+TEST COMPLETE

@@ -1,0 +1,16 @@
+================================================================================================
+DISTANCE LAW PRESERVING THIRD FAMILY
+  direct tail test on the high-drift/high-restore third grown family
+================================================================================================
+family=(drift=0.50, restore=0.90), seeds=[0, 1, 2, 3, 4, 5], b=[5, 6, 7, 8, 10]
+guards: exact zero-source baseline, exact neutral cancellation, sign orientation, weak charge scaling
+
+        zero         plus        minus      neutral       double     exp    alpha      r2    toward
+------------------------------------------------------------------------------------------------------------
+  +0.000e+00   +1.764e-04   -1.764e-04   +0.000e+00   +3.529e-04   1.000   -1.150   0.971         5/5  
+
+SAFE READ
+  sign gate: PASS
+  tail gate: PASS
+  the high-drift/high-restore third family preserves both the signed-source package
+  and the near-Newtonian distance tail on this direct test

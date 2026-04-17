@@ -1,0 +1,38 @@
+late branch guardrail summary started 2026-03-29T14:29:10
+
+Late Branch Guardrail Summary
+=============================
+base_direct_compare_log=/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-base-late-branch-direct-compare.txt
+late_branch_gate=closure_load >= 73.000
+late_branch_subbranches=late-outer-rect: support_load >= 24.000; late-taper-hard: anchor_closure_intensity_gap >= 3.000; late-skew-wrap: anchor_deep_share_gap <= -0.334
+observed_base_late_branch=5 (late-outer-rect:2, late-skew-wrap:1, late-taper-hard:2)
+observed_base_sources=base:exa:base:rect-wrap:local-morph-f,base:peta:base:rect-wrap:local-morph-f,base:exa:base:taper-hard:local-morph-f,base:peta:base:taper-hard:local-morph-f,base:exa:base:skew-wrap:local-morph-k
+finished_non_base_guardrails=9
+finished_non_base_scanned_nonrect_combinations=30
+finished_non_base_first_hits=0
+finished_non_base_first_hit_labels=none
+
+Finished non-base guardrails
+===========================
+large:ultra|mega scanned_nonrect_combinations=6 first_nonrect_row=none
+  conclusion=no non-rect beyond-ceiling non-collapse row appeared on the scanned guardrail
+large:giga scanned_nonrect_combinations=3 first_nonrect_row=none
+  conclusion=no non-rect beyond-ceiling non-collapse row appeared on the scanned guardrail
+large:tera scanned_nonrect_combinations=3 first_nonrect_row=none
+  conclusion=no non-rect beyond-ceiling non-collapse row appeared on the scanned guardrail
+large:peta scanned_nonrect_combinations=3 first_nonrect_row=none
+  conclusion=no non-rect beyond-ceiling non-collapse row appeared on the scanned guardrail
+large:exa scanned_nonrect_combinations=3 first_nonrect_row=none
+  conclusion=no non-rect beyond-ceiling non-collapse row appeared on the scanned guardrail
+mirror:ultra|mega scanned_nonrect_combinations=4 first_nonrect_row=none
+  conclusion=no non-rect beyond-ceiling non-collapse row appeared on the scanned guardrail
+mirror:giga|tera scanned_nonrect_combinations=4 first_nonrect_row=none
+  conclusion=no non-rect beyond-ceiling non-collapse row appeared on the scanned guardrail
+mirror:peta scanned_nonrect_combinations=2 first_nonrect_row=none
+  conclusion=no non-rect beyond-ceiling non-collapse row appeared on the scanned guardrail
+mirror:exa scanned_nonrect_combinations=2 first_nonrect_row=none
+  conclusion=no non-rect beyond-ceiling non-collapse row appeared on the scanned guardrail
+
+conclusion=outside the observed base peta|exa branch, no finished non-base late guardrail through large tera and mirror exa has produced any non-rect beyond-ceiling non-collapse row, so the current late-branch law has no broader-family transfer evidence and no non-base counterexample yet
+
+late branch guardrail summary completed 2026-03-29T14:29:10 total_elapsed=0.0s

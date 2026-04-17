@@ -1,0 +1,37 @@
+large exhausted slice compare started 2026-03-29T15:44:29
+
+Large Exhausted Slice Compare
+============================
+pack=large
+ensemble=exa
+late_branch_floors=support_load>=21.000, closure_load>=76.000, mid_anchor_closure_peak>=12.000
+rows_total=1 (pair-only-sensitive:1)
+closure_gate_rows=1 (pair-only-sensitive:1)
+beyond_ceiling_rows=0 (none)
+best_total_gap_row=large:taper-wrap-large:local-morph-g total_gap=4.000 (support_gap=0.000, closure_gap=0.000, mid_peak_gap=4.000)
+
+Lowest total-gap rows
+=====================
+large:taper-wrap-large:local-morph-g scenario=taper-wrap-large actual=pair-only-sensitive predicted=add1-sensitive branch=outside-gate-add1-default
+  support_load=26.000 closure_load=87.000 mid_anchor_closure_peak=8.000
+  gaps=support:0.000 closure:0.000 mid_peak:4.000 total:4.000
+  anchor_closure_intensity_gap=2.000 anchor_deep_share_gap=0.000 high_bridge_right_count=1.000 high_bridge_right_low_count=0.000
+  edge_identity_event_count=71.000 edge_identity_support_edge_density=0.091
+
+Highest closure-load rows
+=========================
+large:taper-wrap-large:local-morph-g scenario=taper-wrap-large actual=pair-only-sensitive predicted=add1-sensitive branch=outside-gate-add1-default
+  support_load=26.000 closure_load=87.000 mid_anchor_closure_peak=8.000
+  gaps=support:0.000 closure:0.000 mid_peak:4.000 total:4.000
+  anchor_closure_intensity_gap=2.000 anchor_deep_share_gap=0.000 high_bridge_right_count=1.000 high_bridge_right_low_count=0.000
+  edge_identity_event_count=71.000 edge_identity_support_edge_density=0.091
+
+Highest mid-anchor-closure rows
+===============================
+large:taper-wrap-large:local-morph-g scenario=taper-wrap-large actual=pair-only-sensitive predicted=add1-sensitive branch=outside-gate-add1-default
+  support_load=26.000 closure_load=87.000 mid_anchor_closure_peak=8.000
+  gaps=support:0.000 closure:0.000 mid_peak:4.000 total:4.000
+  anchor_closure_intensity_gap=2.000 anchor_deep_share_gap=0.000 high_bridge_right_count=1.000 high_bridge_right_low_count=0.000
+  edge_identity_event_count=71.000 edge_identity_support_edge_density=0.091
+
+large exhausted slice compare completed 2026-03-29T15:50:50 total_elapsed=380.5s

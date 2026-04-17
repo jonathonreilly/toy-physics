@@ -1,0 +1,21 @@
+================================================================================================
+MESOSCOPIC SURROGATE MULTI-STAGE PROBE
+  Retained 3D ordered-lattice valley-linear family
+  h=0.5, W=8, segment_L=6, topN=196, source_z=3.0, strength=5e-05
+  Goal: does the broad surrogate survive two sourced-response stages?
+================================================================================================
+
+stage-1 capture          = 0.691
+stage-2 capture          = 0.825
+stage-1 delta            = +0.00011066
+stage-2 delta            = +0.00010015
+delta ratio              = 0.905
+best-shift stage2 vs 1   = +0
+best-shift score         = 0.9901
+width ratio stage2/stage1= 0.8756
+
+SAFE READ
+  - High best-shift score and near-unit width ratio mean the mesoscopic surrogate
+    survives a second sourced-response stage as the same broad object family.
+  - Large score loss, width blow-up, or delta collapse would mean the surrogate
+    is only a one-step control.

@@ -1,0 +1,25 @@
+================================================================================================
+3D ANGLE-WEIGHT UNITARY SMOKE TEST
+================================================================================================
+candidate: 1/L^p × exp(-0.8θ²)
+fixed DAG: depth=7, slit_sep=4.0, detector_y=-6..6, z_half_width=2, radius=1.75
+
+    k      V_coh    V_incoh         TV      lin_resid     norm_err
+------------------------------------------------------------------------
+  3.0     0.0000     0.0927     0.1173      5.024e-15    0.000e+00
+  5.0     0.9963     0.9828     0.2490      1.831e-15    0.000e+00
+  7.0     0.0000     0.1497     0.1104      3.178e-14    0.000e+00
+
+PASS/FAIL TABLE
+------------------------------------------------------------------------------------------------
+check                                    metric                              value    threshold   result
+------------------------------------------------------------------------------------------------
+zero-field coherent visibility           max V_coh over k in (3.0, 5.       0.9963      >= 0.80     PASS
+coherent vs incoherent profile contrast  min TV(profile_coh, profile_       0.1104      >= 0.10     PASS
+amplitude linearity                      max detector residual |A_ab     3.178e-14   <= 1.0e-10     PASS
+detector normalization                   max |sum P_det - 1|                     0   <= 1.0e-12     PASS
+
+Interpretation:
+  The bounded 3D unitary smoke gap is closed: the angle-weight candidate shows a real zero-field interference pattern on a fixed 3D DAG, the coherent detector profile stays distinct from the incoherent control across the canonical k band, and amplitude superposition remains linear to machine precision.
+
+OVERALL: PASS

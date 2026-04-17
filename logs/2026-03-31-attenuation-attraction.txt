@@ -1,0 +1,101 @@
+================================================================================
+ATTENUATION-BASED GRAVITATIONAL ATTRACTION ON GENERATED DAGs
+================================================================================
+
+TEST 1: Attenuation sweep with spent_fraction action, k=2.5
+
+                attenuation   attract   total  mean_shift
+  --------------------------------------------------------
+       1/delay^p (standard)      0/10      10     -2.1758
+          flat (phase only)      5/10      10     +0.2544
+        (1+field)^p (boost)     10/10      10     +2.1473
+            retained_frac^p      5/10      10     +0.7464
+                 1/(1+sf)^p      8/10      10     +0.7485
+           1/L^p (geometry)      8/10      10     +0.2313
+
+TEST 2: Combinatorial sweep — action × attenuation × k
+
+           action           attenuation      k   attr      mean
+  --------------------------------------------------------------
+   spent_fraction  1/delay^p (standard)    8.0   4/8    -0.0568
+   spent_fraction     flat (phase only)    2.5   3/8    +0.1928
+   spent_fraction     flat (phase only)    4.0   5/8    +0.5855
+   spent_fraction     flat (phase only)    8.0   7/8    +1.8503
+   spent_fraction   (1+field)^p (boost)    1.0   8/8    +1.9488
+   spent_fraction   (1+field)^p (boost)    2.5   8/8    +2.0037
+   spent_fraction   (1+field)^p (boost)    4.0   8/8    +2.2789
+   spent_fraction   (1+field)^p (boost)    8.0   8/8    +2.9264
+   spent_fraction       retained_frac^p    1.0   4/8    +0.7369
+   spent_fraction       retained_frac^p    2.5   4/8    +0.8530
+   spent_fraction       retained_frac^p    4.0   5/8    +1.0519
+   spent_fraction       retained_frac^p    8.0   5/8    +1.6278
+   spent_fraction            1/(1+sf)^p    1.0   8/8    +0.6461
+   spent_fraction            1/(1+sf)^p    2.5   6/8    +0.6695
+   spent_fraction            1/(1+sf)^p    4.0   6/8    +0.9247
+   spent_fraction            1/(1+sf)^p    8.0   7/8    +1.6390
+   spent_fraction      1/L^p (geometry)    2.5   6/8    +0.2412
+   spent_fraction      1/L^p (geometry)    4.0   6/8    +0.4749
+   spent_fraction      1/L^p (geometry)    8.0   6/8    +1.3476
+      spent_delay     flat (phase only)    1.0   4/8    +0.1017
+      spent_delay     flat (phase only)    2.5   6/8    +0.8547
+      spent_delay     flat (phase only)    4.0   6/8    +2.7327
+      spent_delay     flat (phase only)    8.0   6/8    +0.5136
+      spent_delay   (1+field)^p (boost)    1.0   7/8    +2.0147
+      spent_delay   (1+field)^p (boost)    2.5   6/8    +2.6836
+      spent_delay   (1+field)^p (boost)    4.0   7/8    +4.1985
+      spent_delay   (1+field)^p (boost)    8.0   7/8    +3.4280
+      spent_delay       retained_frac^p    1.0   4/8    +0.7881
+      spent_delay       retained_frac^p    2.5   5/8    +1.1578
+      spent_delay       retained_frac^p    4.0   5/8    +1.7595
+      spent_delay       retained_frac^p    8.0   5/8    +2.6050
+      spent_delay            1/(1+sf)^p    1.0   7/8    +0.6717
+      spent_delay            1/(1+sf)^p    2.5   5/8    +1.7655
+      spent_delay            1/(1+sf)^p    4.0   6/8    +2.0602
+      spent_delay            1/(1+sf)^p    8.0   7/8    +2.3620
+      spent_delay      1/L^p (geometry)    1.0   4/8    +0.0199
+      spent_delay      1/L^p (geometry)    2.5   5/8    +1.2561
+      spent_delay      1/L^p (geometry)    4.0   5/8    +1.4696
+      spent_delay      1/L^p (geometry)    8.0   4/8    +0.4709
+      link_length   (1+field)^p (boost)    1.0   8/8    +2.4131
+      link_length   (1+field)^p (boost)    2.5   7/8    +2.3954
+      link_length   (1+field)^p (boost)    4.0   7/8    +3.0553
+      link_length   (1+field)^p (boost)    8.0   7/8    +2.4872
+      link_length       retained_frac^p    1.0   5/8    +1.0214
+      link_length       retained_frac^p    2.5   5/8    +1.5646
+      link_length       retained_frac^p    4.0   4/8    +1.2317
+      link_length       retained_frac^p    8.0   6/8    +1.7165
+      link_length            1/(1+sf)^p    1.0   8/8    +0.8489
+      link_length            1/(1+sf)^p    2.5   6/8    +1.5090
+      link_length            1/(1+sf)^p    4.0   8/8    +1.2019
+      link_length            1/(1+sf)^p    8.0   8/8    +1.4368
+
+  BEST: action=spent_fraction, atten=(1+field)^p (boost), k=8.0
+        attract=8/8, mean_shift=+2.9264
+
+TEST 3: Flip test for best combo (mass above vs below)
+
+  seed     above     below  flips?
+  --------------------------------
+     0   +4.7454   -4.5229     YES
+     1   +5.1758   -2.7838     YES
+     2   +0.4008   -1.0042     YES
+     3   +0.3648   -0.5469     YES
+     4   +2.7131   -1.1518     YES
+     5   +1.2811   -4.2375     YES
+     6   +5.9666   -2.6056     YES
+     7   +2.7639  -10.0422     YES
+     8   +5.5437   -5.0648     YES
+     9   +4.4823   -0.3590     YES
+    10   +5.0974   -5.9858     YES
+    11   +3.9143   -0.8336     YES
+
+  Flips: 12/12
+
+================================================================================
+SUMMARY
+================================================================================
+
+Key question: can attenuation (not just phase) produce attraction
+on random graphs where phase coherence fails?
+
+TEST COMPLETE

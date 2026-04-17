@@ -1,0 +1,29 @@
+==============================================================================
+SOURCE-PROJECTED PARAMETER MAP
+  Retained 3D modular DAG family
+  Question: is the source-projected improvement stable nearby?
+==============================================================================
+
+  seeds/config: 24
+  gap: 3.0
+  k-band: (3.0, 5.0, 7.0)
+  fixed mass count for b sweep: 8
+  fixed b for mass sweep: 3.0
+  projection strengths: (0.02, 0.04, 0.08, 0.12, 0.16, 0.24)
+
+CONFIG SWEEP
+                         label  b alpha   b R2  M alpha   M R2     b@3     M@3
+  ------------------------------------------------------------------------------------------
+            Laplacian baseline    0.211  0.579    0.392  0.911   1.607     nan
+         Source-resolved Green    0.026  0.012    1.126  0.821   0.497     nan
+  Source-projected strength=0.02   -0.234  0.151    0.768  0.863   0.242     nan
+  Source-projected strength=0.04   -0.106  0.111    1.440  0.923   0.349     nan
+  Source-projected strength=0.08   -0.190  0.593    1.245  0.958   0.556     nan
+  Source-projected strength=0.12   -0.173  0.521    0.691  0.880   0.692     nan
+  Source-projected strength=0.16   -0.083  0.141    0.587  0.826   0.839     nan
+  Source-projected strength=0.24    0.083  0.091    0.564  0.923   0.931     nan
+
+VERDICT
+  Best projected strength = Source-projected strength=0.02; b alpha=-0.234, M alpha=0.768.
+  The projected lane is still a parameter-sensitive partial move, not a clean rescue.
+==============================================================================

@@ -1,0 +1,4 @@
+H=0.25 b=3.0 NL=60 n_nodes=141660 dM=+0.025555 kubo_true=+5.986043
+H=0.25 b=4.0 NL=60 n_nodes=141660 dM=+0.015455 kubo_true=+3.819639
+H=0.25 b=5.0 NL=60 n_nodes=141660 dM=+0.011405 kubo_true=+2.826383
+H=0.25 b=6.0 NL=60 n_nodes=141660 dM=+0.008900 kubo_true=+2.211718

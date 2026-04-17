@@ -1,0 +1,28 @@
+==============================================================================
+4D TRUE VISIBILITY (BINNED): Modular DAGs
+  Review-safe fixed-bin detector metric with envelope smoothing
+  Goal: check whether V_gain ~ 0 survives binning
+==============================================================================
+
+   gap     N    V_coh    V_sng    V_gain  n_ok  verdict
+  ------------------------------------------------------------
+   3.0    12    0.908    0.908    -0.000     8  NONE
+   3.0    18    0.847    0.887    -0.041     8  NONE
+   3.0    25    0.959    0.961    -0.001     8  NONE
+   3.0    40    0.950    0.953    -0.003     8  NONE
+   3.0    60    0.914    0.893    +0.021     8  PASS
+   3.0    80    0.467    0.547    -0.080     8  NONE
+   3.0   100    0.000    0.000    +0.000     8  NONE
+   5.0    12    0.473    0.469    +0.005     8  WEAK
+   5.0    18    0.562    0.572    -0.010     8  NONE
+   5.0    25    0.380    0.269    +0.111     8  PASS
+   5.0    40    0.460    0.468    -0.008     8  NONE
+   5.0    60    0.756    0.767    -0.011     8  NONE
+   5.0    80    0.646    0.642    +0.004     8  WEAK
+   5.0   100    0.000    0.000    +0.000     8  NONE
+
+INTERPRETATION
+  V_gain > 0 means the coherent two-slit profile differs from
+  the single-slit average after binning and mild envelope smoothing.
+  This is the stricter check for whether the 4D gain is real.
+==============================================================================

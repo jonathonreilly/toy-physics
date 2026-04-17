@@ -1,0 +1,27 @@
+====================================================================================
+SOURCE-RESOLVED EXACT GREEN H025 POCKET
+  compact exact h=0.25 refinement family, source-resolved Green-like field
+  comparison: source-resolved field vs instantaneous 1/r field
+====================================================================================
+h=0.25, W=3, L=6, source_cluster=4 nodes
+field kernel: exp(-mu r)/(r+eps), mu=0.08, eps=0.5
+source strengths: (0.001, 0.002, 0.004, 0.008)
+target max |f|: 0.02
+
+REDUCTION CHECK
+  zero-source dynamic shift: +0.000000e+00
+  calibration gain: 1.757890e+00
+
+       s         inst        green  green/inst       max|f|
+----------------------------------------------------------------------
+  0.0010 +1.410541e-03 +1.872661e-03       1.328 2.500000e-03
+  0.0020 +2.821591e-03 +3.747301e-03       1.328 5.000000e-03
+  0.0040 +5.645274e-03 +7.502598e-03       1.329 1.000000e-02
+  0.0080 +1.129975e-02 +1.503801e-02       1.331 2.000000e-02
+
+SAFE READ
+  instantaneous F~M exponent: 1.00
+  green-kernel F~M exponent: 1.00
+  TOWARD rows: 4/4
+  mean |green/inst| ratio: 1.329
+  this is a compact h=0.25 refinement-positive pocket, not yet a full theory

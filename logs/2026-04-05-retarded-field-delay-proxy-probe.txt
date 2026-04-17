@@ -1,0 +1,25 @@
+========================================================================================
+RETARDED FIELD DELAY PROXY
+  One observable: intermediate-layer phase lag
+  Weak-field check: mix=0 recovers instantaneous baseline exactly
+========================================================================================
+
+family: generated 3D DAG, seeds=6, layers=18, nodes/layer=32, probe_layer=9, mix=(0.0, 0.25, 0.5, 1.0)
+mass_layer=12, mass_count=8, K=5.0
+
+   mix   phase_lag(rad)   amp_ratio  seeds
+----------------------------------------------
+  0.00        +0.000000      1.0000      6
+  0.25        +2.644361      1.0214      6
+  0.50        -0.022984      1.1361      6
+  1.00        -0.259181      0.7282      6
+
+WEAK-FIELD CONSISTENCY
+  mix=0 phase lag: +0.000000 rad
+  -> exact recovery of the instantaneous baseline on this probe
+
+SAFE READ
+  - The retarded blend produces a small but real intermediate-layer phase lag.
+  - The weak-field limit (mix=0) returns to the instantaneous baseline exactly.
+  - This is a compact delay proxy, not a gravitational-wave theory.
+  - Largest mean lag in this replay: mix=0.25, +2.644361 rad.

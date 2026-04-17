@@ -1,0 +1,92 @@
+generated support-collapse guard projection started 2026-03-28T21:12:19
+
+Generated Support-Collapse Guard Projection
+===========================================
+target=base:taper-wrap
+ensembles=default,broader,wider
+generated_rows_total=6
+generated_guarded_total=6
+generated_modeled_rows_total=0
+generated_modeled_misclassified_total=0
+generated_modeled_ambiguous_total=0
+generated_modeled_unmatched_total=0
+first_modeled_failure_ensemble=none within tested ensembles
+historical_guarded_total=0
+historical_modeled_misclassified_total=0
+
+ensemble=default
+----------------
+rows=2 (pair-only-sensitive:2)
+styles=geometry:2
+guarded=2 (base:taper-wrap:geometry-c:1, base:taper-wrap:geometry-e:1)
+modeled_rows=0 (none)
+modeled_misclassified=0 (none)
+modeled_ambiguous=0 (none)
+modeled_unmatched=0 (none)
+guarded_branches:
+  guarded-support-collapse: 2 (pair-only-sensitive:2)
+  high-closure-add4: 0 (none)
+  high-closure-pair-only: 0 (none)
+  outside-gate-pair-only: 0 (none)
+  outside-gate-add4: 0 (none)
+  outside-gate-add1-default: 0 (none)
+guarded_rows:
+  geometry:base:taper-wrap:geometry-c actual=pair-only-sensitive guarded_subtype=out-of-domain support_load=0.000 closure_load=0.000 edge_identity_event_count=0.000
+  geometry:base:taper-wrap:geometry-e actual=pair-only-sensitive guarded_subtype=out-of-domain support_load=0.000 closure_load=0.000 edge_identity_event_count=0.000
+modeled_misclassified_rows: none
+
+ensemble=broader
+----------------
+rows=2 (pair-only-sensitive:2)
+styles=geometry:2
+guarded=2 (base:taper-wrap:geometry-c:1, base:taper-wrap:geometry-e:1)
+modeled_rows=0 (none)
+modeled_misclassified=0 (none)
+modeled_ambiguous=0 (none)
+modeled_unmatched=0 (none)
+guarded_branches:
+  guarded-support-collapse: 2 (pair-only-sensitive:2)
+  high-closure-add4: 0 (none)
+  high-closure-pair-only: 0 (none)
+  outside-gate-pair-only: 0 (none)
+  outside-gate-add4: 0 (none)
+  outside-gate-add1-default: 0 (none)
+guarded_rows:
+  geometry:base:taper-wrap:geometry-c actual=pair-only-sensitive guarded_subtype=out-of-domain support_load=0.000 closure_load=0.000 edge_identity_event_count=0.000
+  geometry:base:taper-wrap:geometry-e actual=pair-only-sensitive guarded_subtype=out-of-domain support_load=0.000 closure_load=0.000 edge_identity_event_count=0.000
+modeled_misclassified_rows: none
+
+ensemble=wider
+--------------
+rows=2 (pair-only-sensitive:2)
+styles=geometry:2
+guarded=2 (base:taper-wrap:geometry-c:1, base:taper-wrap:geometry-e:1)
+modeled_rows=0 (none)
+modeled_misclassified=0 (none)
+modeled_ambiguous=0 (none)
+modeled_unmatched=0 (none)
+guarded_branches:
+  guarded-support-collapse: 2 (pair-only-sensitive:2)
+  high-closure-add4: 0 (none)
+  high-closure-pair-only: 0 (none)
+  outside-gate-pair-only: 0 (none)
+  outside-gate-add4: 0 (none)
+  outside-gate-add1-default: 0 (none)
+guarded_rows:
+  geometry:base:taper-wrap:geometry-c actual=pair-only-sensitive guarded_subtype=out-of-domain support_load=0.000 closure_load=0.000 edge_identity_event_count=0.000
+  geometry:base:taper-wrap:geometry-e actual=pair-only-sensitive guarded_subtype=out-of-domain support_load=0.000 closure_load=0.000 edge_identity_event_count=0.000
+modeled_misclassified_rows: none
+
+historical_frozen_bucket
+=======================
+rows=32 (add1-sensitive:15, add4-sensitive:8, pair-only-sensitive:9)
+guarded=0 (none)
+modeled_misclassified=0 (none)
+guarded_rows: none
+
+Conclusion
+==========
+The minimal zero-support guard cleanly isolates the canonical generated failures into an out-of-domain support-collapse bucket.
+No historical frozen-bucket row is guarded, and the historical exact-close remains unchanged under the guarded projection.
+
+generated support-collapse guard projection completed 2026-03-28T21:15:19 total_elapsed=180.5s

@@ -1,0 +1,34 @@
+================================================================================
+GENERATED DAG RESIDUAL BRANCH CROSSWALK COMPARE
+================================================================================
+Rows: wide=24, self_sparse=8, pooled=32, neighbor_radius=2.5, coupling=3.000
+
+Branch means:
+  wide flips=12/24 mean_last6_shift=2.3043 mean_extra_field_on_packet=0.0149 mean_extra_forward_share=0.5991
+  self_sparse flips=4/8 mean_last6_shift=-1.0882 mean_extra_packet_side_gap=-0.0779 mean_extra_corridor_share=0.2483
+
+Retained branch-local rules on their home branch:
+  wide-local: extra_field_mean_on_packet <= 0.0010 (accuracy=0.5833)
+  self_sparse-local: extra_support_corridor_share <= 0.0000 (accuracy=0.8750)
+
+Cross-branch transfer of branch-local rules:
+  wide-local on self_sparse: accuracy=0.2500
+  self_sparse-local on wide: accuracy=0.4583
+
+  wide-local split on wide: matched: total=18 flips=10 stays=8 flip_fraction=0.5556 mean_last6_shift=1.5525 | unmatched: total=6 flips=2 stays=4 flip_fraction=0.3333 mean_last6_shift=4.5596
+  self_sparse-local split on self_sparse: matched: total=3 flips=3 stays=0 flip_fraction=1.0000 mean_last6_shift=-5.8023 | unmatched: total=5 flips=1 stays=4 flip_fraction=0.2000 mean_last6_shift=1.7403
+
+Best pooled single rule over forward-family observables:
+  pooled-single: extra_forward_side_gap <= -0.0001 (accuracy=0.6562)
+  branch accuracies: wide=0.6667, self_sparse=0.6250
+
+Best pooled two-clause OR over forward-family observables:
+  pooled-or: extra_support_forward_share >= 0.8571 or extra_forward_side_gap <= -0.0001 (accuracy=0.7500)
+  branch accuracies: wide=0.7917, self_sparse=0.6250
+
+Best pooled deficit-only two-clause OR (all <= directions):
+  pooled-deficit-or: extra_support_forward_share <= 0.1429 or extra_forward_side_gap <= -0.0001 (accuracy=0.6875)
+  branch accuracies: wide=0.6250, self_sparse=0.8750
+
+Interpretation:
+  This compare asks whether the retained wide and self:sparse-25 residual stories really collapse to one smaller forward-packet-retiming language. If branch-local rules fail to transfer and pooled forward-family rules stay materially weaker, the right retained picture is two residual mechanisms with a shared abstract forward-retiming theme rather than one universal law.

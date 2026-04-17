@@ -1,0 +1,20 @@
+========================================================================================
+SAME-HARNESS ACTION COMPARISON: spent-delay vs valley-linear
+  fixed family: 3D ordered dense lattice, 1/L^2 kernel, h^2 measure
+  h=0.25, W=10, L=12, max_d=12, nodes=321,489
+========================================================================================
+
+spent_delay: done in 114.9s
+valley_linear: done in 112.7s
+
+action                 Born        k=0      F~M    gravity   TOWARD                   tail
+------------------------------------------------------------------------------------------------------------
+spent-delay        4.20e-15  +0.00e+00     0.50  +0.045346      8/8 z>=4: -0.52 (R²=0.951)
+valley-linear      4.20e-15  +0.00e+00     1.00  +0.000224      8/8 z>=4: -0.93 (R²=0.983)
+
+READ:
+  - This is a bounded same-family action-fork comparison.
+  - If valley-linear wins here, that does not preserve any spent-delay flagship claim automatically.
+  - Convergence under refinement still needs its own frozen artifact chain.
+
+Total time: 227.8s

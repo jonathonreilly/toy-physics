@@ -1,0 +1,106 @@
+================================================================================================================
+LATTICE-SYMMETRY UNIFICATION DECISION
+  ordered 2D lattice + explicit Z2 symmetry, standard linear propagator only
+  Born is a same-family companion Sorkin audit, not the exact same 2-slit aperture card
+================================================================================================================
+
+CANONICAL DECISION SWEEP
+  slit family=wide_center rows=[3, 4, 5] mass convention=top_slit+1 detector=final-layer centroid
+  max_dy  mass_y       MI     d_TV   pur_cl    1-pur       grav  sign          k=0        Born  retain
+  ------------------------------------------------------------------------------------------------------
+       3       6    0.339    0.590    0.954    0.046    -7.9536  away   +0.000e+00    4.88e-16      no
+       4       6    0.517    0.735    0.876    0.124    -7.4171  away   +0.000e+00    6.54e-16      no
+       5       6    0.653    0.835    0.915    0.085    -6.5389  away   +0.000e+00    4.24e-16      no
+       6       6    0.380    0.574    0.959    0.041    -5.4673  away   +0.000e+00    7.61e-16      no
+
+DISTANCE-LAW COMPATIBILITY: BARRIER HARNESS (canonical slit family)
+  max_dy=3
+    signed : b=2:-4.6324  b=3:-6.3937  b=4:-7.4779  b=5:-7.9198  b=6:-7.9536  b=7:-7.7956  b=8:-7.5852  b=10:-7.1918  b=13:-6.4457  b=16:-5.0710  b=19:-3.5160
+    |delta|: b=2:4.6324  b=3:6.3937  b=4:7.4779  b=5:7.9198  b=6:7.9536  b=7:7.7956  b=8:7.5852  b=10:7.1918  b=13:6.4457  b=16:5.0710  b=19:3.5160
+    positive points=0  tail fit=peak@6,a=-0.63,R2=0.82
+  max_dy=4
+    signed : b=2:-2.9509  b=3:-4.2941  b=4:-5.6003  b=5:-6.6960  b=6:-7.4171  b=7:-7.7151  b=8:-7.7331  b=10:-7.4677  b=13:-6.9030  b=16:-5.5227  b=19:-3.6578
+    |delta|: b=2:2.9509  b=3:4.2941  b=4:5.6003  b=5:6.6960  b=6:7.4171  b=7:7.7151  b=8:7.7331  b=10:7.4677  b=13:6.9030  b=16:5.5227  b=19:3.6578
+    positive points=0  tail fit=peak@8,a=-0.79,R2=0.79
+  max_dy=5
+    signed : b=2:-4.9577  b=3:-5.6056  b=4:-5.9788  b=5:-6.2912  b=6:-6.5389  b=7:-6.6830  b=8:-6.7330  b=10:-6.6418  b=13:-5.5568  b=16:-3.3331  b=19:-1.6859
+    |delta|: b=2:4.9577  b=3:5.6056  b=4:5.9788  b=5:6.2912  b=6:6.5389  b=7:6.6830  b=8:6.7330  b=10:6.6418  b=13:5.5568  b=16:3.3331  b=19:1.6859
+    positive points=0  tail fit=peak@8,a=-1.52,R2=0.81
+  max_dy=6
+    signed : b=2:-6.0181  b=3:-5.9901  b=4:-5.7719  b=5:-5.5875  b=6:-5.4673  b=7:-5.3962  b=8:-5.3698  b=10:-5.2975  b=13:-3.8160  b=16:-1.5375  b=19:-0.3628
+    |delta|: b=2:6.0181  b=3:5.9901  b=4:5.7719  b=5:5.5875  b=6:5.4673  b=7:5.3962  b=8:5.3698  b=10:5.2975  b=13:3.8160  b=16:1.5375  b=19:0.3628
+    positive points=0  tail fit=peak@2,a=-0.87,R2=0.50
+
+DISTANCE-LAW COMPATIBILITY: NO-BARRIER COMPANION HARNESS
+  max_dy=3
+    signed : b=2:-2.1804  b=3:-3.6894  b=4:-5.1864  b=5:-6.2954  b=6:-6.8686  b=7:-6.9913  b=8:-6.8211  b=10:-6.0770  b=13:-4.7615  b=16:-3.5750  b=19:-2.5784
+    |delta|: b=2:2.1804  b=3:3.6894  b=4:5.1864  b=5:6.2954  b=6:6.8686  b=7:6.9913  b=8:6.8211  b=10:6.0770  b=13:4.7615  b=16:3.5750  b=19:2.5784
+    positive points=0  tail fit=peak@7,a=-0.98,R2=0.93
+  max_dy=4
+    signed : b=2:+0.6820  b=3:+0.5585  b=4:-0.1350  b=5:-1.4374  b=6:-3.0606  b=7:-4.5027  b=8:-5.4367  b=10:-5.8870  b=13:-4.8100  b=16:-3.3169  b=19:-1.9460
+    |delta|: b=2:0.6820  b=3:0.5585  b=4:0.1350  b=5:1.4374  b=6:3.0606  b=7:4.5027  b=8:5.4367  b=10:5.8870  b=13:4.8100  b=16:3.3169  b=19:1.9460
+    positive points=2  tail fit=peak@10,a=-1.68,R2=0.92
+  max_dy=5
+    signed : b=2:+1.6679  b=3:+1.4783  b=4:+0.2659  b=5:-1.4950  b=6:-2.9710  b=7:-3.7774  b=8:-4.0162  b=10:-3.6446  b=13:-2.4635  b=16:-1.1703  b=19:-0.1508
+    |delta|: b=2:1.6679  b=3:1.4783  b=4:0.2659  b=5:1.4950  b=6:2.9710  b=7:3.7774  b=8:4.0162  b=10:3.6446  b=13:2.4635  b=16:1.1703  b=19:0.1508
+    positive points=3  tail fit=peak@8,a=-3.37,R2=0.75
+  max_dy=6
+    signed : b=2:-4.3834  b=3:-5.2242  b=4:-5.4973  b=5:-5.4018  b=6:-5.0633  b=7:-4.5869  b=8:-4.0479  b=10:-2.9480  b=13:-1.5567  b=16:-0.7506  b=19:-0.5761
+    |delta|: b=2:4.3834  b=3:5.2242  b=4:5.4973  b=5:5.4018  b=6:5.0633  b=7:4.5869  b=8:4.0479  b=10:2.9480  b=13:1.5567  b=16:0.7506  b=19:0.5761
+    positive points=0  tail fit=peak@4,a=-1.55,R2=0.89
+
+TRADEOFF MAP
+  max_dy           slit   off        Born       MI    1-pur  grav_s    |grav|            distance_fit  retain
+  --------------------------------------------------------------------------------------------------------
+       3  narrow_center    -1    4.88e-16    0.630    0.148    away     6.599  peak@7,a=-0.98,R2=0.93      no
+       3  narrow_center    +0    4.88e-16    0.508    0.084    away     7.581  peak@7,a=-0.98,R2=0.93      no
+       3  narrow_center    +1    4.88e-16    0.411    0.053    away     7.953  peak@7,a=-0.98,R2=0.93      no
+       3    wide_center    -1    4.88e-16    0.485    0.092    away     7.478  peak@7,a=-0.98,R2=0.93      no
+       3    wide_center    +0    4.88e-16    0.399    0.060    away     7.920  peak@7,a=-0.98,R2=0.93      no
+       3    wide_center    +1    4.88e-16    0.339    0.046    away     7.954  peak@7,a=-0.98,R2=0.93      no
+       3     wide_outer    -1    3.11e-16    0.562    0.049    away     8.455  peak@7,a=-0.98,R2=0.93      no
+       3     wide_outer    +0    3.11e-16    0.481    0.035    away     8.334  peak@7,a=-0.98,R2=0.93      no
+       3     wide_outer    +1    3.11e-16    0.421    0.031    away     8.089  peak@7,a=-0.98,R2=0.93      no
+       4  narrow_center    -1    6.54e-16    0.594    0.261    away     4.745  peak@10,a=-1.68,R2=0.92      no
+       4  narrow_center    +0    6.54e-16    0.615    0.203    away     5.942  peak@10,a=-1.68,R2=0.92      no
+       4  narrow_center    +1    6.54e-16    0.595    0.148    away     6.906  peak@10,a=-1.68,R2=0.92      no
+       4    wide_center    -1    6.54e-16    0.598    0.225    away     5.600  peak@10,a=-1.68,R2=0.92      no
+       4    wide_center    +0    6.54e-16    0.576    0.169    away     6.696  peak@10,a=-1.68,R2=0.92      no
+       4    wide_center    +1    6.54e-16    0.517    0.124    away     7.417  peak@10,a=-1.68,R2=0.92      no
+       4     wide_outer    -1    1.47e-15    0.701    0.143    away     8.034  peak@10,a=-1.68,R2=0.92      no
+       4     wide_outer    +0    1.47e-15    0.656    0.108    away     8.285  peak@10,a=-1.68,R2=0.92      no
+       4     wide_outer    +1    1.47e-15    0.586    0.086    away     8.188  peak@10,a=-1.68,R2=0.92      no
+       5  narrow_center    -1    4.24e-16    0.642    0.194    away     6.044  peak@8,a=-3.37,R2=0.75      no
+       5  narrow_center    +0    4.24e-16    0.749    0.146    away     6.235  peak@8,a=-3.37,R2=0.75      no
+       5  narrow_center    +1    4.24e-16    0.805    0.102    away     6.380  peak@8,a=-3.37,R2=0.75      no
+       5    wide_center    -1    4.24e-16    0.761    0.181    away     5.979  peak@8,a=-3.37,R2=0.75      no
+       5    wide_center    +0    4.24e-16    0.788    0.127    away     6.291  peak@8,a=-3.37,R2=0.75      no
+       5    wide_center    +1    4.24e-16    0.653    0.085    away     6.539  peak@8,a=-3.37,R2=0.75      no
+       5     wide_outer    -1    5.06e-16    0.836    0.108    away     7.161  peak@8,a=-3.37,R2=0.75      no
+       5     wide_outer    +0    5.06e-16    0.839    0.082    away     7.134  peak@8,a=-3.37,R2=0.75      no
+       5     wide_outer    +1    5.06e-16    0.709    0.062    away     7.053  peak@8,a=-3.37,R2=0.75      no
+       6  narrow_center    -1    7.61e-16    0.655    0.111    away     6.154  peak@4,a=-1.55,R2=0.89      no
+       6  narrow_center    +0    7.61e-16    0.738    0.079    away     5.862  peak@4,a=-1.55,R2=0.89      no
+       6  narrow_center    +1    7.61e-16    0.660    0.056    away     5.596  peak@4,a=-1.55,R2=0.89      no
+       6    wide_center    -1    7.61e-16    0.741    0.093    away     5.772  peak@4,a=-1.55,R2=0.89      no
+       6    wide_center    +0    7.61e-16    0.584    0.062    away     5.588  peak@4,a=-1.55,R2=0.89      no
+       6    wide_center    +1    7.61e-16    0.380    0.041    away     5.467  peak@4,a=-1.55,R2=0.89      no
+       6     wide_outer    -1    5.11e-16    0.727    0.051    away     5.873  peak@4,a=-1.55,R2=0.89      no
+       6     wide_outer    +0    5.11e-16    0.585    0.038    away     5.621  peak@4,a=-1.55,R2=0.89      no
+       6     wide_outer    +1    5.11e-16    0.407    0.031    away     5.448  peak@4,a=-1.55,R2=0.89      no
+
+BEAM-DEPLETION DIAGNOSTIC (canonical slit family, mass=top_slit+1)
+  max_dy  upper mass/flat  lower mass/flat       skew
+  --------------------------------------------------------
+       3           0.0298           0.6457    -0.6159
+       4           0.8849           8.6544    -7.7695
+       5           0.0406           0.7441    -0.7035
+       6           0.0038           0.1073    -0.1035
+
+DECISION
+  Born-clean companion rows: 36/36
+  Nontrivial MI + decoherence rows: 36/36
+  Positive-gravity rows: 0/36
+  Retained one-family rows: 0/36
+  conclusion=NEGATIVE
+  blocker=beam depletion from the symmetric two-slit geometry; aperture retuning did not fix the sign

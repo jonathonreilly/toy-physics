@@ -1,0 +1,28 @@
+DIRECT PHASE KICK DECOHERENCE (bypass field smoothing)
+Period-3 oscillation, kick_strength=1.0, angle² β=0.8
+
+     N  V_static  V_kicked    V_drop  n_mass
+  ----------------------------------------
+     8    0.4749    0.4107   +0.0641       8
+    10    0.9330    0.9328   +0.0002      16
+    12    0.9119    0.9198   -0.0080      12
+    15    0.9581    0.9326   +0.0255      15
+    18    0.9851    0.9842   +0.0009      21
+    20    0.9926    0.9855   +0.0071      20
+    25    0.9972    0.9966   +0.0006      23
+
+VERDICT: FAIL — V_drop positive but tiny and does not increase with N.
+3 oscillation phases is insufficient diversity to decohere exponentially
+many paths. The averaging over phases converges because fringe patterns
+are similar across phases.
+
+This is the 14th decoherence architecture tested. Updated failure count:
+  Field-mediated: smoothed by Laplacian (CA oscillation)
+  Direct phase kicks: insufficient phase diversity (3 << path count)
+  Path-level records: CLT concentrates amplitude
+  All finite-register: amplitude concentration
+
+THE WALL: decoherence needs env diversity that grows with path
+multiplicity. CA oscillation gives 3 states. Path records give
+polynomial states. Path multiplicity is exponential. The mismatch
+is fundamental for any fixed-period oscillator or finite register.

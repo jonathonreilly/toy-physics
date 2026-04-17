@@ -1,0 +1,52 @@
+====================================================================================
+EVOLVING NETWORK PROTOTYPE V3
+  Gate B: generated structure vs connectivity-preserving imposed control
+  Comparison: self-regulating hard-gap pruning vs backbone corridor control
+====================================================================================
+
+[n_layers=20]
+ d_min  baseline_pur  generated_pur  imposed_pur  generated_gap  imposed_gap   rem_g   rem_i  spine   conv
+--------------------------------------------------------------------------------------------------------
+  0.10        0.9744         0.9408          nan           3.53         0.63  1258.2   315.0   1.00   0.00
+  0.20        0.9744         0.9475          nan           3.51         0.63  1331.3   315.0   1.00   0.00
+  0.30        0.9744         0.9477          nan           4.09         0.63  1376.8   315.0   1.00   0.00
+
+[n_layers=30]
+ d_min  baseline_pur  generated_pur  imposed_pur  generated_gap  imposed_gap   rem_g   rem_i  spine   conv
+--------------------------------------------------------------------------------------------------------
+  0.10        0.9648         0.9419          nan           1.18         0.61  1603.3   555.2   1.00   0.00
+  0.20        0.9648         0.9768          nan           1.47         0.61  1907.5   555.2   1.00   0.00
+  0.30        0.9648         0.9630          nan           2.06         0.61  2079.7   555.2   1.00   0.00
+
+[n_layers=40]
+ d_min  baseline_pur  generated_pur  imposed_pur  generated_gap  imposed_gap   rem_g   rem_i  spine   conv
+--------------------------------------------------------------------------------------------------------
+  0.10        0.9894         0.9884          nan           0.88         0.59  2198.8   798.2   1.00   0.00
+  0.20        0.9894         0.9393          nan           1.21         0.59  2650.0   798.2   1.00   0.00
+  0.30        0.9894         0.9580          nan           1.98         0.59  2880.3   798.2   1.00   0.00
+
+====================================================================================
+PAIRWISE READ
+====================================================================================
+
+  N=20, d_min=0.10: Δpur=+nan, Δgap=+2.90, Δremoved=+943.2, spine_ok=1.00
+  N=20, d_min=0.20: Δpur=+nan, Δgap=+2.88, Δremoved=+1016.3, spine_ok=1.00
+  N=20, d_min=0.30: Δpur=+nan, Δgap=+3.46, Δremoved=+1061.8, spine_ok=1.00
+  N=30, d_min=0.10: Δpur=+nan, Δgap=+0.57, Δremoved=+1048.2, spine_ok=1.00
+  N=30, d_min=0.20: Δpur=+nan, Δgap=+0.86, Δremoved=+1352.3, spine_ok=1.00
+  N=30, d_min=0.30: Δpur=+nan, Δgap=+1.46, Δremoved=+1524.5, spine_ok=1.00
+  N=40, d_min=0.10: Δpur=+nan, Δgap=+0.29, Δremoved=+1400.7, spine_ok=1.00
+  N=40, d_min=0.20: Δpur=+nan, Δgap=+0.62, Δremoved=+1851.8, spine_ok=1.00
+  N=40, d_min=0.30: Δpur=+nan, Δgap=+1.39, Δremoved=+2082.2, spine_ok=1.00
+
+READ:
+  - Generated structure means local self-regulating pruning by distinguishability.
+  - Imposed structure means the same removal budget spent outside a protected backbone.
+  - The imposed comparator now preserves a backbone corridor, but this sweep
+    still loses finite detector purity, so the result is methodological.
+  - Negative Δpur with positive Δgap would be the cleanest Gate B win.
+  - If the deltas are small, mixed, or nan, that is a bounded negative result,
+    not a promoted dynamics solution.
+
+Total time: 5.1s
+====================================================================================

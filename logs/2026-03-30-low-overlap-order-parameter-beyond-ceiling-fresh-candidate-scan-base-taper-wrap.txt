@@ -1,0 +1,15 @@
+beyond-ceiling fresh candidate scan started 2026-03-30T07:37:11
+
+Beyond-Ceiling Fresh Candidate Scan
+===================================
+ensembles=ultra,mega,peta,exa
+packs=base
+scenario_specs=base:taper-wrap
+excluded_sources=base:rect-wrap:local-morph-f,base:skew-wrap:local-morph-c,base:skew-wrap:local-morph-k,base:skew-wrap:mode-mix-d,base:taper-hard:local-morph-f,base:taper-wrap:mode-mix-f,large:taper-wrap-large:local-morph-g,mirror:skew-hard-mirror:local-morph-f
+rows_total=0
+top_candidate=none
+
+Top Fresh Candidates
+====================
+
+beyond-ceiling fresh candidate scan completed 2026-03-30T07:39:59 total_elapsed=168.2s

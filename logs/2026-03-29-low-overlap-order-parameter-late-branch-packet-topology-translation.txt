@@ -1,0 +1,21 @@
+late branch packet topology translation started 2026-03-29T21:10:04
+
+Late Branch Packet Topology Translation
+======================================
+rows_total=7
+late_rows=peta:base:rect-wrap:local-morph-f,exa:base:rect-wrap:local-morph-f,peta:base:taper-hard:local-morph-f,exa:base:taper-hard:local-morph-f,exa:base:skew-wrap:local-morph-k
+exhausted_rows=exa:large:taper-wrap-large:local-morph-g,exa:mirror:skew-hard-mirror:local-morph-f
+late_completion_uniform=Y
+shared_completion_relative_support_nodes=[(-1, 0)]
+shared_completion_relative_closed_edges=[(-1, -1)->(-1, 0), (-1, 0)->(-1, 1), (-1, 0)->(0, -1), (-1, 0)->(0, 1)]
+completion_hinge_relative_node=(-1, 0)
+completion_hinge_incident_closed_edge_count=4
+completion_hinge_incident_closed_edges=[(-1, -1)->(-1, 0), (-1, 0)->(-1, 1), (-1, 0)->(0, -1), (-1, 0)->(0, 1)]
+completion_hinge_neighbor_nodes=[(-1, -1), (-1, 1), (0, -1), (0, 1)]
+completion_hinge_same_column_neighbor_count=2
+completion_hinge_inward_neighbor_count=2
+completion_hinge_outward_neighbor_count=0
+completion_hinge_upper_neighbor_count=2
+completion_hinge_lower_neighbor_count=2
+topology_translation_summary=the late branch repairs the exhausted seven-support mid packet by inserting one four-incident flank hinge. That hinge touches two same-column neighbors and two inward neighbors, so it simultaneously restores the local vertical flank ladder and the two inward bridge-bridge closures into the packet interior.
+late branch packet topology translation completed 2026-03-29T21:17:06 total_elapsed=422.0s

@@ -1,0 +1,47 @@
+========================================================================
+EVOLVING NETWORK PROTOTYPE
+========================================================================
+
+Seed: 35 nodes, x=[0,4], y=[-3,3]
+
+Growth history:
+  Step  0:    35 nodes, x=[0,4], y=[-3,3]
+  Step  1:    63 nodes, x=[-1,5], y=[-4,4]
+  Step  2:    99 nodes, x=[-2,6], y=[-5,5]
+  Step  3:   143 nodes, x=[-3,7], y=[-6,6]
+  Step  4:   195 nodes, x=[-4,8], y=[-7,7]
+  Step  5:   255 nodes, x=[-5,9], y=[-8,8]
+  Step  6:   323 nodes, x=[-6,10], y=[-9,9]
+  Step  7:   399 nodes, x=[-7,11], y=[-10,10]
+  Step  8:   483 nodes, x=[-8,12], y=[-11,11]
+  Step  9:   575 nodes, x=[-9,13], y=[-12,12]
+  Step 10:   675 nodes, x=[-10,14], y=[-13,13]
+  Step 11:   783 nodes, x=[-11,15], y=[-14,14]
+  Step 12:   899 nodes, x=[-12,16], y=[-15,15]
+  Step 13:   961 nodes, x=[-13,17], y=[-15,15]
+  Step 14:  1023 nodes, x=[-14,18], y=[-15,15]
+  Step 15:  1085 nodes, x=[-15,19], y=[-15,15]
+  Step 16:  1147 nodes, x=[-16,20], y=[-15,15]
+  Step 17:  1209 nodes, x=[-17,21], y=[-15,15]
+  Step 18:  1271 nodes, x=[-18,22], y=[-15,15]
+  Step 19:  1333 nodes, x=[-19,23], y=[-15,15]
+  Step 20:  1395 nodes, x=[-20,24], y=[-15,15]
+
+========================================================================
+INTERFERENCE ON GROWING GRAPH
+========================================================================
+
+  Step 5: grid too small (max_x=9)
+  Step 10: 675 nodes, barrier_x=7, slits=±4, V(y=0)=1.000000, mean_V=0.092490
+  Step 15: 1085 nodes, barrier_x=9, slits=±4, V(y=0)=1.000000, mean_V=0.152824
+  Step 20: 1395 nodes, barrier_x=12, slits=±4, V(y=0)=1.000000, mean_V=0.201805
+
+========================================================================
+GRAVITY ON GROWING GRAPH
+========================================================================
+
+  Step 10: grid too small
+  Step 15: 1085 nodes, 5 mass nodes, max_support=0.2500, field(center)=0.245333, field(edge)=0.000000
+  Step 20: 1395 nodes, 5 mass nodes, max_support=0.2500, field(center)=0.256375, field(edge)=0.000000
+
+PROTOTYPE COMPLETE

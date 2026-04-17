@@ -1,0 +1,23 @@
+======================================================================
+GRAPH-MEMORY SCAR DECOHERENCE
+  Propagator: 1/L^p × exp(-0.8×θ²)
+  Scar: set of mass edges traversed (max 3)
+  P(det) = Σ_scar |ψ(det, scar)|²
+======================================================================
+
+TEST 1: Purity vs graph size
+
+     N  n_mass  n_scar  pur_scar  pur_node  scar_off
+  ------------------------------------------------
+     8       7     332    0.6413    0.7971    1.0000
+    12       9    1166    0.7900    0.6751    1.0000
+    18       7    4490    0.8710    0.7987    1.0000
+
+pur_scar = scar env (this test)
+pur_node = node-label env (comparison)
+scar_off = scars disabled (should be ~1.0, unitary baseline)
+
+PASS: pur_scar does not rise with N
+FAIL: pur_scar rises with N (same as node-label)
+
+TEST COMPLETE

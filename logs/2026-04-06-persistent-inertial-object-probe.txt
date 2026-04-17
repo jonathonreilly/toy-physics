@@ -1,0 +1,45 @@
+============================================================================================================
+PERSISTENT INERTIAL OBJECT PROBE
+  Retained 3D ordered-lattice valley-linear family
+  amplitude-level equivalence is frozen elsewhere; this probe only tests object persistence
+  h=0.5, W=8, L=12, z_mass=5.0, strength=5e-05
+  thresholds: capture>=0.80, carry>=0.90, rel_shift_err<=0.05
+============================================================================================================
+
+Free packet detector centroid z = -0.000000
+Free packet detector width     = 3.871127
+Free packet detector peak      = (iy=-2, iz=+2)
+Detector layer support size    = 1089 sites
+
+RELAUNCH CLASS SWEEP
+       label  sites  capture    carry     best        shift  rel_err   width×
+------------------------------------------------------------------------------------------------
+      topN=1      1    0.006    0.941    0.993 +1.687153e-04    0.053    1.000
+      topN=4      4    0.024    0.893    0.893 +1.687153e-04    0.248    1.000
+      topN=9      9    0.053    0.899    0.911 +1.687153e-04    0.135    1.000
+     topN=16     16    0.094    0.915    0.915 +1.687153e-04    0.052    1.000
+     topN=25     25    0.145    0.905    0.905 +1.687153e-04    0.379    1.000
+     topN=36     36    0.205    0.899    0.899 +1.687153e-04    0.567    1.000
+     topN=49     49    0.271    0.893    0.893 +1.687153e-04    0.648    1.000
+     topN=64     64    0.346    0.887    0.887 +1.687153e-04    0.726    1.000
+     topN=81     81    0.422    0.867    0.867 +1.687153e-04    0.746    1.000
+    topN=100    100    0.485    0.870    0.870 +1.687153e-04    0.725    1.000
+    topN=144    144    0.593    0.892    0.892 +1.687153e-04    0.640    1.000
+    topN=196    196    0.669    0.913    0.913 +1.687153e-04    0.570    1.000
+    topN=225    225    0.706    0.928    0.928 +1.687153e-04    0.509    1.000
+    topN=256    256    0.743    0.936    0.936 +1.687153e-04    0.446    1.000
+    topN=289    289    0.779    0.942    0.942 +1.687153e-04    0.392    1.000
+    topN=361    361    0.839    0.954    0.954 +1.687153e-04    0.271    1.000
+
+BEST ADMISSIBLE CLASS
+  no top-N class met the capture/carry/shift thresholds
+
+SURROGATE-LEADING ROW
+  topN=361 with capture=0.839, carry=0.954, shift=+1.687153e-04, rel_err=0.271, width×=1.000
+
+SAFE READ
+  - Amplitude-level equivalence is not what this probe is testing; that is already frozen elsewhere.
+  - The same ordered family only reaches a broad mesoscopic surrogate row; the leading row is topN=361.
+  - No row clears the combined capture/carry/shift thresholds, so the honest read is broad-surrogate steering,
+    not a closed persistent-mass object.
+  - Total runtime: 16.3s

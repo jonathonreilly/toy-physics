@@ -1,0 +1,12 @@
+WAVE DIRECT-DM SINGLE-POINT RUNNER
+family=Fam2 drift=0.05 restore=0.30
+seed=0
+H=0.250  strength=0.004000
+NL=60  PW=6.000  src_layer=20
+start_z_real=3.000  end_z_real=0.000
+dM(early)  = +0.005393
+dM(late)   = +0.006969
+delta_hist = -0.001576
+R_hist     = -22.61%
+elapsed_s  = 120.78
+rss_mb     = 691.0

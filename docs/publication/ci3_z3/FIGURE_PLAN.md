@@ -1,0 +1,111 @@
+# Figure Plan
+
+This is the current manuscript figure map. It is intentionally conservative:
+only figures that strengthen the retained backbone or cleanly illustrate bounded
+secondary lanes belong in the first public package.
+
+Companion captions live in [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md).
+
+## Core arXiv figure set
+
+### Figure 1. Framework and derivation map
+
+- purpose: one-page visual of the retained backbone
+- content:
+  - `Cl(3)` on `Z^3`
+  - weak-field gravity through Poisson / Newton together with WEP / time dilation
+  - exact native `SU(2)`
+  - graph-first structural `SU(3)`
+  - anomaly-forced `3+1`
+  - one-generation closure
+  - three-generation matter structure
+- source: manuscript synthesis, not a numerical runner
+- manuscript asset: [figure1_retained_backbone.svg](./figures/figure1_retained_backbone.svg)
+- status: landed in arXiv draft
+
+### Figure 2. Graph-first `SU(3)` closure
+
+- purpose: show selector, weak axis, residual swap, and `3 ⊕ 1` split
+- source note: [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](../../GRAPH_FIRST_SU3_INTEGRATION_NOTE.md)
+- source runner: [frontier_graph_first_su3_integration.py](../../../scripts/frontier_graph_first_su3_integration.py)
+- manuscript asset: [figure2_graph_first_su3.svg](./figures/figure2_graph_first_su3.svg)
+- status: landed in arXiv draft
+
+### Figure 3. Anomaly-forced `3+1`
+
+- purpose: show the closure chain from left-handed anomaly to single-clock `3+1`
+- source note: [ANOMALY_FORCES_TIME_THEOREM.md](../../ANOMALY_FORCES_TIME_THEOREM.md)
+- source runner: [frontier_anomaly_forces_time.py](../../../scripts/frontier_anomaly_forces_time.py)
+- manuscript asset: [figure3_anomaly_forced_3plus1.svg](./figures/figure3_anomaly_forced_3plus1.svg)
+- status: landed in arXiv draft
+
+### Figure 4. Three-generation matter structure
+
+- purpose: display exact orbit structure `8 = 1 + 1 + 3 + 3`, the retained `hw=1` no-proper-quotient closure, and the physical-lattice interpretation
+- source note: [THREE_GENERATION_STRUCTURE_NOTE.md](../../THREE_GENERATION_STRUCTURE_NOTE.md), [THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md](../../THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md), [PHYSICAL_LATTICE_NECESSITY_NOTE.md](../../PHYSICAL_LATTICE_NECESSITY_NOTE.md)
+- source runners:
+  - [frontier_generation_fermi_point.py](../../../scripts/frontier_generation_fermi_point.py)
+  - [frontier_generation_rooting_undefined.py](../../../scripts/frontier_generation_rooting_undefined.py)
+  - [frontier_three_generation_observable_theorem.py](../../../scripts/frontier_three_generation_observable_theorem.py)
+  - [frontier_physical_lattice_necessity.py](../../../scripts/frontier_physical_lattice_necessity.py)
+  - [frontier_generation_axiom_boundary.py](../../../scripts/frontier_generation_axiom_boundary.py)
+- manuscript asset: [figure4_three_generation_structure.svg](./figures/figure4_three_generation_structure.svg)
+- status: landed in arXiv draft
+
+### Extended Data candidate. Weak-field gravity corollaries plus exact `I_3 = 0` and CPT
+
+- purpose: carry compact gravity corollaries and exact supporting theorems
+  without stealing main-text space
+- source notes:
+  - [BROAD_GRAVITY_DERIVATION_NOTE.md](../../BROAD_GRAVITY_DERIVATION_NOTE.md)
+  - [I3_ZERO_EXACT_THEOREM_NOTE.md](../../I3_ZERO_EXACT_THEOREM_NOTE.md)
+  - [CPT_EXACT_NOTE.md](../../CPT_EXACT_NOTE.md)
+- source runners:
+  - [frontier_broad_gravity.py](../../../scripts/frontier_broad_gravity.py)
+  - [frontier_born_rule_derived.py](../../../scripts/frontier_born_rule_derived.py)
+  - [frontier_cpt_exact.py](../../../scripts/frontier_cpt_exact.py)
+- manuscript asset: [extended_data_1_support_theorems.svg](./figures/extended_data_1_support_theorems.svg)
+- status: landed in arXiv appendix
+
+### Extended Data candidate. Retained `S^3` compactification / topology closure
+
+- purpose: show the cone-cap family, boundary-link structure, and the retained
+  topology closure without bloating the main text
+- source notes:
+  - [S3_GENERAL_R_DERIVATION_NOTE.md](../../S3_GENERAL_R_DERIVATION_NOTE.md)
+  - [S3_CAP_UNIQUENESS_NOTE.md](../../S3_CAP_UNIQUENESS_NOTE.md)
+- source runners:
+  - [frontier_s3_boundary_link_theorem.py](../../../scripts/frontier_s3_boundary_link_theorem.py)
+  - [frontier_s3_cap_uniqueness.py](../../../scripts/frontier_s3_cap_uniqueness.py)
+  - [frontier_s3_general_r.py](../../../scripts/frontier_s3_general_r.py)
+- manuscript asset: [extended_data_2_s3_topology.svg](./figures/extended_data_2_s3_topology.svg)
+- status: landed in arXiv appendix
+
+## arXiv-only secondary figures
+
+### Figure A1. Bounded DM lane
+
+- purpose: show what is exact, derived, and bounded in the DM relic chain
+- source notes:
+  - [DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md](../../DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md)
+  - [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md)
+- status: wait until DM language stabilizes
+
+### Figure A2. Bounded renormalized `y_t` lane
+
+- purpose: show exact UV theorem versus bounded low-energy bridge
+- source notes:
+  - [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](../../YT_ZERO_IMPORT_AUTHORITY_NOTE.md)
+  - [YT_GAUGE_CROSSOVER_THEOREM.md](../../YT_GAUGE_CROSSOVER_THEOREM.md)
+- manuscript asset: [figureA2_bounded_yt_lane.svg](./figures/figureA2_bounded_yt_lane.svg)
+- status: landed in arXiv appendix
+
+### Figure A3. Bounded CKM lane
+
+- purpose: preserve route history without confusing it for the promoted CKM package
+- source notes:
+  - [CABIBBO_BOUND_NOTE.md](../../work_history/ckm/CABIBBO_BOUND_NOTE.md)
+  - [CKM_MASS_BASIS_NNI_NOTE.md](../../work_history/ckm/CKM_MASS_BASIS_NNI_NOTE.md)
+  - [JARLSKOG_PHASE_BOUND_NOTE.md](../../work_history/ckm/JARLSKOG_PHASE_BOUND_NOTE.md)
+- manuscript asset: [figureA3_ckm_route_history.svg](./figures/figureA3_ckm_route_history.svg)
+- status: landed in arXiv appendix as explicit route history only

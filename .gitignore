@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.DS_Store
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+logs/*
+!logs/README.md
+!logs/retained/
+!logs/retained/README.md
+.claude/worktrees/

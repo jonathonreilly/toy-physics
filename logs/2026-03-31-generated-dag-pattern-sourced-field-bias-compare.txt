@@ -1,0 +1,25 @@
+================================================================================
+GENERATED DAG PATTERN-SOURCED FIELD-BIAS COMPARE
+================================================================================
+Rows: 150 viable-source trials on neighbor_radius=2.5, coupling=3.000
+Discovery configs: ['dense-25', 'sparse-25']; holdout configs: ['long-30', 'wide-15']
+
+Source-family and local field means:
+  positive    reuse=0.2338 core=0.0000 union_radius=9.8903 drift=2.2234 corridor=0.2814 fringe_side_gap=0.0011 forward_side_gap=-0.0108
+  nonpositive reuse=0.2368 core=0.0000 union_radius=10.2103 drift=2.3169 corridor=0.3098 fringe_side_gap=0.0048 forward_side_gap=-0.0324
+
+Top single-threshold discovery rules for toward-source shift:
+  forward_side_field_gap <= -0.0000 (discovery=0.6389, holdout=0.5769)
+  source_mean_state_radius <= 8.4099 (discovery=0.6250, holdout=0.5897)
+  forward_side_field_gap <= -0.0001 (discovery=0.6250, holdout=0.5769)
+  source_mean_state_radius <= 8.5913 (discovery=0.6250, holdout=0.5513)
+  forward_side_field_gap >= 0.5197 (discovery=0.6111, holdout=0.5641)
+
+Best single-rule split on all viable rows:
+  matched: total=33 positive_fraction=0.5758 mean_shift=-0.1394 | unmatched: total=117 positive_fraction=0.3846 mean_shift=-0.4667
+
+Best two-feature discovery rule for toward-source shift:
+  source_reuse_share >= 0.2264 and forward_side_field_gap <= -0.0000 (discovery=0.6528, holdout=0.5897)
+
+Interpretation:
+  This compare asks whether toward-source rows are best read as a compact late-source packet family with a cleaner intended-side field bias at the free mover anchor, rather than as a generic source-survival effect.

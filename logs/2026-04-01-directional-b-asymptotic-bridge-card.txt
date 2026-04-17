@@ -1,0 +1,36 @@
+================================================================================================================
+DIRECTIONAL-MEASURE B ASYMPTOTIC BRIDGE CARD
+================================================================================================================
+Retained directional transport fixed. This card reuses the same bounded random-DAG family and
+translates the denominator results into a compact leading-term / correction hierarchy.
+
+Proposed bounded hierarchy:
+  leading term           : b
+  finite-source correction: b - h_mass
+  packet-support correction: b - (h_mass + delta_packet)
+  where h_mass is the mass half-span and delta_packet is the retained free probe-band edge.
+
+   N     h_mass      cv(h)   delta_pkt   cv(delta)   corr@low   corr@high
+--------------------------------------------------------------------------------
+  12    +1.2706     75.23%     -1.8928      93.06%    -0.7881     -0.4463
+  25    +1.1431     68.23%     +1.9376     271.40%    +0.5163     +1.4843
+
+Endpoint density comparison:
+   N                A/b              A/gap                F/b              F/gap
+--------------------------------------------------------------------------------
+  12  +0.0661-> +0.0283  +0.0358-> +0.0233  +0.0261-> +0.0190  +0.0077-> +0.0155
+  25  +0.4078-> +0.0628  +0.0909-> +0.0456  +0.4271-> +0.0546  +0.0836-> +0.0348
+
+Retained reading:
+  1. The mass half-span is modest and comparatively stable within each bounded family slice.
+  2. The retained free probe-band edge is even more family-fixed than the mass half-span.
+  3. Therefore support-gap is not a purer local mass law; it is b plus a graph-family packet correction.
+  4. Center-offset density is the cleanest bounded leading term because it isolates mass placement.
+  5. Nearest-edge density stays a sensible finite-source correction.
+  6. Support-gap should stay secondary until a wider asymptotic family shows delta_packet shrinking or transferring.
+
+Heuristic asymptotic translation:
+  response density ~ Numerator / b                    (retained leading term)
+  edge-corrected   ~ Numerator / (b - h_mass)         (finite source width)
+  support-corrected~ Numerator / (b - h_mass - delta_packet)
+  The last term should currently be read as discrete packet-support structure, not the main law.

@@ -1,0 +1,43 @@
+================================================================================
+FIELD-COUPLED CA v2: Gradient coupling, mass near glider path
+================================================================================
+
+CONTROL: (11.2,10.6) → (30.8,-9.2), size=5
+
+  Coupling = 0.0:
+                            mass   final_x   final_y    size  dy_from_ctrl  toward?
+  ----------------------------------------------------------------------------
+     mass at (20, 5) — path side      30.8      -9.2       5          +0.0       NO
+  mass at (20, -5) — opposite side      30.8      -9.2       5          +0.0       NO
+    mass at (20, 0) — below path      30.8      -9.2       5          +0.0       NO
+  mass at (15, 5) — near, path side      30.8      -9.2       5          +0.0       NO
+  mass at (25, 0) — far, below path      30.8      -9.2       5          +0.0       NO
+
+  Coupling = 1.0:
+                            mass   final_x   final_y    size  dy_from_ctrl  toward?
+  ----------------------------------------------------------------------------
+     mass at (20, 5) — path side      17.4       8.0     123         +17.2      YES
+  mass at (20, -5) — opposite side      15.7       8.0     152         +17.2      YES
+    mass at (20, 0) — below path      19.9       2.0      76         +11.2      YES
+  mass at (15, 5) — near, path side      14.2       4.1     115         +13.3      YES
+  mass at (25, 0) — far, below path      16.6       5.0     150         +14.2      YES
+
+  Coupling = 5.0:
+                            mass   final_x   final_y    size  dy_from_ctrl  toward?
+  ----------------------------------------------------------------------------
+     mass at (20, 5) — path side      19.9       2.5      55         +11.7      YES
+  mass at (20, -5) — opposite side      20.9       4.0      40         +13.1      YES
+    mass at (20, 0) — below path      20.5      -0.5       4          +8.7      YES
+  mass at (15, 5) — near, path side      15.5       4.5       4         +13.7      YES
+  mass at (25, 0) — far, below path      24.3      -3.5      46          +5.7      YES
+
+  Coupling = 10.0:
+                            mass   final_x   final_y    size  dy_from_ctrl  toward?
+  ----------------------------------------------------------------------------
+     mass at (20, 5) — path side      18.7       4.3       7         +13.5      YES
+  mass at (20, -5) — opposite side      30.8      -9.2       5          +0.0       NO
+    mass at (20, 0) — below path      21.3       0.7       7          +9.9      YES
+  mass at (15, 5) — near, path side      16.3       5.7       7         +14.9      YES
+  mass at (25, 0) — far, below path      23.7      -0.7       7          +8.5      YES
+
+TEST COMPLETE

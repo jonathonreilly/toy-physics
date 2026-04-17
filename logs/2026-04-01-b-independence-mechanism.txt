@@ -1,0 +1,79 @@
+==============================================================================
+B-INDEPENDENCE MECHANISM
+  Current-main diagnostic summary
+==============================================================================
+
+PATH SAMPLING ANALYSIS
+  Local path preservation on the retained 4D modular family
+
+   channel  det_same  det_mean_y   det_std_y  focus_same
+------------------------------------------------------------
+upper:flat     0.681       1.849       4.377       0.607
+lower:flat     0.692      -2.037       3.675       0.619
+upper:mass     0.744       2.610       3.994       0.599
+lower:mass     0.620      -1.284       4.288       0.633
+
+Interpretation:
+  The open channel keeps most detector mass on the same side and the
+  post-barrier layers stay channelized. The path ensemble is broad, but it
+  is not scrambling transverse labels into a generic center.
+
+FIELD LOCALIZATION TEST
+  Does a more localized field rescue the distance law?
+
+[Laplacian relaxed (baseline)]
+  b=3.0  shift=+1.7332  SE=1.0248  t=+1.69  shift/b=+0.5777  field_support=0.996
+  b=4.0  shift=+1.0632  SE=0.7726  t=+1.38  shift/b=+0.2658  field_support=0.996
+  b=5.0  shift=+1.0767  SE=0.8067  t=+1.33  shift/b=+0.2153  field_support=0.996
+  b=6.0  shift=+1.2566  SE=0.6998  t=+1.80  shift/b=+0.2094  field_support=0.996
+  b=7.0  shift=+0.9898  SE=0.5490  t=+1.80  shift/b=+0.1414  field_support=0.996
+
+[Sharp (mass nodes only)]
+  b=3.0  shift=+0.2208  SE=0.1520  t=+1.45  shift/b=+0.0736  field_support=0.012
+  b=4.0  shift=+0.1542  SE=0.2146  t=+0.72  shift/b=+0.0385  field_support=0.012
+  b=5.0  shift=+0.1590  SE=0.2166  t=+0.73  shift/b=+0.0318  field_support=0.012
+  b=6.0  shift=-0.1352  SE=0.1637  t=-0.83  shift/b=-0.0225  field_support=0.012
+  b=7.0  shift=-0.1458  SE=0.1124  t=-1.30  shift/b=-0.0208  field_support=0.012
+
+[Gaussian sigma=2]
+  b=3.0  shift=+0.8423  SE=0.4535  t=+1.86  shift/b=+0.2808  field_support=0.342
+  b=4.0  shift=-0.2525  SE=0.4183  t=-0.60  shift/b=-0.0631  field_support=0.342
+  b=5.0  shift=-0.1416  SE=0.5049  t=-0.28  shift/b=-0.0283  field_support=0.342
+  b=6.0  shift=+0.0777  SE=0.3699  t=+0.21  shift/b=+0.0129  field_support=0.342
+  b=7.0  shift=+0.0207  SE=0.3344  t=+0.06  shift/b=+0.0030  field_support=0.342
+
+[Gaussian sigma=1]
+  b=3.0  shift=-0.0056  SE=0.2770  t=-0.02  shift/b=-0.0019  field_support=0.086
+  b=4.0  shift=+0.0022  SE=0.2086  t=+0.01  shift/b=+0.0005  field_support=0.086
+  b=5.0  shift=-0.1731  SE=0.2634  t=-0.66  shift/b=-0.0346  field_support=0.086
+  b=6.0  shift=-0.1893  SE=0.1179  t=-1.61  shift/b=-0.0316  field_support=0.086
+  b=7.0  shift=+0.0105  SE=0.1792  t=+0.06  shift/b=+0.0015  field_support=0.086
+
+[Local 1/r, cutoff=6]
+  b=3.0  shift=+0.2800  SE=0.7033  t=+0.40  shift/b=+0.0933  field_support=0.252
+  b=4.0  shift=-0.2095  SE=0.5532  t=-0.38  shift/b=-0.0524  field_support=0.252
+  b=5.0  shift=+0.1431  SE=0.5091  t=+0.28  shift/b=+0.0286  field_support=0.252
+  b=6.0  shift=-0.0545  SE=0.5034  t=-0.11  shift/b=-0.0091  field_support=0.252
+  b=7.0  shift=+0.0010  SE=0.8170  t=+0.00  shift/b=+0.0001  field_support=0.252
+
+[Exponential, lambda=0.5]
+  b=3.0  shift=+0.2423  SE=0.7826  t=+0.31  shift/b=+0.0808  field_support=0.365
+  b=4.0  shift=-0.2581  SE=0.5524  t=-0.47  shift/b=-0.0645  field_support=0.365
+  b=5.0  shift=-0.4016  SE=0.3992  t=-1.01  shift/b=-0.0803  field_support=0.365
+  b=6.0  shift=+0.0463  SE=0.3631  t=+0.13  shift/b=+0.0077  field_support=0.365
+  b=7.0  shift=-0.0917  SE=0.4881  t=-0.19  shift/b=-0.0131  field_support=0.365
+
+Interpretation:
+  Localizing the field can weaken the signal or make it noisier, but none
+  of the tested local field shapes recover a clean 1/b law on the retained
+  modular family. The smooth graph-wide field remains the best retained
+  explanation for the broad, topological response.
+
+OVERALL READ
+  1. The path ensemble remains locally channel-preserving.
+  2. The graph-wide field acts like a smooth phase valley.
+  3. Localizing the field weakens the signal, but does not restore a clean
+     distance falloff.
+  4. The flat/topological force law is therefore best treated as structural
+     to the current linear path-sum architecture.
+==============================================================================

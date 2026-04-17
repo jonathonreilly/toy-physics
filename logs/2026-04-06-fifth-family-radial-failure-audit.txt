@@ -1,0 +1,14 @@
+FIFTH FAMILY RADIAL FAILURE AUDIT
+  radial-shell boundary on the no-restore grown slice
+
+targets=[(0.2, 0), (0.05, 0), (0.3, 1)]
+
+drift seed zero plus minus neutral double exp ok
+0.20    0 +0.000e+00 -2.028e-06 +2.028e-06 +0.000e+00 -4.057e-06   1.000  no
+0.05    0 +0.000e+00 +2.259e-05 -2.262e-05 +0.000e+00 +4.515e-05   0.999 YES
+0.30    1 +0.000e+00 +1.131e-05 -1.132e-05 +0.000e+00 +2.262e-05   1.000 YES
+
+SAFE READ
+  failing rows: 1
+    drift=0.20 seed=0 plus=-2.028e-06 minus=+2.028e-06 exp=1.000
+  the miss is a sign-orientation boundary, not a control leak

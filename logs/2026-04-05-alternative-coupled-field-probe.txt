@@ -1,0 +1,25 @@
+==================================================================================
+ALTERNATIVE COUPLED-FIELD PROBE
+  exact 3D lattice, edge-carried field transport
+  comparison: edge-carried field vs instantaneous 1/r field
+==================================================================================
+h=0.5, W=6, L=30, gain=1.427390e-46, decay=0.72, gamma=0.85
+
+REDUCTION CHECK
+  zero-source dynamic shift: +0.000000e+00
+
+       s         inst         edge  edge/inst  max|f_edge|
+------------------------------------------------------------------
+  0.0010 +2.702607e-03 +3.021738e-05      0.011 1.000000e-02
+  0.0020 +5.393344e-03 +5.996921e-05      0.011 2.000000e-02
+  0.0040 +1.073461e-02 +1.182387e-04      0.011 4.000000e-02
+  0.0080 +2.122358e-02 +2.311300e-04      0.011 8.000000e-02
+
+SAFE READ
+  zero-source dynamic field recovers free propagation exactly
+  instantaneous TOWARD rows: 4/4
+  edge-carried TOWARD rows: 4/4
+  instantaneous F~M exponent: 0.99
+  edge-carried F~M exponent: 0.98
+  if the edge-carried field keeps sign but misses F~M≈1, freeze it as
+  a bounded no-go for the minimal coupled-field architecture

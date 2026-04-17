@@ -1,0 +1,18 @@
+=================================================================
+GATE B FAR-FIELD HARNESS
+  Growth: template + drift + restore + NN connectivity
+  h=0.5, W=8, NL=25, 12 seeds, z_masses=[3, 4, 5]
+=================================================================
+  drift=0.3,rest=0.5       : 36/36 TOWARD (100%), F~M=1.00
+  drift=0.2,rest=0.7       : 36/36 TOWARD (100%), F~M=1.00
+  drift=0.1,rest=0.9       : 36/36 TOWARD (100%), F~M=1.00
+  exact grid               : 36/36 TOWARD (100%), F~M=1.00
+
+Total time: 963s
+
+SAFE INTERPRETATION
+  This harness tests far-field (z>=3) gravity on grown geometry.
+  If TOWARD > 90%: the growth rule works in the far field.
+  If mixed: the growth rule is noisy even in the far field.
+  F~M should match the fixed-lattice value (1.00) if the
+  universality class transfers to grown geometry.

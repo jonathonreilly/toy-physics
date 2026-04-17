@@ -1,0 +1,18 @@
+======================================================================
+D4: SPATIAL TRACE OVER MASS REGION
+  Trace out mass-exit-node information at boundary
+======================================================================
+
+  N_layers  pur_fine    pur_d4  n_exits
+  --------------------------------------
+         8    0.7160    0.7160        8
+        10    0.6721    0.6721       16
+        12    0.7426    0.7426       13
+        15    0.8210    0.8210       15
+        20    0.8714    0.8714       22
+        25    0.8439    0.8439       28
+
+PASS: pur_d4 at N=25 <= pur_d4 at N=12
+FAIL: pur_d4 increases with N
+
+TEST COMPLETE

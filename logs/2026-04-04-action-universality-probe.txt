@@ -1,0 +1,25 @@
+================================================================================================
+ACTION UNIVERSALITY PROBE
+  Fixed 3D ordered-lattice family
+  h=0.5, W=8, L=12, max_d=3
+  Kernel: 1/L^2 with h^2 measure
+  Field: s/r, standard strength ladder
+  Goal: test weak-field action universality classes, not a universal theorem
+================================================================================================
+
+action                   Born    grav(z=3)   TOWARD      F~M         tail
+------------------------------------------------------------------------------------------------
+S=L                  2.50e-15    +0.000000      0/7      nan          n/a
+S=L(1+f)             2.50e-15    -0.000144      0/7      nan          n/a
+S=L(1-f^0.5)         2.50e-15    +0.020590      7/7     0.50   z>=5:-0.86
+S=L(1-f)             2.50e-15    +0.000144      7/7     1.00   z>=5:-1.47
+S=L(1-f^2)           2.50e-15    +0.000000      7/7     2.00   z>=5:-3.67
+S=L exp(-f)          2.50e-15    +0.000144      7/7     1.00   z>=5:-1.47
+S=L/(1+f)            2.50e-15    +0.000144      7/7     1.00   z>=5:-1.47
+S=-Lf                1.44e-15    -0.000000      0/7      nan          n/a
+
+SAFE READ
+  - Born is structural on this family: field-free Born stays machine-clean for every action.
+  - Phase hills / no-coupling fail to give the desired TOWARD gravity.
+  - Valley actions stay TOWARD, but the F~M exponent follows the weak-field power of f.
+  - The cleanest universality-class statement here is about F~M, not a universal distance theorem.

@@ -1,0 +1,72 @@
+beyond-ceiling fresh candidate scan started 2026-03-30T07:37:11
+
+Beyond-Ceiling Fresh Candidate Scan
+===================================
+ensembles=ultra,mega,peta,exa
+packs=base
+scenario_specs=base:taper-hard
+excluded_sources=base:rect-wrap:local-morph-f,base:skew-wrap:local-morph-c,base:skew-wrap:local-morph-k,base:skew-wrap:mode-mix-d,base:taper-hard:local-morph-f,base:taper-wrap:mode-mix-f,large:taper-wrap-large:local-morph-g,mirror:skew-hard-mirror:local-morph-f
+rows_total=11
+top_candidate=peta:base:base:taper-hard:geometry-s
+top_candidate_summary=shared_packet_membership=0/4, high_bridge_right_count=0.000, mid_anchor_closure_peak=0.000, mid_candidate_attached_max=0.000, closure_load=12.000
+
+Top Fresh Candidates
+====================
+base:taper-hard:base:taper-hard:geometry-s
+  ensembles=exa,peta
+  style=geometry
+  actual=pair-only-sensitive
+  support_load=0.000
+  closure_load=12.000
+  mid_anchor_closure_peak=0.000
+  mid_candidate_attached_max=0.000
+  mid_candidate_bridge_bridge_closed_pair_max=0.000
+  mid_has_four_incident_flank_hinge=n
+  shared_packet_membership=0/4
+  high_bridge_right_count=0.000
+  anchor_closure_intensity_gap=0.000
+  anchor_deep_share_gap=0.000
+base:taper-hard:base:taper-hard:geometry-t
+  ensembles=exa
+  style=geometry
+  actual=pair-only-sensitive
+  support_load=0.000
+  closure_load=12.000
+  mid_anchor_closure_peak=0.000
+  mid_candidate_attached_max=0.000
+  mid_candidate_bridge_bridge_closed_pair_max=0.000
+  mid_has_four_incident_flank_hinge=n
+  shared_packet_membership=0/4
+  high_bridge_right_count=0.000
+  anchor_closure_intensity_gap=0.000
+  anchor_deep_share_gap=0.000
+base:taper-hard:base:taper-hard:mode-mix-b
+  ensembles=exa,mega,peta,ultra
+  style=mode-mix
+  actual=pair-only-sensitive
+  support_load=0.000
+  closure_load=5.000
+  mid_anchor_closure_peak=0.000
+  mid_candidate_attached_max=0.000
+  mid_candidate_bridge_bridge_closed_pair_max=0.000
+  mid_has_four_incident_flank_hinge=n
+  shared_packet_membership=0/4
+  high_bridge_right_count=0.000
+  anchor_closure_intensity_gap=0.000
+  anchor_deep_share_gap=0.000
+base:taper-hard:base:taper-hard:mode-mix-e
+  ensembles=exa,mega,peta,ultra
+  style=mode-mix
+  actual=pair-only-sensitive
+  support_load=0.000
+  closure_load=5.000
+  mid_anchor_closure_peak=0.000
+  mid_candidate_attached_max=0.000
+  mid_candidate_bridge_bridge_closed_pair_max=0.000
+  mid_has_four_incident_flank_hinge=n
+  shared_packet_membership=0/4
+  high_bridge_right_count=0.000
+  anchor_closure_intensity_gap=0.000
+  anchor_deep_share_gap=0.000
+
+beyond-ceiling fresh candidate scan completed 2026-03-30T07:39:07 total_elapsed=116.4s

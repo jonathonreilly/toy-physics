@@ -1,0 +1,51 @@
+========================================================================
+GENERATIVE GRAPH EVOLUTION
+========================================================================
+
+========================================================================
+TEST 1: Growth under different parameters
+========================================================================
+
+     default:    9 nodes,   35 edges, deg=7.8, cluster=0.972, dag_ratio=1.000, extent=0.9x1.5
+       tight:    9 nodes,   31 edges, deg=6.9, cluster=0.898, dag_ratio=1.000, extent=0.7x1.2
+       loose:   13 nodes,   76 edges, deg=11.7, cluster=0.977, dag_ratio=1.000, extent=1.2x1.9
+       dense:   31 nodes,  156 edges, deg=10.1, cluster=0.773, dag_ratio=1.000, extent=3.3x4.9
+      sparse:    6 nodes,   14 edges, deg=4.7, cluster=0.933, dag_ratio=1.000, extent=0.6x1.5
+
+========================================================================
+TEST 2: Causal structure (is spawn order a natural DAG?)
+========================================================================
+
+  Total edges: 35
+  Forward (parent→child): 35
+  Backward (child→parent): 0
+  Same-step: 0
+  DAG ratio (forward / total): 1.0000
+
+  If DAG ratio > 0.5: spawn order provides a preferred time direction
+  If DAG ratio ≈ 0.5: no preferred direction (symmetric)
+
+========================================================================
+TEST 3: Density self-regulation
+========================================================================
+
+  Growth curve (nodes vs step):
+    step= 10:    9 nodes, extent=0.9x1.5, density=6.59 nodes/unit²
+    step= 20:    9 nodes, extent=0.9x1.5, density=6.59 nodes/unit²
+    step= 30:    9 nodes, extent=0.9x1.5, density=6.59 nodes/unit²
+    step= 40:    9 nodes, extent=0.9x1.5, density=6.59 nodes/unit²
+    step= 50:    9 nodes, extent=0.9x1.5, density=6.59 nodes/unit²
+
+========================================================================
+TEST 4: Seed independence (different random seeds)
+========================================================================
+
+    seed   nodes   edges   mean_deg   clustering   dag_ratio
+  ----------------------------------------------------
+      42       9      35       7.78       0.9722      1.0000
+     123      41     202       9.85       0.7495      1.0000
+     456      41     159       7.76       0.6520      1.0000
+     789      27     112       8.30       0.6903      1.0000
+    1000      37     191      10.32       0.7158      1.0000
+
+EVOLUTION COMPLETE

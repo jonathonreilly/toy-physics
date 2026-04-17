@@ -1,0 +1,51 @@
+================================================================================
+COMPACT DENSITY DIAGNOSIS
+================================================================================
+
+TEST A: Field gradient vs y_range
+  Is the field gradient destroyed in compact graphs?
+
+   y_range  mean_field   field_std    grad_mag
+  --------------------------------------------
+       3.0      0.7821      0.0056     +0.0100
+       5.0      0.7542      0.0487     +0.0899
+       8.0      0.6545      0.1681     +0.3161
+      10.0      0.5906      0.2454     +0.4623
+      15.0      0.4873      0.3481     +0.6725
+      20.0      0.4649      0.3916     +0.7506
+
+TEST B: Action difference (mass-side vs free-side)
+  How much does the action differ for paths above vs below?
+
+   y_range  action_above  action_below        diff  attract
+  ------------------------------------------------------
+       3.0      (varies)      (varies)     -0.0101      1/5
+       5.0      (varies)      (varies)     -0.0452      3/5
+       8.0      (varies)      (varies)     -0.1609      4/5
+      10.0      (varies)      (varies)     -0.2591      5/5
+      15.0      (varies)      (varies)     -0.5047      4/5
+      20.0      (varies)      (varies)     -0.6652      2/5
+
+TEST C: Probability concentration at compact vs spread
+  How concentrated is the detector probability distribution?
+
+   y_range  entropy_free  entropy_mass  entropy_drop
+  ----------------------------------------------------
+       3.0         2.591         2.650        +0.059
+       5.0         2.405         2.509        +0.104
+       8.0         2.264         2.237        -0.028
+      10.0         2.182         2.251        +0.069
+      15.0         1.868         1.962        +0.094
+      20.0         1.180         1.275        +0.094
+
+================================================================================
+DIAGNOSIS SUMMARY
+================================================================================
+
+| regime       | field_grad | action_diff | attract | mechanism          |
+|-------------|------------|-------------|---------|---------------------|
+| compact y=3 | ???        | ???         | 0%      | to be determined    |
+| sweet y=10  | ???        | ???         | 100%    | phase deflection    |
+| spread y=30 | ???        | ???         | 20%     | gradient too weak   |
+
+TEST COMPLETE

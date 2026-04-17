@@ -1,0 +1,21 @@
+================================================================================
+GATE B WEAK-CONNECTIVITY HARNESS
+  No-restore grown geometry: label connectivity vs KNN+floor connectivity
+================================================================================
+h=0.5, W=20, layers=25, drift=0.2, seeds=4, z_masses=[3, 4, 5]
+weak rule: KNN k=3 with minimum-edge floor=5
+
+family                             TOWARD      F~M
+exact grid                     12/12 (100.0%)     1.00
+no-restore label-NN            12/12 (100.0%)     1.00
+no-restore KNN+floor            0/12 (  0.0%)     0.00
+
+SAFE INTERPRETATION
+  This harness freezes one weak-connectivity candidate only.
+  The control preserves the old label connectivity with no restore.
+  The candidate uses a weaker position-based forward KNN rule with a
+  minimum-edge floor.
+  Read the result as: does far-field gravity survive with less imposed
+  connectivity structure, or does the signal collapse once labels are loosened?
+
+Total time: 8s

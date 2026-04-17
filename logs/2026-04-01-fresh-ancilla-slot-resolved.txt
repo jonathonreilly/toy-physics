@@ -1,0 +1,28 @@
+======================================================================
+LEVEL B: TRUE SLOT-RESOLVED FRESH ANCILLA ON DAGs
+  Propagator: 1/L^p × exp(-0.8×θ²)
+  Coupling: α_k = 0.5 × edge_angle (branch-dependent)
+  Env: ancilla bitstring (slot-resolved)
+  Seeds: 6  k-band: [3.0, 5.0, 7.0]
+======================================================================
+
+     N   runs   mass_rng  env_max  len_max    pur_fa  pur_node    fa_off
+  ------------------------------------------------------------------------
+     8     15        5-8        3        1    0.9762    0.7602    1.0000
+    12     18       9-13        7        2    0.8160    0.6821    1.0000
+    18     18       7-23       15        3    0.8250    0.8252    1.0000
+    25     18      17-30       31        4    0.8894    0.8654    1.0000
+
+pur_fa = slot-resolved fresh ancilla
+pur_node = angle-weighted node-label baseline
+fa_off = no coupling (should be ~1.0)
+runs = accepted seed/k combinations
+mass_rng = min-max accepted mass-set size across seeds
+env_max = max distinct bitstrings at detector over all runs
+len_max = max bitstring length (= max encounters) over all runs
+
+Interpretation:
+  Encouraging if pur_fa stays flat or falls with N.
+  Failure if pur_fa recoheres at larger N.
+
+TEST COMPLETE

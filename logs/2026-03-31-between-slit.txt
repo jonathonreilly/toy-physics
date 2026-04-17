@@ -1,0 +1,27 @@
+======================================================================
+BETWEEN-SLIT DECOHERENCE
+  Mass in barrier layer, between slit groups
+  Two-register: env = last mass node, partial trace
+======================================================================
+
+  seed     grav   V_2reg    V_coh   V_drop  n_mass  attr  dcoh  all3
+  ------------------------------------------------------------
+     0    +1.68    0.998    0.999   +0.002      10     Y     n     n
+     1    +8.01    0.864    0.867   +0.004      11     Y     n     n
+     2    +0.31    0.978    0.980   +0.002       7     Y     n     n
+     3    -0.56    0.867    0.822   -0.045       8     n     n     n
+     4    +0.40    1.000    1.000   +0.000       6     Y     n     n
+     5    +0.58    0.990    0.966   -0.024      17     Y     n     n
+     6    +2.24    0.855    0.876   +0.021      10     Y     Y     Y
+     7    -2.45    0.958    0.955   -0.003      12     n     n     n
+     8    +1.28    0.989    0.985   -0.004      13     Y     n     n
+     9    +0.91    0.867    0.992   +0.125      10     Y     Y     Y
+    10    +0.60    1.000    0.998   -0.001      16     Y     n     n
+    11    +2.67    1.000    1.000   +0.000       9     Y     n     n
+  ---
+  G:10/12 I:12/12 D:2/12 ALL:2/12
+
+GEOMETRY: mass between slits → each slit couples to different mass nodes
+→ env distinguishes which slit → partial trace produces decoherence
+
+TEST COMPLETE

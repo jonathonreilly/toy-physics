@@ -1,0 +1,67 @@
+====================================================================================================
+WAVE RETARDATION VELOCITY SWEEP
+NL=30, PW=8, S=0.004, base s_layer = NL // 3 = 10
+Source motion: linear translation in z; v varies
+====================================================================================================
+
+   v/c   iz_end           dM           dI          M-I        rel
+--------------------------------------------------------------------------------
+  0.050        5    +0.008173    +0.016383    -0.008210     50.11%
+  0.100        4    +0.008488    +0.015669    -0.007181     45.83%
+  0.150        3    +0.008750    +0.014815    -0.006065     40.94%
+  0.200        2    +0.008904    +0.013918    -0.005014     36.03%
+  0.250        1    +0.008857    +0.012799    -0.003942     30.80%
+  0.300        0    +0.008457    +0.011242    -0.002785     24.77%
+  0.400       -2    +0.007564    +0.007564    -0.000000      0.00%
+
+Log-log fit of |M - I| vs v/c:
+  slope = -3.101  intercept = -12.098
+  -> |M - I| ~ (v/c)^-3.10
+
+Log-log fit of relative gap (|M-I|/max(|M|,|I|)) vs v/c:
+  slope = -2.791  intercept = -7.197
+  -> rel_gap ~ (v/c)^-2.79
+
+====================================================================================================
+SCALING VERDICT
+====================================================================================================
+  WEAKER than linear (slope = -3.10)
+  Effect saturates or is largely v-independent in this range.
+
+====================================================================================================
+LAB EXTRAPOLATION (assuming the fitted scaling)
+====================================================================================================
+  Reference lattice point: v/c = 0.20 -> rel_gap = 36.03%
+  Predicted lab gap (using slope -2.79):
+    cold atom interferometer (1 m/s)          v/c = 3.33e-09  rel_gap ≈ 1.84e+21
+    rotating tungsten rotor (100 m/s)         v/c = 3.33e-07  rel_gap ≈ 4.82e+15
+    centrifuge edge (300 m/s)                 v/c = 1.00e-06  rel_gap ≈ 2.25e+14
+    LIGO test-mass scale (1 mm/s)             v/c = 3.33e-12  rel_gap ≈ 4.34e+29
+    binary pulsar (250 km/s)                  v/c = 8.33e-04  rel_gap ≈ 1.58e+06
+
+These are dimensionless predictions for the M vs I beam-deflection ratio
+on the (3+1)D wave equation. They translate to a measurable phase shift
+in any interferometer that maps to the path-sum + linear-field setup.
+
+====================================================================================================
+SECOND SWEEP: TRAJECTORY-FIXED, VELOCITY-VARYING
+Fixed source trajectory iz: 6 -> 0 (always 6 cells)
+Velocity = 6 / n_active where n_active varies
+====================================================================================================
+
+ n_act  NL_total      v/c           dM           dI          M-I        rel
+------------------------------------------------------------------------------------------
+      60        74   0.1000    +0.005816    -0.002993    +0.008809    151.45%
+      30        44   0.2000    +0.012555    +0.013858    -0.001303      9.40%
+      20        34   0.3000    +0.010569    +0.011377    -0.000808      7.10%
+      15        29   0.4000    +0.007369    +0.007661    -0.000292      3.81%
+      12        26   0.5000    +0.005812    +0.005216    +0.000596     10.25%
+      10        24   0.6000    +0.005004    +0.003946    +0.001058     21.14%
+       8        22   0.7500    +0.003624    +0.001211    +0.002414     66.59%
+
+Log-log fit of trajectory-fixed rel_gap vs v/c:
+  slope = -0.510
+  -> rel_gap (trajectory-fixed) ~ (v/c)^-0.51
+
+This is the PURE velocity scaling with trajectory geometry held constant.
+Compare to first sweep slope of -2.79 which conflated v with range.

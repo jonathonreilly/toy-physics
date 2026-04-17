@@ -1,0 +1,65 @@
+================================================================================================================
+DIRECTIONAL-MEASURE B TREE HIERARCHY COMPARE
+================================================================================================================
+Second-family check on the branching-tree control with corrected directional transport fixed; beta=0.800, bf=2, mass_nodes=2
+Hierarchy under test: b, b - h_mass, b - (h_mass + delta_packet)
+
+N=8
+target_b actual_b     span   edge_b  supp_gap   band_hi       A/b    A/edge     A/gap       F/b    F/edge     F/gap
+------------------------------------------------------------------------------------------------------------------------
+    1.00    1.250    0.625    0.938     1.094    -0.156   +0.3925   +0.5234   +0.4486   +0.5445   +0.7261   +0.6223
+    2.00    1.875    0.625    1.562     1.719    -0.156   +0.2412   +0.2894   +0.2631   +0.2639   +0.3167   +0.2879
+    3.00    3.125    0.625    2.812     2.969    -0.156   +0.1447   +0.1608   +0.1523   +0.0901   +0.1001   +0.0949
+    4.00    3.750    0.625    3.438     3.594    -0.156   +0.1308   +0.1427   +0.1365   +0.1334   +0.1455   +0.1392
+    5.00    4.375    0.625    4.062     4.219    -0.156   +0.1034   +0.1113   +0.1072   +0.0644   +0.0693   +0.0668
+Trend summary (desired: normalized attraction density decreases as actual b increases):
+            action_over_b: PASS (strength +0.3925 -> +0.1034, slope -0.0853)
+       action_over_edge_b: PASS (strength +0.5234 -> +0.1113, slope -0.1202)
+  action_over_support_gap: PASS (strength +0.4486 -> +0.1072, slope -0.1003)
+              flow_over_b: PASS (strength +0.5445 -> +0.0644, slope -0.1359)
+         flow_over_edge_b: PASS (strength +0.7261 -> +0.0693, slope -0.1846)
+    flow_over_support_gap: PASS (strength +0.6223 -> +0.0668, slope -0.1568)
+
+N=10
+target_b actual_b     span   edge_b  supp_gap   band_hi       A/b    A/edge     A/gap       F/b    F/edge     F/gap
+------------------------------------------------------------------------------------------------------------------------
+    1.00    0.938    0.312    0.781     0.859    -0.078   +0.4652   +0.5582   +0.5075   +0.5629   +0.6754   +0.6140
+    2.00    1.875    0.312    1.719     1.797    -0.078   +0.2512   +0.2741   +0.2622   +0.3347   +0.3652   +0.3493
+    3.00    3.125    0.312    2.969     3.047    -0.078   +0.1507   +0.1587   +0.1546   +0.0828   +0.0872   +0.0850
+    4.00    4.062    0.312    3.906     3.984    -0.078   +0.1074   +0.1116   +0.1095   +0.0592   +0.0616   +0.0604
+    5.00    4.688    0.312    4.531     4.609    -0.078   +0.0930   +0.0962   +0.0946   +0.0513   +0.0531   +0.0522
+Trend summary (desired: normalized attraction density decreases as actual b increases):
+            action_over_b: PASS (strength +0.4652 -> +0.0930, slope -0.0933)
+       action_over_edge_b: PASS (strength +0.5582 -> +0.0962, slope -0.1142)
+  action_over_support_gap: PASS (strength +0.5075 -> +0.0946, slope -0.1028)
+              flow_over_b: PASS (strength +0.5629 -> +0.0513, slope -0.1379)
+         flow_over_edge_b: PASS (strength +0.6754 -> +0.0531, slope -0.1644)
+    flow_over_support_gap: PASS (strength +0.6140 -> +0.0522, slope -0.1500)
+
+N=12
+target_b actual_b     span   edge_b  supp_gap   band_hi       A/b    A/edge     A/gap       F/b    F/edge     F/gap
+------------------------------------------------------------------------------------------------------------------------
+    1.00    0.938    0.156    0.859     0.898    -0.039   +0.4351   +0.4747   +0.4541   +0.6599   +0.7199   +0.6886
+    2.00    2.031    0.156    1.953     1.992    -0.039   +0.1867   +0.1941   +0.1903   +0.2801   +0.2913   +0.2856
+    3.00    2.969    0.156    2.891     2.930    -0.039   +0.1277   +0.1312   +0.1294   +0.1445   +0.1484   +0.1464
+    4.00    4.062    0.156    3.984     4.023    -0.039   +0.1004   +0.1024   +0.1014   +0.0942   +0.0961   +0.0951
+    5.00    4.844    0.156    4.766     4.805    -0.039   +0.0783   +0.0796   +0.0789   +0.0724   +0.0736   +0.0730
+Trend summary (desired: normalized attraction density decreases as actual b increases):
+            action_over_b: PASS (strength +0.4351 -> +0.0783, slope -0.0826)
+       action_over_edge_b: PASS (strength +0.4747 -> +0.0796, slope -0.0911)
+  action_over_support_gap: PASS (strength +0.4541 -> +0.0789, slope -0.0866)
+              flow_over_b: PASS (strength +0.6599 -> +0.0724, slope -0.1404)
+         flow_over_edge_b: PASS (strength +0.7199 -> +0.0736, slope -0.1536)
+    flow_over_support_gap: PASS (strength +0.6886 -> +0.0730, slope -0.1467)
+
+Hierarchy verdict across tree sizes:
+            action_over_b: PASS 3/3, FAIL 0/3, INSUF 0/3
+       action_over_edge_b: PASS 3/3, FAIL 0/3, INSUF 0/3
+  action_over_support_gap: PASS 3/3, FAIL 0/3, INSUF 0/3
+              flow_over_b: PASS 3/3, FAIL 0/3, INSUF 0/3
+         flow_over_edge_b: PASS 3/3, FAIL 0/3, INSUF 0/3
+    flow_over_support_gap: PASS 3/3, FAIL 0/3, INSUF 0/3
+
+Interpretation:
+  If center-offset and edge-corrected densities survive on the tree control while support-gap does not,
+  the current hierarchy transfers beyond the random-DAG family instead of being just one bounded fit.

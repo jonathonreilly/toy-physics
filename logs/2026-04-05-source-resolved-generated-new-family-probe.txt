@@ -1,0 +1,46 @@
+============================================================================================================
+SOURCE-RESOLVED GENERATED NEW FAMILY PROBE
+  compact bridge family versus new split-shell support family
+============================================================================================================
+family seeds=0..3
+baseline family: retained compact kNN-floor bridge
+new family: three-band split-shell geometry (bands=(-7.5, 0.0, 7.5), floor=7)
+source strengths: [0.001, 0.002, 0.004, 0.008]
+field target max: 0.02
+modes: static Green vs wavefield
+observables: zero-source reduction, centroid sign counts, F~M exponent, detector N_eff
+
+seed=0  bridge/static    zero=0.000e+00 TOWARD=2/4 F~M=-0.100 N_eff=6.78 support_frac=0.448
+seed=0  bridge/wavefield zero=0.000e+00 TOWARD=0/4 F~M=0.896 N_eff=5.91 support_frac=0.396
+seed=0   split/static    zero=0.000e+00 TOWARD=4/4 F~M=0.455 N_eff=8.01 support_frac=0.525
+seed=0   split/wavefield zero=0.000e+00 TOWARD=4/4 F~M=0.531 N_eff=8.16 support_frac=0.533
+seed=1  bridge/static    zero=0.000e+00 TOWARD=2/4 F~M=0.601 N_eff=5.96 support_frac=0.573
+seed=1  bridge/wavefield zero=0.000e+00 TOWARD=2/4 F~M=1.711 N_eff=6.48 support_frac=0.594
+seed=1   split/static    zero=0.000e+00 TOWARD=1/4 F~M=-0.300 N_eff=3.53 support_frac=0.214
+seed=1   split/wavefield zero=0.000e+00 TOWARD=0/4 F~M=-0.085 N_eff=3.53 support_frac=0.214
+seed=2  bridge/static    zero=0.000e+00 TOWARD=4/4 F~M=-1.131 N_eff=2.92 support_frac=0.292
+seed=2  bridge/wavefield zero=0.000e+00 TOWARD=4/4 F~M=-0.383 N_eff=2.85 support_frac=0.271
+seed=2   split/static    zero=0.000e+00 TOWARD=4/4 F~M=0.531 N_eff=10.70 support_frac=0.700
+seed=2   split/wavefield zero=0.000e+00 TOWARD=4/4 F~M=0.487 N_eff=10.50 support_frac=0.700
+seed=3  bridge/static    zero=0.000e+00 TOWARD=1/4 F~M=-0.636 N_eff=5.59 support_frac=0.458
+seed=3  bridge/wavefield zero=0.000e+00 TOWARD=0/4 F~M=-1.833 N_eff=5.31 support_frac=0.469
+seed=3   split/static    zero=0.000e+00 TOWARD=0/4 F~M=0.531 N_eff=11.28 support_frac=0.600
+seed=3   split/wavefield zero=0.000e+00 TOWARD=0/4 F~M=0.590 N_eff=11.03 support_frac=0.600
+
+SUMMARY
+ bridge/static     zero=0.000e+00  TOWARD=9/16  F~M=-0.316  N_eff=5.31  support_frac=0.443
+ bridge/wavefield  zero=0.000e+00  TOWARD=6/16  F~M=0.098  N_eff=5.14  support_frac=0.432
+  split/static     zero=0.000e+00  TOWARD=9/16  F~M=0.304  N_eff=8.38  support_frac=0.510
+  split/wavefield  zero=0.000e+00  TOWARD=8/16  F~M=0.381  N_eff=8.30  support_frac=0.512
+
+GEOMETRY DELTA
+     static: delta_TOWARD=+0  delta_N_eff=+3.07  delta_F~M=+0.620
+  wavefield: delta_TOWARD=+2  delta_N_eff=+3.16  delta_F~M=+0.283
+
+SAFE READ
+  - The retained compact bridge remains the baseline control.
+  - The split-shell family is a genuinely different support geometry.
+  - If it broadens detector support enough and improves the weak-field law,
+    that would be a real reopening of the generated-family transfer story.
+  - If it only widens support without improving the field relevance,
+    it is a bounded no-go for this new family.

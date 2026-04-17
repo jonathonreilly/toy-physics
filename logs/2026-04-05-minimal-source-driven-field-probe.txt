@@ -1,0 +1,24 @@
+============================================================================
+MINIMAL SOURCE-DRIVEN FIELD PROBE
+  exact 3D lattice, static source, local damped field evolution
+  comparison: source-driven field vs instantaneous 1/r field
+============================================================================
+
+REDUCTION CHECK
+  zero-source dynamic shift: +0.000000e+00
+  fixed dynamic field gain: 3.575370e+00
+
+       s         inst          dyn   dyn/inst   max|f_dyn|
+--------------------------------------------------------------
+  0.0010 +2.702607e-03 +2.969381e-02     10.987 1.000000e-02
+  0.0020 +5.393344e-03 +5.468048e-02     10.139 2.000000e-02
+  0.0040 +1.073461e-02 +9.073752e-02      8.453 4.000000e-02
+  0.0080 +2.122358e-02 +1.105259e-01      5.208 8.000000e-02
+
+SAFE READ
+  instantaneous TOWARD rows: 4/4
+  source-driven TOWARD rows: 4/4
+  instantaneous F~M exponent: 0.99
+  source-driven F~M exponent: 0.64
+  zero-source dynamic field should recover free propagation exactly.
+  If the source-driven rows lose TOWARD or linear mass response, freeze this as a no-go.

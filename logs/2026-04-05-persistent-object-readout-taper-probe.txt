@@ -1,0 +1,30 @@
+============================================================================================================
+PERSISTENT OBJECT READOUT TAPER AUDIT
+  exact h=0.25 lattice, compact source object, broad vs hard vs tapered readout
+============================================================================================================
+h=0.25, W=3, L=6, source_z=2.0, source_nodes=[5320, 5345, 5295, 5321, 5319]
+source strengths=[0.001, 0.002, 0.004, 0.008], updates=3, top_keep=3
+kernel: exp(-mu r)/(r+eps), mu=0.08, eps=0.5
+field target max=0.02, fixed gain=1.800031e+00
+hard radius=1, gaussian sigmas=[1.5, 2.5, 4.0]
+
+REDUCTION CHECK
+  zero-source shift: +0.000000e+00
+
+        mode             step F~M   TOWARD    det N_eff  support_frac    capture      w_eff      delta_z
+----------------------------------------------------------------------------------------------------------------
+       broad     [1.00,1.00,1.00]       12      497.319         1.000      1.000    625.000 +8.561187e-03
+        hard  [-0.00,-0.00,-0.00]       12        8.992         1.000      0.038      9.000 +4.995570e-01
+   gauss_1.5  [-0.00,-0.00,-0.00]       12       34.370         0.099      0.054     38.429 +4.923902e-01
+   gauss_2.5     [0.00,0.00,0.00]       12       90.244         0.243      0.135    106.720 +4.652450e-01
+     gauss_4     [0.01,0.01,0.01]       12      189.501         0.518      0.286    261.514 +4.144223e-01
+
+SAFE READ
+  broad readout stays linear and fully supported: det N_eff=497.319, capture=1.000
+  hard 3x3 readout is the harshest case: det N_eff=8.992, capture=0.038, step F~M=[-0.0007833472353972731, -0.0007192946871321769, -0.0007190566199969782]
+  best tapered readout candidate: gauss_4 with det N_eff=189.501, capture=0.286, support_frac=0.518, step F~M=[0.0054018738292274035, 0.005718876992794101, 0.0057195864648020775]
+
+FASTEST FALSIFIER
+  If every tapered readout still collapses step-wise F~M away from 1,
+  or the only way to localize support is to make the readout too lossy,
+  then the detector/readout localization lane remains a bounded no-go.

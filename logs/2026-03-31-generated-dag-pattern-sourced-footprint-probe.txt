@@ -1,0 +1,27 @@
+================================================================================
+GENERATED DAG PATTERN-SOURCED FOOTPRINT PROBE
+================================================================================
+Rows: coherent free movers only on neighbor_radius=2.5, coupling=3.000, seeds=0..4
+Source family: same self-rule source, same placement, only the late-source field footprint changes
+
+Footprint sweep:
+  last_state: total=149 survive=129 diffuse=15 die=5 positive_shifts=70/149 mean_signed_shift=-0.3883 directional_score=0.0000
+  last2_union: total=150 survive=135 diffuse=12 die=3 positive_shifts=71/150 mean_signed_shift=0.0947 directional_score=0.0852
+  last3_union: total=150 survive=135 diffuse=10 die=5 positive_shifts=76/150 mean_signed_shift=0.7612 directional_score=0.6850
+  last6_union: total=150 survive=135 diffuse=15 die=0 positive_shifts=64/150 mean_signed_shift=-0.3947 directional_score=0.0000
+
+retained_footprint=last3_union (highest positive directional score while preserving mover survival)
+
+last3_union breakdown by config:
+  dense-25: total=36 survive=34 diffuse=1 die=1 mean_signed_shift=1.1011
+  long-30: total=35 survive=29 diffuse=4 die=2 mean_signed_shift=1.3516
+  sparse-25: total=36 survive=33 diffuse=2 die=1 mean_signed_shift=-0.1319
+  wide-15: total=43 survive=39 diffuse=3 die=1 mean_signed_shift=0.7437
+
+last3_union breakdown by mover_rule:
+  life: total=12 survive=11 diffuse=0 die=1 mean_signed_shift=-1.0898
+  self: total=85 survive=78 diffuse=7 die=0 mean_signed_shift=1.2286
+  wide: total=53 survive=46 diffuse=3 die=4 mean_signed_shift=0.4306
+
+Interpretation:
+  This probe asks whether the away-shift problem is mostly caused by the broad late union used to build the source field. If a narrower recent-state footprint restores toward-source steering without collapsing the mover substrate, the active problem is field-footprint compression rather than source viability.

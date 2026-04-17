@@ -1,0 +1,27 @@
+================================================================================================================
+DIRECTIONAL-MEASURE B H_MASS / B CROSSOVER CARD
+================================================================================================================
+Reduced variable: lambda = h_mass / b
+Interpretation target:
+  lambda << 1       : asymptotic point-source regime, b should suffice
+  lambda ~ O(1)     : finite-source regime, b - h_mass should matter
+  edge_b <= 0       : overlap / near-overlap corner where pure b can break badly
+
+    family    N    lam_med  lam_sep_max lam_sep_mean  edge<=0  edge<0.5    A/b   A/edge    F/b   F/edge
+----------------------------------------------------------------------------------------------------------------
+    dag-m3   12      0.233        0.780        0.284        4         6   PASS     PASS   PASS     PASS
+    dag-m3   25      0.307        0.970        0.314        2         4   PASS     PASS   PASS     PASS
+    dag-m5   12      0.432        0.906        0.440        5         7   PASS     PASS   PASS     PASS
+    dag-m5   25      0.428        0.877        0.461        4         6   PASS     PASS   PASS     PASS
+      tree    8      0.100        0.250        0.134        0         0   PASS     PASS   PASS     PASS
+      tree   10      0.050        0.167        0.074        0         0   PASS     PASS   PASS     PASS
+      tree   12      0.026        0.083        0.037        0         0   PASS     PASS   PASS     PASS
+
+Crossover reading:
+  1. Tree control: lambda stays small, edge overlap never happens, and all denominators agree.
+  2. Narrow random-DAG family: lambda is moderate in the bulk, but low-b corners already approach O(1); b still passes.
+  3. Wide random-DAG family: low-b corners enter the overlap regime (edge_b <= 0),
+     but pure b still passes on the bounded family once singular center-offset trials are excluded.
+  4. So the practical crossover is not a new force law. It is the onset of finite source width in lambda = h_mass / b.
+  5. Use response / b as the leading asymptotic term when lambda is comfortably subcritical;
+     promote response / (b - h_mass) as the safer finite-source correction once low-b corners push lambda toward or past O(1).

@@ -1,0 +1,199 @@
+beyond-ceiling wider sentinel guardrail started 2026-03-30T01:02:56
+
+Beyond-Ceiling Wider Sentinel Guardrail
+=======================================
+outer_log=/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-anchor-band-beyond-ceiling-followon.txt
+nonrect_log=/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-generated-beyond-ceiling-nonrect-sweep-base-peta-exa.txt
+packet_log=/Users/jonreilly/Projects/Physics/logs/2026-03-29-low-overlap-order-parameter-late-branch-law-confirmation.txt
+sentinel=wider:base:skew-wrap:local-morph-c
+rows_total=6
+family_counts=guardrail:1, outer-rect:2, skew-wrap:1, taper-hard:2
+
+Baseline Shared-Packet Rows
+===========================
+mega:base:rect-wrap:local-morph-f cohort=held-out family=outer-rect actual=pair-only-sensitive
+  support_load=26.000
+  closure_load=80.000
+  mid_anchor_closure_peak=12.000
+  anchor_closure_intensity_gap=-2.000
+  anchor_deep_share_gap=0.000
+  high_bridge_right_count=1.000
+  high_bridge_right_low_count=1.000
+  edge_identity_event_count=56.000
+  edge_identity_support_edge_density=0.145
+  mid_candidate_attached_max=8.000
+  mid_candidate_bridge_bridge_closed_pair_max=12.000
+  mid_has_four_incident_flank_hinge=Y
+ultra:base:rect-wrap:local-morph-f cohort=held-out family=outer-rect actual=pair-only-sensitive
+  support_load=26.000
+  closure_load=80.000
+  mid_anchor_closure_peak=12.000
+  anchor_closure_intensity_gap=-2.000
+  anchor_deep_share_gap=0.000
+  high_bridge_right_count=1.000
+  high_bridge_right_low_count=1.000
+  edge_identity_event_count=56.000
+  edge_identity_support_edge_density=0.145
+  mid_candidate_attached_max=8.000
+  mid_candidate_bridge_bridge_closed_pair_max=12.000
+  mid_has_four_incident_flank_hinge=Y
+base:exa:base:taper-hard:local-morph-f cohort=late family=taper-hard actual=pair-only-sensitive
+  support_load=22.000
+  closure_load=76.000
+  mid_anchor_closure_peak=12.000
+  anchor_closure_intensity_gap=4.000
+  anchor_deep_share_gap=0.667
+  high_bridge_right_count=2.000
+  high_bridge_right_low_count=0.000
+  edge_identity_event_count=60.000
+  edge_identity_support_edge_density=0.178
+  mid_candidate_attached_max=8.000
+  mid_candidate_bridge_bridge_closed_pair_max=12.000
+  mid_has_four_incident_flank_hinge=Y
+base:peta:base:taper-hard:local-morph-f cohort=late family=taper-hard actual=pair-only-sensitive
+  support_load=22.000
+  closure_load=76.000
+  mid_anchor_closure_peak=12.000
+  anchor_closure_intensity_gap=4.000
+  anchor_deep_share_gap=0.667
+  high_bridge_right_count=2.000
+  high_bridge_right_low_count=0.000
+  edge_identity_event_count=60.000
+  edge_identity_support_edge_density=0.178
+  mid_candidate_attached_max=8.000
+  mid_candidate_bridge_bridge_closed_pair_max=12.000
+  mid_has_four_incident_flank_hinge=Y
+base:exa:base:skew-wrap:local-morph-k cohort=late family=skew-wrap actual=pair-only-sensitive
+  support_load=21.000
+  closure_load=84.000
+  mid_anchor_closure_peak=12.000
+  anchor_closure_intensity_gap=-2.000
+  anchor_deep_share_gap=-0.667
+  high_bridge_right_count=0.000
+  high_bridge_right_low_count=0.000
+  edge_identity_event_count=75.000
+  edge_identity_support_edge_density=0.151
+  mid_candidate_attached_max=8.000
+  mid_candidate_bridge_bridge_closed_pair_max=12.000
+  mid_has_four_incident_flank_hinge=Y
+
+Extended Rows
+=============
+mega:base:rect-wrap:local-morph-f cohort=held-out family=outer-rect actual=pair-only-sensitive
+  support_load=26.000
+  closure_load=80.000
+  mid_anchor_closure_peak=12.000
+  anchor_closure_intensity_gap=-2.000
+  anchor_deep_share_gap=0.000
+  high_bridge_right_count=1.000
+  high_bridge_right_low_count=1.000
+  edge_identity_event_count=56.000
+  edge_identity_support_edge_density=0.145
+  mid_candidate_attached_max=8.000
+  mid_candidate_bridge_bridge_closed_pair_max=12.000
+  mid_has_four_incident_flank_hinge=Y
+ultra:base:rect-wrap:local-morph-f cohort=held-out family=outer-rect actual=pair-only-sensitive
+  support_load=26.000
+  closure_load=80.000
+  mid_anchor_closure_peak=12.000
+  anchor_closure_intensity_gap=-2.000
+  anchor_deep_share_gap=0.000
+  high_bridge_right_count=1.000
+  high_bridge_right_low_count=1.000
+  edge_identity_event_count=56.000
+  edge_identity_support_edge_density=0.145
+  mid_candidate_attached_max=8.000
+  mid_candidate_bridge_bridge_closed_pair_max=12.000
+  mid_has_four_incident_flank_hinge=Y
+base:exa:base:taper-hard:local-morph-f cohort=late family=taper-hard actual=pair-only-sensitive
+  support_load=22.000
+  closure_load=76.000
+  mid_anchor_closure_peak=12.000
+  anchor_closure_intensity_gap=4.000
+  anchor_deep_share_gap=0.667
+  high_bridge_right_count=2.000
+  high_bridge_right_low_count=0.000
+  edge_identity_event_count=60.000
+  edge_identity_support_edge_density=0.178
+  mid_candidate_attached_max=8.000
+  mid_candidate_bridge_bridge_closed_pair_max=12.000
+  mid_has_four_incident_flank_hinge=Y
+base:peta:base:taper-hard:local-morph-f cohort=late family=taper-hard actual=pair-only-sensitive
+  support_load=22.000
+  closure_load=76.000
+  mid_anchor_closure_peak=12.000
+  anchor_closure_intensity_gap=4.000
+  anchor_deep_share_gap=0.667
+  high_bridge_right_count=2.000
+  high_bridge_right_low_count=0.000
+  edge_identity_event_count=60.000
+  edge_identity_support_edge_density=0.178
+  mid_candidate_attached_max=8.000
+  mid_candidate_bridge_bridge_closed_pair_max=12.000
+  mid_has_four_incident_flank_hinge=Y
+base:exa:base:skew-wrap:local-morph-k cohort=late family=skew-wrap actual=pair-only-sensitive
+  support_load=21.000
+  closure_load=84.000
+  mid_anchor_closure_peak=12.000
+  anchor_closure_intensity_gap=-2.000
+  anchor_deep_share_gap=-0.667
+  high_bridge_right_count=0.000
+  high_bridge_right_low_count=0.000
+  edge_identity_event_count=75.000
+  edge_identity_support_edge_density=0.151
+  mid_candidate_attached_max=8.000
+  mid_candidate_bridge_bridge_closed_pair_max=12.000
+  mid_has_four_incident_flank_hinge=Y
+wider:base:skew-wrap:local-morph-c cohort=wider-sentinel family=guardrail actual=pair-only-sensitive
+  support_load=20.000
+  closure_load=70.000
+  mid_anchor_closure_peak=8.000
+  anchor_closure_intensity_gap=1.000
+  anchor_deep_share_gap=0.500
+  high_bridge_right_count=1.000
+  high_bridge_right_low_count=1.000
+  edge_identity_event_count=74.000
+  edge_identity_support_edge_density=0.140
+  mid_candidate_attached_max=7.000
+  mid_candidate_bridge_bridge_closed_pair_max=8.000
+  mid_has_four_incident_flank_hinge=n
+
+Shared Packet Law
+=================
+rows=6 (guardrail:1, outer-rect:2, skew-wrap:1, taper-hard:2)
+mid_anchor_closure_peak_values=8.000:1, 12.000:5
+mid_candidate_attached_max_values=7.000:1, 8.000:5
+mid_candidate_bridge_bridge_closed_pair_max_values=8.000:1, 12.000:5
+mid_has_four_incident_flank_hinge_values=0.000:1, 1.000:5
+mid_anchor_closure_peak >= 10.000: 5/6 (outer-rect:2, skew-wrap:1, taper-hard:2)
+mid_candidate_bridge_bridge_closed_pair_max >= 10.000: 5/6 (outer-rect:2, skew-wrap:1, taper-hard:2)
+mid_candidate_attached_max >= 7.500: 5/6 (outer-rect:2, skew-wrap:1, taper-hard:2)
+mid_has_four_incident_flank_hinge >= 0.500: 5/6 (outer-rect:2, skew-wrap:1, taper-hard:2)
+
+Wider Sentinel Packet Audit
+===========================
+sentinel=wider:base:skew-wrap:local-morph-c
+actual=pair-only-sensitive
+mid_anchor_closure_peak >= 10.000: n
+mid_candidate_bridge_bridge_closed_pair_max >= 10.000: n
+mid_candidate_attached_max >= 7.500: n
+mid_has_four_incident_flank_hinge >= 0.500: n
+shared_packet_membership=0/4
+
+Current Branch Clauses On Wider Sentinel
+=======================================
+family | rule | exact_with_sentinel | sentinel_match | tp/fp/fn | matched(family counts)
+------+-----+--------------------+---------------+----------+----------------------
+outer-rect | edge_identity_event_count <= 58.000 |         Y          |       n       |  2/ 0/ 0 | 2 (outer-rect:2)
+taper-hard | anchor_closure_intensity_gap >= 1.000 |         n          |       Y       |  2/ 1/ 0 | 3 (guardrail:1, taper-hard:2)
+skew-wrap | anchor_deep_share_gap <= -0.334 |         Y          |       n       |  1/ 0/ 0 | 1 (skew-wrap:1)
+
+Conclusion
+==========
+conclusion=the nearest wider base sentinel does not join the shared beyond-ceiling 8/12 packet regime, so this guardrail does not add a fourth shared-packet subbranch.
+sentinel_translation=the wider skew-wrap shoulder keeps the same broader base family but stalls below the common packet lift at `mid_anchor_closure_peak = 8.000`, `mid_candidate_attached_max = 7.000`, and four-incident flank hinge = n.
+shared_packet_rules_hit=none.
+first_clause_failure=taper-hard via anchor_closure_intensity_gap >= 1.000.
+branch_guardrail_read=the current taper-hard intensity clause is only exact inside the shared-packet family; once the compare steps out to the nearest wider base shoulder, that clause lights up before the packet law itself does.
+
+beyond-ceiling wider sentinel guardrail completed 2026-03-30T01:03:33 total_elapsed=36.4s

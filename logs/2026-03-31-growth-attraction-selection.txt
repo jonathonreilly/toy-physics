@@ -1,0 +1,69 @@
+================================================================================
+GROWTH RULE SELECTION FOR GRAVITATIONAL ATTRACTION
+  Corrected propagator: exp(i*k*S) / L^p
+  k-averaged over [3, 4, 5, 6, 7, 8]
+================================================================================
+
+SWEEP 1: Connect radius (graph density)
+  n_layers=12, nodes_per_layer=20, y_range=10
+
+    radius  mean_deg  attract%  mean_shift  n_valid
+  ------------------------------------------------
+       1.5       1.9        0%      -0.440        5
+       2.0       3.0       80%      +0.441        5
+       2.5       6.2      100%      +2.280        5
+       3.0       8.2      100%      +2.130        5
+       3.5      10.0      100%      +1.719        5
+       4.0      11.6      100%      +1.943        5
+       5.0      14.4       80%      +1.686        5
+       6.0      17.0       80%      +1.495        5
+       8.0      21.6       80%      +1.138        5
+
+SWEEP 2: Nodes per layer (path diversity)
+  n_layers=12, connect_radius=3.0, y_range=10
+
+       npl  mean_deg  attract%  mean_shift
+  ----------------------------------------
+         5       2.0       25%      -0.500
+        10       3.9      100%      +1.162
+        15       6.1       60%      +0.572
+        20       8.2      100%      +2.130
+        30      12.2       80%      +2.699
+        40      16.4      100%      +4.021
+        60      24.6      100%      +2.955
+
+SWEEP 3: y_range (spatial spread)
+  n_layers=12, nodes_per_layer=20, connect_radius=3.0
+
+   y_range  mean_deg  attract%  mean_shift
+  ----------------------------------------
+       3.0      22.8        0%      -0.355
+       5.0      15.3       60%      +0.209
+       8.0      10.1       80%      +1.200
+      10.0       8.2      100%      +2.130
+      15.0       5.6      100%      +3.411
+      20.0       4.2       40%      +2.104
+      30.0       2.8       20%      -0.480
+
+================================================================================
+CORRELATION ANALYSIS
+================================================================================
+
+   deg_bin  n_graphs  attract%  mean_shift
+  ----------------------------------------
+         2         7       57%      +0.747
+         4        17       47%      +0.311
+         6        10       60%      +0.378
+         8        11       55%      +0.175
+        10        10       50%      +0.750
+        12         5       80%      +2.428
+        14         6       67%      +1.361
+        16         1      100%      +1.128
+        18         2      100%      +2.005
+        22         3       67%      +1.003
+
+If attraction% increases with mean_degree:
+  → Graph density SELECTS for attraction
+  → Same structural property enables both interference AND gravity
+
+TEST COMPLETE

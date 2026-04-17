@@ -1,0 +1,132 @@
+version: "2026-04-11"
+default_entrypoints:
+  - docs/START_HERE.md
+  - docs/work_history/repo/LANE_STATUS_BOARD.md
+  - docs/CANONICAL_HARNESS_INDEX.md
+  - docs/repo/RETEST_PLAYBOOK.md
+lanes:
+  - id: staggered_parity_core
+    label: "Staggered fermion + parity coupling"
+    status: primary-retained
+    summary: "Current best-supported architecture. Exact lattice-force directional result survives."
+    canonical_scripts:
+      - scripts/frontier_staggered_17card.py
+      - scripts/frontier_staggered_full_suite.py
+    canonical_notes:
+      - docs/STAGGERED_FERMION_CARD_2026-04-11.md
+      - docs/FULL_TEST_MATRIX_2026-04-10.md
+      - docs/SESSION_SYNTHESIS_2026-04-10_FINAL.md
+    blockers:
+      - "Off-lattice sign-selective irregular observable still open."
+  - id: staggered_irregular_structural
+    label: "Staggered irregular graph structural batteries"
+    status: retained-companion
+    summary: "Retained cycle, scaled, self-gravity, wave, retarded, portability, and DAG package."
+    canonical_scripts:
+      - scripts/frontier_staggered_cycle_battery.py
+      - scripts/frontier_staggered_cycle_battery_scaled.py
+      - scripts/frontier_staggered_self_gravity.py
+      - scripts/frontier_two_field_wave.py
+      - scripts/frontier_two_field_retarded_family_closure.py
+      - scripts/frontier_staggered_dag.py
+    canonical_notes:
+      - docs/CYCLE_BATTERY_NOTE_2026-04-10.md
+      - docs/CYCLE_BATTERY_SCALED_NOTE_2026-04-10.md
+      - docs/TWO_FIELD_RETARDED_FAMILY_CLOSURE_NOTE_2026-04-10.md
+      - docs/STAGGERED_DAG_NOTE_2026-04-10.md
+    blockers:
+      - "Direction/sign evidence is still not closed off-lattice."
+  - id: irregular_directional_blocker
+    label: "Irregular off-lattice direction/sign selection"
+    status: open-blocker
+    summary: "No frozen same-surface endogenous irregular observable distinguishes attractive from repulsive coupling."
+    canonical_scripts:
+      - scripts/frontier_irregular_directional_observable.py
+      - scripts/frontier_two_sign_parity.py
+      - scripts/frontier_two_sign_comparison.py
+    canonical_notes:
+      - docs/GRAVITY_SIGN_AUDIT_2026-04-10.md
+      - docs/IRREGULAR_DIRECTIONAL_OBSERVABLE_NOTE_2026-04-11.md
+      - docs/TWO_SIGN_COMPARISON_NOTE_2026-04-10.md
+  - id: emergent_geometry_growth
+    label: "Emergent geometry growth"
+    status: exploratory-reopen
+    summary: "Matter-coupled growth reshapes geometry and shows a narrow high-G toward window, but remains seed- and coupling-sensitive."
+    canonical_scripts:
+      - scripts/frontier_emergent_geometry_v2.py
+      - scripts/frontier_emergent_geometry_g_sweep.py
+      - scripts/frontier_emergent_geometry_multisize.py
+    canonical_notes:
+      - docs/EMERGENT_GEOMETRY_GROWTH_NOTE_2026-04-10.md
+  - id: graph_scalar_control
+    label: "Graph scalar / KG control"
+    status: historical-control
+    summary: "Important control lane and comparison surface; no longer the primary successor architecture."
+    canonical_scripts:
+      - scripts/frontier_graph_kg_16card.py
+      - scripts/frontier_graph_kg_full_suite.py
+      - scripts/frontier_scalar_kg_16card.py
+      - scripts/frontier_scalar_kg_full_suite.py
+    canonical_notes:
+      - docs/FULL_TEST_MATRIX_2026-04-10.md
+  - id: coin_walks
+    label: "Coin / chiral / Dirac-walk lane"
+    status: historical-blocked
+    summary: "Diagnosed blocker is the coin mixing period. Useful negative result, not the main architecture path."
+    canonical_scripts:
+      - scripts/frontier_chiral_bottleneck_card.py
+      - scripts/frontier_dirac_bottleneck_tests.py
+      - scripts/frontier_weakcoin_16card.py
+    canonical_notes:
+      - docs/CHIRAL_WALK_SYNTHESIS_2026-04-09.md
+      - docs/CHIRAL_WALK_SYNTHESIS_2026-04-10_ADDENDUM.md
+  - id: mirror_exact
+    label: "Mirror / exact geometry / Z2xZ2"
+    status: historical-retained
+    summary: "Earlier flagship. Still a major retained historical program, but no longer the default entrypoint."
+    canonical_scripts:
+      - scripts/mirror_2d_validation.py
+      - scripts/mirror_mutual_information_chokepoint.py
+      - scripts/mirror_chokepoint_joint.py
+    canonical_notes:
+      - docs/UNIFIED_PROGRAM_NOTE.md
+      - docs/MIRROR_PROGRAM_SYNTHESIS.md
+  - id: ordered_lattice_action
+    label: "Ordered lattice / action-power / valley-linear"
+    status: historical-retained
+    summary: "Large retained historical branch spanning ordered lattice and action-law subprograms."
+    canonical_scripts:
+      - scripts/frontier_3plus1d_closure_card.py
+      - scripts/frontier_dimension_dependent_kernel.py
+      - scripts/frontier_lorentzian_closure_card.py
+      - scripts/lattice_3d_dense_10prop.py
+      - scripts/lattice_nn_continuum.py
+      - scripts/structured_chokepoint_bridge.py
+    canonical_notes:
+      - docs/ACTION_ARCHITECTURE_MATRIX_NOTE.md
+      - docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md
+      - docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md
+      - docs/CONTINUUM_BRIDGE_NOTE.md
+      - docs/STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md
+  - id: generated_geometry_gate_b
+    label: "Generated geometry / Gate B / source-resolved"
+    status: historical-bounded
+    summary: "Real transfer and generated-family work, but no longer the center of gravity for the repo."
+    canonical_scripts:
+      - scripts/gate_b_grown_joint_package.py
+      - scripts/source_resolved_generated_architecture_bridge.py
+      - scripts/source_resolved_geometry_rule_repair_probe.py
+    canonical_notes:
+      - docs/GATE_B_GROWN_JOINT_PACKAGE_NOTE.md
+      - docs/SOURCE_RESOLVED_GENERATED_ARCHITECTURE_BRIDGE_NOTE.md
+  - id: moonshots
+    label: "Schwarzschild / Hawking / moonshots"
+    status: historical-control
+    summary: "High-risk exploratory work and negative controls for ambition-setting."
+    canonical_scripts:
+      - scripts/frontier_emergent_schwarzschild.py
+      - scripts/frontier_hawking_analog.py
+      - scripts/frontier_quantized_energy_levels.py
+    canonical_notes:
+      - docs/NATURE_BACKLOG_2026-04-10.md
+      - docs/MOONSHOT_FRONTIER_PORTFOLIO_NOTE.md

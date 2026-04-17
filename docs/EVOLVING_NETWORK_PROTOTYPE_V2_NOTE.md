@@ -1,0 +1,87 @@
+# Evolving Network Prototype V2 Note
+
+**Date:** 2026-04-04  
+**Status:** bounded Gate B prototype note, not a promoted dynamics theorem
+
+## One-line read
+
+The new prototype shows a real generated-geometry signal on the 3D hard-gap
+lane, but it does **not** yet close Gate B.
+
+The self-regulating prune rule reliably opens a larger post-barrier gap than
+the unpruned baseline, but at the tested thresholds it does not converge to a
+fixed point and the same-budget imposed-band control still loses detector
+signal in this parameterization.
+
+## Primary artifact
+
+Script:
+
+- [`scripts/evolving_network_prototype_v2.py`](/Users/jonreilly/Projects/Physics/scripts/evolving_network_prototype_v2.py)
+
+Log:
+
+- [`logs/2026-04-04-evolving-network-prototype-v2.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-04-evolving-network-prototype-v2.txt)
+
+## What the prototype compares
+
+This prototype separates two things on the same 3D DAG family:
+
+1. **Generated structure**
+   - local self-regulating prune rule
+   - nodes with low slit distinguishability are removed iteratively
+2. **Imposed structure**
+   - the same removal budget applied as a hand-imposed central band
+
+That makes the comparison review-friendly:
+
+- same graph family
+- same removal budget
+- different selection rule
+
+## Retained result
+
+The generated rule produces a clear gap signal:
+
+- baseline purity stays high: `pur_cl ≈ 0.9648 .. 0.9894`
+- generated purity is slightly lower or comparable: `pur_cl ≈ 0.9393 .. 0.9768`
+- generated gap is nontrivial and grows with threshold: about `0.88 .. 4.09`
+- removal counts are large, which means the rule is acting strongly rather than
+  trivially
+
+The strongest retained read is therefore:
+
+- the generated rule is not just a random perturbation
+- it creates a measurable geometric separation in the post-barrier region
+- the gap signal is distinct from the baseline graph
+
+## Negative / unresolved result
+
+This is still a bounded negative as a Gate B closure attempt:
+
+- `conv = 0.00` in the tested sweep
+- the rule hits the removal cap instead of settling into a stable fixed point
+- the imposed-band control still often loses detector signal (`pur_cl = nan`)
+
+So the prototype does **not** yet show a clean generated-vs-imposed winner
+under the current settings.
+
+## Safe interpretation
+
+- Generated structure is real here.
+- Imposed structure is still a distinct and stronger comparator than the
+  current rule can fully handle.
+- The lane is valuable because it narrows the dynamics question:
+  - the graph can self-organize a gap
+  - but the self-organization is not yet stable enough to count as a closed
+    dynamics solution
+
+## What is not retained from this note
+
+- “Gate B is solved”
+- “the dynamics rule converges to a fixed point”
+- “the imposed-band control is a positive comparator”
+- “this replaces the existing mirror / lattice / valley-linear lanes”
+
+This note should be read as a clean bounded negative with a real generated
+geometry signal, not as a final dynamics theorem.

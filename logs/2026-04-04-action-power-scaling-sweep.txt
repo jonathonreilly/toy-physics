@@ -1,0 +1,22 @@
+========================================================================================================
+ACTION POWER SCALING SWEEP
+  Fixed 3D ordered-lattice family
+  h=0.5, W=10, L=12, max_d=3
+  Kernel: 1/L^2 with h^2 measure
+  Field: s/r, standard strength ladder
+  Goal: test bounded fixed-family scaling with S = L(1-f^p)
+========================================================================================================
+
+   p       Born    grav(z=3)   TOWARD      F~M               tail    -(2p-1)
+--------------------------------------------------------------------------------------------------------
+0.50   2.18e-15    +0.021421      7/7     0.50         z>=5:-0.78      -0.00
+0.75   2.18e-15    +0.001880      7/7     0.75         z>=4:-0.76      -0.50
+1.00   2.18e-15    +0.000150      7/7     1.00         z>=4:-1.00      -1.00
+1.50   2.18e-15    +0.000001      7/7     1.50         z>=5:-2.20      -2.00
+2.00   2.18e-15    +0.000000      7/7     2.00         z>=5:-3.54      -3.00
+
+SAFE READ
+  - On this fixed family, F~M tracks the action power p across the tested sweep.
+  - Born stays machine-clean across the whole tested power family.
+  - The distance tail steepens strongly with p, but should still be read as a bounded family law.
+  - Any closed formula here is empirical on this family unless a separate derivation lands.

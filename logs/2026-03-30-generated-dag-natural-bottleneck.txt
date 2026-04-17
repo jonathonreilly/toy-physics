@@ -1,0 +1,40 @@
+================================================================================
+NATURAL BOTTLENECK INTERFERENCE
+  No hand-imposed barrier. The graph's own sparse region is the barrier.
+================================================================================
+
+  seed= 0: bottleneck x=7, 219 crossings, natural slits at y=[-7.6, 7.8], V(y=0)=0.0002
+  seed= 1: bottleneck x=17, 215 crossings, natural slits at y=[-7.8, 7.7], V(y=0)=0.9961
+  seed= 2: bottleneck x=8, 226 crossings, natural slits at y=[-7.7, 7.9], V(y=0)=0.0002
+  seed= 3: bottleneck x=13, 220 crossings, natural slits at y=[-7.9, 7.3], V(y=0)=0.0925
+  seed= 4: bottleneck x=8, 201 crossings, natural slits at y=[-7.7, 7.7], V(y=0)=0.0034
+  seed= 5: bottleneck x=11, 218 crossings, natural slits at y=[-7.9, 7.2], V(y=0)=0.0038
+  seed= 6: bottleneck x=11, 196 crossings, natural slits at y=[-7.5, 7.9], V(y=0)=0.0485
+  seed= 7: bottleneck x=9, 199 crossings, natural slits at y=[-7.8, 7.8], V(y=0)=0.0197
+  seed= 8: bottleneck x=18, 219 crossings, natural slits at y=[-7.5, 7.1], V(y=0)=0.0937
+  seed= 9: bottleneck x=5, 204 crossings, natural slits at y=[-7.8, 7.9], V(y=0)=0.0000
+  seed=10: bottleneck x=7, 218 crossings, natural slits at y=[-7.6, 7.9], V(y=0)=0.0001
+  seed=11: bottleneck x=3, 222 crossings, natural slits at y=[-7.9, 7.8], V(y=0)=0.0000
+  seed=12: bottleneck x=17, 213 crossings, natural slits at y=[-7.8, 7.6], V(y=0)=0.0000
+  seed=13: bottleneck x=17, 186 crossings, natural slits at y=[-7.4, 7.7], V(y=0)=0.0002
+  seed=14: bottleneck x=18, 221 crossings, natural slits at y=[-7.8, 7.5], V(y=0)=0.0000
+  seed=15: bottleneck x=10, 202 crossings, natural slits at y=[-7.3, 7.9], V(y=0)=0.0032
+  seed=16: bottleneck x=16, 219 crossings, natural slits at y=[-8.0, 7.5], V(y=0)=0.0385
+  seed=17: bottleneck x=10, 224 crossings, natural slits at y=[-7.8, 7.8], V(y=0)=0.0000
+  seed=18: bottleneck x=10, 229 crossings, natural slits at y=[-7.7, 7.9], V(y=0)=0.0212
+  seed=19: bottleneck x=12, 207 crossings, natural slits at y=[-7.6, 7.7], V(y=0)=0.0006
+
+================================================================================
+SUMMARY
+================================================================================
+
+  Valid seeds: 20/20
+  Mean V(y=0): 0.0661
+  Seeds with V > 0.01: 7
+  Mean bottleneck crossings: 212.9
+  Mean slit separation: 15.4
+
+If V > 0 at natural bottlenecks: the graph generates its own interference
+without ANY hand-imposed barrier structure.
+
+TEST COMPLETE

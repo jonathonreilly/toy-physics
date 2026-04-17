@@ -1,0 +1,36 @@
+============================================================================================
+TAPERED 3D REFINEMENT
+  New topology branch: y-only taper, z connectivity uniform
+  Question: does the same-family 3D branch survive refinement at h=0.5?
+============================================================================================
+
+Physical setup: L=12.0, W=6.0, strength=5e-05
+Taper: y core=3.0, y edge=1.0, y taper radius=4.0, z span=3.0
+Slits: |y| >= 0.5 open on the barrier layer
+
+h=1.0
+  Born = 5.42e-16
+  k=0 = +0.000000
+  MI = 0.0789
+  d_TV = 0.2612
+  Decoherence = 18.2%
+  Gravity hierarchy: centroid=-0.024838, P_near=-0.001740, bias=-0.474054 [AWAY]
+  Distance law: insufficient positive support (0/0)
+
+h=0.5
+  Born = 1.91e-15
+  k=0 = +0.000000
+  MI = 0.6714
+  d_TV = 0.8668
+  Decoherence = 49.9%
+  Gravity hierarchy: centroid=-0.005891, P_near=-0.001281, bias=-0.001667 [AWAY]
+  Distance law: insufficient positive support (0/0)
+
+Refinement summary:
+  Born: h=1.0 -> 5.42e-16, h=0.5 -> 1.91e-15
+  Gravity hierarchy: h=1.0 AWAY, h=0.5 AWAY
+  Distance support: h=1.0 0/0, h=0.5 0/0
+  MI: h=1.0 0.0789, h=0.5 0.6714
+  Decoherence: h=1.0 18.2%, h=0.5 49.9%
+
+Conclusion: tapered 3D does not recover hierarchy-clean attraction.
