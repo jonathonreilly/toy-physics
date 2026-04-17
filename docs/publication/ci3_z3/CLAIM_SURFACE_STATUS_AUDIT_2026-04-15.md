@@ -79,6 +79,26 @@ Authority:
 - [COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md](../../COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md)
 - [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md)
 
+### Charged-lepton review-facing package
+
+The charged-lepton mass-hierarchy / Koide row is now coherently positioned as
+a review-facing closure-class package rather than a retained framework-native
+derivation.
+
+Current package posture is appropriately explicit:
+
+- retained structural compatibility package on the `hw=1` triplet
+- observational three-real PDG pin
+- closure class `retained-map-plus-observational-promotion`
+- strict-review verdict `TRUE_NO_PREDICTION`
+- no spare forecast and no claim that the framework derives Koide on the
+  current surface
+
+Authority:
+
+- [CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md](../../CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md)
+- [HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md](../../HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md)
+
 ## Rows That Still Need Claim-Surface Adjustment
 
 These are the rows where the public wording is currently stronger than the
