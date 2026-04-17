@@ -3,6 +3,23 @@
 **Status:** airtight (Grind Program, Batch 5)
 **Runner:** `scripts/frontier_hw1_hw2_s3_equivariant_iso.py` (29/29 PASS)
 
+## Classical results applied
+
+- **Equivariant isomorphism from an invariant involution** (standard
+  rep theory): if U is a G-invariant involution on V ⊕ W that maps
+  V to W, then its restriction U|_V is a G-equivariant iso V ≅ W.
+- **Restriction of operators to invariant subspaces** (standard).
+- **Product of pairwise-commuting involutions is an involution**
+  (elementary algebra).
+
+## Framework-specific step
+
+- Identification of e_3 = S_1 · S_2 · S_3, the top elementary
+  symmetric polynomial in the cube-shifts, as a unitary Hermitian
+  involution on C^8 that bit-flips the three-qubit index
+  α ↦ (1 − α_1, 1 − α_2, 1 − α_3), and in particular sends
+  hw = 1 ↔ hw = 2.
+
 ## Framework object
 
 The Hamming-weight blocks of the taste cube C^8 = (C²)^⊗³ include

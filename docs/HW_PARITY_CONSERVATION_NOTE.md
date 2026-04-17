@@ -5,6 +5,23 @@
 **Reusability:** high — parity-based block-decomposition of BZ-corner
 operators built from site-phase products.
 
+## Classical results applied
+
+- **Z_2 projector decomposition** Π_± = (1 ± U)/2 for any involution
+  U with U² = I (standard linear algebra).
+- **Grading / parity argument** for polynomial algebras: even-degree
+  monomials preserve a Z_2 grading and odd-degree monomials flip it
+  (textbook).
+- **Hamming-distance selection rule** from Batch 1 for the action of
+  site-phase polynomials on BZ corners.
+
+## Framework-specific step
+
+- Identification of the total-parity involution T_1 T_2 T_3 on
+  C^{L³} as the operator whose eigenspace decomposition coincides
+  with the even/odd Hamming-weight decomposition of the BZ-corner
+  subspace.
+
 ## Theorem
 
 Let P_1, P_2, P_3 be the site-phase operators on C^{L³} (L even),

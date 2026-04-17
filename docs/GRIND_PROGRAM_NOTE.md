@@ -185,6 +185,32 @@ hierarchy, gauge structure, confinement, etc.).
   Note: `INTERTWINER_PULLBACK_S3_INVARIANTS_NOTE.md`
   Runner: `frontier_intertwiner_pullback_s3_invariants.py` (25/25 PASS)
 
+### Batch 7: hw-projector algebra + subgroup lattice
+
+- **Hamming-Weight Projector Algebra on C^8** — applies the spectral
+  theorem for self-adjoint operators and commuting-idempotents
+  algebra theory: the hw projectors Π_0, …, Π_3 form a 4-dim abelian
+  *-algebra P ⊂ End(C^8)^{S_3}, the hw-diagonal S_3-invariant
+  companion to the Hadamard-diagonal A_S^{S_3}.
+  Note: `HW_PROJECTOR_ALGEBRA_NOTE.md`
+  Runner: `frontier_hw_projector_algebra.py` (54/54 PASS)
+
+- **Intersection of A_S^{S_3} and the Hw-Projector Algebra** — applies
+  Grassmann's formula + the spectral argument that a simultaneously
+  Hadamard- and hw-diagonal operator must be a scalar: A_S^{S_3} ∩ P
+  = span{I}, dim (A_S^{S_3} + P) = 7. Makes explicit that cube-shift-
+  symmetric and hw-graded are structurally complementary.
+  Note: `CUBE_SHIFT_VS_HW_PROJECTOR_INTERSECTION_NOTE.md`
+  Runner: `frontier_cube_shift_vs_hw_projector_intersection.py` (10/10 PASS)
+
+- **Subgroup-Commutant Dimension Lattice on C^8** — applies the
+  subgroup lattice of S_3 + Schur's lemma: compiles dim End(C^8)^H
+  for each H ⊆ S_3 (S_3: 20, Z_3: 24, each of 3 Z_2: 40, {e}: 64).
+  Single citable reference for the inclusion-reversed commutant
+  lattice.
+  Note: `SUBGROUP_COMMUTANT_LATTICE_NOTE.md`
+  Runner: `frontier_subgroup_commutant_lattice.py` (13/13 PASS)
+
 ## Reusability claim
 
 These theorems are cited in any downstream derivation involving:

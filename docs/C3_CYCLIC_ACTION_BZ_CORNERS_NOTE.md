@@ -5,6 +5,23 @@
 **Reusability:** high — extends main's hw=1 observable theorem to the full
 8-dim taste cube; provides foundation for axis-cycle / Z_3 arguments.
 
+## Classical results applied
+
+- **Orbit–stabilizer theorem for finite group actions** (Burnside;
+  textbook group theory, e.g. Dummit–Foote, *Abstract Algebra*,
+  §4.1).
+- **Cyclic-group action on a finite set** with orbit sizes dividing
+  the group order |Z_3| = 3 (so orbits have size 1 or 3).
+- **Conjugation action on generators**: U S_μ U^{-1} = S_{σ(μ)} is
+  the standard "automorphism of the generating set" pattern.
+
+## Framework-specific step
+
+- Identification of the body-diagonal [111] axis cycle as the
+  unitary U on C^8 = (C²)^⊗³ cyclically permuting the three tensor
+  factors, and the corresponding orbit structure 1 + 3 + 3 + 1 on
+  the 8 taste-cube basis states.
+
 ## Theorem
 
 Let U be the unitary on C^8 = (C²)⊗³ implementing the axis cycle

@@ -5,6 +5,23 @@
 **Reusability:** high — characterizes the S_3-irrep content of C^8,
 required for any S_3-invariance argument on the taste cube.
 
+## Classical results applied
+
+- **Character-theoretic isotypic decomposition** (Frobenius 1896;
+  Serre, *Linear Representations of Finite Groups*, ch. 2).
+- **Character table of S_3** (three irreps: trivial A_1, sign A_2,
+  standard E of dimension 2; Fulton–Harris, *Representation Theory*,
+  §2.2).
+- **Permutation-module character formula** χ(π) = |Fix(π)| for a
+  finite group acting on a set (used to compute the character of
+  the action of S_3 on the 8 basis states of (C²)^⊗³).
+
+## Framework-specific step
+
+- Identification of the S_3 action on C^8 as tensor-position
+  permutation and the computation of its permutation character on
+  the standard basis {|α⟩ : α ∈ {0,1}³}.
+
 ## Theorem
 
 The symmetric group S_3 acts on C^8 = (C²)⊗³ by tensor-position

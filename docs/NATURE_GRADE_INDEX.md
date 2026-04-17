@@ -1,7 +1,7 @@
 # Nature-Grade Index
 
 **Branch:** `claude/main-derived`
-**Updated:** 2026-04-16 (Grind Program Batch 6)
+**Updated:** 2026-04-16 (Grind Program Batch 7)
 
 ## Airtight results on this branch
 
@@ -125,10 +125,30 @@
   S_3-invariant result from C^8 to the BZ-corner subspace of
   C^{L³} via the Batch 1 intertwiner. 25/25 PASS.
 
+### Batch 7: hw-projector algebra + subgroup lattice
+
+- **Hamming-Weight Projector Algebra on C^8**
+  (`HW_PROJECTOR_ALGEBRA_NOTE.md`) — the 4-dim abelian *-algebra
+  P = span{Π_0, …, Π_3} of hw spectral projectors; S_3-invariant,
+  hw-diagonal, and distinct from the Hadamard-diagonal
+  A_S^{S_3}. 54/54 PASS.
+
+- **Intersection of A_S^{S_3} and the Hw-Projector Algebra**
+  (`CUBE_SHIFT_VS_HW_PROJECTOR_INTERSECTION_NOTE.md`) — A_S^{S_3} ∩ P
+  = span{I}, dim (A_S^{S_3} + P) = 7. Identifies the two 4-dim
+  subalgebras as maximally independent within End(C^8)^{S_3}.
+  10/10 PASS.
+
+- **Subgroup-Commutant Dimension Lattice on C^8**
+  (`SUBGROUP_COMMUTANT_LATTICE_NOTE.md`) — reference table:
+  S_3 (dim 20), Z_3 (dim 24), any of the three Z_2 (dim 40),
+  {e} (dim 64). Compiles Batches 3/5/6 commutant dims with monotone
+  decreasing along subgroup chains. 13/13 PASS.
+
 ## Totals
 
 ```
-1180 total verification checks, 0 failures
+1257 total verification checks, 0 failures
 ```
 
 ## Reviewer workflow
@@ -167,6 +187,11 @@ python3 scripts/frontier_hw1_hw2_s3_equivariant_iso.py
 python3 scripts/frontier_z3_cyclic_commutant.py
 python3 scripts/frontier_z2_hw1_mass_matrix_parametrization.py
 python3 scripts/frontier_intertwiner_pullback_s3_invariants.py
+
+# Batch 7
+python3 scripts/frontier_hw_projector_algebra.py
+python3 scripts/frontier_cube_shift_vs_hw_projector_intersection.py
+python3 scripts/frontier_subgroup_commutant_lattice.py
 ```
 
 Each exits 0 on success, nonzero on failure. Each prints a TOTAL

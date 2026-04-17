@@ -6,6 +6,22 @@
 `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md` to the full 8-dim BZ-corner
 spectrum.
 
+## Classical results applied
+
+- **Bloch-wave eigenstates for discrete translation** on Z_L³
+  (Bloch 1929; Ashcroft–Mermin, *Solid State Physics*, ch. 8).
+- **Character theory of finite abelian groups** (Frobenius 1896):
+  Z_L^3 irreps are labeled by k ∈ (2π/L)·Z_L^3 and given by
+  χ_k(x) = exp(i k · x).
+- **BZ-corner specialization**: at α ∈ {0,1}³, k_μ = α_μ · π gives
+  exp(i k_μ) = (−1)^{α_μ} and the eigenvalue of T_μ is (−1)^{α_μ}.
+
+## Framework-specific step
+
+- Identification of the BZ-corner state as
+  |X_α⟩(x) = exp(i π α · x) / √(L³) for α ∈ {0,1}³, the specific
+  plane-waves picked out by the cube-corners of the Brillouin zone.
+
 ## Theorem
 
 Let Z_L³ (L even) be the periodic cubic lattice, and let T_μ for μ ∈ {1,2,3}

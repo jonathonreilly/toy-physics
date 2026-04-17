@@ -4,6 +4,25 @@
 Batch 2 (S_3 decomposition + hw-parity).
 **Runner:** `scripts/frontier_hadamard_s3_composition.py` (117/117 PASS)
 
+## Classical results applied
+
+- **Simultaneous diagonalization of commuting self-adjoint operators**
+  (standard linear algebra).
+- **Permutation action of a finite group on an eigenbasis**: when G
+  permutes the eigenvalues of a commuting family, it permutes the
+  corresponding eigenvectors by the same combinatorial action on
+  their labels (standard rep theory).
+- **Induced Fourier transforms** for finite abelian groups
+  (composition of the Z_2^3 / Hadamard DFT from Batch 1 with the S_3
+  action from Batch 2).
+
+## Framework-specific step
+
+- Composition of the Batch 1 cube-shift joint-eigenbasis and the
+  Batch 2 S_3 axis-permutation action: verifying that the Hadamard
+  basis {|ψ_s⟩} carries the S_3 action by permutation of labels
+  s ∈ {±1}³.
+
 ## Theorem
 
 Let |ψ_s⟩ = (1/√8) Σ_α (∏_μ s_μ^{α_μ}) |α⟩ for s ∈ {±1}³ be the

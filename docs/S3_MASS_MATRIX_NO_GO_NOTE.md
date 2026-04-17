@@ -3,6 +3,23 @@
 **Status:** airtight (Grind Program, Batch 4)
 **Runner:** `scripts/frontier_s3_mass_matrix_no_go.py` (13/13 PASS)
 
+## Classical results applied
+
+- **Schur's lemma** (Schur 1905) for V ≅ A_1 ⊕ E: any G-invariant
+  operator is a scalar on each isotypic component.
+- **Hermitian matrix spectral theorem** (standard linear algebra):
+  eigenvalues of a Hermitian matrix are real, with multiplicities
+  summing to the dimension.
+- **Dimension of End(V)^G for Z_2-representations** via Schur:
+  dim End(V)^{Z_2} = n_+² + n_−² where n_± are the multiplicities
+  of trivial and sign irreps.
+
+## Framework-specific step
+
+- Identification of the hw=1 triplet V = span(X_1, X_2, X_3) of the
+  taste cube with the S_3 standard permutation-rep carrier A_1 ⊕ E
+  (via the Batch 2 S_3 Axis-Permutation Decomposition).
+
 ## Framework object
 
 Let V ⊂ C^8 be the hw=1 subspace (the three states with exactly one

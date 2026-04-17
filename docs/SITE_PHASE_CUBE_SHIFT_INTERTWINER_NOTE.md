@@ -6,6 +6,24 @@ theorem, translation-eigenvalue theorem, and Hamming-distance selection rule.
 **Reusability:** this is the canonical bridge between C^8 taste-cube
 arguments and C^{L³} lattice arguments.
 
+## Classical results applied
+
+- **Intertwiner theory / equivariant linear maps** (standard
+  representation theory; Serre, *Linear Representations of Finite
+  Groups*, ch. 1).
+- **Fourier duality between multiplication and shift** (standard
+  harmonic analysis): under Fourier transform, a multiplication
+  operator on functions of x becomes a shift on functions of the
+  dual variable.  Applied here with the Z_2^3-valued BZ-corner
+  Fourier variable.
+
+## Framework-specific step
+
+- Identification of the isometric embedding Φ : C^8 → C^{L³},
+  |α⟩ ↦ |X_α⟩, and the observation that it intertwines the site-
+  phase P_μ (multiplication by (−1)^{x_μ}) with the cube-shift S_μ
+  (bit-flip on α).
+
 ## Theorem
 
 Let Z_L³ (L even) be the periodic lattice with BZ corner states |X_α⟩

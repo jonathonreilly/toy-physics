@@ -3,6 +3,22 @@
 **Status:** AIRTIGHT — Schur's lemma applied to the S_3 decomposition of C^8
 **Runner:** `scripts/frontier_s3_invariant_operator_dimension.py` (14/14 PASS)
 
+## Classical results applied
+
+- **Schur's lemma** (Schur 1905; Serre, *Linear Representations of
+  Finite Groups*, ch. 2): for a finite group G and a G-module V with
+  isotypic decomposition V = ⊕ m_i · ρ_i,
+  dim_C End(V)^G = Σ_i m_i².
+- **Character-theoretic classification of S_3 irreps**: the three
+  irreps A_1 (trivial), A_2 (sign), E (2-dim standard) have
+  dimensions 1, 1, 2.
+
+## Framework-specific step
+
+- Using the Batch 2 S_3 Axis-Permutation Decomposition
+  C^8 ≅ 4·A_1 ⊕ 2·E as the input to Schur's lemma, giving
+  4² + 0² + 2² = 20.
+
 ## Theorem
 
 Let C^8 = (C²)⊗³ carry the S_3 axis-permutation action. Then

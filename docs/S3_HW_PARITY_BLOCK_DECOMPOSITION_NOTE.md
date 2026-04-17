@@ -4,6 +4,23 @@
 an explicit block-by-hw-parity structure.
 **Runner:** `scripts/frontier_s3_hw_parity_block_decomposition.py` (20/20 PASS)
 
+## Classical results applied
+
+- **Restriction of a G-representation to an invariant subspace**
+  (standard rep theory; Serre, *Linear Representations of Finite
+  Groups*, ch. 1).
+- **Schur's lemma applied block-wise** to the restricted rep on each
+  Z_2-grading component V_±.
+- **Isotypic-multiplicity formula** dim End(V)^G = Σ m_i² applied on
+  each block.
+
+## Framework-specific step
+
+- Combining the Batch 2 hw-parity projectors Π_± with the Batch 2
+  S_3 decomposition, showing that S_3 commutes with Π_± and hence
+  acts on each 4-dim block V_±; the restricted S_3 rep on each
+  block is 2·A_1 ⊕ E.
+
 ## Theorem
 
 Let Π_± = (1 ± Q) / 2 be the hw-parity projectors on C^8 (with

@@ -3,6 +3,23 @@
 **Status:** airtight (Grind Program, Batch 5)
 **Runner:** `scripts/frontier_s3_invariant_hw_graded_decomposition.py` (21/21 PASS)
 
+## Classical results applied
+
+- **Graded module structure** over a commutative ring, with a grading
+  preserved by the G-action (standard commutative algebra).
+- **Schur's lemma applied component-wise** to a G-graded module:
+  End(V)^G = ⊕_{j,k} Hom(V_j, V_k)^G with
+  dim Hom(V_j, V_k)^G = Σ_i m_i^{(j)} · m_i^{(k)}.
+- **Peter–Weyl-type counting** for intertwiners between isotypic
+  components of different graded pieces.
+
+## Framework-specific step
+
+- Identification of the Hamming-weight grading on C^8 = V_0 ⊕ V_1
+  ⊕ V_2 ⊕ V_3 (dimensions 1 + 3 + 3 + 1) and the observation that
+  S_3 axis permutations preserve this grading, so Schur applies
+  block-wise.
+
 ## Framework object
 
 The Batch 3 S_3-Invariant Operator Dimension theorem establishes

@@ -4,6 +4,22 @@
 **Runner:** `scripts/frontier_lego_A_cube_shift_eigenstructure.py` (69/69 PASS)
 **Reusability:** high — cited wherever cube-shift eigenstructure is used
 
+## Classical results applied
+
+- **Simultaneous diagonalization of pairwise-commuting self-adjoint
+  operators** (standard linear algebra / functional analysis).
+- **Character theory of Z_2^n finite abelian group** (Frobenius 1896;
+  Schur 1905). The eight characters χ_s(α) = ∏_μ s_μ^{α_μ} for
+  s ∈ {±1}³ are the irreducible representations of Z_2^3.
+- **Hadamard / Z_2^n discrete Fourier transform** as the change of
+  basis diagonalizing all three S_μ simultaneously.
+
+## Framework-specific step
+
+- Identification of the three cube-shift operators on C^8 as
+  S_μ = σ_x in tensor position μ, acting as bit-flips on the three-
+  qubit index α ∈ {0,1}³.
+
 ## Theorem
 
 Let S_1, S_2, S_3 be the canonical one-step axis shifts on C^8 = (C²)^⊗3,

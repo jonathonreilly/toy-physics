@@ -3,6 +3,25 @@
 **Status:** airtight (Grind Program, Batch 4)
 **Runner:** `scripts/frontier_s3_invariant_polynomial_subalgebra.py` (21/21 PASS)
 
+## Classical results applied
+
+- **Fundamental theorem of symmetric polynomials** (Newton,
+  Waring 1762; van der Waerden, *Algebra*, §4.7): every S_n-
+  symmetric polynomial in n commuting variables is a unique
+  polynomial in the elementary symmetric polynomials e_1, …, e_n.
+- **Schur's lemma** applied to the S_3-fixed subspace of an abelian
+  algebra A_S diagonal in a G-stable eigenbasis: dim A_S^G equals
+  the number of G-orbits on the character set.
+- **Peter–Weyl orbit-counting** for a finite group acting on the
+  character set of an abelian subalgebra.
+
+## Framework-specific step
+
+- Identification of the S_3 action on A_S as the permutation of
+  cube-shift generators S_1, S_2, S_3 by axis permutation; the
+  elementary symmetric polynomials {e_0, e_1, e_2, e_3} in the
+  S_μ are then manifestly S_3-invariant.
+
 ## Framework object
 
 Let A_S ⊂ End(C^8) be the cube-shift polynomial algebra (Batch 4,

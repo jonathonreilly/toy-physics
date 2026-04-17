@@ -5,6 +5,22 @@
 **Reusability:** high — universal selection rule for polynomial operator
 products on Z_L³ acting on BZ corners.
 
+## Classical results applied
+
+- **Orthogonality of plane-wave basis / character orthogonality** on
+  Z_L³ (Frobenius 1896; Serre, *Linear Representations of Finite
+  Groups*, ch. 2).
+- **Discrete Fourier transform** over a finite abelian group, and the
+  identity Σ_x exp(i k · x) = |G| · δ_{k, 0}.
+- **Kronecker-delta selection rule** as a consequence of character
+  orthogonality.
+
+## Framework-specific step
+
+- Identification of the site-phase operator (P_μ ψ)(x) = (−1)^{x_μ} ψ(x)
+  on C^{L³} and its action on BZ corners α ∈ {0,1}³: each P_μ flips
+  the μ-th bit of α.
+
 ## Theorem
 
 Let Z_L³ (L even) be the periodic cubic lattice, with BZ corner states
