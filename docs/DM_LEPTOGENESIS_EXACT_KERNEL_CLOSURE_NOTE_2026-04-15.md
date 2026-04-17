@@ -1,7 +1,8 @@
 # DM Leptogenesis Exact-Kernel Closure
 
 **Date:** 2026-04-15  
-**Status:** exact-kernel closure on the refreshed `main`-derived DM lane  
+**Status:** exact-kernel benchmark theorem on the refreshed `main`-derived DM
+lane  
 **Script:** `scripts/frontier_dm_leptogenesis_exact_kernel_closure.py`
 
 ## Framework sentence
@@ -44,12 +45,13 @@ gives
 
 - `epsilon_1 / epsilon_DI = 0.9276209209...`
 
-and, on the same retained washout / thermal benchmark already used on this
-branch,
+and, on the consistent retained-fit benchmark already used on this branch once
+the exact `K00` denominator is used in both the CP kernel and the washout path,
 
-- `eta / eta_obs = 0.9907305394...`
+- `eta / eta_obs = 0.5578749661...`
 
-So the old reduced `0.30` benchmark is gone on the exact kernel.
+So the old reduced `0.30` benchmark is gone on the exact kernel, but the
+current exact benchmark still remains quantitatively open.
 
 ## Exact source-side kernel package
 
@@ -88,18 +90,20 @@ this yields
 
 So the exact kernel now sits just below the DI ceiling, not far below it.
 
-## Exact eta on the retained benchmark
+## Exact eta on the consistent retained benchmark
 
-Keeping the same retained benchmark washout law used by the branch,
+Keeping the same retained-fit washout benchmark already used by the branch, but
+now with the exact `K00` normalization propagated consistently through the
+washout bookkeeping,
 
-- `K = 23.6180...`
-- `kappa = 2.534289e-2`
+- `K = 11.8090...`
+- `kappa = 1.429205e-2`
 
 gives
 
-- `eta = 6.0632709011e-10`
+- `eta = 3.4141947926e-10`
 - `eta_obs = 6.12e-10`
-- `eta / eta_obs = 0.9907305394`.
+- `eta / eta_obs = 0.5578749661`.
 
 ## Consequence
 
@@ -107,14 +111,17 @@ This resolves the old DM denominator suppression on the refreshed branch:
 
 - the exact source package is not too small
 - the exact diagonal normalization is not open
-- the exact coherent leptogenesis kernel lands at observed `eta` to percent
-  level on the retained benchmark
+- the exact coherent leptogenesis kernel sits close to the DI ceiling
+- but the consistent retained-fit benchmark still undershoots observation
+
+So this note is a benchmark-conditioned exact-kernel theorem, not a final
+closure claim for baryogenesis.
 
 ## Scope
 
 This note claims exact kernel closure on the retained benchmark already used on
-the branch. It does not rewrite the older reduced runner; it supersedes its
-`0.30` reading scientifically.
+the branch. It does not claim full baryogenesis closure, and it supersedes the
+older reduced-kernel `0.30` reading scientifically.
 
 ## Command
 
