@@ -277,10 +277,15 @@ local-polynomial microscopic content.
 **"Gauge direction" status:** legitimized as the correct interpretation
 of the residual.
 
-**Selector-gate status:** still OPEN. The DM flagship gate remains OPEN. This
-theorem does not promote any selector candidate; it sharpens the
-obstruction structure by showing the axiom itself cannot close the gap
-with local content.
+**Selector-gate status at this note's scope:** sole-axiom closure of the
+selector gate via local-polynomial microscopic content is PROVABLY
+IMPOSSIBLE. This theorem does not promote any selector candidate; it
+sharpens the obstruction structure by showing the axiom itself cannot
+close the gap with local content, and routes any closure through
+either a nonlocal axiom-native principle or an observational promotion
+lane. The integrated closure of the DM flagship gate is the downstream
+PMNS-as-f(H) closure via the observational-promotion (P3) lane, which
+is consistent with this impossibility theorem.
 
 ## Connection to downstream closure strategies
 
@@ -346,6 +351,9 @@ Current: `PASS = 35, FAIL = 0`.
 
 If any future revision tightens these boundaries, it must cite a new
 source on the live retained/promoted surface. Until then, the safe
-read is: **microscopic Cl(3)/Z^3 axiom is genuinely silent on (delta,
-q_+); the selector gate remains open; "gauge direction" interpretation is legitimized
-as the correct reading of the residual.**
+read is: **microscopic Cl(3)/Z^3 axiom is genuinely silent on
+`(delta, q_+)` at the local-polynomial level; the "gauge direction"
+interpretation is legitimized as the correct reading of the residual;
+sole-axiom closure via local-polynomial content is ruled out; closure
+of the DM flagship gate is via the downstream PMNS-as-f(H)
+observational-promotion lane.**

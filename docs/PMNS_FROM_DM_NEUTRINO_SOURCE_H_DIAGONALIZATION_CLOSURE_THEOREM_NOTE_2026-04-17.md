@@ -58,7 +58,8 @@ central observational values
 sin^2 θ_12 = 0.307, sin^2 θ_13 = 0.0218, sin^2 θ_23 = 0.545
 ```
 
-has a **unique** chamber solution
+has a unique chamber solution **in the perturbative regime**
+`‖J‖_F ≤ ‖H_base‖_F`:
 
 ```
 (m_*, delta_*, q_+*) = (0.657061, 0.933806, 0.715042)
@@ -67,7 +68,11 @@ has a **unique** chamber solution
 verified by 60 independent random-start multi-start + fsolve sharpening, all
 converging to the same point at machine precision. The point lies strictly
 inside the chamber (distance `0.0159` above the boundary
-`q_+ = sqrt(8/3) - delta`).
+`q_+ = sqrt(8/3) - delta`). Non-perturbative chamber basins exist (at
+`(m, δ, q_+) ≈ (28, 21, 5)` on the same permutation and at `≈ (21, 13, 2)`
+on the competing `σ = (2, 0, 1)` permutation, with `‖J‖_F / ‖H_base‖_F`
+ratios of 21 and 14 respectively) but are excluded by the perturbative-
+uniqueness theorem.
 
 **δ_CP: falsifiable consequence of the construction.** The map
 `(m, delta, q_+) -> (s12^2, s13^2, s23^2, delta_CP)` sends `R^3` to a
@@ -102,15 +107,36 @@ All retained / theorem-grade at the time of writing:
  — `K_Z3 = U_Z3^dag H U_Z3` decomposition, frozen slots `K01 = a_*`, `K02 = b_*`.
 - [DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_CURRENT_BANK_BLINDNESS_THEOREM_NOTE_2026-04-16.md](./DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_CURRENT_BANK_BLINDNESS_THEOREM_NOTE_2026-04-16.md)
  — chamber-blindness of the current exact bank (includes `a_*`, `b_*`).
-- [DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md](./DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md)
- — post-EWSB Dirac operator `Gamma_1` is diagonal in the generation axis
- basis on `H_hw=1`, so the charged-lepton mass basis coincides with the
- axis basis on the active sheet.
 - [THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md](./THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md)
  — retained 3-dim irreducible observable space `H_hw=1`.
+- [NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md](./NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md)
+ — Z_3 support trichotomy fixing `Y_e` diagonal on the `q_H = 0`
+ branch, hence `U_e = I` in the axis basis (primary route).
+- [CHARGED_LEPTON_UE_IDENTITY_VIA_Z3_TRICHOTOMY_NOTE_2026-04-17.md](./CHARGED_LEPTON_UE_IDENTITY_VIA_Z3_TRICHOTOMY_NOTE_2026-04-17.md)
+ — full `U_e = I` replacement citation chain with the `q_H = 0`
+ conditional input flagged explicitly.
+- [DM_NEUTRINO_SOURCE_SURFACE_PERTURBATIVE_UNIQUENESS_THEOREM_NOTE_2026-04-17.md](./DM_NEUTRINO_SOURCE_SURFACE_PERTURBATIVE_UNIQUENESS_THEOREM_NOTE_2026-04-17.md)
+ — retained perturbative-scale criterion selecting Basin 1 uniquely.
 - [DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md](./DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md)
  — exhaustion theorem and the identification of P3 as the atlas-open
  promotion lane that closes the selector gate.
+
+Conditional input (not axiom-derived, SM-canonical):
+
+- `q_H = 0`: the Higgs `Z_3` generation charge on the charged-lepton
+ Yukawa coupling. See
+ [CHARGED_LEPTON_UE_IDENTITY_VIA_Z3_TRICHOTOMY_NOTE_2026-04-17.md](./CHARGED_LEPTON_UE_IDENTITY_VIA_Z3_TRICHOTOMY_NOTE_2026-04-17.md)
+ for the full conditionality discussion.
+
+Complementary (secondary) retained route with an open normalization step:
+
+- [DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md](./DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md)
+ — post-EWSB Dirac operator `Γ_1` diagonal in the axis basis on
+ `H_hw=1`. The chain from axis-basis-diagonal-`Γ_1` to `U_e = I` passes
+ through the still-open second-order effective-Yukawa normalization;
+ hence this is a complementary route that will be retained-grade once
+ that normalization theorem closes elsewhere. The primary route used
+ in this closure is the Z_3-trichotomy route above.
 
 No post-axiom invention. No new axiom.
 
@@ -136,20 +162,34 @@ T_q = [[0, 1, 1], [1, 0, 1], [1, 1, 0]],
 gamma = 1/2, E1 = sqrt(8/3), E2 = sqrt(8)/3.
 ```
 
-`H` is Hermitian by construction (verified at all five the observable-bank exhaustion theorem
-candidate points).
+`H` is Hermitian by construction (verified at all five observable-bank-
+exhaustion candidate points).
 
 ### 2. The charged-lepton basis
 
-The retained Dirac-bridge theorem establishes that on `H_hw=1` the local
-post-EWSB charged-lepton Dirac operator reduces to `Gamma_1` (the axis-1
-bridge), which is diagonal in the generation axis basis
-`{e_1, e_2, e_3}`. Therefore on the active sheet the charged-lepton mass
-basis coincides with the axis basis:
+On `H_hw=1` the retained conjugate `Z_3` triplets are
+`q_L = (0, +1, -1)` and `q_R = (0, -1, +1)` under the retained
+`C_3[111]` generation cycle
+([THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md](./THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md)).
+For a single Higgs doublet with definite `Z_3` charge `q_H`, the retained
+trichotomy
+([NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md](./NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md),
+applied to `Y_e` via the same conjugate-triplet derivation used in
+[LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md](./LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md))
+forces the charged-lepton Yukawa into one of three permutation patterns.
+On the canonical `q_H = 0` branch (an SM-canonical conditional input,
+not axiom-derived), `Y_e = diag(y_1, y_2, y_3)` and therefore
 
 ```
-U_e = I_3 (in the axis basis of H_hw=1).
+|U_e| = I_3 (in the axis basis of H_hw=1).
 ```
+
+See
+[CHARGED_LEPTON_UE_IDENTITY_VIA_Z3_TRICHOTOMY_NOTE_2026-04-17.md](./CHARGED_LEPTON_UE_IDENTITY_VIA_Z3_TRICHOTOMY_NOTE_2026-04-17.md)
+for the full replacement chain (which does **not** depend on the open
+normalization step in the Dirac-bridge theorem) and explicit flagging
+of (i) the `q_H = 0` conditional input and (ii) the observational
+hierarchy pairing `sigma_hier = (2, 1, 0)` below.
 
 ### 3. The neutrino basis from `H`
 
@@ -171,9 +211,13 @@ sigma_hier = (2, 1, 0) # electron <-> largest H-eigenvalue row,
 
 which is the unique row permutation that produces observationally
 non-degenerate angles consistent with the measured PDG hierarchy
-`|U_e3| << |U_e1|, |U_e2|`. The 60-seed multi-start confirms this
-permutation is the unique one that yields a chamber minimizer with
-chi^2 < 10^-4.
+`|U_e3| << |U_e1|, |U_e2|` **within the perturbative regime**
+`||J||_F < ||H_base||_F`. Four of the six permutations admit no chamber
+solution at all; the competing `sigma = (2, 0, 1)` permutation admits a
+chamber solution only at `||J||_F / ||H_base||_F ≈ 14` — deep in the
+non-perturbative regime and excluded by the perturbative-uniqueness
+theorem. The 60-seed multi-start confirms `sigma_hier = (2, 1, 0)` as
+the unique perturbative-regime closing permutation.
 
 ```
 U_PMNS(m, delta, q_+) = P_{sigma_hier} · (eigenvectors of H in ascending eigenvalue order)
@@ -212,7 +256,7 @@ in the retained `Z_3` doublet-block point-selection theorem.
 
 ## Chamber variation of PMNS angles
 
-The runner evaluates the map at the five the observable-bank exhaustion theorem candidates:
+The runner evaluates the map at the five observable-bank-exhaustion candidates:
 
 | Candidate | `(m, δ, q_+)` | `s12^2` | `s13^2` | `s23^2` | `sin δ_CP` |
 |-----------|---------------|---------|---------|---------|-----------|
@@ -304,9 +348,9 @@ every prior retained candidate on the chamber:
 
 The closest prior candidate (A, Schur-Q) lies 0.155 away — well outside
 any numerical tolerance. The PMNS pinning is **inequivalent to every
-prior retained variational candidate**, consistent with the observable-bank exhaustion theorem
-narrower-gap statement that no prior candidate was observationally
-selected.
+prior retained variational candidate**, consistent with the
+observable-bank exhaustion theorem's narrower-gap statement that no
+prior candidate was observationally selected.
 
 ### Cross-check 3: `delta_CP`
 
@@ -398,7 +442,6 @@ The runner (`scripts/frontier_pmns_from_dm_neutrino_source_h_diagonalization_clo
 ## Command
 
 ```bash
-cd /Users/jonBridger/Toy\ Physics/.claude/worktrees/agent-a3f8a57a
 PYTHONPATH=scripts python3 scripts/frontier_pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem.py
 ```
 

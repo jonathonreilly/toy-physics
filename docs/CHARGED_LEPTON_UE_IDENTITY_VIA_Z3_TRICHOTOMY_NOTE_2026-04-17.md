@@ -10,7 +10,7 @@
 
 ## Adversarial finding this note resolves
 
-the [PMNS-as-`f(H)` closure
+The [PMNS-as-`f(H)` closure
 theorem](./PMNS_FROM_DM_NEUTRINO_SOURCE_H_DIAGONALIZATION_CLOSURE_THEOREM_NOTE_2026-04-17.md)
 uses as load-bearing input
 
@@ -290,7 +290,6 @@ the citation chain under `|U_e| = I`.
 ## Command
 
 ```bash
-cd /Users/jonBridger/Toy\ Physics/.claude/worktrees/agent-abb95f16
 python3 scripts/frontier_charged_lepton_ue_identity_via_z3_trichotomy.py
 ```
 

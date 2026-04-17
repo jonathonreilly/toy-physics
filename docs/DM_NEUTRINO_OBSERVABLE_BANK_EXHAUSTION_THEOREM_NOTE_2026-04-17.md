@@ -1,7 +1,7 @@
 # Observable-Bank Exhaustion — Atlas Exhaustion Theorem (Obstruction + New-Gap)
 
 **Date:** 2026-04-17
-**Status:** OBSTRUCTION + NEW-GAP (the selector gate remains OPEN)
+**Status:** OBSTRUCTION + NEW-GAP at this note's scope. Names the three promotion lanes (P1 / P2 / P3) that can close the selector gate; integrated closure is the downstream PMNS-as-f(H) closure via P3.
 **Script:** `scripts/frontier_dm_neutrino_observable_bank_exhaustion_theorem.py`
 **Runner:** `PASS = 36, FAIL = 0`
 **Framework convention:** "axiom" means only the single framework axiom `Cl(3)` on `Z^3`.
@@ -277,17 +277,22 @@ object:
 
 - atlas obstruction row in
  [DERIVATION_ATLAS.md](./publication/ci3_z3/DERIVATION_ATLAS.md)
- under the DM neutrino source-surface family, sibling to the info-geometric / cubic-variational / parity-split obstructions,
- parity-mixing F1, and Physics-Validation.
-- The DM flagship gate stays **open**.
-- The observable-bank-extension lane is now classified as CASE 3 + CASE
- 4. Any future selector attempt along observable-bank lines must cite one of
- P1/P2/P3 and supply the missing promotion.
+ under the DM neutrino source-surface family, sibling to the
+ info-geometric / cubic-variational / parity-split obstructions, the
+ parity-mixing F1 candidate, and the transport chamber-blindness
+ theorem.
+- This note does not close the DM flagship gate on its own. It names
+ the three promotion lanes (P1, P2, P3) that can close it. The
+ integrated closure is the downstream PMNS-as-f(H) closure, which
+ realises P3 explicitly.
+- The observable-bank-extension lane is classified as CASE 3 + CASE 4.
+ Any future selector attempt along observable-bank lines must cite one
+ of P1 / P2 / P3 and supply the missing promotion; P3 is realised by
+ the PMNS-as-f(H) closure.
 
 ## Command
 
 ```bash
-cd /Users/jonBridger/Toy\ Physics/.claude/worktrees/agent-a3a7d931
 PYTHONPATH=scripts python3 scripts/frontier_dm_neutrino_observable_bank_exhaustion_theorem.py
 ```
 

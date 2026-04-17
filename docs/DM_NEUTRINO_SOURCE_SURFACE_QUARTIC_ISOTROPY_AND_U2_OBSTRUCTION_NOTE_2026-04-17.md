@@ -213,7 +213,9 @@ m-dependence.
 
 **Classification:** **CASE 3 — three new obstruction theorems + narrower gap.**
 
-**Closure status of the selector gate remains OPEN.**
+**At this note's scope the selector gate is not closed.** The integrated
+closure of the DM flagship gate is the downstream PMNS-as-f(H) closure,
+which uses the present obstructions as retained inputs in the chain.
 
 ## What this note strictly NEWLY CLOSES
 
@@ -310,8 +312,9 @@ Current expected: `PASS = 18, FAIL = 0`.
 
 ## What this file must never say
 
-- that selector is closed
-- that the DM flagship gate is closed
+- that **this note** closes the selector gate or the DM flagship gate
+  (it does not; the integrated closure is the downstream PMNS-as-f(H)
+  closure, which uses these obstructions as retained inputs)
 - that F1 is the uniquely axiom-forced parity-mixing functional
 - that `U(2)_L × U(2)_R` bifundamental invariance is axiom-native retained
 - that the quartic gives a new parity-mixing selector (it does NOT; it is
@@ -321,5 +324,5 @@ Current expected: `PASS = 18, FAIL = 0`.
 
 If any future revision of this note tightens those boundaries, it must
 cite a new source on the live retained/promoted surface. Until then, the
-safe read is: **three new obstruction theorems + narrower gap; selector remains
-OPEN**.
+safe read is: **three new obstruction theorems + narrower gap at this
+note's scope; integrated closure is downstream**.

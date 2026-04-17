@@ -210,7 +210,8 @@ transport chain is blind to the chamber.
 - Appropriate placement: obstruction row under the DM neutrino
  source-surface / selector family in
  `docs/publication/ci3_z3/DERIVATION_ATLAS.md`.
-- The DM flagship gate stays **open**.
+- This note does not close the DM flagship gate (the integrated closure
+  is the downstream PMNS-as-f(H) closure).
 - The Schur-baseline partial closure, the three the info-geometric selection obstruction/B/C obstruction
  theorems, and this physics-validation obstruction together delimit
  the selector gate open object as: *a selector that couples to a bank-unblinded
@@ -246,7 +247,6 @@ consequence.
 ## Command
 
 ```bash
-cd /Users/jonBridger/Toy\ Physics/.claude/worktrees/inspiring-meitner
 PYTHONPATH=scripts python3 scripts/frontier_dm_neutrino_transport_chamber_blindness_theorem.py
 ```
 

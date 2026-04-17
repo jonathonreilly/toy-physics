@@ -24,9 +24,11 @@ axiom derivable from `Cl(3)` on `Z^3` via the retained atlas?
 
 The honest answer is **NO**. This note produces the obstruction theorem
 with **five independent converging derivations**, each of which rules out
-bifundamental invariance from the retained structure. The DM flagship
-gate for selector therefore remains OPEN, and the Frobenius-route conditional
-gate is closed as unavailable.
+bifundamental invariance from the retained structure. The Frobenius-route
+conditional closure gate is therefore closed as unavailable at this
+note's scope. The integrated closure of the DM flagship gate is the
+downstream PMNS-as-f(H) observational-promotion closure, which does not
+depend on bifundamental invariance.
 
 ## Principal structural input (retained)
 
@@ -323,7 +325,9 @@ bifundamental invariance that this note proves unavailable.
 
 ## What this note does NOT do
 
-- does not close selector (the flagship gate remains OPEN)
+- does not close the selector gate at its own scope (the integrated
+ closure of the DM flagship gate is the downstream PMNS-as-f(H)
+ closure, which does not depend on bifundamental invariance)
 - does not rule out F1 as a **physical** candidate; it rules out the
  sole-axiom promotion of F1 via bifundamental invariance
 - does not prevent Physics-Validation from cross-checking the F1
@@ -478,6 +482,7 @@ If any future revision of this note tightens those boundaries, it must
 cite a new source on the live retained/promoted surface. Until then, the
 safe read is: **bifundamental gauge invariance is NOT derivable from
 Cl(3)/Z^3 on the active doublet block (CASE 3 obstruction). The
-Frobenius-route conditional closure gate is unavailable. selector remains
-OPEN with five inequivalent candidate points now on record, none
-promoted to theorem-grade.**
+Frobenius-route conditional closure gate is unavailable at this note's
+scope; five inequivalent candidate points are on record, none promoted
+to theorem-grade here. The integrated closure of the DM flagship gate
+is the downstream PMNS-as-f(H) observational-promotion closure.**

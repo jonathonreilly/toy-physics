@@ -24,8 +24,9 @@ retained atlas already supports. The "minimum-information selector" in
 remains atlas-flagged as "invented post-axiom dynamical selector law";
 this note does not override that flag.
 
-The DM flagship gate remains **open**. The selector gap is strictly
-narrower after this note.
+This note does not close the DM flagship gate; it strictly narrows the
+selector gap. The integrated closure is the downstream PMNS-as-f(H)
+closure.
 
 ## Setup recap (all retained / theorem-native)
 
@@ -288,8 +289,9 @@ Appropriate placement:
  closure note
 - DM flagship gate status row notes the strictly smaller gap structure
 
-This note must not be used to promote any selector to theorem-grade.
-The flagship gate stays open.
+This note must not be used to promote any selector to theorem-grade. It
+is an obstruction/narrowed-gap result; the integrated closure of the DM
+flagship gate is the downstream PMNS-as-f(H) closure.
 
 ## Command
 

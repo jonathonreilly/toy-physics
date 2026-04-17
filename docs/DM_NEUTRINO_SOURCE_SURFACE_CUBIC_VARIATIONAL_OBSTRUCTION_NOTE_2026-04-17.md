@@ -242,7 +242,9 @@ Appropriate placement:
  [DERIVATION_ATLAS.md](./publication/ci3_z3/DERIVATION_ATLAS.md)
  under the DM neutrino source-surface family, labeled as **narrowed gap
  / obstruction**
-- no change to the DM flagship gate status (still open)
+- this note does not close the DM flagship gate (the integrated closure
+  is the downstream PMNS-as-f(H) closure, which uses this obstruction
+  as one retained input in the chain)
 - paired with the upstream Schur-baseline partial closure; the two notes
  together pin the remaining open object at "selector principle only, via
  (a) or (c), not via (b) stand-alone"

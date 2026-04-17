@@ -252,23 +252,26 @@ baseline-choice sub-objection is now closed.
 This note is **not** flagship publication-grade on its own. It is a
 genuine advance of the DM-flagship-gate claim surface, from
 "bounded, baseline choice not forced" to "theorem-native curvature,
-selector principle still open".
+selector principle still open at this note's scope".
 
 Appropriate placement:
 
 - atlas support row in
  [DERIVATION_ATLAS.md](./publication/ci3_z3/DERIVATION_ATLAS.md)
  under the DM neutrino source-surface family
-- mention in the DM gate retained-atlas update; the flagship gate
- remains **open**
+- prerequisite for the downstream PMNS-as-f(H) closure
+ ([PMNS_FROM_DM_NEUTRINO_SOURCE_H_DIAGONALIZATION_CLOSURE_THEOREM_NOTE_2026-04-17.md](./PMNS_FROM_DM_NEUTRINO_SOURCE_H_DIAGONALIZATION_CLOSURE_THEOREM_NOTE_2026-04-17.md));
+ the retained-atlas-native Q curvature recorded here is the source-
+ response curvature used by that closure
 
-This note should not be used to promote anything in the flagship paper
-quantitative section. The DM flagship gate stays open.
+This note should not be used on its own to promote anything in the
+flagship paper quantitative section. The integrated closure of the DM
+flagship gate is the PMNS-as-f(H) closure; this note is a
+retained-atlas prerequisite in that chain.
 
 ## Command
 
 ```bash
-cd /Users/jonBridger/Toy\ Physics/.claude/worktrees/inspiring-meitner
 PYTHONPATH=scripts python3 scripts/frontier_dm_neutrino_source_surface_schur_scalar_baseline_theorem.py
 ```
 
@@ -276,11 +279,15 @@ Current expected: `PASS = 19, FAIL = 0`.
 
 ## What this file must never say
 
-- that selector is closed
-- that the DM flagship gate is closed
+- that **this note** closes the selector gate (it does not; the selector
+  principle remains open at this note's scope)
+- that **this note** closes the DM flagship gate (it does not; the
+  flagship closure is the downstream PMNS-as-f(H) closure, which uses
+  this note as one retained input among several)
 - that the minimum-information selector has been promoted from post-axiom
-- that the selector law is a theorem
+- that the selector principle is a sole-axiom theorem
 
 If any future revision of this note tightens those boundaries, it must
 cite a new source on the live retained/promoted surface. Until then,
-the safe read is: **baseline sub-objection closed; selector open**.
+the safe read is: **baseline sub-objection closed by Schur; selector
+principle open at this note's scope; flagship closure is downstream**.

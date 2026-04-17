@@ -25,9 +25,10 @@ The outcome is **not** a closure. It is:
  `(delta, q_+)` that **disagrees** with the Schur-Q variational candidate
  `(sqrt(6)/3, sqrt(6)/3)`.
 
-The DM flagship gate remains **open**. The selector gate is not closed. Neither the
-Schur-Q variational candidate nor any microscopic candidate is
-promoted to theorem-grade.
+This note does not close the DM flagship gate or the selector gate.
+Neither the Schur-Q variational candidate nor any microscopic candidate
+is promoted to theorem-grade here. The integrated closure is the
+downstream PMNS-as-f(H) closure.
 
 ## Theorem 1 (retained-atlas-native): Z_3-parity decomposition
 

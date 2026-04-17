@@ -2,8 +2,8 @@
 
 **Date:** 2026-04-17
 **Status:** RETAINED-GRADE PREDICTION — a falsifiable consequence of the
-the PMNS-as-f(H) closure, derived from the retained H-diagonalization
-map alone.
+PMNS-as-f(H) closure, derived from the retained H-diagonalization map
+alone.
 **Script:** `scripts/frontier_pmns_theta23_upper_octant_chamber_closure_prediction.py`
 **Runner:** `PASS = 31, FAIL = 0`
 **Framework convention:** "axiom" means only the single framework axiom
@@ -308,8 +308,8 @@ tested by the **Hyper-K + DUNE + JUNO combined fit** by the early 2030s.
 Short-form one-paragraph statement suitable for inclusion in
 `DM_FLAGSHIP_CLOSURE_REVIEW_NOTE_2026-04-17.md` or the ARXIV_DRAFT:
 
-> **θ_23 upper-octant retained prediction.** The PMNS-closure theorem
-> PMNS-as-f(H) closure has a structural threshold: at PDG 2024 central
+> **θ_23 upper-octant retained prediction.** The PMNS-as-f(H) closure
+> has a structural threshold: at PDG 2024 central
 > `(s_12^2, s_13^2) = (0.307, 0.0218)`, the selector chamber closure admits a
 > solution only for `s_23^2 ≥ 0.5410`; across the NuFit 5.3 NO 3σ
 > rectangle on `(s_12^2, s_13^2)`, the threshold ranges over `[0.5335,
@@ -325,7 +325,6 @@ Short-form one-paragraph statement suitable for inclusion in
 ## Runner
 
 ```bash
-cd /Users/jonBridger/Toy\ Physics/.claude/worktrees/agent-addcaf0b
 PYTHONPATH=scripts python3 \
  scripts/frontier_pmns_theta23_upper_octant_chamber_closure_prediction.py
 ```

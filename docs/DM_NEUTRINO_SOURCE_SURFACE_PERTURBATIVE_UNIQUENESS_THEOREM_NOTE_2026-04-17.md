@@ -13,7 +13,7 @@ prediction.
 
 ## Purpose
 
-the PMNS-as-f(H) closure theorem pinned
+The PMNS-as-f(H) closure theorem pinned
 `(m_*, δ_*, q_+*) = (0.657061, 0.933806, 0.715042)` via direct
 diagonalisation of the retained affine Hermitian
 `H(m, δ, q_+) = H_base + m T_m + δ T_δ + q_+ T_q` and the PDG 2024 PMNS
@@ -211,7 +211,7 @@ coincides with the axis basis: **`U_e = I` in the axis basis.**
 
 ### Why this replaces the Dirac-bridge chain
 
-the PMNS-closure theorem's original `U_e = I` chain cited
+The PMNS-closure theorem's original `U_e = I` chain cited
 [DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE](./DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md),
 which places `Γ_1` diagonal in the axis basis via the second-order
 effective neutrino Dirac Yukawa. That theorem flags as STILL OPEN:
@@ -334,12 +334,11 @@ executes **37 PASS / 0 FAIL** across eight parts:
  verification; `δ_CP` is a consequent coordinate on the 3-manifold.
 - **Part 8 (perturbative-only wide scan).** A perturbative-constrained
  wide-box scan across all six permutations finds exactly one basin:
- the PMNS-closure theorem Basin 1.
+ the PMNS-closure Basin 1 at σ = (2, 1, 0).
 
 ## Command
 
 ```bash
-cd /Users/jonBridger/Toy\ Physics/.claude/worktrees/agent-j-physicist
 PYTHONPATH=scripts python3 scripts/frontier_dm_neutrino_source_surface_perturbative_uniqueness_theorem.py
 ```
 
@@ -352,8 +351,8 @@ Expected: `PASS = 37, FAIL = 0`.
 1. **Perturbative-scale uniqueness.** Among all in-chamber χ²=0 basins
  across all 6 hierarchy-pairing row permutations, EXACTLY ONE
  satisfies the retained perturbative-scale criterion
- `‖J‖_{F,op} ≤ ‖H_base‖_{F,op}`. That basin is the PMNS-closure theorem
- Basin 1 at σ=(2,1,0).
+ `‖J‖_{F,op} ≤ ‖H_base‖_{F,op}`. That basin is the PMNS-closure
+ Basin 1 at σ = (2, 1, 0).
 
 2. **θ_23 upper-octant conditionality.** The closure's chamber
  constraint forces `sin²θ_23 > 0.540863` as a sharp falsifiable
@@ -441,6 +440,6 @@ boundary, `q_H` conditionality) is flagged honestly in-situ.
  canonical Higgs Z_3 assignment)
 - that θ_23 is derived (it is not; the closure predicts the
  upper-octant conditionality, not the θ_23 value)
-- that the PMNS-closure theorem's pinning point is numerically different from
- the perturbative-uniqueness theorem's (it is not; the pinning point is unchanged; only the
- uniqueness-discipline around it is tightened)
+- that the PMNS-closure theorem's pinning point is numerically different
+ after this tightening (it is not; the pinning point is unchanged, only
+ the uniqueness-discipline around it)
