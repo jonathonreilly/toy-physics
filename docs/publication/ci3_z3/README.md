@@ -109,6 +109,11 @@ Current package status:
 - curated neutrino boundary/support packet on `main`, with exact current-stack
   Majorana zero law, exact mass reduction to the Dirac lane, and exact
   last-mile reduction to `(J_chi, mu)`; still outside the manuscript surface
+- persistent exact-lattice compact-object companion on `main`, with one
+  retained blended readout on the nearby family and a `top4` multistage floor
+  that survives beyond the widened pocket, but still below persistent
+  inertial-mass / matter closure because the inward-source directional
+  boundary remains
 - older bounded CKM mass-basis / Cabibbo / partial Jarlskog route history
 - cosmology bounded family such as `\Omega_\Lambda`, `n_s`, `w = -1`
 - bounded secondary predictions already on `main`:

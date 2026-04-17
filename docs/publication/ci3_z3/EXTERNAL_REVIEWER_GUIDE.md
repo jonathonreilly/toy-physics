@@ -143,6 +143,11 @@ Current status from that stack:
 ## Bounded Prediction Surface
 
 - DM flagship gate, with exact transport-chain progress, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, and a PMNS constructive sign chamber that exists but whose current selector families are CP-blind
+- persistent exact-lattice compact-object companion on `main`, with one
+  retained blended readout on the nearby family and a `top4` multistage floor
+  that survives beyond the widened pocket, but still below persistent
+  inertial-mass / matter closure because the inward-source directional
+  boundary remains
 - older bounded CKM mass-basis / Cabibbo / partial Jarlskog route history
 - cosmology bounded family
 - bounded secondary predictions already on `main`, including proton lifetime,
