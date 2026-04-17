@@ -89,6 +89,12 @@ object materially without closing the lane:
   reduces positive diagonal baselines to that same family `D = diag(A,B,B)`
 - across that whole parity-compatible diagonal family, the comparison
   quadratic has the same chamber minimizer `delta_* = q_+* = sqrt(6)/3`
+- if the selector is taken to come from the observable-principle scalar
+  generator on that parity-compatible diagonal family, the strongest currently
+  native local route closes exactly at `delta_* = q_+* = rho_* = sqrt(6)/3`
+- but that local selected slice remains transport-subcritical even after
+  optimizing the spectator line `m`, so it is a closed local route rather than
+  a full DM selector closure
 - but this cleaned-up local route remains a diagnostic/boundary route, not a
   theorem-native selector closure; the live attack target is still the
   right-sensitive `2`-real `Z_3` doublet-block selector law directly
@@ -107,6 +113,9 @@ end state is:
 - exact same-surface thermal bounding, with a certified current-bank
   numerator-selector no-go and a certified unique root interval on the admitted
   one-scalar same-surface family
+- exact strongest-current native local parity-compatible diagonal observable
+  route closure at `delta_* = q_+* = rho_* = sqrt(6)/3`, but with that
+  selected slice still transport-subcritical
 - exact `H`-side source-surface / active-chamber reduction, with the remaining
   source-side object now sharpened all the way to the `2`-real `Z_3`
   doublet-block law and the old one-phase slot route ruled out
