@@ -69,6 +69,12 @@ all-continuum claim.
 
 ## Quantitative Component Stack
 
+Treat the quantitative package as a fixed-surface cascade, not a scan over
+bare gauge couplings. On the accepted package surface, graph-first `SU(3)`
+plus canonical `g_bare^2 = 1` put the Wilson gauge evaluation at
+`beta = 6`, and the plaquette / `u_0` / hierarchy chain is read at that one
+same-surface point. That is a package-framing fact, not a new standalone lane.
+
 Review this as a modular component stack:
 
 1. `alpha_s`: [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md)

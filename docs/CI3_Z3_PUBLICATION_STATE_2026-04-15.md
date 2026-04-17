@@ -111,6 +111,12 @@ The current retained backbone is:
   - physical species structure on the lattice surface, with triplet species
     semantics derived on the accepted Hilbert surface and substrate
     physicality forced on the accepted one-axiom framework surface
+- fixed gauge evaluation point:
+  - the current accepted package surface uses canonical `g_bare^2 = 1`
+  - with graph-first `SU(3)`, the Wilson gauge evaluation is therefore
+    fixed at `beta = 2 N_c / g_bare^2 = 6`
+  - the plaquette / `u_0` / hierarchy chain is read on that one
+    same-surface evaluation point rather than on a tuned family of `beta`
 - confinement on the graph-first `SU(3)` gauge surface:
   - canonical `g_bare^2 = 1` gives Wilson `beta = 6.0`
   - `T = 0` confinement is structural on that gauge sector

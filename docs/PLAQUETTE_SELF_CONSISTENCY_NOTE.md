@@ -4,6 +4,20 @@
 **Status:** retained evaluation theorem (no free parameter), with exact bridge-support stack
 **Script:** `scripts/frontier_plaquette_self_consistency.py`
 
+## Framework-point context
+
+On the current accepted package surface, the Wilson gauge evaluation is not
+treated as a scan variable. The graph-first gauge sector fixes `N_c = 3`, the
+accepted canonical normalization/evaluation surface fixes `g_bare^2 = 1`, and
+the retained Wilson gauge action therefore sits at
+
+`beta = 2 N_c / g_bare^2 = 6`.
+
+So `beta = 6` is the package's fixed gauge evaluation point, and the plaquette
+readout below is the same-surface observable attached to that point. This note
+remains the authority for the plaquette evaluation itself; the repo does not
+need a separate standalone "beta = 6 lane" theorem surface for that fact.
+
 ## Claim
 
 The plaquette expectation
