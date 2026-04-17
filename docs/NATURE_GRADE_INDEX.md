@@ -48,10 +48,26 @@
   site-phase operators preserve/swap the hw-parity decomposition.
   Explicit projectors Π_± = (1 ± T_1 T_2 T_3)/2. 68/68 PASS.
 
+### Batch 3: S_3-invariant algebra + hw-parity refinement
+
+- **S_3-Invariant Operator Dimension on C^8**
+  (`S3_INVARIANT_OPERATOR_DIMENSION_NOTE.md`) — dim End(C^8)^{S_3} = 20
+  via Schur's lemma (4² + 0² + 2² = 20). 14/14 PASS.
+
+- **Hadamard Basis: Simultaneous T_μ Eigenbasis + S_3 Label Action**
+  (`HADAMARD_S3_COMPOSITION_NOTE.md`) — Hadamard basis diagonalizes
+  each T_μ; S_3 acts by label permutation. Composition of Batch 1
+  (intertwiner) and Batch 2 (S_3 / hw-parity). 117/117 PASS.
+
+- **S_3 Decomposition of Hw-Parity Blocks**
+  (`S3_HW_PARITY_BLOCK_DECOMPOSITION_NOTE.md`) — each hw-parity block
+  V_± decomposes as 2·A_1 ⊕ E; refines total to 5+5+5+5 = 20. Shows
+  10 S_3-invariants preserve hw-parity and 10 swap it. 20/20 PASS.
+
 ## Totals
 
 ```
-859 total verification checks, 0 failures
+1010 total verification checks, 0 failures
 ```
 
 ## Reviewer workflow
@@ -70,6 +86,11 @@ python3 scripts/frontier_site_phase_cube_shift_intertwiner.py
 python3 scripts/frontier_c3_cyclic_action_bz_corners.py
 python3 scripts/frontier_s3_action_taste_cube_decomposition.py
 python3 scripts/frontier_hw_parity_conservation.py
+
+# Batch 3
+python3 scripts/frontier_s3_invariant_operator_dimension.py
+python3 scripts/frontier_hadamard_s3_composition.py
+python3 scripts/frontier_s3_hw_parity_block_decomposition.py
 ```
 
 Each exits 0 on success, nonzero on failure. Each prints a TOTAL

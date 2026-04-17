@@ -16,6 +16,40 @@ scope bridges, no imported formulas.
   Note: `KR_A1_VANISHING_DERIVED_NOTE.md`
   Runner: `frontier_KR_A1_vanishing_proof.py` (30/30 PASS)
 
+## Batch 3: S_3-invariant algebra + hw-parity refinement
+
+Three more reusable theorems, including two compositions that bridge
+the earlier batches.
+
+### 8. S_3-Invariant Operator Dimension on C^8
+
+`dim End(C^8)^{S_3} = 20`. Direct consequence of the S_3 Taste-Cube
+Decomposition (C^8 ≅ 4·A_1 ⊕ 2·E) via Schur's lemma: Σ m_irrep² =
+4² + 0² + 2² = 20.
+
+- Note: `S3_INVARIANT_OPERATOR_DIMENSION_NOTE.md`
+- Runner: `frontier_s3_invariant_operator_dimension.py` (14/14 PASS)
+
+### 9. Hadamard Basis: Simultaneous T_μ Eigenbasis + S_3 Label Action (composition)
+
+The Hadamard basis |ψ_s⟩ diagonalizes each T_μ (eigenvalue s_μ)
+and each hw-parity projector. S_3 acts by label permutation on s.
+Bridges Batch 1 (Hadamard / intertwiner) with Batch 2 (S_3 /
+hw-parity) into a unified picture.
+
+- Note: `HADAMARD_S3_COMPOSITION_NOTE.md`
+- Runner: `frontier_hadamard_s3_composition.py` (117/117 PASS)
+
+### 10. S_3 Decomposition of Hw-Parity Blocks (composition)
+
+Each 4-dim hw-parity block V_± decomposes under S_3 as
+2·A_1 ⊕ E. Hence among the 20 S_3-invariants on C^8, exactly 10
+preserve hw-parity and exactly 10 swap it. Refines theorem 8 with
+explicit block structure.
+
+- Note: `S3_HW_PARITY_BLOCK_DECOMPOSITION_NOTE.md`
+- Runner: `frontier_s3_hw_parity_block_decomposition.py` (20/20 PASS)
+
 ## Batch 2: S_3 / axis-permutation + parity structure
 
 Three new reusable theorems strengthening the algebraic toolkit.
@@ -112,7 +146,12 @@ python3 scripts/frontier_c3_cyclic_action_bz_corners.py          # PASS=32
 python3 scripts/frontier_s3_action_taste_cube_decomposition.py   # PASS=57
 python3 scripts/frontier_hw_parity_conservation.py               # PASS=68
 
-# Total: 859 PASS, 0 FAIL
+# Batch 3
+python3 scripts/frontier_s3_invariant_operator_dimension.py          # PASS=14
+python3 scripts/frontier_hadamard_s3_composition.py                  # PASS=117
+python3 scripts/frontier_s3_hw_parity_block_decomposition.py         # PASS=20
+
+# Total: 1010 PASS, 0 FAIL
 ```
 
 ## Grind program philosophy

@@ -90,6 +90,27 @@ hierarchy, gauge structure, confinement, etc.).
   Note: `HW_PARITY_CONSERVATION_NOTE.md`
   Runner: `frontier_hw_parity_conservation.py` (68/68 PASS)
 
+### Batch 3: S_3-invariant algebra + hw-parity refinement
+
+- **S_3-Invariant Operator Dimension on C^8** — dim End(C^8)^{S_3} = 20
+  by Schur's lemma applied to C^8 ≅ 4·A_1 ⊕ 2·E.
+  Note: `S3_INVARIANT_OPERATOR_DIMENSION_NOTE.md`
+  Runner: `frontier_s3_invariant_operator_dimension.py` (14/14 PASS)
+
+- **Hadamard Basis: Simultaneous T_μ Eigenbasis + S_3 Label Action**
+  (composition) — Hadamard basis |ψ_s⟩ diagonalizes each T_μ
+  (eigenvalue s_μ) and each hw-parity projector. S_3 acts on
+  Hadamard basis by label permutation U(π) |ψ_s⟩ = |ψ_{π · s}⟩.
+  Note: `HADAMARD_S3_COMPOSITION_NOTE.md`
+  Runner: `frontier_hadamard_s3_composition.py` (117/117 PASS)
+
+- **S_3 Decomposition of Hw-Parity Blocks** (composition) — each
+  4-dim hw-parity block V_± decomposes under S_3 as 2·A_1 ⊕ E.
+  Refines the S_3 Invariant Operator Dimension: 20 = 5+5+5+5 with
+  10 preserving hw-parity and 10 swapping.
+  Note: `S3_HW_PARITY_BLOCK_DECOMPOSITION_NOTE.md`
+  Runner: `frontier_s3_hw_parity_block_decomposition.py` (20/20 PASS)
+
 ## Reusability claim
 
 These theorems are cited in any downstream derivation involving:
