@@ -1,7 +1,7 @@
 # Nature-Grade Index
 
 **Branch:** `claude/main-derived`
-**Updated:** 2026-04-16 (Grind Program Batch 5)
+**Updated:** 2026-04-16 (Grind Program Batch 6)
 
 ## Airtight results on this branch
 
@@ -104,10 +104,31 @@
   S_3-equivariant bijection V_1 → V_2 taking X_i to X_{jk}. Shows
   V_1 ≅ V_2 as S_3 reps (both A_1 ⊕ E). 29/29 PASS.
 
+### Batch 6: Z_3 structure, hw=1 mass-matrix parametrization, lattice pullback
+
+- **Z_3 Cyclic-Subgroup Commutant on C^8**
+  (`Z3_CYCLIC_COMMUTANT_NOTE.md`) — Schur + Z_3 character theory
+  applied to the taste cube: C^8 ≅ 4·1 ⊕ 2·χ_ω ⊕ 2·χ_{ω²} under
+  Z_3 = ⟨(123)⟩, giving dim End(C^8)^{Z_3} = 24 (4-dim increase over
+  the S_3 case). 20/20 PASS.
+
+- **Z_2-Invariant Hw=1 Mass-Matrix Parametrization**
+  (`Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md`) — explicit
+  5-parameter family M(a, b, c, d) of Hermitian Z_2-invariant
+  operators on hw=1; sign eigenvalue λ_sgn = b − c; remaining
+  eigenvalues λ_± from the 2×2 secular equation on the trivial
+  subspace. 10/10 PASS.
+
+- **Pullback of S_3 Invariants via Site-Phase/Cube-Shift Intertwiner**
+  (`INTERTWINER_PULLBACK_S3_INVARIANTS_NOTE.md`) — standard
+  functoriality of commutants transports every Batch 3/4/5
+  S_3-invariant result from C^8 to the BZ-corner subspace of
+  C^{L³} via the Batch 1 intertwiner. 25/25 PASS.
+
 ## Totals
 
 ```
-1125 total verification checks, 0 failures
+1180 total verification checks, 0 failures
 ```
 
 ## Reviewer workflow
@@ -141,6 +162,11 @@ python3 scripts/frontier_s3_mass_matrix_no_go.py
 python3 scripts/frontier_residual_z2_commutant.py
 python3 scripts/frontier_s3_invariant_hw_graded_decomposition.py
 python3 scripts/frontier_hw1_hw2_s3_equivariant_iso.py
+
+# Batch 6
+python3 scripts/frontier_z3_cyclic_commutant.py
+python3 scripts/frontier_z2_hw1_mass_matrix_parametrization.py
+python3 scripts/frontier_intertwiner_pullback_s3_invariants.py
 ```
 
 Each exits 0 on success, nonzero on failure. Each prints a TOTAL
