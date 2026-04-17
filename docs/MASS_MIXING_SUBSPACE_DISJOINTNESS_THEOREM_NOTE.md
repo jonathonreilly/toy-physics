@@ -10,8 +10,8 @@
 
 On the retained `hw=1` three-generation Hermitian algebra
 `M_3(ℂ)_Herm`, the subspace encoding charged-lepton mass eigenvalues
-is structurally orthogonal to the subspace encoding neutrino-mixing
-parameters:
+has **trivial intersection** with the subspace encoding neutrino-
+mixing parameters:
 ```
 dim(V_H ∩ V_D)  =  rank(V_H) + rank(V_D) − rank(V_H + V_D)
                 =  3 + 3 − 6
@@ -20,8 +20,21 @@ dim(V_H ∩ V_D)  =  rank(V_H) + rank(V_D) − rank(V_H + V_D)
 Charged-lepton mass eigenvalues cannot be expressed as linear
 combinations of neutrino-mixing sources. The charged-lepton closure
 and the neutrino-mixing closure are architecturally independent
-observational pins covering disjoint subspaces of the retained
-Hermitian algebra.
+observational pins covering disjoint (intersection-zero) subspaces
+of the retained Hermitian algebra.
+
+**Scope note — disjointness vs. orthogonality.** The theorem proves
+`dim(V_H ∩ V_D) = 0`, which is **trivial intersection** (the
+subspaces are linearly independent / in direct sum). It does NOT
+prove that `V_H` and `V_D` are **orthogonal** with respect to any
+Hermitian inner product on `M_3(ℂ)_Herm` (e.g., the Hilbert-Schmidt
+inner product `⟨A, B⟩ = Tr(A^† B)`). Trivial-intersection is the
+weaker, strictly algebraic statement; orthogonality is a
+stronger, metric-dependent statement that is NOT established here.
+
+This note uses "disjoint" throughout to refer to the trivial-
+intersection / direct-sum property. Earlier formulations using
+"orthogonal" were imprecise and have been revised.
 
 ## Retained inputs
 
@@ -114,7 +127,8 @@ trivial, and the intersection is `{0}`. □
 ## Corollary: charged-lepton closure and neutrino-mixing closure are
 architecturally independent
 
-Since `V_H ⊥ V_D` on the retained Hermitian algebra, the charged-
+Since `V_H ∩ V_D = {0}` on the retained Hermitian algebra (trivial
+intersection, not orthogonality in any metric sense), the charged-
 lepton mass eigenvalues (which live in `V_D` by `U_e = I_3`) cannot
 be expressed as linear combinations of neutrino-mixing sources.
 Equivalently: observational pinning of the neutrino-mixing chart
@@ -123,16 +137,18 @@ charged-lepton hierarchy is not derivable as a corollary of the
 neutrino-mixing closure.
 
 **Architectural decomposition.** The retained `M_3(ℂ)_Herm` (9 real
-dimensions) decomposes as
+dimensions) admits a direct-sum decomposition (as ℝ-vector spaces,
+not necessarily orthogonal under any particular inner product)
 ```
-M_3(ℂ)_Herm  =  V_H  ⊕  V_D  ⊕  V_{residual}
+M_3(ℂ)_Herm  =  V_H  ⊕  V_D  ⊕  V_{complement}
 ```
 with `dim(V_H) = dim(V_D) = 3` and
-`dim(V_{residual}) = 9 − 6 = 3`. The neutrino-mixing closure pins
+`dim(V_{complement}) = 9 − 6 = 3`, where `V_{complement}` is a
+choice of linear complement to `V_H + V_D`. The neutrino-mixing closure pins
 `V_H` via observational PMNS angles; the charged-lepton closure
-pins `V_D` via observed charged-lepton masses. The residual 3-real
-subspace (containing, e.g., off-diagonal Hermitian modes orthogonal
-to `V_H ⊕ V_D`) is not observationally pinned by either closure.
+pins `V_D` via observed charged-lepton masses. The 3-real
+complementary subspace (containing Hermitian modes not in `V_H + V_D`)
+is not observationally pinned by either closure.
 
 ## Numerical cross-check
 
@@ -161,9 +177,14 @@ decoupled.
   charged-lepton closure proceeds via its own observational pin on
   `V_D` (Theorem 7 in
   [CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md](./CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md)).
-- The residual 3-real subspace `V_{residual}` is not characterized
+- The 3-real complementary subspace is not characterized
   here; it may contain structure relevant to future framework-derives
   attempts.
+- Theorem 3 establishes **disjointness** (trivial intersection /
+  direct sum as ℝ-vector spaces), NOT **orthogonality**. No metric
+  or Hermitian inner product is invoked. Earlier wording of this
+  note that called the subspaces "orthogonal" was imprecise and
+  has been revised.
 
 ## Paper-safe wording
 
@@ -171,8 +192,11 @@ decoupled.
 > neutrino-mixing tangent subspace `V_H = span{T_m, T_δ, T_q}` and
 > the charged-lepton mass subspace `V_D = span{D_1, D_2, D_3}`
 > satisfy `rank(V_H + V_D) = 6`, hence `dim(V_H ∩ V_D) = 0`. The two
-> sector closures are structurally independent observational pins on
-> orthogonal subspaces of the retained Hermitian algebra.
+> sector closures are structurally independent observational pins
+> on disjoint subspaces of the retained Hermitian algebra.
+> Disjointness here means trivial intersection (direct sum as
+> ℝ-vector spaces); it is strictly weaker than orthogonality under
+> any particular Hermitian inner product, which is not claimed.
 
 ## Dependency contract
 

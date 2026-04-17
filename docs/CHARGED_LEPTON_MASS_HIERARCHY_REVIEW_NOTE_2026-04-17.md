@@ -197,9 +197,15 @@ Hermitian `M_3(ℂ)`.
 ```
 dim(V_H ∩ V_D)  =  rank(V_H) + rank(V_D) − rank(V_H + V_D)  =  3 + 3 − 6  =  0.
 ```
-`V_H` and `V_D` are structurally orthogonal subspaces of the retained
-`hw=1` Hermitian algebra. No linear combination of the neutrino-mixing
-tangent generators lies in the species-diagonal subspace.
+`V_H` and `V_D` are **disjoint** subspaces (trivial intersection /
+direct sum as ℝ-vector spaces) of the retained `hw=1` Hermitian
+algebra. No linear combination of the neutrino-mixing tangent
+generators lies in the species-diagonal subspace. Disjointness is
+the strictly weaker, metric-free statement; the stronger claim of
+orthogonality under a specific Hermitian inner product is NOT
+established by the runner and is NOT used downstream. See
+[MASS_MIXING_SUBSPACE_DISJOINTNESS_THEOREM_NOTE.md](./MASS_MIXING_SUBSPACE_DISJOINTNESS_THEOREM_NOTE.md)
+§Safe statement for the disjoint-vs-orthogonal scope note.
 
 **Corollary.** Charged-lepton mass eigenvalues (which live in `V_D` by
 the Dirac-bridge theorem's `U_e = I_3` constraint) cannot be expressed
@@ -449,6 +455,51 @@ Drawing from the preceding theorems and no-gos, we establish the
 closure-class result parallel to the retained neutrino-mixing
 closure.
 
+### 7.0 Convention note (surfaced explicitly)
+
+The weight triple `(w_{O_0}, w_a, w_b)` is the diagonal of the
+second-order return operator `Σ` (Theorem 2). On dimensional grounds
+`Σ` scales as `(effective mass)²` — it is a second-order expression
+in the Dirac operator `Γ_1`. There are therefore two physically
+distinct conventions for identifying `(w_{O_0}, w_a, w_b)` with
+observed masses:
+
+- **Convention A** (linear-mass pin — used in Theorem 7 below):
+  `(w_{O_0}, w_a, w_b) ∝ (m_e, m_μ, m_τ)`.
+  Rationale: read `Σ` as the effective **mass-operator diagonal**
+  after Dirac-bridge diagonalization, so its eigenvalues are the
+  physical masses at first power. Under this convention, the
+  observed Koide `Q_ℓ = 2/3` is read directly off the weight triple.
+
+- **Convention B** (mass-squared pin):
+  `(w_{O_0}, w_a, w_b) ∝ (m_e², m_μ², m_τ²)`.
+  Rationale: read `Σ` dimensionally as `(mass)²`. Under this
+  convention, `Q(w) = Σw / (Σ√w)² = Σm² / (Σm)²`, which is **NOT**
+  `2/3` empirically. The physical Koide is recovered on `√w`, which
+  returns to the linear-mass triple.
+
+The two conventions are mathematically equivalent for the **physical
+content** — Koide `Q = 2/3` is a statement about linear charged-
+lepton masses and holds empirically under both readings (directly
+in Convention A, through `√w` in Convention B). The algebraic
+cone equivalence of Theorem 1 is a statement on whichever triple we
+call `v`; it does not select a convention. Both conventions are
+cross-checked numerically by the companion runner
+(`scripts/frontier_charged_lepton_observational_pin_closure.py`,
+Step 3 convention-cross-check block).
+
+This note, and Theorem 7 below, uses **Convention A** (linear-mass
+pin). The closure verdict `TRUE_NO_PREDICTION` is convention-
+invariant: under either convention, the 3-real observational input
+determines the weight triple up to scale, the Koide condition
+(on the appropriate triple) holds tautologically as a property of
+the PDG charged-lepton masses, and no spare observable emerges from
+the 3→3 map. Convention A is chosen for exposition because it
+reads `Q_ℓ = 2/3` directly off the weights; Convention B is equally
+admissible and carries the same closure.
+
+### 7.1 Theorem 7 (under Convention A)
+
 **Theorem 7.** Let
 `(w_{O_0}, w_a, w_b) = (m_e, m_μ, m_τ)`
 (normalized to `m_τ = 1`, giving
@@ -543,7 +594,7 @@ data.
 > theorem supplies exactly three independent weight slots on the
 > charged-lepton generation space (Theorem 2), and the retained
 > Hermitian subspaces encoding charged-lepton masses and
-> neutrino-mixing parameters are structurally orthogonal
+> neutrino-mixing parameters are disjoint (trivial intersection / direct sum as ℝ-vector spaces, not orthogonality under any inner product)
 > (Theorem 3, `dim(V_H ∩ V_D) = 0`). Six rigorous no-go theorems
 > establish that every retained non-Higgs-Yukawa mechanism is
 > species-diagonal on the generation space (Sections 5.1–5.6).
