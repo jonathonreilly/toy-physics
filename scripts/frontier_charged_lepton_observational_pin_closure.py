@@ -396,23 +396,57 @@ def step3_observational_pin():
     check("Pinned triple satisfies positivity (R1)",
           all(w > 0 for w in w_normalized))
 
-    # Uniqueness check — is the pin unique up to scale?
+    # Uniqueness check — what is actually unique on the retained
+    # surface, and what is merely an observational labeling choice?
     #
-    # The claim has three independent parts, each tested explicitly:
-    #   (U1) The pin matches the observed mass direction under the
-    #        retained Gamma_1 hopping (species -> slot) map: species 1
-    #        -> w_O0, species 2 -> w_a, species 3 -> w_b.
-    #   (U2) Any ALTERNATE species-to-slot map (one of 5 non-identity
-    #        permutations of {w_O0, w_a, w_b} onto {m_e, m_mu, m_tau})
-    #        also matches the OBSERVED set {m_e, m_mu, m_tau} (because
-    #        equality of sets is permutation-invariant), BUT those
-    #        alternate maps would disagree with the retained hopping
-    #        structure (Step 1). Only the identity map is consistent
-    #        with retained hopping. We verify this: the pin is unique
-    #        AS A LABELED BIJECTION (i.e. with the hopping constraint).
-    #   (U3) Non-scalar perturbations of the pin produce DIFFERENT
-    #        mass vectors. Only scalar rescaling preserves the pin.
-    #        We verify this with random non-scalar perturbations.
+    # Scope note (matches authority note Theorem 7 / §10 / §11 claim):
+    #
+    #   The retained hw=1 shape theorem supplies three independent
+    #   weight slots (w_O0, w_a, w_b) but carries a residual S_2
+    #   symmetry on axes {2, 3} that exchanges w_a <-> w_b. Koide Q
+    #   and the Sigma spectrum are S_2-invariant, so that residual
+    #   labeling ambiguity is INVISIBLE in the physical closure
+    #   observables. On the retained surface, the pin is unique
+    #   *as a set* up to overall positive scale; the
+    #   w_a <-> w_b labeling is NOT broken by the retained Gamma_1
+    #   hopping data. (See authority note §6.4 for the S_2-breaking
+    #   primitive survey — the sole-axiom S_2-breaking primitive is
+    #   identified as an open missing primitive, not a retained
+    #   theorem output.)
+    #
+    # We therefore test four OBSERVATIONAL subclaims, each of which
+    # is tight and precisely stated:
+    #
+    #   (U1) Observational labeling check: with the observational
+    #        labeling species-k -> slot-k, the pinned triple matches
+    #        the observed normalized mass direction to machine
+    #        precision. (Positive consistency.)
+    #   (U2) Set-vs-labeled distinction: each of the 5 non-identity
+    #        S_3 permutations of the pin reproduces the observed
+    #        SET {m_e, m_mu, m_tau} (set-equality is permutation-
+    #        invariant) but not the observed LABELED triple. This
+    #        is a tautological statement about labeled tuples of
+    #        distinct values — it does NOT prove the retained
+    #        Gamma_1 hopping breaks the residual S_2 on {w_a, w_b}.
+    #        In particular, the (0, 2, 1) permutation (w_a <-> w_b)
+    #        is the surviving S_2 ambiguity; Koide Q and Sigma are
+    #        invariant under it.
+    #   (U3a) Non-scalar perturbations of the pin produce DIFFERENT
+    #         normalized triples: the pin is a sharp point, not a
+    #         neighborhood.
+    #   (U3b) Positive scalar rescalings preserve the pin direction:
+    #         the pin is unique *up to overall positive scale*.
+    #
+    # Composite: U1 AND U2 AND U3a AND U3b  ==>
+    #   "pin is unique as a set up to positive scale, with residual
+    #    S_2 labeling ambiguity on w_a <-> w_b that is Koide- and
+    #    Sigma-invariant on the retained surface."
+    # This matches authority-note Theorem 7, §10 paper-safe wording,
+    # and §11 'what this note does not claim'. We do NOT claim the
+    # retained Gamma_1 hopping picks out a labeled identity
+    # bijection — that would require a retained S_2-breaking
+    # primitive, which authority note §6.4 explicitly flags as
+    # missing.
     import itertools
     import random as _rnd
     _rnd.seed(23)
@@ -476,24 +510,32 @@ def step3_observational_pin():
 
     unique = u1_pass and u2_pass_all and u3_pass and u3_scale_pass
 
-    check("Pin uniqueness U1: identity hopping map matches observation",
+    check("Pin uniqueness U1 (observational labeling consistency): "
+          "species-k -> slot-k labeling reproduces observed triple",
           u1_pass,
-          detail="species-k -> slot-k gives diag = (m_e, m_mu, m_tau)/Sum")
-    check("Pin uniqueness U2: non-identity perms match as set but not as "
-          "labeled triple (5/5 S_3 non-identity perms)",
+          detail="observational labeling; species-k -> slot-k gives "
+                 "diag = (m_e, m_mu, m_tau)/Sum")
+    check("Pin uniqueness U2 (set-vs-labeled distinction): 5/5 "
+          "non-identity S_3 perms match observed SET but not observed "
+          "LABELED triple",
           u2_pass_all,
-          detail="retained Gamma_1 hopping constraint picks out identity")
-    check("Pin uniqueness U3a: non-scalar perturbations break the pin",
+          detail="tautology on distinct-valued labeled tuples; does NOT "
+                 "claim retained Gamma_1 breaks residual S_2 on {w_a, w_b}")
+    check("Pin uniqueness U3a (sharp pin): non-scalar perturbations "
+          "break the pin",
           u3_pass,
           detail="20 random non-uniform multiplicative perturbations "
-                 "all diverge from observed")
-    check("Pin uniqueness U3b: scalar rescaling preserves the pin",
+                 "all diverge from observed normalized direction")
+    check("Pin uniqueness U3b (scale freedom): positive scalar "
+          "rescalings preserve the pin direction",
           u3_scale_pass,
           detail="20 random positive rescalings all preserve direction")
-    check("Pin uniqueness (composite: U1 AND U2 AND U3a AND U3b)",
+    check("Pin uniqueness (composite: U1 AND U2 AND U3a AND U3b): "
+          "unique as a set up to positive scale; residual S_2 labeling "
+          "ambiguity on w_a <-> w_b is Koide- and Sigma-invariant",
           unique,
-          detail="pin is unique up to positive scale under the "
-                 "retained Gamma_1 hopping constraint")
+          detail="matches authority-note Theorem 7 / §10 / §11; retained "
+                 "surface does NOT break the w_a <-> w_b S_2")
 
     # S_2 violation — do we need w_a != w_b?
     s2_deviation = abs(w_a_pin - w_b_pin) / (w_a_pin + w_b_pin)

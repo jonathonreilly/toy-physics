@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-17
 **Status:** review note — closure-class match via observational pinning; the retained framework does not derive Koide on the current surface. Strict-review verdict: TRUE_NO_PREDICTION.
-**Runners:** 19 runners, 511 PASS / 0 FAIL, independently verified on `origin/main`.
+**Runners:** 19 runners, 518 PASS / 0 FAIL, independently verified on `origin/main`.
 
 ## Abstract
 
@@ -578,7 +578,7 @@ All retained authority runners pass fresh on live `main`:
 - `scripts/frontier_plaquette_self_consistency.py` — 16 PASS, 0 FAIL.
 
 All 19 runners accompanying this review pass on the `origin/main`
-base: **511 PASS / 0 FAIL** across the campaign.
+base: **518 PASS / 0 FAIL** across the campaign.
 
 No retained authority notes on `main` are modified by this submission.
 PDG charged-lepton mass values enter only as comparators and as the
@@ -612,7 +612,7 @@ data.
 
 ## 11. Runner manifest
 
-Nineteen runners, 511 PASS / 0 FAIL on `origin/main` base:
+Nineteen runners, 518 PASS / 0 FAIL on `origin/main` base:
 
 | Runner | PASS | Theorem / section cited |
 |---|---|---|
@@ -626,7 +626,7 @@ Nineteen runners, 511 PASS / 0 FAIL on `origin/main` base:
 | `frontier_koide_anomaly_forced_cross_species.py` | 42 | §5.5 |
 | `frontier_charged_lepton_via_neutrino_hermitian.py` | 14 | Theorem 3 |
 | `frontier_hw1_second_order_return_shape_theorem.py` | 20 | Theorem 2 |
-| `frontier_charged_lepton_observational_pin_closure.py` | 32 | Theorem 7 |
+| `frontier_charged_lepton_observational_pin_closure.py` | 39 | Theorem 7 |
 | `frontier_s2_breaking_primitive_survey.py` | 31 | §6.4 |
 | `frontier_mass_mixing_disjointness_theorem.py` | 9 | Theorem 3 |
 | `frontier_shape_theorem_robustness_audit.py` | 57 | Theorem 2.1 |
@@ -635,7 +635,7 @@ Nineteen runners, 511 PASS / 0 FAIL on `origin/main` base:
 | `frontier_koide_cone_variational_principle_survey.py` | 20 | Theorem 5 |
 | `frontier_koide_cone_real_irrep_democracy.py` | 22 | Theorem 5 |
 | `frontier_fourth_order_mixed_gamma_return.py` | 11 | Theorem 6 |
-| **TOTAL** | **511** | — |
+| **TOTAL** | **518** | — |
 
 ## What this note does not claim
 
