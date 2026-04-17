@@ -1,22 +1,23 @@
 #!/usr/bin/env python3
 """
-G5 Residual-S_2 Symmetry-Reduction Theorem — verification runner.
+Tetragonal stabilizer and residual mu-tau invariance — verification runner.
 
-Establishes the clean symmetry-group argument for why the G5 14-agent
-attack surface could not find a sole-axiom S_2-breaking primitive:
+Establishes the symmetry-group argument for why no operator respecting
+retained cubic O_h symmetry and EWSB axis-1 selection can split the
+muon-tau species degeneracy on the charged-lepton hw=1 triplet:
 
   The stabilizer of axis 1 in the cubic point group O_h is the tetragonal
   group D_{4h}, which contains the sigma_v reflection swapping axes 2
-  and 3. Therefore any retained operator respecting O_h cubic symmetry
-  AND EWSB axis-1 selection automatically respects S_2 on axes {2, 3}
-  and cannot distinguish the T_2 partner states (1,1,0) and (1,0,1).
+  and 3. Any D_{4h}-invariant operator therefore assigns identical
+  matrix elements to the muon-tau T_1 species pair (0,1,0) and (0,0,1),
+  and to the T_2 intermediate partner pair (1,1,0) and (1,0,1).
 
-This is a NEW theorem, orthogonal to the Physicist-G polynomial-invariants
-impossibility theorem on G1. It formalizes the 14-agent empirical result
-into a symmetry-group identity and supplies a concrete falsification test
-for future G5 primitive candidates.
+This theorem formalizes the empirical no-go pattern across the attack
+catalogue in docs/CHARGED_LEPTON_KOIDE_G5_STATUS_NOTE_2026-04-17.md
+into a single symmetry-group identity, and supplies a concrete
+falsification test for future primitive candidates.
 
-Authority: .claude/science/derivations/g5-s2-residual-symmetry-theorem-2026-04-17.md
+Authority: .claude/science/derivations/tetragonal-stabilizer-mu-tau-invariance-2026-04-17.md
 """
 
 from __future__ import annotations
@@ -416,7 +417,7 @@ def part_6_falsification_test() -> None:
 
     print()
     print("  Falsification test passed: the theorem's contrapositive holds.")
-    print("  Any candidate G5 primitive with w_a != w_b MUST break D_{4h}.")
+    print("  Any candidate primitive with w_a != w_b MUST break D_{4h}.")
 
 
 # ---------------------------------------------------------------------------
@@ -463,8 +464,8 @@ def part_7_V_sel_preserves_sigma_v() -> None:
 
 def main() -> int:
     print("=" * 72)
-    print("G5 Residual-S_2 Symmetry-Reduction Theorem")
-    print("Authority: .claude/science/derivations/g5-s2-residual-symmetry-theorem-2026-04-17.md")
+    print("Tetragonal stabilizer and residual mu-tau invariance")
+    print("Authority: .claude/science/derivations/tetragonal-stabilizer-mu-tau-invariance-2026-04-17.md")
     print("=" * 72)
 
     Oh = part_1_Oh_structure()
@@ -482,11 +483,13 @@ def main() -> int:
     print("CONCLUSION:")
     print("  Any retained operator respecting O_h cubic symmetry AND EWSB")
     print("  axis-1 selection automatically respects sigma_v(2<->3), and")
-    print("  therefore cannot distinguish T_2 partner states (1,1,0) and")
-    print("  (1,0,1). G5 sole-axiom closure requires breaking either O_h")
-    print("  or EWSB axis-1 preservation -- both amount to axiom modification.")
-    print("  This formalizes the 14-agent empirical no-go result as a single")
-    print("  symmetry-group identity.")
+    print("  therefore cannot split the muon-tau species pair nor the T_2")
+    print("  intermediate pair (1,1,0) / (1,0,1). Sole-axiom charged-lepton")
+    print("  mass-hierarchy closure on the retained operator class requires")
+    print("  a D_{4h}-breaking primitive; none is present on the retained")
+    print("  backbone. This formalizes the empirical no-go pattern across")
+    print("  the charged-lepton attack catalogue as a single symmetry-group")
+    print("  identity.")
     print("=" * 72)
 
     return 0 if FAIL == 0 else 1

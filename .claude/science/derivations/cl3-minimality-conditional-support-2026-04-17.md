@@ -37,8 +37,9 @@ compatible at `n = 3` only.
 
 ### What this note does NOT claim
 
-- **Does NOT** close the axiom-depth gap (G16) for `d_s = 3`.
-- **Does NOT** absorb `d_s = 3` into the axiom from first principles.
+- **Does NOT** constitute a first-principles derivation of `d_s = 3`
+  from framework-internal structure alone.
+- **Does NOT** absorb `d_s = 3` into the axiom.
 - **Does NOT** derive `d_s = 3` independently of the retained cubic
   orbit surface. The `2^n = 8` requirement itself conditions on the
   retained `8 = 1 + 1 + 3 + 3` structure, which is proven on a cubic
