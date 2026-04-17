@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Top4 multistage transfer sweep across the widened local pocket."""
+"""Multistage transfer sweep across the widened local pocket."""
 
 from __future__ import annotations
 
@@ -48,6 +48,12 @@ def _parse_cases(case_labels: str | None) -> tuple[Case, ...]:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
+        "--top-keep",
+        type=int,
+        default=TOP_KEEP,
+        help="Compact object width to retain per update.",
+    )
+    parser.add_argument(
         "--case-labels",
         default="",
         help="Comma-separated case labels. Defaults to the full widened local pocket.",
@@ -57,15 +63,15 @@ def main() -> None:
 
     t0 = time.time()
     print("=" * 138)
-    print("PERSISTENT OBJECT TOP4 MULTISTAGE TRANSFER SWEEP")
-    print("  widened local-pocket transfer of the first self-maintaining multistage floor")
+    print("PERSISTENT OBJECT MULTISTAGE TRANSFER SWEEP")
+    print("  widened local-pocket transfer of the retained multistage compact-object floor")
     print("=" * 138)
-    print(f"top_keep={TOP_KEEP}, cases={','.join(case.label for case in cases)}")
+    print(f"top_keep={args.top_keep}, cases={','.join(case.label for case in cases)}")
     print()
 
     passes = 0
     for case in cases:
-        row = _run_case(case, TOP_KEEP)
+        row = _run_case(case, args.top_keep)
         passes += int(row.admissible)
         overlap_str = "[" + ",".join(f"{val:.3f}" for val in row.stage_mean_overlap) + "]"
         carry_mean_str = "[" + ",".join(f"{val:.3f}" for val in row.stage_carry_mean) + "]"
@@ -81,11 +87,13 @@ def main() -> None:
         print()
 
     print("SUMMARY")
-    print(f"  top4 multistage-admissible on {passes}/{len(cases)} listed widened-pocket cases")
+    print(f"  top{args.top_keep} multistage-admissible on {passes}/{len(cases)} listed widened-pocket cases")
     print()
     print("SAFE READ")
-    print("  - If top4 stays open across most of this pocket, the exact-lattice route now has a real transferable multistage floor.")
-    print("  - If it collapses on the boundary rows, the floor is real but still pocket-limited.")
+    print(
+        f"  - If top{args.top_keep} stays open across most of this pocket, the exact-lattice route now has a real transferable multistage floor."
+    )
+    print(f"  - If top{args.top_keep} collapses on the boundary rows, the floor is real but still pocket-limited.")
     print("  - This is still a bounded exact-lattice transfer sweep, not matter closure.")
     print()
     print(f"Total runtime: {time.time() - t0:.1f}s")

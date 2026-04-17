@@ -228,11 +228,16 @@ not just local lane wins.
     transfer ring too; the multistage floor sweep now says `top3` was too
     narrow and `top4` is already a self-maintaining multistage floor on the
     stable widened branch; the new transfer sweep says that floor now survives
-    across most of the widened local pocket too
+    across most of the widened local pocket too; the follow-up inward-boundary
+    width ladder then says `top5/top6/top8` still do not reopen `source0.75`
+    or `source1.00`, so the live local limit is inward-source direction rather
+    than floor width
   - the retained ordered family still supports broad-surrogate steering rather
     than a persistent-mass object
 - What would count as the next real upgrade:
   - one farther transfer sweep beyond the current widened local pocket
+  - or a different self-maintaining object architecture if the exact-lattice
+    inward-source boundary proves fundamental
   - or a stronger architecture-level no-go that closes the search for the
     current family
 
@@ -526,8 +531,12 @@ remaining testable and review-safe.
       boundary has moved to between `source_z = 1.00` and `1.25`
     - the bottleneck is no longer source-object shrinkage or the local
       broad-versus-adaptive readout split
-    - it is now full local-pocket universality, beyond-pocket transfer, and
-      full inertial-response closure
+    - the follow-up width ladder then closes the cheap “slightly broader floor”
+      escape hatch: `top5/top6/top8` still leave `source0.75` and `source1.00`
+      closed
+    - so it is now full local-pocket universality, beyond-pocket transfer, a
+      sharper inward-source directional limit, and then full inertial-response
+      closure
   - Deliverables:
     - one farther transfer sweep beyond the current widened local pocket
     - or one bounded negative strong enough to freeze the compact-object
@@ -546,10 +555,16 @@ remaining testable and review-safe.
     - the multistage transfer result is now:
       `top4 = 11/13` across the widened local pocket
     - only `source0.75` and `source1.00` remain closed
+    - widening the floor does not fix that:
+      `top5 = 2/4`, `top6 = 2/4`, `top8 = 2/4` on the inward rows too
+    - `source0.75` stays closed despite clean overlap/carry/alpha/drift, so
+      that row is now best read as a directional miss rather than a width miss
+    - `source1.00` stays a response-law miss: `alpha = 1.11` at `top4`, then
+      `alpha = 0.76` at `top5/top6/top8`
     - fixed windows/tapers remain closed
     - the live question is now whether that `top4` floor leaves the current
-      widened pocket at all, or whether the inward-source boundary is the real
-      local limit
+      widened pocket at all, or whether the inward-source directional boundary
+      is the real local limit
 
 3. **Geometry-transfer discriminator / generated-family recovery**
    - Best upside:

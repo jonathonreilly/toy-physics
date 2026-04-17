@@ -269,7 +269,10 @@ Nobel-scale score.
     floor sweep now says `top3` was too narrow and `top4` is the first
     self-maintaining multistage floor on the stable widened branch, and the
     new transfer sweep says that `top4` floor survives on `11/13` widened-
-    pocket rows with only a residual inward-source boundary
+    pocket rows with only a residual inward-source boundary; a follow-up width
+    ladder then shows that `top5`, `top6`, and `top8` still do not reopen
+    `source0.75` or `source1.00`, so the live local limit is now directional
+    inward source placement rather than floor width
   - Missing: full local-pocket universality and transfer beyond the current
     widened pocket, plus a true persistent inertial-mass law rather than one
     bounded exact-lattice local branch;
@@ -504,9 +507,12 @@ The main upward pressures since the first cut are:
   route further: `top3` is too narrow, but `top4` is the first self-maintaining
   multistage floor on the stable widened branch; the new transfer sweep then
   upgrades that again: the `top4` floor is open on `11/13` widened-pocket rows,
-  with only the deepest inward-source rows still closed; the remaining
-  bottleneck is now full local-pocket universality and beyond-pocket transfer,
-  not source-object localization or a local readout split alone
+  with only the deepest inward-source rows still closed; a follow-up width
+  ladder then shows that even `top5/top6/top8` leave `source0.75` and
+  `source1.00` closed, so the remaining bottleneck is now the inward-source
+  directional limit plus full local-pocket universality / beyond-pocket
+  transfer, not source-object localization, floor width, or a local readout
+  split alone
 - a follow-up readout-localization probe now closes the detector side as a
   bounded negative: a peak-centered `3x3` window shrinks detector support a
   lot, but it only captures a tiny fraction of the detector mass and loses the
@@ -575,8 +581,10 @@ The biggest score movers are:
      `top-3` lane and survives most of a second ring too; the multistage floor
      sweep then says `top4` is already a self-maintaining floor on the stable
      widened branch, and the new transfer sweep says that floor survives across
-     most of the widened local pocket, so the remaining gap is local-pocket
-     universality, beyond-pocket transfer, and eventual closure
+     most of the widened local pocket; the follow-up width ladder then shows
+     that the residual inward rows do not reopen even at `top5/top6/top8`, so
+     the remaining gap is beyond-pocket transfer plus a deeper directional
+     source-placement limit, and then eventual closure
 
 4. **A real grown-family causal or trapping-field observable**
    - strongest improvement to:
