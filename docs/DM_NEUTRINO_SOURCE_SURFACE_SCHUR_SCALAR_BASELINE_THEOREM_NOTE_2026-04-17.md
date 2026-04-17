@@ -216,7 +216,7 @@ surface.
 
 ## Narrowed gap statement
 
-The the selector gate was previously:
+The selector gate was previously:
 
 ```
 (baseline choice) AND (selector principle).
@@ -228,7 +228,7 @@ After this note:
 (selector principle) only.
 ```
 
-Concretely, any future closure of selector must supply one of:
+Concretely, any future closure of the selector gate must supply one of:
 
 **(a)** a sole-axiom derivation of a minimum-coupling (or
 equivalent) variational principle that forces the physical admissible

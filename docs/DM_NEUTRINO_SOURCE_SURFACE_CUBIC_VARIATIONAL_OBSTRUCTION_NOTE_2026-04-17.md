@@ -7,9 +7,10 @@
 
 ## Scope and discipline
 
-This note establishes a precise **obstruction theorem** for the cubic variational selector route on the selector gate
-gate closure attempt: the cubic right-sensitive direction of the
-Z_3-circulant norm form.
+This note establishes a precise **obstruction theorem** for the cubic
+variational selector route on the `Z_3` doublet-block selector gate: the
+cubic right-sensitive direction of the Z_3-circulant norm form fails to
+supply an axiom-native, m-invariant, finite chamber extremum.
 
 It is explicitly **not** a theorem-grade closure. The selector principle
 remains open, and this note records the sharpened reason why the cubic
@@ -42,8 +43,8 @@ Retained upstream (all theorem-grade, no new axioms):
  `Q(delta, q_+) = 6 (delta^2 + q_+^2) / m^2`
 - Schur-Q chamber-boundary minimum at `(delta_*, q_+*) = (sqrt(6)/3, sqrt(6)/3)`
 
-**Question.** does the cubic piece `2 Re(w^3)`, which breaks the
-quadratic isotropy `delta <-> q_+`, pick a unique axiom-native chamber point?
+**Question.** Does the cubic piece `2 Re(w^3)`, which breaks the quadratic
+isotropy `delta <-> q_+`, pick a unique axiom-native chamber point?
 
 ## Obstruction theorem
 
@@ -134,7 +135,7 @@ invariants `{tr(J_act^3), det(J_act), Re(w^3)}` fails to have a unique,
 Each of (A)-(E) is independent; each blocks a different naive closure of
 the cubic variational selection obstruction.
 
-**Corollary.** Any the cubic variational selection obstruction closure of selector requires at least one post-axiom
+**Corollary.** Any closure of the selector gate requires at least one post-axiom
 input: a canonical choice of `m`, a canonical sign/extremum-type convention,
 or a canonical Z_3 representative within the chamber-accessible orbit. None
 of these is currently retained.
@@ -144,7 +145,7 @@ of these is currently retained.
 Before this note, the selector narrowed-gap statement read (from the upstream
 Schur-baseline note):
 
-> "Any future closure of selector must supply one of:
+> "Any future closure of the selector gate must supply one of:
 > (a) a sole-axiom derivation of a minimum-coupling variational principle ...
 > (b) a right-sensitive axiom-native functional on the chamber that breaks
 > the delta <-> q_+ isotropy and has a unique chamber-interior extremum
@@ -259,7 +260,7 @@ quantitative section.
 
 If any future revision tightens those boundaries, it must cite a new source
 on the live retained/promoted surface. Until then, the safe read is:
-**cubic the cubic variational obstruction ruled out; selector selector principle still open; route (b)
+**cubic variational route: ruled out; selector principle still open; route (b)
 closed as stand-alone**.
 
 ## Command

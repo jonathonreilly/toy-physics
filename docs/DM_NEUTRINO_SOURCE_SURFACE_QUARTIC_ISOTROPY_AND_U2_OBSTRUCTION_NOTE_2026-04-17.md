@@ -264,7 +264,7 @@ No new axioms are introduced.
 
 ## Narrowed-gap statement
 
-**Before this note (after Paths A, B, C + parity-mixing note):**
+**Before this note (after the info-geometric / Z_3-cubic / parity-split obstructions + parity-mixing note):**
 ```
 (G-Var) still requires selection axiom (info-geometric leading-quadratic)
 (G-Non-Var) parity-mixing sub-route produces F1 candidate
@@ -294,7 +294,7 @@ Appropriate placement:
 
 - atlas obstruction row in
  [DERIVATION_ATLAS.md](./publication/ci3_z3/DERIVATION_ATLAS.md)
- under the DM neutrino source-surface family, sibling to Paths A, B, C
+ under the DM neutrino source-surface family, sibling to the info-geometric / Z_3-cubic / parity-split obstructions
  and the parity-mixing selector law
 - **do NOT** use for any publication-grade positive quantitative claim
 - **do NOT** promote the Line-1 conditional closure without a sole-axiom

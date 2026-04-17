@@ -7,11 +7,11 @@
 
 ## Scope and discipline
 
-Paths A (info-geometric), B (Z_3 cubic), and C (holonomy / Z_3-parity-definite
-scalars) each produced an obstruction theorem for the right-sensitive 2-real
-selector law on `(delta, q_+)`. The Z_3 parity-split theorem in
-particular showed that `T_q` is purely Z_3-circulant and `T_delta` is purely
-Z_3-anti-circulant, and consequently that **any Z_3-parity-DEFINITE scalar
+The info-geometric, Z_3-cubic, and Z_3-parity-split obstructions each
+produced an obstruction theorem for the right-sensitive 2-real selector
+law on `(delta, q_+)`. The Z_3 parity-split theorem in particular showed
+that `T_q` is purely Z_3-circulant and `T_delta` is purely Z_3-anti-
+circulant, and consequently that **any Z_3-parity-DEFINITE scalar
 functional constrains at most one of the active coordinates at fixed m**.
 
 The remaining untested class is Z_3-parity-MIXING functionals. This note:
@@ -248,7 +248,7 @@ discipline requirement** for Physics-Validation.
 
 ## Narrowed-gap statement
 
-**Before this note (after Paths A, B, C):**
+**Before this note (after the info-geometric / Z_3-cubic / parity-split obstructions):**
 ```
 (G-Var) variational selection axiom unclosed; info-geom
   functionals agree at sqrt(6)/3 at LEADING QUADRATIC only
@@ -269,7 +269,7 @@ parity-mixing sub-class: untested
 ```
 
 All three classes (info-geom, cubic, parity-mixing) produce inequivalent
-candidate points; each requires an additional selection axiom. The the selector gate
+candidate points; each requires an additional selection axiom. The selector gate
 gap is strictly narrower than before: the parity-mixing class is no
 longer open. It is now classified as "narrower-gap via functional-
 selection ambiguity", matching the sibling status of the information-geometric selection obstruction `(G-Var)`.
@@ -326,7 +326,7 @@ Appropriate placement:
 
 - atlas obstruction row in
  [DERIVATION_ATLAS.md](./publication/ci3_z3/DERIVATION_ATLAS.md)
- under the DM neutrino source-surface family, sibling to Paths A, B, C
+ under the DM neutrino source-surface family, sibling to the info-geometric / Z_3-cubic / parity-split obstructions
 - **do NOT** use for any publication-grade positive quantitative claim
 - **do NOT** use to "justify" the Schur-Q variational candidate — this
  note actively produces a competing candidate

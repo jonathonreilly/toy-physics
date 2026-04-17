@@ -7,7 +7,7 @@
 
 ## Scope and discipline
 
-The the selector gate, on the integrati, carries:
+The selector gate, on the integration branch, carries:
 
 - one partial-closure theorem (Schur baseline forces `D = m I_3`),
 - three obstruction / cross-check theorems (information-geometric,

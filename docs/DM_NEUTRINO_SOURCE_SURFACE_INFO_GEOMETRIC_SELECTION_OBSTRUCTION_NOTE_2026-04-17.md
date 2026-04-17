@@ -7,9 +7,9 @@
 
 ## Scope and discipline
 
-This note attempts the information-geometric attack vector on the remaining
-selector gap for the selector doublet-block law. It does **not** close the
-selector. It produces:
+This note attempts the information-geometric attack vector on the
+remaining selector gap for the `Z_3` doublet-block law. It does **not**
+close the selector. It produces:
 
 1. a **Quadratic Unanimity Theorem** (sole-axiom + already-retained stack)
 2. a **Cubic Splitting Obstruction Theorem** (sole-axiom + already-retained stack)
@@ -24,8 +24,8 @@ retained atlas already supports. The "minimum-information selector" in
 remains atlas-flagged as "invented post-axiom dynamical selector law";
 this note does not override that flag.
 
-The DM flagship gate remains **open**. The the selector gap is strictly narrower
-after this note.
+The DM flagship gate remains **open**. The selector gap is strictly
+narrower after this note.
 
 ## Setup recap (all retained / theorem-native)
 
@@ -189,7 +189,7 @@ axiom.
 
 ## Narrowed-gap statement
 
-**Before this note.** The the selector gap after the Schur baseline note was:
+**Before this note.** The selector gap after the Schur baseline note was:
 
 ```
 (selector principle: any variational or non-variational law)
@@ -197,7 +197,7 @@ axiom.
 
 an unspecified single missing ingredient.
 
-**After this note.** The the selector gap splits precisely into two sub-objects:
+**After this note.** The selector gap splits precisely into two sub-objects:
 
 ```
 (G-Var) variational selection axiom fixing a canonical

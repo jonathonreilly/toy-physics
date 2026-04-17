@@ -1,9 +1,10 @@
 # PMNS as `f(H(m, delta, q_+))` Closure Theorem
 
 **Date:** 2026-04-17
-**Status:** POSITIVE CLOSURE of selector on the live DM-neutrino source-oriented sheet,
-via the P3 lane identified in the observable-bank exhaustion theorem.
-PMNS mixing angles are promoted to retained on the chamber.
+**Status:** POSITIVE CLOSURE of the selector gate on the live DM-neutrino
+source-oriented sheet, via the P3 lane identified in the observable-bank
+exhaustion theorem. PMNS mixing angles are promoted to retained on the
+chamber.
 **Script:** `scripts/frontier_pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem.py`
 **Runner:** `PASS = 43, FAIL = 0`
 **Framework convention:** "axiom" means only the single framework axiom `Cl(3)` on `Z^3`.
@@ -15,7 +16,7 @@ tightening is carried by three companion notes:
 
 - Basin-uniqueness and permutation-uniqueness (CRITICAL 1 + 2): resolved
  via the perturbative criterion in
- [SELECTOR_PHYSICIST_J_PERTURBATIVE_UNIQUENESS_NOTE_2026-04-17.md](./SELECTOR_PHYSICIST_J_PERTURBATIVE_UNIQUENESS_NOTE_2026-04-17.md).
+ [DM_NEUTRINO_SOURCE_SURFACE_PERTURBATIVE_UNIQUENESS_THEOREM_NOTE_2026-04-17.md](./DM_NEUTRINO_SOURCE_SURFACE_PERTURBATIVE_UNIQUENESS_THEOREM_NOTE_2026-04-17.md).
  Non-perturbative chamber basins exist, but only one (Basin 1 at
  `sigma = (2, 1, 0)`) lies in the convergence domain of the
  observable-principle source-response expansion.
@@ -36,8 +37,8 @@ tightening is carried by three companion notes:
 
 The observable-bank exhaustion theorem
 [DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17](./DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md)
-stratified the remaining the selector gate open object into exactly three lanes
-`(P1, P2, P3)`. This note builds **P3** explicitly.
+stratified the remaining open object of the selector gate into exactly
+three promotion lanes `(P1, P2, P3)`. This note builds **P3** explicitly.
 
 **Main theorem.** The PMNS mixing angles `(θ_12, θ_13, θ_23,
 delta_CP)` admit an explicit retained-atlas-native closed-form map
@@ -252,7 +253,7 @@ the fsolve convergence). Uniqueness within the axiom-native perturbative
 regime (source Frobenius norm less than baseline Frobenius norm) is
 verified by 60 independent random-start Nelder-Mead descents at
 `chi^2 < 10^-12`. See
-[SELECTOR_PHYSICIST_J_PERTURBATIVE_UNIQUENESS_NOTE_2026-04-17.md](./SELECTOR_PHYSICIST_J_PERTURBATIVE_UNIQUENESS_NOTE_2026-04-17.md)
+[DM_NEUTRINO_SOURCE_SURFACE_PERTURBATIVE_UNIQUENESS_THEOREM_NOTE_2026-04-17.md](./DM_NEUTRINO_SOURCE_SURFACE_PERTURBATIVE_UNIQUENESS_THEOREM_NOTE_2026-04-17.md)
 for the formal perturbative-uniqueness theorem that establishes this as
 retained-grade. Non-perturbative chamber basins exist (e.g. at
 `(m,delta,q_+) ~ (28, 21, 5)` on the same permutation, and at
@@ -431,7 +432,7 @@ axis basis on `H_hw=1` (retained theorem);
 (iv) the direct numerical diagonalization and the unique chamber solution
 recorded here (runner-verified to machine precision, 60-seed multi-start).
 
-No post-axiom selector law is introduced. The selector selector *principle*
+No post-axiom selector law is introduced. The selector *principle*
 (P2 lane) is not needed, because the observational PMNS data, fed
 through the retained `f(H)` map, supplies the remaining 3-real datum
 `(m_*, delta_*, q_+*)` directly. This is the P3 lane realized.
@@ -460,7 +461,7 @@ This note is the **the selector closure theorem** on the publication surface:
 - the selector gate on the DM-neutrino source-oriented sheet: **CLOSED**
  at `(m_*, delta_*, q_+*)`.
 - PMNS retained: **YES** on the chamber via `f(H)`.
-- DM flagship cascade can now proceed downstream of selector using the pinned
+- DM flagship cascade can now proceed downstream of the selector gate using the pinned
  chamber point instead of the previously ambiguous prior candidates.
 - The paragraph in
  [DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md](./DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md)

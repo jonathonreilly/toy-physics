@@ -10,9 +10,10 @@
 This note records the outcome of a **direct microscopic** attempt to close
 the right-sensitive 2-real selector law on the live DM-neutrino source-
 oriented sheet: the `(delta, q_+)` pair in the `Z_3` doublet block. The
-attempt deliberately bypasses any invented variational functional (that is
-Paths A and B). It seeks a sole-axiom closure by a holonomy / transport /
-consistency condition using only already-retained atlas objects.
+attempt deliberately bypasses any invented variational functional (the
+info-geometric and cubic-variational routes). It seeks a sole-axiom
+closure by a holonomy / transport / consistency condition using only
+already-retained atlas objects.
 
 The outcome is **not** a closure. It is:
 

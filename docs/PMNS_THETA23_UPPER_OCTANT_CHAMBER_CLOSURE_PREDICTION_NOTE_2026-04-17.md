@@ -97,7 +97,7 @@ retained chamber constraint.
 
 ## The threshold as a structural feature
 
-The the PMNS-closure map `Φ : (m, δ, q_+) → (s_12^2, s_13^2, s_23^2)` is a
+The PMNS-closure map `Φ : (m, δ, q_+) → (s_12^2, s_13^2, s_23^2)` is a
 smooth map from the (open) 3-manifold `R × {(δ, q_+) : q_+ + δ > sqrt(8/3)}`
 to an open subset of the unit cube. Its inverse image over a fixed
 observational triple `(o_12, o_13, o_23)` is generically a discrete set of
@@ -308,7 +308,7 @@ tested by the **Hyper-K + DUNE + JUNO combined fit** by the early 2030s.
 Short-form one-paragraph statement suitable for inclusion in
 `DM_FLAGSHIP_CLOSURE_REVIEW_NOTE_2026-04-17.md` or the ARXIV_DRAFT:
 
-> **θ_23 upper-octant retained prediction the θ_23 upper-octant prediction.** The the PMNS-closure theorem
+> **θ_23 upper-octant retained prediction.** The PMNS-closure theorem
 > PMNS-as-f(H) closure has a structural threshold: at PDG 2024 central
 > `(s_12^2, s_13^2) = (0.307, 0.0218)`, the selector chamber closure admits a
 > solution only for `s_23^2 ≥ 0.5410`; across the NuFit 5.3 NO 3σ
@@ -316,7 +316,7 @@ Short-form one-paragraph statement suitable for inclusion in
 > 0.5476]` — **entirely in the upper octant**. The threshold surface is a
 > smooth function of `(s_12^2, s_13^2)` and saturates the chamber boundary
 > `q_+ + δ = sqrt(8/3)`, the same 1-parameter ridge that contains the
-> Schur-Q variational candidate `(sqrt(6)/3, sqrt(6)/3)`. The the selector closure
+> Schur-Q variational candidate `(sqrt(6)/3, sqrt(6)/3)`. The selector closure
 > therefore **predicts θ_23 in the upper octant**; resolution of the
 > θ_23 octant at JUNO / Hyper-Kamiokande / DUNE over the next several
 > years provides a direct test. A `>3σ` lower-octant determination would

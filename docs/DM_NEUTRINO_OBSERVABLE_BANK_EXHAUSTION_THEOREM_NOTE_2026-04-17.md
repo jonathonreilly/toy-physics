@@ -216,7 +216,7 @@ No other lane closes selector on the current retained atlas.
  `{det(H), Tr(H^2), ||K_doublet||_F^2}` are chamber-varying but lack
  atlas-retained observational targets. Explicit CASE 3 new-gap.
 
-4. **Three explicit promotion lanes (P1, P2, P3).** The the selector gate open object
+4. **Three explicit promotion lanes (P1, P2, P3).** The selector gate open object
  is now stratified. Any future selector attempt must choose one.
 
 ## Runner-verified content
