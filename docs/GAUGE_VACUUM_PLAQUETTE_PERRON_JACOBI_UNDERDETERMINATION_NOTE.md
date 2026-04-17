@@ -2,8 +2,9 @@
 
 **Date:** 2026-04-17
 **Status:** exact obstruction theorem inside the now-explicit factorized
-source-sector transfer class; even after the exact local Wilson marked-link
-factor is removed, explicit `beta = 6` Perron / Jacobi data are still not forced
+source-sector transfer class; after the normalized mixed-kernel part is fixed
+to the exact local Wilson marked-link factor, explicit `beta = 6` Perron /
+Jacobi data are still not forced
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_perron_jacobi_underdetermination.py`
 
 ## Question
@@ -30,14 +31,15 @@ or Jacobi coefficients.
 
 The new local/environment factorization theorem sharpens this one step further:
 
-`D_6 = D_6^loc E_6`,
+- the normalized mixed-kernel part is already fixed exactly to the local Wilson
+  marked-link factor `D_6^loc`,
+- so the still-open freedom sits only in residual source-sector environment
+  data beyond that exact local factor.
 
-with the exact local Wilson marked-link factor `D_6^loc` explicit.
-
-Even after that exact local factor is stripped off, distinct positive
-conjugation-symmetric residual environment sequences `E_6` can still induce
-different Perron moments and therefore different Jacobi data for the same
-explicit source operator `J`.
+Even after the mixed kernel is fixed in that exact way, distinct admissible
+positive conjugation-symmetric residual source-sector environment operators can
+still induce different Perron moments and therefore different Jacobi data for
+the same explicit source operator `J`.
 
 So the current exact stack still does **not** force the explicit framework-point
 Jacobi coefficients.
@@ -68,16 +70,20 @@ with:
 - `D_6 > 0`,
 - `S D_6 = D_6 S`.
 
-From the new local/environment factorization theorem already on `main`,
+From the new local/environment factorization theorem already on `main`, the
+normalized mixed-kernel part is already explicit:
 
-`D_6 = D_6^loc E_6`,
+`D_6^loc chi_(p,q) = a_(p,q)(6)^4 chi_(p,q)`.
+
+So the current open class is more honestly written as
+
+`T = M D_6^loc R M`,
 
 with:
 
-- `D_6^loc chi_(p,q) = a_(p,q)(6)^4 chi_(p,q)` exact and explicit,
-- `E_6` diagonal in the character basis,
-- `E_6 > 0`,
-- `S E_6 = E_6 S`.
+- `R` diagonal in the character basis,
+- `R > 0`,
+- `S R = R S`.
 
 Every such `T` satisfies the same structural boundary now closed on `main`:
 
@@ -85,19 +91,19 @@ Every such `T` satisfies the same structural boundary now closed on `main`:
 - one simple strictly positive Perron state,
 - Perron-state symmetry reduction under `S`.
 
-## Theorem 1: the current exact factorized class does not determine a unique residual environment sequence
+## Theorem 1: the current exact factorized class does not determine a unique residual source-sector environment operator
 
-Choose two distinct positive conjugation-symmetric residual environment
-sequences
+Choose two distinct positive conjugation-symmetric residual source-sector
+environment operators
 
-`E_A != E_B`
+`R_A != R_B`
 
 on the same explicit source sector.
 
 Then
 
-`T_A = M D_6^loc E_A M`,
-`T_B = M D_6^loc E_B M`
+`T_A = M D_6^loc R_A M`,
+`T_B = M D_6^loc R_B M`
 
 are both positivity-improving self-adjoint transfer operators with unique
 strictly positive Perron states `psi_A`, `psi_B`.
@@ -105,7 +111,7 @@ strictly positive Perron states `psi_A`, `psi_B`.
 Both lie inside the current exact factorized source-sector boundary already
 closed on `main`.
 
-## Theorem 2: distinct admissible residual environment sequences can induce distinct Perron moments for the same source operator
+## Theorem 2: distinct admissible residual source-sector environment operators can induce distinct Perron moments for the same source operator
 
 For the same explicit plaquette source operator `J`, define the Perron moments
 
@@ -115,8 +121,8 @@ For the same explicit plaquette source operator `J`, define the Perron moments
 Because `psi_A` and `psi_B` need not coincide, these moment sequences need not
 coincide either.
 
-The runner exhibits two explicit admissible positive residual environment
-sequences with
+The runner exhibits two explicit admissible positive residual source-sector
+environment operators with
 
 `m_1^(A) != m_1^(B)`
 
@@ -142,13 +148,13 @@ Therefore:
 
 - exact proof that explicit source-operator realization plus Perron reduction
   still do **not** force a unique framework-point Perron measure even after the
-  exact local Wilson marked-link factor is removed
+  exact local Wilson marked-link factor is fixed
 - exact proof that symmetry-reduced Jacobi coefficients are still open on the
   current stack
 - exact clarification of what new theorem object is actually needed next:
-  the explicit residual environment-response sequence `E_6`, or an equivalent
-  exact Perron eigenvector construction after the local Wilson factor is
-  stripped off
+  the explicit residual source-sector environment operator beyond the normalized
+  mixed-kernel local factor, or an equivalent exact Perron eigenvector
+  construction once that local factor is fixed
 
 ## What this does not close
 

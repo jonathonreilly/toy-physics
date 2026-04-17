@@ -2,10 +2,10 @@
 """
 Current plaquette operator stack does not yet force unique Perron/Jacobi data.
 
-This is the sharpened obstruction theorem after local/environment factorization:
-the exact local Wilson marked-link factor is explicit, but the residual
-environment sequence is still not fixed, so the beta=6 Perron moments and
-Jacobi coefficients remain open.
+This is the sharpened obstruction theorem after mixed-kernel locality:
+the normalized mixed-kernel local Wilson marked-link factor is explicit, but
+residual source-sector environment data are still not fixed, so the beta=6
+Perron moments and Jacobi coefficients remain open.
 """
 
 from __future__ import annotations
@@ -147,10 +147,10 @@ def main() -> int:
         dtype=float,
     )
     d_local = np.diag(local**4)
-    e_a = np.diag([np.exp(-0.34 * (p + q) - 0.04 * ((p - q) ** 2)) for p, q in weights])
-    e_b = np.diag([np.exp(-0.25 * (p + q) - 0.11 * ((p - q) ** 2)) for p, q in weights])
-    d_a = d_local @ e_a
-    d_b = d_local @ e_b
+    r_a = np.diag([np.exp(-0.34 * (p + q) - 0.04 * ((p - q) ** 2)) for p, q in weights])
+    r_b = np.diag([np.exp(-0.25 * (p + q) - 0.11 * ((p - q) ** 2)) for p, q in weights])
+    d_a = d_local @ r_a
+    d_b = d_local @ r_b
     t_a = multiplier @ d_a @ multiplier
     t_b = multiplier @ d_b @ multiplier
 
@@ -167,8 +167,8 @@ def main() -> int:
     diff_alpha0 = abs(al_a[0] - al_b[0])
     diff_beta1 = abs(be_a[0] - be_b[0]) if be_a and be_b else 0.0
 
-    sym_a = float(np.max(np.abs(swap @ e_a - e_a @ swap)))
-    sym_b = float(np.max(np.abs(swap @ e_b - e_b @ swap)))
+    sym_a = float(np.max(np.abs(swap @ r_a - r_a @ swap)))
+    sym_b = float(np.max(np.abs(swap @ r_b - r_b @ swap)))
     local_sym = float(np.max(np.abs(swap @ d_local - d_local @ swap)))
     inv_a = float(np.linalg.norm(swap @ psi_a - psi_a))
     inv_b = float(np.linalg.norm(swap @ psi_b - psi_b))
@@ -181,12 +181,12 @@ def main() -> int:
     print("GAUGE-VACUUM PLAQUETTE PERRON/JACOBI UNDERDETERMINATION")
     print("=" * 78)
     print()
-    print("Two admissible residual environment sequences on top of the exact local Wilson marked-link factor")
+    print("Two admissible residual source-sector environment operators on top of the exact mixed-kernel local Wilson factor")
     print(f"  box size                              = {(NMAX + 1)} x {(NMAX + 1)} = {len(weights)} states")
     print(f"  tau                                   = {TAU:.1f}")
     print(f"  local-factor symmetry error           = {local_sym:.3e}")
-    print(f"  E_A symmetry error                    = {sym_a:.3e}")
-    print(f"  E_B symmetry error                    = {sym_b:.3e}")
+    print(f"  R_A symmetry error                    = {sym_a:.3e}")
+    print(f"  R_B symmetry error                    = {sym_b:.3e}")
     print(f"  T_A min entry / Perron floor          = {min_entry_a:.6e} / {floor_a:.6e}")
     print(f"  T_B min entry / Perron floor          = {min_entry_b:.6e} / {floor_b:.6e}")
     print()
@@ -209,7 +209,7 @@ def main() -> int:
         detail=f"min local eigenvalue={float(np.min(local)):.3e}",
     )
     check(
-        "the sharpened class still admits multiple positive conjugation-symmetric residual environment sequences",
+        "the sharpened class still admits multiple positive conjugation-symmetric residual source-sector environment operators",
         sym_a < 1.0e-12 and sym_b < 1.0e-12 and min_entry_a > 0.0 and min_entry_b > 0.0,
         detail=f"min entries=({min_entry_a:.3e}, {min_entry_b:.3e})",
     )
@@ -219,7 +219,7 @@ def main() -> int:
         detail=f"Perron floors=({floor_a:.3e}, {floor_b:.3e})",
     )
     check(
-        "distinct admissible residual environment sequences can induce different Perron moments for the same explicit source operator",
+        "distinct admissible residual source-sector environment operators can induce different Perron moments for the same explicit source operator",
         diff_m1 > 1.0e-4 and diff_m2 > 1.0e-4,
         detail=f"moment gaps=(m1:{diff_m1:.3e}, m2:{diff_m2:.3e})",
     )

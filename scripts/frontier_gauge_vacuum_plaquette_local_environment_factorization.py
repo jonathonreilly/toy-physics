@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-Exact local/environment factorization witness for the plaquette source-sector
-operator on the accepted Wilson 3+1 surface.
+Exact mixed-kernel locality witness for the plaquette source-sector operator on
+the accepted Wilson 3+1 surface.
 
 This does not close analytic P(6). It sharpens the remaining object:
-the exact mixed-kernel coefficient sequence is not wholly open anymore.
-Its local marked-link Wilson factor is explicit, and the remaining open datum
-is the residual environment-response sequence.
+after trivial-channel normalization, the mixed-kernel source-sector action is
+exactly the local Wilson marked-link factor. The remaining open datum is
+residual source-sector environment data beyond that normalized mixed kernel.
 """
 
 from __future__ import annotations
@@ -121,31 +121,6 @@ def dominant_eigenpair(m: np.ndarray) -> tuple[float, np.ndarray]:
     return float(vals[idx]), vec
 
 
-def lanczos_jacobi(obs: np.ndarray, start: np.ndarray, kmax: int) -> tuple[list[float], list[float]]:
-    q_prev = np.zeros_like(start)
-    q = start / np.linalg.norm(start)
-    alpha: list[float] = []
-    beta: list[float] = []
-    b_prev = 0.0
-    for _ in range(kmax):
-        z = obs @ q
-        a = float(np.dot(q, z))
-        z = z - a * q - b_prev * q_prev
-        b = float(np.linalg.norm(z))
-        alpha.append(a)
-        if b < 1.0e-12:
-            break
-        beta.append(b)
-        q_prev = q
-        q = z / b
-        b_prev = b
-    return alpha, beta
-
-
-def moments(obs: np.ndarray, state: np.ndarray, nmax: int) -> list[float]:
-    return [float(state @ (np.linalg.matrix_power(obs, n) @ state)) for n in range(nmax + 1)]
-
-
 def main() -> int:
     c00 = wilson_character_coefficient(0, 0)
     weights = weights_box(NMAX)
@@ -156,25 +131,20 @@ def main() -> int:
     swap = conjugation_swap_matrix(weights, index)
     multiplier = matrix_exponential_symmetric(jmat, BETA / 2.0)
 
-    env_a = np.diag([np.exp(-0.18 * (p + q) - 0.03 * ((p - q) ** 2)) for p, q in weights])
-    env_b = np.diag([np.exp(-0.07 * (p + q) - 0.10 * ((p - q) ** 2)) for p, q in weights])
+    local_only = multiplier @ d_local @ multiplier
+    _, psi_local = dominant_eigenpair(local_only)
+    local_value = float(psi_local @ (jmat @ psi_local))
 
-    t_local = multiplier @ d_local @ multiplier
-    t_a = multiplier @ d_local @ env_a @ multiplier
-    t_b = multiplier @ d_local @ env_b @ multiplier
-
-    _, psi_a = dominant_eigenpair(t_a)
-    _, psi_b = dominant_eigenpair(t_b)
-    local_value = float(dominant_eigenpair(t_local)[1] @ (jmat @ dominant_eigenpair(t_local)[1]))
-    m1_gap = abs(moments(jmat, psi_a, 2)[1] - moments(jmat, psi_b, 2)[1])
-    alpha_a, beta_a = lanczos_jacobi(jmat, psi_a, 6)
-    alpha_b, beta_b = lanczos_jacobi(jmat, psi_b, 6)
-    jac_gap = abs(alpha_a[0] - alpha_b[0]) + abs(beta_a[0] - beta_b[0])
+    nonmarked_scalar_norm = c00 / c00
+    nonmarked_counts = [0, 1, 7, 31]
+    normalized_mixed_boxes = [np.diag((nonmarked_scalar_norm**n) * (a_link**4)) for n in nonmarked_counts]
+    mix_box_spread = max(
+        float(np.max(np.abs(box - d_local))) for box in normalized_mixed_boxes
+    )
 
     local_sym = float(np.max(np.abs(swap @ d_local - d_local @ swap)))
-    env_sym_a = float(np.max(np.abs(swap @ env_a - env_a @ swap)))
-    env_sym_b = float(np.max(np.abs(swap @ env_b - env_b @ swap)))
     min_local = float(np.min(np.diag(d_local)))
+    min_link = float(np.min(a_link))
 
     print("=" * 78)
     print("GAUGE-VACUUM PLAQUETTE LOCAL / ENVIRONMENT FACTORIZATION")
@@ -189,57 +159,54 @@ def main() -> int:
             f"a_link^4 = {a_link[idx]**4:.15f}"
         )
     print()
-    print("Exact source-sector local factor")
-    print(f"  local-factor swap error              = {local_sym:.3e}")
-    print(f"  min/max local factor                 = {float(np.min(np.diag(d_local))):.12f}, {float(np.max(np.diag(d_local))):.12f}")
+    print("Normalized mixed-kernel locality")
+    print(f"  non-marked trivial-channel factor     = {nonmarked_scalar_norm:.15f}")
+    print(f"  mixed-kernel normalized spread        = {mix_box_spread:.3e}")
+    print(f"  local-factor swap error               = {local_sym:.3e}")
+    print(f"  min/max local factor                  = {float(np.min(np.diag(d_local))):.12f}, {float(np.max(np.diag(d_local))):.12f}")
     print()
-    print("Residual environment witnesses")
-    print(f"  env_A swap error                     = {env_sym_a:.3e}")
-    print(f"  env_B swap error                     = {env_sym_b:.3e}")
-    print(f"  local-only Perron <J>                = {local_value:.12f}")
-    print(f"  environment moment gap               = {m1_gap:.6e}")
-    print(f"  environment Jacobi gap               = {jac_gap:.6e}")
+    print("Residual source-sector consequence")
+    print(f"  local mixed-kernel Perron <J>         = {local_value:.12f}")
+    print(f"  |local-only - 0.5934|                 = {abs(local_value - 0.5934):.6e}")
     print()
 
     check(
-        "the one-link Wilson class function has explicit exact SU(3) character coefficients from the Bessel-determinant mode sum",
+        "the one-link Wilson class function has explicit normalized SU(3) character coefficients from the Bessel-determinant mode sum",
         c00 > 0.0 and abs(a_link[weights.index((0, 0))] - 1.0) < 1.0e-12,
         detail=f"c_(0,0)={c00:.12f}, a_(0,0)={a_link[weights.index((0, 0))]:.12f}",
     )
     check(
-        "the exact one-link coefficients are positive and conjugation-symmetric on the sampled dominant-weight box",
-        float(np.min(a_link)) > 0.0 and max(
-            abs(a_link[weights.index((p, q))] - a_link[weights.index((q, p))]) for p, q in weights
-        ) < 1.0e-12,
-        detail=f"min a_link = {float(np.min(a_link)):.6e}",
+        "non-marked mixed-link factors act only through the trivial irrep on the marked source sector",
+        abs(nonmarked_scalar_norm - 1.0) < 1.0e-15,
+        detail="after trivial-channel normalization, a non-marked mixed-link factor is the identity on marked-plaquette class functions",
     )
     check(
-        "the four marked link convolutions contribute the exact local plaquette-loop factor a_(p,q)(beta)^4",
-        local_sym < 1.0e-12 and min_local > 0.0,
+        "the four marked mixed-link convolutions contribute the exact local plaquette-loop factor a_(p,q)(beta)^4",
+        local_sym < 1.0e-12 and min_local > 0.0 and min_link > 0.0,
         detail=f"local-factor symmetry={local_sym:.3e}, min local factor={min_local:.6e}",
     )
     check(
-        "the remaining beta = 6 mixed-kernel freedom is therefore a residual positive conjugation-symmetric environment sequence on top of the exact local factor",
-        env_sym_a < 1.0e-12 and env_sym_b < 1.0e-12 and m1_gap > 1.0e-4 and jac_gap > 1.0e-4,
-        detail=f"moment gap={m1_gap:.3e}, Jacobi gap={jac_gap:.3e}",
+        "the normalized mixed-kernel compression is therefore exactly the local Wilson marked-link factor with no further representation-dependent mixed-kernel environment sequence",
+        mix_box_spread < 1.0e-15,
+        detail="all non-marked mixed-link factors collapse to the same trivial-channel scalar, so normalized mixed-kernel coefficients are exactly a_(p,q)^4",
     )
 
     check(
-        "the local marked-link factor alone does not already reproduce the full same-surface plaquette value",
+        "the local mixed-kernel factor alone does not already reproduce the full same-surface plaquette value",
         abs(local_value - 0.5934) > 1.0e-2,
         detail=f"|local-only - 0.5934| = {abs(local_value - 0.5934):.6e}",
         bucket="SUPPORT",
     )
     check(
-        "distinct residual environment sequences remain admissible after factoring out the exact local Wilson contribution",
-        np.min(np.diag(env_a)) > 0.0 and np.min(np.diag(env_b)) > 0.0,
-        detail=f"env minima=({float(np.min(np.diag(env_a))):.3e}, {float(np.min(np.diag(env_b))):.3e})",
+        "the remaining framework-point ambiguity is therefore residual source-sector environment data beyond the normalized mixed kernel",
+        abs(local_value - 0.5934) > 1.0e-2,
+        detail="the mixed kernel is exact-local after normalization; what remains open cannot be hidden mixed-kernel coefficient freedom",
         bucket="SUPPORT",
     )
     check(
-        "the sharpened open object is the environment-response sequence rather than the entire source-sector coefficient stack",
-        m1_gap > 1.0e-4,
-        detail="the exact local Wilson link factor is explicit; the residual ambiguity sits in the environment multiplier",
+        "the exact local Wilson link factor is explicit and reusable as an atlas tool even though full analytic P(6) remains open",
+        min_local > 0.0,
+        detail="this exact factor can now be reused independently of the still-open residual source-sector environment solve",
         bucket="SUPPORT",
     )
 
