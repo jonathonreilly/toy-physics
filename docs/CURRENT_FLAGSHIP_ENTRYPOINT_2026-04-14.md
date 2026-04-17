@@ -50,7 +50,8 @@ Fast reviewer path after this page:
   one chosen canonical textbook target
 - gauge / matter:
   exact native `SU(2)`, graph-first structural `SU(3)`, anomaly-forced `3+1`,
-  retained three-generation structure, exact `I_3 = 0`, exact CPT, emergent
+  retained three-generation structure with atlas-wired exact taste-cube /
+  residual-symmetry flavor support, exact `I_3 = 0`, exact CPT, retained
   Bell/CHSH support on explicit two-species lattice systems with KS taste
   measurements, emergent Lorentz invariance, retained full strong-CP closure
   on the retained action surface, and exact `T = 0` confinement with bounded

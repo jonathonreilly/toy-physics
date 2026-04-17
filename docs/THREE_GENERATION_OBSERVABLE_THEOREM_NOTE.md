@@ -49,6 +49,22 @@ The package now has three complementary three-sector protection layers:
    proves that the retained `hw=1` triplet already carries an irreducible exact
    generation algebra, so no proper exact quotient survives even before flavor.
 
+The atlas now also carries a matched full-cube / residual-symmetry support
+packet for this lane:
+
+- [SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md](./SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md)
+  fixes the exact BZ-corner / taste-cube bridge
+- [S3_TASTE_CUBE_DECOMPOSITION_NOTE.md](./S3_TASTE_CUBE_DECOMPOSITION_NOTE.md)
+  fixes the exact full-cube `S_3` carrier content `C^8 ~= 4 A_1 + 2 E`
+- [S3_MASS_MATRIX_NO_GO_NOTE.md](./S3_MASS_MATRIX_NO_GO_NOTE.md)
+  fixes the exact unbroken-`S_3` mass-class obstruction on `hw=1`
+- [Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md](./Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md)
+  fixes the exact residual-`Z_2` Hermitian normal form on the same carrier
+
+Those four notes are support tools for the retained generation / flavor lane;
+they do not widen the safe retained claim beyond the current generation
+surface.
+
 ## Input surface
 
 This theorem uses only current retained package ingredients:

@@ -38,7 +38,8 @@ context, not part of the live reviewer path.
 - exact discrete backbone:
   weak-field gravity, restricted strong-field closure, full discrete `3+1`
   GR, chosen-target QG/continuum closure, graph-first `SU(3)`, anomaly-forced
-  `3+1`, retained three-generation structure, exact `I_3 = 0`, exact CPT,
+  `3+1`, retained three-generation structure with atlas-wired exact
+  taste-cube / residual-symmetry flavor support, exact `I_3 = 0`, exact CPT,
   retained Bell/CHSH support on explicit two-species lattice systems with KS
   taste measurements, emergent Lorentz invariance, retained full strong-CP
   closure on the retained action surface, and exact `T = 0` confinement with

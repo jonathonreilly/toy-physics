@@ -87,9 +87,14 @@ Review this as a modular component stack:
    [KR_A1_VANISHING_SUPPORT_NOTE.md](../../KR_A1_VANISHING_SUPPORT_NOTE.md)
 8. three-generation observable closure:
    [THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md](../../THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md)
-9. physical-lattice necessity boundary:
+9. three-generation / flavor representation-theory support packet:
+   [SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md](../../SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md),
+   [S3_TASTE_CUBE_DECOMPOSITION_NOTE.md](../../S3_TASTE_CUBE_DECOMPOSITION_NOTE.md),
+   [S3_MASS_MATRIX_NO_GO_NOTE.md](../../S3_MASS_MATRIX_NO_GO_NOTE.md),
+   [Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md](../../Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md)
+10. physical-lattice necessity boundary:
    [PHYSICAL_LATTICE_NECESSITY_NOTE.md](../../PHYSICAL_LATTICE_NECESSITY_NOTE.md)
-10. three-generation / chirality boundary:
+11. three-generation / chirality boundary:
    [THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md](../../THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md)
 
 Current status from that stack:
@@ -134,6 +139,12 @@ Current status from that stack:
   physical-lattice reading is the unique surviving interpretation, and on the
   accepted one-axiom Hilbert/locality/information surface substrate physicality
   is derived rather than left as a separate live premise
+- exact three-generation / flavor support packet now sits in the atlas on
+  `main`: full BZ-corner site-phase / cube-shift bridge, exact
+  `C^8 ~= 4·A_1 + 2·E` axis-permutation decomposition, exact `S_3`
+  `hw=1` mass-matrix no-go, and exact residual `Z_2` Hermitian normal form;
+  these sharpen the retained matter/flavor support layer without inflating the
+  flagship matter claim
 - bounded Higgs / vacuum package:
   canonical `m_H = 125.1 GeV` (framework-side 3-loop route),
   with retained `119.8 GeV` (2-loop support route),

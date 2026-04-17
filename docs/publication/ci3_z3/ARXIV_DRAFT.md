@@ -350,6 +350,15 @@ on the accepted one-axiom Hilbert/locality/information surface, where the
 graph/locality object is already part of the physical state-space structure
 and no same-theory regulator reinterpretation survives.
 
+The atlas now also fixes the exact full-cube support packet behind this matter
+lane: on the BZ-corner subspace the lattice site-phase operators are exactly
+the cube shifts, the full taste cube decomposes under axis permutations as
+`4 A_1 + 2 E`, the exact unbroken `S_3` class on the retained `hw=1` carrier
+allows at most two spectral values, and the residual axis-fixing `Z_2` class
+yields the full five-real-parameter Hermitian normal form. These are support
+theorems for the retained matter / flavor lane, not additional flagship
+flavor-numerics claims.
+
 This is still not a claim that a conventional rooted staggered regulator has
 evaded Nielsen-Ninomiya [8]. On the framework surface, rooting is undefined in
 Hamiltonian $Cl(3)$ on $Z^3$, the retained `hw=1` observable algebra admits no

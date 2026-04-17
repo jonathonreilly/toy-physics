@@ -95,6 +95,18 @@ Current package status:
 - exact CKM carrier-side support theorem:
   `K_R(q) = 0` for every pure `A1` background on the seven-site support block
   via [KR_A1_VANISHING_SUPPORT_NOTE.md](../../KR_A1_VANISHING_SUPPORT_NOTE.md)
+- retained three-generation matter structure now also has an atlas-wired exact
+  flavor support packet on `main`:
+  the full BZ-corner site-phase / cube-shift bridge
+  [SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md](../../SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md),
+  the exact taste-cube `S_3` decomposition
+  [S3_TASTE_CUBE_DECOMPOSITION_NOTE.md](../../S3_TASTE_CUBE_DECOMPOSITION_NOTE.md),
+  the exact `S_3` `hw=1` mass-matrix no-go
+  [S3_MASS_MATRIX_NO_GO_NOTE.md](../../S3_MASS_MATRIX_NO_GO_NOTE.md),
+  and the exact residual `Z_2` Hermitian normal form
+  [Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md](../../Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md);
+  these are support theorems for the retained matter lane and future flavor
+  work, not additional flagship flavor-numerics claims
 - bounded Higgs / vacuum package:
   canonical `m_H = 125.1 GeV` (framework-side 3-loop route),
   with retained `119.8 GeV` (2-loop support route),
