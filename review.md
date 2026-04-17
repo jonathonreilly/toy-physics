@@ -2,219 +2,231 @@
 
 ## Current Call
 
-Not ready to land as a retained axiom-depth closure of why the framework uses
-`Cl(3)`.
+This branch is no longer being reviewed as a failed retained-closure attempt in
+the same way as the earlier version. The claim boundary is now much more honest.
 
-The branch contains a potentially useful minimality/compatibility argument, but
-it still does not clear the retained bar for G16. The load-bearing issue is
-that the theorem is trying to derive `d_s = 3` while still importing
-`Cl(3)`/`Z^3`-specific retained structure.
+Current disposition:
+
+- **not retained G16 closure**
+- **potentially landable as a conditional/support note**
+- **not yet ready to land as written**, because the upgraded four-generation
+  no-go is still stronger than what the branch actually proves
+
+So the best current outcome is **clean support-note acceptance**, not retained
+closure.
+
+## What Improved
+
+Relative to the earlier version, the branch fixed several real problems:
+
+1. it no longer claims to absorb `d_s = 3` into the axiom
+2. it explicitly labels itself as conditional/support rather than
+   first-principles closure
+3. the runner now really does build the explicit
+   `Cl(3; C) = M_2(C) ⊕ M_2(C)` / `Cl^+(3) ≅ M_2(C)` matrix picture
+4. the `so(n)` / `spin(n)` terminology is fixed
+
+Those are material improvements. The remaining issue is concentrated in the
+newly upgraded four-generation theorem.
 
 ## Replay Status
 
 - `python3 -m py_compile scripts/frontier_cl3_minimality.py` passes
 - `python3 scripts/frontier_cl3_minimality.py` ends with
-  `THEOREM_PASS=13 SUPPORT_PASS=33 FAIL=0`
+  `THEOREM_PASS=27 SUPPORT_PASS=32 FAIL=0`
 
-So the problem is not arithmetic failure. The problem is theorem scope,
-dependency hygiene, and overclaim.
+The branch replays cleanly. The blocker is theorem scope, not arithmetic.
 
-## What Must Be True For Retained Pass
+## Remaining Blockers
 
-To take this as retained, the resubmission has to come back with all four of
-these true at once:
-
-1. the theorem no longer presupposes `Cl(3)`/`Z^3` in the premises while trying
-   to derive `d_s = 3`
-2. the runner actually verifies the Clifford-structure claims the note
-   advertises
-3. the four-generation statement is proved at the same scope it is claimed
-4. the algebra language is mathematically correct and consistent throughout
-
-Until all four are true, this is not a retained closure of G16.
-
-## Blockers And Exact Fix Requirements
-
-### 1. Circular axiom-depth closure
+### 1. The new four-generation no-go is still stronger than the proof
 
 **Problem**
 
-The note says it closes the remaining half of why the framework uses `Cl(3)`,
-but:
+The branch now promotes the four-generation result to a genuine theorem on the
+cubic odd-`n` comparison family. But the load-bearing unremovability step still
+depends on extrapolating the retained `n = 3` no-proper-quotient theorem to
+arbitrary odd `n`.
 
-- its only axiom is `A1. Cl(3) on Z^3 is the physical theory`
-- Step 2 imports the retained `8 = 1 + 1 + 3 + 3` orbit algebra from the
-  accepted cubic `Z^3` generation surface
-- the note's own weakest-link section already admits this is circular on a
-  hypothetical non-`Z^3` surface
+The cited authority for that step is
+`docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`, which is explicitly a
+theorem on the retained `H_hw=1 = span{X1, X2, X3}` surface of the current
+physical `Z^3` package. It is not a family-wide theorem for all odd `n`.
 
-That means the current theorem is not an axiom-depth derivation of `d_s = 3`.
-It is a conditional compatibility theorem on an already-accepted
-`Cl(3)`/`Z^3` surface.
+So the current branch proves:
+
+- counting facts on the cubic `Cl(n)/Z^n` family
+- parity exclusion of `n = 4`
+- residual-species counting for `n = 5, 7, 9, ...`
+
+But it does **not** yet prove the family-wide statement that those residual
+states are unremovable by a corresponding no-proper-quotient theorem for the
+general odd-`n` `hw=1` sector.
+
+**Why it matters**
+
+If the note says:
+
+> four generations are structurally excluded on this comparison family
+
+then the branch has to prove more than counting. It must prove that the
+residual `hw=1` states cannot be collapsed, quotiented, or reinterpreted away
+while preserving the same claimed semantics on that full family.
+
+Right now that is argued by analogy to the retained `n = 3` theorem, not
+derived at family scope.
 
 **What would clear this**
 
-For retained status, the theorem must be rewritten so the premises do not
-already contain the conclusion.
+There are two clean paths.
 
-Concrete requirements:
+#### Path A: Best immediate outcome — keep the branch and downgrade the theorem
 
-- Replace `A1. Cl(3) on Z^3 is the physical theory` with a genuinely
-  comparison-level starting surface.
-  Acceptable examples:
-  - generic `Cl(n)` candidate family on `Z^n`
-  - a weaker accepted one-axiom Hilbert/locality/information surface
-  - another retained surface that does not already hard-code `d_s = 3`
-- Remove the current Step-2 dependence on the retained cubic generation note as
-  a proof of `n = 3`.
-- Supply one of the following:
-  - a non-circular derivation of the `8`-state requirement from a retained
-    principle that is not already cubic-generation-specific
-  - an independent route to `n = 3` that does not use the `8 = 1 + 1 + 3 + 3`
-    generation surface at all
-  - a universal no-go theorem excluding all `n != 3` within the accepted
-    comparison family
-- Add a one-page dependency table that marks each premise as either:
-  - `n`-generic / comparison-level
-  - `n = 3`-specific / downstream
+This is the fastest route to a good landing.
 
-**What will not clear this**
+Required changes:
 
-- rephrasing the current argument as if compatibility implies derivation
-- keeping `A1 = Cl(3) on Z^3` and calling the result “absorbed into the axiom”
-- treating the circularity admission in the weakest-link section as sufficient
-  honesty for a retained claim
+- change the four-generation result back from **theorem** to
+  **bounded incompatibility / support theorem / no-clean-fit statement**
+- say explicitly:
+  - counting + parity rule out a clean exactly-four-generation realization on
+    the cubic odd-`n` comparison family **under the retained hw-orbit reading**
+  - the residual-state unremovability is motivated by the retained `n = 3`
+    no-proper-quotient theorem but is not yet proved family-wide
+- remove wording such as:
+  - "structurally excluded" as a theorem on the whole comparison family
+  - "comparison-level-only" for the no-proper-quotient ingredient
 
-### 2. Clifford-structure runner mismatch
+If you take this path, I would likely accept the branch as a support note after
+cleanup.
+
+#### Path B: Best scientific outcome — actually prove the family-wide no-go
+
+This is the stronger route, but it needs new science.
+
+Required theorem:
+
+- for arbitrary odd `n`, construct the `hw=1` sector
+- build the corresponding exact operator algebra on that sector
+- prove its irreducibility / no-proper-quotient property at that general `n`
+- then show that selecting 4 of the `n` states as physical generations leaves
+  residual exact sectors that cannot be quotiented away
+
+If that theorem is written and the runner certifies it, then the stronger
+four-generation exclusion can stay.
+
+### 2. The runner does not certify the family-wide unremovability step
 
 **Problem**
 
-The note advertises runner verification of:
+Part F currently verifies:
 
-- `Cl(3; C) = M_2(C) ⊕ M_2(C)` by explicit construction + isomorphism
-- `Cl^+(3) ≅ Cl(2; C) = M_2(C)` by explicit basis
+- `|hw=1| = n`
+- no odd `n` gives exactly 4
+- `n = 4` is even
+- residual counts for `n = 5, 7, 9`
 
-But the current script explicitly says it is only working in a single Pauli
-`M_2(C)` copy for the bivector/SU(2) check. It does not build:
+It does **not** verify:
 
-- the direct-sum algebra
-- chirality projectors / pseudoscalar split
-- an explicit even-subalgebra basis and closure check
+- the general odd-`n` `hw=1` operator algebra
+- the family-wide irreducibility / no-proper-quotient statement
+- the impossibility of removing residual species while preserving the claimed
+  exact semantics
 
-So the runner is materially weaker than the note says.
+So even if the note keeps the strong theorem wording, the script is not
+certifying that load-bearing step yet.
 
 **What would clear this**
 
-Because the retained target depends on these claims, the right fix is to
-strengthen the runner rather than weaken the note.
+Again there are two aligned paths:
 
-Required additions:
+- if you downgrade the note, then the current Part F is probably enough as a
+  bounded-counting support computation
+- if you keep the strong theorem, then the runner must be extended to compute
+  and certify the general odd-`n` algebraic statement, not just count residuals
 
-- Build an explicit block-diagonal realization of `Cl(3; C)` as
-  `M_2(C) ⊕ M_2(C)`.
-- Construct the pseudoscalar / chirality operator and verify the two-factor
-  decomposition explicitly.
-- Build an explicit basis for the even subalgebra `Cl^+(3)` and verify:
-  - closure
-  - dimension
-  - matrix-algebra identification with `M_2(C)`
-- Keep the current Pauli-copy bivector/SU(2) check, but relabel it as one piece
-  of the full verification rather than the whole thing.
-
-The note, runner docstring, and appendix have to say the same thing after this.
-
-### 3. Four-generation exclusion is stronger than the proof
+### 3. The note still contains stale pre-v3 summary text
 
 **Problem**
 
-The current branch claims exactly-four-generation matter is structurally
-forbidden. But the actual check is only:
+The current authority note still contains an older runner summary section that
+describes:
 
-- `10`, `12`, and `14` are not powers of two
-- `16 = 2^4` corresponds to even `n = 4`
+- Part F as bounded tension
+- the old `13 THEOREM + 33 SUPPORT` result
 
-That does not exclude higher-dimensional `Cl(n)` realizations with four
-generations plus additional sectors. Elsewhere the note already treats larger
-odd `n` as over-rich rather than impossible.
+while the current branch now presents:
 
-**What would clear this**
+- Part F as a four-generation exclusion theorem
+- actual replay `27 THEOREM + 32 SUPPORT`
 
-For retained status, either prove a real no-go theorem or stop claiming one.
-
-A real no-go would need:
-
-- a clearly defined theorem class:
-  - all odd `n`?
-  - all retained `Cl(n)` comparison-family embeddings?
-  - all embeddings preserving the accepted no-rooting / no-proper-quotient /
-    observable-species semantics?
-- an argument that every four-generation candidate in that class necessarily
-  carries extra exact sectors that survive as additional physical species on the
-  same accepted surface
-- a proof that those extra sectors cannot be quotiented away, reinterpreted, or
-  hidden without violating existing retained generation semantics
-
-There is a plausible route here:
-
-- use the retained no-rooting / no-proper-quotient generation stack
-- classify the minimal `2^n` carrier spaces capable of supporting four distinct
-  generations
-- show every such carrier on the accepted comparison family necessarily leaves
-  additional exact sectors that remain physically distinct on the same surface
-
-But that theorem is not currently present. Until it is, the four-generation
-line must not be called a structural prohibition.
-
-### 4. Incorrect algebra language for larger `n`
-
-**Problem**
-
-Step 1 says the extra bivectors at `n ≥ 4` form an "`su(n)`-like algebra" of
-dimension `n(n-1)/2`.
-
-That is wrong. The bivector sector generates `so(n)` / `spin(n)`, whose
-dimension is `n(n-1)/2`. `su(n)` has dimension `n^2 - 1`.
+That weakens the review surface because the note is simultaneously describing
+two different versions of the result.
 
 **What would clear this**
 
-This is a straightforward correction:
+Update or remove the stale section so the authority note has one coherent story
+only.
 
-- replace `su(n)`-like with `so(n)` / `spin(n)`
-- or use more conservative wording such as “a larger bivector sector”
+## Best Outcome From Here
 
-This is not the main blocker, but it does need to be fixed before resubmission.
+### Best immediate outcome
 
-## Required Resubmission Shape
+Land this as a **conditional minimality / consistency support note** with the
+four-generation result downgraded to a bounded incompatibility statement.
 
-If the target is still retained G16 closure, the resubmission should come back
-with:
+That would give you:
 
-1. a rewritten authority note whose premises are genuinely comparison-level
-2. a real non-circular route to `n = 3`
-3. a strengthened runner that verifies the full Clifford-structure claims
-4. either:
-   - a true four-generation no-go theorem, or
-   - the four-generation language removed from the retained claim
-5. corrected `so(n)` / `spin(n)` language everywhere
+- an honest support artifact
+- a useful reviewer-facing answer to "why Cl(3) and not Cl(5)?"
+- a clean matrix-level Clifford verification
+- no overclaim about retained closure or family-wide four-generation no-go
 
-## Packaging Rule
+### Best long-term outcome
 
-Do not spend time on manuscript/package/front-door wiring until the science
-stack above is fixed.
+If you want a genuinely stronger result later:
 
-If the next resubmission does not clear item 1, the honest classification is
-still support/conditional minimality rather than retained closure.
+1. prove a family-wide odd-`n` no-proper-quotient theorem on `hw=1`
+2. wire that into Part F
+3. then promote the four-generation statement from bounded incompatibility to
+   genuine comparison-family no-go
+
+That would still **not** make this retained G16 closure, because the
+`2^n = 8` step remains conditional on cubic retained structure. It would just
+make the support note scientifically sharper.
+
+### What would be required for true retained G16 closure
+
+This is still a separate, higher bar:
+
+- a non-circular derivation of `n = 3`
+- no dependence on the retained cubic `8 = 1 + 1 + 3 + 3` surface as the
+  load-bearing selector
+
+That is a different science program. This branch is not close to that target,
+and it no longer claims to be.
+
+## Recommended Next Edit
+
+The highest-signal fix is:
+
+1. keep the current honest support-note framing
+2. downgrade the new four-generation result from theorem to bounded
+   incompatibility unless the family-wide no-proper-quotient theorem is added
+3. remove the stale runner-summary section
+
+If that is done cleanly, I would expect to pass this as a support/consistency
+note.
 
 ## Bottom Line
 
-The branch has a usable idea, but not yet a retained theorem.
+This is a much better branch than the original CL3 submission.
 
-The retained route is:
+My current call:
 
-- remove the circular `Cl(3)`/`Z^3` premise
-- supply a genuinely comparison-level derivation of `n = 3`
-- make the runner verify the stronger Clifford claims it advertises
-- either prove the four-generation no-go at full scope or stop claiming it
-
-Until then, this should not be treated as “G16 closed” or “`d_s = 3` absorbed
-into the axiom.”
+- **No** as retained G16 closure
+- **Almost yes** as a support note
+- remaining work:
+  - either prove the family-wide odd-`n` no-proper-quotient theorem
+  - or stop calling the four-generation result a theorem and package it as
+    bounded incompatibility
