@@ -4,205 +4,127 @@
 
 Current verdict: **do not merge as-is**.
 
-This branch has real science in it, but the flagship-closure claim is still too
-strong for the current proof surface, and the branch is mixed with unrelated
-plaquette edits. A clean resubmission is possible, but it needs to satisfy the
-closure conditions below.
+The branch is cleaner than the earlier G1 submissions. The stale theorem-note
+cross-reference is fixed, and the unrelated plaquette contamination appears to
+be gone from the current delta. But the load-bearing flagship-closure blockers
+are still open on the current tip `87ec25fb`.
 
-## Update After Re-Review (`7f6abe4a`)
+## Current Re-Review (`87ec25fb`)
 
-I re-reviewed the branch after the follow-up theorem-note polish commit
-`7f6abe4a`.
+Result: **still no material review change on the claim-bearing science**.
 
-Result: **no material review change**.
+The current branch still overstates what has been proved in three places:
 
-The new commit improves phrasing, but it does not fix the substantive blockers:
+1. the omnibus closure note still headlines the DM flagship gate as
+   `CLOSED` and presents a unique perturbative-regime chamber solution, even
+   though the retained route still depends on the conditional `q_H = 0`
+   branch, the observational hierarchy pairing `sigma_hier = (2, 1, 0)`, and
+   the weaker scale-cutoff selector rather than a theorem-native microscopic
+   basin discriminator;
+2. the Schur baseline note still proves only
+   `commuting baseline => scalar baseline`, then upgrades that conditional
+   statement into the stronger physical claim that the live zero-source
+   baseline itself must be scalar;
+3. the perturbative-uniqueness note still explicitly admits that the strong
+   retained convergence condition `rho(H_base^{-1} J) < 1` fails at all three
+   in-chamber basins, and then selects Basin 1 by the weaker norm statement
+   `||J|| <= ||H_base||`.
 
-- the Schur lane still imports the commuting-baseline premise instead of
-  deriving it;
-- the PMNS uniqueness lane still chooses Basin 1 by the weaker norm cutoff
-  `||J|| <= ||H_base||` after the note itself admits that true log-det
-  convergence fails at every basin;
-- the flagship headline still understates the conditional `q_H = 0` and
-  observational `sigma_hier = (2,1,0)` inputs;
-- the branch is still mixed with unrelated plaquette authority rewrites.
+So the current tip is improved presentation, not a closed flagship selector.
 
-One mechanical issue also still remains on the current tip:
+## What Is Resolved Since Earlier Reviews
 
-- the PMNS closure note still links to the old filename
-  `SELECTOR_PHYSICIST_J_PERTURBATIVE_UNIQUENESS_NOTE_2026-04-17.md`
-  instead of the live
-  `DM_NEUTRINO_SOURCE_SURFACE_PERTURBATIVE_UNIQUENESS_THEOREM_NOTE_2026-04-17.md`.
+- the old stale path to the perturbative-uniqueness note is fixed;
+- the branch now looks like a G1-focused delta rather than a mixed G1 +
+  plaquette rewrite branch.
 
-## Update After Current Check (`c01521a1`)
+Those are real cleanups. They just do not close the flagship claim.
 
-I re-checked the current remote tip `c01521a1`.
+## Live Blockers
 
-Result: **still no material review change**.
+### 1. Omnibus closure note is still too strong
 
-This is still not a new science delta. Relative to the previously reviewed
-science tip `7f6abe4a`, the new commit is note-polish only. It fixes the
-earlier stale cross-reference to the perturbative-uniqueness note, but it does
-not change the claim-bearing science. The current science-facing notes still
-carry the same unresolved blockers:
+The omnibus note currently says the flagship gate is `CLOSED` on the live
+sheet and that the observational PMNS route yields a unique perturbative-regime
+chamber solution.
 
-- the flagship closure note still headlines the gate as CLOSED even though the
-  load-bearing PMNS route remains conditional on `q_H = 0`, the observational
-  hierarchy pairing `sigma = (2,1,0)`, and the upper-octant condition;
-- the Schur-baseline lane still upgrades “any commuting baseline is scalar” to
-  “the physical zero-source baseline is scalar” without a retained theorem
-  proving that the physical baseline must commute with the full retained
-  algebra;
-- the perturbative-uniqueness lane still states uniqueness through the weaker
-  scale cutoff `||J|| <= ||H_base||` after explicitly documenting that the
-  stronger Taylor-convergence condition `rho(H_base^{-1} J) < 1` fails at all
-  three in-chamber basins;
-- the branch still does not route any “flagship gate CLOSED” claim through the
-  publication package surfaces.
+That is stronger than the retained proof surface currently supports. The live
+route still depends on:
 
-So the operative verdict remains: **do not merge as-is**.
+- `q_H = 0` via the Z_3 trichotomy branch;
+- the observational hierarchy pairing `sigma_hier = (2, 1, 0)`;
+- the upper-octant chamber condition;
+- Basin 1 being preferred by the weaker scale cutoff rather than by a retained
+  microscopic selector theorem.
 
-## What Must Be True For A "Closed" Resubmission
+If those conditions remain unproved, then the flagship headline must carry them
+explicitly or be demoted from `CLOSED`.
 
-### 1. Split out the unrelated plaquette edits
+### 2. Schur lane still imports the missing physical premise
 
-This branch is not a clean G1 delta right now.
+The Schur theorem itself is mathematically fine:
 
-Before resubmitting G1 closure:
+- if a baseline commutes with the retained three-generation algebra, then it is
+  scalar.
 
-- remove the plaquette authority rewrites from this branch, including the
-  deletion of the tensor-transfer note/runner and the companion bridge-surface
-  wording edits; or
-- move those plaquette changes onto a separate branch with its own review.
+What is still not proved is the physical upgrade:
 
-Recommended baseline: rebuild the G1 resubmission from current `main`.
+- the live zero-source baseline on the actual source sheet must commute with
+  that full retained algebra.
 
-### 2. Either really close the Schur-baseline premise, or demote it
+Until that premise is derived on the live sheet, the note must stop concluding
+that the physical zero-source baseline is axiom-natively scalar.
 
-The current Schur runner proves only:
+### 3. Basin uniqueness is still only the weaker scale-cutoff route
 
-- if the baseline commutes with the retained three-generation algebra, then it
-  is scalar.
+The perturbative-uniqueness note is honest that true Taylor/log-det convergence
+fails at all three in-chamber basins. Basin 1 is then selected by the weaker
+criterion `||J|| <= ||H_base||`.
 
-It does **not** prove the load-bearing premise:
+That may be a reasonable admissibility rule, but it is not yet a theorem-native
+closure of the basin-selector problem.
 
-- the physical zero-source baseline on the live source sheet must commute with
-  that algebra.
+If you want a merge-ready uniqueness claim, you still need one of:
 
-To close this lane, you need one of:
+- a retained theorem deriving that admissibility rule from accepted framework
+  structure;
+- a different retained discriminator that uniquely selects Basin 1;
+- a stronger retained convergence/result criterion that Basin 1 satisfies while
+  the competitors do not.
 
-- a retained theorem on the live source sheet deriving that commutation
-  requirement from already-accepted framework structure; or
-- a narrower rewrite that presents the Schur result only as a **conditional**
-  or **support** theorem and stops using it as the load-bearing promotion from
-  diagnostic baseline to theorem-native physical baseline.
+Otherwise the note should be framed as a conditional PMNS route under the added
+scale rule, not final flagship closure.
 
-If this is not closed, then the omnibus note must stop saying the
-baseline-choice sub-objection is fully gone.
+## Acceptable Resubmission Shapes
 
-### 3. Either derive a real basin selector, or stop calling the PMNS route unique
+### Option A: Conservative mergeable shape
 
-The current perturbative note explicitly says:
+Land the clean pieces only:
 
-- no in-chamber basin satisfies the actual log-det convergence condition
-  `rho(H_base^{-1} J) < 1`;
-- Basin 1 is chosen by the weaker cutoff `||J|| <= ||H_base||`.
-
-That is not yet a theorem-native uniqueness proof. It is a new admissibility
-rule.
-
-To close the PMNS lane at publication grade, you need one of:
-
-- a retained theorem deriving the admissibility rule `||J|| <= ||H_base||`
-  from accepted atlas inputs on the live source sheet; or
-- a different retained discriminator that uniquely selects Basin 1 from the
-  exact basin set; or
-- a stronger theorem showing Basin 1 satisfies the actual retained response
-  criterion while the competitors do not.
-
-If none of those is available, then the PMNS note must be demoted from
-"unique closure" to a narrower statement such as:
-
-- explicit PMNS-as-`f(H)` map on the chamber;
-- exact observational pinning **given** the added scale cutoff;
-- conditional support route, not final flagship closure.
-
-### 4. Surface the charged-lepton conditions honestly in every closure claim
-
-Right now the load-bearing charged-lepton conditions are:
-
-- `q_H = 0` on the trichotomy route: **CONDITIONAL**
-- `sigma_hier = (2,1,0)`: **OBSERVATIONAL**
-- `theta_23` upper octant: **CONDITIONAL / falsifiable**
-
-Any note that says "flagship gate closed" or "selector closed" must include all
-of those conditions if they remain unproved.
-
-Minimum acceptable wording if you do **not** derive them:
-
-- closure via the observational PMNS route,
-- conditional on `q_H = 0`,
-- conditional on the observational hierarchy pairing `sigma_hier = (2,1,0)`,
-- conditional on `theta_23` upper octant / threshold.
-
-If you want the stronger headline, then derive those conditions or reduce them
-to already-retained equivalences.
-
-### 5. Fix the package wording before asking for merge
-
-Until items 2 through 4 are resolved, the package/front-door surfaces should
-not say:
-
-- `flagship gate CLOSED`
-- `selector gate closes`
-- `publication-grade closure`
-
-Safe fallback wording is:
-
-- strong new obstruction stack plus explicit PMNS observational route;
-- PMNS-as-`f(H)` chamber map is built;
-- Basin 1 is the preferred conditional candidate under the added scale rule;
-- final flagship closure remains open pending a retained baseline premise and a
-  retained basin selector.
-
-## Mechanical Cleanup Needed On Resubmission
-
-- keep package surfaces aligned with whichever claim boundary you choose; do not
-  leave the omnibus, PMNS note, and companion tightening note at different
-  strength levels.
-
-## Two Acceptable Resubmission Shapes
-
-### Option A: Conservative resubmission
-
-Land only the parts that are already scientifically clean:
-
-- obstruction tour;
-- charged-lepton citation-chain cleanup;
-- explicit PMNS chamber map as a conditional observational route;
-- no flagship-closure claim.
-
-This is the easier path.
+- the obstruction stack;
+- the PMNS-as-`f(H)` chamber map;
+- the citation-chain cleanup around the charged-lepton route;
+- no flagship-closure headline.
 
 ### Option B: Strong closure resubmission
 
-Resubmit a real flagship closure only if all of the following are true:
+Keep the flagship-closure claim only if all three live blockers are genuinely
+closed:
 
-- clean branch off current `main`;
-- no unrelated plaquette edits;
-- commuting-baseline premise closed or replaced by a retained theorem;
-- basin uniqueness closed by a retained discriminator, not a heuristic cutoff;
-- charged-lepton / permutation / octant conditions either derived or carried
-  explicitly in the headline claim.
+- derive the commuting-baseline premise on the live source sheet or demote the
+  Schur lane to conditional/support status;
+- derive a retained basin selector rather than relying only on the weaker norm
+  cutoff;
+- surface or derive the charged-lepton / hierarchy / octant conditions at the
+  same strength as the headline claim.
 
 ## Bottom Line
 
-The branch is close enough that it should not be discarded, but it is **not**
-yet ready for merge at the current claim level.
+This branch has real value and is much cleaner than the earlier G1 attempts.
+But at the present claim level it is still not merge-ready. The fastest path is
+either:
 
-If you want the fastest path to a useful resubmission:
-
-1. rebuild from current `main`;
-2. keep only the G1 obstruction stack + PMNS map + citation cleanup;
-3. downgrade the closure language unless you can close the Schur premise and
-   the basin selector cleanly.
+1. demote the current branch to a clean conditional PMNS route plus obstruction
+   stack; or
+2. actually close the Schur physical premise and the basin-selector theorem,
+   then resubmit the flagship-closure headline.
