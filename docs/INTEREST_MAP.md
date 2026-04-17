@@ -272,10 +272,12 @@ Nobel-scale score.
     pocket rows with only a residual inward-source boundary; a follow-up width
     ladder then shows that `top5`, `top6`, and `top8` still do not reopen
     `source0.75` or `source1.00`, so the live local limit is now directional
-    inward source placement rather than floor width
-  - Missing: full local-pocket universality and transfer beyond the current
-    widened pocket, plus a true persistent inertial-mass law rather than one
-    bounded exact-lattice local branch;
+    inward source placement rather than floor width; the final beyond-pocket
+    sweep then says the `top4` floor also survives on `4/5` one-ring-farther
+    cases, with only `source0.50` still closed
+  - Missing: a deeper account of the persistent inward-source directional
+    limit, plus a true persistent inertial-mass law rather than one bounded
+    exact-lattice beyond-pocket branch;
     Gaussian packet + uniform force is now a closed negative route rather than
     a near miss
 
@@ -509,10 +511,11 @@ The main upward pressures since the first cut are:
   upgrades that again: the `top4` floor is open on `11/13` widened-pocket rows,
   with only the deepest inward-source rows still closed; a follow-up width
   ladder then shows that even `top5/top6/top8` leave `source0.75` and
-  `source1.00` closed, so the remaining bottleneck is now the inward-source
-  directional limit plus full local-pocket universality / beyond-pocket
-  transfer, not source-object localization, floor width, or a local readout
-  split alone
+  `source1.00` closed; the last beyond-pocket sweep then shows `top4` survives
+  on `4/5` one-ring-farther rows too, with only `source0.50` still closed, so
+  the remaining bottleneck is now the inward-source directional limit rather
+  than source-object localization, floor width, local readout split, or simple
+  beyond-pocket transfer
 - a follow-up readout-localization probe now closes the detector side as a
   bounded negative: a peak-centered `3x3` window shrinks detector support a
   lot, but it only captures a tiny fraction of the detector mass and loses the
@@ -582,8 +585,9 @@ The biggest score movers are:
      sweep then says `top4` is already a self-maintaining floor on the stable
      widened branch, and the new transfer sweep says that floor survives across
      most of the widened local pocket; the follow-up width ladder then shows
-     that the residual inward rows do not reopen even at `top5/top6/top8`, so
-     the remaining gap is beyond-pocket transfer plus a deeper directional
+     that the residual inward rows do not reopen even at `top5/top6/top8`; the
+     final beyond-pocket sweep then shows that the floor also survives on `4/5`
+     one-ring-farther rows, so the remaining gap is now a deeper directional
      source-placement limit, and then eventual closure
 
 4. **A real grown-family causal or trapping-field observable**

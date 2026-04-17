@@ -231,13 +231,18 @@ not just local lane wins.
     across most of the widened local pocket too; the follow-up inward-boundary
     width ladder then says `top5/top6/top8` still do not reopen `source0.75`
     or `source1.00`, so the live local limit is inward-source direction rather
-    than floor width
+    than floor width; the final beyond-pocket sweep then says that same `top4`
+    floor survives on `4/5` one-ring-farther rows too, with only `source0.50`
+    still closed
   - the retained ordered family still supports broad-surrogate steering rather
     than a persistent-mass object
+  - operationally this exact-lattice branch should now be parked at this
+    beyond-pocket positive unless a direct inward-source law idea or a new
+    object architecture appears
 - What would count as the next real upgrade:
-  - one farther transfer sweep beyond the current widened local pocket
+  - a direct explanation or reopening of the inward-source directional boundary
   - or a different self-maintaining object architecture if the exact-lattice
-    inward-source boundary proves fundamental
+    inward-source boundary remains fundamental
   - or a stronger architecture-level no-go that closes the search for the
     current family
 
@@ -534,13 +539,14 @@ remaining testable and review-safe.
     - the follow-up width ladder then closes the cheap “slightly broader floor”
       escape hatch: `top5/top6/top8` still leave `source0.75` and `source1.00`
       closed
-    - so it is now full local-pocket universality, beyond-pocket transfer, a
-      sharper inward-source directional limit, and then full inertial-response
-      closure
+    - the final beyond-pocket sweep then says the same `top4` floor survives on
+      `4/5` one-ring-farther rows too, with only `source0.50` still closed
+    - so it is now a sharper inward-source directional limit, then eventual
+      full inertial-response closure
   - Deliverables:
-    - one farther transfer sweep beyond the current widened local pocket
-    - or one bounded negative strong enough to freeze the compact-object
-      response lane as a widened-pocket multistage positive only
+    - one direct inward-source directional-law diagnosis
+    - or one park/freeze note strong enough to stop more local tuning on the
+      exact-lattice branch
   - New update:
     - a blended broad/adaptive readout now resolves the earlier complementary
       split on the tested nearby family
@@ -561,10 +567,16 @@ remaining testable and review-safe.
       that row is now best read as a directional miss rather than a width miss
     - `source1.00` stays a response-law miss: `alpha = 1.11` at `top4`, then
       `alpha = 0.76` at `top5/top6/top8`
+    - the beyond-pocket transfer result is now:
+      `top4 = 4/5`
+    - `source2.85`, `width6`, `length3`, and `length9` all stay open
+    - only the deeper inward row `source0.50` is newly closed
     - fixed windows/tapers remain closed
-    - the live question is now whether that `top4` floor leaves the current
-      widened pocket at all, or whether the inward-source directional boundary
-      is the real local limit
+    - the live question is no longer “does `top4` leave the widened pocket?”
+    - it does
+    - the live question is whether the inward-source directional boundary is
+      the real exact-lattice limit, or whether a different object law can
+      bypass it
 
 3. **Geometry-transfer discriminator / generated-family recovery**
    - Best upside:
