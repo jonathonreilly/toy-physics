@@ -96,6 +96,7 @@ The live repo now also carries a materially stronger exact support stack:
 - exact nonperturbative susceptibility-flow theorem for the implicit reduction
   law
 - exact connected plaquette-hierarchy theorem for the implicit reduction law
+- exact obstruction to any finite-order connected-hierarchy truncation
 - exact scalar `3+1` bridge endpoint ratio
   `A_inf / A_2 = 2 / sqrt(3)`
 - exact plaquette four-link coupling map
@@ -120,6 +121,7 @@ Current authorities for that support stack:
 - [GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_REDUCTION_EXISTENCE_THEOREM_NOTE.md)
 - [GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_SUSCEPTIBILITY_FLOW_THEOREM_NOTE.md)
 - [GAUGE_VACUUM_PLAQUETTE_CONNECTED_HIERARCHY_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_CONNECTED_HIERARCHY_THEOREM_NOTE.md)
+- [GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_INFINITE_HIERARCHY_OBSTRUCTION_NOTE.md)
 - [GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md](./GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md)
 - [GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md)
 - [SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md](./SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md)
@@ -132,6 +134,7 @@ Current support runners:
 - `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py`
 - `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py`
 - `scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py`
+- `scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py`
 - `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`
 - `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`
 - `scripts/frontier_scalar_3plus1_temporal_ratio.py`
@@ -151,10 +154,12 @@ The honest live read is now sharper than before:
   is now also closed
 - the exact connected plaquette hierarchy governing that susceptibility flow is
   now also closed
-- so the remaining analytic target is the explicit connected hierarchy and
-  therefore the explicit nonperturbative form of that reduction law at
-  `beta = 6`, not the old constant-lift ansatz, not the onset coefficient, and
-  not reduction-law existence, transport, or hierarchy identification itself
+- no exact finite-order connected-hierarchy truncation can close that object
+- so the remaining analytic target is the explicit nonpolynomial connected
+  hierarchy and therefore the explicit nonperturbative form of that reduction
+  law at `beta = 6`, not the old constant-lift ansatz, not the onset
+  coefficient, and not reduction-law existence, transport, or hierarchy
+  identification itself
 
 ## Safe Reuse Rule
 

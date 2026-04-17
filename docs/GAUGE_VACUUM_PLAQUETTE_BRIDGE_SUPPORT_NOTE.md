@@ -1,8 +1,8 @@
 # Gauge-Vacuum Plaquette Scalar-Bridge Support
 
 **Date:** 2026-04-16
-**Status:** exact local/source/class-level support stack plus exact constant-lift obstruction, exact distinct-shell theorem, exact first nonlinear full-vacuum coefficient, exact implicit reduction-law existence/uniqueness theorem, exact nonperturbative susceptibility-flow theorem, and exact connected-hierarchy theorem; the explicit connected hierarchy at `beta = 6` still remains open
-**Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`, `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py`, `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py`
+**Status:** exact local/source/class-level support stack plus exact constant-lift obstruction, exact distinct-shell theorem, exact first nonlinear full-vacuum coefficient, exact implicit reduction-law existence/uniqueness theorem, exact nonperturbative susceptibility-flow theorem, exact connected-hierarchy theorem, and exact infinite-hierarchy obstruction; the explicit connected hierarchy at `beta = 6` still remains open
+**Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`, `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py`, `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py`
 
 ## Question
 
@@ -218,6 +218,16 @@ one step further:
   `d/d beta C_n = sum_r C_(n+1)`, so explicit nonperturbative closure requires
   the connected plaquette hierarchy rather than one remaining scalar input.
 
+And the new exact infinite-hierarchy obstruction sharpens that one step further:
+
+- on both the local one-plaquette block and every finite periodic Wilson
+  source surface, the diagonal source generator is exactly nonpolynomial;
+- therefore the connected plaquette hierarchy cannot truncate at any finite
+  order;
+- analytic plaquette closure cannot come from an exact finite-order cumulant
+  truncation and must instead come from an exact nonpolynomial hierarchy
+  solution or an equivalent generating object.
+
 ## Remaining gap
 
 The remaining theorem-grade gap is now narrower:
@@ -247,6 +257,7 @@ Current clean read:
 - exact implicit finite-surface reduction-law existence/uniqueness: closed
 - exact nonperturbative susceptibility-flow law: closed
 - exact connected-hierarchy law: closed
+- exact finite-order hierarchy-truncation obstruction: closed
 - explicit nonperturbative physical-vacuum reduction at `beta = 6`: still open
 - canonical plaquette on the live package: still `0.5934`
 
@@ -266,6 +277,7 @@ python3 scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py
 python3 scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py
 python3 scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py
 python3 scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py
+python3 scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py
 ```
 
 Expected summary:
@@ -279,3 +291,4 @@ Expected summary:
 - reduction-existence runner: `THEOREM PASS=4 SUPPORT=4 FAIL=0`
 - susceptibility-flow runner: `THEOREM PASS=5 SUPPORT=3 FAIL=0`
 - connected-hierarchy runner: `THEOREM PASS=4 SUPPORT=4 FAIL=0`
+- infinite-hierarchy obstruction runner: `THEOREM PASS=4 SUPPORT=3 FAIL=0`
