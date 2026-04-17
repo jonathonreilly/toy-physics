@@ -9,6 +9,31 @@ strong for the current proof surface, and the branch is mixed with unrelated
 plaquette edits. A clean resubmission is possible, but it needs to satisfy the
 closure conditions below.
 
+## Update After Re-Review (`7f6abe4a`)
+
+I re-reviewed the branch after the follow-up theorem-note polish commit
+`7f6abe4a`.
+
+Result: **no material review change**.
+
+The new commit improves phrasing, but it does not fix the substantive blockers:
+
+- the Schur lane still imports the commuting-baseline premise instead of
+  deriving it;
+- the PMNS uniqueness lane still chooses Basin 1 by the weaker norm cutoff
+  `||J|| <= ||H_base||` after the note itself admits that true log-det
+  convergence fails at every basin;
+- the flagship headline still understates the conditional `q_H = 0` and
+  observational `sigma_hier = (2,1,0)` inputs;
+- the branch is still mixed with unrelated plaquette authority rewrites.
+
+One mechanical issue also still remains on the current tip:
+
+- the PMNS closure note still links to the old filename
+  `SELECTOR_PHYSICIST_J_PERTURBATIVE_UNIQUENESS_NOTE_2026-04-17.md`
+  instead of the live
+  `DM_NEUTRINO_SOURCE_SURFACE_PERTURBATIVE_UNIQUENESS_THEOREM_NOTE_2026-04-17.md`.
+
 ## What Must Be True For A "Closed" Resubmission
 
 ### 1. Split out the unrelated plaquette edits
