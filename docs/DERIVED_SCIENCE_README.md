@@ -1,103 +1,88 @@
-# Derived Science — Session Contribution (Post-3x-Check)
+# Derived Science — Grind Program, Batch 1
 
 **Branch:** `claude/main-derived`
 **Date:** 2026-04-16
-**Bar:** strictly unbounded — no bridges, no scope qualifiers, no downstream
-structural identifications required for the claim to hold.
 
-After triple-checking, only one result from my session work survives the
-strict unbounded bar.
+Strictly unbounded theorems. Each is a pure-math result applied to a
+specific framework object, with no structural identifications, no
+scope bridges, no imported formulas.
 
-## Single airtight claim
+## Standing airtight result (session carryover)
 
-### P1. K_R vanishes on A1 backgrounds (Schur orthogonality)
+- **K_R Vanishes on A1 Backgrounds** — pure S_3 Schur orthogonality
+  applied to the seven-site star tensor carrier. The components of
+  K_R(q) are inner products with E and T1 irrep basis vectors; both
+  vanish on A1 backgrounds.
+  Note: `KR_A1_VANISHING_DERIVED_NOTE.md`
+  Runner: `frontier_KR_A1_vanishing_proof.py` (30/30 PASS)
 
-- Statement: the tensor carrier K_R(q) = (u_E(q), u_T(q), δ_A1(q)·u_E(q),
-  δ_A1(q)·u_T(q)) with u_E = ⟨E_x, q⟩ and u_T = ⟨T1_x, q⟩ vanishes
-  identically on the A1 subspace of the seven-site star.
-- Proof: distinct S_3 irreps are orthogonal (Schur's theorem). E_x ∈ E
-  irrep, T1_x ∈ T1 irrep, q ∈ A1 irrep. Therefore u_E = u_T = 0, so K_R = 0.
-- Status: unbounded pure-math theorem.
-- Note: `KR_A1_VANISHING_DERIVED_NOTE.md`
-- Runner: `frontier_KR_A1_vanishing_proof.py` — 30/30 PASS
+## Batch 1: cube-shift and BZ-corner foundational algebra
 
-## What was removed after triple-check
+Four small reusable theorems establishing the canonical bridge
+between the abstract taste cube C^8 and the physical lattice C^{L³}.
 
-### P2 (projector algebra) — REMOVED
+### 1. Cube-Shift Joint-Eigenstructure Theorem
 
-Pure linear algebra (weights 1/n and (n-1)/n for rank-1 + rank-(n-1)
-decomposition). The theorem is trivially true but provides no content
-without the downstream identification with the UT CP phase cos²(δ) = 1/6,
-which was explicitly disclaimed. Removed because the theorem in isolation
-is too trivial to be a submission.
+The three cube-shift operators S_μ on C^8 pairwise commute and admit
+a simultaneous eigenbasis of 8 one-dimensional joint eigenspaces,
+indexed by sign triples s ∈ {±1}³. Explicit construction via
+Z_2³ Hadamard characters.
 
-### N1 (V_sel-fermion wrong mass structure) — REMOVED
+- Note: `CUBE_SHIFT_JOINT_EIGENSTRUCTURE_NOTE.md`
+- Runner: `frontier_cube_shift_joint_eigenstructure.py` (69/69 PASS)
 
-My derivation claimed off-diagonal mass matrix elements from
-⟨X_a|S_i S_j|X_b⟩ matrix elements via one-loop δφ exchange. But with
-diagonal δφ propagators Π_{ij} = δ_{ij}/m²_i (correct for mass
-eigenstates at the EWSB vacuum), the formula reduces to diagonal only:
-M_eff(a,b) = y² Σ_i ⟨X_a|S_i²|X_b⟩/m²_i = y² Σ_i δ_{ab}/m²_i. The off-
-diagonal structure I claimed doesn't arise from this diagram. Removed
-for logical gap.
+### 2. Translation-Eigenvalue Theorem on BZ Corners
 
-### N2 (y_t = g_s/√6 not derivable) — REMOVED
+On Z_L³ (L even), the discrete translation T_μ acts on BZ corner
+states |X_α⟩ with α ∈ {0,1}³ as T_μ |X_α⟩ = (−1)^{α_μ} |X_α⟩. This
+generalizes the hw=1 translation result on main to the full 8-dim
+BZ corner spectrum.
 
-The claim "four standard derivation methods fail" is scoped to four
-specific methods; a reviewer can always posit a non-standard approach.
-Removed because the scope constitutes a bridge (a non-standard mechanism
-could exist that I haven't examined).
+- Note: `TRANSLATION_EIGENVALUE_BZ_CORNERS_NOTE.md`
+- Runner: `frontier_translation_eigenvalue_bz_corners.py` (70/70 PASS)
 
-## Honest assessment
+### 3. Hamming-Distance Selection Rule
 
-This branch now contains ONE small unbounded pure-math theorem (P1).
+The minimum number of site-phase operators (P_μ with (P_μ ψ)(x) =
+(−1)^{x_μ} ψ(x)) needed to connect two BZ corners equals the Hamming
+distance between their α-labels. Consequently, hw=1 ↔ hw=1 transitions
+require at least two site-phase insertions.
 
-P1 is:
-- Genuinely rigorous (textbook Schur orthogonality applied to a specific
-  S_3 representation).
-- Small in scope — a single lemma about a specific tensor structure.
-- Not load-bearing for any flagship physics claim in isolation.
-- Would be a building block in a larger CKM derivation, but the
-  downstream application is NOT claimed here.
+- Note: `HAMMING_DISTANCE_SELECTION_RULE_NOTE.md`
+- Runner: `frontier_hamming_distance_selection_rule.py` (473/473 PASS)
 
-This branch is NOT a flagship-level submission. It is a single clean
-lemma that survives the strictest "unbounded only" filter after
-triple-checking my session work.
+### 4. Site-Phase / Cube-Shift Intertwiner Theorem (composition)
 
-## What remains on main (existing, not duplicated here)
+The site-phase P_μ on the BZ-corner subspace of C^{L³} is intertwined
+with the cube-shift S_μ on C^8 via the isometry Φ: |α⟩ ↦ |X_α⟩. This
+is the canonical bridge between C^8 taste-cube arguments and C^{L³}
+lattice arguments.
 
-The existing framework on origin/main contains substantial airtight
-content not produced by me this session:
-- CMT (Coupling Map Theorem) partition identity
-- V_sel EWSB selector (63/63 PASS on main)
-- Anomaly-forced 3+1 theorem
-- Native SU(2), graph-first SU(3)
-- Three-generation observable algebra
-- Discrete 3+1 Einstein-Regge GR + UV-finite QG chain
-- CPT, I_3=0, emergent Lorentz
-- Recent plaquette work (under separate review)
+- Note: `SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md`
+- Runner: `frontier_site_phase_cube_shift_intertwiner.py` (60/60 PASS)
 
-My session contribution (P1) is one small addition to that existing body.
-
-## Reviewer verification
+## Batch 1 total verification
 
 ```bash
-python3 scripts/frontier_KR_A1_vanishing_proof.py
-# Expected: TOTAL: PASS=30, FAIL=0
+python3 scripts/frontier_cube_shift_joint_eigenstructure.py      # PASS=69
+python3 scripts/frontier_translation_eigenvalue_bz_corners.py    # PASS=70
+python3 scripts/frontier_hamming_distance_selection_rule.py      # PASS=473
+python3 scripts/frontier_site_phase_cube_shift_intertwiner.py    # PASS=60
+python3 scripts/frontier_KR_A1_vanishing_proof.py                # PASS=30
+
+# Total: 702 PASS, 0 FAIL
 ```
 
-## Submission readiness (honest)
+## Grind program philosophy
 
-**Not ready for flagship submission.** P1 alone is too small.
+The program is defined in `GRIND_PROGRAM_NOTE.md`. Its purpose is
+sustainable production of reusable framework-native theorems at
+strict unbounded bar. Each theorem becomes a citable lemma for
+larger derivations.
 
-The work done this session is better characterized as:
-1. P1: one small clean lemma produced.
-2. Audit findings: several framework claims previously labeled as
-   "derived" on main rely on structural identifications rather than
-   rigorous derivations. These findings are preserved on
-   `claude/stoic-almeida` as session work but are not promoted here
-   because they don't meet the strict unbounded bar.
+## Out of scope (not in this branch)
 
-If a flagship submission is desired, it should lean on the framework's
-larger existing main-repo results (gauge/EWSB/GR sector), not on my
-session contribution.
+- Quantitative CKM / Yukawa / mass predictions (conjectural)
+- Plaquette ⟨P⟩ derivation work (on main, under separate review)
+- Flagship paper content
+- Structural identifications of any kind
