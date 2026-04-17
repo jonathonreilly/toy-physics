@@ -5,7 +5,8 @@
 `3 spatial + 1 derived-time` surface; the residual spatial-environment
 boundary data arise from one explicit positive character-tensor transfer built
 from exact Wilson character coefficients and exact `SU(3)` fusion
-intertwiners
+intertwiners; the linked script is a finite truncated support packet, not a
+full `beta = 6` tensor-transfer Perron solve
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_tensor_transfer.py`
 
 ## Question
@@ -161,6 +162,24 @@ It is specifically:
 - explicit Perron moments after the full spatial environment is included
 - analytic closure of canonical `P(6)`
 - repo-wide repinning of the canonical plaquette
+
+## Script boundary
+
+The theorem above is structural and exact. The linked runner is intentionally a
+finite support packet only:
+
+- it audits a truncated dominant-weight box with `NMAX = 4`,
+- it truncates the Wilson Bessel mode sum at `MODE_MAX = 80`,
+- it checks one explicit positive tensor-transfer word built from those exact
+  local ingredients,
+- it does **not** evaluate the full `beta = 6` tensor-transfer matrix
+  elements,
+- it does **not** compute the `beta = 6` Perron state or the boundary
+  coefficients `rho_(p,q)(6)`.
+
+So the script is evidence for the explicit local Wilson coefficient stack and
+the tensor-transfer class, not a numerical closure of the remaining
+environment solve.
 
 ## Commands run
 

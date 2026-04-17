@@ -106,6 +106,8 @@ The live repo now also carries a materially stronger exact support stack:
   generating object on the accepted `3+1` source surface
 - exact Perron-state reduction theorem on the explicit transfer operator
 - exact source-sector matrix-element factorization theorem at `beta = 6`
+  with a structural theorem note and a generic positive-diagonal witness
+  runner rather than an explicit Wilson `D_6` evaluation
 - exact local/environment factorization theorem isolating the exact local
   Wilson marked-link factor on the source sector
 - exact spatial-environment character-measure theorem identifying the
@@ -116,7 +118,8 @@ The live repo now also carries a materially stronger exact support stack:
   positive spatial transfer operator
 - exact spatial-environment tensor-transfer theorem identifying the remaining
   boundary amplitudes as explicit Wilson-coefficient / `SU(3)`-intertwiner
-  tensor-transfer data
+  tensor-transfer data, with the runner only a truncated support packet rather
+  than a full `beta = 6` Perron solve
 - exact Perron/Jacobi underdetermination theorem showing that even the
   sharpened factorized operator class still does not force unique `beta = 6`
   Perron moments or Jacobi coefficients until the explicit

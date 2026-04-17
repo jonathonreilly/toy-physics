@@ -90,9 +90,11 @@ and equivalently
 So the remaining open object is no longer just an abstract spectral measure.
 The transfer-operator / character-recurrence theorem and Perron-state
 reduction theorem made the operator route explicit; the new source-sector
-matrix-element factorization theorem now closes the exact `beta = 6`
-source-sector matrix law
-`T_src(6) = exp(3 J) D_6 exp(3 J)`.
+matrix-element factorization theorem now closes the exact structural
+`beta = 6` source-sector matrix law
+`T_src(6) = exp(3 J) D_6 exp(3 J)`, while the linked runner audits that law
+only on a generic positive diagonal witness rather than an explicit Wilson
+`D_6` evaluation.
 The updated local/environment factorization theorem then shows that the
 normalized mixed-kernel contribution is already exactly the local Wilson
 marked-link factor, the residual-environment identification theorem isolates
@@ -102,7 +104,9 @@ class function `C_(Z_6^env)`, the spatial-environment structural transfer
 theorem realizes those boundary character data as boundary amplitudes of one
 positive spatial transfer law, and the spatial-environment tensor-transfer
 theorem fixes the remaining local matrix-element class to explicit Wilson
-coefficients and `SU(3)` intertwiners. So the remaining open object is
+coefficients and `SU(3)` intertwiners, with its runner only a truncated
+support packet over an audited tensor-transfer word rather than a full
+`beta = 6` Perron solve. So the remaining open object is
 specifically the explicit `beta = 6` tensor-transfer Perron / boundary data
 generating the boundary character data of `Z_6^env`, equivalently the Perron eigenvector / moments of the factorized operator
 `exp(3 J) D_6^loc C_(Z_6^env) exp(3 J)`.

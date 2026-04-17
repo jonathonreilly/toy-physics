@@ -280,7 +280,7 @@ further:
   the explicit source operator `J` in that Perron state.
 
 And the new exact source-sector matrix-element factorization theorem closes the
-next constructive step:
+next constructive step at the structural level:
 
 - the exact marked half-slice multiplier on the source sector is `exp(3 J)` at
   the framework point `beta = 6`;
@@ -288,9 +288,13 @@ next constructive step:
   class-function sector is central and therefore diagonal in the `SU(3)`
   character basis:
   `D_6 chi_(p,q) = kappa_(p,q)(6) chi_(p,q)`;
-- the exact `beta = 6` source-sector transfer matrix elements are therefore
-  explicit:
+- the exact `beta = 6` source-sector transfer law is therefore explicit:
   `T_src(6) = exp(3 J) D_6 exp(3 J)`.
+
+The linked runner for that theorem is only a finite algebraic witness over one
+generic positive conjugation-symmetric diagonal sequence on a truncated source
+box. It supports the exact factorized law, but it does **not** itself evaluate
+the Wilson residual diagonal `D_6`.
 
 And the new exact local/environment factorization theorem sharpens that one
 step further:
@@ -331,6 +335,9 @@ one step further:
 - the exact spatial-environment tensor-transfer theorem then closes that these
   remaining boundary amplitudes lie in one explicit Wilson-coefficient /
   `SU(3)`-intertwiner tensor-transfer class;
+- the linked runner for that theorem is a finite truncated support packet over
+  one audited tensor-transfer word, not a full `beta = 6` tensor-transfer
+  Perron solve;
 - the remaining target is therefore no longer an abstract operator `R_6^env`,
   but the explicit `beta = 6` tensor-transfer Perron / boundary data of
   `Z_6^env`.

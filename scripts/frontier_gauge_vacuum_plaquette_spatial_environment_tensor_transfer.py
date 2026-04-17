@@ -3,10 +3,11 @@
 Exact spatial-environment tensor-transfer support packet for the plaquette
 route on the accepted Wilson 3+1 surface.
 
-This does not close analytic P(6). It sharpens the remaining object:
-the spatial-environment boundary character data arise from one explicit
-positive tensor-transfer class built from exact Wilson character coefficients
-and exact SU(3) fusion/intertwiner multiplicities.
+This does not close analytic P(6). It is a truncated support packet that
+sharpens the remaining object: the spatial-environment boundary character
+data arise from one explicit positive tensor-transfer class built from exact
+Wilson character coefficients and exact SU(3) fusion/intertwiner
+multiplicities.
 """
 
 from __future__ import annotations
@@ -137,6 +138,7 @@ def main() -> int:
     print("=" * 78)
     print()
     print("Exact Wilson local coefficients at beta = 6")
+    print(f"  audited truncations                    = NMAX = {NMAX}, MODE_MAX = {MODE_MAX}")
     print(f"  c_(0,0)                              = {c00:.15f}")
     for rep in [(0, 0), (1, 0), (0, 1), (1, 1), (2, 0)]:
         i = index[rep]
