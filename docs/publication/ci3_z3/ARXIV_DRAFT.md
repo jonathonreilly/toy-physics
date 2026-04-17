@@ -28,10 +28,12 @@ retained action surface, and exact $T=0$ confinement with bounded
 $\sqrt{\sigma}\approx 465\,\mathrm{MeV}$.
 Quantitatively, the current package gives the canonical hierarchy evaluation
 $v=246.282818290129\,\mathrm{GeV}$, retains
-$\alpha_s(M_Z)=0.1181$ and electroweak normalization lanes, promotes an
-algebraic CKM atlas/axiom closure package with no quark-mass or fitted-CKM
-inputs, and carries bounded Yukawa/top and Higgs/vacuum rows whose downstream
-transport budget is explicit once the accepted lattice-scale boundary is fixed.
+$\alpha_s(M_Z)=0.1181$ and electroweak normalization lanes, retains the exact
+lattice-scale Ward identity $y_t(M_{\mathrm{Pl}})/g_s(M_{\mathrm{Pl}})
+=1/\sqrt{6}$, promotes an algebraic CKM atlas/axiom closure package with no
+quark-mass or fitted-CKM inputs, and carries derived-with-explicit-systematic
+Yukawa/top and derived-with-inherited-explicit-systematic Higgs/vacuum rows
+with an explicit downstream transport budget.
 The package is already predictive beyond retrospective comparison,
 including proton lifetime, CKM neutron EDM, vacuum criticality, and benchmark
 gravitational decoherence. Dark-matter relic mapping is the sole remaining live
@@ -565,16 +567,14 @@ package fixes the full phase-dressed matrix rather than only the scalar
 readout. This is the controlling CKM theorem surface in the current manuscript
 [11,12].
 
-### 5.4 Bounded Yukawa/top and bounded Higgs/vacuum
+### 5.4 Exact lattice-scale Yukawa/gauge theorem plus explicit-systematic Yukawa/top and Higgs/vacuum
 
-The top-Yukawa/top-mass lane now has a cleaner authority surface than before,
-but it is still not a retained or derived manuscript row. The current package
-does not yet treat the lattice-scale
+The top-Yukawa/top-mass lane now has a retained lattice-scale authority
+surface. The current package does treat the canonical-surface ratio
 $y_t/g_s = 1/\sqrt{6}$
-boundary as a fully closed theorem on the manuscript surface. Instead, it
-treats that ratio as an accepted working boundary and then carries the
-downstream transport budget explicitly. On that current package surface the
-bounded readout is
+as a retained Ward-identity theorem. What remains limited is the downstream
+transport from that exact lattice-scale theorem to the low-energy endpoint.
+On that current package surface the derived-with-explicit-systematic readout is
 
 - $y_t(v)=0.9176$,
 - canonical $m_t^{\mathrm{pole}} = 173.10\,\mathrm{GeV}$ on the framework-side
@@ -585,9 +585,10 @@ bounded readout is
 with an explicit package-native bridge budget of $1.2147511\%$ conservative and
 $0.75500635\%$ support-tight.
 
-Those numbers are strong and zero-import on the downstream readout, but the
-current package still classifies the lane as bounded because the exact
-lattice-scale Yukawa/gauge normalization is not yet closed at manuscript bar.
+Those numbers are strong and zero-import on the downstream readout. The current
+package now classifies the lane as derived with explicit systematic: the exact
+lattice-scale Yukawa/gauge normalization is retained, and the remaining
+limitation is the named transport budget.
 
 The Higgs/vacuum package then inherits that same explicit budget:
 
@@ -598,11 +599,12 @@ The Higgs/vacuum package then inherits that same explicit budget:
 
 The important point is not merely that the central values are competitive. It
 is that the whole route is now stated on one authority surface with one named
-budget and one explicit boundary note. The Higgs/vacuum lane is likewise still
-bounded, because it inherits the bounded Yukawa/top boundary rather than
-standing alone as a retained quantitative theorem row. The comparison surface
-is therefore the standard near-critical Standard Model literature [13,14], not
-a claim that the framework has already removed every quantitative caveat.
+budget and one retained UV Ward theorem. The Higgs/vacuum lane is likewise
+best read as derived with inherited explicit systematic, because it inherits
+the explicit Yukawa/top transport budget rather than standing alone as a fully
+independent retained quantitative theorem row. The comparison surface is
+therefore the standard near-critical Standard Model literature [13,14], not a
+claim that the framework has already removed every quantitative caveat.
 
 An additional exact support theorem now closes one cleaner question on the same
 taste block. The one-loop fermion Coleman-Weinberg Hessian is isotropic at the

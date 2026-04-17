@@ -37,8 +37,10 @@ Framework statement:
 The package has four layers:
 
 1. retained theorem core
-2. retained standalone quantitative lanes (`alpha_s`, EW normalization)
-3. bounded Yukawa/top and bounded Higgs/vacuum lanes
+2. retained standalone quantitative lanes (`alpha_s`, EW normalization,
+   exact lattice-scale Yukawa/gauge Ward theorem)
+3. derived-with-explicit-systematic Yukawa/top and
+   derived-with-inherited-explicit-systematic Higgs/vacuum lanes
 4. bounded prediction surface plus live gates and frozen-out route history
 
 The public manuscript surface on `main` is arXiv-first. Journal-specific
@@ -60,11 +62,11 @@ The current canonical quantitative stack is modular:
 - [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md)
 - [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md)
 - [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md)
+- [YT_WARD_IDENTITY_DERIVATION_THEOREM.md](../../YT_WARD_IDENTITY_DERIVATION_THEOREM.md)
 - [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](../../YT_ZERO_IMPORT_AUTHORITY_NOTE.md)
-- [YT_SQRT6_BOUNDARY_STATUS_NOTE.md](../../YT_SQRT6_BOUNDARY_STATUS_NOTE.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
-- [YT_TRANSPORT_BUDGET_NOTE.md](../../YT_TRANSPORT_BUDGET_NOTE.md)
-- [HIGGS_VACUUM_BOUNDED_STATUS_NOTE.md](../../HIGGS_VACUUM_BOUNDED_STATUS_NOTE.md)
+- [YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md](../../YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md)
+- [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](../../HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md)
 - [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
 - [KR_A1_VANISHING_SUPPORT_NOTE.md](../../KR_A1_VANISHING_SUPPORT_NOTE.md)
 
@@ -79,9 +81,10 @@ Current package status:
   where `alpha_s(v)` comes from the same-surface plaquette chain,
   `g_1(v), g_2(v)` use derived `R_conn = 8/9` support, and the `M_Z`
   rows use the retained running bridge
-- bounded `y_t(v) = 0.9176`, conditional on the accepted lattice-scale
-  `y_t / g_s = 1/sqrt(6)` boundary
-- bounded canonical `m_t(pole) = 173.10 GeV` (3-loop),
+- retained exact lattice-scale Ward theorem:
+  `y_t(M_Pl) / g_s(M_Pl) = 1 / sqrt(6)`
+- derived-with-explicit-systematic `y_t(v) = 0.9176`
+- derived-with-explicit-systematic canonical `m_t(pole) = 173.10 GeV` (3-loop),
   with retained `172.57 GeV` (2-loop) support
   and explicit downstream transport budget `1.2147511%` conservative
   (`0.75500635%` support-tight)
@@ -107,10 +110,10 @@ Current package status:
   [Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md](../../Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md);
   these are support theorems for the retained matter lane and future flavor
   work, not additional flagship flavor-numerics claims
-- bounded Higgs / vacuum package:
+- derived-with-inherited-explicit-systematic Higgs / vacuum package:
   canonical `m_H = 125.1 GeV` (framework-side 3-loop route),
   with retained `119.8 GeV` (2-loop support route),
-  vacuum-stability readout inherited from the bounded `y_t` lane
+  vacuum-stability readout inherited from the explicit `y_t` systematic
 - exact taste-block fermion-CW isotropy support theorem with bounded
   taste-scalar near-degeneracy companion:
   `m_taste = 124.91 GeV`, scalar-only `v_c/T_c = 0.3079`

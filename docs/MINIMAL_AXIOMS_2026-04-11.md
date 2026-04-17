@@ -51,7 +51,10 @@ The current canonical quantitative stack is:
 - [ALPHA_S_DERIVED_NOTE.md](ALPHA_S_DERIVED_NOTE.md)
 - [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md)
 - [YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md)
+- [YT_WARD_IDENTITY_DERIVATION_THEOREM.md](YT_WARD_IDENTITY_DERIVATION_THEOREM.md)
+- [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](YT_ZERO_IMPORT_AUTHORITY_NOTE.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
+- [YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md](YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md)
 - [YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md](YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md)
 - [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md)
 
@@ -63,14 +66,16 @@ Safe current result:
 - retained `1/alpha_EM(M_Z) = 127.67`
 - retained `g_1(v) = 0.4644`
 - retained `g_2(v) = 0.6480`
-- bounded `y_t(v) = 0.9176`
-- bounded `m_t(pole) = 172.57 GeV` (2-loop), `173.10 GeV` (3-loop)
-- bounded Yukawa/top lane carries the current `~3%` QFP/RGE-surrogate
-  systematic
+- retained exact lattice-scale `y_t(M_Pl) / g_s(M_Pl) = 1 / sqrt(6)`
+- derived-with-explicit-systematic `y_t(v) = 0.9176`
+- derived-with-explicit-systematic `m_t(pole) = 172.57 GeV` (2-loop),
+  `173.10 GeV` (3-loop)
+- Yukawa/top lane carries the explicit transport budget
+  `1.2147511%` conservative (`0.75500635%` support-tight)
 - derived-with-inherited-explicit-systematic `m_H = 119.8 GeV`
   (2-loop support route), `125.1 GeV` (framework-side 3-loop route), with
   vacuum-stability readout inherited from the explicit `y_t` systematic
-- bounded vacuum-stability readout
+- derived-with-inherited-explicit-systematic vacuum-stability readout
 
 ## Mathematical Infrastructure Versus Physical Inputs
 

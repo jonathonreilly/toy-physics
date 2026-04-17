@@ -129,16 +129,16 @@ generating the boundary character data of `Z_6^env`, equivalently the Perron eig
 | `delta_CKM` | `65.905157 deg` | closed / derived | no-import closure | CKM downstream comparisons and summary tables | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) |
 | `J` | `3.331 x 10^-5` | closed / derived | no-import closure | CKM downstream comparisons and summary tables | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) |
 
-## D. Useful bounded downstream values
+## D. Useful explicit-systematic downstream values
 
 These are usable, but only with their qualifiers attached.
 
 | Quantity | Canonical value on `main` | Claim class | Import class | Safe reuse | Authority |
 |---|---:|---|---|---|---|
-| `y_t(v)` | `0.9176` | bounded / conditional | zero SM imports on the downstream readout; accepted lattice-scale `1/sqrt(6)` boundary plus explicit downstream transport budget | YT/top/Higgs reuse only with the accepted boundary and bounded qualifier carried explicitly | [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](../../YT_ZERO_IMPORT_AUTHORITY_NOTE.md), [YT_SQRT6_BOUNDARY_STATUS_NOTE.md](../../YT_SQRT6_BOUNDARY_STATUS_NOTE.md) |
-| `m_t(pole)` 2-loop | `172.57 GeV` | bounded / conditional | inherits the bounded `y_t` boundary and transport budget | top-mass reuse only with the bounded qualifier carried explicitly | [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](../../YT_ZERO_IMPORT_AUTHORITY_NOTE.md), [YT_TRANSPORT_BUDGET_NOTE.md](../../YT_TRANSPORT_BUDGET_NOTE.md) |
-| `m_t(pole)` 3-loop | `173.10 GeV` | bounded / conditional | inherits the bounded `y_t` boundary and transport budget | top-mass reuse only with the bounded qualifier carried explicitly | [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](../../YT_ZERO_IMPORT_AUTHORITY_NOTE.md), [YT_TRANSPORT_BUDGET_NOTE.md](../../YT_TRANSPORT_BUDGET_NOTE.md) |
-| `m_H` framework-side 3-loop | `125.1 GeV` | bounded / conditional | inherits the bounded `y_t` boundary and transport budget | Higgs/vacuum reuse only with the bounded qualifier carried explicitly | [HIGGS_VACUUM_BOUNDED_STATUS_NOTE.md](../../HIGGS_VACUUM_BOUNDED_STATUS_NOTE.md), [HIGGS_MASS_BOUNDARY_NOTE.md](../../HIGGS_MASS_BOUNDARY_NOTE.md) |
+| `y_t(v)` | `0.9176` | derived with explicit systematic | zero SM imports on the downstream readout; retained exact lattice-scale `1/sqrt(6)` Ward theorem plus explicit downstream transport budget | YT/top/Higgs reuse is safe with the explicit-systematic qualifier carried explicitly | [YT_WARD_IDENTITY_DERIVATION_THEOREM.md](../../YT_WARD_IDENTITY_DERIVATION_THEOREM.md), [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](../../YT_ZERO_IMPORT_AUTHORITY_NOTE.md), [YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md](../../YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md) |
+| `m_t(pole)` 2-loop | `172.57 GeV` | derived with explicit systematic | inherits the retained exact lattice-scale Ward theorem and the explicit `y_t` transport budget | top-mass reuse is safe with the explicit-systematic qualifier carried explicitly | [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](../../YT_ZERO_IMPORT_AUTHORITY_NOTE.md), [YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md](../../YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md) |
+| `m_t(pole)` 3-loop | `173.10 GeV` | derived with explicit systematic | inherits the retained exact lattice-scale Ward theorem and the explicit `y_t` transport budget | top-mass reuse is safe with the explicit-systematic qualifier carried explicitly | [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](../../YT_ZERO_IMPORT_AUTHORITY_NOTE.md), [YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md](../../YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md) |
+| `m_H` framework-side 3-loop | `125.1 GeV` | derived with inherited explicit systematic | inherits the explicit `y_t` transport budget on the current package support stack | Higgs/vacuum reuse is safe with the inherited explicit-systematic qualifier carried explicitly | [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](../../HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md), [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md) |
 | `sqrt(sigma)` | `465 MeV` | bounded / derived | retained `alpha_s` + EFT bridge | bounded confinement phenomenology only | [CONFINEMENT_STRING_TENSION_NOTE.md](../../CONFINEMENT_STRING_TENSION_NOTE.md) |
 
 ## Rule for downstream work
