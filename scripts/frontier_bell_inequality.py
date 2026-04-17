@@ -1,10 +1,19 @@
 #!/usr/bin/env python3
 """
-CHSH Bell violation from Cl(3) on Z^d — distinguishable taste species.
+CHSH Bell violation on Z^d — generic two-species tensor product.
 
-Two DISTINGUISHABLE particles (different taste species from the Cl(3)
-staggered structure) on a tensor product Hilbert space C^N x C^N.
-This avoids fermionic anticommutation issues entirely.
+Two distinguishable particle slots on a tensor product Hilbert space
+C^N x C^N, coupled by the periodic Poisson Green's function. This is
+a generic bipartite model — the two tensor factors are NOT yet derived
+from specific Cl(3) taste operators (see BELL_INEQUALITY_DERIVED_NOTE.md
+"Open gap" section). The framework supports multiple distinguishable
+fermion species (flavors, generations, colors) which would obey this
+tensor product structure, but the explicit taste-operator construction
+is not implemented here.
+
+What IS derived: the Pauli algebra {Z, X} = 0 from the Z^d bipartite
+structure, the Poisson Green's function from D5, and the [O_A, O_B] = 0
+commutation from the tensor product axiom (SINGLE_AXIOM_HILBERT_NOTE).
 
 Hamiltonian:
     H = H1 x I + I x H1 + G * sum_ij V(i,j) |i><i| x |j><j|
