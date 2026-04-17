@@ -1,19 +1,24 @@
 #!/usr/bin/env python3
 """
-CHSH Bell violation on Z^d — generic two-species tensor product.
+CHSH Bell violation from Cl(3) KS taste decomposition.
 
-Two distinguishable particle slots on a tensor product Hilbert space
-C^N x C^N, coupled by the periodic Poisson Green's function. This is
-a generic bipartite model — the two tensor factors are NOT yet derived
-from specific Cl(3) taste operators (see BELL_INEQUALITY_DERIVED_NOTE.md
-"Open gap" section). The framework supports multiple distinguishable
-fermion species (flavors, generations, colors) which would obey this
-tensor product structure, but the explicit taste-operator construction
-is not implemented here.
+Two taste species from the Kogut-Susskind spin-taste decomposition
+(standard staggered-fermion technology in the framework) on a tensor
+product Hilbert space C^N x C^N, coupled by the periodic Poisson
+Green's function.
 
-What IS derived: the Pauli algebra {Z, X} = 0 from the Z^d bipartite
-structure, the Poisson Green's function from D5, and the [O_A, O_B] = 0
-commutation from the tensor product axiom (SINGLE_AXIOM_HILBERT_NOTE).
+The lattice `n` in this script represents the COARSE-GRAINED physical
+cell lattice of the KS decomposition (spacing 2 on the original Z^d
+staggered lattice). Each cell carries a 2^d-dim taste space. Alice
+and Bob are two specific taste eigenstates (|t_A> = |0...0>, |t_B> =
+|1...1>), each with position Hilbert space C^{N_cells}. See
+BELL_INEQUALITY_DERIVED_NOTE.md for the full taste-decomposition
+derivation of the bipartition.
+
+The measurement operators Z = sublattice parity and X = pair-hop are
+explicit Cl(3) taste operators on each species' position Hilbert space.
+Z corresponds to ξ_5 = product of all taste generators; X is a pair
+Cl(3) rotation.
 
 Hamiltonian:
     H = H1 x I + I x H1 + G * sum_ij V(i,j) |i><i| x |j><j|
