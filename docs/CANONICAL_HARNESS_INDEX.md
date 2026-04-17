@@ -34,6 +34,7 @@ Use this file to find the current canonical note/runner pair on `main`.
 | promoted CKM closure | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) | `frontier_ckm_atlas_axiom_closure.py`, `frontier_ckm_no_import_audit.py` |
 | CKM-only neutron-EDM corollary + bounded prediction | [CKM_NEUTRON_EDM_BOUND_NOTE.md](CKM_NEUTRON_EDM_BOUND_NOTE.md) | `frontier_ckm_neutron_edm_bound.py` |
 | bounded down-type mass-ratio CKM-dual lane | [DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md](DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md), [CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md](CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md) | `frontier_mass_ratio_ckm_dual.py`, `frontier_ckm_five_sixths_bridge_support.py` |
+| bounded BH entropy companion + retained RT-ratio Widom no-go | [BH_ENTROPY_DERIVED_NOTE.md](BH_ENTROPY_DERIVED_NOTE.md), [BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md](BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md) | `frontier_bh_entropy_derived.py`, `frontier_bh_entropy_rt_ratio_widom.py` |
 
 ## Live Science Outside Flagship Core
 

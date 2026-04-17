@@ -190,6 +190,7 @@ Use alongside:
 | Proton-lifetime companion | [PROTON_LIFETIME_DERIVED_NOTE.md](../../PROTON_LIFETIME_DERIVED_NOTE.md) | [frontier_proton_lifetime_derived.py](../../../scripts/frontier_proton_lifetime_derived.py) |
 | Vacuum critical stability companion | [VACUUM_CRITICAL_STABILITY_NOTE.md](../../VACUUM_CRITICAL_STABILITY_NOTE.md) | [frontier_higgs_mass_full_3loop.py](../../../scripts/frontier_higgs_mass_full_3loop.py), [frontier_yt_color_projection_correction.py](../../../scripts/frontier_yt_color_projection_correction.py), [frontier_direct_yt_extraction.py](../../../scripts/frontier_direct_yt_extraction.py) |
 | Bekenstein-Hawking entropy companion | [BH_ENTROPY_DERIVED_NOTE.md](../../BH_ENTROPY_DERIVED_NOTE.md) | [frontier_bh_entropy_derived.py](../../../scripts/frontier_bh_entropy_derived.py) |
+| BH-entropy RT-ratio Widom no-go (retained support theorem for the bounded BH entropy companion) | [BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md](../../BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md) | [frontier_bh_entropy_rt_ratio_widom.py](../../../scripts/frontier_bh_entropy_rt_ratio_widom.py) |
 | Magnetic-monopole companion | [MONOPOLE_DERIVED_NOTE.md](../../MONOPOLE_DERIVED_NOTE.md) | [frontier_monopole_derived.py](../../../scripts/frontier_monopole_derived.py) |
 | GW echo null companion | [GW_ECHO_NULL_RESULT_NOTE.md](../../GW_ECHO_NULL_RESULT_NOTE.md) | [frontier_echo_null_result.py](../../../scripts/frontier_echo_null_result.py) |
 

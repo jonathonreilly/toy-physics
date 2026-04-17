@@ -1,0 +1,79 @@
+==============================================================================
+RT-RATIO ASYMPTOTIC PROBE
+OBC L x L free-fermion half-filled square lattice
+==============================================================================
+
+2D Widom-Gioev-Klich analytic prediction (NN hopping, half filling,
+straight cut, diamond Fermi surface):
+    c_Widom(2D) = 0.1666666667  (= 1 / 6 exactly)
+    1/4          = 0.2500000000   (current BH lane claim)
+
+3D Widom-Gioev-Klich analytic prediction (cubic lattice, half
+filling, straight cut):
+    c_Widom(3D) = 0.105100  (Monte Carlo, N=4e5)
+
+   L      N  chi_eff  ln(chi)      S_ent   c_direct   RT_ratio dev_1/6_% dev_1/4_%
+----------------------------------------------------------------------------------
+   8     64        8   2.0794     4.0518     0.2436     0.2436    +46.1%     -2.6%  (0.0s)
+  12    144       12   2.4849     7.5373     0.2528     0.2528    +51.7%     +1.1%  (0.0s)
+  16    256       16   2.7726    10.8050     0.2436     0.2436    +46.1%     -2.6%  (0.0s)
+  20    400       20   2.9957    13.4592     0.2246     0.2246    +34.8%    -10.1%  (0.0s)
+  24    576       24   3.1781    17.4293     0.2285     0.2285    +37.1%     -8.6%  (0.0s)
+  28    784       28   3.3322    20.8224     0.2232     0.2232    +33.9%    -10.7%  (0.1s)
+  32   1024       32   3.4657    24.4569     0.2205     0.2205    +32.3%    -11.8%  (0.1s)
+  40   1600       40   3.6889    32.1418     0.2178     0.2178    +30.7%    -12.9%  (0.3s)
+  48   2304       48   3.8712    39.7618     0.2140     0.2140    +28.4%    -14.4%  (1.0s)
+  56   3136       56   4.0254    47.6994     0.2116     0.2116    +27.0%    -15.4%  (2.6s)
+  64   4096       64   4.1589    56.2157     0.2112     0.2112    +26.7%    -15.5%  (9.6s)
+  72   5184       72   4.2767    64.5317     0.2096     0.2096    +25.7%    -16.2%  (14.7s)
+  80   6400       80   4.3820    72.9830     0.2082     0.2082    +24.9%    -16.7%  (45.5s)
+  88   7744       88   4.4773    81.6402     0.2072     0.2072    +24.3%    -17.1%  (51.1s)
+  96   9216       96   4.5643    90.2299     0.2059     0.2059    +23.6%    -17.6%  (105.7s)
+
+Two-parameter fit:  RT(L) = c_inf + a / ln(L)
+
+  [L>=16]: c_inf = 0.155868  a = +0.2271  max_resid = 0.00705
+    dev vs 1/6: -6.48%     dev vs 1/4: -37.65%
+  [L>=20]: c_inf = 0.164598  a = +0.1922  max_resid = 0.00410
+    dev vs 1/6: -1.24%     dev vs 1/4: -34.16%
+  [L>=24]: c_inf = 0.157371  a = +0.2217  max_resid = 0.00137
+    dev vs 1/6: -5.58%     dev vs 1/4: -37.05%
+  [L>=32]: c_inf = 0.160373  a = +0.2092  max_resid = 0.00075
+    dev vs 1/6: -3.78%     dev vs 1/4: -35.85%
+  [L>=40]: c_inf = 0.159270  a = +0.2139  max_resid = 0.00081
+    dev vs 1/6: -4.44%     dev vs 1/4: -36.29%
+  [L>=48]: c_inf = 0.163141  a = +0.1972  max_resid = 0.00065
+    dev vs 1/6: -2.12%     dev vs 1/4: -34.74%
+
+Three-parameter fit:  RT(L) = c_inf + a/ln(L) + b/L
+
+  [L>=16]: c_inf = 0.198392  a = +0.0106  b = +0.6014  max_resid = 0.00735
+    dev vs 1/6: +19.04%     dev vs 1/4: -20.64%
+  [L>=20]: c_inf = 0.117088  a = +0.4381  b = -0.7232  max_resid = 0.00372
+    dev vs 1/6: -29.75%     dev vs 1/4: -53.16%
+  [L>=24]: c_inf = 0.182999  a = +0.0874  b = +0.4144  max_resid = 0.00084
+    dev vs 1/6: +9.80%     dev vs 1/4: -26.80%
+  [L>=32]: c_inf = 0.158017  a = +0.2219  b = -0.0425  max_resid = 0.00077
+    dev vs 1/6: -5.19%     dev vs 1/4: -36.79%
+  [L>=40]: c_inf = 0.181048  a = +0.0951  b = +0.4255  max_resid = 0.00067
+    dev vs 1/6: +8.63%     dev vs 1/4: -27.58%
+========================================================================
+Verdict (primary estimator: 2-parameter RT(L) = c_inf + a/ln(L),
+         tail window L >= 48)
+========================================================================
+  c_inf (L >= 48)  = 0.163141
+  a                = +0.1972 / ln(L)
+  max residual     = 0.000648
+  c_inf - 1/6      = -0.003526  (-2.12%)
+  c_inf - 1/4      = -0.086859  (-34.74%)
+
+  c_inf within 10% of 1/6 (Widom)           : True
+  c_inf outside 20% of 1/4 (current claim)  : True
+
+  => RT ratio asymptote is c_Widom = 1/6, NOT 1/4.
+  => The identification S = A / (4 l_P^2) through the RT
+     bond-dimension ratio on the free-fermion carrier is a
+     finite-L artifact; the asymptote is the Widom-Gioev-
+     Klich constant 1/6.
+
+Probe runtime: 230.7 s
