@@ -1,8 +1,8 @@
 # Gauge-Vacuum Plaquette Scalar-Bridge Support
 
 **Date:** 2026-04-16
-**Status:** exact local/source/class-level support stack plus exact constant-lift obstruction, exact distinct-shell theorem, exact first nonlinear full-vacuum coefficient, exact implicit reduction-law existence/uniqueness theorem, exact nonperturbative susceptibility-flow theorem, exact connected-hierarchy theorem, and exact infinite-hierarchy obstruction; the explicit connected hierarchy at `beta = 6` still remains open
-**Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`, `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py`, `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py`
+**Status:** exact local/source/class-level support stack plus exact constant-lift obstruction, exact distinct-shell theorem, exact first nonlinear full-vacuum coefficient, exact implicit reduction-law existence/uniqueness theorem, exact nonperturbative susceptibility-flow theorem, exact connected-hierarchy theorem, exact infinite-hierarchy obstruction, and exact equivalent spectral generating object; explicit spectral identification at `beta = 6` still remains open
+**Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`, `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py`, `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py`
 
 ## Question
 
@@ -228,12 +228,25 @@ And the new exact infinite-hierarchy obstruction sharpens that one step further:
   truncation and must instead come from an exact nonpolynomial hierarchy
   solution or an equivalent generating object.
 
+And the new exact spectral-measure theorem closes that equivalent
+generating-object side:
+
+- on every finite periodic Wilson `L^4` source surface, the normalized
+  plaquette average defines one compact positive spectral measure on `[-1,1]`;
+- the finite Wilson partition function is exactly the Laplace transform of that
+  measure;
+- `P_L`, `chi_L`, and the full connected hierarchy are exactly its tilted
+  moment/cumulant hierarchy;
+- by Hausdorff moment uniqueness, this spectral measure is the unique exact
+  generating object equivalent to the connected plaquette hierarchy.
+
 ## Remaining gap
 
 The remaining theorem-grade gap is now narrower:
 
-> derive the explicit connected plaquette hierarchy and therefore the
-> explicit nonperturbative form of the now-proved implicit
+> explicitly identify the exact compact plaquette spectral measure
+> (or equivalently its Laplace transform / nonpolynomial connected hierarchy)
+> and therefore the explicit nonperturbative form of the now-proved implicit
 > reduction law
 > `P(beta) = P_1plaq(beta_eff(beta))`
 > at the framework point `beta = 6`,
@@ -258,7 +271,8 @@ Current clean read:
 - exact nonperturbative susceptibility-flow law: closed
 - exact connected-hierarchy law: closed
 - exact finite-order hierarchy-truncation obstruction: closed
-- explicit nonperturbative physical-vacuum reduction at `beta = 6`: still open
+- exact equivalent spectral generating object: closed
+- explicit spectral identification / physical-vacuum reduction at `beta = 6`: still open
 - canonical plaquette on the live package: still `0.5934`
 
 So there is **not** yet a basis for repo-wide numeric migration or for removing
@@ -278,6 +292,7 @@ python3 scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py
 python3 scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py
 python3 scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py
 python3 scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py
+python3 scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py
 ```
 
 Expected summary:
@@ -292,3 +307,4 @@ Expected summary:
 - susceptibility-flow runner: `THEOREM PASS=5 SUPPORT=3 FAIL=0`
 - connected-hierarchy runner: `THEOREM PASS=4 SUPPORT=4 FAIL=0`
 - infinite-hierarchy obstruction runner: `THEOREM PASS=4 SUPPORT=3 FAIL=0`
+- spectral-measure runner: `THEOREM PASS=6 SUPPORT=2 FAIL=0`
