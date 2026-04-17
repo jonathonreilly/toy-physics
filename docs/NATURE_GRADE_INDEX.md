@@ -1,7 +1,7 @@
 # Nature-Grade Index
 
 **Branch:** `claude/main-derived`
-**Updated:** 2026-04-16 (Grind Program Batch 1)
+**Updated:** 2026-04-16 (Grind Program Batch 4)
 
 ## Airtight results on this branch
 
@@ -64,10 +64,30 @@
   V_± decomposes as 2·A_1 ⊕ E; refines total to 5+5+5+5 = 20. Shows
   10 S_3-invariants preserve hw-parity and 10 swap it. 20/20 PASS.
 
+### Batch 4: cube-shift polynomial algebra + S_3 mass-matrix no-go
+
+- **Cube-Shift Polynomial Algebra on C^8**
+  (`CUBE_SHIFT_POLYNOMIAL_ALGEBRA_NOTE.md`) — the polynomial algebra
+  A_S = ⟨I, S_1, S_2, S_3⟩ is abelian, 8-dim with basis the 8
+  squarefree monomials M_T, and coincides with the full algebra of
+  Hadamard-diagonal operators on C^8 (maximal abelian). 8/8 PASS.
+
+- **S_3-Invariant Subalgebra of the Cube-Shift Polynomial Algebra**
+  (`S3_INVARIANT_POLYNOMIAL_SUBALGEBRA_NOTE.md`) — A_S^{S_3} is
+  4-dim with canonical basis {e_0, e_1, e_2, e_3} (elementary
+  symmetric polynomials in the cube-shifts); strictly contained in
+  the 20-dim End(C^8)^{S_3}. 21/21 PASS.
+
+- **S_3 Mass-Matrix No-Go on the Hw=1 Triplet**
+  (`S3_MASS_MATRIX_NO_GO_NOTE.md`) — every S_3-invariant Hermitian
+  operator on the hw=1 triplet has spectrum (α, α, α+β) with at most
+  2 distinct eigenvalues; SSB S_3 → Z_2 expands the allowed space
+  from 2 to 5 real dimensions. 13/13 PASS.
+
 ## Totals
 
 ```
-1010 total verification checks, 0 failures
+1052 total verification checks, 0 failures
 ```
 
 ## Reviewer workflow
@@ -91,6 +111,11 @@ python3 scripts/frontier_hw_parity_conservation.py
 python3 scripts/frontier_s3_invariant_operator_dimension.py
 python3 scripts/frontier_hadamard_s3_composition.py
 python3 scripts/frontier_s3_hw_parity_block_decomposition.py
+
+# Batch 4
+python3 scripts/frontier_cube_shift_polynomial_algebra.py
+python3 scripts/frontier_s3_invariant_polynomial_subalgebra.py
+python3 scripts/frontier_s3_mass_matrix_no_go.py
 ```
 
 Each exits 0 on success, nonzero on failure. Each prints a TOTAL

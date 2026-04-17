@@ -1,0 +1,61 @@
+# Cube-Shift Polynomial Algebra on C^8
+
+**Status:** airtight (Grind Program, Batch 4)
+**Runner:** `scripts/frontier_cube_shift_polynomial_algebra.py` (8/8 PASS)
+
+## Framework object
+
+The three cube-shift operators S_1, S_2, S_3 on C^8 = (C^2)^⊗3 (defined
+in the Cube-Shift Joint-Eigenstructure note) generate an associative
+subalgebra
+
+    A_S := ⟨ I, S_1, S_2, S_3 ⟩  ⊂  End(C^8).
+
+## Theorem
+
+1. A_S is abelian: [S_i, S_j] = 0 for all i, j.
+2. A_S admits a basis of the eight squarefree monomials
+
+       { M_T := ∏_{i ∈ T} S_i  :  T ⊆ {1, 2, 3} }
+
+   (with M_∅ = I). Higher-degree products reduce to squarefree form
+   via S_i² = I, so dim_C A_S = 8.
+3. In the Hadamard basis { |ψ_s⟩ : s ∈ {±1}^3 } each M_T is diagonal
+   with eigenvalue
+
+       M_T |ψ_s⟩ = ( ∏_{i ∈ T} s_i ) |ψ_s⟩.
+
+   The map T ↦ χ_T ( s ↦ ∏_{i ∈ T} s_i ) is a bijection between
+   subsets of {1,2,3} and characters of Z_2^3.
+4. A_S coincides with the full algebra of operators diagonal in the
+   Hadamard basis. In particular A_S is a maximal abelian subalgebra
+   of End(C^8), of dimension 8 = dim of the maximal torus in U(8)
+   when restricted to the Hadamard frame.
+
+## Proof sketch
+
+Parts (1)–(2) follow from the commuting involution relations
+S_i² = I and [S_i, S_j] = 0, which are immediate from the Pauli
+algebra on each factor. Part (3) is Z_2^3 character theory: the
+Hadamard vectors are joint eigenvectors of the S_i with eigenvalues
+s_i, so monomial eigenvalues are products of the s_i. Part (4) is
+discrete Fourier / Hadamard inversion on Z_2^3: any function
+d : {±1}^3 → C has a unique expansion d(s) = Σ_T c_T χ_T(s), so
+any Hadamard-diagonal operator is a unique C-linear combination of
+the M_T.
+
+## Verification
+
+The runner enumerates the eight M_T explicitly, checks they are
+linearly independent in End(C^8) (rank 8 in the 64-dim flattened
+space), verifies pairwise commutativity (28 pairs), spot-checks the
+reduction relations, and reconstructs a random Hadamard-diagonal
+operator from the M_T to machine precision.
+
+## Reusability
+
+- Identifies the canonical diagonal-in-Hadamard-basis subalgebra.
+- Used as a stepping stone for the S_3-Invariant Polynomial Subalgebra
+  Theorem (Batch 4), which cuts A_S down to its S_3-fixed part.
+- Foundation for any framework claim of the form "observable O is a
+  function of the cube-shifts" — such an O lies in A_S.
