@@ -1,8 +1,8 @@
 # Gauge-Vacuum Plaquette Perron/Jacobi Underdetermination
 
 **Date:** 2026-04-17
-**Status:** exact obstruction theorem on the current plaquette operator stack;
-explicit `beta = 6` Perron / Jacobi data still not forced
+**Status:** exact obstruction theorem inside the now-explicit factorized
+source-sector transfer class; explicit `beta = 6` Perron / Jacobi data still not forced
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_perron_jacobi_underdetermination.py`
 
 ## Question
@@ -20,15 +20,17 @@ The live stack now closes:
 - the explicit source operator `J`,
 - the exact transfer-operator / character-recurrence realization,
 - the exact Perron-state reduction,
-- the conjugation-symmetry reduction of the Perron state.
+- the conjugation-symmetry reduction of the Perron state,
+- and the exact source-sector matrix-element factorization law
+  `T_src(6) = exp(3 J) D_6 exp(3 J)`.
 
 But those facts do **not** yet determine the explicit `beta = 6` Perron moments
 or Jacobi coefficients.
 
-There exist distinct positive self-adjoint symmetry-preserving transfer
-generators on the same explicit source sector which all satisfy the currently
-closed structural boundary but induce different Perron moments and therefore
-different Jacobi data for the same operator `J`.
+Even inside the new exact factorized class, distinct positive
+conjugation-symmetric diagonal coefficient sequences `D_6` can still induce
+different Perron moments and therefore different Jacobi data for the same
+explicit source operator `J`.
 
 So the current exact stack still does **not** force the explicit framework-point
 Jacobi coefficients.
@@ -42,15 +44,22 @@ character-recurrence theorem.
 Let `S` be the exact conjugation-symmetry involution `(p,q) <-> (q,p)` on the
 dominant-weight basis.
 
-Consider positive self-adjoint transfer operators of the form
+From the exact source-sector matrix-element factorization theorem already on
+`main`, every admissible `beta = 6` source-sector transfer operator has the
+form
 
-`T = exp(6 H)`
+`T_src(6) = M D_6 M`,
+
+with
+
+`M = exp(3 J)`,
 
 with:
 
-- `H = H^*`,
-- strictly positive off-diagonal connectivity on the accepted source graph,
-- `S H = H S`.
+- `M = M^* > 0`,
+- `D_6` diagonal in the character basis,
+- `D_6 > 0`,
+- `S D_6 = D_6 S`.
 
 Every such `T` satisfies the same structural boundary now closed on `main`:
 
@@ -58,26 +67,27 @@ Every such `T` satisfies the same structural boundary now closed on `main`:
 - one simple strictly positive Perron state,
 - Perron-state symmetry reduction under `S`.
 
-## Theorem 1: the current structural boundary does not determine a unique transfer generator
+## Theorem 1: the current exact factorized class does not determine a unique diagonal coefficient sequence
 
-Choose two distinct symmetry-preserving self-adjoint source generators
+Choose two distinct positive conjugation-symmetric diagonal coefficient
+sequences
 
-`H_A != H_B`
+`D_A != D_B`
 
-on the same explicit source sector, both with positive off-diagonal support on
-the accepted source graph and both commuting with `S`.
+on the same explicit source sector.
 
 Then
 
-`T_A = exp(6 H_A)`,
-`T_B = exp(6 H_B)`
+`T_A = M D_A M`,
+`T_B = M D_B M`
 
 are both positivity-improving self-adjoint transfer operators with unique
 strictly positive Perron states `psi_A`, `psi_B`.
 
-Both lie inside the current exact operator boundary already closed on `main`.
+Both lie inside the current exact factorized source-sector boundary already
+closed on `main`.
 
-## Theorem 2: distinct admissible generators can induce distinct Perron moments for the same source operator
+## Theorem 2: distinct admissible diagonal coefficient sequences can induce distinct Perron moments for the same source operator
 
 For the same explicit plaquette source operator `J`, define the Perron moments
 
@@ -87,7 +97,8 @@ For the same explicit plaquette source operator `J`, define the Perron moments
 Because `psi_A` and `psi_B` need not coincide, these moment sequences need not
 coincide either.
 
-The runner exhibits two explicit admissible symmetry-preserving generators with
+The runner exhibits two explicit admissible positive diagonal coefficient
+sequences with
 
 `m_1^(A) != m_1^(B)`
 
@@ -117,7 +128,8 @@ Therefore:
   current stack
 - exact clarification of what new theorem object is actually needed next:
   the explicit `beta = 6` transfer generator / matrix elements on the
-  source-cyclic sector, or an equivalent exact Perron eigenvector construction
+  source-cyclic factorized operator, or an equivalent exact Perron
+  eigenvector construction
 
 ## What this does not close
 

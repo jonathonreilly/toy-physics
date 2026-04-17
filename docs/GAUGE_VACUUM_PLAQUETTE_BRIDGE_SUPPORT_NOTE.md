@@ -1,8 +1,8 @@
 # Gauge-Vacuum Plaquette Scalar-Bridge Support
 
 **Date:** 2026-04-16
-**Status:** exact local/source/class-level support stack plus exact constant-lift obstruction, exact distinct-shell theorem, exact first nonlinear full-vacuum coefficient, exact implicit reduction-law existence/uniqueness theorem, exact nonperturbative susceptibility-flow theorem, exact connected-hierarchy theorem, exact infinite-hierarchy obstruction, exact equivalent spectral generating object, exact framework-point underdetermination theorem, exact transfer-operator / character-recurrence realization, exact Perron-state reduction theorem, and exact Perron/Jacobi underdetermination theorem; explicit `beta = 6` transfer generator / source-sector matrix elements remain open
-**Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`, `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py`, `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_framework_point_underdetermination.py`, `scripts/frontier_gauge_vacuum_plaquette_transfer_operator_character_recurrence.py`, `scripts/frontier_gauge_vacuum_plaquette_perron_reduction_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_perron_jacobi_underdetermination.py`
+**Status:** exact local/source/class-level support stack plus exact constant-lift obstruction, exact distinct-shell theorem, exact first nonlinear full-vacuum coefficient, exact implicit reduction-law existence/uniqueness theorem, exact nonperturbative susceptibility-flow theorem, exact connected-hierarchy theorem, exact infinite-hierarchy obstruction, exact equivalent spectral generating object, exact framework-point underdetermination theorem, exact transfer-operator / character-recurrence realization, exact Perron-state reduction theorem, exact source-sector matrix-element factorization theorem, and exact Perron/Jacobi underdetermination theorem inside that narrowed factorized class; the remaining open object is the exact positive diagonal mixed-kernel character-coefficient sequence `kappa_(p,q)(6)` and its Perron data
+**Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`, `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py`, `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_framework_point_underdetermination.py`, `scripts/frontier_gauge_vacuum_plaquette_transfer_operator_character_recurrence.py`, `scripts/frontier_gauge_vacuum_plaquette_perron_reduction_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_source_sector_matrix_element_factorization.py`, `scripts/frontier_gauge_vacuum_plaquette_perron_jacobi_underdetermination.py`
 
 ## Question
 
@@ -42,13 +42,17 @@ force the slope to be
 
 `[(3/2) (2 / sqrt(3))^(1/4)] / 18`.
 
-So the remaining open object is not a generic missing lift anymore. It is now a
-still narrower target:
+So the remaining open object is not a generic missing lift anymore. The live
+stack now closes the connected hierarchy, the spectral generating object, the
+operator realization, the Perron reduction, and the exact factorized
+source-sector matrix law. The still narrower target is now:
 
-> derive the explicit connected plaquette hierarchy at the framework point
-> `beta = 6`, whose first projection is the connected Wilson susceptibility
-> profile and whose closure would close the explicit nonperturbative reduction
-> law.
+> identify the exact positive diagonal mixed-kernel character-coefficient
+> sequence `kappa_(p,q)(6)` in
+> `T_src(6) = exp(3 J) D_6 exp(3 J)`,
+> equivalently the exact Perron state / moments of that factorized operator,
+> and thereby the explicit nonperturbative reduction law at the framework point
+> `beta = 6`.
 
 ## Exact support piece 1: local Wilson source-response
 
@@ -273,42 +277,58 @@ further:
 - the large-derived-time plaquette measure is exactly the spectral measure of
   the explicit source operator `J` in that Perron state.
 
-And the new exact Perron/Jacobi underdetermination theorem closes the next
+And the new exact source-sector matrix-element factorization theorem closes the
+next constructive step:
+
+- the exact marked half-slice multiplier on the source sector is `exp(3 J)` at
+  the framework point `beta = 6`;
+- the exact compressed mixed-kernel operator on the marked-plaquette
+  class-function sector is central and therefore diagonal in the `SU(3)`
+  character basis:
+  `D_6 chi_(p,q) = kappa_(p,q)(6) chi_(p,q)`;
+- the exact `beta = 6` source-sector transfer matrix elements are therefore
+  explicit:
+  `T_src(6) = exp(3 J) D_6 exp(3 J)`.
+
+And the updated exact Perron/Jacobi underdetermination theorem closes the next
 review question too:
 
 - the explicit source operator `J`,
 - the exact transfer-operator / character-recurrence realization,
 - the exact Perron-state reduction,
+- the exact source-sector matrix-element factorization,
 - and the exact conjugation-symmetry reduction of the Perron state
 
 still do **not** force unique `beta = 6` Perron moments or symmetry-reduced
 Jacobi coefficients;
-- distinct admissible symmetry-preserving positive transfer generators on the
-  same explicit source sector can still induce different Perron measures for
-  the same `J`.
+- even inside the now-explicit factorized class
+  `T_src(6) = exp(3 J) D_6 exp(3 J)`, distinct admissible positive
+  conjugation-symmetric diagonal coefficient sequences `D_6` can still induce
+  different Perron measures for the same `J`.
 
 So the remaining gap is now no longer abstract generating-object existence, no
 longer operator-level realization, and no longer just “find Perron/Jacobi
 data.” It is:
 
-- the explicit `beta = 6` transfer generator / source-sector matrix elements,
-- equivalently an exact `beta = 6` Perron eigenvector construction on that
-  now-explicit recurrence operator.
+- the explicit positive diagonal mixed-kernel character-coefficient sequence
+  `kappa_(p,q)(6)`,
+- equivalently an exact `beta = 6` Perron eigenvector construction for the
+  now-explicit factorized operator `exp(3 J) D_6 exp(3 J)`.
 
 ## Remaining gap
 
 The remaining theorem-grade gap is now narrower:
 
-> explicitly identify the exact compact plaquette spectral measure
-> (or equivalently its Laplace transform / nonpolynomial connected hierarchy)
-> and therefore the explicit nonperturbative form of the now-proved implicit
+> explicitly identify the exact positive diagonal mixed-kernel
+> character-coefficient sequence `kappa_(p,q)(6)` on the now-explicit
+> factorized source sector
+> `T_src(6) = exp(3 J) D_6 exp(3 J)`,
+> equivalently the exact Perron eigenvector / spectral measure of that
+> factorized operator,
+> and thereby the explicit nonperturbative form of the already-proved implicit
 > reduction law
 > `P(beta) = P_1plaq(beta_eff(beta))`
-> at the framework point `beta = 6`,
-> beyond its now-closed onset
-> `beta_eff(beta) = beta + beta^5 / 26244 + O(beta^6)`,
-> by closing the exact `beta = 6` transfer generator / source-sector matrix
-> elements or an equivalent exact Perron eigenvector construction.
+> at the framework point `beta = 6`.
 
 Until that step is closed, the live package should keep the plaquette as:
 
@@ -331,8 +351,9 @@ Current clean read:
 - exact equivalent spectral generating object: closed
 - exact transfer-operator / character-recurrence realization: closed
 - exact Perron-state reduction: closed
-- exact Perron/Jacobi underdetermination on the current operator stack: closed
-- explicit `beta = 6` transfer generator / physical-vacuum reduction: still open
+- exact source-sector matrix-element factorization at `beta = 6`: closed
+- exact Perron/Jacobi underdetermination inside that factorized class: closed
+- explicit `kappa_(p,q)(6)` / physical-vacuum reduction: still open
 - canonical plaquette on the live package: still `0.5934`
 
 So there is **not** yet a basis for repo-wide numeric migration or for removing
@@ -354,6 +375,7 @@ python3 scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py
 python3 scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py
 python3 scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py
 python3 scripts/frontier_gauge_vacuum_plaquette_perron_reduction_theorem.py
+python3 scripts/frontier_gauge_vacuum_plaquette_source_sector_matrix_element_factorization.py
 python3 scripts/frontier_gauge_vacuum_plaquette_perron_jacobi_underdetermination.py
 ```
 
@@ -371,4 +393,5 @@ Expected summary:
 - infinite-hierarchy obstruction runner: `THEOREM PASS=4 SUPPORT=3 FAIL=0`
 - spectral-measure runner: `THEOREM PASS=6 SUPPORT=2 FAIL=0`
 - Perron-reduction runner: `THEOREM PASS=5 SUPPORT=3 FAIL=0`
+- source-sector matrix-element factorization runner: `THEOREM PASS=4 SUPPORT=3 FAIL=0`
 - Perron/Jacobi underdetermination runner: `THEOREM PASS=4 SUPPORT=3 FAIL=0`

@@ -2,10 +2,11 @@
 """
 Current plaquette operator stack does not yet force unique Perron/Jacobi data.
 
-This is the next honest obstruction theorem after Perron reduction:
-the explicit source operator J plus symmetry-preserving Perron reduction still
-do not determine the beta=6 Perron moments or Jacobi coefficients until the
-transfer generator itself is made explicit.
+This is the narrowed obstruction theorem after source-sector matrix-element
+factorization:
+the explicit source operator J plus the exact factorized source-sector class
+still do not determine the beta=6 Perron moments or Jacobi coefficients until
+the diagonal mixed-kernel coefficient sequence is fixed.
 """
 
 from __future__ import annotations
@@ -117,12 +118,11 @@ def main() -> int:
     jmat, weights, index = build_recurrence_matrix(NMAX)
     swap = conjugation_swap_matrix(weights, index)
 
-    diag_a = np.diag([0.16 * (p + q) + 0.02 * ((p - q) ** 2) for p, q in weights])
-    diag_b = np.diag([0.09 * (p + q) + 0.07 * ((p - q) ** 2) for p, q in weights])
-    h_a = jmat + diag_a
-    h_b = jmat + diag_b
-    t_a = matrix_exponential_symmetric(h_a, TAU)
-    t_b = matrix_exponential_symmetric(h_b, TAU)
+    multiplier = matrix_exponential_symmetric(jmat, TAU / 2.0)
+    d_a = np.diag([np.exp(-0.34 * (p + q) - 0.04 * ((p - q) ** 2)) for p, q in weights])
+    d_b = np.diag([np.exp(-0.25 * (p + q) - 0.11 * ((p - q) ** 2)) for p, q in weights])
+    t_a = multiplier @ d_a @ multiplier
+    t_b = multiplier @ d_b @ multiplier
 
     lam_a, psi_a = dominant_eigenpair(t_a)
     lam_b, psi_b = dominant_eigenpair(t_b)
@@ -137,8 +137,8 @@ def main() -> int:
     diff_alpha0 = abs(al_a[0] - al_b[0])
     diff_beta1 = abs(be_a[0] - be_b[0]) if be_a and be_b else 0.0
 
-    sym_a = float(np.max(np.abs(swap @ h_a - h_a @ swap)))
-    sym_b = float(np.max(np.abs(swap @ h_b - h_b @ swap)))
+    sym_a = float(np.max(np.abs(swap @ d_a - d_a @ swap)))
+    sym_b = float(np.max(np.abs(swap @ d_b - d_b @ swap)))
     inv_a = float(np.linalg.norm(swap @ psi_a - psi_a))
     inv_b = float(np.linalg.norm(swap @ psi_b - psi_b))
     min_entry_a = float(np.min(t_a))
@@ -150,11 +150,11 @@ def main() -> int:
     print("GAUGE-VACUUM PLAQUETTE PERRON/JACOBI UNDERDETERMINATION")
     print("=" * 78)
     print()
-    print("Two admissible symmetry-preserving transfer generators on the same explicit source sector")
+    print("Two admissible diagonal mixed-kernel coefficient sequences in the same explicit factorized source-sector class")
     print(f"  box size                              = {(NMAX + 1)} x {(NMAX + 1)} = {len(weights)} states")
     print(f"  tau                                   = {TAU:.1f}")
-    print(f"  H_A symmetry error                    = {sym_a:.3e}")
-    print(f"  H_B symmetry error                    = {sym_b:.3e}")
+    print(f"  D_A symmetry error                    = {sym_a:.3e}")
+    print(f"  D_B symmetry error                    = {sym_b:.3e}")
     print(f"  T_A min entry / Perron floor          = {min_entry_a:.6e} / {floor_a:.6e}")
     print(f"  T_B min entry / Perron floor          = {min_entry_b:.6e} / {floor_b:.6e}")
     print()
@@ -172,7 +172,7 @@ def main() -> int:
     print()
 
     check(
-        "the current structural boundary admits multiple symmetry-preserving positive transfer generators",
+        "the exact factorized source-sector class admits multiple positive conjugation-symmetric diagonal coefficient sequences",
         sym_a < 1.0e-12 and sym_b < 1.0e-12 and min_entry_a > 0.0 and min_entry_b > 0.0,
         detail=f"min entries=({min_entry_a:.3e}, {min_entry_b:.3e})",
     )
@@ -182,12 +182,12 @@ def main() -> int:
         detail=f"Perron floors=({floor_a:.3e}, {floor_b:.3e})",
     )
     check(
-        "distinct admissible generators can induce different Perron moments for the same explicit source operator",
+        "distinct admissible diagonal coefficient sequences can induce different Perron moments for the same explicit source operator",
         diff_m1 > 1.0e-4 and diff_m2 > 1.0e-4,
         detail=f"moment gaps=(m1:{diff_m1:.3e}, m2:{diff_m2:.3e})",
     )
     check(
-        "the symmetry-reduced Jacobi coefficients are therefore not yet forced by the current stack",
+        "the symmetry-reduced Jacobi coefficients are therefore not yet forced even inside the exact factorized class",
         diff_alpha0 > 1.0e-4 and diff_beta1 > 1.0e-4,
         detail=f"Jacobi gaps=(alpha0:{diff_alpha0:.3e}, beta1:{diff_beta1:.3e})",
     )
@@ -205,7 +205,7 @@ def main() -> int:
         bucket="SUPPORT",
     )
     check(
-        "the obstruction is not infinitesimal on the sampled source sector",
+        "the obstruction is not infinitesimal on the sampled factorized source sector",
         diff_m1 > 1.0e-2 and diff_alpha0 > 1.0e-2,
         detail=f"representative gaps=(m1:{diff_m1:.3e}, alpha0:{diff_alpha0:.3e})",
         bucket="SUPPORT",

@@ -1,9 +1,0 @@
-Born rule (3-slit I₃) on DAG — normalized variants (3 seeds averaged)
-
-         raw dy² β=0.5: |I₃|/P = 5.48e-17  PASS
-          slope² β=2.0: |I₃|/P = 9.64e-17  PASS
-          angle² β=2.0: |I₃|/P = 1.62e-16  PASS
-         turning β=2.0: |I₃|/P = 1.42e-16  PASS
-
-All pass at machine precision. The geometric weight is a multiplicative
-amplitude factor → preserves path-sum linearity → Born rule holds.

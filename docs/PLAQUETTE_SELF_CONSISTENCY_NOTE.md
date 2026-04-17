@@ -105,9 +105,11 @@ The live repo now also carries a materially stronger exact support stack:
 - exact transfer-operator / character-recurrence realization of the plaquette
   generating object on the accepted `3+1` source surface
 - exact Perron-state reduction theorem on the explicit transfer operator
-- exact Perron/Jacobi underdetermination theorem showing that the current
-  operator stack still does not force unique `beta = 6` Perron moments or
-  Jacobi coefficients
+- exact source-sector matrix-element factorization theorem at `beta = 6`
+- exact Perron/Jacobi underdetermination theorem showing that even the
+  narrowed factorized operator class still does not force unique `beta = 6`
+  Perron moments or Jacobi coefficients until the positive diagonal
+  mixed-kernel character-coefficient sequence is fixed
 - exact scalar `3+1` bridge endpoint ratio
   `A_inf / A_2 = 2 / sqrt(3)`
 - exact plaquette four-link coupling map
@@ -137,6 +139,7 @@ Current authorities for that support stack:
 - [GAUGE_VACUUM_PLAQUETTE_FRAMEWORK_POINT_UNDERDETERMINATION_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_FRAMEWORK_POINT_UNDERDETERMINATION_NOTE.md)
 - [GAUGE_VACUUM_PLAQUETTE_TRANSFER_OPERATOR_CHARACTER_RECURRENCE_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_TRANSFER_OPERATOR_CHARACTER_RECURRENCE_NOTE.md)
 - [GAUGE_VACUUM_PLAQUETTE_PERRON_REDUCTION_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_PERRON_REDUCTION_THEOREM_NOTE.md)
+- [GAUGE_VACUUM_PLAQUETTE_SOURCE_SECTOR_MATRIX_ELEMENT_FACTORIZATION_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_SOURCE_SECTOR_MATRIX_ELEMENT_FACTORIZATION_NOTE.md)
 - [GAUGE_VACUUM_PLAQUETTE_PERRON_JACOBI_UNDERDETERMINATION_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_PERRON_JACOBI_UNDERDETERMINATION_NOTE.md)
 - [GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md](./GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md)
 - [GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md)
@@ -155,6 +158,7 @@ Current support runners:
 - `scripts/frontier_gauge_vacuum_plaquette_framework_point_underdetermination.py`
 - `scripts/frontier_gauge_vacuum_plaquette_transfer_operator_character_recurrence.py`
 - `scripts/frontier_gauge_vacuum_plaquette_perron_reduction_theorem.py`
+- `scripts/frontier_gauge_vacuum_plaquette_source_sector_matrix_element_factorization.py`
 - `scripts/frontier_gauge_vacuum_plaquette_perron_jacobi_underdetermination.py`
 - `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`
 - `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`
@@ -183,13 +187,17 @@ The honest live read is now sharper than before:
 - the plaquette generating object is now also explicit at the operator level:
   one positive one-clock Wilson transfer operator plus one exact self-adjoint
   `SU(3)` character-recurrence source operator
-- so the remaining analytic target is explicit identification of that
-  `beta = 6` transfer state on the now-explicit recurrence operator and
-  therefore the explicit nonperturbative form of that reduction law at
-  `beta = 6`, not the old constant-lift ansatz, not the onset coefficient,
-  and not reduction-law existence, transport, hierarchy identification,
-  generating-object existence, operator realization, or the finite-jet
-  underdetermination question itself
+- the exact `beta = 6` source-sector transfer matrix elements are now also
+  explicit in factorized form:
+  `T_src(6) = exp(3 J) D_6 exp(3 J)`
+- so the remaining analytic target is explicit identification of the positive
+  diagonal mixed-kernel character-coefficient sequence `D_6`, equivalently the
+  exact Perron state of that factorized operator, and therefore the explicit
+  nonperturbative form of the reduction law at `beta = 6`, not the old
+  constant-lift ansatz, not the onset coefficient, and not reduction-law
+  existence, transport, hierarchy identification, generating-object existence,
+  operator realization, or the broad operator-level underdetermination question
+  itself
 
 ## Safe Reuse Rule
 
