@@ -1,8 +1,8 @@
 # Gauge-Vacuum Plaquette Scalar-Bridge Support
 
 **Date:** 2026-04-16
-**Status:** exact local/source/class-level support stack plus exact constant-lift obstruction, exact distinct-shell theorem, exact first nonlinear full-vacuum coefficient, exact implicit reduction-law existence/uniqueness theorem, and exact nonperturbative susceptibility-flow theorem; the explicit connected Wilson susceptibility profile at `beta = 6` still remains open
-**Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`, `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py`, `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py`
+**Status:** exact local/source/class-level support stack plus exact constant-lift obstruction, exact distinct-shell theorem, exact first nonlinear full-vacuum coefficient, exact implicit reduction-law existence/uniqueness theorem, exact nonperturbative susceptibility-flow theorem, and exact connected-hierarchy theorem; the explicit connected hierarchy at `beta = 6` still remains open
+**Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`, `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py`, `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py`
 
 ## Question
 
@@ -45,9 +45,10 @@ force the slope to be
 So the remaining open object is not a generic missing lift anymore. It is now a
 still narrower target:
 
-> derive the explicit connected Wilson plaquette susceptibility profile at the
-> framework point `beta = 6`, which would close the explicit nonperturbative
-> reduction law.
+> derive the explicit connected plaquette hierarchy at the framework point
+> `beta = 6`, whose first projection is the connected Wilson susceptibility
+> profile and whose closure would close the explicit nonperturbative reduction
+> law.
 
 ## Exact support piece 1: local Wilson source-response
 
@@ -206,11 +207,22 @@ again:
 - the first nonlocal susceptibility correction is exact:
   `chi_L(beta) - chi_1plaq(beta) = 5 beta^4 / 472392 + O(beta^5)`.
 
+And the new exact connected-hierarchy theorem sharpens the structural picture
+one step further:
+
+- `chi_L(beta)` is exactly the shell-summed connected two-point plaquette field
+  `sum_r C_2(p_0, r; beta)`;
+- `chi_L'(beta)` is exactly the shell-summed connected three-point field
+  `sum_(r,s) C_3(p_0, r, s; beta)`;
+- more generally,
+  `d/d beta C_n = sum_r C_(n+1)`, so explicit nonperturbative closure requires
+  the connected plaquette hierarchy rather than one remaining scalar input.
+
 ## Remaining gap
 
 The remaining theorem-grade gap is now narrower:
 
-> derive the explicit connected Wilson susceptibility profile and therefore the
+> derive the explicit connected plaquette hierarchy and therefore the
 > explicit nonperturbative form of the now-proved implicit
 > reduction law
 > `P(beta) = P_1plaq(beta_eff(beta))`
@@ -234,6 +246,7 @@ Current clean read:
 - exact first nonlinear full-vacuum coefficient: closed
 - exact implicit finite-surface reduction-law existence/uniqueness: closed
 - exact nonperturbative susceptibility-flow law: closed
+- exact connected-hierarchy law: closed
 - explicit nonperturbative physical-vacuum reduction at `beta = 6`: still open
 - canonical plaquette on the live package: still `0.5934`
 
@@ -252,6 +265,7 @@ python3 scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py
 python3 scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py
 python3 scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py
 python3 scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py
+python3 scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py
 ```
 
 Expected summary:
@@ -264,3 +278,4 @@ Expected summary:
 - mixed-cumulant audit runner: `THEOREM PASS=6 SUPPORT=1 FAIL=0`
 - reduction-existence runner: `THEOREM PASS=4 SUPPORT=4 FAIL=0`
 - susceptibility-flow runner: `THEOREM PASS=5 SUPPORT=3 FAIL=0`
+- connected-hierarchy runner: `THEOREM PASS=4 SUPPORT=4 FAIL=0`
