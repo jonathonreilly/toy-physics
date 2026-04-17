@@ -34,6 +34,34 @@ One mechanical issue also still remains on the current tip:
   instead of the live
   `DM_NEUTRINO_SOURCE_SURFACE_PERTURBATIVE_UNIQUENESS_THEOREM_NOTE_2026-04-17.md`.
 
+## Update After Current Check (`c01521a1`)
+
+I re-checked the current remote tip `c01521a1`.
+
+Result: **still no material review change**.
+
+This is still not a new science delta. Relative to the previously reviewed
+science tip `7f6abe4a`, the new commit is note-polish only. It fixes the
+earlier stale cross-reference to the perturbative-uniqueness note, but it does
+not change the claim-bearing science. The current science-facing notes still
+carry the same unresolved blockers:
+
+- the flagship closure note still headlines the gate as CLOSED even though the
+  load-bearing PMNS route remains conditional on `q_H = 0`, the observational
+  hierarchy pairing `sigma = (2,1,0)`, and the upper-octant condition;
+- the Schur-baseline lane still upgrades “any commuting baseline is scalar” to
+  “the physical zero-source baseline is scalar” without a retained theorem
+  proving that the physical baseline must commute with the full retained
+  algebra;
+- the perturbative-uniqueness lane still states uniqueness through the weaker
+  scale cutoff `||J|| <= ||H_base||` after explicitly documenting that the
+  stronger Taylor-convergence condition `rho(H_base^{-1} J) < 1` fails at all
+  three in-chamber basins;
+- the branch still does not route any “flagship gate CLOSED” claim through the
+  publication package surfaces.
+
+So the operative verdict remains: **do not merge as-is**.
+
 ## What Must Be True For A "Closed" Resubmission
 
 ### 1. Split out the unrelated plaquette edits
@@ -139,11 +167,6 @@ Safe fallback wording is:
 
 ## Mechanical Cleanup Needed On Resubmission
 
-- update stale links from
-  `SELECTOR_PHYSICIST_J_PERTURBATIVE_UNIQUENESS_NOTE_2026-04-17.md`
-  to
-  `DM_NEUTRINO_SOURCE_SURFACE_PERTURBATIVE_UNIQUENESS_THEOREM_NOTE_2026-04-17.md`
-  in the PMNS closure note.
 - keep package surfaces aligned with whichever claim boundary you choose; do not
   leave the omnibus, PMNS note, and companion tightening note at different
   strength levels.
