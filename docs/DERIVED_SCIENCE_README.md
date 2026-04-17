@@ -16,6 +16,40 @@ scope bridges, no imported formulas.
   Note: `KR_A1_VANISHING_DERIVED_NOTE.md`
   Runner: `frontier_KR_A1_vanishing_proof.py` (30/30 PASS)
 
+## Batch 2: S_3 / axis-permutation + parity structure
+
+Three new reusable theorems strengthening the algebraic toolkit.
+
+### 5. C₃[111] Cyclic-Permutation Action on All BZ Corners
+
+The axis-cycle unitary on C^8 has U³ = I; its orbit structure on the
+computational basis is 1 + 3 + 3 + 1, with two 3-cycles (hw=1 and hw=2)
+and two fixed points (hw=0 and hw=3). Extends main's hw=1 observable
+theorem to the full taste cube.
+
+- Note: `C3_CYCLIC_ACTION_BZ_CORNERS_NOTE.md`
+- Runner: `frontier_c3_cyclic_action_bz_corners.py` (32/32 PASS)
+
+### 6. S₃ Axis-Permutation Decomposition of the Taste Cube
+
+S_3 acts on C^8 with hw-orbit structure 1 + 3 + 3 + 1. As an S_3
+representation, C^8 ≅ 4·A_1 ⊕ 2·E (no sign-irrep A_2 appears).
+Each 3-dim sector (hw=1, hw=2) carries the standard permutation
+representation A_1 ⊕ E.
+
+- Note: `S3_TASTE_CUBE_DECOMPOSITION_NOTE.md`
+- Runner: `frontier_s3_action_taste_cube_decomposition.py` (57/57 PASS)
+
+### 7. Hamming-Weight Parity Conservation
+
+Even-order polynomials in site-phase operators P_μ preserve the
+hw-parity decomposition C^8_{BZ} = C^4_{even-hw} ⊕ C^4_{odd-hw};
+odd-order polynomials swap the two subspaces. Explicit parity
+projectors Π_± = (1 ± T_1 T_2 T_3) / 2.
+
+- Note: `HW_PARITY_CONSERVATION_NOTE.md`
+- Runner: `frontier_hw_parity_conservation.py` (68/68 PASS)
+
 ## Batch 1: cube-shift and BZ-corner foundational algebra
 
 Four small reusable theorems establishing the canonical bridge
@@ -61,16 +95,24 @@ lattice arguments.
 - Note: `SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md`
 - Runner: `frontier_site_phase_cube_shift_intertwiner.py` (60/60 PASS)
 
-## Batch 1 total verification
+## All-batch verification
 
 ```bash
+# Standing
+python3 scripts/frontier_KR_A1_vanishing_proof.py                # PASS=30
+
+# Batch 1
 python3 scripts/frontier_cube_shift_joint_eigenstructure.py      # PASS=69
 python3 scripts/frontier_translation_eigenvalue_bz_corners.py    # PASS=70
 python3 scripts/frontier_hamming_distance_selection_rule.py      # PASS=473
 python3 scripts/frontier_site_phase_cube_shift_intertwiner.py    # PASS=60
-python3 scripts/frontier_KR_A1_vanishing_proof.py                # PASS=30
 
-# Total: 702 PASS, 0 FAIL
+# Batch 2
+python3 scripts/frontier_c3_cyclic_action_bz_corners.py          # PASS=32
+python3 scripts/frontier_s3_action_taste_cube_decomposition.py   # PASS=57
+python3 scripts/frontier_hw_parity_conservation.py               # PASS=68
+
+# Total: 859 PASS, 0 FAIL
 ```
 
 ## Grind program philosophy

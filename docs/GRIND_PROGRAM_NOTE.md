@@ -67,6 +67,29 @@ hierarchy, gauge structure, confinement, etc.).
   Note: `SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md`
   Runner: `frontier_site_phase_cube_shift_intertwiner.py` (60/60 PASS)
 
+### Batch 2: S_3 / axis-permutation + parity structure
+
+- **C₃[111] Cyclic-Permutation Action on All BZ Corners** — the axis
+  cycle unitary U on C^8 has U³ = I; orbit structure 1 + 3 + 3 + 1
+  (two fixed points, two 3-cycles); U S_μ U⁻¹ = S_{cyclic(μ)}.
+  Extends main's hw=1 cycle to the full taste cube.
+  Note: `C3_CYCLIC_ACTION_BZ_CORNERS_NOTE.md`
+  Runner: `frontier_c3_cyclic_action_bz_corners.py` (32/32 PASS)
+
+- **S₃ Axis-Permutation Decomposition of the Taste Cube** — C^8 ≅
+  4·A_1 ⊕ 2·E as S_3 representation. Each 3-dim sector (hw=1, hw=2)
+  carries the standard permutation rep A_1 ⊕ E. The sign irrep A_2
+  does NOT appear in C^8.
+  Note: `S3_TASTE_CUBE_DECOMPOSITION_NOTE.md`
+  Runner: `frontier_s3_action_taste_cube_decomposition.py` (57/57 PASS)
+
+- **Hamming-Weight Parity Conservation** — even-order polynomials
+  in site-phase P_μ preserve the hw-parity decomposition
+  C^{L³}_{BZ} = C^4_{even-hw} ⊕ C^4_{odd-hw}; odd-order swap them.
+  Explicit parity projectors Π_± = (1 ± T_1 T_2 T_3) / 2.
+  Note: `HW_PARITY_CONSERVATION_NOTE.md`
+  Runner: `frontier_hw_parity_conservation.py` (68/68 PASS)
+
 ## Reusability claim
 
 These theorems are cited in any downstream derivation involving:

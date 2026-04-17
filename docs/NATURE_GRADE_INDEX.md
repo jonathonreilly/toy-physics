@@ -32,20 +32,44 @@
   C^8 ↔ C^{L³}_{BZ corners} via Φ: |α⟩ ↦ |X_α⟩ intertwining S_μ and P_μ.
   60/60 PASS.
 
+### Batch 2: S_3 / axis-permutation + parity structure
+
+- **C₃[111] Cyclic-Permutation Action on All BZ Corners**
+  (`C3_CYCLIC_ACTION_BZ_CORNERS_NOTE.md`) — the axis-cycle unitary U
+  on C^8 has U³ = I; orbit structure 1 + 3 + 3 + 1; two 3-cycles
+  (hw=1 and hw=2). 32/32 PASS.
+
+- **S₃ Axis-Permutation Decomposition of the Taste Cube**
+  (`S3_TASTE_CUBE_DECOMPOSITION_NOTE.md`) — C^8 ≅ 4·A_1 ⊕ 2·E as S_3
+  representation; no A_2 component. 57/57 PASS.
+
+- **Hamming-Weight Parity Conservation**
+  (`HW_PARITY_CONSERVATION_NOTE.md`) — even/odd-order polynomials in
+  site-phase operators preserve/swap the hw-parity decomposition.
+  Explicit projectors Π_± = (1 ± T_1 T_2 T_3)/2. 68/68 PASS.
+
 ## Totals
 
 ```
-702 total verification checks, 0 failures
+859 total verification checks, 0 failures
 ```
 
 ## Reviewer workflow
 
 ```bash
+# Standing
 python3 scripts/frontier_KR_A1_vanishing_proof.py
+
+# Batch 1
 python3 scripts/frontier_cube_shift_joint_eigenstructure.py
 python3 scripts/frontier_translation_eigenvalue_bz_corners.py
 python3 scripts/frontier_hamming_distance_selection_rule.py
 python3 scripts/frontier_site_phase_cube_shift_intertwiner.py
+
+# Batch 2
+python3 scripts/frontier_c3_cyclic_action_bz_corners.py
+python3 scripts/frontier_s3_action_taste_cube_decomposition.py
+python3 scripts/frontier_hw_parity_conservation.py
 ```
 
 Each exits 0 on success, nonzero on failure. Each prints a TOTAL
