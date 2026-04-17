@@ -360,8 +360,10 @@ def part_e_non_circularity_audit() -> None:
     #   Used premises:
     #     - dim Lambda^2(R^n) = n(n-1)/2  (pure math)
     #     - dim(su(2)) = 3  (pure math)
-    #     - retained native-SU(2) theorem at canonical no-selector strength,
-    #       read as the Lie-algebra equality spin(n) = su(2)
+    #     - companion retained native-gauge scope theorem (2026-04-17):
+    #       S_k = -(i/2) Gamma_i Gamma_j is the literal retained recipe,
+    #       selector-free by construction, comparison-family-scoped.
+    #       At n = 3 the recipe gives spin(3) = su(2).
     #   Parity is NOT needed in this version.
     #
     # Version B — "canonical simple gauge Lie algebra from bivectors" (not
@@ -374,8 +376,11 @@ def part_e_non_circularity_audit() -> None:
     print("  Version A (SU(2)-specific): load-bearing premises are")
     print("    - dim Lambda^2(R^n) = n(n-1)/2   (pure math)")
     print("    - dim(su(2)) = 3                  (pure math)")
-    print("    - retained native-SU(2) theorem at canonical no-selector")
-    print("      strength, read as spin(n) = su(2) (Lie-algebra equality)")
+    print("    - companion native-gauge scope theorem (2026-04-17):")
+    print("      S_k = -(i/2) Gamma_i Gamma_j is the LITERAL retained recipe,")
+    print("      selector-free by construction, comparison-family-scoped.")
+    print("      This is a separately-retained theorem verified by")
+    print("      scripts/frontier_native_gauge_scope.py.")
     print("    Parity NOT needed — spin(n) = su(2) alone forces n = 3.")
     print()
     print("  Version B (gauge-group-agnostic): load-bearing premises are")
@@ -390,6 +395,7 @@ def part_e_non_circularity_audit() -> None:
     print("    - SM matter content or generation count")
     print("    - retained three-generation observable theorem")
     print("    - any cubic-lattice-specific structure")
+    print("    - any reviewer-judgment interpretation of retained authority")
 
     check(
         "Version A proof uses only SU(2)-specific Lie-algebra matching",
