@@ -4,6 +4,18 @@
 **Status:** retained evaluation theorem (no free parameter), with exact bridge-support stack
 **Script:** `scripts/frontier_plaquette_self_consistency.py`
 
+## Framework-point context
+
+`beta = 6` is the unique framework-point evaluation of the retained
+Wilson-plus-staggered surface, not a tuning choice. The reviewer-facing
+synthesis note surfacing this and consolidating the full `beta = 6` plaquette
+theorem stack is:
+
+- [FRAMEWORK_POINT_BETA_6_LANE_NOTE.md](./FRAMEWORK_POINT_BETA_6_LANE_NOTE.md)
+
+This note remains the authority for the plaquette same-surface evaluation.
+The framework-point lane note is the synthesis surface above it.
+
 ## Claim
 
 The plaquette expectation

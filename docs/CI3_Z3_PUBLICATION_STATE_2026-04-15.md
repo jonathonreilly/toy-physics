@@ -111,6 +111,17 @@ The current retained backbone is:
   - physical species structure on the lattice surface, with triplet species
     semantics derived on the accepted Hilbert surface and substrate
     physicality forced on the accepted one-axiom framework surface
+- framework point `beta = 6`:
+  - `N_c = 3` is forced by graph-first `SU(3)` closure
+  - `g_bare = 1` is forced as the canonical coordinate on the derived
+    operator algebra
+  - therefore `beta = 2 N_c / g_bare^2 = 6` is the unique framework-point
+    evaluation; the lattice spacing is a consequence of this evaluation
+    rather than a tuning parameter
+  - every dimensionful row in the retained quantitative package is a
+    same-surface evaluation at this framework point
+  - reviewer-facing synthesis:
+    [FRAMEWORK_POINT_BETA_6_LANE_NOTE.md](FRAMEWORK_POINT_BETA_6_LANE_NOTE.md)
 - confinement on the graph-first `SU(3)` gauge surface:
   - canonical `g_bare^2 = 1` gives Wilson `beta = 6.0`
   - `T = 0` confinement is structural on that gauge sector

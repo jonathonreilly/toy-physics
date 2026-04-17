@@ -69,6 +69,17 @@ all-continuum claim.
 
 ## Quantitative Component Stack
 
+The quantitative stack is a cascade of same-surface evaluations at one
+framework point. For the reviewer-facing framework-point synthesis, see:
+
+- [FRAMEWORK_POINT_BETA_6_LANE_NOTE.md](../../FRAMEWORK_POINT_BETA_6_LANE_NOTE.md)
+
+`beta = 2 N_c / g_bare^2 = 6` is not a tuning parameter; it is the unique
+axiom-determined Wilson evaluation point, with `N_c = 3` forced by
+graph-first `SU(3)` closure and `g_bare = 1` forced as the canonical
+coordinate on the derived operator algebra. Every row below is a
+same-surface evaluation at that framework point.
+
 Review this as a modular component stack:
 
 1. `alpha_s`: [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md)
