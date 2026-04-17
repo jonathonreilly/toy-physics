@@ -1,20 +1,19 @@
-# G1 Physicist-G: Microscopic Axiom-Level Silence Theorem on (delta, q_+)
+# the microscopic-polynomial impossibility theorem: Microscopic Axiom-Level Silence Theorem on (delta, q_+)
 
 **Date:** 2026-04-17
-**Branch:** `claude/g1-physicist-g` (off `claude/g1-complete`)
 **Status:** OBSTRUCTION (CASE 3) -- microscopic-silence impossibility theorem
-**Script:** `scripts/frontier_g1_physicist_g_microscopic_axiom_level.py`
+**Script:** `scripts/frontier_dm_neutrino_source_surface_microscopic_polynomial_impossibility_theorem.py`
 **Framework convention:** "axiom" means only the single framework axiom `Cl(3)` on `Z^3`.
 
 ## Scope and discipline
 
-Five previous attacks on the G1 right-sensitive 2-real selector law
+Five previous attacks on the selector right-sensitive 2-real selector law
 `(delta_*, q_+*)` on the live DM-neutrino source-oriented sheet all
 operated WITHIN the reduced `(delta, q_+)` chart:
 
-- Path A (info-geometric variational): quadratic unanimity but cubic splitting
-- Path B (Z_3 cubic variational): m-dependent or singular
-- Path C (parity-split microscopic functionals): parity-definite 1D obstruction
+- the info-geometric selection obstruction (info-geometric variational): quadratic unanimity but cubic splitting
+- the cubic variational selection obstruction (Z_3 cubic variational): m-dependent or singular
+- the Z_3 parity-split theorem (parity-split microscopic functionals): parity-definite 1D obstruction
 - Physics-validation: transport chain chamber-blind
 - Parity-mixing Frobenius: multiple inequivalent candidates, functional ambiguity
 
@@ -44,21 +43,21 @@ direction" inside the retained microscopic-invariant sheet.
 We operate strictly on retained / theorem-grade atlas input:
 
 - [THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md](./THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md):
-  retained exact operator algebra `<P_1, P_2, P_3, C_3[111]> = M_3(C)` on `H_hw=1`
+ retained exact operator algebra `<P_1, P_2, P_3, C_3[111]> = M_3(C)` on `H_hw=1`
 - [NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md](./NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md):
-  the retained Dirac matrix support pattern is one of three Z_3 permutation classes
+ the retained Dirac matrix support pattern is one of three Z_3 permutation classes
 - [DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md](./DM_NEUTRINO_SOURCE_SURFACE_CARRIER_NORMAL_FORM_THEOREM_NOTE_2026-04-16.md):
-  retained `(gamma, E_1, E_2)` carrier normal form
+ retained `(gamma, E_1, E_2)` carrier normal form
 - [DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md](./DM_NEUTRINO_SOURCE_SURFACE_SHIFT_QUOTIENT_BUNDLE_THEOREM_NOTE_2026-04-16.md):
-  retained shift-quotient bundle over `(m, delta, r31)`
+ retained shift-quotient bundle over `(m, delta, r31)`
 - [DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md](./DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md):
-  exact affine chart `H(m, delta, q_+) = H_base + m T_m + delta T_delta + q_+ T_q`
-- [G1_Z3_DOUBLET_BLOCK_SELECTOR_SCHUR_BASELINE_PARTIAL_CLOSURE_NOTE_2026-04-17.md](./G1_Z3_DOUBLET_BLOCK_SELECTOR_SCHUR_BASELINE_PARTIAL_CLOSURE_NOTE_2026-04-17.md):
-  Schur baseline `D = m I_3` forced on `H_hw=1`
+ exact affine chart `H(m, delta, q_+) = H_base + m T_m + delta T_delta + q_+ T_q`
+- [DM_NEUTRINO_SOURCE_SURFACE_SCHUR_SCALAR_BASELINE_THEOREM_NOTE_2026-04-17.md](./DM_NEUTRINO_SOURCE_SURFACE_SCHUR_SCALAR_BASELINE_THEOREM_NOTE_2026-04-17.md):
+ Schur baseline `D = m I_3` forced on `H_hw=1`
 - [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](./OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md):
-  axiom-native scalar generator `W[J] = log|det(D+J)| - log|det D|`
+ axiom-native scalar generator `W[J] = log|det(D+J)| - log|det D|`
 - [ONE_GENERATION_MATTER_CLOSURE_NOTE.md](./ONE_GENERATION_MATTER_CLOSURE_NOTE.md):
-  retained one-generation SM completion via anomaly-forced 3+1
+ retained one-generation SM completion via anomaly-forced 3+1
 
 No post-axiom inventions enter the theorem hypotheses.
 
@@ -69,18 +68,18 @@ Hermitian tangent span `{T_m, T_delta, T_q}` on `H_hw=1` decomposes as
 follows:
 
 - `T_q` is exactly `Z_3`-invariant: `C_3 T_q C_3^{-1} = T_q`.
-  Equivalently, `T_q = J - I_3` where `J` is the all-ones matrix, and
-  `J` is the unique Z_3-singlet real symmetric matrix orthogonal to `I_3`.
+ Equivalently, `T_q = J - I_3` where `J` is the all-ones matrix, and
+ `J` is the unique Z_3-singlet real symmetric matrix orthogonal to `I_3`.
 
 - `T_delta` is purely `Z_3`-doublet: `sym(T_delta) = 0`,
-  `anti(T_delta) = T_delta`. Its projection onto the omega-eigenspace of
-  `C_3`-conjugation (with omega = exp(2 pi i / 3)) is nonzero, and
-  `T_delta` equals the sum of the omega and omega-bar projections (both
-  nonzero complex conjugates of each other, giving a real Hermitian matrix).
+ `anti(T_delta) = T_delta`. Its projection onto the omega-eigenspace of
+ `C_3`-conjugation (with omega = exp(2 pi i / 3)) is nonzero, and
+ `T_delta` equals the sum of the omega and omega-bar projections (both
+ nonzero complex conjugates of each other, giving a real Hermitian matrix).
 
 - `T_m` has nonzero `Z_3`-singlet AND nonzero `Z_3`-doublet content:
-  `sym(T_m) = J / 3 = (I_3 + T_q) / 3`, the scalar part; `anti(T_m)` is
-  the doublet part.
+ `sym(T_m) = J / 3 = (I_3 + T_q) / 3`, the scalar part; `anti(T_m)` is
+ the doublet part.
 
 **Proof.** Direct computation verified by runner Part 1.
 
@@ -140,9 +139,9 @@ depends on `(delta, q_+)` only through `(delta^2, q_+)`:
 - heat-kernel traces `Tr(exp(-t D^dagger D))` for `t > 0`
 - smallest absolute eigenvalue of `H` (spectral gap)
 - `Z_3` Ward identity `W[J] = W[C_3 J C_3^{-1}]` on the Schur baseline
-  `D = m I_3`
+ `D = m I_3`
 - translation Ward identities `W[J] = W[T_sign J T_sign^{-1}]` for
-  `T_sign in {T_x, T_y, T_z}` on the Schur baseline
+ `T_sign in {T_x, T_y, T_z}` on the Schur baseline
 - chiral Ward saturation (automatic from delta-evenness of trace moments)
 
 **Proof.** Each of these is a polynomial or convergent power-series
@@ -190,12 +189,12 @@ only through the pair `(delta^2, q_+)`.
 **Examples.** Different retained local polynomial functionals select
 DIFFERENT chamber extrema:
 
-- `Tr(H^2)` chamber-boundary minimum: `(1.2679, 0.3651)` (Path C-b)
-- `det(H)` chamber-interior stationary point: `(0.9644, 1.5524)` (Path C-a)
+- `Tr(H^2)` chamber-boundary minimum: `(1.2679, 0.3651)` (the Z_3 parity-split theorem-b)
+- `det(H)` chamber-interior stationary point: `(0.9644, 1.5524)` (the Z_3 parity-split theorem-a)
 - Schur-Q (`= 6(delta^2 + q_+^2) / m^2`) chamber-boundary minimum:
-  `(sqrt(6)/3, sqrt(6)/3)` (Schur baseline + minimum-coupling selector)
+ `(sqrt(6)/3, sqrt(6)/3)` (Schur baseline + minimum-coupling selector)
 - Frobenius `||K_doublet||_F^2` chamber-boundary minimum:
-  `(sqrt(6)/2 - sqrt(2)/18, sqrt(6)/6 + sqrt(2)/18)` (parity-mixing F1)
+ `(sqrt(6)/2 - sqrt(2)/18, sqrt(6)/6 + sqrt(2)/18)` (parity-mixing F1)
 
 All four pass the retained microscopic tests (Z_3 / chirality /
 translation / heat-kernel / spectral) but fail to agree.
@@ -203,7 +202,7 @@ translation / heat-kernel / spectral) but fail to agree.
 **Proof.** Theorem 4 establishes that every polynomial retained
 microscopic functional reduces to a function of `(delta^2, q_+)`.
 Theorem 3 fixes the structure of the reduction. The cited candidate
-points were computed in the Path A/B/C/parity-mixing notes. The runner
+points were computed in the the info-geometric selection obstruction/B/C/parity-mixing notes. The runner
 Part 6 verifies their pairwise distinctness and the universality of the
 delta-evenness property.
 
@@ -230,7 +229,7 @@ a principle is not known.
 **(beta)** TRANSPORT / HOLONOMY consistency across the full `Z^3`
 lattice, not just the retained `H_hw=1` 3D surface. This would require
 a new theorem relating the full lattice Dirac operator's holonomy to
-the reduced `(delta, q_+)` pair. Path C holonomy attempts on the
+the reduced `(delta, q_+)` pair. the Z_3 parity-split theorem holonomy attempts on the
 retained surface did not close; a full-lattice route is open but
 speculative.
 
@@ -259,12 +258,12 @@ For downstream physics (neutrino masses, PMNS, leptogenesis eta), this
 means:
 
 - The microscopic axiom delivers every Dirac-matrix structural datum
-  up to the 2-real `(delta, q_+)` freedom.
+ up to the 2-real `(delta, q_+)` freedom.
 - Any further determination of `(delta, q_+)` is a SEPARATE scientific
-  task, distinct from axiom-native theoremhood.
+ task, distinct from axiom-native theoremhood.
 - Physics-validation via `eta / eta_obs = 1` or neutrino mass fits
-  SELECTS a point in the gauge sheet, but does not promote it to
-  theorem-grade without an additional derived principle.
+ SELECTS a point in the gauge sheet, but does not promote it to
+ theorem-grade without an additional derived principle.
 
 ## Verdict
 
@@ -278,31 +277,31 @@ local-polynomial microscopic content.
 **"Gauge direction" status:** legitimized as the correct interpretation
 of the residual.
 
-**G1 status:** still OPEN. The DM flagship gate remains OPEN. This
+**Selector-gate status:** still OPEN. The DM flagship gate remains OPEN. This
 theorem does not promote any selector candidate; it sharpens the
 obstruction structure by showing the axiom itself cannot close the gap
 with local content.
 
 ## Connection to downstream closure strategies
 
-After this theorem, the live paths to close G1 reduce to exactly:
+After this theorem, the live paths to close selector reduce to exactly:
 
 1. **Sole-axiom derivation of a nonlocal selector** (information-
-   geometric / variational). This requires either a retained proof that
-   the "minimum-information source law" is axiom-native (currently
-   flagged post-axiom), or discovery of a new axiom-native nonlocal
-   principle on the retained stack.
+  geometric / variational). This requires either a retained proof that
+  the "minimum-information source law" is axiom-native (currently
+  flagged post-axiom), or discovery of a new axiom-native nonlocal
+  principle on the retained stack.
 
 2. **Full-Z^3 transport / holonomy closure.** Any candidate theorem
-   that extends beyond the retained `H_hw=1` 3D surface to the full
-   `Z^3` lattice could introduce structure that pins the gauge. This
-   is open territory.
+  that extends beyond the retained `H_hw=1` 3D surface to the full
+  `Z^3` lattice could introduce structure that pins the gauge. This
+  is open territory.
 
 3. **Physics-validation-driven identification.** If exactly one of the
-   retained candidate points `(Schur-Q, det(H), Tr(H^2), F1, K_12)`
-   is consistent with `eta / eta_obs = 1` and neutrino masses, it
-   becomes a candidate-closure-pending-derivation. This is a
-   physics-validation route, not a theorem-grade derivation.
+  retained candidate points `(Schur-Q, det(H), Tr(H^2), F1, K_12)`
+  is consistent with `eta / eta_obs = 1` and neutrino masses, it
+  becomes a candidate-closure-pending-derivation. This is a
+  physics-validation route, not a theorem-grade derivation.
 
 ## Atlas position
 
@@ -311,42 +310,42 @@ is a hard obstruction / impossibility theorem on the axiom-level claim
 surface. Appropriate placement:
 
 - atlas obstruction row in
-  [DERIVATION_ATLAS.md](./publication/ci3_z3/DERIVATION_ATLAS.md)
-  under the DM neutrino source-surface family, as a distinguished
-  deepest-level sibling to Path A / Path B / Path C / Parity-Mixing
-  notes
+ [DERIVATION_ATLAS.md](./publication/ci3_z3/DERIVATION_ATLAS.md)
+ under the DM neutrino source-surface family, as a distinguished
+ deepest-level sibling to the info-geometric selection obstruction / the cubic variational selection obstruction / the Z_3 parity-split theorem / Parity-Mixing
+ notes
 - do NOT use for any publication-grade positive quantitative claim
 - do NOT use to "rule out" the retained candidate points (they remain
-  retained candidates; this theorem explains WHY no single one is
-  selected axiomatically)
+ retained candidates; this theorem explains WHY no single one is
+ selected axiomatically)
 - DO use to legitimize the "gauge direction" terminology for
-  `(delta, q_+)` in downstream physics discussion
+ `(delta, q_+)` in downstream physics discussion
 
 ## Command
 
 ```bash
-PYTHONPATH=scripts python3 scripts/frontier_g1_physicist_g_microscopic_axiom_level.py
+PYTHONPATH=scripts python3 scripts/frontier_dm_neutrino_source_surface_microscopic_polynomial_impossibility_theorem.py
 ```
 
 Current: `PASS = 35, FAIL = 0`.
 
 ## What this file must never say
 
-- that G1 is closed
+- that selector is closed
 - that the DM flagship gate is closed
 - that any of the retained candidate points (Schur-Q, det(H), Tr(H^2),
-  F1, K_12) has been promoted to theorem-grade by this note (it has not;
-  the theorem explicitly shows none of them is microscopically forced)
+ F1, K_12) has been promoted to theorem-grade by this note (it has not;
+ the theorem explicitly shows none of them is microscopically forced)
 - that the "minimum-information source law" has been promoted from
-  post-axiom (it has not)
+ post-axiom (it has not)
 - that the microscopic axiom is rich enough to close `(delta, q_+)`
-  (the present theorem establishes precisely the opposite)
+ (the present theorem establishes precisely the opposite)
 - that a nonlocal selector principle has been discovered on the axiom
-  (none has; the theorem only identifies which kind of ingredient is
-  required)
+ (none has; the theorem only identifies which kind of ingredient is
+ required)
 
 If any future revision tightens these boundaries, it must cite a new
 source on the live retained/promoted surface. Until then, the safe
 read is: **microscopic Cl(3)/Z^3 axiom is genuinely silent on (delta,
-q_+); G1 remains open; "gauge direction" interpretation is legitimized
+q_+); the selector gate remains open; "gauge direction" interpretation is legitimized
 as the correct reading of the residual.**

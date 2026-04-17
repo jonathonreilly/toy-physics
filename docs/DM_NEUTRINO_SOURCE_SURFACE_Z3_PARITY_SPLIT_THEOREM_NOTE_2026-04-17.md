@@ -1,9 +1,8 @@
-# G1 Path-C: Microscopic Holonomy / Z_3-Parity Selector Attempt
+# the Z_3 parity-split theorem: Microscopic Holonomy / Z_3-Parity Selector Attempt
 
 **Date:** 2026-04-17
-**Branch:** `claude/g1-path-c-holonomy` (off `claude/g1-z3-doublet-selector`)
 **Status:** OBSTRUCTION + NARROWER-GAP + CROSS-CHECK-CANDIDATE
-**Script:** `scripts/frontier_g1_path_c_holonomy_selector.py`
+**Script:** `scripts/frontier_dm_neutrino_source_surface_z3_parity_split_theorem.py`
 **Framework convention:** "axiom" means only the single framework axiom `Cl(3)` on `Z^3`.
 
 ## Scope and discipline
@@ -19,14 +18,14 @@ The outcome is **not** a closure. It is:
 
 - **two retained-atlas-native structural theorems** (Part 1 and Part 2),
 - **one obstruction result** that rules out a whole class of candidate
-  microscopic selectors (Z_3-parity-definite scalars), and
+ microscopic selectors (Z_3-parity-definite scalars), and
 - **three cross-check-candidate results** showing that the natural mixed
-  invariants (`det H`, `Tr(H^2)`, `K_12` character-matching) each give a
-  `(delta, q_+)` that **disagrees** with the Schur-Q variational candidate
-  `(sqrt(6)/3, sqrt(6)/3)`.
+ invariants (`det H`, `Tr(H^2)`, `K_12` character-matching) each give a
+ `(delta, q_+)` that **disagrees** with the Schur-Q variational candidate
+ `(sqrt(6)/3, sqrt(6)/3)`.
 
-The DM flagship gate remains **open**. G1 is not closed. Neither the
-Schur-Q variational candidate nor any Path-C microscopic candidate is
+The DM flagship gate remains **open**. the selector gate is not closed. Neither the
+Schur-Q variational candidate nor any the Z_3 parity-split theorem microscopic candidate is
 promoted to theorem-grade.
 
 ## Theorem 1 (retained-atlas-native): Z_3-parity decomposition
@@ -37,8 +36,8 @@ promoted to theorem-grade.
 conjugation average and `anti(X) = X - sym(X)` denote the residual. Then:
 
 ```
-sym(T_q)     = T_q,          anti(T_q)     = 0
-sym(T_delta) = 0,            anti(T_delta) = T_delta
+sym(T_q)   = T_q,     anti(T_q)   = 0
+sym(T_delta) = 0,      anti(T_delta) = T_delta
 ```
 
 and `T_m` has nonzero components in both parity sectors.
@@ -77,23 +76,23 @@ any `q_+`-dependent term. Since `f` depends on `H` only through
 The runner verifies the two constancy statements numerically:
 
 - `||sym(H)[delta = v] - sym(H)[delta = 0]|| < 10^{-15}` for several `v`,
-  at fixed `(m, q_+)`,
+ at fixed `(m, q_+)`,
 - `||anti(H)[q_+ = v] - anti(H)[q_+ = 0]|| < 10^{-15}` for several `v`,
-  at fixed `(m, delta)`,
+ at fixed `(m, delta)`,
 - `Tr(sym(H)^2)` is independent of `delta`,
 - `Tr(anti(H)^2)` is independent of `q_+`.
 
 **Claim label.** *Retained-atlas-native theorem.* No new axiom. Elementary
 consequence of Theorem 1.
 
-**Corollary (the Path-C structural obstruction).** Any microscopic
+**Corollary (the the Z_3 parity-split theorem structural obstruction).** Any microscopic
 selector law for `(delta, q_+)` that is formulated via a single
 Z_3-parity-definite scalar (circulant-only or anti-circulant-only
 functional) **cannot close the gap**. It necessarily leaves one of the
-two active coordinates free. Path C is therefore forced to use an
+two active coordinates free. the Z_3 parity-split theorem is therefore forced to use an
 invariant that mixes both parity sectors.
 
-## Path-C cross-checks along mixed invariants
+## the Z_3 parity-split theorem cross-checks along mixed invariants
 
 The natural mixed invariants that couple `delta` and `q_+` on the affine
 sheet are tested in Part 3 of the runner. All three candidates are
@@ -139,14 +138,14 @@ This does **not** fix `q_+` (the condition is `q_+`-independent).
 ### Comparison with the Schur-Q variational candidate
 
 ```
-Schur-Q variational (Path B):    (delta, q_+) = (sqrt(6)/3, sqrt(6)/3)
-                                              ~= (0.816497, 0.816497)
-Path C-a  det(H) stationary:     (delta, q_+) ~= (0.964443, 1.552431)
-Path C-b  Tr(H^2) on boundary:   (delta, q_+) ~= (1.267881, 0.365112)
-Path C-c  K_12 char-match:       delta       ~= 0.799987  (q_+ free)
+Schur-Q variational (the cubic variational selection obstruction):  (delta, q_+) = (sqrt(6)/3, sqrt(6)/3)
+                       ~= (0.816497, 0.816497)
+the Z_3 parity-split theorem-a det(H) stationary:   (delta, q_+) ~= (0.964443, 1.552431)
+the Z_3 parity-split theorem-b Tr(H^2) on boundary:  (delta, q_+) ~= (1.267881, 0.365112)
+the Z_3 parity-split theorem-c K_12 char-match:    delta    ~= 0.799987 (q_+ free)
 ```
 
-**All three Path-C candidates disagree with the Schur-Q variational
+**All three the Z_3 parity-split theorem candidates disagree with the Schur-Q variational
 candidate.** No microscopic Z_3-parity-mixing invariant tested here
 reproduces `(sqrt(6)/3, sqrt(6)/3)`.
 
@@ -156,26 +155,26 @@ obvious candidates do not.
 
 ## Narrowed gap statement
 
-Before this note, the Path-C direction was open and unexplored. After
+Before this note, the the Z_3 parity-split theorem direction was open and unexplored. After
 this note:
 
 **Negative results (hard):**
 
-- Any Z_3-parity-definite microscopic scalar is ruled out as a Path-C
-  selector by Theorem 2.
+- Any Z_3-parity-definite microscopic scalar is ruled out as a the Z_3 parity-split theorem
+ selector by Theorem 2.
 - Among natural mixed microscopic scalars, `det(H)`, `Tr(H^2)`, and
-  `K_12` character-match all fail to reproduce the Schur-Q minimum.
+ `K_12` character-match all fail to reproduce the Schur-Q minimum.
 
 **Positive discipline (new):**
 
 - Any future selector candidate for `(delta, q_+)` **must be checked
-  against this cross-check ledger**. The question "does the candidate
-  agree with `sqrt(6)/3`, or with one of `(a)/(b)/(c)`, or with a fourth
-  point?" is now a standing discipline test.
+ against this cross-check ledger**. The question "does the candidate
+ agree with `sqrt(6)/3`, or with one of `(a)/(b)/(c)`, or with a fourth
+ point?" is now a standing discipline test.
 - If a future selector lands at `sqrt(6)/3`, it must explain why the
-  microscopic candidates above miss it.
+ microscopic candidates above miss it.
 - If a future selector lands at one of `(a)/(b)/(c)`, it must explain
-  why the Schur-Q variational candidate is not the physical one.
+ why the Schur-Q variational candidate is not the physical one.
 
 ## Position on publication surface
 
@@ -185,12 +184,12 @@ narrower-gap + obstruction + cross-check note.
 Appropriate placement:
 
 - atlas obstruction row in
-  [DERIVATION_ATLAS.md](./publication/ci3_z3/DERIVATION_ATLAS.md)
-  under the DM neutrino source-surface family, sibling to the
-  Schur-baseline partial closure
+ [DERIVATION_ATLAS.md](./publication/ci3_z3/DERIVATION_ATLAS.md)
+ under the DM neutrino source-surface family, sibling to the
+ Schur-baseline partial closure
 - do NOT use for any publication-grade positive quantitative claim
 - do NOT use to "justify" the Schur-Q variational candidate — this
-  note actively raises new questions for that candidate
+ note actively raises new questions for that candidate
 
 ## Is the det-critical-point the physically right `(delta, q_+)`?
 
@@ -199,18 +198,18 @@ gives `eta / eta_obs ~= 0.189` at the Schur-Q chamber minimum
 (variational candidate). The PMNS-assisted route is required to reach
 `eta / eta_obs = 1`.
 
-A genuine closure via Path C-a (`det(H)` stationary) would predict a
+A genuine closure via the Z_3 parity-split theorem-a (`det(H)` stationary) would predict a
 significantly different `(delta, q_+)`. Evaluating the DM transport
 chain at `(m_det, delta_det, q_det) ~= (0.613, 0.964, 1.552)` is the
 natural next experiment: if `eta / eta_obs` lands closer to 1 at the
 det critical point than at the Schur minimum, that would be a
 compelling **new selector candidate** that deserves theorem-grade
 pursuit in its own right. If it lands further from 1, the det-
-stationarity candidate is ruled out on physical grounds and Path C is
+stationarity candidate is ruled out on physical grounds and the Z_3 parity-split theorem is
 simply obstructed.
 
 This physical cross-check is recorded here as a **follow-up discipline
-requirement** for any future G1 work. It is not performed in this
+requirement** for any future selector work. It is not performed in this
 runner (the transport chain is in a separate package; see
 [DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md](./DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md)).
 
@@ -219,36 +218,36 @@ runner (the transport chain is in a separate package; see
 All retained / theorem-grade on current `main`:
 
 - [DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md](./DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md)
-  — exact affine chart `H(m, delta, q_+)` and exact active generators
-  `T_m, T_delta, T_q`
+ — exact affine chart `H(m, delta, q_+)` and exact active generators
+ `T_m, T_delta, T_q`
 - [DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md](./DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md)
-  — exact chamber `q_+ >= sqrt(8/3) - delta`
+ — exact chamber `q_+ >= sqrt(8/3) - delta`
 - [DM_NEUTRINO_SOURCE_SURFACE_INTRINSIC_SLOT_THEOREM_NOTE_2026-04-16.md](./DM_NEUTRINO_SOURCE_SURFACE_INTRINSIC_SLOT_THEOREM_NOTE_2026-04-16.md)
-  — exact intrinsic slot pair `(a_*, b_*)`
+ — exact intrinsic slot pair `(a_*, b_*)`
 - [DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_POINT_SELECTION_THEOREM_NOTE_2026-04-16.md](./DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_POINT_SELECTION_THEOREM_NOTE_2026-04-16.md)
-  — exact `Z_3` doublet-block readout, including `K_12` formula
-- [G1_Z3_DOUBLET_BLOCK_SELECTOR_SCHUR_BASELINE_PARTIAL_CLOSURE_NOTE_2026-04-17.md](./G1_Z3_DOUBLET_BLOCK_SELECTOR_SCHUR_BASELINE_PARTIAL_CLOSURE_NOTE_2026-04-17.md)
-  — Schur baseline `D = m I_3` and theorem-native `Q = 6(delta^2 + q_+^2)/m^2`
+ — exact `Z_3` doublet-block readout, including `K_12` formula
+- [DM_NEUTRINO_SOURCE_SURFACE_SCHUR_SCALAR_BASELINE_THEOREM_NOTE_2026-04-17.md](./DM_NEUTRINO_SOURCE_SURFACE_SCHUR_SCALAR_BASELINE_THEOREM_NOTE_2026-04-17.md)
+ — Schur baseline `D = m I_3` and theorem-native `Q = 6(delta^2 + q_+^2)/m^2`
 
 No new axioms are introduced in this note.
 
 ## What this file must never say
 
-- that G1 is closed
+- that selector is closed
 - that the DM flagship gate is closed
 - that the Schur-Q variational candidate has been promoted to theorem-
-  native by Path C (it has not; the Path-C cross-check actively
-  disagrees)
+ native by the Z_3 parity-split theorem (it has not; the the Z_3 parity-split theorem cross-check actively
+ disagrees)
 - that the det-stationary point is the physical `(delta, q_+)` (it is a
-  cross-check candidate, not a selector theorem)
-- that Path C is definitively closed (it is obstructed only for Z_3-
-  parity-definite scalars; Z_3-parity-mixing invariants remain an open
-  design space, though the natural ones fail the cross-check)
+ cross-check candidate, not a selector theorem)
+- that the Z_3 parity-split theorem is definitively closed (it is obstructed only for Z_3-
+ parity-definite scalars; Z_3-parity-mixing invariants remain an open
+ design space, though the natural ones fail the cross-check)
 
 ## Command
 
 ```bash
-PYTHONPATH=scripts python3 scripts/frontier_g1_path_c_holonomy_selector.py
+PYTHONPATH=scripts python3 scripts/frontier_dm_neutrino_source_surface_z3_parity_split_theorem.py
 ```
 
 Current expected: `PASS = 22, FAIL = 0`.

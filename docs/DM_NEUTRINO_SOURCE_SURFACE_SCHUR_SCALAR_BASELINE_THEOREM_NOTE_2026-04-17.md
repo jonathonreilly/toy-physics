@@ -1,15 +1,14 @@
-# G1 Z_3 Doublet-Block Selector — Schur-Baseline Partial Closure
+# Z_3 Doublet-Block Selector — Schur-Baseline Partial Closure
 
 **Date:** 2026-04-17
-**Branch:** `claude/g1-z3-doublet-selector`
 **Status:** partial closure theorem + strictly narrowed remaining gap
-**Script:** `scripts/frontier_g1_z3_doublet_block_selector_law.py`
+**Script:** `scripts/frontier_dm_neutrino_source_surface_schur_scalar_baseline_theorem.py`
 **Framework convention:** "axiom" means only the single framework axiom `Cl(3)` on `Z^3`.
 
 ## Scope and discipline
 
 This note establishes a **partial** closure of the right-sensitive 2-real
-selector law on the live DM-neutrino source-oriented sheet (the "G1" gate).
+selector law on the live DM-neutrino source-oriented sheet (the selector gate).
 It does **not** close the full selector law. It **does** close a named
 sub-objection that previously kept the scalar-baseline result at bounded
 status.
@@ -17,14 +16,14 @@ status.
 The distinction matters for claim-boundary discipline:
 
 - the scalar-baseline quadratic diagnostic in
-  [DM_NEUTRINO_SOURCE_SURFACE_SCALAR_BASELINE_ACTIVE_QUADRATIC_DIAGNOSTIC_NOTE_2026-04-17.md](./DM_NEUTRINO_SOURCE_SURFACE_SCALAR_BASELINE_ACTIVE_QUADRATIC_DIAGNOSTIC_NOTE_2026-04-17.md)
-  was bounded because **(i)** the baseline choice `D = m I_3` was not shown
-  to be forced by the axiom, and **(ii)** the minimum-coupling selector
-  principle was not shown to be forced by the axiom
+ [DM_NEUTRINO_SOURCE_SURFACE_SCALAR_BASELINE_ACTIVE_QUADRATIC_DIAGNOSTIC_NOTE_2026-04-17.md](./DM_NEUTRINO_SOURCE_SURFACE_SCALAR_BASELINE_ACTIVE_QUADRATIC_DIAGNOSTIC_NOTE_2026-04-17.md)
+ was bounded because **(i)** the baseline choice `D = m I_3` was not shown
+ to be forced by the axiom, and **(ii)** the minimum-coupling selector
+ principle was not shown to be forced by the axiom
 - this note closes (i) by a Schur argument on the retained three-generation
-  algebra
+ algebra
 - this note does **not** close (ii); the selector principle remains the
-  single remaining open object
+ single remaining open object
 
 ## Theorem statement (Schur baseline on `H_hw=1`)
 
@@ -39,7 +38,7 @@ with every retained generator is a scalar. Hermiticity restricts the scalar
 to `R`, giving
 
 ```
-D = m I_3,   m in R.
+D = m I_3,  m in R.
 ```
 
 Hence the axiom-native zero-source baseline on `H_hw=1` is the scalar
@@ -56,9 +55,9 @@ Q(delta, q_+) = K(J_act, J_act) = 6 (delta^2 + q_+^2) / m^2.
 Prior to this note, the scalar diagnostic was recorded explicitly as:
 
 > "For generic positive baselines `D`, the descended curvature on
->  `(T_delta, T_q)` is not isotropic and can acquire a mixed term, so the
->  quadratic recorded here is specifically a **scalar-baseline diagnostic**,
->  not a baseline-independent theorem-native selector."
+> `(T_delta, T_q)` is not isotropic and can acquire a mixed term, so the
+> quadratic recorded here is specifically a **scalar-baseline diagnostic**,
+> not a baseline-independent theorem-native selector."
 
 The open question was: *why must the baseline be scalar?*
 
@@ -71,7 +70,7 @@ breaking one of the already-retained exact symmetries.
 So the previously bounded quadratic `Q = 6(delta^2 + q_+^2)/m^2` is now:
 
 - the **theorem-native source-response curvature** from the observable
-  principle applied at the unique Schur-compatible baseline
+ principle applied at the unique Schur-compatible baseline
 - no longer a diagnostic with arbitrary baseline choice
 
 The chamber minimizer `delta_* = q_+* = sqrt(6)/3` is now on the
@@ -87,7 +86,7 @@ Specifically, the Schur theorem establishes:
 - the correct axiom-native quadratic functional on the active pair
 - that this functional is isotropic in `(delta, q_+)` at quadratic order
 - that the chamber-boundary minimizer of this functional is
-  `(delta_*, q_+*) = (sqrt(6)/3, sqrt(6)/3)`
+ `(delta_*, q_+*) = (sqrt(6)/3, sqrt(6)/3)`
 
 It does not establish:
 
@@ -106,19 +105,19 @@ and this note does not override that flag. Using the Schur theorem to
 All retained / theorem-grade on current `main`:
 
 - [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](./OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
-  — axiom-native scalar generator `W[J] = log|det(D+J)| - log|det D|`
+ — axiom-native scalar generator `W[J] = log|det(D+J)| - log|det D|`
 - [THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md](./THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md)
-  — exact retained algebra `<P_1, P_2, P_3, C_3[111]>` acts irreducibly on
-  `H_hw=1`
+ — exact retained algebra `<P_1, P_2, P_3, C_3[111]>` acts irreducibly on
+ `H_hw=1`
 - [DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md](./DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md)
-  — exact affine chart `H(m, delta, q_+)` and exact active generators
-  `T_m, T_delta, T_q`
+ — exact affine chart `H(m, delta, q_+)` and exact active generators
+ `T_m, T_delta, T_q`
 - [DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md](./DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md)
-  — exact chamber `q_+ >= sqrt(8/3) - delta`
+ — exact chamber `q_+ >= sqrt(8/3) - delta`
 - [DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_POINT_SELECTION_THEOREM_NOTE_2026-04-16.md](./DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_POINT_SELECTION_THEOREM_NOTE_2026-04-16.md)
-  — exact `Z_3` doublet-block readout
+ — exact `Z_3` doublet-block readout
 - [DM_NEUTRINO_SOURCE_SURFACE_SCALAR_BASELINE_ACTIVE_QUADRATIC_DIAGNOSTIC_NOTE_2026-04-17.md](./DM_NEUTRINO_SOURCE_SURFACE_SCALAR_BASELINE_ACTIVE_QUADRATIC_DIAGNOSTIC_NOTE_2026-04-17.md)
-  — prior-bounded quadratic diagnostic this note promotes
+ — prior-bounded quadratic diagnostic this note promotes
 
 No new axioms are introduced. The Schur step is a standard algebraic
 lemma applied to an already-retained irreducible representation.
@@ -134,16 +133,16 @@ For `J_act = delta T_delta + q_+ T_q` and the scalar baseline `D = m I_3`,
 
 ```
 det(m I + delta T_delta + q_+ T_q)
-   = m^3 - 3 m (delta^2 + q_+^2) + 2 q_+ (q_+^2 - 3 delta^2)
-   = m^3 - 3 m |w|^2 + 2 Re(w^3),     w = q_+ + i delta
+  = m^3 - 3 m (delta^2 + q_+^2) + 2 q_+ (q_+^2 - 3 delta^2)
+  = m^3 - 3 m |w|^2 + 2 Re(w^3),   w = q_+ + i delta
 ```
 
 and this equals the determinant of the explicit `Z_3` circulant
 
 ```
-[ m   w   w* ]
-[ w*  m   w  ]
-[ w   w*  m  ].
+[ m  w  w* ]
+[ w* m  w ]
+[ w  w* m ].
 ```
 
 The cubic term `2 Re(w^3)` breaks the `w -> -w` symmetry to an exact
@@ -159,56 +158,56 @@ the cubic-sensitive direction, but by itself it is not a selector law.
 The formal argument:
 
 1. **Generators are exact and real.** By the three-generation observable
-   theorem, `P_1, P_2, P_3` are exact rank-1 sector projectors on `H_hw=1`
-   with `P_1 + P_2 + P_3 = I_3`, and `C_3[111]` cycles them:
-   `C_3 P_i C_3^{-1} = P_{i+1}` (mod 3). All four generators are real `3x3`.
+  theorem, `P_1, P_2, P_3` are exact rank-1 sector projectors on `H_hw=1`
+  with `P_1 + P_2 + P_3 = I_3`, and `C_3[111]` cycles them:
+  `C_3 P_i C_3^{-1} = P_{i+1}` (mod 3). All four generators are real `3x3`.
 
 2. **R-algebra equals `M_3(R)`.** Products of the generators (together
-   with `C_3^2`) R-span all of `M_3(R)`. The runner verifies this
-   numerically: iterative linear-independence closure gives exactly 9
-   basis elements.
+  with `C_3^2`) R-span all of `M_3(R)`. The runner verifies this
+  numerically: iterative linear-independence closure gives exactly 9
+  basis elements.
 
 3. **Absolute irreducibility on `C^3`.** `M_3(R)` embeds in `M_3(C)` as
-   a real form; it acts absolutely irreducibly on `C^3` iff the only
-   `C`-linear commutant is scalar. The runner verifies this by solving
-   `[A, G] = 0` for `A in M_3(C)` and each generator `G in {P_i, C_3}`;
-   the `C`-nullspace has dimension 1 and is spanned by `I_3`.
+  a real form; it acts absolutely irreducibly on `C^3` iff the only
+  `C`-linear commutant is scalar. The runner verifies this by solving
+  `[A, G] = 0` for `A in M_3(C)` and each generator `G in {P_i, C_3}`;
+  the `C`-nullspace has dimension 1 and is spanned by `I_3`.
 
 4. **Schur's lemma over `C`.** Any `D : C^3 -> C^3` that commutes with
-   the retained generators is `c I_3` for some `c in C`.
+  the retained generators is `c I_3` for some `c in C`.
 
 5. **Hermiticity restricts `c in R`.** A Hermitian `D = c I_3` has
-   `D^dagger = bar{c} I_3 = c I_3`, forcing `c = bar{c}`, i.e. `c in R`.
-   Denote this real scalar `m`.
+  `D^dagger = bar{c} I_3 = c I_3`, forcing `c = bar{c}`, i.e. `c in R`.
+  Denote this real scalar `m`.
 
 6. **Observable-principle evaluation at `D = m I_3`.** The axiom-native
-   generator is
+  generator is
 
-   ```
-   W[J_act] = log|det(m I + J_act)| - log|det(m I)|
-            = log|1 - 3|w|^2/m^2 + 2 Re(w^3)/m^3|.
-   ```
+  ```
+  W[J_act] = log|det(m I + J_act)| - log|det(m I)|
+      = log|1 - 3|w|^2/m^2 + 2 Re(w^3)/m^3|.
+  ```
 
 7. **Zero-source curvature.** Expanding `W` to second order in `J_act`
-   at the origin gives
+  at the origin gives
 
-   ```
-   W[J_act] = - 3 |w|^2 / m^2 + O(|w|^3 / m^3),
-   ```
+  ```
+  W[J_act] = - 3 |w|^2 / m^2 + O(|w|^3 / m^3),
+  ```
 
-   whose Hessian bilinear is `K(X, Y) = (1/m^2) Tr(X Y)`. Using
-   `Tr(T_delta^2) = Tr(T_q^2) = 6` and `Tr(T_delta T_q) = 0`:
+  whose Hessian bilinear is `K(X, Y) = (1/m^2) Tr(X Y)`. Using
+  `Tr(T_delta^2) = Tr(T_q^2) = 6` and `Tr(T_delta T_q) = 0`:
 
-   ```
-   Q(delta, q_+) = - d^2 W = 6 (delta^2 + q_+^2) / m^2.
-   ```
+  ```
+  Q(delta, q_+) = - d^2 W = 6 (delta^2 + q_+^2) / m^2.
+  ```
 
-   The runner checks the Hessian bilinear numerically at four values of
-   `m` and confirms the closed form.
+  The runner checks the Hessian bilinear numerically at four values of
+  `m` and confirms the closed form.
 
 8. **Chamber-boundary minimum.** On the exact chamber boundary
-   `q_+ = sqrt(8/3) - delta`, the unconstrained minimum of
-   `delta^2 + q_+^2` is at `delta = q_+ = sqrt(8/3)/2 = sqrt(6)/3`.
+  `q_+ = sqrt(8/3) - delta`, the unconstrained minimum of
+  `delta^2 + q_+^2` is at `delta = q_+ = sqrt(8/3)/2 = sqrt(6)/3`.
 
 Steps 1–5 establish the Schur theorem. Steps 6–7 record the
 theorem-native curvature. Step 8 records the chamber minimum that the
@@ -217,7 +216,7 @@ surface.
 
 ## Narrowed gap statement
 
-The G1 gate was previously:
+The the selector gate was previously:
 
 ```
 (baseline choice) AND (selector principle).
@@ -229,7 +228,7 @@ After this note:
 (selector principle) only.
 ```
 
-Concretely, any future closure of G1 must supply one of:
+Concretely, any future closure of selector must supply one of:
 
 **(a)** a sole-axiom derivation of a minimum-coupling (or
 equivalent) variational principle that forces the physical admissible
@@ -258,10 +257,10 @@ selector principle still open".
 Appropriate placement:
 
 - atlas support row in
-  [DERIVATION_ATLAS.md](./publication/ci3_z3/DERIVATION_ATLAS.md)
-  under the DM neutrino source-surface family
+ [DERIVATION_ATLAS.md](./publication/ci3_z3/DERIVATION_ATLAS.md)
+ under the DM neutrino source-surface family
 - mention in the DM gate retained-atlas update; the flagship gate
-  remains **open**
+ remains **open**
 
 This note should not be used to promote anything in the flagship paper
 quantitative section. The DM flagship gate stays open.
@@ -270,14 +269,14 @@ quantitative section. The DM flagship gate stays open.
 
 ```bash
 cd /Users/jonBridger/Toy\ Physics/.claude/worktrees/inspiring-meitner
-PYTHONPATH=scripts python3 scripts/frontier_g1_z3_doublet_block_selector_law.py
+PYTHONPATH=scripts python3 scripts/frontier_dm_neutrino_source_surface_schur_scalar_baseline_theorem.py
 ```
 
 Current expected: `PASS = 19, FAIL = 0`.
 
 ## What this file must never say
 
-- that G1 is closed
+- that selector is closed
 - that the DM flagship gate is closed
 - that the minimum-information selector has been promoted from post-axiom
 - that the selector law is a theorem

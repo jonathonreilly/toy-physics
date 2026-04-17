@@ -1,11 +1,10 @@
-# G1 Physicist-H — PMNS as `f(H(m, delta, q_+))` Closure Theorem
+# PMNS as `f(H(m, delta, q_+))` Closure Theorem
 
 **Date:** 2026-04-17
-**Branch:** `claude/g1-physicist-h` (off `claude/g1-complete`)
-**Status:** POSITIVE CLOSURE of G1 on the live DM-neutrino source-oriented sheet,
-via the P3 lane identified in the Physicist-E observable-bank exhaustion note.
+**Status:** POSITIVE CLOSURE of selector on the live DM-neutrino source-oriented sheet,
+via the P3 lane identified in the the observable-bank exhaustion theorem observable-bank exhaustion note.
 PMNS mixing angles are promoted to retained on the chamber.
-**Script:** `scripts/frontier_g1_physicist_h_pmns_as_f_h.py`
+**Script:** `scripts/frontier_pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem.py`
 **Runner:** `PASS = 43, FAIL = 0`
 **Framework convention:** "axiom" means only the single framework axiom `Cl(3)` on `Z^3`.
 
@@ -15,36 +14,36 @@ This note was tightened after adversarial review surfaced five issues. The
 tightening is carried by three companion notes:
 
 - Basin-uniqueness and permutation-uniqueness (CRITICAL 1 + 2): resolved
-  via the perturbative criterion in
-  [G1_PHYSICIST_J_PERTURBATIVE_UNIQUENESS_NOTE_2026-04-17.md](./G1_PHYSICIST_J_PERTURBATIVE_UNIQUENESS_NOTE_2026-04-17.md).
-  Non-perturbative chamber basins exist, but only one (Basin 1 at
-  `sigma = (2, 1, 0)`) lies in the convergence domain of the
-  observable-principle source-response expansion.
+ via the perturbative criterion in
+ [SELECTOR_PHYSICIST_J_PERTURBATIVE_UNIQUENESS_NOTE_2026-04-17.md](./SELECTOR_PHYSICIST_J_PERTURBATIVE_UNIQUENESS_NOTE_2026-04-17.md).
+ Non-perturbative chamber basins exist, but only one (Basin 1 at
+ `sigma = (2, 1, 0)`) lies in the convergence domain of the
+ observable-principle source-response expansion.
 - θ_23 upper-octant conditionality (SERIOUS 3): formalized as a falsifiable
-  retained prediction in
-  [G1_PHYSICIST_K_THETA23_UPPER_OCTANT_PREDICTION_NOTE_2026-04-17.md](./G1_PHYSICIST_K_THETA23_UPPER_OCTANT_PREDICTION_NOTE_2026-04-17.md).
-  Chamber closure exists only if `s_23^2` is above a specific threshold;
-  this is a falsifiable prediction resolvable at DUNE / JUNO / Hyper-K.
+ retained prediction in
+ [PMNS_THETA23_UPPER_OCTANT_CHAMBER_CLOSURE_PREDICTION_NOTE_2026-04-17.md](./PMNS_THETA23_UPPER_OCTANT_CHAMBER_CLOSURE_PREDICTION_NOTE_2026-04-17.md).
+ Chamber closure exists only if `s_23^2` is above a specific threshold;
+ this is a falsifiable prediction resolvable at DUNE / JUNO / Hyper-K.
 - U_e = I citation chain (MEDIUM 4): replaced by the Z_3-trichotomy route
-  in
-  [G1_PHYSICIST_L_Z3_TRICHOTOMY_UE_IDENTITY_NOTE_2026-04-17.md](./G1_PHYSICIST_L_Z3_TRICHOTOMY_UE_IDENTITY_NOTE_2026-04-17.md),
-  which does NOT depend on the open normalization step in the
-  Dirac-bridge theorem.
+ in
+ [CHARGED_LEPTON_UE_IDENTITY_VIA_Z3_TRICHOTOMY_NOTE_2026-04-17.md](./CHARGED_LEPTON_UE_IDENTITY_VIA_Z3_TRICHOTOMY_NOTE_2026-04-17.md),
+ which does NOT depend on the open normalization step in the
+ Dirac-bridge theorem.
 - δ_CP framing (MEDIUM 5): reframed below as "falsifiable consequence of
-  the construction" rather than an over-determined check.
+ the construction" rather than an over-determined check.
 
 ## Summary
 
-The Physicist-E exhaustion theorem
-[G1_PHYSICIST_E_OBSERVABLE_CLOSURE_THEOREM_NOTE_2026-04-17](./G1_PHYSICIST_E_OBSERVABLE_CLOSURE_THEOREM_NOTE_2026-04-17.md)
-stratified the remaining G1 open object into exactly three lanes
+The the observable-bank exhaustion theorem exhaustion theorem
+[DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17](./DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md)
+stratified the remaining the selector gate open object into exactly three lanes
 `(P1, P2, P3)`. This note builds **P3** explicitly.
 
 **Main theorem.** The PMNS mixing angles `(theta_12, theta_13, theta_23,
 delta_CP)` admit an explicit retained-atlas-native closed-form map
 
 ```
-(m, delta, q_+)  -->  (sin^2 theta_12, sin^2 theta_13, sin^2 theta_23, delta_CP)
+(m, delta, q_+) --> (sin^2 theta_12, sin^2 theta_13, sin^2 theta_23, delta_CP)
 ```
 
 obtained by direct diagonalization of the retained affine Hermitian
@@ -55,13 +54,13 @@ everywhere in the chamber `q_+ >= sqrt(8/3) - delta`.
 central observational values
 
 ```
-sin^2 theta_12 = 0.307,   sin^2 theta_13 = 0.0218,   sin^2 theta_23 = 0.545
+sin^2 theta_12 = 0.307,  sin^2 theta_13 = 0.0218,  sin^2 theta_23 = 0.545
 ```
 
 has a **unique** chamber solution
 
 ```
-(m_*, delta_*, q_+*)  =  (0.657061, 0.933806, 0.715042)
+(m_*, delta_*, q_+*) = (0.657061, 0.933806, 0.715042)
 ```
 
 verified by 60 independent random-start multi-start + fsolve sharpening, all
@@ -78,39 +77,39 @@ Disagreement with future measurements falsifies the construction, not
 merely the pinned point. At the pinned point:
 
 ```
-sin(delta_CP)   =  -0.9874
-delta_CP        =  -80.88 deg  (equivalently +279.12 deg)
-|Jarlskog|      =   0.0328
+sin(delta_CP)  = -0.9874
+delta_CP    = -80.88 deg (equivalently +279.12 deg)
+|Jarlskog|   =  0.0328
 ```
 
 in the T2K-preferred lower octant and consistent with the observational
 `|J|` band.
 
 **Observational consistency.** All nine entries of `|U_PMNS|` at the pinned
-point lie inside the NuFit 5.3 3-sigma ranges (normal ordering). G1 closes
+point lie inside the NuFit 5.3 3-sigma ranges (normal ordering). the selector gate closes
 positively on the chamber.
 
 ## Retained inputs
 
-All retained / theorem-grade on `claude/g1-complete` at the time of writing:
+All retained / theorem-grade at the time of writing:
 
 - [DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md](./DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md)
-  — affine chart `H(m, delta, q_+) = H_base + m T_m + delta T_delta + q_+ T_q`.
+ — affine chart `H(m, delta, q_+) = H_base + m T_m + delta T_delta + q_+ T_q`.
 - [DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md](./DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md)
-  — chamber `q_+ >= sqrt(8/3) - delta`.
+ — chamber `q_+ >= sqrt(8/3) - delta`.
 - [DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_POINT_SELECTION_THEOREM_NOTE_2026-04-16.md](./DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_POINT_SELECTION_THEOREM_NOTE_2026-04-16.md)
-  — `K_Z3 = U_Z3^dag H U_Z3` decomposition, frozen slots `K01 = a_*`, `K02 = b_*`.
+ — `K_Z3 = U_Z3^dag H U_Z3` decomposition, frozen slots `K01 = a_*`, `K02 = b_*`.
 - [DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_CURRENT_BANK_BLINDNESS_THEOREM_NOTE_2026-04-16.md](./DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_CURRENT_BANK_BLINDNESS_THEOREM_NOTE_2026-04-16.md)
-  — chamber-blindness of the current exact bank (includes `a_*`, `b_*`).
+ — chamber-blindness of the current exact bank (includes `a_*`, `b_*`).
 - [DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md](./DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md)
-  — post-EWSB Dirac operator `Gamma_1` is diagonal in the generation axis
-  basis on `H_hw=1`, so the charged-lepton mass basis coincides with the
-  axis basis on the active sheet.
+ — post-EWSB Dirac operator `Gamma_1` is diagonal in the generation axis
+ basis on `H_hw=1`, so the charged-lepton mass basis coincides with the
+ axis basis on the active sheet.
 - [THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md](./THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md)
-  — retained 3-dim irreducible observable space `H_hw=1`.
-- [G1_PHYSICIST_E_OBSERVABLE_CLOSURE_THEOREM_NOTE_2026-04-17.md](./G1_PHYSICIST_E_OBSERVABLE_CLOSURE_THEOREM_NOTE_2026-04-17.md)
-  — exhaustion theorem and the identification of P3 as the atlas-open
-  promotion lane that closes G1.
+ — retained 3-dim irreducible observable space `H_hw=1`.
+- [DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md](./DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md)
+ — exhaustion theorem and the identification of P3 as the atlas-open
+ promotion lane that closes the selector gate.
 
 No post-axiom invention. No new axiom.
 
@@ -128,15 +127,15 @@ with
 
 ```
 H_base = [[0, E1, -E1 - i gamma],
-          [E1, 0, -E2],
-          [-E1 + i gamma, -E2, 0]],
-T_m     = [[1, 0, 0], [0, 0, 1], [0, 1, 0]],
+     [E1, 0, -E2],
+     [-E1 + i gamma, -E2, 0]],
+T_m   = [[1, 0, 0], [0, 0, 1], [0, 1, 0]],
 T_delta = [[0, -1, 1], [-1, 1, 0], [1, 0, -1]],
-T_q     = [[0, 1, 1], [1, 0, 1], [1, 1, 0]],
-gamma   = 1/2,  E1 = sqrt(8/3),  E2 = sqrt(8)/3.
+T_q   = [[0, 1, 1], [1, 0, 1], [1, 1, 0]],
+gamma  = 1/2, E1 = sqrt(8/3), E2 = sqrt(8)/3.
 ```
 
-`H` is Hermitian by construction (verified at all five Physicist-E
+`H` is Hermitian by construction (verified at all five the observable-bank exhaustion theorem
 candidate points).
 
 ### 2. The charged-lepton basis
@@ -148,7 +147,7 @@ bridge), which is diagonal in the generation axis basis
 basis coincides with the axis basis:
 
 ```
-U_e  =  I_3   (in the axis basis of H_hw=1).
+U_e = I_3  (in the axis basis of H_hw=1).
 ```
 
 ### 3. The neutrino basis from `H`
@@ -164,9 +163,9 @@ The PMNS matrix is `U_PMNS = U_e^dag U_nu = U_nu`, followed by the
 canonical row permutation
 
 ```
-sigma_hier = (2, 1, 0)     # electron <-> largest H-eigenvalue row,
-                           # muon     <-> middle,
-                           # tau      <-> smallest
+sigma_hier = (2, 1, 0)   # electron <-> largest H-eigenvalue row,
+              # muon   <-> middle,
+              # tau   <-> smallest
 ```
 
 which is the unique row permutation that produces observationally
@@ -191,16 +190,16 @@ and the CP phase from the Jarlskog invariant
 
 ```
 J = Im(U_e1 U_e2^* U_mu1^* U_mu2)
-  = c_12 s_12 c_23 s_23 c_13^2 s_13 sin(delta_CP).
+ = c_12 s_12 c_23 s_23 c_13^2 s_13 sin(delta_CP).
 ```
 
 ## Retained chamber-blindness checks
 
-The runner verifies at the five Physicist-E candidate points `A..E` that
+The runner verifies at the five the observable-bank exhaustion theorem candidate points `A..E` that
 
 ```
-K[0, 1] = a_* = 0.16993211 + 1.19280904 i,  |a_*| = 1.2048528262,
-K[0, 2] = b_* = 0.45860725 - 0.69280904 i,  |b_*| = 0.8308459399.
+K[0, 1] = a_* = 0.16993211 + 1.19280904 i, |a_*| = 1.2048528262,
+K[0, 2] = b_* = 0.45860725 - 0.69280904 i, |b_*| = 0.8308459399.
 ```
 
 These are identical at all five candidates at machine precision, exactly
@@ -212,28 +211,28 @@ in the retained `Z_3` doublet-block point-selection theorem.
 
 ## Chamber variation of PMNS angles
 
-The runner evaluates the map at the five Physicist-E candidates:
+The runner evaluates the map at the five the observable-bank exhaustion theorem candidates:
 
 | Candidate | `(m, δ, q_+)` | `s12^2` | `s13^2` | `s23^2` | `sin δ_CP` |
 |-----------|---------------|---------|---------|---------|-----------|
-| A Schur-Q       | `(0.500, 0.8165, 0.8165)` | 0.5576 | 0.0191 | 0.5429 | -0.958 |
-| B det-crit      | `(0.613, 0.964, 1.552)`    | 0.4624 | 0.1053 | 0.5459 | -0.974 |
-| C Tr(H^2)-bdy   | `(0.385, 1.268, 0.365)`    | 0.0885 | 0.0107 | 0.7427 | +0.712 |
-| D K12 char      | `(0.000, 0.800, 1.000)`    | 0.8116 | 0.0126 | 0.5952 | -0.205 |
-| E par-mix F1    | `(0.6285, 1.146, 0.487)`   | 0.1020 | 0.0123 | 0.6116 | -0.624 |
+| A Schur-Q    | `(0.500, 0.8165, 0.8165)` | 0.5576 | 0.0191 | 0.5429 | -0.958 |
+| B det-crit   | `(0.613, 0.964, 1.552)`  | 0.4624 | 0.1053 | 0.5459 | -0.974 |
+| C Tr(H^2)-bdy  | `(0.385, 1.268, 0.365)`  | 0.0885 | 0.0107 | 0.7427 | +0.712 |
+| D K12 char   | `(0.000, 0.800, 1.000)`  | 0.8116 | 0.0126 | 0.5952 | -0.205 |
+| E par-mix F1  | `(0.6285, 1.146, 0.487)`  | 0.1020 | 0.0123 | 0.6116 | -0.624 |
 
 The angles **genuinely vary** across the chamber
 (spread ~0.7 for `s12^2`, ~0.1 for `s13^2`, ~0.2 for `s23^2`). This is
 the retained-atlas-native `f(H)` chamber-varying observable that closes
-the Physicist-E CASE 4 obstruction on the P3 lane.
+the the observable-bank exhaustion theorem CASE 4 obstruction on the P3 lane.
 
 ## The pinning theorem
 
-**Theorem (G1 closure via PMNS observational constraints).** The system
+**Theorem (the selector closure via PMNS observational constraints).** The system
 
 ```
 |U_e2(m, delta, q_+)|^2 / cos^2 theta_13 = sin^2 theta_12(obs) = 0.307,
-|U_e3(m, delta, q_+)|^2                 = sin^2 theta_13(obs) = 0.0218,
+|U_e3(m, delta, q_+)|^2         = sin^2 theta_13(obs) = 0.0218,
 |U_mu3(m, delta, q_+)|^2 / cos^2 theta_13 = sin^2 theta_23(obs) = 0.545,
 ```
 
@@ -241,9 +240,9 @@ has a unique solution **in the perturbative regime** on the chamber
 `q_+ >= sqrt(8/3) - delta`:
 
 ```
-m_*      =  0.657061342210,
-delta_*  =  0.933806343759,
-q_+*     =  0.715042329587.
+m_*   = 0.657061342210,
+delta_* = 0.933806343759,
+q_+*   = 0.715042329587.
 ```
 
 **Proof sketch.** The map `(m, delta, q_+) -> (s12^2, s13^2, s23^2)` is a
@@ -253,7 +252,7 @@ the fsolve convergence). Uniqueness within the axiom-native perturbative
 regime (source Frobenius norm less than baseline Frobenius norm) is
 verified by 60 independent random-start Nelder-Mead descents at
 `chi^2 < 10^-12`. See
-[G1_PHYSICIST_J_PERTURBATIVE_UNIQUENESS_NOTE_2026-04-17.md](./G1_PHYSICIST_J_PERTURBATIVE_UNIQUENESS_NOTE_2026-04-17.md)
+[SELECTOR_PHYSICIST_J_PERTURBATIVE_UNIQUENESS_NOTE_2026-04-17.md](./SELECTOR_PHYSICIST_J_PERTURBATIVE_UNIQUENESS_NOTE_2026-04-17.md)
 for the formal perturbative-uniqueness theorem that establishes this as
 retained-grade. Non-perturbative chamber basins exist (e.g. at
 `(m,delta,q_+) ~ (28, 21, 5)` on the same permutation, and at
@@ -269,9 +268,9 @@ source-response expansion and are therefore excluded.
 **Chamber boundary check.** The pinned point is inside the chamber:
 
 ```
-q_+* + delta_*  =  1.6489,
-sqrt(8/3)       =  1.6330,
-distance        =  0.0159  (interior).
+q_+* + delta_* = 1.6489,
+sqrt(8/3)    = 1.6330,
+distance    = 0.0159 (interior).
 ```
 
 ## Physics cross-checks
@@ -281,15 +280,15 @@ distance        =  0.0159  (interior).
 At the pinned point,
 
 ```
-|U_PMNS| =  [0.8233, 0.5480, 0.1476]
-           [0.3704, 0.5742, 0.7301]
-           [0.4300, 0.6083, 0.6671]
+|U_PMNS| = [0.8233, 0.5480, 0.1476]
+      [0.3704, 0.5742, 0.7301]
+      [0.4300, 0.6083, 0.6671]
 ```
 
 Every entry lies inside the NuFit 5.3 NO 3-sigma range
 (runner: 9/9 PASS).
 
-### Cross-check 2: prior Physicist-E retained candidates
+### Cross-check 2: prior the observable-bank exhaustion theorem retained candidates
 
 The pinned `(delta_*, q_+*) = (0.934, 0.715)` is strictly distinct from
 every prior retained candidate on the chamber:
@@ -304,7 +303,7 @@ every prior retained candidate on the chamber:
 
 The closest prior candidate (A, Schur-Q) lies 0.155 away — well outside
 any numerical tolerance. The PMNS pinning is **inequivalent to every
-prior retained variational candidate**, consistent with the Physicist-E
+prior retained variational candidate**, consistent with the the observable-bank exhaustion theorem
 narrower-gap statement that no prior candidate was observationally
 selected.
 
@@ -350,56 +349,56 @@ pairing `sigma_hier = (2, 1, 0)`.
 
 This unlocks the downstream flavor / cosmology / leptogenesis
 consequences that were previously blocked by PMNS atlas-openness (per
-the Physicist-E narrow-gap statement): with PMNS retained, every
+the the observable-bank exhaustion theorem narrow-gap statement): with PMNS retained, every
 downstream observable that routes through PMNS on the atlas is now
 level-set against the chamber pin.
 
 ## Narrowed-gap statement
 
-**Before this note:** G1 was stratified into `P1/P2/P3`. `P3` was flagged
-as the largest-scope lane that simultaneously closes G1 and the PMNS
+**Before this note:** selector was stratified into `P1/P2/P3`. `P3` was flagged
+as the largest-scope lane that simultaneously closes selector and the PMNS
 open objects, but the retained-atlas map `(m, delta, q_+) -> PMNS` was
 not explicitly constructed.
 
 **After this note:**
 - The `P3` map is **built** explicitly by direct diagonalization of the
-  retained affine `H`.
-- G1 closes on the chamber at
-  `(m_*, delta_*, q_+*) = (0.657061, 0.933806, 0.715042)`.
+ retained affine `H`.
+- the selector gate closes on the chamber at
+ `(m_*, delta_*, q_+*) = (0.657061, 0.933806, 0.715042)`.
 - PMNS is promoted to retained on the chamber.
 - A falsifiable `delta_CP` prediction is produced:
-  `sin(delta_CP) = -0.987`, `delta_CP ~ -81 deg (= 279 deg)`.
+ `sin(delta_CP) = -0.987`, `delta_CP ~ -81 deg (= 279 deg)`.
 - The solar-gap `Dm^2_21`, absolute-mass scale, and Majorana phases
-  remain atlas-open (different carriers than the Hermitian `H`).
+ remain atlas-open (different carriers than the Hermitian `H`).
 
 ## Runner-verified content
 
-The runner (`scripts/frontier_g1_physicist_h_pmns_as_f_h.py`) executes
+The runner (`scripts/frontier_pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem.py`) executes
 43 PASS / 0 FAIL across seven parts:
 
 - **Part 1 (structural).** `H` and `K_Z3` are Hermitian at five candidates;
-  `a_*`, `b_*` are chamber-blind; `K_doublet` varies on the chamber.
+ `a_*`, `b_*` are chamber-blind; `K_doublet` varies on the chamber.
 - **Part 2 (PMNS chamber-variation).** `sin^2 theta_{12,13,23}` all vary
-  on the chamber with spreads `0.72`, `0.09`, `0.20` respectively.
+ on the chamber with spreads `0.72`, `0.09`, `0.20` respectively.
 - **Part 3 (unique chamber solution).** 60 random-start multi-start
-  Nelder-Mead descents all converge to the same `(m_*, delta_*, q_+*)`;
-  fsolve sharpens to 12 digits; pinned point is strictly inside the
-  chamber.
+ Nelder-Mead descents all converge to the same `(m_*, delta_*, q_+*)`;
+ fsolve sharpens to 12 digits; pinned point is strictly inside the
+ chamber.
 - **Part 4 (PDG ranges).** All 9 entries of `|U_PMNS|` at the pinned
-  point lie inside the NuFit 5.3 NO 3-sigma ranges.
+ point lie inside the NuFit 5.3 NO 3-sigma ranges.
 - **Part 5 (`delta_CP` + Jarlskog).** `|J| = 0.0328` in observed band;
-  `sin(delta_CP) = -0.9874` in T2K-preferred sign.
+ `sin(delta_CP) = -0.9874` in T2K-preferred sign.
 - **Part 6 (candidate inequivalence).** Pinned point is strictly
-  inequivalent (distance >= 0.155) to every prior retained Physicist-E
-  candidate.
+ inequivalent (distance >= 0.155) to every prior retained the observable-bank exhaustion theorem
+ candidate.
 - **Part 7 (frozen-slot closed forms).** `a_*`, `b_*` numerical closed
-  forms recorded; chamber-blindness re-verified.
+ forms recorded; chamber-blindness re-verified.
 
 ## Command
 
 ```bash
 cd /Users/jonBridger/Toy\ Physics/.claude/worktrees/agent-a3f8a57a
-PYTHONPATH=scripts python3 scripts/frontier_g1_physicist_h_pmns_as_f_h.py
+PYTHONPATH=scripts python3 scripts/frontier_pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem.py
 ```
 
 Expected: `PASS = 43, FAIL = 0`.
@@ -408,20 +407,20 @@ Expected: `PASS = 43, FAIL = 0`.
 
 This note **positively claims**:
 - PMNS map `(m, delta, q_+) -> (theta_ij, delta_CP)` is retained-grade on
-  the chamber (constructed from retained inputs only);
-- G1 closes on the chamber at
-  `(m_*, delta_*, q_+*) = (0.657061, 0.933806, 0.715042)`;
+ the chamber (constructed from retained inputs only);
+- the selector gate closes on the chamber at
+ `(m_*, delta_*, q_+*) = (0.657061, 0.933806, 0.715042)`;
 - a retained `delta_CP` prediction: `sin(delta_CP) = -0.9874`,
-  `delta_CP ~ -81 deg (= 279 deg)`;
+ `delta_CP ~ -81 deg (= 279 deg)`;
 - the pinned `|U_PMNS|` matches NuFit 5.3 NO 3-sigma ranges in all 9
-  entries.
+ entries.
 
 This note **does not claim**:
 - closure of the solar-gap `Dm^2_21` (different carrier);
 - closure of the absolute neutrino mass scale (different carrier);
 - closure of Majorana CP phases (separate sector);
 - retention of PMNS on any other chamber than the live source-oriented
-  sheet defined by the retained affine `H`.
+ sheet defined by the retained affine `H`.
 
 The positive claims stand or fall on:
 (i) the retained exact affine chart `H = H_base + m T_m + delta T_delta
@@ -432,7 +431,7 @@ axis basis on `H_hw=1` (retained theorem);
 (iv) the direct numerical diagonalization and the unique chamber solution
 recorded here (runner-verified to machine precision, 60-seed multi-start).
 
-No post-axiom selector law is introduced. The G1 selector *principle*
+No post-axiom selector law is introduced. The selector selector *principle*
 (P2 lane) is not needed, because the observational PMNS data, fed
 through the retained `f(H)` map, supplies the remaining 3-real datum
 `(m_*, delta_*, q_+*)` directly. This is the P3 lane realized.
@@ -442,42 +441,42 @@ through the retained `f(H)` map, supplies the remaining 3-real datum
 With PMNS promoted to retained:
 
 - **Leptogenesis.** The DM-leptogenesis PMNS-assisted transport witness
-  [DM_LEPTOGENESIS_PMNS_TRANSPORT_EXTREMAL_SOURCE_CANDIDATE_NOTE_2026-04-16](./DM_LEPTOGENESIS_PMNS_TRANSPORT_EXTREMAL_SOURCE_CANDIDATE_NOTE_2026-04-16.md)
-  can now be evaluated at the pinned `(delta_*, q_+*)` with the PMNS
-  `(theta_ij, delta_CP)` supplied by this theorem rather than as free
-  parameters.
+ [DM_LEPTOGENESIS_PMNS_TRANSPORT_EXTREMAL_SOURCE_CANDIDATE_NOTE_2026-04-16](./DM_LEPTOGENESIS_PMNS_TRANSPORT_EXTREMAL_SOURCE_CANDIDATE_NOTE_2026-04-16.md)
+ can now be evaluated at the pinned `(delta_*, q_+*)` with the PMNS
+ `(theta_ij, delta_CP)` supplied by this theorem rather than as free
+ parameters.
 - **Flavor sector.** The PMNS retention lifts the
-  [LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md](./LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md)
-  negative result on the two-Higgs / parity-mixing lane: the triviality
-  is reorganized into a relationship between the live `H` sheet and the
-  flavor-currents family.
+ [LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md](./LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md)
+ negative result on the two-Higgs / parity-mixing lane: the triviality
+ is reorganized into a relationship between the live `H` sheet and the
+ flavor-currents family.
 - **`delta_CP` prediction.** A falsifiable prediction
-  `sin(delta_CP) = -0.987` is published for upcoming
-  DUNE / Hyper-Kamiokande test.
+ `sin(delta_CP) = -0.987` is published for upcoming
+ DUNE / Hyper-Kamiokande test.
 
 ## Position on publication surface
 
-This note is the **G1 closure theorem** on the publication surface:
-- G1 gate on the DM-neutrino source-oriented sheet: **CLOSED**
-  at `(m_*, delta_*, q_+*)`.
+This note is the **the selector closure theorem** on the publication surface:
+- the selector gate on the DM-neutrino source-oriented sheet: **CLOSED**
+ at `(m_*, delta_*, q_+*)`.
 - PMNS retained: **YES** on the chamber via `f(H)`.
-- DM flagship cascade can now proceed downstream of G1 using the pinned
-  chamber point instead of the previously ambiguous prior candidates.
+- DM flagship cascade can now proceed downstream of selector using the pinned
+ chamber point instead of the previously ambiguous prior candidates.
 - The paragraph in
-  [G1_PHYSICIST_E_OBSERVABLE_CLOSURE_THEOREM_NOTE_2026-04-17.md](./G1_PHYSICIST_E_OBSERVABLE_CLOSURE_THEOREM_NOTE_2026-04-17.md)
-  that records P3 as an open promotion lane is now **realized**; a
-  follow-up ATLAS update should reclassify P3 from "open promotion lane"
-  to "completed promotion" and retain the PMNS angles as `f(H)`.
+ [DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md](./DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md)
+ that records P3 as an open promotion lane is now **realized**; a
+ follow-up ATLAS update should reclassify P3 from "open promotion lane"
+ to "completed promotion" and retain the PMNS angles as `f(H)`.
 
 ## What this file must never say
 
 - that the solar-gap `Dm^2_21` is retained as `f(H)` (it is not — different
-  carrier);
+ carrier);
 - that the absolute neutrino mass scale is retained at the chamber
-  (different carrier);
+ (different carrier);
 - that Majorana CP phases are retained (separate open Majorana-sector
-  problem);
+ problem);
 - that the PMNS map is valid off the live source-oriented sheet (it is
-  derived on the live sheet only);
+ derived on the live sheet only);
 - that the `delta_CP` prediction is certain (it is a falsifiable
-  retained-grade prediction, subject to upcoming observational test).
+ retained-grade prediction, subject to upcoming observational test).
