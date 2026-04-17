@@ -59,6 +59,8 @@ continuum packaging.
   no-proper-quotient closure on the physical-lattice surface
 - exact `I_3 = 0`
 - exact CPT
+- retained Bell/CHSH support theorem on explicit two-species lattice systems
+  with KS taste measurements
 - emergent Lorentz invariance with first anisotropic correction at dimension 6 and unique cubic-harmonic `\ell = 4` signature; on the retained hierarchy surface the correction is `(E/M_{Pl})^2` suppressed
 - retained full strong-CP closure / `theta_eff = 0` on the retained action surface
 

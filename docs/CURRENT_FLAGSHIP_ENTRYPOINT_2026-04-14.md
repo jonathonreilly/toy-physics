@@ -51,8 +51,10 @@ Fast reviewer path after this page:
 - gauge / matter:
   exact native `SU(2)`, graph-first structural `SU(3)`, anomaly-forced `3+1`,
   retained three-generation structure, exact `I_3 = 0`, exact CPT, emergent
-  Lorentz invariance, retained full strong-CP closure on the retained action
-  surface, and exact `T = 0` confinement with bounded `sqrt(sigma)`
+  Bell/CHSH support on explicit two-species lattice systems with KS taste
+  measurements, emergent Lorentz invariance, retained full strong-CP closure
+  on the retained action surface, and exact `T = 0` confinement with bounded
+  `sqrt(sigma)`
 - quantitative stack:
   retained `alpha_s(M_Z) = 0.1181`, retained EW normalization, canonical
   `v = 246.282818290129 GeV`, promoted CKM atlas/axiom closure,

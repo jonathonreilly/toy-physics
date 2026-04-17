@@ -49,8 +49,10 @@ For the explicit package boundary, use:
   retained `S^3` topology closure, one-generation closure, retained
   three-generation structure on the no-rooting / residual substrate boundary,
   with an exact retained `hw=1` observable no-proper-quotient theorem,
-  exact `I_3 = 0`, exact CPT, emergent Lorentz invariance, and retained full
-  strong-CP closure / `theta_eff = 0` on the retained action surface
+  exact `I_3 = 0`, exact CPT, retained Bell/CHSH support on explicit
+  two-species lattice systems with KS taste measurements, emergent Lorentz
+  invariance, and retained full strong-CP closure / `theta_eff = 0` on the
+  retained action surface
 - confinement:
   exact `T = 0` confinement of the graph-first `SU(3)` gauge sector, with
   bounded `sqrt(sigma) ≈ 465 MeV`

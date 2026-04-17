@@ -39,8 +39,10 @@ context, not part of the live reviewer path.
   weak-field gravity, restricted strong-field closure, full discrete `3+1`
   GR, chosen-target QG/continuum closure, graph-first `SU(3)`, anomaly-forced
   `3+1`, retained three-generation structure, exact `I_3 = 0`, exact CPT,
-  emergent Lorentz invariance, retained full strong-CP closure on the retained
-  action surface, and exact `T = 0` confinement with bounded `sqrt(sigma)`
+  retained Bell/CHSH support on explicit two-species lattice systems with KS
+  taste measurements, emergent Lorentz invariance, retained full strong-CP
+  closure on the retained action surface, and exact `T = 0` confinement with
+  bounded `sqrt(sigma)`
 - retained and promoted quantitative stack:
   canonical `v = 246.282818290129 GeV`, retained `alpha_s(M_Z) = 0.1181`,
   retained EW normalization, promoted CKM atlas/axiom closure,

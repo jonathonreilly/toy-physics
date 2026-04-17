@@ -102,6 +102,10 @@ Current package status:
 - exact taste-block fermion-CW isotropy support theorem with bounded
   taste-scalar near-degeneracy companion:
   `m_taste = 124.91 GeV`, scalar-only `v_c/T_c = 0.3079`
+- retained Bell/CHSH support theorem on explicit two-species lattice systems:
+  KS taste operators are constructed explicitly, `G=0` stays exactly at
+  `|S| = 2.000`, and periodic Poisson coupling yields finite-lattice CHSH
+  violation on the retained 1D/2D/3D family
 
 ## Other Bounded Families
 

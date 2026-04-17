@@ -1,0 +1,16 @@
+Bell CHSH retained support checks
+Date: 2026-04-17
+Runner: scripts/frontier_bell_inequality.py
+
+taste_identity dim=1 side=8: Z=I_cells⊗xi5 -> True, X=I_cells⊗xi_last -> True
+taste_identity dim=2 side=4: Z=I_cells⊗xi5 -> True, X=I_cells⊗xi_last -> True
+taste_identity dim=3 side=4: Z=I_cells⊗xi5 -> True, X=I_cells⊗xi_last -> True
+
+1D null: |S|=2.000000000000
+1D viol: |S|=2.070426682531
+2D null: |S|=2.000000000000
+2D nonviol at G=100: |S|=1.999398395811
+2D viol at G=500: |S|=2.358910007000
+2D viol at G=1000: |S|=2.576927171064
+3D null: |S|=2.000000000000
+3D viol at G=2000: |S|=2.077240320612

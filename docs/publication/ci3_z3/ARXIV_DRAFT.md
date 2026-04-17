@@ -21,9 +21,11 @@ $PL\,S^3 \times \mathbb{R}$, and an exact quantum-gravity/continuum
 identification chain on one chosen canonical textbook target. On the gauge and
 matter side, the same framework carries exact native $SU(2)$, graph-first
 structural $SU(3)$, anomaly-forced $3+1$, retained three-generation matter
-structure, exact $I_3=0$, exact CPT, emergent Lorentz invariance, exact strong
-CP in the form $\theta_{\mathrm{eff}}=0$ on the retained action surface, and
-exact $T=0$ confinement with bounded $\sqrt{\sigma}\approx 465\,\mathrm{MeV}$.
+structure, exact $I_3=0$, exact CPT, retained Bell/CHSH support on explicit
+two-species lattice systems with KS taste measurements, emergent Lorentz
+invariance, exact strong CP in the form $\theta_{\mathrm{eff}}=0$ on the
+retained action surface, and exact $T=0$ confinement with bounded
+$\sqrt{\sigma}\approx 465\,\mathrm{MeV}$.
 Quantitatively, the current package gives the canonical hierarchy evaluation
 $v=246.282818290129\,\mathrm{GeV}$, retains
 $\alpha_s(M_Z)=0.1181$ and electroweak normalization lanes, promotes an
@@ -377,12 +379,17 @@ observable algebra admits no proper exact quotient, and the physical-lattice,
 no-rooting, and anomaly-forced-chirality boundary keeps the claim narrower than
 a conventional lattice-regulator loophole theorem.*
 
-### 4.4 Exact $I_3=0$, exact CPT, and emergent Lorentz invariance
+### 4.4 Exact $I_3=0$, exact CPT, Bell/CHSH support, and emergent Lorentz invariance
 
-Two exact support theorems remain important and compact:
+Three support theorems remain important and compact:
 
 - exact $I_3=0$ and no third-order interference on the Hilbert surface;
 - exact CPT on the free staggered lattice.
+- retained Bell/CHSH support on explicit two-species tensor-product lattice
+  systems, where the local measurement algebra is supplied by explicit
+  Kogut-Susskind taste operators and periodic Poisson coupling yields
+  finite-lattice violations while the $G=0$ null control stays exactly at the
+  classical bound.
 
 These are not decorative extras. They certify that the same discrete framework
 supports both the gauge/matter backbone and nontrivial exact consistency
