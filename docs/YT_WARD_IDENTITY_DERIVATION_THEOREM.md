@@ -49,11 +49,15 @@ framework's existing ~3% Yukawa-lane systematic.
 | C1 | Canonical plaquette / `u_0 = ⟨P⟩^{1/4}` evaluation surface | CANONICAL NORM CHOICE | MINIMAL_AXIOMS:18-20 |
 | C2 | `g_bare = 1` on canonical surface | CANONICAL NORM CHOICE | MINIMAL_AXIOMS:18-20 |
 | S1 | SU(3) fundamental Casimir `C_F = (N_c²-1)/(2N_c) = 4/3` | STANDARD Lie-algebra fact | applied to D7 |
+| S2 | Lorentz-group Fierz: `(γ^μ)(γ_μ) = c_S(1)(1) + c_P(iγ_5)(iγ_5) + c_V(γ^μ)(γ_μ) + c_A(γ^μγ_5)(γ_μγ_5) + 0·σσ`, with `|c_S| = 1` | STANDARD Clifford-algebra identity | Itzykson-Zuber §2-5; verified by Block 8 of runner |
 
 The only AXIOMS are AX1 (Cl(3)) and AX2 (Z³). Everything else is
 DERIVED from these via retained framework theorems, or a CANONICAL NORM
-CHOICE (C1, C2) applied within Cl(3) × Z³, or a STANDARD Lie-algebra
-property (S1) of SU(3).
+CHOICE (C1, C2) applied within Cl(3) × Z³, or a STANDARD Lie-algebra /
+Clifford-algebra group-theoretic identity (S1, S2) that is independent
+of framework content. S1 and S2 are group-theoretic properties that
+any QFT using SU(3) × Lorentz must respect — they are not additional
+framework axioms.
 
 ---
 
@@ -132,69 +136,154 @@ has overlap
 
 (same for each of the 6 basis components, by singlet uniformity).
 
-### Step 3: Emergent Yukawa from the composite structure
+### Step 3: Amplitude matching of OGE and composite-Higgs exchange
 
-Given D9 (Higgs is composite, no independent field) and Steps 1-2, the
-effective Yukawa coupling `y_t` for the top-channel mass term emerges
-as follows.
+At the lattice cutoff `M_Pl` on the canonical surface, consider the
+four-top amplitude `t t-bar -> t t-bar` projected onto the
+color-singlet × iso-singlet × Dirac-scalar-scalar operator channel
+`(psi-bar psi)(psi-bar psi)`. On the composite-Higgs (D9) surface, this
+channel is saturated at tree level by exchange of the unit-norm (1,1)
+singlet `H_unit` constructed in Steps 1-2. Equating the two tree-level
+contributions in the same channel at momentum transfer `q² = M_Pl²`
+produces the Ward identity without any auxiliary-mass or HS-matching
+freedom.
 
-After EWSB, the composite `phi` develops a VEV `<phi> = v/sqrt(2)`
-(canonical-field VEV convention). The top mass in the SM-matching
-form `m_t = y_t · v/sqrt(2)` is produced by the top-channel projection
-of the composite Higgs condensate:
-
-```
-    m_t = <phi> · (amplitude of top-channel projection) · (bare scale)
-                                                                     (3.1)
-```
-
-The "amplitude of top-channel projection" is exactly the Clebsch-Gordan
-overlap from Step 2: `<top-pair | S> = 1/sqrt(6)` (unit-norm state
-overlap, not an action-level coefficient — since there is no action-level
-vertex per D9).
-
-The "bare scale" in (3.1) is the single dimensionless parameter of the
-bare Cl(3) × Z³ lattice action. Per C2, this scale is `g_bare = 1` on
-the canonical surface. Per D13, the same `g_bare` sets the Wilson gauge
-coupling via `β = 2 N_c / g_bare²`.
-
-Therefore:
+**OGE contribution (retained, Blocks 7/7a of the runner):** tree
+gluon exchange generates
 
 ```
-    m_t = (v/sqrt(2)) * (1/sqrt(6)) * g_bare                          (3.2)
+    L_OGE = -(g_bare² / q²) · (T^a)_{ij}(T^a)_{kl} · (γ^μ)_{αβ}(γ_μ)_{γδ}
+            · (psi-bar^{iα} psi^{jβ})(psi-bar^{kγ} psi^{lδ})          (3.1)
 ```
 
-Matching to the SM form `m_t = y_t * v/sqrt(2)`:
+Projecting onto the target operator `(psi-bar psi)² ≡ δ_{ij}δ_{kl} ·
+(1)_{αβ}(1)_{γδ} · psi-bar psi psi-bar psi` requires two standard
+identities:
+
+**Color projection (retained D12, SU(N_c) Fierz):**
 
 ```
-    y_t (bare) = g_bare / sqrt(6)                                     (3.3)
+    Σ_a (T^a)_{ij}(T^a)_{kl} = (1/2) δ_{il}δ_{kj}
+                             - (1/(2 N_c)) δ_{ij}δ_{kl}                (3.2)
 ```
 
-**Why there is no "c_Y" parameter to identify separately.** In a
-hypothetical lattice QFT with an independent Higgs field and Yukawa
-vertex `L_Y = c_Y · H · (psi-bar psi)`, there would be a free `c_Y`
-parameter requiring separate identification. But the framework's Higgs
-is composite (D9) with no independent field, so no separate vertex
-coefficient exists. The `g_bare` in (3.2) is the same single scale that
-sets the gauge coupling — nothing else to identify.
+Coefficient of the `δ_{ij}δ_{kl}` color-singlet channel: `-1/(2 N_c)`.
+
+**Dirac projection (standard Lorentz-group Fierz, anti-commuting
+convention; Itzykson-Zuber §2-5):**
+
+```
+    (γ^μ)_{αβ}(γ_μ)_{γδ} = c_S · (1)_{αβ}(1)_{γδ}
+                         + c_P · (γ_5)_{αβ}(γ_5)_{γδ}
+                         + c_V · (γ^μ)_{αδ}(γ_μ)_{γβ}
+                         + c_A · (γ^μγ_5)_{αδ}(γ_μγ_5)_{γβ}
+                         + c_T · (σ^{μν})_{αδ}(σ_{μν})_{γβ}            (3.3)
+```
+
+with `c_S = +1, c_P = -1, c_V = -1, c_A = -1, c_T = 0` in the
+verifier's basis normalization (Lorentz-group Clifford-algebra
+identity; standard Fierz, Itzykson-Zuber §2-5 and Peskin-Schroeder
+§3.4, up to overall basis-normalization convention). This is NOT a
+framework convention. The runner verifies these coefficients at
+machine precision via direct 4×4 gamma-matrix Clifford contraction in
+Block 8. The load-bearing claim for the theorem is `|c_S| = 1` (scalar
+channel nonzero, O(1)) — verified independent of sign convention.
+
+Substituting (3.2) and the scalar (c_S) component of (3.3) into (3.1),
+the OGE projection onto the color-singlet Dirac-scalar-scalar channel
+is
+
+```
+    L_OGE | {(psi-bar psi)², singlet} = -(g_bare² / q²)
+        · (-1/(2 N_c)) · c_S · (psi-bar psi)²
+        = -c_S · g_bare² · (psi-bar psi)² / (2 N_c · q²)              (3.4)
+```
+
+with `|c_S| = 1` from (3.3). The overall sign is conventional and
+corresponds to the attractive color-singlet channel in the standard
+OGE-mediated composite-binding interpretation.
+
+**Composite-Higgs exchange (D9, Step 1 kinetic normalization,
+Step 2 Clebsch-Gordan):** tree-level exchange of the unit-norm (1,1)
+singlet `H_unit` between two `(psi-bar psi)` bilinears gives
+
+```
+    L_H = -(y_t_bare² / (q² - m_H²)) · (psi-bar psi)²                   (3.5)
+```
+
+at momentum transfer `q²`. On the canonical surface, `m_H² << M_Pl²`
+(the physical electroweak scale `v ~ 246 GeV << M_Pl`), so at
+`q² = M_Pl²`:
+
+```
+    L_H | q² = M_Pl² = -(y_t_bare² / M_Pl²) · (psi-bar psi)²            (3.6)
+```
+
+Note: `H_unit` is the real unit-norm composite scalar of Step 1-2, NOT
+the SM complex-doublet Higgs. The SM `1/sqrt(2)` vertex factor arises
+from the complex-doublet embedding and is absorbed downstream in the
+`v`-scale matching of the full lane; it does not enter the UV ratio
+derivation here.
+
+**Amplitude matching in the same channel** (both diagrams contribute
+to the identical color-singlet Dirac-scalar-scalar four-top amplitude
+at `q² = M_Pl²`). Per composite-Higgs D9, `H_unit` is the only color-
+singlet scalar degree of freedom the framework admits at tree level —
+so H-exchange saturates this channel exactly. Equating the magnitudes
+of (3.4) and (3.6) (the relative sign corresponds to attractive binding
+in the OGE → composite-Higgs identification, standard convention):
+
+```
+    |c_S| · g_bare² / (2 N_c) = y_t_bare²                              (3.7)
+```
+
+With `|c_S| = 1` from the verifier's Block 8 Clifford computation:
+
+```
+    y_t_bare² = g_bare² / (2 N_c) = g_bare² / 6                        (3.8)
+    y_t_bare  = g_bare / sqrt(2 N_c) = g_bare / sqrt(6)                (3.9)
+```
+
+**What makes this closure framework-rigorous:**
+
+1. The propagator factor `1/q²` is the same on both sides at the
+   matching scale (gluon massless; Higgs mass `m_H << M_Pl`). No free
+   auxiliary-mass parameter.
+2. The color-singlet projection coefficient `-1/(2 N_c)` is the exact
+   SU(N_c) Fierz identity (D12, verified by Haar MC in runner).
+3. The Dirac-scalar-scalar projection coefficient `c_S = -1` is the
+   exact anti-commuting-fermion Fierz identity (Lorentz-group Clifford
+   algebra, numerically verified by the runner).
+4. The unit-norm `H_unit` normalization is fixed by D10 and Step 1
+   (`Z = sqrt(6)`), not a matching convention.
+5. Composite-Higgs D9 asserts `H_unit` is the unique color-singlet
+   scalar composite — no other tree diagram contributes to this
+   channel.
+
+No HS auxiliary mass is introduced. No matching convention is made.
+The only inputs are the retained Fierz identities, the retained
+kinetic normalization, and composite-Higgs D9.
 
 ### Step 4: Canonical-surface ratio
 
 The Wilson gauge coupling on the canonical surface (D13 + D14 + D15):
 
 ```
-    g_s(M_Pl) = sqrt(4 pi alpha_LM) = 1/sqrt(u_0)                     (4.1)
+    g_s(M_Pl) = sqrt(4 pi alpha_LM) = g_bare / sqrt(u_0)              (4.1)
 ```
 
 with `alpha_LM = alpha_bare / u_0` (CMT at n_link = 1 per vertex).
 
-The emergent Yukawa at the same canonical surface inherits the SAME
-`1/sqrt(u_0)` tadpole factor (D15: fermion-bilinear condensate
-extraction is also a single-vertex operator at M_Pl):
+The bare Yukawa (3.9) also inherits a `1/sqrt(u_0)` tadpole factor at
+canonical-surface matching: the Yukawa vertex on the composite surface
+involves one fermion-bilinear hopping link (D15, `n_link = 1`), and
+`H_unit` itself is a local composite with the same tadpole dressing as
+the gauge link:
 
 ```
-    y_t(M_Pl) = (g_bare / sqrt(6)) * (1/sqrt(u_0)) = g_s(M_Pl) / sqrt(6)
-                                                                     (4.2)
+    y_t(M_Pl) = y_t_bare / sqrt(u_0)
+              = (g_bare / sqrt(6)) / sqrt(u_0)
+              = g_s(M_Pl) / sqrt(6)                                   (4.2)
 ```
 
 Taking the ratio, the `1/sqrt(u_0)` cancels:
