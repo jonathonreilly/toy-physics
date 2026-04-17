@@ -145,15 +145,15 @@ ledger:
   where `alpha_s(v)` comes from the same-surface plaquette chain,
   `g_1(v), g_2(v)` use derived `R_conn = 8/9` support, and the `M_Z`
   rows use the retained running bridge
-- derived-with-explicit-systematic `y_t(v) = 0.9176`
-- derived-with-explicit-systematic canonical `m_t(pole) = 173.10 GeV` (3-loop),
+- derived `y_t(v) = 0.9176`
+- derived canonical `m_t(pole) = 173.10 GeV` (3-loop),
   with retained `172.57 GeV` (2-loop) support
-  with the current explicit bridge budget of `1.2147511%` conservative
-  (`0.75500635%` support-tight) carried by the Yukawa/top lane
-- derived-with-inherited-explicit-systematic Higgs / vacuum package:
+  and current primary-route standard-method residuals rather than a
+  framework-native explicit bridge qualifier
+- derived Higgs / vacuum package:
   canonical `m_H = 125.1 GeV` (framework-side 3-loop route), with retained
   `119.8 GeV` (2-loop support route); vacuum-stability readout inherited from
-  the explicit `y_t` systematic
+  the current `y_t` lane
 - exact taste-block fermion-CW isotropy support theorem with bounded
   taste-scalar near-degeneracy companion:
   `m_taste = 124.91 GeV`, scalar-only `v_c/T_c = 0.3079`

@@ -1,8 +1,9 @@
 # Axiom-First Microscopic Bridge Theorem
 
-**Date:** 2026-04-15
-**Status:** current supporting theorem for the derived-with-explicit-systematic
-`y_t` lane; reduction theorem, not final unbounded closure
+**Date:** 2026-04-17
+**Status:** current supporting theorem for the independent Schur-bridge
+cross-check path on the `y_t` lane; reduction theorem, not final UV-to-IR
+closure
 
 ## Authority notice
 

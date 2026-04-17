@@ -1,41 +1,28 @@
 # y_t Lane: Zero-Import Authority
 
-**Date:** 2026-04-15
-**Status:** DERIVED with explicit systematic authority surface (zero external observables)
-**Primary runners:** `scripts/frontier_yt_color_projection_correction.py`,
-`scripts/frontier_yt_explicit_systematic_budget.py`
-**Supporting runners:** `scripts/frontier_yt_exact_interacting_bridge_transport.py`,
-`scripts/frontier_yt_microscopic_schur_class_admissibility.py`,
+**Date:** 2026-04-17
+**Status:** DERIVED quantitative authority surface (zero external observables)
+**Primary runners:** `scripts/frontier_yt_ward_identity_derivation.py`,
+`scripts/frontier_yt_color_projection_correction.py`
+**Supporting runners:** `scripts/frontier_yt_explicit_systematic_budget.py`,
+`scripts/frontier_yt_exact_interacting_bridge_transport.py`,
 `scripts/frontier_yt_boundary_consistency.py`,
-`scripts/frontier_yt_eft_bridge.py`,
-`scripts/frontier_yt_2loop_chain.py` (historical support route)
+`scripts/frontier_direct_yt_extraction.py`
 
 ## Authority role
 
-This is the canonical authority note for the zero-import
-renormalized `y_t` lane on `main`.
+This is the canonical authority note for the zero-import renormalized `y_t`
+lane on `main`.
 
 Use this note together with:
 
-- [YT_BOUNDARY_THEOREM.md](./YT_BOUNDARY_THEOREM.md)
-- [YT_EFT_BRIDGE_THEOREM.md](./YT_EFT_BRIDGE_THEOREM.md)
+- [YT_WARD_IDENTITY_DERIVATION_THEOREM.md](./YT_WARD_IDENTITY_DERIVATION_THEOREM.md)
 - [ALPHA_S_DERIVED_NOTE.md](./ALPHA_S_DERIVED_NOTE.md)
-- [YT_GAUGE_CROSSOVER_THEOREM.md](./YT_GAUGE_CROSSOVER_THEOREM.md)
+- [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](./YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
 - [YT_FLAGSHIP_BOUNDARY_NOTE.md](./YT_FLAGSHIP_BOUNDARY_NOTE.md)
+- [YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md](./YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md)
 
-Do not treat older closure or route-history notes as competing authority.
-
-**2026-04-15 authority correction:** the older zero-import 2-loop route
-(`y_t(v) = 0.973`, `m_t = 169.4 GeV`) remains useful route history, but it is
-not the final quantitative posture of the current package. The current live
-boundary is narrower:
-
-- the accepted central route is `y_t(v) = 0.9176`
-- the lane is now best read as `DERIVED with explicit systematic`
-- the current package-native bridge budget is narrower than the older fallback:
-  `1.2147511%` conservative and `0.75500635%` support-tight around the local
-  selector, under the forced-UV transport hypotheses
-- there is no practical direct-lattice bypass on accessible lattices
+Do not treat older backward-Ward / route-history notes as competing authority.
 
 ## Current strongest package read
 
@@ -45,34 +32,84 @@ boundary is narrower:
 | `m_t(pole)` 2-loop | `172.57 GeV` | `172.69 GeV` | `-0.07%` |
 | `m_t(pole)` 3-loop | `173.10 GeV` | `172.69 GeV` | `+0.24%` |
 
-These are the current strongest zero-SM-import central values on the
+These are the current strongest zero-external-observable central values on the
 renormalized `y_t` lane.
 
 ## Safe claim
 
 The current package can safely say:
 
-- the lattice-scale Yukawa-to-gauge ratio is exact
-- the low-energy `y_t` endpoint is a zero-import derived central value
-- the current `m_t` central values are very near observation
-- the lane now carries an explicit residual bridge systematic from the
-  package-native forced-UV transport law: `1.2147511%` conservative,
-  `0.75500635%` support-tight on the current package support stack
+- the lattice-scale Yukawa-to-gauge ratio is exact on the canonical surface:
+  `y_t(M_Pl) / g_s(M_Pl) = 1 / sqrt(6)`
+- the physical low-energy Yukawa is the Ward value times the derived
+  color-projection factor `sqrt(8/9)`
+- the low-energy `y_t` endpoint and the current `m_t` values are derived
+  central values with zero external SM observables on the framework side
+- the current precision caveat on the primary path is a standard-method
+  residual budget, dominated by lattice-to-continuum 1-loop matching at the
+  Planck interface plus standard SM RGE truncation, of order `~1.95%`
+- the older Schur-coarse-bridge budget
+  `1.2147511%` conservative / `0.75500635%` support-tight remains valid as an
+  independent bridge-path cross-check, not as the load-bearing package
+  qualifier on the primary lane
 
-The package cannot yet say that the renormalized `y_t` lane is unbounded.
+The package still cannot say that the renormalized `y_t` lane is a fully
+framework-internal retained theorem from `M_Pl` to `v`.
 
-## Why the lane stays systematic-limited
+## Why the lane is no longer carried by a framework-native explicit systematic
 
-One real systematic-limited step remains:
+The live primary path is now:
 
-1. the low-energy endpoint still uses the backward-Ward bridge
-2. that bridge uses the SM RGE as the perturbative surrogate for the true
-   lattice blocking flow over `v -> M_Pl`
-3. the current package bridge stack narrows the live endpoint budget to
-   `1.2147511%` conservative (`0.75500635%` support-tight), closes the broad
-   scanned constructive family at the intrinsic UV-centered class level, but
-   does not yet remove the surrogate transport law or prove the exact
-   microscopic bridge beyond the proxy family
+1. exact lattice-scale Ward theorem on the retained theory
+2. derived color projection `sqrt(8/9)`
+3. standard lattice-to-continuum matching at the `M_Pl` interface
+4. standard SM RGE running from `M_Pl` to `v`
+5. standard pole-mass conversion
 
-So the lane is materially stronger than before. On the current package it is now a
-derived quantitative lane with explicit systematic, not an unbounded one.
+The remaining quantitative limitation is therefore not a framework-native
+bridge systematic. It is the ordinary residual one would quote on any lattice
+gauge-theory route that matches a lattice boundary condition onto the
+continuum:
+
+- sub-permille input precision on `g_s(M_Pl)` from the same-surface plaquette
+  chain
+- standard SM RGE truncation at the few-per-mille level
+- standard lattice 1-loop matching at the `M_Pl` interface, which dominates
+  the current budget
+
+That leaves the lane as a **derived quantitative lane** rather than a
+retained theorem-grade UV-to-IR closure.
+
+## What the Schur-bridge stack becomes
+
+The Schur-coarse-bridge program is not retracted. It remains useful and
+nontrivial:
+
+- it gives an independent route from the lattice Ward boundary toward the same
+  low-energy endpoint
+- its higher-order and nonlocal tails remain a real quantified bridge-path
+  budget
+- agreement of that bridge path with the Ward-primary path is a meaningful
+  cross-check on the framework
+
+But those bridge tails are no longer the package's load-bearing reason to mark
+the primary YT lane as explicit-systematic.
+
+## Honest boundary
+
+The current package does **not** claim:
+
+- a fully framework-internal continuum-limit theorem on this specific
+  composite-Higgs Wilson-staggered surface
+- a theorem-grade elimination of all UV-to-IR transport residuals
+- a practical direct-lattice bypass that measures `y_t(v)` on accessible
+  lattices
+
+So the right read is:
+
+> the exact lattice-scale Yukawa/gauge normalization is retained, the
+> renormalized low-energy `y_t` / `m_t` lane is derived with zero external SM
+> observables on the framework side, the current primary precision caveat is a
+> standard-method residual budget of order `~1.95%`, and the older Schur
+> bridge survives as an independent cross-check with its own tighter but
+> route-specific budget.

@@ -1,9 +1,8 @@
 # Color-Singlet Projection Correction to y_t
 
 **Date:** 2026-04-15
-**Status:** DERIVED with explicit systematic -- zero SM imports, with an
-explicit package-native bridge budget of `1.2147511%` conservative
-(`0.75500635%` support-tight) on the current package support stack
+**Status:** DERIVED quantitative support on the live YT lane -- zero SM
+imports on the framework-side readout
 **Script:** `scripts/frontier_yt_color_projection_correction.py` (7/7 PASS)
 
 ---
@@ -25,12 +24,12 @@ from the Cl(3) axiom (frontier_color_projection_mc.py), now applied
 to the scalar channel rather than the EW vacuum polarization.
 
 The color-projection correction itself is derived. The full low-energy
-`y_t(v)` / `m_t(pole)` lane is now best read on the current package as derived with
-explicit systematic. On the current package, the residual transport
-uncertainty is narrowed to an explicit endpoint budget of `1.2147511%`
-conservative or `0.75500635%` support-tight around the local selector, and
-the broad scanned constructive family plus current-package microscopic
-admissibility are now closed at the intrinsic Schur-class level.
+`y_t(v)` / `m_t(pole)` lane is now best read on the current package as a
+derived quantitative lane whose primary precision caveat is standard lattice
+matching plus standard SM running. The older Schur-bridge budget
+`1.2147511%` conservative / `0.75500635%` support-tight remains valid as an
+independent cross-check budget, not as the load-bearing package qualifier on
+the primary lane.
 
 ---
 
@@ -45,8 +44,9 @@ With the correction applied and proper MSbar-to-pole conversion:
 | m_H(2-loop, lam=0)    | 119.77 GeV | 125.25 GeV | -4.37%   |
 | alpha_s(M_Z)           | 0.1181     | 0.1179     | +0.14%   |
 
-These central values are the current package readout, but they carry the
-explicit package-native transport budget:
+These central values are the current package readout. On the primary Ward path
+the current precision caveat is the standard-method residual budget; on the
+independent Schur-bridge cross-check path, the old bridge budget remains:
 
 - `1.2147511%` conservative
 - `0.75500635%` support-tight on the current viable family average

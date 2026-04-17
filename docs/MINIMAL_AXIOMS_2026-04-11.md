@@ -67,15 +67,17 @@ Safe current result:
 - retained `g_1(v) = 0.4644`
 - retained `g_2(v) = 0.6480`
 - retained exact lattice-scale `y_t(M_Pl) / g_s(M_Pl) = 1 / sqrt(6)`
-- derived-with-explicit-systematic `y_t(v) = 0.9176`
-- derived-with-explicit-systematic `m_t(pole) = 172.57 GeV` (2-loop),
+- derived `y_t(v) = 0.9176`
+- derived `m_t(pole) = 172.57 GeV` (2-loop),
   `173.10 GeV` (3-loop)
-- Yukawa/top lane carries the explicit transport budget
-  `1.2147511%` conservative (`0.75500635%` support-tight)
-- derived-with-inherited-explicit-systematic `m_H = 119.8 GeV`
+- Yukawa/top lane is carried by the retained exact lattice-scale Ward theorem
+  plus standard lattice-matching / SM-running residuals on the primary route;
+  the older `1.2147511%` / `0.75500635%` bridge budget remains an independent
+  cross-check
+- derived `m_H = 119.8 GeV`
   (2-loop support route), `125.1 GeV` (framework-side 3-loop route), with
-  vacuum-stability readout inherited from the explicit `y_t` systematic
-- derived-with-inherited-explicit-systematic vacuum-stability readout
+  vacuum-stability readout inherited from the current `y_t` lane
+- derived vacuum-stability readout with inherited YT-lane precision caveat
 
 ## Mathematical Infrastructure Versus Physical Inputs
 

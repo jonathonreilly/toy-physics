@@ -948,7 +948,7 @@ def part3_framework_prediction():
     print(f"    g_1(v) = {g1_fw:.4f}  [GUT normalized]")
     print(f"    g_2(v) = {g2_fw:.4f}")
     print(f"    g_3(v) = {g3_fw:.4f}  [alpha_s = {ALPHA_S_V_DERIVED:.4f}]")
-    print(f"    y_t(v) = {yt_fw:.4f}  [backward Ward]")
+    print(f"    y_t(v) = {yt_fw:.4f}  [current YT authority path]")
     print(f"    lambda(M_Pl) = 0.0  [classicality BC]")
 
     t_v = np.log(V_DERIVED)
@@ -1106,8 +1106,8 @@ def part4_sensitivity(fw_results_3loop):
         print(f"  Inversion failed: {e}")
         report("yt-inversion", False, "Could not find y_t for m_H = 125")
 
-    # Explicit inherited y_t systematic bands from the explicit bridge budget.
-    print(f"\n  --- Inherited Higgs band from explicit-systematic y_t route ---")
+    # Bridge-path sensitivity bands inherited from the older exact Schur-bridge audit.
+    print(f"\n  --- Bridge-path Higgs sensitivity band from the YT route ---")
     yt_low_cons = yt_base * (1.0 - YT_REL_BOUND_CONSERVATIVE)
     yt_high_cons = yt_base * (1.0 + YT_REL_BOUND_CONSERVATIVE)
     yt_low_tight = yt_base * (1.0 - YT_REL_BOUND_SUPPORT_TIGHT)
@@ -1127,7 +1127,7 @@ def part4_sensitivity(fw_results_3loop):
         f"(±{YT_REL_BOUND_SUPPORT_TIGHT * 100:.6f}% support-tight)"
     )
     print(f"  m_H tight      = [{mh_low_tight:.1f}, {mh_high_tight:.1f}] GeV")
-    print(f"  This is the remaining Higgs inherited systematic after removing the")
+    print(f"  These are bridge-path cross-check sensitivity bands after removing the")
     print(f"  Buttazzo-style calibration import.")
 
     return {
@@ -1169,8 +1169,8 @@ def part5_authority_summary(sm_results, fw_results, sensitivity):
        - v = 246.28 GeV from hierarchy theorem
 
   WHAT THIS SCRIPT DOES NOT CLOSE:
-    - It does not remove the explicit systematic carried by the y_t route itself.
-    - Therefore the exact Higgs mass still inherits the explicit-systematic y_t lane.
+    - It does not remove the current primary precision caveat carried by the y_t route.
+    - Therefore the exact Higgs mass still inherits the current y_t-lane residual budget.
 
   RESULT:
 """)
@@ -1189,15 +1189,15 @@ def part5_authority_summary(sm_results, fw_results, sensitivity):
             mh_low_tight, mh_high_tight = sensitivity["mh_band_from_yt_bound_support_tight"]
             yt_low_tight, yt_high_tight = sensitivity["yt_band_support_tight"]
             print(
-                f"    Inherited y_t band     = [{yt_low_cons:.4f}, {yt_high_cons:.4f}] "
+                f"    Bridge y_t band        = [{yt_low_cons:.4f}, {yt_high_cons:.4f}] "
                 f"(conservative)"
             )
-            print(f"    Inherited m_H band     = [{mh_low_cons:.1f}, {mh_high_cons:.1f}] GeV")
+            print(f"    Bridge m_H band        = [{mh_low_cons:.1f}, {mh_high_cons:.1f}] GeV")
             print(
-                f"    Inherited y_t tight    = [{yt_low_tight:.4f}, {yt_high_tight:.4f}] "
+                f"    Bridge y_t tight       = [{yt_low_tight:.4f}, {yt_high_tight:.4f}] "
                 f"(support-tight)"
             )
-            print(f"    Inherited m_H tight    = [{mh_low_tight:.1f}, {mh_high_tight:.1f}] GeV")
+            print(f"    Bridge m_H tight       = [{mh_low_tight:.1f}, {mh_high_tight:.1f}] GeV")
 
     if 3 in sm_results:
         r_sm = sm_results[3]
@@ -1222,7 +1222,7 @@ def part5_authority_summary(sm_results, fw_results, sensitivity):
     print()
     print("  Honest authority boundary:")
     print("    - the Buttazzo-style calibrated-fit import is no longer needed")
-    print("    - the remaining Higgs systematic is inherited from the explicit-systematic y_t lane")
+    print("    - the remaining Higgs limitation is inherited from the current y_t-lane precision caveat")
 
 
 # ============================================================================

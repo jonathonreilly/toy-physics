@@ -39,8 +39,7 @@ The package has four layers:
 1. retained theorem core
 2. retained standalone quantitative lanes (`alpha_s`, EW normalization,
    exact lattice-scale Yukawa/gauge Ward theorem)
-3. derived-with-explicit-systematic Yukawa/top and
-   derived-with-inherited-explicit-systematic Higgs/vacuum lanes
+3. derived Yukawa/top and Higgs/vacuum lanes
 4. bounded prediction surface plus live gates and frozen-out route history
 
 The public manuscript surface on `main` is arXiv-first. Journal-specific
@@ -83,11 +82,13 @@ Current package status:
   rows use the retained running bridge
 - retained exact lattice-scale Ward theorem:
   `y_t(M_Pl) / g_s(M_Pl) = 1 / sqrt(6)`
-- derived-with-explicit-systematic `y_t(v) = 0.9176`
-- derived-with-explicit-systematic canonical `m_t(pole) = 173.10 GeV` (3-loop),
+- derived `y_t(v) = 0.9176`
+- derived canonical `m_t(pole) = 173.10 GeV` (3-loop),
   with retained `172.57 GeV` (2-loop) support
-  and explicit downstream transport budget `1.2147511%` conservative
-  (`0.75500635%` support-tight)
+  and current primary-route standard-method residuals
+- derived Higgs / vacuum package:
+  `m_H = 125.1 GeV` (framework-side 3-loop route), with retained
+  `119.8 GeV` (2-loop support route)
 - promoted CKM atlas/axiom closure package
   (no quark-mass or fitted CKM inputs; canonical CMT `alpha_s(v)` input):
   `|V_us| = 0.22727`,
@@ -110,10 +111,10 @@ Current package status:
   [Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md](../../Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md);
   these are support theorems for the retained matter lane and future flavor
   work, not additional flagship flavor-numerics claims
-- derived-with-inherited-explicit-systematic Higgs / vacuum package:
+- derived Higgs / vacuum package:
   canonical `m_H = 125.1 GeV` (framework-side 3-loop route),
   with retained `119.8 GeV` (2-loop support route),
-  vacuum-stability readout inherited from the explicit `y_t` systematic
+  vacuum-stability readout inherited from the current `y_t` lane
 - exact taste-block fermion-CW isotropy support theorem with bounded
   taste-scalar near-degeneracy companion:
   `m_taste = 124.91 GeV`, scalar-only `v_c/T_c = 0.3079`

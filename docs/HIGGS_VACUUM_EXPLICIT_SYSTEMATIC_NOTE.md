@@ -1,7 +1,7 @@
 # Higgs / Vacuum Authority
 
-**Date:** 2026-04-15
-**Status:** derived with inherited explicit systematic quantitative lane on the current package
+**Date:** 2026-04-17
+**Status:** derived quantitative lane on the current package
 **Primary runners:** `scripts/frontier_higgs_mass_full_3loop.py`,
 `scripts/frontier_yt_color_projection_correction.py`
 **Boundary-support runner:** `scripts/frontier_direct_yt_extraction.py`
@@ -43,10 +43,10 @@ Using the current accepted package inputs:
   `m_H(2-loop corrected-input route) = 119.8 GeV`
 - vacuum stability is qualitatively favorable on the same route
 
-These rows are now best read as `DERIVED WITH INHERITED EXPLICIT SYSTEMATIC`
-because they inherit the explicit `y_t` bridge budget on the current package
-support stack. The remaining Higgs blocker is no longer “missing
-framework-native 3-loop implementation.”
+These rows are now best read as **derived quantitative rows that inherit the
+current Ward-primary YT residual budget**. The remaining Higgs blocker is no
+longer “missing framework-native 3-loop implementation,” and it is no longer a
+separate Higgs-native closure failure either.
 
 ## Component Structure
 
@@ -60,8 +60,8 @@ framework-native 3-loop implementation.”
    framework-side value:
    `m_H = 125.1 GeV`
 4. On that same route, the vacuum readout stays qualitatively favorable, but
-   it remains systematic-limited because the lane still inherits the explicit
-   Yukawa bridge budget.
+   it remains precision-limited because the lane still inherits the current
+   YT residual budget.
 5. The exact taste-block Coleman-Weinberg isotropy theorem closes the
    fermion-CW part of the Higgs/taste splitting question. On the current
    bounded gauge-only split model, this supports a near-degenerate taste-scalar
@@ -84,10 +84,10 @@ framework-native 3-loop implementation.”
 - retained support route:
   `m_H(2-loop corrected-input route) = 119.77 GeV`
 - observed comparator: `125.25 GeV`
-- inherited Higgs band from explicit-systematic `y_t`: `121.1-129.2 GeV`
-  conservative, `122.6-127.7 GeV` support-tight
-- vacuum prediction: qualitatively favorable, with inherited explicit
-  systematic through the `y_t` lane
+- inherited Higgs band from the current YT route:
+  `121.1-129.2 GeV` on the bridge-path cross-check budget
+- vacuum prediction: qualitatively favorable, with inherited YT-lane
+  precision caveat through the accepted low-energy Yukawa route
 
 Primary reruns:
 

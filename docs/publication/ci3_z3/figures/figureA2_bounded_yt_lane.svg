@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
-  <title id="title">Figure A2. Derived-with-systematic Yukawa and Higgs transport lane</title>
-  <desc id="desc">Schematic of the exact UV theorem, exact bridge support stack, explicit transport budget, and inherited Higgs/vacuum systematic.</desc>
+  <title id="title">Figure A2. Derived Yukawa and Higgs transport lane</title>
+  <desc id="desc">Schematic of the exact UV Ward theorem, the current derived low-energy lane, the primary standard-method caveat, and the independent bridge cross-check budget.</desc>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#355c7d"/>
@@ -19,7 +19,7 @@
     </style>
   </defs>
   <rect class="bg" x="0" y="0" width="1200" height="760"/>
-  <text class="title" x="600" y="46" text-anchor="middle">Figure A2. Derived-with-Systematic Yukawa / Top and Higgs / Vacuum Lane</text>
+  <text class="title" x="600" y="46" text-anchor="middle">Figure A2. Derived Yukawa / Top and Higgs / Vacuum Lane</text>
 
   <rect class="box exact" x="80" y="165" width="230" height="190"/>
   <text class="label" x="195" y="205" text-anchor="middle">Exact UV side</text>
@@ -32,17 +32,17 @@
   <rect class="box bridge" x="445" y="140" width="310" height="240"/>
   <text class="label" x="600" y="182" text-anchor="middle">Transport to low energy</text>
   <text class="body" x="600" y="220" text-anchor="middle">same-surface plaquette and $R_{conn}$ support</text>
-  <text class="body" x="600" y="248" text-anchor="middle">exact interacting bridge transport stack</text>
-  <text class="body" x="600" y="276" text-anchor="middle">framework-side 2-loop / 3-loop evaluation routes</text>
-  <text class="body" x="600" y="316" text-anchor="middle">not fully internalized as a zero-systematic theorem</text>
+  <text class="body" x="600" y="248" text-anchor="middle">Ward-primary matching and SM running</text>
+  <text class="body" x="600" y="276" text-anchor="middle">exact interacting bridge stack retained as cross-check</text>
+  <text class="body" x="600" y="316" text-anchor="middle">not yet a fully framework-internal UV-to-IR theorem</text>
 
   <line class="arrow" x1="755" y1="260" x2="870" y2="260"/>
 
   <rect class="box budget" x="885" y="165" width="230" height="190"/>
-  <text class="label" x="1000" y="205" text-anchor="middle">Explicit budget</text>
+  <text class="label" x="1000" y="205" text-anchor="middle">Bridge cross-check</text>
   <text class="body" x="1000" y="242" text-anchor="middle">$1.2147511\\%$ conservative</text>
   <text class="body" x="1000" y="270" text-anchor="middle">$0.75500635\\%$ support-tight</text>
-  <text class="body" x="1000" y="298" text-anchor="middle">carried by the Yukawa/top lane</text>
+  <text class="body" x="1000" y="298" text-anchor="middle">route-specific bridge budget</text>
 
   <line class="arrow" x1="1000" y1="355" x2="1000" y2="455"/>
   <line class="arrow" x1="600" y1="380" x2="600" y2="455"/>
@@ -51,5 +51,5 @@
   <text class="label" x="600" y="512" text-anchor="middle">Current live quantitative outputs</text>
   <text class="body" x="600" y="548" text-anchor="middle">$y_t(v)=0.9176$; $m_t^{pole}=173.10$ GeV canonical 3-loop, $172.57$ GeV retained 2-loop support</text>
   <text class="body" x="600" y="578" text-anchor="middle">$m_H=125.1$ GeV canonical framework-side 3-loop, $119.8$ GeV retained 2-loop support</text>
-  <text class="body" x="600" y="608" text-anchor="middle">vacuum stability qualitatively favorable with inherited Yukawa/top systematic</text>
+  <text class="body" x="600" y="608" text-anchor="middle">vacuum stability qualitatively favorable with the current YT-lane caveat</text>
 </svg>

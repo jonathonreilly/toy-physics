@@ -6,8 +6,8 @@
 This repository is not presently organized around the older toy-model or DAG
 exploration surfaces. The current review target is a `Cl(3)` on `Z^3`
 framework package with a retained theorem core, retained standalone
-quantitative lanes, bounded Yukawa/Higgs lanes, one bounded
-charged-lepton package, a bounded prediction portfolio, and one
+quantitative lanes, derived Yukawa/Higgs lanes, one review-facing
+charged-lepton closure-class package, a bounded prediction portfolio, and one
 explicitly open flagship gate.
 
 For framework counting, the public package should be read as a one-axiom
@@ -73,10 +73,11 @@ Canonical quantitative stack:
 - [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md)
 - [YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md)
 - [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](YT_ZERO_IMPORT_AUTHORITY_NOTE.md)
-- [YT_SQRT6_BOUNDARY_STATUS_NOTE.md](YT_SQRT6_BOUNDARY_STATUS_NOTE.md)
+- [YT_WARD_IDENTITY_DERIVATION_THEOREM.md](YT_WARD_IDENTITY_DERIVATION_THEOREM.md)
 - [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
-- [YT_TRANSPORT_BUDGET_NOTE.md](YT_TRANSPORT_BUDGET_NOTE.md)
-- [HIGGS_VACUUM_BOUNDED_STATUS_NOTE.md](HIGGS_VACUUM_BOUNDED_STATUS_NOTE.md)
+- [YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md](YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md)
+- [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md)
+- [HIGGS_MASS_DERIVED_NOTE.md](HIGGS_MASS_DERIVED_NOTE.md)
 - [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
 
 Current quantitative statuses:
@@ -111,16 +112,16 @@ Current quantitative statuses:
   chirality is supplied only on the full-framework anomaly-forced `3+1`
   surface; on the accepted one-axiom Hilbert/locality/information surface the
   substrate-level physical-lattice reading is also derived
-- bounded `y_t(v) = 0.9176`, conditional on the accepted lattice-scale
-  `y_t / g_s = 1/sqrt(6)` boundary
-- bounded canonical `m_t(pole) = 173.10 GeV` (3-loop),
+- derived `y_t(v) = 0.9176`, conditional on the retained exact lattice-scale
+  `y_t / g_s = 1/sqrt(6)` Ward theorem and the accepted primary continuation
+- derived canonical `m_t(pole) = 173.10 GeV` (3-loop),
   with retained `172.57 GeV` (2-loop) support
-  and explicit downstream transport budget `1.2147511%` conservative
-  (`0.75500635%` support-tight)
-- bounded Higgs / vacuum package:
+  and current primary-route standard-method residuals; the older
+  `1.2147511%` / `0.75500635%` budget remains a bridge-path cross-check
+- derived Higgs / vacuum package:
   canonical `m_H = 125.1 GeV` (framework-side 3-loop route),
   with retained `119.8 GeV` (2-loop support route),
-  vacuum-stability readout inherited from the bounded `y_t` lane
+  vacuum-stability readout inherited from the current `y_t` lane
 - exact taste-block fermion-CW isotropy support theorem with bounded
   taste-scalar near-degeneracy companion:
   `m_taste = 124.91 GeV`, scalar-only `v_c/T_c = 0.3079`

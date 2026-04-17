@@ -93,7 +93,7 @@ Companion captions live in [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md).
 
 ### Figure A2. Bounded renormalized `y_t` lane
 
-- purpose: show exact UV theorem versus bounded low-energy bridge
+- purpose: show exact UV theorem, the current derived low-energy lane, and the independent bridge cross-check budget
 - source notes:
   - [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](../../YT_ZERO_IMPORT_AUTHORITY_NOTE.md)
   - [YT_GAUGE_CROSSOVER_THEOREM.md](../../YT_GAUGE_CROSSOVER_THEOREM.md)

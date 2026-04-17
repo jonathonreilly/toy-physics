@@ -7,16 +7,17 @@ PURPOSE: Investigate whether y_t(v) can be extracted DIRECTLY from the
 Cl(3)/Z^3 lattice without the backward Ward (SM RGE over 17 decades).
 
 THE QUESTION:
-  The current accepted package route carries y_t(v) = 0.9176 with an explicit
-  package-native bridge systematic of 1.2147511% conservative
-  (0.75500635% support-tight).
-  The older 2-loop zero-import chain gave y_t(v) = 0.973, m_t = 169.4 GeV.
-  This script does not decide between those central values. Its narrower
-  question is whether ANY direct lattice method can remove the need for the
-  long RG bridge altogether.
-  The backward Ward uses the SM RGE as a surrogate for lattice blocking from
-  v to M_Pl. The current package carries the residual bridge error explicitly.
-  Can ANY direct method reproduce the accepted low-energy y_t(v) without the RGE?
+  The current accepted package route carries y_t(v) = 0.9176 through the exact
+  lattice-scale Ward theorem, the derived color projection, standard
+  lattice-to-continuum matching at M_Pl, and standard SM running to v.
+  The older Schur-bridge route remains an independent cross-check with
+  route-specific budget 1.2147511% conservative (0.75500635% support-tight).
+  This script does not decide between route narratives. Its narrower question
+  is whether ANY direct lattice method can remove the need for the long UV-to-IR
+  transport altogether.
+  The accepted primary path still uses continuum matching/running rather than
+  a 56-step direct blocking computation. Can ANY direct method reproduce the
+  accepted low-energy y_t(v) without that transport?
 
 METHODS TESTED:
 
@@ -655,23 +656,26 @@ print("""
   The large negative g_3^2 term DRIVES y_t upward in the IR.
   This 17-decade evolution is physical content, not an artifact.
 
-  THERE ARE ONLY TWO ROUTES:
-  (A) Perturbative RGE (backward Ward): 17-decade SM beta functions.
-      This IS the current approach. Systematic: explicit package-native bridge
-      budget 1.2147511% conservative, 0.75500635% support-tight.
+  THERE ARE ONLY TWO PRACTICAL TRANSPORT MECHANISMS:
+  (A) Continuum matching + running from the exact Ward boundary.
+      This IS the current accepted primary path. Its live caveat is standard
+      lattice 1-loop matching plus standard SM RGE truncation.
+      The older Schur-bridge stack remains an independent cross-check on the
+      same UV-to-IR transport, not a separate local-lattice bypass.
   (B) Lattice step-scaling: 56 blocking steps from M_Pl to v.
       Computationally impossible (L_initial ~ 7e16).
 
-  The QFP bound IS the irreducible systematic for route (A):
+  The QFP bound is a useful robustness indicator for route (A):
     For y_t(M_Pl) in [0.3, 0.6], y_t(v) varies at the few-percent level.
     The Ward identity fixes y_t(M_Pl) = 0.436, well within this plateau.
+    This explains IR focusing, but it is not the live authority budget by itself.
 
   Route (B) would in principle give exact y_t(v) with no QFP bound,
   but it requires astronomical lattice sizes.
 
-  CONCLUSION: The backward Ward + QFP bound is the MINIMAL feasible
-  route. The explicit package-native bridge systematic is not removable on
-  small lattices.
+  CONCLUSION: The Ward-primary continuum-matched route is the minimal feasible
+  accepted path. The Schur-bridge stack remains a useful cross-check, but no
+  small-lattice direct measurement removes the UV-to-IR transport problem.
 """)
 
 # Quantify the QFP bound
@@ -870,13 +874,14 @@ print("  Method 5 (step-scaling):   Correct but needs L ~ 7e16. INFEASIBLE.")
 print("  Method 6 (condensate):     Measures y_t(M_Pl), not y_t(v). NO BYPASS.")
 print()
 print("  CONCLUSION:")
-print("  The backward Ward + QFP bound is the MINIMAL feasible route.")
-print("  The current explicit bridge systematic is IRREDUCIBLE on accessible lattices.")
+print("  The Ward-primary continuum-matched route is the MINIMAL feasible route.")
+print("  The exact Schur-bridge stack remains a useful cross-check, but")
+print("  no accessible direct lattice measurement removes the UV-to-IR transport.")
 print("  The 17-decade RG evolution carries physical content (g_3 driving")
 print("  y_t upward in the IR) that cannot be bypassed by any local")
 print("  lattice measurement at a single scale.")
 print()
-print("  The y_t lane remains derived with explicit systematic, not direct-lattice closed.")
+print("  The y_t lane is derived, but it is not direct-lattice closed.")
 print()
 
 elapsed = time.time() - t0

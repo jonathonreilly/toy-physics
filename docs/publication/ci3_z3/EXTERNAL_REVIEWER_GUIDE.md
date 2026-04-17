@@ -9,7 +9,7 @@ The current package is:
 
 1. a retained theorem core
 2. retained standalone quantitative lanes for `alpha_s` and EW normalization
-3. promoted CKM atlas/axiom closure plus bounded Yukawa/top and bounded Higgs/vacuum lanes
+3. promoted CKM atlas/axiom closure plus derived Yukawa/top and derived Higgs/vacuum lanes
 4. a bounded prediction surface plus an explicit history bucket for important
    excluded families
 
@@ -116,12 +116,11 @@ Current status from that stack:
   rows use the retained running bridge
 - retained exact lattice-scale Ward theorem:
   `y_t(M_Pl) / g_s(M_Pl) = 1 / sqrt(6)`
-- derived-with-explicit-systematic `y_t(v) = 0.9176`
-- derived-with-explicit-systematic canonical `m_t(pole) = 173.10 GeV` (3-loop),
+- derived `y_t(v) = 0.9176`
+- derived canonical `m_t(pole) = 173.10 GeV` (3-loop),
   with retained `172.57 GeV` (2-loop) support
-  and explicit downstream transport budget `1.2147511%` conservative
-  (`0.75500635%` support-tight)
-- derived-with-inherited-explicit-systematic Higgs / vacuum package:
+  and current primary-route standard-method residuals
+- derived Higgs / vacuum package:
   `m_H = 125.1 GeV` (framework-side 3-loop route), with retained
   `119.8 GeV` (2-loop support route)
 - promoted CKM atlas/axiom closure package

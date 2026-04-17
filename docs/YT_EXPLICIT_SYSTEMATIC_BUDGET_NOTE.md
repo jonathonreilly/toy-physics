@@ -1,42 +1,37 @@
-# `y_t` Explicit Systematic Budget Note
+# `y_t` Residual-Budget and Bridge Cross-Check Note
 
-**Date:** 2026-04-15
-**Status:** package authority for `derived with explicit systematic` wording
+**Date:** 2026-04-17
+**Status:** support note for the current YT authority surface
 **Primary runner:** `scripts/frontier_yt_explicit_systematic_budget.py`
 
 ## Role
 
-This note closes the current status question:
+This note is no longer the package authority for the older intermediate YT-lane
+classification that sat between bounded and fully retained.
 
-> is the remaining `y_t` uncertainty still a generic bounded caveat, or is it
-> now explicit enough to be carried as a named systematic?
+Its current role is narrower:
 
-On the current package, the answer is now the second.
+1. record the residual budget on the Schur-coarse-bridge cross-check path
+2. distinguish that bridge-path budget from the current Ward-primary
+   standard-method residual budget
+3. preserve the exact-bridge tail accounting as useful support rather than as
+   the load-bearing package qualifier on the live YT lane
 
-## Status
+## Current package posture
 
-The live paper-safe status for the Yukawa / top lane is:
+The live YT authority now reads:
 
-> `y_t(v)` and `m_t(pole)` are **derived with explicit systematic**.
+> `y_t(v)` and `m_t(pole)` are **derived quantitative rows** whose primary
+> precision caveat is carried by standard lattice-to-continuum matching and
+> standard SM running on the Ward-primary route.
 
-They are not unbounded, but they are no longer merely “bounded because the
-bridge is unresolved.”
+So the present note is about the **bridge cross-check path**, not the live
+primary classification.
 
-## Why the status changes
+## Bridge-path budget
 
-Three separate structural questions are now closed on the current package:
-
-1. the theorem object is the exact Schur coarse bridge operator
-2. the coarse operator’s normal-form class is unique and stable
-3. axiom-native local positive microscopic bridge operators reduce into that
-   same class on the current tested scale
-
-That means the remaining uncertainty is no longer structural bridge
-admissibility. It is an explicit exact-bridge endpoint budget.
-
-## Named systematic pieces
-
-The remaining package uncertainty is carried by two named exact-bridge tails:
+On the Schur-coarse-bridge route, the residual budget is still carried by two
+named exact-bridge tails:
 
 - higher-order local tail:
   `7.123842e-3 = 0.7123842%`
@@ -45,64 +40,74 @@ The remaining package uncertainty is carried by two named exact-bridge tails:
   or
   `4.262215e-4 = 0.04262215%` support-tight on the current viable family
 
-Two further diagnostics are now negligible or closed:
+Two further diagnostics remain negligible or closed:
 
 - selector-anchor mismatch:
   `5.44897e-6` relative
 - structural class residual:
   closed on the current tested scale on the tested locality tube
 
-## Final package budget
-
-So the live package systematic is:
+That leaves the bridge-path endpoint budget at:
 
 - conservative:
   `1.2147511%`
 - support-tight:
   `0.75500635%`
 
-around the current central value
+around the current central value `y_t(v) = 0.9176`.
 
-- `y_t(v) = 0.9176`
+## How this budget is used now
 
-This is now an explicit package-native systematic budget rather than a generic
-bounded-surrogate caveat.
+This budget is no longer the package's load-bearing qualifier on the live
+Ward-primary YT lane. It now serves three narrower purposes:
 
-## Propagation
+1. it quantifies the independent Schur-bridge cross-check path
+2. it documents that the bridge route remains controlled and scientifically
+   meaningful
+3. it provides a comparison surface against the Ward-primary standard-method
+   residual budget
 
-The same explicit systematic propagates directly to the top-mass readout:
+## Comparison with the live primary path
+
+The current package carries two distinct precision stories:
+
+- **Ward-primary path:**
+  standard lattice 1-loop matching at the `M_Pl` interface plus standard SM
+  RGE truncation; current budget of order `~1.95%`
+- **Schur-bridge cross-check path:**
+  intrinsic bridge-path residual budget
+  `1.2147511%` conservative / `0.75500635%` support-tight
+
+The point of the current package update is that the second budget remains
+useful and real, but it is no longer the reason the primary lane is classified
+the way it is.
+
+## Propagation on the bridge path
+
+If one reads the Schur-bridge route by itself, the same bridge budget
+propagates directly to the top-mass readout:
 
 - `m_t(pole, 2-loop) = 172.57 GeV`
-  with explicit systematic
+  with bridge-path budget
   `±2.097 GeV` conservative,
   `±1.303 GeV` support-tight
 - `m_t(pole, 3-loop) = 173.10 GeV`
-  with explicit systematic
+  with bridge-path budget
   `±2.103 GeV` conservative,
   `±1.307 GeV` support-tight
 
-The Higgs / vacuum lane inherits this same explicit systematic from the Yukawa
-lane rather than a separate Higgs-specific closure failure.
-
-## Safe package claim
-
-> The framework derives the central Yukawa / top values with zero external SM
-> observables. On the current package, the remaining uncertainty is carried as
-> an explicit package-native exact-bridge systematic: `0.7123842%` from the
-> higher-order local tail plus `0.5023669%` conservative nonlocal tail
-> (`0.04262215%` support-tight on the viable family average), for a total
-> conservative package systematic of `1.2147511%` or support-tight package
-> systematic of `0.75500635%`.
+That propagation remains a valid cross-check statement.
 
 ## Honest boundary
 
 This note does **not** claim:
 
-- full unbounded closure of `y_t`
-- vanishing of the exact-bridge tails
-- elimination of the transport systematic as a theorem-grade result
+- that the live package still needs the old bridge-budget classification on the
+  primary YT lane
+- that the bridge-path budget should be discarded
+- that the Ward-primary path has become fully retained from `M_Pl` to `v`
 
-What it does claim is narrower and sufficient for the current package:
+What it does claim is narrower:
 
-> the current package now justifies `derived with explicit systematic` wording for the
-> Yukawa / top lane.
+> the exact-bridge tail accounting remains valid and should now be read as the
+> residual budget of the independent Schur-bridge cross-check path.

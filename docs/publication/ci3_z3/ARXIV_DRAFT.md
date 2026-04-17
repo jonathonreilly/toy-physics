@@ -31,9 +31,9 @@ $v=246.282818290129\,\mathrm{GeV}$, retains
 $\alpha_s(M_Z)=0.1181$ and electroweak normalization lanes, retains the exact
 lattice-scale Ward identity $y_t(M_{\mathrm{Pl}})/g_s(M_{\mathrm{Pl}})
 =1/\sqrt{6}$, promotes an algebraic CKM atlas/axiom closure package with no
-quark-mass or fitted-CKM inputs, and carries derived-with-explicit-systematic
-Yukawa/top and derived-with-inherited-explicit-systematic Higgs/vacuum rows
-with an explicit downstream transport budget.
+quark-mass or fitted-CKM inputs, and carries derived Yukawa/top and Higgs/
+vacuum rows whose current precision caveat is standard-method continuation on
+the primary route rather than a framework-native bridge qualifier.
 The package is already predictive beyond retrospective comparison,
 including proton lifetime, CKM neutron EDM, vacuum criticality, and benchmark
 gravitational decoherence. Dark-matter relic mapping is the sole remaining live
@@ -574,7 +574,7 @@ surface. The current package does treat the canonical-surface ratio
 $y_t/g_s = 1/\sqrt{6}$
 as a retained Ward-identity theorem. What remains limited is the downstream
 transport from that exact lattice-scale theorem to the low-energy endpoint.
-On that current package surface the derived-with-explicit-systematic readout is
+On the current package surface the live derived readout is
 
 - $y_t(v)=0.9176$,
 - canonical $m_t^{\mathrm{pole}} = 173.10\,\mathrm{GeV}$ on the framework-side
@@ -582,15 +582,18 @@ On that current package surface the derived-with-explicit-systematic readout is
 - retained support route $m_t^{\mathrm{pole}} = 172.57\,\mathrm{GeV}$ on the
   corrected-input $2$-loop route,
 
-with an explicit package-native bridge budget of $1.2147511\%$ conservative and
-$0.75500635\%$ support-tight.
+with the current primary precision caveat carried by standard
+lattice-to-continuum matching plus standard SM running, while the older
+Schur-bridge budget of $1.2147511\%$ conservative and $0.75500635\%$
+support-tight is retained only as an independent cross-check budget.
 
-Those numbers are strong and zero-import on the downstream readout. The current
-package now classifies the lane as derived with explicit systematic: the exact
+Those numbers are strong and zero-import on the framework-side downstream
+readout. The current package now classifies the lane as derived: the exact
 lattice-scale Yukawa/gauge normalization is retained, and the remaining
-limitation is the named transport budget.
+limitation on the primary route is a standard-method residual rather than a
+framework-native explicit bridge qualifier.
 
-The Higgs/vacuum package then inherits that same explicit budget:
+The Higgs/vacuum package then inherits that same YT-lane precision caveat:
 
 - canonical $m_H = 125.1\,\mathrm{GeV}$ on the framework-side $3$-loop route;
 - retained support route $m_H = 119.8\,\mathrm{GeV}$ on the corrected-input
@@ -598,13 +601,13 @@ The Higgs/vacuum package then inherits that same explicit budget:
 - vacuum stability qualitatively favorable on the same route.
 
 The important point is not merely that the central values are competitive. It
-is that the whole route is now stated on one authority surface with one named
-budget and one retained UV Ward theorem. The Higgs/vacuum lane is likewise
-best read as derived with inherited explicit systematic, because it inherits
-the explicit Yukawa/top transport budget rather than standing alone as a fully
-independent retained quantitative theorem row. The comparison surface is
-therefore the standard near-critical Standard Model literature [13,14], not a
-claim that the framework has already removed every quantitative caveat.
+is that the whole route is now stated on one authority surface with one
+retained UV Ward theorem and one honest primary precision caveat. The
+Higgs/vacuum lane is likewise best read as derived because it inherits the
+current YT-lane caveat rather than standing alone as a fully independent
+retained quantitative theorem row. The comparison surface is therefore the
+standard near-critical Standard Model literature [13,14], not a claim that the
+framework has already removed every quantitative caveat.
 
 An additional exact support theorem now closes one cleaner question on the same
 taste block. The one-loop fermion Coleman-Weinberg Hessian is isotropic at the
@@ -837,10 +840,10 @@ retained route to $PL\,S^3$ compactification / topology closure.*
 
 ### B.3 Figure A2
 
-![Figure A2. Bounded Yukawa and Higgs transport lane](./figures/figureA2_bounded_yt_lane.svg)
+![Figure A2. Derived Yukawa and Higgs transport lane](./figures/figureA2_bounded_yt_lane.svg)
 
-*Figure A2. Exact UV support, explicit low-energy transport budget, and the
-bounded Yukawa/top plus bounded Higgs/vacuum outputs on the current package
+*Figure A2. Exact UV support, current low-energy transport story, and the
+derived Yukawa/top plus derived Higgs/vacuum outputs on the current package
 surface.*
 
 ### B.4 Figure A3

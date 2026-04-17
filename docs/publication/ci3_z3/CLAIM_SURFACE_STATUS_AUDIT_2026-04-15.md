@@ -298,11 +298,11 @@ Representative surfaces:
 
 **What the repo actually supports**
 
-- bounded Yukawa/top lane
-- bounded Higgs/vacuum lane
+- derived Yukawa/top lane
+- derived Higgs/vacuum lane
 - framework-native 3-loop implementation exists
-- current public tables still visually overemphasize central-value hits over
-  the inherited systematic bound
+- current public tables still need to keep the inherited YT-lane caveat visible
+  alongside the central-value hits
 
 Primary evidence:
 

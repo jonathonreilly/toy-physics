@@ -30,8 +30,8 @@ The current flagship package has five layers:
 
 1. retained theorem core
 2. retained standalone quantitative lanes (`alpha_s`, EW normalization)
-3. bounded Yukawa/top and bounded Higgs/vacuum lanes
-4. one bounded charged-lepton package
+3. derived Yukawa/top and derived Higgs/vacuum lanes
+4. one review-facing charged-lepton closure-class package
 5. bounded prediction surface plus one live gate and an explicit history bucket
 
 Fast reviewer path after this page:
@@ -60,12 +60,13 @@ Fast reviewer path after this page:
 - quantitative stack:
   retained `alpha_s(M_Z) = 0.1181`, retained EW normalization, canonical
   `v = 246.282818290129 GeV`, promoted CKM atlas/axiom closure,
-  bounded Yukawa/top, and bounded Higgs/vacuum
-- bounded charged-lepton package:
-  charged-lepton mass-hierarchy / Koide compatibility is bounded on a
-  three-real PDG pin; this is compatibility with the observed charged-lepton
-  hierarchy, not a retained framework derivation of Koide, and it adds no
-  spare observable forecast beyond the pin
+  derived Yukawa/top, and derived Higgs/vacuum
+- review-facing charged-lepton package:
+  charged-lepton mass-hierarchy / Koide compatibility closes at
+  `retained-map-plus-observational-promotion` on a three-real PDG pin, with
+  strict-review verdict `TRUE_NO_PREDICTION`; this is compatibility with the
+  observed charged-lepton hierarchy, not a retained framework derivation of
+  Koide
 - bounded prediction surface:
   proton lifetime, CKM neutron EDM, down-type flavor-mass CKM-dual ratios,
   vacuum critical stability, benchmark gravitational decoherence, and bounded

@@ -58,8 +58,8 @@ The paper does **not** claim:
 
 The current package keeps:
 
-- bounded Yukawa/top;
-- bounded Higgs/vacuum;
+- a fully retained Yukawa/top UV-to-IR theorem;
+- a fully retained Higgs/vacuum UV-to-IR theorem;
 - bounded/conditional cosmology;
 - one live flagship gate: DM flagship gate.
 
