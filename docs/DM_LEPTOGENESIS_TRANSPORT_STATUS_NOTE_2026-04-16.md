@@ -46,16 +46,19 @@ The refreshed PMNS package strengthens the lane materially:
   `eta / eta_obs = 1`
 - the projected-source constructive chamber `gamma > 0`, `E1 > 0`, `E2 > 0`
   is exactly nonempty and already contains a transport-extremal witness
-- the current exact PMNS stationary / minimum-information selector families are
-  still `delta`-even and therefore CP-sheet blind on the charged-sector bridge
+- the fixed native `N_e` seed surface now also contains an exact constructive
+  `eta/eta_obs = 1` point
 - the residual projected-source selector is reduced exactly to the odd slot
   `A13`, equivalently the phase bit `sign(sin(delta))`, while the remaining
   sole-axiom-native PMNS value object is the even-response pair `(E1,E2)`
+- the current exact PMNS stationary / minimum-information selector families are
+  still `delta`-even and therefore CP-sheet blind on the charged-sector bridge
 
-So the PMNS route is no longer blocked by transport existence or by
-constructive-sign incompatibility. What remains open is the microscopic
-`D_- / dW_e^H` sign law that would actually choose the constructive sheet
-rather than leaving the current selector families CP-blind.
+So the PMNS route is no longer blocked by transport existence, by
+constructive-sign incompatibility, or by lack of an exact constructive closure
+point. What remains open is the right-sensitive microscopic selector law on
+`dW_e^H = Schur_Ee(D_-)`, equivalently the intrinsic `2`-real `Z_3`
+doublet-block point-selection law.
 
 ## Source-surface blocker-reduction status
 
@@ -79,13 +82,16 @@ object materially without closing the lane:
 - the current exact slot/odd-bank and source-bank are both blind to that
   moving `Z_3` doublet block, and the current bank closes negatively at that
   final microscopic gate
-- on a chosen scalar baseline `D = m I_3`, the observable-principle curvature
-  also supplies an exact isotropic comparison quadratic on the active pair,
-  whose chamber minimizer is `delta_* = q_+* = sqrt(6)/3`, but that remains a
-  bounded diagnostic tool rather than a theorem-native selector closure; the
-  clean attack target is still to derive either a canonical baseline principle,
-  a physical minimization principle, or the right-sensitive `2`-real
-  `Z_3` doublet-block selector law directly
+- on positive diagonal baselines, the observable-principle active curvature is
+  Euclidean up to scale exactly on the `23`-symmetric family `D = diag(A,B,B)`,
+  not only on the scalar line `D = m I_3`
+- requiring exact compatibility with the live active `23` odd/even grading
+  reduces positive diagonal baselines to that same family `D = diag(A,B,B)`
+- across that whole parity-compatible diagonal family, the comparison
+  quadratic has the same chamber minimizer `delta_* = q_+* = sqrt(6)/3`
+- but this cleaned-up local route remains a diagnostic/boundary route, not a
+  theorem-native selector closure; the live attack target is still the
+  right-sensitive `2`-real `Z_3` doublet-block selector law directly
 
 So the open DM object is no longer a vague missing `H`-law. It is now the
 explicit right-sensitive `2`-real `Z_3` doublet-block / point-selection law on
@@ -98,15 +104,20 @@ The old transport-side exact boundary on `H_rad(T)` is gone. The current live
 end state is:
 
 - exact source + transport chain on the one-flavor theorem-native branch
+- exact same-surface thermal bounding, with a certified current-bank
+  numerator-selector no-go and a certified unique root interval on the admitted
+  one-scalar same-surface family
 - exact `H`-side source-surface / active-chamber reduction, with the remaining
   source-side object now sharpened all the way to the `2`-real `Z_3`
   doublet-block law and the old one-phase slot route ruled out
+- exact PMNS constructive existence on the fixed native `N_e` seed surface
 - exact theorem-native prediction undershoots observation by a factor
   `~ 5.297`
 - PMNS-assisted repair is scientifically stronger than before: the
-  constructive projected-source sign chamber is nonempty and transport
-  competitive, but the current selector families remain CP-sheet blind
-- the remaining theorem gap is therefore a genuine microscopic selector law
-  problem, together with the final quantitative DM mapping
+  constructive projected-source chamber contains an exact `eta/eta_obs = 1`
+  point, but the current selector families still do not choose it
+- the remaining theorem gap is therefore a genuine right-sensitive
+  microscopic selector-law problem, together with the final quantitative DM
+  mapping
 
 So the DM flagship gate remains open.

@@ -58,9 +58,12 @@ context, not part of the live reviewer path.
   lane, exact PMNS selector/current-stack zero law, and exact last-mile
   reduction to `(J_chi, mu)`
 - one live flagship gate:
-  DM flagship gate, with exact transport closure, source-side reduction all
-  the way to the `2`-real `Z_3` doublet-block law, and a PMNS constructive
-  sign chamber that exists but is not yet microscopically selected
+  DM flagship gate, with exact transport closure, theorem-grade same-surface
+  thermal bounding and a certified current-bank numerator-selector no-go,
+  source-side reduction all the way to the `2`-real `Z_3` doublet-block law,
+  exact constructive `eta/eta_obs = 1` existence on the fixed native `N_e`
+  seed surface, and a remaining right-sensitive microscopic selector-law /
+  final DM-mapping gap
 
 For the package-level gravity/gauge continuum positioning layer, use
 [docs/CONTINUUM_IDENTIFICATION_NOTE.md](docs/CONTINUUM_IDENTIFICATION_NOTE.md).

@@ -40,7 +40,7 @@ Current quantitative component package:
 
 Other bounded component families:
 
-- DM flagship gate, with exact transport closure, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, and a PMNS constructive sign chamber that exists but whose current selector families are CP-blind
+- DM flagship gate, with exact transport closure, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, exact constructive `eta/eta_obs = 1` existence on the fixed native `N_e` seed surface, and a remaining right-sensitive microscopic selector-law / current-bank DM-mapping gap
 - curated neutrino boundary/support packet on `main`, with exact current-stack
   Majorana zero law, exact mass reduction to the Dirac lane, and exact
   retained-neutrino last-mile reduction to `(J_chi, mu)`; outside the

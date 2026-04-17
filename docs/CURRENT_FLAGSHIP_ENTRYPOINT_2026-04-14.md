@@ -73,7 +73,7 @@ packaging.
 
 ## Other Bounded Families
 
-- DM flagship gate, with exact transport-chain progress, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, and a PMNS constructive sign chamber that exists but whose current selector families are CP-blind
+- DM flagship gate, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, exact constructive `eta/eta_obs = 1` existence on the fixed native `N_e` seed surface, and a remaining right-sensitive microscopic selector-law / current-bank DM-mapping gap
 - persistent exact-lattice compact-object companion on `main`, with a bounded
   beyond-pocket compact-object-plus-response regime and a mapped inward-source
   directional boundary; still below persistent inertial-mass / matter closure

@@ -675,15 +675,22 @@ history separately from the live promoted algebraic CKM package.
 
 The only remaining live flagship gate is the dark-matter closure package. The
 exact one-flavor leptogenesis transport chain is now internally closed on the
-theorem-native radiation branch. On the PMNS-assisted side, the projected-source
-constructive sign chamber is now known to be nonempty and already transport
-competitive, but the current selector families remain `delta`-even and hence
-CP-sheet blind. On the source-oriented side, the exact support stack now
-reduces the remaining `H`-side object all the way to the right-sensitive
+theorem-native radiation branch. On the same-surface DM side, the thermal layer
+is no longer only support: it is theorem-grade bounded, with a certified
+current-bank numerator-selector no-go and a certified unique root interval on
+the admitted one-scalar family. On the PMNS-assisted side, the constructive
+projected-source chamber now contains an exact `eta/eta_obs = 1` point on the
+fixed native `N_e` seed surface, so the last-mile blocker is no longer
+constructive existence. On the source-oriented side, the exact support stack
+still reduces the remaining `H`-side object all the way to the right-sensitive
 `2`-real `Z_3` doublet-block law and closes negatively at the current-bank
-level there. But the final theorem-grade microscopic selector closure and full
-quantitative DM mapping are still not promoted at the package bar. That is why
-dark matter stays open.
+level there. The new parity-compatible diagonal-baseline tools clarify the
+local observable-curvature route, but they remain diagnostic rather than
+selector-closing. So the remaining positive theorem target is the
+right-sensitive microscopic selector law on `dW_e^H = Schur_Ee(D_-)`,
+equivalently the intrinsic `2`-real `Z_3` doublet-block point-selection law,
+together with the final quantitative DM mapping. That is why dark matter stays
+open.
 
 The cosmology family is now cleaner than before and no longer needs to be
 treated as several unrelated blockers. $\Lambda$, $w=-1$, and the present
