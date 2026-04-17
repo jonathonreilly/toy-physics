@@ -32,14 +32,13 @@ Current cosmology-facing rows are conditioned on:
 These are not inputs to the retained structural core. They are explicit
 boundary data for the bounded cosmology lane.
 
-The charged-lepton review-facing closure package is additionally conditioned on
+The charged-lepton bounded package is additionally conditioned on
 an explicit three-real observational pin:
 
 - PDG charged-lepton masses `(m_e, m_μ, m_τ)`
 
 Those are not inputs to the retained structural core either. They are the
-explicit observational pin behind the charged-lepton
-`retained-map-plus-observational-promotion` closure row.
+explicit observational pin behind the charged-lepton bounded row.
 
 ## 3. Same-surface derived constants used across the package
 
@@ -101,13 +100,13 @@ bridge layer beyond the exact structural core.
 - cosmology windows:
   - fixed-gap vacuum/topology route plus the still-open matter bridge
 
-## 6. Bounded and review-facing rows
+## 6. Bounded rows
 
 These are already publication-captured, but not promoted to the retained
 theorem core.
 
-- charged-lepton review-facing observational-pin closure package
-  (`TRUE_NO_PREDICTION`; explicit three-real PDG pin)
+- charged-lepton bounded observational-pin package
+  (explicit three-real PDG pin; no spare forecast beyond the pin)
 - Yukawa/top lane
 - Higgs/vacuum lane
 - cosmology lanes

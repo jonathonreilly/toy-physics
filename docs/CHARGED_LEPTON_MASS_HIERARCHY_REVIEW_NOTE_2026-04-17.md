@@ -1,7 +1,7 @@
 # Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework
 
 **Date:** 2026-04-17
-**Status:** review note — closure-class match via observational pinning; the retained framework does not derive Koide on the current surface. Strict-review verdict: TRUE_NO_PREDICTION.
+**Status:** bounded review note — the retained framework does not derive Koide on the current surface; the charged-lepton hierarchy is accommodated only through an explicit observational pin.
 **Runners:** 19 runners, 518 PASS / 0 FAIL, independently verified on `origin/main`.
 
 ## Abstract
@@ -20,20 +20,17 @@ shape theorem that supplies exactly three independent weight slots. The
 retained framework does **not** uniquely predict Koide. All nineteen
 natural attack routes — six structural no-gos, three framework-derives
 lanes, and the observational-pin closure — establish that cone-forcing
-requires either (a) observational pinning at the same closure class as
-the neutrino-mixing closure, or (b) a new retained primitive not
-currently on `main`. Three such primitives are sharply named:
+requires either (a) an explicit observational pin, or (b) a new retained
+primitive not currently on `main`. Three such primitives are sharply named:
 non-Cl(3)-covariant retained lift of the intermediate propagator,
 real-irrep-block democracy in variational weighting, and a mechanism
 breaking within-multiset signed Clifford ordering cancellation at
 fourth order.
 
-The charged-lepton sector therefore closes at the same publication
-class as the neutrino-mixing sector
-(retained-map-plus-observational-promotion). The strict-review verdict
-is **TRUE_NO_PREDICTION**: the 3→3 observational pin produces no
-genuinely new numerical forecast, unlike the 3→4 neutrino-mixing map
-which produces `δ_CP ≈ −81°` as a retained forecast.
+The charged-lepton sector therefore enters the repo as a **bounded**
+package. The 3→3 observational pin produces no genuinely new numerical
+forecast, unlike the 3→4 neutrino-mixing map which produces
+`δ_CP ≈ −81°` as a retained forecast.
 
 ## 1. Retained foundations
 
@@ -212,8 +209,7 @@ the Dirac-bridge theorem's `U_e = I_3` constraint) cannot be expressed
 as linear combinations of neutrino-mixing sources. The charged-lepton
 mass hierarchy is not derivable as a corollary of the retained
 neutrino-mixing closure; each sector requires its own observational
-pin when closed at the retained-map-plus-observational-promotion
-class.
+pin when carried as a bounded package.
 
 **Architectural reading.** The retained `M_3(ℂ)` decomposes as
 ```
@@ -452,8 +448,7 @@ Runner: `scripts/frontier_s2_breaking_primitive_survey.py`.
 ## 7. Theorem 7: charged-lepton observational-pin closure
 
 Drawing from the preceding theorems and no-gos, we establish the
-closure-class result parallel to the retained neutrino-mixing
-closure.
+bounded charged-lepton result on the current retained surface.
 
 ### 7.0 Convention note (surfaced explicitly)
 
@@ -489,14 +484,13 @@ cross-checked numerically by the companion runner
 Step 3 convention-cross-check block).
 
 This note, and Theorem 7 below, uses **Convention A** (linear-mass
-pin). The closure verdict `TRUE_NO_PREDICTION` is convention-
-invariant: under either convention, the 3-real observational input
+pin). The bounded status is convention-invariant: under either convention, the 3-real observational input
 determines the weight triple up to scale, the Koide condition
 (on the appropriate triple) holds tautologically as a property of
 the PDG charged-lepton masses, and no spare observable emerges from
 the 3→3 map. Convention A is chosen for exposition because it
 reads `Q_ℓ = 2/3` directly off the weights; Convention B is equally
-admissible and carries the same closure.
+admissible and carries the same bounded result.
 
 ### 7.1 Theorem 7 (under Convention A)
 
@@ -525,10 +519,7 @@ Then:
   supplying exactly three independent weight slots), not framework
   derivation.**
 
-**Closure class:** retained-map-plus-observational-promotion, identical
-to the neutrino-mixing closure's class. Not sole-axiom.
-
-**Strict-review verdict: TRUE_NO_PREDICTION.** The charged-lepton
+**Repo status:** bounded. The charged-lepton
 closure is a 3→3 observational pin and produces no spare observable
 forecast analogous to the neutrino sector's 3→4 map producing
 `δ_CP ≈ −81°`. Four structural consequences of the shape theorem are
@@ -602,13 +593,12 @@ data.
 > (Theorem 4), variational `C_3`-invariance obstruction (Theorem 5),
 > and fourth-order signed Clifford ordering cancellation
 > (Theorem 6) — close the three natural framework-derives routes.
-> Charged-lepton closure at the
-> retained-map-plus-observational-promotion class follows from a
+> Charged-lepton closure as a bounded package follows from a
 > three-real observational pin on PDG charged-lepton masses
 > (Theorem 7). The retained framework is structurally compatible with
 > Koide but does not derive it; three sharply-named missing primitives
 > are identified for future retained extension.
-> Strict-review verdict: TRUE_NO_PREDICTION on the 3→3 pin map.
+> The 3→3 pin map carries no spare observable forecast beyond the pin.
 
 ## 11. Runner manifest
 
@@ -641,7 +631,7 @@ Nineteen runners, 518 PASS / 0 FAIL on `origin/main` base:
 
 - The retained framework does **not** derive Koide `Q = 2/3` as a sole-axiom theorem output.
 - The charged-lepton hierarchy does **not** fall out of the neutrino-mixing closure as a corollary (Theorem 3 rigorously blocks this route).
-- The closure-class match with the neutrino sector does **not** produce a numerical forecast analogous to `δ_CP ≈ −81°`. The 3→3 pin map has no spare observable.
+- The bounded charged-lepton package does **not** produce a numerical forecast analogous to `δ_CP ≈ −81°`. The 3→3 pin map has no spare observable.
 - The "four falsifiable predictions" that emerge structurally from the shape theorem are SM-consistent and do not distinguish the framework from the Standard Model at current experimental precision.
 - The observational-pin triple is unique **as a set** up to overall scale; a residual `S_2` labeling ambiguity on `w_a ↔ w_b` persists on the retained surface.
 

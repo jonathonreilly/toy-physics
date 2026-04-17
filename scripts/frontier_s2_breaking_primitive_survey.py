@@ -660,7 +660,7 @@ def candidate_6_g1_H_on_T2():
 
     # BUT: H's structure at the chamber pin comes from the G1 observational
     # pin, NOT from a retained S_2-breaking primitive. The retained neutrino-mixing closure is
-    # labeled "retained-map-plus-observational-promotion". H's T_m, T_delta,
+    # now carried on the repo as a bounded charged-lepton package. H's T_m, T_delta,
     # T_q basis tensors ARE retained, but the (m, delta, q_+) values are
     # OBSERVATIONAL (pinned by neutrino PMNS). So H encodes S_2 breaking
     # only because G1's observational pin does.

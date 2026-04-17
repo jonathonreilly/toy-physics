@@ -21,13 +21,12 @@ Core steps:
   4. Verify Koide Q = 2/3 auto-consistency at the pinned triple.
   5. Cross-check against G1's chamber pin.
   6. Identify downstream falsifiable predictions.
-  7. Label closure class (retained-map-plus-observational-promotion).
+  7. Label repo status (`bounded` on the current surface).
 
-Four-outcome verdict:
-  CHARGED_LEPTON_OBSERVATIONAL_PIN_CLOSES = TRUE
-  CHARGED_LEPTON_OBSERVATIONAL_PIN_CLOSES = TRUE_NO_PREDICTION
-  G5_OBSERVATIONAL_PIN_OUTSIDE_CHAMBER
-  G5_OBSERVATIONAL_PIN_UNDERDETERMINED
+Repo-status verdict:
+  CHARGED_LEPTON_OBSERVATIONAL_PIN_STATUS = BOUNDED
+  CHARGED_LEPTON_OBSERVATIONAL_PIN_STATUS = OPEN
+  CHARGED_LEPTON_OBSERVATIONAL_PIN_STATUS = FROZEN_OUT
 """
 
 from __future__ import annotations
@@ -879,54 +878,49 @@ def step6_predictions(w_pin):
 
 
 # ----------------------------------------------------------------------
-# STEP 7: Closure-class labeling
+# STEP 7: Repo-status labeling
 # ----------------------------------------------------------------------
 
 
-def step7_closure_class(w_pin, predictions):
+def step7_repo_status(w_pin, predictions):
     print("=" * 78)
-    print("STEP 7: Closure-class labeling")
+    print("STEP 7: Repo-status labeling")
     print("=" * 78)
 
-    # retained neutrino-mixing closure was labeled "retained-map-plus-observational-promotion (not
-    # sole-axiom)". G5 via this route takes the IDENTICAL label.
+    # This lane closes only through an explicit three-real observational pin, so
+    # on the repo's standard status vocabulary it is bounded, not retained.
 
-    label = "retained-map-plus-observational-promotion"
-    not_label = "sole-axiom"
+    status = "bounded"
 
-    print(f"  charged-lepton closure class     : {label}")
-    print(f"  G5 NOT closed as     : {not_label}")
+    print(f"  charged-lepton repo status       : {status}")
     print()
-    print("  Parity with G1:")
-    print("    Both G1 and G5 close through the P3 promotion lane:")
-    print("      retained affine map  +  minimal observational pin.")
-    print("    G1: H(m, delta, q_+) -> (theta_ij, delta_CP), pinned by PMNS.")
-    print("    G5: Sigma(w_O0, w_a, w_b) -> (m_e, m_mu, m_tau), pinned by PDG masses.")
-    print("    Both cases: a companion worker-style microscopic-polynomial")
-    print("    impossibility theorems rule out sole-axiom closure.")
-    print("    Both cases: the retained map is sole-axiom; the pinning is")
-    print("    minimal observational input.")
+    print("  Reason:")
+    print("    The retained shape theorem supplies the exact 3-slot map")
+    print("      Sigma(w_O0, w_a, w_b) -> (m_e, m_mu, m_tau).")
+    print("    But the final point is fixed by an explicit PDG charged-lepton pin,")
+    print("    so the lane is bounded on the current retained surface.")
+    print("    No separate retained derivation of Koide or the charged-lepton")
+    print("    hierarchy is claimed here.")
 
-    check("charged-lepton closure class matches G1 label 'retained-map-plus-observational-promotion'",
-          label == "retained-map-plus-observational-promotion")
-    return label
+    check("charged-lepton observational-pin lane is classified as bounded",
+          status == "bounded")
+    return status
 
 
 # ----------------------------------------------------------------------
-# STEP 8: Four-outcome verdict
+# STEP 8: Repo-status verdict
 # ----------------------------------------------------------------------
 
 
-def step8_verdict(w_pin, chamber, predictions, closure_label,
+def step8_verdict(w_pin, chamber, predictions, repo_status,
                   unique_pin):
     print("=" * 78)
-    print("STEP 8: FOUR-OUTCOME VERDICT")
+    print("STEP 8: REPO-STATUS VERDICT")
     print("=" * 78)
 
-    # TRUE  : pin inside chamber + unique up to scale + Koide follows + new prediction
-    # TRUE_NO_PREDICTION : pin inside + unique + Koide follows + NO new prediction
-    # OUTSIDE_CHAMBER    : pin violates (R1..R5)
-    # UNDERDETERMINED    : pin works but multiple chamber points fit
+    # BOUNDED   : explicit observational pin closes the lane on the retained map
+    # FROZEN_OUT: observed triple violates the retained chamber
+    # OPEN      : the map is structurally compatible but still underdetermined
 
     # Check chamber membership
     inside_chamber = chamber["positivity"](w_pin)
@@ -941,20 +935,17 @@ def step8_verdict(w_pin, chamber, predictions, closure_label,
     print(f"  pin unique up to scale               : {unique_pin}")
     print(f"  Koide Q = 2/3 follows (to PDG prec)  : {koide_ok}")
     print(f"  at least one new falsifiable pred    : {any_prediction}")
-    print(f"  closure label                        : {closure_label}")
+    print(f"  repo status label                    : {repo_status}")
     print()
 
-    if inside_chamber and unique_pin and koide_ok and any_prediction:
-        verdict = "CHARGED_LEPTON_OBSERVATIONAL_PIN_CLOSES = TRUE"
-        interp = "Full charged-lepton closure at G1 parity via P3 observational pin."
-    elif inside_chamber and unique_pin and koide_ok and not any_prediction:
-        verdict = "CHARGED_LEPTON_OBSERVATIONAL_PIN_CLOSES = TRUE_NO_PREDICTION"
-        interp = "Partial closure: pin works, Koide follows, no new falsifiable content."
+    if inside_chamber and unique_pin and koide_ok:
+        verdict = "CHARGED_LEPTON_OBSERVATIONAL_PIN_STATUS = BOUNDED"
+        interp = "Bounded compatibility package: the retained map accommodates the observed hierarchy through an explicit PDG pin."
     elif not inside_chamber:
-        verdict = "G5_OBSERVATIONAL_PIN_OUTSIDE_CHAMBER"
+        verdict = "CHARGED_LEPTON_OBSERVATIONAL_PIN_STATUS = FROZEN_OUT"
         interp = "The retained chamber is incompatible with the observed hierarchy."
     else:
-        verdict = "G5_OBSERVATIONAL_PIN_UNDERDETERMINED"
+        verdict = "CHARGED_LEPTON_OBSERVATIONAL_PIN_STATUS = OPEN"
         interp = "Pin works but multiple chamber points yield the same observed triple."
 
     print(f"  VERDICT: {verdict}")
@@ -991,11 +982,11 @@ def main():
     # Step 6: predictions
     predictions = step6_predictions(w_pin)
 
-    # Step 7: closure class
-    closure_label = step7_closure_class(w_pin, predictions)
+    # Step 7: repo status
+    repo_status = step7_repo_status(w_pin, predictions)
 
     # Step 8: verdict
-    verdict = step8_verdict(w_pin, chamber, predictions, closure_label,
+    verdict = step8_verdict(w_pin, chamber, predictions, repo_status,
                             unique_pin=pin_unique)
 
     print()

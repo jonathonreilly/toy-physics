@@ -6,8 +6,8 @@
 This repository is not presently organized around the older toy-model or DAG
 exploration surfaces. The current review target is a `Cl(3)` on `Z^3`
 framework package with a retained theorem core, retained standalone
-quantitative lanes, bounded Yukawa/Higgs lanes, one review-facing
-charged-lepton closure-class package, a bounded prediction portfolio, and one
+quantitative lanes, bounded Yukawa/Higgs lanes, one bounded
+charged-lepton package, a bounded prediction portfolio, and one
 explicitly open flagship gate.
 
 For framework counting, the public package should be read as a one-axiom
@@ -127,12 +127,10 @@ Current quantitative statuses:
 
 ## Bounded Prediction Surface
 
-- review-facing charged-lepton mass-hierarchy observational-pin closure
-  package:
-  same `retained-map-plus-observational-promotion` class as the retained
-  neutrino-mixing closure, explicit three-real PDG pin on the retained
-  shape-theorem chamber, strict-review verdict `TRUE_NO_PREDICTION`, and no
-  claim of a retained framework derivation of Koide
+- bounded charged-lepton mass-hierarchy observational-pin package:
+  explicit three-real PDG pin on the retained shape-theorem chamber, no spare
+  observable beyond the pin, and no claim of a retained framework derivation
+  of Koide
 - DM flagship gate, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, exact constructive `eta/eta_obs = 1` existence on the fixed native `N_e` seed surface, and a remaining right-sensitive microscopic selector-law / current-bank DM-mapping gap
 - promoted CKM atlas/axiom closure package, with older Cabibbo / NNI / partial Jarlskog notes retained only as route history
 - cosmology companions

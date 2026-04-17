@@ -260,14 +260,10 @@ Let
    tautological algebraic consequence of the pin equaling the
    observed triple, which satisfies Koide to PDG precision.
 
-**Closure class:** retained-map-plus-observational-promotion,
-identical to the retained neutrino-mixing closure's class. Not
-sole-axiom.
-
-**Strict-review verdict:** `TRUE_NO_PREDICTION`. The map
-`(w_{O_0}, w_a, w_b) ↦ diag(m_e, m_μ, m_τ)` is 3→3 and produces no
-spare observable analogous to the neutrino 3→4 map (which produces
-`δ_CP ≈ −81°` as a retained forecast).
+**Repo status:** bounded. The map
+`(w_{O_0}, w_a, w_b) ↦ diag(m_e, m_μ, m_τ)` is 3→3 and uses an explicit
+observational pin, so it produces no spare observable analogous to the
+neutrino 3→4 map (which produces `δ_CP ≈ −81°` as a retained forecast).
 
 Four structural consequences of the shape theorem are testable but
 SM-consistent:
@@ -313,9 +309,9 @@ retention work.
   mass hierarchy problem. They close three specific framework-
   derives routes and name three candidate primitives whose future
   retention would close the problem.
-- The observational-pin closure of Theorem 7 is `TRUE_NO_PREDICTION`
-  on strict review. It does not supply a new numerical forecast
-  beyond SM baseline.
+- The observational-pin closure of Theorem 7 is bounded on the current
+  repo surface. It does not supply a new numerical forecast beyond SM
+  baseline.
 
 ## Paper-safe wording
 
@@ -331,10 +327,8 @@ retention work.
 > The fourth-order mixed-Γ cancellation theorem (Theorem 6) rules
 > out the fourth-order retained spatial-Clifford + EWSB-weighted
 > Higgs family via signed ordering cancellation. Charged-lepton
-> closure at the retained-map-plus-observational-promotion class
-> follows from a three-real observational pin on the shape-theorem
-> weight triple (Theorem 7), with strict-review verdict
-> `TRUE_NO_PREDICTION`.
+> bounded charged-lepton compatibility follows from a three-real
+> observational pin on the shape-theorem weight triple (Theorem 7).
 
 ## Status
 
