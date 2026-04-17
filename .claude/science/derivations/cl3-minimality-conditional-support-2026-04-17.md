@@ -19,7 +19,7 @@ Review correctness history:
   to explicitly construct `Cl(3;C) = M_2(C) (+) M_2(C)`, terminology
   corrected (`so(n)` / `spin(n)`, not `su(n)`), four-generation claim
   demoted to bounded tension.
-- v3 (this version) adds: (a) an explicit dependency table marking
+- v3 added: (a) an explicit dependency table marking
   each premise as comparison-level vs downstream; (b) an upgraded
   four-generation argument promoted to a genuine no-go theorem on the
   cubic `Cl(n)/Z^n` odd-`n` comparison family interpreted with the
@@ -27,6 +27,15 @@ Review correctness history:
   claim boundary that keeps the note firmly in the support/conditional
   class while exhibiting which parts would lift to retained-level were
   the underlying retained semantics applied.
+- v4 (this version) addresses the reviewer's concern that the v3
+  no-go relied on an `n = 3`-specific retained theorem. The runner
+  now constructs the hw=1 observable algebra explicitly for
+  `n ∈ {3, 5, 7, 9, 11, 13}` (Part F Stage 2), proves it equals
+  `M_n(C)` and acts irreducibly in each case, and documents the
+  parameter-free algebraic structure that extends the construction to
+  arbitrary odd `n` (Stage 4). The four-generation no-go is now
+  family-wide on the odd-`n` cubic family, not conditional on the
+  `n = 3` retained surface. Runner: 50 THEOREM + 32 SUPPORT, 0 FAIL.
 
 ## Scope And Claim Boundary
 
@@ -115,7 +124,7 @@ across the `Cl(n)/Z^n` candidate family for any odd `n ≥ 1`) or
 | Single-clock codimension-1 (`d_t = 1`) | retained | ✓ | |
 | Native SU(2) requires ≥ 3 bivectors | retained | ✓ | |
 | `hw`-orbit size `C(n, k)` under full symmetry group | abstract | ✓ | |
-| No-proper-quotient on the `hw=1` observable algebra | retained | ✓ | |
+| No-proper-quotient on the `hw=1` observable algebra (family-wide for arbitrary odd `n`; verified explicitly for `n ∈ {3,5,7,9,11,13}` in Part F of the runner; algebraic structure is parameter-free in `n`) | family-wide | ✓ | |
 | Three-generation observational fact (3 charged-lepton flavors) | data | ✓ | |
 | `8 = 1 + 1 + 3 + 3` retained orbit algebra decomposition | retained | | ✓ |
 | Selection of the specific `Cl(3)/Z^3` surface (axiom `A1`) | axiom | | ✓ |
@@ -249,13 +258,19 @@ dimension `n(n-1)/2`.
   `spin(n)` / `so(n)` interpretation
 - Part E — Bott periodicity cross-check for `Cl(n;C)` dimension and
   `A ⊕ A` structure
-- Part F — **bounded tension** against a clean four-generation fit on
-  the retained cubic surface, with explicit disclaimer that higher-dim
-  `Cl(n)` embeddings are not excluded
+- Part F — **family-wide four-generation no-go theorem** on the cubic
+  `Cl(n)/Z^n` surface for arbitrary odd `n`. Builds the hw=1 observable
+  algebra explicitly for `n ∈ {3, 5, 7, 9, 11, 13}`, verifies it equals
+  `M_n(C)` (rank-1 sector projectors `P_i`, cyclic `C_n` permutation,
+  matrix units `E_{ij} = P_i C_n^k P_j` of full rank `n^2`), and
+  numerically tests irreducibility (orbit of every nonzero vector
+  spans `C^n`). Stage 4 documents that the construction is
+  parameter-free in `n`, extending the no-proper-quotient result to
+  arbitrary odd `n` by the same algebraic argument.
 
 ### Runner results
 
-**13 THEOREM + 33 SUPPORT, 0 FAIL.**
+**50 THEOREM + 32 SUPPORT, 0 FAIL.**
 
 - The intersection of R1 ∧ R2 ∧ R3 across `n ∈ [0, 20]` is uniquely `n = 3`.
 - The 4-dim reducible rep explicitly realizes `Cl(3;C) = M_2(C) ⊕ M_2(C)`
@@ -296,11 +311,16 @@ hosts the physical generation count:
 number of generations = |hw = 1| = C(n, 1) = n.
 ```
 
-The retained three-generation observable no-proper-quotient theorem
-establishes that the `hw = 1` operator algebra is irreducible and
-admits no proper quotient preserving the generation operators. So the
-`n` states of the `hw = 1` sector cannot be collapsed or relabeled into
-fewer exact physical species by any retained operation.
+The **family-wide no-proper-quotient theorem** (Part F Stages 2–4 of
+the runner; proof in this section below) establishes that for every
+odd `n ≥ 3`, the `hw = 1` operator algebra on cubic `Cl(n)/Z^n` is
+isomorphic to `M_n(C)` and acts irreducibly on `H_{hw=1}^{(n)}`.
+Hence no proper quotient preserving the retained generation operators
+exists, and the `n` states of the `hw = 1` sector cannot be collapsed
+or relabeled into fewer exact physical species by any retained
+operation. (The original `n = 3`-only theorem in
+`docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md` is the special
+case `n = 3` of this family-wide result.)
 
 ### Theorem (Four-Generation Exclusion on Cubic Odd-n)
 
@@ -320,22 +340,62 @@ comparison family.
 
 ### Proof
 
-For odd `n`:
+**Stage 1 (counting).** For odd `n`:
 
 - `n = 1`: `hw = 1` sector has `C(1, 1) = 1` state. Not four.
 - `n = 3`: `hw = 1` sector has `C(3, 1) = 3` states. Not four.
-- `n = 5`: `hw = 1` sector has `C(5, 1) = 5` states. Not four; and
-  declaring four of the five as "generations" leaves one residual
-  `hw = 1` state with identical operator-algebra status. By the
-  retained no-proper-quotient theorem, that residual state cannot be
-  quotiented out while preserving the generation algebra, and therefore
-  must appear as an exact fifth species.
-- `n = 7`: two residual species (`C(7, 1) = 7`). Same argument with two
-  unremovable residuals.
+- `n = 5`: five states. Not four; declaring four as "generations" leaves
+  one residual `hw = 1` state of identical operator-algebra status.
+- `n = 7`: seven states. Three residuals after declaring four.
 - `n ≥ 9` odd: analogous, with `n − 4 ≥ 5` residuals.
 
 `n = 4, 6, 8, ...` (even) are ruled out separately by retained
 chirality parity (R3 in the intersection table above).
+
+**Stage 2 (family-wide no-proper-quotient).** For any odd `n ≥ 3`,
+the cubic `Cl(n)/Z^n` lattice carries `n` independent translations
+`T_1, ..., T_n` acting diagonally on the `n`-dim hw=1 sector
+`H_{hw=1}^{(n)} = span{X_1, ..., X_n}` with eigenvalues
+
+```
+(T_j)_{i,i} = -1 if i = j, +1 otherwise.
+```
+
+These give `n` distinct Z/2-eigenvalue patterns, hence `n` rank-1
+sector projectors
+
+```
+P_i = product over j of (I + ε_j(X_i) · T_j) / 2,    rank P_i = 1.
+```
+
+The cubic `C_n[111]` rotational symmetry permutes axes cyclically and
+hence acts on hw=1 as `X_1 → X_2 → ... → X_n → X_1`. The product
+
+```
+E_{ij} = P_i · C_n^k · P_j         with  k = (i − j) mod n
+```
+
+equals the matrix unit `e_i e_j^*` ∈ `M_n(C)`. The `n²` matrix units
+span `M_n(C)`, which acts irreducibly on `C^n` (standard linear
+algebra: any nonzero `v ∈ C^n` has nonzero component `v_j` for some
+`j`; `E_{ij} v = v_j e_i` reaches every `e_i`).
+
+**Stage 3 (consequence).** For any odd `n ≥ 5`, irreducibility of the
+hw=1 observable algebra forbids any proper invariant subspace, hence
+no proper quotient `Q : H_{hw=1}^{(n)} → H_red` can collapse the
+`n − 4` residual hw=1 states into the four proposed generations while
+preserving the retained operator algebra. The `n − 4` residual species
+are unremovable.
+
+**Construction is parameter-free in `n`.** The proof uses only:
+(i) `n` distinct Z/2 eigenvalue patterns from the `n` lattice
+translations; (ii) the cyclic `C_n[111]` symmetry of cubic `Z^n`
+acting on axes; (iii) `M_n(C)` irreducibility on `C^n` (standard linear
+algebra, holds for every `n ≥ 1`). All three ingredients are present
+for every odd `n ≥ 3`. The runner verifies the construction
+explicitly for `n ∈ {3, 5, 7, 9, 11, 13}` (Part F, Stage 2) and
+documents the parameter-free extension to arbitrary odd `n`
+(Stage 4).
 
 Therefore no odd `n` on this comparison family produces exactly four
 exact generations; and no even `n` is allowed by the framework's
@@ -385,7 +445,8 @@ theorem consistency diagnostic.
 
 ## What A Reviewer Should Conclude
 
-- The math replays: **27 THEOREM + 32 SUPPORT, 0 FAIL** in v3.
+- The math replays: **50 THEOREM + 32 SUPPORT, 0 FAIL** in v4 (with
+  the family-wide no-proper-quotient construction added in Part F).
 - The `d_s = 3` minimality claim is retained-framework-compatibility,
   not first-principles axiom-depth closure. The dependency table above
   makes the premise classification explicit.
@@ -394,11 +455,13 @@ theorem consistency diagnostic.
   isomorphism (Part B).
 - Terminology is now correct: bivectors generate `spin(n) / so(n)`, not
   `su(n)`, and the note uses those names throughout.
-- The four-generation result has been promoted from bounded tension to
-  a genuine no-go theorem on the cubic `Cl(n)/Z^n` odd-`n` comparison
-  family with `hw`-orbit semantics, via the retained no-proper-quotient
-  theorem. The claim boundary is explicit: the no-go applies to this
-  comparison family, not to arbitrary embeddings.
+- The four-generation result is now a **family-wide no-go theorem** on
+  the cubic `Cl(n)/Z^n` odd-`n` comparison family with `hw`-orbit
+  semantics. The earlier `n=3`-conditional retained citation has been
+  replaced with a parameter-free construction proved explicitly for
+  `n ∈ {3, 5, 7, 9, 11, 13}` in Part F (Stage 2) and documented as
+  parameter-free in `n` (Stage 4). The claim boundary is explicit: the
+  no-go applies to this comparison family, not to arbitrary embeddings.
 - If useful, this can be packaged as a retained-framework consistency
   companion / support tool. It is **not** a retained flagship closure.
 
