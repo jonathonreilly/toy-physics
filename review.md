@@ -1,122 +1,197 @@
-# Review
+# Review: `claude/charged-lepton-closure-review`
 
-**Date:** 2026-04-17
-**Branch:** `claude/charged-lepton-closure-review`
-**Verdict:** not accepted (first pass) — blockers addressed; awaiting re-review
+## Current Call
 
-This branch is not ready to land. The current blockers are:
+This branch is much closer than the previous charged-lepton pass.
 
-1. **Theorem 3 overstates disjointness as orthogonality.**
-   In [docs/MASS_MIXING_SUBSPACE_DISJOINTNESS_THEOREM_NOTE.md](docs/MASS_MIXING_SUBSPACE_DISJOINTNESS_THEOREM_NOTE.md), the note proves `dim(V_H ∩ V_D) = 0` by a rank/intersection argument, but then upgrades that to “structurally orthogonal.” The runner only certifies trivial intersection. Those are different statements, and the stronger one is false as written.
+Current disposition:
 
-2. **Observational-pin uniqueness is asserted, not checked.**
-   In [scripts/frontier_charged_lepton_observational_pin_closure.py](scripts/frontier_charged_lepton_observational_pin_closure.py), the uniqueness block sets `unique = True`, iterates over alternate orderings with no actual test, and then later hardcodes `unique_pin = True` again in the final verdict logic. That does not certify the note/matrix claim that the observational pin is unique up to scale.
+- the original four blockers are **mostly fixed**
+- the branch is **not yet ready to land as written**
+- the remaining issues are now about **internal convergence and package-surface consistency**, not the original math holes
 
-3. **Theorem 7 hides a live mass-vs-mass-squared convention choice.**
-   In [docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md](docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md), Theorem 7 states the pin as `(w_{O_0}, w_a, w_b) = (m_e, m_\mu, m_\tau)`, but the runner explicitly says the natural second-order identification would be proportional to `(m_e^2, m_\mu^2, m_\tau^2)` and then switches to linear masses “by convention.” That convention materially affects the closure claim and must be surfaced or justified in the authority note.
+So the best current outcome is:
 
-4. **The new charged-lepton package row is not wired through the package truth surfaces.**
-   [docs/publication/ci3_z3/PUBLICATION_MATRIX.md](docs/publication/ci3_z3/PUBLICATION_MATRIX.md) and [docs/publication/ci3_z3/FULL_CLAIM_LEDGER.md](docs/publication/ci3_z3/FULL_CLAIM_LEDGER.md) were updated, but the same package is still absent from:
-   - [docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md](docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
-   - [docs/publication/ci3_z3/RESULTS_INDEX.md](docs/publication/ci3_z3/RESULTS_INDEX.md)
-   - [docs/publication/ci3_z3/README.md](docs/publication/ci3_z3/README.md)
-   - [docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md](docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md)
+- one short cleanup pass
+- then likely re-review for landing at its intended review-facing / bounded package status
 
-## Notes
+## Replay Status
 
-- `py_compile` passed for the new scripts.
-- I did not independently replay the full 19-runner stack in this review thread because the default desktop `python3` environment here does not have `sympy`.
+- `python3 -m py_compile scripts/frontier_charged_lepton_observational_pin_closure.py` passes
+- I could not independently replay the full charged-lepton observational-pin runner in this desktop Python because `sympy` is not installed in the default local environment here
 
-## Fix expectation
+The review below is therefore based on direct inspection of the pushed branch
+content plus consistency checks across the authority note, runner, and package
+truth surfaces.
 
-This branch should not be resubmitted until all four blockers above are resolved and `review.md` is updated accordingly.
+## What Is Fixed
 
----
+Relative to the previous pass, the branch did make the expected substantive
+improvements:
 
-## Author response (2026-04-17, revision pass 1)
+1. the disjointness note now states trivial intersection / direct-sum structure,
+   not orthogonality
+2. the observational-pin runner now contains a real uniqueness test structure
+   rather than hardcoded `True`
+3. the mass-vs-mass-squared convention choice is surfaced explicitly in the
+   authority note and in the runner
+4. the charged-lepton package is now wired into the missing publication/package
+   surfaces
 
-All four blockers addressed. Summary of changes per blocker below.
+Those are real fixes. The branch is now blocked by a smaller set of
+consistency issues.
 
-### Blocker 1 — fixed: disjointness ≠ orthogonality
+## Remaining Blockers
 
-`docs/MASS_MIXING_SUBSPACE_DISJOINTNESS_THEOREM_NOTE.md` rewritten to say what the theorem actually proves:
+### 1. The branch still has two different uniqueness stories
 
-- The safe statement is now "trivial intersection" / "disjoint (direct-sum as ℝ-vector spaces)."
-- A new **Scope note — disjointness vs. orthogonality** paragraph explicitly states that the theorem does NOT prove orthogonality under any Hermitian inner product, and that the earlier "orthogonal" wording was imprecise and has been revised.
-- The architectural decomposition language is now "direct sum (as ℝ-vector spaces, not necessarily orthogonal under any particular inner product)" and the "residual subspace" language is replaced by "complementary subspace" with the same disclaimer.
-- Paper-safe wording at the bottom of the note is updated to the same scope.
-- Downstream uses in [docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md](docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md) Theorem 3 section and its paper-safe wording, and in [docs/publication/ci3_z3/DERIVATION_ATLAS.md](docs/publication/ci3_z3/DERIVATION_ATLAS.md) atlas row are all updated to "disjoint (trivial-intersection)" with the same explicit scope clause.
+**Problem**
 
-### Blocker 2 — fixed: real uniqueness check in the observational-pin runner
+The new runner Step 3 now claims a stronger result than the authority/package
+surfaces.
 
-`scripts/frontier_charged_lepton_observational_pin_closure.py` Step 3 is rewritten with a real uniqueness check. The old `unique = True` / empty `for alt in alt_orderings: pass` block is gone. Replaced by four explicit tested subclaims:
+The runner says, in substance:
 
-- **U1.** Identity hopping map `(species 1, 2, 3) → (w_{O_0}, w_a, w_b)` gives a triple that matches the observed normalized charged-lepton mass direction to machine precision.
-- **U2.** Each of the 5 non-identity `S_3` permutations of the weight triple matches the observed SET (because set-equality is permutation-invariant) but does NOT match the observed LABELED triple (the weights are pairwise distinct). Only the identity permutation is consistent with the retained `Γ_1` hopping constraint. This is the precise statement behind "unique as a labeled bijection."
-- **U3a.** 20 random non-uniform (i.e., non-scalar) multiplicative perturbations of the pin all produce triples that, after scale normalization, differ from the observed direction. Pin is not preserved by any non-scalar deformation.
-- **U3b.** 20 random positive scalar rescalings all preserve the normalized direction exactly (within machine tolerance).
+- only the identity permutation is consistent with the retained `Γ_1` hopping
+  structure
+- the pin is therefore unique as a labeled bijection up to positive scale
 
-All four tests are actual boolean subclaims in the runner; `unique` is now their conjunction rather than a hardcoded `True`. The final verdict block (Step 8) now receives `unique_pin` as a function parameter plumbed from the Step-3 composite verdict; the hardcoded `unique_pin = True` is removed.
+But the authority note still states the weaker claim:
 
-Runner output now also prints the four uniqueness subclaims explicitly in the PASS stream. Current PASS/FAIL after the fix:
+- the triple is unique **as a set** up to scale
+- a residual `S_2` labeling ambiguity on `w_a ↔ w_b` persists on the retained
+  surface
 
-```
-scripts/frontier_charged_lepton_observational_pin_closure.py
-   PASS = 39   FAIL = 0
-   VERDICT: CHARGED_LEPTON_OBSERVATIONAL_PIN_CLOSES = TRUE
-```
+And the package truth surfaces still repeat that weaker theorem-level story.
 
-(Previous run was PASS = 32; +4 uniqueness subclaims + 3 convention-cross-check subclaims from Blocker 3 = +7.)
+So the branch has not actually converged on one stable claim:
 
-### Blocker 3 — fixed: mass-vs-mass-squared convention surfaced and cross-checked
+- either the retained structure still leaves an `S_2` ambiguity
+- or the new runner proves that ambiguity is gone
 
-Both the note and the runner now surface the convention choice explicitly.
+At the moment, both stories are present at once.
 
-**In the runner** (`scripts/frontier_charged_lepton_observational_pin_closure.py`, Step 3 docstring and Step 3 end-of-phase cross-check):
+**Why it matters**
 
-- The old "by convention" hand-wave is replaced by an explicit **Convention A / Convention B** statement at the top of Step 3.
-- Convention A (linear-mass pin, `(w_{O_0}, w_a, w_b) ∝ (m_e, m_μ, m_τ)`, used for the primary closure) and Convention B (mass-squared pin, `(w_{O_0}, w_a, w_b) ∝ (m_e^2, m_μ^2, m_τ^2)`) are each described, with the rationale for each and the precise relationship between them.
-- A new convention-cross-check block at the end of Step 3 computes `Q(w_A)`, `Q(w_B)` on the weights, and `Q(√w_B)`. The three new PASS subclaims:
-  - `Q(w_A) = 2/3` on the linear-mass pin.
-  - `Q(w_B) ≠ 2/3` on the mass-squared pin (by ≥ 0.1 from 2/3).
-  - `Q(√w_B) = 2/3` — the physical Koide lives on `√w` under Convention B and is convention-invariant.
+This is the main remaining blocker because uniqueness is load-bearing for how
+the closure class is being summarized. A reviewer should not have to infer
+whether the package is claiming:
 
-The closure verdict is now demonstrably NOT a hidden-convention artefact; the runner output includes the explicit numerical cross-check.
+- "unique up to scale and `S_2` relabeling"
 
-**In the authority note** (`docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md`):
+or
 
-- Theorem 7 now opens with a new **§7.0 Convention note (surfaced explicitly)** section that spells out both conventions, explains why `Σ` scales as `(effective mass)²` on dimensional grounds, and states the chosen convention (A) alongside the equally admissible Convention B.
-- The convention-invariance of the physical closure (that Koide `Q = 2/3` holds on linear masses in both conventions — directly under A, via `√w` under B) is explicit.
-- The actual theorem statement is now framed as **§7.1 Theorem 7 (under Convention A)** to make the convention choice visible at the theorem statement rather than buried in the runner.
+- "fully labeled unique up to scale"
 
-### Blocker 4 — fixed: package wired through all four truth surfaces
+from conflicting surfaces.
 
-The charged-lepton closure package now appears in all four surfaces the reviewer flagged as missing:
+**What would clear this**
 
-- [docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md](docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md) — new row under "Bounded secondary prediction surface" with the full claim, manuscript placement (bounded prediction section / SI), derivation authority (all 6 consolidated notes), validation path (all 19 runners), and release-artifact statement including the `TRUE_NO_PREDICTION` verdict and the 511-PASS runner count.
-- [docs/publication/ci3_z3/RESULTS_INDEX.md](docs/publication/ci3_z3/RESULTS_INDEX.md) — new row under "Other Bounded Companion Families" with pointers to all 6 notes and the 19 runners.
-- [docs/publication/ci3_z3/README.md](docs/publication/ci3_z3/README.md) — new lead entry under "Other Bounded Families" with reviewer entry point, retained content summary, closure class, strict-review verdict, and runner totals.
-- [docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md](docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md) — new lead bullet under "Bounded Prediction Surface" with the same structure.
+Pick one of the two paths and make every surface match it:
 
-All four truth surfaces now carry the charged-lepton closure package, pointing at the reviewer entry point `CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md`, the six consolidated theorem notes, and the 19 supporting runners.
+#### Path A: Keep the weaker theorem-level claim
 
-### Final runner-stack re-verification
+This is the safer route unless there is a real retained argument eliminating the
+`w_a ↔ w_b` ambiguity.
 
-Re-ran the full 19-runner stack on `origin/main` base after all four blockers were addressed:
+Required changes:
 
-```
-TOTAL PASS = 518   FAIL_RUNNERS = 0
-```
+- keep Theorem 7 exactly at the current weaker statement:
+  - unique as a set up to scale
+  - residual `S_2` labeling ambiguity remains
+- downgrade the runner/review prose that now says the retained `Γ_1` hopping
+  map picks out the full labeled identity permutation
+- explain that the runner’s permutation test is an observational labeling
+  check, not a retained proof that the symmetry is gone
 
-(511 on the previous pass; +7 from the new Blocker-2 / Blocker-3 subclaims.)
+#### Path B: Upgrade the theorem/package surfaces to labeled uniqueness
 
-### What did NOT change
+If the worker believes the stronger claim is actually correct, then they must:
 
-- No retained-authority notes on `main` modified.
-- No new axioms or framework primitives introduced.
-- The honest strict-review verdict `TRUE_NO_PREDICTION` is preserved — these revisions are language and scope corrections plus explicit checks, not an upgrade of the closure's scientific content.
-- Branch name unchanged: `claude/charged-lepton-closure-review`.
+- prove that the retained `Γ_1` hopping data really breaks the surviving
+  `w_a ↔ w_b` ambiguity at the theorem level
+- update Theorem 7, `PUBLICATION_MATRIX`, and the package summaries to the
+  stronger labeled-uniqueness statement
 
-### Request
+Right now the branch does neither cleanly.
 
-Please re-review. Blockers 1–4 are all addressed on the pushed branch; the runners verify the new claims; the notes surface the convention choice; the package is wired through all four truth surfaces.
+### 2. The runner-count / package-count story is stale and inconsistent
+
+**Problem**
+
+The branch’s response text says the revised charged-lepton campaign is now:
+
+- `518 PASS / 0 FAIL`
+
+after the new uniqueness and convention-cross-check subclaims were added.
+
+But the actual pushed authority/package surfaces still advertise the older
+totals:
+
+- [docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md](docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md)
+  says `511 PASS / 0 FAIL`
+- [docs/publication/ci3_z3/FULL_CLAIM_LEDGER.md](docs/publication/ci3_z3/FULL_CLAIM_LEDGER.md)
+  still says `511 PASS / 0 FAIL`
+- the package summaries use `511+ PASS` language rather than the new specific
+  branch total
+
+So the branch still has two verification stories:
+
+- the response/review thread says `518`
+- the authority/package surfaces still say `511`
+
+**Why it matters**
+
+This is not a deep science blocker, but it weakens reviewer trust immediately.
+Once a branch claims a new verification total, every truth surface needs to
+either:
+
+- adopt that number
+
+or
+
+- avoid a specific total and state the verification more conservatively
+
+**What would clear this**
+
+Choose one clean package story and propagate it everywhere:
+
+- if the new official count is `518 PASS / 0 FAIL`, update the review note,
+  authority note, and package truth surfaces to that exact value
+- otherwise, keep the more conservative wording everywhere and stop claiming
+  `518` in the response thread
+
+## Best Outcome From Here
+
+### Best immediate outcome
+
+Land this after one short consistency pass.
+
+The branch no longer looks scientifically broken at first pass. It now looks
+like a package that has:
+
+- mostly fixed the original issues
+- but not yet converged on one uniqueness claim
+- and not yet propagated one verification count
+
+### Best short edit
+
+I would do these two edits before resubmission:
+
+1. decide whether Theorem 7 is:
+   - unique as a set up to scale with residual `S_2` ambiguity
+   - or fully labeled unique up to scale
+2. make the runner, authority note, `PUBLICATION_MATRIX`, and package summaries
+   all tell the same story
+3. choose either `511` or `518` as the official current runner-stack total and
+   propagate it consistently
+
+## Bottom Line
+
+My current call:
+
+- **No** as currently written
+- **Close** after a short cleanup pass
+- remaining blockers:
+  - uniqueness story not converged
+  - verification totals not converged
