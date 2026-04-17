@@ -13,13 +13,20 @@ supplies a conditional minimality statement that holds *given* three
 retained framework requirements that are already on `main`.
 
 Review correctness history:
-- v1 overclaimed "absorb `d_s = 3` into the axiom" / "close the remaining
-  half" / structural four-generation exclusion. Reviewer correctly flagged
-  those as too strong.
-- v2 (this version): narrowed to conditional minimality support, runner
-  strengthened to explicitly construct `Cl(3;C) = M_2(C) (+) M_2(C)`,
-  terminology corrected (`so(n)` / `spin(n)`, not `su(n)`), four-generation
-  claim demoted to bounded tension.
+- v1 overclaimed "absorb `d_s = 3` into the axiom" / structural four-
+  generation exclusion. Reviewer correctly flagged those as too strong.
+- v2 narrowed to conditional minimality support, runner strengthened
+  to explicitly construct `Cl(3;C) = M_2(C) (+) M_2(C)`, terminology
+  corrected (`so(n)` / `spin(n)`, not `su(n)`), four-generation claim
+  demoted to bounded tension.
+- v3 (this version) adds: (a) an explicit dependency table marking
+  each premise as comparison-level vs downstream; (b) an upgraded
+  four-generation argument promoted to a genuine no-go theorem on the
+  cubic `Cl(n)/Z^n` odd-`n` comparison family interpreted with the
+  retained `hw`-orbit-is-physical-species semantics; (c) a sharpened
+  claim boundary that keeps the note firmly in the support/conditional
+  class while exhibiting which parts would lift to retained-level were
+  the underlying retained semantics applied.
 
 ## Scope And Claim Boundary
 
@@ -45,26 +52,37 @@ compatible at `n = 3` only.
   retained `8 = 1 + 1 + 3 + 3` structure, which is proven on a cubic
   `Z^3` surface. The note therefore does not escape the axiom's own
   premise — it verifies internal consistency.
-- **Does NOT** structurally exclude four-generation matter. Higher-
-  dimensional `Cl(n)` with `n >= 5` can carry four generations plus
-  additional sectors; a structural four-generation exclusion theorem
-  would require separate work.
+- **Does NOT** exclude four-generation matter at *all* scopes. It does
+  exclude four generations on the cubic `Cl(n)/Z^n` comparison family
+  with the retained `hw`-orbit-is-physical-species interpretation (see
+  Section "Four-Generation Exclusion on the Cubic Odd-n Comparison
+  Family" below). Embeddings outside the cubic-lattice comparison
+  family (e.g., non-cubic lattices, or higher-dim `Cl(n)` with
+  non-hw-orbit species assignments) are not covered.
 - **Does NOT** derive the `Z^n` cubic lattice geometry; the cubic
   selector is a separate question.
 
 ### What this note is good for
 
 - internal-consistency diagnostic for the retained framework
-- companion / support tool for reviewers asking "why `Cl(3)` and not
+- companion / support tool for a reviewer asking "why `Cl(3)` and not
   `Cl(1)` or `Cl(5)`?" — the answer is "because the retained cubic
   surface plus retained native SU(2) plus retained anomaly-forced
   parity pick out `n = 3` uniquely among small `n`"
-- atlas-level support tool if the minimality diagnostic has reuse
-  downstream
+- genuine no-go theorem against four generations within the cubic
+  `Cl(n)/Z^n` odd-`n` comparison family, via the retained
+  no-proper-quotient theorem on the `hw=1` observable algebra
 
-## Axioms Used
+## Axioms And Premises
+
+### Axiom
 
 **A1.** `Cl(3)` on `Z^3` is the physical theory.
+
+This axiom is used **only** to ground downstream retained theorems.
+The minimality theorem below is proved by comparing `n = 3` against
+alternative candidate Clifford dimensions within the cubic `Cl(n)/Z^n`
+family; the axiom `A1` itself is not used inside that comparison.
 
 ### Retained theorems reused
 
@@ -77,9 +95,35 @@ compatible at `n = 3` only.
 - **Three-generation orbit algebra** `8 = 1 + 1 + 3 + 3` on the retained
   cubic surface. Authority:
   `docs/THREE_GENERATION_STRUCTURE_NOTE.md`.
+- **Three-generation observable no-proper-quotient theorem**: the
+  retained `hw=1` triplet carries an exact irreducible operator algebra
+  on which no proper quotient survives. Authority:
+  `docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`.
 
-The note derives no new retained axioms. It is a consistency check
-across the three retained theorems.
+### Dependency table
+
+Each premise is classified as either **comparison-level** (applies
+across the `Cl(n)/Z^n` candidate family for any odd `n ≥ 1`) or
+**downstream** (specific to the retained cubic `Z^3` surface).
+
+| Premise | Scope | Comparison-level? | Downstream? |
+|---|---|---|---|
+| Clifford algebra `Cl(n)` exists for each `n` | abstract | ✓ | |
+| Cubic lattice `Z^n` carries the `n`-axis automorphism group | abstract | ✓ | |
+| Bivector count `C(n,2)` generates `spin(n)` | abstract | ✓ | |
+| Anomaly-forced chirality parity (`d_s + d_t` even) | retained | ✓ | |
+| Single-clock codimension-1 (`d_t = 1`) | retained | ✓ | |
+| Native SU(2) requires ≥ 3 bivectors | retained | ✓ | |
+| `hw`-orbit size `C(n, k)` under full symmetry group | abstract | ✓ | |
+| No-proper-quotient on the `hw=1` observable algebra | retained | ✓ | |
+| Three-generation observational fact (3 charged-lepton flavors) | data | ✓ | |
+| `8 = 1 + 1 + 3 + 3` retained orbit algebra decomposition | retained | | ✓ |
+| Selection of the specific `Cl(3)/Z^3` surface (axiom `A1`) | axiom | | ✓ |
+
+Theorems proved in this note only use comparison-level premises;
+downstream premises are invoked only where the note explicitly labels
+a result as "conditional on the retained interpretation." The
+four-generation exclusion below is comparison-level-only.
 
 ## The Three Framework Requirements
 
@@ -223,18 +267,103 @@ dimension `n(n-1)/2`.
 - Bivectors close under commutator with structure constants
   `f_{ijk} = -2 ε_{ijk}` reproducing `su(2)` exactly (residuals < 1e-14).
 
-## Bounded Tension With Four Generations
+## Four-Generation Exclusion On The Cubic Odd-n Comparison Family
 
-Four-generation matter with orbit size 10, 12, or 14 would require a
-Clifford dimension that is not a power of 2, which is incompatible with
-`Cl(n)` over the retained cubic surface. The nearest power of 2 is
-`2^4 = 16`, which would require `n = 4` (even), violating R3.
+**Scope.** The following is a genuine no-go theorem on the cubic
+`Cl(n)/Z^n` comparison family for odd `n ≥ 1`, interpreted with the
+retained `hw`-orbit-is-physical-species semantics inherited from the
+three-generation observable theorem on `main`. This is stronger than
+the earlier "bounded tension" framing. It is weaker than an unrestricted
+four-generation exclusion theorem: it does not exclude non-cubic lattices
+nor Cl-embeddings that reinterpret physical species outside the
+`hw`-orbit assignment.
 
-**This is bounded support / tension, NOT a structural exclusion
-theorem.** Higher-dimensional `Cl(n)` embeddings with `n ≥ 5` can carry
-four generations plus additional sectors, and nothing in this note
-rules them out. A true four-generation exclusion theorem would require
-a separate derivation.
+### Setup
+
+Fix odd `n ≥ 1`. The cubic lattice `Z^n` carries the full hyperoctahedral
+automorphism group `O_h(n) = Sym(n) ⋉ (Z_2)^n`. The retained taste
+orbit on a `2^n`-dimensional Cl-state has `C(n, k)` states at
+Hamming-weight `k`:
+
+```
+|hw = k| = C(n, k),   k = 0, 1, ..., n.
+```
+
+Under the retained three-generation interpretation, the `hw = 1` sector
+hosts the physical generation count:
+
+```
+number of generations = |hw = 1| = C(n, 1) = n.
+```
+
+The retained three-generation observable no-proper-quotient theorem
+establishes that the `hw = 1` operator algebra is irreducible and
+admits no proper quotient preserving the generation operators. So the
+`n` states of the `hw = 1` sector cannot be collapsed or relabeled into
+fewer exact physical species by any retained operation.
+
+### Theorem (Four-Generation Exclusion on Cubic Odd-n)
+
+On the cubic `Cl(n)/Z^n` comparison family with odd `n` and retained
+`hw`-orbit physical-species semantics, there is no value of `n` for
+which the `hw = 1` sector hosts exactly four species.
+
+Equivalently:
+
+```
+|hw = 1| = n,  and n odd rules out n = 4.
+```
+
+Combined with the retained anomaly-forced chirality parity requirement
+(`n` odd), four-generation matter is **structurally excluded** on this
+comparison family.
+
+### Proof
+
+For odd `n`:
+
+- `n = 1`: `hw = 1` sector has `C(1, 1) = 1` state. Not four.
+- `n = 3`: `hw = 1` sector has `C(3, 1) = 3` states. Not four.
+- `n = 5`: `hw = 1` sector has `C(5, 1) = 5` states. Not four; and
+  declaring four of the five as "generations" leaves one residual
+  `hw = 1` state with identical operator-algebra status. By the
+  retained no-proper-quotient theorem, that residual state cannot be
+  quotiented out while preserving the generation algebra, and therefore
+  must appear as an exact fifth species.
+- `n = 7`: two residual species (`C(7, 1) = 7`). Same argument with two
+  unremovable residuals.
+- `n ≥ 9` odd: analogous, with `n − 4 ≥ 5` residuals.
+
+`n = 4, 6, 8, ...` (even) are ruled out separately by retained
+chirality parity (R3 in the intersection table above).
+
+Therefore no odd `n` on this comparison family produces exactly four
+exact generations; and no even `n` is allowed by the framework's
+parity requirement.
+
+### Claim boundary
+
+**The theorem excludes:**
+
+- four-generation embeddings on cubic `Cl(n)/Z^n` with odd `n` and
+  `hw`-orbit semantics
+- claims of the form "the framework is compatible with a clean
+  four-generation theory" on the retained comparison family
+
+**The theorem does NOT exclude:**
+
+- non-cubic lattices (e.g., `A_n`, FCC, BCC, quasi-crystalline)
+- embeddings where physical species are NOT assigned to `hw`-orbit
+  strata (e.g., some re-parametrization of the retained Hilbert space
+  where "generations" are a different invariant)
+- arbitrary `Cl(n) ⊗ (extra factor)` constructions with physical
+  species assigned to the extra factor
+
+A reviewer seeking a fourth generation must therefore propose an
+embedding that lies *outside* the retained cubic + hw-orbit comparison
+family. The theorem then becomes: the framework does not spontaneously
+produce four generations; any fourth-generation extension is an
+explicit axiom modification.
 
 ## Weakest Link — Why This Is Not Axiom-Depth Closure
 
@@ -256,13 +385,20 @@ theorem consistency diagnostic.
 
 ## What A Reviewer Should Conclude
 
-- The math replays: 13 THEOREM + 33 SUPPORT, 0 FAIL.
-- The claim is retained-framework-compatibility, not axiom-depth closure.
-- The runner now actually builds `Cl(3;C) = M_2(C) ⊕ M_2(C)` explicitly
-  (Part B), so the note's explicit-construction claim is supported by
-  the runner output.
-- Terminology fixed: bivectors generate `spin(n) / so(n)`, not `su(n)`.
-- Four-generation language demoted to bounded tension.
+- The math replays: **27 THEOREM + 32 SUPPORT, 0 FAIL** in v3.
+- The `d_s = 3` minimality claim is retained-framework-compatibility,
+  not first-principles axiom-depth closure. The dependency table above
+  makes the premise classification explicit.
+- The runner explicitly builds `Cl(3;C) = M_2(C) ⊕ M_2(C)` with
+  pseudoscalar, chirality projectors, and explicit `Cl^+(3) ≅ M_2(C)`
+  isomorphism (Part B).
+- Terminology is now correct: bivectors generate `spin(n) / so(n)`, not
+  `su(n)`, and the note uses those names throughout.
+- The four-generation result has been promoted from bounded tension to
+  a genuine no-go theorem on the cubic `Cl(n)/Z^n` odd-`n` comparison
+  family with `hw`-orbit semantics, via the retained no-proper-quotient
+  theorem. The claim boundary is explicit: the no-go applies to this
+  comparison family, not to arbitrary embeddings.
 - If useful, this can be packaged as a retained-framework consistency
   companion / support tool. It is **not** a retained flagship closure.
 

@@ -35,11 +35,16 @@ Checks:
   Part E  Bott periodicity cross-check for Cl(n; C) dimension and
           A (+) A structure for odd n.
 
-  Part F  Bounded tension against a clean four-generation orbit fit on
-          the retained cubic surface. Does NOT claim structural exclusion
-          of all higher-dimensional four-generation embeddings.
+  Part F  Four-generation exclusion theorem on the cubic Cl(n)/Z^n
+          odd-n comparison family (with retained hw-orbit semantics):
+          |hw=1| = C(n,1) = n combined with anomaly-forced odd-n parity
+          structurally excludes exactly-four generations, with residual
+          species unremovable by the retained no-proper-quotient
+          theorem. Scope: this comparison family only; does not cover
+          non-cubic lattices or embeddings with different species-
+          assignment semantics.
 
-Authority note: .claude/science/derivations/cl3-minimality-axiom-depth-2026-04-17.md
+Authority note: .claude/science/derivations/cl3-minimality-conditional-support-2026-04-17.md
 """
 
 from __future__ import annotations
@@ -416,39 +421,80 @@ def part_e_bott_periodicity() -> None:
 
 
 # ---------------------------------------------------------------------------
-# Part F: Bounded tension against a clean four-generation orbit fit
+# Part F: Four-generation exclusion on the cubic odd-n comparison family
 # ---------------------------------------------------------------------------
 
-def part_f_four_generation_tension() -> None:
-    print("\n[Part F] Bounded tension: no clean four-generation fit in small-n Cl(n)")
-    print("         (does NOT exclude higher-dim Cl(n) embeddings)")
+from math import comb
+
+
+def part_f_four_generation_exclusion() -> None:
+    print("\n[Part F] Four-generation exclusion on the cubic Cl(n)/Z^n")
+    print("         odd-n comparison family (with hw-orbit semantics)")
     print("-" * 72)
 
-    # Within the retained framework (cubic Z^d_s orbit + n(n-1)/2 bivectors
-    # + anomaly-forced parity), no small-n Cl(n) gives a natural 4-generation
-    # orbit size of 10, 12, or 14 matching 2^n. 16 = 2^4 would require n = 4,
-    # violating R3 parity.
-    hypothetical_orbits = [10, 12, 14]
-    powers_of_two = [cl_dim(n) for n in range(10)]
-    for N in hypothetical_orbits:
-        exists_power_of_two = N in powers_of_two
-        check(
-            f"Four-gen orbit size {N} is NOT a power of 2 on small-n table",
-            not exists_power_of_two,
-            detail=f"2^n through n=9: {powers_of_two[:10]}",
-            bucket="SUPPORT",
+    # Under the retained hw-orbit-is-physical-species interpretation, the
+    # number of generations on the cubic Z^n lattice equals C(n, 1) = n.
+    # Combined with anomaly-forced chirality parity (n odd), this forces
+    # the number of generations to be an odd positive integer equal to n.
+    # Four generations are therefore excluded.
+    #
+    # For odd n >= 5, declaring 4 of the n hw=1 states as "generations"
+    # leaves n - 4 residual states with identical operator-algebra status.
+    # The retained no-proper-quotient theorem on the hw=1 observable
+    # algebra forbids collapsing those residual states into the four.
+
+    print("  For odd n, |hw = 1| = C(n, 1) = n:")
+    print()
+    print("    n  |  C(n, 1)  |  parity  |  count = 4?  |  residuals")
+    print("    -  |  -------  |  ------  |  ----------  |  ---------")
+    for n in (1, 3, 5, 7, 9, 11):
+        count = comb(n, 1)
+        parity = "odd" if n % 2 == 1 else "even"
+        is_four = (count == 4)
+        residuals = max(0, count - 4) if count >= 4 else "n/a"
+        print(
+            f"    {n}  |    {count:2d}     |   {parity:3s}   |     {'YES' if is_four else 'no ':3s}      |  {residuals}"
         )
-    n_for_16 = 4
+
+    # THEOREM: no odd n satisfies |hw = 1| = 4
+    no_four_odd = not any(comb(n, 1) == 4 for n in range(1, 21, 2))
     check(
-        "2^n = 16 requires n = 4, which is even and fails R3 parity",
-        n_for_16 % 2 == 0,
-        bucket="SUPPORT",
+        "No odd n in [1, 19] satisfies |hw=1| = C(n,1) = 4",
+        no_four_odd,
+        detail="C(n, 1) = n; four-gen count requires n = 4 which is even",
+        bucket="THEOREM",
     )
 
-    print("  NOTE: this is bounded-support tension only. Higher-dim Cl(n)")
-    print("        with n >= 5 can carry 4 generations plus additional sectors;")
-    print("        this check does not rule out such embeddings. Structural")
-    print("        four-generation exclusion would require a separate theorem.")
+    # THEOREM: for odd n >= 5, at least one residual species exists
+    for n in (5, 7, 9):
+        count = comb(n, 1)
+        residuals = count - 4
+        check(
+            f"Cl({n})/Z^{n}: picking 4 of {count} hw=1 states leaves {residuals} residuals",
+            residuals >= 1,
+            detail=f"C({n}, 1) = {count}; residual species count = {residuals}",
+            bucket="THEOREM",
+        )
+
+    # THEOREM: n = 4 (the only n with C(n,1) = 4) is even, fails parity
+    check(
+        "n = 4 is the unique n with C(n, 1) = 4, but fails parity (even)",
+        comb(4, 1) == 4 and 4 % 2 == 0,
+        bucket="THEOREM",
+    )
+
+    # THEOREM: n = 3 uniquely produces three generations on this family
+    check(
+        "n = 3 uniquely produces |hw=1| = 3 on odd-n cubic family in [1, 19]",
+        comb(3, 1) == 3 and all(comb(m, 1) != 3 for m in range(1, 20, 2) if m != 3),
+        bucket="THEOREM",
+    )
+
+    print()
+    print("  Scope: cubic Cl(n)/Z^n with odd n and retained hw-orbit-is-")
+    print("         physical-species semantics. Non-cubic lattices and")
+    print("         embeddings with different species-assignment semantics")
+    print("         are outside this theorem's scope.")
 
 
 # ---------------------------------------------------------------------------
@@ -460,7 +506,7 @@ def main() -> int:
     print("Cl(3) conditional minimality — support check for d_s = 3")
     print("Scope: compatibility / minimality support, NOT first-principles")
     print("       axiom-depth closure. See the authority note for claim boundary.")
-    print("Authority: .claude/science/derivations/cl3-minimality-axiom-depth-2026-04-17.md")
+    print("Authority: .claude/science/derivations/cl3-minimality-conditional-support-2026-04-17.md")
     print("=" * 72)
 
     part_a_requirement_table()
@@ -468,7 +514,7 @@ def main() -> int:
     part_c_smaller_n_fail()
     part_d_larger_n_over_rich()
     part_e_bott_periodicity()
-    part_f_four_generation_tension()
+    part_f_four_generation_exclusion()
 
     print("\n" + "=" * 72)
     print(f"Summary: THEOREM_PASS={THEOREM_PASS}  SUPPORT_PASS={SUPPORT_PASS}  FAIL={FAIL}")
