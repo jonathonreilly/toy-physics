@@ -11,10 +11,24 @@ My current disposition is:
 
 - **No** as retained G16 / `d_s = 3` closure
 - **Yes** as a support-note package, including the new native-gauge route, if
-  the retained-grade overclaim is downgraded
+  the retained-grade overclaim is downgraded and the branch is rebased onto
+  current `main`
 
 So the branch is **still not ready to land as retained closure**, but it now
 contains a cleaner and more useful support-level route than the previous round.
+
+## Branch Hygiene
+
+Before any resubmission, **rebase this branch onto the latest `origin/main`**.
+
+At the time of this pass:
+
+- merge-base with `origin/main`: `0e166f090a6bf56efaa2e0ad01c7f23fe142cd00`
+- branch is **15 behind / 17 ahead**
+
+So even if the science claims were acceptable, this branch is not landable
+as-is. It needs a clean replay on top of the current package surface before any
+merge discussion.
 
 ## Replay Status
 
@@ -27,9 +41,96 @@ contains a cleaner and more useful support-level route than the previous round.
 - `python3 -m py_compile scripts/frontier_native_gauge_scope.py` passes
 - `python3 scripts/frontier_native_gauge_scope.py` ends with
   `THEOREM_PASS=23 SUPPORT_PASS=22 FAIL=0`
+- `python3 -m py_compile scripts/frontier_tetragonal_stabilizer_mu_tau_invariance.py`
+  passes
+- `python3 scripts/frontier_tetragonal_stabilizer_mu_tau_invariance.py` ends
+  with `THEOREM_PASS=18 SUPPORT_PASS=8 FAIL=0`
 
 The issue is not syntax or arithmetic. The issue is still the retained status
 of the new premise being introduced.
+
+## Current Findings
+
+### 1. The scope theorem still upgrades an `n = 3` retained code fact into a new arbitrary-`n` framework principle
+
+The new scope note is a better decomposition than the previous branch, but it
+still does not close the retained-bar blocker.
+
+What the current retained authority on `main`
+`docs/NATIVE_GAUGE_CLOSURE_NOTE.md` actually establishes is:
+
+- on the cubic `Z^3` surface
+- `Cl(3)` in taste space
+- `Cl(3)` **contains** an `su(2)` subalgebra
+
+The new scope theorem then takes the literally correct `n = 3` code fact
+
+- the retained `S_k` are exactly the three `Cl(3)` bivectors up to
+  normalization
+
+and promotes it to the stronger comparison-family statement
+
+- for arbitrary `n`
+- the weak generators are all bivectors
+- with no selector
+- therefore the family Lie algebra is `spin(n)`
+
+That stronger family statement is still not a retained consequence of the
+present framework stack. It is a new comparison-family extension principle
+built from:
+
+- the retained `n = 3` construction fact
+- standard chiral-matrix / Clifford extension machinery
+
+That is why the branch is still below retained bar.
+
+### 2. The scope runner still certifies the consequences of the chosen arbitrary-`n` recipe, not that the retained authority forces it
+
+`scripts/frontier_native_gauge_scope.py` now does one genuinely valuable thing
+in Part A:
+
+- it proves that the retained `n = 3` `S_k` operators are exactly the three
+  `Cl(3)` bivectors up to normalization
+
+But after that, Parts B and C:
+
+- build `Cl(n)` for general `n` with the standard chiral-matrix recipe
+- enumerate all bivectors
+- define the native gauge recipe at family scope as “all bivectors”
+- then verify the downstream selector-free counting and Lie-algebra
+  consequences
+
+So the runner certifies:
+
+- `retained n=3 code fact` + `standard arbitrary-n extension recipe`
+  -> selector-free `spin(n)` family
+
+It does **not** certify:
+
+- `current retained native-gauge theorem itself`
+  -> selector-free `spin(n)` family
+
+That is still the unresolved retained-grade gap.
+
+### 3. The tightness note still overstates `d_s = 3` as retainedly derived because it treats the unresolved scope theorem as already retained
+
+The tightness note is cleaner than the earlier branch and the separation into:
+
+- scope theorem
+- tightness theorem
+
+is the right architecture.
+
+But it still says the blocker is solved and that `d_s = 3` is derived from a
+"newly-retained" native-gauge scope theorem. Since the companion scope theorem
+is not yet retained-grade, this downstream note is still support-level rather
+than retained closure.
+
+So the right status is still:
+
+- **No** as retained `d_s = 3` closure
+- **Yes** as a stronger support route, if the retained-grade language is
+  downgraded
 
 ## Main Blocker
 
@@ -155,7 +256,8 @@ Instead:
 3. state explicitly that the family-wide selector-free recipe is still a new
    comparison-family theorem, not yet retained framework authority
 
-That yields an honest and scientifically useful support package.
+That yields an honest and scientifically useful support package. Again: do this
+only after rebasing onto the current `main`.
 
 ### What would actually get this to retained
 
@@ -259,6 +361,15 @@ The current scope runner should be upgraded so that it does more than say:
 - define gauge generators as all bivectors
 - verify the consequences
 
+It should instead certify a theorem of the form:
+
+- any admissible comparison-family extension compatible with the retained
+  `n = 3` construction, automorphism covariance, closure, and no extra
+  selector structure must equal the full bivector sector
+
+That would make the runner evidence for a **forced** family theorem rather than
+for one chosen extension recipe.
+
 Instead it should certify the missing theorem-level content. For example:
 
 - verify exact reduction to the retained `n = 3` construction
@@ -298,6 +409,24 @@ dimension-counting corollary. The real missing science is:
   “weak gauge = full Clifford bivector sector” at arbitrary `n`
 - prove that no proper subset / selector-based extension is framework-admissible
 - make the runner certify that uniqueness statement directly
+
+## Bottom Line
+
+This branch is worth keeping alive, but not as retained closure yet.
+
+The right next move is:
+
+1. **rebase to the latest `main`**
+2. either:
+   - downgrade the scope + tightness pair to support-grade and land them as
+     support material, or
+   - do the additional family-scope uniqueness work above and come back for a
+     real retained pass
+
+Until then, the honest call remains:
+
+- **No** as retained G16 / `d_s = 3` closure
+- **Yes** as a stronger support-note package
 
 If that theorem is closed, the retained `d_s = 3` upgrade should follow
 quickly. Without it, the branch remains a strong support route rather than a
