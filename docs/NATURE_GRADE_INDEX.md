@@ -1,7 +1,7 @@
 # Nature-Grade Index
 
 **Branch:** `claude/main-derived`
-**Updated:** 2026-04-16 (Grind Program Batch 4)
+**Updated:** 2026-04-16 (Grind Program Batch 5)
 
 ## Airtight results on this branch
 
@@ -84,10 +84,30 @@
   2 distinct eigenvalues; SSB S_3 → Z_2 expands the allowed space
   from 2 to 5 real dimensions. 13/13 PASS.
 
+### Batch 5: post-SSB structure + hw-grading refinement
+
+- **Residual Z_2 Commutant on C^8**
+  (`RESIDUAL_Z2_COMMUTANT_NOTE.md`) — C^8 ≅ 6·1 ⊕ 2·sgn as Z_2 rep;
+  dim End(C^8)^{Z_2} = 40, doubling the S_3 case. Hw=1 restricted
+  commutant jumps from 2 to 5 dims, sufficient for 3 distinct
+  eigenvalues. 23/23 PASS.
+
+- **Hw-Graded Decomposition of End(C^8)^{S_3}**
+  (`S3_INVARIANT_HW_GRADED_DECOMPOSITION_NOTE.md`) — the 20-dim
+  S_3-invariant commutant splits as 6 (hw-preserving) + 14
+  (hw-changing). Refines Batch 3's hw-parity 10+10 split by full
+  hw grading. 21/21 PASS.
+
+- **Hw=1 ↔ Hw=2 S_3-Equivariant Iso via e_3**
+  (`HW1_HW2_S3_EQUIVARIANT_ISO_NOTE.md`) — the top elementary
+  symmetric polynomial e_3 = S_1 S_2 S_3 restricts to a unitary
+  S_3-equivariant bijection V_1 → V_2 taking X_i to X_{jk}. Shows
+  V_1 ≅ V_2 as S_3 reps (both A_1 ⊕ E). 29/29 PASS.
+
 ## Totals
 
 ```
-1052 total verification checks, 0 failures
+1125 total verification checks, 0 failures
 ```
 
 ## Reviewer workflow
@@ -116,6 +136,11 @@ python3 scripts/frontier_s3_hw_parity_block_decomposition.py
 python3 scripts/frontier_cube_shift_polynomial_algebra.py
 python3 scripts/frontier_s3_invariant_polynomial_subalgebra.py
 python3 scripts/frontier_s3_mass_matrix_no_go.py
+
+# Batch 5
+python3 scripts/frontier_residual_z2_commutant.py
+python3 scripts/frontier_s3_invariant_hw_graded_decomposition.py
+python3 scripts/frontier_hw1_hw2_s3_equivariant_iso.py
 ```
 
 Each exits 0 on success, nonzero on failure. Each prints a TOTAL

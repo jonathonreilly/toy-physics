@@ -135,6 +135,29 @@ hierarchy, gauge structure, confinement, etc.).
   Note: `S3_MASS_MATRIX_NO_GO_NOTE.md`
   Runner: `frontier_s3_mass_matrix_no_go.py` (13/13 PASS)
 
+### Batch 5: post-SSB structure + hw-grading refinement
+
+- **Residual Z_2 Commutant on C^8** — under the residual Z_2 =
+  ⟨(12)⟩ of S_3 (axis-selection subgroup), C^8 ≅ 6·1 ⊕ 2·sgn and
+  dim End(C^8)^{Z_2} = 40. SSB S_3 → Z_2 doubles the invariant-
+  operator dimension (20 → 40).
+  Note: `RESIDUAL_Z2_COMMUTANT_NOTE.md`
+  Runner: `frontier_residual_z2_commutant.py` (23/23 PASS)
+
+- **Hw-Graded Decomposition of End(C^8)^{S_3}** — the 20-dim
+  S_3-invariant commutant splits by Hamming-weight transitions as
+  6 (hw-preserving) + 14 (hw-changing). Refines Batch 3's hw-parity
+  10+10 split by full hw grading.
+  Note: `S3_INVARIANT_HW_GRADED_DECOMPOSITION_NOTE.md`
+  Runner: `frontier_s3_invariant_hw_graded_decomposition.py` (21/21 PASS)
+
+- **Hw=1 ↔ Hw=2 S_3-Equivariant Iso via e_3** (composition) — the
+  top elementary symmetric polynomial e_3 = S_1 S_2 S_3 restricts
+  to a unitary S_3-equivariant isomorphism V_1 → V_2 with explicit
+  action X_i ↦ X_{jk}. Demonstrates V_1 ≅ V_2 as S_3 reps.
+  Note: `HW1_HW2_S3_EQUIVARIANT_ISO_NOTE.md`
+  Runner: `frontier_hw1_hw2_s3_equivariant_iso.py` (29/29 PASS)
+
 ## Reusability claim
 
 These theorems are cited in any downstream derivation involving:
