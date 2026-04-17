@@ -1,8 +1,8 @@
 # Gauge-Vacuum Plaquette Scalar-Bridge Support
 
 **Date:** 2026-04-16
-**Status:** exact local/source/class-level support stack plus exact constant-lift obstruction, exact distinct-shell theorem, exact first nonlinear full-vacuum coefficient, exact implicit reduction-law existence/uniqueness theorem, exact nonperturbative susceptibility-flow theorem, exact connected-hierarchy theorem, exact infinite-hierarchy obstruction, exact equivalent spectral generating object, exact framework-point underdetermination theorem, and exact transfer-operator / character-recurrence realization; explicit transfer-state identification at `beta = 6` still remains open
-**Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`, `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py`, `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_framework_point_underdetermination.py`, `scripts/frontier_gauge_vacuum_plaquette_transfer_operator_character_recurrence.py`
+**Status:** exact local/source/class-level support stack plus exact constant-lift obstruction, exact distinct-shell theorem, exact first nonlinear full-vacuum coefficient, exact implicit reduction-law existence/uniqueness theorem, exact nonperturbative susceptibility-flow theorem, exact connected-hierarchy theorem, exact infinite-hierarchy obstruction, exact equivalent spectral generating object, exact framework-point underdetermination theorem, exact transfer-operator / character-recurrence realization, and exact Perron-state reduction theorem; explicit Perron / Jacobi data at `beta = 6` still remains open
+**Scripts:** `scripts/frontier_gauge_vacuum_plaquette_bridge_support.py`, `scripts/frontier_scalar_3plus1_temporal_ratio.py`, `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_distinct_shell_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_mixed_cumulant_audit.py`, `scripts/frontier_gauge_vacuum_plaquette_reduction_existence_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py`, `scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py`, `scripts/frontier_gauge_vacuum_plaquette_framework_point_underdetermination.py`, `scripts/frontier_gauge_vacuum_plaquette_transfer_operator_character_recurrence.py`, `scripts/frontier_gauge_vacuum_plaquette_perron_reduction_theorem.py`
 
 ## Question
 
@@ -265,22 +265,25 @@ generating object more explicit than that abstract measure statement:
   graph through one self-adjoint six-neighbor character recurrence operator.
 
 So the remaining gap is now no longer abstract generating-object existence and
-no longer operator-level realization. It is:
+no longer operator-level realization. The new exact Perron-state reduction
+theorem sharpens it one step further:
 
-- explicit transfer-state / Perron data at `beta = 6`,
-- equivalently the exact `beta = 6` state on that now-explicit recurrence
-  operator.
+- for every finite Wilson `3+1` source surface with `beta > 0`, the one-clock
+  transfer operator has one unique strictly positive Perron state;
+- the large-derived-time plaquette state is exactly the spectral measure of the
+  explicit source operator `J` in that Perron vector;
+- the remaining framework-point object is therefore explicit Perron / Jacobi
+  data at `beta = 6`, not a generic thermal trace state.
 
 ## Remaining gap
 
 The remaining theorem-grade gap is now narrower:
 
-> explicitly identify the exact compact plaquette spectral measure
-> (or equivalently its Laplace transform / nonpolynomial connected hierarchy)
-> and therefore the explicit nonperturbative form of the now-proved implicit
-> reduction law
-> `P(beta) = P_1plaq(beta_eff(beta))`
-> at the framework point `beta = 6`,
+> explicitly identify the exact Perron / Jacobi data of the explicit
+> plaquette source operator `J` at the framework point `beta = 6`,
+> equivalently the exact `beta = 6` Perron-state spectral measure and therefore
+> the explicit nonperturbative form of the now-proved implicit reduction law
+> `P(beta) = P_1plaq(beta_eff(beta))`,
 > beyond its now-closed onset
 > `beta_eff(beta) = beta + beta^5 / 26244 + O(beta^6)`.
 
@@ -303,7 +306,7 @@ Current clean read:
 - exact connected-hierarchy law: closed
 - exact finite-order hierarchy-truncation obstruction: closed
 - exact equivalent spectral generating object: closed
-- explicit spectral identification / physical-vacuum reduction at `beta = 6`: still open
+- explicit Perron / Jacobi data at `beta = 6`: still open
 - canonical plaquette on the live package: still `0.5934`
 
 So there is **not** yet a basis for repo-wide numeric migration or for removing
@@ -324,6 +327,7 @@ python3 scripts/frontier_gauge_vacuum_plaquette_susceptibility_flow_theorem.py
 python3 scripts/frontier_gauge_vacuum_plaquette_connected_hierarchy_theorem.py
 python3 scripts/frontier_gauge_vacuum_plaquette_infinite_hierarchy_obstruction.py
 python3 scripts/frontier_gauge_vacuum_plaquette_spectral_measure_theorem.py
+python3 scripts/frontier_gauge_vacuum_plaquette_perron_reduction_theorem.py
 ```
 
 Expected summary:
@@ -338,4 +342,5 @@ Expected summary:
 - susceptibility-flow runner: `THEOREM PASS=5 SUPPORT=3 FAIL=0`
 - connected-hierarchy runner: `THEOREM PASS=4 SUPPORT=4 FAIL=0`
 - infinite-hierarchy obstruction runner: `THEOREM PASS=4 SUPPORT=3 FAIL=0`
+- Perron-state reduction runner: `THEOREM PASS=5 SUPPORT=3 FAIL=0`
 - spectral-measure runner: `THEOREM PASS=6 SUPPORT=2 FAIL=0`
