@@ -1,6 +1,6 @@
 # S_3 Mass-Matrix No-Go on the Hw=1 Triplet
 
-**Status:** airtight (Grind Program, Batch 4)
+**Status:** airtight
 **Runner:** `scripts/frontier_s3_mass_matrix_no_go.py` (13/13 PASS)
 
 ## Classical results applied
@@ -18,14 +18,14 @@
 
 - Identification of the hw=1 triplet V = span(X_1, X_2, X_3) of the
   taste cube with the S_3 standard permutation-rep carrier A_1 ⊕ E
-  (via the Batch 2 S_3 Axis-Permutation Decomposition).
+  (via the `S3_TASTE_CUBE_DECOMPOSITION_NOTE.md` S_3 Axis-Permutation Decomposition).
 
 ## Framework object
 
 Let V ⊂ C^8 be the hw=1 subspace (the three states with exactly one
 axis excited; equivalently the standard 3-dim permutation carrier
 spanned by {X_1, X_2, X_3}). By the S_3 Axis-Permutation Decomposition
-(Batch 2),
+(`S3_TASTE_CUBE_DECOMPOSITION_NOTE.md`),
 
     V  ≅  A_1 ⊕ E
 

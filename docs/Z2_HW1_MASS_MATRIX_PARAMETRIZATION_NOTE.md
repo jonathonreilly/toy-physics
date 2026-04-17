@@ -1,12 +1,12 @@
 # Z_2-Invariant Hw=1 Mass-Matrix Parametrization
 
-**Status:** airtight (Grind Program, Batch 6)
+**Status:** airtight
 **Runner:** `scripts/frontier_z2_hw1_mass_matrix_parametrization.py` (10/10 PASS)
 
 ## Classical results applied
 
 - **Schur's lemma** (Schur 1905), applied to the Z_2 decomposition
-  V_1 ≅ 2·1 ⊕ sgn of the Batch 5 Residual Z_2 Commutant theorem.
+  V_1 ≅ 2·1 ⊕ sgn: dim End(V_1)^{Z_2} = 2² + 1² = 5.
 - **Hermitian matrix spectral theorem** (standard linear algebra).
 - **Secular equation for 2×2 Hermitian blocks** (the quadratic
   formula applied to the characteristic polynomial of a Hermitian
@@ -27,9 +27,9 @@ that arises from the V_sel axis-selection SSB pattern.
 
 The 5-dimensional real space of Z_2-invariant Hermitian operators
 on V_1 = span(X_1, X_2, X_3) with Z_2 = ⟨(12)⟩ swapping axes 1 and 2
-and fixing axis 3. Batch 5 Residual Z_2 Commutant establishes that
-this subspace is 5-dimensional; this theorem gives the explicit
-parametrization and closed-form spectrum.
+and fixing axis 3. Schur's lemma applied to V_1 ≅ 2·1 ⊕ sgn fixes
+the dim at 5; this theorem gives the explicit parametrization and
+closed-form spectrum.
 
 ## Theorem
 
@@ -67,7 +67,8 @@ parametrization and closed-form spectrum.
 5. The S_3-invariant limit is the 2-parameter sublocus d = 0 and
    a = b + c; in that limit the spectrum collapses to
    {b − c, b + c, b + c}, exhibiting at most 2 distinct eigenvalues
-   (consistent with the Batch 4 S_3 Mass-Matrix No-Go).
+   (consistent with the S_3 Mass-Matrix No-Go,
+   `S3_MASS_MATRIX_NO_GO_NOTE.md`).
 
 ## Proof sketch
 
@@ -96,18 +97,17 @@ block form matches the prediction for 10 samples, (e) verifies the
 samples, (f) samples 500 random parameter tuples and finds > 99%
 give 3 distinct eigenvalues, (g) explicitly constructs the
 S_3-invariant limit (d = 0, a = b + c) and confirms exactly 2
-distinct eigenvalues, consistent with Batch 4 no-go.
+distinct eigenvalues, consistent with the S_3 Mass-Matrix No-Go.
 
 ## Reusability
 
 - Closed-form parametrization for any framework construction that
   requires a Z_2-invariant Hermitian mass matrix on the hw=1
   generation triplet with prescribed spectrum.
-- Completes the post-SSB chain:
-  Batch 4 S_3 Mass-Matrix No-Go (SSB is necessary for 3 distinct
-  masses) → Batch 5 Residual Z_2 Commutant (dim 2 → 5 relief) →
-  this theorem (explicit 5-parameter family, separated sign
-  eigenvalue b − c, trivial-block secular equation for the other
-  two eigenvalues).
+- Completes the post-SSB chain: S_3 Mass-Matrix No-Go (SSB is
+  necessary for 3 distinct masses) → Schur on V_1 ≅ 2·1 ⊕ sgn
+  (dim 2 → 5 relief under S_3 → Z_2) → this theorem (explicit
+  5-parameter family, separated sign eigenvalue b − c, trivial-
+  block secular equation for the other two eigenvalues).
 - Sets the stage for further sublocus analysis (NNI texture,
   Fritzsch zeros, etc.) within the 5-parameter family.
