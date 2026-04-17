@@ -110,14 +110,11 @@ refreshed `main`-derived DM branch.
 
 ## What this does not close
 
-This note does **not** by itself claim final `eta` closure.
+This note does **not** yet rewrite the full leptogenesis benchmark in terms of
+these sharp source amplitudes. The existing benchmark runner still uses the
+older reduced kernel.
 
-Its role is narrower and exact: it fixes the sharp-branch source amplitudes
-that feed the downstream kernel. The benchmark rewrite is now carried by
-`DM_LEPTOGENESIS_EXACT_KERNEL_CLOSURE_NOTE_2026-04-15.md`.
-
-So this remains the canonical source-amplitude theorem, while the exact-kernel
-note is the downstream benchmark authority.
+So this is a source-amplitude theorem, not yet the final `eta` closure note.
 
 ## Command
 
