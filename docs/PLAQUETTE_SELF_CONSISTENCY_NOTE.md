@@ -4,6 +4,20 @@
 **Status:** retained evaluation theorem (no free parameter), with exact bridge-support stack
 **Script:** `scripts/frontier_plaquette_self_consistency.py`
 
+## Framework-point context
+
+On the current accepted package surface, the Wilson gauge evaluation is not
+treated as a scan variable. The graph-first gauge sector fixes `N_c = 3`, the
+accepted canonical normalization/evaluation surface fixes `g_bare^2 = 1`, and
+the retained Wilson gauge action therefore sits at
+
+`beta = 2 N_c / g_bare^2 = 6`.
+
+So `beta = 6` is the package's fixed gauge evaluation point, and the plaquette
+readout below is the same-surface observable attached to that point. This note
+remains the authority for the plaquette evaluation itself; the repo does not
+need a separate standalone "beta = 6 lane" theorem surface for that fact.
+
 ## Claim
 
 The plaquette expectation
@@ -106,18 +120,24 @@ The live repo now also carries a materially stronger exact support stack:
   generating object on the accepted `3+1` source surface
 - exact Perron-state reduction theorem on the explicit transfer operator
 - exact source-sector matrix-element factorization theorem at `beta = 6`
+  with a structural theorem note and a generic positive-diagonal witness
+  runner rather than an explicit Wilson `D_6` evaluation
 - exact local/environment factorization theorem isolating the exact local
   Wilson marked-link factor on the source sector
 - exact spatial-environment character-measure theorem identifying the
   residual operator as the boundary character measure of the unmarked spatial
   Wilson environment
-- exact spatial-environment transfer theorem identifying that boundary class
-  function as a boundary-amplitude sequence of one explicit positive spatial
-  transfer operator
+- exact spatial-environment structural transfer theorem identifying that
+  boundary class function as a boundary-amplitude sequence of one explicit
+  positive spatial transfer operator
+- exact spatial-environment tensor-transfer theorem identifying the remaining
+  boundary amplitudes as explicit Wilson-coefficient / `SU(3)`-intertwiner
+  tensor-transfer data, with the runner only a truncated support packet rather
+  than a full `beta = 6` Perron solve
 - exact Perron/Jacobi underdetermination theorem showing that even the
   sharpened factorized operator class still does not force unique `beta = 6`
   Perron moments or Jacobi coefficients until the explicit
-  `beta = 6` spatial-transfer matrix elements generating the boundary
+  `beta = 6` tensor-transfer matrix elements generating the boundary
   character data are fixed
 - exact scalar `3+1` bridge endpoint ratio
   `A_inf / A_2 = 2 / sqrt(3)`
@@ -153,6 +173,7 @@ Current authorities for that support stack:
 - [GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md)
 - [GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md)
 - [GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_THEOREM_NOTE.md)
+- [GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TENSOR_TRANSFER_THEOREM_NOTE.md)
 - [GAUGE_VACUUM_PLAQUETTE_PERRON_JACOBI_UNDERDETERMINATION_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_PERRON_JACOBI_UNDERDETERMINATION_NOTE.md)
 - [GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md](./GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md)
 - [GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md)

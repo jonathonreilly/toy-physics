@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
-Exact spatial-environment transfer witness for the plaquette route on the
-accepted Wilson 3+1 surface.
+Finite class-sector witness for the spatial-environment transfer theorem on the
+plaquette route on the accepted Wilson 3+1 surface.
 
-This does not close analytic P(6). It sharpens the remaining object:
-the boundary character data of the unmarked spatial Wilson environment are
-exact matrix elements of one explicit positive spatial transfer operator,
-not an arbitrary positive sequence.
+This does not close analytic P(6), and it is not the fully explicit beta=6
+environment solve. It only witnesses the structural theorem that the boundary
+character data of the unmarked spatial Wilson environment arise from one
+positive spatial transfer law rather than an arbitrary positive sequence.
 """
 
 from __future__ import annotations

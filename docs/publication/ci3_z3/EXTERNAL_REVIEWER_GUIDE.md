@@ -69,19 +69,25 @@ all-continuum claim.
 
 ## Quantitative Component Stack
 
+Treat the quantitative package as a fixed-surface cascade, not a scan over
+bare gauge couplings. On the accepted package surface, graph-first `SU(3)`
+plus canonical `g_bare^2 = 1` put the Wilson gauge evaluation at
+`beta = 6`, and the plaquette / `u_0` / hierarchy chain is read at that one
+same-surface point. That is a package-framing fact, not a new standalone lane.
+
 Review this as a modular component stack:
 
 1. `alpha_s`: [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md)
 2. color-factor support: [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md)
 3. EW normalization: [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md)
 4. Yukawa / top authority: [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](../../YT_ZERO_IMPORT_AUTHORITY_NOTE.md)
-5. Yukawa / top boundary + correction + budget:
-   [YT_SQRT6_BOUNDARY_STATUS_NOTE.md](../../YT_SQRT6_BOUNDARY_STATUS_NOTE.md),
+5. Yukawa / top Ward theorem + correction + budget:
+   [YT_WARD_IDENTITY_DERIVATION_THEOREM.md](../../YT_WARD_IDENTITY_DERIVATION_THEOREM.md),
    [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md),
-   [YT_TRANSPORT_BUDGET_NOTE.md](../../YT_TRANSPORT_BUDGET_NOTE.md)
+   [YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md](../../YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md)
 6. Higgs / vacuum:
-   [HIGGS_VACUUM_BOUNDED_STATUS_NOTE.md](../../HIGGS_VACUUM_BOUNDED_STATUS_NOTE.md),
-   [HIGGS_MASS_BOUNDARY_NOTE.md](../../HIGGS_MASS_BOUNDARY_NOTE.md)
+   [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](../../HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md),
+   [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md)
 7. CKM closure and carrier-side support:
    [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md),
    [KR_A1_VANISHING_SUPPORT_NOTE.md](../../KR_A1_VANISHING_SUPPORT_NOTE.md)
@@ -108,12 +114,16 @@ Current status from that stack:
   where `alpha_s(v)` comes from the same-surface plaquette chain,
   `g_1(v), g_2(v)` use derived `R_conn = 8/9` support, and the `M_Z`
   rows use the retained running bridge
-- bounded `y_t(v) = 0.9176`, conditional on the accepted lattice-scale
-  `y_t / g_s = 1/sqrt(6)` boundary
-- bounded canonical `m_t(pole) = 173.10 GeV` (3-loop),
+- retained exact lattice-scale Ward theorem:
+  `y_t(M_Pl) / g_s(M_Pl) = 1 / sqrt(6)`
+- derived-with-explicit-systematic `y_t(v) = 0.9176`
+- derived-with-explicit-systematic canonical `m_t(pole) = 173.10 GeV` (3-loop),
   with retained `172.57 GeV` (2-loop) support
   and explicit downstream transport budget `1.2147511%` conservative
   (`0.75500635%` support-tight)
+- derived-with-inherited-explicit-systematic Higgs / vacuum package:
+  `m_H = 125.1 GeV` (framework-side 3-loop route), with retained
+  `119.8 GeV` (2-loop support route)
 - promoted CKM atlas/axiom closure package
   (no quark-mass or fitted CKM inputs; canonical CMT `alpha_s(v)` input):
   `|V_us| = 0.22727`,

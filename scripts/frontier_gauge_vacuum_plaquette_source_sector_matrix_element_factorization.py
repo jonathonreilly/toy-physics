@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """
-Exact source-sector matrix-element factorization witness for the plaquette
-transfer route on the accepted Wilson 3+1 surface.
+Exact source-sector matrix-element factorization support packet for the
+plaquette transfer route on the accepted Wilson 3+1 surface.
 
-This does not close analytic P(6). It closes the factorized source-sector
-matrix-element law:
+This does not close analytic P(6), and it does not evaluate the Wilson
+residual diagonal D_6. It audits the exact factorized source-sector matrix
+law with one generic positive conjugation-symmetric diagonal witness
+operator:
 
     T_src(6) = exp(3 J) D_6 exp(3 J)
 
@@ -166,14 +168,15 @@ def main() -> int:
     print("GAUGE-VACUUM PLAQUETTE SOURCE-SECTOR MATRIX-ELEMENT FACTORIZATION")
     print("=" * 78)
     print()
-    print("Explicit source-sector ingredients at beta = 6")
+    print("Exact source-sector structural ingredients at beta = 6")
     print(f"  dominant-weight box size              = {(NMAX + 1)} x {(NMAX + 1)} = {len(weights)} states")
     print(f"  half-slice multiplier parameter       = beta/2 = {BETA/2.0:.1f}")
+    print(f"  audited truncation                    = NMAX = {NMAX}")
     print(f"  half-multiplier symmetry error        = {half_sym_err:.3e}")
     print(f"  half-multiplier swap error            = {half_swap_err:.3e}")
     print(f"  half-multiplier eigenvalue range      = [{half_vals.min():.12f}, {half_vals.max():.12f}]")
     print()
-    print("Witness diagonal mixed-kernel coefficient sequence")
+    print("Generic positive diagonal witness sequence")
     print(f"  min/max kappa_(p,q)(6)                = {kappa.min():.12f}, {kappa.max():.12f}")
     print(f"  diagonal swap error                   = {d_sym_err:.3e}")
     print()
@@ -201,12 +204,12 @@ def main() -> int:
         detail=f"eigenvalue range=[{half_vals.min():.6f}, {half_vals.max():.6f}]",
     )
     check(
-        "a conjugation-symmetric positive diagonal mixed-kernel coefficient operator yields a factorized source-sector transfer operator",
+        "given a conjugation-symmetric positive diagonal coefficient witness, the exact source-sector law yields a factorized transfer operator",
         d_sym_err < 1.0e-12 and transfer_sym_err < 1.0e-12 and transfer_swap_err < 1.0e-12,
         detail=f"D swap={d_sym_err:.3e}, T symmetry={transfer_sym_err:.3e}, T swap={transfer_swap_err:.3e}",
     )
     check(
-        "the source-sector matrix elements are explicitly T_(lambda,mu)=sum_nu M_(lambda,nu) kappa_nu M_(nu,mu)",
+        "for that audited diagonal witness, the source-sector matrix elements obey T_(lambda,mu)=sum_nu M_(lambda,nu) kappa_nu M_(nu,mu)",
         formula_err < 1.0e-12,
         detail=f"max matrix-formula error = {formula_err:.3e}",
     )
@@ -224,7 +227,7 @@ def main() -> int:
         bucket="SUPPORT",
     )
     check(
-        "once the diagonal coefficient sequence is fixed, the remaining framework-point data are just Perron moments / Jacobi coefficients of J",
+        "once a diagonal coefficient sequence is fixed, the remaining framework-point data are just Perron moments / Jacobi coefficients of J",
         len(alpha) >= 4 and len(beta) >= 3 and perron_expectation > 0.0,
         detail=f"Jacobi depth = {len(alpha)}, Perron <J> = {perron_expectation:.6f}",
         bucket="SUPPORT",

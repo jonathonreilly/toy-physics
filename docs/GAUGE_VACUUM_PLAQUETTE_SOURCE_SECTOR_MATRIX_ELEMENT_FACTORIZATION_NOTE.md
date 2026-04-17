@@ -1,13 +1,14 @@
 # Gauge-Vacuum Plaquette Source-Sector Matrix-Element Factorization Theorem
 
 **Date:** 2026-04-17
-**Status:** exact source-sector factorization theorem on the finite Wilson `3 spatial + 1 derived-time` source surface; the exact residual diagonal source-sector operator at `beta = 6` is explicit at the factorized level, and the mixed-kernel part is now known to localize to the exact marked-link factor after trivial-channel normalization
+**Status:** exact source-sector factorization theorem on the finite Wilson `3 spatial + 1 derived-time` source surface; the exact factorized operator class at `beta = 6` is explicit, and the mixed-kernel part is now known to localize to the exact marked-link factor after trivial-channel normalization; the linked script is a generic positive-diagonal witness, not an explicit Wilson `D_6` evaluation
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_source_sector_matrix_element_factorization.py`
 
 ## Question
 
 Can the previously open `beta = 6` source-sector transfer generator / matrix
-elements be written explicitly on the accepted Wilson `3+1` source surface?
+elements be written in an exact factorized form on the accepted Wilson `3+1`
+source surface?
 
 ## Answer
 
@@ -33,12 +34,12 @@ where:
   stripped, in the `SU(3)` character basis:
   `D_6 chi_(p,q) = kappa_(p,q)(6) chi_(p,q)`.
 
-So the source-sector matrix elements are now explicit:
+So the factorized source-sector matrix law is now explicit:
 
 `(T_src(6))_(lambda,mu)
  = sum_nu (exp(3 J))_(lambda,nu) kappa_nu(6) (exp(3 J))_(nu,mu)`.
 
-This closes the previously open “explicit source-sector matrix element” step.
+This closes the previously open exact factorized source-sector matrix-law step.
 
 What remains open is narrower:
 
@@ -124,7 +125,8 @@ and in the dominant-weight character basis,
 `(T_src(6))_(lambda,mu)
  = sum_nu (exp(3 J))_(lambda,nu) kappa_nu(6) (exp(3 J))_(nu,mu)`.
 
-So the exact source-sector transfer matrix elements are now explicit.
+So the exact source-sector transfer matrix elements are explicit once the
+diagonal coefficient sequence `kappa_(p,q)(6)` is fixed.
 
 ## Corollary 2: exact remaining constructive datum
 
@@ -166,6 +168,22 @@ That is the sharply reduced constructive target.
 - explicit `beta = 6` Perron moments or Jacobi coefficients
 - analytic closure of canonical `P(6)`
 - repo-wide repinning of the canonical plaquette
+
+## Script boundary
+
+The theorem above is structural and exact. The linked runner is only a finite
+algebraic witness:
+
+- it audits a truncated dominant-weight box with `NMAX = 5`,
+- it uses the exact source recurrence `J` and the exact half-slice factor
+  `exp(3 J)`,
+- but it does **not** compute the Wilson residual diagonal `D_6`,
+- instead it injects one explicit generic positive conjugation-symmetric
+  diagonal witness sequence `kappa_(p,q)`,
+- and then verifies the factorized matrix law for that witness operator.
+
+So the script supports the exact factorization theorem, but it is not itself a
+numerical evaluation of the Wilson `beta = 6` source-sector diagonal data.
 
 ## Commands run
 
