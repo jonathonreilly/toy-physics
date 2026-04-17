@@ -1,56 +1,65 @@
-# Derivation: Cl(3) Minimality — Absorbing `d_s = 3` into the Axiom
+# Derivation: Cl(3) Conditional Minimality — Support for `d_s = 3`
 
 ## Date
 
-2026-04-17
+2026-04-17 (narrowed 2026-04-17 after first review)
 
 ## Status
 
-PROPOSED — derivation + verification runner. Attacks the axiom-depth gap
-(G16 on the TOE frontier gap list): "why `Cl(3)` specifically, and not
-`Cl(n)` for some other `n`?" Orthogonal to the live G1/G5/plaquette work
-on the other active branches.
+PROPOSED — conditional compatibility / minimality **support** note.
 
-## Target Behavior
+**This note does not close the axiom-depth question** for `d_s = 3`. It
+supplies a conditional minimality statement that holds *given* three
+retained framework requirements that are already on `main`.
 
-The retained framework takes `Cl(3)` on `Z^3` as the single axiom. A
-skeptical reviewer will legitimately ask:
+Review correctness history:
+- v1 overclaimed "absorb `d_s = 3` into the axiom" / "close the remaining
+  half" / structural four-generation exclusion. Reviewer correctly flagged
+  those as too strong.
+- v2 (this version): narrowed to conditional minimality support, runner
+  strengthened to explicitly construct `Cl(3;C) = M_2(C) (+) M_2(C)`,
+  terminology corrected (`so(n)` / `spin(n)`, not `su(n)`), four-generation
+  claim demoted to bounded tension.
 
-> Why `Cl(3)`? Why not `Cl(1)`, `Cl(5)`, or `Cl(7)`? Is `d_s = 3`
-> derived from something deeper, or simply assumed?
+## Scope And Claim Boundary
 
-The anomaly-forced `3+1` theorem on `main` derives `d_t = 1` **given**
-`d_s = 3`. It does not derive `d_s = 3` itself. This note closes the
-remaining half.
+### What this note claims
 
-**Claim.** `d_s = 3` is uniquely distinguished by the conjunction of
-three retained framework requirements:
+> Given the retained native SU(2) bivector requirement, the retained
+> cubic three-generation 8-state orbit algebra (`8 = 1 + 1 + 3 + 3`), and
+> the retained anomaly-forced chirality parity requirement
+> (`d_s + d_t` even with `d_t = 1`), the unique compatible Clifford
+> dimension is `n = d_s = 3`.
 
-1. **Bivector count**: `Cl(d_s)` must contain at least three independent
-   bivectors to support the native `SU(2)` closure theorem on `main`.
-   The number of bivectors in `Cl(n)` is `C(n, 2) = n(n-1)/2`, so the
-   minimal odd `n` with ≥ 3 bivectors is `n = 3`.
+This is a **conditional minimality support theorem**. It demonstrates
+that the retained framework's three structural requirements are jointly
+compatible at `n = 3` only.
 
-2. **Dimensional matching**: `Cl(d_s)` dimension `2^{d_s}` must accommodate
-   the retained three-generation orbit algebra `8 = 1 + 1 + 3 + 3`. The
-   minimal `n` with `2^n = 8` is `n = 3`.
+### What this note does NOT claim
 
-3. **Parity compatibility with anomaly-forced chirality**: the existing
-   anomaly-forces-time theorem requires an even total Clifford dimension
-   `d_s + d_t = 4`. Combined with the single-clock codimension-1
-   theorem forcing `d_t = 1`, this requires `d_s` odd. Rules out
-   `d_s ∈ {0, 2, 4, 6, ...}`.
+- **Does NOT** close the axiom-depth gap (G16) for `d_s = 3`.
+- **Does NOT** absorb `d_s = 3` into the axiom from first principles.
+- **Does NOT** derive `d_s = 3` independently of the retained cubic
+  orbit surface. The `2^n = 8` requirement itself conditions on the
+  retained `8 = 1 + 1 + 3 + 3` structure, which is proven on a cubic
+  `Z^3` surface. The note therefore does not escape the axiom's own
+  premise — it verifies internal consistency.
+- **Does NOT** structurally exclude four-generation matter. Higher-
+  dimensional `Cl(n)` with `n >= 5` can carry four generations plus
+  additional sectors; a structural four-generation exclusion theorem
+  would require separate work.
+- **Does NOT** derive the `Z^n` cubic lattice geometry; the cubic
+  selector is a separate question.
 
-The three constraints intersect at the unique minimum `d_s = 3`.
-Larger odd `d_s ∈ {5, 7, 9, ...}` carry more structure than the framework
-uses and would produce extra bivectors and extra orbit states whose
-physical absence would be unexplained.
+### What this note is good for
 
-**Consequence for the TOE framing**: `d_s = 3` is absorbed into the axiom
-as **the unique minimal spatial dimension compatible with the framework's
-gauge + generation requirements**. The single-axiom status is preserved
-and the "why three dimensions of space" question reduces to "why is the
-framework minimal?" — the standard Occam principle.
+- internal-consistency diagnostic for the retained framework
+- companion / support tool for reviewers asking "why `Cl(3)` and not
+  `Cl(1)` or `Cl(5)`?" — the answer is "because the retained cubic
+  surface plus retained native SU(2) plus retained anomaly-forced
+  parity pick out `n = 3` uniquely among small `n`"
+- atlas-level support tool if the minimality diagnostic has reuse
+  downstream
 
 ## Axioms Used
 
@@ -58,311 +67,215 @@ framework minimal?" — the standard Occam principle.
 
 ### Retained theorems reused
 
-- **native SU(2) closure**: three independent bivectors in `Cl(d_s)` close
-  into the weak algebra on `Z^{d_s}`. Authority:
+- **Native SU(2) closure**: three independent bivectors in `Cl(d_s)`
+  close into the weak algebra on `Z^{d_s}`. Authority:
   `docs/NATIVE_GAUGE_CLOSURE_NOTE.md`.
-- **anomaly-forced 3+1 closure**: chirality + single-clock codimension-1
-  evolution force `d_s + d_t` even and `d_t = 1`. Authority:
+- **Anomaly-forced `3+1` closure**: chirality requires `d_s + d_t` even
+  and the single-clock codimension-1 theorem forces `d_t = 1`. Authority:
   `docs/ANOMALY_FORCES_TIME_THEOREM.md`.
-- **three-generation orbit algebra** `8 = 1 + 1 + 3 + 3`. Authority:
+- **Three-generation orbit algebra** `8 = 1 + 1 + 3 + 3` on the retained
+  cubic surface. Authority:
   `docs/THREE_GENERATION_STRUCTURE_NOTE.md`.
 
-## Minimal Example
+The note derives no new retained axioms. It is a consistency check
+across the three retained theorems.
 
-The verification runner sweeps `n ∈ {0, 1, 2, 3, 4, 5, 6, 7}` and checks:
+## The Three Framework Requirements
 
-- `dim(Cl(n)) = 2^n`
-- number of bivectors = `n(n-1)/2`
-- parity of `n`
-- Bott periodicity structure (Cl(n;ℂ) for odd n has the form `A ⊕ A`)
-- even subalgebra `Cl^+(n) ≅ Cl(n-1)`
-- whether `n` satisfies each of the three framework requirements
-
-The runner reports which `n` pass each individual requirement, which
-`n` satisfy all three simultaneously, and confirms `n = 3` is the
-unique minimum.
-
-## Derivation
-
-### Step 1: Bivector count requirement for native SU(2)
+### R1 — Native SU(2) needs at least three bivectors
 
 The retained native `SU(2)` closure uses three linearly independent
 bivectors `{e_1 e_2, e_2 e_3, e_3 e_1}` closing under commutator into
-`su(2)`. In general `Cl(n)` for spatial dimension `n` carries
+`su(2)`. The number of bivectors in `Cl(n)` is `C(n, 2) = n(n-1)/2`.
+These bivectors generate the Lie algebra `spin(n)` (equivalently
+`so(n)`), not `su(n)`. For three SU(2) generators we need
 
 ```
-num_bivectors(n) = C(n, 2) = n(n-1)/2
+n(n-1)/2 ≥ 3,  i.e.,  n ≥ 3.
 ```
 
-so:
-- `n = 0`: 0 bivectors — no `SU(2)` possible
-- `n = 1`: 0 bivectors — no `SU(2)` possible
-- `n = 2`: 1 bivector — can generate `U(1)`, not `SU(2)` (needs 3)
-- `n = 3`: 3 bivectors — **minimum that closes `SU(2)`**
-- `n ≥ 4`: more than 3 bivectors
+At `n = 3` we have exactly 3 bivectors and no selector is needed — all
+bivectors are weak generators. At `n ≥ 4` the `spin(n)` algebra of
+dimension `n(n-1)/2` contains more generators than `su(2)`, and some
+rule is needed to pick out three "weak" generators; that rule is
+external to the retained native SU(2) closure.
 
-For `n ≥ 4`, the extra bivectors form an `su(n)`-like algebra with
-dimension `n(n-1)/2`. The framework would then need an additional
-principle to pick out a three-bivector subalgebra as "the weak sector,"
-introducing a selector choice. At `n = 3`, no such selector is needed
-because all bivectors are weak generators.
+### R2 — Dimensional match for the retained 8-state orbit
 
-**Requirement R1:** `n(n-1)/2 ≥ 3`, i.e., `n ≥ 3`.
-
-**Minimal-bivector-without-selector**: `n = 3` uniquely.
-
-### Step 2: Dimensional matching for 8 = 1+1+3+3
-
-The retained three-generation structure on the `hw=1` orbit gives the
-exact decomposition
+The retained three-generation structure decomposes the `hw=1` orbit on
+the cubic `Z^3` surface as
 
 ```
-2^n = 1 + 1 + 3 + 3 = 8
+8 = 1 + 1 + 3 + 3
 ```
 
-on the spatial taste orbit. This forces `n` such that `2^n = 8`,
-uniquely `n = 3`.
+**Note carefully**: this 8-state decomposition is proven on the cubic
+`Z^3` surface itself, so requiring `dim(Cl(n)) = 2^n = 8` conditions on
+`n = 3`-specific retained input. This is the conditional step that
+prevents the note from closing axiom-depth.
 
-For `n = 4`: `2^4 = 16`, which would require a decomposition like
-`16 = 1 + 1 + 3 + 3 + 4 + 4` or similar; the additional eight states
-would have no physical interpretation in the retained framework.
+Under this conditional requirement, `2^n = 8` forces `n = 3` exactly.
 
-For `n = 2`: `2^2 = 4 < 8`, insufficient to carry three generations.
-
-**Requirement R2:** `2^n = 8`, i.e., `n = 3` exactly.
-
-### Step 3: Parity from anomaly-forced chirality
+### R3 — Odd parity from anomaly-forced chirality
 
 The anomaly-forced `3+1` theorem requires even total Clifford dimension
-to support chirality projectors: `d_s + d_t ≡ 0 (mod 2)`. Combined with
-`d_t = 1` from the single-clock theorem, this forces `d_s` odd.
+to support chirality: `d_s + d_t ≡ 0 (mod 2)`. Combined with `d_t = 1`,
+this forces `d_s` odd.
 
-**Requirement R3:** `d_s` odd.
-
-### Step 4: Intersection
+## Intersection Table
 
 | Requirement | `n=0` | `n=1` | `n=2` | `n=3` | `n=4` | `n=5` | `n=6` | `n=7` |
 |---|---|---|---|---|---|---|---|---|
-| R1 (≥ 3 bivectors) | ✗ | ✗ | ✗ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| R2 (`2^n = 8`) | ✗ | ✗ | ✗ | ✓ | ✗ | ✗ | ✗ | ✗ |
-| R3 (odd) | ✗ | ✓ | ✗ | ✓ | ✗ | ✓ | ✗ | ✓ |
-| **All three** | ✗ | ✗ | ✗ | **✓** | ✗ | ✗ | ✗ | ✗ |
+| R1 (≥ 3 bivectors) | · | · | · | ✓ | ✓ | ✓ | ✓ | ✓ |
+| R2 (`2^n = 8`) | · | · | · | ✓ | · | · | · | · |
+| R3 (odd) | · | ✓ | · | ✓ | · | ✓ | · | ✓ |
+| **All three** | · | · | · | **✓** | · | · | · | · |
 
 The unique `n` satisfying R1 ∧ R2 ∧ R3 is `n = 3`.
 
-### Step 5: Consistency check against Bott periodicity
+R2 alone forces `n = 3` exactly. R1 and R3 are consistency checks that
+`n = 3` simultaneously satisfies all three retained requirements — no
+other `n` does.
 
-Clifford algebra classification over `C`:
+## Explicit `Cl(3;C) = M_2(C) ⊕ M_2(C)` Construction
 
-- `Cl(0; ℂ) = ℂ`, dim 1
-- `Cl(1; ℂ) = ℂ ⊕ ℂ`, dim 2
-- `Cl(2; ℂ) = M_2(ℂ)`, dim 4
-- `Cl(3; ℂ) = M_2(ℂ) ⊕ M_2(ℂ)`, dim 8
-- `Cl(4; ℂ) = M_4(ℂ)`, dim 16
-- `Cl(5; ℂ) = M_4(ℂ) ⊕ M_4(ℂ)`, dim 32
-- `Cl(6; ℂ) = M_8(ℂ)`, dim 64
-- `Cl(7; ℂ) = M_8(ℂ) ⊕ M_8(ℂ)`, dim 128
+The runner builds the 4-dimensional reducible representation
 
-For odd `n ≥ 1`, `Cl(n; ℂ)` has the structure `A ⊕ A` with `A = M_{2^{(n-1)/2}}(ℂ)`.
-This `A ⊕ A` structure is what the framework uses to assign left/right
-handedness via chirality projectors `P_± = (1 ± γ^{d+1})/2`.
+```
+e_i = diag(σ_i, -σ_i)     for i = 1, 2, 3
+```
 
-For `n = 3` specifically:
-- `Cl(3; ℂ) = M_2(ℂ) ⊕ M_2(ℂ)` — each factor is `M_2(ℂ)`, the algebra
-  underlying a single `SU(2)` representation
-- even subalgebra `Cl^+(3) ≅ Cl(2; ℂ) = M_2(ℂ)` — this is where `SU(2)`
-  spatial rotations live
-- the two `M_2(ℂ)` factors carry opposite chirality
+which satisfies `{e_i, e_j} = 2 δ_{ij} I_4` and produces a pseudoscalar
 
-The `A ⊕ A` structure with `A = M_2(ℂ)` at `n = 3` is the smallest
-non-trivial example.
+```
+ω = e_1 e_2 e_3 = diag(iI_2, -iI_2),  ω^2 = -I_4.
+```
 
-## Novel Predictions
+The chirality projectors
 
-**P1.** If the retained framework were ever lifted to `d_s = 5`, the
-extra bivectors `{e_1 e_4, e_1 e_5, e_2 e_4, e_2 e_5, e_3 e_4, e_3 e_5,
-e_4 e_5}` would have to be either: (i) suppressed by a selector, (ii)
-promoted to additional gauge generators beyond `SU(2)`, or (iii) absorbed
-into the `SU(3)` commutant structure. None of (i)-(iii) is carried by
-the retained backbone. Going to `d_s = 5` requires extra axiom content.
+```
+P_R = (I_4 - iω) / 2 = diag(I_2, 0),
+P_L = (I_4 + iω) / 2 = diag(0, I_2)
+```
 
-**P2.** If the retained three-generation structure is taken as an
-empirical fact (from the `8 = 1+1+3+3` orbit), the minimality argument
-makes `d_s = 3` a **corollary** of that fact plus anomaly-forced chirality,
-rather than an independent input. This absorbs `d_s = 3` into the axiom.
+satisfy `P_R^2 = P_R`, `P_L^2 = P_L`, `P_R P_L = 0`, `P_R + P_L = I_4`.
+Restricting `{I, e_1, e_2, e_3}` to the R block gives
+`{I_2, σ_x, σ_y, σ_z}` (rank 4, spans `M_2(C)` as a complex vector
+space), and to the L block gives `{I_2, -σ_x, -σ_y, -σ_z}` (also rank
+4). This is the explicit `M_2(C) ⊕ M_2(C)` structure the runner verifies.
 
-**P3.** If observationally a fourth generation were discovered, the orbit
-structure would need to be `1 + 1 + 4 + 4 = 10` or similar, which does
-not match any `2^n`. Four generations are **structurally forbidden** by
-the `Cl(d_s)` minimality argument, not by an ad-hoc bound. This is a
-falsifiable prediction: fourth-generation fermion exclusion is a
-**theorem** on the Cl(3) framework, not a fit.
+The even subalgebra `Cl^+(3)`, spanned by `{1, e_1 e_2, e_2 e_3, e_3 e_1}`,
+is block-diagonal with identical action on the R and L blocks —
+`Cl^+(3)` is embedded diagonally in `M_2(C) ⊕ M_2(C)`. Restricted to a
+single block it has complex rank 4, i.e. it spans a full `M_2(C)` factor,
+consistent with `Cl^+(3) ≅ M_2(C)`.
 
-## Weakest Link
+## Small-`n` Fails and Large-`n` Richness
 
-**Step 2 (dimensional matching)**: the retained `8 = 1 + 1 + 3 + 3`
-decomposition assumes the spatial `Z^3` orbit structure. If on a
-hypothetical `Z^5` lattice the orbit decomposed differently (e.g., into
-`1 + 1 + 3 + 3 + 8` or `1 + 1 + 7 + 7`), the `2^n = 8` requirement
-would not hold. The retained three-generation theorem is specific to
-`Z^3`, so the requirement is circular at first glance.
+### Cl(1) and Cl(2) fail R1 explicitly
 
-The non-circular content is: **given the empirical fact of three
-generations**, `d_s = 3` is the unique compatible Clifford dimension.
-This is an anthropic-style observation rather than a pure axiom-level
-derivation, but it reframes "three generations" from a data input into
-a dimensional consequence of `d_s = 3`, and conversely.
+- `Cl(1)`: zero bivectors — SU(2) cannot be built at all
+- `Cl(2)`: one bivector — its self-commutator is zero, so no non-abelian
+  Lie algebra emerges
 
-## What This Does NOT Claim
+### Cl(5), Cl(7), ... are "over-rich"
 
-- **Not a first-principles derivation of `d_s` from pure logic.** It
-  derives `d_s = 3` from the conjunction of three framework requirements
-  (native `SU(2)`, three generations, anomaly-forced chirality). Each
-  of those requirements is already retained on `main`, so this derivation
-  stays within the single-axiom framework.
-- **Not a claim that `d_s = 3` is the only possible physical dimension.**
-  Other dimensions would be consistent with different physics (e.g., 5D
-  theories exist). The claim is that within **this framework**, `d_s = 3`
-  is uniquely forced.
-- **Not a derivation of the `Z^n` lattice geometry specifically.** Why
-  cubic `Z^3` rather than `A_3`, BCC, or FCC is a separate question
-  (the `Z^n` lattice simplicity question), and remains open.
+At `n = 5`, `Cl(5)` has `C(5,2) = 10` bivectors, generating `spin(5)`
+(of dimension 10). Embedding SU(2) into `spin(5)` requires a selector
+to pick three of the ten generators as weak. The retained native SU(2)
+theorem does not supply such a selector; going to `n = 5` therefore adds
+axiom content.
 
-## Relationship to the Existing Frontier
+Analogously at `n = 7, 9, 11`, the bivector algebras are `spin(n)` of
+dimension `n(n-1)/2`.
 
-This note attacks **G16** on the TOE frontier gap list as documented in
-`.claude/science/derivations/pf-selection-from-axiom-2026-04-17.md`
-(my earlier retracted parent lane note's gap ranking). G16 was flagged
-as "axiom depth for `d_s = 3`" and ranked orthogonal to the live gates.
-This note supplies the minimality argument that closes G16 at the
-retained-axiom-depth level.
-
-The other active workstreams (G1 Physicist-H closure, G5 observational
-pin, plaquette environment tensor-transfer, DM parity-compatible
-selector) are all on orthogonal sectors — they operate downstream of
-the axiom choice, not on the axiom itself. This note therefore does
-not duplicate any existing in-flight work.
-
-## Runner Design
+## Runner
 
 **Target:** `scripts/frontier_cl3_minimality.py`.
 
-**Scope:** verification of the three-requirement intersection across
-`n ∈ {0, ..., 7}`, plus a cross-check against the Bott periodicity
-classification of `Cl(n; ℂ)`.
+**Structure:**
 
-**Checks (THEOREM):**
+- Part A — requirement-table intersection, `n` sweep to `[0, 20]`
+- Part B — explicit `Cl(3;C) = M_2(C) ⊕ M_2(C)` via the 4-dim rep,
+  pseudoscalar, chirality projectors, even subalgebra diagonal embedding,
+  Pauli-block M_2(C) rank verification, bivector commutator closure
+- Part C — explicit SU(2)-closure failure for Cl(1) and Cl(2)
+- Part D — bivector counts for `n ∈ {5, 7, 9, 11}` and their
+  `spin(n)` / `so(n)` interpretation
+- Part E — Bott periodicity cross-check for `Cl(n;C)` dimension and
+  `A ⊕ A` structure
+- Part F — **bounded tension** against a clean four-generation fit on
+  the retained cubic surface, with explicit disclaimer that higher-dim
+  `Cl(n)` embeddings are not excluded
 
-1. Bivector count `C(n, 2)` matches the formula `n(n-1)/2`.
-2. `Cl(n; ℂ)` dimension is `2^n`.
-3. `Cl(3; ℂ) = M_2(ℂ) ⊕ M_2(ℂ)` (explicit construction + isomorphism
-   verification).
-4. Even subalgebra `Cl^+(3) ≅ Cl(2; ℂ) = M_2(ℂ)` (verification by
-   explicit basis).
-5. At `n = 3`, three linearly independent bivectors close under
-   commutator into `su(2)` (this is the retained SU(2) theorem; verify
-   it does NOT close at `n = 2` or `n = 1`).
-6. **Uniqueness**: `n = 3` is the unique `n ∈ {0, ..., 7}` satisfying
-   R1 ∧ R2 ∧ R3.
+### Runner results
 
-**Checks (SUPPORT):**
+**13 THEOREM + 33 SUPPORT, 0 FAIL.**
 
-7. Bott periodicity: `Cl(n + 2; ℂ) ≅ M_2(ℂ) ⊗ Cl(n; ℂ)`.
-8. Four-generation exclusion: there is no `n` with `2^n ∈ {10, 12, 14}`
-   (predictions P3 cross-check).
+- The intersection of R1 ∧ R2 ∧ R3 across `n ∈ [0, 20]` is uniquely `n = 3`.
+- The 4-dim reducible rep explicitly realizes `Cl(3;C) = M_2(C) ⊕ M_2(C)`
+  with chirality projectors verified by the algebra `P_R^2 = P_R`,
+  `P_R + P_L = I_4`, etc.
+- Each chirality block carries a full `M_2(C)` with rank-4 Pauli basis.
+- Cl^+(3) is diagonally embedded with complex rank 4 on each block —
+  the Cl^+(3) ≅ M_2(C) isomorphism is explicit at the matrix level.
+- Bivectors close under commutator with structure constants
+  `f_{ijk} = -2 ε_{ijk}` reproducing `su(2)` exactly (residuals < 1e-14).
 
-## Status Ledger
+## Bounded Tension With Four Generations
 
-| Artifact | Status |
-|---|---|
-| This note | PROPOSED |
-| Verification runner | **PASS 13 THEOREM + 33 SUPPORT, 0 FAIL** |
-| Cross-reference into main manuscript | pending |
+Four-generation matter with orbit size 10, 12, or 14 would require a
+Clifford dimension that is not a power of 2, which is incompatible with
+`Cl(n)` over the retained cubic surface. The nearest power of 2 is
+`2^4 = 16`, which would require `n = 4` (even), violating R3.
 
-## Appendix: Runner Results (2026-04-17)
+**This is bounded support / tension, NOT a structural exclusion
+theorem.** Higher-dimensional `Cl(n)` embeddings with `n ≥ 5` can carry
+four generations plus additional sectors, and nothing in this note
+rules them out. A true four-generation exclusion theorem would require
+a separate derivation.
 
-`scripts/frontier_cl3_minimality.py` — 13 THEOREM + 33 SUPPORT + 0 FAIL.
+## Weakest Link — Why This Is Not Axiom-Depth Closure
 
-### Part 1: requirement-table intersection
+**R2 (`2^n = 8`) is not framework-internal in the strong sense.** The
+`8 = 1 + 1 + 3 + 3` orbit decomposition is a theorem on the cubic `Z^3`
+surface, which is precisely the surface the axiom specifies. Using that
+decomposition to "force" `n = 3` is therefore a consistency check, not
+an independent derivation.
 
-| `n` | `2^n` | bivectors | R1 ≥3 | R2 =8 | R3 odd | **all** |
-|---|---|---|---|---|---|---|
-| 0 | 1  | 0  | · | · | ·  | · |
-| 1 | 2  | 0  | · | · | ✓ | · |
-| 2 | 4  | 1  | · | · | ·  | · |
-| **3** | **8** | **3** | **✓** | **✓** | **✓** | **YES** |
-| 4 | 16 | 6  | ✓ | · | ·  | · |
-| 5 | 32 | 10 | ✓ | · | ✓ | · |
-| 6 | 64 | 15 | ✓ | · | ·  | · |
-| 7 | 128| 21 | ✓ | · | ✓ | · |
+Genuinely closing axiom-depth for `d_s = 3` would require either:
 
-**Unique `n ∈ [0, 20]` satisfying R1 ∧ R2 ∧ R3: n = 3.**
+- (a) an independent non-cubic derivation of the 8-state requirement,
+  from a retained principle that does not presuppose `d_s = 3`, or
+- (b) an independent retained theorem selecting `n = 3` without
+  importing the cubic orbit algebra.
 
-R2 (`2^n = 8`) alone forces `n = 3` exactly. R1 and R3 are consistency
-checks that `n = 3` simultaneously satisfies the other two retained
-framework requirements — no other `n` does.
+This note provides neither. The contribution is strictly a retained-
+theorem consistency diagnostic.
 
-### Part 2: explicit Cl(3) via Pauli matrices
+## What A Reviewer Should Conclude
 
-- Clifford anticommutation `{e_i, e_j} = 2 δ_ij I` verified for all 9 pairs.
-- Three bivectors `e_1 e_2`, `e_2 e_3`, `e_3 e_1` all anti-Hermitian to
-  machine precision.
-- **su(2) closure verified**: `[B_12, B_23] = -2 B_31`,
-  `[B_23, B_31] = -2 B_12`, `[B_31, B_12] = -2 B_23` — structure
-  constants `f_{ijk} = -2 ε_{ijk}` reproduce `su(2)` exactly, residuals
-  below `8e-16`.
+- The math replays: 13 THEOREM + 33 SUPPORT, 0 FAIL.
+- The claim is retained-framework-compatibility, not axiom-depth closure.
+- The runner now actually builds `Cl(3;C) = M_2(C) ⊕ M_2(C)` explicitly
+  (Part B), so the note's explicit-construction claim is supported by
+  the runner output.
+- Terminology fixed: bivectors generate `spin(n) / so(n)`, not `su(n)`.
+- Four-generation language demoted to bounded tension.
+- If useful, this can be packaged as a retained-framework consistency
+  companion / support tool. It is **not** a retained flagship closure.
 
-### Part 3: smaller `n` explicitly fail
+## Next
 
-- Cl(1) has 0 bivectors — no SU(2) generators exist.
-- Cl(2) has 1 bivector; its self-commutator is zero, so no non-abelian
-  algebra can emerge.
+This note does not pursue Path 2 (genuine axiom-depth closure) — that
+requires new science. If that program is later undertaken, candidates
+include:
 
-### Part 4: larger odd `n` are over-rich
+- a retained non-cubic orbit theorem that derives the 8-state structure
+  independently
+- a retained theorem selecting `Cl(n)` for `n = 3` via some intrinsic
+  property (e.g. the specific combination of `spin(n) ⊃ su(2)` +
+  anomaly parity + minimal triality structure), without importing the
+  cubic surface
 
-| `n` | bivectors | excess over 3 | `2^n` |
-|---|---|---|---|
-| 5 | 10 | 7 | 32 |
-| 7 | 21 | 18 | 128 |
-| 9 | 36 | 33 | 512 |
-| 11 | 55 | 52 | 2048 |
-
-Each larger odd `n` requires a selector to pick 3 bivectors as
-"the weak sector" out of the available pool, introducing axiom content.
-
-### Part 5: Bott periodicity cross-check
-
-Confirmed Cl(n; ℂ) has the standard A ⊕ A structure iff `n` is odd,
-with factor dimensions 1, 4, 16, 64, ... at `n = 1, 3, 5, 7, ...`.
-`n = 3` is the smallest odd case where the two factors are non-trivial
-matrix algebras (both = `M_2(ℂ)`), matching the SU(2) chirality structure.
-
-### Part 6: four-generation exclusion
-
-- Hypothetical fourth-generation orbit sizes {10, 12, 14} are not powers
-  of 2 — inconsistent with any `Cl(n)` dimensional matching.
-- The only power of 2 ≥ 10 is `2^4 = 16`, which would require `n = 4`
-  (even), violating the anomaly-forced chirality parity requirement R3.
-- **Therefore: exactly-four-generation matter is excluded as a structural
-  consequence of the framework, not as an ad-hoc bound.** This is
-  prediction P3 made concrete.
-
-### One-sentence takeaway
-
-> Within the retained framework, `d_s = 3` is the unique minimum
-> satisfying three independent requirements that are already retained
-> theorems on `main`: native SU(2) needs ≥ 3 bivectors, the three-
-> generation orbit needs a Cl-algebra of dimension 8, and anomaly-
-> forced chirality needs `d_s` odd. The single intersection point is
-> `n = 3`.
-
-## Next After Runner
-
-- Promote the minimality argument into a one-paragraph addition to
-  `ARXIV_DRAFT.md` framework-motivation section.
-- Cross-reference from `CLAIMS_TABLE.md` as an axiom-motivation
-  corollary (not a retained standalone quantitative claim, but an
-  axiom-depth support row).
-- Link from `ANOMALY_FORCES_TIME_THEOREM.md` as a completion: anomaly
-  determines `d_t = 1`, minimality determines `d_s = 3`. The framework
-  dimension count is then fully forced.
+Until such work lands, the axiom-depth gap for `d_s = 3` remains open.
