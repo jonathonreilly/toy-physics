@@ -177,6 +177,132 @@ companion tightness theorem legitimately deliver:
 
 as retained closure.
 
+### Concrete science work that would enable the upgrade
+
+If the goal is to **upgrade** this branch to retained rather than downgrade it,
+the worker should focus on the following scientific program.
+
+#### 1. Prove a family-scope uniqueness theorem, not just a family-scope extension
+
+Right now the branch shows:
+
+- the retained `n = 3` construction uses the three `Cl(3)` bivectors
+- the standard `Cl(n)` machinery lets one extend that recipe to arbitrary `n`
+
+What it still needs to prove is stronger:
+
+> among all comparison-family extensions compatible with the retained native
+> gauge construction, the only admissible one is “native gauge generators :=
+> the full bivector sector of `Cl(n)`,” with no selector.
+
+That means the worker should write a theorem of the form:
+
+> **Family-scope native-gauge uniqueness theorem.**
+> Given the retained graph / staggered / taste construction, together with the
+> requirement that the comparison-family closure:
+> - reduces to the retained `n = 3` generators,
+> - is functorial in `n`,
+> - is basis-independent up to Clifford automorphism,
+> - is closed under commutator,
+> - introduces no external selector field or extra structure,
+> then the weak-gauge generator space is uniquely the full bivector space.
+
+That is the theorem that would close the present gap. The current branch only
+constructs one natural extension; it does not yet prove that this extension is
+forced.
+
+#### 2. Derive the arbitrary-`n` construction from retained framework rules, not from textbook availability alone
+
+The step that still reads as external is:
+
+- "`Cl(n)` exists via the standard chiral-matrix / staggered-phase
+  construction, therefore recipe `R` extends"
+
+To get retained status, the worker should prove that the framework’s own
+native-gauge construction principle determines that extension.
+
+Concretely:
+
+- start from the same graph-first / η-phase / taste-doubling logic used by the
+  retained `n = 3` theorem
+- formulate it for `Z^n`
+- show that the comparison-family `Γ_k` are fixed up to standard Clifford
+  equivalence by that graph construction
+- then show that the induced native-gauge sector is the bivector sector
+
+That would convert the arbitrary-`n` step from
+"standard family extension we choose to use"
+into
+"framework-native family theorem."
+
+#### 3. Prove that no proper bivector subset can play the same role without adding extra structure
+
+This is the selector issue in its strongest form.
+
+The worker should prove a no-go statement such as:
+
+> any proper subset of bivectors either
+> - fails closure under commutator,
+> - breaks comparison-family symmetry / automorphism covariance,
+> - fails to reduce canonically to the retained `n = 3` construction,
+> - or requires an additional selector not present in the framework inputs.
+
+This is important because it turns “we use all bivectors” from a design choice
+into a forced theorem. Without this no-go step, the current recipe remains a
+natural choice rather than a uniquely determined consequence.
+
+#### 4. Make the runner certify the uniqueness theorem, not only the chosen recipe
+
+The current scope runner should be upgraded so that it does more than say:
+
+- build `Cl(n)`
+- define gauge generators as all bivectors
+- verify the consequences
+
+Instead it should certify the missing theorem-level content. For example:
+
+- verify exact reduction to the retained `n = 3` construction
+- verify covariance of the bivector sector under the relevant Clifford / lattice
+  symmetry actions
+- verify that proper subsets fail one of the admissibility criteria above for
+  low `n` test cases
+- verify that the full bivector sector is the unique commutator-closed,
+  selector-free, comparison-family-covariant candidate under the stated rules
+
+That would make the runner evidence for the actual retained claim, not just for
+the algebra after assuming it.
+
+#### 5. Only then rerun the tightness theorem as the short corollary
+
+Once the scope theorem above is really closed, the current tightness note is
+basically fine:
+
+- full bivector Lie algebra = `spin(n)`
+- observed weak algebra = `su(2)`
+- therefore `spin(n) = su(2)`
+- hence `n(n-1)/2 = 3`
+- hence `n = 3`
+
+So the right order for a true retained upgrade is:
+
+1. retained family-scope native-gauge uniqueness theorem
+2. retained tightness theorem as corollary
+3. optional connection back to the older cubic support note
+
+### Short version to give the worker
+
+If you want this upgraded to retained, do **not** spend more time polishing the
+dimension-counting corollary. The real missing science is:
+
+- prove that the framework itself forces the selector-free family rule
+  “weak gauge = full Clifford bivector sector” at arbitrary `n`
+- prove that no proper subset / selector-based extension is framework-admissible
+- make the runner certify that uniqueness statement directly
+
+If that theorem is closed, the retained `d_s = 3` upgrade should follow
+quickly. Without it, the branch remains a strong support route rather than a
+retained closure.
+
 ## Bottom Line
 
 My current call:
