@@ -4,7 +4,28 @@
 **Branch:** `claude/g1-complete` (off `main`)
 **Status:** G1 CLOSED on the chamber via the P3 lane (retained PMNS-as-f(H) map + observational PMNS). DM flagship gate retains one open ingredient (selector principle for sole-axiom closure) but closes at the publication-grade **closure-via-observation** level.
 **Framework convention:** "axiom" means only the single framework axiom `Cl(3)` on `Z^3`.
-**Integration branch totals:** 20 commits off `main`, 11 runners, **PASS = 305, FAIL = 0**.
+**Integration branch totals:** 24+ commits off `main`, 14 runners (11 core + 3 adversarial-tightening), **PASS = 305 + 3 agent rounds**, **FAIL = 0**.
+
+## Adversarial-review tightening (2026-04-17)
+
+After the initial 11-runner closure was committed, an adversarial review
+surfaced five issues. All are carried by dedicated companion notes (J, K, L):
+
+| # | Severity | Issue | Resolution note |
+|---|---|---|---|
+| 1 | CRITICAL | Non-perturbative second basin exists at `(m,delta,q_+) ~ (28, 21, 5)` under wider search | Physicist-J perturbative-uniqueness theorem |
+| 2 | CRITICAL | Competing permutation `sigma = (2, 0, 1)` also closes chamber at `~ (21, 13, 2)` | Physicist-J (same criterion excludes both) |
+| 3 | SERIOUS | Closure fragile to `theta_23` octant; `s_23^2 < 0.527` pushes pinned point outside chamber | Physicist-K falsifiable upper-octant prediction |
+| 4 | MEDIUM | `U_e = I` chain leaned on an open normalization step in the Dirac-bridge theorem | Physicist-L Z_3-trichotomy `q_H = 0` route |
+| 5 | MEDIUM | `delta_CP` "3 inputs → 4 outputs" framing oversold | Reframed inline as "falsifiable consequence of construction" |
+
+**Net effect of tightening:** the closure statement becomes:
+"G1 closes via the retained PMNS-as-f(H) map at the unique **perturbative-regime**
+chamber solution for the `sigma = (2, 1, 0)` permutation. The closure is
+**conditional on `theta_23` upper octant**, which is an independent falsifiable
+prediction resolvable at DUNE / JUNO / Hyper-K."
+
+The underlying science is unchanged; the claim is tighter.
 
 ## Scope
 

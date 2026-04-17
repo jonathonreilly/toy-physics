@@ -9,6 +9,30 @@ PMNS mixing angles are promoted to retained on the chamber.
 **Runner:** `PASS = 43, FAIL = 0`
 **Framework convention:** "axiom" means only the single framework axiom `Cl(3)` on `Z^3`.
 
+## Adversarial-review status (2026-04-17)
+
+This note was tightened after adversarial review surfaced five issues. The
+tightening is carried by three companion notes:
+
+- Basin-uniqueness and permutation-uniqueness (CRITICAL 1 + 2): resolved
+  via the perturbative criterion in
+  [G1_PHYSICIST_J_PERTURBATIVE_UNIQUENESS_NOTE_2026-04-17.md](./G1_PHYSICIST_J_PERTURBATIVE_UNIQUENESS_NOTE_2026-04-17.md).
+  Non-perturbative chamber basins exist, but only one (Basin 1 at
+  `sigma = (2, 1, 0)`) lies in the convergence domain of the
+  observable-principle source-response expansion.
+- θ_23 upper-octant conditionality (SERIOUS 3): formalized as a falsifiable
+  retained prediction in
+  [G1_PHYSICIST_K_THETA23_UPPER_OCTANT_PREDICTION_NOTE_2026-04-17.md](./G1_PHYSICIST_K_THETA23_UPPER_OCTANT_PREDICTION_NOTE_2026-04-17.md).
+  Chamber closure exists only if `s_23^2` is above a specific threshold;
+  this is a falsifiable prediction resolvable at DUNE / JUNO / Hyper-K.
+- U_e = I citation chain (MEDIUM 4): replaced by the Z_3-trichotomy route
+  in
+  [G1_PHYSICIST_L_Z3_TRICHOTOMY_UE_IDENTITY_NOTE_2026-04-17.md](./G1_PHYSICIST_L_Z3_TRICHOTOMY_UE_IDENTITY_NOTE_2026-04-17.md),
+  which does NOT depend on the open normalization step in the
+  Dirac-bridge theorem.
+- δ_CP framing (MEDIUM 5): reframed below as "falsifiable consequence of
+  the construction" rather than an over-determined check.
+
 ## Summary
 
 The Physicist-E exhaustion theorem
@@ -45,7 +69,13 @@ converging to the same point at machine precision. The point lies strictly
 inside the chamber (distance `0.0159` above the boundary
 `q_+ = sqrt(8/3) - delta`).
 
-**δ_CP prediction.** At the pinned point, the map predicts
+**δ_CP: falsifiable consequence of the construction.** The map
+`(m, delta, q_+) -> (s12^2, s13^2, s23^2, delta_CP)` sends `R^3` to a
+3-dimensional sub-manifold of `R^4`. Three observational angles pin
+`(m, delta, q_+)` (under the perturbative-uniqueness criterion); the CP
+phase is then forced by the chart geometry, not an over-determined fit.
+Disagreement with future measurements falsifies the construction, not
+merely the pinned point. At the pinned point:
 
 ```
 sin(delta_CP)   =  -0.9874
@@ -207,7 +237,8 @@ the Physicist-E CASE 4 obstruction on the P3 lane.
 |U_mu3(m, delta, q_+)|^2 / cos^2 theta_13 = sin^2 theta_23(obs) = 0.545,
 ```
 
-has a **unique** solution on the chamber `q_+ >= sqrt(8/3) - delta`:
+has a unique solution **in the perturbative regime** on the chamber
+`q_+ >= sqrt(8/3) - delta`:
 
 ```
 m_*      =  0.657061342210,
@@ -218,10 +249,17 @@ q_+*     =  0.715042329587.
 **Proof sketch.** The map `(m, delta, q_+) -> (s12^2, s13^2, s23^2)` is a
 smooth surjection from a 3-dimensional chart onto an open subset of the
 unit cube. At the pinned point the Jacobian is non-singular (verified by
-the fsolve convergence). Global uniqueness on the chamber is verified by
-60 independent random-start Nelder-Mead descents, all of which converge
-to the same point at chi^2 < 10^-12 after sharpening. No other chamber
-basin reproduces the observed triple.
+the fsolve convergence). Uniqueness within the axiom-native perturbative
+regime (source Frobenius norm less than baseline Frobenius norm) is
+verified by 60 independent random-start Nelder-Mead descents at
+`chi^2 < 10^-12`. See
+[G1_PHYSICIST_J_PERTURBATIVE_UNIQUENESS_NOTE_2026-04-17.md](./G1_PHYSICIST_J_PERTURBATIVE_UNIQUENESS_NOTE_2026-04-17.md)
+for the formal perturbative-uniqueness theorem that establishes this as
+retained-grade. Non-perturbative chamber basins exist (e.g. at
+`(m,delta,q_+) ~ (28, 21, 5)` on the same permutation, and at
+`~ (21, 13, 2)` on the competing `sigma = (2, 0, 1)` permutation), but
+they are outside the convergence domain of the observable-principle
+source-response expansion and are therefore excluded.
 
 **Closure status.** This pins `(delta_*, q_+*)`. The spectator direction
 `m_*` is also pinned by the same system, with
