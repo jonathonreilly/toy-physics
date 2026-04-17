@@ -111,10 +111,14 @@ The live repo now also carries a materially stronger exact support stack:
 - exact spatial-environment character-measure theorem identifying the
   residual operator as the boundary character measure of the unmarked spatial
   Wilson environment
+- exact spatial-environment transfer theorem identifying that boundary class
+  function as a boundary-amplitude sequence of one explicit positive spatial
+  transfer operator
 - exact Perron/Jacobi underdetermination theorem showing that even the
   sharpened factorized operator class still does not force unique `beta = 6`
   Perron moments or Jacobi coefficients until the explicit
-  `beta = 6` spatial boundary character data are fixed
+  `beta = 6` spatial-transfer matrix elements generating the boundary
+  character data are fixed
 - exact scalar `3+1` bridge endpoint ratio
   `A_inf / A_2 = 2 / sqrt(3)`
 - exact plaquette four-link coupling map
@@ -148,6 +152,7 @@ Current authorities for that support stack:
 - [GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_LOCAL_ENVIRONMENT_FACTORIZATION_THEOREM_NOTE.md)
 - [GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_RESIDUAL_ENVIRONMENT_IDENTIFICATION_THEOREM_NOTE.md)
 - [GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md)
+- [GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_THEOREM_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_TRANSFER_THEOREM_NOTE.md)
 - [GAUGE_VACUUM_PLAQUETTE_PERRON_JACOBI_UNDERDETERMINATION_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_PERRON_JACOBI_UNDERDETERMINATION_NOTE.md)
 - [GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md](./GAUGE_SCALAR_TEMPORAL_COMPLETION_THEOREM_NOTE.md)
 - [GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md](./GAUGE_VACUUM_PLAQUETTE_CONSTANT_LIFT_OBSTRUCTION_NOTE.md)
@@ -170,6 +175,7 @@ Current support runners:
 - `scripts/frontier_gauge_vacuum_plaquette_local_environment_factorization.py`
 - `scripts/frontier_gauge_vacuum_plaquette_residual_environment_identification.py`
 - `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_character_measure.py`
+- `scripts/frontier_gauge_vacuum_plaquette_spatial_environment_transfer.py`
 - `scripts/frontier_gauge_vacuum_plaquette_perron_jacobi_underdetermination.py`
 - `scripts/frontier_gauge_scalar_temporal_completion_theorem.py`
 - `scripts/frontier_gauge_vacuum_plaquette_constant_lift_obstruction.py`
@@ -205,7 +211,8 @@ The honest live read is now sharper than before:
   local:
   `D_beta^mix,norm chi_(p,q) = a_(p,q)(beta)^4 chi_(p,q)`
 - so the remaining analytic target is explicit identification of the
-  `beta = 6` boundary character data of `Z_6^env` in
+  `beta = 6` spatial-transfer matrix elements generating the boundary
+  character data of `Z_6^env` in
   `T_src(6) = exp(3 J) D_6^loc C_(Z_6^env) exp(3 J)`, equivalently the exact
   Perron state of the factorized operator after the local mixed-kernel factor
   is stripped off, and
