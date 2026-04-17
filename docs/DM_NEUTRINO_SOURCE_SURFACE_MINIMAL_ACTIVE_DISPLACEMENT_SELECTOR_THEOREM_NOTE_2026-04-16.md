@@ -1,8 +1,8 @@
 # DM Neutrino Source-Surface Minimal Active-Displacement Selector Theorem
 
 **Date:** 2026-04-16  
-**Status:** exact constructive point-selection theorem with one genuinely new
-right-sensitive input  
+**Status:** exact conditional support theorem with one genuinely new
+right-sensitive selector input  
 **Script:** `scripts/frontier_dm_neutrino_source_surface_minimal_active_displacement_selector_theorem.py`
 
 ## Question
@@ -27,7 +27,7 @@ This is a genuinely new input. It is **not** contained in the old bank.
 
 ## Bottom line
 
-With that input, the point-selection law closes exactly.
+With that input, the point-selection law is fixed exactly.
 
 The active generators are
 
@@ -58,7 +58,7 @@ Therefore
 - `r31,* = 1/2`
 - `phi_+,* = pi/2`.
 
-So the new input closes the exact `2`-real point-selection law itself.
+So the new input fixes the exact `2`-real point-selection law itself.
 
 ## Why this is the right kind of new input
 
@@ -159,10 +159,10 @@ projection of the origin to the boundary line. Therefore
 `delta_* = q_+* = sqrt(6)/3`, equivalently
 `rho_* = sqrt(6)/3`, `r31,* = 1/2`, and `phi_+,* = pi/2`.
 
-## What this closes
+## What this supports
 
-This closes the exact `2`-real point-selection law itself, once the new input
-is accepted.
+This gives an exact conditional comparison theorem for the live `2`-real
+point-selection law, once the new input is accepted.
 
 The branch can now say more sharply:
 

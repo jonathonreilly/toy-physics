@@ -27,6 +27,9 @@ Answer:
       delta_* = q_+* = sqrt(6)/3.
 
   Therefore rho_* = sqrt(6)/3, r31,* = 1/2, and phi_+,* = pi/2.
+
+Status:
+  exact conditional support theorem, not theorem-native selector closure.
 """
 
 from __future__ import annotations
@@ -209,9 +212,9 @@ def part3_the_selected_point_has_exact_carrier_and_doublet_block_data() -> None:
     )
 
 
-def part4_the_note_records_the_new_input_and_closed_form_selector() -> None:
+def part4_the_note_records_the_conditional_support_status() -> None:
     print("\n" + "=" * 88)
-    print("PART 4: THE NOTE RECORDS THE NEW INPUT AND CLOSED-FORM SELECTOR")
+    print("PART 4: THE NOTE RECORDS THE CONDITIONAL SUPPORT STATUS")
     print("=" * 88)
 
     note = read("docs/DM_NEUTRINO_SOURCE_SURFACE_MINIMAL_ACTIVE_DISPLACEMENT_SELECTOR_THEOREM_NOTE_2026-04-16.md")
@@ -220,6 +223,10 @@ def part4_the_note_records_the_new_input_and_closed_form_selector() -> None:
         "The note records the new variational input on the active displacement",
         "minimizing the Frobenius size of the active" in note
         and "Delta_H,act" in note,
+    )
+    check(
+        "The note records this result as a conditional support theorem rather than old-bank closure",
+        "conditional support theorem" in note and "input-driven" in note,
     )
     check(
         "The note records the exact selected law delta_* = q_+* = sqrt(6)/3",
@@ -240,16 +247,17 @@ def main() -> int:
     part1_the_active_generators_define_an_exact_euclidean_selector_problem()
     part2_the_exact_half_plane_has_a_unique_minimizer()
     part3_the_selected_point_has_exact_carrier_and_doublet_block_data()
-    part4_the_note_records_the_new_input_and_closed_form_selector()
+    part4_the_note_records_the_conditional_support_status()
 
     print("\n" + "=" * 88)
     print("RESULT")
     print("=" * 88)
-    print("  Exact answer with the new input:")
+    print("  Exact conditional answer with the new input:")
     print("    - S_act(delta,q_+) = ||delta T_delta + q_+ T_q||_F^2 = 6(delta^2 + q_+^2)")
     print("    - the exact admissible domain is q_+ >= sqrt(8/3) - delta")
     print("    - the unique minimizer is delta_* = q_+* = sqrt(6)/3")
     print("    - therefore rho_* = sqrt(6)/3, r31,* = 1/2, phi_+,* = pi/2")
+    print("    - this remains a conditional support theorem, not old-bank-only closure")
     print()
     print(f"PASS={PASS_COUNT} FAIL={FAIL_COUNT}")
     return 0 if FAIL_COUNT == 0 else 1
