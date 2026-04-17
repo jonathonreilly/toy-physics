@@ -1,7 +1,7 @@
 # Gauge-Vacuum Plaquette Source-Sector Matrix-Element Factorization Theorem
 
 **Date:** 2026-04-17
-**Status:** exact source-sector factorization theorem on the finite Wilson `3 spatial + 1 derived-time` source surface; the exact diagonal mixed-kernel character coefficients at `beta = 6` are now locally factored, but the residual environment-response sequence still remains open
+**Status:** exact source-sector factorization theorem on the finite Wilson `3 spatial + 1 derived-time` source surface; the exact residual diagonal source-sector operator at `beta = 6` is explicit at the factorized level, and the mixed-kernel part is now known to localize to the exact marked-link factor after trivial-channel normalization
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_source_sector_matrix_element_factorization.py`
 
 ## Question
@@ -29,7 +29,8 @@ where:
 - `exp(3 J)` is the exact half-slice spatial plaquette multiplier on the marked
   plaquette,
 - `D_6` is the exact positive self-adjoint diagonal operator of the compressed
-  mixed-plaquette kernel in the `SU(3)` character basis:
+  residual source-sector kernel after the two marked half-slice multipliers are
+  stripped, in the `SU(3)` character basis:
   `D_6 chi_(p,q) = kappa_(p,q)(6) chi_(p,q)`.
 
 So the source-sector matrix elements are now explicit:
@@ -41,11 +42,10 @@ This closes the previously open “explicit source-sector matrix element” step
 
 What remains open is narrower:
 
-> identify the residual environment-response sequence inside
-> `kappa_(p,q)(6) = a_(p,q)(6)^4 epsilon_(p,q)(6)`,
-> after the exact local Wilson marked-link factor `a_(p,q)(6)^4` is removed,
-> and therefore the exact Perron state of this now-explicit factorized
-> operator.
+> identify the residual source-sector environment data beyond the normalized
+> mixed-kernel local factor `a_(p,q)(6)^4`,
+> and therefore the exact Perron state of the now-explicit factorized
+> source-sector operator.
 
 ## Setup
 
@@ -82,13 +82,13 @@ At the framework point `beta = 6`,
 
 `M_3 = exp(3 J)`.
 
-## Theorem 2: exact mixed-kernel compression is central and diagonal in characters
+## Theorem 2: exact residual source-sector compression is central and diagonal in characters
 
 Strip off the two exact marked half-slice multipliers from the one-clock Wilson
-kernel and compress the remaining mixed-plaquette part to the marked-plaquette
+kernel and compress the remaining source-sector part to the marked-plaquette
 class-function sector. Call the resulting operator `C_beta`.
 
-Because the Wilson mixed-plaquette weight is real, positive, and invariant
+Because the remaining Wilson source-sector weight is real, positive, and invariant
 under simultaneous conjugation of the marked plaquette holonomies, `C_beta` is:
 
 - positive,
@@ -109,7 +109,7 @@ Conjugation symmetry gives
 ## Corollary 1: exact source-sector matrix elements
 
 Combining the exact marked half-slice multipliers and the exact diagonal
-mixed-kernel compression,
+residual source-sector compression,
 
 `T_src(beta) = exp[(beta / 2) J] D_beta exp[(beta / 2) J]`,
 
@@ -142,10 +142,11 @@ It is now exactly:
 The new local/environment factorization theorem on `main` sharpens that one
 step further:
 
-- the exact four marked-link Wilson contribution is explicit:
-  `kappa_(p,q)(6) = a_(p,q)(6)^4 epsilon_(p,q)(6)`;
-- so the remaining open object is the residual environment-response sequence
-  `epsilon_(p,q)(6)`, not the whole mixed-kernel coefficient stack.
+- the normalized mixed-kernel part is already exactly the local four-link
+  Wilson factor `a_(p,q)(6)^4`;
+- so the remaining open object is residual source-sector environment data
+  beyond that normalized mixed-kernel local factor, not hidden mixed-kernel
+  coefficient freedom.
 
 That is the sharply reduced constructive target.
 
@@ -160,8 +161,8 @@ That is the sharply reduced constructive target.
 
 ## What this does not close
 
-- explicit values of the residual environment-response coefficients
-  `epsilon_(p,q)(6)`
+- explicit residual source-sector environment data beyond the normalized
+  mixed-kernel local factor
 - explicit `beta = 6` Perron moments or Jacobi coefficients
 - analytic closure of canonical `P(6)`
 - repo-wide repinning of the canonical plaquette

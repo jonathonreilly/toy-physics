@@ -1,7 +1,7 @@
 # Gauge-Vacuum Plaquette Local / Environment Factorization Theorem
 
 **Date:** 2026-04-17
-**Status:** exact source-sector sharpening theorem on the accepted Wilson `3 spatial + 1 derived-time` source surface; the remaining open object is the residual environment-response sequence after the exact local Wilson marked-link factor is removed
+**Status:** exact mixed-kernel locality theorem on the accepted Wilson `3 spatial + 1 derived-time` source surface; after trivial-channel normalization the mixed-kernel source-sector action is exactly the local Wilson marked-link factor, so the remaining open object is residual source-sector environment data outside that normalized mixed kernel
 **Script:** `scripts/frontier_gauge_vacuum_plaquette_local_environment_factorization.py`
 
 ## Question
@@ -10,45 +10,37 @@ After the exact source-sector factorization
 
 `T_src(6) = exp(3 J) D_6 exp(3 J)`,
 
-is the whole diagonal coefficient sequence `D_6` still equally open, or can any
-part of it now be identified exactly?
+does the residual diagonal source-sector datum really remain open already inside
+the normalized mixed-kernel part, or does the mixed kernel localize more
+strongly than that?
 
 ## Answer
 
-Yes. One exact part can now be identified.
+It localizes more strongly.
 
-In temporal gauge, the mixed one-step Wilson kernel factorizes exactly over the
-spatial links. On the marked plaquette, the four links of the plaquette loop
-therefore contribute one exact local Wilson convolution factor each.
+In temporal gauge, the one-step Wilson mixed kernel factorizes exactly over the
+spatial links. On the marked plaquette source sector:
 
-That local link contribution is explicit in the `SU(3)` character basis:
+- each of the four marked links contributes one explicit normalized Wilson
+  convolution eigenvalue `a_(p,q)(beta)`,
+- every non-marked mixed-link factor acts only through the trivial irrep on the
+  marked plaquette class-function sector and therefore contributes a
+  rep-independent scalar.
 
-`a_(p,q)(beta) = c_(p,q)(beta) / (d_(p,q) c_(0,0)(beta))`,
+So after dividing out the trivial-channel scalar, the normalized mixed-kernel
+compression is exactly
 
-with:
+`D_beta^mix,norm chi_(p,q) = a_(p,q)(beta)^4 chi_(p,q)`.
 
-- `d_(p,q) = (p+1)(q+1)(p+q+2)/2`,
-- `c_(p,q)(beta)` the exact Wilson class-function coefficient
-  `sum_n det[I_(n + lambda_j + i - j)(beta/3)]`,
-- `lambda = (p+q, q, 0)`.
+That means the mixed kernel itself contributes no further nonlocal
+representation-dependent environment sequence.
 
-Because the marked plaquette loop contains exactly four links, the exact local
-marked-link contribution on the plaquette character sector is
+The still-open object is therefore narrower and cleaner than the previous
+mixed-kernel phrasing suggested:
 
-`D_beta^loc chi_(p,q) = a_(p,q)(beta)^4 chi_(p,q)`.
-
-Therefore the full source-sector diagonal coefficient sequence factors as
-
-`kappa_(p,q)(beta) = a_(p,q)(beta)^4 epsilon_(p,q)(beta)`,
-
-with `epsilon_(p,q)(beta) >= 0` the residual environment-response sequence.
-
-So the exact remaining constructive target is no longer the whole `D_6`. It is
-the residual environment sequence
-
-`E_6 chi_(p,q) = epsilon_(p,q)(6) chi_(p,q)`.
-
-That is the sharpened open object.
+> the remaining framework-point ambiguity is residual source-sector environment
+> data beyond the normalized mixed kernel, not hidden mixed-kernel coefficient
+> freedom on top of the exact local Wilson marked-link factor.
 
 ## Setup
 
@@ -59,112 +51,108 @@ From the exact transfer-operator / source-sector factorization stack already on
   operator,
 - the local plaquette source is the explicit class-function operator
   `J = (chi_(1,0) + chi_(0,1)) / 6`,
-- the `beta = 6` source-sector transfer law factorizes as
-  `T_src(6) = exp(3 J) D_6 exp(3 J)`,
-- and `D_6` is a positive conjugation-symmetric diagonal operator in the
-  `SU(3)` character basis.
+- the `beta = 6` source-sector transfer law factors through the exact marked
+  half-slice multiplier `exp(3 J)` and one residual positive diagonal
+  source-sector operator,
+- and the mixed one-step Wilson kernel factorizes exactly over spatial links in
+  temporal gauge.
 
-What remained open was the constructive identification of that diagonal
-sequence.
+The question is whether that mixed-kernel part already contains residual
+representation-dependent environment freedom after the exact local marked-link
+factor is stripped off.
 
 ## Theorem 1: exact one-link Wilson convolution coefficients
 
-Fix one spatial link on one mixed plaquette in temporal gauge. Its mixed
-Wilson weight is the central class function
+Fix one spatial link on one mixed plaquette in temporal gauge. Its mixed Wilson
+weight is the central class function
 
 `w_beta(g) = exp[(beta / 3) Re Tr g]`.
 
 By the `SU(3)` character expansion of the Wilson class function,
 
-`w_beta(g) = sum_(p,q) d_(p,q) a_(p,q)(beta) chi_(p,q)(g)`,
-
-with explicit coefficients
-
-`a_(p,q)(beta) = c_(p,q)(beta) / (d_(p,q) c_(0,0)(beta))`,
-
-and
-
-`c_(p,q)(beta)
- = sum_(n in Z) det[I_(n + lambda_j + i - j)(beta/3)]_(i,j=1)^3`,
-
-for `lambda = (p+q, q, 0)`.
-
-Therefore convolution by `w_beta` acts on each irreducible matrix coefficient
-of type `(p,q)` by the exact scalar `a_(p,q)(beta)`.
-
-## Theorem 2: exact four-link marked-plaquette local factor
-
-On the accepted Wilson `3+1` surface, the marked plaquette loop contains
-exactly four spatial links.
-
-After temporal gauge fixing on one clock step, the mixed kernel factorizes
-exactly over the spatial links. So on the plaquette character
-`chi_(p,q)(U_1 U_2 U_3^dag U_4^dag)`, the four marked link convolutions act
-independently and each contributes the same scalar `a_(p,q)(beta)`.
-
-Hence the exact local marked-link factor on the plaquette character sector is
-
-`D_beta^loc chi_(p,q) = a_(p,q)(beta)^4 chi_(p,q)`.
-
-This is exact and no longer open.
-
-## Corollary 1: exact local / environment factorization of the mixed-kernel coefficients
-
-Split the mixed one-step kernel into:
-
-- the four marked link factors,
-- the remaining environment factors.
-
-These pieces commute before source-sector compression because they act on
-disjoint link sets. On the marked plaquette character sector, the first piece is
-already the scalar `a_(p,q)(beta)^4`.
-
-So the full diagonal mixed-kernel coefficients must factor as
-
-`kappa_(p,q)(beta) = a_(p,q)(beta)^4 epsilon_(p,q)(beta)`,
-
-with `epsilon_(p,q)(beta) >= 0` and
-`epsilon_(p,q)(beta) = epsilon_(q,p)(beta)`.
-
-Equivalently,
-
-`D_beta = D_beta^loc E_beta`,
+`w_beta(g) = c_(0,0)(beta) sum_(p,q) d_(p,q) a_(p,q)(beta) chi_(p,q)(g)`,
 
 with:
 
-- `D_beta^loc chi_(p,q) = a_(p,q)(beta)^4 chi_(p,q)`,
-- `E_beta chi_(p,q) = epsilon_(p,q)(beta) chi_(p,q)`.
+- `a_(0,0)(beta) = 1`,
+- `d_(p,q) = (p+1)(q+1)(p+q+2)/2`,
+- `a_(p,q)(beta) = c_(p,q)(beta) / (d_(p,q) c_(0,0)(beta))`,
+- `c_(p,q)(beta)
+   = sum_(n in Z) det[I_(n + lambda_j + i - j)(beta/3)]_(i,j=1)^3`,
+- `lambda = (p+q, q, 0)`.
 
-## Corollary 2: sharpened remaining gap
+Therefore normalized one-link Wilson convolution acts on each irreducible
+matrix coefficient of type `(p,q)` by the exact scalar `a_(p,q)(beta)`.
 
-The constructive plaquette gap is therefore narrower than it was in the older
-`D_6` phrasing.
+## Theorem 2: non-marked mixed-link factors are scalar on the marked source sector
+
+Let `f(W)` be any class function of the marked plaquette holonomy `W`.
+
+If a mixed-kernel link factor acts on a spatial link not belonging to the
+marked plaquette loop, then `f(W)` is independent of that link variable.
+
+So normalized convolution by that non-marked link factor acts by
+
+`C_ell^norm f = f`,
+
+because only the trivial irrep is seen on that link and `a_(0,0)(beta) = 1`.
+
+Equivalently, before trivial-channel normalization each non-marked mixed-link
+factor contributes the same scalar `c_(0,0)(beta)` independently of `(p,q)`.
+
+Therefore all non-marked mixed-link factors collapse to one rep-independent
+scalar on the marked plaquette source sector.
+
+## Theorem 3: the normalized mixed-kernel compression is exactly local
+
+On the accepted Wilson `3+1` source surface, the marked plaquette loop contains
+exactly four spatial links.
+
+Each marked-link factor contributes the normalized irrep eigenvalue
+`a_(p,q)(beta)`, while every non-marked mixed-link factor contributes only a
+rep-independent scalar.
+
+Hence after trivial-channel normalization the full mixed-kernel compression on
+the marked plaquette character sector is exactly
+
+`D_beta^mix,norm chi_(p,q) = a_(p,q)(beta)^4 chi_(p,q)`.
+
+So there is no remaining nonlocal representation-dependent mixed-kernel freedom
+after the exact local Wilson marked-link factor is stripped off.
+
+## Corollary 1: the remaining open object is not mixed-kernel coefficient freedom
+
+The constructive plaquette gap is therefore sharper than the previous
+source-sector phrasing suggested.
 
 What is still open is not:
 
-- the exact local Wilson marked-link contribution,
-- nor the exact source-sector factorization law itself.
+- the normalized mixed-kernel diagonal coefficient sequence,
+- nor any hidden mixed-kernel environment sequence on top of
+  `a_(p,q)(6)^4`.
 
 What remains open is:
 
-> the exact residual environment-response sequence `epsilon_(p,q)(6)`,
-> equivalently the Perron state of
-> `exp(3 J) D_6^loc E_6 exp(3 J)` after the exact local Wilson factor
-> `D_6^loc` is stripped off.
+> the residual source-sector environment operator beyond the normalized mixed
+> kernel, equivalently the framework-point Perron state of the full exact
+> source-sector transfer law after the mixed-kernel local factor has been
+> identified.
 
 ## What this closes
 
-- exact temporal-gauge reduction of the mixed kernel to one-link Wilson
-  convolution factors on the marked plaquette
-- exact `SU(3)` character coefficients of the one-link Wilson class function
-- exact four-link local marked-plaquette factor `a_(p,q)(beta)^4`
-- exact narrowing of the remaining open source-sector datum from the whole
-  `D_6` sequence to the residual environment-response sequence `E_6`
+- exact normalized one-link Wilson convolution coefficients on the mixed kernel
+- exact proof that non-marked mixed-link factors act only by a trivial-channel
+  scalar on the marked source sector
+- exact proof that the normalized mixed-kernel compression is exactly the local
+  four-link Wilson factor `a_(p,q)(beta)^4`
+- exact relocation of the remaining plaquette gap away from hidden mixed-kernel
+  coefficient freedom and into residual source-sector environment data
 
 ## What this does not close
 
-- explicit values of `epsilon_(p,q)(6)`
-- explicit `beta = 6` Perron moments after the environment factor is included
+- explicit residual source-sector environment data at `beta = 6`
+- explicit `beta = 6` Perron moments after the full source-sector environment
+  is included
 - analytic closure of canonical `P(6)`
 - repo-wide repinning of the canonical plaquette
 
