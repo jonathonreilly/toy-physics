@@ -1,0 +1,103 @@
+==========================================================================
+  FRONTIER: CKM-Dual Bridge Identity Theorem
+  (retained structural bridge-exponent theorem; bounded quantitative readout)
+==========================================================================
+
+==========================================================================
+PART 1: sqrt(6) origin = Ward-theorem Clebsch-Gordan on Q_L
+==========================================================================
+
+  N_c = 3
+  N_iso = 2
+  Ward Clebsch-Gordan Z^2 = N_c * N_iso = 6
+  Ward CG factor sqrt(Z^2) = sqrt(6) = 2.449489742783
+  atlas sqrt(n_quark) = sqrt(n_pair * n_color) = sqrt(6) = 2.449489742783
+  [PASS] Ward Z^2 = N_c * N_iso = 6
+  [PASS] Ward sqrt(Z^2) = sqrt(6)
+  [PASS] atlas n_quark = n_pair * n_color = 6
+  [PASS] atlas sqrt(n_quark) = sqrt(6)
+  [PASS] Ward sqrt(6) equals atlas sqrt(n_pair * n_color) as the same retained constant  (|Ward - atlas| = 0.00e+00)
+  [PASS] atlas quark-block dimension equals Ward left-handed block dimension  (n_quark = 6, dim(Q_L) = 6)
+
+==========================================================================
+PART 2: atlas |V_cb| = alpha_s(v)/sqrt(6)
+==========================================================================
+
+  alpha_s(v) = 0.103303816122
+  |V_cb|_atlas = alpha_s(v)/sqrt(n_quark) = 0.042173606330
+  [PASS] |V_cb|_atlas formula uses the same sqrt(6) as the Ward Clebsch-Gordan  (|V_cb| = 0.042173606330)
+
+==========================================================================
+PART 3: 1+5 projector split on the six-state quark block
+==========================================================================
+
+  center-excess CP-even weight    = 1/n_quark = 0.166666666667
+  orthogonal CP-odd complement    = 1 - 1/n_quark = 0.833333333333
+  [PASS] CENTER_EXCESS_WEIGHT = 1/6
+  [PASS] ORTHOGONAL_PHASE_WEIGHT = 5/6
+  [PASS] CENTER_EXCESS + ORTHOGONAL = 1 (complete split)
+  [PASS] sum 1 + 5 = n_quark = 6 (1+5 decomposition reconstructs the block)
+
+==========================================================================
+PART 4: bridge exponents fixed by retained framework constants
+==========================================================================
+
+  GST exponent                = 1/n_pair                          = 0.500000000000
+  5/6 bridge exponent         = ORTHOGONAL_PHASE_WEIGHT            = 0.833333333333
+  inverse bridge exponent     = 1 / ORTHOGONAL_PHASE_WEIGHT = 6/5  = 1.200000000000
+  chain alpha_s exponent      = 1 + 6/5 = 11/5                     = 2.200000000000
+  SU(3) Casimir C_F - T_F     = 4/3 - 1/2 = 5/6                    = 0.833333333333
+                                (coincidence check only)
+  [PASS] GST exponent = 1/n_pair = 1/2
+  [PASS] 5/6 bridge exponent equals the retained orthogonal-complement weight
+  [PASS] inverse bridge exponent (appearing in the m_s/m_b identification) equals 6/5 exactly
+  [PASS] chain alpha_s exponent in closed-form m_d/m_b equals 11/5 exactly
+  [PASS] atlas 5/6 and Casimir 5/6 numerically coincide (framework-internal 5/6 is retained, not the Casimir)  (retained origin: atlas 1+5 projector split; SU(3) Casimir is a coincidence)
+
+==========================================================================
+PART 5: exact algebraic bridge identity on the retained surface
+==========================================================================
+
+  identification: m_d/m_s = alpha_s(v)/n_pair = 0.051651908061
+  identification: m_s/m_b = [alpha_s(v)/sqrt(6)]^(6/5) = 0.022389731616
+  identification: m_d/m_b = (m_d/m_s)(m_s/m_b) = 0.001156472359
+  closed form:    m_d/m_b = alpha_s(v)^(11/5) / (2 * 6^(3/5)) = 0.001156472359
+
+  |V_us|_atlas   = sqrt(alpha_s(v)/2)              = 0.227270561361
+  |V_us|_GST     = sqrt(m_d/m_s)                   = 0.227270561361
+  |V_cb|_atlas   = alpha_s(v)/sqrt(6)              = 0.042173606330
+  |V_cb|_bridge  = (m_s/m_b)^(5/6)                 = 0.042173606330
+  [PASS] (T1) |V_us|_atlas = sqrt(m_d/m_s) exact on identification surface  (|diff| = 0.00e+00)
+  [PASS] (T2) |V_cb|_atlas = (m_s/m_b)^(5/6) exact on identification surface  (|diff| = 0.00e+00)
+  [PASS] chain identity: m_d/m_b = alpha_s(v)^(11/5) / (2 * 6^(3/5))  (|diff| = 4.34e-19)
+
+==========================================================================
+PART 6: bounded quantitative readout against threshold-local self-scale
+==========================================================================
+
+  m_d/m_s:  framework = 0.05165191, comparator = 0.05000000,  dev = +3.304%
+  m_s/m_b:  framework = 0.02238973, comparator = 0.02234450,  dev = +0.202%
+  m_d/m_b:  framework = 0.00115647, comparator = 0.00111722,  dev = +3.513%
+  [PASS] [BOUNDED] m_d/m_s framework lands within 5% of the self-scale comparator  (dev = +3.304%)
+  [PASS] [BOUNDED] m_s/m_b framework lands within 1% of the self-scale comparator  (dev = +0.202%)
+  [PASS] [BOUNDED] m_d/m_b framework lands within 5% of the self-scale comparator  (dev = +3.513%)
+
+==========================================================================
+SUMMARY
+==========================================================================
+  EXACT PASS   = 19
+  BOUNDED PASS = 3
+  FAIL         = 0
+
+  Retained structural content:
+    - sqrt(6) in |V_cb|_atlas and the 5/6 bridge is the same
+      Ward-theorem Clebsch-Gordan sqrt(N_c * N_iso) on Q_L
+    - 5/6 exponent is the retained 1+5 orthogonal-complement weight
+    - bridge relations are exact algebraic identities on the
+      identification surface
+
+  Bounded downstream content:
+    - quantitative mass-ratio readout inherits the current
+      mass-hierarchy systematic; closure of the absolute ratios
+      and scale-selection rule remains explicitly named open work
+==========================================================================

@@ -658,11 +658,18 @@ corollary:
   exactly, $d_n^{\mathrm{QCD}}=0$ and the surviving neutron-EDM signal is
   CKM-only; bounded continuation gives
   $d_n^{\mathrm{CKM}} \sim 8\times 10^{-33}\,e\,\mathrm{cm}$;
-- down-type flavor-mass CKM-dual lane:
+- down-type flavor-mass CKM-dual lane
+  (retained structural bridge-identity theorem + bounded quantitative readout):
+  the $\sqrt{6}$ in $|V_{cb}|_{\mathrm{atlas}}$ and in the $5/6$ bridge is the
+  retained Ward Clebsch-Gordan $\sqrt{N_c \cdot N_{iso}}$ on $Q_L$, the GST
+  exponent $1/2$ is $1/n_{\mathrm{pair}}$, and the $5/6$ bridge exponent is
+  the atlas $1 + 5$ orthogonal-complement projector weight on the six-state
+  $Q_L$ block; on this retained surface
   $m_d/m_s = 0.05165$, $m_s/m_b = 0.02239$, and $m_d/m_b = 0.001156$
   against the threshold-local PDG self-scale comparator
-  $m_s(2\,\mathrm{GeV})/m_b(m_b)$, with theorem-grade closure of the exact
-  $5/6$ scale surface still open;
+  $m_s(2\,\mathrm{GeV})/m_b(m_b)$, with the framework-internal RG/transport
+  derivation of the mass-ratio identification surface and the scale-selection
+  rule still open;
 - vacuum critical stability on the current $\lambda(M_{\mathrm{Pl}})=0$ route;
 - taste-scalar near-degeneracy companion:
   exact taste-block fermion-CW isotropy plus bounded gauge-only split gives

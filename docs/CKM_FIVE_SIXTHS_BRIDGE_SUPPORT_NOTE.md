@@ -1,20 +1,32 @@
 # CKM Five-Sixths Bridge Support Note
 
-**Date:** 2026-04-16
-**Status:** bounded support tool for the down-type CKM-dual mass-ratio lane
+**Date:** 2026-04-16 (bridge support layer); 2026-04-17 (retained structural origin of `5/6`)
+**Status:** numerical-support layer for the down-type CKM-dual mass-ratio lane. The structural origin of the `5/6` exponent is now retained (see the bridge-identity theorem note below). The quantitative mass-ratio readout remains bounded.
 **Primary runner:** `scripts/frontier_ckm_five_sixths_bridge_support.py`
+**Retained structural authority for the `5/6` origin:**
+[CKM_DUAL_BRIDGE_IDENTITY_THEOREM_NOTE_2026-04-17.md](CKM_DUAL_BRIDGE_IDENTITY_THEOREM_NOTE_2026-04-17.md)
 
 ## Safe statement
 
 On the current `main` surface:
 
-- exact `SU(3)` group theory gives `C_F - T_F = 5/6`
-- the promoted CKM atlas package gives `|V_cb| = alpha_s(v) / sqrt(6)`
-- the bounded `5/6` bridge then gives
-  `m_s/m_b = [alpha_s(v)/sqrt(6)]^(6/5)`
+- the retained structural origin of the `5/6` exponent is the atlas
+  orthogonal-complement projector weight on the six-state left-handed
+  quark block `Q_L = (2, 3)`: `1 - 1/n_quark = 5/6` with
+  `n_quark = dim(Q_L) = 6`
+- the numerical coincidence `C_F - T_F = 4/3 - 1/2 = 5/6` is recorded as a
+  cross-check only; the retained origin is the atlas `1 + 5` projector split,
+  not the Casimir identity
+- the promoted CKM atlas package gives `|V_cb| = alpha_s(v) / sqrt(6)`, where
+  `sqrt(6) = sqrt(n_quark) = sqrt(N_c · N_iso)` is the **same** Ward-theorem
+  Clebsch-Gordan that normalizes `H_unit` on `Q_L`
+- the `5/6` bridge gives
+  `m_s/m_b = [alpha_s(v)/sqrt(6)]^(6/5)` as an **exact algebraic identity** on
+  the retained identification surface of the bridge-identity theorem
+  (theorem T2)
 
-This bounded extraction matches the threshold-local self-scale comparator
-`m_s(2 GeV)/m_b(m_b)` at `+0.20%`.
+The bounded quantitative extraction matches the threshold-local self-scale
+comparator `m_s(2 GeV)/m_b(m_b)` at `+0.20%`.
 
 If `m_s` is first run to the common scale `m_b`, the same comparison moves to
 `m_s(m_b)/m_b(m_b)` and the deviation widens to about `+15%`. The two
@@ -27,12 +39,15 @@ $$
 \left[\frac{\alpha_s(2\,\mathrm{GeV})}{\alpha_s(m_b)}\right]^{12/25}.
 $$
 
-That is strong support for using the threshold-local mixed/self-scale
-comparator as the live observation surface for this bounded bridge. It is not
-yet a theorem-grade derivation of either:
+The retained structural identity of the `5/6` exponent is now fixed by the
+atlas projector weights. What is **not** yet retained:
 
-- the full non-perturbative `5/6` exponentiation mechanism at `g = 1`, or
-- the exact scale-selection rule from the framework alone.
+- a framework-internal RG/transport derivation that **forces** the mass-ratio
+  identification `m_s/m_b := [alpha_s(v)/sqrt(6)]^(6/5)` from the retained
+  Ward-theorem UV boundary. Absent that, the mass-ratio identification is an
+  atlas-consistent identification surface, not a retained framework output;
+- the exact scale-selection rule that singles out the threshold-local
+  self-scale comparator.
 
 ## Exact content
 

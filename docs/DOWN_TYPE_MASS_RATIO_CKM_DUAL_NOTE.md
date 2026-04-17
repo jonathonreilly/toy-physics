@@ -1,33 +1,48 @@
 # Down-Type Mass Ratios from the CKM Dual
 
-**Date:** 2026-04-16
-**Status:** bounded secondary flavor-mass lane
+**Date:** 2026-04-16 (original); 2026-04-17 (structural bridge exponents retained)
+**Status:** retained structural bridge-identity theorem + bounded quantitative mass-ratio readout (confinement-pattern split status)
 **Primary runner:** `scripts/frontier_mass_ratio_ckm_dual.py`
+**Retained structural authority:**
+[CKM_DUAL_BRIDGE_IDENTITY_THEOREM_NOTE_2026-04-17.md](CKM_DUAL_BRIDGE_IDENTITY_THEOREM_NOTE_2026-04-17.md)
+(companion runner: `scripts/frontier_ckm_dual_bridge_identity.py`)
 
 ## Safe statement
 
 On the current live package surface, the promoted CKM atlas/axiom closure and
-the canonical same-surface value `alpha_s(v) = 0.103303816122` imply a bounded
-down-type flavor-mass lane:
+the canonical same-surface value `alpha_s(v) = 0.103303816122` combine with
+the retained CKM-Dual Bridge Identity Theorem to give a down-type flavor-mass
+lane with the following split status:
 
-- `m_d/m_s = alpha_s(v) / 2`
-- `m_s/m_b = [alpha_s(v) / sqrt(6)]^(6/5)`
-- `m_d/m_b = (m_d/m_s) (m_s/m_b)`
+- **retained structural layer** — the bridge exponents are framework
+  constants, not free bridge parameters:
+  - `sqrt(6)` in `|V_cb| = alpha_s(v)/sqrt(6)` and in the `5/6` bridge is the
+    retained Ward-theorem Clebsch-Gordan `sqrt(N_c · N_iso) = sqrt(dim(Q_L))`
+  - the `1/2` GST exponent is the atlas structural count `1/n_pair`
+  - the `5/6` bridge exponent is the atlas orthogonal-complement projector
+    weight `1 - 1/n_quark` on the six-state `Q_L` block
+  - GST `|V_us| = sqrt(m_d/m_s)` and the `5/6` bridge
+    `|V_cb| = (m_s/m_b)^(5/6)` are exact algebraic identities on the retained
+    identification surface
+
+- **bounded quantitative layer** — the identification surface itself is an
+  atlas-consistent choice and inherits the mass-hierarchy systematic:
+  - `m_d/m_s = alpha_s(v) / 2`
+  - `m_s/m_b = [alpha_s(v) / sqrt(6)]^(6/5)`
+  - `m_d/m_b = (m_d/m_s) (m_s/m_b) = alpha_s(v)^(11/5) / (2 * 6^(3/5))`
 
 No observed quark masses are used as derivation inputs.
 
-This lane is **bounded**, not retained or theorem-grade, because it depends on
-two bridge steps outside the exact internal core:
+This pattern mirrors the retained confinement row: a retained structural
+theorem fixing the form, with a bounded quantitative downstream readout. What
+is **not** retained is the RG/transport derivation that would force the
+mass-ratio identification surface itself from the retained Ward-theorem UV
+boundary — this remains the named open work for a full quantitative lane
+promotion.
 
-- the standard leading-order GST relation for `|V_us|`
-- the `|V_cb| = (m_s/m_b)^(5/6)` mass-ratio bridge
-
-Both bridges now have explicit current-`main` support notes. The lane is still
-bounded because neither bridge is yet promoted to the retained theorem core.
-
-The lane is still useful. It converts the promoted CKM package into a reusable
-down-type flavor-mass tool that can support later `y_b`, flavor-hierarchy, and
-flavor-dependent cosmology / baryogenesis work.
+The lane converts the promoted CKM package into a reusable down-type
+flavor-mass tool with retained exponent structure that can support later
+`y_b`, flavor-hierarchy, and flavor-dependent cosmology / baryogenesis work.
 
 ## Inputs and bridge structure
 

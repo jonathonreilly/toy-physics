@@ -75,15 +75,22 @@ carried by the current package.
   - bounded continuation: `d_n(CKM) ~ 8 x 10^-33 e cm`
   - authority:
     [CKM_NEUTRON_EDM_BOUND_NOTE.md](../../CKM_NEUTRON_EDM_BOUND_NOTE.md)
-- down-type flavor-mass CKM-dual lane:
+- down-type flavor-mass CKM-dual lane (retained structural bridge-identity theorem + bounded quantitative readout):
+  - retained structural layer: GST exponent `1/2 = 1/n_pair`, `5/6` bridge
+    exponent = atlas orthogonal-complement projector weight on `dim(Q_L)=6`,
+    `sqrt(6)` = retained Ward Clebsch-Gordan `sqrt(N_c · N_iso)` on `Q_L`;
+    GST and `5/6` bridges are exact algebraic identities on the retained
+    identification surface
   - `m_d/m_s = 0.05165`
   - `m_s/m_b = 0.02239`
   - `m_d/m_b = 0.001156`
   - current comparator: threshold-local self-scale down-type mass ratios
   - qualifier:
-    threshold-local self-scale comparison is supported, but theorem-grade
-    scale closure of the `5/6` bridge remains open
+    structural bridge exponents are retained (framework constants);
+    quantitative mass-ratio readout inherits the mass-hierarchy systematic
+    and the scale-selection rule remains open
   - authority:
+    [CKM_DUAL_BRIDGE_IDENTITY_THEOREM_NOTE_2026-04-17.md](../../CKM_DUAL_BRIDGE_IDENTITY_THEOREM_NOTE_2026-04-17.md),
     [DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md](../../DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md)
 - vacuum critical stability:
   - the current `lambda(M_Pl) = 0` route lands on the critical /

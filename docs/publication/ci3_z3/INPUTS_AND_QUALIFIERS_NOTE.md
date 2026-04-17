@@ -90,13 +90,16 @@ bridge layer beyond the exact structural core.
   - retained strong-CP closure package + promoted CKM package
   - exact corollary `d_n(QCD) = 0` on the retained surface; EFT bridge only
     for the bounded `d_n(CKM)` number
-- down-type CKM-dual mass ratios:
-  - promoted CKM closure + GST + bounded `5/6` mass-ratio bridge; no observed
-    masses as derivation inputs
+- down-type CKM-dual mass ratios (retained structural bridge-identity theorem
+  + bounded quantitative readout):
+  - promoted CKM closure + retained CKM-dual bridge-identity theorem fixing
+    the GST exponent as `1/n_pair` and the `5/6` bridge exponent as the
+    atlas orthogonal-complement projector weight on the six-state `Q_L`
+    block; no observed masses as derivation inputs
   - current live comparison surface:
     threshold-local self-scale comparator `m_s(2 GeV)/m_b(m_b)`
-  - theorem-grade closure of the exact `5/6` bridge and exact scale-selection
-    rule remains open
+  - framework-internal RG/transport derivation of the mass-ratio
+    identification surface and exact scale-selection rule remain open
 - proton lifetime:
   - exact operator content + imported dimension-6 EFT decay-rate bridge
 - cosmology windows:

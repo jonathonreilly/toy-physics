@@ -137,9 +137,17 @@ Current package status:
   boundary remains
 - older bounded CKM mass-basis / Cabibbo / partial Jarlskog route history
 - cosmology bounded family such as `\Omega_\Lambda`, `n_s`, `w = -1`
-- bounded secondary predictions already on `main`, plus the CKM-only
-  neutron-EDM corollary with bounded continuation:
-  proton lifetime, down-type flavor-mass CKM-dual ratios, vacuum critical
+- CKM-only neutron-EDM corollary with bounded `d_n(CKM)` continuation on the
+  retained `\theta_{\mathrm{eff}} = 0` surface (retained structural corollary
+  + bounded quantitative readout)
+- retained bridge-identity theorem with bounded quantitative readout
+  (down-type CKM-dual mass-ratio lane): GST and `5/6` bridge exponents are
+  retained framework constants (Ward Clebsch-Gordan `\sqrt{6}` + atlas
+  `1 + 5` orthogonal-complement projector), with the quantitative mass-ratio
+  readout still bounded by the mass-hierarchy surface
+- bounded secondary predictions already on `main`:
+  proton lifetime, bounded quantitative down-type flavor-mass CKM-dual
+  ratios under the retained bridge-identity theorem, vacuum critical
   stability, taste-scalar near-degeneracy, benchmark gravitational
   decoherence
 

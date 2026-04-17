@@ -47,9 +47,13 @@ context, not part of the live reviewer path.
 - retained and promoted quantitative stack:
   canonical `v = 246.282818290129 GeV`, retained `alpha_s(M_Z) = 0.1181`,
   retained EW normalization, promoted CKM atlas/axiom closure,
+  retained CKM-dual bridge-identity theorem (GST and `5/6` bridge exponents
+  fixed by the retained Ward Clebsch-Gordan and the atlas `1+5`
+  orthogonal-complement projector on the six-state quark block),
   bounded Yukawa/top, and bounded Higgs/vacuum
 - bounded prediction surface:
-  proton lifetime, CKM neutron EDM, down-type flavor-mass CKM-dual ratios,
+  proton lifetime, CKM neutron EDM, bounded quantitative down-type flavor-mass
+  CKM-dual ratios (under the retained bridge-identity theorem),
   vacuum critical stability, benchmark gravitational decoherence,
   the bounded exact-lattice persistent-object companion, and bounded cosmology
   rows
