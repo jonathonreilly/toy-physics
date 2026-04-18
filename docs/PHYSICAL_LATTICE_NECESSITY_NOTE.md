@@ -232,6 +232,24 @@ longer being read on that fixed quantitative surface.
 
 ### 5. Cross-lane invariant preservation collapses to the canonical point
 
+**Superseded as primary g_bare justification.** The argument in this
+section uses `alpha_s(v)` and `v` as observational invariants to force the
+canonical point, which is circular if the goal is to fix `g_bare = 1`
+without observational input. It is retained here only as a consistency
+diagnostic showing that no regulator-family deformation preserves both
+live package invariants away from `beta = 6`.
+
+The non-circular g_bare fixation now lives at:
+
+- [G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md](G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md)
+  (operator-algebra route)
+- [G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md](G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md)
+  (1PI amplitude route)
+
+Those notes derive `g_bare = 1` from structural retained content without
+using `alpha_s(v)` or `v` as inputs, which is the cleaner closure. This
+section is kept for the regulator-family diagnostic only.
+
 The boundary can be sharpened further without freezing `u_0` by hand.
 Write
 
