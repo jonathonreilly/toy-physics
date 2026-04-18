@@ -172,6 +172,38 @@ are still bounded.
 
 - full tensor-valued matching/completion theorem for general strong-field GR
 
+### `F07` Wilson two-body / Newton-companion lane
+
+**Status:** frozen out of the flagship paper surface; retained only as a live
+bounded side lane on `main`.
+**Why frozen out:** the open-boundary Wilson two-orbital channel is real and
+clean, and the same-convention weak-field companions materially strengthen the
+distance-law side, but the lane still does not close a full both-masses
+Newton law or action-reaction on the audited Wilson surface.
+
+**Captured work:**
+
+- open-boundary Wilson two-orbital mutual-attraction channel
+- screening-mass distance-law crossover toward Newton-compatible scaling
+- low-screening test-mass source scaling
+- same-convention continuum-limit distance-law extrapolation
+- normalization/reconciliation guardrails within the shared Wilson convention
+
+**Primary sources:**
+
+- [WILSON_TWO_BODY_OPEN_NOTE_2026-04-11.md](../../WILSON_TWO_BODY_OPEN_NOTE_2026-04-11.md)
+- [WILSON_MU2_DISTANCE_SWEEP_NOTE_2026-04-11.md](../../WILSON_MU2_DISTANCE_SWEEP_NOTE_2026-04-11.md)
+- [WILSON_TEST_MASS_CONTINUUM_NOTE_2026-04-11.md](../../WILSON_TEST_MASS_CONTINUUM_NOTE_2026-04-11.md)
+- [WILSON_NORMALIZATION_RECONCILIATION_NOTE_2026-04-11.md](../../WILSON_NORMALIZATION_RECONCILIATION_NOTE_2026-04-11.md)
+
+**Needed to unfreeze:**
+
+- a valid both-masses law on the same audited open Wilson surface
+- a clean equal-and-opposite action-reaction observable, not one dominated by
+  common Wilson-gap slowdown
+- only then any promotion from bounded Wilson companion to package-captured
+  Newton claim
+
 ### `F08` Branch-local inventories and stale strategy docs
 
 **Status:** frozen out as publication authority; retained only as branch-local inventory.  

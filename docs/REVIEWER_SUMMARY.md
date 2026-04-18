@@ -198,6 +198,24 @@ also live on `main`:
 It is useful for the atlas and later lane work, but it is not promoted as a
 flagship manuscript claim surface.
 
+Also outside the flagship spine, the Wilson two-body / Newton-companion lane
+remains live on `main` as a bounded side packet:
+
+- [WILSON_TWO_BODY_OPEN_NOTE_2026-04-11.md](WILSON_TWO_BODY_OPEN_NOTE_2026-04-11.md)
+- [WILSON_MU2_DISTANCE_SWEEP_NOTE_2026-04-11.md](WILSON_MU2_DISTANCE_SWEEP_NOTE_2026-04-11.md)
+- [WILSON_TEST_MASS_CONTINUUM_NOTE_2026-04-11.md](WILSON_TEST_MASS_CONTINUUM_NOTE_2026-04-11.md)
+
+The honest read there is:
+
+- clean open-boundary two-orbital mutual attraction is real
+- the distance exponent is screening-controlled and softens toward `-2`
+- the same-convention low-screening Wilson companions support Newton-compatible
+  weak-field scaling
+- full both-masses / action-reaction closure remains open
+
+So this lane is worth preserving and replaying, but it is intentionally not a
+current flagship manuscript claim surface.
+
 ## Review Rule
 
 - If a result is not in the publication matrix, it is not package-captured.

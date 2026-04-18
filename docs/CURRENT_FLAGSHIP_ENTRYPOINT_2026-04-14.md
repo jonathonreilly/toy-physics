@@ -89,6 +89,14 @@ packaging.
 - persistent exact-lattice compact-object companion on `main`, with a bounded
   beyond-pocket compact-object-plus-response regime and a mapped inward-source
   directional boundary; still below persistent inertial-mass / matter closure
+- bounded Wilson two-body / Newton-companion lane on `main`, but intentionally
+  outside publication capture: open-boundary Wilson dynamics gives a clean
+  genuine two-orbital mutual-attraction channel, the screening-mass sweep
+  softens the distance exponent toward `-2`, and the same-convention
+  weak-field test-mass / continuum companions support Newton-compatible
+  scaling on that Wilson surface; both-masses and action-reaction closure
+  remain open, so this stays a bounded side lane rather than part of the
+  flagship paper package
 - older bounded CKM mass-basis / Cabibbo / partial Jarlskog route history
 - mixed cosmology surface, organized around one fixed-gap vacuum scale:
   retained structural identity `Lambda_vac = lambda_1(S^3_R)`, retained
@@ -119,6 +127,10 @@ For optional historical context, use:
 - [work_history/publication/FROZEN_OUT_REGISTRY.md](work_history/publication/FROZEN_OUT_REGISTRY.md)
 - [work_history/publication/REMOTE_BRANCH_AUDIT_2026-04-14.md](work_history/publication/REMOTE_BRANCH_AUDIT_2026-04-14.md)
 - [work_history/repo/LANE_STATUS_BOARD.md](work_history/repo/LANE_STATUS_BOARD.md)
+
+For non-flagship live side lanes on current `main`, use:
+
+- [CANONICAL_HARNESS_INDEX.md](CANONICAL_HARNESS_INDEX.md)
 
 ## Front-Door Rule
 
