@@ -9,10 +9,12 @@
 RETAINED — this note closes the admissibility package of the
 family-scope native-gauge uniqueness theorem by deriving the three
 load-bearing conditions `(A2)`, `(A4)`, `(A5)` from the retained
-framework extension recipe on `Z^n`. After this closure the
-uniqueness theorem, previously conditional on `(A1)–(A5)`, is
-conditional only on a single retained recipe, and therefore lands
-as a retained-grade theorem.
+framework extension recipe on `Z^n` (Recipe-R). Recipe-R itself is
+retained-forced as of 2026-04-17 via the Recipe-R forcing theorem
+(`recipe-r-forcing-from-retained-n3-2026-04-17.md`), so the full
+chain `retained n=3 native-gauge authority ⟹ Recipe-R ⟹
+(A2, A4, A5) ⟹ V_n = Λ²(R^n)` stands at retained grade under the
+retained `n = 3` native-gauge authority alone.
 
 ## The Problem This Note Solves
 
@@ -287,9 +289,19 @@ From Here"):
 ## Bottom Line
 
 The family-scope native-gauge uniqueness theorem is upgraded from
-support-route / comparison-family conditional to retained-grade under
-a single framework-native recipe (Recipe-R), the retained `n = 3`
-construction extended verbatim to `Z^n`. With this closure,
-`V_n = Λ²(R^n)` at every `n ≥ 2`, and the tightness corollary
-`d_s = 3` is a retained-grade consequence under Recipe-R plus the
-retained weak-SU(2) observation.
+its original support-route / comparison-family conditional form to
+retained-grade under a single framework-native recipe (Recipe-R),
+the retained `n = 3` construction extended verbatim to `Z^n`. With
+this closure, `V_n = Λ²(R^n)` at every `n ≥ 2`, and the tightness
+corollary `d_s = 3` is a retained-grade consequence under Recipe-R
+plus the retained weak-SU(2) observation.
+
+The 2026-04-17 Recipe-R forcing theorem
+(`recipe-r-forcing-from-retained-n3-2026-04-17.md`) further closes
+the "why Recipe-R and not another" question: Recipe-R is retained-
+forced, not retained-chosen, via the (R1)+(R2)+(R3) conditions on
+the retained `n = 3` native-gauge identification, each of which is a
+retained-consequence of the retained `n = 3` authority + retained
+Clifford anticommutator. With that forcing, this closure's
+`A2 / A4 / A5` derivations rest on the retained `n = 3` authority
+alone, with no chosen family-scope rule in the chain.

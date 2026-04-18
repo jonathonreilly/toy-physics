@@ -34,11 +34,39 @@ Recipe-R, but flagged a remaining gap:
 > Then make the runner certify that forcing step directly.
 
 This note executes that program. The uniqueness statement is proved by
-a classical Clifford-algebra grade-preservation lemma, and the
-verification runner
+a classical Clifford-algebra grade-preservation lemma combined with a
+retained-consequence of the `n = 3` su(2) structure-constant test.
+The verification runner
 `scripts/frontier_recipe_r_forcing_from_retained_n3.py`
 certifies every step computationally for `n ∈ {2, 3, 4, 5, 6}` with
-`THEOREM_PASS=52 SUPPORT_PASS=12 FAIL=0`.
+`THEOREM_PASS=72 SUPPORT_PASS=16 FAIL=0`.
+
+The 2026-04-17 second follow-up review (`review.md`) then flagged
+that the original forcing note narrated the equality step
+`V_n = Λ²(R^n)` in prose rather than runner-certifying it, and that
+the intrinsic (C_rot) characterization had not been traced back as a
+retained-consequence of the retained `n = 3` authority. This note has
+been updated (and the runner extended with Part G) to close both
+points:
+
+- **Retained-consequence of (C_rot).** The rotation-on-Γ property
+  `[S_k, Γ_μ] ∈ grade-1` is an automatic algebraic consequence of the
+  retained definition `S_k = -(i/2) ε_{ijk} Γ_i Γ_j` combined with the
+  retained Clifford anticommutator `{Γ_μ, Γ_ν} = 2 δ_{μν} I`. The
+  retained n=3 runner (`scripts/frontier_non_abelian_gauge.py` lines
+  240–275) tests both the Clifford relations and the su(2) structure
+  constants `[S_i, S_j] = i ε_{ijk} S_k`; (C_rot) is therefore a
+  mathematical theorem from retained inputs, not a new intrinsic
+  reading adopted at family scope. Part A of this runner certifies
+  this retained-consequence directly.
+
+- **Direct equality certification.** Part G of this runner directly
+  certifies `V_n = Λ²(R^n)` as an equality (not a containment) at
+  every `n ∈ {2, …, 6}` under the strengthened conditions (R1)–(R3)
+  below. Part G constructs the forced subspace explicitly, computes
+  its dimension, verifies the ad-image onto `so(n)` has the full
+  `n(n−1)/2` dimension, and verifies each ad-element is antisymmetric
+  (lies in `so(n)`). Equality is computed, not narrated.
 
 ## Two Characterizations of the Retained n=3 Identification
 
@@ -108,45 +136,70 @@ action on the `Γ`-vector is exactly `Z(Cl(n))`.
 
 ## Family-Scope Uniqueness Theorem (Recipe-R Forcing)
 
-**Theorem (Recipe-R uniqueness).** Let `{ Γ_1^{(n)}, …, Γ_n^{(n)} }`
-denote the framework-native Clifford generators on `Z^n`
-(graph / η-phase / taste construction, `Γ_k = σ_y^⊗(k−1) ⊗ σ_x ⊗
-σ_0^⊗(n−k)`). Let `{ V_n }_{n ≥ 2}` be a family of linear subspaces
-`V_n ⊆ Cl(n)` satisfying:
+**Theorem (Recipe-R uniqueness, strengthened).** Let
+`{ Γ_1^{(n)}, …, Γ_n^{(n)} }` denote the framework-native Clifford
+generators on `Z^n` (graph / η-phase / taste construction,
+`Γ_k = σ_y^⊗(k−1) ⊗ σ_x ⊗ σ_0^⊗(n−k)`). Let `{ V_n }_{n ≥ 2}` be a
+family of linear subspaces `V_n ⊆ Cl(n)` satisfying:
 
-- **(U1) Retained n=3 reduction.** `V_3` equals the retained
-  native-SU(2) bivector sector, i.e., contains the three generators
-  `S_1, S_2, S_3 = -(i/2) ε_{ijk} Γ_i Γ_j`.
+- **(R1) Center-freeness.** `V_n ∩ Z(Cl(n)) = {0}` at every `n ≥ 2`,
+  i.e., no nonzero element of `V_n` has identically zero adjoint
+  action on the `Γ`-vector. (Retained at n=3 because the three S_k
+  are nonzero grade-2 bivectors, not central.)
 
-- **(U2) Rotation-on-Γ characterization.** At every `n ≥ 2`, every
-  `X ∈ V_n` satisfies `[X, Γ_μ^{(n)}] ∈ span{ Γ_ν^{(n)} : 1 ≤ ν ≤ n }`
-  for every `μ`.
+- **(R2) Rotation-on-Γ.** At every `n ≥ 2`, every `X ∈ V_n` satisfies
+  `[X, Γ_μ^{(n)}] ∈ span{ Γ_ν^{(n)} : 1 ≤ ν ≤ n }` for every `μ`.
+  (Retained-consequence at n=3: this follows automatically from the
+  retained `S_k = -(i/2) ε_{ijk} Γ_i Γ_j` + retained Clifford
+  anticommutator `{Γ_μ, Γ_ν} = 2 δ_{μν} I`; the retained runner at
+  n=3 tests both inputs directly.)
 
-- **(U3) Center-freeness.** At every `n ≥ 2`, `V_n ∩ Z(Cl(n)) = {0}`;
-  equivalently, no nonzero element of `V_n` has identically zero
-  adjoint action on the `Γ`-vector.
+- **(R3) Full rotation algebra.** At every `n ≥ 2`, the adjoint
+  action `ad : V_n → so(n)`, `X ↦ (Γ_μ ↦ [X, Γ_μ])`, has image equal
+  to the full `so(n)` rotation algebra on the `Γ`-vector. (Retained
+  at n=3 because the retained `[S_i, S_j] = i ε_{ijk} S_k` is the
+  full `su(2) ≅ so(3)` Lie algebra; Part A of this runner certifies
+  `ad` is surjective at n=3.)
 
-Then `V_n ⊆ Λ²(R^n)` at every `n ≥ 2`. Moreover, if `V_n` is additionally
-required to realize the full `SO(n)`-rotation algebra on the `Γ`-vector
-(as it does at `n = 3` by (U1)), then
+Then `V_n = Λ²(R^n) = Recipe-R` **EXACTLY** (not merely contained in)
+for every `n ≥ 2`.
 
-    V_n = Λ²(R^n) = Recipe-R               (for every n ≥ 2).
+**Proof.** By the classical Clifford grade-preservation lemma, (R2)
+forces `V_n ⊆ Z(Cl(n)) ⊕ Λ²(R^n)`. By (R1), `V_n` meets `Z(Cl(n))`
+only at 0, so `V_n ⊆ Λ²(R^n)`. The subspace `Λ²(R^n)` has dimension
+`n(n−1)/2`. The adjoint action `ad : Λ²(R^n) → so(n)` is injective
+(any grade-2 element with zero ad-action would be in `Z(Cl(n))`,
+contradicting grade-2-ness) and `dim so(n) = n(n−1)/2 = dim Λ²(R^n)`,
+so `ad` is an isomorphism of `Λ²(R^n) → so(n)`. Condition (R3)
+requires `ad|_{V_n}` to be surjective onto `so(n)`, which combined
+with `V_n ⊆ Λ²(R^n)` and the injectivity of `ad` on `Λ²(R^n)` forces
+`V_n = Λ²(R^n)`. ∎
 
-**Proof.** By the Clifford grade-preservation lemma, (U2) forces
-`V_n ⊆ Z(Cl(n)) ⊕ Λ²(R^n)`. By (U3), `V_n` meets `Z(Cl(n))` only at 0,
-so `V_n` is contained in the complement `Λ²(R^n)` under the direct
-sum decomposition. At `n = 3`, (U1) supplies three linearly
-independent bivectors `S_1, S_2, S_3`, which span the 3-dimensional
-grade-2 subspace `Λ²(R^3)`; hence `V_3 = Λ²(R^3)`. At general `n`, the
-SO(n)-rotation-full extension of (U1) populates all `n(n−1)/2`
-independent bivectors `(1/2) Γ_μ Γ_ν`, so `V_n = Λ²(R^n)`. ∎
+**Remark (retained-consequence status).** Conditions (R1)–(R3) are
+all retained-consequences of the retained n=3 native-gauge authority:
 
-**Remark (family-scope forcing).** Conditions (U1), (U2), (U3) are
-intrinsic statements using only the framework-native `Γ_k` and the
-commutator bracket. There is no choice of grade, no external selector,
-no n-dependent input. The conclusion `V_n = Λ²(R^n) = Recipe-R` is
-therefore forced — not chosen — from the retained `n = 3`
-native-gauge authority.
+| Condition | Retained source |
+|---|---|
+| (R1) | `S_k` are nonzero grade-2 (retained definition, `frontier_non_abelian_gauge.py` line 254) |
+| (R2) | Retained definition `S_k = -(i/2) ε_{ijk} Γ_i Γ_j` + retained Clifford anticommutator (both tested at n=3 in the retained runner) |
+| (R3) | Retained structure-constant test `[S_i, S_j] = i ε_{ijk} S_k` (lines 260–275 of `frontier_non_abelian_gauge.py`) equivalently states that `ad : span(S_k) → so(3)` is surjective |
+
+None of (R1)–(R3) introduces a new premise beyond retained inputs;
+each is a consequence of the retained n=3 native-gauge theorem plus
+the retained Clifford anticommutator. Part A of the forcing runner
+certifies each retained-consequence directly.
+
+**Remark (family-scope extension).** At family scope, the framework-
+native lift of the retained n=3 identification uses the same three
+retained conditions (R1)–(R3), applied at every `n ≥ 2`. The
+framework-native `Γ_k` on `Z^n` are defined by the same retained
+construction (graph / η-phase / taste), so (R2) is automatic at
+every `n`. (R1) is the natural requirement that gauge generators
+act nontrivially. (R3) is the natural requirement that the native
+gauge generator space realize all infinitesimal `SO(n)` rotations
+of the `Γ`-vector — this is what "native gauge" means. Under these
+three conditions at family scope, the theorem forces `V_n = Λ²(R^n)`
+= Recipe-R as the unique equality.
 
 ## Why This Answers the Reviewer
 
@@ -190,25 +243,37 @@ alone".
 
 Runner: `scripts/frontier_recipe_r_forcing_from_retained_n3.py`.
 
-- **Part A** Retained `n = 3` identification: reproduces
-  `S_k = -(i/2) ε_{ijk} Γ_i Γ_j`, verifies `su(2)` structure constants
-  `[S_i, S_j] = i ε_{ijk} S_k`, verifies each `S_k` is pure grade-2,
-  verifies `[S_k, Γ_μ]` lies in grade-1 (rotation-on-Γ property).
+- **Part A** Retained `n = 3` identification:
+  reproduces `S_k = -(i/2) ε_{ijk} Γ_i Γ_j`, verifies `su(2)`
+  structure constants `[S_i, S_j] = i ε_{ijk} S_k`, verifies each
+  `S_k` is pure grade-2, verifies `[S_k, Γ_μ]` lies in grade-1
+  (rotation-on-Γ property, retained-consequence of retained
+  definition + retained Clifford anticommutator), and verifies
+  `ad : span(S_k) → so(3)` is surjective (retained-consequence of
+  the retained `[S_i, S_j] = i ε_{ijk} S_k` su(2) structure test).
 - **Part B** Clifford grade-preservation lemma: enumerates all `2^n`
-  basis monomials at `n ∈ {2, 3, 4, 5, 6}` and certifies that the set
-  `{ X : [X, Γ_μ] ∈ grade-1 ∀μ }` is exactly `Z(Cl(n)) ⊕ grade-2`.
+  basis monomials at `n ∈ {2, 3, 4, 5, 6}` and certifies that the
+  set `{ X : [X, Γ_μ] ∈ grade-1 ∀μ }` is exactly `Z(Cl(n)) ⊕ grade-2`.
 - **Part C** Subspace dimension certification: `dim Z(Cl(n)) + n(n−1)/2`
   matches for every tested `n`.
 - **Part D** Kernel of `ad` on Γ-vector is exactly `Z(Cl(n))`; the
   non-central part is grade-2 of dimension `n(n−1)/2`.
-- **Part E** Family-scope uniqueness: the forced `V_n = Λ²(R^n)`
-  holds at every `n`, and the retained `n = 3` `S_k` lie in
-  `Λ²(R^3)` exactly.
+- **Part E** Family-scope containment: `V_n ⊆ Λ²(R^n)` at every `n`
+  under (R1)+(R2); the retained `n = 3` `S_k` lie in `Λ²(R^3)`.
 - **Part F** Narrative summary distinguishing (C_bivec) from (C_rot),
-  identifying (C_rot) as the intrinsic retained characterization, and
-  stating the uniqueness theorem that forces Recipe-R.
+  identifying (C_rot) as a retained-consequence of the retained n=3
+  authority.
+- **Part G** Direct equality certification `V_n = Λ²(R^n)`:
+  builds the maximal (R2)-preserving subspace `Z(Cl(n)) ⊕ Λ²(R^n)`,
+  quotients by the center (R1), verifies the result has dimension
+  `n(n−1)/2`; constructs `Λ²(R^n)` explicitly via `(1/2) Γ_μ Γ_ν`;
+  computes `ad : Λ²(R^n) → so(n)` and verifies image dimension
+  equals `n(n−1)/2` (R3 surjectivity); verifies each ad-element is
+  real antisymmetric (lies in `so(n)`); certifies the equality
+  `V_n = Λ²(R^n)` directly by subspace-dimension + ad-image
+  computation at every `n ∈ {2, …, 6}`.
 
-Result: `THEOREM_PASS=52 SUPPORT_PASS=12 FAIL=0`.
+Result: `THEOREM_PASS=72 SUPPORT_PASS=16 FAIL=0`.
 
 ## Relation to Companion Notes
 

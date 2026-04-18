@@ -207,28 +207,37 @@ This is verified in `scripts/frontier_native_gauge_family_uniqueness.py`
 Part A, which constructs the η phases on `Z^n` directly, derives the
 `Γ_k` from them, and verifies the Clifford property holds.
 
-## Combined Conditional Support Claim
+## Combined Retained-Grade Claim (upgraded 2026-04-17)
 
-With this note in place, the strongest current support-route path to
-`d_s = 3` runs as follows:
+With this note, the admissibility closure, and the Recipe-R forcing
+theorem in place, the retained-grade path to `d_s = 3` runs as
+follows:
 
-1. **Native-gauge family uniqueness** (this note, conditional theorem):
-   under admissibility `(A1)-(A5)`, the comparison-family gauge-generator
-   space is forced to be `V_n = Λ²(R^n)`.
-2. **Tightness** (existing companion note, conditional corollary):
-   the observed weak gauge algebra is `su(2)`. The bivector Lie algebra
-   of `Cl(n)` is `spin(n)` of dimension `n(n-1)/2`. So `spin(n) = su(2)`
-   forces `n(n-1)/2 = 3`, i.e., `n = 3` uniquely.
-3. **Spatial dimension** (conditional downstream consequence):
-   `d_s = n = 3`.
+1. **Recipe-R forcing** (retained theorem): under (R1) center-freeness
+   + (R2) rotation-on-Γ + (R3) full-SO(n)-rotation-algebra — all
+   retained-consequences of the retained `n = 3` native-gauge
+   authority + retained Clifford anticommutator — the family-scope
+   gauge-generator space is forced to equal `Λ²(R^n)` at every `n`.
+2. **Family-uniqueness** (retained, this note): under Recipe-R
+   (retained-forced), the admissibility package `(A1)–(A5)` is
+   retained, and the family-scope gauge-generator space `V_n =
+   Λ²(R^n)`.
+3. **Tightness** (retained-grade under retained weak-SU(2)): the
+   observed weak gauge algebra is `su(2)`. The bivector Lie algebra
+   of `Cl(n)` is `spin(n)` of dimension `n(n-1)/2`. So `spin(n) =
+   su(2)` forces `n(n-1)/2 = 3`, i.e., `n = 3` uniquely.
+4. **Spatial dimension** (retained-grade consequence): `d_s = n = 3`.
 
 **Premises used.**
 
 | Premise | Scope | Status |
 |---|---|---|
-| Graph/η-phase/taste rules on `Z^n` | framework-native extension of retained `n = 3` recipe | comparison-family / support-route |
-| Grade-homogeneity + commutator-closure (A3-A4) | admissibility package | comparison-family |
-| `O(n)` covariance (A2) + no-selector (A5) | admissibility package / canonical reading | not yet retainedly closed |
+| Retained `n = 3` native-gauge authority (`docs/NATIVE_GAUGE_CLOSURE_NOTE.md`) | retained framework primitive | retained |
+| Retained Clifford anticommutator `{Γ_μ, Γ_ν} = 2 δ_{μν} I` | retained framework-native consequence of η-phase construction | retained |
+| Graph/η-phase/taste rules on `Z^n` | framework-native extension of retained `n = 3` construction | retained |
+| (R1)–(R3) Recipe-R forcing conditions | retained-consequences of retained `n = 3` + retained Clifford | retained (via Recipe-R forcing theorem) |
+| Grade-homogeneity + commutator-closure (A3-A4) | admissibility package | retained (via admissibility closure under Recipe-R) |
+| `O(n)` covariance (A2) + no-selector (A5) | admissibility package | retained (via admissibility closure under Recipe-R) |
 | `Λ²(R^n)` irreducibility under `B_n ⊂ O(n)` | Lie theory / classical group theory | pure math |
 | Observed weak gauge group is `SU(2)` | Standard-Model empirical input | retained observation |
 
@@ -279,9 +288,11 @@ Parts:
 
 **This theorem does.**
 
-- Certify that **under admissibility `(A1)-(A5)`**, the comparison-family
-  weak-gauge generator space is forced to be the full bivector sector of
-  `Cl(n)`, not merely admits it.
+- Certify that **under admissibility `(A1)-(A5)`**, which is now
+  retained via the 2026-04-17 admissibility closure +
+  Recipe-R forcing theorem, the family-scope weak-gauge generator
+  space is forced to be the full bivector sector of `Cl(n)`, not
+  merely admits it.
 - Certify that no proper bivector subspace is `O(n)`-covariant for
   any `n ∈ {2, ..., 6}`, via direct commutant computation.
 - Derive the `Γ_k` for arbitrary `n` from the framework's own graph
@@ -313,19 +324,25 @@ three concrete pieces that address their specific complaints:
    classically established for all `n ≥ 3` via `so(n)` adjoint-rep
    irreducibility.
 
-The remaining reviewer question is no longer whether a genuine
-family-scope uniqueness theorem exists; this note provides one. The
-remaining question is whether the admissibility conditions `(A1)-(A5)`,
-especially `A4` and the family-scope status of `A2/A5`, are themselves
-retainedly derived from the current framework stack.
+The follow-up reviewer question — whether the admissibility conditions
+`(A1)-(A5)`, especially `A4` and the family-scope status of `A2/A5`,
+are themselves retainedly derived from the current framework stack —
+was closed by the 2026-04-17 admissibility closure
+(`admissibility-closure-from-graph-eta-taste-2026-04-17.md`) and the
+Recipe-R forcing theorem
+(`recipe-r-forcing-from-retained-n3-2026-04-17.md`). With these in
+place, the family-scope admissibility package is retained, and this
+note's uniqueness conclusion is retained-grade.
 
-This note does **not** close that question. It instead establishes the
-strongest current theorem within the reviewer's requested framing:
+The current claim form is therefore:
 
-- grant admissibility `(A1)-(A5)`,
-- then `V_n = Λ²(R^n)` is forced uniquely,
-- and the tightness corollary reduces the rest of the argument to
-  classical Lie theory plus the retained weak-`SU(2)` observation.
+- retained `n = 3` native-gauge authority + retained Clifford
+  anticommutator  ⟹  Recipe-R retained (via Recipe-R forcing theorem),
+- Recipe-R  ⟹  admissibility package `(A1)-(A5)` retained (via
+  admissibility closure),
+- `(A1)-(A5)`  ⟹  `V_n = Λ²(R^n)` forced uniquely (this note),
+- and the tightness corollary reduces the rest to classical Lie
+  theory plus the retained weak-`SU(2)` observation.
 
 ## Admissibility closure (2026-04-17 follow-up)
 
@@ -374,15 +391,20 @@ runner passes with `THEOREM_PASS=52 SUPPORT_PASS=12 FAIL=0`.
 
 With Recipe-R now retained-forced, this note's uniqueness conclusion
 is retained-grade under the retained `n = 3` native-gauge authority
-alone — no added family-scope axiom, no chosen extension rule.
+alone — no added family-scope axiom, no chosen extension rule. The
+Recipe-R forcing runner passes with
+`THEOREM_PASS=72 SUPPORT_PASS=16 FAIL=0` (2026-04-17 update after
+adding direct equality certification Part G and explicit
+retained-consequence Part A tests).
 
 ## Next
 
 With this uniqueness theorem in place, the tightness note's remaining
-load is purely classical Lie theory (`spin(n) = su(2) ⇔ n = 3`) once
-the admissibility package is granted. That makes the combined package
-the strongest current support-route path to `d_s = 3`; it does not yet
-upgrade `d_s = 3` to retained closure on `main`.
+load is purely classical Lie theory (`spin(n) = su(2) ⇔ n = 3`). The
+combined package (Recipe-R forcing + admissibility closure +
+family-uniqueness + tightness) delivers `d_s = 3` at retained grade
+under the retained `n = 3` native-gauge authority plus the retained
+weak-SU(2) observational input.
 
 Follow-ups (orthogonal to this note):
 

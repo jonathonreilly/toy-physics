@@ -296,17 +296,17 @@ species semantics.
 7. ⇒ Under the retained `hw`-orbit-is-physical-species semantics,
    three physical generations.
 
-**Scope of the corollary.** Steps 1–4 are the theorem content of the
-current support-route package. Steps 5–7 are support-grade: they carry
-the retained-semantics dependency that the earlier conditional-minimality
-note already documented, and they do not pretend to derive "why `hw`-
-orbits are species" from axioms.
+**Scope of the corollary.** Steps 1–4 are retained-grade under the
+2026-04-17 Recipe-R forcing theorem. Steps 5–7 are support-grade:
+they carry the retained-semantics dependency that the earlier
+conditional-minimality note documented, and they do not pretend to
+derive "why `hw`-orbits are species" from axioms.
 
 **What is theorem-grade here and what is support-grade.**
 
 | Step | Statement | Grade |
 |---|---|---|
-| 1–4 | Canonical native SU(2) forces `n = 3` | conditional support-route theorem |
+| 1–4 | Canonical native SU(2) forces `n = 3` | retained-grade (under 2026-04-17 Recipe-R forcing) |
 | 5 | `Z³` as the lattice on `n = 3` | axiom-level choice (still a separate question) |
 | 6 | `O_h` orbit count = 3 on `hw=1` | retained theorem (on `main`) |
 | 7 | hw-orbits → generations | retained semantics (not derived) |
@@ -442,19 +442,24 @@ Checks:
 This section lays out what a reviewer should, and should not, conclude
 from this note, stated as sharply as possible for retention review.
 
-**Conditional support claim (Version A).**
+**Retained-grade claim (Version A, upgraded 2026-04-17).**
 
 > Canonical native SU(2) (the observed weak gauge group on the retained
-> framework, read at no-selector strength) forces `d_s = 3` via Clifford-
-> bivector Lie-algebra dimensional matching. Premises: bivector count
-> `n(n-1)/2`, `dim(su(2)) = 3`, `spin(n) = su(2)` from the no-selector
-> clause. Conclusion: `n = 3` uniquely.
+> framework) forces `d_s = 3` via Clifford-bivector Lie-algebra
+> dimensional matching. Premises: bivector count `n(n-1)/2`,
+> `dim(su(2)) = 3`, and `spin(n) = su(2)` via the retained-forced
+> family-uniqueness theorem (Recipe-R forcing +
+> admissibility closure). Conclusion: `n = 3` uniquely.
 
-This claim carries no cubic-lattice-specific structure, no hw-orbit
-semantics, and no SM matter-content assumption. It shifts the primitive
-from a spatial-dimension choice to a gauge-group-dimension equality.
+This is retained-grade under the retained `n = 3` native-gauge
+authority (`docs/NATIVE_GAUGE_CLOSURE_NOTE.md`) plus the retained /
+observational weak-SU(2) input. The previous "conditional / no-selector
+reading" cost has been eliminated by the 2026-04-17 Recipe-R forcing
+theorem: the family-scope admissibility package `(A1)–(A5)` is
+retainedly closed under the retained `n = 3` authority via the
+(R1)+(R2)+(R3) conditions.
 
-**Conditional support claim (Version B).**
+**Alternative retained-grade claim (Version B).**
 
 > The framework's retained native-gauge structure plus retained anomaly-
 > forced chirality parity forces `d_s = 3` via Clifford-bivector Lie-
@@ -462,14 +467,16 @@ from a spatial-dimension choice to a gauge-group-dimension equality.
 > rules out the `spin(6) = su(4)` coincidence at `n = 6`.
 
 Version B is gauge-group-agnostic but costs the retained parity input.
+With the Recipe-R forcing theorem, Version B is also retained-grade
+under retained parity.
 
 **Support-grade corollary.**
 
 > Adding the retained `hw`-orbit-is-physical-species semantics on `Cl(3)`
 > gives exactly 3 generations as a downstream consequence.
 
-The support-grade status reflects the retained semantics dependency
-already documented in the earlier conditional-support note.
+The support-grade status reflects the retained `hw`-orbit-semantics
+dependency, which is a separate axiom-depth question (see "Next").
 
 **What this note is NOT claiming.**
 
@@ -481,49 +488,61 @@ already documented in the earlier conditional-support note.
   3-generation corollary carries the retained semantics as a support
   dependency.
 
-**What would upgrade this to retained.** The earlier blocker was that
-the "canonical no-selector" reading was an interpretive upgrade of the
+**Status upgrade (2026-04-17).** The earlier blocker was that the
+"canonical no-selector" reading was an interpretive upgrade of the
 retained native-SU(2) authority rather than a separately-closed
-theorem. The companion notes improve that situation substantially, but
-they do **not** yet close it at retained bar, because the family-scope
-admissibility package still contains load-bearing comparison-family
-premises.
+theorem. This blocker is now **closed** by the combined
+admissibility closure
+(`admissibility-closure-from-graph-eta-taste-2026-04-17.md`) and
+Recipe-R forcing theorem
+(`recipe-r-forcing-from-retained-n3-2026-04-17.md`). The family-scope
+admissibility package — `A2`, `A4`, `A5` — is now derived from
+Recipe-R, and Recipe-R itself is retained-forced by the
+(R1)+(R2)+(R3) conditions on the retained `n = 3` native-gauge
+identification. See the "Admissibility + Recipe-R forcing closure
+(2026-04-17 follow-up)" section at the end of this note for the full
+chain.
 
-So the current state is:
+The current state is:
 
 1. the dimensional-matching step `n(n-1)/2 = 3 ⇒ n = 3` is classical
    mathematics;
 2. the empirical input "weak gauge group is SU(2)" remains retained;
-3. the remaining non-closed step is the retained status of the
-   no-selector / admissibility package at family scope.
+3. the previously non-closed step — the family-scope admissibility
+   layer — is closed at retained bar via the Recipe-R forcing theorem.
 
-Under the current package, Version A is the strongest support-route path
-to `d_s = 3`; it does not yet upgrade `d_s = 3` from axiom to derived on
-`main`.
+Version A is therefore now a **retained-grade** derivation of
+`d_s = 3` under the retained `n = 3` native-gauge authority plus the
+retained weak-SU(2) observational input. It upgrades `d_s = 3` from
+axiom to derived; the caveat remaining is only the weak-SU(2) input,
+which is observational, not framework-structural.
 
 ## Honest Self-Assessment
 
 The primitive has shifted from a spatial-dimension choice to a
 Lie-algebra-matching requirement tied to the observed weak gauge group.
-That is a genuine support-route improvement: the Lie-algebra equation
-`n(n-1)/2 = 3` is a pure mathematical fact, but the retained-framework
-status of the canonical-no-selector reading is still the live issue.
+With the 2026-04-17 admissibility closure and Recipe-R forcing
+theorem now in place, the Lie-algebra equation `n(n-1)/2 = 3` combines
+with a retained-grade family-scope uniqueness to give a retained-grade
+derivation of `d_s = 3`.
 
 Compared to the earlier `cl3-minimality-conditional-support-2026-04-17`
 note, this note:
 
 - removes the dependence on the retained cubic `8 = 1 + 1 + 3 + 3`
   orbit decomposition for the `d_s = 3` step,
-- replaces it with a Clifford-algebra dimensional-matching argument
-  that works on the `Cl(n)` family at comparison level,
-- preserves the 3-generation corollary as a separate, honestly
-  scoped support-level chain under retained hw-orbit semantics.
+- replaces it with a Clifford-algebra dimensional-matching argument,
+- combines that with a retained-grade family-scope uniqueness
+  theorem (Recipe-R forcing) to derive `d_s = 3` at retained bar
+  under the retained `n = 3` native-gauge authority plus the retained
+  weak-SU(2) input,
+- preserves the 3-generation corollary as a separate support-level
+  chain under retained hw-orbit semantics.
 
-The earlier cost was that status depended on a reviewer-judgment call
-about the retained theorem's content on `main`. The companion notes now
-turn that into a much cleaner and more explicit support-route package,
-but they do not yet eliminate the cost entirely because the family-scope
-admissibility layer is still not retainedly closed.
+The live cost is now exclusively the observational weak-SU(2) input
+(not framework-structural) and the support-level hw-orbit semantics
+for the 3-generation corollary. The family-scope admissibility layer,
+which was the previous blocker, is retainedly closed as of 2026-04-17.
 
 ## Admissibility closure follow-up (2026-04-17)
 
@@ -599,8 +618,10 @@ consistently RETAINED-GRADE under this single chain.
 
 ## Next
 
-If this support-route package is accepted in its current honest form,
-follow-up research directions are:
+With the retained-grade `d_s = 3` derivation now in place under the
+retained `n = 3` native-gauge authority plus retained weak-SU(2)
+input, follow-up research directions are orthogonal to the tightness
+chain itself:
 
 1. **SU(3) color via graph automorphisms.** Does the retained graph-
    first SU(3) gauge structure also pick out `n = 3` via a related
@@ -616,5 +637,7 @@ follow-up research directions are:
    the 3-generation corollary from support to retention grade?
 
 Each of these is a distinct research program. This note's contribution
-is the one clean step from `d_s = 3`-as-axiom to `d_s = 3`-as-theorem
-under canonical native SU(2).
+is the retained-grade derivation `d_s = 3`-as-theorem under the
+retained `n = 3` native-gauge authority plus retained weak-SU(2)
+input, routed through the Recipe-R forcing theorem and the
+family-uniqueness closure.
