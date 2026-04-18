@@ -1,28 +1,35 @@
-# YT Retention Master Manifest (Reviewer Entry Point)
+# YT Retention Master Manifest (Reviewer Entry Point — Submission Under Review)
 
 **Date:** 2026-04-18 (amended 2026-04-18 — Session Round 2 reconciliation)
-**Status:** NAVIGATION / INDEX note. Reviewer entry point for the YT
-UV-to-IR transport obstruction program, organised around the 27
-sub-theorem slots (1 master + 17 P1 + 4 P2 + 5 P3) that address the
-P1 / P2 / P3 missing primitives of the master obstruction theorem,
-plus the 10 retention-analysis class notes and the Round 2 SSB
-matching-gap companion note that scope the candidate primitives for
-the Yukawa-hierarchy gap.
+**Status:** NAVIGATION / INDEX note for the YT **submission branch**
+under review. Reviewer entry point for the YT UV-to-IR transport
+obstruction program as **proposed** by this branch, organised around
+the 27 sub-theorem slots (1 master + 17 P1 + 4 P2 + 5 P3) that
+address the P1 / P2 / P3 missing primitives of the master
+obstruction theorem, plus the 10 retention-analysis class notes and
+the Round 2 SSB matching-gap companion note that scope the candidate
+primitives for the Yukawa-hierarchy gap.
 
-**Canonical retained central on `Δ_R` is `−3.77 % ± 0.45 %`
+The word "retained" as used below refers to each sub-theorem's
+**proposal-side self-classification** (runner passes, log clean,
+note on disk). Whether any slot should be promoted to an accepted
+retained status on `main` is the reviewer's call. This manifest is
+the proposal-side reading guide; it is not an acceptance verdict.
+
+**Canonical proposed central on `Δ_R` is `−3.77 % ± 0.45 %`
 (full staggered-PT, framework-native 1-loop).** The literature-cited
 three-channel central `−3.27 %` is preserved below as the prior
-citation-based assembly, explicitly superseded as the canonical central
-by P1.15. The 2-loop extension is retained as **bound-constrained**
-(loop-geometric envelope, not MC-pinned); see §R2 below for the full
-Session Round 2 amendment record.
+citation-based assembly, explicitly superseded as the proposal-side
+canonical central by P1.15. The 2-loop extension is **bound-
+constrained** (loop-geometric envelope, not MC-pinned); see §R2
+below for the full Session Round 2 amendment record.
 
-**This note contains no new physics.** It is a structured roll-up of
-already-retained sub-theorems. No derivation is repeated here; every
-claim carries a pointer to its authority note, runner, and log. The
-manifest introduces no new axiom, no new canonical surface, and no
-new numerical result, and does not modify any existing note or any
-publication-surface file.
+**This note is navigation, not new physics.** It is a structured
+roll-up of the sub-theorem notes under review. Every claim carries a
+pointer to its authority note, runner, and log. The manifest itself
+introduces no new axiom, no new canonical surface, and no new
+numerical result, and does not modify any publication-surface file.
+The numerical claims live in the sub-theorem notes, not here.
 
 **Primary runner:** `scripts/frontier_yt_retention_manifest.py`
 **Log:** `logs/retained/yt_retention_manifest_2026-04-18.log`
@@ -708,6 +715,50 @@ corrections that preserve the underlying numerics.
   element matches the physical trilinear coefficient without any new
   primitive.
 
+### §R2.8 First-round reviewer findings (2026-04-18)
+
+The first reviewer pass on this submission branch surfaced three
+internal-consistency issues. This §R2.8 records the fixes landed in
+response; all fixes preserve the underlying science and sharpen the
+proposal-side framing.
+
+- **R2.8.a — Runner / note slot-status agreement.** The previous
+  manifest runner still hard-coded M.1, P1.1, P1.2, P3.1, P3.2 as
+  `embedded` even though this manifest note records them as ON DISK
+  via Agents A and H. The runner's `SLOTS` table has been upgraded
+  to reflect the on-disk reality: those five slots are now
+  `retained` with their note, runner, and log paths populated, and
+  the new P1.17 slot (full-staggered-PT 2-loop BZ note) is
+  explicitly catalogued. `EXPECTED_TOTAL_SLOTS` is raised from 26
+  to 27, `EXPECTED_P1_SLOTS` from 16 to 17, `EXPECTED_RETAINED_SLOTS`
+  from 21 to 27, `EXPECTED_EMBEDDED_SLOTS` from 5 to 0, with P1.4
+  remaining as the sole `retained`-slot whose NOTE (not runner) is
+  embedded-only by design. Pillar A grand PASS total shifts from
+  the legacy 799 to 868 as these slots come fully into scope.
+- **R2.8.b — 2-loop BZ note scrub of stale "MC-pinned" language.**
+  The §0 honesty correction on the P1.17 note established the
+  2-loop value as bound-constrained, not MC-pinned. Residual body
+  lines that still said "through-2-loop MC-pinned", "MC retained
+  (this note)", or "the 2-loop central is now framework-native
+  MC-pinned" have been scrubbed to match §0. The per-channel
+  `J_X` magnitude envelopes remain correctly described as
+  MC-measured — those are per-topology magnitudes, not matching
+  coefficients — and all references to a gauge-invariant MC pin
+  now clearly flag that as OPEN.
+- **R2.8.c — Proposal-side framing of the readiness and manifest
+  notes.** Both the landing-readiness report and this manifest
+  formerly read as if the bundle were already-retained / "clear
+  for integration" ahead of a review decision. The top-level
+  framing on both notes has been rewritten to submission-under-
+  review language: "proposal-side self-audit", "READY FOR REVIEW",
+  "the reviewer retains the accept / revise / reject call."
+  The per-pillar status lines use "proposal-side self-audit: PASS"
+  in place of "CLEAR FOR INTEGRATION".
+
+None of these fixes modify a canonical numerical value. They
+reconcile the branch's own self-description with the underlying
+state on disk.
+
 ---
 
 ## Part 7 — Reviewer reading guide
@@ -850,8 +901,8 @@ them as prior (i.e. no double counting).
 | —     | SSB matching-gap note (Round 2, Agent I)       | note + runner + log                      |   25 |
 |       |                                                | **Core retention runner PASS total (Pillar A)** | **868** |
 |       |                                                | **Pillar B (retention-analysis + SSB) PASS** |   601 |
-|       |                                                | **Pillar C (manifest + master) PASS**    |   123 |
-|       |                                                | **Grand total retained PASS** (session tally via landing-readiness runner) | **1592** |
+|       |                                                | **Pillar C (manifest + master) PASS**    |   154 |
+|       |                                                | **Grand total retained PASS** (session tally via landing-readiness runner) | **1623** |
 |       |                                                | **Retained runner FAIL total**           |    0 |
 |       |                                                | **Retained slots on disk (of 27 P1/P2/P3 + master)** |   26 |
 |       |                                                | **EMBEDDED-only slots (post-Round-2)**   |    1 (P1.4 by design) |
@@ -865,8 +916,8 @@ Per-pillar retention PASS totals (via the landing-readiness runner
 |------------------------------------------------------------|--------:|------:|-----:|
 | A (P1 + P2 + P3 primitive suite)                           |      26 |   868 |    0 |
 | B (retention-analysis class notes + SSB companion)         |      11 |   601 |    0 |
-| C (master obstruction + manifest)                          |       2 |   123 |    0 |
-| **Grand total**                                            |  **39** |**1592**|    0 |
+| C (master obstruction + manifest)                          |       2 |   154 |    0 |
+| **Grand total**                                            |  **39** |**1623**|    0 |
 
 Note: Pillar A now covers all 17 P1 slots (P1.1–P1.17), all 4 P2
 slots, and all 5 P3 slots; only P1.4 (I_1 symbolic decomposition)
@@ -890,7 +941,7 @@ This manifest makes the following claims and no others:
    (`scripts/frontier_yt_retention_landing_readiness.py`) verifies
    this at run time.
 3. The on-disk retained runners, when run, emitted `[PASS]` lines
-   summing to **1592 across 39 log files** and 0 `[FAIL]` lines, on
+   summing to **1623 across 39 log files** and 0 `[FAIL]` lines, on
    the dates recorded in their log filenames (tally via the
    landing-readiness runner).
 4. The retained YT-lane precision on `Δ_R` and `m_t(pole)` reported in
@@ -906,9 +957,9 @@ The manifest does **not** claim:
 - that the P1.4 EMBEDDED-only slot has been promoted to a standalone
   note (it remains embedded by design, with runner + log on disk);
 - any framework-native 4D BZ quadrature beyond what the P1.15 full
-  staggered-PT note already retained (±0.45 % on Δ_R);
-- any framework-native 2-loop MC retention of `Δ_R^{(2)}` — the
-  retained 2-loop coverage is loop-geometric bound-constrained;
+  staggered-PT note proposes (±0.45 % on Δ_R);
+- any framework-native 2-loop MC pin of `Δ_R^{(2)}` — the proposed
+  2-loop coverage is loop-geometric bound-constrained;
 - any new bound, value, or derivation; the manifest introduces no
   new physics;
 - any modification of the master obstruction theorem's packaged
@@ -947,14 +998,19 @@ python scripts/frontier_yt_retention_landing_readiness.py \
     > logs/retained/yt_retention_landing_readiness_2026-04-18.log 2>&1
 ```
 
-produces the structured landing-readiness log. As of 2026-04-18 the
-expected result is:
+produces the structured landing-readiness log. As of 2026-04-18
+(post-Round-2 reconciliation including §R2.8 runner-note agreement)
+the expected result is:
 
-- cross-reference integrity sweep: 0 broken references once Agent H
-  and Agent I have landed their files;
-- grand total PASS = 1552 across 35 runners (or updated upward by
-  however many PASS markers the SSB and three color-factor runners
-  add on completion), 0 FAIL.
+- cross-reference integrity sweep: 8 expected broken references
+  (4 to the EMBEDDED-only P1.4 note, 4 to the Koide sister-workspace
+  note), 0 unexpected broken references;
+- grand total PASS = 1623 across 39 proposal-runners, 0 FAIL.
+
+The legacy pre-§R2.8 figure "1552 across 35 runners" reflected the
+earlier state where M.1, P1.1, P1.2, P3.1, P3.2 were `embedded`-
+only in the manifest runner and the SSB companion had not yet
+landed. That figure is superseded.
 
 The legacy per-slot manifest runner (`frontier_yt_retention_manifest.py`)
 remains the slot-inventory authority; the landing-readiness runner

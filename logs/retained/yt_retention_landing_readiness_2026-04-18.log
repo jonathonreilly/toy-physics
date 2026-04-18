@@ -11,8 +11,8 @@ Total repo-internal links resolved: 482
    [tolerated] note=docs/YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md -> docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md
    [tolerated] note=docs/YT_CLASS_6_C3_BREAKING_OPERATOR_NOTE_2026-04-18.md -> docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md
    [tolerated] note=docs/YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md -> docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md
-   [tolerated] note=docs/YT_RETENTION_LANDING_READINESS_2026-04-18.md -> docs/YT_P1_I1_LATTICE_PT_SYMBOLIC_DECOMPOSITION_NOTE_2026-04-17.md
    [tolerated] note=docs/YT_RETENTION_LANDING_READINESS_2026-04-18.md -> docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md
+   [tolerated] note=docs/YT_RETENTION_LANDING_READINESS_2026-04-18.md -> docs/YT_P1_I1_LATTICE_PT_SYMBOLIC_DECOMPOSITION_NOTE_2026-04-17.md
    [tolerated] note=docs/YT_RETENTION_MASTER_MANIFEST_2026-04-18.md -> docs/YT_P1_I1_LATTICE_PT_SYMBOLIC_DECOMPOSITION_NOTE_2026-04-17.md
 
 --- Section 2: runner PASS / FAIL tally ---
@@ -23,10 +23,10 @@ Per-pillar tally:
 
   Pillar A (P1+P2+P3 primitives):       runners= 26  PASS=  868  FAIL=  0
   Pillar B (retention-analysis classes):runners= 11  PASS=  601  FAIL=  0
-  Pillar C (manifest + boundary):       runners=  2  PASS=  123  FAIL=  0
+  Pillar C (manifest + boundary):       runners=  2  PASS=  154  FAIL=  0
 
-Grand totals: PASS = 1592, FAIL = 0
-[PASS] aggregate tally: 1592 PASS markers, 0 FAIL across 39 runners
+Grand totals: PASS = 1623, FAIL = 0
+[PASS] aggregate tally: 1623 PASS markers, 0 FAIL across 39 runners
 
 Per-runner breakdown:
   [OK] pillar=B PASS=  52 FAIL=  0 yt_bottom_yukawa_retention_2026-04-18.log
@@ -63,7 +63,7 @@ Per-runner breakdown:
   [OK] pillar=A PASS=   4 FAIL=  0 yt_p3_msbar_to_pole_k1_2026-04-17.log
   [OK] pillar=A PASS=   6 FAIL=  0 yt_p3_msbar_to_pole_k2_2026-04-17.log
   [OK] pillar=A PASS=  18 FAIL=  0 yt_p3_msbar_to_pole_k3_2026-04-17.log
-  [OK] pillar=C PASS= 118 FAIL=  0 yt_retention_manifest_2026-04-18.log
+  [OK] pillar=C PASS= 149 FAIL=  0 yt_retention_manifest_2026-04-18.log
   [OK] pillar=B PASS=  58 FAIL=  0 yt_right_handed_species_dependence_2026-04-18.log
   [OK] pillar=B PASS=  48 FAIL=  0 yt_species_uniformity_extent_2026-04-18.log
   [OK] pillar=B PASS=  25 FAIL=  0 yt_ssb_matching_gap_2026-04-18.log

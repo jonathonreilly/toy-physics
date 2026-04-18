@@ -5,21 +5,30 @@ Authority note: docs/YT_RETENTION_MASTER_MANIFEST_2026-04-18.md
 ========================================================================
 
 ========================================================================
-Block 1: Slot accounting (26 indexed slots = 1 master + 16 P1 + 4 P2 + 5 P3)
+Block 1: Slot accounting (27 indexed slots = 1 master + 17 P1 + 4 P2 + 5 P3)
 ========================================================================
 
-  [PASS] Total slots = 26 (1 master + 16 P1 + 4 P2 + 5 P3)  (26 slots catalogued)
+  [PASS] Total slots = 27 (1 master + 17 P1 + 4 P2 + 5 P3)  (27 slots catalogued)
   [PASS] Master slots = 1  (1 master slots)
-  [PASS] P1 slots = 16  (16 P1 slots)
+  [PASS] P1 slots = 17  (17 P1 slots)
   [PASS] P2 slots = 4  (4 P2 slots)
   [PASS] P3 slots = 5  (5 P3 slots)
-  [PASS] Retained (on-disk) slots = 21  (21 retained slots)
-  [PASS] Embedded-only slots = 5  (5 embedded slots)
+  [PASS] Retained (on-disk) slots = 27  (27 retained slots)
+  [PASS] Embedded-only slots = 0 (post-Round-2; P1.4 note remains embedded by design but slot-level retained)  (0 embedded slots)
 
 ========================================================================
 Block 2: File-existence checks on retained slot artifacts
 ========================================================================
 
+  [PASS] M.1 note exists: docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md
+  [PASS] M.1 runner exists: scripts/frontier_yt_uv_to_ir_transport_obstruction.py
+  [PASS] M.1 log exists: logs/retained/yt_uv_to_ir_transport_obstruction_2026-04-17.log
+  [PASS] P1.1 note exists: docs/YT_P1_SHARED_FIERZ_NO_GO_SUB_THEOREM_NOTE_2026-04-17.md
+  [PASS] P1.1 runner exists: scripts/frontier_yt_p1_shared_fierz_no_go.py
+  [PASS] P1.1 log exists: logs/retained/yt_p1_shared_fierz_no_go_2026-04-17.log
+  [PASS] P1.2 note exists: docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md
+  [PASS] P1.2 runner exists: scripts/frontier_yt_p1_color_factor_retention.py
+  [PASS] P1.2 log exists: logs/retained/yt_p1_color_factor_retention_2026-04-17.log
   [PASS] P1.3 note exists: docs/YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md
   [PASS] P1.3 runner exists: scripts/frontier_yt_p1_loop_geometric_bound.py
   [PASS] P1.3 log exists: logs/retained/yt_p1_loop_geometric_bound_2026-04-17.log
@@ -62,6 +71,9 @@ Block 2: File-existence checks on retained slot artifacts
   [PASS] P1.16 note exists: docs/YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md
   [PASS] P1.16 runner exists: scripts/frontier_yt_p1_delta_r_2_loop_extension.py
   [PASS] P1.16 log exists: logs/retained/yt_p1_delta_r_2_loop_extension_2026-04-18.log
+  [PASS] P1.17 note exists: docs/YT_P1_BZ_QUADRATURE_2_LOOP_FULL_STAGGERED_PT_NOTE_2026-04-18.md
+  [PASS] P1.17 runner exists: scripts/frontier_yt_p1_bz_quadrature_2_loop_full_staggered_pt.py
+  [PASS] P1.17 log exists: logs/retained/yt_p1_bz_quadrature_2_loop_full_staggered_pt_2026-04-18.log
   [PASS] P2.1 note exists: docs/YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md
   [PASS] P2.1 runner exists: scripts/frontier_yt_p2_taste_staircase_transport.py
   [PASS] P2.1 log exists: logs/retained/yt_p2_taste_staircase_transport_2026-04-17.log
@@ -74,6 +86,12 @@ Block 2: File-existence checks on retained slot artifacts
   [PASS] P2.4 note exists: docs/YT_P2_F_YT_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md
   [PASS] P2.4 runner exists: scripts/frontier_yt_p2_f_yt_loop_geometric_bound.py
   [PASS] P2.4 log exists: logs/retained/yt_p2_f_yt_loop_geometric_bound_2026-04-17.log
+  [PASS] P3.1 note exists: docs/YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md
+  [PASS] P3.1 runner exists: scripts/frontier_yt_p3_msbar_to_pole_k1.py
+  [PASS] P3.1 log exists: logs/retained/yt_p3_msbar_to_pole_k1_2026-04-17.log
+  [PASS] P3.2 note exists: docs/YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md
+  [PASS] P3.2 runner exists: scripts/frontier_yt_p3_msbar_to_pole_k2.py
+  [PASS] P3.2 log exists: logs/retained/yt_p3_msbar_to_pole_k2_2026-04-17.log
   [PASS] P3.3 note exists: docs/YT_P3_MSBAR_TO_POLE_K2_INTEGRAL_CITATION_NOTE_2026-04-17.md
   [PASS] P3.3 runner exists: scripts/frontier_yt_p3_k2_integrals.py
   [PASS] P3.3 log exists: logs/retained/yt_p3_k2_integrals_2026-04-17.log
@@ -88,6 +106,12 @@ Block 2: File-existence checks on retained slot artifacts
 Block 3: Runner-log [PASS]/[FAIL] consistency
 ========================================================================
 
+  [PASS] M.1 log has zero FAIL markers  (5 PASS, 0 FAIL)
+  [PASS] M.1 log PASS count matches manifest Part 9 expected  (observed 5, expected 5)
+  [PASS] P1.1 log has zero FAIL markers  (4 PASS, 0 FAIL)
+  [PASS] P1.1 log PASS count matches manifest Part 9 expected  (observed 4, expected 4)
+  [PASS] P1.2 log has zero FAIL markers  (5 PASS, 0 FAIL)
+  [PASS] P1.2 log PASS count matches manifest Part 9 expected  (observed 5, expected 5)
   [PASS] P1.3 log has zero FAIL markers  (43 PASS, 0 FAIL)
   [PASS] P1.3 log PASS count matches manifest Part 9 expected  (observed 43, expected 43)
   [PASS] P1.4 log has zero FAIL markers  (21 PASS, 0 FAIL)
@@ -116,6 +140,8 @@ Block 3: Runner-log [PASS]/[FAIL] consistency
   [PASS] P1.15 log PASS count matches manifest Part 9 expected  (observed 45, expected 45)
   [PASS] P1.16 log has zero FAIL markers  (79 PASS, 0 FAIL)
   [PASS] P1.16 log PASS count matches manifest Part 9 expected  (observed 79, expected 79)
+  [PASS] P1.17 log has zero FAIL markers  (50 PASS, 0 FAIL)
+  [PASS] P1.17 log PASS count matches manifest Part 9 expected  (observed 50, expected 50)
   [PASS] P2.1 log has zero FAIL markers  (12 PASS, 0 FAIL)
   [PASS] P2.1 log PASS count matches manifest Part 9 expected  (observed 12, expected 12)
   [PASS] P2.2 log has zero FAIL markers  (12 PASS, 0 FAIL)
@@ -124,6 +150,10 @@ Block 3: Runner-log [PASS]/[FAIL] consistency
   [PASS] P2.3 log PASS count matches manifest Part 9 expected  (observed 12, expected 12)
   [PASS] P2.4 log has zero FAIL markers  (48 PASS, 0 FAIL)
   [PASS] P2.4 log PASS count matches manifest Part 9 expected  (observed 48, expected 48)
+  [PASS] P3.1 log has zero FAIL markers  (4 PASS, 0 FAIL)
+  [PASS] P3.1 log PASS count matches manifest Part 9 expected  (observed 4, expected 4)
+  [PASS] P3.2 log has zero FAIL markers  (6 PASS, 0 FAIL)
+  [PASS] P3.2 log PASS count matches manifest Part 9 expected  (observed 6, expected 6)
   [PASS] P3.3 log has zero FAIL markers  (30 PASS, 0 FAIL)
   [PASS] P3.3 log PASS count matches manifest Part 9 expected  (observed 30, expected 30)
   [PASS] P3.4 log has zero FAIL markers  (18 PASS, 0 FAIL)
@@ -135,26 +165,24 @@ Block 3: Runner-log [PASS]/[FAIL] consistency
 Block 4: Per-primitive retention PASS roll-up
 ========================================================================
 
-  [PASS] P1 retained-runner PASS total matches manifest expected  (observed P1 = 639, expected 639)
+  [PASS] P1 retained-runner PASS total matches manifest expected  (observed P1 = 698, expected 698)
   [PASS] P2 retained-runner PASS total matches manifest expected  (observed P2 = 84, expected 84)
-  [PASS] P3 retained-runner PASS total matches manifest expected  (observed P3 = 76, expected 76)
-  [PASS] Grand retained-runner PASS total = 799  (observed 799, expected 799)
+  [PASS] P3 retained-runner PASS total matches manifest expected  (observed P3 = 86, expected 86)
+  [PASS] Grand retained-runner PASS total = 868 (Pillar A = P1+P2+P3)  (observed 868, expected 868)
 
-  P1 retained PASS total: 639
+  P1 retained PASS total: 698
   P2 retained PASS total: 84
-  P3 retained PASS total: 76
-  Grand retained PASS total: 799
+  P3 retained PASS total: 86
+  Master (M.1) PASS: 5
+  Pillar A grand retained PASS total (P1+P2+P3): 868
 
 ========================================================================
-Block 5: Embedded-only slot catalog (tolerated, content carried elsewhere)
+Block 5: Embedded-only note catalog (post-Round-2)
 ========================================================================
 
-  [EMBEDDED] M.1  UV-to-IR transport obstruction theorem
-  [EMBEDDED] P1.1  Shared-Fierz shortcut no-go
-  [EMBEDDED] P1.2  Color-factor retention (C_F / C_A / T_F n_f)
-  [EMBEDDED] P3.1  K_1 framework-native (K_1 = C_F = 4/3)
-  [EMBEDDED] P3.2  K_2 color-factor retention (4-tensor)
-  [PASS] Embedded-only slot count = 5 (tolerated; content in cross-referenced retained notes)  (5 embedded slots enumerated)
+  [EMBEDDED-NOTE] P1.4  I_1 symbolic decomposition (Ward I_V = 0)  (runner + log on disk)
+  [PASS] Slot-level embedded count = 0 (post-Round-2)  (0 slot-level embedded entries)
+  [PASS] Embedded-note-only retained slots = 1 (P1.4 by design)  (1 embedded-note-only entries)
 
 ========================================================================
 Block 6: Retained YT-lane final state (carried from sub-theorems)
@@ -173,9 +201,9 @@ Block 6: Retained YT-lane final state (carried from sub-theorems)
 ========================================================================
 Manifest validator summary
 ========================================================================
-  Manifest-validator PASSED: 118
+  Manifest-validator PASSED: 149
   Manifest-validator FAILED: 0
-  Retained-runner [PASS] total surveyed: 799
+  Retained-runner [PASS] total surveyed: 873
   Retained-runner [FAIL] total surveyed: 0
 
 Verdict: MANIFEST VALIDATOR ALL PASS
