@@ -3,11 +3,12 @@
 Status: exploratory / protocol-specific
 
 Primary artifact:
-- `/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_gravitational_memory.py`
+- [`scripts/frontier_gravitational_memory.py`](../scripts/frontier_gravitational_memory.py)
 
 Robustness / diagnosis companions:
-- `/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_memory_sign_robustness.py`
+- [`scripts/frontier_memory_mu2_size_sweep.py`](../scripts/frontier_memory_mu2_size_sweep.py)
 - [`MEMORY_DECAY_DIAGNOSIS_2026-04-11.md`](MEMORY_DECAY_DIAGNOSIS_2026-04-11.md)
+- [`MEMORY_MU2_GEOMETRY_SWEEP_NOTE_2026-04-11.md`](MEMORY_MU2_GEOMETRY_SWEEP_NOTE_2026-04-11.md)
 
 ## What was rerun
 

@@ -35,8 +35,8 @@ What does **not** survive:
 
 ## Audited runners
 
-- [`scripts/frontier_ollivier_einstein.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_ollivier_einstein.py)
-- [`scripts/frontier_ollivier_control.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_ollivier_control.py)
+- [`scripts/frontier_ollivier_einstein.py`](../scripts/frontier_ollivier_einstein.py)
+- [`scripts/frontier_ollivier_control.py`](../scripts/frontier_ollivier_control.py)
 
 Both runners were updated to use the correct minimum-image torus distance for
 periodic wraparound hopping weights before rerun.

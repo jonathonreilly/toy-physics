@@ -18,11 +18,11 @@
 
 ## Key Runners
 
-- [`scripts/gate_b_grown_joint_package.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/gate_b_grown_joint_package.py)
-- [`scripts/source_resolved_generated_architecture_bridge.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/source_resolved_generated_architecture_bridge.py)
-- [`scripts/source_resolved_geometry_rule_repair_probe.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/source_resolved_geometry_rule_repair_probe.py)
-- [`scripts/frontier_emergent_geometry_v2.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_emergent_geometry_v2.py)
-- [`scripts/frontier_emergent_geometry_g_sweep.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_emergent_geometry_g_sweep.py)
+- [`scripts/gate_b_grown_joint_package.py`](../../../scripts/gate_b_grown_joint_package.py)
+- [`scripts/source_resolved_generated_architecture_bridge.py`](../../../scripts/source_resolved_generated_architecture_bridge.py)
+- [`scripts/source_resolved_geometry_rule_repair_probe.py`](../../../scripts/source_resolved_geometry_rule_repair_probe.py)
+- [`scripts/frontier_emergent_geometry_v2.py`](../../../scripts/frontier_emergent_geometry_v2.py)
+- [`scripts/frontier_emergent_geometry_g_sweep.py`](../../../scripts/frontier_emergent_geometry_g_sweep.py)
 
 ## Current Standing
 

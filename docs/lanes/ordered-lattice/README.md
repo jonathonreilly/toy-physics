@@ -16,13 +16,13 @@
 
 ## Key Runners
 
-- [`scripts/lattice_3d_dense_10prop.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/lattice_3d_dense_10prop.py)
-- [`scripts/lattice_3d_dense_window_extension.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/lattice_3d_dense_window_extension.py)
-- [`scripts/lattice_3d_dense_refinement_reconciliation.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/lattice_3d_dense_refinement_reconciliation.py)
-- [`scripts/lattice_nn_continuum.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/lattice_nn_continuum.py)
-- [`scripts/lattice_nn_deterministic_rescale.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/lattice_nn_deterministic_rescale.py)
-- [`scripts/structured_chokepoint_bridge.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/structured_chokepoint_bridge.py)
-- [`scripts/structured_chokepoint_bridge_extension.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/structured_chokepoint_bridge_extension.py)
+- [`scripts/lattice_3d_dense_10prop.py`](../../../scripts/lattice_3d_dense_10prop.py)
+- [`scripts/lattice_3d_dense_window_extension.py`](../../../scripts/lattice_3d_dense_window_extension.py)
+- [`scripts/lattice_3d_dense_refinement_reconciliation.py`](../../../scripts/lattice_3d_dense_refinement_reconciliation.py)
+- [`scripts/lattice_nn_continuum.py`](../../../scripts/lattice_nn_continuum.py)
+- [`scripts/lattice_nn_deterministic_rescale.py`](../../../scripts/lattice_nn_deterministic_rescale.py)
+- [`scripts/structured_chokepoint_bridge.py`](../../../scripts/structured_chokepoint_bridge.py)
+- [`scripts/structured_chokepoint_bridge_extension.py`](../../../scripts/structured_chokepoint_bridge_extension.py)
 
 ## Current Standing
 

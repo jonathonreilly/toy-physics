@@ -15,9 +15,9 @@
 
 ## Key Runners
 
-- [`scripts/frontier_chiral_bottleneck_card.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_chiral_bottleneck_card.py)
-- [`scripts/frontier_dirac_bottleneck_tests.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_dirac_bottleneck_tests.py)
-- [`scripts/frontier_weakcoin_16card.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_weakcoin_16card.py)
+- [`scripts/frontier_chiral_bottleneck_card.py`](../../../scripts/frontier_chiral_bottleneck_card.py)
+- [`scripts/frontier_dirac_bottleneck_tests.py`](../../../scripts/frontier_dirac_bottleneck_tests.py)
+- [`scripts/frontier_weakcoin_16card.py`](../../../scripts/frontier_weakcoin_16card.py)
 
 ## Current Standing
 

@@ -1,7 +1,7 @@
 # Graph True KG vs CN Note
 
 Files:
-- [frontier_graph_true_kg_vs_cn.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_graph_true_kg_vs_cn.py)
+- [frontier_graph_true_kg_vs_cn.py](../scripts/frontier_graph_true_kg_vs_cn.py)
 
 ## Scope
 

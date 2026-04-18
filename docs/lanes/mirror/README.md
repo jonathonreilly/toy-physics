@@ -15,9 +15,9 @@
 
 ## Key Runners
 
-- [`scripts/mirror_2d_validation.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/mirror_2d_validation.py)
-- [`scripts/mirror_mutual_information_chokepoint.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/mirror_mutual_information_chokepoint.py)
-- [`scripts/mirror_chokepoint_joint.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/mirror_chokepoint_joint.py)
+- [`scripts/mirror_2d_validation.py`](../../../scripts/mirror_2d_validation.py)
+- [`scripts/mirror_mutual_information_chokepoint.py`](../../../scripts/mirror_mutual_information_chokepoint.py)
+- [`scripts/mirror_chokepoint_joint.py`](../../../scripts/mirror_chokepoint_joint.py)
 
 ## Current Standing
 

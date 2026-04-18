@@ -21,7 +21,7 @@ Dirac walk machinery as the historical v3/v4 harnesses.
 
 ## Script
 
-- [`scripts/frontier_dirac_walk_3plus1d_source_smoothing_scan.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_dirac_walk_3plus1d_source_smoothing_scan.py)
+- [`scripts/frontier_dirac_walk_3plus1d_source_smoothing_scan.py`](../scripts/frontier_dirac_walk_3plus1d_source_smoothing_scan.py)
 
 ## Result summary
 

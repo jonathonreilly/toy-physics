@@ -33,18 +33,26 @@ What is aligned across the audited docs:
 This integration pass fixes the ledger so `D30` now cites only the retained
 Anderson/eigenvalue note actually present on `main`.
 
-### 2. Main-facing portability cleanup remained open after the first pass
+### 2. Main-facing portability cleanup is now resolved on the audited surface
 
-The highest-impact contradictions are now fixed, but a broader legacy slice of
-`main` docs still needed repo-local path normalization and stale-rerun cleanup.
-That work is tracked as a revisit item in:
+The earlier high-impact portability problem was that a broad historical slice
+of docs still linked runners through one local `.claude/worktrees/...` layout.
+That normalization is now fixed on the main-facing notes and lane readmes that
+the control plane relies on.
 
-- [`docs/MAIN_REVISIT_SWEEP_2026-04-11.md`](MAIN_REVISIT_SWEEP_2026-04-11.md)
+What remains historical:
 
-The repo baseline should therefore be read as:
+- branch/worktree names may still appear as provenance in older notes
+- broader historical doc cleanup debt still exists outside the control-plane
+  surface and is tracked in:
+  [`docs/MAIN_REVISIT_SWEEP_2026-04-11.md`](MAIN_REVISIT_SWEEP_2026-04-11.md)
+
+The repo baseline should therefore now be read as:
 
 - corrected on the bounded-companion control-plane surface
-- still carrying historical doc cleanup debt outside that surface
+- repo-local for the audited runner links
+- still carrying some broader historical prose cleanup debt outside that
+  surface
 
 ## Follow-Up Boundary
 

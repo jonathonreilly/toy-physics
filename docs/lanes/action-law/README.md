@@ -17,9 +17,9 @@
 
 ## Key Runners
 
-- [`scripts/frontier_3plus1d_closure_card.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_3plus1d_closure_card.py)
-- [`scripts/frontier_dimension_dependent_kernel.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_dimension_dependent_kernel.py)
-- [`scripts/frontier_lorentzian_closure_card.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_lorentzian_closure_card.py)
+- [`scripts/frontier_3plus1d_closure_card.py`](../../../scripts/frontier_3plus1d_closure_card.py)
+- [`scripts/frontier_dimension_dependent_kernel.py`](../../../scripts/frontier_dimension_dependent_kernel.py)
+- [`scripts/frontier_lorentzian_closure_card.py`](../../../scripts/frontier_lorentzian_closure_card.py)
 
 ## Current Standing
 

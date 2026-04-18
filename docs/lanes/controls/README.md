@@ -14,10 +14,10 @@
 
 ## Key Runners
 
-- [`scripts/frontier_graph_kg_16card.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_graph_kg_16card.py)
-- [`scripts/frontier_graph_kg_full_suite.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_graph_kg_full_suite.py)
-- [`scripts/frontier_scalar_kg_16card.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_scalar_kg_16card.py)
-- [`scripts/frontier_scalar_kg_full_suite.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_scalar_kg_full_suite.py)
+- [`scripts/frontier_graph_kg_16card.py`](../../../scripts/frontier_graph_kg_16card.py)
+- [`scripts/frontier_graph_kg_full_suite.py`](../../../scripts/frontier_graph_kg_full_suite.py)
+- [`scripts/frontier_scalar_kg_16card.py`](../../../scripts/frontier_scalar_kg_16card.py)
+- [`scripts/frontier_scalar_kg_full_suite.py`](../../../scripts/frontier_scalar_kg_full_suite.py)
 
 ## Current Standing
 

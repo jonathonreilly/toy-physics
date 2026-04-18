@@ -15,9 +15,9 @@
 
 ## Key Runners
 
-- [`scripts/frontier_emergent_schwarzschild.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_emergent_schwarzschild.py)
-- [`scripts/frontier_hawking_analog.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_hawking_analog.py)
-- [`scripts/frontier_quantized_energy_levels.py`](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_quantized_energy_levels.py)
+- [`scripts/frontier_emergent_schwarzschild.py`](../../../scripts/frontier_emergent_schwarzschild.py)
+- [`scripts/frontier_hawking_analog.py`](../../../scripts/frontier_hawking_analog.py)
+- [`scripts/frontier_quantized_energy_levels.py`](../../../scripts/frontier_quantized_energy_levels.py)
 
 ## Current Standing
 
