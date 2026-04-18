@@ -1,6 +1,6 @@
 # Interest Map
 
-**Date:** 2026-04-09  
+**Date:** 2026-04-18  
 **Status:** internal program-calibration note
 
 ## Purpose
@@ -36,108 +36,126 @@ right reading is:
 
 Important updates since the last score change:
 
-- the retained scalar weak-field core is stronger in one important way:
-  - the new 3D Laplacian closure card says analytic `1/r`, nonlinear Laplacian,
-    and linear Laplacian all reproduce the same sign-class and near-linear
-    `F~M` behavior on the retained ordered-lattice `2+1D` lane
-  - that closes the old objection that the gravity signal survived only on a
-    hand-written analytic field
-- but the stronger mechanistic read is now also narrower:
-  - the completed `k·H` sweep shows the lensing slope is not a geometric
-    invariant; it oscillates from attractive to repulsive as the coupling moves
-  - the old `-1.40` lensing slope at `k·H = 2.5` survives only as a retained
-    reference-window value, not as a universal law of the propagator
-  - the "eikonal gap" is therefore not a fixed correction but a coupling-
-    dependent interference term
-- the weak/strong-field cleanup is materially clearer:
-  - the PN `f²` lane is now read as a regime map rather than a paradox:
-    enhancement and suppression occur in different response windows
-  - the 2D AWAY/TOWARD story is now split into two mechanisms:
-    attenuation choice and phase-window shifts with changing accumulated phase
-- the publication-blocker pass tightened the outer claim surface:
-  - the causal propagator lane is a real negative for a ballistic light-cone
-    interpretation of the amplitude envelope
-  - the analytic continuum-transfer lane is interesting but still non-unitary,
-    so it does not rescue a clean relativistic propagator claim
-  - the wider 3+1D distance-law card is better than the first probe, but still
-    under-constrained and boundary-sensitive
-  - the angular-kernel derivation remains open; the current route is still
-    heuristic / empirical rather than derived
-- the dynamic side is still promising but should stay bounded:
-  - 3D dynamic growth now has clean Born survival and a real field-sensitive
-    response on the grown DAG
-  - but the current merged artifact does not yet support a retained
-    toward-mass gravity transfer claim on the grown 3D graph
+- the cosmology / GR identity chain is materially stronger:
+  - the retained spectral-gap identity `Lambda_vac = 3 / R^2` on the de Sitter
+    stationary vacuum sector now lands on `main` as a standalone theorem with
+    a dark-energy equation-of-state corollary
+  - the graviton-mass structural identity `m_g^2 = 2 hbar^2 Lambda_vac / c^2 =
+    6 hbar^2 / (c^2 R^2)` is now a retained theorem that chains directly off
+    the spectral-gap identity and the retained `S^3` topology, with the
+    numerical `m_g ~ 3.52 x 10^-33 eV` row kept explicitly bounded
+  - that upgrades the cosmology / graviton lane from "numerical companion"
+    status into a retained structural identity backbone
+- the structure-level internal-symmetry surface is a little stronger:
+  - the three-generation chirality defense is now surfaced on `main`
+  - the CL3 support-route minimality packet landed as a retained feature,
+    sharpening how tightly the single-axiom `Cl(3)` on `Z^3` surface forces
+    the current support route
+  - the Higgs `Z_3`-charge gauge-redundancy theorem is now used to discharge
+    the previously-listed `q_H = 0` conditional on the DM flagship gate
+- the dark-matter / dark-sector surface now has one retained local theorem:
+  - the DM-neutrino P3 Sylvester linear-path signature theorem carries the
+    pointwise signature statement at the retained P3 pin as a retained local
+    theorem rather than an imposed rule
+  - the DM flagship gate itself is still OPEN: the current-bank quantitative
+    DM selector / mapping side and `A-BCC` input stay open, and the PMNS-as-
+    `f(H)` package is still best read as bounded on an open gate
+- the charged-lepton lane is better bounded without being promoted:
+  - the Koide review support stack, circulant/character derivation and bridge,
+    full-cube `Gamma_i` route, and positive one-clock selector now close the
+    bridges exactly onto the April 17 Koide package
+  - the authoritative state is still "no retained Koide derivation on the
+    current surface" — one irreducible microscopic scalar selector law is
+    still open
+- the bridge-to-known-physics surface is a little broader:
+  - the YT UV-to-IR transport retention program is now landed on `main`
+  - a bounded same-surface W-boson consistency probe is landed
+  - `g_bare` structural normalization support is now a retained feature
+  - the bounded Wilson side lane is surfaced alongside the bounded irregular
+    sign packet
+- the prior cycle's retained reads still hold:
+  - the `2+1D` Laplacian-closure card remains the cleanest defense against
+    the old "analytic-field only" objection
+  - the `k·H` sweep still says the lensing slope is a coupling-window
+    observable rather than a universal Newtonian exponent, and the causal
+    propagator / continuum-transfer lanes remain bounded negatives
 - the bottom-line shift is:
-  - stronger as a mechanistic discrete-wave / path-sum research program
-  - weaker as an immediate "we reproduced Newton / relativity" package
+  - the cosmology-scale retained structural identities genuinely broaden the
+    "emergent gravity" reading beyond parameter-window claims, but the
+    remaining open flagship gates (DM selector, charged-lepton microscopic
+    scalar law, matter / inertia closure) still gate the broader package
 
 ## Delta Vs Last Update
 
 Score deltas since the previous map:
 
-- `Publishable as a foundational-physics breakthrough claim`: `8.0 -> 7.4`
-  Reason: the latest merged work closes one real gap (`2+1D` Laplacian-field
-  closure) but narrows the flagship gravity claim more sharply:
-  the lensing slope is now a coupling-window / resonance observable rather
-  than a universal Newtonian exponent, the kernel is still empirical, and the
-  causal / continuum blockers did not convert into positives.
-- `Likelihood of publication in very top field journals today`: `7.0 -> 6.4`
-  Reason: the package is still strong as a careful computational-model / emergent-
-  mechanism paper, but the newest blockers weaken the broad-physics pitch:
-  no ballistic light cone in the amplitude envelope, no clean unitary
-  continuum limit from the raw transfer matrix, and no stable `3+1D`
-  distance-law closure yet.
-- `Ready for top-tier mainstream physics claims`: `7.1 -> 6.5`
-  Reason: the mainstream-facing story is now more honest but also narrower.
-  The model still touches gravity, action, gauge structure, and dynamics, but
-  the current read is “parameter-window resonance mechanism” rather than
-  “emergent relativistic gravity.”
-- `Strength against harshest critique`: `5.0 -> 4.8`
-  Reason: one hostile line just got stronger:
-  “this is a tuned resonance window on a discrete propagator, not a broad law.”
-  The Laplacian closure helps against the old analytic-field critique, but the
-  new `k·H` dependence and causal-propagator negative give skeptics fresh
-  leverage.
-- `Field-shifting theory program`: `9.9 -> 10.0`
-  Reason: the program itself is now even more interesting.
-  The `k`-sweep is one of the most informative mechanistic results in the repo:
-  it says the gravity-like lane is an interference / resonance phenomenon.
-  That is weaker as a direct GR-style claim, but richer as a discrete-physics
-  research direction.
-- `Landmark foundational breakthrough`: `7.7 -> 7.1`
-  Reason: the path is narrower than the previous map implied. The project now
-  looks less like “nearly there if one more lane closes” and more like “real
-  mechanism class with several decisive conceptual gaps still open.”
-- `Nobel-scale breakthrough`: `1.8 -> 1.6`
-  Reason: still not fanciful in the strict sense, but the resonance-window
-  interpretation and the causal / continuum negatives push the true horizon
-  farther out again.
+- `Publishable as a foundational-physics breakthrough claim`: `7.4 -> 7.7`
+  Reason: the retained cosmological-constant spectral-gap identity and the
+  retained graviton-mass structural identity together give the foundational-
+  physics surface a concrete theorem-grade backbone on the cosmology / GR
+  side, rather than another parameter-window observation. The charged-lepton
+  Koide stack and the DM flagship gate both remain open, which keeps this
+  below the 8.0 level the previous cycle started at.
+- `Likelihood of publication in very top field journals today`: `6.4 -> 6.7`
+  Reason: the retained identity chain is exactly the kind of theorem-grade
+  content top-field referees weigh most heavily; the bounded W-boson probe,
+  the YT UV-to-IR transport retention program, and `g_bare` structural
+  normalization each add small amounts of review-safe surface, but the
+  causal / continuum and matter / inertia gaps are still not closed.
+- `Ready for top-tier mainstream physics claims`: `6.5 -> 6.7`
+  Reason: the mainstream-facing story now touches cosmological constant and
+  graviton mass through a retained structural identity rather than a numerical
+  coincidence, which is mainstream-legible. The open flagship gates on the
+  DM and charged-lepton sides still cap the mainstream read below 7.
+- `Strength against harshest critique`: `4.8 -> 5.1`
+  Reason: theorem-grade retained identities are materially harder to dismiss
+  as "tuned windows." The hostile reader can still press the DM selector and
+  charged-lepton microscopic scalar law being open, which is why this does
+  not move further.
+- `Field-shifting theory program`: unchanged at `10.0/10`
+  Reason: already maxed; the new identity chain reinforces the existing max
+  rather than raising a ceiling that no longer has room.
+- `Landmark foundational breakthrough`: `7.1 -> 7.4`
+  Reason: a retained cosmological-constant + graviton-mass spectral-gap
+  identity pair is exactly the landmark-shaped structural result the previous
+  map flagged as missing. Several conceptual gaps (matter / inertia, DM
+  selector, charged-lepton microscopic law, continuum / causal closure) still
+  prevent a larger jump.
+- `Nobel-scale breakthrough`: `1.6 -> 1.8`
+  Reason: the retained cosmology-scale identity chain is the first mildly
+  Nobel-shaped structural result on `main`; it still requires experimental
+  confirmation and universality beyond the current surface to move further.
 
 Retained-claim status changes since the previous map:
 
-- `New positive`: the retained `2+1D` gravity lane is stronger because the
-  self-consistent Laplacian closures now reproduce the analytic field’s sign
-  class and near-linear `F~M`.
-- `Downgraded`: the old `-1.40` lensing slope is no longer counted as a
-  structural invariant. It is now a retained reference-window value at
-  `k·H = 2.5`.
-- `New mechanism read`: the gravity-like deflection lane is now best described
-  as a coupling-window / resonance phenomenon in the propagator, not geometric
-  ray bending with a fixed wave correction.
-- `Narrow positive`: the PN lane now supports a regime-dependent shift along
-  the same response curve, not a fixed “suppression” theorem.
-- `Narrow positive`: the 2D AWAY/TOWARD split is now cleaner:
-  part attenuation prescription, part phase-window shift, not a pure
-  dimensional no-go.
-- `New negative`: the amplitude-envelope propagator does not show a clean
-  ballistic light cone. Whatever causality survives in the model is not
-  present as a simple wavefront in `|psi|`.
-- `New bounded negative`: the analytic continuum-transfer lane is interesting
-  but still non-unitary / growth-dominated, so it does not currently support
-  a clean relativistic or KG-like continuum claim.
-- `Narrow positive`: the wider `3+1D` distance-law probe improves feasibility
-  but remains under-constrained; it is not yet a retained Newtonian tail.
+- `New retained identity theorem`: cosmological-constant spectral-gap identity
+  `Lambda_vac = 3 / R^2` on the de Sitter stationary vacuum sector, with a
+  retained dark-energy equation-of-state corollary.
+- `New retained identity theorem`: graviton-mass structural identity
+  `m_g^2 = 2 hbar^2 Lambda_vac / c^2`, chained directly off the spectral-gap
+  identity and retained `S^3` topology. The numerical `m_g ~ 3.52 x 10^-33 eV`
+  companion remains explicitly bounded.
+- `New retained local theorem`: DM-neutrino P3 Sylvester linear-path signature
+  theorem carries the pointwise P3 signature as a retained local theorem.
+- `New retained support`: CL3 support-route minimality packet, three-generation
+  chirality defense, and Higgs `Z_3`-charge gauge-redundancy theorem all
+  sharpen the single-axiom structural surface; `g_bare` structural
+  normalization is a retained feature.
+- `New bounded retention`: YT UV-to-IR transport retention program, bounded
+  same-surface W-boson consistency probe, bounded Wilson side lane, and
+  bounded irregular sign packet.
+- `Unretained (bridge only)`: the charged-lepton Koide review stack closes the
+  circulant/character and full-cube `Gamma_i` bridges exactly onto the April
+  17 Koide package, but no retained Koide derivation exists on the current
+  surface; one microscopic scalar selector law is still open.
+- `Still open`: the DM flagship gate remains OPEN — `A-BCC`, the observational
+  hierarchy pairing `sigma_hier = (2, 1, 0)`, and the current-bank quantitative
+  DM selector / mapping side are still open.
+- `Carried forward`: the prior cycle's positives (Laplacian-closure `2+1D`
+  gravity lane, `k`-sweep resonance-window read, PN regime map, AWAY/TOWARD
+  mechanism split) and bounded negatives (no ballistic light cone in `|psi|`,
+  non-unitary continuum transfer, under-constrained `3+1D` distance law) all
+  still hold.
 
 Score deltas that did not move:
 
@@ -146,6 +164,7 @@ Score deltas that did not move:
 - `Broad theorist interest`: unchanged at `10.0/10`
 - `Bridge to known physics`: unchanged at `10.0/10`
 - `Publishable as a careful computational-model paper`: unchanged at `10.0/10`
+- `Field-shifting theory program`: unchanged at `10.0/10`
 
 ## Current map
 
@@ -156,13 +175,13 @@ Score deltas that did not move:
 | Broad theorist interest | `10.0/10` | still maxed out on curiosity value; the exact-lattice wavefield lane, complex-action carryover, grown-row companion, bounded wide-lattice distance frontier, stronger electrostatics family, and graph-growth proxies make the program look richer rather than narrower after merge |
 | Bridge to known physics | `10.0/10` | now effectively maxed in breadth, because the mainline portfolio visibly touches weak-field gravity, signed scalar couplings, causal phase structure, distance-law behavior, and graph-growth expansion proxies; it is still not a full closure because the self-generated field and inertial-response sectors remain only partly retained |
 | Publishable as a careful computational-model paper | `10.0/10` | essentially maxed; the repo now has enough retained positives, enough bounded negatives, and enough diagnosed closures to support a very strong disciplined computational-model paper even if the flagship physics claim remains narrower |
-| Publishable as a foundational-physics breakthrough claim | `7.4/10` | still above the bar for a serious foundations paper, but now clearly narrower than the previous map: the cleanest retained story is action constraint + Born/gauge structure + bounded weak-field gravity windows, not a universal Newtonian / relativistic closure |
-| Likelihood of publication in very top field journals today (`PRL` / `PRX` / `Nature Physics`) | `6.4/10` | plausible only as a highly disciplined, narrowly framed mechanism paper; the latest blockers make the broader flagship pitch weaker because the strongest gravity-like lane is parameter-window specific and the causal / continuum story remains materially incomplete |
-| Ready for top-tier mainstream physics claims | `6.5/10` | the bridge to known physics is still broad, but the current honest read is “discrete-wave resonance mechanism with Newtonian-looking windows,” not “emergent relativistic gravity,” which lowers mainstream claim-readiness |
-| Strength against harshest critique | `4.8/10` | still the weakest score on the map. The package is more honest and mechanistically sharper, but the hostile reader can now press a stronger line: the retained gravity-like behavior may be a tuned resonance-window phenomenon rather than a broad law-level result |
-| Field-shifting theory program | `10.0/10` | maxed as a research program: the latest work made the flagship claim narrower but the mechanism class more interesting. The `k`-sweep, PN regime map, attenuation / phase split, and causal-envelope negative together point to a richer discrete-wave theory question than before |
-| Landmark foundational breakthrough | `7.1/10` | still conceivable, but no longer reads like a near-miss. The route now clearly requires solving several deep conceptual gaps: kernel derivation, causal / continuum closure, and a non-window-specific gravity law |
-| Nobel-scale breakthrough | `1.6/10` | the project still has a real ladder of intermediate results, but the latest mechanistic clarification moves it farther from an immediate “new fundamental law” horizon |
+| Publishable as a foundational-physics breakthrough claim | `7.7/10` | stronger than the previous cycle because the cleanest retained story now includes a theorem-grade cosmological-constant + graviton-mass structural identity chain on top of action constraint, Born/gauge structure, and bounded weak-field gravity windows; still below 8.0 because the DM flagship gate and charged-lepton microscopic selector law remain open |
+| Likelihood of publication in very top field journals today (`PRL` / `PRX` / `Nature Physics`) | `6.7/10` | stronger than the previous map because the retained identity chain is exactly the kind of content top-field referees weigh most heavily; the causal / continuum and matter / inertia gaps still cap this below a clean flagship-level pitch |
+| Ready for top-tier mainstream physics claims | `6.7/10` | the mainstream surface now includes retained cosmological-constant and graviton-mass structural identities rather than numerical coincidences, which reads better to a mainstream referee; open flagship DM and charged-lepton gates still keep the mainstream read below 7 |
+| Strength against harshest critique | `5.1/10` | still the weakest score on the map, but improving: theorem-grade retained identities are materially harder to dismiss as tuned windows than the previous mechanism-only package. The hostile reader can still press the open DM selector, the open microscopic scalar selector on the charged-lepton side, and the still-absent matter / inertia closure |
+| Field-shifting theory program | `10.0/10` | maxed as a research program: the retained cosmology / GR identity chain, the DM P3 Sylvester local theorem, the three-generation chirality defense, and the CL3 support-route minimality packet together make the program visibly broader and more theorem-driven than the previous cycle, even though the ceiling cannot move further |
+| Landmark foundational breakthrough | `7.4/10` | a retained cosmological-constant + graviton-mass spectral-gap identity pair is exactly the landmark-shaped structural result the previous map flagged as missing; a full landmark read still requires closing matter / inertia, the DM selector, the charged-lepton microscopic selector law, and the continuum / causal gap |
+| Nobel-scale breakthrough | `1.8/10` | the retained cosmology-scale identity chain is the first mildly Nobel-shaped structural result on `main`; still requires a universality class beyond the current surface and an experimentally confirmed discriminator to move meaningfully further |
 
 ## Harshest-Critique Tracker
 
@@ -170,33 +189,46 @@ This section should be updated periodically alongside the score above.
 
 ### Current harshest critique
 
-> This is a sophisticated discrete path-sum / interference simulator that can
-> produce gravity-like, gauge-like, and Born-like behavior, but the current
-> gravity story may be a tuned resonance-window phenomenon on a discrete
-> propagator rather than a broad law-level derivation. The package is richer
-> and more honest than before, but still not structurally forced.
+> This is a sophisticated discrete path-sum / interference simulator whose
+> cosmology-scale lane now carries a retained spectral-gap identity and a
+> chained graviton-mass identity, but the flagship matter-sector reads (DM
+> selector, charged-lepton microscopic selector, persistent-inertial closure)
+> are still open, the gravity-like lane is still parameter-window specific at
+> the weak-field level, and the causal / continuum story has not closed.
+> The package is more theorem-driven than before, but still not structurally
+> forced everywhere it claims.
 
-### Current answer strength: `4.8/10`
+### Current answer strength: `5.1/10`
 
 Why the score is not lower:
 
-- the retained package is more self-correcting and mechanistically explicit
-  than it was before this update
+- the retained package now has theorem-grade identity content on the cosmology
+  / GR side: `Lambda_vac = 3 / R^2` on the de Sitter stationary vacuum sector
+  plus the chained `m_g^2 = 2 hbar^2 Lambda_vac / c^2` graviton-mass identity
+- the DM-neutrino P3 Sylvester linear-path signature theorem upgrades one
+  flagship-gate rule from imposed to retained local theorem
+- the CL3 support-route minimality packet, three-generation chirality defense,
+  and Higgs `Z_3`-charge gauge-redundancy theorem tighten the structural
+  single-axiom surface
 - the `2+1D` gravity lane is no longer just an analytic-field artifact:
   the Laplacian-closure card reproduces the same sign class and near-linear
   mass scaling
-- the `k`-sweep is a real mechanistic gain:
-  it tells us the gravity-like response is coupling-window dependent rather
-  than leaving the `-1.40` slope as a mysterious one-off number
+- the `k`-sweep still reads gravity-like behavior as a coupling-window
+  phenomenon rather than a mysterious one-off slope
 - Born, `k=0`, and gauge structure remain genuinely strong retained anchors
-- the negative results are now cleaner no-gos instead of vague unease:
+- the negative results are still cleaner no-gos instead of vague unease:
   no ballistic light cone in the amplitude envelope, no raw-transfer
   continuum closure, no derived kernel yet
 
 Why the score is not higher:
 
-- the strongest gravity-like observable is now parameter-window specific:
-  the same propagator becomes shallow or repulsive at other `k·H`
+- the DM flagship gate is still OPEN: `A-BCC`, the observational hierarchy
+  pairing `sigma_hier = (2, 1, 0)`, and the current-bank quantitative DM
+  selector / mapping side all remain open
+- there is still no retained charged-lepton Koide derivation on the current
+  surface; one microscopic scalar selector law is still open
+- the strongest weak-field gravity-like observable is still parameter-window
+  specific: the same propagator becomes shallow or repulsive at other `k·H`
 - there is still no derived reason the retained kernel should be the right one
 - the amplitude envelope does not supply a clean relativistic / light-cone
   story
