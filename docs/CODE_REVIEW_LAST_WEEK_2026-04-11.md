@@ -46,11 +46,7 @@ be promoted or reinterpreted without fixes.
 
 ## Validated Medium-Severity Findings
 
-1. `frontier_self_consistency_test.py` random controls are not moment-matched.
-   - Using `abs(normal(mean, std))` changes both mean and variance, so the sign
-     and correlation comparisons are confounded.
-
-2. `frontier_staggered_dag.py` is not actually directed in the Hamiltonian.
+1. `frontier_staggered_dag.py` is not actually directed in the Hamiltonian.
    - The current construction stores edges both ways, so the retained signal is
      a layered-bias result, not a true DAG propagation test.
 
@@ -70,6 +66,15 @@ be promoted or reinterpreted without fixes.
    - That rerun lowers the honest hard scores to `4/5`, `5/5`, `4/5`, so the
      wave note now sits as a bounded rerun-corrected result rather than a
      retained `5/5` closure.
+
+3. `frontier_self_consistency_test.py` no longer relies on non-moment-matched
+   random controls.
+   - On current `main`, the earlier `abs(normal(mean, std))` controls have been
+     replaced by the structured-null rerun in
+     `SELF_CONSISTENCY_STRUCTURED_NULL_NOTE_2026-04-11.md`.
+   - The live runner now uses a torus-shifted static field and a phase-scrambled
+     same-spectrum null, and the current rerun reproduces the note's corrected
+     fixed-surface output.
 
 ## Verified False Positive From Agent Review
 
