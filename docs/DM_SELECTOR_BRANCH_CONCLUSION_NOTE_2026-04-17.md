@@ -60,7 +60,14 @@ win. Endpoint and split-1 are already broad-bundle dominated from `s = 0`
 upward on the same edge-profile footing, so the tested broad-window pressure
 collapses entirely to that split-2 edge interval. That still falls short of the
 finer exact-carrier theorem, but it identifies the live geometric pressure much
-more narrowly.
+more narrowly. And even there, the tested broad split-2 edge now looks too
+coarse to be the real transport-selected rival lane: its best transport readout
+stays below `0.847299300834`, well below the preferred recovered
+`1.052220313052`, and its winning packet columns stay separated from the
+preferred small-leakage quotient. So the live carrier-side pressure is now
+sharper still: not just the split-2 low-slack edge interval, but a possible
+lower-repair, transport-compatible lane inside that interval on the finer exact
+carrier.
 
 So the carrier side stops exactly at:
 

@@ -106,6 +106,10 @@ def main() -> int:
         "The branch conclusion note records that tested broad-window pressure now collapses entirely to split-2 edge data",
         "collapses entirely to that split-2 edge interval" in conclusion_note,
     )
+    check(
+        "The branch conclusion note records the split-2 transport-lane incompatibility sharpening",
+        "0.847299300834" in conclusion_note and "1.052220313052" in conclusion_note and "transport-compatible lane" in conclusion_note,
+    )
 
     print("\n" + "=" * 88)
     print("BRANCH RESULT")
