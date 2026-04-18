@@ -800,6 +800,26 @@ def part1_reference_surface() -> None:
         and "a positive Wilson-to-`dW_e^H` theorem" in local_two_edge,
     )
 
+    local_four_source = read("docs/PERRON_FROBENIUS_STEP2_WILSON_LOCAL_HERMITIAN_FOUR_SOURCE_REDUCTION_NOTE_2026-04-18.md")
+    check(
+        "Step-2 Wilson local Hermitian four-source reduction note records that the remaining local Wilson primitive is already equivalent to one local Hermitian nearest-neighbor 4-source packet, with the current bank still failing even that sharper packet",
+        "local Hermitian nearest-neighbor `4`-source packet" in local_four_source
+        and "`E_12 = (X_12 + i Y_12)/2`" in local_four_source
+        and "`E_23 = (X_23 + i Y_23)/2`" in local_four_source
+        and "current bank still does **not** realize even this sharper local" in local_four_source
+        and "a positive Wilson-to-`dW_e^H` theorem" in local_four_source,
+    )
+
+    local_hermitian_cert = read("docs/PERRON_FROBENIUS_STEP2_WILSON_LOCAL_HERMITIAN_SHARPEST_CERTIFICATE_NOTE_2026-04-18.md")
+    check(
+        "Step-2 Wilson local Hermitian sharpest-certificate note records that the whole Wilson compressed route now has the local Hermitian 4+3 form: one nearest-neighbor 4-source packet plus only the 3 scalar spectral identities, with the current bank still failing already at the first local Hermitian layer",
+        "local Hermitian `4 + 3` certificate" in local_hermitian_cert
+        and "local Hermitian nearest-neighbor `4`-source packet" in local_hermitian_cert
+        and "`Tr(B_e^k) = Tr(H_e^k)` for `k = 1, 2, 3`" in local_hermitian_cert
+        and "current bank still does **not** realize the local Hermitian" in local_hermitian_cert
+        and "a positive Wilson-to-`dW_e^H` theorem" in local_hermitian_cert,
+    )
+
     pmns_native_exhaust = read("docs/PMNS_SOLE_AXIOM_NATIVE_CURRENT_ROUTE_EXHAUSTION_NOTE_2026-04-17.md")
     check(
         "PMNS sole-axiom native-current route-exhaustion note records that no overlooked exact PMNS-native route to nonzero J_chi remains on the current bank and that the next honest PMNS-native target is now a sharper fixed-slice current-image collapse law",
@@ -1162,6 +1182,14 @@ def part3_cross_sector_boundary() -> None:
     support(
         "Compressed Wilson local two-edge source target",
         "the remaining positive Wilson primitive is now sharper than an abstract charged source family: it is one local adjacent two-edge Wilson source law on the physical nearest-neighbor lattice, and the current bank still does not instantiate even that local source layer",
+    )
+    support(
+        "Compressed Wilson local Hermitian four-source reduction",
+        "the remaining local Wilson primitive is now sharper still than the two-edge source law: it is exactly one local Hermitian nearest-neighbor 4-source packet, obtained by taking the Hermitian and skew-Hermitian edge combinations on the adjacent two-edge chain, and the current bank still does not instantiate even that packet",
+    )
+    support(
+        "Compressed Wilson local Hermitian sharpest certificate",
+        "the whole Wilson compressed route now has a matching local Hermitian constructive package too: one nearest-neighbor Hermitian 4-source packet on the physical lattice, then only the 3 scalar spectral identities Tr(B_e^k)=Tr(H_e^k) for k=1,2,3",
     )
     support(
         "PMNS fixed-slice readout closure",
