@@ -1,0 +1,182 @@
+========================================================================
+YT Retention Master Manifest Validator
+------------------------------------------------------------------------
+Authority note: docs/YT_RETENTION_MASTER_MANIFEST_2026-04-18.md
+========================================================================
+
+========================================================================
+Block 1: Slot accounting (26 indexed slots = 1 master + 16 P1 + 4 P2 + 5 P3)
+========================================================================
+
+  [PASS] Total slots = 26 (1 master + 16 P1 + 4 P2 + 5 P3)  (26 slots catalogued)
+  [PASS] Master slots = 1  (1 master slots)
+  [PASS] P1 slots = 16  (16 P1 slots)
+  [PASS] P2 slots = 4  (4 P2 slots)
+  [PASS] P3 slots = 5  (5 P3 slots)
+  [PASS] Retained (on-disk) slots = 21  (21 retained slots)
+  [PASS] Embedded-only slots = 5  (5 embedded slots)
+
+========================================================================
+Block 2: File-existence checks on retained slot artifacts
+========================================================================
+
+  [PASS] P1.3 note exists: docs/YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md
+  [PASS] P1.3 runner exists: scripts/frontier_yt_p1_loop_geometric_bound.py
+  [PASS] P1.3 log exists: logs/retained/yt_p1_loop_geometric_bound_2026-04-17.log
+  [PASS] P1.4 note embedded (tolerated; see manifest Part 9)
+  [PASS] P1.4 runner exists: scripts/frontier_yt_p1_i1_lattice_pt_symbolic.py
+  [PASS] P1.4 log exists: logs/retained/yt_p1_i1_lattice_pt_symbolic_2026-04-17.log
+  [PASS] P1.5 note exists: docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md
+  [PASS] P1.5 runner exists: scripts/frontier_yt_p1_i_s_lattice_pt_citation.py
+  [PASS] P1.5 log exists: logs/retained/yt_p1_i_s_lattice_pt_citation_2026-04-17.log
+  [PASS] P1.6 note exists: docs/YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md
+  [PASS] P1.6 runner exists: scripts/frontier_yt_p1_i_s_revision_verification.py
+  [PASS] P1.6 log exists: logs/retained/yt_p1_i_s_revision_verification_2026-04-17.log
+  [PASS] P1.7 note exists: docs/YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md
+  [PASS] P1.7 runner exists: scripts/frontier_yt_p1_h_unit_renormalization.py
+  [PASS] P1.7 log exists: logs/retained/yt_p1_h_unit_renormalization_2026-04-17.log
+  [PASS] P1.8 note exists: docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md
+  [PASS] P1.8 runner exists: scripts/frontier_yt_p1_rep_ab_cancellation.py
+  [PASS] P1.8 log exists: logs/retained/yt_p1_rep_ab_cancellation_2026-04-17.log
+  [PASS] P1.9 note exists: docs/YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md
+  [PASS] P1.9 runner exists: scripts/frontier_yt_p1_delta_1_bz.py
+  [PASS] P1.9 log exists: logs/retained/yt_p1_delta_1_bz_2026-04-17.log
+  [PASS] P1.10 note exists: docs/YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md
+  [PASS] P1.10 runner exists: scripts/frontier_yt_p1_delta_2_bz.py
+  [PASS] P1.10 log exists: logs/retained/yt_p1_delta_2_bz_2026-04-17.log
+  [PASS] P1.11 note exists: docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md
+  [PASS] P1.11 runner exists: scripts/frontier_yt_p1_delta_3_bz.py
+  [PASS] P1.11 log exists: logs/retained/yt_p1_delta_3_bz_2026-04-17.log
+  [PASS] P1.12 note exists: docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md
+  [PASS] P1.12 runner exists: scripts/frontier_yt_p1_delta_r_master_assembly.py
+  [PASS] P1.12 log exists: logs/retained/yt_p1_delta_r_master_assembly_2026-04-18.log
+  [PASS] P1.13 note exists: docs/YT_P1_DELTA_R_SM_RGE_CROSSCHECK_NOTE_2026-04-18.md
+  [PASS] P1.13 runner exists: scripts/frontier_yt_p1_delta_r_sm_rge_crosscheck.py
+  [PASS] P1.13 log exists: logs/retained/yt_p1_delta_r_sm_rge_crosscheck_2026-04-18.log
+  [PASS] P1.14 note exists: docs/YT_P1_BZ_QUADRATURE_NUMERICAL_NOTE_2026-04-18.md
+  [PASS] P1.14 runner exists: scripts/frontier_yt_p1_bz_quadrature_numerical.py
+  [PASS] P1.14 log exists: logs/retained/yt_p1_bz_quadrature_numerical_2026-04-18.log
+  [PASS] P1.15 note exists: docs/YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md
+  [PASS] P1.15 runner exists: scripts/frontier_yt_p1_bz_quadrature_full_staggered_pt.py
+  [PASS] P1.15 log exists: logs/retained/yt_p1_bz_quadrature_full_staggered_pt_2026-04-18.log
+  [PASS] P1.16 note exists: docs/YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md
+  [PASS] P1.16 runner exists: scripts/frontier_yt_p1_delta_r_2_loop_extension.py
+  [PASS] P1.16 log exists: logs/retained/yt_p1_delta_r_2_loop_extension_2026-04-18.log
+  [PASS] P2.1 note exists: docs/YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md
+  [PASS] P2.1 runner exists: scripts/frontier_yt_p2_taste_staircase_transport.py
+  [PASS] P2.1 log exists: logs/retained/yt_p2_taste_staircase_transport_2026-04-17.log
+  [PASS] P2.2 note exists: docs/YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md
+  [PASS] P2.2 runner exists: scripts/frontier_yt_p2_v_matching.py
+  [PASS] P2.2 log exists: logs/retained/yt_p2_v_matching_2026-04-17.log
+  [PASS] P2.3 note exists: docs/YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE_2026-04-17.md
+  [PASS] P2.3 runner exists: scripts/frontier_yt_p2_taste_staircase_beta.py
+  [PASS] P2.3 log exists: logs/retained/yt_p2_taste_staircase_beta_2026-04-17.log
+  [PASS] P2.4 note exists: docs/YT_P2_F_YT_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md
+  [PASS] P2.4 runner exists: scripts/frontier_yt_p2_f_yt_loop_geometric_bound.py
+  [PASS] P2.4 log exists: logs/retained/yt_p2_f_yt_loop_geometric_bound_2026-04-17.log
+  [PASS] P3.3 note exists: docs/YT_P3_MSBAR_TO_POLE_K2_INTEGRAL_CITATION_NOTE_2026-04-17.md
+  [PASS] P3.3 runner exists: scripts/frontier_yt_p3_k2_integrals.py
+  [PASS] P3.3 log exists: logs/retained/yt_p3_k2_integrals_2026-04-17.log
+  [PASS] P3.4 note exists: docs/YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md
+  [PASS] P3.4 runner exists: scripts/frontier_yt_p3_msbar_to_pole_k3.py
+  [PASS] P3.4 log exists: logs/retained/yt_p3_msbar_to_pole_k3_2026-04-17.log
+  [PASS] P3.5 note exists: docs/YT_P3_K_SERIES_GEOMETRIC_BOUND_NOTE_2026-04-17.md
+  [PASS] P3.5 runner exists: scripts/frontier_yt_p3_k_series_geometric_bound.py
+  [PASS] P3.5 log exists: logs/retained/yt_p3_k_series_geometric_bound_2026-04-17.log
+
+========================================================================
+Block 3: Runner-log [PASS]/[FAIL] consistency
+========================================================================
+
+  [PASS] P1.3 log has zero FAIL markers  (43 PASS, 0 FAIL)
+  [PASS] P1.3 log PASS count matches manifest Part 9 expected  (observed 43, expected 43)
+  [PASS] P1.4 log has zero FAIL markers  (21 PASS, 0 FAIL)
+  [PASS] P1.4 log PASS count matches manifest Part 9 expected  (observed 21, expected 21)
+  [PASS] P1.5 log has zero FAIL markers  (33 PASS, 0 FAIL)
+  [PASS] P1.5 log PASS count matches manifest Part 9 expected  (observed 33, expected 33)
+  [PASS] P1.6 log has zero FAIL markers  (38 PASS, 0 FAIL)
+  [PASS] P1.6 log PASS count matches manifest Part 9 expected  (observed 38, expected 38)
+  [PASS] P1.7 log has zero FAIL markers  (48 PASS, 0 FAIL)
+  [PASS] P1.7 log PASS count matches manifest Part 9 expected  (observed 48, expected 48)
+  [PASS] P1.8 log has zero FAIL markers  (45 PASS, 0 FAIL)
+  [PASS] P1.8 log PASS count matches manifest Part 9 expected  (observed 45, expected 45)
+  [PASS] P1.9 log has zero FAIL markers  (55 PASS, 0 FAIL)
+  [PASS] P1.9 log PASS count matches manifest Part 9 expected  (observed 55, expected 55)
+  [PASS] P1.10 log has zero FAIL markers  (42 PASS, 0 FAIL)
+  [PASS] P1.10 log PASS count matches manifest Part 9 expected  (observed 42, expected 42)
+  [PASS] P1.11 log has zero FAIL markers  (51 PASS, 0 FAIL)
+  [PASS] P1.11 log PASS count matches manifest Part 9 expected  (observed 51, expected 51)
+  [PASS] P1.12 log has zero FAIL markers  (68 PASS, 0 FAIL)
+  [PASS] P1.12 log PASS count matches manifest Part 9 expected  (observed 68, expected 68)
+  [PASS] P1.13 log has zero FAIL markers  (31 PASS, 0 FAIL)
+  [PASS] P1.13 log PASS count matches manifest Part 9 expected  (observed 31, expected 31)
+  [PASS] P1.14 log has zero FAIL markers  (40 PASS, 0 FAIL)
+  [PASS] P1.14 log PASS count matches manifest Part 9 expected  (observed 40, expected 40)
+  [PASS] P1.15 log has zero FAIL markers  (45 PASS, 0 FAIL)
+  [PASS] P1.15 log PASS count matches manifest Part 9 expected  (observed 45, expected 45)
+  [PASS] P1.16 log has zero FAIL markers  (79 PASS, 0 FAIL)
+  [PASS] P1.16 log PASS count matches manifest Part 9 expected  (observed 79, expected 79)
+  [PASS] P2.1 log has zero FAIL markers  (12 PASS, 0 FAIL)
+  [PASS] P2.1 log PASS count matches manifest Part 9 expected  (observed 12, expected 12)
+  [PASS] P2.2 log has zero FAIL markers  (12 PASS, 0 FAIL)
+  [PASS] P2.2 log PASS count matches manifest Part 9 expected  (observed 12, expected 12)
+  [PASS] P2.3 log has zero FAIL markers  (12 PASS, 0 FAIL)
+  [PASS] P2.3 log PASS count matches manifest Part 9 expected  (observed 12, expected 12)
+  [PASS] P2.4 log has zero FAIL markers  (48 PASS, 0 FAIL)
+  [PASS] P2.4 log PASS count matches manifest Part 9 expected  (observed 48, expected 48)
+  [PASS] P3.3 log has zero FAIL markers  (30 PASS, 0 FAIL)
+  [PASS] P3.3 log PASS count matches manifest Part 9 expected  (observed 30, expected 30)
+  [PASS] P3.4 log has zero FAIL markers  (18 PASS, 0 FAIL)
+  [PASS] P3.4 log PASS count matches manifest Part 9 expected  (observed 18, expected 18)
+  [PASS] P3.5 log has zero FAIL markers  (28 PASS, 0 FAIL)
+  [PASS] P3.5 log PASS count matches manifest Part 9 expected  (observed 28, expected 28)
+
+========================================================================
+Block 4: Per-primitive retention PASS roll-up
+========================================================================
+
+  [PASS] P1 retained-runner PASS total matches manifest expected  (observed P1 = 639, expected 639)
+  [PASS] P2 retained-runner PASS total matches manifest expected  (observed P2 = 84, expected 84)
+  [PASS] P3 retained-runner PASS total matches manifest expected  (observed P3 = 76, expected 76)
+  [PASS] Grand retained-runner PASS total = 799  (observed 799, expected 799)
+
+  P1 retained PASS total: 639
+  P2 retained PASS total: 84
+  P3 retained PASS total: 76
+  Grand retained PASS total: 799
+
+========================================================================
+Block 5: Embedded-only slot catalog (tolerated, content carried elsewhere)
+========================================================================
+
+  [EMBEDDED] M.1  UV-to-IR transport obstruction theorem
+  [EMBEDDED] P1.1  Shared-Fierz shortcut no-go
+  [EMBEDDED] P1.2  Color-factor retention (C_F / C_A / T_F n_f)
+  [EMBEDDED] P3.1  K_1 framework-native (K_1 = C_F = 4/3)
+  [EMBEDDED] P3.2  K_2 color-factor retention (4-tensor)
+  [PASS] Embedded-only slot count = 5 (tolerated; content in cross-referenced retained notes)  (5 embedded slots enumerated)
+
+========================================================================
+Block 6: Retained YT-lane final state (carried from sub-theorems)
+========================================================================
+
+  Delta_R (1-loop literature-cited central)           -3.271 %              (from P1.12)
+  Delta_R (1-loop full staggered-PT)                  -3.77 % +/- 0.45 %    (from P1.15)
+  Delta_R (through-2-loop extension)                  -3.99 % +/- 0.70 %    (from P1.16)
+  P1 loop-expansion bound |Delta_R^tot|               <= 7.41 %             (from P1.3)
+  P2 residual (3-loop tail)                           0.15 %                (from P2.4)
+  P3 residual (tail on m_t)                           0.137 %               (from P3.5)
+  m_t(pole) YT-lane (through 2-loop)                  172.57 +/- 6.9 GeV    (from P1.16)
+  Observed m_t(pole) (PDG)                            172.69 GeV            (from external)
+  [PASS] Final-state readout consistent with retained sub-theorems (structural)  (values carried from retained P1.15, P1.16, P2.4, P3.5)
+
+========================================================================
+Manifest validator summary
+========================================================================
+  Manifest-validator PASSED: 118
+  Manifest-validator FAILED: 0
+  Retained-runner [PASS] total surveyed: 799
+  Retained-runner [FAIL] total surveyed: 0
+
+Verdict: MANIFEST VALIDATOR ALL PASS
+========================================================================

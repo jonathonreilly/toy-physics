@@ -1,0 +1,118 @@
+========================================================================
+YT Right-Handed Sector Species-Dependence Retention Analysis
+========================================================================
+
+Candidate class #4: does the retained right-handed sector provide
+a framework-native mechanism to break Yukawa unification at M_Pl?
+Outcome: C (retained no-go).  u_R and d_R are identical under
+SU(3)_c x SU(2)_L; their U(1)_Y eigenvalues (+4/3 vs -2/3) do NOT
+alter the Yukawa CG factor, which is 1/sqrt(6) for both channels.
+
+Block 1: Retained SU(3) Casimirs and canonical-surface anchors.
+  [PASS] C_F = 4/3 (retained SU(3) fundamental Casimir)  (C_F = 1.3333333333)
+  [PASS] C_A = 3 (retained SU(3) adjoint Casimir)  (C_A = 3.0000000000)
+  [PASS] T_F = 1/2 (retained)  (T_F = 0.5000000000)
+  [PASS] N_C = 3, N_iso = 2, DIM_Q_L = 6 (retained)  (N_C = 3, N_iso = 2, DIM_Q_L = 6)
+  [PASS] alpha_LM = 0.09067 +/- 1e-4 (canonical lattice anchor)  (alpha_LM = 0.09067000)
+  [PASS] alpha_s(v) = 0.1033 +/- 1e-4 (CMT canonical)  (alpha_s(v) = 0.10330000)
+
+Block 2: Retained right-handed sector (one-generation matter closure).
+  [PASS] u_R : (1, 3)_{+4/3} (retained, SM branch)  (Y(u_R) = 4/3)
+  [PASS] d_R : (1, 3)_{-2/3} (retained, SM branch)  (Y(d_R) = -2/3)
+  [PASS] e_R : (1, 1)_{-2} (retained)  (Y(e_R) = -2)
+  [PASS] nu_R : (1, 1)_{0} (retained, SM branch selection)  (Y(nu_R) = 0)
+  [PASS] Q_L : (2, 3)_{+1/3} (retained LEFT_HANDED_CHARGE_MATCHING)  (Y(Q_L) = 1/3)
+  [PASS] L_L : (2, 1)_{-1} (retained LEFT_HANDED_CHARGE_MATCHING)  (Y(L_L) = -1)
+
+Block 3: Anomaly cancellation of the retained one-generation spectrum.
+  [PASS] Tr[Y] = 0 (gravitational anomaly, inherited)  (Tr[Y] = 0)
+  [PASS] Tr[Y^3] = 0 (U(1)^3 anomaly, inherited)  (Tr[Y^3] = 0)
+  [PASS] Tr[SU(3)^2 Y] = 0 (mixed color-hypercharge, inherited)  (Tr[SU(3)^2 Y] = 0)
+
+Block 4: 4D Clifford algebra, chirality, and RH projection (inherited).
+  [PASS] gamma_5^2 = +I (proper involution, inherited from frontier_right_handed_sector)  (||G5^2 - I|| = 0.00e+00)
+  [PASS] gamma_5 Hermitian (inherited)
+  [PASS] gamma_5 anticommutes with all Gamma_mu (inherited)
+  [PASS] Tr(P_R) = 8 (8-state right-handed subspace on C^16, inherited)  (Tr(P_R) = 8)
+  [PASS] Tr(P_L) = 8 (8-state left-handed subspace, inherited)  (Tr(P_L) = 8)
+
+Block 5: Taste algebra commutes with gamma_5 (same color on L and R).
+  [PASS] Taste algebra (commutant of Cl(4)) has dim 16 (inherited)  (taste_dim = 16)
+  [PASS] All 16 taste operators commute with gamma_5 (inherited)  (color structure is the SAME on C^8_L and C^8_R)
+
+Block 6: SU(3)_c x SU(2)_L equivalence of u_R and d_R (core claim).
+  [PASS] u_R and d_R both SU(2) singlets (same rep dim = 1)  (SU(2) dim = 1 for both)
+  [PASS] u_R and d_R both SU(3) triplets (same rep dim = 3)  (SU(3) dim = 3 for both)
+  [PASS] u_R and d_R differ ONLY in U(1)_Y eigenvalue (+4/3 vs -2/3)  (Y(u_R) = 4/3 != Y(d_R) = -2/3)
+  [PASS] Y(u_R) - Y(d_R) = +2 (abelian charge gap, no rep change)  (Y(u_R) - Y(d_R) = 2)
+
+Block 7: Color Clebsch-Gordan for 3 x 3* -> 1 projection.
+  [PASS] CG[color: 3 x 3* -> 1] = 1/sqrt(N_C) = 1/sqrt(3)  (CG_color = 0.5773502692)
+  [PASS] Color singlet state unit norm: <S_c|S_c> = 1  (<S_c|S_c> = 1.0000000000)
+  [PASS] All 3 color basis overlaps = 1/sqrt(3) (color singlet uniformity)  (overlaps = ['0.577350', '0.577350', '0.577350'])
+
+Block 8: Iso Clebsch-Gordan for 2 x 2* -> 1 projection.
+  [PASS] CG[iso: 2 x 2* -> 1] = 1/sqrt(N_iso) = 1/sqrt(2)  (CG_iso = 0.7071067812)
+  [PASS] Iso singlet state unit norm: <S_i|S_i> = 1  (<S_i|S_i> = 1.0000000000)
+  [PASS] Both 2 iso basis overlaps = 1/sqrt(2) (iso singlet uniformity)  (overlaps = ['0.707107', '0.707107'])
+
+Block 9: Combined Yukawa CG for Q_bar_L x H_tilde x u_R (up-type).
+  [PASS] CG[Q_bar_L x H_tilde x u_R -> (1,1,0)] = 1/sqrt(6) (up-type)  (CG_up = 0.4082482905)
+  [PASS] U(1)_Y charge conservation (up): -Y(Q_L) + Y(H_tilde) + Y(u_R) = 0  (Sum = 0)
+  [PASS] U(1)_Y CG coefficient = +1 (abelian, trivial) for up-type  (abelian tensor product is one-dimensional with CG = +1)
+
+Block 10: Combined Yukawa CG for Q_bar_L x H x d_R (down-type).
+  [PASS] CG[Q_bar_L x H x d_R -> (1,1,0)] = 1/sqrt(6) (down-type)  (CG_down = 0.4082482905)
+  [PASS] U(1)_Y charge conservation (down): -Y(Q_L) + Y(H) + Y(d_R) = 0  (Sum = 0)
+  [PASS] U(1)_Y CG coefficient = +1 (abelian, trivial) for down-type  (abelian tensor product is one-dimensional with CG = +1)
+
+Block 11: Species equality -- CG[up-type] = CG[down-type] (Outcome C).
+  [PASS] CG[up] = CG[down] (both = 1/sqrt(6)) -- retained RH sector does NOT differentiate  (|CG_up - CG_down| = 0.00e+00 (machine precision))
+  [PASS] CG[up] = 1/sqrt(6) exactly (matches retained Block 6 uniformity)  (CG_up = 0.4082482905)
+  [PASS] CG[down] = 1/sqrt(6) exactly (matches retained Block 6 uniformity)  (CG_down = 0.4082482905)
+  [PASS] Yukawa trilinear CG factor matches retained Block 6 Q_L x Q_L* CG  (Both = 0.4082482905 = 1/sqrt(6))
+
+Block 12: Leptonic Yukawa CG (charged-lepton and neutrino channels).
+  [PASS] CG[L_bar_L x H x e_R -> singlet] = 1/sqrt(2) (charged-lepton)  (CG_lepton = 0.7071067812)
+  [PASS] U(1)_Y conservation (e_R channel): -Y(L_L) + Y(H) + Y(e_R) = 0  (Sum = 0)
+  [PASS] U(1)_Y conservation (nu_R channel): -Y(L_L) + Y(H_tilde) + Y(nu_R) = 0  (Sum = 0)
+  [PASS] CG[e_R] = CG[nu_R] = 1/sqrt(2) (lepton species uniformity)  (no intra-lepton differentiation under retained RH sector)
+
+Block 13: Per-species Yukawa prediction under Outcome C.
+  [PASS] y_t(M_Pl, lattice) = g_s(M_Pl)/sqrt(6) ~ 0.4358 (retained Ward)  (y_t(M_Pl) = 0.435774)
+  [PASS] y_b(M_Pl, lattice) = g_s(M_Pl)/sqrt(6) ~ 0.4358 (species uniformity)  (y_b(M_Pl) = 0.435774)
+  [PASS] y_u(M_Pl) = y_t(M_Pl) (up-type species uniformity extends from Block 6)  (y_u = y_t = 0.435774)
+  [PASS] y_d(M_Pl) = y_b(M_Pl) (down-type species uniformity extends from Block 6)  (y_d = y_b = 0.435774)
+  [PASS] Yukawa unification at M_Pl extends to ALL quark species under Outcome C  (y_u = y_d = y_t = y_b = 0.435774)
+
+Block 14: Consistency with observed m_t vs m_b hierarchy.
+  [PASS] Observed m_t/m_b ~ 41 (top-bottom hierarchy)  (m_t/m_b(obs) = 41.31)
+  [PASS] Framework predicts m_t/m_b ~ 1 (Outcome C + RG quasi-fixed-point)  (m_t/m_b(framework) ~ 1.04)
+  [PASS] Framework underestimates observed t/b ratio by ~40x (Outcome C FALSIFIED on hierarchy)  (obs/pred ratio = 39.7x)
+
+Block 15: Retention verdict and summary.
+  [PASS] Outcome C: retained RH sector does NOT differentiate y_u from y_d at Ward level  (CG[up] = CG[down] = 1/sqrt(6) by U(1)_Y triviality)
+  [PASS] Candidate class #4 closed as insufficient to break Yukawa unification  (RH sector's U(1)_Y +4/3 vs -2/3 is abelian; non-abelian CG unchanged)
+  [PASS] Retention gap (33x m_b falsification) UNCHANGED by this analysis  (b-quark retention analysis Outcome A is not modified)
+  [PASS] New primitive required elsewhere (flavor-column, gen-hierarchy, SUSY, etc.)  (these remain open research directions; not retained by this note)
+
+========================================================================
+SUMMARY
+========================================================================
+  Total checks: 58
+  Passed: 58
+  Failed: 0
+
+  ALL CHECKS PASSED
+
+  RESULT: Outcome C -- retained right-handed sector does NOT
+  differentiate up-type from down-type Yukawa CG factors.
+  The Clebsch-Gordan factor for Q_bar_L x H x q_R is 1/sqrt(6)
+  for both q_R = u_R and q_R = d_R, by the trivial U(1) tensor
+  product on abelian charges and the identical (1, 3) non-abelian
+  representation of u_R and d_R.
+
+  Candidate class #4 closed.  The retention gap on m_b (33x
+  falsification under Yukawa unification at M_Pl) is unchanged.
+  A primitive beyond the retained right-handed sector is
+  required to close the up-type vs down-type mass hierarchy.

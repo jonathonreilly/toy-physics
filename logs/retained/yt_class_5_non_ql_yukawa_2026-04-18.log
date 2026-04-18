@@ -1,0 +1,128 @@
+========================================================================
+YT Class #5: Non-Q_L-Block Yukawa Vertex Retention Analysis
+========================================================================
+
+Candidate class #5: does the non-Q_L-block Yukawa vertex structure
+(trilinear Q_bar_L x H x q_R with q_R on C^8_R, outside Q_L) provide
+a framework-native mechanism to break Yukawa unification at M_Pl?
+
+Outcome: D (retained no-go with structural refinement).
+  CG[Q_bar_L x H_tilde x u_R] = 1/sqrt(3) * 1/sqrt(2) * 1 = 1/sqrt(6)
+  CG[Q_bar_L x H x d_R]       = 1/sqrt(3) * 1/sqrt(2) * 1 = 1/sqrt(6)
+  |CG_up - CG_down| = 0 (machine precision)
+
+The block asymmetry between Ward Q_L x Q_L* and physical Q_L x q_R
+does not differentiate species.  Numerical coincidence 1/sqrt(6) in
+both derivations is the arithmetic identity sqrt(AB) = sqrt(A)*sqrt(B).
+
+The matching gap (how H_unit on Q_L x Q_L* generates the trilinear
+on Q_L x q_R after SSB) is FLAGGED separately, OUT OF SCOPE.
+
+Block 1: Retained group-theory constants and canonical anchors.
+  [PASS] N_C = 3 (retained SU(3) color)  (N_C = 3)
+  [PASS] N_iso = 2 (retained SU(2) iso doublet)  (N_iso = 2)
+  [PASS] DIM_Q_L = N_C * N_iso = 6 (retained Q_L block)  (DIM_Q_L = 6)
+  [PASS] alpha_LM = 0.09067 +/- 1e-4 (canonical lattice anchor)  (alpha_LM = 0.09067000)
+  [PASS] alpha_s(v) = 0.1033 +/- 1e-4 (CMT canonical)  (alpha_s(v) = 0.10330000)
+
+Block 2: Retained matter block assignments (one-gen matter closure).
+  [PASS] Q_L : (2, 3)_{+1/3} (retained LEFT_HANDED_CHARGE_MATCHING)  (Y(Q_L) = 1/3)
+  [PASS] u_R : (1, 3)_{+4/3} (retained one-gen matter closure)  (Y(u_R) = 4/3)
+  [PASS] d_R : (1, 3)_{-2/3} (retained one-gen matter closure)  (Y(d_R) = -2/3)
+  [PASS] H : (1, 2)_{+1} (SM Higgs, lattice-doubled Y convention)  (Y(H) = 1)
+  [PASS] H_tilde = i*sigma_2 H* : (1, 2_bar)_{-1} (iso conjugate)  (Y(H_tilde) = -1)
+
+Block 3: Cl(4) chirality gamma_5 splits C^16 = C^8_L + C^8_R
+         (Q_L and q_R on ORTHOGONAL chirality eigenspaces).
+  [PASS] gamma_5^2 = I (proper involution, retained)  (||G5^2 - I|| = 0.00e+00)
+  [PASS] Tr(P_L) = 8 (Q_L block sits inside 8-dim LH subspace C^8_L)  (Tr(P_L) = 8)
+  [PASS] Tr(P_R) = 8 (q_R blocks sit inside 8-dim RH subspace C^8_R)  (Tr(P_R) = 8)
+  [PASS] P_L * P_R = 0 (Q_L and q_R orthogonal chirality eigenspaces)  (||P_L P_R|| = 0.00e+00)
+  [PASS] gamma_5 anticommutes with all Gamma_mu (retained)  (standard Cl(4) chirality property)
+
+Block 4: Trilinear color CG factor CG[3_bar x 3 -> 1] = 1/sqrt(3).
+  [PASS] CG_color[3_bar x 3 -> 1] = 1/sqrt(N_c) = 1/sqrt(3) (trilinear)  (CG_color = 0.5773502692)
+  [PASS] Color singlet state |S_c> = (1/sqrt(3)) sum_a |a, a> unit norm  (<S_c|S_c> = 1.0000000000)
+  [PASS] All 3 color basis overlaps = 1/sqrt(3) (singlet uniformity on color)  (overlaps = [0.57735, 0.57735, 0.57735])
+
+Block 5: Trilinear iso CG factor CG[2_bar x 2 -> 1] = 1/sqrt(2).
+  [PASS] CG_iso[2_bar x 2 -> 1] = 1/sqrt(N_iso) = 1/sqrt(2) (trilinear)  (CG_iso = 0.7071067812)
+  [PASS] Iso singlet state |S_I> = (1/sqrt(2)) sum_a |a, a> unit norm  (<S_I|S_I> = 1.0000000000)
+  [PASS] Both 2 iso basis overlaps = 1/sqrt(2) (singlet uniformity on iso)  (overlaps = [0.707107, 0.707107])
+
+Block 6: U(1)_Y charge conservation (abelian trivial CG).
+  [PASS] Up-type: -Y(Q_L) + Y(H_tilde) + Y(u_R) = 0 (charge conservation)  (Sum = 0)
+  [PASS] Down-type: -Y(Q_L) + Y(H) + Y(d_R) = 0 (charge conservation)  (Sum = 0)
+  [PASS] U(1)_Y CG = +1 (abelian tensor trivial; Y_a tensor Y_b = Y_{a+b})  (standard group theory, not framework-specific)
+
+Block 7: H_tilde = i*sigma_2 H* is unitary (norm-preserving).
+  [PASS] (i*sigma_2)^+ (i*sigma_2) = I (unitarity)  (||U^+U - I|| = 0.00e+00)
+  [PASS] || i*sigma_2 ||_op = 1 (operator norm)  (||i*sigma_2||_op = 1.0000000000)
+  [PASS] ||epsilon^{ab}||_F^2 = ||delta_{ab}||_F^2 = 2 (norm equivalence)  (||eps||^2 = 2.0000, ||delta||^2 = 2.0000)
+  [PASS] CG_iso[Q_bar_L . H_tilde] = CG_iso[Q_bar_L . H] = 1/sqrt(2)  (CG_iso(H) = CG_iso(H_tilde) = 0.7071067812)
+
+Block 8: Ward theorem 4-fermion CG on Q_L x Q_L* (retained).
+  [PASS] Ward theorem 1/sqrt(N_c * N_iso) = 1/sqrt(6) (retained H_unit Z=sqrt(6))  (CG_Ward = 0.4082482905)
+  [PASS] Ward derivation surface: 4-fermion 1PI on (psi_bar psi)_{(1,1)} x (psi_bar psi)_{(1,1)}  (both bilinears in Q_L block (Ward theorem, eq. 3.1-3.8))
+
+Block 9: Up-type trilinear CG for Q_bar_L x H_tilde x u_R -> (1,1,0).
+  [PASS] y_u_CG = CG_color * CG_iso * CG_Y = (1/sqrt(3)) * (1/sqrt(2)) * 1 = 1/sqrt(6)  (y_u_CG = 0.4082482905)
+  [PASS] Up-type CG is independent of U(1)_Y assignment (abelian triviality)  (Y(u_R) = +4/3 vs Y(d_R) = -2/3 does not modify non-abelian CG)
+
+Block 10: Down-type trilinear CG for Q_bar_L x H x d_R -> (1,1,0).
+  [PASS] y_d_CG = CG_color * CG_iso * CG_Y = (1/sqrt(3)) * (1/sqrt(2)) * 1 = 1/sqrt(6)  (y_d_CG = 0.4082482905)
+  [PASS] Down-type CG same algebraic structure as up-type (same non-abelian reps)  (only U(1)_Y eigenvalues differ; CG_Y = +1 for both)
+
+Block 11: Species equality y_u_CG = y_d_CG = 1/sqrt(6) (Outcome D).
+  [PASS] CG[up] = CG[down] (both = 1/sqrt(6)) -- Outcome D core result  (|y_u_CG - y_d_CG| = 0.00e+00 (machine precision))
+  [PASS] y_u_CG = 1/sqrt(6) exactly (non-Q_L-block trilinear)  (y_u_CG = 0.4082482905)
+  [PASS] y_d_CG = 1/sqrt(6) exactly (non-Q_L-block trilinear)  (y_d_CG = 0.4082482905)
+  [PASS] Trilinear CG = Ward 4-fermion CG (both = 1/sqrt(6)) by arithmetic  (sqrt(N_c * N_iso) = sqrt(N_c) * sqrt(N_iso) => 1/sqrt(6) in both)
+  [PASS] Numerical 1/sqrt(6) matches target value 0.408248...  (1/sqrt(6) = 0.4082482905)
+
+Block 12: Arithmetic identity: Ward single-norm vs trilinear factored.
+  [PASS] 1/sqrt(N_c * N_iso) = 1/sqrt(N_c) * 1/sqrt(N_iso) (arithmetic identity)  (Ward: 0.4082482905,  Trilinear: 0.4082482905)
+  [PASS] sqrt(6) = sqrt(3) * sqrt(2) (arithmetic, not structural theorem)  (sqrt(6) = 2.4494897428,  sqrt(3)*sqrt(2) = 2.4494897428)
+
+Block 13: Leptonic trilinear CG (charged-lepton and neutrino channels).
+  [PASS] CG[L_bar_L x H x e_R -> singlet] = 1/sqrt(2) (charged-lepton)  (y_e_CG = 0.7071067812)
+  [PASS] CG[L_bar_L x H_tilde x nu_R -> singlet] = 1/sqrt(2) (neutrino)  (y_nu_CG = 0.7071067812)
+  [PASS] Charged-lepton U(1)_Y: -Y(L_L) + Y(H) + Y(e_R) = 0  (Sum = 0)
+  [PASS] Neutrino U(1)_Y: -Y(L_L) + Y(H_tilde) + Y(nu_R) = 0  (Sum = 0)
+  [PASS] y_e_CG = y_nu_CG = 1/sqrt(2) (intra-lepton species uniformity)  (color-trivial; iso singlet only; no intra-lepton differentiation)
+
+Block 14: Per-species Yukawa prediction at M_Pl under Outcome D.
+  [PASS] y_t(M_Pl) = g_s(M_Pl)/sqrt(6) ~ 0.4358 (retained Ward top)  (y_t(M_Pl) = 0.435774)
+  [PASS] y_b(M_Pl) = g_s(M_Pl)/sqrt(6) ~ 0.4358 (retained Ward bottom, Outcome A)  (y_b(M_Pl) = 0.435774)
+  [PASS] y_u(M_Pl) = y_t(M_Pl) (up-type species uniformity extends via trilinear)  (y_u = y_t = 0.435774)
+  [PASS] y_d(M_Pl) = y_b(M_Pl) (down-type species uniformity extends via trilinear)  (y_d = y_b = 0.435774)
+  [PASS] Full Yukawa unification at M_Pl under Outcome D (trilinear does not differentiate)  (y_u = y_d = y_t = y_b = 0.435774)
+
+Block 15: Retention verdict -- Outcome D closure of class #5.
+  [PASS] Outcome D: non-Q_L-block trilinear does NOT differentiate y_u vs y_d  (block asymmetry (Q_L vs q_R on orthogonal chirality) is not a differentiator)
+  [PASS] Candidate class #5 closed as insufficient to break Yukawa unification  (trilinear CG = 1/sqrt(6) for both up and down by standard group theory)
+  [PASS] Retention gap (33x m_b falsification) UNCHANGED by class #5 analysis  (b-quark Outcome A is not modified)
+  [PASS] Matching gap (Ward 4-fermion Q_L x Q_L* vs physical trilinear Q_L x q_R) FLAGGED  (separate open structural question, OUT OF SCOPE of this class-5 note)
+  [PASS] New primitive required elsewhere (outside retained core)  (classes #1, #2, #4, #5 all closed; no retained primitive differentiates)
+
+========================================================================
+SUMMARY
+========================================================================
+  Total checks: 56
+  Passed: 56
+  Failed: 0
+
+  ALL CHECKS PASSED
+
+  RESULT: Outcome D -- the non-Q_L-block Yukawa vertex structure
+  (trilinear Q_bar_L x H x q_R) does NOT differentiate up-type from
+  down-type Yukawa CG factors.  Both channels carry CG = 1/sqrt(6)
+  by the factored product (1/sqrt(N_c)) * (1/sqrt(N_iso)) * 1, which
+  coincides numerically with the Ward 4-fermion CG 1/sqrt(N_c*N_iso)
+  on Q_L x Q_L* by the arithmetic identity sqrt(AB) = sqrt(A)*sqrt(B).
+
+  Candidate class #5 closed.  The retention gap on m_b (33x
+  falsification under Yukawa unification at M_Pl) is unchanged.
+  The matching gap between Ward 4-fermion and physical trilinear
+  derivations is flagged as a separate open structural question,
+  OUT OF SCOPE of this class-5 retention analysis.

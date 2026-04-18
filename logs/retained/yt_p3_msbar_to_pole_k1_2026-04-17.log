@@ -1,0 +1,44 @@
+========================================================================
+P3 MSbar-to-pole K_1 framework-native derivation -- runner
+Date: 2026-04-17
+Authority: YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md
+========================================================================
+
+========================================================================
+PART A: Retained SU(3) fundamental Casimir
+========================================================================
+
+  N_c                       = 3
+  C_F  =  (N_c^2 - 1)/(2 N_c) = 4/3  = 1.3333333333
+  [PASS] C_F = (N_c^2 - 1)/(2 N_c) = 4/3 exactly at SU(3)  (value = 4/3)
+
+========================================================================
+PART B: K_1 = C_F (1-loop Casimir identity)
+========================================================================
+
+  K_1 (1-loop heavy-quark Casimir)  =  C_F  =  4/3  =  1.3333333333
+  [PASS] K_1 = C_F identity (1-loop heavy-quark Casimir, alpha_s/pi scheme)  (K_1 = 4/3, C_F = 4/3)
+
+========================================================================
+PART C: Retained running-coupling anchor at mu = m_t
+========================================================================
+
+  alpha_s(m_t)              = 0.108000
+  alpha_s / pi              = 0.034377
+  [PASS] alpha_s(m_t) ~ 0.108 retained plaquette-derived anchor (within 1 %)  (value = 0.108000)
+
+========================================================================
+PART D: 1-loop MSbar-to-pole shift at retained alpha_s(m_t)
+========================================================================
+
+  K_1 * (alpha_s/pi)        = 0.045837
+  as a percentage           = 4.5837 %
+  [PASS] K_1 * (alpha_s/pi) ~ 4.58 % at alpha_s(m_t) ~ 0.108  (shift = 4.5837 %)
+
+========================================================================
+SUMMARY: PASS=4  FAIL=0
+========================================================================
+
+(K_1 = C_F = 4/3 exactly at SU(3), retained framework-native.
+ 1-loop shift ~ 4.58 % of m_MSbar(m_t) at the retained
+ plaquette-derived alpha_s(m_t) ~ 0.108 anchor.)

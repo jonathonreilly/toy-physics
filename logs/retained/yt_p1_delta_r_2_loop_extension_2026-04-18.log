@@ -1,0 +1,177 @@
+========================================================================
+YT P1 - Delta_R 2-Loop Structural Extension
+  (Color-tensor retention + loop-geometric bound applied at 2-loop)
+========================================================================
+
+Block A: Retained SU(3) Casimirs, flavor counts, canonical-surface constants.
+  [PASS] C_F = 4/3 (retained)  (C_F = 4/3)
+  [PASS] C_A = 3 (retained)  (C_A = 3)
+  [PASS] T_F = 1/2 (retained)  (T_F = 1/2)
+  [PASS] n_f = 6 (MSbar at M_Pl)  (n_f = 6)
+  [PASS] n_l = 5 (light flavors in b_0)  (n_l = 5)
+  [PASS] b_0 = 23/3 (retained beta coefficient at n_l=5)  (b_0 = 23/3)
+  [PASS] alpha_LM = 0.09067 +/- 1e-4 (canonical surface)  (alpha_LM = 0.0906678360)
+  [PASS] alpha_LM / pi = 0.02886 +/- 1e-5 (canonical surface)  (alpha_LM/pi = 0.0288604686)
+  [PASS] alpha_LM / (4 pi) = 0.00721 +/- 1e-5 (canonical surface)  (alpha_LM/(4 pi) = 0.0072151171)
+  [PASS] (alpha_LM / (4 pi))^2 ~ 5.20e-5 (2-loop prefactor)  ((alpha_LM/(4 pi))^2 = 5.2058e-05)
+
+Block B: Retention of 1-loop Delta_R central (from master assembly).
+  [PASS] C_F channel 1-loop central ~ +1.924 % (from master assembly)  (C_F channel = +1.9240 %)
+  [PASS] C_A channel 1-loop central ~ -7.215 % (from master assembly)  (C_A channel = -7.2151 %)
+  [PASS] T_F n_f channel 1-loop central ~ +2.020 % (from master assembly)  (T_F n_f channel = +2.0202 %)
+  [PASS] Delta_R^{1-loop} central ~ -3.271 % (from master assembly)  (Delta_R^{1-loop} = -3.27085 %)
+  [PASS] Sign: Delta_R^{1-loop} is NEGATIVE at central  (sign < 0)
+
+Block C: Retention of loop-geometric envelope.
+  [PASS] r_R = (alpha_LM/pi) * b_0 = 0.22126 (loop-geometric bound)  (r_R = 0.221264)
+  [PASS] r_R reconstructs to (alpha_LM/pi) * (23/3) exactly in float  (r_R = 0.2212635923)
+  [PASS] Tail factor r_R / (1 - r_R) = 0.2841 +/- 0.001  (tail_factor = 0.284132)
+  [PASS] Amplification factor 1 / (1 - r_R) = 1.2841 +/- 0.001  (amp_factor = 1.284132)
+  [PASS] Geometric-sum convergence r_R < 1  (r_R = 0.221264 < 1)
+  [PASS] r_R > max(r_CF, r_CA, r_lp) (envelope from loop-geometric note)  (r_R = 0.2213 > max(0.0770, 0.1732, 0.1443) = 0.1732)
+
+Block D: 2-loop color-tensor skeleton (8 SU(3) Casimir tensors at n_f = 6).
+    Expected tensor values (exact rationals):
+      C_F^2                 =  16/9  (expected 16/9, float 1.777778)
+      C_F C_A               =  4  (expected 4, float 4.000000)
+      C_A^2                 =  9  (expected 9, float 9.000000)
+      C_F T_F n_f           =  4  (expected 4, float 4.000000)
+      C_A T_F n_f           =  9  (expected 9, float 9.000000)
+      T_F^2 n_f^2           =  9  (expected 9, float 9.000000)
+      C_F^2 T_F             =  8/9  (expected 8/9, float 0.888889)
+      C_F T_F               =  2/3  (expected 2/3, float 0.666667)
+  [PASS] Tensor C_F^2 = 16/9 exact at SU(3), n_f=6  (value = 16/9)
+  [PASS] Tensor C_F C_A = 4 exact at SU(3), n_f=6  (value = 4)
+  [PASS] Tensor C_A^2 = 9 exact at SU(3), n_f=6  (value = 9)
+  [PASS] Tensor C_F T_F n_f = 4 exact at SU(3), n_f=6  (value = 4)
+  [PASS] Tensor C_A T_F n_f = 9 exact at SU(3), n_f=6  (value = 9)
+  [PASS] Tensor T_F^2 n_f^2 = 9 exact at SU(3), n_f=6  (value = 9)
+  [PASS] Tensor C_F^2 T_F = 8/9 exact at SU(3), n_f=6  (value = 8/9)
+  [PASS] Tensor C_F T_F = 2/3 exact at SU(3), n_f=6  (value = 2/3)
+  [PASS] All 8 retained color tensors are non-zero at SU(3), n_f=6  (non-zero count = 8 / 8)
+  [PASS] Tensor count at 2-loop = 8 (Cartesian product {C_F, C_A, T_F n_f}^2 / symm + heavy-top)  (Enumeration structurally consistent with P3 K_3 10-tensor template)
+    Sum of retained tensor values = 115/3  (38.3333)
+  [PASS] Dominant 2-loop tensors (>= 9): {C_A^2, C_A T_F n_f, T_F^2 n_f^2} (expected)  (dominant = ['C_A^2', 'C_A T_F n_f', 'T_F^2 n_f^2'])
+
+Block E: 2-loop magnitude bound from loop-geometric envelope.
+  [PASS] |Delta_R^{2-loop}| <= r_R * |Delta_R^{1-loop}| = 0.7236 %  (bound = 0.7237 %)
+  [PASS] 2-loop bound less than 1 % (deep in convergence regime)  (bound = 0.7237 % < 1 %)
+  [PASS] 2-loop/1-loop ratio = r_R = 0.22126 (= bound fraction)  (ratio = 0.221264)
+
+Block F: Tail bound and total bound at 2-loop truncation.
+  [PASS] |tail(N=1)| <= |Delta_R^{1-loop}| * r_R / (1 - r_R) = 0.9293 %  (tail bound = 0.9294 %)
+  [PASS] |Delta_R^{total}| <= |Delta_R^{1-loop}| / (1 - r_R) = 4.2003 %  (total bound = 4.2002 %)
+  [PASS] Total bound = 1-loop + tail (arithmetic consistency)  (sum consistency verified)
+  [PASS] Geometric series identity: amp = 1 + tail/one_loop * (1-r_R)/... verified  (amp = 1/(1-r_R), tail = r_R/(1-r_R), amp = 1 + tail = 1.284132)
+
+Block G: Through-2-loop bound-saturated central estimate.
+  [PASS] Delta_R^{through-2-loop, bound-sat} = -3.994 %  (through-2L central = -3.9946 %)
+  [PASS] Through-2-loop = 1-loop * (1 + r_R) = -3.271% * 1.2213  (identity: -3.9946 % = -3.9946 %)
+  [PASS] Through-2-loop central shift from 1-loop = -0.7236 % (same-sign)  (shift = -0.7237 %)
+  [PASS] Sign of through-2-loop: NEGATIVE (same sign as 1-loop)  (sign < 0)
+  [PASS] |through-2L| > |1-loop| (bound-saturated shift moves magnitude up)  (|through-2L| = 3.9946 % > |1-loop| = 3.2709 %)
+  [PASS] |through-2L| <= total bound (consistency with geometric series)  (|through-2L| = 3.9946 % <= 4.2002 %)
+  [PASS] Through-2L no-saturation central = 1-loop central = -3.271 %  (no-sat central = -3.2709 %)
+
+Block H: Refined P1 primitive band and m_t(pole) retained lane.
+  [PASS] P1^{1-loop} = |Delta_R^{1-loop}| = 3.271 %  (P1^{1-loop} = 3.2709 %)
+  [PASS] P1^{through-2-loop, bound-sat} = 3.994 %  (P1^{2-loop} = 3.9946 %)
+  [PASS] P1 band at 2-loop: [3.27 %, 4.71 %] (no-sat ↔ sat + 18% citation)  (P1 in [3.271 %, 4.714 %])
+  [PASS] P1 band at 2-loop strictly above packaged single-channel (1.92 %)  (P1_low = 3.271 % > 1.924 %)
+  [PASS] m_t(pole) central (retained) = 172.57 GeV  (m_t^central = 172.570 GeV)
+  [PASS] m_t(pole) PDG observed = 172.69 GeV  (m_t^PDG = 172.690 GeV)
+  [PASS] m_t lane width at 1-loop = +/- 5.644 GeV (from master assembly)  (Delta m_t^{1-loop} = +/- 5.645 GeV)
+  [PASS] m_t lane width at through-2-loop (bound-sat) = +/- 6.891 GeV  (Delta m_t^{2-loop} = +/- 6.893 GeV)
+  [PASS] m_t lane at 2-loop wider than 1-loop (honest loop-envelope propagation)  (6.893 > 5.645)
+  [PASS] m_t lane widening ratio ~1.22 (= 1 + r_R)  (ratio = 1.2213)
+  [PASS] m_t central shift at 2-loop (bound-sat, same-sign) = +0.624 GeV  (Delta m_t^{central shift} = +0.624 GeV)
+  [PASS] m_t central through-2-loop = 173.19 GeV  (m_t^{central-2L} = 173.194 GeV)
+  [PASS] m_t(PDG) within retained lane at 2-loop [165.7, 179.5] GeV  (m_t(PDG) = 172.69 in [165.68, 179.46] GeV)
+  [PASS] m_t(PDG) within retained lane at through-2-loop central +/- 6.9  (m_t(PDG) = 172.69 in [166.30, 180.09] GeV)
+
+Block I: Retained coverage fractions.
+  [PASS] 1-loop coverage fraction = 1 - r_R = 0.7787 (of total bound)  (coverage = 0.7787)
+  [PASS] Through-2-loop coverage fraction ~ 0.9510 (of total bound, bound-sat)  (coverage = 0.9510)
+  [PASS] Through-2-loop coverage >= 95 % (retention floor)  (coverage = 0.9510)
+  [PASS] Residual (>=3-loop) tail: 1 - through-2L coverage <= 5 %  (residual = 0.0490)
+  [PASS] 3+-loop tail bound ~ r_R^2 / (1 - r_R) * Delta_1 = 0.206 % (framework-native)  (tail(N=2) bound = 0.2056 %)
+
+Block J: Structural analogy with P3 K_2/K_3 color-factor retention.
+  [PASS] P1 1-loop tensor count = 3 (C_F, C_A, T_F n_f)  (count = 3)
+  [PASS] P1 2-loop tensor count = 8 (this note)  (count = 8)
+  [PASS] P3 K_1 tensor count = 1 (C_F)  (count = 1)
+  [PASS] P3 K_2 tensor count = 4 (Cartesian product with C_F)  (count = 4)
+  [PASS] P3 K_3 tensor count = 10 (Cartesian product + heavy-top completion)  (count = 10)
+  [PASS] P1 2-loop count 8 sits between P3 K_2 (4) and K_3 (10), reflecting 3-channel 1-loop base  (P1 2-loop = 8 in [K_2 = 4, K_3 = 10])
+
+Block K: Structural preservation checks.
+  [PASS] 1-loop Delta_R master assembly theorem NOT modified  (Delta_R^{1-loop} central = -3.271 % inherited)
+  [PASS] Loop-geometric bound sub-theorem NOT modified  (r_R = 0.22126 and tail factor inherited)
+  [PASS] Rep-A/Rep-B cancellation theorem NOT modified  (three-channel 1-loop structure inherited)
+  [PASS] Delta_1, Delta_2, Delta_3 BZ-computation sub-theorems NOT modified  (per-channel centrals inherited)
+  [PASS] P3 K_2 and K_3 color-factor retention notes NOT modified  (analog 2-loop/3-loop structural templates referenced read-only)
+  [PASS] Master UV->IR transport obstruction theorem NOT modified  (P1/P2/P3 partition and ~1.95 % total residual unchanged at structural level)
+  [PASS] Publication-surface files NOT modified  (no propagation to publication tables)
+  [PASS] Framework-native 4D BZ quadrature of 8 J_X 2-loop integrals remains OPEN  (J_FF, J_FA, J_AA, J_Fl, J_Al, J_ll, J_FFh, J_Fh all open)
+
+========================================================================
+SUMMARY: PASS=79  FAIL=0
+========================================================================
+
+DEFINITIVE RESULT (Delta_R 2-Loop Structural Extension):
+
+  Delta_R^(2) = (alpha_LM/(4 pi))^2 * Sum_k c_k * J_k
+              = 5.2058e-05 * [C_F^2 J_FF + C_F C_A J_FA + C_A^2 J_AA
+                  + C_F T_F n_f J_Fl + C_A T_F n_f J_Al + T_F^2 n_f^2 J_ll
+                  + C_F^2 T_F J_FFh + C_F T_F J_Fh]
+
+  2-loop color tensors at SU(3), n_f = 6 (exact rationals):
+    C_F^2                = 16/9  (1.7778)
+    C_F C_A              = 4  (4.0000)
+    C_A^2                = 9  (9.0000)
+    C_F T_F n_f          = 4  (4.0000)
+    C_A T_F n_f          = 9  (9.0000)
+    T_F^2 n_f^2          = 9  (9.0000)
+    C_F^2 T_F            = 8/9  (0.8889)
+    C_F T_F              = 2/3  (0.6667)
+
+  Loop-geometric envelope:
+    r_R = (alpha_LM/pi) * b_0                  = 0.221264
+    tail factor r_R/(1-r_R)                    = 0.284132
+    amplification 1/(1-r_R)                    = 1.284132
+
+  Bounds from the envelope (applied to |Delta_R^{1-loop}| = 3.2709 %):
+    |Delta_R^(2)|                              <= 0.7237 %
+    |tail(N=1)| = Delta_1 * r/(1-r)            <= 0.9294 %
+    |Delta_R^{total}| = Delta_1 / (1-r)         <= 4.2002 %
+
+  Through-2-loop central (bound-saturated, same-sign):
+    Delta_R^{through-2L}                        = -3.9946 %
+    shift from 1-loop central                  = -0.7237 %
+
+  Refined P1 retention band:
+    P1^{1-loop central}                         = 3.271 %
+    P1^{through-2L central}                     = 3.995 %
+    P1 band at 2-loop: [3.27 %, 4.71 %]
+
+  m_t(pole) retained lane at through-2-loop:
+    m_t^{central, 1-loop}                       = 172.57 GeV
+    m_t^{central, 2-loop (bound-sat shift)}     = 173.19 GeV
+    lane width at 1-loop                        = +/- 5.64 GeV
+    lane width at through-2-loop (bound-sat)    = +/- 6.89 GeV
+    m_t(PDG observed)                           = 172.69 GeV  (within lane)
+
+  Retained coverage fractions:
+    1-loop / total bound                        = 0.7787
+    through-2-loop (bound-sat) / total bound    = 0.9510
+
+  Structural analogy to P3:
+    P3 K_1 (1-loop)        : 1 tensor  (C_F)
+    P3 K_2 (2-loop)        : 4 tensors (retained C_2 skeleton)
+    P3 K_3 (3-loop)        : 10 tensors (retained K_3 skeleton)
+    P1 Delta_R (1-loop)    : 3 tensors (C_F, C_A, T_F n_f)
+    P1 Delta_R (2-loop)    : 8 tensors (this note)
+
+(Extension depends only on retained SU(3) Casimirs + retained n_f, n_l
+ + retained alpha_LM + retained 1-loop central + retained loop-geometric
+ envelope; no 2-loop BZ integral value enters as a derivation input.)

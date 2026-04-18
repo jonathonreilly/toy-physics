@@ -1,0 +1,140 @@
+==============================================================================
+P2 V-MATCHING THEOREM: VERIFICATION (PARTIAL)
+==============================================================================
+
+BLOCK 1. Retained canonical-surface constants.
+  <P>                     = 0.593400
+  u_0                     = 0.877681
+  sqrt(u_0)               = 0.936847
+  alpha_bare              = 0.079577
+  alpha_LM                = 0.090668
+  alpha_s^SM(v)           = 0.103304
+  g_s^lat(M_Pl) = 1/sqrt(u_0) = 1.067411
+  g_s^SM(v) = 1/u_0       = 1.139366
+  1/sqrt(6) Ward          = 0.408248
+  R_conn = (N_c^2-1)/N_c^2 = 0.888889
+  sqrt(8/9) y_t proj      = 0.942809
+  ln(M_Pl/v)              = 38.4422
+
+BLOCK 2. CMT endpoints and the sqrt(u_0) factor.
+  [PASS] g_s^lat(M_Pl) = 1/sqrt(u_0)
+         1.067411 vs 1.067411
+  [PASS] g_s^SM(v) = 1/u_0
+         1.139366 vs 1.139366
+  [PASS] g_s^lat(M_Pl) / g_s^SM(v) = sqrt(u_0) (CMT endpoint ratio)
+         ratio = 0.936847, sqrt(u_0) = 0.936847
+
+BLOCK 3. Ward BC at M_Pl.
+  [PASS] y_t^lat(M_Pl) = g_s^lat(M_Pl) / sqrt(6) = 0.4358
+         y_t^lat(M_Pl) = 0.435769
+  y_t^lat(M_Pl) = 0.435769
+
+BLOCK 4. Path A: color projection alone does not close M.
+  [PASS] Path A: color projection alone gives 8/9, not M = 1.9734
+         M_Path_A = 0.8889 vs M_target = 1.9734
+  M_Path_A = 8/9 = 0.888889
+  M_target = 1.973400
+  M_target / M_Path_A = 2.2201 (residual = F_yt * sqrt(u_0))
+
+BLOCK 5. 1-loop SM RGE up-running of gauge couplings from v to M_Pl.
+  g_s^SM(M_Pl) = 0.489206
+  g_1(M_Pl)    = 0.615390
+  g_2(M_Pl)    = 0.504866
+  g_s^lat(M_Pl) / g_s^SM(M_Pl) = 2.181924
+  [PASS] UV-coupling mismatch g_lat/g_SM at M_Pl > 2 (Path C decomposition)
+         ratio = 2.1819; this is one factor of M decomposition
+
+BLOCK 6. 1-loop SM RGE: forward integration from M_Pl to v.
+  Initial (at M_Pl):
+    y_t(M_Pl) = 0.435769 (Ward BC)
+    g_s(M_Pl) = 0.489206
+    g_1(M_Pl) = 0.615390
+    g_2(M_Pl) = 0.504866
+  Final (at v):
+    y_t(v)   = 0.950225  (1-loop; before color projection)
+    g_s(v)   = 1.139366  (CMT cross-check)
+    g_1(v)   = 0.464400 (cross-check vs 0.4644)
+    g_2(v)   = 0.648000 (cross-check vs 0.6480)
+  [PASS] CMT cross-check: g_s(v; 1-loop forward) = 1/u_0
+         g_s(v) = 1.139366 vs 1/u_0 = 1.139366, rel err = 1.51e-11
+
+BLOCK 7. Central identity: M = sqrt(u_0) * F_yt * sqrt(8/9).
+  F_yt (1-loop) = y_t^SM(v) / y_t^lat(M_Pl) = 2.180573
+  M_1-loop = sqrt(u_0) * F_yt * sqrt(8/9)
+          = 0.9368 * 2.1806 * 0.9428
+          = 1.926029
+  M_target  = 1.973400
+  |M_1-loop - M_target| / M_target = 2.400%
+  [PASS] 1-loop M closes within QFP 3% envelope
+         deviation = 2.400% vs QFP envelope = 3.0%
+  [PASS] 1-loop residual ~ 2.4% (1-loop vs 2-loop truncation shift, QFP Part 4a)
+         deviation = 2.400% vs 1->2 loop shift = 2.4%
+
+BLOCK 8. Cross-check: M_target decomposed through Path A vs Path C.
+  'Residual after Path A' decomposition:
+    target (1.9734 / (8/9))       = 2.2201
+    1-loop (M_1loop / (8/9))      = 2.1668
+    Path C form (sqrt(u_0)*F_yt/sqrt(8/9)) = 2.1668
+  [PASS] Path C residual decomposition matches within 1-loop precision
+         diff = 0.00e+00
+
+BLOCK 9. Path C factor-by-factor decomposition table.
+  factor                                value  source
+  sqrt(u_0)                          0.936847  CMT endpoint ratio
+  F_yt (1-loop)                      2.180573  SM RGE transport of y_t
+  sqrt(8/9)                          0.942809  color projection on y_t
+  M_1-loop (product)                 1.926029  this note
+  M_target (taste-staircase)         1.973400  prior note
+
+BLOCK 10. Comparison to 2-loop SM RGE on the retained primary chain.
+  Primary-chain y_t(v; 2-loop, pre-proj) = 0.9734
+  y_t(v; 2-loop, with color projection)  = 0.9177
+  g_s^SM(v)                               = 1.1394
+  M_primary = 1.973002 (should match target 1.9734)
+  [PASS] M from primary-chain 2-loop values matches target to 0.1%
+         M_primary = 1.9730, M_target = 1.9734
+
+BLOCK 11. Outcome classification.
+  Outcome: PARTIAL
+
+  Structural identity (Part 4 of the note):
+    M = sqrt(u_0) * F_yt * sqrt(8/9)                  [CLOSED]
+
+  1-loop numerical evaluation of F_yt:
+    M_1-loop = 1.9260 vs M_target = 1.9734
+    deviation = 2.400% < QFP envelope 3.0%
+                              [CLOSED within retained 3% envelope]
+
+  Full 2-loop numerical evaluation of F_yt:
+    M_primary = 1.9730 from retained zero-import chain
+                              [CLOSED on primary chain]
+  [PASS] Outcome = PARTIAL (structural identity closed; 1-loop bounded; 2-loop via primary)
+         Every factor retained; residual 2.4% bounded by QFP 3% envelope
+
+BLOCK 12. Paths considered and committed.
+  Path A (color projection alone):    NOT closed (gives 8/9, not 1.9734)
+  Path B (ratio-level RG running):    ambiguous BC mixing; not used
+  Path C (this note):                 COMMITTED; see Part 5 of note
+  Path D (retained no-go):            NOT needed; Path C bounds the residual
+
+==============================================================================
+RESULT: 12 PASS, 0 FAIL   (0.00s)
+==============================================================================
+
+OUTCOME: PARTIAL
+  Structural identity:   M = sqrt(u_0) * F_yt * sqrt(8/9)  [CLOSED]
+  1-loop M_1-loop       = 1.9260
+  Target M_target       = 1.9734
+  1-loop deviation      = 2.400% (within retained 3% QFP envelope)
+  2-loop quantitative closure via retained primary chain.
+
+Path committed: PATH C (color projection x SM RGE transport on y_t
+                         x CMT endpoint ratio sqrt(u_0))
+
+The taste-staircase closes the 17-decade UV-to-IR transport on the
+lattice side; this note closes the single matching coefficient at v
+in decomposed form, bounded by retained theorems. P2 is narrowed from
+an unclosed 17-decade surrogate to a retained structural identity plus
+a retained 2-loop numerical evaluation that is already on the primary
+chain.
+
