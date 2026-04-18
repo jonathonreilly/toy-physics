@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-W-boson mass prediction on the retained Cl(3)/Z^3 EW normalization surface.
-=============================================================================
+W-boson same-surface consistency probe on the retained Cl(3)/Z^3 EW lane.
+==========================================================================
 
 New lane. Combines the retained framework numerics
     v        = 246.282818290129 GeV          [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE]
@@ -21,11 +21,12 @@ and the M_Z consistency cross-check,
 
     M_Z^tree = sqrt(g_1_Y^2 + g_2^2) * v / 2,   g_1_Y^2 = (3/5) * g_1_GUT^2.
 
-Lane status: same-surface consistency probe. The residual against pole
-measurements tracks the precision already present in the retained g_2(v)
-readout (YT_EW_COLOR_PROJECTION: g_2(v)_framework vs g_2(v)_observed is at
-the 0.26% level) and is NOT of the few-MeV size that ordinary missing SM
-2-loop / Delta r_rem corrections carry on the SM indirect M_W surface.
+Lane status: package-captured bounded same-surface consistency probe. The
+residual against pole measurements tracks the precision already present in
+the retained g_2(v) readout (YT_EW_COLOR_PROJECTION: g_2(v)_framework vs
+g_2(v)_observed is at the 0.26% level) and is NOT of the few-MeV size that
+ordinary missing SM 2-loop / Delta r_rem corrections carry on the SM
+indirect M_W surface.
 
 Self-contained: numpy only.
 PStack lane: w-mass-prediction
@@ -91,7 +92,8 @@ log("=" * 78)
 log("W-BOSON MASS ON THE RETAINED Cl(3)/Z^3 EW NORMALIZATION SURFACE")
 log("=" * 78)
 log()
-log("Same-surface consistency probe. NOT on the retained prediction surface.")
+log("Package-captured bounded same-surface probe.")
+log("NOT on the retained quantitative / prediction surface.")
 log("The residual against pole measurements tracks the precision already")
 log("present in the retained g_2(v) readout and is NOT absorbed by SM")
 log("2-loop / Delta r_rem corrections, which are at the few-MeV level.")
@@ -245,7 +247,7 @@ log("=" * 78)
 log()
 log(f"  Framework-side tree readout:  M_W^tree = {MW_TREE:.4f} GeV")
 log(f"  Framework-side RGE readout:   M_W^RGE  = {MW_RGE:.4f} GeV")
-log("  (both are same-surface consistency probes, NOT retained claims)")
+log("  (both are bounded same-surface probes, NOT retained claims)")
 log()
 
 # Cross-check that the residual inherits the retained g_2(v) precision.

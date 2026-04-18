@@ -1,9 +1,10 @@
 # `M_W` Same-Surface Consistency Probe on the Retained EW Lane
 
 **Date:** 2026-04-18 (revised after review)
-**Status:** new lane; **same-surface consistency probe** against PDG /
-CDF / ATLAS / CMS / LHCb pole measurements. **Not** a bounded companion
-at the missing-2-loop / `Delta r_rem` level.
+**Status:** package-captured **bounded same-surface consistency probe** on the
+retained EW lane. Reviewer-facing comparison against PDG / CDF / ATLAS / CMS /
+LHCb pole measurements only; **not** a retained or manuscript-facing
+quantitative claim.
 **Primary runner:** `scripts/frontier_w_mass_prediction.py`
 **Upstream authorities:**
 [`YT_EW_COLOR_PROJECTION_THEOREM.md`](YT_EW_COLOR_PROJECTION_THEOREM.md),
@@ -12,18 +13,18 @@ at the missing-2-loop / `Delta r_rem` level.
 
 ## Authority Role
 
-This note opens the W-boson pole-mass lane, which was not previously on the
-prediction surface. It is a **same-surface consistency probe**: its readouts
-use only retained same-surface values plus the SM 1-loop SU(2) beta
-coefficient `b_2 = 19/6` (the same pure group-theory coefficient already
-used by the retained sin^2(theta_W) / alpha_EM running bridge and by
+This note records the W-boson pole-mass lane as a **same-surface consistency
+probe** on the retained EW normalization surface. Its readouts use only
+retained same-surface values plus the SM 1-loop SU(2) beta coefficient
+`b_2 = 19/6` (the same pure group-theory coefficient already used by the
+retained sin^2(theta_W) / alpha_EM running bridge and by
 [`ALPHA_S_DERIVED_NOTE.md`](ALPHA_S_DERIVED_NOTE.md)).
 
-The lane is **not** a retained claim and is not on the publication surface.
-Its residual against pole measurements does not meet the precision floor of
-the SM indirect `M_W` prediction (which is set at the few-MeV level by
-modern SM 2-loop / `Delta r_rem` analyses), so it cannot be read as an
-SM-parity prediction. It is an internal consistency probe only.
+The lane is **not** a retained claim. It is package-captured only in the
+bounded companion portfolio. Its residual against pole measurements does not
+meet the precision floor of the SM indirect `M_W` prediction (which is set at
+the few-MeV level by modern SM 2-loop / `Delta r_rem` analyses), so it cannot
+be read as an SM-parity prediction. It is an internal consistency probe only.
 
 ## Safe Statement
 
@@ -86,16 +87,19 @@ Cl(3) on Z^3
   ~`0.01 GeV` level
 - it does **not** import a pole value into the framework-side solve;
   experimental central values enter only in the comparison table below
-- it does **not** propose any new promotion to `CLAIMS_TABLE.md`,
-  `PREDICTION_SURFACE_2026-04-15.md`, or `QUANTITATIVE_SUMMARY_TABLE.md`.
-  Promotion and repo-wide weaving are the reviewer's call.
+- it is package-captured only as a bounded same-surface EW diagnostic;
+  its `CLAIMS_TABLE.md` entry is bounded-companion only, and it is **not**
+  promoted to the retained quantitative surface or
+  `PREDICTION_SURFACE_2026-04-15.md`
 
 ## Package Role
 
-This lane is a framework-side same-surface consistency probe. Its tree
-readout uses only retained same-surface values; the RGE fixed-point solve
-adds only the SM 1-loop SU(2) coefficient `b_2 = 19/6`, reused from the
-retained EW normalization and `alpha_s` lanes.
+This lane is a framework-side bounded same-surface consistency probe. Its tree
+readout uses only retained same-surface values; the RGE fixed-point solve adds
+only the SM 1-loop SU(2) coefficient `b_2 = 19/6`, reused from the retained
+EW normalization and `alpha_s` lanes.
+
+Publication placement on `main`: bounded companion section / appendix only.
 
 It remains distinct from:
 

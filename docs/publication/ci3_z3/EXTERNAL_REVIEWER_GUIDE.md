@@ -119,6 +119,12 @@ Current status from that stack:
   rows use the retained running bridge
 - retained exact lattice-scale Ward theorem:
   `y_t(M_Pl) / g_s(M_Pl) = 1 / sqrt(6)`
+- bounded same-surface W-boson EW diagnostic on that retained EW lane:
+  `M_W^tree = 79.7956 GeV`,
+  `M_W^RGE = 80.5573 GeV`,
+  `M_Z^tree = 91.2663 GeV`;
+  the `~0.19 GeV` `M_W` residual tracks the retained `g_2(v)` precision and
+  is not a retained or few-MeV SM-indirect `M_W` claim
 - retained YT/top transport package:
   canonical full-staggered-PT `Δ_R = -3.77% ± 0.45%`,
   retained `y_t(v) = 0.9176`,
@@ -173,6 +179,7 @@ Current status from that stack:
 ## Bounded Prediction Surface
 
 - **Charged-lepton mass-hierarchy observational-pin closure** (Koide `Q = 2/3`). Reviewer entry point: [CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md](../../CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md). Repo status: `bounded`. The 3→3 pin produces no spare observable analogous to the retained neutrino-mixing 3→4 map's `δ_CP ≈ −81°` forecast. Seven theorems (algebraic cone equivalence, second-order-return shape theorem + 7-stress-test robustness, mass/mixing subspace disjointness `dim(V_H ∩ V_D) = 0`, transport identity, variational-principle no-retained-principle survey with the named real-irrep-block-democracy candidate primitive, fourth-order signed Clifford ordering cancellation, observational-pin closure) + six rigorous structural no-gos. Convention-invariant under mass-vs-mass-squared pin choice; closure content is framework compatibility with observed Koide, not framework derivation. Pin is unique as a set up to positive scale, with a residual `S_2` labeling ambiguity on `w_a ↔ w_b` that is Koide- and Σ-invariant on the retained surface. 19 runners, 518 PASS / 0 FAIL on origin/main base.
+- W-boson same-surface EW consistency probe. Reviewer entry point: [W_MASS_DERIVED_NOTE.md](../../W_MASS_DERIVED_NOTE.md). Repo status: `bounded`. On the retained EW lane the framework-side readouts are `M_W^tree = 79.7956 GeV`, `M_W^RGE = 80.5573 GeV`, `M_Z^tree = 91.2663 GeV`. The remaining `~0.19 GeV` `M_W` gap tracks the existing retained `g_2(v)` precision and is therefore treated as a reviewer-facing same-surface consistency probe, not as a retained or few-MeV SM-indirect `M_W` prediction.
 - DM flagship gate, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, plus a repo-live G1 PMNS-as-`f(H)` conditional/support package: the PMNS map from `H` is fixed and `q_H` is GAUGE-retained, but the chamber pin still depends on an imposed branch-choice rule, so the remaining live blocker is still the physical selector law / current-bank DM-mapping gap
 - persistent exact-lattice compact-object companion on `main`, with one
   retained blended readout on the nearby family and a `top4` multistage floor
