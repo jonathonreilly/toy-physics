@@ -62,6 +62,7 @@ The current canonical quantitative stack is modular:
 - [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md)
 - [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md)
 - [YT_EW_DELTA_R_RETENTION_ANALYSIS_NOTE_2026-04-18.md](../../YT_EW_DELTA_R_RETENTION_ANALYSIS_NOTE_2026-04-18.md)
+- [W_MASS_DERIVED_NOTE.md](../../W_MASS_DERIVED_NOTE.md)
 - [YT_WARD_IDENTITY_DERIVATION_THEOREM.md](../../YT_WARD_IDENTITY_DERIVATION_THEOREM.md)
 - [YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md](../../YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md)
 - [YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md](../../YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md)
@@ -85,6 +86,12 @@ Current package status:
   now explicitly keeps `~0.4%–2.9%` matching bands on those rows
 - retained exact lattice-scale Ward theorem:
   `y_t(M_Pl) / g_s(M_Pl) = 1 / sqrt(6)`
+- bounded same-surface W-boson EW diagnostic on that retained EW lane:
+  `M_W^tree = 79.7956 GeV`,
+  `M_W^RGE = 80.5573 GeV`,
+  `M_Z^tree = 91.2663 GeV`;
+  the `~0.19 GeV` `M_W` residual tracks the existing retained `g_2(v)`
+  precision and is not a retained or few-MeV SM-indirect `M_W` claim
 - retained YT/top transport package:
   `Δ_R = -3.77% ± 0.45%` on the canonical full-staggered-PT surface,
   retained `y_t(v) = 0.9176`,
@@ -126,6 +133,13 @@ Current package status:
 - exact taste-block fermion-CW isotropy support theorem with bounded
   taste-scalar near-degeneracy companion:
   `m_taste = 124.91 GeV`, scalar-only `v_c/T_c = 0.3079`
+- bounded same-surface W-boson EW diagnostic companion on the retained EW
+  lane:
+  `M_W^tree = 79.7956 GeV`,
+  `M_W^RGE = 80.5573 GeV`,
+  `M_Z^tree = 91.2663 GeV`;
+  useful as a reviewer-facing consistency probe, not promoted as a retained
+  or prediction-surface mass claim
 - retained Bell/CHSH support theorem on explicit two-species lattice systems:
   KS taste operators are constructed explicitly, `G=0` stays exactly at
   `|S| = 2.000`, and periodic Poisson coupling yields finite-lattice CHSH

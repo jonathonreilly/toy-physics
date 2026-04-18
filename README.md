@@ -55,9 +55,9 @@ context, not part of the live reviewer path.
   bounded Yukawa/top, and bounded Higgs/vacuum
 - bounded prediction surface:
   proton lifetime, CKM neutron EDM, down-type flavor-mass CKM-dual ratios,
-  vacuum critical stability, benchmark gravitational decoherence,
-  the bounded exact-lattice persistent-object companion, and bounded cosmology
-  rows
+  the same-surface W-boson EW consistency probe, vacuum critical stability,
+  benchmark gravitational decoherence, the bounded exact-lattice
+  persistent-object companion, and bounded cosmology rows
 - curated neutrino boundary/support packet outside the flagship core:
   exact current-stack Majorana zero law, exact mass reduction to the Dirac
   lane, exact PMNS selector/current-stack zero law, and exact last-mile
