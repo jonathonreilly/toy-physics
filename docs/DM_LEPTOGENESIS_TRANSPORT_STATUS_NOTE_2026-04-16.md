@@ -146,6 +146,43 @@ at the same final place:
 - the finer right-sensitive microscopic selector law on
   `dW_e^H = Schur_{E_e}(D_-)`.
 
+## Reviewed selector obstruction science stack (2026-04-18)
+
+The reviewed 2026-04-18 selector science stack sharpens that same open gate on
+the selector side and the exact-carrier side without closing either one.
+
+What is now additionally exact on `main`:
+
+- the selector-class side is compressed by the microscopic positive-probe
+  representation theorem: once exact family-threshold semantics are fixed,
+  admissible scalarizations collapse to the canonical extremal law, so the old
+  family/weight/scalarization ambiguity is no longer the live blocker;
+- the current exact bank still does not force a unique selector even on the
+  canonical full-family witness-volume functional: different exact thresholds
+  choose different recovered winners, so the selector-side obstruction is now
+  explicitly an intrinsic threshold-law nonrealization rather than generic
+  family choice;
+- the carrier side is no longer a diffuse rival-window search: endpoint and
+  split-1 broad-window pressure are already absent on the tested broad bundle,
+  while the broad split-2 pressure sharpens first to a low-slack edge interval
+  and then to two explicit split-2 upper-face neighborhoods;
+- on those tested split-2 neighborhoods, the lower-repair transport lane
+  remains incompatible with the preferred recovered lane, so the current
+  carrier-side gap is no longer broad search but interval-certified
+  exact-carrier dominance/completeness on that residual split-2 region;
+- the branch conclusion is therefore honest and stable: this is a reviewed
+  double-obstruction packet, not a constructive selector closure.
+
+So the reviewed selector science stack does real science work for the repo:
+it removes fake selector-family freedom, localizes the carrier pressure to one
+small residual geometric region, and turns the remaining open object into a
+much narrower theorem target. But it still leaves the DM flagship gate open at
+the same final place:
+
+- the finer right-sensitive microscopic selector law for the physical source
+  branch / point, together with interval-certified exact-carrier
+  dominance/completeness on the residual split-2 selector branch.
+
 ## Meaning
 
 The old transport-side exact boundary on `H_rad(T)` is gone. The current live
@@ -165,6 +202,10 @@ end state is:
   Wilson descendant law, explicit positive structured realizations of the
   target `dW_e^H` / `H_e` class, and constructive positive exact closure on the
   fixed native `N_e` seed surface already manifold-valued rather than point-like
+- exact reviewed selector obstruction science stack: selector-side ambiguity is
+  compressed to intrinsic threshold-law nonrealization, and the tested
+  carrier-side pressure is exhausted to two explicit split-2 upper-face
+  neighborhoods rather than a diffuse rival-window search
 - exact PMNS constructive existence on the fixed native `N_e` seed surface
 - exact theorem-native prediction undershoots observation by a factor
   `~ 5.297`
@@ -172,7 +213,7 @@ end state is:
   constructive projected-source chamber contains an exact `eta/eta_obs = 1`
   point, but the current selector families still do not choose it
 - the remaining theorem gap is therefore a genuine right-sensitive
-  microscopic selector-law problem, together with the final quantitative DM
-  mapping
+  microscopic selector-law problem, together with interval-certified
+  exact-carrier dominance/completeness and the final quantitative DM mapping
 
 So the DM flagship gate remains open.

@@ -140,7 +140,7 @@ Current quantitative statuses:
   explicit three-real PDG pin on the retained shape-theorem chamber, no spare
   observable beyond the pin, and no claim of a retained framework derivation
   of Koide
-- DM flagship gate, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` conditional/support package, and a reviewed Wilson direct-descendant science stack showing that current `main` carries no hidden Wilson-to-`dW_e^H` descendant law while explicit structured positive model classes and manifold-valued constructive positive exact closure already exist on the fixed native `N_e` seed surface: the remaining live blocker is therefore the finer right-sensitive microscopic selector law for the physical source branch / point, not support provenance or positivity existence
+- DM flagship gate, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` conditional/support package, a reviewed selector obstruction stack that compresses selector-side ambiguity to intrinsic threshold-law nonrealization and exhausts the tested carrier-side pressure to two explicit split-2 upper-face neighborhoods, and a reviewed Wilson direct-descendant science stack showing that current `main` carries no hidden Wilson-to-`dW_e^H` descendant law while explicit structured positive model classes and manifold-valued constructive positive exact closure already exist on the fixed native `N_e` seed surface: the remaining live blocker is therefore the finer right-sensitive microscopic selector law for the physical source branch / point together with interval-certified exact-carrier dominance/completeness, not generic family-choice search, diffuse carrier archaeology, support provenance, or positivity existence
 - promoted CKM atlas/axiom closure package, with older Cabibbo / NNI / partial Jarlskog notes retained only as route history
 - cosmology companions
 - bounded secondary predictions already on `main`, plus the CKM-only
@@ -152,16 +152,22 @@ Current quantitative statuses:
 
 1. DM flagship gate
 
-   The live DM gate now includes both the repo-tracked G1 PMNS-as-`f(H)`
-   conditional/support package and the reviewed Wilson direct-descendant
-   science stack. So current `main` already fixes the PMNS map from `H`,
-   discharges `q_H` as GAUGE-retained, excludes any hidden Wilson-to-`dW_e^H`
-   descendant law on the current bank, and exhibits explicit structured
-   positive model classes together with manifold-valued constructive positive
-   exact closure on the fixed native `N_e` seed surface. The gate remains open
-   because the chamber pin still depends on an imposed branch-choice rule and
-   the finer right-sensitive microscopic selector law for the physical source
-   branch / point is still missing.
+   The live DM gate now includes the repo-tracked G1 PMNS-as-`f(H)`
+   conditional/support package, the reviewed selector obstruction science
+   stack, and the reviewed Wilson direct-descendant science stack. So current
+   `main` already fixes the PMNS map from `H`, discharges `q_H` as
+   GAUGE-retained, compresses selector-side ambiguity to intrinsic
+   threshold-law nonrealization on the current exact bank, excludes any hidden
+   Wilson-to-`dW_e^H` descendant law on the current bank, and exhibits
+   explicit structured positive model classes together with manifold-valued
+   constructive positive exact closure on the fixed native `N_e` seed surface,
+   while the tested carrier-side pressure is exhausted to two explicit
+   split-2 upper-face neighborhoods. The gate remains open because the chamber
+   pin still depends on an imposed branch-choice rule and the finer
+   right-sensitive microscopic selector law for the physical source branch /
+   point, together with interval-certified exact-carrier
+   dominance/completeness on that residual split-2 selector branch, is still
+   missing.
 
 Outside the flagship spine, a curated neutrino boundary/support packet is now
 also live on `main`:

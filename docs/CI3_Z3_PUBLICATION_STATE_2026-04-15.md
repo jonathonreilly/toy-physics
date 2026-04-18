@@ -226,15 +226,21 @@ The remaining live paper gates are:
    conditional/support package: the PMNS map from `H` is fixed, `q_H`
    is discharged as GAUGE-retained by the Higgs `Z_3` gauge-redundancy
    theorem, and the package yields conditional/support `sin δ_CP` and
-   `θ_23` upper-octant consequences. The reviewed Wilson direct-descendant
-   science stack further shows that current `main` carries no hidden
-   Wilson-to-`dW_e^H` descendant law, while explicit structured positive
-   model classes and manifold-valued constructive positive exact closure
-   already exist on the fixed native `N_e` seed surface. The gate
-   nevertheless remains open because the chamber pin still relies on an
-   imposed branch-choice admissibility rule and the finer right-sensitive
-   microscopic selector law for the physical source branch / point is still
-   missing.
+   `θ_23` upper-octant consequences. The reviewed selector obstruction
+   science stack further shows that selector-side ambiguity is already
+   compressed to intrinsic threshold-law nonrealization on the current
+   exact bank, and that the tested carrier-side pressure is exhausted to
+   two explicit split-2 upper-face neighborhoods. The reviewed Wilson
+   direct-descendant science stack further shows that current `main`
+   carries no hidden Wilson-to-`dW_e^H` descendant law, while explicit
+   structured positive model classes and manifold-valued constructive
+   positive exact closure already exist on the fixed native `N_e` seed
+   surface. The gate nevertheless remains open because the chamber pin
+   still relies on an imposed branch-choice admissibility rule and the
+   finer right-sensitive microscopic selector law for the physical source
+   branch / point, together with interval-certified exact-carrier
+   dominance/completeness on that residual split-2 selector branch, is
+   still missing.
 
 Outside the flagship paper core, a live partial neutrino boundary/support
 packet is now also on `main`:

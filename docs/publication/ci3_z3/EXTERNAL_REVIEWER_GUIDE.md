@@ -180,7 +180,7 @@ Current status from that stack:
 
 - **Charged-lepton mass-hierarchy observational-pin closure** (Koide `Q = 2/3`). Reviewer entry point: [CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md](../../CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md). Repo status: `bounded`. The 3→3 pin produces no spare observable analogous to the retained neutrino-mixing 3→4 map's `δ_CP ≈ −81°` forecast. Seven theorems (algebraic cone equivalence, second-order-return shape theorem + 7-stress-test robustness, mass/mixing subspace disjointness `dim(V_H ∩ V_D) = 0`, transport identity, variational-principle no-retained-principle survey with the named real-irrep-block-democracy candidate primitive, fourth-order signed Clifford ordering cancellation, observational-pin closure) + six rigorous structural no-gos. Convention-invariant under mass-vs-mass-squared pin choice; closure content is framework compatibility with observed Koide, not framework derivation. Pin is unique as a set up to positive scale, with a residual `S_2` labeling ambiguity on `w_a ↔ w_b` that is Koide- and Σ-invariant on the retained surface. 19 runners, 518 PASS / 0 FAIL on origin/main base.
 - W-boson same-surface EW consistency probe. Reviewer entry point: [W_MASS_DERIVED_NOTE.md](../../W_MASS_DERIVED_NOTE.md). Repo status: `bounded`. On the retained EW lane the framework-side readouts are `M_W^tree = 79.7956 GeV`, `M_W^RGE = 80.5573 GeV`, `M_Z^tree = 91.2663 GeV`. The remaining `~0.19 GeV` `M_W` gap tracks the existing retained `g_2(v)` precision and is therefore treated as a reviewer-facing same-surface consistency probe, not as a retained or few-MeV SM-indirect `M_W` prediction.
-- DM flagship gate, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` conditional/support package, and a reviewed Wilson direct-descendant science stack showing that current `main` carries no hidden Wilson-to-`dW_e^H` descendant law while explicit structured positive model classes and manifold-valued constructive positive exact closure already exist on the fixed native `N_e` seed surface: the remaining live blocker is therefore the finer right-sensitive microscopic selector law for the physical source branch / point, not support provenance or positivity existence
+- DM flagship gate, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` conditional/support package, a reviewed selector obstruction stack that compresses selector-side ambiguity to intrinsic threshold-law nonrealization and exhausts the tested carrier-side pressure to two explicit split-2 upper-face neighborhoods, and a reviewed Wilson direct-descendant science stack showing that current `main` carries no hidden Wilson-to-`dW_e^H` descendant law while explicit structured positive model classes and manifold-valued constructive positive exact closure already exist on the fixed native `N_e` seed surface: the remaining live blocker is therefore the finer right-sensitive microscopic selector law for the physical source branch / point together with interval-certified exact-carrier dominance/completeness, not generic family-choice search, diffuse carrier archaeology, support provenance, or positivity existence
 - persistent exact-lattice compact-object companion on `main`, with one
   retained blended readout on the nearby family and a `top4` multistage floor
   that survives beyond the widened pocket, but still below persistent
@@ -198,15 +198,21 @@ Current status from that stack:
 1. DM flagship gate
 
    The live DM gate already includes the repo-tracked G1 PMNS-as-`f(H)`
-   conditional/support package and the reviewed Wilson direct-descendant
-   science stack. So current `main` already fixes the PMNS map from `H`,
-   discharges `q_H` as GAUGE-retained, excludes any hidden Wilson-to-`dW_e^H`
-   descendant law on the current bank, and exhibits explicit structured
-   positive model classes together with manifold-valued constructive positive
-   exact closure on the fixed native `N_e` seed surface. The gate remains open
-   because the chamber pin still depends on an imposed branch-choice rule and
-   the finer right-sensitive microscopic selector law for the physical source
-   branch / point is still missing.
+   conditional/support package, the reviewed selector obstruction science
+   stack, and the reviewed Wilson direct-descendant science stack. So current
+   `main` already fixes the PMNS map from `H`, discharges `q_H` as
+   GAUGE-retained, compresses selector-side ambiguity to intrinsic
+   threshold-law nonrealization on the current exact bank, excludes any hidden
+   Wilson-to-`dW_e^H` descendant law on the current bank, and exhibits
+   explicit structured positive model classes together with manifold-valued
+   constructive positive exact closure on the fixed native `N_e` seed surface,
+   while the tested carrier-side pressure is exhausted to two explicit
+   split-2 upper-face neighborhoods. The gate remains open because the chamber
+   pin still depends on an imposed branch-choice rule and the finer
+   right-sensitive microscopic selector law for the physical source branch /
+   point, together with interval-certified exact-carrier
+   dominance/completeness on that residual split-2 selector branch, is still
+   missing.
 
 Outside the flagship paper surface, a curated neutrino boundary/support packet
 is now also live on `main`:
