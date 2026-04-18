@@ -114,6 +114,10 @@ def main() -> int:
         "The branch conclusion note records the broader split-2 low-slack incompatibility sharpening",
         "0.884523453538" in conclusion_note and "0.233468501596" in conclusion_note,
     )
+    check(
+        "The branch conclusion note records the upper-m ridge sharpening of the residual carrier pressure",
+        "upper-`m`" in conclusion_note and "`m=-0.14`" in conclusion_note,
+    )
 
     print("\n" + "=" * 88)
     print("BRANCH RESULT")
