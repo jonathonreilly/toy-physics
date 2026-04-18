@@ -120,29 +120,32 @@ SLOTS: List[Dict[str, object]] = [
         "slot_id": "M.1",
         "title": "UV-to-IR transport obstruction theorem",
         "primitive": "master",
-        "status": "embedded",
-        "note": None,
-        "runner": None,
-        "log": None,
+        # Round 2 (Agent A, 2026-04-18): standalone note + runner + log on disk.
+        "status": "retained",
+        "note": "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md",
+        "runner": "scripts/frontier_yt_uv_to_ir_transport_obstruction.py",
+        "log": "logs/retained/yt_uv_to_ir_transport_obstruction_2026-04-17.log",
     },
-    # ---- P1 (16) ----
+    # ---- P1 (17) ----
     {
         "slot_id": "P1.1",
         "title": "Shared-Fierz shortcut no-go",
         "primitive": "P1",
-        "status": "embedded",
-        "note": None,
-        "runner": None,
-        "log": None,
+        # Round 2 (Agent A, 2026-04-18): standalone note + runner + log on disk.
+        "status": "retained",
+        "note": "docs/YT_P1_SHARED_FIERZ_NO_GO_SUB_THEOREM_NOTE_2026-04-17.md",
+        "runner": "scripts/frontier_yt_p1_shared_fierz_no_go.py",
+        "log": "logs/retained/yt_p1_shared_fierz_no_go_2026-04-17.log",
     },
     {
         "slot_id": "P1.2",
         "title": "Color-factor retention (C_F / C_A / T_F n_f)",
         "primitive": "P1",
-        "status": "embedded",
-        "note": None,
-        "runner": None,
-        "log": None,
+        # Round 2 (Agent H, 2026-04-18): standalone note + runner + log on disk.
+        "status": "retained",
+        "note": "docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
+        "runner": "scripts/frontier_yt_p1_color_factor_retention.py",
+        "log": "logs/retained/yt_p1_color_factor_retention_2026-04-17.log",
     },
     {
         "slot_id": "P1.3",
@@ -271,6 +274,18 @@ SLOTS: List[Dict[str, object]] = [
         "runner": "scripts/frontier_yt_p1_delta_r_2_loop_extension.py",
         "log": "logs/retained/yt_p1_delta_r_2_loop_extension_2026-04-18.log",
     },
+    {
+        "slot_id": "P1.17",
+        "title": "BZ quadrature 2-loop full staggered-PT (magnitude-envelope bound; NOT MC-pinned)",
+        "primitive": "P1",
+        # Round 2 (Agent C, 2026-04-18) honesty fix: retained value is the
+        # loop-geometric bound from P1.3 with same-sign saturation, not an
+        # MC matching coefficient.
+        "status": "retained",
+        "note": "docs/YT_P1_BZ_QUADRATURE_2_LOOP_FULL_STAGGERED_PT_NOTE_2026-04-18.md",
+        "runner": "scripts/frontier_yt_p1_bz_quadrature_2_loop_full_staggered_pt.py",
+        "log": "logs/retained/yt_p1_bz_quadrature_2_loop_full_staggered_pt_2026-04-18.log",
+    },
     # ---- P2 (4) ----
     {
         "slot_id": "P2.1",
@@ -313,19 +328,21 @@ SLOTS: List[Dict[str, object]] = [
         "slot_id": "P3.1",
         "title": "K_1 framework-native (K_1 = C_F = 4/3)",
         "primitive": "P3",
-        "status": "embedded",
-        "note": None,
-        "runner": None,
-        "log": None,
+        # Round 2 (Agent H, 2026-04-18): standalone note + runner + log on disk.
+        "status": "retained",
+        "note": "docs/YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md",
+        "runner": "scripts/frontier_yt_p3_msbar_to_pole_k1.py",
+        "log": "logs/retained/yt_p3_msbar_to_pole_k1_2026-04-17.log",
     },
     {
         "slot_id": "P3.2",
         "title": "K_2 color-factor retention (4-tensor)",
         "primitive": "P3",
-        "status": "embedded",
-        "note": None,
-        "runner": None,
-        "log": None,
+        # Round 2 (Agent H, 2026-04-18): standalone note + runner + log on disk.
+        "status": "retained",
+        "note": "docs/YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
+        "runner": "scripts/frontier_yt_p3_msbar_to_pole_k2.py",
+        "log": "logs/retained/yt_p3_msbar_to_pole_k2_2026-04-17.log",
     },
     {
         "slot_id": "P3.3",
@@ -361,20 +378,30 @@ SLOTS: List[Dict[str, object]] = [
 # Expected structural invariants (per manifest Part 9)
 # ---------------------------------------------------------------------------
 
-EXPECTED_TOTAL_SLOTS = 26
+EXPECTED_TOTAL_SLOTS = 27
 EXPECTED_MASTER_SLOTS = 1
-EXPECTED_P1_SLOTS = 16
+EXPECTED_P1_SLOTS = 17
 EXPECTED_P2_SLOTS = 4
 EXPECTED_P3_SLOTS = 5
 
-EXPECTED_RETAINED_SLOTS = 21
-EXPECTED_EMBEDDED_SLOTS = 5
+# Post-Round-2: all 27 slots carry retained runner+log artifacts on disk.
+# P1.4 is the single slot whose *note file* remains embedded-only by
+# design (runner + log are on disk); the slot_status for P1.4 is still
+# "retained" because its retained-runner artifacts exist. There are no
+# "embedded"-status slots remaining.
+EXPECTED_RETAINED_SLOTS = 27
+EXPECTED_EMBEDDED_SLOTS = 0
 
 # Expected per-slot [PASS] counts from the manifest's Part 9 table.
 # These are the deterministic values emitted by the retained runners
 # into their logs. If a runner is re-run and the count drifts, this
-# manifest validator flags the drift.
+# manifest validator flags the drift. The master slot M.1 is tracked
+# individually but does not count toward the P1/P2/P3 primitive-suite
+# grand total (Pillar A).
 EXPECTED_PASS_PER_SLOT: Dict[str, int] = {
+    "M.1": 5,
+    "P1.1": 4,
+    "P1.2": 5,
     "P1.3": 43,
     "P1.4": 21,
     "P1.5": 33,
@@ -389,18 +416,25 @@ EXPECTED_PASS_PER_SLOT: Dict[str, int] = {
     "P1.14": 40,
     "P1.15": 45,
     "P1.16": 79,
+    "P1.17": 50,
     "P2.1": 12,
     "P2.2": 12,
     "P2.3": 12,
     "P2.4": 48,
+    "P3.1": 4,
+    "P3.2": 6,
     "P3.3": 30,
     "P3.4": 18,
     "P3.5": 28,
 }
-EXPECTED_GRAND_TOTAL_PASS = sum(EXPECTED_PASS_PER_SLOT.values())  # 799
+# Pillar A grand total = P1 + P2 + P3 (master M.1 is reported separately).
+EXPECTED_GRAND_TOTAL_PASS = sum(
+    v for k, v in EXPECTED_PASS_PER_SLOT.items() if k.startswith("P")
+)
 EXPECTED_P1_PASS = sum(v for k, v in EXPECTED_PASS_PER_SLOT.items() if k.startswith("P1"))
 EXPECTED_P2_PASS = sum(v for k, v in EXPECTED_PASS_PER_SLOT.items() if k.startswith("P2"))
 EXPECTED_P3_PASS = sum(v for k, v in EXPECTED_PASS_PER_SLOT.items() if k.startswith("P3"))
+EXPECTED_MASTER_PASS = EXPECTED_PASS_PER_SLOT.get("M.1", 0)
 
 
 # ---------------------------------------------------------------------------
@@ -428,7 +462,7 @@ def count_markers(log_path: str) -> Tuple[int, int]:
 
 def block_1_slot_accounting() -> None:
     print("========================================================================")
-    print("Block 1: Slot accounting (26 indexed slots = 1 master + 16 P1 + 4 P2 + 5 P3)")
+    print("Block 1: Slot accounting (27 indexed slots = 1 master + 17 P1 + 4 P2 + 5 P3)")
     print("========================================================================")
     print()
 
@@ -441,7 +475,7 @@ def block_1_slot_accounting() -> None:
     embedded = sum(1 for s in SLOTS if s["status"] == "embedded")
 
     check(
-        "Total slots = 26 (1 master + 16 P1 + 4 P2 + 5 P3)",
+        "Total slots = 27 (1 master + 17 P1 + 4 P2 + 5 P3)",
         total == EXPECTED_TOTAL_SLOTS,
         detail=f"{total} slots catalogued",
     )
@@ -451,7 +485,7 @@ def block_1_slot_accounting() -> None:
         detail=f"{master} master slots",
     )
     check(
-        "P1 slots = 16",
+        "P1 slots = 17",
         p1 == EXPECTED_P1_SLOTS,
         detail=f"{p1} P1 slots",
     )
@@ -466,12 +500,12 @@ def block_1_slot_accounting() -> None:
         detail=f"{p3} P3 slots",
     )
     check(
-        "Retained (on-disk) slots = 21",
+        "Retained (on-disk) slots = 27",
         retained == EXPECTED_RETAINED_SLOTS,
         detail=f"{retained} retained slots",
     )
     check(
-        "Embedded-only slots = 5",
+        "Embedded-only slots = 0 (post-Round-2; P1.4 note remains embedded by design but slot-level retained)",
         embedded == EXPECTED_EMBEDDED_SLOTS,
         detail=f"{embedded} embedded slots",
     )
@@ -619,7 +653,7 @@ def block_4_primitive_rollup(per_slot_pass: Dict[str, int]) -> None:
         detail=f"observed P3 = {p3}, expected {EXPECTED_P3_PASS}",
     )
     check(
-        "Grand retained-runner PASS total = 799",
+        f"Grand retained-runner PASS total = {EXPECTED_GRAND_TOTAL_PASS} (Pillar A = P1+P2+P3)",
         grand == EXPECTED_GRAND_TOTAL_PASS,
         detail=f"observed {grand}, expected {EXPECTED_GRAND_TOTAL_PASS}",
     )
@@ -628,13 +662,14 @@ def block_4_primitive_rollup(per_slot_pass: Dict[str, int]) -> None:
     print(f"  P1 retained PASS total: {p1}")
     print(f"  P2 retained PASS total: {p2}")
     print(f"  P3 retained PASS total: {p3}")
-    print(f"  Grand retained PASS total: {grand}")
+    print(f"  Master (M.1) PASS: {per_slot_pass.get('M.1', 0)}")
+    print(f"  Pillar A grand retained PASS total (P1+P2+P3): {grand}")
     print()
 
 
 def block_5_embedded_slots() -> None:
     print("========================================================================")
-    print("Block 5: Embedded-only slot catalog (tolerated, content carried elsewhere)")
+    print("Block 5: Embedded-only note catalog (post-Round-2)")
     print("========================================================================")
     print()
 
@@ -643,10 +678,24 @@ def block_5_embedded_slots() -> None:
         sid = s["slot_id"]
         title = s["title"]
         print(f"  [EMBEDDED] {sid}  {title}")
+    # Post-Round-2: no slot-level embedded entries remain; P1.4 keeps its
+    # note embedded-only by design (its runner + log are on disk), and
+    # the block_2 file-existence pass already records that as a tolerated
+    # [PASS] line.
+    embedded_note_only = [s for s in SLOTS if s["note"] is None and s["status"] == "retained"]
+    for s in embedded_note_only:
+        sid = s["slot_id"]
+        title = s["title"]
+        print(f"  [EMBEDDED-NOTE] {sid}  {title}  (runner + log on disk)")
     check(
-        "Embedded-only slot count = 5 (tolerated; content in cross-referenced retained notes)",
+        f"Slot-level embedded count = {EXPECTED_EMBEDDED_SLOTS} (post-Round-2)",
         len(embedded) == EXPECTED_EMBEDDED_SLOTS,
-        detail=f"{len(embedded)} embedded slots enumerated",
+        detail=f"{len(embedded)} slot-level embedded entries",
+    )
+    check(
+        "Embedded-note-only retained slots = 1 (P1.4 by design)",
+        len(embedded_note_only) == 1,
+        detail=f"{len(embedded_note_only)} embedded-note-only entries",
     )
     print()
 

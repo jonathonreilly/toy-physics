@@ -355,20 +355,21 @@ where the `±0.713%` combines:
                          =  −4.60%  ±  0.84%
 ```
 
-**Refined P1 band (through-2-loop MC-pinned):**
+**Refined P1 band (through-2-loop, bound-constrained — NOT MC-pinned; see §0):**
 
 | Source | `Δ_R^{through-2L}` central | 1σ band |
 |---|---|---|
 | 1-loop only (full-PT retained) | −3.77% | ±0.45% |
 | Prior bound-saturated estimate | −3.99% | ±0.70% |
-| **MC retained (this note)** | **−4.60%** | **±0.84%** |
+| **Bound-constrained (this note, §0-corrected)** | **−4.60%** | **±0.84%** |
 
-Consistency with prior: the new MC retention is `0.87σ` from the
-prior bound-saturated central (well within the 2σ band). The small
-shift (`−0.61%`) reflects the honest MC-informed structural
-uncertainty on the same-sign saturation assumption; the new band
-`[−5.44%, −3.76%]` strictly contains the prior bound-saturated
-central `−3.99%`.
+Consistency with prior: the bound-constrained central is `0.87σ`
+from the prior bound-saturated central (well within the 2σ band).
+The small shift (`−0.61%`) reflects the sharpened bound-saturation
+band under the same-sign 2-loop structural expectation; the new
+band `[−5.44%, −3.76%]` strictly contains the prior bound-saturated
+central `−3.99%`. Both central values are loop-geometric bound
+applications, not MC matching coefficients (see §0).
 
 **m_t(pole) retained band refinement:**
 
@@ -380,8 +381,10 @@ central `−3.99%`.
 
 **Confidence:**
 
-- HIGH on the 8 MC-retained `J_X` magnitudes (reproducible at fixed
-  seed, grid convergence within expected variance on all 8 channels);
+- HIGH on the 8 per-channel `J_X` schematic magnitude envelopes
+  (MC-measured; reproducible at fixed seed, grid convergence within
+  expected variance on all 8 channels) — these are per-topology
+  magnitudes, NOT gauge-invariant matching coefficients;
 - HIGH on the retained 8-tensor color-tensor skeleton (inherited
   verbatim from the 2-loop extension note);
 - HIGH on the retained loop-geometric bound (`r_R = 0.22126`
@@ -396,14 +399,20 @@ central `−3.99%`.
   the true framework-native central could be anywhere in `[−0.83%, 0]`
   depending on the actual diagram cancellations).
 
-**Precision milestone.** The 2-loop integrals are now **all 8
-MC-retained** on the framework-native lattice canonical surface,
+**Coverage milestone.** The 8 schematic 2-loop magnitude envelopes
+(`J_X` integrals) are now **all 8 MC-measured as per-channel
+magnitudes** on the framework-native lattice canonical surface,
 moving the 2-loop primitive from "structural bound with 8 open
-integrals" to "MC-retained magnitude envelope with bound-constrained
-central assembly." The through-2-loop uncertainty ±0.84% is
-comparable to the prior bound-saturated ±0.70%, but the **structural
-retention coverage is now 100%** (8 of 8 integrals MC-retained; 0
-of 8 OPEN).
+magnitudes" to "per-channel magnitude envelope computed, with the
+through-2-loop central still carried by the retained loop-geometric
+bound (§0)." The through-2-loop uncertainty ±0.84% is comparable
+to the prior bound-saturated ±0.70%, but the **per-channel
+magnitude coverage is now 100%** (8 of 8 schematic-envelope
+integrals MC-measured; 0 of 8 OPEN). **The through-2-loop central
+itself remains bound-constrained**, not MC-pinned; promotion to
+an MC-pinned matching coefficient requires a gauge-invariant
+assembly the schematic Cartesian-product estimator does not
+deliver (see §0.2).
 
 **Safe claim boundary.** The numerical values are computed by 8D
 Monte Carlo on 2·10⁶ uniform samples of BZ² with fixed random seed
@@ -569,7 +578,7 @@ subtraction used in the 1-loop note.
 
 ---
 
-## 3. Eight MC-retained `J_X` values
+## 3. Eight per-channel schematic `J_X` magnitude envelopes (MC-measured)
 
 ### 3.1 Production MC results at N = 2·10⁶ samples (seed = 42)
 
@@ -738,25 +747,29 @@ reflecting:
 |--------|---------|---------|-------|
 | 1-loop full-PT only | −3.77% | ±0.45% | 0.90% |
 | Prior bound-saturated | −3.99% | ±0.70% | 1.40% |
-| **MC retained (this note)** | **−4.60%** | **±0.84%** | **1.68%** |
+| **Bound-constrained (this note, §0-corrected)** | **−4.60%** | **±0.84%** | **1.68%** |
 
-Consistency check: `|MC − prior| = 0.61%`, which is `0.87σ` on the
-prior uncertainty. The new MC retention is **consistent** with the
-prior bound-saturated estimate at well under 1σ, and the `0.61%`
-shift reflects the honest MC-informed structural uncertainty on the
-saturation assumption.
+Consistency check: `|new − prior| = 0.61%`, which is `0.87σ` on the
+prior uncertainty. The §0-corrected bound-constrained central is
+**consistent** with the prior bound-saturated estimate at well
+under 1σ, and the `0.61%` shift reflects a sharpened
+bound-saturation band rather than an MC matching coefficient.
 
 Width: the new band is wider than the prior bound-saturated (1.68%
-vs 1.40%), reflecting the honest addition of MC statistical + 2-loop
-scheme systematic on top of the bound envelope. The **tightening
-vs the bound-only envelope** is on the 2-loop piece:
+vs 1.40%), reflecting the 8 schematic J_X magnitude envelopes
+folded in as a structural systematic on top of the bound envelope.
+The **per-channel magnitude coverage is tighter** on the 2-loop
+piece:
 
-- Prior 2-loop: ±0.72% (bound-only, no central)
-- New 2-loop: ±0.71% (MC + systematic, with −0.83% central)
+- Prior 2-loop: ±0.72% (bound-only, no per-channel magnitude data)
+- New 2-loop: ±0.71% (bound + per-channel J_X systematic, same
+  −0.83% bound-saturated central)
 
-The width is comparable, but the **retention coverage is tighter**:
-the 2-loop central is now **framework-native MC-pinned** rather than
-"bound with unknown saturation."
+The width is comparable, and the **per-channel magnitude coverage
+has been added**: 8 of 8 schematic envelopes MC-measured. The
+2-loop central itself is **still the retained loop-geometric bound
+with same-sign saturation**, not a framework-native MC matching
+coefficient (see §0).
 
 ### 6.4 Dominant-channel structure
 
@@ -811,12 +824,13 @@ precision band (±1.46 GeV).
 |--------|-------------------------|
 | 1-loop full-PT only | 172.57 ± 6.50 GeV |
 | Prior bound-saturated | 172.57 ± 6.89 GeV |
-| **MC retained (this note)** | **172.57 ± 7.94 GeV** |
+| **Bound-constrained (this note, §0-corrected)** | **172.57 ± 7.94 GeV** |
 
 The new lane is wider than the bound-saturated (7.94 vs 6.89 GeV)
-because the MC-informed 2-loop central is more negative (−0.83%
-vs bound central −0.72%). Both remain consistent with observed
-172.69 GeV at well under 1σ.
+because the same-sign-saturated bound central is more negative
+(−0.83% vs −0.72%). Both remain consistent with observed
+172.69 GeV at well under 1σ. The central is bound-constrained, not
+MC-pinned; see §0.
 
 ---
 
@@ -1023,10 +1037,12 @@ It does **not** claim:
   uncertainty from ~5-10% per channel to sub-percent.
 - **3-loop and higher corrections** beyond the geometric tail bound
   (retained bound `|tail(N=2)| ≤ r_R² · |Δ_R^{(1)}| ≈ 0.18%`).
-- **Propagation of the MC-retained through-2-loop `Δ_R = −4.60%`**
+- **Propagation of the bound-constrained through-2-loop `Δ_R = −4.60%`**
   into any publication-surface table. This note does not propagate;
   the P1 publication-surface treatment remains as-documented in the
-  prior master assembly theorem with 1-loop central `−3.27%`.
+  prior master assembly theorem with 1-loop central `−3.27%`. Any
+  future propagation would require a gauge-invariant MC-pinned
+  central, which is OPEN.
 
 ---
 
@@ -1068,7 +1084,8 @@ The runner verifies:
 12. Through-2-loop consistent with prior bound-saturated estimate at
     `0.87σ` (< 2σ).
 13. 2-loop final uncertainty (±0.713%) tighter than loop-geometric
-    bound (±0.834%) — MC-retained precision.
+    bound (±0.834%) — bound-constrained band with per-channel
+    magnitude systematic (NOT an MC-pinned central).
 14. m_t(pole) lane `172.57 GeV ± 7.94 GeV`; observed `172.69 GeV`
     within lane.
 15. C_A-dominated channels (`J_AA`, `J_Al`) among top 3 by
