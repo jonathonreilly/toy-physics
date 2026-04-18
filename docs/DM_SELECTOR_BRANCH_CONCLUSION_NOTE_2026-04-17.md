@@ -67,7 +67,13 @@ stays below `0.847299300834`, well below the preferred recovered
 preferred small-leakage quotient. So the live carrier-side pressure is now
 sharper still: not just the split-2 low-slack edge interval, but a possible
 lower-repair, transport-compatible lane inside that interval on the finer exact
-carrier.
+carrier. The branch now also fails to see such a lane on the tested broad
+split-2 low-slack box itself: under the lower-repair constraint the strongest
+tested rival stays below `0.884523453538`, and the closest tested lower-repair
+packet lane still stays at distance at least `0.233468501596` from the
+preferred quotient. So the residual carrier pressure is now smaller again:
+interval-style exclusion or dominance on the exact carrier inside the residual
+split-2 low-slack region.
 
 So the carrier side stops exactly at:
 
