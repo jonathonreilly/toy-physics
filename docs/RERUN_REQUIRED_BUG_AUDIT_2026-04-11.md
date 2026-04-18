@@ -225,10 +225,21 @@ Revisit rule:
 These are not “run it again” bugs. The measurement itself is invalid or the
 claim does not match the computed object.
 
+Current-main backlog handling:
+
+- Items B1-B5 below are now explicitly retired from the active blocker stack on
+  current `main`. Keep them only as redesign guidance if those historical or
+  bounded lanes are reopened.
+- The remaining entries in this section are redesign-only guidance for older or
+  narrowed surfaces. They are not same-lane rerun tasks.
+
 ### 1. Original two-body mutual-attraction runner
 
 **Status on `main`: retired as evidence; preserved only as a historical
 exploratory predecessor to the open-Wilson two-orbital lane**
+
+**Current stack disposition: not an active current-main blocker; redesign only
+if this historical lane is ever reopened**
 
 Affected runner:
 
@@ -251,6 +262,9 @@ Action:
 
 **Status on `main`: historical-only caution; not part of the live Wilson
 evidence chain**
+
+**Current stack disposition: not an active current-main blocker; redesign only
+if this historical lane is ever reopened**
 
 Affected runner:
 
@@ -278,6 +292,9 @@ Action:
 
 **Status on `main`: bounded post-selected law-characterization surface; not a
 blind law-estimate blocker for the current Wilson reopen lane**
+
+**Current stack disposition: not an active current-main blocker; keep only as
+redesign guidance for any future blind-law-estimate attempt**
 
 Affected runners:
 
@@ -309,6 +326,9 @@ Revisit rule:
 **Status on `main`: corrected negative / boundary-of-validity marker; not a
 live rerun blocker in its current form**
 
+**Current stack disposition: not an active current-main blocker; reopen only if
+the lane is redesigned around a different measurement-theory question**
+
 Affected runner:
 
 - [`scripts/frontier_born_rule_alpha.py`](../scripts/frontier_born_rule_alpha.py)
@@ -339,6 +359,9 @@ Revisit rule:
 **Status on `main`: bounded branch-mediated entanglement package on an
 externally imposed two-branch protocol preserved; no longer presented
 as a full BMV / gravity-quantumness closure**
+
+**Current stack disposition: not an active current-main blocker; redesign only
+before any attempt to promote this bounded witness package**
 
 Affected runners:
 
