@@ -1021,6 +1021,139 @@ def part1_reference_surface() -> None:
         and "different first `2 x 2` Krylov/Lanczos bulk blocks" in finite_krylov,
     )
 
+    finite_jacobi = read("docs/GAUGE_VACUUM_PLAQUETTE_BETA6_IDENTITY_RIM_FINITE_JACOBI_PACKET_REDUCTION_NOTE_2026-04-18.md")
+    check(
+        "Plaquette beta=6 identity-rim finite-Jacobi packet reduction note records that the sharp fixed-depth bulk datum is the eta_6(e)-generated finite Jacobi packet, and that even the propagated triple still does not determine its first nontrivial Jacobi packet",
+        "finite **Jacobi packet**" in finite_jacobi
+        and "fixed-depth class-sector closure depends only on the finite Jacobi packet" in finite_jacobi
+        and "same exact propagated retained triple" in finite_jacobi
+        and "first nontrivial Jacobi packet" in finite_jacobi,
+    )
+
+    plaquette_certificate = read("docs/GAUGE_VACUUM_PLAQUETTE_BETA6_FIXED_DEPTH_MINIMAL_CERTIFICATE_NOTE_2026-04-18.md")
+    check(
+        "Plaquette beta=6 fixed-depth minimal-certificate note records that the whole non-Wilson plaquette lane is one minimal Jacobi+K certificate and that the current bank already fails at the first Jacobi layer",
+        "`Jacobi + K` certificate" in plaquette_certificate
+        and "one finite identity-rim Jacobi packet" in plaquette_certificate
+        and "fails at the first Jacobi layer" in plaquette_certificate,
+    )
+
+    finite_moment = read("docs/GAUGE_VACUUM_PLAQUETTE_BETA6_IDENTITY_RIM_FINITE_MOMENT_PACKET_REDUCTION_NOTE_2026-04-18.md")
+    check(
+        "Plaquette beta=6 identity-rim finite-moment packet reduction note records that the sharp fixed-depth bulk datum is equivalently one finite cyclic-moment packet and that the propagated triple still does not determine even the first nontrivial moment pair",
+        "finite cyclic-moment packet" in finite_moment
+        and "first nontrivial moment pair" in finite_moment
+        and "first nontrivial cyclic-moment pair" in finite_moment,
+    )
+
+    scalar_certificate = read("docs/GAUGE_VACUUM_PLAQUETTE_BETA6_FIXED_DEPTH_SCALAR_CERTIFICATE_NOTE_2026-04-18.md")
+    check(
+        "Plaquette beta=6 fixed-depth scalar-certificate note records that the whole non-Wilson plaquette route is one minimal moment+K certificate and that the current bank already fails at the first scalar layer",
+        "`moment + K` certificate" in scalar_certificate
+        and "one finite cyclic-moment packet" in scalar_certificate
+        and ("fails at the first scalar layer" in scalar_certificate
+             or "fails already at the first scalar layer" in scalar_certificate),
+    )
+
+    wilson_audit = read("docs/PERRON_FROBENIUS_WILSON_DEPENDENCY_AUDIT_NOTE_2026-04-18.md")
+    check(
+        "Wilson dependency-audit note records that Wilson is the main positive reopening lever while PMNS and plaquette blockers remain live independently on the current bank",
+        "Wilson robustness matters **asymmetrically**." in wilson_audit
+        and "What depends directly on Wilson robustness" in wilson_audit
+        and "What does **not** become positive merely by reopening Wilson" in wilson_audit
+        and "Wilson is the main positive reopening lever" in wilson_audit,
+    )
+
+    frontier_certificates = read("docs/PERRON_FROBENIUS_MINIMAL_FRONTIER_CERTIFICATES_NOTE_2026-04-18.md")
+    check(
+        "Minimal frontier-certificates note records that the remaining PF science is now exactly one Wilson reopening certificate, one PMNS-native production certificate, and one plaquette scalar certificate",
+        "three minimal frontier certificates" in frontier_certificates
+        and "Wilson positive reopening certificate" in frontier_certificates
+        and "PMNS-native production certificate" in frontier_certificates
+        and "Plaquette non-Wilson scalar certificate" in frontier_certificates,
+    )
+
+    pmns_certificate = read("docs/PMNS_GRAPH_FIRST_FIXED_SLICE_MINIMAL_PRODUCTION_CERTIFICATE_NOTE_2026-04-18.md")
+    check(
+        "PMNS fixed-slice minimal production-certificate note records that the whole PMNS-native frontier is one minimal fixed-slice two-holonomy production certificate which the current bank still does not realize",
+        ("minimal" in pmns_certificate and "fixed-slice two-holonomy" in pmns_certificate and "production certificate" in pmns_certificate)
+        and "still does **not** realize that certificate" in pmns_certificate,
+    )
+
+    asymmetric_closure = read("docs/PERRON_FROBENIUS_CURRENT_BANK_ASYMMETRIC_CLOSURE_NOTE_2026-04-18.md")
+    check(
+        "Current-bank asymmetric-closure note records that Wilson is the only positive reopening lever while PMNS-native and plaquette remain independent blockers, so weakening Wilson makes the branch more clearly negative rather than more open",
+        "asymmetrically closed" in asymmetric_closure
+        and "more clearly negative, not more open" in asymmetric_closure,
+    )
+
+    wilson_nilpotent = read("docs/PERRON_FROBENIUS_STEP2_WILSON_LOCAL_NILPOTENT_CHAIN_GENERATOR_REDUCTION_NOTE_2026-04-18.md")
+    check(
+        "Wilson local nilpotent-chain generator reduction note records that the sharpest local Wilson constructive primitive is exactly one local nilpotent chain generator downstream of Phi_chain",
+        "one local nilpotent chain generator" in wilson_nilpotent
+        and "`P_1 := 1 - N^* N = E_11`" in wilson_nilpotent
+        and "current bank still does **not** realize even this sharper local generator" in wilson_nilpotent,
+    )
+
+    wilson_nilpotent_cert = read("docs/PERRON_FROBENIUS_STEP2_WILSON_LOCAL_NILPOTENT_CHAIN_MINIMAL_CERTIFICATE_NOTE_2026-04-18.md")
+    check(
+        "Wilson local nilpotent-chain minimal-certificate note records that the whole Wilson route is one local nilpotent-chain 1+3 certificate and that the current bank still fails already at the generator layer",
+        "local nilpotent-chain `1 + 3` certificate" in wilson_nilpotent_cert
+        and "one local nilpotent chain generator `N_chain`" in wilson_nilpotent_cert
+        and "current bank still does **not** realize even the first generator layer" in wilson_nilpotent_cert,
+    )
+
+    pmns_scalar = read("docs/PMNS_GRAPH_FIRST_FIXED_SLICE_SCALAR_PRODUCTION_DISCRIMINANT_NOTE_2026-04-18.md")
+    check(
+        "PMNS fixed-slice scalar production-discriminant note records that the remaining native production frontier is one scalar nonvanishing certificate Delta_(phi1,phi2)>0 which the current bank still does not realize",
+        "scalar discriminant" in pmns_scalar
+        and "Delta_(phi1,phi2)" in pmns_scalar
+        and "current bank still does **not**" in pmns_scalar
+        and "realize even that scalar certificate" in pmns_scalar,
+    )
+
+    plaquette_hankel = read("docs/GAUGE_VACUUM_PLAQUETTE_BETA6_FIRST_HANKEL_CERTIFICATE_NOTE_2026-04-18.md")
+    check(
+        "Plaquette beta=6 first-Hankel certificate note records that the first constructive non-Wilson blocker is one first Hankel+K certificate and that the current bank already fails at that first Hankel layer",
+        "first Hankel + `K` certificate" in plaquette_hankel
+        and "first Hankel matrix" in plaquette_hankel
+        and "current bank already fails at that first Hankel layer" in plaquette_hankel,
+    )
+
+    sharpest_frontier = read("docs/PERRON_FROBENIUS_SHARPEST_FRONTIER_CERTIFICATES_NOTE_2026-04-18.md")
+    check(
+        "Sharpest frontier-certificates note records that the remaining PF branch is now one Wilson generator certificate, one PMNS scalar certificate, and one plaquette first-Hankel certificate",
+        "sharpest frontier decomposition" in sharpest_frontier
+        and "local nilpotent-chain `1 + 1` certificate" in sharpest_frontier
+        and "scalar holonomy discriminant" in sharpest_frontier
+        and "first Hankel + `K` certificate" in sharpest_frontier,
+    )
+
+    wilson_charpoly = read("docs/PERRON_FROBENIUS_STEP2_WILSON_LOCAL_NILPOTENT_CHARPOLY_CERTIFICATE_NOTE_2026-04-18.md")
+    check(
+        "Wilson local nilpotent-charpoly certificate note records that the whole Wilson route is one local nilpotent-chain 1+1 certificate with a single cubic characteristic-polynomial identity",
+        "local nilpotent-chain `1 + 1` certificate" in wilson_charpoly
+        and "`chi_(B_e)(lambda) = chi_(H_e)(lambda)`" in wilson_charpoly
+        and "current bank still does **not** realize even the first generator layer" in wilson_charpoly,
+    )
+
+    wilson_complete = read("docs/PERRON_FROBENIUS_WILSON_CURRENT_BANK_COMPLETE_CLOSURE_NOTE_2026-04-18.md")
+    check(
+        "Wilson current-bank complete-closure note records that the Wilson reopening route is now fully reduced and negatively closed on the current bank",
+        "completely closed on the current bank" in wilson_complete
+        and "current bank does **not** realize the Wilson reopening route" in wilson_complete
+        and "Wilson-lane closure theorem on the current bank" in wilson_complete,
+    )
+
+    full_frontier_closure = read("docs/PERRON_FROBENIUS_CURRENT_BANK_FULL_FRONTIER_CLOSURE_NOTE_2026-04-18.md")
+    check(
+        "Current-bank full-frontier closure note records that all three sharpest frontier certificates are now negatively closed on the current bank",
+        ("All three frontier certificates are now negatively closed" in full_frontier_closure
+         or "all three frontier certificates are now negatively closed" in full_frontier_closure)
+        and "no remaining positive PF route left open" in full_frontier_closure
+        and "fully closed negatively" in full_frontier_closure,
+    )
+
 
 def part2_sector_local_witnesses() -> None:
     print()
@@ -1328,6 +1461,70 @@ def part3_cross_sector_boundary() -> None:
     support(
         "Plaquette finite-Krylov bulk reduction",
         "at fixed propagation depth the plaquette bulk front is sharper again: not even the whole eta_6(e)-cyclic object is the honest target, only the finite eta_6(e)-generated Krylov block matters; but the current propagated retained triple still does not determine even its first nontrivial 2 x 2 Krylov/Lanczos block",
+    )
+    support(
+        "Plaquette finite-Jacobi packet reduction",
+        "the plaquette bulk front is sharper once more: the honest fixed-depth bulk datum is not even an arbitrary finite Krylov matrix block but the canonical eta_6(e)-generated finite Jacobi packet, equivalently the same fixed-depth bulk object in Lanczos form; yet the current propagated retained triple still does not determine even its first nontrivial Jacobi packet on the current bank",
+    )
+    support(
+        "Plaquette fixed-depth minimal certificate",
+        "the non-Wilson plaquette route is now packaged in the same hard-review-safe way too: at fixed depth the whole operator lane is one minimal Jacobi+K certificate, namely one identity-rim finite Jacobi packet on the bulk side together with the already-explicit compressed boundary law Z_beta^env(W)=<K(W), v_beta>; and the current bank still fails already at the first Jacobi layer",
+    )
+    support(
+        "Plaquette finite-moment packet reduction",
+        "the plaquette scalar reformulation is sharper still: by cyclic moment uniqueness and the fixed-Jacobi reduction, the same fixed-depth bulk datum is equivalently one finite cyclic-moment packet, and the current propagated retained triple still does not determine even the first nontrivial moment pair (m1,m2)",
+    )
+    support(
+        "Plaquette fixed-depth scalar certificate",
+        "the non-Wilson plaquette route is now fully scalar in reviewer-facing form: at fixed depth the whole lane is one minimal moment+K certificate, namely one finite cyclic-moment packet on the bulk side together with the already-explicit boundary evaluation law through K(W); and the current bank still fails already at the first scalar moment layer",
+    )
+    support(
+        "Wilson dependency audit",
+        "the Wilson re-audit lane is now typed cleanly too: Wilson is the main positive reopening lever because the partial step-1 parent surface and the entire sharp local Phi_chain source route are Wilson-dependent, but the branch already carries Wilson-independent PMNS and plaquette blockers as well, so weakening Wilson would make the current-bank global reading more clearly negative rather than more open",
+    )
+    support(
+        "Minimal frontier certificates",
+        "the remaining PF science is now packaged as a minimal frontier decomposition too: one Wilson local reopening certificate, one PMNS-native production certificate, and one non-Wilson plaquette scalar certificate; only the Wilson item is currently a positive reopening lever, while the other two remain exact current-bank blockers",
+    )
+    support(
+        "PMNS minimal production certificate",
+        "the PMNS-native frontier is now packaged in matching certificate form too: after fixed-slice readout closure the whole remaining native lane is one minimal fixed-slice two-holonomy production certificate, equivalent to production of nonzero J_chi = chi; and the current bank still does not realize that certificate",
+    )
+    support(
+        "Current-bank asymmetric closure",
+        "the branch consequence of the Wilson audit is now explicit too: the current bank is asymmetrically closed, with Wilson as the only positive reopening lever while the PMNS-native production certificate and the plaquette scalar certificate remain independent blockers; so weakening Wilson would make the branch more clearly negative rather than more open",
+    )
+    support(
+        "Wilson local nilpotent-chain generator reduction",
+        "the Wilson reopening certificate is now sharper than a local path algebra too: one local nilpotent chain generator N_chain on the physical adjacent two-edge chain already reconstructs the full local chain algebra, so the current-bank Wilson gap can now be stated as failure to realize even that single local generator",
+    )
+    support(
+        "Wilson local nilpotent-chain minimal certificate",
+        "the whole Wilson compressed route is now packaged at its sharpest constructive level as one local nilpotent-chain 1+3 certificate: one local generator layer and then only the 3 scalar spectral identities Tr(B_e^k)=Tr(H_e^k) for k=1,2,3",
+    )
+    support(
+        "PMNS scalar production discriminant",
+        "the PMNS-native production frontier is now scalarized too: after the fixed-slice two-holonomy collapse theorem, nonzero chi is equivalent to positivity of one fixed-slice scalar holonomy discriminant Delta_(phi1,phi2), and the current bank still forces that scalar to vanish",
+    )
+    support(
+        "Plaquette first Hankel certificate",
+        "the non-Wilson plaquette blocker is now sharper than a generic first moment pair: at the first constructive layer it is exactly one first Hankel+K certificate, and the current bank already fails there because the same propagated retained triple can support different first Hankel layers",
+    )
+    support(
+        "Sharpest frontier certificates",
+        "the remaining PF branch is now packaged in its sharpest current form: one Wilson local generator+charpoly certificate, one PMNS scalar production certificate, and one plaquette first-Hankel+K certificate; only the Wilson item remains a positive reopening lever under stronger future input",
+    )
+    support(
+        "Wilson local nilpotent-charpoly certificate",
+        "the Wilson lane is sharper still: because the post-support 3-trace packet is exactly equivalent to one cubic characteristic-polynomial identity for the Hermitian 3x3 compressed block, the whole Wilson reopening route is now one local nilpotent-chain 1+1 certificate",
+    )
+    support(
+        "Wilson current-bank complete closure",
+        "the Wilson lane is now completely closed on the current bank at that sharpest level too: the current bank still fails already at the local nilpotent generator layer, so no further Wilson bank rescans are scientifically live without genuinely new Wilson input",
+    )
+    support(
+        "Current-bank full frontier closure",
+        "with Wilson now completely closed on the current bank as well, all three sharpest frontier certificates are negative on the present bank; so the current-bank PF program is fully closed negatively even though Wilson remains the main plausible reopening lever under stronger future science",
     )
     support(
         "Plaquette evaluator boundary",
