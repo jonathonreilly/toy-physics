@@ -6,7 +6,7 @@
 
 ## Safe statement
 
-On the current live package surface, the promoted CKM atlas/axiom closure and
+On the current live package surface, the promoted CKM atlas/axiom package and
 the canonical same-surface value `alpha_s(v) = 0.103303816122` imply a bounded
 down-type flavor-mass lane:
 
@@ -140,7 +140,7 @@ This lane does not promote flavor masses to the retained theorem core.
 
 It does provide a clean reusable bridge:
 
-- promoted CKM closure
+- promoted CKM atlas/axiom package
 - canonical `alpha_s(v)`
 - exact SU(3) constants
 - GST support

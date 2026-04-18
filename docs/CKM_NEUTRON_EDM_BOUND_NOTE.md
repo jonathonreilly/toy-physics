@@ -30,7 +30,7 @@ The estimate uses two ingredients:
    - authority:
      [STRONG_CP_THETA_ZERO_NOTE.md](STRONG_CP_THETA_ZERO_NOTE.md)
 
-2. **Promoted CKM closure package**
+2. **Promoted CKM atlas/axiom package**
    - framework Jarlskog invariant `J = 3.331 x 10^-5`
    - authority:
      [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
@@ -46,7 +46,7 @@ bounded, not theorem-grade.
 
 ## What Is Retained Exactly
 
-On the retained action surface plus the promoted CKM closure package, the repo
+On the retained action surface plus the promoted CKM atlas/axiom package, the repo
 now supports the following exact corollary:
 
 > `d_n(QCD) = 0` exactly on the retained `\theta_eff = 0` surface, so the

@@ -41,7 +41,7 @@ The exact part of the support stack is narrow but real:
 - `C_F = 4/3`
 - `T_F = 1/2`
 - `C_F - T_F = 5/6`
-- promoted CKM closure gives `|V_cb| = alpha_s(v)/sqrt(6)`
+- promoted CKM atlas/axiom package gives `|V_cb| = alpha_s(v)/sqrt(6)`
 
 So the only non-exact step in this note is the bridge from the CKM quantity to
 the down-type mass ratio:

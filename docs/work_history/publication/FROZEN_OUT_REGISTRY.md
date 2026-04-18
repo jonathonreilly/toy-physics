@@ -69,7 +69,7 @@ were superseded by the complete prediction chain and its support stack.
 ### `F03` Older CKM bounded route-history portfolio
 
 **Status:** frozen out as superseded authority.
-**Why frozen out:** the promoted CKM atlas/axiom closure package now controls
+**Why frozen out:** the promoted CKM atlas/axiom package now controls
 the live authority surface on `main`; the older bounded Cabibbo / mass-basis /
 Jarlskog rows remain useful only as route history and comparison material.
 

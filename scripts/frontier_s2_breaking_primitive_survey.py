@@ -774,7 +774,7 @@ def candidate_8_schur_cascade():
     print("=" * 78)
     print("CANDIDATE 8 — Retained Schur-cascade structure from CKM atlas")
     print("=" * 78)
-    print("  The retained CKM atlas uses a Schur cascade to resolve generation")
+    print("  The promoted CKM atlas/axiom package uses a Schur cascade to resolve generation")
     print("  pairs. Does this cascade carry S_2 breaking?")
     print()
 

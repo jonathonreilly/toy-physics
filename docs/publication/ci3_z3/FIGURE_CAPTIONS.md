@@ -79,6 +79,6 @@ budget rather than by a zero-systematic theorem.
 ### Figure A3. Bounded CKM lane
 
 This is route-history material only. The live flavor authority is now the
-promoted no-import CKM closure package. If included at all, this figure should
+promoted no-import CKM atlas/axiom package. If included at all, this figure should
 explain how earlier Cabibbo / mass-basis / partial-Jarlskog lanes were pruned
 or superseded without competing with the canonical CKM package.

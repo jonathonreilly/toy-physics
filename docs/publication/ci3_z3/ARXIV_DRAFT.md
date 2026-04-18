@@ -34,7 +34,8 @@ lattice-scale Ward identity $y_t(M_{\mathrm{Pl}})/g_s(M_{\mathrm{Pl}})
 =1/\sqrt{6}$, carries a retained YT/top transport lane with canonical
 full-staggered-PT $\Delta_R=-3.77\% \pm 0.45\%$ and retained canonical
 $m_t(\mathrm{pole})=172.57 \pm 6.50\,\mathrm{GeV}$, promotes an algebraic CKM
-atlas/axiom closure package with no quark-mass or fitted-CKM inputs, and keeps
+atlas/axiom package on the canonical tensor/projector surface with no
+quark-mass or fitted-CKM inputs, and keeps
 the Higgs/vacuum row derived while auditing it with an explicit
 retention-decomposed band.
 The package is already predictive beyond retrospective comparison,
@@ -78,8 +79,8 @@ one chosen canonical textbook target; that is a chosen-target identification
 theorem, not a blanket claim about every possible continuum completion. Strong
 CP is exact on the retained action surface. Confinement is promoted as an exact
 structural theorem with a bounded string-tension readout. CKM is promoted as a
-canonical atlas/tensor closure package with canonical CMT $\alpha_s(v)$ input
-and no quark-mass or fitted-CKM derivation inputs. The package is already
+canonical atlas/tensor/projector package with canonical CMT $\alpha_s(v)$
+input and no quark-mass or fitted-CKM derivation inputs. The package is already
 predictive beyond the theorem spine: it carries bounded secondary predictions,
 not only retrospective matches. The only live flagship gate left is dark matter
 relic mapping.
@@ -536,7 +537,7 @@ after the retained running bridge below $v$.
 ### 5.3 Promoted algebraic CKM package
 
 Flavor is no longer an open flagship gate. The current package carries a
-promoted algebraic atlas/axiom CKM closure route on the canonical
+promoted algebraic CKM atlas/axiom package on the canonical
 atlas/tensor/projector surface, with canonical CMT $\alpha_s(v)$ as the
 quantitative coupling input, exact atlas counts, exact projector structure,
 exact bilinear tensor slot, exact $Z_3$ source, and exact Schur cascade. No
@@ -641,7 +642,7 @@ The fastest way to read the quantitative package is Table 1.
 | Electroweak scale | $v = 246.282818290129\,\mathrm{GeV}$ | exact theorem + canonical same-surface evaluation |
 | Strong coupling | $\alpha_s(M_Z)=0.1181$ | retained standalone quantitative lane |
 | Electroweak normalization | $g_1(v)=0.4644$, $g_2(v)=0.6480$ | retained standalone quantitative lane |
-| CKM | $|V_{us}|=0.22727$, $|V_{cb}|=0.04217$, $|V_{ub}|=0.003913$ | promoted algebraic closure package |
+| CKM | $|V_{us}|=0.22727$, $|V_{cb}|=0.04217$, $|V_{ub}|=0.003913$ | promoted algebraic package |
 | Top sector | $y_t(v)=0.9176$, $m_t^{\mathrm{pole}}=173.10\,\mathrm{GeV}$ | bounded |
 | Higgs sector | $m_H=125.1\,\mathrm{GeV}$ | bounded |
 | Confinement readout | $\sqrt{\sigma}\approx 465\,\mathrm{MeV}$ | bounded quantitative readout on exact structural theorem |
@@ -756,7 +757,7 @@ side is no longer just structural algebra: it includes anomaly-forced $3+1$,
 retained three-generation structure, retained action-surface strong-CP
 closure on the retained Wilson-plus-staggered action surface, exact
 confinement, emergent Lorentz invariance, and a promoted
-algebraic CKM closure package. The quantitative side is no longer just a set of
+algebraic CKM atlas/axiom package. The quantitative side is no longer just a set of
 promising near-misses: it contains a canonical same-surface electroweak-scale
 evaluation, retained electroweak and strong-coupling lanes, and bounded
 Yukawa/Higgs authority surfaces with named downstream budgets. The package is already

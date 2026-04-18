@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Bounded down-type mass ratios from the promoted CKM closure.
+Bounded down-type mass ratios from the promoted CKM atlas/axiom package.
 
 Status:
   bounded secondary lane

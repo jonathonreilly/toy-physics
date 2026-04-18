@@ -170,7 +170,7 @@ ledger:
   observational-pin package, while the reviewed April 18 Koide stack narrows a
   live candidate route to one microscopic scalar selector law without
   upgrading the package to retained derivation or creating a spare forecast
-- promoted CKM no-import closure package with full sharp `|V_us|`, `|V_cb|`, `|V_ub|`, `\delta`, and `J`
+- promoted CKM atlas/axiom package on the canonical tensor/projector surface with full sharp `|V_us|`, `|V_cb|`, `|V_ub|`, `\delta`, and `J`
 - older bounded Cabibbo / NNI / partial Jarlskog notes retained only as route history
 - mixed cosmology surface: retained `\Lambda_{vac} = \lambda_1(S^3_R)`
   identity and retained `w = -1` corollary, with bounded numerical

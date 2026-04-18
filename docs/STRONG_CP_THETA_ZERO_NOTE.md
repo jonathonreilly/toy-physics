@@ -306,7 +306,8 @@ These support items are not counted as theorem-grade closure.
 4. **Observable neutron-EDM matrix elements.**
    The surviving observable lane is the separate CKM neutron-EDM corollary /
    bounded-prediction note: the exact corollary `d_n(QCD) = 0` and
-   CKM-only structure follow from this theorem plus promoted CKM closure, while
+   CKM-only structure follow from this theorem plus the promoted CKM
+   atlas/axiom package, while
    the numerical `d_n(CKM)` scale remains EFT-bridged.
 
 ## How This Changes The Paper

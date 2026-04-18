@@ -59,7 +59,8 @@ Fast reviewer path after this page:
   action surface, and exact `T = 0` confinement with bounded `sqrt(sigma)`
 - quantitative stack:
   retained `alpha_s(M_Z) = 0.1181`, retained EW normalization, canonical
-  `v = 246.282818290129 GeV`, promoted CKM atlas/axiom closure,
+  `v = 246.282818290129 GeV`, promoted CKM atlas/axiom package on the
+  canonical tensor/projector surface,
   retained YT/top transport, and derived Higgs/vacuum with a
   retention-decomposed budget
 - bounded charged-lepton package:

@@ -43,7 +43,7 @@ gate closes.
   - authority:
     [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md),
     [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md)
-- CKM atlas/axiom closure package:
+- CKM atlas/axiom package on the canonical tensor/projector surface:
   - `|V_us| = 0.22727`
   - `|V_cb| = 0.04217`
   - `|V_ub| = 0.003913`

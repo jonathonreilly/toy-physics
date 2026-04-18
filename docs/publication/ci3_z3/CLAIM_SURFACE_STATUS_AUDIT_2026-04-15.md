@@ -43,6 +43,26 @@ even though Lorentz had already been promoted on `main`.
 
 That was stale wording, not a theorem gap. It is now fixed.
 
+### 3. CKM atlas/axiom package scoping
+
+The repo had drifted into mixing a real promoted quantitative package with
+broader public labels like `closed / derived`.
+
+What is now explicit:
+
+- the live authority is the promoted CKM atlas/axiom package on the canonical
+  tensor/projector surface
+- public capture-status cells now use `promoted`, while claim-strength rows use
+  `promoted quantitative package`
+- canonical CMT `alpha_s(v)` is the quantitative coupling input, and the
+  package is described via exact atlas counts, the exact `1/6` projector, the
+  exact bilinear tensor carrier `K_R`, the exact `Z_3` source, and the exact
+  Schur cascade
+- older bounded Cabibbo / mass-basis / partial-Jarlskog notes remain route
+  history only
+
+Affected front-door and publication-control files were updated directly.
+
 ## Rows That Are Already Clean Enough
 
 These are not current submission blockers at the claim-surface level.
@@ -102,7 +122,7 @@ Authority:
 - [CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md](../../CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md)
 - [HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md](../../HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md)
 
-## Rows That Still Need Claim-Surface Adjustment
+## Rows That Needed or Still Need Claim-Surface Adjustment
 
 These are the rows where the public wording is currently stronger than the
 exact support carried by the repo. No narrowing has been applied here yet; this
@@ -186,8 +206,9 @@ presentation hardening, not claim-surface repair.
 
 **Current public posture**
 
-- exact strong CP / `\theta_eff = 0`
-- package reads broadly as if the problem is fully solved
+- the live public package now states retained action-surface `\theta_eff = 0`
+- the repo no longer presents this as a universal dynamical
+  instanton/measure theorem
 
 Representative surfaces:
 
@@ -209,19 +230,21 @@ Primary evidence:
 
 **Adjustment class**
 
-- real claim-surface issue
+- repo/manuscript cleanup resolved on `main`; no missing theorem on the
+  retained action surface
 
 **Why**
 
 Leg C is an exclusion-by-action-surface argument, not a dynamical
-instanton-measure suppression theorem. The public wording should reflect that.
+instanton-measure suppression theorem. The public wording now reflects that.
 
 ### D. CKM
 
 **Current public posture**
 
-- promoted no-import closure package
-- pre-cleanup public quantitative row marked `closed / derived`
+- before cleanup, one public quantitative row had been marked `closed / derived`
+- the live public package now presents a promoted CKM atlas/axiom package on
+  the canonical tensor/projector surface
 
 Representative surfaces:
 
@@ -247,12 +270,15 @@ Primary evidence:
 
 **Adjustment class**
 
-- real claim-surface issue
+- repo/manuscript cleanup resolved on `main`; no missing theorem on the
+  promoted package route
 
 **Why**
 
-The promoted package is real, but the current flagship wording is broader than
-the exact support story needs to be.
+The promoted package is real, but the old flagship wording was broader than
+the exact support story needed. The public matrix/front-door rows now present
+the package with valid `promoted` / `promoted quantitative package` labels on
+the canonical tensor/projector surface.
 
 ### E. `\alpha_s` and EW normalization
 

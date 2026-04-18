@@ -9,7 +9,7 @@ The current package is:
 
 1. a retained theorem core
 2. retained standalone quantitative lanes for `alpha_s` and EW normalization
-3. promoted CKM atlas/axiom closure plus a retained YT/top transport lane and a derived Higgs/vacuum lane with a retention-decomposed budget
+3. promoted CKM atlas/axiom package plus a retained YT/top transport lane and a derived Higgs/vacuum lane with a retention-decomposed budget
 4. a bounded prediction surface plus an explicit history bucket for important
    excluded families
 
@@ -94,7 +94,7 @@ Review this as a modular component stack:
    [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](../../HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md),
    [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md),
    [HIGGS_MASS_RETENTION_ANALYSIS_NOTE_2026-04-18.md](../../HIGGS_MASS_RETENTION_ANALYSIS_NOTE_2026-04-18.md)
-7. CKM closure and carrier-side support:
+7. CKM atlas/axiom package and carrier-side support:
    [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md),
    [KR_A1_VANISHING_SUPPORT_NOTE.md](../../KR_A1_VANISHING_SUPPORT_NOTE.md)
 8. three-generation observable closure:
@@ -139,7 +139,7 @@ Current status from that stack:
   canonical framework-side 3-loop route `m_H = 125.1 GeV`,
   retention analysis `m_H = 125.04 ± 3.17 GeV`,
   with retained `119.8 GeV` (2-loop support route)
-- promoted CKM atlas/axiom closure package
+- promoted CKM atlas/axiom package on the canonical tensor/projector surface
   (no quark-mass or fitted CKM inputs; canonical CMT `alpha_s(v)` input):
   `|V_us| = 0.22727`,
   `|V_cb| = 0.04217`,

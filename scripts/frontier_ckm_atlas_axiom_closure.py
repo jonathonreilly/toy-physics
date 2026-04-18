@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 """
-CKM Atlas/Axiom No-Import Closure
+CKM Atlas/Axiom No-Import Package
 =================================
 
-STATUS: package-native closure route with canonical CMT coupling and an exact
-tensor-slot theorem for 1->3 mixing.
+STATUS: promoted package-native quantitative package on the canonical
+tensor/projector surface, with canonical CMT coupling and an exact tensor-slot
+theorem for 1->3 mixing.
 
-This route does not reuse the old mass-input CKM formulas. It closes CKM on a
-strict no-import surface by combining only package-native exact/derived inputs:
+This route does not reuse the old mass-input CKM formulas. It carries the
+promoted CKM atlas/axiom package on a strict no-import surface by combining
+only package-native exact/derived inputs:
 
   1. canonical alpha_s(v) from the coupling-map theorem on the plaquette surface
   2. the exact EWSB 1+2 split (one weak corner, residual color pair)

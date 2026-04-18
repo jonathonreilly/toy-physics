@@ -95,7 +95,7 @@ Current quantitative statuses:
   `M_Z` rows then using the retained running bridge; the retained
   EW matching audit now explicitly shows that `~0.4%–2.9%` matching bands
   comfortably cover the packaged-observed deviations
-- promoted CKM atlas/axiom closure package
+- promoted CKM atlas/axiom package on the canonical tensor/projector surface
   (no quark-mass or fitted CKM inputs; canonical CMT `alpha_s(v)` input):
   `|V_us| = 0.22727`,
   `|V_cb| = 0.04217`,
@@ -161,7 +161,7 @@ Current quantitative statuses:
   right-sensitive microscopic selector law for the physical source branch /
   point, interval-certified exact-carrier dominance/completeness on the
   residual split-2 selector branch, and current-bank quantitative DM mapping
-- promoted CKM atlas/axiom closure package, with older Cabibbo / NNI / partial Jarlskog notes retained only as route history
+- promoted CKM atlas/axiom package on the canonical tensor/projector surface, with older Cabibbo / NNI / partial Jarlskog notes retained only as route history
 - cosmology companions
 - bounded secondary predictions already on `main`, plus the CKM-only
   neutron-EDM corollary with bounded continuation: proton lifetime, down-type

@@ -8,7 +8,7 @@ STATUS: retained structural corollary + bounded quantitative prediction
 This script does not upgrade the retained strong-CP closure package itself. It takes:
 
   1. θ_eff = 0 on the retained strong-CP action surface
-  2. the promoted CKM closure package
+  2. the promoted CKM atlas/axiom package
 
 and combines them into:
 
@@ -18,7 +18,7 @@ and combines them into:
       d_n(CKM) ~ 10^-32 - 10^-33 e cm
 
 Import class:
-  framework CKM closure + standard hadronic/EW EFT bridge
+  promoted CKM atlas/axiom package + standard hadronic/EW EFT bridge
 """
 
 from __future__ import annotations
@@ -60,7 +60,7 @@ def main() -> int:
           dn_qcd == 0.0,
           "θ_eff = 0 → d_n(QCD) = 0")
 
-    # Framework CKM closure package.
+    # Framework CKM atlas/axiom package.
     alpha_s_v = CANONICAL_ALPHA_S_V
     lam = np.sqrt(alpha_s_v / 2.0)
     A = np.sqrt(2.0 / 3.0)
@@ -123,7 +123,7 @@ def main() -> int:
     print()
     print("Bounded quantitative continuation:")
     print(f"  d_n(CKM) ≈ {dn_ckm:.1e} e·cm")
-    print("  import class: promoted CKM closure + standard EFT bridge")
+    print("  import class: promoted CKM atlas/axiom package + standard EFT bridge")
     return 0 if FAIL_COUNT == 0 else 1
 
 

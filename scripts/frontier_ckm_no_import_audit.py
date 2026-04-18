@@ -60,7 +60,7 @@ class Route:
 
 ROUTES = [
     Route(
-        name="Atlas/axiom no-import closure",
+        name="Atlas/axiom no-import package",
         script="scripts/frontier_ckm_atlas_axiom_closure.py",
         note="docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md",
         quantitative_scope="full sharp CKM matrix from the canonical CMT alpha_s(v), atlas counts {2,3,6}, the exact 1/6 center-excess projector, the exact bilinear tensor carrier K_R on A1 x {E_x, T1x}, the Z3 phase source, and the Schur cascade",

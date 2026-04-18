@@ -98,7 +98,7 @@ bridge layer beyond the exact structural core.
   - exact corollary `d_n(QCD) = 0` on the retained surface; EFT bridge only
     for the bounded `d_n(CKM)` number
 - down-type CKM-dual mass ratios:
-  - promoted CKM closure + GST + bounded `5/6` mass-ratio bridge; no observed
+  - promoted CKM atlas/axiom package + GST + bounded `5/6` mass-ratio bridge; no observed
     masses as derivation inputs
   - current live comparison surface:
     threshold-local self-scale comparator `m_s(2 GeV)/m_b(m_b)`

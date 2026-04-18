@@ -1,13 +1,15 @@
 # CKM Atlas/Axiom Closure Note
 
 **Date:** 2026-04-15  
-**Status:** promoted no-import closure route with canonical CMT coupling and an exact tensor-slot theorem  
+**Status:** promoted no-import quantitative package on the canonical tensor/projector surface
 **Script:** `scripts/frontier_ckm_atlas_axiom_closure.py`
 
 ## Claim
 
-CKM closes on the mainline package without importing quark masses or fitted CKM
-observables by combining only branch-local exact or derived ingredients:
+The mainline package carries a promoted algebraic CKM atlas/axiom package on
+the canonical tensor/projector surface without importing quark masses or
+fitted CKM observables. It combines only branch-local exact or derived
+ingredients:
 
 1. canonical `alpha_s(v)` from the coupling-map theorem on the plaquette
    surface
@@ -193,9 +195,9 @@ No observed quark masses appear anywhere in the derivation.
 
 ## Scope
 
-This is the **promoted main-branch closure note**. It supersedes the older
-bounded Cabibbo / mass-basis NNI / Jarlskog presentation as the controlling
-CKM authority surface.
+This is the **promoted main-branch CKM authority note**. It supersedes the
+older bounded Cabibbo / mass-basis NNI / Jarlskog presentation as the
+controlling CKM authority surface.
 
 The review-safe theorem statement is now:
 

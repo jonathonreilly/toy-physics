@@ -107,7 +107,7 @@ Use alongside:
   - exact `I_3 = 0` and CPT as compact supporting theorems
   - emergent Lorentz invariance with first anisotropic correction at dimension 6 and unique cubic-harmonic `\ell = 4` signature
   - retained action-surface strong-CP closure / `theta_eff = 0` on the retained Wilson-plus-staggered action surface
-  - promoted CKM atlas/axiom closure package as part of the quantitative manuscript surface
+  - promoted CKM atlas/axiom package as part of the quantitative manuscript surface
 - Public package companions / appendices:
   - bounded weak-field GR companions beyond Newton / Poisson / WEP / time-dilation
   - derivation chains
@@ -206,7 +206,7 @@ Use alongside:
 
 | Component | Note | Runner |
 |---|---|---|
-| CKM closure package | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) | [frontier_ckm_atlas_axiom_closure.py](../../../scripts/frontier_ckm_atlas_axiom_closure.py), [frontier_ckm_no_import_audit.py](../../../scripts/frontier_ckm_no_import_audit.py) |
+| CKM atlas/axiom package | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) | [frontier_ckm_atlas_axiom_closure.py](../../../scripts/frontier_ckm_atlas_axiom_closure.py), [frontier_ckm_no_import_audit.py](../../../scripts/frontier_ckm_no_import_audit.py) |
 
 ## Package Rule
 

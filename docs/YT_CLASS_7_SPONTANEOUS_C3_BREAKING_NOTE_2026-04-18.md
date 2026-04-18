@@ -17,7 +17,7 @@ doublers reducing to 1 physical species via α_LM^16) is a mechanism on the
 **taste cube** C^8, not on the generation triplet H_hw=1; the two are
 structurally independent (C_{3[111]} lives on the hw=1 triplet with
 ordinary cyclic action, while the taste staircase compresses hw=0, hw=1,
-hw=2, hw=3 sectors in a generation-symmetric manner). The retained CKM
+hw=2, hw=3 sectors in a generation-symmetric manner). The promoted CKM
 phase `δ_std = arctan(√5) = 65.905°` traces to the **explicit** Z_3 source
 at the electroweak 1+2 split, not to spontaneous breaking of a larger
 flavor symmetry. Class #7 therefore closes as a retained no-go,
@@ -52,7 +52,7 @@ It does **not** modify:
   (`docs/STRONG_CP_THETA_ZERO_NOTE.md`), whose θ_eff = 0 on the retained
   action surface and the weak-only Z_3 source discipline are inherited
   without modification;
-- the retained CKM atlas/axiom closure
+- the promoted CKM atlas/axiom package
   (`docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`), whose
   `δ_std = arctan(√5) = 65.905°` phase derivation from the Z_3 source at
   the 1+2 EWSB split is inherited as-is;
@@ -99,7 +99,7 @@ C_3-breaking primitive question on the current retained surface.
 - **Strong-CP θ = 0 closure:**
   `docs/STRONG_CP_THETA_ZERO_NOTE.md` — θ_eff = 0 on the retained action
   surface; Z_3 source is weak-only, not strong-sector.
-- **CKM atlas/axiom closure:**
+- **CKM atlas/axiom package:**
   `docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md` — `δ_std = arctan(√5) = 65.905°`
   from Z_3 source phase 2π/3 on the 1+5 projector.
 
@@ -199,8 +199,8 @@ the composite quark-antiquark bilinear. Adding a generation-triplet Higgs
 would require a new axiom (not retained). **Closed negatively —
 non-retained.**
 
-**Path E (spontaneous CKM phase breaking).** The retained CKM phase
-δ_std = arctan(√5) = 65.905° traces through the promoted closure route
+**Path E (spontaneous CKM phase breaking).** The promoted CKM phase
+δ_std = arctan(√5) = 65.905° traces through the promoted CKM atlas/axiom package
 to the **explicit** Z_3 source at the electroweak 1+2 split (CKM atlas
 note, §Exact Constants). This is a **discrete explicit** CP source acting
 on the mass-basis mixing matrix, not the spontaneous breaking of a larger
@@ -499,14 +499,14 @@ missing primitive, parallel to the Class #6 note's §5.3 Primitive 4.)
 
 ### 2.6 Path E — spontaneous CKM phase breaking
 
-**Question.** The retained CKM phase `δ_std = 65.905°` is a non-trivial
+**Question.** The promoted CKM phase `δ_std = 65.905°` is a non-trivial
 CP-violating phase in the quark mass-basis mixing matrix. In BSM models
 with spontaneous CP violation, the CKM phase can arise from a larger
 discrete or continuous flavor symmetry broken spontaneously by
 flavor-dependent condensates. Does this mechanism operate on the retained
 surface?
 
-**Analysis.** From the CKM atlas/axiom closure note, the retained phase
+**Analysis.** From the CKM atlas/axiom package note, the promoted phase
 traces through:
 
 ```
@@ -537,7 +537,7 @@ projector structure. Key features:
    shows that the Z_3 source does NOT leak into a strong-sector θ phase;
    it is confined to weak-sector phase structure.
 
-Therefore the retained CKM phase is **explicit** (from the Z_3 source
+Therefore the promoted CKM phase is **explicit** (from the Z_3 source
 built into the action) rather than **emergent** (from spontaneous
 breaking of a larger flavor symmetry). There is no hidden spontaneous
 breaking mechanism on the retained surface producing δ = arctan(√5).
@@ -674,7 +674,7 @@ This note claims:
 > a C_3-breaking tadpole because `D + m` commutes with C_{3[111]} on every
 > gauge background, making `det(D + m)` pointwise C_3-invariant. Adding an
 > independent flavor Higgs would violate D9 (composite-Higgs axiom) and is
-> therefore non-retained. The retained CKM phase δ_std = arctan(√5) = 65.905°
+> therefore non-retained. The promoted CKM phase δ_std = arctan(√5) = 65.905°
 > traces to the **explicit** Z_3 source at the 1+2 EWSB split, not to
 > spontaneous breaking of a larger flavor symmetry. The taste staircase
 > (16 α_LM decouplings) acts generation-symmetrically at every rung and
@@ -694,7 +694,7 @@ It does **not** claim:
 - any modification of the retained composite-Higgs axiom D9 or D17
   uniqueness;
 - any modification of the retained strong-CP θ = 0 closure;
-- any modification of the retained CKM atlas/axiom closure;
+- any modification of the promoted CKM atlas/axiom package;
 - any modification of the bottom-Yukawa retention analysis (Outcome A,
   Yukawa unification empirically falsified);
 - any modification of the Class #1 flavor-column or Class #6 explicit C_3

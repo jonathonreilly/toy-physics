@@ -128,11 +128,11 @@ generating the boundary character data of `Z_6^env`, equivalently the Perron eig
 
 | Quantity | Canonical value on `main` | Claim class | Import class | Safe reuse | Authority |
 |---|---:|---|---|---|---|
-| `|V_us|` | `0.22727` | derived | no-import closure | CKM downstream comparisons and summary tables | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) |
-| `|V_cb|` | `0.04217` | derived | no-import closure | CKM downstream comparisons and summary tables | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) |
-| `|V_ub|` | `0.003913` | derived | no-import closure | CKM downstream comparisons and summary tables | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) |
-| `delta_CKM` | `65.905157 deg` | derived | no-import closure | CKM downstream comparisons and summary tables | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) |
-| `J` | `3.331 x 10^-5` | derived | no-import closure | CKM downstream comparisons and summary tables | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) |
+| `|V_us|` | `0.22727` | derived | promoted CKM atlas/axiom package | CKM downstream comparisons and summary tables | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) |
+| `|V_cb|` | `0.04217` | derived | promoted CKM atlas/axiom package | CKM downstream comparisons and summary tables | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) |
+| `|V_ub|` | `0.003913` | derived | promoted CKM atlas/axiom package | CKM downstream comparisons and summary tables | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) |
+| `delta_CKM` | `65.905157 deg` | derived | promoted CKM atlas/axiom package | CKM downstream comparisons and summary tables | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) |
+| `J` | `3.331 x 10^-5` | derived | promoted CKM atlas/axiom package | CKM downstream comparisons and summary tables | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) |
 
 ## D. Useful YT/Higgs downstream values
 

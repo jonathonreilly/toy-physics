@@ -106,7 +106,7 @@ Current package status:
   `m_H = 125.1 GeV` (framework-side 3-loop route),
   retention analysis `m_H = 125.04 ± 3.17 GeV`,
   with retained `119.8 GeV` (2-loop support route)
-- promoted CKM atlas/axiom closure package
+- promoted CKM atlas/axiom package on the canonical tensor/projector surface
   (no quark-mass or fitted CKM inputs; canonical CMT `alpha_s(v)` input):
   `|V_us| = 0.22727`,
   `|V_cb| = 0.04217`,

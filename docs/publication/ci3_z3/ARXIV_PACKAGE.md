@@ -53,7 +53,7 @@ Other bounded component families:
 
 Promoted quantitative package additions:
 
-- CKM no-import closure
+- CKM no-import atlas/axiom package
 
 Optional historical context:
 

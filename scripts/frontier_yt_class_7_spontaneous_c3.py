@@ -21,7 +21,7 @@ C_{3[111]}-invariant on H_hw=1.  No other retained bilinear carries (1,1)
 scalar content with generation labels (D17 uniqueness Z^2 = 6).  D + m
 commutes with C_{3[111]} on every gauge background, so det(D+m) is
 C_{3[111]}-invariant and no radiative tadpole can break C_3.  Adding a
-flavor Higgs violates D9 (non-retained).  The retained CKM phase traces
+flavor Higgs violates D9 (non-retained).  The promoted CKM phase traces
 to the EXPLICIT Z_3 source, not spontaneous breaking.  The taste staircase
 is generation-blind and preserves C_{3[111]} at every rung.
 
@@ -388,14 +388,14 @@ def block_5_path_d_flavor_higgs_non_retained():
 
 
 # ---------------------------------------------------------------------------
-# Block 6: Path E -- retained CKM phase is EXPLICIT (not spontaneous)
+# Block 6: Path E -- promoted CKM phase is EXPLICIT (not spontaneous)
 # ---------------------------------------------------------------------------
 
 
 def block_6_path_e_ckm_explicit_not_spontaneous():
     print()
     print("=" * 78)
-    print("Block 6: Path E -- retained CKM phase is explicit via Z_3 source")
+    print("Block 6: Path E -- promoted CKM phase is explicit via Z_3 source")
     print("=" * 78)
 
     # Retained delta_std = arctan(sqrt(5)) = 65.905 deg
@@ -520,7 +520,7 @@ def block_8_numerical_consistency():
     )
 
     check(
-        "delta_std = 65.905 deg (retained CKM CP phase)",
+        "delta_std = 65.905 deg (promoted CKM CP phase)",
         abs(DELTA_STD_DEG - 65.905) < 0.01,
         f"delta_std = {DELTA_STD_DEG:.6f} deg",
     )
@@ -620,7 +620,7 @@ def block_11_no_modification_upstream():
         "Three-gen observable theorem M_3(C) on H_hw=1": True,
         "Hierarchy theorem v = M_Pl * (7/8)^(1/4) * alpha_LM^16": True,
         "Strong-CP theta_eff = 0 closure (four legs)": True,
-        "CKM atlas/axiom closure delta_std = arctan(sqrt(5))": True,
+        "Promoted CKM atlas/axiom package delta_std = arctan(sqrt(5))": True,
         "S_3 taste-cube decomposition C^8 ~= 4 A_1 + 2 E": True,
         "Taste-staircase transport per-rung Ward ratio": True,
         "Class #6 explicit C_3 breaking Outcome D (no-go)": True,

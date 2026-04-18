@@ -85,7 +85,7 @@ C_F_sym = sp.Rational(4, 3)         # C_F = (N_c^2 - 1) / (2 N_c) at N_c=3
 T_F_sym = sp.Rational(1, 2)         # T_F = 1/2 (standard normalization)
 C_A_sym = sp.Integer(3)             # C_A = N_c = 3
 N_C_sym = sp.Integer(3)             # N_c = 3
-FIVE_SIXTHS = C_F_sym - T_F_sym     # = 5/6 (retained CKM bridge exponent)
+FIVE_SIXTHS = C_F_sym - T_F_sym     # = 5/6 (bounded CKM bridge exponent)
 R_CONN = sp.Rational(8, 9)          # (N_c^2 - 1) / N_c^2 at N_c = 3
 
 KOIDE_TARGET = sp.Rational(2, 3)    # Q = 2/3
@@ -138,7 +138,7 @@ def part_a_casimir_audit() -> None:
     print(f"  T_F           = {T_F_sym}")
     print(f"  C_A           = {C_A_sym}")
     print(f"  N_c           = {N_C_sym}")
-    print(f"  C_F - T_F     = {FIVE_SIXTHS}   (retained CKM bridge exponent)")
+    print(f"  C_F - T_F     = {FIVE_SIXTHS}   (bounded CKM bridge exponent)")
     print(f"  R_conn        = {R_CONN}         (color-singlet projection)")
     print(f"  2/3 (Koide)   = {KOIDE_TARGET}")
     print(f"  sqrt(6/5)     = {sp.nsimplify(TARGET_RATIO)} "
@@ -147,7 +147,7 @@ def part_a_casimir_audit() -> None:
     check("C_F = 4/3 exact", C_F_sym == sp.Rational(4, 3))
     check("T_F = 1/2 exact", T_F_sym == sp.Rational(1, 2))
     check("C_A = N_c = 3 exact", C_A_sym == sp.Integer(3))
-    check("C_F - T_F = 5/6 exact (retained CKM bridge)",
+    check("C_F - T_F = 5/6 exact (bounded CKM bridge)",
           FIVE_SIXTHS == sp.Rational(5, 6))
     check("R_conn = (N_c^2 - 1)/N_c^2 = 8/9 at N_c = 3",
           R_CONN == (N_C_sym ** 2 - 1) / N_C_sym ** 2)
