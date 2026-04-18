@@ -47,6 +47,7 @@ This note sharpens:
 3. [KOIDE_GAMMA_ORBIT_OBSERVABLE_SELECTOR_GENERATOR_LINE_NOTE_2026-04-18.md](./KOIDE_GAMMA_ORBIT_OBSERVABLE_SELECTOR_GENERATOR_LINE_NOTE_2026-04-18.md)
 4. [DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_POINT_SELECTION_THEOREM_NOTE_2026-04-16.md](./DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_POINT_SELECTION_THEOREM_NOTE_2026-04-16.md)
 5. [DM_NEUTRINO_SOURCE_SURFACE_M_SPECTATOR_THEOREM_NOTE_2026-04-16.md](./DM_NEUTRINO_SOURCE_SURFACE_M_SPECTATOR_THEOREM_NOTE_2026-04-16.md)
+6. [KOIDE_SELECTED_SLICE_FROZEN_BANK_DECOMPOSITION_NOTE_2026-04-18.md](./KOIDE_SELECTED_SLICE_FROZEN_BANK_DECOMPOSITION_NOTE_2026-04-18.md)
 
 ## Theorem 1: `kappa` is exactly one ratio of the compressed `dW_e^H` data
 
@@ -122,6 +123,15 @@ m = Re K12 + 4 sqrt(2)/9 = Tr K_Z3.
 ```
 
 That is the exact remaining microscopic datum on the selected slice.
+
+The companion frozen-bank decomposition note sharpens this one step further:
+the entire selected kernel is already
+```text
+K_Z3^sel(m) = K_frozen + m T_m^(K)
+```
+over the exact frozen slot/CP bank. So the remaining charged-lepton datum is
+not just "one scalar somewhere in the block"; it is the coefficient of one
+fixed real direction.
 
 ## Corollary 1: current exact invariants cannot choose it
 

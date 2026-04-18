@@ -73,6 +73,10 @@ Since that draft, one more exact reduction has closed:
     the scalar `m = Re K12 + 4 sqrt(2)/9 = Tr K_Z3`, and `kappa(m)` is monotone
     on the physical first branch
     [KOIDE_MICROSCOPIC_SCALAR_SELECTOR_TARGET_NOTE_2026-04-18.md](./KOIDE_MICROSCOPIC_SCALAR_SELECTOR_TARGET_NOTE_2026-04-18.md).
+12. the selected slice itself is now decomposed exactly as a frozen slot/CP
+    bank plus one real direction
+    `K_Z3^sel(m) = K_frozen + m T_m^(K)`
+    [KOIDE_SELECTED_SLICE_FROZEN_BANK_DECOMPOSITION_NOTE_2026-04-18.md](./KOIDE_SELECTED_SLICE_FROZEN_BANK_DECOMPOSITION_NOTE_2026-04-18.md).
 
 ## Top-line attack order
 
