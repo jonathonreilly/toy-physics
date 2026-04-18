@@ -338,6 +338,20 @@ What is not exact now:
   nearest-neighbor lattice whose first responses land on the compressed
   Hermitian route; and the present bank still does **not** realize even that
   sharper local source layer
+- and the new step-2 Wilson local Hermitian four-source reduction theorem
+  sharpens that same Wilson primitive one level further still: the local
+  adjacent two-edge source law is already exactly equivalent to one local
+  Hermitian nearest-neighbor `4`-source packet, so the live source-side Wilson
+  target is now finite again in local Hermitian packet language; and the
+  present bank still does **not** realize even that sharper local Hermitian
+  packet
+- and the new step-2 Wilson local Hermitian sharpest-certificate theorem then
+  packages the whole Wilson front at that same local constructive level too:
+  the compressed Wilson route is now exactly one local Hermitian `4 + 3`
+  certificate, namely one nearest-neighbor Hermitian `4`-source packet on the
+  physical lattice followed by only the `3` scalar spectral identities
+  `Tr(B_e^k) = Tr(H_e^k)` for `k = 1, 2, 3`; and the present bank still fails
+  already at that first local Hermitian source layer
 - and the new PMNS sole-axiom native-current route-exhaustion theorem closes
   the last obvious PMNS-native loophole: there is no overlooked exact
   sole-axiom PMNS-native route to nonzero `J_chi` on the current bank, so the
