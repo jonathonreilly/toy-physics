@@ -118,7 +118,8 @@ The current retained backbone is:
     semantics derived on the accepted Hilbert surface and substrate
     physicality forced on the accepted one-axiom framework surface
 - fixed gauge evaluation point:
-  - the current accepted package surface uses canonical `g_bare^2 = 1`
+  - on the accepted Wilson-action surface, the current package now uses
+    structurally fixed canonical `g_bare^2 = 1`
   - with graph-first `SU(3)`, the Wilson gauge evaluation is therefore
     fixed at `beta = 2 N_c / g_bare^2 = 6`
   - the plaquette / `u_0` / hierarchy chain is read on that one

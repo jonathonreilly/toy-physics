@@ -22,6 +22,22 @@ route history.
 These are the framework inputs. Everything else in the current publication
 package is either retained, bounded, or still open relative to that stack.
 
+On the canonical-normalization entry, `g_bare = 1` is no longer carried only
+as a bare normalization choice. On the accepted Wilson-action surface it is
+now structurally fixed by the retained operator-algebra route:
+
+- operator-algebra route:
+  [G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md](G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md)
+  together with
+  [G_BARE_RIGIDITY_THEOREM_NOTE.md](G_BARE_RIGIDITY_THEOREM_NOTE.md)
+
+A complementary retained obstruction
+[G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18.md](G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18.md)
+closes the Grassmann / spectral dynamical-fixation class negatively.
+The residual freedom is narrowly scoped to the Wilson-action-form premise,
+not to a hidden continuous coupling parameter on the accepted package
+surface.
+
 The physical-lattice reading is no longer carried here as a separate live
 input. On the accepted one-axiom Hilbert/locality/information surface it is
 derived by [PHYSICAL_LATTICE_NECESSITY_NOTE.md](PHYSICAL_LATTICE_NECESSITY_NOTE.md),

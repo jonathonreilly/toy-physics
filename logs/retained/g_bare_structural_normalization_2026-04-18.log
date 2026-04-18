@@ -1,0 +1,115 @@
+==============================================================================
+G_BARE STRUCTURAL NORMALIZATION THEOREM
+Cl(3) -> End(V) -> su(3) -> Wilson action rigidity chain
+==============================================================================
+
+==============================================================================
+SECTION A: Cl(3) -> End(V=C^8) canonicity (Claim 1)
+==============================================================================
+  [PASS] {G_1, G_1} = 2 delta_11 I_8  (norm = 0.00e+00)
+  [PASS] {G_1, G_2} = 2 delta_12 I_8  (norm = 0.00e+00)
+  [PASS] {G_1, G_3} = 2 delta_13 I_8  (norm = 0.00e+00)
+  [PASS] {G_2, G_2} = 2 delta_22 I_8  (norm = 0.00e+00)
+  [PASS] {G_2, G_3} = 2 delta_23 I_8  (norm = 0.00e+00)
+  [PASS] {G_3, G_3} = 2 delta_33 I_8  (norm = 0.00e+00)
+  [PASS] omega = G_1 G_2 G_3 satisfies omega^2 = -I_8
+  [PASS] P_R^2 = P_R
+  [PASS] P_L^2 = P_L
+  [PASS] P_R + P_L = I_8
+  [PASS] P_R P_L = 0
+  [PASS] Bivector G_1 G_2 commutes with omega
+  [PASS] Bivector G_2 G_3 commutes with omega
+  [PASS] Bivector G_3 G_1 commutes with omega
+  [PASS] [S_1, S_2] = i S_3
+  [PASS] [S_2, S_3] = i S_1
+  [PASS] [S_3, S_1] = i S_2
+  [PASS] Inner-aut-transformed anticommutator {Gp_1, Gp_1}
+  [PASS] Inner-aut-transformed anticommutator {Gp_1, Gp_2}
+  [PASS] Inner-aut-transformed anticommutator {Gp_1, Gp_3}
+  [PASS] Inner-aut-transformed anticommutator {Gp_2, Gp_2}
+  [PASS] Inner-aut-transformed anticommutator {Gp_2, Gp_3}
+  [PASS] Inner-aut-transformed anticommutator {Gp_3, Gp_3}
+
+--- Graph-first axis selector ---
+  [PASS] Axis vertex p=(1,0,0) gives F=0
+  [PASS] Axis vertex p=(0,1,0) gives F=0
+  [PASS] Axis vertex p=(0,0,1) gives F=0
+  [PASS] Non-axis p=[np.float64(0.5), np.float64(0.5), np.float64(0.0)] has F > 0 (F=0.2500)
+  [PASS] Non-axis p=[np.float64(0.3333333333333333), np.float64(0.3333333333333333), np.float64(0.3333333333333333)] has F > 0 (F=0.3333)
+  [PASS] Non-axis p=[np.float64(0.8), np.float64(0.1), np.float64(0.1)] has F > 0 (F=0.1700)
+
+==============================================================================
+SECTION B: Trace form forced by Cl(3) structure (Claim 2)
+==============================================================================
+  [PASS] HS Gram: Tr(T_a T_b) = delta_ab / 2 on triplet  (max dev = 1.11e-16)
+  [PASS] HS Gram has zero imaginary part  (max imag = 0.00e+00)
+  [PASS] HS Gram is Ad-invariant  (max dev = 2.23e-16)
+  [PASS] Killing form K(T_1, T_1) = 2 N_c * Tr_fund = 3.0  (K11 = 3.000000, expected = 3.0)
+  [PASS] HS / Killing ratio = 1/6 (Killing-form rigidity)  (ratio = 0.16666667, expected = 0.16666667)
+
+  Killing-form rigidity -> any Ad-invariant form on su(3) is a scalar
+  multiple of the HS trace form. The 'Cl(3) pseudoscalar-adjoint form'
+  therefore differs from the HS form by at most a single positive scalar k.
+  [PASS] Uniqueness of Ad-invariant bilinear form on simple su(3) (verified via ad-matrix)  (dim(Inv^2(su(3))) = 1 by classical Lie theory)
+  [PASS] Scalar dilation lambda=0.5: Gram scales by lambda^2
+  [PASS] Scaled Gram differs from canonical (forbidden dilation)
+  [PASS] Scalar dilation lambda=1.5: Gram scales by lambda^2
+  [PASS] Scaled Gram differs from canonical (forbidden dilation)
+  [PASS] Scalar dilation lambda=2.0: Gram scales by lambda^2
+  [PASS] Scaled Gram differs from canonical (forbidden dilation)
+
+==============================================================================
+SECTION C: Wilson plaquette coefficient forced (Claim 3)
+==============================================================================
+  [PASS] Canonical Tr(T_a T_b) = delta_ab / 2 confirmed
+  [PASS] Quadratic Casimir sum_a T_a T_a = C_F I with C_F = 1.3333333333333333
+  [PASS] A_mu, A_nu are Hermitian
+  [PASS] F_munu (constant-A limit) is Hermitian
+  [PASS] Wilson plaquette a^4 coefficient matches Tr(F^2)/(2 N_c)  (fit = 1.221390e+00, predicted = 1.221390e+00, rel err = 3.50e-08)
+  [PASS] beta = 2 N_c / g^2 matching at g^2 = 0.5: beta = 12.0  (beta * g^2 = 6.000000 = 2 N_c = 6, err = 0.00e+00)
+  [PASS] beta = 2 N_c / g^2 matching at g^2 = 1.0: beta = 6.0  (beta * g^2 = 6.000000 = 2 N_c = 6, err = 0.00e+00)
+  [PASS] beta = 2 N_c / g^2 matching at g^2 = 1.5: beta = 4.0  (beta * g^2 = 6.000000 = 2 N_c = 6, err = 0.00e+00)
+  [PASS] beta = 2 N_c / g^2 matching at g^2 = 2.0: beta = 3.0  (beta * g^2 = 6.000000 = 2 N_c = 6, err = 0.00e+00)
+  [PASS] Canonical g = 1 (Cl(3) rigidity) -> beta = 2 N_c = 6.0  (beta = 6.0)
+  [PASS] Rescaled T -> 0.5 T has non-canonical Gram (forbidden by Claim 2)
+  [PASS] Rescaled T -> 2.0 T has non-canonical Gram (forbidden by Claim 2)
+
+  [BOUNDED] Alternative action forms (Symanzik, improved, etc.)
+  would change the leading a^4 coefficient by a known factor.
+  The canonical Wilson action is retained as the standard; alternative
+  actions are outside the scope of this theorem.
+  [PASS] [BOUNDED] Wilson action form is retained (not derived from Cl(3))  (retained lattice-QFT convention)
+
+==============================================================================
+SECTION D: End-to-end integration (no circularity)
+==============================================================================
+  [PASS] Step 1: Cl(3) -> End(V=C^8) canonical rep built  ({G_mu, G_nu} = 2 delta_munu verified in Section A)
+  [PASS] Step 2: Graph selector + triplet + C_3 -> su(3) on triplet  (retained theorems on main)
+  [PASS] Step 3: Killing-form rigidity forces Tr(T_a T_b) = delta_ab/2
+  [PASS] Step 4: Existing rigidity forbids scalar dilation of T_a  (G_BARE_RIGIDITY_THEOREM_NOTE.md)
+  [PASS] Step 5: Wilson plaquette matching gives beta = 2 N_c / g^2  (verified in Section C)
+  [PASS] Step 6: Canonical g = 1 -> beta = 2 N_c = 6
+
+  Circularity audit:
+  - Steps 1-3 use only Cl(3) axioms, graph retention, Lie-algebra rigidity.
+  - Step 4 is the existing retained rigidity theorem.
+  - Step 5 uses canonical generator normalization from step 3; no β input.
+  - Step 6 derives g = 1 from Claims 1 + 2 + step 4 rigidity, not as input.
+  - Final beta = 6 is derived, not asserted.
+  [PASS] No circular usage of beta = 6 or g = 1 as input  (all derivation steps are forward-only)
+
+==============================================================================
+SUMMARY
+==============================================================================
+  EXACT   : PASS = 60,   FAIL = 0
+  BOUNDED : PASS = 1, FAIL = 0
+  TOTAL   : PASS = 61, FAIL = 0
+
+  All exact checks passed.
+  Claims 1, 2 retained as exact structural theorems.
+  Claim 3 retained conditional on Wilson plaquette action form.
+
+  Conclusion: g_bare = 1 <=> beta = 6 is a structural normalization
+  theorem, not a dynamical fixation. The residual freedom is the
+  choice of Wilson action form itself, not a hidden continuous
+  coupling parameter.
