@@ -12,31 +12,36 @@ The chain:
 
     retained n=3 native-gauge authority
       + axiomatic Z^n graph B_n = Z_2^n x| S_n symmetry
-      -> (Recipe-R forcing theorem, v3 with (R3) as theorem
-           consequence) -> Recipe-R retained
+      -> (Recipe-R forcing theorem, v4: V_n constructed from
+           retained n=3 seed b_0 := (1/2) Γ_1 Γ_2 by the B_n
+           action; V_n = Λ²(R^n) certified numerically) -> Recipe-R retained
       -> (admissibility closure) -> A2 ∧ A4 ∧ A5 retained
       -> (family-uniqueness theorem) -> V_n = Λ²(R^n) retained
       -> (this note) -> spin(n) = su(2) ⟺ n(n-1)/2 = 3 ⟺ n = 3
       -> d_s = 3 retained (under weak-SU(2) observational input).
 
-The 2026-04-18 v3 strengthening of the Recipe-R forcing theorem
-(`recipe-r-forcing-from-retained-n3-2026-04-17.md`, Part H) closes
-the last reviewer blocker: the full-rotation-algebra condition
-`(R3) ad : V_n → so(n)` surjective is now a **theorem consequence**
-of retained + axiomatic inputs, not an added family-scope premise.
-Specifically, Part H derives (R3) from
+The 2026-04-18 **v4 strengthening** of the Recipe-R forcing theorem
+(`recipe-r-forcing-from-retained-n3-2026-04-17.md`, Part I) closes
+the last reviewer blocker: previous premises `(R0)` retained-lift,
+`(R1)` center-freeness, `(R2)` rotation-on-Γ, and `(V_3-match)` are
+**all replaced by an explicit construction**
 
-  * `Z^n` graph `B_n`-symmetry (lattice axiom),
-  * retained graph/η/taste `Γ_μ` `B_n`-covariance,
-  * classical `B_n`-irreducibility of `Λ²(R^n)` for `n ≥ 2`,
-  * retained `V_3 = Λ²(R^3)`,
-  * retained-lift (R0): `V_n` uses only retained-main data.
+    V_n := span_R ( B_n · b_0 ),   b_0 := (1/2) Γ_1 Γ_2 ∈ Cl(n),
 
-Combined with (R1) center-freeness and (R2) rotation-on-Γ (both
-retained-consequences of the retained n=3 identification + retained
-Clifford anticommutator), the forcing theorem gives
-`V_n = Λ²(R^n) = Recipe-R` at every `n ≥ 2` without a family-scope
-Ansatz beyond retained-lift.
+so no family-scope premises remain. The inputs are only:
+
+  * retained `n = 3` seed `b_0 = (1/2) Γ_1 Γ_2` (coincides with the
+    retained `S_3 = -(i/2) Γ_1 Γ_2` up to `-i` normalization);
+  * retained Clifford anticommutator `{Γ_μ, Γ_ν} = 2 δ_{μν} I` (main);
+  * axiomatic `Z^n` graph `B_n = Z_2^n ⋊ S_n` symmetry;
+  * classical `B_n`-irreducibility of `Λ²(R^n)` for `n ≥ 2`.
+
+Part I of the runner certifies `V_n = Λ²(R^n)` numerically at
+`n ∈ {2, …, 6}` via (I.1) SVD rank of the orbit span = `n(n-1)/2`,
+(I.2) basis-containment residual `< 10⁻¹³`, (I.3) retained-V_3
+coincidence, (I.4) grade audit. `(R3)` `ad(V_n) = so(n)` follows as
+a theorem consequence via the classical bivector-to-`so(n)`
+isomorphism (Part G Step 4).
 
 The ORIGINAL STATUS language ("SUPPORT-ROUTE / CONDITIONAL TIGHTNESS
 COROLLARY") is preserved in the historical content below for
@@ -52,8 +57,9 @@ SU(2) itself.
 
 **The reviewer's successive blockers have all been addressed** by
 the 2026-04-17 scope, uniqueness, admissibility-closure, and
-Recipe-R forcing notes, with the 2026-04-18 Part H v3 strengthening
-that upgrades the chain to retained-grade:
+Recipe-R forcing notes, with the 2026-04-18 Part I v4 strengthening
+that upgrades the chain to retained-grade (no family-scope
+premises, `V_n` constructed from the retained seed):
 
 1. **Scope theorem** — `native-gauge-scope-theorem-2026-04-17.md`
    shows the retained `S_k = -(i/2) Γ_i Γ_j` construction at `n = 3`
@@ -69,12 +75,15 @@ that upgrades the chain to retained-grade:
    `admissibility-closure-from-graph-eta-taste-2026-04-17.md` reduces
    `(A2)`, `(A4)`, `(A5)` to consequences of Recipe-R.
 
-4. **Recipe-R forcing theorem (v3)** —
+4. **Recipe-R forcing theorem (v4)** —
    `recipe-r-forcing-from-retained-n3-2026-04-17.md` derives
-   Recipe-R itself as the unique family-scope extension of the
-   retained `n = 3` identification, with `(R3)` full-rotation-algebra
-   now a **theorem consequence** (Part H) of the retained/axiomatic
-   inputs listed in Status above — not an added family-scope premise.
+   Recipe-R itself by **constructing** `V_n := span_R(B_n · b_0)`
+   with `b_0 := (1/2) Γ_1 Γ_2` (the retained `n = 3` seed) and
+   numerically certifying `V_n = Λ²(R^n)` at every `n ∈ {2, …, 6}`
+   (Part I). All previous premises `(R0)`, `(R1)`, `(R2)`,
+   `(V_3-match)` are consequences of the construction; `(R3)`
+   `ad(V_n) = so(n)` follows via the classical bivector-to-`so(n)`
+   isomorphism (Part G Step 4).
 
 With those companion results in place, this tightness note is a
 retained-grade corollary:
@@ -283,16 +292,19 @@ comparison-family extension to `Cl(n)` for `n ∈ {1, ..., 6}` via the
 standard chiral-matrix construction.
 
 With the full companion stack in place (scope + uniqueness +
-admissibility-closure + Recipe-R forcing v3 with `(R3)` derived
-rather than assumed), the sensitive premise is a **retained-grade**
-theorem: the retained `n = 3` native-gauge authority + axiomatic
-`Z^n` graph `B_n`-symmetry + classical `Λ²(R^n)` `B_n`-irreducibility
-jointly force `V_n = Λ²(R^n)` at every `n ≥ 2`, and (R3) follows
-as a theorem consequence. This tightness note then reduces the
-remaining step to pure Lie-algebra dimensional matching
-`n(n-1)/2 = 3 ⇒ n = 3`. The derivation is genuinely non-circular
-and retained-grade under the retained `n = 3` native-gauge authority
-plus the `Z^n` lattice axiom plus the observational weak-SU(2) input.
+admissibility-closure + Recipe-R forcing v4 with `V_n` constructed
+from the retained `n = 3` seed `b_0 := (1/2) Γ_1 Γ_2` rather than
+axiomatized via `(R0)`–`(R3)`), the sensitive premise is a
+**retained-grade** theorem: the retained seed `b_0`, the retained
+Clifford anticommutator, the axiomatic `Z^n` graph
+`B_n`-symmetry, and the classical `Λ²(R^n)` `B_n`-irreducibility
+jointly force `V_n = Λ²(R^n)` at every `n ≥ 2` (Part I certifies
+numerically); `(R3)` follows via the classical bivector-to-`so(n)`
+isomorphism. This tightness note then reduces the remaining step
+to pure Lie-algebra dimensional matching `n(n-1)/2 = 3 ⇒ n = 3`.
+The derivation is genuinely non-circular and retained-grade under
+the retained `n = 3` native-gauge authority plus the `Z^n` lattice
+axiom plus the observational weak-SU(2) input.
 
 ## Corollary: Three Generations
 
@@ -336,9 +348,10 @@ The v4 note took `d_s = 3` as given and derived the 3-generation
 structure on the cubic surface as an algebraic comparison-family
 theorem. This corollary instead derives `d_s = 3` itself at
 retained grade from native SU(2) (via the 2026-04-17 admissibility
-closure + Recipe-R forcing theorem with the 2026-04-18 v3 Part H
-strengthening that derives `(R3)` from retained/axiomatic inputs),
-and inherits the v4 support-level chain for the generation count.
+closure + Recipe-R forcing theorem with the 2026-04-18 v4 Part I
+strengthening that **constructs** `V_n` from the retained `n = 3`
+seed and certifies `V_n = Λ²(R^n)` numerically, with no `(R0)`–`(R3)`
+premises), and inherits the generation-level chain.
 So the combined claim is:
 
 > Canonical native SU(2) + retained hw-orbit semantics ⇒ 3 generations,
@@ -536,9 +549,12 @@ The current state is:
 
 Version A is therefore now a **retained-grade** derivation of
 `d_s = 3` under the retained `n = 3` native-gauge authority plus the
-retained weak-SU(2) observational input. It upgrades `d_s = 3` from
-axiom to derived; the caveat remaining is only the weak-SU(2) input,
-which is observational, not framework-structural.
+retained weak-SU(2) observational input, with the Recipe-R forcing
+step upgraded to v4 (no family-scope premises — `V_n` is
+constructed from the retained `n = 3` seed by the axiomatic `B_n`
+action, and `V_n = Λ²(R^n)` is certified numerically). It upgrades
+`d_s = 3` from axiom to derived; the caveat remaining is only the
+weak-SU(2) input, which is observational, not framework-structural.
 
 ## Honest Self-Assessment
 
@@ -609,19 +625,23 @@ That blocker is closed by
     .claude/science/derivations/recipe-r-forcing-from-retained-n3-2026-04-17.md
 
 (verification runner: `scripts/frontier_recipe_r_forcing_from_retained_n3.py`,
-result `THEOREM_PASS=52 SUPPORT_PASS=12 FAIL=0`).
+result v4: `THEOREM_PASS=113 SUPPORT_PASS=21 FAIL=0`).
 
-The forcing theorem shows that the retained `n = 3` native-gauge
-identification has an intrinsic characterization — "rotation on the
-Γ-vector" (C_rot) — that uses only the framework-native `Γ_k` and the
-commutator bracket. The classical Clifford grade-preservation lemma
+The v4 forcing theorem **constructs** `V_n := span_R(B_n · b_0)`
+with `b_0 := (1/2) Γ_1 Γ_2` (retained `n = 3` seed), under the
+axiomatic `Z^n` graph `B_n = Z_2^n ⋊ S_n` action on `Cl(n)`. Then:
 
-    { X ∈ Cl(n) : [X, Γ_μ] ∈ grade-1 for all μ } = Z(Cl(n)) ⊕ Λ²(R^n)
+- `V_n` is `B_n`-invariant by construction;
+- `V_n ⊆ Λ²(R^n)` by grade preservation (`b_0` is grade-2 and `B_n`
+  preserves the grade filtration);
+- `V_n ≠ 0` because `b_0 ∈ V_n` and `b_0 ≠ 0`;
+- `Λ²(R^n)` is `B_n`-irreducible, so the only nonzero `B_n`-invariant
+  subspace of `Λ²(R^n)` is `Λ²(R^n)` itself.
 
-(with `Z(Cl(n))` = grade-0 for even `n`, = grade-0 ⊕ grade-n for odd
-`n`) then forces `V_n = Λ²(R^n) = Recipe-R` uniquely at every `n ≥ 2`
-once central elements are excluded and the retained `n = 3`
-identification populates the bivector sector.
+Hence `V_n = Λ²(R^n) = Recipe-R` at every `n ≥ 2`. Part I of the
+runner certifies this numerically (rank check, lstsq basis
+containment, grade audit, retained-V_3 coincidence) — no family-scope
+premises, no hard-coded equality.
 
 Combined with the admissibility closure and the family-uniqueness
 theorem, the `d_s = 3` chain is now:

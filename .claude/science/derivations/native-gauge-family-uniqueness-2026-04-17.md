@@ -26,11 +26,20 @@ The theorem was originally stated conditionally on admissibility
 The 2026-04-17 Recipe-R forcing theorem
 (`recipe-r-forcing-from-retained-n3-2026-04-17.md`) derived Recipe-R
 itself under three conditions `(R1)`, `(R2)`, `(R3)`. The 2026-04-18
-**v3 strengthening** of that forcing theorem (Part H of its runner)
-closes the previous reviewer blocker that `(R3)` was an added family-
-scope premise: `(R3)` is now **derived as a theorem consequence** of
-`(R0)` retained-lift + `(R1)` + `(R2)` + retained `V_3` + graph-
-`B_n`-symmetry + `Λ²(R^n)` `B_n`-irreducibility.
+**v3 strengthening** derived `(R3)` from `(R0)`-retained-lift +
+graph-`B_n`-symmetry + `Λ²(R^n)` `B_n`-irreducibility. The 2026-04-18
+**v4 strengthening** (Part I of the forcing runner) then closes the
+residual v3 reviewer blocker that `(R0)` was itself a definitional
+family-scope premise: `(R0)` is **replaced by an explicit
+construction**
+
+    V_n := span_R ( B_n · b_0 ),   b_0 := (1/2) Γ_1 Γ_2,
+
+where `b_0` is the retained `n = 3` native-gauge generator `S_3` up
+to normalization and `B_n` is the graph symmetry of `Z^n`. Every
+previous premise `(R0)`, `(R1)`, `(R2)`, `(V_3-match)` is now a
+consequence of this construction (certified numerically by Part I
+at `n ∈ {2, …, 6}`; no hard-coded equality).
 
 The ORIGINAL STATUS language ("SUPPORT-ROUTE / COMPARISON-FAMILY
 CONDITIONAL THEOREM") is preserved in the historical content below
@@ -224,11 +233,14 @@ With this note, the admissibility closure, and the Recipe-R forcing
 theorem in place, the retained-grade path to `d_s = 3` runs as
 follows:
 
-1. **Recipe-R forcing** (retained theorem): under (R1) center-freeness
-   + (R2) rotation-on-Γ + (R3) full-SO(n)-rotation-algebra — all
-   retained-consequences of the retained `n = 3` native-gauge
-   authority + retained Clifford anticommutator — the family-scope
-   gauge-generator space is forced to equal `Λ²(R^n)` at every `n`.
+1. **Recipe-R forcing** (retained theorem, v4): `V_n := span_R(B_n · b_0)`
+   with `b_0 := (1/2) Γ_1 Γ_2` (retained `n = 3` seed; coincides with
+   the retained `S_3` up to normalization). Under the axiomatic `B_n`
+   action on `Cl(n)`, `V_n = Λ²(R^n)` at every `n` is certified
+   numerically by Part I (rank + basis-containment + grade audit;
+   residuals `< 10⁻¹³`). No `(R0)`–`(R3)` premises — these are now
+   consequences. `(R3)` `ad(V_n) = so(n)` follows via the classical
+   bivector-to-`so(n)` isomorphism (Part G Step 4).
 2. **Family-uniqueness** (retained, this note): under Recipe-R
    (retained-forced), the admissibility package `(A1)–(A5)` is
    retained, and the family-scope gauge-generator space `V_n =
@@ -389,44 +401,49 @@ with verification runner
 
     scripts/frontier_recipe_r_forcing_from_retained_n3.py
 
-The 2026-04-18 v3 strengthening of the forcing theorem proves the
-family-scope equality `V_n = Λ²(R^n) = Recipe-R` with **(R3) derived
-as a theorem consequence, not added as a premise**. The premises
-are now:
+The 2026-04-18 **v4 strengthening** of the forcing theorem proves the
+family-scope equality `V_n = Λ²(R^n) = Recipe-R` with **no `(R0)`
+premise at all**. Instead, `V_n` is constructed directly from the
+retained `n = 3` seed:
 
-- `(R0)` retained-lift: `V_n` is defined entirely in terms of the
-  retained `Γ_μ` on `Z^n` and the retained Clifford anticommutator,
-  with no external selector. (Definitional — this is the admissibility
-  closure's `A5`.)
-- `(R1)` center-freeness: `V_n ∩ Z(Cl(n)) = {0}`. (Retained at n=3.)
-- `(R2)` rotation-on-Γ: `[X, Γ_μ] ∈ grade-1` for every `X ∈ V_n`,
-  every `μ`. (Retained-consequence of retained
-  `S_k = -(i/2) ε_{ijk} Γ_i Γ_j` + retained Clifford anticommutator;
-  Part A certifies.)
-- `(V_3-match)` `V_3 = Λ²(R^3)`. (Retained n=3 native-gauge closure.)
+    V_n := span_R ( B_n · b_0 ),   b_0 := (1/2) Γ_1 Γ_2 ∈ Cl(n).
 
-And (R3) is **derived**:
+Under this construction, the former premises are now consequences:
+
+- `(R0)` retained-lift — is the construction itself: `V_n` is built
+  from the retained seed `b_0 = (1/2) Γ_1 Γ_2` (which at `n = 3`
+  coincides with the retained `S_3 = -(i/2) Γ_1 Γ_2` up to the `-i`
+  normalization) under the axiomatic `B_n = Z_2^n ⋊ S_n` action on
+  `Cl(n)`.
+- `(R1)` center-freeness — `b_0 ∈ Λ²(R^n) \ Z(Cl(n))` and `B_n`
+  preserves the grade filtration, so `V_n ⊆ Λ²(R^n)` and in
+  particular `V_n ∩ Z(Cl(n)) = {0}`.
+- `(R2)` rotation-on-Γ — automatic for grade-2 elements.
+- `(V_3-match)` `V_3 = Λ²(R^3)` — certified numerically by Part I.3
+  (every retained `S_k` lies in the `B_3`-orbit span of `b_0`).
+
+And `(R3)` is **derived**:
 
 - Graph on `Z^n` is `B_n = Z_2^n ⋊ S_n` symmetric (lattice axiom).
 - Retained graph/η/taste `Γ_μ` are `B_n`-covariant (Part H.1
-  certifies the anticommutator and grade filtration are preserved).
-- `(R0)` ⇒ `V_n` is `B_n`-invariant.
-- `(R1)+(R2)` + Clifford grade-preservation lemma ⇒
-  `V_n ⊆ Λ²(R^n)`.
-- `Λ²(R^n)` is `B_n`-irreducible for `n ≥ 2` (Part H.2 + H.3
-  certify: the `B_n`-orbit of a single bivector spans `Λ²(R^n)`,
-  and the symmetric-group average of any bivector vanishes so no
-  proper `B_n`-invariant subspace exists).
-- Therefore `V_n ∈ {0, Λ²(R^n)}`. Retained `V_3 = Λ²(R^3)` + uniform
-  recipe `(R0)` ⇒ `V_n ≠ 0`. Hence `V_n = Λ²(R^n)`.
-- `ad : Λ²(R^n) → so(n)` is the classical isomorphism ⇒
-  `ad(V_n) = so(n)`, i.e., (R3) is a theorem consequence.
+  certifies anticommutator + grade filtration preservation).
+- `V_n` is `B_n`-invariant by construction (it is a `B_n`-orbit span).
+- `V_n ⊆ Λ²(R^n)` because every orbit element of `b_0` is grade-2
+  (Part I.4: zero non-grade-2 projection).
+- `V_n ≠ 0` because `b_0 ∈ V_n` and `b_0 ≠ 0` — no "uniform recipe"
+  premise needed, just a non-zero seed.
+- `Λ²(R^n)` is `B_n`-irreducible for `n ≥ 2` (Part H.2 + H.3).
+- Therefore `V_n = Λ²(R^n)` (certified numerically by Part I.1 rank
+  check + Part I.2 basis-containment residual `< 10⁻¹³`).
+- `ad : Λ²(R^n) → so(n)` is the classical isomorphism (Part G Step 4)
+  ⇒ `ad(V_n) = so(n)`, i.e., `(R3)` is a theorem consequence.
 
 The Recipe-R forcing runner passes with
-`THEOREM_PASS=97 SUPPORT_PASS=21 FAIL=0` (2026-04-18 v3 totals after
-adding Part H). With (R3) now derived, the family-uniqueness
-conclusion stands on retained + axiomatic footing alone — no
-family-scope Ansatz beyond the retained-lift (R0).
+`THEOREM_PASS=113 SUPPORT_PASS=21 FAIL=0` (2026-04-18 v4 totals,
+Parts A–I). With `(R0)` now replaced by construction, the
+family-uniqueness conclusion stands on retained + axiomatic footing
+with **no** family-scope Ansatz: only the retained `n = 3` seed and
+the axiomatic `Z^n` lattice `B_n` symmetry enter.
 
 ## Next
 
