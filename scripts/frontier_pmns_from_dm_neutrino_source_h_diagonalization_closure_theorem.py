@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Selector the PMNS-closure theorem: PMNS angles as f(H(m, delta, q_+))
-— retained map with conditional/support chamber pin.
+— retained map with bounded P3 chamber package.
 
 Branch: (off ).
 
@@ -607,7 +607,7 @@ def main() -> int:
   obs = pmns_observables(m_star, d_star, q_star)
   print(f" Predicted delta_CP = {obs['dcp_deg']:+.2f} deg (sin = {obs['sin_dcp']:+.4f})")
   print(f" Jarlskog J     = {obs['J']:+.6f}")
-  print(" selector closure status: CONDITIONAL / SUPPORT on chamber at the pinned point.")
+  print(" selector closure status: BOUNDED on chamber, with A-BCC and sigma_hier open.")
 
   return 0 if FAIL_COUNT == 0 else 1
 

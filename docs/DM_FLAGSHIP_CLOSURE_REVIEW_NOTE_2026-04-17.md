@@ -1,9 +1,25 @@
-# DM Flagship Gate — Conditional / Support Closure Review
+# DM Flagship Gate — Open-Gate Review
 
-**Date:** 2026-04-17 (Option-B progress landing: `q_H = 0` conditional closed by gauge-redundancy theorem; residual conditionals 3 → 2)
-**Status:** **CONDITIONAL / SUPPORT closure** on the live DM-neutrino source-oriented sheet via the observational PMNS promotion (P3) lane. Two residual conditionals (reduced from three by the Option-B B2 landing): (a) the Schur scalar-baseline result is a **commutant-class structural lemma** only — it does NOT prove the live-sheet zero-source baseline satisfies the Schur commutation premise; (b) the source-branch selector (Sylvester inertia preservation on the `signature(H_base) = (2,0,1)` component) is an **imposed branch-choice / conditional admissibility rule**, not a retained-theorem selector derivation. With both labelled conditionally, the P3-lane chamber pin is a publication-grade **conditional/support** closure, not a retained-grade sole-axiom or retained-selector closure. The closure is further conditional on (i) the observational hierarchy pairing `σ_hier = (2, 1, 0)` and (ii) the chosen source branch. **The previously-listed `q_H = 0` conditional has been discharged as GAUGE (retained) via the Higgs `Z_3`-charge gauge-redundancy theorem** — three `q_H` branches give identical `Y_e Y_e†` on `L_L` axes, hence identical `U_e = I`, hence identical `|U_PMNS|`; `q_H` is gauge-redundant with respect to PMNS observables and carries no physical content. The θ_23 upper-octant prediction and the `sin δ_CP = -0.9874` prediction are falsifiable at DUNE / JUNO / Hyper-K _given_ the conditional selector.
+**Date:** 2026-04-17 (2026-04-18 P3 Sylvester update applied)
+**Status:** **OPEN flagship gate.** On the live DM-neutrino source-oriented
+sheet the old pointwise P3 branch-choice rule is no longer merely imposed:
+the pointwise signature statement at the retained P3 pin is now carried by
+the retained local theorem
+[DM_NEUTRINO_SOURCE_SURFACE_P3_SYLVESTER_LINEAR_PATH_SIGNATURE_THEOREM_NOTE_2026-04-18.md](./DM_NEUTRINO_SOURCE_SURFACE_P3_SYLVESTER_LINEAR_PATH_SIGNATURE_THEOREM_NOTE_2026-04-18.md).
+That sharpens the old source-branch conditional into one retained local
+theorem plus one named remaining source-side input `A-BCC`. The live G1
+PMNS-as-`f(H)` package is therefore now best read as a **bounded** package on
+an otherwise open flagship gate: `A-BCC` and the observational hierarchy
+pairing `σ_hier = (2, 1, 0)` remain open, and the current-bank quantitative DM
+selector / mapping side is also still open. **The previously-listed `q_H = 0`
+conditional has been discharged as GAUGE (retained)** via the Higgs `Z_3`-
+charge gauge-redundancy theorem.
 **Framework convention:** "axiom" means only the single framework axiom `Cl(3)` on `Z^3`.
-**Runner coverage:** 15 frontier runners, **PASS = 502, FAIL = 0**. All PASSes verify the stated mathematical content; the `CLOSED` headline previously attached to the flagship gate has been retracted in favour of the honest `conditional/support` label. The Schur runner gained a Part 6 live-sheet non-commutation witness (7 extra PASSes, Option A). The Higgs `Z_3`-charge gauge-redundancy runner is new on this landing (73 PASSes, Option B — closes one of the three conditionals).
+**Runner coverage:** 16 frontier runners, **PASS = 513, FAIL = 0**. This now
+includes the dedicated P3 Sylvester linear-path signature theorem runner
+(`PASS = 11, FAIL = 0`). The integrated table below is preserved as the
+pre-2026-04-18 route record; its older row labels should be read in that
+historical sense except where superseded by the status block above.
 
 ## Scope
 

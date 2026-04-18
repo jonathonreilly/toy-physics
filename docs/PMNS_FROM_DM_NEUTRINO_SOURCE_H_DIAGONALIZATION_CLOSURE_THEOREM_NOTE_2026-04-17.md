@@ -1,26 +1,28 @@
-# PMNS as `f(H(m, delta, q_+))` — Conditional / Support Closure
+# PMNS as `f(H(m, delta, q_+))` — Bounded P3 Package
 
-**Date:** 2026-04-17 (Option-A demotion applied after 2026-04-17 review pass)
-**Status:** **CONDITIONAL / SUPPORT closure — NOT a retained live-sheet
-closure theorem.** The positive content this note retains: an explicit
+**Date:** 2026-04-17 (2026-04-18 P3 Sylvester update applied)
+**Status:** **BOUNDED P3 package — NOT a retained live-sheet closure
+theorem.** The positive content this note retains: an explicit
 map `(m, δ, q_+) → (θ_12, θ_13, θ_23, δ_CP)` by direct
 diagonalisation of the retained affine Hermitian `H` on the live sheet,
 and a uniquely pinned chamber point
 `(m_*, δ_*, q_+*) = (0.657061, 0.933806, 0.715042)` whose `|U_PMNS|`
 matches NuFit 5.3 NO 3-σ in 9/9 entries and predicts
-`sin δ_CP = −0.9874`. The conditionality that the current branch tip
-carries, explicitly flagged here:
+`sin δ_CP = −0.9874`.
 
-1. **Imposed branch-choice admissibility rule** on the Hermitian
-   curvature (`signature(H_base + J) = (2, 0, 1)`) — NOT a retained
-   theorem; see the perturbative-uniqueness note's Option-A demotion
-   and the flagship closure review note.
+**2026-04-18 update.** The old pointwise branch-choice admissibility rule at
+the pinned P3 point is no longer merely imposed. It is now carried by the
+retained local theorem
+[`DM_NEUTRINO_SOURCE_SURFACE_P3_SYLVESTER_LINEAR_PATH_SIGNATURE_THEOREM_NOTE_2026-04-18.md`](./DM_NEUTRINO_SOURCE_SURFACE_P3_SYLVESTER_LINEAR_PATH_SIGNATURE_THEOREM_NOTE_2026-04-18.md).
+What remains open on this package is:
+
+1. **Baseline-connected-component input** `A-BCC` — the identification of the
+   baseline-connected component of `{det(H) ≠ 0}` as the physical live sheet.
 2. **Observational hierarchy pairing** `σ_hier = (2, 1, 0)`.
 
-Under these two conditionals the pinning is unique inside the
-chamber. Without them (in particular without (1)), there are competing
-admissible basins (notably at `(28, 21, 5)` and `(21, 13, 2)` on
-opposite caustic branches).
+Under these two remaining open inputs the pinning is unique inside the
+chamber. Without them there are competing admissible basins (notably at
+`(28, 21, 5)` and `(21, 13, 2)` on opposite caustic branches).
 
 **Previously listed as conditional, now discharged as GAUGE (retained):**
 the Higgs `Z_3` charge `q_H = 0` branch is a canonical gauge representative
@@ -31,7 +33,13 @@ axes, hence identical `U_e = I`, hence identical `|U_PMNS|`; the choice
 `q_H = 0` is a right-basis relabeling that PMNS does not see.
 
 The DM flagship gate status on the current branch tip is therefore
-**conditional / support**, NOT `CLOSED`.
+**open**, NOT `CLOSED`, and this note should be read as a bounded package on
+that open gate.
+
+The body below preserves the original 2026-04-17 route analysis. Where it
+refers to the old imposed branch-choice rule, read that as historical route
+language except where the 2026-04-18 local Sylvester theorem is cited
+explicitly.
 **Script:** `scripts/frontier_pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem.py`
 **Runner:** `PASS = 43, FAIL = 0`
 **Framework convention:** "axiom" means only the single framework axiom `Cl(3)` on `Z^3`.
