@@ -6,10 +6,10 @@
 
 ## Status
 
-PROPOSED-FOR-RETAINED — new theorem + verification runner. Separately
-retention-eligible. Intended as the missing premise that the companion
-`native-su2-tightness-forces-ds3-2026-04-17.md` note requires to upgrade
-from support-grade to retention-grade.
+SUPPORT-ROUTE / STRUCTURAL CLARIFICATION NOTE — verification runner
+included. This note makes the retained `n = 3` native-gauge construction's
+bivector recipe explicit and extends that recipe at comparison-family
+scope; it does not, by itself, upgrade `d_s = 3` to retained closure.
 
 ## The Problem This Note Solves
 
@@ -33,10 +33,9 @@ statement:
 - with no external selector,
 - therefore `spin(n) = su(2)`.
 
-The reviewer's prescription for retained closure was a separate
-**Native-gauge scope theorem** proving that the retained construction
-really has a comparison-family, selector-free reading. That is what
-this note establishes.
+The reviewer's prescription was a separate **Native-gauge scope theorem**
+proving that the retained construction really has a comparison-family,
+selector-free reading. That is what this note establishes.
 
 ## What This Note Proves
 
@@ -71,8 +70,10 @@ Under recipe `(R)`:
    - `n = 5`: 10 bivectors; `spin(5) ≅ sp(2)` (not `su(2)`).
    - `n = 6`: 15 bivectors; `spin(6) ≅ su(4)` (not `su(2)`).
 
-Hence recipe `(R)` forces `n = 3` uniquely as the spatial dimension
-at which the native gauge Lie algebra equals `su(2)`.
+Hence recipe `(R)` singles out `n = 3` within the comparison family as
+the unique member whose full bivector Lie algebra equals `su(2)`. This
+is the structural input the companion tightness note uses; it is not, by
+itself, a retained `d_s = 3` closure theorem.
 
 ## The Key Observation That Makes This A Theorem, Not An Interpretation
 
@@ -131,23 +132,23 @@ reproduces the retained construction line-for-line.
 
 ## What Gets Promoted Where
 
-**Retention-eligible (new).**
+**Support-route structural theorem (new).**
 
 - `Theorem (Native-Gauge Scope).` The retained native-SU(2) construction
-  is selector-free and comparison-family-scoped under recipe `(R)`.
+  is literally a selector-free bivector recipe at `n = 3`, and that
+  recipe has a clean comparison-family extension.
 
-**Retention-eligible (companion tightness theorem, now unblocked).**
+**Conditional downstream corollary (companion tightness note).**
 
 - `Theorem (Native-SU(2)-Tightness).` Recipe `(R)` produces the Lie
   algebra `su(2)` only at `n = 3`, by Clifford-bivector Lie-algebra
   dimensional matching `n(n-1)/2 = dim(su(2)) = 3`.
 
-**Together these imply.**
+**Together these support.**
 
-- Retained closure: `d_s = 3` is derived from the retained native-gauge
-  construction recipe plus the observed weak-SU(2) gauge group, with no
-  cubic `Z^3` orbit structure, no hw-orbit semantics, and no SM matter
-  content used in the derivation.
+- the strongest current support-route path from the native-gauge recipe
+  to `d_s = 3`, still conditional on the companion admissibility
+  package rather than a retained axiom-table update.
 
 ## Relation To The Reviewer's Requirements
 
@@ -230,8 +231,8 @@ Checks:
 
 ## Honest Self-Assessment
 
-This is a genuine retention-grade claim, not an interpretive re-reading,
-because:
+This is a genuine structural clarification / support-route claim, not an
+interpretive re-reading, because:
 
 1. The recipe "S_k = -(i/2) Γ_i Γ_j" is **literally** what the retained
    runner uses at lines 257–259 of `scripts/frontier_non_abelian_gauge.py`.
@@ -257,29 +258,16 @@ prove more than it claims," the response is:
 
 ## Next
 
-With both this note and the companion tightness theorem at retention
-grade, the immediate follow-ups are:
+With this note in place, the immediate follow-up is not another
+corollary. It is to decide whether the comparison-family extension and
+the no-selector/admissibility package can themselves be promoted from
+support-route assumptions to retained framework rules.
 
-1. Update the companion `native-su2-tightness-forces-ds3-2026-04-17.md`
-   note to point to this note as the now-retained premise.
-2. Reviewer signoff: the combined package now satisfies the reviewer's
-   prescribed 3-step decomposition (native-gauge scope theorem →
-   tightness theorem → generation corollary), with step 1 separately
-   retained by this note.
-3. Axiom table update on `main`: `d_s = 3` moves from "Choice" to
-   "Derived (via native-gauge scope + tightness)."
+Until that is done, this note is best read as:
 
-If a reviewer still objects to retention grade, the remaining argument
-must take one of two forms:
+1. a clean clarification that the retained `n = 3` construction is
+   literally bivector-based and selector-free, and
+2. a clean comparison-family premise for the companion uniqueness and
+   tightness notes,
 
-- (a) object that the retained runner's `S_k = -(i/2) Γ_i Γ_j` line is
-  not load-bearing for the retained authority's claim — which seems
-  implausible given the code is the authority's verification artifact;
-- (b) object that the chiral-matrix / staggered-phase construction does
-  not genuinely extend to `n ≠ 3` — which contradicts standard Clifford
-  theory.
-
-Either objection is welcome and can be addressed concretely, but at this
-point the note's retention-grade status rests on verifiable code-level
-and mathematical facts, not on reviewer-judgment calls about the "right
-reading" of the retained theorem.
+not as a standalone promotion of `d_s = 3` from axiom to derived.

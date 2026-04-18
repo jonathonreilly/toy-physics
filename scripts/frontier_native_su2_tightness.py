@@ -437,7 +437,7 @@ def part_f_three_generations_corollary() -> None:
     #   (6) |O_h-orbits on hw=1 of Cl(3)| = 3                   [retained theorem on main]
     #   (7) 3 physical generations                              [retained hw-orbit semantics]
     #
-    # Steps 1-4 are retention-eligible (Version A of the main theorem).
+    # Steps 1-4 are the theorem content of the current support-route Version A.
     # Steps 5-7 are support-grade (inherit the retained semantics dependency
     # already documented in the earlier conditional-support note).
 
@@ -451,15 +451,15 @@ def part_f_three_generations_corollary() -> None:
     print("    (7) 3 physical generations                 [retained hw semantics]")
     print()
     print("  Grade table:")
-    print("    Steps 1-4: retention-eligible (content of main theorem)")
+    print("    Steps 1-4: conditional support-route theorem content")
     print("    Step 5:    axiom-level lattice choice (separate research question)")
     print("    Step 6:    retained theorem on main")
     print("    Step 7:    retained semantics (not derived from axioms)")
 
-    # Step 4 is the retention-grade theorem output.
+    # Step 4 is the theorem output within the current support-route package.
     n_forced = next(n for n in range(1, 20) if dim_bivectors(n) == 3)
     check(
-        "Step 4: Canonical native SU(2) forces n = 3",
+        "Step 4: Conditional Version A path selects n = 3",
         n_forced == 3,
         detail="n(n-1)/2 = 3 has unique positive-integer solution n = 3",
         bucket="THEOREM",
@@ -517,11 +517,11 @@ def part_f_three_generations_corollary() -> None:
         bucket="SUPPORT",
     )
 
-    # Explicit upgrade claim: d_s = 3 moves from axiom to theorem.
+    # Explicit support-route claim: the package sharpens the selector for n = 3.
     check(
-        "Upgrade claim: d_s = 3 goes from axiom to derived under Version A",
+        "Support-route claim: Version A sharpens the n = 3 selector",
         True,
-        detail="primitive replaced: 'd_s = 3 choice' -> 'canonical native SU(2)'",
+        detail="does not yet change the retained axiom table on main",
         bucket="THEOREM",
     )
 
@@ -548,13 +548,14 @@ def main() -> int:
     print("=" * 72)
     print()
     print("CONCLUSION:")
-    print("  The canonical no-selector reading of the retained native-SU(2)")
-    print("  theorem forces the Clifford dimension to satisfy spin(n) = su(2),")
-    print("  which by dimensional matching has unique positive-integer solution")
-    print("  n = 3. This derivation uses only Clifford-bivector counting and")
-    print("  Lie-algebra dimension, with no cubic Z^3 orbit, no hw-orbit")
-    print("  semantics, and no SM matter content. It replaces the primitive")
-    print("  'd_s = 3 axiom' with 'canonical native SU(2) with no selector'.")
+    print("  Under the canonical no-selector reading used in the companion")
+    print("  scope/uniqueness notes, the Clifford dimension satisfies")
+    print("  spin(n) = su(2), which by dimensional matching has unique")
+    print("  positive-integer solution n = 3. This derivation uses only")
+    print("  Clifford-bivector counting and Lie-algebra dimension, with no")
+    print("  cubic Z^3 orbit, no hw-orbit semantics, and no SM matter content.")
+    print("  It is the strongest current support-route derivation of n = 3,")
+    print("  not yet a retained replacement for the d_s = 3 primitive on main.")
     print("=" * 72)
 
     return 0 if FAIL == 0 else 1

@@ -6,11 +6,13 @@
 
 ## Status
 
-PROPOSED-FOR-RETAINED — tightness corollary of the family-scope
-uniqueness theorem.
+SUPPORT-ROUTE / CONDITIONAL TIGHTNESS COROLLARY — contingent on the
+companion scope and uniqueness notes.
 
-**The reviewer's two successive blockers have been addressed** by
-two separate companion notes:
+**The reviewer's two successive blockers have been addressed** in the
+sense that there is now a real scope note and a real uniqueness note.
+What they provide, however, is the strongest current support-route path,
+not a retained closure:
 
 1. **Scope theorem** — `native-gauge-scope-theorem-2026-04-17.md`
    shows the retained `S_k = -(i/2) Γ_i Γ_j` construction at `n = 3`
@@ -31,30 +33,30 @@ two separate companion notes:
    bivector sector `V_n = Λ²(R^n)` for all `n ≥ 1`, with no proper
    subset admissible (by `O(n)`-irreducibility of `Λ²(R^n)`) and no
    mixed-grade alternative satisfying reduction. The `Γ_k` for
-   arbitrary `n` are derived from the framework's own
-   graph/η-phase/taste rules on `Z^n`, not from textbook Clifford
-   machinery.
+   arbitrary `n` are derived from the framework's own graph/η-phase/
+   taste rules on `Z^n`, not from textbook Clifford machinery.
 
-With uniqueness in place, this tightness note is a short corollary:
+With those companion results in place, this tightness note is a short
+conditional corollary:
 
-- retained family-scope uniqueness: `V_n = Λ²(R^n)` with
-  `dim V_n = n(n-1)/2` (now a forced theorem).
+- conditional family-scope uniqueness: `V_n = Λ²(R^n)` with
+  `dim V_n = n(n-1)/2` once the admissibility package is granted.
 - observed weak gauge Lie algebra `su(2)` has dimension 3.
 - therefore `n(n-1)/2 = 3`, i.e., `n = 3` uniquely.
 
-The primitive shift from the earlier axiom reading is:
+The primitive shift from the earlier axiom reading is therefore only at
+support-route level for now:
 
 - previously: `d_s = 3` on `Z³` as axiom (A1).
 - now: `d_s = 3` derived from (family-scope uniqueness theorem) +
   (observed weak SU(2) gauge group) + (standard Lie-algebra dimension
   counting).
 
-The chain is retention-eligible at the spatial-dimension axiom-depth
-scope. The reviewer's prescribed 5-step program is now executed in
-full: uniqueness theorem (prescribed step 1), framework-rule-derived
-`Γ_k` (step 2), no-go on proper subsets (step 3), runner certifies
-uniqueness directly (step 4), and the tightness theorem as a short
-corollary (step 5, this note).
+The reviewer's prescribed 5-step program is now executed in theorem
+form, but not yet at retained bar: uniqueness theorem (prescribed
+step 1), framework-rule-derived `Γ_k` (step 2), no-go on proper subsets
+(step 3), runner certifies uniqueness directly (step 4), and the
+tightness theorem as a short corollary (step 5, this note).
 
 ## The Problem And What This Note Actually Tries To Do
 
@@ -125,8 +127,9 @@ spin(n) = su(2)   as Lie algebras.
 
 ### The main theorem
 
-**Theorem (Native-SU(2)-Tightness).** The retained native-SU(2)
-statement at canonical no-selector strength,
+**Theorem (Native-SU(2)-Tightness, conditional Version A).** The
+native-SU(2) statement at canonical no-selector strength, read through
+the companion scope and uniqueness notes,
 
 ```
 spin(n) = su(2),
@@ -217,8 +220,8 @@ prose, state the full comparison-family, selector-free recipe.
 
 The companion note
 `.claude/science/derivations/native-gauge-scope-theorem-2026-04-17.md`
-closes that gap by proving the recipe-level statement separately, as
-its own retention-eligible theorem. Specifically, the companion note
+addresses that gap by proving the recipe-level statement separately, as
+its own support-route structural theorem. Specifically, the companion note
 shows that the retained authority's weak-SU(2) generators are
 **literally** the three Clifford bivectors `Γ_i Γ_j` of `Cl(3)`, with
 the identification verifiable line-for-line against
@@ -236,10 +239,11 @@ a reinterpretation. The companion note further verifies the recipe's
 comparison-family extension to `Cl(n)` for `n ∈ {1, ..., 6}` via the
 standard chiral-matrix construction.
 
-With the companion note in place, the sensitive premise is now a
-separately-retained theorem, and this tightness note reduces to pure
-Lie-algebra dimensional matching `n(n-1)/2 = 3 ⇒ n = 3`. The
-derivation is genuinely non-circular at comparison-family scope.
+With the companion note in place, the sensitive premise is at least a
+cleanly stated support-route theorem rather than an implicit reading of
+the retained authority. This tightness note then reduces the remaining
+step to pure Lie-algebra dimensional matching `n(n-1)/2 = 3 ⇒ n = 3`.
+The derivation is genuinely non-circular at comparison-family scope.
 
 ## Corollary: Three Generations
 
@@ -263,17 +267,17 @@ species semantics.
 7. ⇒ Under the retained `hw`-orbit-is-physical-species semantics,
    three physical generations.
 
-**Scope of the corollary.** Steps 1–4 are retention-grade (the content
-of the main theorem). Steps 5–7 are support-grade: they carry the
-retained-semantics dependency that the earlier conditional-minimality
+**Scope of the corollary.** Steps 1–4 are the theorem content of the
+current support-route package. Steps 5–7 are support-grade: they carry
+the retained-semantics dependency that the earlier conditional-minimality
 note already documented, and they do not pretend to derive "why `hw`-
 orbits are species" from axioms.
 
-**What is retention-grade and what is support-grade.**
+**What is theorem-grade here and what is support-grade.**
 
 | Step | Statement | Grade |
 |---|---|---|
-| 1–4 | Canonical native SU(2) forces `n = 3` | retention-eligible |
+| 1–4 | Canonical native SU(2) forces `n = 3` | conditional support-route theorem |
 | 5 | `Z³` as the lattice on `n = 3` | axiom-level choice (still a separate question) |
 | 6 | `O_h` orbit count = 3 on `hw=1` | retained theorem (on `main`) |
 | 7 | hw-orbits → generations | retained semantics (not derived) |
@@ -281,9 +285,10 @@ orbits are species" from axioms.
 **What the corollary adds beyond the v4 conditional-support note.**
 The v4 note took `d_s = 3` as given and derived the 3-generation
 structure on the cubic surface as an algebraic comparison-family
-theorem. This corollary instead derives `d_s = 3` itself at retention
-grade from native SU(2), and inherits the v4 conditional-support
-chain for the generation count. So the combined claim is:
+theorem. This corollary instead derives `d_s = 3` itself at
+support-route level from native SU(2), and inherits the v4
+conditional-support chain for the generation count. So the combined
+claim is:
 
 > Canonical native SU(2) + retained hw-orbit semantics ⇒ 3 generations,
 > with the spatial-dimension step upgraded from "axiom" to "retention-
@@ -408,7 +413,7 @@ Checks:
 This section lays out what a reviewer should, and should not, conclude
 from this note, stated as sharply as possible for retention review.
 
-**Retention-eligible claim (Version A).**
+**Conditional support claim (Version A).**
 
 > Canonical native SU(2) (the observed weak gauge group on the retained
 > framework, read at no-selector strength) forces `d_s = 3` via Clifford-
@@ -420,7 +425,7 @@ This claim carries no cubic-lattice-specific structure, no hw-orbit
 semantics, and no SM matter-content assumption. It shifts the primitive
 from a spatial-dimension choice to a gauge-group-dimension equality.
 
-**Retention-eligible claim (Version B).**
+**Conditional support claim (Version B).**
 
 > The framework's retained native-gauge structure plus retained anomaly-
 > forced chirality parity forces `d_s = 3` via Clifford-bivector Lie-
@@ -447,36 +452,33 @@ already documented in the earlier conditional-support note.
   3-generation corollary carries the retained semantics as a support
   dependency.
 
-**What upgrades this to retained.** The earlier blocker was that the
-"canonical no-selector" reading was an interpretive upgrade of the
-retained native-SU(2) authority rather than a separately-retained
-theorem. That blocker has been addressed by the companion
-**native-gauge scope theorem** note
-(`.claude/science/derivations/native-gauge-scope-theorem-2026-04-17.md`),
-which establishes the no-selector recipe as its own retention-grade
-claim, verifiable directly against the retained code on `main`.
+**What would upgrade this to retained.** The earlier blocker was that
+the "canonical no-selector" reading was an interpretive upgrade of the
+retained native-SU(2) authority rather than a separately-closed
+theorem. The companion notes improve that situation substantially, but
+they do **not** yet close it at retained bar, because the family-scope
+admissibility package still contains load-bearing comparison-family
+premises.
 
-With the companion note in place:
+So the current state is:
 
-1. The "canonical no-selector" reading is now a separately-retained
-   theorem, not a reviewer-judgment call.
-2. The Lie-algebra dimensional-matching step `n(n-1)/2 = 3 ⇒ n = 3`
-   is classical mathematics with no further reinterpretation needed.
-3. The empirical input "weak gauge group is SU(2)" is the only
-   non-mathematical ingredient, and it is the same ingredient every
-   Standard-Model derivation relies on.
+1. the dimensional-matching step `n(n-1)/2 = 3 ⇒ n = 3` is classical
+   mathematics;
+2. the empirical input "weak gauge group is SU(2)" remains retained;
+3. the remaining non-closed step is the retained status of the
+   no-selector / admissibility package at family scope.
 
-Under this package, Version A is retention-eligible and upgrades
-`d_s = 3` from axiom to derived.
+Under the current package, Version A is the strongest support-route path
+to `d_s = 3`; it does not yet upgrade `d_s = 3` from axiom to derived on
+`main`.
 
 ## Honest Self-Assessment
 
 The primitive has shifted from a spatial-dimension choice to a
-Lie-algebra-matching requirement tied to the observed weak gauge
-group. This is a genuine axiom-depth improvement: the Lie-algebra
-equation `n(n-1)/2 = 3` is a pure mathematical fact, and the only
-retained-framework input is the canonical-no-selector reading of the
-native-SU(2) theorem.
+Lie-algebra-matching requirement tied to the observed weak gauge group.
+That is a genuine support-route improvement: the Lie-algebra equation
+`n(n-1)/2 = 3` is a pure mathematical fact, but the retained-framework
+status of the canonical-no-selector reading is still the live issue.
 
 Compared to the earlier `cl3-minimality-conditional-support-2026-04-17`
 note, this note:
@@ -488,17 +490,16 @@ note, this note:
 - preserves the 3-generation corollary as a separate, honestly
   scoped support-level chain under retained hw-orbit semantics.
 
-The earlier cost was that retention status depended on a
-reviewer-judgment call about the retained theorem's content on
-`main`. The companion native-gauge scope note has now eliminated
-that cost by establishing the no-selector recipe as a separately-
-retained theorem, verifiable by direct code inspection rather than
-reviewer interpretation.
+The earlier cost was that status depended on a reviewer-judgment call
+about the retained theorem's content on `main`. The companion notes now
+turn that into a much cleaner and more explicit support-route package,
+but they do not yet eliminate the cost entirely because the family-scope
+admissibility layer is still not retainedly closed.
 
 ## Next
 
-If the Version A theorem is accepted at retention grade, follow-up
-research directions:
+If this support-route package is accepted in its current honest form,
+follow-up research directions are:
 
 1. **SU(3) color via graph automorphisms.** Does the retained graph-
    first SU(3) gauge structure also pick out `n = 3` via a related

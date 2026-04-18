@@ -6,15 +6,15 @@
 
 ## Status
 
-PROPOSED-FOR-RETAINED — new theorem + verification runner. This note
-is designed to close the reviewer's retention-grade blocker on the
-`claude/cl3-minimality` branch by upgrading the earlier
-"native-gauge scope theorem" from an admissible comparison-family
-**extension** to a **forced uniqueness** theorem.
+SUPPORT-ROUTE / COMPARISON-FAMILY CONDITIONAL THEOREM — new theorem +
+verification runner. This note answers the reviewer's request for a
+genuine family-scope uniqueness theorem, but the theorem remains
+conditional on the admissibility package `(A1)-(A5)` rather than a
+retained closure of that package.
 
 ## The Problem This Note Solves
 
-The reviewer's 2026-04-17 retention-grade blocker was:
+The reviewer's 2026-04-17 blocker was:
 
 > The new scope theorem ... certifies:
 > `retained n=3 code fact` + `standard arbitrary-n extension recipe`
@@ -194,28 +194,28 @@ This is verified in `scripts/frontier_native_gauge_family_uniqueness.py`
 Part A, which constructs the η phases on `Z^n` directly, derives the
 `Γ_k` from them, and verifies the Clifford property holds.
 
-## Combined Retention Claim
+## Combined Conditional Support Claim
 
-With this note in place, the retention-grade derivation of `d_s = 3`
-runs as follows:
+With this note in place, the strongest current support-route path to
+`d_s = 3` runs as follows:
 
-1. **Native-gauge family uniqueness** (this note, retention-eligible):
-   the retained native-gauge construction, taken at framework scope via
-   the graph/η-phase rules on `Z^n`, forces `V_n = Λ²(R^n)` uniquely
-   under admissibility (A1)-(A5).
-2. **Tightness** (existing companion note, corollary):
+1. **Native-gauge family uniqueness** (this note, conditional theorem):
+   under admissibility `(A1)-(A5)`, the comparison-family gauge-generator
+   space is forced to be `V_n = Λ²(R^n)`.
+2. **Tightness** (existing companion note, conditional corollary):
    the observed weak gauge algebra is `su(2)`. The bivector Lie algebra
    of `Cl(n)` is `spin(n)` of dimension `n(n-1)/2`. So `spin(n) = su(2)`
    forces `n(n-1)/2 = 3`, i.e., `n = 3` uniquely.
-3. **Spatial dimension** (direct consequence): `d_s = n = 3`.
+3. **Spatial dimension** (conditional downstream consequence):
+   `d_s = n = 3`.
 
 **Premises used.**
 
 | Premise | Scope | Status |
 |---|---|---|
-| Graph/η-phase/taste rules on `Z^n` | framework-native | retained (generalises `main` construction) |
-| Grade-homogeneity + commutator-closure (A3-A4) | retained construction structure | comparison-family |
-| `O(n)` covariance (A2) + no-selector (A5) | canonical framework rules | retained as "canonical" |
+| Graph/η-phase/taste rules on `Z^n` | framework-native extension of retained `n = 3` recipe | comparison-family / support-route |
+| Grade-homogeneity + commutator-closure (A3-A4) | admissibility package | comparison-family |
+| `O(n)` covariance (A2) + no-selector (A5) | admissibility package / canonical reading | not yet retainedly closed |
 | `Λ²(R^n)` irreducibility under `B_n ⊂ O(n)` | Lie theory / classical group theory | pure math |
 | Observed weak gauge group is `SU(2)` | Standard-Model empirical input | retained observation |
 
@@ -266,9 +266,8 @@ Parts:
 
 **This theorem does.**
 
-- Certify that the retained native-gauge construction, taken at
-  framework scope via the graph/η-phase/taste rules on `Z^n`, forces
-  the weak-gauge generator space to be the full bivector sector of
+- Certify that **under admissibility `(A1)-(A5)`**, the comparison-family
+  weak-gauge generator space is forced to be the full bivector sector of
   `Cl(n)`, not merely admits it.
 - Certify that no proper bivector subspace is `O(n)`-covariant for
   any `n ∈ {2, ..., 6}`, via direct commutant computation.
@@ -301,32 +300,27 @@ three concrete pieces that address their specific complaints:
    classically established for all `n ≥ 3` via `so(n)` adjoint-rep
    irreducibility.
 
-The remaining reviewer-judgment question is whether the admissibility
-conditions (A1)-(A5) are themselves retention-grade framework rules
-or a proposed axiomatization layered on top of the retained stack.
-My position is:
+The remaining reviewer question is no longer whether a genuine
+family-scope uniqueness theorem exists; this note provides one. The
+remaining question is whether the admissibility conditions `(A1)-(A5)`,
+especially `A4` and the family-scope status of `A2/A5`, are themselves
+retainedly derived from the current framework stack.
 
-- (A1) Reduction is forced by the retained `n = 3` code.
-- (A2) `O(n)`-covariance is the natural symmetry of the lattice
-  construction; rejecting it would require introducing an external
-  selector, which (A5) forbids.
-- (A3) Commutator closure is the defining property of a gauge Lie
-  algebra; a "gauge generator space" that isn't closed under bracket
-  is not a gauge algebra.
-- (A4) Grade-homogeneity is the natural functoriality condition for a
-  recipe that extends across `n` without `n`-specific bookkeeping;
-  mixed-grade recipes require additional structure and fail (A5).
-- (A5) No-selector is the reviewer's own primitive — they explicitly
-  asked for "no external selector field or extra structure."
+This note does **not** close that question. It instead establishes the
+strongest current theorem within the reviewer's requested framing:
 
-So the admissibility conditions track the reviewer's own framing
-directly, and the proof is a theorem within that framing.
+- grant admissibility `(A1)-(A5)`,
+- then `V_n = Λ²(R^n)` is forced uniquely,
+- and the tightness corollary reduces the rest of the argument to
+  classical Lie theory plus the retained weak-`SU(2)` observation.
 
 ## Next
 
-With this uniqueness theorem in place, the tightness theorem's load
-is purely classical Lie theory (`spin(n) = su(2) ⇔ n = 3`), and the
-combined package derives `d_s = 3` at retention grade.
+With this uniqueness theorem in place, the tightness note's remaining
+load is purely classical Lie theory (`spin(n) = su(2) ⇔ n = 3`) once
+the admissibility package is granted. That makes the combined package
+the strongest current support-route path to `d_s = 3`; it does not yet
+upgrade `d_s = 3` to retained closure on `main`.
 
 Follow-ups (orthogonal to this note):
 

@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """
-Family-scope native-gauge UNIQUENESS theorem — verification runner.
+Family-scope native-gauge UNIQUENESS theorem — conditional support runner.
 
-Addresses the reviewer's 2026-04-17 retention-grade blocker:
-"upgrade the native-gauge scope theorem from an admissible extension
-to a forced uniqueness theorem."
+Addresses the reviewer's request for a genuine family-scope uniqueness
+theorem: upgrade the native-gauge scope theorem from an admissible
+extension to a forced uniqueness theorem, while keeping the theorem
+explicitly conditional on admissibility conditions (A1)-(A5).
 
 Concretely: verify that under the admissibility conditions
 
@@ -466,7 +467,9 @@ def part_e_pipeline() -> None:
     print("  Corollary (tightness): V_n = Lambda^2(R^n) has dim n(n-1)/2.")
     print("  Observed weak gauge Lie algebra su(2) has dim 3. So:")
     print("    n(n-1)/2 = 3  =>  n = 3  uniquely.")
-    print("  This completes d_s = 3 at retention grade.")
+    print("  This is the strongest current support-route path to d_s = 3.")
+    print("  It does not yet close the retained status of the admissibility")
+    print("  package itself.")
 
     check(
         "Tightness corollary: dim(V_n) = dim(su(2)) forces n = 3",
@@ -505,12 +508,14 @@ def main() -> int:
     print()
     print("  The arbitrary-n Gamma_k are derived from the framework's own")
     print("  graph/eta-phase/taste rules on Z^n (Part A), not from textbook")
-    print("  Clifford machinery. This addresses the reviewer's point that the")
-    print("  arbitrary-n extension must come from retained framework rules.")
+    print("  Clifford machinery. This addresses the extension side of the")
+    print("  reviewer's point without, by itself, closing the retained status")
+    print("  of A2/A4/A5.")
     print()
     print("  Combined with the companion native-SU(2)-tightness theorem,")
-    print("  this uniquely forces n = 3, upgrading d_s = 3 from axiom to")
-    print("  retention-grade theorem.")
+    print("  this gives the strongest current conditional path to n = 3.")
+    print("  It does not, by itself, upgrade d_s = 3 from axiom to retained")
+    print("  theorem on main.")
     print("=" * 72)
 
     return 0 if FAIL == 0 else 1

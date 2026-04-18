@@ -2,24 +2,21 @@
 
 ## Current Call
 
-This branch is again materially better than the prior round. The new
-`native-gauge-family-uniqueness-2026-04-17.md` finally adds the theorem the
-previous review asked for: a family-scope uniqueness result, not just a scope
-extension or a tightness corollary.
+This branch is now in the right state.
 
 My current disposition is:
 
 - **No** as retained G16 / `d_s = 3` closure
-- **Yes** as a strong support-route package if the retained-grade language is
-  downgraded accordingly
+- **Yes** to land as a strong support-route / comparison-family packet
 
-The branch is now close in the right way. The remaining blocker is no longer
-"you have no uniqueness theorem." The remaining blocker is:
+The key change from the prior review is that the branch no longer tries to
+present the new scope / uniqueness / tightness stack as retained closure. The
+real science is now described honestly:
 
-- the uniqueness theorem is proved **under the admissibility package
+- the uniqueness theorem is real, but proved **under the admissibility package
   (A1)-(A5)**,
-- and the note's own premise table still classifies load-bearing pieces of that
-  package as **comparison-family**, not retained.
+- and the load-bearing pieces of that package remain **comparison-family /
+  not-yet-retainedly-closed**.
 
 So the branch now proves:
 
@@ -34,15 +31,11 @@ That is valuable. But it is still not the same as:
 
 ## Branch Hygiene
 
-Before any landing discussion, **rebase this branch onto current
-`origin/main`**.
-
 At the time of this pass:
 
-- branch is **3 behind / 19 ahead** `origin/main`
+- branch is **0 behind / 23 ahead** `origin/main`
 
-So even if the science were accepted at retained bar, this branch is not yet
-landable as-is.
+So branch hygiene is no longer the blocker.
 
 ## Replay Status
 
@@ -79,9 +72,9 @@ Three real improvements are now present:
 
 That is genuine progress, and the review note should acknowledge it directly.
 
-## Main Blocker
+## Main Remaining Science
 
-### The new uniqueness theorem still depends on an admissibility package that is not yet retainedly closed
+### The uniqueness theorem still depends on an admissibility package that is not yet retainedly closed
 
 The key theorem now begins with:
 
@@ -110,15 +103,15 @@ alone. It is deriving it from:
 - plus a new admissibility package whose most load-bearing step
   (`A4` grade-homogeneity / functoriality) is not yet retainedly closed.
 
-That is the current blocker in one sentence:
+That is the current scientific blocker in one sentence:
 
 > the uniqueness theorem is now real, but it is still conditional on a new
 > admissibility layer rather than derived from already-retained framework
 > rules.
 
-## Runner Weakness
+## Runner Boundary
 
-### The new runner certifies the conditional pipeline, but still not the retained status of that pipeline
+### The runners certify the conditional pipeline, not the retained status of that pipeline
 
 The new runner is better than the earlier scope runner, but it still does not
 certify the missing retained-grade step.
@@ -142,13 +135,13 @@ restatement of the conclusion under `(A1)-(A5)`, rather than an independent
 verification that the retained stack itself forces those premises.
 
 So `26/9 PASS` is evidence for the **conditional uniqueness theorem**, not for
-the stronger claim that `d_s = 3` is now retainedly closed from existing
-framework inputs alone.
+the stronger claim that `d_s = 3` is retainedly closed from existing framework
+inputs alone.
 
 ## Best Outcome From Here
 
 If the goal is to get this branch to **retained**, the worker should stop
-polishing the tightness corollary and instead close the status of the
+polishing downstream corollaries and instead close the status of the
 admissibility package itself.
 
 Specifically:
@@ -163,7 +156,8 @@ Specifically:
 
 That is the actual remaining science.
 
-If the worker cannot do that yet, the honest landing is:
+If the worker cannot do that yet, the honest landing is exactly what this
+cleanup now supports:
 
 - keep the new uniqueness theorem,
 - mark it as a **support-route / comparison-family conditional theorem**,
@@ -171,13 +165,13 @@ If the worker cannot do that yet, the honest landing is:
 
 ## Bottom Line
 
-This branch now contains a real and useful theorem that the earlier rounds did
-not have. But it is still not retained `d_s = 3` closure, because the
-load-bearing admissibility package is not yet itself retainedly derived.
+This branch now contains a real and useful theorem packet that the earlier
+rounds did not have. But it is still not retained `d_s = 3` closure, because
+the load-bearing admissibility package is not yet itself retainedly derived.
 
 So my current recommendation is:
 
 - **do not land as retained closure**
-- **do keep this as the strongest support-route version so far**
-- **upgrade only after the admissibility package is itself closed at retained
-  bar**
+- **do land it only as the strongest support-route version so far**
+- **do not spend more time pushing side science unless it directly closes
+  `A2/A4/A5`, especially `A4`**

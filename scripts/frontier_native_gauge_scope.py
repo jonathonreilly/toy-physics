@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """
-Native-gauge scope theorem — verification runner.
+Native-gauge scope theorem — structural clarification runner.
 
 Verifies that the retained native-SU(2) construction on
 `docs/NATIVE_GAUGE_CLOSURE_NOTE.md` is literally the recipe
 "gauge generators := Clifford bivectors of Cl(n)", and that this recipe
-is selector-free by construction and comparison-family-scoped. This
-promotes the "canonical no-selector" reading from interpretation to
-structural fact about the retained code.
+is selector-free by construction and comparison-family-scoped. This is a
+support-route clarification of the retained `n = 3` code, not a
+standalone retained `d_s = 3` closure runner.
 
 Parts:
 
@@ -390,9 +390,10 @@ def main() -> int:
     print("  Part D-E show the bivector Lie algebra equals spin(n), and")
     print("  spin(n) = su(2) iff n = 3 by dimensional matching.")
     print()
-    print("  This is the separate retained theorem that the companion")
-    print("  native-SU(2)-tightness note requires. Together they upgrade")
-    print("  d_s = 3 from axiom to derived.")
+    print("  This is the structural clarification that the companion notes use.")
+    print("  By itself it does not upgrade d_s = 3 from axiom to derived on")
+    print("  main; the remaining live issue is the retained status of the")
+    print("  family-scope admissibility package.")
     print("=" * 72)
 
     return 0 if FAIL == 0 else 1
