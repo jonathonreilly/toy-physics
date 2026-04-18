@@ -4,11 +4,11 @@
 **Status:** proposed **retained structural identity corollary** +
 **bounded quantitative continuation**. Packages the already-exact-on-the-
 retained-internal-surface relation `m_g^2 = 2 hbar^2 Lambda_vac / c^2` from
-the graviton-mass companion into a standalone retained identity theorem on
-`main`, built directly from
+the graviton-mass companion into a standalone proposed-retained identity
+theorem, built directly from the retained
 [`COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md`](COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md)
-and the Lichnerowicz TT spectrum on `S^3`. Publication matrix and claims
-table are left unchanged pending reviewer acceptance.
+on `main` and the Lichnerowicz TT spectrum on `S^3`. Publication matrix and
+claims table are left unchanged pending reviewer acceptance.
 **Script:** `scripts/frontier_graviton_mass_spectral_gap_identity.py`
 **Upstream authorities (all retained on `main`):**
 [`COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md`](COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md),
@@ -109,10 +109,31 @@ on an Einstein manifold. (References: Higuchi 1987; Deser and Nepomechie
 [`GRAVITON_MASS_DERIVED_NOTE.md`](GRAVITON_MASS_DERIVED_NOTE.md), Step 1,
 rewritten here so the TT spectrum is in the chain of this note.
 
-The TT mass squared on that background is `m_g^2 c^2 / hbar^2 =
-lambda_2^TT = 6 / R^2`, equivalently
+*Mass identification (KK-style compactness).* The linearized Einstein
+equations on `PL S^3 x R` restricted to TT metric perturbations reduce,
+after harmonic decomposition on `S^3`, to a family of decoupled 1+0D
+oscillator equations for the modal amplitudes, one per spatial TT
+harmonic. Each equation takes the form
 
-  `m_g^2  =  6 hbar^2 / (c^2 R^2)`.
+  `(d^2 / dt^2 + c^2 lambda_l^TT) a_l(t)  =  0`,
+
+so the modal amplitudes oscillate with angular frequency
+`omega_l = c sqrt(lambda_l^TT)`. In the standard compactness / Kaluza-
+Klein identification for a field on a compact spatial manifold, the 1+0D
+effective rest-mass-squared per mode is `m_l^2 c^2 / hbar^2 = lambda_l^TT`
+(equivalently `E_l = hbar omega_l` at vanishing linear momentum on the
+compact slice). Applied to the lowest TT mode at `l = 2`:
+
+  `m_g^2  =  hbar^2 lambda_2^TT / c^2  =  6 hbar^2 / (c^2 R^2)`.
+
+This is the same identification recorded in
+[`GRAVITON_MASS_DERIVED_NOTE.md`](GRAVITON_MASS_DERIVED_NOTE.md), Step 3,
+as an exact consequence of the `S^3` Lichnerowicz spectrum. The retained
+content of this theorem is the spectral identity and the KK rest-mass
+identification; the separate question of whether this compactness-mass
+behaves exactly like a 4D-effective-theory Fierz-Pauli mass at the quantum
+level (the vDVZ issue) is **not** claimed and stays in the bounded
+companion note (see "What Is Not Retained by This Theorem" below).
 
 *Leg B (retained vacuum identity).* Condition (1) is the retained identity
 theorem `Lambda_vac = 3 / R^2` for every `R > 0`. Substituting into the
@@ -153,9 +174,19 @@ a ratio of exactly `3`. □
   recorded in
   [`GRAVITON_MASS_DERIVED_NOTE.md`](GRAVITON_MASS_DERIVED_NOTE.md)
   and in the `graviton mass m_g` row of the current publication matrix;
-- the vDVZ-style "topological mass vs Fierz-Pauli" argument (qualitative
-  on `main` — see
-  [`GRAVITON_MASS_DERIVED_NOTE.md`](GRAVITON_MASS_DERIVED_NOTE.md), Step 5);
+- the 4D-effective-theory interpretation of the compactness mass `m_g` as
+  a Fierz-Pauli-like massive-graviton mass with matching vDVZ behavior:
+  the KK rest-mass identification is classical and standard, but the
+  quantum-level defense that this compactness mass avoids the vDVZ
+  discontinuity is only qualitative on `main` and is flagged as such in
+  [`GRAVITON_MASS_DERIVED_NOTE.md`](GRAVITON_MASS_DERIVED_NOTE.md),
+  Bounded point 8 and Step 5. This theorem covers only the spectral
+  identity `m_g^2 = 2 hbar^2 Lambda_vac / c^2` in the retained KK rest-
+  mass sense; it does **not** promote the full-4D-EFT "real graviton
+  mass" claim;
+- the Vainshtein-screening / solar-system consistency argument:
+  quantitatively bounded-below-current-bounds in the companion, not a
+  theorem;
 - detectability: the prediction is `~10^10` below LIGO O3 and the
   strongest model-independent bound, unchanged on the retained surface.
 
@@ -181,12 +212,17 @@ form of the relation; the bounded piece is the numerical evaluation.
 This theorem is strictly downstream of
 [`COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md`](COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md):
 that note retained `Lambda_vac = lambda_1(S^3_R) = 3/R^2`; this one adds
-the Lichnerowicz TT lowest-mode side and reads off
+the Lichnerowicz TT lowest-mode side and reads off the pure-number
+spectral ratio
 
-  `m_g^2 / Lambda_vac  =  (lambda_2^TT) / (lambda_1 hbar^-2 c^2) * hbar^2 / c^2
-                        =  2 hbar^2 / c^2`,
+  `lambda_2^TT / lambda_1  =  (6 / R^2) / (3 / R^2)  =  2`,
 
-a pure-number ratio fixed by the retained `S^3` spectral geometry. So:
+which converts the `Lambda_vac = 3/R^2` identity into
+
+  `m_g^2 / Lambda_vac  =  (hbar^2 / c^2) * (lambda_2^TT / lambda_1)
+                       =  2 hbar^2 / c^2`.
+
+So:
 
 - the scalar-Laplacian first eigenvalue `3/R^2` fixes `Lambda_vac`;
 - the Lichnerowicz TT lowest eigenvalue `6/R^2` fixes `m_g^2 c^2/hbar^2`;
