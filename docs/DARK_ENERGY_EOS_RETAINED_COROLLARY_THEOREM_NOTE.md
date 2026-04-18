@@ -1,9 +1,10 @@
 # Dark-Energy EOS Retained Structural Corollary
 
 **Date:** 2026-04-18
-**Status:** proposed **retained structural corollary** + **bounded quantitative
-continuation**. This note is the promotion-target write-up; the publication
-matrix and claims table are left unchanged pending reviewer acceptance.
+**Status:** proposed **retained structural corollary** on the companion-lane
+spectral-gap vacuum identification. This note is the promotion-target
+write-up; the publication matrix and claims table are left unchanged pending
+reviewer acceptance.
 **Script:** `scripts/frontier_dark_energy_eos_retained_corollary.py`
 **Upstream authorities:**
 [`S3_GENERAL_R_DERIVATION_NOTE.md`](S3_GENERAL_R_DERIVATION_NOTE.md),
@@ -27,8 +28,9 @@ the EOS value `w`, nothing else.
 The scientific content is already present in
 [`COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md`](COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md)
 under "`w = -1` is the same mechanism". The contribution of this note is to
-separate that statement into its own dual-status row, using the architecture
-already established by
+separate that statement into a standalone retained-corollary row for the
+EOS `w`, following the structural-corollary-with-named-conditioning
+precedent of
 [`CONFINEMENT_STRING_TENSION_NOTE.md`](CONFINEMENT_STRING_TENSION_NOTE.md)
 and
 [`CKM_NEUTRON_EDM_BOUND_NOTE.md`](CKM_NEUTRON_EDM_BOUND_NOTE.md).
@@ -50,8 +52,11 @@ Let the retained surface carry:
    used by the canonical cosmology-companion lane (authority:
    [`COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md`](COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md));
 4. a fixed radius `R` (i.e. the topology is not dynamically rescaled by
-   cosmic evolution; only topology change or a non-isometric deformation can
-   shift `lambda_1`).
+   cosmic evolution; rescaling `R` or a non-isometric deformation of the
+   round metric would shift `lambda_1`, neither is retained on `main`).
+
+In what follows we write `a_sc(t)` for the FRW scale factor and `l_P` for the
+fundamental lattice spacing, to keep those separate from the S^3 radius `R`.
 
 **Theorem.** Under conditions (1)–(4), the dark-energy density is exactly
 time-independent,
@@ -63,23 +68,25 @@ and therefore the dark-energy equation of state is
   `w = -1   exactly`,
 
 with CPL parameters `w_0 = -1`, `w_a = 0`. The retained lattice-discretization
-correction is a constant shift `|delta Lambda / Lambda| = (1/4)(a/R)^2`
+correction is a constant shift `|delta Lambda / Lambda| = (1/4)(l_P / R)^2`
 (authority:
 [`DARK_ENERGY_EOS_NOTE.md`](DARK_ENERGY_EOS_NOTE.md), Part 2), hence carries
 no additional time dependence and does **not** shift `w`.
 
-**Proof.** Conditions (1)–(3) give `Lambda = 3/R^2`. Condition (4) gives
+**Proof.** Conditions (1)–(3) give `Lambda = 3 / R^2`. Condition (4) gives
 `d R / d t = 0`, so `d Lambda / d t = 0` and `d rho_Lambda / d t = 0`. The
-continuity equation for any cosmological fluid is
+continuity equation for any cosmological fluid on the retained smooth FRW
+target is
 
   `d rho / d t + 3 H (1 + w) rho = 0`,
 
 which for `rho = rho_Lambda > 0` and `d rho_Lambda / d t = 0` forces
-`(1 + w) = 0`, i.e. `w = -1`. Equivalently, `w = -1 - (1/3) d ln rho / d ln a`
-and `d ln rho_Lambda / d ln a = 0`. The retained lattice correction enters as
-`Lambda_eff = (3/R^2)(1 - (1/4)(a/R)^2)`, which is `a(t)`-independent when the
-fundamental lattice spacing `a = l_P` and topology scale `R` are both fixed,
-so `d rho_Lambda / d t = 0` is preserved. □
+`(1 + w) = 0`, i.e. `w = -1`. Equivalently,
+`w = -1 - (1/3) d ln rho / d ln a_sc` and
+`d ln rho_Lambda / d ln a_sc = 0`. The retained lattice correction enters as
+`Lambda_eff = (3 / R^2) * (1 - (1/4)(l_P / R)^2)`, which is
+`a_sc(t)`-independent when `l_P` and `R` are both fixed constants, so
+`d rho_Lambda / d t = 0` is preserved. □
 
 ## What Is Retained Exactly
 
@@ -113,26 +120,40 @@ following are **not** upgraded by this note:
 - first-principles derivation of the cosmological-scale matching: unchanged,
   still the honest remaining gap.
 
-## Dual-Status Architecture
+## Relationship to Other Cosmology Rows
 
-This note follows the template already used on `main`:
+The EOS value `w` and the numerical `Lambda` value already sit in **distinct
+rows** of
+[`PUBLICATION_MATRIX.md`](publication/ci3_z3/PUBLICATION_MATRIX.md). This note
+asks only for the `Dark energy EOS w` row to move. The `Cosmological constant
+Lambda` row is unchanged and stays `bounded/conditional` as recorded in
+[`COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md`](COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md).
+The matter-content bridge behind present-day `Omega_Lambda`
+([`COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md`](COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md))
+is also unchanged. So the package-level picture after promotion would read:
 
-- retained structural corollary:
-  `w = -1` exactly on the retained `S^3` + spectral-gap + fixed-`R` surface
-  (this note);
-- bounded quantitative continuation:
-  numerical `Lambda = 3 / R_Lambda^2` still conditional on the
-  cosmology-scale identification
-  (authorities:
-  [`COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md`](COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md),
-  [`COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md`](COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md)).
+- **retained structural corollary (new):**
+  `w = -1` exactly on the retained `S^3` + spectral-gap + fixed-`R` surface;
+- **bounded/conditional (unchanged):**
+  numerical `Lambda`, present-day `Omega_Lambda`, spectral tilt `n_s`,
+  graviton mass, and the cosmology-scale identification itself.
 
-Analogous rows already on `main`:
+Precedent structural-corollary promotions already on `main`:
 
-- retained `T = 0` confinement + bounded `sqrt(sigma) ~ 465 MeV`
+- retained `T = 0` confinement of graph-first SU(3), with `sqrt(sigma)` kept
+  bounded
   ([`CONFINEMENT_STRING_TENSION_NOTE.md`](CONFINEMENT_STRING_TENSION_NOTE.md));
-- retained `d_n(QCD) = 0` + bounded `d_n(CKM) ~ 10^-33 e cm`
+- retained `d_n(QCD) = 0` on the `theta_eff = 0` surface, with `d_n(CKM)`
+  kept bounded
   ([`CKM_NEUTRON_EDM_BOUND_NOTE.md`](CKM_NEUTRON_EDM_BOUND_NOTE.md)).
+
+The difference from those precedents: CKM-EDM and confinement each bundle
+an exact retained component (`d_n(QCD) = 0`, `T = 0` confinement) with a
+bounded numerical continuation on *the same observable* (`d_n(CKM)`,
+`sqrt(sigma)`). Here the EOS `w` is the whole observable — its retained
+value is `-1` exactly, with no separate bounded numerical continuation on
+that same observable. The bounded parts live in the adjacent `Lambda` and
+`Omega_Lambda` rows.
 
 ## Safe Claim Boundary
 
@@ -140,7 +161,9 @@ What this lane supports:
 
 - on the retained `S^3` + spectral-gap + fixed-`R` surface, the dark-energy
   density is exactly time-independent and `w = -1` is exact;
-- CPL parameters `w_0 = -1`, `w_a = 0` to all orders on that surface;
+- every Taylor coefficient of `w(a_sc)` in `(1 - a_sc)` vanishes except the
+  constant `-1`; in particular the CPL parameters are `w_0 = -1`, `w_a = 0`
+  exactly;
 - retained lattice-discretization corrections are constant and do not shift
   `w`.
 
@@ -154,28 +177,30 @@ What this lane does **not** support:
   companion surface.
 
 The scope of the corollary is therefore the EOS value `w`, conditional on the
-retained identification `Lambda = lambda_1(S^3)` that is already used by the
-cosmology companion stack.
+companion-lane identification `Lambda = lambda_1(S^3)` that is already used
+by the cosmology companion stack.
 
 ## Observational Falsifiability
 
 This is a clean binary prediction. DESI, Euclid, and SPHEREx are actively
-constraining the CPL `(w_0, w_a)` plane:
+constraining the CPL `(w_0, w_a)` plane. The exact SN compilation changes the
+central values; across the combinations used in DESI DR1 (2024) and DR2
+(2025), the published BAO + CMB + Type Ia SN posteriors showed a persistent
+`2-4 sigma` preference for `(w_0, w_a) != (-1, 0)` depending on which SN
+sample is combined. The DR2 update did not collapse that tension to LCDM;
+it held or modestly strengthened for most combinations. DESI final (2026-2027)
+is forecast to reach a few-percent absolute precision on `w_0`.
 
-- DESI DR1 (2024): `w_0 = -0.55 +/- 0.21`, `w_a = -1.30 +0.70/-0.60`
-  (2-3 sigma hint of dynamical DE, systematics not excluded);
-- DESI DR2 (2025): tension reduced, trending toward `(w_0, w_a) = (-1, 0)`;
-- DESI final (2026-2027): expected `~1%` precision on `w_0`.
-
-Any `> 5 sigma` detection of `w != -1` or `w_a != 0` falsifies the
+Any `> 5 sigma` detection of `w_0 != -1` or `w_a != 0` falsifies the
 spectral-gap vacuum identification used by the retained corollary. Any
 detection of `w < -1` at any epoch is independently a phantom-crossing
 falsification.
 
 Retained framework corrections to `w = -1`:
 
-- lattice-discretization drift bound: `|delta w| < (1/4)(l_P / R_H)^2
-  ~ 2 x 10^-123` under any conceivable evolution of `a/R`;
+- lattice-discretization drift bound: `|delta w| < (1/4)(l_P / R)^2
+  ~ 3 x 10^-123` at the vacuum scale `R ~ R_H`, under any conceivable
+  evolution of `l_P / R` consistent with both being fixed constants;
 - higher-`k` mixing: excluded on the fixed-topology + fixed-`R` surface;
 - topological phase transitions: would produce a discontinuity, not a smooth
   CPL drift.
@@ -190,14 +215,20 @@ This note does not modify
 [`CLAIMS_TABLE.md`](publication/ci3_z3/CLAIMS_TABLE.md). Those changes are
 reviewer-gated and belong to the publication control plane. For reviewer
 reference, the proposed edit to the `Dark energy EOS w` row of the
-quantitative component stack is:
+quantitative component stack (matrix section B), matching the existing
+9-column schema, is:
 
-| Quantity / lane | Framework result | Status | Current publication decision |
-|---|---|---|---|
-| Dark energy EOS `w` | `w = -1` exact on retained `S^3` + spectral-gap + fixed-`R` surface; numerical `Lambda` still bounded | retained structural corollary + bounded quantitative continuation | retained corollary may appear on the flagship / SI surface; numerical `Lambda` stays the existing bounded/conditional companion |
+| Quantity / lane | Workstream | Framework result | Observation / comparator | Claim-strength status | Import class | Current publication decision | Authority / best source | Frozen-out ref |
+|---|---|---|---|---|---|---|---|---|
+| Dark energy EOS `w` | spectral-gap cosmology | `w = -1` exactly on retained `S^3` + spectral-gap + fixed-`R` surface; CPL `(w_0, w_a) = (-1, 0)` | observationally near `-1`, DESI BAO + CMB + SN posteriors show persistent 2-4 sigma preference for `w != -1` depending on SN combination | retained structural corollary (companion-surface conditional) | retained `S^3` topology + retained spectral gap `lambda_1 = 3/R^2` + companion-lane spectral-gap vacuum identification `Lambda = lambda_1(S^3_R)` + fixed `R` | retained corollary may appear on the flagship / SI surface; numerical `Lambda` stays the existing bounded/conditional companion row | this note + [DARK_ENERGY_EOS_NOTE.md](../../DARK_ENERGY_EOS_NOTE.md) + [COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md](../../COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md) | `F04` |
 
-This mirrors the existing "CKM-only neutron EDM on the retained `theta_eff = 0`
-surface" row.
+The adjacent `Cosmological constant Lambda` row and the remaining cosmology
+companion rows are **not** proposed for change.
+
+This row framing mirrors the existing "CKM-only neutron EDM on the retained
+`theta_eff = 0` surface" row in that the retention is structurally exact but
+carries a named companion-surface conditioning (there: the EFT bridge; here:
+the spectral-gap vacuum identification).
 
 ## Commands Run
 

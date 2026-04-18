@@ -215,7 +215,7 @@ def check_cpl_parameters() -> None:
     """
     a_grid = np.linspace(0.01, 3.0, 5000)
     w_of_a = np.full_like(a_grid, -1.0)
-    w_0_fit = w_of_a[-1] if False else w_of_a[np.argmin(np.abs(a_grid - 1.0))]
+    w_at_a_equals_one = float(w_of_a[np.argmin(np.abs(a_grid - 1.0))])
     # linear fit of (1 - a) -> w gives slope w_a and intercept w_0
     slope, intercept = np.polyfit(1.0 - a_grid, w_of_a, 1)
     check("CPL intercept w_0 = -1 exactly",
@@ -225,8 +225,8 @@ def check_cpl_parameters() -> None:
           abs(slope) < 1e-12,
           f"w_a = {slope:+.12e}")
     check("pointwise w(a=1) = -1",
-          w_0_fit == -1.0,
-          f"w(a=1) = {w_0_fit:+.12e}")
+          w_at_a_equals_one == -1.0,
+          f"w(a=1) = {w_at_a_equals_one:+.12e}")
 
 
 # ---------------------------------------------------------------------------
