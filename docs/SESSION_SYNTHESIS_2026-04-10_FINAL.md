@@ -246,15 +246,17 @@ The full-suite baseline is now frozen:
 
 10. **Retarded family-closure sibling**: DONE as a bounded positive sibling
     result. `frontier_two_field_retarded_family_closure.py` closes `9/9` on all
-    three admissible cycle-bearing families and retains the causal DAG at
-    `8/9` (`R8` gauge structurally N/A). This is the retained family-closure
-    sibling; keep it distinct from the still-partial retarded probe.
+    three admissible cycle-bearing families and extends to a layered
+    DAG-derived operating point at `8/9` (`R8` gauge structurally N/A). This is
+    the retained family-closure sibling; keep it distinct from the still-
+    partial retarded probe and from any genuinely directed-DAG claim.
 
-11. **Causal DAG compatibility**: DONE as a retained probe.
-   `frontier_staggered_dag.py` closes `6/6` on three layered DAG
+11. **Layered DAG-derived control**: narrowed to a bounded control.
+   `frontier_staggered_dag.py` still closes `6/6` on three layered acyclic
    configurations with Born-clean linearity, exact norm, measurable forward
-   propagation, and inward retained proxy response under the corrected
-   parity-coupled sign.
+   depth bias, and inward proxy response under the corrected parity-coupled
+   sign, but the live Hamiltonian symmetrizes the adjacency so this is not a
+   genuinely directed-Hamiltonian DAG theorem.
 
 12. **First larger-graph break frontier**: DONE as a retained boundary note.
     `frontier_staggered_cycle_break_frontier.py` shows that the first honest

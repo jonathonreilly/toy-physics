@@ -34,7 +34,7 @@ Use the smallest retained runner that actually carries the claim:
   - [`scripts/frontier_staggered_self_gravity.py`](../../scripts/frontier_staggered_self_gravity.py)
 - two-field retarded sibling:
   - [`scripts/frontier_two_field_retarded_family_closure.py`](../../scripts/frontier_two_field_retarded_family_closure.py)
-- causal DAG compatibility:
+- layered DAG-derived control:
   - [`scripts/frontier_staggered_dag.py`](../../scripts/frontier_staggered_dag.py)
 - emergent geometry:
   - [`scripts/frontier_emergent_geometry_v2.py`](../../scripts/frontier_emergent_geometry_v2.py)

@@ -294,6 +294,9 @@ Action:
 
 ### 9. DAG compatibility lane
 
+**Status on `main`: narrowed to a bounded layered-geometry control; no longer
+safe to cite as a genuinely directed causal-DAG result**
+
 Affected runner:
 
 - [`scripts/frontier_staggered_dag.py`](../scripts/frontier_staggered_dag.py)
@@ -301,6 +304,11 @@ Affected runner:
 Reason:
 
 - current Hamiltonian uses both edge directions, so it is not a true DAG
+
+Current mainline read:
+
+- the runner and note are now framed as a layered DAG-derived control with
+  symmetrized Hermitian transport
 
 Action:
 

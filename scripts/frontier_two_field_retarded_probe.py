@@ -234,7 +234,7 @@ def make_layered_cycle(seed=42, layers=6, width=4) -> Graph:
 
 
 def make_causal_dag(seed=42, layers=8, width=5) -> Graph:
-    """Layered bipartite DAG-like tree: one forward connection per node, no cycles."""
+    """Layered acyclic template derived from a DAG-like tree, with symmetrized adjacency."""
     rng = random.Random(seed)
     coords = []
     colors = []
@@ -262,7 +262,7 @@ def make_causal_dag(seed=42, layers=8, width=5) -> Graph:
             adj[j].add(i)
     adj_l = {k: list(v) for k, v in adj.items()}
     src = layer_nodes[0][0]
-    return Graph("causal_dag", pos, col, adj_l, n, src, _bfs(adj_l, src, n), None)
+    return Graph("layered_dag_derived", pos, col, adj_l, n, src, _bfs(adj_l, src, n), None)
 
 
 # ============================================================================

@@ -385,7 +385,7 @@ def main() -> None:
         f"family closure: iters={FAMILY_CLOSURE_ITERS}, seed_mix={FAMILY_SEED_MIX:.2f}, "
         f"sharpen={FAMILY_SHARPEN:.2f}, relax={FAMILY_RELAX:.2f}, capture_exp={FAMILY_CAPTURE_EXP:.2f}"
     )
-    print("Graph-native: random geometric, growing, layered cycle, causal DAG.")
+    print("Graph-native: random geometric, growing, layered cycle, layered DAG-derived control.")
     print()
 
     scores = []

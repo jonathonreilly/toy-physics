@@ -21,8 +21,9 @@ Direct sign tests now split cleanly:
 - under the corrected parity and lapse couplings, well vs hill are
   distinguishable in the exact-lattice external-potential test
 - the canonical exact-force staggered card survives unchanged at `17/17`
-- graph portability (`7/7`), self-gravity (`5/5`), wave coupling (`5/5`),
-  and DAG compatibility (`6/6`) all survive numerically under the parity rewrite
+- graph portability (`7/7`), self-gravity (`5/5`), the rerun-corrected wave
+  coupling (`4/5`, `5/5`, `4/5`), and the layered DAG-derived control (`6/6`)
+  all survive numerically under the parity rewrite
 - the cycle battery now closes `9/9` on all three retained cycle-bearing
   families
 - the scaled sibling now closes `9/9` on all nine retained larger-size runs
@@ -215,7 +216,8 @@ current blocker, not the exact-cubic sign test.
 **Script:** `frontier_correct_coupling.py`
 
 **Action completed in part:** the retained stack is being rewritten around the
-parity coupling; the canonical card, portability, self-gravity, wave, and DAG
+parity coupling; the canonical card, portability, self-gravity, rerun-corrected
+wave note, and layered DAG-derived control
 probes survive, while some cycle/retarded rows now fail honestly.
 
 ### Option B: Sign-Agnostic Observables
@@ -267,8 +269,8 @@ What now survives cleanly:
 - exact-lattice directional response on the canonical `17-card`
 - graph portability `7/7`
 - self-gravity `5/5` with strong contraction across all retained scaling families
-- wave two-field `5/5`
-- DAG compatibility `6/6`
+- rerun-corrected wave two-field `4/5`, `5/5`, `4/5`
+- layered DAG-derived control `6/6`
 - cycle battery `9/9` on all three retained cycle-bearing families
 - scaled sibling `9/9` on all nine retained larger-size runs
 - retarded family-closure sibling `9/9`, `9/9`, `9/9`, `8/9`

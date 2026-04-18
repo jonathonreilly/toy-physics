@@ -8,7 +8,7 @@
 - irregular graph batteries
 - self-gravity
 - two-field wave audit / retarded closure
-- DAG compatibility
+- layered DAG-derived control
 - sign/direction audit and blocker
 - emergent geometry reopen
 
@@ -37,5 +37,7 @@
 - irregular graph structural package is strong
 - retained two-field closure lives on the retarded family-closure sibling; the
   older wave-law prototype is now bounded after the clean-family rerun
+- the old staggered DAG runner is now read only as a bounded layered-geometry
+  control because its Hamiltonian symmetrizes the adjacency
 - off-lattice sign-selective observable is still the main blocker
 - emergent geometry is partially reopened, not closed

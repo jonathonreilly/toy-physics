@@ -56,9 +56,10 @@ This backlog is ordered by value to the main project, not by ease.
   [`frontier_staggered_cycle_battery_scaled.py`](../scripts/frontier_staggered_cycle_battery_scaled.py):
   the force-first battery stays closed on random geometric, growing, and
   layered cycle at side `8`, `10`, and `12`.
-- A retained causal-DAG compatibility probe now exists in
+- A bounded layered-DAG-derived control now exists in
   [`frontier_staggered_dag.py`](../scripts/frontier_staggered_dag.py): `6/6`
-  on three layered DAG configurations.
+  on three layered acyclic configurations, but with symmetrized rather than
+  truly directed transport.
 - A first two-field endogenous coupling is now retained as a prototype in
   [`frontier_two_field_coupling.py`](../scripts/frontier_two_field_coupling.py),
   but it still uses relaxation dynamics for `Phi`.
@@ -74,7 +75,8 @@ This backlog is ordered by value to the main project, not by ease.
 - A sibling family-closure attempt now exists in
   [`frontier_two_field_retarded_family_closure.py`](../scripts/frontier_two_field_retarded_family_closure.py):
   it closes `9/9` on all three admissible cycle-bearing families and retains
-  the causal DAG at `8/9` (`R8` gauge structurally N/A).
+  a layered DAG-derived operating point at `8/9` (`R8` gauge structurally N/A),
+  but that layered control still uses symmetrized transport.
 - The first larger-graph break frontier is now frozen in
   [`frontier_staggered_cycle_break_frontier.py`](../scripts/frontier_staggered_cycle_break_frontier.py):
   the earliest clean failure is a gauge/current collapse on the random

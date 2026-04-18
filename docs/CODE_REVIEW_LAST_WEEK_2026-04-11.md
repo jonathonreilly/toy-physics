@@ -46,10 +46,6 @@ be promoted or reinterpreted without fixes.
 
 ## Validated Medium-Severity Findings
 
-1. `frontier_staggered_dag.py` is not actually directed in the Hamiltonian.
-   - The current construction stores edges both ways, so the retained signal is
-     a layered-bias result, not a true DAG propagation test.
-
 ## Resolved Since Review
 
 1. `frontier_two_field_retarded_probe.py` no longer scores R9 unconditionally.
@@ -75,6 +71,13 @@ be promoted or reinterpreted without fixes.
    - The live runner now uses a torus-shifted static field and a phase-scrambled
      same-spectrum null, and the current rerun reproduces the note's corrected
      fixed-surface output.
+
+4. `frontier_staggered_dag.py` no longer carries a live claim of genuinely
+   directed-Hamiltonian DAG compatibility.
+   - On current `main`, the runner and note now state the truth: the layered
+     acyclic template is still useful as a bounded geometry control, but the
+     Hamiltonian symmetrizes the adjacency, so the old retained causal-DAG
+     compatibility framing has been withdrawn.
 
 ## Verified False Positive From Agent Review
 

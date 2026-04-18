@@ -13,8 +13,9 @@ The strongest defended result is the retained staggered interaction stack:
 - self-gravity is retained on those same graph families
 - retarded family closure is retained on those same graph families; the older
   wave-law two-field hardening is now a bounded audit after the clean-family rerun
-- a causal-DAG sibling shows the same force/Born/norm/family story survives on
-  layered DAGs
+- a bounded layered-DAG-derived control shows the same force/Born/norm/family
+  numerics survive on a layered acyclic template, though not yet with a truly
+  directed Hamiltonian
 
 That is a real methodological result: the staggered graph-native interacting
 field lane is portable across an admissible graph class and is not just a
@@ -44,7 +45,8 @@ A real breakthrough would be:
 > one canonical, graph-native, endogenous matter-plus-field dynamics that
 > simultaneously closes the retained interaction battery, family robustness,
 > source-scale closure, and a sign-selective directional observable on both an
-> admissible cycle-bearing graph family and an admissible causal-DAG family,
+> admissible cycle-bearing graph family and an admissible genuinely directed
+> causal-DAG family,
 > without relying on external kernels or architecture-specific rescue
 > semantics.
 
@@ -57,7 +59,7 @@ Build one canonical iterative endogenous two-field harness on exactly two
 families:
 
 - one retained cycle-bearing family
-- one retained causal-DAG family
+- one genuinely directed causal-DAG family
 
 Use the best current nonlocal/retarded source law as the starting point and
 require, in one harness:

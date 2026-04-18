@@ -1,21 +1,24 @@
 #!/usr/bin/env python3
 """
-Staggered Fermion on Causal DAG — Retained Probe
-==================================================
-Tests the staggered architecture on a directed acyclic graph (DAG)
-with natural causal structure: edges go from past to future layers.
+Staggered Fermion on Layered DAG-Derived Family — Bounded Control
+=================================================================
+Tests the staggered architecture on a layered acyclic template derived from a
+causal DAG construction.
 
-The DAG provides:
-  - Causal ordering (partial order on events)
-  - Bipartite structure (color = layer % 2)
-  - Forward propagation (probability flows through layers)
+Important scope boundary:
+  - layers still provide a causal ordering / depth coordinate
+  - color still comes from layer parity
+  - the Hamiltonian uses a symmetrized Hermitian adjacency, not a genuinely
+    directed operator
+  - so this is a layered-DAG-derived compatibility control, not a proof of
+    true directed-Hamiltonian DAG transport
 
 Battery:
   D1: Force TOWARD (gravity)
   D2: N-stability (force stays TOWARD)
   D3: Norm conservation
   D4: Born (linearity)
-  D5: Causal propagation (probability moves forward in DAG)
+  D5: Forward-depth bias (probability moves toward later layers)
   D6: State-family robustness
 """
 
@@ -108,7 +111,7 @@ def run_dag_battery(n_layers=8, width=5, seed=42):
     psi0 = _gauss(pos,src)
 
     print(f"{'='*70}")
-    print(f"STAGGERED DAG ({n} nodes, {n_layers} layers, width={width})")
+    print(f"LAYERED DAG-DERIVED CONTROL ({n} nodes, {n_layers} layers, width={width})")
     print(f"{'='*70}")
     print(f"  Bipartite: {all(col[i]!=col[j] for i,nbs in adj.items() for j in nbs)}")
 
@@ -141,7 +144,7 @@ def run_dag_battery(n_layers=8, width=5, seed=42):
     p=lin<1e-6; score+=p
     print(f"  [D4] Born: {lin:.4e} {'PASS' if p else 'FAIL'}")
 
-    # D5: Causal propagation
+    # D5: Forward-depth bias
     psi_pt=np.zeros(n,dtype=complex); psi_pt[src]=1.0
     psi_c=_cn(H_flat,n,psi_pt,5)
     rho_c=np.abs(psi_c)**2
@@ -149,7 +152,7 @@ def run_dag_battery(n_layers=8, width=5, seed=42):
     for i in range(n): p_by_layer[int(depth[i])]+=rho_c[i]
     forward_frac=np.sum(p_by_layer[1:])/np.sum(p_by_layer) if np.sum(p_by_layer)>0 else 0
     p=forward_frac>0.01; score+=p
-    print(f"  [D5] Causal: forward_frac={forward_frac:.4f} {'PASS' if p else 'FAIL'}")
+    print(f"  [D5] Forward-depth: forward_frac={forward_frac:.4f} {'PASS' if p else 'FAIL'}")
 
     # D6: State families
     psi_even=psi0.copy(); psi_even[col==1]=0; psi_even/=np.linalg.norm(psi_even)
@@ -170,9 +173,9 @@ def run_dag_battery(n_layers=8, width=5, seed=42):
 if __name__ == '__main__':
     t0=time.time()
     print("="*70)
-    print("STAGGERED FERMION ON CAUSAL DAG")
+    print("STAGGERED FERMION ON LAYERED DAG-DERIVED FAMILY")
     print("="*70)
-    print("Layered DAG with causal ordering. Bipartite by layer parity.")
+    print("Layered acyclic template with causal ordering and symmetrized transport.")
     print()
 
     scores=[]

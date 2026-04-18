@@ -50,7 +50,7 @@ The repo currently contains four different classes of publication material:
 - native gauge/current on real irregular graph cycles
 - endogenous self-gravity contraction
 - bounded two-field wave coupling
-- causal DAG compatibility
+- bounded layered-DAG-derived control
 - bounded fixed-adjacency branch-superposition result in 2D
 - bounded many-body-style boundary-law result from the Dirac-sea correlation-matrix probe, now backed by a larger robustness addendum
 - bounded branch-mediated entanglement result in the externally imposed geometry-branch toy protocol
@@ -390,7 +390,7 @@ The repo currently contains four different classes of publication material:
   - gauge on irregular cycles
   - self-gravity
   - two-field wave coupling
-  - DAG compatibility
+  - bounded layered-DAG-derived control
 
 ### B. Best historical package
 

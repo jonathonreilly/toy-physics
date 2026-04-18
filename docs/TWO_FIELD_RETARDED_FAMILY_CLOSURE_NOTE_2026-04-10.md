@@ -27,12 +27,12 @@ The underlying field law remains unchanged and parity-coupled:
   `H_diag = (mass + Phi)·parity`
 
 The probe runs on the retained admissible cycle-bearing bipartite
-families, plus a causal DAG operating-point check:
+families, plus a layered DAG-derived operating-point check:
 
 - random geometric
 - growing
 - layered cycle
-- causal DAG (`R8` gauge structurally N/A)
+- layered DAG-derived control (`R8` gauge structurally N/A)
 
 **Measurement note:** on these irregular graph families, the sign rows use the
 audited shell-radial proxy from the retained graph batteries rather than the
@@ -42,7 +42,7 @@ field-profile diagnostics, not as evidence that attraction is dynamically chosen
 
 ## Battery Results
 
-| Row | Random Geometric (36) | Growing (48) | Layered Cycle (24) | Causal DAG (36) |
+| Row | Random Geometric (36) | Growing (48) | Layered Cycle (24) | Layered DAG-Derived (36) |
 |---|---:|---:|---:|---:|
 | R1 Zero-source | PASS | PASS | PASS | PASS |
 | R2 Linearity | `R²=1.000000` | `R²=1.000000` | `R²=1.000000` | `R²=1.000000` |
@@ -57,11 +57,13 @@ field-profile diagnostics, not as evidence that attraction is dynamically chosen
 ## What Holds
 
 - The family-closure loop preserves the retarded battery on the cycle-bearing
-  families and extends the same operating-point closure to the causal DAG
+  families and extends the same operating-point closure to the layered
+  DAG-derived control
   (`8/9`, with gauge structurally N/A).
 - Family robustness closes to `3/3` on all three cycle-bearing families and
-  on the causal DAG operating point. Iterative stability now closes on the
-  growing family once the source is re-anchored to the deepest reachable node.
+  on the layered DAG-derived operating point. Iterative stability now closes on
+  the growing family once the source is re-anchored to the deepest reachable
+  node.
 - Norm remains machine-clean.
 - Native gauge closure still lands on real graph cycles.
 
@@ -75,7 +77,7 @@ probe.
   rather than a fundamental failure of the retarded/hybrid law.
 - This probe shows that a family-conditioned closure loop can lift the
   `R7` gate while keeping the other rows intact, and can do so on both the
-  cycle-bearing families and a causal DAG operating point.
+  cycle-bearing families and a layered DAG-derived operating point.
 - The two-sign audit narrows the interpretation: the irregular sign rows are
   parity-coupled field-profile diagnostics, not proof that the architecture
   predicts attraction on these graph families.
