@@ -239,7 +239,14 @@ retained observation that the weak gauge algebra is SU(2).
 - Recipe-R itself as an a-priori "why this recipe and not another"
   question — this is the scope of the retained `n = 3` native-gauge
   closure, which Recipe-R simply extends. Recipe-R does not introduce
-  new operators or axioms beyond that.
+  new operators or axioms beyond that. **(Closed 2026-04-17 follow-up):**
+  see `recipe-r-forcing-from-retained-n3-2026-04-17.md` for the
+  forcing theorem that derives Recipe-R uniquely from the retained
+  `n = 3` rotation-on-Γ characterization and the classical Clifford
+  grade-preservation lemma. With that note in place, Recipe-R is
+  retained-forced (not retained-chosen), and the closures of `A2 / A4
+  / A5` above rest on the retained `n = 3` native-gauge authority
+  alone.
 
 ## Verification Runner
 

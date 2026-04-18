@@ -6,8 +6,37 @@
 
 ## Status
 
-SUPPORT-ROUTE / CONDITIONAL TIGHTNESS COROLLARY — contingent on the
-companion scope and uniqueness notes.
+RETAINED-GRADE TIGHTNESS COROLLARY (under retained native-gauge
+authority + retained weak-SU(2) observational input) — upgraded from
+the original SUPPORT-ROUTE / CONDITIONAL status by the 2026-04-17
+admissibility closure
+(`admissibility-closure-from-graph-eta-taste-2026-04-17.md`) and the
+2026-04-17 Recipe-R forcing theorem
+(`recipe-r-forcing-from-retained-n3-2026-04-17.md`). With Recipe-R
+now retained-forced from the retained `n = 3` native-gauge
+identification, the family-uniqueness conclusion `V_n = Λ²(R^n)` is
+retained-grade under the retained stack alone, and this tightness
+corollary inherits that status:
+
+    retained n=3 native-gauge authority
+      -> (Recipe-R forcing theorem) -> Recipe-R retained
+      -> (admissibility closure) -> A2 ∧ A4 ∧ A5 retained
+      -> (family-uniqueness theorem) -> V_n = Λ²(R^n) retained
+      -> (this note) -> spin(n) = su(2) ⟺ n(n-1)/2 = 3 ⟺ n = 3
+      -> d_s = 3 retained (under retained weak-SU(2) observation).
+
+The ORIGINAL STATUS language ("SUPPORT-ROUTE / CONDITIONAL TIGHTNESS
+COROLLARY") is preserved in the historical content below for
+traceability; see the "Admissibility + Recipe-R forcing closure
+(2026-04-17 follow-up)" section at the end for the status upgrade.
+
+**Caveat on retained bar.** The tightness corollary remains
+contingent on the empirical/retained observation that the weak gauge
+group is SU(2). That input is observational, not derived from the
+Cl(3) framework structure itself, and is therefore not upgraded by
+this stack. The "retained-grade" label above refers to the derivation
+chain from the retained `n = 3` native-gauge authority to `d_s = 3`;
+it does not claim to derive SU(2) itself.
 
 **The reviewer's two successive blockers have been addressed** in the
 sense that there is now a real scope note and a real uniqueness note.
@@ -520,6 +549,53 @@ the `d_s = 3` chain becomes:
 
 With the admissibility closure in place, this chain no longer leaves a
 comparison-family gap at the admissibility layer.
+
+## Admissibility + Recipe-R forcing closure (2026-04-17 follow-up)
+
+The 2026-04-17 reviewer follow-up (`review.md`) accepted the
+admissibility closure as mathematically coherent under Recipe-R, but
+flagged that Recipe-R itself was still a chosen family-scope rule
+rather than a forced consequence of the retained stack:
+
+> the branch closes `A2 / A4 / A5` only after promoting the family-scope
+> extension recipe itself (Recipe-R) to a retained rule, and that is
+> still the very thing that is not yet proved from the current retained
+> stack.
+
+That blocker is closed by
+
+    .claude/science/derivations/recipe-r-forcing-from-retained-n3-2026-04-17.md
+
+(verification runner: `scripts/frontier_recipe_r_forcing_from_retained_n3.py`,
+result `THEOREM_PASS=52 SUPPORT_PASS=12 FAIL=0`).
+
+The forcing theorem shows that the retained `n = 3` native-gauge
+identification has an intrinsic characterization — "rotation on the
+Γ-vector" (C_rot) — that uses only the framework-native `Γ_k` and the
+commutator bracket. The classical Clifford grade-preservation lemma
+
+    { X ∈ Cl(n) : [X, Γ_μ] ∈ grade-1 for all μ } = Z(Cl(n)) ⊕ Λ²(R^n)
+
+(with `Z(Cl(n))` = grade-0 for even `n`, = grade-0 ⊕ grade-n for odd
+`n`) then forces `V_n = Λ²(R^n) = Recipe-R` uniquely at every `n ≥ 2`
+once central elements are excluded and the retained `n = 3`
+identification populates the bivector sector.
+
+Combined with the admissibility closure and the family-uniqueness
+theorem, the `d_s = 3` chain is now:
+
+    retained n=3 native-gauge authority (docs/NATIVE_GAUGE_CLOSURE_NOTE.md)
+      ⟹ Recipe-R retained-forced             [Recipe-R forcing theorem]
+      ⟹ A2 ∧ A4 ∧ A5 retained                 [admissibility closure]
+      ⟹ V_n = Λ²(R^n) retained for all n ≥ 2  [family-uniqueness theorem]
+      ⟹ spin(n) = su(2) ⟺ n = 3               [this tightness note]
+      ⟹ d_s = 3 retained                      [under retained weak-SU(2)]
+
+No step in this chain requires a chosen family-scope rule; every step
+is either retained framework authority, classical Lie theory, or the
+(retained/observational) weak-SU(2) input. The internal package
+voice — admissibility closure, family-uniqueness, tightness — is now
+consistently RETAINED-GRADE under this single chain.
 
 ## Next
 

@@ -6,11 +6,24 @@
 
 ## Status
 
-SUPPORT-ROUTE / COMPARISON-FAMILY CONDITIONAL THEOREM — new theorem +
-verification runner. This note answers the reviewer's request for a
-genuine family-scope uniqueness theorem, but the theorem remains
-conditional on the admissibility package `(A1)-(A5)` rather than a
-retained closure of that package.
+RETAINED-GRADE THEOREM (under retained Recipe-R, retained via the
+2026-04-17 Recipe-R forcing theorem in
+`recipe-r-forcing-from-retained-n3-2026-04-17.md`) — the theorem was
+originally stated conditionally on admissibility `(A1)-(A5)`. With
+the 2026-04-17 admissibility closure
+(`admissibility-closure-from-graph-eta-taste-2026-04-17.md`), `(A2)`,
+`(A4)`, `(A5)` were reduced to consequences of Recipe-R, and with the
+2026-04-17 Recipe-R forcing theorem, Recipe-R itself is now
+retained-forced from the retained `n = 3` native-gauge identification.
+The family-uniqueness conclusion `V_n = Λ²(R^n)` is therefore
+retained-grade under the retained `n = 3` native-gauge authority
+(docs/NATIVE_GAUGE_CLOSURE_NOTE.md) alone.
+
+The ORIGINAL STATUS language ("SUPPORT-ROUTE / COMPARISON-FAMILY
+CONDITIONAL THEOREM") is preserved in the historical content below
+for traceability; see the "Admissibility closure (2026-04-17
+follow-up)" and "Recipe-R forcing (2026-04-17 follow-up)" sections
+for the status upgrade.
 
 ## The Problem This Note Solves
 
@@ -333,6 +346,35 @@ rather than posited axioms. The runner passes with
 `THEOREM_PASS=42 SUPPORT_PASS=39 FAIL=0`. With that closure in place,
 the present note's `(A1)-(A5) ⟹ V_n = Λ²(R^n)` conclusion rests on a
 single retained recipe instead of a five-axiom admissibility package.
+
+## Recipe-R forcing (2026-04-17 follow-up)
+
+The 2026-04-17 reviewer follow-up (`review.md`) flagged that the
+admissibility closure above was conditional on Recipe-R being
+retained, and that Recipe-R itself was still a chosen family-scope
+rule rather than a forced consequence of the retained stack. That gap
+is now closed by
+
+    .claude/science/derivations/recipe-r-forcing-from-retained-n3-2026-04-17.md
+
+with verification runner
+
+    scripts/frontier_recipe_r_forcing_from_retained_n3.py
+
+The forcing theorem shows that the retained `n = 3` native-gauge
+identification has two logically distinct characterizations —
+"bivector" (C_bivec) and "rotation-on-Γ" (C_rot) — that coincide at
+`n = 3` but differ at family scope. The intrinsic characterization
+(C_rot) uses only the framework-native `Γ_k` and the commutator
+bracket and extends automatically to every `n`. The classical
+Clifford grade-preservation lemma
+`{X : ad_X preserves grade-1} = Z(Cl(n)) ⊕ Λ²(R^n)` then forces
+`V_n = Λ²(R^n) = Recipe-R` as the unique family-scope extension. The
+runner passes with `THEOREM_PASS=52 SUPPORT_PASS=12 FAIL=0`.
+
+With Recipe-R now retained-forced, this note's uniqueness conclusion
+is retained-grade under the retained `n = 3` native-gauge authority
+alone — no added family-scope axiom, no chosen extension rule.
 
 ## Next
 
