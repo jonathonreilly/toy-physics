@@ -1,259 +1,231 @@
-# CKM-Dual Bridge Identity Theorem
-## Retained Structural Identities + Proposed Atlas-Projector-Weighted Texture Primitive
+# CKM-Dual Bridge Identity: Structural Identities + Proposed Texture Ansatz
+## (Branch-Local Proposal — Not Wired Into The Live Package)
 
-**Date:** 2026-04-17 (first draft); revised 2026-04-17 after review.md (new-science path: propose texture primitive).
-**Status (two-layer):**
-- **retained structural identities** — the `sqrt(6)`, `1/n_{pair}`, and `5/6` constants in the down-type CKM-dual lane are the same retained framework constants as those appearing in the Ward theorem and the CKM atlas (SI1, SI2, SI3 below).
-- **proposed new retained primitive (P-AT)** — the Atlas-Projector-Weighted Mass-Matrix Texture on the retained `hw=1` down-type block. Under P-AT, the GST relation and the `5/6` bridge become **leading-order-exact** hierarchical identities, and combining with the retained CKM atlas gives the mass-ratio identification surface (I1)–(I2) as a framework output.
-- **conditional on P-AT acceptance** — GST `|V_{us}| = \sqrt{m_d/m_s}` and the `5/6` bridge `|V_{cb}| = (m_s/m_b)^{5/6}` are retained leading-order theorems; (I1)–(I2) are retained identification-surface outputs.
-
-P-AT is explicitly a **new retained primitive proposal**, not a derivation from pre-existing retained inputs. It uses only retained atlas projector weights as exponents in the `(2,3)` off-diagonal of the down-type mass matrix. Its acceptance or rejection is a framework-level decision.
-
+**Date:** 2026-04-17 (first draft); revised 2026-04-17 (review v1: three-layer
+split); revised 2026-04-17 (review v2: branch-local scope, unaudited-K_R
+claims backed off).
+**Scope:** this note is a **branch-local proposal** on
+`claude/angry-chatelet-2dc78c`. It is deliberately **not** wired into the
+live publication/arXiv/front-door surfaces. Acceptance into the retained
+framework would require additional work named at the bottom of this note.
 **Primary runner:** `scripts/frontier_ckm_dual_bridge_identity.py`
-**Authority role:** proposes and validates P-AT; separates retained structural identities from conditional-on-P-AT bridge theorems.
 
-## Reviewer context
+This note has two independent layers with independent evidence status:
 
-The earlier draft of this note claimed the bridges as unconditional retained framework theorems. The review on this branch (see `review.md`, P1/P1/P2) correctly flagged that the previous framing promoted a chosen identification surface as if the framework had already derived it. This revision takes the **new-science path**: propose a concrete, sharp new primitive that actually derives the bridges (at leading order), and label it transparently as new.
+- **Layer 1 — structural constants identification (numerical, on this
+  branch).** The `\sqrt{6}`, `1/n_{pair}`, and `5/6` constants that appear
+  when the down-type CKM-dual lane is written algebraically are the same
+  constants that appear in the retained Ward-identity theorem and the
+  promoted CKM atlas. The runner certifies this as arithmetic identities
+  on retained inputs.
+- **Layer 2 — proposed mass-matrix texture ansatz (numerical, on this
+  branch).** A specific `3x3` symmetric mass-matrix ansatz with
+  NNI-geometric `(1,2)`, atlas-exponent `(2,3)` off-diagonal
+  `m_s^{5/6} m_b^{1/6}`, and `(1,3) = 0` reproduces the GST and `5/6`
+  bridge as leading-order-exact hierarchical identities under numerical
+  diagonalization. The runner certifies this as numerical consequences of
+  the chosen ansatz.
 
-## Retained inputs (unchanged)
+Neither layer is landed on the live publication surfaces by this note.
 
-1. **Ward-identity theorem** —
-   [YT_WARD_IDENTITY_DERIVATION_THEOREM.md](YT_WARD_IDENTITY_DERIVATION_THEOREM.md),
-   `y_t(M_Pl) / g_s(M_Pl) = 1/\sqrt{6} = 1/\sqrt{N_c \cdot N_{iso}}`. The
-   `\sqrt{6}` is the Clebsch-Gordan normalization of the unit-norm scalar
-   singlet composite `H_unit = (1/\sqrt{6}) \sum \psī\psi` on the
-   left-handed quark block `Q_L`, derived from `D9` (composite Higgs) and
-   `D17` (scalar-uniqueness on `Q_L`) with `Z^2 = N_c \cdot N_{iso} = 6`.
+## What this note explicitly does not claim
 
-2. **CKM atlas/axiom closure** —
-   [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md),
-   `|V_{us}| = \sqrt{\alpha_s(v)/2}`, `|V_{cb}| = \alpha_s(v)/\sqrt{6}`.
-   The `2` is the residual color pair (EWSB `1 + 2` split), and the `6` is
-   `n_{quark} = n_{pair} \cdot n_{color} = \dim(Q_L)`.
+To avoid the over-promotion flagged in the review series on this branch,
+the following claims are **not** being made here:
 
-3. **Atlas `1 + 5` projector split on `Q_L`** — same atlas note. On the
-   six-state quark block, the center-excess scalar CP-even weight is
-   `CENTER\_EXCESS\_WEIGHT = 1/n_{quark} = 1/6`, and the CP-odd orthogonal
-   complement has weight `ORTHOGONAL\_PHASE\_WEIGHT = 1 - 1/6 = 5/6`.
+1. It is **not** claimed that the proposed `3x3` texture ansatz is
+   realized by, embedded in, or derived from the retained `Z_2` `hw=1`
+   normal form of the down-type mass matrix
+   ([Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md](Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md)).
+   The retained normal form is a 5-real-parameter family; the ansatz
+   below is a specific texture with two free ratios, and its embedding
+   in that 5-parameter family is not audited by the runner.
+2. It is **not** claimed that the atlas `1 + 5` projector structure on
+   the `Q_L` block — specifically the bilinear tensor carrier `K_R` from
+   [S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md](S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md)
+   — forces the `(2,3)` off-diagonal to have the atlas-exponent form. The
+   `K_R` language is used only as the **structural motivation** for why
+   the exponents `(5/6, 1/6)` are the natural candidates; the runner does
+   not audit any operator-level identification with `K_R`.
+3. It is **not** claimed that GST or the `5/6` bridge are retained
+   framework-output theorems in any sense. The runner certifies only
+   (a) arithmetic identities on retained inputs and (b) numerical
+   consequences of a chosen texture ansatz.
+4. No publication/arXiv/front-door row is promoted, demoted, or otherwise
+   altered by this note or by this branch.
 
-4. **Z_2 `hw=1` mass-matrix parametrization** —
-   [Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md](Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md).
-   The retained `Z_2`-invariant Hermitian normal form is a 5-parameter
-   family on the `hw=1` down-type triplet.
+## Retained inputs used (unchanged, cited only)
 
-5. **Canonical same-surface coupling** —
-   [ALPHA_S_DERIVED_NOTE.md](ALPHA_S_DERIVED_NOTE.md),
-   `\alpha_s(v) = \alpha_{bare} / u_0^2 = 0.103303816122`.
+1. Ward-identity theorem:
+   [YT_WARD_IDENTITY_DERIVATION_THEOREM.md](YT_WARD_IDENTITY_DERIVATION_THEOREM.md)
+   gives `y_t(M_Pl)/g_s(M_Pl) = 1/\sqrt{6}` with `Z^2 = N_c · N_{iso} = 6`
+   on `Q_L`.
+2. CKM atlas closure:
+   [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
+   gives `|V_{us}|_{atlas} = \sqrt{\alpha_s(v)/2}`,
+   `|V_{cb}|_{atlas} = \alpha_s(v)/\sqrt{6}`.
+3. Atlas `1 + 5` projector split on `Q_L`:
+   same atlas note; `CENTER\_EXCESS\_WEIGHT = 1/6`, `ORTHOGONAL\_PHASE\_WEIGHT = 5/6`.
+4. Canonical `\alpha_s(v)`:
+   [ALPHA_S_DERIVED_NOTE.md](ALPHA_S_DERIVED_NOTE.md).
 
-No observed quark masses enter as derivation inputs. No new retained
-primitives apart from P-AT (stated below) are introduced.
+## Layer 1 — structural constants identification
 
-## Layer 1: retained structural identities (unchanged by review)
+SI1, SI2, SI3 are arithmetic identities on retained framework inputs.
 
-**SI1 (same-`\sqrt{6}` identity).** The `\sqrt{6}` in the Ward identity
-`y_t(M_Pl)/g_s(M_Pl) = 1/\sqrt{6}` and in `|V_{cb}|_{atlas} =
-\alpha_s(v)/\sqrt{6}` is the **same** retained framework constant
-`\sqrt{N_c · N_{iso}} = \sqrt{n_{pair} · n_{color}} = \sqrt{n_{quark}}
-= \sqrt{\dim(Q_L)} = \sqrt{6}`.
+**SI1.** `\sqrt{6}` appearing in `|V_{cb}|_{atlas}` equals
+`\sqrt{N_c · N_{iso}}` from the Ward identity; both derive from
+`n_{quark} = \dim(Q_L) = 6`.
 
-**SI2 (GST exponent origin).** The `1/2` exponent in the GST form
-`|V_{us}| = (m_d/m_s)^{1/2}` equals `1/n_{pair}` where `n_{pair} = 2` is
-the retained EWSB residual color-pair count.
+**SI2.** The exponent `1/2` that would appear in a GST relation
+`|V_{us}| = (m_d/m_s)^{1/2}` equals `1/n_{pair}` with `n_{pair} = 2`
+from the retained atlas EWSB residual pair count.
 
-**SI3 (`5/6` atlas projector origin).** The `5/6` exponent in the bridge
-`|V_{cb}| = (m_s/m_b)^{5/6}` equals the retained atlas orthogonal-complement
-projector weight `1 - 1/n_{quark} = 5/6` on the six-state `Q_L` block, the
-same `5/6` that appears as `\sin^2(\delta_{std})` in the atlas `1 + 5`
-projector split. The numerical coincidence with the SU(3) Casimir
-combination `C_F - T_F = 5/6` is recorded as a cross-check, not the
-retained origin.
+**SI3.** The exponent `5/6` that would appear in a bridge relation
+`|V_{cb}| = (m_s/m_b)^{5/6}` equals the atlas orthogonal-complement
+projector weight `1 - 1/n_{quark} = 5/6`. The coincidence
+`C_F - T_F = 5/6` (SU(3) Casimir combination) is recorded as a
+numerical coincidence, not an independent derivation.
 
-SI1, SI2, SI3 are exact retained identities that specify *which* framework
-constants carry the `\sqrt{6}`, `1/2`, and `5/6` numbers. They do **not**
-by themselves derive the mass-ratio identification surface — that is what
-the proposed primitive in Layer 2 supplies.
+The runner certifies SI1, SI2, SI3 as closed-form arithmetic on retained
+constants. No mass-matrix ansatz is invoked for these checks.
 
-## Layer 2: proposed new retained primitive — P-AT
+## Layer 2 — proposed mass-matrix texture ansatz (branch-local)
 
-**Primitive P-AT (Atlas-Projector-Weighted Mass-Matrix Texture).** On the
-retained `hw=1` down-type mass matrix in the axis basis `(X_1, X_2, X_3)`
-(where `X_3` is aligned with the heaviest generation), the real symmetric
-mass matrix has the NNI-zero + atlas-projector-weighted `(2,3)` texture
+**Texture ansatz P-AT.** On a `3x3` symmetric real mass-matrix in an
+axis basis `(X_1, X_2, X_3)` with ordered masses
+`m_d < m_s < m_b`:
 
 ```
-              [  m_d            \sqrt{m_d · m_s}        0                        ]
-    M_d  =    [  \sqrt{m_d·m_s}   m_s                     m_s^{w_o} · m_b^{w_c}    ]      (P-AT)
-              [  0              m_s^{w_o} · m_b^{w_c}   m_b                      ]
+    M_d(1,1) = m_d
+    M_d(2,2) = m_s
+    M_d(3,3) = m_b
+    M_d(1,2) = M_d(2,1) = \sqrt{m_d · m_s}            (NNI geometric mean)
+    M_d(2,3) = M_d(3,2) = m_s^{5/6} · m_b^{1/6}       (atlas-exponent ansatz)
+    M_d(1,3) = M_d(3,1) = 0                           (NNI texture zero)
 ```
 
-with
+P-AT is a chosen texture ansatz. Its structural motivation is that the
+atlas bilinear tensor carrier `K_R` on `Q_L` decomposes into CP-even
+(weight `1/6`) and CP-odd (weight `5/6`) sectors, suggesting that the
+bridge-inducing `(2,3)` mass-matrix element might inherit similar
+exponents. This is a motivating heuristic, not a derivation.
 
-- `w_o = ORTHOGONAL\_PHASE\_WEIGHT = 5/6` (retained CP-odd projector weight
-  on `Q_L`, SI3);
-- `w_c = CENTER\_EXCESS\_WEIGHT = 1/6` (retained CP-even projector weight
-  on `Q_L`, SI3);
-- `w_o + w_c = 1` (complete atlas projector split on `Q_L`);
-- the `(1,2)` off-diagonal is the classical NNI geometric mean
-  `\sqrt{m_d · m_s}` (standard texture-zero mechanism);
-- the `(1,3)` off-diagonal is zero (texture zero, in the standard NNI
-  sense).
+**Numerical consequences under P-AT (what the runner certifies).**
+Under numerical diagonalization of P-AT at a sequence of hierarchical
+scalings `(m_d/m_s, m_s/m_b) = (\epsilon, \epsilon)` for
+`\epsilon \in \{10^{-1}, 10^{-2}, 10^{-3}, 10^{-4}, 10^{-5}, 10^{-6}\}`,
+assuming `U_u = I` (up-type diagonal in weak basis):
 
-The new retained content in P-AT is specifically the `(2,3)` off-diagonal
-form: the heavier generation is weighted by the CP-even `CENTER\_EXCESS`
-atlas projector fraction `1/6`, and the lighter generation by the CP-odd
-`ORTHOGONAL` complement `5/6`. The geometric-mean `(1,2)` entry and the
-texture zero `(1,3)` are standard NNI content and are not novel here.
+- `|V_{us}|_{P-AT} / \sqrt{m_d/m_s}` tends to `1` monotonically as
+  `\epsilon \to 0`;
+- `|V_{cb}|_{P-AT} / (m_s/m_b)^{5/6}` tends to `1` monotonically as
+  `\epsilon \to 0`.
 
-**Motivation (framework-internal, but not a pre-existing retained
-derivation).** The atlas bilinear tensor carrier
-[S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md](S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md)
-on the `Q_L` block decomposes into a CP-even singlet (weight `1/6`) and a
-CP-odd orthogonal complement (weight `5/6`). The bridge-inducing operator
-that mixes generations 2 and 3 couples through this same `Q_L` carrier.
-P-AT asserts that the off-diagonal `(2,3)` mass-matrix element inherits
-the same atlas projector weighting, with the heavier generation carried
-on the CP-even fraction and the lighter generation on the CP-odd
-complement. This is structurally motivated — but it is a **new claim**
-and not a theorem on the current retained surface.
+**Identification-surface arithmetic.** If one additionally imposes the
+equations
 
-## Consequences under P-AT
-
-**T1 (GST leading-order exactness under P-AT).** In the hierarchical
-limit `m_d/m_s \to 0`, `m_s/m_b \to 0`, the down-type diagonalization of
-P-AT gives
 ```
-    |V_{us}|  =  \sqrt{m_d/m_s}   (leading-order-exact).
+    |V_{us}|_{P-AT} = |V_{us}|_{atlas}                                (A1)
+    |V_{cb}|_{P-AT} = |V_{cb}|_{atlas}                                (A2)
 ```
 
-**T2 (`5/6` bridge leading-order exactness under P-AT).** In the same
-hierarchical limit, the down-type diagonalization of P-AT gives
-```
-    |V_{cb}|  =  (m_s/m_b)^{5/6}  (leading-order-exact).
-```
+with the leading-order P-AT expressions `\sqrt{m_d/m_s}` and
+`(m_s/m_b)^{5/6}`, the arithmetic forces
 
-**T3 (mass-ratio identification surface).** Equating T1 and T2 with the
-retained atlas values
-`|V_{us}|_{atlas} = \sqrt{\alpha_s(v)/n_{pair}}` and
-`|V_{cb}|_{atlas} = \alpha_s(v)/\sqrt{n_{quark}}` gives the mass-ratio
-identification surface
 ```
-    m_d/m_s  =  \alpha_s(v) / n_{pair}                                   (I1)
-    m_s/m_b  =  [ \alpha_s(v) / \sqrt{n_{quark}} ]^{n_{quark}/(n_{quark}-1)}
-             =  [ \alpha_s(v) / \sqrt{6} ]^{6/5}                         (I2)
+    m_d/m_s  =  \alpha_s(v) / n_{pair}                                (I1)
+    m_s/m_b  =  [\alpha_s(v)/\sqrt{n_{quark}}]^{n_{quark}/(n_{quark}-1)}
+             =  [\alpha_s(v)/\sqrt{6}]^{6/5}                          (I2)
 ```
 
-as a retained framework output under P-AT (at leading order).
+The runner treats (I1)–(I2) as definitions for the purpose of evaluating
+the P-AT ansatz at the observed hierarchy; it does not claim (I1)–(I2)
+are derived from retained framework objects.
 
-The exponents `1/n_{pair}` and `n_{quark}/(n_{quark}-1)` in (I1)–(I2) are
-fixed by the retained structural counts (SI2, SI3), not chosen. No
-mass-matrix parameter is free.
+## Numerical readout (reference only, not a publication lane)
 
-## Numerical verification
+At `\alpha_s(v) = 0.103303816122` the closed-form (I1)–(I2) give:
 
-The runner `scripts/frontier_ckm_dual_bridge_identity.py` verifies:
+| Ratio | Closed form | PDG threshold-local comparator | Deviation |
+|---|---|---|---|
+| `m_d/m_s` | `0.0516519` | `0.0500000` | `+3.30%` |
+| `m_s/m_b` | `0.0223897` | `0.0223445` | `+0.20%` |
+| `m_d/m_b` | `0.001156` | `0.001117` | `+3.50%` |
 
-1. **Retained structural identities SI1, SI2, SI3** — `\sqrt{6}` Ward /
-   atlas / quark-block dimension equalities; `1/2 = 1/n_{pair}`;
-   `5/6 = 1 - 1/n_{quark}` atlas projector weight equalities.
-2. **P-AT hierarchical limit** — numerical diagonalization of the P-AT
-   mass matrix at a sequence of epsilon-scaled mass hierarchies
-   `(m_d/m_s, m_s/m_b) = (\epsilon, \epsilon)` for
-   `\epsilon \in \{10^{-1}, 10^{-2}, 10^{-3}, 10^{-4}, 10^{-5}, 10^{-6}\}`,
-   confirming
-   - `|V_{us}| / \sqrt{m_d/m_s}  \to  1` as `\epsilon \to 0`,
-   - `|V_{cb}| / (m_s/m_b)^{5/6}  \to  1` as `\epsilon \to 0`.
-3. **Identification-surface match at the observed hierarchy** — using the
-   canonical `\alpha_s(v) = 0.103303816122`, the P-AT diagonalization gives
-   `|V_{us}|_{P-AT} \approx |V_{us}|_{atlas}` and
-   `|V_{cb}|_{P-AT} \approx |V_{cb}|_{atlas}` within small-hierarchy
-   leading-order error.
-4. **Mass-ratio readout against PDG threshold-local self-scale** —
-   `m_d/m_s = 0.05165` (`+3.30%`),
-   `m_s/m_b = 0.02239` (`+0.20%`),
-   `m_d/m_b = 0.001156` (`+3.50%`).
+These numbers are reported here as a record of where the P-AT ansatz
+lands against standard PDG self-scale ratios. They are not claimed as a
+promoted or retained quantitative lane, and the existing
+`DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md` + `CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md`
+bounded lane on `main` is unchanged by this note.
 
-Expected result: `RETAINED PASS=N`, `P-AT PASS=M`, `BOUNDED PASS=K`,
-`FAIL=0`. The runner tags results by layer.
+## Named open work required for any future promotion
 
-## Status summary
+This branch-local note does not attempt these steps. They are named so
+that future work on an accepting branch knows what would be required:
 
-**Retained on `main` (structural-identity layer):**
+1. **Embedding in the retained `Z_2` `hw=1` normal form.** Show
+   explicitly that the P-AT texture ansatz is a point (or a low-
+   dimensional slice) of the retained 5-real-parameter family in
+   [Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md](Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md),
+   and identify the specific `Z_2` parameters `(a, b, c, d)` that
+   realize it. The current runner does not do this.
+2. **Operator-level derivation from `K_R`.** Show explicitly that the
+   bilinear tensor carrier `K_R` in
+   [S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md](S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md),
+   projected onto the generation `hw=1` subspace, gives a `(2,3)`
+   off-diagonal with exponents `(5/6, 1/6)` rather than, e.g., geometric-mean
+   exponents `(1/2, 1/2)`. The current runner does not do this and the
+   current heuristic does not do this.
+3. **Up-type compatibility.** Check that the assumption `U_u = I` is
+   compatible with a corresponding up-type texture on the same retained
+   surface. The current runner uses `U_u = I` as a choice without
+   auditing it against any retained up-type structure.
+4. **Next-to-leading-order residuals under P-AT.** At the observed
+   hierarchy, the P-AT diagonalization deviates from GST by roughly
+   `O(m_d/m_s) ~ 5%` and from the `5/6` bridge by roughly
+   `O(m_s/m_b) ~ 2%`. A systematic NLO account of these residuals
+   would tighten or falsify the ansatz; none is done here.
+5. **Scale-selection theorem for the observation comparator.** The
+   threshold-local self-scale PDG comparator is used without a framework-
+   internal derivation of its uniqueness. Unchanged from prior review.
 
-- SI1: `\sqrt{6}` = retained Ward Clebsch-Gordan `\sqrt{N_c · N_{iso}}`,
-  same as atlas `\sqrt{n_{quark}}`.
-- SI2: GST exponent `1/2 = 1/n_{pair}` (atlas EWSB pair count).
-- SI3: `5/6` exponent = atlas `1 + 5` orthogonal-complement projector
-  weight (not the SU(3) Casimir coincidence).
+Until at least items 1 and 2 are done, P-AT is a numerical proposal on
+this branch and is deliberately kept out of the live publication
+surfaces.
 
-**Proposed new retained primitive (framework-level review pending):**
+## Relation to prior notes (no content changes triggered)
 
-- P-AT: down-type `hw=1` mass matrix has NNI-zero structure + atlas-projector-weighted `(2,3)` off-diagonal with exponents `(w_o, w_c) = (5/6, 1/6)`.
+This note links the existing bounded lane notes as reading material only.
+It does not modify their status on `main`.
 
-**Consequences under P-AT (retained conditional on P-AT acceptance):**
+- [DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md](DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md):
+  bounded secondary flavor-mass lane on `main`.
+- [CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md](CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md):
+  bounded support tool on `main`; its runner certifies the Casimir
+  arithmetic plus bounded self-scale numerics, which remains its honest
+  scope.
+- [CKM_FROM_MASS_HIERARCHY_NOTE.md](CKM_FROM_MASS_HIERARCHY_NOTE.md):
+  bounded historical route for GST.
 
-- T1: GST `|V_{us}| = \sqrt{m_d/m_s}` is leading-order exact.
-- T2: `5/6` bridge `|V_{cb}| = (m_s/m_b)^{5/6}` is leading-order exact.
-- T3: mass-ratio identification surface (I1)–(I2) is the framework output
-  combining T1–T2 with the retained atlas CKM values.
+## Validation
 
-**Still bounded (downstream quantitative):**
+Run:
 
-- Absolute values `m_d`, `m_s`, `m_b` (only their ratios are pinned).
-- Threshold-local versus same-scale comparator choice.
+```bash
+python3 scripts/frontier_ckm_dual_bridge_identity.py
+```
 
-**Still open (explicitly named):**
+Expected on this branch:
 
-- Framework-level review: does P-AT (atlas-projector-weighted `(2,3)`)
-  qualify as a retained primitive, or is it a proposal that needs further
-  derivation from a retained operator-theoretic argument on the `Q_L`
-  bilinear tensor carrier `K_R`?
-- A sub-leading-order correction program beyond the hierarchical
-  leading-order exact bridges.
-- A framework-level scale-selection rule for the threshold-local
-  comparator surface.
+- `RETAINED PASS` checks on SI1, SI2, SI3 structural-identity arithmetic;
+- `P-AT PASS` checks on the hierarchical-limit numerical consequences of
+  the chosen ansatz, plus the identification-surface arithmetic under
+  (A1)–(A2);
+- `BOUNDED PASS` reference comparisons against PDG threshold-local
+  self-scale;
+- `FAIL = 0`.
 
-## Relation to prior notes
-
-- [CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md](CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md)
-  — `5/6` exponent origin upgraded from Casimir coincidence to retained
-  atlas projector weight (SI3); the bridge itself is now retained
-  **leading-order** under P-AT (not exact at finite hierarchy).
-- [CKM_FROM_MASS_HIERARCHY_NOTE.md](CKM_FROM_MASS_HIERARCHY_NOTE.md)
-  — GST exponent origin upgraded from NNI-texture assumption to retained
-  atlas `1/n_{pair}` count (SI2); the GST relation itself is now retained
-  **leading-order** under P-AT.
-- [Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md](Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md)
-  — P-AT is a specific 2-parameter subspace of the 5-parameter `Z_2`
-  normal form (after identifying `m_d`, `m_s`, `m_b` up to scale). P-AT
-  does not follow from `Z_2` symmetry alone; the `(2,3)` off-diagonal
-  structure is the new framework content.
-
-## Honest boundary
-
-This revised note does **not** claim:
-
-- that P-AT is derived from pre-existing retained primitives;
-- exact closure of GST or `5/6` bridge at finite hierarchy (only
-  leading-order);
-- full retention of absolute down-type mass values (only ratios up to
-  overall scale);
-- a scale-selection theorem;
-- closure of the up-type or charged-lepton sectors.
-
-What it does claim, in two sharp layers:
-
-1. **Layer 1 (retained on `main`):** SI1–SI3 identify the `\sqrt{6}`,
-   `1/2`, and `5/6` numbers with retained framework structural constants
-   (Ward Clebsch-Gordan, `n_{pair}`, atlas orthogonal-complement
-   projector weight). These are retained unconditionally.
-2. **Layer 2 (proposed new primitive, framework-level review pending):**
-   P-AT asserts the atlas-projector-weighted `(2,3)` off-diagonal in the
-   down-type mass-matrix texture. Under P-AT, T1 (GST), T2 (`5/6`
-   bridge), and T3 (identification surface I1-I2) follow at leading order
-   in the hierarchical limit.
-
-The earlier draft of this note conflated Layer 1 and Layer 2. This
-revision separates them: Layer 1 is retained and unambiguous; Layer 2 is
-a new framework proposal with explicit "proposed primitive" status and
-explicit leading-order qualifier on the derived bridges.
+The runner's own summary explicitly frames this as "proposal with
+numerics, not framework-primitive certification," consistent with the
+named-open-work list above.

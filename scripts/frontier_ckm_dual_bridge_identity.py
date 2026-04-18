@@ -1,35 +1,49 @@
 #!/usr/bin/env python3
 """
-CKM-Dual Bridge Identity Theorem: two-layer runner.
+CKM-Dual Bridge Identity: branch-local runner for a proposed texture ansatz.
 
 Authority:
   docs/CKM_DUAL_BRIDGE_IDENTITY_THEOREM_NOTE_2026-04-17.md
+  (branch-local proposal; NOT wired into live publication surfaces)
 
-Layer 1 (retained on main) — structural identities:
-  SI1: sqrt(6) in |V_cb|_atlas and in the Ward identity is the same retained
-       framework constant sqrt(N_c * N_iso) = sqrt(dim(Q_L)).
-  SI2: GST exponent 1/2 = 1/n_pair (retained atlas EWSB residual pair count).
-  SI3: 5/6 bridge exponent = atlas orthogonal-complement projector weight
-       1 - 1/n_quark = 5/6, not the SU(3) Casimir combination C_F - T_F.
+SCOPE. This runner is explicitly a proposal-with-numerics audit, not a
+framework-primitive certification. It does two independent things:
 
-Layer 2 (proposed new retained primitive P-AT) — Atlas-Projector-Weighted
-Mass-Matrix Texture:
-  M_d(1,1) = m_d, M_d(2,2) = m_s, M_d(3,3) = m_b
-  M_d(1,2) = sqrt(m_d * m_s)                          (GST / NNI geometric mean)
-  M_d(2,3) = m_s^(5/6) * m_b^(1/6)                    (atlas-projector-weighted)
-  M_d(1,3) = 0                                        (NNI texture zero)
+(1) Layer 1 — structural-constants arithmetic. It verifies that the
+    sqrt(6), 1/n_pair, and 5/6 constants that appear when the down-type
+    CKM-dual lane is written algebraically are the same constants that
+    appear in the retained Ward-identity theorem and the promoted CKM
+    atlas. These are arithmetic identities on retained inputs; no
+    mass-matrix assumption enters.
 
-Under P-AT, in the hierarchical limit m_d/m_s -> 0 and m_s/m_b -> 0:
-  T1: |V_us| = sqrt(m_d/m_s)              (GST, leading-order exact)
-  T2: |V_cb| = (m_s/m_b)^(5/6)            (5/6 bridge, leading-order exact)
-  T3: matching to the retained CKM atlas gives the mass-ratio identification
-      surface (I1)-(I2):
-         m_d/m_s = alpha_s(v) / n_pair
-         m_s/m_b = [ alpha_s(v) / sqrt(n_quark) ]^(n_quark/(n_quark-1))
+(2) Layer 2 — chosen mass-matrix texture ansatz (P-AT). It constructs a
+    specific 3x3 symmetric real mass matrix with NNI geometric-mean
+    (1,2), atlas-exponent (2,3) off-diagonal m_s^(5/6)*m_b^(1/6), and
+    (1,3) = 0, diagonalizes it numerically over a sequence of
+    hierarchical scalings (m_d/m_s, m_s/m_b) = (epsilon, epsilon), and
+    reports how the CKM magnitudes |V_us|, |V_cb| behave. It then
+    imposes the atlas-match equations |V_us|_{P-AT} = |V_us|_{atlas} and
+    |V_cb|_{P-AT} = |V_cb|_{atlas} at leading order and reports the
+    closed-form mass-ratio identification surface that follows.
 
-The runner tags results by layer: RETAINED (SI1-SI3), P-AT (the proposed
-primitive's consequences), and BOUNDED (quantitative PDG readout). P-AT is a
-new framework proposal and its acceptance is a framework-level decision.
+What this runner explicitly does NOT do:
+
+- It does NOT verify that the P-AT texture ansatz is realized by, or
+  embedded in, the retained Z_2 hw=1 normal form on the down-type mass
+  matrix. That embedding would need a separate audit against the
+  5-real-parameter Z_2 family in docs/Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md.
+- It does NOT derive the atlas-exponent (2,3) texture from the retained
+  bilinear tensor carrier K_R on Q_L. K_R is cited only as the
+  structural motivation for the exponents (5/6, 1/6); no operator-level
+  identification with K_R is checked here.
+- It does NOT treat P-AT or the induced identification surface (I1)-(I2)
+  as retained framework theorems. The runner tags them as P-AT checks
+  precisely because they are consequences of a chosen ansatz.
+
+Tags used:
+  RETAINED  — arithmetic identities on retained inputs only
+  P-AT      — numerical consequences of the chosen texture ansatz
+  BOUNDED   — reference numerical match to PDG threshold-local self-scale
 """
 
 from __future__ import annotations
@@ -257,7 +271,7 @@ def layer1_si2_gst_exponent() -> None:
 
 def layer2_pat_hierarchical_limit() -> None:
     print("\n" + "=" * 74)
-    print("LAYER 2 / P-AT: hierarchical limit of atlas-projector-weighted texture")
+    print("LAYER 2 / P-AT: hierarchical-limit numerics for the chosen texture ansatz")
     print("=" * 74)
     print("")
     print("  Diagonalize the P-AT mass matrix with texture")
@@ -297,7 +311,7 @@ def layer2_pat_hierarchical_limit() -> None:
     )
 
     check(
-        "T1: |V_us|/sqrt(m_d/m_s) tends to 1 as epsilon -> 0 (GST leading-order exact under P-AT)",
+        "T1: |V_us|/sqrt(m_d/m_s) tends to 1 as epsilon -> 0 (chosen-ansatz numerical result)",
         gst_drift < 1e-3,
         f"deviation at epsilon=1e-6 is {gst_drift:.3e}",
         layer="P-AT",
@@ -309,7 +323,7 @@ def layer2_pat_hierarchical_limit() -> None:
         layer="P-AT",
     )
     check(
-        "T2: |V_cb|/(m_s/m_b)^(5/6) tends to 1 as epsilon -> 0 (5/6 bridge leading-order exact under P-AT)",
+        "T2: |V_cb|/(m_s/m_b)^(5/6) tends to 1 as epsilon -> 0 (chosen-ansatz numerical result)",
         bridge_drift < 1e-5,
         f"deviation at epsilon=1e-6 is {bridge_drift:.3e}",
         layer="P-AT",
@@ -430,10 +444,10 @@ def layer3_quantitative_readout(r_ds: float, r_sb: float, r_db: float) -> None:
 
 def main() -> int:
     print("=" * 74)
-    print("  FRONTIER: CKM-Dual Bridge Identity Theorem")
-    print("  (two-layer: Layer 1 retained structural identities SI1-SI3;")
-    print("   Layer 2 proposed new retained primitive P-AT with hierarchical")
-    print("   limit derivation of GST, 5/6 bridge, and identification surface)")
+    print("  FRONTIER: CKM-Dual Bridge Identity (branch-local proposal)")
+    print("  Layer 1: arithmetic identities on retained constants (SI1-SI3).")
+    print("  Layer 2: numerical consequences of a chosen 3x3 texture ansatz.")
+    print("  NOT a framework-primitive certification; see authority note.")
     print("=" * 74)
 
     # Layer 1: retained structural identities
@@ -452,30 +466,29 @@ def main() -> int:
     print("\n" + "=" * 74)
     print("SUMMARY")
     print("=" * 74)
-    print(f"  RETAINED PASS = {RETAINED_PASS}    (Layer 1: SI1-SI3 structural identities)")
-    print(f"  P-AT PASS     = {PAT_PASS}    (Layer 2: hierarchical-limit bridge theorems")
-    print(f"                              under the proposed atlas-projector texture)")
-    print(f"  BOUNDED PASS  = {BOUNDED_PASS}    (Layer 3: quantitative PDG readout)")
+    print(f"  RETAINED PASS = {RETAINED_PASS}    (Layer 1: arithmetic on retained constants)")
+    print(f"  P-AT PASS     = {PAT_PASS}    (Layer 2: numerics of chosen texture ansatz)")
+    print(f"  BOUNDED PASS  = {BOUNDED_PASS}    (Layer 3: PDG threshold-local reference match)")
     print(f"  FAIL          = {FAIL_COUNT}")
     print()
-    print("  Layer 1 (retained on main):")
-    print("    SI1: sqrt(6) in |V_cb|_atlas and Ward theorem is the same")
-    print("         retained framework constant sqrt(N_c * N_iso).")
-    print("    SI2: GST exponent 1/2 is the retained atlas 1/n_pair count.")
-    print("    SI3: 5/6 bridge exponent is the retained atlas 1+5")
-    print("         orthogonal-complement projector weight (not the Casimir).")
+    print("  What this runner certifies:")
+    print("    Layer 1 — arithmetic identities linking the sqrt(6), 1/n_pair,")
+    print("              and 5/6 numbers that appear in the bridge algebra")
+    print("              to retained Ward-theorem and atlas constants.")
+    print("    Layer 2 — numerical consequences (in the hierarchical limit,")
+    print("              and at the observed hierarchy under (A1)-(A2)) of a")
+    print("              chosen 3x3 texture ansatz whose (2,3) off-diagonal is")
+    print("              m_s^(5/6) * m_b^(1/6) by construction.")
     print()
-    print("  Layer 2 (proposed new retained primitive P-AT):")
-    print("    atlas-projector-weighted (2,3) off-diagonal in the down-type")
-    print("    hw=1 mass matrix: M_d(2,3) = m_s^(5/6) * m_b^(1/6).")
-    print("    Under P-AT, GST and the 5/6 bridge are leading-order exact")
-    print("    hierarchical identities, and combining with the retained CKM")
-    print("    atlas gives the identification surface (I1)-(I2).")
-    print("    P-AT is a framework-level proposal, not a derivation from")
-    print("    pre-existing retained primitives.")
+    print("  What this runner does NOT certify:")
+    print("    - that the texture ansatz sits inside the retained Z_2 hw=1")
+    print("      normal form of the down-type mass matrix;")
+    print("    - that K_R on Q_L forces the (5/6, 1/6) exponents rather than,")
+    print("      e.g., geometric-mean exponents (1/2, 1/2);")
+    print("    - that any live publication row is altered by these results.")
     print()
-    print("  Layer 3 (bounded): threshold-local self-scale PDG match at")
-    print("    m_d/m_s +3.30%, m_s/m_b +0.20%, m_d/m_b +3.50%.")
+    print("  Authority note lists the named open work required before any")
+    print("  future promotion: docs/CKM_DUAL_BRIDGE_IDENTITY_THEOREM_NOTE_2026-04-17.md")
     print("=" * 74)
 
     return 0 if FAIL_COUNT == 0 else 1

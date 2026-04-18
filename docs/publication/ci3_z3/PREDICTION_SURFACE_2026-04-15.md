@@ -75,33 +75,15 @@ carried by the current package.
   - bounded continuation: `d_n(CKM) ~ 8 x 10^-33 e cm`
   - authority:
     [CKM_NEUTRON_EDM_BOUND_NOTE.md](../../CKM_NEUTRON_EDM_BOUND_NOTE.md)
-- down-type flavor-mass CKM-dual lane (three-layer: retained structural identities + proposed new retained primitive P-AT + bounded quantitative readout):
-  - **Layer 1 (retained structural identities SI1-SI3, unconditional on `main`):**
-    `sqrt(6)` = retained Ward Clebsch-Gordan `sqrt(N_c · N_iso)` on `Q_L`;
-    GST exponent `1/2 = 1/n_pair` = retained atlas EWSB residual pair count;
-    `5/6` bridge exponent = retained atlas `1 + 5` orthogonal-complement
-    projector weight on the six-state `Q_L` block
-  - **Layer 2 (proposed new retained primitive P-AT, framework-level review pending):**
-    atlas-projector-weighted `(2,3)` off-diagonal in the down-type `hw=1`
-    NNI mass matrix, `M_d(2,3) = m_s^(5/6) · m_b^(1/6)`. Under P-AT, GST
-    `|V_us| = sqrt(m_d/m_s)` and `5/6` bridge `|V_cb| = (m_s/m_b)^(5/6)`
-    are leading-order exact hierarchical identities; combining with the
-    retained CKM atlas gives the identification surface `m_d/m_s =
-    alpha_s(v)/n_pair`, `m_s/m_b = [alpha_s(v)/sqrt(n_quark)]^(6/5)` as
-    framework output. P-AT is a **new framework proposal**, not a
-    derivation from pre-existing retained primitives
-  - **Layer 3 (bounded quantitative readout):**
-    `m_d/m_s = 0.05165`, `m_s/m_b = 0.02239`, `m_d/m_b = 0.001156`
+- down-type flavor-mass CKM-dual lane:
+  - `m_d/m_s = 0.05165`
+  - `m_s/m_b = 0.02239`
+  - `m_d/m_b = 0.001156`
   - current comparator: threshold-local self-scale down-type mass ratios
   - qualifier:
-    Layer 1 structural identities are retained unconditionally;
-    Layer 2 (P-AT) is a proposed new retained primitive subject to
-    framework-level review (its derivation from an operator-theoretic
-    argument on the atlas bilinear tensor carrier `K_R` is explicitly
-    named open work); Layer 3 quantitative mass-ratio readout inherits
-    the mass-hierarchy systematic; the scale-selection rule remains open
+    threshold-local self-scale comparison is supported, but theorem-grade
+    scale closure of the `5/6` bridge remains open
   - authority:
-    [CKM_DUAL_BRIDGE_IDENTITY_THEOREM_NOTE_2026-04-17.md](../../CKM_DUAL_BRIDGE_IDENTITY_THEOREM_NOTE_2026-04-17.md),
     [DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md](../../DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md)
 - vacuum critical stability:
   - the current `lambda(M_Pl) = 0` route lands on the critical /

@@ -173,22 +173,9 @@ Current status from that stack:
   boundary remains
 - older bounded CKM mass-basis / Cabibbo / partial Jarlskog route history
 - cosmology bounded family
-- CKM-only neutron-EDM corollary with bounded `d_n(CKM)` continuation on the
-  retained `\theta_{\mathrm{eff}} = 0` surface (retained structural corollary
-  + bounded quantitative readout)
-- CKM-dual down-type lane (three-layer): (Layer 1) retained structural
-  identities SI1-SI3 — `\sqrt{6}` = Ward Clebsch-Gordan, `1/2 = 1/n_{pair}`,
-  `5/6` = atlas `1 + 5` orthogonal-complement projector weight — are
-  retained on `main` unconditionally; (Layer 2) proposed new retained
-  primitive P-AT — atlas-projector-weighted `(2,3)` off-diagonal
-  `M_d(2,3) = m_s^{5/6} m_b^{1/6}` in the `hw=1` NNI mass matrix — is a
-  framework-level proposal with review pending; under P-AT, GST and the
-  `5/6` bridge are leading-order exact and the identification surface
-  (I1)-(I2) follows; (Layer 3) bounded quantitative mass-ratio readout
-  inherits the mass-hierarchy systematic
-- bounded secondary predictions already on `main`, including proton lifetime,
-  bounded quantitative down-type flavor-mass CKM-dual ratios under the
-  proposed P-AT primitive, vacuum critical stability, taste-scalar
+- bounded secondary predictions already on `main`, plus the CKM-only
+  neutron-EDM corollary with bounded continuation: proton lifetime, down-type
+  flavor-mass CKM-dual ratios, vacuum critical stability, taste-scalar
   near-degeneracy, benchmark gravitational decoherence, and monopole mass
 
 ## What Is Still Open
