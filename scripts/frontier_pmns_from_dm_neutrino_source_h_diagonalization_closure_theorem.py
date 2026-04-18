@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """
-Selector the PMNS-closure theorem: PMNS angles as f(H(m, delta, q_+)) — retained derivation.
+Selector the PMNS-closure theorem: PMNS angles as f(H(m, delta, q_+))
+— retained map with conditional/support chamber pin.
 
 Branch: (off ).
 
-This runner builds the P3 promotion lane identified by the the observable-bank exhaustion theorem
-observable-bank exhaustion theorem: promote the PMNS mixing angles
-(theta_12, theta_13, theta_23, delta_CP) to retained as f(H(m, delta, q_+))
-on the live DM-neutrino source-oriented sheet, and use the observed PMNS
-values to pin the active point (delta_*, q_+*).
+This runner builds the P3 lane identified by the observable-bank exhaustion
+theorem: construct the retained PMNS map
+(theta_12, theta_13, theta_23, delta_CP) = f(H(m, delta, q_+))
+on the live DM-neutrino source-oriented sheet, then pin the chamber point
+conditionally using the observed PMNS angles plus the imposed branch-choice
+rule.
 
 Attack line L1 (direct diagonalization). The retained theorem
 DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY gives an
@@ -17,14 +19,14 @@ explicit 3x3 Hermitian H(m, delta, q_+) on the observable space H_hw=1:
   H(m, delta, q_+) = H_base + m T_m + delta T_delta + q_+ T_q
 
 with retained H_base, T_m, T_delta, T_q and (gamma, E1, E2) = (1/2,
-sqrt(8/3), sqrt(8)/3). By the retained Dirac-bridge theorem, the charged-
-lepton sector effective mass matrix on the H_hw=1 surface is aligned with
-the generation-index axis basis (Gamma_1 is diagonal in the axis basis);
-therefore the PMNS matrix is the eigenbasis unitary of H evaluated on the
-axis basis, with a canonical row permutation that orders the eigenvectors
-by the hierarchy identification (electron <-> highest H-eigenvalue, muon
-<-> middle, tau <-> lowest). This is the unique row permutation that
-produces non-pathological PMNS angles on the chamber.
+sqrt(8/3), sqrt(8)/3). By the retained Z_3 trichotomy plus the Higgs Z_3
+charge gauge-redundancy theorem, the charged-lepton basis on `H_hw=1`
+coincides with the generation-index axis basis up to right-basis relabeling,
+so the PMNS matrix is the eigenbasis unitary of H evaluated on the axis
+basis, with a canonical row permutation that orders the eigenvectors by the
+hierarchy identification (electron <-> highest H-eigenvalue, muon
+<-> middle, tau <-> lowest). This row ordering closes only conditionally on
+the observational hierarchy pairing used on this branch.
 
 Deliverables verified here:
 
@@ -578,8 +580,8 @@ def main() -> int:
   print("=" * 88)
   print()
   print("Attack line: L1 (direct diagonalization of H).")
-  print("PMNS convention: charged-lepton basis = axis basis (Gamma_1 diagonal")
-  print("on H_hw=1 by the retained Dirac-bridge theorem). PMNS is the")
+  print("PMNS convention: charged-lepton basis = axis basis by the retained")
+  print("Z_3-trichotomy route plus Higgs q_H gauge-redundancy theorem. PMNS is the")
   print("eigenbasis unitary of H, row-permuted by the hierarchy pairing")
   print("(electron <-> largest H-eigenvalue, muon <-> middle, tau <-> lowest).")
 
@@ -605,7 +607,7 @@ def main() -> int:
   obs = pmns_observables(m_star, d_star, q_star)
   print(f" Predicted delta_CP = {obs['dcp_deg']:+.2f} deg (sin = {obs['sin_dcp']:+.4f})")
   print(f" Jarlskog J     = {obs['J']:+.6f}")
-  print(f" the selector closure status: CLOSED on chamber at the pinned point.")
+  print(" selector closure status: CONDITIONAL / SUPPORT on chamber at the pinned point.")
 
   return 0 if FAIL_COUNT == 0 else 1
 

@@ -253,13 +253,13 @@ Current observational status:
 
 The threshold lies comfortably above the lower-octant best fit and
 above the current 1-sigma upper edge of the lower octant, and below
-the upper-octant best fit. Hence the PMNS-as-f(H) closure makes a
-GENUINE FALSIFIABLE STRUCTURAL PREDICTION:
+the upper-octant best fit. Hence the PMNS-as-f(H) conditional/support
+package makes a GENUINE FALSIFIABLE STRUCTURAL PREDICTION:
 
 > **Prediction (θ_23 upper-octant).** The measured `sin²θ_23` must
 > satisfy `sin²θ_23 > 0.5409`. A measurement firmly establishing
-> `sin²θ_23 ≤ 0.5409` would FALSIFY the PMNS-as-f(H) retained closure
-> at the closure pinning.
+> `sin²θ_23 ≤ 0.5409` would FALSIFY the PMNS-as-f(H) conditional/support
+> chamber pin at the closure point.
 
 This is testable at JUNO (reactor θ_12 / θ_13 precision + shape), DUNE
 (θ_23 precision via muon-neutrino disappearance), and Hyper-Kamiokande
@@ -325,13 +325,12 @@ introduced by the current tightening; it is made explicit here so the
 reviewer can see that the full chain
 
 ```
- retained-Z_3-charges + (q_H = 0, SM-canonical)
+ retained-Z_3-charges + q_H gauge redundancy + canonical representative q_H = 0
  ⟹ Y_e diagonal in axis basis
  ⟹ U_e = I
 ```
 
-is retained-grade MODULO the documented `q_H = 0` phenomenological
-assignment. The Dirac-bridge chain is retained as a COMPLEMENTARY
+is retained-grade on the PMNS-observable surface. The Dirac-bridge chain is retained as a COMPLEMENTARY
 (not primary) route and is useful for cross-check only once the
 effective-Yukawa normalisation theorem closes elsewhere.
 
@@ -387,10 +386,11 @@ This note TIGHTENS rather than replaces the closure:
  is unchanged.
 - The `sin δ_CP = −0.987` value at that pin is unchanged, but is now
  a CONDITIONAL prediction (conditional on the imposed branch-choice
- rule and on `q_H = 0`), not an unconditional closure output.
+ rule), not an unconditional closure output. `q_H` is gauge-redundant
+ for PMNS observables on this branch.
 - The chamber-boundary check and the PDG-range check are unchanged.
 - The `U_e = I` citation chain is tightened from the Dirac-bridge
- route to the trichotomy `q_H = 0` route (still conditional on `q_H`).
+ route to the trichotomy + Higgs gauge-redundancy route.
 - The "unique chamber solution" claim is replaced by "unique
  **baseline-connected-branch** chamber solution under the imposed
  branch-choice rule", explicitly flagged as conditional / support
@@ -490,10 +490,12 @@ Expected: `PASS = 46, FAIL = 0`.
  is a stronger series-domain condition kept only as an honest
  boundary.
 
-- **NOT derivation of `q_H = 0`.** The trichotomy note flags the
- Higgs Z_3 charge `q_H` as an input, not a derived quantity. The
- trichotomy route for `U_e = I` is retained-grade GIVEN `q_H = 0`;
- the `q_H` selection is a separate open item on the atlas.
+- **NOT derivation of a physically preferred `q_H` branch.** The
+ trichotomy note still introduces the Higgs `Z_3` charge label `q_H`,
+ but the Higgs gauge-redundancy theorem shows that `q_H = ±1` are
+ PMNS-equivalent to the canonical representative `q_H = 0`. So `q_H`
+ is no longer a separate open physical conditional for PMNS
+ observables on this branch.
 
 - **NOT closure of θ_23 itself.** The upper-octant conditionality is
  a PREDICTION of the closure, not a derivation of the θ_23 value.
@@ -526,12 +528,13 @@ Expected: `PASS = 46, FAIL = 0`.
 3. **The θ_23 upper-octant prediction is OWNED, as a CONDITIONAL
  prediction.** The sharp threshold `s₂₃²_crit = 0.5409` is a
  falsifiable structural prediction of the closure *under the imposed
- rule and `q_H = 0`*, not of the retained atlas unconditionally.
+ rule*, not of the retained atlas unconditionally. `q_H` is no longer
+ a separate conditional at this stage.
 
-4. **The `U_e = I` chain is UPGRADED, but still conditional.** The
- open-ingredient Dirac-bridge chain is replaced with the trichotomy +
- `q_H = 0` chain; the `q_H = 0` phenomenological input is made
- explicit as a conditional.
+4. **The `U_e = I` chain is UPGRADED.** The open-ingredient Dirac-bridge
+ chain is replaced with the trichotomy + Higgs gauge-redundancy chain;
+ `q_H = 0` is now treated as the canonical gauge representative rather
+ than a separate physical conditional.
 
 5. **The δ_CP framing is CORRECTED.** 3-manifold dimensional
  framing replaces the over-determined-check framing.

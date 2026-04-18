@@ -1,8 +1,8 @@
 # Neutrino Sector Closure (Phase 4 of mass spectrum)
 
 **Date:** 2026-04-17
-**Status:** retained atmospheric scale + rho + eta_break + k_B; bounded solar gap
-and PMNS angles (theta_23 upper-octant retained).
+**Status:** retained atmospheric scale + rho + eta_break + k_B; bounded solar gap;
+conditional/support `theta_23` upper-octant lane.
 **Primary runner:** `scripts/frontier_neutrino_mass_derived.py`
 **Depends on:** retained atmospheric-scale + adjacent-placement + residual-sharing
 staircase theorem package; Phase 1-2 of mass spectrum.
@@ -29,9 +29,11 @@ neutrino mass scale and ordering without fitting any neutrino observable:
 **No observed neutrino masses, splittings, or mixing angles are used as
 derivation inputs.**
 
-In addition the retained `PMNS_THETA23_UPPER_OCTANT_CHAMBER_CLOSURE_PREDICTION`
-theorem gives a falsifiable upper-octant prediction `s_23^2 >= 0.541` at
-PDG-2024 central `(s_12^2, s_13^2)`, testable at JUNO/DUNE/Hyper-Kamiokande.
+In addition the conditional/support
+`PMNS_THETA23_UPPER_OCTANT_CHAMBER_CLOSURE_PREDICTION` note gives a
+falsifiable upper-octant consequence `s_23^2 >= 0.541` at PDG-2024 central
+`(s_12^2, s_13^2)`, testable at JUNO/DUNE/Hyper-Kamiokande, given the same
+imposed branch-choice rule used by the G1 chamber pin.
 
 This closes the Phase 4 deliverable of the mass-spectrum attack plan:
 
@@ -55,7 +57,7 @@ This closes the Phase 4 deliverable of the mass-spectrum attack plan:
 - [UP_TYPE_MASS_RATIO_CKM_INVERSION_NOTE.md](./UP_TYPE_MASS_RATIO_CKM_INVERSION_NOTE.md):
   Phase 2 up-sector parallel-bridge ansatz.
 - [PMNS_THETA23_UPPER_OCTANT_CHAMBER_CLOSURE_PREDICTION_NOTE_2026-04-17.md](./PMNS_THETA23_UPPER_OCTANT_CHAMBER_CLOSURE_PREDICTION_NOTE_2026-04-17.md):
-  retained θ_23 upper-octant chamber-closure prediction.
+  conditional/support θ_23 upper-octant chamber-threshold consequence.
 
 ### No observational input
 
@@ -96,7 +98,7 @@ already-promoted staircase coupling `alpha_LM`.
 - the atmospheric mass scale `m_3 ~ 5.06e-2 eV` and
   `Dm^2_31 ~ 2.54e-3 eV^2` (within 5% of NuFit 5.3 NO);
 - the **normal ordering** as a structural prediction (`m_3 > m_2 > m_1`);
-- the **θ_23 upper-octant** retained chamber-closure prediction
+- the **θ_23 upper-octant** conditional/support chamber-threshold consequence
   (`s_23^2 >= 0.541` at PDG-2024 central);
 - `k_B = 8` as the taste-staircase level for the lightest RH neutrino —
   the input required by Phase 5 leptogenesis.
@@ -181,7 +183,7 @@ The runner verifies:
   of NuFit 5.3 NO central, with normal ordering structural; also that
   the diagonal `Dm^2_21` benchmark is NOT a closure (honestly flagged
   as open lane) (Part 3);
-- the retained `theta_23` upper-octant chamber-closure prediction (Part 4);
+- the conditional/support `theta_23` upper-octant chamber-threshold consequence (Part 4);
 - `k_B = 8` and `M_1` as the Phase 5 leptogenesis input (Part 5);
 - the shared `alpha_LM` building-block between quark 2-3 and neutrino
   2-3 splittings (Part 6);

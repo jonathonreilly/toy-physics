@@ -1,9 +1,10 @@
 # θ_23 Upper-Octant Chamber-Closure Prediction
 
 **Date:** 2026-04-17
-**Status:** RETAINED-GRADE PREDICTION — a falsifiable consequence of the
-PMNS-as-f(H) closure, derived from the retained H-diagonalization map
-alone.
+**Status:** CONDITIONAL / SUPPORT prediction — a falsifiable consequence of
+the retained H-diagonalization map plus the same imposed branch-choice
+admissibility rule used by the G1 chamber pin. The threshold geometry is
+sharp; the selector interpretation remains conditional.
 **Script:** `scripts/frontier_pmns_theta23_upper_octant_chamber_closure_prediction.py`
 **Runner:** `PASS = 31, FAIL = 0`
 **Framework convention:** "axiom" means only the single framework axiom
@@ -24,8 +25,8 @@ threshold** in the inverse problem:
 This is not a fragility of the closure; it is a **structural feature** of the
 retained H-diagonalization map. Below threshold, the geometric chamber that
 carries the retained affine `H` does not contain an observationally-
-consistent point. We sharpen this into a falsifiable retained prediction of
-the selector closure.
+consistent point. We sharpen this into a falsifiable conditional/support
+prediction of the selector closure.
 
 **Main result.** At PDG 2024 central `(s_12^2, s_13^2) = (0.307, 0.0218)`,
 
@@ -51,7 +52,7 @@ s_23^2_min(s_12^2, s_13^2) in [0.5335, 0.5476].
 The surface lies **strictly above maximal mixing** (`s_23^2 = 0.5`) at every
 point of the rectangle.
 
-**Retained prediction (falsifiable).**
+**Conditional/support prediction (falsifiable).**
 ```
 Selector chamber closure ADMITS a solution only if
  s_23^2 >= s_23^2_min(s_12^2, s_13^2)
@@ -93,7 +94,7 @@ All retained at the time of writing:
 
 No new axiom or post-axiom selector is introduced. The prediction is
 purely a sharpened consequence of the retained PMNS-as-f(H) map plus the
-retained chamber constraint.
+same chamber constraint used by the conditional/support pin.
 
 ## The threshold as a structural feature
 
@@ -213,10 +214,10 @@ well outside the NuFit 5.3 NO 3σ range on `s_12^2`.) So Schur-Q is not the
 PMNS pin; Schur-Q is a chamber-boundary variational landmark that happens to
 share the chamber-boundary line with the PMNS chamber-closure threshold.
 
-## Formal statement of the retained prediction
+## Formal statement of the conditional/support prediction
 
-**Retained prediction (selector-gate θ_23 upper-octant).** Given the retained
-the PMNS-as-f(H) closure and the retained chamber
+**Conditional/support prediction (selector-gate θ_23 upper-octant).** Given the
+retained PMNS-as-f(H) map and the conditionally pinned chamber
 `q_+ + δ ≥ sqrt(8/3)`, the selector inverse problem
 
 ```
@@ -233,10 +234,10 @@ is a smooth function with range in the upper octant. Over the NuFit 5.3 NO
 3-sigma rectangle on `(s_12^2, s_13^2)` it takes values in `[0.5335, 0.5476]`;
 at PDG 2024 central `(0.307, 0.0218)`, `s_23^2_min = 0.540970`.
 
-**Corollary (θ_23 upper-octant).** The selector chamber closure requires
+**Corollary (θ_23 upper-octant; conditional on the same branch-choice rule used by the chamber pin).** The selector chamber closure requires
 `sin^2 θ_23` in the **upper octant** (`> 0.5`).
 
-**Falsification criteria (retained-grade).**
+**Falsification criteria (conditional/support).**
 - A future global fit settling on `sin^2 θ_23 < 0.5` at `>3σ`
  UNCONDITIONALLY FALSIFIES the selector closure (since the threshold surface is
  entirely above `0.5`).
@@ -277,9 +278,10 @@ tested by the **Hyper-K + DUNE + JUNO combined fit** by the early 2030s.
 
 ### What this note positively claims
 
-1. **Retained-grade prediction** (not an obstruction). Derived purely from
- the retained H-diagonalization map and the retained chamber
- constraint. No new axiom; no new selector principle.
+1. **Conditional/support prediction** (not an obstruction). Derived from
+ the retained H-diagonalization map and the chamber
+ constraint, with the selector interpretation inheriting the same
+ imposed branch-choice rule as the chamber pin.
 2. **Exact threshold** `s_23^2_min(0.307, 0.0218) = 0.540970` at PDG 2024
  central (12-digit brentq convergence; runner-verified).
 3. **Threshold surface range** `[0.5335, 0.5476]` over the NuFit 5.3 NO 3σ
@@ -303,12 +305,12 @@ tested by the **Hyper-K + DUNE + JUNO combined fit** by the early 2030s.
 - That the result pins or predicts `Δm^2_21`, absolute masses, or Majorana
  phases (they live on different carriers).
 
-## Retained-prediction statement for the omnibus
+## Conditional/support statement for the omnibus
 
 Short-form one-paragraph statement suitable for inclusion in
 `DM_FLAGSHIP_CLOSURE_REVIEW_NOTE_2026-04-17.md` or the ARXIV_DRAFT:
 
-> **θ_23 upper-octant retained prediction.** The PMNS-as-f(H) closure
+> **θ_23 upper-octant conditional/support prediction.** The PMNS-as-f(H) closure
 > has a structural threshold: at PDG 2024 central
 > `(s_12^2, s_13^2) = (0.307, 0.0218)`, the selector chamber closure admits a
 > solution only for `s_23^2 ≥ 0.5410`; across the NuFit 5.3 NO 3σ
@@ -316,7 +318,8 @@ Short-form one-paragraph statement suitable for inclusion in
 > 0.5476]` — **entirely in the upper octant**. The threshold surface is a
 > smooth function of `(s_12^2, s_13^2)` and saturates the chamber boundary
 > `q_+ + δ = sqrt(8/3)`, the same 1-parameter ridge that contains the
-> Schur-Q variational candidate `(sqrt(6)/3, sqrt(6)/3)`. The selector closure
+> Schur-Q variational candidate `(sqrt(6)/3, sqrt(6)/3)`. Given the same
+> imposed branch-choice rule used by the chamber pin, the selector closure
 > therefore **predicts θ_23 in the upper octant**; resolution of the
 > θ_23 octant at JUNO / Hyper-Kamiokande / DUNE over the next several
 > years provides a direct test. A `>3σ` lower-octant determination would
@@ -342,13 +345,14 @@ Expected: `PASS = 31, FAIL = 0`. Seven parts:
 - **Part 4.** Verification that current PDG 2024 / NuFit 5.3 central
  values yield a valid chamber-interior closure.
 - **Part 5.** Chamber-boundary saturation / Schur-Q coincidence check.
-- **Part 6.** Formalization of the θ_23 upper-octant retained prediction.
+- **Part 6.** Formalization of the θ_23 upper-octant conditional/support prediction.
 - **Part 7.** Convergence diagnostics on the threshold.
 
 ## What this file must never say
 
-- that θ_23 upper octant is closed sole-axiom (it is a prediction of the
- P3-lane observational-pinning closure, not a sole-axiom derivation);
+- that θ_23 upper octant is retained-grade or sole-axiom (it is a
+ conditional/support prediction of the P3-lane observational pin, not a
+ sole-axiom derivation);
 - that the threshold `s_23^2_min = 0.541` is the octant boundary (the
  octant boundary is `0.5`; `0.541` is a sharper bound);
 - that Schur-Q = threshold (they are different points on the same

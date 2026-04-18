@@ -4,8 +4,9 @@ Selector the theta_23-upper-octant prediction: theta_23 chamber-closure threshol
 
 Branch: (off ).
 
-This runner converts the the PMNS-closure theorem PMNS-as-f(H) closure's input-sensitivity
-behaviour into a falsifiable retained prediction of the the selector closure.
+This runner converts the PMNS-as-f(H) chamber pin's input-sensitivity
+behaviour into a falsifiable conditional/support prediction for the
+selector closure.
 
 the PMNS-closure theorem established: requiring the retained map
   (m, delta, q_+) --> (sin^2 theta_12, sin^2 theta_13, sin^2 theta_23)
@@ -26,7 +27,7 @@ problem exists. On one side of the threshold chamber closure exists; on the
 other side it does not. This is a STRUCTURAL FEATURE of the retained
 H-diagonalization map.
 
-The retained prediction:
+The conditional/support prediction:
   Given fixed s12^2 = 0.307 and s13^2 = 0.0218 (PDG 2024 central values),
   the the PMNS-closure theorem H-diagonalization map admits a chamber-interior inverse
   image only if s23^2 >= s23^2_threshold = 0.540970 (computed here to 12
@@ -66,7 +67,7 @@ Deliverables verified:
  5. Verifies the boundary-saturation/Schur-Q coincidence: at threshold the
    (delta, q_+) lies on the chamber-boundary line q_+ + delta = sqrt(8/3),
    the same line containing Schur-Q (delta = q_+ = sqrt(6)/3).
- 6. Formalizes the theta_23 upper-octant retained prediction.
+ 6. Formalizes the theta_23 upper-octant conditional/support prediction.
 
 Framework convention: "axiom" means only the single framework axiom Cl(3)
 on Z^3.
@@ -551,14 +552,14 @@ def part5_schur_q_coincidence(s23_thresh: float) -> None:
 
 
 # ---------------------------------------------------------------------------
-# Part 6: formalize the theta_23 upper-octant retained prediction
+# Part 6: formalize the theta_23 upper-octant conditional/support prediction
 # ---------------------------------------------------------------------------
 
 
 def part6_upper_octant_prediction(s23_thresh: float, grid: dict) -> None:
   print()
   print("=" * 88)
-  print("Part 6: formalized theta_23 upper-octant retained prediction")
+  print("Part 6: formalized theta_23 upper-octant conditional/support prediction")
   print("=" * 88)
 
   # Collect threshold surface numbers
@@ -571,9 +572,9 @@ def part6_upper_octant_prediction(s23_thresh: float, grid: dict) -> None:
 
   print(" Prediction statement:")
   print()
-  print("  Given the retained the PMNS-closure theorem PMNS-as-f(H) closure, the")
-  print("  H-diagonalization admits a chamber-interior inverse image of")
-  print("  the observed PMNS angles ONLY IF")
+  print("  Given the retained PMNS-as-f(H) map and the same imposed branch-choice")
+  print("  rule used by the chamber pin, the H-diagonalization admits a")
+  print("  chamber-interior inverse image of the observed PMNS angles ONLY IF")
   print()
   print(f"    s23^2 >= s23^2_min(s12^2, s13^2)")
   print()
@@ -621,7 +622,7 @@ def part6_upper_octant_prediction(s23_thresh: float, grid: dict) -> None:
   print("      and appearance; expected ~0.01 (stat) on s23^2.")
   print("  Hyper-K (2027+): large mass atmospheric + accelerator; octant at >3σ.")
   print()
-  print("  FALSIFICATION CRITERIA (retained-grade):")
+  print("  FALSIFICATION CRITERIA (conditional/support):")
   print(f"   • Global fit moving s23^2 below {min_thr:.4f} at 3σ FALSIFIES the selector closure")
   print(f"    at PDG central (s12^2, s13^2). (Current NuFit LO 3σ edge ~ 0.445.)")
   print(f"   • Octant determination settling to lower octant at >3σ FALSIFIES")
@@ -683,12 +684,12 @@ def main() -> int:
   print("G1 PHYSICIST-K — θ_23 chamber-closure threshold prediction")
   print("=" * 88)
   print()
-  print("Sharpens the adversarial input-sensitivity of the PMNS-closure theorem's pinning")
-  print("into a falsifiable retained prediction of the the selector closure:")
+  print("Sharpens the adversarial input-sensitivity of the PMNS chamber pin")
+  print("into a falsifiable conditional/support prediction of the selector closure:")
   print("given PDG-central (s12^2, s13^2), the selector chamber closure admits")
   print("an interior solution only if s23^2 >= threshold. The threshold")
   print("surface lies entirely in the upper octant (> 0.5), yielding a")
-  print("concrete θ_23 upper-octant retained prediction testable at JUNO,")
+  print("concrete θ_23 upper-octant conditional/support prediction testable at JUNO,")
   print("DUNE, and Hyper-K.")
 
   part1_adversarial_table()
@@ -711,7 +712,8 @@ def main() -> int:
   print(f" Threshold s23^2_min at PDG central (0.307, 0.0218) = {s23_thresh:.6f}")
   print(f" Threshold surface over NuFit 3σ rectangle lies in upper octant (>0.5).")
   print(f" NuFit 5.3 NO best-fit 0.568 ADMITS closure; 0.445 (LO) DOES NOT.")
-  print(f" the selector closure PREDICTS θ_23 upper octant — falsifiable at JUNO/DUNE/Hyper-K.")
+  print(" the selector closure conditionally predicts θ_23 upper octant —")
+  print(" falsifiable at JUNO/DUNE/Hyper-K under the same branch-choice rule.")
 
   return 0 if FAIL_COUNT == 0 else 1
 

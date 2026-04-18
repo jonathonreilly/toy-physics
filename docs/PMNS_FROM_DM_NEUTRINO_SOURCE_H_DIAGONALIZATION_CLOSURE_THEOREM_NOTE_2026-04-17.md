@@ -118,7 +118,7 @@ imposed rule they are equally admissible.
 **δ_CP: falsifiable consequence of the construction.** The map
 `(m, delta, q_+) -> (s12^2, s13^2, s23^2, delta_CP)` sends `R^3` to a
 3-dimensional sub-manifold of `R^4`. Three observational angles pin
-`(m, delta, q_+)` (under the retained source-branch inertia selector);
+`(m, delta, q_+)` (under the imposed branch-choice rule);
 the CP phase is then forced by the chart geometry, not an over-determined fit.
 Disagreement with future measurements falsifies the construction, not
 merely the pinned point. At the pinned point:
@@ -134,7 +134,7 @@ in the T2K-preferred lower octant and consistent with the observational
 
 **Observational consistency.** All nine entries of `|U_PMNS|` at the pinned
 point lie inside the NuFit 5.3 3-sigma ranges (normal ordering). Under
-the imposed branch-choice rule and `q_H = 0`, the selector gate closes
+the imposed branch-choice rule, the selector gate closes
 conditionally on the chamber; the honest overall status is
 **conditional / support**, NOT unconditional positive closure.
 
@@ -153,11 +153,14 @@ All retained / theorem-grade at the time of writing:
 - [THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md](./THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md)
  — retained 3-dim irreducible observable space `H_hw=1`.
 - [NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md](./NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md)
- — Z_3 support trichotomy fixing `Y_e` diagonal on the `q_H = 0`
- branch, hence `U_e = I` in the axis basis (primary route).
+ — Z_3 support trichotomy giving the three `q_H` support patterns on
+ the charged-lepton Yukawa.
 - [CHARGED_LEPTON_UE_IDENTITY_VIA_Z3_TRICHOTOMY_NOTE_2026-04-17.md](./CHARGED_LEPTON_UE_IDENTITY_VIA_Z3_TRICHOTOMY_NOTE_2026-04-17.md)
- — full `U_e = I` replacement citation chain with the `q_H = 0`
- conditional input flagged explicitly.
+ — full `U_e = I` replacement citation chain on `H_hw=1`.
+- [HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17.md](./HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17.md)
+ — `q_H` is gauge-redundant with respect to PMNS observables; `q_H = 0`
+ is the canonical gauge representative, not an additional physical
+ conditional.
 - [DM_NEUTRINO_SOURCE_SURFACE_PERTURBATIVE_UNIQUENESS_THEOREM_NOTE_2026-04-17.md](./DM_NEUTRINO_SOURCE_SURFACE_PERTURBATIVE_UNIQUENESS_THEOREM_NOTE_2026-04-17.md)
  — imposed branch-choice admissibility rule (NOT retained)
  `signature(H_base + J) = (2, 0, 1)` picks Basin 1 uniquely.
@@ -167,13 +170,6 @@ All retained / theorem-grade at the time of writing:
 - [DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md](./DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md)
  — exhaustion theorem and the identification of P3 as the atlas-open
  promotion lane that closes the selector gate.
-
-Conditional input (not axiom-derived, SM-canonical):
-
-- `q_H = 0`: the Higgs `Z_3` generation charge on the charged-lepton
- Yukawa coupling. See
- [CHARGED_LEPTON_UE_IDENTITY_VIA_Z3_TRICHOTOMY_NOTE_2026-04-17.md](./CHARGED_LEPTON_UE_IDENTITY_VIA_Z3_TRICHOTOMY_NOTE_2026-04-17.md)
- for the full conditionality discussion.
 
 Complementary (secondary) retained route with an open normalization step:
 
@@ -224,8 +220,8 @@ trichotomy
 applied to `Y_e` via the same conjugate-triplet derivation used in
 [LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md](./LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md))
 forces the charged-lepton Yukawa into one of three permutation patterns.
-On the canonical `q_H = 0` branch (an SM-canonical conditional input,
-not axiom-derived), `Y_e = diag(y_1, y_2, y_3)` and therefore
+On the canonical gauge representative `q_H = 0`, `Y_e = diag(y_1, y_2, y_3)`
+and therefore
 
 ```
 |U_e| = I_3 (in the axis basis of H_hw=1).
@@ -234,9 +230,11 @@ not axiom-derived), `Y_e = diag(y_1, y_2, y_3)` and therefore
 See
 [CHARGED_LEPTON_UE_IDENTITY_VIA_Z3_TRICHOTOMY_NOTE_2026-04-17.md](./CHARGED_LEPTON_UE_IDENTITY_VIA_Z3_TRICHOTOMY_NOTE_2026-04-17.md)
 for the full replacement chain (which does **not** depend on the open
-normalization step in the Dirac-bridge theorem) and explicit flagging
-of (i) the `q_H = 0` conditional input and (ii) the observational
-hierarchy pairing `sigma_hier = (2, 1, 0)` below.
+normalization step in the Dirac-bridge theorem) and the Higgs
+gauge-redundancy theorem showing that `q_H = ±1` are physically
+equivalent right-basis relabelings for PMNS observables. The remaining
+non-retained ingredient here is the observational hierarchy pairing
+`sigma_hier = (2, 1, 0)` below.
 
 ### 3. The neutrino basis from `H`
 

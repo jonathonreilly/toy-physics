@@ -55,8 +55,8 @@ The actual curvature object on the live source-oriented sheet is the
 exact Hermitian affine chart
 `H(m, δ, q_+) = H_base + m T_m + δ T_δ + q_+ T_q` directly; it does
 NOT have a Schur-forced scalar-baseline reduction. The PMNS-as-f(H)
-"closure" (basin-uniqueness under an imposed branch-choice rule,
-conditional on `q_H = 0`) is a conditional / support result, NOT a
+"closure" (basin-uniqueness under an imposed branch-choice rule) is a
+conditional / support result, NOT a
 retained live-sheet closure theorem. See the flagship closure review
 note for the honest overall status.
 
@@ -104,9 +104,9 @@ to `R`, giving
 D = m I_3, m in R.
 ```
 
-Hence the axiom-native zero-source baseline on `H_hw=1` is the scalar
-matrix, and the observable-principle curvature on the active pair is
-theorem-native:
+On the commutant class, the zero-source baseline on `H_hw=1` is the
+scalar matrix, and the corresponding reference curvature on the active
+pair is:
 
 ```
 K(X, Y) = (1/m^2) Tr(X Y),
@@ -145,10 +145,11 @@ What this note does NOT retain:
 
 ## What this does **not** close
 
-The Schur-baseline theorem promotes the *curvature* to theorem-native. It
+The Schur-baseline theorem defines a scalar-commutant-class *reference
+curvature*. It does **not** promote the live-sheet curvature, and it
 does **not** promote the *selector principle*.
 
-Specifically, the Schur theorem establishes:
+Specifically, on the commutant class the Schur theorem establishes:
 
 - the correct axiom-native quadratic functional on the active pair
 - that this functional is isotropic in `(delta, q_+)` at quadratic order

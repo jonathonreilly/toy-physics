@@ -216,6 +216,16 @@ The remaining live paper gates are:
 
 1. DM flagship gate
 
+   The live DM gate now includes a repo-tracked G1 PMNS-as-`f(H)`
+   conditional/support package: the PMNS map from `H` is fixed, `q_H`
+   is discharged as GAUGE-retained by the Higgs `Z_3` gauge-redundancy
+   theorem, and the package yields conditional/support `sin δ_CP` and
+   `θ_23` upper-octant consequences. The gate nevertheless remains open
+   because the chamber pin still relies on an imposed branch-choice
+   admissibility rule and the Schur lane remains only a commutant-class
+   lemma, so the retained selector law for the physical source branch /
+   point is still missing.
+
 Outside the flagship paper core, a live partial neutrino boundary/support
 packet is now also on `main`:
 

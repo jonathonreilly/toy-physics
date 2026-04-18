@@ -25,7 +25,7 @@ table for the entire lane.
 | 1 | down-type quarks | `frontier_mass_ratio_ckm_dual.py` | `DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md` | **retained headline** |
 | 2 | up-type quarks | `frontier_mass_ratio_up_sector.py` | `UP_TYPE_MASS_RATIO_CKM_INVERSION_NOTE.md` | bounded, one conditional partition |
 | 3 | charged leptons | `frontier_mass_ratio_lepton_sector.py` | `CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md` | bounded cross-reference; three missing primitives named |
-| 4 | neutrino sector | `frontier_neutrino_mass_derived.py` | `NEUTRINO_MASS_DERIVED_NOTE.md` | retained (`k_B = 8`, `m_3`, NO, `theta_23` upper octant); bounded solar gap |
+| 4 | neutrino sector | `frontier_neutrino_mass_derived.py` | `NEUTRINO_MASS_DERIVED_NOTE.md` | retained (`k_B = 8`, `m_3`, NO); conditional/support `theta_23` upper octant; bounded solar gap |
 | 5 | cosmology | `frontier_cosmology_from_mass_spectrum.py` | `COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md` | bounded/conditional (imported `eta` + bounded `alpha_GUT`) |
 
 ## Phase 1 — down-type quark mass ratios from CKM dual
@@ -116,7 +116,7 @@ Retained zero-import outputs:
 - atmospheric scale `m_3 = 5.06e-2 eV`, `Dm^2_31 = 2.54e-3 eV^2` (+3.5%
   of NuFit 5.3 NO);
 - **normal ordering as structural prediction**;
-- **`theta_23` upper-octant falsifiable retained prediction**
+- **`theta_23` upper-octant falsifiable conditional/support prediction**
   (`s_23^2 >= 0.541`).
 
 Bounded:
@@ -171,7 +171,7 @@ closure).
 - `rho = B/A = alpha_LM`, `eta_break = eps/B = alpha_LM/2` (Phase 4, exact)
 - `m_3`, `Dm^2_31` (Phase 4, +3.5%)
 - normal ordering (Phase 4, structural)
-- `theta_23` upper octant (Phase 4, falsifiable retained)
+- `theta_23` upper octant (Phase 4, falsifiable conditional/support)
 - `R_base = 31/9` (Phase 5, exact group theory)
 - flatness identity `Omega_total = 1` (Phase 5, textbook)
 
@@ -227,7 +227,7 @@ Expected result on `main`:
 - the up-type 1-2 sector ratio `m_u/m_c` is closed within 3% at the
   observation-comparator partition in a bounded one-parameter family;
 - the neutrino atmospheric mass scale, normal ordering, and the
-  `theta_23` upper-octant prediction are retained;
+  `theta_23` upper-octant consequence is conditional/support, not retained;
 - the cosmological pie chart (`Omega_b, Omega_DM, Omega_m, Omega_Lambda`)
   lands within 2% across the board once `eta` is imported;
 - the five-phase attack reduces the ToE parameter count on the retained

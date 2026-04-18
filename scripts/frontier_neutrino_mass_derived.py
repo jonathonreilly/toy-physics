@@ -17,7 +17,7 @@ mass-spectrum attack plan:
   - the atmospheric neutrino scale m_3 ~ 5.06e-2 eV is predicted without
     a fit on the exact diagonal benchmark (atmospheric-scale theorem);
   - Dm^2_31 ~ 2.539e-3 eV^2 lands within a few percent of the NuFit central;
-  - theta_23 sits in the upper octant (retained chamber-closure prediction).
+  - theta_23 sits in the upper octant as a conditional/support chamber-threshold consequence.
 
 What is NOT closed by Phase 4 on this branch:
 
@@ -94,7 +94,7 @@ DM2_21_OBS = 7.42e-5       # eV^2, NuFit 5.3 NO central
 M3_OBS = math.sqrt(DM2_31_OBS)
 S12_SQ_OBS = 0.307         # PDG 2024 central
 S13_SQ_OBS = 0.0218
-S23_SQ_UPPER_OCTANT_MIN = 0.5410  # retained chamber-closure prediction
+S23_SQ_UPPER_OCTANT_MIN = 0.5410  # conditional/support chamber-threshold prediction
 
 
 def check(name: str, condition: bool, detail: str = "") -> bool:
@@ -262,16 +262,16 @@ def main() -> int:
     )
 
     # ----------------------------------------------------------------------
-    # Part 4 -- PMNS angle landmarks (retained theta_23 upper octant)
+    # Part 4 -- PMNS angle landmarks (conditional/support theta_23 upper octant)
     # ----------------------------------------------------------------------
 
-    section("Part 4: PMNS angle landmarks from retained closure")
-    print("  theta_23 upper-octant chamber-closure prediction (retained):")
+    section("Part 4: PMNS angle landmarks from conditional/support closure")
+    print("  theta_23 upper-octant chamber-threshold consequence (conditional/support):")
     print(f"    s_23^2 >= s_23^2_min ~ {S23_SQ_UPPER_OCTANT_MIN:.4f} at PDG central")
     print("    (see PMNS_THETA23_UPPER_OCTANT_CHAMBER_CLOSURE_PREDICTION_NOTE)")
     print()
     print("  theta_12, theta_13 status: bounded chamber, no sharp point")
-    print("    pinning; the selector closure is consistent with observation")
+    print("    pinning; the conditional/support closure is consistent with observation")
     print("    on a 1-parameter chamber-boundary ridge q+ + delta = sqrt(8/3).")
 
     check(
@@ -282,7 +282,7 @@ def main() -> int:
     check(
         "theta_23 prediction is falsifiable by JUNO/DUNE/HK",
         0.5 < S23_SQ_UPPER_OCTANT_MIN < 1.0,
-        "retained prediction lies in physical octant range",
+        "conditional/support prediction lies in physical octant range",
     )
 
     # ----------------------------------------------------------------------
@@ -370,7 +370,7 @@ def main() -> int:
     print("    - m_3 ~ 5.06e-2 eV (atmospheric-scale theorem)")
     print("    - Dm^2_31 within a few percent of NuFit 5.3 NO central")
     print("    - normal ordering as structural prediction")
-    print("    - theta_23 upper-octant retained chamber prediction")
+    print("    - theta_23 upper-octant conditional/support chamber consequence")
     print()
     print("  What Phase 4 BOUNDS but does NOT retain:")
     print("    - the solar gap Dm^2_21 (diagonal benchmark over-predicts;")
