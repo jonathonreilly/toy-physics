@@ -1,12 +1,12 @@
 # Branch Entanglement Robustness Note
 
 **Date:** 2026-04-11  
-**Status:** bounded-retained robustness addendum
+**Status:** bounded companion robustness addendum
 
 Primary artifact:
 - `/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_branch_entanglement_robustness.py`
 
-Companion retained notes:
+Companion notes:
 - [`BMV_ENTANGLEMENT_NOTE_2026-04-11.md`](BMV_ENTANGLEMENT_NOTE_2026-04-11.md)
 - [`BMV_THREEBODY_NOTE_2026-04-11.md`](BMV_THREEBODY_NOTE_2026-04-11.md)
 

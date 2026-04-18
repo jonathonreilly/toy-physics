@@ -40,5 +40,5 @@ Set μ=0 (massless graviton). This eliminates exponential screening.
 The 1D wave equation without mass has no attenuation — the pulse
 propagates without decay. Memory should then be N-independent.
 
-The memory result should be DOWNGRADED from bounded-retained to
+The memory result should be DOWNGRADED from the historical `bounded-retained` label to
 exploratory/finite-size artifact until tested with μ=0.

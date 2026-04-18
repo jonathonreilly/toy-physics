@@ -12,7 +12,7 @@ The discrete event-network model has established:
 - Joint coexistence on Z₂ mirror DAGs through N=100
 
 The frontiers below are ordered by their ability to elevate this from
-"interesting toy model" to "new research program worthy of top journals."
+"interesting bounded computational model" to "new research program worthy of top journals."
 
 ---
 
@@ -282,7 +282,7 @@ continuum gravity.
 to close the biggest reviewer vulnerabilities.
 
 **Then offensive:** Pursue #5 (area law) or #2 (Lorentz) to elevate
-from toy model to research program.
+from bounded computational model to research program.
 
 **Package the foundation:** Existing Born/gravity/decoherence results
 become the foundation paper, with the frontier results as follow-ups.

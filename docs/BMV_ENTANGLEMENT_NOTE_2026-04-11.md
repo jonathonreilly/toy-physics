@@ -2,7 +2,7 @@
 
 ## Status
 
-`bounded-retained`
+`bounded companion`
 
 ## Script
 

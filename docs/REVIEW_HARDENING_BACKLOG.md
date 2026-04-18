@@ -287,7 +287,7 @@ Why it matters:
 
 Goal:
 
-- make the project testable even at the toy-model level
+- make the project testable even at the current bounded-computational-model level
 
 Concrete deliverables:
 

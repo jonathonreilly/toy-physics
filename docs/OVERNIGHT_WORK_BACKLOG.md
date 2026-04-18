@@ -763,7 +763,7 @@ interest map rather than just broaden the science search.
 
 3. **Cleaner same-family closure**
    - Best score impact:
-     - publishability as a careful toy-model paper
+     - publishability as a careful computational-model paper
      - broader theorist interest
      - bridge to known physics
    - Deliverables:

@@ -53,7 +53,7 @@ query strings.
 
 - `"impact parameter" deflection law 1/b discrete lattice`
 - `"weak-field" scattering "impact parameter" exponent`
-- `"gravitational lensing" toy model impact parameter scaling`
+- `"gravitational lensing" computational model impact parameter scaling`
 
 ### 3. Moving-source directional bias
 
@@ -138,4 +138,3 @@ That order matches the current retained hierarchy:
   literature match.
 - It is not a substitute for a real search.
 - It is not a request to broaden the physics story before the search.
-

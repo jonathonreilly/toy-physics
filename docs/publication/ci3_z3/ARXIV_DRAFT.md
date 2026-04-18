@@ -761,7 +761,7 @@ gravitational decoherence.
 The remaining flagship gap is explicit rather than hidden: dark-matter relic
 mapping. That open bridge matters, but it does not erase the rows that are
 already closed. The correct arXiv posture is therefore not “everything is
-solved,” and not “interesting toy model awaiting future work.” It is “one
+solved,” and not “interesting reduced computational model awaiting future work.” It is “one
 discrete framework already carries a large exact backbone, a promoted
 quantitative stack, and a bounded prediction surface, with one major flagship
 gate still open.” If that claim is wrong, it is wrong specifically and

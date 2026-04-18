@@ -119,7 +119,7 @@ those surfaces.
 
 **Problem**
 
-- The current package says “closed / derived” and “no-import closure package”
+- The pre-cleanup package said “closed / derived” and “no-import closure package”
   in the public-facing surfaces:
   - [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
   - [ARXIV_DRAFT.md](./ARXIV_DRAFT.md)
@@ -153,7 +153,7 @@ those surfaces.
 
 **Problem**
 
-- Public surfaces still say “retained / derived” and “all else derived”:
+- Pre-cleanup public surfaces said “retained / derived” and “all else derived”:
   - [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
 - The note itself admits the `9/8` factor is not derived from the CMT alone:
   - [YT_EW_COLOR_PROJECTION_THEOREM.md](/Users/jonreilly/Projects/Physics/docs/YT_EW_COLOR_PROJECTION_THEOREM.md)

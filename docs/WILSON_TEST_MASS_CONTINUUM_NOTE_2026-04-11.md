@@ -1,7 +1,7 @@
 # Wilson Test-Mass / Continuum Companion
 
 **Date:** 2026-04-11  
-**Status:** bounded-retained Wilson companion  
+**Status:** bounded companion on the Wilson lane
 **Scope:** same-convention open-boundary Wilson runners only
 
 ## Purpose

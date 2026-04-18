@@ -6,7 +6,7 @@ This runner closes one specific plaquette-bridge objection:
 
   the exact temporal-completion law  A_inf / A_2 = 2 / sqrt(3)
 
-is not just the kernel of one chosen scalar toy model. It is the universal
+is not just the kernel of one chosen scalar benchmark model. It is the universal
 normalized endpoint ratio for the accepted Wilson nearest-neighbor local
 bosonic scalar gauge-source class.
 

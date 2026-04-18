@@ -5,7 +5,7 @@
 
 ## What was tested
 
-Simulated BMV-like experiment: beam propagates through field of a mass
+Simulated BMV comparison protocol: beam propagates through field of a mass
 in superposition of two z-positions (z=+sep and z=-sep). Measured the
 entanglement (1 - overlap) between beam states conditioned on the
 two mass positions.

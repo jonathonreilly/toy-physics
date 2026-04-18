@@ -1,7 +1,7 @@
 # Down-Type Mass Ratios from the CKM Dual
 
 **Date:** 2026-04-16
-**Status:** bounded secondary flavor-mass lane
+**Status:** bounded secondary lane
 **Primary runner:** `scripts/frontier_mass_ratio_ckm_dual.py`
 
 ## Safe statement

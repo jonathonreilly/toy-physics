@@ -162,7 +162,7 @@ If this becomes a paper or formal note, the most useful comparison targets are l
 
 When describing the project externally:
 
-- call it a **discrete event-network toy model**
+- call it a **discrete event-network computational model**
 - compare it first to **digital / emergent mechanism programs**
 - use **quantum-measure** language for fixed-DAG interference results
 - use **collision-model / influence-functional** language for the decoherence frontier

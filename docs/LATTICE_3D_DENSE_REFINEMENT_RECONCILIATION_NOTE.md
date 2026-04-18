@@ -73,14 +73,14 @@ itself:
 
 So the safe read is:
 
-- **3D dense spent-delay remains a bounded retained branch**
+- **3D dense spent-delay remains a bounded companion branch**
 - **the older `h = 0.5` refinement-positive story fails under corrected
   physical mapping**
 
 ## What is retained
 
 - the 3D dense spent-delay family remains canonical at `h = 1.0`
-- the same-family barrier card still has a bounded retained read
+- the same-family barrier card still has a bounded companion read
 - the corrected hierarchy makes the failure of the refinement story explicit
 
 ## What is not retained
@@ -104,4 +104,3 @@ The project ranking does not change:
 - **mirror remains the flagship**
 - **ordered lattice remains the secondary branch**
 - **NN refinement remains the continuum-side bridge**
-

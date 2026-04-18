@@ -1,7 +1,7 @@
 # Eigenvalue Statistics and Anderson Phase Note
 
 **Date:** 2026-04-11  
-**Status:** bounded-retained candidate on frontier; not yet promoted  
+**Status:** bounded companion on the current `main` surface; not promoted to flagship core
 **Script:** `frontier_eigenvalue_stats_and_anderson_phase.py`
 
 ## Scope

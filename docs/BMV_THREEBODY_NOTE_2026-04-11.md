@@ -2,7 +2,7 @@
 
 ## Status
 
-`bounded-retained (corrected interpretation)`
+`bounded companion (corrected interpretation)`
 
 ## Canonical Artifact
 

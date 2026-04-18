@@ -1,7 +1,7 @@
 # Staggered Self-Consistent Two-Body Channel on an Open 3D Lattice
 
 **Date:** 2026-04-11  
-**Status:** bounded retained companion on `main`  
+**Status:** bounded companion on `main`
 **Script:** `scripts/frontier_staggered_self_consistent_two_body.py`
 
 ## Question

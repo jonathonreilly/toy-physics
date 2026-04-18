@@ -3,7 +3,7 @@
 Bounded down-type mass ratios from the promoted CKM closure.
 
 Status:
-  bounded secondary flavor-mass lane
+  bounded secondary lane
 
 Safe claim:
   Combining the promoted CKM atlas/axiom package with the standard GST
@@ -315,7 +315,7 @@ def main() -> int:
     print(f"  m_d/m_s = {r_ds:.6f}  (self-scale comparator: {R_DS_OBS:.6f})")
     print(f"  m_s/m_b = {r_sb:.6f}  (self-scale comparator: {R_SB_OBS:.6f})")
     print(f"  m_d/m_b = {r_db:.6f}  (self-scale comparator: {R_DB_OBS:.6f})")
-    print("  Status: bounded secondary flavor-mass lane")
+    print("  Status: bounded secondary lane")
     print("  Live qualifier: threshold-local self-scale comparator supported; theorem-grade scale closure remains open")
     print("\n" + "=" * 72)
     print(f"  TOTAL: PASS={PASS_COUNT}, FAIL={FAIL_COUNT}")

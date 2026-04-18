@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""One-command confidence gate for the corrected toy-model benchmark base."""
+"""One-command confidence gate for the corrected benchmark base."""
 
 from __future__ import annotations
 

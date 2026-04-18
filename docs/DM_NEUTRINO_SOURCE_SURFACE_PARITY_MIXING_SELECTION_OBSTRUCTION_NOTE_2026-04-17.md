@@ -289,7 +289,7 @@ All retained / theorem-grade on the integration branch:
 - [DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md](./DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md)
  — chamber `q_+ >= sqrt(8/3) - delta`
 - [DM_NEUTRINO_SOURCE_SURFACE_SCHUR_SCALAR_BASELINE_THEOREM_NOTE_2026-04-17.md](./DM_NEUTRINO_SOURCE_SURFACE_SCHUR_SCALAR_BASELINE_THEOREM_NOTE_2026-04-17.md)
- — Schur baseline D = m I_3 and theorem-native curvature Q
+ — Schur baseline D = m I_3 and commutant-class reference curvature Q
 - [DM_NEUTRINO_SOURCE_SURFACE_INFO_GEOMETRIC_SELECTION_OBSTRUCTION_NOTE_2026-04-17.md](./DM_NEUTRINO_SOURCE_SURFACE_INFO_GEOMETRIC_SELECTION_OBSTRUCTION_NOTE_2026-04-17.md)
  — Quadratic Unanimity, Cubic Splitting Obstruction, Structural
  Obstruction, narrowed-gap (G-Var)/(G-Non-Var) split

@@ -83,7 +83,7 @@ Score deltas since the previous map:
   than a universal Newtonian exponent, the kernel is still empirical, and the
   causal / continuum blockers did not convert into positives.
 - `Likelihood of publication in very top field journals today`: `7.0 -> 6.4`
-  Reason: the package is still strong as a careful toy-model / emergent-
+  Reason: the package is still strong as a careful computational-model / emergent-
   mechanism paper, but the newest blockers weaken the broad-physics pitch:
   no ballistic light cone in the amplitude envelope, no clean unitary
   continuum limit from the raw transfer matrix, and no stable `3+1D`
@@ -141,21 +141,21 @@ Retained-claim status changes since the previous map:
 
 Score deltas that did not move:
 
-- `Toy-model mechanism interest`: unchanged at `10.0/10`
+- `Computational-model mechanism interest`: unchanged at `10.0/10`
 - `Foundations / complex-systems / network-dynamics interest`: unchanged at `10.0/10`
 - `Broad theorist interest`: unchanged at `10.0/10`
 - `Bridge to known physics`: unchanged at `10.0/10`
-- `Publishable as a careful computational toy-model paper`: unchanged at `10.0/10`
+- `Publishable as a careful computational-model paper`: unchanged at `10.0/10`
 
 ## Current map
 
 | category | score | read |
 |---|---:|---|
-| Toy-model mechanism interest | `10.0/10` | the portable weak-field package now looks like a real mechanism class rather than a handful of geometry pockets: three-family cross-family agreement, a portable distance tail, first bounded dynamic/tidal extensions, and cleaner closure notes all raise trust materially |
+| Computational-model mechanism interest | `10.0/10` | the portable weak-field package now looks like a real mechanism class rather than a handful of geometry pockets: three-family cross-family agreement, a portable distance tail, first bounded dynamic/tidal extensions, and cleaner closure notes all raise trust materially |
 | Foundations / complex-systems / network-dynamics interest | `10.0/10` | the current portfolio is now rich enough to look like a serious emergent-law program: portable fixed-field structure, nested portability boundaries, first moving-source/tidal extensions, and disciplined diagnosed closures on the failed object/strong-field lanes |
 | Broad theorist interest | `10.0/10` | still maxed out on curiosity value; the exact-lattice wavefield lane, complex-action carryover, grown-row companion, bounded wide-lattice distance frontier, stronger electrostatics family, and graph-growth proxies make the program look richer rather than narrower after merge |
 | Bridge to known physics | `10.0/10` | now effectively maxed in breadth, because the mainline portfolio visibly touches weak-field gravity, signed scalar couplings, causal phase structure, distance-law behavior, and graph-growth expansion proxies; it is still not a full closure because the self-generated field and inertial-response sectors remain only partly retained |
-| Publishable as a careful computational toy-model paper | `10.0/10` | essentially maxed; the repo now has enough retained positives, enough bounded negatives, and enough diagnosed closures to support a very strong disciplined toy-model paper even if the flagship physics claim remains narrower |
+| Publishable as a careful computational-model paper | `10.0/10` | essentially maxed; the repo now has enough retained positives, enough bounded negatives, and enough diagnosed closures to support a very strong disciplined computational-model paper even if the flagship physics claim remains narrower |
 | Publishable as a foundational-physics breakthrough claim | `7.4/10` | still above the bar for a serious foundations paper, but now clearly narrower than the previous map: the cleanest retained story is action constraint + Born/gauge structure + bounded weak-field gravity windows, not a universal Newtonian / relativistic closure |
 | Likelihood of publication in very top field journals today (`PRL` / `PRX` / `Nature Physics`) | `6.4/10` | plausible only as a highly disciplined, narrowly framed mechanism paper; the latest blockers make the broader flagship pitch weaker because the strongest gravity-like lane is parameter-window specific and the causal / continuum story remains materially incomplete |
 | Ready for top-tier mainstream physics claims | `6.5/10` | the bridge to known physics is still broad, but the current honest read is “discrete-wave resonance mechanism with Newtonian-looking windows,” not “emergent relativistic gravity,” which lowers mainstream claim-readiness |
@@ -643,7 +643,7 @@ external-score movers right now:
 
 The honest external read today is:
 
-- **high intrinsic toy-model interest**
+- **high intrinsic computational-model interest**
 - **real odds of a careful narrow paper**
 - **low current odds of broad mainstream acceptance as a breakthrough claim**
 

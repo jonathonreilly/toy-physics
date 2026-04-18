@@ -1,7 +1,7 @@
 # Staggered Newton Blocking Sensitivity on the Open 3D Cubic Surface
 
 **Date:** 2026-04-11  
-**Status:** bounded retained companion on `main`  
+**Status:** bounded companion on `main`
 **Script:** `scripts/frontier_staggered_newton_blocking_sensitivity.py`
 
 ## Question

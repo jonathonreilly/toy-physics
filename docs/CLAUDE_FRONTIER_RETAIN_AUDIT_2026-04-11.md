@@ -292,7 +292,7 @@ Current honest baseline:
 
 ### 2. BMV / branch-entanglement extensions
 
-Keep bounded retained notes that are already honest, but do not promote the
+Keep bounded companion notes that are already honest, but do not promote the
 stronger new frontier claims yet.
 
 Reason:

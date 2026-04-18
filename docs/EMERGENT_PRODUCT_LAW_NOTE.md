@@ -2,7 +2,7 @@
 
 **Script:** `scripts/frontier_emergent_product_law.py`
 **Date:** 2026-04-11
-**Status:** bounded-retained candidate; acceptance gates passed on one audited open 3D staggered cross-field Poisson surface
+**Status:** bounded companion on one audited open 3D staggered cross-field Poisson surface
 
 ## Motivation
 

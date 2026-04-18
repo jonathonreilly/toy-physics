@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-11  
 **Lane:** staggered bounded side probe  
-**Status:** bounded-retained structured-curvature proxy with explicit caveats
+**Status:** bounded companion structured-curvature proxy with explicit caveats
 
 ## Bottom line
 

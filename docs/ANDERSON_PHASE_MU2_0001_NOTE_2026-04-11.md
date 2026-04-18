@@ -1,7 +1,7 @@
 # Anderson Phase Map Note at `mu2 = 0.001`
 
 **Date:** 2026-04-11  
-**Status:** bounded retained companion on `main`  
+**Status:** bounded companion on `main`
 **Script:** `scripts/frontier_anderson_phase_unscreened_periodic.py`
 
 ## Scope

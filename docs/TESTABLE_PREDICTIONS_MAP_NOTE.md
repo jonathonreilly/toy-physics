@@ -85,7 +85,7 @@ Why it ranks this high:
   - `F~M` stays near `1.00`
 - Still needs hardening:
   - transfer off the exact lattice
-  - a stronger experimental mapping if it is going to be claimed outside the toy model
+  - a stronger experimental mapping if it is going to be claimed outside the current bounded computational model
 - Platform class: **analog-simulator-testable** in spirit, **theory-only** as
   a literal lattice claim
 

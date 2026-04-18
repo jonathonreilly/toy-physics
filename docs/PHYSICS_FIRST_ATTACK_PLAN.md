@@ -336,7 +336,7 @@ physics?
 **Why this is highest priority**
 
 - It is the biggest remaining gap in the model.
-- It is the clearest path from a toy model to a physics mechanism.
+- It is the clearest path from a bounded computational model to a physics mechanism.
 - It directly addresses the strongest “imposed geometry” criticism.
 
 **Success criteria**
@@ -405,7 +405,7 @@ prove that it cannot without additional assumptions?
 
 - This is where the current “Newton derived” temptation lives or dies.
 - A real no-go result would be just as valuable as a stronger derivation.
-- This is the cleanest route from “nice toy model” toward “forced structure.”
+- This is the cleanest route from “nice bounded computational model” toward “forced structure.”
 
 **Success criteria**
 

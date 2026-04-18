@@ -217,7 +217,7 @@ instanton-measure suppression theorem. The public wording should reflect that.
 **Current public posture**
 
 - promoted no-import closure package
-- public quantitative row marked `closed / derived`
+- pre-cleanup public quantitative row marked `closed / derived`
 
 Representative surfaces:
 
@@ -233,7 +233,8 @@ Representative surfaces:
   note
 - exact counts / projector / tensor-slot / Schur cascade structure are real
 - public numerics still rely on a selected canonical surface and a comparator
-  structure that should be described more carefully than “closed / derived”
+  structure that, before the terminology cleanup, was described more
+  carelessly than `derived` or `promoted quantitative package`
 
 Primary evidence:
 
@@ -253,7 +254,7 @@ the exact support story needs to be.
 
 **Current public posture**
 
-- retained / derived
+- pre-cleanup `retained / derived`
 - “canonical same-surface plaquette evaluation, all else derived”
 
 Representative surfaces:

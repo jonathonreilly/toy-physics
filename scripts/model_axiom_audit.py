@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the current axiom-level audit for the toy model.
+"""Render the current axiom-level audit for the computational model.
 
 This is an architecture artifact, not a new experiment sweep. It compresses the
 current state of the project into four reusable views:

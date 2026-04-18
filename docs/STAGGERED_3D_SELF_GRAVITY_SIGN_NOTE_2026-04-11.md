@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-11  
 **Script:** `scripts/frontier_staggered_3d_self_gravity_sign.py`  
-**Status:** bounded retained positive/negative split on `main`
+**Status:** bounded companion positive/negative split on `main`
 
 ## Question
 

@@ -343,7 +343,7 @@ This is a real physics trade-off, not a parameter-tuning issue.
 
 ## Honest assessment
 
-This is a toy model with seven publishable quantitative results:
+This is a reduced computational model with seven publishable quantitative results:
 
 1. **Gravity from phase:** deflection via phase valley mechanism,
    5.1 SE on uniform DAGs, 1/b² distance scaling, F∝M.
@@ -359,7 +359,7 @@ This is a toy model with seven publishable quantitative results:
    over baseline). Effective range extends from N≈235 to N≈1355.
 
 5. **Joint coexistence:** same propagator, same graphs, broad
-   parameter window. The first toy model (to our knowledge) where
+   parameter window. The first reduced computational model (to our knowledge) where
    gravity and decoherence emerge from a single discrete structure.
 
 6. **Dimensional escape:** 4D modular DAGs show exponent -0.22

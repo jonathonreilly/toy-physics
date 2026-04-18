@@ -1,8 +1,8 @@
-# Holographic Boundary-Law Probe (Retained Bounded Note)
+# Holographic Boundary-Law Probe (Bounded Companion Note)
 
 ## Status
 
-`bounded-retained`
+`bounded companion`
 
 This probe supports a bounded many-body-style boundary-law statement on the 2D
 periodic staggered lattice using the Dirac-sea correlation-matrix construction.

@@ -1,7 +1,7 @@
 # Wilson `mu^2` Distance Sweep Note
 
 **Date:** 2026-04-11  
-**Status:** bounded-retained calibration note
+**Status:** bounded companion calibration note
 
 **Script:** `scripts/frontier_wilson_mu2_distance_sweep.py`
 

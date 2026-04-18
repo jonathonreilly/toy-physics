@@ -326,7 +326,7 @@ post-selection is needed.
 
 Previously retained:
 - Born rule I_3 = 0 (pairwise interference)
-- Gravitational entanglement (BMV-like, delta_S > 0)
+- Branch-mediated gravitational entanglement witness (`delta_S > 0` on the externally imposed two-branch protocol)
 
 This result adds:
 - Explicit CHSH Bell violation on a proper tensor product bipartition

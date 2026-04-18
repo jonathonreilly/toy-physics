@@ -15,17 +15,17 @@ derived quantitative rows, and still-open companion lanes.
 | `M_Pl` as UV cutoff | assumed framework scale | Treated as the framework cutoff, not fitted from the SM. |
 | SU(3) plaquette `<P> = 0.5934` at `beta = 6` | same-surface evaluated / derived | The complete prediction chain uses the canonical plaquette evaluation of the retained partition function, not an experimental import or a free parameter. |
 | exact structural gauge/matter backbone | derived | `SU(3) x SU(2) x U(1)`, three generations, anomaly-forced `3+1`, and the retained matter structure are package-grade. |
-| `SU(3)` confinement / `\sqrt{\sigma}` | derived / retained structural theorem + bounded quantitative prediction | `T = 0` confinement is structural on the graph-first `SU(3)` gauge sector at canonical `g_bare^2 = 1`; the bounded `\sqrt{\sigma} \approx 465 MeV` readout uses the retained `\alpha_s` lane plus the standard low-energy EFT bridge. |
-| strong CP / `θ_eff = 0` | derived / retained exact structural theorem | On the retained axiom-determined Wilson-plus-staggered action surface, no bare `θ` appears and the real-mass staggered determinant carries no phase. |
-| CKM neutron EDM | derived / retained structural corollary + bounded quantitative prediction | Retained strong-CP closure plus promoted CKM closure imply `d_n(QCD) = 0` exactly on the retained surface, so the surviving neutron EDM is CKM-only; the bounded `d_n(CKM) ~ 10^-32 - 10^-33 e cm` readout uses the standard short-/long-distance EFT bridge. |
+| `SU(3)` confinement / `\sqrt{\sigma}` | retained support + bounded companion | `T = 0` confinement is structural on the graph-first `SU(3)` gauge sector at canonical `g_bare^2 = 1`; the bounded `\sqrt{\sigma} \approx 465 MeV` readout uses the retained `\alpha_s` lane plus the standard low-energy EFT bridge. |
+| strong CP / `θ_eff = 0` | retained | On the retained axiom-determined Wilson-plus-staggered action surface, no bare `θ` appears and the real-mass staggered determinant carries no phase. |
+| CKM neutron EDM | retained corollary + bounded companion | Retained strong-CP closure plus promoted CKM closure imply `d_n(QCD) = 0` exactly on the retained surface, so the surviving neutron EDM is CKM-only; the bounded `d_n(CKM) ~ 10^-32 - 10^-33 e cm` readout uses the standard short-/long-distance EFT bridge. |
 | hierarchy / `v` theorem | derived | `v = 246.282818290129 GeV` is retained on the hierarchy lane; it is not part of the separate quantitative component stack. |
 | `R_conn = 8/9` color factor | derived | Canonical authority is [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md); it is not a fit knob. |
-| EW normalization package | derived / retained quantitative lane | `sin^2(theta_W)`, `1/alpha_EM`, `g_1(v)`, and `g_2(v)` form a standalone retained EW lane. |
-| renormalized `y_t` endpoint | bounded / derived | `y_t(v) = 0.9176` is a zero-import central value, but it inherits an approximately `3%` QFP/RGE-surrogate systematic. |
-| top pole mass package | bounded / derived | `m_t(pole) = 172.57 GeV` (2-loop) and `173.10 GeV` (3-loop) inherit the bounded `y_t` systematic. |
+| EW normalization package | derived | `sin^2(theta_W)`, `1/alpha_EM`, `g_1(v)`, and `g_2(v)` form a standalone retained EW lane. |
+| renormalized `y_t` endpoint | derived | `y_t(v) = 0.9176` is a zero-import central value, but it inherits an approximately `3%` QFP/RGE-surrogate systematic. |
+| top pole mass package | derived | `m_t(pole) = 172.57 GeV` (2-loop) and `173.10 GeV` (3-loop) inherit the bounded `y_t` systematic. |
 | Higgs CW/stability package | bounded | the mechanism, `lambda(M_Pl)=0` boundary, and framework-native full 3-loop Higgs implementation now exist; exact `m_H` and vacuum stability remain bounded only because they inherit the bounded `y_t` / QFP route. |
-| DM flagship gate | bounded/open | Exact transport-chain progress is real, but final DM quantitative closure is still not closed. |
-| CKM quantitative closure | derived / promoted quantitative package | The canonical atlas/axiom no-import closure is promoted on `main`; older Cabibbo / mass-basis / partial-Jarlskog routes remain route history only. |
+| DM flagship gate | open flagship gate | Exact transport-chain progress is real, but final DM quantitative closure is still not closed. |
+| CKM quantitative closure | promoted quantitative package | The canonical atlas/axiom no-import closure is promoted on `main`; older Cabibbo / mass-basis / partial-Jarlskog routes remain route history only. |
 
 ## Writing rule
 

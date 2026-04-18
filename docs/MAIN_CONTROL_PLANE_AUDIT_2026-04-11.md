@@ -19,7 +19,7 @@ repo-local rerun surface everywhere.
 
 What is aligned across the audited docs:
 
-- the promoted staggered open-cubic companions are consistently treated as **bounded retained companions**, not as full Newton closure
+- the promoted staggered open-cubic companions are consistently treated as **bounded companions**, not as full Newton closure
 - staggered both-masses and trajectory-level staggered two-body closure remain open
 - the Wilson lane remains bounded rather than a retained full Newton claim
 - the Ollivier lane remains bounded as a proxy, not an Einstein-equation derivation
@@ -43,7 +43,7 @@ That work is tracked as a revisit item in:
 
 The repo baseline should therefore be read as:
 
-- corrected on the bounded retained control-plane surface
+- corrected on the bounded-companion control-plane surface
 - still carrying historical doc cleanup debt outside that surface
 
 ## Follow-Up Boundary

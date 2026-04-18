@@ -23,7 +23,7 @@ chain) is genuinely required.
 The runner implements three independent symbolic tactics:
 
     T1 DIRECT SYMBOLIC LEGENDRE TRANSFORM
-       Build W(J) on a minimal hw=1 toy model parametrised by two mass
+       Build W(J) on a minimal hw=1 reduced model parametrised by two mass
        scales m_+ (trivial-character eigenspace) and m_- (nontrivial-
        character eigenspace), Legendre-transform symbolically, and read
        off alpha, beta. Check whether alpha = beta is an algebraic
@@ -245,16 +245,16 @@ def partA_legendre_structure():
 
 
 def tactic1_direct_legendre():
-    """Symbolic Legendre transform on a toy block with two mass scales.
+    """Symbolic Legendre transform on a reduced block with two mass scales.
 
-    Construct a minimal toy model where the exact retained structure is
+    Construct a minimal reduced model where the exact retained structure is
     honoured: two independent invariant subsystems E_+ (1D) and E_w +
     E_{w^2} (2D, real-irreducible under conjugation). Assign Dirac mass
     m_+ to the trivial block and mass m_- to the nontrivial block. Build
     W(J) = log|det(D + J)| on this tensor-factored system and read off
     the curvature eigenvalues directly.
 
-    Observation: on this toy model, the free determinant factorises as
+    Observation: on this reduced model, the free determinant factorises as
 
         det(D + J) = (m_+ + j_+) * (m_- + j_w) * (m_- + j_{w^2})
 

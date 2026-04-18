@@ -4,9 +4,10 @@
 **Branch:** `frontier/spot-checks`
 
 This file is a frontier triage surface, not a publication-ready summary. It
-separates:
+uses the historical discovery-label family from
+[`docs/repo/CONTROLLED_VOCABULARY.md`](repo/CONTROLLED_VOCABULARY.md) and separates:
 
-- bounded retained side results
+- `bounded-retained` side results
 - exploratory leads
 - clean negatives
 
@@ -20,7 +21,7 @@ For publication use, prefer:
 | Probe | Strongest honest claim | Status |
 |---|---|---|
 | Holographic boundary-law probe | On the 2D periodic staggered lattice, Dirac-sea entropy scales more cleanly with boundary than volume; the audited BFS-ball robustness surface gives `100/100` fits above `R^2=0.95`, with caveats on the `side=6` two-point fits and separate smaller partition checks | `bounded-retained` |
-| Fixed-adjacency branch superposition | Retained 2D branch effect on the current staggered Hamiltonian; 1D controls stay null | `bounded-retained` |
+| Fixed-adjacency branch superposition | Bounded 2D branch effect on the current staggered Hamiltonian; 1D controls stay null | `bounded-retained` |
 | Gravitational memory | The original `N=61` ring pulse signal is real on its narrow protocol, but later robustness sweeps show strong size/position fragility and Yukawa-screening dependence | `exploratory-lead` |
 | Two-body branch entanglement | Externally imposed two-branch source/field protocol yields `delta_S > 0` for all tested `G`, with peak entropy `0.69287` nats | `bounded-retained` |
 | Three-body branch entanglement | On the audited robustness surface, the fixed two-branch protocol yields W-type tripartite branch entanglement with `tau_3 = 0` in `25/25` configurations | `bounded-retained` |

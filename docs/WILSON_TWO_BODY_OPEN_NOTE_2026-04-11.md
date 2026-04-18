@@ -1,7 +1,7 @@
 # Wilson Two-Body Open-Lattice Note
 
 **Date:** 2026-04-11  
-**Status:** bounded-retained candidate on frontier; not yet promoted  
+**Status:** bounded companion on the current `main` surface; not promoted to flagship core
 **Scripts:**  
 - `frontier_wilson_two_body.py`  
 - `frontier_wilson_two_body_open.py`  
@@ -191,7 +191,7 @@ artifact that the open-lattice harness was built to avoid.
 
 This Wilson result is strongest as:
 
-- a bounded-retained mutual-attraction result
+- a bounded companion mutual-attraction result
 - a counterexample to “the two-body lane is pure artifact”
 - a launch point for understanding why the discrete mutual channel follows a
   steeper-than-Newton falloff

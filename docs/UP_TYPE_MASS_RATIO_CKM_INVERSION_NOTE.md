@@ -1,7 +1,7 @@
 # Up-Type Mass Ratios from the CKM Inversion (Phase 2 of mass spectrum)
 
 **Date:** 2026-04-17
-**Status:** bounded secondary flavor-mass lane (one conditional partition)
+**Status:** bounded secondary lane (one conditional partition)
 **Primary runner:** `scripts/frontier_mass_ratio_up_sector.py`
 **Depends on:** `DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md` (Phase 1)
 

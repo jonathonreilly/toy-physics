@@ -278,9 +278,9 @@ The formal argument:
  `delta^2 + q_+^2` is at `delta = q_+ = sqrt(8/3)/2 = sqrt(6)/3`.
 
 Steps 1–5 establish the Schur theorem. Steps 6–7 record the
-theorem-native curvature. Step 8 records the chamber minimum that the
-diagnostic note previously identified; here it is on the theorem-native
-surface.
+commutant-class reference curvature. Step 8 records the chamber minimum
+that the diagnostic note previously identified; here it is on the
+commutant-class reference surface.
 
 ## Honest gap statement (Option-A — withdrawal of earlier "narrowed gap" claim)
 

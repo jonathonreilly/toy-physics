@@ -3,8 +3,8 @@
 **Date:** 2026-04-15
 **Purpose:** one-page reviewer framing for the current `main` package
 
-This repository is not presently organized around the older toy-model or DAG
-exploration surfaces. The current review target is a `Cl(3)` on `Z^3`
+This repository is not presently organized around the older exploratory or
+layered-geometry side surfaces. The current review target is a `Cl(3)` on `Z^3`
 framework package with a retained theorem core, retained standalone
 quantitative lanes, derived Yukawa/Higgs lanes, one review-facing
 charged-lepton closure-class package, a bounded prediction portfolio, and one

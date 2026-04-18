@@ -3,7 +3,7 @@
 Bounded up-type mass ratios from the CKM dual with a parallel-bridge ansatz.
 
 Status:
-  bounded secondary flavor-mass lane (one conditional partition parameter)
+  bounded secondary lane (one conditional partition parameter)
 
 Safe claim:
   Extending the promoted CKM atlas/axiom package and the Phase 1 down-type

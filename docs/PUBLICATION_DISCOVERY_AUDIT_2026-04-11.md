@@ -161,7 +161,7 @@ The repo currently contains four different classes of publication material:
 
 **Verdict**
 
-- worth preserving as a bounded retained frontier result
+- worth preserving as a bounded companion frontier result
 - strong enough to anchor a bounded “clean mutual channel plus weak-field
   Newton-compatible companion” discussion
 - not yet the Nature-threshold two-body closure
@@ -231,7 +231,7 @@ The repo currently contains four different classes of publication material:
 
 **Verdict**
 
-- preserve as a bounded retained companion on `main`
+- preserve as a bounded companion on `main`
 - use it as the canonical CI(3) / `Z^3` gauge entrypoint on `main`
 - treat the abelian factor as hypercharge-like / left-handed matched until the
   anomaly-complete completion theorem lands
