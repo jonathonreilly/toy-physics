@@ -153,8 +153,8 @@ def main() -> int:
     )
     check(
         "the marked-rim boundary state is positive and conjugation-symmetric",
-        boundary_swap < 1.0e-12 and float(np.min(boundary)) >= 0.0,
-        detail=f"minimum boundary amplitude={float(np.min(boundary)):.6e}",
+        boundary_swap < 1.0e-12 and float(np.min(boundary)) >= -1.0e-12,
+        detail=f"minimum boundary amplitude={float(np.min(boundary)):.6e} (roundoff-tolerant positivity)",
     )
     check(
         "the environment character coefficients are exact boundary amplitudes of the spatial transfer operator",
