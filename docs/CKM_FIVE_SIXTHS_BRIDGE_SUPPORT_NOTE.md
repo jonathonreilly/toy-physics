@@ -1,9 +1,20 @@
 # CKM Five-Sixths Bridge Support Note
 
-**Date:** 2026-04-16 (bridge support layer); 2026-04-17 (retained structural origin of `5/6`)
-**Status:** numerical-support layer for the down-type CKM-dual mass-ratio lane. The structural origin of the `5/6` exponent is now retained (see the bridge-identity theorem note below). The quantitative mass-ratio readout remains bounded.
+**Date:** 2026-04-16 (bridge support layer); 2026-04-17 (retained structural origin of `5/6` + proposed primitive P-AT that, if accepted, upgrades the bridge to a leading-order retained theorem).
+**Status:** numerical-support layer for the down-type CKM-dual mass-ratio lane.
+- The structural origin of the `5/6` exponent is retained on `main`: it is
+  the atlas `1+5` orthogonal-complement projector weight on `Q_L` (SI3 in
+  the bridge-identity note below). The numerical coincidence with the
+  SU(3) Casimir combination `C_F - T_F = 5/6` is a cross-check only.
+- Under the proposed new retained primitive **P-AT** (atlas-projector-weighted
+  `(2,3)` off-diagonal `M_d(2,3) = m_s^(5/6) · m_b^(1/6)`), the `5/6`
+  bridge `|V_cb| = (m_s/m_b)^(5/6)` is leading-order exact in the
+  hierarchical limit and the quantitative mass-ratio readout derives from
+  the retained CKM atlas. P-AT is a framework-level proposal with review
+  pending (see the bridge-identity note).
+- The quantitative mass-ratio readout remains bounded downstream.
 **Primary runner:** `scripts/frontier_ckm_five_sixths_bridge_support.py`
-**Retained structural authority for the `5/6` origin:**
+**Authority for structural `5/6` origin (Layer 1) and P-AT proposal (Layer 2):**
 [CKM_DUAL_BRIDGE_IDENTITY_THEOREM_NOTE_2026-04-17.md](CKM_DUAL_BRIDGE_IDENTITY_THEOREM_NOTE_2026-04-17.md)
 
 ## Safe statement

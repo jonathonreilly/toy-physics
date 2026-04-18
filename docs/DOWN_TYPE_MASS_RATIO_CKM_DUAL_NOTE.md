@@ -1,9 +1,9 @@
 # Down-Type Mass Ratios from the CKM Dual
 
-**Date:** 2026-04-16 (original); 2026-04-17 (structural bridge exponents retained)
-**Status:** retained structural bridge-identity theorem + bounded quantitative mass-ratio readout (confinement-pattern split status)
+**Date:** 2026-04-16 (original); 2026-04-17 (three-layer status: retained structural identities + proposed new retained primitive P-AT + bounded quantitative readout)
+**Status:** three-layer (Layer 1 retained structural identities + Layer 2 proposed new retained primitive P-AT + Layer 3 bounded quantitative readout)
 **Primary runner:** `scripts/frontier_mass_ratio_ckm_dual.py`
-**Retained structural authority:**
+**Authority (Layer 1 retained identities + Layer 2 proposed primitive P-AT):**
 [CKM_DUAL_BRIDGE_IDENTITY_THEOREM_NOTE_2026-04-17.md](CKM_DUAL_BRIDGE_IDENTITY_THEOREM_NOTE_2026-04-17.md)
 (companion runner: `scripts/frontier_ckm_dual_bridge_identity.py`)
 
@@ -11,38 +11,64 @@
 
 On the current live package surface, the promoted CKM atlas/axiom closure and
 the canonical same-surface value `alpha_s(v) = 0.103303816122` combine with
-the retained CKM-Dual Bridge Identity Theorem to give a down-type flavor-mass
-lane with the following split status:
+the CKM-Dual Bridge Identity Theorem to give a down-type flavor-mass lane
+with the following three-layer status:
 
-- **retained structural layer** — the bridge exponents are framework
-  constants, not free bridge parameters:
-  - `sqrt(6)` in `|V_cb| = alpha_s(v)/sqrt(6)` and in the `5/6` bridge is the
-    retained Ward-theorem Clebsch-Gordan `sqrt(N_c · N_iso) = sqrt(dim(Q_L))`
-  - the `1/2` GST exponent is the atlas structural count `1/n_pair`
-  - the `5/6` bridge exponent is the atlas orthogonal-complement projector
-    weight `1 - 1/n_quark` on the six-state `Q_L` block
-  - GST `|V_us| = sqrt(m_d/m_s)` and the `5/6` bridge
-    `|V_cb| = (m_s/m_b)^(5/6)` are exact algebraic identities on the retained
-    identification surface
+- **Layer 1 — retained structural identities (unconditional on `main`):**
+  - `sqrt(6)` in `|V_cb| = alpha_s(v)/sqrt(6)` is the retained Ward-theorem
+    Clebsch-Gordan `sqrt(N_c · N_iso) = sqrt(dim(Q_L))` (SI1)
+  - GST exponent `1/2 = 1/n_pair` is the retained atlas EWSB residual
+    pair count (SI2)
+  - `5/6` bridge exponent = retained atlas `1+5` orthogonal-complement
+    projector weight on the six-state `Q_L` block (SI3); the numerical
+    coincidence with the SU(3) Casimir combination `C_F - T_F = 5/6` is
+    recorded as a cross-check, not the retained origin
 
-- **bounded quantitative layer** — the identification surface itself is an
-  atlas-consistent choice and inherits the mass-hierarchy systematic:
-  - `m_d/m_s = alpha_s(v) / 2`
-  - `m_s/m_b = [alpha_s(v) / sqrt(6)]^(6/5)`
-  - `m_d/m_b = (m_d/m_s) (m_s/m_b) = alpha_s(v)^(11/5) / (2 * 6^(3/5))`
+- **Layer 2 — proposed new retained primitive P-AT (framework-level review pending):**
+  on the retained `hw=1` down-type mass matrix, the `(2,3)` off-diagonal
+  has the atlas-projector-weighted form
+  `M_d(2,3) = m_s^(5/6) · m_b^(1/6)` (lighter generation weighted by CP-odd
+  `5/6`, heavier by CP-even `1/6`), with `(1,2)` off-diagonal =
+  `sqrt(m_d · m_s)` (NNI geometric mean) and `(1,3)` = 0 (NNI texture zero).
+  Under P-AT, in the hierarchical limit `m_d/m_s -> 0`, `m_s/m_b -> 0`:
+  - T1: GST `|V_us| = sqrt(m_d/m_s)` is leading-order exact
+  - T2: `5/6` bridge `|V_cb| = (m_s/m_b)^(5/6)` is leading-order exact
+  - T3: combining with the retained CKM atlas values `|V_us|_atlas =
+    sqrt(alpha_s(v)/n_pair)` and `|V_cb|_atlas = alpha_s(v)/sqrt(n_quark)`
+    gives the identification surface
+    - `m_d/m_s = alpha_s(v) / n_pair`
+    - `m_s/m_b = [alpha_s(v)/sqrt(n_quark)]^(n_quark/(n_quark-1)) =
+      [alpha_s(v)/sqrt(6)]^(6/5)`
+    - `m_d/m_b = alpha_s(v)^(11/5) / (2 · 6^(3/5))`
+    as framework output.
+  P-AT is a **new framework proposal**, not a derivation from pre-existing
+  retained primitives. Its structural motivation is that the atlas
+  bilinear tensor carrier `K_R` on `Q_L` has CP-even and CP-odd sectors
+  with weights `1/6` and `5/6`, and the bridge-inducing `(2,3)`
+  mass-matrix element inherits the same weighting. The acceptance or
+  rejection of P-AT is a framework-level decision with review pending.
+
+- **Layer 3 — bounded quantitative readout:** the identification surface
+  (I1)-(I2) gives
+  - `m_d/m_s = 0.05165` (+3.30% vs PDG self-scale comparator)
+  - `m_s/m_b = 0.02239` (+0.20%)
+  - `m_d/m_b = 0.001156` (+3.50%)
 
 No observed quark masses are used as derivation inputs.
 
-This pattern mirrors the retained confinement row: a retained structural
-theorem fixing the form, with a bounded quantitative downstream readout. What
-is **not** retained is the RG/transport derivation that would force the
-mass-ratio identification surface itself from the retained Ward-theorem UV
-boundary — this remains the named open work for a full quantitative lane
-promotion.
+What remains open (named):
+- a framework-internal operator-theoretic derivation of P-AT from the
+  atlas bilinear tensor carrier `K_R` on `Q_L` that would elevate P-AT
+  from proposed to retained;
+- a sub-leading-order correction program beyond the hierarchical
+  leading-order exact bridges under P-AT;
+- a framework-internal scale-selection theorem that forces the
+  threshold-local self-scale comparator.
 
 The lane converts the promoted CKM package into a reusable down-type
-flavor-mass tool with retained exponent structure that can support later
-`y_b`, flavor-hierarchy, and flavor-dependent cosmology / baryogenesis work.
+flavor-mass tool with retained exponent structure (Layer 1) plus the
+proposed P-AT primitive (Layer 2) that, if accepted, upgrades the
+identification surface to a framework output.
 
 ## Inputs and bridge structure
 

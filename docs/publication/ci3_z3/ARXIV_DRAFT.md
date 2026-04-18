@@ -659,17 +659,26 @@ corollary:
   CKM-only; bounded continuation gives
   $d_n^{\mathrm{CKM}} \sim 8\times 10^{-33}\,e\,\mathrm{cm}$;
 - down-type flavor-mass CKM-dual lane
-  (retained structural bridge-identity theorem + bounded quantitative readout):
-  the $\sqrt{6}$ in $|V_{cb}|_{\mathrm{atlas}}$ and in the $5/6$ bridge is the
-  retained Ward Clebsch-Gordan $\sqrt{N_c \cdot N_{iso}}$ on $Q_L$, the GST
-  exponent $1/2$ is $1/n_{\mathrm{pair}}$, and the $5/6$ bridge exponent is
-  the atlas $1 + 5$ orthogonal-complement projector weight on the six-state
-  $Q_L$ block; on this retained surface
+  (three-layer: retained structural identities + proposed new retained
+  primitive P-AT + bounded quantitative readout):
+  Layer 1 (retained): the $\sqrt{6}$ in $|V_{cb}|_{\mathrm{atlas}}$ is the
+  retained Ward Clebsch-Gordan $\sqrt{N_c \cdot N_{iso}}$ on $Q_L$; GST
+  exponent $1/2$ is $1/n_{\mathrm{pair}}$; $5/6$ bridge exponent is the
+  retained atlas $1 + 5$ orthogonal-complement projector weight on the
+  six-state $Q_L$ block. Layer 2 (proposed new retained primitive P-AT,
+  framework-level review pending): the down-type $hw=1$ NNI mass matrix
+  has atlas-projector-weighted $(2,3)$ off-diagonal
+  $M_d(2,3) = m_s^{5/6} m_b^{1/6}$; under P-AT, GST and the $5/6$ bridge
+  are leading-order exact in the hierarchical limit, and combining with
+  the retained CKM atlas gives the mass-ratio identification surface
+  $m_d/m_s = \alpha_s(v)/n_{\mathrm{pair}}$,
+  $m_s/m_b = [\alpha_s(v)/\sqrt{n_{\mathrm{quark}}}]^{6/5}$. Layer 3
+  (bounded quantitative readout):
   $m_d/m_s = 0.05165$, $m_s/m_b = 0.02239$, and $m_d/m_b = 0.001156$
   against the threshold-local PDG self-scale comparator
-  $m_s(2\,\mathrm{GeV})/m_b(m_b)$, with the framework-internal RG/transport
-  derivation of the mass-ratio identification surface and the scale-selection
-  rule still open;
+  $m_s(2\,\mathrm{GeV})/m_b(m_b)$, with the framework-internal
+  operator-theoretic derivation of P-AT from the atlas bilinear tensor
+  carrier $K_R$ and the exact scale-selection rule remaining open;
 - vacuum critical stability on the current $\lambda(M_{\mathrm{Pl}})=0$ route;
 - taste-scalar near-degeneracy companion:
   exact taste-block fermion-CW isotropy plus bounded gauge-only split gives

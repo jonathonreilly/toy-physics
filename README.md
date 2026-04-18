@@ -47,13 +47,16 @@ context, not part of the live reviewer path.
 - retained and promoted quantitative stack:
   canonical `v = 246.282818290129 GeV`, retained `alpha_s(M_Z) = 0.1181`,
   retained EW normalization, promoted CKM atlas/axiom closure,
-  retained CKM-dual bridge-identity theorem (GST and `5/6` bridge exponents
-  fixed by the retained Ward Clebsch-Gordan and the atlas `1+5`
-  orthogonal-complement projector on the six-state quark block),
+  retained CKM-dual structural identities (SI1-SI3: `sqrt(6)` = Ward
+  Clebsch-Gordan, `1/2 = 1/n_pair`, `5/6` = atlas `1+5`
+  orthogonal-complement projector) and a proposed new retained primitive
+  P-AT (atlas-projector-weighted `(2,3)` mass-matrix texture, under
+  framework-level review) from which GST and the `5/6` bridge follow
+  as leading-order hierarchical theorems,
   bounded Yukawa/top, and bounded Higgs/vacuum
 - bounded prediction surface:
   proton lifetime, CKM neutron EDM, bounded quantitative down-type flavor-mass
-  CKM-dual ratios (under the retained bridge-identity theorem),
+  CKM-dual ratios (under the proposed P-AT primitive),
   vacuum critical stability, benchmark gravitational decoherence,
   the bounded exact-lattice persistent-object companion, and bounded cosmology
   rows

@@ -90,16 +90,23 @@ bridge layer beyond the exact structural core.
   - retained strong-CP closure package + promoted CKM package
   - exact corollary `d_n(QCD) = 0` on the retained surface; EFT bridge only
     for the bounded `d_n(CKM)` number
-- down-type CKM-dual mass ratios (retained structural bridge-identity theorem
-  + bounded quantitative readout):
-  - promoted CKM closure + retained CKM-dual bridge-identity theorem fixing
-    the GST exponent as `1/n_pair` and the `5/6` bridge exponent as the
-    atlas orthogonal-complement projector weight on the six-state `Q_L`
-    block; no observed masses as derivation inputs
+- down-type CKM-dual mass ratios (three-layer: retained structural identities
+  + proposed new retained primitive P-AT + bounded quantitative readout):
+  - **Layer 1 (retained, unconditional):** promoted CKM closure + retained
+    structural identities SI1-SI3 (`\sqrt{6}` = Ward CG, GST exponent
+    `1/2 = 1/n_pair`, `5/6` = atlas orthogonal-complement projector weight)
+  - **Layer 2 (proposed new retained primitive P-AT, review pending):**
+    atlas-projector-weighted `(2,3)` off-diagonal
+    `M_d(2,3) = m_s^(5/6) m_b^(1/6)` in the down-type `hw=1` NNI mass matrix.
+    Under P-AT, GST and `5/6` bridge are leading-order exact; combining with
+    the retained CKM atlas gives the identification surface `m_d/m_s`,
+    `m_s/m_b` as framework output. P-AT is a new framework proposal, not
+    derived from pre-existing retained primitives; no observed masses enter
   - current live comparison surface:
     threshold-local self-scale comparator `m_s(2 GeV)/m_b(m_b)`
-  - framework-internal RG/transport derivation of the mass-ratio
-    identification surface and exact scale-selection rule remain open
+  - framework-internal operator-theoretic derivation of P-AT from the atlas
+    bilinear tensor carrier `K_R` remains named open work, together with
+    the exact scale-selection rule for the threshold-local comparator
 - proton lifetime:
   - exact operator content + imported dimension-6 EFT decay-rate bridge
 - cosmology windows:

@@ -176,14 +176,19 @@ Current status from that stack:
 - CKM-only neutron-EDM corollary with bounded `d_n(CKM)` continuation on the
   retained `\theta_{\mathrm{eff}} = 0` surface (retained structural corollary
   + bounded quantitative readout)
-- retained CKM-dual bridge-identity theorem fixing the GST and `5/6` bridge
-  exponents as framework constants (Ward Clebsch-Gordan `\sqrt{6}` + atlas
-  `1 + 5` orthogonal-complement projector), with bounded quantitative
-  down-type mass-ratio readout inheriting the mass-hierarchy systematic
-  (confinement-pattern split status)
+- CKM-dual down-type lane (three-layer): (Layer 1) retained structural
+  identities SI1-SI3 — `\sqrt{6}` = Ward Clebsch-Gordan, `1/2 = 1/n_{pair}`,
+  `5/6` = atlas `1 + 5` orthogonal-complement projector weight — are
+  retained on `main` unconditionally; (Layer 2) proposed new retained
+  primitive P-AT — atlas-projector-weighted `(2,3)` off-diagonal
+  `M_d(2,3) = m_s^{5/6} m_b^{1/6}` in the `hw=1` NNI mass matrix — is a
+  framework-level proposal with review pending; under P-AT, GST and the
+  `5/6` bridge are leading-order exact and the identification surface
+  (I1)-(I2) follows; (Layer 3) bounded quantitative mass-ratio readout
+  inherits the mass-hierarchy systematic
 - bounded secondary predictions already on `main`, including proton lifetime,
   bounded quantitative down-type flavor-mass CKM-dual ratios under the
-  retained bridge-identity theorem, vacuum critical stability, taste-scalar
+  proposed P-AT primitive, vacuum critical stability, taste-scalar
   near-degeneracy, benchmark gravitational decoherence, and monopole mass
 
 ## What Is Still Open

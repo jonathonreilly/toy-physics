@@ -1,311 +1,259 @@
 # CKM-Dual Bridge Identity Theorem
+## Retained Structural Identities + Proposed Atlas-Projector-Weighted Texture Primitive
 
-**Date:** 2026-04-17
-**Status:** retained structural theorem for the GST and `5/6` bridge exponents; bounded quantitative mass-ratio readout remains controlled by the current mass-hierarchy surface
+**Date:** 2026-04-17 (first draft); revised 2026-04-17 after review.md (new-science path: propose texture primitive).
+**Status (two-layer):**
+- **retained structural identities** — the `sqrt(6)`, `1/n_{pair}`, and `5/6` constants in the down-type CKM-dual lane are the same retained framework constants as those appearing in the Ward theorem and the CKM atlas (SI1, SI2, SI3 below).
+- **proposed new retained primitive (P-AT)** — the Atlas-Projector-Weighted Mass-Matrix Texture on the retained `hw=1` down-type block. Under P-AT, the GST relation and the `5/6` bridge become **leading-order-exact** hierarchical identities, and combining with the retained CKM atlas gives the mass-ratio identification surface (I1)–(I2) as a framework output.
+- **conditional on P-AT acceptance** — GST `|V_{us}| = \sqrt{m_d/m_s}` and the `5/6` bridge `|V_{cb}| = (m_s/m_b)^{5/6}` are retained leading-order theorems; (I1)–(I2) are retained identification-surface outputs.
+
+P-AT is explicitly a **new retained primitive proposal**, not a derivation from pre-existing retained inputs. It uses only retained atlas projector weights as exponents in the `(2,3)` off-diagonal of the down-type mass matrix. Its acceptance or rejection is a framework-level decision.
+
 **Primary runner:** `scripts/frontier_ckm_dual_bridge_identity.py`
-**Authority role:** structural bridge-identity authority for the down-type
-CKM-dual mass-ratio lane. Replaces the naked `5/6 = C_F - T_F` Casimir
-coincidence as the retained origin of the bridge exponents.
+**Authority role:** proposes and validates P-AT; separates retained structural identities from conditional-on-P-AT bridge theorems.
 
-## Role
+## Reviewer context
 
-This note upgrades the down-type CKM-dual lane from "bounded with two
-independently motivated bridge relations" to "retained structural bridge
-identity plus bounded quantitative mass-ratio readout". It parallels the
-confinement / `sqrt(sigma)` pattern: a retained structural theorem that fixes
-the exponent structure exactly, alongside a bounded quantitative prediction
-that still inherits the mass-hierarchy systematic.
+The earlier draft of this note claimed the bridges as unconditional retained framework theorems. The review on this branch (see `review.md`, P1/P1/P2) correctly flagged that the previous framing promoted a chosen identification surface as if the framework had already derived it. This revision takes the **new-science path**: propose a concrete, sharp new primitive that actually derives the bridges (at leading order), and label it transparently as new.
 
-The structural content now retained is:
-
-- the `sqrt(6)` appearing in `|V_cb| = alpha_s(v)/sqrt(6)` and in the `5/6`
-  bridge `|V_cb| = (m_s/m_b)^(5/6)` is the **same** retained framework
-  constant as the Ward-identity Clebsch-Gordan `1/sqrt(N_c · N_iso)` on the
-  left-handed quark block `Q_L = (2, 3)`;
-- the `5/6` exponent in the bridge is the **retained** CP-odd
-  orthogonal-complement weight on the same six-state quark block, equal to
-  `1 - 1/6` where `1/6` is the exact center-excess scalar weight from the
-  retained atlas projector split `6 = 1 + 5`;
-- the bridge relations are **exact algebraic identities** on the retained
-  identification surface
-  `m_d/m_s := alpha_s(v)/2`, `m_s/m_b := [alpha_s(v)/sqrt(6)]^(6/5)`.
-
-The bridge exponents are therefore no longer independent bridge parameters;
-they are fixed by retained structural numbers of the framework. The
-**quantitative** match to PDG threshold-local self-scale comparators
-(`+3.3%` for `m_d/m_s`, `+0.2%` for `m_s/m_b`) is the downstream bounded
-readout of this retained structural identity.
-
-## Retained inputs
-
-All structural constants used below are already retained or promoted:
+## Retained inputs (unchanged)
 
 1. **Ward-identity theorem** —
    [YT_WARD_IDENTITY_DERIVATION_THEOREM.md](YT_WARD_IDENTITY_DERIVATION_THEOREM.md),
-   `y_t(M_Pl) / g_s(M_Pl) = 1/sqrt(6) = 1/sqrt(N_c · N_iso)`. The `sqrt(6)`
-   is the Clebsch-Gordan normalization of the unit-norm scalar singlet
-   composite `H_unit = (1/sqrt(6)) Sigma ψ̄ψ` on the left-handed quark block
-   `Q_L`. The Clebsch-Gordan is derived from `D9` (composite Higgs) and
-   `D17` (scalar-uniqueness on `Q_L`) as canonical Hilbert-space
-   normalization, with `Z^2 = N_c · N_iso = 6`.
+   `y_t(M_Pl) / g_s(M_Pl) = 1/\sqrt{6} = 1/\sqrt{N_c \cdot N_{iso}}`. The
+   `\sqrt{6}` is the Clebsch-Gordan normalization of the unit-norm scalar
+   singlet composite `H_unit = (1/\sqrt{6}) \sum \psī\psi` on the
+   left-handed quark block `Q_L`, derived from `D9` (composite Higgs) and
+   `D17` (scalar-uniqueness on `Q_L`) with `Z^2 = N_c \cdot N_{iso} = 6`.
 
 2. **CKM atlas/axiom closure** —
    [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md),
-   `|V_us| = sqrt(alpha_s(v)/2)`, `|V_cb| = alpha_s(v)/sqrt(6)`. The `2` is
-   the residual color pair from the exact EWSB `1 + 2` split. The `6` is
-   the exact left-handed quark-block dimension `n_quark = n_pair · n_color
-   = 2 · 3`, the same `6` as in the Ward theorem.
+   `|V_{us}| = \sqrt{\alpha_s(v)/2}`, `|V_{cb}| = \alpha_s(v)/\sqrt{6}`.
+   The `2` is the residual color pair (EWSB `1 + 2` split), and the `6` is
+   `n_{quark} = n_{pair} \cdot n_{color} = \dim(Q_L)`.
 
-3. **Atlas `1 + 5` projector split on the quark block** — same atlas note.
-   On the six-state quark block, the center-excess scalar CP-even weight is
-   exactly
-   `CENTER_EXCESS_WEIGHT = 1/n_quark = 1/6`,
-   and the CP-odd orthogonal complement has weight
-   `ORTHOGONAL_PHASE_WEIGHT = 1 - 1/6 = 5/6`.
-   These are the projector weights that give `cos^2(delta_std) = 1/6` and
-   `sin^2(delta_std) = 5/6` in the atlas closure.
+3. **Atlas `1 + 5` projector split on `Q_L`** — same atlas note. On the
+   six-state quark block, the center-excess scalar CP-even weight is
+   `CENTER\_EXCESS\_WEIGHT = 1/n_{quark} = 1/6`, and the CP-odd orthogonal
+   complement has weight `ORTHOGONAL\_PHASE\_WEIGHT = 1 - 1/6 = 5/6`.
 
-4. **Canonical same-surface coupling** —
+4. **Z_2 `hw=1` mass-matrix parametrization** —
+   [Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md](Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md).
+   The retained `Z_2`-invariant Hermitian normal form is a 5-parameter
+   family on the `hw=1` down-type triplet.
+
+5. **Canonical same-surface coupling** —
    [ALPHA_S_DERIVED_NOTE.md](ALPHA_S_DERIVED_NOTE.md),
-   `alpha_s(v) = alpha_bare / u_0^2 = 0.103303816122` on the plaquette /
-   CMT surface. This is the coupling used in both the CKM atlas and the
-   down-type lane.
+   `\alpha_s(v) = \alpha_{bare} / u_0^2 = 0.103303816122`.
 
-No additional axioms are used. No observed quark masses enter. The theorem
-statement below is an exact algebraic identity on the retained surface
-built from (1)-(4).
+No observed quark masses enter as derivation inputs. No new retained
+primitives apart from P-AT (stated below) are introduced.
 
-## Theorem statement
+## Layer 1: retained structural identities (unchanged by review)
 
-**Theorem (CKM-Dual Bridge Identity).** On the retained framework surface,
-define the canonical down-type mass-ratio identification
+**SI1 (same-`\sqrt{6}` identity).** The `\sqrt{6}` in the Ward identity
+`y_t(M_Pl)/g_s(M_Pl) = 1/\sqrt{6}` and in `|V_{cb}|_{atlas} =
+\alpha_s(v)/\sqrt{6}` is the **same** retained framework constant
+`\sqrt{N_c · N_{iso}} = \sqrt{n_{pair} · n_{color}} = \sqrt{n_{quark}}
+= \sqrt{\dim(Q_L)} = \sqrt{6}`.
 
-```
-    m_d/m_s := alpha_s(v) / 2                                       (I1)
-    m_s/m_b := [ alpha_s(v) / sqrt(6) ]^(6/5)                       (I2)
-```
+**SI2 (GST exponent origin).** The `1/2` exponent in the GST form
+`|V_{us}| = (m_d/m_s)^{1/2}` equals `1/n_{pair}` where `n_{pair} = 2` is
+the retained EWSB residual color-pair count.
 
-where `2 = n_pair` is the residual color-pair count of the EWSB `1 + 2`
-split and `6 = n_quark = n_pair · n_color` is the left-handed quark-block
-dimension. Then on this identification surface the two bridge relations
+**SI3 (`5/6` atlas projector origin).** The `5/6` exponent in the bridge
+`|V_{cb}| = (m_s/m_b)^{5/6}` equals the retained atlas orthogonal-complement
+projector weight `1 - 1/n_{quark} = 5/6` on the six-state `Q_L` block, the
+same `5/6` that appears as `\sin^2(\delta_{std})` in the atlas `1 + 5`
+projector split. The numerical coincidence with the SU(3) Casimir
+combination `C_F - T_F = 5/6` is recorded as a cross-check, not the
+retained origin.
 
-```
-    (GST)       |V_us|_atlas = sqrt( m_d/m_s )                      (T1)
-    (5/6)       |V_cb|_atlas = ( m_s/m_b )^(5/6)                    (T2)
-```
+SI1, SI2, SI3 are exact retained identities that specify *which* framework
+constants carry the `\sqrt{6}`, `1/2`, and `5/6` numbers. They do **not**
+by themselves derive the mass-ratio identification surface — that is what
+the proposed primitive in Layer 2 supplies.
 
-hold **exactly**. The exponent `1/2` in (T1) is `1/n_pair`, the exponent
-`5/6` in (T2) is the orthogonal-complement projector weight on the
-six-state quark block. Both are retained framework constants, not free
-bridge parameters.
+## Layer 2: proposed new retained primitive — P-AT
 
-Furthermore:
-
-- the `sqrt(6)` in `|V_cb|_atlas = alpha_s(v)/sqrt(6)` is the **same**
-  retained framework constant as the Ward-theorem Clebsch-Gordan
-  `1/sqrt(N_c · N_iso)` on `Q_L`;
-- the `5/6` in (T2) is the retained orthogonal-complement projector weight
-  on the **same** six-state quark block `Q_L`;
-- the `2` in (I1) is the retained EWSB residual color pair count and the
-  `1/2` exponent in (T1) is the atlas `n_pair` structural count.
-
-No Nearest-Neighbor Interaction (NNI) texture assumption is used. No ad-hoc
-exponentiation mechanism is used. The theorem fixes the bridge exponents
-**from retained framework structure**.
-
-## Proof
-
-### 1. The two `sqrt(6)` factors are the same framework constant
-
-The Ward-identity theorem derives the composite-Higgs Clebsch-Gordan
+**Primitive P-AT (Atlas-Projector-Weighted Mass-Matrix Texture).** On the
+retained `hw=1` down-type mass matrix in the axis basis `(X_1, X_2, X_3)`
+(where `X_3` is aligned with the heaviest generation), the real symmetric
+mass matrix has the NNI-zero + atlas-projector-weighted `(2,3)` texture
 
 ```
-    Z^2 = N_c · N_iso = 3 · 2 = 6
+              [  m_d            \sqrt{m_d · m_s}        0                        ]
+    M_d  =    [  \sqrt{m_d·m_s}   m_s                     m_s^{w_o} · m_b^{w_c}    ]      (P-AT)
+              [  0              m_s^{w_o} · m_b^{w_c}   m_b                      ]
 ```
 
-from `D17` (unique scalar singlet on `Q_L`). This makes
-`1/sqrt(6) = 1/sqrt(N_c · N_iso) = 1/sqrt(dim(Q_L))` the canonical
-unit-norm normalization of `H_unit` on `Q_L`.
+with
 
-The CKM atlas derives
+- `w_o = ORTHOGONAL\_PHASE\_WEIGHT = 5/6` (retained CP-odd projector weight
+  on `Q_L`, SI3);
+- `w_c = CENTER\_EXCESS\_WEIGHT = 1/6` (retained CP-even projector weight
+  on `Q_L`, SI3);
+- `w_o + w_c = 1` (complete atlas projector split on `Q_L`);
+- the `(1,2)` off-diagonal is the classical NNI geometric mean
+  `\sqrt{m_d · m_s}` (standard texture-zero mechanism);
+- the `(1,3)` off-diagonal is zero (texture zero, in the standard NNI
+  sense).
 
+The new retained content in P-AT is specifically the `(2,3)` off-diagonal
+form: the heavier generation is weighted by the CP-even `CENTER\_EXCESS`
+atlas projector fraction `1/6`, and the lighter generation by the CP-odd
+`ORTHOGONAL` complement `5/6`. The geometric-mean `(1,2)` entry and the
+texture zero `(1,3)` are standard NNI content and are not novel here.
+
+**Motivation (framework-internal, but not a pre-existing retained
+derivation).** The atlas bilinear tensor carrier
+[S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md](S3_TIME_BILINEAR_TENSOR_PRIMITIVE_NOTE.md)
+on the `Q_L` block decomposes into a CP-even singlet (weight `1/6`) and a
+CP-odd orthogonal complement (weight `5/6`). The bridge-inducing operator
+that mixes generations 2 and 3 couples through this same `Q_L` carrier.
+P-AT asserts that the off-diagonal `(2,3)` mass-matrix element inherits
+the same atlas projector weighting, with the heavier generation carried
+on the CP-even fraction and the lighter generation on the CP-odd
+complement. This is structurally motivated — but it is a **new claim**
+and not a theorem on the current retained surface.
+
+## Consequences under P-AT
+
+**T1 (GST leading-order exactness under P-AT).** In the hierarchical
+limit `m_d/m_s \to 0`, `m_s/m_b \to 0`, the down-type diagonalization of
+P-AT gives
 ```
-    |V_cb|_atlas = A * lambda_w^2 = sqrt(n_pair/n_color) * (alpha_s(v)/n_pair)
-                 = alpha_s(v)/sqrt(n_pair · n_color)
-                 = alpha_s(v)/sqrt(n_quark)
-                 = alpha_s(v)/sqrt(6)
-```
-
-from the same structural count `n_quark = n_pair · n_color = dim(Q_L)`.
-
-Both `sqrt(6)` factors therefore come from the retained structural count
-`dim(Q_L) = N_c · N_iso = 6`. They are the same framework constant.
-
-### 2. The `5/6` in (T2) is the retained orthogonal-complement weight
-
-On the six-state quark block, the atlas projector decomposition gives
-
-```
-    6 = 1 + 5
-```
-
-with the `1`-dimensional factor being the CP-even singlet center-excess
-direction and the `5`-dimensional factor being its orthogonal complement.
-The corresponding normalized weights are
-
-```
-    CENTER_EXCESS_WEIGHT        = 1/6         (CP-even)
-    ORTHOGONAL_PHASE_WEIGHT     = 5/6         (CP-odd)
-```
-
-These are the exact atlas projector weights, retained in the closure note
-as `cos^2(delta_std) = 1/6`, `sin^2(delta_std) = 5/6`. The `5/6`
-appearing in the bridge relation (T2) is this retained orthogonal-complement
-weight.
-
-### 3. The bridge relations are exact algebraic identities
-
-Given the identifications (I1) and (I2),
-
-```
-    sqrt(m_d/m_s) = sqrt(alpha_s(v)/2) = |V_us|_atlas
+    |V_{us}|  =  \sqrt{m_d/m_s}   (leading-order-exact).
 ```
 
-which is (T1). And
-
+**T2 (`5/6` bridge leading-order exactness under P-AT).** In the same
+hierarchical limit, the down-type diagonalization of P-AT gives
 ```
-    (m_s/m_b)^(5/6) = ( [alpha_s(v)/sqrt(6)]^(6/5) )^(5/6)
-                    = alpha_s(v)/sqrt(6)
-                    = |V_cb|_atlas
+    |V_{cb}|  =  (m_s/m_b)^{5/6}  (leading-order-exact).
 ```
 
-which is (T2). Both are exact on the identification surface (I1)-(I2); no
-approximations or bridge hypotheses are used.
-
-### 4. Downstream chain ratio
-
-The chain `m_d/m_b = (m_d/m_s)(m_s/m_b)` follows algebraically:
-
+**T3 (mass-ratio identification surface).** Equating T1 and T2 with the
+retained atlas values
+`|V_{us}|_{atlas} = \sqrt{\alpha_s(v)/n_{pair}}` and
+`|V_{cb}|_{atlas} = \alpha_s(v)/\sqrt{n_{quark}}` gives the mass-ratio
+identification surface
 ```
-    m_d/m_b = alpha_s(v) / 2  *  [alpha_s(v)/sqrt(6)]^(6/5)
-            = alpha_s(v)^(11/5) / ( 2 * 6^(3/5) ).
+    m_d/m_s  =  \alpha_s(v) / n_{pair}                                   (I1)
+    m_s/m_b  =  [ \alpha_s(v) / \sqrt{n_{quark}} ]^{n_{quark}/(n_{quark}-1)}
+             =  [ \alpha_s(v) / \sqrt{6} ]^{6/5}                         (I2)
 ```
 
-This is the framework-native chain ratio on the retained identification
-surface.
+as a retained framework output under P-AT (at leading order).
 
-## Numerical readout (bounded quantitative layer)
+The exponents `1/n_{pair}` and `n_{quark}/(n_{quark}-1)` in (I1)–(I2) are
+fixed by the retained structural counts (SI2, SI3), not chosen. No
+mass-matrix parameter is free.
 
-Using the canonical same-surface value `alpha_s(v) = 0.103303816122`:
+## Numerical verification
 
-| Ratio | Framework identification | Threshold-local comparator | Deviation |
-|---|---|---|---|
-| `m_d/m_s` | `alpha_s(v) / 2 = 0.0516519` | `4.67/93.4 = 0.0500000` | `+3.30%` |
-| `m_s/m_b` | `[alpha_s(v)/sqrt(6)]^(6/5) = 0.0223897` | `93.4/4180 = 0.0223445` | `+0.20%` |
-| `m_d/m_b` | `alpha_s(v)^(11/5) / (2 * 6^(3/5)) = 0.001156` | `4.67/4180 = 0.0011172` | `+3.50%` |
+The runner `scripts/frontier_ckm_dual_bridge_identity.py` verifies:
 
-The quantitative match is bounded by the current mass-hierarchy surface and
-remains subject to the same explicit systematic that controls the Yukawa /
-top lane. What the retained theorem above provides is the **exact
-structural identity** of the bridge exponents with retained framework
-structural numbers.
+1. **Retained structural identities SI1, SI2, SI3** — `\sqrt{6}` Ward /
+   atlas / quark-block dimension equalities; `1/2 = 1/n_{pair}`;
+   `5/6 = 1 - 1/n_{quark}` atlas projector weight equalities.
+2. **P-AT hierarchical limit** — numerical diagonalization of the P-AT
+   mass matrix at a sequence of epsilon-scaled mass hierarchies
+   `(m_d/m_s, m_s/m_b) = (\epsilon, \epsilon)` for
+   `\epsilon \in \{10^{-1}, 10^{-2}, 10^{-3}, 10^{-4}, 10^{-5}, 10^{-6}\}`,
+   confirming
+   - `|V_{us}| / \sqrt{m_d/m_s}  \to  1` as `\epsilon \to 0`,
+   - `|V_{cb}| / (m_s/m_b)^{5/6}  \to  1` as `\epsilon \to 0`.
+3. **Identification-surface match at the observed hierarchy** — using the
+   canonical `\alpha_s(v) = 0.103303816122`, the P-AT diagonalization gives
+   `|V_{us}|_{P-AT} \approx |V_{us}|_{atlas}` and
+   `|V_{cb}|_{P-AT} \approx |V_{cb}|_{atlas}` within small-hierarchy
+   leading-order error.
+4. **Mass-ratio readout against PDG threshold-local self-scale** —
+   `m_d/m_s = 0.05165` (`+3.30%`),
+   `m_s/m_b = 0.02239` (`+0.20%`),
+   `m_d/m_b = 0.001156` (`+3.50%`).
 
-## What the theorem does and does not retain
+Expected result: `RETAINED PASS=N`, `P-AT PASS=M`, `BOUNDED PASS=K`,
+`FAIL=0`. The runner tags results by layer.
 
-**Retained (new structural theorem):**
+## Status summary
 
-- `sqrt(6)` in both `|V_cb|_atlas` and the `5/6` bridge is the same
-  framework constant `sqrt(dim(Q_L))`, identified with the Ward-theorem
-  Clebsch-Gordan `sqrt(N_c · N_iso)`.
-- The `5/6` exponent in the bridge is the orthogonal-complement projector
-  weight `1 - 1/dim(Q_L) = 5/6` on the six-state quark block.
-- The bridge relations (T1) and (T2) are exact algebraic identities on the
-  retained identification surface (I1)-(I2).
+**Retained on `main` (structural-identity layer):**
+
+- SI1: `\sqrt{6}` = retained Ward Clebsch-Gordan `\sqrt{N_c · N_{iso}}`,
+  same as atlas `\sqrt{n_{quark}}`.
+- SI2: GST exponent `1/2 = 1/n_{pair}` (atlas EWSB pair count).
+- SI3: `5/6` exponent = atlas `1 + 5` orthogonal-complement projector
+  weight (not the SU(3) Casimir coincidence).
+
+**Proposed new retained primitive (framework-level review pending):**
+
+- P-AT: down-type `hw=1` mass matrix has NNI-zero structure + atlas-projector-weighted `(2,3)` off-diagonal with exponents `(w_o, w_c) = (5/6, 1/6)`.
+
+**Consequences under P-AT (retained conditional on P-AT acceptance):**
+
+- T1: GST `|V_{us}| = \sqrt{m_d/m_s}` is leading-order exact.
+- T2: `5/6` bridge `|V_{cb}| = (m_s/m_b)^{5/6}` is leading-order exact.
+- T3: mass-ratio identification surface (I1)–(I2) is the framework output
+  combining T1–T2 with the retained atlas CKM values.
 
 **Still bounded (downstream quantitative):**
 
-- The absolute down-type mass ratios `m_d/m_s`, `m_s/m_b`, `m_d/m_b`
-  inherit the mass-hierarchy lane systematic. The theorem fixes the
-  **bridge exponents** exactly, not the absolute mass ratios.
-- The threshold-local versus same-scale comparator choice is not closed by
-  this theorem. The `+15%` same-scale deviation remains separately
-  characterized by the one-loop transport factor `(alpha_s(2 GeV)/
-  alpha_s(m_b))^(12/25) = 1.14747` and is not claimed to be retained.
+- Absolute values `m_d`, `m_s`, `m_b` (only their ratios are pinned).
+- Threshold-local versus same-scale comparator choice.
 
-**Named open work (explicitly not claimed here):**
+**Still open (explicitly named):**
 
-- a framework-internal derivation of the mass-ratio surface (I1)-(I2) from
-  a retained RG/transport theorem that connects `y_s(M_Pl)/y_b(M_Pl)` to
-  the retained Ward-identity `y_t(M_Pl)/g_s(M_Pl) = 1/sqrt(6)` UV boundary.
-  This would move the mass-ratio identification itself from retained
-  identification surface to retained theorem output. It is the remaining
-  theorem-grade work for a full retention of the absolute mass ratios;
-- a framework-internal scale-selection theorem that forces the
-  threshold-local self-scale comparator as the unique retained comparison
-  surface.
+- Framework-level review: does P-AT (atlas-projector-weighted `(2,3)`)
+  qualify as a retained primitive, or is it a proposal that needs further
+  derivation from a retained operator-theoretic argument on the `Q_L`
+  bilinear tensor carrier `K_R`?
+- A sub-leading-order correction program beyond the hierarchical
+  leading-order exact bridges.
+- A framework-level scale-selection rule for the threshold-local
+  comparator surface.
 
 ## Relation to prior notes
 
-This note supersedes the support-only framing in:
-
 - [CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md](CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md)
-  — the `5/6` exponent origin is now retained structural, not just the
-  `C_F - T_F` Casimir identity;
+  — `5/6` exponent origin upgraded from Casimir coincidence to retained
+  atlas projector weight (SI3); the bridge itself is now retained
+  **leading-order** under P-AT (not exact at finite hierarchy).
 - [CKM_FROM_MASS_HIERARCHY_NOTE.md](CKM_FROM_MASS_HIERARCHY_NOTE.md)
-  — the GST relation `|V_us| = sqrt(m_d/m_s)` is now retained on the
-  identification surface (I1) as an exact algebraic consequence of the
-  retained atlas `n_pair = 2` count, not an NNI-texture assumption.
-
-Those support notes remain live as route-history and numerical-support
-material; this note carries the retained structural authority.
-
-## Validation
-
-Run:
-
-```bash
-python3 scripts/frontier_ckm_dual_bridge_identity.py
-```
-
-The runner verifies:
-
-1. `sqrt(6)` origin is the retained Ward-theorem Clebsch-Gordan `sqrt(N_c ·
-   N_iso)` on `Q_L`;
-2. CKM atlas `|V_cb| = alpha_s(v)/sqrt(6)` uses the same `sqrt(6)` = `sqrt
-   (dim(Q_L))`;
-3. `1 + 5` projector split on the quark block gives `CENTER_EXCESS_WEIGHT =
-   1/6` and `ORTHOGONAL_PHASE_WEIGHT = 5/6` exactly;
-4. the GST exponent `1/2` equals `1/n_pair` exactly;
-5. the bridge exponent `5/6` equals the atlas orthogonal-complement weight
-   exactly;
-6. `|V_us|_atlas = sqrt(m_d/m_s)` on the identification surface (T1) is
-   exact algebraic;
-7. `|V_cb|_atlas = (m_s/m_b)^(5/6)` on the identification surface (T2) is
-   exact algebraic;
-8. the chain ratio `m_d/m_b = alpha_s(v)^(11/5) / (2 · 6^(3/5))` is exact
-   algebraic on the same surface;
-9. the `5/6` retained orthogonal-complement weight is numerically
-   coincident with the standard SU(3) Casimir combination `C_F - T_F =
-   4/3 - 1/2 = 5/6` (reported as a coincidence check, not as a retained
-   derivation);
-10. the quantitative readout against the threshold-local self-scale
-    comparators matches at `+3.3%` / `+0.2%` / `+3.5%` as a bounded
-    downstream consequence.
-
-Expected result: `EXACT PASS=N` exact algebraic checks, `BOUNDED PASS=M`
-numerical-comparator checks, `FAIL=0`.
+  — GST exponent origin upgraded from NNI-texture assumption to retained
+  atlas `1/n_{pair}` count (SI2); the GST relation itself is now retained
+  **leading-order** under P-AT.
+- [Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md](Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md)
+  — P-AT is a specific 2-parameter subspace of the 5-parameter `Z_2`
+  normal form (after identifying `m_d`, `m_s`, `m_b` up to scale). P-AT
+  does not follow from `Z_2` symmetry alone; the `(2,3)` off-diagonal
+  structure is the new framework content.
 
 ## Honest boundary
 
-This note is deliberately narrow. It does not claim:
+This revised note does **not** claim:
 
-- full retention of the absolute down-type mass ratios;
-- a framework-internal derivation of the mass-hierarchy itself;
-- closure of the scale-selection rule;
-- any claim about the up-type or charged-lepton sectors;
-- any claim about the `+15%` same-scale deviation residual.
+- that P-AT is derived from pre-existing retained primitives;
+- exact closure of GST or `5/6` bridge at finite hierarchy (only
+  leading-order);
+- full retention of absolute down-type mass values (only ratios up to
+  overall scale);
+- a scale-selection theorem;
+- closure of the up-type or charged-lepton sectors.
 
-What it does claim is the structural identity of the bridge exponents with
-retained framework constants, on top of which the down-type lane carries a
-bounded quantitative readout that stays inside the existing mass-hierarchy
-systematic.
+What it does claim, in two sharp layers:
+
+1. **Layer 1 (retained on `main`):** SI1–SI3 identify the `\sqrt{6}`,
+   `1/2`, and `5/6` numbers with retained framework structural constants
+   (Ward Clebsch-Gordan, `n_{pair}`, atlas orthogonal-complement
+   projector weight). These are retained unconditionally.
+2. **Layer 2 (proposed new primitive, framework-level review pending):**
+   P-AT asserts the atlas-projector-weighted `(2,3)` off-diagonal in the
+   down-type mass-matrix texture. Under P-AT, T1 (GST), T2 (`5/6`
+   bridge), and T3 (identification surface I1-I2) follow at leading order
+   in the hierarchical limit.
+
+The earlier draft of this note conflated Layer 1 and Layer 2. This
+revision separates them: Layer 1 is retained and unambiguous; Layer 2 is
+a new framework proposal with explicit "proposed primitive" status and
+explicit leading-order qualifier on the derived bridges.

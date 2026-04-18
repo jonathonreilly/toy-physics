@@ -4,16 +4,20 @@
 **Date:** 2026-04-12 (original); 2026-04-17 (cross-referenced to retained bridge-identity theorem)
 **Status:** BOUNDED. The CKM mixing hierarchy |V_us| >> |V_cb| >> |V_ub| follows from the asymmetry between up-type and down-type mass hierarchies produced by the framework. All three PDG CKM elements lie inside the prediction bands. Zero additional free parameters beyond the mass hierarchy prediction.
 
-**Retained structural anchor for the GST exponent:** the GST exponent `1/2` in
-`|V_us| = sqrt(m_d/m_s)` is now identified with the retained atlas structural
-count `1/n_pair` (where `n_pair = 2` is the EWSB residual color-pair size)
-via the CKM-Dual Bridge Identity Theorem
+**Retained structural anchor for the GST exponent + proposed primitive route:**
+The GST exponent `1/2` in `|V_us| = sqrt(m_d/m_s)` is retained on `main` as
+the atlas structural count `1/n_pair` (where `n_pair = 2` is the EWSB
+residual color-pair size) via SI2 in the CKM-Dual Bridge Identity Theorem
 ([CKM_DUAL_BRIDGE_IDENTITY_THEOREM_NOTE_2026-04-17.md](CKM_DUAL_BRIDGE_IDENTITY_THEOREM_NOTE_2026-04-17.md)).
-That theorem establishes GST as an exact algebraic identity on the retained
-identification surface `m_d/m_s := alpha_s(v)/n_pair`, independent of any NNI
-or democratic texture assumption. The NNI / Schur-complement material below
-remains live as numerical-support route history; it is no longer the sole
-structural carrier of the GST exponent.
+Under the **proposed new retained primitive P-AT** (atlas-projector-weighted
+mass-matrix texture with `(1,2)` off-diagonal at the geometric mean and
+`(2,3)` off-diagonal = `m_s^(5/6) m_b^(1/6)`), the GST relation
+`|V_us| = sqrt(m_d/m_s)` is leading-order exact in the hierarchical limit,
+and the identification surface `m_d/m_s := alpha_s(v)/n_pair` follows as a
+framework output (not an assumption). P-AT is a framework-level proposal
+with review pending. The NNI / Schur-complement material below remains
+live as numerical-support route history consistent with the P-AT `(1,2)`
+sector (geometric-mean texture).
 
 ---
 

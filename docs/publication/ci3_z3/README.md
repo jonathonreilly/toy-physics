@@ -140,14 +140,19 @@ Current package status:
 - CKM-only neutron-EDM corollary with bounded `d_n(CKM)` continuation on the
   retained `\theta_{\mathrm{eff}} = 0` surface (retained structural corollary
   + bounded quantitative readout)
-- retained bridge-identity theorem with bounded quantitative readout
-  (down-type CKM-dual mass-ratio lane): GST and `5/6` bridge exponents are
-  retained framework constants (Ward Clebsch-Gordan `\sqrt{6}` + atlas
-  `1 + 5` orthogonal-complement projector), with the quantitative mass-ratio
-  readout still bounded by the mass-hierarchy surface
+- down-type CKM-dual mass-ratio lane (three-layer):
+  (Layer 1) retained structural identities SI1-SI3 (`\sqrt{6}` = Ward
+  Clebsch-Gordan, `1/2 = 1/n_{pair}`, `5/6` = atlas `1+5`
+  orthogonal-complement projector weight) — unconditional on `main`;
+  (Layer 2) proposed new retained primitive P-AT — atlas-projector-weighted
+  `(2,3)` off-diagonal `M_d(2,3) = m_s^{5/6} m_b^{1/6}` in the down-type
+  `hw=1` NNI mass matrix — framework-level review pending; under P-AT,
+  GST and `5/6` bridge are leading-order exact in the hierarchical limit
+  and combining with the retained CKM atlas gives the identification
+  surface (I1)-(I2); (Layer 3) bounded quantitative mass-ratio readout
 - bounded secondary predictions already on `main`:
   proton lifetime, bounded quantitative down-type flavor-mass CKM-dual
-  ratios under the retained bridge-identity theorem, vacuum critical
+  ratios under the proposed P-AT primitive, vacuum critical
   stability, taste-scalar near-degeneracy, benchmark gravitational
   decoherence
 
