@@ -1057,18 +1057,18 @@ def part1_reference_surface() -> None:
 
     wilson_audit = read("docs/PERRON_FROBENIUS_WILSON_DEPENDENCY_AUDIT_NOTE_2026-04-18.md")
     check(
-        "Wilson dependency-audit note records that Wilson is the main positive reopening lever while PMNS and plaquette blockers remain live independently on the current bank",
+        "Wilson dependency-audit note records that Wilson is the main plausible future reopening lever while PMNS and plaquette blockers remain live independently on the current bank",
         "Wilson robustness matters **asymmetrically**." in wilson_audit
         and "What depends directly on Wilson robustness" in wilson_audit
         and "What does **not** become positive merely by reopening Wilson" in wilson_audit
-        and "Wilson is the main positive reopening lever" in wilson_audit,
+        and "main **plausible future positive reopening lever**" in wilson_audit,
     )
 
     frontier_certificates = read("docs/PERRON_FROBENIUS_MINIMAL_FRONTIER_CERTIFICATES_NOTE_2026-04-18.md")
     check(
-        "Minimal frontier-certificates note records that the remaining PF science is now exactly one Wilson reopening certificate, one PMNS-native production certificate, and one plaquette scalar certificate",
+        "Minimal frontier-certificates note records that the remaining PF science is canonically decomposed into one Wilson frontier certificate, one PMNS-native production certificate, and one plaquette scalar certificate",
         "three minimal frontier certificates" in frontier_certificates
-        and "Wilson positive reopening certificate" in frontier_certificates
+        and "Wilson current-bank frontier certificate" in frontier_certificates
         and "PMNS-native production certificate" in frontier_certificates
         and "Plaquette non-Wilson scalar certificate" in frontier_certificates,
     )
@@ -1082,8 +1082,9 @@ def part1_reference_surface() -> None:
 
     asymmetric_closure = read("docs/PERRON_FROBENIUS_CURRENT_BANK_ASYMMETRIC_CLOSURE_NOTE_2026-04-18.md")
     check(
-        "Current-bank asymmetric-closure note records that Wilson is the only positive reopening lever while PMNS-native and plaquette remain independent blockers, so weakening Wilson makes the branch more clearly negative rather than more open",
-        "asymmetrically closed" in asymmetric_closure
+        "Current-bank asymmetric-closure note records that no live positive route remains on the present bank while Wilson is still the main plausible future reopening lever and weakening Wilson makes the branch more clearly negative rather than more open",
+        "future-theory reopening map is still asymmetric" in asymmetric_closure
+        and "no live positive route remaining on the present bank" in asymmetric_closure
         and "more clearly negative, not more open" in asymmetric_closure,
     )
 
@@ -1480,11 +1481,11 @@ def part3_cross_sector_boundary() -> None:
     )
     support(
         "Wilson dependency audit",
-        "the Wilson re-audit lane is now typed cleanly too: Wilson is the main positive reopening lever because the partial step-1 parent surface and the entire sharp local Phi_chain source route are Wilson-dependent, but the branch already carries Wilson-independent PMNS and plaquette blockers as well, so weakening Wilson would make the current-bank global reading more clearly negative rather than more open",
+        "the Wilson re-audit lane is now typed cleanly too: on the present bank the Wilson route is negatively closed, but under stronger future science Wilson remains the main plausible reopening lever because the partial step-1 parent surface and the sharpest local Wilson constructive route are Wilson-dependent, while the branch already carries Wilson-independent PMNS and plaquette blockers as well",
     )
     support(
         "Minimal frontier certificates",
-        "the remaining PF science is now packaged as a minimal frontier decomposition too: one Wilson local reopening certificate, one PMNS-native production certificate, and one non-Wilson plaquette scalar certificate; only the Wilson item is currently a positive reopening lever, while the other two remain exact current-bank blockers",
+        "the remaining PF science is now packaged as a minimal frontier decomposition too: one Wilson local frontier certificate, one PMNS-native production certificate, and one non-Wilson plaquette scalar certificate; all three are now negatively closed on the present bank, but the decomposition remains the canonical frontier map for any future reopening attempt",
     )
     support(
         "PMNS minimal production certificate",
@@ -1492,7 +1493,7 @@ def part3_cross_sector_boundary() -> None:
     )
     support(
         "Current-bank asymmetric closure",
-        "the branch consequence of the Wilson audit is now explicit too: the current bank is asymmetrically closed, with Wilson as the only positive reopening lever while the PMNS-native production certificate and the plaquette scalar certificate remain independent blockers; so weakening Wilson would make the branch more clearly negative rather than more open",
+        "the branch consequence of the Wilson audit is now explicit too: no live positive route remains on the present bank, but future-theory asymmetry still holds because Wilson is the main plausible reopening lever under stronger science while the PMNS-native production certificate and the plaquette scalar certificate remain independent blockers; so weakening Wilson would make the branch more clearly negative rather than more open",
     )
     support(
         "Wilson local nilpotent-chain generator reduction",

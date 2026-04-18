@@ -1150,24 +1150,22 @@ promotion would require one of the following:
 
 The current sharpened read is stricter than before:
 
-- on the Wilson compressed route, the invariant missing object is now the
-  matrix-source embedding `Phi_e`, more sharply the weaker Hermitian source
-  embedding `Psi_e`, and sharpest of all the invariant Wilson compressed-
-  resolvent block law `P_e S_W P_e |_(Ran(P_e)) ~= H_e`; but on the physical
-  lattice the remaining constructive Wilson content has now been reduced all
-  the way to the local path-algebra embedding
-  `Phi_chain : A_chain -> End(H_W)` on one adjacent two-edge chain, more
-  sharply its restricted local Hermitian chain-plane embedding
-  `Psi_chain : V_chain^H -> Herm(H_W)` with
-  `V_chain^H = span_R{X_12, Y_12, X_23, Y_23}`, so the whole Wilson route is
-  now exactly one minimal local path-algebra `2-edge + 3` certificate,
-  equivalently one minimal local chain-plane `4 + 3` certificate; and the
-  current bank is now closed negatively even at that sharpest local algebraic
-  level; while the full finite response count is still known to be minimally
-  `9`; and the new Wilson-dependency audit now makes the asymmetric branch
-  logic explicit: Wilson is the main positive reopening lever, but not the
-  only blocker, because PMNS triviality / production and plaquette operator
-  nonclosure remain live current-bank obstructions independently
+  - on the Wilson compressed route, the invariant missing object had first
+  reduced from the matrix-source embedding `Phi_e` and its Hermitian
+  restriction `Psi_e` to the invariant Wilson compressed-resolvent block law
+  `P_e S_W P_e |_(Ran(P_e)) ~= H_e`; on the physical lattice that constructive
+  route then reduced through the local path-algebra and local Hermitian chain-
+  plane formulations all the way to one local nilpotent-chain `1 + 1`
+  certificate:
+  one local nilpotent chain generator on an adjacent physical two-edge chain
+  together with one cubic characteristic-polynomial identity for the
+  compressed `3 x 3` Hermitian block; and the current bank is now closed
+  negatively even at that sharpest Wilson level. The Wilson-dependency audit
+  therefore has to be read in the sharpened sense: on the present bank there
+  is no live positive Wilson route left, while under stronger future science
+  Wilson remains the main plausible reopening lever because PMNS triviality /
+  production and plaquette operator nonclosure remain live obstructions
+  independently
 - on the PMNS-native route, fixed-slice readout is now closed, so the
   remaining blocker is production of nonzero `J_chi`, not another collapse law;
   and on the strongest PMNS-native microscopic lane that blocker is now pinned
@@ -1186,14 +1184,16 @@ The current sharpened read is stricter than before:
   operator-side `beta = 6` object; so the whole fixed-depth non-Wilson
   plaquette route is now one minimal scalar `moment + K` certificate, and the
   current bank already fails at its first scalar bulk layer
-- taken together, the remaining PF science is now exactly one minimal frontier
-  decomposition:
-  one Wilson local reopening certificate, one PMNS-native production
-  certificate, and one non-Wilson plaquette scalar certificate; and only the
-  Wilson item is currently a positive reopening lever while the other two
-  remain exact current-bank blockers; so the current bank is now explicitly
-  asymmetrically closed, and weakening Wilson would make the branch more
-  clearly negative rather than more open
+- taken together, the remaining PF science first reduced to one minimal
+  frontier decomposition:
+  one Wilson local frontier certificate, one PMNS-native production
+  certificate, and one non-Wilson plaquette scalar certificate. But after the
+  subsequent full frontier closure the present bank is now fully closed
+  negatively across all three certificates. The only asymmetry that remains is
+  future-theory asymmetry: under stronger science Wilson is still the main
+  plausible reopening lever, while PMNS-native production and plaquette
+  operator nonclosure remain independent blockers; so weakening Wilson would
+  make the branch more clearly negative rather than more open
 - on step 3, the compatibility theorem is still not ready to search because
   the prerequisite hypotheses are not all in hand
 
@@ -1211,7 +1211,7 @@ route is now exactly one local nilpotent-chain `1 + 1` certificate, and the
 current bank still fails already at the generator layer.
 
 That means the whole present bank is now fully closed negatively at the
-sharpest frontier level: Wilson is still the only plausible reopening lever
+sharpest frontier level: Wilson is still the main plausible reopening lever
 under stronger future science, but on the current bank itself all three live
 frontier certificates are now negative.
 

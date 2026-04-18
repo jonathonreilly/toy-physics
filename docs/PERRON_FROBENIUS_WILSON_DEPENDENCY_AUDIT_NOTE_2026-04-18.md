@@ -36,8 +36,9 @@ What does **not** become positive merely by reopening Wilson:
    framework-point beta data, including no finite sample-packet closure and no
    propagated-triple closure of the reduced cyclic bulk object.
 
-So Wilson is the branch's main **positive reopening lever**, but not the only
-load-bearing blocker on the branch.
+So Wilson is the branch's main **plausible future positive reopening lever**,
+but not the only load-bearing blocker on the branch; on the present bank
+itself, the Wilson lane is now negatively closed too.
 
 ## Exact Wilson-dependent surfaces
 
@@ -60,28 +61,30 @@ From
 So if Wilson parent robustness changes, the exact step-1 surface must be
 re-audited before any positive global PF-selector route remains honest.
 
-### 2. The sharpened positive Wilson route is entirely Wilson-source-side
+### 2. The sharpened Wilson reopening route is entirely Wilson-source-side
 
 From
-[PERRON_FROBENIUS_STEP2_WILSON_LOCAL_CHAIN_PATH_ALGEBRA_TARGET_NOTE_2026-04-18.md](./PERRON_FROBENIUS_STEP2_WILSON_LOCAL_CHAIN_PATH_ALGEBRA_TARGET_NOTE_2026-04-18.md):
+[PERRON_FROBENIUS_STEP2_WILSON_LOCAL_NILPOTENT_CHAIN_GENERATOR_REDUCTION_NOTE_2026-04-18.md](./PERRON_FROBENIUS_STEP2_WILSON_LOCAL_NILPOTENT_CHAIN_GENERATOR_REDUCTION_NOTE_2026-04-18.md):
 
-- the sharpest Wilson local constructive primitive is already exactly
-  `Phi_chain : A_chain -> End(H_W)`.
-
-From
-[PERRON_FROBENIUS_STEP2_WILSON_LOCAL_PATH_ALGEBRA_MINIMAL_CERTIFICATE_NOTE_2026-04-18.md](./PERRON_FROBENIUS_STEP2_WILSON_LOCAL_PATH_ALGEBRA_MINIMAL_CERTIFICATE_NOTE_2026-04-18.md):
-
-- the whole Wilson compressed route is now exactly one minimal local
-  path-algebra `2-edge + 3` certificate.
+- the sharpest Wilson local constructive primitive is already exactly one
+  local nilpotent chain generator `N_chain` on the physical adjacent two-edge
+  chain.
 
 From
-[PERRON_FROBENIUS_STEP2_WILSON_LOCAL_PATH_ALGEBRA_CURRENT_BANK_NONREALIZATION_NOTE_2026-04-18.md](./PERRON_FROBENIUS_STEP2_WILSON_LOCAL_PATH_ALGEBRA_CURRENT_BANK_NONREALIZATION_NOTE_2026-04-18.md):
+[PERRON_FROBENIUS_STEP2_WILSON_LOCAL_NILPOTENT_CHARPOLY_CERTIFICATE_NOTE_2026-04-18.md](./PERRON_FROBENIUS_STEP2_WILSON_LOCAL_NILPOTENT_CHARPOLY_CERTIFICATE_NOTE_2026-04-18.md):
 
-- the current bank still does **not** realize that sharpest local Wilson
-  algebra object.
+- the whole Wilson compressed route is now exactly one local nilpotent-chain
+  `1 + 1` certificate.
 
-So the branch's strongest remaining **positive** PF route is Wilson-dependent at
-its sharpest local constructive layer.
+From
+[PERRON_FROBENIUS_WILSON_CURRENT_BANK_COMPLETE_CLOSURE_NOTE_2026-04-18.md](./PERRON_FROBENIUS_WILSON_CURRENT_BANK_COMPLETE_CLOSURE_NOTE_2026-04-18.md):
+
+- the current bank still does **not** realize even that sharpest local Wilson
+  generator route.
+
+So the branch's strongest plausible future **positive** PF route is
+Wilson-dependent at its sharpest local constructive layer, even though the
+present bank already closes that route negatively.
 
 ### 3. Plaquette operator identifications also use Wilson structure
 
@@ -150,7 +153,8 @@ either.
 
 The branch currently depends on Wilson robustness in the following exact sense:
 
-- the strongest positive global-PF reopening route is Wilson-dependent;
+- the strongest plausible future positive global-PF reopening route is
+  Wilson-dependent;
 - the strongest already-landed current-bank blockers are **not** exhausted by
   Wilson alone.
 
@@ -193,7 +197,7 @@ This note makes the branch easier to review honestly.
 
 It says the sharper thing:
 
-- Wilson is the main positive reopening lever,
+- Wilson is the main plausible future positive reopening lever,
 - but Wilson is not the only blocker on the branch,
 - so a Wilson re-audit matters most for the **positive** PF route, not for the
   already-landed negative current-stack closure.

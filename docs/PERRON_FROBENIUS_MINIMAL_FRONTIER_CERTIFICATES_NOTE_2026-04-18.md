@@ -1,8 +1,10 @@
 # Perron-Frobenius Minimal Frontier Certificates
 
 **Date:** 2026-04-18  
-**Status:** exact science-only packaging of the remaining PF branch into a
-minimal set of frontier certificates on the current bank  
+**Status:** exact science-only packaging of the minimal PF frontier
+certificates on the current bank; these certificates are now all negatively
+closed on the present bank, but they remain the canonical frontier
+decomposition for any future reopening attempt  
 **Script:** `scripts/frontier_perron_frobenius_minimal_frontier_certificates_2026_04_18.py`
 
 ## Question
@@ -13,9 +15,9 @@ frontier objects on the current bank?
 
 ## Answer
 
-The current branch now reduces to three minimal frontier certificates:
+The current branch reduces to three minimal frontier certificates:
 
-1. **Wilson positive reopening certificate**
+1. **Wilson current-bank frontier certificate**
    one local physical Wilson `2-edge + 3` certificate, equivalently the sharp
    local path-algebra `Phi_chain` route plus the 3 scalar spectral identities;
 2. **PMNS-native production certificate**
@@ -25,15 +27,20 @@ The current branch now reduces to three minimal frontier certificates:
    one fixed-depth minimal `moment + K` certificate on the class-sector
    operator lane.
 
-That is the smallest review-safe exact frontier decomposition now visible on
-the branch.
+That is the smallest review-safe exact frontier decomposition visible on the
+branch.
+
+After the later full current-bank closure theorem, all three certificates are
+now negatively closed on the present bank. They remain useful as the canonical
+decomposition of what would need genuinely new science in order to reopen the
+program.
 
 ## Setup
 
 From
 [PERRON_FROBENIUS_WILSON_DEPENDENCY_AUDIT_NOTE_2026-04-18.md](./PERRON_FROBENIUS_WILSON_DEPENDENCY_AUDIT_NOTE_2026-04-18.md):
 
-- Wilson is the main positive reopening lever,
+- under stronger future science, Wilson is the main plausible reopening lever,
 - but not the only blocker on the current bank.
 
 From
@@ -55,7 +62,7 @@ three frontier certificates listed above.
 
 They are minimal in the following sense:
 
-- the Wilson positive route has already been compressed to its sharpest local
+- the Wilson route has already been compressed to its sharpest local
   physical certificate,
 - the PMNS-native lane has already been reduced from route search to a single
   production-law object,
@@ -65,19 +72,20 @@ They are minimal in the following sense:
 So the branch is no longer honestly described as one vague “global PF gap.”
 It is one minimal three-certificate frontier.
 
-## Corollary 1: positive global reopening still runs primarily through Wilson
+## Corollary 1: future-theory reopening still runs primarily through Wilson
 
-Among those three certificates, only the Wilson certificate is currently a
-positive reopening lever for a common sole-axiom PF selector.
+On the present bank, none of the three certificates is realized positively.
 
-The PMNS-native and plaquette certificates are still exact current-bank
-blockers.
+But among the three frontier certificates, Wilson remains the main plausible
+future reopening lever under stronger science.
+
+The PMNS-native and plaquette certificates remain exact current-bank blockers.
 
 ## What this closes
 
 - one exact minimal decomposition of the remaining PF work
-- one reviewer-facing statement of which frontier is the positive reopening
-  lever and which frontiers remain blockers
+- one reviewer-facing statement of the canonical frontier decomposition after
+  current-bank closure
 
 ## What this does not close
 
@@ -92,7 +100,7 @@ This gives the branch a clean top-level frontier map.
 
 The repo can now say:
 
-- the positive reopening lever is one Wilson local certificate,
+- the sharpest future-theory reopening lever is one Wilson local certificate,
 - the PMNS-native unresolved object is one production certificate,
 - the plaquette unresolved object is one scalar non-Wilson certificate.
 

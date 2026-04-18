@@ -1,8 +1,10 @@
 # Perron-Frobenius Sharpest Frontier Certificates
 
 **Date:** 2026-04-18  
-**Status:** exact science-only sharpening of the remaining PF branch to its
-current sharpest constructive/scalar certificates  
+**Status:** exact science-only sharpening of the PF frontier to its current
+sharpest constructive/scalar certificates; these certificates are now all
+negatively closed on the present bank, but they remain the sharpest frontier
+decomposition for future reopening attempts  
 **Script:** `scripts/frontier_perron_frobenius_sharpest_frontier_certificates_2026_04_18.py`
 
 ## Question
@@ -13,9 +15,9 @@ reviewer-facing statement of the remaining PF frontier?
 
 ## Answer
 
-The branch now sharpens to three certificates:
+The branch sharpens to three certificates:
 
-1. **Wilson positive reopening certificate**
+1. **Wilson current-bank frontier certificate**
    one local nilpotent-chain `1 + 1` certificate:
    - one local nilpotent chain generator on the physical adjacent two-edge
      chain,
@@ -27,7 +29,12 @@ The branch now sharpens to three certificates:
 3. **Plaquette first constructive scalar certificate**
    one first Hankel + `K` certificate.
 
-That is the sharpest frontier decomposition now visible on the current bank.
+That is the sharpest frontier decomposition now visible on the branch.
+
+After the later full current-bank closure theorem, all three certificates are
+now negatively closed on the present bank. They still identify the smallest
+constructive/scalar objects that any stronger future science would have to
+reopen.
 
 ## Setup
 
@@ -57,10 +64,13 @@ They are sharper than the previous decomposition because:
 So the branch is now sharper than the earlier “minimal frontier certificates”
 surface.
 
-## Corollary 1: the positive reopening lever is still only Wilson
+## Corollary 1: the sharpest future-theory reopening lever is still Wilson
 
-Among the three sharpest frontier certificates, only the Wilson certificate is
-currently a positive reopening lever for a common sole-axiom PF selector.
+On the present bank, none of the three sharpest frontier certificates is
+realized positively.
+
+But under stronger future science, Wilson remains the main plausible reopening
+lever.
 
 The PMNS-native scalar certificate and the plaquette first-Hankel certificate
 remain exact current-bank blockers.
@@ -83,7 +93,8 @@ This is the cleanest current statement of the branch.
 
 The repo can now say:
 
-- Wilson reopening is one local generator + one cubic characteristic-polynomial
+- Wilson reopening under stronger science is one local generator + one cubic
+  characteristic-polynomial
   identity,
 - PMNS-native production is one scalar nonvanishing certificate,
 - plaquette non-Wilson closure already fails at one first Hankel + `K`

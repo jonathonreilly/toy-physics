@@ -55,7 +55,8 @@ From
 From
 [PERRON_FROBENIUS_WILSON_DEPENDENCY_AUDIT_NOTE_2026-04-18.md](./PERRON_FROBENIUS_WILSON_DEPENDENCY_AUDIT_NOTE_2026-04-18.md):
 
-- Wilson remains the only positive reopening lever for the global PF program.
+- under stronger future science, Wilson remains the main plausible reopening
+  lever for the global PF program.
 
 So the only remaining question is whether the Wilson lane itself is still open
 on the current bank once stated at its sharpest form.
@@ -113,8 +114,9 @@ current bank:
 
 This resolves the Wilson lane as far as the current bank can honestly take it.
 
-Wilson is still the only positive reopening lever globally, but on the current
-bank it is now completely reduced and negatively closed.
+Wilson remains the main plausible reopening lever under stronger future
+science, but on the current bank it is now completely reduced and negatively
+closed.
 
 ## Command
 
