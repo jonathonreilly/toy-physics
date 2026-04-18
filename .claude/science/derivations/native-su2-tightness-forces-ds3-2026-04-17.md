@@ -496,6 +496,31 @@ turn that into a much cleaner and more explicit support-route package,
 but they do not yet eliminate the cost entirely because the family-scope
 admissibility layer is still not retainedly closed.
 
+## Admissibility closure follow-up (2026-04-17)
+
+The family-scope admissibility layer (A2, A4, A5) is closed by the
+separate note
+
+    .claude/science/derivations/admissibility-closure-from-graph-eta-taste-2026-04-17.md
+
+and certified by
+
+    scripts/frontier_admissibility_closure_from_graph_eta_taste.py
+    (THEOREM_PASS=42 SUPPORT_PASS=39 FAIL=0).
+
+Under that closure, the admissibility package reduces to a single
+retained extension recipe (apply the retained `n = 3` native-gauge
+construction to `Z^n` verbatim). Combined with this tightness note,
+the `d_s = 3` chain becomes:
+
+    Recipe-R (retained extension)
+      ⟹ V_n = Λ²(R^n) for all n ≥ 2         [family-uniqueness + A2/A4/A5 closure]
+      ⟹ spin(n) = su(2) ⟹ n = 3             [this tightness note]
+      ⟹ d_s = 3                              [downstream consequence]
+
+With the admissibility closure in place, this chain no longer leaves a
+comparison-family gap at the admissibility layer.
+
 ## Next
 
 If this support-route package is accepted in its current honest form,

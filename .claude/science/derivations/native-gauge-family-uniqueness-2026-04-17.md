@@ -314,6 +314,26 @@ strongest current theorem within the reviewer's requested framing:
 - and the tightness corollary reduces the rest of the argument to
   classical Lie theory plus the retained weak-`SU(2)` observation.
 
+## Admissibility closure (2026-04-17 follow-up)
+
+The 2026-04-17 reviewer feedback (`review.md`) identified `A2`, `A4`,
+`A5` as the remaining retention-grade blockers, with `A4` load-bearing.
+These are closed in the separate note
+
+    .claude/science/derivations/admissibility-closure-from-graph-eta-taste-2026-04-17.md
+
+and certified by
+
+    scripts/frontier_admissibility_closure_from_graph_eta_taste.py
+
+which reduces the admissibility package to a single retained extension
+recipe (Recipe-R: apply the retained `n = 3` construction to `Z^n`
+verbatim). Under Recipe-R, `A2`, `A3`, `A4`, `A5` are derived theorems
+rather than posited axioms. The runner passes with
+`THEOREM_PASS=42 SUPPORT_PASS=39 FAIL=0`. With that closure in place,
+the present note's `(A1)-(A5) ⟹ V_n = Λ²(R^n)` conclusion rests on a
+single retained recipe instead of a five-axiom admissibility package.
+
 ## Next
 
 With this uniqueness theorem in place, the tightness note's remaining
