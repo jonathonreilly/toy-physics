@@ -83,6 +83,27 @@ What is now explicit:
 
 Affected front-door and publication-control files were updated directly.
 
+### 5. Higgs / top package scoping
+
+The repo had drifted into mixing the now-retained YT/top transport lane with
+older pre-retention summary wording, and one manuscript summary table was still
+collapsing the retained top lane and the derived Higgs/vacuum lane together as
+generic bounded rows.
+
+What is now explicit:
+
+- the YT/top package is a retained quantitative lane on `main`
+- the canonical retained downstream top readout is the full-staggered-PT
+  `m_t(pole) = 172.57 ± 6.50 GeV`, with explicit through-2-loop retained
+  coverage
+- the older `173.10 GeV` framework-side 3-loop top number remains a derived
+  cross-check, not the controlling top authority row
+- the Higgs / vacuum package remains derived, with the retention-decomposed
+  budget `m_H = 125.04 ± 3.17 GeV` and the 2-loop support route named
+  explicitly
+
+Affected front-door and publication-control files were updated directly.
+
 ## Rows That Are Already Clean Enough
 
 These are not current submission blockers at the claim-surface level.
@@ -345,7 +366,10 @@ status, and the public surfaces separate same-surface structure, derived
 
 **Current public posture**
 
-- bounded rows, but still fronted by sharp central values
+- the live package now separates the retained YT/top transport lane from the
+  derived Higgs/vacuum lane
+- front-door rows no longer collapse those two lanes into generic bounded
+  summaries
 
 Representative surfaces:
 
@@ -369,11 +393,15 @@ Primary evidence:
 
 **Adjustment class**
 
-- real claim-surface issue
+- repo/manuscript cleanup resolved on `main`; no missing theorem on the live
+  YT/top and Higgs package surfaces
 
 **Why**
 
-The notes are bounded. The public tables still read too sharply.
+The authority notes were already more honest than the stale summaries. The
+public surfaces now track the retained YT/top transport lane and the derived
+Higgs/vacuum lane with the same retention-decomposed budget language used in
+the controlling notes.
 
 ### G. Three-generation matter / chirality defense
 
@@ -414,10 +442,10 @@ At the current repo state:
 
 - the front-door axiom count problem was real and is now fixed
 - the stale Lorentz contradiction was real and is now fixed
-- the biggest remaining issues are not random reviewer noise
-- they are concentrated in a small set of claim-surface rows:
-  `v`, gravity/QG framing, strong CP, CKM, EW normalization / `\alpha_s`,
-  Higgs/top presentation, and three-generation/chirality defense
+- the old claim-surface drift on gravity/QG framing, strong CP, CKM,
+  `\alpha_s` / EW normalization, and Higgs/top presentation has now been
+  cleaned on `main`
+- the main remaining live issues recorded in this audit are the electroweak
+  hierarchy / `v` posture and the three-generation / chirality defense
 
-No claim narrowing has been applied in this note. It exists to guide the next
-editing pass.
+This note remains a living audit guide for the remaining editing pass.

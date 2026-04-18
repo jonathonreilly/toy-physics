@@ -153,15 +153,20 @@ ledger:
   where `alpha_s(v)` comes from the same-surface plaquette chain,
   `g_1(v), g_2(v)` use derived `R_conn = 8/9` support, and the `M_Z`
   rows use the retained running bridge
-- derived `y_t(v) = 0.9176`
-- derived canonical `m_t(pole) = 173.10 GeV` (3-loop),
-  with retained `172.57 GeV` (2-loop) support
-  and current primary-route standard-method residuals rather than a
-  framework-native explicit bridge qualifier
-- derived Higgs / vacuum package:
-  canonical `m_H = 125.1 GeV` (framework-side 3-loop route), with retained
-  `119.8 GeV` (2-loop support route); vacuum-stability readout inherited from
-  the current `y_t` lane
+- retained YT/top transport package:
+  canonical full-staggered-PT `Δ_R = -3.77% ± 0.45%`,
+  retained `y_t(v) = 0.9176`,
+  retained canonical `m_t(pole) = 172.57 ± 6.50 GeV`,
+  with explicit through-2-loop retained coverage
+  `172.57 ± 6.9 GeV` (structural) / `172.57 ± 7.94 GeV`
+  (bound-constrained, not MC-pinned); the older `173.10 GeV` 3-loop route now
+  survives only as a derived cross-check
+- derived Higgs / vacuum package with retention-decomposed budget:
+  canonical `m_H = 125.1 GeV` (framework-side 3-loop route),
+  retention analysis `m_H = 125.04 ± 3.17 GeV`,
+  corrected-input `119.8 GeV` (2-loop support route),
+  and vacuum-stability readout inherited from the retained YT lane together
+  with cataloged Higgs-native gaps
 - exact taste-block fermion-CW isotropy support theorem with bounded
   taste-scalar near-degeneracy companion:
   `m_taste = 124.91 GeV`, scalar-only `v_c/T_c = 0.3079`

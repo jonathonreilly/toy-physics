@@ -579,24 +579,28 @@ surface. The current package does treat the canonical-surface ratio
 $y_t/g_s = 1/\sqrt{6}$
 as a retained Ward-identity theorem. What remains limited is the downstream
 transport from that exact lattice-scale theorem to the low-energy endpoint.
-On the current package surface the live derived readout is
+On the current package surface the live retained transport readout is
 
 - $y_t(v)=0.9176$,
-- canonical $m_t^{\mathrm{pole}} = 173.10\,\mathrm{GeV}$ on the framework-side
-  $3$-loop route,
-- retained support route $m_t^{\mathrm{pole}} = 172.57\,\mathrm{GeV}$ on the
-  corrected-input $2$-loop route,
+- canonical retained $m_t^{\mathrm{pole}} = 172.57 \pm 6.50\,\mathrm{GeV}$ on
+  the full-staggered-PT route,
+- explicit through-$2$-loop retained coverage
+  $172.57 \pm 6.9\,\mathrm{GeV}$ (structural) /
+  $172.57 \pm 7.94\,\mathrm{GeV}$ (bound-constrained),
+- older $m_t^{\mathrm{pole}} = 173.10\,\mathrm{GeV}$ on the framework-side
+  $3$-loop route as a derived cross-check,
 
-with the current primary precision caveat carried by standard
-lattice-to-continuum matching plus standard SM running, while the older
+with the current primary precision caveat carried by the retained UV-to-IR
+transport obstruction stack, canonical full-staggered-PT quadrature, and
+explicit through-$2$-loop continuation envelopes, while the older
 Schur-bridge budget of $1.2147511\%$ conservative and $0.75500635\%$
-support-tight is retained only as an independent cross-check budget.
+support-tight survives only as an independent cross-check budget.
 
-Those numbers are strong and zero-import on the framework-side downstream
-readout. The current package now classifies the lane as derived: the exact
-lattice-scale Yukawa/gauge normalization is retained, and the remaining
-limitation on the primary route is a standard-method residual rather than a
-framework-native explicit bridge qualifier.
+Those numbers are strong and zero-import on the accepted downstream transport
+surface. The current package now classifies the lane as retained quantitative:
+the exact lattice-scale Yukawa/gauge normalization is retained upstream, and
+the downstream transport lane is carried on `main` by the retained
+obstruction/quadrature stack rather than by the older generic bridge umbrella.
 
 The Higgs/vacuum package then inherits that same YT-lane precision caveat:
 
@@ -607,11 +611,12 @@ The Higgs/vacuum package then inherits that same YT-lane precision caveat:
 
 The important point is not merely that the central values are competitive. It
 is that the whole route is now stated on one authority surface with one
-retained UV Ward theorem and one honest primary precision caveat. The
-Higgs/vacuum lane is likewise best read as derived because it inherits the
-current YT-lane caveat rather than standing alone as a fully independent
-retained quantitative theorem row. The comparison surface is therefore the
-standard near-critical Standard Model literature [13,14], not a claim that the
+retained UV Ward theorem, one retained transport lane, and one honest
+derived Higgs/vacuum follow-on budget. The Higgs/vacuum lane is therefore best
+read as derived because it inherits the current retained YT lane rather than
+standing alone as a fully independent retained quantitative theorem row. The
+comparison surface is therefore the standard near-critical Standard Model
+literature [13,14], not a claim that the
 framework has already removed every quantitative caveat.
 
 An additional exact support theorem now closes one cleaner question on the same
@@ -643,8 +648,8 @@ The fastest way to read the quantitative package is Table 1.
 | Strong coupling | $\alpha_s(M_Z)=0.1181$ | retained standalone quantitative lane |
 | Electroweak normalization | $g_1(v)=0.4644$, $g_2(v)=0.6480$ | retained standalone quantitative lane |
 | CKM | $|V_{us}|=0.22727$, $|V_{cb}|=0.04217$, $|V_{ub}|=0.003913$ | promoted algebraic package |
-| Top sector | $y_t(v)=0.9176$, $m_t^{\mathrm{pole}}=173.10\,\mathrm{GeV}$ | bounded |
-| Higgs sector | $m_H=125.1\,\mathrm{GeV}$ | bounded |
+| Top sector | $y_t(v)=0.9176$, $m_t^{\mathrm{pole}}=172.57 \pm 6.50\,\mathrm{GeV}$ | retained quantitative lane |
+| Higgs sector | $m_H=125.1\,\mathrm{GeV}$ with retention analysis $125.04 \pm 3.17\,\mathrm{GeV}$ | derived quantitative lane |
 | Confinement readout | $\sqrt{\sigma}\approx 465\,\mathrm{MeV}$ | bounded quantitative readout on exact structural theorem |
 
 **Table 1.** Main retained and promoted quantitative outputs on the current
