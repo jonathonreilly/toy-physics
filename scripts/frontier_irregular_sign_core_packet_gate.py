@@ -3,11 +3,11 @@
 Irregular Sign Core-Packet Gate at Both Screening Levels
 =========================================================
 
-Gate test for promoting the irregular-sign lane with core_packet as the
-redefined primary observable, replacing shell_packet.
+Gate test for freezing a bounded same-surface irregular sign-separation packet
+with core_packet as the centered audited observable, replacing shell_packet.
 
 Motivation:
-  - The sign separator (+Phi vs -Phi) is physically real
+  - The sign separator (+Phi vs -Phi) is physically real on some surfaces
   - shell_packet (oscillating gaussian) fails at low screening because
     oscillation creates interference that masks the sign signal
   - core_packet (non-oscillating gaussian: exp(-r^2/2sigma^2)) shows 93%+
@@ -481,13 +481,15 @@ def main():
         print("core_packet (non-oscillating gaussian) separates +Phi from -Phi")
         print("on the audited irregular bipartite families at BOTH screening levels.")
         print()
-        print("The irregular-sign lane can promote with core_packet as the")
-        print("redefined primary observable. The shell_packet failure at low")
-        print("screening was an artifact of oscillation-induced interference,")
-        print("not a failure of the underlying sign physics.")
+        print("Current-main read: this is a bounded same-surface irregular")
+        print("sign separator on the centered core-packet surface. The older")
+        print("shell_packet failure at low screening was an artifact of")
+        print("oscillation-induced interference, not a failure of the")
+        print("underlying sign physics.")
         print()
         print("Scope: audited families (random_geometric, growing, layered_cycle),")
-        print("seeds 42-46, G in {5.0, 10.0}. Not universal.")
+        print("seeds 42-46, G in {5.0, 10.0}. Broader packet/transport")
+        print("portability remains open.")
     elif gate1_pass:
         print("Gate 1 PASSES but Gate 2 FAILS.")
         print("core_packet works at high screening but not at low screening.")

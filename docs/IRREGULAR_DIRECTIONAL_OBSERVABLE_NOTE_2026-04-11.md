@@ -2,6 +2,9 @@
 
 **Date:** 2026-04-11  
 **Script:** `frontier_irregular_directional_observable.py`
+**Status on current `main`: historical blocker surface for the off-center /
+transport-style probe; later bounded core-packet separator exists on a
+narrower centered packet surface**
 
 ## Question
 
@@ -82,5 +85,22 @@ The strongest blocker is:
 - the best current dynamical candidate (`frontier current bias`) is partial
   only, not robust across families
 
-So the irregular-graph directional-observable track is currently a **blocker
-result**, not a retained win.
+So this specific off-center / transport-style probe is a **blocker result**,
+not a retained win.
+
+## Later Narrow Bounded Reopen
+
+Current `main` now also carries a later, narrower bounded same-surface reopen:
+
+- [`IRREGULAR_SIGN_CORE_PACKET_GATE_NOTE.md`](IRREGULAR_SIGN_CORE_PACKET_GATE_NOTE.md)
+- [`WEAK_COUPLING_RETENTION_NOTE_2026-04-11.md`](WEAK_COUPLING_RETENTION_NOTE_2026-04-11.md)
+
+Those later notes do **not** overturn this blocker on the off-center transport
+surface. They show instead that:
+
+- a centered non-oscillating core packet can separate attractive from
+  repulsive parity coupling on the audited irregular families
+- weak-coupling shell-force separation is stable on a broader low-`G` audited
+  surface
+- broader transport / packet portability beyond those narrower surfaces
+  remains open

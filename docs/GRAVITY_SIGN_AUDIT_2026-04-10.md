@@ -29,14 +29,20 @@ Direct sign tests now split cleanly:
 - the scaled sibling now closes `9/9` on all nine retained larger-size runs
 - the retarded family-closure sibling now closes `9/9`, `9/9`, `9/9`, `8/9`
 - the endogenous same-surface directional probe failed (`0/9`, `0/9`, `4/9`)
+- later bounded follow-ups on current `main` recover:
+  - a retained weak-coupling sign-sensitive regime on the audited irregular
+    family/size/seed surface
+  - a bounded centered core-packet same-surface sign separator across the
+    audited irregular families at both `mu^2 = 0.1` and `mu^2 = 0.001`
 
 So the sign story is reopened, but not fully closed:
 - the old two-sign comparison is now a **negative control** that invalidates the
   identity coupling
 - the corrected coupling restores sign-sensitivity in direct well/hill tests
-- irregular self-generated graph batteries still need one frozen graph-native
-  directional observable beyond the current shell/edge-radial proxies and the
-  failed endogenous same-surface probe
+- irregular self-generated graph batteries still need portability beyond the
+  new bounded centered-packet surface; one universally frozen graph-native
+  directional observable across broader packet/transport surfaces is still not
+  in hand
 
 ## Observable Hierarchy
 
@@ -148,6 +154,23 @@ dynamical observables rather than shell-profile positivity.
 
 **Verdict:** blocker. The endogenous same-surface observable does not yet
 provide a frozen sign-selective irregular-graph direction claim.
+
+### Later Bounded Same-Surface Reopen
+
+`frontier_irregular_sign_core_packet_gate.py` and
+`IRREGULAR_SIGN_CORE_PACKET_GATE_NOTE.md` later recover a narrower bounded
+same-surface separator by switching to a centered non-oscillating core packet
+and auditing both `mu^2 = 0.1` and `mu^2 = 0.001`:
+
+| Screening | ball1 positive | ball2 positive | depth positive | min fraction |
+|-----------|----------------|----------------|----------------|--------------|
+| `mu^2=0.1` | `30/30` | `30/30` | `30/30` | `100%` |
+| `mu^2=0.001` | `28/30` | `30/30` | `28/30` | `93.3%` |
+
+**Verdict:** bounded reopen, not universal closure. The centered core-packet
+surface is now a real same-surface irregular sign separator on the audited
+families, but the older off-center / transport-style blocker still explains
+why the lane remains scoped narrowly.
 
 ## Emergent Geometry — Corrected
 

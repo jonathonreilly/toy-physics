@@ -1,6 +1,9 @@
 # Irregular Sign Core-Packet Gate Note
 
-## Status: PASS (all three gates)
+**Date:** 2026-04-11
+**Script:** `frontier_irregular_sign_core_packet_gate.py`
+**Status:** bounded same-surface irregular sign separator on the audited
+centered core-packet surface
 
 ## What was tested
 
@@ -38,10 +41,26 @@ failures.
 
 ## Conclusion
 
-core_packet cleanly separates attraction from repulsion on the audited
-irregular bipartite families at both screening levels. The shell_packet
-failure at low screening was an artifact of oscillation-induced interference
-masking the sign signal, not a failure of the underlying sign physics.
+On the audited centered core-packet surface, `core_packet` cleanly separates
+attraction from repulsion on the retained irregular bipartite families at both
+screening levels. The older `shell_packet` failure at low screening was an
+artifact of oscillation-induced interference masking the sign signal, not a
+failure of the underlying sign physics.
+
+This closes a **bounded same-surface separator**, not the whole irregular
+direction/sign problem. It does **not** establish:
+
+- arbitrary packet portability
+- transport-style / off-center directional closure
+- universal off-lattice directional gravity on all graph families or `G`
+  values
+
+The right read on current `main` is:
+
+- the centered non-oscillating core packet now gives a bounded same-surface
+  irregular sign separator
+- the older off-center / transport-style probe remains a blocker history
+- broader packet and transport portability on irregular graphs is still open
 
 ## Scope limits
 
@@ -52,6 +71,11 @@ masking the sign signal, not a failure of the underlying sign physics.
   mu2=0.1 (~1e-2), consistent with weaker gravitational coupling at low
   screening
 
-## Script
+## Companion Context
 
-`scripts/frontier_irregular_sign_core_packet_gate.py`
+- blocker history:
+  [`IRREGULAR_DIRECTIONAL_OBSERVABLE_NOTE_2026-04-11.md`](IRREGULAR_DIRECTIONAL_OBSERVABLE_NOTE_2026-04-11.md)
+- weak-coupling retained companion:
+  [`WEAK_COUPLING_RETENTION_NOTE_2026-04-11.md`](WEAK_COUPLING_RETENTION_NOTE_2026-04-11.md)
+- broader sign audit:
+  [`GRAVITY_SIGN_AUDIT_2026-04-10.md`](GRAVITY_SIGN_AUDIT_2026-04-10.md)
