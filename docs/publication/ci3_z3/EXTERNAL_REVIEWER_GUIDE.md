@@ -190,7 +190,9 @@ Current status from that stack:
   inertial-mass / matter closure because the inward-source directional
   boundary remains
 - older bounded CKM mass-basis / Cabibbo / partial Jarlskog route history
-- cosmology bounded family
+- mixed cosmology surface: retained `Lambda_vac = lambda_1(S^3_R)` identity
+  and retained `w = -1` corollary, with bounded numerical `Lambda`,
+  `Omega_Lambda`, `m_g`, and `n_s`
 - bounded secondary predictions already on `main`, plus the CKM-only
   neutron-EDM corollary with bounded continuation: proton lifetime, down-type
   flavor-mass CKM-dual ratios, vacuum critical stability, taste-scalar

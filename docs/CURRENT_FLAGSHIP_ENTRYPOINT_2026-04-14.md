@@ -89,9 +89,10 @@ packaging.
   beyond-pocket compact-object-plus-response regime and a mapped inward-source
   directional boundary; still below persistent inertial-mass / matter closure
 - older bounded CKM mass-basis / Cabibbo / partial Jarlskog route history
-- cosmology bounded family, organized around one fixed-gap vacuum scale
-  (`Lambda`, `w = -1`, graviton mass) plus the remaining matter bridge behind
-  present-day `Omega_Lambda`
+- mixed cosmology surface, organized around one fixed-gap vacuum scale:
+  retained structural identity `Lambda_vac = lambda_1(S^3_R)` and retained
+  `w = -1` corollary, with bounded numerical `Lambda`, graviton mass, and
+  present-day `Omega_Lambda` still behind the matter bridge
 - bounded secondary predictions already on `main`, plus the CKM-only
   neutron-EDM corollary with bounded continuation: proton lifetime, down-type
   flavor-mass CKM-dual ratios, vacuum critical stability, benchmark

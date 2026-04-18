@@ -1,0 +1,63 @@
+========================================================================
+Dark-Energy EOS Retained Structural Corollary
+========================================================================
+
+Theorem: on the retained S^3 + spectral-gap + fixed-R surface,
+         rho_Lambda is time-independent and w = -1 exactly,
+         independent of the numerical value of R.
+
+[1] Retained identity Lambda_vac = lambda_1(S^3_R) imported ------
+  [PASS] identity theorem note present in repo  (path = docs/COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md)
+  [PASS] identity theorem runner present in repo  (path = scripts/frontier_cosmological_constant_spectral_gap_identity.py)
+  [PASS] identity Lambda_vac = lambda_1(S^3_R) at R = 5.000e-01  (both = 1.200000e+01)
+  [PASS] identity Lambda_vac = lambda_1(S^3_R) at R = 1.000e+00  (both = 3.000000e+00)
+  [PASS] identity Lambda_vac = lambda_1(S^3_R) at R = 3.142e+00  (both = 3.039621e-01)
+  [PASS] identity Lambda_vac = lambda_1(S^3_R) at R = 1.000e+26  (both = 3.000000e-52)
+
+[2] Scaling lambda_1 ~ 1 / R^2 ------------------------------------
+  [PASS] lambda_1 = 3 / R^2 exactly under R rescaling  (max fractional residual = 0.00e+00)
+
+[3] Lambda time-independence under fixed R ------------------------
+  [PASS] fixed R gives d Lambda / d t = 0 exactly  (max fractional drift over 13.8 Gyr sample = 0.00e+00)
+
+[4] Continuity equation implies w = -1 ----------------------------
+  [PASS] continuity at H = 1.092e-18 s^-1 forces w = -1  (w_inferred = -1.0000000000000000e+00)
+  [PASS] continuity at H = 2.184e-18 s^-1 forces w = -1  (w_inferred = -1.0000000000000000e+00)
+  [PASS] continuity at H = 4.369e-18 s^-1 forces w = -1  (w_inferred = -1.0000000000000000e+00)
+  [PASS] continuity at H = 2.184e-17 s^-1 forces w = -1  (w_inferred = -1.0000000000000000e+00)
+
+[5] CPL parameters on corollary surface ---------------------------
+  [PASS] CPL intercept w_0 = -1 exactly  (w_0 = -1.000000000000e+00)
+  [PASS] CPL slope w_a = 0 exactly  (w_a = +6.028156269807e-16)
+  [PASS] pointwise w(a=1) = -1  (w(a=1) = -1.000000000000e+00)
+
+[6] Decoupling from numerical Lambda value ------------------------
+  [PASS] w = -1 holds for every fixed R (decoupled from the bounded numerical Lambda)  (max |w + 1| over R sweep = 0.00e+00)
+
+[7] Lattice correction is a constant shift ------------------------
+  [PASS] lattice correction is a constant shift (no time dependence)  (delta = -3.467e-123, drift over sample = 0.00e+00)
+
+[8] No phantom crossing -------------------------------------------
+  [PASS] w(a) >= -1 identically (no phantom crossing)  (min w = -1.000)
+  [PASS] w(a) <= -1 identically (saturation)  (max w = -1.000)
+
+[9] Lattice-discretization drift bound ----------------------------
+  [PASS] |delta w| bound from lattice is far below observational floor  (|delta w| < 1.39e-122,  DESI sensitivity / bound ~ 7.21e+119)
+
+========================================================================
+SUMMARY: PASS=20  FAIL=0
+========================================================================
+
+Retained structural corollary:
+  w = -1 exactly on the retained de Sitter stationary vacuum +
+  retained S^3 topology + retained Lambda_vac = lambda_1(S^3_R)
+  identity, independent of the numerical value of R.
+  CPL parameters: (w_0, w_a) = (-1, 0).
+
+Retained upstream premise:
+  docs/COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md
+  scripts/frontier_cosmological_constant_spectral_gap_identity.py
+
+NOT upgraded by this runner or its note:
+  the numerical value of Lambda / R_Lambda remains the existing
+  bounded cosmology-scale identification row.

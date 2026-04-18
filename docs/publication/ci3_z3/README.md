@@ -172,7 +172,9 @@ Current package status:
   inertial-mass / matter closure because the inward-source directional
   boundary remains
 - older bounded CKM mass-basis / Cabibbo / partial Jarlskog route history
-- cosmology bounded family such as `\Omega_\Lambda`, `n_s`, `w = -1`
+- mixed cosmology surface: retained structural identity
+  `\Lambda_{vac} = \lambda_1(S^3_R)` and retained `w = -1` corollary, with
+  bounded numerical `\Lambda`, `\Omega_\Lambda`, `n_s`, and `m_g`
 - bounded secondary predictions already on `main`, plus the CKM-only
   neutron-EDM corollary with bounded continuation:
   proton lifetime, down-type flavor-mass CKM-dual ratios, vacuum critical

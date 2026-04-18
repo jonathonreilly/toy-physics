@@ -704,10 +704,12 @@ together with the final quantitative DM mapping. That is why dark matter stays
 open.
 
 The cosmology family is now cleaner than before and no longer needs to be
-treated as several unrelated blockers. $\Lambda$, $w=-1$, and the present
-$\Omega_\Lambda$ row reduce to one fixed-gap vacuum/de Sitter scale plus the
-remaining matter-content bridge. That is useful, but the cosmology family is
-still bounded/conditional on the current public package surface.
+treated as several unrelated blockers. The public package now carries a
+retained structural identity $\Lambda_{vac} = \lambda_1(S^3_R)$ and a retained
+exact EOS corollary $w=-1$ on the same fixed-gap vacuum/de Sitter surface,
+while the numerical $\Lambda$, the present $\Omega_\Lambda$ row, and the
+remaining cosmology numerics still reduce to one fixed-gap vacuum scale plus
+the remaining matter-content bridge.
 
 ## 7. Reproducibility Surface
 

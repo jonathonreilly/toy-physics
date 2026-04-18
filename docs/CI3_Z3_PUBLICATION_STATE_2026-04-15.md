@@ -170,7 +170,9 @@ ledger:
   upgrading the package to retained derivation or creating a spare forecast
 - promoted CKM no-import closure package with full sharp `|V_us|`, `|V_cb|`, `|V_ub|`, `\delta`, and `J`
 - older bounded Cabibbo / NNI / partial Jarlskog notes retained only as route history
-- `\Omega_\Lambda`, `n_s`, `w = -1`, and `\Lambda` cosmology companions
+- mixed cosmology surface: retained `\Lambda_{vac} = \lambda_1(S^3_R)`
+  identity and retained `w = -1` corollary, with bounded numerical
+  `\Omega_\Lambda`, `n_s`, and `\Lambda` companions
 - vacuum-critical-stability, BH-entropy, proton-lifetime, gravitational-decoherence, and monopole companions
 
 The current quantitative component stack on `main` is:
@@ -275,7 +277,9 @@ section, but they are not yet retained closure:
 - DM coarse-graining / Stosszahlansatz notes
 - renormalized `y_t` running and matching notes
 - gauge-coupling normalization notes
-- cosmology companions such as `w = -1`, graviton mass, `Omega_Lambda`, `n_s`
+- bounded cosmology numerics such as graviton mass, `Omega_Lambda`, and `n_s`,
+  together with older companion-note history below the retained
+  `\Lambda_{vac} = \lambda_1(S^3_R)` / `w = -1` surface
 - older Higgs mass / Coleman-Weinberg route notes now superseded by the
   complete prediction chain
 - proton lifetime, vacuum-critical-stability, down-type flavor-mass CKM-dual

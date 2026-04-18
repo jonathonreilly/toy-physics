@@ -1,0 +1,51 @@
+========================================================================
+Spectral-Gap Cosmological-Constant Identity Theorem
+========================================================================
+
+Theorem: on the retained direct-universal GR de Sitter stationary
+         vacuum sector with retained S^3 spatial topology,
+         Lambda_vac = lambda_1(S^3_R) = 3 / R^2 for every R > 0.
+         The identity is retained; R's numerical value is not.
+
+[A] Leg A: vacuum Einstein equations force Lambda = 3/R^2 --------
+  [PASS] trace-contracted vacuum Einstein gives R_4d = 4 Lambda in D = 4  (R_4d / Lambda = 4.0)
+  [PASS] vacuum Einstein reduces to R_{mu nu} = Lambda g_{mu nu} in D = 4  (R_{mu nu} / (Lambda g_{mu nu}) = 1.0)
+  [PASS] de Sitter Ricci throat at R = 5.000e-01 forces Lambda = 3/R^2  (Lambda = 1.200000e+01,  expected 1.200000e+01)
+  [PASS] de Sitter Ricci throat at R = 1.000e+00 forces Lambda = 3/R^2  (Lambda = 3.000000e+00,  expected 3.000000e+00)
+  [PASS] de Sitter Ricci throat at R = 2.000e+00 forces Lambda = 3/R^2  (Lambda = 7.500000e-01,  expected 7.500000e-01)
+  [PASS] de Sitter Ricci throat at R = 3.142e+00 forces Lambda = 3/R^2  (Lambda = 3.039621e-01,  expected 3.039621e-01)
+  [PASS] de Sitter Ricci throat at R = 1.000e+06 forces Lambda = 3/R^2  (Lambda = 3.000000e-12,  expected 3.000000e-12)
+  [PASS] de Sitter Ricci throat at R = 1.000e+26 forces Lambda = 3/R^2  (Lambda = 3.000000e-52,  expected 3.000000e-52)
+
+[B] Leg B: Lichnerowicz-Obata gives lambda_1(S^3_R) = 3/R^2 ------
+  [PASS] Obata equality on S^3_R at R = 5.000e-01 gives lambda_1 = 3/R^2  (lambda_1 = 1.200000e+01,  expected 1.200000e+01)
+  [PASS] Obata equality on S^3_R at R = 1.000e+00 gives lambda_1 = 3/R^2  (lambda_1 = 3.000000e+00,  expected 3.000000e+00)
+  [PASS] Obata equality on S^3_R at R = 2.000e+00 gives lambda_1 = 3/R^2  (lambda_1 = 7.500000e-01,  expected 7.500000e-01)
+  [PASS] Obata equality on S^3_R at R = 3.142e+00 gives lambda_1 = 3/R^2  (lambda_1 = 3.039621e-01,  expected 3.039621e-01)
+  [PASS] Obata equality on S^3_R at R = 1.000e+06 gives lambda_1 = 3/R^2  (lambda_1 = 3.000000e-12,  expected 3.000000e-12)
+  [PASS] Obata equality on S^3_R at R = 1.000e+26 gives lambda_1 = 3/R^2  (lambda_1 = 3.000000e-52,  expected 3.000000e-52)
+  [PASS] S^3 mode ratios match n(n+2)/3  (max error over first 5 modes = 0.00e+00)
+  [PASS] discrete S^3 graph Laplacian admits a nonzero first eigenvalue  (lam_1_graph = 0.2095 (coarse discretization; continuum value is 3 at R=1))
+
+[C] Closure: both legs coincide as functions of R -----------------
+  [PASS] Lambda_vac (Einstein leg) = lambda_1(S^3_R) (spectral leg) as functions of R  (max absolute residual over R sweep = 0.00e+00)
+  [PASS] log-log slope of Lambda_vac vs R matches -2 on the Einstein leg  (slope = -2.000000000000)
+  [PASS] log-log slope of lambda_1 vs R matches -2 on the spectral leg  (slope = -2.000000000000)
+  [PASS] intercepts of both legs equal log 3  (intercept_Einstein = 1.098612288668, intercept_spectrum = 1.098612288668, log 3 = 1.098612288668)
+
+[D] Numerical value of R/Lambda not fixed by the theorem ---------
+  [PASS] distinct R choices give distinct Lambda values (theorem is about identity, not value)  (distinct Lambda values = 3 of 3)
+  [PASS] identity Lambda = lambda_1 holds at each R, regardless of value  (max residual = 0.00e+00)
+
+========================================================================
+SUMMARY: PASS=22  FAIL=0
+========================================================================
+
+Retained structural identity theorem:
+  Lambda_vac = lambda_1(S^3_R) = 3 / R^2 for every R > 0,
+  on the retained de Sitter stationary vacuum with S^3 topology.
+
+NOT upgraded:
+  the numerical value of R / R_Lambda / Lambda remains the
+  existing bounded cosmology-scale identification,
+  per COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md.

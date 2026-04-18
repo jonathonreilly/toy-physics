@@ -126,18 +126,25 @@ in route history.
 These are part of the framework's falsification surface even when present
 experimental sensitivity is limited.
 
-## Conditional cosmology predictions
+## Mixed cosmology surface
 
-The cosmology side also carries predictions, but they remain package-conditional
-because the matter bridge is still open.
+The cosmology side no longer sits wholly in package-conditional prediction
+space. The retained surface now carries:
 
-- `Lambda` from the fixed-gap / de Sitter scale route
-- `w = -1` on the same fixed-gap route
+- `Lambda_vac = lambda_1(S^3_R)` as an exact structural identity
+- `w = -1` exactly on the same fixed-gap stationary-vacuum surface
+
+The remaining numerical cosmology predictions remain bounded because the
+matter bridge and cosmology-scale identification are still open:
+
+- numerical `Lambda` from the fixed-gap / de Sitter scale route
 - graviton-mass companion from the same vacuum/topology scale
 - present-day `Omega_Lambda` once the matter bridge closes
 
 Authority:
 
+- [COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md](../../COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md)
+- [DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md](../../DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md)
 - [COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md](../../COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md)
 - [COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md](../../COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md)
 - [DARK_ENERGY_EOS_NOTE.md](../../DARK_ENERGY_EOS_NOTE.md)
