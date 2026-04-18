@@ -9,7 +9,7 @@ This backlog is ordered by value to the main project, not by ease.
 - The two-sign comparison is now retained in
   [`frontier_two_sign_comparison.py`](../scripts/frontier_two_sign_comparison.py)
   and
-  [`TWO_SIGN_COMPARISON_NOTE_2026-04-10.md`](../docs/TWO_SIGN_COMPARISON_NOTE_2026-04-10.md):
+  [`TWO_SIGN_COMPARISON_NOTE_2026-04-10.md`](../../../TWO_SIGN_COMPARISON_NOTE_2026-04-10.md):
   on irregular graph families, the current shell-radial and edge-radial sign
   measures are not sign-selective. Both attractive and repulsive coupling can
   remain inward on those observables, even after the corrected parity
@@ -21,7 +21,7 @@ This backlog is ordered by value to the main project, not by ease.
   - derive the attractive sign from the staggered / Dirac structure, or
   - freeze the irregular graph program as explicitly sign-agnostic
 - A new exploratory weak-coupling regime now exists in
-  [`WEAK_COUPLING_SIGN_SENSITIVITY_NOTE_2026-04-11.md`](../docs/WEAK_COUPLING_SIGN_SENSITIVITY_NOTE_2026-04-11.md):
+  [`WEAK_COUPLING_SIGN_SENSITIVITY_NOTE_2026-04-11.md`](../../../WEAK_COUPLING_SIGN_SENSITIVITY_NOTE_2026-04-11.md):
   at `G=5,10`, width asymmetry and shell-force separation are much stronger
   than on the retained structural operating points. This is promising, but it
   is not yet a retained closure because the effect is `14/15`, not `15/15`,
@@ -38,7 +38,7 @@ This backlog is ordered by value to the main project, not by ease.
 - Frozen narrow positive:
   [`frontier_staggered_backreaction_green_closure.py`](../scripts/frontier_staggered_backreaction_green_closure.py)
   and
-  [`STAGGERED_BACKREACTION_GREEN_CLOSURE_NOTE.md`](../docs/STAGGERED_BACKREACTION_GREEN_CLOSURE_NOTE.md)
+  [`STAGGERED_BACKREACTION_GREEN_CLOSURE_NOTE.md`](../../../STAGGERED_BACKREACTION_GREEN_CLOSURE_NOTE.md)
   now give a graph-native direct Green map (`resistance_yukawa`) that cuts the
   retained cycle-bearing mean gap from `8.899e-01` to `9.889e-02` and the
   layered holdout gap from `8.759e-01` to `1.680e-02`, while preserving the
@@ -86,7 +86,7 @@ This backlog is ordered by value to the main project, not by ease.
   a quality-matched local control stays retained through `extra=6`, while the
   frontier branch fails native gauge at `extra=5/6`.
 - The gravity-sign audit is now frozen in
-  [`GRAVITY_SIGN_AUDIT_2026-04-10.md`](../docs/GRAVITY_SIGN_AUDIT_2026-04-10.md):
+  [`GRAVITY_SIGN_AUDIT_2026-04-10.md`](../../../GRAVITY_SIGN_AUDIT_2026-04-10.md):
   exact lattice force remains the standard on the canonical card, while the
   irregular-graph batteries are now explicitly treated as audited radial
   proxies that do not by themselves distinguish attractive from repulsive
@@ -133,7 +133,7 @@ This backlog is ordered by value to the main project, not by ease.
 
 - Compare `phi_solved(depth)` against `phi_ext(depth)` directly on one
   cycle-bearing family and one layered family.
-- Frozen in [`STAGGERED_BACKREACTION_SHELL_SPECTRAL_NOTE.md`](../docs/STAGGERED_BACKREACTION_SHELL_SPECTRAL_NOTE.md): the solved graph field is much flatter in depth than the external-kernel control, and its spectrum is more concentrated in the lowest modes on both families. Treat this as source-sector characterization, not as an open blocker.
+- Frozen in [`STAGGERED_BACKREACTION_SHELL_SPECTRAL_NOTE.md`](../../../STAGGERED_BACKREACTION_SHELL_SPECTRAL_NOTE.md): the solved graph field is much flatter in depth than the external-kernel control, and its spectrum is more concentrated in the lowest modes on both families. Treat this as source-sector characterization, not as an open blocker.
 - Use that result to decide whether the next closure attempt should be:
   - a different Green's-function map
   - a genuinely nonlinear iterative source sector
@@ -152,7 +152,7 @@ This backlog is ordered by value to the main project, not by ease.
 - Keep the exact lattice-force card separate from the irregular-graph
   shell-radial proxy batteries, and do not describe the latter as exact
   coordinate-force expectations or as sign-selection evidence. Treat
-  [`IRREGULAR_DIRECTIONAL_OBSERVABLE_NOTE_2026-04-11.md`](../docs/IRREGULAR_DIRECTIONAL_OBSERVABLE_NOTE_2026-04-11.md)
+  [`IRREGULAR_DIRECTIONAL_OBSERVABLE_NOTE_2026-04-11.md`](../../../IRREGULAR_DIRECTIONAL_OBSERVABLE_NOTE_2026-04-11.md)
   as the blocker note.
 - Keep the portability probe separate from the canonical card.
 - Preserve the full-suite baseline as `29/38` in 1D and `28/38` in 3D.

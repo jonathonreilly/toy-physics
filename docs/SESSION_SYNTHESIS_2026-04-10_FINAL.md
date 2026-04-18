@@ -321,8 +321,8 @@ The full-suite baseline is now frozen:
    not a retained geometry closure.
 
 For the active backlog and agent brief, see:
-- `docs/WORK_BACKLOG_2026-04-10.md`
-- `docs/CLAUDE_BACKLOG_BRIEF_2026-04-10.md`
+- `docs/work_history/repo/backlog/WORK_BACKLOG_2026-04-10.md`
+- `docs/work_history/repo/backlog/CLAUDE_BACKLOG_BRIEF_2026-04-10.md`
 
 The current retained cycle-bearing integration is frozen in:
 - `scripts/frontier_staggered_cycle_battery.py`

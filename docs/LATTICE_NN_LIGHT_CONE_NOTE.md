@@ -11,7 +11,7 @@ Artifacts checked:
 - [`scripts/causal_field_gravity.py`](/Users/jonreilly/Projects/Physics/scripts/causal_field_gravity.py)
 - [`logs/2026-04-01-causal-field-fixed-mass-verify.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-01-causal-field-fixed-mass-verify.txt)
 - [`logs/2026-04-01-causal-field-mass-scaling.txt`](/Users/jonreilly/Projects/Physics/logs/2026-04-01-causal-field-mass-scaling.txt)
-- [`docs/OVERNIGHT_WORK_BACKLOG.md`](/Users/jonreilly/Projects/Physics/docs/OVERNIGHT_WORK_BACKLOG.md)
+- [`docs/work_history/repo/backlog/OVERNIGHT_WORK_BACKLOG.md`](/Users/jonreilly/Projects/Physics/docs/work_history/repo/backlog/OVERNIGHT_WORK_BACKLOG.md)
 - [`docs/SESSION_SUMMARY_2026-04-01_DIMENSIONAL.md`](/Users/jonreilly/Projects/Physics/docs/SESSION_SUMMARY_2026-04-01_DIMENSIONAL.md)
 
 ## State Check

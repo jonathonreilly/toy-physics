@@ -5,7 +5,10 @@
 
 Current rerun-required bug ledger:
 
-- [`docs/RERUN_REQUIRED_BUG_AUDIT_2026-04-11.md`](../RERUN_REQUIRED_BUG_AUDIT_2026-04-11.md)
+- live queue:
+  [`docs/repo/ACTIVE_REVIEW_QUEUE.md`](./ACTIVE_REVIEW_QUEUE.md)
+- historical detailed bug audit:
+  [`docs/work_history/repo/review_feedback/RERUN_REQUIRED_BUG_AUDIT_2026-04-11.md`](../work_history/repo/review_feedback/RERUN_REQUIRED_BUG_AUDIT_2026-04-11.md)
 
 ## 1. Pick The Lane First
 

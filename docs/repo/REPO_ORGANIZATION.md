@@ -12,13 +12,13 @@ The repo has accumulated:
 - notes that mix retained, bounded, and exploratory claims
 - repeated semantic bugs in observables and runner assumptions
 
-The correct fix is **not** a risky physical file move while science work is
-still landing. The fix is a stable control plane:
+The correct fix is a stable control plane:
 
 - one lane board
 - one canonical harness index
 - one retest playbook
 - one machine-readable lane registry
+- one active review queue
 
 ## Actual Layout
 
@@ -27,11 +27,14 @@ still landing. The fix is a stable control plane:
   - `frontier_*` is the current frontier namespace
   - older non-`frontier_` scripts are often historical or lane-specific
 - `docs/`
-  - retained notes, synthesis notes, audits, backlogs, and historical writeups
+  - retained notes, synthesis notes, and current control-plane docs
 - `docs/repo/`
   - navigation/control-plane docs added specifically to keep the repo usable
 - `docs/lanes/`
   - lane-level manifests for the whole repo
+- `docs/work_history/`
+  - explicit historical bucket for archived review packets, backlogs, and
+    older lane material
 - `outputs/`, `logs/`
   - run artifacts and transient output
 
@@ -66,14 +69,18 @@ The labels below are the historical lane-board subset of that vocabulary.
   - where each lane across the whole repo sits now
 - [`docs/repo/CONTROLLED_VOCABULARY.md`](./CONTROLLED_VOCABULARY.md)
   - repo-wide status taxonomy and wording rules
+- [`docs/repo/ACTIVE_REVIEW_QUEUE.md`](./ACTIVE_REVIEW_QUEUE.md)
+  - single live queue for current-main review feedback
+- [`docs/repo/REVIEW_FEEDBACK_WORKFLOW.md`](./REVIEW_FEEDBACK_WORKFLOW.md)
+  - process for landing, reviewing, triaging, and closing feedback
 - [`docs/CANONICAL_HARNESS_INDEX.md`](../CANONICAL_HARNESS_INDEX.md)
   - which scripts to rerun first
 - [`docs/lanes/README.md`](../lanes/README.md)
   - lane-by-lane manifests for the full repo
 - [`docs/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md`](../work_history/POTENTIAL_PUBLICATION_DISCOVERIES_LOG.md)
   - cumulative paper-seed / discovery ledger
-- [`docs/PUBLICATION_DISCOVERY_AUDIT_2026-04-11.md`](../PUBLICATION_DISCOVERY_AUDIT_2026-04-11.md)
-  - current lane-by-lane critical audit of what is genuinely safe to treat as a paper candidate
+- [`docs/work_history/repo/review_feedback/PUBLICATION_DISCOVERY_AUDIT_2026-04-11.md`](../work_history/repo/review_feedback/PUBLICATION_DISCOVERY_AUDIT_2026-04-11.md)
+  - historical lane-by-lane publication-candidate audit
 - [`docs/repo/RETEST_PLAYBOOK.md`](RETEST_PLAYBOOK.md)
   - how to handle runner bugs or claim changes
 - [`docs/repo/LANE_REGISTRY.yaml`](LANE_REGISTRY.yaml)
@@ -107,17 +114,19 @@ When a new runner lands:
 4. If the result changes the retained program surface, also update:
    - [`docs/SESSION_SYNTHESIS_2026-04-10_FINAL.md`](../SESSION_SYNTHESIS_2026-04-10_FINAL.md)
 
-Older evaluation-tool markdown files were intentionally removed from current
-`main`. If you need the exact historical text, use git history rather than the
-live repo surface.
+Operational review packets and planning backlogs were intentionally moved out of
+the front-door `docs/` surface. Use the active review queue for current work
+and the work-history archive for older detailed packets.
 
 - [`docs/work_history/repo/evaluation_tools/README.md`](../work_history/repo/evaluation_tools/README.md)
+- [`docs/work_history/repo/review_feedback/README.md`](../work_history/repo/review_feedback/README.md)
+- [`docs/work_history/repo/backlog/README.md`](../work_history/repo/backlog/README.md)
 
-Do not treat those scorecards/cards as part of the live control plane.
+Do not treat those scorecards, old audit packets, or backlog notes as part of
+the live control plane.
 
 ## What This Organization Deliberately Does Not Do
 
-- It does **not** move old scripts around while the frontier branch is active.
 - It does **not** pretend every note in `docs/` is equally current.
 - It does **not** merge exact-lattice force claims with irregular-graph proxy
   claims.

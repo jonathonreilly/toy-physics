@@ -61,7 +61,7 @@ theory.
 Read this together with:
 
 - [`docs/PHYSICS_FIRST_ATTACK_PLAN.md`](/Users/jonreilly/Projects/Physics/docs/PHYSICS_FIRST_ATTACK_PLAN.md)
-- [`docs/OVERNIGHT_WORK_BACKLOG.md`](/Users/jonreilly/Projects/Physics/docs/OVERNIGHT_WORK_BACKLOG.md)
+- [`docs/work_history/repo/backlog/OVERNIGHT_WORK_BACKLOG.md`](/Users/jonreilly/Projects/Physics/docs/work_history/repo/backlog/OVERNIGHT_WORK_BACKLOG.md)
 
 The weak-field lane survives the `c = inf` limit, so this branch is viable as a
 moonshot extension.

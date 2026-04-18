@@ -29,6 +29,10 @@ package.
   - active flagship paper surface
 - `docs/work_history/`
   - explicit historical bucket
+- `docs/work_history/repo/review_feedback/`
+  - archived operational review packets and resolved audit histories
+- `docs/work_history/repo/backlog/`
+  - archived planning/backlog notes
 - `docs/work_history/pf/`
   - salvaged PF route history from the rejected closure packet
 - the live review surface should point here only for optional historical

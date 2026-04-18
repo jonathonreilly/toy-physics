@@ -424,7 +424,7 @@ The retained program is:
 ## Highest-value next wins
 
 For short-horizon worker execution, use
-[`docs/OVERNIGHT_WORK_BACKLOG.md`](OVERNIGHT_WORK_BACKLOG.md)
+[`docs/work_history/repo/backlog/OVERNIGHT_WORK_BACKLOG.md`](work_history/repo/backlog/OVERNIGHT_WORK_BACKLOG.md)
 as the concrete task queue. The priorities below remain the canonical
 program-level roadmap.
 

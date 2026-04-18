@@ -15,7 +15,7 @@ looks across the whole `main` repo and flags:
 
 Use this together with:
 
-- [`docs/repo/LANE_STATUS_BOARD.md`](work_history/repo/LANE_STATUS_BOARD.md)
+- [`docs/work_history/repo/LANE_STATUS_BOARD.md`](../LANE_STATUS_BOARD.md)
 - [`docs/RERUN_REQUIRED_BUG_AUDIT_2026-04-11.md`](RERUN_REQUIRED_BUG_AUDIT_2026-04-11.md)
 - [`docs/PUBLICATION_DISCOVERY_AUDIT_2026-04-11.md`](PUBLICATION_DISCOVERY_AUDIT_2026-04-11.md)
 - [`docs/CANONICAL_HARNESS_INDEX.md`](CANONICAL_HARNESS_INDEX.md)
