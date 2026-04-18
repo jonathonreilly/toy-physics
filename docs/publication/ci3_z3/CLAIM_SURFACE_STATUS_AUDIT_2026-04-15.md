@@ -407,7 +407,8 @@ the controlling notes.
 
 **Current public posture**
 
-- retained three-generation matter structure
+- retained three-generation matter structure with an explicit reviewer-facing
+  three-generation / chirality boundary note on `main`
 
 Representative surfaces:
 
@@ -419,22 +420,30 @@ Representative surfaces:
 
 - the package already makes the physical-lattice reading explicit
 - the axiom boundary is explicit
-- but there is still no strong reviewer-facing surface addressing the expected
-  Nielsen–Ninomiya / chiral-regulator objection directly
+- the reviewer-facing Nielsen–Ninomiya / chiral-regulator boundary is now
+  surfaced directly and tied to the accepted physical-lattice / no-rooting /
+  anomaly-forced-chirality package boundary
 
 Primary evidence:
 
 - [THREE_GENERATION_STRUCTURE_NOTE.md](../../THREE_GENERATION_STRUCTURE_NOTE.md)
 - [GENERATION_AXIOM_BOUNDARY_NOTE.md](../../GENERATION_AXIOM_BOUNDARY_NOTE.md)
+- [THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md](../../THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md)
+- [PHYSICAL_LATTICE_NECESSITY_NOTE.md](../../PHYSICAL_LATTICE_NECESSITY_NOTE.md)
 
 **Adjustment class**
 
-- part wording / part missing defense note
+- repo/manuscript cleanup resolved on `main`; no missing reviewer-facing
+  defense note remains on the live package surface
 
 **Why**
 
-The internal package has the axiom-boundary answer, but it is not yet surfaced
-in the form reviewers will ask for.
+The dedicated reviewer-facing boundary note is now live, and the main package
+surfaces already state the narrow answer: physical-lattice species structure,
+no rooting in Hamiltonian `Cl(3)` on `Z^3`, no proper exact quotient on the
+retained `hw=1` surface, and chirality only on the full-framework
+anomaly-forced `3+1` surface. The remaining work here is optional presentation
+hardening, not claim-surface repair.
 
 ## Working Conclusion
 
@@ -443,9 +452,11 @@ At the current repo state:
 - the front-door axiom count problem was real and is now fixed
 - the stale Lorentz contradiction was real and is now fixed
 - the old claim-surface drift on gravity/QG framing, strong CP, CKM,
-  `\alpha_s` / EW normalization, and Higgs/top presentation has now been
-  cleaned on `main`
-- the main remaining live issues recorded in this audit are the electroweak
-  hierarchy / `v` posture and the three-generation / chirality defense
+  `\alpha_s` / EW normalization, Higgs/top presentation, and the
+  three-generation / chirality reviewer-facing boundary has now been cleaned
+  on `main`
+- no separate live claim-surface blocker remains recorded in this audit; what
+  remains is optional presentation hardening
 
-This note remains a living audit guide for the remaining editing pass.
+This note remains a living audit guide for future drift checks, not a record
+of a current unresolved claim-surface blocker.
