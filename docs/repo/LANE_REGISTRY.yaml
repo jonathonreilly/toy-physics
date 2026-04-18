@@ -14,7 +14,6 @@ lanes:
       - scripts/frontier_staggered_full_suite.py
     canonical_notes:
       - docs/STAGGERED_FERMION_CARD_2026-04-11.md
-      - docs/FULL_TEST_MATRIX_2026-04-10.md
       - docs/SESSION_SYNTHESIS_2026-04-10_FINAL.md
     blockers:
       - "Off-lattice sign-selective irregular observable still open."
@@ -68,7 +67,7 @@ lanes:
       - scripts/frontier_scalar_kg_16card.py
       - scripts/frontier_scalar_kg_full_suite.py
     canonical_notes:
-      - docs/FULL_TEST_MATRIX_2026-04-10.md
+      - docs/GRAPH_LAPLACIAN_CORE_CARD_NOTE.md
   - id: coin_walks
     label: "Coin / chiral / Dirac-walk lane"
     status: historical-blocked

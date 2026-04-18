@@ -63,14 +63,14 @@ Examples:
 - `claude/youthful-neumann: MASTER_DERIVATION_SCORECARD.md`
 - `claude/youthful-neumann: STANDALONE_PREDICTIONS_INVENTORY_2026-04-12.md`
 - `claude/youthful-neumann: PAPER_STRATEGY_2026-04-12.md`
-- `historical publication-prep working copy: COMPLETE_DISCOVERY_SCORECARD_2026-04-11.md`
-- `historical publication-prep working copy: PREDICTION_CARD.md`
+- `historical publication-prep working copy: COMPLETE_DISCOVERY_SCORECARD_2026-04-11.md` (scrubbed from current `main`)
+- `historical publication-prep working copy: PREDICTION_CARD.md` (scrubbed from current `main`)
 
 Status:
 
 - useful for capture/history
 - frozen into family `F08`
-- not current science authority
+- not current science authority or current repo surface
 
 ### 4. Old root entry surfaces and historical lane front doors
 

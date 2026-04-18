@@ -139,9 +139,11 @@ Addresses the "one-family artifact" critique. The hub-concentration
 exception is informative: gravity needs distributed path diversity.
 
 ### Falsification criteria
-PREDICTION_CARD.md lists 5 explicit falsification criteria. The k=0
-control (gravity vanishes without phase) connects to quantum-measure
-distinction between physical interference and trivial amplitude bias.
+The current package keeps explicit falsification-style boundaries in the live
+prediction and scoping surfaces rather than the old evaluation card. The `k=0`
+control (gravity vanishes without phase) still connects to the
+quantum-measure distinction between physical interference and trivial
+amplitude bias.
 
 ### Distance law as structural result
 b-independence derived and closed across 9+ avenues. Connects to

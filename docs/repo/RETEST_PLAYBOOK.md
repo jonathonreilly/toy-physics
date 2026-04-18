@@ -103,7 +103,6 @@ scripts in scratch directories.
 If a bug changes a retained claim, update all affected surfaces:
 
 - lane note for the runner
-- [`docs/FULL_TEST_MATRIX_2026-04-10.md`](../FULL_TEST_MATRIX_2026-04-10.md)
 - [`docs/SESSION_SYNTHESIS_2026-04-10_FINAL.md`](../SESSION_SYNTHESIS_2026-04-10_FINAL.md)
 - [`docs/work_history/repo/LANE_STATUS_BOARD.md`](../work_history/repo/LANE_STATUS_BOARD.md)
 - [`docs/repo/LANE_REGISTRY.yaml`](LANE_REGISTRY.yaml)
@@ -112,6 +111,11 @@ Also update these when the bug is sign-related:
 
 - [`docs/GRAVITY_SIGN_AUDIT_2026-04-10.md`](../GRAVITY_SIGN_AUDIT_2026-04-10.md)
 - [`docs/TWO_SIGN_COMPARISON_NOTE_2026-04-10.md`](../TWO_SIGN_COMPARISON_NOTE_2026-04-10.md)
+
+Older evaluation-tool markdown files were intentionally scrubbed from current
+`main`. If you are reconstructing older internal comparison surfaces, use git
+history rather than treating those scorecards as part of the live control-plane
+contract.
 
 ## 8. Guardrails
 

@@ -53,8 +53,9 @@ The panel is designed to answer three questions:
 
 ## Core-Card Connection
 
-This panel is the concrete implementation target for `C16` in
-[FULL_TEST_MATRIX_2026-04-10.md](./FULL_TEST_MATRIX_2026-04-10.md):
+This panel is the concrete implementation target for the historical multi-readout
+panel row later absorbed into the audited Dirac-core discussion in
+[DIRAC_CORE_CARD_NOTE.md](./DIRAC_CORE_CARD_NOTE.md):
 
 - first-arrival
 - peak

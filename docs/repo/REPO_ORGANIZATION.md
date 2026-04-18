@@ -105,8 +105,15 @@ When a new runner lands:
    - [`docs/work_history/repo/LANE_STATUS_BOARD.md`](../work_history/repo/LANE_STATUS_BOARD.md)
    - [`docs/repo/LANE_REGISTRY.yaml`](LANE_REGISTRY.yaml)
 4. If the result changes the retained program surface, also update:
-   - [`docs/FULL_TEST_MATRIX_2026-04-10.md`](../FULL_TEST_MATRIX_2026-04-10.md)
    - [`docs/SESSION_SYNTHESIS_2026-04-10_FINAL.md`](../SESSION_SYNTHESIS_2026-04-10_FINAL.md)
+
+Older evaluation-tool markdown files were intentionally removed from current
+`main`. If you need the exact historical text, use git history rather than the
+live repo surface.
+
+- [`docs/work_history/repo/evaluation_tools/README.md`](../work_history/repo/evaluation_tools/README.md)
+
+Do not treat those scorecards/cards as part of the live control plane.
 
 ## What This Organization Deliberately Does Not Do
 

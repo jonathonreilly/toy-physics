@@ -15,7 +15,6 @@
 ## Start Here
 
 - [`../../STAGGERED_FERMION_CARD_2026-04-11.md`](../../STAGGERED_FERMION_CARD_2026-04-11.md)
-- [`../../FULL_TEST_MATRIX_2026-04-10.md`](../../FULL_TEST_MATRIX_2026-04-10.md)
 - [`../../GRAVITY_SIGN_AUDIT_2026-04-10.md`](../../GRAVITY_SIGN_AUDIT_2026-04-10.md)
 
 ## Key Runners
@@ -41,3 +40,5 @@
   control because its Hamiltonian symmetrizes the adjacency
 - off-lattice sign-selective observable is still the main blocker
 - emergent geometry is partially reopened, not closed
+- older cross-architecture scorecards were intentionally scrubbed from current
+  `main`; use the retained note, lane board, and harness index instead

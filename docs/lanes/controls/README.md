@@ -10,7 +10,7 @@
 
 ## Start Here
 
-- [`../../FULL_TEST_MATRIX_2026-04-10.md`](../../FULL_TEST_MATRIX_2026-04-10.md)
+- [`../../GRAPH_LAPLACIAN_CORE_CARD_NOTE.md`](../../GRAPH_LAPLACIAN_CORE_CARD_NOTE.md)
 
 ## Key Runners
 
@@ -23,3 +23,5 @@
 
 - control and comparison surface
 - not the primary successor architecture
+- older evaluation scorecards were scrubbed from current `main`; use the
+  audited control note and runners directly
