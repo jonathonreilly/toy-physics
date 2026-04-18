@@ -73,7 +73,11 @@ tested rival stays below `0.884523453538`, and the closest tested lower-repair
 packet lane still stays at distance at least `0.233468501596` from the
 preferred quotient. So the residual carrier pressure is now smaller again:
 interval-style exclusion or dominance on the exact carrier inside the residual
-split-2 low-slack region.
+split-2 low-slack region. And on the tested coarse slices even that residual
+pressure is not spread uniformly: both transport objectives already drift
+monotonically toward the upper-`m` boundary, with the strongest tested pressure
+at `m=-0.14`. So the positive-path carrier target is narrower again:
+the residual exact-carrier part of the upper-`m`, low-slack split-2 ridge.
 
 So the carrier side stops exactly at:
 
