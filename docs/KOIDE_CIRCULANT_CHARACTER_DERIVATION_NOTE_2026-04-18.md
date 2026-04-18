@@ -281,3 +281,182 @@ or hierarchy-theorem scale is a downstream question.
   Koide 1981 PLB 120:161; Sumino arXiv:0812.2090 & 0903.3640;
   Xing/Zhang hep-ph/0602134 (running-vs-pole analysis);
   Kartavtsev arXiv:1111.0480 (multi-sector extensions).
+
+---
+
+# Appendix A: Follow-up agent verification (2026-04-18)
+
+Four follow-up agents investigated the four open items (O1-O4). Arithmetic
+verified independently. Results summarized below.
+
+## A.1  v_0 scale NEAR-CLOSURE (updates O2)
+
+Using only retained framework constants (`v = 246.283 GeV`, `α_LM = 0.0907`,
+`(7/8)` from the hierarchy theorem), the following identifications match
+observed values to <1% precision:
+
+```
+m_τ       ≈ v × α_LM² × (7/8)              = 1.7729 GeV   vs 1.77686 GeV   (0.22% off)
+Σ m_ℓ     ≈ v × α_LM² × √(7/8)             = 1.8953 GeV   vs 1.88303 GeV   (0.65% off)
+v_0       ≈ √[v × α_LM² × (7/8)] / (1+√2 cos(2/9))  = 17.696 √MeV   vs 17.716 √MeV   (0.11% off)
+```
+
+**Step-by-step arithmetic (unit-labeled):**
+- `α_LM² = 0.0907² = 0.008226` (dimensionless)
+- `v × α_LM² = 246.283 GeV × 0.008226 = 2.0262 GeV`
+- `v × α_LM² × (7/8) = 2.0262 × 0.875 = 1.7729 GeV` ✓
+- Observed `m_τ = 1.77686 GeV`, residual `(1.7729 - 1.77686)/1.77686 = -0.22%` ✓
+
+**Structural remark.** The cascade `v × α_LM² × (7/8)` uses α_LM raised to
+integer power 2 (two additional cascade steps below the EW hierarchy's
+α_LM^{16}), together with the (7/8) factor raised to integer power 1 (vs
+(7/8)^{1/4} in the EW hierarchy). **The one remaining structural question
+is why the lepton sector carries (7/8)^1, not (7/8)^{1/4} or (7/8)^0,
+relative to the EW cascade.** This is a sharper, narrower version of O2.
+
+## A.2  δ = 2/9 rad — dimensional-ratio structural identity (updates O1)
+
+Exhaustive search over geometric, topological, character-algebra,
+temporal, and extremization candidates. Findings:
+
+- **Berry phase on circulant moduli = 0** (eigenvectors δ-independent)
+- **tr(H^n) extremization gives δ ∈ {0, π/3, 2π/3}**, NOT 2/9
+- **APBC L_t=4 Matsubara phases mod 2π/3** give {π/4, π/12}, never 2/9
+- **Character-algebra 2π/27** (= (2π/3)/9) gives 0.2327 rad — 4.7% off
+- **π/12 critical angle** gives massless electron (wrong)
+- **All other geometric/temporal candidates miss by ≥0.8%**
+
+**The one surviving identity (exact):**
+```
+δ = 2/9 = (real DOF of b in b = |b| e^{iδ}) / (dim_ℝ M_3(ℂ)_Herm)
+       = 2 / 9
+       = 2 / |C_3|²
+```
+Numerically exact. Interpretation: δ is the ratio of the complex-phase
+degree of freedom (2 real DOFs in b ∈ ℂ) to the total 9-dim Hermitian
+algebra. **Required bridge:** a canonical identification of this
+dimensionless ratio with radians. This unit bridge is not supplied by the
+retained axiom set.
+
+**Sector-universal structure suggestion.** Brannen's neutrino conjecture
+uses `δ_ν = 2/9 + π/12`. If 2/9 is a universal structural ratio (common
+to all fermion sectors via dim-ratio) and `π/12` is a sector offset
+(interpretable as `(2π/3)/8` where 8 = dim Cl(3)), the burden reframes
+to: derive 2/9 as common + π/12 as lepton-vs-neutrino offset. π/12 is
+Cl(3)-native; 2/9 is the dim-ratio identity. Both pieces have structural
+origins; the unit-bridge for δ still needs a derivation.
+
+## A.3  Quark sector — NOT extensible with same ρ
+
+Verified numerically:
+```
+Up-type: √m_t / v_0_up = 13.14 / 4.77 = 2.754
+         Required cos θ = (2.754 - 1) / √2 = 1.240  → |cos| > 1, IMPOSSIBLE
+Charged lepton: √m_τ / v_0_lep = 42.15 / 17.72 = 2.379
+                Just below 1 + √2 = 2.414 envelope (98.5% of ceiling)
+```
+
+**The √2 equipartition (ρ = 2|b|/a = √2) caps eigenvalue ratio at 1 + √2 ≈
+2.414**. Top quark overshoots (2.754); bottom quark overshoots (2.536);
+charged-lepton tau JUST fits (2.379, at 98.5% of the ceiling).
+
+**Implication:** Koide Q = 2/3 is SECTOR-SPECIFIC, not universal.
+Relaxing A1 (allowing sector-dependent ρ) gives:
+- ρ_lep = √2 ≈ 1.414 (charged leptons near equipartition-critical)
+- ρ_up ≈ 1.754 (up-type, color-modified)
+- ρ_down ≈ 1.536 (down-type, color-modified)
+
+The circulant eigenvalue structure (R1, R2) still holds for quarks, but
+the equipartition assumption A1 is charged-lepton-specific. Literature's
+"quark Koide at 5%" is partial cancellation near ρ=√2 for (c,b,t), not a
+fundamental identity.
+
+**This strengthens the charged-lepton story.** Tau sitting at 98.5% of
+the equipartition envelope (nearly maximal) is a non-trivial structural
+observation. The electron being just below the critical angle π/12
+(small but nonzero mass) is the complementary boundary feature. Charged
+leptons specifically fit between these two extremal structures — a
+near-critical arrangement.
+
+## A.4  √m vs m identification — remains PHENOMENOLOGICAL (O4)
+
+Systematic search of axiom-level operator interpretations found:
+
+1. Natural Cl(3) operators (`Γ_i Γ_i = I`, `M(φ)² = |φ|² I`, the
+   second-order return `Σ`) give **dimensionless or mass-1 eigenvalues**,
+   not [mass]^{1/2}.
+2. The Hermitian circulant `H = a·I + b·C + b̄·C²` has dimensionless
+   eigenvalues unless `a, b` are imported with dimensions. The retained
+   hierarchy theorem gives `v` in mass units, not `√mass`. **No axiom
+   construction delivers [mass]^{1/2}.**
+3. The "spinor amplitude ~ √m" argument (Dirac `u(p) ~ √(E+m)`) is a
+   canonical QFT normalization convention, not a Cl(3)/Z³ consequence.
+4. The shape theorem operator `Σ` is LINEAR in weight, so its eigenvalues
+   inherit weight units directly — suggesting m, not √m.
+
+**Verdict:** P1 is not axiom-derivable under strict Cl(3)/Z³. It remains
+a phenomenological identification. For the Koide derivation to close
+fully, P1 must be accepted as a named retained primitive OR an additional
+axiom-internal construction must identify circulant eigenvalues with √m.
+
+## A.5  Updated status summary
+
+| Piece | Updated status | Precision |
+|---|---|---|
+| R1 Circulant form on C_3 orbit | AXIOM-CLEAN | Exact |
+| R2 Eigenvalue spectrum | AXIOM-CLEAN | Exact |
+| A1 √2 equipartition | Charged-lepton-specific assumption | Exact under A1 |
+| Koide Q = 2/3 | AXIOM-DERIVED given A1+P1 | Exact |
+| **v_0 scale (O2)** | **NEAR-CLOSED** via `v × α_LM² × (7/8)` | **0.22% on m_τ** |
+| δ = 2/9 rad (O1) | PARTIAL: `δ = 2/dim(Herm_3)` exact; needs rad-unit bridge | Exact ratio, bridge open |
+| Quark Koide extension | CHARGED-LEPTON-SPECIFIC (Q=2/3 not universal) | n/a |
+| √m identification (P1) | **PHENOMENOLOGICAL** — no axiom derivation | Empirical |
+
+## A.6  Remaining gaps — narrowed from 4 to 3
+
+After follow-up verification, the retention note has THREE genuinely open
+structural questions, each more tractable than the original
+three-mass-hierarchy problem:
+
+1. **Derive the (7/8)^1 exponent in the lepton sector.** Why this
+   specific integer power of the EW hierarchy's (7/8)^{1/4} factor? This
+   would close v_0 to the framework's native precision. Sharpest
+   structural question.
+
+2. **Justify the A1 equipartition (√2 coefficient) as a charged-lepton
+   structural principle.** The observation that ρ_lep = √2 places tau at
+   98.5% of the maximum envelope AND electron near the critical angle
+   π/12 is suggestive — charged leptons sit at a near-extremal boundary
+   that quarks don't. What forces ρ = √2 specifically?
+
+3. **Justify P1 (√m identification) OR find an axiom-internal
+   construction with √m eigenvalues.** Either a retention-level
+   primitive or a derivation from LSZ-reduction-analog logic in the
+   discrete framework.
+
+**Net reduction:** The three-mass problem reduces from "derive three
+free parameters" to "derive one integer exponent (7/8 power), one
+normalization principle (A1 ρ=√2), and one eigenvalue interpretation
+(P1 √m)." Each is a more tractable structural question.
+
+## A.7  The near-critical structural picture
+
+Follow-up scouting surfaced a suggestive combined observation worth
+flagging:
+
+- **Tau sits at 98.5% of the equipartition envelope** (|cos| ceiling)
+- **Electron sits just below the critical massless angle π/12** (|cos| bound)
+
+Charged leptons occupy the near-critical region of the circulant
+parameter space — near-maximal AND near-massless boundary features
+simultaneously. This is arguably why Koide Q = 2/3 holds exactly here
+and fails in other sectors: the equipartition value ρ=√2 is the
+boundary between "top-quark-like overshoot" (ρ > √2) and
+"uniform-degenerate" (ρ < √2), and charged leptons sit precisely on it.
+
+If a framework mechanism (e.g., renormalization-group fixed point, or
+EWSB-critical-surface) drives charged-lepton dynamics to ρ=√2 while
+color dynamics push quark sectors to ρ > √2, Koide becomes a
+charged-lepton-specific critical-point prediction. This aligns with the
+Sumino family-gauge-cancellation picture — different mechanism, same
+critical-point story.
