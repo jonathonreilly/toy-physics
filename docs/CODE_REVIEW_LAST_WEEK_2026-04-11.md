@@ -110,14 +110,22 @@ None on current `main`.
 
 11. The old torus gravitational-decoherence distance sweep is no longer a live
     blocker on current `main`.
-    - The runner named in the stale audit entry,
-      `frontier_gravitational_decoherence_rate.py`, is not on the live script
-      surface.
-    - The current mainline gravitational-decoherence companion instead hangs
-      off `frontier_grav_decoherence_derived.py` and
-      `GRAV_DECOHERENCE_DERIVED_NOTE.md`, which already frame the lane as a
-      bounded BMV-class benchmark companion rather than a finite-size torus
-      scaling claim.
+   - The runner named in the stale audit entry,
+     `frontier_gravitational_decoherence_rate.py`, is not on the live script
+     surface.
+   - The current mainline gravitational-decoherence companion instead hangs
+     off `frontier_grav_decoherence_derived.py` and
+     `GRAV_DECOHERENCE_DERIVED_NOTE.md`, which already frame the lane as a
+     bounded BMV-class benchmark companion rather than a finite-size torus
+     scaling claim.
+
+12. `frontier_geometry_superposition.py` no longer carries the broken
+    added-edge pseudo-variant on current `main`.
+   - The added-edge DAG builder now samples valid forward skip edges explicitly
+     instead of breaking out after the first failed random draw.
+   - The rerun keeps the lane as a bounded exploratory/path-sum
+     geometry-superposition signal, but the perturbed `added-10%` family is now
+     a real constructed variant rather than a fragile near-empty comparison.
 
 ## Verified False Positive From Agent Review
 

@@ -164,7 +164,10 @@ Action if the historical torus sweep is reopened:
 - redo the `Gamma(d)` law on an open surface or a torus protocol with distinct
   minimum-image separations
 
-### 6. Geometry-superposition added-edge DAG variant is broken
+### 6. Geometry-superposition added-edge DAG variant
+
+**Status on `main`: corrected and rerun; exploratory lane preserved with
+narrower historical/path-sum framing**
 
 Affected runner:
 
@@ -175,10 +178,28 @@ Bug:
 - the added-edge DAG builder can break after the first failed draw, often
   returning essentially no added edges
 
-Required rerun:
+Corrected current surface:
 
-- if the added-edge comparison still matters, fix the loop and rerun the
-  perturbation-family comparison
+- [`scripts/frontier_geometry_superposition.py`](../scripts/frontier_geometry_superposition.py)
+- [`docs/GEOMETRY_SUPERPOSITION_DAG_ENSEMBLE_NOTE_2026-04-11.md`](GEOMETRY_SUPERPOSITION_DAG_ENSEMBLE_NOTE_2026-04-11.md)
+
+Current mainline read:
+
+- the added-edge geometry now samples valid forward skip edges explicitly
+- the rerun remains a bounded exploratory/path-sum geometry-superposition
+  signal, not a staggered retained result
+- current rerun summary:
+  - raw coherent-vs-incoherent contrast: `3.93%`
+  - normalized phase-only contrast: `3.93%`
+  - centroid shift: `0.0574`
+  - width change: `0.0211`
+  - pairwise detector-phase differences up to `0.323 rad` (`18.5°`)
+
+Revisit rule:
+
+- do not promote this lane as a staggered headline result
+- if reopened later, treat it as a path-sum exploratory control rather than a
+  live retained architecture lane
 
 ## B. Redesign Before Any Rerun
 

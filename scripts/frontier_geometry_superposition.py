@@ -132,22 +132,33 @@ def build_added_edges_dag(
     n_added = 0
     n_base = sum(len(v) for v in dag.values())
     target_add = int(n_base * frac)
+    if target_add <= 0:
+        return dag
 
-    node_list = [n for n in nodes if n in arrival_times]
-    while n_added < target_add:
-        a = rng.choice(node_list)
-        # Pick a random node 2 layers ahead
+    candidates: list[tuple[tuple[int, int], tuple[int, int]]] = []
+    existing = {a: set(children) for a, children in dag.items()}
+
+    for a in nodes:
+        if a not in arrival_times:
+            continue
         ax, ay = a
-        bx = ax + 2
-        by = ay + rng.choice([-1, 0, 1])
-        b = (bx, by)
-        if b in arrival_times and arrival_times[b] > arrival_times[a] + epsilon:
-            if b not in dag.get(a, []):
-                dag.setdefault(a, []).append(b)
-                n_added += 1
-        # Safety valve
-        if n_added == 0 and target_add > 0:
-            break
+        for dy in (-1, 0, 1):
+            b = (ax + 2, ay + dy)
+            if b not in arrival_times:
+                continue
+            if arrival_times[b] <= arrival_times[a] + epsilon:
+                continue
+            if b in existing.get(a, set()):
+                continue
+            candidates.append((a, b))
+
+    if not candidates:
+        return dag
+
+    rng.shuffle(candidates)
+    for a, b in candidates[:target_add]:
+        dag.setdefault(a, []).append(b)
+        n_added += 1
     return dag
 
 
