@@ -80,7 +80,7 @@ packaging.
 
 ## Other Bounded Families
 
-- DM flagship gate, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, plus a repo-live G1 PMNS-as-`f(H)` conditional/support package: the PMNS map from `H` is fixed and `q_H` is GAUGE-retained, but the chamber pin still depends on an imposed branch-choice rule, so the remaining live blocker is still the physical selector law / current-bank DM-mapping gap
+- DM flagship gate, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` conditional/support package, and a reviewed Wilson direct-descendant science stack showing that current `main` carries no hidden Wilson-to-`dW_e^H` descendant law while explicit structured positive model classes and manifold-valued constructive positive exact closure already exist on the fixed native `N_e` seed surface: the remaining live blocker is therefore the finer right-sensitive microscopic selector law for the physical source branch / point, not support provenance or positivity existence
 - persistent exact-lattice compact-object companion on `main`, with a bounded
   beyond-pocket compact-object-plus-response regime and a mapped inward-source
   directional boundary; still below persistent inertial-mass / matter closure

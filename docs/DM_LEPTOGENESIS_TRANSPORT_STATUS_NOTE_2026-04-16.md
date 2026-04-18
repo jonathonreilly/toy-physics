@@ -104,6 +104,48 @@ explicit right-sensitive `2`-real `Z_3` doublet-block / point-selection law on
 the known active chamber, with the old one-phase slot route ruled out and the
 current exact bank already shown not to contain a hidden selector.
 
+## Reviewed Wilson direct-descendant science stack (2026-04-18)
+
+The reviewed 2026-04-18 Wilson direct-descendant stack strengthens that same
+open-gate boundary without closing it.
+
+What is now additionally exact on `main`:
+
+- the Wilson-parent audit shows the current repo should not yet treat the
+  Wilson parent as a fully validated charged descendant parent for the DM
+  route; at present it is only a partial gauge-side template and theorem-shape
+  guide;
+- the effective-parent route remains a real positive fork, but it is still a
+  boundary / target route rather than a current-bank theorem;
+- the current-bank Wilson boundary verifiers show there is still no hidden
+  Wilson-to-`dW_e^H` descendant theorem, no hidden Wilson Hermitian source
+  family for that codomain, and no hidden local chain/path-algebra route doing
+  that work under another name;
+- the structured-extension, minimal-certificate, adjacent-chain normal-form,
+  and structured-model-realization notes show that explicit positive model
+  classes realizing the target `dW_e^H` / `H_e` responses are real and
+  replayable;
+- the projected-source branch discriminant identifies the constructive
+  positive branch exactly as `Delta_src = det(H_e) > 0`;
+- the positive-branch compatibility, multiplicity, and manifold theorems show
+  that constructive positive exact closure on the fixed native `N_e` seed
+  surface is nonempty but not isolating: there are multiple exact points and
+  locally a positive-dimensional exact-closure manifold;
+- the flagship-frontier-collapse theorem then sharpens the manuscript-facing
+  blocker: on the live PMNS-assisted route the charged support `E_e` is
+  already fixed, so the remaining open object is the finer right-sensitive
+  microscopic law on `L_e = Schur_{E_e}(D_-)`, equivalently on
+  `dW_e^H = Schur_{E_e}(D_-)`, not a separate support-provenance problem.
+
+So the reviewed Wilson direct-descendant stack does real science work for the
+repo: it closes off fake remaining branches, certifies explicit positive model
+families, and shows that constructive positive exact closure is already too
+large to be the final selector. But it still leaves the DM flagship gate open
+at the same final place:
+
+- the finer right-sensitive microscopic selector law on
+  `dW_e^H = Schur_{E_e}(D_-)`.
+
 ## Meaning
 
 The old transport-side exact boundary on `H_rad(T)` is gone. The current live
@@ -119,6 +161,10 @@ end state is:
 - exact `H`-side source-surface / active-chamber reduction, with the remaining
   source-side object now sharpened all the way to the `2`-real `Z_3`
   doublet-block law and the old one-phase slot route ruled out
+- exact reviewed Wilson direct-descendant science stack: no hidden current-bank
+  Wilson descendant law, explicit positive structured realizations of the
+  target `dW_e^H` / `H_e` class, and constructive positive exact closure on the
+  fixed native `N_e` seed surface already manifold-valued rather than point-like
 - exact PMNS constructive existence on the fixed native `N_e` seed surface
 - exact theorem-native prediction undershoots observation by a factor
   `~ 5.297`
