@@ -139,8 +139,27 @@ Current quantitative statuses:
 - bounded charged-lepton mass-hierarchy observational-pin package:
   explicit three-real PDG pin on the retained shape-theorem chamber, no spare
   observable beyond the pin, and no claim of a retained framework derivation
-  of Koide
-- DM flagship gate, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` bounded package with a retained local P3 Sylvester linear-path signature theorem at the pinned point, a reviewed selector obstruction stack that compresses selector-side ambiguity to intrinsic threshold-law nonrealization and exhausts the tested carrier-side pressure to two explicit split-2 upper-face neighborhoods, and a reviewed Wilson direct-descendant science stack showing that current `main` carries no hidden Wilson-to-`dW_e^H` descendant law while explicit structured positive model classes and manifold-valued constructive positive exact closure already exist on the fixed native `N_e` seed surface: the remaining live blockers are the named baseline-connected-component input `A-BCC`, the observational hierarchy pairing `σ_hier = (2, 1, 0)`, the finer right-sensitive microscopic selector law for the physical source branch / point, interval-certified exact-carrier dominance/completeness on the residual split-2 selector branch, and current-bank quantitative DM mapping
+  of Koide. A reviewed April 18 Koide support stack now sharpens one candidate
+  route down to one microscopic scalar selector law, but it remains
+  conditional/support and does not change the bounded package status
+- DM flagship gate, with exact transport-chain progress, theorem-grade
+  same-surface thermal bounding and a certified current-bank
+  numerator-selector no-go, source-side reduction all the way to the `2`-real
+  `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)`
+  conditional/support package with a retained local P3 Sylvester
+  linear-path signature theorem at the pinned point, a reviewed selector
+  obstruction stack that compresses selector-side ambiguity to intrinsic
+  threshold-law nonrealization and exhausts the tested carrier-side pressure
+  to two explicit split-2 upper-face neighborhoods, and a reviewed Wilson
+  direct-descendant science stack showing that current `main` carries no
+  hidden Wilson-to-`dW_e^H` descendant law while explicit structured positive
+  model classes and manifold-valued constructive positive exact closure
+  already exist on the fixed native `N_e` seed surface: the remaining live
+  blockers are the named baseline-connected-component input `A-BCC`, the
+  observational hierarchy pairing `σ_hier = (2, 1, 0)`, the finer
+  right-sensitive microscopic selector law for the physical source branch /
+  point, interval-certified exact-carrier dominance/completeness on the
+  residual split-2 selector branch, and current-bank quantitative DM mapping
 - promoted CKM atlas/axiom closure package, with older Cabibbo / NNI / partial Jarlskog notes retained only as route history
 - cosmology companions
 - bounded secondary predictions already on `main`, plus the CKM-only

@@ -4,6 +4,14 @@
 **Status:** bounded review note — the retained framework does not derive Koide on the current surface; the charged-lepton hierarchy is accommodated only through an explicit observational pin.
 **Runners:** 19 runners, 518 PASS / 0 FAIL, independently verified on `origin/main`.
 
+**Repo addendum (2026-04-18):** a reviewed follow-on support stack now lives on
+current `main` via
+[CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md](./CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md).
+It closes the April 18 candidate route down to one microscopic scalar selector
+law, but it does **not** change the authoritative status of this note: the
+charged-lepton package remains bounded observational-pin compatibility rather
+than a retained Koide derivation.
+
 ## Abstract
 
 On the retained `Cl(3)/Z^3` framework, we investigate whether the charged-lepton mass hierarchy and Koide's relation

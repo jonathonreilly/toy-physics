@@ -163,6 +163,11 @@ ledger:
 - exact taste-block fermion-CW isotropy support theorem with bounded
   taste-scalar near-degeneracy companion:
   `m_taste = 124.91 GeV`, scalar-only `v_c/T_c = 0.3079`
+- bounded charged-lepton package plus reviewed Koide support stack:
+  the authoritative charged-lepton result remains the April 17 bounded
+  observational-pin package, while the reviewed April 18 Koide stack narrows a
+  live candidate route to one microscopic scalar selector law without
+  upgrading the package to retained derivation or creating a spare forecast
 - promoted CKM no-import closure package with full sharp `|V_us|`, `|V_cb|`, `|V_ub|`, `\delta`, and `J`
 - older bounded Cabibbo / NNI / partial Jarlskog notes retained only as route history
 - `\Omega_\Lambda`, `n_s`, `w = -1`, and `\Lambda` cosmology companions
