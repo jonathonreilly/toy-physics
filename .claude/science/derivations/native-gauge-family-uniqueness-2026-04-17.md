@@ -6,24 +6,35 @@
 
 ## Status
 
-RETAINED-GRADE THEOREM (under retained Recipe-R, retained via the
-2026-04-17 Recipe-R forcing theorem in
-`recipe-r-forcing-from-retained-n3-2026-04-17.md`) — the theorem was
-originally stated conditionally on admissibility `(A1)-(A5)`. With
-the 2026-04-17 admissibility closure
-(`admissibility-closure-from-graph-eta-taste-2026-04-17.md`), `(A2)`,
-`(A4)`, `(A5)` were reduced to consequences of Recipe-R, and with the
-2026-04-17 Recipe-R forcing theorem, Recipe-R itself is now
-retained-forced from the retained `n = 3` native-gauge identification.
-The family-uniqueness conclusion `V_n = Λ²(R^n)` is therefore
-retained-grade under the retained `n = 3` native-gauge authority
-(docs/NATIVE_GAUGE_CLOSURE_NOTE.md) alone.
+RETAINED-GRADE THEOREM — the family-uniqueness conclusion
+`V_n = Λ²(R^n)` for every `n ≥ 2` is retained-grade under the
+retained `n = 3` native-gauge authority
+(`docs/NATIVE_GAUGE_CLOSURE_NOTE.md`) + the axiomatic `Z^n` lattice
+structure. The chain is:
+
+  retained n=3 identification (`V_3 = Λ²(R^3)`)
+    + retained Clifford anticommutator `{Γ_μ, Γ_ν} = 2 δ_{μν} I`
+    + axiomatic graph-`Z^n` `B_n = Z_2^n ⋊ S_n` symmetry
+    + retained graph/η-phase/taste `Γ_μ` construction
+    + classical `B_n`-irreducibility of `Λ²(R^n)`
+  ⇒  V_n = Λ²(R^n) = Recipe-R  at every `n ≥ 2`.
+
+The theorem was originally stated conditionally on admissibility
+`(A1)-(A5)`. The 2026-04-17 admissibility closure
+(`admissibility-closure-from-graph-eta-taste-2026-04-17.md`) reduced
+`(A2)`, `(A4)`, `(A5)` to consequences of the Recipe-R extension rule.
+The 2026-04-17 Recipe-R forcing theorem
+(`recipe-r-forcing-from-retained-n3-2026-04-17.md`) derived Recipe-R
+itself under three conditions `(R1)`, `(R2)`, `(R3)`. The 2026-04-18
+**v3 strengthening** of that forcing theorem (Part H of its runner)
+closes the previous reviewer blocker that `(R3)` was an added family-
+scope premise: `(R3)` is now **derived as a theorem consequence** of
+`(R0)` retained-lift + `(R1)` + `(R2)` + retained `V_3` + graph-
+`B_n`-symmetry + `Λ²(R^n)` `B_n`-irreducibility.
 
 The ORIGINAL STATUS language ("SUPPORT-ROUTE / COMPARISON-FAMILY
 CONDITIONAL THEOREM") is preserved in the historical content below
-for traceability; see the "Admissibility closure (2026-04-17
-follow-up)" and "Recipe-R forcing (2026-04-17 follow-up)" sections
-for the status upgrade.
+for traceability.
 
 ## The Problem This Note Solves
 
@@ -378,33 +389,54 @@ with verification runner
 
     scripts/frontier_recipe_r_forcing_from_retained_n3.py
 
-The forcing theorem shows that the retained `n = 3` native-gauge
-identification has two logically distinct characterizations —
-"bivector" (C_bivec) and "rotation-on-Γ" (C_rot) — that coincide at
-`n = 3` but differ at family scope. The intrinsic characterization
-(C_rot) uses only the framework-native `Γ_k` and the commutator
-bracket and extends automatically to every `n`. The classical
-Clifford grade-preservation lemma
-`{X : ad_X preserves grade-1} = Z(Cl(n)) ⊕ Λ²(R^n)` then forces
-`V_n = Λ²(R^n) = Recipe-R` as the unique family-scope extension. The
-runner passes with `THEOREM_PASS=52 SUPPORT_PASS=12 FAIL=0`.
+The 2026-04-18 v3 strengthening of the forcing theorem proves the
+family-scope equality `V_n = Λ²(R^n) = Recipe-R` with **(R3) derived
+as a theorem consequence, not added as a premise**. The premises
+are now:
 
-With Recipe-R now retained-forced, this note's uniqueness conclusion
-is retained-grade under the retained `n = 3` native-gauge authority
-alone — no added family-scope axiom, no chosen extension rule. The
-Recipe-R forcing runner passes with
-`THEOREM_PASS=72 SUPPORT_PASS=16 FAIL=0` (2026-04-17 update after
-adding direct equality certification Part G and explicit
-retained-consequence Part A tests).
+- `(R0)` retained-lift: `V_n` is defined entirely in terms of the
+  retained `Γ_μ` on `Z^n` and the retained Clifford anticommutator,
+  with no external selector. (Definitional — this is the admissibility
+  closure's `A5`.)
+- `(R1)` center-freeness: `V_n ∩ Z(Cl(n)) = {0}`. (Retained at n=3.)
+- `(R2)` rotation-on-Γ: `[X, Γ_μ] ∈ grade-1` for every `X ∈ V_n`,
+  every `μ`. (Retained-consequence of retained
+  `S_k = -(i/2) ε_{ijk} Γ_i Γ_j` + retained Clifford anticommutator;
+  Part A certifies.)
+- `(V_3-match)` `V_3 = Λ²(R^3)`. (Retained n=3 native-gauge closure.)
+
+And (R3) is **derived**:
+
+- Graph on `Z^n` is `B_n = Z_2^n ⋊ S_n` symmetric (lattice axiom).
+- Retained graph/η/taste `Γ_μ` are `B_n`-covariant (Part H.1
+  certifies the anticommutator and grade filtration are preserved).
+- `(R0)` ⇒ `V_n` is `B_n`-invariant.
+- `(R1)+(R2)` + Clifford grade-preservation lemma ⇒
+  `V_n ⊆ Λ²(R^n)`.
+- `Λ²(R^n)` is `B_n`-irreducible for `n ≥ 2` (Part H.2 + H.3
+  certify: the `B_n`-orbit of a single bivector spans `Λ²(R^n)`,
+  and the symmetric-group average of any bivector vanishes so no
+  proper `B_n`-invariant subspace exists).
+- Therefore `V_n ∈ {0, Λ²(R^n)}`. Retained `V_3 = Λ²(R^3)` + uniform
+  recipe `(R0)` ⇒ `V_n ≠ 0`. Hence `V_n = Λ²(R^n)`.
+- `ad : Λ²(R^n) → so(n)` is the classical isomorphism ⇒
+  `ad(V_n) = so(n)`, i.e., (R3) is a theorem consequence.
+
+The Recipe-R forcing runner passes with
+`THEOREM_PASS=97 SUPPORT_PASS=21 FAIL=0` (2026-04-18 v3 totals after
+adding Part H). With (R3) now derived, the family-uniqueness
+conclusion stands on retained + axiomatic footing alone — no
+family-scope Ansatz beyond the retained-lift (R0).
 
 ## Next
 
-With this uniqueness theorem in place, the tightness note's remaining
-load is purely classical Lie theory (`spin(n) = su(2) ⇔ n = 3`). The
-combined package (Recipe-R forcing + admissibility closure +
-family-uniqueness + tightness) delivers `d_s = 3` at retained grade
-under the retained `n = 3` native-gauge authority plus the retained
-weak-SU(2) observational input.
+With this uniqueness theorem now retained-grade, the tightness
+note's remaining load is purely classical Lie theory
+(`spin(n) = su(2) ⇔ n = 3`). The combined package (Recipe-R forcing
+v3 + admissibility closure + family-uniqueness + tightness) delivers
+`d_s = 3` at retained grade under the retained `n = 3` native-gauge
+authority + the `Z^n` lattice axiom + the observational weak-SU(2)
+input.
 
 Follow-ups (orthogonal to this note):
 

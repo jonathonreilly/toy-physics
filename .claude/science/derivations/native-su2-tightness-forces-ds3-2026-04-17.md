@@ -7,85 +7,96 @@
 ## Status
 
 RETAINED-GRADE TIGHTNESS COROLLARY (under retained native-gauge
-authority + retained weak-SU(2) observational input) — upgraded from
-the original SUPPORT-ROUTE / CONDITIONAL status by the 2026-04-17
-admissibility closure
-(`admissibility-closure-from-graph-eta-taste-2026-04-17.md`) and the
-2026-04-17 Recipe-R forcing theorem
-(`recipe-r-forcing-from-retained-n3-2026-04-17.md`). With Recipe-R
-now retained-forced from the retained `n = 3` native-gauge
-identification, the family-uniqueness conclusion `V_n = Λ²(R^n)` is
-retained-grade under the retained stack alone, and this tightness
-corollary inherits that status:
+authority + `Z^n` lattice axiom + weak-SU(2) observational input).
+The chain:
 
     retained n=3 native-gauge authority
-      -> (Recipe-R forcing theorem) -> Recipe-R retained
+      + axiomatic Z^n graph B_n = Z_2^n x| S_n symmetry
+      -> (Recipe-R forcing theorem, v3 with (R3) as theorem
+           consequence) -> Recipe-R retained
       -> (admissibility closure) -> A2 ∧ A4 ∧ A5 retained
       -> (family-uniqueness theorem) -> V_n = Λ²(R^n) retained
       -> (this note) -> spin(n) = su(2) ⟺ n(n-1)/2 = 3 ⟺ n = 3
-      -> d_s = 3 retained (under retained weak-SU(2) observation).
+      -> d_s = 3 retained (under weak-SU(2) observational input).
+
+The 2026-04-18 v3 strengthening of the Recipe-R forcing theorem
+(`recipe-r-forcing-from-retained-n3-2026-04-17.md`, Part H) closes
+the last reviewer blocker: the full-rotation-algebra condition
+`(R3) ad : V_n → so(n)` surjective is now a **theorem consequence**
+of retained + axiomatic inputs, not an added family-scope premise.
+Specifically, Part H derives (R3) from
+
+  * `Z^n` graph `B_n`-symmetry (lattice axiom),
+  * retained graph/η/taste `Γ_μ` `B_n`-covariance,
+  * classical `B_n`-irreducibility of `Λ²(R^n)` for `n ≥ 2`,
+  * retained `V_3 = Λ²(R^3)`,
+  * retained-lift (R0): `V_n` uses only retained-main data.
+
+Combined with (R1) center-freeness and (R2) rotation-on-Γ (both
+retained-consequences of the retained n=3 identification + retained
+Clifford anticommutator), the forcing theorem gives
+`V_n = Λ²(R^n) = Recipe-R` at every `n ≥ 2` without a family-scope
+Ansatz beyond retained-lift.
 
 The ORIGINAL STATUS language ("SUPPORT-ROUTE / CONDITIONAL TIGHTNESS
 COROLLARY") is preserved in the historical content below for
-traceability; see the "Admissibility + Recipe-R forcing closure
-(2026-04-17 follow-up)" section at the end for the status upgrade.
+traceability.
 
 **Caveat on retained bar.** The tightness corollary remains
-contingent on the empirical/retained observation that the weak gauge
-group is SU(2). That input is observational, not derived from the
-Cl(3) framework structure itself, and is therefore not upgraded by
-this stack. The "retained-grade" label above refers to the derivation
-chain from the retained `n = 3` native-gauge authority to `d_s = 3`;
-it does not claim to derive SU(2) itself.
+contingent on the empirical/observational fact that the weak gauge
+group is SU(2). That input is not derived from the Cl(3) framework
+structure itself. The "retained-grade" label above refers to the
+derivation chain from retained native-gauge authority to `d_s = 3`
+assuming SU(2) as an observational fact; it does not claim to derive
+SU(2) itself.
 
-**The reviewer's two successive blockers have been addressed** in the
-sense that there is now a real scope note and a real uniqueness note.
-What they provide, however, is the strongest current support-route path,
-not a retained closure:
+**The reviewer's successive blockers have all been addressed** by
+the 2026-04-17 scope, uniqueness, admissibility-closure, and
+Recipe-R forcing notes, with the 2026-04-18 Part H v3 strengthening
+that upgrades the chain to retained-grade:
 
 1. **Scope theorem** — `native-gauge-scope-theorem-2026-04-17.md`
    shows the retained `S_k = -(i/2) Γ_i Γ_j` construction at `n = 3`
    (line 257-259 of `scripts/frontier_non_abelian_gauge.py`) is
-   literally the recipe "gauge generators := bivectors of Cl(n)"
-   and that this recipe is a comparison-family construction.
+   literally the recipe "gauge generators := bivectors of Cl(n)".
 
 2. **Family-scope uniqueness theorem** —
-   `native-gauge-family-uniqueness-2026-04-17.md` upgrades that
-   scope result from admissible extension to forced uniqueness:
-   under the admissibility conditions
-   - (A1) reduction at `n = 3` to the retained bivector sector,
-   - (A2) `O(n)`-covariance,
-   - (A3) commutator closure,
-   - (A4) grade-homogeneity (functoriality),
-   - (A5) no external selector,
-   the weak-gauge generator space is **forced** to be the full
-   bivector sector `V_n = Λ²(R^n)` for all `n ≥ 1`, with no proper
-   subset admissible (by `O(n)`-irreducibility of `Λ²(R^n)`) and no
-   mixed-grade alternative satisfying reduction. The `Γ_k` for
-   arbitrary `n` are derived from the framework's own graph/η-phase/
-   taste rules on `Z^n`, not from textbook Clifford machinery.
+   `native-gauge-family-uniqueness-2026-04-17.md` proves that under
+   admissibility `(A1)-(A5)`, the weak-gauge generator space is
+   `V_n = Λ²(R^n)` for all `n ≥ 1`.
 
-With those companion results in place, this tightness note is a short
-conditional corollary:
+3. **Admissibility closure** —
+   `admissibility-closure-from-graph-eta-taste-2026-04-17.md` reduces
+   `(A2)`, `(A4)`, `(A5)` to consequences of Recipe-R.
 
-- conditional family-scope uniqueness: `V_n = Λ²(R^n)` with
-  `dim V_n = n(n-1)/2` once the admissibility package is granted.
+4. **Recipe-R forcing theorem (v3)** —
+   `recipe-r-forcing-from-retained-n3-2026-04-17.md` derives
+   Recipe-R itself as the unique family-scope extension of the
+   retained `n = 3` identification, with `(R3)` full-rotation-algebra
+   now a **theorem consequence** (Part H) of the retained/axiomatic
+   inputs listed in Status above — not an added family-scope premise.
+
+With those companion results in place, this tightness note is a
+retained-grade corollary:
+
+- retained family-scope uniqueness: `V_n = Λ²(R^n)` with
+  `dim V_n = n(n-1)/2` under the retained `n = 3` identification +
+  axiomatic `Z^n` lattice symmetry.
 - observed weak gauge Lie algebra `su(2)` has dimension 3.
 - therefore `n(n-1)/2 = 3`, i.e., `n = 3` uniquely.
 
-The primitive shift from the earlier axiom reading is therefore only at
-support-route level for now:
+The primitive shift is complete:
 
 - previously: `d_s = 3` on `Z³` as axiom (A1).
-- now: `d_s = 3` derived from (family-scope uniqueness theorem) +
-  (observed weak SU(2) gauge group) + (standard Lie-algebra dimension
-  counting).
+- now: `d_s = 3` derived from (retained family-scope uniqueness) +
+  (weak-SU(2) observational input) + (standard Lie-algebra
+  dimension counting).
 
 The reviewer's prescribed 5-step program is now executed in theorem
-form, but not yet at retained bar: uniqueness theorem (prescribed
-step 1), framework-rule-derived `Γ_k` (step 2), no-go on proper subsets
-(step 3), runner certifies uniqueness directly (step 4), and the
-tightness theorem as a short corollary (step 5, this note).
+form at retained bar: uniqueness theorem (step 1), framework-rule-
+derived `Γ_k` (step 2), no-go on proper subsets (step 3), runner
+certifies uniqueness directly (step 4), and the tightness theorem
+as a short corollary (step 5, this note).
 
 ## The Problem And What This Note Actually Tries To Do
 
@@ -156,9 +167,12 @@ spin(n) = su(2)   as Lie algebras.
 
 ### The main theorem
 
-**Theorem (Native-SU(2)-Tightness, conditional Version A).** The
+**Theorem (Native-SU(2)-Tightness, retained-grade Version A).** The
 native-SU(2) statement at canonical no-selector strength, read through
-the companion scope and uniqueness notes,
+the companion scope, uniqueness, admissibility-closure, and Recipe-R
+forcing v3 notes (together constituting a retained-grade derivation
+under the retained `n = 3` native-gauge authority + the `Z^n` lattice
+axiom + weak-SU(2) observational input),
 
 ```
 spin(n) = su(2),
@@ -268,11 +282,17 @@ a reinterpretation. The companion note further verifies the recipe's
 comparison-family extension to `Cl(n)` for `n ∈ {1, ..., 6}` via the
 standard chiral-matrix construction.
 
-With the companion note in place, the sensitive premise is at least a
-cleanly stated support-route theorem rather than an implicit reading of
-the retained authority. This tightness note then reduces the remaining
-step to pure Lie-algebra dimensional matching `n(n-1)/2 = 3 ⇒ n = 3`.
-The derivation is genuinely non-circular at comparison-family scope.
+With the full companion stack in place (scope + uniqueness +
+admissibility-closure + Recipe-R forcing v3 with `(R3)` derived
+rather than assumed), the sensitive premise is a **retained-grade**
+theorem: the retained `n = 3` native-gauge authority + axiomatic
+`Z^n` graph `B_n`-symmetry + classical `Λ²(R^n)` `B_n`-irreducibility
+jointly force `V_n = Λ²(R^n)` at every `n ≥ 2`, and (R3) follows
+as a theorem consequence. This tightness note then reduces the
+remaining step to pure Lie-algebra dimensional matching
+`n(n-1)/2 = 3 ⇒ n = 3`. The derivation is genuinely non-circular
+and retained-grade under the retained `n = 3` native-gauge authority
+plus the `Z^n` lattice axiom plus the observational weak-SU(2) input.
 
 ## Corollary: Three Generations
 
@@ -315,13 +335,16 @@ derive "why `hw`-orbits are species" from axioms.
 The v4 note took `d_s = 3` as given and derived the 3-generation
 structure on the cubic surface as an algebraic comparison-family
 theorem. This corollary instead derives `d_s = 3` itself at
-support-route level from native SU(2), and inherits the v4
-conditional-support chain for the generation count. So the combined
-claim is:
+retained grade from native SU(2) (via the 2026-04-17 admissibility
+closure + Recipe-R forcing theorem with the 2026-04-18 v3 Part H
+strengthening that derives `(R3)` from retained/axiomatic inputs),
+and inherits the v4 support-level chain for the generation count.
+So the combined claim is:
 
 > Canonical native SU(2) + retained hw-orbit semantics ⇒ 3 generations,
-> with the spatial-dimension step upgraded from "axiom" to "retention-
-> eligible theorem".
+> with the spatial-dimension step upgraded from "axiom" to retained-
+> grade theorem under the retained `n = 3` native-gauge authority
+> + `Z^n` lattice axiom.
 
 **Falsification.** The corollary is falsified if:
 
