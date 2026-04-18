@@ -42,8 +42,13 @@ context, not part of the live reviewer path.
   taste-cube / residual-symmetry flavor support, exact `I_3 = 0`, exact CPT,
   retained Bell/CHSH support on explicit two-species lattice systems with KS
   taste measurements, emergent Lorentz invariance, retained full strong-CP
-  closure on the retained action surface, and exact `T = 0` confinement with
-  bounded `sqrt(sigma)`
+  closure on the retained action surface, exact `T = 0` confinement with
+  bounded `sqrt(sigma)`, and retained discrete evanescent-barrier lattice
+  transfer-matrix bound (with explicit `lambda_+(i) = (u_i +
+  sqrt(u_i^2 - 4))/2`, `u_i = 2 + (V_i - E)/t`) plus retained
+  Schwarzschild-interior tortoise-length identity on `Cl(3)/Z^3` with
+  `a = l_Planck`; the Planck-unit astrophysical echo-suppression exponent
+  remains a (C-rate)-conditional bounded companion, not a retained row
 - retained and promoted quantitative stack:
   canonical `v = 246.282818290129 GeV`, retained `alpha_s(M_Z) = 0.1181`,
   retained EW normalization, promoted CKM atlas/axiom closure,

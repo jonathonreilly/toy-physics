@@ -68,6 +68,16 @@ This does **not** justify claiming:
    bridge
 3. fully general non-`O_h` strong-field closure
 4. no-horizon / no-echo as theorem-level downstream consequences
+   (a NARROWER retained pair is now available in
+   [EVANESCENT_BARRIER_AMPLITUDE_SUPPRESSION_THEOREM_NOTE.md](./EVANESCENT_BARRIER_AMPLITUDE_SUPPRESSION_THEOREM_NOTE.md):
+   (A) a rigorous discrete-Schroedinger lattice transfer-matrix amplitude
+   bound on `Cl(3)/Z^3` with `a = l_Planck` and (B) the exact
+   Schwarzschild-interior tortoise-length identity.  These do NOT
+   promote the Planck-unit astrophysical exponent
+   `exp[-(R_S/l_P) ln(R_S/R_min)]` to retained — that step requires an
+   open conditional (C-rate) on the per-unit-tortoise-length evanescent
+   rate that is NOT on the retained surface — but they do give the
+   bounded GW-echo companion a retained pair it can quote by name)
 
 ## Practical conclusion
 

@@ -122,6 +122,17 @@ Current package status:
   KS taste operators are constructed explicitly, `G=0` stays exactly at
   `|S| = 2.000`, and periodic Poisson coupling yields finite-lattice CHSH
   violation on the retained 1D/2D/3D family
+- retained discrete evanescent-barrier lattice bound + Schwarzschild
+  tortoise-length identity on `Cl(3)/Z^3` with framework-axiom spacing
+  `a = l_Planck`: (A) rigorous discrete-Schroedinger transfer-matrix bound
+  `|G| <= C exp[-sum_i ln lambda_+(i)]` with
+  `lambda_+(i) = (u_i + sqrt(u_i^2 - 4))/2`, `u_i = 2 + (V_i - E)/t`;
+  (B) exact tortoise-length identity
+  `L*(R_min, R_S; eps) = R_S ln((R_S - R_min)/eps) + eps + R_min - R_S`.
+  The Planck-unit astrophysical exponent `exp[-(R_S/l_P) ln(R_S/R_min)]`
+  carried by the bounded GW-echo null companion is (C-rate)-conditional on
+  an order-one per-unit-tortoise-length rate lower bound and is NOT on the
+  retained surface of this theorem
 
 ## Other Bounded Families
 

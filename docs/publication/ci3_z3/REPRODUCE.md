@@ -19,6 +19,7 @@ python3 scripts/frontier_physical_lattice_necessity.py
 python3 scripts/frontier_generation_axiom_boundary.py
 python3 scripts/frontier_cpt_exact.py
 python3 scripts/frontier_born_rule_derived.py
+python3 scripts/frontier_evanescent_barrier_amplitude_suppression.py
 ```
 
 ## Expected use

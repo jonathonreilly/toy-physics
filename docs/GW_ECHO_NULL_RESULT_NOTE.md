@@ -1,9 +1,14 @@
 # GW Echo Null Result Note
 
-**Date:** 2026-04-14  
-**Script:** `scripts/frontier_echo_null_result.py`  
+**Date:** 2026-04-14 (retained upstream theorems A+B added 2026-04-17;
+open conditional (C-rate) called out 2026-04-17 review)
+**Script:** `scripts/frontier_echo_null_result.py`
 **Status:** BOUNDED COMPANION — accepted current framework reading is **no
-detectable echoes**
+detectable echoes** under the `|T| ~ exp[-(R_S/l_P) ln(R_S/R_min)]` formula,
+which is (C-rate)-conditional on an order-one per-unit-tortoise-length
+evanescent-rate lower bound.  The retained structural upstream (theorems
+A+B) is [EVANESCENT_BARRIER_AMPLITUDE_SUPPRESSION_THEOREM_NOTE.md](./EVANESCENT_BARRIER_AMPLITUDE_SUPPRESSION_THEOREM_NOTE.md);
+(C-rate) is explicitly NOT on that retained surface.
 
 ## Summary
 
@@ -75,6 +80,18 @@ The decisive lane is the evanescent barrier:
 
 For stellar-mass systems the exponent is enormous, so the coherent return is
 effectively zero.
+
+This suppression formula consumes the retained lattice transfer-matrix
+bound (theorem A) and the retained Schwarzschild-interior tortoise-length
+identity (theorem B) of
+[EVANESCENT_BARRIER_AMPLITUDE_SUPPRESSION_THEOREM_NOTE.md](./EVANESCENT_BARRIER_AMPLITUDE_SUPPRESSION_THEOREM_NOTE.md),
+plus the open conditional (C-rate) — an order-one per-unit-tortoise-length
+evanescent-rate lower bound that is NOT on the retained surface.  Theorems
+A + B alone do not imply the Planck-unit exponent; (C-rate) plus the
+bounded Schwarzschild-interior extension together supply the remaining
+step.  The `|T| ~ exp[-(R_S/l_P) ln(R_S/R_min)]` formula is therefore a
+(C-rate)-conditional bounded-companion statement, not a retained
+consequence of the framework alone.
 
 ### 4. Observation then matches the null prediction
 
