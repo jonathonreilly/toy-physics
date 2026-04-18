@@ -13,17 +13,12 @@ be promoted or reinterpreted without fixes.
    - So the script cannot support either an image-free distance-law claim or a
      full `F ∝ M1 M2` claim.
 
-2. `frontier_two_body_mutual_attraction.py` is not a genuine two-body test.
-   - It evolves one wavefunction with two lobes.
-   - Any separation signal is contaminated by self-focusing and lobe
-     interference.
-
-3. `frontier_branch_entanglement_robustness.py` hard-wires `tau_3 = 0`.
+2. `frontier_branch_entanglement_robustness.py` hard-wires `tau_3 = 0`.
    - The current overlap-based formula makes GHZ impossible by construction for
      the two-branch ansatz.
    - So `0/25 GHZ` is not an empirical result.
 
-4. Several periodic 2D staggered runners misweight wraparound neighbors.
+3. Several periodic 2D staggered runners misweight wraparound neighbors.
    - The pattern is: periodic adjacency via modulo indexing, followed by
      hopping weights computed from raw coordinate differences instead of
      minimum-image distances.
@@ -34,12 +29,12 @@ be promoted or reinterpreted without fixes.
    - This contaminates boundary-crossing couplings in those periodic 2D
      surfaces.
 
-5. `frontier_entanglement_area_law.py` is not a bipartite entanglement
+4. `frontier_entanglement_area_law.py` is not a bipartite entanglement
    entropy measurement.
    - It fits the entropy of a boundary transfer/channel object, not a true
      subsystem reduced density matrix.
 
-6. `frontier_bmv_entanglement.py` overstates what it measures.
+5. `frontier_bmv_entanglement.py` overstates what it measures.
    - The script computes a branch-mediated toy witness.
    - It does not implement the full logic needed for a genuine BMV
      gravity-quantumness conclusion.
@@ -78,6 +73,17 @@ be promoted or reinterpreted without fixes.
      acyclic template is still useful as a bounded geometry control, but the
      Hamiltonian symmetrizes the adjacency, so the old retained causal-DAG
      compatibility framing has been withdrawn.
+
+5. `frontier_two_body_mutual_attraction.py` is no longer part of the live
+   mutual-attraction evidence chain on current `main`.
+   - The old one-wavefunction/two-lobe staggered runner is now carried only as
+     a historical exploratory pointer, and
+     `TWO_BODY_MUTUAL_ATTRACTION_NOTE_2026-04-11.md` explicitly says it is not
+     a genuine two-particle test.
+   - The live two-body package now hangs off the bounded open-Wilson successor
+     lane in `WILSON_TWO_BODY_OPEN_NOTE_2026-04-11.md`, which is itself
+     explicitly framed as a genuine two-orbital channel but not full Newton
+     closure.
 
 ## Verified False Positive From Agent Review
 

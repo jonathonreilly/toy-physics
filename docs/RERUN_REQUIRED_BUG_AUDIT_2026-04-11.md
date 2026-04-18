@@ -159,6 +159,9 @@ claim does not match the computed object.
 
 ### 1. Original two-body mutual-attraction runner
 
+**Status on `main`: retired as evidence; preserved only as a historical
+exploratory predecessor to the open-Wilson two-orbital lane**
+
 Affected runner:
 
 - historical frontier-only runner `frontier_two_body_mutual_attraction.py`
