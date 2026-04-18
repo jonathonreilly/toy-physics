@@ -1,0 +1,79 @@
+# DM Neutrino Source-Surface Split-1 Window Bundle-Dominance Candidate
+
+**Date:** 2026-04-17  
+**Status:** strong local split-1 dominance candidate on a broad exact bundle box; not flagship closure  
+**Primary runner:** `scripts/frontier_dm_neutrino_source_surface_split1_window_bundle_dominance_candidate.py`
+
+## Question
+
+On the compact branch, can the split-1 `m` window already be pushed toward a
+meaningful local dominance statement without reviving the deleted rival-window
+candidate forest?
+
+## Bottom line
+
+Yes, as a broad exact-bundle dominance candidate.
+
+Using the explicit exact shift-quotient bundle over `(m, delta, r31)`, the
+split-1 window
+
+- `m in [-1.16, -1.10]`
+
+was searched on the compact core box
+
+- `delta in [-2.5, 2.5]`
+- `r31 in [0.5, 4.0]`
+
+and then challenged on two tails:
+
+- high-`r31` tail with `r31 in {4.5, 5, 6, 8, 10}`
+- high-|`delta`| tail with `|delta| in [3, 8]`
+
+The best repair found on the broad compact box is
+
+- `2.308603400914`
+
+from a global differential evolution refinement on that compact box.
+
+at a boundary point near
+
+- `(-1.1, 1.08840241, 0.5)`
+
+and this still stays above the preferred recovered floor
+
+- `Lambda_+(x_*) = 1.586874714730`
+
+by
+
+- `7.217286861842e-01`.
+
+## Tail challenges
+
+The tested tails are much higher:
+
+- high-`r31` best repair: `6.201953117824`
+- high-|`delta`| best repair: `3.988395902207`
+
+So on the tested exact-bundle domain, the split-1 window does not show any
+near-floor rival competitor.
+
+## Why this matters
+
+This is stronger than just saying “split-1 is still open.”
+
+It says that on a broad exact bundle box that already contains the lowest
+tested split-1 basin, the repair remains safely above the preferred recovered
+winner, and the obvious tails are even less competitive.
+
+That does not prove the local dominance theorem, but it does move the split-1
+window from “missing follow-on” to “strongly dominated candidate on the tested
+bundle domain.”
+
+## Honest boundary
+
+This is not a theorem of global bundle dominance, not exact carrier
+completeness, and not flagship closure.
+
+It is a strong local split-1 exact-bundle dominance candidate on a broad core
+box with explicit tail challenges. The remaining theorem gap is still the
+upgrade from tested bundle dominance to certified local rival-window dominance.
