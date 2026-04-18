@@ -147,7 +147,16 @@ best-eta search collapses to one repair-cap peak at small positive slack,
 while the closest-lane search collapses to the slack-floor endpoint. So the
 positive-path carrier target is now narrower again: the residual exact-carrier
 neighborhoods of those two explicit split-2 upper-`m` face extremals, not the
-whole low-slack region and not even a diffuse ridge.
+whole low-slack region and not even a diffuse ridge. And the branch now pushes
+one local step further even there: on tested 3D boxes around those extremals,
+the cap neighborhood keeps the same lower-repair eta peak at
+`(-0.14, 1.188513342509166, 0.0195041737783)` with
+`eta/eta_obs = 0.884523189582`, while the endpoint neighborhood keeps the same
+closest-lane point at `(-0.14, 1.188955544069478, 0)` with packet distance
+`0.233274467128`. Both tested local neighborhoods remain transport-
+incompatible. So the live carrier-side gap is no longer a vague split-2 region
+at all. It is interval-certified exclusion or dominance on the exact carrier
+inside those two explicit local upper-face neighborhoods.
 
 ### 3. The missing theorem is interval-certified completeness or dominance
 
@@ -179,7 +188,8 @@ The next carrier-side work should be only one of:
 2. prove a rival-window dominance theorem strong enough to avoid full
    completeness, now especially on a lower-repair, transport-compatible lane
    inside the residual exact-carrier neighborhoods of the two explicit
-   split-2 upper-`m` face extremals;
+   split-2 upper-`m` face extremals, now sharpened further to the two explicit
+   local upper-face neighborhoods above;
 3. prove a no-go theorem that current exact methods cannot certify those
    windows.
 
@@ -196,6 +206,7 @@ Anything broader is below the current reduction surface.
 - [DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_LOW_SLACK_UPPER_M_RIDGE_CANDIDATE_NOTE_2026-04-18.md](./DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_LOW_SLACK_UPPER_M_RIDGE_CANDIDATE_NOTE_2026-04-18.md)
 - [DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_UPPER_M_SLACK_FLOOR_ENDPOINT_CANDIDATE_NOTE_2026-04-18.md](./DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_UPPER_M_SLACK_FLOOR_ENDPOINT_CANDIDATE_NOTE_2026-04-18.md)
 - [DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_LOWER_REPAIR_UPPER_FACE_EXTREMALS_CANDIDATE_NOTE_2026-04-18.md](./DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_LOWER_REPAIR_UPPER_FACE_EXTREMALS_CANDIDATE_NOTE_2026-04-18.md)
+- [DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_UPPER_FACE_LOCAL_NEIGHBORHOODS_CANDIDATE_NOTE_2026-04-18.md](./DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_UPPER_FACE_LOCAL_NEIGHBORHOODS_CANDIDATE_NOTE_2026-04-18.md)
 - [frontier_dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem.py](../scripts/frontier_dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem.py)
 - [frontier_dm_neutrino_source_surface_split2_boundary_band_transition_candidate.py](../scripts/frontier_dm_neutrino_source_surface_split2_boundary_band_transition_candidate.py)
 - [frontier_dm_neutrino_source_surface_split2_edge_profile_transition_candidate.py](../scripts/frontier_dm_neutrino_source_surface_split2_edge_profile_transition_candidate.py)
@@ -205,4 +216,5 @@ Anything broader is below the current reduction surface.
 - [frontier_dm_neutrino_source_surface_split2_low_slack_upper_m_ridge_candidate.py](../scripts/frontier_dm_neutrino_source_surface_split2_low_slack_upper_m_ridge_candidate.py)
 - [frontier_dm_neutrino_source_surface_split2_upper_m_slack_floor_endpoint_candidate.py](../scripts/frontier_dm_neutrino_source_surface_split2_upper_m_slack_floor_endpoint_candidate.py)
 - [frontier_dm_neutrino_source_surface_split2_lower_repair_upper_face_extremals_candidate.py](../scripts/frontier_dm_neutrino_source_surface_split2_lower_repair_upper_face_extremals_candidate.py)
+- [frontier_dm_neutrino_source_surface_split2_upper_face_local_neighborhoods_candidate.py](../scripts/frontier_dm_neutrino_source_surface_split2_upper_face_local_neighborhoods_candidate.py)
 - [frontier_dm_neutrino_source_surface_global_dominance_completeness_obstruction.py](../scripts/frontier_dm_neutrino_source_surface_global_dominance_completeness_obstruction.py)

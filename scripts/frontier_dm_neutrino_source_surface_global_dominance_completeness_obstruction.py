@@ -151,6 +151,10 @@ def part2_the_unresolved_rival_geometry_is_localized_to_three_windows() -> None:
         "The obstruction note records that the sampled split-2 upper-face pressure sharpens to two explicit extremals",
         "0.0195041737783" in note and "1.188513342509166" in note and "1.188955544069478" in note and "0.233274467128" in note,
     )
+    check(
+        "The obstruction note records that those split-2 extremals stay pinned on tested local neighborhoods",
+        "two explicit local upper-face neighborhoods" in note and "0.884523189582" in note and "0.233274467128" in note,
+    )
 
 
 def part3_exact_carrier_completeness_and_global_dominance_remain_unproved() -> None:
@@ -172,6 +176,10 @@ def part3_exact_carrier_completeness_and_global_dominance_remain_unproved() -> N
     check(
         "The obstruction note sharpens the missing carrier theorem to transport-compatible neighborhoods of the two split-2 upper-face extremals",
         "transport-compatible lane" in note and "two explicit split-2 upper-`m` face extremals" in note,
+    )
+    check(
+        "The obstruction note now sharpens the missing carrier theorem further to interval-certified control on the two explicit local upper-face neighborhoods",
+        "interval-certified exclusion or dominance" in note and "two explicit local upper-face neighborhoods" in note,
     )
     check(
         "The branch conclusion note keeps the overall branch verdict at obstruction",

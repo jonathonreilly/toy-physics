@@ -123,6 +123,13 @@ def main() -> int:
         "0.0195041737783" in conclusion_note and "1.188513342509166" in conclusion_note and "1.188955544069478" in conclusion_note and "0.233274467128" in conclusion_note,
     )
     check(
+        "The branch conclusion note records that the carrier side is now exhausted to two explicit local upper-face neighborhoods",
+        "interval-style exclusion or dominance on two explicit" in conclusion_note
+        and "split-2 upper-face neighborhoods" in conclusion_note
+        and "0.884523189582" in conclusion_note
+        and "0.233274467128" in conclusion_note,
+    )
+    check(
         "The branch conclusion note records the selector-side threshold-law nonrealization sharpening",
         "threshold-volume" in conclusion_note and "tau=0.13" in conclusion_note and "tau=0.14" in conclusion_note and "intrinsic threshold law" in conclusion_note,
     )
