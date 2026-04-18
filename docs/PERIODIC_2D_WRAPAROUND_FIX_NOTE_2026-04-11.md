@@ -2,106 +2,143 @@
 
 ## Scope
 
-This note covers the periodic-2D minimum-image weighting bug identified in:
+This note records the validated periodic-lattice minimum-image bug and the
+current-main reruns after fixing it.
 
-- `scripts/frontier_self_consistency_test.py`
-- `scripts/frontier_eigenvalue_stats_and_anderson_phase.py`
-- `scripts/frontier_born_rule_alpha.py`
+Bug class:
 
-The bug was specific to the hopping-weight builder on periodic square lattices.
-Adjacency was built with torus wraparound, but the edge weight was computed from
-raw coordinate differences instead of minimum-image distances. That meant a
-wraparound nearest neighbor on a `side x side` torus could be treated as having
-distance `side - 1` instead of `1`, suppressing the corresponding hopping.
+- periodic adjacency was built with modulo indexing
+- hopping weights were then computed from raw coordinate differences instead of
+  minimum-image distances
+- a wraparound nearest neighbor on a `side x side` torus could therefore be
+  treated as having distance `side - 1` instead of `1`
 
-## Fix
+Current-main fix:
 
-All three scripts now compute periodic edge lengths with minimum-image deltas:
+- shared helper: [`scripts/periodic_geometry.py`](../scripts/periodic_geometry.py)
+- periodic weighted runners now use minimum-image separations consistent with
+  the torus adjacency actually being evolved
 
-- `dx = min(abs(x_j - x_i), side - abs(x_j - x_i))`
-- `dy = min(abs(y_j - y_i), side - abs(y_j - y_i))`
+## Corrected live surfaces on `main`
 
-The Hamiltonian weights now match the torus adjacency actually used by the
-lattice builders.
+Canonical corrected periodic surfaces now include:
+
+- [`scripts/frontier_self_consistency_test.py`](../scripts/frontier_self_consistency_test.py)
+- [`scripts/frontier_eigenvalue_stats_and_anderson_phase.py`](../scripts/frontier_eigenvalue_stats_and_anderson_phase.py)
+- [`scripts/frontier_born_rule_alpha.py`](../scripts/frontier_born_rule_alpha.py)
+- [`scripts/frontier_holographic_probe.py`](../scripts/frontier_holographic_probe.py)
+- [`scripts/frontier_boundary_law_robustness.py`](../scripts/frontier_boundary_law_robustness.py)
+- [`scripts/frontier_staggered_geometry_superposition_retained.py`](../scripts/frontier_staggered_geometry_superposition_retained.py)
+- [`scripts/frontier_bmv_entanglement.py`](../scripts/frontier_bmv_entanglement.py)
+- [`scripts/frontier_branch_entanglement_robustness.py`](../scripts/frontier_branch_entanglement_robustness.py)
+
+Historical periodic surface also rerun under the fix:
+
+- [`scripts/frontier_bmv_threebody.py`](../scripts/frontier_bmv_threebody.py)
+
+That standalone three-body heuristic runner changes materially under the fix,
+but it remains non-canonical and does not override the robustness harness.
 
 ## Corrected rerun status
 
-### 1. `frontier_self_consistency_test.py`
+### Diagnostic trio
 
-Corrected rerun on the fixed `10x10` periodic surface:
+#### 1. `frontier_self_consistency_test.py`
 
-- `1-SelfConsist`: sign margin `+30.0 +/- 0.0`, width ratio `0.3554`, boundary alpha `0.145434`
-- `2-StaticInit`: sign margin `+40.0 +/- 0.0`, width ratio `0.3563`, boundary alpha `0.159548`
-- `3-PosRandom`: sign margin `-0.2 +/- 6.9`, width ratio `0.6465`, boundary alpha `0.126349`
-- `4-NegRandom`: sign margin `+0.2 +/- 6.9`, width ratio `1.0892`, boundary alpha `0.256546`
+Corrected interpretation on the fixed `10x10` torus:
 
-Corrected interpretation:
+- deterministic split between self-consistent and static-from-initial survives
+- structured field still cleanly separates from the corrected structured-null
+  controls
+- the lane remains a fixed-surface torus comparison, not a continuum closure
 
-- The lane still supports a deterministic split between self-consistent and static-from-initial on this fixed torus surface.
-- The lane still supports a strong separation between structured and random positive potentials.
-- The corrected run does **not** change the larger methodological caveat: this is still a torus-fixed comparison, not a universal continuum statement.
+Use the corrected structured-null surface:
 
-### 2. `frontier_eigenvalue_stats_and_anderson_phase.py`
+- [`docs/SELF_CONSISTENCY_STRUCTURED_NULL_NOTE_2026-04-11.md`](SELF_CONSISTENCY_STRUCTURED_NULL_NOTE_2026-04-11.md)
 
-Corrected rerun on the fixed periodic surfaces:
+#### 2. `frontier_eigenvalue_stats_and_anderson_phase.py`
 
-- Part 1 still shows **no chaos transition**. The spectrum stays on the Poisson side for all tested `G`.
-- Corrected `<r>` values:
-  - `G=0`: `0.1797`
-  - `G=10`: `0.3963`
-  - `G=50`: `0.3984`
-  - `G=100`: `0.3457`
-- The maximum corrected `<r>` is `0.3984`, still below the Poisson/GOE midpoint `0.458`.
+Corrected interpretation on the fixed periodic surfaces:
 
-Corrected phase-map read:
+- no chaos transition is rescued by the fix
+- the finite Anderson-vs-disorder window remains, but as a torus phase-map
+  result only
+- the corrected maximum spacing statistic still stays below the Poisson/GOE
+  midpoint
 
-- `L=8`: gravity-distinguishable at `G = 0.5, 1, 2, 5, 10, 20`
-- `L=10`: gravity-distinguishable at `G = 2, 5`
-- `L=12`: gravity-distinguishable at `G = 2, 5, 10, 20`
-- `L=6`: only a narrow corrected window near `G = 10`
+#### 3. `frontier_born_rule_alpha.py`
 
-Corrected interpretation:
+Corrected interpretation on the fixed `10x10` torus:
 
-- The bug fix does **not** rescue a chaos claim.
-- The Anderson-gravity window remains real on these corrected periodic surfaces, but it is a torus phase-map result, not yet an architecture-wide retained closure.
+- the minimum-image fix does not rescue the Born-rule lane
+- `alpha = 2.0` remains non-unique on the corrected surface
+- the lane stays a corrected negative / boundary-of-validity result
 
-### 3. `frontier_born_rule_alpha.py`
+### Corrected bounded companion package
 
-Corrected rerun on the fixed `10x10` periodic surface:
+#### 4. Boundary-law probes
 
-- Best composite-stability alpha is still `1.00` at `G = 5, 10, 50`
-- `alpha = 2.0` is still **not** uniquely selected
-- Corrected sign-selectivity margin at `alpha = 2.0`: `+30`
-- Best non-2.0 margin is tied at `+30`
+Corrected reruns now live in:
 
-Corrected interpretation:
+- [`docs/HOLOGRAPHIC_PROBE_NOTE_2026-04-11.md`](HOLOGRAPHIC_PROBE_NOTE_2026-04-11.md)
+- [`docs/BOUNDARY_LAW_ROBUSTNESS_NOTE_2026-04-11.md`](BOUNDARY_LAW_ROBUSTNESS_NOTE_2026-04-11.md)
 
-- The minimum-image bug does **not** reopen the Born-rule lane.
-- The corrected rerun still falsifies the original uniqueness hypothesis.
-- The script now states this honestly: sign selectivity is present at `alpha = 2.0`, but not uniquely best.
+What survives after the fix:
 
-## What remains invalid or limited
+- boundary scaling is still preferred over volume scaling on the Dirac-sea probe
+- the audited robustness sweep still gives `100/100` BFS-ball fits above
+  `R^2 = 0.95`
+- the stronger live read is a corrected bounded boundary-law companion on the
+  periodic staggered surface, not a broader holography claim
 
-These issues are **not** fixed by the minimum-image patch:
+#### 5. Fixed-adjacency branch-superposition lane
 
-### `frontier_self_consistency_test.py`
+Corrected rerun now lives in:
 
-- The positive/negative random controls are still generated from absolute-value Gaussian draws rather than a tighter matched random ensemble.
-- Large deterministic separations on this fixed surface should still be read as exact surface splits, not generic statistical significance claims.
+- [`docs/STAGGERED_GEOMETRY_SUPERPOSITION_NOTE_2026-04-11.md`](STAGGERED_GEOMETRY_SUPERPOSITION_NOTE_2026-04-11.md)
 
-### `frontier_eigenvalue_stats_and_anderson_phase.py`
+What survives after the fix:
 
-- This remains a periodic-torus study.
-- The disorder comparison is still a model-control experiment, not a proof that gravity and disorder are cleanly separated on all surfaces.
+- the 1D control remains weak/null
+- the 2D fixed-adjacency field-branch effect remains bounded positive at the
+  audited operating point
+- this is still a field-branch result on fixed adjacency, not topology
+  superposition
 
-### `frontier_born_rule_alpha.py`
+#### 6. Branch-mediated entanglement package
 
-- The script still measures Hartree fixed-point convergence, not quantum measurement.
-- Even after the wraparound fix, this lane remains structurally incapable of deriving the Born rule from unitary single-particle dynamics alone.
+Corrected reruns now live in:
 
-## Retention recommendation
+- [`docs/BMV_ENTANGLEMENT_NOTE_2026-04-11.md`](BMV_ENTANGLEMENT_NOTE_2026-04-11.md)
+- [`docs/BRANCH_ENTANGLEMENT_ROBUSTNESS_NOTE_2026-04-11.md`](BRANCH_ENTANGLEMENT_ROBUSTNESS_NOTE_2026-04-11.md)
+- [`docs/BMV_THREEBODY_NOTE_2026-04-11.md`](BMV_THREEBODY_NOTE_2026-04-11.md)
 
-- Treat the corrected outputs in this note as the canonical periodic-2D rerun surface for these three scripts.
-- Keep the self-consistency and Anderson-phase lanes as corrected periodic-surface results.
-- Keep the Born-rule lane as a corrected negative / boundary-of-validity result.
-- Do **not** promote any broader claim from these reruns without separately addressing the remaining methodological limitations listed above.
+What survives after the fix:
+
+- the 2-body externally imposed two-branch witness still has `delta_S > 0`
+- the canonical robustness harness still gives W-type tripartite structure and
+  `tau_3 = 0`
+- the old standalone three-body heuristic runner is historical only and should
+  not be used as the canonical classifier
+
+## What remains limited after the fix
+
+These issues are not solved by the minimum-image correction itself:
+
+- periodic torus results remain periodic torus results
+- the boundary-law package is still a bounded many-body-style companion, not a
+  holography proof
+- the branch-entanglement package is still an externally imposed two-branch
+  protocol, not a full BMV / mediator-null witness
+- the Born-rule alpha sweep still does not become a measurement-theory result
+
+## Current mainline recommendation
+
+- Treat this note as the canonical bug-fix entrypoint for the live periodic
+  weighted package on current `main`.
+- Use the corrected companion notes listed above for exact rerun numbers.
+- Do not cite pre-fix periodic numbers from older notes, review comments, or
+  session summaries.
+- If an older periodic frontier script is reopened later, audit it against
+  [`scripts/periodic_geometry.py`](../scripts/periodic_geometry.py) before
+  trusting any weighted-torus claim.

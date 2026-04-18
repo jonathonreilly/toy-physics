@@ -21,8 +21,8 @@ Do not read every entry below as an unresolved blocker on current `main`.
 
 ### 1. Periodic 2D staggered wraparound-weight bug
 
-**Status on `main`: corrected on the retained trio; still a live bug pattern
-for nearby periodic-2D surfaces**
+**Status on `main`: corrected on the live periodic weighted package; historical
+periodic frontiers still need code audit before reuse**
 
 Bug class:
 
@@ -31,26 +31,43 @@ Bug class:
   minimum-image distances
 - boundary-crossing neighbors are therefore misweighted
 
-Validated affected runners:
+Validated affected runners included:
 
 - [`scripts/frontier_born_rule_alpha.py`](../scripts/frontier_born_rule_alpha.py)
 - [`scripts/frontier_self_consistency_test.py`](../scripts/frontier_self_consistency_test.py)
 - [`scripts/frontier_eigenvalue_stats_and_anderson_phase.py`](../scripts/frontier_eigenvalue_stats_and_anderson_phase.py)
+- [`scripts/frontier_holographic_probe.py`](../scripts/frontier_holographic_probe.py)
+- [`scripts/frontier_boundary_law_robustness.py`](../scripts/frontier_boundary_law_robustness.py)
+- [`scripts/frontier_staggered_geometry_superposition_retained.py`](../scripts/frontier_staggered_geometry_superposition_retained.py)
+- [`scripts/frontier_bmv_entanglement.py`](../scripts/frontier_bmv_entanglement.py)
+- [`scripts/frontier_branch_entanglement_robustness.py`](../scripts/frontier_branch_entanglement_robustness.py)
 
-Likely same bug pattern also touches nearby periodic 2D frontier probes built
-with the same helper structure. Before promoting any periodic 2D result from
-the 2026-04-11 frontier batch, check whether it uses this pattern.
-
-Corrected retained reruns now exist on `main` for:
+Corrected current-main reruns now exist for:
 
 - [`scripts/frontier_self_consistency_test.py`](../scripts/frontier_self_consistency_test.py)
 - [`scripts/frontier_eigenvalue_stats_and_anderson_phase.py`](../scripts/frontier_eigenvalue_stats_and_anderson_phase.py)
 - [`scripts/frontier_born_rule_alpha.py`](../scripts/frontier_born_rule_alpha.py)
+- [`scripts/frontier_holographic_probe.py`](../scripts/frontier_holographic_probe.py)
+- [`scripts/frontier_boundary_law_robustness.py`](../scripts/frontier_boundary_law_robustness.py)
+- [`scripts/frontier_staggered_geometry_superposition_retained.py`](../scripts/frontier_staggered_geometry_superposition_retained.py)
+- [`scripts/frontier_bmv_entanglement.py`](../scripts/frontier_bmv_entanglement.py)
+- [`scripts/frontier_branch_entanglement_robustness.py`](../scripts/frontier_branch_entanglement_robustness.py)
+
+Shared fix surface:
+
+- [`scripts/periodic_geometry.py`](../scripts/periodic_geometry.py)
+
+Historical note:
+
+- [`scripts/frontier_bmv_threebody.py`](../scripts/frontier_bmv_threebody.py)
+  also moves under the minimum-image fix, but it remains a historical heuristic
+  surface and not the canonical branch-entanglement classifier.
 
 Revisit rule:
 
-- any *other* periodic 2D result outside those corrected retained notes should
-  still be rerun or code-audited before reuse
+- any *other* periodic 2D result outside those corrected current-main notes
+  should still be code-audited against `scripts/periodic_geometry.py` and rerun
+  before reuse
 
 ### 2. Self-consistency random controls are not moment-matched
 

@@ -1,7 +1,7 @@
 # Staggered Geometry Superposition Note — 2026-04-11
 
-**Status:** retained, bounded positive  
-**Harness:** [frontier_staggered_geometry_superposition_retained.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_staggered_geometry_superposition_retained.py)
+**Status:** bounded companion
+**Harness:** [frontier_staggered_geometry_superposition_retained.py](/Users/jonreilly/Projects/Physics/scripts/frontier_staggered_geometry_superposition_retained.py)
 
 ## What this is
 
@@ -25,7 +25,7 @@ This is **not yet** a graph-topology superposition result. The lattice
 adjacency is fixed. What is superposed is the effective scalar/geometry branch
 on top of the same staggered transport law.
 
-## Retained rerun
+## Corrected rerun
 
 Rerun command:
 
@@ -33,15 +33,16 @@ Rerun command:
 source /tmp/physics_venv/bin/activate && python scripts/frontier_staggered_geometry_superposition_retained.py
 ```
 
-Exact rerun output at the retained operating point `G=10`:
+Exact minimum-image rerun output on current `main` at the operating point
+`G=10`:
 
 | Case | TV | dphi | TVq | overlap | PdetA | PdetB | Verdict |
 |---|---:|---:|---:|---:|---:|---:|---|
-| `1D n=41` | `0.0001` | `0.0003` | `0.0000` | `0.9096` | `0.0000` | `0.0000` | `WEAK_OR_NULL` |
+| `1D n=41` | `0.0001` | `0.0019` | `0.0000` | `0.9096` | `0.0000` | `0.0000` | `WEAK_OR_NULL` |
 | `1D n=61` | `0.0000` | `0.0000` | `0.0000` | `0.9992` | `0.0000` | `0.0000` | `WEAK_OR_NULL` |
-| `2D side=8` | `0.5766` | `3.5315` | `0.2237` | `0.0105` | `0.5791` | `0.2399` | `BOUNDED_POSITIVE` |
-| `2D side=10` | `0.2493` | `0.3706` | `0.0685` | `0.1623` | `0.6025` | `0.2776` | `BOUNDED_POSITIVE` |
-| `2D side=12` | `0.1271` | `0.1596` | `0.0146` | `0.2322` | `0.3937` | `0.2223` | `BOUNDED_POSITIVE` |
+| `2D side=8` | `0.5053` | `3.2494` | `0.2585` | `0.0343` | `0.4354` | `0.2327` | `BOUNDED_POSITIVE` |
+| `2D side=10` | `0.3109` | `4.8740` | `0.0884` | `0.1295` | `0.5506` | `0.2447` | `BOUNDED_POSITIVE` |
+| `2D side=12` | `0.1363` | `0.2652` | `0.0197` | `0.2223` | `0.3822` | `0.2007` | `BOUNDED_POSITIVE` |
 
 Operating point details:
 
@@ -55,13 +56,13 @@ Operating point details:
 What survives scrutiny:
 
 - the effect is **null in 1D** under the same protocol
-- the effect is **cleanly positive in 2D** at the retained operating point
+- the effect is **cleanly positive in 2D** at the audited operating point
 - the coherent branch superposition differs from the classical mixture:
-  - `TVq = 0.2237` at `side=8`
-  - `TVq = 0.0685` at `side=10`
-  - `TVq = 0.0146` at `side=12`
+  - `TVq = 0.2585` at `side=8`
+  - `TVq = 0.0884` at `side=10`
+  - `TVq = 0.0197` at `side=12`
 - the two branch states are globally distinguishable:
-  - overlap drops to `0.0105` at `side=8`
+  - overlap drops to `0.0343` at `side=8`
 
 What this means:
 
@@ -84,5 +85,5 @@ So the honest claim is:
 > and screened-field branches produces detector-resolved interference that
 > differs from the corresponding classical mixture.
 
-That is a bounded positive geometry/field-branch result, not a full graph
-geometry superposition claim.
+That is a bounded companion geometry/field-branch result, not a full graph
+geometry-superposition claim.

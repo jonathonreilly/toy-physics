@@ -4,7 +4,7 @@
 **Status:** supporting robustness note for the bounded boundary-law probe
 
 Primary artifact:
-- `/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_boundary_law_robustness.py`
+- `/Users/jonreilly/Projects/Physics/scripts/frontier_boundary_law_robustness.py`
 
 Companion retained note:
 - [`HOLOGRAPHIC_PROBE_NOTE_2026-04-11.md`](HOLOGRAPHIC_PROBE_NOTE_2026-04-11.md)
@@ -30,21 +30,19 @@ Separate partition check:
 
 ## Exact Rerun Numbers
 
+This note reflects the current-main minimum-image rerun on the periodic surface.
+
 Counted BFS-ball surface:
 - total configs: `100`
 - `R^2 > 0.95`: `100/100`
-- `R^2 > 0.99`: `79/100`
-- `R^2` range: `0.975520` to `1.000000`
-- `R^2` mean ± std: `0.995000 ± 0.006390`
-
-Nontrivial subsets:
-- `side >= 8`: `80/80` above `0.95`, min `0.975520`, mean `0.993749`
-- `side >= 10`: `60/60` above `0.95`, min `0.975520`, mean `0.993337`
+- `R^2 > 0.99`: `78/100`
+- `R^2` range: `0.974518` to `1.000000`
+- `R^2` mean ± std: `0.994607 ± 0.007004`
 
 Partition check at `side=10, G=10`:
-- BFS-ball: `0.996408 ± 0.001480`, min `0.994763`
-- rectangular: `0.982002 ± 0.006375`, min `0.969595`
-- random: `0.995118 ± 0.003120`, min `0.989110`
+- BFS-ball: `0.995138 ± 0.001668`
+- rectangular: `0.994513 ± 0.002123`
+- random: `0.995500 ± 0.002903`
 
 ## Caveats
 
@@ -52,6 +50,8 @@ Partition check at `side=10, G=10`:
   Those are two-point fits, so `R^2 = 1.0` there is automatic.
 - The `100/100` figure applies only to the BFS-ball sweep. The partition
   generalization evidence is smaller and separate.
+- This is the corrected minimum-image periodic rerun; older pre-fix torus
+  numbers should not be reused.
 - This is a robustness addendum for the bounded many-body-style boundary-law
   result. It is not, by itself, a holography proof.
 

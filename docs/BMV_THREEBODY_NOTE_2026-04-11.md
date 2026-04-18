@@ -6,13 +6,19 @@
 
 ## Canonical Artifact
 
-- `/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_branch_entanglement_robustness.py`
+- `/Users/jonreilly/Projects/Physics/scripts/frontier_branch_entanglement_robustness.py`
 
 Historical standalone runner:
-- `/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_bmv_threebody.py`
+- `/Users/jonreilly/Projects/Physics/scripts/frontier_bmv_threebody.py`
 
 The standalone runner is no longer the canonical interpretation surface. The
 later robustness harness is.
+
+After the current-main minimum-image fix on periodic lattices, the standalone
+heuristic runner moves numerically and can print GHZ-like rows on some couplings.
+That does not reopen the canonical interpretation, because the robustness
+harness remains the authoritative surface and still gives theorem-consistent
+`tau_3 = 0`, W-type tripartite structure throughout the audited package.
 
 ## Rerun
 

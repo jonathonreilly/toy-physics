@@ -43,6 +43,8 @@ from scipy.sparse import eye as speye
 from scipy.sparse import lil_matrix
 from scipy.sparse.linalg import spsolve
 
+from periodic_geometry import infer_periodic_extents, minimum_image_distance
+
 # ── Physical parameters ──────────────────────────────────────────────
 MASS = 0.30
 MU2 = 0.22
@@ -91,11 +93,12 @@ def make_lattice_2d(side: int, seed: int | None = None):
 def build_laplacian(pos: np.ndarray, adj: dict[int, list[int]]):
     n = len(pos)
     lap = lil_matrix((n, n), dtype=float)
+    extents = infer_periodic_extents(pos)
     for i, nbs in adj.items():
         for j in nbs:
             if i >= j:
                 continue
-            d = math.hypot(pos[j, 0] - pos[i, 0], pos[j, 1] - pos[i, 1])
+            d = minimum_image_distance(pos[i], pos[j], extents)
             w = 1.0 / max(d, 0.5)
             lap[i, j] -= w
             lap[j, i] -= w
@@ -111,11 +114,12 @@ def build_hamiltonian(pos: np.ndarray, color: np.ndarray,
     ham = lil_matrix((n, n), dtype=complex)
     parity = np.where(color == 0, 1.0, -1.0)
     ham.setdiag((MASS + phi) * parity)
+    extents = infer_periodic_extents(pos)
     for i, nbs in adj.items():
         for j in nbs:
             if i >= j:
                 continue
-            d = math.hypot(pos[j, 0] - pos[i, 0], pos[j, 1] - pos[i, 1])
+            d = minimum_image_distance(pos[i], pos[j], extents)
             w = 1.0 / max(d, 0.5)
             ham[i, j] += -0.5j * w
             ham[j, i] += 0.5j * w
@@ -148,7 +152,7 @@ def binary_entropy(p: float) -> float:
     return -p * math.log(p) - (1.0 - p) * math.log(1.0 - p)
 
 
-# ── 2-body BMV ───────────────────────────────────────────────────────
+# ── 2-body branch entanglement ───────────────────────────────────────
 
 def run_2body(side: int, g: float, separation: int,
               source_xy: tuple[int, int], seed: int | None = None):
@@ -214,7 +218,7 @@ def run_2body(side: int, g: float, separation: int,
     }
 
 
-# ── 3-body BMV ───────────────────────────────────────────────────────
+# ── 3-body branch entanglement ───────────────────────────────────────
 
 def run_3body(side: int, g: float, source_xy: tuple[int, int],
               seed: int | None = None):

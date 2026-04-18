@@ -27,6 +27,8 @@ from scipy.sparse import eye as speye
 from scipy.sparse.linalg import spsolve
 from scipy.stats import linregress
 
+from periodic_geometry import infer_periodic_extents, minimum_image_distance
+
 # ---------------------------------------------------------------------------
 # Physical parameters
 # ---------------------------------------------------------------------------
@@ -193,12 +195,13 @@ def build_hamiltonian(n: int, pos: np.ndarray, adj: dict, col: np.ndarray,
 
     par = np.where(col == 0, 1.0, -1.0)
     H.setdiag((MASS + phi) * par)
+    extents = infer_periodic_extents(pos)
 
     for i, nbs in adj.items():
         for j in nbs:
             if i >= j:
                 continue
-            d = math.hypot(pos[j, 0] - pos[i, 0], pos[j, 1] - pos[i, 1])
+            d = minimum_image_distance(pos[i], pos[j], extents)
             d = min(d, 2.0)
             w = 1.0 / max(d, 0.5)
             H[i, j] += -0.5j * w

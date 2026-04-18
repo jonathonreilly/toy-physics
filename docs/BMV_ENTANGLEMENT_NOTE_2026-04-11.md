@@ -10,30 +10,30 @@
 
 ## Rerun
 
-Rerun on 2026-04-11 in the physics venv:
+Corrected minimum-image rerun on `2026-04-18` in the physics venv:
 
 | G | overlap_1 | overlap_2 | product_overlap | S_quantum (nats) | S_mix (nats) | delta_S (nats) |
 |---:|---:|---:|---:|---:|---:|---:|
-| 1 | 0.9804 | 0.9925 | 0.9730 | 0.07148 | 0.05509 | 0.01639 |
-| 2 | 0.9270 | 0.9696 | 0.8988 | 0.20024 | 0.15669 | 0.04355 |
-| 5 | 0.6719 | 0.8211 | 0.5517 | 0.53208 | 0.44630 | 0.08579 |
-| 10 | 0.2435 | 0.4336 | 0.1056 | 0.68756 | 0.66320 | 0.02437 |
-| 20 | 0.1831 | 0.2836 | 0.0519 | 0.69180 | 0.67629 | 0.01550 |
-| 50 | 0.0967 | 0.2419 | 0.0234 | 0.69287 | 0.68847 | 0.00441 |
+| 1 | 0.9805 | 0.9933 | 0.9740 | 0.06946 | 0.05476 | 0.01470 |
+| 2 | 0.9274 | 0.9730 | 0.9023 | 0.19510 | 0.15605 | 0.03905 |
+| 5 | 0.6722 | 0.8422 | 0.5662 | 0.52296 | 0.44604 | 0.07692 |
+| 10 | 0.2369 | 0.5079 | 0.1203 | 0.68589 | 0.66482 | 0.02107 |
+| 20 | 0.2111 | 0.1189 | 0.0251 | 0.69283 | 0.67069 | 0.02214 |
+| 50 | 0.1258 | 0.0904 | 0.0114 | 0.69308 | 0.68521 | 0.00787 |
 
 Norms stayed at `1.0000` for all four branch states at every tested `G`.
 
 Peak entanglement:
 
-- `S_quantum = 0.69287` nats at `G=50`
-- `0.99961` bits
-- `99.96%` of the two-branch maximum `ln(2)`
+- `S_quantum = 0.69308` nats at `G=50`
+- `0.99991` bits
+- `99.99%` of the two-branch maximum `ln(2)`
 
 ## Strongest Honest Interpretation
 
-This script shows a strong **branch-mediated entanglement signal** on a
-fixed-adjacency staggered-lattice protocol with an externally imposed
-two-branch source configuration.
+This corrected periodic rerun preserves a strong **branch-mediated
+entanglement signal** on a fixed-adjacency staggered-lattice protocol with an
+externally imposed two-branch source configuration.
 
 - A shared geometry branch `(source present, source absent)` is imposed externally.
 - Each particle evolves coherently under both branches.
@@ -52,9 +52,9 @@ Reasons:
 - The script does not implement the full local-operations-and-classical-communication exclusion logic used in BMV-style claims.
 - The result is therefore a **branch-mediated entanglement witness on an externally imposed two-branch protocol**, not a standalone proof that gravity must be quantum.
 
-## Retained Claim
+## Bounded Claim
 
-The retained claim is:
+The live bounded claim is:
 
 > On a 2D staggered lattice with a fixed externally imposed geometry-branch superposition, the shared branch coherently entangles two separated particles beyond the corresponding classical branch mixture, with `delta_S > 0` for all tested couplings and `S_quantum` saturating near `ln(2)`.
 

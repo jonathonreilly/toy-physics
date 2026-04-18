@@ -4,7 +4,7 @@
 **Status:** bounded companion robustness addendum
 
 Primary artifact:
-- `/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_branch_entanglement_robustness.py`
+- `/Users/jonreilly/Projects/Physics/scripts/frontier_branch_entanglement_robustness.py`
 
 Companion notes:
 - [`BMV_ENTANGLEMENT_NOTE_2026-04-11.md`](BMV_ENTANGLEMENT_NOTE_2026-04-11.md)
@@ -26,20 +26,22 @@ Audited surfaces:
 
 ## Exact Rerun Numbers
 
+This note reflects the current-main minimum-image rerun on the periodic surface.
+
 ### 2-body branch-entanglement
 
 - `delta_S > 0`: `60/60`
 - overall `delta_S`:
-  - min: `0.000685`
-  - max: `0.494375`
-  - mean: `0.046981`
+  - min: `0.000507`
+  - max: `0.416917`
+  - mean: `0.039757`
 
 Side `12` persistence:
-- `G=1`: `0.01246 ± 0.00046` (`27.1σ`)
-- `G=5`: `0.07244 ± 0.00353` (`20.5σ`)
-- `G=10`: `0.03495 ± 0.00408` (`8.6σ`)
-- `G=20`: `0.00258 ± 0.00150` (`1.7σ`)
-- `G=50`: `0.00199 ± 0.00097` (`2.0σ`)
+- `G=1`: `0.01202 ± 0.00044` (`27.1σ`)
+- `G=5`: `0.06966 ± 0.00335` (`20.8σ`)
+- `G=10`: `0.03315 ± 0.00387` (`8.6σ`)
+- `G=20`: `0.00312 ± 0.00166` (`1.9σ`)
+- `G=50`: `0.00219 ± 0.00098` (`2.2σ`)
 
 ### 3-body branch-entanglement
 
@@ -56,8 +58,8 @@ the fixed two-branch ansatz used by the canonical robustness harness,
 only a sanity check that the implementation stays on the intended ansatz.
 
 Representative rerun rows:
-- `G=20, src=(6,6)`: `S_1|23=0.69300`, `S_2|13=0.69288`, `S_3|12=0.69294`, `tau_3=0.00000`, class `W`
-- `G=50, src=(6,3)`: `0.69309`, `0.69312`, `0.69311`, `tau_3=0.00000`, class `W`
+- `G=20, src=(6,6)`: `S_1|23=0.69302`, `S_2|13=0.69291`, `S_3|12=0.69299`, `tau_3=0.00000`, class `W`
+- `G=50, src=(6,3)`: `0.69299`, `0.69240`, `0.68959`, `tau_3=0.00000`, class `W`
 
 ## Strongest Honest Claims
 
