@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Three-body branch entanglement on a staggered lattice.
+Historical heuristic three-body branch-entanglement diagnostic on a staggered
+lattice.
 
 Extension of the 2-body branch-entanglement protocol to three particles in a
 triangular arrangement. A gravitational source at the center is placed in an
@@ -33,7 +34,7 @@ Historical note:
   This standalone runner was the first tripartite probe, but its
   GHZ/W interpretation is superseded by
   frontier_branch_entanglement_robustness.py.
-  Keep this script as an exploratory heuristic surface, not the
+  Keep this script as a historical exploratory heuristic surface, not the
   canonical classifier.
 """
 
@@ -668,7 +669,7 @@ def main():
     t0 = time.time()
 
     print("=" * 90)
-    print("THREE-BODY BRANCH ENTANGLEMENT ON STAGGERED LATTICE")
+    print("HISTORICAL HEURISTIC THREE-BODY BRANCH-ENTANGLEMENT DIAGNOSTIC")
     print("=" * 90)
     print()
     print(f"Lattice: 2D staggered, side={SIDE}, n={SIDE**2}")
@@ -676,8 +677,13 @@ def main():
     print(f"Source at {SOURCE_POS}")
     print(f"MASS={MASS}, MU2={MU2}, DT={DT}, N_STEPS={N_STEPS}, sigma={SIGMA}")
     print()
-    print("Protocol: Source in superposition |A> + |B> where A=present, B=absent.")
+    print("Protocol: externally imposed source superposition |A> + |B>,")
+    print("          where A=present and B=absent.")
     print("|Psi> = (|psi_1A>|psi_2A>|psi_3A> + |psi_1B>|psi_2B>|psi_3B>) / sqrt(2)")
+    print()
+    print("Guardrail: this is the historical heuristic runner only.")
+    print("Use frontier_branch_entanglement_robustness.py for the canonical")
+    print("3-body interpretation surface on current main.")
     print()
 
     # ── Table: Branch overlaps ───────────────────────────────────────
@@ -737,7 +743,7 @@ def main():
     # ── Analysis ─────────────────────────────────────────────────────
     print()
     print("=" * 90)
-    print("ANALYSIS")
+    print("HEURISTIC ANALYSIS")
     print("=" * 90)
     print()
 
@@ -794,7 +800,7 @@ def main():
     # ── Verdict ──────────────────────────────────────────────────────
     print()
     print("=" * 90)
-    print("VERDICT")
+    print("HEURISTIC VERDICT")
     print("=" * 90)
     print()
 

@@ -1,7 +1,18 @@
 #!/usr/bin/env python3
 """
-Staggered Fermion + Potential Gravity — C1-C16 + Physical-State Gate
-=====================================================================
+Historical legacy staggered-potential C1-C16 + physical-state gate harness
+===========================================================================
+
+Current-main boundary:
+  this script is preserved as a legacy sector-filtered control harness, not as
+  a live evidence surface. Some rows are legacy proxy checks rather than
+  current retained-grade measurements, including the older C13/C14 rows called
+  out in the review audit.
+
+Use the cleaned current-main successors when current evidence is needed:
+  - frontier_staggered_17card.py
+  - frontier_graph_kg_16card.py
+
 Architecture: 1D staggered Kogut-Susskind fermion (1 scalar per site),
   gravity via scalar potential V = -m*g*S/(r+eps) on diagonal.
   Evolution: Crank-Nicolson (exactly unitary).
@@ -81,7 +92,7 @@ MASS_POS = N_SITES//2 + 4
 
 def run_card():
     print("="*70)
-    print("STAGGERED FERMION + POTENTIAL — C1-C16 + PHYSICAL-STATE GATE")
+    print("HISTORICAL LEGACY STAGGERED-POTENTIAL CONTROL HARNESS")
     print("="*70)
     n=N_SITES; m=MASS; c=n//2; mp=MASS_POS
     V = build_V(n, m, G, S, mp)
@@ -89,6 +100,7 @@ def run_card():
     H_grav = staggered_H(n, m, V)
     psi0 = gauss(n)
     print(f"  n={n}, mass={m}, g={G}, S={S}, dt={DT}, N={NS}")
+    print("  Guardrail: legacy proxy harness only; do not cite as current evidence.")
     print()
 
     score = 0
@@ -293,6 +305,8 @@ def run_card():
         print(f"    N={ns_lc}: P_inside_cone={P_in:.4f}")
 
     print(f"\n  SCORE: {score}/17")
+    print("  Legacy result only. Prefer frontier_staggered_17card.py for")
+    print("  current-main structural card evidence.")
     return score
 
 

@@ -1,7 +1,19 @@
 #!/usr/bin/env python3
 """
-Simplified Axioms — Full C1-C16 Card on 3 Graph Types
-=======================================================
+Historical legacy C1-C16 control harness on 3 graph types
+=========================================================
+
+Current-main boundary:
+  this script is preserved as a legacy exploratory control harness, not as a
+  live evidence surface. Several rows are legacy proxies rather than current
+  retained-grade measurements:
+    - non-cubic C11 uses an eigenvalue-fit proxy
+    - C13/C14 are older travel-matched / legacy susceptibility rows
+
+Use the cleaned successor lanes when current evidence is needed:
+  - frontier_graph_kg_16card.py
+  - frontier_staggered_17card.py
+
 Norm fix: Crank-Nicolson integrator (exactly unitary).
   U(dt) = (I + i*H*dt/2)^{-1} * (I - i*H*dt/2)
 
@@ -476,9 +488,10 @@ def run_16_card(name, adj, pos, mass=0.3, g=5.0, S=5e-4, dt=0.05, n_steps=20):
 if __name__ == '__main__':
     t_start = time.time()
     print("="*70)
-    print("SIMPLIFIED AXIOMS — C1-C16 CARD ON 3 GRAPH TYPES")
+    print("HISTORICAL LEGACY C1-C16 CONTROL HARNESS ON 3 GRAPH TYPES")
     print("="*70)
     print("Evolution: Crank-Nicolson (exactly unitary)")
+    print("Guardrail: legacy proxy harness only; do not cite as current evidence.")
     print()
 
     # A. Cubic
@@ -496,7 +509,7 @@ if __name__ == '__main__':
 
     elapsed = time.time() - t_start
     print(f"\n{'='*70}")
-    print("FINAL SUMMARY")
+    print("FINAL SUMMARY (LEGACY CONTROL HARNESS)")
     print(f"{'='*70}")
     print(f"  Cubic lattice:    {s_c}/16")
     print(f"  Random geometric: {s_r}/16")
@@ -509,8 +522,10 @@ if __name__ == '__main__':
     print(f"  C13 carrier-k sweep uses v_g-matched travel distance.")
     print(f"  C15 uses periodic-vs-open (cubic), variant-radius (random), or seed-variant (growing).")
     if all_pass >= 14:
-        print(f"\n  All graphs >= 14/16. Core axioms hold across topologies.")
+        print(f"\n  Legacy result: all graphs >= 14/16 on this proxy control harness.")
     elif all_pass >= 10:
-        print(f"\n  Good coverage (min {all_pass}/16). Some graph-dependent issues remain.")
+        print(f"\n  Legacy result: good proxy coverage (min {all_pass}/16).")
     else:
-        print(f"\n  Weak coverage (min {all_pass}/16). Significant failures on some topologies.")
+        print(f"\n  Legacy result: weak proxy coverage (min {all_pass}/16).")
+    print("  Do not use this script as a current-main evidence surface.")
+    print("  Prefer frontier_graph_kg_16card.py and frontier_staggered_17card.py.")

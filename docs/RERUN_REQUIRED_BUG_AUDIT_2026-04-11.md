@@ -354,6 +354,14 @@ Reasons:
   the zero-GHZ row is now treated only as a sanity check, not an empirical
   exclusion result
 
+Current mainline read:
+
+- [`scripts/frontier_branch_entanglement_robustness.py`](../scripts/frontier_branch_entanglement_robustness.py)
+  is the canonical current-main interpretation surface
+- [`scripts/frontier_bmv_threebody.py`](../scripts/frontier_bmv_threebody.py)
+  is now explicitly labeled as a historical heuristic runner and should not
+  override the robustness harness
+
 Action:
 
 - keep the current bounded branch-mediated witness package only for the narrow
@@ -387,19 +395,39 @@ Action:
 
 ### 7. Bekenstein-Hawking script
 
+**Status on `main`: bounded companion lane preserved; the old script name in
+this audit is stale**
+
 Affected runner:
 
-- [`scripts/frontier_bekenstein_hawking.py`](../scripts/frontier_bekenstein_hawking.py)
+- historical older naming: `frontier_bekenstein_hawking.py` (not retained on
+  current `main`)
+- live current-main bounded companion:
+  - [`scripts/frontier_bh_entropy_derived.py`](../scripts/frontier_bh_entropy_derived.py)
+  - [`docs/BH_ENTROPY_DERIVED_NOTE.md`](BH_ENTROPY_DERIVED_NOTE.md)
+  - [`docs/BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md`](BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md)
 
 Reason:
 
 - it fits Dirac-sea entropy of the final Hamiltonian, not the evolved packet
 
-Action:
+Current mainline read:
 
-- redesign before rerun if the claim is black-hole-like entropy
+- the live BH runner is now explicitly a bounded companion / comparison lane,
+  not a retained derivation of `S = A / (4 l_P^2)`
+- the retained Widom no-go note is the reason this lane stays bounded on the
+  current free-fermion carrier
+
+Revisit rule:
+
+- do not cite the BH lane as a live derivation of the `1/4` coefficient
+- redesign the carrier or observable before any rerun if the goal is a
+  stronger black-hole-like entropy claim
 
 ### 8. Axioms / potential 16-card controls
+
+**Status on `main`: historical legacy control harnesses only; not live
+evidence surfaces**
 
 Affected runners:
 
@@ -412,8 +440,16 @@ Reasons:
 - C13/C14 use flattened-index derivatives, not geometry
 - one potential-card row is a self-subtraction tautology
 
-Action:
+Current mainline read:
 
+- both runners are now explicitly labeled as legacy proxy/control harnesses
+- the cleaned current-main successors for structural card evidence are:
+  - [`scripts/frontier_graph_kg_16card.py`](../scripts/frontier_graph_kg_16card.py)
+  - [`scripts/frontier_staggered_17card.py`](../scripts/frontier_staggered_17card.py)
+
+Revisit rule:
+
+- do not cite these two legacy harnesses as current evidence
 - redesign those rows before any rerun if the card is meant to carry evidence
 
 ### 9. DAG compatibility lane
@@ -443,6 +479,9 @@ Action:
 These do not require new numerical work right now; they need narrowed framing.
 
 - [`scripts/frontier_boundary_law_robustness.py`](../scripts/frontier_boundary_law_robustness.py) header/banner
+  - **Status on `main`: corrected** — the runner now presents itself as a
+    bounded boundary-law robustness addendum rather than a generic proof-like
+    probe banner
 
 ## D. Verified False Positive
 

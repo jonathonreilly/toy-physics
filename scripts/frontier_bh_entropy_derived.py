@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """
-Bekenstein-Hawking Entropy S = A/(4 l_P^2) Derived from Lattice Entanglement
-=============================================================================
+Bekenstein-Hawking Entropy Bounded Companion from Lattice Entanglement
+======================================================================
 
-STATUS: DERIVED -- area law confirmed (R^2 > 0.999), coefficient matched via
-        Ryu-Takayanagi bond-dimension interpretation:
-            S_exact / (|dA| * ln chi_eff) ~ 0.24 ~ 1/4
+STATUS: BOUNDED COMPANION -- the finite-L RT ratio is near ~0.24 on the
+        small audited surface, but the asymptotic carrier coefficient is
+        controlled by the Widom-Gioev-Klich value 1/6, not 1/4.
+        This runner is therefore a bounded companion / comparison lane,
+        not a retained derivation of S = A / (4 l_P^2).
 
 DERIVATION CHAIN:
 
@@ -18,30 +20,31 @@ DERIVATION CHAIN:
     picture (Swingle 2012), the maximal entanglement across the cut is:
         S_max = |dA| * ln(chi_eff)
 
-  Step 3 (Ryu-Takayanagi Ratio): The ACTUAL entanglement entropy is a
-    fraction of the maximum:
-        S_actual = S_max / (4 G_N)
-    In lattice Planck units (a = l_P, G_N = 1):
-        S_actual / S_max = 1/4
-    We measure this ratio numerically and find ~0.24, matching 1/4.
+  Step 3 (Ryu-Takayanagi Ratio, bounded finite-L comparison):
+    On the audited small-L surface the measured ratio is ~0.24, which is
+    numerically close to 1/4. The current-main bounded note explains why
+    this is not the asymptotic value on this carrier.
 
-  Step 4 (Bekenstein-Hawking): On a Planck lattice, a spherical boundary
+  Step 4 (bounded BH comparison only): On a Planck lattice, a spherical boundary
     of area A has |dA| = A/l_P^2 boundary sites.  The transfer matrix
     bond dimension chi_eff corresponds to the full local Hilbert space.
     Then:
         S = |dA| * ln(chi_eff) / 4 = (A/l_P^2) * ln(chi_eff) / 4
     For chi_eff = 2 (qubit per site): S = A * ln(2) / (4 l_P^2)
-    In bits: S_bits = A / (4 l_P^2)  --  the Bekenstein-Hawking formula.
+    In bits: S_bits = A / (4 l_P^2)  --  used here only as a bounded
+    comparison target, not a retained framework derivation.
 
 CHECKS:
   1. Area law R^2 > 0.999 (2D and 3D)
-  2. RT ratio S_exact / S_max ~ 1/4 across multiple lattice sizes
+  2. RT ratio finite-L comparison to 1/4 across multiple lattice sizes
   3. Gravity modulates entropy monotonically
   4. Frozen star entropy scales correctly with mass
   5. Species counting: RT ratio stable under Hilbert-space dimension change
   6. Finite-size trend of RT ratio
 
-PStack experiment: frontier-bh-entropy-derived
+Current-main interpretation:
+  use BH_ENTROPY_DERIVED_NOTE.md and BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md
+  as the canonical package boundary for this lane.
 """
 
 from __future__ import annotations
@@ -242,11 +245,11 @@ def check_1_area_law() -> dict:
 
 
 # ============================================================================
-# CHECK 2: RT ratio S_exact / S_max ~ 1/4  (the key derivation step)
+# CHECK 2: finite-L RT ratio comparison to 1/4
 # ============================================================================
 
 def check_2_rt_ratio() -> dict:
-    """Compute the Ryu-Takayanagi ratio: S_exact / (|dA| * ln chi_eff).
+    """Compute the finite-L RT comparison ratio: S_exact / (|dA| * ln chi_eff).
 
     In a tensor network, the maximum entanglement across a cut with bond
     dimension chi is S_max = |dA| * ln(chi).  The Ryu-Takayanagi formula
@@ -259,15 +262,16 @@ def check_2_rt_ratio() -> dict:
         S / S_max = 1/4
 
     We compute chi_eff from the transfer matrix SVD and measure S_exact
-    from the free-fermion correlation matrix.  The ratio should be ~1/4.
+    from the free-fermion correlation matrix. On current `main` this is a
+    bounded finite-L comparison to the `1/4` target, not a retained theorem.
 
     This is the BOND DIMENSION interpretation: the raw coefficient c ~ 0.41
     is not compared directly to 1/4.  Instead, the ratio S/(|dA| * ln chi)
     where chi = chi_eff (transfer matrix rank) gives ~0.24 ~ 1/4.
     """
     print("\n" + "=" * 72)
-    print("CHECK 2: RYU-TAKAYANAGI RATIO  S / (|dA| * ln chi_eff)")
-    print("   Target: 1/4 = 0.2500")
+    print("CHECK 2: FINITE-L RT COMPARISON  S / (|dA| * ln chi_eff)")
+    print("   Comparison target: 1/4 = 0.2500")
     print("=" * 72)
 
     results = {}
@@ -385,11 +389,11 @@ def check_2_rt_ratio() -> dict:
     results["dev_mean_2d"] = dev_mean_2d
     results["dev_mean_3d"] = dev_mean_3d
 
-    # The critical check: is the ratio within 15% of 1/4?
+    # Finite-L comparison check against the 1/4 target.
     pass_2d = dev_mean_2d < 15
     pass_3d = dev_mean_3d < 15
-    print(f"\n  PASS 2D (mean RT ratio within 15% of 1/4): {pass_2d}")
-    print(f"  PASS 3D (mean RT ratio within 15% of 1/4): {pass_3d}")
+    print(f"\n  2D finite-L comparison within 15% of 1/4: {pass_2d}")
+    print(f"  3D finite-L comparison within 15% of 1/4: {pass_3d}")
 
     results["pass_2d"] = pass_2d
     results["pass_3d"] = pass_3d
@@ -720,7 +724,7 @@ def synthesis(c1: dict, c2: dict, c3: dict, c4: dict,
               c5: dict, c6: dict) -> dict:
     """Assemble the derivation and report pass/fail."""
     print("\n" + "=" * 72)
-    print("SYNTHESIS: S_BH = A / (4 l_P^2) FROM LATTICE ENTANGLEMENT")
+    print("SYNTHESIS: BOUNDED BH ENTROPY COMPANION FROM LATTICE ENTANGLEMENT")
     print("=" * 72)
 
     verdicts = {}
@@ -739,7 +743,7 @@ def synthesis(c1: dict, c2: dict, c3: dict, c4: dict,
     dev_2d = c2.get("dev_mean_2d", 100)
     dev_3d = c2.get("dev_mean_3d", 100)
     pass_rt = dev_2d < 15 or dev_3d < 15
-    print(f"\n  2. RT RATIO S/(|dA| ln chi_eff) ~ 1/4:")
+    print(f"\n  2. RT RATIO finite-L comparison to 1/4:")
     print(f"     2D mean: {mean_2d:.4f}  (dev {dev_2d:.1f}%)")
     print(f"     3D mean: {mean_3d:.4f}  (dev {dev_3d:.1f}%)")
     print(f"     {'PASS' if pass_rt else 'FAIL'}: "
@@ -752,7 +756,7 @@ def synthesis(c1: dict, c2: dict, c3: dict, c4: dict,
     verdicts["gravity"] = mono
 
     # 4. Frozen star scaling
-    print(f"\n  4. FROZEN STAR: S_lat = S_BH by construction when RT = 1/4")
+    print(f"\n  4. FROZEN STAR: comparison identity when RT is set to 1/4")
     verdicts["frozen_star"] = True
 
     # 5. Species universality
@@ -782,21 +786,20 @@ def synthesis(c1: dict, c2: dict, c3: dict, c4: dict,
     print(f"  CHECKS PASSED: {n_pass}/{n_total}")
     print(f"  " + "=" * 60)
 
-    print(f"\n  DERIVATION:")
-    print(f"    (i)   Area law: S_ent = c * |dA|  [R^2 > 0.998]")
-    print(f"    (ii)  Transfer matrix defines bond dimension chi_eff")
-    print(f"    (iii) Ryu-Takayanagi ratio:")
+    print(f"\n  COMPANION SUMMARY:")
+    print(f"    (i)   Area-law-like scaling is numerically strong on the audited")
+    print(f"          finite lattice sizes.")
+    print(f"    (ii)  The transfer-matrix construction defines a bounded")
+    print(f"          bond-dimension comparison scale chi_eff.")
+    print(f"    (iii) Finite-L RT ratios are:")
     print(f"            S_ent / (|dA| * ln chi_eff)  =  {mean_2d:.4f} (2D)")
     print(f"                                          =  {mean_3d:.4f} (3D)")
-    print(f"            Target: 1/4 = 0.2500")
-    print(f"    (iv)  On Planck lattice (a = l_P), |dA| = A/l_P^2:")
-    print(f"            S = (A/l_P^2) * ln(chi_eff) / 4")
-    print(f"    (v)   In bits (S_bits = S_nats / ln chi):")
-    print(f"            S_bits = A / (4 l_P^2)")
-    print(f"          This is the Bekenstein-Hawking formula.")
-    print(f"\n    The 1/4 arises as the ratio of actual entanglement")
-    print(f"    to maximum entanglement across the boundary -- the lattice")
-    print(f"    ground state uses ~25% of the available bond capacity.")
+    print(f"            comparison target: 1/4 = 0.2500")
+    print(f"    (iv)  On current main, this is a bounded BH-comparison lane only.")
+    print(f"          The retained Widom no-go says the asymptotic coefficient on")
+    print(f"          this free-fermion carrier is 1/6, not 1/4.")
+    print(f"    (v)   Therefore the script does not derive the Bekenstein-Hawking")
+    print(f"          coefficient as a retained framework theorem.")
     print()
 
     verdicts["n_pass"] = n_pass
@@ -810,12 +813,13 @@ def synthesis(c1: dict, c2: dict, c3: dict, c4: dict,
 
 def main() -> None:
     print("=" * 72)
-    print("BEKENSTEIN-HAWKING ENTROPY FROM LATTICE: FULL DERIVATION")
-    print("S_BH = A / (4 l_P^2)")
+    print("BEKENSTEIN-HAWKING ENTROPY: BOUNDED LATTICE COMPANION")
+    print("Finite-L comparison to S_BH = A / (4 l_P^2)")
     print("=" * 72)
     print()
-    print("Derive S_BH from lattice entanglement using the Ryu-Takayanagi")
-    print("bond-dimension interpretation: S / (|dA| * ln chi_eff) = 1/4.")
+    print("Bounded comparison lane: finite-L lattice entanglement is compared")
+    print("to the Ryu-Takayanagi / Bekenstein-Hawking target, but current main")
+    print("does not treat this runner as a retained derivation.")
     print()
 
     t_start = time.time()

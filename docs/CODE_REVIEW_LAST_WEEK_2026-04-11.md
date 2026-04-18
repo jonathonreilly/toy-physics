@@ -146,6 +146,29 @@ None on current `main`.
      `BORN_RULE_ANALYSIS_2026-04-11.md` for the canonical current-main
      interpretation.
 
+15. `frontier_bh_entropy_derived.py` no longer presents itself as a retained
+    Bekenstein-Hawking derivation on current `main`.
+   - The live BH package was already bounded in the companion notes because of
+     the retained Widom no-go; the runner now says the same thing directly.
+   - Current-main treatment is a bounded BH-comparison lane on the present
+     free-fermion carrier, not a derived `1/4` coefficient theorem.
+
+16. `frontier_axioms_16card.py` and `frontier_staggered_potential_16card.py`
+    are now explicitly marked as historical legacy control harnesses.
+   - The review concern was real: these old card scripts still contain proxy or
+     tautological rows that should not be read as current evidence.
+   - On current `main`, their banners now tell users to prefer the cleaned
+     successor card surfaces instead of treating the legacy scores as live
+     support.
+
+17. `frontier_boundary_law_robustness.py` and `frontier_bmv_threebody.py`
+    now have explicit current-main guardrail banners.
+   - The boundary-law runner now describes itself as a bounded robustness
+     addendum rather than a generic proof-like probe.
+   - The standalone three-body branch-entanglement runner now clearly labels
+     itself as a historical heuristic diagnostic and defers canonical
+     interpretation to `frontier_branch_entanglement_robustness.py`.
+
 ## Verified False Positive From Agent Review
 
 One agent claimed `frontier_wilson_two_body_open.py` still computed center of

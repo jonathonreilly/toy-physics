@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Boundary-law robustness probe: multi-seed, multi-size, multi-partition checks.
+"""Bounded boundary-law robustness addendum: multi-seed, multi-size,
+multi-partition checks.
 
-Strengthens the boundary-law result from frontier_holographic_probe.py (R^2=0.9998
-on single seed) with systematic robustness checks:
+Strengthens the bounded boundary-law result from frontier_holographic_probe.py
+with systematic robustness checks:
 
   1. Multi-seed stability (5 seeds per lattice size)
   2. Size convergence (side=6,8,10,12,14)
@@ -10,8 +11,13 @@ on single seed) with systematic robustness checks:
   4. G-dependence of the coefficient (G=0,5,10,20)
   5. Coefficient error bars from multi-seed spread
 
-Physics: Dirac-sea correlation-matrix method (Peschel 2003) on staggered-fermion
-Hamiltonian with parity coupling, evolved under screened-Poisson self-gravity.
+Physics: Dirac-sea correlation-matrix method (Peschel 2003) on a
+staggered-fermion Hamiltonian with parity coupling, evolved under
+screened-Poisson self-gravity.
+
+Current-main boundary:
+  this is a bounded many-body-style boundary-law robustness addendum on the
+  periodic lattice, not a holography proof.
 """
 
 from __future__ import annotations
@@ -307,7 +313,7 @@ def run_experiment():
     t_global = time.time()
 
     print("=" * 80)
-    print("BOUNDARY-LAW ROBUSTNESS PROBE")
+    print("BOUNDED BOUNDARY-LAW ROBUSTNESS ADDENDUM")
     print("Multi-seed, multi-size, multi-partition, multi-G checks")
     print("=" * 80)
     print()
@@ -530,11 +536,12 @@ def run_experiment():
             print(f"  {ptype} partition: R^2 = {r2s.mean():.6f} +/- {r2s.std():.6f}")
 
     if all_r2.mean() > 0.95:
-        print("\n  ==> BOUNDARY LAW ROBUSTLY CONFIRMED across seeds, sizes, G, partitions")
+        print("\n  ==> BOUNDED boundary-law scaling is robust across the audited")
+        print("      seeds, sizes, couplings, and partition families.")
     elif all_r2.mean() > 0.85:
-        print("\n  ==> Boundary law holds with moderate robustness")
+        print("\n  ==> Bounded boundary-law scaling holds with moderate robustness")
     else:
-        print("\n  ==> Boundary law NOT robust -- further investigation needed")
+        print("\n  ==> Boundary-law robustness is insufficient on this audited surface")
 
     elapsed = time.time() - t_global
     print(f"\n  Total elapsed: {elapsed:.1f}s")
