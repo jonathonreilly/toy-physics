@@ -352,6 +352,56 @@ What is not exact now:
   physical lattice followed by only the `3` scalar spectral identities
   `Tr(B_e^k) = Tr(H_e^k)` for `k = 1, 2, 3`; and the present bank still fails
   already at that first local Hermitian source layer
+- and the new step-2 Wilson local Hermitian four-source minimality theorem
+  closes the last obvious finite shortcut on that same constructive lane: the
+  local Hermitian nearest-neighbor `4`-source packet is not only sufficient but
+  dimensionally minimal, so no honest generic local Hermitian `3`-source
+  shortcut can determine arbitrary Wilson constructive packet data
+- and the new step-2 Wilson local Hermitian minimal-certificate theorem then
+  packages the whole Wilson front at its sharpest reviewer-facing level: the
+  compressed Wilson route is now exactly one minimal local Hermitian `4 + 3`
+  certificate, namely one **minimal** nearest-neighbor Hermitian `4`-source
+  packet on the physical lattice followed by only the `3` scalar spectral
+  identities `Tr(B_e^k) = Tr(H_e^k)` for `k = 1, 2, 3`; and the present bank
+  still fails already at that first minimal local Hermitian source layer
+- and the new step-2 Wilson local Hermitian chain-plane target theorem then
+  sharpens that same Wilson front from packet coordinates to its right local
+  invariant object: the minimal nearest-neighbor Hermitian `4`-source packet is
+  exactly equivalent to one real-linear injective Hermitian embedding of the
+  physical nearest-neighbor chain plane
+  `Psi_chain : V_chain^H -> Herm(H_W)`, with
+  `V_chain^H = span_R{X_12, Y_12, X_23, Y_23} subset Herm(3)`; and the present
+  bank still does **not** realize even that restricted local embedding
+- and the new step-2 Wilson local chain-plane minimal-certificate theorem then
+  packages the whole Wilson front at its sharpest invariant local level too:
+  the compressed Wilson route is now exactly one minimal local chain-plane
+  `4 + 3` certificate, namely one minimal Hermitian embedding
+  `Psi_chain : V_chain^H -> Herm(H_W)` on the physical nearest-neighbor chain
+  plane followed by only the `3` scalar spectral identities
+  `Tr(B_e^k) = Tr(H_e^k)` for `k = 1, 2, 3`; and the present bank still fails
+  already at that first invariant local layer
+- and the new step-2 Wilson local chain path-algebra target theorem then
+  sharpens the same Wilson bottleneck once more from the restricted Hermitian
+  chain plane to its canonical local algebra object: the adjacent physical
+  two-edge chain already generates one local path algebra `A_chain`, and the
+  sharpest Wilson local constructive primitive is now exactly one local unital
+  `*`-monomorphism `Phi_chain : A_chain -> End(H_W)` whose Hermitian
+  restriction is `Psi_chain`; and the present bank still does **not** realize
+  even that sharper local algebra object
+- and the new step-2 Wilson local path-algebra minimal-certificate theorem
+  then packages the whole Wilson front at its sharpest physical local algebra
+  level too: the compressed Wilson route is now exactly one minimal local
+  path-algebra `2-edge + 3` certificate, namely one local unital
+  `*`-monomorphism `Phi_chain : A_chain -> End(H_W)` on the adjacent physical
+  two-edge chain followed by only the `3` scalar spectral identities
+  `Tr(B_e^k) = Tr(H_e^k)` for `k = 1, 2, 3`; and the present bank still fails
+  already at that first local algebraic layer
+- and the new step-2 Wilson local path-algebra current-bank nonrealization
+  theorem closes the matching hidden-object loophole at that same sharpness
+  level: the current bank does **not** already realize the local path-algebra
+  embedding `Phi_chain` under another name, because it still lacks the
+  upstream Wilson-side embedding/compression object and still fails already at
+  the local two-edge and restricted chain-plane layers
 - and the new PMNS sole-axiom native-current route-exhaustion theorem closes
   the last obvious PMNS-native loophole: there is no overlooked exact
   sole-axiom PMNS-native route to nonzero `J_chi` on the current bank, so the
@@ -1103,8 +1153,18 @@ The current sharpened read is stricter than before:
 - on the Wilson compressed route, the invariant missing object is now the
   matrix-source embedding `Phi_e`, more sharply the weaker Hermitian source
   embedding `Psi_e`, and sharpest of all the invariant Wilson compressed-
-  resolvent block law `P_e S_W P_e |_(Ran(P_e)) ~= H_e`; while the finite
-  response count is already known to be minimally `9`
+  resolvent block law `P_e S_W P_e |_(Ran(P_e)) ~= H_e`; but on the physical
+  lattice the remaining constructive Wilson content has now been reduced all
+  the way to the local path-algebra embedding
+  `Phi_chain : A_chain -> End(H_W)` on one adjacent two-edge chain, more
+  sharply its restricted local Hermitian chain-plane embedding
+  `Psi_chain : V_chain^H -> Herm(H_W)` with
+  `V_chain^H = span_R{X_12, Y_12, X_23, Y_23}`, so the whole Wilson route is
+  now exactly one minimal local path-algebra `2-edge + 3` certificate,
+  equivalently one minimal local chain-plane `4 + 3` certificate; and the
+  current bank is now closed negatively even at that sharpest local algebraic
+  level; while the full finite response count is still known to be minimally
+  `9`
 - on the PMNS-native route, fixed-slice readout is now closed, so the
   remaining blocker is production of nonzero `J_chi`, not another collapse law;
   and on the strongest PMNS-native microscopic lane that blocker is now pinned

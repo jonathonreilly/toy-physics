@@ -820,6 +820,76 @@ def part1_reference_surface() -> None:
         and "a positive Wilson-to-`dW_e^H` theorem" in local_hermitian_cert,
     )
 
+    local_four_min = read("docs/PERRON_FROBENIUS_STEP2_WILSON_LOCAL_HERMITIAN_FOUR_SOURCE_MINIMALITY_NOTE_2026-04-18.md")
+    check(
+        "Step-2 Wilson local Hermitian four-source minimality note records that the local Hermitian Wilson source route is dimensionally minimal at four real channels, so no honest generic local Hermitian 3-source shortcut exists on that lane",
+        "`dim_R V_loc^H = 4`" in local_four_min
+        and "If `m < 4`, then `L` cannot be injective." in local_four_min
+        and "exact minimal finite number of real local Hermitian source" in local_four_min
+        and "is `4`" in local_four_min
+        and "no honest generic local Hermitian `3`-source shortcut exists" in local_four_min,
+    )
+
+    local_min_cert = read("docs/PERRON_FROBENIUS_STEP2_WILSON_LOCAL_HERMITIAN_MINIMAL_CERTIFICATE_NOTE_2026-04-18.md")
+    check(
+        "Step-2 Wilson local Hermitian minimal-certificate note records that the whole Wilson compressed route now has the minimal local Hermitian 4+3 form: one minimal nearest-neighbor 4-source packet plus only the 3 scalar spectral identities, with the current bank still failing already at the first minimal local Hermitian layer",
+        "minimal local Hermitian `4 + 3` certificate" in local_min_cert
+        and "local Hermitian nearest-neighbor `4`-source packet" in local_min_cert
+        and "already known to be minimal" in local_min_cert
+        and "`Tr(B_e^k) = Tr(H_e^k)` for `k = 1, 2, 3`" in local_min_cert
+        and "current bank still does **not** realize the local Hermitian" in local_min_cert,
+    )
+
+    chain_plane = read("docs/PERRON_FROBENIUS_STEP2_WILSON_LOCAL_HERMITIAN_CHAIN_PLANE_TARGET_NOTE_2026-04-18.md")
+    check(
+        "Step-2 Wilson local Hermitian chain-plane target note records that the minimal local Hermitian 4-source packet is exactly equivalent to one real-linear injective Hermitian embedding Psi_chain of the physical nearest-neighbor chain plane V_chain^H, with the current bank still failing even that restricted local embedding",
+        "`Psi_chain : V_chain^H -> Herm(H_W)`" in chain_plane
+        and "`V_chain^H := span_R{ X_12, Y_12, X_23, Y_23 } subset Herm(3)`" in chain_plane
+        and "exactly equivalent" in chain_plane
+        and "current bank still does **not** realize even the restricted local" in chain_plane
+        and "a positive Wilson-to-`dW_e^H` theorem" in chain_plane,
+    )
+
+    chain_plane_cert = read("docs/PERRON_FROBENIUS_STEP2_WILSON_LOCAL_CHAIN_PLANE_MINIMAL_CERTIFICATE_NOTE_2026-04-18.md")
+    check(
+        "Step-2 Wilson local chain-plane minimal-certificate note records that the whole Wilson compressed route now has the invariant local 4+3 form: one minimal Hermitian embedding Psi_chain of the physical nearest-neighbor chain plane plus only the 3 scalar spectral identities, with the current bank still failing already at the first chain-plane layer",
+        "minimal local chain-plane `4 + 3` certificate" in chain_plane_cert
+        and "`Psi_chain : V_chain^H -> Herm(H_W)`" in chain_plane_cert
+        and "already minimal" in chain_plane_cert
+        and "`Tr(B_e^k) = Tr(H_e^k)` for `k = 1, 2, 3`" in chain_plane_cert
+        and "current bank still does **not** realize the local chain-plane" in chain_plane_cert,
+    )
+
+    chain_path_alg = read("docs/PERRON_FROBENIUS_STEP2_WILSON_LOCAL_CHAIN_PATH_ALGEBRA_TARGET_NOTE_2026-04-18.md")
+    check(
+        "Step-2 Wilson local chain path-algebra target note records that the sharpest Wilson local constructive primitive is exactly one local unital *-monomorphism Phi_chain of the physical adjacent two-edge chain path algebra A_chain, whose Hermitian restriction is Psi_chain, with the current bank still failing even that local algebra object",
+        "`Phi_chain : A_chain -> End(H_W)`" in chain_path_alg
+        and ("local path algebra" in chain_path_alg or "local path-algebra" in chain_path_alg)
+        and "`Psi_chain : V_chain^H -> Herm(H_W)`" in chain_path_alg
+        and "current bank still does **not** realize even the local path-algebra" in chain_path_alg
+        and "a positive Wilson-to-`dW_e^H` theorem" in chain_path_alg,
+    )
+
+    path_alg_cert = read("docs/PERRON_FROBENIUS_STEP2_WILSON_LOCAL_PATH_ALGEBRA_MINIMAL_CERTIFICATE_NOTE_2026-04-18.md")
+    check(
+        "Step-2 Wilson local path-algebra minimal-certificate note records that the whole Wilson compressed route now has the sharpest physical local algebra form: one minimal local path-algebra embedding Phi_chain on the adjacent two-edge chain plus only the 3 scalar spectral identities, with the current bank still failing already at the first local algebraic layer",
+        "minimal local path-algebra `2-edge + 3` certificate" in path_alg_cert
+        and "`Phi_chain : A_chain -> End(H_W)`" in path_alg_cert
+        and "already known to be physically minimal" in path_alg_cert
+        and "`Tr(B_e^k) = Tr(H_e^k)` for `k = 1, 2, 3`" in path_alg_cert
+        and "current bank still does **not** realize the local path-algebra" in path_alg_cert,
+    )
+
+    path_alg_nonreal = read("docs/PERRON_FROBENIUS_STEP2_WILSON_LOCAL_PATH_ALGEBRA_CURRENT_BANK_NONREALIZATION_NOTE_2026-04-18.md")
+    check(
+        "Step-2 Wilson local path-algebra current-bank nonrealization note records that the current bank does not already realize Phi_chain under another name because it still lacks the upstream Wilson-side embedding/compression object and still fails already at the local two-edge and restricted chain-plane layers",
+        "`Phi_chain`" in path_alg_nonreal
+        and "does **not** already realize the local" in path_alg_nonreal
+        and "still lacks the upstream Wilson-side" in path_alg_nonreal
+        and "local adjacent two-edge source" in path_alg_nonreal
+        and "restricted local Hermitian chain-plane layer" in path_alg_nonreal,
+    )
+
     pmns_native_exhaust = read("docs/PMNS_SOLE_AXIOM_NATIVE_CURRENT_ROUTE_EXHAUSTION_NOTE_2026-04-17.md")
     check(
         "PMNS sole-axiom native-current route-exhaustion note records that no overlooked exact PMNS-native route to nonzero J_chi remains on the current bank and that the next honest PMNS-native target is now a sharper fixed-slice current-image collapse law",
@@ -1190,6 +1260,34 @@ def part3_cross_sector_boundary() -> None:
     support(
         "Compressed Wilson local Hermitian sharpest certificate",
         "the whole Wilson compressed route now has a matching local Hermitian constructive package too: one nearest-neighbor Hermitian 4-source packet on the physical lattice, then only the 3 scalar spectral identities Tr(B_e^k)=Tr(H_e^k) for k=1,2,3",
+    )
+    support(
+        "Compressed Wilson local Hermitian four-source minimality",
+        "that local Hermitian constructive packet is now known to be dimensionally minimal too: the local Hermitian nearest-neighbor source space has real dimension 4, so no honest generic local Hermitian 3-source shortcut can determine arbitrary Wilson constructive packet data",
+    )
+    support(
+        "Compressed Wilson local Hermitian minimal certificate",
+        "the whole Wilson compressed route now has its sharpest reviewer-facing form: one minimal local Hermitian nearest-neighbor 4-source packet on the physical lattice, then only the 3 scalar spectral identities Tr(B_e^k)=Tr(H_e^k) for k=1,2,3",
+    )
+    support(
+        "Compressed Wilson local Hermitian chain-plane target",
+        "the Wilson front is now sharper than a basis packet too: the minimal local Hermitian nearest-neighbor 4-source packet is exactly one real-linear injective Hermitian embedding Psi_chain of the physical nearest-neighbor chain plane V_chain^H = span_R{X_12,Y_12,X_23,Y_23}",
+    )
+    support(
+        "Compressed Wilson local chain-plane minimal certificate",
+        "the whole Wilson compressed route now has its sharpest invariant local form: one minimal Hermitian embedding Psi_chain of the physical nearest-neighbor chain plane V_chain^H, then only the 3 scalar spectral identities Tr(B_e^k)=Tr(H_e^k) for k=1,2,3",
+    )
+    support(
+        "Compressed Wilson local chain path-algebra target",
+        "the Wilson bottleneck is now sharper again in physical local algebra language: the adjacent two-edge chain generates one local path algebra A_chain, and the sharpest local constructive primitive is exactly one local unital *-monomorphism Phi_chain whose Hermitian restriction is the chain-plane embedding Psi_chain",
+    )
+    support(
+        "Compressed Wilson local path-algebra minimal certificate",
+        "the whole Wilson compressed route now has its sharpest physical local algebra form: one minimal local path-algebra embedding Phi_chain on the adjacent two-edge chain, then only the 3 scalar spectral identities Tr(B_e^k)=Tr(H_e^k) for k=1,2,3",
+    )
+    support(
+        "Compressed Wilson local path-algebra current-bank nonrealization",
+        "the current bank is now explicitly closed negatively at that same sharpness level too: it does not already realize the local path-algebra embedding Phi_chain under another name, because it still fails upstream at the Wilson-side embedding/compression object and already fails downstream at the local two-edge and restricted chain-plane layers",
     )
     support(
         "PMNS fixed-slice readout closure",
