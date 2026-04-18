@@ -1,9 +1,15 @@
-# Koide Q = 2/3 as a C_3[111] Character-Theoretic Derivation — Candidate Retention Note
+# Koide Q = 2/3 as a C_3[111] Character-Theoretic Derivation — Candidate Extension Note
 
 **Date:** 2026-04-18
-**Status:** CANDIDATE PARTIAL FRAMEWORK PREDICTION — awaiting review for retention
+**Status:** candidate extension note — exact circulant/character bridge on the
+retained `C_3[111]` orbit, but no retained Koide derivation on the current
+surface
 **Relates to:** `docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md`,
-`docs/CHARGED_LEPTON_ASSUMPTION_AUDIT_2026-04-17.md`,
+`docs/HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md`,
+`docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md`,
+`docs/KOIDE_CIRCULANT_CHARACTER_BRIDGE_NOTE_2026-04-18.md`,
+`docs/KOIDE_SQRTM_AMPLITUDE_PRINCIPLE_NOTE_2026-04-18.md`,
+`docs/KOIDE_POSITIVE_PARENT_AXIS_OBSTRUCTION_NOTE_2026-04-18.md`,
 `docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`
 
 ## Summary
@@ -12,12 +18,18 @@ The charged-lepton Koide relation
 ```
 Q = (m_e + m_μ + m_τ) / (√m_e + √m_μ + √m_τ)² = 2/3
 ```
-is shown to be an **algebraic consequence** of two axiom-level ingredients of
-Cl(3) on Z³ plus one specific structural assumption. Previously listed as
-Layer-5 assumption `A5.1` ("Q = 2/3 exact") and `A5.2` ("Koide meaningful, not
-coincidence") in the charged-lepton assumption audit, this note promotes Q = 2/3
-from **coincidence-status to candidate framework prediction**, pending review of
-one equipartition assumption and one phenomenological identification.
+admits a new **operator-space reformulation** on the retained `Cl(3)` on `Z^3`
+surface. On the retained `hw=1` triplet, every Hermitian operator commuting with
+the `C_3[111]` action is circulant, and its eigenvalue triple has exactly the
+Brannen/Rivero cosine form. If one further assumes the matrix-space
+equipartition condition `A1` and the phenomenological identification `P1`, then
+Koide `Q = 2/3` follows algebraically.
+
+This does **not** change the current retained charged-lepton status. The
+authoritative April 17 review still stands: on the present retained surface the
+charged-lepton sector is bounded observational-pin only. The contribution of
+this note is to isolate the exact retained backbone `(R1, R2)` and sharpen the
+candidate extension route beyond it.
 
 The three charged-lepton masses reduce to a **one-parameter family** (plus
 overall scale) given Koide:
@@ -88,11 +100,42 @@ This fixes the **√2 coefficient** in the Brannen/Rivero form:
 - Schur orthogonality between irrep sectors of C_3 on `M_3(ℂ)`
 
 **This assumption is the one load-bearing non-axiom step.** It is the
-magnitude-squared equipartition primitive discussed in the assumption audit
-(`CHARGED_LEPTON_ASSUMPTION_AUDIT_2026-04-17.md` Layer 4). It is NOT retained as a
+magnitude-squared selection step of this candidate lane. It is NOT retained as a
 theorem on the current surface.
 
-## One phenomenological identification
+## Exact bridge to the April 17 Koide package
+
+Let `λ = (λ_0, λ_1, λ_2)` be the eigenvalue triple of the circulant Hermitian
+```
+H = a·I + b·C + b̄·C²,
+```
+and let `ω = e^{2πi/3}`. Then
+```
+λ_k = a + b ω^k + b̄ ω^{-k}.
+```
+Taking the `C_3` character decomposition of the triple `λ` itself gives
+```
+a_0 = (λ_0 + λ_1 + λ_2) / √3 = √3 · a,
+z   = (λ_0 + ω̄ λ_1 + ω λ_2) / √3 = √3 · b.
+```
+Therefore
+```
+a_0² = 2 |z|²    ⟺    3a² = 6|b|².
+```
+
+So `A1` is **not** a new independent primitive relative to the April 17 Koide
+package. It is the operator-space lift of the same equal-character-weight
+condition already isolated in Theorem 1 of
+`CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md`, now applied to the
+circulant eigenvalue triple. The genuine open question is the **selection
+principle** for this equality, not the algebraic bridge itself. On the current
+science stack, the sharpest named candidate selection principle remains the
+real-irrep-block-democracy lane of `HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md`.
+Written in operator-space block energies
+`E_+ = 3a²`, `E_⊥ = 6|b|²`, `A1` is exactly the same candidate principle in a
+different coordinate system.
+
+## One open identification problem
 
 ### P1. Spectral eigenvalues correspond to √m, not m
 
@@ -105,15 +148,24 @@ reproduces observed charged-lepton masses to sub-percent precision at
 `δ = 2/9 rad` (see §"Verification"). An alternative identification `λ_k = m_k`
 would NOT give Koide `Q = 2/3`.
 
-**Status:** This identification is empirical, motivated by the Koide relation
-itself (which is naturally expressed in `√m` space). It is NOT derived from
-Cl(3)/Z³. Possible structural origins for future investigation:
+**Status:** This identification is not retained today, but it is no longer a
+free phenomenological guess. The new
+`KOIDE_SQRTM_AMPLITUDE_PRINCIPLE_NOTE_2026-04-18.md` narrows it to a concrete
+internal route: derive a positive quadratic parent operator `M` on the Koide
+lane whose principal square root `M^(1/2)` is the circulant amplitude operator.
+Then `eig(M^(1/2)) = √eig(M)` gives `λ_k = √m_k` automatically. The new
+obstruction note sharpens the remaining gap: a nontrivial positive
+`C_3[111]` parent lives in the eigenvalue/Fourier channel, while the current
+retained charged-lepton readout is axis-diagonal (`U_e = I_3`). So the live
+problem is now the parent **plus** the readout primitive, not the square-root
+functional calculus itself.
+Possible structural routes:
 - Dirac spinor normalization (fermion wave functions have `√m` character)
-- Square-root structure of Clifford algebra (Cl(3) spinors carry half-integer
-  scaling)
-- Second-order return theorem: hw=1 intermediate-space matrix elements are
-  second-order in Γ_1, giving m² in one convention but m^1 after taking square
-  root of the cascade
+- LSZ-style one-leg amplitude readout from a positive quadratic parent
+- principal positive square root of a `C_3[111]`-covariant parent mass operator
+- second-order return theorem: hw=1 intermediate-space matrix elements are
+  quadratic, so physical linear amplitudes naturally arise on the square-root
+  branch
 
 ## Koide Q = 2/3 as algebraic consequence
 
@@ -188,41 +240,74 @@ identified. Candidate derivations tested:
 ### O2. Scale v_0
 
 The overall scale `v_0 = 17.72 √MeV` determines absolute masses given the
-ratios. Likely derivable from the retained hierarchy theorem
-`v = M_Pl × (7/8)^(1/4) × α_LM^{16}` via a generation-sector normalization, but
-this computation has not been performed.
+ratios. No retained derivation of this scale is currently known on the charged-
+lepton lane. The hierarchy theorem retains
+`v = M_Pl × (7/8)^(1/4) × α_LM^{16}`, but that does **not** by itself supply an
+independent lepton-sector first-power `(7/8)` factor, and reusing `(7/8)` in
+that way would risk double-counting. So the present `v_0` story is still a
+heuristic near-match problem, not a framework-correct closure.
 
-### O3. Justification of the equipartition assumption A1
+### O3. Selection principle for the equal-character-weight / A1 condition
 
-The 3:6 Frobenius-norm equipartition giving √2 requires structural grounding.
-Candidates listed above; none rigorously derived. This is the same load-bearing
-step flagged as Primitive D / magnitude-squared equipartition in the assumption
-audit.
+The exact bridge above shows that `A1` is the matrix-space form of the
+equal-character-weight condition `a_0² = 2|z|²`. What remains open is not the
+algebraic equivalence, but the charged-lepton-specific mechanism that selects
+it. Candidates listed above remain non-retained. The current sharpest named
+selection principle is still the April 17 real-irrep-block-democracy primitive.
 
-### O4. Justification of the √m identification P1
+### O4. Derive the positive parent behind the `√m` amplitude readout
 
-Why do circulant eigenvalues correspond to `√m` rather than `m` or `m²`?
-Not currently derived; observationally forced.
+The square-root map itself is now structurally narrowed: the repo already uses
+it when passing from quadratic parents to one-leg amplitudes. The live question
+is which positive `C_3[111]`-covariant parent operator `M` on the charged-lepton
+lane has principal square root `M^(1/2)` equal to the candidate circulant
+amplitude operator, **and** what retained readout makes that nontrivial
+eigenvalue channel physical despite the current `U_e = I_3` axis readout.
 
-## Impact on retained audit
+The constructive target is now smaller than a generic `Herm(3)` reconstruction:
+the Koide lane needs only the `3`-real `C_3[111]`-covariant Hermitian family
+`a I + b C + b* C²`, and Koide itself cuts that to a `2`-real scale-plus-phase
+subfamily. So the next positive attack is not "derive an arbitrary charged
+Hermitian block", but "derive the microscopic source law for the cyclic
+`3`-response Wilson descendant, then the single selector equation landing it on
+the Koide cone." See
+[KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md](./KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md)
+and
+[KOIDE_CYCLIC_WILSON_DESCENDANT_LAW_NOTE_2026-04-18.md](./KOIDE_CYCLIC_WILSON_DESCENDANT_LAW_NOTE_2026-04-18.md).
+For the ranked positive-path map, with fresh axiom-only routes placed ahead of
+transplant routes, see
+[KOIDE_POSITIVE_PATHS_FIRST_PRINCIPLES_NOTE_2026-04-18.md](./KOIDE_POSITIVE_PATHS_FIRST_PRINCIPLES_NOTE_2026-04-18.md).
 
-If accepted with caveats, this note **promotes assumptions A5.1 and A5.2** of
-the charged-lepton assumption audit:
+## Relation to the current retained charged-lepton status
 
-**Before:** `A5.1: Q = 2/3 exact (assumption)` and `A5.2: Koide meaningful
-(numerical coincidence vs signal)`.
+The current authoritative retained statement remains the April 17 charged-lepton
+review:
 
-**After:** Q = 2/3 is axiom-derived modulo equipartition (A1) and √m
-identification (P1). Koide is a signal, not a coincidence — it's the C_3[111]
-character-theoretic consequence of the retained generation structure.
+- on the present retained surface, Koide is **structurally compatible** with the
+  retained `hw=1` algebra;
+- the framework does **not** yet derive Koide as a sole-axiom theorem output;
+- charged-lepton closure remains a **bounded observational pin**.
 
-The three-mass derivation problem reduces to a **one-parameter problem**:
-- Derive the overall scale `v_0` (framework-tractable via hierarchy theorem)
-- Derive the phase `δ = 2/9 rad` (OPEN)
+This note does not supersede that result. It contributes a new exact
+operator-space interpretation of the Brannen/Rivero ansatz and a cleaner
+candidate extension route:
+
+- `R1` and `R2` are exact retained statements;
+- `A1` is the operator-space form of the same equal-character-weight condition
+  already isolated in the April 17 package;
+- `P1` is narrowed to the positive-parent / one-leg-amplitude construction;
+- the scale / phase questions remain open.
+
+So the science stack is:
+
+- **retained now:** April 17 bounded charged-lepton package;
+- **new here:** exact circulant/character bridge and sharper candidate extension
+  language;
+- **not retained yet:** any upgrade from bounded to derived.
 
 ## Proposed status classification
 
-**CANDIDATE PARTIAL FRAMEWORK PREDICTION — AWAITING REVIEW**
+**CANDIDATE EXTENSION ROUTE — SCIENCE-CLEAN BUT NOT RETAINED**
 
 This is a reduction of the charged-lepton mass-hierarchy problem, not a full
 closure. The circulant form (R1, R2) is axiom-clean; the equipartition (A1)
@@ -230,10 +315,14 @@ and √m identification (P1) are structural assumptions requiring either
 derivation or formal acceptance as retained primitives. Koide Q = 2/3 holds
 exactly given R1+R2+A1+P1.
 
-If retained as a partial prediction:
-- The bounded `TRUE_NO_PREDICTION` status on Q = 2/3 promotes to RETAINED
-- The three-mass problem reframes as "derive δ = 2/9 and v_0"
-- The review note's Layer-5 assumptions receive a concrete derivation pathway
+This is a proposal for a future retained extension route, not a correction to
+the present charged-lepton framework state.
+
+If a future retained extension supplies:
+- a charged-lepton-specific selection principle for `A1`, and
+- either a retained derivation or explicit primitive for `P1`,
+
+then the current bounded status can be revisited on a clean science surface.
 
 If the equipartition (A1) or √m identification (P1) are rejected:
 - Koide remains a coincidence-class observation
@@ -273,8 +362,10 @@ or hierarchy-theorem scale is a downstream question.
 
 ## File references
 
-- Parent review: `CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md`
-- Audit context: `CHARGED_LEPTON_ASSUMPTION_AUDIT_2026-04-17.md`
+- Current retained-status authority: `CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md`
+- Algebraic Koide cone equivalence: `CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md`
+- Higher-order closure / real-irrep-block democracy: `HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md`
+- Circulant/character bridge companion: `KOIDE_CIRCULANT_CHARACTER_BRIDGE_NOTE_2026-04-18.md`
 - Generation-space theorem: `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`
 - C_3[111] retained surface: `HW1_SECOND_ORDER_RETURN_SHAPE_THEOREM_NOTE.md`
 - Literature: Brannen 2006 (unpublished notes); Rivero/Gsponer hep-ph/0505220;
@@ -289,11 +380,12 @@ or hierarchy-theorem scale is a downstream question.
 Four follow-up agents investigated the four open items (O1-O4). Arithmetic
 verified independently. Results summarized below.
 
-## A.1  v_0 scale NEAR-CLOSURE (updates O2)
+## A.1  v_0 scale HEURISTIC NEAR-MATCH (updates O2)
 
-Using only retained framework constants (`v = 246.283 GeV`, `α_LM = 0.0907`,
-`(7/8)` from the hierarchy theorem), the following identifications match
-observed values to <1% precision:
+Using retained `v = 246.283 GeV` and `α_LM = 0.0907`, plus a **heuristic**
+first-power reuse of the hierarchy APBC datum `(7/8)` as a lepton-sector
+multiplier, the following identifications match observed values to <1%
+precision:
 
 ```
 m_τ       ≈ v × α_LM² × (7/8)              = 1.7729 GeV   vs 1.77686 GeV   (0.22% off)
@@ -307,12 +399,20 @@ v_0       ≈ √[v × α_LM² × (7/8)] / (1+√2 cos(2/9))  = 17.696 √MeV   
 - `v × α_LM² × (7/8) = 2.0262 × 0.875 = 1.7729 GeV` ✓
 - Observed `m_τ = 1.77686 GeV`, residual `(1.7729 - 1.77686)/1.77686 = -0.22%` ✓
 
-**Structural remark.** The cascade `v × α_LM² × (7/8)` uses α_LM raised to
-integer power 2 (two additional cascade steps below the EW hierarchy's
-α_LM^{16}), together with the (7/8) factor raised to integer power 1 (vs
-(7/8)^{1/4} in the EW hierarchy). **The one remaining structural question
-is why the lepton sector carries (7/8)^1, not (7/8)^{1/4} or (7/8)^0,
-relative to the EW cascade.** This is a sharper, narrower version of O2.
+**Structural remark.** This appendix entry does **not** use only retained
+framework constants in the strict sense. The cascade `v × α_LM² × (7/8)` uses
+α_LM raised to integer power 2 (two additional cascade steps below the EW
+hierarchy's `α_LM^{16}`), together with the APBC datum `(7/8)` raised to
+integer power 1 (vs `(7/8)^{1/4}` in the EW hierarchy). This is **not**
+currently a retained derivation: the hierarchy theorem retains
+`(7/8)^(1/4)` for `v`, not an independent first-power `(7/8)` lepton-sector
+factor, and
+`docs/HIGGS_MASS_HIERARCHY_CORRECTION_NOTE.md`
+already warns that naïve first-power reuse is a double-count risk. The result
+should therefore be read as a numerical clue only, not a framework-correct
+closure. The sharpened structural question is whether there exists a
+**non-double-counted** lepton-sector selector whose canonical value happens to
+be `(7/8)^1`.
 
 ## A.2  δ = 2/9 rad — dimensional-ratio structural identity (updates O1)
 
@@ -378,7 +478,7 @@ observation. The electron being just below the critical angle π/12
 leptons specifically fit between these two extremal structures — a
 near-critical arrangement.
 
-## A.4  √m vs m identification — remains PHENOMENOLOGICAL (O4)
+## A.4  √m vs m identification — narrowed to the positive-parent route (O4)
 
 Systematic search of axiom-level operator interpretations found:
 
@@ -387,17 +487,20 @@ Systematic search of axiom-level operator interpretations found:
    not [mass]^{1/2}.
 2. The Hermitian circulant `H = a·I + b·C + b̄·C²` has dimensionless
    eigenvalues unless `a, b` are imported with dimensions. The retained
-   hierarchy theorem gives `v` in mass units, not `√mass`. **No axiom
-   construction delivers [mass]^{1/2}.**
-3. The "spinor amplitude ~ √m" argument (Dirac `u(p) ~ √(E+m)`) is a
-   canonical QFT normalization convention, not a Cl(3)/Z³ consequence.
-4. The shape theorem operator `Σ` is LINEAR in weight, so its eigenvalues
-   inherit weight units directly — suggesting m, not √m.
+   hierarchy theorem gives `v` in mass units, not `√mass`, so a parent
+   operator is still needed.
+3. The repo now supports a sharper internal route: if there exists a positive
+   quadratic parent `M`, then the one-leg amplitude operator `M^(1/2)` carries
+   eigenvalues `√m` exactly; this matches both the charged-lepton convention-B
+   square-root readout and the LSZ square-root rule.
+4. What is still missing is the charged-lepton-specific parent `M` itself, plus
+   the retained readout primitive that escapes the current axis-diagonal
+   obstruction.
 
-**Verdict:** P1 is not axiom-derivable under strict Cl(3)/Z³. It remains
-a phenomenological identification. For the Koide derivation to close
-fully, P1 must be accepted as a named retained primitive OR an additional
-axiom-internal construction must identify circulant eigenvalues with √m.
+**Verdict:** P1 is not retained yet, but it has narrowed from a generic
+phenomenological guess to a concrete positive-parent / one-leg-amplitude
+construction problem, now tightly coupled to the axis-vs-eigenvalue readout
+obstruction.
 
 ## A.5  Updated status summary
 
@@ -405,39 +508,44 @@ axiom-internal construction must identify circulant eigenvalues with √m.
 |---|---|---|
 | R1 Circulant form on C_3 orbit | AXIOM-CLEAN | Exact |
 | R2 Eigenvalue spectrum | AXIOM-CLEAN | Exact |
-| A1 √2 equipartition | Charged-lepton-specific assumption | Exact under A1 |
-| Koide Q = 2/3 | AXIOM-DERIVED given A1+P1 | Exact |
-| **v_0 scale (O2)** | **NEAR-CLOSED** via `v × α_LM² × (7/8)` | **0.22% on m_τ** |
+| A1 √2 equipartition | Charged-lepton-specific candidate principle; **not retained** | Exact if assumed |
+| Koide Q = 2/3 | Conditional algebraic consequence of `R1+R2+A1+P1`; **not retained today** | Exact under those assumptions |
+| **v_0 scale (O2)** | **HEURISTIC NEAR-MATCH ONLY** via `v × α_LM² × (7/8)`; **not a retained hierarchy input** | **0.22% on m_τ** |
 | δ = 2/9 rad (O1) | PARTIAL: `δ = 2/dim(Herm_3)` exact; needs rad-unit bridge | Exact ratio, bridge open |
 | Quark Koide extension | CHARGED-LEPTON-SPECIFIC (Q=2/3 not universal) | n/a |
-| √m identification (P1) | **PHENOMENOLOGICAL** — no axiom derivation | Empirical |
+| √m identification (P1) | **OPEN, narrowed** to positive-parent plus readout-primitive route | candidate internal construction |
 
 ## A.6  Remaining gaps — narrowed from 4 to 3
 
-After follow-up verification, the retention note has THREE genuinely open
-structural questions, each more tractable than the original
+After follow-up verification, this candidate-extension note still leaves THREE
+genuinely open structural questions, each more tractable than the original
 three-mass-hierarchy problem:
 
-1. **Derive the (7/8)^1 exponent in the lepton sector.** Why this
-   specific integer power of the EW hierarchy's (7/8)^{1/4} factor? This
-   would close v_0 to the framework's native precision. Sharpest
-   structural question.
+1. **Derive a non-double-counted lepton-sector scale selector.** The
+   numerical near-match `v × α_LM² × (7/8)` is interesting, but the
+   first-power `(7/8)` factor is not retained today. The sharp question is
+   whether a genuine lepton-sector selector produces that same value without
+   reusing the hierarchy datum illegitimately.
 
-2. **Justify the A1 equipartition (√2 coefficient) as a charged-lepton
-   structural principle.** The observation that ρ_lep = √2 places tau at
-   98.5% of the maximum envelope AND electron near the critical angle
-   π/12 is suggestive — charged leptons sit at a near-extremal boundary
-   that quarks don't. What forces ρ = √2 specifically?
+2. **Find the charged-lepton selection principle for the equal-character-weight
+   / A1 condition.** The exact bridge now identifies `A1` as the matrix-space
+   form of the April 17 Koide condition. The open science is the mechanism that
+   selects it, not the bridge itself.
 
-3. **Justify P1 (√m identification) OR find an axiom-internal
-   construction with √m eigenvalues.** Either a retention-level
-   primitive or a derivation from LSZ-reduction-analog logic in the
-   discrete framework.
+3. **Derive the positive parent and readout primitive behind the `√m` amplitude
+   operator.** The square-root functional calculus and one-leg amplitude logic
+   are now clean. The missing science is the charged-lepton-specific positive
+   parent `M` together with a retained route from its nontrivial eigenvalue
+   channel to physical charged-lepton masses. Constructively, the cyclic
+   `3`-response descendant law is now explicit; what remains is the microscopic
+   source law for those three responses together with the one extra real
+   selector equation inside that smaller family.
 
 **Net reduction:** The three-mass problem reduces from "derive three
-free parameters" to "derive one integer exponent (7/8 power), one
-normalization principle (A1 ρ=√2), and one eigenvalue interpretation
-(P1 √m)." Each is a more tractable structural question.
+free parameters" to "derive one lepton-sector scale selector, one
+selection principle for equal-character-weight / `A1`, and one positive-parent
+plus readout construction behind the `√m` amplitude operator." Each is a more
+tractable structural question.
 
 ## A.7  The near-critical structural picture
 
