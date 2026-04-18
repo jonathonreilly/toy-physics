@@ -1,15 +1,22 @@
 #!/usr/bin/env python3
 """
-Frontier: Born Rule from Gravitational Self-Consistency
-========================================================
+Frontier: Generalized-Density Hartree Alpha Boundary Marker
+===========================================================
 
-Does self-consistent gravitational backreaction REQUIRE the Born rule
-p = |psi|^2 (alpha=2)?
+Historical question:
+  does self-consistent Hartree backreaction on a fixed periodic staggered
+  surface pick out alpha=2 uniquely?
 
-The self-consistency condition is: V = G * K * rho, where rho = |psi|^alpha
-is the generalized "probability" measure. The standard Born rule has alpha=2.
-If alpha=2 is the UNIQUE value that produces a stable self-consistent fixed
-point, then gravity selects the Born rule.
+Current boundary on `main`:
+  no. This runner is a negative / boundary-of-validity surface, not a
+  measurement-theory derivation. It probes fixed-point smoothness of the
+  generalized-density Hartree iteration with rho = |psi|^alpha; it does not
+  derive the Born rule.
+
+The self-consistency condition is: V = G * K * rho, where rho = |psi|^alpha.
+The standard Born-rule density corresponds to alpha=2, but this script only
+tests how the fixed-point iteration behaves as alpha varies on the audited
+periodic surface.
 
 Protocol on 2D staggered lattice (side=10, n=100):
 
@@ -20,15 +27,15 @@ For each alpha in [1.0, 1.2, 1.5, 1.8, 1.9, 1.95, 2.0, 2.05, 2.1, 2.2,
 2. Run self-consistent Hartree loop for 100 iterations
 3. Measure convergence metrics: norm stability, phi convergence, energy
    stability, width stability
-4. Compute Lyapunov exponent of the iteration
+4. Compute Lyapunov-style iteration diagnostics
 5. Test sign selectivity at each alpha
 6. Sweep G = [5, 10, 50] for G-dependence
 
-HYPOTHESIS: alpha=2 is the unique stable fixed point of the self-consistent
-Hartree iteration — other alpha values show divergent or oscillatory behavior.
-
-FALSIFICATION: If multiple alpha values show equal convergence quality, the
-Born rule is not uniquely selected by self-consistency.
+Interpretation boundary:
+  - this is a fixed-point smoothness diagnostic for the Hartree iteration
+  - it is not a measurement-theory test
+  - on current `main`, alpha=2 is not uniquely selected on the corrected
+    periodic surface
 """
 
 from __future__ import annotations
@@ -359,8 +366,8 @@ def main():
     t0 = time.time()
 
     print("=" * 78)
-    print("FRONTIER: BORN RULE FROM GRAVITATIONAL SELF-CONSISTENCY")
-    print("Does alpha=2 (Born rule) uniquely produce stable backreaction?")
+    print("GENERALIZED-DENSITY HARTREE ALPHA BOUNDARY MARKER")
+    print("Historical hypothesis check on a fixed periodic surface only")
     print("=" * 78)
     print()
     print(f"Lattice: {SIDE}x{SIDE} periodic staggered (n={SIDE**2})")
@@ -368,6 +375,7 @@ def main():
     print(f"N_ITER={N_ITER}, SIGN_ITER={SIGN_ITER}")
     print(f"Alphas: {ALPHAS}")
     print(f"G values: {G_VALUES}")
+    print("Interpretation: fixed-point smoothness diagnostic, not measurement theory")
     print()
 
     n, pos, adj, col = build_lattice_2d(SIDE)
@@ -496,11 +504,12 @@ def main():
     # ═══════════════════════════════════════════════════════════════
 
     print("=" * 78)
-    print("VERDICT")
+    print("BOUNDARY VERDICT")
     print("=" * 78)
     print()
 
-    # Check if alpha=2.0 is uniquely best across all G values
+    # Check whether alpha=2.0 is uniquely best across all G values on this
+    # fixed-point smoothness surface.
     best_alphas = {}
     for G in G_VALUES:
         scores_g = {}
@@ -519,11 +528,12 @@ def main():
     all_born = all(ba == 2.0 for ba in best_alphas.values())
 
     if all_born:
-        print("  HYPOTHESIS CONFIRMED: alpha=2.0 (Born rule) is the unique")
-        print("  stable fixed point of the self-consistent Hartree iteration")
-        print("  across all tested G values.")
+        print("  Surface result: alpha=2.0 is uniquely best on this fixed-point")
+        print("  smoothness score across the tested G values.")
+        print("  This would still be a Hartree-iteration boundary result, not a")
+        print("  measurement-theory derivation of the Born rule.")
     else:
-        print("  HYPOTHESIS STATUS: alpha=2.0 is NOT uniquely best across all G.")
+        print("  Surface result: alpha=2.0 is NOT uniquely best across all G.")
         for G in G_VALUES:
             print(f"    G={G:>5.1f}: best alpha = {best_alphas[G]:.2f}")
 
@@ -541,13 +551,13 @@ def main():
           f"margin={best_other_sel[1]:+d}")
 
     if sel_at_2 > 0 and sel_at_2 > best_other_sel[1]:
-        print("  Sign selectivity favors alpha=2.0 over the tested alternatives.")
+        print("  On this sign-diagnostic row, alpha=2.0 beats the tested alternatives.")
     elif sel_at_2 > 0 and sel_at_2 == best_other_sel[1]:
         print("  Sign selectivity is present at alpha=2.0 but not uniquely best.")
     elif sel_at_2 > 0:
-        print("  Sign selectivity present but not uniquely best at alpha=2.")
+        print("  Sign selectivity is present but not uniquely best at alpha=2.")
     else:
-        print("  Sign selectivity ABSENT at alpha=2 -- unexpected.")
+        print("  Sign selectivity is absent at alpha=2 on this surface.")
 
     # Check Lyapunov
     print()
@@ -559,6 +569,12 @@ def main():
         print("  Positive Lyapunov => UNSTABLE at alpha=2.")
     else:
         print("  Lyapunov ~ 0 => MARGINAL stability at alpha=2.")
+
+    print()
+    print("  Current-main interpretation: this lane is a negative /")
+    print("  boundary-of-validity marker for Born-rule selection by Hartree")
+    print("  smoothness. Use BORN_RULE_ANALYSIS_2026-04-11.md for the")
+    print("  canonical explanation.")
 
     elapsed = time.time() - t0
     print(f"\n  Total time: {elapsed:.1f}s")
@@ -573,8 +589,8 @@ def main():
         import matplotlib.pyplot as plt
 
         fig, axes = plt.subplots(2, 3, figsize=(18, 12))
-        fig.suptitle('Born Rule from Gravitational Self-Consistency\n'
-                     'Does alpha=2 uniquely produce stable backreaction?',
+        fig.suptitle('Generalized-Density Hartree Alpha Boundary Marker\n'
+                     'Fixed-point smoothness on a periodic surface',
                      fontsize=14, fontweight='bold')
 
         colors_g = {5.0: '#d62728', 10.0: '#ff7f0e', 50.0: '#2ca02c'}

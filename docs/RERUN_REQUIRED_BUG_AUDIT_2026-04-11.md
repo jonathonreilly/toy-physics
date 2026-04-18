@@ -306,6 +306,9 @@ Revisit rule:
 
 ### 4. Born-rule alpha sweep
 
+**Status on `main`: corrected negative / boundary-of-validity marker; not a
+live rerun blocker in its current form**
+
 Affected runner:
 
 - [`scripts/frontier_born_rule_alpha.py`](../scripts/frontier_born_rule_alpha.py)
@@ -315,10 +318,21 @@ Reasons:
 - ad hoc Hartree stability score, not a measurement-theory test
 - also hit by the periodic 2D wraparound-weight bug
 
-Action:
+Current mainline read:
 
-- no rerun in the current form
-- the lane needs a different question, not more alpha sweeps
+- the corrected minimum-image surface still does **not** make `alpha=2`
+  uniquely selected
+- the runner is now framed explicitly as a generalized-density Hartree
+  fixed-point smoothness diagnostic, not a Born-rule derivation
+- the canonical current-main interpretation lives in:
+  - [`docs/BORN_RULE_ANALYSIS_2026-04-11.md`](BORN_RULE_ANALYSIS_2026-04-11.md)
+  - [`docs/PERIODIC_2D_WRAPAROUND_FIX_NOTE_2026-04-11.md`](PERIODIC_2D_WRAPAROUND_FIX_NOTE_2026-04-11.md)
+
+Revisit rule:
+
+- do not promote this lane as a measurement-theory or Born-rule-selection result
+- no rerun in the current form; the lane needs a different question, not more
+  alpha sweeps
 
 ### 5. Branch/BMV entanglement classification
 

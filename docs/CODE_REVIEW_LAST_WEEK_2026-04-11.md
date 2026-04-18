@@ -136,6 +136,16 @@ None on current `main`.
      on the audited clean subset, not a blind law estimate over all sampled
      rows.
 
+14. `frontier_born_rule_alpha.py` is now explicitly framed as a negative
+    boundary marker on current `main`.
+   - The corrected periodic package already showed that the minimum-image fix
+     does not rescue Born-rule selection, and the runner now says the same
+     thing directly: it is a generalized-density Hartree fixed-point
+     smoothness diagnostic, not a measurement-theory derivation.
+   - The live repo surface now points users to
+     `BORN_RULE_ANALYSIS_2026-04-11.md` for the canonical current-main
+     interpretation.
+
 ## Verified False Positive From Agent Review
 
 One agent claimed `frontier_wilson_two_body_open.py` still computed center of

@@ -74,6 +74,10 @@ Corrected interpretation on the fixed `10x10` torus:
 - `alpha = 2.0` remains non-unique on the corrected surface
 - the lane stays a corrected negative / boundary-of-validity result
 
+Canonical current-main interpretation:
+
+- [`docs/BORN_RULE_ANALYSIS_2026-04-11.md`](BORN_RULE_ANALYSIS_2026-04-11.md)
+
 ### Corrected bounded companion package
 
 #### 4. Boundary-law probes
