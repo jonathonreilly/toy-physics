@@ -3,8 +3,8 @@
 Branch-mediated entanglement robustness checks (2-body and 3-body).
 
 Multi-seed, multi-geometry, and source-position robustness sweeps for the
-BMV-style branch entanglement results. Tests whether delta_S > 0 (2-body)
-and the corrected 3-body entanglement classification survive across:
+branch-mediated entanglement results. Tests whether delta_S > 0 (2-body)
+and the corrected 3-body W-type classification survive across:
 
   1. Multiple seeds (5 per configuration, jittered lattice positions)
   2. Source position sweep (5 different locations)
@@ -22,6 +22,11 @@ Protocol (3-body):
   Three particles in triangular arrangement.
   Same source superposition.
   Compute bipartite entropies and 3-tangle.
+
+Important boundary:
+  For the fixed two-branch ansatz used here, tau_3 = 0 is theorem-implied by
+  the overlap algebra. So the GHZ count below is only a sanity check that the
+  code matches the ansatz; it is not an empirical discovery metric.
 
 This runner is the canonical interpretation surface for the 3-body branch
 protocol. The earlier standalone three-body runner uses a heuristic tangle
@@ -538,7 +543,8 @@ def main():
     ghz_configs = sum(
         1 for v in three_body_data.values() if v["majority"].startswith("GHZ")
     )
-    print(f"GHZ-type classification: {ghz_configs}/{total_configs} configurations")
+    print("GHZ-type theorem check (not an empirical discovery metric): "
+          f"{ghz_configs}/{total_configs} configurations")
 
     # ================================================================
     # SECTION 5: COMPREHENSIVE SUMMARY
@@ -572,7 +578,8 @@ def main():
     print()
 
     print("3-BODY TRIPARTITE ENTANGLEMENT:")
-    print(f"  GHZ-type fraction: {ghz_configs}/{total_configs} "
+    print("  GHZ-type theorem-check fraction: "
+          f"{ghz_configs}/{total_configs} "
           f"({100*ghz_configs/max(total_configs,1):.0f}%)")
 
     tau_means = [v["tau_mean"] for v in three_body_data.values()]

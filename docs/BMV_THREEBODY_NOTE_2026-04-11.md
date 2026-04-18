@@ -31,8 +31,12 @@ Fixed protocol:
 
 Robustness surface:
 - `25/25` configurations classify as `W` or `W-asym`
-- `0/25` classify as `GHZ-type`
+- `0/25` pass the GHZ theorem check
 - `tau_3` min/max/mean: `0.000000 / 0.000000 / 0.000000`
+
+For this fixed externally imposed two-branch protocol, `tau_3 = 0` is
+theorem-implied by the overlap structure. So the zero-GHZ row is a sanity
+check on the ansatz, not an empirical exclusion result.
 
 Representative rerun rows:
 

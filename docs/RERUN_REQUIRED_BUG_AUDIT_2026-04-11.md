@@ -254,12 +254,17 @@ Reasons:
 
 - 2-body script is a branch-entanglement witness on an externally imposed
   two-branch protocol, not a full BMV result
-- 3-body GHZ path is dead / impossible under the current classifier
+- 3-body GHZ path is theorem-impossible under the fixed two-branch ansatz, so
+  the zero-GHZ row is now treated only as a sanity check, not an empirical
+  exclusion result
 
 Action:
 
 - keep the current bounded branch-mediated witness package only for the narrow
   `delta_S > 0` / W-type claims on the externally imposed two-branch protocol
+- do not treat the `0/25 GHZ` line as a live rerun blocker on current `main`;
+  the current blocker is only for any future attempt to promote this surface
+  beyond the bounded two-branch witness framing
 - redesign the entanglement witness/classifier before any rerun if the goal is
   a stronger quantum-gravity claim
 

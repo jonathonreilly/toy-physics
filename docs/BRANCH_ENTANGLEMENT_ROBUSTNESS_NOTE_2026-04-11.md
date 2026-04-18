@@ -43,12 +43,17 @@ Side `12` persistence:
 
 ### 3-body branch-entanglement
 
-- `GHZ-type` classification: `0/25`
+- `GHZ-type` theorem check: `0/25`
 - `W` or `W-asym` classification: `25/25`
 - `tau_3`:
   - min: `0.000000`
   - max: `0.000000`
   - mean: `0.000000`
+
+The `0/25` GHZ row is not an empirical discovery metric on this surface. For
+the fixed two-branch ansatz used by the canonical robustness harness,
+`tau_3 = 0` is theorem-implied by the overlap algebra, so the GHZ count is
+only a sanity check that the implementation stays on the intended ansatz.
 
 Representative rerun rows:
 - `G=20, src=(6,6)`: `S_1|23=0.69300`, `S_2|13=0.69288`, `S_3|12=0.69294`, `tau_3=0.00000`, class `W`
