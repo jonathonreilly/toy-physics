@@ -127,6 +127,15 @@ None on current `main`.
      geometry-superposition signal, but the perturbed `added-10%` family is now
      a real constructed variant rather than a fragile near-empty comparison.
 
+13. `frontier_wilson_two_body_laws.py` is now explicitly framed as a
+    post-selected characterization surface on current `main`.
+   - The runner and Wilson companion notes now state the boundary directly:
+     the distance and partner-source fits use the subset of rows already
+     labeled `ATTRACT` and `CLEAN`.
+   - That leaves the live Wilson reopen lane with a bounded calibration claim
+     on the audited clean subset, not a blind law estimate over all sampled
+     rows.
+
 ## Verified False Positive From Agent Review
 
 One agent claimed `frontier_wilson_two_body_open.py` still computed center of

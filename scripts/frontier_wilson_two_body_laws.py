@@ -1,10 +1,17 @@
 #!/usr/bin/env python3
 """
-Wilson two-body law sweeps on the open-boundary surface.
+Wilson two-body post-selected law characterizations on the open-boundary
+surface.
 
 Checks:
-  1. distance falloff of the early mutual acceleration
-  2. partner-source scaling at fixed separation
+  1. distance falloff characterization of the early mutual acceleration
+  2. partner-source scaling characterization at fixed separation
+
+Important boundary:
+  - the fitted rows are the subset already labeled ATTRACT and CLEAN by the
+    audited open-surface runner
+  - this script is therefore a bounded calibration/characterization surface,
+    not a blind law-estimate theorem runner
 """
 
 from __future__ import annotations
@@ -32,6 +39,7 @@ def main():
     print("WILSON TWO-BODY LAW SWEEPS")
     print("=" * 88)
     print("Surface: open 3D Wilson lattice, G=5, mu2=0.22")
+    print("Fit surface: post-selected ATTRACT + CLEAN rows only")
     print()
 
     # Distance sweep
@@ -54,14 +62,20 @@ def main():
     fit_rows = [(d, amp) for _, d, amp, snr, signal, quality in dist_rows if signal == "ATTRACT" and quality == "CLEAN"]
     slope, intercept, r2 = power_law_fit([d for d, _ in fit_rows], [amp for _, amp in fit_rows])
     print()
-    print(f"Global clean-attract fit: |a_mut| ~ d^{slope:.3f}  (R^2={r2:.4f})")
+    print(
+        f"Global post-selected clean-attract characterization: "
+        f"|a_mut| ~ d^{slope:.3f}  (R^2={r2:.4f})"
+    )
 
     # Per-side fits
     for side in (11, 13, 15):
         side_rows = [(d, amp) for s, d, amp, snr, signal, quality in dist_rows if s == side and signal == "ATTRACT" and quality == "CLEAN"]
         if len(side_rows) >= 2:
             slope_s, _, r2_s = power_law_fit([d for d, _ in side_rows], [amp for _, amp in side_rows])
-            print(f"  side={side}: |a_mut| ~ d^{slope_s:.3f}  (R^2={r2_s:.4f})")
+            print(
+                f"  side={side}: post-selected |a_mut| ~ d^{slope_s:.3f}  "
+                f"(R^2={r2_s:.4f})"
+            )
 
     # Mass/source sweep
     print("\nPartner-source sweep  (side=13, d=4)")
@@ -83,7 +97,10 @@ def main():
         [amp for m, amp, snr, signal, quality in mass_rows if signal == "ATTRACT" and quality == "CLEAN"],
     )
     print()
-    print(f"Mass fit at side=13,d=4: |a_mut| ~ mB^{slope_m:.3f}  (R^2={r2_m:.4f})")
+    print(
+        f"Mass characterization at side=13,d=4: |a_mut| ~ mB^{slope_m:.3f}  "
+        f"(R^2={r2_m:.4f})"
+    )
 
 
 if __name__ == "__main__":

@@ -66,6 +66,12 @@ So the Wilson mutual-attraction signal is real on the open surface.
 
 `frontier_wilson_two_body_laws.py` extends the open-lattice result.
 
+These law fits are a **post-selected characterization surface**:
+
+- the fit rows are the subset already labeled `ATTRACT` and `CLEAN`
+- they are useful as bounded calibration on the audited open Wilson surface
+- they are **not** a blind law estimate over all sampled rows
+
 ### Distance falloff
 
 Surface:
@@ -82,7 +88,8 @@ Fits:
 - `side=13`: `d^-3.313` (`R^2 = 0.9960`)
 - `side=15`: `d^-3.500` (`R^2 = 0.9939`)
 
-This is a very clean power law, but it is **not** Newtonian `1/r^2`.
+This is a very clean post-selected power-law characterization, but it is
+**not** Newtonian `1/r^2`.
 
 ### Partner-source scaling
 
@@ -98,8 +105,8 @@ Fit:
 
 - `|a_mut| ~ mB^0.483` (`R^2 = 0.9363`)
 
-So the partner-source dependence is monotone and real, but clearly sublinear
-on that screened surface.
+So the partner-source dependence is monotone and real on the selected clean
+surface, but clearly sublinear on that screened surface.
 
 ## Both-Masses Audit
 

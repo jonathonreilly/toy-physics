@@ -125,6 +125,9 @@ Revisit rule:
 
 ### 4. Retarded probe R9 cannot fail
 
+**Status on `main`: corrected and rerun; R9 is now diagnostic-only and not part
+of the scored closure battery**
+
 Affected runner:
 
 - [`scripts/frontier_two_field_retarded_probe.py`](../scripts/frontier_two_field_retarded_probe.py)
@@ -133,10 +136,26 @@ Bug:
 
 - the scale-gap row increments the score unconditionally
 
-Required rerun:
+Corrected current surface:
 
-- only if you want R9 to count as a real gate
-- fix scoring first, then rerun the retarded scale-gap surface
+- [`scripts/frontier_two_field_retarded_probe.py`](../scripts/frontier_two_field_retarded_probe.py)
+- [`docs/TWO_FIELD_RETARDED_PROBE_NOTE_2026-04-10.md`](TWO_FIELD_RETARDED_PROBE_NOTE_2026-04-10.md)
+
+Current mainline read:
+
+- R9 is explicitly labeled as an unscored diagnostic row for force-gap,
+  shell-radial, and spectral characterization
+- the scored battery on current `main` is `R1`-`R8` only
+- the retained takeaway is therefore about graph-native causal-memory viability
+  and the surviving scored rows, not a closed scale-gap gate
+
+Revisit rule:
+
+- do not count R9 as a pass/fail closure row unless the lane is redesigned to
+  make it a real scored gate
+- for current `main`, cite the retarded-probe note and runner as a bounded
+  rerun-corrected retarded-field companion with diagnostic-only scale-gap
+  reporting
 
 ### 5. Decoherence distance sweep aliases torus separations
 
@@ -257,6 +276,9 @@ Action:
 
 ### 3. Wilson law-fit scripts use post-selected survivor rows
 
+**Status on `main`: bounded post-selected law-characterization surface; not a
+blind law-estimate blocker for the current Wilson reopen lane**
+
 Affected runners:
 
 - [`scripts/frontier_wilson_two_body_laws.py`](../scripts/frontier_wilson_two_body_laws.py)
@@ -267,9 +289,20 @@ Reason:
 
 - fits are made only on rows already labeled `ATTRACT` and `CLEAN`
 
-Action:
+Current mainline read:
 
-- redesign the fit surface first if you want a blind law estimate
+- [`scripts/frontier_wilson_two_body_laws.py`](../scripts/frontier_wilson_two_body_laws.py)
+  now presents itself explicitly as a post-selected characterization surface
+- the companion Wilson notes say the same thing: these fits are bounded
+  calibrations on the clean attractive subset of the audited open surface
+- the live Wilson package therefore keeps the narrow calibration claim without
+  pretending to be a blind law estimate
+
+Revisit rule:
+
+- do not cite these fits as an unbiased all-row law inference
+- redesign the fit surface first if the goal is a blind law estimate or a
+  stronger Newton-law closure argument
 
 ### 4. Born-rule alpha sweep
 

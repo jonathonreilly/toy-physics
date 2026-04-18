@@ -52,6 +52,13 @@ Representative rows:
 
 ## Fits
 
+These fits are again a **post-selected characterization surface** on the
+audited open Wilson lane:
+
+- only rows already labeled `ATTRACT` and `CLEAN` enter the fit
+- the result is useful as bounded open-surface calibration
+- it is **not** a blind law estimate over every sampled row
+
 Clean attractive rows only:
 
 - global fit over all tested sides: `|a_mut| ~ d^-3.669` (`R^2 = 0.9896`)
@@ -85,7 +92,8 @@ Best current statement:
 - This is still a Hartree two-orbital construction, not a fully interacting
   many-body Newton-law derivation.
 - The fit is taken from the clean attractive subset only, as in the audited
-  open-lattice lane.
+  open-lattice lane, so it should be read as a post-selected characterization
+  rather than a blind law estimate.
 - The result speaks to the open 3D Wilson surface at `G=5`, `mu^2=0.22`; it
   does not yet establish a universal law across couplings or masses.
 
