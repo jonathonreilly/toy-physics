@@ -252,6 +252,9 @@ Action:
 
 ### 6. Entanglement area-law script
 
+**Status on `main`: retired as evidence; preserved only as a historical
+boundary-transfer entropy diagnostic**
+
 Affected runner:
 
 - [`scripts/frontier_entanglement_area_law.py`](../scripts/frontier_entanglement_area_law.py)
@@ -262,7 +265,11 @@ Reason:
 
 Action:
 
-- no rerun until the measured object is changed
+- do not use this script as live boundary-law evidence
+- if boundary-law support is needed on current `main`, use the bounded
+  Dirac-sea package instead:
+  - [`scripts/frontier_holographic_probe.py`](../scripts/frontier_holographic_probe.py)
+  - [`scripts/frontier_boundary_law_robustness.py`](../scripts/frontier_boundary_law_robustness.py)
 
 ### 7. Bekenstein-Hawking script
 

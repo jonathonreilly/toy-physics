@@ -29,12 +29,7 @@ be promoted or reinterpreted without fixes.
    - This contaminates boundary-crossing couplings in those periodic 2D
      surfaces.
 
-4. `frontier_entanglement_area_law.py` is not a bipartite entanglement
-   entropy measurement.
-   - It fits the entropy of a boundary transfer/channel object, not a true
-     subsystem reduced density matrix.
-
-5. `frontier_bmv_entanglement.py` overstates what it measures.
+4. `frontier_bmv_entanglement.py` overstates what it measures.
    - The script computes a branch-mediated toy witness.
    - It does not implement the full logic needed for a genuine BMV
      gravity-quantumness conclusion.
@@ -84,6 +79,16 @@ be promoted or reinterpreted without fixes.
      lane in `WILSON_TWO_BODY_OPEN_NOTE_2026-04-11.md`, which is itself
      explicitly framed as a genuine two-orbital channel but not full Newton
      closure.
+
+6. `frontier_entanglement_area_law.py` is no longer part of the live
+   boundary-law evidence chain on current `main`.
+   - The old runner is now explicitly marked as a historical
+     boundary-transfer entropy diagnostic rather than a true subsystem
+     entanglement measurement.
+   - The live bounded boundary-law package instead hangs off
+     `frontier_holographic_probe.py` and its audited addendum, which are
+     already framed as a many-body-style Dirac-sea boundary-law result rather
+     than a full holography claim.
 
 ## Verified False Positive From Agent Review
 

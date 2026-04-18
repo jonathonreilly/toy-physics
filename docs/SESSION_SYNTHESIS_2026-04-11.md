@@ -44,7 +44,7 @@ Retained batteries after the parity rewrite:
 
 ### Early Frontier Highlights (later narrowed in places)
 
-**1. Holographic Area Law (frontier_holographic_probe.py)**
+**1. Holographic Boundary-Law Probe (frontier_holographic_probe.py)**
 Entanglement entropy of the Dirac sea (filled negative-energy modes) on the
 staggered lattice scales with BOUNDARY AREA, not volume.
 - Free: `R^2 = 0.9995` for `S` vs `|boundary|`, `0.8984` for `S` vs `|A|`
@@ -135,7 +135,7 @@ The Dirac-sea / holographic probe is the stronger and more relevant boundary-law
 
 | Result | Community | Risk | Status |
 |--------|-----------|------|--------|
-| Holographic area law | QG, QI, holography | Low | boundary-law fit survives with gravity |
+| Holographic boundary-law probe | QG, QI, holography | Low | boundary-law fit survives with gravity |
 | Spectral dimension shift | QG, spectral theory | Medium | gravity-dependent shift, interpretation exploratory |
 | Geometry superposition | QG, coherent branch probes | Medium | retained 2D branch effect on fixed adjacency |
 | Gravitational memory | GW theory, BMS | Medium | exploratory screened ring artifact |
@@ -168,7 +168,7 @@ Scripts (new):
 - frontier_gravitational_memory.py — Christodoulou memory
 - frontier_confinement_probe.py — string tension
 - frontier_spectral_geometry.py — Weyl's law + spectral dimension
-- frontier_holographic_probe.py — Dirac sea area law
+- frontier_holographic_probe.py — Dirac-sea boundary-law probe
 
 Docs (new):
 - STAGGERED_FERMION_CARD_2026-04-11.md

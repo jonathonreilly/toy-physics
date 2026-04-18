@@ -295,7 +295,7 @@ become the foundation paper, with the frontier results as follow-ups.
 | 2 | Emergent Lorentz invariance | Nature Physics | High | Planned |
 | 3 | Action uniqueness theorem | PRD | Medium | ACTIVE |
 | 4 | Dynamic graph growth | PRL | High | Planned |
-| 5 | Entanglement area law | PRL/NatPhys | Medium | ACTIVE |
+| 5 | Boundary-law / holographic probe | PRL/NatPhys | Medium | ACTIVE |
 | 6 | Quantized energy levels | PRD | Low | ACTIVE |
 | 7 | Spin from graph symmetry | PRL | High | Planned |
 | 8 | Cosmological expansion | PRD/CQG | High | Planned |

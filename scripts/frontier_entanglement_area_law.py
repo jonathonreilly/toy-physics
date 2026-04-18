@@ -1,15 +1,19 @@
-"""Entanglement area law on the discrete event-network DAG.
+"""Historical boundary-transfer entropy diagnostic on the event-network DAG.
 
-TRUE SPATIAL BIPARTITION method:
+This script is preserved as a diagnostic/historical probe only.
+
+It does NOT construct a canonical subsystem reduced density matrix on a single
+many-body state. Instead it builds a source-to-cut transfer matrix:
 - Region A = source boundary (x=0), region B = cut boundary (x=cut_x).
 - Propagate from EACH source y_in on x=0 independently through the DAG.
 - Collect amplitudes M[y_cut, y_in] at the cut boundary.
-- The reduced density matrix for region B:
+- Form
       rho_B(y, y') = sum_{y_in} M(y, y_in) * conj(M(y', y_in))
-  This traces over region A (the source degrees of freedom).
+  which traces over source labels in this transfer construction.
 - S_vN = -Tr(rho_B ln rho_B)
 
-For area law: S should scale with boundary size (2H+1), not volume (H*cut_x).
+Diagnostic question: does this transfer entropy track boundary size more
+closely than region volume on the audited surface?
 
 Eigensolver: proper complex Hermitian Jacobi diagonalization using
 complex Givens rotations (phase-factored 2x2 subproblem).
@@ -352,14 +356,15 @@ def linear_fit(xs: list[float], ys: list[float]) -> tuple[float, float, float]:
 
 def main() -> None:
     print("=" * 80)
-    print("ENTANGLEMENT AREA LAW ON DISCRETE EVENT-NETWORK DAG")
+    print("BOUNDARY-TRANSFER ENTROPY DIAGNOSTIC ON EVENT-NETWORK DAG")
     print("=" * 80)
     print()
-    print("Method: TRUE SPATIAL BIPARTITION")
+    print("Method: source-to-cut transfer construction")
     print("  Region A = source boundary (x=0), region B = cut boundary (x=cut_x)")
     print("  Propagate from EACH source y_in independently to build M[y_cut, y_in]")
-    print("  rho_B = M @ M^dagger  (traces over source degrees of freedom)")
+    print("  rho_B = M @ M^dagger  (traces over source labels in this construction)")
     print("  S_vN = -Tr(rho_B ln rho_B)")
+    print("  Historical note: this is not the live Dirac-sea boundary-law package.")
     print()
     print("Eigensolver: complex Hermitian Jacobi with proper Givens rotations")
     print()
@@ -542,15 +547,15 @@ def main() -> None:
     print("SUMMARY AND INTERPRETATION")
     print("=" * 80)
 
-    print(f"\n1. BOUNDARY SCALING (Experiment A):")
+    print(f"\n1. BOUNDARY SCALING IN THIS TRANSFER CONSTRUCTION (Experiment A):")
     print(f"   Free:  S ~ boundary^{alpha:.2f}  (R^2={r2_pl:.3f})")
     print(f"   Mass:  S ~ boundary^{alpha_m:.2f}  (R^2={r2_plm:.3f})")
     if alpha > 0.5 and r2_pl > 0.7:
-        print(f"   ==> AREA LAW SUPPORTED in free space")
+        print(f"   ==> POSITIVE BOUNDARY-SCALING SIGNAL in free space")
     elif alpha > 0 and r2_pl > 0.5:
-        print(f"   ==> WEAK AREA LAW (sub-linear growth)")
+        print(f"   ==> WEAK POSITIVE BOUNDARY SCALING (sub-linear growth)")
     elif alpha < 0:
-        print(f"   ==> ENTROPY SATURATES (sub-area-law)")
+        print(f"   ==> ENTROPY SATURATES (sublinear boundary scaling)")
     else:
         print(f"   ==> INCONCLUSIVE (alpha={alpha:.2f}, R^2={r2_pl:.3f})")
 
@@ -560,9 +565,9 @@ def main() -> None:
         print(f"   ==> BOUNDARY-CONTROLLED: entropy does not track volume")
         if alpha < 0.1:
             print(f"   BUT: boundary scaling is flat/negative (alpha={alpha:.2f}),")
-            print(f"   so this is SUB-AREA-LAW (saturation), not area law")
+            print(f"   so this is SATURATING / SUBLINEAR, not a clean boundary-growth signal")
         else:
-            print(f"   ==> Consistent with area law (entropy grows with boundary)")
+            print(f"   ==> Consistent with positive boundary-controlled scaling here")
     elif r2_vc > 0.7:
         print(f"   S grows with volume (R^2={r2_vc:.3f})")
         print(f"   ==> VOLUME LAW component present")
