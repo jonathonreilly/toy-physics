@@ -29,11 +29,6 @@ be promoted or reinterpreted without fixes.
    - This contaminates boundary-crossing couplings in those periodic 2D
      surfaces.
 
-4. `frontier_bmv_entanglement.py` overstates what it measures.
-   - The script computes a branch-mediated toy witness.
-   - It does not implement the full logic needed for a genuine BMV
-     gravity-quantumness conclusion.
-
 ## Validated Medium-Severity Findings
 
 ## Resolved Since Review
@@ -89,6 +84,15 @@ be promoted or reinterpreted without fixes.
      `frontier_holographic_probe.py` and its audited addendum, which are
      already framed as a many-body-style Dirac-sea boundary-law result rather
      than a full holography claim.
+
+7. `frontier_bmv_entanglement.py` no longer overstates itself as a genuine
+   BMV / gravity-quantumness witness on current `main`.
+   - The runner and companion note now present it explicitly as a
+     branch-mediated toy protocol with an externally imposed geometry/source
+     branch.
+   - The live bounded package keeps the positive `delta_S > 0` result while
+     reserving full BMV / mediator-null claims for future redesigned
+     witnesses.
 
 ## Verified False Positive From Agent Review
 

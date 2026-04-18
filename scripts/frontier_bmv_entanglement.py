@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-BMV-like branch entanglement protocol on a staggered lattice.
+Branch-mediated entanglement toy protocol on a staggered lattice.
 
 Protocol: Two particles (wavepackets) on a 2D staggered lattice. A source at the
 midpoint is placed in an externally imposed branch superposition of
@@ -8,8 +8,9 @@ midpoint is placed in an externally imposed branch superposition of
 correlates the two particles through that branch structure.
 
 Guardrail:
-  this is a toy-model branch-entanglement probe, not a full BMV witness. It
-  does not by itself prove that gravity must be quantum.
+  this is a toy-model branch-entanglement probe with an externally imposed
+  geometry/source branch, not a full BMV witness. It does not by itself prove
+  that gravity must be quantum.
 
 The two-particle state is:
   |Psi> = (|psi_1A>|psi_2A> + |psi_1B>|psi_2B>) / sqrt(2)
@@ -132,10 +133,10 @@ def binary_entropy(p: float) -> float:
     return -p * math.log(p) - (1.0 - p) * math.log(1.0 - p)
 
 
-# ── BMV protocol ─────────────────────────────────────────────────────
+# ── Branch-entanglement toy protocol ────────────────────────────────
 
 def run_bmv(g: float):
-    """Run the BMV protocol for a given source coupling strength G."""
+    """Run the toy branch-entanglement protocol for a given source strength G."""
     pos, color, adj, index, n = make_lattice_2d(SIDE)
     lap = build_laplacian(pos, adj)
 
@@ -179,7 +180,7 @@ def run_bmv(g: float):
     norm_2A = np.linalg.norm(psi_2A)
     norm_2B = np.linalg.norm(psi_2B)
 
-    # BMV entanglement entropy
+    # Branch-mediated entanglement entropy
     # For |Psi> = (|a>|c> + |b>|d>) / sqrt(2):
     # rho_1 eigenvalues are (1 +/- |<a|b>|*|<c|d>|) / 2
     product_overlap = overlap_1 * overlap_2
@@ -229,7 +230,7 @@ def main():
     t0 = time.time()
 
     print("=" * 78)
-    print("BMV ENTANGLEMENT PROTOCOL ON STAGGERED LATTICE")
+    print("BRANCH-MEDIATED ENTANGLEMENT TOY PROTOCOL")
     print("=" * 78)
     print()
     print(f"Lattice: 2D staggered, side={SIDE}, n={SIDE**2}")
@@ -269,7 +270,7 @@ def main():
     print("  ovlp_12 = ovlp_1 * ovlp_2    (combined overlap)")
     print("  S_quant = S(rho_1) for quantum joint state  [entanglement entropy]")
     print("  S_mix   = S(rho_1) for classical mixture    [classical ignorance]")
-    print("  dS      = S_quant - S_mix                   [gravity-induced entanglement]")
+    print("  dS      = S_quant - S_mix                   [branch-mediated entanglement]")
     print()
 
     # Check branch-mediated entanglement signal.
@@ -285,10 +286,10 @@ def main():
         print("BRANCH-ENTANGLEMENT SIGNAL: POSITIVE")
         print("  The fixed geometry-branch toy model generates entanglement")
         print("  beyond the corresponding classical branch mixture.")
-        print("  This is BMV-like evidence in a controlled toy setting,")
+        print("  This is a bounded toy-protocol result,")
         print("  not a standalone gravity-is-quantum witness.")
     else:
-        print("BMV WITNESS: NULL")
+        print("BRANCH-ENTANGLEMENT TOY WITNESS: NULL")
         print("  No entanglement beyond classical mixing detected.")
         print("  Overlaps may be too close to 1 for detectable entanglement.")
 

@@ -1,4 +1,4 @@
-# BMV-Like Branch Entanglement on a Staggered Lattice
+# Branch-Mediated Entanglement on a Staggered Lattice
 
 ## Status
 
@@ -6,7 +6,7 @@
 
 ## Script
 
-- `/Users/jonreilly/Projects/Physics/.claude/worktrees/sleepy-cerf/scripts/frontier_bmv_entanglement.py`
+- `/Users/jonreilly/Projects/Physics/scripts/frontier_bmv_entanglement.py`
 
 ## Rerun
 
@@ -31,7 +31,8 @@ Peak entanglement:
 
 ## Strongest Honest Interpretation
 
-This script shows a strong **branch-mediated entanglement signal** in a fixed-adjacency staggered-lattice toy model.
+This script shows a strong **branch-mediated entanglement signal** in a
+fixed-adjacency staggered-lattice toy model.
 
 - A shared geometry branch `(source present, source absent)` is imposed externally.
 - Each particle evolves coherently under both branches.
@@ -48,7 +49,7 @@ Reasons:
 
 - The geometry/source superposition is inserted by hand rather than generated dynamically by the particles' own mass branches.
 - The script does not implement the full local-operations-and-classical-communication exclusion logic used in BMV-style claims.
-- The result is therefore a **BMV-like toy-model entanglement construction**, not a standalone proof that gravity must be quantum.
+- The result is therefore a **branch-mediated toy-model entanglement construction**, not a standalone proof that gravity must be quantum.
 
 ## Retained Claim
 

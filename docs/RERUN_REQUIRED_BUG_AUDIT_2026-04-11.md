@@ -234,6 +234,9 @@ Action:
 
 ### 5. Branch/BMV entanglement classification
 
+**Status on `main`: bounded toy-witness package preserved; no longer presented
+as a full BMV / gravity-quantumness closure**
+
 Affected runners:
 
 - [`scripts/frontier_bmv_entanglement.py`](../scripts/frontier_bmv_entanglement.py)
@@ -247,6 +250,8 @@ Reasons:
 
 Action:
 
+- keep the current bounded branch-mediated toy-witness package only for the
+  narrow `delta_S > 0` / W-type claims
 - redesign the entanglement witness/classifier before any rerun if the goal is
   a stronger quantum-gravity claim
 
