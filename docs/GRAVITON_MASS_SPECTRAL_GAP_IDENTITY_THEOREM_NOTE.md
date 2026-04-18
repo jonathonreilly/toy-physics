@@ -1,14 +1,15 @@
 # Graviton-Mass Spectral-Gap Identity Theorem
 
 **Date:** 2026-04-18
-**Status:** proposed **retained structural identity corollary** +
+**Status:** **retained structural identity theorem** +
 **bounded quantitative continuation**. Packages the already-exact-on-the-
 retained-internal-surface relation `m_g^2 = 2 hbar^2 Lambda_vac / c^2` from
-the graviton-mass companion into a standalone proposed-retained identity
-theorem, built directly from the retained
+the graviton-mass companion into a standalone retained identity theorem,
+built directly from the retained
 [`COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md`](COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md)
 on `main` and the Lichnerowicz TT spectrum on `S^3`. Publication matrix and
-claims table are left unchanged pending reviewer acceptance.
+claims surfaces now capture the retained structural identity separately from
+the bounded numerical companion.
 **Script:** `scripts/frontier_graviton_mass_spectral_gap_identity.py`
 **Upstream authorities (all retained on `main`):**
 [`COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md`](COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md),
@@ -65,7 +66,7 @@ Let the retained surface carry:
    [`UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md`](UNIVERSAL_GR_DISCRETE_GLOBAL_CLOSURE_NOTE.md),
    [`UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md`](UNIVERSAL_QG_CANONICAL_TEXTBOOK_CONTINUUM_GR_CLOSURE_NOTE.md)).
 
-**Theorem (graviton-mass spectral-gap identity).** Under conditions
+**Theorem (graviton spectral compactness-mass identity).** Under conditions
 (1)–(3), the TT graviton mass `m_g` on the retained de Sitter stationary
 vacuum with round `S^3` slice of radius `R` satisfies the exact structural
 identity
@@ -173,7 +174,8 @@ a ratio of exactly `3`. □
 - the numerical value of `m_g` in eV: remains the bounded continuation
   recorded in
   [`GRAVITON_MASS_DERIVED_NOTE.md`](GRAVITON_MASS_DERIVED_NOTE.md)
-  and in the `graviton mass m_g` row of the current publication matrix;
+  and in the `graviton compactness mass m_g (numerical companion)` row of
+  the current publication matrix;
 - the 4D-effective-theory interpretation of the compactness mass `m_g` as
   a Fierz-Pauli-like massive-graviton mass with matching vDVZ behavior:
   the KK rest-mass identification is classical and standard, but the
@@ -233,20 +235,19 @@ So:
 Once the Λ identity is retained, the graviton-mass identity is one
 spectral step away.
 
-## Proposed Publication Matrix Row Change
+## Publication Matrix Capture
 
-This note does not modify
-[`PUBLICATION_MATRIX.md`](publication/ci3_z3/PUBLICATION_MATRIX.md). For
-reviewer reference, the proposed edit to the existing `graviton mass m_g`
-row (matrix section B, currently `bounded`), matching the existing
-9-column schema, is:
+This theorem is now wired into
+[`PUBLICATION_MATRIX.md`](publication/ci3_z3/PUBLICATION_MATRIX.md) as a
+retained structural row distinct from the bounded numerical companion:
 
 | Quantity / lane | Workstream | Framework result | Observation / comparator | Claim-strength status | Import class | Current publication decision | Authority / best source | Frozen-out ref |
 |---|---|---|---|---|---|---|---|---|
-| graviton mass `m_g` | `S^3` / topology cosmology | retained structural: `m_g^2 = 2 hbar^2 Lambda_vac / c^2 = 6 hbar^2 / (c^2 R^2)` on retained de Sitter + `S^3` surface; Higuchi factor-3 corollary. Bounded numerical: `m_g ~ 3.52 x 10^-33 eV` at `R = c/H_0` | current bound `m_g < 1.76 x 10^-23 eV` (LIGO O3) | retained structural identity + bounded quantitative continuation | retained `Lambda_vac = lambda_1(S^3_R)` identity theorem + standard Lichnerowicz TT spectrum on `S^3` + bounded cosmology-scale identification for the numerical value | retained structural row may appear on the flagship / SI theorem surface; bounded numerical stays the existing cosmology-companion row | this note + [GRAVITON_MASS_DERIVED_NOTE.md](../../GRAVITON_MASS_DERIVED_NOTE.md) + [COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md](../../COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md) | `F04` |
+| graviton spectral compactness-mass identity | retained `S^3` / topology cosmology | `m_g^2 = 2 hbar^2 Lambda_vac / c^2 = 6 hbar^2 / (c^2 R^2)` as an exact function identity in `R` on the retained de Sitter stationary vacuum + round `S^3` spatial topology; Higuchi factor-3 corollary | n/a (identity, not a numerical comparison) | retained | retained `Lambda_vac = lambda_1(S^3_R)` identity theorem + standard Lichnerowicz TT spectrum on `S^3` + classical KK-style compactness-mass identification for TT modes on the compact slice | retained theorem surface / SI eligible; bounded numerical `m_g` and the broader 4D-EFT/vDVZ interpretation stay in the companion row | this note + [COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md](../../COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md) | n/a |
 
 The adjacent `Cosmological constant Lambda`, `Omega_Lambda`, spectral tilt
-`n_s`, and other cosmology companion rows are **not** proposed for change.
+`n_s`, and other cosmology companion rows are unchanged in status. The
+numerical `m_g` row stays bounded.
 
 ## Commands Run
 

@@ -91,9 +91,11 @@ packaging.
   directional boundary; still below persistent inertial-mass / matter closure
 - older bounded CKM mass-basis / Cabibbo / partial Jarlskog route history
 - mixed cosmology surface, organized around one fixed-gap vacuum scale:
-  retained structural identity `Lambda_vac = lambda_1(S^3_R)` and retained
-  `w = -1` corollary, with bounded numerical `Lambda`, graviton mass, and
-  present-day `Omega_Lambda` still behind the matter bridge
+  retained structural identity `Lambda_vac = lambda_1(S^3_R)`, retained
+  `w = -1` corollary, and retained graviton spectral compactness-mass
+  identity `m_g^2 = 2 hbar^2 Lambda_vac / c^2`, with bounded numerical
+  `Lambda`, numerical `m_g`, and present-day `Omega_Lambda` still behind the
+  matter bridge
 - bounded secondary predictions already on `main`, plus the CKM-only
   neutron-EDM corollary with bounded continuation: proton lifetime, down-type
   flavor-mass CKM-dual ratios, vacuum critical stability, benchmark

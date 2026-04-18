@@ -139,7 +139,8 @@ The remaining numerical cosmology predictions remain bounded because the
 matter bridge and cosmology-scale identification are still open:
 
 - numerical `Lambda` from the fixed-gap / de Sitter scale route
-- graviton-mass companion from the same vacuum/topology scale
+- numerical graviton compactness-mass companion from the same
+  vacuum/topology scale
 - present-day `Omega_Lambda` once the matter bridge closes
 
 Authority:

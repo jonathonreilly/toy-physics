@@ -3,7 +3,7 @@
 Graviton-Mass Spectral-Gap Identity Theorem
 ============================================
 
-STATUS: retained structural identity corollary + bounded quantitative
+STATUS: retained structural identity theorem + bounded quantitative
 continuation
 
 This runner verifies the narrow identity statement in
@@ -29,7 +29,7 @@ Two legs:
     lambda_2^TT = 6/R^2 (no l=0 or l=1 TT modes exist).
 
   Leg B (retained vacuum identity): the Lambda_vac = 3/R^2 identity is
-    imported from the retained companion theorem (its own runner:
+    imported from the retained identity theorem (its own runner:
     scripts/frontier_cosmological_constant_spectral_gap_identity.py).
 
 Substitution gives m_g^2 = 2 Lambda_vac hbar^2 / c^2. The factor 2 is
@@ -325,7 +325,7 @@ def main() -> int:
     print(f"SUMMARY: PASS={PASS_COUNT}  FAIL={FAIL_COUNT}")
     print("=" * 72)
     print()
-    print("Retained structural identity corollary:")
+    print("Retained structural identity theorem:")
     print("  m_g^2 = 2 hbar^2 Lambda_vac / c^2 = 6 hbar^2 / (c^2 R^2)")
     print("  on the retained de Sitter + S^3 surface, for every R > 0.")
     print("  Higuchi ratio = 3 exactly.")

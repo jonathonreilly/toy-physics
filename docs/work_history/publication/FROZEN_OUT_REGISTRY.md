@@ -102,18 +102,16 @@ beyond the retained flagship backbone.
 
 **Captured work:**
 
-- cosmological constant `\Lambda`
+- numerical cosmological constant `\Lambda`
 - vacuum-energy no-go / UV-IR audit behind the `\Lambda` companion
-- dark energy EOS `w = -1`
+- numerical graviton compactness mass
 - `n_s`
 - conditional `\Omega_\Lambda`
-- graviton mass
 
 **Primary sources:**
 
 - [COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md](../../COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md)
 - [COSMOLOGICAL_CONSTANT_VACUUM_ENERGY_AUDIT_NOTE.md](../../COSMOLOGICAL_CONSTANT_VACUUM_ENERGY_AUDIT_NOTE.md)
-- [DARK_ENERGY_EOS_NOTE.md](../../DARK_ENERGY_EOS_NOTE.md)
 - [PRIMORDIAL_SPECTRUM_NOTE.md](../../PRIMORDIAL_SPECTRUM_NOTE.md)
 - [GRAVITON_MASS_DERIVED_NOTE.md](../../GRAVITON_MASS_DERIVED_NOTE.md)
 - [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md)

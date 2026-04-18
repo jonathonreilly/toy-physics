@@ -1,0 +1,64 @@
+========================================================================
+Graviton-Mass Spectral-Gap Identity Theorem
+========================================================================
+
+Theorem: on the retained de Sitter stationary vacuum + retained
+         S^3 + Lichnerowicz TT spin-2 spectrum,
+         m_g^2 = 2 hbar^2 Lambda_vac / c^2 = 6 hbar^2 / (c^2 R^2)
+         for every R > 0.  Higuchi ratio = 3 exactly.
+
+[A] Leg A: Lichnerowicz TT spectrum (lambda_2^TT = 6/R^2) -------
+  [PASS] Lichnerowicz TT eigenvalues at l = 2..6 match l(l+2) - 2  (max error over first 5 modes = 0.00e+00)
+  [PASS] Lichnerowicz TT lowest mode at R = 5.000e-01 is 6/R^2  (lambda_2^TT = 2.400000e+01, expected 2.400000e+01)
+  [PASS] Lichnerowicz TT lowest mode at R = 1.000e+00 is 6/R^2  (lambda_2^TT = 6.000000e+00, expected 6.000000e+00)
+  [PASS] Lichnerowicz TT lowest mode at R = 2.000e+00 is 6/R^2  (lambda_2^TT = 1.500000e+00, expected 1.500000e+00)
+  [PASS] Lichnerowicz TT lowest mode at R = 3.142e+00 is 6/R^2  (lambda_2^TT = 6.079243e-01, expected 6.079243e-01)
+  [PASS] Lichnerowicz TT lowest mode at R = 1.000e+06 is 6/R^2  (lambda_2^TT = 6.000000e-12, expected 6.000000e-12)
+  [PASS] Lichnerowicz TT lowest mode at R = 1.000e+26 is 6/R^2  (lambda_2^TT = 6.000000e-52, expected 6.000000e-52)
+  [PASS] lambda_2^TT / lambda_1(scalar) = 2 exactly at R = 5.000e-01  (ratio = 2.000000000000)
+  [PASS] lambda_2^TT / lambda_1(scalar) = 2 exactly at R = 1.000e+00  (ratio = 2.000000000000)
+  [PASS] lambda_2^TT / lambda_1(scalar) = 2 exactly at R = 3.142e+00  (ratio = 2.000000000000)
+
+[B] Leg B: retained Lambda_vac = 3/R^2 identity imported --------
+  [PASS] upstream Lambda = lambda_1(S^3_R) identity note present  (path = docs/COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md)
+  [PASS] upstream Lambda = lambda_1(S^3_R) identity runner present  (path = scripts/frontier_cosmological_constant_spectral_gap_identity.py)
+  [PASS] imported identity Lambda_vac = 3/R^2 at R = 5.000e-01  (Lambda_vac = 1.200000e+01)
+  [PASS] imported identity Lambda_vac = 3/R^2 at R = 1.000e+00  (Lambda_vac = 3.000000e+00)
+  [PASS] imported identity Lambda_vac = 3/R^2 at R = 3.142e+00  (Lambda_vac = 3.039621e-01)
+  [PASS] imported identity Lambda_vac = 3/R^2 at R = 1.000e+26  (Lambda_vac = 3.000000e-52)
+
+[C] Closure: substitute -> m_g^2 = 2 hbar^2 Lambda_vac / c^2 ----
+  [PASS] m_g^2 c^2 / hbar^2 = 2 Lambda_vac as functions of R  (max residual over R sweep = 0.00e+00)
+  [PASS] m_g^2 (SI kg^2) from Leg A equals 2 hbar^2 Lambda_vac / c^2  (max residual SI = 3.57e-102,  scale = 7.42e-83)
+  [PASS] log-log slope of m_g^2 c^2 / hbar^2 vs R is -2 (Leg A)  (slope = -2.000000000000)
+  [PASS] log-log slope of 2 Lambda_vac vs R is -2 (Leg B)  (slope = -2.000000000000)
+  [PASS] intercepts match at log 6  (intercept_A = 1.791759469228, intercept_B = 1.791759469228, log 6 = 1.791759469228)
+
+[D] Higuchi corollary: ratio = 3 exactly -------------------------
+  [PASS] Higuchi ratio (m^2 / (2 Lambda / 3)) = 3 at R = 1.000e-01  (ratio = 3.000000000000)
+  [PASS] Higuchi ratio (m^2 / (2 Lambda / 3)) = 3 at R = 1.000e+00  (ratio = 3.000000000000)
+  [PASS] Higuchi ratio (m^2 / (2 Lambda / 3)) = 3 at R = 1.000e+26  (ratio = 3.000000000000)
+
+[E] Bounded numerical continuation (not upgraded) ----------------
+  [PASS] bounded numerical m_g at R = c/H_0 is ~ 3.5e-33 eV  (m_g = 3.522e-33 eV)
+  [PASS] bounded numerical m_g sits far below LIGO O3 bound  (m_g / M_G_OBS_BOUND = 2.00e-10)
+  [PASS] identity holds at R = 1.373e+25 (distinct from R_Hubble scales)  (m_g^2 = 3.941e-135 kg^2, expected 3.941e-135 kg^2)
+  [PASS] identity holds at R = 1.373e+26 (distinct from R_Hubble scales)  (m_g^2 = 3.941e-137 kg^2, expected 3.941e-137 kg^2)
+  [PASS] identity holds at R = 1.373e+27 (distinct from R_Hubble scales)  (m_g^2 = 3.941e-139 kg^2, expected 3.941e-139 kg^2)
+
+[F] Compton-length bookkeeping -----------------------------------
+  [PASS] Compton scale lambda_C = R / sqrt(6) at R = 1.000e+00  (lambda_C = 4.082483e-01, expected 4.082483e-01)
+  [PASS] Compton scale lambda_C = R / sqrt(6) at R = 1.373e+26  (lambda_C = 5.603236e+25, expected 5.603236e+25)
+
+========================================================================
+SUMMARY: PASS=31  FAIL=0
+========================================================================
+
+Retained structural identity theorem:
+  m_g^2 = 2 hbar^2 Lambda_vac / c^2 = 6 hbar^2 / (c^2 R^2)
+  on the retained de Sitter + S^3 surface, for every R > 0.
+  Higuchi ratio = 3 exactly.
+
+Bounded quantitative continuation (NOT upgraded by this runner):
+  m_g ~ 3.52e-33 eV at R = c/H_0 stays in the existing
+  bounded cosmology-companion row per GRAVITON_MASS_DERIVED_NOTE.md.

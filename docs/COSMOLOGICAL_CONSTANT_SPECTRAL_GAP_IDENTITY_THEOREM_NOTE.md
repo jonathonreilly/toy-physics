@@ -173,10 +173,10 @@ retained structural identity row in the cosmology block:
 | Spectral-gap cosmological-constant identity | retained GR + spectral-gap cosmology | `Lambda_vac = lambda_1(S^3_R) = 3 / R^2` as an exact function identity in `R` on the retained de Sitter stationary vacuum + round `S^3` spatial topology | n/a (identity, not a numerical comparison) | retained | retained direct-universal GR closure + retained smooth global gravitational stationary/Gaussian class + retained canonical textbook continuum GR closure + retained `S^3` topology + Lichnerowicz–Obata equality for spheres | retained structural identity may appear on the flagship / SI / theorem box; numerical `R_Lambda` / `Lambda` values stay in the existing bounded companion rows | this note + [COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md](../../COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md) + [COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md](../../COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md) | n/a |
 
 The adjacent numerical `Cosmological constant Lambda` row, the
-`\Omega_\Lambda` chain, the `spectral tilt n_s` row, the `graviton mass m_g`
-row, and the rest of the cosmology companion stack remain unchanged in
-status. Their numerical claims are still bounded by the cosmology-scale
-identification and matter-bridge gaps.
+`\Omega_\Lambda` chain, the `spectral tilt n_s` row, the numerical graviton
+compactness-mass companion row, and the rest of the cosmology companion
+stack remain unchanged in status. Their numerical claims are still bounded
+by the cosmology-scale identification and matter-bridge gaps.
 
 ## Downstream Effect
 
