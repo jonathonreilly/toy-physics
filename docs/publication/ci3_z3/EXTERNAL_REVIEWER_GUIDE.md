@@ -9,7 +9,7 @@ The current package is:
 
 1. a retained theorem core
 2. retained standalone quantitative lanes for `alpha_s` and EW normalization
-3. promoted CKM atlas/axiom closure plus derived Yukawa/top and derived Higgs/vacuum lanes
+3. promoted CKM atlas/axiom closure plus a retained YT/top transport lane and a derived Higgs/vacuum lane with a retention-decomposed budget
 4. a bounded prediction surface plus an explicit history bucket for important
    excluded families
 
@@ -80,14 +80,17 @@ Review this as a modular component stack:
 1. `alpha_s`: [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md)
 2. color-factor support: [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md)
 3. EW normalization: [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md)
-4. Yukawa / top authority: [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](../../YT_ZERO_IMPORT_AUTHORITY_NOTE.md)
-5. Yukawa / top Ward theorem + correction + budget:
+4. EW matching retention audit:
+   [YT_EW_DELTA_R_RETENTION_ANALYSIS_NOTE_2026-04-18.md](../../YT_EW_DELTA_R_RETENTION_ANALYSIS_NOTE_2026-04-18.md)
+5. YT / top transport authority stack:
    [YT_WARD_IDENTITY_DERIVATION_THEOREM.md](../../YT_WARD_IDENTITY_DERIVATION_THEOREM.md),
-   [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md),
-   [YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md](../../YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md)
-6. Higgs / vacuum:
+   [YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md](../../YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md),
+   [YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md](../../YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md),
+   [YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md](../../YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md)
+6. Higgs / vacuum plus retention analysis:
    [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](../../HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md),
-   [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md)
+   [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md),
+   [HIGGS_MASS_RETENTION_ANALYSIS_NOTE_2026-04-18.md](../../HIGGS_MASS_RETENTION_ANALYSIS_NOTE_2026-04-18.md)
 7. CKM closure and carrier-side support:
    [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md),
    [KR_A1_VANISHING_SUPPORT_NOTE.md](../../KR_A1_VANISHING_SUPPORT_NOTE.md)
@@ -116,13 +119,17 @@ Current status from that stack:
   rows use the retained running bridge
 - retained exact lattice-scale Ward theorem:
   `y_t(M_Pl) / g_s(M_Pl) = 1 / sqrt(6)`
-- derived `y_t(v) = 0.9176`
-- derived canonical `m_t(pole) = 173.10 GeV` (3-loop),
-  with retained `172.57 GeV` (2-loop) support
-  and current primary-route standard-method residuals
-- derived Higgs / vacuum package:
-  `m_H = 125.1 GeV` (framework-side 3-loop route), with retained
-  `119.8 GeV` (2-loop support route)
+- retained YT/top transport package:
+  canonical full-staggered-PT `Δ_R = -3.77% ± 0.45%`,
+  retained `y_t(v) = 0.9176`,
+  retained canonical `m_t(pole) = 172.57 ± 6.50 GeV`,
+  with through-2-loop retained coverage
+  `172.57 ± 6.9 GeV` (structural) /
+  `172.57 ± 7.94 GeV` (bound-constrained, not MC-pinned)
+- derived Higgs / vacuum package with retention-decomposed budget:
+  canonical framework-side 3-loop route `m_H = 125.1 GeV`,
+  retention analysis `m_H = 125.04 ± 3.17 GeV`,
+  with retained `119.8 GeV` (2-loop support route)
 - promoted CKM atlas/axiom closure package
   (no quark-mass or fitted CKM inputs; canonical CMT `alpha_s(v)` input):
   `|V_us| = 0.22727`,
@@ -154,10 +161,11 @@ Current status from that stack:
   `hw=1` mass-matrix no-go, and exact residual `Z_2` Hermitian normal form;
   these sharpen the retained matter/flavor support layer without inflating the
   flagship matter claim
-- bounded Higgs / vacuum package:
+- derived Higgs / vacuum package with retention-decomposed budget:
   canonical `m_H = 125.1 GeV` (framework-side 3-loop route),
+  retention analysis `m_H = 125.04 ± 3.17 GeV`,
   with retained `119.8 GeV` (2-loop support route),
-  vacuum-stability readout inherited from the bounded `y_t` lane
+  vacuum-stability readout inherited from the retained YT transport lane
 - exact taste-block fermion-CW isotropy support theorem with bounded
   taste-scalar near-degeneracy companion:
   `m_taste = 124.91 GeV`, scalar-only `v_c/T_c = 0.3079`

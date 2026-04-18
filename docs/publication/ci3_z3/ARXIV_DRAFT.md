@@ -30,10 +30,12 @@ Quantitatively, the current package gives the canonical hierarchy evaluation
 $v=246.282818290129\,\mathrm{GeV}$, retains
 $\alpha_s(M_Z)=0.1181$ and electroweak normalization lanes, retains the exact
 lattice-scale Ward identity $y_t(M_{\mathrm{Pl}})/g_s(M_{\mathrm{Pl}})
-=1/\sqrt{6}$, promotes an algebraic CKM atlas/axiom closure package with no
-quark-mass or fitted-CKM inputs, and carries derived Yukawa/top and Higgs/
-vacuum rows whose current precision caveat is standard-method continuation on
-the primary route rather than a framework-native bridge qualifier.
+=1/\sqrt{6}$, carries a retained YT/top transport lane with canonical
+full-staggered-PT $\Delta_R=-3.77\% \pm 0.45\%$ and retained canonical
+$m_t(\mathrm{pole})=172.57 \pm 6.50\,\mathrm{GeV}$, promotes an algebraic CKM
+atlas/axiom closure package with no quark-mass or fitted-CKM inputs, and keeps
+the Higgs/vacuum row derived while auditing it with an explicit
+retention-decomposed band.
 The package is already predictive beyond retrospective comparison,
 including proton lifetime, the CKM-only neutron-EDM corollary with bounded
 continuation, vacuum criticality, and benchmark gravitational decoherence.
@@ -845,11 +847,10 @@ retained route to $PL\,S^3$ compactification / topology closure.*
 
 ### B.3 Figure A2
 
-![Figure A2. Derived Yukawa and Higgs transport lane](./figures/figureA2_bounded_yt_lane.svg)
+![Figure A2. Retained YT transport lane and Higgs follow-on route](./figures/figureA2_bounded_yt_lane.svg)
 
-*Figure A2. Exact UV support, current low-energy transport story, and the
-derived Yukawa/top plus derived Higgs/vacuum outputs on the current package
-surface.*
+*Figure A2. Exact UV support, retained low-energy YT transport story, and the
+derived Higgs/vacuum follow-on outputs on the current package surface.*
 
 ### B.4 Figure A3
 

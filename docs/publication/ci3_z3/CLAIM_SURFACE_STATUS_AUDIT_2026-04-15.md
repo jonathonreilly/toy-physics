@@ -299,11 +299,11 @@ Representative surfaces:
 
 **What the repo actually supports**
 
-- derived Yukawa/top lane
-- derived Higgs/vacuum lane
-- framework-native 3-loop implementation exists
-- current public tables still need to keep the inherited YT-lane caveat visible
-  alongside the central-value hits
+- retained YT/top transport lane
+- derived Higgs/vacuum lane with a retention-decomposed budget
+- framework-native 3-loop Higgs implementation exists
+- current public tables now carry the retained YT authority stack and the
+  explicit Higgs retention analysis rather than a generic inherited-YT caveat
 
 Primary evidence:
 

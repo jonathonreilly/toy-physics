@@ -91,12 +91,14 @@ Companion captions live in [FIGURE_CAPTIONS.md](./FIGURE_CAPTIONS.md).
   - [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md)
 - status: wait until DM language stabilizes
 
-### Figure A2. Bounded renormalized `y_t` lane
+### Figure A2. Retained YT transport lane and Higgs follow-on route
 
-- purpose: show exact UV theorem, the current derived low-energy lane, and the independent bridge cross-check budget
+- purpose: show the exact UV theorem, the retained low-energy YT transport lane, and the derived Higgs follow-on route
 - source notes:
-  - [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](../../YT_ZERO_IMPORT_AUTHORITY_NOTE.md)
-  - [YT_GAUGE_CROSSOVER_THEOREM.md](../../YT_GAUGE_CROSSOVER_THEOREM.md)
+  - [YT_WARD_IDENTITY_DERIVATION_THEOREM.md](../../YT_WARD_IDENTITY_DERIVATION_THEOREM.md)
+  - [YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md](../../YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md)
+  - [YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md](../../YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md)
+  - [HIGGS_MASS_RETENTION_ANALYSIS_NOTE_2026-04-18.md](../../HIGGS_MASS_RETENTION_ANALYSIS_NOTE_2026-04-18.md)
 - manuscript asset: [figureA2_bounded_yt_lane.svg](./figures/figureA2_bounded_yt_lane.svg)
 - status: landed in arXiv appendix
 

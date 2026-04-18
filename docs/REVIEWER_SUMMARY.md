@@ -6,8 +6,9 @@
 This repository is not presently organized around the older exploratory or
 layered-geometry side surfaces. The current review target is a `Cl(3)` on `Z^3`
 framework package with a retained theorem core, retained standalone
-quantitative lanes, derived Yukawa/Higgs lanes, one review-facing
-charged-lepton closure-class package, a bounded prediction portfolio, and one
+quantitative lanes, a retained YT/top transport lane, a derived
+Higgs/vacuum lane with a retention-decomposed budget, one bounded
+charged-lepton package, a bounded prediction portfolio, and one
 explicitly open flagship gate.
 
 For framework counting, the public package should be read as a one-axiom
@@ -72,12 +73,14 @@ Canonical quantitative stack:
 - [ALPHA_S_DERIVED_NOTE.md](ALPHA_S_DERIVED_NOTE.md)
 - [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md)
 - [YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md)
-- [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](YT_ZERO_IMPORT_AUTHORITY_NOTE.md)
+- [YT_EW_DELTA_R_RETENTION_ANALYSIS_NOTE_2026-04-18.md](YT_EW_DELTA_R_RETENTION_ANALYSIS_NOTE_2026-04-18.md)
 - [YT_WARD_IDENTITY_DERIVATION_THEOREM.md](YT_WARD_IDENTITY_DERIVATION_THEOREM.md)
-- [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
-- [YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md](YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md)
+- [YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md](YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md)
+- [YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md](YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md)
+- [YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md](YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md)
 - [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md)
 - [HIGGS_MASS_DERIVED_NOTE.md](HIGGS_MASS_DERIVED_NOTE.md)
+- [HIGGS_MASS_RETENTION_ANALYSIS_NOTE_2026-04-18.md](HIGGS_MASS_RETENTION_ANALYSIS_NOTE_2026-04-18.md)
 - [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
 
 Current quantitative statuses:
@@ -88,7 +91,9 @@ Current quantitative statuses:
   `1/alpha_EM(M_Z) = 127.67`
   with `g_1(v), g_2(v)` carried by the same package through the
   same-surface plaquette chain plus derived `R_conn = 8/9` support, and the
-  `M_Z` rows then using the retained running bridge
+  `M_Z` rows then using the retained running bridge; the retained
+  EW matching audit now explicitly shows that `~0.4%–2.9%` matching bands
+  comfortably cover the packaged-observed deviations
 - promoted CKM atlas/axiom closure package
   (no quark-mass or fitted CKM inputs; canonical CMT `alpha_s(v)` input):
   `|V_us| = 0.22727`,
@@ -112,16 +117,19 @@ Current quantitative statuses:
   chirality is supplied only on the full-framework anomaly-forced `3+1`
   surface; on the accepted one-axiom Hilbert/locality/information surface the
   substrate-level physical-lattice reading is also derived
-- derived `y_t(v) = 0.9176`, conditional on the retained exact lattice-scale
-  `y_t / g_s = 1/sqrt(6)` Ward theorem and the accepted primary continuation
-- derived canonical `m_t(pole) = 173.10 GeV` (3-loop),
-  with retained `172.57 GeV` (2-loop) support
-  and current primary-route standard-method residuals; the older
-  `1.2147511%` / `0.75500635%` budget remains a bridge-path cross-check
-- derived Higgs / vacuum package:
-  canonical `m_H = 125.1 GeV` (framework-side 3-loop route),
-  with retained `119.8 GeV` (2-loop support route),
-  vacuum-stability readout inherited from the current `y_t` lane
+- retained YT/top transport package:
+  exact lattice-scale `y_t(M_Pl) / g_s(M_Pl) = 1/sqrt(6)` Ward theorem,
+  retained UV-to-IR transport obstruction stack, canonical full-staggered-PT
+  `Δ_R = -3.77% ± 0.45%`, retained `y_t(v) = 0.9176`, retained canonical
+  `m_t(pole) = 172.57 ± 6.50 GeV`, and through-2-loop retained coverage
+  `172.57 ± 6.9 GeV` (structural) / `172.57 ± 7.94 GeV` (bound-constrained,
+  not MC-pinned); the older bridge-path budget now survives only as an
+  independent cross-check
+- derived Higgs / vacuum package with retention-decomposed budget:
+  canonical framework-side 3-loop route `m_H = 125.1 GeV`, retention analysis
+  `m_H = 125.04 ± 3.17 GeV`, 2-loop support route `119.8 GeV`, and
+  vacuum-stability readout inherited from the YT lane together with cataloged
+  Higgs-native gaps
 - exact taste-block fermion-CW isotropy support theorem with bounded
   taste-scalar near-degeneracy companion:
   `m_taste = 124.91 GeV`, scalar-only `v_c/T_c = 0.3079`

@@ -39,7 +39,7 @@ The package has four layers:
 1. retained theorem core
 2. retained standalone quantitative lanes (`alpha_s`, EW normalization,
    exact lattice-scale Yukawa/gauge Ward theorem)
-3. derived Yukawa/top and Higgs/vacuum lanes
+3. retained YT/top transport lane plus a derived Higgs/vacuum lane with a retention-decomposed budget
 4. bounded prediction surface plus live gates and frozen-out route history
 
 The public manuscript surface on `main` is arXiv-first. Journal-specific
@@ -61,11 +61,13 @@ The current canonical quantitative stack is modular:
 - [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md)
 - [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md)
 - [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md)
+- [YT_EW_DELTA_R_RETENTION_ANALYSIS_NOTE_2026-04-18.md](../../YT_EW_DELTA_R_RETENTION_ANALYSIS_NOTE_2026-04-18.md)
 - [YT_WARD_IDENTITY_DERIVATION_THEOREM.md](../../YT_WARD_IDENTITY_DERIVATION_THEOREM.md)
-- [YT_ZERO_IMPORT_AUTHORITY_NOTE.md](../../YT_ZERO_IMPORT_AUTHORITY_NOTE.md)
-- [YT_COLOR_PROJECTION_CORRECTION_NOTE.md](../../YT_COLOR_PROJECTION_CORRECTION_NOTE.md)
-- [YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md](../../YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md)
+- [YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md](../../YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md)
+- [YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md](../../YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md)
+- [YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md](../../YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md)
 - [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](../../HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md)
+- [HIGGS_MASS_RETENTION_ANALYSIS_NOTE_2026-04-18.md](../../HIGGS_MASS_RETENTION_ANALYSIS_NOTE_2026-04-18.md)
 - [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
 - [KR_A1_VANISHING_SUPPORT_NOTE.md](../../KR_A1_VANISHING_SUPPORT_NOTE.md)
 
@@ -79,16 +81,21 @@ Current package status:
   `g_2(v) = 0.6480`
   where `alpha_s(v)` comes from the same-surface plaquette chain,
   `g_1(v), g_2(v)` use derived `R_conn = 8/9` support, and the `M_Z`
-  rows use the retained running bridge
+  rows use the retained running bridge; the retained EW matching audit
+  now explicitly keeps `~0.4%–2.9%` matching bands on those rows
 - retained exact lattice-scale Ward theorem:
   `y_t(M_Pl) / g_s(M_Pl) = 1 / sqrt(6)`
-- derived `y_t(v) = 0.9176`
-- derived canonical `m_t(pole) = 173.10 GeV` (3-loop),
-  with retained `172.57 GeV` (2-loop) support
-  and current primary-route standard-method residuals
-- derived Higgs / vacuum package:
-  `m_H = 125.1 GeV` (framework-side 3-loop route), with retained
-  `119.8 GeV` (2-loop support route)
+- retained YT/top transport package:
+  `Δ_R = -3.77% ± 0.45%` on the canonical full-staggered-PT surface,
+  retained `y_t(v) = 0.9176`,
+  retained canonical `m_t(pole) = 172.57 ± 6.50 GeV`,
+  with through-2-loop retained coverage
+  `172.57 ± 6.9 GeV` (structural) /
+  `172.57 ± 7.94 GeV` (bound-constrained, not MC-pinned)
+- derived Higgs / vacuum package with retention-decomposed budget:
+  `m_H = 125.1 GeV` (framework-side 3-loop route),
+  retention analysis `m_H = 125.04 ± 3.17 GeV`,
+  with retained `119.8 GeV` (2-loop support route)
 - promoted CKM atlas/axiom closure package
   (no quark-mass or fitted CKM inputs; canonical CMT `alpha_s(v)` input):
   `|V_us| = 0.22727`,
@@ -111,10 +118,11 @@ Current package status:
   [Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md](../../Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md);
   these are support theorems for the retained matter lane and future flavor
   work, not additional flagship flavor-numerics claims
-- derived Higgs / vacuum package:
+- derived Higgs / vacuum package with retention-decomposed budget:
   canonical `m_H = 125.1 GeV` (framework-side 3-loop route),
+  retention analysis `m_H = 125.04 ± 3.17 GeV`,
   with retained `119.8 GeV` (2-loop support route),
-  vacuum-stability readout inherited from the current `y_t` lane
+  vacuum-stability readout inherited from the retained YT transport lane
 - exact taste-block fermion-CW isotropy support theorem with bounded
   taste-scalar near-degeneracy companion:
   `m_taste = 124.91 GeV`, scalar-only `v_c/T_c = 0.3079`

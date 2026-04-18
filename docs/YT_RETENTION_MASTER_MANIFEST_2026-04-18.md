@@ -114,7 +114,7 @@ supporting Class #5 via an independent Hubbard–Stratonovich route.)
 
 ---
 
-## Part 2 — P1 sub-theorems (16 slots)
+## Part 2 — P1 sub-theorems (17 slots)
 
 P1 concerns the 1-loop (and partial 2-loop) matching correction on
 the Ward ratio `y_t² / g_s²` at `M_Pl` on the tadpole-improved
@@ -821,7 +821,7 @@ input.
                              │                  │                  │
                     ┌────────┴────────┐  ┌──────┴──────┐   ┌───────┴──────┐
                     │   P1 suite      │  │   P2 suite  │   │    P3 suite  │
-                    │  (16 slots)     │  │  (4 slots)  │   │   (5 slots)  │
+                    │  (17 slots)     │  │  (4 slots)  │   │   (5 slots)  │
                     └─────────────────┘  └─────────────┘   └──────────────┘
 
 P1:
