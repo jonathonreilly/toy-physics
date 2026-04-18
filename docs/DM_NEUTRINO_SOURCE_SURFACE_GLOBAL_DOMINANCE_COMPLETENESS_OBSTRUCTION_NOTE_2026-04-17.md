@@ -45,6 +45,12 @@ The branch does support:
   endpoint and split-1 are already dominated from `s = 0` upward, so the
   tested broad-window carrier pressure collapses entirely to the split-2 edge
   interval `0 <= s < s_*`,
+- and a split-2 edge transport-lane obstruction candidate on that same tested
+  edge interval: the broad low-slack undercut does not realize the preferred
+  recovered transport lane, since on the tested interval its best
+  `eta/eta_obs` stays below `0.847299300834` while the preferred recovered lane
+  sits at `1.052220313052`, and its winning packet columns stay separated from
+  the preferred small-leakage quotient,
 - and a localized rival-window picture with exactly three exposed unresolved
   windows:
   `[-1.899713, -1.87]`, `[-1.16, -1.10]`, and `[-0.19, -0.14]`.
@@ -105,6 +111,11 @@ one-dimensional edge interval `0 <= s < s_*` on the tested edge profile
 `R_split2(s)`. So the remaining useful carrier theorem really does have to use
 the finer exact carrier restriction, and on split-2 it only needs to exclude or
 dominate that low-slack edge interval rather than every broad-bundle point.
+And even that edge interval is now sharper than a generic broad undercut:
+on the tested split-2 edge it is transport-incompatible with the preferred
+recovered lane, so the remaining carrier theorem only needs to rule out a
+lower-repair, transport-compatible lane there, not just any lower-repair broad
+bundle point.
 
 ### 3. The missing theorem is interval-certified completeness or dominance
 
@@ -134,7 +145,8 @@ The next carrier-side work should be only one of:
 
 1. prove exact-carrier completeness;
 2. prove a rival-window dominance theorem strong enough to avoid full
-   completeness, now especially on the low-slack split-2 boundary band;
+   completeness, now especially on a lower-repair, transport-compatible lane
+   inside the low-slack split-2 interval;
 3. prove a no-go theorem that current exact methods cannot certify those
    windows.
 
@@ -146,8 +158,10 @@ Anything broader is below the current reduction surface.
 - [DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_BOUNDARY_BAND_TRANSITION_CANDIDATE_NOTE_2026-04-18.md](./DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_BOUNDARY_BAND_TRANSITION_CANDIDATE_NOTE_2026-04-18.md)
 - [DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_EDGE_PROFILE_TRANSITION_CANDIDATE_NOTE_2026-04-18.md](./DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_EDGE_PROFILE_TRANSITION_CANDIDATE_NOTE_2026-04-18.md)
 - [DM_NEUTRINO_SOURCE_SURFACE_RIVAL_WINDOW_EDGE_PROFILE_HIERARCHY_CANDIDATE_NOTE_2026-04-18.md](./DM_NEUTRINO_SOURCE_SURFACE_RIVAL_WINDOW_EDGE_PROFILE_HIERARCHY_CANDIDATE_NOTE_2026-04-18.md)
+- [DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_EDGE_TRANSPORT_LANE_OBSTRUCTION_CANDIDATE_NOTE_2026-04-18.md](./DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_EDGE_TRANSPORT_LANE_OBSTRUCTION_CANDIDATE_NOTE_2026-04-18.md)
 - [frontier_dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem.py](../scripts/frontier_dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem.py)
 - [frontier_dm_neutrino_source_surface_split2_boundary_band_transition_candidate.py](../scripts/frontier_dm_neutrino_source_surface_split2_boundary_band_transition_candidate.py)
 - [frontier_dm_neutrino_source_surface_split2_edge_profile_transition_candidate.py](../scripts/frontier_dm_neutrino_source_surface_split2_edge_profile_transition_candidate.py)
 - [frontier_dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate.py](../scripts/frontier_dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate.py)
+- [frontier_dm_neutrino_source_surface_split2_edge_transport_lane_obstruction_candidate.py](../scripts/frontier_dm_neutrino_source_surface_split2_edge_transport_lane_obstruction_candidate.py)
 - [frontier_dm_neutrino_source_surface_global_dominance_completeness_obstruction.py](../scripts/frontier_dm_neutrino_source_surface_global_dominance_completeness_obstruction.py)
