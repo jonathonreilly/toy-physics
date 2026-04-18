@@ -22,12 +22,16 @@ competing foundation stories.
 
 What is now explicit:
 
-- the framework stands on the one-axiom reduction surface:
-  [SINGLE_AXIOM_INFORMATION_NOTE.md](../../SINGLE_AXIOM_INFORMATION_NOTE.md),
-  [SINGLE_AXIOM_HILBERT_NOTE.md](../../SINGLE_AXIOM_HILBERT_NOTE.md)
+- the accepted package statement is `Cl(3)` on `Z^3` as the physical theory
 - [MINIMAL_AXIOMS_2026-04-11.md](../../MINIMAL_AXIOMS_2026-04-11.md) is the
   operational package-boundary memo used to audit the current implementation
   surface
+- the one-axiom notes
+  [SINGLE_AXIOM_INFORMATION_NOTE.md](../../SINGLE_AXIOM_INFORMATION_NOTE.md)
+  and
+  [SINGLE_AXIOM_HILBERT_NOTE.md](../../SINGLE_AXIOM_HILBERT_NOTE.md)
+  are optional reduction/support notes for framework compression and
+  physical-lattice scoping
 
 Affected front-door files were updated directly.
 

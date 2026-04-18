@@ -25,13 +25,15 @@ boundary conditions:
 
 Framework statement:
 
-- the paper-level framework is the one-axiom reduction surface in
-  [SINGLE_AXIOM_INFORMATION_NOTE.md](../../SINGLE_AXIOM_INFORMATION_NOTE.md)
-  and
-  [SINGLE_AXIOM_HILBERT_NOTE.md](../../SINGLE_AXIOM_HILBERT_NOTE.md)
+- the accepted package statement is `Cl(3)` on `Z^3` as the physical theory
 - [MINIMAL_AXIOMS_2026-04-11.md](../../MINIMAL_AXIOMS_2026-04-11.md) is the
   operational package-boundary memo used to audit the current implementation
   surface
+- [SINGLE_AXIOM_INFORMATION_NOTE.md](../../SINGLE_AXIOM_INFORMATION_NOTE.md)
+  and
+  [SINGLE_AXIOM_HILBERT_NOTE.md](../../SINGLE_AXIOM_HILBERT_NOTE.md)
+  are optional reduction/support notes for framework compression and
+  physical-lattice scoping, not the load-bearing front-door input ledger
 
 The electroweak scale is not an external input on the current paper surface.
 The exact minimal hierarchy theorem fixes the source-response structure on the

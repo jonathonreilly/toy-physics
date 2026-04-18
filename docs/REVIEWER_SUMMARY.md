@@ -11,16 +11,16 @@ Higgs/vacuum lane with a retention-decomposed budget, one bounded
 charged-lepton package, a bounded prediction portfolio, and one
 explicitly open flagship gate.
 
-For framework counting, the public package should be read as a one-axiom
-program:
+For framework scoping, keep two layers separate:
 
-- [SINGLE_AXIOM_INFORMATION_NOTE.md](SINGLE_AXIOM_INFORMATION_NOTE.md)
-- [SINGLE_AXIOM_HILBERT_NOTE.md](SINGLE_AXIOM_HILBERT_NOTE.md)
-
-The separate file
-[MINIMAL_AXIOMS_2026-04-11.md](MINIMAL_AXIOMS_2026-04-11.md) is the operational
-package-boundary memo used to audit current implementation-facing lanes. It is
-not a second foundation.
+- the accepted package statement is `Cl(3)` on `Z^3` as the physical theory
+- [MINIMAL_AXIOMS_2026-04-11.md](MINIMAL_AXIOMS_2026-04-11.md) is the
+  operational package-boundary memo used to audit current
+  implementation-facing lanes
+- [SINGLE_AXIOM_INFORMATION_NOTE.md](SINGLE_AXIOM_INFORMATION_NOTE.md) and
+  [SINGLE_AXIOM_HILBERT_NOTE.md](SINGLE_AXIOM_HILBERT_NOTE.md) are optional
+  reduction/support notes for framework compression and physical-lattice
+  scoping, not the load-bearing front-door input ledger
 
 ## Current Read Order
 

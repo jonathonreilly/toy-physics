@@ -4,6 +4,12 @@
 **Status:** confirmed (all four tests pass)
 **Runner:** `scripts/frontier_single_axiom_information.py`
 
+**Scope note:** this is a reduction/support note for framework compression and
+physical-lattice scoping. It is not the load-bearing accepted input ledger for
+the current paper package, whose framework statement remains `Cl(3)` on `Z^3`
+with the audited package boundary recorded in
+`docs/MINIMAL_AXIOMS_2026-04-11.md`.
+
 ## The claim
 
 The two axioms of the model (graph substrate + unitary dynamics) are not

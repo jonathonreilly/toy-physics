@@ -12,15 +12,22 @@ This note is the shortest package-level answer to:
 
 ## 1. Framework statement
 
-The paper-level framework is the one-axiom reduction surface:
+The accepted package statement is:
 
-- [SINGLE_AXIOM_INFORMATION_NOTE.md](../../SINGLE_AXIOM_INFORMATION_NOTE.md)
-- [SINGLE_AXIOM_HILBERT_NOTE.md](../../SINGLE_AXIOM_HILBERT_NOTE.md)
+> We take `Cl(3)` on `Z^3` as the physical theory.
 
 The operational memo
 [MINIMAL_AXIOMS_2026-04-11.md](../../MINIMAL_AXIOMS_2026-04-11.md)
 records the accepted implementation boundary used to audit the current package.
-It is not a competing foundation count.
+
+The one-axiom notes
+
+- [SINGLE_AXIOM_INFORMATION_NOTE.md](../../SINGLE_AXIOM_INFORMATION_NOTE.md)
+- [SINGLE_AXIOM_HILBERT_NOTE.md](../../SINGLE_AXIOM_HILBERT_NOTE.md)
+
+are optional reduction/support context for framework compression and
+physical-lattice scoping. They are not the load-bearing input ledger for the
+current paper surface.
 
 ## 2. Explicit external inputs on the current paper surface
 

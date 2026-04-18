@@ -16,14 +16,16 @@ bucket:
 
 - [work_history/README.md](work_history/README.md)
 
-For framework assumptions, read the one-axiom reduction notes first:
+For the accepted package inputs, use
+[MINIMAL_AXIOMS_2026-04-11.md](MINIMAL_AXIOMS_2026-04-11.md).
+
+For optional framework-compression / reduction context, use:
 
 - [SINGLE_AXIOM_INFORMATION_NOTE.md](SINGLE_AXIOM_INFORMATION_NOTE.md)
 - [SINGLE_AXIOM_HILBERT_NOTE.md](SINGLE_AXIOM_HILBERT_NOTE.md)
 
-Then use [MINIMAL_AXIOMS_2026-04-11.md](MINIMAL_AXIOMS_2026-04-11.md) only as
-the operational package-boundary memo for the current audited implementation
-surface on `main`.
+Those one-axiom notes are support/reduction context for the current package.
+They are not the load-bearing input ledger for the reviewed `main` surface.
 
 For the gravity/QG continuum bridge specifically, the current capstones are:
 

@@ -13,14 +13,17 @@ The current package is:
 4. a bounded prediction surface plus an explicit history bucket for important
    excluded families
 
-For framework counting, read the public package as a one-axiom program:
+For framework scoping, keep two layers separate:
 
-- [SINGLE_AXIOM_INFORMATION_NOTE.md](../../SINGLE_AXIOM_INFORMATION_NOTE.md)
-- [SINGLE_AXIOM_HILBERT_NOTE.md](../../SINGLE_AXIOM_HILBERT_NOTE.md)
-
-Use [MINIMAL_AXIOMS_2026-04-11.md](../../MINIMAL_AXIOMS_2026-04-11.md) only as
-the operational package-boundary memo for the current audited implementation
-surface.
+- the accepted package statement is `Cl(3)` on `Z^3` as the physical theory
+- use [MINIMAL_AXIOMS_2026-04-11.md](../../MINIMAL_AXIOMS_2026-04-11.md) as
+  the operational package-boundary memo for the current audited
+  implementation surface
+- use [SINGLE_AXIOM_INFORMATION_NOTE.md](../../SINGLE_AXIOM_INFORMATION_NOTE.md)
+  and
+  [SINGLE_AXIOM_HILBERT_NOTE.md](../../SINGLE_AXIOM_HILBERT_NOTE.md)
+  only as optional reduction/support notes for framework compression and
+  physical-lattice scoping
 
 Read the gravity/QG side as exact on the discrete project route and on one
 chosen canonical textbook continuum target. The package is not asserting that

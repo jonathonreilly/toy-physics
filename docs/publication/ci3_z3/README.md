@@ -7,13 +7,16 @@ Use this package instead of browsing raw repo chronology.
 
 Framework statement:
 
-- the public package stands on the one-axiom reduction notes
-  [SINGLE_AXIOM_INFORMATION_NOTE.md](../../SINGLE_AXIOM_INFORMATION_NOTE.md)
-  and
-  [SINGLE_AXIOM_HILBERT_NOTE.md](../../SINGLE_AXIOM_HILBERT_NOTE.md)
+- the accepted package statement is `Cl(3)` on `Z^3` as the physical theory
 - [MINIMAL_AXIOMS_2026-04-11.md](../../MINIMAL_AXIOMS_2026-04-11.md) is the
   operational package-boundary memo for the current audited implementation
-  surface, not a competing axiom count
+  surface
+- [SINGLE_AXIOM_INFORMATION_NOTE.md](../../SINGLE_AXIOM_INFORMATION_NOTE.md)
+  and
+  [SINGLE_AXIOM_HILBERT_NOTE.md](../../SINGLE_AXIOM_HILBERT_NOTE.md)
+  are optional reduction/support notes for framework compression and
+  physical-lattice scoping, not a competing or load-bearing front-door input
+  count
 
 ## External Reviewer Read Order
 

@@ -4,6 +4,12 @@
 **Status:** PASS -- all four tests support axiom unification
 **Runner:** `scripts/frontier_single_axiom_hilbert.py`
 
+**Scope note:** this is a reduction/support note for framework compression and
+Hilbert-surface scoping. It is not the load-bearing accepted input ledger for
+the current paper package, whose framework statement remains `Cl(3)` on `Z^3`
+with the audited package boundary recorded in
+`docs/MINIMAL_AXIOMS_2026-04-11.md`.
+
 ## Question
 
 Can the two axioms (finite graph + unitary evolution) be reduced to one?
