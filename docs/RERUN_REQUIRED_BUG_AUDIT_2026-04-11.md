@@ -140,15 +140,26 @@ Required rerun:
 
 ### 5. Decoherence distance sweep aliases torus separations
 
+**Status on `main`: stale historical caution only; not a live rerun blocker**
+
 Affected runner:
 
-- [`scripts/frontier_gravitational_decoherence_rate.py`](../scripts/frontier_gravitational_decoherence_rate.py)
+- historical frontier-only runner `frontier_gravitational_decoherence_rate.py`
+  (not retained on `main`)
 
 Bug:
 
 - `d = 6, 8` on a periodic `10x10` torus are not clean long-range separations
 
-Required rerun:
+Current mainline read:
+
+- the live gravitational-decoherence companion on current `main` hangs off:
+  - [`scripts/frontier_grav_decoherence_derived.py`](../scripts/frontier_grav_decoherence_derived.py)
+  - [`docs/GRAV_DECOHERENCE_DERIVED_NOTE.md`](GRAV_DECOHERENCE_DERIVED_NOTE.md)
+- that bounded companion is a derived BMV-class benchmark lane, not the old
+  finite-torus distance sweep
+
+Action if the historical torus sweep is reopened:
 
 - redo the `Gamma(d)` law on an open surface or a torus protocol with distinct
   minimum-image separations
@@ -363,8 +374,6 @@ Action:
 
 These do not require new numerical work right now; they need narrowed framing.
 
-- [`docs/SESSION_SYNTHESIS_2026-04-11.md`](SESSION_SYNTHESIS_2026-04-11.md)
-- [`docs/FINAL_STATE_2026-04-11.md`](FINAL_STATE_2026-04-11.md)
 - [`scripts/frontier_boundary_law_robustness.py`](../scripts/frontier_boundary_law_robustness.py) header/banner
 
 ## D. Verified False Positive

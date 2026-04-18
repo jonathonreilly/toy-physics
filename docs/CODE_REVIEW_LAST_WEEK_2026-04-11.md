@@ -108,6 +108,17 @@ None on current `main`.
      reserving full BMV / mediator-null claims for future redesigned
      witnesses.
 
+11. The old torus gravitational-decoherence distance sweep is no longer a live
+    blocker on current `main`.
+    - The runner named in the stale audit entry,
+      `frontier_gravitational_decoherence_rate.py`, is not on the live script
+      surface.
+    - The current mainline gravitational-decoherence companion instead hangs
+      off `frontier_grav_decoherence_derived.py` and
+      `GRAV_DECOHERENCE_DERIVED_NOTE.md`, which already frame the lane as a
+      bounded BMV-class benchmark companion rather than a finite-size torus
+      scaling claim.
+
 ## Verified False Positive From Agent Review
 
 One agent claimed `frontier_wilson_two_body_open.py` still computed center of

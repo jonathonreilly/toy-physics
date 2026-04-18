@@ -120,9 +120,14 @@ Cornell fit gives sigma=0.018 but E(r) is strongly oscillatory (even/odd r
 alternation from staggered lattice artifacts). The "string tension" is likely
 a fitting artifact on non-monotonic data. NOT confirmed.
 
-**9. Gravitational Decoherence Rate (frontier_gravitational_decoherence_rate.py)**
-Decoherence signal exists but Diosi-Penrose scaling (Gamma ~ G/d) not
-cleanly reproduced. Finite-size artifacts dominate. Needs n >> 61.
+**9. Gravitational Decoherence Companion (current mainline:
+frontier_grav_decoherence_derived.py)**
+The old torus distance-sweep runner `frontier_gravitational_decoherence_rate.py`
+should be treated as historical only. The current mainline capture is the
+bounded BMV-class companion in `frontier_grav_decoherence_derived.py` /
+`GRAV_DECOHERENCE_DERIVED_NOTE.md`, which packages the benchmark prediction
+`gamma = 0.253 Hz`, `Phi_ent = 12.4 rad` as a derived companion rather than a
+finite-size torus scaling claim.
 
 **10. Single-Particle Entropy (frontier_self_gravity_entropy.py)**
 Simple bipartition entropy is NOT an area-law result.
@@ -162,7 +167,9 @@ Scripts (new):
 - frontier_self_gravity_entropy.py — single-particle entropy audit
 - frontier_critical_exponents_extended.py — 12-config finite-size scaling
 - frontier_geometry_superposition_sweep.py — 4-sweep parameter study
-- frontier_gravitational_decoherence_rate.py — decoherence rate
+- frontier_gravitational_decoherence_rate.py — historical torus decoherence
+  sweep; current mainline companion later replaced by
+  frontier_grav_decoherence_derived.py
 - frontier_quantum_zeno.py — Zeno localization
 - frontier_z2_sublattice_decoherence.py — sublattice MI protection
 - frontier_gravitational_memory.py — Christodoulou memory
