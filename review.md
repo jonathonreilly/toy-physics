@@ -2,81 +2,104 @@
 
 ## Verdict
 
-Still reject for `main` at the current tip (`6d2cf065`).
+Still reject for `main` at the current tip (`29fb7282`).
 
-The latest update improves some note-consistency language, but it does not
-change the load-bearing blockers from the previous review:
+This round is a real scientific improvement over the earlier PF packet. The
+branch now states the honest negative current-bank claim rather than
+overclaiming a positive global sole-axiom PF selector. But it is still not
+ready to land as science on `main`.
 
-1. the umbrella PF closure runner is still a note-audit script rather than an
-   object-level theorem verifier,
-2. the representative frontier-certificate runners still prove toy generic
-   lemmas and then promote note conclusions, and
-3. the branch still creates a large root-level authority stack without any
-   package-surface wiring.
+I am **not** treating lack of repo weaving as a blocker here. If the science
+were clean, I would do the landing/package work myself. The remaining blockers
+are scientific evidence-surface blockers.
 
 ## Current Replay
 
-The branch still replays cleanly:
-
+- `frontier_perron_frobenius_selection_axiom_boundary.py`
+  → `PASS = 126, FAIL = 0, SUPPORT = 63`
 - `frontier_perron_frobenius_current_bank_full_frontier_closure_2026_04_18.py`
-  → `THEOREM PASS=4 SUPPORT=1 FAIL=0`
+  → `THEOREM PASS = 4, SUPPORT = 1, FAIL = 0`
+- `frontier_perron_frobenius_wilson_current_bank_complete_closure_2026_04_18.py`
+  → `THEOREM PASS = 3, SUPPORT = 1, FAIL = 1`
 - `frontier_perron_frobenius_step2_wilson_local_nilpotent_charpoly_certificate_2026_04_18.py`
-  → `THEOREM PASS=4 SUPPORT=1 FAIL=0`
+  → `THEOREM PASS = 4, SUPPORT = 1, FAIL = 0`
+- `frontier_pmns_graph_first_fixed_slice_scalar_production_discriminant_2026_04_18.py`
+  → `THEOREM PASS = 4, SUPPORT = 1, FAIL = 0`
+- `frontier_gauge_vacuum_plaquette_beta6_first_hankel_certificate_2026_04_18.py`
+  → `THEOREM PASS = 4, SUPPORT = 1, FAIL = 0`
 
-So this remains an evidence-surface rejection, not a runtime one.
+So this is no longer just the old “overclaimed positive PF” problem. The new
+packet is closer. But the current negative-closure evidence layer still does
+not clear review.
 
 ## Live Blockers
 
-### 1. The top closure runner is still only checking note phrases
+### 1. One of the branch's own headline Wilson validators currently fails
 
+`scripts/frontier_perron_frobenius_wilson_current_bank_complete_closure_2026_04_18.py`
+does **not** replay cleanly at the current tip. It fails on its support check
+against
+`docs/PERRON_FROBENIUS_WILSON_DEPENDENCY_AUDIT_NOTE_2026-04-18.md`, because the
+audit note no longer contains the exact wording the runner expects about Wilson
+being the “only/main positive reopening lever.”
+
+That means the branch's claimed “clean current-bank closure validator stack” is
+still internally inconsistent on its own terms.
+
+This is not the deepest scientific issue, but it is a real blocker: the branch
+cannot be called clean while one of its top-level exact-closure validators is
+red locally.
+
+### 2. The new negative-closure layer is still certified mainly by note-audit and generic certificate-shape runners
+
+The central current-bank closure runner
 `scripts/frontier_perron_frobenius_current_bank_full_frontier_closure_2026_04_18.py`
-still just reads the Wilson / PMNS / plaquette notes and passes if they contain
-the expected closure sentences. It does **not** verify the branch-wide closure
-claim directly on the underlying branch objects.
+still only:
 
-That is enough for a prose-consistency audit. It is not enough for claims like:
+- reads the Wilson / PMNS / plaquette closure notes,
+- checks for expected phrases,
+- and then declares that all three frontier certificates are negatively closed.
 
-- “all three frontier certificates are negatively closed”
-- “no remaining positive PF route is left open”
-- “current-bank global PF is fully closed negatively”
+That is prose-consistency auditing, not a theorem-grade primary verifier for
+the branch-wide statement
+“the present exact bank has no live positive PF route remaining.”
 
-Those remain theorem-grade statements without a theorem-grade primary runner.
+The same issue persists one level down in the representative new frontier
+certificate runners:
 
-### 2. The Wilson representative certificate is still toy-lemma plus note audit
+- `frontier_perron_frobenius_step2_wilson_local_nilpotent_charpoly_certificate_2026_04_18.py`
+  proves a generic Hermitian `3x3` trace/characteristic-polynomial identity on
+  a hand-built toy matrix with `b = h.copy()`, then checks whether the notes
+  say the Wilson route has been reduced to a local `1 + 1` certificate.
+- `frontier_pmns_graph_first_fixed_slice_scalar_production_discriminant_2026_04_18.py`
+  proves a generic `2x2` Gram-positivity / scalar-discriminant lemma for a toy
+  holonomy map, then checks whether the note says the fixed-slice PMNS frontier
+  has been scalarized.
+- `frontier_gauge_vacuum_plaquette_beta6_first_hankel_certificate_2026_04_18.py`
+  proves generic first-moment / Hankel facts for toy witness matrices, then
+  checks whether the note says the plaquette frontier now fails at the first
+  Hankel layer.
 
-`scripts/frontier_perron_frobenius_step2_wilson_local_nilpotent_charpoly_certificate_2026_04_18.py`
-still proves only the generic Hermitian `3x3` equivalence using a hand-built
-matrix `h` with `b = h.copy()`, then checks whether the notes say the Wilson
-route has been compressed to a local `1 + 1` certificate.
+These are good **certificate-shape** sanity checks. They are not yet direct
+object-level verifiers that the **current exact bank** itself forces those
+three frontier reductions/nonrealizations.
 
-That is still not a certification of the actual Wilson objects or the concrete
-branch route. The same general issue remains at the PMNS and plaquette frontier
-certificate layer.
-
-### 3. The branch still bypasses the repo truth surfaces
-
-This tip still does **not** update any of the package control-plane files:
-
-- `PUBLICATION_MATRIX.md`
-- `DERIVATION_ATLAS.md`
-- `DERIVATION_VALIDATION_MAP.md`
-- `CLAIMS_TABLE.md`
-- `RESULTS_INDEX.md`
-- `EXTERNAL_REVIEWER_GUIDE.md`
-- package / root `README` surfaces
-
-So even if some subset of the science were acceptable, the branch is still not
-packaged for `main`. It remains a competing root-level authority stack rather
-than a package-captured landing.
+So the scientific gap is now narrower and clearer than before, but it is still
+real: the branch lacks a theorem-grade primary verification layer for the exact
+negative current-bank closure it now claims.
 
 ## Practical Call
 
-The latest edits are not enough to make this branch merge-ready.
+The science is closer than the previous PF review, but it is still not ready
+to land.
 
-The honest next step is still:
+The next honest step is:
 
-1. keep this as a salvage / review branch,
-2. promote lower-level notes only where the runner certifies actual branch
-   objects rather than note text,
-3. replace the umbrella closure layer with real object-level verifiers, and
-4. only then wire any accepted subset through the repo publication surfaces.
+1. fix the broken Wilson complete-closure validator so the branch is at least
+   internally self-consistent again;
+2. replace the current note-audit / generic-certificate runners with
+   object-level current-bank verifiers for the three live frontier closures;
+3. then resubmit the negative current-bank PF theorem packet.
+
+If that happens, this could plausibly become landable as a **science-only exact
+boundary result** on `main`. It is not there yet.
