@@ -2,172 +2,167 @@
 
 ## Current Call
 
-This branch is closer again, but I still do **not** clear it as retained
-`d_s = 3` / G16 closure.
+This branch still does **not** clear as retained `d_s = 3` / G16 closure.
 
 My current disposition is:
 
 - **No** as retained closure
-- **Yes** as a stronger support-route packet if the statuses are cleaned up
+- **Yes** as a stronger support-route packet if the status surfaces are
+  downgraded back into alignment
 
-The new `recipe-r-forcing-from-retained-n3-2026-04-17.md` note is the
-right target. The branch is now attacking the real remaining question:
-whether `Recipe-R` is forced rather than chosen. But the current proof
-surface still does not close that point cleanly.
+The branch has made real progress. The new `Recipe-R forcing v2` work is
+materially better than the prior pass. But it still does not show that the
+retained authority on `main` itself forces the family-scope extension
+`Recipe-R`; it shows that `Recipe-R` follows once an extra family-scope
+full-rotation-algebra reading is imposed.
 
 ## Branch Hygiene
 
 At the time of this pass:
 
-- branch is **0 behind / 27 ahead** `origin/main`
+- branch is **12 behind / 29 ahead** `origin/main`
 
-So this is not a branch-state problem.
+That is not the main blocker here, but the branch is no longer in a clean
+rebase state.
 
 ## Replay Status
 
 - `python3 -m py_compile scripts/frontier_recipe_r_forcing_from_retained_n3.py scripts/frontier_admissibility_closure_from_graph_eta_taste.py scripts/frontier_native_gauge_family_uniqueness.py scripts/frontier_native_su2_tightness.py` passes
 - `python3 scripts/frontier_recipe_r_forcing_from_retained_n3.py` ends with
-  `THEOREM_PASS=52 SUPPORT_PASS=12 FAIL=0`
-- `python3 scripts/frontier_admissibility_closure_from_graph_eta_taste.py` ends with
-  `THEOREM_PASS=42 SUPPORT_PASS=39 FAIL=0`
-- `python3 scripts/frontier_native_gauge_family_uniqueness.py` ends with
-  `THEOREM_PASS=26 SUPPORT_PASS=9 FAIL=0`
-- `python3 scripts/frontier_native_su2_tightness.py` ends with
-  `THEOREM_PASS=19 SUPPORT_PASS=16 FAIL=0`
-- `python3 scripts/frontier_native_gauge_scope.py` still replays cleanly
+  `THEOREM_PASS=72 SUPPORT_PASS=16 FAIL=0`
+- `python3 scripts/frontier_native_gauge_family_uniqueness.py` still ends with:
+  `It does not, by itself, upgrade d_s = 3 from axiom to retained theorem on main.`
+- `python3 scripts/frontier_native_su2_tightness.py` still ends with:
+  `It is the strongest current support-route derivation of n = 3, not yet a retained replacement for the d_s = 3 primitive on main.`
 
-The branch is not failing computationally.
+So the rejection is not a runtime one.
 
 ## What Improved
 
 Three real improvements are now present:
 
-1. The branch no longer stops at “Recipe-R gives `A2/A4/A5`”; it now
-   tries to address whether `Recipe-R` itself is forced.
-2. The new forcing runner proves a real Clifford-algebra lemma:
-   grade-1-preservers sit inside `Z(Cl(n)) ⊕ Λ²(R^n)`.
-3. The companion notes have been updated to acknowledge the new forcing
-   theorem and try to propagate its consequences through the CL3 packet.
+1. The new forcing note now states the equality step explicitly and no longer
+   stops at mere containment in `Λ²(R^n)`.
+2. The forcing runner was extended in a real way: it now certifies the
+   Clifford-grade lemma, the center quotient, and the bivector-to-`so(n)`
+   adjoint image dimension.
+3. The old “top says retained, body says support-route” inconsistency in the
+   family-uniqueness note is narrower than before.
 
 That is genuine progress.
 
 ## Main Blocker
 
-### The forcing theorem still relies on an added intrinsic characterization and then an added equality step
+### The last forcing step still comes from an added family-scope `R3` premise
 
-The new forcing note makes two moves:
+The new forcing note proves a real theorem up to the following point:
 
-1. It replaces the old “bivector” family-scope reading by an intrinsic
-   “rotation-on-Γ” characterization `(C_rot)`.
-2. It proves that any `X` preserving the Γ-vector under adjoint action
-   lies in `Z(Cl(n)) ⊕ Λ²(R^n)`, and after excluding the center,
-   lies in `Λ²(R^n)`.
+- `(R2)` rotation-on-`Γ` gives
+  `V_n ⊆ Z(Cl(n)) ⊕ Λ²(R^n)`
+- `(R1)` center-freeness gives
+  `V_n ⊆ Λ²(R^n)`
 
-That much is real mathematics.
+That part is solid.
 
-But the retained-bar issue is what comes next:
+The remaining equality
 
-- the note says `(C_rot)` is the intrinsic retained characterization of
-  the `n = 3` authority,
-- and then says the family-scope extension is the unique **full**
-  `SO(n)` rotation-generator subspace, hence equality
-  `V_n = Λ²(R^n) = Recipe-R`.
+`V_n = Λ²(R^n) = Recipe-R`
 
-That still leaves two unclosed steps:
+is then obtained by adding
 
-1. the retained authority on `main` does not itself state this
-   `rotation-on-Γ` characterization as the load-bearing theorem surface;
-2. the equality step at general `n` still needs the extra “full
-   `SO(n)`-rotation algebra” extension premise, which is stronger than
-   mere containment in `Λ²(R^n)`.
+- `(R3)` full rotation algebra: `ad(V_n) = so(n)`
 
-So the branch has improved from:
+and the note explicitly says that at family scope this is
 
-- “Recipe-R is just chosen”
+> the natural requirement that the native gauge generator space realize all
+> infinitesimal `SO(n)` rotations of the `Γ`-vector — this is what "native
+> gauge" means.
+
+That is still the load-bearing gap. The retained authority on `main`
+(`docs/NATIVE_GAUGE_CLOSURE_NOTE.md`) proves exact native cubic `SU(2)` at
+`n = 3`; it does **not** itself state that every family-scope native-gauge
+extension must realize the full `SO(n)` rotation algebra on the `Γ`-vector.
+
+So the current branch has improved from:
+
+- “Recipe-R is chosen”
 
 to:
 
-- “Recipe-R follows if you accept `(C_rot)` as the retained intrinsic
-  characterization and accept the full-rotation-algebra extension.”
+- “Recipe-R is forced if the family-scope extension is required to realize the
+  full `SO(n)` rotation algebra.”
 
-That is closer, but it is still not obviously “retained native-gauge
-authority on `main` alone forces Recipe-R.”
+That is better, but it is still not “retained authority on `main` alone forces
+Recipe-R.”
 
 ## Runner Boundary
 
-### The new runner certifies the Clifford lemma and bivector containment, not the full retained forcing claim
+### The runner still narrates the forcing claim more strongly than it certifies it
 
-The runner does good work on:
+The runner now does certify:
 
-- reproducing the retained `n = 3` `S_k`,
-- proving grade-1-preserver classification for basis monomials,
-- identifying the center,
-- and showing the bivector sector has the expected dimension.
+- the monomial classification,
+- the center structure,
+- the center-free containment in bivectors,
+- and the fact that bivectors realize full `so(n)`.
 
-But the actual forcing claim is still not independently certified:
+But its own internal logic still shows the open point:
 
-- Part E checks the bivector span dimension and that the retained `S_k`
-  lie in the bivector span at `n = 3`;
-- Part F then narrates that this yields the unique family-scope
-  extension and closes the blocker.
+- Part E says `(U1)`–`(U3)` already force `Recipe-R`
+- Part F says Parts B–E close the follow-up blocker
+- Part G then says equality actually required the extra strengthened premise
+  `(R3)` and certifies that stronger theorem instead
 
-That does **not** yet amount to a direct certification that any family
-`V_n` satisfying the retained intrinsic characterization must equal the
-full bivector sector at every `n`. The runner never constructs or audits
-the extra “full `SO(n)`-rotation algebra” premise; it is inserted in the
-note and summary narrative.
+So the runner now certifies:
 
-So the runner is evidence for:
+- `Recipe-R` under `(R1)+(R2)+(R3)`
 
-- `rotation-on-Γ` implies containment in `Λ²(R^n)` modulo center,
+not:
 
-not yet for:
+- `Recipe-R` from the retained stack alone
 
-- the full retained forcing of `Recipe-R`.
+That is the right support-route science result. It is still not a retained
+forcing result.
 
-## Internal Package Problem
+## Remaining Surface Mismatch
 
-The companion authority surfaces are also still internally mixed.
+The downstream CL3 authority surfaces still outrun the actual certified status.
 
-- The top of the uniqueness and tightness notes now labels them
+- The top of the uniqueness and tightness notes now treats the CL3 packet as
   retained-grade under the new forcing theorem.
-- But lower down, both notes still preserve older support-route text
-  saying the package is only the strongest current support-route path
-  and does not yet upgrade `d_s = 3` on `main`.
+- But the companion runners still end by saying the family-uniqueness /
+  tightness route is the strongest current conditional or support-route path,
+  not yet a retained replacement on `main`.
 
-So the CL3 packet still does not speak with one voice about its own
-status.
+So the package still does not speak with one voice about its own status. The
+science and the scripts are now closer than before, but the note surfaces are
+still one step stronger than the certified result.
 
 ## Best Outcome From Here
 
-If the goal is still retained closure, the real next science is now:
+If the goal is retained closure, there is now only one worthwhile science push:
 
-1. show that the retained `n = 3` native-gauge authority itself
-   canonically carries the `rotation-on-Γ` characterization, rather than
-   that characterization being the new chosen intrinsic reading;
-2. show that the family-scope extension is forced as the full
-   `SO(n)`-rotation-generator algebra, not merely a center-free
-   subspace contained in `Λ²(R^n)`;
-3. make the runner certify exactly that equality step rather than
-   narrating it in Part F.
+1. derive the family-scope full-rotation-algebra premise itself from the
+   retained native-gauge authority, instead of defining it as what “native
+   gauge” means at arbitrary `n`
 
 If the branch cannot do that yet, the honest landing remains:
 
-- keep the new forcing note and runner,
-- keep the whole packet support-route,
-- and remove the retained-grade status upgrades from the companion notes.
+1. keep the new forcing note and runner
+2. keep the CL3 packet support-route / comparison-family
+3. remove the retained-grade upgrades from the uniqueness / tightness
+   authority surfaces
 
 ## Bottom Line
 
-This is still real progress. But I do not think the branch has yet
-crossed the retained bar. The new theorem proves a good containment /
-characterization result, but the last step from that result to
-“retained `Recipe-R` forcing” still depends on a stronger intrinsic
-reading and a stronger family-scope equality premise than the retained
-authority visibly provides today.
+The branch is meaningfully better than the last pass. But the remaining blocker
+is still real and now very narrow:
 
-So my recommendation is:
+- **Recipe-R is not yet retained-forced from the current `main` authority**
+- it is forced only after adding the family-scope full-`SO(n)` premise
+
+So my recommendation remains:
 
 - **do not clear as retained closure**
-- **do clear only as a stronger support-route packet if the status surfaces are made consistent**
-- **do not push more side corollaries until the `C_rot` / full-`SO(n)` forcing step is made explicit and runner-certified**
+- **do clear as a stronger support-route packet after status cleanup**
+- **do not spend more time pushing downstream CL3 corollaries unless the next work directly derives the family-scope `R3` forcing step**
