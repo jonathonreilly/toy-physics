@@ -93,7 +93,16 @@ peak at `s~=0.0195041737783`, `delta~=1.188513342509166`,
 collapses to the slack-floor endpoint `s=0`,
 `delta~=1.188955544069478`, with packet distance `0.233274467128`. So the
 positive-path carrier target is narrower again: the residual exact-carrier
-neighborhoods of those two explicit split-2 upper-`m` face extremals.
+neighborhoods of those two explicit split-2 upper-`m` face extremals. The
+branch now pushes one local step further there as well: on tested 3D boxes
+around those two extremals, the cap neighborhood keeps the same eta peak at
+`(-0.14, 1.188513342509166, 0.0195041737783)` with
+`eta/eta_obs~=0.884523189582`, while the endpoint neighborhood keeps the same
+closest-lane point at `(-0.14, 1.188955544069478, 0)` with packet distance
+`0.233274467128`. Both tested local neighborhoods remain transport-
+incompatible. So the carrier-side branch no longer stops at a vague split-2
+region; it stops at interval-style exclusion or dominance on two explicit
+split-2 upper-face neighborhoods.
 
 So the carrier side stops exactly at:
 
@@ -118,4 +127,5 @@ archaeology is below the current surface.
 - [DM_NEUTRINO_SOURCE_SURFACE_MICROSCOPIC_POSITIVE_PROBE_REPRESENTATION_THEOREM_NOTE_2026-04-17.md](./DM_NEUTRINO_SOURCE_SURFACE_MICROSCOPIC_POSITIVE_PROBE_REPRESENTATION_THEOREM_NOTE_2026-04-17.md)
 - [DM_NEUTRINO_SOURCE_SURFACE_OBSERVABLE_GRAMMAR_EXHAUSTION_OBSTRUCTION_NOTE_2026-04-17.md](./DM_NEUTRINO_SOURCE_SURFACE_OBSERVABLE_GRAMMAR_EXHAUSTION_OBSTRUCTION_NOTE_2026-04-17.md)
 - [DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md](./DM_NEUTRINO_SOURCE_SURFACE_GLOBAL_DOMINANCE_COMPLETENESS_OBSTRUCTION_NOTE_2026-04-17.md)
+- [DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md](./DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md)
 - [frontier_dm_selector_branch_conclusion.py](../scripts/frontier_dm_selector_branch_conclusion.py)
