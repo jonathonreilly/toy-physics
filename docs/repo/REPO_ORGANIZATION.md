@@ -37,6 +37,10 @@ still landing. The fix is a stable control plane:
 
 ## Status Meanings
 
+Repo-wide status language now lives in
+[`CONTROLLED_VOCABULARY.md`](./CONTROLLED_VOCABULARY.md).
+The labels below are the historical lane-board subset of that vocabulary.
+
 - `primary-retained`
   - current best-supported lane
   - this is where new readers should start
@@ -60,6 +64,8 @@ still landing. The fix is a stable control plane:
 
 - [`docs/work_history/repo/LANE_STATUS_BOARD.md`](../work_history/repo/LANE_STATUS_BOARD.md)
   - where each lane across the whole repo sits now
+- [`docs/repo/CONTROLLED_VOCABULARY.md`](./CONTROLLED_VOCABULARY.md)
+  - repo-wide status taxonomy and wording rules
 - [`docs/CANONICAL_HARNESS_INDEX.md`](../CANONICAL_HARNESS_INDEX.md)
   - which scripts to rerun first
 - [`docs/lanes/README.md`](../lanes/README.md)

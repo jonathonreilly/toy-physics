@@ -31,8 +31,9 @@ Peak entanglement:
 
 ## Strongest Honest Interpretation
 
-This script shows a strong **branch-mediated entanglement signal** in a
-fixed-adjacency staggered-lattice toy model.
+This script shows a strong **branch-mediated entanglement signal** on a
+fixed-adjacency staggered-lattice protocol with an externally imposed
+two-branch source configuration.
 
 - A shared geometry branch `(source present, source absent)` is imposed externally.
 - Each particle evolves coherently under both branches.
@@ -49,7 +50,7 @@ Reasons:
 
 - The geometry/source superposition is inserted by hand rather than generated dynamically by the particles' own mass branches.
 - The script does not implement the full local-operations-and-classical-communication exclusion logic used in BMV-style claims.
-- The result is therefore a **branch-mediated toy-model entanglement construction**, not a standalone proof that gravity must be quantum.
+- The result is therefore a **branch-mediated entanglement witness on an externally imposed two-branch protocol**, not a standalone proof that gravity must be quantum.
 
 ## Retained Claim
 

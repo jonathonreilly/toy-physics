@@ -61,8 +61,8 @@ For 2-body:
 > On the audited fixed-adjacency two-branch staggered-lattice protocol, the
 > 2-body branch-entanglement signal is robust: `delta_S > 0` in `60/60`
 > audited configurations across seeds, separations, source positions, and
-> sizes. This remains a bounded toy-model branch-entanglement result, not a
-> full BMV witness.
+> sizes. This remains a bounded branch-mediated entanglement result on an
+> externally imposed two-branch protocol, not a full BMV witness.
 
 For 3-body:
 

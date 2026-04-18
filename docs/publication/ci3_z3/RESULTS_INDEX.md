@@ -8,6 +8,7 @@ Use alongside:
 - [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
 - [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
 - [FULL_CLAIM_LEDGER.md](./FULL_CLAIM_LEDGER.md)
+- [Repo controlled vocabulary](../../repo/CONTROLLED_VOCABULARY.md)
 
 ## Retained Core
 

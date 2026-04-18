@@ -53,8 +53,10 @@ The repo currently contains four different classes of publication material:
 - bounded layered-DAG-derived control
 - bounded fixed-adjacency branch-superposition result in 2D
 - bounded many-body-style boundary-law result from the Dirac-sea correlation-matrix probe, now backed by a larger robustness addendum
-- bounded branch-mediated entanglement result in the externally imposed geometry-branch toy protocol
-- bounded tripartite branch-mediated entanglement result with corrected W-type structure in the externally imposed two-branch toy protocol
+- bounded branch-mediated entanglement result on the externally imposed
+  geometry-branch protocol
+- bounded tripartite branch-mediated entanglement result with corrected W-type
+  structure on the externally imposed two-branch protocol
 - bounded weak-coupling irregular-graph sign-sensitive regime on stable shell metrics
 - bounded irregular same-surface core-packet sign separator across the audited irregular families at both screened and low-screening settings
 - bounded cross-field emergent product-law companion on one audited open 3D staggered surface

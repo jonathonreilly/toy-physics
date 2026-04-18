@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Branch-mediated entanglement toy protocol on a staggered lattice.
+Branch-mediated entanglement on an externally imposed two-branch protocol.
 
 Protocol: Two particles (wavepackets) on a 2D staggered lattice. A source at the
 midpoint is placed in an externally imposed branch superposition of
@@ -8,7 +8,7 @@ midpoint is placed in an externally imposed branch superposition of
 correlates the two particles through that branch structure.
 
 Guardrail:
-  this is a toy-model branch-entanglement probe with an externally imposed
+  this is a branch-entanglement probe on an externally imposed
   geometry/source branch, not a full BMV witness. It does not by itself prove
   that gravity must be quantum.
 
@@ -21,8 +21,8 @@ giving entanglement entropy:
 
   S = H_binary(p) where p = (1 + overlap_1 * overlap_2) / 2
 
-Toy witness: S > 0 whenever overlap < 1, i.e. whenever the branches create
-distinguishable evolution for either particle.
+Branch-mediated witness: S > 0 whenever overlap < 1, i.e. whenever the
+branches create distinguishable evolution for either particle.
 
 Sweep G = [1, 2, 5, 10, 20, 50] to map the entanglement vs coupling strength.
 """
@@ -133,10 +133,10 @@ def binary_entropy(p: float) -> float:
     return -p * math.log(p) - (1.0 - p) * math.log(1.0 - p)
 
 
-# ── Branch-entanglement toy protocol ────────────────────────────────
+# ── Branch-entanglement protocol ────────────────────────────────────
 
 def run_bmv(g: float):
-    """Run the toy branch-entanglement protocol for a given source strength G."""
+    """Run the branch-entanglement protocol for a given source strength G."""
     pos, color, adj, index, n = make_lattice_2d(SIDE)
     lap = build_laplacian(pos, adj)
 
@@ -284,12 +284,12 @@ def main():
 
     if any_entangled:
         print("BRANCH-ENTANGLEMENT SIGNAL: POSITIVE")
-        print("  The fixed geometry-branch toy model generates entanglement")
+        print("  The fixed geometry-branch protocol generates entanglement")
         print("  beyond the corresponding classical branch mixture.")
-        print("  This is a bounded toy-protocol result,")
+        print("  This is a bounded externally imposed two-branch result,")
         print("  not a standalone gravity-is-quantum witness.")
     else:
-        print("BRANCH-ENTANGLEMENT TOY WITNESS: NULL")
+        print("BRANCH-ENTANGLEMENT PROTOCOL: NULL")
         print("  No entanglement beyond classical mixing detected.")
         print("  Overlaps may be too close to 1 for detectable entanglement.")
 

@@ -9,8 +9,12 @@ Active rerun map:
 
 - [`docs/RERUN_REQUIRED_BUG_AUDIT_2026-04-11.md`](../RERUN_REQUIRED_BUG_AUDIT_2026-04-11.md)
 - [`docs/CLAUDE_FRONTIER_RETAIN_AUDIT_2026-04-11.md`](../CLAUDE_FRONTIER_RETAIN_AUDIT_2026-04-11.md)
+- [`docs/repo/CONTROLLED_VOCABULARY.md`](../../repo/CONTROLLED_VOCABULARY.md)
 
 ## Status Legend
+
+These are historical lane-board labels, not the publication-capture
+dispositions used in `PUBLICATION_MATRIX.md`.
 
 - `primary-retained`: current best-supported lane
 - `retained-companion`: real and replayable, but not the single entrypoint

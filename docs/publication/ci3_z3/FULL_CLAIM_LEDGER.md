@@ -19,6 +19,14 @@ Use this file together with:
 - [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
 - [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
 - [PUBLICATION_CONTROL_PLANE.md](./PUBLICATION_CONTROL_PLANE.md)
+- [Repo controlled vocabulary](../../repo/CONTROLLED_VOCABULARY.md)
+
+Terminology rule:
+
+- `PUBLICATION_MATRIX.md` carries package-capture decisions
+- this ledger carries the narrative decision behind them and may also use
+  claim-strength labels such as `derived`, `bounded companion`, or
+  `conditional / support`
 
 ## 1. How to read the package
 
@@ -139,7 +147,7 @@ external reviewer will ask about them whether or not they are retained.
 | Quantity / lane | Current decision | Why not promoted | Primary authority | Matrix / freeze reference |
 |---|---|---|---|---|
 | CKM closure package | closed promoted quantitative package | atlas/axiom CKM package is now carried by canonical CMT `\alpha_s(v)` as the quantitative coupling input, exact atlas counts, exact `1/6` projector, exact bilinear tensor carrier `K_R`, exact `Z_3` source, and exact Schur cascade; no quark masses or fitted CKM observables enter the derivation, and older bounded Cabibbo/NNI/Jarlskog notes are superseded as authority | [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md) | matrix row `CKM closure package`, n/a |
-| Down-type mass-ratio CKM-dual lane | bounded secondary flavor-mass lane | promoted CKM closure plus canonical `\alpha_s(v)` and exact SU(3) constants already give a clean down-type flavor-mass extraction without observed-mass inputs; the lane still depends on the GST bridge and the bounded `5/6` bridge, but the threshold-local self-scale comparator now has explicit support while theorem-grade scale closure remains open | [DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md](../../DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md) | matrix row `Down-type mass-ratio CKM-dual lane` |
+| Down-type mass-ratio CKM-dual lane | bounded secondary lane | promoted CKM closure plus canonical `\alpha_s(v)` and exact SU(3) constants already give a clean down-type flavor-mass extraction without observed-mass inputs; the lane still depends on the GST bridge and the bounded `5/6` bridge, but the threshold-local self-scale comparator now has explicit support while theorem-grade scale closure remains open | [DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md](../../DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md) | matrix row `Down-type mass-ratio CKM-dual lane` |
 | Charged-lepton mass-hierarchy review package | bounded charged-lepton compatibility package | algebraic Koide-cone equivalence `Q = 2/3 ⟺ a_0² = 2\|z\|²` on retained `hw=1` (Theorem 1); retained second-order-return shape theorem supplying three independent weight slots via `Γ_1` hopping (Theorem 2) with publication-grade 7-stress-test robustness; mass-mixing subspace disjointness theorem `dim(V_H ∩ V_D) = 0` establishing architectural independence of charged-lepton and neutrino-mixing closures (Theorem 3); six rigorous structural no-gos establishing every retained non-Higgs-Yukawa mechanism is species-diagonal (Sections 5.1–5.6); three higher-order structural theorems closing the three natural framework-derives routes with named missing primitives (Theorems 4, 5, 6); bounded observational-pin closure with Koide recovered tautologically to PDG precision (Theorem 7); pin is unique as a set up to positive scale with a residual `S_2` labeling ambiguity on `w_a ↔ w_b` that is Koide- and Σ-invariant on the retained surface; no spare forecast beyond the pin; 518 PASS / 0 FAIL across all nineteen supporting runners | [CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md](../../CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md), [CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md](../../CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md), [HW1_SECOND_ORDER_RETURN_SHAPE_THEOREM_NOTE.md](../../HW1_SECOND_ORDER_RETURN_SHAPE_THEOREM_NOTE.md), [MASS_MIXING_SUBSPACE_DISJOINTNESS_THEOREM_NOTE.md](../../MASS_MIXING_SUBSPACE_DISJOINTNESS_THEOREM_NOTE.md), [STRUCTURAL_NO_GO_SURVEY_NOTE.md](../../STRUCTURAL_NO_GO_SURVEY_NOTE.md), [HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md](../../HIGHER_ORDER_STRUCTURAL_THEOREMS_NOTE.md) | matrix row `Charged-lepton mass-hierarchy observational-pin closure` |
 
 ### Higgs and individual companion lanes

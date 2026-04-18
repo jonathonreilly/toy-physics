@@ -68,7 +68,8 @@ On the audited robustness surface:
 So the right interpretation is:
 
 > bounded **W-type** tripartite branch-mediated entanglement in a
-> fixed-adjacency toy model, not a full multipartite quantum-gravity claim.
+> fixed-adjacency externally imposed two-branch protocol, not a full
+> multipartite quantum-gravity claim.
 
 ## Why keep it
 

@@ -88,8 +88,8 @@ be promoted or reinterpreted without fixes.
 7. `frontier_bmv_entanglement.py` no longer overstates itself as a genuine
    BMV / gravity-quantumness witness on current `main`.
    - The runner and companion note now present it explicitly as a
-     branch-mediated toy protocol with an externally imposed geometry/source
-     branch.
+     branch-mediated entanglement protocol with an externally imposed
+     geometry/source branch.
    - The live bounded package keeps the positive `delta_S > 0` result while
      reserving full BMV / mediator-null claims for future redesigned
      witnesses.

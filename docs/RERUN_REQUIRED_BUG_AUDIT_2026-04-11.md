@@ -234,7 +234,8 @@ Action:
 
 ### 5. Branch/BMV entanglement classification
 
-**Status on `main`: bounded toy-witness package preserved; no longer presented
+**Status on `main`: bounded branch-mediated entanglement package on an
+externally imposed two-branch protocol preserved; no longer presented
 as a full BMV / gravity-quantumness closure**
 
 Affected runners:
@@ -245,13 +246,14 @@ Affected runners:
 
 Reasons:
 
-- 2-body script is a toy branch witness, not a full BMV result
+- 2-body script is a branch-entanglement witness on an externally imposed
+  two-branch protocol, not a full BMV result
 - 3-body GHZ path is dead / impossible under the current classifier
 
 Action:
 
-- keep the current bounded branch-mediated toy-witness package only for the
-  narrow `delta_S > 0` / W-type claims
+- keep the current bounded branch-mediated witness package only for the narrow
+  `delta_S > 0` / W-type claims on the externally imposed two-branch protocol
 - redesign the entanglement witness/classifier before any rerun if the goal is
   a stronger quantum-gravity claim
 

@@ -10,6 +10,10 @@ For the full package-captured publication inventory, also use:
 - [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
 - [Historical frozen-out registry](../../work_history/publication/FROZEN_OUT_REGISTRY.md)
 - [Historical remote-branch audit](../../work_history/publication/REMOTE_BRANCH_AUDIT_2026-04-14.md)
+- [Repo controlled vocabulary](../../repo/CONTROLLED_VOCABULARY.md)
+
+In this file, the `Status` column uses claim-strength language, not the
+five-way publication-capture dispositions from `PUBLICATION_MATRIX.md`.
 
 ## External inputs
 

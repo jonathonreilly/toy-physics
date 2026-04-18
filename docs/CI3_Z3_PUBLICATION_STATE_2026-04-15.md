@@ -16,9 +16,15 @@ The package now also carries a publication-capture layer:
 - [publication/ci3_z3/PUBLICATION_MATRIX.md](publication/ci3_z3/PUBLICATION_MATRIX.md)
 - [publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md](publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md)
 - [publication/ci3_z3/PUBLICATION_CONTROL_PLANE.md](publication/ci3_z3/PUBLICATION_CONTROL_PLANE.md)
+- [repo/CONTROLLED_VOCABULARY.md](repo/CONTROLLED_VOCABULARY.md)
 
 Those files exist so no result family is silently lost between the
 retained theorem core and the broader bounded portfolio.
+
+Use the controlled vocabulary note to keep publication-capture dispositions
+(`retained`, `promoted`, `bounded`, `open`, `frozen-out`) separate from
+claim-strength labels such as `derived`, `bounded companion`, or
+`conditional / support`.
 
 Historical capture context now lives in the history bucket:
 
