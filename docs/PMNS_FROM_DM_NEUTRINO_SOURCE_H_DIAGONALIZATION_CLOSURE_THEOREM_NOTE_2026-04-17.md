@@ -15,13 +15,20 @@ carries, explicitly flagged here:
    curvature (`signature(H_base + J) = (2, 0, 1)`) — NOT a retained
    theorem; see the perturbative-uniqueness note's Option-A demotion
    and the flagship closure review note.
-2. **SM-canonical `q_H = 0`** (not axiom-derived).
-3. **Observational hierarchy pairing** `σ_hier = (2, 1, 0)`.
+2. **Observational hierarchy pairing** `σ_hier = (2, 1, 0)`.
 
-Under these three conditionals the pinning is unique inside the
+Under these two conditionals the pinning is unique inside the
 chamber. Without them (in particular without (1)), there are competing
 admissible basins (notably at `(28, 21, 5)` and `(21, 13, 2)` on
 opposite caustic branches).
+
+**Previously listed as conditional, now discharged as GAUGE (retained):**
+the Higgs `Z_3` charge `q_H = 0` branch is a canonical gauge representative
+with no physical content in PMNS observables — see
+[`HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17`](./HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17.md).
+The three `q_H ∈ {0, ±1}` branches give identical `Y_e Y_e†` on `L_L`
+axes, hence identical `U_e = I`, hence identical `|U_PMNS|`; the choice
+`q_H = 0` is a right-basis relabeling that PMNS does not see.
 
 The DM flagship gate status on the current branch tip is therefore
 **conditional / support**, NOT `CLOSED`.
@@ -432,15 +439,18 @@ closed-form `f(H(m, δ, q_+))` on the live source-oriented sheet;
 evaluated at the chamber pin
 `(m_*, δ_*, q_+*) = (0.657061, 0.933806, 0.715042)` they match
 observation at NuFit 5.3 3-σ (9/9). This closure is CONDITIONAL on
-(1) the imposed branch-choice rule, (2) `q_H = 0`, (3) the
-observational hierarchy pairing `σ_hier = (2, 1, 0)`. It is NOT
-unconditionally retained.
+(1) the imposed branch-choice rule and (2) the observational
+hierarchy pairing `σ_hier = (2, 1, 0)`. It is NOT unconditionally
+retained. **The previously-listed third conditional on `q_H = 0` has
+been discharged as GAUGE (retained)** via
+[`HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17`](./HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17.md)
+— residual conditionals on the flagship closure are now two rather
+than three.
 
 Downstream flavor / cosmology / leptogenesis consequences can be
 evaluated against the chamber pin as *support* rather than as a fully
 retained PMNS input. An atlas-native promotion to retained requires
-closing the imposed branch-choice rule (Option B) and the `q_H`
-conditional.
+closing the imposed branch-choice rule (Option B item 2).
 
 ## Honest gap statement (after Option-A demotion)
 
@@ -454,15 +464,17 @@ not explicitly constructed.
  retained affine `H`.
 - The selector gate closes on the chamber CONDITIONALLY at
  `(m_*, delta_*, q_+*) = (0.657061, 0.933806, 0.715042)`, where the
- conditionality is the imposed branch-choice rule + `q_H = 0` +
- σ_hier = (2, 1, 0).
+ conditionality is the imposed branch-choice rule + σ_hier = (2, 1, 0).
+ (`q_H = 0` was previously listed as a third conditional; now discharged
+ as GAUGE (retained) via the Higgs Z_3-charge gauge-redundancy theorem.)
 - PMNS is CONDITIONAL / SUPPORT on the chamber, NOT unconditionally retained.
 - Basin-uniqueness is a conditional result under the imposed branch-
  choice rule. The first-pass "retained Sylvester inertia" framing is
- WITHDRAWN. Load-bearing non-retained ingredients:
+ WITHDRAWN. Load-bearing non-retained ingredients (2 — was 3):
  (i) imposed branch-choice rule (Option-B open),
- (ii) SM-canonical `q_H = 0`,
- (iii) observational hierarchy pairing `σ_hier = (2, 1, 0)`.
+ (ii) observational hierarchy pairing `σ_hier = (2, 1, 0)`.
+ The previously-listed `q_H = 0` conditional has been discharged as
+ GAUGE (retained) on this Option-B landing.
 - A falsifiable CONDITIONAL `delta_CP` prediction is produced:
  `sin(delta_CP) = -0.987`, `delta_CP ~ -81 deg (= 279 deg)`.
 - The solar-gap `Dm^2_21`, absolute-mass scale, and Majorana phases
@@ -508,9 +520,11 @@ This note **positively claims** (under the honest-label revision):
  explicit closed-form map from retained retained inputs (the affine
  `H`, retained `H_hw=1`, retained chamber). The MAP itself (not the
  closure) is theorem-grade.
-- Under the imposed branch-choice rule + `q_H = 0` + σ_hier = (2,1,0),
- the selector gate closes CONDITIONALLY on the chamber at
- `(m_*, delta_*, q_+*) = (0.657061, 0.933806, 0.715042)`.
+- Under the imposed branch-choice rule + σ_hier = (2,1,0), the
+ selector gate closes CONDITIONALLY on the chamber at
+ `(m_*, delta_*, q_+*) = (0.657061, 0.933806, 0.715042)`. (`q_H = 0`
+ is a GAUGE (retained) choice and is not a separate conditional — see
+ `HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17`.)
 - Under the same conditionals, basin uniqueness (vs the two competing
  in-chamber χ²=0 basins) holds: only the pinned point lies on the
  baseline-connected branch of the caustic. Sylvester's law of inertia
@@ -573,24 +587,24 @@ With PMNS promoted to retained:
 This note is a **conditional / support closure** on the publication surface:
 - The selector gate on the DM-neutrino source-oriented sheet is
  CLOSED ONLY CONDITIONALLY at `(m_*, δ_*, q_+*)` — conditional on the
- imposed branch-choice rule + `q_H = 0` + σ_hier = (2, 1, 0). The
- flagship closure headline is **conditional / support**, NOT `CLOSED`.
+ imposed branch-choice rule + σ_hier = (2, 1, 0). The flagship closure
+ headline is **conditional / support**, NOT `CLOSED`.
 - PMNS: conditional / support on the chamber via `f(H)`, NOT
  unconditionally retained.
 - Basin uniqueness: conditional under the imposed branch-choice rule.
  The first-pass "retained Sylvester inertia selector" framing is
- WITHDRAWN. Three load-bearing non-retained ingredients are explicit:
- (a) imposed branch-choice rule (Option-B open), (b) `q_H = 0`
- (SM-canonical, not axiom-derived), (c) observational hierarchy
- pairing `σ_hier = (2, 1, 0)`.
+ WITHDRAWN. Two load-bearing non-retained ingredients are explicit
+ (was three; `q_H = 0` discharged as GAUGE retained on this landing):
+ (a) imposed branch-choice rule (Option-B open),
+ (b) observational hierarchy pairing `σ_hier = (2, 1, 0)`.
 - DM flagship cascade downstream proceeds as *support* from the
  conditional pin, not from a fully retained input.
 - The paragraph in
  [DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md](./DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md)
  that records P3 as an open promotion lane remains open: what is
  realized by this note is a CONDITIONAL closure, not a completed
- promotion. An atlas-native promotion requires closing the three
- load-bearing non-retained items.
+ promotion. An atlas-native promotion requires closing the remaining
+ two load-bearing non-retained items.
 
 ## What this file must never say
 

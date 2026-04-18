@@ -98,7 +98,7 @@ equation has exactly one solution (because `q_L` is a conjugate triplet),
 so the support is one of three permutation patterns exactly as in the
 trichotomy theorem.
 
-### Step 3 — Branch condition `q_H = 0` (CONDITIONAL)
+### Step 3 — Branch condition `q_H = 0` (GAUGE, retained)
 
 On the `q_H = 0` branch the trichotomy forces
 
@@ -106,22 +106,28 @@ On the `q_H = 0` branch the trichotomy forces
 Y_e = diag(y_1, y_2, y_3).
 ```
 
-`q_H = 0` is **not axiom-derived**. The retained atlas
-([`NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md`](./NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md)
-and the trichotomy note) explicitly record that the Higgs Z_3 charge `q_H`
-is a bridge condition the theorem does not derive. It is therefore an
-explicit **conditional input** on this route.
+**Status upgraded from CONDITIONAL to GAUGE (retained) by
+[`HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17`](./HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17.md).**
+That theorem proves the three `q_H` branches give **identical**
+`Y_e Y_e†` on the `L_L`-axis basis, hence identical `U_e = I`, hence
+identical `|U_PMNS|` up to the separately-flagged `σ_hier` row
+permutation. Concretely, `Y_e[q_H = ±1] = Y_e[q_H = 0] · P_±` with `P_±`
+a right-handed (`e_R`) cyclic permutation matrix; since PMNS depends
+only on left-handed diagonalizers, the right-handed relabeling is
+invisible to PMNS observables.
 
-Symmetry note: the other two branches `q_H = ±1` produce `Y_e` supported on
-a cyclic permutation `P_σ` of the three axes. A cyclic permutation is
-absorbed by relabelling the three axes, i.e. by composing with `sigma_hier`
-in Step 5. So `q_H = 0` vs `q_H = ±1` are physically equivalent **up to the
-separate hierarchy-pairing choice**, and do not give distinct PMNS
-predictions once `sigma_hier` is fixed observationally. The choice
-`q_H = 0` is therefore a **convenient canonical representative** of the
-definite-Z_3-Higgs class, not an additional physical assumption beyond
-"single Higgs with definite Z_3 charge" plus "observational hierarchy
-pairing."
+`q_H` is therefore not a physical conditional on the PMNS prediction —
+it is a gauge choice. Setting `q_H = 0` is the canonical representative
+in which `Y_e` is diagonal (simplest form); the other two branches are
+exactly equivalent physically.
+
+The retained atlas
+([`NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md`](./NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md)
+and the trichotomy note) still does not **derive** `q_H = 0` as a
+forced charge assignment — but the gauge-redundancy theorem proves
+that no such derivation is needed, because `q_H` is not a physical
+parameter. The flag that was previously CONDITIONAL is now discharged
+as GAUGE (retained).
 
 ### Step 4 — Diagonal `Y_e` implies `|U_e| = I` (elementary)
 
@@ -189,7 +195,7 @@ is an honest, separate flag from the `q_H = 0` condition.
 |------|---------|--------|
 | 1 | conjugate Z_3 triplets `q_L, q_R` on `H_hw=1` | RETAINED |
 | 2 | trichotomy support rule on `Y_e` | RETAINED |
-| 3 | `q_H = 0` branch condition | **CONDITIONAL** (single-Higgs Z_3-neutral) |
+| 3 | `q_H = 0` branch condition | **GAUGE (retained)** via [`HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17`](./HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17.md) |
 | 4 | diagonal `Y_e` ⇒ `U_e = I` | RETAINED (linear algebra) |
 | 5 | hierarchy pairing `σ_hier = (2, 1, 0)` | **OBSERVATIONAL** (discrete) |
 
@@ -203,9 +209,12 @@ Compare to the original PMNS-closure citation chain:
 | 4 | `Gamma_1` diagonal in axis basis of `H_hw=1` | RETAINED |
 | 5 | hierarchy pairing `σ_hier = (2, 1, 0)` | **OBSERVATIONAL** |
 
-The replacement route removes the "OPEN" step 3 and replaces it with an
-explicit **conditional** branch on `q_H`. Conditional is a strictly
-cleaner honesty boundary than open.
+The replacement route removes the "OPEN" step 3. Under the
+gauge-redundancy theorem, `q_H = 0` is now a **GAUGE choice (retained)**
+— not a conditional — because the three `q_H` branches give identical
+PMNS up to the separately-flagged `σ_hier`. This is a strictly stronger
+result than "conditional," since conditional implied a physical branch
+dependency; gauge means no physical dependency at all.
 
 ## Replacement citation text for the PMNS-closure theorem
 
@@ -284,8 +293,10 @@ the citation chain under `|U_e| = I`.
  available** (this note) in addition to the PMNS-closure citation.
 - Open `C^16` → `3×3` Dirac-bridge normalization: **still open**, but no
  longer blocking the charged-lepton `U_e = I` step in the selector closure.
-- Non-axiom inputs on the charged-lepton lane: now reduced to the two
- explicit flags (`q_H = 0` conditional + `σ_hier` observational).
+- Non-axiom inputs on the charged-lepton lane: now reduced to a single
+ observational flag (`σ_hier` hierarchy-pairing). The previously-listed
+ `q_H = 0` conditional is discharged as GAUGE (retained) via the
+ gauge-redundancy theorem.
 
 ## Command
 

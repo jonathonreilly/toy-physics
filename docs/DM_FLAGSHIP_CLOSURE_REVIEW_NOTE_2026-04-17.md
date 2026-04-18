@@ -1,9 +1,9 @@
 # DM Flagship Gate — Conditional / Support Closure Review
 
-**Date:** 2026-04-17 (Option-A honest-label revision after reviewer pass `5c70c15d`)
-**Status:** **CONDITIONAL / SUPPORT closure** on the live DM-neutrino source-oriented sheet via the observational PMNS promotion (P3) lane. Two load-bearing ingredients are honestly labelled below as NOT retained-grade: (a) the Schur scalar-baseline result is a **commutant-class structural lemma** only — it does NOT prove the live-sheet zero-source baseline satisfies the Schur commutation premise; (b) the source-branch selector (Sylvester inertia preservation on the `signature(H_base) = (2,0,1)` component) is an **imposed branch-choice / conditional admissibility rule**, not a retained-theorem selector derivation. With both labelled conditionally, the P3-lane chamber pin is a publication-grade **conditional/support** closure, not a retained-grade sole-axiom or retained-selector closure. The closure is further conditional on (i) the observational hierarchy pairing `σ_hier = (2, 1, 0)`, (ii) the SM-canonical Higgs Z_3 assignment `q_H = 0`, and (iii) the chosen source branch. The θ_23 upper-octant prediction and the `sin δ_CP = -0.9874` prediction are falsifiable at DUNE / JUNO / Hyper-K _given_ the conditional selector.
+**Date:** 2026-04-17 (Option-B progress landing: `q_H = 0` conditional closed by gauge-redundancy theorem; residual conditionals 3 → 2)
+**Status:** **CONDITIONAL / SUPPORT closure** on the live DM-neutrino source-oriented sheet via the observational PMNS promotion (P3) lane. Two residual conditionals (reduced from three by the Option-B B2 landing): (a) the Schur scalar-baseline result is a **commutant-class structural lemma** only — it does NOT prove the live-sheet zero-source baseline satisfies the Schur commutation premise; (b) the source-branch selector (Sylvester inertia preservation on the `signature(H_base) = (2,0,1)` component) is an **imposed branch-choice / conditional admissibility rule**, not a retained-theorem selector derivation. With both labelled conditionally, the P3-lane chamber pin is a publication-grade **conditional/support** closure, not a retained-grade sole-axiom or retained-selector closure. The closure is further conditional on (i) the observational hierarchy pairing `σ_hier = (2, 1, 0)` and (ii) the chosen source branch. **The previously-listed `q_H = 0` conditional has been discharged as GAUGE (retained) via the Higgs `Z_3`-charge gauge-redundancy theorem** — three `q_H` branches give identical `Y_e Y_e†` on `L_L` axes, hence identical `U_e = I`, hence identical `|U_PMNS|`; `q_H` is gauge-redundant with respect to PMNS observables and carries no physical content. The θ_23 upper-octant prediction and the `sin δ_CP = -0.9874` prediction are falsifiable at DUNE / JUNO / Hyper-K _given_ the conditional selector.
 **Framework convention:** "axiom" means only the single framework axiom `Cl(3)` on `Z^3`.
-**Runner coverage:** 14 frontier runners, **PASS = 429, FAIL = 0**. All PASSes verify the stated mathematical content; the `CLOSED` headline previously attached to the flagship gate has been retracted in favour of the honest `conditional/support` label. The Schur runner gained a Part 6 live-sheet non-commutation witness (7 extra PASSes) to make the Option-A honest label explicit.
+**Runner coverage:** 15 frontier runners, **PASS = 502, FAIL = 0**. All PASSes verify the stated mathematical content; the `CLOSED` headline previously attached to the flagship gate has been retracted in favour of the honest `conditional/support` label. The Schur runner gained a Part 6 live-sheet non-commutation witness (7 extra PASSes, Option A). The Higgs `Z_3`-charge gauge-redundancy runner is new on this landing (73 PASSes, Option B — closes one of the three conditionals).
 
 ## Scope
 
@@ -81,9 +81,10 @@ attack-and-closure runs. Each runner is self-contained with PASS/FAIL harness.
 | 10 | obstruction | `frontier_dm_neutrino_source_surface_bifundamental_invariance_obstruction_theorem.py` | 37 | K_doublet is Hermitian ⇒ only U(2) adjoint, not bifundamental |
 | 11 | branch-choice rule (conditional admissibility) | `frontier_dm_neutrino_source_surface_perturbative_uniqueness_theorem.py` | 46 | Sylvester inertia preservation on the baseline-connected component picks Basin 1 _given_ the imposed branch-choice admissibility rule. The rule itself is NOT a retained theorem on this branch (Option B open item). |
 | 12 | tightening | `frontier_pmns_theta23_upper_octant_chamber_closure_prediction.py` | 31 | θ_23 upper-octant retained prediction; threshold `s_23²_min = 0.5410` |
-| 13 | tightening | `frontier_charged_lepton_ue_identity_via_z3_trichotomy.py` | 40 | `U_e = I` via Z_3-trichotomy `q_H = 0` branch |
-| 14 | **CONDITIONAL / SUPPORT CLOSURE** | **`frontier_pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem.py`** | **43** | **Retained PMNS-as-f(H) map + observational chamber pin, conditional on the imposed branch-choice admissibility rule and `q_H = 0`, `σ_hier = (2,1,0)`, upper octant** |
-| | | **Total** | **429** | **429 PASS / 0 FAIL** |
+| 13 | tightening | `frontier_charged_lepton_ue_identity_via_z3_trichotomy.py` | 40 | `U_e = I` via Z_3-trichotomy `q_H = 0` branch (status: GAUGE retained via row 15) |
+| 14 | **CONDITIONAL / SUPPORT CLOSURE** | **`frontier_pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem.py`** | **43** | **Retained PMNS-as-f(H) map + observational chamber pin, conditional on the imposed branch-choice admissibility rule and `σ_hier = (2,1,0)`, upper octant** |
+| 15 | Option-B q_H = 0 closure | `frontier_higgs_z3_charge_pmns_gauge_redundancy_theorem.py` | 73 | Higgs `Z_3`-charge gauge-redundancy theorem: `q_H` is gauge-redundant wrt PMNS observables; three branches give identical `Y_e Y_e†` on `L_L` axes ⇒ identical `U_e = I` ⇒ identical `|U_PMNS|`. Upgrades `q_H = 0` from CONDITIONAL to GAUGE (retained). Closes one of the three flagship conditionals. |
+| | | **Total** | **502** | **502 PASS / 0 FAIL** |
 
 All runners are `scripts/frontier_*.py` with their accompanying theorem
 notes in `docs/*_NOTE_2026-04-17.md`.
@@ -275,8 +276,11 @@ Clean retained route for `U_e = I` in the axis basis:
    `H_hw=1`.
 2. Z_3 trichotomy + single Higgs with definite `q_H` → three permutation
    supports.
-3. On the `q_H = 0` branch (SM-canonical, conditional not axiom-forced),
-   `Y_e = diag(y_1, y_2, y_3)`.
+3. On the `q_H = 0` branch — now **GAUGE (retained)** via
+   [`HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17`](./HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17.md) —
+   `Y_e = diag(y_1, y_2, y_3)`. (The three `q_H` branches give identical
+   `|U_PMNS|`; `q_H = 0` is the canonical gauge representative, not an
+   independent physical conditional.)
 4. Therefore `U_e = I` in the axis basis.
 
 This route uses ONLY retained atlas objects and does NOT depend on the
@@ -340,8 +344,9 @@ point lie inside the NuFit 5.3 NO 3σ ranges (9/9 PASS).
 1. **Retained map construction.** `(m, δ, q_+) → (θ_ij, δ_CP)` is a
    retained-grade map on the chamber constructed from retained inputs
    only (affine chart + chamber + three-generation observable theorem +
-   Z_3 trichotomy `q_H = 0` branch, plus the scalar-commutant-class Schur
-   reference used as a structural lemma only).
+   Z_3 trichotomy gauge-redundancy `q_H = 0` [retained], plus the
+   scalar-commutant-class Schur reference used as a structural lemma
+   only).
 2. **Conditional / support closure via P3 lane.** Retained map + PDG PMNS
    data + imposed branch-choice admissibility rule (baseline-connected
    non-caustic component, i.e. signature preservation) → unique chamber pin.
@@ -397,20 +402,39 @@ point lie inside the NuFit 5.3 NO 3σ ranges (9/9 PASS).
    remains hypothetically possible.
 5. P1 / P2 alternative promotion lanes — identified by the observable-
    bank exhaustion theorem, complementary to the realized P3 closure.
-6. **Live-sheet Schur commutation premise (Option B item 1).** Derive,
-   on the actual source-oriented sheet, why the relevant zero-source
-   baseline must commute with the retained three-generation algebra.
-   Without this, the Schur result stays a commutant-class lemma and
-   cannot be promoted to live-sheet curvature.
-7. **Source-branch admissibility principle (Option B item 2).** Derive
-   why the physical PMNS closure must lie on the baseline-connected
+6. **Live-sheet Schur commutation premise (Option B item 1 — OPEN).**
+   Derive, on the actual source-oriented sheet, why the relevant
+   zero-source baseline must commute with the retained three-generation
+   algebra. Without this, the Schur result stays a commutant-class lemma
+   and cannot be promoted to live-sheet curvature. Confidence: LOW —
+   `H_live` has simple spectrum, so the maximal retained commutant is
+   the 3-D polynomial algebra in `H_live`, which is not absolutely
+   irreducible. A Schur-free route (e.g. `log|det|` expansion) is the
+   more likely path; separate follow-up.
+7. **Source-branch admissibility principle (Option B item 2 — OPEN).**
+   Derive why the physical PMNS closure must lie on the baseline-connected
    `det ≠ 0` component rather than on another non-caustic component on
    which `W[J] = log|det(H_base + J)|` is also well-defined. Without
    this, the inertia-preserving selector stays a branch-choice rule
-   rather than a retained selector.
+   rather than a retained selector. Candidate route:
+   `BASIN_SIGNATURE_FROM_CONTINUITY_THEOREM_NOTE` — retained
+   observable-continuity / Grassmann-additivity argument on `W[J]`.
 
-Closing both of these together is the Option B path back to a
-retained-grade flagship-closure headline.
+### Closed on this landing (Option B item 3)
+
+8. **Higgs `Z_3` charge `q_H = 0` conditional (Option B item 3 — CLOSED).**
+   Previously listed as SM-canonical conditional; discharged by the
+   Higgs `Z_3`-charge gauge-redundancy theorem
+   ([`HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17`](./HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17.md)).
+   The three `q_H ∈ {0, ±1}` branches give identical `Y_e Y_e†` on
+   `L_L` axes, hence identical `U_e = I`, hence identical `|U_PMNS|`.
+   `q_H` is gauge-redundant with PMNS; setting `q_H = 0` is a canonical
+   choice with no physical content. Status: CONDITIONAL → GAUGE
+   (retained). Residual conditionals on flagship closure: 3 → 2.
+
+Closing items 6 AND 7 together is the Option B path back to a
+retained-grade flagship-closure headline. Item 8 closed on this
+landing reduces the residual conditional load from three to two.
 
 ## Review order for a skeptical reviewer
 
@@ -424,16 +448,17 @@ retained-grade flagship-closure headline.
 
 ## Runner verification
 
-All 14 runners pass on the current surface. Reproduce with:
+All 15 runners pass on the current surface. Reproduce with:
 
 ```
 PYTHONPATH=scripts python3 scripts/frontier_*_theorem.py
 PYTHONPATH=scripts python3 scripts/frontier_*_obstruction.py
 PYTHONPATH=scripts python3 scripts/frontier_*_prediction.py
 PYTHONPATH=scripts python3 scripts/frontier_pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem.py
+PYTHONPATH=scripts python3 scripts/frontier_higgs_z3_charge_pmns_gauge_redundancy_theorem.py
 ```
 
-Expected: total PASS = 429, FAIL = 0.
+Expected: total PASS = 502, FAIL = 0.
 
 ## Position on the flagship paper surface (honest Option-A labels)
 
