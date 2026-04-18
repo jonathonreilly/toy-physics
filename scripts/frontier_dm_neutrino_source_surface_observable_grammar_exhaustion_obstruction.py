@@ -209,9 +209,36 @@ def part3_higher_level_selector_data_are_atomic_functionals(
     )
 
 
-def part4_the_note_records_the_obstruction_honestly() -> None:
+def part4_the_current_bank_still_does_not_fix_an_intrinsic_threshold_law(
+    hs_bank: list[np.ndarray], repairs_bank: np.ndarray
+) -> None:
     print("\n" + "=" * 88)
-    print("PART 4: THE NOTE RECORDS THE OBSTRUCTION HONESTLY")
+    print("PART 4: THE CURRENT BANK STILL DOES NOT FIX AN INTRINSIC THRESHOLD LAW")
+    print("=" * 88)
+
+    del repairs_bank
+    nonrealization_note = read(
+        "docs/DM_NEUTRINO_SOURCE_SURFACE_ATOMIC_WITNESS_VOLUME_SELECTOR_NONREALIZATION_NOTE_2026-04-18.md"
+    )
+
+    check(
+        "The branch now carries the exact canonical witness-volume selector family on the full rank-one probe family",
+        "V_tau(H)" in nonrealization_note and "piecewise-quadratic" in nonrealization_note,
+    )
+    check(
+        "That exact intrinsic threshold-volume family already flips the recovered winner between tau=0.13 and tau=0.14",
+        "tau = 0.13" in nonrealization_note and "lift `1`" in nonrealization_note and "tau = 0.14" in nonrealization_note and "lift `0`" in nonrealization_note,
+    )
+    check(
+        "So the unresolved selector datum is now sharper than generic family choice: it is an intrinsic threshold law",
+        len(hs_bank) == 5,
+        "current exact bank nonrealization persists even on the canonical full-family threshold-volume selector",
+    )
+
+
+def part5_the_note_records_the_obstruction_honestly() -> None:
+    print("\n" + "=" * 88)
+    print("PART 5: THE NOTE RECORDS THE OBSTRUCTION HONESTLY")
     print("=" * 88)
 
     note = read("docs/DM_NEUTRINO_SOURCE_SURFACE_OBSERVABLE_GRAMMAR_EXHAUSTION_OBSTRUCTION_NOTE_2026-04-17.md")
@@ -231,6 +258,10 @@ def part4_the_note_records_the_obstruction_honestly() -> None:
         "The obstruction note keeps the boundary honest: representation is compressed, but selector closure is still not proved",
         "selector-class side does" in note and "close positively" in note,
     )
+    check(
+        "The obstruction note records the sharper current-bank nonrealization as a missing intrinsic threshold law",
+        "intrinsic threshold law" in note and "tau = 0.13" in note and "tau = 0.14" in note,
+    )
 
 
 def main() -> int:
@@ -245,7 +276,8 @@ def main() -> int:
     hs_bank, repairs_bank = part1_atomic_threshold_events_recover_the_singleton_response_field_exactly()
     part2_the_intrinsic_family_quotient_already_lives_at_the_atomic_level(hs_bank, repairs_bank)
     part3_higher_level_selector_data_are_atomic_functionals(hs_bank, repairs_bank)
-    part4_the_note_records_the_obstruction_honestly()
+    part4_the_current_bank_still_does_not_fix_an_intrinsic_threshold_law(hs_bank, repairs_bank)
+    part5_the_note_records_the_obstruction_honestly()
 
     print("\n" + "=" * 88)
     print("RESULT")

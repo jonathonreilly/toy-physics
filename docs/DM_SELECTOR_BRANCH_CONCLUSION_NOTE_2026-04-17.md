@@ -28,8 +28,18 @@ The branch proves that exact family-threshold semantics force scalarization
 through the canonical positive-probe extremal law, and on the recovered carrier
 that law is a strict monotone of `Lambda_+`.
 
-What it does **not** prove is that the true last-mile selector is exhausted by
-that exact atomic positive-probe grammar itself.
+The branch now goes one step further on the current exact bank: even the full
+canonical rank-one family already carries an intrinsic threshold-volume
+selector family `V_tau(H)`, and different exact thresholds choose different
+recovered winners (`1` at `tau=0.13`, `0` at `tau=0.14`).
+
+What it still does **not** prove is an intrinsic threshold law selecting one
+member of that family, equivalently that the true last-mile selector is
+exhausted by the exact atomic positive-probe grammar itself.
+
+So the selector-side obstruction is no longer vague family-choice freedom. On
+the current exact bank it is specifically the nonrealization of an intrinsic
+threshold law on the canonical witness-volume selector family.
 
 So the selector-class side stops exactly at:
 
