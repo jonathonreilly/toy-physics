@@ -63,6 +63,26 @@ What is now explicit:
 
 Affected front-door and publication-control files were updated directly.
 
+### 4. `\alpha_s` and EW normalization package scoping
+
+The repo had drifted into a stale `retained / derived` split across one public
+quantitative row, even though the live control surfaces already treated
+`\alpha_s(M_Z)` and the EW normalization package as standalone retained
+quantitative lanes with explicit `R_conn` and running-bridge qualifiers.
+
+What is now explicit:
+
+- `\alpha_s(M_Z)` is captured as a retained standalone quantitative lane across
+  the public control surfaces
+- the EW normalization package remains retained, with the extra derived
+  `R_conn = 8/9 + O(1/N_c^4)` support and the retained `M_Z` running bridge
+  named explicitly
+- the retained EW matching audit is the right place for the `~0.4%–2.9%`
+  bridge/matching envelope; the package is not being sold as an exact
+  same-surface no-bridge theorem
+
+Affected front-door and publication-control files were updated directly.
+
 ## Rows That Are Already Clean Enough
 
 These are not current submission blockers at the claim-surface level.
@@ -284,8 +304,10 @@ the canonical tensor/projector surface.
 
 **Current public posture**
 
-- pre-cleanup `retained / derived`
-- “canonical same-surface plaquette evaluation, all else derived”
+- the live public package now treats `\alpha_s(M_Z)` and the EW normalization
+  package as retained standalone quantitative lanes
+- the extra `R_conn` support and the retained running bridge are named
+  explicitly where they matter
 
 Representative surfaces:
 
@@ -296,7 +318,7 @@ Representative surfaces:
 **What the repo actually supports**
 
 - strong standalone lanes
-- but the public package still blurs three different things:
+- public-facing separation between three different things:
   1. exact framework-side structure
   2. the extra connected-color-trace condition behind the `9/8` EW factor
   3. threshold/EFT running behind the `M_Z`-quoted numbers
@@ -309,11 +331,15 @@ Primary evidence:
 
 **Adjustment class**
 
-- real claim-surface issue
+- repo/manuscript cleanup resolved on `main`; no missing theorem on the live
+  EW package surface
 
 **Why**
 
-The deeper notes are already more honest than the front-door summaries.
+The deeper notes were already more honest than the front-door summaries. The
+remaining stale `derived` row has now been aligned with the retained package
+status, and the public surfaces separate same-surface structure, derived
+`R_conn` support, and retained running/matching bridges cleanly.
 
 ### F. Higgs / top
 
