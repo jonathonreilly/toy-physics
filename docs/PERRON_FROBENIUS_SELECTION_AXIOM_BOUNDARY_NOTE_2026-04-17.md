@@ -4,6 +4,7 @@
 **Status:** exact current-stack boundary on whether Perron-Frobenius selection is already derived from the sole axiom  
 **Script:** `scripts/frontier_perron_frobenius_selection_axiom_boundary.py`  
 **Framework convention:** "axiom" means only the single framework axiom `Cl(3)` on `Z^3`.
+**Reviewer entrypoint:** [PERRON_FROBENIUS_REVIEW_STATUS_NOTE_2026-04-18.md](./PERRON_FROBENIUS_REVIEW_STATUS_NOTE_2026-04-18.md)
 
 ## Question
 

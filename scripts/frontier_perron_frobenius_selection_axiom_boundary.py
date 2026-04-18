@@ -1155,6 +1155,15 @@ def part1_reference_surface() -> None:
         and "fully closed negatively" in full_frontier_closure,
     )
 
+    review_status = read("docs/PERRON_FROBENIUS_REVIEW_STATUS_NOTE_2026-04-18.md")
+    check(
+        "PF review-status note records the reviewer-facing current-bank closure and future-theory reopening distinction",
+        "negative current-bank closure" in review_status
+        and "does **not** support a positive theorem" in review_status
+        and "future-theory status" in review_status
+        and "Wilson is still the main plausible reopening lever" in review_status,
+    )
+
 
 def part2_sector_local_witnesses() -> None:
     print()
@@ -1526,6 +1535,10 @@ def part3_cross_sector_boundary() -> None:
     support(
         "Current-bank full frontier closure",
         "with Wilson now completely closed on the current bank as well, all three sharpest frontier certificates are negative on the present bank; so the current-bank PF program is fully closed negatively even though Wilson remains the main plausible reopening lever under stronger future science",
+    )
+    support(
+        "PF review status note",
+        "the review branch now has one explicit reviewer entrypoint too: a science-only status note that states the clean top-line result, namely sector-local PF yes, positive global sole-axiom PF no on the present bank, with Wilson retained only as the main plausible future reopening lever under stronger science",
     )
     support(
         "Plaquette evaluator boundary",

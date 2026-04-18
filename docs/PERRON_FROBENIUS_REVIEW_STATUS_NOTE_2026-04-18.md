@@ -105,6 +105,6 @@ python3 scripts/frontier_perron_frobenius_selection_axiom_boundary.py
 
 Expected review-branch result:
 
-- `PASS = 126`
+- `PASS = 127`
 - `FAIL = 0`
-- `SUPPORT = 63`
+- `SUPPORT = 64`
