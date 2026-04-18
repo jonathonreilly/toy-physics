@@ -139,6 +139,10 @@ def part2_the_unresolved_rival_geometry_is_localized_to_three_windows() -> None:
         "The obstruction note records that the tested split-2 edge undercut is transport-incompatible with the preferred recovered lane",
         "transport-incompatible with the preferred" in note and "0.847299300834" in note and "1.052220313052" in note,
     )
+    check(
+        "The obstruction note records that no lower-repair transport-compatible lane is currently visible on the tested broad split-2 low-slack box",
+        "0.884523453538" in note and "0.233468501596" in note and "no lower-repair transport-compatible lane is currently" in note,
+    )
 
 
 def part3_exact_carrier_completeness_and_global_dominance_remain_unproved() -> None:
@@ -159,7 +163,7 @@ def part3_exact_carrier_completeness_and_global_dominance_remain_unproved() -> N
     )
     check(
         "The obstruction note sharpens the missing carrier theorem to a transport-compatible lane inside split-2 rather than a generic broad-window point",
-        "transport-compatible lane" in note,
+        "transport-compatible lane" in note and "residual exact-carrier part" in note,
     )
     check(
         "The branch conclusion note keeps the overall branch verdict at obstruction",

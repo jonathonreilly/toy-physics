@@ -51,6 +51,13 @@ The branch does support:
   `eta/eta_obs` stays below `0.847299300834` while the preferred recovered lane
   sits at `1.052220313052`, and its winning packet columns stay separated from
   the preferred small-leakage quotient,
+- and a broader split-2 low-slack transport incompatibility candidate on the
+  tested box `m in [-0.19,-0.14]`, `delta in [-2.5,2.5]`, `0 <= s <= s_*`:
+  under the lower-repair constraint `Lambda_+ <= Lambda_+(x_*)`, no tested
+  sample reaches `eta/eta_obs >= 1`, seeded global searches keep the best
+  lower-repair transport rival below `0.884523453538`, and the closest tested
+  lower-repair packet lane still stays at distance at least `0.233468501596`
+  from the preferred quotient,
 - and a localized rival-window picture with exactly three exposed unresolved
   windows:
   `[-1.899713, -1.87]`, `[-1.16, -1.10]`, and `[-0.19, -0.14]`.
@@ -115,7 +122,11 @@ And even that edge interval is now sharper than a generic broad undercut:
 on the tested split-2 edge it is transport-incompatible with the preferred
 recovered lane, so the remaining carrier theorem only needs to rule out a
 lower-repair, transport-compatible lane there, not just any lower-repair broad
-bundle point.
+bundle point. The branch now goes a bit further on the tested broad split-2
+low-slack box as well: no lower-repair transport-compatible lane is currently
+visible there either. So the remaining carrier theorem target is no longer a
+generic broad split-2 search, but interval-style exclusion or dominance on the
+exact carrier inside the residual split-2 low-slack region.
 
 ### 3. The missing theorem is interval-certified completeness or dominance
 
@@ -146,7 +157,7 @@ The next carrier-side work should be only one of:
 1. prove exact-carrier completeness;
 2. prove a rival-window dominance theorem strong enough to avoid full
    completeness, now especially on a lower-repair, transport-compatible lane
-   inside the low-slack split-2 interval;
+   inside the residual exact-carrier part of the low-slack split-2 region;
 3. prove a no-go theorem that current exact methods cannot certify those
    windows.
 
@@ -159,9 +170,11 @@ Anything broader is below the current reduction surface.
 - [DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_EDGE_PROFILE_TRANSITION_CANDIDATE_NOTE_2026-04-18.md](./DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_EDGE_PROFILE_TRANSITION_CANDIDATE_NOTE_2026-04-18.md)
 - [DM_NEUTRINO_SOURCE_SURFACE_RIVAL_WINDOW_EDGE_PROFILE_HIERARCHY_CANDIDATE_NOTE_2026-04-18.md](./DM_NEUTRINO_SOURCE_SURFACE_RIVAL_WINDOW_EDGE_PROFILE_HIERARCHY_CANDIDATE_NOTE_2026-04-18.md)
 - [DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_EDGE_TRANSPORT_LANE_OBSTRUCTION_CANDIDATE_NOTE_2026-04-18.md](./DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_EDGE_TRANSPORT_LANE_OBSTRUCTION_CANDIDATE_NOTE_2026-04-18.md)
+- [DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_LOW_SLACK_TRANSPORT_INCOMPATIBILITY_CANDIDATE_NOTE_2026-04-18.md](./DM_NEUTRINO_SOURCE_SURFACE_SPLIT2_LOW_SLACK_TRANSPORT_INCOMPATIBILITY_CANDIDATE_NOTE_2026-04-18.md)
 - [frontier_dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem.py](../scripts/frontier_dm_neutrino_source_surface_microscopic_positive_probe_representation_theorem.py)
 - [frontier_dm_neutrino_source_surface_split2_boundary_band_transition_candidate.py](../scripts/frontier_dm_neutrino_source_surface_split2_boundary_band_transition_candidate.py)
 - [frontier_dm_neutrino_source_surface_split2_edge_profile_transition_candidate.py](../scripts/frontier_dm_neutrino_source_surface_split2_edge_profile_transition_candidate.py)
 - [frontier_dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate.py](../scripts/frontier_dm_neutrino_source_surface_rival_window_edge_profile_hierarchy_candidate.py)
 - [frontier_dm_neutrino_source_surface_split2_edge_transport_lane_obstruction_candidate.py](../scripts/frontier_dm_neutrino_source_surface_split2_edge_transport_lane_obstruction_candidate.py)
+- [frontier_dm_neutrino_source_surface_split2_low_slack_transport_incompatibility_candidate.py](../scripts/frontier_dm_neutrino_source_surface_split2_low_slack_transport_incompatibility_candidate.py)
 - [frontier_dm_neutrino_source_surface_global_dominance_completeness_obstruction.py](../scripts/frontier_dm_neutrino_source_surface_global_dominance_completeness_obstruction.py)

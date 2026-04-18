@@ -110,6 +110,10 @@ def main() -> int:
         "The branch conclusion note records the split-2 transport-lane incompatibility sharpening",
         "0.847299300834" in conclusion_note and "1.052220313052" in conclusion_note and "transport-compatible lane" in conclusion_note,
     )
+    check(
+        "The branch conclusion note records the broader split-2 low-slack incompatibility sharpening",
+        "0.884523453538" in conclusion_note and "0.233468501596" in conclusion_note,
+    )
 
     print("\n" + "=" * 88)
     print("BRANCH RESULT")
