@@ -29,5 +29,7 @@ package.
   - active flagship paper surface
 - `docs/work_history/`
   - explicit historical bucket
+- `docs/work_history/pf/`
+  - salvaged PF route history from the rejected closure packet
 - the live review surface should point here only for optional historical
   context, not as part of the primary read path
