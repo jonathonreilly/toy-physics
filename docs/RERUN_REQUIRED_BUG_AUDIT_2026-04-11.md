@@ -181,6 +181,9 @@ Action:
 
 ### 2. Periodic Wilson “Newton law” runner
 
+**Status on `main`: historical-only caution; not part of the live Wilson
+evidence chain**
+
 Affected runner:
 
 - historical frontier-only runner `frontier_wilson_newton_law.py`
@@ -194,6 +197,9 @@ Reasons:
 Action:
 
 - do not rerun as a Newton test
+- do not treat it as a missing rerun blocker for the current `main` package;
+  the live Wilson weak-field lane already hangs off the open-surface runners
+  and notes
 - if the law lane continues, rerun only on the open Wilson surface with a
   physically meaningful source/inertial parameterization:
   - [`scripts/frontier_wilson_mu2_distance_sweep.py`](../scripts/frontier_wilson_mu2_distance_sweep.py)
