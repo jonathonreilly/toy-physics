@@ -2,176 +2,171 @@
 
 ## Current Call
 
-This branch is now in the right state.
+This branch is materially better again. The new
+`admissibility-closure-from-graph-eta-taste-2026-04-17.md` note is
+exactly the kind of science push the prior review asked for: it targets
+`A2`, `A4`, and `A5` directly rather than polishing another downstream
+corollary.
 
 My current disposition is:
 
 - **No** as retained G16 / `d_s = 3` closure
-- **Yes** to land as a strong support-route / comparison-family packet
+- **Still yes** as a strong support-route packet
 
-The key change from the prior review is that the branch no longer tries to
-present the new scope / uniqueness / tightness stack as retained closure. The
-real science is now described honestly:
+The blocker has changed shape. It is no longer:
 
-- the uniqueness theorem is real, but proved **under the admissibility package
-  (A1)-(A5)**,
-- and the load-bearing pieces of that package remain **comparison-family /
-  not-yet-retainedly-closed**.
+> you never tried to close `A2 / A4 / A5`.
 
-So the branch now proves:
+It is now:
 
-> if the native gauge family satisfies (A1)-(A5), then it is forced to be the
-> full bivector sector `Lambda^2(R^n)`, and the tightness corollary gives
-> `d_s = 3`.
-
-That is valuable. But it is still not the same as:
-
-> the current retained framework stack already proves (A1)-(A5), therefore
-> `d_s = 3` is retainedly derived.
+> the branch closes `A2 / A4 / A5` only **after promoting the family-scope
+> extension recipe itself (`Recipe-R`) to a retained rule**, and that is still
+> the very thing that is not yet proved from the current retained stack.
 
 ## Branch Hygiene
 
 At the time of this pass:
 
-- branch is **0 behind / 23 ahead** `origin/main`
+- branch is **0 behind / 25 ahead** `origin/main`
 
-So branch hygiene is no longer the blocker.
+So hygiene is clean. The issue is scientific / evidentiary, not git state.
 
 ## Replay Status
 
-- `python3 -m py_compile scripts/frontier_cl3_minimality.py` passes
-- `python3 scripts/frontier_cl3_minimality.py` ends with
-  `THEOREM_PASS=50 SUPPORT_PASS=32 FAIL=0`
-- `python3 -m py_compile scripts/frontier_native_su2_tightness.py` passes
-- `python3 scripts/frontier_native_su2_tightness.py` ends with
-  `THEOREM_PASS=19 SUPPORT_PASS=16 FAIL=0`
-- `python3 -m py_compile scripts/frontier_native_gauge_scope.py` passes
-- `python3 scripts/frontier_native_gauge_scope.py` ends with
-  `THEOREM_PASS=23 SUPPORT_PASS=22 FAIL=0`
-- `python3 -m py_compile scripts/frontier_native_gauge_family_uniqueness.py`
-  passes
+- `python3 -m py_compile scripts/frontier_admissibility_closure_from_graph_eta_taste.py scripts/frontier_native_gauge_family_uniqueness.py scripts/frontier_native_su2_tightness.py` passes
+- `python3 scripts/frontier_admissibility_closure_from_graph_eta_taste.py` ends with
+  `THEOREM_PASS=42 SUPPORT_PASS=39 FAIL=0`
 - `python3 scripts/frontier_native_gauge_family_uniqueness.py` ends with
   `THEOREM_PASS=26 SUPPORT_PASS=9 FAIL=0`
+- `python3 scripts/frontier_native_su2_tightness.py` ends with
+  `THEOREM_PASS=19 SUPPORT_PASS=16 FAIL=0`
+- `python3 scripts/frontier_native_gauge_scope.py` still replays cleanly
 
-The issue is not syntax or arithmetic. The issue is the retained status of the
-new admissibility package.
+The branch is not failing computationally.
 
 ## What Improved
 
 Three real improvements are now present:
 
-1. The branch no longer relies only on the old
-   `native-gauge-scope-theorem-2026-04-17.md` story.
-2. The new family-uniqueness note actually proves a clean mathematical result:
-   `(A1)-(A5) -> V_n = Lambda^2(R^n)`.
-3. The new runner adds real content beyond the prior round:
-   - explicit grade-subset elimination at `n = 3`,
-   - direct commutant checks for bivector irreducibility,
-   - a cleaner separation between uniqueness and the `spin(n)=su(2)` tightness
-     corollary.
+1. There is now a dedicated admissibility-closure note instead of a
+   vague “canonical reading” gap.
+2. The new runner does direct work on the actual previously-missing
+   objects: grade purity, `S = {2}` functoriality, axis-permutation /
+   sign-flip covariance, and selector-freeness.
+3. The follow-up sections in the uniqueness and tightness notes now try
+   to integrate the new closure rather than simply leaving the old
+   blocker in place.
 
-That is genuine progress, and the review note should acknowledge it directly.
+That is genuine progress.
 
-## Main Remaining Science
+## Main Blocker
 
-### The uniqueness theorem still depends on an admissibility package that is not yet retainedly closed
+### The new closure note still assumes the family-scope recipe it needs to derive from retained authority
 
-The key theorem now begins with:
+The load-bearing move of the new note is:
 
-- `(A1)` reduction at `n = 3`
-- `(A2)` `O(n)` covariance
-- `(A3)` commutator closure
-- `(A4)` grade-homogeneity / functoriality
-- `(A5)` no external selector
+- take the retained `n = 3` construction,
+- define the family-scope extension rule
 
-Then the proof is:
+  `Recipe-R: V_n^framework := span { (1/2) Γ_μ Γ_ν : 1 ≤ μ < ν ≤ n }`
 
-- `(A4)` gives `V_n = ⊕_{k in S} Lambda^k(R^n)`
-- `(A1)` at `n = 3` forces `S = {2}`
-- therefore `V_n = Lambda^2(R^n)` for all `n`
+- then prove `A2`, `A4`, and `A5` from that definition.
 
-That proof is mathematically coherent. The retained-bar problem is that the
-note's own premise table explicitly says:
+That is mathematically coherent. But it means:
 
-- `A3-A4` are **comparison-family**
-- `A2+A5` are treated as retained only in a `"canonical"` reading
+- `A4` is obtained because the generators were **defined** to be
+  bivector products,
+- `A5` is obtained because the generators were **defined** using only
+  the `Γ_k`,
+- and the branch's “retained closure” claim now hinges on the statement
+  that this family-scope extension rule is itself already retained.
 
-So the branch is still not deriving `d_s = 3` from the current retained stack
-alone. It is deriving it from:
+That is exactly the unresolved step.
 
-- current retained `n = 3` native-gauge authority,
-- plus a new admissibility package whose most load-bearing step
-  (`A4` grade-homogeneity / functoriality) is not yet retainedly closed.
+The branch has therefore moved the blocker from:
 
-That is the current scientific blocker in one sentence:
+- “you have not closed `A2 / A4 / A5`”
 
-> the uniqueness theorem is now real, but it is still conditional on a new
-> admissibility layer rather than derived from already-retained framework
-> rules.
+to:
+
+- “you have not shown that the current retained framework itself forces
+  `Recipe-R`, rather than you choosing `Recipe-R` as the extension rule.”
+
+In one sentence:
+
+> the new note proves consequences of the family-scope bivector recipe,
+> but it still does not prove that the retained stack on `main`
+> uniquely or natively entails that recipe at arbitrary `n`.
 
 ## Runner Boundary
 
-### The runners certify the conditional pipeline, not the retained status of that pipeline
+### The new runner certifies definitional consequences of `Recipe-R`, not the retained forcing of `Recipe-R`
 
-The new runner is better than the earlier scope runner, but it still does not
-certify the missing retained-grade step.
+The new runner is honest about what it computes, and the computations
+are good. But the crucial function is literally:
 
-What it does certify:
+> `V_n^framework := span { (1/2) Γ_μ Γ_ν : μ < ν }`
 
-- the `n = 3` eta-phase facts,
-- the standard Clifford realization across `n`,
-- irreducibility/no-proper-subset evidence for the bivector sector,
-- the grade-subset elimination at `n = 3`.
+From there:
 
-What it does **not** certify:
+- grade-2 purity is immediate,
+- selector-freeness is immediate,
+- and the combined closure section declares success under the retained
+  extension recipe.
 
-- that `(A2)`, `(A4)`, and `(A5)` are already forced by the current retained
-  framework stack,
-- or that the present `main` native-gauge authority itself entails the full
-  admissibility package.
+So the runner certifies:
 
-And the final theorem-certifying pipeline in Part E is still written as a
-restatement of the conclusion under `(A1)-(A5)`, rather than an independent
-verification that the retained stack itself forces those premises.
+- if you adopt `Recipe-R`, then `A2`, `A4`, `A5` follow.
 
-So `26/9 PASS` is evidence for the **conditional uniqueness theorem**, not for
-the stronger claim that `d_s = 3` is retainedly closed from existing framework
-inputs alone.
+It does **not** certify:
+
+- that the current retained native-gauge authority on `main`
+  already determines `Recipe-R` as the unique family-scope extension.
+
+That makes the new runner evidence for a stronger **support-route
+proposal**, not yet for retained closure.
+
+## Internal Package Problem
+
+The branch also now has an internal status mismatch:
+
+- the new admissibility note says the package is retained and that
+  `d_s = 3` is retained-grade under `Recipe-R`,
+- but the companion uniqueness and tightness notes still label
+  themselves support-route / conditional and still say the package does
+  **not** yet upgrade `d_s = 3` on `main`.
+
+So even before deciding the science, the CL3 authority surface is not
+yet speaking with one voice.
 
 ## Best Outcome From Here
 
-If the goal is to get this branch to **retained**, the worker should stop
-polishing downstream corollaries and instead close the status of the
-admissibility package itself.
+If the goal is still to reach **retained** `d_s = 3`, the real next
+science is now even narrower than before:
 
-Specifically:
+1. Prove that the current retained native-gauge authority itself
+   determines `Recipe-R` at family scope, rather than taking it as the
+   chosen extension rule.
+2. Or prove a genuine uniqueness statement saying that any
+   family-scope extension of the retained `n = 3` recipe satisfying the
+   framework-native graph / η-phase / taste rules must equal `Recipe-R`.
+3. Then make the runner certify that forcing step directly.
 
-1. Prove that `A4` grade-homogeneity / functoriality is a retained
-   framework-native rule, not just a natural comparison-family axiom.
-2. Prove that `A2` covariance and `A5` no-selector are retained framework
-   primitives at family scope, not only a canonical reading of the `n = 3`
-   case.
-3. Make the runner certify those points directly, instead of only certifying
-   the downstream uniqueness once `(A1)-(A5)` are granted.
+If the branch cannot do that yet, the honest landing is:
 
-That is the actual remaining science.
-
-If the worker cannot do that yet, the honest landing is exactly what this
-cleanup now supports:
-
-- keep the new uniqueness theorem,
-- mark it as a **support-route / comparison-family conditional theorem**,
-- and do **not** present the downstream `d_s = 3` notes as retained closure.
+- keep the admissibility-closure note,
+- keep the new runner,
+- keep the whole packet explicitly support-route,
+- and remove any new retained-grade language tied to `Recipe-R`.
 
 ## Bottom Line
 
-This branch now contains a real and useful theorem packet that the earlier
-rounds did not have. But it is still not retained `d_s = 3` closure, because
-the load-bearing admissibility package is not yet itself retainedly derived.
+This is real progress and the right kind of progress. But it still does
+not clear retained `d_s = 3` closure, because the new “closure” is only
+after elevating `Recipe-R` itself to a retained family-scope rule.
 
-So my current recommendation is:
+So my recommendation is:
 
-- **do not land as retained closure**
-- **do land it only as the strongest support-route version so far**
-- **do not spend more time pushing side science unless it directly closes
-  `A2/A4/A5`, especially `A4`**
+- **do not clear as retained closure**
+- **do clear only as a stronger support-route packet if the statuses are made consistent**
+- **do not push more side corollaries until `Recipe-R` itself is forced from retained framework structure**
