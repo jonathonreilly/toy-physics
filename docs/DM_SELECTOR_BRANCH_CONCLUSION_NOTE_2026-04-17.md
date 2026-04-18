@@ -76,8 +76,14 @@ interval-style exclusion or dominance on the exact carrier inside the residual
 split-2 low-slack region. And on the tested coarse slices even that residual
 pressure is not spread uniformly: both transport objectives already drift
 monotonically toward the upper-`m` boundary, with the strongest tested pressure
-at `m=-0.14`. So the positive-path carrier target is narrower again:
-the residual exact-carrier part of the upper-`m`, low-slack split-2 ridge.
+at `m=-0.14`. The branch now sharpens that one step further on the sampled
+upper-`m` face: the best lower-repair eta search collapses to one repair-cap
+peak at `s~=0.0195041737783`, `delta~=1.188513342509166`,
+`eta/eta_obs~=0.884523189582`, while the closest sampled lower-repair lane
+collapses to the slack-floor endpoint `s=0`,
+`delta~=1.188955544069478`, with packet distance `0.233274467128`. So the
+positive-path carrier target is narrower again: the residual exact-carrier
+neighborhoods of those two explicit split-2 upper-`m` face extremals.
 
 So the carrier side stops exactly at:
 

@@ -147,6 +147,10 @@ def part2_the_unresolved_rival_geometry_is_localized_to_three_windows() -> None:
         "The obstruction note records that the tested residual transport pressure already collapses toward the upper-m low-slack ridge",
         "upper-" in note and "m=-0.14" in note and "low-slack ridge" in note,
     )
+    check(
+        "The obstruction note records that the sampled split-2 upper-face pressure sharpens to two explicit extremals",
+        "0.0195041737783" in note and "1.188513342509166" in note and "1.188955544069478" in note and "0.233274467128" in note,
+    )
 
 
 def part3_exact_carrier_completeness_and_global_dominance_remain_unproved() -> None:
@@ -166,8 +170,8 @@ def part3_exact_carrier_completeness_and_global_dominance_remain_unproved() -> N
         "interval-certified exclusion theorem" in note and "global lower-bound theorem" in note,
     )
     check(
-        "The obstruction note sharpens the missing carrier theorem to a transport-compatible lane inside split-2 rather than a generic broad-window point",
-        "transport-compatible lane" in note and "upper-`m`, low-slack split-2" in note,
+        "The obstruction note sharpens the missing carrier theorem to transport-compatible neighborhoods of the two split-2 upper-face extremals",
+        "transport-compatible lane" in note and "two explicit split-2 upper-`m` face extremals" in note,
     )
     check(
         "The branch conclusion note keeps the overall branch verdict at obstruction",
