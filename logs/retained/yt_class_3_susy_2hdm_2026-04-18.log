@@ -1,0 +1,148 @@
+========================================================================
+YT Class #3: SUSY / 2HDM Retention Analysis
+========================================================================
+
+Candidate class #3: does the retained Cl(3)/Z^3 framework support
+two independent composite scalar Higgs operators (H_u and H_d with
+distinct VEVs v_u, v_d, giving tan beta = v_u/v_d) or a retained
+SUSY completion, to differentiate y_u from y_d at M_Pl?
+
+Outcome: B (retained no-go).  D9 + D16 + D17 force a single
+composite scalar H_unit on the Q_L block; no retained SUSY;
+2HDM is admitted-extension only and is internally obstructed.
+tan beta is NOT a framework-native parameter.
+
+Block 1: Retained SU(3) Casimirs and canonical-surface anchors.
+  [PASS] C_F = 4/3 (retained SU(3) fundamental Casimir)  (C_F = 1.3333333333)
+  [PASS] C_A = 3 (retained SU(3) adjoint Casimir)  (C_A = 3.0000000000)
+  [PASS] T_F = 1/2 (retained)  (T_F = 0.5000000000)
+  [PASS] N_C = 3, N_iso = 2, DIM_Q_L = 6 (retained)  (N_C = 3, N_iso = 2, DIM_Q_L = 6)
+  [PASS] alpha_LM = 0.09067 +/- 1e-4 (canonical lattice anchor)  (alpha_LM = 0.09067000)
+  [PASS] alpha_s(v) = 0.1033 +/- 1e-4 (CMT canonical)  (alpha_s(v) = 0.10330000)
+
+Block 2: D17 Z^2 values on Q_L irreps (inherited Ward Block 5).
+  [PASS] Z^2[(1,1)] = 6 (retained H_unit, unique D17 scalar)  (Z^2[(1,1)] = 6.0)
+  [PASS] Z^2[(1,8)] = 8 (excluded by D17)  (Z^2[(1,8)] = 8.0)
+  [PASS] Z^2[(3,1)] = 9/2 (excluded by D17)  (Z^2[(3,1)] = 4.5)
+  [PASS] Z^2[(8,3)] = 24 (excluded by D17)  (Z^2[(8,3)] = 24.0)
+  [PASS] All three excluded Z^2 distinct from 6 (Block 5 uniqueness)  (retained H_unit uniqueness confirmed)
+
+Block 3: D9 single-composite-Higgs axiom and absence of fundamental scalar.
+  [PASS] D9: framework Higgs = composite psibar*psi condensate, NOT fundamental scalar  (retained structural axiom (YUKAWA_COLOR_PROJECTION_THEOREM:33-40))
+  [PASS] Bare action contains NO independent fundamental scalar field  (n_fundamental_scalars (retained) = 0)
+  [PASS] D17: exactly ONE composite Higgs H_unit on the Q_L block (Z^2 = 6)  (n_composite_scalars on Q_L (retained) = 1)
+  [PASS] D9 + D17: retained framework has ONE composite scalar, not TWO -- 2HDM not retained  (class #3 cannot draw a retained second scalar from D9/D17)
+
+Block 4: D16 bare-action completeness.
+  [PASS] Bare action contains Wilson plaquette (D13 gauge kinetic)  (retained)
+  [PASS] Bare action contains staggered Dirac (D2-D4 fermion kinetic)  (retained)
+  [PASS] Bare action contains NO fundamental second scalar field (D16)  (2HDM H_u, H_d not retained)
+  [PASS] Bare action contains NO contact 4-fermion vertex (D16)  (retained)
+  [PASS] Bare action contains NO independent Yukawa vertex (D9 + D16)  (Yukawa is derived from H_unit matrix element, not a bare vertex)
+  [PASS] Bare action contains NO superpartner kinetic term (no retained SUSY)  (retained Cl(3)/Z^3 is not supersymmetric)
+
+Block 5: Attempted iso-sub-block decomposition of H_unit (Z^2 test).
+  [PASS] P_up is Hermitian (P_up = P_up^T)
+  [PASS] P_up is idempotent (P_up^2 = P_up)
+  [PASS] P_up + P_down = I_6 (iso split covers Q_L)
+  [PASS] P_up trace = 3 (Z^2_up = 3, N_c for 3 color states)  (tr(P_up) = 3.0)
+  [PASS] P_down trace = 3 (Z^2_down = 3)  (tr(P_down) = 3.0)
+  [PASS] Z^2_up = 3 != Z^2_D17 = 6 (iso sub-block excluded by D17)  (iso sub-block operator is NOT a retained H_u scalar)
+  [PASS] Z^2_down = 3 != Z^2_D17 = 6 (iso sub-block excluded by D17)  (iso sub-block operator is NOT a retained H_d scalar)
+  [PASS] P_up = (1/2)(I_6 + T3_6) exactly (machine precision)  (||P_up - (1/2)(I+T3)|| = 0.00e+00)
+  [PASS] P_up is equal mixture of (1,1) retained direction and (3,1) excluded direction  (exact algebraic identity; (3,1) has Z^2 = 9/2 != 6, excluded by D17)
+
+Block 6: SM + 2HDM structural conventions (algebraic context).
+  [PASS] SM convention: one Higgs doublet H with Y_H = +1 (SM context, not retained)  (n_Higgs_SM = 1)
+  [PASS] SM up-type via H~ = i sigma_2 H*: Y(H~) = -Y(H) = -1  (Y(H~) = -1, Y(H) = 1)
+  [PASS] 2HDM convention: two independent Higgs doublets H_u, H_d (SM/MSSM context)  (n_Higgs_2HDM = 2)
+  [PASS] 2HDM H_u hypercharge from U(1)_Y conservation: Y(H_u) = -1  (Y(H_u) = -1)
+  [PASS] 2HDM H_d hypercharge from U(1)_Y conservation: Y(H_d) = +1  (Y(H_d) = 1)
+
+Block 7: Retained H_unit carries equal 1/sqrt(6) weight on both iso components.
+  [PASS] H_unit has weight 1/sqrt(6) on each up-iso component (up-r, up-g, up-b)  (up-iso weights = ['0.408248', '0.408248', '0.408248'])
+  [PASS] H_unit has weight 1/sqrt(6) on each down-iso component (down-r, down-g, down-b)  (down-iso weights = ['0.408248', '0.408248', '0.408248'])
+  [PASS] H_unit up-iso weights = down-iso weights (iso-symmetric, single scalar)  (cannot split into H_u (up-only) and H_d (down-only) under D17)
+  [PASS] Sum of squared weights = 1 (H_unit is unit-normalized on Q_L x Q_L*)  (sum |weights|^2 = 1.0000000000)
+
+Block 8: Exact SU(2)_L invariance at M_Pl blocks (1,1)-(3,1) mixing.
+  [PASS] H_unit commutes with T^1_iso (SU(2)_L invariant)  (||[T1, H_unit]|| = 0.00e+00)
+  [PASS] H_unit commutes with T^2_iso  (||[T2, H_unit]|| = 0.00e+00)
+  [PASS] H_unit commutes with T^3_iso  (||[T3, H_unit]|| = 0.00e+00)
+  [PASS] P_up/sqrt(3) does NOT commute with T^1_iso (breaks SU(2)_L)  (||[T1, H_up]|| = 0.7071)
+  [PASS] P_up/sqrt(3) does NOT commute with T^2_iso (breaks SU(2)_L)  (||[T2, H_up]|| = 0.7071)
+  [PASS] Exact SU(2)_L at M_Pl: (1,1) H_unit and any iso-split operator cannot mix  (operators in different irreps of unbroken SU(2)_L are orthogonal at all loops)
+
+Block 9: No retained SUSY structure in Cl(3)/Z^3.
+  [PASS] D1 spatial bipartite parity Z_2 is retained (NATIVE_GAUGE_CLOSURE:14-18)  (retained as the staggered fermion phase source, NOT SUSY)
+  [PASS] Clifford algebra Z_2 grading (even/odd rank) is a standard structural fact  (retained as an algebraic property of Cl(3), NOT SUSY)
+  [PASS] Boson/fermion SUSY Z_2 grading is NOT retained in Cl(3)/Z^3  (framework corpus has no superpartner or SUSY-derived content)
+  [PASS] No retained boson/fermion superpartner pairing  (absent from retained core)
+  [PASS] No retained supersymmetry generator Q
+  [PASS] No retained superspace or SUSY multiplet structure
+  [PASS] No retained holomorphic superpotential -> no MSSM-style 2HDM from SUSY  (MSSM route to tan beta unavailable on retained surface)
+
+Block 10: 2HDM as admitted extension (NOT retained) in neutrino/DM sector.
+  [PASS] 2HDM is NOT retained on the bare-axiom Cl(3)/Z^3 surface  (D9 + D16 + D17 forbid retained second scalar)
+  [PASS] 2HDM IS admitted as an extension in neutrino/DM sector only  (DM_NEUTRINO_TWO_HIGGS_MINIMALITY_THEOREM (admitted))
+  [PASS] Admitted canonical 2HDM lane: exact source-phase branch is internally obstructed  (DM_NEUTRINO_CANONICAL_TWO_HIGGS_SLOT_NO_GO: x_3 * y_3 = 0 forced, CP tensor collapses)
+  [PASS] Admitted-extension 2HDM cannot be used as retained primitive to close m_b gap  (admitted != retained; class #3 requires retained content to break Ward unification)
+
+Block 11: Hypothetical tan beta scenario (phenomenological context only).
+  [PASS] Observed m_t/m_b ~ 41.3 (PDG 2024 context)  (m_t/m_b(obs) = 41.313)
+  [PASS] y_t(v) / y_b(v) at RG quasi-fixed point ~ 1.04 (from b-Yukawa note §3.4)  (y_t/y_b(QFP) = 1.0383)
+  [PASS] Hypothetical tan beta ~ 40 would close m_t/m_b gap IF 2HDM were retained  (tan beta (hypothetical) ~ 39.79)
+  [PASS] tan beta ~ 40 is PHENOMENOLOGICAL, not framework-derived (no retention claim)  (no retained mechanism fixes this value on the Cl(3)/Z^3 surface)
+
+Block 12: Species-differentiation test for class #3 (four sub-paths).
+  [PASS] Sub-path (a): second composite (1,1) scalar != H_unit on Q_L -- NOT retained  (D17 Block 5: (1,1) subspace is 1-dim; Z^2=6 unique to H_unit)
+  [PASS] Sub-path (b): fundamental second scalar in bare action -- NOT retained  (D16 MINIMAL_AXIOMS:18-20: no fundamental scalars in bare action)
+  [PASS] Sub-path (c): retained SUSY with holomorphy -> 2HDM -- NOT retained  (no retained superpartner content in Cl(3)/Z^3)
+  [PASS] Sub-path (d): operator-mixing (1,1) <-> (3,1) at M_Pl -- FORBIDDEN  (exact SU(2)_L at M_Pl blocks mixing between different irreps at all loops)
+  [PASS] Outcome B confirmed: NO retained sub-path provides species differentiation for class #3  (all four structural sub-paths close negatively)
+
+Block 13: Completeness across four candidate classes from b-Yukawa note.
+  [PASS] Class #1 (H_unit flavor-column) closed as Outcome C  (YT_H_UNIT_FLAVOR_COLUMN_DECOMPOSITION_NOTE_2026-04-18)
+  [PASS] Class #2 (Generation-hierarchy primitive) closed as Outcome D  (YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18)
+  [PASS] Class #3 (SUSY / 2HDM) closed as Outcome B (THIS note)  (YT_CLASS_3_SUSY_2HDM_ANALYSIS_NOTE_2026-04-18)
+  [PASS] Class #4 (Right-handed species dependence) closed as Outcome C  (YT_RIGHT_HANDED_SPECIES_DEPENDENCE_NOTE_2026-04-18)
+  [PASS] All four enumerated candidate classes now closed as retained no-go  (retention gap on charged-flavor mass hierarchy persists)
+
+Block 14: Per-species Yukawa prediction under class #3 (same as Outcome A).
+  [PASS] y_t(M_Pl, lattice) = g_s/sqrt(6) ~ 0.4358 (retained Ward, class #3 does not alter)  (y_t(M_Pl) = 0.435774)
+  [PASS] y_b(M_Pl, lattice) = g_s/sqrt(6) (retained Ward species uniformity)  (y_b(M_Pl) = 0.435774)
+  [PASS] Yukawa unification y_t = y_b = y_u = y_d at M_Pl (class #3 not broken)  (all = 0.435774)
+  [PASS] Framework predicts m_t/m_b ~ 1 under class #3 (retained Ward + RG quasi-fixed-point)  (m_t/m_b(framework) ~ 1.04)
+  [PASS] Framework underestimates observed t/b hierarchy by ~40x (class #3 does NOT resolve)  (obs/pred ratio = 39.8x)
+
+Block 15: Retention verdict and summary for class #3.
+  [PASS] Outcome B: retained Cl(3)/Z^3 does NOT support 2HDM or SUSY completion  (D9 + D16 + D17 single scalar; no retained SUSY)
+  [PASS] Candidate class #3 closed as insufficient to break Yukawa unification  (tan beta not framework-native; no up/down scalar split)
+  [PASS] Retention gap (33x m_b falsification) UNCHANGED by this analysis  (b-quark retention Outcome A is not modified)
+  [PASS] All four candidate classes closed; retention gap persists across #1-#4  (missing primitive lies outside the originally enumerated set)
+
+========================================================================
+SUMMARY
+========================================================================
+  Total checks: 79
+  Passed: 79
+  Failed: 0
+
+  ALL CHECKS PASSED
+
+  RESULT: Outcome B -- retained Cl(3)/Z^3 framework does NOT
+  support 2HDM or a retained SUSY completion.  D9 + D16 + D17
+  force a single composite Higgs H_unit on the Q_L block, and the
+  Cl(3) Z_2 grading is spatial-parity/Clifford even-odd (D1), not
+  boson/fermion SUSY.  2-Higgs lanes have been explored as admitted
+  extensions only, and are internally obstructed on the canonical
+  source-phase branch.
+
+  tan beta is NOT a framework-native parameter.  Species
+  differentiation via class #3 is unavailable on the retained
+  surface.
+
+  With class #3 closed, all four candidate classes (#1-#4)
+  from the b-quark retention analysis are now closed.  The 33x
+  falsification on m_b stands; the required primitive lies outside
+  the originally enumerated set.

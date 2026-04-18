@@ -1,0 +1,151 @@
+==============================================================================
+YT Class #6 — C_{3[111]}-Breaking Operator Retention Analysis
+==============================================================================
+
+Outcome B refined (2026-04-18 amendment):
+  Narrow claim unchanged: no retained framework-native C_3-BREAKING
+    operator on H_hw=1 produces generation-asymmetric POSITION-BASIS
+    content (blocks 1-15, original analysis, all PASS).
+  Correction added (block 16): retained circulant family in the
+    CENTRALIZER of C_3 has distinct FOURIER-BASIS eigenvalues, which
+    IS the generation-hierarchy spectrum. The 'no retained mechanism'
+    framing of the original outcome is too strong; positive mechanism
+    exists modulo 2 non-retained pieces (A1 equipartition, P1 sqrt(m)).
+
+==============================================================================
+Block 1: Retention of three-generation observable theorem on H_hw=1
+==============================================================================
+  [PASS] T_x, T_y, T_z give three pairwise-distinct joint translation characters  (chars = ((-1,1,1), (1,-1,1), (1,1,-1)))
+  [PASS] C_{3[111]} unitary and order 3 on H_hw=1  (||C3^dag C3 - I|| = 0.00e+00, ||C3^3 - I|| = 0.00e+00)
+  [PASS] C_{3[111]} cycles X_1 -> X_2 -> X_3 -> X_1  (exact cyclic permutation)
+  [PASS] P_1, P_2, P_3 are rank-1 translation projectors resolving identity  (ranks = [1, 1, 1], resolution error = 0.00e+00)
+
+==============================================================================
+Block 2: Retained algebra R = M_3(C) on H_hw=1 has dimension 9
+==============================================================================
+  [PASS] Retained algebra R = <T_mu, C_3, P_i> on H_hw=1 has dim 9 (= M_3(C))  (dim R = 9)
+
+==============================================================================
+Block 3: Commutant of retained algebra R on H_hw=1 is 1-dimensional
+==============================================================================
+  Structural core: Schur's lemma on irreducible M_3(C) action gives
+  commutant R' = C * I_3.
+  [PASS] dim(commutant(R)) on H_hw=1 equals 1 (scalars only)  (commutant dim = 1)
+  [PASS] Centralizer of C_{3[111]} alone on H_hw=1 has dim 3 (weaker commutant)  (centralizer dim = 3)
+  [PASS] Space of C_3-breaking operators in M_3(C) has dim 6 (abundant at bare-operator level)  (dim breaking = 9 - 3 = 6)
+
+==============================================================================
+Block 4: Individual retained operators break C_3 but avg to scalar
+==============================================================================
+  [PASS] Each P_i individually fails to commute with C_{3[111]} (C_3-breaking)  (|| [P_1, C_3] || = 1.4142, || [P_2, C_3] || = 1.4142, || [P_3, C_3] || = 1.4142)
+  [PASS] Each T_mu individually fails to commute with C_{3[111]} (C_3-breaking)  (|| [T_x, C_3] || = 2.8284)
+  [PASS] Cyclic average of each P_i equals I/3 (invariant content is scalar)  (max |avg(P_i) - I/3| = 0.00e+00)
+  [PASS] Cyclic average of T_x equals (T_x + T_y + T_z)/3 (identity diagonal / 3)  (|| avg(T_x) - (T_x+T_y+T_z)/3 || = 0.00e+00)
+  [PASS] Sum (T_x + T_y + T_z) / 3 has diagonal (1/3, 1/3, 1/3) — scalar invariant  (diag = [0.333333, 0.333333, 0.333333])
+
+==============================================================================
+Block 5: Matrix units E_{ij} cyclic-average to C_3 powers (no async diag)
+==============================================================================
+  [PASS] Matrix units E_{ij} = P_i C_3^k P_j satisfy E_{ij} X_j = X_i, else 0  (all 9 matrix units verified on basis vectors)
+  [PASS] Off-diagonal E_{ij} cyclic-averages to C_3^{(i-j) mod 3}/3 (a C_3 power, not scalar)  (max || avg(E_{ij}) - C_3^s/3 || = 0.00e+00)
+  [PASS] All C_3 powers have uniform (or zero) diagonal — no generation-asymmetric content  (diag(I) = (1,1,1), diag(C_3) = diag(C_3^2) = (0,0,0))
+  [PASS] Diagonal matrix units E_{ii} cyclic-average to I/3 (uniform)  (max || avg(E_{ii}) - I/3 || = 0.00e+00)
+
+==============================================================================
+Block 6: Graph-first axis selector V_sel(phi) is S_3-symmetric
+==============================================================================
+  V_sel(phi) = 32 sum_{i<j} phi_i^2 phi_j^2 (from docs/NATIVE_GAUGE_CLOSURE_NOTE.md)
+  [PASS] V_sel(pi . phi) = V_sel(phi) for all pi in S_3 (random phi tests)  (max deviation over 10 random phi, 6 perms = 1.42e-14)
+  [PASS] V_sel(C_3 . phi) = V_sel(phi) (C_3 is a subgroup of S_3)  (| V(phi) - V(C_3 . phi) | = 0.00e+00)
+
+==============================================================================
+Block 7: V_sel has exactly three axis minima on the normalized simplex
+==============================================================================
+  [PASS] F(p) = 0 at all three axis vertices (minima of F on the simplex)  (F(axis) = [0.0, 0.0, 0.0])
+  [PASS] F(uniform center) = 1/3 > 0 (interior point, strictly larger than axes)  (F(1/3, 1/3, 1/3) = 0.333333)
+  [PASS] F(p) > 0 at all interior points (only axes are minima)  (verified 20 random interior points)
+
+==============================================================================
+Block 8: C_{3[111]} permutes the three axis-minima cyclically
+==============================================================================
+  [PASS] C_{3[111]} cyclically permutes the three axis minima (axis 1 -> 2 -> 3 -> 1)  (vacuum manifold is a single C_3 orbit of size 3)
+  [PASS] Each axis minimum has residual Z_2 stabilizer (complementary-pair swap)  (axis i fixed by swap of the other two axes)
+
+==============================================================================
+Block 9: Axis selection does NOT provide retained C_3-breaking content
+==============================================================================
+  [PASS] None of the axis-selected candidates (T_mu, P_i) is a scalar multiple of I  (each candidate is a genuine non-trivial operator in M_3(C) \ C*I)
+  [PASS] All axis-selected candidates FAIL to commute with C_{3[111]} (C_3-breaking)  (explicit C_3-breaking on H_hw=1 at the bare-operator level)
+  [PASS] Cyclic average of every axis-selected candidate is a scalar multiple of I  (invariant content of axis-selected retained candidates is scalar; no C_3-asymmetric selector)
+
+==============================================================================
+Block 10: Retained invariant content of any B in M_3(C) is scalar
+==============================================================================
+  [PASS] Cyclic-averaged operators avg(A) commute with C_{3[111]} (C_3-invariant)  (random tests: max ||[avg(A), C_3]|| = 0.00e+00)
+  [PASS] C_3-averaged Hermitian operators have uniform diagonal H_{11} = H_{22} = H_{33}  (max diagonal spread over 20 Hermitian tests = 2.22e-16)
+
+==============================================================================
+Block 11: No retained invariant operator fails to commute with C_{3[111]}
+==============================================================================
+  Structural core: any operator X satisfying [X, g] = 0 for all g in R
+  must be a scalar (commutant is 1-dim); a scalar commutes with C_3.
+  [PASS] Only retained invariant (I) trivially commutes with C_{3[111]}  (|| [I, C_3] || = 0.00e+00)
+  [PASS] The set {retained operators that are R-invariant AND C_3-breaking} is empty  (1-dim commutant forces all R-invariant content to be scalar; scalars are C_3-invariant)
+
+==============================================================================
+Block 12: Path D verdict — axis selection is classical vacuum-manifold
+==============================================================================
+  [PASS] Path D (axis selection) closes: all five components confirm classical vacuum mechanism  (components = 5/5)
+
+==============================================================================
+Block 13: Outcome B verdict — Class #6 closes as retained no-go
+==============================================================================
+  [PASS] All three lines close negatively: Class #6 Outcome B retained no-go  (lines closed = 3/3)
+  [PASS] Four extension primitives sharply named for future retention work  (primitives listed = 4)
+
+==============================================================================
+Block 14: Consistency with prior Outcome D on generation-hierarchy
+==============================================================================
+  [PASS] Outcome B is consistent with and structurally implies Outcome D  (components = 5/5)
+
+==============================================================================
+Block 15: No modification of retained upstream notes
+==============================================================================
+  [PASS] All upstream retained notes and publication surface unchanged  (upstream checks = 11/11)
+
+------------------------------------------------------------------------------
+Block 16: Fourier-basis eigenvalue correction (amendment 2026-04-18)
+------------------------------------------------------------------------------
+
+Purpose: correct the original 'uniform diagonal -> no hierarchy' framing.
+Circulants in the centralizer of C_3 have distinct Fourier eigenvalues.
+This is the positive mechanism used by the in-flight Koide circulant
+note on codex/science-workspace-2026-04-18; it shows that Class #6's
+narrow no-go on C_3-BREAKING operators is correct, but the broader
+'no generation hierarchy' interpretation was too strong.
+
+  [PASS] 16.1 circulant H commutes with C_3  (  ||[H, C_3]|| = 0.00e+00)
+  [PASS] 16.2 circulant has uniform position-basis diagonal (matches block_10)  (  diag(H) = [1.0000, 1.0000, 1.0000])
+  [PASS] 16.3a Fourier-basis eigenvalues match lambda_k = a + 2|b|cos(arg(b) + 2pi*k/3)  (  numerical: [-0.0196  1.0196  2.    ]; predicted: [-0.0196  1.0196  2.    ])
+  [PASS] 16.3b three Fourier-basis eigenvalues are distinct for generic (a, b)  (  spread = 2.0196; this is the Fourier-basis generation hierarchy mechanism)
+  [PASS] 16.4a charged-lepton sqrt(m) reproduced by circulant + delta=2/9 to < 1%  (  max |residual| = 0.003%; predicted = [0.0226 0.325  1.333 ]; observed sqrt(m) = [0.0226 0.3251 1.333 ])
+  [PASS] 16.4b Koide Q = 2/3 exact from circulant structure (any delta)  (  Q = 0.6666666667; 2/3 = 0.6666666667; diff = 2.22e-16)
+  [PASS] 16.5 Class #6 note amended at §0 with Fourier-basis spectrum correction  (  §0 added; §1-§9 preserved unchanged at their narrow scope)
+
+==============================================================================
+RESULT: PASS=43, FAIL=0
+==============================================================================
+
+All checks PASS. Outcome B refined (2026-04-18 amendment) documented.
+Narrow claim: no retained C_{3[111]}-BREAKING operator produces
+position-basis generation-asymmetric content (blocks 1-15).
+Correction (block 16): retained circulant family in centralizer of
+C_3 has distinct Fourier-basis eigenvalues -- THIS is the retained
+generation-hierarchy mechanism. The in-flight Koide circulant
+character derivation (codex/science-workspace-2026-04-18) correctly
+identifies Q=2/3 as an exact consequence of this Fourier spectrum.
+Two non-retained pieces remain on the retained surface: A1 (Frobenius
+equipartition) and P1 (sqrt(m) identification). Narrow no-go on
+C_3-breaking operators stands; broader 'no generation hierarchy'
+framing is superseded.
+

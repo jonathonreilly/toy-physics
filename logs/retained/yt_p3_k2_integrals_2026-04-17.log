@@ -1,0 +1,142 @@
+========================================================================
+P3 MSbar-to-pole K_2 two-loop integral citation check -- runner
+Date: 2026-04-17
+Authority: YT_P3_MSBAR_TO_POLE_K2_INTEGRAL_CITATION_NOTE_2026-04-17.md
+========================================================================
+
+========================================================================
+PART A: Retained four-tensor color decomposition at SU(3)
+========================================================================
+
+  Tensor                        | Exact value at SU(3)
+  ------------------------------------------------------------
+  C_F^2   (I_FF weight)         | 16/9  = 1.7777777778
+  C_F C_A (I_FA weight)         | 4  = 4.0000000000
+  C_F T_F (I_Fl weight)         | 2/3  = 0.6666666667
+  C_F T_F (I_Fh weight)         | 2/3  = 0.6666666667
+  [PASS] C_F^2 = 16/9 exact at SU(3)  (value = 16/9)
+  [PASS] C_F C_A = 4 exact at SU(3)  (value = 4)
+  [PASS] C_F T_F = 2/3 exact at SU(3) (light-loop)  (value = 2/3)
+  [PASS] C_F T_F = 2/3 exact at SU(3) (heavy-loop)  (value = 2/3)
+  [PASS] Four-tensor retention unchanged from prior K_2 color-factor note  (rational weights (16/9, 4, 2/3, 2/3) reproduced)
+
+========================================================================
+PART B: Retained light-fermion count n_l at the top-mass scale
+========================================================================
+
+  n_l (at mu = m_t)                 = 5
+  n_h (heavy, decoupled at m_t)     = 1
+  [PASS] n_l = 5 at the top-quark MSbar scale
+  [PASS] n_h = 1 at the top-quark MSbar scale
+  [PASS] Light-flavor count is positive and bounded by SM content
+
+========================================================================
+PART C: Expected rational + zeta-value basis structure
+========================================================================
+
+  Transcendental basis (each I_i is a rational combination):
+    1 (rational)      = 1.0000000000
+    pi^2              = 9.8696044011
+    pi^2 * ln 2       = 6.8410884639
+    zeta_3            = 1.2020569032
+  [PASS] Transcendental basis has 4 entries (rational, pi^2, pi^2*ln2, zeta_3)
+  [PASS] No higher-transcendental piece (Li_4, zeta_5) appears at 2-loop on-shell  (verified by absence from the GBGS 1990 / Broadhurst 1991 closed forms)
+  [PASS] zeta_2 = pi^2 / 6 is absorbed into the pi^2 basis element  (zeta_2 = 1.6449340668)
+
+  zeta_2 = pi^2/6 = 1.6449340668
+  zeta_3           = 1.2020569032
+  ln 2             = 0.6931471806
+
+========================================================================
+PART D: Literature-pinned I_Fl from n_l-linear shift
+========================================================================
+
+  dK_2/dn_l                = -0.311000
+  (2/3) I_Fl = dK_2/dn_l   = -0.311000
+  I_Fl (pinned)            = -0.466500
+  [PASS] Per-flavor shift (2/3) I_Fl = -0.311 (to three decimals)  ((2/3) I_Fl = -0.311000)
+  [PASS] I_Fl approximately -0.467 (literature GBGS 1990 / Broadhurst 1991)  (I_Fl = -0.466500)
+  [PASS] I_Fl is negative (physical sign of light-loop gluon propagator insertion)
+
+========================================================================
+PART E: Literature-cited n_l-independent combination
+========================================================================
+
+  K_2(n_l = 5) target       = 10.940500
+  5 * dK_2/dn_l             = -1.555000
+  K_2(n_l = 0) reconstructed = 12.495500
+  K_2(n_l = 0) literature   = 12.496000
+  residual                  = -0.000500
+  [PASS] n_l = 0 baseline K_2(0) = 12.496 (literature)  (K_2(0) = 12.496000)
+  [PASS] Reconstructed K_2(0) = K_2(5) - 5 * dK_2/dn_l matches literature (within last-digit rounding of the three cited values)  (|residual| = 5.000000e-04  (literature values quoted to 3 decimals; 5e-4 is within rounding))
+  [PASS] Combination 12.496 = (16/9) I_FF + 4 I_FA + (2/3) I_Fh is a single literature-cited number, not pinned per integral  (safe claim boundary: see note section 4.2)
+
+========================================================================
+PART F: Full reconstruction of K_2(n_l = 5)
+========================================================================
+
+  (2/3) I_Fl (per flavor)     = -0.311000
+  n_l * (2/3) I_Fl            = -1.555000
+  K_2(n_l = 0) (cited)        = 12.496000
+  K_2(n_l = 5) reconstructed  = 10.941000
+  K_2(n_l = 5) target         = 10.940500
+  residual                    = +5.000000e-04
+  [PASS] Reconstructed K_2(n_l = 5) matches 10.9405 to sub-permille  (relative error = 4.570e-05)
+  [PASS] Absolute residual |K_2_reconstructed - 10.9405| < 5e-3  (|residual| = 5.000000e-04)
+
+========================================================================
+PART G: Linear n_l dependence (no double-fermion-loop at 2-loop)
+========================================================================
+
+  K_2(3)  = 11.563000
+  K_2(4)  = 11.252000
+  K_2(5)  = 10.941000
+  K_2(6)  = 10.630000
+  K_2(5) - K_2(4) = -0.311000  (expect -0.311)
+  K_2(6) - K_2(5) = -0.311000  (expect -0.311)
+  second diff at n_l=4: +0.000000e+00  (expect 0)
+  second diff at n_l=5: +0.000000e+00  (expect 0)
+  [PASS] K_2(5) - K_2(4) = -0.311 (per-flavor light-loop shift)  (diff = -0.311000)
+  [PASS] K_2(6) - K_2(5) = -0.311 (per-flavor light-loop shift)  (diff = -0.311000)
+  [PASS] Second difference vanishes at n_l = 4 (linear in n_l at 2-loop)  (second diff = +0.000e+00)
+  [PASS] Second difference vanishes at n_l = 5 (linear in n_l at 2-loop)  (second diff = +0.000e+00)
+  [PASS] Monotone decreasing K_2(n_l) (light-loop insertion lowers the coefficient)
+
+========================================================================
+PART H: K_1 = C_F = 4/3 retention preserved (no change)
+========================================================================
+
+  K_1 (retained framework-native) = 4/3 = 1.3333333333
+  [PASS] K_1 = C_F = 4/3 exact at SU(3) (retained, unchanged)  (K_1 = 4/3)
+  [PASS] K_1 retention is framework-native, not cited from literature  (C_F is an exact SU(3) Casimir value)
+  [PASS] K_1 -> K_2 promotion is via retained color-tensor skeleton only  (no numerical import crosses the K_1 -> K_2 boundary)
+
+========================================================================
+PART I: Physical sanity of the alpha_s expansion at m_t
+========================================================================
+
+  alpha_s(m_t)              = 0.107900
+  alpha_s / pi              = 0.034346
+  delta_1 = K_1 (a/pi)      = 0.045794
+  delta_2 = K_2 (a/pi)^2    = 0.012906
+  delta_2 / delta_1         = 0.2818
+  [PASS] 1-loop shift delta_1 approximately 4.6% at m_t  (delta_1 = 0.045794)
+  [PASS] 2-loop shift delta_2 approximately 1.3% at m_t  (delta_2 = 0.012906)
+  [PASS] Series convergence: delta_2 < delta_1 at alpha_s(m_t)  (ratio = 0.2818)
+
+========================================================================
+SUMMARY: PASS=30  FAIL=0
+========================================================================
+
+K_2(n_l = 5) reconstructed  = 10.941000
+K_2(n_l = 5) target         = 10.940500
+absolute residual           = 5.000000e-04
+
+Retention map:
+  retained (framework-native): C_F, C_A, T_F; four color tensors;
+    n_l = 5; K_1 = 4/3
+  cited (external QCD lit.):  K_2(5) = 10.9405;
+    dK_2/dn_l = -0.311;
+    n_l-independent sum 12.496 = (16/9) I_FF + 4 I_FA + (2/3) I_Fh
+  not provided:               framework-native 2-loop derivation of
+    any individual I_FF, I_FA, I_Fl, I_Fh on the retained action

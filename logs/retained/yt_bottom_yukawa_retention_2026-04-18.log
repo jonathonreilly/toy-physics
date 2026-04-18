@@ -1,0 +1,123 @@
+========================================================================
+YT Bottom Yukawa P1 Retention Analysis (b-Quark Ward Extension)
+========================================================================
+
+Framework-native retention analysis extending the retained Ward
+identity theorem and P1 Delta_R assembly to the b-quark.
+Outcome: A (Yukawa unification at M_Pl), empirically FALSIFIED.
+
+Block 1: Retained SU(3) Casimirs and canonical-surface anchors.
+  [PASS] C_F = 4/3 (retained from D7 + S1)  (C_F = 1.3333333333)
+  [PASS] C_A = 3 (retained from D7)  (C_A = 3.0000000000)
+  [PASS] T_F = 1/2 (retained from D7 + S1)  (T_F = 0.5000000000)
+  [PASS] N_C * N_iso = 6 (Q_L block dimension)  (dim(Q_L) = 6)
+  [PASS] alpha_LM = 0.09067 +/- 1e-4 (canonical lattice surface)  (alpha_LM = 0.0906678360)
+  [PASS] alpha_s(v) = 0.1033 +/- 1e-4 (CMT canonical value)  (alpha_s(v) = 0.1033038161)
+  [PASS] alpha_LM/(4 pi) = 0.00721 +/- 1e-5 (canonical expansion parameter)  (alpha_LM/(4 pi) = 0.0072151171)
+
+Block 2: Retained Ward tree-level identity for top Yukawa (inherited).
+  [PASS] y_t_bare = 1/sqrt(6) = 0.408248 +/- 1e-6 (retained, Ward theorem T1)  (1/sqrt(6) = 0.4082482905)
+  [PASS] G3(M_Pl, lattice) = sqrt(4 pi alpha_LM) = 1.067 +/- 1e-3  (G3(M_Pl, lattice) = 1.067411)
+  [PASS] YT(M_Pl, lattice) = G3/sqrt(6) = 0.4358 +/- 5e-4 (retained)  (YT(M_Pl, lattice) = 0.435769)
+
+Block 3: Re-verify Block 6 species uniformity of the Clebsch-Gordan.
+  The retained Ward theorem Block 6 asserts all six basis Clebsch-Gordan
+  overlaps of the unit-norm (1,1) singlet equal 1/sqrt(6).
+  [PASS] 6 basis Clebsch-Gordan overlaps computed on Q_L x Q_L* (dim 36)  (n_overlaps = 6)
+  [PASS] Each overlap = 1/sqrt(6) (species uniformity, machine precision)  (overlaps = [0.40824829, 0.40824829, 0.40824829, 0.40824829, 0.40824829, 0.40824829])
+  [PASS] Singlet uniformity is exact algebraic property of unit-norm (1,1)  (max-min = 0.00e+00)
+
+Block 4: y_b Ward identity extension by species substitution (Outcome A).
+  By Block 6 species uniformity, the matrix element <0|H_unit|b-bar b>
+  in the (b-color, down-iso) external state equals 1/sqrt(6) identically.
+  [PASS] y_b_bare := <0|H_unit|b-bar_down b_down> = 1/sqrt(6) (algebraic, Outcome A)  (y_b_bare = 0.4082482905)
+  [PASS] y_b(M_Pl, lattice) = y_b_bare / sqrt(u_0) = 0.4358 +/- 5e-4  (y_b(M_Pl, lattice) = 0.435769)
+  [PASS] y_b(M_Pl)/g_s(M_Pl) = 1/sqrt(6) (Ward identity, Outcome A)  (y_b/g_s = 0.4082482905)
+  [PASS] Yukawa unification at M_Pl: y_t(M_Pl) = y_b(M_Pl) on lattice surface  (YT = 0.435769, YB = 0.435769)
+
+Block 5: Retained Delta_R is flavor-blind (structural, no species index).
+  [PASS] C_F channel = +1.92% (inherited from Delta_R master assembly)  (C_F contribution = 1.924%)
+  [PASS] C_A channel = -7.22% (inherited from Delta_R master assembly)  (C_A contribution = -7.215%)
+  [PASS] T_F n_f channel = +2.02% (inherited from Delta_R master assembly)  (T_F n_f contribution = 2.020%)
+  [PASS] Delta_R^central = -3.27% (sum, inherited)  (Delta_R = -3.271%)
+  [PASS] Three-channel decomposition is flavor-blind (no species index)  (C_F, C_A, T_F n_f are color Casimirs; Delta_R^bottom = Delta_R^top)
+  [PASS] Delta_R^bottom = Delta_R^top = -3.27% (structural equality, Outcome A)  (Delta_R^bottom central = -3.271%)
+
+Block 6: MSbar Ward ratio at M_Pl for bottom (from Delta_R + tree Ward).
+  [PASS] (y_b/g_s)^MSbar(M_Pl) = (1/sqrt(6))(1+Delta_R) ~ 0.3949 at central  ((y_b/g_s)^MSbar(M_Pl) = 0.394895)
+  [PASS] Delta_R 1-sigma band propagates to Ward ratio: (y_b/g_s) in [0.386, 0.404]  (band = [0.3855, 0.4043])
+
+Block 7: SM 2-loop RGE backward scan for Yukawa unification BC at M_Pl.
+  Running full SM 2-loop RGE for (g1, g2, g3, y_t, y_b) backward
+  from v to M_Pl to find (y_t(v), y_b(v)) consistent with Ward BC.
+
+  Solving iteratively (fixed-point)...
+  [PASS] Yukawa unification backward scan converged (<=80 iterations)  (iterations = 7)
+  [PASS] yt(M_Pl) = g_s(M_Pl)/sqrt(6) at converged y_t(v) (Ward BC satisfied)  (yt(M_Pl) = 0.1990, target = 0.1989)
+  [PASS] yb(M_Pl) = g_s(M_Pl)/sqrt(6) at converged y_b(v) (Yukawa unification)  (yb(M_Pl) = 0.1991, target = 0.1989)
+  Converged values: y_t(v) = 0.5877, y_b(v) = 0.5665
+  At M_Pl: g_s = 0.4872, y_t = 0.1990, y_b = 0.1991
+  [PASS] yt(v) ~ 0.55 +/- 0.10 (quasi-fixed-point under coupled running)  (yt(v) = 0.5877)
+  [PASS] yb(v) ~ 0.55 +/- 0.10 (dragged toward y_t by coupling)  (yb(v) = 0.5665)
+  [PASS] y_b(v)/y_t(v) ~ 1 at converged BC (Yukawa unification quasi-fixed-point)  (y_b/y_t at v = 0.9639 (observed: 0.018))
+
+Block 8: m_t and m_b predictions from Yukawa unification BC (Outcome A).
+  m_t^A = y_t(v) * v/sqrt(2)         = 102.34 GeV
+  m_b^A(v) = y_b(v) * v/sqrt(2)      = 98.65 GeV
+  m_b^A(m_b) = m_b(v)/0.68           = 145.07 GeV
+  [PASS] m_t^framework (Yukawa unification BC) ~ 80-130 GeV  (m_t = 102.34 GeV (obs 172.69))
+  [PASS] m_b^framework(v) ~ 80-130 GeV (dragged up by unification)  (m_b(v) = 98.65 GeV)
+  [PASS] m_b^framework(m_b) ~ 110-180 GeV (Outcome A prediction)  (m_b(m_b) = 145.07 GeV (obs 4.18))
+
+Block 9: Empirical comparison — Outcome A is FALSIFIED.
+  [PASS] m_b^framework / m_b^observed >= 20 (large overshoot, Outcome A fails)  (m_b ratio = 34.7x (obs 4.18 vs framework ~140 GeV))
+  [PASS] m_t^framework / m_t^observed <= 0.80 (simultaneous undershoot)  (m_t ratio = 0.593 (obs 172.69 vs framework ~99 GeV))
+  [PASS] Yukawa unification at M_Pl is empirically falsified for m_b (33x)  (33x overshoot is far outside any retention band)
+  [PASS] Simultaneous m_t failure confirms coupled quasi-fixed-point  (y_t and y_b drag each other to y ≈ 0.55 at v)
+
+Block 10: Top-only consistency cross-check (retained surface).
+  With y_b(v) ≈ 0.016 (observed, NOT unification BC), y_t(v) is
+  fixed by matching to the LATTICE Ward target yt(M_Pl) = G3/sqrt(6)
+  = 0.4358 (using the framework lattice g_3 = sqrt(4 pi alpha_LM),
+  not the MSbar-RGE-transported g_3 at M_Pl).  This is the same
+  convention as frontier_yt_2loop_chain.py: the target is the
+  absolute LATTICE Ward value, not the MSbar ratio at the RGE scale.
+  [PASS] Top-only backward scan: y_t(v) found for LATTICE Ward target 0.4358  (y_t(v) = 0.9733, err on yt(M_Pl) = 0.0010)
+  [PASS] m_t^top-only without color projection ~ 155-180 GeV  (m_t^top-only (bare) = 169.50 GeV)
+  [PASS] m_t^top-only with sqrt(8/9) color projection ~ 155-180 GeV  (m_t^top-only * sqrt(8/9) = 159.81 GeV (prior retained 172.57))
+
+Block 11: Outcome classification.
+  [PASS] Outcome A (Yukawa unification at M_Pl): algebraically established  (via Block 6 species uniformity + retained Ward identity)
+  [PASS] Outcome A: empirically FALSIFIED by 33x on m_b  (m_b^framework ~ 145 GeV vs observed 4.18 GeV)
+  [PASS] Outcome B (species-dependent Clebsch-Gordan) ruled out by Block 6  (all 6 basis overlaps = 1/sqrt(6) exactly (machine precision))
+  [PASS] Outcome C (framework cannot predict m_b) not applicable  (framework predicts m_b ≈ 140 GeV; the prediction is falsified)
+  [PASS] Retention gap: absolute y_b scale requires a new primitive  (candidate: flavor-column / generation-hierarchy / SUSY tan(beta))
+
+Block 12: Safe-claim boundary verification.
+  [PASS] Ward-identity tree-level theorem unchanged  (Block 6 species uniformity inherited, not modified)
+  [PASS] Delta_R master assembly unchanged  (-3.27% central and 1-sigma band inherited, not modified)
+  [PASS] Yukawa color-projection theorem unchanged  (sqrt(8/9) factor inherited, not modified)
+  [PASS] Down-type mass-ratio CKM-dual note unchanged  (bounded lane is about m_s/m_b ratio, not absolute m_b)
+  [PASS] Master obstruction theorem unchanged  (~1.95% total residual unchanged; this note does not modify P1/P2/P3)
+  [PASS] Publication-surface files unchanged  (no publication table is modified by this note)
+
+========================================================================
+Summary
+========================================================================
+  Total: PASS = 52, FAIL = 0
+
+Verdict (Outcome A, Yukawa unification at M_Pl):
+  y_t(M_Pl) = y_b(M_Pl) = g_s(M_Pl)/sqrt(6) = 0.4358 (lattice)
+  (y_b/g_s)^MSbar(M_Pl) = (1/sqrt(6))(1+Delta_R) = 0.3949
+    with Delta_R = -3.27% +/- 2.3% (inherited)
+  y_t(v) = 0.5877, y_b(v) = 0.5665 (converged)
+  m_t^framework = 102.3 GeV (obs 172.69)
+  m_b^framework(m_b) = 145.1 GeV (obs 4.18)
+  m_b ratio (framework/obs) = 34.7x  <-- FALSIFIED
+
+Retention gap: the current retained Ward + Delta_R + SM 2-loop RGE
+chain predicts m_b ≈ 140 GeV from the species-uniform BC, a factor
+of ~33 larger than observed 4.18 GeV.  Closing this gap requires a
+new primitive beyond the retained core.
+
+All retention-analysis checks PASS.

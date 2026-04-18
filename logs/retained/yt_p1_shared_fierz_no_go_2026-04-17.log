@@ -1,0 +1,117 @@
+========================================================================
+YT P1 Shared-Fierz Shortcut No-Go Sub-Theorem -- runner
+Date: 2026-04-17
+Authority: YT_P1_SHARED_FIERZ_NO_GO_SUB_THEOREM_NOTE_2026-04-17.md
+========================================================================
+
+Rep-A 1-loop piece list (dressing g_s^2 on OGE channel):
+  vertex:
+    color_structure = (C_F - C_A/2) T^A
+    dirac_structure = gamma^mu gamma^nu gamma_mu
+    bz_integral     = I_v_gauge
+    topology        = vertex-correction
+    renorm_type     = lagrangian-parameter
+  gluon_SE_gluonic:
+    color_structure = (5/3) C_A T^A
+    dirac_structure = N/A (internal gluon propagator)
+    bz_integral     = I_SE_gluonic+ghost
+    topology        = self-energy
+    renorm_type     = lagrangian-parameter
+  gluon_SE_fermion:
+    color_structure = (-4/3) T_F n_f T^A
+    dirac_structure = N/A (closed fermion loop)
+    bz_integral     = I_SE_fermion-loop
+    topology        = self-energy
+    renorm_type     = lagrangian-parameter
+  ghost:
+    color_structure = absorbed in gluon_SE_gluonic (Feynman gauge)
+    dirac_structure = N/A
+    bz_integral     = absorbed in I_SE_gluonic+ghost
+    topology        = self-energy
+    renorm_type     = lagrangian-parameter
+  external_Z_psi:
+    color_structure = C_F (per leg)
+    dirac_structure = scalar
+    bz_integral     = I_leg
+    topology        = external-leg-self-energy
+    renorm_type     = external-leg
+  tadpole:
+    color_structure = absorbed in u_0 tadpole improvement
+    dirac_structure = N/A
+    bz_integral     = absorbed in u_0
+    topology        = tadpole
+    renorm_type     = non-perturbative
+
+Rep-B 1-loop piece list (dressing y_t^2 via H_unit):
+  scalar_vertex:
+    color_structure = C_F (identity color)
+    dirac_structure = gamma^mu 1 gamma_mu
+    bz_integral     = I_v_scalar
+    topology        = vertex-correction
+    renorm_type     = composite-operator
+  operator_anom_dim:
+    color_structure = -6 C_F
+    dirac_structure = scalar bilinear (psi-bar psi)
+    bz_integral     = -6 (constant from MSbar scalar-density gamma_S)
+    topology        = composite-operator-dressing
+    renorm_type     = composite-operator
+  external_Z_psi:
+    color_structure = C_F (per leg)
+    dirac_structure = scalar
+    bz_integral     = I_leg
+    topology        = external-leg-self-energy
+    renorm_type     = external-leg
+  tadpole:
+    color_structure = absorbed in u_0 tadpole improvement
+    dirac_structure = N/A
+    bz_integral     = absorbed in u_0
+    topology        = tadpole
+    renorm_type     = non-perturbative
+
+Structural check 1: external Z_psi matches exactly between Rep-A and Rep-B.
+  [PASS] External Z_psi is the UNIQUE exactly-shared Rep-A/Rep-B piece  (shared non-trivial pieces = ['external_Z_psi'])
+
+Structural check 2: gluon SE (C_A, T_F n_f) in Rep-A has no Rep-B analog.
+  [PASS] Rep-A gluon SE (both C_A and T_F n_f channels) has NO Rep-B counterpart  (Rep-B has no self-energy topology (color-singlet scalar operator has no internal gluon to dress); covers both gluonic and fermion-loop)
+
+Structural check 3: scalar-op anom. dim. in Rep-B has no Rep-A analog.
+  [PASS] Rep-B scalar-operator anom. dim. (-6 C_F) has NO Rep-A counterpart  (Rep-A has Lagrangian-parameter renormalization; Rep-B has composite-operator)
+
+Structural check 4: vertex BZ integrals differ between Rep-A and Rep-B.
+  [PASS] Vertex corrections have different Dirac/color/BZ structures (NO Fierz maps them)  (Rep-A: Dirac=gamma^mu gamma^nu gamma_mu, color=(C_F - C_A/2) T^A, BZ=I_v_gauge; Rep-B: Dirac=gamma^mu 1 gamma_mu, color=C_F (identity color), BZ=I_v_scalar)
+
+Diagnostic: non-shared pieces in each direction.
+  Rep-A pieces NOT convertible to Rep-B: ['gluon_SE_fermion', 'gluon_SE_gluonic']
+  Rep-B pieces NOT convertible to Rep-A: ['operator_anom_dim']
+
+Retained Fierz constants (from D12 + S2, tree level only):
+  D12 color singlet coefficient: -1/(2 N_c) = -0.1666666667
+  S2 Lorentz scalar coefficient: c_S = 1
+  Tree Ward:  y_t_bare^2 = g_bare^2 / (2 N_c) = 0.1666666667
+
+These Fierz identities hold at TREE level only. At 1-loop, the
+diagrammatic structure of Rep-A and Rep-B diverges qualitatively
+and no Fierz rearrangement closes the gap.
+
+========================================================================
+SUMMARY: PASS=4  FAIL=0
+========================================================================
+
+VERDICT: SHARED-FIERZ SHORTCUT NO-GO.
+
+  The 1-loop ratio correction Delta_R = delta_y - delta_g cannot
+  be closed by any algebraic shortcut using the Ward-theorem Fierz
+  (D12 color + S2 Clifford) identities.
+
+  Rep-A (OGE extraction of g_s^2) has: vertex + gluon SE + ghost
+  + quark SE + tadpole pieces.
+  Rep-B (H_unit extraction of y_t^2) has: scalar vertex + scalar-op
+  dressing + quark SE.
+
+  External Z_psi cancels exactly on the ratio (same physical legs).
+  All other pieces are STRUCTURALLY DIFFERENT and cannot be related
+  by any Fierz identity (different diagram topologies, renorm types,
+  color channels, Dirac Clifford structures).
+
+  Delta_R must be computed channel by channel via lattice-PT BZ
+  evaluation on the retained canonical surface.

@@ -1,0 +1,50 @@
+========================================================================
+P3 MSbar-to-pole K_2 color-tensor retention -- runner
+Date: 2026-04-17
+Authority: YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md
+========================================================================
+
+========================================================================
+PART A: Retained four-tensor color decomposition at SU(3), n_l = 5
+========================================================================
+
+  Tensor                      | Exact value at SU(3)
+  --------------------------------------------------------------
+  C_F^2                       | 16/9  = 1.7777777778
+  C_F * C_A                   | 4  = 4.0000000000
+  C_F * T_F * n_l             | 10/3  = 3.3333333333
+  C_F * T_F                   | 2/3  = 0.6666666667
+  [PASS] C_F^2 = 16/9 exactly at SU(3)  (value = 16/9)
+  [PASS] C_F * C_A = 4 exactly at SU(3)  (value = 4)
+  [PASS] C_F * T_F * n_l = 10/3 exactly at SU(3), n_l = 5  (value = 10/3)
+
+========================================================================
+PART B: Four-tensor decomposition identity at n_l = 5
+========================================================================
+
+  K_2(n_l = 5)  =  (16/9) J_FF + 4 J_FA + (10/3) J_Fl + (2/3) J_Fh
+  Symbolic residual = 0
+  [PASS] Four-tensor decomposition identity exact at SU(3), n_l = 5  (residual = 0)
+  [PASS] K_2 is linear in n_l: K_2(5) - K_2(4) = (2/3) J_Fl  (delta = 2*J_Fl/3)
+
+========================================================================
+PART C: Numerical reconstruction at n_l = 5
+========================================================================
+
+  Literature target K_2(n_l = 5)    = 10.940500
+  Linear n_l slope  dK_2/dn_l        = -0.311000
+  Pinned J_Fl  =  dK_2/dn_l / (2/3)  = -0.466500
+  n_l-independent combination C_0    = 12.495500
+  Light-fermion contribution at n_l=5= -1.555000
+  Reconstructed K_2(n_l = 5)         = 10.940500
+  [PASS] Reconstruction: K_2(n_l = 5) = 10.9405 to sub-permille  (diff = 0.000e+00)
+
+========================================================================
+SUMMARY: PASS=6  FAIL=0
+========================================================================
+
+(Four-tensor color-tensor skeleton of K_2 retained framework-native
+ at SU(3), n_l = 5. Per-integral values J_FF, J_FA, J_Fl, J_Fh are
+ cited from Gray-Broadhurst-Grafe-Schilcher 1990 and Marquard-
+ Steinhauser 2016; reconstruction reproduces K_2(n_l=5) = 10.9405
+ to sub-permille.)

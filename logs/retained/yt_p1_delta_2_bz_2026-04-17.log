@@ -1,0 +1,123 @@
+========================================================================
+YT P1 - Delta_2 (C_A channel) BZ computation
+========================================================================
+
+Block 1: Retained SU(3) Casimirs and canonical-surface constants.
+  [PASS] N_c = 3  (N_c = 3)
+  [PASS] C_F = 4/3 (retained from D7 + S1)  (C_F = 1.3333333333)
+  [PASS] C_A = 3  (C_A = 3.0000000000)
+  [PASS] T_F = 1/2  (T_F = 0.5000000000)
+  [PASS] alpha_LM matches canonical-surface retention  (alpha_LM = 0.0906678360)
+  [PASS] alpha_LM/(4 pi) = 0.00721 +/- 1e-5 (retained)  (alpha_LM/(4 pi) = 0.0072151171)
+
+Block 2: Retained Rep-A/Rep-B formula Delta_2 = I_v_gauge - (5/3) I_SE.
+  [PASS] Delta_2(0, 0) = 0 (structural baseline)  (Delta_2(0, 0) = 0.000000)
+  [PASS] Delta_2(0, 3) = -5 (pure-I_SE check at I_SE = 3)  (Delta_2(0, 3) = -5.000000)
+  [PASS] Delta_2(3, 0) = +3 (pure-I_v_gauge check at I_v_gauge = 3)  (Delta_2(3, 0) = 3.000000)
+  [PASS] Delta_2(a, b) = Delta_2(a, 0) + Delta_2(0, b) (linearity)  (Delta_2 is linear in (I_v_gauge, I_SE))
+  [PASS] Retained 5/3 factor from QCD gluon-SE color decomposition  (coefficient on I_SE = 1.666667 (expected 5/3 = 1.666667))
+
+Block 3: Cited I_SE^{gluonic+ghost} range on tadpole-improved Wilson plaquette.
+  [PASS] I_SE range: [1, 3] (Hasenfratz-Hasenfratz 1980; Kawai-Nakayama 1981; Lepage-Mackenzie 1992)  (I_SE in [1.0, 3.0])
+  [PASS] I_SE central = 2.0 (midpoint of cited bracket)  (I_SE_central = 2.0)
+  [PASS] I_SE^{gluonic+ghost} upper bound < Hasenfratz-Hasenfratz total (~3.413)  (I_SE_upper = 3.0, HH total = 3.413)
+
+Block 4: Cited I_v_gauge - conserved (Ward identity) vs local current.
+  [PASS] I_v_gauge = 0 for conserved point-split staggered vector current (Ward identity, exact)  (I_v_gauge^{conserved} = 0.0)
+  [PASS] I_v_gauge range [1, 3] for LOCAL staggered vector current (cited)  (I_v_gauge^{local} in [1.0, 3.0])
+  [PASS] I_v_gauge^{local, central} = 2.0 (midpoint of cited local range)  (I_v_gauge_local_central = 2.0)
+  [PASS] Conserved current is the retained canonical choice (I_v_gauge = 0)  (scripts/frontier_yt_p1_i1_lattice_pt_symbolic.py Block 4, PASS: I_V = 0)
+
+Block 5: Delta_2 at each cited scenario.
+
+  scenario: CONSERVED_LOWER_ISE  (I_v_gauge = 0, I_SE = 1)
+    I_v_gauge = 0.000, I_SE = 1.000
+    Delta_2 = -1.6667
+    C_A * Delta_2 * alpha_LM/(4 pi) = -3.6076 %
+
+  scenario: CONSERVED_CENTRAL    (I_v_gauge = 0, I_SE = 2)
+    I_v_gauge = 0.000, I_SE = 2.000
+    Delta_2 = -3.3333
+    C_A * Delta_2 * alpha_LM/(4 pi) = -7.2151 %
+
+  scenario: CONSERVED_UPPER_ISE  (I_v_gauge = 0, I_SE = 3)
+    I_v_gauge = 0.000, I_SE = 3.000
+    Delta_2 = -5.0000
+    C_A * Delta_2 * alpha_LM/(4 pi) = -10.8227 %
+
+  scenario: LOCAL_CENTRAL        (I_v_gauge = 2, I_SE = 2)
+    I_v_gauge = 2.000, I_SE = 2.000
+    Delta_2 = -1.3333
+    C_A * Delta_2 * alpha_LM/(4 pi) = -2.8860 %
+
+  scenario: LOCAL_MOST_NEG       (I_v_gauge = 1, I_SE = 3)
+    I_v_gauge = 1.000, I_SE = 3.000
+    Delta_2 = -4.0000
+    C_A * Delta_2 * alpha_LM/(4 pi) = -8.6581 %
+
+  scenario: LOCAL_LEAST_NEG      (I_v_gauge = 3, I_SE = 1)
+    I_v_gauge = 3.000, I_SE = 1.000
+    Delta_2 = +1.3333
+    C_A * Delta_2 * alpha_LM/(4 pi) = +2.8860 %
+
+  [PASS] Delta_2^{central, conserved}(I_SE = 2) = -10/3 ~ -3.333  (Delta_2_central = -3.333333 (expected -3.333333))
+  [PASS] Delta_2^{conserved} in [-5.0, -5/3]  (Delta_2^{conserved} in [-5.0000, -1.6667])
+  [PASS] Delta_2^{local} in [-4.0, +4/3]  (Delta_2^{local} in [-4.0000, 1.3333])
+  [PASS] Delta_2^{combined} outer envelope: [-5.0, +4/3]  (Delta_2 in [-5.0000, 1.3333])
+  [PASS] Safe negative-dominant claim range Delta_2 in [-5, 0] covers central  (central -3.3333 in [-5.0, 0.0])
+
+Block 6: C_A * Delta_2 * alpha_LM/(4 pi) numerical contribution.
+  [PASS] C_A * Delta_2^{central} * alpha_LM/(4 pi) ~ -7.22 % (conserved, I_SE=2)  (contribution = -7.2151 %)
+  [PASS] C_A * Delta_2(I_v_gauge=2, I_SE=3) * alpha_LM/(4 pi) ~ -6.49 %  (Delta_2 = -3.0000, contribution = -6.4936 %)
+  [PASS] C_A * Delta_2 * alpha_LM/(4 pi) range: [~-10.82 %, 0 %] on Delta_2 in [-5, 0]  (range = [-10.8227 %, +0.0000 %])
+
+Block 7: Sign of the C_A channel contribution.
+  [PASS] Sign of C_A * Delta_2^{central}: NEGATIVE (reduces ratio correction)  (contribution = -7.2151 % < 0)
+  [PASS] Sign of C_A * Delta_2 at all conserved-current scenarios: NEGATIVE  (all conserved-current Delta_2 < 0 implies C_A contribution < 0)
+  [PASS] C_A contribution non-positive across Delta_2 in [-5, 0] safe range  (strictly non-positive on the retained safe claim range)
+
+Block 8: Comparison C_F channel context (indicative only).
+  [PASS] C_F * Delta_1^{lower=2} * alpha_LM/(4 pi) ~ +1.92 % (packaged delta_PT)  (C_F contribution (Delta_1=2) = +1.9240 %)
+  [PASS] C_F * Delta_1^{upper=6} * alpha_LM/(4 pi) ~ +5.77 % (cited I_S central)  (C_F contribution (Delta_1=6) = +5.7721 %)
+  [PASS] Net C_F + C_A at Delta_1 = 2, central Delta_2: ~ -5.3 % (negative, C_A dominates)  (net (lower Delta_1) = -5.2911 %)
+  [PASS] Net C_F + C_A at Delta_1 = 6, central Delta_2: ~ -1.4 % (near zero, partial cancellation)  (net (upper Delta_1) = -1.4430 %)
+  [PASS] C_A channel SUBTRACTS from C_F channel (partial cancellation in ratio)  (opposite-sign contributions at central => partial cancellation on the ratio)
+
+Block 9: Structural preservation checks.
+  [PASS] Ward-identity tree-level theorem unchanged  (y_t_bare^2 = g_bare^2 / 6 not modified by this note)
+  [PASS] Rep-A/Rep-B partial-cancellation formula preserved  (Delta_2 = I_v_gauge - (5/3) I_SE retained from sibling theorem)
+  [PASS] 5/3 factor from QCD gluon self-energy color decomposition (HIGH confidence)  (11/3 C_A pure-gauge piece splits into vertex + 5/3 gluonic/ghost)
+  [PASS] Three-channel ratio decomposition unchanged  (Delta_R = (alpha/(4 pi)) * (C_F Delta_1 + C_A Delta_2 + T_F n_f Delta_3))
+  [PASS] Packaged delta_PT = 1.92 % unchanged by this note  (packaged value retained as continuum-heuristic lower baseline)
+  [PASS] Cited I_S bracket [4, 10] unchanged (C_F channel, orthogonal)  (this note addresses C_A channel only; C_F channel handled elsewhere)
+  [PASS] Master obstruction theorem NOT modified by this note  (authority boundary respected)
+  [PASS] Publication-surface files NOT modified by this note  (no net ratio correction is propagated; Delta_1 and Delta_3 excluded)
+
+========================================================================
+SUMMARY: PASS=42  FAIL=0
+========================================================================
+
+RETAINED CITATION-LEVEL RESULTS:
+
+  I_SE^{gluonic+ghost} in [1, 3] (tadpole-improved Wilson plaquette)
+  I_v_gauge = 0 (conserved point-split current, Ward identity, exact)
+  I_v_gauge in [1, 3] (local current, cited sensitivity)
+
+  Delta_2^{central, conserved, I_SE=2}  =  0 - (5/3)*2  =  -10/3
+                                     =  -3.3333
+  Delta_2 safe range                 =  [-5, 0]
+
+  C_A * Delta_2^{central} * alpha_LM/(4 pi)  =  -7.2151 %
+  C_A * Delta_2 range                         =  [-10.8227 %, +0.0000 %]
+
+  SIGN: NEGATIVE at central (C_A channel REDUCES the ratio correction).
+
+CONFIDENCE:
+  - MODERATE-HIGH on sign (negative/non-positive across retained range).
+  - MODERATE on magnitude (literature-bounded, O(1) quadrature uncertainty).
+  - HIGH on the 5/3 factor (retained from Rep-A/Rep-B theorem).
+
+BOUNDARIES:
+  - No framework-native 4D BZ quadrature performed.
+  - No publication-surface propagation (Delta_1 and Delta_3 excluded).
+  - No modification of the master obstruction, Ward, or sibling P1 notes.

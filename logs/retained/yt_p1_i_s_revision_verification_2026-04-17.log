@@ -1,0 +1,137 @@
+========================================================================
+P1 I_S revision verification -- runner
+Date: 2026-04-17
+Authority: docs/YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md
+========================================================================
+
+========================================================================
+PART A: Reconstruction of packaged delta_PT = 1.92%
+========================================================================
+
+  alpha_LM                  = 0.0906678360
+  C_F = (N_c^2-1)/(2 N_c)  = 1.3333333333
+  alpha_LM * C_F / (2 pi)   = 0.0192403124
+                           = 1.9240 %
+  [PASS] Packaged delta_PT = alpha_LM * C_F / (2 pi) evaluates to 1.924%  (delta_PT = 1.9240 %)
+  [PASS] Packaged delta_PT is a continuum vertex-correction magnitude (per source)  (source: UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md line 197)
+  [PASS] Packaged delta_PT is NOT a lattice BZ integration output  (no BZ domain or lattice propagators specified in the source)
+
+========================================================================
+PART B: Convention identity alpha/(2 pi) = 2 alpha/(4 pi)
+========================================================================
+
+  alpha_LM / (2 pi)         = 0.0144302343
+  2 * alpha_LM / (4 pi)     = 0.0144302343
+  alpha_LM * C_F / (2 pi)   = 0.0192403124
+  (alpha_LM/(4 pi))*C_F*2   = 0.0192403124
+  (alpha_LM/(4 pi))*C_F*4   = 0.0384806248
+  (alpha_LM/(4 pi))*C_F*6   = 0.0577209371
+  [PASS] Convention identity alpha/(2 pi) = 2 alpha/(4 pi) is exact  (diff = 0.000e+00)
+  [PASS] Packaged value equals (alpha/(4 pi)) * C_F * 2 by convention switch  (diff = 0.000e+00)
+  [PASS] The '2' in (alpha/(4 pi)) * C_F * 2 is a convention factor, not a BZ integral  (convention switches do not produce physical operator matching coefficients)
+
+========================================================================
+PART C: Framework-specific P1 at cited I_S values (alpha/(4 pi))
+========================================================================
+
+  P1(I_S) = (alpha_LM/(4 pi)) * C_F * I_S = 0.007215 * 1.333333 * I_S
+
+             label    I_S   P1 (absolute)    P1 (%)  ratio to 1.92%
+  ----------------------------------------------------------------------
+      standard (2)    2.0      0.01924031    1.924%         1.000x
+       low-end (4)    4.0      0.03848062    3.848%         2.000x
+       central (6)    6.0      0.05772094    5.772%         3.000x
+      high-mid (8)    8.0      0.07696125    7.696%         4.000x
+     high-end (10)   10.0      0.09620156    9.620%         5.000x
+  [PASS] P1(I_S = 2) = packaged 1.924% exactly (convention-identity reading)  (P1(I_S=2) = 1.9240 %)
+  [PASS] P1(I_S = 4) ~ 3.85% (cited low end)  (P1(I_S=4) = 3.8481 %)
+  [PASS] P1(I_S = 6) ~ 5.77% (cited central)  (P1(I_S=6) = 5.7721 %)
+  [PASS] P1(I_S = 10) ~ 9.62% (cited high end)  (P1(I_S=10) = 9.6202 %)
+  [PASS] Ratio P1(I_S=6) / P1(I_S=2) = 3.0 exactly (structural)  (ratio = 3.0000000000)
+
+========================================================================
+PART D: Rejection of Possibility B (false-alarm convention mismatch)
+========================================================================
+  [PASS] Ratio P1(I_S=6) / packaged = 3.0, not 1.0 (no single-convention match)  (ratio = 3.0000)
+  [PASS] Possibility B rejected: no normalization switch equates the two  (packaged and cited differ by a factor 3.0, not a convention factor)
+  [PASS] Cited I_S contains lattice artifacts (plaquette, taste sum, tadpole)  (per prior citation note §2.3)
+  [PASS] Packaged delta_PT lacks lattice artifacts (continuum formula)  (per source: 'standard vertex-correction formula')
+  [PASS] Possibility B rejected on semantic grounds (distinct physical objects)  (lattice-artifact content differs; they are not convention-related)
+
+========================================================================
+PART E: Possibility A confirmation (revision correct in magnitude)
+========================================================================
+
+  cited bracket I_S in [4.0, 10.0] central 6.0
+  lattice P1 bracket = [3.8481 %, 9.6202 %]  central 5.7721 %
+  packaged continuum = 1.9240 %
+  [PASS] Lattice I_S low-end (4) strictly above continuum reference (2)  (4.0 > 2.0)
+  [PASS] All lattice P1 values in cited bracket exceed packaged 1.92%  (min P1 = 3.8481 % > packaged = 1.9240 %)
+  [PASS] Revision direction is UPWARD (lattice > continuum for scalar density)  (staggered taste sum + plaquette artifact, per prior note §2.3)
+
+========================================================================
+PART F: Possibility C semantics (distinct; lattice supersedes, not additive)
+========================================================================
+  [PASS] Lattice matching contains continuum limit (supersedes, not additive)  (lattice Z_S reduces to continuum MSbar when artifacts removed)
+  [PASS] Packaged 1.92% should NOT be added to lattice P1 (not on same ledger)  (lattice supersedes continuum on the lattice surface)
+  [PASS] Naive sum = 7.70% is NOT the correct P1 (would double-count)  (naive sum = 7.6961 % (INCORRECT accounting))
+  [PASS] Correct P1 on lattice surface = central lattice value ~5.77%  (correct P1 = 5.7721 %)
+
+========================================================================
+PART G: Dimensional consistency of the two quantities
+========================================================================
+  [PASS] Both quantities are dimensionless (same units)  ([alpha] * [dimensionless Casimir and coefficient] = dimensionless)
+  [PASS] Both quantities are first-order in alpha_LM (same perturbative order)  (O(alpha_LM) corrections to ln(Z_S))
+  [PASS] Both quantities are in the C_F channel (same color sector)  (Delta_R = C_F * I_1 + (other); packaged and cited both in C_F piece)
+
+========================================================================
+PART H: Verdict determination
+========================================================================
+  [PASS] Possibility B (false alarm) rejected  (distinct physical objects; no convention switch reconciles)
+  [PASS] Possibility A (revision correct in magnitude) confirmed  (lattice I_S > continuum; P1 in [3.85%, 9.62%] > 1.92%)
+  [PASS] Possibility C (distinct contributions) captures semantics  (lattice supersedes continuum; do not add)
+
+  REVISED P1 (central)  =  5.7721 %  (I_S = 6.0)
+  REVISED P1 (range)    =  [3.8481 %, 9.6202 %]
+  PACKAGED (superseded) =  1.9240 %  (continuum vertex-correction magnitude)
+  REVISION FACTOR       =  3.00x (upward)
+  [PASS] Confidence HIGH on semantic verdict (B rejected; A+C correct)
+  [PASS] Confidence MODERATE on quantitative value (O(1) citation uncertainty)  (cited I_S ~ 6 not framework-native; range [4, 10] carries uncertainty)
+
+========================================================================
+PART I: Structural preservation (nothing retained is modified)
+========================================================================
+
+  Structural flags:
+    master obstruction theorem modified        = False
+    Ward-identity theorem modified             = False
+    packaged delta_PT note modified            = False
+    prior P1 I_S citation note modified        = False
+    prior symbolic I_1 = I_S reduction modified = False
+    publication-surface files modified         = False
+  [PASS] Master obstruction theorem NOT modified
+  [PASS] Ward-identity theorem NOT modified
+  [PASS] Packaged delta_PT note NOT modified
+  [PASS] Prior P1 I_S citation note NOT modified
+  [PASS] Prior symbolic I_1 = I_S reduction NOT modified
+  [PASS] Publication-surface files NOT modified
+  [PASS] This runner produces only the verification note + runner + log  (no edits to existing retained or publication-surface files)
+
+========================================================================
+SUMMARY: PASS=38  FAIL=0
+========================================================================
+
+FINAL VERDICT:
+  Possibility B (false-alarm convention mismatch): REJECTED.
+  Possibility A (revision correct in magnitude):   CONFIRMED.
+  Possibility C (distinct contributions):          CAPTURES SEMANTICS.
+
+  Revised P1 (central)  =  5.7721 %  (I_S = 6.0 cited, alpha/(4 pi) convention)
+  Revised P1 (range)    =  [3.8481 %, 9.6202 %]
+  Packaged (superseded) =  1.9240 %  (continuum vertex-correction magnitude)
+
+  Confidence on semantic verdict: HIGH.
+  Confidence on quantitative value: MODERATE (O(1) citation uncertainty).
+
+  No master obstruction theorem, Ward-identity theorem,
+  publication-surface file, or prior retained object is modified.

@@ -1,0 +1,108 @@
+========================================================================
+YT P1 - Delta_3 BZ Computation (T_F n_f Fermion-Loop Channel)
+========================================================================
+
+Block 1: Retained SU(3) Casimirs and canonical-surface constants.
+  [PASS] N_c = 3  (N_c = 3)
+  [PASS] C_F = 4/3 (retained from D7 + S1)  (C_F = 1.3333333333)
+  [PASS] C_A = 3  (C_A = 3.0000000000)
+  [PASS] T_F = 1/2  (T_F = 0.5000000000)
+  [PASS] n_f = 6 (MSbar side at M_Pl, 3 generations x 2 quarks)  (n_f = 6)
+  [PASS] n_taste = 16 (lattice side at M_Pl, staggered 2^4 BZ corners)  (n_taste = 16)
+  [PASS] alpha_LM matches canonical-surface retention  (alpha_LM = 0.0906678360)
+  [PASS] alpha_LM / (4 pi) = 0.00721 +/- 1e-5 (retained)  (alpha_LM / (4 pi) = 0.0072151171)
+
+Block 2: 4/3 prefactor in Delta_3 derives structurally from b_0.
+  [PASS] b_0 fermion-loop coefficient: -(4/3) T_F n_f (standard QCD)  (coefficient = -1.3333333333)
+  [PASS] delta_g includes [(5/3) C_A - (4/3) T_F n_f] I_SE (Rep-A catalog)  (fermion-loop enters delta_g with coefficient -(4/3) T_F n_f)
+  [PASS] Rep B has NO internal gluon, so NO fermion-loop in delta_y  (fermion loop requires internal gluon propagator)
+  [PASS] delta_y - delta_g sign flip: -(4/3) -> +(4/3) on ratio correction  (ratio coefficient = +1.3333333333)
+  [PASS] Delta_3 prefactor = 4/3 (exact group theory)  (DELTA_3_PREFACTOR = 1.3333333333)
+
+Block 3: Literature bracket I_SE^{fermion-loop} in [0.5, 1.5].
+  [PASS] I_SE^{fermion-loop} low citation bound >= 0.5  (I_SE low = 0.5000)
+  [PASS] I_SE^{fermion-loop} central ~ 0.7 (Sharpe-Bhattacharya 1998)  (I_SE central = 0.7000)
+  [PASS] I_SE^{fermion-loop} high citation bound <= 1.5  (I_SE high = 1.5000)
+  [PASS] I_SE^{fermion-loop} positive across entire literature bracket  (fermion-loop BZ integral is positive (screening-sign on Pi_g))
+  [PASS] Central value inside low/high bracket  (0.5 <= 0.7 <= 1.5)
+
+Block 4: Delta_3 = (4/3) * I_SE^{fermion-loop} assembly.
+  [PASS] Delta_3 central = (4/3) * 0.7 ~ 0.933  (Delta_3_central = 0.933333)
+  [PASS] Delta_3 low = (4/3) * 0.5 ~ 0.667  (Delta_3_low = 0.666667)
+  [PASS] Delta_3 high = (4/3) * 1.5 = 2.000  (Delta_3_high = 2.000000)
+  [PASS] Delta_3 > 0 across entire bracket (SIGN: positive)  (Delta_3 in [0.6667, 2.0000] all positive)
+
+Block 5: T_F * n_f prefactor at MSbar (n_f = 6) vs lattice (n_taste = 16).
+  [PASS] T_F * n_f = 3 at MSbar matching (n_f = 6)  (T_F * n_f = 3.000000)
+  [PASS] T_F * n_taste = 8 at lattice (n_taste = 16)  (T_F * n_taste = 8.000000)
+  [PASS] Lattice/MSbar enhancement factor = 8/3 ~ 2.67  (8/3 = 2.666667)
+
+Block 6: T_F n_f * Delta_3 * alpha_LM/(4pi) at n_f = 6 (MSbar).
+  [PASS] MSbar per-Delta_3 prefactor = 3 * alpha_LM/(4pi) ~ 0.0216  (prefactor = 0.02164535)
+  [PASS] MSbar central contribution ~ +2.02 %  (contribution_MSbar_central = +2.0202 %)
+  [PASS] MSbar low contribution ~ +1.44 %  (contribution_MSbar_low = +1.4430 %)
+  [PASS] MSbar high contribution ~ +4.32 %  (contribution_MSbar_high = +4.3291 %)
+  [PASS] MSbar contribution SIGN: positive across bracket  (bracket: [+1.443 %, +4.329 %])
+
+Block 7: T_F n_taste * Delta_3 * alpha_LM/(4pi) at n_taste = 16 (lattice contrast).
+  [PASS] Lattice central contribution ~ +5.38 %  (contribution_lattice_central = +5.3873 %)
+  [PASS] Lattice low contribution ~ +3.85 %  (contribution_lattice_low = +3.8481 %)
+  [PASS] Lattice high contribution ~ +11.54 %  (contribution_lattice_high = +11.5442 %)
+  [PASS] Lattice contribution SIGN: positive across bracket  (bracket: [+3.848 %, +11.544 %])
+  [PASS] Lattice / MSbar ratio ~ 8/3 (at fixed I_SE)  (ratio = 2.666667)
+
+Block 8: Retained matching convention is MSbar at n_f = 6.
+  [PASS] Adopted central: MSbar n_f = 6 convention  (standard SM matching convention at M_Pl)
+  [PASS] Lattice n_taste = 16 presented as CONTRAST only  (enhancement factor 8/3 noted; NOT adopted as central)
+  [PASS] Delta_3 central = 0.93 (MSbar convention adopted)  (Delta_3 central MSbar = 0.933333)
+
+Block 9: Illustrative full ratio-correction assemblies (using Delta_3 central).
+  scenario: A (low Delta_1=+2, Delta_2=-1, Delta_3 central)
+    Delta_1 = +2.000, Delta_2 = -1.000, Delta_3 = +0.933
+    full ratio correction = +1.780 %
+  [PASS] Scenario produces finite ratio correction  (+1.780 %)
+  scenario: B (Delta_1=-2, Delta_2=-2, Delta_3 central)
+    Delta_1 = -2.000, Delta_2 = -2.000, Delta_3 = +0.933
+    full ratio correction = -4.233 %
+  [PASS] Scenario produces finite ratio correction  (-4.233 %)
+  scenario: C (Delta_1=+4, Delta_2=0, Delta_3 high)
+    Delta_1 = +4.000, Delta_2 = +0.000, Delta_3 = +2.000
+    full ratio correction = +8.177 %
+  [PASS] Scenario produces finite ratio correction  (+8.177 %)
+
+  [PASS] Scenario A ratio correction ~ +1.77 %  (+1.780 %)
+  [PASS] Scenario B ratio correction ~ -4.24 %  (-4.233 %)
+  [PASS] Scenario C ratio correction ~ +8.17 %  (+8.177 %)
+  [PASS] Full ratio correction spans roughly [-5 %, +10 %] under illustrative scenarios  (B = -4.233, C = +8.177)
+
+Block 10: Structural preservation checks.
+  [PASS] Rep-A/Rep-B cancellation theorem NOT modified by this note  (Delta_3 formula (4/3) * I_SE retained from parent theorem)
+  [PASS] Master obstruction theorem NOT modified by this note  (authority boundary respected)
+  [PASS] Ward-identity tree-level theorem NOT modified by this note  (y_t_bare^2 = g_bare^2 / 6 unchanged)
+  [PASS] Taste-staircase no-go theorem NOT modified by this note  (n_taste = 16 cited for contrast only, not used as central)
+  [PASS] Publication-surface files NOT modified by this note  (no propagation to publication tables)
+  [PASS] Framework-native I_SE^{fermion-loop} evaluation remains OPEN  (literature bracket used; sub-O(1) evaluation not performed)
+
+========================================================================
+SUMMARY: PASS=51  FAIL=0
+========================================================================
+
+DEFINITIVE RESULT:
+
+  Delta_3 = (4/3) * I_SE^{fermion-loop}
+  I_SE^{fermion-loop} literature: [0.50, 1.50] (central 0.70)
+  Delta_3 bracket: [0.667, 2.000] (central 0.933)
+  SIGN: POSITIVE
+
+  MSbar contribution (n_f = 6, RETAINED central):
+    T_F * n_f * Delta_3 * alpha_LM/(4pi)
+    central = +2.020 %
+    bracket = [+1.443 %, +4.329 %]
+
+  Lattice contribution (n_taste = 16, CONTRAST only):
+    T_F * n_taste * Delta_3 * alpha_LM/(4pi)
+    central = +5.387 %
+    bracket = [+3.848 %, +11.544 %]
+
+  Lattice/MSbar enhancement = 8/3 ~ 2.667
+
