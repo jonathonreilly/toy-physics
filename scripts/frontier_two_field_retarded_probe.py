@@ -26,7 +26,7 @@ This is graph-native:
   - no 1D helper fallback
   - tested only on admissible cycle-bearing bipartite graph families
 
-Retained battery:
+Scored battery:
   R1 Zero-source control
   R2 Source-response linearity
   R3 Additivity
@@ -35,6 +35,8 @@ Retained battery:
   R6 Norm conservation
   R7 State-family robustness
   R8 Native gauge closure
+
+Unscored diagnostic row:
   R9 Force-gap characterization + shell/spectral diagnostics
 """
 
@@ -573,7 +575,7 @@ def run_battery(g: Graph):
         print("  [R8] Gauge: no cycle found, SKIP")
         score += 0
 
-    # R9: force-gap + shell/spectral diagnostics
+    # R9: force-gap + shell/spectral diagnostics (diagnostic only; unscored)
     rho_ref = _source_density(g)
     phi_ext = _external_phi(g)
     H_ext = _build_H(g, MASS, phi_ext)
@@ -614,10 +616,13 @@ def run_battery(g: Graph):
             spec_ratios.append(abs(spec_solve[k] / spec_ext[k]))
     mean_spec_ratio = float(np.mean(spec_ratios)) if spec_ratios else 0.0
 
-    print(f"  [R9] Gap: G_eff={G_eff:.1f}, shell_grad_ratio={shell_ratio:.3f}, spectral_ratio(modes1-5)={mean_spec_ratio:.3f}")
-    score += 1
+    print(
+        f"  [R9 diagnostic] Gap: G_eff={G_eff:.1f}, "
+        f"shell_grad_ratio={shell_ratio:.3f}, "
+        f"spectral_ratio(modes1-5)={mean_spec_ratio:.3f}"
+    )
 
-    print(f"\n  SCORE: {score}/9")
+    print(f"\n  SCORED ROWS: {score}/8  (R9 diagnostic only)")
     return score
 
 
@@ -649,7 +654,7 @@ def main():
             scores.append(s)
 
     print(f"\n{'=' * 70}")
-    print(f"SUMMARY: {len(scores)} families tested, scores: {scores}")
+    print(f"SUMMARY: {len(scores)} families tested, scored-row totals (R1-R8): {scores}")
     print(f"Time: {time.time() - t0:.1f}s")
 
 

@@ -39,7 +39,11 @@ evidence.
 | R6 Norm | `1.22e-15` | `0.00e+00` | `2.22e-16` |
 | R7 Families | `2/3` | `3/3` | `2/3` |
 | R8 Gauge | `J_range=1.60e-02`, `sin R²=0.9999` | `J_range=3.08e-03`, `sin R²=0.9500` | `J_range=4.00e-02`, `sin R²=0.9736` |
-| R9 Gap | `G_eff=157.8`, `shell_grad_ratio=0.005`, `spectral_ratio=0.020` | `G_eff=230.6`, `shell_grad_ratio=0.004`, `spectral_ratio=0.017` | `G_eff=100.5`, `shell_grad_ratio=0.009`, `spectral_ratio=0.021` |
+| R9 Gap (diagnostic only; unscored) | `G_eff=157.8`, `shell_grad_ratio=0.005`, `spectral_ratio=0.020` | `G_eff=230.6`, `shell_grad_ratio=0.004`, `spectral_ratio=0.017` | `G_eff=100.5`, `shell_grad_ratio=0.009`, `spectral_ratio=0.021` |
+
+R9 is intentionally not part of the pass/fail score. It is a characterization
+row tracking how much smoother the solved retarded field remains than the
+external-kernel reference on these irregular graph families.
 
 ## What Holds
 
@@ -70,5 +74,7 @@ The retained takeaway is narrower than the wave prototype:
 - graph-native causal memory is viable
 - the force battery stays intact on the main coupled evolution
 - sector robustness remains the next blocker
+- the force-gap / shell / spectral row remains diagnostic rather than a scored
+  closure row
 - on irregular graphs, the current sign rows are about an audited radial proxy,
   not an exact coordinate-force expectation or a sign-selection result

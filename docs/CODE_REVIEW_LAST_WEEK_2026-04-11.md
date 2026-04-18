@@ -58,9 +58,13 @@ be promoted or reinterpreted without fixes.
    field state.
    - That makes the family check dependent on the initial branch history.
 
-4. `frontier_two_field_retarded_probe.py` R9 cannot fail.
-   - The row prints scale-gap diagnostics and then increments the score
-     unconditionally.
+## Resolved Since Review
+
+1. `frontier_two_field_retarded_probe.py` no longer scores R9 unconditionally.
+   - On current `main`, R9 is now explicitly labeled as a diagnostic-only row
+     for force-gap / shell / spectral characterization.
+   - The runner score now covers only scored rows `R1`-`R8`, and the companion
+     note labels R9 as unscored.
 
 ## Verified False Positive From Agent Review
 
