@@ -2,7 +2,7 @@
 
 ## Verdict
 
-Still reject for `main` at the current tip (`29fb7282`).
+Still reject for `main` at the current tip (`8afbd4c5`).
 
 This round is a real scientific improvement over the earlier PF packet. The
 branch now states the honest negative current-bank claim rather than
@@ -13,10 +13,15 @@ I am **not** treating lack of repo weaving as a blocker here. If the science
 were clean, I would do the landing/package work myself. The remaining blockers
 are scientific evidence-surface blockers.
 
+This update does improve one thing: the branch now wires the new PF
+review-status note into the umbrella boundary verifier, so the top-level
+review entrypoint is cleaner than on the previous tip. But that does not
+change the actual theorem-grade blockers below.
+
 ## Current Replay
 
 - `frontier_perron_frobenius_selection_axiom_boundary.py`
-  → `PASS = 126, FAIL = 0, SUPPORT = 63`
+  → `PASS = 127, FAIL = 0, SUPPORT = 64`
 - `frontier_perron_frobenius_current_bank_full_frontier_closure_2026_04_18.py`
   → `THEOREM PASS = 4, SUPPORT = 1, FAIL = 0`
 - `frontier_perron_frobenius_wilson_current_bank_complete_closure_2026_04_18.py`
@@ -47,8 +52,8 @@ That means the branch's claimed “clean current-bank closure validator stack”
 still internally inconsistent on its own terms.
 
 This is not the deepest scientific issue, but it is a real blocker: the branch
-cannot be called clean while one of its top-level exact-closure validators is
-red locally.
+cannot be called clean while one of its own top-level exact-closure validators
+is still red locally after the latest update.
 
 ### 2. The new negative-closure layer is still certified mainly by note-audit and generic certificate-shape runners
 
