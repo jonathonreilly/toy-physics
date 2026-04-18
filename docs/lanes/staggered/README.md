@@ -7,7 +7,7 @@
 - parity-coupled staggered fermion core card
 - irregular graph batteries
 - self-gravity
-- two-field wave / retarded closures
+- two-field wave audit / retarded closure
 - DAG compatibility
 - sign/direction audit and blocker
 - emergent geometry reopen
@@ -35,5 +35,7 @@
 - strongest retained architecture in the repo
 - exact lattice directional result is retained
 - irregular graph structural package is strong
+- retained two-field closure lives on the retarded family-closure sibling; the
+  older wave-law prototype is now bounded after the clean-family rerun
 - off-lattice sign-selective observable is still the main blocker
 - emergent geometry is partially reopened, not closed

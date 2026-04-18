@@ -11,7 +11,8 @@ The strongest defended result is the retained staggered interaction stack:
 - cycle-bearing battery closes `9/9` on three admissible graph families
 - scaled sibling keeps that `9/9` battery closed through side `12`
 - self-gravity is retained on those same graph families
-- two-field wave coupling is retained with hard `5/5`
+- retarded family closure is retained on those same graph families; the older
+  wave-law two-field hardening is now a bounded audit after the clean-family rerun
 - a causal-DAG sibling shows the same force/Born/norm/family story survives on
   layered DAGs
 

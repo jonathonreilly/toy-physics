@@ -62,12 +62,12 @@ This backlog is ordered by value to the main project, not by ease.
 - A first two-field endogenous coupling is now retained as a prototype in
   [`frontier_two_field_coupling.py`](../scripts/frontier_two_field_coupling.py),
   but it still uses relaxation dynamics for `Phi`.
-- A wave-law two-field hardening is now retained in
-  [`frontier_two_field_wave.py`](../scripts/frontier_two_field_wave.py): hard
-  `5/5` on the retained cycle-bearing families, with width kept as a
-  diagnostic rather than a hard gate. The corrected parity coupling leaves the
-  hard score intact but changes the width diagnostic.
-- A retarded / hybrid field-law probe is now retained in
+- A wave-law two-field hardening now survives only as a bounded rerun-corrected
+  note in [`frontier_two_field_wave.py`](../scripts/frontier_two_field_wave.py):
+  `W1`-`W4` still hold on all retained cycle-bearing families, but the clean
+  `W6` restarts give hard scores `4/5`, `5/5`, `4/5`, so this is no longer a
+  retained family-robust closure.
+- A retarded / hybrid field-law probe is now bounded in
   [`frontier_two_field_retarded_probe.py`](../scripts/frontier_two_field_retarded_probe.py):
   the main coupled-force battery survives, but family robustness still drops to
   `2/3` on random geometric and layered-cycle families.

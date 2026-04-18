@@ -219,12 +219,12 @@ The full-suite baseline is now frozen:
    exact matter norm, bounded Φ growth, and inward retained proxy response
    under the corrected parity coupling.
 
-6. **Two-field wave hardening**: DONE as a retained hardening step.
-   `frontier_two_field_wave.py` closes hard `5/5` on all three retained
-   cycle-bearing families with a wave-law `Φ` field, exact `ψ` norm, bounded
-   `Φ`, and inward retained proxy response under the corrected parity
-   coupling. Width response survives only as a diagnostic, not a universal
-   gate.
+6. **Two-field wave hardening**: rerun-corrected to a bounded result.
+   On current `main`, `frontier_two_field_wave.py` still keeps the wave-law
+   `Φ` field bounded, preserves exact `ψ` norm, and retains inward proxy
+   response on all three retained cycle-bearing families, but the clean-family
+   rerun downgrades the hard scores to `4/5`, `5/5`, `4/5` because `W6`
+   closes only on the growing family. Width response remains diagnostic.
 
 7. **Self-gravity scaling**: DONE as a retained scaling readout.
    `frontier_staggered_self_gravity_scaling.py` shows that self-gravity stays

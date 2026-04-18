@@ -54,10 +54,6 @@ be promoted or reinterpreted without fixes.
    - The current construction stores edges both ways, so the retained signal is
      a layered-bias result, not a true DAG propagation test.
 
-3. `frontier_two_field_wave.py` family-robustness reuses an already evolved
-   field state.
-   - That makes the family check dependent on the initial branch history.
-
 ## Resolved Since Review
 
 1. `frontier_two_field_retarded_probe.py` no longer scores R9 unconditionally.
@@ -65,6 +61,15 @@ be promoted or reinterpreted without fixes.
      for force-gap / shell / spectral characterization.
    - The runner score now covers only scored rows `R1`-`R8`, and the companion
      note labels R9 as unscored.
+
+2. `frontier_two_field_wave.py` no longer reuses an already evolved field
+   state in the family-robustness battery.
+   - On current `main`, `W6` restarts each family from fresh `Φ=0`,
+     `dΦ/dt=0` data, so the family check is independent of the first branch's
+     evolved field history.
+   - That rerun lowers the honest hard scores to `4/5`, `5/5`, `4/5`, so the
+     wave note now sits as a bounded rerun-corrected result rather than a
+     retained `5/5` closure.
 
 ## Verified False Positive From Agent Review
 

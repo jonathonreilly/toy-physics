@@ -137,16 +137,18 @@ G_eff = 0.4-0.7 across all families. Source-scale gap closed.
 | random_geo (36) | 20/20 TW, CV=0.12 | 3e-16 | dphi=0.012 | 3/3 TW |
 | growing (48) | 20/20 TW, CV=0.93 | 2e-16 | dphi=0.011 | 3/3 TW |
 
-## 6. Two-Field Wave (frontier_two_field_wave.py)
+## 6. Two-Field Wave (frontier_two_field_wave.py, rerun-corrected)
 
 Wave-equation Phi + staggered psi, parity coupling.
 
 | Family | Force | Norm | Phi bounded | Families |
 |--------|-------|------|-------------|----------|
-| random_geo (36) | 30/30 TW | 4e-16 | max=0.27 | 3/3 TW |
+| random_geo (36) | 30/30 TW | 4e-16 | max=0.27 | 2/3 TW |
 | growing (48) | 30/30 TW | 2e-16 | max=0.16 | 3/3 TW |
-| layered (24) | 30/30 TW | 2e-16 | max=0.34 | 3/3 TW |
-| **Hard score** | **5/5** | **5/5** | **5/5** |
+| layered (24) | 30/30 TW | 2e-16 | max=0.34 | 2/3 TW |
+
+Hard scores after the clean-family rerun: random geometric `4/5`, growing
+`5/5`, layered `4/5`.
 
 ## 7. Graph Portability (frontier_staggered_graph_portability.py)
 
@@ -182,9 +184,9 @@ beta ranges 0.33-0.73 (NOT mean-field 0.5) — topology-dependent.
 | Self-gravity | 5+5+5 = 15/15 | 15 |
 | Retarded closure | 9+8+9+8 = 34/36 | 36 |
 | Iterative closure | PASS on 2 families | ~10 |
-| Two-field wave | 5+5+5 = 15/15 | 15 |
+| Two-field wave | 4+5+4 = 13/15 | 15 |
 | Graph portability | 8+8+8 = 24/24 | 24 |
-| **TOTAL** | **~185/190** | |
+| **TOTAL** | **~183/190** | |
 
 ## What Changed: Identity -> Parity Coupling
 

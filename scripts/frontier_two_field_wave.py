@@ -20,7 +20,7 @@ Battery:
   W3: ψ norm conservation
   W4: Φ bounded (no runaway)
   W5: Width response vs free evolution (diagnostic, not a hard gate)
-  W6: State-family robustness
+  W6: State-family robustness from fresh zero-field initial data
 """
 
 from __future__ import annotations
@@ -244,13 +244,15 @@ def run_wave_coupling(name, pos, col, adj, n, src):
     ratio = widths_c[-1] / widths_f[-1] if widths_f[-1] > 0 else 1
     print(f"  [W5] Width ratio: {ratio:.4f} ({'contracted' if ratio<1 else 'expanded'}) [diagnostic]")
 
-    # W6: State families
+    # W6: State families. Each family restarts from fresh field data so this
+    # battery checks robustness of the coupling law, not continuation history.
     fam_tw = 0
     for label, psi_init in [("gauss", _gauss(pos,src)),
                              ("color-0", _color_state(pos,col,src,0)),
                              ("color-1", _color_state(pos,col,src,1))]:
         psi_f = psi_init.copy()
-        phi_f = phi.copy(); pi_f = pi_phi.copy()  # use current Phi field
+        phi_f = np.zeros(n)
+        pi_f = np.zeros(n)
         for _ in range(5):
             H_f = _build_H(pos,col,adj,n,MASS,phi_f)
             psi_f = _cn_step(H_f, n, psi_f)

@@ -66,7 +66,7 @@ Bug:
 - this changes the effective mean and variance
 - sign/correlation comparisons are confounded
 
-Corrected retained surface:
+Corrected current surface:
 
 - [`scripts/frontier_self_consistency_test.py`](../scripts/frontier_self_consistency_test.py)
 - [`docs/SELF_CONSISTENCY_STRUCTURED_NULL_NOTE_2026-04-11.md`](SELF_CONSISTENCY_STRUCTURED_NULL_NOTE_2026-04-11.md)
@@ -78,6 +78,9 @@ Revisit rule:
 
 ### 3. Two-field wave family robustness is not independent
 
+**Status on `main`: corrected and rerun; the wave note is now downgraded to a
+bounded wave-field result**
+
 Affected runner:
 
 - [`scripts/frontier_two_field_wave.py`](../scripts/frontier_two_field_wave.py)
@@ -86,9 +89,22 @@ Bug:
 
 - family checks inherit the already evolved field state
 
-Required rerun:
+Corrected retained surface:
 
-- rerun `W6` from clean restarts per family
+- [`scripts/frontier_two_field_wave.py`](../scripts/frontier_two_field_wave.py)
+- [`docs/STAGGERED_TWO_FIELD_WAVE_NOTE.md`](STAGGERED_TWO_FIELD_WAVE_NOTE.md)
+
+Rerun outcome on current `main`:
+
+- `W6` now restarts each family from clean `Φ=0`, `dΦ/dt=0` initial data
+- the corrected hard scores are `4/5`, `5/5`, `4/5` on random geometric,
+  growing, and layered cycle
+- the old retained `5/5` interpretation does not survive the clean-family rerun
+
+Revisit rule:
+
+- do not cite older retained `5/5` wave-coupling summaries; use the rerun-
+  corrected wave note and current test matrix wording instead
 
 ### 4. Retarded probe R9 cannot fail
 
