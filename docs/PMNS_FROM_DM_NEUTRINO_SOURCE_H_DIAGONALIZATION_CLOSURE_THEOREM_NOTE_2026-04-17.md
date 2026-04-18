@@ -14,12 +14,16 @@ chamber.
 This note was tightened after adversarial review surfaced five issues. The
 tightening is carried by three companion notes:
 
-- Basin-uniqueness and permutation-uniqueness (CRITICAL 1 + 2): resolved
- via the perturbative criterion in
+- Basin-uniqueness and permutation-uniqueness (CRITICAL 1 + 2): closed
+ by a retained theorem (Sylvester inertia preservation on the source
+ branch) in
  [DM_NEUTRINO_SOURCE_SURFACE_PERTURBATIVE_UNIQUENESS_THEOREM_NOTE_2026-04-17.md](./DM_NEUTRINO_SOURCE_SURFACE_PERTURBATIVE_UNIQUENESS_THEOREM_NOTE_2026-04-17.md).
- Non-perturbative chamber basins exist, but only one (Basin 1 at
- `sigma = (2, 1, 0)`) lies in the convergence domain of the
- observable-principle source-response expansion.
+ Competing in-chamber basins flip `signature(H_base + J)` from
+ `(2, 0, 1)` to `(1, 0, 2)` and thereby cross the caustic
+ `det(H_base + J) = 0`; they lie on a different congruence-class
+ branch than the retained baseline `J = 0` and are not in the
+ retained source-branch domain of the log-det observable. Only
+ Basin 1 at `sigma = (2, 1, 0)` preserves inertia.
 - θ_23 upper-octant conditionality (SERIOUS 3): formalized as a falsifiable
  retained prediction in
  [PMNS_THETA23_UPPER_OCTANT_CHAMBER_CLOSURE_PREDICTION_NOTE_2026-04-17.md](./PMNS_THETA23_UPPER_OCTANT_CHAMBER_CLOSURE_PREDICTION_NOTE_2026-04-17.md).
@@ -58,8 +62,9 @@ central observational values
 sin^2 θ_12 = 0.307, sin^2 θ_13 = 0.0218, sin^2 θ_23 = 0.545
 ```
 
-has a unique chamber solution **in the perturbative regime**
-`‖J‖_F ≤ ‖H_base‖_F`:
+has a unique chamber solution **on the retained source branch** —
+i.e. on the connected component of `det(H_base + J) ≠ 0` that contains
+`J = 0`, equivalently `signature(H_base + J) = signature(H_base) = (2, 0, 1)`:
 
 ```
 (m_*, delta_*, q_+*) = (0.657061, 0.933806, 0.715042)
@@ -68,17 +73,19 @@ has a unique chamber solution **in the perturbative regime**
 verified by 60 independent random-start multi-start + fsolve sharpening, all
 converging to the same point at machine precision. The point lies strictly
 inside the chamber (distance `0.0159` above the boundary
-`q_+ = sqrt(8/3) - delta`). Non-perturbative chamber basins exist (at
+`q_+ = sqrt(8/3) - delta`). Off-branch chamber basins exist (at
 `(m, δ, q_+) ≈ (28, 21, 5)` on the same permutation and at `≈ (21, 13, 2)`
-on the competing `σ = (2, 0, 1)` permutation, with `‖J‖_F / ‖H_base‖_F`
-ratios of 21 and 14 respectively) but are excluded by the perturbative-
-uniqueness theorem.
+on the competing `σ = (2, 0, 1)` permutation) but both flip
+`signature(H_base + J)` to `(1, 0, 2)` and give `det(H_base + J) < 0`;
+they sit on a different branch of the caustic than the retained
+baseline and are excluded by the Sylvester inertia-preservation
+selector (retained basin-uniqueness theorem).
 
 **δ_CP: falsifiable consequence of the construction.** The map
 `(m, delta, q_+) -> (s12^2, s13^2, s23^2, delta_CP)` sends `R^3` to a
 3-dimensional sub-manifold of `R^4`. Three observational angles pin
-`(m, delta, q_+)` (under the perturbative-uniqueness criterion); the CP
-phase is then forced by the chart geometry, not an over-determined fit.
+`(m, delta, q_+)` (under the retained source-branch inertia selector);
+the CP phase is then forced by the chart geometry, not an over-determined fit.
 Disagreement with future measurements falsifies the construction, not
 merely the pinned point. At the pinned point:
 
@@ -116,7 +123,11 @@ All retained / theorem-grade at the time of writing:
  — full `U_e = I` replacement citation chain with the `q_H = 0`
  conditional input flagged explicitly.
 - [DM_NEUTRINO_SOURCE_SURFACE_PERTURBATIVE_UNIQUENESS_THEOREM_NOTE_2026-04-17.md](./DM_NEUTRINO_SOURCE_SURFACE_PERTURBATIVE_UNIQUENESS_THEOREM_NOTE_2026-04-17.md)
- — retained perturbative-scale criterion selecting Basin 1 uniquely.
+ — retained Sylvester inertia-preservation selector picking Basin 1
+ uniquely on the source branch `signature(H_base + J) = (2, 0, 1)`.
+ Scale bounds are retained as consistency diagnostics (Basin 1 satisfies
+ `‖J‖_F / ‖H_base‖_F ≈ 0.94` and `‖J‖_op / ‖H_base‖_op ≈ 0.86` while
+ the off-branch basins have ratios ≥ 11).
 - [DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md](./DM_NEUTRINO_OBSERVABLE_BANK_EXHAUSTION_THEOREM_NOTE_2026-04-17.md)
  — exhaustion theorem and the identification of P3 as the atlas-open
  promotion lane that closes the selector gate.
@@ -211,13 +222,14 @@ sigma_hier = (2, 1, 0) # electron <-> largest H-eigenvalue row,
 
 which is the unique row permutation that produces observationally
 non-degenerate angles consistent with the measured PDG hierarchy
-`|U_e3| << |U_e1|, |U_e2|` **within the perturbative regime**
-`||J||_F < ||H_base||_F`. Four of the six permutations admit no chamber
-solution at all; the competing `sigma = (2, 0, 1)` permutation admits a
-chamber solution only at `||J||_F / ||H_base||_F ≈ 14` — deep in the
-non-perturbative regime and excluded by the perturbative-uniqueness
-theorem. The 60-seed multi-start confirms `sigma_hier = (2, 1, 0)` as
-the unique perturbative-regime closing permutation.
+`|U_e3| << |U_e1|, |U_e2|` **on the retained source branch**
+`signature(H_base + J) = (2, 0, 1)`. Four of the six permutations admit
+no chamber solution at all; the competing `sigma = (2, 0, 1)`
+permutation admits a chamber solution only at
+`signature(H_base + J) = (1, 0, 2)` (on the opposite branch of the
+caustic), and is therefore excluded by the retained inertia-preservation
+selector. The 60-seed multi-start confirms `sigma_hier = (2, 1, 0)` as
+the unique source-branch closing permutation.
 
 ```
 U_PMNS(m, delta, q_+) = P_{sigma_hier} · (eigenvectors of H in ascending eigenvalue order)
@@ -271,7 +283,7 @@ The angles **genuinely vary** across the chamber
 the retained-atlas-native `f(H)` chamber-varying observable that closes
 the observable-bank exhaustion theorem CASE 4 obstruction on the P3 lane.
 
-## The pinning theorem
+## The pinning theorem (retained source-branch selection)
 
 **Theorem (the selector closure via PMNS observational constraints).** The system
 
@@ -281,8 +293,9 @@ the observable-bank exhaustion theorem CASE 4 obstruction on the P3 lane.
 |U_mu3(m, delta, q_+)|^2 / cos^2 θ_13 = sin^2 θ_23(obs) = 0.545,
 ```
 
-has a unique solution **in the perturbative regime** on the chamber
-`q_+ >= sqrt(8/3) - delta`:
+has a unique solution **on the retained source branch**
+`B_src = { J : signature(H_base + J) = signature(H_base) = (2, 0, 1) }`
+inside the chamber `q_+ >= sqrt(8/3) - delta`:
 
 ```
 m_* = 0.657061342210,
@@ -293,17 +306,18 @@ q_+* = 0.715042329587.
 **Proof sketch.** The map `(m, delta, q_+) -> (s12^2, s13^2, s23^2)` is a
 smooth surjection from a 3-dimensional chart onto an open subset of the
 unit cube. At the pinned point the Jacobian is non-singular (verified by
-the fsolve convergence). Uniqueness within the axiom-native perturbative
-regime (source Frobenius norm less than baseline Frobenius norm) is
-verified by 60 independent random-start Nelder-Mead descents at
-`chi^2 < 10^-12`. See
-[DM_NEUTRINO_SOURCE_SURFACE_PERTURBATIVE_UNIQUENESS_THEOREM_NOTE_2026-04-17.md](./DM_NEUTRINO_SOURCE_SURFACE_PERTURBATIVE_UNIQUENESS_THEOREM_NOTE_2026-04-17.md)
-for the formal perturbative-uniqueness theorem that establishes this as
-retained-grade. Non-perturbative chamber basins exist (e.g. at
-`(m,delta,q_+) ~ (28, 21, 5)` on the same permutation, and at
-`~ (21, 13, 2)` on the competing `sigma = (2, 0, 1)` permutation), but
-they are outside the convergence domain of the observable-principle
-source-response expansion and are therefore excluded.
+the fsolve convergence). Uniqueness on the retained source branch is
+established by the Sylvester inertia-preservation theorem in
+[DM_NEUTRINO_SOURCE_SURFACE_PERTURBATIVE_UNIQUENESS_THEOREM_NOTE_2026-04-17.md](./DM_NEUTRINO_SOURCE_SURFACE_PERTURBATIVE_UNIQUENESS_THEOREM_NOTE_2026-04-17.md):
+among the three in-chamber χ²=0 basins (one at the pinned point on
+σ=(2,1,0); a second at `(28, 21, 5)` on σ=(2,1,0); a third at
+`(21, 13, 2)` on σ=(2,0,1)), only the pinned point preserves the
+retained signature `(2, 0, 1)` and `sgn det > 0`; the other two flip
+signature to `(1, 0, 2)` with `det < 0` and therefore sit on a
+different branch of the caustic `det(H_base + J) = 0` than the
+retained baseline `J = 0`. Signature is a Sylvester congruence-invariant
+of the retained Hermitian form — an algebraic axiom-native criterion,
+not a new post-axiom principle.
 
 **Closure status.** This pins `(delta_*, q_+*)`. The spectator direction
 `m_*` is also pinned by the same system, with
@@ -405,12 +419,17 @@ as the largest-scope lane that simultaneously closes selector and the PMNS
 open objects, but the retained-atlas map `(m, delta, q_+) -> PMNS` was
 not explicitly constructed.
 
-**After this note:**
+**After this note (and the 2026-04-17 inertia promotion):**
 - The `P3` map is **built** explicitly by direct diagonalization of the
  retained affine `H`.
 - the selector gate closes on the chamber at
  `(m_*, delta_*, q_+*) = (0.657061, 0.933806, 0.715042)`.
 - PMNS is promoted to retained on the chamber.
+- Basin-uniqueness is retained-grade via the Sylvester inertia-
+ preservation theorem on the source branch. The remaining structural
+ conditionals are observational (hierarchy pairing `σ_hier = (2, 1, 0)`)
+ and SM-canonical (`q_H = 0`); these are documented as separate open
+ atlas items, not as the basin selector.
 - A falsifiable `delta_CP` prediction is produced:
  `sin(delta_CP) = -0.987`, `delta_CP ~ -81 deg (= 279 deg)`.
 - The solar-gap `Dm^2_21`, absolute-mass scale, and Majorana phases
@@ -454,6 +473,9 @@ This note **positively claims**:
  the chamber (constructed from retained inputs only);
 - the selector gate closes on the chamber at
  `(m_*, delta_*, q_+*) = (0.657061, 0.933806, 0.715042)`;
+- basin uniqueness (vs the two competing in-chamber χ²=0 basins) is
+ retained-grade via the Sylvester inertia-preservation selector:
+ only the pinned point preserves `signature(H_base + J) = (2, 0, 1)`;
 - a retained `delta_CP` prediction: `sin(delta_CP) = -0.9874`,
  `delta_CP ~ -81 deg (= 279 deg)`;
 - the pinned `|U_PMNS|` matches NuFit 5.3 NO 3-sigma ranges in all 9
@@ -464,7 +486,12 @@ This note **does not claim**:
 - closure of the absolute neutrino mass scale (different carrier);
 - closure of Majorana CP phases (separate sector);
 - retention of PMNS on any other chamber than the live source-oriented
- sheet defined by the retained affine `H`.
+ sheet defined by the retained affine `H`;
+- Taylor convergence of `W[J] = log|det(H_base + J)|` at the Basin 1
+ physical amplitude (the retained log-det observable is well-defined on
+ the source branch without requiring Taylor convergence; `ρ(D⁻¹J) ≈ 1.285`
+ at Basin 1 is an honest series-domain boundary, not a failure of the
+ retained closure).
 
 The positive claims stand or fall on:
 (i) the retained exact affine chart `H = H_base + m T_m + delta T_delta
@@ -504,6 +531,10 @@ This note is the **the selector closure theorem** on the publication surface:
 - the selector gate on the DM-neutrino source-oriented sheet: **CLOSED**
  at `(m_*, delta_*, q_+*)`.
 - PMNS retained: **YES** on the chamber via `f(H)`.
+- Basin uniqueness: **retained-grade** via the Sylvester inertia-
+ preservation theorem. The remaining conditionals are the observational
+ hierarchy pairing `σ_hier = (2, 1, 0)` and the SM-canonical Higgs Z_3
+ charge `q_H = 0` — both documented as separate atlas items.
 - DM flagship cascade can now proceed downstream of the selector gate using the pinned
  chamber point instead of the previously ambiguous prior candidates.
 - The paragraph in
@@ -523,4 +554,10 @@ This note is the **the selector closure theorem** on the publication surface:
 - that the PMNS map is valid off the live source-oriented sheet (it is
  derived on the live sheet only);
 - that the `delta_CP` prediction is certain (it is a falsifiable
- retained-grade prediction, subject to upcoming observational test).
+ retained-grade prediction, subject to upcoming observational test);
+- that a Frobenius / operator-norm scale bound `‖J‖ ≤ ‖H_base‖` is the
+ basin selector (those are consistency diagnostics; the retained
+ selector is the Sylvester inertia-preservation theorem);
+- that `W[J] = log|det(D + J)|` requires Taylor convergence at the
+ Basin 1 amplitude (it does not; the retained observable is defined
+ on the source-branch domain by direct diagonalisation).

@@ -1,17 +1,53 @@
-# Z_3 Doublet-Block Selector — Schur-Baseline Partial Closure
+# Commutant-Class Structural Lemma (Schur Scalar Baseline)
 
 **Date:** 2026-04-17
-**Status:** partial closure theorem + strictly narrowed remaining gap
+**Status:** retained **commutant-class structural lemma**, NOT a closure
+of the live DM-neutrino source-oriented sheet. The Schur conclusion
+`D = m I_3` applies to the hypothetical zero-source baseline that
+COMMUTES with the retained three-generation algebra. The retained
+`H_base` on the live source-oriented sheet does not satisfy that
+premise (`‖[H_base, C_3]‖_F ≈ 6.05`, `‖[T_m, C_3]‖_F ≈ 2.45` — both
+numerically non-zero), so the scalar-baseline curvature
+`Q = 6(δ² + q_+²)/m²` IS NOT the retained curvature of the DM-neutrino
+sheet. This note is retained at the "structural lemma" grade as a
+reference for the commutant class; it is NOT retained as the curvature
+of the active affine chart.
 **Script:** `scripts/frontier_dm_neutrino_source_surface_schur_scalar_baseline_theorem.py`
 **Framework convention:** "axiom" means only the single framework axiom `Cl(3)` on `Z^3`.
 
+## Status demotion notice (2026-04-17)
+
+An earlier draft framed this note as a "partial closure" of the
+selector gate. Adversarial review correctly identified that the Schur
+conclusion `D = m I_3` applies only to baselines commuting with the
+retained three-generation algebra ⟨P_1, P_2, P_3, C_3[111]⟩. The
+retained Hermitian curvature `H_base` on the live source-oriented
+sheet (from the retained active affine boundary theorem) does NOT
+commute with the retained algebra:
+
+```
+‖[H_base, C_3]‖_F ≈ 6.05      (numerically non-zero)
+‖[T_m, C_3]‖_F  ≈ 2.45      (numerically non-zero)
+```
+
+Therefore the Schur scalar baseline `D = m I_3` and the curvature
+`Q = 6(δ² + q_+²)/m²` derived from it are NOT retained curvature
+objects on the live sheet. They characterise a different (commuting)
+baseline class that is retained as a reference structure — useful for
+constructive-comparison purposes only.
+
+The retained curvature object on the live source-oriented sheet is the
+exact Hermitian affine chart
+`H(m, δ, q_+) = H_base + m T_m + δ T_delta + q_+ T_q` directly; the
+PMNS closure (basin-uniqueness now retained via the Sylvester inertia
+theorem) is the publication-grade selector closure, NOT this note.
+
 ## Scope and discipline
 
-This note establishes a **partial** closure of the right-sensitive 2-real
-selector law on the live DM-neutrino source-oriented sheet (the selector gate).
-It does **not** close the full selector law. It **does** close a named
-sub-objection that previously kept the scalar-baseline result at bounded
-status.
+This note is a **commutant-class structural lemma** about the Schur
+rigidity of commuting operators on the retained irreducible space
+`H_hw=1`. It does **not** close the selector gate, and it is **not**
+the retained curvature of the live DM-neutrino source-oriented sheet.
 
 The distinction matters for claim-boundary discipline:
 
@@ -20,10 +56,15 @@ The distinction matters for claim-boundary discipline:
  was bounded because **(i)** the baseline choice `D = m I_3` was not shown
  to be forced by the axiom, and **(ii)** the minimum-coupling selector
  principle was not shown to be forced by the axiom
-- this note closes (i) by a Schur argument on the retained three-generation
- algebra
-- this note does **not** close (ii); the selector principle remains the
- single remaining open object
+- this note records a Schur argument that would force `D = m I_3`
+ conditional on commuting with the retained three-generation algebra;
+ the retained `H_base` does NOT satisfy that conditional (see the
+ numerical commutator witnesses above)
+- this note does **not** close (ii); the selector principle remains
+ an atlas-level open object, and publication-grade selector closure
+ for the DM-neutrino source sheet proceeds through PMNS-as-f(H)
+ observational promotion (P3 lane), with basin-uniqueness retained
+ via the Sylvester inertia-preservation theorem
 
 ## Theorem statement (Schur baseline on `H_hw=1`)
 

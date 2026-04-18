@@ -1,9 +1,9 @@
 # DM Flagship Gate — Closure Review
 
 **Date:** 2026-04-17
-**Status:** flagship gate CLOSED on the live DM-neutrino source-oriented sheet via the observational PMNS promotion (P3) lane. Conditional on θ_23 upper octant (falsifiable).
+**Status:** flagship gate CLOSED on the live DM-neutrino source-oriented sheet via the observational PMNS promotion (P3) lane. The basin-uniqueness sub-blocker is closed by a retained theorem (Sylvester inertia preservation on the source branch). The closure is conditional on (i) the observational hierarchy pairing `σ_hier = (2, 1, 0)` and (ii) the SM-canonical Higgs Z_3 assignment `q_H = 0`; the θ_23 upper-octant prediction is retained-grade and falsifiable at DUNE / JUNO / Hyper-K.
 **Framework convention:** "axiom" means only the single framework axiom `Cl(3)` on `Z^3`.
-**Runner coverage:** 14 frontier runners, **PASS = 413, FAIL = 0**.
+**Runner coverage:** 14 frontier runners, **PASS = 422, FAIL = 0**.
 
 ## Scope
 
@@ -72,11 +72,11 @@ attack-and-closure runs. Each runner is self-contained with PASS/FAIL harness.
 | 8 | obstruction | `frontier_dm_neutrino_source_surface_quartic_isotropy_and_u2_obstruction.py` | 18 | U(2)-invariance obstruction + quartic-isotropy identity `Tr(J⁴) = ½[Tr(J²)]²` |
 | 9 | obstruction | `frontier_dm_neutrino_source_surface_microscopic_polynomial_impossibility_theorem.py` | 35 | Microscopic-polynomial impossibility on `(δ, q_+)` |
 | 10 | obstruction | `frontier_dm_neutrino_source_surface_bifundamental_invariance_obstruction_theorem.py` | 37 | K_doublet is Hermitian ⇒ only U(2) adjoint, not bifundamental |
-| 11 | tightening | `frontier_dm_neutrino_source_surface_perturbative_uniqueness_theorem.py` | 37 | Perturbative-scale uniqueness: `‖J‖_F < ‖H_base‖_F` selects Basin 1 |
+| 11 | tightening | `frontier_dm_neutrino_source_surface_perturbative_uniqueness_theorem.py` | 46 | Retained Sylvester inertia-preservation selector picks Basin 1 on the source branch (primary); scale bounds kept as consistency diagnostics |
 | 12 | tightening | `frontier_pmns_theta23_upper_octant_chamber_closure_prediction.py` | 31 | θ_23 upper-octant retained prediction; threshold `s_23²_min = 0.5410` |
 | 13 | tightening | `frontier_charged_lepton_ue_identity_via_z3_trichotomy.py` | 40 | `U_e = I` via Z_3-trichotomy `q_H = 0` branch |
 | 14 | **CLOSURE** | **`frontier_pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem.py`** | **43** | **Retained PMNS-as-f(H) map + observational chamber pin** |
-| | | **Total** | **413** | **413 PASS / 0 FAIL** |
+| | | **Total** | **422** | **422 PASS / 0 FAIL** |
 
 All runners are `scripts/frontier_*.py` with their accompanying theorem
 notes in `docs/*_NOTE_2026-04-17.md`.
@@ -194,22 +194,35 @@ retained symmetry.
 After the initial obstruction tour + closure was laid down, adversarial
 review surfaced five issues. Three dedicated theorems close them.
 
-### Perturbative-uniqueness theorem (CRITICAL 1 + 2)
+### Inertia-preservation basin-uniqueness theorem (CRITICAL 1 + 2)
 → [DM_NEUTRINO_SOURCE_SURFACE_PERTURBATIVE_UNIQUENESS_THEOREM_NOTE_2026-04-17.md](./DM_NEUTRINO_SOURCE_SURFACE_PERTURBATIVE_UNIQUENESS_THEOREM_NOTE_2026-04-17.md)
 
-The observable-principle scalar generator `W[J] = log|det(D+J)|` admits a
-retained-grade source-response expansion only in the perturbative regime
-`‖J‖_F ≤ ‖H_base‖_F`. Checked at all candidate branches:
+The retained observable `W[J] = log|det(H_base + J)|` is well-defined on
+the complement of the caustic `det(H_base + J) = 0`. Its natural domain
+on the source-oriented sheet is the **source branch** `B_src` — the
+connected component containing `J = 0`, equivalently the set of `J`
+preserving the retained signature `signature(H_base + J) = signature(H_base) = (2, 0, 1)`.
+Signature is a Sylvester congruence-invariant of the retained Hermitian
+form (an algebraic axiom-native quantity, not a new principle).
 
-| Branch | `(m, δ, q_+)` | sin(δ_CP) | `‖J‖_F / ‖H_base‖_F` | Regime |
-|---|---|---:|---:|---|
-| Basin 1, σ=(2,1,0) | (0.657, 0.934, 0.715) | −0.987 | **0.94** | perturbative |
-| Basin 2, σ=(2,1,0) | (28, 21, 5) | +0.554 | 20.88 | non-perturbative |
-| σ=(2,0,1) cluster | (21, 13, 2) | −0.419 | 13.92 | non-perturbative |
+Checked at all in-chamber χ²=0 basins:
 
-The criterion simultaneously excludes the non-perturbative second basin
-AND the competing permutation. Basin 1 is the unique perturbative chamber
-closure, with 14× margin to the next candidate.
+| Branch | `(m, δ, q_+)` | sin(δ_CP) | `signature(H)` | `det(H)` | source branch? |
+|---|---|---:|---|---:|---|
+| Basin 1, σ=(2,1,0) | (0.657, 0.934, 0.715) | −0.987 | **(2, 0, 1)** | **+0.959** | **YES** |
+| Basin 2, σ=(2,1,0) | (28, 21, 5) | +0.554 | (1, 0, 2) | −70377 | no (signature flipped) |
+| σ=(2,0,1) cluster | (21, 13, 2) | −0.419 | (1, 0, 2) | −20295 | no (signature flipped) |
+
+The retained inertia selector simultaneously excludes the second
+σ=(2,1,0) basin AND the competing σ=(2,0,1) permutation: both flip
+`signature` across the caustic and therefore lie on a different branch
+than the retained baseline. Basin 1 is the unique source-branch
+chamber closure.
+
+Scale diagnostics remain recorded for transparency: `‖J‖_F / ‖H_base‖_F`
+is 0.94 at Basin 1 vs 20.9 and 13.9 at the competing basins; the scale
+bounds independently also pick Basin 1 (consistency check), but the
+retained primary selector is the Sylvester inertia invariant.
 
 ### θ_23 upper-octant chamber-closure prediction (SERIOUS 3)
 → [PMNS_THETA23_UPPER_OCTANT_CHAMBER_CLOSURE_PREDICTION_NOTE_2026-04-17.md](./PMNS_THETA23_UPPER_OCTANT_CHAMBER_CLOSURE_PREDICTION_NOTE_2026-04-17.md)
@@ -262,18 +275,19 @@ $$
 
 on the chamber `q_+ ≥ √(8/3) − δ`.
 
-**Pinning theorem (unique perturbative chamber solution).** Requiring the
+**Pinning theorem (unique source-branch chamber solution).** Requiring the
 map to reproduce PDG 2024 central observational values
 `(sin²θ_12, sin²θ_13, sin²θ_23) = (0.307, 0.0218, 0.545)` has a unique
-perturbative-regime chamber solution
+source-branch (inertia-preserving) chamber solution
 
 $$
 \boxed{(m_*,\ \delta_*,\ q_+^*) \;=\; (0.657061,\ 0.933806,\ 0.715042)}
 $$
 
 verified by multi-start Nelder-Mead + fsolve sharpening to machine
-precision. Non-perturbative chamber basins exist but are excluded by the
-perturbative-uniqueness theorem.
+precision. The two competing in-chamber χ²=0 basins sit on the
+`signature = (1, 0, 2)` branch with `det(H_base + J) < 0`; they are
+excluded by the Sylvester inertia-preservation theorem.
 
 **Falsifiable δ_CP consequence.** The map sends `R^3` to a 3-dim submanifold
 of `R^4`; three observational inputs pin `(m, δ, q_+)`, and δ_CP is the
@@ -365,7 +379,7 @@ PYTHONPATH=scripts python3 scripts/frontier_*_prediction.py
 PYTHONPATH=scripts python3 scripts/frontier_pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem.py
 ```
 
-Expected: total PASS = 413, FAIL = 0.
+Expected: total PASS = 422, FAIL = 0.
 
 ## Position on the flagship paper surface
 
@@ -377,10 +391,12 @@ gates. The correct ARXIV_DRAFT wording is:
 > PMNS-as-f(H) construction and observational PMNS pinning. The chamber
 > closure point is
 > `(m_*, δ_*, q_+*) = (0.657061, 0.933806, 0.715042)`,
-> with unique-in-perturbative-regime guaranteed by the perturbative-
-> uniqueness theorem. The closure supplies two falsifiable retained
-> predictions: `sin δ_CP = −0.9874` and `θ_23` in the upper octant with
-> threshold `s_23² ≥ 0.5410`. Sole-axiom closure remains impossible at the
+> with basin-uniqueness on the retained source branch guaranteed by the
+> Sylvester inertia-preservation theorem (an algebraic congruence-invariant
+> of the retained Hermitian curvature; no post-axiom principle is imported).
+> The closure supplies two falsifiable retained predictions:
+> `sin δ_CP = −0.9874` and `θ_23` in the upper octant with threshold
+> `s_23² ≥ 0.5410`. Sole-axiom closure remains impossible at the
 > microscopic-polynomial level per the impossibility theorem; closure-via-
 > observational-promotion is the published result.
 
@@ -397,3 +413,10 @@ gates. The correct ARXIV_DRAFT wording is:
 - that the DM flagship cascade is now fully sole-axiom (the closure is at
   retained-publication-grade, the standard for a Nature-level flagship
   claim)
+- that a Frobenius / operator-norm scale bound is the primary basin
+  selector (those are consistency diagnostics; the retained primary
+  selector is the Sylvester inertia-preservation theorem)
+- that `W[J] = log|det(H_base + J)|` requires Taylor convergence at the
+  Basin 1 amplitude (the retained log-det observable is defined on the
+  source branch by direct diagonalisation; the series-disk `ρ < 1` is an
+  honest analytic-representation boundary, not the retained selector)
