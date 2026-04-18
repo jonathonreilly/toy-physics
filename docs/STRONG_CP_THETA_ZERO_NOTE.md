@@ -1,13 +1,13 @@
-# Strong CP / θ = 0 Full Closure on the Retained Action Surface
+# Strong CP / θ = 0 Retained Action-Surface Closure
 
 **Date:** 2026-04-16
-**Status:** retained full strong-CP closure on the retained axiom-determined
-action surface
+**Status:** retained action-surface `θ_eff = 0` closure on the retained
+axiom-determined action surface
 **Script:** `scripts/frontier_strong_cp_theta_zero.py`
 
 ## Theorem
 
-**Theorem (retained-framework full strong-CP closure).**
+**Theorem (retained-framework action-surface `θ_eff = 0` closure).**
 On the retained Wilson-plus-staggered action surface of the `Cl(3)/Z^3`
 framework,
 
@@ -227,7 +227,7 @@ Therefore, on the retained Wilson-plus-staggered action surface,
     arg det(M_u M_d) = 0,
     θ_eff = 0.
 
-This is now a **full strong-CP closure package on the retained action surface**.
+This is now a **retained action-surface strong-CP closure package**.
 
 ## What Is Actually Proved
 

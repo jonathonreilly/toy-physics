@@ -49,7 +49,7 @@ Use alongside:
 | Exact CPT | [CPT_EXACT_NOTE.md](../../CPT_EXACT_NOTE.md) | [frontier_cpt_exact.py](../../../scripts/frontier_cpt_exact.py) |
 | CHSH Bell support theorem | [BELL_INEQUALITY_DERIVED_NOTE.md](../../BELL_INEQUALITY_DERIVED_NOTE.md) | [frontier_bell_inequality.py](../../../scripts/frontier_bell_inequality.py) |
 | Emergent Lorentz invariance | [EMERGENT_LORENTZ_INVARIANCE_NOTE.md](../../EMERGENT_LORENTZ_INVARIANCE_NOTE.md) | [frontier_emergent_lorentz_invariance.py](../../../scripts/frontier_emergent_lorentz_invariance.py) |
-| Strong CP / `θ_eff = 0` | [STRONG_CP_THETA_ZERO_NOTE.md](../../STRONG_CP_THETA_ZERO_NOTE.md) | [frontier_strong_cp_theta_zero.py](../../../scripts/frontier_strong_cp_theta_zero.py) |
+| Strong CP / retained action-surface `θ_eff = 0` closure | [STRONG_CP_THETA_ZERO_NOTE.md](../../STRONG_CP_THETA_ZERO_NOTE.md) | [frontier_strong_cp_theta_zero.py](../../../scripts/frontier_strong_cp_theta_zero.py) |
 | Discrete evanescent-barrier lattice transfer-matrix bound + Schwarzschild tortoise-length identity (bounded-companion Planck-unit astrophysical exponent is (C-rate)-conditional) | [EVANESCENT_BARRIER_AMPLITUDE_SUPPRESSION_THEOREM_NOTE.md](../../EVANESCENT_BARRIER_AMPLITUDE_SUPPRESSION_THEOREM_NOTE.md) | [frontier_evanescent_barrier_amplitude_suppression.py](../../../scripts/frontier_evanescent_barrier_amplitude_suppression.py) |
 
 ## Quantitative Component Package
@@ -106,7 +106,7 @@ Use alongside:
   - three-generation matter structure
   - exact `I_3 = 0` and CPT as compact supporting theorems
   - emergent Lorentz invariance with first anisotropic correction at dimension 6 and unique cubic-harmonic `\ell = 4` signature
-  - retained full strong-CP closure / `theta_eff = 0` on the retained action surface
+  - retained action-surface strong-CP closure / `theta_eff = 0` on the retained Wilson-plus-staggered action surface
   - promoted CKM atlas/axiom closure package as part of the quantitative manuscript surface
 - Public package companions / appendices:
   - bounded weak-field GR companions beyond Newton / Poisson / WEP / time-dilation

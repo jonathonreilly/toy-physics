@@ -54,8 +54,8 @@ For the explicit package boundary, use:
   with an exact retained `hw=1` observable no-proper-quotient theorem,
   exact `I_3 = 0`, exact CPT, retained Bell/CHSH support on explicit
   two-species lattice systems with KS taste measurements, emergent Lorentz
-  invariance, and retained full strong-CP closure / `theta_eff = 0` on the
-  retained action surface
+  invariance, and retained action-surface strong-CP closure /
+  `theta_eff = 0` on the retained Wilson-plus-staggered action surface
 - confinement:
   exact `T = 0` confinement of the graph-first `SU(3)` gauge sector, with
   bounded `sqrt(sigma) ≈ 465 MeV`

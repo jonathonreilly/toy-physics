@@ -54,9 +54,9 @@ Fast reviewer path after this page:
   retained three-generation structure with atlas-wired exact taste-cube /
   residual-symmetry flavor support, exact `I_3 = 0`, exact CPT, retained
   Bell/CHSH support on explicit two-species lattice systems with KS taste
-  measurements, emergent Lorentz invariance, retained full strong-CP closure
-  on the retained action surface, and exact `T = 0` confinement with bounded
-  `sqrt(sigma)`
+  measurements, emergent Lorentz invariance, retained action-surface
+  strong-CP closure at `θ_eff = 0` on the retained Wilson-plus-staggered
+  action surface, and exact `T = 0` confinement with bounded `sqrt(sigma)`
 - quantitative stack:
   retained `alpha_s(M_Z) = 0.1181`, retained EW normalization, canonical
   `v = 246.282818290129 GeV`, promoted CKM atlas/axiom closure,

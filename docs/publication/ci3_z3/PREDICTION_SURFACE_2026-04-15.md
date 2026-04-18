@@ -119,7 +119,8 @@ in route history.
   - authority:
     [EMERGENT_LORENTZ_INVARIANCE_NOTE.md](../../EMERGENT_LORENTZ_INVARIANCE_NOTE.md)
 - strong CP:
-  - `theta_eff = 0` on the retained axiom-determined action surface
+  - retained action-surface `theta_eff = 0` on the retained
+    axiom-determined Wilson-plus-staggered action surface
   - authority:
     [STRONG_CP_THETA_ZERO_NOTE.md](../../STRONG_CP_THETA_ZERO_NOTE.md)
 

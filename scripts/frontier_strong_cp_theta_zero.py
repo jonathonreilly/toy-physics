@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Strong CP / θ = 0 Full Closure on the Retained Action Surface
-==============================================================
+Strong CP / θ = 0 Retained Action-Surface Closure
+=================================================
 
-STATUS: retained-framework full closure on the retained Wilson-plus-staggered
-action surface
+STATUS: retained-framework action-surface closure on the retained
+Wilson-plus-staggered action surface
 
 TARGET CLAIM:
   On the retained Wilson-plus-staggered Cl(3)/Z³ action surface,
@@ -685,7 +685,7 @@ def test_combined_theta_eff():
 
 def main():
     print("=" * 78)
-    print("Strong CP / θ = 0 Full Closure on the Retained Action Surface")
+    print("Strong CP / θ = 0 Retained Action-Surface Closure")
     print("=" * 78)
     print()
     print("CLAIM: On the retained Wilson-plus-staggered Cl(3)/Z³ action surface,")

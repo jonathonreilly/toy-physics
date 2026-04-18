@@ -23,8 +23,9 @@ matter side, the same framework carries exact native $SU(2)$, graph-first
 structural $SU(3)$, anomaly-forced $3+1$, retained three-generation matter
 structure, exact $I_3=0$, exact CPT, retained Bell/CHSH support on explicit
 two-species lattice systems with KS taste measurements, emergent Lorentz
-invariance, exact strong CP in the form $\theta_{\mathrm{eff}}=0$ on the
-retained action surface, and exact $T=0$ confinement with bounded
+invariance, retained action-surface strong-CP closure in the form
+$\theta_{\mathrm{eff}}=0$ on the retained Wilson-plus-staggered action
+surface, and exact $T=0$ confinement with bounded
 $\sqrt{\sigma}\approx 465\,\mathrm{MeV}$.
 Quantitatively, the current package gives the canonical hierarchy evaluation
 $v=246.282818290129\,\mathrm{GeV}$, retains
@@ -752,8 +753,9 @@ The gravity side is no longer just weak-field: it now includes exact full
 discrete $3+1$ gravity on the project route and exact continuum/QG
 identification on one chosen canonical textbook target. The gauge and matter
 side is no longer just structural algebra: it includes anomaly-forced $3+1$,
-retained three-generation structure, retained full strong-CP closure on the
-retained action surface, exact confinement, emergent Lorentz invariance, and a promoted
+retained three-generation structure, retained action-surface strong-CP
+closure on the retained Wilson-plus-staggered action surface, exact
+confinement, emergent Lorentz invariance, and a promoted
 algebraic CKM closure package. The quantitative side is no longer just a set of
 promising near-misses: it contains a canonical same-surface electroweak-scale
 evaluation, retained electroweak and strong-coupling lanes, and bounded
