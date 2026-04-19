@@ -240,8 +240,11 @@ is now also live on `main`:
 It is useful for atlas/review purposes, but it is not being promoted here as a
 retained manuscript lane. The live exact endpoint is a boundary packet: the
 current-stack Majorana law is zero, neutrino mass in general reduces to the
-Dirac lane, and the full retained-neutrino sole-axiom frontier is reduced to
-`(J_chi, mu)` with the current retained routes setting both to zero.
+Dirac lane, the pure-retained PMNS bank also fixes `sigma = 0`, no
+right-conjugacy-invariant observable of `K = Y^dag Y` can intrinsicize the
+admitted right-Gram completion route, and the full retained-neutrino
+sole-axiom frontier is reduced to `(J_chi, mu)` with the current retained
+routes setting both to zero.
 
 ## Read The Package In Order
 

@@ -70,8 +70,10 @@ Fast reviewer path after this page:
   framework derivation of Koide. A reviewed April 18 Koide support stack now
   lives on `main`: it closes an exact circulant/operator-space bridge and an
   exact positive selected-line reduction stack down to one microscopic scalar
-  selector law, but it does not upgrade the authoritative package beyond
-  bounded status
+  selector law. The exact one-scalar obstruction triangulation theorem and the
+  exact `Z_3` selected-slice scalar-potential support note now sharpen that
+  route further, but they still do not upgrade the authoritative package
+  beyond bounded status
 - bounded prediction surface plus one dual-status flavor corollary:
   proton lifetime, the CKM-only neutron-EDM corollary with bounded
   continuation, down-type flavor-mass CKM-dual ratios, vacuum critical

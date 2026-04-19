@@ -141,7 +141,9 @@ Current quantitative statuses:
   explicit three-real PDG pin on the retained shape-theorem chamber, no spare
   observable beyond the pin, and no claim of a retained framework derivation
   of Koide. A reviewed April 18 Koide support stack now sharpens one candidate
-  route down to one microscopic scalar selector law, but it remains
+  route down to one microscopic scalar selector law. The exact one-scalar
+  obstruction triangulation theorem and exact `Z_3` scalar-potential support
+  note now sharpen that endpoint further, but the stack remains
   conditional/support and does not change the bounded package status
 - DM flagship gate, with exact transport-chain progress, theorem-grade
   same-surface thermal bounding and a certified current-bank
@@ -198,6 +200,10 @@ also live on `main`:
 
 It is useful for the atlas and later lane work, but it is not promoted as a
 flagship manuscript claim surface.
+Its current exact endpoint now also includes a PMNS sigma-zero no-go, a
+right-conjugacy-invariant PMNS no-go on the admitted right-Gram route, and the
+charged-lepton-side two-Higgs canonical reduction as one-sided branch
+bookkeeping.
 
 Also outside the flagship spine, the Wilson two-body / Newton-companion lane
 remains live on `main` as a bounded side packet:

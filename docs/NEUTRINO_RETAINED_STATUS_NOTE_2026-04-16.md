@@ -17,8 +17,14 @@ It is a curated boundary/support packet:
   Dirac Yukawa object
 - exact negative closeout of the full single-Higgs lepton PMNS route and exact
   seven-real reduction of the minimal surviving neutrino-side two-Higgs class
+- exact seven-real reduction of the minimal surviving charged-lepton-side
+  two-Higgs class
 - exact PMNS selector reduction stack down to one real reduced amplitude
   `a_sel`, with exact current-stack zero law `a_sel,current = 0`
+- exact current-bank no-go fixing the native cycle/transport mean `sigma` to
+  zero on the pure-retained PMNS bank
+- exact current-bank no-go showing no right-conjugacy-invariant observable of
+  `K = Y^dag Y` can intrinsicize the admitted right-Gram completion route
 - exact last-mile reduction of the full retained-neutrino sole-axiom frontier
   to the pair `(J_chi, mu)`, with current retained routes setting both to zero
 - exact negative Majorana lower-level pairing result on the retained
@@ -63,6 +69,8 @@ Reviewer-facing packet front doors:
   [LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md](./LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md)
 - exact minimal neutrino-side two-Higgs canonical reduction:
   [NEUTRINO_DIRAC_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md](./NEUTRINO_DIRAC_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md)
+- exact minimal charged-lepton-side two-Higgs canonical reduction:
+  [CHARGED_LEPTON_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md](./CHARGED_LEPTON_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md)
 - exact PMNS native nontrivial-character current boundary and selector stack:
   [PMNS_C3_NONTRIVIAL_CURRENT_BOUNDARY_NOTE.md](./PMNS_C3_NONTRIVIAL_CURRENT_BOUNDARY_NOTE.md),
   [PMNS_SECTOR_ORIENTATION_ORBIT_NOTE.md](./PMNS_SECTOR_ORIENTATION_ORBIT_NOTE.md),
@@ -75,6 +83,9 @@ Reviewer-facing packet front doors:
   [PMNS_SELECTOR_CURRENT_STACK_ZERO_LAW_NOTE.md](./PMNS_SELECTOR_CURRENT_STACK_ZERO_LAW_NOTE.md),
   [PMNS_SELECTOR_SIGN_TO_BRANCH_REDUCTION_NOTE.md](./PMNS_SELECTOR_SIGN_TO_BRANCH_REDUCTION_NOTE.md),
   [PMNS_BRANCH_CONDITIONED_QUADRATIC_SHEET_CLOSURE_NOTE.md](./PMNS_BRANCH_CONDITIONED_QUADRATIC_SHEET_CLOSURE_NOTE.md)
+- exact current-bank sigma-zero and right-conjugacy-invariant no-go closeouts:
+  [PMNS_SIGMA_ZERO_NOGO_NOTE.md](./PMNS_SIGMA_ZERO_NOGO_NOTE.md),
+  [PMNS_RIGHT_CONJUGACY_INVARIANT_NO_GO_NOTE.md](./PMNS_RIGHT_CONJUGACY_INVARIANT_NO_GO_NOTE.md)
 - exact last-mile reduction to the pair `(J_chi, mu)`:
   [NEUTRINO_TWO_AMPLITUDE_LAST_MILE_REDUCTION_NOTE.md](./NEUTRINO_TWO_AMPLITUDE_LAST_MILE_REDUCTION_NOTE.md)
 - exact retained-neutrino sole-axiom negative closeout:
@@ -109,5 +120,8 @@ So the live status is:
 - [frontier_neutrino_majorana_lower_level_pairing_nogo.py](../scripts/frontier_neutrino_majorana_lower_level_pairing_nogo.py)
 - [frontier_neutrino_majorana_current_stack_zero_law.py](../scripts/frontier_neutrino_majorana_current_stack_zero_law.py)
 - [frontier_neutrino_mass_reduction_to_dirac.py](../scripts/frontier_neutrino_mass_reduction_to_dirac.py)
+- [frontier_charged_lepton_two_higgs_canonical_reduction.py](../scripts/frontier_charged_lepton_two_higgs_canonical_reduction.py)
+- [frontier_pmns_sigma_zero_no_go.py](../scripts/frontier_pmns_sigma_zero_no_go.py)
+- [frontier_pmns_right_conjugacy_invariant_nogo.py](../scripts/frontier_pmns_right_conjugacy_invariant_nogo.py)
 - [frontier_neutrino_two_amplitude_last_mile.py](../scripts/frontier_neutrino_two_amplitude_last_mile.py)
 - [frontier_neutrino_sole_axiom_full_closure_boundary.py](../scripts/frontier_neutrino_sole_axiom_full_closure_boundary.py)

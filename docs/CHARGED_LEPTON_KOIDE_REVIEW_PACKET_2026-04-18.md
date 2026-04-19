@@ -25,6 +25,12 @@ The clean current endpoint is:
   to one scalar cyclic-response law
 - the selected-slice kernel now reduces further to a frozen slot/CP bank plus
   one real microscopic coefficient
+- the one-scalar obstruction triangulation theorem now shows that the live
+  charged-lepton promotion gap is exactly one real scalar condition
+  `kappa = 2`
+- the exact `Z_3` scalar-potential support note derives the Clifford-fixed
+  selected-slice potential but also records honestly that its minimum does not
+  select the physical point
 
 So the current charged-lepton state is:
 
@@ -44,6 +50,8 @@ So the current charged-lepton state is:
 8. [KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md](./KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md)
 9. [KOIDE_MICROSCOPIC_SCALAR_SELECTOR_TARGET_NOTE_2026-04-18.md](./KOIDE_MICROSCOPIC_SCALAR_SELECTOR_TARGET_NOTE_2026-04-18.md)
 10. [KOIDE_SELECTED_SLICE_FROZEN_BANK_DECOMPOSITION_NOTE_2026-04-18.md](./KOIDE_SELECTED_SLICE_FROZEN_BANK_DECOMPOSITION_NOTE_2026-04-18.md)
+11. [KOIDE_ONE_SCALAR_OBSTRUCTION_TRIANGULATION_THEOREM_NOTE_2026-04-18.md](./KOIDE_ONE_SCALAR_OBSTRUCTION_TRIANGULATION_THEOREM_NOTE_2026-04-18.md)
+12. [KOIDE_Z3_SCALAR_POTENTIAL_SUPPORT_NOTE_2026-04-19.md](./KOIDE_Z3_SCALAR_POTENTIAL_SUPPORT_NOTE_2026-04-19.md)
 
 ## Package Role
 
@@ -58,7 +66,9 @@ current `main`.
 
 It is not yet clean enough to promote charged leptons to retained closure,
 because the current stack still stops one step short of a retained selector
-law for the final microscopic scalar.
+law for the final microscopic scalar. The current exact endpoint is now
+sharper: the missing step is one scalar condition, and the current
+selected-slice scalar potential does not by itself select it.
 
 So the right classification is:
 
