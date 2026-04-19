@@ -1,92 +1,108 @@
-# Koide Theta Hierarchy Open Scalar -- CLOSED by Berry-Phase Theorem
+# Koide Theta Hierarchy Open Scalar -- Closed on the Actual Berry Route
 
 **Date:** 2026-04-19
-**Status:** CLOSED (cycle 10B). Originally the remaining open scalar on
-the Koide charged-lepton lane: the doublet argument theta_PDG ~ 2.0416
-rad ~ 116.976 deg in the circulant parametrization, equivalent to
-Brannen-Zenczykowski delta = 2/9. Not expressible as a retained
-angular primitive in cycles 1-4. Now **closed** by the retained
-**Berry-phase theorem** on the projectivized Koide cone.
+**Status:** closed for AXIOM E / the charged-lepton phase gate, but not a full
+charged-lepton mass-package promotion. The old ambient-`S^2` / `n = 2`
+monopole story is superseded. The correct closure lives on the exact selected
+charged-lepton line.
 
 **Primary reference:** `docs/KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md`.
 
 ---
 
-## 1. What changed between cycle 1-4 and cycle 10
+## 1. What was open
 
-### Cycle 1-4 state
+The residual charged-lepton angular datum was the Brannen-Zenczykowski phase
 
-The Koide theta was the residual open scalar after AXIOM D pinned
-kappa = 2. AXIOM D fixes `|b|` relative to `a` on the sqrt-parent
-`H = aI + bC + b^bar C^2`, but not `arg(b)`. The PDG value
+```text
+theta_PDG = 2 pi / 3 + delta,    delta ~= 2/9,
+```
 
-    theta_PDG = 2 pi / 3 + 2/9 ~ 2.0416 rad
-
-(Brannen delta = 2/9, 2-decade phenomenological value;
-Brannen 2006 MASSES2.pdf; Zenczykowski PRD 86 (2012) 117303) was not
-reproducible from retained angular primitives at 0.05% tolerance.
-Closure routes flagged at that time:
-
-- atom-bank extension (add more retained angles);
-- third-moment readout primitive (cubic moment construction);
-- CP / Klein-four sigma_S lift;
-- positive-parent-axis obstruction lift.
-
-Cycle 8 Q1 reformulated the content as AXIOM E:
-
-    cos(3 * arg(b_s)) = cos(Q),    Q = 2/3,
-
-which is independent of AXIOM D + A0-A3 (cycle 8 Q1 proved this on the
-Hilbert series of the coordinate ring modulo AXIOM D).
-
-### Cycle 10B state (this update)
-
-AXIOM E has been reduced to a **theorem** via the **Berry-phase theorem
-on the projectivized Koide cone S^2_Koide**. The construction:
-
-1. Projectivize the Koide cone to S^2_Koide.
-2. Identify the natural equivariant line bundle L_doublet = det(doublet)
-   associated to the non-trivial C_3 isotype of the hw = 1 triplet.
-3. Its first Chern number is `n = dim(doublet) = d - 1 = 2` (at d = 3),
-   by Borel-Weil / Pieri on S^2 under a finite-group action.
-4. The monopole connection of flux n has Berry holonomy over one C_3
-   cyclic period equal to `gamma = 2 pi n / d = 2 pi Q`.
-5. Brannen reduction: `delta_d = Q / d = (d - 1) / d^2`, giving
-   `delta_3 = 2 / 9` exactly.
-
-The value 2/9 emerges from the **Chern-fraction per orbifold
-fundamental period** of the doublet monopole bundle at d = 3. No
-numerical tuning. No new axioms.
-
-AXIOM E -- equivalently, the Koide theta -- is now a corollary of the
-Berry-phase theorem.
-
-Cost: zero new axioms. AXIOM E has dropped from the axiom list.
+equivalently AXIOM E in the branch language. Earlier cycle-10 text claimed to
+close this by putting a chosen `n = 2` monopole bundle on an ambient
+projectivized Koide `S^2`. That is not the actual charged-lepton route.
 
 ---
 
-## 2. Current status
+## 2. What actually closes
 
-The Koide theta hierarchy is **closed**. The 2/9 value is
-structurally forced by retained equivariant index-theoretic data on
-S^2_Koide (Chern class + C_3 orbifold structure). The dim-parametric
-scan d = 2..7 verifies `delta_d = (d - 1) / d^2` at every dim.
+On the exact selected charged-lepton line
+
+```text
+H_sel(m) = H(m, sqrt(6)/3, sqrt(6)/3),
+```
+
+the normalized Koide state has exact Fourier form
+
+```text
+s(m) = (1/sqrt(2)) v_1 + (1/2) e^{i theta(m)} v_omega
+                     + (1/2) e^{-i theta(m)} v_omegabar.
+```
+
+So the physical phase-carrying datum is the projective `C_3` doublet ray
+
+```text
+[e^{i theta(m)} : e^{-i theta(m)}] = [1 : e^{-2 i theta(m)}]
+```
+
+on the equator of `CP^1`. The tautological line over that ray has canonical
+Berry connection
+
+```text
+A = d theta.
+```
+
+There is a unique unphased first-branch point `m_0` with `theta(m_0)=2 pi / 3`,
+so
+
+```text
+Hol(m_0 -> m) = theta(m) - 2 pi / 3 = delta(m).
+```
+
+That is the load-bearing theorem: the physical charged-lepton phase observable
+is the Berry holonomy of the canonical tautological line on the actual selected
+route.
+
+At the current selected-line witness point, the runner gives
+
+```text
+delta ~= 0.222229861577,
+```
+
+within witness precision of `2/9`.
 
 ---
 
-## 3. Runner status
+## 3. What the forced `2` is
 
-The old runner `scripts/frontier_koide_theta_hierarchy_open_scalar.py`
-is NOT included in this branch (the open scalar is closed). Its
-functional content is absorbed into the Berry-phase theorem runner
-`scripts/frontier_koide_berry_phase_theorem.py` (PASS=26 FAIL=0).
+The relevant forced factor `2` is **not** an ambient monopole charge. On the
+actual route it comes from the doubled projective phase
+
+```text
+[1 : e^{-2 i theta}],
+```
+
+forced by the conjugate doublet pair `(e^{i theta}, e^{-i theta})`. The
+canonical bundle itself is the tautological `CP^1` line.
 
 ---
 
-## 4. Cross-references
+## 4. Scope boundary
 
-- `docs/KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md` (cycle 10B, primary)
-- `docs/KOIDE_MOMENT_RATIO_UNIFORMITY_THEOREM_NOTE_2026-04-19.md` (cycle 10A, AXIOM D -> theorem)
-- `docs/KOIDE_SQRTM_AMPLITUDE_PRINCIPLE_NOTE_2026-04-18.md` (sqrt-mass dictionary, on main)
-- `docs/CYCLE_1_TO_10_SYNTHESIS_NOTE_2026-04-19.md` (reading order)
-- Brannen 2006 MASSES2.pdf; Zenczykowski PRD 86 (2012) 117303; PRD 87 (2013) 077302; Rivero-Gsponer hep-ph/0505220 (historical Brannen phase literature).
+This closes the **phase gate** AXIOM E. It does **not** close the separate
+microscopic selected-point law for the physical endpoint `m_*` on the selected
+line. So the broader charged-lepton mass-hierarchy package on current `main`
+remains bounded even though the Berry/phase half is now closed on the actual
+route.
+
+---
+
+## 5. Runner status
+
+The Berry runner
+`scripts/frontier_koide_berry_phase_theorem.py`
+now validates the actual selected-line carrier, the forced doubled projective
+phase, the exact scalar-phase bridge, the canonical Berry connection, the
+selected-slice Berry-selector no-go, and the zero-Berry retained circulant
+moduli result. Narrative statements are no longer marked as validated.
+
