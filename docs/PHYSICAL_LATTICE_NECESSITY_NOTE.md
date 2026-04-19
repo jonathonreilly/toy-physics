@@ -239,14 +239,18 @@ without observational input. It is retained here only as a consistency
 diagnostic showing that no regulator-family deformation preserves both
 live package invariants away from `beta = 6`.
 
-The non-circular g_bare fixation now lives at:
+The non-circular g_bare fixation now lives at two independent retained routes:
 
 - [G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md](G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md)
-  (operator-algebra route)
+  together with
+  [G_BARE_RIGIDITY_THEOREM_NOTE.md](G_BARE_RIGIDITY_THEOREM_NOTE.md)
+  (operator-algebra / structural-normalization route)
 - [G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md](G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md)
+  with
+  [G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md](G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md)
   (1PI amplitude route)
 
-Those notes derive `g_bare = 1` from structural retained content without
+Those notes derive `g_bare = 1` from retained structural content without
 using `alpha_s(v)` or `v` as inputs, which is the cleaner closure. This
 section is kept for the regulator-family diagnostic only.
 
