@@ -9,8 +9,10 @@ scalar-selector gates: Koide `kappa`, Koide doublet-phase (Koide
 not the current reviewer-facing claim surface. The honest read after the
 science review plus the later meta-closure pass is:
 
-- at the **reviewer bar**, MRU, Berry, DPLE, and RPSR/STRC remain
-  support/conditional routes rather than full object-derivation closures;
+- at the **reviewer bar**, MRU, Berry, and DPLE remain support routes, while
+  quark `a_u` now closes on branch-internal bimodule footing via
+  `BICAC -> STRC-LO -> RPSR` but still falls short of pure retained-physics
+  derivation because BICAC is an added framework-native postulate;
 - at the **meta-axiom layer**, the strongest current compression is
   `4 -> 2` via **DIM-UNIQ + STRC**, not `4 -> 0`;
 - a named future target (**BACT**, the bimodule amplitude-completeness
@@ -35,7 +37,7 @@ scalar selections:
 | **Koide `kappa`** | Charged-lepton cone normalization `kappa = 2` | Support/candidate principle via **MRU** |
 | **Koide `theta`** | Doublet-phase offset `delta = 2/9` (Brannen–Zenczykowski) | Geometric support/candidate via **Berry holonomy** |
 | **DM A-BCC basin** | Interior-minimum linear-path Sylvester discriminator `F_4` | Support theorem on the fixed DM chart via **DPLE** |
-| **Quark `a_u`** | Up-sector reduced amplitude `a_u = 0.7748865611` | Conditional support via **RPSR** + **STRC observable principle** |
+| **Quark `a_u`** | Up-sector reduced amplitude `a_u = 0.7748865611` | Branch-internal theorem via **BICAC -> STRC-LO -> RPSR** |
 
 §2 presents the four branch-local routes; §3 presents STRC; §4 records the
 later meta-closure compression (`DIM-UNIQ + STRC`); §5 separates
@@ -148,10 +150,23 @@ derive the endpoint used by the canonical path law; it picks a constructive
 **plateau**, not a point. See
 `docs/DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_TRANSPORT_PLATEAU_THEOREM_NOTE_2026-04-19.md`.
 
+A fifth same-day theorem pushes the transport story to its honest endpoint.
+Exact flavored transport on the simplex already fixes a unique favored-column
+orbit, represented by
+`(0.0356443..., 0.0356443..., 0.9287114...)` up to flavor permutation. The
+four constructive plateau witnesses all realize that same orbit. But the
+fixed-seed direct-descendant source surface is `5`-real, the favored column
+has only `2` independent reals, and the exact source -> favored-column
+Jacobian has rank `2` at the constructive witness. So transport leaves a
+local `3`-real source fiber unresolved above the canonical column. This means
+the remaining DM science is no longer “which favored column?” but “which
+microscopic source in that fiber is retained-physics-selected?” See
+`docs/DM_WILSON_DIRECT_DESCENDANT_CANONICAL_TRANSPORT_COLUMN_FIBER_THEOREM_NOTE_2026-04-19.md`.
+
 See `docs/DM_DPLE_DIMENSION_PARAMETRIC_EXTREMUM_THEOREM_NOTE_2026-04-19.md`.
 Runner PASS=19 FAIL=0.
 
-### §2.4 Reduced Projector-Ray Sum Rule (RPSR) — conditional route to Quark `a_u`
+### §2.4 Reduced Projector-Ray Sum Rule (RPSR) — NLO completion of the quark `a_u` route
 
 On the 1 (+) 5 CKM projector ray
 `p = cos(delta_std) + i sin(delta_std)`,
@@ -163,16 +178,22 @@ scalar-tensor bridge `supp = 6/7`, `a_d = rho`, and `delta_A1 = 1/42`.
 The NLO excess `rho / 49` is the unique minimal 3-atom contraction on
 `{rho, supp, delta_A1}`.
 
-**Conditional on STRC** (§3):
+Pre-BICAC packaging recorded this as conditional on STRC. The later same-day
+update
+`docs/STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`
+closes that old LO gap on bimodule footing:
 
     [LO closure]  a_u + rho * sin(delta_std) = sin(delta_std).
+
+So §2.4 should now be read as the **NLO completion** of the quark theorem
+route, not merely as a standalone conditional packet.
 
 See `docs/QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md`.
 Runner PASS=10 FAIL=0.
 
 ---
 
-## §3 STRC observable principle — Koide-analog on CKM
+## §3 STRC-LO theorem on CKM via BICAC + collinearity
 
 The linear amplitude sum rule on the CKM 1(+)5 projector ray:
 
@@ -184,6 +205,21 @@ equivalently (geometric form):
 
 where `r = rho + i eta = p / sqrt(7)` is the scalar-comparison ray
 collinear with `p`.
+
+**Same-day upgrade.** The branch no longer carries STRC-LO only as an
+observable principle. `docs/STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`
+derives it from:
+
+1. retained `a_d = Re(r) = rho`,
+2. retained collinearity `r = p / sqrt(7)`,
+3. the framework-native bimodule postulate
+   `a_u + a_d * Im(p) = Im(p)` (BICAC).
+
+That upgrades quark `a_u` from a merely conditional route to a real
+branch-internal theorem. The reviewer-bar caveat is now sharper: the open
+issue is not the old LO algebraic gap, but the status of BICAC as an added
+bimodule structural postulate rather than a derivation from previously
+retained quark observables alone.
 
 **Koide-analog epistemic footing.** STRC is to CKM reduced
 amplitudes what the Koide sum rule is to charged-lepton sqrt-masses:
@@ -302,7 +338,9 @@ support/conditional packet:
   charged-lepton phase to be that holonomy;
 - DPLE upgrades `F_4` to a real theorem on the fixed chart but does not derive
   the physical source-side chart by itself;
-- STRC remains an observable principle and RPSR remains conditional on it.
+- quark `a_u` now closes on bimodule footing via BICAC + STRC-LO + RPSR, but
+  BICAC remains an added framework-native structural postulate rather than a
+  pure retained derivation.
 
 So the current reviewer-grade answer is still: **no full gate is closed on
 this branch yet**.

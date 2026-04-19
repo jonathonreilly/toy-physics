@@ -11,6 +11,15 @@ change the per-gate scientific verdict below: the branch still does not clear
 the reviewer's object-derivation bar on any of the four gates. See
 `docs/SCALAR_SELECTOR_CYCLE13_META_CLOSURE_STATUS_NOTE_2026-04-19.md`.
 
+**Later same-day quark update.** The old quark LO gap is now closed on
+branch-internal bimodule footing by
+`docs/STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`, which derives
+STRC-LO from retained `a_d = Re(r)`, the retained scalar/tensor collinearity,
+and the framework-native BICAC postulate. That strengthens the quark lane
+substantially, but it still does not remove the reviewer-bar issue because
+BICAC is an added bimodule structural postulate rather than a derivation from
+the previously retained quark physics alone.
+
 ## Executive decision table
 
 | Path | Target gate | Science result | Does it close the gate? | Review decision |
@@ -18,7 +27,7 @@ the reviewer's object-derivation bar on any of the four gates. See
 | MRU | Koide `kappa = 2` | exact equivalence theorem on `Herm_circ(d)` | **No** | support / candidate principle only |
 | Berry holonomy | Koide `delta = 2/9` | coherent geometric construction with correct `2/9` output | **No** | geometric support / candidate only |
 | DPLE | DM `A-BCC` / F4 lane | useful exact matrix-analysis theorem; reproduces F4 on fixed basin chart | **No** | support theorem on the open DM gate |
-| RPSR | quark `a_u` / Min-C lane | strong conditional route with one explicit remaining algebraic gap | **No** | conditional support theorem |
+| STRC-LO + RPSR | quark `a_u` / Min-C lane | quark theorem on bimodule footing; old LO gap closed by BICAC | **Qualified** | branch-internal theorem, reviewer-bar caveat remains |
 
 ## 1. MRU on `Herm_circ(d)` -- Koide `kappa`
 
@@ -258,6 +267,31 @@ law: even after transport is brought in, the endpoint is still not uniquely
 derived. The remaining selector problem is finer than constructive transport
 extremality.
 
+A fifth same-day theorem now pushes the transport side as far as the current
+branch seems to support:
+
+- `docs/DM_WILSON_DIRECT_DESCENDANT_CANONICAL_TRANSPORT_COLUMN_FIBER_THEOREM_NOTE_2026-04-19.md`
+- `scripts/frontier_dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_2026_04_19.py`
+
+It proves that exact flavored transport already fixes a **canonical favored
+column orbit** on the simplex,
+
+```text
+(0.0356443..., 0.0356443..., 0.9287114...)
+```
+
+up to flavor permutation. The four constructive plateau witnesses all realize
+that same favored-column orbit. But the fixed native seed surface is `5`-real,
+the favored column carries only `2` independent reals, and the exact
+source -> favored-column Jacobian has rank `2` at the constructive witness.
+So transport still leaves a local **`3`-real source fiber** unresolved above
+that canonical column orbit.
+
+That is the cleanest current-branch statement of what science remains on the
+DM side. The branch no longer lacks a transport law or a transport-selected
+column. It lacks the finer microscopic law on `L_e` or an equivalent retained-
+physics selector that picks one source in that `3`-real fiber.
+
 ### Science decision
 
 DPLE should be treated as a **support theorem on the open DM gate**:
@@ -266,10 +300,12 @@ DPLE should be treated as a **support theorem on the open DM gate**:
 - worth preserving,
 - but not a full closure of the DM selector problem.
 
-## 4. RPSR on the projector ray -- quark `a_u`
+## 4. STRC-LO + RPSR on the projector ray -- quark `a_u`
 
 **Primary files**
 
+- `docs/STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`
+- `scripts/frontier_strc_lo_collinearity_theorem.py`
 - `docs/QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md`
 - `docs/QUARK_UP_AMPLITUDE_RETAINED_NATIVE_CANDIDATE_NOTE_2026-04-19.md`
 - `docs/SCALAR_TENSOR_RAY_MAGNITUDE_BRIDGE_NOTE_2026-04-19.md`
@@ -277,41 +313,56 @@ DPLE should be treated as a **support theorem on the open DM gate**:
 
 ### What scientifically holds
 
-This route is scientifically sharp and useful.
+This route is scientifically stronger than the earlier conditional read.
 
 The branch isolates:
 
 - a real structural identity for the scalar/tensor ray-magnitude bridge
   `supp = 6/7`;
+- a framework-native bimodule split law **BICAC**
+  (`a_u + a_d * Im(p) = Im(p)`);
+- a derived LO identity
+  `a_u + rho * sin(delta_std) = sin(delta_std)` from BICAC + retained
+  `a_d = Re(r)` + scalar/tensor collinearity;
 - a clear NLO correction `rho / 49`;
 - an exact target identity for the preferred `a_u`;
 - and a clean uniqueness separation among the eight Pareto candidates.
 
-The runner demonstrates that, once the LO identity is assumed,
+The same-day STRC-LO runner demonstrates that the old LO gap is now closed on
+the branch's bimodule footing, and the RPSR runner then supplies the NLO lift:
 
 ```text
 a_u / sin(delta_std) + a_d = 1 + rho / 49
 ```
 
-is exact and uniquely singles out the target candidate.
+So the branch now has a real quark theorem route to the target
+`a_u = 0.7748865611`.
 
-### Why it does **not** close the gate
+### Why it still does **not** clear the reviewer bar
 
-The note itself is honest here: the LO identity
+The old conditional gap is no longer the issue. The issue is now the status of
+**BICAC** itself.
 
-```text
-a_u / sin(delta_std) + a_d = 1
-```
+`STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md` is explicit that BICAC is a
+framework-native bimodule postulate, not a new SM axiom. That is a meaningful
+scientific advance over the old "assume STRC" packaging. But it is still an
+added structural principle rather than a derivation from the previously
+retained quark-side physics alone.
 
-at NNI diagonalization remains unproved.
-
-That means the branch has not closed the quark gate; it has reduced it to one
-named algebraic gap.
+So the quark lane is now stronger than a conditional support theorem, but it
+still does not meet the strict reviewer request for object derivation from the
+retained package without new load-bearing postulates.
 
 ### Science decision
 
-RPSR is a strong **conditional support theorem** and a genuine improvement over
-the older Min-C framing. It does not yet constitute full closure.
+The honest current read is:
+
+- **branch-internal theorem:** yes, via BICAC + STRC-LO + RPSR;
+- **reviewer-bar retained derivation:** not yet.
+
+So this lane should now be treated as a **real quark theorem on bimodule
+footing**, not merely a conditional route, but with an explicit reviewer-bar
+caveat attached to BICAC.
 
 ## 5. Net science conclusion
 
@@ -325,8 +376,8 @@ The right scientific read is:
 2. **Berry**: elegant geometric support model for `2/9`, not a closure.
 3. **DPLE**: real support theorem that upgrades the old F4 selector story, but
    does not eliminate the remaining DM source-side open input.
-4. **RPSR**: strong conditional reduction of the quark gate to one explicit LO
-   algebraic identity.
+4. **STRC-LO + RPSR**: quark `a_u` now closes on bimodule footing via BICAC,
+   but still imports one additional framework-native structural postulate.
 
 So the branch is **not** a clean "remaining open gates are now closed"
 science packet.
@@ -334,7 +385,7 @@ science packet.
 It is a **mixed support packet** containing:
 
 - one strong DM support theorem (DPLE),
-- one strong conditional quark route (RPSR),
+- one quark theorem on bimodule footing (STRC-LO + RPSR),
 - and two charged-lepton support/candidate routes (MRU, Berry).
 
 ## 6. Salvage recommendation
@@ -344,9 +395,10 @@ are:
 
 - `DM_DPLE_DIMENSION_PARAMETRIC_EXTREMUM_THEOREM_NOTE_2026-04-19.md`
   as a support theorem on the open DM gate;
-- `QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md`
+- `STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`
+  plus `QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md`
   plus `SCALAR_TENSOR_RAY_MAGNITUDE_BRIDGE_NOTE_2026-04-19.md`
-  as a conditional/support quark packet;
+  as a bimodule-theorem quark packet with an explicit BICAC caveat;
 - `KOIDE_Z3_JOINT_PROJECTOR_IDENTITY_NOTE_2026-04-19.md`
   and `KOIDE_KAPPA_TWO_ORBIT_DIMENSION_FACTORIZATION_NOTE_2026-04-19.md`
   as infrastructure/support notes if their closure language is demoted.
