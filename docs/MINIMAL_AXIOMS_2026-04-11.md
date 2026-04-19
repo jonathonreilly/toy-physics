@@ -22,26 +22,27 @@ route history.
 These are the framework inputs. Everything else in the current publication
 package is either retained, bounded, or still open relative to that stack.
 
-On the canonical-normalization entry, `g_bare = 1` is no longer carried only
-as a bare normalization choice. On the accepted Wilson-action surface it is
-now structurally fixed by the retained operator-algebra route:
+On the canonical-normalization entry, `g_bare = 1` is now carried by two
+independent retained structural routes:
 
 - operator-algebra route:
   [G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md](G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md)
   together with
   [G_BARE_RIGIDITY_THEOREM_NOTE.md](G_BARE_RIGIDITY_THEOREM_NOTE.md)
+- 1PI amplitude route:
+  [G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md](G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md)
+  with the load-bearing Rep-B independence theorem
+  [G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md](G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md)
+  and the off-surface same-1PI pinning theorem
+  [G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md](G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md)
 
 A complementary retained obstruction
 [G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18.md](G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18.md)
 closes the Grassmann / spectral dynamical-fixation class negatively.
-The residual freedom is narrowly scoped to the Wilson-action-form premise,
-not to a hidden continuous coupling parameter on the accepted package
-surface.
-
-An additional 1PI Ward re-read is tracked in
-[G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md](G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md),
-but only as a `conditional / support` candidate. The accepted minimal
-input stack does not rely on that candidate route.
+Under both closure routes plus that obstruction, the residual freedom is
+narrowly scoped
+(Wilson action form, or axiomatic-bundling reading), not a hidden
+continuous coupling parameter.
 
 The physical-lattice reading is no longer carried here as a separate live
 input. On the accepted one-axiom Hilbert/locality/information surface it is
