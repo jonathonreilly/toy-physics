@@ -1,11 +1,14 @@
 # Moment-Ratio Uniformity (MRU) Theorem on Cl(d)/Z_d
 
 **Date:** 2026-04-19
-**Lane:** Charged-lepton Koide — closure of `kappa = 2`.
-**Status:** RETAINED theorem. Closes the charged-lepton Koide cone
-normalization (`kappa = a^2 / |b|^2 = 2`) as the `d = 3` specialization
-of a dim-parametric principle on the Hermitian circulant algebra
-`Herm_circ(d)`.
+**Lane:** Charged-lepton Koide — candidate route to `kappa = 2`.
+**Status:** Exact theorem on the auxiliary Hermitian-circulant surface;
+reviewer-facing status is **support / candidate principle**, not full
+charged-lepton gate closure. The theorem shows that `kappa = a^2 / |b|^2 = 2`
+is the `d = 3` specialization of a dim-parametric principle on
+`Herm_circ(d)`, but it does not derive why the physical charged-lepton carrier
+must satisfy MRU. See
+`docs/SCALAR_SELECTOR_CYCLE1_SCIENCE_REVIEW_NOTE_2026-04-19.md`.
 **Primary runner:** `scripts/frontier_koide_moment_ratio_uniformity_theorem.py`
 (PASS=65 FAIL=0).
 
@@ -27,8 +30,9 @@ equation is between two real singlets (no doublet). At `d = 4, 5, 6`
 the principle fragments into 2, 2, 3 independent equations
 respectively.
 
-**Consequence.** The Koide `kappa` gate closes entirely through
-retained theorems; no separate "AXIOM D" is required.
+**Consequence.** MRU is a sharp exact restatement of the remaining Koide scalar
+condition. It materially improves the route geometry, but by itself it does
+not close the charged-lepton gate.
 
 ---
 
@@ -200,9 +204,9 @@ All 65 PASS, 0 FAIL. No retained runner regresses.
 
 ## 8. Honest statement
 
-MRU is a retained theorem under the standard Frobenius metric on
-`M_d(C)` (induced from the trace on the observable algebra). The
-content `kappa = 2` is a corollary at `d = 3`.
+MRU is an exact theorem under the standard Frobenius metric on `M_d(C)`
+(induced from the trace on the observable algebra). The content
+`kappa = 2` is a corollary at `d = 3`.
 
 The construction is genuinely dim-parametric: the per-d isotype counts
 and MRU equation counts vary non-trivially (1, 1, 2, 2, 3 at
@@ -212,5 +216,8 @@ weighting choice — per-basis-element Frobenius norm `w(I)` — is forced
 by the canonical trace metric, not a free parameter. An alternative
 weighting (by isotype real dimension) gives `kappa = 1`, not the Koide
 normalization; this is ruled out by the retained trace metric.
+
+Scientifically, the theorem should presently be read as a candidate principle
+on the open charged-lepton gate rather than as a completed object-derivation.
 
 Runner status: PASS=65 FAIL=0.

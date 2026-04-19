@@ -8,7 +8,9 @@ rule. STRC closes the LO gap in RPSR (see
 `docs/QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md`).
 Under Scenario A (bundling into the existing
 `QUARK_PROJECTOR_PARAMETER_AUDIT` retention), net axiom cost is
-approximately 1 observable principle.
+approximately 1 observable principle. Reviewer-facing status remains
+**conditional support only** because STRC is not yet a derived law from the
+retained quark carrier.
 **Primary runner:** `scripts/frontier_quark_strc_observable_principle.py`
 (PASS=19 FAIL=0).
 
@@ -252,9 +254,9 @@ cost is approximately 1 observable principle.
 
 | Scenario | STRC status | 4-gate outcome |
 |:---|:---|:---|
-| A (bundled, recommended) | Bundled into `QUARK_PROJECTOR_PARAMETER_AUDIT` | 3 full theorems + 1 obs principle |
-| B (standalone) | New standalone observable axiom | 3 full theorems + 1 new axiom |
-| C (future) | Derived via bimodule ray-saturation theorem | 4 full theorems |
+| A (bundled, recommended) | Bundled into `QUARK_PROJECTOR_PARAMETER_AUDIT` | current honest meta read: `DIM-UNIQ + STRC` |
+| B (standalone) | New standalone observable axiom | route-history packaging without the meta compression |
+| C (future) | Derived via bimodule ray-saturation theorem | stronger meta-closure than A; still not reviewer-grade by itself |
 
 Scenario C target:
 `docs/CLIFFORD_BIMODULE_RAY_SATURATION_FUTURE_TARGET_NOTE_2026-04-19.md`.

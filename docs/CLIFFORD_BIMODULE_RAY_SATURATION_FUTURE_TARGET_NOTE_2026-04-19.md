@@ -29,10 +29,11 @@ relation
 on the imaginary axis of the retained unit projector ray
 `p = cos(delta_std) + i sin(delta_std)`.
 
-If proven, STRC ceases to be an observable principle and becomes a
-theorem; the quark up-amplitude gate closes as a full theorem and
-the axiom cost across all four Tier-1 scalar-selector gates drops to
-**0**.
+If proven, STRC ceases to be a standalone observable principle and becomes a
+derived theorem on the quark side. That would tighten the
+**meta-axiom** accounting of the scalar-selector program substantially, but it
+would still sit alongside the separate per-lane object-derivation work needed
+to clear the reviewer's bar.
 
 This note documents the target, its significance, and concrete
 approach hints. It does not claim any retention.
@@ -123,31 +124,25 @@ is upgraded to derived-theorem status.
 
 Current state (Scenario A):
 
-- 3 full closures: MRU (Koide `kappa`), Berry-phase (Koide `theta`),
-  DPLE (`F_4` / DM).
-- 1 observable principle: STRC (Quark `a_u`).
+- reviewer-facing: support/conditional packet, not full closure
+- meta-axiom layer: `DIM-UNIQ + STRC`
 
 If the bimodule ray-saturation theorem is proven:
 
-- 4 full closures: MRU, Berry-phase, DPLE, ray-saturation.
-- 0 observable principles.
+- reviewer-facing: still requires the separate per-lane object derivations
+- meta-axiom layer: tighter than `DIM-UNIQ + STRC`, because STRC is no longer
+  carried separately as an observable principle
 
-This is the **Scenario C** outcome: full axiom closure across the
-scalar-selector investigation.
+This is the honest **Scenario C** read: stronger meta-closure across the
+scalar-selector investigation, not an automatic reviewer-grade closure.
 
 ### 3.2 Structural consequence
 
-The three existing closures (MRU, Berry, DPLE) are all `d = 3`
-specializations of dim-parametric principles on retained structure.
-A proven ray-saturation theorem would make the *fourth* closure also
-a `d = 3` specialization — now of a bimodule representation-theoretic
-principle. This would yield a uniform pattern:
-
-> All four Tier-1 scalar-selector gates close via dim-parametric
-> theorems whose `d = 3` specializations match retained framework
-> content.
-
-Such uniformity would strengthen the publishable claim substantially
+The three existing non-quark routes (MRU, Berry, DPLE) already fit one
+dim-uniqueness pattern. A proven ray-saturation theorem would make the
+quark-side route structurally less isolated and would strengthen the
+meta-closure story substantially. But that uniformity would still sit above,
+not replace, the object-derivation requirement on each lane.
 by eliminating any residual "observable principle" from the scalar-
 selector investigation.
 
@@ -220,8 +215,9 @@ surface. This is speculative but concrete.
 3. **No approach is validated.** The Section 4 approach hints are
    suggestive directions, not pre-registered claims.
 4. **No paper claim depends on this target.** The publishable claim
-   (Scenario A: 3 full theorems + 1 observable principle) stands on
-   its own; this note flags the future target for transparency.
+   now rests on the honest support/conditional packet plus the
+   `DIM-UNIQ + STRC` meta-closure read; this note flags the future
+   target for transparency.
 
 ---
 

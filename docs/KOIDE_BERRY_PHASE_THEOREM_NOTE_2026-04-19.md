@@ -1,11 +1,14 @@
 # Berry-Phase Theorem on the Projectivized Koide Cone
 
 **Date:** 2026-04-19
-**Lane:** Charged-lepton Koide — closure of the doublet-argument phase
+**Lane:** Charged-lepton Koide — candidate route to the doublet-argument phase
 (Brannen–Zenczykowski `delta = 2/9`).
-**Status:** RETAINED theorem. The `delta = 2/9` phase offset is the
-Berry holonomy of the `n = 2` monopole bundle on the projectivized
-Koide cone `S^2_Koide` under its `C_3` action.
+**Status:** Coherent geometric theorem/model on `S^2_Koide`; reviewer-facing
+status is **geometric support / candidate**, not full charged-lepton gate
+closure. The note constructs a Berry-holonomy route to `delta = 2/9`, but it
+does not derive that the physical charged-lepton phase must be read from this
+specific bundle/connection. See
+`docs/SCALAR_SELECTOR_CYCLE1_SCIENCE_REVIEW_NOTE_2026-04-19.md`.
 **Primary runner:** `scripts/frontier_koide_berry_phase_theorem.py`
 (PASS=26 FAIL=0).
 
@@ -29,9 +32,9 @@ equivariant index theory on the hw = 1 triplet decomposition
 singlet `(+)` doublet on `S^2_Koide`. The monopole construction is
 unique up to gauge.
 
-**Consequence.** The Koide theta gate closes through a retained theorem.
-The Koide charged-lepton ratio sector now closes entirely through
-retained theorems (MRU for `kappa`; Berry-phase for the doublet phase).
+**Consequence.** The note supplies a clean geometric support model for the
+`2/9` phase and sharpens what a successful forcing theorem would need to fix.
+It does not by itself close the Koide theta gate.
 
 ---
 

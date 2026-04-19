@@ -2,11 +2,14 @@
 
 **Date:** 2026-04-19
 **Lane:** Dark-matter A-BCC basin-selector.
-**Status:** RETAINED theorem. The `F4` interior-minimum linear-path
-Sylvester discriminant on the DM A-BCC chart is the `d = 3`
-specialization of the **Dim-Parametric log|det| Extremum (DPLE)**
-principle on linear Hermitian pencils. Uhlig 1982 supplies the
-structural backbone at `d = 3`.
+**Status:** Exact matrix-analysis theorem; reviewer-facing status is **support
+theorem on the open DM gate**, not full A-BCC closure. The `F4`
+interior-minimum linear-path Sylvester discriminant on the DM A-BCC chart is
+the `d = 3` specialization of the **Dim-Parametric log|det| Extremum (DPLE)**
+principle on linear Hermitian pencils. Uhlig 1982 supplies the structural
+backbone at `d = 3`, but the theorem does not by itself derive the physical
+source-side chart. See
+`docs/SCALAR_SELECTOR_CYCLE1_SCIENCE_REVIEW_NOTE_2026-04-19.md`.
 **Primary runner:** `scripts/frontier_dm_dple_theorem.py`
 (PASS=19 FAIL=0).
 
@@ -27,9 +30,9 @@ the DPLE `d = 3` specialization `F_3` agrees with the retained `F4`
 condition algebraically on all four basins `{1, N, P, X}`. Basin 1 is
 the unique `F_3 = True` basin.
 
-**Consequence.** `F4` is demoted from axiom to theorem. The DM A-BCC
-gate now closes through a retained matrix-analysis theorem plus the
-retained P3 Sylvester linear-path structure on `main`.
+**Consequence.** `F4` is upgraded from a heuristic/chart-level selector to a
+real theorem on the fixed DM chart. This materially strengthens the open DM
+lane, but it does not by itself close the A-BCC gate.
 
 ---
 

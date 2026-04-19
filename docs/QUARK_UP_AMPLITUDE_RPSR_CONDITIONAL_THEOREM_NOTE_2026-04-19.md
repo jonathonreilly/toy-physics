@@ -9,7 +9,10 @@ observable principle — the LO balance
 `a_u + rho * sin(delta_std) = sin(delta_std)` is a *linear* amplitude
 sum rule on the CKM projector ray, not derivable from retained
 quadratic-unitarity structure. See
-`docs/QUARK_STRC_OBSERVABLE_PRINCIPLE_NOTE_2026-04-19.md`.
+`docs/QUARK_STRC_OBSERVABLE_PRINCIPLE_NOTE_2026-04-19.md`. Reviewer-facing
+status is therefore **conditional support theorem**, not full quark-gate
+closure. See
+`docs/SCALAR_SELECTOR_CYCLE1_SCIENCE_REVIEW_NOTE_2026-04-19.md`.
 **Primary runner:** `scripts/frontier_quark_up_amplitude_rpsr_conditional.py`
 (PASS=10 FAIL=0).
 

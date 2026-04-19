@@ -5,6 +5,12 @@
 This note is intentionally **not** a claim-surface audit. The question here is
 whether the new logic paths themselves actually close the targeted open gates.
 
+**Later update.** A same-day meta-closure pass tightened the structural read to
+`4 -> 2` at the meta-axiom layer via DIM-UNIQ + STRC, but it did **not**
+change the per-gate scientific verdict below: the branch still does not clear
+the reviewer's object-derivation bar on any of the four gates. See
+`docs/SCALAR_SELECTOR_CYCLE13_META_CLOSURE_STATUS_NOTE_2026-04-19.md`.
+
 ## Executive decision table
 
 | Path | Target gate | Science result | Does it close the gate? | Review decision |

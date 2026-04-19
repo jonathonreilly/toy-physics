@@ -5,16 +5,23 @@
 scalar-selector gates: Koide `kappa`, Koide doublet-phase (Koide
 `theta`), Quark up-amplitude `a_u`, DM A-BCC basin.
 
-**Status.** Three of the four gates close directly through retained
-theorems (MRU, Berry-phase, DPLE). The fourth (Quark `a_u`) closes
-conditionally on the STRC observable principle, which bundles with
-the existing `QUARK_PROJECTOR_PARAMETER_AUDIT` retention (Scenario A:
-net axiom cost ~1 observable principle). A named future target (the
-Clifford bimodule ray-saturation theorem) would, if proven, upgrade
-STRC to a derived theorem and close all four gates as full theorems.
+**Status.** This note now serves as **route-history and internal synthesis**,
+not the current reviewer-facing claim surface. The honest read after the
+science review plus the later meta-closure pass is:
 
-**Reading order.** This is the primary entry-point. Read it first,
-then follow the pointers in §2-§6.
+- at the **reviewer bar**, MRU, Berry, DPLE, and RPSR/STRC remain
+  support/conditional routes rather than full object-derivation closures;
+- at the **meta-axiom layer**, the strongest current compression is
+  `4 -> 2` via **DIM-UNIQ + STRC**, not `4 -> 0`;
+- a named future target (**BACT**, the bimodule amplitude-completeness
+  theorem) sharpens the remaining quark-side structural gap but does not erase
+  the per-lane object-derivation issue by itself.
+
+**Reading order.** Read
+`docs/SCALAR_SELECTOR_CYCLE1_SCIENCE_REVIEW_NOTE_2026-04-19.md` first,
+then
+`docs/SCALAR_SELECTOR_CYCLE13_META_CLOSURE_STATUS_NOTE_2026-04-19.md`,
+then use this note for the branch-local candidate-route logic in §2-§9.
 
 ---
 
@@ -25,22 +32,21 @@ scalar selections:
 
 | Gate | Content | Status |
 |---|---|---|
-| **Koide `kappa`** | Charged-lepton cone normalization `kappa = 2` | Full closure via **MRU theorem** |
-| **Koide `theta`** | Doublet-phase offset `delta = 2/9` (Brannen–Zenczykowski) | Full closure via **Berry-phase theorem** |
-| **DM A-BCC basin** | Interior-minimum linear-path Sylvester discriminator `F_4` | Full closure via **DPLE theorem** |
-| **Quark `a_u`** | Up-sector reduced amplitude `a_u = 0.7748865611` | Conditional closure via **RPSR** + **STRC observable principle** |
+| **Koide `kappa`** | Charged-lepton cone normalization `kappa = 2` | Support/candidate principle via **MRU** |
+| **Koide `theta`** | Doublet-phase offset `delta = 2/9` (Brannen–Zenczykowski) | Geometric support/candidate via **Berry holonomy** |
+| **DM A-BCC basin** | Interior-minimum linear-path Sylvester discriminator `F_4` | Support theorem on the fixed DM chart via **DPLE** |
+| **Quark `a_u`** | Up-sector reduced amplitude `a_u = 0.7748865611` | Conditional support via **RPSR** + **STRC observable principle** |
 
-§2 presents each full-closure theorem; §3 presents STRC; §4 identifies
-the meta-structural pattern (three of four are `d = 3` specializations
-of dim-parametric principles); §5 accounts honestly for the axiom
-delta; §6 names the future target that would close the fourth gate as
-a theorem.
+§2 presents the four branch-local routes; §3 presents STRC; §4 records the
+later meta-closure compression (`DIM-UNIQ + STRC`); §5 separates
+meta-axiom accounting from reviewer-bar accounting; §6 names the future target
+BACT.
 
 ---
 
-## §2 Four new retained theorems
+## §2 Four branch-local routes
 
-### §2.1 Moment-Ratio Uniformity (MRU) — closes Koide `kappa`
+### §2.1 Moment-Ratio Uniformity (MRU) — candidate route to Koide `kappa`
 
 On the Hermitian circulant algebra `Herm_circ(d)` with Frobenius
 metric, the MRU principle requires Frobenius-normalized cyclic
@@ -55,7 +61,7 @@ singlet-vs-doublet scalar selector iff `|Iso(d)| = 2` with one singlet
 See `docs/KOIDE_MOMENT_RATIO_UNIFORMITY_THEOREM_NOTE_2026-04-19.md`.
 Runner PASS=65 FAIL=0.
 
-### §2.2 Berry-phase theorem on `S^2_Koide` — closes Koide `theta`
+### §2.2 Berry-phase theorem on `S^2_Koide` — candidate route to Koide `theta`
 
 The projectivized Koide cone `S^2_Koide` carries a natural `C_3`
 action. The `n = 2` monopole line bundle `L_doublet` (first Chern
@@ -75,7 +81,7 @@ See `docs/KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md`. Runner
 PASS=26 FAIL=0. Literature alignment: Brannen 2006, Zenczykowski PRD
 2012/2013.
 
-### §2.3 Dim-Parametric log|det| Extremum (DPLE) — closes `F_4`
+### §2.3 Dim-Parametric log|det| Extremum (DPLE) — support theorem on `F_4`
 
 On the retained linear Hermitian pencil `H(t) = H_0 + t H_1`, the
 observable `W(t) = log|det H(t)|` has at most `floor(d/2)` interior
@@ -92,7 +98,7 @@ classification provides the dim-parametric backbone.
 See `docs/DM_DPLE_DIMENSION_PARAMETRIC_EXTREMUM_THEOREM_NOTE_2026-04-19.md`.
 Runner PASS=19 FAIL=0.
 
-### §2.4 Reduced Projector-Ray Sum Rule (RPSR) — conditional closure of Quark `a_u`
+### §2.4 Reduced Projector-Ray Sum Rule (RPSR) — conditional route to Quark `a_u`
 
 On the 1 (+) 5 CKM projector ray
 `p = cos(delta_std) + i sin(delta_std)`,
@@ -168,9 +174,9 @@ PASS=19 FAIL=0.
 
 ## §4 Meta-structural picture
 
-### §4.1 Three of the four new theorems are `d = 3` specializations
+### §4.1 DIM-UNIQ compresses the MRU/Berry/DPLE routes
 
-The three full closures (MRU, Berry, DPLE) share a common structural
+The three non-quark routes (MRU, Berry, DPLE) share a common structural
 pattern:
 
 - Each states a **dim-parametric principle** at arbitrary `d >= 2`.
@@ -181,9 +187,9 @@ pattern:
 - Each is **non-trivial at other `d`** (fragmentation at `d >= 4`;
   degeneracy at `d = 2`).
 
-This is the dim-uniqueness fingerprint — now directly manifested in
-three independent observable-principle statements, not only in the
-bivector-count / anomaly-parity / Cayley–Hamilton / 7-no-go layer.
+This is the **DIM-UNIQ** fingerprint: a single dim-uniqueness pattern
+manifested across three independent route constructions. At the
+meta-closure layer, these three routes compress to one meta-axiom.
 
 `d = 3` itself is already retained on `main` via several independent
 routes:
@@ -197,12 +203,12 @@ routes:
 - `.claude/science/derivations/native-su2-tightness-forces-ds3-2026-04-17.md`
   (alt route).
 
-### §4.2 STRC is Koide-analog on CKM
+### §4.2 STRC is the separate quark-side meta-axiom
 
-The fourth gate (Quark `a_u`) is not closed by another dim-parametric
-`d = 3` specialization. Instead it is closed by a **scalar amplitude
-sum rule on a retained specific ray** — a linear relation of a
-structurally different type from the three dim-parametric closures.
+The fourth gate (Quark `a_u`) is not captured by the dim-uniqueness
+pattern above. Instead it is isolated by a **scalar amplitude sum rule
+on a retained specific ray** — a linear relation of a structurally
+different type from the three dim-parametric routes.
 
 **STRC is the Koide-analog for CKM.** Koide retains a linear scalar
 relation on charged-lepton sqrt-masses; STRC retains a linear scalar
@@ -212,32 +218,48 @@ as observable principles.
 
 ---
 
-## §5 Honest axiom accounting
+## §5 Honest accounting: meta-axioms vs reviewer bar
 
-Net axiom delta across the four Tier-1 scalar-selector gates:
+Two different accounting layers must be kept separate.
 
-- **3 full-theorem closures** at zero new axiom cost (all
-  pre-conditions retained on `main`): MRU (Koide `kappa`), Berry-
-  phase (Koide `theta`), DPLE (DM A-BCC `F_4`).
-- **1 conditional closure** via STRC observable principle (Quark
-  `a_u`), bundled into existing `QUARK_PROJECTOR_PARAMETER_AUDIT`
-  retention. Scenario A net axiom cost: approximately 1 observable
-  principle.
+### §5.1 Meta-axiom accounting
 
-Scenario comparison:
+At the branch's internal structural layer, the strongest honest
+compression is:
 
-| Scenario | STRC status | 4-gate outcome |
+- **DIM-UNIQ** for MRU + Berry + DPLE
+- **STRC** for the quark LO balance
+
+So the current meta answer is **`4 -> 2`**, not `4 -> 0`.
+
+| Scenario | Meta-axiom status | Outcome |
 |:---|:---|:---|
-| A (bundled, recommended) | Bundled into `QUARK_PROJECTOR_PARAMETER_AUDIT` | 3 full theorems + 1 obs principle |
-| B (standalone) | New standalone observable axiom | 3 full theorems + 1 new axiom |
-| C (future) | Derived via bimodule ray-saturation theorem | 4 full theorems |
+| A (current honest read) | `DIM-UNIQ + STRC` | `4 -> 2` |
+| B (alternate packaging) | standalone route descriptions | `4 -> 4` |
+| C (future target) | derive STRC via BACT / ray-saturation | sharper meta-closure than A, but still not reviewer-grade by itself |
 
----
+### §5.2 Reviewer-bar accounting
 
-## §6 Future target — bimodule ray-saturation theorem
+At the reviewer's object-derivation bar, the current branch remains a
+support/conditional packet:
+
+- MRU restates the missing charged-lepton scalar law but does not derive why
+  the physical carrier satisfies it;
+- Berry gives a coherent geometric model but does not force the physical
+  charged-lepton phase to be that holonomy;
+- DPLE upgrades `F_4` to a real theorem on the fixed chart but does not derive
+  the physical source-side chart by itself;
+- STRC remains an observable principle and RPSR remains conditional on it.
+
+So the current reviewer-grade answer is still: **no full gate is closed on
+this branch yet**.
+
+## §6 Future target — BACT / bimodule ray-saturation theorem
 
 If the following target is proven, STRC becomes a derived theorem
-and the fourth gate closes unconditionally.
+at the meta-closure layer. That would improve the branch's axiom
+accounting, but it still would not by itself erase the per-lane
+object-derivation gap identified in the science review.
 
 **Ray-saturation theorem (target).** On the Clifford bimodule
 
@@ -247,9 +269,10 @@ prove that bimodule unitarity + scalar-tensor support bridge
 `supp = 6/7` + democratic center-excess `delta_A1 = 1/42` jointly
 force STRC-LO.
 
-**Significance.** If proven, the quark `a_u` gate closes fully, and
-the net axiom cost across all four Tier-1 scalar-selector gates
-drops to **0**.
+**Significance.** If proven, the quark-side linear-amplitude gap is no
+longer carried as a separate observable principle. The meta-closure
+picture tightens, but reviewer-grade closure still also requires the
+lane-specific object derivations.
 
 **Approach directions (not validated).**
 
@@ -294,20 +317,24 @@ No retention is claimed for this target.
 
 Start here, then (in order):
 
-1. `KOIDE_Z3_JOINT_PROJECTOR_IDENTITY_NOTE_2026-04-19.md` — shared
+1. `SCALAR_SELECTOR_CYCLE1_SCIENCE_REVIEW_NOTE_2026-04-19.md` —
+   current science verdict on the branch routes.
+2. `SCALAR_SELECTOR_CYCLE13_META_CLOSURE_STATUS_NOTE_2026-04-19.md` —
+   later same-day `4 -> 2` meta-closure update.
+3. `KOIDE_Z3_JOINT_PROJECTOR_IDENTITY_NOTE_2026-04-19.md` — shared
    `C_3` isotypic decomposition (scaffolding).
-2. `KOIDE_KAPPA_TWO_ORBIT_DIMENSION_FACTORIZATION_NOTE_2026-04-19.md`
+4. `KOIDE_KAPPA_TWO_ORBIT_DIMENSION_FACTORIZATION_NOTE_2026-04-19.md`
    — axiom-native "2" + cone normalization pieces.
-3. `KOIDE_MOMENT_RATIO_UNIFORMITY_THEOREM_NOTE_2026-04-19.md` — MRU.
-4. `KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md` — Berry-phase.
-5. `DM_DPLE_DIMENSION_PARAMETRIC_EXTREMUM_THEOREM_NOTE_2026-04-19.md`
+5. `KOIDE_MOMENT_RATIO_UNIFORMITY_THEOREM_NOTE_2026-04-19.md` — MRU.
+6. `KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md` — Berry-phase.
+7. `DM_DPLE_DIMENSION_PARAMETRIC_EXTREMUM_THEOREM_NOTE_2026-04-19.md`
    — DPLE.
-6. `SCALAR_TENSOR_RAY_MAGNITUDE_BRIDGE_NOTE_2026-04-19.md` — `supp`
+8. `SCALAR_TENSOR_RAY_MAGNITUDE_BRIDGE_NOTE_2026-04-19.md` — `supp`
    bridge.
-7. `QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md`
+9. `QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md`
    — RPSR.
-8. `QUARK_STRC_OBSERVABLE_PRINCIPLE_NOTE_2026-04-19.md` — STRC.
-9. `CLIFFORD_BIMODULE_RAY_SATURATION_FUTURE_TARGET_NOTE_2026-04-19.md`
+10. `QUARK_STRC_OBSERVABLE_PRINCIPLE_NOTE_2026-04-19.md` — STRC.
+11. `CLIFFORD_BIMODULE_RAY_SATURATION_FUTURE_TARGET_NOTE_2026-04-19.md`
    — future target (optional).
 
 ### Runners
@@ -326,19 +353,15 @@ No retained runner on `main` regresses.
 
 ---
 
-## §9 Publishable claim
+## §9 Honest branch claim
 
-> The framework closes three of four Tier-1 scalar-selector gates
-> (Koide `kappa` via MRU, Koide `theta` via Berry-phase on
-> `S^2_Koide`, DM A-BCC `F_4` via DPLE) directly through retained
-> dim-parametric theorems whose `d = 3` specializations match
-> retained framework content at zero new axiom cost. The fourth
-> gate (Quark `a_u` LO balance) closes conditionally on the STRC
-> observable principle — a Koide-analog linear amplitude sum rule
-> on the retained CKM 1(+)5 projector ray — which bundles with the
-> existing `QUARK_PROJECTOR_PARAMETER_AUDIT` retention, yielding
-> net axiom cost of approximately 1 observable principle across
-> all four gates (Scenario A). Six SM-native structural sources are
-> ruled out for STRC; the remaining path to zero axiom cost is the
-> named bimodule ray-saturation theorem (future mathematical
-> target).
+> This branch contributes four mathematically meaningful scalar-selector
+> routes, but on the current evidence it remains a **support/conditional
+> packet**, not a full gate-closure packet. The strongest later same-day
+> compression is meta-structural: MRU, Berry, and DPLE fit one
+> dim-uniqueness pattern (DIM-UNIQ), while the quark LO balance isolates one
+> separate observable principle (STRC), giving an honest `4 -> 2`
+> meta-closure. The remaining sharp future target is the bimodule
+> amplitude-completeness / ray-saturation theorem (BACT), together with the
+> still-open per-lane object-derivation work needed to clear the reviewer's
+> bar.
