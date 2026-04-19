@@ -102,11 +102,19 @@ packaging.
 - live bounded quark mass-ratio review/support stack on `main`: the
   reviewer-facing quark packet now bundles the down-type CKM-dual lane, the
   bounded up-type inversion extension, the minimal Schur-NNI full-solve
-  support, the reduced projector-ray CKM+CP closure extension, and the
-  parameter/candidate/native/affine audits that reduce the remaining
-  non-derived quark-CP content to a short bounded shortlist for one up-sector
-  scalar amplitude law; this sharpens the flavor status on `main` without
-  promoting full quark closure to retained
+  support, the reduced projector-ray CKM+CP closure extension, the
+  parameter/candidate/native/affine audits, the tensor-endpoint bridge and
+  resolution, the endpoint-readout constraint lane, the endpoint-chain / Route
+  2 readout-theorem block, the scalar-comparison bridge band, the
+  denominator-admissibility no-go, and the partition revisit; current `main`
+  therefore reduces the remaining non-derived quark-CP content to one sharply
+  structured bounded endpoint split rather than a free scalar search, with an
+  exact `1/6` refit branch, a bounded slope-ratio anchored branch, exact
+  restricted readout reduction to one missing `E`-channel map entry
+  `beta_E / alpha_E = 21/4` once the `T`-side candidates are granted, and an
+  exact conditional Route-2 time-coupling family whose uniqueness is still
+  obstructed by that unresolved readout entry; this sharpens the flavor status
+  on `main` without promoting full quark closure to retained
 - older bounded CKM mass-basis / Cabibbo / partial Jarlskog route history
 - mixed cosmology surface, organized around one fixed-gap vacuum scale:
   retained structural identity `Lambda_vac = lambda_1(S^3_R)`, retained
