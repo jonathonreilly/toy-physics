@@ -108,6 +108,21 @@ now the finer sign law on `L_e` itself, not a vague chart-choice placeholder.
 See
 `docs/DM_WILSON_DIRECT_DESCENDANT_LOCAL_SCHUR_BRANCH_DISCRIMINANT_THEOREM_NOTE_2026-04-19.md`.
 
+A second same-day local coordinate theorem sharpens the selector side again:
+near the constructive positive exact-closure root, the projected-source scalar
+pack
+
+```text
+(eta_1, gamma, E1, E2, Delta_src)
+```
+
+already has full local rank, and on the exact-closure manifold the residual
+`4`-pack `(gamma, E1, E2, Delta_src)` already coordinatizes the local
+manifold. So the remaining DM selector problem is no longer missing local
+coordinates. It is missing a stronger **value law** on observables that the
+branch already has. See
+`docs/DM_WILSON_DIRECT_DESCENDANT_LOCAL_OBSERVABLE_COORDINATE_THEOREM_NOTE_2026-04-19.md`.
+
 See `docs/DM_DPLE_DIMENSION_PARAMETRIC_EXTREMUM_THEOREM_NOTE_2026-04-19.md`.
 Runner PASS=19 FAIL=0.
 

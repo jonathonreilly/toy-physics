@@ -188,6 +188,31 @@ choice." It is the finer sign law on `L_e` itself. That is real progress on
 the source-side object, but the positive sign law is still not derived from
 retained physics, so the gate remains open at the reviewer's bar.
 
+An additional same-day local coordinate theorem sharpens this one step further:
+
+- `docs/DM_WILSON_DIRECT_DESCENDANT_LOCAL_OBSERVABLE_COORDINATE_THEOREM_NOTE_2026-04-19.md`
+- `scripts/frontier_dm_wilson_direct_descendant_local_observable_coordinate_theorem_2026_04_19.py`
+
+At the constructive positive exact-closure root, the projected-source scalar
+pack
+
+```text
+(eta_1, gamma, E1, E2, Delta_src)
+```
+
+already has full local rank, and on the exact-closure manifold
+`eta_1 = 1` the residual `4`-pack `(gamma, E1, E2, Delta_src)` already gives
+local coordinates.
+
+So the remaining DM selector gap is now sharper still:
+
+- not missing local observable coordinates,
+- but missing a stronger **value law** on observables that already exist.
+
+That matters because it kills the loophole that the open DM gap might still be
+just a repackaging problem. The branch now knows the local projected-source
+coordinates it has, and what it lacks is stronger selection content.
+
 ### Science decision
 
 DPLE should be treated as a **support theorem on the open DM gate**:
