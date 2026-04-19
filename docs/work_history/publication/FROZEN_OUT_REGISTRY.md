@@ -197,6 +197,66 @@ mix retained, bounded, fitted, conditional, and stale claims.
 - rewrite as cleaned authority notes or incorporate claim-by-claim into the
   canonical matrix / ledger
 
+### `F09` Perron-Frobenius current-bank closure packet
+
+**Status:** frozen out as live science authority; retained only as route-history salvage.
+**Why frozen out:** the review branch contained useful route decomposition and
+dependency analysis, but its theorem-grade closure claims were not accepted.
+The load-bearing runners certified note consistency and generic certificate
+shapes rather than the actual Wilson / PMNS / plaquette branch objects.
+
+**Captured work:**
+
+- ordered PF attack program
+- convergence of the PMNS-side routes onto one Wilson-side primitive
+- Wilson-dependency asymmetry for future positive reopening
+- explicit re-entry conditions for a future PF resubmission
+
+**Primary sources:**
+
+- [PERRON_FROBENIUS_ROUTE_SALVAGE_NOTE_2026-04-18.md](../pf/PERRON_FROBENIUS_ROUTE_SALVAGE_NOTE_2026-04-18.md)
+- source review branch: `codex/pf-science-review-2026-04-18` at `7e9aae2c`
+
+**Needed to unfreeze:**
+
+- object-level verifiers over the actual Wilson / PMNS / plaquette objects
+- a real descendant or explicit operator-evaluation theorem at the remaining
+  constructive seam
+- only then any branch-wide PF compatibility / selector claim
+
+### `F10` Atomic review packets and hybrid EW/atomic branch promotions
+
+**Status:** frozen out of the flagship paper core; partially salvaged as
+bounded atomic work history only.
+**Why frozen out:** the reviewed hydrogen / helium branch mixed useful lattice
+atomic numerics with a branch-local EW authority attempt and a stronger
+isoelectronic promotion than the evidence supported.
+
+**Captured work:**
+
+- bounded hydrogen spectrum companion on the retained lattice Hamiltonian
+  surface
+- bounded helium Hartree and Jastrow companions on the same kernel
+- explicit rejection of the branch-local `alpha_EM` “zero-import” authority
+  attempt in favor of the already-retained EW normalization lane on `main`
+- explicit rejection of the fixed-grid isoelectronic promotion as a live
+  authority surface
+
+**Primary sources:**
+
+- [HYDROGEN_HELIUM_ATOMIC_COMPANION_NOTE_2026-04-18.md](../atomic/HYDROGEN_HELIUM_ATOMIC_COMPANION_NOTE_2026-04-18.md)
+- [frontier_atomic_hydrogen_lattice_companion.py](../../../scripts/frontier_atomic_hydrogen_lattice_companion.py)
+- [frontier_atomic_helium_hartree_companion.py](../../../scripts/frontier_atomic_helium_hartree_companion.py)
+- [frontier_atomic_helium_jastrow_companion.py](../../../scripts/frontier_atomic_helium_jastrow_companion.py)
+
+**Needed to unfreeze:**
+
+- theorem-grade atomic closure beyond finite-box companion numerics
+- honest continuum/volume control for hydrogen and helium on the promoted
+  surface
+- a verified multi-electron extension that does not lean on fixed-grid
+  overclaims
+
 ## Registry rule
 
 The flagship paper may reference frozen-out work only if:
