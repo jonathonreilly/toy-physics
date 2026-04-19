@@ -76,26 +76,28 @@ This is exact and verified by the dedicated runner.
 
 ## What this closes
 
-The σ_hier open conditional in the P3 flagship package is resolved under
+The free `σ_hier` ambiguity at the pinned chamber point is resolved under
 observational promotion:
 
 - σ_hier was previously listed as an "independent conditional — an S_3
   involution (order 2), not derivable from the retained C_3 order-3 cycle."
 - This theorem shows it has **no observational ambiguity**: no other σ ∈ S_3
   passes the joint 4-observable PMNS constraint.
-- `σ_hier` is promoted from "free conditional" to "observationally unique":
-  uniquely selected by observation at the live pin, not internally derived.
+- `σ_hier` is promoted from "free conditional" to "observationally unique at
+  the live pin": uniquely selected by observation there, not internally
+  derived from the framework alone.
 
 ## Consequence for the P3 flagship
 
-With σ_hier resolved by this theorem:
+With `σ_hier` resolved at the pinned point by this theorem:
 
 - The P3 flagship closure (PMNS-as-f(H) map + chamber pin) depends on:
-  1. The imposed branch-choice rule **A-BCC** (physical sheet = C_base)
+  1. The imposed branch-choice rule **A-BCC** (physical sheet = `C_base`)
   2. ~~σ_hier = (2,1,0) as an independent conditional~~ → **now closed by
-     observational uniqueness**
-- **A-BCC remains the single load-bearing open input** on the P3 flagship
-  closure.
+     observational uniqueness at the live pin**
+- **A-BCC remains the single named source-side open input on the pinned
+  chamber packet.** Broader chamber-wide / all-basin uniqueness is not
+  supplied by this theorem.
 
 ## Falsifiable prediction
 
@@ -115,6 +117,10 @@ chamber pin under the 4-observable PMNS constraint).
   separately; see `ABCC_CP_PHASE_NO_GO_THEOREM_NOTE_2026-04-19.md`).
 - Does not pin the absolute neutrino mass scale (different carrier).
 - Does not determine the solar gap Δm²_21 (different carrier).
+- Does not claim chamber-wide or all-basin uniqueness. Other `H`-parameter
+  basins, including the documented Basin N neighborhood, may still support
+  other internally consistent PMNS fits. A chamber-wide uniqueness statement
+  would require a separate basin analysis.
 
 ## Reproduction
 

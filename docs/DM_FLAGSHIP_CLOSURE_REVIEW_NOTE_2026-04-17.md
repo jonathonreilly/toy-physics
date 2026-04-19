@@ -9,11 +9,12 @@ the retained local theorem
 That sharpens the old source-branch conditional into one retained local
 theorem plus one named remaining source-side input `A-BCC`. The live G1
 PMNS-as-`f(H)` package is therefore now best read as a **bounded** package on
-an otherwise open flagship gate: `A-BCC` and the observational hierarchy
-pairing `σ_hier = (2, 1, 0)` remain open, and the current-bank quantitative DM
-selector / mapping side is also still open. **The previously-listed `q_H = 0`
-conditional has been discharged as GAUGE (retained)** via the Higgs `Z_3`-
-charge gauge-redundancy theorem.
+an otherwise open flagship gate: `A-BCC` remains open, the observational
+hierarchy pairing `σ_hier = (2, 1, 0)` is fixed at the pinned chamber point
+but not yet as a chamber-wide / all-basin theorem, and the current-bank
+quantitative DM selector / mapping side is also still open. **The
+previously-listed `q_H = 0` conditional has been discharged as GAUGE
+(retained)** via the Higgs `Z_3`-charge gauge-redundancy theorem.
 **Framework convention:** "axiom" means only the single framework axiom `Cl(3)` on `Z^3`.
 **Runner coverage:** 16 frontier runners, **PASS = 513, FAIL = 0**. This now
 includes the dedicated P3 Sylvester linear-path signature theorem runner

@@ -28,6 +28,9 @@ The clean current endpoint is:
 - the one-scalar obstruction triangulation theorem now shows that the live
   charged-lepton promotion gap is exactly one real scalar condition
   `kappa = 2`
+- the reviewed Cl(3) doublet/Kramers route now also closes negatively: it
+  sharpens one structural support route but still does not derive the physical
+  selector point
 - the exact `Z_3` scalar-potential support note derives the Clifford-fixed
   selected-slice potential but also records honestly that its minimum does not
   select the physical point
@@ -51,7 +54,8 @@ So the current charged-lepton state is:
 9. [KOIDE_MICROSCOPIC_SCALAR_SELECTOR_TARGET_NOTE_2026-04-18.md](./KOIDE_MICROSCOPIC_SCALAR_SELECTOR_TARGET_NOTE_2026-04-18.md)
 10. [KOIDE_SELECTED_SLICE_FROZEN_BANK_DECOMPOSITION_NOTE_2026-04-18.md](./KOIDE_SELECTED_SLICE_FROZEN_BANK_DECOMPOSITION_NOTE_2026-04-18.md)
 11. [KOIDE_ONE_SCALAR_OBSTRUCTION_TRIANGULATION_THEOREM_NOTE_2026-04-18.md](./KOIDE_ONE_SCALAR_OBSTRUCTION_TRIANGULATION_THEOREM_NOTE_2026-04-18.md)
-12. [KOIDE_Z3_SCALAR_POTENTIAL_SUPPORT_NOTE_2026-04-19.md](./KOIDE_Z3_SCALAR_POTENTIAL_SUPPORT_NOTE_2026-04-19.md)
+12. [KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md](./KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md)
+13. [KOIDE_Z3_SCALAR_POTENTIAL_SUPPORT_NOTE_2026-04-19.md](./KOIDE_Z3_SCALAR_POTENTIAL_SUPPORT_NOTE_2026-04-19.md)
 
 ## Package Role
 
@@ -69,6 +73,8 @@ because the current stack still stops one step short of a retained selector
 law for the final microscopic scalar. The current exact endpoint is now
 sharper: the missing step is one scalar condition, and the current
 selected-slice scalar potential does not by itself select it.
+Branch-local exploratory `Q = 2/3`-surface and scale-selector near-miss probes
+remain off current-main authority.
 
 So the right classification is:
 

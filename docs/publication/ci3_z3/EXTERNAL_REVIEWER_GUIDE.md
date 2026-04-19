@@ -105,9 +105,14 @@ Review this as a modular component stack:
    [S3_TASTE_CUBE_DECOMPOSITION_NOTE.md](../../S3_TASTE_CUBE_DECOMPOSITION_NOTE.md),
    [S3_MASS_MATRIX_NO_GO_NOTE.md](../../S3_MASS_MATRIX_NO_GO_NOTE.md),
    [Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md](../../Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md)
-10. physical-lattice necessity boundary:
+10. reviewed `Cl(3) -> SM` algebraic support packet:
+   [CL3_SM_EMBEDDING_MASTER_NOTE.md](../../CL3_SM_EMBEDDING_MASTER_NOTE.md),
+   [CL3_SM_EMBEDDING_THEOREM.md](../../CL3_SM_EMBEDDING_THEOREM.md),
+   [CL3_COLOR_AUTOMORPHISM_THEOREM.md](../../CL3_COLOR_AUTOMORPHISM_THEOREM.md),
+   [CL3_TASTE_GENERATION_THEOREM.md](../../CL3_TASTE_GENERATION_THEOREM.md)
+11. physical-lattice necessity boundary:
    [PHYSICAL_LATTICE_NECESSITY_NOTE.md](../../PHYSICAL_LATTICE_NECESSITY_NOTE.md)
-11. three-generation / chirality boundary:
+12. three-generation / chirality boundary:
    [THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md](../../THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md)
 
 Current status from that stack:
@@ -171,6 +176,10 @@ Current status from that stack:
   `hw=1` mass-matrix no-go, and exact residual `Z_2` Hermitian normal form;
   these sharpen the retained matter/flavor support layer without inflating the
   flagship matter claim
+- a reviewed April 19 `Cl(3) -> SM` algebraic support packet is also live on
+  `main` for reviewer / atlas use only; it sharpens algebraic weak/color/taste
+  structure behind the retained matter lane, but it is not part of the
+  accepted minimal-input stack
 - derived Higgs / vacuum package with retention-decomposed budget:
   canonical `m_H = 125.1 GeV` (framework-side 3-loop route),
   retention analysis `m_H = 125.04 ± 3.17 GeV`,

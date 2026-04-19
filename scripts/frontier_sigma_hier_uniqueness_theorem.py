@@ -42,7 +42,7 @@ STEP 2 (CP-phase discriminator):
 Conclusion:
     The combination of the 9/9 NuFit 3-sigma magnitude check AND the
     experimental CP-phase sign preference (sin(delta_CP) < 0) uniquely
-    selects sigma = (2, 1, 0) from the 6-element S_3.
+    selects sigma = (2, 1, 0) from the 6-element S_3 at the pinned point.
 
     This is a conditional support theorem under the observational-promotion
     framework: sigma_hier is not derivable from Cl(3)/Z^3 alone, but it is
@@ -447,9 +447,12 @@ def main() -> int:
     print("      is the unique physically admissible pairing.")
     print()
     print("  This promotes sigma_hier from an 'independent conditional' to an")
-    print("  'observationally unique' choice: not derived from Cl(3)/Z^3 alone,")
-    print("  but uniquely fixed at the live pin by the combined 4-observable")
-    print("  PMNS constraint.")
+    print("  'observationally unique' choice at the live pin: not derived from")
+    print("  Cl(3)/Z^3 alone, but uniquely fixed there by the combined")
+    print("  4-observable PMNS constraint.")
+    print("  This is a pinned-point theorem only, not a chamber-wide or")
+    print("  all-basin uniqueness theorem; other admitted basins must be")
+    print("  checked separately.")
     print()
     print("  The CP-phase prediction sin(delta_CP) = -0.9874 is then a")
     print("  falsifiable geometric consequence: a confirmed >3-sigma positive sin(delta_CP)")
