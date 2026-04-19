@@ -45,23 +45,34 @@ Uniqueness: MRU has a single non-trivial singlet-vs-doublet scalar
 selector iff `|Iso(d)| = 2` with one singlet + one complex doublet,
 which holds iff **d = 3**. Runner PASS=65 FAIL=0.
 
-### 1.2 Berry-phase theorem on S^2_Koide -- closes Koide theta
+### 1.2 Berry-phase theorem on the actual selected-line phase carrier -- closes Koide theta
 
 See `docs/KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md`.
 
-The projectivized Koide cone S^2_Koide carries a natural C_3 action.
-The n = 2 monopole line bundle L_doublet (first Chern number =
-dim(doublet) = d - 1 = 2 at d = 3) has Berry holonomy
+The old ambient-`S^2` / `n = 2` monopole closure story fails. The actual Berry
+closure lives on the exact charged-lepton selected line
 
-    gamma(one C_3 period) = 2 pi (d - 1) / d = 2 pi Q.
+    H_sel(m) = H(m, sqrt(6)/3, sqrt(6)/3).
 
-At d = 3: gamma = 4 pi / 3. Reduction to Brannen units per C_3 element:
+Along its positive first branch, the normalized Koide state has fixed singlet
+weight and moving conjugate doublet coefficients
 
-    delta_d = Q / d = (d - 1) / d^2    (at d = 3: 2/9 exactly).
+    (1/sqrt(2), 1/2 e^{i theta}, 1/2 e^{-i theta}),
 
-This gives AXIOM E (cos(3 arg b_s) = cos(Q)) as a corollary. Runner
-PASS=26 FAIL=0. Literature alignment: Brannen 2006, Zenczykowski PRD
-2012/2013 two-decade phenomenology of delta = 2/9.
+so the physical phase carrier is the projective `C_3` doublet ray
+
+    [e^{i theta} : e^{-i theta}] = [1 : e^{-2 i theta}]
+
+on the equator of `CP^1`. The tautological line over that ray has canonical
+Berry connection `A = d theta`, and the holonomy from the unique unphased
+selected-line point is exactly the Brannen offset
+
+    delta = theta - 2 pi / 3.
+
+So AXIOM E is closed as an actual-route phase-observable theorem. The separate
+microscopic selected-point law for the broader charged-lepton mass package
+remains open upstream of this phase theorem. Runner PASS surface is now the
+actual-route Berry audit, not the old ambient monopole arithmetic.
 
 ### 1.3 DPLE (Dim-Parametric log|det| Extremum) -- closes F4
 
@@ -76,7 +87,14 @@ H_1 = J_*) reproduces F4 (cycle 7B) on all four basins {1, N, P, X}.
 d = 3 uniqueness: clean binary selector iff d = 3; d = 2 degenerate;
 d >= 4 fragments (explicit d = 4 example with 2 interior Morse-idx-0
 CPs). Uhlig 1982 sign-characteristic classification provides the
-dim-parametric backbone. Runner PASS=19 FAIL=0.
+dim-parametric backbone. Runner PASS=22 FAIL=0 (T1-T8).
+
+**Scope.** DPLE closes the F4 SCALAR SELECTOR axiom on the sub-gate
+conditioned on A-BCC. The source-side identification of C_base as the
+physical sheet (axiom A-BCC) remains open at the framework level;
+observational grounding is provided by the A-BCC CP-phase no-go theorem
+on main. The "DM A-BCC basin: axiom cost 1 -> 0" in the table above
+refers to the F4 scalar-selector axiom, not to A-BCC.
 
 ### 1.4 RPSR (Reduced Projector-Ray Sum Rule) -- conditional closure of Min-C
 
@@ -102,21 +120,24 @@ PASS=10 FAIL=0.
 
 ---
 
-## 2. Meta-finding: three independent d = 3 closures
+## 2. Meta-finding: two dim-parametric closures plus one actual-route Berry closure
 
-The three full closures (MRU, Berry, DPLE) share a common structural
-pattern:
+MRU and DPLE share a common structural pattern:
 
 - Each states a **dim-parametric principle** at arbitrary d >= 2.
 - Each reduces at **d = 3** to the retained axiom content.
 - Each has **at most one** non-trivial specialization (MRU: 1-equation
-  singlet-vs-doublet; Berry: unique Chern-class = dim(doublet); DPLE:
-  at most one interior Morse-idx-0 CP).
+  singlet-vs-doublet; DPLE: at most one interior Morse-idx-0 CP).
 - Each is **non-trivial at other d** (fragmentation at d >= 4,
   degeneracy at d = 2).
 
-**This is the dim-uniqueness fingerprint of cycle 9**, now directly
-manifested in three independent observable-principle statements (not
+The Berry closure is different: it is not an ambient dim-parametric monopole
+theorem, but an actual selected-line Berry theorem on the physical
+projective-doublet phase carrier.
+
+**This is still part of the cycle-9 d = 3 picture**, now manifested in two
+independent dim-parametric observable-principle statements plus one exact
+actual-route phase theorem (not
 just in the bivector-count / anomaly-parity / Cayley-Hamilton / 7-no-go
 layer).
 
@@ -147,8 +168,8 @@ See `docs/KOIDE_Z3_JOINT_PROJECTOR_IDENTITY_NOTE_2026-04-19.md`.
 
 The shared Z_3 isotypic decomposition of C^3 (Koide singlet/doublet
 and DM Z_3 singlet/doublet projectors are the same matrices). This is
-the retained scaffolding on which MRU (cycle 10A) and Berry (cycle
-10B) build their dim-parametric constructions. Runner PASS=55 FAIL=0.
+the retained scaffolding on which MRU (cycle 10A) and the actual-route Berry
+theorem (cycle 10B) build. Runner PASS=55 FAIL=0.
 
 ### 3.2 Kappa=2 orbit-dimension factorization
 
@@ -240,7 +261,7 @@ theorems, axiom cost zero**.
 - **Berry phase** (cycle 10B): Brannen 2006 MASSES2.pdf; Zenczykowski
   PRD 86 (2012) 117303; PRD 87 (2013) 077302; Rivero-Gsponer
   hep-ph/0505220. The two-decade phenomenological `delta = 2/9` is now
-  derived.
+  identified with the actual selected-line Berry holonomy.
 - **DPLE** (cycle 10C): Uhlig 1982 (Linear Algebra Appl. 46),
   sign-characteristic classification for Hermitian pencils; Mehl-
   Mehrmann-Ran-Rodman 2016 (Linear Algebra Appl. 511) generalization;
@@ -272,19 +293,31 @@ closure:
 
 ## 10. Honest closing statement
 
-Three full Tier-1 closures (MRU, Berry, DPLE) + one conditional closure
-(RPSR). Zero new axioms added in all three full closures; the
-conditional closure is gated on **one** specific LO algebraic identity
-(cycle 11 target).
+Three Tier-1 SCALAR SELECTOR closures (MRU, Berry, DPLE) + one
+conditional closure (RPSR). Zero new axioms added in all three scalar-
+selector closures; the conditional closure is gated on **one** specific
+LO algebraic identity (cycle 11 target).
 
-The three full closures all specialize dim-parametric observable-
-principle theorems at d = 3. This is a structural confirmation of the
-dim-uniqueness-at-3 picture already retained on main (R1 bivector-
-count saturation, R2 anomaly parity, R3 Cayley-Hamilton coincidence, 7
-no-gos). The framework's observable scalar principles all share the
-same d = 3 specialization point.
+**A-BCC clarification.** The "DM A-BCC basin" closure (1 -> 0) above
+refers to the F4 scalar-selector axiom on the sub-gate conditioned on the
+baseline-connected-component identification. DPLE closes F4; it does not
+close A-BCC. The source-side physical-sheet identification remains the
+single open input on the DM flagship gate, as documented in
+`DM_FLAGSHIP_CLOSURE_REVIEW_NOTE_2026-04-17.md` (item 7 in "Still open")
+and `DM_DPLE_ABCC_NO_GO_NOTE_2026-04-19.md` (sign-blindness no-go). A
+full assumptions audit of A-BCC is in
+`DM_ABCC_ASSUMPTIONS_AUDIT_NOTE_2026-04-19.md` (PASS=21 FAIL=0):
+all five algebraic derivation routes fail; C_base-connectivity reduces
+the gap to a single continuity axiom (cycle 11+ target).
 
-Runner suite: 6 new runners, all PASS=N FAIL=0. No retained runner on
+MRU and DPLE specialize dim-parametric observable-principle theorems at
+d = 3, while Berry closes through the exact selected-line phase carrier.
+This is still consistent with the dim-uniqueness-at-3 picture already retained
+on main (R1 bivector-count saturation, R2 anomaly parity, R3
+Cayley-Hamilton coincidence, 7 no-gos), but the Berry half should no longer be
+described as an ambient dim-parametric monopole theorem.
+
+Runner suite: 7 new runners, all PASS=N FAIL=0. No retained runner on
 main regresses.
 
 **Reading order:** start here. Then (in order):

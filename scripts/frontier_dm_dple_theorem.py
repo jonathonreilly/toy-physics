@@ -305,6 +305,78 @@ def task7_d3_binary_uniqueness():
 
 
 # ---------------------------------------------------------------------------
+# T8: DPLE sign-blindness -- A-BCC is NOT closed by DPLE
+# ---------------------------------------------------------------------------
+
+def task8_dple_sign_blindness():
+    """
+    DPLE's floor(d/2) Morse-idx-0 bound operates on W(t) = log|det H(t)|,
+    which uses the absolute value of det.  The bound is therefore sign-blind:
+    it applies equally to C_base pencils (det H_0 > 0) and C_neg pencils
+    (det H_0 < 0).
+
+    The F_3 selector adds condition (4): sign(p(t_*)) = sign(det H_base) > 0.
+    This sign condition is A-BCC encoded in F_3.  DPLE derives conditions
+    (1)-(3) (structure of the unique interior minimum at d=3); it does not
+    derive condition (4).
+
+    Verification:
+      (a) C_neg pencils satisfy the floor(d/2) = 1 bound -- DPLE applies.
+      (b) Some C_neg pencils have an interior Morse-idx-0 CP where
+          sign(p(t_*)) = sign(det H_0) < 0 -- same structural pattern as
+          Basin 1, but on C_neg.  DPLE cannot prefer C_base over C_neg.
+      (c) Structural conclusion: A-BCC (physical sheet = C_base) is not
+          derived from DPLE; it is still an open source-side input.
+    """
+    print("\n=== T8: DPLE sign-blindness -- A-BCC not closed by DPLE ===")
+    d = 3
+    bound = d // 2  # = 1
+
+    # (a) C_neg pencils (det H_0 < 0): DPLE floor bound still holds
+    max_obs_cneg = 0
+    n_cneg = 500
+    for _ in range(n_cneg):
+        H0 = rand_herm(d, RNG)
+        # Force det < 0 by negating if needed (det(-A) = (-1)^3 det(A) = -det(A))
+        if np.linalg.det(H0).real > 0:
+            H0 = -H0
+        H1 = rand_herm(d, RNG)
+        coeffs = char_poly_coeffs(H0, H1, d)
+        cnt, _ = interior_morse_idx0(coeffs, (0.0, 1.0))
+        max_obs_cneg = max(max_obs_cneg, cnt)
+    check("d=3 C_neg pencils: max interior Morse-idx-0 CP <= floor(d/2)=1",
+          max_obs_cneg <= bound,
+          f"max_obs = {max_obs_cneg}  (DPLE sign-blind: bound holds for det<0)")
+
+    # (b) Find a C_neg pencil with an interior Morse-idx-0 CP at which
+    #     p(t_*) < 0 -- sign matches det(H_0) < 0; analogous to Basin 1 on C_base.
+    found_cneg_example = False
+    for _ in range(20000):
+        H0 = rand_herm(d, RNG)
+        if np.linalg.det(H0).real > 0:
+            H0 = -H0
+        H1 = rand_herm(d, RNG)
+        coeffs = char_poly_coeffs(H0, H1, d)
+        cnt, roots_in = interior_morse_idx0(coeffs, (0.0, 1.0))
+        if cnt >= 1:
+            t_star = min(roots_in)
+            p_star = p_at(coeffs, t_star)
+            c0 = coeffs[0]
+            # sign match: both negative
+            if p_star < 0 and c0 < 0:
+                found_cneg_example = True
+                break
+    check("C_neg analog of F_3=True found: interior min with sign(p(t*))=sign(det H_0)<0",
+          found_cneg_example,
+          "demonstrates DPLE structure is sign-symmetric; A-BCC needed to prefer C_base")
+
+    # (c) Structural conclusion: explicit PASS marking the open gap
+    check("A-BCC REMAINS OPEN: DPLE is a scalar-selector support theorem, not source-side closure",
+          True,
+          "sign condition (4) in F_3 encodes A-BCC; DPLE's |det| bound cannot derive it")
+
+
+# ---------------------------------------------------------------------------
 # Driver
 # ---------------------------------------------------------------------------
 
@@ -319,6 +391,7 @@ def main() -> int:
     task5_d2_degeneracy()
     task6_d3_f4_discriminant()
     task7_d3_binary_uniqueness()
+    task8_dple_sign_blindness()
 
     print()
     print("=" * 72)

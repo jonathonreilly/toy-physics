@@ -30,6 +30,16 @@ axiom count drops from 4 {D, E, Min-C, F4} to 3 {D, E, Min-C} on that
 gate (and subsequently all four axioms across all lanes close through
 cycles 10A, 10B, 10C, 10D).
 
+**Scope limitation (non-negotiable).** The "DM A-BCC gate" axioms
+{D, E, Min-C, F4} are the *scalar-selector sub-gate* axioms that operate
+*conditioned on* the baseline-connected-component identification (axiom
+**A-BCC**). DPLE closes F4 on this conditioned sub-gate. It does NOT
+close A-BCC — the identification of C_base = {det H > 0} as the physical
+PMNS sheet. A-BCC remains the single source-side open input on the DM
+flagship gate. See section 5.2 for the sign-encoding no-go and
+`ABCC_CP_PHASE_NO_GO_THEOREM_NOTE_2026-04-19.md` for the observational
+grounding of A-BCC already on main.
+
 ---
 
 ## 1. Setup
@@ -185,11 +195,38 @@ Nor does DPLE derive H_base and J_* as operators; these are fixed by
 the retained sigma-hier uniqueness theorem and cubic-variational
 obstruction theorem (both on main).
 
+**No-go: DPLE cannot close A-BCC.**
+
+The F_3 selector has four conditions:
+  (1) Delta_ret = c_2^2 - 3 c_1 c_3 > 0
+  (2) t_* in (0, 1)
+  (3) p''(t_*) > 0  [Morse-index-0]
+  (4) sign(p(t_*)) = sign(c_0) = sign(det H_base) > 0
+
+DPLE's floor(d/2) bound is a bound on interior Morse-index-0 critical
+points of W(t) = log|det H(t)|. This observable uses the ABSOLUTE VALUE
+of det, so the bound is sign-blind: it constrains conditions (1)-(3)
+only. At d = 3, DPLE proves the unique-interior-minimum structure --
+conditions (1)-(3) are theorem-grade.
+
+Condition (4) is a SIGN condition on det, not on |det|. It requires the
+interior minimum of det (not |det|) to be positive, i.e., to match the
+sign of det H_base. This is exactly A-BCC encoded in F_3: "the path
+from J = 0 to J_physical stays on C_base (det > 0)."
+
+Formally: A-BCC is the axiom that the physical J is in C_base. F_3 = True
+at Basin 1 is a CONSEQUENCE of A-BCC on the linear path (since P3
+Sylvester proves the path stays in C_base). Demoting F4 to a theorem
+means conditions (1)-(3) are derived; condition (4) remains a physical
+input. DPLE cannot derive condition (4) because the DPLE bound applies
+equally to C_neg pencils (det H_0 < 0): the generic floor(d/2) structure
+is sign-symmetric. Runner T8 verifies this sign-blindness explicitly.
+
 ---
 
 ## 6. Runner verification
 
-`scripts/frontier_dm_dple_theorem.py` runs 7 tasks totalling ~20
+`scripts/frontier_dm_dple_theorem.py` runs 8 tasks totalling 22
 checks. Key results:
 
 - T1: det H(t) is degree-d in t for d = 2, 3, 4, 5 (max |coeff(t^{d+1})|
@@ -202,8 +239,12 @@ checks. Key results:
 - T5: d = 2 degeneracy (F_2 is a vacuous signature condition).
 - T6: d = 3 signature connection to retained F4.
 - T7: d = 3 binary-selector uniqueness (CP counts histogram).
+- T8: DPLE sign-blindness -- A-BCC gap check. Three PASSes: (a) C_neg
+  pencils satisfy floor(d/2)=1 bound; (b) C_neg analog of F_3=True exists
+  (DPLE structure is sign-symmetric); (c) A-BCC remains open (explicit
+  structural PASS marking the gap).
 
-Expected: PASS >= 18 FAIL=0.
+Expected: PASS=22 FAIL=0.
 
 ---
 
@@ -216,15 +257,29 @@ F4}.
 linear-path). Gate axioms = {D, E, Min-C}.
 
 Combined with cycles 10A (MRU, D -> theorem) and 10B (Berry, E ->
-theorem): the only remaining axiom touching the DM A-BCC gate is Min-C
--- and that drops to a conditional theorem under cycle 10D (RPSR).
+theorem): the only remaining axiom touching the DM A-BCC scalar-selector
+sub-gate is Min-C -- and that drops to a conditional theorem under cycle
+10D (RPSR).
+
+**A-BCC clarification.** The axioms {D, E, Min-C, F4} listed above are
+the SCALAR SELECTOR axioms on the sub-gate conditioned on A-BCC (the
+baseline-connected-component identification). F4 dropping means the
+scalar selector sub-gate is closed (under the stated conditions). The
+source-side input A-BCC itself -- identifying C_base as the physical PMNS
+sheet -- is NOT part of this sub-gate list. A-BCC remains the single
+open source-side input on the DM flagship gate; the A-BCC CP-phase no-go
+theorem (on main) provides observational grounding but not axiom-level
+derivation from Cl(3)/Z^3.
 
 ---
 
 ## 8. Cross-references
 
-- `docs/DM_CHAMBER_SIGNATURE_STRUCTURE_NOTE_2026-04-19.md` (F4 context, now DPLE-closed)
-- `docs/DM_NEUTRINO_SOURCE_SURFACE_P3_SYLVESTER_LINEAR_PATH_SIGNATURE_THEOREM_NOTE_2026-04-18.md` (retained path theorem on main)
+- `docs/DM_CHAMBER_SIGNATURE_STRUCTURE_NOTE_2026-04-19.md` (F4 context, now DPLE-closed on scalar-selector sub-gate)
+- `docs/DM_NEUTRINO_SOURCE_SURFACE_P3_SYLVESTER_LINEAR_PATH_SIGNATURE_THEOREM_NOTE_2026-04-18.md` (retained path theorem on main; shows linear path stays in C_base at P3 pin)
+- `docs/ABCC_CP_PHASE_NO_GO_THEOREM_NOTE_2026-04-19.md` (observational grounding of A-BCC; on main)
+- `docs/DM_FLAGSHIP_CLOSURE_REVIEW_NOTE_2026-04-17.md` (A-BCC listed as "Still open" item 7)
+- `docs/DM_DPLE_ABCC_NO_GO_NOTE_2026-04-19.md` (formal statement of DPLE sign-blindness no-go)
 - `docs/CYCLE_1_TO_10_SYNTHESIS_NOTE_2026-04-19.md` (reading order)
 - Uhlig 1982 (Linear Algebra Appl. 46), Mehl-Mehrmann-Ran-Rodman 2016 (Linear Algebra Appl. 511), Milnor Morse Theory (1963).
 
@@ -234,8 +289,15 @@ theorem): the only remaining axiom touching the DM A-BCC gate is Min-C
 
 DPLE is a mechanical algebraic theorem (Jacobi, Cayley-Hamilton,
 Sylvester inertia); its d = 3 specialization reduces to the retained F4
-exactly. No numerical tuning. No new axioms. The dim-parametric probe at
-d = 2..5 demonstrates both the fragmentation at d >= 4 and the binary-
-selector uniqueness at d = 3.
+conditions (1)-(3) exactly. No numerical tuning. No new axioms. The
+dim-parametric probe at d = 2..5 demonstrates both the fragmentation at
+d >= 4 and the binary-selector uniqueness at d = 3.
 
-Runner status: PASS >= 18 FAIL=0.
+**Status: HONEST SUPPORT THEOREM on the DM flagship gate.** DPLE closes
+the F4 scalar-selector axiom on the conditioned sub-gate. It is not a
+source-side closure theorem. A-BCC -- the physical-sheet identification
+-- remains the single open source-side input. The sign condition (4)
+in F_3 encodes A-BCC content; DPLE's sign-blind log|det| bound cannot
+derive it.
+
+Runner status: PASS=22 FAIL=0 (T1-T7 plus T8 sign-blindness check).

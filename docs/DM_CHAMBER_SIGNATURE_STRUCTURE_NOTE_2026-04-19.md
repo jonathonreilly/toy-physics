@@ -74,6 +74,12 @@ DPLE's requirements:
 algebraic theorem; F4 is its d = 3 specialization on the retained
 pencil.
 
+**Scope.** DPLE closes conditions (1)-(3) of F_3 (structure of the
+unique interior minimum at d=3). Condition (4) -- sign(p(t_*)) =
+sign(det H_base) > 0 -- encodes A-BCC (physical sheet = C_base) and is
+not derived from DPLE. A-BCC remains an open source-side input; see
+`DM_DPLE_ABCC_NO_GO_NOTE_2026-04-19.md`.
+
 ### Dim-uniqueness
 
 - d = 2: F_2 is vacuous (no cubic discriminant branch).
@@ -109,6 +115,9 @@ and `scripts/frontier_dm_f4_discriminator_axiom_candidate.py` are NOT
 included in this branch (superseded). Their functional content is
 absorbed into the DPLE theorem runner
 `scripts/frontier_dm_dple_theorem.py` (PASS=19 FAIL=0).
+
+The DPLE runner (`frontier_dm_dple_theorem.py`) is now PASS=22 FAIL=0
+(T1-T7 original checks plus T8 sign-blindness / A-BCC gap check).
 
 Retained DM runners on main pass unchanged:
 
