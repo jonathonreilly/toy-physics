@@ -184,7 +184,7 @@ Current status from that stack:
 
 - **Charged-lepton mass-hierarchy observational-pin closure** (Koide `Q = 2/3`). Reviewer entry point: [CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md](../../CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md). Repo status: `bounded`. The 3→3 pin produces no spare observable analogous to the retained neutrino-mixing 3→4 map's `δ_CP ≈ −81°` forecast. Seven theorems (algebraic cone equivalence, second-order-return shape theorem + 7-stress-test robustness, mass/mixing subspace disjointness `dim(V_H ∩ V_D) = 0`, transport identity, variational-principle no-retained-principle survey with the named real-irrep-block-democracy candidate primitive, fourth-order signed Clifford ordering cancellation, observational-pin closure) + six rigorous structural no-gos. Convention-invariant under mass-vs-mass-squared pin choice; closure content is framework compatibility with observed Koide, not framework derivation. Pin is unique as a set up to positive scale, with a residual `S_2` labeling ambiguity on `w_a ↔ w_b` that is Koide- and Σ-invariant on the retained surface. 19 runners, 518 PASS / 0 FAIL on origin/main base.
 - W-boson same-surface EW consistency probe. Reviewer entry point: [W_MASS_DERIVED_NOTE.md](../../W_MASS_DERIVED_NOTE.md). Repo status: `bounded`. On the retained EW lane the framework-side readouts are `M_W^tree = 79.7956 GeV`, `M_W^RGE = 80.5573 GeV`, `M_Z^tree = 91.2663 GeV`. The remaining `~0.19 GeV` `M_W` gap tracks the existing retained `g_2(v)` precision and is therefore treated as a reviewer-facing same-surface consistency probe, not as a retained or few-MeV SM-indirect `M_W` prediction.
-- DM flagship gate, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` bounded package with a retained local P3 Sylvester linear-path signature theorem at the pinned point, a reviewed selector obstruction stack that compresses selector-side ambiguity to intrinsic threshold-law nonrealization and exhausts the tested carrier-side pressure to two explicit split-2 upper-face neighborhoods, and a reviewed Wilson direct-descendant science stack showing that current `main` carries no hidden Wilson-to-`dW_e^H` descendant law while explicit structured positive model classes and manifold-valued constructive positive exact closure already exist on the fixed native `N_e` seed surface: the remaining live blockers are the named baseline-connected-component input `A-BCC`, the observational hierarchy pairing `σ_hier = (2, 1, 0)`, the finer right-sensitive microscopic selector law for the physical source branch / point, interval-certified exact-carrier dominance/completeness on the residual split-2 selector branch, and current-bank quantitative DM mapping
+- DM flagship gate, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` bounded package that now fixes `σ_hier = (2, 1, 0)` observationally at the pinned chamber point and gives a CP-phase no-go for the known `C_neg` chi²=0 basins under the physical pairing, a reviewed selector obstruction stack that compresses selector-side ambiguity to intrinsic threshold-law nonrealization and exhausts the tested carrier-side pressure to two explicit split-2 upper-face neighborhoods, and a reviewed Wilson direct-descendant science stack showing that current `main` carries no hidden Wilson-to-`dW_e^H` descendant law while explicit structured positive model classes and manifold-valued constructive positive exact closure already exist on the fixed native `N_e` seed surface: the remaining live blockers are `A-BCC` as an axiom-native branch-choice law, the finer right-sensitive microscopic selector law for the physical source branch / point, interval-certified exact-carrier dominance/completeness on the residual split-2 selector branch, and current-bank quantitative DM mapping
 - persistent exact-lattice compact-object companion on `main`, with one
   retained blended readout on the nearby family and a `top4` multistage floor
   that survives beyond the widened pocket, but still below persistent
@@ -206,19 +206,22 @@ Current status from that stack:
 
    The live DM gate already includes the repo-tracked G1 PMNS-as-`f(H)`
    bounded package, the retained local P3 Sylvester linear-path signature
-   theorem, the reviewed selector obstruction science stack, and the reviewed
-   Wilson direct-descendant science stack. So current `main` already fixes the
-   PMNS map from `H`, discharges `q_H` as GAUGE-retained, proves the pointwise
-   signature `(2, 0, 1)` theorem-grade at the retained P3 pin, compresses
-   selector-side ambiguity to intrinsic threshold-law nonrealization on the
-   current exact bank, excludes any hidden Wilson-to-`dW_e^H` descendant law
-   on the current bank, and exhibits explicit structured positive model
-   classes together with manifold-valued constructive positive exact closure
-   on the fixed native `N_e` seed surface, while the tested carrier-side
-   pressure is exhausted to two explicit split-2 upper-face neighborhoods. The
-   gate remains open because the named baseline-connected-component input
-   `A-BCC`, the observational hierarchy pairing `σ_hier = (2, 1, 0)`, the
-   finer right-sensitive microscopic selector law, interval-certified
+   theorem, the observationally unique `σ_hier = (2, 1, 0)` pin theorem, the
+   known-`C_neg` CP-phase no-go support theorem, the reviewed selector
+   obstruction science stack, and the reviewed Wilson direct-descendant
+   science stack. So current `main` already fixes the PMNS map from `H`,
+   discharges `q_H` as GAUGE-retained, proves the pointwise signature
+   `(2, 0, 1)` theorem-grade at the retained P3 pin, fixes the physical
+   hierarchy pairing observationally at that pin, grounds the known
+   component-choice competitors observationally, compresses selector-side
+   ambiguity to intrinsic threshold-law nonrealization on the current exact
+   bank, excludes any hidden Wilson-to-`dW_e^H` descendant law on the current
+   bank, and exhibits explicit structured positive model classes together with
+   manifold-valued constructive positive exact closure on the fixed native
+   `N_e` seed surface, while the tested carrier-side pressure is exhausted to
+   two explicit split-2 upper-face neighborhoods. The gate remains open
+   because `A-BCC` is still observationally grounded rather than axiom-native,
+   the finer right-sensitive microscopic selector law, interval-certified
    exact-carrier dominance/completeness on the residual split-2 selector
    branch, and current-bank quantitative DM mapping are still open.
 

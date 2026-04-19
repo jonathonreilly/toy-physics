@@ -241,8 +241,9 @@ The remaining live paper gates are:
    The live DM gate now includes a repo-tracked G1 PMNS-as-`f(H)`
    conditional/support package: the PMNS map from `H` is fixed, `q_H`
    is discharged as GAUGE-retained by the Higgs `Z_3` gauge-redundancy
-   theorem, and the package yields conditional/support `sin δ_CP` and
-   `θ_23` upper-octant consequences. The reviewed selector obstruction
+   theorem, `σ_hier = (2, 1, 0)` is observationally unique at the pinned
+   chamber point, and the known `C_neg` chi²=0 basins are CP-phase
+   excluded under the physical pairing. The reviewed selector obstruction
    science stack further shows that selector-side ambiguity is already
    compressed to intrinsic threshold-law nonrealization on the current
    exact bank, and that the tested carrier-side pressure is exhausted to
@@ -251,12 +252,12 @@ The remaining live paper gates are:
    carries no hidden Wilson-to-`dW_e^H` descendant law, while explicit
    structured positive model classes and manifold-valued constructive
    positive exact closure already exist on the fixed native `N_e` seed
-   surface. The gate nevertheless remains open because the chamber pin
-   still relies on an imposed branch-choice admissibility rule and the
-   finer right-sensitive microscopic selector law for the physical source
+   surface. The gate nevertheless remains open because `A-BCC` is still
+   observationally grounded rather than axiom-native, and the finer
+   right-sensitive microscopic selector law for the physical source
    branch / point, together with interval-certified exact-carrier
-   dominance/completeness on that residual split-2 selector branch, is
-   still missing.
+   dominance/completeness on that residual split-2 selector branch and
+   current-bank quantitative DM mapping, is still missing.
 
 Outside the flagship paper core, a live partial neutrino boundary/support
 packet is now also on `main`:
