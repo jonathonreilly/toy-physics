@@ -165,6 +165,29 @@ specialization of a genuine theorem.
 That is valuable, but it is not the same as discharging the remaining `A-BCC`
 source-side input.
 
+### Same-day source-side improvement
+
+A later same-day theorem does tighten the DM object-derivation picture even
+though it still stops short of closure:
+
+- `docs/DM_WILSON_DIRECT_DESCENDANT_LOCAL_SCHUR_BRANCH_DISCRIMINANT_THEOREM_NOTE_2026-04-19.md`
+- `scripts/frontier_dm_wilson_direct_descendant_local_schur_branch_discriminant_theorem_2026_04_19.py`
+
+That theorem proves the current branch discriminator is already an exact local
+scalar of the descended charged Schur block:
+
+```text
+Delta_src(dW_e^H) = det(H_e(L_e)),
+```
+
+with `H_e(L_e) = Herm(L_e^(-1))`, and shows ambient Wilson completions cannot
+change the branch sign once `L_e` is fixed.
+
+So the remaining DM gap is no longer "some unspecified source-side chart
+choice." It is the finer sign law on `L_e` itself. That is real progress on
+the source-side object, but the positive sign law is still not derived from
+retained physics, so the gate remains open at the reviewer's bar.
+
 ### Science decision
 
 DPLE should be treated as a **support theorem on the open DM gate**:

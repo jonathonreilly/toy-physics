@@ -95,6 +95,19 @@ degenerate; `d >= 4` fragments (explicit `d = 4` example with 2
 interior Morse-idx-0 CPs). Uhlig 1982 sign-characteristic
 classification provides the dim-parametric backbone.
 
+Same-day source-side tightening: the current branch discriminator on the DM
+route is already an exact local scalar of the descended charged Schur block,
+
+```text
+Delta_src(dW_e^H) = det(H_e(L_e)),
+```
+
+with `H_e(L_e) = Herm(L_e^(-1))`, and that sign is invariant under ambient
+Wilson completions once `L_e` is fixed. So the open DM source-side object is
+now the finer sign law on `L_e` itself, not a vague chart-choice placeholder.
+See
+`docs/DM_WILSON_DIRECT_DESCENDANT_LOCAL_SCHUR_BRANCH_DISCRIMINANT_THEOREM_NOTE_2026-04-19.md`.
+
 See `docs/DM_DPLE_DIMENSION_PARAMETRIC_EXTREMUM_THEOREM_NOTE_2026-04-19.md`.
 Runner PASS=19 FAIL=0.
 
