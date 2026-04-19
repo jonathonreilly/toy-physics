@@ -23,9 +23,11 @@
 3. The three hw=1 states are related by the Z₃ cyclic subgroup:
    `e₁ → e₂ → e₃ → e₁`.
 
-4. Each hw=1 state carries identical SU(2)×U(1) quantum numbers (same eigenvalue
-   structure under all gauge generators), so the Z₃ orbit provides 3 generation
-   candidates with identical gauge quantum numbers.
+4. The hw=1 sector has Y eigenvalues {+1/3, +1/3, −1} and T₃ eigenvalues
+   {−1/2, +1/2, +1/2} within the 3D subspace. The Z₃ cyclic symmetry relates all
+   three states; the combined matter content — two quark-like (Y=+1/3) and one
+   lepton-like (Y=−1) — is consistent with one SM left-handed generation, and the
+   three-fold Z₃ degeneracy provides 3 such generation candidates.
 
 ---
 
@@ -69,30 +71,37 @@ The hw=1 sector `{e₁, e₂, e₃}` has characters:
 This matches `A₁ + E` exactly — the standard 3-point permutation representation.
 The Z₃ element `(123)` sends `e₁ → e₂ → e₃ → e₁` (cyclic, verified numerically).
 
-### D. Equal Gauge Quantum Numbers
+### D. Quantum Number Content of the hw=1 Sector
 
-All three hw=1 states are related by Z₃ ⊂ S₃ which commutes with:
-- Hamming weight → same SU(3)_c sector
-- Hypercharge Y (Y is defined on the b₁b₂ base and fiber independently of which
-  axis is "active")
-- SU(2)_weak fiber (acts on b₃ independently of Z₃ base permutation)
+Z₃ cycles all three tensor factors: e₁→e₂→e₃→e₁. Because Z₃ maps b₃ (fiber)
+to b₁ (base) and back, it does NOT preserve the base/fiber decomposition on which
+Y and T₃ are defined. Individual hw=1 states are NOT Y eigenstates:
+- e₃ = |0,0,1⟩ (b₃=1): Y eigenstate with Y = +1/3, T₃ = +1/2
+- e₁ = |1,0,0⟩ and e₂ = |0,1,0⟩ (b₃=0, mixed base): T₃ = +1/2 each (σ₃|0⟩ = +|0⟩);
+  symmetric combination (e₁+e₂)/√2 has Y = +1/3, antisymmetric (e₁−e₂)/√2 has Y = −1.
 
-Therefore each generation candidate carries the same `SU(2)×U(1)` quantum numbers.
+The Y eigenvalue spectrum of the full 3D hw=1 subspace is {+1/3, +1/3, −1}.
+The T₃ spectrum is {−1/2, +1/2, +1/2}.
+
+The Z₃ symmetry establishes these three states as a degenerate generation-structure
+orbit: each copy of the lattice (choosing a different axis as the "generation axis")
+gives the same {+1/3, +1/3, −1} matter content, so three Z₃-orbit copies yield
+three families with the same quantum number structure.
 
 ---
 
 ## Physical Interpretation
 
 The three taste doublers from Z³ staggered fermions are not spurious artifacts:
-they are the algebraic origin of three generations, each carrying identical
-electroweak quantum numbers and related by the Z₃ cyclic symmetry of the cubic
-lattice.
+they are the algebraic origin of three generation-analogous structures, each with
+Y spectrum {+1/3, +1/3, −1} and T₃ spectrum {−1/2, +1/2, +1/2}, related by the
+Z₃ cyclic symmetry of the cubic lattice.
 
 The S₃ → Z₃ → 3 generations chain is:
 1. Z³ spatial lattice has cubic symmetry S₃ (axis permutations)
 2. Staggered doubling maps each spatial axis to a taste direction
 3. Z₃ subgroup cyclically permutes the three taste-axis states
-4. All three carry the same SU(2)×U(1) content → 3 identical generations
+4. Each copy has Y spectrum {+1/3, +1/3, −1} (quark-like + lepton-like) → 3 generation-analogous structures
 
 This provides the algebraic basis for "taste = generation" without requiring
 additional matter input.
@@ -109,7 +118,8 @@ additional matter input.
 | C^8 = 4A₁ + 0A₂ + 2E | exact |
 | hw=1: A₁+E permutation rep | exact |
 | Z₃ cycles {e₁→e₂→e₃→e₁} | exact |
-| hw=1 states carry equal Y eigenvalues | exact |
+| hw=1 Y spectrum: {−1, +1/3, +1/3} | exact |
+| hw=1 T₃ spectrum: {−1/2, +1/2, +1/2} | exact |
 
 Independent crosscheck: `scripts/frontier_s3_action_taste_cube_decomposition.py`
 produces identical decomposition (63/63 pass, 0 fail).
@@ -119,7 +129,8 @@ produces identical decomposition (63/63 pass, 0 fail).
 ## What This Theorem Closes
 
 - **Taste = generation blocker**: Z₃ cyclic symmetry of Z³ forces exactly 3
-  generation candidates with identical SU(2)×U(1) quantum numbers
+  generation candidates; the hw=1 sector has Y spectrum {+1/3, +1/3, −1} and
+  T₃ spectrum {−1/2, +1/2, +1/2}, consistent with one SM left-handed generation
 - Provides algebraic support for the three-generation matter structure already
   retained in `MINIMAL_AXIOMS_2026-04-11.md`
 

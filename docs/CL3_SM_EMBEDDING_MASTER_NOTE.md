@@ -1,7 +1,7 @@
 # Cl(3) → SM Embedding: Master Synthesis Note
 
 **Date:** 2026-04-19
-**Status:** retained, all 94 algebraic checks pass
+**Status:** retained, all 95 algebraic checks pass
 **Claim boundary authority:** this note (synthesis); sub-theorems have individual notes
 **Script:** `scripts/verify_cl3_sm_embedding.py`
 
@@ -19,14 +19,14 @@ Starting from the single framework axiom — local algebra `Cl(3)` on spatial su
 | `g₂² = 1/(d+1) = 1/4` | `dim(Cl⁺(3)) = 4` | retained |
 | `g_Y² = 1/(d+2) = 1/5` | `dim(Cl⁺(3) + {ω}) = 5` | retained |
 | Y eigenvalues +1/3 / −1 | P_symm base projector | retained |
-| SM anomaly cancellation | `Tr(Y) = 0` | retained |
+| Y tracelessness (precondition for anomaly cancellation) | `Tr(Y) = 0` | retained |
 | N_c = 3 | `dim(Z³) = 3` axes | retained |
-| SU(3)_c algebra | automorphism of sym 3D base | retained |
+| SU(3)_c algebra | acts on sym 3D base of taste cube | retained |
 | `[SU(3), SU(2)] = 0` | tensor product base⊗fiber | retained |
-| `R_conn = 8/9` | SU(3) Fierz identity | retained |
+| `R_conn = 8/9` (leading order) | SU(N_c) adjoint fraction; Fierz confirms | retained |
 | sqrt(9/8) EW correction | 1/R_conn from Fierz | retained |
 | 3 generations | Z₃ orbit of hw=1 taste triplet | retained |
-| Equal generation charges | Z₃ permutes within gauge sector | retained |
+| hw=1 Y spectrum {+1/3, +1/3, −1} | quark-like × 2 + lepton-like × 1 per orbit | retained |
 | A-BCC det(H) ≥ 0 | Kramers degeneracy, T²<0 on L-sector | retained |
 
 ---
@@ -69,12 +69,13 @@ the Fierz completeness relation gives:
 ∑_a T^a_{ij} T^a_{kl} = (1/2)δᵢₗδₖⱼ − (1/(2N_c))δᵢⱼδₖₗ
 ```
 
-Taking the color-singlet to color-octet ratio:
+The adjoint (non-singlet) fraction of the N_c×N_c matrix algebra is:
 ```
 R_conn = (N_c²−1)/N_c² = 8/9
 ```
 
-This is algebraic; the sqrt(9/8) EW-color correction follows immediately.
+This is the leading-order algebraic value; O(1/N_c^4) ~ 1.2% corrections are bounded in
+`RCONN_DERIVED_NOTE.md`. The sqrt(9/8) EW-color correction follows at the same order.
 
 **Authority:** [CL3_COLOR_AUTOMORPHISM_THEOREM.md](CL3_COLOR_AUTOMORPHISM_THEOREM.md), Section D.
 
@@ -93,7 +94,7 @@ T² = J₂ · J₂* = −(1/4)I₄ < 0
 
 Kramers theorem for T² < 0: every eigenvalue of any Hermitian operator in this
 sector must be doubly degenerate. Therefore any H_L in the span of L-sector SU(2)
-generators has paired eigenvalues, and `det(H_L) = (λ₁λ₁)(λ₂λ₂) ≥ 0`.
+generators has paired eigenvalues, and `det(H_L) = λ₁²λ₂² ≥ 0`.
 
 The positivity of the condensate determinant is a theorem, not a postulate.
 
@@ -166,11 +167,11 @@ Script: `scripts/verify_cl3_sm_embedding.py`
 | D | Bare couplings g₂², g_Y² | 5 | 5/5 |
 | E | Fiber SU(2) commutes with Y | 7 | 7/7 |
 | F | Y eigenvalues +1/3 / −1 | 11 | 11/11 |
-| G | S₃ on C^8, hw=1 = 3 gen | 13 | 13/13 |
+| G | S₃ on C^8, hw=1 = 3 gen | 14 | 14/14 |
 | H | SU(3)_c, T_F=1/2, Fierz | 6 | 6/6 |
 | I | N_c=3, R_conn=8/9 | 7 | 7/7 |
 | J | A-BCC Kramers | 19 | 19/19 |
-| **Total** | | **94** | **94/94** |
+| **Total** | | **95** | **95/95** |
 
 ---
 

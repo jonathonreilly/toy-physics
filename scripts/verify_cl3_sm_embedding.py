@@ -407,9 +407,23 @@ ok_G &= check(f"  hw=1 triplet: chi(2c)={chi_hw1_2c:.0f}, chi(3c)={chi_hw1_3c:.0
               np.isclose(chi_hw1_2c, 1) and np.isclose(chi_hw1_3c, 0),
               f"  -> A1+E (permutation rep of 3-orbit)")
 
-# Z3 maps each generation to the next: captures 3-fold generation structure
-ok_G &= check("  Z3 cyclically permutes 3 generation candidates",
-              True, "each gen carries same SU(2)xU(1) content, related by Z3")
+# hw=1 Y eigenvalue spectrum: restricted 3×3 Y matrix has eigenvalues {-1, +1/3, +1/3}
+# (two quark-like states at Y=+1/3 and one lepton-like state at Y=-1)
+Y_hw1 = Y[np.ix_(hw1_idx, hw1_idx)]
+evals_Y_hw1 = sorted(np.linalg.eigvalsh(Y_hw1.real))
+expected_Y_hw1 = sorted([-1.0, 1/3, 1/3])
+ok_G &= check("  hw=1 Y spectrum: {-1, +1/3, +1/3}  (quark-like x2, lepton-like x1)",
+              np.allclose(evals_Y_hw1, expected_Y_hw1, atol=1e-8),
+              f"got {np.round(evals_Y_hw1, 4)}")
+
+# hw=1 T3 eigenvalue spectrum: Jf3 on hw=1 gives {-1/2, +1/2, +1/2}
+# e1=(1,0,0) and e2=(0,1,0) have b3=0 → T3=+1/2 (s3|0>=+|0>)
+# e3=(0,0,1) has b3=1 → T3=-1/2 (s3|1>=-|1>)
+Jf3_hw1 = Jf3[np.ix_(hw1_idx, hw1_idx)]
+evals_T3_hw1 = sorted(np.linalg.eigvalsh(Jf3_hw1.real))
+ok_G &= check("  hw=1 T3 eigenvalues: {-1/2, +1/2, +1/2}  (one down-type, two up-type)",
+              np.allclose(evals_T3_hw1, sorted([-0.5, 0.5, 0.5]), atol=1e-8),
+              f"got {np.round(evals_T3_hw1, 4)}")
 
 check("Section G", ok_G)
 
