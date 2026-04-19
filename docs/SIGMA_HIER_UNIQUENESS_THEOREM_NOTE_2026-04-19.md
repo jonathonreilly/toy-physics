@@ -115,6 +115,13 @@ chamber pin under the 4-observable PMNS constraint).
   separately; see `ABCC_CP_PHASE_NO_GO_THEOREM_NOTE_2026-04-19.md`).
 - Does not pin the absolute neutrino mass scale (different carrier).
 - Does not determine the solar gap Δm²_21 (different carrier).
+- **Does not claim chamber-wide uniqueness.** The uniqueness is conditional
+  on the pinned chamber point `(0.657061, 0.933806, 0.715042)`. Other
+  H-parameter basins (e.g., Basin N at `(m, δ, q₊) ≈ (0.502, 0.854, 0.426)`,
+  identified on the parallel `review/scalar-selector-cycle1-theorems` branch)
+  may yield physically consistent PMNS fits with their own σ_hier selection.
+  The pinned-point uniqueness result is technically correct and verified; a
+  chamber-wide uniqueness proof requires separate analysis across all basins.
 
 ## Reproduction
 

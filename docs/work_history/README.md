@@ -29,8 +29,6 @@ package.
   - active flagship paper surface
 - `docs/work_history/`
   - explicit historical bucket
-- `docs/work_history/atomic/`
-  - bounded atomic companions and salvage packets
 - `docs/work_history/repo/review_feedback/`
   - archived operational review packets and resolved audit histories
 - `docs/work_history/repo/backlog/`

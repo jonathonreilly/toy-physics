@@ -244,10 +244,10 @@ isoelectronic promotion than the evidence supported.
 
 **Primary sources:**
 
-- [HYDROGEN_HELIUM_ATOMIC_COMPANION_NOTE_2026-04-18.md](../atomic/HYDROGEN_HELIUM_ATOMIC_COMPANION_NOTE_2026-04-18.md)
-- [frontier_atomic_hydrogen_lattice_companion.py](../../../scripts/frontier_atomic_hydrogen_lattice_companion.py)
-- [frontier_atomic_helium_hartree_companion.py](../../../scripts/frontier_atomic_helium_hartree_companion.py)
-- [frontier_atomic_helium_jastrow_companion.py](../../../scripts/frontier_atomic_helium_jastrow_companion.py)
+- [HYDROGEN_HELIUM_LATTICE_NOTE.md](../../HYDROGEN_HELIUM_LATTICE_NOTE.md)
+- [hydrogen_from_graph_dynamics.py](../../../scripts/hydrogen_from_graph_dynamics.py)
+- [helium_hartree_scf.py](../../../scripts/helium_hartree_scf.py)
+- [helium_jastrow_vmc.py](../../../scripts/helium_jastrow_vmc.py)
 
 **Needed to unfreeze:**
 

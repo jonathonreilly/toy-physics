@@ -86,7 +86,7 @@ mechanism (see `ELECTRON_MASS_BLOCKAGE_NOTE.md` — blockage is structural).
 ## Chapter 3 — Cl(3) → Standard Model Embedding
 
 **Sources:** `CL3_SM_EMBEDDING_MASTER_NOTE.md` and theorem docs  
-**Verification:** `verify_cl3_sm_embedding.py` — **94/94 algebraic checks PASS**
+**Verification:** `verify_cl3_sm_embedding.py` — **95/95 algebraic checks PASS**
 
 Starting from Cl(3) on Z³, the full SM gauge structure emerges algebraically:
 
@@ -184,8 +184,7 @@ M₃ = M_Pl × α_LM^7               = 6.150 × 10¹¹ GeV
 ## Chapter 6 — Lepton Mass Tower
 
 **Sources:** `KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md`,
-`KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md`,
-`CLUSTER_A_ASSUMPTIONS_AUDIT_2026-04-19.md`
+`KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md`
 
 ### Z³ scalar potential
 
@@ -405,7 +404,7 @@ Remaining tensions at (m_0, d_0):
 - The β_q23 ratio WORSENS to 4.9×10⁻⁴ at (m_0, d_0) vs 3.1×10⁻⁴ at m_prod1
 - The two cross-sector conditions (κ=κ_PDG and β ratio=S) are mutually incompatible at d≠S
 
-**Three α_EM² near-identities (`frontier_koide_gap_relentless.py`, `frontier_koide_gap_koide_scale.py`):**
+**Three α_EM² near-identities (`frontier_koide_gap_2d_intersection.py`, `frontier_koide_gap_residual_audit.py`):**
 
 | Identity | Value | Accuracy | Cl(3) factors |
 |---|---|---|---|
@@ -427,7 +426,7 @@ as a secondary consequence (less precise due to nonlinear m→ε sensitivity). T
 identity involves α_LM (the framework's bare coupling) and is consistent with
 α_LM ≈ 4π·α_EM (which holds at the 1% level).
 
-**J₃ cubic structure (algebraic, `frontier_koide_gap_relentless.py`):** Since T_M² = I
+**J₃ cubic structure (algebraic, `frontier_koide_gap_exhaustive.py`):** Since T_M² = I
 (exact algebraic identity), J₃_sel(m) = Tr(H_sel³) is a DEPRESSED CUBIC with no m²
 term: J₃_sel(m) = m³ + 3A·m + B where A = Tr(H₀²·T_M), B = Tr(H₀³). This was
 confirmed to floating-point precision. The only J₃ crossing with J₃_PMNS in [−5, +5] is
@@ -468,16 +467,21 @@ Physical interpretation: the tree-level Cl(3) normalization uvw=1 acquires:
 
 The gap then closes when uvw(m) = 1 − α/(2π)(1+2C₂α), which occurs at m = m_*.
 
-**Running mass scale (`frontier_koide_gap_koide_scale.py`):** One-loop QED running of
-lepton masses in QED gives κ(running masses at μ_K) = κ_prod1 exactly at:
+**Running mass scale (`frontier_koide_gap_running_mass_fix.py`):** One-loop QED running of
+lepton masses with correct threshold decoupling (each lepton held at pole for μ < m_l) gives
+κ(running masses at μ_K) = κ_prod1 exactly at:
 ```
-μ_K = 164.5 MeV = 1.557 × m_μ
+μ_K = 164.32 MeV = 1.5552 × m_μ
 ```
-New candidate: μ_K/m_μ ≈ **14/9 = 1.5556 to 0.064%** (`frontier_koide_gap_residual_audit.py`).
-Note: 14 = dim(Cl(3)) + dim(Cl⁺(3)) + 2 = 8+4+2, or 2×7 where 7 = dim(Im O) (octonions).
-The denominator 9 = N_c². This gives 14/9 = dim-ratio × N_c⁻², plausibly of Cl(3) origin.
-Two-factor alternative: √3 × E1/(1+S) = 6√2−4√3 ≈ 1.557 to 0.034%.
-The running mass route is scheme-dependent and remains provisionally open.
+Precision identification: μ_K/m_μ = **14/9 = 1.5556 to 0.02%** — the cleanest rational.
+14 = N_c² + N_c + 2 = 9+3+2 (N_c=3), or equivalently 14/9 = C₂×(7/6) where C₂=4/3.
+**Gap closure at μ_K: NEGATIVE.** The κ gap (κ_prod1 − κ_PDG = −4.82×10⁻⁵) does NOT
+close at μ_K. Using α(μ_K) in the loop formula still gives κ ≈ κ_PDG, not κ_prod1.
+The running mass route is **DEAD for gap closure**. μ_K is physically interesting
+(where running masses satisfy the Z³ κ-condition) but does not bridge the Koide gap.
+
+**Earlier result μ_K = 164.5 MeV from koide_scale.py was a trapezoidal approximation
+artefact; the correct value with proper integration is 164.32 MeV.**
 
 ### Open directions
 
@@ -485,9 +489,10 @@ The running mass route is scheme-dependent and remains provisionally open.
    0.00006%, effectively exact. The subleading factor 1/S = 3/√6 = SELECTOR⁻¹ is a
    natural Z₃ symmetry scale. No further residual requires explanation at achievable precision.
 
-2. **μ_K identification (PARTIAL)**: μ_K/m_μ ≈ 14/9 to 0.064%, or 6√2−4√3 to 0.034%.
-   The 14 = 8+4+2 Cl(3) decomposition is plausible but not proven from first principles.
-   Scheme dependence limits the physicality of μ_K — this route is inconclusive.
+2. **μ_K identification (CLOSED — dead for gap)**: μ_K = (14/9)×m_μ to 0.02% where
+   14 = N_c²+N_c+2. This is the scale where running masses satisfy the Z³ κ-condition.
+   Gap closure test at μ_K: NEGATIVE — the Koide gap Δκ = 4.82×10⁻⁵ is NOT closed.
+   This route is fully exhausted.
 
 3. **One-loop+color-Casimir uvw structure (CONFIRMED to 0.0066%)**: uvw(m_*) − 1 =
    −α/(2π) − (2C₂/(2π))α² where C₂ = 4/3 = S×E1. One-loop alone is 1.9% off; including
@@ -534,6 +539,25 @@ The running mass route is scheme-dependent and remains provisionally open.
    self-consistency check at m_loop; the 0.62% uvw variation across the plateau (7.3×10⁻⁶)
    represents the inherent ambiguity in the mass point from PDG observables alone.
 
+7. **5-ANGLE SIMULTANEOUS ATTACK (`frontier_koide_gap_0p0066_attack.py` + `frontier_koide_gap_running_mass_fix.py`):**
+   All five routes exhausted — none closes the gap:
+   ```
+   A. Higher-order loops: X3 = −118.83 at m_cos, no Cl(3) form. Padé [1,1]
+      (p=47.23, q=44.56) shifts m by 3.2×10⁻⁷ — far less than gap. DEAD.
+   B. R_conn corrections: R_conn = 8/9 algebraically exact for SU(3). C₂_eff
+      at m_cos = 0.900, ΔC₂/C₂ = −32.5% — unphysical. DEAD.
+   C. Running masses: μ_K = 164.32 MeV = (14/9)×m_μ to 0.02% (corrected from
+      prior 164.5 MeV artefact). Gap test: κ residual at μ_K = 0.016% of Δκ.
+      Gap NOT closed. Route DEAD for gap closure.
+   D. PSLQ: T = (544/45)π is the ONLY clean exact form. Two-constant forms
+      (3π + (7003/170)ln2 etc.) have large denominators — not natural.
+   E. Cross-sector: m_loop vs m_exact differ by 482.8% of total gap. DEAD.
+   ```
+   **Final conclusion:** The color-Casimir formula is complete. The Koide gap
+   (Δκ = 4.82×10⁻⁵) is irreducible at single-sector; it equals one retained
+   observable (κ_PDG or m_τ). Five independent angle attacks confirm no loop,
+   algebraic, or running-mass mechanism closes it without cross-sector input.
+
 ---
 
 ## Derivation Chain Summary
@@ -552,9 +576,9 @@ Cl(3) on Z³
 │   taste staircase (7/18 weight)  α_EM = 1/136.4   (0.21%)
 │
 ├─► Cl⁺(3)≅ℍ, Z₃ orbit, Fierz    (embedding)
-│   SU(2)×U(1)×SU(3) quantum numbers (94/94 PASS)
+│   SU(2)×U(1)×SU(3) quantum numbers (95/95 PASS)
 │   3 generations, Y spectrum
-│   A-BCC: Kramers theorem (proved)
+│   L-sector det(H_L)≥0: Kramers (proved); A-BCC sheet: observationally grounded
 │
 ├─► H(m,δ,q₊) affine chart        (PMNS)
 │   PMNS angles: 9/9 NuFit PASS
@@ -597,7 +621,6 @@ Cl(3) on Z³
 |---|---|---|
 | Atoms | `HYDROGEN_HELIUM_LATTICE_NOTE.md` | `hydrogen_from_graph_dynamics.py`, `helium_hartree_scf.py` |
 | Atoms | `FRAMEWORK_VS_STANDARD_QM_NOTE.md` | `helium_jastrow_vmc.py`, `helium_isoelectronic_series.py` |
-| Atoms (archive) | `work_history/atomic/HYDROGEN_HELIUM_ATOMIC_COMPANION_NOTE_2026-04-18.md` | `frontier_atomic_*_companion.py` |
 | α_EM | `ALPHA_EM_DERIVATION_NOTE.md` | `alpha_em_from_axioms.py` |
 | α_EM audit | `ALPHA_EM_AUDIT_NOTE.md`, `ELECTRON_MASS_BLOCKAGE_NOTE.md` | `electron_mass_from_axioms.py` |
 | Cl(3)→SM | `CL3_SM_EMBEDDING_MASTER_NOTE.md` | `verify_cl3_sm_embedding.py` |
@@ -610,8 +633,10 @@ Cl(3) on Z³
 | Scalar potential | `KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md` | `frontier_koide_z3_scalar_potential.py` |
 | Selector gap | `KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md` | `frontier_koide_cl3_selector_gap.py` |
 | Scale identity | — | `frontier_koide_scale_selector_identity.py`, `frontier_koide_eigenvalue_q23_surface.py` |
-| Assumptions audit | `CLUSTER_A_ASSUMPTIONS_AUDIT_2026-04-19.md` | — |
-| Gap theorem | — | `frontier_koide_gap_4x4_investigation.py`, `frontier_koide_gap_oneloop_analysis.py`, `frontier_koide_gap_closure_theorem.py` |
-| Gap relentless | — | `frontier_koide_gap_relentless.py`, `frontier_koide_gap_koide_scale.py` |
+| PMNS β ratio | — | `frontier_koide_pmns_beta_ratio_origin.py` |
+| Gap exhaustive | — | `frontier_koide_gap_exhaustive.py` (25+ routes) |
+| Gap 2D intersection | — | `frontier_koide_gap_2d_intersection.py` (ε₀ identity) |
 | Gap residual audit | — | `frontier_koide_gap_residual_audit.py` |
-| Gap closure / 38 | — | `frontier_koide_gap_38_investigation.py` |
+| Gap loop / 272/45 | — | `frontier_koide_gap_38_investigation.py` |
+| Gap 5-angle attack | — | `frontier_koide_gap_0p0066_attack.py` |
+| Gap running mass | — | `frontier_koide_gap_running_mass_fix.py` (μ_K) |

@@ -27,7 +27,7 @@ Starting from the single framework axiom — local algebra `Cl(3)` on spatial su
 | sqrt(9/8) EW correction | 1/R_conn from Fierz | retained |
 | 3 generations | Z₃ orbit of hw=1 taste triplet | retained |
 | hw=1 Y spectrum {+1/3, +1/3, −1} | quark-like × 2 + lepton-like × 1 per orbit | retained |
-| A-BCC det(H) ≥ 0 | Kramers degeneracy, T²<0 on L-sector | retained |
+| L-sector det(H_L) ≥ 0 | Kramers degeneracy (T²<0 on chiral L-sector) — necessary but not sufficient for full A-BCC | retained |
 
 ---
 
@@ -79,7 +79,7 @@ This is the leading-order algebraic value; O(1/N_c^4) ~ 1.2% corrections are bou
 
 **Authority:** [CL3_COLOR_AUTOMORPHISM_THEOREM.md](CL3_COLOR_AUTOMORPHISM_THEOREM.md), Section D.
 
-### Blocker 4: A-BCC det(H) ≥ 0 — Kramers degeneracy
+### Blocker 4: L-sector det(H_L) ≥ 0 — Kramers degeneracy
 
 **Before:** `det(H) > 0` for the bilinear condensate operator was imposed as a
 positivity assumption.
@@ -96,7 +96,15 @@ Kramers theorem for T² < 0: every eigenvalue of any Hermitian operator in this
 sector must be doubly degenerate. Therefore any H_L in the span of L-sector SU(2)
 generators has paired eigenvalues, and `det(H_L) = λ₁²λ₂² ≥ 0`.
 
-The positivity of the condensate determinant is a theorem, not a postulate.
+The L-sector determinant positivity is a theorem, not a postulate.
+
+**Scope boundary:** Kramers establishes `det(H_L) ≥ 0` on the chiral L-sector.
+This is a **necessary but not sufficient** condition for full A-BCC (physical-sheet
+selection C_base vs C_neg). The physical-sheet choice requires additional observational
+grounding — two Sylvester-inertia basins (C_base signature (1,0,2) and C_neg signature
+(2,0,1)) are both geometrically valid; T2K/NOvA exclusion of C_neg is the current
+operational closure. Axiom-native derivation of the physical-sheet selector remains
+open. See `DM_LEPTON_SYNTHESIS_NOTE_2026-04-19.md` §2.3.
 
 **Authority:** [CL3_SM_EMBEDDING_THEOREM.md](CL3_SM_EMBEDDING_THEOREM.md) and
 `scripts/verify_cl3_sm_embedding.py` Section J.
@@ -186,7 +194,7 @@ Script: `scripts/verify_cl3_sm_embedding.py`
 | Y = +1/3 / −1 | `NATIVE_GAUGE_CLOSURE_NOTE.md`: abelian factor |
 | [SU(3),SU(2)] = 0 | `NATIVE_GAUGE_CLOSURE_NOTE.md`: gauge-structure backbone |
 | 3 generations | `MINIMAL_AXIOMS_2026-04-11.md`: three-generation structure |
-| A-BCC | Chiral condensate positivity in plaquette evaluation |
+| L-sector det(H_L) ≥ 0 | Chiral condensate positivity via Kramers (L-sector only) |
 
 ---
 

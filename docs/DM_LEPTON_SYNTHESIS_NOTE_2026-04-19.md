@@ -2,8 +2,9 @@
 
 **Date:** 2026-04-19  
 **Branch:** `frontier/dm-leptons-review`  
-**Status:** Complete derivation stack from Cl(3)/Z³ axiom through
-observational-promotion closure
+**Status:** Axiom-native derivation stack complete through embedding + α_EM;
+A-BCC physical-sheet selection observationally grounded (T2K/NOvA), not yet
+axiom-native — the last open gate on P3
 
 ## Overview
 
