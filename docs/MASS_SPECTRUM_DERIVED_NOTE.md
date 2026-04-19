@@ -18,6 +18,21 @@ single reviewer entry point.  Each phase has its own runner and its
 own authority note.  This document is the index + honest-accounting
 table for the entire lane.
 
+Quark-only reviewer front door on current `main`:
+[QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md](./QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md).
+That packet now separates three quark endpoints clearly:
+minimal-surface CKM-CP no-go, bounded reduced projector-ray closure, and a
+broader bounded complex-carrier existence proof. None of those upgrades the
+quark full closure to retained status. The latest quark-side update also
+compresses the remaining reduced up-amplitude freedom to a short bounded exact
+candidate shortlist rather than a completely free scalar, and the follow-on
+restricted native-expression scan shows that the current exact
+projector/support grammar still does not force one dominant law. The newest
+follow-on widened native-affine-support no-go sharpens that again: even the
+projector-prefactored affine `delta_A1` family can beat the current best
+refit and anchored baselines separately, but it still does not produce one
+dominant reduced up-amplitude law.
+
 ## The five phases
 
 | Phase | Sector | Runner | Note | Status |
@@ -202,17 +217,17 @@ closure).
 Run all five in sequence:
 
 ```bash
-python3 scripts/frontier_mass_ratio_ckm_dual.py
-python3 scripts/frontier_mass_ratio_up_sector.py
+python3 scripts/frontier_quark_mass_ratio_review.py
 python3 scripts/frontier_mass_ratio_lepton_sector.py
 python3 scripts/frontier_neutrino_mass_derived.py
 python3 scripts/frontier_cosmology_from_mass_spectrum.py
 ```
 
+The quark packet runner replays Phase 1 and Phase 2 internally.
+
 Expected result on `main`:
 
-- `frontier_mass_ratio_ckm_dual.py`: `PASS=23 FAIL=0`
-- `frontier_mass_ratio_up_sector.py`: `PASS=23 FAIL=0`
+- `frontier_quark_mass_ratio_review.py`: `PASS=46 FAIL=0`
 - `frontier_mass_ratio_lepton_sector.py`: `PASS=11 FAIL=0`
 - `frontier_neutrino_mass_derived.py`: `PASS=19 FAIL=0`
 - `frontier_cosmology_from_mass_spectrum.py`: `PASS=14 FAIL=0`
