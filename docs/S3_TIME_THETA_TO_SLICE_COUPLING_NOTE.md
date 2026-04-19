@@ -1,136 +1,105 @@
-# Route 2 `Theta_R` to Slice Coupling: Bounded Candidate and Exact Blocker
+# Route 2 Readout to Slice Coupling
 
-**Date:** 2026-04-14  
-**Purpose:** identify the cleanest current law that couples the missing tensor
-support observable `Theta_R` into the exact slice generator `Lambda_R` /
-bounded transfer law `T_R = exp(-Lambda_R)` on `PL S^3 x R`
+**Date:** 2026-04-19  
+**Purpose:** state the current exact status of the Route-2
+`Theta_R -> Lambda_R` coupling problem after the exact bilinear carrier and
+the new readout/time-coupling theorem block
 
 ## Verdict
 
-The cleanest current answer is **bounded, not exact**.
+The current answer is no longer “bounded staging object only.”
 
-The route-2 stack already gives:
+The branch now has:
 
-- exact `S^3` spatial closure
-- exact anomaly-forced time with a single clock, `d_t = 1`
-- exact route-2 background `PL S^3 x R`
-- exact slice generator `Lambda_R`
-- bounded transfer operator `T_R = exp(-Lambda_R)`
+- exact slice backbone `Lambda_R`, `T_R = exp(-Lambda_R)`
+- exact bilinear carrier `K_R`
+- exact restricted readout reduction to one admissible map `P_R`
+- exact conditional coupling family
+  `Xi_P(t ; c) = (P_R c) ⊗ exp(-t Lambda_R) u_*`
 
-The missing object is still the exact tensor-valued support observable on
-`A1 x {E_x, T1x}`. On the exact support-side stack, that exact tensor carrier
-does not exist.
+What it still does **not** have is one unique exact readout-to-slice theorem,
+because the readout map itself is not yet derived exactly.
 
-So the best current law is a **bounded staging law**:
+So the honest endpoint is:
 
-> `Theta_R^(0)(q) = (gamma_E(q), gamma_T(q))`
+> exact conditional coupling family, exact induced obstruction to uniqueness.
 
-with the remaining `A1` dependence organized by the exact support scalar
+## Exact ingredients already available
 
-> `delta_A1(r) = 1 / (6 (1 + sqrt(6) r))`.
+### Carrier
 
-That bounded law can feed the route-2 slice bridge only as a source-side
-staging observable. It does **not** upgrade `Lambda_R` into an exact
-Einstein/Regge dynamics theorem.
+- `K_R(q) = (u_E, u_T, delta_A1 u_E, delta_A1 u_T)`
 
-## Exact route-2 ingredients already in hand
+### Readout class
 
-### Kinematics
+- restricted bright form
+  `gamma_E = alpha_E u_E + beta_E delta_A1 u_E`
+  `gamma_T = alpha_T u_T + beta_T delta_A1 u_T`
 
-The retained kinematic background is exact:
+### Slice backbone
 
-- `PL S^3 x R`
+- exact `Lambda_R`
+- exact `T_R = exp(-Lambda_R)`
+- exact seed law `V_R(t) = exp(-t Lambda_R) u_*`
 
-from:
+## Exact conditional coupling family
 
-- [`S3_GENERAL_R_DERIVATION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/S3_GENERAL_R_DERIVATION_NOTE.md)
-- [`ANOMALY_FORCES_TIME_THEOREM.md`](/Users/jonreilly/Projects/Physics/docs/ANOMALY_FORCES_TIME_THEOREM.md)
+Once an admissible readout map `P_R` is chosen, the current branch supports
+the exact family
 
-### Slice generator
+```text
+Xi_P(t ; c) = (P_R c) ⊗ V_R(t)
+```
 
-The exact microscopic shell action supplies the exact slice generator:
+for every restricted carrier column `c`.
 
-- `I_R(f ; j) = 1/2 f^T Lambda_R f - j^T f`
+This is exact because:
 
-from:
+1. `c` is exact,
+2. `P_R` is algebraic once specified,
+3. `V_R(t)` is exact.
 
-- [`OH_SCHUR_BOUNDARY_ACTION_NOTE.md`](/Users/jonreilly/Projects/Physics/docs/OH_SCHUR_BOUNDARY_ACTION_NOTE.md)
+So the route does not lack a carrier-to-slice construction anymore.
 
-The induced transfer operator is the bounded one-step law:
+## Why the unique theorem is still blocked
 
-- `T_R = exp(-Lambda_R)`
+The readout theorem does not yet derive the endpoint triple
 
-## Bounded `Theta_R` staging law
+```text
+beta_T / alpha_T = -1
+alpha_T / alpha_E = -2
+beta_E / alpha_E = 21/4.
+```
 
-The current best route-2 tensor staging object is the bright-channel pair:
+Therefore the readout map remains non-unique even on the restricted class.
 
-- `Theta_R^(0)(q) = (gamma_E(q), gamma_T(q))`
+The new runner shows this directly:
 
-on the microscopic support block:
+- distinct exact admissible maps agree at shell normalization,
+- but produce different center `E` source factors,
+- so they produce different exact spacetime tensors on the same slice
+  backbone.
 
-- `A1 x {E_x, T1x}`
+That means the ambiguity is not in `Lambda_R`. It is in the unresolved source
+readout map.
 
-The exact support-side scalar that survives shell-blindness is:
+## Current blocker
 
-- `delta_A1(q) = phi_support(center)/Q - phi_support(arm_mean)/Q`
+The blocker is now very precise:
 
-with exact canonical family law:
+> unresolved readout exactness blocks a unique exact `Theta_R -> Lambda_R`
+> coupling law on the current carrier.
 
-- `delta_A1(r) = 1 / (6 (1 + sqrt(6) r))`
+This is sharper than the older “missing tensor observable” statement, because
+the carrier and the slice semigroup are already exact.
 
-The current bounded prototype is affine in that exact scalar:
+## Bottom line
 
-- `gamma_E(delta) = a_E + b_E delta`
-- `gamma_T(delta) = a_T + b_T delta`
+Route 2 now has:
 
-This is the cleanest current coupling candidate from the tensor support side
-into the route-2 slice bridge.
+- exact carrier,
+- exact slice backbone,
+- exact conditional readout-to-slice family,
+- no unique exact coupling theorem yet.
 
-## Why the coupling is only bounded
-
-The retained exact support-side machinery is still scalar/rank-one on the
-current `A1` block.
-
-The exact support Hessian has no mixed `A1`-bright block, the support scalar
-is blind to `E_x` and `T1x`, and the support-to-active operator is rank one
-and charge-only. Therefore the current exact support stack cannot generate a
-nonzero exact tensor observable on `A1 x {E_x, T1x}`.
-
-That means the route-2 tensor observable can only enter the slice law as a
-bounded source-side staging object for now.
-
-## What the bounded coupling law is
-
-The cleanest current route-2 coupling statement is:
-
-1. the exact scalar slice generator remains `Lambda_R`
-2. the bounded transfer law remains `T_R = exp(-Lambda_R)`
-3. the missing tensor support observable is staged by
-   `Theta_R^(0)(q) = (gamma_E(q), gamma_T(q))`
-4. `Theta_R^(0)` is organized by the exact support scalar `delta_A1`
-5. the exact route-2 dynamics bridge is still missing
-
-So the current law is a **source-augmented bounded bridge candidate**, not an
-exact time-coupling theorem.
-
-## Sharp blocker
-
-The exact blocker is still the same one:
-
-> there is no exact tensor-valued support observable on `A1 x {E_x, T1x}`
-> in the current retained support-side machinery.
-
-Without that exact tensor carrier, `Theta_R` cannot be coupled to `Lambda_R`
-as a theorem-grade GR dynamics law.
-
-## Practical conclusion
-
-Route 2 now has the cleanest current answer available:
-
-- exact background: `PL S^3 x R`
-- exact slice generator: `Lambda_R`
-- bounded transfer operator: `T_R = exp(-Lambda_R)`
-- bounded tensor staging observable: `Theta_R^(0)(q)`
-
-That is the right tool-chain for future atlas work, but it is not yet an exact
-`Theta_R -> Lambda_R` closure theorem.
+The next theorem target is the missing readout map entry, not a new slice law.
