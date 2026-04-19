@@ -191,7 +191,7 @@ All cycle-1 and cycle-10 runners pass at PASS=N FAIL=0:
 | `frontier_koide_z3_joint_projector_identity.py` | 55 | 0 |
 | `frontier_koide_kappa_two_orbit_dimension_factorization.py` | 26 | 0 |
 | `frontier_koide_moment_ratio_uniformity_theorem.py` | 65 | 0 |
-| `frontier_koide_berry_phase_theorem.py` | 26 | 0 |
+| `frontier_koide_berry_phase_theorem.py` | 23 | 0 |
 | `frontier_dm_dple_theorem.py` | 19 | 0 |
 | `frontier_quark_up_amplitude_rpsr_conditional.py` | 10 | 0 |
 
