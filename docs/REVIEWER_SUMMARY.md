@@ -162,6 +162,7 @@ Current quantitative statuses:
   point, interval-certified exact-carrier dominance/completeness on the
   residual split-2 selector branch, and current-bank quantitative DM mapping
 - promoted CKM atlas/axiom package on the canonical tensor/projector surface, with older Cabibbo / NNI / partial Jarlskog notes retained only as route history
+- reviewer-facing [QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md](QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md) now bundles the live down-type CKM-dual lane, the bounded up-type inversion extension, the minimal-surface CP no-go, the reduced projector-ray closure, the parameter audit, the widened up-amplitude candidate scan, the restricted native-expression scan, and the widened native-affine-support no-go: current `main` now reduces the remaining non-derived quark-CP content to a short exact-candidate shortlist for one up-sector scalar amplitude law, while even the widened projector-prefactored affine `delta_A1` family still shows a bounded split rather than one forced dominant law and the broader complex-carrier note remains as fallback existence proof
 - cosmology companions
 - bounded secondary predictions already on `main`, plus the CKM-only
   neutron-EDM corollary with bounded continuation: proton lifetime, down-type
