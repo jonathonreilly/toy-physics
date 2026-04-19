@@ -139,6 +139,15 @@ This still stops short of reviewer-grade closure because the path and witness
 are constructive inputs rather than retained-physics outputs, but it is a real
 explicit selector-law candidate on the open DM gate.
 
+A fourth same-day theorem removes the next obvious canonicalization attempt.
+Constructive-sign transport extremality on the fixed seed surface is already
+nonunique: the branch carries at least four pairwise distinct interior
+constructive witnesses with the same extremal favored-column value
+`eta_1 = 1.052220313052...`. So transport extremality alone cannot uniquely
+derive the endpoint used by the canonical path law; it picks a constructive
+**plateau**, not a point. See
+`docs/DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_TRANSPORT_PLATEAU_THEOREM_NOTE_2026-04-19.md`.
+
 See `docs/DM_DPLE_DIMENSION_PARAMETRIC_EXTREMUM_THEOREM_NOTE_2026-04-19.md`.
 Runner PASS=19 FAIL=0.
 

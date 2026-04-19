@@ -235,6 +235,29 @@ object-derivation standard, because the constructive witness and the path are
 explicit constructive inputs, not retained-physics outputs. So the law is now
 explicit, but it is still path-chosen rather than reviewer-grade.
 
+A fourth same-day theorem sharpens that limitation further:
+
+- `docs/DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_TRANSPORT_PLATEAU_THEOREM_NOTE_2026-04-19.md`
+- `scripts/frontier_dm_wilson_direct_descendant_constructive_transport_plateau_theorem_2026_04_19.py`
+
+It proves that constructive-sign transport extremality does **not** uniquely
+canonicalize the path endpoint. The branch now has at least four pairwise
+distinct interior constructive witnesses with the same extremal favored-column
+value
+
+```text
+eta_1 = 1.052220313052...
+```
+
+while carrying different other transport values and different projected-source
+triplets. So transport extremality on the constructive sign chamber already
+picks a **plateau**, not a point.
+
+That matters because it closes the next obvious rescue route for the new path
+law: even after transport is brought in, the endpoint is still not uniquely
+derived. The remaining selector problem is finer than constructive transport
+extremality.
+
 ### Science decision
 
 DPLE should be treated as a **support theorem on the open DM gate**:
