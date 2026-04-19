@@ -130,6 +130,7 @@ y_t_bare^(0) = 1 / sqrt(6),
 is not a statement tied to the preselected canonical surface. It is a
 tree-level bare-scale identity on the retained `Q_L` block itself.
 
-So the remaining question for Path 2 is no longer Rep-B independence. The
-remaining step is only whether the same-1PI matching equation is a valid
-independent pinning identity for `g_bare`.
+The remaining Path-2 step is supplied separately by
+[G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md](G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md),
+which upgrades the same-`Gamma^(4)` coefficient identity itself to an
+off-surface theorem and then solves `g_bare = 1`.

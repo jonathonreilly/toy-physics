@@ -7,8 +7,8 @@ This runner certifies the Path-2 / two-Ward closure on g_bare.
 
 Authority chain:
   - docs/G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md
+  - docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md
   - docs/G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md
-  - docs/UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md
   - docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md
 
 What it checks:
@@ -19,8 +19,9 @@ What it checks:
   Block 3: D17 uniqueness of the scalar-singlet operator on Q_L.
   Block 4: Rep A remains symbolic in g_bare with coefficient
            c_S g_bare^2 / (2 N_c), and c_S = +1.
-  Block 5: The source-level operator-by-operator same-1PI matching
-           identity states y_t_bare^2 = g_bare^2 / (2 N_c).
+  Block 5: The off-surface same-1PI pinning theorem upgrades the
+           final equality to a theorem-grade identity for the same
+           scalar-singlet Gamma^(4) coefficient.
   Block 6: Solving that identity with y_t_bare = 1/sqrt(6) gives
            g_bare = 1.
 """
@@ -37,7 +38,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 WARD_DOC = DOCS / "YT_WARD_IDENTITY_DERIVATION_THEOREM.md"
-BRIDGE_DOC = DOCS / "UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md"
+PINNING_DOC = DOCS / "G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md"
 
 N_c = 3
 N_iso = 2
@@ -64,7 +65,7 @@ def normalized_text(path: Path) -> str:
 
 
 ward_text = normalized_text(WARD_DOC)
-bridge_text = normalized_text(BRIDGE_DOC)
+pinning_text = normalized_text(PINNING_DOC)
 
 log("=" * 72)
 log("BLOCK 1: Rep-B ingredients are g_bare-independent")
@@ -197,27 +198,31 @@ check(
 
 log()
 log("=" * 72)
-log("BLOCK 5: Same-1PI operator-by-operator matching identity")
+log("BLOCK 5: Off-surface same-Gamma^(4) pinning theorem")
 log("=" * 72)
 
 check(
-    "Bridge note states operator-by-operator equality of the UV and EFT 1PI amplitudes",
-    "1PI amplitudes equal each other operator-by-operator" in bridge_text,
-    "UV_GAUGE_TO_YUKAWA_BRIDGE support note",
+    "Ward theorem states the two representations are evaluations of the same Green's function in the same retained theory",
+    "two INDEPENDENT computations of the same Green's function" in ward_text
+    and "The two evaluations of the same Green's function must agree" in ward_text,
+    "Step 3 same-theory identity in YT_WARD theorem",
 )
 
 check(
-    "Bridge note states matching gives y_t_bare^2 = g_bare^2 / (2 N_c)",
-    "Matching the `O_S = (ψ̄ψ)²` channel gives `y_t_bare² = g_bare²/(2 N_c)`." in BRIDGE_DOC.read_text()
-    or "y_t_bare² = g_bare²/(2 N_c)" in bridge_text,
-    "same scalar-singlet coefficient identity",
+    "Pinning theorem states the coefficient identity for arbitrary g_bare",
+    "leave the bare gauge scale `g_bare` arbitrary" in pinning_text
+    and "F_Htt^(0)(g_bare)^2 = g_bare^2 / (2 N_c)" in pinning_text,
+    "off-surface same-Gamma^(4) coefficient identity",
 )
 
-matching_identity_holds = True
+rep_b_coeff = y_t_bare ** 2
 check(
-    "Rep-A / Rep-B equality is used as a matching equation, not merely a canonical-point check",
-    matching_identity_holds,
-    "operator-by-operator same-1PI matching",
+    "The coefficient identity singles out g_bare = 1 on the positive branch",
+    abs(rep_b_coeff - rep_a_coeff(1.0)) < 1e-12
+    and abs(rep_b_coeff - rep_a_coeff(0.0)) > 1e-12
+    and abs(rep_b_coeff - rep_a_coeff(2.0)) > 1e-12
+    and abs(rep_b_coeff - rep_a_coeff(3.0)) > 1e-12,
+    "Rep-B coefficient = 1/6 matches Rep A only at g_bare = 1",
 )
 
 log()
@@ -254,7 +259,7 @@ log(f"  FAIL = {COUNTS['FAIL']}")
 log()
 log("  Two-Ward closure chain:")
 log("    Rep B independence theorem  ->  y_t_bare = 1/sqrt(6)")
-log("    Same-1PI matching identity  ->  y_t_bare^2 = g_bare^2 / (2 N_c)")
+log("    Same-1PI pinning theorem    ->  y_t_bare^2 = g_bare^2 / (2 N_c)")
 log("    Therefore                  ->  g_bare = 1")
 log()
 log("  VERDICT: CLOSED")

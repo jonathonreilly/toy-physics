@@ -3,7 +3,9 @@
 **Date:** 2026-04-19
 **Status:** CLOSED — Path 2 closure established
 **Primary runner:** `scripts/frontier_g_bare_two_ward_closure.py`
-**Load-bearing support theorem:** [G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md](G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md)
+**Load-bearing theorems:**
+- [G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md](G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md)
+- [G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md](G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md)
 
 ---
 
@@ -12,17 +14,19 @@
 The two-Ward / two-representation route now **closes** `g_bare`.
 
 The missing gap was not in Rep A. It was in the status of Rep B and in the
-role of the Rep-A / Rep-B equality. That gap is now closed by separating the
-route into two theorems:
+status of the final Rep-A / Rep-B equality. That gap is now closed by
+separating the route into two explicit theorems:
 
 1. **Rep-B bare-scale independence theorem.**
    The tree-level bare `H_unit` top-channel form factor is
    `y_t_bare^(0) = 1 / sqrt(6)` for arbitrary `g_bare` on the retained
    `Q_L` block.
-2. **Same-1PI operator matching identity.**
-   The scalar-singlet 1PI four-fermion coefficient satisfies
-   `y_t_bare² = g_bare² / (2 N_c)` as an operator-by-operator matching
-   identity, not merely as a check already performed at `g_bare = 1`.
+2. **Off-surface same-1PI pinning theorem.**
+   The scalar-singlet four-fermion coefficient on the retained `Q_L` block
+   satisfies
+   `F_Htt^(0)(g_bare)^2 = g_bare² / (2 N_c)` for arbitrary `g_bare`,
+   because it is the same amputated Green's-function coefficient computed two
+   ways in the same retained theory.
 
 Combining them gives
 
@@ -81,33 +85,45 @@ Its three inputs are all `g_bare`-free:
 So Rep B is no longer a canonical-surface reading. It is an off-surface
 tree-level bare-scale identity.
 
-### C. Rep A = Rep B is an independent pinning identity
+### C. The final equality is now theorem-grade and off-surface
 
 The remaining issue was whether the equality was only a canonical-surface
 consistency check. The answer is now **no**.
 
-The load-bearing statement is the same-1PI matching formulation recorded in
-[UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md](UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md):
+The load-bearing statement is no longer the subordinate bridge note. It is the
+Path-2 theorem
+[G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md](G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md),
+which isolates the exact off-surface identity needed for closure:
 
-> at `q² = M_Pl² ≫ m_H²`, the UV and EFT 1PI amplitudes equal each other
-> operator-by-operator. Matching the `O_S` channel gives
-> `y_t_bare² = g_bare² / (2 N_c)`.
+```
+Gamma_S^(4)(q²; g_bare)
+  = - c_S g_bare² / (2 N_c q²) * O_S
+  = - F_Htt^(0)(g_bare)^2 / q² * O_S.                              (M1)
+```
+
+This theorem is internal to the retained Ward route itself:
+
+- Representation A uses D16 + D12 + S2 on the bare action with arbitrary
+  `g_bare`.
+- Representation B uses D17 plus the Rep-B independence theorem on the same
+  retained block.
+- D17 leaves only one retained scalar-singlet coefficient on `Q_L`, so the two
+  formulas are forced to agree as the same projected Green's-function
+  coefficient.
+
+```
+F_Htt^(0)(g_bare)^2 = g_bare² / (2 N_c).                           (M2)
+```
 
 That is not the old interpretive move "re-read the canonical check as an
-equation." It is the explicit operator-by-operator matching identity for the
-same scalar-singlet 1PI object.
+equation." It is an off-surface theorem about the same coefficient in the same
+retained theory.
 
-On the retained tree-level surface, with `c_S = +1`, the matching identity is
-
-```
-y_t_bare² = g_bare² / (2 N_c).                                    (M1)
-```
-
-Substitute the independent Rep-B theorem `y_t_bare = 1 / sqrt(6)`:
+Substitute the independent Rep-B theorem `F_Htt^(0)(g_bare) = 1 / sqrt(6)`:
 
 ```
 1/6 = g_bare² / (2 * 3)
-g_bare² = 1.                                                       (M2)
+g_bare² = 1.                                                       (M3)
 ```
 
 Therefore the two-Ward route pins `g_bare` absolutely.
@@ -127,14 +143,15 @@ The present closure is different.
 What is now added:
 
 1. a theorem that Rep B is genuinely off-surface and `g_bare`-independent;
-2. an explicit use of the operator-by-operator same-1PI matching identity,
-   not the merely numerical check at the canonical point.
+2. a theorem that the same scalar-singlet `Gamma^(4)` coefficient itself is
+   off-surface and identical in the two retained representations.
 
 So both closure bars are met:
 
 1. **Rep B is independent of the preselected canonical surface.**
-2. **Rep A = Rep B is used as an actual matching equation for the same 1PI
-   coefficient, not as a re-reading of a check already performed at `g_bare=1`.**
+2. **Rep A = Rep B is used as an actual off-surface coefficient identity for
+   the same projected Green's function, not as a re-reading of a check already
+   performed at `g_bare = 1`.**
 
 ---
 
@@ -165,7 +182,7 @@ The companion runner now certifies closure by checking:
 2. the tree-level `H_unit` form factor `y_t_bare = 1 / sqrt(6)` for arbitrary
    `g_bare`;
 3. the symbolic Rep-A coefficient `g_bare² / (2 N_c)`;
-4. the source-level operator-by-operator 1PI matching statement;
+4. the theorem-grade off-surface same-`Gamma^(4)` pinning identity;
 5. the solved value `g_bare = 1`.
 
 ---
@@ -173,10 +190,10 @@ The companion runner now certifies closure by checking:
 ## Bottom Line
 
 Path 2 is now closed by an explicit independence theorem plus an explicit
-same-1PI matching identity:
+off-surface same-1PI pinning theorem:
 
 ```
-y_t_bare = 1 / sqrt(6)     (independent of g_bare)
-y_t_bare² = g_bare² / 6    (same-1PI matching)
+F_Htt^(0)(g_bare) = 1 / sqrt(6)     (independent of g_bare)
+F_Htt^(0)(g_bare)^2 = g_bare² / 6   (same Gamma^(4) coefficient)
 => g_bare = 1.
 ```
