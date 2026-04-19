@@ -97,6 +97,14 @@ packaging.
   scaling on that Wilson surface; both-masses and action-reaction closure
   remain open, so this stays a bounded side lane rather than part of the
   flagship paper package
+- live bounded quark mass-ratio review/support stack on `main`: the
+  reviewer-facing quark packet now bundles the down-type CKM-dual lane, the
+  bounded up-type inversion extension, the minimal Schur-NNI full-solve
+  support, the reduced projector-ray CKM+CP closure extension, and the
+  parameter/candidate/native/affine audits that reduce the remaining
+  non-derived quark-CP content to a short bounded shortlist for one up-sector
+  scalar amplitude law; this sharpens the flavor status on `main` without
+  promoting full quark closure to retained
 - older bounded CKM mass-basis / Cabibbo / partial Jarlskog route history
 - mixed cosmology surface, organized around one fixed-gap vacuum scale:
   retained structural identity `Lambda_vac = lambda_1(S^3_R)`, retained

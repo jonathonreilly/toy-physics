@@ -2,8 +2,8 @@
 
 **Date:** 2026-04-17
 **Status:** headline bundling note for the 1→3 mass-spectrum attack.
-Mixed closure: one retained headline (Phase 1 down-type dual), one
-bounded secondary with explicit partition (Phase 2 up sector), one
+Mixed closure: two bounded quark phases (Phase 1 down-type dual and
+Phase 2 up sector), one
 bounded cross-reference (Phase 3 charged leptons), one retained
 seesaw scale + bounded solar/PMNS (Phase 4 neutrino), one
 bounded/conditional cosmology cascade (Phase 5).
@@ -37,7 +37,7 @@ dominant reduced up-amplitude law.
 
 | Phase | Sector | Runner | Note | Status |
 |---|---|---|---|---|
-| 1 | down-type quarks | `frontier_mass_ratio_ckm_dual.py` | `DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md` | **retained headline** |
+| 1 | down-type quarks | `frontier_mass_ratio_ckm_dual.py` | `DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md` | bounded secondary lane |
 | 2 | up-type quarks | `frontier_mass_ratio_up_sector.py` | `UP_TYPE_MASS_RATIO_CKM_INVERSION_NOTE.md` | bounded, one conditional partition |
 | 3 | charged leptons | `frontier_mass_ratio_lepton_sector.py` | `CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md` | bounded cross-reference; three missing primitives named |
 | 4 | neutrino sector | `frontier_neutrino_mass_derived.py` | `NEUTRINO_MASS_DERIVED_NOTE.md` | retained (`k_B = 8`, `m_3`, NO); conditional/support `theta_23` upper octant; bounded solar gap |
@@ -63,7 +63,7 @@ bridge exponent.
 | `m_d/m_b` | 1.16e-3 | 1.12e-3 | +3.6% |
 
 Uses only promoted/exact framework inputs (atlas CKM, `alpha_s(v)`, SU(3)
-Casimirs).  Zero fitted parameters.  **Retained headline.**
+Casimirs).  Zero fitted parameters.  **Bounded secondary lane.**
 
 ## Phase 2 — up-type quark mass ratios from CKM inversion
 

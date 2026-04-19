@@ -62,6 +62,12 @@ If you want the current bounded charged-lepton package, use:
 - [publication/ci3_z3/PUBLICATION_MATRIX.md](publication/ci3_z3/PUBLICATION_MATRIX.md)
 - [publication/ci3_z3/DERIVATION_VALIDATION_MAP.md](publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
 
+If you want the current bounded quark review/support packet, use:
+
+- [QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md](QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md)
+- [publication/ci3_z3/PUBLICATION_MATRIX.md](publication/ci3_z3/PUBLICATION_MATRIX.md)
+- [publication/ci3_z3/DERIVATION_VALIDATION_MAP.md](publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
+
 If you want the shortest publication-facing inventory of what the framework
 already predicts beyond the retained theorem core, use:
 

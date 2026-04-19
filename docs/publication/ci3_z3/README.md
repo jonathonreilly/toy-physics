@@ -171,6 +171,12 @@ Current package status:
   that survives beyond the widened pocket, but still below persistent
   inertial-mass / matter closure because the inward-source directional
   boundary remains
+- live bounded quark mass-ratio review/support stack on `main`: the
+  reviewer-facing quark packet bundles the down-type CKM-dual lane, bounded
+  up-type inversion, minimal Schur-NNI full-solve support, reduced
+  projector-ray CKM+CP closure, and the parameter/native/audit scans that now
+  reduce the remaining non-derived quark-CP content to one up-sector scalar
+  amplitude law with a short bounded exact shortlist
 - older bounded CKM mass-basis / Cabibbo / partial Jarlskog route history
 - mixed cosmology surface: retained structural identity
   `\Lambda_{vac} = \lambda_1(S^3_R)` and retained `w = -1` corollary, with
