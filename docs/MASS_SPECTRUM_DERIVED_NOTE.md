@@ -1,12 +1,11 @@
 # Mass Spectrum Derived — Five-Phase Attack Closure
 
-**Date:** 2026-04-17
-**Status:** headline bundling note for the 1→3 mass-spectrum attack.
-Mixed closure: two bounded quark phases (Phase 1 down-type dual and
-Phase 2 up sector), one
-bounded cross-reference (Phase 3 charged leptons), one retained
-seesaw scale + bounded solar/PMNS (Phase 4 neutrino), one
-bounded/conditional cosmology cascade (Phase 5).
+**Date:** 2026-04-19
+**Status:** headline bundling note for the current five-phase mass-spectrum
+lane on `main`. Mixed closure: two bounded quark phases (Phase 1 down-type
+dual and Phase 2 up sector), one bounded cross-reference (Phase 3 charged
+leptons), one retained seesaw scale + bounded solar/PMNS (Phase 4 neutrino),
+one bounded/conditional cosmology cascade (Phase 5).
 **Attack plan:** `/Users/jonBridger/.claude/plans/zesty-nibbling-pretzel.md`
 **Framework convention:** "axiom" means only the single framework
 axiom `Cl(3)` on `Z^3`.
@@ -31,7 +30,51 @@ projector/support grammar still does not force one dominant law. The newest
 follow-on widened native-affine-support no-go sharpens that again: even the
 projector-prefactored affine `delta_A1` family can beat the current best
 refit and anchored baselines separately, but it still does not produce one
-dominant reduced up-amplitude law.
+dominant reduced up-amplitude law. The newest tensor-endpoint bridge then
+shows that the split winners are not arbitrary scan artifacts: the exact
+support endpoint gap `1/6` seeds the strongest current affine refit law, while
+the bounded tensor slope ratio `|b_E / b_T|` seeds the strongest current
+anchored tensor-endpoint law near the earlier `sqrt(7)` proxy branch. The
+quark lane is still bounded, but the remaining split is now organized by
+current support-tensor endpoint data rather than a free expression search. The
+newest tensor-endpoint resolution then closes the next theorem attempt
+negatively: no exact identity `|b_E / b_T| = sqrt(7)` lands, and the
+restricted exact endpoint grammar already contains many exact two-step
+denominators beating the direct `sqrt(7)` law on anchored aggregate. So the
+honest quark endpoint on current `main` is now a theorem-grade bounded no-go:
+exact `1/6` refit branch, bounded slope-ratio anchored branch, no retained
+unification law yet. The follow-on readout-constraint note shows that the live
+support surface already fixes `(a_E, b_E, a_T, b_T)` exactly from endpoint
+values and reduces the open coefficient theorem to the channel ratios `r_E`
+and `r_T`, while still leaving the exact `E/T` coefficient law open. The
+new E-channel endpoint-quotient note then builds the first bounded law
+candidate directly on that reduced surface: `gamma_E(center)/gamma_E(shell)`
+is best rationalized by `15/8` in a controlled low-rational endpoint class,
+which implies `r_E = 21/4` and the anchored denominator candidate `D_E = 21/8`
+on the same live quark branch. The new endpoint-ratio-chain note sharpens that
+again: the live endpoint data are simultaneously nearest to the small-rational
+chain `{5/6, -2, -8/9}`, which forces the same `15/8 -> 21/4 -> 21/8` law by
+exact endpoint multiplication and therefore identifies the real theorem-grade
+target as the endpoint ratio chain rather than the isolated `E` quotient. The
+new Route-2 readout theorem block then pushes that one step further: the exact
+bilinear carrier reduces the restricted bright readout to one channelwise map,
+the endpoint-chain target is exactly equivalent to the readout triple
+`(beta_T / alpha_T, alpha_T / alpha_E, beta_E / alpha_E) = (-1, -2, 21/4)`,
+and after granting the `T`-side candidates the irreducible missing map entry
+collapses to the `E`-channel ratio `beta_E / alpha_E = 21/4`. The companion
+time-coupling note then shows that `Lambda_R` and `T_R = exp(-Lambda_R)` are
+already exact enough to support an exact conditional readout-to-slice family,
+but unresolved readout exactness still blocks one unique exact
+`Theta_R -> Lambda_R` coupling theorem. The scalar-comparison bridge note then
+shows that the CKM scalar package defines a narrow exact bridge band containing
+the anchored solve, but the refit-better and anchor-better windows are still
+disjoint. The endpoint-denominator admissibility and `sqrt(7)`
+counterexample-simplification notes sharpen the same no-go one step further:
+`sqrt(7)` is unique only as the pure seven-only irrational generator, and the
+bounded exact-denominator beaters collapse to 17 cases with two minimal
+representatives rather than a unique replacement law. A separate partition
+revisit also closes the old CP-orthogonal interior law negatively and replaces
+it with a narrow phase-deformed edge.
 
 ## The five phases
 
