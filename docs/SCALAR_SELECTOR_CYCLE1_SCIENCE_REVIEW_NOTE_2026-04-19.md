@@ -213,6 +213,28 @@ That matters because it kills the loophole that the open DM gap might still be
 just a repackaging problem. The branch now knows the local projected-source
 coordinates it has, and what it lacks is stronger selection content.
 
+A third same-day theorem now upgrades the old continuity witness into an
+explicit selector-law candidate:
+
+- `docs/DM_WILSON_DIRECT_DESCENDANT_CANONICAL_PATH_SELECTOR_THEOREM_NOTE_2026-04-19.md`
+- `scripts/frontier_dm_wilson_direct_descendant_canonical_path_selector_theorem_2026_04_19.py`
+
+On the exact affine path from the aligned native seed to the explicit
+constructive witness, the favored column `eta_1` crosses exact closure exactly
+once and transversely. So the branch now carries a concrete path law:
+
+```text
+choose the unique eta_1 = 1 point on the aligned-seed -> constructive-witness path.
+```
+
+That selected point is constructive, positive-branch, locally observable, and
+distinct from the other already-certified exact positive roots.
+
+This is real selector science. But it is still not the reviewer's requested
+object-derivation standard, because the constructive witness and the path are
+explicit constructive inputs, not retained-physics outputs. So the law is now
+explicit, but it is still path-chosen rather than reviewer-grade.
+
 ### Science decision
 
 DPLE should be treated as a **support theorem on the open DM gate**:

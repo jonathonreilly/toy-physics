@@ -123,6 +123,22 @@ coordinates. It is missing a stronger **value law** on observables that the
 branch already has. See
 `docs/DM_WILSON_DIRECT_DESCENDANT_LOCAL_OBSERVABLE_COORDINATE_THEOREM_NOTE_2026-04-19.md`.
 
+A third same-day theorem upgrades the old continuity witness into an explicit
+path-selected law candidate. On the exact affine path from the aligned native
+seed to the explicit constructive witness, `eta_1` crosses exact closure
+exactly once and transversely. So the branch now carries the concrete rule
+
+```text
+choose the unique eta_1 = 1 point on the aligned-seed -> constructive-witness path.
+```
+
+The selected point remains constructive, positive-branch, locally observable,
+and distinct from the other certified exact positive roots. See
+`docs/DM_WILSON_DIRECT_DESCENDANT_CANONICAL_PATH_SELECTOR_THEOREM_NOTE_2026-04-19.md`.
+This still stops short of reviewer-grade closure because the path and witness
+are constructive inputs rather than retained-physics outputs, but it is a real
+explicit selector-law candidate on the open DM gate.
+
 See `docs/DM_DPLE_DIMENSION_PARAMETRIC_EXTREMUM_THEOREM_NOTE_2026-04-19.md`.
 Runner PASS=19 FAIL=0.
 
