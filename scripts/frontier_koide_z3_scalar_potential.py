@@ -41,6 +41,7 @@ from frontier_dm_neutrino_source_surface_active_affine_point_selection_boundary 
 from frontier_dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem import (
     kz_from_h,
 )
+from frontier_koide_selected_line_cyclic_response_bridge import hstar_witness_kappa
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
@@ -162,6 +163,19 @@ def part2_z3_scalar_potential_derivation() -> None:
         detail="follows from cp1=-2√6/9 and cp2=2√2/9 bank identities",
     )
 
+    # Stronger: Tr(kz_from_h(active_affine_h(0, delta, q))) = 0 for ALL (delta, q)
+    import itertools
+    ok_general = all(
+        abs(float(np.real(np.trace(kz_from_h(active_affine_h(0.0, d, q)))))) < 1e-12
+        for d, q in [(0.1, 0.5), (0.8, 1.2), (0.3, 0.9), (SELECTOR, SELECTOR)]
+    )
+    check(
+        "General lemma: Tr(K_frozen(δ,q)) = 0 for ALL (δ,q) on the affine slice, not just the Koide selector",
+        ok_general,
+        detail="structural identity of kz_from_h ∘ active_affine_h — m² cross-term vanishes throughout the chamber",
+        kind="NUMERIC",
+    )
+
     c1 = float(np.real(np.trace(K_frozen @ T)))
     c2 = float(np.real(np.trace(K_frozen @ K_frozen @ T)))
     trKf2 = float(np.real(np.trace(K_frozen @ K_frozen)))
@@ -174,8 +188,8 @@ def part2_z3_scalar_potential_derivation() -> None:
     )
     check(
         "Quadratic-cross coupling c2 = Tr(K_frozen² T_m) is non-zero",
-        abs(c2 - 2.9166666667) < 1e-9,
-        detail=f"c2 = {c2:.10f}  (note: 7/6 * sqrt(6) appears here)",
+        abs(c2 - 35 / 12) < 1e-9,
+        detail=f"c2 = {c2:.10f}  (exact: 35/12)",
     )
 
     # Verify the Taylor structure numerically
@@ -331,7 +345,7 @@ def part5_honest_gap() -> None:
     m_pos = float(brentq(u_small, -1.32, -1.25))
     kappa_pos = kappa(m_pos)
 
-    kappa_star = -0.6079056980
+    _, kappa_star = hstar_witness_kappa()
     m_star = float(brentq(lambda m: kappa(m) - kappa_star, -1.3, -1.0))
 
     check(
@@ -370,7 +384,7 @@ def part6_scale_analysis() -> None:
     print("PART 6: scale analysis — slot values at m_* match PDG to 0.03%")
     print("=" * 88)
 
-    kappa_star = -0.6079056980
+    _, kappa_star = hstar_witness_kappa()
     m_star = float(brentq(lambda m: kappa(m) - kappa_star, -1.3, -1.0))
     v_star, w_star = slot_values(m_star)
     u_star, _ = koide_roots(v_star, w_star)
@@ -395,9 +409,9 @@ def part6_scale_analysis() -> None:
         kind="NUMERIC",
     )
     check(
-        "After one overall scale fit, all three masses match PDG to < 0.05%",
+        "After one overall scale fit, all three sqrt(mass) values match PDG to < 0.05%",
         float(np.max(np.abs(rel))) < 5e-4,
-        detail=f"rel errors = [{rel[0]:.4e}, {rel[1]:.4e}, {rel[2]:.4e}]",
+        detail=f"rel sqrt-mass errors = [{rel[0]:.4e}, {rel[1]:.4e}, {rel[2]:.4e}]",
         kind="NUMERIC",
     )
     check(

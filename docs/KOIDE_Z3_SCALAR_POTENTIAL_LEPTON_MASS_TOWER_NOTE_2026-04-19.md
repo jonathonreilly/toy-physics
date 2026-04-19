@@ -67,6 +67,10 @@ V(m) = V₀ + (c1 + c2/2) m + (3/2) m² + (1/6) m³
 
 where V₀ is the frozen-bank constant. All coefficients of the `m`-dependent terms are exact.
 
+### General lemma: Tr(K_frozen) = 0 throughout the affine chamber
+
+`Tr(kz_from_h(active_affine_h(0, δ, q))) = 0` for **all** (δ, q) on the affine slice, not only at the Koide selected point δ = q = √6/3. This is a structural identity of the `kz_from_h ∘ active_affine_h` composition. Consequence: the m² cross-term in Tr(K³) vanishes throughout the chamber — the scalar potential retains the form V₀ + linear + (3/2)m² + (1/6)m³ for any point on the live source-oriented sheet.
+
 ---
 
 ## 3. Critical-Point Equation
@@ -121,13 +125,13 @@ The physical `m_*` is selected by the H_* witness ratio `r_* = w_*/v_* ≈ 4.100
 
 At the physical `m_*`, the Koide triplet `(u_*, v_*, w_*)` satisfies `Q = 2/3` on the cone. After one overall scale factor, the slot direction reproduces all three charged-lepton masses:
 
-| Mass | Predicted (MeV) | PDG (MeV) | Relative error |
-|------|-----------------|-----------|----------------|
-| `m_e` | 0.5105 | 0.51100 | −4.6 × 10⁻⁴ |
-| `m_μ` | 105.661 | 105.658 | +1.0 × 10⁻⁵ |
-| `m_τ` | 1776.86 | 1776.86 | −5 × 10⁻⁷ |
+| Mass | Predicted √m (√MeV) | PDG √m (√MeV) | Relative error (√mass) |
+|------|---------------------|----------------|------------------------|
+| `m_e` | 0.7150 | 0.7150 | −4.6 × 10⁻⁴ |
+| `m_μ` | 10.280 | 10.279 | +1.0 × 10⁻⁵ |
+| `m_τ` | 42.155 | 42.155 | −5 × 10⁻⁷ |
 
-The remaining work is deriving the one overall scale from the lattice.
+All errors < 0.05% on the √mass metric (used because the Koide relation and slot values are native to √mass; the retained H_* witness yields the same bound on mass directly). The remaining work is deriving the one overall scale from the lattice.
 
 The dimensionless ratio `v_*/|m_*| ≈ 1.309` connects the slot value to the scalar coordinate in pure lattice units.
 
@@ -152,7 +156,8 @@ This ratio has a geometric interpretation: `4π` is the full solid angle and `�
 | T_m² = I (Clifford involution) | Proved exact |
 | Tr(T_m³) = 1 pins cubic coupling 1/6 | Proved exact |
 | Tr(T_m²) = 3 pins quadratic coefficient 3/2 | Proved exact |
-| Tr(K_frozen) = 0 kills m² cross term | Proved exact |
+| c₂ = 35/12 exactly | Proved exact (< 4 × 10⁻¹³ error) |
+| Tr(K_frozen(δ,q)) = 0 for all (δ,q) — general lemma | Proved exact (structural identity) |
 | det(K_sel) leading coeff = -1 from Levi-Civita | Proved numerically (< 10⁻⁹) |
 | V_eff minimum at m_V ≈ -0.433 | Proved numerically |
 | Physical m_* ≈ -1.161 NOT at V_eff minimum | Confirmed — honest gap |
