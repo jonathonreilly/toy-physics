@@ -57,6 +57,16 @@ lanes:
       - scripts/frontier_emergent_geometry_multisize.py
     canonical_notes:
       - docs/EMERGENT_GEOMETRY_GROWTH_NOTE_2026-04-10.md
+  - id: atomic_lattice_companions
+    label: "Atomic lattice companions"
+    status: exploratory-reopen
+    summary: "Bounded hydrogen level-ratio numerics plus helium Hartree and one-parameter Jastrow companions survive on the retained lattice Hamiltonian surface, but continuum/volume control, exact-helium closure, and multi-electron extension remain open."
+    canonical_scripts:
+      - scripts/frontier_atomic_hydrogen_lattice_companion.py
+      - scripts/frontier_atomic_helium_hartree_companion.py
+      - scripts/frontier_atomic_helium_jastrow_companion.py
+    canonical_notes:
+      - docs/work_history/atomic/HYDROGEN_HELIUM_ATOMIC_COMPANION_NOTE_2026-04-18.md
   - id: graph_scalar_control
     label: "Graph scalar / KG control"
     status: historical-control

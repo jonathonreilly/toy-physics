@@ -101,3 +101,22 @@ claim surface. The surviving material is best read as:
 - route history for any future atomic closure program
 - evidence that the branch was not empty, while also avoiding overpromotion of
   its rejected EW / isoelectronic claims
+
+## Future Reopen Path
+
+This salvage is also the correct starting point for any future atomic lane on
+`main`. The next honest steps are:
+
+- hydrogen continuum / volume control beyond the current finite-box companion
+- helium beyond Hartree plus one-parameter Jastrow, without overstating exact
+  closure
+- a cleaner multi-electron extension that does not lean on fixed-grid
+  isoelectronic overclaims
+
+Two things are intentionally *not* part of this atomic reopen path:
+
+- the branch-local `alpha_EM` authority attempt, which stays rejected in favor
+  of the already-live EW normalization lane on `main`
+- the charged-lepton / `m_e` closure problem, which belongs under the existing
+  charged-lepton hierarchy / Koide program rather than the atomic companion
+  lane itself
