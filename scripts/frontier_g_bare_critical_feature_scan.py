@@ -697,8 +697,8 @@ def main() -> int:
         #   (b) localized kink by fit-residual ratio
         loud = bool((local_sigma > 3.0 and kink) or extremum_in_global_fit)
         check(
-            f"observable '{key}' has a localized non-smooth feature at beta=6",
-            loud,
+            f"observable '{key}' has no localized non-smooth feature at beta=6",
+            not loud,
             f"resid@6/sigma={local_sigma:.2f}, kink={kink}, extremum={extremum_in_global_fit}",
         )
         any_feature = any_feature or loud

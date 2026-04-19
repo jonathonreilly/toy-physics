@@ -38,6 +38,11 @@ The residual freedom is narrowly scoped to the Wilson-action-form premise,
 not to a hidden continuous coupling parameter on the accepted package
 surface.
 
+An additional 1PI Ward re-read is tracked in
+[G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md](G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md),
+but only as a `conditional / support` candidate. The accepted minimal
+input stack does not rely on that candidate route.
+
 The physical-lattice reading is no longer carried here as a separate live
 input. On the accepted one-axiom Hilbert/locality/information surface it is
 derived by [PHYSICAL_LATTICE_NECESSITY_NOTE.md](PHYSICAL_LATTICE_NECESSITY_NOTE.md),
