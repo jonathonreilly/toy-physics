@@ -67,6 +67,11 @@ The clean current endpoint is:
   principal `2 x 2` resolvent block, and exact Koide near the physical root
   is a local `O_0` renormalization law of that visible chamber link rather
   than a new free selector scalar
+- on the physically relevant micro-window around the positive root, that
+  `O_0` correction branch is already affine to about `7 x 10^(-11)` with
+  slope `alpha ~= 0.959212206...`, so the visible chamber-link correction at
+  `lambda_slack` sits on the same one-constant local transport germ rather
+  than requiring another mechanism
 
 So the current charged-lepton state is:
 
@@ -96,6 +101,7 @@ So the current charged-lepton state is:
 18. [KOIDE_WEIGHTED_CHARACTER_SOURCE_AXIS_THEOREM_NOTE_2026-04-20.md](./KOIDE_WEIGHTED_CHARACTER_SOURCE_AXIS_THEOREM_NOTE_2026-04-20.md)
 19. [KOIDE_HIGGS_DRESSED_RESOLVENT_ROOT_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_RESOLVENT_ROOT_THEOREM_NOTE_2026-04-20.md)
 20. [KOIDE_HIGGS_DRESSED_CHAMBER_LINK_RENORMALIZATION_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_CHAMBER_LINK_RENORMALIZATION_THEOREM_NOTE_2026-04-20.md)
+21. [KOIDE_HIGGS_DRESSED_AFFINE_TRANSPORT_GERM_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_AFFINE_TRANSPORT_GERM_THEOREM_NOTE_2026-04-20.md)
 
 ## Package Role
 
@@ -131,7 +137,9 @@ with one unique small positive root near chamber slack and cosine `0.996266`
 to the PDG `sqrt(m)` direction. That route is now sharper again: the visible
 chamber scalar is already `Re(H_*[1,3]) = lambda_slack`, while exact Koide
 near the physical positive root is a local `O_0` renormalization branch of
-that visible chamber link.
+that visible chamber link. And on the physically relevant micro-window that
+branch is already affine to about `7 x 10^(-11)`, so the remaining transport
+object is naturally one affine coefficient `alpha`, not a generic local curve.
 
 So the right classification is:
 

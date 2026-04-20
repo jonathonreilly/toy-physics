@@ -113,6 +113,18 @@ reweight the canonical character sources. See
    is the microscopic `O_0` renormalization law of the visible chamber-link
    scalar `Re(H_*[1,3])`. See
    `docs/KOIDE_HIGGS_DRESSED_CHAMBER_LINK_RENORMALIZATION_THEOREM_NOTE_2026-04-20.md`.
+   Later same-day sharpening: on the physically relevant micro-window around
+   the positive root, the exact local Koide branch is already affine to about
+   `7 x 10^(-11)`, with
+   `h_0(lambda) ~= alpha (lambda - lambda_*)`,
+   `alpha ~= 0.959212206...`, and only tiny quadratic curvature. The visible
+   chamber-link correction at `lambda_slack` is already predicted by that
+   affine germ to `~ 3 x 10^(-11)` and by the quadratic germ to machine
+   precision. So the remaining open object on this route can now be read even
+   more sharply: derive the microscopic origin of the affine `O_0`
+   renormalization coefficient `alpha ~= 0.959212206...` (and, secondarily,
+   its tiny curvature corrections). See
+   `docs/KOIDE_HIGGS_DRESSED_AFFINE_TRANSPORT_GERM_THEOREM_NOTE_2026-04-20.md`.
 
 **Required retained ingredients for any of the above:** explicit lattice propagator or transport-integral definition on the retained Cl(3)/Z³ carrier; currently on main as partial-support.
 
