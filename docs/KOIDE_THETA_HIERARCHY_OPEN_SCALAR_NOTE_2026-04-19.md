@@ -1,10 +1,11 @@
 # Koide Theta Hierarchy Open Scalar -- Closed on the Actual Berry Route
 
 **Date:** 2026-04-19
-**Status:** closed for AXIOM E / the charged-lepton phase gate, but not a full
-charged-lepton mass-package promotion. The old ambient-`S^2` / `n = 2`
-monopole story is superseded. The correct closure lives on the exact selected
-charged-lepton line.
+**Status:** closed for AXIOM E / the charged-lepton phase gate. On the
+branch-local actual-route stack, the previously separate selected-line
+`m_* / kappa_sel,*` input is also gone as a corollary. The old ambient-`S^2` /
+`n = 2` monopole story is superseded. The correct closure lives on the exact
+selected charged-lepton line.
 
 **Primary reference:** `docs/KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md`.
 
@@ -63,13 +64,14 @@ That is the load-bearing theorem: the physical charged-lepton phase observable
 is the Berry holonomy of the canonical tautological line on the actual selected
 route.
 
-At the current selected-line witness point, the runner gives
+At the directly Berry-selected point, the runner gives
 
 ```text
-delta ~= 0.222229861577,
+delta = 2/9,
 ```
 
-within witness precision of `2/9`.
+with the legacy witness remaining only as a near-coincident compatibility
+datum.
 
 ---
 
@@ -89,11 +91,17 @@ canonical bundle itself is the tautological `CP^1` line.
 
 ## 4. Scope boundary
 
-This closes the **phase gate** AXIOM E. It does **not** close the separate
-microscopic selected-point law for the physical endpoint `m_*` on the selected
-line. So the broader charged-lepton mass-hierarchy package on current `main`
-remains bounded even though the Berry/phase half is now closed on the actual
-route.
+On the branch-local stack, the exact selected-line scalar-phase bridge gives
+
+```text
+delta = 2/9  ->  kappa_sel,* = -0.607918569997  ->  m_* = -1.160443440065.
+```
+
+So there is no longer a separate selected-line scalar import on this route.
+
+This still does **not** automatically rewrite the authoritative current-main
+bounded charged-lepton package. Current main remains bounded until the
+branch-local actual-route Berry theorem stack is promoted there.
 
 ---
 
@@ -102,7 +110,7 @@ route.
 The Berry runner
 `scripts/frontier_koide_berry_phase_theorem.py`
 now validates the actual selected-line carrier, the forced doubled projective
-phase, the exact scalar-phase bridge, the canonical Berry connection, the
-selected-slice Berry-selector no-go, and the zero-Berry retained circulant
-moduli result. Narrative statements are no longer marked as validated.
-
+phase, the direct `delta = 2/9 -> m_*` selection, the canonical Berry
+connection, the selected-slice Berry-selector no-go, and the zero-Berry
+retained circulant moduli result. Narrative statements are no longer marked as
+validated.

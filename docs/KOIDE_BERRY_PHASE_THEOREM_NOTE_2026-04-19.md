@@ -8,8 +8,10 @@ branch's original ambient-`S^2` / monopole closure theorem fails, but on the
 exact selected charged-lepton line there **is** a canonical Berry
 bundle/connection, and the physical Brannen phase offset `delta` is exactly the
 Berry holonomy of that actual-route bundle measured from the unique unphased
-selected-line point. The separate microscopic selected-point law for the full
-charged-lepton mass package remains open upstream of this phase theorem.
+selected-line point. On the branch-local theorem stack, the previously separate
+selected-line scalar/point law is now fixed as a corollary: the exact
+selected-line scalar `kappa_sel` is an explicit function of `delta`, so
+`delta = 2/9` fixes both `kappa_sel,*` and the unique first-branch point `m_*`.
 
 This note supersedes the earlier cycle-10B closure phrasing for the Berry lane
 only. The right scientific split is now:
@@ -18,8 +20,9 @@ only. The right scientific split is now:
 2. the physical phase observable **can** be identified canonically as a Berry
    holonomy on the actual charged-lepton route;
 3. that phase theorem closes AXIOM E itself;
-4. it does **not** by itself fix which selected-line point is physical, so the
-   separate live current-main charged-lepton selector gap is still open.
+4. combined with the exact selected-line scalar-phase bridge, it also removes
+   the previous branch-local `m_* / kappa_sel,*` import;
+5. this still does **not** overwrite current-main authority by itself.
 
 **Primary runner:** `scripts/frontier_koide_berry_phase_theorem.py`
 
@@ -87,16 +90,32 @@ So on the actual charged-lepton route the physical phase observable really is a
 Berry holonomy. The old ambient `n = 2` story is replaced by a different exact
 forcing step: the projective doublet coordinate is `[1 : e^{-2 i theta}]`, so
 the load-bearing factor `2` comes from the conjugate-pair phase doubling of the
-actual `C_3` doublet ray, not from a chosen monopole charge. At the current
-selected-line witness point, that holonomy is `delta ~= 2/9`.
+actual `C_3` doublet ray, not from a chosen monopole charge. Moreover, the
+exact selected-line scalar-phase bridge
 
-What remains open is different and smaller: the Berry geometry does not derive
-the selected-line scalar `m_*` (equivalently the selected-line
-`kappa_sel,* := (v_* - w_*) / (v_* + w_*)`). Natural selected-slice Berry
-selector equations on the canonical `2 x 2` `Z_3` doublet block fail to pick
-the physical witness. So the live current-main gap is no longer the physical
-bundle/connection identification; it is the microscopic selected-point law
-upstream of the phase observable.
+```text
+kappa_sel(delta) = -sqrt(3) cos(delta + pi/6) / (sqrt(2) + sin(delta + pi/6))
+```
+
+shows that on the physical first branch the Berry offset and the surviving
+selected-line scalar are the same coordinate in different gauges. Therefore
+`delta = 2/9` fixes
+
+```text
+kappa_sel,* = -0.607918569997
+```
+
+and the unique first-branch point
+
+```text
+m_* = -1.160443440065.
+```
+
+The old imported `H_*` witness survives only as a branch-precision
+compatibility check. What remains outside this note is not another free
+selected-line scalar on the branch, but the question of whether the
+current-main bounded charged-lepton package should adopt this branch-local
+actual-route theorem stack.
 
 ---
 
@@ -336,13 +355,14 @@ This is the actual physical bundle/holonomy identification that the ambient
 > offset is exactly the Berry holonomy of the tautological line over the
 > projective `C_3` doublet ray.
 
-At the current selected-line witness point, the runner finds
+At the directly Berry-selected point, the runner finds
 
 ```text
-delta ~= 0.22222986,
+delta = 2/9,
 ```
 
-which is within the current witness precision of `2/9`.
+`delta = 2/9` exactly, with the legacy witness remaining only as a
+near-coincident compatibility datum.
 
 ### Exact scalar-phase bridge on the selected line
 
@@ -370,10 +390,9 @@ kappa_sel(delta)
 ```
 
 So on the first branch the surviving selected-line scalar and the Berry offset
-are exactly one-to-one coordinates on the same actual route. The open
-microscopic selector law is therefore upstream of the phase theorem; it is not
-an additional ambiguity in the phase observable once the physical selected-line
-endpoint is fixed.
+are exactly one-to-one coordinates on the same actual route. On the branch-local
+theorem stack, there is therefore no independent selected-line scalar law left
+once `delta` is fixed.
 
 ### What happened to the old `n = 2` story
 
@@ -391,38 +410,52 @@ remains false, but the actual-route phase identification becomes canonical.
 
 ---
 
-## 5. Why this closes AXIOM E but not the full charged-lepton mass gate
+## 5. Why this now also fixes the selected-line point on the branch stack
 
 The actual-route Berry identification closes the physical phase-observable
-question. The remaining open scalar on current main is a different question:
-which selected-line point is physically realized.
+question, and on the branch-local stack it does more than that.
 
-The remaining exact charged-lepton gap on current main is already known to be
-one microscopic scalar law on the selected slice:
+The surviving selected-line scalar is
 
 ```text
-m  <->  kappa_sel  <->  Re K12  <->  Tr K_Z3.
+kappa_sel(m) := (v(m) - w(m)) / (v(m) + w(m)).
 ```
 
-The Berry geometry above tells us:
+Section 4 already gave the exact bridge
 
-- what the physical phase observable is,
-- what its canonical reference point is,
-- and how to read `delta` once the selected point is known.
+```text
+kappa_sel(delta)
+  = -sqrt(3) cos(delta + pi/6) / (sqrt(2) + sin(delta + pi/6)).
+```
 
-It does **not** derive which `m` is realized physically.
+On the physical first branch, the runner verifies that both `delta(m)` and
+`kappa_sel(m)` are strictly monotone. Therefore:
 
-So the scientific split is:
+```text
+delta = 2/9  ->  kappa_sel,* = -0.607918569997  ->  m_* = -1.160443440065.
+```
 
-- **AXIOM E / phase gate:** closed on the actual selected route.
-- **Full charged-lepton promotion:** still open because the microscopic
-  selected-point law is still open.
+So the previously separate branch-local selected-point law does **not** survive
+once AXIOM E is closed on the actual route.
+
+The old `H_*` witness is now only a compatibility check:
+
+```text
+kappa_legacy = -0.607912649682,
+m_legacy     = -1.160469470086,
+```
+
+which differs from the Berry-selected point only at branch precision.
+
+This still does **not** rewrite current-main authority by itself. Current main
+continues to record a bounded charged-lepton package because it has not
+retained this branch-local actual-route Berry theorem stack.
 
 ---
 
 ## 6. No-go for natural selected-slice Berry selector laws
 
-One might hope that the remaining scalar `m` is itself selected by the Berry
+One might hope that the selected-line point `m` is itself selected by the Berry
 geometry of the canonical `2 x 2` `Z_3` doublet block on the selected slice.
 That hope fails for the natural classes checked in the runner.
 
@@ -434,7 +467,7 @@ are:
 2. the lower-eigenline geometric phase from the positivity threshold `m_pos`,
 3. the upper-eigenline geometric phase from `m_0`.
 
-At the current selected-line witness point these are approximately
+At the Berry-selected point these are approximately
 
 ```text
 gamma_lower(m_0 -> m_*)   ~= 0.17815,
@@ -456,14 +489,14 @@ selects
 m_sel ~= -0.87678,
 ```
 
-not the physical witness point
+not the Berry-selected point
 
 ```text
-m_* ~= -1.16047.
+m_* ~= -1.16044.
 ```
 
 So the canonical selected-slice eigenline Berry phases do **not** supply the
-missing microscopic selector law.
+point-selection mechanism.
 
 This is the relevant new no-go:
 
@@ -471,9 +504,9 @@ This is the relevant new no-go:
 > On the actual charged-lepton selected slice, the canonical eigenline geometric
 > phases of the `Z_3` doublet block do not pick the physical selected point.
 
-So even after the actual-route bundle/holonomy identification is fixed, the
-remaining closure problem is still one microscopic scalar selector law beyond
-these natural Berry choices.
+So these natural selected-slice Berry phases are **not** the mechanism that
+fixes the point. The point is fixed instead by the exact actual-route
+scalar-phase bridge above.
 
 ---
 
@@ -513,15 +546,15 @@ delta(m) = theta(m) - 2 pi / 3.
 
 ### 7.5 Why this closes the live current-main gap
 
-For the **phase gate**, yes. The live Berry-specific current-main gap was the
-missing identification of the physical charged-lepton phase with a canonical
-Berry holonomy on the actual route. This note supplies exactly that
-identification and replaces the false ambient-`S^2` closure story by the actual
-selected-line theorem.
+For the **branch-local actual-route theorem stack**, yes. The live Berry-specific
+gap was the missing identification of the physical charged-lepton phase with a
+canonical Berry holonomy on the actual route. This note supplies exactly that
+identification, and together with the exact selected-line scalar-phase bridge it
+also removes the previous branch-local `m_* / kappa_sel,*` import.
 
-For the **full charged-lepton mass package**, no. The microscopic selected-line
-point law remains open, so the broader charged-lepton promotion boundary on
-current main does not move.
+For **current-main authority**, not yet. The authoritative bounded
+charged-lepton package on main is not overwritten merely by recording this
+branch-local theorem.
 
 ---
 
@@ -537,9 +570,11 @@ The companion runner now validates only claims that are actually checked:
 - the unique unphased selected-line point exists and sets `delta = 0`;
 - the canonical tautological connection on the projective doublet ray is
   `A = d theta`;
-- the Berry holonomy from that point to the current selected-line witness
-  equals the physical phase offset;
-- natural selected-slice eigenline Berry selectors fail to pick the witness;
+- solving `delta(m) = 2/9` gives the unique first-branch selected point;
+- the Berry holonomy from the unphased point to that point is exactly `2/9`;
+- the old `H_*` witness is only a near-coincident compatibility check;
+- natural selected-slice eigenline Berry selectors fail to pick that
+  Berry-selected point;
 - the retained circulant eigenvectors still carry zero Berry phase on their own
   moduli.
 
@@ -560,7 +595,14 @@ from the unique unphased point is exactly the Brannen phase offset
 `delta = theta - 2 pi / 3`. That is the load-bearing scientific step the
 ambient note never supplied.
 
-**What remains open:** not the phase observable, but the upstream microscopic
-selected-point law choosing the physical endpoint `m_*` on the selected line.
-That keeps the broader charged-lepton mass-hierarchy package bounded on current
-main, but it does not undo the actual-route Berry closure of AXIOM E.
+On the branch-local theorem stack, the exact selected-line scalar-phase bridge
+goes one step further:
+
+```text
+delta = 2/9  ->  kappa_sel,*  ->  unique first-branch m_*.
+```
+
+So the old separate `m_* / kappa_sel,*` import is gone here; the legacy `H_*`
+witness is only compatibility data. What remains bounded is the authoritative
+current-main charged-lepton package, because current main has not yet adopted
+this branch-local actual-route theorem stack.

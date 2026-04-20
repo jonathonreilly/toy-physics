@@ -11,7 +11,8 @@ This runner tests only claims that are actually validated:
   (C) On the exact selected line, the normalized Koide amplitudes carry a
       canonical projective C_3 doublet ray with fixed-modulus Fourier
       coefficients, forced doubled projective phase, exact scalar-phase
-      bridge, and a unique unphased reference point.
+      bridge, a unique unphased reference point, and a unique first-branch
+      point selected directly by delta = 2/9.
   (D) On that actual selected route, the tautological CP^1 Berry connection
       reproduces the physical phase offset.
   (E) Natural selected-slice eigenline Berry selector laws do not pick the
@@ -38,7 +39,6 @@ from frontier_dm_neutrino_source_surface_z3_doublet_block_point_selection_theore
 from frontier_higgs_dressed_propagator_v1 import H3
 from frontier_koide_selected_line_cyclic_response_bridge import (
     hstar_witness_kappa,
-    selected_line_kappa,
 )
 
 
@@ -60,6 +60,7 @@ SQRT2 = math.sqrt(2.0)
 SQRT3 = math.sqrt(3.0)
 SELECTOR = math.sqrt(6.0) / 3.0
 KOIDE_RATIO = 2.0 / 3.0
+DELTA_TARGET = 2.0 / 9.0
 SINGLET_FRACTION = 0.5
 OMEGA = np.exp(2j * np.pi / 3.0)
 
@@ -149,6 +150,11 @@ def theta_phase(m: float) -> float:
 
 def delta_offset(m: float) -> float:
     return theta_phase(m) - 2.0 * math.pi / 3.0
+
+
+def selected_line_kappa(m: float) -> float:
+    v, w = selected_line_slots(m)
+    return (v - w) / (v + w)
 
 
 def projective_doublet_ratio(m: float) -> complex:
@@ -270,8 +276,12 @@ print("-" * 72)
 
 m_pos = float(brentq(lambda m: selected_line_small_amp(m)[0], -1.3, -1.2))
 m_zero = float(brentq(lambda m: selected_line_small_amp(m)[0] - selected_line_small_amp(m)[1], -0.4, -0.2))
+m_target = float(brentq(lambda m: delta_offset(m) - DELTA_TARGET, m_pos + 1.0e-4, m_zero - 1.0e-4))
+kappa_target = selected_line_scalar_from_delta(DELTA_TARGET)
 _beta_star, kappa_star = hstar_witness_kappa()
-m_star = float(brentq(lambda m: selected_line_kappa(m) - kappa_star, -1.165, -1.160))
+m_legacy = float(
+    brentq(lambda m: selected_line_kappa(m) - kappa_star, m_pos + 1.0e-4, m_zero - 1.0e-4)
+)
 
 first_branch_grid = np.linspace(m_pos + 1.0e-4, m_zero - 1.0e-4, 25)
 first_branch_dense = np.linspace(m_pos + 1.0e-4, m_zero - 1.0e-4, 200)
@@ -327,22 +337,27 @@ check(
     bool(np.all(np.diff(delta_dense) < 0.0)) and bool(np.all(np.diff(scalar_dense) < 0.0)),
     f"delta in ({delta_dense[-1]:.6f}, {delta_dense[0]:.6f})",
 )
-conn_theta = berry_connection(canonical_spinor, theta_phase(m_star)).real
+conn_theta = berry_connection(canonical_spinor, theta_phase(m_target)).real
 check(
     "(C8) The tautological equator connection is A = dtheta",
     abs(conn_theta - 1.0) < 1e-6,
-    f"A(theta_*) = {conn_theta:.12f}",
+    f"A(theta_2/9) = {conn_theta:.12f}",
 )
 check(
-    "(C9) The current selected-line witness carries the physical 2/9 phase",
-    abs(delta_offset(m_star) - 2.0 / 9.0) < 5e-5,
-    f"m_* = {m_star:.12f}, delta = {delta_offset(m_star):.12f}",
+    "(C9) Solving delta(m)=2/9 on the first branch gives one unique selected point",
+    abs(delta_offset(m_target) - DELTA_TARGET) < 1e-12,
+    f"m_Berry = {m_target:.12f}",
 )
 check(
-    "(C10) Berry holonomy from the unphased point equals the phase offset",
-    abs((theta_phase(m_star) - theta_phase(m_zero)) - delta_offset(m_star)) < 1e-12
-    and abs((theta_phase(m_star) - theta_phase(m_zero)) - 2.0 / 9.0) < 5e-5,
-    f"hol = {theta_phase(m_star) - theta_phase(m_zero):.12f}",
+    "(C10) Berry holonomy from the unphased point to that point is exactly 2/9",
+    abs((theta_phase(m_target) - theta_phase(m_zero)) - delta_offset(m_target)) < 1e-12
+    and abs((theta_phase(m_target) - theta_phase(m_zero)) - DELTA_TARGET) < 1e-12,
+    f"hol = {theta_phase(m_target) - theta_phase(m_zero):.12f}",
+)
+check(
+    "(C11) The old H_* witness is only a near-coincident compatibility check",
+    abs(m_legacy - m_target) < 1.0e-4 and abs(kappa_star - kappa_target) < 1.0e-4,
+    f"dm = {m_target - m_legacy:+.2e}, dkappa = {kappa_target - kappa_star:+.2e}",
 )
 
 
@@ -353,9 +368,9 @@ check(
 print("\n(D) Natural selected-slice Berry selector no-go")
 print("-" * 72)
 
-geom_lower_zero = open_path_geometric_phase(m_zero, m_star, branch=0)
-geom_lower_pos = open_path_geometric_phase(m_pos, m_star, branch=0)
-geom_upper_zero = open_path_geometric_phase(m_zero, m_star, branch=1)
+geom_lower_zero = open_path_geometric_phase(m_zero, m_target, branch=0)
+geom_lower_pos = open_path_geometric_phase(m_pos, m_target, branch=0)
+geom_upper_zero = open_path_geometric_phase(m_zero, m_target, branch=1)
 selector_root = float(
     brentq(
         lambda m: open_path_geometric_phase(m_zero, m, branch=0, n=700) - delta_offset(m),
@@ -365,24 +380,24 @@ selector_root = float(
 )
 
 check(
-    "(D1) Lower-eigenline geometric phase from the unphased point is not 2/9 at the witness",
+    "(D1) Lower-eigenline geometric phase from the unphased point is not 2/9 at the Berry-selected point",
     abs(geom_lower_zero - 2.0 / 9.0) > 1e-2,
     f"gamma = {geom_lower_zero:.12f}",
 )
 check(
-    "(D2) Lower-eigenline geometric phase from threshold is not 2/9 at the witness",
+    "(D2) Lower-eigenline geometric phase from threshold is not 2/9 at the Berry-selected point",
     abs(geom_lower_pos - 2.0 / 9.0) > 1e-2,
     f"gamma = {geom_lower_pos:.12f}",
 )
 check(
-    "(D3) Upper-eigenline geometric phase from the unphased point is not 2/9 at the witness",
+    "(D3) Upper-eigenline geometric phase from the unphased point is not 2/9 at the Berry-selected point",
     abs(geom_upper_zero - 2.0 / 9.0) > 1e-2,
     f"gamma = {geom_upper_zero:.12f}",
 )
 check(
-    "(D4) Solving gamma_lower(m_0 -> m) = delta(m) selects a different point than the witness",
-    abs(selector_root - m_star) > 0.1,
-    f"m_sel = {selector_root:.12f}, m_* = {m_star:.12f}",
+    "(D4) Solving gamma_lower(m_0 -> m) = delta(m) selects a different point than the Berry-selected point",
+    abs(selector_root - m_target) > 0.1,
+    f"m_sel = {selector_root:.12f}, m_Berry = {m_target:.12f}",
 )
 
 

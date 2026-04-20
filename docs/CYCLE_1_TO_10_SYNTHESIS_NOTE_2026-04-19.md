@@ -70,9 +70,13 @@ selected-line point is exactly the Brannen offset
     delta = theta - 2 pi / 3.
 
 So AXIOM E is closed as an actual-route phase-observable theorem. The separate
-microscopic selected-point law for the broader charged-lepton mass package
-remains open upstream of this phase theorem. Runner PASS surface is now the
-actual-route Berry audit, not the old ambient monopole arithmetic.
+branch-local selected-point import does not survive once the exact
+selected-line scalar-phase bridge is included: on the physical first branch,
+`delta` and `kappa_sel` are exact equivalent coordinates, so `delta = 2/9`
+fixes `kappa_sel,*` and the unique selected-line point `m_*`. The old `H_*`
+witness is demoted to compatibility only. Runner PASS surface is now the
+actual-route Berry audit plus the selected-line bridge, not the old ambient
+monopole arithmetic.
 
 ### 1.3 DPLE (Dim-Parametric log|det| Extremum) -- closes F4
 
