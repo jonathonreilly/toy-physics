@@ -98,7 +98,17 @@ reweight the canonical character sources. See
 
 1. **H_* witness ratio from a retained lattice calculation.** The H_* witness kappa_* ≈ −0.608 currently pins `m_*` by observational fit. If a retained lattice propagator or transport integral computes kappa_* from Cl(3)/Z³ ingredients alone, the cone point is forced. This is the most likely route.
 2. **Retained `C_3`-singlet Schur law on the `4 x 4` (hw=1 + singlet/baryon) block.** The new reduction theorem shows every equivariant `4 x 4` extension collapses to `K_eff(m) = K_sel(m) - lambda(m) J`. So this route is now exactly: derive the scalar singlet-Schur law `lambda(m)` from the microscopic lattice action. The later constant-coupling sharpening proves that a fixed positive `lambda` does not close the selector by itself; it merely reparameterizes a continuum of branch minima. So the real remaining target is the microscopic `lambda`-law, not the existence of some positive constant `lambda`.
-3. **One-clock semigroup / Γ-orbit positive witness route.** Already delivers cos-similarity > 1 − 10⁻⁹ with PDG √m-vector at the cone point `H_*`. Currently conditional on G1 observational chamber pins (M_STAR, DELTA_STAR, Q_PLUS_STAR). If those three pins can be derived from retained framework, `Q = 2/3` follows.
+3. **One-clock semigroup / Γ-orbit positive witness route.** Already delivers
+   cos-similarity > 1 − 10⁻⁹ with the PDG `sqrt(m)` vector at the cone point
+   `H_*`. But this route is now also shown not to be a hidden basin selector:
+   the same semigroup witness transfers across Basin 1, Basin 2, Basin X, the
+   chamber-violating CP-conjugate point, and the chamber-violating
+   `C_neg q<0` point, with direction-cos spread only at the `10^(-13)` level
+   after one overall scale fit. So this avenue also inherits the open G1
+   chamber/basin program rather than bypassing it. If the physical G1 chamber
+   pins can be derived from retained framework, then `Q = 2/3` follows on this
+   route; without that, the semigroup witness is only support. See
+   `docs/KOIDE_GAMMA_ORBIT_SEMIGROUP_BASIN_TRANSFER_NO_GO_THEOREM_NOTE_2026-04-20.md`.
 4. **Missing-axis Higgs-dressed resolvent root route.** On the retained avenue-G missing-axis lift `W_4(h_0) = diag(h_0, H_*)`, the resolvent family `(lambda I - W_4)^(-1)` now has an exact Koide root at baseline `h_0 = 0`: the unique small positive root `lambda_* ~= 0.0158087032854` yields `Q = 2/3` exactly on the induced species spectrum and direction cosine `0.996266...` to the PDG √m-direction. The nearby branch-internal chamber slack `lambda_slack = q_+* + delta_* - sqrt(8/3) ~= 0.0158555114905` is only a near-hit, not the exact root; exact Koide at `lambda_slack` is restored by a tiny positive `h_0 ~= 4.49e-5`. So this avenue is now reduced to a one-scalar `lambda` law (or equivalent near-surface `(lambda, h_0)` law), not a broad functional-class ambiguity. Closing it requires a retained derivation of that scalar law from the microscopic transport operator. See `docs/KOIDE_HIGGS_DRESSED_RESOLVENT_ROOT_THEOREM_NOTE_2026-04-20.md`.
    Later same-day sharpening: this route is now even more concrete. The old
    chamber slack scalar is exactly the visible chamber-link entry

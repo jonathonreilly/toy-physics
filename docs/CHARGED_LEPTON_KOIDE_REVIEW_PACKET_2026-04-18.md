@@ -100,6 +100,11 @@ The clean current endpoint is:
   positive Koide root; the excluded CP-conjugate point even beats Basin 1 on
   charged-lepton direction cosine, so transport is not the physical basin
   selector
+- and the same is now true of the positive one-clock semigroup witness: Basin
+  1, Basin 2, Basin X, the chamber-violating CP-conjugate point, and the
+  chamber-violating `C_neg q < 0` point all admit the same near-perfect
+  semigroup witness after one overall scale fit, so that route also inherits
+  the open G1 chamber/basin selector rather than bypassing it
 
 So the current charged-lepton state is:
 
@@ -136,6 +141,7 @@ So the current charged-lepton state is:
 25. [KOIDE_HIGGS_DRESSED_COUPLING_PACKET_REDUCTION_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_COUPLING_PACKET_REDUCTION_THEOREM_NOTE_2026-04-20.md)
 26. [KOIDE_HIGGS_DRESSED_CHAMBER_PAIR_INVERSION_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_CHAMBER_PAIR_INVERSION_THEOREM_NOTE_2026-04-20.md)
 27. [KOIDE_HIGGS_DRESSED_BASIN_TRANSFER_NO_GO_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_BASIN_TRANSFER_NO_GO_THEOREM_NOTE_2026-04-20.md)
+28. [KOIDE_GAMMA_ORBIT_SEMIGROUP_BASIN_TRANSFER_NO_GO_THEOREM_NOTE_2026-04-20.md](./KOIDE_GAMMA_ORBIT_SEMIGROUP_BASIN_TRANSFER_NO_GO_THEOREM_NOTE_2026-04-20.md)
 
 ## Package Role
 
@@ -191,7 +197,11 @@ violating `C_neg q<0` point, each with the same eight-root pattern and a
 strong small positive Koide root. The excluded CP-conjugate point actually
 beats Basin 1 on charged-lepton direction cosine. So the transport avenue is
 not the physical basin selector; it inherits the open G1 chamber/basin
-selection program.
+selection program. And the same is now true of the positive one-clock
+semigroup witness itself: the same G1 competitor set carries essentially the
+same near-perfect semigroup witness after one overall scale fit, with
+direction-cos spread only at the `10^(-13)` level across the whole set. So
+that route also inherits the open G1 chamber/basin selection program.
 
 So the right classification is:
 
