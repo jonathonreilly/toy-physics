@@ -13,8 +13,11 @@ science review plus the later meta-closure pass is:
   measure law, Berry is now an obstruction theorem against the current
   monopole packaging on the actual base, DPLE remains an open-gate support
   route, and quark `a_u` closes on branch-internal bimodule footing via
-  `BICAC -> STRC-LO -> RPSR` but still falls short of pure retained-physics
-  derivation because BICAC is an added framework-native postulate;
+  `BICAC -> STRC-LO -> RPSR`; same-day NORM theorems strengthen this by
+  showing that LO split laws already exist on the bimodule and that BICAC is
+  the unique normalized affine extension, but the route still falls short of
+  pure retained-physics derivation because that naturality input is extra
+  bimodule structure;
 - at the **meta-axiom layer**, the strongest current compression is
   `4 -> 2` via **DIM-UNIQ + STRC**, not `4 -> 0`;
 - a named future target (**BACT**, the bimodule amplitude-completeness
@@ -39,7 +42,7 @@ scalar selections:
 | **Koide `kappa`** | Charged-lepton cone normalization `kappa = 2` | Support/candidate principle via **MRU** |
 | **Koide `theta`** | Doublet-phase offset `delta = 2/9` (Brannen–Zenczykowski) | Old Berry route; new obstruction on the actual positive base |
 | **DM A-BCC basin** | Interior-minimum linear-path Sylvester discriminator `F_4` | A-BCC chamber-closure route in §2.3a; direct-descendant frontier still sharpened further below |
-| **Quark `a_u`** | Up-sector reduced amplitude `a_u = 0.7748865611` | Branch-internal theorem via **BICAC -> STRC-LO -> RPSR** |
+| **Quark `a_u`** | Up-sector reduced amplitude `a_u = 0.7748865611` | Branch-internal theorem via **BICAC -> STRC-LO -> RPSR**, strengthened by NORM existence/naturality |
 
 §2 presents the four branch-local routes; §3 presents STRC; §4 records the
 later meta-closure compression (`DIM-UNIQ + STRC`); §5 separates
@@ -264,6 +267,35 @@ present branch does **not** force `kappa = 1`; it leaves an explicit endpoint-
 selection problem on `kappa in [sqrt(6/7), 1]`. See
 `docs/QUARK_BICAC_ENDPOINT_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`.
 
+Two same-day NORM theorems refine that obstruction. The first shows that the
+bridge family already lifts to actual complementary endomorphisms of the
+one-real imaginary channel `I = R * Im(p)`:
+
+```text
+D_kappa(x) = rho * kappa * x,
+U_kappa(x) = (1-rho*kappa) * x.
+```
+
+So the binary residue "does an LO split law exist on the bimodule?" is now
+settled positively. See
+`docs/QUARK_BIMODULE_NORM_EXISTENCE_THEOREM_NOTE_2026-04-19.md`.
+
+The second shows that if one asks for a normalized affine extension of the
+split law across the full ownership interval `a in [0,1]`, then uniqueness
+collapses to BICAC:
+
+```text
+D_a = a Id_I,
+U_a = (1-a) Id_I.
+```
+
+At the physical point `a = rho`, that is exactly STRC-LO. The support and
+target profiles stay valid fixed-point laws but fail full-interval
+normalization because their `D_1` is not `Id_I`. So the open quark caveat is
+now narrower: not existence, not bare endpoint arbitrariness, but derivation
+of this normalized affine naturality from retained quark physics. See
+`docs/QUARK_BIMODULE_NORM_NATURALITY_THEOREM_NOTE_2026-04-19.md`.
+
 ---
 
 ## §3 STRC-LO theorem on CKM via BICAC + collinearity
@@ -293,6 +325,12 @@ branch-internal theorem. The reviewer-bar caveat is now sharper: the open
 issue is not the old LO algebraic gap, but the status of BICAC as an added
 bimodule structural postulate rather than a derivation from previously
 retained quark observables alone.
+
+The same-day NORM-naturality theorem sharpens that wording further. On the
+full ownership interval, BICAC is the unique normalized affine extension of
+the LO split law. So the remaining issue is more specific than "BICAC is a
+postulate": it is the status of the normalized affine naturality that singles
+BICAC out.
 
 The new endpoint-obstruction theorem makes that sharper again: deriving BICAC
 is equivalent to proving the endpoint-selection law that collapses the retained
@@ -382,6 +420,12 @@ relation on CKM reduced amplitudes. Both live on a specific retained
 ray in their respective sectors; both are on equal epistemic footing
 as observable principles.
 
+The same-day NORM theorems do not erase this meta-axiom layer, but they do
+clean up the quark-side internal picture: the LO split law already exists on
+the bimodule, and BICAC is the unique normalized affine extension. What
+remains open is whether that extension principle is itself retained-physics-
+derived.
+
 ---
 
 ## §5 Honest accounting: meta-axioms vs reviewer bar
@@ -411,6 +455,9 @@ support/conditional packet:
 
 - MRU restates the missing charged-lepton scalar law but does not derive why
   the physical carrier satisfies it;
+- operator-side `kappa = 2` framing is now dispensable if the reviewer accepts
+  the spectrum-side closure language, because `Q = 2/3`, `kappa = 2`, and MRU
+  at `d = 3` are already the same leaf on the branch;
 - Berry's old geometric model exists, but the new bundle-obstruction theorem
   shows that packaging is not available on the actual positive Koide base;
 - DPLE upgrades `F_4` to a real theorem on the fixed chart but does not derive
@@ -419,9 +466,10 @@ support/conditional packet:
   **closed at axiom level conditional on DPLE acceptance** via
   `(P3 chamber bound) ∩ (DPLE F_4)` (see §2.3a) — the same conditional
   status as DPLE itself, with no new axiom load on the gate;
-- quark `a_u` now closes on bimodule footing via BICAC + STRC-LO + RPSR, but
-  BICAC remains an added framework-native structural postulate rather than a
-  pure retained derivation.
+- quark `a_u` now closes on bimodule footing via BICAC + STRC-LO + RPSR, and
+  same-day NORM theorems show that BICAC is the unique normalized affine
+  extension of the LO split law, but the derivation of that naturality from
+  pure retained quark physics remains open.
 
 So the current reviewer-grade answer is still: **no full gate is closed on
 this branch yet**.

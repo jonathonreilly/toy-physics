@@ -20,6 +20,20 @@ substantially, but it still does not remove the reviewer-bar issue because
 BICAC is an added bimodule structural postulate rather than a derivation from
 the previously retained quark physics alone.
 
+**Later same-day quark strengthening.** Two additional bimodule theorems now
+sharpen that caveat:
+
+- `docs/QUARK_BIMODULE_NORM_EXISTENCE_THEOREM_NOTE_2026-04-19.md`
+- `docs/QUARK_BIMODULE_NORM_NATURALITY_THEOREM_NOTE_2026-04-19.md`
+
+They show that the branch already carries actual LO split laws on the
+one-real imaginary channel (`NORM` existence) and that BICAC is the unique
+normalized affine extension across the full ownership interval (`NORM`
+naturality). So the remaining quark caveat is no longer "does a bimodule law
+exist?" or even "is BICAC just one arbitrary endpoint?" It is the narrower
+question of whether that normalized affine naturality can itself be derived
+from the retained quark packet.
+
 ## Executive decision table
 
 | Path | Target gate | Science result | Does it close the gate? | Review decision |
@@ -104,6 +118,20 @@ MRU is scientifically useful as a **support/candidate principle**:
 - it sharpens what kind of law would be sufficient.
 
 But it does **not** by itself close the Koide `kappa` gate.
+
+### Operator-side framing
+
+The operator-side `kappa = 2` primitive is now physically redundant on the
+branch. Once the reviewer accepts spectrum-side closure language, the
+load-bearing content is already the single Koide / MRU leaf
+
+```text
+Q = 2/3  <=>  kappa = 2  <=>  MRU at d = 3.
+```
+
+So no separate operator-side IDCS-style primitive is needed in the current
+charged-lepton packet. What remains open is the measure law selecting that
+leaf, not another independent operator identity.
 
 ## 2. Berry holonomy on `S^2_Koide` -- Koide `delta = 2/9`
 
@@ -394,6 +422,10 @@ DPLE should be treated as a **support theorem on the open DM gate**:
 - `scripts/frontier_strc_lo_collinearity_theorem.py`
 - `docs/QUARK_BICAC_ENDPOINT_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`
 - `scripts/frontier_quark_bicac_endpoint_obstruction_theorem.py`
+- `docs/QUARK_BIMODULE_NORM_EXISTENCE_THEOREM_NOTE_2026-04-19.md`
+- `scripts/frontier_quark_bimodule_norm_existence_theorem.py`
+- `docs/QUARK_BIMODULE_NORM_NATURALITY_THEOREM_NOTE_2026-04-19.md`
+- `scripts/frontier_quark_bimodule_norm_naturality_theorem.py`
 - `docs/QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md`
 - `docs/QUARK_UP_AMPLITUDE_RETAINED_NATIVE_CANDIDATE_NOTE_2026-04-19.md`
 - `docs/SCALAR_TENSOR_RAY_MAGNITUDE_BRIDGE_NOTE_2026-04-19.md`
@@ -452,6 +484,36 @@ prove the endpoint-selection law collapsing kappa in [sqrt(6/7), 1] to
 kappa = 1.
 ```
 
+Two same-day NORM theorems refine that still further.
+
+First:
+
+- `docs/QUARK_BIMODULE_NORM_EXISTENCE_THEOREM_NOTE_2026-04-19.md`
+- `scripts/frontier_quark_bimodule_norm_existence_theorem.py`
+
+show that this is not merely a scalar bridge interval. The full family already
+lifts to actual complementary real-linear endomorphisms of the one-real
+imaginary channel `I = R * Im(p)`. So the binary residue is settled
+positively: an LO split law does exist on the bimodule.
+
+Second:
+
+- `docs/QUARK_BIMODULE_NORM_NATURALITY_THEOREM_NOTE_2026-04-19.md`
+- `scripts/frontier_quark_bimodule_norm_naturality_theorem.py`
+
+show that if one asks for a normalized affine extension of the split law
+across the full ownership interval `a in [0,1]`, then BICAC is unique:
+
+```text
+D_a = a Id_I,
+U_a = (1-a) Id_I.
+```
+
+At the physical point `a = rho`, this is exactly STRC-LO / BICAC. The support
+and target bridge profiles remain valid fixed-point laws, but they fail the
+full-interval normalization condition because their `D_1` is
+`sqrt(6/7) Id_I` or `(48/49) Id_I`, not `Id_I`.
+
 ### Why it still does **not** clear the reviewer bar
 
 The old conditional gap is no longer the issue. The issue is now the status of
@@ -463,15 +525,25 @@ scientific advance over the old "assume STRC" packaging. But it is still an
 added structural principle rather than a derivation from the previously
 retained quark-side physics alone.
 
-So the quark lane is now stronger than a conditional support theorem, but it
-still does not meet the strict reviewer request for object derivation from the
-retained package without new load-bearing postulates.
+So the quark lane is now stronger than a conditional support theorem, and
+stronger than a bare "BICAC postulate" reading. The remaining reviewer-bar
+caveat has narrowed to:
+
+```text
+derive NORM normalization / naturality from retained quark-side physics.
+```
+
+That is a materially sharper target, but it still does not meet the strict
+reviewer request for object derivation from the retained package without new
+load-bearing postulates.
 
 ### Science decision
 
 The honest current read is:
 
 - **branch-internal theorem:** yes, via BICAC + STRC-LO + RPSR;
+- **same-day strengthening:** BICAC is the unique normalized affine extension
+  of the LO split law on the full ownership interval;
 - **reviewer-bar retained derivation:** not yet.
 
 So this lane should now be treated as a **real quark theorem on bimodule
@@ -492,9 +564,11 @@ The right scientific read is:
 3. **DPLE**: real support theorem that upgrades the old F4 selector story, but
    does not eliminate the remaining DM source-side open input, now sharpened
    to a 3-scalar spectral law on `H_e/L_e`.
-4. **STRC-LO + RPSR**: quark `a_u` now closes on bimodule footing via BICAC,
-   but still imports one additional framework-native structural postulate,
-   now isolated as an endpoint-selection law on `kappa`.
+4. **STRC-LO + RPSR**: quark `a_u` now closes on bimodule footing via BICAC;
+   same-day NORM theorems settle existence and normalized affine uniqueness,
+   so the remaining extra structure is no longer a vague endpoint-choice
+   postulate but the narrower question of deriving that NORM naturality from
+   retained quark physics.
 
 So the branch is **not** a clean "remaining open gates are now closed"
 science packet.

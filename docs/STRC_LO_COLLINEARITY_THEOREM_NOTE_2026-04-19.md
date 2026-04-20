@@ -2,12 +2,15 @@
 
 **Date:** 2026-04-19
 **Lane:** Quark up-amplitude — closes the open LO gap in RPSR.
-**Status:** RETAINED theorem. STRC-LO (`a_u + rho · sin_d = sin_d`) is
-proved from three ingredients: (1) the retained `a_d = Re(r)`; (2) the
-**Bimodule Imaginary-Channel Amplitude-Conservation** (BICAC) postulate
-— a framework-native split law for the imaginary amplitude in the
-1(+)5 bimodule; (3) the retained collinearity `r = p/sqrt(7)` (C1).
-BICAC is not a new SM axiom; it is internal to the bimodule framework.
+**Status:** retained quark theorem on bimodule footing. STRC-LO
+(`a_u + rho · sin_d = sin_d`) is proved from three ingredients:
+(1) the retained `a_d = Re(r)`; (2) the **Bimodule Imaginary-Channel
+Amplitude-Conservation** (BICAC) split law for the imaginary amplitude in the
+`1(+)5` bimodule; (3) the retained collinearity `r = p/sqrt(7)` (C1).
+Later same-day NORM results show that BICAC is the unique normalized affine
+extension of the LO split law on the one-real imaginary channel, so the
+remaining caveat is the status of that naturality input rather than the old LO
+algebra itself.
 **Primary runner:** `scripts/frontier_strc_lo_collinearity_theorem.py`
 
 ---
@@ -46,8 +49,17 @@ BICAC is not a new SM axiom; it is internal to the bimodule framework.
    removing the A1⊗5-rep cross-coupling to the scalar ray.
 
 **Consequence.** The physical `a_u = Im(p) − Re(p)·Im(r) = sin_d·(1−rho)`
-is now identified. The RPSR conditional theorem upgrades to a full
-retained theorem via STRC-LO + the NLO correction `rho/49`.
+is now identified. The RPSR conditional theorem upgrades to a quark theorem on
+bimodule footing via STRC-LO + the NLO correction `rho/49`.
+
+Same-day NORM theorems sharpen the split-law status further:
+
+- `docs/QUARK_BIMODULE_NORM_EXISTENCE_THEOREM_NOTE_2026-04-19.md`
+- `docs/QUARK_BIMODULE_NORM_NATURALITY_THEOREM_NOTE_2026-04-19.md`
+
+They show that the quark packet already carries actual LO split laws on the
+one-real imaginary channel and that BICAC is the unique normalized affine
+extension of that law across the full ownership interval.
 
 ---
 
@@ -186,17 +198,17 @@ The derivation chain:
 3. Full RPSR: `a_u_full = sin_d · (1 − rho + rho · supp · delta_A1)
    = sin_d · (1 − 48 rho/49) = 0.7748865611` (10 decimals).
 
-All four Tier-1 scalar-selector gates now close as **full retained
-theorems** (Scenario C):
+This note should therefore be read narrowly as the **quark** LO theorem route:
 
-| Gate | Theorem |
+| Quark ingredient | Status |
 |---|---|
-| Koide `kappa` | MRU |
-| Koide `theta` | Berry-phase |
-| DM A-BCC `F_4` | DPLE |
-| **Quark `a_u`** | **STRC-LO (BICAC + collinearity) + RPSR NLO** |
+| retained `a_d = Re(r)` | yes |
+| retained collinearity `r = p/sqrt(7)` | yes |
+| BICAC split law | yes on bimodule footing; later sharpened by NORM naturality |
+| full target via RPSR NLO | yes |
 
-Net SM-axiom cost across all four gates: **0 observable principles**.
+At the branch level, reviewer-bar caveats remain elsewhere in the scalar-
+selector packet; this note does not claim whole-program closure.
 
 ---
 
