@@ -154,6 +154,17 @@ So no separate operator-side IDCS-style primitive is needed in the current
 charged-lepton packet. What remains open is the measure law selecting that
 leaf, not another independent operator identity.
 
+A new same-branch reduction theorem sharpens the old open `4 x 4`
+singlet/baryon route under the selected-slice scalar potential. Every
+`C_3`-equivariant singlet extension Schur-reduces exactly to
+`K_eff(m) = K_sel(m) - lambda(m) J` on the trivial Fourier projector
+`J = 3 P_+`, so the route is no longer a generic matrix-valued correction.
+It is one scalar singlet-Schur law. In the fixed-coupling subclass
+(`lambda` constant), requiring the branch-local physical point `m_*` to be the
+positive-branch minimum fixes one unique positive number
+`lambda_* ~= 0.5456253117`. See
+`docs/KOIDE_C3_SINGLET_EXTENSION_REDUCTION_THEOREM_NOTE_2026-04-20.md`.
+
 ## 2. Berry holonomy on `S^2_Koide` -- Koide `delta = 2/9`
 
 **Primary files**

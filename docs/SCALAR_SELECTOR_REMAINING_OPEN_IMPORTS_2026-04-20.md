@@ -32,10 +32,20 @@ Closing `Q = 2/3` from Cl(3)/Z³ would immediately upgrade the Koide κ and θ l
 
 **What has not been ruled out:** a forcing from a retained Z³ scalar potential that lands its physical minimum on the cone. The retained Z³ scalar potential `V(m) = const + (c1+c2/2)m + (3/2)m² + (1/6)m³` has a stationary point `m_V ≈ −0.433` which is **not** the Koide cone point `m_* ≈ −1.161` (documented on main as an honest gap). A successful derivation requires adding the first-principles retained ingredient that moves the effective minimum from `m_V` to `m_*`.
 
+**New same-branch reduction (2026-04-20):** the previously vague `4 x 4`
+singlet/baryon route is now reduced exactly to a `C_3`-singlet Schur law
+`K_eff(m) = K_sel(m) - lambda(m) J` on the trivial Fourier projector
+`J = 3 P_+`. So the open object is not a generic non-uniform `4 x 4`
+correction anymore; it is one scalar function `lambda(m)`. In the fixed-coupling
+subclass (`lambda` constant), making the branch-local physical selected point
+`m_*` stationary forces one unique positive value
+`lambda_* ~= 0.5456253117`. See
+`docs/KOIDE_C3_SINGLET_EXTENSION_REDUCTION_THEOREM_NOTE_2026-04-20.md`.
+
 **Candidate closing routes (each needs its own derivation):**
 
 1. **H_* witness ratio from a retained lattice calculation.** The H_* witness kappa_* ≈ −0.608 currently pins `m_*` by observational fit. If a retained lattice propagator or transport integral computes kappa_* from Cl(3)/Z³ ingredients alone, the cone point is forced. This is the most likely route.
-2. **Retained microscopic selector on the 4×4 (hw=1 + baryon) block.** If the full 4×4 generator (T₂ sector + baryon) from the microscopic lattice action introduces non-uniform coupling that adds a retained m-dependent term to `V_eff`, the minimum may move to `m_*`. Ruled `low-probability` on main but not formally closed.
+2. **Retained `C_3`-singlet Schur law on the `4 x 4` (hw=1 + singlet/baryon) block.** The new reduction theorem shows every equivariant `4 x 4` extension collapses to `K_eff(m) = K_sel(m) - lambda(m) J`. So this route is now exactly: derive the scalar singlet-Schur law `lambda(m)` from the microscopic lattice action. In the fixed-coupling subclass this reduces further to the one positive constant `lambda_* ~= 0.5456253117` that moves the minimum to `m_*`.
 3. **Transport gap ratio 4π/√6.** Numerically close to the observed `η/η_obs ≈ 5.29` (3.2% mismatch). If formalized into a retained lattice identity, it could pin `m_*`.
 4. **One-clock semigroup / Γ-orbit positive witness route.** Already delivers cos-similarity > 1 − 10⁻⁹ with PDG √m-vector at the cone point `H_*`. Currently conditional on G1 observational chamber pins (M_STAR, DELTA_STAR, Q_PLUS_STAR). If those three pins can be derived from retained framework, `Q = 2/3` follows.
 

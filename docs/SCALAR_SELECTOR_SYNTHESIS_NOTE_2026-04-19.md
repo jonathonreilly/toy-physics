@@ -126,6 +126,15 @@ independent retained closure route for operator-side `kappa`. See
 `docs/KOIDE_KAPPA_BLOCK_TOTAL_FROBENIUS_MEASURE_THEOREM_NOTE_2026-04-19.md`.
 Runner PASS=16 FAIL=0.
 
+The old open `4 x 4` singlet/baryon correction route is now also much sharper.
+Every `C_3`-equivariant singlet extension of the selected slice Schur-reduces
+to `K_eff(m) = K_sel(m) - lambda(m) J` with `J = 3 P_+`, so the open object is
+one scalar singlet-Schur law, not a generic matrix-valued correction. In the
+fixed-coupling subclass this collapses further to one exact positive constant
+`lambda_* ~= 0.5456253117` if the branch-local physical point `m_*` is to
+be the positive-branch minimum. See
+`docs/KOIDE_C3_SINGLET_EXTENSION_REDUCTION_THEOREM_NOTE_2026-04-20.md`.
+
 ### §2.2 Berry-phase theorem on `S^2_Koide` — candidate route to Koide `theta`
 
 The projectivized Koide cone `S^2_Koide` carries a natural `C_3`
