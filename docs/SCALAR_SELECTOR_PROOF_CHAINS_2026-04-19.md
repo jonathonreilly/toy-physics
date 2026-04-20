@@ -21,6 +21,12 @@ bookkeeping. For current branch-facing status, apply two corrections first:
   chart is `{Basin 1, Basin 2, Basin X}`. Any older "four-basin" or
   `{Basin 1, Basin X}` language below predates the completeness theorem. See
   `docs/DM_ABCC_BASIN_ENUMERATION_COMPLETENESS_THEOREM_NOTE_2026-04-20.md`.
+- DM A-BCC `σ_hier`: the `σ_hier = (2,1,0)` ambiguity is no longer open on
+  the review branch. The active-chamber completeness + parity-reduction +
+  upper-octant/source-cubic stack closes `I12` and makes `sin δ_CP < 0` a
+  consequence. What remains open on the PMNS side is the angle triple itself.
+  See `docs/DM_I12_SIGMA_HIER_CLOSURE_PACKET_NOTE_2026-04-20.md` and
+  `docs/DM_SIGMA_HIER_UPPER_OCTANT_SELECTOR_THEOREM_NOTE_2026-04-20.md`.
 
 ---
 

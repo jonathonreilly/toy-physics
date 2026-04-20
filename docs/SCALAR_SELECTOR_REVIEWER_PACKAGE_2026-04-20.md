@@ -13,7 +13,7 @@ Four Tier-1 Standard Model scalar-selector gates close this cycle via retained C
 |---|---|---|---|
 | **Koide κ** | Charged-lepton cone normalization `κ = 2` (equivalently `Q = 2/3`) | Spectrum–operator Fourier-bridge identity + block-total Frobenius measure | `Q = 2/3` (observational Koide relation) |
 | **Koide θ** | Brannen–Zenczykowski phase offset `δ = 2/9` | Pancharatnam–Berry identification on the physical selected line + exact scalar–phase bridge | `δ = 2/9` (observational Brannen relation) |
-| **DM A-BCC** | Physical neutrino-source basin selection (Basin 1) | Sylvester signature-forcing + σ-chain + DPLE `F_4` + chamber bound | PMNS observational pins (NuFit 3σ, T2K sign) |
+| **DM A-BCC** | Physical neutrino-source basin selection (Basin 1) | Sylvester signature-forcing + σ-chain + DPLE `F_4` + chamber bound + upper-octant / source-cubic selector | PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)` |
 | **Quark a_u** | Up-sector reduced amplitude `a_u = 0.7748865611` | Affine-physical-carrier JTS + one-dimensional 5-channel residue + RPSR NLO | Bimodule `B = Cl(3)/Z₃ ⊗ Cl_CKM(1⊕5)`, retained atoms `ρ, supp, δ_A1` (CKM atlas) |
 
 ---
@@ -152,17 +152,35 @@ carries `H_base` in Sylvester chamber `C_base = {det > 0, signature (1, 0, 2)}` 
 
 **Theorem (Sylvester signature-forcing).** Any continuous path in `Herm_3` between `C_base` and any component with `det < 0` must cross the determinant-zero variety. Hence if the physical path `H(t; J_phys)` stays in `{det ≠ 0}` for all `t ∈ [0, 1]` (PMNS Non-Singularity, PNS), the endpoint `H(1; J_phys)` must lie in `C_base`.
 
-**Theorem (σ-chain).** Combining the retained chamber bound `q_+ + δ ≥ √(8/3)`, the retained basin-completeness theorem, the retained σ-hierarchy uniqueness theorem (picks `σ = (2,1,0)` under NuFit 3σ PMNS pins and T2K `sin δ_CP < 0`), and the retained ABCC CP-phase no-go (excludes `sin δ_CP > 0.247` at >3σ), the corrected five-basin chart collapses to Basin 1 uniquely:
+**Theorem (updated σ-chain).** Combining the retained chamber bound
+`q_+ + δ ≥ √(8/3)`, the retained chamber-completeness theorem on the active
+`χ² = 0` set, the parity reduction
+`J_σ = parity(σ) I_src(H) / Δ`, the exact chamber upper-octant law, and the
+coefficient-free source law `I_src(H) > 0`, the active-chamber chart
+collapses to Basin 1 uniquely:
 
-- Basin 2 is in the active chamber but has `sin δ_CP > 0` at the physical `σ = (2,1,0)` pairing → T2K-excluded;
-- Basin X at σ = (2,1,0) has `sin δ_CP > 0` → T2K-excluded;
-- Basin N has `q_+ + δ = 1.28 < √(8/3)` → chamber-excluded;
-- Basin P has `q_+ + δ = 0.10 < √(8/3)` → chamber-excluded;
-- Basin 1 has `q_+ + δ = 1.649 > √(8/3)`, `sin δ_CP < 0`, and P3 Sylvester computes `min det(H_base + t J_1) = 0.878 > 0` on `[0, 1]`.
+- the active-chamber `χ² = 0` set is exactly `{Basin 1, Basin 2, Basin X}`;
+- among the two `9/9`-magnitude-passing permutations only `σ = (2,1,0)`
+  satisfies the exact chamber upper-octant law;
+- on the upper-octant chamber roots, `I_src(H) > 0` holds only on Basin 1;
+- therefore `σ_hier = (2,1,0)` and `sin δ_CP < 0` are consequences, not
+  retained selector inputs;
+- Basin 1 also has `q_+ + δ = 1.649 > √(8/3)` and P3 Sylvester computes
+  `min det(H_base + t J_1) = 0.878 > 0` on `[0, 1]`.
 
 Hence `J_phys = J_{Basin 1}` and PNS is a derived property of the physical path.
 
-**Proof.** Multi-observable verification in `scripts/frontier_dm_pns_attack_cascade.py` (34 PASS, 0 FAIL), `scripts/frontier_dm_abcc_signature_forcing_theorem.py` (43 PASS), and `scripts/frontier_dm_abcc_pmns_nonsingularity_theorem.py` (33 PASS). The P3 Sylvester linear-path signature theorem is retained upstream; see `docs/DM_NEUTRINO_SOURCE_SURFACE_P3_SYLVESTER_LINEAR_PATH_SIGNATURE_THEOREM_NOTE_2026-04-18.md`.
+**Proof.** Multi-observable verification in
+`scripts/frontier_dm_pns_attack_cascade.py` (34 PASS, 0 FAIL),
+`scripts/frontier_dm_abcc_signature_forcing_theorem.py` (43 PASS),
+`scripts/frontier_dm_abcc_pmns_nonsingularity_theorem.py` (33 PASS),
+`scripts/frontier_dm_pmns_chamber_spectral_completeness_theorem_2026_04_20.py`
+(11 PASS), `scripts/frontier_dm_pmns_upper_octant_source_cubic_selector_theorem_2026_04_20.py`
+(14 PASS), and
+`scripts/frontier_dm_sigma_hier_upper_octant_selector_theorem_2026_04_20.py`
+(14 PASS). The P3 Sylvester linear-path signature theorem is retained
+upstream; see
+`docs/DM_NEUTRINO_SOURCE_SURFACE_P3_SYLVESTER_LINEAR_PATH_SIGNATURE_THEOREM_NOTE_2026-04-18.md`.
 
 ### §3.2 Independent route — chamber ∩ DPLE F_4
 
@@ -178,7 +196,13 @@ Hence `J_phys = J_{Basin 1}` and PNS is a derived property of the physical path.
 
 ### §3.4 Retained inputs
 
-Retained inputs are: the chamber bound `q_+ + δ ≥ √(8/3)` (now reproduced inline in `docs/DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md`), NuFit PMNS 3σ ranges and T2K CP-phase sign (retained observational inputs named in `docs/SIGMA_HIER_UNIQUENESS_THEOREM_NOTE_2026-04-19.md` and `docs/ABCC_CP_PHASE_NO_GO_THEOREM_NOTE_2026-04-19.md`). PNS is derived as a property of Basin 1, not axiomatized. Basin completeness is no longer an open import: the corrected five-basin chart and its active-chamber subchart are certified in `docs/DM_ABCC_BASIN_ENUMERATION_COMPLETENESS_THEOREM_NOTE_2026-04-20.md`.
+Retained inputs are: the chamber bound `q_+ + δ ≥ √(8/3)` (now reproduced
+inline in `docs/DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md`) and the
+PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)`. The CP-sign / `σ_hier`
+half is no longer retained input on this branch: it is derived by the
+active-chamber completeness theorem, the parity reduction, the upper-octant
+law, and the coefficient-free source-cubic selector. PNS is derived as a
+property of Basin 1, not axiomatized.
 
 ---
 
@@ -314,8 +338,7 @@ All runners pass on canonical branch `review/scalar-selector-cycle1-theorems` wi
 |---|---|---|---|
 | Q23 | Koide relation `Q = 2/3` | κ, θ | Foot 1994; Koide 1983; PDG-verified |
 | BZ | Brannen phase `δ = 2/9` | θ | Brannen 2006; Rivero–Zenczykowski; PDG-verified |
-| PMNS | NuFit 3σ PMNS angles | A-BCC σ-chain | Esteban et al., NuFit 5.3 |
-| T2K | T2K `sin δ_CP < 0` preference | A-BCC σ-chain | T2K Collaboration, Nature 580:339 (2020) |
+| PMNS | PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)` | A-BCC σ-chain | NuFit / pinned chamber target |
 | CHB | Chamber bound `q_+ + δ ≥ √(8/3)` | A-BCC | reviewer-grade inline derivation in `DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md` |
 | BIM | Bimodule `B = Cl(3)/Z₃ ⊗ Cl_CKM(1⊕5)` | a_u | `CL3_SM_EMBEDDING_THEOREM` + `CKM_ATLAS_AXIOM_CLOSURE_NOTE` (main) |
 | ATOM-ρ | `a_d = ρ = 1/√42` | a_u | CKM atlas |

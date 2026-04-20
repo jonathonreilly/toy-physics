@@ -14,9 +14,8 @@ prevent the corresponding lane from being marked retained-derivation on main.
 |---|---|---|---|---|
 | I1 | Koide relation `Q = 2/3` | κ, θ | retained observational; the same-branch linking theorem now shows the natural general form is `Q = 2/d` by equal-sector norm, not `(d−1)/d` | a Cl(3)/Z³-native forcing of the cone condition `a_0² = 2|z|²` from retained representation-theory or from a retained scalar-potential minimization that lands on the cone |
 | I2 / P | Brannen phase `δ = 2/9` on the physical base | θ | the new Brannen-phase reduction theorem reduces I2 to `I1` via `δ = Q/d`, but the cycle-2 linking theorem + direct no-go sharpen the live load-bearing step as one named radian-bridge postulate `P`: the structural count `2/d²` must be identified with the physical Berry holonomy in radians on the selected-line CP¹ base | either derive `P` directly by a retained Wilson/lattice identity on the physical base, or derive a physical-base theorem that makes the Brannen reduction `δ = Q/d` canonical; then closing `I1` closes `I2` automatically |
-| I5 | PMNS observational pins (NuFit 3σ ranges, T2K `sin δ_CP < 0`) | A-BCC (sigma-chain) | retained observational inputs | framework-native derivation of NuFit angles (open on main as the broader charged-lepton flagship gate) and/or of the sign of `sin δ_CP` from Cl(3) CP structure |
+| I5 | PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)` | A-BCC (sigma-chain) | retained observational input; the new upper-octant / source-cubic selector theorems close the CP-sign / `σ_hier` half on the active chamber, leaving only the angle triple itself | framework-native derivation of the PMNS angle triple from the retained DM / PMNS source surface |
 | I10 | H_* witness ratio `w/v ≈ 4.101` | m_* (selected-line point) | retained observational; selected-line provenance is now closed, so only the scalar-phase pin remains | deriving `m_*` as a corollary of `δ = 2/9` via the exact scalar-phase bridge (already established). If I2 / `P` closes, I10 closes automatically |
-| I12 | σ_hier permutation `(2,1,0)` | A-BCC (sigma-chain) | retained from `SIGMA_HIER_UNIQUENESS_THEOREM_NOTE` (given T2K input on `sin δ_CP`) | framework-native CP structure forcing `sin δ_CP < 0` at the physical chamber point |
 
 ## §0a Closed in cycle 2
 
@@ -36,6 +35,17 @@ prevent the corresponding lane from being marked retained-derivation on main.
   The corrected full χ²=0 chart is five basins
   `{Basin 1, Basin N, Basin P, Basin 2, Basin X}`; the active-chamber chart is
   `{Basin 1, Basin 2, Basin X}`.
+- **I12 closed.** The `σ_hier = (2,1,0)` ambiguity is now closed without
+  importing the T2K sign preference. The active-chamber support stack from
+  `docs/DM_PMNS_CHAMBER_SPECTRAL_COMPLETENESS_THEOREM_NOTE_2026-04-20.md`,
+  `docs/DM_PMNS_CP_ORIENTATION_PARITY_REDUCTION_NOTE_2026-04-20.md`,
+  `docs/DM_PMNS_UPPER_OCTANT_SOURCE_CUBIC_SELECTOR_THEOREM_NOTE_2026-04-20.md`,
+  and the authoritative closeout
+  `docs/DM_SIGMA_HIER_UPPER_OCTANT_SELECTOR_THEOREM_NOTE_2026-04-20.md`
+  proves that among the two `9/9`-magnitude-passing permutations only
+  `(2,1,0)` satisfies the exact chamber upper-octant law, and the negative
+  PMNS CP sign follows as a consequence. The branch-local proof chain is
+  packaged in `docs/DM_I12_SIGMA_HIER_CLOSURE_PACKET_NOTE_2026-04-20.md`.
 - **I7, I8 closed by review-surface provenance cleanup.** The quark lane now
   states its retained bimodule and atom provenance inline in the reviewer
   package and headline theorem surfaces: `docs/SCALAR_SELECTOR_REVIEWER_PACKAGE_2026-04-20.md`,
@@ -201,13 +211,34 @@ See `docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md`,
 `docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md`, and
 `docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md`.
 
-### Priority 3: I5, I12 (PMNS observational pins and σ_hier permutation)
+### Priority 3: I5 (PMNS angle triple)
 
-Scope is larger than the scalar-selector cycle; these are part of the broader
-charged-lepton flagship gate. Closing them requires framework-native PMNS
+Scope is larger than the scalar-selector cycle; this is part of the broader
+charged-lepton flagship gate. Closing it requires framework-native PMNS
 derivation, which is an open program on multiple branches
 (lepton-mass-tower, lepton-pmns-integration, dm-leptons-review). Not scoped
 to tomorrow's submission.
+
+**New same-branch reduction (2026-04-20):** the PMNS CP-sign / hierarchy half
+is no longer open. `docs/DM_SIGMA_HIER_H_INTRINSIC_NO_GO_THEOREM_NOTE_2026-04-20.md`
+rules out the `H`-intrinsic and `μ↔τ`-even scalar families;
+`docs/DM_PMNS_CP_ORIENTATION_PARITY_REDUCTION_NOTE_2026-04-20.md` reduces the
+remaining ambiguity to one parity bit; and the coefficient-free selector
+system
+
+```text
+sin² θ23 > 1/2,
+I_src(H) > 0
+```
+
+closes that bit on the exact active-chamber root set via
+`docs/DM_PMNS_UPPER_OCTANT_SOURCE_CUBIC_SELECTOR_THEOREM_NOTE_2026-04-20.md`.
+The cleaner authoritative closeout is
+`docs/DM_SIGMA_HIER_UPPER_OCTANT_SELECTOR_THEOREM_NOTE_2026-04-20.md`, which
+uses the exact chamber upper-octant law to select `σ_hier = (2,1,0)` from the
+two `9/9`-magnitude-passing permutations and then gets `sin δ_CP < 0` as a
+consequence. So the only remaining PMNS observational input on this branch is
+the angle triple itself, not the CP sign.
 
 ### Priority 4: I10 (selected-line physical point)
 
@@ -227,15 +258,15 @@ statement for this cycle is:
 > amplitude (a_u) — each reduce to retained Cl(3)/Z³ framework ingredients,
 > with the only still-open named retained inputs now being the Koide cone
 > relation Q = 2/3, the residual radian-bridge P behind the physical Brannen
-> phase value δ = 2/9, and the PMNS NuFit + T2K observational pins. No new
+> phase value δ = 2/9, and the PMNS angle triple. No new
 > axioms are added this cycle. The framework
 > contributes (i) a canonical Pancharatnam–Berry geometric identification of δ
 > on the physical selected line together with a precise no-go for deriving its
 > value from the current retained base alone, (ii) an exact Fourier-bridge
 > algebraic reduction of operator-side κ = 2 to spectrum-side Q = 2/3,
 > (iii) a Sylvester-inertia reduction of A-BCC, closed via a multi-observable
-> sigma-chain that combines retained Cl(3)/Z³ theorems with named
-> observational inputs, and (iv) a linear-algebra derivation of the up-sector
+> sigma-chain that combines retained Cl(3)/Z³ theorems with the PMNS
+> angle-triple pin, and (iv) a linear-algebra derivation of the up-sector
 > quark closure on the retained `1⊕5` bimodule and CKM-atlas atom package,
 > whose provenance is now surfaced inline on the review branch. Each retained
 > observational input or structural postulate still blocking native closure is
@@ -245,8 +276,8 @@ statement for this cycle is:
 Closing any priority-1 or priority-2 item above would upgrade the
 corresponding lane from retained-conditional to retained-derivation and
 eliminate the named retained input. The cycle-2 housekeeping imports I3, I4,
-I6, and I11 are now closed; the remaining irreducible frontier is the Koide
-`Q`/radian-bridge pair and the PMNS observational pins.
+I6, I11, and I12 are now closed; the remaining irreducible frontier is the
+Koide `Q`/radian-bridge pair and the PMNS angle triple.
 
 ## §3 Reproduction of current retained-conditional state
 
@@ -266,6 +297,10 @@ the primary closure runner and its verification counts are:
 | DM A-BCC (PMNS Non-Singularity conditional) | `frontier_dm_abcc_pmns_nonsingularity_theorem.py` | 38 | conditional closure |
 | DM A-BCC (sigma-chain attack cascade) | `frontier_dm_pns_attack_cascade.py` | 47 | multi-observable chain |
 | DM A-BCC (assumptions audit) | `frontier_dm_abcc_assumptions_audit.py` | 21 | five-route structural no-go |
+| DM A-BCC (active-chamber completeness) | `frontier_dm_pmns_chamber_spectral_completeness_theorem_2026_04_20.py` | 11 | exact chamber `χ²=0` set = `{Basin 1, Basin 2, Basin X}` |
+| DM A-BCC (`σ_hier` upper-octant selector) | `frontier_dm_sigma_hier_upper_octant_selector_theorem_2026_04_20.py` | 14 | closes `I12` without importing T2K sign |
+| DM A-BCC (upper-octant / source-cubic selector) | `frontier_dm_pmns_upper_octant_source_cubic_selector_theorem_2026_04_20.py` | 14 | fixes Basin 1 uniquely on the active chamber |
+| DM A-BCC (local-family no-go) | `frontier_dm_pmns_local_selector_family_no_go_theorem_2026_04_20.py` | 15 | reduces `I5` to nonlocal point-selection / angle triple only |
 | Quark a_u (JTS-affine-physical-carrier + ISSR1) | `frontier_quark_issr1_bicac_forcing.py` | 13 | headline closure |
 | Quark a_u (JTS physical-point second route) | `frontier_quark_jts_physical_point_closure_theorem.py` | 12 | independent witness |
 | Quark a_u (shell-normalization corroboration) | `frontier_quark_bimodule_lo_shell_normalization_theorem.py` | 10 | Route-2 carrier |
