@@ -13,7 +13,7 @@ Four Tier-1 Standard Model scalar-selector gates close this cycle via retained C
 |---|---|---|---|
 | **Koide κ** | Charged-lepton cone normalization `κ = 2` (equivalently `Q = 2/3`) | Spectrum–operator Fourier-bridge identity + block-total Frobenius measure | `Q = 2/3` (observational Koide relation) |
 | **Koide θ** | Brannen–Zenczykowski phase offset `δ = 2/9` | Pancharatnam–Berry identification on the physical selected line + exact scalar–phase bridge | `δ = 2/9` (observational Brannen relation) |
-| **DM A-BCC** | Physical neutrino-source basin selection (Basin 1) | Sylvester signature-forcing + σ-chain + DPLE `F_4` + chamber bound + upper-octant / source-cubic selector | PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)` |
+| **DM A-BCC** | Physical neutrino-source basin selection (Basin 1) | Sylvester signature-forcing + σ-chain + DPLE `F_4` + chamber bound + upper-octant / source-cubic selector | PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)`; now sharpened to a point-selection law on an exact local `2`-real PMNS source manifold |
 | **Quark a_u** | Up-sector reduced amplitude `a_u = 0.7748865611` | Affine-physical-carrier JTS + one-dimensional 5-channel residue + RPSR NLO | Bimodule `B = Cl(3)/Z₃ ⊗ Cl_CKM(1⊕5)`, retained atoms `ρ, supp, δ_A1` (CKM atlas) |
 
 ---
@@ -201,8 +201,12 @@ inline in `docs/DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md`) and the
 PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)`. The CP-sign / `σ_hier`
 half is no longer retained input on this branch: it is derived by the
 active-chamber completeness theorem, the parity reduction, the upper-octant
-law, and the coefficient-free source-cubic selector. PNS is derived as a
-property of Basin 1, not axiomatized.
+law, and the coefficient-free source-cubic selector. The new fixed-`N_e`
+exact-source-manifold theorem further sharpens the remaining angle-side gap:
+the physical PMNS target already lies on an exact regular local `2`-real
+source manifold on the charged-lepton-side seed surface, so the live missing
+object is the point-selection law on that manifold, not target existence.
+PNS is derived as a property of Basin 1, not axiomatized.
 
 ---
 
