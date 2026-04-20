@@ -9,8 +9,10 @@ scalar-selector gates: Koide `kappa`, Koide doublet-phase (Koide
 not the current reviewer-facing claim surface. The honest read after the
 science review plus the later meta-closure pass is:
 
-- at the **reviewer bar**, MRU, Berry, and DPLE remain support routes, while
-  quark `a_u` now closes on branch-internal bimodule footing via
+- at the **reviewer bar**, MRU is now a support route with an explicit missing
+  measure law, Berry is now an obstruction theorem against the current
+  monopole packaging on the actual base, DPLE remains an open-gate support
+  route, and quark `a_u` closes on branch-internal bimodule footing via
   `BICAC -> STRC-LO -> RPSR` but still falls short of pure retained-physics
   derivation because BICAC is an added framework-native postulate;
 - at the **meta-axiom layer**, the strongest current compression is
@@ -35,8 +37,8 @@ scalar selections:
 | Gate | Content | Status |
 |---|---|---|
 | **Koide `kappa`** | Charged-lepton cone normalization `kappa = 2` | Support/candidate principle via **MRU** |
-| **Koide `theta`** | Doublet-phase offset `delta = 2/9` (Brannen–Zenczykowski) | Geometric support/candidate via **Berry holonomy** |
-| **DM A-BCC basin** | Interior-minimum linear-path Sylvester discriminator `F_4` | **Closed at axiom level conditional on DPLE acceptance** via `(P3 chamber bound) ∩ (DPLE F_4)` — see §2.3a |
+| **Koide `theta`** | Doublet-phase offset `delta = 2/9` (Brannen–Zenczykowski) | Old Berry route; new obstruction on the actual positive base |
+| **DM A-BCC basin** | Interior-minimum linear-path Sylvester discriminator `F_4` | A-BCC chamber-closure route in §2.3a; direct-descendant frontier still sharpened further below |
 | **Quark `a_u`** | Up-sector reduced amplitude `a_u = 0.7748865611` | Branch-internal theorem via **BICAC -> STRC-LO -> RPSR** |
 
 §2 presents the four branch-local routes; §3 presents STRC; §4 records the
@@ -63,6 +65,16 @@ singlet-vs-doublet scalar selector iff `|Iso(d)| = 2` with one singlet
 See `docs/KOIDE_MOMENT_RATIO_UNIFORMITY_THEOREM_NOTE_2026-04-19.md`.
 Runner PASS=65 FAIL=0.
 
+A same-day obstruction theorem sharpens the MRU frontier. On the same
+`1 ⊕ 2` cyclic carrier, every weighted block-log-volume law lands on the leaf
+`kappa = 2 mu / nu`. MRU is the equal-weight leaf `(mu, nu) = (1, 1)`, while
+the retained unreduced determinant carrier satisfies
+`det(alpha P_+ + beta P_perp) = alpha beta^2`, so it carries weights `(1, 2)`
+and lands at `kappa = 1`, not `kappa = 2`. The exact missing object is
+therefore a retained `1:1` real-isotype measure or equivalent two-slot carrier
+reduction. See
+`docs/KOIDE_MRU_WEIGHT_CLASS_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`.
+
 ### §2.2 Berry-phase theorem on `S^2_Koide` — candidate route to Koide `theta`
 
 The projectivized Koide cone `S^2_Koide` carries a natural `C_3`
@@ -82,6 +94,17 @@ doublet-phase identity — as a corollary.
 See `docs/KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md`. Runner
 PASS=26 FAIL=0. Literature alignment: Brannen 2006, Zenczykowski PRD
 2012/2013.
+
+A same-day obstruction theorem changes the honest status of that route. On the
+actual positive projectivized Koide cone, the normalized Koide locus is only
+three open arcs on the upper Koide circle, cyclically permuted by `C_3`, so
+the physical quotient is an open interval. Every equivariant complex line
+bundle there is therefore trivial, `c_1 = 0`, and no gauge-invariant Berry
+holonomy exists on the actual physical base. If positivity is relaxed to the
+sign-relaxed projective conic, the base is only `S^1`, so `H^2 = 0` still
+kills any monopole/Chern charge and `delta = 2/9` becomes a flat-holonomy
+choice, not a forced value. See
+`docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`.
 
 ### §2.3 Dim-Parametric log|det| Extremum (DPLE) — support theorem on `F_4`
 
@@ -163,6 +186,16 @@ the remaining DM science is no longer “which favored column?” but “which
 microscopic source in that fiber is retained-physics-selected?” See
 `docs/DM_WILSON_DIRECT_DESCENDANT_CANONICAL_TRANSPORT_COLUMN_FIBER_THEOREM_NOTE_2026-04-19.md`.
 
+A sixth same-day theorem identifies that residual `3`-real fiber explicitly.
+On the constructive plateau, the three spectral invariants
+`(Tr(H_e), Tr(H_e^2), det(H_e))` have rank `3` on the local kernel of the
+favored-column map, and the augmented map
+`source5 -> (col_1, col_2, Tr(H_e), Tr(H_e^2), det(H_e))`
+has full rank `5`. So the remaining DM ambiguity is already an explicit
+**3-scalar spectral law on `H_e`, hence on `L_e`**, not an amorphous source
+family. See
+`docs/DM_WILSON_DIRECT_DESCENDANT_TRANSPORT_FIBER_SPECTRAL_COMPLETION_THEOREM_NOTE_2026-04-19.md`.
+
 See `docs/DM_DPLE_DIMENSION_PARAMETRIC_EXTREMUM_THEOREM_NOTE_2026-04-19.md`.
 Runner PASS=19 FAIL=0.
 
@@ -221,6 +254,16 @@ route, not merely as a standalone conditional packet.
 See `docs/QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md`.
 Runner PASS=10 FAIL=0.
 
+A further same-day obstruction theorem sharpens the remaining quark gap. The
+retained bimodule/ray packet supports the exact bridge family
+`a_u(kappa) = sin_d * (1 - rho * kappa)` with three exact landmarks already on
+the branch:
+`kappa_support = sqrt(6/7)`, `kappa_target = 48/49`, and `kappa_BICAC = 1`.
+Because all currently retained packet identities are `kappa`-independent, the
+present branch does **not** force `kappa = 1`; it leaves an explicit endpoint-
+selection problem on `kappa in [sqrt(6/7), 1]`. See
+`docs/QUARK_BICAC_ENDPOINT_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`.
+
 ---
 
 ## §3 STRC-LO theorem on CKM via BICAC + collinearity
@@ -250,6 +293,10 @@ branch-internal theorem. The reviewer-bar caveat is now sharper: the open
 issue is not the old LO algebraic gap, but the status of BICAC as an added
 bimodule structural postulate rather than a derivation from previously
 retained quark observables alone.
+
+The new endpoint-obstruction theorem makes that sharper again: deriving BICAC
+is equivalent to proving the endpoint-selection law that collapses the retained
+bridge interval `kappa in [sqrt(6/7), 1]` to `kappa = 1`.
 
 **Koide-analog epistemic footing.** STRC is to CKM reduced
 amplitudes what the Koide sum rule is to charged-lepton sqrt-masses:
@@ -364,8 +411,8 @@ support/conditional packet:
 
 - MRU restates the missing charged-lepton scalar law but does not derive why
   the physical carrier satisfies it;
-- Berry gives a coherent geometric model but does not force the physical
-  charged-lepton phase to be that holonomy;
+- Berry's old geometric model exists, but the new bundle-obstruction theorem
+  shows that packaging is not available on the actual positive Koide base;
 - DPLE upgrades `F_4` to a real theorem on the fixed chart but does not derive
   the physical source-side chart by itself; A-BCC itself, the basin-choice
   on that chart, has now moved from "support / observationally grounded" to
@@ -393,6 +440,19 @@ object-derivation gap identified in the science review.
 prove that bimodule unitarity + scalar-tensor support bridge
 `supp = 6/7` + democratic center-excess `delta_A1 = 1/42` jointly
 force STRC-LO.
+
+Equivalently in the new obstruction-theorem language: prove the endpoint-
+selection law that collapses the retained bridge family
+
+    a_u(kappa) = sin_d * (1 - rho * kappa),
+
+from the current interval
+
+    kappa in [sqrt(6/7), 1]
+
+to the BICAC endpoint
+
+    kappa = 1.
 
 **Significance.** If proven, the quark-side linear-amplitude gap is no
 longer carried as a separate observable principle. The meta-closure

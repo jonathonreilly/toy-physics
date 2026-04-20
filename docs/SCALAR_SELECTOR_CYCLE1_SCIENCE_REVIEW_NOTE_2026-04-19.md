@@ -24,8 +24,8 @@ the previously retained quark physics alone.
 
 | Path | Target gate | Science result | Does it close the gate? | Review decision |
 |---|---|---|---|---|
-| MRU | Koide `kappa = 2` | exact equivalence theorem on `Herm_circ(d)` | **No** | support / candidate principle only |
-| Berry holonomy | Koide `delta = 2/9` | coherent geometric construction with correct `2/9` output | **No** | geometric support / candidate only |
+| MRU | Koide `kappa = 2` | exact equivalence theorem plus weight-class obstruction | **No** | support theorem with explicit missing measure law |
+| Berry holonomy | Koide `delta = 2/9` | old geometric route plus bundle obstruction on the actual base | **No** | obstruction theorem against current Berry closure route |
 | DPLE | DM `A-BCC` / F4 lane | useful exact matrix-analysis theorem; reproduces F4 on fixed basin chart | **No** | support theorem on the open DM gate |
 | STRC-LO + RPSR | quark `a_u` / Min-C lane | quark theorem on bimodule footing; old LO gap closed by BICAC | **Qualified** | branch-internal theorem, reviewer-bar caveat remains |
 
@@ -50,6 +50,34 @@ The note proves an exact statement:
 This is mathematically coherent. The runner verifies the algebraic equivalence,
 the per-`d` equation counts, and the `d = 3` singlet-vs-doublet uniqueness
 pattern.
+
+A later same-day obstruction theorem sharpens the open MRU gap substantially:
+
+- `docs/KOIDE_MRU_WEIGHT_CLASS_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`
+- `scripts/frontier_koide_mru_weight_class_obstruction_theorem.py`
+
+It classifies the whole weighted block-log-volume family on the same `1 ⊕ 2`
+cyclic carrier and proves that every weighted leaf lands at
+
+```text
+kappa = 2 mu / nu.
+```
+
+MRU is exactly the equal-weight leaf `(mu, nu) = (1, 1)`. But the retained
+unreduced determinant carrier satisfies
+
+```text
+det(alpha P_+ + beta P_perp) = alpha beta^2,
+```
+
+so it carries weights `(1, 2)` and lands at `kappa = 1`, not MRU's
+`kappa = 2`. That means the current branch no longer merely “fails to derive
+MRU.” It now identifies the exact missing object:
+
+```text
+a retained 1:1 real-isotype measure, or an equivalent two-slot carrier
+reduction that counts the whole doublet block once.
+```
 
 ### Why it does **not** close the gate
 
@@ -97,6 +125,23 @@ The note constructs a geometric model:
 As a geometric construction, this is coherent and the runner reproduces the
 holonomy arithmetic and the `2/9` value.
 
+A later same-day obstruction theorem changes the honest status of this lane:
+
+- `docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`
+- `scripts/frontier_koide_berry_bundle_obstruction_theorem.py`
+
+It proves that on the **actual positive** projectivized Koide cone, the
+normalized Koide locus is one-dimensional: three open arcs on the upper Koide
+circle, cyclically permuted by `C_3`, so the physical quotient is an open
+interval. Therefore every `C_3`-equivariant complex line bundle there is
+trivial, `c_1 = 0`, and there is no gauge-invariant Berry holonomy on the
+physical base.
+
+If positivity is relaxed to the sign-relaxed projective conic, the base is
+only `S^1`, so `H^2 = 0` still kills any monopole/Chern charge. The only
+surviving datum there is a flat-holonomy parameter `t`, with `delta(t) = t/3`,
+so `delta = 2/9` is realizable by choice (`t = 2/3`) but not forced.
+
 ### Why it does **not** close the gate
 
 The critical scientific step is not the holonomy calculation. It is the
@@ -113,6 +158,10 @@ Those are added geometric choices. They are not independently forced by the
 existing charged-lepton package, and the note itself still records an open point
 around the Chern-class packaging.
 
+The new obstruction theorem goes further: on the actual positive projectivized
+Koide base, the old monopole / `c_1 = 2` packaging is not merely underived. It
+is **topologically unavailable**.
+
 ### Verification weakness
 
 The companion runner is weaker than the note:
@@ -125,8 +174,15 @@ The companion runner is weaker than the note:
 
 ### Science decision
 
-This is a **geometric support/candidate route** to the Koide phase, not a full
-scientific closure of the `delta = 2/9` gate.
+The honest read is now:
+
+- the old Berry note is a geometric support construction on an auxiliary
+  enlarged surface;
+- the new bundle-obstruction theorem shows that construction does **not** live
+  on the actual physical positive Koide base.
+
+So this lane is not a closure route. It is now an **obstruction theorem
+against the current Berry closure packaging** on the physical base.
 
 ## 3. DPLE on the DM pencil -- F4 / `A-BCC`
 
@@ -292,6 +348,36 @@ DM side. The branch no longer lacks a transport law or a transport-selected
 column. It lacks the finer microscopic law on `L_e` or an equivalent retained-
 physics selector that picks one source in that `3`-real fiber.
 
+A sixth same-day theorem sharpens that residual DM object one step further:
+
+- `docs/DM_WILSON_DIRECT_DESCENDANT_TRANSPORT_FIBER_SPECTRAL_COMPLETION_THEOREM_NOTE_2026-04-19.md`
+- `scripts/frontier_dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_2026_04_19.py`
+
+It proves that the remaining local `3`-real transport fiber is already an
+explicit **spectral-invariant fiber** of the descended Hermitian response
+`H_e`, hence of `L_e`. On the known constructive plateau witnesses, the two
+independent favored-column coordinates carry rank `2`, while the three spectral
+invariants
+
+```text
+(Tr(H_e), Tr(H_e^2), det(H_e))
+```
+
+carry rank `3` on the transport-fiber kernel, and the augmented map
+
+```text
+(col_1, col_2, Tr(H_e), Tr(H_e^2), det(H_e))
+```
+
+has full rank `5`.
+
+So the open DM object is now sharper than “pick one source in a 3-real
+family.” It is the specific task:
+
+```text
+derive a 3-scalar microscopic spectral law on H_e, equivalently on L_e.
+```
+
 ### Science decision
 
 DPLE should be treated as a **support theorem on the open DM gate**:
@@ -306,6 +392,8 @@ DPLE should be treated as a **support theorem on the open DM gate**:
 
 - `docs/STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`
 - `scripts/frontier_strc_lo_collinearity_theorem.py`
+- `docs/QUARK_BICAC_ENDPOINT_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`
+- `scripts/frontier_quark_bicac_endpoint_obstruction_theorem.py`
 - `docs/QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md`
 - `docs/QUARK_UP_AMPLITUDE_RETAINED_NATIVE_CANDIDATE_NOTE_2026-04-19.md`
 - `docs/SCALAR_TENSOR_RAY_MAGNITUDE_BRIDGE_NOTE_2026-04-19.md`
@@ -337,6 +425,32 @@ a_u / sin(delta_std) + a_d = 1 + rho / 49
 
 So the branch now has a real quark theorem route to the target
 `a_u = 0.7748865611`.
+
+A same-day obstruction theorem now makes the remaining quark gap precise:
+
+- `docs/QUARK_BICAC_ENDPOINT_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`
+- `scripts/frontier_quark_bicac_endpoint_obstruction_theorem.py`
+
+It proves that the retained packet supports the exact bridge family
+
+```text
+a_u(kappa) = sin(delta_std) * (1 - rho * kappa),
+```
+
+with three exact distinguished points already on the branch:
+
+- `kappa_support = sqrt(6/7)`,
+- `kappa_target = 48/49`,
+- `kappa_BICAC = 1`.
+
+All retained ray/support identities are `kappa`-independent, so the current
+packet does **not** force the BICAC endpoint `kappa = 1`. The missing quark
+math is therefore not just “derive BICAC somehow,” but the sharper task:
+
+```text
+prove the endpoint-selection law collapsing kappa in [sqrt(6/7), 1] to
+kappa = 1.
+```
 
 ### Why it still does **not** clear the reviewer bar
 
@@ -373,11 +487,14 @@ gates.
 The right scientific read is:
 
 1. **MRU**: exact restatement of the remaining Koide scalar law, not a closure.
-2. **Berry**: elegant geometric support model for `2/9`, not a closure.
+2. **Berry**: the old geometric support model exists, but the current physical
+   Berry-bundle packaging is obstructed on the actual positive Koide base.
 3. **DPLE**: real support theorem that upgrades the old F4 selector story, but
-   does not eliminate the remaining DM source-side open input.
+   does not eliminate the remaining DM source-side open input, now sharpened
+   to a 3-scalar spectral law on `H_e/L_e`.
 4. **STRC-LO + RPSR**: quark `a_u` now closes on bimodule footing via BICAC,
-   but still imports one additional framework-native structural postulate.
+   but still imports one additional framework-native structural postulate,
+   now isolated as an endpoint-selection law on `kappa`.
 
 So the branch is **not** a clean "remaining open gates are now closed"
 science packet.
@@ -386,7 +503,10 @@ It is a **mixed support packet** containing:
 
 - one strong DM support theorem (DPLE),
 - one quark theorem on bimodule footing (STRC-LO + RPSR),
-- and two charged-lepton support/candidate routes (MRU, Berry).
+- one charged-lepton support theorem with an explicit missing measure law
+  (MRU),
+- and one charged-lepton obstruction theorem against the current Berry closure
+  packaging.
 
 ## 6. Salvage recommendation
 
