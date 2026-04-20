@@ -1,39 +1,53 @@
 # DM Wilson Direct-Descendant Canonical Transport-Column Fiber Theorem
 
 **Date:** 2026-04-19  
-**Status:** exact current-branch theorem sharpening the DM transport-side
-selector object. Exact flavored transport on the probability-simplex column
-space already selects a unique current-branch maximizer orbit
+**Status:** exact current-branch source-fiber reduction theorem. Exact flavored
+transport on the probability-simplex column space already selects a unique
+current-branch maximizer orbit
 
 ```text
 (0.0356443..., 0.0356443..., 0.9287114...)
 ```
 
 up to flavor permutation. All currently known constructive transport-plateau
-witnesses realize that same favored-column orbit. But on the fixed native
-`N_e` seed surface, the direct-descendant source -> favored-column map has
-rank `2` on a `5`-real source surface, so transport still leaves a local
-`3`-real source fiber unresolved.
+witnesses realize that same favored-column orbit. On the fixed native `N_e`
+seed surface, the direct-descendant source -> favored-column map has rank `2`
+on a `5`-real source surface, so transport leaves a local `3`-real source
+fiber unresolved.
+
+The new sharpened point is this:
+
+- on each known local representative of that canonical column fiber, the
+  direct-descendant triplet values `(gamma, E1, E2)` already have full rank
+  `3` on the residual `3`-real fiber, so an exact direct-descendant
+  triplet-value law would locally pick a unique source;
+- but the currently retained exact source-oriented triplet package
+  `(1/2, sqrt(8/3), sqrt(8)/3)` does **not** land on the direct-descendant
+  fixed-seed surface at all.
 
 So the remaining DM issue is no longer “what favored column does transport
-want?” The branch now answers that. The remaining issue is the **microscopic
-law that selects a source in the fiber over that canonical column orbit.**
+want?” and it is not “find some extra transport optimization.” It is:
+
+> derive the **compatible direct-descendant triplet-value law** on
+> `L_e / dW_e^H / (gamma, E1, E2)` above the canonical favored-column orbit.
 
 **Primary runner:**  
 `scripts/frontier_dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_2026_04_19.py`
-(`PASS=16 FAIL=0`).
+(`PASS=22 FAIL=0`).
 
 ## Question
 
 After the new constructive transport plateau theorem, the remaining ambiguity
-could still have been read in two different ways:
+could still have been read in three different ways:
 
 1. maybe transport had not yet fixed the correct favored PMNS column
    tightly enough; or
 2. maybe transport had already fixed the favored column, and the unresolved
-   ambiguity lived entirely in the source-side realizations of that column.
+   ambiguity lived entirely in the source-side realizations of that column; or
+3. maybe the already-retained exact triplet package from the older
+   source-oriented lane was already the missing microscopic law on that fiber.
 
-This theorem distinguishes those two possibilities.
+This theorem distinguishes all three possibilities.
 
 ## Bottom line
 
@@ -48,14 +62,43 @@ col_* = (0.0356443..., 0.0356443..., 0.9287114...)
 
 up to row permutation.
 
-But that does **not** fix a unique direct-descendant source. The fixed-seed
+That still does **not** fix a unique direct-descendant source. The fixed-seed
 source surface is `5`-real, while the favored column carries only `2`
 independent reals, and the exact Jacobian at the constructive witness has rank
-`2`. So the unresolved object is now concrete:
+`2`. So the unresolved object is first reduced to:
 
 > a local `3`-real source fiber above the canonical favored transport column.
 
-That is the science left.
+But the theorem sharpens it one step further.
+
+On every currently known local representative of that fiber, the
+direct-descendant map
+
+```text
+source -> (favored column, gamma, E1, E2)
+```
+
+has full rank `5`, and the restricted triplet map
+
+```text
+fiber -> (gamma, E1, E2)
+```
+
+has full rank `3`.
+
+So the remaining local selector object is exactly:
+
+> the direct-descendant triplet-value law on the canonical source fiber.
+
+That is real progress. But it still does **not** close the branch, because the
+currently retained exact source-oriented triplet package
+
+```text
+(gamma, E1, E2) = (1/2, sqrt(8/3), sqrt(8)/3)
+```
+
+has no preimage on the direct-descendant fixed-seed source surface. So it
+cannot be the missing source law here.
 
 ## What the theorem proves
 
@@ -123,6 +166,56 @@ pairwise separated sources, with minimum source separation
 
 while their favored-column multisets agree to `O(10^-8)`.
 
+### 4. On that local fiber, the direct-descendant triplet values are already a complete coordinate system
+
+Fix any of the four currently certified canonical-column witnesses `W0-W3`.
+At each witness, the exact Jacobian of
+
+```text
+source -> (favored column, gamma, E1, E2)
+```
+
+has full rank `5`.
+
+Equivalently, after restricting to the local `3`-real fiber over the raw
+favored-column representative, the triplet map
+
+```text
+fiber -> (gamma, E1, E2)
+```
+
+has rank `3`.
+
+So if the branch had an exact **direct-descendant** triplet-value law on that
+fiber, it would locally pick a unique source. The local codimension gap is not
+larger than the triplet itself.
+
+### 5. The currently retained exact source-oriented triplet package is not that law
+
+The older retained source-oriented lane already fixes the exact triplet
+
+```text
+(gamma, E1, E2) = (1/2, sqrt(8/3), sqrt(8)/3).
+```
+
+The runner now performs a deterministic global search over the full fixed
+native `N_e` seed surface and finds that this target is not attained anywhere.
+The closest direct-descendant triplet still misses by
+
+```text
+||(gamma, E1, E2) - (1/2, sqrt(8/3), sqrt(8)/3)|| = 0.568319...
+```
+
+with componentwise errors
+
+```text
+(-0.499881..., -0.182635..., -0.199374...).
+```
+
+So the currently retained exact triplet package from the source-oriented lane
+does **not** collapse the canonical direct-descendant source fiber. It is not
+even compatible with the direct-descendant source surface.
+
 ## Why this matters
 
 This is the cleanest same-day compression of the remaining DM science.
@@ -138,13 +231,25 @@ The branch now knows:
 
 - the canonical favored transport column orbit;
 - the fact that the constructive plateau already lies over that orbit;
-- the exact local size of the remaining unresolved source-side fiber.
+- the exact local size of the remaining unresolved source-side fiber;
+- and the exact local observable type that would close it if its values were
+  known.
 
-So the remaining science is now sharply identified as:
+That is a materially sharper answer than the old generic “microscopic value
+law on `L_e`” wording.
 
-> derive the microscopic law on `L_e` (or an equivalent retained-physics law)
-> that selects a point in the `3`-real fixed-seed source fiber over
-> `col_*`.
+The remaining science is now sharply identified as:
+
+> derive the **compatible direct-descendant triplet-value law**
+> `(gamma, E1, E2)` on `L_e / dW_e^H` above the canonical favored-column orbit,
+> or an equivalent `3`-real microscopic law of the same strength.
+
+And it also closes a tempting but false shortcut:
+
+> import the already-retained source-oriented exact triplet package.
+
+That package is real science on its own lane, but it is **not** the missing
+selector on this direct-descendant source surface.
 
 ## Relation to the earlier same-day DM theorems
 
@@ -158,11 +263,18 @@ This theorem sits downstream of four already-landed same-day sharpenings:
    the branch carries an explicit path-selected law candidate.
 4. **constructive transport plateau theorem**  
    constructive transport extremality alone does not pick a unique endpoint.
+5. **exact-kernel / source-oriented triplet package**  
+   the older source-oriented lane already fixes
+   `(gamma, E1, E2) = (1/2, sqrt(8/3), sqrt(8)/3)`.
 
-The new theorem explains that last obstruction structurally:
+The new theorem explains the remaining obstruction structurally:
 
 - transport **does** fix a canonical column;
-- but source-side nonuniqueness survives above that column as a real fiber.
+- source-side nonuniqueness survives above that column as a real fiber;
+- direct-descendant triplet values are locally the right coordinates on that
+  fiber;
+- but the old exact source-oriented triplet values are not the right values
+  for this lane.
 
 ## What this closes
 
@@ -170,10 +282,12 @@ The new theorem explains that last obstruction structurally:
 - the hope that more transport optimization alone would uniquely select the
   direct-descendant source;
 - the possibility that the remaining DM gap is still “which favored column?”
+- the shortcut claim that the already-retained exact source-oriented triplet
+  package automatically closes the direct-descendant source fiber.
 
 ## What this does not close
 
-- the microscopic value law on `L_e`;
+- the compatible direct-descendant triplet-value law on `L_e`;
 - a reviewer-grade derivation of the direct-descendant source from retained
   physics;
 - the final DM flagship gate.
@@ -184,6 +298,9 @@ The new theorem explains that last obstruction structurally:
 - `docs/DM_WILSON_DIRECT_DESCENDANT_LOCAL_OBSERVABLE_COORDINATE_THEOREM_NOTE_2026-04-19.md`
 - `docs/DM_WILSON_DIRECT_DESCENDANT_CANONICAL_PATH_SELECTOR_THEOREM_NOTE_2026-04-19.md`
 - `docs/DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_TRANSPORT_PLATEAU_THEOREM_NOTE_2026-04-19.md`
+- `docs/DM_LEPTOGENESIS_EXACT_KERNEL_CLOSURE_NOTE_2026-04-15.md`
+- `docs/DM_NEUTRINO_SOURCE_SURFACE_INTRINSIC_SLOT_THEOREM_NOTE_2026-04-16.md`
+- `docs/DM_WILSON_DIRECT_DESCENDANT_CANONICAL_FIBER_SCHUR_ENTROPY_CANDIDATE_NO_GO_NOTE_2026-04-19.md`
 
 ## Reproduction
 
@@ -193,4 +310,4 @@ PYTHONPATH=scripts python3 scripts/frontier_dm_wilson_direct_descendant_canonica
 
 Expected:
 
-- `PASS=16 FAIL=0`
+- `PASS=22 FAIL=0`
