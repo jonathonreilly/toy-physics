@@ -237,28 +237,44 @@ verified inside the RPSR runner (T8, T9).
 
 ---
 
-## 7. Cycle-11 results and retention targets
+## 7. Cycle-11/12 results and retention targets
 
-### 7.1 A-BCC conditional closure (cycle 11, LANDED)
+### 7.1 A-BCC conditional closure (cycles 11–12, LANDED)
 
-See `docs/DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md`.
+See `docs/DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md` (cycle
+11) and `docs/DM_ABCC_SIGNATURE_FORCING_THEOREM_NOTE_2026-04-19.md`
+(cycle 12).
 
 The A-BCC assumptions audit (cycle 10) identified the C_base-connectivity
 axiom as the sole residual route. Cycle 11 closes this by proving:
 
 > **A-BCC from PMNS Non-Singularity (PNS).** If det(H_base + t J_phys) ≠ 0
 > for all t ∈ [0, 1], then det(H_base + J_phys) > 0 (A-BCC). Proof:
-> IVT + det(H_base) > 0.
+> IVT + det(H_base) > 0. [PASS=38 FAIL=0]
 
-Both known C_neg chi²=0 basins (Basin 2, Basin X) require a neutrino mass
-zero-crossing at t ≈ 0.028 and t ≈ 0.038 respectively. Basin 1 avoids
-all crossings (P3 Sylvester, min det = 0.879). Runner PASS=38 FAIL=0.
+Cycle 12 identifies the algebraic MECHANISM behind this result via
+Sylvester's law of inertia:
 
-**A-BCC status:** CONDITIONAL THEOREM gated on PNS. Reduction:
-A-BCC ← PNS + IVT + det(H_base) > 0. PNS is observationally grounded
-(measured neutrino masses non-zero) but not derived from Cl(3)/Z³ alone.
-Axiom cost: 1 (PNS) — weaker and more physically motivated than the prior
-bare sign assumption.
+> **Sylvester Signature-Forcing.** H_base has signature (1, 0, 2).
+> All C_neg points have signature (2, 0, 1). The two chambers are
+> topologically disconnected in GL(Herm_3). ANY continuous path from
+> H_base to a C_neg endpoint MUST cross det=0 — regardless of path
+> shape. [PASS=54 FAIL=0]
+
+Both known C_neg chi²=0 basins (Basin 2, Basin X) have signature (2,0,1)
+≠ H_base (1,0,2). Spectral flow = 1: exactly one eigenvalue crosses zero
+on any path (at t ≈ 0.028 for Basin 2; t ≈ 0.038 for Basin X). Basin 1
+has the same signature (1,0,2) as H_base and never crosses det=0
+(P3 Sylvester, min det = 0.878, path-independent over 6 path shapes).
+
+**A-BCC status:** CONDITIONAL THEOREM gated on PNS. Reduction (upgraded
+cycle 12):
+A-BCC ← PNS (any path) + Sylvester signature-forcing + det(H_base) > 0.
+PNS is observationally grounded (measured neutrino masses non-zero) but
+not derived from Cl(3)/Z³ alone. Axiom cost: 1 (PNS). The cycle 12
+upgrade is that PNS → A-BCC holds for ANY coupling path, not only the
+linear path; and the mechanism (two distinct signature chambers) is
+fully identified.
 
 ### 7.2 Open retention target: Quark gate LO identity
 
@@ -323,19 +339,25 @@ conditional closure (RPSR). Zero new axioms added in all three scalar-
 selector closures; the conditional closure is gated on **one** specific
 LO algebraic identity (cycle 11 target).
 
-**A-BCC status (updated cycle 11).** DPLE closes the F4 scalar-selector
-axiom on the conditioned sub-gate. A-BCC (source-side physical-sheet
-identification) is now a **conditional theorem** gated on PMNS
+**A-BCC status (updated cycles 11–12).** DPLE closes the F4 scalar-
+selector axiom on the conditioned sub-gate. A-BCC (source-side physical-
+sheet identification) is now a **conditional theorem** gated on PMNS
 Non-Singularity (PNS): see
 `DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md` (cycle 11,
-PASS=38 FAIL=0). The full assumptions audit is in
+PASS=38 FAIL=0) and
+`DM_ABCC_SIGNATURE_FORCING_THEOREM_NOTE_2026-04-19.md` (cycle 12,
+PASS=54 FAIL=0). The full assumptions audit is in
 `DM_ABCC_ASSUMPTIONS_AUDIT_NOTE_2026-04-19.md` (PASS=21 FAIL=0);
 all five algebraic routes fail; PNS is the one remaining input.
 
 PNS states that no neutrino eigenvalue passes through zero during the
 physical dark-matter coupling. Both known C_neg chi²=0 basins explicitly
-violate PNS (zero-crossings at t ≈ 0.028 and t ≈ 0.038). Basin 1 is the
-unique chi²=0 basin consistent with PNS.
+violate PNS via a Sylvester signature mismatch: H_base has signature
+(1,0,2), Basin 2/X have signature (2,0,1) — different topological
+chambers of GL(Herm_3). The zero-crossing (spectral flow = 1) at
+t ≈ 0.028 (Basin 2) and t ≈ 0.038 (Basin X) is algebraically mandatory
+on any continuous path. Basin 1 is the unique chi²=0 basin with the same
+signature (1,0,2) as H_base.
 
 MRU and DPLE specialize dim-parametric observable-principle theorems at
 d = 3, while Berry closes through the exact selected-line phase carrier.
@@ -344,8 +366,8 @@ on main (R1 bivector-count saturation, R2 anomaly parity, R3
 Cayley-Hamilton coincidence, 7 no-gos), but the Berry half should no longer be
 described as an ambient dim-parametric monopole theorem.
 
-Runner suite: 8 runners (7 cycle-10 + 1 cycle-11 PNS), all PASS=N FAIL=0.
-No retained runner on main regresses.
+Runner suite: 9 runners (7 cycle-10 + 1 cycle-11 PNS + 1 cycle-12
+Sylvester), all PASS=N FAIL=0. No retained runner on main regresses.
 
 **Reading order:** start here. Then (in order):
 `KOIDE_MOMENT_RATIO_UNIFORMITY_THEOREM_NOTE` ->

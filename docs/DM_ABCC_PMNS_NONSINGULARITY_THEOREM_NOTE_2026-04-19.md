@@ -322,6 +322,9 @@ Expected: PASS=38 FAIL=0.
 - `docs/DM_DPLE_DIMENSION_PARAMETRIC_EXTREMUM_THEOREM_NOTE_2026-04-19.md`
   (F4 → DPLE theorem; scalar-selector sub-gate closed)
 - `docs/CYCLE_1_TO_10_SYNTHESIS_NOTE_2026-04-19.md` (cycle 1-10 landing)
+- `docs/DM_ABCC_SIGNATURE_FORCING_THEOREM_NOTE_2026-04-19.md` (cycle 12:
+  Sylvester signature-forcing upgrades this IVT result to any path; full
+  algebraic mechanism behind why C_neg requires a det=0 crossing)
 
 ---
 
