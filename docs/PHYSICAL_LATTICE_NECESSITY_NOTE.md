@@ -139,8 +139,7 @@ interpretation remains.
 >
 > - the retained `hw=1` generation surface is already exact and irreducible,
 >   so no proper exact quotient / rooting / reduction survives there;
-> - the gauge surface is fixed on the accepted Wilson plaquette action
->   by the structural-normalization + rigidity route, with
+> - the gauge surface is fixed at the Wilson plaquette action with
 >   `g_bare^2 = 1`, hence `beta = 6`;
 > - the accepted quantitative surface is fixed at the canonical
 >   `beta = 6` plaquette / `u_0` / hierarchy chain;
@@ -240,22 +239,22 @@ without observational input. It is retained here only as a consistency
 diagnostic showing that no regulator-family deformation preserves both
 live package invariants away from `beta = 6`.
 
-The non-circular g_bare fixation now lives at:
+The non-circular g_bare fixation now lives at two independent retained routes:
 
 - [G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md](G_BARE_STRUCTURAL_NORMALIZATION_THEOREM_NOTE_2026-04-18.md)
-  (operator-algebra route)
+  together with
+  [G_BARE_RIGIDITY_THEOREM_NOTE.md](G_BARE_RIGIDITY_THEOREM_NOTE.md)
+  (operator-algebra / structural-normalization route)
+- [G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md](G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md)
+  with
+  [G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md](G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md)
+  and
+  [G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md](G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md)
+  (1PI amplitude route)
 
-That theorem derives `g_bare = 1` on the accepted Wilson-action surface
-from structural retained content without using `alpha_s(v)` or `v` as
-inputs, which is the cleaner closure. The bounded dynamical obstruction
-lane in [G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18.md](G_BARE_DYNAMICAL_FIXATION_OBSTRUCTION_NOTE_2026-04-18.md)
-then closes the critical-feature route negatively. This section is kept for
-the regulator-family diagnostic only.
-
-An additional two-Ward 1PI re-read is recorded in
-[G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md](G_BARE_TWO_WARD_CLOSURE_NOTE_2026-04-18.md),
-but only as a `conditional / support` candidate. The present theorem
-does not rely on that candidate route.
+Those notes derive `g_bare = 1` from retained structural content without
+using `alpha_s(v)` or `v` as inputs, which is the cleaner closure. This
+section is kept for the regulator-family diagnostic only.
 
 The boundary can be sharpened further without freezing `u_0` by hand.
 Write
