@@ -36,7 +36,7 @@ scalar selections:
 |---|---|---|
 | **Koide `kappa`** | Charged-lepton cone normalization `kappa = 2` | Support/candidate principle via **MRU** |
 | **Koide `theta`** | Doublet-phase offset `delta = 2/9` (Brannen–Zenczykowski) | Geometric support/candidate via **Berry holonomy** |
-| **DM A-BCC basin** | Interior-minimum linear-path Sylvester discriminator `F_4` | Support theorem on the fixed DM chart via **DPLE** |
+| **DM A-BCC basin** | Interior-minimum linear-path Sylvester discriminator `F_4` | **Closed at axiom level conditional on DPLE acceptance** via `(P3 chamber bound) ∩ (DPLE F_4)` — see §2.3a |
 | **Quark `a_u`** | Up-sector reduced amplitude `a_u = 0.7748865611` | Branch-internal theorem via **BICAC -> STRC-LO -> RPSR** |
 
 §2 presents the four branch-local routes; §3 presents STRC; §4 records the
@@ -165,6 +165,36 @@ microscopic source in that fiber is retained-physics-selected?” See
 
 See `docs/DM_DPLE_DIMENSION_PARAMETRIC_EXTREMUM_THEOREM_NOTE_2026-04-19.md`.
 Runner PASS=19 FAIL=0.
+
+### §2.3a A-BCC axiom-level closure via chamber bound + DPLE F_4
+
+The DM A-BCC basin-choice closes at axiom level via the intersection of
+two retained ingredients:
+
+1. **Active affine chamber bound** `q_+ + δ ≥ √(8/3)` — preliminary P3
+   of the P3 Sylvester linear-path signature theorem note (intrinsic
+   `Z_3` doublet-block point-selection theorem). Strictly excludes
+   Basin N (`q+δ = 1.28`) and Basin P (`q+δ = 0.10`) from the active
+   chamber, leaving the survivor pair `{Basin 1, Basin X}`.
+2. **DPLE `F_4` selector** — discriminant `Δ = c_2² − 3 c_1 c_3 > 0`
+   plus interior Morse-index-0 critical point with matching sign,
+   evaluated on the linear pencil `H(t) = H_base + t · J_B`. Picks
+   Basin 1 (`Δ_1 = +7.804`, `t_* = 0.776`, `p_* = +0.878`) uniquely
+   among the chamber survivors; Basin X has `Δ_X = −4.7 × 10⁶` and fails.
+
+Composition `(C1) ∩ (C2) = {Basin 1}`. No T2K, NuFit, or PDG input.
+This is a 6th derivation angle structurally distinct from the five
+algebraic-sign-theorem routes catalogued (and ruled out) by the
+companion A-BCC assumptions audit; it succeeds because it leverages a
+retained chamber inequality plus the DPLE algebraic discriminator
+rather than asking for an intrinsic sign rule on `det H`.
+
+A-BCC is therefore no longer an independent axiom on the DM gate; it
+collapses into the intersection of two ingredients that the gate
+already requires.
+
+See `docs/DM_ABCC_CLOSURE_VIA_CHAMBER_BOUND_AND_DPLE_F4_NOTE_2026-04-19.md`.
+Runner `frontier_dm_abcc_chamber_dple_closure.py` PASS=39 FAIL=0.
 
 ### §2.4 Reduced Projector-Ray Sum Rule (RPSR) — NLO completion of the quark `a_u` route
 
@@ -337,7 +367,11 @@ support/conditional packet:
 - Berry gives a coherent geometric model but does not force the physical
   charged-lepton phase to be that holonomy;
 - DPLE upgrades `F_4` to a real theorem on the fixed chart but does not derive
-  the physical source-side chart by itself;
+  the physical source-side chart by itself; A-BCC itself, the basin-choice
+  on that chart, has now moved from "support / observationally grounded" to
+  **closed at axiom level conditional on DPLE acceptance** via
+  `(P3 chamber bound) ∩ (DPLE F_4)` (see §2.3a) — the same conditional
+  status as DPLE itself, with no new axiom load on the gate;
 - quark `a_u` now closes on bimodule footing via BICAC + STRC-LO + RPSR, but
   BICAC remains an added framework-native structural postulate rather than a
   pure retained derivation.
@@ -437,6 +471,7 @@ Start here, then (in order):
 | `frontier_koide_moment_ratio_uniformity_theorem.py` | 65 | 0 |
 | `frontier_koide_berry_phase_theorem.py` | 26 | 0 |
 | `frontier_dm_dple_theorem.py` | 19 | 0 |
+| `frontier_dm_abcc_chamber_dple_closure.py` | 39 | 0 |
 | `frontier_quark_up_amplitude_rpsr_conditional.py` | 10 | 0 |
 | `frontier_quark_strc_observable_principle.py` | 19 | 0 |
 
