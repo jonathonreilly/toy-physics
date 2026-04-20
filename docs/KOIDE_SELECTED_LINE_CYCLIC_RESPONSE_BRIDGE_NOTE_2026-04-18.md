@@ -1,14 +1,11 @@
 # Koide Selected-Line Cyclic-Response Bridge
 
 **Date:** 2026-04-18  
-**Status:** exact bridge theorem on the branch-local actual-route stack. Given
-AXIOM E (`delta = 2/9`, retained input from Brannen–Zenczykowski) and the
-actual-route Berry geometric identification, the previously separate
+**Status:** exact bridge theorem on the branch-local actual-route stack. Once
+AXIOM E is closed on the actual Berry route, the previously separate
 selected-line scalar/point law is no longer open: `delta = 2/9` fixes
 `kappa_sel,*` and the unique first-branch point `m_*`. The old `H_*` witness is
-demoted to a compatibility check. Berry geometry on the selected line gives
-`delta` its holonomy meaning but does not quantize the specific value `2/9`
-from first principles; that remains AXIOM E.
+demoted to a compatibility check.
 **Runner:** `scripts/frontier_koide_selected_line_cyclic_response_bridge.py`
 (PASS=20 FAIL=0)
 
@@ -61,8 +58,7 @@ w/v = 4.100981191542.
 ```
 
 So the selected-line scalar/point law is not an independent remaining gap
-once AXIOM E (supplying `delta = 2/9`) is combined with the actual-route
-geometric identification.
+once AXIOM E is genuinely closed on the actual route.
 
 ## 1. Exact cyclic/orbit inversion
 

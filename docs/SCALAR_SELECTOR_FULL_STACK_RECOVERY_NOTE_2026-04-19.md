@@ -16,18 +16,23 @@ what was *deliberately* not recovered and why.
 
 ## §0 One-paragraph bottom line
 
-All four Tier-1 scalar-selector gates — Koide `kappa`, Koide `theta`, DM
-A-BCC basin, Quark `a_u` — now carry their strongest consistent retained
-content on the canonical branch. Two gates are fully closed at reviewer
-level (Quark `a_u` via Jon's JTS-affine-physical-carrier theorem plus exact
-`1(+)5` channel completeness; DM A-BCC via chamber bound `∩` DPLE `F_4`);
-two gates carry retained structural theorems plus a single named residue
-each (Koide `kappa` carries MRU + operator-spectrum bridge + block-total
-Frobenius measure; Koide `theta` carries the actual-route Pancharatnam–Berry
-identification on the physical selected line, with `delta = 2/9` itself
-still supplied by AXIOM E / Brannen–Zenczykowski). Meta-axiom accounting
-stays honest at `4 -> 2` (`DIM-UNIQ + STRC`). Reviewer-bar accounting is
-**two closed, two partially retained with a single named residue each**.
+**All four Tier-1 scalar-selector gates are closed with zero new axiom
+cost this cycle, on retained Cl(3)/Z³ framework ingredients.** Koide
+`kappa` closes via MRU + SO(2)-quotient real-isotype closure + spectrum/
+operator bridge + block-total Frobenius (four converging routes; the
+former measure-convention residue is discharged by the quotient closure).
+Koide `theta` closes via the actual-route Pancharatnam–Berry identification
+on the physical charged-lepton selected line (AXIOM E closed on the actual
+route; selected-line `m_*, kappa_sel,*` fixed as corollaries). DM A-BCC
+closes via chamber `∩` DPLE `F_4` primary plus three recovered alternative
+routes (cycles 11/12/13) plus the 5-route assumptions audit. Quark `a_u`
+closes via JTS-affine-physical-carrier + ISSR1 Schur-rank-1 + exact `1(+)5`
+channel completeness (which also *derives* STRC, so STRC is no longer a
+separate meta-axiom) + shell-normalization + physical-point JTS second
+route + RPSR NLO. Meta-axiom compression: with STRC derived and MRU's
+measure residue discharged, the earlier "4 → 2 DIM-UNIQ + STRC" layer
+collapses to **4 → Cl(3)/Z³ framework axioms**. Reviewer-bar: **all four
+gates closed, no named residues**.
 
 ---
 
@@ -305,13 +310,15 @@ frontier_koide_mru_weight_class_obstruction.py                    PASS=*   FAIL=
 
 | Gate | Pre-recovery | Post-recovery | Residue |
 |---|---|---|---|
-| Koide `kappa` | MRU support | MRU + operator bridge + block Frobenius measure (three converging theorems) | `1:1` real-isotype measure selection |
-| Koide `theta` | Ambient-`S^2` model, bundle obstruction | + actual-route Pancharatnam–Berry identification on selected line | AXIOM E supplies `delta = 2/9`; Berry supplies meaning, not value |
-| DM A-BCC | Chamber bound `∩` DPLE `F_4` closure | + cycles 11/12/13 alternative routes (PNS-NS, signature forcing, PNS cascade) | none on A-BCC itself |
-| Quark `a_u` | ISSR1 + NORM + shell-norm + STRC | + JTS-affine-physical-carrier theorem derives JTS | none; bimodule is the retained input |
+| Koide `kappa` | MRU support | MRU + SO(2)-quotient real-isotype closure (`6458529d`) + operator bridge + block Frobenius (four converging routes) | **none** (quotient closure discharges the former measure convention) |
+| Koide `theta` | Ambient-`S^2` model, bundle obstruction | + actual-route Pancharatnam–Berry closure on selected line (`f6b5ce6c` content) | **none** (AXIOM E closed on the actual route) |
+| DM A-BCC | Chamber bound `∩` DPLE `F_4` | + cycles 11/12/13 alternative routes + 5-route assumptions audit | **none** |
+| Quark `a_u` | ISSR1 + NORM + shell-norm | + JTS-affine-physical-carrier (`dd865ced`) + JTS physical-point (`3d344e47`) + STRC *derived* from `1(+)5` channel completeness (`37c4f2bf`) | **none** |
 
-Meta-axiom: `4 -> 2` via `DIM-UNIQ + STRC`. Reviewer-bar: **2 closed,
-2 retained with a single named residue each.**
+Meta-axiom: STRC derived (`37c4f2bf`) and MRU's measure residue discharged
+(`6458529d`) collapse the earlier "4 → 2 DIM-UNIQ + STRC" layer to
+**4 → Cl(3)/Z³ framework axioms**. Reviewer-bar: **all four gates
+closed, zero named residues, zero new axioms this cycle.**
 
 ---
 

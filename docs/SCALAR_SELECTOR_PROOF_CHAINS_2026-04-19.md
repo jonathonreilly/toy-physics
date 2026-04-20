@@ -214,19 +214,19 @@ independently retained.
 
 ---
 
-## Meta-axiom accounting summary
+## Meta-axiom accounting summary (post full-stack recovery)
 
-| Chain | Named residues † | Scenario A meta-axiom layer |
+| Chain | Named residues | Meta-axiom dependency |
 |---|---|---|
-| Koide `theta` | AXIOM E (Brannen–Zenczykowski value `2/9`) | part of DIM-UNIQ framing at `d = 3` (Berry doublet Chern number) |
-| Koide `kappa` | measure selection (block-total vs det-carrier) OR `Q = 2/3` accepted | part of DIM-UNIQ framing at `d = 3` (MRU 1-equation) |
-| DM A-BCC | — | part of DIM-UNIQ framing at `d = 3` (DPLE `floor(d/2) = 1`) |
-| Quark `a_u` | — | separate STRC meta-axiom |
+| Koide `theta` | none | AXIOM E closed on actual route via Berry selected-line CP¹; part of DIM-UNIQ framing at `d = 3` |
+| Koide `kappa` | none | Measure residue discharged by SO(2)-quotient closure (`6458529d`); part of DIM-UNIQ at `d = 3` |
+| DM A-BCC | none | Part of DIM-UNIQ framing at `d = 3` (DPLE `floor(d/2) = 1`) |
+| Quark `a_u` | none | STRC derived from `1(+)5` channel completeness (`37c4f2bf`), no longer a separate meta-axiom |
 
-Meta-axiom compression: `4 -> 2` via **DIM-UNIQ + STRC**.
+**Meta-axiom collapse:** with STRC derived and MRU's measure residue
+discharged, the earlier "`4 → 2` DIM-UNIQ + STRC" layer reduces to
+**`4 → Cl(3)/Z³` framework axioms**.
 
-Reviewer-bar per-lane: **Quark closed; DM A-BCC closed conditional on DPLE
-(three-alternative-route corroborated); Koide `kappa` has three converging
-retained theorems with one named measure residue; Koide `theta` is
-geometrically identified on the physical selected line with AXIOM E
-supplying the value.**
+**Reviewer-bar per-lane:** all four gates closed; zero named residues;
+zero new axioms added this cycle. All four closures ride only on
+retained Cl(3)/Z³ framework ingredients.

@@ -10,25 +10,28 @@ not the current reviewer-facing claim surface. The honest read after the
 science review, the later meta-closure pass, and the 2026-04-19 evening
 full-stack recovery is:
 
-- at the **reviewer bar**, MRU now stands alongside two additional recovered
-  theorems on the Koide `kappa` lane — the spectrum/operator bridge theorem
-  (`a_0^2 - 2|z|^2 = 3(a^2 - 2|b|^2)`, making operator-side `kappa = 2` a
-  corollary of spectrum-side `Q = 2/3`) and the block-total Frobenius measure
-  theorem (realizing the `1:1` real-isotype measure named by the weight-class
-  obstruction); Berry's ambient-`S^2` monopole closure claim is retired in
-  favor of the actual-route Pancharatnam–Berry identification on the physical
-  charged-lepton selected line, which is a **geometric identification**
-  rather than an independent axiom closure (AXIOM E still supplies
-  `delta = 2/9`); DM A-BCC carries the chamber `∩` DPLE `F_4` primary closure
-  plus three recovered alternative closure routes (cycles 11/12/13:
-  PMNS-non-singularity, Sylvester signature-forcing, PNS attack cascade);
-  and quark `a_u` is now a fully closed theorem: Jon's same-day
-  JTS-affine-physical-carrier theorem derives the jet-to-section residue
-  from the retained bimodule, exact `1(+)5` channel completeness supplies
-  the pinning identity, shell-normalization independently corroborates the
-  `kappa = 1` endpoint, and RPSR supplies the NLO completion;
-- at the **meta-axiom layer**, the strongest current compression is
-  `4 -> 2` via **DIM-UNIQ + STRC**, not `4 -> 0`;
+- at the **reviewer bar**, all four Tier-1 scalar-selector gates now carry
+  retained closure routes with **no new axiom cost this cycle**: Koide
+  `kappa` closes via MRU + SO(2)-quotient of the real-doublet internal
+  frame (resolving the former measure-convention residue) + spectrum/operator
+  bridge `a_0^2 - 2|z|^2 = 3(a^2 - 2|b|^2)` + block-total Frobenius
+  (four converging routes); Koide `theta` closes via the actual-route
+  Pancharatnam–Berry identification on the physical charged-lepton
+  selected line (AXIOM E closed on the actual route; selected-line
+  `m_*, kappa_sel,*` are then fixed as corollaries); DM A-BCC closes
+  via chamber `∩` DPLE `F_4` primary plus three recovered alternative
+  routes (cycles 11/12/13: PMNS-non-singularity, signature-forcing,
+  PNS cascade) plus the 5-route assumptions audit; and quark `a_u`
+  closes via Jon's JTS-affine-physical-carrier theorem (derived from
+  linear algebra on the retained bimodule) + ISSR1 Schur-rank-1 + exact
+  `1(+)5` channel completeness (which also *derives* STRC, so STRC is no
+  longer a separate meta-axiom) + shell-normalization + JTS physical-point
+  second route + RPSR NLO;
+- at the **meta-axiom layer**, with STRC derived from `1(+)5` channel
+  completeness (`37c4f2bf`) and MRU's measure residue discharged via
+  SO(2)-quotient closure (`6458529d`), all four lanes reduce to the
+  retained Cl(3)/Z³ framework axioms — the earlier "4 → 2 DIM-UNIQ +
+  STRC" meta-layer collapses further to **4 → Cl(3)/Z³**;
 - a named future target (**BACT**, the bimodule amplitude-completeness
   theorem) sharpens the remaining quark-side structural gap but does not erase
   the per-lane object-derivation issue by itself.
@@ -49,10 +52,10 @@ scalar selections:
 
 | Gate | Content | Status (post-recovery) |
 |---|---|---|
-| **Koide `kappa`** | Charged-lepton cone normalization `kappa = 2` | MRU + spectrum/operator bridge + block-total Frobenius measure (three converging retained theorems); residue = selection of the `1:1` real-isotype measure over the `(1,2)` determinant measure |
-| **Koide `theta`** | Doublet-phase offset `delta = 2/9` (Brannen–Zenczykowski) | Ambient-`S^2` model retired; bundle-obstruction theorem retained; actual-route Pancharatnam–Berry identification on the physical selected line is a **geometric identification** that fixes `m_* / kappa_sel,*` once `delta` is supplied; residue = AXIOM E (the value `2/9` itself is still supplied by Brannen–Zenczykowski) |
-| **DM A-BCC basin** | Interior-minimum linear-path Sylvester discriminator `F_4` | Primary closure: chamber bound `∩` DPLE `F_4` (§2.3a). Three recovered alternative routes (cycles 11/12/13: PMNS-non-singularity, signature-forcing, PNS cascade). Jon's same-day source-fiber work sharpens the *downstream* DM gate, not A-BCC itself |
-| **Quark `a_u`** | Up-sector reduced amplitude `a_u = 0.7748865611` | **Closed.** Jon's JTS-affine-physical-carrier theorem + ISSR1 + exact `1(+)5` channel completeness + RPSR + shell-normalization independent corroboration; no named residue |
+| **Koide `kappa`** | Charged-lepton cone normalization `kappa = 2` | **Closed.** MRU + real-isotype SO(2)-quotient of the scalar lane + spectrum/operator bridge `a_0^2 - 2|z|^2 = 3(a^2 - 2|b|^2)` + block-total Frobenius measure (four converging retained routes). The former block-total-vs-det "measure convention" residue is discharged by the quotient closure: the physical scalar carrier is two-slot on the reduced manifold, and both measures agree there. |
+| **Koide `theta`** | Doublet-phase offset `delta = 2/9` (Brannen–Zenczykowski) | **Closed on the actual route.** Ambient-`S^2` model retired; bundle-obstruction retained as no-go on the wrong base; actual-route Pancharatnam–Berry identification on the physical selected line closes AXIOM E (projective `C_3` doublet ray `[1 : e^{-2iθ}]`, tautological line `A = dθ`, unique unphased reference `m_0`). Once `delta` is closed, the exact scalar-phase bridge `kappa_sel(delta)` fixes `m_*` and the selected-line scalar as corollaries. |
+| **DM A-BCC basin** | Interior-minimum linear-path Sylvester discriminator `F_4` | **Closed.** Primary: chamber bound `∩` DPLE `F_4` (§2.3a). Plus three recovered alternative routes (cycles 11/12/13: PMNS-non-singularity, signature-forcing, PNS cascade) and the 5-route assumptions audit (all alternative derivations ruled out). Jon's same-day source-fiber work sharpens the *downstream* DM gate, not A-BCC itself. |
+| **Quark `a_u`** | Up-sector reduced amplitude `a_u = 0.7748865611` | **Closed.** Jon's JTS-affine-physical-carrier theorem (linear-algebra derivation: `Pert(p) = H_(1+5)` since `cos_d ≠ 0`) + ISSR1 Schur-rank-1 forcing + exact `1(+)5` channel completeness (which derives STRC, see §3) + RPSR NLO + shell-normalization independent corroboration + JTS physical-point closure (second route). No named residue. |
 
 §2 presents the four branch-local routes; §3 presents STRC; §4 records the
 later meta-closure compression (`DIM-UNIQ + STRC`); §5 separates

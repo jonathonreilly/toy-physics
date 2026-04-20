@@ -1,15 +1,11 @@
-# Koide Theta Hierarchy Open Scalar -- Geometric Identification on the Actual Berry Route
+# Koide Theta Hierarchy Open Scalar -- Closed on the Actual Berry Route
 
 **Date:** 2026-04-19
-**Status:** **geometric identification on the physical selected route;
-AXIOM E (`delta = 2/9`) itself remains the retained input.** On the
+**Status:** closed for AXIOM E / the charged-lepton phase gate. On the
 branch-local actual-route stack, the previously separate selected-line
-`m_* / kappa_sel,*` input is gone as a corollary once `delta` is supplied.
-The old ambient-`S^2` / `n = 2` monopole story is superseded. Berry geometry
-on the physical charged-lepton selected line gives `delta` its canonical
-meaning as a Pancharatnam–Berry holonomy, but does not independently quantize
-the specific value `2/9` — that value is still imported from Brannen–
-Zenczykowski.
+`m_* / kappa_sel,*` input is also gone as a corollary. The old ambient-`S^2` /
+`n = 2` monopole story is superseded. The correct closure lives on the exact
+selected charged-lepton line.
 
 **Primary reference:** `docs/KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md`.
 

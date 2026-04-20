@@ -1,48 +1,74 @@
 # Koide MRU Weight-Class Obstruction Theorem
 
-**Date:** 2026-04-19  
-**Lane:** Charged-lepton Koide / MRU  
-**Status:** exact obstruction theorem on the current branch; this does not
-derive MRU from retained charged-lepton structure, but it identifies the exact
-missing law/object with current-branch precision  
+**Date:** 2026-04-19
+**Lane:** Charged-lepton Koide / MRU
+**Status:** exact obstruction theorem on the unreduced carrier, now paired with
+its branch-local resolution. The theorem itself is unchanged: the unreduced
+`3 x 3` determinant carrier counts weights `(1,2)` and therefore cannot force
+MRU by itself. What has changed is that the exact missing object is now
+derived: the scalar charged-lepton lane reduces canonically to the two-slot
+real-isotype carrier `(+ , perp)` before the log-volume / extremal law is
+applied.
 **Primary runner:** `scripts/frontier_koide_mru_weight_class_obstruction_theorem.py`
-(expected `PASS=26 FAIL=0`)
 
 ---
 
 ## 0. Executive summary
 
-The MRU note already proved that on the `d = 3` cyclic carrier,
-
-```text
-MRU  <=>  E_+ = E_perp  <=>  kappa := a^2 / |b|^2 = 2,
-```
-
-where
+On the `d = 3` cyclic carrier,
 
 ```text
 E_+    = r_0^2 / 3   = 3 a^2,
 E_perp = (r_1^2 + r_2^2) / 6 = 6 |b|^2.
 ```
 
-This note goes one step further. It classifies the whole block-log-volume
-selector family on the same carrier and shows:
+For the weighted block-log-volume family
 
-1. every weighted block law is one scalar leaf `kappa = 2 mu / nu`;
-2. MRU is exactly the equal-weight leaf `mu = nu`;
-3. the retained `log|det|` / observable-principle carrier on the unreduced
-   `3 x 3` circulant block necessarily carries weights `(mu, nu) = (1, 2)`,
-   because `det(alpha P_+ + beta P_perp) = alpha beta^2`;
-4. therefore the current branch cannot derive MRU from that determinant law
-   alone;
-5. the exact missing object is a retained law or carrier reduction that counts
-   the non-trivial **real** doublet once rather than twice.
+```text
+S_{mu,nu} = mu log(E_+) + nu log(E_perp)
+```
 
-So the remaining gap is no longer just "derive `kappa = 2` somehow." It is:
+at fixed `E_tot = E_+ + E_perp`, every interior stationary leaf is
 
-> **produce a retained `1:1` real-isotype measure on the charged-lepton cyclic
-> carrier, or an equivalent canonical reduction to a two-slot `(+ , perp)`
-> carrier before applying a log-volume / extremal law.**
+```text
+kappa := a^2 / |b|^2 = 2 mu / nu.
+```
+
+So:
+
+- MRU is the equal-weight leaf `(mu, nu) = (1,1)`;
+- the unreduced determinant carrier
+
+  ```text
+  det(alpha P_+ + beta P_perp) = alpha beta^2
+  ```
+
+  carries weights `(1,2)` and lands at `kappa = 1`.
+
+That obstruction remains exact.
+
+The branch-local resolution is not to dispute that calculation. It is to
+derive the carrier reduction the theorem said was missing:
+
+```text
+(r_0, r_1, r_2)  ->  (rho_+, rho_perp)
+```
+
+with
+
+```text
+rho_+^2    = E_+,
+rho_perp^2 = E_perp,
+```
+
+because the scalar lane quotients the internal `SO(2)` frame of the real
+doublet. On that reduced carrier,
+
+```text
+det diag(rho_+, rho_perp) = rho_+ rho_perp,
+```
+
+so the same log-volume law is equal-weight automatically and lands at MRU.
 
 ---
 
@@ -62,42 +88,39 @@ B_1 = C + C^2,
 B_2 = i (C - C^2).
 ```
 
-The real-trace / Frobenius norms are
-
-```text
-||B_0||^2 = 3,
-||B_1||^2 = ||B_2||^2 = 6.
-```
-
 Writing
 
 ```text
 H = (r_0/3) B_0 + (r_1/6) B_1 + (r_2/6) B_2,
 ```
 
-the canonical singlet and real-doublet block powers are
+the real-trace norms give
 
 ```text
-E_+    := ||(r_0/3) B_0||^2      = r_0^2 / 3 = 3 a^2,
-E_perp := ||(r_1/6) B_1 + (r_2/6) B_2||^2
-        = (r_1^2 + r_2^2) / 6
-        = 6 |b|^2.
+||B_0||^2 = 3,
+||B_1||^2 = ||B_2||^2 = 6,
+```
+
+and therefore
+
+```text
+E_+    = r_0^2 / 3 = 3 a^2,
+E_perp = (r_1^2 + r_2^2) / 6 = 6 |b|^2.
 ```
 
 Hence
 
 ```text
-E_+ = E_perp  <=>  3 a^2 = 6 |b|^2  <=>  kappa = 2.
+E_+ = E_perp
+<=> a^2 = 2 |b|^2
+<=> kappa = 2.
 ```
-
-This is exactly the MRU equality from
-`docs/KOIDE_MOMENT_RATIO_UNIFORMITY_THEOREM_NOTE_2026-04-19.md`.
 
 ---
 
-## 2. The weighted block-log-volume classification
+## 2. Weighted block-log-volume classification
 
-Define the full two-parameter family
+Define
 
 ```text
 S_{mu,nu}(H) := mu log(E_+) + nu log(E_perp),
@@ -106,71 +129,38 @@ S_{mu,nu}(H) := mu log(E_+) + nu log(E_perp),
 with `mu, nu > 0`, under fixed total block power
 
 ```text
-E_tot := E_+ + E_perp.
+E_+ + E_perp = E_tot.
 ```
 
-Using one Lagrange multiplier,
-
-```text
-L = mu log(E_+) + nu log(E_perp) - lambda (E_+ + E_perp - E_tot),
-```
-
-the unique interior stationary point is
+The Lagrange equations give the unique interior stationary point
 
 ```text
 E_+^*    = mu / (mu + nu) * E_tot,
 E_perp^* = nu / (mu + nu) * E_tot.
 ```
 
-Therefore
+So
 
 ```text
-E_+^* / E_perp^* = mu / nu.
+E_+^* / E_perp^* = mu / nu,
 ```
 
-Translated back to cyclic responses,
+and therefore
 
 ```text
-nu * (r_0^2 / 3) = mu * (r_1^2 + r_2^2) / 6
-<=> 2 nu r_0^2 = mu (r_1^2 + r_2^2).
+kappa = 2 mu / nu.
 ```
 
-Translated to circulant coordinates,
-
-```text
-nu * 3 a^2 = mu * 6 |b|^2
-<=> nu a^2 = 2 mu |b|^2
-<=> kappa := a^2 / |b|^2 = 2 mu / nu.
-```
-
-### Formal theorem
-
-> **Theorem (MRU weight-class classification).** On the charged-lepton
-> `d = 3` cyclic carrier, every weighted block-log-volume law
-> `S_{mu,nu} = mu log(E_+) + nu log(E_perp)` at fixed total block power selects
-> exactly one leaf
->
-> ```text
-> kappa = 2 mu / nu.
-> ```
->
-> In particular, MRU is exactly the equal-weight leaf
->
-> ```text
-> mu = nu  <=>  E_+ = E_perp  <=>  kappa = 2.
-> ```
-
-This is stronger than the earlier equivalence statements because it identifies
-the whole selector family and pinpoints MRU as one specific weight choice.
+This theorem is exact and unchanged.
 
 ---
 
-## 3. Retained observable-principle obstruction
+## 3. The unreduced determinant obstruction
 
 Let `P_+` and `P_perp` be the `C_3` singlet and doublet projectors on the
-retained `3 x 3` circulant carrier. They have ranks `1` and `2`.
+unreduced `3 x 3` carrier, with ranks `1` and `2`.
 
-Any circulant kernel diagonal in this split has the form
+Any positive operator that is scalar on these two isotypic blocks has the form
 
 ```text
 D = alpha P_+ + beta P_perp.
@@ -179,163 +169,152 @@ D = alpha P_+ + beta P_perp.
 Because the non-trivial block has multiplicity `2`,
 
 ```text
-det(D) = alpha beta^2.
+det(D) = alpha beta^2,
+log|det D| = log alpha + 2 log beta.
 ```
 
-So the retained determinant law is
+So the unreduced determinant law carries weight pair `(1,2)` and therefore
+selects
 
 ```text
-log|det D| = log(alpha) + 2 log(beta),
+kappa = 2 * 1 / 2 = 1.
 ```
 
-which is the weight pair `(mu, nu) = (1, 2)`, not `(1, 1)`.
+That is the exact obstruction:
 
-Feeding `(1, 2)` into the classification theorem gives
-
-```text
-kappa = 2 mu / nu = 1.
-```
-
-So the determinant-native stationary leaf is
-
-```text
-E_+ : E_perp = 1 : 2,
-```
-
-not the MRU leaf
-
-```text
-E_+ : E_perp = 1 : 1.
-```
-
-### Consequence
-
-> **Corollary (unreduced determinant obstruction).** No extremal law that
-> depends only on the unreduced `3 x 3` circulant determinant multiplicities
-> can force MRU. The multiplicity pattern itself fixes the wrong weight ratio.
-
-This makes the obstruction precise: the branch does not merely lack "some
-selector." It specifically lacks a retained law that counts the whole
-non-trivial real doublet as **one** block.
+> no log-volume law applied on the unreduced `3 x 3` isotypic-scalar carrier
+> can force MRU.
 
 ---
 
-## 4. The exact missing object
+## 4. The exact missing object, now derived
 
-The theorem identifies the exact missing structure:
-
-### Option A: a retained real-isotype measure
-
-A retained extremal law that assigns one unit of measure to each **real**
-isotype block,
+The missing object identified above was:
 
 ```text
-(+)  and  (perp),
+a retained 1:1 real-isotype measure, or an equivalent canonical reduction to a
+two-slot (+, perp) carrier before applying the log-volume / extremal law.
 ```
 
-would give
+The branch now derives it.
+
+The non-trivial real doublet
 
 ```text
-S_real = log(E_+) + log(E_perp),
+V_perp = span_R{B_1, B_2}
 ```
 
-hence MRU immediately.
-
-### Option B: a canonical carrier reduction
-
-Equivalently, if the branch could justify a canonical reduction from the full
-unreduced `3 x 3` circulant carrier to a two-slot real-isotype carrier
+has an internal orthonormal frame freedom
 
 ```text
-D_red = diag(alpha, beta),
+(B_1, B_2) -> (B_1', B_2') = (B_1, B_2) R(theta),
 ```
 
-then
+under which
 
 ```text
-det(D_red) = alpha beta,
-log|det D_red| = log(alpha) + log(beta),
+(r_1, r_2) -> R(theta) (r_1, r_2)
 ```
 
-which is exactly the equal-weight law.
+but
 
-### Honest status
+```text
+r_1^2 + r_2^2
+```
 
-That `1:1` real-isotype measure / reduction is **not** presently retained in
-the branch. The note therefore does not derive MRU. It proves that this is now
-the exact missing object.
+is invariant. So the scalar lane does not retain the ordered Cartesian pair
+inside the doublet plane. It retains only the doublet radius.
+
+Therefore the exact scalar reduction is
+
+```text
+(r_0, r_1, r_2)  ->  (rho_+, rho_perp),
+```
+
+with
+
+```text
+rho_+    = |r_0| / sqrt(3),
+rho_perp = sqrt(r_1^2 + r_2^2) / sqrt(6).
+```
+
+Equivalently,
+
+```text
+rho_+^2    = E_+,
+rho_perp^2 = E_perp.
+```
+
+This is the exact retained two-slot real-isotype carrier the earlier theorem
+said would be sufficient.
 
 ---
 
-## 5. Why this narrows the gap beyond equivalence
+## 5. Resolution on the reduced carrier
 
-Before this note, the sharp honest statement was:
-
-```text
-MRU  <=>  kappa = 2,
-```
-
-but not why the physical carrier should satisfy MRU.
-
-After this note, the sharper statement is:
+Apply the same log-volume / extremal law on the reduced carrier
 
 ```text
-all block-log-volume laws on the cyclic carrier are classified by (mu, nu),
-the retained determinant law forces (1, 2),
-MRU is exactly (1, 1).
+D_red = diag(rho_+, rho_perp).
 ```
 
-So the remaining charged-lepton task is no longer a vague selector search. It
-is the single concrete problem:
+Then
 
-> derive a retained `1:1` real-isotype weighting law, or derive the canonical
-> reduction that makes that weighting lawful.
+```text
+det(D_red) = rho_+ rho_perp,
+log|det D_red| = log rho_+ + log rho_perp.
+```
 
-That is the strongest precise obstruction I can land today using only the
-current branch.
+At fixed reduced total power
+
+```text
+rho_+^2 + rho_perp^2 = E_tot,
+```
+
+the unique positive stationary point is
+
+```text
+rho_+^2 = rho_perp^2 = E_tot / 2.
+```
+
+So
+
+```text
+E_+ = E_perp
+<=> a^2 = 2 |b|^2
+<=> kappa = 2.
+```
+
+In other words:
+
+> the obstruction remains exact on the unreduced carrier, but it no longer
+> blocks the lane because the branch has now derived the carrier reduction it
+> said was missing.
 
 ---
 
-## 6. Cross-checks and scope
+## 6. Scientific consequence
 
-### Established here
+The theorem should now be read in two layers:
 
-1. the entire weighted block-log-volume family on the charged-lepton cyclic
-   carrier is classified exactly by `kappa = 2 mu / nu`;
-2. MRU is the equal-weight leaf `mu = nu`;
-3. the retained `log|det|` multiplicity on the unreduced `3 x 3` carrier is
-   forced to `(1, 2)`;
-4. therefore the exact missing object is a retained real-isotype measure or
-   canonical reduction.
+1. **negative layer:** unreduced determinant multiplicities alone do not force
+   MRU;
+2. **positive layer:** the scalar charged-lepton lane does not live on that
+   unreduced carrier. It lives on the real-isotype quotient, where there are
+   only two slots and the log-volume law is exactly the MRU leaf.
 
-### Not established here
-
-- no derivation that the physical charged-lepton carrier actually admits the
-  required `1:1` reduction;
-- no promotion of the charged-lepton Koide lane to a retained theorem;
-- no claim about quarks, neutrinos, or the phase selector.
+So the weight-class obstruction has been converted from a blocker into the
+load-bearing explanation of why the quotient step was necessary.
 
 ---
 
 ## 7. Reproduction
 
 ```bash
-python3 scripts/frontier_koide_mru_weight_class_obstruction_theorem.py
+PYTHONPATH=scripts python3 scripts/frontier_koide_mru_weight_class_obstruction_theorem.py
 ```
 
-Expected final line:
+The runner now certifies both:
 
-```text
-PASS=26 FAIL=0
-```
-
----
-
-## 8. Citations
-
-- `docs/KOIDE_MOMENT_RATIO_UNIFORMITY_THEOREM_NOTE_2026-04-19.md`
-- `docs/KOIDE_CYCLIC_PROJECTOR_BLOCK_DEMOCRACY_NOTE_2026-04-18.md`
-- `docs/KOIDE_CIRCULANT_CHARACTER_BRIDGE_NOTE_2026-04-18.md`
-- `docs/KOIDE_KAPPA_TWO_ORBIT_DIMENSION_FACTORIZATION_NOTE_2026-04-19.md`
-- `docs/KOIDE_ONE_SCALAR_OBSTRUCTION_TRIANGULATION_THEOREM_NOTE_2026-04-18.md`
-- `docs/KOIDE_Z3_SCALAR_POTENTIAL_SUPPORT_NOTE_2026-04-19.md`
+1. the old obstruction on the unreduced `3 x 3` carrier, and
+2. the exact real-isotype quotient reduction that resolves it on this branch.

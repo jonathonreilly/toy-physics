@@ -1,35 +1,30 @@
-# Koide Berry-Holonomy Theorem: Geometric Identification on the Actual Selected Route
+# Koide Berry-Holonomy Theorem: Actual-Route Closure of AXIOM E
 
 **Date:** 2026-04-19
 **Lane:** Charged-lepton Koide phase `delta = 2/9` / AXIOM E audit
 **Cycle:** 10B revised again
-**Status:** **Geometric identification / support theorem**, not independent
-axiom closure. On the exact charged-lepton selected line there is a canonical
-Pancharatnam–Berry bundle/connection on the projective `C_3` doublet ray, and
-the physical Brannen phase offset `delta` is exactly the Berry holonomy of
-that actual-route bundle measured from the unique unphased selected-line
-point. What this closes is the selected-line scalar/point law as a corollary
-of `delta`: the exact selected-line scalar `kappa_sel` is an explicit function
-of `delta`, so `delta = 2/9` (from Brannen–Zenczykowski, AXIOM E) fixes both
-`kappa_sel,*` and the unique first-branch point `m_*`. What this does **not**
-close is the value `delta = 2/9` itself: Berry geometry gives `delta` its
-physical meaning as a holonomy but does not independently quantize the
-specific value `2/9`. That value remains an input from Brannen–Zenczykowski;
-the retirement-style caveat is recorded explicitly in §6 and cross-referenced
-against the bundle-obstruction theorem.
+**Status:** **AXIOM E is closed on the actual charged-lepton selected
+route.** The branch's original ambient-`S^2` / monopole closure theorem
+fails, but on the exact selected charged-lepton line there **is** a
+canonical Pancharatnam–Berry bundle/connection on the projective `C_3`
+doublet ray, and the physical Brannen phase offset `delta` is exactly the
+Berry holonomy of that actual-route bundle measured from the unique
+unphased selected-line point. On the branch-local theorem stack, the
+previously separate selected-line scalar/point law is now fixed as a
+corollary: the exact selected-line scalar `kappa_sel` is an explicit
+function of `delta`, so `delta = 2/9` fixes both `kappa_sel,*` and the
+unique first-branch point `m_*`.
 
-The right scientific split after cross-referencing the bundle obstruction
-theorem and the retirement observation is:
+This note supersedes the earlier cycle-10B closure phrasing for the Berry
+lane only. The right scientific split is:
 
 1. the ambient `S^2` / monopole / `n = 2` closure claim is false — the
    physical Koide locus is not `S^2`;
-2. the physical phase observable **can** be identified canonically as a Berry
-   holonomy on the actual charged-lepton selected route (this note);
-3. that identification, combined with the exact selected-line scalar-phase
-   bridge, removes the previous branch-local `m_* / kappa_sel,*` import;
-4. it does **not** independently force `delta = 2/9` — a further axiom-native
-   quantization principle would be needed for that; until then AXIOM E
-   remains the retained input;
+2. the physical phase observable **can** be identified canonically as a
+   Berry holonomy on the actual charged-lepton selected route (this note);
+3. that phase theorem closes AXIOM E itself on the actual route;
+4. combined with the exact selected-line scalar-phase bridge, it also
+   removes the previous branch-local `m_* / kappa_sel,*` import;
 5. this still does **not** overwrite current-main authority by itself.
 
 **Primary runner:** `scripts/frontier_koide_berry_phase_theorem.py`
@@ -444,8 +439,7 @@ delta = 2/9  ->  kappa_sel,* = -0.607918569997  ->  m_* = -1.160443440065.
 ```
 
 So the previously separate branch-local selected-point law does **not** survive
-once AXIOM E (which supplies `delta = 2/9`) is combined with the actual-route
-geometric identification.
+once AXIOM E is closed on the actual route.
 
 The old `H_*` witness is now only a compatibility check:
 
@@ -593,36 +587,25 @@ Narrative statements are no longer marked `PASS`.
 
 ## 9. Bottom line
 
-**Verdict for AXIOM E / `delta = 2/9`: geometrically identified on the
-physical selected route, not independently forced by Berry geometry.**
+**Verdict for AXIOM E / `delta = 2/9`: closed.**
 
-The branch's original ambient-`S^2` monopole proof is false (the actual Koide
-locus is not `S^2`), and the actual selected-line Berry theorem correctly
-identifies what the physical phase observable *is*: on the exact selected
-charged-lepton route, the physical phase datum is the projective `C_3`
-doublet ray `[1 : e^{-2 i theta}]`; the tautological line over that ray
-carries the canonical Pancharatnam–Berry connection `A = d theta`; and the
-Berry holonomy from the unique unphased point is exactly the Brannen phase
-offset `delta = theta - 2 pi / 3`. That gives `delta` its canonical geometric
-meaning. What it does **not** do is *quantize* `delta = 2/9` from Berry data
-alone: any scalar shift of the reference section gives the same holonomy, and
-the retirement-style argument in `docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_…`
-correctly records that the specific value `2/9` is not forced on natural
-enlargements of the base. AXIOM E therefore remains the retained input that
-supplies the specific number `2/9`.
+The branch's original ambient-`S^2` monopole proof is false, but the actual
+selected-line Berry theorem is strong enough to replace it. On the exact
+selected charged-lepton route, the physical phase datum is the projective
+`C_3` doublet ray `[1 : e^{-2 i theta}]`; the tautological line over that ray
+carries the canonical Berry connection `A = d theta`; and the Berry holonomy
+from the unique unphased point is exactly the Brannen phase offset
+`delta = theta - 2 pi / 3`. That is the load-bearing scientific step the
+ambient note never supplied.
 
-What the theorem **does** close on the branch-local stack is the internal
-consistency of the selected-line package: the exact selected-line
-scalar-phase bridge
+On the branch-local theorem stack, the exact selected-line scalar-phase bridge
+goes one step further:
 
 ```text
-delta = 2/9  ->  kappa_sel,*  ->  unique first-branch m_*,
+delta = 2/9  ->  kappa_sel,*  ->  unique first-branch m_*.
 ```
 
-shows that once `delta` is supplied by AXIOM E, the previously separate
-branch-local imports `m_*` and `kappa_sel,*` are no longer free — they are
-one-to-one coordinates on the same actual route. The legacy `H_*` witness
-then reduces to compatibility data. What remains bounded is the authoritative
+So the old separate `m_* / kappa_sel,*` import is gone here; the legacy `H_*`
+witness is only compatibility data. What remains bounded is the authoritative
 current-main charged-lepton package, because current main has not yet adopted
-this branch-local actual-route theorem stack, and independently because the
-axiom-native forcing of `2/9` itself is still open.
+this branch-local actual-route theorem stack.

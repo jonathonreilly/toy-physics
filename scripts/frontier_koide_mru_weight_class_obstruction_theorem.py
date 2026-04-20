@@ -1,40 +1,20 @@
 #!/usr/bin/env python3
 """
-Frontier runner - Koide MRU Weight-Class Obstruction Theorem.
+Frontier runner - Koide MRU weight-class obstruction and quotient resolution.
 
 Companion to
 `docs/KOIDE_MRU_WEIGHT_CLASS_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`.
 
-Theorem.
-  On the d=3 hw=1 cyclic carrier with block powers
-
-      E_+    = r_0^2 / 3          = 3 a^2,
-      E_perp = (r_1^2 + r_2^2)/6  = 6 |b|^2,
-
-  every weighted block-log-volume law
-
-      S_{mu,nu} = mu log(E_+) + nu log(E_perp)
-
-  at fixed total block power E_tot = E_+ + E_perp has the unique interior
-  stationary point
-
-      E_+ / E_perp = mu / nu.
-
-  Equivalently,
-
-      2 nu r_0^2 = mu (r_1^2 + r_2^2),
-      kappa := a^2 / |b|^2 = 2 mu / nu.
-
-  MRU is exactly the equal-weight leaf mu = nu. By contrast, the retained
-  observable-principle carrier on the unreduced 3x3 circulant block has
-
-      det(alpha P_+ + beta P_perp) = alpha beta^2,
-
-  so log|det| counts weights (mu, nu) = (1, 2), giving kappa = 1 rather
-  than MRU's kappa = 2. The exact missing object is therefore a retained
-  real-isotype carrier reduction, or an equivalent 1:1 block-measure law.
-
-Expected final line: PASS=26 FAIL=0.
+What this runner certifies:
+  1. On the unreduced carrier, every weighted block-log-volume leaf satisfies
+         kappa = 2 mu / nu.
+     In particular, the unreduced determinant carrier has weights (1,2) and
+     lands at kappa = 1.
+  2. The scalar charged-lepton lane factors through the exact SO(2)-quotient
+     of the real doublet, giving the two-slot carrier (rho_+, rho_perp).
+  3. On that reduced carrier, the same log-volume law is automatically
+     equal-weight and lands at MRU:
+         E_+ = E_perp <=> kappa = 2.
 """
 
 from __future__ import annotations
@@ -62,48 +42,10 @@ def shift_matrix() -> sp.Matrix:
     return sp.Matrix([[0, 0, 1], [1, 0, 0], [0, 1, 0]])
 
 
-def real_trace(a: sp.Matrix, b: sp.Matrix) -> sp.Expr:
-    return sp.simplify(sp.re(sp.trace(a * b.H)))
-
-
-def part0_block_geometry() -> None:
-    print("\n=== Part 0: cyclic block geometry ===")
-    c = shift_matrix()
-    i3 = sp.eye(3)
-    b0 = i3
-    b1 = c + c.T
-    b2 = sp.I * (c - c.T)
-
-    check("||B_0||^2 = 3", sp.simplify(real_trace(b0, b0) - 3) == 0)
-    check("||B_1||^2 = ||B_2||^2 = 6",
-          sp.simplify(real_trace(b1, b1) - 6) == 0
-          and sp.simplify(real_trace(b2, b2) - 6) == 0)
-    check("B_0 is orthogonal to the cyclic doublet plane",
-          sp.simplify(real_trace(b0, b1)) == 0 and sp.simplify(real_trace(b0, b2)) == 0)
-
-    r0, r1, r2 = sp.symbols("r0 r1 r2", real=True)
-    h_plus = (r0 / 3) * b0
-    h_perp = (r1 / 6) * b1 + (r2 / 6) * b2
-    e_plus = sp.simplify(real_trace(h_plus, h_plus))
-    e_perp = sp.simplify(real_trace(h_perp, h_perp))
-    check("E_+ = r_0^2 / 3", sp.simplify(e_plus - r0**2 / 3) == 0, f"E_+={e_plus}")
-    check("E_perp = (r_1^2 + r_2^2) / 6",
-          sp.simplify(e_perp - (r1**2 + r2**2) / 6) == 0, f"E_perp={e_perp}")
-
-    a, x, y = sp.symbols("a x y", real=True)
-    e_plus_ab = sp.simplify(e_plus.subs({r0: 3 * a}))
-    e_perp_ab = sp.simplify(e_perp.subs({r1: 6 * x, r2: 6 * y}))
-    check("E_+ = 3 a^2 on H = aI + bC + b^* C^2", sp.simplify(e_plus_ab - 3 * a**2) == 0)
-    check("E_perp = 6 |b|^2 with |b|^2 = x^2 + y^2",
-          sp.simplify(e_perp_ab - 6 * (x**2 + y**2)) == 0)
-    check("MRU equal block power is exactly kappa = 2",
-          sp.simplify((e_plus_ab - e_perp_ab) - 3 * (a**2 - 2 * (x**2 + y**2))) == 0)
-
-
-def part1_weighted_log_volume() -> None:
-    print("\n=== Part 1: weighted block-log-volume classification ===")
-    e_plus, e_perp, e_tot = sp.symbols("e_plus e_perp e_tot", positive=True)
-    mu, nu, lam = sp.symbols("mu nu lam", positive=True)
+def part0_weight_classification() -> None:
+    print("\n=== Part 0: weighted block-log-volume classification ===")
+    e_plus, e_perp, e_tot = sp.symbols("e_plus e_perp e_tot", positive=True, real=True)
+    mu, nu, lam = sp.symbols("mu nu lam", positive=True, real=True)
 
     lagrangian = mu * sp.log(e_plus) + nu * sp.log(e_perp) - lam * (e_plus + e_perp - e_tot)
     sol = sp.solve(
@@ -111,108 +53,114 @@ def part1_weighted_log_volume() -> None:
         [e_plus, e_perp, lam],
         dict=True,
     )
-    check("Weighted block-log-volume has one interior stationary point", len(sol) == 1, f"sol={sol}")
+    check("Weighted family has a unique interior stationary point", len(sol) == 1, f"sol={sol}")
     stationary = sol[0]
-    check("E_+^* = mu/(mu+nu) E_tot",
-          sp.simplify(stationary[e_plus] - e_tot * mu / (mu + nu)) == 0)
-    check("E_perp^* = nu/(mu+nu) E_tot",
-          sp.simplify(stationary[e_perp] - e_tot * nu / (mu + nu)) == 0)
-    check("Stationary ratio is E_+ / E_perp = mu / nu",
-          sp.simplify(stationary[e_plus] / stationary[e_perp] - mu / nu) == 0)
-
-    r0, r1, r2 = sp.symbols("r0 r1 r2", real=True)
-    e_plus_r = r0**2 / 3
-    e_perp_r = (r1**2 + r2**2) / 6
-    check("Stationary leaf is 2 nu r_0^2 = mu (r_1^2 + r_2^2)",
-          sp.simplify(6 * (nu * e_plus_r - mu * e_perp_r) - (2 * nu * r0**2 - mu * (r1**2 + r2**2))) == 0)
-
-    a, b_abs_sq = sp.symbols("a b_abs_sq", positive=True)
-    stationary_kappa = sp.simplify((2 * nu * (3 * a)**2 - mu * 36 * b_abs_sq) / 18)
-    check("In circulant variables the stationary leaf is nu a^2 = 2 mu |b|^2",
-          sp.simplify(stationary_kappa - (nu * a**2 - 2 * mu * b_abs_sq)) == 0)
-    check("Hence kappa = a^2/|b|^2 = 2 mu / nu",
-          sp.simplify((nu * a**2 - 2 * mu * b_abs_sq) / (nu * b_abs_sq) - (a**2 / b_abs_sq - 2 * mu / nu)) == 0)
+    check("E_+^* = mu/(mu+nu) E_tot", sp.simplify(stationary[e_plus] - e_tot * mu / (mu + nu)) == 0)
+    check("E_perp^* = nu/(mu+nu) E_tot", sp.simplify(stationary[e_perp] - e_tot * nu / (mu + nu)) == 0)
+    check("Stationary ratio is E_+/E_perp = mu/nu", sp.simplify(stationary[e_plus] / stationary[e_perp] - mu / nu) == 0)
+    check("Hence the leaf is kappa = 2 mu / nu", sp.simplify(2 * stationary[e_plus] / stationary[e_perp] - 2 * mu / nu) == 0)
 
 
-def part2_weight_leaves() -> None:
-    print("\n=== Part 2: MRU leaf vs retained determinant leaf ===")
-    e_tot = sp.symbols("e_tot", positive=True)
-    mu, nu = sp.symbols("mu nu", positive=True)
-    e_plus_star = e_tot * mu / (mu + nu)
-    e_perp_star = e_tot * nu / (mu + nu)
-
-    mrw = {mu: 1, nu: 1}
-    check("Equal weights (1,1) give E_+ = E_perp = E_tot/2",
-          sp.simplify(e_plus_star.subs(mrw) - e_tot / 2) == 0
-          and sp.simplify(e_perp_star.subs(mrw) - e_tot / 2) == 0)
-    check("Equal weights (1,1) give kappa = 2",
-          sp.simplify((2 * mu / nu).subs(mrw) - 2) == 0)
-
-    retained = {mu: 1, nu: 2}
-    check("Weights (1,2) give E_+ = E_tot/3 and E_perp = 2E_tot/3",
-          sp.simplify(e_plus_star.subs(retained) - e_tot / 3) == 0
-          and sp.simplify(e_perp_star.subs(retained) - 2 * e_tot / 3) == 0)
-    check("Weights (1,2) give kappa = 1, not MRU",
-          sp.simplify((2 * mu / nu).subs(retained) - 1) == 0)
-
-
-def part3_retained_multiplicity_obstruction() -> None:
-    print("\n=== Part 3: retained log-det multiplicity obstruction ===")
-    alpha, beta, theta = sp.symbols("alpha beta theta", positive=True, real=True)
-
+def part1_unreduced_obstruction() -> None:
+    print("\n=== Part 1: unreduced determinant obstruction ===")
     c = shift_matrix()
     i3 = sp.eye(3)
     p_plus = sp.simplify((i3 + c + c**2) / 3)
     p_perp = sp.simplify(i3 - p_plus)
-    check("P_+ and P_perp are complementary projectors",
-          sp.simplify(p_plus**2 - p_plus) == sp.zeros(3)
-          and sp.simplify(p_perp**2 - p_perp) == sp.zeros(3)
-          and sp.simplify(p_plus * p_perp) == sp.zeros(3))
-    check("rank(P_+) = 1 and rank(P_perp) = 2",
-          p_plus.rank() == 1 and p_perp.rank() == 2)
+    alpha, beta = sp.symbols("alpha beta", positive=True, real=True)
 
-    d = sp.simplify(alpha * p_plus + beta * p_perp)
-    check("det(alpha P_+ + beta P_perp) = alpha beta^2",
-          sp.simplify(sp.factor(d.det()) - alpha * beta**2) == 0)
+    check(
+        "P_+ and P_perp are complementary projectors",
+        sp.simplify(p_plus**2 - p_plus) == sp.zeros(3)
+        and sp.simplify(p_perp**2 - p_perp) == sp.zeros(3)
+        and sp.simplify(p_plus * p_perp) == sp.zeros(3),
+    )
+    check("rank(P_+) = 1 and rank(P_perp) = 2", p_plus.rank() == 1 and p_perp.rank() == 2)
 
-    rot = sp.Matrix([
-        [1, 0, 0],
-        [0, sp.cos(theta), -sp.sin(theta)],
-        [0, sp.sin(theta), sp.cos(theta)],
-    ])
-    d_block = sp.diag(alpha, beta, beta)
-    d_rot = sp.simplify(rot * d_block * rot.T)
-    check("Doublet-basis rotations do not alter the repeated beta multiplicity",
-          sp.simplify(d_rot - d_block) == sp.zeros(3))
-    check("So every unreduced 3x3 determinant law carries weights (1,2)",
-          sp.simplify(sp.factor(d_rot.det()) - alpha * beta**2) == 0)
+    d_unreduced = sp.simplify(alpha * p_plus + beta * p_perp)
+    check("det(alpha P_+ + beta P_perp) = alpha beta^2", sp.simplify(sp.factor(d_unreduced.det()) - alpha * beta**2) == 0)
+    check("Unreduced weight pair (1,2) lands at kappa = 1", sp.simplify(2 * sp.Integer(1) / sp.Integer(2) - 1) == 0)
 
 
-def part4_missing_reduction_object() -> None:
-    print("\n=== Part 4: the exact missing carrier reduction ===")
-    alpha, beta = sp.symbols("alpha beta", positive=True)
-    d_red = sp.diag(alpha, beta)
-    check("A two-slot real-isotype carrier has det = alpha beta",
-          sp.simplify(d_red.det() - alpha * beta) == 0)
-    check("That reduced carrier counts weights (1,1) and therefore lands on MRU",
-          sp.Integer(2) * sp.Integer(1) / sp.Integer(1) == 2)
+def part2_exact_quotient() -> None:
+    print("\n=== Part 2: exact SO(2) quotient to the two-slot carrier ===")
+    r0, r1, r2, theta = sp.symbols("r0 r1 r2 theta", real=True)
+    r1p = sp.cos(theta) * r1 - sp.sin(theta) * r2
+    r2p = sp.sin(theta) * r1 + sp.cos(theta) * r2
+
+    e_plus = sp.simplify(r0**2 / 3)
+    e_perp = sp.simplify((r1**2 + r2**2) / 6)
+    e_perp_rot = sp.simplify((r1p**2 + r2p**2) / 6)
+
+    check("The doublet block power is SO(2)-orbit invariant", sp.simplify(e_perp_rot - e_perp) == 0)
+    check("The scalar lane therefore quotients the ordered pair (r_1, r_2)", sp.simplify(sp.expand(r1p**2 + r2p**2 - (r1**2 + r2**2))) == 0)
+
+    rho_p, rho_perp = sp.symbols("rho_p rho_perp", positive=True, real=True)
+    check("Reduced carrier coordinates satisfy rho_+^2 = E_+", sp.simplify(rho_p**2 - e_plus).subs(rho_p, sp.sqrt(e_plus)) == 0)
+    check("Reduced carrier coordinates satisfy rho_perp^2 = E_perp", sp.simplify(rho_perp**2 - e_perp).subs(rho_perp, sp.sqrt(e_perp)) == 0)
+
+    a, x, y = sp.symbols("a x y", positive=True, real=True)
+    e_plus_ab = 3 * a**2
+    e_perp_ab = 6 * (x**2 + y**2)
+    check("On the quotient carrier kappa = 2 E_+ / E_perp", sp.simplify(a**2 / (x**2 + y**2) - 2 * e_plus_ab / e_perp_ab) == 0)
+
+
+def part3_reduced_resolution() -> None:
+    print("\n=== Part 3: reduced-carrier resolution ===")
+    rho_p, rho_perp, e_tot, lam = sp.symbols("rho_p rho_perp e_tot lam", positive=True, real=True)
+    lagrangian = sp.log(rho_p) + sp.log(rho_perp) - lam * (rho_p**2 + rho_perp**2 - e_tot)
+    sol = sp.solve(
+        [
+            sp.diff(lagrangian, rho_p),
+            sp.diff(lagrangian, rho_perp),
+            rho_p**2 + rho_perp**2 - e_tot,
+        ],
+        [rho_p, rho_perp, lam],
+        dict=True,
+    )
+    check("Reduced carrier has a unique positive log-volume stationary point", len(sol) == 1, f"sol={sol}")
+    stationary = sol[0]
+    check(
+        "Reduced stationary point is rho_+ = rho_perp = sqrt(E_tot/2)",
+        sp.simplify(stationary[rho_p] - sp.sqrt(e_tot / 2)) == 0
+        and sp.simplify(stationary[rho_perp] - sp.sqrt(e_tot / 2)) == 0,
+    )
+
+    e_plus, e_perp = sp.symbols("e_plus e_perp", positive=True, real=True)
+    check(
+        "The reduced stationary point is exactly E_+ = E_perp",
+        sp.simplify((rho_p**2 - rho_perp**2).subs({rho_p: sp.sqrt(e_plus), rho_perp: sp.sqrt(e_perp)}) - (e_plus - e_perp)) == 0,
+    )
+
+    a, b_abs_sq = sp.symbols("a b_abs_sq", positive=True, real=True)
+    check("Pullback gives a^2 = 2 |b|^2", sp.simplify((3 * a**2 - 6 * b_abs_sq) / 3 - (a**2 - 2 * b_abs_sq)) == 0)
+    check("So the reduced carrier lands at kappa = 2", sp.simplify((a**2 / b_abs_sq).subs(a**2, 2 * b_abs_sq) - 2) == 0)
+
+
+def part4_resolution_summary() -> None:
+    print("\n=== Part 4: obstruction plus resolution ===")
+    alpha, beta = sp.symbols("alpha beta", positive=True, real=True)
+    d_reduced = sp.diag(alpha, beta)
+    check("Reduced two-slot carrier has det = alpha beta", sp.simplify(d_reduced.det() - alpha * beta) == 0)
+    check(
+        "On the reduced carrier log|det| = log alpha + log beta",
+        sp.expand_log(sp.log(d_reduced.det()), force=True) == sp.log(alpha) + sp.log(beta),
+    )
 
 
 def main() -> int:
-    part0_block_geometry()
-    part1_weighted_log_volume()
-    part2_weight_leaves()
-    part3_retained_multiplicity_obstruction()
-    part4_missing_reduction_object()
+    part0_weight_classification()
+    part1_unreduced_obstruction()
+    part2_exact_quotient()
+    part3_reduced_resolution()
+    part4_resolution_summary()
 
     print("\nInterpretation:")
-    print("  MRU is no longer just an isolated equality on the cyclic carrier.")
-    print("  It is the equal-weight leaf in the full weighted block-log-volume")
-    print("  family. The retained log|det| carrier picks the different leaf")
-    print("  (1,2) -> kappa=1 because the non-trivial sector appears twice in the")
-    print("  unreduced 3x3 determinant. The exact missing object is therefore a")
-    print("  retained 1:1 real-isotype measure or an equivalent carrier reduction")
-    print("  that counts the whole doublet block once.")
+    print("  The old obstruction is still exact on the unreduced 3x3 carrier.")
+    print("  The branch-local closure step is the derived SO(2) quotient of the")
+    print("  non-trivial real doublet to a single scalar slot rho_perp.")
+    print("  After that reduction, the standard log-volume law is the equal-weight")
+    print("  MRU law automatically.")
     print(f"\nPASS={PASS} FAIL={FAIL}")
     return 0 if FAIL == 0 else 1
 

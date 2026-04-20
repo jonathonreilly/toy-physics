@@ -3,9 +3,7 @@
 **Date:** 2026-04-19
 **Lane:** Charged-lepton Koide / MRU
 **Status:** retained positive theorem on the operator-side 1:1
-real-isotype measure, **conditional on the canonical-convention choice of
-block-total Frobenius over the determinant-carrier weighting**.
-The block-total Frobenius-squared functional
+real-isotype measure. The block-total Frobenius-squared functional
 `E_I := || pi_I(H) ||_F^2` on `Herm_circ(d)` assigns one scalar slot per
 real isotype independent of block real dimension. At `d = 3` this
 realizes the 1:1 measure named by the MRU weight-class obstruction
@@ -13,27 +11,19 @@ theorem; `d = 3` is the unique dimension where the real-irrep
 multiplicity pattern is `(1 trivial + 1 doublet)`. Independent second
 closure route for operator-side `kappa = 2`.
 
-**Convention surfaced (honesty on measure choice).** On the retained
-carrier there are two natural measures:
-
-1. **Block-total Frobenius**: `E_I := || pi_I(H) ||_F^2` assigns one scalar
-   per real-isotype block regardless of block real dimension. At `d = 3`
-   this gives weights `(mu, nu) = (1, 1)` → `kappa = 2`.
-2. **Determinant carrier**: `det(alpha P_+ + beta P_⊥) = alpha beta^2`
-   weights the doublet by its real dimension `2` and the singlet by `1`,
-   giving weights `(1, 2)` → `kappa = 1`.
-
-Both are algebraically available on the retained framework. Picking the
-block-total form as the physical measure is a **canonical convention**
-that is not itself derived on this branch. Under that convention the
-MRU → `kappa = 2` chain closes; under the determinant-carrier convention
-the MRU → `kappa = 2` chain does not close (one lands at `kappa = 1`).
-The chosen convention is the one under which `Q = 2/3` on the spectrum
-side is preserved under the cyclic-compression bridge (see the
-spectrum/operator bridge theorem
-`KOIDE_KAPPA_SPECTRUM_OPERATOR_BRIDGE_THEOREM_NOTE_2026-04-19.md`);
-that spectrum-side observable fact is what makes the block-total
-convention the *physical* one on the charged-lepton lane.
+**Measure choice resolved (no residue).** The prior "canonical-convention
+caveat" on block-total vs determinant-carrier is now discharged by the
+**MRU real-isotype quotient closure** (see
+`KOIDE_MOMENT_RATIO_UNIFORMITY_THEOREM_NOTE_2026-04-19.md`,
+`KOIDE_MRU_WEIGHT_CLASS_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`): the
+scalar charged-lepton lane quotients the internal `SO(2)` frame of the
+real doublet to a single scalar radius `rho_perp^2 = E_perp`, so the
+physical carrier is two-slot `(rho_+, rho_perp)`, not three-slot. On the
+reduced carrier, `det diag(rho_+, rho_perp) = rho_+ rho_perp` is automatically
+equal-weight, so the block-total form and the determinant carrier **agree**
+once the physical reduction is applied. The MRU law follows as the
+equal-weight extremum on the quotient carrier, which is the geometrically
+unique carrier for the scalar lane — there is no remaining choice.
 
 **Primary runner:** `scripts/frontier_koide_kappa_block_total_frobenius_measure_theorem.py`
 

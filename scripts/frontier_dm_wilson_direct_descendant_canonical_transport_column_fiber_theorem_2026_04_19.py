@@ -27,6 +27,7 @@ import math
 import sys
 
 import numpy as np
+from scipy.linalg import null_space
 from scipy.optimize import differential_evolution, minimize
 
 import frontier_dm_wilson_direct_descendant_constructive_transport_plateau_theorem_2026_04_19 as plateau
@@ -41,12 +42,19 @@ from frontier_dm_leptogenesis_flavor_column_functional_theorem import (
     flavored_column_functional,
     flavored_transport_kernel,
 )
+from frontier_dm_leptogenesis_ne_projected_source_law_derivation import (
+    hermitian_linear_responses,
+)
+from frontier_dm_leptogenesis_ne_projected_source_triplet_sign_theorem import (
+    triplet_from_projected_response_pack,
+)
 from frontier_dm_leptogenesis_pmns_transport_extremal_source_candidate import (
     XBAR_NE,
     YBAR_NE,
     build_active_from_seed_logits,
     eta_columns_from_active,
 )
+from frontier_dm_leptogenesis_pmns_projector_interface import canonical_h
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
@@ -57,6 +65,7 @@ JAC_TOL = 1.0e-8
 RANK_TOL = 1.0e-8
 HESS_STEP = 1.0e-5
 GRAD_STEP = 1.0e-7
+DIRECT_TRIPLET_STEP = 1.0e-6
 
 COLUMN_STARTS = [
     np.array([0.02, 0.93], dtype=float),
@@ -66,6 +75,11 @@ COLUMN_STARTS = [
     np.array([0.90, 0.05], dtype=float),
     np.array([0.04, 0.92], dtype=float),
 ]
+SOURCE_SURFACE_BOUNDS = [(-8.0, 8.0), (-8.0, 8.0), (-8.0, 8.0), (-8.0, 8.0), (-math.pi, math.pi)]
+SOURCE_TRIPLET_TARGET = np.array(
+    [0.5, math.sqrt(8.0 / 3.0), math.sqrt(8.0) / 3.0],
+    dtype=float,
+)
 
 PKG = exact_package()
 Z_GRID, SOURCE_PROFILE, WASHOUT_TAIL = flavored_transport_kernel(PKG.k_decay_exact)
@@ -187,6 +201,17 @@ def favored_column_from_source5(vector: np.ndarray) -> np.ndarray:
     return np.asarray(packet[:, 1], dtype=float)
 
 
+def triplet_from_source5(vector: np.ndarray) -> np.ndarray:
+    x, y, delta = source5_to_xyd(vector)
+    hmat = canonical_h(x, y, delta)
+    triplet = triplet_from_projected_response_pack(hermitian_linear_responses(hmat))
+    return np.array([triplet["gamma"], triplet["E1"], triplet["E2"]], dtype=float)
+
+
+def triplet_from_params(params: np.ndarray) -> np.ndarray:
+    return triplet_from_source5(fixed_seed_source5_from_params(params))
+
+
 def favored_column_jacobian(vector: np.ndarray, step: float = 1.0e-6) -> np.ndarray:
     vector = np.asarray(vector, dtype=float)
     jac = np.zeros((3, vector.size), dtype=float)
@@ -197,6 +222,21 @@ def favored_column_jacobian(vector: np.ndarray, step: float = 1.0e-6) -> np.ndar
             favored_column_from_source5(vector + dv) - favored_column_from_source5(vector - dv)
         ) / (2.0 * step)
     return jac
+
+
+def triplet_jacobian(vector: np.ndarray, step: float = DIRECT_TRIPLET_STEP) -> np.ndarray:
+    vector = np.asarray(vector, dtype=float)
+    jac = np.zeros((3, vector.size), dtype=float)
+    for idx in range(vector.size):
+        dv = np.zeros_like(vector)
+        dv[idx] = step
+        jac[:, idx] = (triplet_from_source5(vector + dv) - triplet_from_source5(vector - dv)) / (2.0 * step)
+    return jac
+
+
+def source_triplet_target_objective(params: np.ndarray) -> float:
+    delta = triplet_from_params(np.asarray(params, dtype=float)) - SOURCE_TRIPLET_TARGET
+    return float(np.dot(delta, delta))
 
 
 def main() -> int:
@@ -256,6 +296,40 @@ def main() -> int:
         for i in range(len(plateau_columns))
         for j in range(i + 1, len(plateau_columns))
     )
+    plateau_triplets = [triplet_from_source5(source) for source in plateau_source5]
+
+    combined_rank_ok = True
+    fiber_triplet_rank_ok = True
+    combined_min_singulars = []
+    fiber_triplet_min_singulars = []
+    for source in plateau_source5:
+        col_jac = favored_column_jacobian(source, step=DIRECT_TRIPLET_STEP)
+        trip_jac = triplet_jacobian(source, step=DIRECT_TRIPLET_STEP)
+        combined = np.vstack([col_jac, trip_jac])
+        combined_singular = np.linalg.svd(combined, compute_uv=False)
+        combined_min_singulars.append(float(np.min(combined_singular)))
+        combined_rank_ok &= int(np.sum(combined_singular > RANK_TOL)) == 5
+
+        fiber_basis = null_space(col_jac, rcond=RANK_TOL)
+        restricted = trip_jac @ fiber_basis
+        restricted_singular = np.linalg.svd(restricted, compute_uv=False)
+        fiber_triplet_min_singulars.append(float(np.min(restricted_singular)))
+        fiber_triplet_rank_ok &= fiber_basis.shape == (5, 3)
+        fiber_triplet_rank_ok &= restricted.shape == (3, 3)
+        fiber_triplet_rank_ok &= int(np.sum(restricted_singular > RANK_TOL)) == 3
+
+    exact_triplet_gap = differential_evolution(
+        source_triplet_target_objective,
+        bounds=SOURCE_SURFACE_BOUNDS,
+        seed=0,
+        maxiter=50,
+        popsize=15,
+        polish=True,
+        disp=False,
+    )
+    gap_triplet = triplet_from_params(exact_triplet_gap.x)
+    gap_triplet_error = gap_triplet - SOURCE_TRIPLET_TARGET
+    gap_triplet_norm = float(np.linalg.norm(gap_triplet_error))
 
     print("\n" + "=" * 88)
     print("PART 1: EXACT TRANSPORT FIXES A UNIQUE CURRENT-BRANCH COLUMN ORBIT")
@@ -343,7 +417,45 @@ def main() -> int:
     )
 
     print("\n" + "=" * 88)
-    print("PART 4: BOTTOM LINE")
+    print("PART 4: ON THE CANONICAL COLUMN FIBER, THE DIRECT-DESCENDANT TRIPLET VALUES ARE LOCALLY COMPLETE")
+    print("=" * 88)
+    check(
+        "At every known canonical-column witness, the source -> (favored column, gamma, E1, E2) map has full local rank 5",
+        combined_rank_ok and min(combined_min_singulars) > 1.0e-3,
+        f"min combined singulars={[f'{val:.6e}' for val in combined_min_singulars]}",
+    )
+    check(
+        "Restricted to the 3-real canonical-column fiber, the direct-descendant triplet values (gamma, E1, E2) have full rank 3",
+        fiber_triplet_rank_ok and min(fiber_triplet_min_singulars) > 1.0e-3,
+        f"min fiber-triplet singulars={[f'{val:.6e}' for val in fiber_triplet_min_singulars]}",
+    )
+    check(
+        "So a genuine exact triplet-value law on the direct-descendant side would locally pick a unique source on that fiber",
+        combined_rank_ok and fiber_triplet_rank_ok,
+        "the remaining local object is the direct-descendant triplet-value law on the canonical fiber",
+    )
+
+    print("\n" + "=" * 88)
+    print("PART 5: THE CURRENT SOURCE-ORIENTED EXACT TRIPLET PACKAGE DOES NOT LAND ON THE DIRECT-DESCENDANT SURFACE")
+    print("=" * 88)
+    check(
+        "Deterministic global search leaves a definite nonzero gap to the exact source-oriented target (1/2, sqrt(8/3), sqrt(8)/3)",
+        gap_triplet_norm > 5.0e-1,
+        f"closest norm={gap_triplet_norm:.12f}",
+    )
+    check(
+        "The best direct-descendant approximation still misses every target component materially",
+        abs(gap_triplet_error[0]) > 4.9e-1 and abs(gap_triplet_error[1]) > 1.7e-1 and abs(gap_triplet_error[2]) > 1.9e-1,
+        f"error={np.round(gap_triplet_error, 12)}",
+    )
+    check(
+        "Therefore the current exact source-oriented triplet package cannot be the microscopic law selecting the canonical direct-descendant source fiber",
+        gap_triplet_norm > 5.0e-1,
+        f"closest direct triplet={np.round(gap_triplet, 12)}",
+    )
+
+    print("\n" + "=" * 88)
+    print("PART 6: BOTTOM LINE")
     print("=" * 88)
     check(
         "Exact transport now canonically fixes a favored direct-descendant column orbit",
@@ -351,9 +463,9 @@ def main() -> int:
         f"col*={np.round(witness_sorted, 12)}, eta_1={witness_eta:.12f}",
     )
     check(
-        "But the remaining DM object is now a concrete microscopic source-fiber law, not a missing transport law",
+        "The remaining DM object is now the compatible direct-descendant triplet-value law on the canonical source fiber, not a missing transport law",
         True,
-        "derive a point in the 3-real fixed-seed source fiber over the canonical favored column orbit",
+        "the current source-oriented exact triplet package misses the direct-descendant source surface",
     )
 
     print()
@@ -361,6 +473,12 @@ def main() -> int:
     print(f"  canonical eta_1 / eta_obs        = {witness_eta:.12f}")
     print(f"  favored-column Jacobian singulars= {np.round(singular_vals, 12)}")
     print(f"  min constructive source sep      = {min_source_sep:.12f}")
+    print(
+        "  plateau triplets                = "
+        f"{[tuple(float(val) for val in np.round(triplet, 9)) for triplet in plateau_triplets]}"
+    )
+    print(f"  source-triplet target           = {np.round(SOURCE_TRIPLET_TARGET, 12)}")
+    print(f"  closest direct triplet          = {np.round(gap_triplet, 12)}")
 
     print("\n" + "=" * 88)
     print(f"SUMMARY: PASS={PASS_COUNT} FAIL={FAIL_COUNT}")

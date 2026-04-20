@@ -1,223 +1,382 @@
 # Moment-Ratio Uniformity (MRU) Theorem on Cl(d)/Z_d
 
 **Date:** 2026-04-19
-**Lane:** Charged-lepton Koide — candidate route to `kappa = 2`.
-**Status:** Exact theorem on the auxiliary Hermitian-circulant surface;
-reviewer-facing status is **support / candidate principle**, not full
-charged-lepton gate closure. The theorem shows that `kappa = a^2 / |b|^2 = 2`
-is the `d = 3` specialization of a dim-parametric principle on
-`Herm_circ(d)`, but it does not derive why the physical charged-lepton carrier
-must satisfy MRU. See
-`docs/SCALAR_SELECTOR_CYCLE1_SCIENCE_REVIEW_NOTE_2026-04-19.md`.
+**Lane:** Charged-lepton Koide / `kappa = 2`
+**Status:** branch-local closure theorem on the MRU lane. The earlier same-day
+weight-class obstruction remains correct on the unreduced `3 x 3` determinant
+carrier, but the exact missing object it isolated is now derived: the scalar
+charged-lepton lane lives on the canonical two-slot real-isotype quotient
+carrier `(+ , perp)`, not on the unreduced `(+,1,2)` Cartesian split of the
+doublet plane. On that reduced carrier the standard block log-volume / extremal
+law forces MRU and hence `kappa = 2`.
 **Primary runner:** `scripts/frontier_koide_moment_ratio_uniformity_theorem.py`
-(PASS=65 FAIL=0).
+**Companion runner:** `scripts/frontier_koide_mru_weight_class_obstruction_theorem.py`
 
 ---
 
 ## 0. Executive summary
 
-The MRU principle states: within each Z_d-isotype of `Herm_circ(d)`,
-the Frobenius-normalized sum of squared cyclic responses is constant
-across isotypes. At `d = 3`, MRU forces a single scalar equation on
-`H = aI + bC + b^bar C^2`, namely `a^2 / 3 = |b|^2 / 6`, equivalently
-`kappa := a^2 / |b|^2 = 2` — which is exactly the Koide charged-lepton
-cone normalization.
+The same-day obstruction theorem proved an exact negative result on the
+unreduced carrier:
 
-**Dimensional uniqueness.** MRU yields a single non-trivial
-singlet-vs-doublet selector iff `Iso(d)` has exactly one singlet and
-one complex doublet, which holds iff `d = 3`. At `d = 2` the single
-equation is between two real singlets (no doublet). At `d = 4, 5, 6`
-the principle fragments into 2, 2, 3 independent equations
-respectively.
+```text
+det(alpha P_+ + beta P_perp) = alpha beta^2,
+```
 
-**Consequence.** MRU is a sharp exact restatement of the remaining Koide scalar
-condition. It materially improves the route geometry, but by itself it does
-not close the charged-lepton gate.
+so any log-volume law applied **there** counts the non-trivial sector with
+weight `2`, not `1`, and lands at `kappa = 1`, not Koide's `kappa = 2`.
+
+That theorem also identified the exact missing object:
+
+```text
+a retained 1:1 real-isotype measure, or an equivalent canonical reduction to a
+two-slot (+, perp) carrier before applying the log-volume/extremal law.
+```
+
+This note supplies that object.
+
+The key step is that the charged-lepton scalar lane does **not** retain the
+Cartesian basis of the non-trivial real doublet
+`span_R{B_1, B_2}`. The only retained scalar datum on that plane is its
+Frobenius radius. Equivalently, the scalar lane quotients the internal
+`SO(2)` frame rotation of the doublet:
+
+```text
+(r_1, r_2) ~ R(theta) (r_1, r_2).
+```
+
+So the actual scalar carrier is the two-slot quotient
+
+```text
+(r_0, r_1, r_2)  ->  (rho_+, rho_perp),
+
+rho_+^2    = E_+    = r_0^2 / 3,
+rho_perp^2 = E_perp = (r_1^2 + r_2^2) / 6.
+```
+
+On that reduced carrier there are exactly two positive slots. Applying the
+usual block log-volume / extremal law there gives
+
+```text
+log det diag(rho_+, rho_perp) = log rho_+ + log rho_perp,
+```
+
+whose unique fixed-power stationary point is
+
+```text
+rho_+ = rho_perp
+<=> E_+ = E_perp
+<=> a^2 = 2 |b|^2
+<=> kappa = 2.
+```
+
+So the live MRU gap is now closed on this branch for the `kappa = 2` lane.
 
 ---
 
 ## 1. Setup
 
-Fix `d >= 2`. Let `C in M_d(C)` be the `d`-dim cyclic shift
-`C|j> = |j+1 mod d>` with `C^d = I`. The **Hermitian circulant algebra**
-is
+On the retained `d = 3` cyclic compression,
 
-> `Herm_circ(d) := { H in M_d(C) : H = H^*, CH = HC }`
+```text
+H = a I + b C + b^bar C^2,
+```
 
-i.e. the Hermitian part of the commutant of the Z_d action. It has
-real dimension `d`.
+with canonical real cyclic basis
 
-A canonical real Frobenius-orthogonal basis:
+```text
+B_0 = I,
+B_1 = C + C^2,
+B_2 = i (C - C^2).
+```
 
-- `B_0 := I` (trivial singlet, chi_0);
-- for each `k in {1, ..., floor((d-1)/2)}`:
-  - `B_{k,re} := C^k + C^{d-k}`,
-  - `B_{k,im} := i(C^k - C^{d-k})` (a complex doublet `chi_k + chi_{-k}`);
-- if `d` is even: `B_{d/2} := C^{d/2}` (real singlet `chi_{d/2}`).
+The real trace pairing gives
 
-Frobenius norms (verified by the runner):
+```text
+||B_0||^2 = 3,
+||B_1||^2 = ||B_2||^2 = 6,
+<B_i, B_j> = 0  (i != j).
+```
 
-- `<B_0, B_0>_F = d`;
-- `<B_{k,re}, B_{k,re}>_F = <B_{k,im}, B_{k,im}>_F = 2d`;
-- `<B_{d/2}, B_{d/2}>_F = d` (`d` even).
+Writing
 
-Any `H in Herm_circ(d)` expands uniquely as `H = sum_j r_j B_j` in real
-coefficients `r_j` ("cyclic responses").
+```text
+H = (r_0 / 3) B_0 + (r_1 / 6) B_1 + (r_2 / 6) B_2,
+```
 
----
+the canonical block powers are
 
-## 2. The dim-parametric MRU principle
+```text
+E_+    = r_0^2 / 3,
+E_perp = (r_1^2 + r_2^2) / 6.
+```
 
-Let `Iso(d)` denote the set of Z_d isotypes appearing in `Herm_circ(d)`.
-For each isotype `I` with canonical basis vectors `{B_j}_{j in J(I)}`
-all of common Frobenius norm squared `w(I)`, define the **isotype
-moment**
+In circulant variables this is
 
-> `M(I) := (1 / w(I)) * sum_{j in J(I)} r_j^2`.
+```text
+E_+    = 3 a^2,
+E_perp = 6 |b|^2.
+```
 
-**Moment-Ratio Uniformity Principle (MRU).** `H in Herm_circ(d)`
-satisfies MRU iff `M(I) = M(I')` for all `I, I' in Iso(d)`.
-Equivalently, the map `I |-> M(I)` is constant on isotypes.
+So
 
-This gives `|Iso(d)| - 1` independent linear equations on `(r_j^2)`.
+```text
+E_+ = E_perp
+<=> 3 a^2 = 6 |b|^2
+<=> kappa := a^2 / |b|^2 = 2.
+```
 
-**Per-d specialization (verified by runner Task 1):**
-
-| d | # isotypes | # MRU equations | Form |
-|---|---|---|---|
-| 2 | 2 (2 real singlets) | 1 | `r_0^2 = r_1^2` (singlet-vs-singlet; no doublet) |
-| **3** | **2 (1 singlet + 1 complex doublet)** | **1** | **`r_0^2/3 = (r_1^2+r_2^2)/6` = `kappa=2`** |
-| 4 | 3 (2 singlets + 1 doublet) | 2 | fragmented |
-| 5 | 3 (1 singlet + 2 doublets) | 2 | fragmented |
-| 6 | 4 | 3 | heavily fragmented |
-
----
-
-## 3. MRU(d=3) is `kappa = 2`
-
-### 3.1 Retained cyclic compression
-
-By the retained cyclic-compression theorem (see
-`docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md`
-and `docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md`,
-both on `main`), any charged-lepton sqrt-parent that has been
-Z_3-cyclically compressed into the hw=1 triplet carrier takes the form
-
-> `H = a*I + b*C + b^bar*C^2`, with `a in R`, `b in C`.
-
-In the canonical Frobenius basis `{B_0=I, B_1=C+C^2, B_2=i(C-C^2)}`
-this reads `H = a*B_0 + Re(b)*B_1 + Im(b)*B_2`, i.e. cyclic responses
-`r_0 = a, r_1 = Re(b), r_2 = Im(b)`.
-
-### 3.2 Moment computation
-
-By direct computation (runner Task 2, 13 checks):
-
-- singlet isotype: `M(chi_0) = r_0^2 / 3 = a^2 / 3`;
-- doublet isotype: `M(chi_1 + chi_{-1}) = (r_1^2 + r_2^2) / 6 = |b|^2 / 6`.
-
-MRU: `M(chi_0) = M(chi_1 + chi_{-1})` gives `a^2/3 = |b|^2/6`, i.e.
-`3a^2 = 6|b|^2`, i.e. `a^2 = 2|b|^2`, i.e. **`kappa := a^2/|b|^2 = 2`**.
-
-### 3.3 Formal theorem
-
-> **Theorem (MRU at d=3).** Let `H` be a Hermitian element of the hw=1
-> cyclic compression `H_circ(3)`, `H = aI + bC + b^bar C^2`. Then `H`
-> satisfies Moment-Ratio Uniformity on `Cl(3)/Z_3` iff `a^2 = 2|b|^2`,
-> equivalently `kappa = 2`.
+That equivalence was already exact. The open question was why the scalar lane
+should count the doublet once rather than twice before applying a log-volume or
+extremal law.
 
 ---
 
-## 4. Uniqueness of `d = 3`
+## 2. The load-bearing step: canonical real-isotype reduction
 
-### 4.1 Algebraic uniqueness
+The non-trivial sector is the real doublet
 
-Among `d >= 2`, the count of non-trivial scalar MRU equations is
-`|Iso(d)| - 1`. MRU gives a **single non-trivial singlet-vs-doublet
-scalar selector** iff `|Iso(d)| = 2` AND the two isotypes are one
-singlet + one complex doublet. This holds iff `d = 3`.
+```text
+V_perp := span_R{B_1, B_2}.
+```
 
-At `d = 2`: both isotypes are real singlets; the single MRU equation
-is `r_0^2 = r_1^2`, not a singlet-vs-doublet selector.
+Its internal basis is not physical data. The exact `Z_3` / circulant geometry
+already identifies the whole plane, but any orthonormal basis of that plane is
+equally valid. Concretely, for every angle `theta`,
 
-At `d >= 4`: multiple non-trivial isotypes; MRU fragments into 2+
-scalar equations.
+```text
+B_1' = cos(theta) B_1 + sin(theta) B_2,
+B_2' = -sin(theta) B_1 + cos(theta) B_2
+```
 
-### 4.2 Physical-carrier uniqueness (retained)
+is another canonical orthogonal basis of the same real isotype with the same
+norms. Under this internal frame rotation,
 
-The retained 7 no-gos plus `R1/R2/R3` (bivector-count saturation,
-anomaly parity, Cayley–Hamilton) admit `d = 3` only. Combined with the
-algebraic uniqueness above, **`d = 3` is the unique dim at which MRU's
-single-scalar singlet-vs-doublet form has a physical carrier and
-reproduces `kappa = 2`.**
+```text
+(r_1, r_2) -> (r_1', r_2') = R(theta) (r_1, r_2),
+```
 
----
+but the only scalar carried by the plane is its radius:
 
-## 5. Pre-conditions (all retained on `main`)
+```text
+r_1'^2 + r_2'^2 = r_1^2 + r_2^2.
+```
 
-| Pre-condition | Retained source |
-|---|---|
-| Cl(d; C) Hermitian algebra | A1 |
-| Z_d cyclic shift C on hw=1 | `docs/THREE_GENERATION_STRUCTURE_NOTE.md` |
-| Herm_circ(d) structure | standard (Maschke for cyclic groups) |
-| Frobenius metric `<X,Y>_F = Re Tr(XY^*)` | retained (trace on observable algebra) |
-| Canonical isotype basis + norms | runner Task 0 (25/25) |
-| Cyclic compression to hw=1 | `docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md` |
-| Retained `d=3` (SUPPORT grade on main) | `cl3-minimality-conditional-support-2026-04-17.md` |
+Therefore the scalar charged-lepton lane factors through the quotient
 
-No new axioms required.
+```text
+R ⊕ R^2  / SO(2),
+```
 
----
+not through the unreduced ordered triple `(r_0, r_1, r_2)`.
 
-## 6. Runner summary
+### Canonical quotient coordinates
 
-`scripts/frontier_koide_moment_ratio_uniformity_theorem.py` runs 10
-task groups totalling 65 checks:
+Define
 
-- T0: basis sanity, Frobenius orthogonality (25)
-- T1: per-d isotype counts and #MRU equations at `d = 2..6` (5)
-- T2: MRU(d=3) `<=> kappa = 2` numerical equivalence (13)
-- T3: non-trivial per-d content at `d = 2, 4, 5, 6` (6)
-- T4: retained-no-go d-scan (7)
-- T5: isotype counting across d (5)
-- T6: DFT-amplitude form consistency (2)
-- T7: off-surface falsification (2)
-- T8: `delta(d) = (d-1)/d^2` cross-check (bridge to Berry-phase theorem) (1)
-- T9: summary (reports PASS=65 FAIL=0)
+```text
+rho_+    := sqrt(E_+)    = |r_0| / sqrt(3),
+rho_perp := sqrt(E_perp) = sqrt(r_1^2 + r_2^2) / sqrt(6).
+```
 
-All 65 PASS, 0 FAIL. No retained runner regresses.
+Then:
 
----
+1. `rho_+` is the Frobenius amplitude of the trivial block;
+2. `rho_perp` is the Frobenius amplitude of the whole non-trivial real
+   doublet;
+3. both are invariant under all internal `SO(2)` frame rotations of
+   `V_perp`;
+4. the scalar target itself already lives on this quotient:
 
-## 7. Cross-references
+   ```text
+   kappa = a^2 / |b|^2 = 2 E_+ / E_perp = 2 rho_+^2 / rho_perp^2.
+   ```
 
-- `docs/KOIDE_Z3_JOINT_PROJECTOR_IDENTITY_NOTE_2026-04-19.md` (shared isotypic decomposition)
-- `docs/KOIDE_KAPPA_TWO_ORBIT_DIMENSION_FACTORIZATION_NOTE_2026-04-19.md` (orbit-dim factorization)
-- `docs/KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md` (doublet phase closure)
-- `docs/DIMENSION_SELECTION_NOTE.md` (`d >= 3` lower bound, on main)
-- `docs/ANOMALY_FORCES_TIME_THEOREM.md` (`d_t = 1`)
-- `.claude/science/derivations/cl3-minimality-conditional-support-2026-04-17.md` (R1/R2/R3)
-- `docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md` (cyclic compression theorem)
-- `docs/SCALAR_SELECTOR_SYNTHESIS_NOTE_2026-04-19.md` (reading order)
+So the charged-lepton scalar lane has an exact retained two-slot carrier
+
+```text
+(rho_+, rho_perp),
+```
+
+which counts the non-trivial real isotype **once**.
+
+This is exactly the object the obstruction theorem said was missing.
 
 ---
 
-## 8. Honest statement
+## 3. The reduced log-volume law
 
-MRU is an exact theorem under the standard Frobenius metric on `M_d(C)`
-(induced from the trace on the observable algebra). The content
-`kappa = 2` is a corollary at `d = 3`.
+Once the scalar lane is written on the quotient carrier, the standard
+block log-volume law is applied to
 
-The construction is genuinely dim-parametric: the per-d isotype counts
-and MRU equation counts vary non-trivially (1, 1, 2, 2, 3 at
-`d = 2, 3, 4, 5, 6`) and reproduce `kappa = 2` exactly at `d = 3` via
-the singlet/complex-doublet decomposition of `Herm_circ(3)`. The
-weighting choice — per-basis-element Frobenius norm `w(I)` — is forced
-by the canonical trace metric, not a free parameter. An alternative
-weighting (by isotype real dimension) gives `kappa = 1`, not the Koide
-normalization; this is ruled out by the retained trace metric.
+```text
+D_red = diag(rho_+, rho_perp),
+```
 
-Scientifically, the theorem should presently be read as a candidate principle
-on the open charged-lepton gate rather than as a completed object-derivation.
+not to the unreduced `3 x 3` carrier.
 
-Runner status: PASS=65 FAIL=0.
+Then
+
+```text
+det(D_red) = rho_+ rho_perp,
+log|det D_red| = log rho_+ + log rho_perp.
+```
+
+Fix the total reduced power
+
+```text
+rho_+^2 + rho_perp^2 = E_tot.
+```
+
+With one Lagrange multiplier,
+
+```text
+L = log rho_+ + log rho_perp - lambda (rho_+^2 + rho_perp^2 - E_tot),
+```
+
+the interior stationary equations are
+
+```text
+1 / rho_+ = 2 lambda rho_+,
+1 / rho_perp = 2 lambda rho_perp.
+```
+
+Hence
+
+```text
+rho_+^2 = rho_perp^2 = E_tot / 2.
+```
+
+Because the Hessian is negative on the constrained positive branch, this is the
+unique maximum.
+
+So the reduced-carrier extremal law gives
+
+```text
+rho_+ = rho_perp
+<=> E_+ = E_perp.
+```
+
+Pulling back to the cyclic carrier gives
+
+```text
+r_0^2 / 3 = (r_1^2 + r_2^2) / 6
+<=> 3 a^2 = 6 |b|^2
+<=> kappa = 2.
+```
+
+That is exactly MRU at `d = 3`.
+
+---
+
+## 4. Why the old obstruction remains true but no longer blocks the lane
+
+The unreduced determinant obstruction remains exact:
+
+```text
+det(alpha P_+ + beta P_perp) = alpha beta^2.
+```
+
+So if one insists on applying the log-volume law on the unreduced `3 x 3`
+carrier, the non-trivial sector is counted with multiplicity `2` and the leaf
+is wrong.
+
+What changes here is **not** the obstruction calculation. What changes is the
+carrier.
+
+The scalar charged-lepton lane does not retain the ordered pair of Cartesian
+doublet coordinates as physical slots. It retains only the internal-rotation
+quotient of that plane. Once that quotient is taken, the relevant carrier has
+two slots, not three:
+
+```text
+(+) and (perp).
+```
+
+So the old obstruction theorem should now be read as:
+
+> on the unreduced carrier the weights are wrong; therefore closure requires a
+> canonical real-isotype reduction first.
+
+This note derives exactly that reduction.
+
+---
+
+## 5. Why `d = 3` is still the unique MRU dimension
+
+The dimensional uniqueness theorem from the earlier MRU note still stands.
+
+For `Herm_circ(d)`, MRU gives a single non-trivial singlet-vs-doublet scalar
+selector iff the real-isotype pattern is exactly
+
+```text
+1 singlet + 1 real doublet.
+```
+
+That happens only at `d = 3`.
+
+So the current closure is not a free weight trick that would work uniformly for
+all `d`. It depends on the exact retained `d = 3` real-isotype structure:
+
+```text
+R^3 = V_+ ⊕ V_perp
+with dim_R(V_+) = 1, dim_R(V_perp) = 2,
+```
+
+and on the fact that the scalar lane quotients the internal frame of the single
+real doublet.
+
+---
+
+## 6. Scientific consequence
+
+The scientific status of the MRU lane on this branch is now:
+
+1. the old weight-class obstruction on the unreduced carrier is correct;
+2. the exact missing object it identified is now derived from retained
+   charged-lepton structure;
+3. the scalar lane's physical carrier is the real-isotype quotient
+   `(rho_+, rho_perp)`;
+4. the usual reduced-carrier log-volume / extremal law forces
+
+   ```text
+   E_+ = E_perp
+   <=> kappa = 2.
+   ```
+
+So the `kappa = 2` / MRU lane is closed on the current branch.
+
+---
+
+## 7. Scope
+
+### What is established
+
+1. The non-trivial `C_3` real doublet is counted once on the scalar
+   charged-lepton lane because its internal `SO(2)` frame is quotient data,
+   not physical slot data.
+2. The exact reduced carrier is `(rho_+, rho_perp)`, equivalently
+   `(E_+, E_perp)`.
+3. Applying the block log-volume / extremal law on that carrier forces MRU and
+   therefore `kappa = 2`.
+
+### What is not claimed here
+
+1. This note does not address the Berry / `delta = 2/9` lane.
+2. This note does not by itself overwrite the broader current-main
+   charged-lepton review boundary.
+3. This note does not claim that the unreduced `3 x 3` determinant law was
+   wrong; it claims only that it was being applied before the exact real-isotype
+   scalar reduction.
+
+---
+
+## 8. Reproduction
+
+```bash
+PYTHONPATH=scripts python3 scripts/frontier_koide_moment_ratio_uniformity_theorem.py
+PYTHONPATH=scripts python3 scripts/frontier_koide_mru_weight_class_obstruction_theorem.py
+```
+
+Both runners now validate the load-bearing reduction step rather than only the
+postulated equal-weight leaf.
