@@ -153,6 +153,32 @@ reweight the canonical character sources. See
    sharply: derive the coherent omitted-channel coupling vector `g` from the
    microscopic transport law. See
    `docs/KOIDE_HIGGS_DRESSED_SELF_ENERGY_COHERENCE_THEOREM_NOTE_2026-04-20.md`.
+   Latest same-day sharpening: that coherent omitted-channel vector is itself
+   already only a visible two-real chamber packet,
+   `g = [lambda_+ + i/2, lambda_-]^T`, with
+   `lambda_+ = q_+* + delta_* - sqrt(8/3)` and
+   `lambda_- = q_+* - delta_* + sqrt(8/3)`. So the remaining open object on
+   this route can now be read even more sharply: derive the visible two-link
+   chamber packet `(lambda_+, lambda_-)` from the microscopic transport law.
+   See
+   `docs/KOIDE_HIGGS_DRESSED_COUPLING_PACKET_REDUCTION_THEOREM_NOTE_2026-04-20.md`.
+   Latest same-day sharpening: that visible two-link packet is itself just an
+   invertible repackaging of the G1 chamber pair
+   `(q_+*, delta_*)`. So the strongest surviving Higgs-dressed transport route
+   no longer carries a separate hidden datum beyond those chamber pins. The
+   remaining open object on this route can now be read even more sharply:
+   derive the G1 chamber pair `(q_+*, delta_*)` from retained physics. See
+   `docs/KOIDE_HIGGS_DRESSED_CHAMBER_PAIR_INVERSION_THEOREM_NOTE_2026-04-20.md`.
+   Latest same-day sharpening: even that does not leave a hidden transport
+   selector. The missing-axis Higgs-dressed resolvent route transfers across
+   all currently known G1 competitor points — Basin 1, Basin 2, Basin X, the
+   chamber-violating CP-conjugate point, and the chamber-violating `C_neg q<0`
+   point — each with the same eight-root pattern and a unique small positive
+   `Q = 2/3` root of strong charged-lepton direction cosine. The excluded
+   CP-conjugate point actually gives a better direction cosine than Basin 1.
+   So this avenue cannot be the physical basin selector. It inherits the open
+   G1 chamber/basin program rather than bypassing it. See
+   `docs/KOIDE_HIGGS_DRESSED_BASIN_TRANSFER_NO_GO_THEOREM_NOTE_2026-04-20.md`.
 
 **Required retained ingredients for any of the above:** explicit lattice propagator or transport-integral definition on the retained Cl(3)/Z³ carrier; currently on main as partial-support.
 

@@ -86,6 +86,20 @@ The clean current endpoint is:
   physical local branch; only the full coherent rank-1 combination does, so
   the remaining microscopic object is the coherent omitted-channel coupling
   vector itself
+- that coherent vector is now reduced further: once the fixed `sqrt(8/3)` arm
+  and the fixed imaginary half-gamma are peeled off, it is exactly a visible
+  two-real chamber packet `(lambda_+, lambda_-)`, not a generic complex datum
+- and that visible two-link packet is now shown to be just an invertible
+  repackaging of the G1 chamber pair `(q_+*, delta_*)`, so the strongest
+  surviving Higgs-dressed transport route no longer carries a separate hidden
+  microscopic datum beyond those chamber pins
+- and the final transport loophole is now also closed negatively: the same
+  missing-axis Higgs-dressed resolvent mechanism transfers to Basin 2, Basin X,
+  the chamber-violating CP-conjugate point, and the chamber-violating `C_neg`
+  `q < 0` point, each with the same eight-root pattern and a strong small
+  positive Koide root; the excluded CP-conjugate point even beats Basin 1 on
+  charged-lepton direction cosine, so transport is not the physical basin
+  selector
 
 So the current charged-lepton state is:
 
@@ -119,6 +133,9 @@ So the current charged-lepton state is:
 22. [KOIDE_HIGGS_DRESSED_TRANSPORT_SUSCEPTIBILITY_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_TRANSPORT_SUSCEPTIBILITY_THEOREM_NOTE_2026-04-20.md)
 23. [KOIDE_HIGGS_DRESSED_OMITTED_CHANNEL_SELF_ENERGY_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_OMITTED_CHANNEL_SELF_ENERGY_THEOREM_NOTE_2026-04-20.md)
 24. [KOIDE_HIGGS_DRESSED_SELF_ENERGY_COHERENCE_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_SELF_ENERGY_COHERENCE_THEOREM_NOTE_2026-04-20.md)
+25. [KOIDE_HIGGS_DRESSED_COUPLING_PACKET_REDUCTION_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_COUPLING_PACKET_REDUCTION_THEOREM_NOTE_2026-04-20.md)
+26. [KOIDE_HIGGS_DRESSED_CHAMBER_PAIR_INVERSION_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_CHAMBER_PAIR_INVERSION_THEOREM_NOTE_2026-04-20.md)
+27. [KOIDE_HIGGS_DRESSED_BASIN_TRANSFER_NO_GO_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_BASIN_TRANSFER_NO_GO_THEOREM_NOTE_2026-04-20.md)
 
 ## Package Role
 
@@ -164,7 +181,17 @@ localized one step further to a rank-1 omitted-channel self-energy in the
 Schur-complement resolvent of the reached block. And that self-energy is now
 sharpened again: only its full coherent rank-1 form restores the physical
 local branch, so the live transport object is the coherent omitted-channel
-coupling vector.
+coupling vector. And that vector is now reduced further to a visible two-real
+chamber packet `(lambda_+, lambda_-)` plus fixed constants. And that packet is
+now shown to be exactly an invertible repackaging of the G1 chamber pair
+`(q_+*, delta_*)`. And the final loophole on that transport avenue is now also
+closed negatively: the same missing-axis resolvent mechanism survives on Basin
+2, Basin X, the chamber-violating CP-conjugate point, and the chamber-
+violating `C_neg q<0` point, each with the same eight-root pattern and a
+strong small positive Koide root. The excluded CP-conjugate point actually
+beats Basin 1 on charged-lepton direction cosine. So the transport avenue is
+not the physical basin selector; it inherits the open G1 chamber/basin
+selection program.
 
 So the right classification is:
 

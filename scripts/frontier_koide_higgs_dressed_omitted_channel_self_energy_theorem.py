@@ -34,6 +34,8 @@ H_STAR = H3(M_STAR, DELTA_STAR, Q_PLUS_STAR)
 M_OMIT = H_STAR[0, 0]
 G_VEC = np.array([[H_STAR[2, 0]], [H_STAR[1, 0]]], dtype=complex)
 H_REACHED = H_STAR[np.ix_([2, 1], [2, 1])]
+LAMBDA_PLUS = Q_PLUS_STAR + DELTA_STAR - np.sqrt(8.0 / 3.0)
+LAMBDA_MINUS = Q_PLUS_STAR - DELTA_STAR + np.sqrt(8.0 / 3.0)
 
 
 def reached_block_full(lam: float) -> np.ndarray:
@@ -94,8 +96,11 @@ def main() -> None:
         detail=f"self_energy={np.round(self_energy_star, 12).tolist()}",
     )
     check(
-        "The omitted-channel couplings are exactly the visible chamber-link and E1 couplings",
-        abs(float(G_VEC[0, 0].real) - 0.01585551149054787) < 1.0e-15 and abs(float(G_VEC[0, 0].imag) - 0.5) < 1.0e-15,
+        "The omitted-channel coupling vector is exactly the visible two-link chamber packet plus the fixed half-gamma phase",
+        abs(float(G_VEC[0, 0].real) - LAMBDA_PLUS) < 1.0e-15
+        and abs(float(G_VEC[0, 0].imag) - 0.5) < 1.0e-15
+        and abs(float(G_VEC[1, 0].real) - LAMBDA_MINUS) < 1.0e-15
+        and abs(float(G_VEC[1, 0].imag)) < 1.0e-15,
         detail=f"g={np.round(G_VEC.flatten(), 12).tolist()}",
     )
 

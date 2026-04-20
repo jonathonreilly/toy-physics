@@ -70,18 +70,19 @@ So the omitted-channel self-energy is what both:
 The omitted-channel coupling vector is already visible inside `H_*`:
 
 ```text
-g = [ lambda_slack + i/2,  E1 ]^T
+g = [ lambda_+ + i/2,  lambda_- ]^T
 ```
 
 in the reached ordering `(T2[110], T2[101])`, with
 
 ```text
-lambda_slack = Re(H_*[1,3]),
-E1 = sqrt(8/3).
+lambda_+ = q_+* + delta_* - sqrt(8/3) = Re(H_*[1,3]),
+lambda_- = q_+* - delta_* + sqrt(8/3) = H_*[1,2].
 ```
 
 So the omitted-channel correction is not an abstract hidden matrix. It is a
-rank-1 self-energy built from already-visible chamber data.
+rank-1 self-energy built from an already-visible two-link chamber packet plus
+the fixed imaginary half-gamma phase.
 
 ## 2. Structural consequence
 
