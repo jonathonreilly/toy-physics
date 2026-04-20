@@ -38,6 +38,18 @@ The clean current endpoint is:
   remaining simple intrinsic spectral-selector hope negatively: the canonical
   `2 x 2` block is spectrally complete but sign-blind, and its low-complexity
   spectral laws only reparameterize the same one-scalar gap
+- the exact eigenvalue-`Q = 2/3` surface theorem now also closes the strongest
+  `M2` assumption-escape negatively: replacing slot readout by eigenvalues of
+  `exp(beta H_sel(m))` gives a monotone one-real surface `beta_q23(m)`, not a
+  selected physical point
+- the exact scale-selector reparameterization theorem now also closes the
+  strongest `M1` assumption-escape negatively: the near-miss condition
+  `u*v*w = 1` uses the Koide-completed slot `u_small(v,w)`, so it is a
+  reparameterization on the already-imposed cone rather than an independent
+  derivation
+- the old transport-gap observation `1/eta_ratio ≈ 4pi/sqrt(6)` is now also
+  demoted honestly: even an exact identity there would only compare two
+  branch-level constants and would still not furnish an `m`-selection law
 
 So the current charged-lepton state is:
 
@@ -61,6 +73,9 @@ So the current charged-lepton state is:
 12. [KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md](./KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md)
 13. [KOIDE_Z3_SCALAR_POTENTIAL_SUPPORT_NOTE_2026-04-19.md](./KOIDE_Z3_SCALAR_POTENTIAL_SUPPORT_NOTE_2026-04-19.md)
 14. [KOIDE_SELECTED_SLICE_SPECTRAL_COMPLETION_AND_MINIMAL_LOCAL_SPECTRAL_LAW_NO_GO_NOTE_2026-04-20.md](./KOIDE_SELECTED_SLICE_SPECTRAL_COMPLETION_AND_MINIMAL_LOCAL_SPECTRAL_LAW_NO_GO_NOTE_2026-04-20.md)
+15. [KOIDE_EIGENVALUE_Q23_SURFACE_THEOREM_NOTE_2026-04-20.md](./KOIDE_EIGENVALUE_Q23_SURFACE_THEOREM_NOTE_2026-04-20.md)
+16. [KOIDE_SCALE_SELECTOR_REPARAMETERIZATION_THEOREM_NOTE_2026-04-20.md](./KOIDE_SCALE_SELECTOR_REPARAMETERIZATION_THEOREM_NOTE_2026-04-20.md)
+17. [KOIDE_TRANSPORT_GAP_CONSTANT_NO_GO_NOTE_2026-04-20.md](./KOIDE_TRANSPORT_GAP_CONSTANT_NO_GO_NOTE_2026-04-20.md)
 
 ## Package Role
 
@@ -79,9 +94,13 @@ law for the final microscopic scalar. The current exact endpoint is now
 sharper: the missing step is one scalar condition, and the current
 selected-slice scalar potential does not by itself select it, while the
 completed canonical `2 x 2` spectral carrier also does not provide a hidden
-low-complexity selector law.
-Branch-local exploratory `Q = 2/3`-surface and scale-selector near-miss probes
-remain off current-main authority.
+low-complexity selector law. On this local review branch the two obvious
+assumption-escape probes have now also been formalized: the eigenvalue
+`Q = 2/3` route is only a one-real surface `beta_q23(m)`, and the
+scale-selector near-miss `u*v*w = 1` is only a Koide-lane
+reparameterization built from `u_small(v,w)`. The old transport-gap
+comparison has also been demoted to a constant-vs-constant bridge rather than
+an `m`-selection law.
 
 So the right classification is:
 

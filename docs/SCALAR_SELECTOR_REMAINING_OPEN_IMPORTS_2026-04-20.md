@@ -67,12 +67,26 @@ selected-slice spectral route is no longer a live closure candidate either.
 See
 `docs/KOIDE_SELECTED_SLICE_SPECTRAL_COMPLETION_AND_MINIMAL_LOCAL_SPECTRAL_LAW_NO_GO_NOTE_2026-04-20.md`.
 
+**Assumption-escape closeout (2026-04-20):** two nearby alternative readings
+are now also ruled out as genuine closures. First, if one drops the current
+slot readout and instead imposes `Q = 2/3` on the eigenvalues of
+`exp(beta H_sel(m))`, the route does not select a point: for each fixed
+selected-line spectrum the eigenvalue purity is strictly increasing in `beta`,
+so `Q_eig = 2/3` cuts a unique `beta_q23(m)` and yields a one-real monotone
+surface `beta = beta_q23(m)`. It still needs an independent beta-law. Second,
+the striking scale near-miss `u*v*w = 1` is not an independent forcing law at
+all: the `u` used there is the Koide-completed small root `u_small(v,w)`, so
+that condition already lives on the imposed cone `Q = 2/3` and only
+reparameterizes the existing selected-line gap. It near-hits `m_*` but does
+not equal it. See
+`docs/KOIDE_EIGENVALUE_Q23_SURFACE_THEOREM_NOTE_2026-04-20.md` and
+`docs/KOIDE_SCALE_SELECTOR_REPARAMETERIZATION_THEOREM_NOTE_2026-04-20.md`.
+
 **Candidate closing routes (each needs its own derivation):**
 
 1. **H_* witness ratio from a retained lattice calculation.** The H_* witness kappa_* ≈ −0.608 currently pins `m_*` by observational fit. If a retained lattice propagator or transport integral computes kappa_* from Cl(3)/Z³ ingredients alone, the cone point is forced. This is the most likely route.
 2. **Retained `C_3`-singlet Schur law on the `4 x 4` (hw=1 + singlet/baryon) block.** The new reduction theorem shows every equivariant `4 x 4` extension collapses to `K_eff(m) = K_sel(m) - lambda(m) J`. So this route is now exactly: derive the scalar singlet-Schur law `lambda(m)` from the microscopic lattice action. The later constant-coupling sharpening proves that a fixed positive `lambda` does not close the selector by itself; it merely reparameterizes a continuum of branch minima. So the real remaining target is the microscopic `lambda`-law, not the existence of some positive constant `lambda`.
-3. **Transport gap ratio 4π/√6.** Numerically close to the observed `η/η_obs ≈ 5.29` (3.2% mismatch). If formalized into a retained lattice identity, it could pin `m_*`.
-4. **One-clock semigroup / Γ-orbit positive witness route.** Already delivers cos-similarity > 1 − 10⁻⁹ with PDG √m-vector at the cone point `H_*`. Currently conditional on G1 observational chamber pins (M_STAR, DELTA_STAR, Q_PLUS_STAR). If those three pins can be derived from retained framework, `Q = 2/3` follows.
+3. **One-clock semigroup / Γ-orbit positive witness route.** Already delivers cos-similarity > 1 − 10⁻⁹ with PDG √m-vector at the cone point `H_*`. Currently conditional on G1 observational chamber pins (M_STAR, DELTA_STAR, Q_PLUS_STAR). If those three pins can be derived from retained framework, `Q = 2/3` follows.
 
 **Required retained ingredients for any of the above:** explicit lattice propagator or transport-integral definition on the retained Cl(3)/Z³ carrier; currently on main as partial-support.
 
