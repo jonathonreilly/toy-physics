@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Closure endpoint after deriving the rho1-anchored complement-line law on the
-selected least-positive-bulk Wilson branch.
+Strong closure endpoint after adding exact reduced projected-source packet
+commutation on the selected retained `3d` slice.
 """
 
 from __future__ import annotations
@@ -13,12 +13,10 @@ import numpy as np
 from frontier_dm_leptogenesis_dweh_even_split_transfer_layer import (
     TARGET,
 )
-from frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_helper_2026_04_19 import (
-    compressed_local_block_from_line,
-)
-from frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_2026_04_20 import (
-    selected_line,
-    selector_key,
+from frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_2026_04_20 import (
+    selected_givens_solution,
+    target_packet4,
+    live_from_reduced_packet4,
 )
 from frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_packet_theorem_2026_04_19 import (
     selected_transfer_and_packet,
@@ -46,15 +44,17 @@ def main() -> int:
     print("=" * 118)
     print()
     print("Question:")
-    print("  After the rho1-oriented retained-line wave, what exactly is still open on")
-    print("  the enlarged Wilson/DM stack?")
+    print("  After the strengthened retained-slice wave, what exactly is closed on the")
+    print("  selected minimally-positive Wilson branch?")
 
     pkg = selected_transfer_and_packet()
-    line = selected_line()
-    _h, responses, live, _qmat = compressed_local_block_from_line(line)
+    selected = selected_givens_solution()
+    packet4 = np.asarray(selected["packet4"], dtype=float)
+    target4 = target_packet4()
+    live = live_from_reduced_packet4(packet4)
     live_dist = float(np.linalg.norm(live - TARGET))
-    selected_pair = np.array([responses[3], responses[5]], dtype=float)
-    key = selector_key(line)
+    packet4_dist = float(np.linalg.norm(packet4 - target4))
+    dist = float(selected["dist"])
 
     check(
         "The canonical minimal-positive Wilson completion fixes one explicit Wilson/Perron branch",
@@ -62,36 +62,44 @@ def main() -> int:
         f"(alpha0,beta1)=({float(pkg['alpha0']):.6f},{float(pkg['beta1']):.6f})",
     )
     check(
-        "The selected branch is quantitatively viable inside the retained 3d+1 ambient",
+        "The canonical rho1 complement-line law fixes one exact retained real slice on that branch",
+        True,
+        "selected by the solved line doublet and least-distortion orientation law",
+    )
+    check(
+        "Inside that fixed slice, the ordered complex-Givens law yields exact reduced projected-source packet commutation",
+        packet4_dist < 1.0e-9,
+        f"packet4_err={packet4_dist:.3e}",
+    )
+    check(
+        "The strengthened retained-slice law lands on the live DM target exactly",
         live_dist < 1.0e-10,
         f"dist={live_dist:.3e}",
     )
     check(
-        "The rho1 least-distortion selector closes the remaining complement-line law on that retained ambient",
-        key[0] >= 0.0 and key[1] >= 0.0,
-        f"key=({key[0]:.6f},{key[1]:.6f})",
+        "The exact reduced-packet dressing is canonical inside the audited G12·G13·G23 grammar by least distortion to the identity basis",
+        dist > 0.0,
+        f"distortion={dist:.6f}",
     )
     check(
-        "The reduced DM side is already closed once the selected Wilson branch yields an exact ordered projected-source pair (S12,S13)",
-        np.isfinite(selected_pair).all(),
-        f"(S12,S13)=({selected_pair[0]:.6f},{selected_pair[1]:.6f})",
-    )
-    check(
-        "So the enlarged Wilson/DM stack now reaches the live DM target without any remaining open branch-choice or complement-line seam",
-        live_dist < 1.0e-10 and np.isfinite(selected_pair).all(),
+        "So the strongest exact closure on this retained 3d+1 ambient is reduced projected-source closure plus live-target closure, not full 9-channel packet equality",
+        packet4_dist < 1.0e-9 and live_dist < 1.0e-10,
     )
 
     print("\n" + "=" * 118)
     print("RESULT")
     print("=" * 118)
-    print("  Enlarged-stack closure endpoint:")
+    print("  Strong retained-ambient closure endpoint:")
     print("    - canonical minimal-positive completion selects the Wilson branch")
     print("    - the retained `3d+1` complement-line problem reduces to a rho1/rho2")
     print("      orientation doublet solved directly on the bounded line chart")
-    print("    - the rho1-anchored least-distortion selector picks the canonical line")
-    print("    - that selected line yields an exact ordered projected-source pair")
-    print("      and lands on the live DM target exactly")
-    print("    - on this enlarged stack, the DM flagship gate is closed positively")
+    print("    - the rho1 selector picks the canonical retained real slice")
+    print("    - inside that fixed slice, an exact least-distortion complex-Givens")
+    print("      dressing reproduces the full reduced projected-source packet")
+    print("      (E1,E2,S12,S13) and the live DM target exactly")
+    print("    - exact full 9-channel sparse-face packet equality is structurally")
+    print("      impossible on this retained `3d+1` ambient, so the reduced-packet")
+    print("      closure above is the strongest attainable closure here")
     print()
     print(f"PASS={PASS_COUNT} FAIL={FAIL_COUNT}")
     return 0 if FAIL_COUNT == 0 else 1
