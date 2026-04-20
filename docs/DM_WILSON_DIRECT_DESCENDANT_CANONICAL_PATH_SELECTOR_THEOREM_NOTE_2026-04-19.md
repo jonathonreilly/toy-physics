@@ -1,178 +1,201 @@
-# DM Wilson Direct-Descendant Canonical Path Selector Theorem
+# DM Wilson Direct-Descendant Canonical Path Selector Status Note
 
 **Date:** 2026-04-19  
-**Status:** explicit path-selected law on the constructive positive exact-
-closure route. On the exact affine path from the aligned native seed to the
-explicit constructive witness, the favored column `eta_1` crosses exact
-closure exactly once and transversely. So the current branch now carries an
-explicit selector-law candidate:
-
-```text
-choose the unique eta_1 = 1 point on the aligned-seed -> constructive-witness path.
-```
-
-This is real science progress on the open DM gate, but it is still a
-**path-chosen** law, not a reviewer-grade derivation of the selected object
-from retained physics alone.
-
+**Status:** support-level candidate only — the path is still chosen, not
+derived from retained physics  
 **Primary runner:**  
 `scripts/frontier_dm_wilson_direct_descendant_canonical_path_selector_theorem_2026_04_19.py`
-(`PASS=15 FAIL=0`).
 
-## Question
+## Verdict
 
-The old constructive continuity theorem proved only existence:
+The aligned-seed -> constructive-witness affine segment remains useful
+support-level science, but it does **not** close the DM canonical-path lane.
 
-- on the explicit interpolation family from the aligned native seed to the
-  constructive witness, there exists `lambda_* in (0,1)` with `eta_1 = 1`.
+What survives:
 
-But that did not yet make the interpolation family into a law. Two sharper
-questions remained:
+- on that explicit affine segment, the favored column `eta_1` still crosses
+  exact closure uniquely and transversely;
+- the selected point is still constructive, positive-branch, and locally
+  visible in the full projected-source observable chart.
 
-1. is the exact root on that path unique?
-2. if so, does that unique path-selected root survive as a genuine positive
-   direct-descendant selector candidate rather than just an existence witness?
+What fails:
+
+- the path itself is still not forced by retained physics;
+- other equally seed-fixed constructive affine laws already produce distinct
+  exact positive roots;
+- geodesic language does not rescue uniqueness;
+- even the natural `Y`- and `H`-carrier pullback geometries do not recover the
+  current constructive point;
+- the neighboring source-surface selector theorems do not yet descend to this
+  direct-descendant lane.
+
+So the honest branch verdict is:
+
+> the current path law is still chosen, not derived.
+
+## The current support-level candidate still works on its own segment
+
+On the explicit affine path
+
+```text
+v_P(lambda) = (1 - lambda) v_seed + lambda v_w,
+```
+
+from the aligned native seed to the explicit constructive witness, the runner
+still certifies:
+
+- one exact `eta_1 = 1` crossing;
+- transverse slope
+
+  ```text
+  d eta_1 / d lambda |_P = 0.445808799932... > 0;
+  ```
+
+- constructive positive selected point
+
+  ```text
+  P
+  = (1.04926685, 0.48315245, 0.66630668, 0.08410670, 1.49766553),
+  ```
+
+  with observable pack
+
+  ```text
+  (eta_1, gamma, E1, E2, Delta_src)
+  = (1.0, 0.177466004463..., 0.247922610478..., 1.552085732579..., 0.006583113927...).
+  ```
+
+So the old candidate is still real science. It is just not yet a reviewer-grade
+canonical path law.
+
+## Why the path is still not derived
+
+The new load-bearing negative result is recorded in
+[DM_WILSON_DIRECT_DESCENDANT_CANONICAL_PATH_DERIVATION_NO_GO_NOTE_2026-04-19.md](DM_WILSON_DIRECT_DESCENDANT_CANONICAL_PATH_DERIVATION_NO_GO_NOTE_2026-04-19.md).
+
+Its content is:
+
+1. **Affine ambiguity remains.**  
+   Three other retained constructive overshooting witnesses `A+`, `B+`, `C+`
+   already live on the same fixed native seed surface. The seed-fixed affine
+   segments to those witnesses also have exact transverse `eta_1 = 1` roots,
+   and those roots are distinct from the current candidate point.
+
+2. **Geodesic language remains ambiguous.**  
+   In the present affine chart, the current segment and the competing `A+`,
+   `B+`, `C+` segments are all straight lines. So under the natural
+   constant-metric class they are all geodesics. No retained theorem yet fixes
+   a metric that would single out only the current one.
+
+3. **Gradient-flow language is not closed either.**  
+   If one tries the obvious seed-based law "follow the `eta_1` gradient until
+   `eta_1 = 1`", the answer depends on the chosen metric. Euclidean and
+   `x1`-weighted constant metrics land on different exact roots, and neither
+   root is the current constructive positive point.
+
+4. **The most natural retained carrier metrics still fail.**  
+   The runner now also tests the pullback of the Frobenius metric from the
+   exact canonical carriers `Y` and `H = Y Y^dagger`. Both pullback metrics are
+   positive definite at the aligned seed, so they are honest theorem-native
+   metric candidates. But their `eta_1` gradient flows land on
+
+   ```text
+   v_grad^H = (0.65110101, 0.43193331, 0.30713402, 0.18639426, 0.0)
+   v_grad^Y = (0.63953158, 0.42183722, 0.32104885, 0.18257746, 0.0),
+   ```
+
+   both with exact `eta_1 = 1` and both nonconstructive:
+
+   ```text
+   v_grad^H: (1.0, 0.0, -0.23699551..., 0.22450038..., 0.03806907...)
+   v_grad^Y: (1.0, 0.0, -0.24405841..., 0.20824367..., 0.03763495...)
+   ```
+
+   So even the obvious carrier-native geometries do not derive the current
+   constructive exact point.
+
+5. **The source-surface selector packet does not yet descend here.**  
+   The nearby source-surface theorems live on a different exact H-side sheet
+   whose shift-invariant intrinsic slot pair and CP pair are fixed constants.
+   The direct-descendant exact roots `P`, `A_path`, `B_path`, `C_path` and the
+   constructive transport-plateau witnesses `W0`, `W1`, `W2`, `W3` all stay
+   uniformly away from those source-surface constants. So the current lane does
+   not yet carry a theorem-grade bridge that would let one import the
+   source-surface local selector law as the missing endpoint-direction law.
+
+That is enough to miss the closure bar.
+
+## Exact competing affine-selected roots
+
+The no-go packet certifies the following three additional seed-fixed affine
+roots from equally constructive overshooting witnesses:
+
+```text
+A_path = (1.01497656, 0.49220909, 0.65328256, 0.11912803, 1.41237208)
+B_path = (0.86063287, 0.32735058, 0.71332829, 0.10458238, 1.59013800)
+C_path = (1.00712956, 0.30188412, 0.79571626, 0.02997295, 2.19344946)
+```
+
+with packs
+
+```text
+A_path: (1.0, 0.14792387..., 0.24958820..., 1.45193690..., 0.00880419...)
+B_path: (1.0, 0.08784500..., 0.04543037..., 1.12265931..., 0.02001948...)
+C_path: (1.0, 0.07715807..., 0.11679743..., 1.60542658..., 0.01311861...)
+```
+
+Each is constructive, positive-branch, and locally complete in the same
+observable chart. So the statement
+
+```text
+choose the unique eta_1 = 1 point on a fixed-seed affine path to a
+constructive overshooting witness
+```
+
+is still ambiguous.
+
+## What extra ingredient is needed
+
+To upgrade the path from chosen to derived, the branch still needs one more
+retained theorem-grade ingredient of one of these types:
+
+- a metric on the fixed seed surface that is itself forced by retained physics
+  and gives a unique relevant geodesic;
+- a scalar potential or vector field on that surface whose flow is
+  theorem-fixed and lands on the physical constructive root;
+- a theorem-fixed endpoint or tangent-direction law that selects one witness
+  direction without importing it by hand;
+- a direct-descendant bridge theorem proving that the source-surface selector
+  packet is the correct descended law on this lane;
+- or, more directly, the microscopic value law on the descended local block
+  `L_e` itself;
+- or an equivalent path law of the same selector strength.
+
+Without one of those, the current affine segment cannot honestly be called the
+canonical path.
 
 ## Bottom line
 
-Yes, on the current branch.
+The branch now knows something sharper than before:
 
-Write the exact fixed-seed affine path
+- the old affine segment is a real selector candidate;
+- but the path-derivation problem is still open;
+- and the exact reason is now pinned to affine/geodesic ambiguity, failure of
+  the natural carrier pullback flows, and absence of a bridge from the
+  source-surface selector packet.
 
-```text
-(x, y, delta)(lambda)
-  = (1 - lambda) (x_seed, y_seed, 0) + lambda (x_w, y_w, delta_w),
-  lambda in [0, 1].
-```
-
-Then:
-
-1. the path stays exactly on the fixed native `N_e` seed surface;
-2. `eta_1(lambda) - 1` changes sign exactly once on a dense current-branch
-   scan;
-3. after a shallow initial dip, `eta_1(lambda)` is strictly increasing on the
-   sampled tail, so the exact crossing is unique on the canonical path;
-4. the crossing is transverse:
-
-   ```text
-   d eta_1 / d lambda |_* = 0.445808799932... > 0;
-   ```
-
-5. the selected point still satisfies
-
-   ```text
-   eta_1 = 1,
-   gamma > 0,
-   E1 > 0,
-   E2 > 0,
-   Delta_src > 0;
-   ```
-
-6. the projected-source scalar pack
-
-   ```text
-   (eta_1, gamma, E1, E2, Delta_src)
-   ```
-
-   again has full local rank there, so the path-selected point is already
-   visible in a locally complete observable chart;
-7. this selected point is distinct from the other already-certified exact
-   constructive positive roots from the multiplicity packet.
-
-So the branch now has an explicit selector-law candidate on the open DM gate:
-
-> choose the unique exact closure point on the canonical aligned-seed ->
-> constructive-witness affine path.
-
-## The selected point
-
-The unique canonical-path crossing is
-
-```text
-lambda_* = 0.795532193595...
-```
-
-with direct-descendant coordinates
-
-```text
-(x1, x2, y1, y2, delta)
-= (1.04926685, 0.48315245, 0.66630668, 0.08410670, 1.49766553),
-```
-
-and projected-source observable pack
-
-```text
-(eta_1, gamma, E1, E2, Delta_src)
-= (1.0, 0.177466004463..., 0.247922610478..., 1.552085732579..., 0.006583113927...).
-```
-
-These are strictly constructive and positive-branch values.
-
-## Why this matters
-
-This upgrades the old continuity witness in a real way.
-
-Before this theorem, the explicit aligned-seed -> constructive-witness path
-only supplied:
-
-- one existence argument for an exact closure point.
-
-After this theorem, the same path supplies:
-
-- a unique exact crossing,
-- a transverse selection event,
-- an explicit selected point,
-- and a point that remains locally visible in the full projected-source scalar
-  coordinates.
-
-So the path is no longer only an existence device. It is now an explicit
-selector-law candidate on the current branch.
-
-## Relation to the other exact positive roots
-
-The multiplicity packet already certified three other exact constructive
-positive roots on the fixed native seed surface:
-
-- family `A`,
-- family `B`,
-- family `C`.
-
-The present theorem proves the canonical-path-selected root is not secretly one
-of those previously certified points:
-
-- each of `A`, `B`, and `C` stays a definite distance off the canonical path
-  segment;
-- each is also a definite distance away in direct-descendant parameter space.
-
-So this is genuinely new selector content, not a relabeling of the earlier
-multiplicity witnesses.
-
-## What this closes
-
-- the loophole that the constructive interpolation family only proved
-  existence but not uniqueness on its own path;
-- the ambiguity over whether the canonical constructive path lands on a
-  locally visible projected-source point;
-- the idea that the continuity route had no actual selector interpretation.
-
-## What this does not close
-
-- a reviewer-grade derivation of the path itself from retained physics;
-- a derivation of the explicit constructive witness from retained physics;
-- the finer microscopic value law on `L_e = Schur_{E_e}(D_-)`;
-- the final DM flagship gate.
-
-So the honest status is:
-
-- **path-selected law:** yes;
-- **reviewer-grade object derivation:** still no.
+So the DM canonical-path lane is **not closed**.
 
 ## Cross-references
 
 - `docs/DM_LEPTOGENESIS_PMNS_CONSTRUCTIVE_CONTINUITY_CLOSURE_THEOREM_NOTE_2026-04-17.md`
-- `docs/DM_WILSON_DIRECT_DESCENDANT_POSITIVE_BRANCH_COMPATIBILITY_AND_INSUFFICIENCY_THEOREM_NOTE_2026-04-18.md`
 - `docs/DM_WILSON_DIRECT_DESCENDANT_CONSTRUCTIVE_POSITIVE_CLOSURE_MULTIPLICITY_THEOREM_NOTE_2026-04-18.md`
+- `docs/DM_WILSON_DIRECT_DESCENDANT_POSITIVE_BRANCH_COMPATIBILITY_AND_INSUFFICIENCY_THEOREM_NOTE_2026-04-18.md`
 - `docs/DM_WILSON_DIRECT_DESCENDANT_LOCAL_OBSERVABLE_COORDINATE_THEOREM_NOTE_2026-04-19.md`
+- `docs/DM_WILSON_DIRECT_DESCENDANT_CANONICAL_PATH_DERIVATION_NO_GO_NOTE_2026-04-19.md`
+- `docs/DM_WILSON_DIRECT_DESCENDANT_MICROSCOPIC_VALUE_FRONTIER_THEOREM_NOTE_2026-04-18.md`
+- `docs/DM_NEUTRINO_SOURCE_SURFACE_PARITY_COMPATIBLE_OBSERVABLE_SELECTOR_THEOREM_NOTE_2026-04-17.md`
+- `docs/DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_POINT_SELECTION_THEOREM_NOTE_2026-04-16.md`
 
 ## Reproduction
 
@@ -182,4 +205,4 @@ PYTHONPATH=scripts python3 scripts/frontier_dm_wilson_direct_descendant_canonica
 
 Expected:
 
-- `PASS=15 FAIL=0`
+- `VERDICT: PATH STILL CHOSEN`
