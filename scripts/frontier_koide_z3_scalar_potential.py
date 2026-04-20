@@ -142,11 +142,7 @@ def part1_clifford_involution() -> None:
         abs(float(np.real(np.trace(T3))) - 1.0) < 1e-14,
         detail="Tr(T_m^3)=1 → coefficient of m³ in Tr(K³)/6 is 1/6",
     )
-    check(
-        "So T_m² = I forces the exact coefficients of the Z³-invariant potential",
-        True,
-        detail="V(m) = (3/2)m² + (1/6)m³ + linear + const  (all from Clifford involution)",
-    )
+    print("  [note] T_m² = I with Tr(T_m²)=3 and Tr(T_m³)=1 forces V(m) = (3/2)m² + (1/6)m³ + linear + const.")
 
 
 def part2_z3_scalar_potential_derivation() -> None:
@@ -212,23 +208,9 @@ def part2_z3_scalar_potential_derivation() -> None:
                 kind="NUMERIC",
             )
 
-    check(
-        "Tr(K_sel²) = Tr(K_f²) + 2c1·m + 3m²  (exact Z³ expansion)",
-        True,
-        detail=f"Tr(K_f²)={trKf2:.6f}, c1={c1:.6f}, quadratic coeff=3",
-        kind="NUMERIC",
-    )
-    check(
-        "Tr(K_sel³) = Tr(K_f³) + 3c2·m + m³  (Tr(K_frozen)=0 kills m² cross term)",
-        True,
-        detail=f"Tr(K_f³)={trKf3:.6f}, c2={c2:.6f}, cubic coeff=1",
-        kind="NUMERIC",
-    )
-    check(
-        "V(m) = const + (c1+c2/2)m + (3/2)m² + (1/6)m³  — all coefficients exact",
-        True,
-        detail=f"linear coeff={c1+c2/2:.6f}, quad=3/2, cubic=1/6",
-    )
+    print(f"  [note] Tr(K_sel²) expansion verified numerically above (Tr(K_f²)={trKf2:.6f}, c1={c1:.6f}, quadratic coeff=3).")
+    print(f"  [note] Tr(K_sel³) expansion verified numerically above (Tr(K_f³)={trKf3:.6f}, c2={c2:.6f}, cubic coeff=1).")
+    print(f"  [note] V(m) = const + (c1+c2/2)m + (3/2)m² + (1/6)m³ — linear coeff={c1+c2/2:.6f}, quad=3/2, cubic=1/6.")
 
 
 def part3_cubic_pins_det_and_levi_civita() -> None:
@@ -246,22 +228,14 @@ def part3_cubic_pins_det_and_levi_civita() -> None:
     )
     coeffs = np.polyfit(ms, dets, 3)
 
-    check(
-        "det(K_sel(m)) is exactly cubic in m",
-        True,
-        detail="K_sel = K_frozen + m*T_m is affine in m, so det is degree ≤ 3",
-    )
+    print("  [note] det(K_sel(m)) is exactly cubic in m: K_sel = K_frozen + m·T_m is affine in m.")
     check(
         "Leading coefficient of det(K_sel) is exactly -1",
         abs(coeffs[0] + 1.0) < 1e-8,
         detail=f"fitted lead coeff = {coeffs[0]:.10f}  (from Leibniz/Levi-Civita det formula)",
         kind="NUMERIC",
     )
-    check(
-        "The -1 arises because T_m contributes one factor per diagonal in ε_ijk expansion",
-        True,
-        detail="det(T_m) = -1 (odd permutation matrix) → leading term -m³",
-    )
+    print("  [note] The -1 leading coefficient: det(T_m) = -1 (odd permutation matrix) → leading term -m³.")
     check(
         "Quadratic det coefficient matches -c1 to machine precision",
         abs(coeffs[1] - (-c1_global())) < 1e-7,
@@ -294,11 +268,7 @@ def part4_critical_point_and_veff_minimum() -> None:
     m_min = (-6.0 + math.sqrt(discriminant)) / 2.0
     m_max = (-6.0 - math.sqrt(discriminant)) / 2.0
 
-    check(
-        "dV/dm = 0 gives exact quadratic: m² + 6m + 2(c1 + c2/2) = 0",
-        True,
-        detail=f"c1+c2/2 = {lin_coeff:.10f}, discriminant = {discriminant:.10f}",
-    )
+    print(f"  [note] dV/dm = 0 is the quadratic m² + 6m + 2(c1 + c2/2) = 0: c1+c2/2 = {lin_coeff:.10f}, discriminant = {discriminant:.10f}.")
     check(
         "V_eff has one physical minimum at m_V ≈ -0.433 (positive-branch side)",
         abs(m_min + 0.433) < 0.002,
@@ -372,11 +342,7 @@ def part5_honest_gap() -> None:
         abs(m_V - m_star) > 0.5,
         detail=f"|m_V - m_*| = {abs(m_V - m_star):.6f}  (gap of ~0.73 in m units)",
     )
-    check(
-        "The Z³ potential V(m) alone does not select m_* — an additional microscopic law is needed",
-        True,
-        detail="V_eff pins the cubic structure; physical point requires H_* witness or equivalent selector",
-    )
+    print("  [note] The Z³ potential V(m) alone does not select m_*; the physical point requires the H_* witness or an equivalent selector (microscopic gap flagged honestly).")
 
 
 def part6_scale_analysis() -> None:
@@ -415,20 +381,8 @@ def part6_scale_analysis() -> None:
         detail=f"rel sqrt-mass errors = [{rel[0]:.4e}, {rel[1]:.4e}, {rel[2]:.4e}]",
         kind="NUMERIC",
     )
-    check(
-        "The predicted masses are (e, mu, tau) = ({:.4f}, {:.4f}, {:.2f}) MeV".format(
-            *pred_mass_mev.tolist()
-        ),
-        True,
-        detail="after one scale parameter — remaining work is deriving that scale from the lattice",
-    )
-    check(
-        "Dimensionless ratio v_*/|m_*| = {:.8f} (links slot to scalar coordinate)".format(
-            v_star / abs(m_star)
-        ),
-        True,
-        detail=f"v_*={v_star:.8f}, |m_*|={abs(m_star):.8f}",
-    )
+    print("  [note] Predicted masses after one-scale fit: (e, mu, tau) = ({:.4f}, {:.4f}, {:.2f}) MeV.".format(*pred_mass_mev.tolist()))
+    print(f"  [note] Dimensionless ratio v_*/|m_*| = {v_star/abs(m_star):.8f} (v_*={v_star:.8f}, |m_*|={abs(m_star):.8f}).")
 
 
 def part7_transport_gap_observation() -> None:
@@ -448,16 +402,8 @@ def part7_transport_gap_observation() -> None:
         detail=f"1/η_ratio={gap_factor:.4f}, 4π/√6={geometric_ratio:.4f}  (3.2% mismatch)",
         kind="NUMERIC",
     )
-    check(
-        "4π/√6 = full solid angle 4π divided by Koide |z| = √6/2 times 2",
-        True,
-        detail=f"|z|=√6/2={koide_sector:.6f} is the analytically constant Koide character norm",
-    )
-    check(
-        "This geometric connection is an OBSERVATION only — not yet a formal derivation",
-        True,
-        detail="flag: formal transport–Koide coupling needs a lattice calculation",
-    )
+    print(f"  [note] 4π/√6 = full solid angle 4π divided by Koide |z|=√6/2 times 2 (|z|=√6/2={koide_sector:.6f}).")
+    print("  [note] This geometric connection is an OBSERVATION only — not yet a formal derivation (flag: formal transport-Koide coupling needs a lattice calculation).")
 
 
 def main() -> int:

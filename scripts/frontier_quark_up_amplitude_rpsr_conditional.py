@@ -182,10 +182,9 @@ def main() -> int:
           abs(bridge_sq - supp) < 1e-13,
           f"scalar^2/tensor^2 = {bridge_sq:.12f}")
 
-    # T10 retained det-phase neutrality
-    check("T10 Det-phase neutrality retained (anchor)",
-          True,
-          "frontier_quark_projector_parameter_audit.py: PASS=6 FAIL=0")
+    # Note: det-phase neutrality of the anchored projector fit is verified
+    # in scripts/frontier_quark_projector_parameter_audit.py (separate runner),
+    # not re-checked here to avoid a hardcoded True annotation PASS.
 
     print()
     print("  Cross-sector (meta-principle):")
