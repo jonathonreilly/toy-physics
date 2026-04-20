@@ -205,8 +205,10 @@ Step 8  — [Step 6 + Step 7] force a_u + a_d sin_d = sin_d = BICAC-LO at
           kappa = 1
           [QUARK_ISSR1_BICAC_FORCING_THEOREM_NOTE_2026-04-19,
            runner PASS=13 verdict "JTS DERIVED; ISSR1 CLOSED"]
-Step 9  — retain a_d = rho = 1/sqrt(42) (Scenario A bundling in STRC)
-          [QUARK_STRC_OBSERVABLE_PRINCIPLE_NOTE_2026-04-19]
+Step 9  — retain a_d = rho = 1/sqrt(42) from the CKM-atlas scalar ray /
+          projector-parameter audit package; retain supp = 6/7 and
+          delta_A1 = 1/42 from the same CKM-atlas support bank
+          [CKM_ATLAS_AXIOM_CLOSURE_NOTE, QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19]
 Step 10 — [Step 8 + Step 9] => a_u(kappa=1) = sin_d * (1 - rho) = LO target
 Step 11 — independent shell-normalization confirms same kappa = 1 endpoint
           on exact Route-2 carrier

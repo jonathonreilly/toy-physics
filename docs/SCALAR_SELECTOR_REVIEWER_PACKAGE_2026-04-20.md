@@ -205,6 +205,11 @@ with:
 - retained atom `a_d = ρ = 1/√42` (see `docs/QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`);
 - retained NLO atoms `supp = 6/7` and `δ_{A1} = 1/42` (CKM atlas).
 
+This is the review-surface provenance closure for the quark lane: the
+headline theorem now names the retained bimodule, the projector ray, the
+physical carrier plane, and the CKM-atlas atom bank inline instead of leaving
+those sources distributed implicitly across older quark notes.
+
 ### §4.2 Primary closure — affine-physical-carrier jet-to-section identification
 
 **Theorem.** Because `cos_d ≠ 0`, the pair `{p, e_5}` spans `H_{(1+5)}`. Hence the perturbation plane

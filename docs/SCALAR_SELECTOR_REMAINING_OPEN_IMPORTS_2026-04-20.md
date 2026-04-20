@@ -15,8 +15,6 @@ prevent the corresponding lane from being marked retained-derivation on main.
 | I1 | Koide relation `Q = 2/3` | κ, θ | retained observational; the same-branch linking theorem now shows the natural general form is `Q = 2/d` by equal-sector norm, not `(d−1)/d` | a Cl(3)/Z³-native forcing of the cone condition `a_0² = 2|z|²` from retained representation-theory or from a retained scalar-potential minimization that lands on the cone |
 | I2 / P | Brannen phase `δ = 2/9` on the physical base | θ | the new Brannen-phase reduction theorem reduces I2 to `I1` via `δ = Q/d`, but the cycle-2 linking theorem + direct no-go sharpen the live load-bearing step as one named radian-bridge postulate `P`: the structural count `2/d²` must be identified with the physical Berry holonomy in radians on the selected-line CP¹ base | either derive `P` directly by a retained Wilson/lattice identity on the physical base, or derive a physical-base theorem that makes the Brannen reduction `δ = Q/d` canonical; then closing `I1` closes `I2` automatically |
 | I5 | PMNS observational pins (NuFit 3σ ranges, T2K `sin δ_CP < 0`) | A-BCC (sigma-chain) | retained observational inputs | framework-native derivation of NuFit angles (open on main as the broader charged-lepton flagship gate) and/or of the sign of `sin δ_CP` from Cl(3) CP structure |
-| I7 | Bimodule `B = Cl(3)/Z₃ ⊗ Cl_CKM(1⊕5)` | a_u | retained framework object; provenance distributed across CKM atlas + Cl_CKM axiom notes | add a self-contained provenance paragraph in the Quark headline theorem pointing to the CKM atlas closure note and the Cl_CKM(1⊕5) axiomatization |
-| I8 | Retained atoms `ρ = 1/√42`, `supp = 6/7`, `δ_A1 = 1/42` | a_u | retained from CKM atlas closure | explicit inline citation to `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md` in the Quark closure summary; upstream closures already on main |
 | I10 | H_* witness ratio `w/v ≈ 4.101` | m_* (selected-line point) | retained observational; selected-line provenance is now closed, so only the scalar-phase pin remains | deriving `m_*` as a corollary of `δ = 2/9` via the exact scalar-phase bridge (already established). If I2 / `P` closes, I10 closes automatically |
 | I12 | σ_hier permutation `(2,1,0)` | A-BCC (sigma-chain) | retained from `SIGMA_HIER_UNIQUENESS_THEOREM_NOTE` (given T2K input on `sin δ_CP`) | framework-native CP structure forcing `sin δ_CP < 0` at the physical chamber point |
 
@@ -38,6 +36,11 @@ prevent the corresponding lane from being marked retained-derivation on main.
   The corrected full χ²=0 chart is five basins
   `{Basin 1, Basin N, Basin P, Basin 2, Basin X}`; the active-chamber chart is
   `{Basin 1, Basin 2, Basin X}`.
+- **I7, I8 closed by review-surface provenance cleanup.** The quark lane now
+  states its retained bimodule and atom provenance inline in the reviewer
+  package and headline theorem surfaces: `docs/SCALAR_SELECTOR_REVIEWER_PACKAGE_2026-04-20.md`,
+  `docs/QUARK_JTS_AFFINE_PHYSICAL_CARRIER_THEOREM_NOTE_2026-04-19.md`, and
+  `docs/SCALAR_SELECTOR_PROOF_CHAINS_2026-04-19.md`.
 
 ## §1 Priority ordering for closure
 
@@ -206,12 +209,7 @@ derivation, which is an open program on multiple branches
 (lepton-mass-tower, lepton-pmns-integration, dm-leptons-review). Not scoped
 to tomorrow's submission.
 
-### Priority 4: I7, I8 (quark provenance surfacing)
-
-Still housekeeping, not new derivation. The math is already on main; the
-remaining work is citation hygiene at the headline theorem level.
-
-### Priority 5: I10 (selected-line physical point)
+### Priority 4: I10 (selected-line physical point)
 
 Now the only open content behind `m_*` is the scalar-phase pin itself. If
 `I2 / P` closes, `I10` closes immediately by the exact selected-line
@@ -226,11 +224,11 @@ statement for this cycle is:
 > charged-lepton cone normalization (κ = 2, equivalently the operator-side
 > Koide relation), the Koide Brannen–Zenczykowski phase offset (δ = 2/9), the
 > dark-matter A-BCC basin-sheet choice, and the up-sector quark reduced
-> amplitude (a_u) — each reduce to retained Cl(3)/Z³ framework ingredients
-> plus named retained inputs (the Koide cone relation Q = 2/3; the residual
-> radian-bridge P behind the physical Brannen phase value δ = 2/9; PMNS NuFit
-> + T2K observational pins; the CKM atlas unit-ray parameter ρ = 1/√42 and
-> its structure atoms). No new axioms are added this cycle. The framework
+> amplitude (a_u) — each reduce to retained Cl(3)/Z³ framework ingredients,
+> with the only still-open named retained inputs now being the Koide cone
+> relation Q = 2/3, the residual radian-bridge P behind the physical Brannen
+> phase value δ = 2/9, and the PMNS NuFit + T2K observational pins. No new
+> axioms are added this cycle. The framework
 > contributes (i) a canonical Pancharatnam–Berry geometric identification of δ
 > on the physical selected line together with a precise no-go for deriving its
 > value from the current retained base alone, (ii) an exact Fourier-bridge
@@ -238,16 +236,17 @@ statement for this cycle is:
 > (iii) a Sylvester-inertia reduction of A-BCC, closed via a multi-observable
 > sigma-chain that combines retained Cl(3)/Z³ theorems with named
 > observational inputs, and (iv) a linear-algebra derivation of the up-sector
-> quark closure on the retained `1⊕5` bimodule. Each retained observational
-> input or structural postulate is listed in the Remaining-Open-Imports
-> register along with the derivation that would close it.
+> quark closure on the retained `1⊕5` bimodule and CKM-atlas atom package,
+> whose provenance is now surfaced inline on the review branch. Each retained
+> observational input or structural postulate still blocking native closure is
+> listed in the Remaining-Open-Imports register along with the derivation that
+> would close it.
 
 Closing any priority-1 or priority-2 item above would upgrade the
 corresponding lane from retained-conditional to retained-derivation and
 eliminate the named retained input. The cycle-2 housekeeping imports I3, I4,
 I6, and I11 are now closed; the remaining irreducible frontier is the Koide
-`Q`/radian-bridge pair, the PMNS observational pins, and the quark
-provenance surfacing.
+`Q`/radian-bridge pair and the PMNS observational pins.
 
 ## §3 Reproduction of current retained-conditional state
 
