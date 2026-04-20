@@ -1,59 +1,73 @@
 # Koide Selected-Line Cyclic-Response Bridge
 
 **Date:** 2026-04-18  
-**Status:** exact reduction of the remaining charged-lepton promotion gap to
-one scalar cyclic-response law  
+**Status:** exact bridge theorem on the branch-local actual-route stack. Given
+AXIOM E (`delta = 2/9`, retained input from Brannen–Zenczykowski) and the
+actual-route Berry geometric identification, the previously separate
+selected-line scalar/point law is no longer open: `delta = 2/9` fixes
+`kappa_sel,*` and the unique first-branch point `m_*`. The old `H_*` witness is
+demoted to a compatibility check. Berry geometry on the selected line gives
+`delta` its holonomy meaning but does not quantize the specific value `2/9`
+from first principles; that remains AXIOM E.
 **Runner:** `scripts/frontier_koide_selected_line_cyclic_response_bridge.py`
+(PASS=20 FAIL=0)
 
 ## Question
 
-After the current positive Koide route was reduced to the selected line
+After the branch-local Berry theorem identifies the physical charged-lepton
+phase as the actual-route holonomy
+
 ```text
-G_m = H(m, sqrt(6)/3, sqrt(6)/3)
+delta = theta - 2 pi / 3 = 2/9,
 ```
-and then coordinate-closed by threshold continuity plus the imported `H_*`
-witness ratio, what exactly is the smallest remaining charged-lepton gap?
+
+does the selected line still need one extra imported scalar `kappa_sel,*` to
+choose the physical point?
 
 ## Bottom line
 
-It is only one scalar.
+No.
 
-The exact missing charged-lepton bridge can be written as the scale-free
-cyclic-response ratio
+On the exact selected line
+
 ```text
-kappa := sqrt(3) r2 / (2 r0 - r1),
+G_m = H(m, sqrt(6)/3, sqrt(6)/3),
 ```
-equivalently
+
+the surviving cyclic scalar
+
 ```text
-kappa = (v-w) / (v+w),
+kappa_sel := sqrt(3) r2 / (2 r0 - r1) = (v-w) / (v+w)
 ```
-where `(r0, r1, r2)` are the cyclic Koide responses and `(u, v, w)` are the
-physical orbit-slot amplitudes on the small branch.
 
-Once `kappa_*` is fixed by a retained charged-lepton law, everything else on
-the current Koide route is already fixed:
+is an exact function of the Berry offset:
 
-1. `w/v = (1-kappa_*) / (1+kappa_*)`;
-2. the small-branch direction is fixed;
-3. on the selected line, the first-branch point `m_*` is fixed uniquely by the
-   monotone bridge `kappa(m)`;
-4. threshold continuity fixes the physical branch.
+```text
+kappa_sel(delta)
+  = -sqrt(3) cos(delta + pi/6) / (sqrt(2) + sin(delta + pi/6)).
+```
 
-So the charged-lepton Koide route is now **one scalar retained law away** from
-promotion.
+On the physical first branch, both `delta(m)` and `kappa_sel(m)` are strictly
+monotone. Therefore
 
-## Input stack
+```text
+delta = 2/9  ->  kappa_sel,* = -0.607918569997  ->  m_* = -1.160443440065,
+```
 
-This bridge sharpens:
+with
 
-1. [KOIDE_CYCLIC_WILSON_DESCENDANT_LAW_NOTE_2026-04-18.md](./KOIDE_CYCLIC_WILSON_DESCENDANT_LAW_NOTE_2026-04-18.md)
-2. [KOIDE_GAMMA_ORBIT_SELECTOR_BRIDGE_NOTE_2026-04-18.md](./KOIDE_GAMMA_ORBIT_SELECTOR_BRIDGE_NOTE_2026-04-18.md)
-3. [KOIDE_GAMMA_ORBIT_OBSERVABLE_SELECTOR_GENERATOR_LINE_NOTE_2026-04-18.md](./KOIDE_GAMMA_ORBIT_OBSERVABLE_SELECTOR_GENERATOR_LINE_NOTE_2026-04-18.md)
-4. [KOIDE_GAMMA_ORBIT_SELECTED_LINE_CLOSURE_NOTE_2026-04-18.md](./KOIDE_GAMMA_ORBIT_SELECTED_LINE_CLOSURE_NOTE_2026-04-18.md)
+```text
+w/v = 4.100981191542.
+```
 
-## Theorem 1: exact cyclic/orbit inversion
+So the selected-line scalar/point law is not an independent remaining gap
+once AXIOM E (supplying `delta = 2/9`) is combined with the actual-route
+geometric identification.
 
-The fresh `Gamma`-orbit reduction gives
+## 1. Exact cyclic/orbit inversion
+
+The selected-line `Gamma`-orbit reduction gives
+
 ```text
 r0 = u + v + w,
 r1 = 2u - v - w,
@@ -61,6 +75,7 @@ r2 = sqrt(3) (v - w).
 ```
 
 This inverts exactly to
+
 ```text
 u = (r0 + r1) / 3,
 v = r0/3 - r1/6 + sqrt(3) r2/6,
@@ -70,158 +85,137 @@ w = r0/3 - r1/6 - sqrt(3) r2/6.
 So the cyclic responses and the physical orbit slots are exactly equivalent
 coordinates.
 
-## Corollary 1: the remaining bridge is one scalar cyclic ratio
+## 2. The bridge is one scalar, and that scalar is the Berry offset
 
 Define
+
 ```text
-kappa := sqrt(3) r2 / (2 r0 - r1).
+kappa_sel := sqrt(3) r2 / (2 r0 - r1).
 ```
 
-Using the inversion formulas above,
+Using the inversion formulas,
+
 ```text
 2 r0 - r1 = 3 (v+w),
 sqrt(3) r2 = 3 (v-w),
 ```
+
 so
+
 ```text
-kappa = (v-w) / (v+w).
+kappa_sel = (v-w) / (v+w),
+w/v = (1-kappa_sel) / (1+kappa_sel).
 ```
 
-Therefore
+Along the exact first selected-line branch, the normalized Koide state has
+Fourier form
+
 ```text
-w/v = (1-kappa) / (1+kappa).
+s(m) = (1/sqrt(2)) v_1 + (1/2) e^{i theta(m)} v_omega
+                     + (1/2) e^{-i theta(m)} v_omegabar,
 ```
 
-So fixing one scalar `kappa` is exactly the same thing as fixing the
-reachable-slot ratio `w/v`.
+with `delta = theta - 2 pi / 3`. Transforming back to the axis basis yields the
+exact scalar-phase bridge
 
-## Corollary 2: on the small branch, fixing `kappa` fixes the full direction
-
-On the small Koide branch,
 ```text
-u = 2(v+w) - sqrt(3(v^2 + 4vw + w^2)).
+kappa_sel(delta)
+  = -sqrt(3) cos(delta + pi/6) / (sqrt(2) + sin(delta + pi/6)).
 ```
 
-That means the normalized amplitude direction depends only on `w/v`, hence only
-on `kappa`.
+That is the load-bearing step: the selected-line scalar is not independent of
+the actual-route Berry phase.
 
-So once `kappa_*` is known, the full charged-lepton amplitude direction is
-known on the current route.
+## 3. The first branch is one-to-one
 
-## Theorem 2: exact threshold value on the selected line
+The runner verifies two exact branch anchors:
 
-On the selected line `G_m`, the small branch turns on at the exact threshold
 ```text
-m_pos ~= -1.2957949
-```
-where
-```text
-u_- = 0.
+m_pos = -1.295794904067,    kappa_pos = -1/sqrt(3),
+m_0   = -0.265815998702,    delta(m_0) = 0.
 ```
 
-At that threshold the exact cone gives
+On the open interval `(m_pos, m_0)`, both
+
 ```text
-v^2 + w^2 = 4vw,
-```
-so with `w > v`,
-```text
-w/v = 2 + sqrt(3),
-kappa_pos = -1 / sqrt(3).
+kappa_sel(m)
 ```
 
-So the scalar bridge starts at one exact algebraic endpoint.
+and
 
-## Theorem 3: on the first selected-line branch, `kappa(m)` is monotone
-
-Numerically, on the first branch from `m_pos` up to the turnover window,
 ```text
-kappa(m)
+delta(m)
 ```
-is strictly monotone.
 
-Therefore any target value
+are strictly monotone. Therefore either one is a complete coordinate on the
+physical first branch, and solving `delta(m) = 2/9` gives one unique
+selected-line point.
+
+## 4. Corollary: AXIOM E fixes `kappa_sel,*` and `m_*`
+
+Substituting the actual-route Berry target `delta = 2/9` into the exact bridge
+gives
+
 ```text
-kappa_* in [kappa(0), kappa_pos]
-```
-fixes a unique first-branch point `m_*`.
-
-That is the exact statement needed for promotion:
-
-> a retained charged-lepton law fixing `kappa_*` would already fix the
-> selected-line point.
-
-## Current candidate route in this language
-
-The current coordinate-closed candidate route imports one scalar from the
-earlier `H_*` witness:
-```text
-kappa_* ~= -0.607905698005.
+kappa_sel,* = -0.607918569997.
 ```
 
 Solving
+
 ```text
-kappa(m) = kappa_*
+delta(m) = 2/9
 ```
+
 on the first branch gives
-```text
-m_* ~= -1.16046947.
-```
-
-That reproduces the same selected-line Koide witness as the current closure
-note.
-
-So the imported datum is not “a whole matrix witness” anymore. It is exactly
-one scalar.
-
-## Why this matters
-
-This is the sharpest honest charged-lepton status now visible in the repo:
-
-- the route is no longer blocked by a generic parent/readout problem;
-- it is no longer blocked by a generic three-response law;
-- it is not even blocked by a free one-real line;
-- it is blocked only by one scale-free charged-lepton scalar law for
-  `kappa_*`.
-
-That is the smallest concrete retained target currently on the charged-lepton
-Koide lane.
-
-## What remains open
-
-The remaining charged-lepton promotion target is now:
 
 ```text
-derive kappa_* from a retained charged-lepton law.
+m_* = -1.160443440065.
 ```
 
-Equivalent formulations are:
+At that point:
 
-- derive `w/v` on the selected line;
-- derive the cyclic ratio `sqrt(3) r2 / (2 r0 - r1)`;
-- derive one scale-free charged-lepton response ratio on the cyclic Koide
-  carrier.
-- derive the selected-slice microscopic scalar
-  `m = Re K12 + 4 sqrt(2)/9 = Tr K_Z3`;
-- derive the compressed `dW_e^H` ratio
-  `sqrt(3) (y12 + y23 - y13) / (d_sum - x_sum)`.
+```text
+kappa_sel(m_*) = -0.607918569997,
+w/v = 4.100981191542,
+Q = 2/3 exactly,
+cos(dir(m_*), dir_PDG) > 0.99999999997.
+```
 
-Everything downstream of that scalar is already fixed by the current exact
-stack.
+So the selected-line direction is fixed directly by AXIOM E once the actual
+Berry theorem is in place.
 
-The companion
-[KOIDE_MICROSCOPIC_SCALAR_SELECTOR_TARGET_NOTE_2026-04-18.md](./KOIDE_MICROSCOPIC_SCALAR_SELECTOR_TARGET_NOTE_2026-04-18.md)
-sharpens this further: on the exact selected slice `delta = q_+ = sqrt(6)/3`,
-the remaining microscopic datum is already just one `Z_3` doublet-block scalar,
-and `kappa` is a monotone function of that scalar on the physical first branch.
+## 5. The old `H_*` witness is no longer load-bearing
 
-## Consequence
+The imported one-clock `H_*` witness still lands very near the Berry-selected
+point:
 
-The charged-lepton Koide route is not fully retained yet.
+```text
+kappa_legacy = -0.607912649682,
+m_legacy     = -1.160469470086.
+```
 
-But it is now only **one scalar retained bridge law away**.
+The differences are only
 
-That is substantially sharper than “find a parent,” “find a readout,” or
-“derive the whole cyclic response law.”
+```text
+Delta kappa = -5.92e-06,
+Delta m     = +2.60e-05.
+```
+
+So the old witness remains a branch-precision compatibility check, not the step
+that fixes the selected-line point.
+
+## 6. Scope boundary
+
+This note closes the branch-local selected-line scalar/point law on the
+combined Berry-plus-selected-line route:
+
+```text
+delta = 2/9  ->  kappa_sel,*  ->  unique first-branch m_*.
+```
+
+It does **not** by itself rewrite the authoritative current-main bounded
+charged-lepton package. Current main still records a bounded result because the
+actual-route Berry theorem is branch-local science, not current-main authority.
 
 ## Reproduction
 

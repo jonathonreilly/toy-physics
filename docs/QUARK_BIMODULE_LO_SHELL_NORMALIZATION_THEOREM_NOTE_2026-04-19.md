@@ -3,10 +3,23 @@
 **Date:** 2026-04-19  
 **Lane:** Quark up-amplitude / bimodule LO closure  
 **Status:** same-day retained follow-on theorem. This note gives an
-independent support-side derivation of the physical-point BICAC / STRC-LO law
-from exact carrier normalization already on the branch. The earlier `kappa`
-obstruction remains valid on the narrower ray/support-only packet, but the
-exact shell-normalized carrier adds the missing `kappa`-sensitive datum.
+independent support-side corroboration of the physical-point BICAC / STRC-LO
+law from exact carrier normalization already on the branch. The earlier
+`kappa` obstruction remains valid on the narrower ray/support-only packet;
+the exact shell-normalized carrier adds the missing `kappa`-sensitive datum.
+**Provenance of `rho = 1/sqrt(42)`:** `rho` is retained on the branch from
+the CKM atlas closure (`CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`) as the unit-ray
+parameter, with `a_d = rho` also retained (see
+`QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`). This note does **not**
+derive `rho`; it uses `rho` as retained input and shows that the
+shell-normalized coefficient of the exact bimodule carrier agrees with
+that retained value only at the BICAC endpoint `kappa = 1`, thereby
+selecting `kappa = 1` among the candidate bridge values
+`{kappa_support = sqrt(6/7), kappa_target = 48/49, kappa_BICAC = 1}`. T4
+explicitly verifies that support and target bridge factors *fail* the same
+retained shell coefficient, so T5 is a discriminative consistency check
+between two independent retained sources of `rho`, not a tautological
+restatement.  
 **Primary runner:** `scripts/frontier_quark_bimodule_lo_shell_normalization_theorem.py`
 
 ---

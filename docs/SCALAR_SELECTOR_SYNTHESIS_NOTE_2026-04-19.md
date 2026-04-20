@@ -7,26 +7,36 @@ scalar-selector gates: Koide `kappa`, Koide doublet-phase (Koide
 
 **Status.** This note now serves as **route-history and internal synthesis**,
 not the current reviewer-facing claim surface. The honest read after the
-science review plus the later meta-closure pass is:
+science review, the later meta-closure pass, and the 2026-04-19 evening
+full-stack recovery is:
 
-- at the **reviewer bar**, MRU is now a support route with an explicit missing
-  measure law, Berry is now an obstruction theorem against the current
-  monopole packaging on the actual base, DPLE remains an open-gate support
-  route, and quark `a_u` is now a retained theorem: exact `1(+)5` channel
-  completeness / ISSR1 forces the LO split, the shell-normalization theorem
-  independently corroborates that same `kappa = 1` endpoint on the Route-2
-  carrier, and RPSR supplies the NLO target; same-day NORM theorems strengthen
-  this further by showing that BICAC is the unique normalized affine
-  extension on the full ownership interval;
+- at the **reviewer bar**, MRU now stands alongside two additional recovered
+  theorems on the Koide `kappa` lane — the spectrum/operator bridge theorem
+  (`a_0^2 - 2|z|^2 = 3(a^2 - 2|b|^2)`, making operator-side `kappa = 2` a
+  corollary of spectrum-side `Q = 2/3`) and the block-total Frobenius measure
+  theorem (realizing the `1:1` real-isotype measure named by the weight-class
+  obstruction); Berry's ambient-`S^2` monopole closure claim is retired in
+  favor of the actual-route Pancharatnam–Berry identification on the physical
+  charged-lepton selected line, which is a **geometric identification**
+  rather than an independent axiom closure (AXIOM E still supplies
+  `delta = 2/9`); DM A-BCC carries the chamber `∩` DPLE `F_4` primary closure
+  plus three recovered alternative closure routes (cycles 11/12/13:
+  PMNS-non-singularity, Sylvester signature-forcing, PNS attack cascade);
+  and quark `a_u` is now a fully closed theorem: Jon's same-day
+  JTS-affine-physical-carrier theorem derives the jet-to-section residue
+  from the retained bimodule, exact `1(+)5` channel completeness supplies
+  the pinning identity, shell-normalization independently corroborates the
+  `kappa = 1` endpoint, and RPSR supplies the NLO completion;
 - at the **meta-axiom layer**, the strongest current compression is
   `4 -> 2` via **DIM-UNIQ + STRC**, not `4 -> 0`;
 - a named future target (**BACT**, the bimodule amplitude-completeness
   theorem) sharpens the remaining quark-side structural gap but does not erase
   the per-lane object-derivation issue by itself.
 
-**Reading order.** Read
-`docs/SCALAR_SELECTOR_CYCLE1_SCIENCE_REVIEW_NOTE_2026-04-19.md` first,
-then
+**Reading order.** Start with
+`docs/SCALAR_SELECTOR_FULL_STACK_RECOVERY_NOTE_2026-04-19.md` for the
+post-recovery per-lane audit. Then read
+`docs/SCALAR_SELECTOR_CYCLE1_SCIENCE_REVIEW_NOTE_2026-04-19.md` and
 `docs/SCALAR_SELECTOR_CYCLE13_META_CLOSURE_STATUS_NOTE_2026-04-19.md`,
 then use this note for the branch-local candidate-route logic in §2-§9.
 
@@ -37,12 +47,12 @@ then use this note for the branch-local candidate-route logic in §2-§9.
 The framework's Tier-1 Standard Model gate closure requires four
 scalar selections:
 
-| Gate | Content | Status |
+| Gate | Content | Status (post-recovery) |
 |---|---|---|
-| **Koide `kappa`** | Charged-lepton cone normalization `kappa = 2` | Support/candidate principle via **MRU** |
-| **Koide `theta`** | Doublet-phase offset `delta = 2/9` (Brannen–Zenczykowski) | Old Berry route; new obstruction on the actual positive base |
-| **DM A-BCC basin** | Interior-minimum linear-path Sylvester discriminator `F_4` | A-BCC chamber-closure route in §2.3a; direct-descendant frontier still sharpened further below |
-| **Quark `a_u`** | Up-sector reduced amplitude `a_u = 0.7748865611` | Retained theorem via exact `1(+)5` completeness / ISSR1 -> STRC-LO -> RPSR, independently corroborated by shell-normalized Route-2 closure |
+| **Koide `kappa`** | Charged-lepton cone normalization `kappa = 2` | MRU + spectrum/operator bridge + block-total Frobenius measure (three converging retained theorems); residue = selection of the `1:1` real-isotype measure over the `(1,2)` determinant measure |
+| **Koide `theta`** | Doublet-phase offset `delta = 2/9` (Brannen–Zenczykowski) | Ambient-`S^2` model retired; bundle-obstruction theorem retained; actual-route Pancharatnam–Berry identification on the physical selected line is a **geometric identification** that fixes `m_* / kappa_sel,*` once `delta` is supplied; residue = AXIOM E (the value `2/9` itself is still supplied by Brannen–Zenczykowski) |
+| **DM A-BCC basin** | Interior-minimum linear-path Sylvester discriminator `F_4` | Primary closure: chamber bound `∩` DPLE `F_4` (§2.3a). Three recovered alternative routes (cycles 11/12/13: PMNS-non-singularity, signature-forcing, PNS cascade). Jon's same-day source-fiber work sharpens the *downstream* DM gate, not A-BCC itself |
+| **Quark `a_u`** | Up-sector reduced amplitude `a_u = 0.7748865611` | **Closed.** Jon's JTS-affine-physical-carrier theorem + ISSR1 + exact `1(+)5` channel completeness + RPSR + shell-normalization independent corroboration; no named residue |
 
 §2 presents the four branch-local routes; §3 presents STRC; §4 records the
 later meta-closure compression (`DIM-UNIQ + STRC`); §5 separates
@@ -78,6 +88,41 @@ therefore a retained `1:1` real-isotype measure or equivalent two-slot carrier
 reduction. See
 `docs/KOIDE_MRU_WEIGHT_CLASS_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`.
 
+### §2.1a κ spectrum/operator bridge theorem — operator-side κ as corollary of spectrum-side Q
+
+Under the retained cyclic-compression bridge, the exact sympy-verified
+identity
+
+```text
+a_0^2 - 2 |z|^2  =  3 (a^2 - 2 |b|^2)
+```
+
+makes operator-side `kappa = g_0^2 / |g_1|^2 = 2` a corollary of
+spectrum-side `Q = 2/3` on the charged-lepton Koide cone. So if the reviewer
+accepts the spectrum-side closure language, the operator-side framing is
+dispensable: `Q = 2/3`, `kappa = 2`, and MRU at `d = 3` are the same leaf on
+the branch. See
+`docs/KOIDE_KAPPA_SPECTRUM_OPERATOR_BRIDGE_THEOREM_NOTE_2026-04-19.md`.
+Runner PASS=9 FAIL=0.
+
+### §2.1b κ block-total Frobenius measure theorem — realizes the 1:1 measure
+
+The `1:1` real-isotype measure named by §2.1's weight-class obstruction is
+explicitly realized by the block-total Frobenius-squared functional
+
+```text
+E_I := || pi_I(H) ||_F^2.
+```
+
+At `d = 3` this gives `E_+ = 3 a^2`, `E_⊥ = 6 |b|^2`, so the block-total
+extremum recovers `kappa = 2` while the determinant-carrier lands at
+`kappa = 1`. `d = 3` is the unique dim where `Herm_circ` decomposes as
+`1 · trivial ⊕ 1 · complex-doublet` — so the block-total Frobenius functional
+is itself dim-uniquely well-defined at `d = 3`. This supplies a second
+independent retained closure route for operator-side `kappa`. See
+`docs/KOIDE_KAPPA_BLOCK_TOTAL_FROBENIUS_MEASURE_THEOREM_NOTE_2026-04-19.md`.
+Runner PASS=16 FAIL=0.
+
 ### §2.2 Berry-phase theorem on `S^2_Koide` — candidate route to Koide `theta`
 
 The projectivized Koide cone `S^2_Koide` carries a natural `C_3`
@@ -103,11 +148,29 @@ actual positive projectivized Koide cone, the normalized Koide locus is only
 three open arcs on the upper Koide circle, cyclically permuted by `C_3`, so
 the physical quotient is an open interval. Every equivariant complex line
 bundle there is therefore trivial, `c_1 = 0`, and no gauge-invariant Berry
-holonomy exists on the actual physical base. If positivity is relaxed to the
-sign-relaxed projective conic, the base is only `S^1`, so `H^2 = 0` still
-kills any monopole/Chern charge and `delta = 2/9` becomes a flat-holonomy
-choice, not a forced value. See
+holonomy exists on the actual physical base from that ambient monopole
+packaging. If positivity is relaxed to the sign-relaxed projective conic, the
+base is only `S^1`, so `H^2 = 0` still kills any monopole/Chern charge. See
 `docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`.
+
+**Recovered actual-route geometric identification.** On the physical
+charged-lepton selected line `H_sel(m) = H(m, sqrt(6)/3, sqrt(6)/3)`, the
+normalized Koide amplitude has fixed singlet weight `1/sqrt(2)`; the moving
+datum is the projective `C_3` doublet ray `[1 : e^{-2 i theta(m)}]` on the
+equator of `CP^1`. The tautological line over that equator carries the
+canonical Pancharatnam–Berry connection `A = d theta`, and the holonomy from
+the unique unphased point `m_0` (where `u(m_0) = v(m_0)` and
+`theta(m_0) = 2 pi / 3`) to any selected-line point is exactly the Brannen
+offset `delta(m) = theta(m) - 2 pi / 3`. The exact scalar-phase bridge
+`kappa_sel(delta) = -sqrt(3) cos(delta+pi/6)/(sqrt(2)+sin(delta+pi/6))`
+shows that `delta = 2/9` then fixes both `kappa_sel,*` and the unique
+first-branch point `m_*`, removing the previously separate branch-local
+imports. This is a **geometric identification** of `delta` with a canonical
+Berry holonomy on the physical route, not an independent axiom closure —
+the specific value `2/9` is not forced by Berry quantization alone (any
+reference section gives the same holonomy), so AXIOM E / Brannen–
+Zenczykowski remains the retained input that supplies the number. See
+`docs/KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md` (recovered, PASS=24).
 
 ### §2.3 Dim-Parametric log|det| Extremum (DPLE) — support theorem on `F_4`
 
@@ -232,6 +295,24 @@ already requires.
 See `docs/DM_ABCC_CLOSURE_VIA_CHAMBER_BOUND_AND_DPLE_F4_NOTE_2026-04-19.md`.
 Runner `frontier_dm_abcc_chamber_dple_closure.py` PASS=39 FAIL=0.
 
+**Recovered alternative closure routes (cycles 11/12/13).** Three independent
+multi-observable routes reach the same Basin-1 conclusion, providing
+corroboration of §2.3a:
+
+1. **PMNS Non-Singularity conditional theorem.** Given retained PMNS
+   non-singularity on the active chamber, Basin 1 is the unique survivor.
+   See `docs/DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md`. Runner
+   PASS=38.
+2. **Sylvester signature-forcing theorem.** Path-independent signature
+   forcing via IVT + `det` sign on the linear pencil rules out Basin N,
+   Basin P, Basin X. See
+   `docs/DM_ABCC_SIGNATURE_FORCING_THEOREM_NOTE_2026-04-19.md`. Runner
+   PASS=54.
+3. **PNS attack cascade.** Sigma-chain combining chamber bound, σ-hier,
+   χ²=0, T2K, and P3 Sylvester forces Basin 1 uniquely and reaches PNS
+   and then A-BCC. See `docs/DM_PNS_ATTACK_CASCADE_NOTE_2026-04-19.md`.
+   Runner PASS=47.
+
 ### §2.4 Reduced Projector-Ray Sum Rule (RPSR) — NLO completion of the quark `a_u` route
 
 On the 1 (+) 5 CKM projector ray
@@ -281,12 +362,27 @@ delivers the full physical target `a_u = 0.7748865611` from retained
 representation theory plus a single named structural residue. See
 `docs/QUARK_ISSR1_BICAC_FORCING_THEOREM_NOTE_2026-04-19.md`.
 
-That single residue is named **JTS (Jet-To-Section)**: the bimodule
-perturbation cone `(a_u, a_d) in R^2` is identified with the 1-jet space at
-`p` of deforming sections of `B`. JTS is a single category-theoretic principle,
-analogous in epistemic status to the **1:1 real-isotype measure** that is the
-operator-side residue on the Koide kappa weight-class obstruction theorem
-(`docs/KOIDE_MRU_WEIGHT_CLASS_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`). Both
+That single residue was originally named **JTS (Jet-To-Section)**: the
+bimodule perturbation cone `(a_u, a_d) in R^2` identified with the 1-jet
+space at `p` of deforming sections of `B`.
+
+**Update (Jon's same-day commit `dd865ced`).** JTS is no longer a residue.
+The JTS-affine-physical-carrier theorem
+(`docs/QUARK_JTS_AFFINE_PHYSICAL_CARRIER_THEOREM_NOTE_2026-04-19.md`) derives
+the jet-to-section identification from retained affine bimodule geometry
+alone: because the physical projector ray
+`p = cos_d e_1 + sin_d e_5` with `cos_d = 1/sqrt(6) != 0` gives
+`{p, e_5}` as a basis of `H_(1+5)`, the perturbation cone
+`Pert(p) = span{p, e_5} = H_(1+5)` equals the exact retained physical
+carrier plane. Hence the affine physical carrier `A_p = p + H_(1+5)` is a
+canonical subspace of the retained bimodule, and
+`Pert(p) ≅ J^1_p(A_p)` is a canonical bijection by direct linear algebra.
+So on the retained `1(+)5` carrier, JTS is **derived**, not postulated.
+
+The residue-comparison to Koide therefore stands only on the Koide side
+(the `1:1` real-isotype measure remains a named structural residue for
+operator-side `kappa`); on the quark side there is no remaining residue
+beyond the bimodule itself. Both
 the FORM (NORM-Naturality) and the MAP (ISSR1 Schur-rank-1) of BICAC-LO are
 now derived from retained representation theory; only JTS remains as a named
 structural residue. See

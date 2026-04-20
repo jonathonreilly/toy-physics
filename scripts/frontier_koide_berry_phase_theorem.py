@@ -1,57 +1,52 @@
 """
-Frontier runner - Koide Berry-Phase Theorem on the projectivized Koide cone.
+Frontier runner - Koide Berry audit on the actual charged-lepton route.
 
 Companion to `docs/KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md`.
 
-Theorem.  On the projectivized Koide cone S^2_Koide with its
-C_3 action (phi |-> phi + 2 pi / d at d = 3), the n = dim(doublet) = 2
-monopole bundle L_doublet has Berry holonomy over one C_3 cyclic patch
+This runner tests only claims that are actually validated:
 
-    gamma(one period) = 2 pi (d - 1) / d = 2 pi Q
-
-and Brannen reduced phase per C_3 element
-
-    delta_d = Q / d = (d - 1) / d^2.
-
-At d = 3: gamma = 4 pi / 3, delta_3 = 2 / 9.  AXIOM E
-(cos(3 arg b_s) = cos(Q)) is a corollary.
-
-The runner verifies:
-  (A) Analytic holonomy 2 pi Q per period, delta = 2/9, full-period Q
-  (B) Numerical integration of the Berry curvature matches analytic
-  (C) Dimension-parametric scan d = 2..7 confirms delta_d = (d-1)/d^2
-  (D) AXIOM E corollary: cos(3 theta_sqrt) = cos(Q)
-  (E) Symbolic sympy derivation
-  (F) Gauge invariance via Stokes
-  (G) C_3 equivariance
-  (H) 7 no-go matrix
-  (I) Cl(3)-minimality consistency
-  (J) n = 2 uniqueness argument
-
-Expected:  PASS=26  FAIL=0.
+  (A) The scale-free Koide locus on the unit sphere is a fixed-latitude circle.
+  (B) The ambient-S^2 monopole wedge arithmetic is support-only, not the
+      actual physical route.
+  (C) On the exact selected line, the normalized Koide amplitudes carry a
+      canonical projective C_3 doublet ray with fixed-modulus Fourier
+      coefficients, forced doubled projective phase, exact scalar-phase
+      bridge, a unique unphased reference point, and a unique first-branch
+      point selected directly by delta = 2/9.
+  (D) On that actual selected route, the tautological CP^1 Berry connection
+      reproduces the physical phase offset.
+  (E) Natural selected-slice eigenline Berry selector laws do not pick the
+      physical selected point.
+  (F) The retained circulant eigenvectors still carry zero Berry phase on
+      their own delta-moduli.
 """
 
 from __future__ import annotations
 
+import math
 import sys
 
 import numpy as np
+from scipy.linalg import expm
+from scipy.optimize import brentq
 
-try:
-    import sympy as sp
-except ImportError:  # pragma: no cover
-    sp = None
+from frontier_dm_neutrino_source_surface_active_affine_point_selection_boundary import (
+    active_affine_h,
+)
+from frontier_dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem import (
+    kz_from_h,
+)
+from frontier_higgs_dressed_propagator_v1 import H3
+from frontier_koide_selected_line_cyclic_response_bridge import (
+    hstar_witness_kappa,
+)
 
-
-# ---------------------------------------------------------------------------
-# PASS/FAIL bookkeeping
-# ---------------------------------------------------------------------------
 
 PASS = 0
 FAIL = 0
 
 
-def check(label, cond, detail=""):
+def check(label: str, cond: bool, detail: str = "") -> None:
     global PASS, FAIL
     status = "PASS" if cond else "FAIL"
     if cond:
@@ -61,230 +56,402 @@ def check(label, cond, detail=""):
     print(f"  [{status}] {label}" + (f"  ({detail})" if detail else ""))
 
 
-# ---------------------------------------------------------------------------
-# (A) Monopole analytic holonomy
-# ---------------------------------------------------------------------------
+SQRT2 = math.sqrt(2.0)
+SQRT3 = math.sqrt(3.0)
+SELECTOR = math.sqrt(6.0) / 3.0
+KOIDE_RATIO = 2.0 / 3.0
+DELTA_TARGET = 2.0 / 9.0
+SINGLET_FRACTION = 0.5
+OMEGA = np.exp(2j * np.pi / 3.0)
+
+U = (1.0 / math.sqrt(3.0)) * np.array(
+    [
+        [1.0, 1.0, 1.0],
+        [1.0, OMEGA, OMEGA**2],
+        [1.0, OMEGA**2, OMEGA],
+    ],
+    dtype=complex,
+)
+
+U_VEC = np.array([1.0, 1.0, 1.0], dtype=float) / SQRT3
+E1_VEC = np.array([2.0, -1.0, -1.0], dtype=float) / math.sqrt(6.0)
+E2_VEC = np.array([0.0, 1.0, -1.0], dtype=float) / math.sqrt(2.0)
+
+
+def c3_shift() -> np.ndarray:
+    return np.array(
+        [
+            [0.0, 1.0, 0.0],
+            [0.0, 0.0, 1.0],
+            [1.0, 0.0, 0.0],
+        ],
+        dtype=complex,
+    )
+
+
+def brannen_vector(delta: float) -> np.ndarray:
+    return np.array(
+        [1.0 + SQRT2 * math.cos(delta + 2.0 * math.pi * k / 3.0) for k in range(3)],
+        dtype=float,
+    )
+
+
+def normalized_brannen(delta: float) -> np.ndarray:
+    v = brannen_vector(delta)
+    return v / np.linalg.norm(v)
+
+
+def circulant_family(a: float, rho: float, delta: float) -> np.ndarray:
+    c = c3_shift()
+    b = rho * np.exp(1j * (2.0 * math.pi / 3.0 + delta))
+    return a * np.eye(3, dtype=complex) + b * c + np.conjugate(b) * (c @ c)
+
+
+def berry_connection(state_fn, x: float, step: float = 1e-7) -> complex:
+    psi = state_fn(x)
+    psi_f = state_fn(x + step)
+    deriv = (psi_f - psi) / step
+    return 1j * np.vdot(psi, deriv)
+
+
+def selected_line_slots(m: float) -> tuple[float, float]:
+    x = expm(H3(m, SELECTOR, SELECTOR))
+    v = float(np.real(x[2, 2]))
+    w = float(np.real(x[1, 1]))
+    return v, w
+
+
+def koide_root_pair(v: float, w: float) -> tuple[float, float]:
+    rad = math.sqrt(3.0 * (v * v + 4.0 * v * w + w * w))
+    return 2.0 * (v + w) - rad, 2.0 * (v + w) + rad
+
+
+def selected_line_small_amp(m: float) -> np.ndarray:
+    v, w = selected_line_slots(m)
+    u_small, _ = koide_root_pair(v, w)
+    return np.array([u_small, v, w], dtype=float)
+
+
+def normalized_selected_line_state(m: float) -> np.ndarray:
+    amp = selected_line_small_amp(m)
+    return amp / np.linalg.norm(amp)
+
+
+def selected_line_fourier_coeffs(m: float) -> np.ndarray:
+    return np.conjugate(U).T @ normalized_selected_line_state(m)
+
+
+def theta_phase(m: float) -> float:
+    theta = float(np.angle(selected_line_fourier_coeffs(m)[1]))
+    if theta < 0.0:
+        theta += 2.0 * math.pi
+    return theta
+
+
+def delta_offset(m: float) -> float:
+    return theta_phase(m) - 2.0 * math.pi / 3.0
+
+
+def selected_line_kappa(m: float) -> float:
+    v, w = selected_line_slots(m)
+    return (v - w) / (v + w)
+
+
+def projective_doublet_ratio(m: float) -> complex:
+    coeffs = selected_line_fourier_coeffs(m)
+    return coeffs[2] / coeffs[1]
+
+
+def canonical_spinor(theta: float) -> np.ndarray:
+    return np.array([1.0, np.exp(-2j * theta)], dtype=complex) / math.sqrt(2.0)
+
+
+def selected_line_scalar_from_delta(delta: float) -> float:
+    return -SQRT3 * math.cos(delta + math.pi / 6.0) / (
+        math.sqrt(2.0) + math.sin(delta + math.pi / 6.0)
+    )
+
+
+def k2_block(m: float) -> np.ndarray:
+    return kz_from_h(active_affine_h(m, SELECTOR, SELECTOR))[1:3, 1:3]
+
+
+def selected_slice_eigenvector(m: float, branch: int = 0) -> np.ndarray:
+    w, v = np.linalg.eigh(k2_block(m))
+    idx = np.argsort(w)
+    vec = v[:, idx[branch]]
+    vec = vec * np.exp(-1j * np.angle(vec[0]))
+    if vec[0].real < 0.0:
+        vec = -vec
+    return vec / np.linalg.norm(vec)
+
+
+def open_path_geometric_phase(m0: float, m1: float, branch: int = 0, n: int = 700) -> float:
+    ms = np.linspace(m0, m1, n)
+    vecs = [selected_slice_eigenvector(m, branch) for m in ms]
+    vals = []
+    mids = []
+    for a, b, va, vb in zip(ms[:-1], ms[1:], vecs[:-1], vecs[1:]):
+        dm = b - a
+        vals.append((1j * np.vdot(va, (vb - va) / dm)).real)
+        mids.append((a + b) / 2.0)
+    return float(np.angle(np.vdot(vecs[0], vecs[-1])) - np.trapezoid(vals, mids))
+
 
 print("=" * 72)
-print("Berry-phase theorem on S^2_Koide")
+print("Cycle 10B revised again -- actual-route Berry audit")
 print("=" * 72)
 
-print("\n(A) Analytic monopole holonomy")
+
+# ---------------------------------------------------------------------------
+# (A) Scale-free Koide geometry
+# ---------------------------------------------------------------------------
+
+print("\n(A) Actual scale-free Koide geometry")
 print("-" * 72)
 
-Q = 2.0 / 3.0
-C_A = 3
-d = 3
-n_flux = d - 1
-total_flux = 2 * np.pi * n_flux
-fraction = 1.0 / C_A
-gamma_one_period = total_flux * fraction
+deltas = np.linspace(0.0, 2.0 * math.pi, 721, endpoint=True)
+states = np.array([normalized_brannen(delta) for delta in deltas])
 
-print(f"  Total monopole flux: 2 pi (d-1) = {total_flux:.6f}")
-print(f"  Fraction per C_3 period: 1/C_A = {fraction:.6f}")
-print(f"  Holonomy over one period: gamma = {gamma_one_period:.10f}")
-print(f"  Expected: 2 pi Q = {2 * np.pi * Q:.10f}")
+singlet_components = states @ U_VEC
+doublet_vectors = states - np.outer(singlet_components, U_VEC)
+doublet_norms = np.linalg.norm(doublet_vectors, axis=1)
+koide_ratios = np.array([np.dot(state, state) / (np.sum(state) ** 2) for state in states])
+positive_mask = np.array([np.all(brannen_vector(delta) > 0.0) for delta in deltas], dtype=bool)
 
-check("(A1) gamma = 2 pi Q per C_3 period",
-      abs(gamma_one_period - 2 * np.pi * Q) < 1e-10,
-      f"diff = {abs(gamma_one_period - 2 * np.pi * Q):.2e}")
-
-delta_brannen = (gamma_one_period / (2 * np.pi)) / C_A
-check("(A2) Brannen delta per element = 2/9",
-      abs(delta_brannen - 2.0 / 9.0) < 1e-10,
-      f"delta = {delta_brannen:.10f}")
-
-full_period_brannen = gamma_one_period / (2 * np.pi)
-check("(A3) Full-period Brannen unit = Q",
-      abs(full_period_brannen - Q) < 1e-10,
-      f"Q_obs = {full_period_brannen:.10f}")
+check(
+    "(A1) Normalized Brannen family stays on the Koide cone",
+    np.max(np.abs(koide_ratios - KOIDE_RATIO)) < 1e-12,
+    f"max |K(delta)-2/3| = {np.max(np.abs(koide_ratios - KOIDE_RATIO)):.2e}",
+)
+check(
+    "(A2) The unit Koide locus has fixed singlet amplitude",
+    np.max(np.abs(singlet_components - math.sqrt(SINGLET_FRACTION))) < 1e-12,
+    f"singlet = {singlet_components[0]:.12f}",
+)
+check(
+    "(A3) The unit Koide locus has fixed doublet radius",
+    np.max(np.abs(doublet_norms - math.sqrt(1.0 - SINGLET_FRACTION))) < 1e-12,
+    f"doublet radius = {doublet_norms[0]:.12f}",
+)
+check(
+    "(A4) The positive charged-lepton sector is a proper sub-arc, not the full circle",
+    0.0 < float(np.mean(positive_mask)) < 1.0,
+    f"positive fraction of sampled deltas = {float(np.mean(positive_mask)):.4f}",
+)
 
 
 # ---------------------------------------------------------------------------
-# (B) Numerical Berry-curvature integration
+# (B) Ambient-S^2 support only
 # ---------------------------------------------------------------------------
 
-print("\n(B) Numerical Berry curvature integration")
+print("\n(B) Ambient-S^2 monopole support only")
 print("-" * 72)
 
+n_flux = 2.0
+theta_k = math.acos(math.sqrt(SINGLET_FRACTION))
+branch_wedge_holonomy = 2.0 * math.pi * n_flux / 3.0
+branch_delta = (branch_wedge_holonomy / (2.0 * math.pi)) / 3.0
+latitude_step_holonomy = (n_flux / 2.0) * (1.0 - math.cos(theta_k)) * (2.0 * math.pi / 3.0)
+latitude_delta = latitude_step_holonomy / (2.0 * math.pi * 3.0)
 
-def patch_holonomy(n, d_symm, n_theta=10000):
-    thetas = np.linspace(0, np.pi, n_theta)
-    sin_theta = np.sin(thetas)
-    theta_integral = np.trapezoid(sin_theta, thetas)
-    phi_integral = 2 * np.pi / d_symm
-    return (n / 2.0) * theta_integral * phi_integral
-
-
-numerical_holonomy = patch_holonomy(n_flux, C_A)
-print(f"  Numerical patch holonomy: {numerical_holonomy:.10f}")
-print(f"  Analytic 2 pi Q:         {2 * np.pi * Q:.10f}")
-check("(B1) Numerical integration matches analytic",
-      abs(numerical_holonomy - 2 * np.pi * Q) < 1e-3,
-      f"diff = {abs(numerical_holonomy - 2 * np.pi * Q):.2e}")
+check(
+    "(B1) The auxiliary ambient-S^2 wedge arithmetic reproduces 2/9",
+    abs(branch_delta - 2.0 / 9.0) < 1e-12,
+    f"delta_aux = {branch_delta:.12f}",
+)
+check(
+    "(B2) The same monopole connection restricted to the actual Koide latitude does not give 2/9",
+    abs(latitude_delta - 2.0 / 9.0) > 1e-3,
+    f"delta_lat = {latitude_delta:.12f}",
+)
 
 
 # ---------------------------------------------------------------------------
-# (C) Dimension-parametric scan
+# (C) Actual selected-line Berry carrier
 # ---------------------------------------------------------------------------
 
-print("\n(C) Dimension-parametric scan: delta_d = (d-1)/d^2")
+print("\n(C) Actual selected-line projective doublet ray")
 print("-" * 72)
 
-for d_test in [2, 3, 4, 5, 6, 7]:
-    n_test = d_test - 1
-    gamma_test = 2 * np.pi * n_test / d_test
-    Q_test = (d_test - 1.0) / d_test
-    delta_test = Q_test / d_test
-    pred = (d_test - 1.0) / (d_test * d_test)
-    check(f"(C{d_test - 1}) d={d_test}: delta = (d-1)/d^2 = {pred:.6f}",
-          abs(delta_test - pred) < 1e-10,
-          f"delta_obs = {delta_test:.6f}")
+m_pos = float(brentq(lambda m: selected_line_small_amp(m)[0], -1.3, -1.2))
+m_zero = float(brentq(lambda m: selected_line_small_amp(m)[0] - selected_line_small_amp(m)[1], -0.4, -0.2))
+m_target = float(brentq(lambda m: delta_offset(m) - DELTA_TARGET, m_pos + 1.0e-4, m_zero - 1.0e-4))
+kappa_target = selected_line_scalar_from_delta(DELTA_TARGET)
+_beta_star, kappa_star = hstar_witness_kappa()
+m_legacy = float(
+    brentq(lambda m: selected_line_kappa(m) - kappa_star, m_pos + 1.0e-4, m_zero - 1.0e-4)
+)
+
+first_branch_grid = np.linspace(m_pos + 1.0e-4, m_zero - 1.0e-4, 25)
+first_branch_dense = np.linspace(m_pos + 1.0e-4, m_zero - 1.0e-4, 200)
+first_branch_amplitudes = np.array([selected_line_small_amp(m) for m in first_branch_grid])
+first_branch_koide = np.array(
+    [np.dot(amp, amp) / (np.sum(amp) ** 2) for amp in first_branch_amplitudes],
+    dtype=float,
+)
+coeffs = np.array([selected_line_fourier_coeffs(m) for m in first_branch_grid])
+theta_grid = np.array([theta_phase(m) for m in first_branch_grid], dtype=float)
+projective_ratios = np.array([projective_doublet_ratio(m) for m in first_branch_grid], dtype=complex)
+delta_dense = np.array([delta_offset(m) for m in first_branch_dense], dtype=float)
+scalar_dense = np.array([selected_line_kappa(m) for m in first_branch_dense], dtype=float)
+scalar_bridge_dense = np.array(
+    [selected_line_scalar_from_delta(delta) for delta in delta_dense],
+    dtype=float,
+)
+
+check(
+    "(C1) The selected first branch stays exactly on the Koide cone",
+    np.max(np.abs(first_branch_koide - KOIDE_RATIO)) < 1e-12,
+    f"max |Q_sel-2/3| = {np.max(np.abs(first_branch_koide - KOIDE_RATIO)):.2e}",
+)
+check(
+    "(C2) The selected-line Fourier coefficients have fixed moduli and conjugate phases",
+    np.max(np.abs(np.abs(coeffs[:, 0]) - 1.0 / math.sqrt(2.0))) < 1e-12
+    and np.max(np.abs(np.abs(coeffs[:, 1]) - 0.5)) < 1e-12
+    and np.max(np.abs(coeffs[:, 2] - np.conjugate(coeffs[:, 1]))) < 1e-12,
+    "coeffs = (1/sqrt(2), 1/2 e^{i theta}, 1/2 e^{-i theta})",
+)
+check(
+    "(C3) The projective C_3 doublet coordinate has the forced doubled phase e^{-2 i theta}",
+    np.max(np.abs(projective_ratios - np.exp(-2j * theta_grid))) < 1e-12,
+    "ell(theta) = [1 : e^{-2 i theta}]",
+)
+check(
+    "(C4) There is a unique unphased first-branch point with theta = 2 pi / 3",
+    abs(delta_offset(m_zero)) < 1e-12 and abs(theta_phase(m_zero) - 2.0 * math.pi / 3.0) < 1e-12,
+    f"m_0 = {m_zero:.12f}",
+)
+check(
+    "(C5) The positivity threshold carries the exact offset pi / 12",
+    abs(delta_offset(m_pos) - math.pi / 12.0) < 1e-12,
+    f"m_pos = {m_pos:.12f}",
+)
+check(
+    "(C6) The selected-line scalar and Berry offset satisfy one exact branch relation",
+    np.max(np.abs(scalar_dense - scalar_bridge_dense)) < 1e-12,
+    "kappa_sel(delta) = -sqrt(3) cos(delta+pi/6)/(sqrt(2)+sin(delta+pi/6))",
+)
+check(
+    "(C7) On the first branch the selected-line scalar and Berry offset are one-to-one",
+    bool(np.all(np.diff(delta_dense) < 0.0)) and bool(np.all(np.diff(scalar_dense) < 0.0)),
+    f"delta in ({delta_dense[-1]:.6f}, {delta_dense[0]:.6f})",
+)
+conn_theta = berry_connection(canonical_spinor, theta_phase(m_target)).real
+check(
+    "(C8) The tautological equator connection is A = dtheta",
+    abs(conn_theta - 1.0) < 1e-6,
+    f"A(theta_2/9) = {conn_theta:.12f}",
+)
+check(
+    "(C9) Solving delta(m)=2/9 on the first branch gives one unique selected point",
+    abs(delta_offset(m_target) - DELTA_TARGET) < 1e-12,
+    f"m_Berry = {m_target:.12f}",
+)
+check(
+    "(C10) Berry holonomy from the unphased point to that point is exactly 2/9",
+    abs((theta_phase(m_target) - theta_phase(m_zero)) - delta_offset(m_target)) < 1e-12
+    and abs((theta_phase(m_target) - theta_phase(m_zero)) - DELTA_TARGET) < 1e-12,
+    f"hol = {theta_phase(m_target) - theta_phase(m_zero):.12f}",
+)
+check(
+    "(C11) The old H_* witness is only a near-coincident compatibility check",
+    abs(m_legacy - m_target) < 1.0e-4 and abs(kappa_star - kappa_target) < 1.0e-4,
+    f"dm = {m_target - m_legacy:+.2e}, dkappa = {kappa_target - kappa_star:+.2e}",
+)
 
 
 # ---------------------------------------------------------------------------
-# (D) AXIOM E corollary
+# (D) Natural selected-slice Berry selectors fail
 # ---------------------------------------------------------------------------
 
-print("\n(D) AXIOM E corollary: cos(3 arg b_s) = cos(Q)")
+print("\n(D) Natural selected-slice Berry selector no-go")
 print("-" * 72)
 
-theta_sqrt = 2 * np.pi / C_A + delta_brannen
-cos_3theta = np.cos(3 * theta_sqrt)
-cos_Q = np.cos(Q)
-print(f"  theta_sqrt = 2 pi/3 + delta = {theta_sqrt:.10f}")
-print(f"  cos(3 theta_sqrt) = {cos_3theta:.10f}")
-print(f"  cos(Q)            = {cos_Q:.10f}")
-check("(D1) AXIOM E recovered: cos(3 theta_sqrt) = cos(Q)",
-      abs(cos_3theta - cos_Q) < 1e-10,
-      f"diff = {abs(cos_3theta - cos_Q):.2e}")
+geom_lower_zero = open_path_geometric_phase(m_zero, m_target, branch=0)
+geom_lower_pos = open_path_geometric_phase(m_pos, m_target, branch=0)
+geom_upper_zero = open_path_geometric_phase(m_zero, m_target, branch=1)
+selector_root = float(
+    brentq(
+        lambda m: open_path_geometric_phase(m_zero, m, branch=0, n=700) - delta_offset(m),
+        -0.90,
+        -0.85,
+    )
+)
+
+check(
+    "(D1) Lower-eigenline geometric phase from the unphased point is not 2/9 at the Berry-selected point",
+    abs(geom_lower_zero - 2.0 / 9.0) > 1e-2,
+    f"gamma = {geom_lower_zero:.12f}",
+)
+check(
+    "(D2) Lower-eigenline geometric phase from threshold is not 2/9 at the Berry-selected point",
+    abs(geom_lower_pos - 2.0 / 9.0) > 1e-2,
+    f"gamma = {geom_lower_pos:.12f}",
+)
+check(
+    "(D3) Upper-eigenline geometric phase from the unphased point is not 2/9 at the Berry-selected point",
+    abs(geom_upper_zero - 2.0 / 9.0) > 1e-2,
+    f"gamma = {geom_upper_zero:.12f}",
+)
+check(
+    "(D4) Solving gamma_lower(m_0 -> m) = delta(m) selects a different point than the Berry-selected point",
+    abs(selector_root - m_target) > 0.1,
+    f"m_sel = {selector_root:.12f}, m_Berry = {m_target:.12f}",
+)
 
 
 # ---------------------------------------------------------------------------
-# (E) Symbolic derivation
+# (E) Retained circulant moduli still have zero Berry phase
 # ---------------------------------------------------------------------------
 
-print("\n(E) Symbolic derivation of the theorem")
+print("\n(E) Retained circulant moduli carry zero Berry phase")
 print("-" * 72)
 
-if sp is None:
-    # Skip silently with PASS stubs so the count still matches
-    check("(E1) Symbolic form = 2 pi n / d", True, "sympy unavailable; bypassed")
-    check("(E2) n = d - 1 gives Q = (d-1)/d", True, "sympy unavailable; bypassed")
-    check("(E3) Brannen delta = (d-1)/d^2", True, "sympy unavailable; bypassed")
-    check("(E4) At d=3, delta = 2/9 exactly", True, "sympy unavailable; bypassed")
-else:
-    theta_s = sp.Symbol('theta', real=True)
-    phi_s = sp.Symbol('phi', real=True)
-    n_s = sp.Symbol('n', integer=True, positive=True)
-    d_s = sp.Symbol('d', integer=True, positive=True)
-    F_s = (n_s / 2) * sp.sin(theta_s)
-    holonomy_sym = sp.integrate(sp.integrate(F_s, (theta_s, 0, sp.pi)),
-                                (phi_s, 0, 2 * sp.pi / d_s))
-    holonomy_sym = sp.simplify(holonomy_sym)
-    check("(E1) Symbolic form = 2 pi n / d",
-          sp.simplify(holonomy_sym - 2 * sp.pi * n_s / d_s) == 0,
-          f"holonomy = {holonomy_sym}")
-    Q_sym_form = sp.simplify(holonomy_sym.subs(n_s, d_s - 1) / (2 * sp.pi))
-    check("(E2) n = d - 1 gives Q = (d-1)/d",
-          sp.simplify(Q_sym_form - (d_s - 1) / d_s) == 0,
-          f"Q_sym = {Q_sym_form}")
-    delta_sym = sp.simplify(Q_sym_form / d_s)
-    check("(E3) Brannen delta = (d-1)/d^2",
-          sp.simplify(delta_sym - (d_s - 1) / d_s ** 2) == 0,
-          f"delta_sym = {delta_sym}")
-    delta_d3 = sp.simplify(delta_sym.subs(d_s, 3))
-    check("(E4) At d=3, delta = 2/9 exactly",
-          sp.simplify(delta_d3 - sp.Rational(2, 9)) == 0,
-          f"delta(d=3) = {delta_d3}")
+a_test = 1.2
+rho_test = 0.4
+max_offdiag = 0.0
+for delta in np.linspace(0.0, 2.0 * math.pi, 101, endpoint=False):
+    diag_form = np.conjugate(U).T @ circulant_family(a_test, rho_test, delta) @ U
+    offdiag = diag_form - np.diag(np.diag(diag_form))
+    max_offdiag = max(max_offdiag, float(np.max(np.abs(offdiag))))
 
+check(
+    "(E1) A fixed Fourier basis diagonalizes the whole circulant delta-family",
+    max_offdiag < 1e-12,
+    f"max offdiag = {max_offdiag:.2e}",
+)
+fixed_basis_connections = [
+    berry_connection(lambda delta, vec=vec: vec, 0.4) for vec in (U[:, 0], U[:, 1], U[:, 2])
+]
+check(
+    "(E2) Berry connection of the circulant eigenvectors is zero",
+    max(abs(val) for val in fixed_basis_connections) < 1e-9,
+    f"max |A_k| = {max(abs(val) for val in fixed_basis_connections):.2e}",
+)
+state_connections = [
+    berry_connection(
+        lambda delta: np.array(
+            [
+                1.0 / math.sqrt(2.0),
+                0.5 * np.exp(1j * delta),
+                0.5 * np.exp(-1j * delta),
+            ],
+            dtype=complex,
+        ),
+        delta,
+    )
+    for delta in np.linspace(0.0, 2.0 * math.pi, 13)
+]
+check(
+    "(E3) The symmetric-gauge Koide state has zero connection on delta-moduli",
+    max(abs(val) for val in state_connections) < 5e-7,
+    f"max |A_state| = {max(abs(val) for val in state_connections):.2e}",
+)
 
-# ---------------------------------------------------------------------------
-# (F) Gauge invariance (Stokes)
-# ---------------------------------------------------------------------------
-
-print("\n(F) Gauge invariance via Stokes")
-print("-" * 72)
-
-
-def flux_via_stokes(n, d_symm, n_theta=10000):
-    thetas = np.linspace(0, np.pi, n_theta)
-    sin_theta = np.sin(thetas)
-    theta_integral = np.trapezoid(sin_theta, thetas)
-    phi_integral = 2 * np.pi / d_symm
-    return (n / 2.0) * theta_integral * phi_integral
-
-
-flux = flux_via_stokes(n_flux, C_A)
-check("(F1) Stokes flux = 2 pi n / d (analytic)",
-      abs(flux - 2 * np.pi * n_flux / C_A) < 1e-3,
-      f"diff = {abs(flux - 2 * np.pi * n_flux / C_A):.2e}")
-
-
-# ---------------------------------------------------------------------------
-# (G) C_3 equivariance
-# ---------------------------------------------------------------------------
-
-print("\n(G) C_3 equivariance of the connection")
-print("-" * 72)
-print("  F = (n/2) sin(theta) d theta ^ d phi is manifestly C_3-invariant.")
-print("  A_N = (n/2)(1 - cos theta) d phi is C_3-invariant (shift in phi).")
-check("(G1) C_3 equivariance of F and A_N", True, "by construction")
-
-
-# ---------------------------------------------------------------------------
-# (H) 7 no-go matrix
-# ---------------------------------------------------------------------------
-
-print("\n(H) Falsification -- 7 no-go checks")
-print("-" * 72)
-
-check("(H1) PMNS sigma = 0", True, "orthogonal lane")
-check("(H2) PMNS right-conjugacy invariant",
-      abs(np.cos(3 * (theta_sqrt + 2 * np.pi / 3)) - cos_Q) < 1e-10,
-      "3*(theta+2pi/3) shifts by 2 pi")
-check("(H3) ABCC CP-phase",
-      abs(np.cos(3 * theta_sqrt) - np.cos(3 * (-theta_sqrt))) < 1e-10,
-      "cos(3 theta) CP-symmetric")
-check("(H4) DM Z^3-doublet same-surface numerator", True, "orthogonal lane")
-check("(H5) Quark up-amplitude native affine", True, "orthogonal lane")
-check("(H6) Koide positive-parent-axis obstruction", True, "untouched")
-check("(H7) DM Z^3-doublet current-bank blindness", True, "orthogonal lane")
-
-
-# ---------------------------------------------------------------------------
-# (I) cl(3) minimality consistency
-# ---------------------------------------------------------------------------
-
-print("\n(I) cl(3)-minimality consistency")
-print("-" * 72)
-print("  d = |C_3| = 3 is retained on main (cl3-minimality-conditional-support).")
-print("  Berry theorem uses d as INPUT; n_flux = d - 1 = 2 = dim(doublet).")
-check("(I1) cl3-minimality compatible", True, "d=3 threaded consistently")
-
-
-# ---------------------------------------------------------------------------
-# (J) Uniqueness of n = 2
-# ---------------------------------------------------------------------------
-
-print("\n(J) Uniqueness: among monopole bundles, only n = 2 gives delta = 2/9")
-print("-" * 72)
-for n in [0, 1, 2, 3, 4]:
-    gm = 2 * np.pi * n / C_A / (2 * np.pi)
-    delta = gm / C_A
-    print(f"  n={n}: gamma/(2 pi) per period = {gm:.4f}, delta = {delta:.4f}")
-check("(J1) n = 2 uniquely reproduces Brannen 2/9",
-      True, "dim(doublet) = 2 forced by cubic-moment channel selection")
-
-
-# ---------------------------------------------------------------------------
-# Summary
-# ---------------------------------------------------------------------------
 
 print()
 print("=" * 72)
 print(f"PASS={PASS} FAIL={FAIL}")
 print("=" * 72)
-
-if FAIL > 0:
-    sys.exit(1)
+sys.exit(0 if FAIL == 0 else 1)

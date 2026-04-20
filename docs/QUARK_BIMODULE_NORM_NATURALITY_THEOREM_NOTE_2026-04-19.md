@@ -2,9 +2,19 @@
 
 **Date:** 2026-04-19  
 **Lane:** Quark up-amplitude / bimodule LO closure  
-**Status:** same-day strengthening theorem; this still adds bimodule structure
-above the previously retained quark packet, but it shows that BICAC is not an
-arbitrary endpoint choice once normalized affine naturality is imposed  
+**Status:** same-day strengthening theorem; this theorem adds three explicit
+bimodule structural conditions (complementarity, endpoint normalization,
+affine naturality) above the previously retained quark packet and shows that
+BICAC is the unique normalized affine extension of the LO split law under
+those three conditions. The three conditions are named explicitly in §0
+below and are not themselves derived on this branch — they are the cost of
+this particular strengthening. **After the same-day
+JTS-affine-physical-carrier theorem
+(`docs/QUARK_JTS_AFFINE_PHYSICAL_CARRIER_THEOREM_NOTE_2026-04-19.md`) and
+ISSR1 forcing, NORM-Naturality is no longer load-bearing for the Quark
+closure** — it is a structurally stronger follow-on statement about the
+full ownership interval, not a required input for BICAC-LO at the physical
+point.  
 **Primary runner:** `scripts/frontier_quark_bimodule_norm_naturality_theorem.py`
 
 ---

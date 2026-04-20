@@ -34,11 +34,17 @@ Pi_5 p = sin_d e_5,
 where `Pi_5 = |e_5><e_5|` is the canonical `5`-projector.
 
 The exact mixed `A1 -> 5` transfer induced by the same physical ray is the
-unique rank-one operator
+rank-1 operator
 
 ```text
 T_p := Pi_5 |p><e_1| = sin_d |e_5><e_1|.
 ```
+
+(The `e_1 -> Pi_5 p` polarization implicit in that choice is discussed in
+§2 below; alternative rank-1 choices on the retained data are enumerated
+there. On the cleaner affine-physical-carrier derivation
+[`QUARK_JTS_AFFINE_PHYSICAL_CARRIER_THEOREM_NOTE_2026-04-19.md`] no
+operator choice is needed.)
 
 Applied to the retained down-sector occupancy `d := a_d e_1`, it gives
 
@@ -128,7 +134,7 @@ Pi_5 p = sin_d e_5.
 ```
 
 Now inject a unit `A1` occupancy into the same physical ray and immediately
-project to the `5` channel. The resulting operator is forced:
+project to the `5` channel. The resulting `A1 -> 5` channel map is:
 
 ```text
 T_p := Pi_5 |p><e_1|.
@@ -143,14 +149,32 @@ T_p       = [[0, 0], [sin_d, 0]]
          = sin_d |e_5><e_1|.
 ```
 
-So `T_p` is the unique rank-one operator on the physical carrier with
+`T_p` is the rank-1 operator on `H_(1+5)` that satisfies
 
 ```text
 T_p e_1 = Pi_5 p,
-T_p e_5 = 0.
+T_p e_5 = 0,
 ```
 
-That is the exact `A1 -> 5` channel map induced by the physical unit ray.
+i.e. it is the `A1 -> 5` transfer induced by first applying the unit ray and
+then projecting onto the `5` channel. **Honest qualifier:** on the retained
+data, there are five structurally distinct rank-1 operators built from
+`{Pi_5, |p>, <p|, |e_1>, <e_1|, |e_5>, <e_5|}`. The specific choice
+`Pi_5 |p><e_1|` realises the polarization "evaluate on `e_1`, project to `5`
+after applying `p`" — which is the same content the JTS-as-residue framing
+used to carry. So the transfer-operator derivation is a valid path to
+BICAC-LO **once that polarization is named**, but not the only such choice.
+
+**Cleaner canonical derivation (same LO conclusion).** Jon's same-day
+JTS-affine-physical-carrier theorem
+(`docs/QUARK_JTS_AFFINE_PHYSICAL_CARRIER_THEOREM_NOTE_2026-04-19.md`) reaches
+the same LO identity `a_u + a_d sin_d = sin_d` without any operator choice
+or polarization: because `cos_d != 0`, `{p, e_5}` is a basis of `H_(1+5)`,
+so the perturbation cone `Pert(p) = span{p, e_5} = H_(1+5)` equals the
+exact physical carrier by linear algebra alone, and exact `1(+)5` channel
+completeness then supplies the pinning identity. That path is the current
+canonical route; the transfer-operator framing below is retained as a second
+derivation that relies on naming the `e_1 -> Pi_5 p` polarization explicitly.
 
 ## 3. Forced channel completeness
 
