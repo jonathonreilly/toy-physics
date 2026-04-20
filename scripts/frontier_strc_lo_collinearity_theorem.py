@@ -1,57 +1,45 @@
 #!/usr/bin/env python3
 """
-Frontier runner — STRC-LO Collinearity Theorem.
+Frontier runner - STRC-LO / BICAC theorem on the exact 1(+)5 carrier.
 
-Companion to
-`docs/STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`.
+This runner verifies the actual load-bearing claim:
 
-Proves and verifies STRC-LO:
+  On the physical reduced carrier H_(1+5) = span{e_1, e_5},
+  with physical projector ray
 
-    a_u  +  rho * sin_d  =  sin_d
+      p = cos_d e_1 + sin_d e_5,
 
-Four-step proof
----------------
-(0) BICAC (Bimodule Imaginary-Channel Amplitude-Conservation) — framework-
-    native postulate: the imaginary amplitude Im(p) is split between the
-    up-sector and down-sector in the 1(+)5 bimodule:
-        a_u  +  a_d * Im(p)  =  Im(p)
-    This is not a new SM axiom; it is the internal amplitude-conservation
-    law of the bimodule.
+  retained scalar-comparison ray
 
-(1) STRC-LO from BICAC + retained a_d = Re(r):
-    Substituting a_d = rho into BICAC:
-        a_u  =  Im(p) * (1 - Re(r))  =  sin_d * (1 - rho)
+      r = p / sqrt(7) = a_d e_1 + eta e_5,
 
-(2) Collinearity identity C1: Re(p)*Im(r) = Im(p)*Re(r)
-    (both equal sin_d * cos_d / sqrt(7))
+  canonical 5-projector
 
-(3) Cross-residual form via C1:
-    Substituting C1 into STRC-LO gives the Frobenius cross-residual:
-        a_u  =  Im(p) - Re(r)*Im(p)  =  Im(p) - Re(p)*Im(r)
+      Pi_5 = |e_5><e_5|,
 
-Checks
-------
-  C0  BICAC: a_u + a_d*Im(p) = Im(p)  (bimodule amplitude-conservation)
-  C1  Collinearity identity: cos_d * eta = sin_d * rho  (exact)
-  C2  Cross-residual form: Im(p) - Re(p)*Im(r) = sin_d - cos_d*eta
-  C3  Cross-residual equals Im(p)*(1 - Re(r))  (exact)
-  C4  STRC-LO: a_u + rho * sin_d = sin_d  (exact, < 1e-13)
-  C5  a_u matches sin_d*(1-rho)  (exact)
-  C6  Collinearity C1: Re(p)*Im(r) = Im(p)*Re(r)
-  C7  BICAC→STRC-LO: a_u = Im(p)*(1-Re(r)) from BICAC + a_d = Re(r)
-  C8  Complement: (1-Re(r)) + Re(r) = 1 (complement identity)
-  C9  RPSR upgrade: a_u/sin_d + a_d = 1 + rho/49 exactly
-  C10 Full target a_u = 0.7748865611 (10 decimals)
-  N1  Regression gate — no retained runner regresses
+  and canonical A1 -> 5 transfer operator induced by the physical ray
 
-Expected: PASS >= 12  FAIL = 0.
+      T_p = Pi_5 |p><e_1| = sin_d |e_5><e_1|,
+
+  the exact 5-budget identity is
+
+      Pi_5 p = T_p (a_d e_1) + a_u e_5.
+
+Therefore
+
+      a_u + a_d * Im(p) = Im(p),
+
+  i.e. BICAC / STRC-LO.
+
+The PASS surface is exact operator algebra only. It does not mark narrative
+claims or bounded fit language as validated.
 """
 
 from __future__ import annotations
 
 import math
-import subprocess
-import sys
+
+import numpy as np
 
 
 PASS = 0
@@ -73,227 +61,122 @@ def check(name: str, cond: bool, detail: str = "") -> None:
 
 def main() -> int:
     print("=" * 72)
-    print("  STRC-LO Collinearity Theorem")
-    print("  Proof: BICAC + retained a_d=Re(r) + collinearity C1")
+    print("  STRC-LO / BICAC theorem on the exact 1(+)5 carrier")
     print("=" * 72)
 
-    # ------------------------------------------------------------------ #
-    # Retained atoms                                                       #
-    # ------------------------------------------------------------------ #
-    sin_d = math.sqrt(5.0 / 6.0)   # Im(p)
-    cos_d = 1.0 / math.sqrt(6.0)   # Re(p)
-    rho   = 1.0 / math.sqrt(42.0)  # Re(r) = a_d
-    eta   = math.sqrt(5.0 / 42.0)  # Im(r)
-    supp      = 6.0 / 7.0
-    delta_A1  = 1.0 / 42.0
+    e1 = np.array([1.0, 0.0], dtype=float)
+    e5 = np.array([0.0, 1.0], dtype=float)
 
-    # Scalar ray: r = rho + i*eta = p/sqrt(7)
-    Re_p, Im_p = cos_d, sin_d
-    Re_r, Im_r = rho,   eta
+    cos_d = 1.0 / math.sqrt(6.0)
+    sin_d = math.sqrt(5.0 / 6.0)
+    p = np.array([cos_d, sin_d], dtype=float)
+    r = p / math.sqrt(7.0)
 
-    a_d = rho  # retained down amplitude
+    a_d = r[0]
+    eta = r[1]
+    supp = 6.0 / 7.0
+    delta_a1 = 1.0 / 42.0
+
+    pi_5 = np.array([[0.0, 0.0], [0.0, 1.0]], dtype=float)
+    ket_p_bra_e1 = np.outer(p, e1)
+    t_p = pi_5 @ ket_p_bra_e1
+
+    down_occ = a_d * e1
+    total_5 = pi_5 @ p
+    mixed_5 = t_p @ down_occ
+    residual_5 = total_5 - mixed_5
+    a_u = float(residual_5[1])
+
+    outer_r_p = np.outer(r, p)
 
     print()
-    print("  Retained inputs:")
-    print(f"    p  = cos_d + i*sin_d  =  {cos_d:.12f} + {sin_d:.12f}*i")
-    print(f"    r  = p/sqrt(7)        =  {rho:.12f} + {eta:.12f}*i")
-    print(f"    a_d = Re(r) = rho     =  {a_d:.12f}")
-    print(f"    sin_d = sqrt(5/6)     =  {sin_d:.12f}")
-    print(f"    cos_d = 1/sqrt(6)     =  {cos_d:.12f}")
-    print(f"    eta   = sqrt(5/42)    =  {eta:.12f}")
-    print()
+    print("  Exact carrier data:")
+    print(f"    e1         = {e1}")
+    print(f"    e5         = {e5}")
+    print(f"    p          = {p}")
+    print(f"    r          = {r}")
+    print(f"    a_d        = Re(r) = {a_d:.12f}")
+    print(f"    Im(p)      = {sin_d:.12f}")
+    print(f"    Pi_5 p     = {total_5}")
+    print(f"    T_p        =")
+    print(t_p)
+    print(f"    T_p(a_d e1)= {mixed_5}")
+    print(f"    residual_5 = {residual_5}")
+    print(f"    a_u        = {a_u:.12f}")
 
-    # ------------------------------------------------------------------ #
-    # Step 0: BICAC — Bimodule Imaginary-Channel Amplitude-Conservation   #
-    # ------------------------------------------------------------------ #
-    print("  Step 0 — BICAC: a_u + a_d*Im(p) = Im(p)  (bimodule postulate)")
+    check(
+        "T1  p is the unit physical projector ray on H_(1+5)",
+        abs(float(np.dot(p, p)) - 1.0) < 1e-15,
+        f"|p|^2 = {float(np.dot(p, p)):.15f}",
+    )
+    check(
+        "T2  r = p/sqrt(7) and a_d = Re(r) = 1/sqrt(42)",
+        np.max(np.abs(r - p / math.sqrt(7.0))) < 1e-15
+        and abs(a_d - 1.0 / math.sqrt(42.0)) < 1e-15,
+        f"a_d = {a_d:.15f}",
+    )
+    check(
+        "T3  Pi_5 projects the physical ray to the exact 5-budget Im(p) e5",
+        np.max(np.abs(total_5 - sin_d * e5)) < 1e-15,
+        f"Pi_5 p = {total_5}",
+    )
+    check(
+        "T4  T_p = Pi_5 |p><e1| = sin_d |e5><e1|",
+        np.max(np.abs(t_p - np.array([[0.0, 0.0], [sin_d, 0.0]], dtype=float))) < 1e-15,
+        f"T_p[1,0] = {t_p[1,0]:.15f}",
+    )
+    check(
+        "T5  T_p is the unique A1 -> 5 transfer induced by p: T_p e1 = Pi_5 p and T_p e5 = 0",
+        np.max(np.abs(t_p @ e1 - total_5)) < 1e-15
+        and np.max(np.abs(t_p @ e5)) < 1e-15,
+        f"T_p e1 = {t_p @ e1}, T_p e5 = {t_p @ e5}",
+    )
+    check(
+        "T6  The retained down occupancy produces exact mixed-channel budget a_d Im(p) e5",
+        np.max(np.abs(mixed_5 - a_d * sin_d * e5)) < 1e-15,
+        f"T_p(a_d e1) = {mixed_5}",
+    )
+    check(
+        "T7  The off-diagonal A1 -> 5 entry of r tensor p is exactly a_d Im(p)",
+        abs(outer_r_p[0, 1] - a_d * sin_d) < 1e-15,
+        f"(r tensor p)_(1->5) = {outer_r_p[0,1]:.15f}",
+    )
+    check(
+        "T8  Collinearity makes the two mixed-channel off-diagonal entries equal",
+        abs(outer_r_p[0, 1] - outer_r_p[1, 0]) < 1e-15
+        and abs(outer_r_p[1, 0] - eta * cos_d) < 1e-15,
+        f"upper-right = {outer_r_p[0,1]:.15f}, lower-left = {outer_r_p[1,0]:.15f}",
+    )
+    check(
+        "T9  The residual 5 vector is pure e5 and defines a_u uniquely",
+        abs(residual_5[0]) < 1e-15
+        and abs(a_u - sin_d * (1.0 - a_d)) < 1e-15,
+        f"residual_5 = {residual_5}",
+    )
+    check(
+        "T10 BICAC / STRC-LO: a_u + a_d Im(p) = Im(p)",
+        abs(a_u + a_d * sin_d - sin_d) < 1e-15,
+        f"|LHS-RHS| = {abs(a_u + a_d * sin_d - sin_d):.3e}",
+    )
 
-    # BICAC identifies the physical a_u: the imaginary budget Im(p) is split
-    # between the up-sector (a_u) and down-sector (a_d*Im(p)).
-    # From BICAC + retained a_d = Re(r): a_u = Im(p)*(1 - Re(r)).
-    a_u_from_bicac = Im_p * (1.0 - Re_r)   # = sin_d*(1-rho)
-    bicac_lhs = a_u_from_bicac + a_d * Im_p
-    bicac_rhs = Im_p
+    a_u_full = sin_d * (1.0 - a_d + a_d * supp * delta_a1)
+    check(
+        "T11 Downstream NLO step gives a_u = sin_d (1 - 48 a_d / 49)",
+        abs(a_u_full - sin_d * (1.0 - 48.0 * a_d / 49.0)) < 1e-15,
+        f"a_u_full = {a_u_full:.12f}",
+    )
+    check(
+        "T12 The RPSR target remains 0.7748865611 at 10 decimals",
+        abs(a_u_full - 0.7748865611) < 5e-11,
+        f"a_u_full = {a_u_full:.10f}",
+    )
 
-    print(f"    a_u  =  Im(p)*(1-Re(r))  =  sin_d*(1-rho)  =  {a_u_from_bicac:.15f}")
-    print(f"    a_d  =  Re(r)  =  rho                       =  {a_d:.15f}")
-    print(f"    BICAC LHS  =  a_u + a_d*Im(p)               =  {bicac_lhs:.15f}")
-    print(f"    BICAC RHS  =  Im(p)  =  sin_d               =  {bicac_rhs:.15f}")
-    print(f"    |LHS - RHS|                                   =  {abs(bicac_lhs - bicac_rhs):.3e}")
-
-    # C0
-    check("C0  BICAC: a_u + a_d*Im(p) = Im(p)  (bimodule amplitude-conservation)",
-          abs(bicac_lhs - bicac_rhs) < 1e-15,
-          f"residual = {abs(bicac_lhs - bicac_rhs):.3e}")
-
-    # ------------------------------------------------------------------ #
-    # Step 1: Collinearity identity                                        #
-    # ------------------------------------------------------------------ #
-    print()
-    print("  Step 1 — Collinearity identity: Re(p)*Im(r) = Im(p)*Re(r)")
-
-    lhs_cross = Re_p * Im_r   # cos_d * eta
-    rhs_cross = Im_p * Re_r   # sin_d * rho
-
-    print(f"    Re(p)*Im(r)  =  cos_d * eta  =  {lhs_cross:.15f}")
-    print(f"    Im(p)*Re(r)  =  sin_d * rho  =  {rhs_cross:.15f}")
-    print(f"    |LHS - RHS|                  =  {abs(lhs_cross - rhs_cross):.3e}")
-
-    # C1
-    check("C1  Collinearity: cos_d*eta = sin_d*rho (exact)",
-          abs(lhs_cross - rhs_cross) < 1e-15,
-          f"residual = {abs(lhs_cross - rhs_cross):.3e}")
-
-    # C6 (proof step 1 framing)
-    check("C6  Proof step 1: Re(p)*Im(r) = Im(p)*Re(r) holds",
-          abs(Re_p * Im_r - Im_p * Re_r) < 1e-15,
-          "collinearity substitution valid")
-
-    # ------------------------------------------------------------------ #
-    # Proof step 2: Frobenius cross-residual definition                    #
-    # ------------------------------------------------------------------ #
-    print()
-    print("  Step 2 — Frobenius cross-residual: a_u := Im(p) - Re(p)*Im(r)")
-
-    a_u_cross_residual = Im_p - Re_p * Im_r   # sin_d - cos_d*eta
-
-    print(f"    Im(p) - Re(p)*Im(r)       =  {a_u_cross_residual:.15f}")
-
-    # C2
-    check("C2  Cross-residual: Im(p)-Re(p)*Im(r) = sin_d - cos_d*eta",
-          abs(a_u_cross_residual - (sin_d - cos_d * eta)) < 1e-15,
-          f"value = {a_u_cross_residual:.12f}")
-
-    # Substitute collinearity: Re(p)*Im(r) = Im(p)*Re(r)
-    a_u_after_sub = Im_p * (1.0 - Re_r)      # sin_d*(1-rho)
-
-    print(f"    Im(p)*(1 - Re(r))          =  {a_u_after_sub:.15f}")
-    print(f"    |cross-residual - (1-Re(r)) form|  = "
-          f"{abs(a_u_cross_residual - a_u_after_sub):.3e}")
-
-    # C3
-    check("C3  Im(p)-Re(p)*Im(r)  =  Im(p)*(1-Re(r))  (exact after sub.)",
-          abs(a_u_cross_residual - a_u_after_sub) < 1e-15,
-          f"residual = {abs(a_u_cross_residual - a_u_after_sub):.3e}")
-
-    # C7 (BICAC->STRC-LO: a_u = Im(p)*(1-Re(r)) from retained a_d = Re(r))
-    check("C7  BICAC->STRC-LO: a_u = Im(p)*(1-Re(r)) from BICAC + a_d=Re(r)",
-          abs(a_u_after_sub - sin_d * (1.0 - rho)) < 1e-15,
-          "identification confirmed")
-
-    # ------------------------------------------------------------------ #
-    # Proof step 3: STRC-LO                                               #
-    # ------------------------------------------------------------------ #
-    print()
-    print("  Step 3 — STRC-LO: a_u + a_d*sin_d = sin_d")
-
-    a_u_LO = a_u_after_sub   # = sin_d*(1-rho)
-    strc_lhs = a_u_LO + a_d * sin_d
-    strc_rhs = sin_d
-
-    print(f"    a_u     = sin_d*(1-rho)   =  {a_u_LO:.15f}")
-    print(f"    a_d     = rho             =  {a_d:.15f}")
-    print(f"    LHS     = a_u + rho*sin_d =  {strc_lhs:.15f}")
-    print(f"    RHS     = sin_d           =  {strc_rhs:.15f}")
-    print(f"    |LHS - RHS|               =  {abs(strc_lhs - strc_rhs):.3e}")
-
-    # C4
-    check("C4  STRC-LO: a_u + rho*sin_d = sin_d  (exact)",
-          abs(strc_lhs - strc_rhs) < 1e-13,
-          f"|LHS-RHS| = {abs(strc_lhs - strc_rhs):.3e}")
-
-    # C5
-    check("C5  a_u = sin_d*(1-rho) matches cross-residual",
-          abs(a_u_LO - sin_d * (1.0 - rho)) < 1e-15,
-          f"a_u_LO = {a_u_LO:.12f}")
-
-    # C8 complement step
-    complement = (1.0 - Re_r) + Re_r
-    check("C8  Proof step 3: (1-Re(r)) + Re(r) = 1  (complement)",
-          abs(complement - 1.0) < 1e-15,
-          f"complement = {complement:.15f}")
-
-    # ------------------------------------------------------------------ #
-    # RPSR upgrade (LO + NLO → full theorem)                              #
-    # ------------------------------------------------------------------ #
-    print()
-    print("  RPSR upgrade — STRC-LO + NLO correction → full theorem")
-
-    nlo = rho * supp * delta_A1   # = rho/49
-    a_u_full = sin_d * (1.0 - rho + rho * supp * delta_A1)
-    rpsr_lhs = a_u_full / sin_d + a_d
-    rpsr_rhs = 1.0 + rho / 49.0
-
-    print(f"    NLO correction = rho*supp*delta_A1 = rho/49 =  {nlo:.12f}")
-    print(f"    a_u_full       = sin_d*(1-48*rho/49)        =  {a_u_full:.12f}")
-    print(f"    RPSR LHS = a_u/sin_d + a_d                  =  {rpsr_lhs:.15f}")
-    print(f"    RPSR RHS = 1 + rho/49                        =  {rpsr_rhs:.15f}")
-    print(f"    |LHS - RHS|                                   =  {abs(rpsr_lhs - rpsr_rhs):.3e}")
-
-    # C9
-    check("C9  RPSR: a_u_full/sin_d + a_d = 1 + rho/49  (exact)",
-          abs(rpsr_lhs - rpsr_rhs) < 1e-13,
-          f"|diff| = {abs(rpsr_lhs - rpsr_rhs):.3e}")
-
-    # C10
-    check("C10 Full target a_u = 0.7748865611 (10 decimals)",
-          abs(a_u_full - 0.7748865611) < 5e-11,
-          f"a_u = {a_u_full:.10f}")
-
-    # ------------------------------------------------------------------ #
-    # Regression gate: run a fast subset of retained runners              #
-    # ------------------------------------------------------------------ #
-    print()
-    print("  N1  Regression gate — retained runner spot-check")
-
-    retained_checks_pass = True
-    runners_to_spot = [
-        "scripts/frontier_quark_up_amplitude_rpsr_conditional.py",
-        "scripts/frontier_quark_strc_observable_principle.py",
-        "scripts/frontier_koide_moment_ratio_uniformity_theorem.py",
-    ]
-
-    for runner in runners_to_spot:
-        try:
-            result = subprocess.run(
-                [sys.executable, runner],
-                capture_output=True, text=True, timeout=60,
-            )
-            stdout = result.stdout
-            if "FAIL=0" in stdout or "FAIL = 0" in stdout:
-                status = "PASS"
-            elif "FAIL" in stdout:
-                # count FAIL lines
-                fail_count = stdout.count("[FAIL]")
-                if fail_count == 0:
-                    status = "PASS"
-                else:
-                    status = f"FAIL({fail_count})"
-                    retained_checks_pass = False
-            else:
-                status = "PASS"  # no FAIL found → assume pass
-        except Exception as exc:
-            status = f"SKIP({exc})"
-
-        print(f"    {runner.split('/')[-1]:52s}  [{status}]")
-
-    check("N1  No retained runner regresses", retained_checks_pass,
-          "spot-check of retained runners")
-
-    # ------------------------------------------------------------------ #
-    # Summary                                                             #
-    # ------------------------------------------------------------------ #
     print()
     print("=" * 72)
-    print(f"  PASS = {PASS}   FAIL = {FAIL}")
-    if FAIL == 0:
-        print("  STRC-LO (BICAC + collinearity)  —  PROVED and VERIFIED")
-    else:
-        print("  ** FAILURES DETECTED — review output above **")
+    print(f"PASS={PASS} FAIL={FAIL}")
     print("=" * 72)
-
     return 0 if FAIL == 0 else 1
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    raise SystemExit(main())

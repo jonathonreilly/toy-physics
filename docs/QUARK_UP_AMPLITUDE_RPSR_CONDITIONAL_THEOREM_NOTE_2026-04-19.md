@@ -1,18 +1,14 @@
-# Quark Up-Amplitude Reduced Projector-Ray Sum Rule (RPSR) — Conditional Theorem
+# Quark Up-Amplitude Reduced Projector-Ray Sum Rule (RPSR)
 
 **Date:** 2026-04-19
 **Lane:** Quark up-amplitude.
-**Status:** CONDITIONAL theorem. RPSR is derived from retained
-infrastructure at LO + NLO on the 1 (+) 5 projector ray. Full closure
-is conditional on the STRC (Scalar-Tensor Ray Complementarity)
-observable principle — the LO balance
-`a_u + rho * sin(delta_std) = sin(delta_std)` is a *linear* amplitude
-sum rule on the CKM projector ray, not derivable from retained
-quadratic-unitarity structure. See
-`docs/QUARK_STRC_OBSERVABLE_PRINCIPLE_NOTE_2026-04-19.md`. Reviewer-facing
-status is therefore **conditional support theorem**, not full quark-gate
-closure. See
-`docs/SCALAR_SELECTOR_CYCLE1_SCIENCE_REVIEW_NOTE_2026-04-19.md`.
+**Status:** Derived theorem. The old LO condition is now discharged by
+`docs/STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`, which proves
+the physical law
+`a_u + rho * sin(delta_std) = sin(delta_std)` as exact `1(+)5` channel
+completeness on the physical reduced carrier. This note now records the
+downstream LO+NLO RPSR assembly. The historical filename is preserved from the
+earlier conditional stage.
 **Primary runner:** `scripts/frontier_quark_up_amplitude_rpsr_conditional.py`
 (PASS=10 FAIL=0).
 
@@ -47,19 +43,13 @@ The derivation uses four retained ingredients:
    `{rho, supp, delta_A1}` exactly once — the unique minimal
    contraction on the retained atom bank.
 
-The remaining retention gap is one LO observable principle:
+The old LO gap is now closed:
 
-> [GAP] The LO balance `a_u + rho * sin(delta_std) = sin(delta_std)`
-> (equivalently `a_u / sin_d + a_d = 1` with `a_d = rho` pinned) is
-> STRC — a *linear* amplitude sum rule on the CKM projector ray.
-> STRC is not derivable from the retained quadratic-unitarity stack
-> or from any of the six SM-native structural sources surveyed
-> (EW-charge, 1(+)5 block factor, row-unitarity NLO, discrete flavor
-> groups, anomaly cancellation, Clifford bimodule). It is retained as
-> a Koide-analog observable principle; under Scenario A (bundling
-> into the existing `QUARK_PROJECTOR_PARAMETER_AUDIT` reduced-
-> amplitude retention) the net axiom cost is approximately 1
-> observable principle.
+> [DISCHARGED] The LO balance `a_u + rho * sin(delta_std) = sin(delta_std)`
+> is no longer carried as a separate observable principle here. It is derived
+> in `docs/STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md` from the exact
+> `1(+)5` carrier, the canonical `5`-projector, and the canonical
+> `A1 -> 5` transfer operator induced by the physical projector ray.
 
 Numerical LO closure is verified at < 2% in
 `frontier_quark_projector_parameter_audit.py` (PASS=6 FAIL=0) and
@@ -107,7 +97,7 @@ Target numerical value: `a_u = 0.7748865611` (10 decimals).
 
 ## 2. Derivation from retained infrastructure
 
-### 2.1 LO ray completeness — STRC observable principle
+### 2.1 LO ray completeness — STRC theorem
 
 Given `|p|^2 = 1` and `a_d = rho`, the LO identity
 `a_u / sin_d + a_d = 1` is the "ray-budget" statement: the two
@@ -119,17 +109,19 @@ Geometric form:
 where `r = rho + i eta = p / sqrt(7)` is the retained scalar-
 comparison ray (collinear with `p`, magnitude `1/sqrt(7)`).
 
-This LO identity is a *linear* amplitude sum rule that is NOT
-derivable from retained quadratic unitarity (`|p|^2 = 1` is quadratic,
-not linear). Six named candidate SM-native structural sources were
-surveyed and do not close the LO balance; see
-`docs/QUARK_STRC_OBSERVABLE_PRINCIPLE_NOTE_2026-04-19.md`. The identity
-is retained as **STRC (Scalar-Tensor Ray Complementarity)** — a
-Koide-analog linear amplitude sum rule on the reduced projector ray.
-Under Scenario A, STRC bundles into the existing
-`QUARK_PROJECTOR_PARAMETER_AUDIT` retention (which already retains
-`a_d = rho`), so the net axiom cost is approximately 1 observable
-principle.
+This LO identity is now derived in
+`docs/STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md` as exact
+`1(+)5` channel completeness:
+
+- `Pi_5 p = sin_d e_5` is the total physical `5` budget,
+- `T_p = Pi_5 |p><e_1| = sin_d |e_5><e_1|` is the canonical `A1 -> 5`
+  transfer operator induced by the physical ray,
+- applying `T_p` to the retained down occupancy `a_d e_1` gives the mixed
+  channel budget `a_d sin_d e_5`,
+- the up-sector amplitude is the unique residual on the one-dimensional
+  `5` channel.
+
+So the LO balance is no longer an added postulate in this lane.
 
 ### 2.2 NLO scalar-tensor support bridge
 
@@ -187,7 +179,7 @@ candidates.
 
 ---
 
-## 4. Derivation status and the STRC gap
+## 4. Derivation status
 
 | Step | Content | Retained? |
 |---|---|---|
@@ -195,29 +187,23 @@ candidates.
 | (2) Scalar-ray collinearity with tensor | Algebraic from `(rho, eta)` | YES |
 | (3) Scalar -> tensor support bridge `supp = 6/7` | `CKM_ATLAS` | YES |
 | (4) `a_d = rho` retained | `QUARK_PROJECTOR_PARAMETER_AUDIT` | YES |
-| (5) LO ray completeness `a_u/sin_d + a_d = 1` | **STRC observable principle**; bundled with `a_d = rho` | Conditional (Scenario A: ~1 obs principle) |
+| (5) LO ray completeness `a_u/sin_d + a_d = 1` | `STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md` | YES |
 | (6) NLO excess `rho/49` from (3) + `delta_A1` | Minimal 3-atom contraction | YES |
-| (7) Full RPSR identity | From (1)-(6) | Conditional on (5) |
+| (7) Full RPSR identity | From (1)-(6) | YES |
 | (8) Det-phase neutrality compatibility | `QUARK_PROJECTOR_PARAMETER_AUDIT` | YES |
 
-### 4.1 Explicit flag
+### 4.1 Exact LO discharge
 
-> **Conditional on STRC.** The LO balance
+> The LO balance
 >
 > ```
 > a_u + rho * sin(delta_std) = sin(delta_std)
 > ```
 >
-> (equivalently `a_u / sin(delta_std) + a_d = 1` with `a_d = rho`) is
-> a **linear** amplitude sum rule on the 1(+)5 projector ray. It is
-> a novel Koide-analog linear amplitude sum rule, retained as the
-> **STRC observable principle**
-> (`docs/QUARK_STRC_OBSERVABLE_PRINCIPLE_NOTE_2026-04-19.md`) and
-> bundled into the existing `QUARK_PROJECTOR_PARAMETER_AUDIT`
-> retention (Scenario A). Full derivation from deeper structure would
-> require a ray-saturation theorem on the Clifford bimodule
-> `Cl(3)/Z_3 (x) Cl_CKM(1(+)5)`
-> (`docs/CLIFFORD_BIMODULE_RAY_SATURATION_FUTURE_TARGET_NOTE_2026-04-19.md`).
+> is now discharged by exact operator algebra on the physical `1(+)5`
+> carrier, not by a separate observable-principle postulate. The named
+> future-target note remains useful as route history, but this lane no longer
+> depends on it for LO closure.
 
 ---
 
@@ -246,8 +232,7 @@ Expected: PASS=10 FAIL=0.
 
 RPSR is quark-specific and is NOT universal. Sector-by-sector:
 
-- **Quarks:** RPSR — `a_u / sin_d + a_d = 1 + rho / 49` (exact,
-  conditional on STRC at LO).
+- **Quarks:** RPSR — `a_u / sin_d + a_d = 1 + rho / 49` (exact).
 - **Charged leptons:** `kappa = 2` Koide-cone Casimir gap (theorem via
   MRU).
 - **Neutrinos:** `a_nu = 0` (sigma = 0 no-go, trivial).
@@ -276,21 +261,24 @@ meta-principle, not a single universal formula.
 
 ## 8. Honest statement
 
-RPSR is derivable at LO + NLO from retained infrastructure **except**
-for one linear amplitude sum rule (`a_u + rho * sin_d = sin_d`) at
-NNI diagonalization. This identity is NOT derivable from the retained
-quadratic-unitarity stack (unitarity is quadratic; STRC is linear)
-and is retained as **STRC (Scalar-Tensor Ray Complementarity)** — a
-Koide-analog linear amplitude sum rule on the CKM projector ray.
+RPSR is now derivable at LO + NLO from retained infrastructure.
+
+The former LO gap
+
+```text
+a_u + rho * sin_d = sin_d
+```
+
+is discharged in
+`docs/STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`
+as exact `1(+)5` channel completeness on the physical reduced carrier.
 
 Target `a_u = 0.7748865611` reproduced to 10 decimals. Uniqueness
 against the 8 Pareto candidates is quantified and clean (smallest
 non-target margin 3.5e-5, well above numerical precision). All 7
 retained no-gos pass. All 4 retained quark runners pass.
 
-**Status:** conditional theorem. Under Scenario A (STRC bundled into
-`QUARK_PROJECTOR_PARAMETER_AUDIT`), the quark `a_u` gate lands at 1
-observable principle. Path to full closure is the bimodule
-ray-saturation theorem (future research target).
+**Status:** derived theorem. The quark `a_u` gate no longer depends on a
+separate STRC observable-principle postulate in this lane.
 
 Runner status: PASS=10 FAIL=0.

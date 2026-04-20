@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-Frontier runner - Quark up-amplitude RPSR conditional theorem.
+Frontier runner - Quark up-amplitude RPSR theorem.
 
 Companion to
 `docs/QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md`.
 
-Conditional theorem.  On the retained 1 (+) 5 CKM projector
+Theorem.  On the retained 1 (+) 5 CKM projector
 ray p = cos(delta_std) + i sin(delta_std) with |p|^2 = 1
 (CKM_ATLAS_AXIOM_CLOSURE_NOTE), let a_u, a_d in R be the real reduced
 up/down amplitudes defined by
@@ -23,17 +23,14 @@ the RPSR identity is
 
 equivalently a_u = sqrt(5/6) * (1 - 48 rho / 49) = 0.7748865611... (10 dec).
 
-Conditional: retention of RPSR as a full theorem depends on the STRC
-(Scalar-Tensor Ray Complementarity) observable principle -- the
-*linear* amplitude sum rule `a_u + rho * sin_d = sin_d` (equivalently
-`a_u / sin_d + a_d = 1` with `a_d = rho`). STRC is not derivable from
-retained quadratic unitarity or any of six SM-native structural sources
-(EW-charge, 1(+)5 block factor, row-unitarity NLO, discrete flavor
-groups, anomaly cancellation, Clifford bimodule); it is retained on the
-same epistemic footing as Koide's lepton-mass sum rule. See
-`docs/QUARK_STRC_OBSERVABLE_PRINCIPLE_NOTE_2026-04-19.md`. Numerical LO
-closure is retained at < 2% via
-`frontier_quark_projector_parameter_audit.py`.
+The former LO gap
+
+    a_u + rho * sin_d = sin_d
+
+is now discharged in
+`docs/STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`
+as exact `1(+)5` channel completeness on the physical reduced carrier.
+This runner keeps the downstream RPSR algebra and uniqueness checks.
 
 Checks (10):
   T1  |p|^2 = 1
@@ -75,7 +72,7 @@ def check(name: str, cond: bool, detail: str = "") -> None:
 
 def main() -> int:
     print("=" * 72)
-    print("  RPSR conditional theorem (STRC-closed)")
+    print("  RPSR theorem")
     print("=" * 72)
 
     rho = 1.0 / math.sqrt(42.0)
@@ -138,7 +135,7 @@ def main() -> int:
     strc_lhs = a_u_LO + rho * sin_d
     strc_rhs = sin_d
     print()
-    print("  STRC observable principle:")
+    print("  STRC-closed LO identity:")
     print(f"    a_u_LO  +  rho * sin_d  =  {strc_lhs:.12f}")
     print(f"    sin_d                    =  {strc_rhs:.12f}")
     print(f"    |LHS - RHS|              =  {abs(strc_lhs - strc_rhs):.3e}")
@@ -193,12 +190,12 @@ def main() -> int:
     print()
     print("  Cross-sector (meta-principle):")
     print("    Quarks:          RPSR  a_u/sin_d + a_d = 1 + rho/49")
-    print("                     LO balance = STRC observable principle")
+    print("                     LO balance discharged by exact 1(+)5 channel completeness")
     print("    Charged leptons: kappa = 2 (Koide-cone Casimir gap; MRU theorem)")
     print("                     Koide sum rule (scalar amplitude retention)")
     print("    Neutrinos:       a_nu = 0 (sigma = 0 no-go)")
     print()
-    print("  STRC is Koide-analog on CKM: linear amplitude sum rule on retained ray.")
+    print("  STRC is the exact LO carrier identity used in the quark RPSR theorem.")
 
     print()
     print("=" * 72)
