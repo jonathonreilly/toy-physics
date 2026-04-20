@@ -144,6 +144,15 @@ reweight the canonical character sources. See
    now be read even more sharply: derive the omitted-channel self-energy term
    from the microscopic transport law. See
    `docs/KOIDE_HIGGS_DRESSED_OMITTED_CHANNEL_SELF_ENERGY_THEOREM_NOTE_2026-04-20.md`.
+   Latest same-day sharpening: that omitted-channel self-energy is itself not
+   enough as an undifferentiated matrix datum. Splitting it into single-arm,
+   diagonal-only, and off-diagonal-only pieces shows that none of those
+   partial modes reproduces the physical local branch; only the full coherent
+   rank-1 combination restores `h_0(lambda_*) = 0` and the physical local
+   slope. So the remaining open object on this route can now be read even more
+   sharply: derive the coherent omitted-channel coupling vector `g` from the
+   microscopic transport law. See
+   `docs/KOIDE_HIGGS_DRESSED_SELF_ENERGY_COHERENCE_THEOREM_NOTE_2026-04-20.md`.
 
 **Required retained ingredients for any of the above:** explicit lattice propagator or transport-integral definition on the retained Cl(3)/Z³ carrier; currently on main as partial-support.
 

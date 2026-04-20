@@ -81,6 +81,11 @@ The clean current endpoint is:
   self-energy, and that omitted channel is what both shifts the local branch
   onto the physical origin and lowers the slope from near-1 bare tracking to
   the observed `alpha`
+- and that omitted-channel correction is now sharper still: no single arm, no
+  diagonal-only magnitude piece, and no off-diagonal-only piece reproduces the
+  physical local branch; only the full coherent rank-1 combination does, so
+  the remaining microscopic object is the coherent omitted-channel coupling
+  vector itself
 
 So the current charged-lepton state is:
 
@@ -113,6 +118,7 @@ So the current charged-lepton state is:
 21. [KOIDE_HIGGS_DRESSED_AFFINE_TRANSPORT_GERM_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_AFFINE_TRANSPORT_GERM_THEOREM_NOTE_2026-04-20.md)
 22. [KOIDE_HIGGS_DRESSED_TRANSPORT_SUSCEPTIBILITY_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_TRANSPORT_SUSCEPTIBILITY_THEOREM_NOTE_2026-04-20.md)
 23. [KOIDE_HIGGS_DRESSED_OMITTED_CHANNEL_SELF_ENERGY_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_OMITTED_CHANNEL_SELF_ENERGY_THEOREM_NOTE_2026-04-20.md)
+24. [KOIDE_HIGGS_DRESSED_SELF_ENERGY_COHERENCE_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_SELF_ENERGY_COHERENCE_THEOREM_NOTE_2026-04-20.md)
 
 ## Package Role
 
@@ -155,7 +161,10 @@ That coefficient is now also sharpened: `alpha = 1 - backreaction`, with the
 entire nontrivial local deviation coming from a small reached-principal-block
 transport backreaction term of size `~ 4.08%`. And that backreaction is now
 localized one step further to a rank-1 omitted-channel self-energy in the
-Schur-complement resolvent of the reached block.
+Schur-complement resolvent of the reached block. And that self-energy is now
+sharpened again: only its full coherent rank-1 form restores the physical
+local branch, so the live transport object is the coherent omitted-channel
+coupling vector.
 
 So the right classification is:
 
