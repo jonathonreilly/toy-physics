@@ -25,29 +25,7 @@ from frontier_perron_frobenius_step2_nilpotent_chain_source_response_calculus_20
 ORIGINAL_RETAINED_WEIGHTS = ((0, 0), (1, 0), (0, 1), (1, 1))
 ORDERED_LINE_BASIS = (1, 0, 2, 3)
 BOUNDARY_FIRST_WEIGHTS = tuple(ORIGINAL_RETAINED_WEIGHTS[i] for i in ORDERED_LINE_BASIS)
-
-# Explicit exact target-hitting complement lines in the original retained
-# coordinates `((0,0),(1,0),(0,1),(1,1))`. The boundary-first structure is
-# carried separately by `ORDERED_LINE_BASIS`.
-LINE_A = np.array(
-    [
-        0.4967705956049574,
-        0.024399386239089632,
-        0.8289404459627717,
-        0.2558933026487660,
-    ],
-    dtype=float,
-)
-LINE_B = np.array(
-    [
-        0.5273106873489956,
-        0.8459692861767273,
-        0.060833791226262236,
-        0.05078046571475716,
-    ],
-    dtype=float,
-)
-
+_RETAINED_BLOCK_ORIGINAL: np.ndarray | None = None
 
 def normalize_line(line: np.ndarray) -> np.ndarray:
     arr = np.asarray(line, dtype=float).reshape(4)
@@ -57,12 +35,47 @@ def normalize_line(line: np.ndarray) -> np.ndarray:
     return arr / norm
 
 
+def line_from_positive_angles(theta: float, phi: float, psi: float) -> np.ndarray:
+    """
+    Unit complement line on the positive `(1,1)` hemisphere of the retained
+    ambient `S^3/{±1}`.
+    """
+
+    cpsi = float(np.cos(psi))
+    return normalize_line(
+        np.array(
+            [
+                np.cos(theta) * np.cos(phi) * cpsi,
+                np.sin(theta) * np.cos(phi) * cpsi,
+                np.sin(phi) * cpsi,
+                np.sin(psi),
+            ],
+            dtype=float,
+        )
+    )
+
+
+def positive_angles_from_line(line: np.ndarray) -> np.ndarray:
+    vec = normalize_line(line)
+    if vec[3] < 0.0:
+        vec = -vec
+    xy = float(np.hypot(vec[0], vec[1]))
+    theta = float(np.arctan2(vec[1], vec[0]))
+    phi = float(np.arctan2(vec[2], xy))
+    psi = float(np.arcsin(np.clip(vec[3], -1.0, 1.0)))
+    return np.array([theta, phi, psi], dtype=float)
+
+
 def selected_retained_block_original() -> np.ndarray:
+    global _RETAINED_BLOCK_ORIGINAL
+    if _RETAINED_BLOCK_ORIGINAL is not None:
+        return np.array(_RETAINED_BLOCK_ORIGINAL, dtype=float)
     pkg = selected_transfer_and_packet()
     transfer = np.asarray(pkg["transfer"], dtype=float)
     _jmat, weights, index = build_recurrence_matrix(5)
     retained = [index[w] for w in ORIGINAL_RETAINED_WEIGHTS]
-    return transfer[np.ix_(retained, retained)]
+    _RETAINED_BLOCK_ORIGINAL = transfer[np.ix_(retained, retained)]
+    return np.array(_RETAINED_BLOCK_ORIGINAL, dtype=float)
 
 
 def selected_retained_block_boundary_first() -> np.ndarray:

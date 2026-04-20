@@ -11,9 +11,10 @@ import sys
 import numpy as np
 
 from frontier_dm_leptogenesis_dweh_even_split_transfer_layer import TARGET
+from frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_exact_solve_doublet_theorem_2026_04_20 import (
+    solved_target_hitting_lines,
+)
 from frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_helper_2026_04_19 import (
-    LINE_A,
-    LINE_B,
     compressed_local_block_from_line,
     normalize_line,
     projection_frobenius_distance,
@@ -48,6 +49,12 @@ def selector_key(line: np.ndarray) -> tuple[float, float]:
     )
 
 
+def selected_line() -> np.ndarray:
+    lines = solved_target_hitting_lines()
+    idx = min(range(len(lines)), key=lambda i: selector_key(lines[i]))
+    return np.array(lines[idx], dtype=float)
+
+
 def main() -> int:
     print("=" * 118)
     print("GAUGE-VACUUM PLAQUETTE FIRST-SECTOR MINIMAL-BULK COMPLETION 3D+1 RHO1 LEAST-DISTORTION SELECTOR")
@@ -58,49 +65,45 @@ def main() -> int:
     print("  doublet, is there a canonical branch-side selector that picks the right")
     print("  member without reopening generic frame freedom?")
 
-    lines = [LINE_A, LINE_B]
+    lines = solved_target_hitting_lines()
     keys = [selector_key(line) for line in lines]
     choice = min(range(len(lines)), key=lambda idx: keys[idx])
     chosen = lines[choice]
     errs = [float(np.linalg.norm(compressed_local_block_from_line(line)[2] - TARGET)) for line in lines]
     line_sep = min(
-        np.linalg.norm(normalize_line(LINE_A) - normalize_line(LINE_B)),
-        np.linalg.norm(normalize_line(LINE_A) + normalize_line(LINE_B)),
+        np.linalg.norm(normalize_line(lines[0]) - normalize_line(lines[1])),
+        np.linalg.norm(normalize_line(lines[0]) + normalize_line(lines[1])),
     )
     _h, responses, live, _qmat = compressed_local_block_from_line(chosen)
     dist = float(np.linalg.norm(live - TARGET))
-    gap_to_a = min(
-        np.linalg.norm(normalize_line(chosen) - normalize_line(LINE_A)),
-        np.linalg.norm(normalize_line(chosen) + normalize_line(LINE_A)),
-    )
 
     print()
-    print(f"  selector key(line A)                        = ({keys[0][0]:.12f}, {keys[0][1]:.12f})")
-    print(f"  selector key(line B)                        = ({keys[1][0]:.12f}, {keys[1][1]:.12f})")
+    for idx, key in enumerate(keys):
+        print(f"  selector key(solution[{idx}])               = ({key[0]:.12f}, {key[1]:.12f})")
     print(f"  chosen line index                           = {choice}")
     print(f"  chosen live point                           = ({live[0]:.12f}, {live[1]:.12f}, {live[2]:.12f})")
     print(f"  chosen ordered-even split                   = ({responses[3]:.12f}, {responses[5]:.12f})")
     print()
 
     check(
-        "The retained-line problem has reduced to a rho1/rho2 orientation doublet with two explicit exact target-hitting lines",
+        "The retained-line problem has reduced to a rho1/rho2 orientation doublet with two solved exact target-hitting lines",
         line_sep > 1.0e-3 and max(errs) < 1.0e-10,
         f"(sep,max_err)=({line_sep:.6f},{max(errs):.3e})",
     )
     check(
-        "Projection-Frobenius distortion to the rho1 reference slice is strictly smaller for line A than for line B",
-        keys[0][0] + 1.0e-6 < keys[1][0],
-        f"(dA,dB)=({keys[0][0]:.6f},{keys[1][0]:.6f})",
+        "Projection-Frobenius distortion to the rho1 reference slice has a unique strict minimizer on the solved set",
+        len(lines) == 2 and min(keys)[0] + 1.0e-6 < max(keys)[0],
+        f"distances={[round(key[0], 6) for key in keys]}",
     )
     check(
-        "Preferred boundary-anchor loss is also strictly smaller for line A than for line B",
-        keys[0][1] + 1.0e-6 < keys[1][1],
-        f"(lossA,lossB)=({keys[0][1]:.6f},{keys[1][1]:.6f})",
+        "Preferred boundary-anchor loss breaks the solved-set tie in the same direction",
+        len(lines) == 2 and min(keys)[1] + 1.0e-6 < max(keys)[1],
+        f"anchor_losses={[round(key[1], 6) for key in keys]}",
     )
     check(
-        "So the rho1-anchored least-distortion selector chooses line A uniquely from the exact doublet",
-        choice == 0 and gap_to_a < 1.0e-12,
-        f"gap_to_A={gap_to_a:.3e}",
+        "So the rho1-anchored least-distortion selector chooses one solved line uniquely from the full exact-solve set",
+        len(lines) == 2 and keys[choice] < keys[1 - choice],
+        f"chosen_key=({keys[choice][0]:.6f},{keys[choice][1]:.6f})",
     )
     check(
         "The selected rho1-anchored least-distortion line reproduces the observed live DM target",
@@ -114,11 +117,11 @@ def main() -> int:
     print("  New complement-line law:")
     print("    - solve the retained `3d+1` complement-line problem on the selected")
     print("      Wilson branch")
-    print("    - the exact-solve set is a rho1/rho2 orientation doublet")
+    print("    - the full bounded exact-solve set is a rho1/rho2 orientation doublet")
     print("    - choose the member with least Grassmann projection-distortion to the")
     print("      rho1 reference slice, breaking any tie by smallest loss of the")
     print("      preferred boundary anchor `(1,0)`")
-    print("    - this selects the canonical line A and lands exactly on the live DM target")
+    print("    - this selects one canonical solved line and lands exactly on the live DM target")
     print()
     print(f"PASS={PASS_COUNT} FAIL={FAIL_COUNT}")
     return 0 if FAIL_COUNT == 0 else 1

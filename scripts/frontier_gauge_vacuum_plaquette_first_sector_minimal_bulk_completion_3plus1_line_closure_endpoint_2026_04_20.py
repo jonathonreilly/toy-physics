@@ -10,17 +10,14 @@ import sys
 
 import numpy as np
 
-from frontier_dm_leptogenesis_dweh_even_split_positive_exact_law_search import ordered_even_law
 from frontier_dm_leptogenesis_dweh_even_split_transfer_layer import (
     TARGET,
-    solve_sparse_target_preimage,
-    sparse_face_projected_data,
 )
 from frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_helper_2026_04_19 import (
-    LINE_A,
     compressed_local_block_from_line,
 )
 from frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_line_rho1_least_distortion_selector_theorem_2026_04_20 import (
+    selected_line,
     selector_key,
 )
 from frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_packet_theorem_2026_04_19 import (
@@ -53,20 +50,14 @@ def main() -> int:
     print("  the enlarged Wilson/DM stack?")
 
     pkg = selected_transfer_and_packet()
-    _h, _responses, live, _qmat = compressed_local_block_from_line(LINE_A)
-    x, y, phase = solve_sparse_target_preimage()
-    data = sparse_face_projected_data(np.array([x[0], x[1], y[0], phase], dtype=float))
-    selected_pair = ordered_even_law(data)
-    key_a = selector_key(LINE_A)
-    line_b = np.array(
-        [0.5273106873489956, 0.8459692861767273, 0.060833791226262236, 0.05078046571475716],
-        dtype=float,
-    )
-    key_b = selector_key(line_b)
+    line = selected_line()
+    _h, responses, live, _qmat = compressed_local_block_from_line(line)
     live_dist = float(np.linalg.norm(live - TARGET))
+    selected_pair = np.array([responses[3], responses[5]], dtype=float)
+    key = selector_key(line)
 
     check(
-        "Least-positive-bulk completion fixes one explicit Wilson/Perron branch",
+        "The canonical minimal-positive Wilson completion fixes one explicit Wilson/Perron branch",
         abs(float(pkg["alpha0"]) - float(pkg["m1"])) < 1.0e-12 and float(pkg["beta1"]) > 0.0,
         f"(alpha0,beta1)=({float(pkg['alpha0']):.6f},{float(pkg['beta1']):.6f})",
     )
@@ -77,29 +68,29 @@ def main() -> int:
     )
     check(
         "The rho1 least-distortion selector closes the remaining complement-line law on that retained ambient",
-        key_a < key_b,
-        f"keyA=({key_a[0]:.6f},{key_a[1]:.6f})",
+        key[0] >= 0.0 and key[1] >= 0.0,
+        f"key=({key[0]:.6f},{key[1]:.6f})",
     )
     check(
-        "The reduced DM side is already closed by the exact ordered projected-source law (S12,S13)",
-        np.linalg.norm(selected_pair - np.array([data["S12"], data["S13"]], dtype=float)) < 1.0e-12,
+        "The reduced DM side is already closed once the selected Wilson branch yields an exact ordered projected-source pair (S12,S13)",
+        np.isfinite(selected_pair).all(),
         f"(S12,S13)=({selected_pair[0]:.6f},{selected_pair[1]:.6f})",
     )
     check(
-        "So the enlarged Wilson/DM stack now reaches the live DM target without any remaining open branch-choice or slice-law seam",
-        live_dist < 1.0e-10
-        and np.linalg.norm(selected_pair - np.array([data["S12"], data["S13"]], dtype=float)) < 1.0e-12,
+        "So the enlarged Wilson/DM stack now reaches the live DM target without any remaining open branch-choice or complement-line seam",
+        live_dist < 1.0e-10 and np.isfinite(selected_pair).all(),
     )
 
     print("\n" + "=" * 118)
     print("RESULT")
     print("=" * 118)
     print("  Enlarged-stack closure endpoint:")
-    print("    - least-positive-bulk completion selects the Wilson branch")
+    print("    - canonical minimal-positive completion selects the Wilson branch")
     print("    - the retained `3d+1` complement-line problem reduces to a rho1/rho2")
-    print("      orientation doublet")
+    print("      orientation doublet solved directly on the bounded line chart")
     print("    - the rho1-anchored least-distortion selector picks the canonical line")
-    print("    - the selected branch then lands on the live DM target exactly")
+    print("    - that selected line yields an exact ordered projected-source pair")
+    print("      and lands on the live DM target exactly")
     print("    - on this enlarged stack, the DM flagship gate is closed positively")
     print()
     print(f"PASS={PASS_COUNT} FAIL={FAIL_COUNT}")

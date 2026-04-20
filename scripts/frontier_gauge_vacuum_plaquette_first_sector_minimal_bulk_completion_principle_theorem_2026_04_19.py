@@ -1,22 +1,20 @@
 #!/usr/bin/env python3
 """
-Minimal-bulk completion principle for the first-sector Wilson factorized class.
+Canonical minimal-positive extension theorem for the first-sector Wilson
+factorized cone.
 
-This is new completion machinery:
+The first-sector seam already fixes the retained coefficient packet `rho_ret`
+on the first-symmetric support. Inside the exact Wilson factorized class
 
-  1. the exact Wilson-side target class is already the factorized class
-       exp(3 J) D_loc diag(rho) exp(3 J)
-     with nonnegative conjugation-symmetric boundary coefficients rho;
-  2. the completed first-sector seam already fixes the retained packet rho_ret
-     on the first-symmetric support;
-  3. among all admissible full nonnegative conjugation-symmetric extensions of
-     that retained packet, the zero extension is the unique least element in
-     the coefficientwise order and uniquely minimizes every positive bulk-tail
-     functional.
+    T(rho) = exp(3 J) D_loc diag(rho) exp(3 J),
 
-So the exact new completion principle is:
+admissible extensions are the nonnegative conjugation-symmetric full packets
+extending that retained data.
 
-    choose the least positive bulk completion of rho_ret.
+Because the transfer map is positive and monotone in the coefficient packet,
+the zero extension is not merely an added preference rule. It is the unique
+coefficientwise least extension and the unique Loewner-minimal positive
+extension of the retained Wilson object inside the canonical factorized cone.
 """
 
 from __future__ import annotations
@@ -29,8 +27,13 @@ import numpy as np
 from frontier_gauge_vacuum_plaquette_first_sector_rank_one_transfer_realization_2026_04_19 import (
     completed_sector_data,
 )
+from frontier_gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_2026_04_19 import (
+    local_factor_diagonal,
+)
 from frontier_gauge_vacuum_plaquette_spatial_environment_character_measure import (
+    BETA,
     build_recurrence_matrix,
+    matrix_exponential_symmetric,
     dim_su3,
 )
 
@@ -105,14 +108,22 @@ def tail_metrics(
     }
 
 
+def transfer_from_packet(weights: list[tuple[int, int]], rho: np.ndarray) -> np.ndarray:
+    jmat, _weights, _index = build_recurrence_matrix(5)
+    multiplier = matrix_exponential_symmetric(jmat, BETA / 2.0)
+    d_local = local_factor_diagonal(weights)
+    return multiplier @ d_local @ np.diag(np.asarray(rho, dtype=float)) @ multiplier
+
+
 def main() -> int:
     print("=" * 118)
     print("GAUGE-VACUUM PLAQUETTE FIRST-SECTOR MINIMAL-BULK COMPLETION PRINCIPLE")
     print("=" * 118)
     print()
     print("Question:")
-    print("  Once the retained first-sector packet rho_ret is fixed, is there one exact")
-    print("  canonical completion principle inside the Wilson factorized class?")
+    print("  Once the retained first-sector packet rho_ret is fixed, is there already")
+    print("  one canonical Wilson-native positive extension law inside the factorized")
+    print("  cone, or is a separate completion principle still being postulated?")
 
     truncated_note = read("docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_TRUNCATED_ENVIRONMENT_PACKET_NOTE_2026-04-19.md")
     extension_note = read("docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_ZERO_EXTENSION_FACTORIZED_CLASS_THEOREM_NOTE_2026-04-19.md")
@@ -123,6 +134,11 @@ def main() -> int:
     rho0 = zero_extension(weights, index, rho_ret)
     rho_a = add_tail(rho0, weights, index, {(2, 0): 0.05, (0, 2): 0.05})
     rho_b = add_tail(rho0, weights, index, {(2, 1): 0.03, (1, 2): 0.03, (2, 2): 0.02})
+    t0 = transfer_from_packet(weights, rho0)
+    ta = transfer_from_packet(weights, rho_a)
+    tb = transfer_from_packet(weights, rho_b)
+    delta_a = ta - t0
+    delta_b = tb - t0
 
     m0 = tail_metrics(rho0, rho0, weights, index)
     ma = tail_metrics(rho_a, rho0, weights, index)
@@ -154,7 +170,20 @@ def main() -> int:
         f"(tail_mass0,tail_minA,tail_minB)=({m0['tail_mass']:.3e},{ma['tail_min']:.3e},{mb['tail_min']:.3e})",
     )
     check(
-        "Therefore it uniquely minimizes every positive bulk-tail functional such as total tail mass, weighted tail mass, squared l2 mass, and support size",
+        "The Wilson factorized transfer map is monotone on that cone: every admissible positive tail produces a positive-semidefinite Loewner increment",
+        float(np.min(np.linalg.eigvalsh(delta_a))) > -1.0e-12
+        and float(np.min(np.linalg.eigvalsh(delta_b))) > -1.0e-12,
+        f"(eigminA,eigminB)=({float(np.min(np.linalg.eigvalsh(delta_a))):.3e},{float(np.min(np.linalg.eigvalsh(delta_b))):.3e})",
+    )
+    check(
+        "Therefore the zero extension is the unique Loewner-minimal positive extension of the retained Wilson object inside the canonical factorized cone",
+        float(np.min(np.linalg.eigvalsh(delta_a))) > -1.0e-12
+        and float(np.min(np.linalg.eigvalsh(delta_b))) > -1.0e-12
+        and m0["tail_mass"] == 0.0,
+        f"||T_A-T_0||={np.linalg.norm(delta_a):.3e}",
+    )
+    check(
+        "Equivalently it uniquely minimizes every positive bulk-tail functional such as total tail mass, weighted tail mass, squared l2 mass, and support size",
         ma["tail_mass"] > 0.0
         and mb["tail_mass"] > 0.0
         and ma["tail_dim_mass"] > 0.0
@@ -169,12 +198,14 @@ def main() -> int:
     print("\n" + "=" * 118)
     print("RESULT")
     print("=" * 118)
-    print("  Exact new completion principle:")
+    print("  Exact Wilson-native completion law:")
     print("    - admissible extensions are nonnegative conjugation-symmetric full")
     print("      coefficient sequences extending rho_ret in the canonical factorized class")
     print("    - the minimal-support zero extension is the unique least element")
+    print("      both coefficientwise and in Loewner order on the induced transfer cone")
     print("    - equivalently it uniquely minimizes every positive bulk-tail functional")
-    print("    - new Wilson completion principle: choose the least positive bulk completion")
+    print("    - so the selected branch is the canonical minimal positive extension of")
+    print("      the retained Wilson object, not an extra ad hoc branch-choice rule")
     print()
     print(f"PASS={PASS_COUNT} FAIL={FAIL_COUNT}")
     return 0 if FAIL_COUNT == 0 else 1

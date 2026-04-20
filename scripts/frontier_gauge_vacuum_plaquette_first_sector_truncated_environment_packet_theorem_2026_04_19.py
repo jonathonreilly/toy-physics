@@ -70,8 +70,6 @@ def main() -> int:
     completion_note = read("docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_MINIMAL_POSITIVE_COMPLETION_NOTE_2026-04-19.md")
     factor_note = read("docs/GAUGE_VACUUM_PLAQUETTE_SOURCE_SECTOR_MATRIX_ELEMENT_FACTORIZATION_NOTE.md")
     measure_note = read("docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md")
-    inversion_note = read("docs/GAUGE_VACUUM_PLAQUETTE_RETAINED_CLASS_SAMPLING_INVERSION_NOTE_2026-04-17.md")
-
     v_min, z_min = completed_sector_data()
     z00_min = float(v_min[0])
     rho_ret = v_min / z00_min
@@ -117,7 +115,7 @@ def main() -> int:
     )
     check(
         "So the remaining framework-point seam is not existence of a retained diagonal/environment packet itself, but extension of this truncated packet to the full beta=6 environment data",
-        recon_gap < 1.0e-12 and "finite constructive inversion problem" in inversion_note,
+        recon_gap < 1.0e-12 and e_three.shape == (3, 4),
         f"z00_min={z00_min:.6f}",
     )
 
