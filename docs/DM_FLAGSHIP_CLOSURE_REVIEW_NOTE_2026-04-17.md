@@ -15,6 +15,17 @@ but not yet as a chamber-wide / all-basin theorem, and the current-bank
 quantitative DM selector / mapping side is also still open. **The
 previously-listed `q_H = 0` conditional has been discharged as GAUGE
 (retained)** via the Higgs `Z_3`-charge gauge-redundancy theorem.
+**2026-04-20 Wilson-side update:** current `main` now also carries a retained
+first-sector `3d+1` Wilson support packet: canonical minimal-positive
+factorized completion, a bounded exact complement-line orientation doublet, a
+`rho1` least-distortion retained-slice selector, exact reduced
+projected-source packet closure and exact live-target closure on that selected
+ambient, and a structural no-go for exact full sparse-face `9`-channel packet
+equality on the same ambient. This is substantial Wilson-side progress. It
+does **not** yet demote the open flagship gate, because the new closure is
+retained-ambient and least-distortion-selected, whereas the manuscript-facing
+remaining object is still the route-independent right-sensitive microscopic
+selector law on `dW_e^H = Schur_{E_e}(D_-)`.
 **Framework convention:** "axiom" means only the single framework axiom `Cl(3)` on `Z^3`.
 **Runner coverage:** 16 frontier runners, **PASS = 513, FAIL = 0**. This now
 includes the dedicated P3 Sylvester linear-path signature theorem runner
