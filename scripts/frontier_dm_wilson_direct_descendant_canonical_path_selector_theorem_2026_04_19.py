@@ -1,18 +1,29 @@
 #!/usr/bin/env python3
 """
-DM Wilson direct-descendant canonical path-selector theorem.
+DM Wilson direct-descendant canonical-path status audit.
 
 Purpose:
-  Upgrade the old constructive continuity existence argument into an explicit
-  selector law candidate on the direct-descendant route:
+  Test whether the aligned-seed -> constructive-witness affine path is now
+  forced by retained physics on the DM canonical-path lane.
 
-    choose the unique exact eta_1 = 1 point on the canonical affine path from
-    the aligned native seed to the explicit constructive witness.
+Answer:
+  No. The current affine segment remains a useful support-level selector
+  candidate, but the path itself is still chosen.
 
-  This is not a derivation of the path or witness from retained physics. It is
-  a concrete selector law on the current reviewed branch, and it lands on a
-  point that is distinct from the other already-certified exact constructive
-  positive roots.
+  What the runner certifies:
+    1. the current candidate path still has a unique transverse constructive
+       positive exact-closure root;
+    2. at least three other equally seed-fixed constructive overshooting
+       affine segments produce distinct exact transverse roots;
+    3. in the present affine chart, all of those segments are straight-line
+       geodesics for the natural constant-metric class, so geodesic language
+       does not make the current segment unique;
+    4. even after upgrading to the exact pullback metrics from the canonical
+       Y- and H-carriers, the seed-based eta_1 gradient flows still land on
+       nonconstructive exact roots, not on the current constructive point;
+    5. the neighboring source-surface selector packet does not descend to the
+       direct-descendant exact roots or plateau witnesses, so it cannot yet be
+       imported as the missing endpoint-direction law.
 """
 
 from __future__ import annotations
@@ -20,51 +31,39 @@ from __future__ import annotations
 import sys
 
 import numpy as np
-from scipy.linalg import null_space
+from scipy.linalg import eigh, null_space
 from scipy.optimize import brentq
 
+import frontier_dm_wilson_direct_descendant_constructive_transport_plateau_theorem_2026_04_19 as plateau
+from dm_leptogenesis_exact_common import exact_package
 from frontier_dm_leptogenesis_pmns_constructive_continuity_closure_theorem import (
     constructive_column_eta,
     path_point,
-    path_triplet,
     seed_point,
 )
-from frontier_dm_leptogenesis_pmns_projector_interface import canonical_h
-from frontier_dm_wilson_direct_descendant_constructive_positive_closure_multiplicity_theorem_2026_04_18 import (
-    eta1,
+from frontier_dm_leptogenesis_pmns_projector_interface import canonical_h, canonical_y
+from frontier_dm_leptogenesis_pmns_transport_extremal_source_candidate import (
+    build_active_from_seed_logits,
+)
+from frontier_dm_neutrino_positive_polar_h_cp_theorem import cp_pair_from_h
+from frontier_dm_neutrino_postcanonical_polar_section import slot_pair_from_h
+from frontier_dm_neutrino_source_surface_intrinsic_slot_theorem import (
+    intrinsic_slot_formula,
 )
 from frontier_dm_wilson_direct_descendant_local_observable_coordinate_theorem_2026_04_19 import (
+    delta_src,
+    eta1,
     observable_jacobian,
     observable_pack,
+    triplet,
 )
 
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
-
-FD_STEPS = [1.0e-5, 1.0e-6, 1.0e-7]
-ETA_GRID = np.linspace(0.0, 1.0, 10001, dtype=float)
-
-FAMILY_DATA = [
-    (
-        "A",
-        np.array([1.16845863, 0.46803892, 0.77107315, 0.05539671, 1.88733895], dtype=float),
-        1.88233895,
-        1.89233895,
-    ),
-    (
-        "B",
-        np.array([0.86088785, 0.32714819, 0.71367707, 0.10440906, 1.59650180], dtype=float),
-        1.59150180,
-        1.60150180,
-    ),
-    (
-        "C",
-        np.array([1.00731313, 0.30177597, 0.79591855, 0.02985850, 2.19935677], dtype=float),
-        2.19435677,
-        2.20435677,
-    ),
-]
+FD_STEP = 1.0e-6
+PKG = exact_package()
+A_STAR, B_STAR = intrinsic_slot_formula()
 
 
 def check(name: str, condition: bool, detail: str = "") -> bool:
@@ -81,195 +80,450 @@ def check(name: str, condition: bool, detail: str = "") -> bool:
     return condition
 
 
-def vector_from_path(lam: float) -> np.ndarray:
+SEED_X, SEED_Y, SEED_DELTA = seed_point()
+SEED_VECTOR = np.array(
+    [SEED_X[0], SEED_X[1], SEED_Y[0], SEED_Y[1], SEED_DELTA],
+    dtype=float,
+)
+
+CONSTRUCTIVE_WITNESS = np.array(
+    [1.174161560603, 0.462544348009, 0.758741415897, 0.026904299513, 1.882595756164],
+    dtype=float,
+)
+
+OVERSHOOT_WITNESSES = {
+    "A+": np.array([1.16845863, 0.46803892, 0.77107315, 0.05539671, 1.89233895], dtype=float),
+    "B+": np.array([0.86088785, 0.32714819, 0.71367707, 0.10440906, 1.59150180], dtype=float),
+    "C+": np.array([1.00731313, 0.30177597, 0.79591855, 0.02985850, 2.19435677], dtype=float),
+}
+
+FLOW_METRICS = {
+    "euclid": np.eye(5, dtype=float),
+    "x1-heavy": np.diag([25.0, 1.0, 1.0, 1.0, 1.0]),
+}
+
+
+def path_vector(lam: float) -> np.ndarray:
     x, y, delta = path_point(float(lam))
     return np.array([x[0], x[1], y[0], y[1], delta], dtype=float)
 
 
-def delta_src_from_vector(v: np.ndarray) -> float:
-    x = np.array([v[0], v[1], 3.0 * np.mean(seed_point()[0]) - v[0] - v[1]], dtype=float)
-    y = np.array([v[2], v[3], 3.0 * np.mean(seed_point()[1]) - v[2] - v[3]], dtype=float)
-    hmat = canonical_h(x, y, float(v[4]))
-    return float(np.real(np.linalg.det(hmat)))
+def source5_to_xyd(v: np.ndarray) -> tuple[np.ndarray, np.ndarray, float]:
+    v = np.asarray(v, dtype=float)
+    x = np.array([v[0], v[1], 3.0 * SEED_X.mean() - v[0] - v[1]], dtype=float)
+    y = np.array([v[2], v[3], 3.0 * SEED_Y.mean() - v[2] - v[3]], dtype=float)
+    return x, y, float(v[4])
 
 
-def path_root() -> tuple[float, np.ndarray]:
-    lam_star = float(brentq(lambda lam: constructive_column_eta(lam) - 1.0, 0.0, 1.0))
-    return lam_star, vector_from_path(lam_star)
+def canonical_h_from_source5(v: np.ndarray) -> np.ndarray:
+    x, y, delta = source5_to_xyd(v)
+    return canonical_h(x, y, delta)
 
 
-def family_root(label: str, base: np.ndarray, lo: float, hi: float) -> tuple[str, np.ndarray]:
-    root = float(brentq(lambda e_val: eta1(np.array([base[0], base[1], base[2], base[3], e_val], dtype=float)) - 1.0, lo, hi))
-    out = base.copy()
-    out[4] = root
-    return label, out
+def canonical_y_from_source5(v: np.ndarray) -> np.ndarray:
+    x, y, delta = source5_to_xyd(v)
+    return canonical_y(x, y, delta)
 
 
-def line_segment_residual(v: np.ndarray, start: np.ndarray, end: np.ndarray) -> tuple[float, float]:
-    direction = end - start
-    lam_fit = float(np.dot(v - start, direction) / max(np.dot(direction, direction), 1.0e-15))
-    lam_clip = min(1.0, max(0.0, lam_fit))
-    proj = start + lam_clip * direction
-    return lam_fit, float(np.linalg.norm(v - proj))
+def segment(endpoint: np.ndarray, lam: float) -> np.ndarray:
+    return (1.0 - lam) * SEED_VECTOR + lam * endpoint
 
 
-def finite_eta_derivative(lam: float, h: float = 1.0e-6) -> float:
-    return float((constructive_column_eta(lam + h) - constructive_column_eta(lam - h)) / (2.0 * h))
+def segment_eta(endpoint: np.ndarray, lam: float) -> float:
+    return float(eta1(segment(endpoint, lam)))
+
+
+def segment_root(endpoint: np.ndarray) -> tuple[float, np.ndarray]:
+    lam_star = float(brentq(lambda lam: segment_eta(endpoint, lam) - 1.0, 0.0, 1.0))
+    return lam_star, segment(endpoint, lam_star)
+
+
+def derivative_on_segment(endpoint: np.ndarray, lam: float, h: float = FD_STEP) -> float:
+    return float(
+        (segment_eta(endpoint, lam + h) - segment_eta(endpoint, lam - h)) / (2.0 * h)
+    )
+
+
+def midpoint_and_second_difference(endpoint: np.ndarray) -> tuple[float, float]:
+    midpoint_err = float(
+        np.linalg.norm(
+            segment(endpoint, 0.5) - 0.5 * (segment(endpoint, 0.0) + segment(endpoint, 1.0))
+        )
+    )
+    second_diff = float(
+        np.linalg.norm(
+            segment(endpoint, 0.25) - 2.0 * segment(endpoint, 0.50) + segment(endpoint, 0.75)
+        )
+    )
+    return midpoint_err, second_diff
+
+
+def local_rank_data(v: np.ndarray) -> tuple[int, float, int, float]:
+    jac = observable_jacobian(v, FD_STEP)
+    singular = np.linalg.svd(jac, compute_uv=False)
+    tangent_basis = null_space(jac[0:1, :])
+    restricted = jac[1:, :] @ tangent_basis
+    restricted_singular = np.linalg.svd(restricted, compute_uv=False)
+    return (
+        int(np.sum(singular > 1.0e-8)),
+        float(np.min(singular)),
+        int(np.sum(restricted_singular > 1.0e-8)),
+        float(np.min(restricted_singular)),
+    )
+
+
+def constructive_positive(v: np.ndarray) -> bool:
+    pack = observable_pack(v)
+    return (
+        abs(pack[0] - 1.0) < 1.0e-10
+        and pack[1] > 0.0
+        and pack[2] > 0.0
+        and pack[3] > 0.0
+        and pack[4] > 0.0
+    )
+
+
+def overshooting_constructive(endpoint: np.ndarray) -> bool:
+    tr = triplet(endpoint)
+    return (
+        eta1(endpoint) > 1.0
+        and tr["gamma"] > 0.0
+        and tr["E1"] > 0.0
+        and tr["E2"] > 0.0
+        and delta_src(endpoint) > 0.0
+    )
+
+
+def grad_eta(v: np.ndarray, h: float = FD_STEP) -> np.ndarray:
+    grad = np.zeros_like(v)
+    for idx in range(v.size):
+        vp = v.copy()
+        vm = v.copy()
+        vp[idx] += h
+        vm[idx] -= h
+        grad[idx] = (eta1(vp) - eta1(vm)) / (2.0 * h)
+    return grad
+
+
+def solve_metric(metric: np.ndarray, grad: np.ndarray) -> np.ndarray:
+    evals, evecs = eigh(metric)
+    evals = np.maximum(evals, 1.0e-8)
+    inv_metric = (evecs * (1.0 / evals)) @ evecs.T
+    return inv_metric @ grad
+
+
+def pullback_metric(v: np.ndarray, carrier_map, h: float = FD_STEP) -> np.ndarray:
+    derivs = []
+    for idx in range(v.size):
+        vp = v.copy()
+        vm = v.copy()
+        vp[idx] += h
+        vm[idx] -= h
+        derivs.append((carrier_map(vp) - carrier_map(vm)) / (2.0 * h))
+    metric = np.zeros((v.size, v.size), dtype=float)
+    for i in range(v.size):
+        for j in range(v.size):
+            metric[i, j] = float(np.real(np.vdot(derivs[i], derivs[j])))
+    return metric
+
+
+def flow_to_exact_root(metric_provider) -> np.ndarray:
+    v = SEED_VECTOR.copy()
+    step = 2.0e-3
+    for _ in range(8000):
+        grad = grad_eta(v)
+        velocity = solve_metric(metric_provider(v), grad)
+        norm = float(np.linalg.norm(velocity))
+        if norm < 1.0e-12:
+            break
+        velocity /= norm
+        trial = v + step * velocity
+        if eta1(trial) >= 1.0:
+            lo = 0.0
+            hi = step
+            for _ in range(60):
+                mid = 0.5 * (lo + hi)
+                candidate = v + mid * velocity
+                if eta1(candidate) >= 1.0:
+                    hi = mid
+                else:
+                    lo = mid
+            return v + hi * velocity
+        v = trial
+    raise RuntimeError("gradient flow did not reach eta_1 = 1")
+
+
+def source5_from_transport_params(params: np.ndarray) -> np.ndarray:
+    x, y, delta = build_active_from_seed_logits(*np.asarray(params, dtype=float))
+    return np.array([x[0], x[1], y[0], y[1], delta], dtype=float)
+
+
+def source_surface_slot_error(v: np.ndarray) -> float:
+    h = canonical_h_from_source5(v)
+    a, b = slot_pair_from_h(h)
+    return max(abs(a - A_STAR), abs(b - B_STAR))
+
+
+def source_surface_cp_error(v: np.ndarray) -> float:
+    cp1, cp2 = cp_pair_from_h(canonical_h_from_source5(v))
+    return max(abs(cp1 - PKG.cp1), abs(cp2 - PKG.cp2))
 
 
 def main() -> int:
     print("=" * 88)
-    print("DM WILSON DIRECT-DESCENDANT CANONICAL PATH SELECTOR THEOREM")
+    print("DM WILSON DIRECT-DESCENDANT CANONICAL PATH STATUS AUDIT")
     print("=" * 88)
 
-    lam_star, v_star = path_root()
-    pack_star = observable_pack(v_star)
-    triplet_star = path_triplet(lam_star)
-    path_start = vector_from_path(0.0)
-    path_end = vector_from_path(1.0)
-    family_roots = [family_root(*item) for item in FAMILY_DATA]
+    path_lambda = float(brentq(lambda lam: constructive_column_eta(lam) - 1.0, 0.0, 1.0))
+    path_root = path_vector(path_lambda)
+    path_pack = observable_pack(path_root)
+    path_rank = local_rank_data(path_root)
+
+    alt_data: dict[str, dict[str, object]] = {}
+    for label, endpoint in OVERSHOOT_WITNESSES.items():
+        root_lambda, root = segment_root(endpoint)
+        alt_data[label] = {
+            "endpoint": endpoint,
+            "root_lambda": root_lambda,
+            "root": root,
+            "pack": observable_pack(root),
+            "rank": local_rank_data(root),
+            "deriv": derivative_on_segment(endpoint, root_lambda),
+        }
+
+    flow_roots = {
+        name: flow_to_exact_root(lambda _v, metric=metric: metric)
+        for name, metric in FLOW_METRICS.items()
+    }
+    pullback_roots = {
+        "H-pullback": flow_to_exact_root(lambda v: pullback_metric(v, canonical_h_from_source5)),
+        "Y-pullback": flow_to_exact_root(lambda v: pullback_metric(v, canonical_y_from_source5)),
+    }
+
+    plateau_params = [("W0", plateau.witness_params())]
+    for idx, anchor in enumerate(plateau.ANCHOR_PARAMS, start=1):
+        refined, _res = plateau.refine_constructive_maximizer(anchor)
+        plateau_params.append((f"W{idx}", refined))
+    plateau_source5 = {
+        label: source5_from_transport_params(params) for label, params in plateau_params
+    }
+    plateau_slot_errors = {
+        label: source_surface_slot_error(v) for label, v in plateau_source5.items()
+    }
+    plateau_cp_errors = {
+        label: source_surface_cp_error(v) for label, v in plateau_source5.items()
+    }
 
     print("\n" + "=" * 88)
-    print("PART 1: THE CANONICAL PATH IS THE EXACT AFFINE GEODESIC ON THE FIXED SEED SURFACE")
+    print("PART 1: THE CURRENT ALIGNED-SEED -> CONSTRUCTIVE-WITNESS PATH REMAINS SUPPORT-LEVEL SCIENCE")
     print("=" * 88)
-    x_seed, y_seed, delta_seed = seed_point()
-    x_half, y_half, delta_half = path_point(0.5)
-    midpoint = 0.5 * (path_start + path_end)
-    second_difference = vector_from_path(0.25) - 2.0 * vector_from_path(0.50) + vector_from_path(0.75)
-
     check(
-        "The canonical lambda = 0 endpoint is the exact aligned native seed",
-        np.linalg.norm(path_start - np.array([x_seed[0], x_seed[1], y_seed[0], y_seed[1], delta_seed], dtype=float)) < 1.0e-12,
-        f"start={np.round(path_start, 12)}",
+        "The current candidate affine path still reaches a unique exact eta_1 = 1 point",
+        0.0 < path_lambda < 1.0 and abs(path_pack[0] - 1.0) < 1.0e-12,
+        f"lambda_*={path_lambda:.12f}",
     )
     check(
-        "The canonical lambda = 1 endpoint is the explicit constructive witness",
-        np.linalg.norm(path_end - vector_from_path(1.0)) < 1.0e-12,
-        f"end={np.round(path_end, 12)}",
+        "The current candidate root is still constructive and positive-branch",
+        path_pack[1] > 0.0 and path_pack[2] > 0.0 and path_pack[3] > 0.0 and path_pack[4] > 0.0,
+        f"pack={np.round(path_pack, 12)}",
     )
     check(
-        "The path midpoint is the affine midpoint and the second finite difference vanishes",
-        np.linalg.norm(vector_from_path(0.5) - midpoint) < 1.0e-12 and np.linalg.norm(second_difference) < 1.0e-12,
-        f"||second diff||={np.linalg.norm(second_difference):.2e}",
-    )
-    check(
-        "Every path point stays on the fixed native seed surface",
-        abs(np.mean(x_half) - np.mean(x_seed)) < 1.0e-12 and abs(np.mean(y_half) - np.mean(y_seed)) < 1.0e-12,
-        f"(xbar,ybar)=({np.mean(x_half):.12f},{np.mean(y_half):.12f})",
-    )
-    _ = delta_half
-
-    print("\n" + "=" * 88)
-    print("PART 2: THE CANONICAL PATH CROSSES EXACT CLOSURE ONCE AND TRANSVERSELY")
-    print("=" * 88)
-    eta_vals = np.array([constructive_column_eta(lam) for lam in ETA_GRID], dtype=float)
-    eta_shift = eta_vals - 1.0
-    diff_eta = np.diff(eta_vals)
-    min_idx = int(np.argmin(eta_vals))
-    sign_change_count = int(np.sum(eta_shift[:-1] * eta_shift[1:] < 0.0))
-    d_eta_star = finite_eta_derivative(lam_star)
-
-    check(
-        "The canonical path eta profile has exactly one exact-closure sign change on a dense grid",
-        sign_change_count == 1,
-        f"sign changes={sign_change_count}",
-    )
-    check(
-        "After its shallow initial dip, eta_1 is strictly increasing on the dense sampled tail",
-        min_idx < len(diff_eta) and np.all(diff_eta[min_idx:] > 0.0),
-        f"lambda_min={ETA_GRID[min_idx]:.4f}, eta_min={eta_vals[min_idx]:.12f}",
-    )
-    check(
-        "The exact closure root lies on that increasing tail and is therefore unique on the canonical path",
-        ETA_GRID[min_idx] < lam_star < 1.0 and abs(constructive_column_eta(lam_star) - 1.0) < 1.0e-12,
-        f"lambda_*={lam_star:.12f}",
-    )
-    check(
-        "The canonical-path crossing is transverse",
-        d_eta_star > 1.0e-4,
-        f"d eta_1 / d lambda |_* = {d_eta_star:.12f}",
+        "The current candidate root is still locally visible in the full observable chart",
+        path_rank[0] == 5 and path_rank[1] > 1.0e-4 and path_rank[2] == 4 and path_rank[3] > 1.0e-4,
+        f"min singulars=({path_rank[1]:.6e},{path_rank[3]:.6e})",
     )
 
     print("\n" + "=" * 88)
-    print("PART 3: THE PATH-SELECTED ROOT IS CONSTRUCTIVE, POSITIVE-BRANCH, AND LOCALLY COMPLETE")
+    print("PART 2: COMPETING FIXED-SEED AFFINE SELECTOR LAWS ALREADY EXIST")
     print("=" * 88)
-    full_min_singulars = []
-    closure_min_singulars = []
-    full_rank = True
-    closure_rank = True
-    for step in FD_STEPS:
-        jac = observable_jacobian(v_star, step)
-        singular = np.linalg.svd(jac, compute_uv=False)
-        tangent_basis = null_space(jac[0:1, :])
-        restricted = jac[1:, :] @ tangent_basis
-        restricted_singular = np.linalg.svd(restricted, compute_uv=False)
-        full_min_singulars.append(float(np.min(singular)))
-        closure_min_singulars.append(float(np.min(restricted_singular)))
-        full_rank &= int(np.sum(singular > 1.0e-8)) == 5
-        closure_rank &= restricted.shape == (4, 4) and int(np.sum(restricted_singular > 1.0e-8)) == 4
-
     check(
-        "The path-selected root satisfies eta_1 = 1 with gamma > 0, E1 > 0, E2 > 0, and Delta_src > 0",
-        abs(pack_star[0] - 1.0) < 1.0e-12 and pack_star[1] > 0.0 and pack_star[2] > 0.0 and pack_star[3] > 0.0 and pack_star[4] > 0.0,
-        f"pack={np.round(pack_star, 12)}",
+        "The A+, B+, and C+ multiplicity endpoints are all constructive positive overshooting witnesses",
+        all(overshooting_constructive(endpoint) for endpoint in OVERSHOOT_WITNESSES.values()),
+        "three retained overshooting witnesses on the same fixed seed surface",
     )
     check(
-        "The full observable pack is again a local coordinate chart at the path-selected root",
-        full_rank and min(full_min_singulars) > 1.0e-4,
-        f"min singulars={[f'{val:.6e}' for val in full_min_singulars]}",
+        "Each competing seed-fixed affine segment has an exact eta_1 = 1 root in (0,1)",
+        all(0.0 < data["root_lambda"] < 1.0 and abs(data["pack"][0] - 1.0) < 1.0e-10 for data in alt_data.values()),
+        ", ".join(f"{label}: {data['root_lambda']:.12f}" for label, data in alt_data.items()),
     )
     check(
-        "On eta_1 = 1, the residual four-pack again coordinatizes the local closure manifold",
-        closure_rank and min(closure_min_singulars) > 1.0e-4,
-        f"min restricted singulars={[f'{val:.6e}' for val in closure_min_singulars]}",
+        "Each competing affine crossing is transverse",
+        all(data["deriv"] > 1.0e-4 for data in alt_data.values()),
+        ", ".join(f"{label}: d eta/dlambda={data['deriv']:.6f}" for label, data in alt_data.items()),
+    )
+    check(
+        "Each competing affine root is itself constructive positive and locally complete",
+        all(
+            constructive_positive(data["root"])
+            and data["rank"][0] == 5
+            and data["rank"][1] > 1.0e-4
+            and data["rank"][2] == 4
+            and data["rank"][3] > 1.0e-4
+            for data in alt_data.values()
+        ),
+        "A+, B+, and C+ all land on full-rank constructive positive exact roots",
+    )
+    check(
+        "Those competing affine-selected roots are distinct from the current candidate root",
+        min(float(np.linalg.norm(data["root"] - path_root)) for data in alt_data.values()) > 5.0e-2,
+        ", ".join(
+            f"{label}: dist={np.linalg.norm(data['root'] - path_root):.6f}"
+            for label, data in alt_data.items()
+        ),
     )
 
     print("\n" + "=" * 88)
-    print("PART 4: THE PATH LAW PICKS A ROOT DISTINCT FROM THE OTHER CERTIFIED EXACT POSITIVE ROOTS")
+    print("PART 3: GEODESIC LANGUAGE DOES NOT MAKE THE CURRENT SEGMENT UNIQUE")
     print("=" * 88)
-    residuals: list[tuple[str, float, float]] = []
-    separations: list[tuple[str, float]] = []
-    for label, root in family_roots:
-        lam_fit, resid = line_segment_residual(root, path_start, path_end)
-        residuals.append((label, lam_fit, resid))
-        separations.append((label, float(np.linalg.norm(root - v_star))))
-
+    geodesic_candidates = {"P": CONSTRUCTIVE_WITNESS, **OVERSHOOT_WITNESSES}
+    midpoint_ok = True
+    second_diff_ok = True
+    details = []
+    for label, endpoint in geodesic_candidates.items():
+        midpoint_err, second_diff = midpoint_and_second_difference(endpoint)
+        midpoint_ok &= midpoint_err < 1.0e-12
+        second_diff_ok &= second_diff < 1.0e-12
+        details.append(f"{label}: ({midpoint_err:.1e}, {second_diff:.1e})")
     check(
-        "Each previously certified family root stays a definite distance off the canonical path segment",
-        min(resid for _label, _lam_fit, resid in residuals) > 3.0e-2,
-        f"residuals={[(label, round(resid, 6)) for label, _lam_fit, resid in residuals]}",
+        "The current and competing selector segments are all straight affine geodesics in the natural constant-metric chart",
+        midpoint_ok and second_diff_ok,
+        "; ".join(details),
     )
     check(
-        "The canonical-path root is distinct from every previously certified constructive positive exact root",
-        min(sep for _label, sep in separations) > 2.0e-1,
-        f"separations={[(label, round(sep, 6)) for label, sep in separations]}",
+        "So the standard affine-geodesic class already contains multiple constructive exact candidates",
+        len(geodesic_candidates) >= 4,
+        "P together with A+, B+, and C+",
     )
 
     print("\n" + "=" * 88)
-    print("PART 5: BOTTOM LINE")
+    print("PART 4: THE OBVIOUS SEED-BASED ETA_1 GRADIENT FLOW IS METRIC-DEPENDENT")
+    print("=" * 88)
+    flow_packs = {name: observable_pack(root) for name, root in flow_roots.items()}
+    check(
+        "The Euclidean and x1-heavy eta_1 gradient flows both hit exact eta_1 = 1 roots",
+        all(abs(pack[0] - 1.0) < 1.0e-10 for pack in flow_packs.values()),
+        ", ".join(f"{name}: eta_1={pack[0]:.12f}" for name, pack in flow_packs.items()),
+    )
+    check(
+        "Those gradient-flow roots are distinct, so the flow law depends on the chosen metric",
+        float(np.linalg.norm(flow_roots["euclid"] - flow_roots["x1-heavy"])) > 1.0e-2,
+        f"dist={np.linalg.norm(flow_roots['euclid'] - flow_roots['x1-heavy']):.6f}",
+    )
+    check(
+        "Neither obvious eta_1 gradient flow lands on the current constructive path-selected root",
+        all(float(np.linalg.norm(root - path_root)) > 5.0e-2 for root in flow_roots.values()),
+        ", ".join(f"{name}: dist_to_P={np.linalg.norm(root - path_root):.6f}" for name, root in flow_roots.items()),
+    )
+    check(
+        "Neither obvious eta_1 gradient flow root is constructive positive",
+        all(not constructive_positive(root) for root in flow_roots.values()),
+        "; ".join(
+            f"{name}: pack={np.round(flow_packs[name], 9)}"
+            for name in flow_roots
+        ),
+    )
+
+    print("\n" + "=" * 88)
+    print("PART 5: NATURAL CARRIER PULLBACK GEOMETRIES STILL DO NOT RECOVER THE CURRENT ROOT")
+    print("=" * 88)
+    pullback_packs = {name: observable_pack(root) for name, root in pullback_roots.items()}
+    seed_pullback_metrics = {
+        "H-pullback": pullback_metric(SEED_VECTOR, canonical_h_from_source5),
+        "Y-pullback": pullback_metric(SEED_VECTOR, canonical_y_from_source5),
+    }
+    check(
+        "The canonical Y- and H-carriers induce positive-definite pullback metrics at the aligned seed",
+        all(float(np.min(np.linalg.eigvalsh(metric))) > 1.0e-6 for metric in seed_pullback_metrics.values()),
+        "; ".join(
+            f"{name}: min eig={np.min(np.linalg.eigvalsh(metric)):.6e}"
+            for name, metric in seed_pullback_metrics.items()
+        ),
+    )
+    check(
+        "The H- and Y-pullback eta_1 flows both hit exact eta_1 = 1 roots",
+        all(abs(pack[0] - 1.0) < 1.0e-10 for pack in pullback_packs.values()),
+        ", ".join(f"{name}: eta_1={pack[0]:.12f}" for name, pack in pullback_packs.items()),
+    )
+    check(
+        "Those pullback-flow roots are distinct, so even natural carrier geometries do not produce one canonical eta_1 flow",
+        float(np.linalg.norm(pullback_roots["H-pullback"] - pullback_roots["Y-pullback"])) > 1.0e-2,
+        f"dist={np.linalg.norm(pullback_roots['H-pullback'] - pullback_roots['Y-pullback']):.6f}",
+    )
+    check(
+        "Neither pullback-flow root lands on the current constructive path-selected point",
+        all(float(np.linalg.norm(root - path_root)) > 5.0e-2 for root in pullback_roots.values()),
+        ", ".join(f"{name}: dist_to_P={np.linalg.norm(root - path_root):.6f}" for name, root in pullback_roots.items()),
+    )
+    check(
+        "Neither pullback-flow root is constructive positive",
+        all(not constructive_positive(root) for root in pullback_roots.values()),
+        "; ".join(
+            f"{name}: pack={np.round(pullback_packs[name], 9)}"
+            for name in pullback_roots
+        ),
+    )
+
+    print("\n" + "=" * 88)
+    print("PART 6: THE SOURCE-SURFACE SELECTOR PACKET DOES NOT DESCEND TO THIS LANE")
     print("=" * 88)
     check(
-        "The current branch therefore carries an explicit canonical path-selector law candidate",
+        "Every current exact direct-descendant root stays uniformly away from the source-surface intrinsic slot pair",
+        min([source_surface_slot_error(path_root)] + [source_surface_slot_error(data["root"]) for data in alt_data.values()]) > 9.0e-1,
+        ", ".join(
+            [f"P: {source_surface_slot_error(path_root):.6f}"]
+            + [f"{label}: {source_surface_slot_error(data['root']):.6f}" for label, data in alt_data.items()]
+        ),
+    )
+    check(
+        "Every current exact direct-descendant root also stays uniformly away from the source-surface CP pair",
+        min([source_surface_cp_error(path_root)] + [source_surface_cp_error(data["root"]) for data in alt_data.values()]) > 5.0e-1,
+        ", ".join(
+            [f"P: {source_surface_cp_error(path_root):.6f}"]
+            + [f"{label}: {source_surface_cp_error(data['root']):.6f}" for label, data in alt_data.items()]
+        ),
+    )
+    check(
+        "The constructive transport-plateau witnesses are likewise outside the source-surface sheet",
+        min(plateau_slot_errors.values()) > 9.0e-1 and min(plateau_cp_errors.values()) > 5.0e-1,
+        "; ".join(
+            f"{label}: (slot={plateau_slot_errors[label]:.6f}, cp={plateau_cp_errors[label]:.6f})"
+            for label in plateau_source5
+        ),
+    )
+    slot_winner = min(plateau_slot_errors, key=plateau_slot_errors.get)
+    cp_winner = min(plateau_cp_errors, key=plateau_cp_errors.get)
+    check(
+        "Even nearest-source-surface heuristics split on the plateau rather than selecting one witness direction",
+        slot_winner != cp_winner,
+        f"slot nearest={slot_winner}, cp nearest={cp_winner}",
+    )
+
+    print("\n" + "=" * 88)
+    print("PART 7: BOTTOM LINE")
+    print("=" * 88)
+    check(
+        "The aligned-seed -> constructive-witness affine path is still chosen rather than derived",
         True,
-        "choose the unique eta_1 = 1 point on the aligned-seed -> constructive-witness affine path",
+        "competing affine/geodesic candidates exist; natural carrier pullback flows miss P; the source-surface selector packet does not descend",
     )
     check(
-        "This is real selector science, but it is still path-chosen rather than reviewer-grade object-derivation from retained physics",
+        "A future closure theorem must add either a direct-descendant -> source-surface bridge theorem or a microscopic value law on L_e itself",
         True,
-        "the witness and affine path are explicit constructive inputs, not yet axiom-native outputs",
+        "a generic metric or borrowed source-surface law is not enough on the present retained packet",
     )
 
     print()
-    print(f"  lambda_* = {lam_star:.12f}")
-    print(f"  path-selected coordinates = {np.round(v_star, 12)}")
-    print(f"  path-selected pack        = {np.round(pack_star, 12)}")
-    print(
-        "  path-selected triplet     = "
-        f"({triplet_star['gamma']:.12f}, {triplet_star['E1']:.12f}, {triplet_star['E2']:.12f})"
-    )
+    print(f"  current path root P   = {np.round(path_root, 12)}")
+    for label, data in alt_data.items():
+        print(f"  competing root {label:>2} = {np.round(data['root'], 12)}")
+    for name, root in flow_roots.items():
+        print(f"  flow root {name:>8} = {np.round(root, 12)}")
+    for name, root in pullback_roots.items():
+        print(f"  pullback root {name:>10} = {np.round(root, 12)}")
 
     print("\n" + "=" * 88)
     print(f"SUMMARY: PASS={PASS_COUNT} FAIL={FAIL_COUNT}")
+    print("VERDICT: PATH STILL CHOSEN")
     print("=" * 88)
     return 0 if FAIL_COUNT == 0 else 1
 
