@@ -2,7 +2,7 @@
 
 ## Scope
 
-This is the reviewer-facing front door for the live quark mass-ratio lane on
+This is the  front door for the live quark mass-ratio lane on
 current `main`.
 
 It bundles the live down-type, up-type, minimal full-solve, and bounded
@@ -180,7 +180,7 @@ Bridge/support context when needed:
 
 ## Package Role
 
-- reviewer-facing intake for the live quark mass-ratio package on `main`
+-  intake for the live quark mass-ratio package on `main`
 - one-place summary of what is numerically strong versus what is still bounded
 - validation front door for the current down-type and up-type replay runners
 

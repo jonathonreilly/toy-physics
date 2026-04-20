@@ -1,10 +1,10 @@
 # DM Chamber Signature Structure -- F4 Closed by DPLE Theorem
 
 **Date:** 2026-04-19
-**Status:** SUPERSEDED (cycle 10C). Originally the cycle 7B / 8
+**Status:** SUPERSEDED (this cycle). Originally the cycle 7B / 8
 signature-structure analysis of the DM A-BCC chart, introducing F4
 (interior-minimum linear-path Sylvester discriminant) as the basin-
-selector axiom candidate. Cycle 10C reduces F4 to a **theorem**: the
+selector axiom candidate. this cycle reduces F4 to a **theorem**: the
 d = 3 specialization of the dim-parametric **log|det| extremum
 principle (DPLE)** on the retained linear Hermitian pencil. F4 is no
 longer an independent axiom.
@@ -14,9 +14,9 @@ longer an independent axiom.
 
 ---
 
-## 1. What changed between cycle 1-4 and cycle 10
+## 1. What changed between this cycle-4 and this cycle
 
-### Cycle 1-4 state
+### this cycle-4 state
 
 Cycles 7B and 8 identified F4 as the discriminating axiom candidate on
 the DM A-BCC chart:
@@ -40,7 +40,7 @@ Sylvester linear-path theorem on main), but its physical justification
 -- variational / Wilson / slot-freeze derivation -- was the **1-axiom
 gap**.
 
-### Cycle 10C state (this update)
+### this cycle state (this update)
 
 F4 reduces to a **theorem** via the dim-parametric **DPLE principle**.
 The principle, stated at arbitrary d >= 2:
@@ -91,8 +91,8 @@ not derived from DPLE. A-BCC remains an open source-side input; see
 
 Combined with retained R1 / R2 / R3 on main, d = 3 is the unique dim at
 which the DM A-BCC lane has a physical carrier with a clean binary F_d
-selector -- the same dim-uniqueness fingerprint as MRU (cycle 10A) and
-Berry (cycle 10B).
+selector -- the same dim-uniqueness fingerprint as MRU (this cycle) and
+Berry (this cycle).
 
 ---
 
@@ -130,7 +130,7 @@ Retained DM runners on main pass unchanged:
 
 ## 4. Cross-references
 
-- `docs/DM_DPLE_DIMENSION_PARAMETRIC_EXTREMUM_THEOREM_NOTE_2026-04-19.md` (cycle 10C, primary)
+- `docs/DM_DPLE_DIMENSION_PARAMETRIC_EXTREMUM_THEOREM_NOTE_2026-04-19.md` (this cycle, primary)
 - `docs/DM_NEUTRINO_SOURCE_SURFACE_P3_SYLVESTER_LINEAR_PATH_SIGNATURE_THEOREM_NOTE_2026-04-18.md` (retained path theorem, on main)
 - `docs/CYCLE_1_TO_10_SYNTHESIS_NOTE_2026-04-19.md` (reading order)
 - Uhlig 1982 (Linear Algebra Appl. 46); Mehl-Mehrmann-Ran-Rodman 2016; Milnor Morse Theory 1963.

@@ -2,9 +2,7 @@
 
 **Date:** 2026-04-19
 **Lane:** Dark-matter A-BCC basin-selector (source-side physical-sheet
-identification)
-**Cycle:** 12
-**Status:** RETAINED THEOREM. Sylvester's law of inertia proves that any
+identification)**Status:** RETAINED THEOREM. Sylvester's law of inertia proves that any
 continuous path from H_base to a C_neg endpoint MUST cross det=0,
 regardless of path shape. This is an algebraic, path-independent
 mechanism that upgrades the A-BCC conditional theorem from an IVT
@@ -17,7 +15,7 @@ PNS remains the single remaining physical input.
 
 ## 0. Executive summary
 
-The A-BCC PMNS Non-Singularity theorem (cycle 11) proved:
+The A-BCC PMNS Non-Singularity theorem (this cycle) proved:
 
 > If det(H(t)) ≠ 0 on the linear path [0,1] then A-BCC (IVT argument).
 
@@ -50,9 +48,9 @@ step-half). Basin 1 crosses det=0 on zero path shapes.
 Δn− = −1 (one negative eigenvalue becomes positive). Exactly ONE
 eigenvalue crosses zero on the path to Basin 2 (at t ≈ 0.0276) and
 Basin X (at t ≈ 0.0383). This is the same zero-crossing identified in
-cycle 11 as the PMNS singularity.
+this cycle as the PMNS singularity.
 
-**Upgrade over cycle 11:** The original IVT argument proved PNS → A-BCC
+**Upgrade over this cycle:** The original IVT argument proved PNS → A-BCC
 for the linear path. The Sylvester argument proves PNS → A-BCC for
 ANY path. The mechanism is identified: C_neg is in a different
 topological chamber than H_base.
@@ -68,7 +66,7 @@ Runner: PASS=54 FAIL=0.
 
 ## 1. Setup
 
-Physical Hermitian operator (same as cycle 11):
+Physical Hermitian operator (same as this cycle):
 
     H_base = [[0, E1, -E1-i*Gamma],
               [E1, 0, -E2],
@@ -195,7 +193,7 @@ of eigenvalue zero-crossings equals |Δn−| = 1.
 | Basin 2 | 1 (middle, sorted) | t ≈ 0.0276 | neg → pos |
 | Basin X | 1 (middle, sorted) | t ≈ 0.0383 | neg → pos |
 
-The PMNS singularity identified in cycle 11 (second neutrino mass passes
+The PMNS singularity identified in this cycle (second neutrino mass passes
 through zero) is exactly the signature-forcing crossing: the middle
 eigenvalue of H_base must cross zero because the endpoint has one fewer
 negative eigenvalue. The crossing is algebraically mandatory — it is a
@@ -236,14 +234,14 @@ to cross (and Basin 1 avoids crossing due to P3 Sylvester).
 
 ## 7. Relation to prior A-BCC results
 
-**Cycle 11 (PNS theorem, IVT):** Proved PNS → A-BCC on the linear path.
+**this cycle (PNS theorem, IVT):** Proved PNS → A-BCC on the linear path.
 Mechanism: IVT applied to the linear path polynomial det(H_base + t J).
 
-**Cycle 12 (this note, Sylvester):** Proves PNS → A-BCC on ANY path.
+**this cycle (this note, Sylvester):** Proves PNS → A-BCC on ANY path.
 Mechanism: Sylvester signature-forcing. The two chambers C_base and
 C_neg are topologically disconnected in GL(Herm_3).
 
-**Upgrade:** The Sylvester argument subsumes the cycle 11 IVT argument
+**Upgrade:** The Sylvester argument subsumes the this cycle IVT argument
 as a special case (the linear path). The content is the same (PNS →
 A-BCC), but the mechanism is now identified as topological
 (signature-chamber structure) rather than analytic (IVT on a specific
@@ -287,13 +285,13 @@ PNS is grounded observationally:
 - The spectral flow crossing for Basin 2/X occurs at t ≈ 2.8% of full
   coupling — well within the measurable range.
 
-**Comparison to assumptions audit (cycle 10):** The audit ruled out all
+**Comparison to assumptions audit (this cycle):** The audit ruled out all
 five algebraic routes to A-BCC from Cl(3)/Z³ structure alone. This
 theorem does not contradict those no-goes: it does not derive A-BCC from
 Cl(3)/Z³ without an additional input. It identifies the MECHANISM (the
 two-chamber signature structure of the Herm_3 pencil), reduces the
 problem to PNS, and shows PNS is path-independent. The minimal residual
-input is PNS (1 axiom), unchanged from cycle 11.
+input is PNS (1 axiom), unchanged from this cycle.
 
 **Status: RETAINED THEOREM.** The Sylvester signature-forcing is a
 mechanical theorem (Sylvester's law of inertia, established 1852). Its
@@ -326,7 +324,7 @@ Expected: PASS=54 FAIL=0.
 ## 10. Cross-references
 
 - `docs/DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md`
-  (cycle 11: PNS conditional theorem via IVT; this cycle extends it to
+  (this cycle: PNS conditional theorem via IVT; this cycle extends it to
   all paths via Sylvester)
 - `docs/DM_ABCC_ASSUMPTIONS_AUDIT_NOTE_2026-04-19.md`
   (all five algebraic routes ruled out; confirms PNS is minimal input)
@@ -368,7 +366,7 @@ now supported by:
       + Chamber structure (1,0,2) / (2,0,1) (verified scan + E2-threshold)
 
 This is the complete algebraic structure of A-BCC. PNS is the minimum
-physical input. The assumptions audit (cycle 10) confirms no
+physical input. The assumptions audit (this cycle) confirms no
 Cl(3)/Z³ derivation of this sign input is possible.
 
 **Status: RETAINED THEOREM.** PASS=54 FAIL=0.

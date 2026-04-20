@@ -1,8 +1,8 @@
 # Koide Selected-Line Cyclic-Response Bridge
 
 **Date:** 2026-04-18  
-**Status:** exact bridge theorem on the branch-local actual-route stack. Once
-AXIOM E is closed on the actual Berry route, the previously separate
+**Status:** exact bridge theorem on the actual-route stack. Once
+the Brannen-Zenczykowski phase offset is closed on the actual Berry route, the previously separate
 selected-line scalar/point law is no longer open: `delta = 2/9` fixes
 `kappa_sel,*` and the unique first-branch point `m_*`. The old `H_*` witness is
 demoted to a compatibility check.
@@ -11,7 +11,7 @@ demoted to a compatibility check.
 
 ## Question
 
-After the branch-local Berry theorem identifies the physical charged-lepton
+After the Berry theorem identifies the physical charged-lepton
 phase as the actual-route holonomy
 
 ```text
@@ -58,7 +58,7 @@ w/v = 4.100981191542.
 ```
 
 So the selected-line scalar/point law is not an independent remaining gap
-once AXIOM E is genuinely closed on the actual route.
+once the Brannen-Zenczykowski phase offset is genuinely closed on the actual route.
 
 ## 1. Exact cyclic/orbit inversion
 
@@ -147,7 +147,7 @@ are strictly monotone. Therefore either one is a complete coordinate on the
 physical first branch, and solving `delta(m) = 2/9` gives one unique
 selected-line point.
 
-## 4. Corollary: AXIOM E fixes `kappa_sel,*` and `m_*`
+## 4. Corollary: the Brannen-Zenczykowski phase offset fixes `kappa_sel,*` and `m_*`
 
 Substituting the actual-route Berry target `delta = 2/9` into the exact bridge
 gives
@@ -177,7 +177,7 @@ Q = 2/3 exactly,
 cos(dir(m_*), dir_PDG) > 0.99999999997.
 ```
 
-So the selected-line direction is fixed directly by AXIOM E once the actual
+So the selected-line direction is fixed directly by the Brannen-Zenczykowski phase offset once the actual
 Berry theorem is in place.
 
 ## 5. The old `H_*` witness is no longer load-bearing
@@ -202,16 +202,15 @@ that fixes the selected-line point.
 
 ## 6. Scope boundary
 
-This note closes the branch-local selected-line scalar/point law on the
+This note closes the selected-line scalar/point law on the
 combined Berry-plus-selected-line route:
 
 ```text
 delta = 2/9  ->  kappa_sel,*  ->  unique first-branch m_*.
 ```
 
-It does **not** by itself rewrite the authoritative current-main bounded
-charged-lepton package. Current main still records a bounded result because the
-actual-route Berry theorem is branch-local science, not current-main authority.
+This note does not by itself rewrite main's charged-lepton package. Current main still records a bounded result because the
+actual-route Berry theorem has not yet been promoted to main.
 
 ## Reproduction
 

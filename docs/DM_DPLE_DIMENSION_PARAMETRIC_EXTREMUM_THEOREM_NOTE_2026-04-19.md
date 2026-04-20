@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-19
 **Lane:** Dark-matter A-BCC basin-selector.
-**Status:** Exact matrix-analysis theorem; reviewer-facing status is **support
+**Status:** Exact matrix-analysis theorem;  status is **support
 theorem on the open DM gate**, not full A-BCC closure. The `F4`
 interior-minimum linear-path Sylvester discriminant on the DM A-BCC chart is
 the `d = 3` specialization of the **Dim-Parametric log|det| Extremum (DPLE)**

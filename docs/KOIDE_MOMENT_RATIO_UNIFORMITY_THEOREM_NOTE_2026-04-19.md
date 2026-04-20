@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-19
 **Lane:** Charged-lepton Koide / `kappa = 2`
-**Status:** branch-local closure theorem on the MRU lane. The earlier same-day
+**Status:** closure theorem on the MRU lane. The earlier same-day
 weight-class obstruction remains correct on the unreduced `3 x 3` determinant
 carrier, but the exact missing object it isolated is now derived: the scalar
 charged-lepton lane lives on the canonical two-slot real-isotype quotient

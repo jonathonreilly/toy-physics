@@ -155,8 +155,7 @@ J1_evals = np.linalg.eigvalsh(J1)
 check("J_phys (Basin 1) is NOT positive semi-definite", not np.all(J1_evals >= -1e-10),
       f"J eigenvalues={J1_evals}")
 
-check("ATTACK VECTOR 3: RULED OUT — no Cl(3) positivity constraint on H eigenvalues",
-      True, "all generators and J_phys have mixed spectrum; no algebraic lower bound")
+print("  [note] ATTACK VECTOR 3 ruled out: all generators and J_phys have mixed spectrum (verified above), so there is no Cl(3) algebraic positivity bound on H eigenvalues.")
 
 # ---------------------------------------------------------------------------
 # T3: Attack vector 2 — source-surface chamber constraint
@@ -293,8 +292,7 @@ min_abs_eval = min(
 check(f"Min |eigenvalue| along Basin 1 path = {min_abs_eval:.4f} > 0.3",
       min_abs_eval > 0.3)
 
-check("P3 Sylvester theorem (retained on main): det(H(t)) > 0 for all t in [0,1]",
-      True, "ATTACK VECTOR 5: POSITIVE RESULT — theorem-grade, derived from exact cubic")
+print("  [note] ATTACK VECTOR 5 (P3 Sylvester) is a retained positive theorem: det(H_base + t J_Basin1) > 0 for all t in [0,1], proved from the exact cubic (min det = 0.878 verified above).")
 
 # ---------------------------------------------------------------------------
 # T7: Sigma-chain PNS conditional theorem (the complete argument)
@@ -315,11 +313,8 @@ for name, p in [("Basin 2", BASIN2), ("Basin X", BASIN_X)]:
 check("Sigma-chain step 3: P3 Sylvester → det > 0 on Basin 1 path → PNS",
       min_det_basin1 > 0)
 
-check(
-    "SIGMA-CHAIN THEOREM: chamber + sigma(2,1,0) + chi^2=0 + T2K => J_phys = Basin 1 => PNS",
-    True,
-    "observational inputs T2K + NuFit already retained in sigma-hier uniqueness + ABCC_CP_PHASE",
-)
+print("  [sigma-chain] chamber bound + sigma=(2,1,0) [NuFit-compatible] + chi^2=0 + T2K sin(dcp)<0 => J_phys = Basin 1 => PNS (min det > 0 proved by P3 Sylvester above).")
+print("  [sigma-chain] Observational inputs T2K + NuFit are already retained in the sigma-hier uniqueness theorem and the ABCC CP-phase no-go.")
 
 # ---------------------------------------------------------------------------
 # T8: No purely algebraic PNS (sign-blindness no-go, consistent with cycle 10)
@@ -348,11 +343,7 @@ for name, p in [("Basin 2", BASIN2), ("Basin X", BASIN_X)]:
         "shows pure Cl(3)/Z^3 algebra cannot rule out det crossings in general",
     )
 
-check(
-    "PURE ALGEBRAIC PNS: RULED OUT — sign-blindness no-go (same as cycle 10 DPLE)",
-    True,
-    "Cl(3)/Z^3 alone cannot determine eigenvalue sign without observational input",
-)
+print("  [note] Pure algebraic PNS is ruled out by the DPLE sign-blindness no-go: Cl(3)/Z^3 alone cannot determine eigenvalue sign without observational input. Consistent with DM_DPLE_ABCC_NO_GO.")
 
 # ---------------------------------------------------------------------------
 # T9: Summary of all 7 attack vectors
@@ -377,18 +368,10 @@ vector_results = [
 ]
 
 for name, result, detail in vector_results:
-    check(f"{name}: {result}", True, detail)
+    print(f"  [summary] {name}: {result} — {detail}")
 
-check(
-    "PNS is DERIVABLE from the retained measurement framework (sigma-chain theorem)",
-    True,
-    "NOT from pure Cl(3)/Z^3 algebra; requires T2K+NuFit (already retained)",
-)
-check(
-    "PNS closes A-BCC when combined with Sylvester signature-forcing (cycle 12)",
-    True,
-    "full chain: T2K+NuFit+Cl(3)/Z^3 => PNS => A-BCC => DM flagship gate closes",
-)
+print("  [conclusion] PNS is derivable from the retained measurement framework via the sigma-chain; requires T2K + NuFit observational inputs (already retained).")
+print("  [conclusion] Combined with Sylvester signature-forcing (a separate theorem), the chain T2K + NuFit + Cl(3)/Z^3 => PNS => A-BCC closes the DM flagship basin-selection gate.")
 
 # ---------------------------------------------------------------------------
 # Final summary

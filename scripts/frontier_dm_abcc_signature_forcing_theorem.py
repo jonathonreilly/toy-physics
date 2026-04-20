@@ -261,8 +261,7 @@ if crossings2:
     ev_idx, t_cross = crossings2[0]
     evals_before = np.sort(np.linalg.eigvalsh(Hb + (t_cross - 1e-4) * J2))
     evals_after  = np.sort(np.linalg.eigvalsh(Hb + (t_cross + 1e-4) * J2))
-    check(f"Basin 2: crossing eigenvalue index {ev_idx} at t≈{t_cross:.4f}",
-          True, f"eigenvalue {evals_before[ev_idx]:.5f} → {evals_after[ev_idx]:.5f}")
+    print(f"  [note] Basin 2 crossing eigenvalue index {ev_idx} at t ≈ {t_cross:.4f} ({evals_before[ev_idx]:.5f} -> {evals_after[ev_idx]:.5f}).")
     check("Basin 2: crossing eigenvalue changes sign (neg → pos)",
           evals_before[ev_idx] < 0 < evals_after[ev_idx])
 
@@ -274,8 +273,7 @@ if crossingsX:
     ev_idx, t_cross = crossingsX[0]
     evals_before = np.sort(np.linalg.eigvalsh(Hb + (t_cross - 1e-4) * JX))
     evals_after  = np.sort(np.linalg.eigvalsh(Hb + (t_cross + 1e-4) * JX))
-    check(f"Basin X: crossing eigenvalue index {ev_idx} at t≈{t_cross:.4f}",
-          True, f"eigenvalue {evals_before[ev_idx]:.5f} → {evals_after[ev_idx]:.5f}")
+    print(f"  [note] Basin X crossing eigenvalue index {ev_idx} at t ≈ {t_cross:.4f} ({evals_before[ev_idx]:.5f} -> {evals_after[ev_idx]:.5f}).")
     check("Basin X: crossing eigenvalue changes sign (neg → pos)",
           evals_before[ev_idx] < 0 < evals_after[ev_idx])
 
@@ -304,25 +302,26 @@ print("\nT8: Signature-forcing → PNS conditional theorem")
 # - Sylvester: ANY path → "PNS (on any path) ↔ A-BCC"
 # - Mechanism: explicit signature (1,0,2) ↔ (2,0,1) chamber structure
 
-check("STRUCTURAL: PNS (any path) → A-BCC [Sylvester signature forcing]", True,
-      "gap: PNS is the single remaining physical input")
-check("STRUCTURAL: C_base = {sig (1,0,2)} chamber, C_neg = {sig (2,0,1)} chamber", True,
-      "verified on 3000 C_neg + 3000 C_base sample points")
-check("STRUCTURAL: PNS is path-independent (6 path types verified for Basin 2 and X)",
-      True, "topological fact, not just linear-path IVT")
-check("STRUCTURAL: Residual input = PNS (1 axiom, observationally grounded)",
-      True, "all three neutrino masses measured positive and nonzero")
+# The T8 summary statements are synthesis of the numerical tasks above; the
+# underlying claims are verified by the earlier sample scans and path checks.
+# Converted to print commentary so PASS count reflects only numeric checks.
+print("  [note] Sylvester signature-forcing: PNS on any path implies A-BCC (chamber structure prevents sign-flip without det=0 crossing).")
+print("  [note] C_base = {sig (1,0,2)} chamber, C_neg = {sig (2,0,1)} chamber (verified on 3000+3000 sample points above).")
+print("  [note] PNS is path-independent — six path types (linear, curved, zigzag, etc.) verified above for Basin 2 and Basin X.")
+print("  [note] Residual physical input = PNS; observationally grounded by the measured non-zero neutrino-mass-squared splittings.")
 
 # ---------------------------------------------------------------------------
 # T9: Summary — A-BCC conditional theorem with Sylvester mechanism
 # ---------------------------------------------------------------------------
 print("\nT9: Summary")
 
-check("Basin 1: unique chi²=0 basin with sig=(1,0,2) [C_base, same as H_base]", True)
-check("Basin 2: chi²=0 basin with sig=(2,0,1) [C_neg], Sylvester-excluded", True)
-check("Basin X: chi²=0 basin with sig=(2,0,1) [C_neg], Sylvester-excluded", True)
-check("Theorem: A-BCC ← PNS + Sylvester [path-independent, spectral flow = 1]", True)
-check("Honest gap: PNS is the minimal remaining physical input", True)
+# T9 summary (each claim was numerically verified above in T4-T7). Converted
+# to print commentary to keep PASS count verification-only.
+print("  [summary] Basin 1: unique chi^2=0 basin with signature (1,0,2) = C_base, matches H_base.")
+print("  [summary] Basin 2: chi^2=0 basin with signature (2,0,1) = C_neg, Sylvester-excluded.")
+print("  [summary] Basin X: chi^2=0 basin with signature (2,0,1) = C_neg, Sylvester-excluded.")
+print("  [summary] Theorem reduction: A-BCC <- PNS + Sylvester inertia (path-independent, spectral flow = 1).")
+print("  [summary] Residual physical input: PNS (single axiom, observationally grounded).")
 
 # ---------------------------------------------------------------------------
 # Final summary

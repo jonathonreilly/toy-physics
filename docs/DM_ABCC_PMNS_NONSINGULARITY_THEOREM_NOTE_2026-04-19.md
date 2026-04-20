@@ -2,9 +2,7 @@
 
 **Date:** 2026-04-19
 **Lane:** Dark-matter A-BCC basin-selector (source-side physical-sheet
-identification)
-**Cycle:** 11
-**Status:** CONDITIONAL THEOREM. A-BCC is equivalent to a single
+identification)**Status:** CONDITIONAL THEOREM. A-BCC is equivalent to a single
 physically-grounded continuity axiom (PMNS Non-Singularity). Both known
 C_neg chi²=0 basins (Basin 2, Basin_X) require a neutrino mass
 zero-crossing at t ≈ 0.028 and t ≈ 0.038 respectively. Basin 1 avoids
@@ -17,7 +15,7 @@ vs. the prior bare sign assumption.
 
 ## 0. Executive summary
 
-The A-BCC assumptions audit (cycle 10, `DM_ABCC_ASSUMPTIONS_AUDIT_NOTE`)
+The A-BCC assumptions audit (this cycle, `DM_ABCC_ASSUMPTIONS_AUDIT_NOTE`)
 ruled out all five algebraic derivation routes and identified a single
 residual gap: the C_base-connectivity axiom. This note closes that gap
 by proving:
@@ -321,8 +319,8 @@ Expected: PASS=38 FAIL=0.
   open" item 7; now reduced to PNS)
 - `docs/DM_DPLE_DIMENSION_PARAMETRIC_EXTREMUM_THEOREM_NOTE_2026-04-19.md`
   (F4 → DPLE theorem; scalar-selector sub-gate closed)
-- `docs/CYCLE_1_TO_10_SYNTHESIS_NOTE_2026-04-19.md` (cycle 1-10 landing)
-- `docs/DM_ABCC_SIGNATURE_FORCING_THEOREM_NOTE_2026-04-19.md` (cycle 12:
+- `docs/CYCLE_1_TO_10_SYNTHESIS_NOTE_2026-04-19.md` (this cycle-10 landing)
+- `docs/DM_ABCC_SIGNATURE_FORCING_THEOREM_NOTE_2026-04-19.md` (this cycle:
   Sylvester signature-forcing upgrades this IVT result to any path; full
   algebraic mechanism behind why C_neg requires a det=0 crossing)
 

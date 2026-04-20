@@ -314,17 +314,17 @@ Expected: PASS=21 FAIL=0.
 
 | Item | Status |
 |------|--------|
-| AXIOM D (kappa=2) | CLOSED: MRU theorem (cycle 10A) |
-| AXIOM E (theta) | CLOSED: Berry-phase theorem (cycle 10B) |
-| F4 (scalar selector) | CLOSED: DPLE theorem (cycle 10C) |
-| Min-C | CONDITIONALLY CLOSED: RPSR (cycle 10D, pending LO identity) |
+| the Koide cone-normalization relation (kappa=2) | CLOSED: MRU theorem (this cycle) |
+| the Brannen-Zenczykowski phase offset (theta) | CLOSED: Berry-phase theorem (this cycle) |
+| F4 (scalar selector) | CLOSED: DPLE theorem (this cycle) |
+| Min-C | CONDITIONALLY CLOSED: RPSR (this cycle, pending LO identity) |
 | **A-BCC** | **OPEN: single named source-side input** |
 
 A-BCC is not in the scalar-selector sub-gate list {D, E, Min-C, F4};
 it is a separate source-side identification axiom that the sub-gate takes
-as input. The cycle-10 scalar-selector closures do not affect A-BCC.
+as input. The this cycle scalar-selector closures do not affect A-BCC.
 
-**Path to closure (cycle 11+ target):** Prove that "the physical J must
+**Path to closure (this cycle+ target):** Prove that "the physical J must
 reach its final value via a continuous path from J=0 that remains in
 C_base" from a retained physical-reasonableness axiom (e.g., adiabatic
 source turn-on, or Grassmann-additivity of the observable W[J]). This

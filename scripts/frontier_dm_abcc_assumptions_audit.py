@@ -202,9 +202,10 @@ def task_a4_kramers_route():
     # Also check: the 3x3 dimension is odd; Kramers requires even dimension
     # (pairs of degenerate eigenstates). A 3x3 system with T^2=-1 would need
     # to have all eigenvalues doubly degenerate — impossible for 3x3.
-    check("3x3 odd dimension is incompatible with full Kramers pairing",
-          True,
-          "d=3 (odd) cannot have all-degenerate Kramers pairs; Kramers applies to d=2 spinors")
+    # Kramers theorem: if T is anti-unitary with T^2=-1, all eigenstates come in
+    # degenerate pairs; hence the state-space dimension must be even. For d=3 the
+    # odd dimension is arithmetically incompatible with full Kramers pairing.
+    print("  [note] 3x3 odd dimension is arithmetically incompatible with full Kramers pairing (d=2k required for T^2=-1).")
 
 
 # ---------------------------------------------------------------------------
@@ -293,9 +294,7 @@ def task_a7_chirality_route():
     check("Basin 1 in C_base (det > 0), Basin 2 in C_neg (det < 0)",
           det1 > 0 and det2 < 0,
           f"det(B1)={det1:.3f}, det(B2)={det2:.2e}")
-    check("Sigma-hier selection applies to pairing, not to det-sign (two C_neg solutions exist)",
-          True,
-          "sigma=(2,1,0) uniquely selected; C_base vs C_neg not determined by sigma-hier alone")
+    print("  [note] Sigma-hier selects sigma=(2,1,0) uniquely but does NOT determine C_base vs C_neg alone; two C_neg solutions exist at the same sigma.")
 
 
 # ---------------------------------------------------------------------------
@@ -331,9 +330,7 @@ def task_a8_connectivity_route():
     check("Basin 1 linear path stays in C_base on [0,1] (P3 Sylvester confirmation)",
           min_det_basin1 > 0,
           f"min det = {min_det_basin1:.4f} > 0")
-    check("C_base-connectivity is a topological FACT but not a derivation of A-BCC without 'physical J from J=0' axiom",
-          True,
-          "requires additional continuity axiom not in Cl(3)/Z^3")
+    print("  [note] C_base-connectivity is a topological fact (Basin 1 path stays det>0) but is not a derivation of A-BCC without an adiabatic-path continuity axiom.")
 
 
 # ---------------------------------------------------------------------------
@@ -428,9 +425,7 @@ def task_a11_route_summary():
     for route, status, reason in routes:
         print(f"  {route:<40s} {status:<10s} {reason}")
 
-    check("Route summary table printed (informational)",
-          True,
-          "6 routes fail or only support; A-BCC remains open")
+    print("  [note] Route summary table printed above (informational): 6 routes fail or supply only support; A-BCC-from-Cl(3)/Z^3-alone remains open.")
 
 
 # ---------------------------------------------------------------------------
@@ -459,9 +454,7 @@ def task_a12_verdict():
     print("  axiom (adiabatic source / Grassmann-additivity of W[J]) and")
     print("  prove A-BCC as its corollary.")
 
-    check("A-BCC is the single named open input on the DM flagship gate",
-          True,
-          "no derivation found; C_base-connectivity motivates cycle-11 target")
+    print("  [note] A-BCC is the single named open input on the DM flagship gate (no derivation found via the five algebraic routes; C_base-connectivity motivates the continuity-axiom target).")
 
 
 # ---------------------------------------------------------------------------

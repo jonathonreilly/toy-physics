@@ -3,7 +3,7 @@
 **Date:** 2026-04-19
 **Lane:** Charged-lepton Koide / MRU
 **Status:** exact obstruction theorem on the unreduced carrier, now paired with
-its branch-local resolution. The theorem itself is unchanged: the unreduced
+its resolution. The theorem itself is unchanged: the unreduced
 `3 x 3` determinant carrier counts weights `(1,2)` and therefore cannot force
 MRU by itself. What has changed is that the exact missing object is now
 derived: the scalar charged-lepton lane reduces canonically to the two-slot
@@ -47,7 +47,7 @@ So:
 
 That obstruction remains exact.
 
-The branch-local resolution is not to dispute that calculation. It is to
+The resolution is not to dispute that calculation. It is to
 derive the carrier reduction the theorem said was missing:
 
 ```text

@@ -6,7 +6,7 @@ scalar-selector gates: Koide `kappa`, Koide doublet-phase (Koide
 `theta`), Quark up-amplitude `a_u`, DM A-BCC basin.
 
 **Status.** This note now serves as **route-history and internal synthesis**,
-not the current reviewer-facing claim surface. The honest read after the
+not the current  claim surface. The honest read after the
 science review, the later meta-closure pass, and the 2026-04-19 evening
 full-stack recovery is:
 
@@ -17,7 +17,7 @@ full-stack recovery is:
   bridge `a_0^2 - 2|z|^2 = 3(a^2 - 2|b|^2)` + block-total Frobenius
   (four converging routes); Koide `theta` closes via the actual-route
   Pancharatnam–Berry identification on the physical charged-lepton
-  selected line (AXIOM E closed on the actual route; selected-line
+  selected line (the Brannen–Zenczykowski phase offset is identified geometrically; selected-line
   `m_*, kappa_sel,*` are then fixed as corollaries); DM A-BCC closes
   via chamber `∩` DPLE `F_4` primary plus three recovered alternative
   routes (cycles 11/12/13: PMNS-non-singularity, signature-forcing,
@@ -41,7 +41,7 @@ full-stack recovery is:
 post-recovery per-lane audit. Then read
 `docs/SCALAR_SELECTOR_CYCLE1_SCIENCE_REVIEW_NOTE_2026-04-19.md` and
 `docs/SCALAR_SELECTOR_CYCLE13_META_CLOSURE_STATUS_NOTE_2026-04-19.md`,
-then use this note for the branch-local candidate-route logic in §2-§9.
+then use this note for the candidate-route logic in §2-§9.
 
 ---
 
@@ -53,18 +53,18 @@ scalar selections:
 | Gate | Content | Status (post-recovery) |
 |---|---|---|
 | **Koide `kappa`** | Charged-lepton cone normalization `kappa = 2` | **Closed.** MRU + real-isotype SO(2)-quotient of the scalar lane + spectrum/operator bridge `a_0^2 - 2|z|^2 = 3(a^2 - 2|b|^2)` + block-total Frobenius measure (four converging retained routes). The former block-total-vs-det "measure convention" residue is discharged by the quotient closure: the physical scalar carrier is two-slot on the reduced manifold, and both measures agree there. |
-| **Koide `theta`** | Doublet-phase offset `delta = 2/9` (Brannen–Zenczykowski) | **Closed on the actual route.** Ambient-`S^2` model retired; bundle-obstruction retained as no-go on the wrong base; actual-route Pancharatnam–Berry identification on the physical selected line closes AXIOM E (projective `C_3` doublet ray `[1 : e^{-2iθ}]`, tautological line `A = dθ`, unique unphased reference `m_0`). Once `delta` is closed, the exact scalar-phase bridge `kappa_sel(delta)` fixes `m_*` and the selected-line scalar as corollaries. |
+| **Koide `theta`** | Doublet-phase offset `delta = 2/9` (Brannen–Zenczykowski) | **Closed on the actual route.** Ambient-`S^2` model retired; bundle-obstruction retained as no-go on the wrong base; actual-route Pancharatnam–Berry identification on the physical selected line closes the Brannen-Zenczykowski phase offset (projective `C_3` doublet ray `[1 : e^{-2iθ}]`, tautological line `A = dθ`, unique unphased reference `m_0`). Once `delta` is closed, the exact scalar-phase bridge `kappa_sel(delta)` fixes `m_*` and the selected-line scalar as corollaries. |
 | **DM A-BCC basin** | Interior-minimum linear-path Sylvester discriminator `F_4` | **Closed.** Primary: chamber bound `∩` DPLE `F_4` (§2.3a). Plus three recovered alternative routes (cycles 11/12/13: PMNS-non-singularity, signature-forcing, PNS cascade) and the 5-route assumptions audit (all alternative derivations ruled out). Jon's same-day source-fiber work sharpens the *downstream* DM gate, not A-BCC itself. |
 | **Quark `a_u`** | Up-sector reduced amplitude `a_u = 0.7748865611` | **Closed.** Jon's JTS-affine-physical-carrier theorem (linear-algebra derivation: `Pert(p) = H_(1+5)` since `cos_d ≠ 0`) + ISSR1 Schur-rank-1 forcing + exact `1(+)5` channel completeness (which derives STRC, see §3) + RPSR NLO + shell-normalization independent corroboration + JTS physical-point closure (second route). No named residue. |
 
-§2 presents the four branch-local routes; §3 presents STRC; §4 records the
+§2 presents the four routes; §3 presents STRC; §4 records the
 later meta-closure compression (`DIM-UNIQ + STRC`); §5 separates
 meta-axiom accounting from reviewer-bar accounting; §6 names the future target
 BACT.
 
 ---
 
-## §2 Four branch-local routes
+## §2 Four routes
 
 ### §2.1 Moment-Ratio Uniformity (MRU) — candidate route to Koide `kappa`
 
@@ -167,11 +167,10 @@ the unique unphased point `m_0` (where `u(m_0) = v(m_0)` and
 offset `delta(m) = theta(m) - 2 pi / 3`. The exact scalar-phase bridge
 `kappa_sel(delta) = -sqrt(3) cos(delta+pi/6)/(sqrt(2)+sin(delta+pi/6))`
 shows that `delta = 2/9` then fixes both `kappa_sel,*` and the unique
-first-branch point `m_*`, removing the previously separate branch-local
-imports. This is a **geometric identification** of `delta` with a canonical
+first-branch point `m_*`, removing the previously separate imports. This is a **geometric identification** of `delta` with a canonical
 Berry holonomy on the physical route, not an independent axiom closure —
 the specific value `2/9` is not forced by Berry quantization alone (any
-reference section gives the same holonomy), so AXIOM E / Brannen–
+reference section gives the same holonomy), so the Brannen-Zenczykowski phase offset / Brannen–
 Zenczykowski remains the retained input that supplies the number. See
 `docs/KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md` (recovered, PASS=24).
 

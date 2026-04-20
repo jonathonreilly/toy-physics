@@ -1,8 +1,8 @@
 # Koide Theta Hierarchy Open Scalar -- Closed on the Actual Berry Route
 
 **Date:** 2026-04-19
-**Status:** closed for AXIOM E / the charged-lepton phase gate. On the
-branch-local actual-route stack, the previously separate selected-line
+**Status:** closed for the Brannen-Zenczykowski phase offset / the charged-lepton phase gate. On the
+actual-route stack, the previously separate selected-line
 `m_* / kappa_sel,*` input is also gone as a corollary. The old ambient-`S^2` /
 `n = 2` monopole story is superseded. The correct closure lives on the exact
 selected charged-lepton line.
@@ -19,7 +19,7 @@ The residual charged-lepton angular datum was the Brannen-Zenczykowski phase
 theta_PDG = 2 pi / 3 + delta,    delta ~= 2/9,
 ```
 
-equivalently AXIOM E in the branch language. Earlier cycle-10 text claimed to
+equivalently the Brannen-Zenczykowski phase offset in the branch language. Earlier text in this lane claimed to
 close this by putting a chosen `n = 2` monopole bundle on an ambient
 projectivized Koide `S^2`. That is not the actual charged-lepton route.
 
@@ -91,7 +91,7 @@ canonical bundle itself is the tautological `CP^1` line.
 
 ## 4. Scope boundary
 
-On the branch-local stack, the exact selected-line scalar-phase bridge gives
+On the stack, the exact selected-line scalar-phase bridge gives
 
 ```text
 delta = 2/9  ->  kappa_sel,* = -0.607918569997  ->  m_* = -1.160443440065.
@@ -101,7 +101,7 @@ So there is no longer a separate selected-line scalar import on this route.
 
 This still does **not** automatically rewrite the authoritative current-main
 bounded charged-lepton package. Current main remains bounded until the
-branch-local actual-route Berry theorem stack is promoted there.
+actual-route Berry theorem stack is promoted there.
 
 ---
 

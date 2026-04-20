@@ -27,7 +27,7 @@ component where det(H_base + J) > 0 (same sign as det H_base). This
 is stated as an open item in `DM_FLAGSHIP_CLOSURE_REVIEW_NOTE_2026-04-17`
 (section "Still open", item 7).
 
-**DPLE (theorem, cycle 10C).** On the retained linear Hermitian pencil
+**DPLE (theorem, this cycle).** On the retained linear Hermitian pencil
 H(t) = H_0 + t H_1 with H_0 invertible, the observable
 
     W(t) = log|det H(t)|
@@ -113,8 +113,8 @@ DPLE is a genuine and non-trivial scalar-selector theorem:
 - It proves the d = 3 uniqueness of the clean binary selector structure:
   at d = 2 the condition is vacuous; at d >= 4 it fragments (multiple
   interior Morse-index-0 CPs possible).
-- Combined with the other cycle-10 closures (MRU, Berry), it unifies
-  the three Tier-1 scalar-selector axioms (D, E, F4) as d = 3
+- Combined with the other scalar-selector closures (MRU, Berry), it unifies
+  the three Tier-1 scalar-selector routes as `d = 3`
   specializations of dim-parametric principles.
 
 None of this implies source-side closure.
@@ -165,6 +165,6 @@ It closes the F4 axiom on the conditioned sub-gate. It does not close
 A-BCC. The source-side physical-sheet identification remains the single
 open input on the DM flagship.
 
-The cycle-10 synthesis description "DM A-BCC basin: axiom cost 1 -> 0"
+The this cycle synthesis description "DM A-BCC basin: axiom cost 1 -> 0"
 refers to the F4 scalar-selector axiom only. The DM flagship gate remains
 open pending A-BCC closure.

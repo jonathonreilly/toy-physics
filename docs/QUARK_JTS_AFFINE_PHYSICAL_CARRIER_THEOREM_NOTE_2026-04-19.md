@@ -1,13 +1,43 @@
 # Quark JTS Affine Physical-Carrier Theorem
 
 **Date:** 2026-04-19
-**Lane:** Quark ISSR1 / jet-to-section route.
+**Lane:** Quark up-amplitude / jet-to-section identification.
 **Status:** **Derived theorem.** The perturbation cone on the physical
-`1(+)5` bimodule carrier is canonically the `1`-jet space of the physical-route
-section functor inside the retained bimodule, i.e. of deforming sections whose
-image stays on the exact affine physical carrier through the projector ray.
+`1(+)5` reduced bimodule carrier is canonically the `1`-jet space of the
+physical-route section functor inside the retained bimodule, i.e. of
+deforming sections whose image stays on the exact affine physical carrier
+through the projector ray.
 
 **Primary runner:** `scripts/frontier_quark_issr1_bicac_forcing.py`
+
+---
+
+## 0.1 Bimodule provenance
+
+The retained bimodule is
+
+```text
+B  =  Cl(3)/Z_3  ⊗  Cl_CKM(1 ⊕ 5)
+```
+
+with:
+
+- `Cl(3)/Z_3`: the core flavor algebra, retained from
+  `docs/CL3_SM_EMBEDDING_THEOREM.md` and `docs/CL3_COLOR_AUTOMORPHISM_THEOREM.md`
+  on main;
+- `Cl_CKM(1 ⊕ 5)`: the CKM 1⊕5 Clifford carrier, retained from the CKM
+  atlas closure (`docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md` on main), which
+  fixes the unit projector ray `p = cos_d e_1 + sin_d e_5` with
+  `cos_d = 1/√6`, `sin_d = √(5/6)`;
+- the exact reduced physical carrier `H_(1+5) = span{e_1, e_5}`, retained
+  from the same CKM atlas closure as the physical carrier plane through
+  the projector ray;
+- the retained atoms `a_d = ρ = 1/√42` (from
+  `docs/QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`),
+  `supp = 6/7` and `δ_{A1} = 1/42` (CKM atlas).
+
+No new axiom cost is added by this theorem; the JTS identification follows
+by elementary linear algebra on the retained bases (see §1 below).
 
 ---
 

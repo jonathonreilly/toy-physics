@@ -43,7 +43,7 @@ Closing `Q = 2/3` from Cl(3)/Z³ would immediately upgrade the Koide κ and θ l
 
 ### Priority 2: I2 (Brannen phase `δ = 2/9`)
 
-Closing `δ = 2/9` would upgrade the Koide θ lane to retained-derivation. Lower leverage than I1 but more within reach because a partial derivation already exists (the cycle-10B ambient-S² Berry-holonomy calculation `γ = 2π(d−1)/d = 2πQ`, reducing to `δ = Q/d = 2/9` at `d = 3`).
+Closing `δ = 2/9` would upgrade the Koide θ lane to retained-derivation. Lower leverage than I1 but more within reach because a partial derivation already exists (the the original ambient-S² Berry-holonomy calculation `γ = 2π(d−1)/d = 2πQ`, reducing to `δ = Q/d = 2/9` at `d = 3`).
 
 **Partial derivation already on canonical:** §2 of `KOIDE_BERRY_PHASE_THEOREM_NOTE` (ambient-S² n=2 monopole model). On the C₃-equivariant completion of the scale-free Koide locus to the unit 2-sphere, the doublet bundle carries `c_1 = dim(doublet) = 2` by Borel–Weil/Pieri; the Berry holonomy of this bundle over one C₃ cyclic period equals `2πQ = 4π/3`; reduction to Brannen units per C₃ element gives `δ = Q/d = 2/9`.
 
@@ -51,7 +51,7 @@ Closing `δ = 2/9` would upgrade the Koide θ lane to retained-derivation. Lower
 
 **Candidate closing routes:**
 
-1. **Equivariant-completion forcing theorem.** Show that the minimal C₃-equivariant completion of the scale-free Koide locus that preserves the retained representation-theoretic data (specifically, the doublet bundle's dim-doublet Chern-class identity) is S². A theorem of the form "the minimal equivariant CW extension of `K_norm⁺/C₃` compatible with retained data is `S²`" would promote the cycle-10B calculation to retained.
+1. **Equivariant-completion forcing theorem.** Show that the minimal C₃-equivariant completion of the scale-free Koide locus that preserves the retained representation-theoretic data (specifically, the doublet bundle's dim-doublet Chern-class identity) is S². A theorem of the form "the minimal equivariant CW extension of `K_norm⁺/C₃` compatible with retained data is `S²`" would promote the this cycle calculation to retained.
 2. **Wilson-line Z³-orbit quantization on the physical base.** The selected-line CP¹ Pancharatnam–Berry identification is on the physical base. Augmenting with a retained quantization condition — e.g., the Berry phase per C₃ element must satisfy a Wilson-line retention identity on the retained Cl(3)/Z³ lattice — could force `δ = 2/9`. Open territory.
 3. **Derive δ as a cycle-periodic Berry phase from the retained Z³ scalar potential.** If V(m) induces a Berry-type phase on closed paths in the scalar-lane reduced configuration space, quantization of that phase by the retained Z₃ cycle could force the value.
 
@@ -85,7 +85,7 @@ Closing any priority-1 or priority-2 item above would upgrade the corresponding 
 
 ## §3 Reproduction of current retained-conditional state
 
-All runners currently pass on canonical (branch `review/scalar-selector-cycle1-theorems`). For each of the four Tier-1 lanes the primary closure runner and its verification counts are:
+All runners currently pass on canonical (branch `review/scalar-selector-this cycle-theorems`). For each of the four Tier-1 lanes the primary closure runner and its verification counts are:
 
 | Lane | Primary runner | PASS | Notes |
 |---|---|---|---|
@@ -105,4 +105,4 @@ All runners currently pass on canonical (branch `review/scalar-selector-cycle1-t
 | Quark a_u (RPSR NLO) | `frontier_quark_up_amplitude_rpsr_conditional.py` | 9 | delivers full physical target `a_u = 0.7748865611` |
 | g_bare two-Ward closure (supporting) | `frontier_g_bare_two_ward_closure.py` | 18 | `g_bare = 1` |
 
-No single runner has hardcoded `check("...", True, ...)` PASSes after the cycle-1 cleanup pass. Every PASS is a numeric or symbolic verification of the stated claim.
+No single runner has hardcoded `check("...", True, ...)` PASSes after the this cycle cleanup pass. Every PASS is a numeric or symbolic verification of the stated claim.

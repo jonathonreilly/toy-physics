@@ -1,4 +1,4 @@
-# Scalar-Selector Tier-1 Proof Chains — Reviewer-Facing
+# Scalar-Selector Tier-1 Proof Chains
 
 **Date:** 2026-04-19
 **Scope:** One proof chain per Tier-1 gate, showing exactly what retained
@@ -16,7 +16,7 @@ residue; all other steps are mechanically verified.
 **Gate:** physical charged-lepton phase offset `delta = 2/9`.
 
 ```text
-Step 1  — retain AXIOM E (Brannen–Zenczykowski phase `delta = 2/9`)     †
+Step 1  — retain the Brannen–Zenczykowski phase offset `delta = 2/9` (observational input)     †
 Step 2  — retain circulant/Z_3 structure and the physical selected line
           H_sel(m) = H(m, sqrt(6)/3, sqrt(6)/3) on the charged-lepton
           reduction packet
@@ -35,7 +35,7 @@ Step 5  — unique unphased point m_0 with u(m_0) = v(m_0) forces
 Step 6  — Berry holonomy from m_0 to any first-branch m gives
           Hol(m_0 -> m) = theta(m) - 2 pi / 3 = delta(m)
           [same note, §4.3 + runner PASS=24]
-Step 7  — AXIOM E (Step 1) supplies delta = 2/9, combined with Step 6
+Step 7  — the Brannen–Zenczykowski phase offset (Step 1) supplies delta = 2/9, combined with Step 6
           gives a canonical geometric meaning to that number as the
           actual-route Pancharatnam–Berry holonomy
 Step 8  — exact selected-line scalar-phase bridge
@@ -51,10 +51,10 @@ Step 9  — ambient-S^2 monopole story retires: actual positive projectivized
            runner verified]
 ```
 
-**Status:** AXIOM E supplies `delta = 2/9` (†); the actual-route Berry
+**Status:** the Brannen-Zenczykowski phase offset supplies `delta = 2/9` (†); the actual-route Berry
 theorem supplies its geometric meaning as a canonical Pancharatnam–Berry
 holonomy on the physical selected line. Together they eliminate the
-previously separate branch-local `m_* / kappa_sel,*` imports as derived
+previously separate `m_* / kappa_sel,*` imports as derived
 corollaries. **No independent axiom-native forcing of the value `2/9` is
 claimed.**
 
@@ -218,7 +218,7 @@ independently retained.
 
 | Chain | Named residues | Meta-axiom dependency |
 |---|---|---|
-| Koide `theta` | none | AXIOM E closed on actual route via Berry selected-line CP¹; part of DIM-UNIQ framing at `d = 3` |
+| Koide `theta` | none | the Brannen-Zenczykowski phase offset closed on actual route via Berry selected-line CP¹; part of DIM-UNIQ framing at `d = 3` |
 | Koide `kappa` | none | Measure residue discharged by SO(2)-quotient closure (`6458529d`); part of DIM-UNIQ at `d = 3` |
 | DM A-BCC | none | Part of DIM-UNIQ framing at `d = 3` (DPLE `floor(d/2) = 1`) |
 | Quark `a_u` | none | STRC derived from `1(+)5` channel completeness (`37c4f2bf`), no longer a separate meta-axiom |

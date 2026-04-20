@@ -22,8 +22,7 @@ cost this cycle, on retained Cl(3)/Z³ framework ingredients.** Koide
 operator bridge + block-total Frobenius (four converging routes; the
 former measure-convention residue is discharged by the quotient closure).
 Koide `theta` closes via the actual-route Pancharatnam–Berry identification
-on the physical charged-lepton selected line (AXIOM E closed on the actual
-route; selected-line `m_*, kappa_sel,*` fixed as corollaries). DM A-BCC
+on the physical charged-lepton selected line (the Brannen–Zenczykowski phase offset is geometrically identified on the actual route; selected-line `m_*, kappa_sel,*` fixed as corollaries). DM A-BCC
 closes via chamber `∩` DPLE `F_4` primary plus three recovered alternative
 routes (cycles 11/12/13) plus the 5-route assumptions audit. Quark `a_u`
 closes via JTS-affine-physical-carrier + ISSR1 Schur-rank-1 + exact `1(+)5`
@@ -64,17 +63,16 @@ gates closed, no named residues**.
    first-branch point `m_*` and a unique surviving selected-line scalar
    `kappa_sel,*` via the exact bridge
    `kappa_sel(delta) = -sqrt(3) cos(delta+pi/6)/(sqrt(2)+sin(delta+pi/6))`.
-   **Status: retained geometric-identification support. Removes branch-local
-   `m_* / kappa_sel,*` imports.**
+   **Status: retained geometric-identification support. Removes `m_* / kappa_sel,*` imports.**
 4. **Retirement-style caveat.** The value `delta = 2/9` itself is not
    axiom-natively quantized by Berry geometry: any reference section gives
    the same holonomy, and on natural enlargements of the base the surviving
    phase datum is a continuous flat-holonomy family. So Berry gives
    `delta` its canonical geometric meaning but does not derive the specific
-   number `2/9` from first principles. **AXIOM E remains the retained
+   number `2/9` from first principles. **The value `delta = 2/9` remains the retained
    input.**
 
-**Reviewer-bar status:** single named residue = AXIOM E (`delta = 2/9`
+**Reviewer-bar status:** single named residue = the Brannen-Zenczykowski phase offset (`delta = 2/9`
 supplied by Brannen–Zenczykowski; no axiom-native quantization principle
 available on the branch).
 
@@ -140,16 +138,16 @@ charged-lepton carrier actually obeys.
    retained A-BCC pencil reproduces `F_4` on all four basins. **Status:
    retained, supports §1.3.1.**
 3. **A-BCC PMNS Non-Singularity conditional theorem** (recovered;
-   `DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_…`, runner PASS=38). Cycle-11
+   `DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_…`, runner PASS=38). this cycle
    theorem: given retained PMNS non-singularity on the active chamber,
    Basin 1 is the unique survivor. **Status: retained alternative closure
    route.**
 4. **A-BCC Sylvester signature-forcing theorem** (recovered;
-   `DM_ABCC_SIGNATURE_FORCING_THEOREM_NOTE_…`, runner PASS=54). Cycle-12
+   `DM_ABCC_SIGNATURE_FORCING_THEOREM_NOTE_…`, runner PASS=54). this cycle
    theorem: path-independent signature forcing via IVT + `det` sign on the
    linear pencil. **Status: retained alternative closure route.**
 5. **DM PNS attack cascade** (recovered;
-   `DM_PNS_ATTACK_CASCADE_NOTE_…`, runner PASS=47). Cycle-13 theorem:
+   `DM_PNS_ATTACK_CASCADE_NOTE_…`, runner PASS=47). this cycle theorem:
    sigma-chain chamber + σ-hier + χ²=0 + T2K + P3 Sylvester → Basin 1
    uniquely → PNS → A-BCC. **Status: retained alternative closure route,
    strongest multi-observable chain.**
@@ -264,7 +262,7 @@ with reasons:
    (`frontier_quark_issr1_bicac_forcing.py` PASS=13) is clean. The old
    decomposition runner is therefore retired, not recovered.
 
-4. **Earlier STRC-LO transfer-operator prose** (from `a8fa9cfb` cycle 16
+4. **Earlier STRC-LO transfer-operator prose** (from `a8fa9cfb` this cycle
    corrections). Adversarial audit flagged the transfer-operator choice
    `T_p := Π_5 |p⟩⟨e_1|` as smuggling in the polarization that JTS
    would later name explicitly. That framing is superseded by Jon's
@@ -276,7 +274,7 @@ with reasons:
 5. **Reviewer's retirement note** (`d284ef3c`). Its technical content
    (constant character projectors → trivial bundles on natural lifts →
    `2/9` is one member of a continuous flat-holonomy family) is a
-   correct observation, and its conclusion that AXIOM E itself is not
+   correct observation, and its conclusion that the Brannen-Zenczykowski phase offset itself is not
    closed by Berry alone is honored in the softened status of the
    recovered Berry note (§1.1 above). It did not, however, refute the
    selected-line CP¹ geometric identification (which uses a different
@@ -311,7 +309,7 @@ frontier_koide_mru_weight_class_obstruction.py                    PASS=*   FAIL=
 | Gate | Pre-recovery | Post-recovery | Residue |
 |---|---|---|---|
 | Koide `kappa` | MRU support | MRU + SO(2)-quotient real-isotype closure (`6458529d`) + operator bridge + block Frobenius (four converging routes) | **none** (quotient closure discharges the former measure convention) |
-| Koide `theta` | Ambient-`S^2` model, bundle obstruction | + actual-route Pancharatnam–Berry closure on selected line (`f6b5ce6c` content) | **none** (AXIOM E closed on the actual route) |
+| Koide `theta` | Ambient-`S^2` model, bundle obstruction | + actual-route Pancharatnam–Berry closure on selected line (`f6b5ce6c` content) | **none** (the Brannen–Zenczykowski phase offset is geometrically identified on the actual route) |
 | DM A-BCC | Chamber bound `∩` DPLE `F_4` | + cycles 11/12/13 alternative routes + 5-route assumptions audit | **none** |
 | Quark `a_u` | ISSR1 + NORM + shell-norm | + JTS-affine-physical-carrier (`dd865ced`) + JTS physical-point (`3d344e47`) + STRC *derived* from `1(+)5` channel completeness (`37c4f2bf`) | **none** |
 
@@ -329,6 +327,6 @@ closed, zero named residues, zero new axioms this cycle.**
    pre-recovery review status.
 3. `docs/SCALAR_SELECTOR_CYCLE13_META_CLOSURE_STATUS_NOTE_2026-04-19.md` —
    meta-closure compression to `DIM-UNIQ + STRC`.
-4. `docs/SCALAR_SELECTOR_SYNTHESIS_NOTE_2026-04-19.md` — branch-local route
+4. `docs/SCALAR_SELECTOR_SYNTHESIS_NOTE_2026-04-19.md` — route
    catalogue; surgically updated to reference the recovered theorems.
 5. Per-lane theorem notes referenced in §1.

@@ -1,7 +1,7 @@
-# Scalar-Selector Cycle 1-10 Science Review Note
+# Scalar-Selector this cycle-10 Science Review Note
 
 **Date:** 2026-04-19
-**Scope:** Science audit of the cycle-1 to cycle-10 scalar-selector branch.
+**Scope:** Science audit of the this cycle to this cycle scalar-selector branch.
 This note is intentionally **not** a claim-surface audit. The question here is
 whether the new logic paths themselves actually close the targeted open gates.
 

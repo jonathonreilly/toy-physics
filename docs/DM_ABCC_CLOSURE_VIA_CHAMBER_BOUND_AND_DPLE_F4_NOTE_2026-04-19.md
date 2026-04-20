@@ -14,7 +14,7 @@ already retained on branch / main.
 ## 0. Executive summary
 
 A-BCC ("Basin 1 is the physical PMNS sheet") closes at axiom level via the
-intersection of two retained algebraic conditions on the cycle-13 derived
+intersection of two retained algebraic conditions on the this cycle derived
 basin chart `{Basin 1, Basin N, Basin P, Basin X}`:
 
 ```
@@ -37,7 +37,7 @@ selects Basin 1 uniquely.
 **Net axiom effect.** A-BCC is no longer an independent axiom. It collapses
 into the intersection of (i) a retained chamber theorem and (ii) the DPLE
 F_4 algebraic selector. The remaining axiom-grade input is exactly the same
-DPLE candidate axiom that the cycle-13 source-side closure already requires.
+DPLE candidate axiom that the this cycle source-side closure already requires.
 
 ---
 
@@ -51,7 +51,7 @@ retained as preliminary **P3** of the P3 Sylvester linear-path signature
 theorem note. Its origin is the **intrinsic Z_3 doublet-block
 point-selection theorem** on the retained source surface — a structural
 inequality, not an observational filter. Outside this chamber the source
-package and the chart-affinity machinery on which the cycle-13
+package and the chart-affinity machinery on which the this cycle
 construction rests are not legitimately defined.
 
 The chamber bound is therefore a **derivation-side filter**: any candidate
@@ -79,7 +79,7 @@ them from the admissible set on **algebraic** grounds, independent of any
 observational discriminator (T2K, NuFit, PDG).
 
 This is sharper than the "loose" chamber bound `q+δ ≥ E1 − 0.1 ≈ 1.53`
-used in earlier scratch-side scans (e.g. the cycle-9 chamber-σ_hier
+used in earlier scratch-side scans (e.g. the this cycle chamber-σ_hier
 counter-examples). The strict P3 bound is what the retained note carries;
 under it, Basin N — the most stubborn observational counter-example —
 exits the admissible set on its own.
@@ -168,7 +168,7 @@ ingredients already imply A-BCC**.
 
 ## 6. Honest positioning vs the existing 5-route audit
 
-The companion audit on `origin/codex/scalar-selector-cycle1-review`
+The companion audit on `origin/codex/scalar-selector-this cycle-review`
 (`docs/DM_ABCC_ASSUMPTIONS_AUDIT_NOTE_2026-04-19.md`, commit `db20faf3`)
 catalogues five candidate algebraic derivation routes for A-BCC and
 concludes that **all five fail**:
@@ -295,7 +295,7 @@ discriminant test is closed-form and uses only retained data.
 If the reviewer rejects DPLE-as-axiom (e.g., demands a deeper
 variational origin), the present A-BCC closure is conditional on the
 status of DPLE, not on any new axiom. The cycle-7B variational F4
-candidate (Berry–Pancharatnam action) and cycle-10C DPLE candidate
+candidate (Berry–Pancharatnam action) and this cycle DPLE candidate
 remain the variational origins under consideration.
 
 ### 8.2 Conditional on the chamber bound being a retained theorem
@@ -311,7 +311,7 @@ closure survives but loses the chamber-redundancy layer.
 ### 8.3 Not conditional on observational input
 
 No T2K, NuFit, or PDG value is used at any step. The closure remains
-valid even if the cycle-12 framework-review observational grounding
+valid even if the this cycle framework-review observational grounding
 (which uses T2K + σ_hier uniqueness + 9/9 NuFit) is set aside. The
 present closure complements that observational grounding rather than
 replacing it.
@@ -360,7 +360,7 @@ computation; there are no hard-coded TRUE values.
   route ruled out.
 - `docs/DM_ABCC_ASSUMPTIONS_AUDIT_NOTE_2026-04-19.md` — five-route
   no-go audit on the algebraic-sign-theorem class
-  (`origin/codex/scalar-selector-cycle1-review`, commit `db20faf3`).
+  (`origin/codex/scalar-selector-this cycle-review`, commit `db20faf3`).
 - `docs/SCALAR_SELECTOR_SYNTHESIS_NOTE_2026-04-19.md` — synthesis with
   the A-BCC closure entry recorded under §1 / §2.3.
 

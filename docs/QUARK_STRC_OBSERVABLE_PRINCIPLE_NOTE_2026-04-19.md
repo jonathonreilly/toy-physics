@@ -1,18 +1,17 @@
-# Scalar-Tensor Ray Complementarity (STRC) — Observable Principle
+# Scalar-Tensor Ray Complementarity (STRC) — Historical Observable-Principle Framing (SUPERSEDED)
 
 **Date:** 2026-04-19
 **Lane:** Quark up-amplitude LO-balance.
-**Status:** Retained **observable principle** on the CKM 1(+)5 projector
-ray, on the same epistemic footing as Koide's charged-lepton mass sum
-rule. STRC closes the LO gap in RPSR (see
-`docs/QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md`).
-Under Scenario A (bundling into the existing
-`QUARK_PROJECTOR_PARAMETER_AUDIT` retention), net axiom cost is
-approximately 1 observable principle. Reviewer-facing status remains
-**conditional support only** because STRC is not yet a derived law from the
-retained quark carrier.
+**Status:** **SUPERSEDED.** This note records the earlier "retained
+observable principle" framing of STRC-LO. STRC-LO is now derived as a
+theorem from the exact one-dimensional 5-channel residue on the retained
+`1⊕5` carrier; see
+`docs/STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md` for the derivation.
+This note is retained as route-history only and should not be cited as
+the primary STRC source.
 **Primary runner:** `scripts/frontier_quark_strc_observable_principle.py`
-(PASS=19 FAIL=0).
+(PASS=19 FAIL=0) — verifies the STRC identity and its implications,
+independent of derivation framing.
 
 ---
 

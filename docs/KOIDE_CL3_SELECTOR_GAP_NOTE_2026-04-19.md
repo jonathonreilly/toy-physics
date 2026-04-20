@@ -125,9 +125,9 @@ The one-clock semigroup (gamma_orbit note) provides a positive witness: `H_* = H
 | No eigenvalue degeneracy crossing at m_* | Confirmed numerically |
 | m_* = −1.1605 NOT derivable from Cl(3) alone | Honest gap — remains open |
 
-## Current-main boundary
+## main
 
 This note sharpens the charged-lepton review/support stack already on `main`.
 It does **not** upgrade the authoritative bounded charged-lepton package, and it
-does **not** promote the branch-local exploratory `Q = 2/3`-surface or
-scale-selector near-miss probes into current-main authority.
+does **not** promote the exploratory `Q = 2/3`-surface or
+scale-selector near-miss probes into 

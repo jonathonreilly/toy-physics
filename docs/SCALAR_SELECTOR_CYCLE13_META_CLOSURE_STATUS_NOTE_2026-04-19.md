@@ -1,7 +1,7 @@
-# Scalar-Selector Cycle 13 Meta-Closure Status Note
+# Scalar-Selector this cycle Meta-Closure Status Note
 
 **Date:** 2026-04-19
-**Scope:** Honest status update after the cycle-13 meta-closure return, taken
+**Scope:** Honest status update after the this cycle meta-closure return, taken
 before the April 19, 2026 7:00 PM America/New_York rate-limit reset.
 **Status:** structural/meta-closure note only. This is not a claim that the
 four scalar-selector gates are now reviewer-grade derivations.
@@ -65,7 +65,7 @@ The obstruction is an **observable-type split** across the four routes:
 Quadratic, topological, and linear-amplitude statements do not collapse into
 one already-retained principle. Earlier angle-6 reasoning already showed that
 quadratic unitarity on the bimodule does not force a linear amplitude sum
-rule. The cycle-13 meta-closure return generalizes that point: there is no
+rule. The this cycle meta-closure return generalizes that point: there is no
 single currently landed principle that covers all four observable types.
 
 So the honest meta answer is:

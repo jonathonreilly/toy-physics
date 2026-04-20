@@ -1,12 +1,10 @@
 # DM PNS Attack Cascade: Seven Attack Vectors on PMNS Non-Singularity
 
 **Date:** 2026-04-19
-**Lane:** Dark-matter A-BCC basin-selector (PNS derivation from axioms)
-**Cycle:** 13
-**Status:** CONDITIONAL THEOREM (sigma-chain). PNS is derivable from the
+**Lane:** Dark-matter A-BCC basin-selector (PNS derivation from axioms)**Status:** CONDITIONAL THEOREM (sigma-chain). PNS is derivable from the
 retained measurement framework. Pure algebraic PNS (from Cl(3)/Z³
 alone, without observational input) is ruled out by the same
-sign-blindness no-go as DPLE (cycle 10C).
+sign-blindness no-go as DPLE (this cycle).
 **Primary runner:**
 `scripts/frontier_dm_pns_attack_cascade.py`
 
@@ -32,7 +30,7 @@ result:
 >       + P3 Sylvester (on main)
 >     ⟹ J_phys = Basin 1 uniquely ⟹ PNS holds.
 
-**New findings (cycle 13):**
+**New findings (this cycle):**
 
 1. Under sigma (2,1,0), chi²=0 has TWO NEW solutions not in {Basin 1,
    Basin 2, Basin X}: a C_neg solution with q < 0 (q+δ = 0.139) and
@@ -55,7 +53,7 @@ result:
 uses T2K (sin(δ_CP) < 0) and NuFit (PMNS angles) as inputs. Both are
 already retained in the framework (sigma-hier uniqueness theorem + ABCC_
 CP_PHASE). Pure algebraic PNS from Cl(3)/Z³ alone is ruled out by
-sign-blindness (same no-go as DPLE cycle 10C).
+sign-blindness (same no-go as DPLE this cycle).
 
 Runner: PASS=47 FAIL=0.
 
@@ -188,7 +186,7 @@ main), the in-chamber C_neg chi²=0 solutions are excluded.
   ≈ −2.46, +1.03, +2.09).
 - No Cl(3)/Z³ algebraic identity forces a lower bound on eigenvalues of
   H_base + t J for J in the physical source space.
-- The Kramers/spinor argument (cycle 10 audit) fails due to
+- The Kramers/spinor argument (this cycle audit) fails due to
   representation mismatch (spinor ≠ vector rep).
 
 ### Vector 4: Z³ lattice spectral gap
@@ -253,14 +251,14 @@ without specifying the physical sheet (C_base vs. C_neg).
 - Both are in the chamber (q+δ ≥ √(8/3)).
 - Both are chi²=0 under their respective sigma permutations.
 
-Yet the linear paths to Basin 2 and Basin X both cross det=0 (cycle 12:
+Yet the linear paths to Basin 2 and Basin X both cross det=0 (this cycle:
 Sylvester signature-forcing). Therefore: within the Cl(3)/Z³-constrained
 source space, there exist paths that DO violate PNS. PNS cannot be
 derived from Cl(3)/Z³ alone — it requires identifying which basin is
 physical (equivalently: which sigma permutation is physical, via T2K).
 
 This is the same sign-blindness that rules out algebraic closure of
-A-BCC (DPLE no-go, cycle 10C). PNS encodes the same sign information as
+A-BCC (DPLE no-go, this cycle). PNS encodes the same sign information as
 A-BCC, and both have the same residual observational requirement.
 
 ---
@@ -293,7 +291,7 @@ P3 Sylvester theorem (on main; theorem-grade, exact cubic)
   └─→ det(H_base + t·J_phys) > 0 for all t ∈ [0,1]
   ⟹ PNS holds
 
-Sylvester signature-forcing (cycle 12; algebraic, path-independent)
+Sylvester signature-forcing (this cycle; algebraic, path-independent)
   └─→ C_neg endpoints require det=0 crossing on any path
   └─→ PNS → A-BCC
 
@@ -307,7 +305,7 @@ Sylvester signature-forcing (cycle 12; algebraic, path-independent)
 Both were already retained before this cycle. No new observational inputs
 added by the sigma-chain PNS argument.
 
-**New content (cycle 13):**
+**New content (this cycle):**
 - Chamber constraint excludes two new pathological chi²=0 solutions
   (C_neg q<0 and CP-conjugate) that were outside the prior scan scope.
 - 2000-seed empirical verification: no C_neg+chamber+sin(δ_CP)<0+chi²=0
@@ -379,11 +377,11 @@ Expected: PASS=47 FAIL=0.
 
 ## 7. Cross-references
 
-- `docs/DM_ABCC_SIGNATURE_FORCING_THEOREM_NOTE_2026-04-19.md` (cycle 12:
+- `docs/DM_ABCC_SIGNATURE_FORCING_THEOREM_NOTE_2026-04-19.md` (this cycle:
   Sylvester forcing; PNS → A-BCC for any path)
 - `docs/DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md` (cycle
   11: PNS → A-BCC via IVT; this cycle derives PNS itself)
-- `docs/DM_ABCC_ASSUMPTIONS_AUDIT_NOTE_2026-04-19.md` (cycle 10: all 5
+- `docs/DM_ABCC_ASSUMPTIONS_AUDIT_NOTE_2026-04-19.md` (this cycle: all 5
   algebraic A-BCC routes ruled out; chamber constraint cited §2)
 - `docs/ABCC_CP_PHASE_NO_GO_THEOREM_NOTE_2026-04-19.md` (on main: Basin
   2/X sin(δ_CP) > 0; T2K exclusion; step 2 of sigma-chain)
@@ -409,8 +407,8 @@ reduces PNS to inputs already retained in the framework. No new axioms.
 The A-BCC closure chain is complete:
 
     T2K + NuFit + Cl(3)/Z³
-      → PNS (sigma-chain, cycle 13)
-      → A-BCC (Sylvester forcing, cycle 12)
+      → PNS (sigma-chain, this cycle)
+      → A-BCC (Sylvester forcing, this cycle)
       → DM flagship gate closes
 
 **Status: CONDITIONAL THEOREM (sigma-chain). PASS=47 FAIL=0.**

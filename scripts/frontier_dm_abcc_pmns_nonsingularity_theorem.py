@@ -336,16 +336,13 @@ def task8_pns_conditional_theorem():
     print("    Axiom cost: PNS (path-continuity in {det!=0}) vs. A-BCC (sign assumption).")
     print("    Reduction: A-BCC <- PNS + IVT + det(H_base)>0.")
 
-    check("PNS conditional theorem: structural gap is PMNS Non-Singularity",
-          True, "A-BCC <- PNS + IVT + det(H_base)>0")
-    check("PNS gap is weaker than bare A-BCC assumption",
-          True, "PNS is path-property; A-BCC is endpoint-property")
-    check("PNS is observationally grounded (non-zero measured neutrino masses)",
-          True, "Delta_m^2_21 != 0 and Delta_m^2_31 != 0 (oscillation data)")
-    check("All known C_neg basins violate PNS explicitly",
-          True, "Basin2 t~0.028, BasinX t~0.038")
-    check("Basin 1 (unique F4=True basin) satisfies PNS (P3 Sylvester)",
-          True, "min det Basin1 = 0.879 > 0")
+    # T8 deliverables are summary statements about the earlier numerical tasks;
+    # the underlying computations are verified by tasks 1-7 above. Converted to
+    # print commentary to keep PASS count numeric-only.
+    print("  [note] Conditional-theorem reduction: A-BCC <- PNS + IVT + det(H_base)>0.")
+    print("  [note] PNS (path-continuity in {det != 0}) is a weaker structural gap than the bare A-BCC endpoint assumption.")
+    print("  [note] PNS is observationally grounded via measured Delta_m^2_21, Delta_m^2_31 != 0 (oscillation data).")
+    print("  [note] Among the four-basin chi^2=0 enumeration, only Basin 1 satisfies PNS on [0,1]: min det = 0.879 > 0; Basin 2 crosses det=0 at t ~ 0.028, Basin X at t ~ 0.038.")
 
 
 # ---------------------------------------------------------------------------
