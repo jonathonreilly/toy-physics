@@ -39,6 +39,7 @@ FAIL_COUNT = 0
 
 ETA_TOL = 1.0e-10
 GRAD_TOL = 1.0e-5
+PLATEAU_LABELS = ("W0", "W1", "W2", "W3")
 
 # Three additional deterministic constructive anchors discovered on the current
 # branch. Local refinement from these anchors converges to distinct witnesses
@@ -78,6 +79,14 @@ def witness_params() -> np.ndarray:
         ],
         dtype=float,
     )
+
+
+def plateau_witness_params() -> list[np.ndarray]:
+    params = [witness_params()]
+    for anchor in ANCHOR_PARAMS:
+        refined, _res = refine_constructive_maximizer(anchor)
+        params.append(refined)
+    return params
 
 
 def eta1_from_params(params: np.ndarray) -> float:
@@ -154,11 +163,8 @@ def main() -> int:
     print("=" * 88)
 
     witness_ref = witness_params()
-    maximizer_params = [witness_ref]
-    labels = ["W0", "W1", "W2", "W3"]
-    for anchor in ANCHOR_PARAMS:
-        refined, _res = refine_constructive_maximizer(anchor)
-        maximizer_params.append(refined)
+    maximizer_params = plateau_witness_params()
+    labels = list(PLATEAU_LABELS)
 
     with contextlib.redirect_stdout(io.StringIO()):
         x_ext, y_ext, delta_ext, _packet_ext, etas_ext = cand.part2_transport_extremality_selects_a_positive_off_seed_candidate()
