@@ -75,6 +75,55 @@ selected point `m_*` stationary forces one unique positive value
 `lambda_* ~= 0.5456253117`. See
 `docs/KOIDE_C3_SINGLET_EXTENSION_REDUCTION_THEOREM_NOTE_2026-04-20.md`.
 
+**Later same-branch sharpening (2026-04-20):** the fixed-coupling subclass is
+now understood more sharply. Solving the stationarity equation for constant
+`lambda` gives an explicit family `lambda_±(m)` on the physical first branch,
+so constant singlet dressing does **not** pick out `m_*` by itself. It
+reparameterizes a whole interval of first-branch stationary points
+`m in [m_pos, m_disc]`, with two positive `lambda` values on the upper part of
+that interval. So the remaining open object on this route is not "find some
+positive constant `lambda`"; it is still the microscopic law fixing `lambda`
+itself, equivalently fixing `m`. See
+`docs/KOIDE_C3_CONSTANT_SINGLET_REPARAMETERIZATION_THEOREM_NOTE_2026-04-20.md`.
+
+**Further same-branch sharpening (2026-04-20):** the canonical selected-slice
+`2 x 2` `Z_3` doublet block also does **not** contain a hidden intrinsic
+spectral selector. Its completed spectral data are exact, but after freezing
+the bank they collapse to the sign-blind coordinate
+`x^2 = (m - 4 sqrt(2)/9)^2`: `Tr(K2)` is constant, while `det(K2)`,
+`Tr(K2^2)`, and the eigenvalue-gap square are all affine in `x^2`. On the
+physical first branch `x < 0` everywhere, so those raw spectral scalars are
+strictly monotone and the natural low-complexity spectral-law classes
+(single-scalar, affine, coefficient-free monomial, normalized-by-trace) only
+reparameterize the branch. They do not select the physical point. See
+`docs/KOIDE_SELECTED_SLICE_SPECTRAL_COMPLETION_AND_MINIMAL_LOCAL_SPECTRAL_LAW_NO_GO_NOTE_2026-04-20.md`.
+
+**Assumption-escape closeout (2026-04-20):** two nearby alternative readings
+are now also ruled out as genuine closures. First, if one drops the current
+slot readout and instead imposes `Q = 2/3` on the eigenvalues of
+`exp(beta H_sel(m))`, the route does not select a point: for each fixed
+selected-line spectrum the eigenvalue purity is strictly increasing in `beta`,
+so `Q_eig = 2/3` cuts a unique `beta_q23(m)` and yields a one-real monotone
+surface `beta = beta_q23(m)`. It still needs an independent beta-law. Second,
+the striking scale near-miss `u*v*w = 1` is not an independent forcing law at
+all: the `u` used there is the Koide-completed small root `u_small(v,w)`, so
+that condition already lives on the imposed cone `Q = 2/3` and only
+reparameterizes the existing selected-line gap. It near-hits `m_*` but does
+not equal it. See
+`docs/KOIDE_EIGENVALUE_Q23_SURFACE_THEOREM_NOTE_2026-04-20.md` and
+`docs/KOIDE_SCALE_SELECTOR_REPARAMETERIZATION_THEOREM_NOTE_2026-04-20.md`.
+
+**Weighted character-source closeout (2026-04-20):** the natural weighted
+extension of the old `Z_3` character-source cross-check is now also closed.
+For arbitrary central left/right class-function weights on the canonical
+sources `s_i = e_{q_L(i)} ⊗ e_{q_R(i)}`, the weighted kernel is always exactly
+diagonal: `diag(mu_0 nu_0, mu_1 nu_2, mu_2 nu_1)`. So a unique top eigenvalue
+can only select a basis axis, and every basis axis has `Q = 1`, not `2/3`;
+while a degenerate top leaves the ray unfixed. So observable-principle source
+work must derive genuine off-axis circulant Fourier content of `D^(-1)`, not
+just reweight the canonical character sources. See
+`docs/KOIDE_WEIGHTED_CHARACTER_SOURCE_AXIS_THEOREM_NOTE_2026-04-20.md`.
+
 **Candidate closing routes (each needs its own derivation):**
 
 1. **H_* witness ratio from a retained lattice calculation.** The H_* witness
@@ -86,14 +135,25 @@ selected point `m_*` stationary forces one unique positive value
    extension collapses to `K_eff(m) = K_sel(m) - lambda(m) J`. So this route
    is now exactly: derive the scalar singlet-Schur law `lambda(m)` from the
    microscopic lattice action.
-3. **Transport gap ratio `4π/√6`.** Numerically close to the observed
-   `η/η_obs ≈ 5.29` (3.2% mismatch). If formalized into a retained lattice
-   identity, it could pin `m_*`.
+3. **Missing-axis Higgs-dressed resolvent root law.** On the natural baseline
+   `W_4(0) = diag(0, H_*)`, the strongest surviving transport avenue has now
+   been reduced to isolated scalar roots of `Q(abs eig Sigma_lambda(0)) = 2/3`,
+   with one unique small positive root
+   `lambda_* = 0.015808703285395...` near chamber slack and cosine
+   `0.996266...` to the PDG `sqrt(m)` direction. So this route is now exactly:
+   derive the transport-side lambda-law on the missing-axis resolvent family.
+   See `docs/KOIDE_HIGGS_DRESSED_RESOLVENT_ROOT_THEOREM_NOTE_2026-04-20.md`.
 4. **One-clock semigroup / Γ-orbit positive witness route.** Already delivers
    cos-similarity > `1 − 10⁻⁹` with the PDG `√m` vector at the cone point
    `H_*`. Currently conditional on observational chamber pins
    `(M_STAR, DELTA_STAR, Q_PLUS_STAR)`. If those three pins can be derived
    from retained framework, `Q = 2/3` follows.
+
+**Demoted candidate (2026-04-20):** the old transport-gap observation
+`1/eta_ratio ≈ 4pi/sqrt(6)` is no longer a live selector route. Even an exact
+identity there would still compare two branch-level constants and would not
+introduce any selected-line `m` dependence. See
+`docs/KOIDE_TRANSPORT_GAP_CONSTANT_NO_GO_NOTE_2026-04-20.md`.
 
 **Required retained ingredients for any of the above:** explicit lattice
 propagator or transport-integral definition on the retained Cl(3)/Z³ carrier;

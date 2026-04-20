@@ -34,6 +34,37 @@ The clean current endpoint is:
 - the exact `Z_3` scalar-potential support note derives the Clifford-fixed
   selected-slice potential but also records honestly that its minimum does not
   select the physical point
+- the exact `C_3` singlet-extension reduction sharpens the old `4 x 4` route
+  to one scalar Schur law, and the fixed-coupling follow-up shows that
+  constant singlet dressing only reparameterizes a continuum of first-branch
+  stationary points rather than selecting the physical one
+- the exact selected-slice spectral-completion theorem now also closes the
+  remaining simple intrinsic spectral-selector hope negatively: the canonical
+  `2 x 2` block is spectrally complete but sign-blind, and its low-complexity
+  spectral laws only reparameterize the same one-scalar gap
+- the exact eigenvalue-`Q = 2/3` surface theorem now also closes the strongest
+  `M2` assumption escape negatively: replacing slot readout by eigenvalues of
+  `exp(beta H_sel(m))` gives a monotone one-real surface `beta_q23(m)`, not a
+  selected physical point
+- the exact scale-selector reparameterization theorem now also closes the
+  strongest `M1` assumption escape negatively: the near-miss condition
+  `u*v*w = 1` uses the Koide-completed slot `u_small(v,w)`, so it is a
+  reparameterization on the already-imposed cone rather than an independent
+  derivation
+- the old transport-gap observation `1/eta_ratio ~= 4pi/sqrt(6)` is now also
+  demoted honestly: even an exact identity there would only compare two
+  branch-level constants and would still not furnish an `m`-selection law
+- the natural weighted extension of the old `Z_3` character-source cross-check
+  is now also closed negatively: arbitrary left/right central class-function
+  weights still keep the source kernel diagonal in the canonical source basis,
+  so unique tops are basis axes with `Q = 1` and degenerate tops still do not
+  force a unique Koide ray
+- the strongest surviving Higgs-dressed transport route is now also reduced to
+  one scalar: on the missing-axis resolvent lift with baseline `h_0 = 0`,
+  `Q = 2/3` occurs at a unique small positive root
+  `lambda_* = 0.015808703285395...`, giving direction cosine `0.996266...`
+  to the PDG `sqrt(m)` direction; chamber slack is only a near-hit, not the
+  exact root
 
 So the current charged-lepton state is:
 
@@ -56,6 +87,14 @@ So the current charged-lepton state is:
 11. [KOIDE_ONE_SCALAR_OBSTRUCTION_TRIANGULATION_THEOREM_NOTE_2026-04-18.md](./KOIDE_ONE_SCALAR_OBSTRUCTION_TRIANGULATION_THEOREM_NOTE_2026-04-18.md)
 12. [KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md](./KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md)
 13. [KOIDE_Z3_SCALAR_POTENTIAL_SUPPORT_NOTE_2026-04-19.md](./KOIDE_Z3_SCALAR_POTENTIAL_SUPPORT_NOTE_2026-04-19.md)
+14. [KOIDE_C3_SINGLET_EXTENSION_REDUCTION_THEOREM_NOTE_2026-04-20.md](./KOIDE_C3_SINGLET_EXTENSION_REDUCTION_THEOREM_NOTE_2026-04-20.md)
+15. [KOIDE_C3_CONSTANT_SINGLET_REPARAMETERIZATION_THEOREM_NOTE_2026-04-20.md](./KOIDE_C3_CONSTANT_SINGLET_REPARAMETERIZATION_THEOREM_NOTE_2026-04-20.md)
+16. [KOIDE_SELECTED_SLICE_SPECTRAL_COMPLETION_AND_MINIMAL_LOCAL_SPECTRAL_LAW_NO_GO_NOTE_2026-04-20.md](./KOIDE_SELECTED_SLICE_SPECTRAL_COMPLETION_AND_MINIMAL_LOCAL_SPECTRAL_LAW_NO_GO_NOTE_2026-04-20.md)
+17. [KOIDE_EIGENVALUE_Q23_SURFACE_THEOREM_NOTE_2026-04-20.md](./KOIDE_EIGENVALUE_Q23_SURFACE_THEOREM_NOTE_2026-04-20.md)
+18. [KOIDE_SCALE_SELECTOR_REPARAMETERIZATION_THEOREM_NOTE_2026-04-20.md](./KOIDE_SCALE_SELECTOR_REPARAMETERIZATION_THEOREM_NOTE_2026-04-20.md)
+19. [KOIDE_TRANSPORT_GAP_CONSTANT_NO_GO_NOTE_2026-04-20.md](./KOIDE_TRANSPORT_GAP_CONSTANT_NO_GO_NOTE_2026-04-20.md)
+20. [KOIDE_WEIGHTED_CHARACTER_SOURCE_AXIS_THEOREM_NOTE_2026-04-20.md](./KOIDE_WEIGHTED_CHARACTER_SOURCE_AXIS_THEOREM_NOTE_2026-04-20.md)
+21. [KOIDE_HIGGS_DRESSED_RESOLVENT_ROOT_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_RESOLVENT_ROOT_THEOREM_NOTE_2026-04-20.md)
 
 ## Package Role
 
@@ -72,9 +111,17 @@ It is not yet clean enough to promote charged leptons to retained closure,
 because the current stack still stops one step short of a retained selector
 law for the final microscopic scalar. The current exact endpoint is now
 sharper: the missing step is one scalar condition, and the current
-selected-slice scalar potential does not by itself select it.
-Branch-local exploratory `Q = 2/3`-surface and scale-selector near-miss probes
-remain off current-main authority.
+selected-slice scalar potential does not by itself select it, while the
+completed canonical `2 x 2` spectral carrier also does not provide a hidden
+low-complexity selector law. The strongest nearby assumption escapes have now
+also been formalized and closed honestly: the eigenvalue `Q = 2/3` route is
+only a one-real surface `beta_q23(m)`, the scale-selector near-miss
+`u*v*w = 1` is only a Koide-lane reparameterization built from `u_small(v,w)`,
+and the weighted character-source extension still cannot force anything but
+basis axes or degeneracies. The surviving Higgs-dressed transport avenue is
+now reduced to one scalar root law on the missing-axis resolvent lift, while
+the old transport-gap comparison is demoted to a constant-vs-constant bridge
+rather than an `m`-selection law.
 
 So the right classification is:
 
