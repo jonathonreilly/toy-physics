@@ -42,10 +42,35 @@ subclass (`lambda` constant), making the branch-local physical selected point
 `lambda_* ~= 0.5456253117`. See
 `docs/KOIDE_C3_SINGLET_EXTENSION_REDUCTION_THEOREM_NOTE_2026-04-20.md`.
 
+**Later same-branch sharpening (2026-04-20):** the fixed-coupling subclass is
+now understood more sharply. Solving the stationary equation for constant
+`lambda` gives an explicit family `lambda_±(m)` on the physical first branch,
+so constant singlet dressing does **not** pick out `m_*` by itself. It
+reparameterizes a whole interval of first-branch stationary points
+`m in [m_pos, m_disc]`, with two positive `lambda` values on the upper part of
+that interval. So the remaining open object on this route is not "find some
+positive constant `lambda`"; it is still the microscopic law fixing `lambda`
+itself, equivalently fixing `m`. See
+`docs/KOIDE_C3_CONSTANT_SINGLET_REPARAMETERIZATION_THEOREM_NOTE_2026-04-20.md`.
+
+**Further same-branch sharpening (2026-04-20):** the canonical selected-slice
+`2 x 2` `Z_3` doublet block also does **not** contain a hidden intrinsic
+spectral selector. Its completed spectral data are exact, but after freezing
+the bank they collapse to the sign-blind coordinate
+`x^2 = (m - 4 sqrt(2)/9)^2`: `Tr(K2)` is constant, while `det(K2)`,
+`Tr(K2^2)`, and the eigenvalue-gap square are all affine in `x^2`. On the
+physical first branch `x < 0` everywhere, so those raw spectral scalars are
+strictly monotone and the natural low-complexity spectral-law classes
+(single-scalar, affine, coefficient-free monomial, normalized-by-trace) only
+reparameterize the branch. They do not select the physical point. So the
+selected-slice spectral route is no longer a live closure candidate either.
+See
+`docs/KOIDE_SELECTED_SLICE_SPECTRAL_COMPLETION_AND_MINIMAL_LOCAL_SPECTRAL_LAW_NO_GO_NOTE_2026-04-20.md`.
+
 **Candidate closing routes (each needs its own derivation):**
 
 1. **H_* witness ratio from a retained lattice calculation.** The H_* witness kappa_* ≈ −0.608 currently pins `m_*` by observational fit. If a retained lattice propagator or transport integral computes kappa_* from Cl(3)/Z³ ingredients alone, the cone point is forced. This is the most likely route.
-2. **Retained `C_3`-singlet Schur law on the `4 x 4` (hw=1 + singlet/baryon) block.** The new reduction theorem shows every equivariant `4 x 4` extension collapses to `K_eff(m) = K_sel(m) - lambda(m) J`. So this route is now exactly: derive the scalar singlet-Schur law `lambda(m)` from the microscopic lattice action. In the fixed-coupling subclass this reduces further to the one positive constant `lambda_* ~= 0.5456253117` that moves the minimum to `m_*`.
+2. **Retained `C_3`-singlet Schur law on the `4 x 4` (hw=1 + singlet/baryon) block.** The new reduction theorem shows every equivariant `4 x 4` extension collapses to `K_eff(m) = K_sel(m) - lambda(m) J`. So this route is now exactly: derive the scalar singlet-Schur law `lambda(m)` from the microscopic lattice action. The later constant-coupling sharpening proves that a fixed positive `lambda` does not close the selector by itself; it merely reparameterizes a continuum of branch minima. So the real remaining target is the microscopic `lambda`-law, not the existence of some positive constant `lambda`.
 3. **Transport gap ratio 4π/√6.** Numerically close to the observed `η/η_obs ≈ 5.29` (3.2% mismatch). If formalized into a retained lattice identity, it could pin `m_*`.
 4. **One-clock semigroup / Γ-orbit positive witness route.** Already delivers cos-similarity > 1 − 10⁻⁹ with PDG √m-vector at the cone point `H_*`. Currently conditional on G1 observational chamber pins (M_STAR, DELTA_STAR, Q_PLUS_STAR). If those three pins can be derived from retained framework, `Q = 2/3` follows.
 

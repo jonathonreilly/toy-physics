@@ -34,6 +34,10 @@ The clean current endpoint is:
 - the exact `Z_3` scalar-potential support note derives the Clifford-fixed
   selected-slice potential but also records honestly that its minimum does not
   select the physical point
+- the exact selected-slice spectral-completion theorem now also closes the
+  remaining simple intrinsic spectral-selector hope negatively: the canonical
+  `2 x 2` block is spectrally complete but sign-blind, and its low-complexity
+  spectral laws only reparameterize the same one-scalar gap
 
 So the current charged-lepton state is:
 
@@ -56,6 +60,7 @@ So the current charged-lepton state is:
 11. [KOIDE_ONE_SCALAR_OBSTRUCTION_TRIANGULATION_THEOREM_NOTE_2026-04-18.md](./KOIDE_ONE_SCALAR_OBSTRUCTION_TRIANGULATION_THEOREM_NOTE_2026-04-18.md)
 12. [KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md](./KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md)
 13. [KOIDE_Z3_SCALAR_POTENTIAL_SUPPORT_NOTE_2026-04-19.md](./KOIDE_Z3_SCALAR_POTENTIAL_SUPPORT_NOTE_2026-04-19.md)
+14. [KOIDE_SELECTED_SLICE_SPECTRAL_COMPLETION_AND_MINIMAL_LOCAL_SPECTRAL_LAW_NO_GO_NOTE_2026-04-20.md](./KOIDE_SELECTED_SLICE_SPECTRAL_COMPLETION_AND_MINIMAL_LOCAL_SPECTRAL_LAW_NO_GO_NOTE_2026-04-20.md)
 
 ## Package Role
 
@@ -72,7 +77,9 @@ It is not yet clean enough to promote charged leptons to retained closure,
 because the current stack still stops one step short of a retained selector
 law for the final microscopic scalar. The current exact endpoint is now
 sharper: the missing step is one scalar condition, and the current
-selected-slice scalar potential does not by itself select it.
+selected-slice scalar potential does not by itself select it, while the
+completed canonical `2 x 2` spectral carrier also does not provide a hidden
+low-complexity selector law.
 Branch-local exploratory `Q = 2/3`-surface and scale-selector near-miss probes
 remain off current-main authority.
 
