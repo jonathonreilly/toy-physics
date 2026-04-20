@@ -50,6 +50,11 @@ The clean current endpoint is:
 - the old transport-gap observation `1/eta_ratio ≈ 4pi/sqrt(6)` is now also
   demoted honestly: even an exact identity there would only compare two
   branch-level constants and would still not furnish an `m`-selection law
+- the natural weighted extension of the old `Z_3` character-source cross-check
+  is now also closed negatively: arbitrary left/right central class-function
+  weights still keep the source kernel diagonal in the canonical source basis,
+  so unique tops are basis axes with `Q = 1` and degenerate tops still do not
+  force a unique Koide ray
 
 So the current charged-lepton state is:
 
@@ -76,6 +81,7 @@ So the current charged-lepton state is:
 15. [KOIDE_EIGENVALUE_Q23_SURFACE_THEOREM_NOTE_2026-04-20.md](./KOIDE_EIGENVALUE_Q23_SURFACE_THEOREM_NOTE_2026-04-20.md)
 16. [KOIDE_SCALE_SELECTOR_REPARAMETERIZATION_THEOREM_NOTE_2026-04-20.md](./KOIDE_SCALE_SELECTOR_REPARAMETERIZATION_THEOREM_NOTE_2026-04-20.md)
 17. [KOIDE_TRANSPORT_GAP_CONSTANT_NO_GO_NOTE_2026-04-20.md](./KOIDE_TRANSPORT_GAP_CONSTANT_NO_GO_NOTE_2026-04-20.md)
+18. [KOIDE_WEIGHTED_CHARACTER_SOURCE_AXIS_THEOREM_NOTE_2026-04-20.md](./KOIDE_WEIGHTED_CHARACTER_SOURCE_AXIS_THEOREM_NOTE_2026-04-20.md)
 
 ## Package Role
 
@@ -100,7 +106,11 @@ assumption-escape probes have now also been formalized: the eigenvalue
 scale-selector near-miss `u*v*w = 1` is only a Koide-lane
 reparameterization built from `u_small(v,w)`. The old transport-gap
 comparison has also been demoted to a constant-vs-constant bridge rather than
-an `m`-selection law.
+an `m`-selection law. And the natural weighted extension of the old
+character-source route is now also closed: arbitrary central left/right
+class-function weights keep the kernel diagonal in the canonical source basis,
+so that route can only pick basis axes or remain degenerate, never a unique
+Koide ray.
 
 So the right classification is:
 

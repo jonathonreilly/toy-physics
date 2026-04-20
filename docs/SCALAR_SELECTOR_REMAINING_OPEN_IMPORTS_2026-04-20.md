@@ -82,6 +82,18 @@ not equal it. See
 `docs/KOIDE_EIGENVALUE_Q23_SURFACE_THEOREM_NOTE_2026-04-20.md` and
 `docs/KOIDE_SCALE_SELECTOR_REPARAMETERIZATION_THEOREM_NOTE_2026-04-20.md`.
 
+**Weighted character-source closeout (2026-04-20):** the natural weighted
+extension of the old `Z_3` character-source cross-check is now also closed.
+For arbitrary central left/right class-function weights on the canonical
+sources `s_i = e_{q_L(i)} \otimes e_{q_R(i)}`, the weighted kernel is always
+exactly diagonal:
+`diag(mu_0 nu_0, mu_1 nu_2, mu_2 nu_1)`. So a unique top eigenvalue can only
+select a basis axis, and every basis axis has `Q = 1`, not `2/3`; while a
+degenerate top leaves the ray unfixed. So observable-principle source work
+must derive genuine off-axis circulant Fourier content of `D^(-1)`, not just
+reweight the canonical character sources. See
+`docs/KOIDE_WEIGHTED_CHARACTER_SOURCE_AXIS_THEOREM_NOTE_2026-04-20.md`.
+
 **Candidate closing routes (each needs its own derivation):**
 
 1. **H_* witness ratio from a retained lattice calculation.** The H_* witness kappa_* ≈ −0.608 currently pins `m_*` by observational fit. If a retained lattice propagator or transport integral computes kappa_* from Cl(3)/Z³ ingredients alone, the cone point is forced. This is the most likely route.
