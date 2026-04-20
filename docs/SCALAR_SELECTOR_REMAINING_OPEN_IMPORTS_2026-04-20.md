@@ -8,7 +8,7 @@
 | # | Import | Lane | Current status | What closes it |
 |---|---|---|---|---|
 | I1 | Koide relation `Q = 2/3` | κ, θ | retained observational (not derived; 6 structural no-go theorems on main rule out several mechanisms) | a Cl(3)/Z³-native forcing of the cone condition `a_0² = 2|z|²` from retained representation-theory or from a retained scalar-potential minimization that lands on the cone |
-| I2 | Brannen phase `δ = 2/9` | θ | retained observational (Berry identifies geometrically on the physical selected line; ambient-S² derivation blocked by bundle obstruction) | either (a) a justified natural completion of the physical 1-D locus to an ambient equivariant base carrying `c_1 = dim(doublet) = 2`, or (b) a Wilson-line / Z³-orbit quantization on the physical base that forces the holonomy value |
+| I2 | Brannen phase `δ = 2/9` | θ | retained observational, but the arithmetic is now structurally collapsed: on the retained `d = 3` `Z_3` singlet-plus-doublet split, `δ_struct = Q_struct / 3 = 2/9` as a dimensionless ratio; what remains open is the radian/unit bridge | a physical-base unit bridge or Wilson-line / Z³-orbit quantization law identifying the structural `2/9` with the physical phase in radians |
 | I3 | Selected-line reduction `H_sel(m) = H(m, √6/3, √6/3)` | θ, m_* | cited as retained but provenance not named inline | surface the explicit reduction from the retained charged-lepton two-Higgs canonical reduction (retained: `frontier_charged_lepton_two_higgs_canonical_reduction.py`), add one-paragraph citation at point of use |
 | I4 | Chamber bound `q_+ + δ ≥ √(8/3)` | A-BCC | retained as preliminary P3 of P3-Sylvester linear-path signature theorem; derivation not reproduced at point of use | reproduce the intrinsic Z₃-doublet-block point-selection derivation inline in the A-BCC closure note as a one-page appendix, or add precise section-level citation |
 | I5 | PMNS observational pins (NuFit 3σ ranges, T2K `sin δ_CP < 0`) | A-BCC (sigma-chain) | retained observational inputs | framework-native derivation of NuFit angles (open on main as the broader charged-lepton flagship gate) and/or of the sign of `sin δ_CP` from Cl(3) CP structure |
@@ -199,6 +199,37 @@ Closing `δ = 2/9` would upgrade the Koide θ lane to retained-derivation. Lower
 **Partial derivation already on canonical:** §2 of `KOIDE_BERRY_PHASE_THEOREM_NOTE` (ambient-S² n=2 monopole model). On the C₃-equivariant completion of the scale-free Koide locus to the unit 2-sphere, the doublet bundle carries `c_1 = dim(doublet) = 2` by Borel–Weil/Pieri; the Berry holonomy of this bundle over one C₃ cyclic period equals `2πQ = 4π/3`; reduction to Brannen units per C₃ element gives `δ = Q/d = 2/9`.
 
 **What blocks this as a closure:** the retained positive physical Koide locus is three open arcs on a single circle (not S²), so on the actual physical base the doublet bundle is equivariantly trivial, `c_1 = 0`. See `KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE`. The ambient-S² completion is therefore the load-bearing step that needs a physics justification, not just a natural-mathematics justification.
+
+**New same-branch structural reduction (2026-04-20).** The phase arithmetic is
+now isolated more sharply. On the retained `d = 3` `Z_3` singlet-plus-doublet
+split, the unique-doublet count gives
+
+```text
+Q_struct = 2 / d,
+delta_struct = 2 / d^2 = Q_struct / d,
+```
+
+so at `d = 3`
+
+```text
+Q_struct = 2/3,
+delta_struct = 2/9.
+```
+
+This does **not** by itself derive the physical phase in radians. It means the
+remaining Berry-side gap is not the arithmetic `2/9`, but the unit bridge that
+identifies the structural `2/9` with the physical phase observable. See
+`docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md`.
+
+**New same-branch no-go sharpening (2026-04-20).** The obvious physical-base
+Berry closures of that unit bridge are now also ruled out. On the actual
+projective `Z_3` qubit ray, the direct one-step Pancharatnam phase is `pi/3`,
+the full three-step Bargmann invariant is `pi`, and the actual selected-line
+Berry connection `A = d theta` carries a continuum of endpoint holonomies with
+`2/9` as only one interior choice. So the remaining gap is now a specific
+physical-base unit bridge / quantization law, not a hidden direct Berry
+selector on the current carrier. See
+`docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md`.
 
 **Candidate closing routes:**
 

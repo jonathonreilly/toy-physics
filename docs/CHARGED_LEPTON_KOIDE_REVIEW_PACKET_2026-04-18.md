@@ -105,6 +105,20 @@ The clean current endpoint is:
   chamber-violating `C_neg q < 0` point all admit the same near-perfect
   semigroup witness after one overall scale fit, so that route also inherits
   the open G1 chamber/basin selector rather than bypassing it
+- and the Koide `Q` / `delta` pair is now structurally linked more sharply:
+  on the retained `d = 3` `Z_3` singlet-plus-doublet split, the same unique
+  doublet count gives `Q_struct = 2/3` and `delta_struct = 2/9` as
+  dimensionless ratios, so the Berry-side open object is no longer "where do
+  these two numbers come from?" but "what physical-base law identifies the
+  structural `2/9` with radians?"
+- and that remaining Berry-side bridge is now sharper again: the obvious
+  direct `Z_3`-qubit closures fail on the physical carrier itself. The
+  one-step Pancharatnam phase is `pi/3`, the three-step Bargmann invariant is
+  `pi`, and the actual selected-line `A = d theta` connection carries a
+  continuum of endpoint holonomies containing `2/9` rather than forcing it.
+  So the remaining live phase object is a specific unit bridge /
+  Wilson-line quantization law, not another hidden selector on the current
+  Berry carrier
 
 So the current charged-lepton state is:
 
@@ -142,6 +156,8 @@ So the current charged-lepton state is:
 26. [KOIDE_HIGGS_DRESSED_CHAMBER_PAIR_INVERSION_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_CHAMBER_PAIR_INVERSION_THEOREM_NOTE_2026-04-20.md)
 27. [KOIDE_HIGGS_DRESSED_BASIN_TRANSFER_NO_GO_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_BASIN_TRANSFER_NO_GO_THEOREM_NOTE_2026-04-20.md)
 28. [KOIDE_GAMMA_ORBIT_SEMIGROUP_BASIN_TRANSFER_NO_GO_THEOREM_NOTE_2026-04-20.md](./KOIDE_GAMMA_ORBIT_SEMIGROUP_BASIN_TRANSFER_NO_GO_THEOREM_NOTE_2026-04-20.md)
+29. [KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md](./KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md)
+30. [KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md](./KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md)
 
 ## Package Role
 
