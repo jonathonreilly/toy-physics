@@ -8,7 +8,7 @@
 | # | Import | Lane | Current status | What closes it |
 |---|---|---|---|---|
 | I1 | Koide relation `Q = 2/3` | κ, θ | retained observational (not derived; 6 structural no-go theorems on main rule out several mechanisms) | a Cl(3)/Z³-native forcing of the cone condition `a_0² = 2|z|²` from retained representation-theory or from a retained scalar-potential minimization that lands on the cone |
-| I2 | Brannen phase `δ = 2/9` | θ | retained observational (Berry identifies geometrically on the physical selected line; ambient-S² derivation blocked by bundle obstruction) | either (a) a justified natural completion of the physical 1-D locus to an ambient equivariant base carrying `c_1 = dim(doublet) = 2`, or (b) a Wilson-line / Z³-orbit quantization on the physical base that forces the holonomy value |
+| I2 | Brannen phase `δ = 2/9` | θ | **conditionally closed on I1** — `δ = Q/d = 2/9` derived from `n_eff = 2` (conjugate-pair forcing, structural) and `d = 3` (|C₃|, structural), given `Q = 2/3` (I1). All three candidate closing routes exhausted and shown to reduce to I1. See `KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md`. | closing I1 (`Q = 2/3`) closes I2 automatically via `δ = Q/d` |
 | I3 | Selected-line reduction `H_sel(m) = H(m, √6/3, √6/3)` | θ, m_* | cited as retained but provenance not named inline | surface the explicit reduction from the retained charged-lepton two-Higgs canonical reduction (retained: `frontier_charged_lepton_two_higgs_canonical_reduction.py`), add one-paragraph citation at point of use |
 | I4 | Chamber bound `q_+ + δ ≥ √(8/3)` | A-BCC | retained as preliminary P3 of P3-Sylvester linear-path signature theorem; derivation not reproduced at point of use | reproduce the intrinsic Z₃-doublet-block point-selection derivation inline in the A-BCC closure note as a one-page appendix, or add precise section-level citation |
 | I5 | PMNS observational pins (NuFit 3σ ranges, T2K `sin δ_CP < 0`) | A-BCC (sigma-chain) | retained observational inputs | framework-native derivation of NuFit angles (open on main as the broader charged-lepton flagship gate) and/or of the sign of `sin δ_CP` from Cl(3) CP structure |
@@ -51,19 +51,23 @@ subclass (`lambda` constant), making the branch-local physical selected point
 
 **Required retained ingredients for any of the above:** explicit lattice propagator or transport-integral definition on the retained Cl(3)/Z³ carrier; currently on main as partial-support.
 
-### Priority 2: I2 (Brannen phase `δ = 2/9`)
+### Priority 2: I2 (Brannen phase `δ = 2/9`) — **CONDITIONALLY CLOSED on I1**
 
-Closing `δ = 2/9` would upgrade the Koide θ lane to retained-derivation. Lower leverage than I1 but more within reach because a partial derivation already exists (the the original ambient-S² Berry-holonomy calculation `γ = 2π(d−1)/d = 2πQ`, reducing to `δ = Q/d = 2/9` at `d = 3`).
+**Status update (2026-04-20):** I2 is now conditionally closed on I1. The formula `δ = Q/d = 2/9` is derived from structural ingredients alone — `n_eff = 2` (doublet conjugate-pair forcing, no retained input) and `d = 3` (|C₃|) — conditional on the retained Koide ratio `Q = 2/3` (I1). All three candidate closing routes have been exhausted and shown to reduce to I1. I2 is no longer independently open; it is a corollary of I1.
 
-**Partial derivation already on canonical:** §2 of `KOIDE_BERRY_PHASE_THEOREM_NOTE` (ambient-S² n=2 monopole model). On the C₃-equivariant completion of the scale-free Koide locus to the unit 2-sphere, the doublet bundle carries `c_1 = dim(doublet) = 2` by Borel–Weil/Pieri; the Berry holonomy of this bundle over one C₃ cyclic period equals `2πQ = 4π/3`; reduction to Brannen units per C₃ element gives `δ = Q/d = 2/9`.
+**Derivation summary (`KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md`):**
+- `n_eff = 2`: derived from `L_{ω̄} = conj(L_ω)`, which forces the projective ratio `ζ = e^{-2iθ}` with `|d(arg ζ)/dθ| = 2`. No retained input.
+- `δ = n_eff / d² = 2/9`: from Brannen normalization, `|Δ(arg ζ)| / (2π·d) = (4π/3)/(6π) = 2/9`.
+- Equivalence: `δ = Q/d` where `Q = n_eff/d = 2/3`.
 
-**What blocks this as a closure:** the retained positive physical Koide locus is three open arcs on a single circle (not S²), so on the actual physical base the doublet bundle is equivariantly trivial, `c_1 = 0`. See `KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE`. The ambient-S² completion is therefore the load-bearing step that needs a physics justification, not just a natural-mathematics justification.
+**Route exhaustion:**
+1. Route 1 (equivariant S² completion): reproduces `δ = 2/9` with `n=2`, but forcing `c_1 = 2` on the physical cycle reduces to `Q = n_eff/d = 2/3` (I1).
+2. Route 2 (Wilson-line Z₃ quantization): connection `A = dθ` is flat on the 1D equator; all closed Z₃ orbits give trivial holonomy; no quantization.
+3. Route 3 (Z₃ scalar-potential Berry phase): `V(m)` minimum at `m_V ≈ -0.433 ≠ m_* ≈ -1.161`; CL3 selector gap note confirms blockage.
 
-**Candidate closing routes:**
+**Runner:** `scripts/frontier_koide_brannen_phase_reduction_theorem.py` — PASS=16 FAIL=0.
 
-1. **Equivariant-completion forcing theorem.** Show that the minimal C₃-equivariant completion of the scale-free Koide locus that preserves the retained representation-theoretic data (specifically, the doublet bundle's dim-doublet Chern-class identity) is S². A theorem of the form "the minimal equivariant CW extension of `K_norm⁺/C₃` compatible with retained data is `S²`" would promote the this cycle calculation to retained.
-2. **Wilson-line Z³-orbit quantization on the physical base.** The selected-line CP¹ Pancharatnam–Berry identification is on the physical base. Augmenting with a retained quantization condition — e.g., the Berry phase per C₃ element must satisfy a Wilson-line retention identity on the retained Cl(3)/Z³ lattice — could force `δ = 2/9`. Open territory.
-3. **Derive δ as a cycle-periodic Berry phase from the retained Z³ scalar potential.** If V(m) induces a Berry-type phase on closed paths in the scalar-lane reduced configuration space, quantization of that phase by the retained Z₃ cycle could force the value.
+**What remains open:** only I1 (`Q = 2/3`). Closing I1 closes I2 automatically.
 
 ### Priority 3: I4 (Chamber bound)
 
