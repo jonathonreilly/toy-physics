@@ -1,11 +1,16 @@
 # A-BCC Assumptions Audit: Can the Physical-Sheet Identification Be Derived?
 
 **Date:** 2026-04-19
-**Status:** FULL NO-GO. All five candidate derivation routes for A-BCC fail.
-A-BCC cannot be derived from the Cl(3)/Z³ algebraic structure alone.
+**Status:** FULL NO-GO on algebraic routes. All five candidate algebraic
+derivation routes for A-BCC fail. A-BCC cannot be derived from the
+Cl(3)/Z³ algebraic structure alone. The C_base-connectivity route
+identified here as the best candidate is closed in cycle 11 as a
+conditional theorem (PNS); see
+`docs/DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md`.
 **Companion notes:**
 - `docs/DM_DPLE_ABCC_NO_GO_NOTE_2026-04-19.md` (DPLE sign-blindness)
 - `docs/ABCC_CP_PHASE_NO_GO_THEOREM_NOTE_2026-04-19.md` (observational grounding)
+- `docs/DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md` (cycle 11 closure)
 **Primary runner:** `scripts/frontier_dm_abcc_assumptions_audit.py`
 **Runner result:** PASS=21 FAIL=0
 

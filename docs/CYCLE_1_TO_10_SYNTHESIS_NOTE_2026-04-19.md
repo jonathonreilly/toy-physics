@@ -237,9 +237,30 @@ verified inside the RPSR runner (T8, T9).
 
 ---
 
-## 7. Cycle-11 retention target (explicit and bounded)
+## 7. Cycle-11 results and retention targets
 
-The sole remaining retention gap:
+### 7.1 A-BCC conditional closure (cycle 11, LANDED)
+
+See `docs/DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md`.
+
+The A-BCC assumptions audit (cycle 10) identified the C_base-connectivity
+axiom as the sole residual route. Cycle 11 closes this by proving:
+
+> **A-BCC from PMNS Non-Singularity (PNS).** If det(H_base + t J_phys) ≠ 0
+> for all t ∈ [0, 1], then det(H_base + J_phys) > 0 (A-BCC). Proof:
+> IVT + det(H_base) > 0.
+
+Both known C_neg chi²=0 basins (Basin 2, Basin X) require a neutrino mass
+zero-crossing at t ≈ 0.028 and t ≈ 0.038 respectively. Basin 1 avoids
+all crossings (P3 Sylvester, min det = 0.879). Runner PASS=38 FAIL=0.
+
+**A-BCC status:** CONDITIONAL THEOREM gated on PNS. Reduction:
+A-BCC ← PNS + IVT + det(H_base) > 0. PNS is observationally grounded
+(measured neutrino masses non-zero) but not derived from Cl(3)/Z³ alone.
+Axiom cost: 1 (PNS) — weaker and more physically motivated than the prior
+bare sign assumption.
+
+### 7.2 Open retention target: Quark gate LO identity
 
 > **Target.** Prove `a_u / sin(delta_std) + a_d = 1` at NNI-
 > diagonalization with `a_d = rho = 1/sqrt(42)` pinned, using retained
@@ -302,17 +323,19 @@ conditional closure (RPSR). Zero new axioms added in all three scalar-
 selector closures; the conditional closure is gated on **one** specific
 LO algebraic identity (cycle 11 target).
 
-**A-BCC clarification.** The "DM A-BCC basin" closure (1 -> 0) above
-refers to the F4 scalar-selector axiom on the sub-gate conditioned on the
-baseline-connected-component identification. DPLE closes F4; it does not
-close A-BCC. The source-side physical-sheet identification remains the
-single open input on the DM flagship gate, as documented in
-`DM_FLAGSHIP_CLOSURE_REVIEW_NOTE_2026-04-17.md` (item 7 in "Still open")
-and `DM_DPLE_ABCC_NO_GO_NOTE_2026-04-19.md` (sign-blindness no-go). A
-full assumptions audit of A-BCC is in
-`DM_ABCC_ASSUMPTIONS_AUDIT_NOTE_2026-04-19.md` (PASS=21 FAIL=0):
-all five algebraic derivation routes fail; C_base-connectivity reduces
-the gap to a single continuity axiom (cycle 11+ target).
+**A-BCC status (updated cycle 11).** DPLE closes the F4 scalar-selector
+axiom on the conditioned sub-gate. A-BCC (source-side physical-sheet
+identification) is now a **conditional theorem** gated on PMNS
+Non-Singularity (PNS): see
+`DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md` (cycle 11,
+PASS=38 FAIL=0). The full assumptions audit is in
+`DM_ABCC_ASSUMPTIONS_AUDIT_NOTE_2026-04-19.md` (PASS=21 FAIL=0);
+all five algebraic routes fail; PNS is the one remaining input.
+
+PNS states that no neutrino eigenvalue passes through zero during the
+physical dark-matter coupling. Both known C_neg chi²=0 basins explicitly
+violate PNS (zero-crossings at t ≈ 0.028 and t ≈ 0.038). Basin 1 is the
+unique chi²=0 basin consistent with PNS.
 
 MRU and DPLE specialize dim-parametric observable-principle theorems at
 d = 3, while Berry closes through the exact selected-line phase carrier.
@@ -321,13 +344,14 @@ on main (R1 bivector-count saturation, R2 anomaly parity, R3
 Cayley-Hamilton coincidence, 7 no-gos), but the Berry half should no longer be
 described as an ambient dim-parametric monopole theorem.
 
-Runner suite: 7 new runners, all PASS=N FAIL=0. No retained runner on
-main regresses.
+Runner suite: 8 runners (7 cycle-10 + 1 cycle-11 PNS), all PASS=N FAIL=0.
+No retained runner on main regresses.
 
 **Reading order:** start here. Then (in order):
 `KOIDE_MOMENT_RATIO_UNIFORMITY_THEOREM_NOTE` ->
 `KOIDE_BERRY_PHASE_THEOREM_NOTE` ->
 `DM_DPLE_DIMENSION_PARAMETRIC_EXTREMUM_THEOREM_NOTE` ->
-`QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE`. For
-supporting/superseded context: the four updated cycle-1-4 notes plus
-the scalar-tensor ray-magnitude bridge note.
+`QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE` ->
+`DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE`. For supporting/superseded
+context: the four updated cycle-1-4 notes plus the scalar-tensor
+ray-magnitude bridge note.
