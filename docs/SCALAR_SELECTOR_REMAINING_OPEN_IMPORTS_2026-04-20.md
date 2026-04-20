@@ -18,7 +18,7 @@
 | I9 | `a_d = ρ` | a_u | retained from `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE` | inline citation already present; nothing to close |
 | I10 | H_* witness ratio `w/v ≈ 4.101` | m_* (selected-line point) | retained observational | deriving `m_*` as a corollary of `δ = 2/9` via the exact scalar-phase bridge (already established). If I2 closes, I10 closes automatically |
 | I11 | Basin enumeration `{Basin 1, N, P, X}` exhaustiveness | A-BCC | **closed on this branch for the active chamber**: `DM_PMNS_CHAMBER_SPECTRAL_COMPLETENESS_THEOREM_NOTE_2026-04-20.md` proves the exact chamber `χ² = 0` set is `{Basin 1, Basin 2, Basin X}` | none for the active chamber; off-chamber chart bookkeeping is separate from the live A-BCC completeness target |
-| I12 | σ_hier permutation `(2,1,0)` | A-BCC (sigma-chain) | **closed on this branch**: `DM_PMNS_UPPER_OCTANT_SOURCE_CUBIC_SELECTOR_THEOREM_NOTE_2026-04-20.md` proves that the upper-octant chamber law plus the source-cubic orientation law `I_src(H) > 0` select Basin 1 uniquely, hence `sigma_hier = (2,1,0)` and `sin δ_CP < 0` | none beyond landing the new theorem |
+| I12 | σ_hier permutation `(2,1,0)` | A-BCC (sigma-chain) | **closed on this branch**: the authoritative closeout is `DM_SIGMA_HIER_UPPER_OCTANT_SELECTOR_THEOREM_NOTE_2026-04-20.md`; it proves that among the two `9/9`-magnitude-passing permutations only `(2,1,0)` satisfies the exact chamber upper-octant law. The earlier `DM_PMNS_UPPER_OCTANT_SOURCE_CUBIC_SELECTOR_THEOREM_NOTE_2026-04-20.md` gives the exact chamber-root / source-cubic version of the same closure. See also `DM_I12_SIGMA_HIER_CLOSURE_PACKET_NOTE_2026-04-20.md` for the branch-local proof chain. | none beyond landing the closure packet and theorem |
 
 ## §1 Priority ordering for closure
 
@@ -77,11 +77,15 @@ Update on this branch:
   `DM_SIGMA_HIER_H_INTRINSIC_NO_GO_THEOREM_NOTE_2026-04-20.md` ruled out
   `H`-intrinsic and `μ↔τ`-even scalar families, and
   `DM_PMNS_CP_ORIENTATION_PARITY_REDUCTION_NOTE_2026-04-20.md` reduced the
-  gap to one parity bit. The new
+  gap to one parity bit. The first closeout theorem
   `DM_PMNS_UPPER_OCTANT_SOURCE_CUBIC_SELECTOR_THEOREM_NOTE_2026-04-20.md`
   closes that bit: the retained chamber law forces the upper octant, and the
   coefficient-free source law `I_src(H) > 0` then selects Basin 1 uniquely,
-  hence `sigma_hier = (2,1,0)`.
+  hence `sigma_hier = (2,1,0)`. The authoritative branch-local closeout note
+  is now
+  `DM_SIGMA_HIER_UPPER_OCTANT_SELECTOR_THEOREM_NOTE_2026-04-20.md`, with
+  `DM_I12_SIGMA_HIER_CLOSURE_PACKET_NOTE_2026-04-20.md` added as a
+  reviewer-facing proof packet.
 - `I5` is reduced one step further. The CP-sign half is now closed by the same
   theorem, so the remaining `I5` gap is only the framework-native derivation
   of the PMNS angle triple itself.

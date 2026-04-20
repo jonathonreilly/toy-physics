@@ -8,6 +8,12 @@ parity / charged-doublet label law for `sigma_hier`.
 **Primary runner:**  
 `scripts/frontier_dm_pmns_cp_orientation_parity_reduction_2026_04_20.py`
 
+**Supersession note (closure status):** this note is an intermediate reduction
+only. On `morning-4-20`, `I12` is actually closed by
+[DM_PMNS_UPPER_OCTANT_SOURCE_CUBIC_SELECTOR_THEOREM_NOTE_2026-04-20.md](./DM_PMNS_UPPER_OCTANT_SOURCE_CUBIC_SELECTOR_THEOREM_NOTE_2026-04-20.md)
+and packaged most cleanly in
+[DM_SIGMA_HIER_UPPER_OCTANT_SELECTOR_THEOREM_NOTE_2026-04-20.md](./DM_SIGMA_HIER_UPPER_OCTANT_SELECTOR_THEOREM_NOTE_2026-04-20.md).
+
 ---
 
 ## 0. Question

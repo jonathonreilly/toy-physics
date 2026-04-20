@@ -1,7 +1,8 @@
 # DM σ_hier Upper-Octant Selector Theorem
 
 **Date:** 2026-04-20  
-**Status:** conditional/support theorem on the open DM PMNS gate  
+**Status:** conditional/support theorem on the open DM PMNS gate; the
+authoritative `I12` closeout theorem on `morning-4-20`  
 **Scope:** closes the discrete `σ_hier` ambiguity at the pinned chamber point
 without importing the T2K/NOvA CP-phase-sign preference  
 **Does not close:** `I5` as the PMNS angle-pin law, or `A-BCC` as an axiom-
@@ -10,6 +11,10 @@ native branch-choice theorem
 `scripts/frontier_dm_sigma_hier_upper_octant_selector_theorem_2026_04_20.py`
 
 ## Summary
+
+This is the theorem note to cite for `I12` closure on `morning-4-20`. The
+older `DM_PMNS_CP_ORIENTATION_PARITY_REDUCTION_NOTE_2026-04-20.md` is only an
+intermediate reduction note; the actual closeout is here.
 
 The older `σ_hier` uniqueness theorem reduced the six `S_3` hierarchy
 pairings to the two magnitude-passing permutations
