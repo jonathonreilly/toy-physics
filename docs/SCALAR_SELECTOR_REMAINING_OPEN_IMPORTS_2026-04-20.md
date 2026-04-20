@@ -11,7 +11,7 @@
 | I2 | Brannen phase `δ = 2/9` | θ | retained observational (Berry identifies geometrically on the physical selected line; ambient-S² derivation blocked by bundle obstruction) | either (a) a justified natural completion of the physical 1-D locus to an ambient equivariant base carrying `c_1 = dim(doublet) = 2`, or (b) a Wilson-line / Z³-orbit quantization on the physical base that forces the holonomy value |
 | I3 | Selected-line reduction `H_sel(m) = H(m, √6/3, √6/3)` | θ, m_* | **closed on this branch**: the Koide microscopic target note now names the charged-lepton two-Higgs canonical reduction and selected-line closure notes inline | none beyond landing the updated target note |
 | I4 | Chamber bound `q_+ + δ ≥ √(8/3)` | A-BCC | **closed on this branch**: inline derivation added from the retained active-half-plane inverse chart | none beyond landing the updated A-BCC note |
-| I5 | PMNS observational pins (NuFit 3σ ranges, T2K `sin δ_CP < 0`) | A-BCC (sigma-chain) | **further reduced on this branch, not fully closed**: `DM_PMNS_UPPER_OCTANT_SOURCE_CUBIC_SELECTOR_THEOREM_NOTE_2026-04-20.md` closes the CP-sign / `sigma_hier` half by the coefficient-free selector system `s23^2 > 1/2`, `I_src(H) > 0`; the PMNS angle triple itself remains observational | framework-native derivation of the PMNS angle triple `(sin^2 theta_12, sin^2 theta_13, sin^2 theta_23)` |
+| I5 | PMNS observational pins (NuFit 3σ ranges, T2K `sin δ_CP < 0`) | A-BCC (sigma-chain) | **further reduced on this branch, not fully closed**: `DM_PMNS_UPPER_OCTANT_SOURCE_CUBIC_SELECTOR_THEOREM_NOTE_2026-04-20.md` closes the CP-sign / `sigma_hier` half by the coefficient-free selector system `s23^2 > 1/2`, `I_src(H) > 0`; the new `DM_PMNS_NE_SEED_SURFACE_EXACT_SOURCE_MANIFOLD_THEOREM_NOTE_2026-04-20.md` shows that on the charged-lepton-side minimal branch the physical PMNS angle triple already lies on a regular local `2`-real source manifold inside the fixed native `N_e` seed surface, while the current exact nonlocal seed-surface selector families all miss it | framework-native `2`-real point-selection law on the exact PMNS source manifold (equivalently: the selected-branch Hermitian-data law on the charged-lepton-side branch) |
 | I6 | Scalar-lane SO(2)-quotient of the real doublet | κ (MRU route only) | **closed on this branch**: `KOIDE_SCALAR_LANE_OBSERVABLE_RADIUS_THEOREM_NOTE_2026-04-20.md` derives the quotient from the observable-principle local scalar jet | none for the MRU route; the spectrum/operator bridge remains an independent route |
 | I7 | Bimodule `B = Cl(3)/Z₃ ⊗ Cl_CKM(1⊕5)` | a_u | **closed on this branch**: the Quark ISSR1 headline theorem now carries a self-contained provenance paragraph for the bimodule route | none beyond landing the updated Quark note |
 | I8 | Retained atoms `ρ = 1/√42`, `supp = 6/7`, `δ_A1 = 1/42` | a_u | **closed on this branch**: the Quark ISSR1 headline theorem now cites the exact CKM atlas atoms inline | none beyond landing the updated Quark note |
@@ -87,8 +87,14 @@ Update on this branch:
   `DM_I12_SIGMA_HIER_CLOSURE_PACKET_NOTE_2026-04-20.md` added as a
   reviewer-facing proof packet.
 - `I5` is reduced one step further. The CP-sign half is now closed by the same
-  theorem, so the remaining `I5` gap is only the framework-native derivation
-  of the PMNS angle triple itself.
+  theorem, and the new
+  `DM_PMNS_NE_SEED_SURFACE_EXACT_SOURCE_MANIFOLD_THEOREM_NOTE_2026-04-20.md`
+  sharpens the angle side: on the charged-lepton-side minimal branch the
+  physical PMNS angle triple already lies on a regular local `2`-real source
+  manifold inside the fixed native `N_e` seed surface, but the current exact
+  nonlocal seed-surface selector families do not pick it. So the remaining
+  `I5` gap is no longer generic “derive the PMNS triple somehow.” It is the
+  framework-native point-selection law on that exact PMNS source manifold.
 
 ### Priority 6: I6 (SO(2)-quotient)
 
