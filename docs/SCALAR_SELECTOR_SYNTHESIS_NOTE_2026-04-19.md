@@ -267,6 +267,30 @@ present branch does **not** force `kappa = 1`; it leaves an explicit endpoint-
 selection problem on `kappa in [sqrt(6/7), 1]`. See
 `docs/QUARK_BICAC_ENDPOINT_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`.
 
+A same-day forcing theorem then closes that endpoint-selection problem from
+retained representation theory. The Imag-Slice Schur-Rank-1 (ISSR1) theorem
+shows that on the bimodule `B = Cl(3)/Z_3 ⊗ Cl_CKM(1⊕5)`, the SO(2)-invariant
+1-D weight-0 slice of `V_5` carries `Hom_{SO(2)}(C, V_5^{wt=0})` of dimension 1
+(Schur). Identifying `psi = a_u (i v_5) + a_d p` as the 1-jet of a deforming
+section forces `Im<v_5, psi> = Im<v_5, p>`, equivalently
+`a_u + a_d * sin_d = sin_d` — which is BICAC-LO at `kappa = 1`. Combined
+with the retained BACT-NLO contraction `rho * supp * delta_A1 = rho/49`, the
+chain BICAC-LO + BACT-NLO collapses the bridge to `kappa_target = 48/49` and
+delivers the full physical target `a_u = 0.7748865611` from retained
+representation theory plus a single named structural residue. See
+`docs/QUARK_ISSR1_BICAC_FORCING_THEOREM_NOTE_2026-04-19.md`.
+
+That single residue is named **JTS (Jet-To-Section)**: the bimodule
+perturbation cone `(a_u, a_d) in R^2` is identified with the 1-jet space at
+`p` of deforming sections of `B`. JTS is a single category-theoretic principle,
+analogous in epistemic status to the **1:1 real-isotype measure** that is the
+operator-side residue on the Koide kappa weight-class obstruction theorem
+(`docs/KOIDE_MRU_WEIGHT_CLASS_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`). Both
+the FORM (NORM-Naturality) and the MAP (ISSR1 Schur-rank-1) of BICAC-LO are
+now derived from retained representation theory; only JTS remains as a named
+structural residue. See
+`docs/QUARK_JTS_RESIDUE_NOTE_2026-04-19.md`.
+
 Two same-day NORM theorems refine that obstruction. The first shows that the
 bridge family already lifts to actual complementary endomorphisms of the
 one-real imaginary channel `I = R * Im(p)`:
@@ -468,8 +492,12 @@ support/conditional packet:
   status as DPLE itself, with no new axiom load on the gate;
 - quark `a_u` now closes on bimodule footing via BICAC + STRC-LO + RPSR, and
   same-day NORM theorems show that BICAC is the unique normalized affine
-  extension of the LO split law, but the derivation of that naturality from
-  pure retained quark physics remains open.
+  extension of the LO split law; the same-day ISSR1 forcing theorem then
+  derives BICAC-LO from Schur-rank-1 on the SO(2)-invariant `V_5^{wt=0}`
+  slice, so both the FORM and the MAP of BICAC-LO are now derived from
+  retained representation theory, with the single named structural residue
+  being JTS (jet-to-section identification). BICAC-LO + BACT-NLO together
+  give the full physical target `a_u = 0.7748865611` at `kappa = 48/49`.
 
 So the current reviewer-grade answer is still: **no full gate is closed on
 this branch yet**.
@@ -582,6 +610,7 @@ Start here, then (in order):
 | `frontier_dm_abcc_chamber_dple_closure.py` | 39 | 0 |
 | `frontier_quark_up_amplitude_rpsr_conditional.py` | 10 | 0 |
 | `frontier_quark_strc_observable_principle.py` | 19 | 0 |
+| `frontier_quark_issr1_bicac_forcing.py` | 41 | 0 |
 
 No retained runner on `main` regresses.
 
