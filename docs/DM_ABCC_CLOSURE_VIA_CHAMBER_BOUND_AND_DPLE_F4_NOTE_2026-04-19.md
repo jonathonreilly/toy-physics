@@ -54,6 +54,14 @@ inequality, not an observational filter. Outside this chamber the source
 package and the chart-affinity machinery on which the this cycle
 construction rests are not legitimately defined.
 
+> **Inline derivation (open import I4 closed).** The reviewer-grade
+> inline derivation of `q_+ + δ ≥ √(8/3)` from the retained Cl(3)/Z_3
+> doublet-block geometry is reproduced in
+> `docs/DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md` (§A), with
+> runner `scripts/frontier_dm_abcc_chamber_bound_derivation.py`
+> (`PASS = 15, FAIL = 0`). The present note delegates the bound's
+> derivation to that companion; no further ingredients are invoked here.
+
 The chamber bound is therefore a **derivation-side filter**: any candidate
 basin lying in the half-space `q_+ + δ < √(8/3)` is excluded from the
 admissible set on purely retained-theoretic grounds, before any further
@@ -86,9 +94,10 @@ exits the admissible set on its own.
 
 ---
 
-## 3. Survivors after the chamber bound: {Basin 1, Basin X}
+## 3. Sheet-restricted survivors after the chamber bound: {Basin 1, Basin X}
 
-Applying (C1) collapses the admissible chart from four basins to two:
+Applying (C1) collapses the sheet-restricted admissible chart from four
+basins to two:
 
     chamber survivors = {Basin 1, Basin X}.
 
@@ -350,6 +359,9 @@ computation; there are no hard-coded TRUE values.
 
 ## 10. References
 
+- `docs/DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md`
+  — inline reviewer-grade derivation of the chamber bound
+  `q_+ + δ ≥ √(8/3)` (open import I4 closed).
 - `docs/DM_NEUTRINO_SOURCE_SURFACE_P3_SYLVESTER_LINEAR_PATH_SIGNATURE_THEOREM_NOTE_2026-04-18.md`
   — chamber bound (P3) and linear-path signature continuation (on main).
 - `docs/DM_DPLE_DIMENSION_PARAMETRIC_EXTREMUM_THEOREM_NOTE_2026-04-19.md`

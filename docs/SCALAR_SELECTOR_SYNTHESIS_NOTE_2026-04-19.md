@@ -28,9 +28,10 @@ full-stack recovery is:
   longer a separate meta-axiom) + shell-normalization + JTS physical-point
   second route + RPSR NLO;
 - at the **meta-axiom layer**, with STRC derived from `1(+)5` channel
-  completeness (`37c4f2bf`) and MRU's measure residue discharged via
-  SO(2)-quotient closure (`6458529d`), all four lanes reduce to the
-  retained Cl(3)/Z³ framework axioms — the earlier "4 → 2 DIM-UNIQ +
+  completeness (`37c4f2bf`) and the Koide `kappa` gate now carried
+  primarily by the spectrum/operator bridge plus block-total Frobenius,
+  all four lanes reduce to the retained Cl(3)/Z³ framework axioms — the
+  earlier "4 → 2 DIM-UNIQ +
   STRC" meta-layer collapses further to **4 → Cl(3)/Z³**;
 - a named future target (**BACT**, the bimodule amplitude-completeness
   theorem) sharpens the remaining quark-side structural gap but does not erase
@@ -42,6 +43,20 @@ post-recovery per-lane audit. Then read
 `docs/SCALAR_SELECTOR_CYCLE1_SCIENCE_REVIEW_NOTE_2026-04-19.md` and
 `docs/SCALAR_SELECTOR_CYCLE13_META_CLOSURE_STATUS_NOTE_2026-04-19.md`,
 then use this note for the candidate-route logic in §2-§9.
+
+**2026-04-20 supersession note.** Two cycle-2 corrections override parts of
+the historical route language below:
+
+- Koide `kappa`: MRU remains supplementary only. The SO(2)-quotient needed to
+  make MRU load-bearing is not retained-derived from the observable
+  principle; the primary retained route is now the spectrum/operator bridge
+  plus the block-total Frobenius measure. See
+  `docs/KOIDE_MRU_DEMOTION_NOTE_2026-04-20.md`.
+- DM A-BCC basin bookkeeping: the full χ²=0 chart is now certified as five
+  basins `{Basin 1, Basin N, Basin P, Basin 2, Basin X}`, with active-chamber
+  chart `{Basin 1, Basin 2, Basin X}`. Any older "four-basin" or
+  `{Basin 1, Basin X}` phrasing below is pre-completeness bookkeeping. See
+  `docs/DM_ABCC_BASIN_ENUMERATION_COMPLETENESS_THEOREM_NOTE_2026-04-20.md`.
 
 ---
 

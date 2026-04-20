@@ -1,14 +1,14 @@
-# Koide Brannen-Phase Reduction Theorem: I2 Conditionally Closed on I1
+# Koide Brannen-Phase Reduction Theorem: Conditional `δ = Q/d` Route
 
 **Date:** 2026-04-20
 **Lane:** Charged-lepton Koide phase `delta = 2/9`.
-**Status:** **I2 conditionally closed on I1.** The Brannen phase satisfies
-`delta = Q/d` exactly, where `Q = 2/3` is the Koide ratio and `d = 3 = |C_3|`.
-The formula is structurally forced by the doublet conjugate-pair charge `n_eff = 2`
-and the C_3 group order. Conditional on the Koide ratio `Q = 2/3` (retained
-observational, open item I1), `delta = 2/9` is uniquely derived. An independent
-derivation of `delta` without first deriving `Q` is blocked; all three candidate
-routes reduce to the same underlying I1 gap.
+**Status:** conditional reduction route. This note proves the route
+`δ = Q/d` from the doublet conjugate-pair charge `n_eff = 2` and `d = 3 = |C_3|`.
+The cycle-2 linking theorem and direct no-go sharpen the remaining load-bearing
+step: on the physical selected-line CP¹ base, the structural ratio `2/d²`
+still has to be identified with the physical Berry holonomy in radians
+(the named residual postulate `P`). So this note should be read as one
+important reduction route, not as the final standalone discharge of I2.
 
 **Primary runner:**
 `scripts/frontier_koide_brannen_phase_reduction_theorem.py`
@@ -18,6 +18,10 @@ routes reduce to the same underlying I1 gap.
   identification on the actual selected line
 - `docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md` — bundle
   triviality on the physical Koide base
+- `docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md` — general
+  `Q ↔ δ` structural link
+- `docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md` — sharp no-go
+  on closing the physical-base radian bridge from retained data alone
 - `docs/SCALAR_SELECTOR_REMAINING_OPEN_IMPORTS_2026-04-20.md` — I1 and I2
   open import register
 
@@ -25,10 +29,11 @@ routes reduce to the same underlying I1 gap.
 
 ## 0. Executive summary
 
-The Brannen phase `delta = 2/9` is currently a retained observational input (I2).
-The Berry theorem identifies `delta(m)` as the Berry holonomy of the tautological
-CP^1 line on the actual selected charged-lepton route (for all `m`), but does not
-force the VALUE `delta = 2/9`.
+The Brannen phase `delta = 2/9` is currently a retained observational input.
+The Berry theorem identifies `delta(m)` as the Berry holonomy of the
+tautological CP^1 line on the actual selected charged-lepton route (for all
+`m`), but does not by itself force the VALUE `delta = 2/9` on the physical
+base.
 
 This note derives the VALUE via the following chain:
 
@@ -45,9 +50,10 @@ The derivation of `n_eff = 2` is structural and independent of `Q`. The step
 `Q = 2/3` is the retained observational input (I1). Given `Q`, `delta = Q/d = 2/9`
 follows uniquely from the doublet structure and C_3 order. Therefore:
 
-> **I2 is conditionally closed on I1.** The open item is I1 (the Koide ratio
-> Q = 2/3), not I2 (the Brannen phase delta = 2/9). Once I1 is derived, I2
-> closes automatically via delta = Q/d.
+> **This note provides the conditional `δ = Q/d` route.** The cycle-2
+> companion notes sharpen the remaining live gap as the physical-base
+> radian-bridge postulate `P`. So once `I1` is derived and `P` is closed, I2
+> closes automatically via `δ = Q/d`.
 
 ---
 

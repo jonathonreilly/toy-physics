@@ -9,6 +9,19 @@ notes.
 note) and a runner (for the machine-checked proof). `†` marks a named
 residue; all other steps are mechanically verified.
 
+**2026-04-20 supersession note.** This file is historical proof-chain
+bookkeeping. For current branch-facing status, apply two corrections first:
+
+- Koide `kappa`: the MRU/SO(2)-quotient path is no longer primary. The
+  retained closure route is the spectrum/operator bridge plus the block-total
+  Frobenius measure; MRU is supplementary only. See
+  `docs/KOIDE_MRU_DEMOTION_NOTE_2026-04-20.md`.
+- DM A-BCC basin bookkeeping: the full χ²=0 chart is now
+  `{Basin 1, Basin N, Basin P, Basin 2, Basin X}`, and the active-chamber
+  chart is `{Basin 1, Basin 2, Basin X}`. Any older "four-basin" or
+  `{Basin 1, Basin X}` language below predates the completeness theorem. See
+  `docs/DM_ABCC_BASIN_ENUMERATION_COMPLETENESS_THEOREM_NOTE_2026-04-20.md`.
+
 ---
 
 ## Chain 1 — Koide `theta` (Brannen–Zenczykowski phase `delta = 2/9`)
@@ -219,12 +232,13 @@ independently retained.
 | Chain | Named residues | Meta-axiom dependency |
 |---|---|---|
 | Koide `theta` | none | the Brannen-Zenczykowski phase offset closed on actual route via Berry selected-line CP¹; part of DIM-UNIQ framing at `d = 3` |
-| Koide `kappa` | none | Measure residue discharged by SO(2)-quotient closure (`6458529d`); part of DIM-UNIQ at `d = 3` |
+| Koide `kappa` | none | Current primary route is bridge + block-total Frobenius; historical SO(2)-quotient language is superseded by `KOIDE_MRU_DEMOTION_NOTE_2026-04-20.md` |
 | DM A-BCC | none | Part of DIM-UNIQ framing at `d = 3` (DPLE `floor(d/2) = 1`) |
 | Quark `a_u` | none | STRC derived from `1(+)5` channel completeness (`37c4f2bf`), no longer a separate meta-axiom |
 
-**Meta-axiom collapse:** with STRC derived and MRU's measure residue
-discharged, the earlier "`4 → 2` DIM-UNIQ + STRC" layer reduces to
+**Meta-axiom collapse:** with STRC derived and the Koide `kappa` gate carried
+primarily by the bridge/block-total pair, the earlier "`4 → 2` DIM-UNIQ +
+STRC" layer reduces to
 **`4 → Cl(3)/Z³` framework axioms**.
 
 **Reviewer-bar per-lane:** all four gates closed; zero named residues;

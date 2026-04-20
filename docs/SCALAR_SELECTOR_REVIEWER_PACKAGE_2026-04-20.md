@@ -59,7 +59,7 @@ The equal-block-measure extremum `E_+ = E_⊥` at fixed `E_+ + E_⊥` recovers `
 
 ### §1.3 Supporting — Moment-Ratio Uniformity (MRU)
 
-On `Herm_circ(3)` with Frobenius metric, the MRU principle — Frobenius-normalized cyclic responses uniform across Z₃ isotypes — is a single scalar equation equivalent to `a² = 2|b|²`. See `scripts/frontier_koide_moment_ratio_uniformity_theorem.py` (26 PASS). MRU is supplementary support; the primary closure (§1.1) and independent corroboration (§1.2) do not rely on it.
+On `Herm_circ(3)` with Frobenius metric, the MRU principle — Frobenius-normalized cyclic responses uniform across Z₃ isotypes — is a single scalar equation equivalent to `a² = 2|b|²`. See `scripts/frontier_koide_moment_ratio_uniformity_theorem.py` (26 PASS). MRU is supplementary support only. The cycle-2 demotion note proves that the stronger SO(2)-quotient needed to make MRU load-bearing is **not** derivable from the retained observable principle, so the primary closure remains the spectrum/operator bridge plus the block-total Frobenius route. See `docs/KOIDE_MRU_DEMOTION_NOTE_2026-04-20.md`.
 
 ### §1.4 Supporting obstructions — what is ruled out
 
@@ -81,7 +81,10 @@ with `δ = 2/9` ≈ 0.222 rad fitting PDG to machine precision.
 
     H_sel(m)  =  H( m, √6/3, √6/3 )
 
-(the explicit reduction of the retained two-Higgs canonical-form; see `docs/CHARGED_LEPTON_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md` on main), the normalized Koide amplitude has the exact Fourier decomposition
+(whose specific slot values are now traced exactly to the retained-on-`main`
+parity-compatible observable-selector chain in
+`docs/KOIDE_SELECTED_LINE_PROVENANCE_NOTE_2026-04-20.md`), the normalized
+Koide amplitude has the exact Fourier decomposition
 
     s(m)  =  (1/√2) v_1  +  (1/2) e^{iθ(m)} v_ω  +  (1/2) e^{−iθ(m)} v_{ω̄}
 
@@ -107,11 +110,31 @@ gives a one-to-one map between the Brannen phase `δ` and the surviving selected
 
 **Theorem.** On the actual physical positive projectivized Koide locus — three open arcs on a single latitude circle, cyclically permuted by C₃ — every C₃-equivariant complex line bundle is equivariantly trivial. In particular no nontrivial Chern class can live on the physical base. See `docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`.
 
-**Consequence.** The original ambient-S² monopole construction with `c_1 = dim(doublet) = 2` (reproducing `δ = Q/d = (d−1)/d² = 2/9` at `d = 3` by classical Berry arithmetic) does **not** live on the physical base. It survives as an internally coherent illustration only. The physical-base closure is the selected-line CP¹ Pancharatnam–Berry identification above, which uses the projective doublet-coordinate phase-doubling `e^{−2iθ}` in place of the ambient `c_1 = 2` flux.
+**Consequence.** The original ambient-S² monopole construction does **not**
+live on the physical base. It survives only as an internally coherent
+illustration. The physical-base closure is the selected-line CP¹
+Pancharatnam–Berry identification above, which uses the projective
+doublet-coordinate phase-doubling `e^{−2iθ}` in place of any ambient
+topological flux. The same-branch linking theorem then identifies the honest
+remaining gap precisely: the structural count `2/d²` is available, but its
+identification with the physical Berry holonomy in radians is not forced on
+the retained base.
 
 ### §2.3 Retained input and open-import status
 
-**Retained input.** The value `δ = 2/9` is the observational Brannen–Zenczykowski phase offset. The identification above gives this value its canonical geometric meaning as a Pancharatnam–Berry holonomy on the physical selected line; it does not independently quantize the specific value from topology alone. (Any reference section on the tautological CP¹ line gives the same holonomy; the ambient-S² route supplies the value via classical Berry arithmetic but not on the physical base.) The value `δ = 2/9` remains a retained observational input, listed as I2 in the Remaining Open Imports register with candidate closing routes (equivariant-completion forcing theorem; Wilson-line Z³-orbit quantization; retained Z³ scalar-potential Berry quantization).
+**Retained input.** The value `δ = 2/9` is the observational
+Brannen–Zenczykowski phase offset. The identification above gives this value
+its canonical geometric meaning as a Pancharatnam–Berry holonomy on the
+physical selected line; it does not independently quantize the specific value
+from topology alone. The cycle-2 linking theorem and no-go sharpen the open
+content to one named residual statement:
+
+```text
+P: the dimensionless structural ratio 2/d² is the physical Berry holonomy in radians.
+```
+
+See `docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md` and
+`docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md`.
 
 ---
 
@@ -129,9 +152,9 @@ carries `H_base` in Sylvester chamber `C_base = {det > 0, signature (1, 0, 2)}` 
 
 **Theorem (Sylvester signature-forcing).** Any continuous path in `Herm_3` between `C_base` and any component with `det < 0` must cross the determinant-zero variety. Hence if the physical path `H(t; J_phys)` stays in `{det ≠ 0}` for all `t ∈ [0, 1]` (PMNS Non-Singularity, PNS), the endpoint `H(1; J_phys)` must lie in `C_base`.
 
-**Theorem (σ-chain).** Combining the retained chamber bound `q_+ + δ ≥ √(8/3)` (preliminary P3 of the P3-Sylvester linear-path theorem), the retained σ-hierarchy uniqueness theorem (picks `σ = (2,1,0)` under NuFit 3σ PMNS pins and T2K `sin δ_CP < 0`), and the retained ABCC CP-phase no-go (excludes `sin δ_CP > 0.247` at >3σ), the four-basin enumeration collapses to Basin 1 uniquely:
+**Theorem (σ-chain).** Combining the retained chamber bound `q_+ + δ ≥ √(8/3)`, the retained basin-completeness theorem, the retained σ-hierarchy uniqueness theorem (picks `σ = (2,1,0)` under NuFit 3σ PMNS pins and T2K `sin δ_CP < 0`), and the retained ABCC CP-phase no-go (excludes `sin δ_CP > 0.247` at >3σ), the corrected five-basin chart collapses to Basin 1 uniquely:
 
-- Basin 2 at σ = (2,1,0) has `sin δ_CP > 0` → T2K-excluded;
+- Basin 2 is in the active chamber but has `sin δ_CP > 0` at the physical `σ = (2,1,0)` pairing → T2K-excluded;
 - Basin X at σ = (2,1,0) has `sin δ_CP > 0` → T2K-excluded;
 - Basin N has `q_+ + δ = 1.28 < √(8/3)` → chamber-excluded;
 - Basin P has `q_+ + δ = 0.10 < √(8/3)` → chamber-excluded;
@@ -143,7 +166,7 @@ Hence `J_phys = J_{Basin 1}` and PNS is a derived property of the physical path.
 
 ### §3.2 Independent route — chamber ∩ DPLE F_4
 
-**Theorem (DPLE dim-parametric extremum).** On any retained linear Hermitian pencil, `log|det H(t)|` has at most `⌊d/2⌋` interior Morse-index-0 critical points; at `d = 3` exactly one. The F_4 discriminant test `Δ = c_2² − 3 c_1 c_3 > 0` with matching-signature interior Morse-index-0 CP selects `Basin 1` uniquely from `{Basin 1, Basin X}`, while the chamber bound excludes `{Basin N, Basin P}`.
+**Theorem (DPLE dim-parametric extremum).** On any retained linear Hermitian pencil, `log|det H(t)|` has at most `⌊d/2⌋` interior Morse-index-0 critical points; at `d = 3` exactly one. On the corrected five-basin chart, the chamber survivors are `{Basin 1, Basin 2, Basin X}`. The cycle-2 completeness theorem and the retained signature results place Basin 2 and Basin X on the `C_neg` sheet, so the A-BCC sheet-restricted DPLE comparison remains the pair `{Basin 1, Basin X}` analyzed in the closure note, and the F_4 discriminant test `Δ = c_2² − 3 c_1 c_3 > 0` selects Basin 1 uniquely there.
 
 **Proof.** Uhlig 1982 sign-characteristic matrix-pencil classification backbone; verified in `scripts/frontier_dm_dple_theorem.py` (19 PASS, 0 FAIL) and `scripts/frontier_dm_abcc_chamber_dple_closure.py` (39 PASS, 0 FAIL).
 
@@ -155,7 +178,7 @@ Hence `J_phys = J_{Basin 1}` and PNS is a derived property of the physical path.
 
 ### §3.4 Retained inputs
 
-Retained inputs are: the chamber bound `q_+ + δ ≥ √(8/3)` (retained from P3-Sylvester preliminary), NuFit PMNS 3σ ranges and T2K CP-phase sign (retained observational inputs named in `docs/SIGMA_HIER_UNIQUENESS_THEOREM_NOTE_2026-04-19.md` and `docs/ABCC_CP_PHASE_NO_GO_THEOREM_NOTE_2026-04-19.md`). PNS is derived as a property of Basin 1, not axiomatized. The four-basin enumeration is empirically complete under the four σ-permutations from N-seed chamber scans; a structural completeness theorem is named as I11 in the open-imports register.
+Retained inputs are: the chamber bound `q_+ + δ ≥ √(8/3)` (now reproduced inline in `docs/DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md`), NuFit PMNS 3σ ranges and T2K CP-phase sign (retained observational inputs named in `docs/SIGMA_HIER_UNIQUENESS_THEOREM_NOTE_2026-04-19.md` and `docs/ABCC_CP_PHASE_NO_GO_THEOREM_NOTE_2026-04-19.md`). PNS is derived as a property of Basin 1, not axiomatized. Basin completeness is no longer an open import: the corrected five-basin chart and its active-chamber subchart are certified in `docs/DM_ABCC_BASIN_ENUMERATION_COMPLETENESS_THEOREM_NOTE_2026-04-20.md`.
 
 ---
 
@@ -288,12 +311,12 @@ All runners pass on canonical branch `review/scalar-selector-cycle1-theorems` wi
 | BZ | Brannen phase `δ = 2/9` | θ | Brannen 2006; Rivero–Zenczykowski; PDG-verified |
 | PMNS | NuFit 3σ PMNS angles | A-BCC σ-chain | Esteban et al., NuFit 5.3 |
 | T2K | T2K `sin δ_CP < 0` preference | A-BCC σ-chain | T2K Collaboration, Nature 580:339 (2020) |
-| CHB | Chamber bound `q_+ + δ ≥ √(8/3)` | A-BCC | retained preliminary P3 of `P3_SYLVESTER_LINEAR_PATH_SIGNATURE_THEOREM` (on branch) |
+| CHB | Chamber bound `q_+ + δ ≥ √(8/3)` | A-BCC | reviewer-grade inline derivation in `DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md` |
 | BIM | Bimodule `B = Cl(3)/Z₃ ⊗ Cl_CKM(1⊕5)` | a_u | `CL3_SM_EMBEDDING_THEOREM` + `CKM_ATLAS_AXIOM_CLOSURE_NOTE` (main) |
 | ATOM-ρ | `a_d = ρ = 1/√42` | a_u | CKM atlas |
 | ATOM-S | `supp = 6/7` | a_u | CKM atlas |
 | ATOM-A | `δ_{A1} = 1/42` | a_u | CKM atlas |
-| HSEL | Selected-line reduction `H_sel(m) = H(m, √6/3, √6/3)` | θ | retained two-Higgs canonical reduction (main) |
+| HSEL | Selected-line reduction `H_sel(m) = H(m, √6/3, √6/3)` | θ | exact retained-on-`main` provenance in `KOIDE_SELECTED_LINE_PROVENANCE_NOTE_2026-04-20.md` |
 
 No other observational or structural-postulate inputs enter the four Tier-1 closures this cycle.
 
