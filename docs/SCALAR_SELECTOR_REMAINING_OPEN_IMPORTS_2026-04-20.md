@@ -11,14 +11,14 @@
 | I2 | Brannen phase `δ = 2/9` | θ | retained observational (Berry identifies geometrically on the physical selected line; ambient-S² derivation blocked by bundle obstruction) | either (a) a justified natural completion of the physical 1-D locus to an ambient equivariant base carrying `c_1 = dim(doublet) = 2`, or (b) a Wilson-line / Z³-orbit quantization on the physical base that forces the holonomy value |
 | I3 | Selected-line reduction `H_sel(m) = H(m, √6/3, √6/3)` | θ, m_* | **closed on this branch**: the Koide microscopic target note now names the charged-lepton two-Higgs canonical reduction and selected-line closure notes inline | none beyond landing the updated target note |
 | I4 | Chamber bound `q_+ + δ ≥ √(8/3)` | A-BCC | **closed on this branch**: inline derivation added from the retained active-half-plane inverse chart | none beyond landing the updated A-BCC note |
-| I5 | PMNS observational pins (NuFit 3σ ranges, T2K `sin δ_CP < 0`) | A-BCC (sigma-chain) | retained observational inputs | framework-native derivation of NuFit angles (open on main as the broader charged-lepton flagship gate) and/or of the sign of `sin δ_CP` from Cl(3) CP structure |
+| I5 | PMNS observational pins (NuFit 3σ ranges, T2K `sin δ_CP < 0`) | A-BCC (sigma-chain) | **further reduced on this branch, not fully closed**: `DM_PMNS_UPPER_OCTANT_SOURCE_CUBIC_SELECTOR_THEOREM_NOTE_2026-04-20.md` closes the CP-sign / `sigma_hier` half by the coefficient-free selector system `s23^2 > 1/2`, `I_src(H) > 0`; the PMNS angle triple itself remains observational | framework-native derivation of the PMNS angle triple `(sin^2 theta_12, sin^2 theta_13, sin^2 theta_23)` |
 | I6 | Scalar-lane SO(2)-quotient of the real doublet | κ (MRU route only) | **closed on this branch**: `KOIDE_SCALAR_LANE_OBSERVABLE_RADIUS_THEOREM_NOTE_2026-04-20.md` derives the quotient from the observable-principle local scalar jet | none for the MRU route; the spectrum/operator bridge remains an independent route |
 | I7 | Bimodule `B = Cl(3)/Z₃ ⊗ Cl_CKM(1⊕5)` | a_u | **closed on this branch**: the Quark ISSR1 headline theorem now carries a self-contained provenance paragraph for the bimodule route | none beyond landing the updated Quark note |
 | I8 | Retained atoms `ρ = 1/√42`, `supp = 6/7`, `δ_A1 = 1/42` | a_u | **closed on this branch**: the Quark ISSR1 headline theorem now cites the exact CKM atlas atoms inline | none beyond landing the updated Quark note |
 | I9 | `a_d = ρ` | a_u | retained from `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE` | inline citation already present; nothing to close |
 | I10 | H_* witness ratio `w/v ≈ 4.101` | m_* (selected-line point) | retained observational | deriving `m_*` as a corollary of `δ = 2/9` via the exact scalar-phase bridge (already established). If I2 closes, I10 closes automatically |
-| I11 | Basin enumeration `{Basin 1, N, P, X}` exhaustiveness | A-BCC | **reduced on this branch, not fully closed**: `DM_PMNS_ASYMPTOTIC_SOURCE_NO_GO_NOTE_2026-04-20.md` rules out unbounded pure-source basins, so only compact-basin completeness remains | a structural compact-region completeness theorem on χ²=0 points in the active chamber |
-| I12 | σ_hier permutation `(2,1,0)` | A-BCC (sigma-chain) | **named-family no-go on this branch**: `DM_SIGMA_HIER_H_INTRINSIC_NO_GO_THEOREM_NOTE_2026-04-20.md` rules out all `H`-intrinsic and `μ↔τ`-even scalar selector families | a flavor-orienting retained law that is `μ↔τ`-odd / CP-odd at the physical chamber point |
+| I11 | Basin enumeration `{Basin 1, N, P, X}` exhaustiveness | A-BCC | **closed on this branch for the active chamber**: `DM_PMNS_CHAMBER_SPECTRAL_COMPLETENESS_THEOREM_NOTE_2026-04-20.md` proves the exact chamber `χ² = 0` set is `{Basin 1, Basin 2, Basin X}` | none for the active chamber; off-chamber chart bookkeeping is separate from the live A-BCC completeness target |
+| I12 | σ_hier permutation `(2,1,0)` | A-BCC (sigma-chain) | **closed on this branch**: `DM_PMNS_UPPER_OCTANT_SOURCE_CUBIC_SELECTOR_THEOREM_NOTE_2026-04-20.md` proves that the upper-octant chamber law plus the source-cubic orientation law `I_src(H) > 0` select Basin 1 uniquely, hence `sigma_hier = (2,1,0)` and `sin δ_CP < 0` | none beyond landing the new theorem |
 
 ## §1 Priority ordering for closure
 
@@ -73,12 +73,18 @@ Scope is larger than the scalar-selector cycle; these are part of the broader ch
 
 Update on this branch:
 
-- `I12` is narrowed materially. The new
-  `DM_SIGMA_HIER_H_INTRINSIC_NO_GO_THEOREM_NOTE_2026-04-20.md` proves that no
-  selector living only on `H_pin`, or on `μ↔τ`-even scalar PMNS data, can fix
-  `sigma_hier`. The remaining target is therefore a flavored orienting law,
-  not another `H`-intrinsic scalar.
-- `I5` remains open.
+- `I12` is now closed. The old
+  `DM_SIGMA_HIER_H_INTRINSIC_NO_GO_THEOREM_NOTE_2026-04-20.md` ruled out
+  `H`-intrinsic and `μ↔τ`-even scalar families, and
+  `DM_PMNS_CP_ORIENTATION_PARITY_REDUCTION_NOTE_2026-04-20.md` reduced the
+  gap to one parity bit. The new
+  `DM_PMNS_UPPER_OCTANT_SOURCE_CUBIC_SELECTOR_THEOREM_NOTE_2026-04-20.md`
+  closes that bit: the retained chamber law forces the upper octant, and the
+  coefficient-free source law `I_src(H) > 0` then selects Basin 1 uniquely,
+  hence `sigma_hier = (2,1,0)`.
+- `I5` is reduced one step further. The CP-sign half is now closed by the same
+  theorem, so the remaining `I5` gap is only the framework-native derivation
+  of the PMNS angle triple itself.
 
 ### Priority 6: I6 (SO(2)-quotient)
 
@@ -90,23 +96,24 @@ through the doublet radius.
 
 ### Priority 7: I11 (basin enumeration exhaustiveness)
 
-Needs a completeness theorem on chi²=0 points under the four σ-permutations in the active chamber. Analytic argument likely available; scope: small original theorem.
+Closed on this branch for the active chamber.
 
-Update on this branch:
+The old `DM_PMNS_ASYMPTOTIC_SOURCE_NO_GO_NOTE_2026-04-20.md` removed the
+infinity-tail loophole. The new
+`DM_PMNS_CHAMBER_SPECTRAL_COMPLETENESS_THEOREM_NOTE_2026-04-20.md` closes the
+compact remainder: the exact active-chamber `chi^2 = 0` set is
 
-- `DM_PMNS_ASYMPTOTIC_SOURCE_NO_GO_NOTE_2026-04-20.md` closes the infinity
-  loophole. No exact PMNS-fit basin can escape to infinity on the pure-source
-  chamber directions.
-- So the remaining problem is no longer global completeness; it is
-  **compact-basin completeness**.
+```text
+{Basin 1 on sigma=(2,1,0), Basin 2 on sigma=(2,1,0), Basin X on sigma=(2,0,1)}.
+```
 
 ## §2 What a Nature reviewer will still see after submission
 
 With the above items retained-observational, the honest Nature-grade statement for this cycle is:
 
-> Four Tier-1 scalar-selector gates of the Standard Model — the Koide charged-lepton cone normalization (κ = 2, equivalently the operator-side Koide relation), the Koide Brannen–Zenczykowski phase offset (δ = 2/9), the dark-matter A-BCC basin-sheet choice, and the up-sector quark reduced amplitude (a_u) — each reduce to retained Cl(3)/Z³ framework ingredients plus named retained inputs (the Koide cone relation Q = 2/3; the Brannen phase value δ = 2/9; PMNS NuFit + T2K observational pins; the CKM atlas unit-ray parameter ρ = 1/√42 and its structure atoms). No new axioms are added this cycle. The framework contributes (i) a canonical Pancharatnam–Berry geometric identification of δ on the physical selected line, (ii) an exact Fourier-bridge algebraic reduction of operator-side κ = 2 to spectrum-side Q = 2/3, (iii) a Sylvester-inertia reduction of A-BCC, closed via a multi-observable sigma-chain that combines retained Cl(3)/Z³ theorems with named observational inputs, (iv) a linear-algebra derivation of the up-sector quark closure on the retained 1⊕5 bimodule. Each retained observational input is listed in the Remaining-Open-Imports register along with the derivation that would close it.
+> Four Tier-1 scalar-selector gates of the Standard Model — the Koide charged-lepton cone normalization (κ = 2, equivalently the operator-side Koide relation), the Koide Brannen–Zenczykowski phase offset (δ = 2/9), the dark-matter A-BCC basin-sheet choice, and the up-sector quark reduced amplitude (a_u) — each reduce to retained Cl(3)/Z³ framework ingredients plus named retained inputs (the Koide cone relation Q = 2/3; the Brannen phase value δ = 2/9; the PMNS angle triple `(sin^2 theta_12, sin^2 theta_13, sin^2 theta_23)`; the CKM atlas unit-ray parameter ρ = 1/√42 and its structure atoms). No new axioms are added this cycle. The framework contributes (i) a canonical Pancharatnam–Berry geometric identification of δ on the physical selected line, (ii) an exact Fourier-bridge algebraic reduction of operator-side κ = 2 to spectrum-side Q = 2/3, (iii) a Sylvester-inertia reduction of A-BCC, now sharpened by an exact compact active-chamber completeness theorem, an exact source-cubic / parity reduction of the PMNS CP sign, and a coefficient-free upper-octant / source-cubic selector law fixing `sigma_hier = (2,1,0)`, (iv) a linear-algebra derivation of the up-sector quark closure on the retained 1⊕5 bimodule. Each retained observational input is listed in the Remaining-Open-Imports register along with the derivation that would close it.
 
-Closing any priority-1 or priority-2 item above would upgrade the corresponding lane from retained-conditional to retained-derivation and eliminate the named retained input. Closing all six priority-1–4 items would move the entire cycle from retained-conditional to retained-derivation, leaving only PMNS observational pins (part of a separate flagship program) and basin-enumeration completeness (minor theorem) as observational inputs.
+Closing any priority-1 or priority-2 item above would upgrade the corresponding lane from retained-conditional to retained-derivation and eliminate the named retained input. Closing all six priority-1–4 items would move the entire cycle from retained-conditional to retained-derivation, leaving only the PMNS angle triple as the non-derived ingredient on the DM side.
 
 ## §3 Reproduction of current retained-conditional state
 
@@ -123,6 +130,7 @@ All runners currently pass on canonical (branch `review/scalar-selector-cycle1-t
 | DM A-BCC (PMNS Non-Singularity conditional) | `frontier_dm_abcc_pmns_nonsingularity_theorem.py` | 38 | conditional closure |
 | DM A-BCC (sigma-chain attack cascade) | `frontier_dm_pns_attack_cascade.py` | 47 | multi-observable chain |
 | DM A-BCC (assumptions audit) | `frontier_dm_abcc_assumptions_audit.py` | 21 | five-route structural no-go |
+| DM A-BCC (upper-octant / source-cubic selector) | `frontier_dm_pmns_upper_octant_source_cubic_selector_theorem_2026_04_20.py` | 14 | closes `sigma_hier` and the PMNS CP-sign half on the active chamber |
 | Quark a_u (JTS-affine-physical-carrier + ISSR1) | `frontier_quark_issr1_bicac_forcing.py` | 13 | headline closure |
 | Quark a_u (JTS physical-point second route) | `frontier_quark_jts_physical_point_closure_theorem.py` | 12 | independent witness |
 | Quark a_u (shell-normalization corroboration) | `frontier_quark_bimodule_lo_shell_normalization_theorem.py` | 10 | Route-2 carrier |
