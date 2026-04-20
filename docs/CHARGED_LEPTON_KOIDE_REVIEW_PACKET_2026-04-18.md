@@ -55,6 +55,12 @@ The clean current endpoint is:
   weights still keep the source kernel diagonal in the canonical source basis,
   so unique tops are basis axes with `Q = 1` and degenerate tops still do not
   force a unique Koide ray
+- the strongest surviving Higgs-dressed transport route is now also reduced to
+  one scalar: on the missing-axis resolvent lift with baseline `h_0 = 0`,
+  `Q = 2/3` occurs at a unique small positive root
+  `lambda_* = 0.015808703285395...`, giving direction cosine `0.996266...`
+  to the PDG `sqrt(m)` direction; chamber slack is only a near-hit, not the
+  exact root
 
 So the current charged-lepton state is:
 
@@ -82,6 +88,7 @@ So the current charged-lepton state is:
 16. [KOIDE_SCALE_SELECTOR_REPARAMETERIZATION_THEOREM_NOTE_2026-04-20.md](./KOIDE_SCALE_SELECTOR_REPARAMETERIZATION_THEOREM_NOTE_2026-04-20.md)
 17. [KOIDE_TRANSPORT_GAP_CONSTANT_NO_GO_NOTE_2026-04-20.md](./KOIDE_TRANSPORT_GAP_CONSTANT_NO_GO_NOTE_2026-04-20.md)
 18. [KOIDE_WEIGHTED_CHARACTER_SOURCE_AXIS_THEOREM_NOTE_2026-04-20.md](./KOIDE_WEIGHTED_CHARACTER_SOURCE_AXIS_THEOREM_NOTE_2026-04-20.md)
+19. [KOIDE_HIGGS_DRESSED_RESOLVENT_ROOT_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_RESOLVENT_ROOT_THEOREM_NOTE_2026-04-20.md)
 
 ## Package Role
 
@@ -110,7 +117,11 @@ an `m`-selection law. And the natural weighted extension of the old
 character-source route is now also closed: arbitrary central left/right
 class-function weights keep the kernel diagonal in the canonical source basis,
 so that route can only pick basis axes or remain degenerate, never a unique
-Koide ray.
+Koide ray. The strongest surviving Higgs-dressed transport route has also now
+collapsed to one scalar root law on the missing-axis resolvent lift: once the
+baseline `h_0 = 0` is fixed, the exact Koide hits are isolated `lambda` roots,
+with one unique small positive root near chamber slack and cosine `0.996266`
+to the PDG `sqrt(m)` direction.
 
 So the right classification is:
 
