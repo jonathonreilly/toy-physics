@@ -125,6 +125,25 @@ reweight the canonical character sources. See
    renormalization coefficient `alpha ~= 0.959212206...` (and, secondarily,
    its tiny curvature corrections). See
    `docs/KOIDE_HIGGS_DRESSED_AFFINE_TRANSPORT_GERM_THEOREM_NOTE_2026-04-20.md`.
+   Latest same-day sharpening: `alpha` is now no longer just a fitted local
+   coefficient. It satisfies an exact local susceptibility identity
+   `alpha = 1 - backreaction`, where the full deviation from bare `O_0`
+   chamber-link tracking is a single small reached-principal-block transport
+   backreaction term of size `~ 4.08%`. So the remaining open object on this
+   route can now be read even more sharply: derive that reached-block
+   backreaction term from the microscopic transport law. See
+   `docs/KOIDE_HIGGS_DRESSED_TRANSPORT_SUSCEPTIBILITY_THEOREM_NOTE_2026-04-20.md`.
+   Latest same-day sharpening: that backreaction is now localized one step
+   further. The exact reached principal block is the Schur-complement
+   resolvent `(lambda I - H_r - Sigma_omit(lambda))^(-1)` with one rank-1
+   omitted-channel self-energy
+   `Sigma_omit(lambda) = g g† / (lambda - m_0)`. Removing that self-energy
+   shifts the local branch off the physical origin and restores slope `~ 1`,
+   while the full self-energy lowers the slope to the physical
+   `alpha ~= 0.959212206...`. So the remaining open object on this route can
+   now be read even more sharply: derive the omitted-channel self-energy term
+   from the microscopic transport law. See
+   `docs/KOIDE_HIGGS_DRESSED_OMITTED_CHANNEL_SELF_ENERGY_THEOREM_NOTE_2026-04-20.md`.
 
 **Required retained ingredients for any of the above:** explicit lattice propagator or transport-integral definition on the retained Cl(3)/Z³ carrier; currently on main as partial-support.
 

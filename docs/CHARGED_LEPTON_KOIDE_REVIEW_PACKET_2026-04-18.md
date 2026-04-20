@@ -72,6 +72,15 @@ The clean current endpoint is:
   slope `alpha ~= 0.959212206...`, so the visible chamber-link correction at
   `lambda_slack` sits on the same one-constant local transport germ rather
   than requiring another mechanism
+- that affine coefficient is now also sharpened structurally: it equals
+  `1 -` a small reached-principal-block backreaction term (`~ 4.08%`), so the
+  remaining local transport object is no longer a generic fit coefficient but
+  a specific transport-sector susceptibility correction
+- that susceptibility correction is now localized one step further: the full
+  reached block is exactly a Schur resolvent with one rank-1 omitted-channel
+  self-energy, and that omitted channel is what both shifts the local branch
+  onto the physical origin and lowers the slope from near-1 bare tracking to
+  the observed `alpha`
 
 So the current charged-lepton state is:
 
@@ -102,6 +111,8 @@ So the current charged-lepton state is:
 19. [KOIDE_HIGGS_DRESSED_RESOLVENT_ROOT_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_RESOLVENT_ROOT_THEOREM_NOTE_2026-04-20.md)
 20. [KOIDE_HIGGS_DRESSED_CHAMBER_LINK_RENORMALIZATION_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_CHAMBER_LINK_RENORMALIZATION_THEOREM_NOTE_2026-04-20.md)
 21. [KOIDE_HIGGS_DRESSED_AFFINE_TRANSPORT_GERM_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_AFFINE_TRANSPORT_GERM_THEOREM_NOTE_2026-04-20.md)
+22. [KOIDE_HIGGS_DRESSED_TRANSPORT_SUSCEPTIBILITY_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_TRANSPORT_SUSCEPTIBILITY_THEOREM_NOTE_2026-04-20.md)
+23. [KOIDE_HIGGS_DRESSED_OMITTED_CHANNEL_SELF_ENERGY_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_OMITTED_CHANNEL_SELF_ENERGY_THEOREM_NOTE_2026-04-20.md)
 
 ## Package Role
 
@@ -140,6 +151,11 @@ near the physical positive root is a local `O_0` renormalization branch of
 that visible chamber link. And on the physically relevant micro-window that
 branch is already affine to about `7 x 10^(-11)`, so the remaining transport
 object is naturally one affine coefficient `alpha`, not a generic local curve.
+That coefficient is now also sharpened: `alpha = 1 - backreaction`, with the
+entire nontrivial local deviation coming from a small reached-principal-block
+transport backreaction term of size `~ 4.08%`. And that backreaction is now
+localized one step further to a rank-1 omitted-channel self-energy in the
+Schur-complement resolvent of the reached block.
 
 So the right classification is:
 
