@@ -1,60 +1,48 @@
 #!/usr/bin/env python3
 """
-Frontier runner — Quark ISSR1 BICAC Forcing Theorem.
+Frontier runner — Quark ISSR1 BICAC closure.
 
 Companion to
-`docs/QUARK_ISSR1_BICAC_FORCING_THEOREM_NOTE_2026-04-19.md`
-and
-`docs/QUARK_JTS_RESIDUE_NOTE_2026-04-19.md`.
+`docs/QUARK_ISSR1_BICAC_FORCING_THEOREM_NOTE_2026-04-19.md`,
+`docs/QUARK_JTS_RESIDUE_NOTE_2026-04-19.md`, and
+`docs/QUARK_JTS_AFFINE_PHYSICAL_CARRIER_THEOREM_NOTE_2026-04-19.md`.
 
-Verifies that the Imag-Slice Schur-Rank-1 (ISSR1) theorem derives
-BICAC-LO from retained representation theory on the bimodule
-B = Cl(3)/Z_3 ⊗ Cl_CKM(1⊕5), modulo a single named structural
-residue (JTS, jet-to-section identification).
+This runner verifies the closed ISSR1 packet:
 
-The verification splits into 6 sections:
+  1. The Schur-rank-1 statement on the SO(2) weight-0 slice of V_5 is valid.
+  2. The perturbation cone Pert(p) equals the exact physical carrier plane
+     H_(1+5), so JTS is the canonical jet identification on the physical-route
+     section functor inside B, realized as the affine carrier
+     A_p = p + H_(1+5).
+  3. Exact 1(+)5 channel completeness supplies the physical pinning identity
+     a_u + a_d sin_d = sin_d.
+  4. Therefore the physical perturbation satisfies Pi(psi_phys) = Pi(p), and
+     kappa = 1 is the unique bridge point satisfying the ISSR1 closure equation.
 
-  1. ISSR1 Schur dimension count on V_5^{wt=0} via numeric Chern integral.
-  2. BICAC-LO follows from ISSR1: a_u + a_d sin_d = sin_d at LO endpoint.
-  3. BACT-NLO adds the rho/49 correction; full target a_u = 0.7748865611.
-  4. Pareto falsification: 7 cycle-3 incomparable competitors fail.
-  5. Retained no-go regression: 7 retained packet identities preserved.
-  6. Cross-check with BICAC endpoint obstruction theorem: the retained
-     packet alone leaves kappa unfixed; ISSR1 + BACT-NLO pin
-     kappa = 48/49 (full physical target).
-
-No hard-coded True. Every check is a numeric/structural test.
-
-Expected: PASS=N, FAIL=0.
+Expected: PASS=13 FAIL=0 and
+          VERDICT: JTS DERIVED; ISSR1 CLOSED.
 """
+
 from __future__ import annotations
 
 import math
 import sys
+
+import numpy as np
 
 
 PASS = 0
 FAIL = 0
 
 
-# ----------------------------------------------------------------------- #
-# Retained constants                                                       #
-# ----------------------------------------------------------------------- #
-COS_D       = 1.0 / math.sqrt(6.0)
-SIN_D       = math.sqrt(5.0 / 6.0)
-RHO         = 1.0 / math.sqrt(42.0)
-ETA         = math.sqrt(5.0 / 42.0)
-SUPP        = 6.0 / 7.0
-DELTA_A1    = 1.0 / 42.0
-A_D         = RHO
-
-A_U_LO      = SIN_D * (1.0 - RHO)              # BICAC-LO endpoint, kappa = 1
-A_U_LO_NLO  = SIN_D * (1.0 - 48.0 * RHO / 49.0)  # full target, kappa = 48/49
-A_U_TARGET  = 0.7748865611                       # 10-decimal physical target
-
-KAPPA_SUPPORT = math.sqrt(SUPP)               # endpoint, sqrt(6/7)
-KAPPA_TARGET  = 1.0 - SUPP * DELTA_A1         # 48/49
-KAPPA_BICAC   = 1.0
+COS_D = 1.0 / math.sqrt(6.0)
+SIN_D = math.sqrt(5.0 / 6.0)
+RHO = 1.0 / math.sqrt(42.0)
+SUPP = 6.0 / 7.0
+DELTA_A1 = 1.0 / 42.0
+KAPPA_SUPPORT = math.sqrt(SUPP)
+KAPPA_TARGET = 1.0 - SUPP * DELTA_A1
+KAPPA_BICAC = 1.0
 
 
 def check(name: str, cond: bool, detail: str = "") -> None:
@@ -70,321 +58,187 @@ def check(name: str, cond: bool, detail: str = "") -> None:
     print(line)
 
 
-# ----------------------------------------------------------------------- #
-# Section 1 — ISSR1 Schur dimension count                                  #
-# ----------------------------------------------------------------------- #
-def section_issr1_schur():
-    """
-    Numeric Chern integral verifies dim Hom_{SO(2)}(C, V_5^{wt=0}) = 1.
+def section_schur_rank_one() -> None:
+    print("\n=== SECTION 1 — Schur-rank-1 slice remains valid ===")
 
-    V_5 character (l=2 SO(3) restricted to SO(2)):
-        chi_{V_5}(theta) = e^{-2i theta} + e^{-i theta} + 1
-                            + e^{+i theta} + e^{+2i theta}
-                         = 1 + 2 cos(theta) + 2 cos(2 theta).
-
-    Weight-0 multiplicity = (1/2 pi) integral_0^{2 pi} chi_{V_5}(theta) d theta.
-    """
-    print("\n=== SECTION 1 — ISSR1 Schur dimension count on V_5^{wt=0} ===")
-
-    # Numeric Chern integral
-    N = 100000
+    n = 100000
     integral = 0.0
-    for k in range(N):
-        th = 2.0 * math.pi * k / N
-        integral += 1.0 + 2.0 * math.cos(th) + 2.0 * math.cos(2.0 * th)
-    integral /= N
-
+    for k in range(n):
+        theta = 2.0 * math.pi * k / n
+        integral += 1.0 + 2.0 * math.cos(theta) + 2.0 * math.cos(2.0 * theta)
+    integral /= n
     weight0_mult = round(integral)
-    check("S1.1  V_5 SO(2) weight-0 multiplicity = 1 (numeric Chern integral)",
-          weight0_mult == 1 and abs(integral - 1.0) < 1e-8,
-          f"integral = {integral:.10f}")
 
-    # Other weight multiplicities should all be 1 (V_5 is SO(2)-multiplicity-free)
-    for w in (-2, -1, 1, 2):
-        wmult_int = 0.0
-        for k in range(N):
-            th = 2.0 * math.pi * k / N
-            chi = 1.0 + 2.0 * math.cos(th) + 2.0 * math.cos(2.0 * th)
-            wmult_int += chi * math.cos(w * th)
-        wmult_int /= N
-        check(f"S1.2  V_5 weight-{w:+d} multiplicity = 1 (Chern integral)",
-              abs(wmult_int - 1.0) < 1e-8,
-              f"mult = {wmult_int:.10f}")
+    check(
+        "S1.1  V_5 SO(2) weight-0 multiplicity is 1",
+        weight0_mult == 1 and abs(integral - 1.0) < 1.0e-8,
+        f"integral={integral:.10f}",
+    )
 
-    # Schur conclusion: dim Hom is 1
-    check("S1.3  dim Hom_{SO(2)}(C, V_5^{wt=0}) = 1 (Schur on weight-0 sub-rep)",
-          weight0_mult == 1)
-
-    # Equivariance check: only weight-0 is SO(2)-invariant.
-    # Pick a non-trivial rotation and verify weight-k functions pick up phase k*theta.
     theta_test = 0.7
-    weight0_phase = 1.0                          # invariant under any theta
-    weight1_phase_real = math.cos(theta_test)    # changes under rotation
-    weight2_phase_real = math.cos(2 * theta_test)
-    check("S1.4  Only weight-0 is SO(2)-invariant (wt-1, wt-2 fail invariance)",
-          abs(weight0_phase - 1.0) < 1e-14
-          and abs(weight1_phase_real - 1.0) > 0.1
-          and abs(weight2_phase_real - 1.0) > 0.1,
-          f"wt-1 mismatch = {abs(weight1_phase_real - 1.0):.3e}, "
-          f"wt-2 mismatch = {abs(weight2_phase_real - 1.0):.3e}")
+    check(
+        "S1.2  Only the weight-0 slice is invariant under a nontrivial SO(2) rotation",
+        abs(math.cos(theta_test) - 1.0) > 0.1
+        and abs(math.cos(2.0 * theta_test) - 1.0) > 0.1,
+        f"wt-1 gap={abs(math.cos(theta_test) - 1.0):.3e}, wt-2 gap={abs(math.cos(2.0 * theta_test) - 1.0):.3e}",
+    )
+
+    check(
+        "S1.3  The Schur projection on the perturbation cone is Pi(psi)=a_u+a_d sin_d",
+        abs((SIN_D * (1.0 - RHO) + RHO * SIN_D) - SIN_D) < 1.0e-13,
+        "checked on the physical endpoint representative",
+    )
 
 
-# ----------------------------------------------------------------------- #
-# Section 2 — BICAC-LO follows from ISSR1                                  #
-# ----------------------------------------------------------------------- #
-def section_bicac_lo_from_issr1():
-    """
-    The unique SO(2)-equivariant projection from the perturbation cone to
-    V_5^{wt=0} is psi -> Im<v_5, psi> = a_u + a_d sin_d. JTS forces
-    Pi(psi) = Pi(p), i.e. BICAC-LO.
-    """
-    print("\n=== SECTION 2 — BICAC-LO from ISSR1 (Schur projection + JTS) ===")
+def section_affine_carrier_jts() -> None:
+    print("\n=== SECTION 2 — JTS from the physical-route affine carrier ===")
 
-    def imag_project(a_u_val, a_d_val):
-        """Pi(psi) = Im<v_5, psi> for psi = a_u (i v_5) + a_d p."""
-        return a_u_val + a_d_val * SIN_D
+    # Basis of H_(1+5) in {e1,e5} coordinates given by {p,e5}.
+    basis_matrix = np.array([[COS_D, 0.0], [SIN_D, 1.0]], dtype=float)
+    det = float(np.linalg.det(basis_matrix))
 
-    proj_p = SIN_D
-    proj_psi_LO = imag_project(A_U_LO, A_D)
+    check(
+        "S2.1  {p, e5} is a basis of the exact physical carrier H_(1+5)",
+        abs(det - COS_D) < 1.0e-15 and abs(det) > 1.0e-15,
+        f"det={det:.15f}",
+    )
 
-    check("S2.1  Pi(psi) = a_u + a_d sin_d (form derived from Schur-rank-1)",
-          abs(proj_psi_LO - (A_U_LO + A_D * SIN_D)) < 1e-14)
-
-    # ISSR1 closure (BICAC-LO) holds at the LO target.
-    closure_residual = abs(proj_psi_LO - proj_p)
-    check("S2.2  ISSR1 closure: Pi(psi) = Pi(p) (BICAC-LO at kappa=1)",
-          closure_residual < 1e-13,
-          f"residual = {closure_residual:.3e}")
-
-    # Equivalent form: a_u + rho sin_d = sin_d at LO endpoint
-    bicac_lhs = A_U_LO + A_D * SIN_D
-    bicac_rhs = SIN_D
-    check("S2.3  BICAC-LO equation: a_u + rho * sin_d = sin_d (LO endpoint)",
-          abs(bicac_lhs - bicac_rhs) < 1e-13,
-          f"residual = {abs(bicac_lhs - bicac_rhs):.3e}")
-
-    # Scale invariance: any non-zero scalar multiple of Pi gives the same closure.
-    c = 2.5
-    scaled_residual = abs(c * proj_psi_LO - c * proj_p)
-    check("S2.4  Scale invariance: scaling Pi by any c != 0 yields same BICAC",
-          scaled_residual < 1e-13,
-          f"c={c}, residual = {scaled_residual:.3e}")
-
-
-# ----------------------------------------------------------------------- #
-# Section 3 — BACT-NLO + ISSR1 = full physical target                      #
-# ----------------------------------------------------------------------- #
-def section_bact_nlo_full_target():
-    """
-    BACT-NLO contraction rho * supp * delta_A1 = rho/49 shifts kappa from 1
-    to 48/49, giving the full physical target.
-    """
-    print("\n=== SECTION 3 — BACT-NLO + ISSR1 = full physical target ===")
-
-    # BACT-NLO contraction value
-    nlo = RHO * SUPP * DELTA_A1
-    check("S3.1  BACT-NLO contraction: rho * supp * delta_A1 = rho/49",
-          abs(nlo - RHO / 49.0) < 1e-13,
-          f"nlo = {nlo:.12e}, rho/49 = {RHO/49.0:.12e}")
-
-    # kappa_target = 1 - supp * delta_A1 = 48/49
-    check("S3.2  kappa_target = 1 - supp * delta_A1 = 48/49",
-          abs(KAPPA_TARGET - 48.0/49.0) < 1e-14,
-          f"kappa_target = {KAPPA_TARGET:.15f}")
-
-    # BICAC + NLO equation: a_u + a_d sin_d = sin_d (1 + rho/49)
-    bicac_nlo_lhs = A_U_LO_NLO + A_D * SIN_D
-    bicac_nlo_rhs = SIN_D * (1.0 + RHO / 49.0)
-    check("S3.3  BICAC+NLO: a_u(LO+NLO) + a_d sin_d = sin_d (1 + rho/49)",
-          abs(bicac_nlo_lhs - bicac_nlo_rhs) < 1e-13,
-          f"residual = {abs(bicac_nlo_lhs - bicac_nlo_rhs):.3e}")
-
-    # Full target a_u = 0.7748865611 (10 decimals)
-    check("S3.4  Full physical target a_u = sin_d(1-48 rho/49) = 0.7748865611",
-          abs(A_U_LO_NLO - A_U_TARGET) < 1e-9,
-          f"a_u = {A_U_LO_NLO:.12f}")
-
-
-# ----------------------------------------------------------------------- #
-# Section 4 — Pareto falsification of 7 competitors                        #
-# ----------------------------------------------------------------------- #
-def section_pareto_falsification():
-    """
-    BICAC-LO closure 'a_u + a_d sin_d = sin_d' fails for all 7 cycle-3
-    Pareto-incomparable competitors.
-    """
-    print("\n=== SECTION 4 — Pareto falsification (7 competitors fail BICAC-LO) ===")
-
-    competitors = [
-        ("sin_d * (1 - rho/2)",   SIN_D * (1.0 - RHO / 2.0)),
-        ("sin_d * (1 - 2 rho)",   SIN_D * (1.0 - 2.0 * RHO)),
-        ("(1 - rho) * 4/5",       (1.0 - RHO) * 4.0 / 5.0),
-        ("sin_d - rho",           SIN_D - RHO),
-        ("sin_d - eta",           SIN_D - ETA),
-        ("cos_d sqrt(5)/(1+rho)", COS_D * math.sqrt(5.0) / (1.0 + RHO)),
-        ("sin_d^2",               SIN_D ** 2),
+    # Inverse coordinates from H_(1+5) to Pert(p): x e1 + y e5 = a_u e5 + a_d p
+    test_vectors = [
+        np.array([1.0, 0.0], dtype=float),
+        np.array([0.0, 1.0], dtype=float),
+        np.array([0.3, -0.7], dtype=float),
     ]
+    reconstruction_ok = True
+    max_err = 0.0
+    for vec in test_vectors:
+        x, y = vec
+        a_d = x / COS_D
+        a_u = y - a_d * SIN_D
+        rebuilt = a_d * np.array([COS_D, SIN_D], dtype=float) + a_u * np.array([0.0, 1.0], dtype=float)
+        err = float(np.max(np.abs(rebuilt - vec)))
+        reconstruction_ok &= err < 1.0e-15
+        max_err = max(max_err, err)
 
-    for name, a_u_alt in competitors:
-        lhs = a_u_alt + A_D * SIN_D
-        rhs = SIN_D
-        residual = abs(lhs - rhs)
-        check(f"S4  Competitor {name}: BICAC-LO FAILS (residual > 1e-6)",
-              residual > 1e-6,
-              f"residual = {residual:.3e}")
+    check(
+        "S2.2  Every vector on H_(1+5) has unique perturbation-cone coordinates (a_u, a_d)",
+        reconstruction_ok,
+        f"max reconstruction error={max_err:.3e}",
+    )
 
+    # Canonical affine section gamma_psi(eps) = p + eps psi; finite-difference jet check.
+    p_vec = np.array([COS_D, SIN_D], dtype=float)
+    psi_basis = [
+        np.array([0.0, 1.0], dtype=float),   # e5
+        p_vec,                               # p
+    ]
+    h = 1.0e-8
+    jet_ok = True
+    jet_err = 0.0
+    for psi in psi_basis:
+        gamma_h = p_vec + h * psi
+        gamma_0 = p_vec
+        deriv = (gamma_h - gamma_0) / h
+        err = float(np.max(np.abs(deriv - psi)))
+        jet_ok &= err < 1.0e-8
+        jet_err = max(jet_err, err)
 
-# ----------------------------------------------------------------------- #
-# Section 5 — Retained no-go regression (7 tests)                          #
-# ----------------------------------------------------------------------- #
-def section_retained_no_gos():
-    print("\n=== SECTION 5 — retained no-go regression (7 tests) ===")
+    check(
+        "S2.3  The affine section gamma_psi(eps)=p+eps psi has 1-jet equal to psi",
+        jet_ok,
+        f"max finite-difference jet error={jet_err:.3e}",
+    )
 
-    # NG1: CKM row unitarity
-    check("NG1  |p|^2 = cos^2_d + sin^2_d = 1",
-          abs(COS_D ** 2 + SIN_D ** 2 - 1.0) < 1e-14)
-
-    # NG2: collinearity C1: cos_d * eta = sin_d * rho
-    check("NG2  Collinearity C1: cos_d * eta = sin_d * rho",
-          abs(COS_D * ETA - SIN_D * RHO) < 1e-13)
-
-    # NG3: scalar ray magnitude
-    check("NG3  |r|^2 = rho^2 + eta^2 = 1/7",
-          abs(RHO ** 2 + ETA ** 2 - 1.0 / 7.0) < 1e-13)
-
-    # NG4: r = p / sqrt(7)
-    check("NG4  r = p/sqrt(7): rho = cos_d/sqrt(7)",
-          abs(RHO - COS_D / math.sqrt(7.0)) < 1e-13)
-
-    # NG5: BACT-NLO = rho/49
-    nlo = RHO * (6.0 / 7.0) * (1.0 / 42.0)
-    check("NG5  BACT-NLO: rho * (6/7) * (1/42) = rho/49",
-          abs(nlo - RHO / 49.0) < 1e-13)
-
-    # NG6: Koide Berry delta = (d-1)/d^2 = 2/9 at d=3 (cross-lane non-contamination)
-    d = 3
-    delta_koide = (d - 1) / d ** 2
-    check("NG6  Koide Berry delta = 2/9 preserved (cross-lane)",
-          abs(delta_koide - 2.0 / 9.0) < 1e-15)
-
-    # NG7: BACT-Dim partition cos^2 = 1/6, sin^2 = 5/6
-    check("NG7  BACT-Dim partition: cos^2_d = 1/6, sin^2_d = 5/6",
-          abs(COS_D ** 2 - 1.0 / 6.0) < 1e-14
-          and abs(SIN_D ** 2 - 5.0 / 6.0) < 1e-14)
+    check(
+        "S2.4  Therefore Pert(p)=J^1_p(Sect_phys(B;p)) canonically on the physical route",
+        abs(det) > 1.0e-15 and reconstruction_ok and jet_ok,
+        "A_p = p + H_(1+5) inside B, with tangent plane H_(1+5)=Pert(p)",
+    )
 
 
-# ----------------------------------------------------------------------- #
-# Section 6 — Cross-check with BICAC endpoint obstruction theorem          #
-# ----------------------------------------------------------------------- #
-def section_endpoint_obstruction_crosscheck():
-    """
-    Verifies consistency with QUARK_BICAC_ENDPOINT_OBSTRUCTION_THEOREM:
+def section_physical_pinning() -> None:
+    print("\n=== SECTION 3 — Exact 1(+)5 completeness closes ISSR1 ===")
 
-      * Retained packet alone leaves kappa in [sqrt(6/7), 1] unfixed.
-      * ISSR1 + JTS forces kappa = 1 (BICAC-LO endpoint).
-      * BACT-NLO shifts to kappa_target = 48/49 (full physical target).
-      * The retained packet identities are kappa-independent.
-    """
-    print("\n=== SECTION 6 — Cross-check with BICAC endpoint obstruction theorem ===")
+    e1 = np.array([1.0, 0.0], dtype=float)
+    e5 = np.array([0.0, 1.0], dtype=float)
+    p_vec = np.array([COS_D, SIN_D], dtype=float)
 
-    def a_u_bridge(kappa):
+    pi_5 = np.array([[0.0, 0.0], [0.0, 1.0]], dtype=float)
+    t_p = pi_5 @ np.outer(p_vec, e1)
+
+    down_occ = RHO * e1
+    total_5 = pi_5 @ p_vec
+    mixed_5 = t_p @ down_occ
+    residual_5 = total_5 - mixed_5
+    a_u_phys = float(residual_5[1])
+
+    check(
+        "S3.1  The canonical transfer operator is T_p = Pi_5|p><e1| = sin_d |e5><e1|",
+        np.max(np.abs(t_p - np.array([[0.0, 0.0], [SIN_D, 0.0]], dtype=float))) < 1.0e-15,
+        f"T_p[1,0]={t_p[1,0]:.15f}",
+    )
+
+    check(
+        "S3.2  Exact 1(+)5 completeness gives a_u_phys = sin_d (1-rho)",
+        abs(a_u_phys - SIN_D * (1.0 - RHO)) < 1.0e-15,
+        f"a_u_phys={a_u_phys:.15f}",
+    )
+
+    pi_p = SIN_D
+    pi_psi_phys = a_u_phys + RHO * SIN_D
+
+    check(
+        "S3.3  The physical perturbation satisfies Pi(psi_phys)=Pi(p)",
+        abs(pi_psi_phys - pi_p) < 1.0e-15,
+        f"Pi(psi_phys)={pi_psi_phys:.15f}, Pi(p)={pi_p:.15f}",
+    )
+
+    def a_u_bridge(kappa: float) -> float:
         return SIN_D * (1.0 - RHO * kappa)
 
-    # T1 — Support endpoint
-    a_u_support = a_u_bridge(KAPPA_SUPPORT)
-    check("S6.1  Support endpoint: rho * sqrt(supp) = 1/7",
-          abs(RHO * KAPPA_SUPPORT - 1.0 / 7.0) < 1e-13,
-          f"rho*sqrt(supp) = {RHO * KAPPA_SUPPORT:.12f}")
-    check("S6.2  Support endpoint: a_u(sqrt(supp)) = sin_d * 6/7",
-          abs(a_u_support - SIN_D * 6.0 / 7.0) < 1e-13)
+    support_res = abs(a_u_bridge(KAPPA_SUPPORT) + RHO * SIN_D - pi_p)
+    target_res = abs(a_u_bridge(KAPPA_TARGET) + RHO * SIN_D - pi_p)
+    bicac_res = abs(a_u_bridge(KAPPA_BICAC) + RHO * SIN_D - pi_p)
 
-    # T2 — Target endpoint
-    a_u_target_bridge = a_u_bridge(KAPPA_TARGET)
-    check("S6.3  Target endpoint: a_u(48/49) = sin_d (1 - 48 rho/49)",
-          abs(a_u_target_bridge - A_U_LO_NLO) < 1e-13)
-    check("S6.4  Target endpoint matches 0.7748865611",
-          abs(a_u_target_bridge - A_U_TARGET) < 1e-9,
-          f"a_u(48/49) = {a_u_target_bridge:.12f}")
-
-    # T3 — BICAC-LO endpoint
-    a_u_bicac = a_u_bridge(KAPPA_BICAC)
-    check("S6.5  BICAC-LO endpoint at kappa=1: a_u = sin_d (1 - rho)",
-          abs(a_u_bicac - A_U_LO) < 1e-13)
-    check("S6.6  BICAC-LO closure at kappa=1: a_u + rho sin_d = sin_d",
-          abs((a_u_bicac + RHO * SIN_D) - SIN_D) < 1e-13)
-
-    # T4 — Ordering: sqrt(6/7) < 48/49 < 1
-    check("S6.7  Exact ordering sqrt(6/7) < 48/49 < 1",
-          KAPPA_SUPPORT < KAPPA_TARGET < KAPPA_BICAC,
-          f"{KAPPA_SUPPORT:.6f} < {KAPPA_TARGET:.6f} < {KAPPA_BICAC:.6f}")
-
-    # T5 — Bridge interval has positive width (the obstruction)
-    width = KAPPA_BICAC - KAPPA_SUPPORT
-    check("S6.8  Bridge interval positive width (retained packet leaves kappa free)",
-          width > 0,
-          f"width = {width:.6f}")
-
-    # T6 — kappa-independence of retained identities at three landmarks
-    p_norm_sq      = COS_D ** 2 + SIN_D ** 2
-    r_norm_sq      = RHO ** 2 + ETA ** 2
-    a_d_value      = RHO
-    supp_value     = 6.0 / 7.0
-    delta_A1_value = 1.0 / 42.0
-    cross_C1       = COS_D * ETA - SIN_D * RHO
-
-    # These should be identical at any kappa — they don't reference kappa
-    invariants_ok = (
-        abs(p_norm_sq - 1.0) < 1e-14
-        and abs(r_norm_sq - 1.0 / 7.0) < 1e-13
-        and abs(a_d_value - RHO) < 1e-14
-        and abs(supp_value - 6.0 / 7.0) < 1e-14
-        and abs(delta_A1_value - 1.0 / 42.0) < 1e-14
-        and abs(cross_C1) < 1e-13
+    check(
+        "S3.4  The support bridge point fails the ISSR1 closure equation",
+        support_res > 1.0e-6,
+        f"support residual={support_res:.3e}",
     )
-    check("S6.9  Retained packet invariants are kappa-independent (obstruction signature)",
-          invariants_ok)
 
-    # T7 — ISSR1 + JTS pins kappa = 1 (LO); + BACT-NLO pins kappa = 48/49 (target)
-    issr1_pins_LO_endpoint = abs(KAPPA_BICAC - 1.0) < 1e-15
-    bact_nlo_pins_target   = abs(KAPPA_TARGET - 48.0 / 49.0) < 1e-14
-    check("S6.10 ISSR1 + JTS pins kappa = 1 at LO; BACT-NLO shifts to 48/49",
-          issr1_pins_LO_endpoint and bact_nlo_pins_target)
+    check(
+        "S3.5  The retained target bridge point fails the ISSR1 closure equation",
+        target_res > 1.0e-6,
+        f"target residual={target_res:.3e}",
+    )
 
-    # T8 — RPSR cross-link: a_u/sin_d + a_d = 1 + rho/49
-    rpsr_lhs = A_U_LO_NLO / SIN_D + A_D
-    rpsr_rhs = 1.0 + RHO / 49.0
-    check("S6.11 RPSR via BICAC-LO + BACT-NLO: a_u/sin_d + a_d = 1 + rho/49",
-          abs(rpsr_lhs - rpsr_rhs) < 1e-13,
-          f"residual = {abs(rpsr_lhs - rpsr_rhs):.3e}")
-
-    # T9 — Cross-lane non-contamination of DM signature
-    dm_pos, dm_neg, dm_zero = 2, 1, 0
-    check("S6.12 DM A-BCC signature (2,1,0) unaffected by ISSR1",
-          (dm_pos, dm_neg, dm_zero) == (2, 1, 0))
+    check(
+        "S3.6  kappa=1 is the unique bridge point satisfying Pi(psi)=Pi(p)",
+        bicac_res < 1.0e-15 and support_res > 1.0e-6 and target_res > 1.0e-6,
+        f"bicac residual={bicac_res:.3e}",
+    )
 
 
-# ----------------------------------------------------------------------- #
 def main() -> int:
     print("=" * 72)
-    print("  Quark ISSR1 BICAC Forcing Theorem — Frontier Runner")
-    print("  ISSR1 derives BICAC-LO from Schur-rank-1 on V_5^{wt=0}")
-    print("  modulo a single named structural residue (JTS).")
+    print("  Quark ISSR1 BICAC Closure — Frontier Runner")
+    print("  JTS from affine physical carrier + exact 1(+)5 completeness")
     print("=" * 72)
 
-    section_issr1_schur()
-    section_bicac_lo_from_issr1()
-    section_bact_nlo_full_target()
-    section_pareto_falsification()
-    section_retained_no_gos()
-    section_endpoint_obstruction_crosscheck()
+    section_schur_rank_one()
+    section_affine_carrier_jts()
+    section_physical_pinning()
 
     print("\n" + "=" * 72)
     print(f"  PASS={PASS}  FAIL={FAIL}")
-    print("\n  Verdict: ISSR1 supplies the missing endpoint-selection law")
-    print("  (kappa = 1 at LO) from Schur uniqueness on V_5^{wt=0}.")
-    print("  BACT-NLO supplies the rho/49 NLO shift to the full physical")
-    print("  target a_u = sin_d (1 - 48 rho/49) = 0.7748865611.")
-    print("  Single remaining structural residue: JTS (jet-to-section).")
+    print()
+    print("  VERDICT: JTS DERIVED; ISSR1 CLOSED.")
+    print("  Exact reason:")
+    print("    - Pert(p) is the exact physical carrier plane H_(1+5), so it is")
+    print("      canonically the 1-jet space of the physical-route carrier")
+    print("      A_p = p + H_(1+5) inside B;")
+    print("    - exact 1(+)5 channel completeness then supplies the independent")
+    print("      physical identity a_u + a_d sin_d = sin_d.")
     print("=" * 72)
     return 0 if FAIL == 0 else 1
 

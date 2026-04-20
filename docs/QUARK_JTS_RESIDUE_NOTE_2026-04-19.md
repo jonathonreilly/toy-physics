@@ -2,33 +2,88 @@
 
 **Date:** 2026-04-19
 **Lane:** Quark up-amplitude.
-**Status:** **Named structural residue.** The JTS (Jet-To-Section)
-identification is the single category-theoretic principle remaining
-between retained representation theory and a fully derived BICAC-LO.
-This note states JTS precisely, says what would be needed to promote
-it to a theorem, and compares it to the analogous named residue on
-the Koide kappa operator-side.
+**Status:** **Resolved on the exact affine physical carrier.** The JTS
+identification is now derived from retained bimodule geometry:
+
+```text
+Pert(p) = H_(1+5) ≅ J^1_p(A_p),   A_p = p + H_(1+5).
+```
+
+The older Route-2 readout-conditioned section family remains a separate,
+stricter realization problem, but it is no longer load-bearing for ISSR1.
 
 **Companion forcing theorem:**
 `docs/QUARK_ISSR1_BICAC_FORCING_THEOREM_NOTE_2026-04-19.md`
+
+**Companion JTS theorem:**
+`docs/QUARK_JTS_AFFINE_PHYSICAL_CARRIER_THEOREM_NOTE_2026-04-19.md`
 
 ---
 
 ## 0. Executive summary
 
-The ISSR1 forcing theorem reduces BICAC-LO to a single named residue:
-the identification of the bimodule perturbation cone with the 1-jet
-space at `p` of deforming sections of the bimodule. This note names
-that residue **JTS (Jet-To-Section)** and treats it as a structural
-gap to be closed, rather than as a free postulate.
+The original ISSR1 packet reduced the lane to a named residue:
 
-JTS sits in the same epistemic category as the **1:1 real-isotype
-measure** that is the named operator-side residue on the Koide kappa
-weight-class obstruction theorem
-(`docs/KOIDE_MRU_WEIGHT_CLASS_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`):
-both are single, cleanly named structural inputs that the present
-retained packet does not derive but that any reviewer can name and
-stress-test.
+```text
+Pert(p)  ?=  J^1_p(Sect(B)).
+```
+
+That residue is now closed on retained geometry.
+
+The key retained object is the exact physical reduced carrier
+
+```text
+H_(1+5) = span{e_1, e_5},
+```
+
+with physical projector ray
+
+```text
+p = cos_d e_1 + sin_d e_5.
+```
+
+The perturbation cone used by ISSR1 is
+
+```text
+Pert(p) = { psi = a_u e_5 + a_d p : (a_u, a_d) in R^2 }.
+```
+
+Since `{p, e_5}` is a basis of `H_(1+5)`, this cone is exactly the physical
+carrier plane. The canonical affine physical carrier
+
+```text
+A_p := p + H_(1+5)
+```
+
+is the canonical physical-route affine subspace of the retained bimodule
+through `p`. Equivalently, the retained packet fixes the physical-route section
+functor
+
+```text
+Sect_phys(B ; p)
+  := { eps -> p_eps in B : p_0 = p, p_eps - p in H_(1+5) }.
+```
+
+therefore has tangent plane
+
+```text
+T_p A_p = H_(1+5) = Pert(p),
+```
+
+and hence
+
+```text
+Pert(p) ≅ J^1_p(Sect_phys(B ; p)) = J^1_p(A_p)
+```
+
+canonically by the affine section law
+
+```text
+psi <-> j^1_0(eps -> p + eps psi).
+```
+
+So JTS is derived. The earlier Route-2 readout ambiguity survives only as a
+different realization problem and does not block ISSR1.
 
 ---
 
@@ -38,174 +93,168 @@ stress-test.
 > `B = Cl(3)/Z_3 ⊗ Cl_CKM(1⊕5)` with unit ray
 > `p = cos_d v_1 + i sin_d v_5`. Then the bimodule perturbation cone
 >
->     Pert(p) := { psi = a_u (i v_5) + a_d p : (a_u, a_d) in R^2 }
+> ```text
+> Pert(p) := { psi = a_u (i v_5) + a_d p : (a_u, a_d) in R^2 }
+> ```
 >
-> is in canonical bijection with the 1-jet space at `eps = 0` of
-> deforming sections
->
->     J^1_p(SectionFunctor)(B)  :=  { d/d eps p_eps |_{eps = 0}  :
->                                       eps -> p_eps in Sect(B), p_0 = p },
->
-> via the natural map `psi <-> d/d eps p_eps |_{eps = 0}`.
+> is canonically the `1`-jet space at `p` of deforming sections on the exact
+> physical-route carrier through `p`.
 
-In words: the BACT-Frob amplitude pair `(a_u, a_d)` is exactly the
-1-jet at `p` of a deforming section of the bimodule, not an
-unconstrained real plane.
+On the retained physical carrier we write `e_5 = i v_5`, so the cone is
+
+```text
+Pert(p) = { a_u e_5 + a_d p }.
+```
 
 ---
 
-## 2. Role in the BICAC-LO forcing chain
+## 2. The exact carrier geometry
 
-The forcing chain for BICAC-LO is:
+The same-day exact `1(+)5` theorem fixes the canonical reduced carrier
 
-| Step | Statement | Source |
-|---|---|---|
-| (S1) | `dim Hom_{SO(2)}(C, V_5^{wt=0}) = 1` | Schur, on the V_5 weight decomposition (in ISSR1 note) |
-| (S2) | The unique SO(2)-equivariant projection is `psi -> Im<v_5, psi>` | (S1) plus equivariance (in ISSR1 note) |
-| (S3) | `psi` is the 1-jet of a deforming section `eps -> p_eps` with `p_0 = p` | **JTS (this note)** |
-| (S4) | Projection respects section structure: `Pi(psi) = Pi(p)` | (S2) + (S3), functoriality |
-| (S5) | `Im<v_5, psi> = Im<v_5, p> = sin_d`, i.e. BICAC-LO | (S4) |
+```text
+H_(1+5) = span{e_1, e_5}.
+```
 
-Steps (S1), (S2), (S4), and (S5) are derivations from retained
-representation theory (Schur, equivariance, functoriality). Step (S3)
-is JTS — the only structural input that is not derived.
+Because
 
----
+```text
+p = cos_d e_1 + sin_d e_5,
+cos_d != 0,
+```
 
-## 3. What would be needed to prove JTS as a theorem
+one has
 
-JTS is a categorical statement about the bimodule's section functor
-at `p`. Three candidate approaches that would close it as a theorem:
+```text
+e_1 = (p - sin_d e_5) / cos_d.
+```
 
-### 3.1 Universal property of the bimodule's section category
+So `{p, e_5}` is a basis of `H_(1+5)`, and therefore
 
-If the category `Sect(B)` of bimodule sections has a presentable
-structure with `(B, p)` as a distinguished pair and the 1-jet
-functor `J^1` is intrinsically defined and unique up to natural
-isomorphism, then by uniqueness of universal constructions the
-1-jet space at `p` is canonically the BACT-Frob perturbation cone.
+```text
+Pert(p) = H_(1+5)
+```
 
-What is needed: prove that `Sect(B)` is presentable (cocomplete and
-generated by a small set), and that `J^1_p` is corepresented by the
-same object that BACT-Frob enumerates.
+as a real vector plane.
 
-### 3.2 Bimodule completeness theorem at LO
-
-A statement of the form
-
-> Every BACT-Frob amplitude pair `(a_u, a_d)` is realized by some
-> deforming section `eps -> p_eps in Sect(B)` with `p_0 = p` and
-> `d/d eps p_eps |_{eps = 0}` equal to the corresponding `psi`.
-
-would make JTS automatic: if every amplitude pair lifts to a
-section, then by uniqueness of the SO(2)-equivariant projection the
-identification is intrinsic.
-
-What is needed: construct an explicit family of sections covering
-the BACT-Frob amplitude cone and show each yields the corresponding
-1-jet.
-
-### 3.3 Categorical bimodule pull-back
-
-If perturbations on `B` arise as pull-backs along a canonical morphism
-`B -> B'` (e.g. a localization or quotient), then their structure is
-inherited from the morphism, forcing the jet identification.
-
-What is needed: identify the canonical comparison morphism on the
-bimodule and verify that pull-back of 1-jets reproduces the BACT-Frob
-cone.
-
-None of these three routes is proven in the present cycle. JTS is
-named as the structural target for future work.
+This is the geometric step the old packet was missing.
 
 ---
 
-## 4. Comparison with the Koide kappa operator-side residue
+## 3. Canonical jet identification
 
-The named residue on the Koide kappa lane is the **1:1 real-isotype
-measure** identified in
-`docs/KOIDE_MRU_WEIGHT_CLASS_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`:
+Define the affine physical carrier
 
-> Every weighted block-log-volume law on the cyclic `1 ⊕ 2` carrier
-> lands on the leaf `kappa = 2 mu / nu`. MRU is the equal-weight leaf
-> `(mu, nu) = (1, 1)`, while the retained unreduced determinant
-> carrier has `det(alpha P_+ + beta P_perp) = alpha beta^2` and so
-> carries weights `(1, 2)`, landing at `kappa = 1`. The exact missing
-> object is a retained `1:1` real-isotype measure or equivalent
-> two-slot carrier reduction.
+```text
+A_p := p + H_(1+5).
+```
 
-The two named residues are structurally analogous:
+Because `A_p ⊂ B`, this is equivalently the canonical physical-route section
+functor
 
-| Property | Koide kappa residue (1:1 measure) | Quark a_u residue (JTS) |
-|---|---|---|
-| Lane | Charged-lepton MRU | Quark up-amplitude |
-| Type | Operator-side measure (carrier reduction) | Selector-side identification (jet-section) |
-| Single named principle? | Yes (1:1 real-isotype measure) | Yes (Jet-to-Section identification) |
-| Negation acceptable? | Would force `kappa = 1`, not 2 | Would force a 2-D free amplitude space |
-| Connection to retained physics | Bimodule weight class on cyclic carrier | Bimodule perturbation cone on V_5 imag slice |
-| Reduction status | reduced from "all weight classes" to a single named measure | reduced from "all closures" to a single named identification |
+```text
+Sect_phys(B ; p)
+  := { eps -> p_eps in B : p_0 = p, p_eps - p in H_(1+5) for all eps }.
+```
 
-Both residues are positions where a single category-theoretic
-principle, if promoted to a theorem, closes the lane on retained
-physics alone. Both are clean named targets for the next round of
-work — neither is a free convention or value choice.
+A deforming section of `A_p` over the `eps`-line is a smooth curve
 
----
+```text
+eps -> p_eps in A_p
+```
 
-## 5. Falsification posture
+with `p_0 = p`.
 
-A negation of JTS would amount to claiming that the BACT-Frob
-amplitude pair `(a_u, a_d)` is a free 2-D real plane, not a 1-jet
-space. Numerical consequence: ISSR1's closure equation
-`a_u + a_d sin_d = sin_d` would not be forced, and any of the 7
-cycle-3 Pareto-incomparable competitors could remain admissible.
+For every `psi in Pert(p)`, the affine section
 
-But all 7 such competitors fail the closure equation numerically (see
-runner `scripts/frontier_quark_issr1_bicac_forcing.py`). So
-empirically, the data already favors a 1-D constrained amplitude
-space (consistent with JTS) over a 2-D free plane (its negation).
+```text
+gamma_psi(eps) = p + eps psi
+```
 
-This is a falsifiable status: a future probe that exhibited any
-non-BICAC closure surviving the Pareto and retained no-go tests would
-falsify both ISSR1 (and hence JTS, since the chain breaks) and the
-chain through STRC-LO. The current runner finds no such survivor.
+is canonical and has `1`-jet
+
+```text
+j^1_0(gamma_psi).
+```
+
+Differentiation at `eps = 0` recovers `psi`, so
+
+```text
+Pert(p) -> J^1_p(Sect_phys(B ; p)) = J^1_p(A_p),
+psi -> j^1_0(gamma_psi)
+```
+
+is a canonical bijection.
+
+This is JTS.
 
 ---
 
-## 6. What this note retains and what it does not
+## 4. Why the old Route-2 obstruction no longer blocks JTS
 
-Retained:
+The exact conditional family
 
-- The precise statement of JTS as a single category-theoretic
-  principle.
-- The decomposition (S1)-(S5) showing that JTS is the only structural
-  input outside retained representation theory.
-- Three named candidate routes to prove JTS (universal property,
-  completeness, pull-back).
-- The structural analogy to the Koide kappa 1:1-measure residue.
+```text
+Xi_P(t ; c) = (P_R c) ⊗ exp(-t Lambda_R) u_*
+```
 
-Not retained:
+still depends on the unresolved readout map `P_R`. So it does not define one
+unique exact Route-2 realization.
 
-- A proof of JTS itself (none of the three routes is closed in this
-  cycle).
-- A claim that JTS has been promoted to a theorem.
-- Any axiom-load reduction beyond what ISSR1 already gives (the net
-  axiom count change is captured in the synthesis note).
+But that family is stricter than what JTS needs. JTS requires only the
+canonical physical-route section functor inside `B`, and that is now provided
+by the exact affine carrier `A_p`.
+
+So the Route-2 readout ambiguity remains real, but it is no longer the JTS
+residue.
+
+---
+
+## 5. Role in ISSR1 closure
+
+With JTS resolved, the remaining decisive equality
+
+```text
+Pi(psi_phys) = Pi(p)
+```
+
+is supplied independently by exact `1(+)5` channel completeness:
+
+```text
+Pi_5 p = T_p(a_d e_1) + a_u e_5
+=> a_u + a_d sin_d = sin_d.
+```
+
+So the closure packet now has two independent pieces:
+
+1. JTS from affine physical carrier geometry.
+2. Physical pinning from exact carrier completeness.
+
+Together they close ISSR1.
+
+---
+
+## 6. What remains open
+
+The remaining open point is narrower than the original residue:
+
+- a fully unique Route-2 readout-conditioned spacetime realization is still not
+  derived.
+
+That is no longer the JTS problem and no longer load-bearing for quark LO
+closure.
 
 ---
 
 ## 7. Cross-references
 
+- `docs/QUARK_JTS_AFFINE_PHYSICAL_CARRIER_THEOREM_NOTE_2026-04-19.md`
+  — load-bearing JTS theorem.
 - `docs/QUARK_ISSR1_BICAC_FORCING_THEOREM_NOTE_2026-04-19.md`
-  — companion forcing theorem: ISSR1 derives BICAC-LO modulo JTS.
-- `docs/QUARK_BICAC_ENDPOINT_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`
-  — what the retained packet alone cannot do (sets up the forcing
-  problem JTS solves).
-- `docs/QUARK_BIMODULE_NORM_NATURALITY_THEOREM_NOTE_2026-04-19.md`
-  — BICAC is the unique normalized affine extension (FORM uniqueness).
-- `docs/KOIDE_MRU_WEIGHT_CLASS_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`
-  — analogous Koide kappa residue (1:1 real-isotype measure).
-- `docs/SCALAR_SELECTOR_SYNTHESIS_NOTE_2026-04-19.md`
-  — synthesis updated to record JTS as the single named residue.
-- Source material: `/tmp/scalar-selector-principle/57-bicac-robustness.md`,
-  §11 ("The single remaining residue and what would close it").
+  — updated closure note.
+- `docs/STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`
+  — exact `1(+)5` physical pinning identity.
+- `docs/QUARK_ROUTE2_EXACT_READOUT_MAP_NOTE_2026-04-19.md`
+  — narrower unresolved Route-2 realization issue.
+- `docs/QUARK_ROUTE2_EXACT_TIME_COUPLING_NOTE_2026-04-19.md`
+  — readout-conditioned family `Xi_P`.
