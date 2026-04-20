@@ -51,6 +51,11 @@ The old LO gap is now closed:
 > `1(+)5` carrier, the canonical `5`-projector, and the canonical
 > `A1 -> 5` transfer operator induced by the physical projector ray.
 
+The companion note
+`docs/QUARK_BIMODULE_LO_SHELL_NORMALIZATION_THEOREM_NOTE_2026-04-19.md`
+provides an independent support-side derivation of the same LO balance from
+the exact shell-normalized Route-2 carrier.
+
 Numerical LO closure is verified at < 2% in
 `frontier_quark_projector_parameter_audit.py` (PASS=6 FAIL=0) and
 holds exactly under STRC.

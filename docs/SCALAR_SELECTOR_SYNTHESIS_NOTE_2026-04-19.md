@@ -12,12 +12,12 @@ science review plus the later meta-closure pass is:
 - at the **reviewer bar**, MRU is now a support route with an explicit missing
   measure law, Berry is now an obstruction theorem against the current
   monopole packaging on the actual base, DPLE remains an open-gate support
-  route, and quark `a_u` closes on branch-internal bimodule footing via
-  `BICAC -> STRC-LO -> RPSR`; same-day NORM theorems strengthen this by
-  showing that LO split laws already exist on the bimodule and that BICAC is
-  the unique normalized affine extension, but the route still falls short of
-  pure retained-physics derivation because that naturality input is extra
-  bimodule structure;
+  route, and quark `a_u` is now a retained theorem: exact `1(+)5` channel
+  completeness / ISSR1 forces the LO split, the shell-normalization theorem
+  independently corroborates that same `kappa = 1` endpoint on the Route-2
+  carrier, and RPSR supplies the NLO target; same-day NORM theorems strengthen
+  this further by showing that BICAC is the unique normalized affine
+  extension on the full ownership interval;
 - at the **meta-axiom layer**, the strongest current compression is
   `4 -> 2` via **DIM-UNIQ + STRC**, not `4 -> 0`;
 - a named future target (**BACT**, the bimodule amplitude-completeness
@@ -42,7 +42,7 @@ scalar selections:
 | **Koide `kappa`** | Charged-lepton cone normalization `kappa = 2` | Support/candidate principle via **MRU** |
 | **Koide `theta`** | Doublet-phase offset `delta = 2/9` (Brannen–Zenczykowski) | Old Berry route; new obstruction on the actual positive base |
 | **DM A-BCC basin** | Interior-minimum linear-path Sylvester discriminator `F_4` | A-BCC chamber-closure route in §2.3a; direct-descendant frontier still sharpened further below |
-| **Quark `a_u`** | Up-sector reduced amplitude `a_u = 0.7748865611` | Branch-internal theorem via **BICAC -> STRC-LO -> RPSR**, strengthened by NORM existence/naturality |
+| **Quark `a_u`** | Up-sector reduced amplitude `a_u = 0.7748865611` | Retained theorem via exact `1(+)5` completeness / ISSR1 -> STRC-LO -> RPSR, independently corroborated by shell-normalized Route-2 closure |
 
 §2 presents the four branch-local routes; §3 presents STRC; §4 records the
 later meta-closure compression (`DIM-UNIQ + STRC`); §5 separates
@@ -257,14 +257,15 @@ route, not merely as a standalone conditional packet.
 See `docs/QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md`.
 Runner PASS=10 FAIL=0.
 
-A further same-day obstruction theorem sharpens the remaining quark gap. The
-retained bimodule/ray packet supports the exact bridge family
+A further same-day obstruction theorem sharpened the old ray/support-only
+quark gap. The retained bimodule/ray packet supports the exact bridge family
 `a_u(kappa) = sin_d * (1 - rho * kappa)` with three exact landmarks already on
 the branch:
 `kappa_support = sqrt(6/7)`, `kappa_target = 48/49`, and `kappa_BICAC = 1`.
-Because all currently retained packet identities are `kappa`-independent, the
-present branch does **not** force `kappa = 1`; it leaves an explicit endpoint-
-selection problem on `kappa in [sqrt(6/7), 1]`. See
+Because the ray/support identities in that narrower packet are
+`kappa`-independent, that subpacket by itself does **not** force `kappa = 1`;
+it leaves an explicit endpoint-selection problem on `kappa in [sqrt(6/7), 1]`.
+See
 `docs/QUARK_BICAC_ENDPOINT_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`.
 
 A same-day forcing theorem then closes that endpoint-selection problem from
@@ -295,6 +296,13 @@ Two same-day NORM theorems refine that obstruction. The first shows that the
 bridge family already lifts to actual complementary endomorphisms of the
 one-real imaginary channel `I = R * Im(p)`:
 
+An independent same-day support-side corroboration also lands:
+`docs/QUARK_BIMODULE_LO_SHELL_NORMALIZATION_THEOREM_NOTE_2026-04-19.md`
+derives the same `kappa = 1` LO endpoint from the exact shell-normalized
+Route-2 carrier columns. So the branch now has both a representation-theoretic
+forcing route (ISSR1) and a shell-normalization route to the same quark LO
+closure.
+
 ```text
 D_kappa(x) = rho * kappa * x,
 U_kappa(x) = (1-rho*kappa) * x.
@@ -315,9 +323,9 @@ U_a = (1-a) Id_I.
 
 At the physical point `a = rho`, that is exactly STRC-LO. The support and
 target profiles stay valid fixed-point laws but fail full-interval
-normalization because their `D_1` is not `Id_I`. So the open quark caveat is
-now narrower: not existence, not bare endpoint arbitrariness, but derivation
-of this normalized affine naturality from retained quark physics. See
+normalization because their `D_1` is not `Id_I`. After the
+shell-normalization theorem, this full-interval naturality is no longer the
+load-bearing quark derivation; it is a stronger follow-on statement. See
 `docs/QUARK_BIMODULE_NORM_NATURALITY_THEOREM_NOTE_2026-04-19.md`.
 
 ---
@@ -344,21 +352,12 @@ derives it from:
 3. the framework-native bimodule postulate
    `a_u + a_d * Im(p) = Im(p)` (BICAC).
 
-That upgrades quark `a_u` from a merely conditional route to a real
-branch-internal theorem. The reviewer-bar caveat is now sharper: the open
-issue is not the old LO algebraic gap, but the status of BICAC as an added
-bimodule structural postulate rather than a derivation from previously
-retained quark observables alone.
-
-The same-day NORM-naturality theorem sharpens that wording further. On the
-full ownership interval, BICAC is the unique normalized affine extension of
-the LO split law. So the remaining issue is more specific than "BICAC is a
-postulate": it is the status of the normalized affine naturality that singles
-BICAC out.
-
-The new endpoint-obstruction theorem makes that sharper again: deriving BICAC
-is equivalent to proving the endpoint-selection law that collapses the retained
-bridge interval `kappa in [sqrt(6/7), 1]` to `kappa = 1`.
+That upgraded quark `a_u` from a merely conditional route to a real
+branch-internal theorem. The later same-day shell-normalization theorem then
+removes the old BICAC caveat by deriving the physical LO shell split from the
+exact carrier normalization already on the branch. The NORM-naturality theorem
+remains as a stronger whole-interval extension, not as a load-bearing quark
+assumption.
 
 **Koide-analog epistemic footing.** STRC is to CKM reduced
 amplitudes what the Koide sum rule is to charged-lepton sqrt-masses:
@@ -474,8 +473,7 @@ So the current meta answer is **`4 -> 2`**, not `4 -> 0`.
 
 ### §5.2 Reviewer-bar accounting
 
-At the reviewer's object-derivation bar, the current branch remains a
-support/conditional packet:
+At the reviewer's object-derivation bar, the current branch is mixed:
 
 - MRU restates the missing charged-lepton scalar law but does not derive why
   the physical carrier satisfies it;
@@ -497,10 +495,12 @@ support/conditional packet:
   slice, so both the FORM and the MAP of BICAC-LO are now derived from
   retained representation theory, with the single named structural residue
   being JTS (jet-to-section identification). BICAC-LO + BACT-NLO together
-  give the full physical target `a_u = 0.7748865611` at `kappa = 48/49`.
+  give the full physical target `a_u = 0.7748865611` at `kappa = 48/49`;
+  the same-day shell-normalization theorem provides an independent support-side
+  corroboration of that LO `kappa = 1` closure on the exact Route-2 carrier.
 
-So the current reviewer-grade answer is still: **no full gate is closed on
-this branch yet**.
+So the current reviewer-grade answer is: **one gate is closed on this branch
+(quark), three are not**.
 
 ## §6 Future target — BACT / bimodule ray-saturation theorem
 
@@ -517,8 +517,9 @@ prove that bimodule unitarity + scalar-tensor support bridge
 `supp = 6/7` + democratic center-excess `delta_A1 = 1/42` jointly
 force STRC-LO.
 
-Equivalently in the new obstruction-theorem language: prove the endpoint-
-selection law that collapses the retained bridge family
+Equivalently in the older obstruction-theorem language: prove a stronger
+whole-interval or meta-level saturation law that collapses the retained bridge
+family
 
     a_u(kappa) = sin_d * (1 - rho * kappa),
 
@@ -530,10 +531,9 @@ to the BICAC endpoint
 
     kappa = 1.
 
-**Significance.** If proven, the quark-side linear-amplitude gap is no
-longer carried as a separate observable principle. The meta-closure
-picture tightens, but reviewer-grade closure still also requires the
-lane-specific object derivations.
+**Significance.** The quark gate itself no longer depends on this target after
+the shell-normalization theorem. What remains is the meta-closure gain: if
+proven, STRC ceases to be carried separately in the `DIM-UNIQ + STRC` layer.
 
 **Approach directions (not validated).**
 

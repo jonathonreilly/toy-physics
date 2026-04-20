@@ -2,10 +2,11 @@
 
 **Date:** 2026-04-19  
 **Lane:** Quark up-amplitude.  
-**Status:** **Retained obstruction theorem.** The currently retained
-bimodule/ray packet does **not** derive BICAC. It supports a positive-width
+**Status:** **Retained obstruction theorem on the ray/support-only packet.**
+That narrower packet does **not** derive BICAC. It supports a positive-width
 bridge interval of exact candidate amplitudes, and BICAC is only one endpoint
-of that interval.
+of that interval. Later same-day shell-normalization work adds exact carrier
+input that bypasses this obstruction at the physical LO point.
 
 **Primary runner:** `scripts/frontier_quark_bicac_endpoint_obstruction_theorem.py`
 
@@ -41,8 +42,10 @@ Every retained ray/support identity currently in hand is `kappa`-independent:
 `delta_A1 = 1/42`, and the collinearity cross-identity
 `Re(p) Im(r) = Im(p) Re(r)`.
 
-Therefore the present packet does **not** force `kappa = 1`. BICAC remains an
-endpoint-selection principle, not a derived theorem, on the current data.
+Therefore the ray/support-only packet does **not** force `kappa = 1`. BICAC
+remains an endpoint-selection principle on that narrower data set. The later
+shell-normalization theorem changes the branch status by adding exact
+`kappa`-sensitive carrier normalization data not used here.
 
 ---
 

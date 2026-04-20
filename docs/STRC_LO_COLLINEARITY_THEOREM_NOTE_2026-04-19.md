@@ -73,6 +73,12 @@ a_u = sin_d (1 - rho),   a_u + rho sin_d = sin_d.
 
 This closes the BICAC / STRC-LO lane on the exact carrier.
 
+The companion note
+`docs/QUARK_BIMODULE_LO_SHELL_NORMALIZATION_THEOREM_NOTE_2026-04-19.md`
+re-derives the same `kappa = 1` LO endpoint from the exact shell-normalized
+Route-2 carrier columns, and can be read as an independent support-side
+corroboration of the carrier-level closure proved here.
+
 ## 1. Physical reduced carrier
 
 The live quark notes already fix the physical reduced `1(+)5` structure:

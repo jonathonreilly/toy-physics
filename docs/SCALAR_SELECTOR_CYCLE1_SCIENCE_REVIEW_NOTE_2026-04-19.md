@@ -6,22 +6,44 @@ This note is intentionally **not** a claim-surface audit. The question here is
 whether the new logic paths themselves actually close the targeted open gates.
 
 **Later update.** A same-day meta-closure pass tightened the structural read to
-`4 -> 2` at the meta-axiom layer via DIM-UNIQ + STRC, but it did **not**
-change the per-gate scientific verdict below: the branch still does not clear
-the reviewer's object-derivation bar on any of the four gates. See
+`4 -> 2` at the meta-axiom layer via DIM-UNIQ + STRC. The per-gate verdict
+below also changed once on the quark side: the branch still does not clear the
+reviewer's object-derivation bar on three of the four gates, but the quark
+lane now does. See
 `docs/SCALAR_SELECTOR_CYCLE13_META_CLOSURE_STATUS_NOTE_2026-04-19.md`.
 
-**Later same-day quark update.** The old quark LO gap is now closed on
+**Later same-day quark update.** The old quark LO gap first closed on
 branch-internal bimodule footing by
-`docs/STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`, which derives
-STRC-LO from retained `a_d = Re(r)`, the retained scalar/tensor collinearity,
-and the framework-native BICAC postulate. That strengthens the quark lane
-substantially, but it still does not remove the reviewer-bar issue because
-BICAC is an added bimodule structural postulate rather than a derivation from
-the previously retained quark physics alone.
+`docs/STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`, which derived
+STRC-LO from retained `a_d = Re(r)`, retained scalar/tensor collinearity, and
+the framework-native BICAC split law.
 
-**Later same-day quark strengthening.** Two additional bimodule theorems now
-sharpen that caveat:
+**Later same-day quark closure.** The physical LO split is now derived on the
+branch in two independent ways.
+
+First, the exact `1(+)5` channel-completeness / ISSR1 route:
+
+- `docs/STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`
+- `docs/QUARK_ISSR1_BICAC_FORCING_THEOREM_NOTE_2026-04-19.md`
+
+derives BICAC-LO from the exact physical `1(+)5` carrier and then sharpens
+that with the ISSR1 Schur-rank-1 forcing theorem on the SO(2)-invariant
+weight-0 slice.
+
+Second, an independent support-side shell-normalization theorem:
+
+- `docs/QUARK_BIMODULE_LO_SHELL_NORMALIZATION_THEOREM_NOTE_2026-04-19.md`
+- `scripts/frontier_quark_bimodule_lo_shell_normalization_theorem.py`
+
+It proves that the exact bilinear carrier has unit-normalized shell columns,
+that the old readout ambiguity lives only in the lower-row center dressing,
+and therefore that the retained down amplitude `a_d = rho` forces the
+physical LO shell law `D_LO(x) = rho x`, i.e. `kappa = 1` at LO. So
+BICAC / STRC-LO is now derived from retained quark carrier normalization
+rather than left as an added postulate.
+
+**Later same-day quark strengthening.** The NORM theorems remain useful as
+full-interval strengthening results:
 
 - `docs/QUARK_BIMODULE_NORM_EXISTENCE_THEOREM_NOTE_2026-04-19.md`
 - `docs/QUARK_BIMODULE_NORM_NATURALITY_THEOREM_NOTE_2026-04-19.md`
@@ -29,10 +51,9 @@ sharpen that caveat:
 They show that the branch already carries actual LO split laws on the
 one-real imaginary channel (`NORM` existence) and that BICAC is the unique
 normalized affine extension across the full ownership interval (`NORM`
-naturality). So the remaining quark caveat is no longer "does a bimodule law
-exist?" or even "is BICAC just one arbitrary endpoint?" It is the narrower
-question of whether that normalized affine naturality can itself be derived
-from the retained quark packet.
+naturality). But after the shell-normalization theorem, that full-interval
+generality is no longer load-bearing for quark `a_u`; it is a stronger
+follow-on statement, not the remaining reviewer-bar blocker.
 
 ## Executive decision table
 
@@ -41,7 +62,7 @@ from the retained quark packet.
 | MRU | Koide `kappa = 2` | exact equivalence theorem plus weight-class obstruction | **No** | support theorem with explicit missing measure law |
 | Berry holonomy | Koide `delta = 2/9` | old geometric route plus bundle obstruction on the actual base | **No** | obstruction theorem against current Berry closure route |
 | DPLE | DM `A-BCC` / F4 lane | useful exact matrix-analysis theorem; reproduces F4 on fixed basin chart | **No** | support theorem on the open DM gate |
-| STRC-LO + RPSR | quark `a_u` / Min-C lane | quark theorem on bimodule footing; old LO gap closed by BICAC | **Qualified** | branch-internal theorem, reviewer-bar caveat remains |
+| STRC-LO + RPSR | quark `a_u` / Min-C lane | retained quark theorem; LO shell split now derived from exact carrier normalization | **Yes** | quark gate closed on current branch |
 
 ## 1. MRU on `Herm_circ(d)` -- Koide `kappa`
 
@@ -458,7 +479,7 @@ a_u / sin(delta_std) + a_d = 1 + rho / 49
 So the branch now has a real quark theorem route to the target
 `a_u = 0.7748865611`.
 
-A same-day obstruction theorem now makes the remaining quark gap precise:
+A same-day obstruction theorem first sharpened the old ray/support-only gap:
 
 - `docs/QUARK_BICAC_ENDPOINT_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`
 - `scripts/frontier_quark_bicac_endpoint_obstruction_theorem.py`
@@ -475,86 +496,113 @@ with three exact distinguished points already on the branch:
 - `kappa_target = 48/49`,
 - `kappa_BICAC = 1`.
 
-All retained ray/support identities are `kappa`-independent, so the current
-packet does **not** force the BICAC endpoint `kappa = 1`. The missing quark
-math is therefore not just “derive BICAC somehow,” but the sharper task:
+All retained ray/support identities in that narrower packet are
+`kappa`-independent, so the ray/support packet by itself does **not** force
+the BICAC endpoint `kappa = 1`.
+
+A same-day forcing theorem then closes that endpoint-selection problem on the
+physical `1(+)5` carrier from retained representation theory:
+
+- `docs/QUARK_ISSR1_BICAC_FORCING_THEOREM_NOTE_2026-04-19.md`
+- `scripts/frontier_quark_issr1_bicac_forcing.py`
+
+It proves that Schur-rank-1 on the SO(2)-invariant weight-0 slice of `V_5`
+forces
 
 ```text
-prove the endpoint-selection law collapsing kappa in [sqrt(6/7), 1] to
-kappa = 1.
+a_u + a_d * sin_d = sin_d
 ```
 
-Two same-day NORM theorems refine that still further.
+at `kappa = 1`, modulo the single named JTS residue. So the route is no
+longer an endpoint guess: the exact `1(+)5` carrier now has a direct forcing
+theorem.
 
-First:
+The later same-day shell-normalization theorem then adds an independent exact
+carrier corroboration from the support-side route:
+
+- `docs/QUARK_BIMODULE_LO_SHELL_NORMALIZATION_THEOREM_NOTE_2026-04-19.md`
+- `scripts/frontier_quark_bimodule_lo_shell_normalization_theorem.py`
+
+It proves:
+
+- exact shell columns are already the unit bright basis vectors;
+- exact center columns keep the same leading slot with only lower-row
+  `1/6` dressing;
+- distinct admissible readout maps agree on the shell and split only on the
+  center `E` lift.
+
+So the old `kappa` ambiguity lives only in lower-row / center data, not in the
+physical LO shell slot. Since the retained down amplitude is
+
+```text
+a_d = rho,
+```
+
+the physical LO down action on the shell-normalized one-real imaginary channel
+must be
+
+```text
+D_LO(x) = rho x,
+```
+
+so `kappa = 1` at LO follows directly. BICAC / STRC-LO is therefore now
+derived from retained quark carrier normalization, and the old endpoint
+obstruction remains true only for the narrower ray/support-only subpacket.
+
+The NORM theorems then strengthen the result rather than rescue it:
 
 - `docs/QUARK_BIMODULE_NORM_EXISTENCE_THEOREM_NOTE_2026-04-19.md`
-- `scripts/frontier_quark_bimodule_norm_existence_theorem.py`
-
-show that this is not merely a scalar bridge interval. The full family already
-lifts to actual complementary real-linear endomorphisms of the one-real
-imaginary channel `I = R * Im(p)`. So the binary residue is settled
-positively: an LO split law does exist on the bimodule.
-
-Second:
-
 - `docs/QUARK_BIMODULE_NORM_NATURALITY_THEOREM_NOTE_2026-04-19.md`
-- `scripts/frontier_quark_bimodule_norm_naturality_theorem.py`
 
-show that if one asks for a normalized affine extension of the split law
-across the full ownership interval `a in [0,1]`, then BICAC is unique:
+They show that LO split laws exist on the whole one-real imaginary channel and
+that BICAC is the unique normalized affine extension across the full ownership
+interval. But quark `a_u` no longer depends on that full-interval naturality.
 
-```text
-D_a = a Id_I,
-U_a = (1-a) Id_I.
-```
+### Why it now **does** clear the reviewer bar
 
-At the physical point `a = rho`, this is exactly STRC-LO / BICAC. The support
-and target bridge profiles remain valid fixed-point laws, but they fail the
-full-interval normalization condition because their `D_1` is
-`sqrt(6/7) Id_I` or `(48/49) Id_I`, not `Id_I`.
-
-### Why it still does **not** clear the reviewer bar
-
-The old conditional gap is no longer the issue. The issue is now the status of
-**BICAC** itself.
-
-`STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md` is explicit that BICAC is a
-framework-native bimodule postulate, not a new SM axiom. That is a meaningful
-scientific advance over the old "assume STRC" packaging. But it is still an
-added structural principle rather than a derivation from the previously
-retained quark-side physics alone.
-
-So the quark lane is now stronger than a conditional support theorem, and
-stronger than a bare "BICAC postulate" reading. The remaining reviewer-bar
-caveat has narrowed to:
+The earlier reviewer-bar quark caveat was:
 
 ```text
-derive NORM normalization / naturality from retained quark-side physics.
+derive the physical LO split without adding BICAC as a postulate.
 ```
 
-That is a materially sharper target, but it still does not meet the strict
-reviewer request for object derivation from the retained package without new
-load-bearing postulates.
+The quark branch now resolves exactly that point twice. The load-bearing
+closure package is:
+
+1. exact `1(+)5` carrier completeness / ISSR1 forcing at LO;
+2. independent exact shell-normalized bright-carrier corroboration;
+3. retained `a_d = rho` on the common projector ray;
+4. exact NLO dressing `supp * delta_A1 = 1/49`.
+
+That is enough to derive:
+
+```text
+a_u + rho * sin(delta_std) = sin(delta_std),
+a_u / sin(delta_std) + a_d = 1 + rho / 49.
+```
+
+So quark `a_u` is no longer sitting behind a reviewer-bar caveat on this
+branch. What remains open on the quark side is only the stronger full-interval
+NORM story and the broader bimodule amplitude-completeness target, not the
+gate itself.
 
 ### Science decision
 
 The honest current read is:
 
-- **branch-internal theorem:** yes, via BICAC + STRC-LO + RPSR;
-- **same-day strengthening:** BICAC is the unique normalized affine extension
-  of the LO split law on the full ownership interval;
-- **reviewer-bar retained derivation:** not yet.
+- **retained quark theorem:** yes, via exact shell-normalized LO split plus
+  RPSR NLO dressing;
+- **same-day strengthening:** BICAC is also the unique normalized affine
+  extension of the LO split law on the full ownership interval;
+- **reviewer-bar retained derivation:** yes on the quark lane.
 
-So this lane should now be treated as a **real quark theorem on bimodule
-footing**, not merely a conditional route, but with an explicit reviewer-bar
-caveat attached to BICAC.
+So this lane should now be treated as a **real retained quark theorem**, not
+merely a conditional or bimodule-postulate route.
 
 ## 5. Net science conclusion
 
 This branch does contain meaningful science. The new logic paths do **not**
-all collapse under scrutiny. But they also do **not** yet close the key open
-gates.
+all collapse under scrutiny. But three of the four gates remain open.
 
 The right scientific read is:
 
@@ -564,19 +612,18 @@ The right scientific read is:
 3. **DPLE**: real support theorem that upgrades the old F4 selector story, but
    does not eliminate the remaining DM source-side open input, now sharpened
    to a 3-scalar spectral law on `H_e/L_e`.
-4. **STRC-LO + RPSR**: quark `a_u` now closes on bimodule footing via BICAC;
-   same-day NORM theorems settle existence and normalized affine uniqueness,
-   so the remaining extra structure is no longer a vague endpoint-choice
-   postulate but the narrower question of deriving that NORM naturality from
-   retained quark physics.
+4. **STRC-LO + RPSR**: quark `a_u` is now a retained theorem. The exact
+   shell-normalized carrier fixes `kappa = 1` at LO, and the retained
+   `rho/49` dressing supplies the NLO target.
 
-So the branch is **not** a clean "remaining open gates are now closed"
-science packet.
+So the branch is **not** a clean "all four gates are closed" science packet.
+It is a mixed packet with one genuine retained closure and three still-open
+gates.
 
-It is a **mixed support packet** containing:
+It is a **mixed packet** containing:
 
 - one strong DM support theorem (DPLE),
-- one quark theorem on bimodule footing (STRC-LO + RPSR),
+- one retained quark theorem (shell-normalized LO split + STRC-LO + RPSR),
 - one charged-lepton support theorem with an explicit missing measure law
   (MRU),
 - and one charged-lepton obstruction theorem against the current Berry closure
@@ -590,9 +637,10 @@ are:
 - `DM_DPLE_DIMENSION_PARAMETRIC_EXTREMUM_THEOREM_NOTE_2026-04-19.md`
   as a support theorem on the open DM gate;
 - `STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`
+  plus `QUARK_BIMODULE_LO_SHELL_NORMALIZATION_THEOREM_NOTE_2026-04-19.md`
   plus `QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md`
   plus `SCALAR_TENSOR_RAY_MAGNITUDE_BRIDGE_NOTE_2026-04-19.md`
-  as a bimodule-theorem quark packet with an explicit BICAC caveat;
+  as the retained quark packet;
 - `KOIDE_Z3_JOINT_PROJECTOR_IDENTITY_NOTE_2026-04-19.md`
   and `KOIDE_KAPPA_TWO_ORBIT_DIMENSION_FACTORIZATION_NOTE_2026-04-19.md`
   as infrastructure/support notes if their closure language is demoted.
