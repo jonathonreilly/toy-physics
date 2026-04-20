@@ -11,7 +11,7 @@
 | I2 | Brannen phase `δ = 2/9` | θ | retained observational (Berry identifies geometrically on the physical selected line; ambient-S² derivation blocked by bundle obstruction) | either (a) a justified natural completion of the physical 1-D locus to an ambient equivariant base carrying `c_1 = dim(doublet) = 2`, or (b) a Wilson-line / Z³-orbit quantization on the physical base that forces the holonomy value |
 | I3 | Selected-line reduction `H_sel(m) = H(m, √6/3, √6/3)` | θ, m_* | **closed on this branch**: the Koide microscopic target note now names the charged-lepton two-Higgs canonical reduction and selected-line closure notes inline | none beyond landing the updated target note |
 | I4 | Chamber bound `q_+ + δ ≥ √(8/3)` | A-BCC | **closed on this branch**: inline derivation added from the retained active-half-plane inverse chart | none beyond landing the updated A-BCC note |
-| I5 | PMNS observational pins (NuFit 3σ ranges, T2K `sin δ_CP < 0`) | A-BCC (sigma-chain) | **further reduced on this branch, not fully closed**: `DM_PMNS_UPPER_OCTANT_SOURCE_CUBIC_SELECTOR_THEOREM_NOTE_2026-04-20.md` closes the CP-sign / `sigma_hier` half by the coefficient-free selector system `s23^2 > 1/2`, `I_src(H) > 0`; the new `DM_PMNS_NE_SEED_SURFACE_EXACT_SOURCE_MANIFOLD_THEOREM_NOTE_2026-04-20.md` shows that on the charged-lepton-side minimal branch the physical PMNS angle triple already lies on a regular local `2`-real source manifold inside the fixed native `N_e` seed surface, while the current exact nonlocal seed-surface selector families all miss it | framework-native `2`-real point-selection law on the exact PMNS source manifold (equivalently: the selected-branch Hermitian-data law on the charged-lepton-side branch) |
+| I5 | PMNS observational pins (NuFit 3σ ranges, T2K `sin δ_CP < 0`) | A-BCC (sigma-chain) | **closed on this branch**: `DM_PMNS_UPPER_OCTANT_SOURCE_CUBIC_SELECTOR_THEOREM_NOTE_2026-04-20.md` closes the CP-sign / `sigma_hier` half; `DM_PMNS_NE_SEED_SURFACE_EXACT_SOURCE_MANIFOLD_THEOREM_NOTE_2026-04-20.md` reduces the angle side to a point-selection law on the exact charged-lepton-side PMNS manifold; the new `DM_PMNS_Z3_DOUBLET_BLOCK_CENTER_SELECTOR_THEOREM_NOTE_2026-04-20.md` proves that the coefficient-free `Z_3` doublet-block center law `delta_db(H) = 1`, `q_+(H) = 0` cuts that manifold to an exact two-sheet pair, and the already-closed `I12` law `I_src(H) > 0` selects the physical sheet uniquely | none beyond landing the center-selector closure theorem |
 | I6 | Scalar-lane SO(2)-quotient of the real doublet | κ (MRU route only) | **closed on this branch**: `KOIDE_SCALAR_LANE_OBSERVABLE_RADIUS_THEOREM_NOTE_2026-04-20.md` derives the quotient from the observable-principle local scalar jet | none for the MRU route; the spectrum/operator bridge remains an independent route |
 | I7 | Bimodule `B = Cl(3)/Z₃ ⊗ Cl_CKM(1⊕5)` | a_u | **closed on this branch**: the Quark ISSR1 headline theorem now carries a self-contained provenance paragraph for the bimodule route | none beyond landing the updated Quark note |
 | I8 | Retained atoms `ρ = 1/√42`, `supp = 6/7`, `δ_A1 = 1/42` | a_u | **closed on this branch**: the Quark ISSR1 headline theorem now cites the exact CKM atlas atoms inline | none beyond landing the updated Quark note |
@@ -69,11 +69,14 @@ and Quark ISSR1 headline notes.
 
 ### Priority 5: I5, I12 (PMNS observational pins and σ_hier permutation)
 
-Scope is larger than the scalar-selector cycle; these are part of the broader charged-lepton flagship gate. Closing them requires framework-native PMNS derivation, which is an open program on multiple branches (lepton-mass-tower, lepton-pmns-integration, dm-leptons-review). Not scoped to tomorrow's submission.
+Historically this priority sat on the broader charged-lepton flagship gate.
+On this branch it is now fully closed: `I12` is closed by the upper-octant /
+source-cubic selector theorem, and `I5` is closed by the exact PMNS-manifold
+center-selector theorem below.
 
 Update on this branch:
 
-- `I12` is now closed. The old
+- `I12` is closed. The old
   `DM_SIGMA_HIER_H_INTRINSIC_NO_GO_THEOREM_NOTE_2026-04-20.md` ruled out
   `H`-intrinsic and `μ↔τ`-even scalar families, and
   `DM_PMNS_CP_ORIENTATION_PARITY_REDUCTION_NOTE_2026-04-20.md` reduced the
@@ -86,15 +89,17 @@ Update on this branch:
   `DM_SIGMA_HIER_UPPER_OCTANT_SELECTOR_THEOREM_NOTE_2026-04-20.md`, with
   `DM_I12_SIGMA_HIER_CLOSURE_PACKET_NOTE_2026-04-20.md` added as a
   reviewer-facing proof packet.
-- `I5` is reduced one step further. The CP-sign half is now closed by the same
-  theorem, and the new
+- `I5` is now also closed on the current theorem stack. The reduction note
   `DM_PMNS_NE_SEED_SURFACE_EXACT_SOURCE_MANIFOLD_THEOREM_NOTE_2026-04-20.md`
-  sharpens the angle side: on the charged-lepton-side minimal branch the
-  physical PMNS angle triple already lies on a regular local `2`-real source
-  manifold inside the fixed native `N_e` seed surface, but the current exact
-  nonlocal seed-surface selector families do not pick it. So the remaining
-  `I5` gap is no longer generic “derive the PMNS triple somehow.” It is the
-  framework-native point-selection law on that exact PMNS source manifold.
+  had already shown that the physical PMNS angle triple lies on a regular
+  local `2`-real source manifold inside the fixed native `N_e` seed surface.
+  The new
+  `DM_PMNS_Z3_DOUBLET_BLOCK_CENTER_SELECTOR_THEOREM_NOTE_2026-04-20.md`
+  supplies the missing point-selection law on that exact manifold: the
+  coefficient-free `Z_3` doublet-block center law `delta_db(H) = 1`,
+  `q_+(H) = 0` cuts the manifold to an exact two-sheet pair, and the
+  already-closed `I12` source-cubic law `I_src(H) > 0` selects the physical
+  sheet uniquely.
 
 ### Priority 6: I6 (SO(2)-quotient)
 
@@ -121,9 +126,9 @@ compact remainder: the exact active-chamber `chi^2 = 0` set is
 
 With the above items retained-observational, the honest Nature-grade statement for this cycle is:
 
-> Four Tier-1 scalar-selector gates of the Standard Model — the Koide charged-lepton cone normalization (κ = 2, equivalently the operator-side Koide relation), the Koide Brannen–Zenczykowski phase offset (δ = 2/9), the dark-matter A-BCC basin-sheet choice, and the up-sector quark reduced amplitude (a_u) — each reduce to retained Cl(3)/Z³ framework ingredients plus named retained inputs (the Koide cone relation Q = 2/3; the Brannen phase value δ = 2/9; the PMNS angle triple `(sin^2 theta_12, sin^2 theta_13, sin^2 theta_23)`; the CKM atlas unit-ray parameter ρ = 1/√42 and its structure atoms). No new axioms are added this cycle. The framework contributes (i) a canonical Pancharatnam–Berry geometric identification of δ on the physical selected line, (ii) an exact Fourier-bridge algebraic reduction of operator-side κ = 2 to spectrum-side Q = 2/3, (iii) a Sylvester-inertia reduction of A-BCC, now sharpened by an exact compact active-chamber completeness theorem, an exact source-cubic / parity reduction of the PMNS CP sign, and a coefficient-free upper-octant / source-cubic selector law fixing `sigma_hier = (2,1,0)`, (iv) a linear-algebra derivation of the up-sector quark closure on the retained 1⊕5 bimodule. Each retained observational input is listed in the Remaining-Open-Imports register along with the derivation that would close it.
+> Four Tier-1 scalar-selector gates of the Standard Model — the Koide charged-lepton cone normalization (κ = 2, equivalently the operator-side Koide relation), the Koide Brannen–Zenczykowski phase offset (δ = 2/9), the dark-matter A-BCC basin-sheet choice together with the PMNS observational pins, and the up-sector quark reduced amplitude (a_u) — each reduce to retained Cl(3)/Z³ framework ingredients plus named retained inputs (the Koide cone relation Q = 2/3; the Brannen phase value δ = 2/9; the CKM atlas unit-ray parameter ρ = 1/√42 and its structure atoms). No new axioms are added this cycle. The framework contributes (i) a canonical Pancharatnam–Berry geometric identification of δ on the physical selected line, (ii) an exact Fourier-bridge algebraic reduction of operator-side κ = 2 to spectrum-side Q = 2/3, (iii) a Sylvester-inertia reduction of A-BCC, now sharpened by an exact compact active-chamber completeness theorem, an exact source-cubic / parity reduction of the PMNS CP sign, an exact charged-lepton-side PMNS source-manifold theorem, and a coefficient-free `Z_3` doublet-block center law `delta_db = 1`, `q_+ = 0` whose unique physical sheet is selected by `I_src(H) > 0`, (iv) a linear-algebra derivation of the up-sector quark closure on the retained 1⊕5 bimodule. Each retained observational input is listed in the Remaining-Open-Imports register along with the derivation that would close it.
 
-Closing any priority-1 or priority-2 item above would upgrade the corresponding lane from retained-conditional to retained-derivation and eliminate the named retained input. Closing all six priority-1–4 items would move the entire cycle from retained-conditional to retained-derivation, leaving only the PMNS angle triple as the non-derived ingredient on the DM side.
+Closing any priority-1 or priority-2 item above would upgrade the corresponding lane from retained-conditional to retained-derivation and eliminate the named retained input. On this branch, after the `I5`, `I11`, and `I12` closures, the remaining live retained inputs in this register are only `I1`, `I2`, and their corollary `I10`.
 
 ## §3 Reproduction of current retained-conditional state
 
@@ -141,6 +146,7 @@ All runners currently pass on canonical (branch `review/scalar-selector-cycle1-t
 | DM A-BCC (sigma-chain attack cascade) | `frontier_dm_pns_attack_cascade.py` | 47 | multi-observable chain |
 | DM A-BCC (assumptions audit) | `frontier_dm_abcc_assumptions_audit.py` | 21 | five-route structural no-go |
 | DM A-BCC (upper-octant / source-cubic selector) | `frontier_dm_pmns_upper_octant_source_cubic_selector_theorem_2026_04_20.py` | 14 | closes `sigma_hier` and the PMNS CP-sign half on the active chamber |
+| DM A-BCC (Z3 doublet-block center selector) | `frontier_dm_pmns_z3_doublet_block_center_selector_theorem_2026_04_20.py` | 15 | closes the remaining PMNS angle-pin on the current theorem stack |
 | Quark a_u (JTS-affine-physical-carrier + ISSR1) | `frontier_quark_issr1_bicac_forcing.py` | 13 | headline closure |
 | Quark a_u (JTS physical-point second route) | `frontier_quark_jts_physical_point_closure_theorem.py` | 12 | independent witness |
 | Quark a_u (shell-normalization corroboration) | `frontier_quark_bimodule_lo_shell_normalization_theorem.py` | 10 | Route-2 carrier |
