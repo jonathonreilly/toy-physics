@@ -61,6 +61,12 @@ The clean current endpoint is:
   `lambda_* = 0.015808703285395...`, giving direction cosine `0.996266...`
   to the PDG `sqrt(m)` direction; chamber slack is only a near-hit, not the
   exact root
+- that same Higgs-dressed route is now sharper again: the old chamber slack
+  scalar is exactly the visible chamber-link entry `Re(H_*[1,3])`, the
+  induced species block is exactly one scalar `O_0` channel plus the reached
+  principal `2 x 2` resolvent block, and exact Koide near the physical root
+  is a local `O_0` renormalization law of that visible chamber link rather
+  than a new free selector scalar
 
 So the current charged-lepton state is:
 
@@ -89,6 +95,7 @@ So the current charged-lepton state is:
 17. [KOIDE_TRANSPORT_GAP_CONSTANT_NO_GO_NOTE_2026-04-20.md](./KOIDE_TRANSPORT_GAP_CONSTANT_NO_GO_NOTE_2026-04-20.md)
 18. [KOIDE_WEIGHTED_CHARACTER_SOURCE_AXIS_THEOREM_NOTE_2026-04-20.md](./KOIDE_WEIGHTED_CHARACTER_SOURCE_AXIS_THEOREM_NOTE_2026-04-20.md)
 19. [KOIDE_HIGGS_DRESSED_RESOLVENT_ROOT_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_RESOLVENT_ROOT_THEOREM_NOTE_2026-04-20.md)
+20. [KOIDE_HIGGS_DRESSED_CHAMBER_LINK_RENORMALIZATION_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_CHAMBER_LINK_RENORMALIZATION_THEOREM_NOTE_2026-04-20.md)
 
 ## Package Role
 
@@ -121,7 +128,10 @@ Koide ray. The strongest surviving Higgs-dressed transport route has also now
 collapsed to one scalar root law on the missing-axis resolvent lift: once the
 baseline `h_0 = 0` is fixed, the exact Koide hits are isolated `lambda` roots,
 with one unique small positive root near chamber slack and cosine `0.996266`
-to the PDG `sqrt(m)` direction.
+to the PDG `sqrt(m)` direction. That route is now sharper again: the visible
+chamber scalar is already `Re(H_*[1,3]) = lambda_slack`, while exact Koide
+near the physical positive root is a local `O_0` renormalization branch of
+that visible chamber link.
 
 So the right classification is:
 

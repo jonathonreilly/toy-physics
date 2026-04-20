@@ -100,6 +100,19 @@ reweight the canonical character sources. See
 2. **Retained `C_3`-singlet Schur law on the `4 x 4` (hw=1 + singlet/baryon) block.** The new reduction theorem shows every equivariant `4 x 4` extension collapses to `K_eff(m) = K_sel(m) - lambda(m) J`. So this route is now exactly: derive the scalar singlet-Schur law `lambda(m)` from the microscopic lattice action. The later constant-coupling sharpening proves that a fixed positive `lambda` does not close the selector by itself; it merely reparameterizes a continuum of branch minima. So the real remaining target is the microscopic `lambda`-law, not the existence of some positive constant `lambda`.
 3. **One-clock semigroup / Γ-orbit positive witness route.** Already delivers cos-similarity > 1 − 10⁻⁹ with PDG √m-vector at the cone point `H_*`. Currently conditional on G1 observational chamber pins (M_STAR, DELTA_STAR, Q_PLUS_STAR). If those three pins can be derived from retained framework, `Q = 2/3` follows.
 4. **Missing-axis Higgs-dressed resolvent root route.** On the retained avenue-G missing-axis lift `W_4(h_0) = diag(h_0, H_*)`, the resolvent family `(lambda I - W_4)^(-1)` now has an exact Koide root at baseline `h_0 = 0`: the unique small positive root `lambda_* ~= 0.0158087032854` yields `Q = 2/3` exactly on the induced species spectrum and direction cosine `0.996266...` to the PDG √m-direction. The nearby branch-internal chamber slack `lambda_slack = q_+* + delta_* - sqrt(8/3) ~= 0.0158555114905` is only a near-hit, not the exact root; exact Koide at `lambda_slack` is restored by a tiny positive `h_0 ~= 4.49e-5`. So this avenue is now reduced to a one-scalar `lambda` law (or equivalent near-surface `(lambda, h_0)` law), not a broad functional-class ambiguity. Closing it requires a retained derivation of that scalar law from the microscopic transport operator. See `docs/KOIDE_HIGGS_DRESSED_RESOLVENT_ROOT_THEOREM_NOTE_2026-04-20.md`.
+   Later same-day sharpening: this route is now even more concrete. The old
+   chamber slack scalar is exactly the visible chamber-link entry
+   `lambda_slack = Re(H_*[1,3])`, and the induced species block is exactly a
+   scalar `O_0` resolvent channel plus the reached principal `2 x 2`
+   resolvent block of `(lambda I - H_*)^(-1)`. On the positive branch,
+   Koide `Q = 2/3` is therefore an exact balance law between
+   `x = 1/(lambda - h_0)`, `t = Tr(B_lambda)`, and `d = det(B_lambda)`,
+   with `det(B_lambda)` already fixed by Jacobi complement identity:
+   `det(B_lambda) = (lambda - M_*) / det(lambda I - H_*)`. So the remaining
+   open object on this avenue is not an unconstrained new scalar `lambda`; it
+   is the microscopic `O_0` renormalization law of the visible chamber-link
+   scalar `Re(H_*[1,3])`. See
+   `docs/KOIDE_HIGGS_DRESSED_CHAMBER_LINK_RENORMALIZATION_THEOREM_NOTE_2026-04-20.md`.
 
 **Required retained ingredients for any of the above:** explicit lattice propagator or transport-integral definition on the retained Cl(3)/Z³ carrier; currently on main as partial-support.
 
