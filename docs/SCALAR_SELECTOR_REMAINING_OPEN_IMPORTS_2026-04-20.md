@@ -14,7 +14,7 @@ prevent the corresponding lane from being marked retained-derivation on main.
 |---|---|---|---|---|
 | I1 | Koide relation `Q = 2/3` | κ, θ | retained observational; the same-branch linking theorem now shows the natural general form is `Q = 2/d` by equal-sector norm, not `(d−1)/d` | a Cl(3)/Z³-native forcing of the cone condition `a_0² = 2|z|²` from retained representation-theory or from a retained scalar-potential minimization that lands on the cone |
 | I2 / P | Brannen phase `δ = 2/9` on the physical base | θ | the new Brannen-phase reduction theorem reduces I2 to `I1` via `δ = Q/d`, but the cycle-2 linking theorem + direct no-go sharpen the live load-bearing step as one named radian-bridge postulate `P`: the structural count `2/d²` must be identified with the physical Berry holonomy in radians on the selected-line CP¹ base | either derive `P` directly by a retained Wilson/lattice identity on the physical base, or derive a physical-base theorem that makes the Brannen reduction `δ = Q/d` canonical; then closing `I1` closes `I2` automatically |
-| I5 | PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)` | A-BCC (sigma-chain) | retained observational input; the new upper-octant / source-cubic selector theorems close the CP-sign / `σ_hier` half on the active chamber, and the fixed-`N_e` exact-source-manifold theorem shows the physical PMNS target already lies on a regular local `2`-real source manifold on the charged-lepton-side seed surface. What remains is the point-selection law on that exact manifold | framework-native point-selection law on the exact PMNS source manifold inside the fixed native `N_e` seed surface |
+| I5 | PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)` | A-BCC (sigma-chain) | retained observational input; the new upper-octant / source-cubic selector theorems close the CP-sign / `σ_hier` half on the active chamber, and the fixed-`N_e` exact-source-manifold theorem shows the physical PMNS target already lies on a regular local `2`-real source manifold on the charged-lepton-side seed surface. The tested `Z_3` center law `delta_db = 1`, `q_+ = 0` is useful only conditionally: together with `I_src > 0` it still leaves a positive-sheet `3`-real locus and does not derive the PMNS target by itself | framework-native point-selection law stronger than the current `Z_3` center law on the exact PMNS / positive-center locus |
 | I10 | H_* witness ratio `w/v ≈ 4.101` | m_* (selected-line point) | retained observational; selected-line provenance is now closed, so only the scalar-phase pin remains | deriving `m_*` as a corollary of `δ = 2/9` via the exact scalar-phase bridge (already established). If I2 / `P` closes, I10 closes automatically |
 
 ## §0a Closed in cycle 2
@@ -252,6 +252,15 @@ PMNS angle triple somehow”: it is the missing point-selection law on that
 exact `2`-real source manifold. See
 `docs/DM_PMNS_NE_SEED_SURFACE_EXACT_SOURCE_MANIFOLD_THEOREM_NOTE_2026-04-20.md`.
 
+**Tested center-law route (2026-04-20):** the proposed coefficient-free
+`Z_3` doublet-block center law `delta_db(H) = 1`, `q_+(H) = 0` does not close
+`I5` by itself, even after adding the already-closed sheet law `I_src(H) > 0`.
+On the verified patch it leaves a local positive-sheet `3`-real center locus,
+and the PMNS angle triple varies macroscopically along that locus. So the
+center law is a useful conditional cut on the exact PMNS manifold, but not yet
+the missing native point-selection law. See
+`docs/DM_PMNS_Z3_DOUBLET_BLOCK_CENTER_POSITIVE_SHEET_NO_GO_THEOREM_NOTE_2026-04-20.md`.
+
 ### Priority 4: I10 (selected-line physical point)
 
 Now the only open content behind `m_*` is the scalar-phase pin itself. If
@@ -271,7 +280,8 @@ statement for this cycle is:
 > with the only still-open named retained inputs now being the Koide cone
 > relation Q = 2/3, the residual radian-bridge P behind the physical Brannen
 > phase value δ = 2/9, and the PMNS angle triple point-selection law on the
-> exact charged-lepton-side seed manifold. No new
+> exact charged-lepton-side seed manifold beyond the currently tested `Z_3`
+> center law. No new
 > axioms are added this cycle. The framework
 > contributes (i) a canonical Pancharatnam–Berry geometric identification of δ
 > on the physical selected line together with a precise no-go for deriving its
@@ -281,7 +291,9 @@ statement for this cycle is:
 > sigma-chain that combines retained Cl(3)/Z³ theorems with the PMNS
 > angle-triple pin, now sharpened by an exact fixed-`N_e` source-manifold
 > theorem showing the target already lies on a regular `2`-real source
-> manifold, and (iv) a linear-algebra derivation of the up-sector
+> manifold together with a center-law positive-sheet no-go showing that the
+> current `delta_db = 1`, `q_+ = 0`, `I_src > 0` proposal is still
+> insufficient, and (iv) a linear-algebra derivation of the up-sector
 > quark closure on the retained `1⊕5` bimodule and CKM-atlas atom package,
 > whose provenance is now surfaced inline on the review branch. Each retained
 > observational input or structural postulate still blocking native closure is
@@ -317,6 +329,7 @@ the primary closure runner and its verification counts are:
 | DM A-BCC (upper-octant / source-cubic selector) | `frontier_dm_pmns_upper_octant_source_cubic_selector_theorem_2026_04_20.py` | 14 | fixes Basin 1 uniquely on the active chamber |
 | DM A-BCC (local-family no-go) | `frontier_dm_pmns_local_selector_family_no_go_theorem_2026_04_20.py` | 15 | reduces `I5` to nonlocal point-selection / angle triple only |
 | DM A-BCC (fixed-`N_e` exact-source manifold) | `frontier_dm_pmns_ne_seed_surface_exact_source_manifold_theorem_2026_04_20.py` | 12 | shows the physical PMNS target already lies on a regular local `2`-real source manifold |
+| DM A-BCC (center-law positive-sheet no-go) | `frontier_dm_pmns_z3_doublet_block_center_positive_sheet_no_go_2026_04_20.py` | 14 | shows `delta_db = 1`, `q_+ = 0`, `I_src > 0` still leaves a positive-sheet `3`-real locus |
 | Quark a_u (JTS-affine-physical-carrier + ISSR1) | `frontier_quark_issr1_bicac_forcing.py` | 13 | headline closure |
 | Quark a_u (JTS physical-point second route) | `frontier_quark_jts_physical_point_closure_theorem.py` | 12 | independent witness |
 | Quark a_u (shell-normalization corroboration) | `frontier_quark_bimodule_lo_shell_normalization_theorem.py` | 10 | Route-2 carrier |

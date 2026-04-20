@@ -13,7 +13,7 @@ Four Tier-1 Standard Model scalar-selector gates close this cycle via retained C
 |---|---|---|---|
 | **Koide κ** | Charged-lepton cone normalization `κ = 2` (equivalently `Q = 2/3`) | Spectrum–operator Fourier-bridge identity + block-total Frobenius measure | `Q = 2/3` (observational Koide relation) |
 | **Koide θ** | Brannen–Zenczykowski phase offset `δ = 2/9` | Pancharatnam–Berry identification on the physical selected line + exact scalar–phase bridge | `δ = 2/9` (observational Brannen relation) |
-| **DM A-BCC** | Physical neutrino-source basin selection (Basin 1) | Sylvester signature-forcing + σ-chain + DPLE `F_4` + chamber bound + upper-octant / source-cubic selector | PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)`; now sharpened to a point-selection law on an exact local `2`-real PMNS source manifold |
+| **DM A-BCC** | Physical neutrino-source basin selection (Basin 1) | Sylvester signature-forcing + σ-chain + DPLE `F_4` + chamber bound + upper-octant / source-cubic selector | PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)`; now sharpened to a point-selection law on an exact local `2`-real PMNS source manifold beyond the currently tested `Z_3` center law |
 | **Quark a_u** | Up-sector reduced amplitude `a_u = 0.7748865611` | Affine-physical-carrier JTS + one-dimensional 5-channel residue + RPSR NLO | Bimodule `B = Cl(3)/Z₃ ⊗ Cl_CKM(1⊕5)`, retained atoms `ρ, supp, δ_A1` (CKM atlas) |
 
 ---
@@ -205,7 +205,10 @@ law, and the coefficient-free source-cubic selector. The new fixed-`N_e`
 exact-source-manifold theorem further sharpens the remaining angle-side gap:
 the physical PMNS target already lies on an exact regular local `2`-real
 source manifold on the charged-lepton-side seed surface, so the live missing
-object is the point-selection law on that manifold, not target existence.
+object is the point-selection law on that manifold, not target existence. The
+tested `Z_3` center proposal `delta_db = 1`, `q_+ = 0` is not yet that law:
+the center-law positive-sheet no-go theorem shows that adding `I_src > 0`
+still leaves a positive-sheet `3`-real locus with varying PMNS triples.
 PNS is derived as a property of Basin 1, not axiomatized.
 
 ---
