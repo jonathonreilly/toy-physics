@@ -237,7 +237,7 @@ verified inside the RPSR runner (T8, T9).
 
 ---
 
-## 7. Cycle-11/12 results and retention targets
+## 7. Cycle-11/12/13 results and retention targets
 
 ### 7.1 A-BCC conditional closure (cycles 11–12, LANDED)
 
@@ -267,14 +267,23 @@ on any path (at t ≈ 0.028 for Basin 2; t ≈ 0.038 for Basin X). Basin 1
 has the same signature (1,0,2) as H_base and never crosses det=0
 (P3 Sylvester, min det = 0.878, path-independent over 6 path shapes).
 
-**A-BCC status:** CONDITIONAL THEOREM gated on PNS. Reduction (upgraded
-cycle 12):
-A-BCC ← PNS (any path) + Sylvester signature-forcing + det(H_base) > 0.
-PNS is observationally grounded (measured neutrino masses non-zero) but
-not derived from Cl(3)/Z³ alone. Axiom cost: 1 (PNS). The cycle 12
-upgrade is that PNS → A-BCC holds for ANY coupling path, not only the
-linear path; and the mechanism (two distinct signature chambers) is
-fully identified.
+**A-BCC status (updated cycle 13):** FULLY CLOSED within the retained
+measurement framework. Reduction (cycle 13 sigma-chain + cycles 11–12):
+
+    PNS (sigma-chain, cycle 13)
+      ← Chamber (q+δ ≥ √(8/3), Cl(3)/Z³)
+         + chi²=0 (NuFit)
+         + sigma = (2,1,0) (sigma-hier uniqueness, on main)
+         + T2K sin(δ_CP) < 0 (ABCC_CP_PHASE, on main)
+         + P3 Sylvester (on main)
+    A-BCC (Sylvester forcing, cycle 12)
+      ← PNS (any path) + Sylvester (1,0,2)/(2,0,1) chambers
+
+All observational inputs (T2K + NuFit) were already retained before
+cycle 13. No new axiom cost. Axiom cost relative to retained framework: 0.
+
+See `docs/DM_PNS_ATTACK_CASCADE_NOTE_2026-04-19.md` (cycle 13,
+PASS=47 FAIL=0).
 
 ### 7.2 Open retention target: Quark gate LO identity
 
@@ -339,25 +348,19 @@ conditional closure (RPSR). Zero new axioms added in all three scalar-
 selector closures; the conditional closure is gated on **one** specific
 LO algebraic identity (cycle 11 target).
 
-**A-BCC status (updated cycles 11–12).** DPLE closes the F4 scalar-
+**A-BCC status (updated cycles 11–13).** DPLE closes the F4 scalar-
 selector axiom on the conditioned sub-gate. A-BCC (source-side physical-
-sheet identification) is now a **conditional theorem** gated on PMNS
-Non-Singularity (PNS): see
-`DM_ABCC_PMNS_NONSINGULARITY_THEOREM_NOTE_2026-04-19.md` (cycle 11,
-PASS=38 FAIL=0) and
-`DM_ABCC_SIGNATURE_FORCING_THEOREM_NOTE_2026-04-19.md` (cycle 12,
-PASS=54 FAIL=0). The full assumptions audit is in
-`DM_ABCC_ASSUMPTIONS_AUDIT_NOTE_2026-04-19.md` (PASS=21 FAIL=0);
-all five algebraic routes fail; PNS is the one remaining input.
+sheet identification) is now **fully closed within the retained
+measurement framework** via the sigma-chain (cycle 13):
+`DM_PNS_ATTACK_CASCADE_NOTE_2026-04-19.md` (cycle 13, PASS=47 FAIL=0).
 
-PNS states that no neutrino eigenvalue passes through zero during the
-physical dark-matter coupling. Both known C_neg chi²=0 basins explicitly
-violate PNS via a Sylvester signature mismatch: H_base has signature
-(1,0,2), Basin 2/X have signature (2,0,1) — different topological
-chambers of GL(Herm_3). The zero-crossing (spectral flow = 1) at
-t ≈ 0.028 (Basin 2) and t ≈ 0.038 (Basin X) is algebraically mandatory
-on any continuous path. Basin 1 is the unique chi²=0 basin with the same
-signature (1,0,2) as H_base.
+The complete chain: Cl(3)/Z³ → H_base, chamber → chi²=0 + sigma-hier →
+Basin 1 uniquely → P3 Sylvester → PNS → Sylvester signature-forcing →
+A-BCC. Observational inputs (T2K + NuFit) were already retained; no new
+axiom cost. Basin 2/X are excluded by T2K (ABCC_CP_PHASE, on main) AND
+by Sylvester signature mismatch (cycle 12): signature (2,0,1) ≠ H_base
+(1,0,2), forcing det=0 crossing (spectral flow = 1) on any path to
+either basin. Basin 1 is the unique physical chi²=0 basin.
 
 MRU and DPLE specialize dim-parametric observable-principle theorems at
 d = 3, while Berry closes through the exact selected-line phase carrier.
@@ -366,8 +369,9 @@ on main (R1 bivector-count saturation, R2 anomaly parity, R3
 Cayley-Hamilton coincidence, 7 no-gos), but the Berry half should no longer be
 described as an ambient dim-parametric monopole theorem.
 
-Runner suite: 9 runners (7 cycle-10 + 1 cycle-11 PNS + 1 cycle-12
-Sylvester), all PASS=N FAIL=0. No retained runner on main regresses.
+Runner suite: 10 runners (7 cycle-10 + 1 cycle-11 PNS + 1 cycle-12
+Sylvester + 1 cycle-13 PNS cascade), all PASS=N FAIL=0. No retained
+runner on main regresses.
 
 **Reading order:** start here. Then (in order):
 `KOIDE_MOMENT_RATIO_UNIFORMITY_THEOREM_NOTE` ->
