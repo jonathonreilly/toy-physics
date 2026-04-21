@@ -37,6 +37,11 @@ The clean current endpoint is:
   exactly the Brannen/circulant phase up to fixed `C_3` ordering bookkeeping,
   so once an ambient law fixes that phase the current selected-line target
   follows automatically
+- the new Brannen-phase endpoint pullback takes that one step further: the
+  current exact stack now writes the selected-line scalar bridge, reachable-slot
+  ratio, and first-branch endpoint directly as pullbacks of the ambient Brannen
+  phase, so the remaining burden is narrower than "phase plus separate
+  endpoint law"
 - the bare selected-line missing-axis resolvent boundary now also closes
   negatively: that local family can imitate the charged-lepton packet
   numerically, but only away from the physical first-branch endpoint, so the
@@ -75,7 +80,8 @@ So the current charged-lepton state is:
 14. [KOIDE_ONE_CLOCK_ENDPOINT_TARGET_THEOREM_NOTE_2026-04-20.md](./KOIDE_ONE_CLOCK_ENDPOINT_TARGET_THEOREM_NOTE_2026-04-20.md)
 15. [KOIDE_SELECTED_LINE_CYCLIC_PHASE_TARGET_NOTE_2026-04-20.md](./KOIDE_SELECTED_LINE_CYCLIC_PHASE_TARGET_NOTE_2026-04-20.md)
 16. [KOIDE_SELECTED_LINE_BRANNEN_PHASE_ORBIT_BRIDGE_NOTE_2026-04-21.md](./KOIDE_SELECTED_LINE_BRANNEN_PHASE_ORBIT_BRIDGE_NOTE_2026-04-21.md)
-17. [KOIDE_SELECTED_LINE_BARE_RESOLVENT_ENDPOINT_BOUNDARY_NOTE_2026-04-20.md](./KOIDE_SELECTED_LINE_BARE_RESOLVENT_ENDPOINT_BOUNDARY_NOTE_2026-04-20.md)
+17. [KOIDE_BRANNEN_PHASE_ENDPOINT_PULLBACK_NOTE_2026-04-21.md](./KOIDE_BRANNEN_PHASE_ENDPOINT_PULLBACK_NOTE_2026-04-21.md)
+18. [KOIDE_SELECTED_LINE_BARE_RESOLVENT_ENDPOINT_BOUNDARY_NOTE_2026-04-20.md](./KOIDE_SELECTED_LINE_BARE_RESOLVENT_ENDPOINT_BOUNDARY_NOTE_2026-04-20.md)
 
 ## Package Role
 
@@ -109,6 +115,10 @@ the current selected-line phase target is already the Brannen/circulant phase
 variable up to one fixed `C_3` shift and the current slot-orientation sign, so
 the remaining bridge is ambient phase selection rather than a second local
 phase-identification problem.
+The new pullback sharpening then removes another layer: once that ambient
+Brannen phase is fixed, the current selected-line scalar bridge, reachable-slot
+ratio, and first-branch endpoint are already fixed automatically by the exact
+selected-line stack.
 Branch-local exploratory `Q = 2/3`-surface and scale-selector near-miss probes
 remain off current-main authority.
 
