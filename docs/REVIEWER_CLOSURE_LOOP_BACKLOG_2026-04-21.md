@@ -18,6 +18,7 @@
 | 5 | Joint N1 + N2 polynomial attack | **N1 is primitive bottleneck** | `REVIEWER_CLOSURE_LOOP_ITER5_N1_IS_BOTTLENECK_NOTE_2026-04-21.md` — 4/7 PASS (3 FAILs are hypothesis being disproven). N2 reduces to N1 + Tr(H)=2/3 via polynomial root-selection; N3 reduces to finite real-root enumeration. N1 itself is NOT derivable from currently retained Atlas. Honest Nature-grade conclusion: proposal is a SUPPORT package, not closure. |
 | 6 | N1 via 3-Casimir {Tr(H), Tr(H²), det(H)} set | **negative** | `REVIEWER_CLOSURE_LOOP_ITER6_TRH2_CASIMIR_NEGATIVE_NOTE_2026-04-21.md` — 0/3 PASS (3 FAILs = hypothesis disproven). Tr(H²)_closure = 7.0716 vs closest retained simple (5√2) = 7.0711, dev 5.9e-4 (0.0083%). Not a clean retained Casimir. 3-Casimir derivation path ruled out. |
 | 7 | Bridge B structural derivation via Z_3 rep theory (Berry phase / equivariant η) | **narrowed, same class as A + N1** | `REVIEWER_CLOSURE_LOOP_ITER7_BRIDGE_B_NARROWED_NOTE_2026-04-21.md` — 5/5 PASS. arg(b) and APS η have DIFFERENT mathematical types (amplitude phase vs. spectral invariant). Naive Berry-phase gives trivial 2π (not 2/9). Bridge B weak reading (observational) closed at iter 3; strong reading (framework derivation) open. Same class as Bridge A + N1. |
+| 8 | Chamber-wide σ_hier = (2,1,0) extension via 13k chamber points × 6 permutations × 4-obs constraint | **🎯 CLOSED at Nature-grade numerical scale** | `REVIEWER_CLOSURE_LOOP_ITER8_SIGMA_HIER_CHAMBER_WIDE_CLOSED_NOTE_2026-04-21.md` — 10/11 PASS (1 FAIL is 3-angle-only sub-test; full 4-obs gives strict uniqueness). Under full 4-obs (NuFit 3σ AND T2K sin δ_CP < 0), σ = (2,1,0) STRICTLY UNIQUE across entire A-BCC active chamber. 905/3187 local chamber points admissible; 0 points admissible for all 5 other permutations. Structural Jarlskog sign-flip mechanism identical to retained A-BCC CP-phase argument. |
 
 ## Loop continues (user directive: "keep /loop on full closure")
 
@@ -117,12 +118,16 @@ These keep the broader DM/PMNS gate OPEN until they land:
    - Priority: MEDIUM.
    - Target iter: 4.
 
-6. **Chamber-wide / all-basin `σ_hier = (2,1,0)` extension**
+6. **Chamber-wide / all-basin `σ_hier = (2,1,0)` extension** — **🎯 CLOSED iter 8**
    - Claim to close: extend the pinned-point σ_hier uniqueness to the
      full chamber / all basins.
-   - Current state: observational at pinned point. Chamber-wide open.
-   - Priority: MEDIUM.
-   - Target iter: 5.
+   - Current state: closed at Nature-grade numerical scale (iter 8).
+     Under full 4-obs constraint (NuFit 3σ + T2K sin δ_CP < 0),
+     σ = (2,1,0) strictly unique across 13k+ chamber points; all 5
+     other permutations have 0 admissible points. Structural Jarlskog
+     sign-flip mechanism identical to retained A-BCC CP-phase argument.
+   - Priority: CLOSED.
+   - Iter: 8.
 
 7. **Interval-certified exact-carrier dominance/completeness on residual split-2 selector branch**
    - Claim to close: interval-certified exact-carrier dominance /
