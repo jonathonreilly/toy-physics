@@ -278,6 +278,19 @@ selector burden is not merely “force minimal relative action”; it is to brid
 that exact internal selector to the recovered right-sensitive selector branch,
 or to replace it with a finer microscopic law. See
 `docs/DM_SELECTOR_RELATIVE_ACTION_RECOVERED_BRANCH_SEPARATION_SUPPORT_THEOREM_NOTE_2026-04-21.md`.
+The same selector lane is now also less disconnected than before. A new
+projection support theorem shows that the exact observable-relative-action
+source already has one canonical recovered image: across Frobenius distance on
+`H`, Euclidean distance on the active target `(delta, q_+)`, threshold-profile
+distance on the exact witness-volume family, and an audited common-positive
+window geometry packet (affine-invariant distance, dual LogDet divergences,
+and inverse-eigenvalue parameter distance), the unique nearest recovered point
+is always the preferred recovered lift `0`. That same lift is already the one
+selected by the intrinsic threshold candidate `tau_b,min`. So the remaining
+selector burden narrows again: justify the projection principle from the exact
+internal selector to that preferred recovered lift, or replace both selector
+objects by a finer microscopic law. See
+`docs/DM_SELECTOR_RELATIVE_ACTION_RECOVERED_PROJECTION_SUPPORT_THEOREM_NOTE_2026-04-21.md`.
 PNS is derived as a property of Basin 1, not axiomatized.
 
 ---
@@ -396,6 +409,7 @@ All runners pass with no hardcoded `True` PASS annotations. Every PASS is a nume
 | A-BCC 5-route audit | `frontier_dm_abcc_assumptions_audit.py` | 16 | 0 |
 | DPLE dim-parametric extremum | `frontier_dm_dple_theorem.py` | 19 | 0 |
 | Split-2 interval-certified dominance closure | `frontier_dm_split2_interval_certified_dominance_closure_2026_04_21.py` | 17 | 0 |
+| Selector relative-action recovered projection | `frontier_dm_selector_relative_action_recovered_projection_support_2026_04_21.py` | 12 | 0 |
 | a_u JTS-affine + LO + NLO | `frontier_quark_issr1_bicac_forcing.py` | 13 | 0 |
 | a_u JTS physical-point | `frontier_quark_jts_physical_point_closure_theorem.py` | 12 | 0 |
 | a_u shell normalization | `frontier_quark_bimodule_lo_shell_normalization_theorem.py` | 10 | 0 |

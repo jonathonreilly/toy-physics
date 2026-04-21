@@ -229,8 +229,14 @@ Current quantitative statuses:
    microscopic law that bypasses the threshold family. The strongest current
    framework-internal observable-relative-action selector also stays off that
    recovered selector branch and carries its own later breakpoint, so the live
-   selector burden is sharper again: bridge the internal selector law to the
-   recovered right-sensitive branch, or replace it with a finer microscopic law.
+   selector burden is sharper again. At the same time, a new same-branch
+   projection support theorem now shows that the exact internal selector has
+   one canonical recovered image already: across Frobenius, target,
+   threshold-profile, affine-invariant, dual LogDet, and inverse-eigenvalue
+   metrics, the unique nearest recovered point is always the same preferred
+   lift `0` already selected by `tau_b,min`. So the live selector burden is now
+   more specific: justify that projection principle, or replace both current
+   selector objects with a finer microscopic law.
    The reviewer-facing current-bank quantitative mapping item is now closed. The hierarchy pairing
    `σ_hier = (2, 1, 0)` is already fixed
    observationally at the retained pin; what remains open there is any

@@ -93,9 +93,14 @@ packaging.
   canonical recovered-branch breakpoint candidate `tau_b,min`, but the
   strongest current framework-internal observable-relative-action selector does
   not yet land on that recovered branch and instead carries its own later
-  breakpoint. So the remaining selector burden is no longer just “force
-  relative action”; it is to bridge that internal selector to the recovered
-  right-sensitive selector branch, or replace it with a finer microscopic law
+  breakpoint. A new same-branch projection support theorem now shows that the
+  exact internal selector nevertheless has one canonical recovered image
+  already: across Frobenius, target, threshold-profile, affine-invariant, dual
+  LogDet, and inverse-eigenvalue metrics, the unique nearest recovered point is
+  always the same preferred lift `0` already selected by `tau_b,min`. So the
+  remaining selector burden is no longer just “force relative action”; it is to
+  justify that projection principle, or replace both current selector objects
+  with a finer microscopic law
 - persistent exact-lattice compact-object companion in the package, with a bounded
   beyond-pocket compact-object-plus-response regime and a mapped inward-source
   directional boundary; still below persistent inertial-mass / matter closure
