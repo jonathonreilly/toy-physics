@@ -236,7 +236,14 @@ Current quantitative statuses:
    metrics, the unique nearest recovered point is always the same preferred
    lift `0` already selected by `tau_b,min`. So the live selector burden is now
    more specific: justify that projection principle, or replace both current
-   selector objects with a finer microscopic law.
+   selector objects with a finer microscopic law. A new same-day
+   shifted-imaginary sign theorem sharpens the packet one step further: all
+   recovered lifts already share the sharp source tuple and the constructive
+   triplet chamber `gamma > 0`, `E1 > 0`, `E2 > 0`, and all have
+   `sin(delta) > 0`, but only the preferred lift `0` lies on the positive
+   side of `Im(K_Z3[1,2]) = 0`. So the remaining selector burden is now the
+   positive activation law for that shifted-imaginary doublet mixing, or a
+   finer replacement law.
    The reviewer-facing current-bank quantitative mapping item is now closed. The hierarchy pairing
    `σ_hier = (2, 1, 0)` is already fixed
    observationally at the retained pin; what remains open there is any

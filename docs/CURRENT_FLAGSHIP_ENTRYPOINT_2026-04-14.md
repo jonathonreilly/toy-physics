@@ -100,7 +100,12 @@ packaging.
   always the same preferred lift `0` already selected by `tau_b,min`. So the
   remaining selector burden is no longer just “force relative action”; it is to
   justify that projection principle, or replace both current selector objects
-  with a finer microscopic law
+  with a finer microscopic law. A same-day shifted-imaginary sign theorem then
+  sharpens the packet again: the sharp source tuple and constructive triplet
+  chamber are already shared across the recovered packet, but only the
+  preferred lift `0` lies on the positive side of `Im(K_Z3[1,2]) = 0`. So the
+  live selector burden is now specifically the positive activation law for the
+  shifted-imaginary doublet mixing, or a finer replacement law
 - persistent exact-lattice compact-object companion in the package, with a bounded
   beyond-pocket compact-object-plus-response regime and a mapped inward-source
   directional boundary; still below persistent inertial-mass / matter closure

@@ -291,6 +291,17 @@ selector burden narrows again: justify the projection principle from the exact
 internal selector to that preferred recovered lift, or replace both selector
 objects by a finer microscopic law. See
 `docs/DM_SELECTOR_RELATIVE_ACTION_RECOVERED_PROJECTION_SUPPORT_THEOREM_NOTE_2026-04-21.md`.
+The same packet is now sharpened one step further. All recovered lifts already
+share the exact sharp source tuple and the same constructive triplet chamber
+`gamma > 0`, `E1 > 0`, `E2 > 0`, and all also satisfy `sin(delta) > 0`. Those
+data still do not break the recovered selector degeneracy. The first
+right-sensitive datum that does is the shifted-imaginary doublet sign:
+the exact internal selector lies on the positive side of
+`Im(K_Z3[1,2]) = 0`, and among recovered lifts only the preferred lift `0`
+shares that positive side. So the remaining selector burden is now more
+specific still: derive the positive activation law for
+`Im(K_Z3[1,2])`, or replace the packet by a finer microscopic law. See
+`docs/DM_SELECTOR_SHIFTED_DOUBLET_IMAG_SIGN_SUPPORT_THEOREM_NOTE_2026-04-21.md`.
 PNS is derived as a property of Basin 1, not axiomatized.
 
 ---
