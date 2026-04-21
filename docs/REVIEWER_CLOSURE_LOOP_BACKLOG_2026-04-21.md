@@ -19,6 +19,7 @@
 | 6 | N1 via 3-Casimir {Tr(H), Tr(H²), det(H)} set | **negative** | `REVIEWER_CLOSURE_LOOP_ITER6_TRH2_CASIMIR_NEGATIVE_NOTE_2026-04-21.md` — 0/3 PASS (3 FAILs = hypothesis disproven). Tr(H²)_closure = 7.0716 vs closest retained simple (5√2) = 7.0711, dev 5.9e-4 (0.0083%). Not a clean retained Casimir. 3-Casimir derivation path ruled out. |
 | 7 | Bridge B structural derivation via Z_3 rep theory (Berry phase / equivariant η) | **narrowed, same class as A + N1** | `REVIEWER_CLOSURE_LOOP_ITER7_BRIDGE_B_NARROWED_NOTE_2026-04-21.md` — 5/5 PASS. arg(b) and APS η have DIFFERENT mathematical types (amplitude phase vs. spectral invariant). Naive Berry-phase gives trivial 2π (not 2/9). Bridge B weak reading (observational) closed at iter 3; strong reading (framework derivation) open. Same class as Bridge A + N1. |
 | 8 | Chamber-wide σ_hier = (2,1,0) extension via 13k chamber points × 6 permutations × 4-obs constraint | **🎯 CLOSED at Nature-grade numerical scale** | `REVIEWER_CLOSURE_LOOP_ITER8_SIGMA_HIER_CHAMBER_WIDE_CLOSED_NOTE_2026-04-21.md` — 10/11 PASS (1 FAIL is 3-angle-only sub-test; full 4-obs gives strict uniqueness). Under full 4-obs (NuFit 3σ AND T2K sin δ_CP < 0), σ = (2,1,0) STRICTLY UNIQUE across entire A-BCC active chamber. 905/3187 local chamber points admissible; 0 points admissible for all 5 other permutations. Structural Jarlskog sign-flip mechanism identical to retained A-BCC CP-phase argument. |
+| 9 | A-BCC axiomatic derivation via Tr+det signature combinatorics on H_base | **🎯 CLOSED at Nature-grade** | `REVIEWER_CLOSURE_LOOP_ITER9_ABCC_TRACE_DET_SIGNATURE_CLOSED_NOTE_2026-04-21.md` — 14/14 PASS. A-BCC derives from retained-only inputs: P1 H_base zero diagonal (Tr=0) + symbolic det(H_base) = 2·E_1²·E_2 > 0 (γ cancels identically) + elementary signature lemma (Tr=0, det>0 Hermitian 3×3 ⟹ signature (1,0,2) unique) + retained P3 Sylvester linear-path preservation. Fresh angle vs afternoon-4-21 iter 9 scalar-Casimir negative result. |
 
 ## Loop continues (user directive: "keep /loop on full closure")
 
@@ -110,13 +111,16 @@ These keep the broader DM/PMNS gate OPEN until they land:
 
 ### Gate 2 — DM flagship gate (residues after afternoon-4-21-proposal)
 
-5. **A-BCC axiomatic derivation**
+5. **A-BCC axiomatic derivation** — **🎯 CLOSED iter 9**
    - Claim to close: derive `sign(det H) > 0` for the physical chamber
      from Cl(3)/Z³ directly (not from T2K observational input).
-   - Current state: observationally grounded. afternoon-4-21
-     iter 9 ruled out scalar-class paths.
-   - Priority: MEDIUM.
-   - Target iter: 4.
+   - Current state: closed at Nature-grade (iter 9). Derivation chain:
+     P1 H_base zero diagonal (Tr=0) + det(H_base) = 2·E_1²·E_2 > 0
+     (symbolic, γ cancels) + elementary signature lemma + retained P3
+     Sylvester linear-path. Fresh angle (NOT scalar-Casimir, which was
+     ruled out by afternoon-4-21 iter 9).
+   - Priority: CLOSED.
+   - Iter: 9.
 
 6. **Chamber-wide / all-basin `σ_hier = (2,1,0)` extension** — **🎯 CLOSED iter 8**
    - Claim to close: extend the pinned-point σ_hier uniqueness to the
