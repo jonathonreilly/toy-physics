@@ -86,23 +86,87 @@ mechanisms.
 Status: I1/I2 now RETAINED-DERIVED + STRESS-TESTED. User's "no cracks"
 criterion met for I1/I2 against currently-anticipated objections.
 
-## Iteration 7+ target (next loop)
+## Iteration 7 (completed: consolidation / brainstorm)
 
-**Attack A (2-rotation composite mechanism, continued)**: Iter 6's
-preliminary analysis showed that with first rotation `(0,1,-1)/√2`
-by angle `δ·Q`, the second rotation has angle ≈ δ·(1−Q) = δ/3 (4%
-off), but axis is not clean. Refine search.
+**Attack**: Master-status consolidation of iter 1-6 and brainstorm
+expansion of iter 8+ candidates.
+**Artifact**: `docs/KOIDE_EVENING_4_20_MASTER_STATUS_2026-04-21.md`
+**Outcome**: Clear one-screen summary of I1/I2/I5 status. Decision
+point identified: I1/I2 main-landable; I5 science-in-progress.
+Loop could continue 3-5 more iterations or partial-consolidate to
+main now.
 
-**Attack B (δ_CP sign)**: Derive sin δ_CP < 0 from Cl(3) pseudoscalar.
+## Iteration 8+ specific candidates (ranked by concreteness)
 
-**Attack C (quark sector cross-check)**: Does the quark mass ratio
-sector fit a (Q_q, δ_q) structure? (Quark Koide: Q_u ≈ 0.849,
-Q_d ≈ 0.732 — neither is 2/3, so NOT the same Q as leptons. But
-other structure may be retained.)
+### Attack B1 (δ_CP sign from Cl(3) chirality — specific hypothesis)
 
-**Attack D (final consolidation)**: Write the master summary note
-for evening-4-20 branch status ("what's done, what's open, where
-the user would land a reviewer review").
+**Claim**: T2K preferred sin δ_CP < 0 follows from retained Cl(3)
+orientation combined with neutrino chirality.
+
+Setup:
+- Cl(3) pseudoscalar I = e_1 e_2 e_3 has I² = −1, I central.
+- Under parity P: I → −I. Under C: I → ±I (convention-dependent).
+- Neutrinos are LH only (retained SM structure); charged leptons
+  are both LH and RH.
+- Conjecture: the "effective Cl(3) imaginary unit" is I for Dirac
+  (charged lepton), −I for Weyl-LH (neutrino).
+- Sign flip → sin δ_CP^neutrino = −sin δ_CP^charged-lepton.
+- If charged lepton sector has "natural" +π/2 CP phase (consistent
+  with SELECTOR > 0, δ = +2/9 > 0), then neutrino sector has −π/2,
+  giving sin δ_CP < 0 as T2K observes.
+
+**Test**: Write runner that verifies Cl(3) pseudoscalar acts opposite
+on LH vs RH Weyl spinors, quantifies the induced sign in J_CP.
+
+### Attack B2 (composite mechanism with Cl(3) operator identification)
+
+**Claim**: V_conj = V_TBM · R_cl3 where R_cl3 = exp(−ε · O_cl3) for
+a specific Cl(3) operator O_cl3 combining retained SELECTOR bivector
+and retained C_3 symmetrizer.
+
+Setup:
+- Iter 5 showed dominant component is (0,1,-1)/√2 × δ·Q.
+- Second component (iter 5 preliminary): angle ~δ·(1−Q), axis
+  ~ mixed between (2,-1,-1)/√6 and (1,1,1)/√3.
+- Conjecture: O_cl3 = SELECTOR · B_1 + c_2 · B_2 for specific bivectors.
+
+**Test**: Parametrize O_cl3 by two (Q, δ)-coupled coefficients and
+numerically match to R_exact = V_conj · V_TBM^T.
+
+### Attack C (quark sector parallel)
+
+**Observation**: Quark Koide Q_u ≈ 0.849, Q_d ≈ 0.732 don't match
+lepton Q = 2/3. But Cabibbo angle θ_C ≈ 13.04° ≈ 0.228 rad is
+close to δ = 2/9 ≈ 0.222 rad (2.6% gap).
+
+**Test**: Verify whether there's a retained "quark Brannen phase"
+δ_q ≈ 2/9 (same as lepton) with different sector-specific Q_q.
+
+### Attack D (strengthen I2/P with 4th independent framework)
+
+**Target**: Beyond the 3 clusters (topological, analytical,
+number-theoretic), add a 4th independent derivation of δ = 2/9.
+Candidates: modular form special values, CFT partition function,
+holographic calculation.
+
+### Attack E (connect I1 to observable principle more tightly)
+
+**Target**: Iter 2 showed Frobenius metric → F_sym → AM-GM → κ=2.
+Tighten the "Frobenius metric is forced by retained Herm_circ(3)"
+step. Specifically: show that the Frobenius metric is the UNIQUE
+(up to scale) C_3-invariant symmetric form on Herm_circ(3).
+
+### Attack F (publication-draft consolidation)
+
+If iter 8+ closes I5 or if user chooses to consolidate now: draft
+arXiv paper structure covering I1 + I2/P + (I5 conjecture or closure).
+
+### Long-shot (lower priority)
+
+- Modular form route to δ: continue CM point attempt from earlier work.
+- E8 / octonion unification: speculative.
+- Knot invariants on PL S³: speculative.
+- Gravity-dual / holography: speculative.
 
 ## Long-tail brainstorm (priority-unranked)
 
