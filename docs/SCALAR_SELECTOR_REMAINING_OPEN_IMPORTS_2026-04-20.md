@@ -26,7 +26,7 @@ The downstream selected-line witness remains conditional on the second bridge.
 |---|---|---|---|
 | Koide relation `Q = 2/3` | κ, θ | reviewer-tested Frobenius-isotype / AM-GM support package isolates the Koide point as the unique extremum of the admitted block-total functional, but the physical/source-law extremal-principle bridge remains open | derive why the physical charged-lepton packet must extremize the block-total Frobenius functional, or an equivalent accepted source law that forces the same point |
 | Brannen phase `δ = 2/9` on the physical base | θ | reviewer-tested APS / ABSS support package isolates the exact ambient topological value `η = 2/9`, but the physical selected-line Brannen-phase bridge remains open | derive `δ_physical = η_APS`, equivalently an ambient one-clock `3+1` transport / endpoint / Wilson law whose selected-line pullback is the physical Brannen phase |
-| PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)` | PMNS selector lane | A-BCC is now closed on the retained measurement framework via the sigma-chain, retained P3 Sylvester, PMNS nonsingularity, and Sylvester signature forcing; the physical PMNS target already lies on a regular local `2`-real source manifold on the charged-lepton-side seed surface, and the residual split-2 carrier-side dominance/completeness blocker is now interval-certified closed on the two explicit upper-face boxes. The tested `Z_3` center law `delta_db = 1`, `q_+ = 0` is useful only conditionally: together with `I_src > 0` it still leaves a positive-sheet `3`-real locus and does not derive the PMNS target by itself. On the current exact threshold-volume selector family, the preferred recovered lift now has a theorem-grade high-threshold stabilization window and a canonical earliest middle-branch breakpoint `tau_b,min`; separately, the strongest current framework-internal observable-relative-action selector stays off that recovered selector branch and carries its own later breakpoint. A new audited projection support theorem shows that this exact internal selector nevertheless has one canonical recovered image already: across Frobenius, target, threshold-profile, affine-invariant, dual-LogDet, and inverse-eigenvalue metrics, the unique nearest recovered point is always the same preferred lift `0` already selected by `tau_b,min`. A further same-day doublet-block sign theorem sharpens the packet once more: the sharp source tuple and constructive triplet chamber are already shared across the recovered packet, but the internal selector lies on the positive side of the canonical shifted-imaginary boundary `Im(K_Z3[1,2]) = 0`, and among recovered lifts only the preferred lift `0` lies on that same positive side | finer right-sensitive microscopic point-selection law stronger than the current `Z_3` center law on the exact PMNS / positive-center locus; on the current selector packet this now means deriving the positive activation law for the shifted imaginary doublet mixing `Im(K_Z3[1,2])`, or replacing the packet by a finer microscopic law |
+| PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)` | PMNS selector lane | On the review surface, the DM flagship gate is now closed at the current package grade. A-BCC is closed on the retained measurement framework via the sigma-chain, retained P3 Sylvester, PMNS nonsingularity, and Sylvester signature forcing; the split-2 carrier-side dominance/completeness blocker is interval-certified closed on the two explicit upper-face boxes; and the last selector-side residue is now closed on the current recovered packet by the same exact scalar observable-relative-action law, transported to the common positive windows `A_mu(H)=H+mu I`: across the full audited shift family and a dense admissible stress range, the preferred recovered lift `0` is always the unique minimizer, and it is exactly the unique recovered point on the positive side of `Im(K_Z3[1,2]) = 0` | derive the relevant five-basin source chart / branch-choice structure natively from `Cl(3)/Z³` alone, removing the retained-measurement pin and upgrading the DM lane from review-surface closure to full axiom-native closure |
 | Selected-line witness ratio `w/v ≈ 4.101` | m_* (selected-line point) | conditionally pinned by the exact selected-line scalar-phase bridge once the physical Brannen phase is fixed; still open because the Brannen-phase bridge is open | the same physical Brannen-phase bridge that closes `δ = 2/9`, or an equivalent ambient endpoint law that fixes the selected-line point directly |
 
 ## §0a Closed in cycle 2
@@ -70,6 +70,14 @@ The downstream selected-line witness remains conditional on the second bridge.
   eigenvalue control, exact cofactor projector-row intervals, and boxwise
   transport upper bounds `eta / eta_obs < 1` throughout. See
   `docs/DM_SPLIT2_INTERVAL_CERTIFIED_DOMINANCE_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
+- **Recovered-packet selector residue closed on the review surface.** The same
+  exact scalar observable-relative-action law now closes the current recovered
+  selector packet after transport to the common positive windows
+  `A_mu(H)=H+mu I`: on the recovered bank, the preferred lift `0` is the
+  unique minimizer across the full audited shift family and a dense admissible
+  stress range, and it is exactly the unique recovered point with
+  `Im(K_Z3[1,2]) > 0`. See
+  `docs/DM_SELECTOR_SHIFTED_RELATIVE_ACTION_RECOVERED_PACKET_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
 
 ## §1 Priority ordering for closure
 
@@ -342,10 +350,11 @@ one-variable transport kernel to certify `eta / eta_obs < 1` throughout both
 boxes. So the residual carrier-side completeness question is now closed on
 the review surface. A-BCC is also now closed on the retained measurement
 surface via the sigma-chain, retained P3 Sylvester theorem, PMNS
-nonsingularity reduction, and Sylvester signature forcing. What remains open
-on the PMNS lane is the finer right-sensitive microscopic point-selection
-law. The stricter axiom-native A-BCC target remains a boundary/no-go item
-only, not a live review-surface blocker. See
+nonsingularity reduction, and Sylvester signature forcing. The recovered
+selector packet is now also closed on the review surface by the shifted
+same-law packet theorem. What remains outside the current closure grade is
+the stricter native source-chart / branch-choice derivation from `Cl(3)/Z^3`
+alone. See
 `docs/DM_SPLIT2_INTERVAL_CERTIFIED_DOMINANCE_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
 
 ### Priority 4: Selected-line physical point

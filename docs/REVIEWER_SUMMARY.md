@@ -165,9 +165,10 @@ Current quantitative statuses:
   carries no hidden Wilson-to-`dW_e^H` descendant law while explicit
   structured positive model classes and manifold-valued constructive positive
   exact closure already exist on the fixed native `N_e` seed surface: A-BCC
-  is now closed on the retained measurement surface, and the only remaining
-  live DM blocker is the finer right-sensitive microscopic selector law for
-  the physical source branch / point;
+  is now closed on the retained measurement surface, and the recovered-packet
+  selector residue is now also closed on the review surface by the shifted
+  same-law packet theorem; what remains outside the current closure grade is
+  the stricter native source-chart / branch-choice derivation;
   `σ_hier = (2, 1, 0)` is fixed observationally at the pinned chamber point,
   but broader chamber-wide / all-basin uniqueness is still out of scope
 - promoted CKM atlas/axiom package on the canonical tensor/projector surface, with older Cabibbo / NNI / partial Jarlskog notes retained only as route history
@@ -235,15 +236,19 @@ Current quantitative statuses:
    threshold-profile, affine-invariant, dual LogDet, and inverse-eigenvalue
    metrics, the unique nearest recovered point is always the same preferred
    lift `0` already selected by `tau_b,min`. So the live selector burden is now
-   more specific: justify that projection principle, or replace both current
-   selector objects with a finer microscopic law. A new same-day
-   shifted-imaginary sign theorem sharpens the packet one step further: all
-   recovered lifts already share the sharp source tuple and the constructive
-   triplet chamber `gamma > 0`, `E1 > 0`, `E2 > 0`, and all have
-   `sin(delta) > 0`, but only the preferred lift `0` lies on the positive
-   side of `Im(K_Z3[1,2]) = 0`. So the remaining selector burden is now the
-   positive activation law for that shifted-imaginary doublet mixing, or a
-   finer replacement law.
+   more specific. A new same-day shifted-imaginary sign theorem sharpened the
+   packet one step further: all recovered lifts already share the sharp source
+   tuple and the constructive triplet chamber `gamma > 0`, `E1 > 0`,
+   `E2 > 0`, and all have `sin(delta) > 0`, but only the preferred lift `0`
+   lies on the positive side of `Im(K_Z3[1,2]) = 0`. That remaining
+   selector-side packet is now closed on the review surface: the same exact
+   scalar observable-relative-action law, transported to the common positive
+   windows `A_mu(H)=H+mu I`, uniquely minimizes at the preferred recovered
+   lift `0` across the full audited shift family and a dense admissible stress
+   range, and that lift is exactly the unique recovered point with
+   `Im(K_Z3[1,2]) > 0`. So there is no remaining DM blocker on the review
+   surface. What remains outside the current closure grade is the stricter
+   native source-chart / branch-choice derivation from `Cl(3)/Z^3` alone.
    The reviewer-facing current-bank quantitative mapping item is now closed. The hierarchy pairing
    `σ_hier = (2, 1, 0)` is already fixed
    observationally at the retained pin; what remains open there is any

@@ -249,10 +249,8 @@ projector-row intervals, and boxwise transport upper bounds
 surface: the retained-measurement integration theorem packages the
 already-landed sigma-chain, retained P3 Sylvester theorem, PMNS
 nonsingularity reduction, and Sylvester signature forcing into one explicit
-closure statement. So the only live DM blocker on the review surface is now
-the finer right-sensitive microscopic selector law. The stricter axiom-native
-A-BCC target remains a boundary statement only, not a live review-surface
-blocker. See
+closure statement. The stricter axiom-native A-BCC target remains a boundary
+statement only, not a live review-surface blocker. See
 `docs/DM_SPLIT2_INTERVAL_CERTIFIED_DOMINANCE_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
 The selector side is also slightly sharper than before: on the recovered bank,
 the exact intrinsic threshold-volume selector family now has a theorem-grade
@@ -291,17 +289,23 @@ selector burden narrows again: justify the projection principle from the exact
 internal selector to that preferred recovered lift, or replace both selector
 objects by a finer microscopic law. See
 `docs/DM_SELECTOR_RELATIVE_ACTION_RECOVERED_PROJECTION_SUPPORT_THEOREM_NOTE_2026-04-21.md`.
-The same packet is now sharpened one step further. All recovered lifts already
-share the exact sharp source tuple and the same constructive triplet chamber
-`gamma > 0`, `E1 > 0`, `E2 > 0`, and all also satisfy `sin(delta) > 0`. Those
-data still do not break the recovered selector degeneracy. The first
-right-sensitive datum that does is the shifted-imaginary doublet sign:
-the exact internal selector lies on the positive side of
-`Im(K_Z3[1,2]) = 0`, and among recovered lifts only the preferred lift `0`
-shares that positive side. So the remaining selector burden is now more
-specific still: derive the positive activation law for
-`Im(K_Z3[1,2])`, or replace the packet by a finer microscopic law. See
-`docs/DM_SELECTOR_SHIFTED_DOUBLET_IMAG_SIGN_SUPPORT_THEOREM_NOTE_2026-04-21.md`.
+The same packet was then sharpened one step further. All recovered lifts
+already share the exact sharp source tuple and the same constructive triplet
+chamber `gamma > 0`, `E1 > 0`, `E2 > 0`, and all also satisfy `sin(delta) > 0`.
+Those data still do not break the recovered selector degeneracy. The first
+right-sensitive datum that does is the shifted-imaginary doublet sign: the
+exact internal selector lies on the positive side of `Im(K_Z3[1,2]) = 0`, and
+among recovered lifts only the preferred lift `0` shares that positive side.
+See `docs/DM_SELECTOR_SHIFTED_DOUBLET_IMAG_SIGN_SUPPORT_THEOREM_NOTE_2026-04-21.md`.
+That remaining selector packet is now closed on the review surface. The same
+exact scalar observable-relative-action law, transported to the common
+positive windows `A_mu(H)=H+mu I`, uniquely minimizes at the preferred
+recovered lift `0` across the full audited shift family and a dense
+admissible stress range, and that lift is exactly the unique recovered point
+with `Im(K_Z3[1,2]) > 0`. So there is no remaining DM blocker on the review
+surface. What still remains outside the current closure grade is the stricter
+native source-chart / branch-choice derivation from `Cl(3)/Z^3` alone. See
+`docs/DM_SELECTOR_SHIFTED_RELATIVE_ACTION_RECOVERED_PACKET_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
 PNS is derived as a property of Basin 1, not axiomatized.
 
 ---
