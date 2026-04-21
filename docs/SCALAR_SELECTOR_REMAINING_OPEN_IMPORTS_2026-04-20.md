@@ -198,6 +198,23 @@ closure candidates fail: selected-line PB per element, full-orbit Bargmann
 phase, bare Plancherel-weight identification, and the selected-slice midpoint
 rule do not produce `2/d²` in radians on the physical base.
 
+**Further same-branch sharpening (2026-04-20 evening):** the actual
+selected-line local packet is now proved too small to close `P`. On the
+physical selected-line `CP¹` carrier, the canonical local geometry is flat
+(`A = dθ`, `F = 0`) with constant equator metric density, while the structural
+scalar `ρ_δ = |Im(b_F)|² = 2/d²` is branch-constant. Two distinct interior
+first-branch points therefore carry the same local invariant packet
+`(F, g_FS, ρ_δ)` but different Berry holonomies `δ(m)`. So no intrinsic
+**local** selected-line law built from the tautological Berry geometry plus
+`ρ_δ` can select the physical point `δ = 2/d²`. Any successful closure of `P`
+must therefore be nonlocal on the branch (endpoint/continuation/transport) or
+must add extra Wilson/lattice phase data. See
+`docs/KOIDE_SELECTED_LINE_LOCAL_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md`.
+On the repo's physical `3+1` reading, that means the missing content cannot
+live in the `1`-dimensional selected-line base itself; it has to come from
+ambient continuation/transport data or extra retained Wilson/lattice
+structure.
+
 **Minimal additional inputs now known to suffice (any one closes `P`):**
 
 1. **Lattice propagator radian quantum.** A retained identity of the form
