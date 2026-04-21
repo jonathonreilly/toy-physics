@@ -224,7 +224,11 @@ Current quantitative statuses:
    that same family already belongs uniquely to the preferred recovered lift.
    So the remaining positive selector burden is now narrower: derive why the
    physical threshold law is that intrinsic breakpoint, or derive a stronger
-   microscopic law that bypasses the threshold family.
+   microscopic law that bypasses the threshold family. The strongest current
+   framework-internal observable-relative-action selector also stays off that
+   recovered selector branch and carries its own later breakpoint, so the live
+   selector burden is sharper again: bridge the internal selector law to the
+   recovered right-sensitive branch, or replace it with a finer microscopic law.
    The reviewer-facing current-bank quantitative mapping item is now closed. The hierarchy pairing
    `σ_hier = (2, 1, 0)` is already fixed
    observationally at the retained pin; what remains open there is any

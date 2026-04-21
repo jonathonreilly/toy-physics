@@ -89,6 +89,13 @@ packaging.
 ## Other Bounded Families
 
 - DM flagship gate, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` conditional/support package that now fixes `σ_hier = (2, 1, 0)` observationally at the pinned chamber point and gives a CP-phase no-go for the known `C_neg` chi²=0 basins under the physical pairing, a reviewer-facing three-identity support proposal on the same affine Hermitian chart whose proposed system `Tr(H) = Q_Koide`, `delta * q_+ = Q_Koide`, `det(H) = E2` numerically recovers one interior chamber point in the audited search box and yields a PMNS packet inside the current NuFit `1 sigma` bands, a reviewed selector obstruction stack that compresses selector-side ambiguity to intrinsic threshold-law nonrealization, a new threshold-stabilization support theorem showing the preferred recovered lift is already the unique minimizer on an exact high-threshold window of that intrinsic family, and an interval-certified split-2 dominance theorem closing the tested carrier-side pressure on the two explicit upper-face neighborhoods, together with a reviewer-facing current-bank quantitative mapping note and a reviewed Wilson direct-descendant science stack showing that the current package carries no hidden Wilson-to-`dW_e^H` descendant law while explicit structured positive model classes and manifold-valued constructive positive exact closure already exist on the fixed native `N_e` seed surface: the remaining live blockers are `A-BCC` as an axiom-native branch-choice law and the finer right-sensitive microscopic selector law for the physical source branch / point. The three-identity proposal is retained as support only: the product and determinant laws are not yet derived, and the present uniqueness evidence is numerical rather than theorem-grade
+- DM selector sharpening: the current exact threshold-volume packet now has a
+  canonical recovered-branch breakpoint candidate `tau_b,min`, but the
+  strongest current framework-internal observable-relative-action selector does
+  not yet land on that recovered branch and instead carries its own later
+  breakpoint. So the remaining selector burden is no longer just “force
+  relative action”; it is to bridge that internal selector to the recovered
+  right-sensitive selector branch, or replace it with a finer microscopic law
 - persistent exact-lattice compact-object companion in the package, with a bounded
   beyond-pocket compact-object-plus-response regime and a mapped inward-source
   directional boundary; still below persistent inertial-mass / matter closure

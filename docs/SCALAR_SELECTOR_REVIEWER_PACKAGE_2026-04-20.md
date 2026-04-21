@@ -257,6 +257,16 @@ So the selector-side burden is narrower again: derive why the physical
 threshold law is this earliest intrinsic breakpoint, or derive a stronger
 microscopic selector law. See
 `docs/DM_SELECTOR_FIRST_SHOULDER_EXIT_THRESHOLD_SUPPORT_NOTE_2026-04-21.md`.
+There is now one more useful separator on the same selector lane. The
+strongest current framework-internal selector law — the observable-relative-
+action law on the fixed native `N_e` seed surface — does not already land on
+the recovered selector branch. Its exact source stays off the recovered bank,
+is not chosen by the recovered-bank breakpoint `tau_b,min`, and instead
+carries its own later intrinsic breakpoint `tau_b,rel`. So the remaining
+selector burden is not merely “force minimal relative action”; it is to bridge
+that exact internal selector to the recovered right-sensitive selector branch,
+or to replace it with a finer microscopic law. See
+`docs/DM_SELECTOR_RELATIVE_ACTION_RECOVERED_BRANCH_SEPARATION_SUPPORT_THEOREM_NOTE_2026-04-21.md`.
 PNS is derived as a property of Basin 1, not axiomatized.
 
 ---
