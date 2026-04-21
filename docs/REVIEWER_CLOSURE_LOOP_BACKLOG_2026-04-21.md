@@ -12,6 +12,7 @@
 | Iter | Attack | Status | Note |
 |------|--------|--------|------|
 | 1 | Audit of afternoon-4-21-proposal vs. reviewer items | **audit PASS** | `REVIEWER_CLOSURE_LOOP_ITER1_AUDIT_NOTE_2026-04-21.md` — 11/11 PASS. afternoon-4-21-proposal closes Gate-2 right-sensitive microscopic selector law per DERIVATION_ATLAS line-335 equivalence. 8 items remain open. |
+| 2 | Bridge A — multi-principle convergence on E_+ = E_⊥ + retained γ identity | **partial / narrowed** | `REVIEWER_CLOSURE_LOOP_ITER2_BRIDGE_A_NARROWED_NOTE_2026-04-21.md` — 14/14 PASS. 5 natural information/variational principles all critical at p_+ = 1/2. At Koide, `\|b\|²/a² = γ = 1/2` (retained H_base constant). Koide extremum is a structural attractor; dynamical mechanism still open. |
 
 ## Closed by existing afternoon-4-21-proposal (confirmed in iter 1)
 
