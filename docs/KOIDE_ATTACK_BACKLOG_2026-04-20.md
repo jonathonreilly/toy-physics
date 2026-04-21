@@ -73,31 +73,36 @@ combination with clean (Q, δ) form matches V_conj within 1%.
 Rules out simplest mechanism hypothesis. Iter 6+ must attack composite
 mechanisms.
 
-## Iteration 6+ target (next loop)
+## Iteration 6 (completed)
 
-**Attack A (direct mechanism search)**: Find 2-rotation composite
-matching V_conj exactly.
+**Attack**: Reviewer stress-test on I1 (Q=2/3) and I2/P (δ=2/9) closures.
+**Runner**: `scripts/frontier_koide_reviewer_stress_test.py` (35/35 PASS).
+**Outcome**: All 9 enumerated reviewer objections addressed:
+- Uniqueness (4): F-functional, global-max, tangent weights, η-value.
+- Scope (3): E_+/E_⊥ positivity, PL smoothability, Morse-Bott.
+- Independence (2): 8 routes cluster into 3 independent mathematical
+  frameworks (topological, analytical, number-theoretic); iter 2
+  AM-GM uses Frobenius metric, NOT Peter-Weyl (no C1 cycling).
+Status: I1/I2 now RETAINED-DERIVED + STRESS-TESTED. User's "no cracks"
+criterion met for I1/I2 against currently-anticipated objections.
 
-Specific sub-attacks:
-- **μ-τ-breaking + transverse rotation**: Start with dominant
-  R_{(0,1,-1)/√2}(√Q·δ), search for second rotation (1 retained
-  parameter) that closes the gap.
-- **Cl(3) bivector + pseudoscalar**: Combine bivector rotation
-  (retained SELECTOR-axis) with pseudoscalar action (retained I).
-- **Exp of full S_3-breaking operator**: Identify a specific
-  Cl(3) operator whose exponentiation gives V_conj.
+## Iteration 7+ target (next loop)
 
-**Attack B (CP phase sign, separate from mechanism)**: Derive
-sin δ_CP < 0 from Cl(3) pseudoscalar I = e₁e₂e₃ (T2K best-fit).
-If retained, combined with iter 4 gives full complex PMNS closure.
+**Attack A (2-rotation composite mechanism, continued)**: Iter 6's
+preliminary analysis showed that with first rotation `(0,1,-1)/√2`
+by angle `δ·Q`, the second rotation has angle ≈ δ·(1−Q) = δ/3 (4%
+off), but axis is not clean. Refine search.
 
-**Attack C (reviewer stress-tests on I1/I2)**: Challenge the iter 1
-topological robustness and iter 2 AM-GM uniqueness claims to verify
-they're reviewer-proof.
+**Attack B (δ_CP sign)**: Derive sin δ_CP < 0 from Cl(3) pseudoscalar.
 
-**Attack D (quark sector)**: Parallel to lepton — does (Q_q, δ_q)
-structure fit V_CKM? Cabibbo θ_C ≈ 13.04° ≈ 2/9 rad — coincidence
-or retained?
+**Attack C (quark sector cross-check)**: Does the quark mass ratio
+sector fit a (Q_q, δ_q) structure? (Quark Koide: Q_u ≈ 0.849,
+Q_d ≈ 0.732 — neither is 2/3, so NOT the same Q as leptons. But
+other structure may be retained.)
+
+**Attack D (final consolidation)**: Write the master summary note
+for evening-4-20 branch status ("what's done, what's open, where
+the user would land a reviewer review").
 
 ## Long-tail brainstorm (priority-unranked)
 
