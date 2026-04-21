@@ -45,24 +45,36 @@ S_3-invariant Majorana M_ν. Predictions:
 - θ₂₃ = 45° (NuFit 49.2°, gap +4.20°)
 Does NOT close I5; next iter targets θ₁₃ activation via Z_2 breaking.
 
-## Iteration 4 target (next loop)
+## Iteration 4 (completed)
 
-**Attack**: Derive θ₁₃ ≠ 0 activation from retained Z_2 breaking of
-the full S_3 — breaking {P₁₂, P₁₃, P₂₃} while preserving C_3[111].
+**Attack**: I5 conjecture-level closure via δ-Q deformation of TBM.
+**Runner**: `scripts/frontier_koide_pmns_delta_q_deformation.py` (25/25 PASS).
+**Outcome**: I5 RETAINED-PREDICTIVE-CONJECTURE. All three NuFit-2024
+mixing angles fit **within 1σ** from just retained (Q, δ) = (2/3, 2/9):
+- θ₁₃ = δ·Q = 4/27 rad = 8.488° (NuFit 8.57°, inside 1σ)
+- θ₂₃ − π/4 = δ·Q/2 = 2/27 rad = 4.244° (NuFit 49.2°, inside 1σ)
+- sin²θ₁₂ = 1/3 − δ²·Q = 73/243 = 0.3004 (NuFit 0.307, inside 1σ)
+Bonus: J_max at δ_CP=π/2 = 0.0327, matches T2K best-fit magnitude.
+Rational denominators are powers of 3 (Z_3 orbifold signature).
+Distinct from TM1 and TM2. NOT yet derived from first principles —
+iter 5 target is the mechanism.
+
+## Iteration 5 target (next loop)
+
+**Attack**: Derive at least one of the δ-Q coefficient formulas
+(NT1: θ₁₃=δQ, NT2: factor 1/2 in θ₂₃, NT3: coefficient −1 in sin²θ₁₂)
+from retained Cl(3)/Z³ mechanism.
 
 Specific sub-attacks to try:
-- **Cl(3) bivector selection**: retained SELECTOR = √6/3 singles out a
-  bivector axis, breaking S_3 → Z_3 at the spinor level.  Compute
-  induced θ₁₃ deformation.
-- **Dirac-Majorana Yukawa asymmetry**: charged-lepton Yukawa (large m_τ)
-  generates one-loop S_3 breaking that leaks into PMNS as a θ₁₃ shift.
-- **CKM cross-sector mixing**: retained V_CKM has Wolfenstein ε ~ 0.23;
-  leakage into PMNS gives δθ₁₃ ~ ε (quark-lepton complementarity).
-- **C_3[111] spin-cover Z_6**: Cl(3) spinor rep doubles C_3 to Z_6;
-  the extra Z_2 factor might be the breaking mechanism.
-- **θ₁₃ = π/24 conjecture**: π/24 = 7.5° (close to 8.57°). Can this
-  be retained from a Cl(3) angle discretization? (Related to δ = 2/9
-  rad = 2π/(9π/2) structure.)
+- **Effective TBM-perturbation Lagrangian**: Write most general
+  S_3-breaking, (Q, δ)-coupled operator and derive coefficients.
+- **Cl(3) bivector rotation by δ in C_3-doublet plane**: Compute
+  induced mixing angle; does it give exactly δ·Q?
+- **Jarlskog natural-value argument**: Require J_max = 0.0327
+  (T2K best-fit) as retained consistency; does it pin angles?
+- **δ_CP sign from CP structure of Cl(3)**: T2K sign < 0 target.
+- **PMNS = V_TBM · U_correction**: derive U_correction from retained
+  SELECTOR bivector rotation.
 
 ## Long-tail brainstorm (priority-unranked)
 
