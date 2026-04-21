@@ -206,7 +206,15 @@ Current quantitative statuses:
    classes together with manifold-valued constructive positive exact closure
    on the fixed native `N_e` seed surface, while the tested carrier-side
    pressure is exhausted to two explicit split-2 upper-face neighborhoods. The
-   gate remains open because the named baseline-connected-component input
+   branch also now carries a reviewer-facing three-identity support proposal on
+   the affine Hermitian chart: on the current active-chamber working surface,
+   the proposed system `Tr(H) = Q_Koide`, `delta * q_+ = Q_Koide`, `det(H) = E2`
+   numerically recovers one interior chamber point in the audited search box
+   and yields a PMNS packet inside the current NuFit `1 sigma` bands. This is
+   explicitly support, not closure: the two new selector identities are still
+   proposed rather than retained-derived, and the current uniqueness statement
+   is numerical rather than theorem-grade.
+   The gate remains open because the named baseline-connected-component input
    `A-BCC`, the finer right-sensitive microscopic selector law,
    interval-certified exact-carrier dominance/completeness on the residual
    split-2 selector branch, and current-bank quantitative DM mapping are

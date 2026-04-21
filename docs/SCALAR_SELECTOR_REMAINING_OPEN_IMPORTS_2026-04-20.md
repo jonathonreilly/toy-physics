@@ -303,6 +303,27 @@ center law is a useful conditional cut on the exact PMNS manifold, but not yet
 the missing native point-selection law. See
 `docs/DM_PMNS_Z3_DOUBLET_BLOCK_CENTER_POSITIVE_SHEET_NO_GO_THEOREM_NOTE_2026-04-20.md`.
 
+**Three-identity support proposal (2026-04-21):** a new reviewer-facing support
+package records the compact candidate system
+
+```text
+Tr(H) = Q_Koide,
+delta * q_+ = Q_Koide,
+det(H) = E2
+```
+
+on the retained affine Hermitian chart. On the current active-chamber working
+surface, that proposed system solves numerically to one interior chamber point
+in the audited search box and yields a PMNS packet inside the current NuFit
+`1 sigma` bands. This is useful support, not closure: the product law
+`delta * q_+ = Q_Koide` and determinant law `det(H) = E2` are still proposed
+selector identities rather than retained derivations, and the current
+one-cluster statement is a bounded numerical search result rather than a
+theorem-grade uniqueness proof. See
+`docs/PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_PROPOSAL_README_2026-04-21.md`,
+`docs/PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_NOTE_2026-04-21.md`, and
+`scripts/frontier_pmns_selector_three_identity_support_2026_04_21.py`.
+
 ### Priority 4: Selected-line physical point
 
 The selected-line witness remains downstream of the Brannen-phase bridge. If

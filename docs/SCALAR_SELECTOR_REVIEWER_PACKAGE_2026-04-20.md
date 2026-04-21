@@ -226,6 +226,14 @@ object is the point-selection law on that manifold, not target existence. The
 tested `Z_3` center proposal `delta_db = 1`, `q_+ = 0` is not yet that law:
 the center-law positive-sheet no-go theorem shows that adding `I_src > 0`
 still leaves a positive-sheet `3`-real locus with varying PMNS triples.
+The new three-identity support proposal is worth retaining as a compact
+candidate law on the same affine chart: on the current active-chamber working
+surface the proposed system `Tr(H) = Q_Koide`, `delta * q_+ = Q_Koide`,
+`det(H) = E2` numerically recovers one interior chamber point in the audited
+search box and gives a PMNS packet inside the current NuFit `1 sigma` bands.
+It remains support only: the product and determinant laws are not yet retained
+derivations, and the current uniqueness statement is numerical rather than
+theorem-grade.
 PNS is derived as a property of Basin 1, not axiomatized.
 
 ---
