@@ -218,6 +218,11 @@ Current quantitative statuses:
    `A-BCC` and the finer right-sensitive microscopic selector law are still
    open. The residual split-2 carrier-side dominance/completeness blocker is
    now closed by interval certification on the two explicit upper-face boxes.
+   On the selector side, the exact intrinsic threshold-volume family already
+   has a high-threshold stabilization window on which the preferred recovered
+   lift is the unique minimizer, so the remaining positive selector burden is
+   now narrower: derive a threshold law landing in that window, or derive a
+   stronger microscopic law that bypasses the threshold family.
    The reviewer-facing current-bank quantitative mapping item is now closed. The hierarchy pairing
    `σ_hier = (2, 1, 0)` is already fixed
    observationally at the retained pin; what remains open there is any

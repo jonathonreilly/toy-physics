@@ -243,6 +243,13 @@ review surface are now branch-choice / selector-side only: `A-BCC` as an
 axiom-native branch-choice law and the finer right-sensitive microscopic
 selector law. See
 `docs/DM_SPLIT2_INTERVAL_CERTIFIED_DOMINANCE_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
+The selector side is also slightly sharper than before: on the recovered bank,
+the exact intrinsic threshold-volume selector family now has a theorem-grade
+high-threshold stabilization window on which the preferred recovered lift is
+the unique minimizer. That does not yet derive the selector law, but it
+reduces the remaining positive burden to an intrinsic threshold law landing in
+that exact window. See
+`docs/DM_SELECTOR_THRESHOLD_STABILIZATION_SUPPORT_THEOREM_NOTE_2026-04-21.md`.
 PNS is derived as a property of Basin 1, not axiomatized.
 
 ---
