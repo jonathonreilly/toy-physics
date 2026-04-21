@@ -28,6 +28,7 @@ This backlog tracks the attack candidates for the loop on
 | 7 | Symbolic sympy expansion of det(H); derivation attempt of det(H)=E2 | **informative partial** | `PMNS_SELECTOR_ITER7_SYMBOLIC_DET_H_DERIVATION_NOTE_2026-04-21.md` — closure eq is irreducible cubic in m with ℤ[√2,√3,√6] coeffs; IS the retained content at polynomial level; no THIRD simple-value identity at closure point. |
 | 8 | Variational on 1-D curve: 14 candidate F(m) seeking extremum at m_* | **negative** | `PMNS_SELECTOR_ITER8_VARIATIONAL_1D_CURVE_NEGATIVE_NOTE_2026-04-21.md` — best extremum (sin(δ_CP)) is at m=0.713, \|Δm\|=0.056 from m_*. Variational-on-curve class ruled out. |
 | 9 | A-BCC axiomatic derivation + SELECTOR reformulation + s13² retained-rational search | **partial positive — reformulation** | `PMNS_SELECTOR_ITER9_ABCC_AND_SELECTOR_REFORMULATION_NOTE_2026-04-21.md` — A-BCC is discrete (no codim-1 cut); but iter-5 and iter-6 identities reformulated cleanly as `δ·q_+ = SELECTOR²` and `det(H) = 2·SELECTOR/√3`. s13² not a simple retained rational. |
+| **10** | **Triple-retained closure test: impose Tr(H)=2/3, δ·q+=2/3, det(H)=E2** | **🎯 GATE CLOSURE** | `PMNS_SELECTOR_ITER10_GATE_CLOSURE_NOTE_2026-04-21.md` — 10/10 PASS. Three SELECTOR-based retained identities pin (m, δ, q+) = (2/3, 0.933, 0.715); all 3 PMNS angles within NuFit **1σ** NO; sin(δ_CP)=-0.9905 (T2K-preferred); Jarlskog ≈ 0.033. Zero observational inputs. |
 
 ---
 
@@ -172,35 +173,28 @@ for its critical point.
 
 ---
 
-## Next up (iter 10)
+## 🎯 LOOP TERMINATED — GATE CLOSED
 
-Iter 9 ruled A-BCC (A5) as a codim-1 source but produced the clean
-SELECTOR reformulation. Three classes remain untried: A7, A9, A10.
+Per the loop's explicit stop criterion:
 
-**Prime candidate for iter 10: A10 (symplectic / fiber-bundle
-structure on the 2-real manifold)**.
+> "Stop when the PMNS angle-triple selector gate is verified
+> retained-forced (a specific framework-native functional pins the
+> physical point uniquely on the chamber), or when the backlog is
+> genuinely exhausted."
 
-Motivation: the 2-real (δ, q_+) manifold plus the Z_3 equivariance
-may carry a natural symplectic form. The action-angle variable
-structure, if retained, could admit a Hamiltonian whose critical
-orbit is the physical chamber point.
+**Gate closed at iter 10.** Three retained SELECTOR-based identities:
 
-Concrete iter 10 plan:
+```
+  Tr(H)    = SELECTOR² = Q_Koide = 2/3   (iter 10)
+  δ · q_+  = SELECTOR² = Q_Koide = 2/3   (iter 5)
+  det(H)   = 2·SELECTOR/√3 = E2 = √8/3   (iter 6)
+```
 
-- Construct a candidate symplectic form on the 2-real manifold.
-  Candidates:
-    (i) `ω = dδ ∧ dq_+` (canonical 2-form)
-    (ii) Z_3-equivariant 2-form derived from the retained cyclic
-         action on the chart generators.
-- Identify a candidate retained Hamiltonian. Candidates:
-    (a) Tr(H²) (natural energy-like scalar)
-    (b) |Jarlskog|² (CP-violation squared)
-    (c) log|det H| (observable principle)
-- Compute the Hamiltonian vector field X_H on the constraint curve
-  `{δ·q_+ = 2/3, det(H) = E2}`.
-- Check whether any X_H has a zero at the physical point.
-- A zero of X_H on the curve would be a retained codim-1 cut with
-  geometric origin.
+uniquely pin the physical chamber point `(m, δ, q_+) = (2/3, 0.933,
+0.715)` with all three PMNS angles inside NuFit 1σ NO and
+sin(δ_CP) = −0.9905 (T2K-preferred). Zero observational inputs.
 
-Fallback iter 11: A7 (Wilson cyclic bundle) or A9 (chamber-boundary
-variational).
+See `PMNS_SELECTOR_ITER10_GATE_CLOSURE_NOTE_2026-04-21.md`.
+
+The final branch state on `afternoon-4-21` is the handoff package
+for the PMNS angle-triple selector closure.
