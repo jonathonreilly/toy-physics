@@ -27,6 +27,7 @@ This backlog tracks the attack candidates for the loop on
 | 6 | Combined-cuts scan: walk `{δ·q_+ = 2/3, s13²=0.0218}` curve, find second retained cut | **second cut found: `det(H) = E2 = √8/3`** | `PMNS_SELECTOR_ITER6_SECOND_CUT_DET_H_EQ_E2_NOTE_2026-04-21.md` — two retained identities + s13² input gives PMNS within 1σ on s12² and essentially central on s23². E2 is a retained atlas constant. |
 | 7 | Symbolic sympy expansion of det(H); derivation attempt of det(H)=E2 | **informative partial** | `PMNS_SELECTOR_ITER7_SYMBOLIC_DET_H_DERIVATION_NOTE_2026-04-21.md` — closure eq is irreducible cubic in m with ℤ[√2,√3,√6] coeffs; IS the retained content at polynomial level; no THIRD simple-value identity at closure point. |
 | 8 | Variational on 1-D curve: 14 candidate F(m) seeking extremum at m_* | **negative** | `PMNS_SELECTOR_ITER8_VARIATIONAL_1D_CURVE_NEGATIVE_NOTE_2026-04-21.md` — best extremum (sin(δ_CP)) is at m=0.713, \|Δm\|=0.056 from m_*. Variational-on-curve class ruled out. |
+| 9 | A-BCC axiomatic derivation + SELECTOR reformulation + s13² retained-rational search | **partial positive — reformulation** | `PMNS_SELECTOR_ITER9_ABCC_AND_SELECTOR_REFORMULATION_NOTE_2026-04-21.md` — A-BCC is discrete (no codim-1 cut); but iter-5 and iter-6 identities reformulated cleanly as `δ·q_+ = SELECTOR²` and `det(H) = 2·SELECTOR/√3`. s13² not a simple retained rational. |
 
 ---
 
@@ -171,36 +172,35 @@ for its critical point.
 
 ---
 
-## Next up (iter 9)
+## Next up (iter 10)
 
-Iter 8 ruled out variational-on-curve third-cut candidates. Of the
-10 initially catalogued attack classes, 4 remain untried: **A5**
-(A-BCC axiomatic derivation), A7 (Wilson-line cyclic bundle), A9
-(chamber-boundary variational), A10 (symplectic).
+Iter 9 ruled A-BCC (A5) as a codim-1 source but produced the clean
+SELECTOR reformulation. Three classes remain untried: A7, A9, A10.
 
-**Prime candidate for iter 9: A5 (A-BCC axiomatic derivation)**.
+**Prime candidate for iter 10: A10 (symplectic / fiber-bundle
+structure on the 2-real manifold)**.
 
-Motivation: the user's original headline was "DM A-BCC / PMNS
-angle-triple gate". A-BCC is currently observationally grounded (T2K
-CP-phase excludes the C_neg basin) but NOT derived from Cl(3)/Z³. If
-axiomatic derivation succeeds, it may come with additional structure
-(beyond the signature choice) that constrains the chamber point
-further.
+Motivation: the 2-real (δ, q_+) manifold plus the Z_3 equivariance
+may carry a natural symplectic form. The action-angle variable
+structure, if retained, could admit a Hamiltonian whose critical
+orbit is the physical chamber point.
 
-Concrete iter 9 plan:
+Concrete iter 10 plan:
 
-1. Review the retained proof of A-BCC in
-   `scripts/frontier_abcc_cp_phase_no_go_theorem.py` — what does it
-   currently use observationally vs retained-forced?
-2. Attempt to replace the T2K observational input with a retained
-   derivation from Cl(3)/Z³:
-   - Does the retained W[J] = log|det(H_base + J)| observable
-     principle force `sign(det) > 0` on the physical chamber directly?
-   - Does the retained Z_3 trichotomy + σ_hier = (2, 1, 0) + I1/I2P
-     closures jointly force the A-BCC basin choice?
-3. If A-BCC becomes retained, check whether any ADDITIONAL structure
-   pins the chamber point: e.g., does A-BCC + retained constraints
-   uniquely determine the basin point?
+- Construct a candidate symplectic form on the 2-real manifold.
+  Candidates:
+    (i) `ω = dδ ∧ dq_+` (canonical 2-form)
+    (ii) Z_3-equivariant 2-form derived from the retained cyclic
+         action on the chart generators.
+- Identify a candidate retained Hamiltonian. Candidates:
+    (a) Tr(H²) (natural energy-like scalar)
+    (b) |Jarlskog|² (CP-violation squared)
+    (c) log|det H| (observable principle)
+- Compute the Hamiltonian vector field X_H on the constraint curve
+  `{δ·q_+ = 2/3, det(H) = E2}`.
+- Check whether any X_H has a zero at the physical point.
+- A zero of X_H on the curve would be a retained codim-1 cut with
+  geometric origin.
 
-Fallback if A5 fails: iter 10 tries A9 (chamber-boundary variational)
-or A7 (Wilson-line cyclic bundle).
+Fallback iter 11: A7 (Wilson cyclic bundle) or A9 (chamber-boundary
+variational).
