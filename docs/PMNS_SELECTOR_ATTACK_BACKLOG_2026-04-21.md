@@ -24,6 +24,7 @@ This backlog tracks the attack candidates for the loop on
 | 3 | Brannen-phase gate: 12 phase invariants vs retained I2/P values {2/9 rad, 2π/9, π−2/9, …} | **weak hint / negative at 1e-4** | `PMNS_SELECTOR_ITER3_BRANNEN_PHASE_WEAK_HINT_NOTE_2026-04-21.md` — best match \|dev\|=0.025 rad (1.4°), two clusters; chamber-blind `Im(a_*+b_*) = γ = 1/2` exactly |
 | 4 | Operator-commutation + scalar-invariant scan (33 scalars × retained simple values) | **mixed — strong hint on `δ · q_+ ≈ 2/3 = Q`** (0.15% dev) | `PMNS_SELECTOR_ITER4_OPERATOR_COMMUTATION_MIXED_NOTE_2026-04-21.md` — operator-commutation class ruled out; scalar scan finds `δ·q_+ = 2/3` and `Σλ/Σ\|λ\| = 1/6` both at 0.001 deviation — likely iter-5 candidates |
 | 5 | Precision-sharpen test of `δ · q_+ = Q = 2/3` hypothesis | **strong intermediate** | `PMNS_SELECTOR_ITER5_DELTA_QPLUS_EQ_Q_HYPOTHESIS_NOTE_2026-04-21.md` — at machine precision `\|dev\| = 1.04e-3` (NOT exact), BUT re-pin under exact constraint gives `sin²θ_23 = 0.5447` within 0.06% of PDG central 0.545 — inside 1σ NuFit NO. A genuine codim-1 cut compatible with all PMNS data. |
+| 6 | Combined-cuts scan: walk `{δ·q_+ = 2/3, s13²=0.0218}` curve, find second retained cut | **second cut found: `det(H) = E2 = √8/3`** | `PMNS_SELECTOR_ITER6_SECOND_CUT_DET_H_EQ_E2_NOTE_2026-04-21.md` — two retained identities + s13² input gives PMNS within 1σ on s12² and essentially central on s23². E2 is a retained atlas constant. |
 
 ---
 
@@ -168,33 +169,28 @@ for its critical point.
 
 ---
 
-## Next up (iter 6)
+## Next up (iter 7)
 
-Iter 5 established `δ · q_+ ≈ Q = 2/3` to 0.16% — NOT exact but
-observationally admissible at 1σ. Iter 6 has TWO sub-goals:
+Iter 6 found a very strong second-cut candidate: **`det(H) = √8/3 = E2`**
+(retained atlas constant). Combined with iter 5's first cut
+`δ · q_+ = Q = 2/3`, the pair reduces the 3D chart to discrete points
+observationally consistent with PDG 3σ on ALL three PMNS angles.
 
-**(a) Derive `δ · q_+ = 2/3` (or its exact framework-native form) from
-Cl(3)/Z³ axioms.** Candidates:
+Iter 7 primary direction: **framework-native derivation of
+`det(H) = E2 = √8/3`**. Concretely:
 
-- AM-GM on a weighted product: find `F(m, δ, q_+) = α·log(δ) + β·log(q_+)
-  + γ·log(something)` under a retained `Σ = const` constraint whose
-  extremum gives `δ · q_+ = 2/3`.
-- Direct I1 parallel: reinterpret `δ` and `q_+` as isotype amplitudes
-  on some retained projector; AM-GM at the maximum gives `δ · q_+ =
-  (N/2)²/4`; identify `N` from retained structure.
-- Cross-sector pull: maybe `δ · q_+` equals `Q` NOT because of a new
-  AM-GM but because the Koide I1 Q literally = the chamber-coordinate
-  product at a retained locus, via the retained `U_e = I` + Z_3
-  trichotomy structure.
+- Expand `det(H(m, δ, q_+))` as a polynomial in `(m, δ, q_+)` with
+  coefficients from the retained H_base, T_M, T_Δ, T_Q structure.
+- Impose `det(H) = √8/3` and look for a retained factorization
+  (e.g. `det(H) = E2 · (retained combination) + remainder`).
+- Test: at the pinned point, do the non-E2 terms sum to a retained
+  simple value? Or does the full polynomial identity reduce to
+  something clean like `m · f(δ, q_+) = E2 · g(retained)`?
+- Also: expand `det(H)` in the eigenvalue basis and check whether
+  `det(H) = E2` corresponds to a specific eigenvalue relation.
 
-**(b) Identify a SECOND retained condition on the 1-real hyperbola
-`{δ · q_+ = 2/3}` that picks the exact point `(m_*, δ_*, q_+*)`.**
-
-- Re-run the iter-4 scalar scan AFTER fixing `δ · q_+ = 2/3` exactly
-  — the chamber collapses to a 1-parameter curve; look for near-hits
-  of other retained scalars along that curve.
-- Natural candidates: `Tr(H) = m`, `det(H)`, `q_+ − δ`, `q_+ + δ`,
-  `m · δ`, `m · q_+`.
-
-Iter 6 primary attack: combined (a) + (b) — search the 1-param curve
-under `δ · q_+ = 2/3` for the second retained cut.
+If iter 7 succeeds in deriving `det(H) = E2`, iter 8 then searches
+for the third retained cut (replacing s13² as observational input).
+Iter 8 candidates: A5 (A-BCC axiomatic derivation), A10 (symplectic),
+or rescanning scalars on the discrete 0-D intersection locus for a
+third simple-value hit.
