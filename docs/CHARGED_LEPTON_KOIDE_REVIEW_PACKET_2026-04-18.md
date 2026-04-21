@@ -96,12 +96,15 @@ Items that remain open:
 - quark-sector and neutrino-sector Koide analogs are sector-specific open
   problems.
 
-So the current classification is:
+So the current classification is (updated 2026-04-20 late night):
 
-- **conditional** retained-derivation of Q = 2/3 (via qubit-lattice-dim
-  bridge acceptance; notes 21 and 22 together describe two compatible
-  views — no-go within character-data surface, closure via Q-chain)
-- **conditional** retained-derivation of delta = 2/9 (follows from Q
-  closure via CPC; same reviewer-decision dependency)
-- retained promotion for charged-lepton ratios (conditional on retained
-  v_0 AND acceptance of the Q closure bridge)
+- **retained-derivation of Q = 2/3** (UNCONDITIONAL via F-functional Legendre
+  transform + η-invariant G4 algebra chain, 8+ independent routes)
+- **retained-derivation of delta = 2/9 rad** (UNCONDITIONAL via APS
+  η-invariant on retained C_3[111] spatial-rotation fixed-locus,
+  8 independent exact derivations)
+- retained promotion for charged-lepton ratios (modulo overall scale v_0
+  which remains a separate hierarchy input)
+
+See `KOIDE_UNCONDITIONAL_CLOSURE_2026-04-20.md` for full derivation chain
+from 24 parallel agent investigations across 4 rounds.
