@@ -32,6 +32,11 @@ The clean current endpoint is:
   exact selected line the remaining datum is equivalently one phase on the
   exact cyclic Koide circle, so the live constructive target is one ambient
   cyclic-response phase law
+- the new selected-line / Brannen phase-orbit bridge now shows that this
+  selected-line phase is not a second independent local phase variable: it is
+  exactly the Brannen/circulant phase up to fixed `C_3` ordering bookkeeping,
+  so once an ambient law fixes that phase the current selected-line target
+  follows automatically
 - the bare selected-line missing-axis resolvent boundary now also closes
   negatively: that local family can imitate the charged-lepton packet
   numerically, but only away from the physical first-branch endpoint, so the
@@ -69,7 +74,8 @@ So the current charged-lepton state is:
 13. [KOIDE_Z3_SCALAR_POTENTIAL_SUPPORT_NOTE_2026-04-19.md](./KOIDE_Z3_SCALAR_POTENTIAL_SUPPORT_NOTE_2026-04-19.md)
 14. [KOIDE_ONE_CLOCK_ENDPOINT_TARGET_THEOREM_NOTE_2026-04-20.md](./KOIDE_ONE_CLOCK_ENDPOINT_TARGET_THEOREM_NOTE_2026-04-20.md)
 15. [KOIDE_SELECTED_LINE_CYCLIC_PHASE_TARGET_NOTE_2026-04-20.md](./KOIDE_SELECTED_LINE_CYCLIC_PHASE_TARGET_NOTE_2026-04-20.md)
-16. [KOIDE_SELECTED_LINE_BARE_RESOLVENT_ENDPOINT_BOUNDARY_NOTE_2026-04-20.md](./KOIDE_SELECTED_LINE_BARE_RESOLVENT_ENDPOINT_BOUNDARY_NOTE_2026-04-20.md)
+16. [KOIDE_SELECTED_LINE_BRANNEN_PHASE_ORBIT_BRIDGE_NOTE_2026-04-21.md](./KOIDE_SELECTED_LINE_BRANNEN_PHASE_ORBIT_BRIDGE_NOTE_2026-04-21.md)
+17. [KOIDE_SELECTED_LINE_BARE_RESOLVENT_ENDPOINT_BOUNDARY_NOTE_2026-04-20.md](./KOIDE_SELECTED_LINE_BARE_RESOLVENT_ENDPOINT_BOUNDARY_NOTE_2026-04-20.md)
 
 ## Package Role
 
@@ -98,6 +104,11 @@ The newest geometric sharpening goes one step further: on the exact cyclic
 carrier that same endpoint is equivalently one phase on the circle
 `r1^2 + r2^2 = 2 r0^2`. So the most natural ambient formulation now is one
 cyclic-response phase law, not a bare local selected-line section.
+The new orbit-bridge sharpening then removes one extra ambiguity on that side:
+the current selected-line phase target is already the Brannen/circulant phase
+variable up to one fixed `C_3` shift and the current slot-orientation sign, so
+the remaining bridge is ambient phase selection rather than a second local
+phase-identification problem.
 Branch-local exploratory `Q = 2/3`-surface and scale-selector near-miss probes
 remain off current-main authority.
 
