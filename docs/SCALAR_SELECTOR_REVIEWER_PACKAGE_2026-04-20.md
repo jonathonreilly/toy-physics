@@ -4,7 +4,7 @@
 **Scope:** Reviewer-facing clean-language summary of four Tier-1 Standard
 Model scalar-selector gates on the current review surface. The package closes
 the up-sector quark gate, materially sharpens the charged-lepton Koide gates,
-and reduces the DM gate to explicit named blockers without adding new axioms.
+and reduces the DM gate to two explicit named blockers without adding new axioms.
 Named retained observational inputs and unresolved structural bridges are
 listed explicitly. This note is the primary read-me for the submission.
 
@@ -12,7 +12,7 @@ listed explicitly. This note is the primary read-me for the submission.
 
 ## §0 Bottom line
 
-Four Tier-1 Standard Model scalar-selector gates close this cycle via retained Cl(3)/Z³ framework ingredients plus named retained inputs. No new axioms are added. Each gate carries at least one primary closure route plus one or more independent corroborating routes. All runners pass with no hardcoded verifications. Open retained-observational inputs are enumerated separately in `docs/SCALAR_SELECTOR_REMAINING_OPEN_IMPORTS_2026-04-20.md`.
+On the current review surface, the up-sector quark gate is fully closed, the charged-lepton Koide lane carries the strongest current executable support stack but still retains two physical bridges, and the DM gate is reduced to two explicit named blockers after the new split-2 interval certification. No new axioms are added. All runners pass with no hardcoded verifications. Open retained-observational inputs and unresolved structural bridges are enumerated separately in `docs/SCALAR_SELECTOR_REMAINING_OPEN_IMPORTS_2026-04-20.md`.
 
 **2026-04-21 package update.** The April 21 Koide package
 (`docs/KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md`) supersedes the
@@ -234,6 +234,15 @@ search box and gives a PMNS packet inside the current NuFit `1 sigma` bands.
 It remains support only: the product and determinant laws are not yet retained
 derivations, and the current uniqueness statement is numerical rather than
 theorem-grade.
+The carrier-side split-2 dominance/completeness blocker is no longer open.
+The new interval-certified theorem closes the two residual upper-face boxes
+`CAP_BOX` and `ENDPOINT_BOX` by Weyl eigenvalue control, exact cofactor
+projector-row intervals, and boxwise transport upper bounds
+`eta / eta_obs < 1` throughout. So the remaining live DM blockers on the
+review surface are now branch-choice / selector-side only: `A-BCC` as an
+axiom-native branch-choice law and the finer right-sensitive microscopic
+selector law. See
+`docs/DM_SPLIT2_INTERVAL_CERTIFIED_DOMINANCE_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
 PNS is derived as a property of Basin 1, not axiomatized.
 
 ---
@@ -349,6 +358,7 @@ All runners pass with no hardcoded `True` PASS annotations. Every PASS is a nume
 | A-BCC chamber ∩ DPLE | `frontier_dm_abcc_chamber_dple_closure.py` | 39 | 0 |
 | A-BCC 5-route audit | `frontier_dm_abcc_assumptions_audit.py` | 16 | 0 |
 | DPLE dim-parametric extremum | `frontier_dm_dple_theorem.py` | 19 | 0 |
+| Split-2 interval-certified dominance closure | `frontier_dm_split2_interval_certified_dominance_closure_2026_04_21.py` | 17 | 0 |
 | a_u JTS-affine + LO + NLO | `frontier_quark_issr1_bicac_forcing.py` | 13 | 0 |
 | a_u JTS physical-point | `frontier_quark_jts_physical_point_closure_theorem.py` | 12 | 0 |
 | a_u shell normalization | `frontier_quark_bimodule_lo_shell_normalization_theorem.py` | 10 | 0 |

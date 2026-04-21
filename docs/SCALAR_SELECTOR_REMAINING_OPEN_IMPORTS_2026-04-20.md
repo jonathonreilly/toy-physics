@@ -25,7 +25,7 @@ The downstream selected-line witness remains conditional on the second bridge.
 |---|---|---|---|
 | Koide relation `Q = 2/3` | κ, θ | reviewer-tested Frobenius-isotype / AM-GM support package isolates the Koide point as the unique extremum of the admitted block-total functional, but the physical/source-law extremal-principle bridge remains open | derive why the physical charged-lepton packet must extremize the block-total Frobenius functional, or an equivalent accepted source law that forces the same point |
 | Brannen phase `δ = 2/9` on the physical base | θ | reviewer-tested APS / ABSS support package isolates the exact ambient topological value `η = 2/9`, but the physical selected-line Brannen-phase bridge remains open | derive `δ_physical = η_APS`, equivalently an ambient one-clock `3+1` transport / endpoint / Wilson law whose selected-line pullback is the physical Brannen phase |
-| PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)` | A-BCC (sigma-chain) | retained observational input; the new upper-octant / source-cubic selector theorems close the CP-sign / `σ_hier` half on the active chamber, and the fixed-`N_e` exact-source-manifold theorem shows the physical PMNS target already lies on a regular local `2`-real source manifold on the charged-lepton-side seed surface. The tested `Z_3` center law `delta_db = 1`, `q_+ = 0` is useful only conditionally: together with `I_src > 0` it still leaves a positive-sheet `3`-real locus and does not derive the PMNS target by itself | framework-native point-selection law stronger than the current `Z_3` center law on the exact PMNS / positive-center locus |
+| PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)` | A-BCC (sigma-chain) | retained observational input; the new upper-octant / source-cubic selector theorems close the CP-sign / `σ_hier` half on the active chamber, the fixed-`N_e` exact-source-manifold theorem shows the physical PMNS target already lies on a regular local `2`-real source manifold on the charged-lepton-side seed surface, and the residual split-2 carrier-side dominance/completeness blocker is now interval-certified closed on the two explicit upper-face boxes. The tested `Z_3` center law `delta_db = 1`, `q_+ = 0` is useful only conditionally: together with `I_src > 0` it still leaves a positive-sheet `3`-real locus and does not derive the PMNS target by itself | axiom-native branch-choice law `A-BCC` together with a finer right-sensitive microscopic point-selection law stronger than the current `Z_3` center law on the exact PMNS / positive-center locus |
 | Selected-line witness ratio `w/v ≈ 4.101` | m_* (selected-line point) | conditionally pinned by the exact selected-line scalar-phase bridge once the physical Brannen phase is fixed; still open because the Brannen-phase bridge is open | the same physical Brannen-phase bridge that closes `δ = 2/9`, or an equivalent ambient endpoint law that fixes the selected-line point directly |
 
 ## §0a Closed in cycle 2
@@ -62,6 +62,13 @@ The downstream selected-line witness remains conditional on the second bridge.
   package and headline theorem surfaces: `docs/SCALAR_SELECTOR_REVIEWER_PACKAGE_2026-04-20.md`,
   `docs/QUARK_JTS_AFFINE_PHYSICAL_CARRIER_THEOREM_NOTE_2026-04-19.md`, and
   `docs/SCALAR_SELECTOR_PROOF_CHAINS_2026-04-19.md`.
+- **Residual split-2 carrier dominance/completeness closed.** The prior
+  carrier-side reduction had already localized the remaining split-2 pressure
+  to the two explicit upper-face neighborhoods `CAP_BOX` and `ENDPOINT_BOX`.
+  The new interval-certified theorem closes those whole boxes by Weyl
+  eigenvalue control, exact cofactor projector-row intervals, and boxwise
+  transport upper bounds `eta / eta_obs < 1` throughout. See
+  `docs/DM_SPLIT2_INTERVAL_CERTIFIED_DOMINANCE_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
 
 ## §1 Priority ordering for closure
 
@@ -324,6 +331,19 @@ theorem-grade uniqueness proof. See
 `docs/PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_NOTE_2026-04-21.md`, and
 `scripts/frontier_pmns_selector_three_identity_support_2026_04_21.py`.
 
+**New same-branch closure (2026-04-21):** the carrier-side split-2
+dominance/completeness blocker is no longer open. The branch had already
+reduced all remaining split-2 carrier pressure to the two explicit upper-face
+boxes `CAP_BOX` and `ENDPOINT_BOX`. The new interval-certified theorem uses
+the exact affine split-2 generators, Weyl eigenvalue control on each whole
+box, exact cofactor formulas for all projector-row weights, and the exact
+one-variable transport kernel to certify `eta / eta_obs < 1` throughout both
+boxes. So the residual carrier-side completeness question is now closed on
+the review surface. What remains open on the PMNS lane is branch-choice /
+selector-side only: `A-BCC` and the finer right-sensitive microscopic
+point-selection law. See
+`docs/DM_SPLIT2_INTERVAL_CERTIFIED_DOMINANCE_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
+
 ### Priority 4: Selected-line physical point
 
 The selected-line witness remains downstream of the Brannen-phase bridge. If
@@ -387,6 +407,7 @@ the primary closure runner and its verification counts are:
 | DM A-BCC (local-family no-go) | `frontier_dm_pmns_local_selector_family_no_go_theorem_2026_04_20.py` | 15 | reduces the remaining PMNS gate to nonlocal point-selection / angle triple only |
 | DM A-BCC (fixed-`N_e` exact-source manifold) | `frontier_dm_pmns_ne_seed_surface_exact_source_manifold_theorem_2026_04_20.py` | 12 | shows the physical PMNS target already lies on a regular local `2`-real source manifold |
 | DM A-BCC (center-law positive-sheet no-go) | `frontier_dm_pmns_z3_doublet_block_center_positive_sheet_no_go_2026_04_20.py` | 14 | shows `delta_db = 1`, `q_+ = 0`, `I_src > 0` still leaves a positive-sheet `3`-real locus |
+| DM split-2 interval-certified dominance closure | `frontier_dm_split2_interval_certified_dominance_closure_2026_04_21.py` | 17 | certifies `eta / eta_obs < 1` on the full `CAP_BOX` and `ENDPOINT_BOX` residual neighborhoods |
 | Quark a_u (JTS-affine-physical-carrier + ISSR1) | `frontier_quark_issr1_bicac_forcing.py` | 13 | headline closure |
 | Quark a_u (JTS physical-point second route) | `frontier_quark_jts_physical_point_closure_theorem.py` | 12 | independent witness |
 | Quark a_u (shell-normalization corroboration) | `frontier_quark_bimodule_lo_shell_normalization_theorem.py` | 10 | Route-2 carrier |

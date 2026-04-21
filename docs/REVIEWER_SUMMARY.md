@@ -158,17 +158,16 @@ Current quantitative statuses:
   linear-path signature theorem at the pinned point, a reviewed selector
   obstruction stack that compresses selector-side ambiguity to intrinsic
   threshold-law nonrealization and exhausts the tested carrier-side pressure
-  to two explicit split-2 upper-face neighborhoods, a new dense-grid /
-  empirical-Lipschitz support packet on those residual boxes, a closed
+  to two explicit split-2 upper-face neighborhoods, a reviewed
+  interval-certified split-2 dominance theorem closing those whole boxes, a closed
   reviewer-facing current-bank quantitative mapping note, and a reviewed
   Wilson direct-descendant science stack showing that the current package
   carries no hidden Wilson-to-`dW_e^H` descendant law while explicit
   structured positive model classes and manifold-valued constructive positive
   exact closure already exist on the fixed native `N_e` seed surface: the
   remaining live blockers are the named baseline-connected-component input
-  `A-BCC`, the finer right-sensitive microscopic selector law for the
-  physical source branch / point, and interval-certified exact-carrier
-  dominance/completeness on the residual split-2 selector branch;
+  `A-BCC` and the finer right-sensitive microscopic selector law for the
+  physical source branch / point;
   `σ_hier = (2, 1, 0)` is fixed observationally at the pinned chamber point,
   but broader chamber-wide / all-basin uniqueness is still out of scope
 - promoted CKM atlas/axiom package on the canonical tensor/projector surface, with older Cabibbo / NNI / partial Jarlskog notes retained only as route history
@@ -216,10 +215,10 @@ Current quantitative statuses:
    proposed rather than retained-derived, and the current uniqueness statement
    is numerical rather than theorem-grade.
    The gate remains open because the named baseline-connected-component input
-   `A-BCC`, the finer right-sensitive microscopic selector law, and
-   interval-certified exact-carrier dominance/completeness on the residual
-   split-2 selector branch are still open. The reviewer-facing current-bank
-   quantitative mapping item is now closed. The hierarchy pairing
+   `A-BCC` and the finer right-sensitive microscopic selector law are still
+   open. The residual split-2 carrier-side dominance/completeness blocker is
+   now closed by interval certification on the two explicit upper-face boxes.
+   The reviewer-facing current-bank quantitative mapping item is now closed. The hierarchy pairing
    `σ_hier = (2, 1, 0)` is already fixed
    observationally at the retained pin; what remains open there is any
    chamber-wide / all-basin extension beyond the pinned-point theorem.
