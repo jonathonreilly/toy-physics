@@ -25,6 +25,7 @@ This backlog tracks the attack candidates for the loop on
 | 4 | Operator-commutation + scalar-invariant scan (33 scalars × retained simple values) | **mixed — strong hint on `δ · q_+ ≈ 2/3 = Q`** (0.15% dev) | `PMNS_SELECTOR_ITER4_OPERATOR_COMMUTATION_MIXED_NOTE_2026-04-21.md` — operator-commutation class ruled out; scalar scan finds `δ·q_+ = 2/3` and `Σλ/Σ\|λ\| = 1/6` both at 0.001 deviation — likely iter-5 candidates |
 | 5 | Precision-sharpen test of `δ · q_+ = Q = 2/3` hypothesis | **strong intermediate** | `PMNS_SELECTOR_ITER5_DELTA_QPLUS_EQ_Q_HYPOTHESIS_NOTE_2026-04-21.md` — at machine precision `\|dev\| = 1.04e-3` (NOT exact), BUT re-pin under exact constraint gives `sin²θ_23 = 0.5447` within 0.06% of PDG central 0.545 — inside 1σ NuFit NO. A genuine codim-1 cut compatible with all PMNS data. |
 | 6 | Combined-cuts scan: walk `{δ·q_+ = 2/3, s13²=0.0218}` curve, find second retained cut | **second cut found: `det(H) = E2 = √8/3`** | `PMNS_SELECTOR_ITER6_SECOND_CUT_DET_H_EQ_E2_NOTE_2026-04-21.md` — two retained identities + s13² input gives PMNS within 1σ on s12² and essentially central on s23². E2 is a retained atlas constant. |
+| 7 | Symbolic sympy expansion of det(H); derivation attempt of det(H)=E2 | **informative partial** | `PMNS_SELECTOR_ITER7_SYMBOLIC_DET_H_DERIVATION_NOTE_2026-04-21.md` — closure eq is irreducible cubic in m with ℤ[√2,√3,√6] coeffs; IS the retained content at polynomial level; no THIRD simple-value identity at closure point. |
 
 ---
 
@@ -169,28 +170,38 @@ for its critical point.
 
 ---
 
-## Next up (iter 7)
+## Next up (iter 8)
 
-Iter 6 found a very strong second-cut candidate: **`det(H) = √8/3 = E2`**
-(retained atlas constant). Combined with iter 5's first cut
-`δ · q_+ = Q = 2/3`, the pair reduces the 3D chart to discrete points
-observationally consistent with PDG 3σ on ALL three PMNS angles.
+Iter 7 verified the closure equation `det(H) = E2 | δ·q+ = 2/3` is an
+irreducible cubic in m with ℤ[√2, √3, √6] coefficients. It IS the
+retained content at the polynomial level — but does not reduce to a
+simpler one-scalar-equals-one-simple-value form. No third simple-value
+scalar identity exists at the closure point within the broad class
+tested.
 
-Iter 7 primary direction: **framework-native derivation of
-`det(H) = E2 = √8/3`**. Concretely:
+Iter 8 primary direction: **variational on the 1-D curve**. On the
+1-parameter curve `{δ · q_+ = 2/3, det(H) = E2}` (parameterized by m
+or δ), search for a retained functional `F(m, δ, q_+)` whose
+extremum along the curve is the physical point `(m_*, δ_*, q_+*)`.
 
-- Expand `det(H(m, δ, q_+))` as a polynomial in `(m, δ, q_+)` with
-  coefficients from the retained H_base, T_M, T_Δ, T_Q structure.
-- Impose `det(H) = √8/3` and look for a retained factorization
-  (e.g. `det(H) = E2 · (retained combination) + remainder`).
-- Test: at the pinned point, do the non-E2 terms sum to a retained
-  simple value? Or does the full polynomial identity reduce to
-  something clean like `m · f(δ, q_+) = E2 · g(retained)`?
-- Also: expand `det(H)` in the eigenvalue basis and check whether
-  `det(H) = E2` corresponds to a specific eigenvalue relation.
+Concrete candidates for the variational functional:
 
-If iter 7 succeeds in deriving `det(H) = E2`, iter 8 then searches
-for the third retained cut (replacing s13² as observational input).
-Iter 8 candidates: A5 (A-BCC axiomatic derivation), A10 (symplectic),
-or rescanning scalars on the discrete 0-D intersection locus for a
-third simple-value hit.
+- `F = Tr(H^2) / Tr(H)^2` (dimensionless Koide-like ratio of H-spectrum
+  invariants)
+- `F = log |λ_max / λ_min|` (spread of eigenvalues)
+- `F = Jarlskog(U_PMNS(H))` (CP-violation invariant, natural physical
+  quantity)
+- `F = Σ (arg K_ij)` (Z_3 phase sum on K-basis)
+- `F = W[J]` restricted to the 1-D curve (observable principle on the
+  reduced manifold)
+
+Iter 8 plan:
+1. Parametrize the 1-D curve by `m` (so δ = f(m), q_+ = g(m) solve
+   δ·q_+ = 2/3 and det(H) = E2 simultaneously).
+2. Compute each candidate F(m) along the curve.
+3. Find extrema (zeros of dF/dm).
+4. Check whether any extremum coincides with `m_*`.
+5. If yes, that F is the third retained cut. Verify it's
+   framework-native.
+
+This would complete the selector gate with THREE retained identities.
