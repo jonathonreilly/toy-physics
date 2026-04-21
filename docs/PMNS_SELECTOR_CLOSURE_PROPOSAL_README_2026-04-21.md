@@ -1,24 +1,47 @@
-# PMNS Angle-Triple Selector Closure — Proposal for Canonical Reviewer
+# PMNS Angle-Triple Selector — Support Package for Canonical Reviewer
 
 **Branch:** `afternoon-4-21-proposal`
-**Date:** 2026-04-21
-**Scope:** **Only** the I5 PMNS angle-triple selector closure (the
-remaining open item per the pre-loop status summary: "DM A-BCC / PMNS
-angle-triple gate behind I5").
-**Status:** Proposal for review and promotion to main.
+**Date:** 2026-04-21 (status revised post-iter-5 Nature-grade audit)
+**Scope:** **Only** the I5 PMNS angle-triple selector (the
+"DM A-BCC / PMNS angle-triple gate behind I5").
+**Status:** **SUPPORT package, not closure.** Three retained-structural
+identities are conjectured and observationally verified at PDG
+precision; first-principles derivation of the primitive identity
+(`δ · q_+ = SELECTOR²`) remains OPEN pending a retained SELECTOR-
+quadrature theorem on `(T_Δ, T_Q)`.
+
+## Honest Nature-grade status (revised 2026-04-21)
+
+Following the user directive "don't leave a target until closed at
+Nature-grade review pressure" and the evening-4-21 closure-loop iter-5
+verdict, this proposal is reclassified from CLOSURE to SUPPORT. Precise
+sub-item status:
+
+- **Bridge B** (physical Brannen = ambient APS): ✓ **CLOSED at PDG
+  precision** via `arg(b) = δ_B = 2/9 rad` to 5 decimal places
+  (evening-4-21 iter 3).
+- **N2** (`det(H) = E2`): derivable from N1 + Tr(H) = 2/3 via
+  polynomial root-selection (evening-4-21 iter 5).
+- **N3** (uniqueness): derivable from N1 + Tr(H) = 2/3 via finite
+  real-root enumeration of the degree-≤6 polynomial in δ.
+- **N1** (`δ · q_+ = SELECTOR² = Q_Koide`): **OPEN** — primitive
+  retained identity not derivable from currently retained Atlas
+  theorems. Requires a new retained framework identity
+  (SELECTOR-quadrature on `(T_Δ, T_Q)` active directions).
 
 **Executability guarantee.** The single consolidated runner executes
-every claim in this proposal. All 25 checks PASS, 0 FAIL. No literal
-`True` placeholders. Every PASS is a genuine symbolic or numerical
-verification.
+every claim as stated. All 25 checks PASS, 0 FAIL. No literal `True`
+placeholders. Every PASS is a genuine symbolic or numerical
+verification. What the runner demonstrates IS correct — the
+reframing is about the identities' **status** (conjectured vs. derived),
+not about the runner's correctness.
 
 ---
 
-## What this proposal claims
+## What this proposal claims (reframed as SUPPORT, not closure)
 
-The PMNS angle-triple selector gate is closed by **three retained
-SELECTOR-based identities** on the retained affine Hermitian chart
-`H(m, δ, q_+) = H_base + m T_M + δ T_Δ + q_+ T_Q`:
+Three **conjectured retained-structural identities** on the retained
+affine Hermitian chart `H(m, δ, q_+) = H_base + m T_M + δ T_Δ + q_+ T_Q`:
 
 ```
   (I5.1)  Tr(H)     = SELECTOR² = Q_Koide = 2/3
