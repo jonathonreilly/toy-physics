@@ -42,6 +42,11 @@ The clean current endpoint is:
   ratio, and first-branch endpoint directly as pullbacks of the ambient Brannen
   phase, so the remaining burden is narrower than "phase plus separate
   endpoint law"
+- the new conjugation-symmetry boundary theorem then shows why that ambient
+  phase law is still missing: the current exact positive conjugation-symmetric
+  one-clock Wilson class kills the odd cyclic phase channel `B2`, so the
+  remaining ambient bridge must be orientation-sensitive rather than another
+  purely even boundary-amplitude refinement
 - the bare selected-line missing-axis resolvent boundary now also closes
   negatively: that local family can imitate the charged-lepton packet
   numerically, but only away from the physical first-branch endpoint, so the
@@ -81,7 +86,8 @@ So the current charged-lepton state is:
 15. [KOIDE_SELECTED_LINE_CYCLIC_PHASE_TARGET_NOTE_2026-04-20.md](./KOIDE_SELECTED_LINE_CYCLIC_PHASE_TARGET_NOTE_2026-04-20.md)
 16. [KOIDE_SELECTED_LINE_BRANNEN_PHASE_ORBIT_BRIDGE_NOTE_2026-04-21.md](./KOIDE_SELECTED_LINE_BRANNEN_PHASE_ORBIT_BRIDGE_NOTE_2026-04-21.md)
 17. [KOIDE_BRANNEN_PHASE_ENDPOINT_PULLBACK_NOTE_2026-04-21.md](./KOIDE_BRANNEN_PHASE_ENDPOINT_PULLBACK_NOTE_2026-04-21.md)
-18. [KOIDE_SELECTED_LINE_BARE_RESOLVENT_ENDPOINT_BOUNDARY_NOTE_2026-04-20.md](./KOIDE_SELECTED_LINE_BARE_RESOLVENT_ENDPOINT_BOUNDARY_NOTE_2026-04-20.md)
+18. [KOIDE_BRANNEN_PHASE_CONJUGATION_SYMMETRY_BOUNDARY_NOTE_2026-04-21.md](./KOIDE_BRANNEN_PHASE_CONJUGATION_SYMMETRY_BOUNDARY_NOTE_2026-04-21.md)
+19. [KOIDE_SELECTED_LINE_BARE_RESOLVENT_ENDPOINT_BOUNDARY_NOTE_2026-04-20.md](./KOIDE_SELECTED_LINE_BARE_RESOLVENT_ENDPOINT_BOUNDARY_NOTE_2026-04-20.md)
 
 ## Package Role
 
@@ -119,6 +125,11 @@ The new pullback sharpening then removes another layer: once that ambient
 Brannen phase is fixed, the current selected-line scalar bridge, reachable-slot
 ratio, and first-branch endpoint are already fixed automatically by the exact
 selected-line stack.
+The new conjugation-symmetry boundary theorem then sharpens the remaining
+ambient target one more time: the current exact positive conjugation-symmetric
+Wilson class cannot by itself generate the odd cyclic phase channel, so the
+remaining Brannen bridge must be orientation-sensitive rather than another
+purely even refinement of the same class.
 Branch-local exploratory `Q = 2/3`-surface and scale-selector near-miss probes
 remain off current-main authority.
 
