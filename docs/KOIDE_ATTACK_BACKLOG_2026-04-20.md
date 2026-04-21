@@ -23,27 +23,46 @@ I5 to retained-derived theorem-grade with no reviewer cracks.
 depends only on tangent rep, not metric. Thus δ = 2/9 rad is metric-
 independent given the retained kinematics.
 
-## Iteration 2 target (next loop)
+## Iteration 2 (completed)
 
-**Attack**: C1 discharge via deriving Peter-Weyl from retained
-observable-principle invariance structure.
+**Attack**: C1 discharge via AM-GM on isotype Frobenius energies.
+**Runner**: `scripts/frontier_koide_peter_weyl_am_gm.py` (24/24 PASS).
+**Outcome**: C1 discharged. F = log(E_+·E_⊥) under fixed E_+ + E_⊥ = N
+forces max at E_+ = E_⊥ ⟺ κ = 2 ⟺ Q = 2/3 by AM-GM inequality. The
+"Peter-Weyl weighting" is a renaming of the Frobenius isotype metric,
+not a separate prescription.
+
+## Iteration 3 (completed)
+
+**Attack**: I5 leading-order — PMNS V_TBM from S_3 axis-permutation symmetry.
+**Runner**: `scripts/frontier_koide_pmns_tbm_from_s3.py` (35/35 PASS).
+**Outcome**: I5 INTERMEDIATE. The retained Z³ cubic S_3 symmetry forces
+V_TBM as the leading-order PMNS matrix — the simultaneous real eigenbasis
+of {C_3[111]-symmetrizer, P_{23}-reflection}. Diagonalizes every
+S_3-invariant Majorana M_ν. Predictions:
+- θ₁₂ = 35.264° (NuFit 33.44°, gap −1.82°)
+- θ₁₃ = 0° (NuFit 8.57°, gap +8.57° DOMINANT "reactor angle")
+- θ₂₃ = 45° (NuFit 49.2°, gap +4.20°)
+Does NOT close I5; next iter targets θ₁₃ activation via Z_2 breaking.
+
+## Iteration 4 target (next loop)
+
+**Attack**: Derive θ₁₃ ≠ 0 activation from retained Z_2 breaking of
+the full S_3 — breaking {P₁₂, P₁₃, P₂₃} while preserving C_3[111].
 
 Specific sub-attacks to try:
-- Peter-Weyl prescription = unique covariant Haar measure on Z_3 isotypes
-  (derive from observable principle retained properties).
-- Peter-Weyl prescription = unique choice that makes the "trace-class
-  normalization" of W[J] isotype-independent.
-- Axiomatic derivation of Peter-Weyl from retained Schur orthogonality.
-
-## Iteration 3+ target: I5 PMNS
-
-**Attack candidates (from open-imports register)**:
-- Framework-native derivation of NuFit mixing angles (θ_12, θ_23, θ_13).
-- Framework-native derivation of `sin δ_CP < 0` from Cl(3) CP structure.
-- T2K sign constraint: show the retained Cl(3) has CP structure forcing
-  the observed sign.
-- Z_3 tribimaximal-like ansatz from retained C_3[111] spatial rotation
-  action on PMNS matrix.
+- **Cl(3) bivector selection**: retained SELECTOR = √6/3 singles out a
+  bivector axis, breaking S_3 → Z_3 at the spinor level.  Compute
+  induced θ₁₃ deformation.
+- **Dirac-Majorana Yukawa asymmetry**: charged-lepton Yukawa (large m_τ)
+  generates one-loop S_3 breaking that leaks into PMNS as a θ₁₃ shift.
+- **CKM cross-sector mixing**: retained V_CKM has Wolfenstein ε ~ 0.23;
+  leakage into PMNS gives δθ₁₃ ~ ε (quark-lepton complementarity).
+- **C_3[111] spin-cover Z_6**: Cl(3) spinor rep doubles C_3 to Z_6;
+  the extra Z_2 factor might be the breaking mechanism.
+- **θ₁₃ = π/24 conjecture**: π/24 = 7.5° (close to 8.57°). Can this
+  be retained from a Cl(3) angle discretization? (Related to δ = 2/9
+  rad = 2π/(9π/2) structure.)
 
 ## Long-tail brainstorm (priority-unranked)
 
