@@ -250,6 +250,13 @@ the unique minimizer. That does not yet derive the selector law, but it
 reduces the remaining positive burden to an intrinsic threshold law landing in
 that exact window. See
 `docs/DM_SELECTOR_THRESHOLD_STABILIZATION_SUPPORT_THEOREM_NOTE_2026-04-21.md`.
+There is also now one cleaner intrinsic breakpoint candidate on that same
+family: the earliest middle-branch threshold `tau_b,min = min_i log(1+b_i)`.
+It belongs uniquely to the preferred recovered lift and already selects it.
+So the selector-side burden is narrower again: derive why the physical
+threshold law is this earliest intrinsic breakpoint, or derive a stronger
+microscopic selector law. See
+`docs/DM_SELECTOR_FIRST_SHOULDER_EXIT_THRESHOLD_SUPPORT_NOTE_2026-04-21.md`.
 PNS is derived as a property of Basin 1, not axiomatized.
 
 ---
