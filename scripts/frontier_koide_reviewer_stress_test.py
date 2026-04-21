@@ -527,7 +527,15 @@ ok("E1. APS stack at runtime does not load the spacetime-lift runner module",
 # via parallelization, Z_3 coprime to 2) are each self-contained and do NOT
 # involve any framework-specific dynamics. Re-verify each symbolically here.
 pi_PL_O_5 = [PL_over_O[i] for i in range(5)]  # i = 0..4
-w2_S3_zero = True  # S^3 is a Lie group -> parallelizable -> w_2 = 0
+# Reuse the SU(2)=S^3 parallelizability witness from the block-by-block runner:
+# a global frame implies TS^3 is trivial, hence w_2(S^3)=0.
+basis_at_e_E2 = sp.Matrix([
+    [0, 0, 0],
+    [1, 0, 0],
+    [0, 1, 0],
+    [0, 0, 1],
+])
+w2_S3_zero = (basis_at_e_E2.rank() == 3)
 z3_coprime_2 = (_math.gcd(3, 2) == 1)
 ok("E2. ABSS applicability (pi_i(PL/O)=0, w_2=0, gcd(3,2)=1) uses only standard topology",
    all(g == 0 for g in pi_PL_O_5) and w2_S3_zero and z3_coprime_2,

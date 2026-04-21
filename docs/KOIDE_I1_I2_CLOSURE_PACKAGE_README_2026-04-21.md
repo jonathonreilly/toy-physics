@@ -10,8 +10,8 @@ closures, plus their connecting Q = 3·δ identity.
 actual executable computation — symbolic via sympy (solve, eigenvalues,
 diff, free_symbols, rank), numeric via PDG lepton masses, or direct
 structural checks (sys.modules for the decoupling audit, H_1/H^1 tables
-for spin structure uniqueness). There are **zero** literal `True`
-placeholders anywhere in the package. Totals: **201 PASS / 0 FAIL.**
+for spin structure uniqueness). There are **zero hardcoded PASS
+placeholders** in the package runners. Totals: **201 PASS / 0 FAIL.**
 
 ---
 

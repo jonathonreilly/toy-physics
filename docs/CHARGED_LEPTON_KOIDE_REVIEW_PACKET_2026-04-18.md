@@ -9,6 +9,12 @@ It is a current-main review/support packet for honest review, consolidation,
 and downstream promotion work. It is not a claim that charged leptons are
 already retained closed on the current framework surface.
 
+**2026-04-21 canonical update.** On
+`review/scalar-selector-cycle1-theorems`, the `morning-4-21` package now lands
+retained-forced closure for both `I1` (`Q = 2/3`) and `I2 / P` (`δ = 2/9`).
+The older conditional/evening discussion below is preserved as historical
+provenance, not as the current canonical status.
+
 ## Exact Current Endpoint
 
 The clean current endpoint is:
@@ -82,12 +88,12 @@ The clean current endpoint is:
 So the current charged-lepton state is:
 
 - exact candidate-route closure
-- **conditional** retained-derivation of Q = 2/3 (via qubit-lattice-dim +
-  anomaly-arithmetic identification; reviewer-facing, NOT overturning
-  the same-day radian-bridge no-go)
-- **conditional** retained-derivation of delta = 2/9 (via CPC chain from
-  conditional Q closure; does not overturn the no-go for P within
-  character-data surface)
+- **retained-forced** derivation of `Q = 2/3` on the canonical review branch
+  via the Frobenius-isotype / AM-GM closure stack in
+  `KOIDE_I1_I2_CLOSURE_PACKAGE_README_2026-04-21.md`
+- **retained-forced** derivation of `delta = 2/9` on the canonical review
+  branch via the ABSS fixed-point / topological-robustness closure stack in
+  `KOIDE_I1_I2_CLOSURE_PACKAGE_README_2026-04-21.md`
 - overall lepton mass scale v_0 still open (separate hierarchy input)
 
 ## Read In Order

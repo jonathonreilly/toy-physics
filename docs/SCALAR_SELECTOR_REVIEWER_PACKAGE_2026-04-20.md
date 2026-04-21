@@ -9,10 +9,17 @@
 
 Four Tier-1 Standard Model scalar-selector gates close this cycle via retained Cl(3)/Z³ framework ingredients plus named retained inputs. No new axioms are added. Each gate carries at least one primary closure route plus one or more independent corroborating routes. All runners pass with no hardcoded verifications. Open retained-observational inputs are enumerated separately in `docs/SCALAR_SELECTOR_REMAINING_OPEN_IMPORTS_2026-04-20.md`.
 
+**2026-04-21 canonical update.** The Koide `κ` / `θ` rows below are now
+superseded on `review/scalar-selector-cycle1-theorems` by the landed
+`morning-4-21` closure package:
+`docs/KOIDE_I1_I2_CLOSURE_PACKAGE_README_2026-04-21.md` plus its 8 executable
+runners (`201 PASS / 0 FAIL`). On the canonical review branch, `Q = 2/3` and
+`δ = 2/9` are no longer treated as named retained observational inputs.
+
 | Gate | Observable | Closure routes | Retained inputs |
 |---|---|---|---|
-| **Koide κ** | Charged-lepton cone normalization `κ = 2` (equivalently `Q = 2/3`) | Spectrum–operator Fourier-bridge identity + block-total Frobenius measure | `Q = 2/3` (observational Koide relation) |
-| **Koide θ** | Brannen–Zenczykowski phase offset `δ = 2/9` | Pancharatnam–Berry identification on the physical selected line + exact scalar–phase bridge | `δ = 2/9` (observational Brannen relation) |
+| **Koide κ** | Charged-lepton cone normalization `κ = 2` (equivalently `Q = 2/3`) | Canonical closure package: Frobenius-isotype / AM-GM forcing + executable reviewer stress-test | none beyond retained framework kinematics on the canonical review branch |
+| **Koide θ** | Brannen–Zenczykowski phase offset `δ = 2/9` | Canonical closure package: ABSS fixed-point / topological robustness + executable reviewer stress-test | none beyond retained framework kinematics on the canonical review branch |
 | **DM A-BCC** | Physical neutrino-source basin selection (Basin 1) | Sylvester signature-forcing + σ-chain + DPLE `F_4` + chamber bound + upper-octant / source-cubic selector | PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)`; now sharpened to a point-selection law on an exact local `2`-real PMNS source manifold beyond the currently tested `Z_3` center law |
 | **Quark a_u** | Up-sector reduced amplitude `a_u = 0.7748865611` | Affine-physical-carrier JTS + one-dimensional 5-channel residue + RPSR NLO | Bimodule `B = Cl(3)/Z₃ ⊗ Cl_CKM(1⊕5)`, retained atoms `ρ, supp, δ_A1` (CKM atlas) |
 

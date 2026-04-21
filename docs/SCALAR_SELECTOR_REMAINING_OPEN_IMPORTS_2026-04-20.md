@@ -8,14 +8,23 @@ Cl(3)/Z³ framework ingredients alone. Items listed here are
 **retained-observational or structural-postulate inputs** that currently
 prevent the corresponding lane from being marked retained-derivation on main.
 
+**2026-04-21 canonical update.** The `morning-4-21` closure package is now
+landed on `review/scalar-selector-cycle1-theorems`. On this canonical review
+branch, `I1` (`Q = 2/3`) closes via the Frobenius-isotype / AM-GM route,
+`I2 / P` (`δ = 2/9`) closes via the ABSS fixed-point / topological-robustness
+route, and `I10` closes as the downstream selected-line corollary. The only
+still-open named import on the canonical branch is now `I5`. The detailed
+`I1` / `I2` / `I10` sections below are preserved as pre-closure archival
+record.
+
 ## §0 Summary table
 
 | # | Import | Lane | Current status | What closes it |
 |---|---|---|---|---|
-| I1 | Koide relation `Q = 2/3` | κ, θ | retained observational; the same-branch linking theorem now shows the natural general form is `Q = 2/d` by equal-sector norm, not `(d−1)/d` | a Cl(3)/Z³-native forcing of the cone condition `a_0² = 2|z|²` from retained representation-theory or from a retained scalar-potential minimization that lands on the cone |
-| I2 / P | Brannen phase `δ = 2/9` on the physical base | θ | the new Brannen-phase reduction theorem reduces I2 to `I1` via `δ = Q/d`, but the cycle-2 linking theorem + direct no-go sharpen the live load-bearing step as one named radian-bridge postulate `P`: the structural count `2/d²` must be identified with the physical Berry holonomy in radians on the selected-line CP¹ base | either derive `P` directly by a retained Wilson/lattice identity on the physical base, or derive a physical-base theorem that makes the Brannen reduction `δ = Q/d` canonical; then closing `I1` closes `I2` automatically |
+| I1 | Koide relation `Q = 2/3` | κ, θ | **closed on canonical 2026-04-21** via the Frobenius-isotype / AM-GM closure package (`docs/KOIDE_I1_I2_CLOSURE_PACKAGE_README_2026-04-21.md`) | closed |
+| I2 / P | Brannen phase `δ = 2/9` on the physical base | θ | **closed on canonical 2026-04-21** via the ABSS fixed-point / topological-robustness closure package (`docs/KOIDE_I1_I2_CLOSURE_PACKAGE_README_2026-04-21.md`) | closed |
 | I5 | PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)` | A-BCC (sigma-chain) | retained observational input; the new upper-octant / source-cubic selector theorems close the CP-sign / `σ_hier` half on the active chamber, and the fixed-`N_e` exact-source-manifold theorem shows the physical PMNS target already lies on a regular local `2`-real source manifold on the charged-lepton-side seed surface. The tested `Z_3` center law `delta_db = 1`, `q_+ = 0` is useful only conditionally: together with `I_src > 0` it still leaves a positive-sheet `3`-real locus and does not derive the PMNS target by itself | framework-native point-selection law stronger than the current `Z_3` center law on the exact PMNS / positive-center locus |
-| I10 | H_* witness ratio `w/v ≈ 4.101` | m_* (selected-line point) | retained observational; selected-line provenance is now closed, so only the scalar-phase pin remains | deriving `m_*` as a corollary of `δ = 2/9` via the exact scalar-phase bridge (already established). If I2 / `P` closes, I10 closes automatically |
+| I10 | H_* witness ratio `w/v ≈ 4.101` | m_* (selected-line point) | **closed on canonical 2026-04-21** as a corollary of the `I2 / P` closure package | closed |
 
 ## §0a Closed in cycle 2
 
@@ -58,7 +67,7 @@ Closing any single item in the following ordered list produces the largest
 reduction in the retained-observational footprint of the scalar-selector
 cycle.
 
-### Priority 1: I1 (Koide `Q = 2/3`)
+### Priority 1: Archived pre-closure record for I1 (Koide `Q = 2/3`)
 
 Closing `Q = 2/3` from Cl(3)/Z³ would immediately upgrade the Koide κ and θ
 lanes from "retained-observational-conditional" to "retained-derivation" on
@@ -172,7 +181,7 @@ introduce any selected-line `m` dependence. See
 propagator or transport-integral definition on the retained Cl(3)/Z³ carrier;
 currently on main as partial support.
 
-### Priority 2: I2 / P (radian bridge for `δ = 2/9`)
+### Priority 2: Archived pre-closure record for I2 / P (radian bridge for `δ = 2/9`)
 
 The branch now carries two complementary results:
 
@@ -291,7 +300,7 @@ center law is a useful conditional cut on the exact PMNS manifold, but not yet
 the missing native point-selection law. See
 `docs/DM_PMNS_Z3_DOUBLET_BLOCK_CENTER_POSITIVE_SHEET_NO_GO_THEOREM_NOTE_2026-04-20.md`.
 
-### Priority 4: I10 (selected-line physical point)
+### Priority 4: Archived pre-closure record for I10 (selected-line physical point)
 
 Now the only open content behind `m_*` is the scalar-phase pin itself. If
 `I2 / P` closes, `I10` closes immediately by the exact selected-line
@@ -299,42 +308,39 @@ scalar-phase bridge.
 
 ## §2 What a Nature reviewer will still see after submission
 
-With the above items retained-observational, the honest Nature-grade
-statement for this cycle is:
+With the 2026-04-21 Koide closure package now landed on canonical, the honest
+Nature-grade statement for this cycle is:
 
 > Four Tier-1 scalar-selector gates of the Standard Model — the Koide
 > charged-lepton cone normalization (κ = 2, equivalently the operator-side
 > Koide relation), the Koide Brannen–Zenczykowski phase offset (δ = 2/9), the
 > dark-matter A-BCC basin-sheet choice, and the up-sector quark reduced
 > amplitude (a_u) — each reduce to retained Cl(3)/Z³ framework ingredients,
-> with the only still-open named retained inputs now being the Koide cone
-> relation Q = 2/3, the residual radian-bridge P behind the physical Brannen
-> phase value δ = 2/9, and the PMNS angle triple point-selection law on the
-> exact charged-lepton-side seed manifold beyond the currently tested `Z_3`
+> with the only still-open named retained input now being the PMNS angle
+> triple point-selection law on the exact charged-lepton-side seed manifold
+> beyond the currently tested `Z_3`
 > center law. No new
 > axioms are added this cycle. The framework
-> contributes (i) a canonical Pancharatnam–Berry geometric identification of δ
-> on the physical selected line together with a precise no-go for deriving its
-> value from the current retained base alone, (ii) an exact Fourier-bridge
-> algebraic reduction of operator-side κ = 2 to spectrum-side Q = 2/3,
-> (iii) a Sylvester-inertia reduction of A-BCC, closed via a multi-observable
+> contributes (i) a retained-forced Frobenius-isotype / AM-GM closure of the
+> Koide cone relation `Q = 2/3`, (ii) a retained-forced ABSS fixed-point /
+> topological-robustness closure of the Brannen phase `δ = 2/9`, (iii) an exact
+> Fourier-bridge algebraic reduction of operator-side κ = 2 to spectrum-side Q = 2/3,
+> (iv) a Sylvester-inertia reduction of A-BCC, closed via a multi-observable
 > sigma-chain that combines retained Cl(3)/Z³ theorems with the PMNS
 > angle-triple pin, now sharpened by an exact fixed-`N_e` source-manifold
 > theorem showing the target already lies on a regular `2`-real source
 > manifold together with a center-law positive-sheet no-go showing that the
 > current `delta_db = 1`, `q_+ = 0`, `I_src > 0` proposal is still
-> insufficient, and (iv) a linear-algebra derivation of the up-sector
+> insufficient, and (v) a linear-algebra derivation of the up-sector
 > quark closure on the retained `1⊕5` bimodule and CKM-atlas atom package,
 > whose provenance is now surfaced inline on the review branch. Each retained
 > observational input or structural postulate still blocking native closure is
 > listed in the Remaining-Open-Imports register along with the derivation that
 > would close it.
 
-Closing any priority-1 or priority-2 item above would upgrade the
-corresponding lane from retained-conditional to retained-derivation and
-eliminate the named retained input. The cycle-2 housekeeping imports I3, I4,
-I6, I11, and I12 are now closed; the remaining irreducible frontier is the
-Koide `Q`/radian-bridge pair and the PMNS angle-triple point-selection law.
+The cycle-2 housekeeping imports I3, I4, I6, I11, and I12 are now closed;
+with the 2026-04-21 Koide package, the remaining irreducible frontier on the
+canonical review branch is `I5` alone.
 
 ## §3 Reproduction of current retained-conditional state
 
