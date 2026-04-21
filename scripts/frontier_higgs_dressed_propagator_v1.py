@@ -152,11 +152,13 @@ def H3(m, delta, q_plus):
     return H_BASE + m * T_M + delta * T_DELTA + q_plus * T_Q
 
 
-# G1 observational chamber pin (PMNS-pinned)
+# G1 observational chamber pin (PMNS-pinned; not framework-derived)
 M_STAR = 0.657061342210
 DELTA_STAR = 0.933806343759
 Q_PLUS_STAR = 0.715042329587
 
+# Any downstream use of H_STAR_3 inherits this observational pin unless a
+# separate theorem discharges it.
 H_STAR_3 = H3(M_STAR, DELTA_STAR, Q_PLUS_STAR)
 H_STAR_EIGS, _ = np.linalg.eigh(H_STAR_3)  # ascending real eigenvalues
 # documented in the G1 note: (-1.30909, -0.32043, +2.28659)

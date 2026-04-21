@@ -20,10 +20,12 @@ Q = (m_e + m_μ + m_τ) / (√m_e + √m_μ + √m_τ)² = 2/3
 ```
 admits a new **operator-space reformulation** on the retained `Cl(3)` on `Z^3`
 surface. On the retained `hw=1` triplet, every Hermitian operator commuting with
-the `C_3[111]` action is circulant, and its eigenvalue triple has exactly the
-Brannen/Rivero cosine form. If one further assumes the matrix-space
-equipartition condition `A1` and the phenomenological identification `P1`, then
-Koide `Q = 2/3` follows algebraically.
+the `C_3[111]` action is circulant, and its eigenvalue triple has the exact
+shifted-cosine circulant form `λ_k = a + 2|b| cos(arg(b) + 2πk/3)`. If one
+further assumes the matrix-space equipartition condition `A1` and the
+phenomenological identification `P1 : λ_k = √m_k`, this becomes the
+Brannen/Rivero `√m` parametrization, after which Koide `Q = 2/3` follows
+algebraically.
 
 This does **not** change the current retained charged-lepton status. The
 authoritative April 17 review still stands: on the present retained surface the
@@ -57,14 +59,16 @@ the circulants.
 
 **Axiom status:** strict consequence of Cl(3)/Z³ + C_3[111] retained cyclic structure.
 
-### R2. Circulant eigenvalue spectrum (axiom-clean)
+### R2. Circulant shifted-cosine eigenvalue spectrum (axiom-clean)
 
 The eigenvalues of `H = a·I + b·C + b̄·C²`, obtained by diagonalization in the
 Fourier basis:
 ```
 λ_k = a + 2|b| cos(arg(b) + 2πk/3)          k ∈ {0, 1, 2}
 ```
-This is the Brannen/Rivero spectral form with the identifications
+This is the exact circulant shifted-cosine law. It becomes the
+Brannen/Rivero `√m` form only after the later bridge `λ_k = √m_k` together
+with `A1`, with the identifications
 ```
 v_0 = a,       arg(b) = δ,       2|b| = (coefficient of cosine)
 ```
@@ -168,6 +172,12 @@ Possible structural routes:
   branch
 
 ## Koide Q = 2/3 as algebraic consequence
+
+Once the operator-eigenvalue law has been bridged to the Brannen/Rivero
+`√m` parametrization via `A1 + P1`, the final step to `Q = 2/3` is the standard
+trigonometric identity of that parametrization. The `A1 + P1` dependence is in
+the bridge from circulant eigenvalues to `√m_k`, not in the Brannen-to-Koide
+algebra itself.
 
 Given R1 + R2 + A1 + P1, and using the standard cosine identities for
 third-roots-of-unity:

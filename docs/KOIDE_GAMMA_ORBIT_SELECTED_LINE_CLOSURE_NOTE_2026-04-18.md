@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-18  
 **Status:** closes the remaining free coordinates on the current positive
-candidate route  
+candidate route once the earlier observational `H_*` witness ratio is imported
 **Runner:** `scripts/frontier_koide_gamma_orbit_selected_line_closure.py`
 
 ## Question
@@ -36,9 +36,11 @@ selected line, and the line parameter `m` is fixed by the **first continuous
 hit** of the route-invariant reachable-slot ratio `r = w/v` of the earlier
 `H_*` one-clock witness.
 
-So the current positive candidate route is now **coordinate-closed**.
+So the current positive candidate route is now **coordinate-closed modulo the
+imported `H_*` witness ratio**.
 
-There are no free internal parameters left on this lane.
+There are no free internal parameters left on this lane once that
+observational PMNS-pinned witness is imported.
 
 ## Input stack
 
@@ -112,6 +114,8 @@ scale-free reachable-slot ratio
 ```text
 r_* = w_* / v_* ~= 4.100904169382.
 ```
+That `H_*` witness is itself an observational PMNS-pinned input on the current
+science stack, not an axiom-only charged-lepton theorem.
 
 On the selected line, the ratio function
 ```text
@@ -144,7 +148,8 @@ m_* = m_first ~= -1.16046947.
 
 ## Consequence
 
-The current positive route is now coordinate-closed:
+The current positive route is now coordinate-closed modulo the imported
+`H_*` witness ratio:
 
 1. the exact selector theorem fixes `delta = q_+ = sqrt(6)/3`;
 2. the exact one-clock law fixes the semigroup class;
@@ -152,7 +157,8 @@ The current positive route is now coordinate-closed:
 4. the preserved reachable-slot ratio fixes `m` at the first monotone hit on
    the selected line.
 
-So there are no free internal coordinates left on this candidate route.
+So there are no free internal coordinates left on this candidate route once the
+observational `H_*` pin is accepted as input.
 
 ## Closed witness
 
