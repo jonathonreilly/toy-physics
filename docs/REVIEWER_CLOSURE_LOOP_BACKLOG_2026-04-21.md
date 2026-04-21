@@ -14,6 +14,7 @@
 | 1 | Audit of afternoon-4-21-proposal vs. reviewer items | **audit PASS** | `REVIEWER_CLOSURE_LOOP_ITER1_AUDIT_NOTE_2026-04-21.md` — 11/11 PASS. afternoon-4-21-proposal closes Gate-2 right-sensitive microscopic selector law per DERIVATION_ATLAS line-335 equivalence. 8 items remain open. |
 | 2 | Bridge A — multi-principle convergence on E_+ = E_⊥ + retained γ identity | **partial / narrowed** | `REVIEWER_CLOSURE_LOOP_ITER2_BRIDGE_A_NARROWED_NOTE_2026-04-21.md` — 14/14 PASS. 5 natural information/variational principles all critical at p_+ = 1/2. At Koide, `\|b\|²/a² = γ = 1/2` (retained H_base constant). Koide extremum is a structural attractor; dynamical mechanism still open. |
 | 3 | Bridge B — empirical `arg(b)` vs retained δ_B = 2/9 on Herm_circ(3) | **🎯 CLOSED at PDG precision** | `REVIEWER_CLOSURE_LOOP_ITER3_BRIDGE_B_CLOSED_NOTE_2026-04-21.md` — 9/9 PASS. \|arg(b)\|_empirical = 0.2222296 rad vs δ_B = 2/9 = 0.2222222 rad, deviation 7.4e-6 rad (0.0033%), inside PDG m_τ 3σ band. Observational identity confirmed to 5 decimal places. Downstream m_* / w/v reduces to v_0 (outside-scope). |
+| 4 | N1 (δ·q_+ = Q_Koide) derivation attempt via retained Atlas | **narrowed** | `REVIEWER_CLOSURE_LOOP_ITER4_N1_NARROWED_NOTE_2026-04-21.md` — 8/8 PASS. Path 1 (already-retained) ruled out. Path 2 pinpoints missing identity: SELECTOR-quadrature `δ·q_+ = SELECTOR²` on (T_Δ, T_Q). Path 3 tentative-primitive. Connects to A-BCC and potentially N2. |
 
 ## Closed by existing afternoon-4-21-proposal (confirmed in iter 1)
 
