@@ -268,6 +268,21 @@ Specific candidates for iter 32+:
   δ = 2/9 as APS Dedekind sum might connect to modular L-values.
   Possibly unlocks h_{23} structure via L-function identities.
 
+### Iter 33-34 refinement of SA targets
+
+**Iter 33 SA4 result** (negative): H' = [B_1, M_0] gives degenerate-pert θ_mix
+= arctan(√6)/2 ≈ 34°.  But iter 4 requires θ_mix ≈ 14.8°.  Factor of 2.29
+too large.  Simple bivector commutator doesn't match.
+
+**Iter 34 structural observation**: the required ratio for iter 4
+compatibility is h_{23}/(h_{22} - h_{33}) ≈ 0.283.  Not a clean
+expression.  The search for retained H' must give this specific ratio.
+
+**Remaining SA4 variants to test (iter 35+)**:
+- H' = [B_1 - B_2, M_0] (asymmetric bivector)
+- H' = [B_+, M_non_inv] where M_non_inv has lifted degeneracy
+- Weighted sum c_1 [B_1, M_0] + c_2 (something)
+
 ### Sum Rule 1 factor-2 derivation (sub-sub-attack)
 
 Iter 18's SR1 (θ_13 = 2·(θ_23 − π/4)) requires explaining the factor 2.
