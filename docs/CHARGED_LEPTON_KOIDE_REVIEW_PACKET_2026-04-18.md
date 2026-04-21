@@ -28,6 +28,14 @@ The clean current endpoint is:
 - the new endpoint-target theorem now identifies the single highest-value
   theorem target on current `main`: one ambient one-clock endpoint law for
   that microscopic scalar
+- the new cyclic-phase target theorem sharpens the same endpoint again: on the
+  exact selected line the remaining datum is equivalently one phase on the
+  exact cyclic Koide circle, so the live constructive target is one ambient
+  cyclic-response phase law
+- the bare selected-line missing-axis resolvent boundary now also closes
+  negatively: that local family can imitate the charged-lepton packet
+  numerically, but only away from the physical first-branch endpoint, so the
+  remaining endpoint law is not a bare selected-line resolvent section
 - the one-scalar obstruction triangulation theorem now shows that the live
   charged-lepton promotion gap is exactly one real scalar condition
   `kappa = 2`
@@ -60,6 +68,8 @@ So the current charged-lepton state is:
 12. [KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md](./KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md)
 13. [KOIDE_Z3_SCALAR_POTENTIAL_SUPPORT_NOTE_2026-04-19.md](./KOIDE_Z3_SCALAR_POTENTIAL_SUPPORT_NOTE_2026-04-19.md)
 14. [KOIDE_ONE_CLOCK_ENDPOINT_TARGET_THEOREM_NOTE_2026-04-20.md](./KOIDE_ONE_CLOCK_ENDPOINT_TARGET_THEOREM_NOTE_2026-04-20.md)
+15. [KOIDE_SELECTED_LINE_CYCLIC_PHASE_TARGET_NOTE_2026-04-20.md](./KOIDE_SELECTED_LINE_CYCLIC_PHASE_TARGET_NOTE_2026-04-20.md)
+16. [KOIDE_SELECTED_LINE_BARE_RESOLVENT_ENDPOINT_BOUNDARY_NOTE_2026-04-20.md](./KOIDE_SELECTED_LINE_BARE_RESOLVENT_ENDPOINT_BOUNDARY_NOTE_2026-04-20.md)
 
 ## Package Role
 
@@ -84,6 +94,10 @@ scalar target note, the live theorem burden on current `main` is now singular
 and explicit. The next real target is not a generic parent or readout law; it
 is one ambient one-clock endpoint law for
 `m = Re K12 + 4 sqrt(2)/9 = Tr K_Z3`.
+The newest geometric sharpening goes one step further: on the exact cyclic
+carrier that same endpoint is equivalently one phase on the circle
+`r1^2 + r2^2 = 2 r0^2`. So the most natural ambient formulation now is one
+cyclic-response phase law, not a bare local selected-line section.
 Branch-local exploratory `Q = 2/3`-surface and scale-selector near-miss probes
 remain off current-main authority.
 
