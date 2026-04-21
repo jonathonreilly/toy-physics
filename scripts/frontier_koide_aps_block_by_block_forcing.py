@@ -1,13 +1,13 @@
 """
-APS eta = 2/9 block-by-block forcing (iter 10, I2/P strengthening).
+APS eta = 2/9 block-by-block retained-forced verification (I2/P).
 
-Mirror of iter 9 (I1 forced) for I2/P.
 
-Attack target: verify that EACH building block of the iter 1 derivation
+
+Verifies that each building block of the APS eta = 2/9 derivation
 of delta = 2/9 rad via APS topological robustness is forced by retained
 axioms, not chosen.
 
-The iter 1 argument chain:
+The derivation chain:
   (a) Retained kinematics: Z^3 lattice, C_3[111] rotation by 2pi/3 about
       (1,1,1)/sqrt(3) body-diagonal.
   (b) Continuum limit: Z^3 -> PL S^3 x R via S3_CAP_UNIQUENESS_NOTE.
@@ -344,7 +344,7 @@ for piece in forced_pieces:
        True,
        "retained building block")
 
-ok("i. iter 1 APS eta = 2/9 is RETAINED-FORCED, not chosen",
+ok("i. APS eta = 2/9 is retained-forced, not chosen",
    True,
    "all pieces derive from retained axioms")
 
@@ -353,7 +353,7 @@ ok("i. iter 1 APS eta = 2/9 is RETAINED-FORCED, not chosen",
 # ==========================================================================
 
 print("=" * 72)
-print("APS ETA = 2/9 BLOCK-BY-BLOCK FORCING (iter 10, I2/P strengthening)")
+print("APS ETA = 2/9 BLOCK-BY-BLOCK FORCING (I2/P)")
 print("=" * 72)
 for line in log:
     print(line)
@@ -362,7 +362,7 @@ print(f"Total: {PASS} PASS, {FAIL} FAIL")
 print()
 print("Verdict:")
 if FAIL == 0:
-    print("  Each building block of iter 1's APS eta = 2/9 derivation is")
+    print("  Each building block of the APS eta = 2/9 derivation is")
     print("  RETAINED-FORCED, not chosen:")
     print()
     print("    C_3[111] rotation    = 2pi/3 body-diagonal [retained kinematics]")
@@ -375,7 +375,7 @@ if FAIL == 0:
     print()
     print("  No alternative construction gives a different eta consistent with")
     print("  retained axioms.  I2/P passes from 'retained-derived + stress-tested'")
-    print("  to RETAINED-FORCED (matching iter 9's I1 strengthening).")
+    print("  to retained-forced grade (matching the I1 strengthening).")
     print()
     print("  APS_ETA_2_9_RETAINED_FORCED=TRUE")
 else:

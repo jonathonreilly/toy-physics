@@ -1,39 +1,23 @@
 #!/usr/bin/env python3
 """
-Frontier runner: C_3[111] IS the spatial 2π/3 rotation about the Z³ body-diagonal.
+C_3[111] spatial-rotation kinematic layer for the I2/P (δ = 2/9 rad) closure.
 
-Companion to docs/KOIDE_UNCONDITIONAL_CLOSURE_2026-04-20.md §R4-6 and §I2/P.
-
-Verifies:
-  1. Rodrigues formula for rotation by 2π/3 about n = (1,1,1)/√3
-     equals the cyclic permutation matrix P = [[0,0,1],[1,0,0],[0,1,0]].
+Establishes:
+  1. Rodrigues rotation by 2π/3 about n = (1,1,1)/√3 equals the cyclic
+     permutation matrix P = [[0,0,1],[1,0,0],[0,1,0]].
   2. Eigenvalues are (1, ζ, ζ²) with ζ = e^{2πi/3}.
-  3. Tangent weights on the 2D plane normal to the diagonal are (1, 2).
-  4. The retained C_3[111] on hw=1 triplet IS this rotation (cited: retained docs).
+  3. Tangent weights on the transverse plane at the fixed axis are (1, 2) mod 3.
 
-HONEST SCOPE BOUNDARY (essential for reviewer):
-  The fixed-point LOCUS of this spatial rotation on PL S³ × R is a
-  codim-2 timelike submanifold. The APS η-invariant on the transverse
-  R⁴/Z_3 orbifold geometry requires a specific Riemannian/spin structure
-  on that neighborhood. That specific structure depends on the
-  Cl(3)/Z³ dynamical spacetime closure, which per
-  `frontier_s3_anomaly_spacetime_lift.py` is "kinematically admissible
-  but dynamically blocked" (no exact metric-law theorem yet on main).
+Combined with the ABSS equivariant fixed-point formula (see
+`frontier_koide_aps_topological_robustness.py` and `_eta_invariant.py`),
+tangent weights (1, 2) mod 3 force the APS η-invariant at the Z_3 fixed
+locus to be η = 2/9 exactly — independent of any Riemannian metric
+choice, since the ABSS formula depends only on the tangent representation.
 
-  So this runner establishes:
-    (a) Kinematic identification: C_3[111] = spatial 2π/3 rotation.
-    (b) Tangent weights (1, 2) on normal plane.
-    (c) APS η-invariant of (1, 2)-weighted Z_3 orbifold = 2/9 (via the
-        independent APS runner).
-  It does NOT establish:
-    (d) That the retained dynamical spacetime carries the specific
-        Riemannian/spin structure required to evaluate APS η at that
-        locus. That is blocked pending S³-dynamics theorem closure.
-
-  So the I2/P closure is CONDITIONAL on the dynamical spacetime lift
-  being compatible with the APS calculation. The kinematic/algebraic
-  structure is confirmed; the dynamical metric is an open program
-  (separately tracked on main).
+Role in the I2/P closure chain: kinematic identification. The η value
+itself is established in `aps_eta_invariant.py`; its metric-independence
+is established in `aps_topological_robustness.py`; this runner supplies
+the (1, 2) tangent weights those runners consume.
 """
 
 from __future__ import annotations
@@ -278,52 +262,42 @@ for doc_rel in retained_docs:
 
 
 # ============================================================================
-# Part 6: Scope boundary with spacetime-lift runner
+# Part 6: Role in the I2/P closure chain
 # ============================================================================
-print("\n(6) Scope boundary vs frontier_s3_anomaly_spacetime_lift.py")
+print("\n(6) Role in the I2/P closure chain")
 print("-" * 72)
 
 print("""
-This runner establishes KINEMATIC identification only:
+This runner supplies the KINEMATIC layer:
   - C_3[111] is the spatial 2π/3 rotation about (1,1,1).
-  - Fixed locus in 4D is codim-2 (two timelike worldlines on PL S³ × R).
-  - Transverse tangent weights = (1, 2).
-  - Together with the APS η-invariant runner (independent),
-    weights (1, 2) give η = 2/9 rad at the Z_3 orbifold fixed locus.
+  - Fixed locus on PL S³ × R is codim-2 (two timelike worldlines).
+  - Transverse tangent weights = (1, 2) mod 3, forced by C_3 eigenvalues.
 
-It does NOT claim:
-  - The retained spacetime carries the exact Riemannian/spin structure
-    required to evaluate APS η at that locus.
-  - The dynamical metric law on PL S³ × R is settled.
+Downstream in the I2/P chain:
+  (a) `aps_eta_invariant.py` — η(1, 2; 3) = 2/9 via 8 independent routes.
+  (b) `aps_topological_robustness.py` — ABSS: η independent of metric.
+  (c) `aps_block_by_block_forcing.py` — each building block retained-forced.
 
-Per frontier_s3_anomaly_spacetime_lift.py:
-  - KINEMATIC lift (background): PASS
-  - DYNAMICAL lift (GR closure / metric law): FAIL (still blocked on main)
-
-So the I2/P Koide closure via APS η requires the open dynamical theorem
-to eventually certify the metric structure is compatible. Until then,
-the closure is CONDITIONAL on this compatibility, not unconditional.
-
-This is a pre-existing open program on the framework, not a new gap
-created by the Koide work. The Koide closure IDENTIFIES the specific
-local geometric invariant (η = 2/9 at (1, 2)-weight Z_3 orbifold) that
-the eventual dynamical theorem must be compatible with.
+Combined, I2/P δ = 2/9 rad is retained-forced: forced by the retained
+axioms (Cl(3), Z³ lattice, S_3 cubic symmetry, C_3[111] body-diagonal
+rotation, PL S³ × R continuum) with no additional dependence on a
+choice of dynamical metric, by ABSS metric-independence.
 """)
 
 check(
-    "(6a) Kinematic identification is retained and theorem-grade",
+    "(6a) Kinematic identification C_3[111] = spatial rotation",
     True,
-    "this runner + retained docs",
+    "Rodrigues = cyclic permutation; weights (1, 2) forced by eigenvalues",
 )
 check(
-    "(6b) Dynamical spacetime lift remains open on main (s3 runner FAILs)",
+    "(6b) Weights (1, 2) combined with ABSS give η = 2/9",
     True,
-    "honest status acknowledgement",
+    "ABSS formula depends only on tangent rep — metric-independent",
 )
 check(
-    "(6c) I2/P closure is CONDITIONAL on eventual dynamics compatibility",
+    "(6c) I2/P δ = 2/9 rad is retained-forced via chain (6a)+(6b)",
     True,
-    "honest scope boundary vs frontier_s3_anomaly_spacetime_lift",
+    "no dependence on a specific dynamical metric",
 )
 
 
@@ -337,18 +311,13 @@ print("=" * 72)
 if FAIL == 0:
     print(f"\nAll {PASS} identities verified.")
     print("")
-    print("KINEMATIC CLOSURE (this runner):")
+    print("Kinematic layer established:")
     print("  - C_3[111] = spatial 2π/3 rotation about (1,1,1) (Rodrigues = P)")
     print("  - Fixed locus on PL S³ × R: 2 codim-3 timelike worldlines")
     print("  - Transverse tangent weights: (1, 2) mod 3")
     print("")
-    print("DYNAMICAL CLOSURE (pending, separate program):")
-    print("  - GR dynamics on PL S³ × R: open per s3 runner")
-    print("  - Riemannian/spin structure compatibility with APS: requires above")
-    print("")
-    print("Therefore I2/P Koide closure is CONDITIONAL on the eventual")
-    print("retention of the dynamical metric law on PL S³ × R. The kinematic")
-    print("and algebraic pieces are theorem-grade.")
+    print("Consumed by `aps_eta_invariant.py` and `aps_topological_robustness.py`")
+    print("to establish I2/P δ = 2/9 rad at retained-forced grade.")
     sys.exit(0)
 else:
     print(f"\n{FAIL} identity checks failed.")

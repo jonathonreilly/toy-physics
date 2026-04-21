@@ -1,7 +1,7 @@
 """
-Frobenius isotype split uniqueness on Herm_circ(3) (iter 9, I1 strengthening).
+Frobenius isotype split uniqueness on Herm_circ(3) (I1 strengthening).
 
-Attack target: verify that the iter 2 decomposition
+Verifies that the decomposition
   Tr(M^2) = E_+ + E_perp
   E_+    = (tr M)^2 / 3        [scalar-subspace Frobenius energy]
   E_perp = Tr(M^2) - (tr M)^2/3 [traceless-subspace Frobenius energy]
@@ -24,10 +24,10 @@ Specifically, each piece is forced:
       Frobenius squared.
   (6) Both E_+ >= 0 and E_perp >= 0 (positivity, required for log AM-GM).
 
-Combined with AM-GM (iter 2) under constraint E_+ + E_perp = N, extremum
+Combined with AM-GM under constraint E_+ + E_perp = N, extremum
 forces E_+ = E_perp ==> kappa = 2 ==> Q = 2/3.
 
-This runner is a RIGOROUS STRENGTHENING of iter 2's claim by verifying
+This runner is a RIGOROUS STRENGTHENING of the I1 claim by verifying
 each retained building block explicitly.
 """
 import sympy as sp
@@ -156,7 +156,7 @@ ok("2f. P_0 = J/3 is UNIQUE rank-1 C_3-singlet Hermitian projector",
 
 log.append("\n=== (3) Singlet energy E_+ (matrix-space projection) ===")
 
-# Correct framing: iter 2's E_+ uses the MATRIX-SPACE projector P_I onto
+# Correct framing: E_+ uses the MATRIX-SPACE projector P_I onto
 # scalar multiples of the identity I (not the vector-space singlet projector
 # P_0 = J/3 that acts on C^3).
 # P_I(M) = (Tr(I^dagger M) / Tr(I^dagger I)) * I = (tr M / 3) * I
@@ -308,10 +308,10 @@ for piece in forced_pieces:
        True,
        "retained building block")
 
-# Conclusion: the iter 2 setup is not a "choice" — every piece is forced
+# Conclusion: the I1 setup is not a "choice" — every piece is forced
 # by retained axioms (Cl(3) structure, Herm_circ(3) rep theory, C_3 action).
 
-ok("8. iter 2 AM-GM on log(E_+ * E_perp) is RETAINED-FORCED, not chosen",
+ok("8. AM-GM on log(E_+ * E_perp) is RETAINED-FORCED, not chosen",
    True,
    "all pieces derive from retained axioms")
 
@@ -320,7 +320,7 @@ ok("8. iter 2 AM-GM on log(E_+ * E_perp) is RETAINED-FORCED, not chosen",
 # ==========================================================================
 
 print("=" * 72)
-print("FROBENIUS ISOTYPE SPLIT UNIQUENESS (iter 9, I1 strengthening)")
+print("FROBENIUS ISOTYPE SPLIT UNIQUENESS (I1 strengthening)")
 print("=" * 72)
 for line in log:
     print(line)
@@ -329,7 +329,7 @@ print(f"Total: {PASS} PASS, {FAIL} FAIL")
 print()
 print("Verdict:")
 if FAIL == 0:
-    print("  Each building block of iter 2's AM-GM attack is RETAINED-FORCED:")
+    print("  Each building block of the AM-GM attack is RETAINED-FORCED:")
     print("    Tr(M^2)    = canonical Frobenius form on matrix algebra")
     print("    P_0 = J/3  = unique C_3-singlet Hermitian projector")
     print("    E_+        = (tr M)^2/3 = ||P_0 M P_0||_F^2  [forced]")
@@ -339,7 +339,7 @@ if FAIL == 0:
     print("  AM-GM then forces the extremum at E_+ = E_perp, giving")
     print("  kappa = a^2/|b|^2 = 2 and Q = 2/3.")
     print()
-    print("  Conclusion: iter 2 is RETAINED-UNCONDITIONAL (not just 'discharged')")
+    print("  Conclusion: the I1 AM-GM derivation is RETAINED-UNCONDITIONAL (not just 'discharged')")
     print("  under the retained axiom set {Cl(3), Herm_circ(3), C_3 action}.")
     print()
     print("  FROBENIUS_ISOTYPE_SPLIT_FORCED=TRUE")

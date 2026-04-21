@@ -1,11 +1,20 @@
 #!/usr/bin/env python3
 """
-Frontier runner: APS η-invariant on L(3,1) / R^4/Z_3 = 2/9 rad
+APS η-invariant on L(3,1) / R^4/Z_3 = 2/9 rad (I2/P value).
 
-Companion to docs/KOIDE_UNCONDITIONAL_CLOSURE_2026-04-20.md §I2/P closure.
+Verifies EIGHT independent exact derivations of the APS η-invariant at the
+Z_3 fixed locus with tangent weights (1, 2) — all giving η = 2/9 exactly,
+matching the Brannen phase δ = 2/9 rad.
 
-Verifies EIGHT independent exact derivations of the APS η-invariant = 2/9 rad
-at the Z_3 fixed-point locus, matching the Brannen phase δ = 2/9.
+Routes:
+  (1) Hirzebruch-Zagier signature defect
+  (2) APS Dirac-operator spectral flow
+  (3) Dedekind sum 4 · s(1, 3)
+  (4) Equivariant fixed-point (ABSS)
+  (5) Core algebraic identity (ζ − 1)(ζ² − 1) = 3
+  (6) C_3 Chern-Simons level-2 mean spin
+  (7) K-theory χ_0 isotype
+  (8) Dai-Freed q = 0 twist
 
 All computations use sympy + mpmath for exact symbolic / 50-digit numerical
 verification. No observational input.
