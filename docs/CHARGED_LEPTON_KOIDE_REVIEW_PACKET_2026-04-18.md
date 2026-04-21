@@ -45,8 +45,12 @@ The clean current endpoint is:
 So the current charged-lepton state is:
 
 - exact candidate-route closure
-- retained-derivation of Q = 2/3 (via qubit-lattice-dim identity)
-- retained-derivation of delta = 2/9 (via Imaginary Coupling Theorem)
+- **conditional** retained-derivation of Q = 2/3 (via qubit-lattice-dim +
+  anomaly-arithmetic identification; reviewer-facing, NOT overturning
+  the same-day radian-bridge no-go)
+- **conditional** retained-derivation of delta = 2/9 (via CPC chain from
+  conditional Q closure; does not overturn the no-go for P within
+  character-data surface)
 - overall lepton mass scale v_0 still open (separate hierarchy input)
 
 ## Read In Order
@@ -82,7 +86,8 @@ current `main`.
 both retained-derivation on current main. The single structural identity
 `dim(Cl(3) spinor) / dim(Z^3 lattice) = 2/3` (uniquely realized at d = 3)
 plus the retained `SELECTOR = sqrt(6)/3` axiom (`SELECTOR^2 = 2/3`) closes
-both lanes algebraically.
+both lanes algebraically. See `KOIDE_UNCONDITIONAL_CLOSURE_2026-04-20.md`
+for the final closure (24 parallel agents, 4 rounds).
 
 Items that remain open:
 
@@ -93,6 +98,10 @@ Items that remain open:
 
 So the current classification is:
 
-- retained-derivation of Q = 2/3 (Koide cone)
-- retained-derivation of delta = 2/9 (Brannen phase)
-- retained promotion for charged-lepton ratios (conditional on retained v_0)
+- **conditional** retained-derivation of Q = 2/3 (via qubit-lattice-dim
+  bridge acceptance; notes 21 and 22 together describe two compatible
+  views — no-go within character-data surface, closure via Q-chain)
+- **conditional** retained-derivation of delta = 2/9 (follows from Q
+  closure via CPC; same reviewer-decision dependency)
+- retained promotion for charged-lepton ratios (conditional on retained
+  v_0 AND acceptance of the Q closure bridge)

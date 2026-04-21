@@ -2,11 +2,16 @@
 
 **Date:** 2026-04-20
 **Lane:** Scalar-selector cycle 1 — joint closure of I1 (Koide `Q = 2/3`) and I2/P (Brannen phase `δ = 2/9`).
-**Status:** **CLOSED.** At retained `d = 3` (from the Cl(3) on Z³ axiom),
-six independent structural paths deliver exact Q = 2/3 and δ = 2/9.
-No observational input required.
+**Status:** **Conditional closure — reviewer-facing.** Six independent
+retained paths at d = 3 converge at exact Q = 2/3 and δ = 2/9, but the
+closure rests on accepting the qubit-lattice-dim / anomaly-arithmetic
+identification (`Q_Koide = dim(Cl(3) spinor)/dim(Z³ lattice) = |Y(d_R)|`)
+as a valid structural bridge. **This note does NOT overturn the same-day
+`KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE`** — the no-go rules out four
+specific character-data candidates for P; this note uses a different
+route (Q-closure → CPC → δ). Reviewer decision needed. See §1.2a.
 **Primary runner:** `scripts/frontier_koide_qubit_lattice_dim_closure.py`
-(PASS=55, FAIL=0).
+(PASS=62, FAIL=0).
 
 ---
 
@@ -118,6 +123,52 @@ is the quark contribution to the Y³ anomaly coefficient. At d = 3:
 retained charged-lepton selected line. Both are "per-dimension Q" and
 coincide because the retained U(1) structure + Cl(3) spinor map the
 quark anomaly density onto the lepton doublet phase.
+
+### 1.2a Honest reconciliation with `KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE`
+
+The same-day cycle-2 no-go note
+`docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md` declares
+that `P` (radian bridge for δ = 2/9) **cannot** be closed from retained
+Cl(3)/Z_3 + d=3 surface, because "every retained radian is (rational) ×
+π, while δ = 2/9 is a pure rational." The no-go lists four failed
+candidates and three minimal extra inputs that would close P, none
+retained.
+
+**This note does NOT overturn the no-go.** The scope difference:
+
+- **No-go scope:** proves that four specific retained Cl(3)/Z_3
+  closure candidates (per-Z_3 PB phase, closed-orbit Bargmann,
+  Plancherel-weight identification, interior-point selector) do NOT
+  reproduce 2/9 rad natively from Cl(3)/Z_3 character data alone.
+- **This note's scope:** closes δ = 2/9 via the chain
+  `A-select → SELECTOR² = Q (via qubit-lattice-dim) → CPC d·δ = Q →
+  δ = 2/9`. The load-bearing bridge is the qubit-lattice-dim +
+  anomaly-arithmetic identification of `Q_Koide = 2/3` as a structural
+  Cl(3)/Z³ constant, NOT a new Cl(3)/Z₃ character-data radian bridge.
+  With Q closed, CPC derives δ (in Brannen's own cosine-argument
+  radian convention) without invoking the no-go's four candidates.
+
+**What this does and does not say vs. the no-go:**
+
+- **Concedes:** the no-go's four specific candidates indeed fail; this
+  note uses a different route (the Q closure + CPC chain).
+- **Concedes:** if one rejects the qubit-lattice-dim / anomaly-
+  arithmetic identification as a valid "structural bridge" retention
+  (and instead treats Q_Koide as observational), then P remains open
+  per the no-go.
+- **Argues:** with the qubit-lattice-dim / anomaly-arithmetic
+  identification accepted (supported by 6-path convergence and the
+  `d² − 1 = 2^d` arithmetic uniqueness), Q closes, and CPC closes δ
+  automatically — no new radian-bridge axiom needed.
+- **Reviewer decision:** whether the qubit-lattice-dim + anomaly
+  evidence constitutes acceptance of Q as retained-derivation is the
+  open judgment call. If yes, I1 and I2/P are both closed. If no,
+  both remain retained-observational (as the no-go asserts).
+
+The two notes are consistent under the following reading: **the no-go
+rules out closure of P as an INDEPENDENT primitive within the
+character-data surface; this note closes P via the DEPENDENT chain
+from Q closure (i.e., P is no longer independent once Q closes).**
 
 ### 1.3 Exact anomaly-arithmetic closure (new, 2026-04-20 evening).
 
