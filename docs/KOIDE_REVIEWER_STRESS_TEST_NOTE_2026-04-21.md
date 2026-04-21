@@ -1,7 +1,8 @@
-# Reviewer Stress-Test for I1 and I2/P
+# Reviewer Stress-Test for the Koide Q and Delta Support Routes
 
 **Date:** 2026-04-21
-**Status:** RETAINED-FORCED. Enumerated reviewer objections addressed by
+**Status:** Strong executable stress-test of the current Koide support routes.
+Enumerated reviewer objections to the internal AM-GM and APS chains are addressed by
 executable checks that route to the block-by-block forcing runners
 (`frobenius_isotype_split_uniqueness.py`, `aps_block_by_block_forcing.py`,
 `aps_topological_robustness.py`), every one of which is now executable.
@@ -16,8 +17,8 @@ graph audit for spacetime-lift decoupling.
 ## Scope
 
 Enumerates the strongest reviewer objections to:
-- **I1** (Q = 2/3 via F-functional + AM-GM)
-- **I2/P** (δ = 2/9 rad via APS topological robustness)
+- **Q route** (`Q = 2/3` via F-functional + AM-GM)
+- **delta route** (`δ = 2/9` ambient APS value via topological robustness)
 
 Each objection is either answered by an executable check in this
 runner or cited to the specific retained-source runner/note that
@@ -77,7 +78,7 @@ establishes it.
       level-2 mean spin.
   Three independent frameworks is still strong theorem-grade support.
 
-- **C2** *Does the I1 AM-GM derivation cycle back to a Peter-Weyl
+- **C2** *Does the Q-route AM-GM derivation cycle back to a Peter-Weyl
   prescription?*
   No. The AM-GM derivation uses `F_sym = log(E_+ · E_⊥)` with
   equal weights — the Frobenius trace metric, forced by the
@@ -120,15 +121,20 @@ to the η conclusion. **(E5)** confirms this decoupling explicitly.
 - C_3[111] = 2π/3 body-diagonal rotation subgroup.
 - Continuum limit Z³ → PL S³ × R (`S3_CAP_UNIQUENESS_NOTE` on main).
 
-These are the **framework's retained axioms**. "Retained-forced under
-retained kinematics" is equivalent to "forced by the framework's
-axioms" — it is not a hidden soft conditional.
+These are the **framework's retained axioms**. The stress-test shows that the
+internal AM-GM and ambient APS chains do not hide extra mathematical premises
+once those axioms are granted. This is narrower than full physical closure:
+the physical/source-law bridge behind `Q` and the physical Brannen-phase bridge
+behind `δ` remain open.
 
-## Remaining open items (not in I1 or I2/P scope)
+## Remaining open items beyond the internal support chains
 
-- I5 (PMNS mixing-angle mechanism) — separate lane, not part of this
-  package.
+- physical/source-law bridge behind `Q = 2/3`
+- physical Brannen-phase bridge behind `δ = 2/9`
+- PMNS mixing-angle mechanism — separate lane, not part of this
+  package's internal Koide support chains
 - sin(δ_CP) sign — separate observable.
 - Quark-sector Koide / CKM — separate retention problem.
 
-None of these affect the I1 or I2/P closures addressed here.
+The stress-test does not discharge those remaining physical bridges; it only
+shows that the currently claimed support computations are internally clean.

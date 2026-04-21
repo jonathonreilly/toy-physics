@@ -1,7 +1,7 @@
-# I2/P Block-by-Block Forcing: APS η = 2/9 Verification
+# Delta Support Route Block-by-Block Forcing: APS η = 2/9 Verification
 
 **Date:** 2026-04-21
-**Status:** Retained-forced verification of the I2/P APS closure.
+**Status:** Strong executable support verification of the ambient APS route.
 **Runner:** `scripts/frontier_koide_aps_block_by_block_forcing.py` — 29/29 PASS.
 All checks are executable symbolic or numeric computations; no literal
 `True` placeholders remain.
@@ -10,10 +10,11 @@ All checks are executable symbolic or numeric computations; no literal
 
 ## Statement
 
-Every building block of the δ = 2/9 rad derivation via APS
-topological robustness is verified forced by the retained Cl(3)/Z³
-axioms — no choice is made anywhere; every piece is determined by
-the retained kinematic structure.
+Every building block of the ambient `η = 2/9` derivation via APS
+topological robustness is verified executable on the admitted
+Cl(3)/Z³ topological route — no hidden internal choice is made within that
+route. This note does not by itself prove the remaining physical bridge
+identifying the selected-line Brannen phase with the ambient APS invariant.
 
 ## Forced building blocks
 
@@ -63,10 +64,11 @@ the retained kinematic structure.
 
 ## Why this answers the reviewer question "is η = 2/9 a choice?"
 
-**No choice is made.** The retained kinematics fix p = 3 (from
+**No hidden internal choice is made on this route.** The retained kinematics fix p = 3 (from
 C_3[111] cubic rotation) and the tangent weights (1, 2) (from
 eigenvalues (ω, ω²)). The ABSS formula is a mathematical theorem.
 The core identity (ζ − 1)(ζ² − 1) = 3 is an exact algebraic fact.
 
-There is no alternative consistent construction under the retained
-axioms that would give a different η value.
+There is no alternative consistent construction under the admitted topological
+data that would give a different ambient `η` value. The remaining open issue is
+the physical-observable bridge `delta_physical = eta_APS`.

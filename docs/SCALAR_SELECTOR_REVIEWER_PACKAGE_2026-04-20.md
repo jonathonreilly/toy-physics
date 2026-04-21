@@ -366,7 +366,7 @@ All runners pass with no hardcoded `True` PASS annotations. Every PASS is a nume
 
 ## §6 Retained observational inputs (complete list)
 
-**2026-04-21 package update.** After the landed April 21 closure package,
+**2026-04-21 package update.** After the landed April 21 support package,
 Koide `Q = 2/3` and Brannen `δ = 2/9` are no longer counted here as retained
 observational inputs. The table below lists the remaining retained
 observational or atlas-level inputs across the four Tier-1 gates.

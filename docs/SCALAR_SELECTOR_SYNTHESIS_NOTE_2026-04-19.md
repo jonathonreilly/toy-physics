@@ -6,18 +6,17 @@ scalar-selector gates: Koide `kappa`, Koide doublet-phase (Koide
 `theta`), Quark up-amplitude `a_u`, DM A-BCC basin.
 
 **Status.** This note now serves as **route-history and internal synthesis**,
-not the current  claim surface. The honest read after the
-science review, the later meta-closure pass, and the 2026-04-19 evening
-full-stack recovery is:
+not the current claim surface. The authoritative current status lives in
+`SCALAR_SELECTOR_REMAINING_OPEN_IMPORTS_2026-04-20.md`,
+`SCALAR_SELECTOR_REVIEWER_PACKAGE_2026-04-20.md`, and the April 21 Koide
+support package. The honest read now is:
 
-- at the **reviewer bar**, all four Tier-1 scalar-selector gates now carry
-  retained closure routes with **no new axiom cost this cycle**: Koide
-  `kappa` closes via MRU + SO(2)-quotient of the real-doublet internal
-  frame (resolving the former measure-convention residue) + spectrum/operator
-  bridge `a_0^2 - 2|z|^2 = 3(a^2 - 2|b|^2)` + block-total Frobenius
-  (four converging routes); Koide `theta` closes via the actual-route
-  Pancharatnam–Berry identification on the physical charged-lepton
-  selected line (the Brannen–Zenczykowski phase offset is identified geometrically; selected-line
+- the up-sector quark gate is closed on the current review surface;
+- the charged-lepton Koide lane has the strongest current executable support
+  stack, but still leaves open the physical/source-law bridge behind `Q = 2/3`
+  and the physical Brannen-phase bridge behind `δ = 2/9`;
+- the DM flagship gate remains open, now sharpened to explicit named blockers
+  rather than a free search.
   `m_*, kappa_sel,*` are then fixed as corollaries); DM A-BCC closes
   via chamber `∩` DPLE `F_4` primary plus three recovered alternative
   routes (cycles 11/12/13: PMNS-non-singularity, signature-forcing,
@@ -67,9 +66,9 @@ scalar selections:
 
 | Gate | Content | Status (post-recovery) |
 |---|---|---|
-| **Koide `kappa`** | Charged-lepton cone normalization `kappa = 2` | **Closed.** MRU + real-isotype SO(2)-quotient of the scalar lane + spectrum/operator bridge `a_0^2 - 2|z|^2 = 3(a^2 - 2|b|^2)` + block-total Frobenius measure (four converging retained routes). The former block-total-vs-det "measure convention" residue is discharged by the quotient closure: the physical scalar carrier is two-slot on the reduced manifold, and both measures agree there. |
-| **Koide `theta`** | Doublet-phase offset `delta = 2/9` (Brannen–Zenczykowski) | **Closed on the actual route.** Ambient-`S^2` model retired; bundle-obstruction retained as no-go on the wrong base; actual-route Pancharatnam–Berry identification on the physical selected line closes the Brannen-Zenczykowski phase offset (projective `C_3` doublet ray `[1 : e^{-2iθ}]`, tautological line `A = dθ`, unique unphased reference `m_0`). Once `delta` is closed, the exact scalar-phase bridge `kappa_sel(delta)` fixes `m_*` and the selected-line scalar as corollaries. |
-| **DM A-BCC basin** | Interior-minimum linear-path Sylvester discriminator `F_4` | **Closed.** Primary: chamber bound `∩` DPLE `F_4` (§2.3a). Plus three recovered alternative routes (cycles 11/12/13: PMNS-non-singularity, signature-forcing, PNS cascade) and the 5-route assumptions audit (all alternative derivations ruled out). Jon's same-day source-fiber work sharpens the *downstream* DM gate, not A-BCC itself. |
+| **Koide `kappa`** | Charged-lepton cone normalization `kappa = 2` | **Support only on the current package surface.** Multiple exact internal routes isolate the Koide point, but the physical/source-law bridge behind `Q = 2/3` remains open. |
+| **Koide `theta`** | Doublet-phase offset `delta = 2/9` (Brannen–Zenczykowski) | **Support only on the current package surface.** The actual-route Berry and ambient APS stacks are mathematically strong, but the physical Brannen-phase bridge remains open. |
+| **DM A-BCC basin** | Interior-minimum linear-path Sylvester discriminator `F_4` | **Open as part of the broader DM flagship gate.** The source-side reductions are much sharper than earlier in the cycle, but the package still leaves named open blockers on the physical PMNS/selector side. |
 | **Quark `a_u`** | Up-sector reduced amplitude `a_u = 0.7748865611` | **Closed.** Jon's JTS-affine-physical-carrier theorem (linear-algebra derivation: `Pert(p) = H_(1+5)` since `cos_d ≠ 0`) + ISSR1 Schur-rank-1 forcing + exact `1(+)5` channel completeness (which derives STRC, see §3) + RPSR NLO + shell-normalization independent corroboration + JTS physical-point closure (second route). No named residue. |
 
 §2 presents the four routes; §3 presents STRC; §4 records the

@@ -1,34 +1,35 @@
 """
-Reviewer stress-test for I1 (Q = 2/3) and I2/P (δ = 2/9 rad) closures.
+Reviewer stress-test for the current Koide support chains behind
+Q = 2/3 and δ = 2/9 rad.
 
-Enumerates the strongest reviewer objections to the I1 closure
-(AM-GM on isotype Frobenius energies) and I2/P closure (APS η via
-ABSS topological robustness), and verifies each objection is
+Enumerates the strongest reviewer objections to the internal AM-GM
+support chain (isotype Frobenius energies) and the ambient APS support
+chain (η via ABSS topological robustness), and verifies each objection is
 addressed by an executable check.
 
 Objections grouped by category:
 
   CAT-A: Uniqueness
-    (A1) Is F = log(E_+ · E_⊥) unique given retained axioms?       [I1]
-    (A2) Is Q = 2/3 the unique extremum (not saddle)?              [I1]
-    (A3) Are the (1, 2) tangent weights uniquely forced?           [I2/P]
-    (A4) Is η = 2/9 unique for (1, 2) weights?                     [I2/P]
+    (A1) Is F = log(E_+ · E_⊥) unique given retained axioms?       [Q route]
+    (A2) Is Q = 2/3 the unique extremum (not saddle)?              [Q route]
+    (A3) Are the (1, 2) tangent weights uniquely forced?           [delta route]
+    (A4) Is η = 2/9 unique for (1, 2) weights?                     [delta route]
 
   CAT-B: Scope
-    (B1) Are E_+, E_⊥ guaranteed non-negative?                     [I1]
-    (B2) PL vs smooth — does ABSS apply?                           [I2/P]
-    (B3) Is the Z_3 fixed locus Morse-Bott?                        [I2/P]
+    (B1) Are E_+, E_⊥ guaranteed non-negative?                     [Q route]
+    (B2) PL vs smooth — does ABSS apply?                           [delta route]
+    (B3) Is the Z_3 fixed locus Morse-Bott?                        [delta route]
 
   CAT-C: Independence
-    (C1) Are the 8 routes to η = 2/9 independent?                  [I2/P]
-    (C2) Does AM-GM derivation cycle back to a Peter-Weyl choice?  [I1]
+    (C1) Are the 8 routes to η = 2/9 independent?                  [delta route]
+    (C2) Does AM-GM derivation cycle back to a Peter-Weyl choice?  [Q route]
 
   CAT-E: Decoupling from external runners
-    (E1-E5) Is I2/P independent of the framework's separately-open
-            dynamical-metric-lift question?                         [I2/P]
+    (E1-E5) Is the delta support route independent of the framework's
+            separately-open dynamical-metric-lift question?         [delta route]
 
   CAT-D: Scope of "retained kinematics"
-    (D2a-D2b) Does "retained-forced" hide soft assumptions?        [joint]
+    (D2a-D2b) Do the support chains hide soft assumptions?         [joint]
 
 Each objection is checked via a specific executable verification (where
 possible) or cited to a specific retained source that establishes it.
@@ -262,7 +263,7 @@ ok("B1c. Physical PDG charged leptons: BOTH E_+ > 0 AND E_perp > 0 (interior)",
    f"E_+ = {E_plus_B1:.6g}, E_perp = {E_perp_B1:.6g}")
 
 # (B2) PL vs smooth Riemannian for APS
-# The I2/P closure uses ABSS topological robustness.  The ABSS formula is
+# The delta support route uses ABSS topological robustness. The ABSS formula is
 # derived for smooth Riemannian manifolds with group action.  For PL
 # manifolds, the analog is the Neumann-Raynaud PL eta-invariant, which
 # agrees with the smooth eta for manifolds that are both PL and smooth.
@@ -475,7 +476,7 @@ for (tag, desc) in addressed:
 # CAT-E: Explicit decoupling from the s3_anomaly_spacetime_lift runner
 # ==========================================================================
 #
-# A reviewer correctly asked: does I2/P closure still depend on
+# A reviewer correctly asked: does the delta support route still depend on
 # frontier_s3_anomaly_spacetime_lift.py, which hard-fails on 'dynamical
 # lift' (no exact metric-law theorem)?
 #
@@ -609,11 +610,10 @@ ok("D2a. 'Retained kinematics' enumerates exactly 6 named framework axioms",
    len(retained_kinematics) == 6 and not contains_soft,
    f"items = {len(retained_kinematics)}; no soft-qualifier terms present")
 
-# D2b: Executable tautology verification — show 'retained-forced' = 'forced
-# by retained axioms' by verifying that adopting the retained-kinematics list
-# as premises is sufficient to derive 2/3 and 2/9 (the derivation is gap-free).
-# The gap-free-ness has been checked by the individual runners; here we
-# re-state it as a boolean consistency:
+# D2b: Executable tautology verification — show the internal support chains do
+# not hide extra mathematical assumptions once the retained axioms are granted.
+# The gap-free-ness of the internal AM-GM and ambient APS calculations has been
+# checked by the individual runners; here we re-state that consistency.
 derivation_complete = (
     # I1: AM-GM maximum gives kappa = 2
     sp.simplify(kappa_from_eq - 2) == 0
@@ -624,13 +624,15 @@ derivation_complete = (
     # Morse-Bott holds (det != 0)
     and sp.simplify(det_R_normal_minus_I - 3) == 0
 )
-ok("D2b. 'Retained-forced' executable: adopting the 6 axioms ⟹ kappa = 2 and eta = 2/9",
+ok("D2b. Internal support chains executable: adopting the 6 axioms yields kappa = 2 and ambient eta = 2/9",
    derivation_complete,
-   "I1 and I2/P derivations close under retained-kinematics premises (no extra assumption)")
+   "AM-GM and ambient APS chains close under retained-kinematics premises (no extra internal assumption)")
 
 # Remaining open doors (honest, limited to genuinely open items)
 open_doors = [
-    "I5 (PMNS mixing-angle mechanism): open, separate lane, not in scope here",
+    "physical/source-law bridge behind Q = 2/3",
+    "physical Brannen-phase bridge behind delta = 2/9",
+    "PMNS mixing-angle mechanism: open, separate lane, not in scope here",
     "sin(delta_CP) sign: T2K prefers < 0, framework derivation open",
     "quark-sector Koide / CKM cross-sector prediction",
 ]
@@ -638,16 +640,16 @@ open_doors = [
 log.append(f"\n  Remaining open doors (for I5 and strengthening): {len(open_doors)}")
 for door in open_doors:
     log.append(f"    - {door}")
-log.append("  (NOTE: 'retained kinematics' removed from this list -- it is not a")
-log.append("   soft assumption; it is the axiomatic base of the framework.  I1 and")
-log.append("   I2/P claims are retained-forced WITHOUT additional hidden conditions.)")
+log.append("  (NOTE: 'retained kinematics' is not itself the remaining issue here; it")
+log.append("   is the axiomatic base of the framework. The remaining open items are the")
+log.append("   physical bridges from those internal support chains to the observables.)")
 
 # ==========================================================================
 # Summary
 # ==========================================================================
 
 print("=" * 72)
-print("KOIDE REVIEWER STRESS-TEST for I1 and I2/P closures")
+print("KOIDE REVIEWER STRESS-TEST for the Koide support chains")
 print("=" * 72)
 for line in log:
     print(line)
@@ -656,26 +658,26 @@ print(f"Total: {PASS} PASS, {FAIL} FAIL")
 print()
 print("Verdict:")
 if FAIL == 0:
-    print("  All enumerated reviewer objections to I1 (Q=2/3 via F-functional +")
-    print("  AM-GM) and I2/P (delta=2/9 via APS topological robustness) are")
-    print("  addressed by executable checks or cite theorem-grade")
-    print("  artifacts.")
+    print("  All enumerated reviewer objections to the current Koide Q support")
+    print("  route (F-functional + AM-GM) and delta support route (ambient APS")
+    print("  topological robustness) are addressed by executable checks or cite")
+    print("  theorem-grade artifacts.")
     print()
     print("  Addressed objections:")
     print(f"    Uniqueness (CAT-A): 4")
     print(f"    Scope (CAT-B): 3")
     print(f"    Independence (CAT-C): 2 clusters -> 3 independent frameworks")
     print()
-    print("  Remaining open doors (not in scope for I1 or I2/P):")
+    print("  Remaining open doors:")
     print(f"    - I5 mechanism (separate lane)")
     print(f"    - delta_CP sign (separate observable)")
     print(f"    - quark-sector parallel (cross-sector check)")
     print()
-    print("  I1 and I2/P status: RETAINED-FORCED")
-    print("  (every building block verified executively — see block-by-block")
-    print("   forcing runners; enumerated reviewer objections addressed)")
+    print("  Koide support-chain status: internally stress-tested")
+    print("  (the admitted AM-GM and ambient APS chains are executable and clean,")
+    print("   but the two physical bridges remain open)")
     print()
-    print("  REVIEWER_STRESS_TEST_PASSED_I1_I2=TRUE")
+    print("  REVIEWER_STRESS_TEST_PASSED_KOIDE_SUPPORT=TRUE")
 else:
     print(f"  {FAIL} objection(s) not fully addressed.  Iter 7+ must close these.")
-    print("  REVIEWER_STRESS_TEST_PASSED_I1_I2=PARTIAL")
+    print("  REVIEWER_STRESS_TEST_PASSED_KOIDE_SUPPORT=PARTIAL")

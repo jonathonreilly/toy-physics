@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Koide cone Q = 2/3 via AM-GM on isotype Frobenius energies (I1 closure).
+Koide Q = 2/3 support route via AM-GM on isotype Frobenius energies.
 
 Claim: the F-functional F(G) = 2 log(tr G) + log(C_2) is
   F(G) = log(E_+ · E_⊥) + constant
@@ -11,12 +11,15 @@ and G = a I + b C + b* C² parametrizes Herm_circ(3).
 
 AM-GM applied to (E_+, E_⊥) under fixed total Frobenius (E_+ + E_⊥ = N)
 gives the unique maximum at E_+ = E_⊥, i.e., 3a² = 6|b|², i.e.,
-κ = a²/|b|² = 2, i.e., Q = (1 + 2/κ)/d = 2/3 at d = 3.
+κ = a²/|b|² = 2, i.e., Q = (1 + 2/κ)/d = 2/3 at d = 3, on this admitted
+internal route.
 
 The "weights" (2, 1) on (tr G, C_2) are not a separate postulate — they
 are the definitional rewriting of log + AM-GM on the two isotype
 Frobenius energies. The Frobenius inner product itself is the canonical
-(trace-form) inner product on matrix algebras, unique up to scale.
+(trace-form) inner product on matrix algebras, unique up to scale. This
+runner does not by itself prove the remaining physical/source-law bridge
+from that extremum to the charged-lepton packet.
 """
 
 from __future__ import annotations
@@ -509,9 +512,10 @@ if FAIL == 0:
     print("isotype decomposition on Herm_circ(3). AM-GM forces the unique")
     print("maximum at E_+ = E_⊥, giving κ = 2 and Q = 2/3 at d = 3.")
     print("")
-    print("I1 Q = 2/3 is retained-forced: forced by the retained axioms")
-    print("(Cl(3), Z³ lattice, Herm_circ(3) via circulant structure, Frobenius")
-    print("inner product) via AM-GM (a pure mathematical inequality).")
+    print("This establishes the strongest current executable support chain for")
+    print("Q = 2/3 on the admitted block-total Frobenius route.")
+    print("What remains open is the physical/source-law bridge showing that the")
+    print("charged-lepton packet must extremize this admitted functional.")
     sys.exit(0)
 else:
     print(f"\n{FAIL} identity checks failed.")

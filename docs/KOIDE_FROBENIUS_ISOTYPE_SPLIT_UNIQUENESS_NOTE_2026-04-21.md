@@ -1,7 +1,7 @@
-# I1 Block-by-Block Forcing: Frobenius Isotype Split Uniqueness
+# Q-Route Block-by-Block Forcing: Frobenius Isotype Split Uniqueness
 
 **Date:** 2026-04-21
-**Status:** Retained-forced verification of the I1 AM-GM closure.
+**Status:** Strong executable support verification of the April 21 AM-GM route.
 **Runner:** `scripts/frontier_koide_frobenius_isotype_split_uniqueness.py` — 28/28 PASS.
 All checks are executable symbolic or numeric computations; no literal
 `True` placeholders remain.
@@ -10,10 +10,12 @@ All checks are executable symbolic or numeric computations; no literal
 
 ## Statement
 
-Every building block of the Koide `F = log(E_+ · E_⊥)` + AM-GM
-derivation of Q = 2/3 is verified forced by the retained
-Cl(3)/Herm_circ(3) axioms — no choice is made anywhere; every piece
-is determined by the retained structure.
+Every building block of the Koide `F = log(E_+ · E_⊥)` + AM-GM route to
+`Q = 2/3` is verified executable and structurally fixed by the admitted
+Cl(3)/Herm_circ(3) setup. This note is about the internal mathematical chain on
+that admitted route. It does not by itself prove the remaining physical/source-
+law bridge showing that the charged-lepton packet must be selected by this
+extremal principle.
 
 ## Forced building blocks (each with an executable check)
 
@@ -75,12 +77,14 @@ At the maximum:
 
 ## Why this answers the reviewer question "is F a choice?"
 
-**No choice is made.** The Frobenius inner product is the canonical
+**No hidden internal choice is made on this route.** The Frobenius inner product is the canonical
 trace form (unique up to scale). The projections `P_I` and `I − P_I`
 are the unique Frobenius-orthogonal projections onto scalar and
 traceless subspaces. AM-GM is a mathematical inequality, not a
-prescription. Consequently, Q = 2/3 is retained-forced: it follows
-by theorem from the retained Cl(3)/Herm_circ(3) axioms.
+prescription. Consequently, this admitted block-total route isolates the Koide
+point `Q = 2/3`. What remains open is not the internal AM-GM step, but the
+physical/source-law bridge from the accepted charged-lepton framework surface to
+this extremal principle.
 
 The "(2, 1) weights" appearing in the equivalent form `F = 2 log(tr G) + log(C_2)`
 are the algebraic consequence of the definitional relation

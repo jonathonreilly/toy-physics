@@ -2,12 +2,14 @@
 
 **Date:** 2026-04-19
 **Lane:** Charged-lepton Koide phase `delta = 2/9`
-**Status:** **the Brannen-Zenczykowski phase offset is closed on the actual charged-lepton selected
-route.** The branch's original ambient-`S^2` / monopole closure theorem
-fails, but on the exact selected charged-lepton line there **is** a
-canonical Pancharatnam–Berry bundle/connection on the projective `C_3`
-doublet ray, and the physical Brannen phase offset `delta` is exactly the
-Berry holonomy of that actual-route bundle measured from the unique
+**Status:** historical actual-route Berry note retained for provenance. The
+original ambient-`S^2` / monopole closure theorem fails, and this selected-line
+Berry analysis remains mathematically useful, but the current package does not
+treat it as full physical closure of the Brannen phase because the physical
+Brannen-phase bridge remains open. On the exact selected charged-lepton line
+there **is** a canonical Pancharatnam–Berry bundle/connection on the projective
+`C_3` doublet ray, and the candidate physical Brannen phase offset `delta`
+matches the Berry holonomy of that actual-route bundle measured from the unique
 unphased selected-line point. On the theorem stack, the
 previously separate selected-line scalar/point law is now fixed as a
 corollary: the exact selected-line scalar `kappa_sel` is an explicit
@@ -435,8 +437,8 @@ On the physical first branch, the runner verifies that both `delta(m)` and
 delta = 2/9  ->  kappa_sel,* = -0.607918569997  ->  m_* = -1.160443440065.
 ```
 
-So the previously separate selected-point law does **not** survive
-once the Brannen-Zenczykowski phase offset is closed on the actual route.
+So the previously separate selected-point law would not survive if the physical
+Brannen phase were established on this actual-route Berry carrier.
 
 The old `H_*` witness is now only a compatibility check:
 
@@ -584,7 +586,8 @@ Narrative statements are no longer marked `PASS`.
 
 ## 9. Bottom line
 
-**Verdict for the Brannen-Zenczykowski phase offset `delta = 2/9`: closed.**
+**Verdict for the selected-line Berry route:** exact geometric support route,
+not current full physical closure.
 
 The branch's original ambient-`S^2` monopole proof is false, but the actual
 selected-line Berry theorem is strong enough to replace it. On the exact

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-APS η-invariant on L(3,1) / R^4/Z_3 = 2/9 rad (I2/P value).
+APS η-invariant on L(3,1) / R^4/Z_3 = 2/9 rad (ambient delta support value).
 
 Verifies EIGHT independent exact derivations of the APS η-invariant at the
 Z_3 fixed locus with tangent weights (1, 2) — all giving η = 2/9 exactly,
-matching the Brannen phase δ = 2/9 rad.
+matching the current support-route target for the Brannen phase.
 
 Routes:
   (1) Hirzebruch-Zagier signature defect
@@ -401,7 +401,8 @@ if FAIL == 0:
     print("APS η-invariant = 2/9 rad is a retained geometric invariant")
     print("of the Z_3 orbifold / lens space L(3,1), derivable from number")
     print("theory alone. No observational input required.")
-    print("\nThis provides the radian bridge for I2/P (Brannen δ = 2/9).")
+    print("\nThis fixes the ambient APS value used in the delta support route.")
+    print("The physical Brannen-phase bridge remains a separate step.")
     sys.exit(0)
 else:
     print(f"\n{FAIL} identity checks failed.")

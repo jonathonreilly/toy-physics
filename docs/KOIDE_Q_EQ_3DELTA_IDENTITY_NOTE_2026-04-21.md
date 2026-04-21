@@ -1,4 +1,4 @@
-# Q = p·δ Retained Identity (I1 ↔ I2/P bridge)
+# Q = p·δ Arithmetic Identity on the Current Koide Support-Route Values
 
 **Date:** 2026-04-21
 **Status:** Retained arithmetic identity.
@@ -8,7 +8,7 @@
 
 ## Statement
 
-Given the retained closures of I1 and I2/P, the two retained values
+Given the current Koide support-route values, the two retained values
 satisfy a clean arithmetic identity:
 
 ```
@@ -37,12 +37,14 @@ Combining: `Q/δ = (2/d)/(2/p²) = p²/d = p` (when p = d), so `Q = p·δ`.
 
 ## Why this matters
 
-The I1 and I2/P closures are **not independent** derivations that
+The Q and delta support routes are **not independent** derivations that
 happen to both come out rational. They are **two faces of the same
 retained Z_3 structure**:
 
-- I2/P derives δ on the Z_p-orbifold side via APS η.
-- I1 derives Q on the d-dimensional-circulant side via AM-GM.
+- The delta support route derives the ambient `δ = 2/p²` value on the
+  Z_p-orbifold side via APS η.
+- The Q support route derives `Q = 2/d` on the d-dimensional-circulant
+  side via AM-GM.
 - The Z_3 axiomatic base forces p = d, linking the two values by
   Q = p·δ.
 
@@ -52,7 +54,8 @@ derivation of Q, the identity is immediate.
 
 ## Scope
 
-This note covers ONLY the I1 ↔ I2/P arithmetic bridge. Consequences
+This note covers ONLY the arithmetic bridge between the current Q and delta
+support-route values. Consequences
 of this identity for PMNS angles (Sum Rules, conservation laws under
-(Q, δ)-parametrized deformations) are part of the separate I5 lane
+(Q, δ)-parametrized deformations) are part of the separate PMNS lane
 and are not included in this package.

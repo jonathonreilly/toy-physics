@@ -1,5 +1,6 @@
 """
-APS eta = 2/9 block-by-block retained-forced verification (I2/P).
+APS eta = 2/9 block-by-block support verification for the ambient topological
+route behind the Brannen phase.
 
 
 
@@ -530,7 +531,7 @@ composite_forcing_ok = (
     # (i) All consistent combinations give 2/9
     and all(sp.simplify(v - sp.Rational(2, 9)) == 0 for v in all_eta_values)
 )
-ok("i3. COMPOSITE: APS eta = 2/9 is retained-forced (all executable pieces combine)",
+ok("i3. COMPOSITE: ambient APS eta = 2/9 follows from the executable support chain",
    composite_forcing_ok,
    "chain (a)->(b)->(c)->(d)->(e)->(f)->(g)->(h)->(i) is gap-free and executable")
 
@@ -539,7 +540,7 @@ ok("i3. COMPOSITE: APS eta = 2/9 is retained-forced (all executable pieces combi
 # ==========================================================================
 
 print("=" * 72)
-print("APS ETA = 2/9 BLOCK-BY-BLOCK FORCING (I2/P)")
+print("APS ETA = 2/9 BLOCK-BY-BLOCK SUPPORT CHAIN")
 print("=" * 72)
 for line in log:
     print(line)
@@ -548,8 +549,8 @@ print(f"Total: {PASS} PASS, {FAIL} FAIL")
 print()
 print("Verdict:")
 if FAIL == 0:
-    print("  Each building block of the APS eta = 2/9 derivation is")
-    print("  RETAINED-FORCED, not chosen:")
+    print("  Each building block of the ambient APS eta = 2/9 derivation is")
+    print("  executable and structurally fixed on the admitted topological route:")
     print()
     print("    C_3[111] rotation    = 2pi/3 body-diagonal [retained kinematics]")
     print("    eigenvalues          = (1, omega, omega^2) [forced by rotation order]")
@@ -559,11 +560,13 @@ if FAIL == 0:
     print("    core identity        = (omega-1)(omega^2-1) = 3 [exact algebra]")
     print("    result eta           = 2/9 [unique computation]")
     print()
-    print("  No alternative construction gives a different eta consistent with")
-    print("  retained axioms.  I2/P passes from 'retained-derived + stress-tested'")
-    print("  to retained-forced grade (matching the I1 strengthening).")
+    print("  No alternative construction gives a different ambient eta consistent")
+    print("  with the admitted topological data. This is the strongest current")
+    print("  executable support chain for the ambient APS value. What remains")
+    print("  open is the physical-observable bridge identifying the selected-line")
+    print("  Brannen phase with this ambient invariant.")
     print()
-    print("  APS_ETA_2_9_RETAINED_FORCED=TRUE")
+    print("  APS_ETA_2_9_SUPPORT_CHAIN=TRUE")
 else:
     print(f"  {FAIL} checks failed.")
-    print("  APS_ETA_2_9_RETAINED_FORCED=PARTIAL")
+    print("  APS_ETA_2_9_SUPPORT_CHAIN=PARTIAL")

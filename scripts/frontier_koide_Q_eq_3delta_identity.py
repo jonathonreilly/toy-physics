@@ -1,7 +1,7 @@
 """
-Q = 3·delta retained identity.
+Q = 3·delta arithmetic identity on the current Koide support-route values.
 
-Discovery: the retained invariants from I1 and I2/P satisfy a
+Discovery: the current Koide support-route values satisfy a
 clean arithmetic identity:
 
   Q = p · delta,   where p = 3 is the Z_3 orbifold order.
@@ -15,7 +15,7 @@ Derivation:
 
 Numerically: Q = 2/3, delta = 2/9, 3·delta = 6/9 = 2/3 = Q. EXACT.
 
-Consequences:
+Consequences if the current support-route values survive review:
 
   (1) Sum Rule 2 at TBM limit is TRIVIALLY satisfied:
       At TBM: sin^2(θ_12) = 1/3, sin^2(θ_13) = 0.
@@ -30,9 +30,9 @@ Consequences:
       Δ SR2 LHS = Q·Δsin²(θ_12) + Δsin²(θ_13) = -δ²·Q² + δ²·Q² = 0.
       So SR2 LHS is CONSERVED = δ exactly at leading order.
 
-This is STRUCTURAL PROGRESS on the I5 mechanism: Sum Rule 2 isn't an
-accidental numerical coincidence but a CONSERVATION LAW anchored at
-TBM's retained Q=3δ identity.  The (Q, δ)-deformation is a
+This is structural support for the PMNS sum-rule lane: Sum Rule 2 is not
+being treated as an accidental numerical coincidence if the same
+support-route values persist. The (Q, δ)-deformation is then a
 conservation-preserving trajectory in angle space.
 """
 import sympy as sp
@@ -58,11 +58,11 @@ def ok(name, cond, detail=""):
 # Setup: retained values
 # ==========================================================================
 
-log.append("=== (1) Retained values from I1 and I2/P ===")
+log.append("=== (1) Current support-route values for Q and delta ===")
 
-# Q from I1 AM-GM closure
+# Q from the current AM-GM support route
 Q = sp.Rational(2, 3)
-# delta from I2/P APS η closure
+# delta from the current ambient APS support route
 delta = sp.Rational(2, 9)
 # p = 3: Z_3 orbifold order = number of generations
 p = sp.Integer(3)
@@ -140,10 +140,10 @@ log.append(f"  = {delta} = δ")
 log.append(f"  Anchored by Q = 3·δ identity")
 
 # ==========================================================================
-# (5) Why this identity matters: I1 and I2/P are two faces of Z_3
+# (5) Why this identity matters: the Q and delta support routes share Z_3
 # ==========================================================================
 
-log.append("\n=== (5) Interpretation: I1 and I2/P share Z_3 axiomatic base ===")
+log.append("\n=== (5) Interpretation: the Q and delta support routes share the same Z_3 base ===")
 
 # Executable: the identity Q = 3·δ is a non-trivial rational prediction
 # with zero parameters. Verify by substituting the closed-form formulas.
@@ -164,11 +164,11 @@ ok("5b. The Z_3 order is 3 on BOTH sides (APS p = 3, AM-GM d = 3)",
    Z3_order_APS == 3 and Z3_order_iso == 3 and Z3_order_APS == Z3_order_iso,
    f"APS p = {Z3_order_APS}, AM-GM d = {Z3_order_iso}; both forced by same Z_3")
 
-# Executable: if I1 and I2/P were truly independent, the ratio Q/δ would
+# Executable: if the Q and delta support routes were truly independent, the ratio Q/δ would
 # not be forced to a specific rational. That it equals exactly 3 = p = d
 # is a nontrivial consistency prediction. Verify both values and the
 # ratio simultaneously.
-ok("5c. I1 and I2/P linked: Q/δ = 3 holds exactly (non-coincidence)",
+ok("5c. Q and delta support routes linked: Q/δ = 3 holds exactly (non-coincidence)",
    sp.simplify(Q - sp.Rational(2, 3)) == 0
    and sp.simplify(delta - sp.Rational(2, 9)) == 0
    and sp.simplify(Q / delta - 3) == 0,
@@ -179,7 +179,7 @@ ok("5c. I1 and I2/P linked: Q/δ = 3 holds exactly (non-coincidence)",
 # ==========================================================================
 
 print("=" * 72)
-print("Q = 3·delta RETAINED IDENTITY")
+print("Q = 3·delta ARITHMETIC IDENTITY ON THE CURRENT KOIDE SUPPORT-ROUTE VALUES")
 print("=" * 72)
 for line in log:
     print(line)
@@ -188,19 +188,21 @@ print(f"Total: {PASS} PASS, {FAIL} FAIL")
 print()
 print("Verdict:")
 if FAIL == 0:
-    print("  Q = p·delta is a retained arithmetic identity linking I1 and I2/P:")
-    print(f"    Q = 2/3 (I1: AM-GM closure at kappa = 2, d = 3)")
-    print(f"    delta = 2/9 (I2/P: APS eta closure on Z_3 orbifold)")
+    print("  Q = p·delta is an arithmetic identity linking the current Koide")
+    print("  support-route values:")
+    print(f"    Q = 2/3 (AM-GM support route at kappa = 2, d = 3)")
+    print(f"    delta = 2/9 (ambient APS support route on the Z_3 orbifold)")
     print(f"    p = d = 3 (Z_3 order = number of generations)")
     print(f"    Q/delta = p^2/d = p when p = d, so Q = 3·delta.")
     print()
     print("  Numerically: 2/3 = 3 * (2/9). Exact.")
     print()
-    print("  The two closures are not independent. They are two faces of the")
-    print("  same Z_3 retained structure: I2/P derives delta = 2/p^2 from")
-    print("  the APS formula on a Z_p orbifold, I1 derives Q = 2/d from")
-    print("  AM-GM on d-dimensional circulant isotype energies, and the Z_3")
-    print("  axiomatic base forces p = d, giving Q = p * delta.")
+    print("  The two support routes are not independent. They are two faces of")
+    print("  the same Z_3 retained structure: the delta support route gives")
+    print("  delta = 2/p^2 from the APS formula on a Z_p orbifold, the Q")
+    print("  support route gives Q = 2/d from AM-GM on d-dimensional")
+    print("  circulant isotype energies, and the Z_3 axiomatic base forces")
+    print("  p = d, giving Q = p * delta.")
     print()
     print("  Q_EQ_P_DELTA_IDENTITY=TRUE")
 else:

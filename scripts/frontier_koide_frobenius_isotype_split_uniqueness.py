@@ -12,7 +12,9 @@ onto scalar multiples of I (P_I: Herm(3) -> span{I}), NOT the vector-space
 C_3-singlet projection P_0 = J/3 on C^3. These are two different notions:
   - P_0 = J/3 acts on C^3 vectors, projects onto (1,1,1)/sqrt(3).
   - P_I acts on Herm(3) matrix space, projects onto multiples of identity.
-Both are retained-forced, but they serve different roles.
+Both are structurally forced by the admitted matrix-space setup, but they serve
+different roles. This internal forcing does not by itself settle the separate
+physical/source-law bridge behind the Koide observable.
 
 Specifically, each piece is forced:
   (1) Tr(M^2) is the Frobenius inner product, forced by Cl(3) trace structure.
@@ -447,7 +449,8 @@ print(f"Total: {PASS} PASS, {FAIL} FAIL")
 print()
 print("Verdict:")
 if FAIL == 0:
-    print("  Each building block of the AM-GM attack is RETAINED-FORCED:")
+    print("  Each building block of the AM-GM attack is structurally fixed on the")
+    print("  admitted matrix-space route:")
     print("    Tr(M^2)    = canonical Frobenius form on matrix algebra")
     print("    P_0 = J/3  = unique C_3-singlet Hermitian projector")
     print("    E_+        = (tr M)^2/3 = ||P_0 M P_0||_F^2  [forced]")
@@ -457,10 +460,12 @@ if FAIL == 0:
     print("  AM-GM then forces the extremum at E_+ = E_perp, giving")
     print("  kappa = a^2/|b|^2 = 2 and Q = 2/3.")
     print()
-    print("  Conclusion: the I1 AM-GM derivation is RETAINED-UNCONDITIONAL (not just 'discharged')")
-    print("  under the retained axiom set {Cl(3), Herm_circ(3), C_3 action}.")
+    print("  Conclusion: this is the strongest current executable internal support")
+    print("  chain for the Koide Q route under {Cl(3), Herm_circ(3), C_3 action}.")
+    print("  The physical/source-law bridge from this extremum to the charged-lepton")
+    print("  packet remains a separate open item.")
     print()
-    print("  FROBENIUS_ISOTYPE_SPLIT_FORCED=TRUE")
+    print("  FROBENIUS_ISOTYPE_SPLIT_SUPPORT_CHAIN=TRUE")
 else:
     print(f"  {FAIL} checks failed. Iter 2 retention needs stronger argument.")
-    print("  FROBENIUS_ISOTYPE_SPLIT_FORCED=PARTIAL")
+    print("  FROBENIUS_ISOTYPE_SPLIT_SUPPORT_CHAIN=PARTIAL")

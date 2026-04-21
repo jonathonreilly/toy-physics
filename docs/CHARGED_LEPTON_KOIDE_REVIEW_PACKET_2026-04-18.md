@@ -15,7 +15,7 @@ conditional evening discussion below remains historical provenance.
 
 ## Historical Route-Pruning Record
 
-Before the final closure package, the stack passed through the following
+Before the final April 21 support package, the stack passed through the following
 reductions:
 
 - the authoritative retained status is still the April 17 bounded review:
@@ -160,7 +160,7 @@ Note 22 uses a DIFFERENT route: Q-closure via qubit-lattice-dim +
 anomaly arithmetic, then CPC d·delta = Q derives delta. Whether this
 constituted a valid structural bridge was the live reviewer question on the
 April 20 evening surface. That historical state is now superseded by the
-April 21 closure package.
+April 21 support package.
 
 **(April 20 late - reduction note 24)** Even if reviewer declines note 22 as
 full closure, the open content of the Brannen-phase radian-bridge step is now much sharper. The new

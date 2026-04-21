@@ -425,13 +425,14 @@ APPLICATION TO RETAINED Cl(3)/Z³.
   This is independent of the specific dynamical metric law on PL S³ × R
   (which remains open per frontier_s3_anomaly_spacetime_lift.py).
 
-CONCLUSION. The Koide I2/P closure via APS η = 2/9 is METRIC-INDEPENDENT
-and thus does NOT require (C2) — the retained dynamical metric law
-compatibility — as a separate condition. The kinematic retention
-(C_3[111] spatial rotation, tangent weights) + the Atiyah-Bott-Segal-Singer
-theorem jointly discharge C2.
+CONCLUSION. The ambient APS η = 2/9 support route is METRIC-INDEPENDENT
+and thus does NOT require the retained dynamical metric law
+compatibility as a separate condition. The kinematic retention
+(C_3[111] spatial rotation, tangent weights) + the
+Atiyah-Bott-Segal-Singer theorem jointly fix the ambient APS value.
 
-What remains is (C1): the Peter-Weyl prescription for I1 closure.
+What remains is not a metric issue but the physical Brannen-phase bridge
+from that ambient invariant to the selected-line observable.
 """)
 
 # Executable metric-independence summary: combine the Z_3-invariant-metric
@@ -460,21 +461,23 @@ check(
 
 
 # ============================================================================
-# T8. Consequence for I2/P
+# T8. Consequence for the ambient APS value
 # ============================================================================
 print("\n" + "=" * 72)
-print("T8: Consequence for I2/P")
+print("T8: Consequence for the ambient APS value")
 print("=" * 72)
 
 print("""
-With metric-independence established, the I2/P value η = 2/9 rad is
+With metric-independence established, the ambient APS value η = 2/9 rad is
 fixed by the retained kinematic inputs alone:
   - C_3[111] rotation (retained Z³ cubic symmetry)
   - Tangent weights (1, 2) at the fixed locus
   - ABSS equivariant fixed-point formula (theorem)
   - Core algebraic identity (ζ-1)(ζ²-1) = 3 (algebraic fact)
 
-No dependence on a specific dynamical metric.
+No dependence on a specific dynamical metric. The remaining open step is
+the physical Brannen-phase bridge from this ambient invariant to the
+selected-line observable.
 """)
 
 # Executable: alternative weight classes give DIFFERENT η. So η is sensitive
@@ -514,8 +517,9 @@ if FAIL == 0:
     print("APS η at Z_3 fixed point with tangent weights (1, 2) is topological")
     print("(determined by tangent rep, not Riemannian metric). Combined with the")
     print("kinematic inputs from `c3_spatial_rotation.py` and the 8 routes in")
-    print("`aps_eta_invariant.py`, this establishes I2/P δ = 2/9 rad at")
-    print("retained-forced grade, independent of any dynamical metric law.")
+    print("`aps_eta_invariant.py`, this establishes the ambient APS support")
+    print("chain for η = 2/9, independent of any dynamical metric law.")
+    print("The remaining open step is the physical Brannen-phase bridge.")
     sys.exit(0)
 else:
     print(f"\n{FAIL} identity checks failed.")

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-C_3[111] spatial-rotation kinematic layer for the I2/P (δ = 2/9 rad) closure.
+C_3[111] spatial-rotation kinematic layer for the Koide delta support route.
 
 Establishes:
   1. Rodrigues rotation by 2π/3 about n = (1,1,1)/√3 equals the cyclic
@@ -14,10 +14,10 @@ tangent weights (1, 2) mod 3 force the APS η-invariant at the Z_3 fixed
 locus to be η = 2/9 exactly — independent of any Riemannian metric
 choice, since the ABSS formula depends only on the tangent representation.
 
-Role in the I2/P closure chain: kinematic identification. The η value
-itself is established in `aps_eta_invariant.py`; its metric-independence
-is established in `aps_topological_robustness.py`; this runner supplies
-the (1, 2) tangent weights those runners consume.
+Role in the delta support chain: kinematic identification. The ambient APS
+η value itself is established in `aps_eta_invariant.py`; its
+metric-independence is established in `aps_topological_robustness.py`;
+this runner supplies the (1, 2) tangent weights those runners consume.
 """
 
 from __future__ import annotations
@@ -273,9 +273,9 @@ for doc_rel in retained_docs:
 
 
 # ============================================================================
-# Part 6: Role in the I2/P closure chain
+# Part 6: Role in the delta support chain
 # ============================================================================
-print("\n(6) Role in the I2/P closure chain")
+print("\n(6) Role in the delta support chain")
 print("-" * 72)
 
 print("""
@@ -284,15 +284,17 @@ This runner supplies the KINEMATIC layer:
   - Fixed locus on PL S³ × R is codim-2 (two timelike worldlines).
   - Transverse tangent weights = (1, 2) mod 3, forced by C_3 eigenvalues.
 
-Downstream in the I2/P chain:
+Downstream in the delta support chain:
   (a) `aps_eta_invariant.py` — η(1, 2; 3) = 2/9 via 8 independent routes.
   (b) `aps_topological_robustness.py` — ABSS: η independent of metric.
-  (c) `aps_block_by_block_forcing.py` — each building block retained-forced.
+  (c) `aps_block_by_block_forcing.py` — each building block of the ambient APS
+      support chain is executable.
 
-Combined, I2/P δ = 2/9 rad is retained-forced: forced by the retained
-axioms (Cl(3), Z³ lattice, S_3 cubic symmetry, C_3[111] body-diagonal
-rotation, PL S³ × R continuum) with no additional dependence on a
-choice of dynamical metric, by ABSS metric-independence.
+Combined, these results isolate the exact ambient APS value η = 2/9 on the
+admitted topological route, with no additional dependence on a choice of
+dynamical metric, by ABSS metric-independence. The remaining open step is the
+physical-observable bridge identifying the selected-line Brannen phase with
+this ambient invariant.
 """)
 
 # Executable composite checks: re-verify the three core downstream claims
@@ -320,12 +322,12 @@ check(
     f"η = {eta_6b}",
 )
 
-# (6c) The chain (6a) + (6b) + metric independence gives I2/P δ = 2/9 rad
+# (6c) The chain (6a) + (6b) + metric independence fixes the ambient APS value
 # without any dependence on a dynamical metric. Executable: the computed
 # eta above contains no metric variables, and (6a) and (6b) both hold
 # symbolically.
 check(
-    "(6c) I2/P δ = 2/9 rad composed from (6a) + (6b) with no metric dependence",
+    "(6c) ambient APS η = 2/9 composed from (6a) + (6b) with no metric dependence",
     sp.simplify(R_simp - P) == sp.zeros(3, 3)
     and sp.simplify(eta_6b - sp.Rational(2, 9)) == 0
     and eta_6b.free_symbols == set(),
@@ -349,7 +351,7 @@ if FAIL == 0:
     print("  - Transverse tangent weights: (1, 2) mod 3")
     print("")
     print("Consumed by `aps_eta_invariant.py` and `aps_topological_robustness.py`")
-    print("to establish I2/P δ = 2/9 rad at retained-forced grade.")
+    print("to establish the ambient APS support chain for η = 2/9.")
     sys.exit(0)
 else:
     print(f"\n{FAIL} identity checks failed.")
