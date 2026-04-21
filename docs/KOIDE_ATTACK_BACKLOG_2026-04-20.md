@@ -143,12 +143,23 @@ number-theoretic), add a 4th independent derivation of δ = 2/9.
 Candidates: modular form special values, CFT partition function,
 holographic calculation.
 
-### Attack E (connect I1 to observable principle more tightly)
+### Attack E — COMPLETED (iter 9)
 
-**Target**: Iter 2 showed Frobenius metric → F_sym → AM-GM → κ=2.
-Tighten the "Frobenius metric is forced by retained Herm_circ(3)"
-step. Specifically: show that the Frobenius metric is the UNIQUE
-(up to scale) C_3-invariant symmetric form on Herm_circ(3).
+**Runner**: `scripts/frontier_koide_frobenius_isotype_split_uniqueness.py` (32/32 PASS).
+**Outcome**: I1 RETAINED-FORCED. Each building block of iter 2's
+AM-GM argument is verified to be forced by retained axioms, not
+chosen. Key clarification: E_+ uses MATRIX-SPACE projector P_I
+(scalar subspace), not vector-space P_0 = J/3. Both are distinct
+and both forced. Iter 2 passes from "retained-derived + stress-tested"
+to **retained-forced** (no alternative consistent construction exists).
+
+### Attack E2 (I2/P analogous strengthening)
+
+**Target**: Produce an analogous "retained-forced" verification for
+iter 1 (δ = 2/9 via APS topological robustness) — a block-by-block
+check that each piece is forced, not chosen. Most of this is already
+in iter 1 + iter 6, but a dedicated runner would match iter 9's
+depth for I2/P.
 
 ### Attack F (publication-draft consolidation)
 
