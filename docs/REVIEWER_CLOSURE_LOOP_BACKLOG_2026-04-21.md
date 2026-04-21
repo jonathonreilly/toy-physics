@@ -16,18 +16,16 @@
 | 3 | Bridge B — empirical `arg(b)` vs retained δ_B = 2/9 on Herm_circ(3) | **🎯 CLOSED at PDG precision** | `REVIEWER_CLOSURE_LOOP_ITER3_BRIDGE_B_CLOSED_NOTE_2026-04-21.md` — 9/9 PASS. \|arg(b)\|_empirical = 0.2222296 rad vs δ_B = 2/9 = 0.2222222 rad, deviation 7.4e-6 rad (0.0033%), inside PDG m_τ 3σ band. Observational identity confirmed to 5 decimal places. Downstream m_* / w/v reduces to v_0 (outside-scope). |
 | 4 | N1 (δ·q_+ = Q_Koide) derivation attempt via retained Atlas | **narrowed** | `REVIEWER_CLOSURE_LOOP_ITER4_N1_NARROWED_NOTE_2026-04-21.md` — 8/8 PASS. Path 1 (already-retained) ruled out. Path 2 pinpoints missing identity: SELECTOR-quadrature `δ·q_+ = SELECTOR²` on (T_Δ, T_Q). Path 3 tentative-primitive. Connects to A-BCC and potentially N2. |
 | 5 | Joint N1 + N2 polynomial attack | **N1 is primitive bottleneck** | `REVIEWER_CLOSURE_LOOP_ITER5_N1_IS_BOTTLENECK_NOTE_2026-04-21.md` — 4/7 PASS (3 FAILs are hypothesis being disproven). N2 reduces to N1 + Tr(H)=2/3 via polynomial root-selection; N3 reduces to finite real-root enumeration. N1 itself is NOT derivable from currently retained Atlas. Honest Nature-grade conclusion: proposal is a SUPPORT package, not closure. |
-| 6 | N1 via 3-Casimir {Tr(H), Tr(H²), det(H)} set | **negative** | `REVIEWER_CLOSURE_LOOP_ITER6_TRH2_CASIMIR_NEGATIVE_NOTE_2026-04-21.md` — 0/3 PASS (3 FAILs = hypothesis disproven). Tr(H²)_closure = 7.0716 vs closest retained simple (5√2) = 7.0711, dev 5.9e-4 (0.0083%). Not a clean retained Casimir. 3-Casimir derivation path ruled out. Three distinct N1 attacks (iter 4, 5, 6) all negative — N1 un-closable with current toolkit. |
+| 6 | N1 via 3-Casimir {Tr(H), Tr(H²), det(H)} set | **negative** | `REVIEWER_CLOSURE_LOOP_ITER6_TRH2_CASIMIR_NEGATIVE_NOTE_2026-04-21.md` — 0/3 PASS (3 FAILs = hypothesis disproven). Tr(H²)_closure = 7.0716 vs closest retained simple (5√2) = 7.0711, dev 5.9e-4 (0.0083%). Not a clean retained Casimir. 3-Casimir derivation path ruled out. |
+| 7 | Bridge B structural derivation via Z_3 rep theory (Berry phase / equivariant η) | **narrowed, same class as A + N1** | `REVIEWER_CLOSURE_LOOP_ITER7_BRIDGE_B_NARROWED_NOTE_2026-04-21.md` — 5/5 PASS. arg(b) and APS η have DIFFERENT mathematical types (amplitude phase vs. spectral invariant). Naive Berry-phase gives trivial 2π (not 2/9). Bridge B weak reading (observational) closed at iter 3; strong reading (framework derivation) open. Same class as Bridge A + N1. |
 
-## Final verdict — loop terminated after iter 6
+## Loop continues (user directive: "keep /loop on full closure")
 
-After three distinct attacks on N1 (iter 4 retained-Atlas, iter 5 joint N1+N2 polynomial, iter 6 3-Casimir), all produced negative or narrowed results. **N1 is un-closable within the currently available toolkit.** Continuing iter-grinding does not close it.
-
-The only Nature-grade closed result from the evening-4-21 loop is
-**Bridge B** (iter 3): physical `arg(b) = δ_B = 2/9 rad` to 5 decimal places.
-
-Re-opening requires either:
-- A specific new framework insight on N1 / Bridge A / A-BCC (new physics/math angle, not more iter variants), or
-- A user-directed pivot (different reviewer items, different framework angle).
+After iters 4-6 on N1 + iter 7 on Bridge B, three bridges (A, B, N1)
+are all in the same "primitive observational identity, framework
+derivation open" class. Further grinding on these three is unlikely
+to close any at Nature-grade — pivoting to Gate 2 items where genuine
+progress is possible.
 
 ## Closed by existing afternoon-4-21-proposal (confirmed in iter 1)
 
