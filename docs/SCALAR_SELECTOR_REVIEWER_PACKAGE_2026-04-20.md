@@ -70,7 +70,7 @@ On `Herm_circ(3)` with Frobenius metric, the MRU principle — Frobenius-normali
 
 ### §1.4 Supporting obstructions — what is ruled out
 
-Six structural no-go theorems on main (`docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md`, total 250 PASS across 6 runners) rule out Z₃-invariance alone, sectoral universality, color-sector correction, anomaly-forced cross-species, SU(2) gauge-exchange mixing, and observable-principle character symmetry as mechanisms that would force `Q = 2/3` independently of the observational input. This localizes `Q = 2/3` as a retained observational relation rather than a retained derivation. See the Remaining Open Imports register for candidate closing routes (I1).
+Six structural no-go theorems on main (`docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md`, total 250 PASS across 6 runners) rule out Z₃-invariance alone, sectoral universality, color-sector correction, anomaly-forced cross-species, SU(2) gauge-exchange mixing, and observable-principle character symmetry as candidate forcing mechanisms for `Q = 2/3`. These remain useful negative controls, but on the canonical review branch they are superseded by the landed Frobenius-isotype / AM-GM closure package rather than read as the final Koide status.
 
 ---
 
@@ -348,17 +348,20 @@ All runners pass on canonical branch `review/scalar-selector-cycle1-theorems` wi
 
 ## §6 Retained observational inputs (complete list)
 
+**2026-04-21 canonical update.** After the landed `morning-4-21` closure
+package, Koide `Q = 2/3` and Brannen `δ = 2/9` are no longer counted here as
+retained observational inputs on the canonical review branch. The table below
+lists the remaining retained observational or atlas-level inputs across the
+four Tier-1 gates.
+
 | Label | Input | Used in | Provenance |
 |---|---|---|---|
-| Q23 | Koide relation `Q = 2/3` | κ, θ | Foot 1994; Koide 1983; PDG-verified |
-| BZ | Brannen phase `δ = 2/9` | θ | Brannen 2006; Rivero–Zenczykowski; PDG-verified |
 | PMNS | PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)` | A-BCC σ-chain | NuFit / pinned chamber target |
 | CHB | Chamber bound `q_+ + δ ≥ √(8/3)` | A-BCC | reviewer-grade inline derivation in `DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md` |
 | BIM | Bimodule `B = Cl(3)/Z₃ ⊗ Cl_CKM(1⊕5)` | a_u | `CL3_SM_EMBEDDING_THEOREM` + `CKM_ATLAS_AXIOM_CLOSURE_NOTE` (main) |
 | ATOM-ρ | `a_d = ρ = 1/√42` | a_u | CKM atlas |
 | ATOM-S | `supp = 6/7` | a_u | CKM atlas |
 | ATOM-A | `δ_{A1} = 1/42` | a_u | CKM atlas |
-| HSEL | Selected-line reduction `H_sel(m) = H(m, √6/3, √6/3)` | θ | exact retained-on-`main` provenance in `KOIDE_SELECTED_LINE_PROVENANCE_NOTE_2026-04-20.md` |
 
 No other observational or structural-postulate inputs enter the four Tier-1 closures this cycle.
 

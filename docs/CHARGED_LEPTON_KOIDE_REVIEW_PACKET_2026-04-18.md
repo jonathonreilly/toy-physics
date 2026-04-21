@@ -154,10 +154,9 @@ U(1) hypercharge commutant.
 out four specific character-data candidates for the radian bridge P.
 Note 22 uses a DIFFERENT route: Q-closure via qubit-lattice-dim +
 anomaly arithmetic, then CPC d·delta = Q derives delta. Whether this
-constitutes a valid structural bridge is a reviewer judgment call.
-If reviewer accepts: both I1 and I2/P close; if reviewer rejects:
-both remain retained-observational per note 21 and the open-imports
-register.
+constituted a valid structural bridge was the live reviewer question on the
+April 20 evening surface. On the canonical review branch, that historical
+state is now superseded by the landed `morning-4-21` closure package.
 
 **(April 20 late - reduction note 24)** Even if reviewer declines note 22 as
 full closure, the open content of `I2 / P` is now much sharper. The new
@@ -167,8 +166,9 @@ time theorem already fixes the native ambient as one-clock physical `3+1`.
 So the live native route is no longer "find a smarter local Berry scalar." It
 is now: derive a one-clock ambient `3+1` endpoint/transport law, or derive an
 extra Wilson/lattice phase datum on that ambient, whose pullback fixes the
-Koide point. This helps explain why the anomaly/time line materially supports
-the `I1/I2` evening route without yet forcing canonical promotion.
+Koide point. This remains useful provenance for how the search space
+collapsed, but it is no longer the canonical closure posture after the
+April 21 package.
 
 Items that remain open:
 
@@ -177,12 +177,12 @@ Items that remain open:
 - quark-sector and neutrino-sector Koide analogs are sector-specific open
   problems.
 
-So the current classification is:
+So the current canonical classification is:
 
-- **conditional** retained-derivation of Q = 2/3 (via qubit-lattice-dim
-  bridge acceptance; notes 21 and 22 together describe two compatible
-  views — no-go within character-data surface, closure via Q-chain)
-- **conditional** retained-derivation of delta = 2/9 (follows from Q
-  closure via CPC; same reviewer-decision dependency)
-- retained promotion for charged-lepton ratios (conditional on retained
-  v_0 AND acceptance of the Q closure bridge)
+- **retained-forced** derivation of `Q = 2/3` on
+  `review/scalar-selector-cycle1-theorems` via the `morning-4-21` closure
+  package
+- **retained-forced** derivation of `delta = 2/9` on
+  `review/scalar-selector-cycle1-theorems` via the same package
+- retained promotion for charged-lepton ratios, modulo the separate overall
+  lepton scale input `v_0`
