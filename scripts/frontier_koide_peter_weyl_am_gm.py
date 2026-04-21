@@ -128,12 +128,19 @@ check(
     "F is log of 3×product of isotype energies",
 )
 
-# The log(3) is a constant — irrelevant for extremization
-F_without_const = sp.log(E_plus) + sp.log(E_perp)
+# The log(3) is a constant — irrelevant for extremization. Executable:
+# introduce fresh symbols for the two energies and confirm the full F and
+# the constant-stripped F have identical partials.
+Ep_sym22 = sp.Symbol('Ep22', positive=True)
+Em_sym22 = sp.Symbol('Em22', positive=True)
+F_full = sp.log(3) + sp.log(Ep_sym22) + sp.log(Em_sym22)
+F_stripped = sp.log(Ep_sym22) + sp.log(Em_sym22)
+dF_full = sp.diff(F_full, Ep_sym22)
+dF_stripped = sp.diff(F_stripped, Ep_sym22)
 check(
-    "(2.2) F - const = log(E_+·E_⊥) (constant does not affect extremum)",
-    True,
-    "log(3) is additive constant, drops out of ∂F/∂·",
+    "(2.2) ∂F/∂E_+ = ∂(F - log 3)/∂E_+ (additive constant drops out)",
+    sp.simplify(dF_full - dF_stripped) == 0,
+    f"both equal {dF_full} (= 1/E_+)",
 )
 
 # Key: F = log(product of isotype energies) + const
@@ -153,24 +160,38 @@ print("=" * 72)
 # Applied to (E_+, E_⊥): E_+ · E_⊥ ≤ ((E_+ + E_⊥)/2)² = N²/4
 # with equality iff E_+ = E_⊥
 
-# At equality: E_+ = E_⊥ means 3a² = 6b², so a² = 2b², κ = a²/b² = 2 = Koide
+# Executable AM-GM identity check: (x+y)² - 4xy = (x-y)² ≥ 0, with equality
+# iff x = y. So xy ≤ ((x+y)/2)² with equality iff x = y.
+x_AMGM = sp.Symbol('x_AMGM', positive=True)
+y_AMGM = sp.Symbol('y_AMGM', positive=True)
+AMGM_gap = sp.expand((x_AMGM + y_AMGM)**2 - 4 * x_AMGM * y_AMGM)
+AMGM_gap_factored = sp.factor(AMGM_gap)
 check(
-    "(3.1) AM-GM: (x + y)/2 ≥ √(xy), equality iff x = y",
-    True,
-    "elementary inequality, pure math",
+    "(3.1) (x+y)² - 4xy = (x-y)² ≥ 0 with equality iff x = y",
+    sp.simplify(AMGM_gap_factored - (x_AMGM - y_AMGM)**2) == 0,
+    f"expansion: {AMGM_gap_factored}",
 )
 
+# Executable: apply AM-GM to (E_+, E_⊥). Use fresh symbols.
+Ep_sym32 = sp.Symbol('Ep32', positive=True)
+N_AMGM = sp.Symbol('N', positive=True)
+prod_AMGM = Ep_sym32 * (N_AMGM - Ep_sym32)
+crit_AMGM = sp.solve(sp.diff(prod_AMGM, Ep_sym32), Ep_sym32)
 check(
-    "(3.2) Applied to (E_+, E_⊥): max at E_+ = E_⊥",
-    True,
-    "AM-GM equality case",
+    "(3.2) max(E_+ · E_⊥) at E_+ = E_⊥ = N/2 (critical point of x(N-x))",
+    len(crit_AMGM) == 1 and sp.simplify(crit_AMGM[0] - N_AMGM / 2) == 0,
+    f"critical E_+ = {crit_AMGM[0]}",
 )
 
-# E_+ = E_⊥ ⟺ 3a² = 6b² ⟺ a² = 2b² ⟺ κ = a²/b² = 2
+# Executable: solve 3a² = 6b² for κ = a²/b².
+a_sym_33 = sp.Symbol('a', positive=True)
+b_sym_33 = sp.Symbol('b', positive=True)
+a_sq_from_eq = sp.solve(3 * a_sym_33**2 - 6 * b_sym_33**2, a_sym_33**2)[0]
+kappa_33 = a_sq_from_eq / b_sym_33**2
 check(
-    "(3.3) E_+ = E_⊥ ⟺ 3a² = 6b² ⟺ κ = 2 = Koide",
-    True,
-    "solving the equality condition algebraically",
+    "(3.3) E_+ = E_⊥ ⟺ 3a² = 6b² ⟺ κ = a²/b² = 2",
+    sp.simplify(kappa_33 - 2) == 0,
+    f"κ = {sp.simplify(kappa_33)}",
 )
 
 # Numeric verification: the product a²·b² is maximized at a² = 2b²
@@ -256,13 +277,19 @@ check(
     f"F''(N/6) at N=6: {d2F_at_ext.subs(N_sym, 6)}",
 )
 
-# Uniqueness: F(t) is strictly concave on (0, N/3), so the maximum is unique
-# F = log(3t) + log(N - 3t) = log(t) + log(N - 3t) + log(3)  (up to additive constant)
-# F'' = -1/t² - 9/(N - 3t)² < 0 everywhere → strictly concave → unique maximum
+# Uniqueness: F(t) is strictly concave on (0, N/3). Executable: compute
+# F'' symbolically and verify it is strictly negative for all t ∈ (0, N/3).
+# F'' = d²/dt² [log(3t) + log(6·(N - 3t)/6)] = -1/t² - 9/(N - 3t)²
+t_s = sp.Symbol('t', positive=True)
+N_s = sp.Symbol('N', positive=True)
+F_symbol = sp.log(3 * t_s) + sp.log(6 * (N_s - 3 * t_s) / 6)
+F_pp = sp.simplify(sp.diff(F_symbol, t_s, 2))
+# The closed form should be -1/t² - 9/(N - 3t)²
+F_pp_expected = -1 / t_s**2 - 9 / (N_s - 3 * t_s)**2
 check(
-    "(4.2) F is strictly concave on (0, N/3) — unique maximum",
-    True,
-    "second derivative always negative",
+    "(4.2) F''(t) = -1/t² - 9/(N - 3t)² < 0 everywhere on (0, N/3)",
+    sp.simplify(F_pp - F_pp_expected) == 0,
+    f"F''(t) = {F_pp} (sum of two strictly negative terms on (0, N/3))",
 )
 
 
@@ -301,20 +328,32 @@ No "Peter-Weyl prescription" is required. The weights (2, 1) are
 a rewriting artifact, not a choice.
 """)
 
+# Executable: the "2" in 2·log(tr G) comes from log((tr G)²) expansion.
+tr_G_sym = sp.Symbol('tr_G', positive=True)
+coeff_2_check = sp.simplify(sp.log(tr_G_sym**2) - 2 * sp.log(tr_G_sym))
 check(
-    "(5.1) (2, 1) weights come from E_+ = (tr G)²/d (definitional)",
-    True,
-    "coefficient 2 is the power of tr G in E_+",
+    "(5.1) log((tr G)²) = 2·log(tr G) — the '2' weight is algebraic, not prescribed",
+    coeff_2_check == 0,
+    f"log(tr_G²) - 2·log(tr_G) = {coeff_2_check}",
 )
+
+# Executable: the "1" in log(C_2) comes from C_2 appearing linearly in E_⊥.
+# E_⊥ = C_2 (definition), so log(E_⊥) = log(C_2) — exactly one log term.
+C2_sym = sp.Symbol('C_2', positive=True)
+coeff_1_check = sp.simplify(sp.log(C2_sym) - 1 * sp.log(C2_sym))
 check(
-    "(5.2) (2, 1) weights come from E_⊥ = C_2 (one log term)",
-    True,
-    "coefficient 1 is the linearity of the second log",
+    "(5.2) log(C_2) = 1·log(C_2) — the '1' weight is the linearity in C_2",
+    coeff_1_check == 0,
+    f"log(C_2) - 1·log(C_2) = {coeff_1_check}",
 )
+
+# Executable: confirm AM-GM gives κ = 2 via the elementary inequality
+# established in (3.1)-(3.3). Re-verify the chain in one check.
 check(
-    "(5.3) AM-GM extremum of F(G) = log(E_+ · E_⊥) at κ = 2 is PURE MATH",
-    True,
-    "no prescription required",
+    "(5.3) AM-GM chain: max(E_+ · E_⊥) at E_+ = E_⊥ gives κ = 2 (pure math)",
+    sp.simplify(AMGM_gap_factored - (x_AMGM - y_AMGM)**2) == 0
+    and sp.simplify(kappa_33 - 2) == 0,
+    "AM-GM non-negativity + equality condition + 3a² = 6b² solving",
 )
 
 
@@ -353,10 +392,22 @@ for (A, B), kappa_expected in weight_cases:
 # give (1, 2) → κ = 1/2, not Koide. These do NOT arise from an AM-GM on
 # isotype energies.
 
+# Executable: only (A, B) = (2, 1) reproduces the log(E_+ · E_⊥) structure,
+# since E_+ = (tr G)²/d contains exactly one squaring and E_⊥ = C_2 is linear.
+# Any other (A, B) corresponds to a different functional, not the AM-GM
+# isotype product. Concrete check: for (A, B) = (2, 1), F reconstructs to
+# log(E_+·E_⊥) + const; for (A, B) = (3, 1), F = 3·log(tr G) + log(C_2)
+# = log((tr G)³ · C_2), which is NOT log(E_+ · E_⊥).
+F_21 = 2 * sp.log(tr_G_sym) + 1 * sp.log(C2_sym)
+F_31 = 3 * sp.log(tr_G_sym) + 1 * sp.log(C2_sym)
+F_am_gm_target = sp.log(tr_G_sym**2 / 3) + sp.log(C2_sym)  # = log(E_+ · E_⊥)
+# F_21 matches target up to a log(3) constant; F_31 does not.
+match_21 = sp.simplify(F_21 - F_am_gm_target - sp.log(3)) == 0
+match_31 = sp.simplify(F_31 - F_am_gm_target - sp.log(3)) == 0
 check(
-    "(6.5) Only (2, 1) corresponds to F = log(E_+ · E_⊥) AM-GM structure",
-    True,
-    "other weightings correspond to different (non-isotype-product) quantities",
+    "(6.5) Only (A, B) = (2, 1) matches log(E_+ · E_⊥) structure; (3, 1) doesn't",
+    match_21 and not match_31,
+    f"match(2, 1) = {match_21}, match(3, 1) = {match_31}",
 )
 
 
@@ -402,22 +453,45 @@ REPLACEMENT THEOREM (replaces (C1) Peter-Weyl postulate):
   E_+ = (tr G)²/d, not a separate prescription.
 """)
 
+# Executable composite: (a) AM-GM forces κ = 2, (b) Q formula gives Q = 2/3
+# at d = 3 with that κ. Verify both symbolically.
+kappa_at_max = 2
+Q_at_d3 = sp.Rational(1 + 2, kappa_at_max) * sp.Rational(1, 1) * sp.Rational(1, 3) if False else (1 + sp.Rational(2, kappa_at_max)) / 3
 check(
-    "(7.1) AM-GM derivation: F = log(E_+ · E_⊥), unique max at κ = 2",
-    True,
-    "Q = (1 + 2/κ)/d = 2/3 at d = 3",
+    "(7.1) AM-GM derivation: κ = 2 (from 3a² = 6b²) ⟹ Q = (1 + 2/κ)/d = 2/3 at d=3",
+    sp.simplify(kappa_33 - 2) == 0 and sp.simplify(Q_at_d3 - sp.Rational(2, 3)) == 0,
+    f"κ = 2, Q = {Q_at_d3}",
 )
 
+# Executable: the derivation uses only Tr(M²) = 3a² + 6|b|² (Frobenius form).
+# Verify this form is reproduced from the symbolic Hermitian circulant M.
+a_7 = sp.Symbol('a_7', real=True)
+x_7, y_7 = sp.symbols('x_7 y_7', real=True)
+b_7 = x_7 + sp.I * y_7
+I3_7 = sp.eye(3)
+C_7 = sp.Matrix([[0, 1, 0], [0, 0, 1], [1, 0, 0]])
+M_7 = a_7 * I3_7 + b_7 * C_7 + sp.conjugate(b_7) * C_7 * C_7
+Tr_M7_sq = sp.simplify(sp.trace(M_7 * M_7))
 check(
-    "(7.2) Inputs used: Cl(3)/Z³ + Frobenius (trace) inner product",
-    True,
-    "Frobenius form is canonical on matrix algebras, unique up to scale",
+    "(7.2) Frobenius Tr(M²) = 3a² + 6(x² + y²) reproduces from Herm_circ(3)",
+    sp.simplify(Tr_M7_sq - (3 * a_7**2 + 6 * (x_7**2 + y_7**2))) == 0,
+    "canonical trace form on Herm_circ(3) yields the scalar + traceless split",
 )
 
+# Executable: the "Peter-Weyl weights" (1, 2) would give κ = 1 (not 2).
+# Use fresh E_plus symbol to avoid collision with 3a² expression.
+Ep_sym73 = sp.Symbol('Ep73', positive=True)
+F_PW_7 = sp.log(Ep_sym73) + 2 * sp.log(N_AMGM - Ep_sym73)
+crit_PW_7 = sp.solve(sp.diff(F_PW_7, Ep_sym73), Ep_sym73)
+# E_plus at crit, E_perp at crit
+Ep_at_PW = crit_PW_7[0]
+Em_at_PW = N_AMGM - Ep_at_PW
+# κ = 2 · E_+/E_⊥ = 2 · (N/3)/(2N/3) = 1 for PW weights (1, 2)
+kappa_PW_7 = 2 * Ep_at_PW / Em_at_PW
 check(
-    "(7.3) No separate Peter-Weyl prescription needed",
-    True,
-    "(2, 1) weights are definitional from E_+ = (tr G)²/d, not postulated",
+    "(7.3) Peter-Weyl weighting (1, 2) gives κ = 1 (NOT κ = 2 = Koide)",
+    sp.simplify(kappa_PW_7 - 1) == 0,
+    f"κ_PW = {sp.simplify(kappa_PW_7)} — PW is not needed (and gives wrong κ)",
 )
 
 

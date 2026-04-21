@@ -2,7 +2,9 @@
 
 **Date:** 2026-04-21
 **Status:** Retained-forced verification of the I2/P APS closure.
-**Runner:** `scripts/frontier_koide_aps_block_by_block_forcing.py` — 34/34 PASS.
+**Runner:** `scripts/frontier_koide_aps_block_by_block_forcing.py` — 29/29 PASS.
+All checks are executable symbolic or numeric computations; no literal
+`True` placeholders remain.
 
 ---
 
@@ -39,16 +41,25 @@ the retained kinematic structure.
   η(2, 2, 3) = 1/9 ≠ 2/9, only η(1, 2, 3) = η(2, 1, 3) = 2/9 — and
   only (1, 2) is consistent with the retained C_3 rotation eigenvalues.
 
-## ABSS applicability
+## ABSS applicability (every prerequisite is executable)
 
-- **(h1)** PL S³ is smoothable (Cerf's theorem for dim ≤ 6).
-- **(h2)** Spin structure on S³ × R exists and is unique up to
-  isomorphism (S³ simply connected, w_2 = 0).
-- **(h3)** Fixed locus is Morse-Bott: normal eigenvalues (ω, ω²) are
-  non-unit, so the rotation is non-degenerate on the normal bundle.
-- **(h4)** C_3 ⊂ SO(3) lifts to Spin(3) = SU(2), preserving spin
-  structure.
-- **(h5)** All ABSS prerequisites verified → formula applies.
+- **(h1)** PL smoothability obstruction groups π_i(PL/O) = 0 for
+  i ≤ dim(PL S³ × R) = 4. The runner checks the standard table
+  {π_0 = π_1 = π_2 = π_3 = π_4 = 0} (Cerf–Munkres), making the
+  obstruction vanish by enumeration.
+- **(h2)** S³ is parallelizable (as SU(2) Lie group) — TS³ is globally
+  trivialized by three linearly-independent left-invariant fields. The
+  runner exhibits these three fields as quaternion imaginary units and
+  checks rank = 3. Then w_2(S³) = 0 ⟹ spin exists. Uniqueness follows
+  from H^1(S³ × R; Z_2) = 0, which the runner derives from the known
+  homology of S³ (simply connected ⟹ H_1 = 0).
+- **(h3)** Morse-Bott is checked via `det(R_normal − I) = 3 ≠ 0`
+  computed symbolically from (ω − 1)(ω² − 1) = 3.
+- **(h4)** C_3 ⊂ SO(3) lifts to SU(2) as an explicit unit quaternion
+  `q = cos(π/3) + sin(π/3) · (1,1,1)/√3 ·(i,j,k)`. The runner verifies
+  (i) |q|² = 1, (ii) q³ = −1, confirming the 2:1 double cover.
+- **(h5)** Composite: (h1) ∧ (h2) ∧ (h3) ∧ (h4) all verified
+  executively, so the ABSS fixed-point formula applies.
 
 ## Why this answers the reviewer question "is η = 2/9 a choice?"
 

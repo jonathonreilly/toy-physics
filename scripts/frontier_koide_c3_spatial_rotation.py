@@ -222,12 +222,23 @@ check(
 )
 
 # Weights (1, 2) in complex parametrization:
-# transverse plane rotation has eigenvalues ω^1, ω^2 (= ω^{-1})
-# So tangent weights are (1, 2) mod 3
+# Executable: the 2x2 rotation block R_block = [[-1/2, -√3/2], [√3/2, -1/2]]
+# (or the sign-flipped variant) diagonalizes over C to eigenvalues e^{2πi/3}
+# and e^{-2πi/3} = e^{2πi·2/3}. Compute the transverse block's eigenvalues
+# symbolically and verify they are primitive cube roots of unity.
+R_transverse_block = sp.simplify(R_in_basis[1:3, 1:3])
+tr_eigvals = list(R_transverse_block.eigenvals().keys())
+# Check each eigenvalue satisfies z^3 = 1 and z != 1
+weights_are_1_2 = (
+    len(tr_eigvals) == 2
+    and all(sp.simplify(z**3 - 1) == 0 for z in tr_eigvals)
+    and all(sp.simplify(z - 1) != 0 for z in tr_eigvals)
+    and sp.simplify(tr_eigvals[0] * tr_eigvals[1] - 1) == 0  # ω · ω² = 1
+)
 check(
-    "(4b) Tangent weights on transverse plane = (1, 2) mod 3",
-    True,
-    "eigenvalues ω and ω² on 2D transverse rotation",
+    "(4b) Transverse block eigenvalues are {ω, ω²} ⟹ weights (1, 2) mod 3",
+    weights_are_1_2,
+    f"transverse eigvals = {tr_eigvals}",
 )
 
 
@@ -284,20 +295,41 @@ rotation, PL S³ × R continuum) with no additional dependence on a
 choice of dynamical metric, by ABSS metric-independence.
 """)
 
+# Executable composite checks: re-verify the three core downstream claims
+# symbolically here, so this runner's verdict is not a cite-and-assert.
+
+# (6a) C_3[111] is the spatial rotation (Rodrigues = cyclic permutation)
+# was already verified in Part 1 (1a PASS). Re-state:
 check(
-    "(6a) Kinematic identification C_3[111] = spatial rotation",
-    True,
-    "Rodrigues = cyclic permutation; weights (1, 2) forced by eigenvalues",
+    "(6a) C_3[111] = cyclic permutation P (executable via Rodrigues identity)",
+    sp.simplify(R_simp - P) == sp.zeros(3, 3),
+    "verified earlier at (1a); restated here as kinematic identification",
 )
+
+# (6b) ABSS formula on Z_3 orbifold with weights (1, 2) gives η = 2/9.
+# Compute inline.
+omega_6b = sp.Rational(-1, 2) + sp.I * sp.sqrt(3) / 2
+omega2_6b = sp.Rational(-1, 2) - sp.I * sp.sqrt(3) / 2
+eta_6b = sp.simplify(sp.Rational(1, 3) * (
+    1 / ((omega_6b - 1) * (omega2_6b - 1))
+    + 1 / ((omega2_6b - 1) * (omega_6b - 1))
+))
 check(
-    "(6b) Weights (1, 2) combined with ABSS give η = 2/9",
-    True,
-    "ABSS formula depends only on tangent rep — metric-independent",
+    "(6b) ABSS on (1, 2) at p=3 symbolically gives η = 2/9",
+    sp.simplify(eta_6b - sp.Rational(2, 9)) == 0,
+    f"η = {eta_6b}",
 )
+
+# (6c) The chain (6a) + (6b) + metric independence gives I2/P δ = 2/9 rad
+# without any dependence on a dynamical metric. Executable: the computed
+# eta above contains no metric variables, and (6a) and (6b) both hold
+# symbolically.
 check(
-    "(6c) I2/P δ = 2/9 rad is retained-forced via chain (6a)+(6b)",
-    True,
-    "no dependence on a specific dynamical metric",
+    "(6c) I2/P δ = 2/9 rad composed from (6a) + (6b) with no metric dependence",
+    sp.simplify(R_simp - P) == sp.zeros(3, 3)
+    and sp.simplify(eta_6b - sp.Rational(2, 9)) == 0
+    and eta_6b.free_symbols == set(),
+    f"symbolic chain holds; free_symbols(η) = {eta_6b.free_symbols}",
 )
 
 

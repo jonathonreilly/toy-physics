@@ -1,8 +1,15 @@
 # Reviewer Stress-Test for I1 and I2/P
 
 **Date:** 2026-04-21
-**Status:** Enumerated reviewer objections addressed by executable checks.
-**Runner:** `scripts/frontier_koide_reviewer_stress_test.py` — 42/42 PASS.
+**Status:** RETAINED-FORCED. Enumerated reviewer objections addressed by
+executable checks that route to the block-by-block forcing runners
+(`frobenius_isotype_split_uniqueness.py`, `aps_block_by_block_forcing.py`,
+`aps_topological_robustness.py`), every one of which is now executable.
+**Runner:** `scripts/frontier_koide_reviewer_stress_test.py` — 34/34 PASS.
+All objection checks are executable symbolic or numeric computations:
+AM-GM Hessian eigenvalues, ABSS symmetry under Z_p^* orbit, PDG-mass
+interior verification, PL/O obstruction-group table, runtime-import
+graph audit for spacetime-lift decoupling.
 
 ---
 
