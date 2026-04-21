@@ -23,6 +23,7 @@ This backlog tracks the attack candidates for the loop on
 | 2 | `W[J] = log|det H|` under scalar Casimir constraints {‖J‖_F², Tr(H²), Tr(H), Tr(H³)} | **negative** | `PMNS_SELECTOR_ITER2_WDET_CONSTRAINED_NEGATIVE_NOTE_2026-04-21.md` — best alignment at cos(θ)=0.69 with Tr(H²), still 46° off |
 | 3 | Brannen-phase gate: 12 phase invariants vs retained I2/P values {2/9 rad, 2π/9, π−2/9, …} | **weak hint / negative at 1e-4** | `PMNS_SELECTOR_ITER3_BRANNEN_PHASE_WEAK_HINT_NOTE_2026-04-21.md` — best match \|dev\|=0.025 rad (1.4°), two clusters; chamber-blind `Im(a_*+b_*) = γ = 1/2` exactly |
 | 4 | Operator-commutation + scalar-invariant scan (33 scalars × retained simple values) | **mixed — strong hint on `δ · q_+ ≈ 2/3 = Q`** (0.15% dev) | `PMNS_SELECTOR_ITER4_OPERATOR_COMMUTATION_MIXED_NOTE_2026-04-21.md` — operator-commutation class ruled out; scalar scan finds `δ·q_+ = 2/3` and `Σλ/Σ\|λ\| = 1/6` both at 0.001 deviation — likely iter-5 candidates |
+| 5 | Precision-sharpen test of `δ · q_+ = Q = 2/3` hypothesis | **strong intermediate** | `PMNS_SELECTOR_ITER5_DELTA_QPLUS_EQ_Q_HYPOTHESIS_NOTE_2026-04-21.md` — at machine precision `\|dev\| = 1.04e-3` (NOT exact), BUT re-pin under exact constraint gives `sin²θ_23 = 0.5447` within 0.06% of PDG central 0.545 — inside 1σ NuFit NO. A genuine codim-1 cut compatible with all PMNS data. |
 
 ---
 
@@ -167,25 +168,33 @@ for its critical point.
 
 ---
 
-## Next up (iter 5)
+## Next up (iter 6)
 
-**Candidate**: precision-sharpen test of `δ · q_+ = Q = 2/3`. The
-strongest signal from iter 4 by far. Iter 5 settles whether this is
-an exact retained identity or a 0.15%-level near-miss.
+Iter 5 established `δ · q_+ ≈ Q = 2/3` to 0.16% — NOT exact but
+observationally admissible at 1σ. Iter 6 has TWO sub-goals:
 
-Concrete plan:
-- Solve the chamber inversion at HIGH PRECISION (mpmath or symbolic
-  sympy), re-pinning `(m, δ, q_+)` to the PDG 2024 central values
-  `(sin²θ_12, sin²θ_13, sin²θ_23) = (0.307, 0.0218, 0.545)`.
-- At that high-precision pinned point, compute `δ · q_+` to 10+
-  digits. If it equals `2/3` to 10+ digits → retained identity
-  confirmed.
-- If confirmed: also test `Σλ / Σ|λ| = 1/6` at high precision (the
-  other iter 4 near-hit).
-- Additionally: re-pin under the CONSTRAINT `δ · q_+ = 2/3` exactly
-  (imposing this as one of the three equations), and check whether
-  the resulting PMNS angles are within PDG 3σ of central — this is
-  the predictive falsifiability test.
-- If both (retained exactness AND PDG-compatibility) hold, the gate
-  closes via cross-sector I1 → I5 linkage and iter 6 moves to
-  axiomatic derivation.
+**(a) Derive `δ · q_+ = 2/3` (or its exact framework-native form) from
+Cl(3)/Z³ axioms.** Candidates:
+
+- AM-GM on a weighted product: find `F(m, δ, q_+) = α·log(δ) + β·log(q_+)
+  + γ·log(something)` under a retained `Σ = const` constraint whose
+  extremum gives `δ · q_+ = 2/3`.
+- Direct I1 parallel: reinterpret `δ` and `q_+` as isotype amplitudes
+  on some retained projector; AM-GM at the maximum gives `δ · q_+ =
+  (N/2)²/4`; identify `N` from retained structure.
+- Cross-sector pull: maybe `δ · q_+` equals `Q` NOT because of a new
+  AM-GM but because the Koide I1 Q literally = the chamber-coordinate
+  product at a retained locus, via the retained `U_e = I` + Z_3
+  trichotomy structure.
+
+**(b) Identify a SECOND retained condition on the 1-real hyperbola
+`{δ · q_+ = 2/3}` that picks the exact point `(m_*, δ_*, q_+*)`.**
+
+- Re-run the iter-4 scalar scan AFTER fixing `δ · q_+ = 2/3` exactly
+  — the chamber collapses to a 1-parameter curve; look for near-hits
+  of other retained scalars along that curve.
+- Natural candidates: `Tr(H) = m`, `det(H)`, `q_+ − δ`, `q_+ + δ`,
+  `m · δ`, `m · q_+`.
+
+Iter 6 primary attack: combined (a) + (b) — search the 1-param curve
+under `δ · q_+ = 2/3` for the second retained cut.
