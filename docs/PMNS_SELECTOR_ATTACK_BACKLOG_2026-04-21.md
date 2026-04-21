@@ -20,6 +20,7 @@ This backlog tracks the attack candidates for the loop on
 | Iter | Attack | Status | Note |
 |------|--------|--------|------|
 | 1 | Doublet-block AM-GM on (E_sym, E_anti) | **negative** | `PMNS_SELECTOR_ITER1_DOUBLET_AMGM_NEGATIVE_NOTE_2026-04-21.md` |
+| 2 | `W[J] = log|det H|` under scalar Casimir constraints {‖J‖_F², Tr(H²), Tr(H), Tr(H³)} | **negative** | `PMNS_SELECTOR_ITER2_WDET_CONSTRAINED_NEGATIVE_NOTE_2026-04-21.md` — best alignment at cos(θ)=0.69 with Tr(H²), still 46° off |
 
 ---
 
@@ -164,12 +165,26 @@ for its critical point.
 
 ---
 
-## Next up (iter 2)
+## Next up (iter 3)
 
-**Candidate**: A2 (observable-principle functional with scale-fixing
-constraint). Reason: `W[J] = log|det H|` is ALREADY the retained
-observable principle in the framework, so its use needs no additional
-justification. The only question is which scale-fixing constraint
-matches, and that should be testable by trying the natural candidates
-(Frobenius, trace, determinant-preserving) and seeing which one places
-the critical point at the pinned point.
+**Candidate**: A4 (Brannen-phase gate). Reason: iter 1 ruled out naive
+doublet AM-GM; iter 2 ruled out the entire class of scalar-Casimir
+Lagrangian extrema of `W[J]`. The next natural attack is a **cross-
+sector** one: does the retained Brannen phase δ = 2/9 rad (closed by
+I2/P on this repo) appear as an intrinsic phase of `H(m, δ, q_+)` on
+the chamber, and does the level set `phase(H) = 2/9 mod 1` pass
+through the pinned point? If yes, we have a direct I2/P → I5 retained
+linkage.
+
+Concrete plan:
+- Compute `arg(det H)` over the chamber.
+- Compute the `Z_3`-isotype phase-composition of `H`: let `H_k =
+  Σ_j H_{jk} · ζ^{jk}` for k = 0, 1, 2, and define phase invariants
+  `arg(H_1)`, `arg(H_2)`, `arg(H_0)`.
+- Compute the APS η-like phase of the eigenvalue triple of `H`
+  (sum of arg(λ_i) weighted by Z_3 isotypes).
+- Test: does any such phase equal 2/9 (mod 1) at the pinned point and
+  NOT at nearby chamber points (i.e. is it a level-set cutting the
+  2-real family to a 1-real curve)?
+- If yes, identify a second retained condition that cuts the curve to
+  a point.
