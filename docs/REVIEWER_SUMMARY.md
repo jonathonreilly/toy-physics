@@ -8,9 +8,9 @@ layered-geometry side surfaces. The current review target is a `Cl(3)` on `Z^3`
 framework package with a retained theorem core, retained standalone
 quantitative lanes, a retained YT/top transport lane, a derived
 Higgs/vacuum lane with a retention-decomposed budget, one charged-lepton
-package with retained-forced Koide closure plus a separate bounded scale
-item, a bounded prediction portfolio, and one
-explicitly open flagship gate.
+review/support package with two explicit Koide bridge residues plus a
+separate bounded scale item, a bounded prediction portfolio, and two
+explicitly open scientific gates.
 
 For framework scoping, keep two layers separate:
 
@@ -145,10 +145,11 @@ Current quantitative statuses:
 
 - charged-lepton Koide package:
   the historical observational-pin baseline and the April 18-20 route-pruning
-  stack remain useful provenance, but the April 21 closure package now gives
-  retained-forced derivations of both `Q = 2/3` and `δ = 2/9`; the separate
-  overall lepton scale `v_0` remains a bounded hierarchy input outside that
-  closure
+  stack remain useful provenance, and the April 21 package now gives the
+  strongest current executable support for both `Q = 2/3` and `δ = 2/9`; the
+  remaining live charged-lepton blockers are the physical/source-law
+  extremal-principle bridge behind `Q`, the physical Brannen-phase bridge
+  behind `δ`, and the separate overall lepton scale `v_0`
 - DM flagship gate, with exact transport-chain progress, theorem-grade
   same-surface thermal bounding and a certified current-bank
   numerator-selector no-go, source-side reduction all the way to the `2`-real
@@ -179,7 +180,19 @@ Current quantitative statuses:
 
 ## Open Gates
 
-1. DM flagship gate
+1. Charged-lepton Koide bridge package
+
+   The current charged-lepton lane is no longer a diffuse search. The live
+   April 21 support stack proves two sharp mathematical statements: the
+   block-total Frobenius functional peaks at the Koide point `Q = 2/3`, and
+   the ambient APS invariant on the retained `Z_3` orbifold is exactly
+   `η = 2/9`. What remains open are the two physical bridges: why the
+   charged-lepton packet must extremize that Frobenius functional, and why
+   the physical selected-line Brannen phase equals the ambient APS invariant.
+   The selected-line witness `m_*` / `w/v` remains downstream of the second
+   bridge. The overall lepton scale `v_0` also remains outside the package.
+
+2. DM flagship gate
 
    The live DM gate now includes the repo-tracked G1 PMNS-as-`f(H)` bounded
    package, the retained local P3 Sylvester linear-path signature theorem, the

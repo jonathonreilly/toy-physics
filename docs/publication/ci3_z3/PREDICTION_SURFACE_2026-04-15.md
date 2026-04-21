@@ -158,7 +158,7 @@ The main missing flagship prediction remains:
 
 - full DM flagship-gate closure
 
-That is the one live gate because it blocks the strongest matter/cosmology
+That is the main live prediction gate because it blocks the strongest matter/cosmology
 promotion path. It does not erase the rest of the prediction surface.
 
 ## Bottom Line

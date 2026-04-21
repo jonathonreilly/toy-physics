@@ -37,19 +37,19 @@ Framework statement:
 
 ## Current Package Shape
 
-**2026-04-21 package update.** The charged-lepton Koide closure package is now
-part of the review surface. The older bounded observational-pin and route-
-pruning rows are historical baseline/provenance unless they are explicitly
-cited for that purpose.
+**2026-04-21 package update.** The charged-lepton Koide April 21 package is
+now part of the review surface as the strongest executable support stack. The
+older bounded observational-pin and route-pruning rows are historical
+baseline/provenance unless they are explicitly cited for that purpose.
 
 The package has five layers:
 
 1. retained theorem core
 2. retained standalone quantitative lanes (`alpha_s`, EW normalization,
    exact lattice-scale Yukawa/gauge Ward theorem)
-3. retained charged-lepton Koide closure package
+3. charged-lepton Koide review/support package with two explicit bridge residues
 4. retained YT/top transport lane plus a derived Higgs/vacuum lane with a retention-decomposed budget
-5. bounded prediction surface plus one remaining live scalar-selector gate and frozen-out route history
+5. bounded prediction surface plus two remaining live scientific gates and frozen-out route history
 
 The public manuscript surface is arXiv-first. Journal-specific packaging is
 private and is not kept here as a competing public draft.
@@ -175,7 +175,7 @@ Current package status:
 
 ## Other Bounded Families
 
-- Historical charged-lepton mass-hierarchy observational-pin baseline, retained only as provenance behind the current Koide closure package. Reviewer entry point: [CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md](../../CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md). It contains the algebraic Koide-cone equivalence, the retained `hw=1` second-order-return shape theorem, the mass/mixing subspace disjointness theorem `dim(V_H ∩ V_D) = 0`, six rigorous structural no-gos on retained non-Higgs-Yukawa mechanisms, three higher-order structural theorems, and the observational-pin closure at 3-real PDG input. The reviewed April 18-20 Koide support stack remains useful provenance for route-pruning and compatibility checks, but the authoritative status is now the retained-forced April 21 closure package rather than bounded observational-pin compatibility.
+- Historical charged-lepton mass-hierarchy observational-pin baseline, retained only as provenance behind the current Koide review/support package. Reviewer entry point: [CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md](../../CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md). It contains the algebraic Koide-cone equivalence, the retained `hw=1` second-order-return shape theorem, the mass/mixing subspace disjointness theorem `dim(V_H ∩ V_D) = 0`, six rigorous structural no-gos on retained non-Higgs-Yukawa mechanisms, three higher-order structural theorems, and the observational-pin closure at 3-real PDG input. The reviewed April 18-20 Koide support stack remains useful provenance for route-pruning and compatibility checks, but the authoritative status is now the April 21 support package rather than bounded observational-pin compatibility.
 - DM flagship gate, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` conditional/support package with a retained local P3 Sylvester linear-path signature theorem at the pinned point and an observational uniqueness theorem for `σ_hier = (2, 1, 0)` at that pin, a reviewed selector obstruction stack that compresses selector-side ambiguity to intrinsic threshold-law nonrealization and exhausts the tested carrier-side pressure to two explicit split-2 upper-face neighborhoods, and a reviewed Wilson direct-descendant science stack showing that the current package carries no hidden Wilson-to-`dW_e^H` descendant law while explicit structured positive model classes and manifold-valued constructive positive exact closure already exist on the fixed native `N_e` seed surface: the remaining live blockers are the named baseline-connected-component input `A-BCC`, the finer right-sensitive microscopic selector law for the physical source branch / point, interval-certified exact-carrier dominance/completeness on the residual split-2 selector branch, and current-bank quantitative DM mapping; broader chamber-wide / all-basin uniqueness beyond the pinned `σ_hier` theorem remains out of scope
 - curated neutrino boundary/support packet in the package, with exact current-stack
   Majorana zero law, exact mass reduction to the Dirac lane, exact PMNS

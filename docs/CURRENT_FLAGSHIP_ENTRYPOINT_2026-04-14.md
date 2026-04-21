@@ -31,9 +31,10 @@ The current flagship package has five layers:
 1. retained theorem core
 2. retained standalone quantitative lanes (`alpha_s`, EW normalization)
 3. retained YT/top transport lane plus a derived Higgs/vacuum lane with a retention-decomposed budget
-4. one charged-lepton package with retained-forced Koide closure plus a
-   separate bounded scale hierarchy item
-5. bounded prediction surface plus one live gate and an explicit history bucket
+4. one charged-lepton review/support package with two explicit Koide bridge
+   residues plus a separate bounded scale hierarchy item
+5. bounded prediction surface plus two live scientific gates and an explicit
+   history bucket
 
 Fast reviewer path after this page:
 
@@ -69,9 +70,11 @@ Fast reviewer path after this page:
 - charged-lepton Koide package:
   the historical observational-pin baseline remains useful compatibility
   provenance, and the April 18-20 route-pruning stack remains useful support
-  provenance, but the April 21 closure package now supplies retained-forced
-  derivations of both `Q = 2/3` and `δ = 2/9`; the only separate charged-
-  lepton hierarchy item left outside that closure is the overall scale `v_0`
+  provenance; the April 21 package now supplies the strongest executable
+  support for both `Q = 2/3` and `δ = 2/9`, but the physical/source-law
+  extremal-principle bridge behind `Q` and the physical Brannen-phase bridge
+  behind `δ` remain open; the separate overall scale `v_0` also remains
+  outside that package
 - bounded prediction surface plus one dual-status flavor corollary:
   proton lifetime, the CKM-only neutron-EDM corollary with bounded
   continuation, down-type flavor-mass CKM-dual ratios, vacuum critical
@@ -125,9 +128,11 @@ packaging.
   flavor-mass CKM-dual ratios, vacuum critical stability, benchmark
   gravitational decoherence, BH entropy, and monopole mass
 
-## Live Gate
+## Live Scientific Gates
 
-1. DM flagship gate
+1. Charged-lepton Koide bridge package
+
+2. DM flagship gate
 
 ## Where The Package Lives
 

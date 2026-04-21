@@ -9,21 +9,24 @@ Cl(3)/Z³ framework ingredients alone. Items listed here are
 prevent the corresponding lane from being marked retained-derivation on the
 review surface.
 
-**2026-04-21 package update.** The April 21 Koide closure package is now
-landed on the package review surface. The Koide relation `Q = 2/3`, the
-Brannen phase `δ = 2/9`, and the downstream selected-line witness all close.
-The only still-open named scalar-selector item is now the PMNS angle-triple
-point-selection law. The detailed Koide / Brannen / selected-line sections
-below are preserved as pre-closure archival record.
+**2026-04-21 package update.** The April 21 Koide package is now landed on
+the package review surface as the strongest current executable support stack.
+It materially sharpens the charged-lepton lane, but it does not yet close it.
+Two scientific bridges remain open:
+
+- the physical/source-law extremal-principle bridge behind `Q = 2/3`;
+- the physical Brannen-phase bridge behind `δ = 2/9`.
+
+The downstream selected-line witness remains conditional on the second bridge.
 
 ## §0 Summary table
 
 | Import | Lane | Current status | What closes it |
 |---|---|---|---|
-| Koide relation `Q = 2/3` | κ, θ | **closed on 2026-04-21** via the Frobenius-isotype / AM-GM closure package (`docs/KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md`) | closed |
-| Brannen phase `δ = 2/9` on the physical base | θ | **closed on 2026-04-21** via the ABSS fixed-point / topological-robustness closure package (`docs/KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md`) | closed |
+| Koide relation `Q = 2/3` | κ, θ | reviewer-tested Frobenius-isotype / AM-GM support package isolates the Koide point as the unique extremum of the admitted block-total functional, but the physical/source-law extremal-principle bridge remains open | derive why the physical charged-lepton packet must extremize the block-total Frobenius functional, or an equivalent accepted source law that forces the same point |
+| Brannen phase `δ = 2/9` on the physical base | θ | reviewer-tested APS / ABSS support package isolates the exact ambient topological value `η = 2/9`, but the physical selected-line Brannen-phase bridge remains open | derive `δ_physical = η_APS`, equivalently an ambient one-clock `3+1` transport / endpoint / Wilson law whose selected-line pullback is the physical Brannen phase |
 | PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)` | A-BCC (sigma-chain) | retained observational input; the new upper-octant / source-cubic selector theorems close the CP-sign / `σ_hier` half on the active chamber, and the fixed-`N_e` exact-source-manifold theorem shows the physical PMNS target already lies on a regular local `2`-real source manifold on the charged-lepton-side seed surface. The tested `Z_3` center law `delta_db = 1`, `q_+ = 0` is useful only conditionally: together with `I_src > 0` it still leaves a positive-sheet `3`-real locus and does not derive the PMNS target by itself | framework-native point-selection law stronger than the current `Z_3` center law on the exact PMNS / positive-center locus |
-| Selected-line witness ratio `w/v ≈ 4.101` | m_* (selected-line point) | **closed on 2026-04-21** as a corollary of the Brannen-phase closure package | closed |
+| Selected-line witness ratio `w/v ≈ 4.101` | m_* (selected-line point) | conditionally pinned by the exact selected-line scalar-phase bridge once the physical Brannen phase is fixed; still open because the Brannen-phase bridge is open | the same physical Brannen-phase bridge that closes `δ = 2/9`, or an equivalent ambient endpoint law that fixes the selected-line point directly |
 
 ## §0a Closed in cycle 2
 
@@ -66,7 +69,7 @@ Closing any single item in the following ordered list produces the largest
 reduction in the retained-observational footprint of the scalar-selector
 cycle.
 
-### Priority 1: Archived pre-closure record for Koide `Q = 2/3`
+### Priority 1: Koide `Q = 2/3`
 
 Closing `Q = 2/3` from Cl(3)/Z³ would immediately upgrade the Koide κ and θ
 lanes from "retained-observational-conditional" to "retained-derivation" on
@@ -180,7 +183,7 @@ introduce any selected-line `m` dependence. See
 propagator or transport-integral definition on the retained Cl(3)/Z³ carrier;
 currently present only as partial support.
 
-### Priority 2: Archived pre-closure record for the Brannen-phase radian bridge
+### Priority 2: Brannen `δ = 2/9`
 
 The branch now carries two complementary results:
 
@@ -300,30 +303,28 @@ center law is a useful conditional cut on the exact PMNS manifold, but not yet
 the missing native point-selection law. See
 `docs/DM_PMNS_Z3_DOUBLET_BLOCK_CENTER_POSITIVE_SHEET_NO_GO_THEOREM_NOTE_2026-04-20.md`.
 
-### Priority 4: Archived pre-closure record for the selected-line physical point
+### Priority 4: Selected-line physical point
 
-Now the only open content behind `m_*` is the scalar-phase pin itself. If
-the Brannen-phase radian bridge closes, the selected-line witness closes
+The selected-line witness remains downstream of the Brannen-phase bridge. If
+the physical Brannen-phase bridge closes, the selected-line witness closes
 immediately by the exact selected-line scalar-phase bridge.
 
 ## §2 What a Nature reviewer will still see after submission
 
-With the 2026-04-21 Koide closure package now landed on canonical, the honest
+With the 2026-04-21 Koide support package now landed on canonical, the honest
 Nature-grade statement for this cycle is:
 
 > Four Tier-1 scalar-selector gates of the Standard Model — the Koide
 > charged-lepton cone normalization (κ = 2, equivalently the operator-side
-> Koide relation), the Koide Brannen–Zenczykowski phase offset (δ = 2/9), the
+> Koide relation), the Koide Brannen-Zenczykowski phase offset (δ = 2/9), the
 > dark-matter A-BCC basin-sheet choice, and the up-sector quark reduced
-> amplitude (a_u) — each reduce to retained Cl(3)/Z³ framework ingredients,
-> with the only still-open named retained input now being the PMNS angle
-> triple point-selection law on the exact charged-lepton-side seed manifold
-> beyond the currently tested `Z_3`
-> center law. No new
-> axioms are added this cycle. The framework
-> contributes (i) a retained-forced Frobenius-isotype / AM-GM closure of the
-> Koide cone relation `Q = 2/3`, (ii) a retained-forced ABSS fixed-point /
-> topological-robustness closure of the Brannen phase `δ = 2/9`, (iii) an exact
+> amplitude (a_u) — are all sharply compressed on the retained Cl(3)/Z^3
+> review surface, with no new axioms added this cycle. The framework
+> contributes (i) a reviewer-tested Frobenius-isotype / AM-GM support stack
+> that isolates the Koide point but still leaves open the physical/source-law
+> extremal-principle bridge, (ii) a reviewer-tested ABSS fixed-point /
+> topological-robustness support stack that isolates the exact ambient APS
+> value `η = 2/9` but still leaves open the physical Brannen-phase bridge, (iii) an exact
 > Fourier-bridge algebraic reduction of operator-side κ = 2 to spectrum-side Q = 2/3,
 > (iv) a Sylvester-inertia reduction of A-BCC, closed via a multi-observable
 > sigma-chain that combines retained Cl(3)/Z³ theorems with the PMNS
@@ -338,9 +339,9 @@ Nature-grade statement for this cycle is:
 > listed in the Remaining-Open-Imports register along with the derivation that
 > would close it.
 
-The cycle-2 housekeeping imports are now closed; with the 2026-04-21 Koide
-package, the remaining irreducible frontier on the package surface is the
-PMNS angle-triple point-selection law alone.
+The cycle-2 housekeeping imports are now closed, but the package surface still
+has three live frontier items: the Koide extremal-principle bridge, the
+physical Brannen-phase bridge, and the PMNS angle-triple point-selection law.
 
 ## §3 Reproduction of current retained-conditional state
 

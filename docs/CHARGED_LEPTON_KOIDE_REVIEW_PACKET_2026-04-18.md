@@ -7,10 +7,11 @@ This is the reviewer front door for the charged-lepton Koide package.
 It is the consolidated review, provenance, and closure packet for honest
 review, retention, and downstream weaving.
 
-**2026-04-21 package update.** The April 21 Koide closure package now gives
-retained-forced closure for both the Koide relation `Q = 2/3` and the
-Brannen phase `δ = 2/9`. The older conditional evening discussion below is
-preserved as historical provenance, not as current package status.
+**2026-04-21 package update.** The April 21 Koide package is now the
+authoritative review/support surface for the charged-lepton lane. It is much
+stronger than the April 18-20 state, but it does not yet give
+retained-forced closure for either `Q = 2/3` or `δ = 2/9`. The older
+conditional evening discussion below remains historical provenance.
 
 ## Historical Route-Pruning Record
 
@@ -86,12 +87,17 @@ reductions:
 So the current charged-lepton package status is:
 
 - exact candidate-route closure
-- **retained-forced** derivation of `Q = 2/3` via the Frobenius-isotype /
-  AM-GM closure stack in
+- reviewer-tested Frobenius-isotype / AM-GM support for `Q = 2/3` in
   `KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md`
-- **retained-forced** derivation of `δ = 2/9` via the ABSS fixed-point /
-  topological-robustness closure stack in
+- reviewer-tested ABSS fixed-point / topological-robustness support for
+  `δ = 2/9` in
   `KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md`
+- remaining open bridge behind `Q = 2/3`: why the physical charged-lepton
+  packet must extremize the block-total Frobenius functional
+- remaining open bridge behind `δ = 2/9`: why the physical selected-line
+  Brannen phase equals the ambient APS invariant
+- selected-line witness `m_*` / `w/v` remains downstream of the physical
+  Brannen-phase bridge
 - overall lepton mass scale v_0 still open (separate hierarchy input)
 
 ## Read In Order
@@ -177,8 +183,9 @@ Items that remain open:
 
 So the current package classification is:
 
-- **retained-forced** derivation of `Q = 2/3` via the April 21 closure
-  package
-- **retained-forced** derivation of `delta = 2/9` via the same package
-- retained promotion for charged-lepton ratios, modulo the separate overall
-  lepton scale input `v_0`
+- strongest current executable support for `Q = 2/3`, with the
+  extremal-principle bridge still open
+- strongest current executable support for `delta = 2/9`, with the physical
+  Brannen-phase bridge still open
+- retained promotion for charged-lepton ratios is still conditional on those
+  two bridges, modulo the separate overall lepton scale input `v_0`

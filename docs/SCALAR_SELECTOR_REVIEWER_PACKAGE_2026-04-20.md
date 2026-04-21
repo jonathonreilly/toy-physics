@@ -1,7 +1,12 @@
 # Scalar-Selector Cycle 1 — Reviewer Package
 
 **Date:** 2026-04-20
-**Scope:** Reviewer-facing clean-language summary of four Tier-1 Standard Model scalar-selector gates, each closed on retained Cl(3)/Z³ framework ingredients with no new axioms added this cycle. Named retained observational inputs are listed explicitly. This note is the primary read-me for the submission.
+**Scope:** Reviewer-facing clean-language summary of four Tier-1 Standard
+Model scalar-selector gates on the current review surface. The package closes
+the up-sector quark gate, materially sharpens the charged-lepton Koide gates,
+and reduces the DM gate to explicit named blockers without adding new axioms.
+Named retained observational inputs and unresolved structural bridges are
+listed explicitly. This note is the primary read-me for the submission.
 
 ---
 
@@ -9,16 +14,17 @@
 
 Four Tier-1 Standard Model scalar-selector gates close this cycle via retained Cl(3)/Z³ framework ingredients plus named retained inputs. No new axioms are added. Each gate carries at least one primary closure route plus one or more independent corroborating routes. All runners pass with no hardcoded verifications. Open retained-observational inputs are enumerated separately in `docs/SCALAR_SELECTOR_REMAINING_OPEN_IMPORTS_2026-04-20.md`.
 
-**2026-04-21 package update.** The April 21 Koide closure package
-(`docs/KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md`) supersedes the older
-κ / θ status lines below. `Q = 2/3` and `δ = 2/9` are now carried as
-retained-forced closure results rather than named retained observational
-inputs.
+**2026-04-21 package update.** The April 21 Koide package
+(`docs/KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md`) supersedes the
+older κ / θ route-pruning surface as the strongest current support stack. It
+does not fully close the charged-lepton Koide lane: `Q = 2/3` still needs the
+physical/source-law extremal-principle bridge, and `δ = 2/9` still needs the
+physical Brannen-phase bridge.
 
 | Gate | Observable | Closure routes | Retained inputs |
 |---|---|---|---|
-| **Koide κ** | Charged-lepton cone normalization `κ = 2` (equivalently `Q = 2/3`) | April 21 closure package: Frobenius-isotype / AM-GM forcing + executable reviewer stress-test | none beyond retained framework kinematics |
-| **Koide θ** | Brannen–Zenczykowski phase offset `δ = 2/9` | April 21 closure package: ABSS fixed-point / topological robustness + executable reviewer stress-test | none beyond retained framework kinematics |
+| **Koide κ** | Charged-lepton cone normalization `κ = 2` (equivalently `Q = 2/3`) | April 21 support package: Frobenius-isotype / AM-GM support + executable reviewer stress-test | physical/source-law bridge from retained framework physics to the block-total Frobenius extremal principle |
+| **Koide θ** | Brannen-Zenczykowski phase offset `δ = 2/9` | April 21 support package: ABSS fixed-point / topological robustness + executable reviewer stress-test | physical Brannen-phase bridge from the selected-line observable to the ambient APS invariant |
 | **DM A-BCC** | Physical neutrino-source basin selection (Basin 1) | Sylvester signature-forcing + σ-chain + DPLE `F_4` + chamber bound + upper-octant / source-cubic selector | PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)`; now sharpened to a point-selection law on an exact local `2`-real PMNS source manifold beyond the currently tested `Z_3` center law |
 | **Quark a_u** | Up-sector reduced amplitude `a_u = 0.7748865611` | Affine-physical-carrier JTS + one-dimensional 5-channel residue + RPSR NLO | Bimodule `B = Cl(3)/Z₃ ⊗ Cl_CKM(1⊕5)`, retained atoms `ρ, supp, δ_A1` (CKM atlas) |
 
@@ -46,10 +52,11 @@ holds where `(a_0, z)` are the spectrum-side C₃ character components of `(√m
 
 **Consequence.** The spectrum-side Koide relation `Q = 2/3`, equivalent to `a_0² = 2|z|²`, implies the operator-side normalization `a² = 2|b|²`, i.e. `κ = 2`. The operator-side framing reduces algebraically to the spectrum-side framing under the retained cyclic-compression bridge.
 
-**Package status.** `Q = 2/3` is no longer carried here as a retained
-observational input. It is recovered by the April 21 Frobenius-isotype /
-AM-GM closure package. The observational relation remains the physical target
-being matched.
+**Package status.** The April 21 Frobenius-isotype / AM-GM stack is the
+strongest current support route for `Q = 2/3`. It proves that the admitted
+block-total Frobenius functional is maximized at the Koide point. What
+remains open is the physical/source-law bridge: why the charged-lepton packet
+must extremize that functional on the retained framework surface.
 
 ### §1.2 Independent corroboration — block-total Frobenius measure
 
@@ -72,7 +79,13 @@ On `Herm_circ(3)` with Frobenius metric, the MRU principle — Frobenius-normali
 
 ### §1.4 Supporting obstructions — what is ruled out
 
-Six structural no-go theorems in `docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md` (total 250 PASS across 6 runners) rule out Z₃-invariance alone, sectoral universality, color-sector correction, anomaly-forced cross-species, SU(2) gauge-exchange mixing, and observable-principle character symmetry as candidate forcing mechanisms for `Q = 2/3`. These remain useful negative controls, but they are superseded by the landed Frobenius-isotype / AM-GM closure package rather than read as the final Koide status.
+Six structural no-go theorems in `docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md`
+(total 250 PASS across 6 runners) rule out Z₃-invariance alone, sectoral
+universality, color-sector correction, anomaly-forced cross-species, SU(2)
+gauge-exchange mixing, and observable-principle character symmetry as
+candidate forcing mechanisms for `Q = 2/3`. These remain useful negative
+controls, but they are superseded by the landed Frobenius-isotype / AM-GM
+support package rather than read as the final Koide status.
 
 ---
 
@@ -131,11 +144,11 @@ the retained base.
 
 ### §2.3 Package status and geometric context
 
-**Package status.** `δ = 2/9` is no longer carried here as a retained
-observational input. The April 21 ABSS fixed-point / topological-robustness
-chain closes the old selected-line identification gap. The Berry-holonomy
-reading above remains the geometric context for that closure rather than an
-outstanding open item.
+**Package status.** The April 21 ABSS fixed-point / topological-robustness
+chain is the strongest current support route for `δ = 2/9`. It computes the
+ambient APS invariant exactly and proves its robustness. The Berry-holonomy
+reading above remains more than geometric context: the physical selected-line
+Brannen-phase bridge is still open.
 
 See `docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md` and
 `docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md`.

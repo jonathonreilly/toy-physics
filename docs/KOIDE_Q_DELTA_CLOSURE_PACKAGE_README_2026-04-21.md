@@ -1,130 +1,87 @@
-# Koide Closure Package — `Q = 2/3` and `δ = 2/9`
+# Koide Review Package — `Q = 2/3` and `δ = 2/9`
 
-**Package:** April 21, 2026 Koide closure handoff
+**Package:** April 21, 2026 Koide review/support handoff
 **Date:** 2026-04-21
-**Scope:** **Only** the Koide relation `Q = 2/3`, the Brannen phase
-`δ = 2/9 rad`, and their connecting identity `Q = 3·δ`.
-**Status:** Ready for review / retention.
+**Scope:** Only the charged-lepton Koide relation `Q = 2/3`, the Brannen
+phase `δ = 2/9 rad`, and their compatibility identity `Q = 3·δ`.
+**Status:** Ready for review as the strongest current executable support
+package. Two explicit scientific bridges remain open.
 
 **Executability guarantee.** Every PASS check across the 8 runners is an
-actual executable computation — symbolic via sympy (solve, eigenvalues,
-diff, free_symbols, rank), numeric via PDG lepton masses, or direct
-structural checks (sys.modules for the decoupling audit, H_1/H^1 tables
-for spin structure uniqueness). There are **zero hardcoded PASS
-placeholders** in the package runners. Totals: **201 PASS / 0 FAIL.**
+actual executable computation: symbolic via sympy, numeric via PDG lepton
+masses, or direct structural checks. Totals: **201 PASS / 0 FAIL**.
 
 ---
 
-## Anticipated reviewer questions
+## What this package establishes
 
-### Q1: Does any runner in this package say the Brannen-phase closure is "conditional on dynamical metric compatibility"?
+This package does two things cleanly:
 
-**No.** The full Brannen-phase closure chain (`c3_spatial_rotation.py` +
-`aps_eta_invariant.py` + `aps_topological_robustness.py` +
-`aps_block_by_block_forcing.py`) consistently concludes `δ = 2/9` at
-retained-forced grade. Metric-dependence is discharged by the
-Atiyah-Bott-Segal-Singer topological-robustness theorem
-(`aps_topological_robustness.py`, 41/41 PASS): the APS η value at an
-isolated Z_p fixed locus depends only on the tangent representation,
-not on the Riemannian metric.
+1. It proves that the admitted block-total Frobenius functional on
+   `Herm_circ(3)` is maximized at the Koide point `Q = 2/3`.
+2. It proves that the retained `Z_3` orbifold carries an exact ambient APS
+   invariant `η = 2/9`, and that this value is topologically robust.
 
-### Q2: Does the APS stack depend on the framework's open dynamical-metric-lift question?
-
-**No. The APS stack is orthogonal to that question.** The APS η value
-requires only:
-
-1. **Retained kinematic manifold** — PL S³ × R with Z_3 = C_3[111]
-   action. This is the framework's retained kinematic axiom base,
-   independently established elsewhere in the package (e.g. `S3_CAP_UNIQUENESS_NOTE`).
-2. **Standard algebraic topology** — PL S³ is smoothable (Cerf,
-   dim ≤ 6); S³ has spin structure (w₂ = 0); the Z_3 action lifts
-   via equivariant smoothing. These are topology theorems, not
-   framework assumptions.
-3. **ABSS equivariant fixed-point theorem** — η depends only on the
-   tangent representation (a, b), not on the metric. Mathematical
-   theorem.
-4. **Core algebraic identity** — (ζ − 1)(ζ² − 1) = 3 for ζ = primitive
-   cube root of unity. Exact.
-
-The framework's dynamical-metric-lift question is about **which
-specific metric** the framework's dynamics eventually picks out.
-ABSS gives the **same η value** (2/9) for any smooth metric consistent
-with the retained Z_3 action, so the specific dynamical metric is
-irrelevant to the η = 2/9 conclusion. This decoupling is verified
-explicitly in `frontier_koide_reviewer_stress_test.py` checks E1–E5.
-
-### Q3: Does "retained-forced" hide a soft assumption?
-
-**No.** "Retained kinematics" enumerates precisely:
-
-- Cl(3) Clifford algebra on Z³ lattice.
-- SELECTOR = √6/3.
-- Observable principle W[J].
-- S₃ cubic axis-permutation symmetry on Z³.
-- C_3[111] = 2π/3 body-diagonal rotation subgroup.
-- Continuum limit Z³ → PL S³ × R.
-
-These are the framework's retained axioms. "Retained-forced given
-retained kinematics" is equivalent to "forced by the framework's
-axioms". Verified in `frontier_koide_reviewer_stress_test.py` checks
-D2a, D2b.
-
-The "remaining open doors" list in the stress-test contains only
-items genuinely outside the Koide / Brannen closure scope (PMNS
-angle-triple mechanism, `δ_CP` sign, quark sector). None of these affect the
-Koide / Brannen closures.
+These are strong results. They are not the same as full retained-forced
+closure of the physical charged-lepton observables.
 
 ---
 
-## What this package contains
+## The remaining open bridges
 
-8 dedicated runners + 4 companion notes, selected from the larger
-April 20 loop work to cover **only** the Koide / Brannen closures.
+### 1. Koide relation `Q = 2/3`
 
-**PMNS mixing-angle work is NOT included here** — it remains a separate
-mechanism package with open derivation. That can be handled as a separate
-promotion decision.
+The April 21 Frobenius stack proves where the **admitted** block-total
+functional is extremized. What remains open is the physical/source-law bridge:
 
-## Closure grade: RETAINED-FORCED
+> why the physical charged-lepton packet must extremize that functional on the
+> accepted framework surface.
 
-Both closure components are at the **strongest closure grade**: each building
-block is verified forced by retained axioms, and no alternative consistent
-construction exists. See the block-by-block forcing runners
-(`frobenius_isotype_split_uniqueness.py` for `Q = 2/3` and
-`aps_block_by_block_forcing.py` for `δ = 2/9`).
+This is the same residue still named in
+`docs/KOIDE_KAPPA_BLOCK_TOTAL_FROBENIUS_MEASURE_THEOREM_NOTE_2026-04-19.md`:
+the unresolved choice of canonical extremal principle.
+
+### 2. Brannen phase `δ = 2/9`
+
+The April 21 APS stack proves the exact ambient topological number
+`η = 2/9`. What remains open is the physical-observable bridge:
+
+> why the physical Brannen phase on the actual selected-line `CP^1` carrier is
+> this APS invariant.
+
+This is the same residual postulate sharpened in
+`docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md` and
+`docs/KOIDE_P_ONE_CLOCK_3PLUS1_TRANSPORT_REDUCTION_NOTE_2026-04-20.md`.
 
 ---
 
-## Koide relation: `Q = 2/3` (Koide cone)
+## Koide relation: `Q = 2/3`
 
-### Mechanism (one-line)
+### Mechanism
 
-AM-GM inequality on isotype Frobenius energies of Herm_circ(3).
+AM-GM inequality on the isotype Frobenius energies of `Herm_circ(3)`.
 
-### Detail
+### What is proved
 
-- Isotype energies: E_+ = (tr M)²/3 (scalar-subspace), E_⊥ = Tr(M²) − E_+ (traceless).
-- Under constraint E_+ + E_⊥ = N (fixed total Frobenius norm),
-  AM-GM forces maximum at E_+ = E_⊥ ⟺ κ = a²/|b|² = 2.
-- At κ = 2, d = 3: **Q = (1 + 2/κ)/d = 2/3**.
+- Isotype energies are
+  `E_+ = (tr M)^2 / 3` and `E_perp = Tr(M^2) - E_+`.
+- Under fixed total Frobenius norm `E_+ + E_perp = N`, AM-GM forces the
+  unique interior extremum at `E_+ = E_perp`.
+- On the charged-lepton carrier that is exactly `kappa = a^2 / |b|^2 = 2`,
+  hence `Q = (1 + 2 / kappa) / 3 = 2/3`.
 
-### C1 (Peter-Weyl prescription) discharged
+### What this does not yet prove
 
-The AM-GM derivation uses only the **Frobenius (trace) inner product**
-on Herm_circ(3), which is the canonical inner product on matrix algebras
-(unique up to scale via bilinearity + symmetry + conjugation-invariance
-+ positive-definiteness). No "Peter-Weyl prescription" is needed.
+It does not yet prove that the physical charged-lepton packet is selected by
+that extremal principle rather than by another retained natural functional.
 
-### Runners
+### Main runners
 
 - `scripts/frontier_koide_peter_weyl_am_gm.py` — **22/22 PASS**
-  (AM-GM ⟹ κ = 2 ⟹ Q = 2/3)
-- `scripts/frontier_koide_frobenius_isotype_split_uniqueness.py` — **28/28 PASS**
-  (block-by-block forcing: canonical-trace Ad-invariance, P_0
-  uniqueness from C's eigenvectors, symbolic positivity over the reals,
-  PDG-mass interior check, AM-GM Hessian concavity — all executable)
+- `scripts/frontier_koide_frobenius_isotype_split_uniqueness.py` —
+  **28/28 PASS**
 
-### Note
+### Main note
 
 - `docs/KOIDE_FROBENIUS_ISOTYPE_SPLIT_UNIQUENESS_NOTE_2026-04-21.md`
 
@@ -132,77 +89,51 @@ on Herm_circ(3), which is the canonical inner product on matrix algebras
 
 ## Brannen phase: `δ = 2/9 rad`
 
-### Mechanism (one-line)
+### Mechanism
 
-Atiyah-Bott-Segal-Singer equivariant fixed-point formula for APS
-η-invariant on Z_3 orbifold with tangent weights (1, 2).
+Atiyah-Bott-Segal-Singer equivariant fixed-point formula for the APS
+`η`-invariant on the retained `Z_3` orbifold with tangent weights `(1, 2)`.
 
-### Detail
+### What is proved
 
-- Retained C_3[111] rotation acts as 2π/3 about (1,1,1)/√3 body-diagonal
-  (Rodrigues formula = cyclic permutation matrix P).
-- Fixed locus: body-diagonal, codim-2 on S³.
-- Tangent eigenvalues (ω, ω²) give weights (1, 2) mod 3 uniquely.
-- ABSS formula: η = (1/p) · Σ_{k=1}^{p−1} 1 / ((ζ^{ka}−1)(ζ^{kb}−1))
-- Core algebraic identity: **(ζ − 1)(ζ² − 1) = 3** exactly (for ζ = primitive cube root of unity).
-- At (a, b) = (1, 2), p = 3: η = (1/3) · (1/3 + 1/3) = **2/9 exactly**.
+- The retained `C_3[111]` rotation fixes the body-diagonal and yields tangent
+  weights `(1, 2)` mod `3`.
+- The ABSS fixed-point formula gives
+  `η = (1/3) * (1/3 + 1/3) = 2/9` exactly.
+- The value is topologically robust: it depends on the tangent
+  representation, not on the choice of smooth `Z_3`-compatible metric.
 
-### C2 (spacetime dynamics) discharged
+### What this does not yet prove
 
-The ABSS formula is **topologically robust** — it depends only on the
-tangent representation at the fixed point, NOT on the choice of Riemannian
-metric. So the APS η value survives any metric-law resolution of the
-dynamical PL-S³ × R problem.
+It does not yet prove that the physical Brannen phase on the actual
+selected-line `CP^1` carrier equals this ambient APS invariant.
 
-### Runners
+### Main runners
 
 - `scripts/frontier_koide_aps_eta_invariant.py` — **21/21 PASS**
-  (8 independent number-theoretic routes to η = 2/9)
 - `scripts/frontier_koide_aps_topological_robustness.py` — **41/41 PASS**
-  (metric-independence: Z_3-invariant transverse metric forced scalar
-  via R^T G R = G solved symbolically; ABSS formula has no metric free
-  symbols; rep-class invariance executable)
 - `scripts/frontier_koide_c3_spatial_rotation.py` — **16/16 PASS**
-  (Rodrigues identity verification)
 - `scripts/frontier_koide_aps_block_by_block_forcing.py` — **29/29 PASS**
-  (block-by-block forcing: ABSS applicability executively verified —
-  π_i(PL/O) = 0 for i ≤ 4, w_2(S³) = 0 via parallelization, SO(3)→SU(2)
-  lift computed as explicit quaternion q³ = −1)
 
-### Note
+### Main note
 
 - `docs/KOIDE_APS_BLOCK_BY_BLOCK_FORCING_NOTE_2026-04-21.md`
 
 ---
 
-## Bonus: Q and δ are linked by retained arithmetic identity
+## Compatibility identity
 
-**Q = p · δ = 3·δ**
+### `Q = 3·δ`
 
-### Derivation
+The package also contains an exact arithmetic compatibility identity:
 
-The two closures aren't independent — they're linked by the underlying
-Z_3 structure:
+- `Q = 2/d` on the Koide side at `d = 3`
+- `δ = 2/p^2` on the APS side at `p = 3`
+- the same retained `Z_3` arithmetic gives `p = d = 3`
+- therefore `Q = p·δ = 3·δ`
 
-- δ = **2/p²** (APS formula at Z_p orbifold, p = 3)
-- Q = **2/d** (AM-GM at κ = 2, d = 3)
-- **Z_3 structure forces p = d** (the Z_3 isotypes that define d = 3
-  generations ARE the same Z_3 as the C_3[111] cubic rotation that
-  gives p = 3 in the APS formula)
-- Therefore: **Q / δ = (2/d) / (2/p²) = p²/d = p** (when p = d)
-- So **Q = p · δ = 3 · δ**
-
-Numerically: 2/3 = 3 · (2/9). ✓
-
-### Significance
-
-This identity is retained-forced (not a numerical coincidence). It shows
-the Koide relation and the Brannen phase are **two faces of the same Z_3
-retained structure**:
-
-- From APS side: δ scales as 1/p² (quadratic in orbifold order)
-- From Koide side: Q scales as 1/d (linear in generation count)
-- Their ratio p²/d = p reveals Q = p · δ at p = d
+This is best read as an exact compatibility identity between the two support
+routes. It does not by itself discharge either remaining physical bridge.
 
 ### Runner
 
@@ -214,35 +145,25 @@ retained structure**:
 
 ---
 
-## Joint Koide / Brannen reviewer stress-test
+## Reviewer stress-test
 
 ### Runner
 
 - `scripts/frontier_koide_reviewer_stress_test.py` — **34/34 PASS**
-  (every objection check is executable: AM-GM Hessian symbolic,
-  Z_p^*-orbit invariance, PDG-mass interior test, PL/O obstructions,
-  runtime-import graph check for decoupling from spacetime-lift)
 
-### 9 objections addressed
+### What it is good for
 
-**Uniqueness (4)**:
-- A1: F-functional uniqueness via Frobenius metric
-- A2: Q = 2/3 is global max (strict concavity), not saddle
-- A3: (1, 2) tangent weights forced by C_3 rotation order
-- A4: APS η = 2/9 unique for (1, 2) weights
+The stress-test shows the package has good executable hygiene:
 
-**Scope (3)**:
-- B1: E_+, E_⊥ non-negative (trivial for real/complex amplitudes)
-- B2: PL vs smooth — Cerf's theorem (PL smoothable in dim ≤ 6) +
-  topological robustness of η
-- B3: Morse-Bott condition satisfied (C_3 rotation non-degenerate)
+- no placeholder PASS checks
+- no hidden dependence on unresolved dynamical-metric details for the ambient
+  APS number
+- no circular dependence of the AM-GM route on the APS route
 
-**Independence (2)**:
-- C1: 8 routes to η = 2/9 cluster into 3 independent mathematical
-  frameworks (topological, analytical, number-theoretic) —
-  honest downgrade from "8 independent" to "3 independent"
-- C2: the `Q = 2/3` AM-GM route uses Frobenius metric, NOT Peter-Weyl weighting,
-  so no circularity with C1 discharge
+### What it is not
+
+It is not a replacement for the two remaining scientific bridges listed
+above.
 
 ### Note
 
@@ -252,96 +173,53 @@ retained structure**:
 
 ## Full artifact manifest
 
-### Runners (8, `scripts/`)
+### Runners
 
 | File | Purpose | PASS |
 |---|---|---|
-| `frontier_koide_aps_topological_robustness.py` | Brannen phase: ABSS metric-independence (executable) | 41/41 |
-| `frontier_koide_aps_eta_invariant.py` | Brannen phase: 8 routes to η = 2/9 | 21/21 |
-| `frontier_koide_c3_spatial_rotation.py` | Brannen phase: Rodrigues = cyclic permutation | 16/16 |
-| `frontier_koide_aps_block_by_block_forcing.py` | Brannen phase: block-by-block retained-forced (executable) | 29/29 |
-| `frontier_koide_peter_weyl_am_gm.py` | Koide relation: AM-GM ⟹ Q = 2/3 | 22/22 |
-| `frontier_koide_frobenius_isotype_split_uniqueness.py` | Koide relation: block-by-block retained-forced (executable) | 28/28 |
-| `frontier_koide_Q_eq_3delta_identity.py` | **Bridge**: Q = 3·δ identity | 10/10 |
-| `frontier_koide_reviewer_stress_test.py` | **Joint**: 9-objection stress-test | 34/34 |
+| `frontier_koide_aps_topological_robustness.py` | Brannen support: metric-independence of ambient APS value | 41/41 |
+| `frontier_koide_aps_eta_invariant.py` | Brannen support: exact `η = 2/9` by multiple routes | 21/21 |
+| `frontier_koide_c3_spatial_rotation.py` | Brannen support: Rodrigues equals cyclic permutation | 16/16 |
+| `frontier_koide_aps_block_by_block_forcing.py` | Brannen support: ambient APS forcing chain | 29/29 |
+| `frontier_koide_peter_weyl_am_gm.py` | Koide support: AM-GM gives `Q = 2/3` | 22/22 |
+| `frontier_koide_frobenius_isotype_split_uniqueness.py` | Koide support: Frobenius-isotype forcing chain | 28/28 |
+| `frontier_koide_Q_eq_3delta_identity.py` | compatibility identity `Q = 3·δ` | 10/10 |
+| `frontier_koide_reviewer_stress_test.py` | reviewer stress-test | 34/34 |
 
-**Total: 201 PASS checks, 0 FAIL.**
+**Total: 201 PASS, 0 FAIL.**
 
-Every PASS is an actual executable symbolic or numeric computation.
-There are no literal `True` assertions anywhere in the package.
+### Notes
 
-### Notes (4, `docs/`)
-
-- `KOIDE_APS_BLOCK_BY_BLOCK_FORCING_NOTE_2026-04-21.md` — Brannen phase
-- `KOIDE_FROBENIUS_ISOTYPE_SPLIT_UNIQUENESS_NOTE_2026-04-21.md` — Koide relation
-- `KOIDE_Q_EQ_3DELTA_IDENTITY_NOTE_2026-04-21.md` — Q = 3·δ bridge
-- `KOIDE_REVIEWER_STRESS_TEST_NOTE_2026-04-21.md` — joint stress-test
-
-### This README
-
-- `KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md` — this file
+- `docs/KOIDE_APS_BLOCK_BY_BLOCK_FORCING_NOTE_2026-04-21.md`
+- `docs/KOIDE_FROBENIUS_ISOTYPE_SPLIT_UNIQUENESS_NOTE_2026-04-21.md`
+- `docs/KOIDE_Q_EQ_3DELTA_IDENTITY_NOTE_2026-04-21.md`
+- `docs/KOIDE_REVIEWER_STRESS_TEST_NOTE_2026-04-21.md`
 
 ---
 
-## Verification
+## Review order
 
-All 8 runners tested on a clean package tree with no local carry-over
-dependencies:
-
-```
-scripts/frontier_koide_aps_topological_robustness.py: 41 PASS, 0 FAIL
-scripts/frontier_koide_aps_eta_invariant.py:          21 PASS, 0 FAIL
-scripts/frontier_koide_c3_spatial_rotation.py:        16 PASS, 0 FAIL
-scripts/frontier_koide_peter_weyl_am_gm.py:           22 PASS, 0 FAIL
-scripts/frontier_koide_reviewer_stress_test.py:       34 PASS, 0 FAIL
-scripts/frontier_koide_frobenius_isotype_split_uniqueness.py: 28 PASS, 0 FAIL
-scripts/frontier_koide_aps_block_by_block_forcing.py: 29 PASS, 0 FAIL
-scripts/frontier_koide_Q_eq_3delta_identity.py:       10 PASS, 0 FAIL
-```
-
----
-
-## Reviewer/owner checklist
-
-Recommended review order:
-
-1. **This README** (5-10 min) — get oriented.
-2. **`frontier_koide_aps_eta_invariant.py`** — see the APS η = 2/9 derivation
-   via 8 independent routes.
-3. **`KOIDE_APS_BLOCK_BY_BLOCK_FORCING_NOTE_2026-04-21.md`** — understand
-   the Brannen-phase retained-forced argument chain.
-4. **`frontier_koide_peter_weyl_am_gm.py`** — see the AM-GM ⟹ Q = 2/3.
-5. **`KOIDE_FROBENIUS_ISOTYPE_SPLIT_UNIQUENESS_NOTE_2026-04-21.md`** —
-   understand the Koide-relation retained-forced argument chain.
-6. **`KOIDE_Q_EQ_3DELTA_IDENTITY_NOTE_2026-04-21.md`** — the bridge.
-7. **`KOIDE_REVIEWER_STRESS_TEST_NOTE_2026-04-21.md`** — see the
-   enumerated reviewer objections addressed.
-8. **Run all 8 runners** — verify 201/201 PASS locally.
-
----
-
-## What's NOT in this package (deliberately excluded)
-
-- **PMNS mixing-angle work**: remains a separate open mechanism package.
-  It has observational robustness + sum rules + uniqueness among simple
-  `(Q, δ)`-expressions, but the product-structure mechanism derivation
-  (why `θ_13 = δ·Q` specifically) is open. Treat as a separate promotion
-  decision; it is not required for the Koide / Brannen closure landing.
-
-- **Meta iterations** (master-status notes, publication outline, abstract
-  draft, honest critiques): useful history but not essential for the
-  Koide / Brannen closure.
-
-  content.
+1. This README.
+2. `scripts/frontier_koide_peter_weyl_am_gm.py`.
+3. `docs/KOIDE_FROBENIUS_ISOTYPE_SPLIT_UNIQUENESS_NOTE_2026-04-21.md`.
+4. `scripts/frontier_koide_aps_eta_invariant.py`.
+5. `docs/KOIDE_APS_BLOCK_BY_BLOCK_FORCING_NOTE_2026-04-21.md`.
+6. `docs/KOIDE_Q_EQ_3DELTA_IDENTITY_NOTE_2026-04-21.md`.
+7. `docs/KOIDE_REVIEWER_STRESS_TEST_NOTE_2026-04-21.md`.
 
 ---
 
 ## Bottom line
 
-- Q = 2/3: **RETAINED-FORCED** with block-by-block verification.
-- δ = 2/9: **RETAINED-FORCED** with block-by-block verification.
-- Q = 3·δ: retained arithmetic identity linking both.
-- 9 reviewer objections addressed.
-- **201 executable PASS checks**, 0 FAIL.
+- `Q = 2/3`: strongest current executable support, not yet retained-forced
+  closure.
+- `δ = 2/9`: strongest current executable support, not yet retained-forced
+  closure.
+- `Q = 3·δ`: exact compatibility identity between the two support routes.
+- Remaining open behind `Q`: the physical/source-law extremal-principle
+  bridge.
+- Remaining open behind `δ`: the physical Brannen-phase bridge
+  `δ_physical = η_APS`.
+- `m_*` / `w/v` remains downstream of the Brannen-phase bridge.
 
-Ready for review and main-branch promotion.
+Ready for review as the strongest current Koide support package.

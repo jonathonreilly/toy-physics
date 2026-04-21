@@ -9,7 +9,7 @@ The current package is:
 
 1. a retained theorem core
 2. retained standalone quantitative lanes for `alpha_s` and EW normalization
-3. a retained charged-lepton Koide closure package
+3. a charged-lepton Koide review/support package with two explicit bridge residues
 4. promoted CKM atlas/axiom package plus a retained YT/top transport lane and a derived Higgs/vacuum lane with a retention-decomposed budget
 5. a bounded prediction surface plus an explicit history bucket for important
    excluded families
@@ -193,7 +193,7 @@ Current status from that stack:
 
 ## Charged-Lepton Koide Closure
 
-- **Charged-lepton Koide closure package** (`Q = 2/3`, `δ = 2/9`). Reviewer entry points: [KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md](../../KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md) and [CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md](../../CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md). Package status: `retained-forced` closure package. The historical observational-pin baseline and route-pruning notes remain provenance and compatibility context rather than the authoritative closure status. The separate overall scale `v_0` remains outside this closure. 8 closure runners, 201 PASS / 0 FAIL.
+- **Charged-lepton Koide review/support package** (`Q = 2/3`, `δ = 2/9`). Reviewer entry points: [KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md](../../KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md) and [CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md](../../CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md). Package status: strongest current executable support, not retained-forced closure. The historical observational-pin baseline and route-pruning notes remain provenance and compatibility context. The remaining live issues are the extremal-principle bridge behind `Q`, the physical Brannen-phase bridge behind `δ`, and the separate overall scale `v_0`. 8 runners, 201 PASS / 0 FAIL.
 
 ## Bounded Prediction Surface
 - W-boson same-surface EW consistency probe. Reviewer entry point: [W_MASS_DERIVED_NOTE.md](../../W_MASS_DERIVED_NOTE.md). Repo status: `bounded`. On the retained EW lane the framework-side readouts are `M_W^tree = 79.7956 GeV`, `M_W^RGE = 80.5573 GeV`, `M_Z^tree = 91.2663 GeV`. The remaining `~0.19 GeV` `M_W` gap tracks the existing retained `g_2(v)` precision and is therefore treated as a reviewer-facing same-surface consistency probe, not as a retained or few-MeV SM-indirect `M_W` prediction.
