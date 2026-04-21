@@ -164,10 +164,10 @@ Current quantitative statuses:
   Wilson direct-descendant science stack showing that the current package
   carries no hidden Wilson-to-`dW_e^H` descendant law while explicit
   structured positive model classes and manifold-valued constructive positive
-  exact closure already exist on the fixed native `N_e` seed surface: the
-  remaining live blockers are the named baseline-connected-component input
-  `A-BCC` and the finer right-sensitive microscopic selector law for the
-  physical source branch / point;
+  exact closure already exist on the fixed native `N_e` seed surface: A-BCC
+  is now closed on the retained measurement surface, and the only remaining
+  live DM blocker is the finer right-sensitive microscopic selector law for
+  the physical source branch / point;
   `σ_hier = (2, 1, 0)` is fixed observationally at the pinned chamber point,
   but broader chamber-wide / all-basin uniqueness is still out of scope
 - promoted CKM atlas/axiom package on the canonical tensor/projector surface, with older Cabibbo / NNI / partial Jarlskog notes retained only as route history
@@ -214,10 +214,12 @@ Current quantitative statuses:
    explicitly support, not closure: the two new selector identities are still
    proposed rather than retained-derived, and the current uniqueness statement
    is numerical rather than theorem-grade.
-   The gate remains open because the named baseline-connected-component input
-   `A-BCC` and the finer right-sensitive microscopic selector law are still
-   open. The residual split-2 carrier-side dominance/completeness blocker is
-   now closed by interval certification on the two explicit upper-face boxes.
+   A-BCC is no longer open on the review surface: the retained measurement
+   stack now closes it via the sigma-chain, the retained P3 Sylvester path
+   theorem, the PMNS nonsingularity reduction, and Sylvester signature
+   forcing. The residual split-2 carrier-side dominance/completeness blocker
+   is also now closed by interval certification on the two explicit upper-face
+   boxes.
    On the selector side, the exact intrinsic threshold-volume family already
    has a high-threshold stabilization window on which the preferred recovered
    lift is the unique minimizer, and the earliest middle-branch breakpoint on

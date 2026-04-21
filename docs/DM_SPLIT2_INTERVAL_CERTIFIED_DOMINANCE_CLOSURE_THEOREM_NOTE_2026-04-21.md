@@ -138,11 +138,13 @@ The split-2 carrier-side dominance/completeness blocker is no longer open on
 the review surface.
 
 What remains open on the dark-matter flagship gate is now strictly
-branch-choice / selector-side:
+selector-side on the review surface:
 
-- `A-BCC` as an axiom-native branch-choice law
 - the finer right-sensitive microscopic selector law for the physical source
   branch / point
+
+The stricter axiom-native A-BCC target remains a boundary/no-go statement,
+but not a live review-surface blocker.
 
 This theorem does not close the PMNS gate by itself. It removes the last
 carrier-side completeness obstruction on the reviewed split-2 residual branch.

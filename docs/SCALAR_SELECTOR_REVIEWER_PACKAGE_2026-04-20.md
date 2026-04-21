@@ -238,10 +238,14 @@ The carrier-side split-2 dominance/completeness blocker is no longer open.
 The new interval-certified theorem closes the two residual upper-face boxes
 `CAP_BOX` and `ENDPOINT_BOX` by Weyl eigenvalue control, exact cofactor
 projector-row intervals, and boxwise transport upper bounds
-`eta / eta_obs < 1` throughout. So the remaining live DM blockers on the
-review surface are now branch-choice / selector-side only: `A-BCC` as an
-axiom-native branch-choice law and the finer right-sensitive microscopic
-selector law. See
+`eta / eta_obs < 1` throughout. A-BCC is also no longer open on the review
+surface: the retained-measurement integration theorem packages the
+already-landed sigma-chain, retained P3 Sylvester theorem, PMNS
+nonsingularity reduction, and Sylvester signature forcing into one explicit
+closure statement. So the only live DM blocker on the review surface is now
+the finer right-sensitive microscopic selector law. The stricter axiom-native
+A-BCC target remains a boundary statement only, not a live review-surface
+blocker. See
 `docs/DM_SPLIT2_INTERVAL_CERTIFIED_DOMINANCE_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
 The selector side is also slightly sharper than before: on the recovered bank,
 the exact intrinsic threshold-volume selector family now has a theorem-grade
@@ -379,6 +383,7 @@ All runners pass with no hardcoded `True` PASS annotations. Every PASS is a nume
 | A-BCC σ-chain attack cascade | `frontier_dm_pns_attack_cascade.py` | 34 | 0 |
 | A-BCC signature-forcing | `frontier_dm_abcc_signature_forcing_theorem.py` | 43 | 0 |
 | A-BCC PMNS-non-singularity | `frontier_dm_abcc_pmns_nonsingularity_theorem.py` | 33 | 0 |
+| A-BCC retained-measurement closure | `frontier_dm_abcc_retained_measurement_closure_2026_04_21.py` | 15 | 0 |
 | A-BCC chamber ∩ DPLE | `frontier_dm_abcc_chamber_dple_closure.py` | 39 | 0 |
 | A-BCC 5-route audit | `frontier_dm_abcc_assumptions_audit.py` | 16 | 0 |
 | DPLE dim-parametric extremum | `frontier_dm_dple_theorem.py` | 19 | 0 |
@@ -407,7 +412,7 @@ observational or atlas-level inputs across the four Tier-1 gates.
 
 | Label | Input | Used in | Provenance |
 |---|---|---|---|
-| PMNS | PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)` | A-BCC σ-chain | NuFit / pinned chamber target |
+| PMNS | PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)` | PMNS selector law on the retained-measurement physical branch | NuFit / pinned chamber target |
 | CHB | Chamber bound `q_+ + δ ≥ √(8/3)` | A-BCC | reviewer-grade inline derivation in `DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md` |
 | BIM | Bimodule `B = Cl(3)/Z₃ ⊗ Cl_CKM(1⊕5)` | a_u | `CL3_SM_EMBEDDING_THEOREM` + `CKM_ATLAS_AXIOM_CLOSURE_NOTE` (main) |
 | ATOM-ρ | `a_d = ρ = 1/√42` | a_u | CKM atlas |

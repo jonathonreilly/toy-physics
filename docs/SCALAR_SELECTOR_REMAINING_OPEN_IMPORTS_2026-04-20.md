@@ -1,10 +1,11 @@
 # Scalar-Selector Cycle 1 — Remaining Open Imports
 
 **Date:** 2026-04-20
-**Scope:** Each still-open import on the four Tier-1 scalar-selector lanes
-(Koide θ, Koide κ, DM A-BCC, Quark a_u) plus the supporting selected-line and
-Berry lanes, with a specific statement of what derivation would close it from
-Cl(3)/Z³ framework ingredients alone. Items listed here are
+**Scope:** Each still-open import on the remaining flagship scalar-selector
+lanes (Koide θ, Koide κ, the DM PMNS selector lane, plus the supporting
+selected-line and bounded quark side lanes), with a specific statement of what
+derivation would close it from Cl(3)/Z³ framework ingredients alone. Items
+listed here are
 **retained-observational or structural-postulate inputs** that currently
 prevent the corresponding lane from being marked retained-derivation on the
 review surface.
@@ -25,7 +26,7 @@ The downstream selected-line witness remains conditional on the second bridge.
 |---|---|---|---|
 | Koide relation `Q = 2/3` | κ, θ | reviewer-tested Frobenius-isotype / AM-GM support package isolates the Koide point as the unique extremum of the admitted block-total functional, but the physical/source-law extremal-principle bridge remains open | derive why the physical charged-lepton packet must extremize the block-total Frobenius functional, or an equivalent accepted source law that forces the same point |
 | Brannen phase `δ = 2/9` on the physical base | θ | reviewer-tested APS / ABSS support package isolates the exact ambient topological value `η = 2/9`, but the physical selected-line Brannen-phase bridge remains open | derive `δ_physical = η_APS`, equivalently an ambient one-clock `3+1` transport / endpoint / Wilson law whose selected-line pullback is the physical Brannen phase |
-| PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)` | A-BCC (sigma-chain) | retained observational input; the new upper-octant / source-cubic selector theorems close the CP-sign / `σ_hier` half on the active chamber, the fixed-`N_e` exact-source-manifold theorem shows the physical PMNS target already lies on a regular local `2`-real source manifold on the charged-lepton-side seed surface, and the residual split-2 carrier-side dominance/completeness blocker is now interval-certified closed on the two explicit upper-face boxes. The tested `Z_3` center law `delta_db = 1`, `q_+ = 0` is useful only conditionally: together with `I_src > 0` it still leaves a positive-sheet `3`-real locus and does not derive the PMNS target by itself. On the current exact threshold-volume selector family, the preferred recovered lift now has a theorem-grade high-threshold stabilization window and a canonical earliest middle-branch breakpoint `tau_b,min`; separately, the strongest current framework-internal observable-relative-action selector stays off that recovered selector branch and carries its own later breakpoint | axiom-native branch-choice law `A-BCC` together with a finer right-sensitive microscopic point-selection law stronger than the current `Z_3` center law on the exact PMNS / positive-center locus; on the current selector packet this now means bridging the internal selector law to the recovered right-sensitive branch, or replacing both by a finer microscopic law |
+| PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)` | PMNS selector lane | A-BCC is now closed on the retained measurement framework via the sigma-chain, retained P3 Sylvester, PMNS nonsingularity, and Sylvester signature forcing; the physical PMNS target already lies on a regular local `2`-real source manifold on the charged-lepton-side seed surface, and the residual split-2 carrier-side dominance/completeness blocker is now interval-certified closed on the two explicit upper-face boxes. The tested `Z_3` center law `delta_db = 1`, `q_+ = 0` is useful only conditionally: together with `I_src > 0` it still leaves a positive-sheet `3`-real locus and does not derive the PMNS target by itself. On the current exact threshold-volume selector family, the preferred recovered lift now has a theorem-grade high-threshold stabilization window and a canonical earliest middle-branch breakpoint `tau_b,min`; separately, the strongest current framework-internal observable-relative-action selector stays off that recovered selector branch and carries its own later breakpoint | finer right-sensitive microscopic point-selection law stronger than the current `Z_3` center law on the exact PMNS / positive-center locus; on the current selector packet this now means bridging the internal selector law to the recovered right-sensitive branch, or replacing both by a finer microscopic law |
 | Selected-line witness ratio `w/v ≈ 4.101` | m_* (selected-line point) | conditionally pinned by the exact selected-line scalar-phase bridge once the physical Brannen phase is fixed; still open because the Brannen-phase bridge is open | the same physical Brannen-phase bridge that closes `δ = 2/9`, or an equivalent ambient endpoint law that fixes the selected-line point directly |
 
 ## §0a Closed in cycle 2
@@ -339,9 +340,12 @@ the exact affine split-2 generators, Weyl eigenvalue control on each whole
 box, exact cofactor formulas for all projector-row weights, and the exact
 one-variable transport kernel to certify `eta / eta_obs < 1` throughout both
 boxes. So the residual carrier-side completeness question is now closed on
-the review surface. What remains open on the PMNS lane is branch-choice /
-selector-side only: `A-BCC` and the finer right-sensitive microscopic
-point-selection law. See
+the review surface. A-BCC is also now closed on the retained measurement
+surface via the sigma-chain, retained P3 Sylvester theorem, PMNS
+nonsingularity reduction, and Sylvester signature forcing. What remains open
+on the PMNS lane is the finer right-sensitive microscopic point-selection
+law. The stricter axiom-native A-BCC target remains a boundary/no-go item
+only, not a live review-surface blocker. See
 `docs/DM_SPLIT2_INTERVAL_CERTIFIED_DOMINANCE_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
 
 ### Priority 4: Selected-line physical point
@@ -358,7 +362,8 @@ Nature-grade statement for this cycle is:
 > Four Tier-1 scalar-selector gates of the Standard Model — the Koide
 > charged-lepton cone normalization (κ = 2, equivalently the operator-side
 > Koide relation), the Koide Brannen-Zenczykowski phase offset (δ = 2/9), the
-> dark-matter A-BCC basin-sheet choice, and the up-sector quark reduced
+> dark-matter basin choice on the retained measurement surface, and the
+> up-sector quark reduced
 > amplitude (a_u) — are all sharply compressed on the retained Cl(3)/Z^3
 > review surface, with no new axioms added this cycle. The framework
 > contributes (i) a reviewer-tested Frobenius-isotype / AM-GM support stack
@@ -367,8 +372,9 @@ Nature-grade statement for this cycle is:
 > topological-robustness support stack that isolates the exact ambient APS
 > value `η = 2/9` but still leaves open the physical Brannen-phase bridge, (iii) an exact
 > Fourier-bridge algebraic reduction of operator-side κ = 2 to spectrum-side Q = 2/3,
-> (iv) a Sylvester-inertia reduction of A-BCC, closed via a multi-observable
-> sigma-chain that combines retained Cl(3)/Z³ theorems with the PMNS
+> (iv) a Sylvester-inertia reduction of A-BCC, now closed on the retained
+> measurement framework via a multi-observable sigma-chain that combines
+> retained Cl(3)/Z³ theorems with the PMNS
 > angle-triple pin, now sharpened by an exact fixed-`N_e` source-manifold
 > theorem showing the target already lies on a regular `2`-real source
 > manifold together with a center-law positive-sheet no-go showing that the
@@ -400,6 +406,7 @@ the primary closure runner and its verification counts are:
 | DM A-BCC (Sylvester signature-forcing) | `frontier_dm_abcc_signature_forcing_theorem.py` | 54 | path-independent via IVT + det sign |
 | DM A-BCC (PMNS Non-Singularity conditional) | `frontier_dm_abcc_pmns_nonsingularity_theorem.py` | 38 | conditional closure |
 | DM A-BCC (sigma-chain attack cascade) | `frontier_dm_pns_attack_cascade.py` | 47 | multi-observable chain |
+| DM A-BCC (retained measurement closure) | `frontier_dm_abcc_retained_measurement_closure_2026_04_21.py` | 15 | integration theorem; review-surface closure grade |
 | DM A-BCC (assumptions audit) | `frontier_dm_abcc_assumptions_audit.py` | 21 | five-route structural no-go |
 | DM A-BCC (active-chamber completeness) | `frontier_dm_pmns_chamber_spectral_completeness_theorem_2026_04_20.py` | 11 | exact chamber `χ²=0` set = `{Basin 1, Basin 2, Basin X}` |
 | DM A-BCC (`σ_hier` upper-octant selector) | `frontier_dm_sigma_hier_upper_octant_selector_theorem_2026_04_20.py` | 14 | closes the hierarchy-permutation ambiguity without importing T2K sign |
