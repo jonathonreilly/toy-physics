@@ -2,14 +2,13 @@
 
 **Date:** 2026-04-20
 **Lane:** Scalar-selector cycle 1 — joint closure of I1 (Koide `Q = 2/3`) and I2/P (Brannen phase `δ = 2/9`).
-**Status:** **Conditional closure — reviewer-facing.** Six independent
-retained paths at d = 3 converge at exact Q = 2/3 and δ = 2/9, but the
-closure rests on accepting the qubit-lattice-dim / anomaly-arithmetic
-identification (`Q_Koide = dim(Cl(3) spinor)/dim(Z³ lattice) = |Y(d_R)|`)
-as a valid structural bridge. **This note does NOT overturn the same-day
-`KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE`** — the no-go rules out four
-specific character-data candidates for P; this note uses a different
-route (Q-closure → CPC → δ). Reviewer decision needed. See §1.2a.
+**Status:** **SUPERSEDED by `KOIDE_UNCONDITIONAL_CLOSURE_2026-04-20.md`**
+which establishes unconditional closure via R4-6 (retained C_3[111] IS
+the spatial 2π/3 rotation about the Z³ body-diagonal, with fixed-locus
+in 4D giving R⁴/Z_3 transverse geometry and APS η = 2/9 rad). This
+earlier note provides one of the 8+ independent derivation routes
+(qubit-lattice-dim identification), but the definitive closure uses
+the spatial-rotation + APS η-invariant chain.
 **Primary runner:** `scripts/frontier_koide_qubit_lattice_dim_closure.py`
 (PASS=62, FAIL=0).
 

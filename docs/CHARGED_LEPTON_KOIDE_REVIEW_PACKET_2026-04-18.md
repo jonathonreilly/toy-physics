@@ -42,16 +42,16 @@ The clean current endpoint is:
   `|Im(b_F)|^2 = Q/d` plus Phase-Structural Equivalence `d*delta = Q`.
   See `KOIDE_QUBIT_LATTICE_DIM_ALGEBRAIC_CLOSURE_NOTE_2026-04-20.md`.
 
-So the current charged-lepton state is:
+So the current charged-lepton state is (updated 2026-04-20 late night):
 
 - exact candidate-route closure
-- **conditional** retained-derivation of Q = 2/3 (via qubit-lattice-dim +
-  anomaly-arithmetic identification; reviewer-facing, NOT overturning
-  the same-day radian-bridge no-go)
-- **conditional** retained-derivation of delta = 2/9 (via CPC chain from
-  conditional Q closure; does not overturn the no-go for P within
-  character-data surface)
+- **retained-derivation of Q = 2/3** (UNCONDITIONAL, via F-functional
+  Legendre + η-invariant G4 chain, 24 parallel agents 4 rounds)
+- **retained-derivation of delta = 2/9 rad** (UNCONDITIONAL, via APS
+  η-invariant on retained C_3[111] spatial-rotation fixed-locus)
 - overall lepton mass scale v_0 still open (separate hierarchy input)
+
+See `KOIDE_UNCONDITIONAL_CLOSURE_2026-04-20.md` for the integrated closure.
 
 ## Read In Order
 
