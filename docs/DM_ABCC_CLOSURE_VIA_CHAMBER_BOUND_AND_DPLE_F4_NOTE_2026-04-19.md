@@ -9,6 +9,19 @@ already retained on branch / main.
 **Dedicated runner:** `scripts/frontier_dm_abcc_chamber_dple_closure.py`
 **Runner result:** `PASS = 39, FAIL = 0`
 
+**2026-04-21 correction.** This note was written on the older four-basin chart
+`{Basin 1, Basin N, Basin P, Basin X}`. The retained basin-enumeration
+certificate later corrected that chart to five basins by adding the missing
+in-chamber `C_neg` point Basin 2. The corrected native-route statement now
+lives in
+`docs/DM_ABCC_FIVE_BASIN_CHAMBER_DPLE_SUPPORT_THEOREM_NOTE_2026-04-21.md` with
+runner
+`scripts/frontier_dm_abcc_five_basin_chamber_dple_support_2026_04_21.py`.
+That update shows the chamber+DPLE route survives the five-basin correction:
+`F_4(Basin 2) = FALSE`, so the corrected composition still selects Basin 1
+uniquely. The present note should therefore be read as the historical
+four-basin precursor, not the final corrected native-route artifact.
+
 ---
 
 ## 0. Executive summary

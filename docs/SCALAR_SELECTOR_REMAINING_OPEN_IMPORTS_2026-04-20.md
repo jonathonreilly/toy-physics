@@ -408,6 +408,7 @@ the primary closure runner and its verification counts are:
 | DM A-BCC (sigma-chain attack cascade) | `frontier_dm_pns_attack_cascade.py` | 47 | multi-observable chain |
 | DM A-BCC (retained measurement closure) | `frontier_dm_abcc_retained_measurement_closure_2026_04_21.py` | 15 | integration theorem; review-surface closure grade |
 | DM A-BCC (assumptions audit) | `frontier_dm_abcc_assumptions_audit.py` | 21 | five-route structural no-go |
+| DM A-BCC (corrected five-basin chamber ∩ DPLE) | `frontier_dm_abcc_five_basin_chamber_dple_support_2026_04_21.py` | 24 | Basin 2 fails `F_4`; corrected native chamber+DPLE route still selects Basin 1 |
 | DM A-BCC (active-chamber completeness) | `frontier_dm_pmns_chamber_spectral_completeness_theorem_2026_04_20.py` | 11 | exact chamber `χ²=0` set = `{Basin 1, Basin 2, Basin X}` |
 | DM A-BCC (`σ_hier` upper-octant selector) | `frontier_dm_sigma_hier_upper_octant_selector_theorem_2026_04_20.py` | 14 | closes the hierarchy-permutation ambiguity without importing T2K sign |
 | DM A-BCC (upper-octant / source-cubic selector) | `frontier_dm_pmns_upper_octant_source_cubic_selector_theorem_2026_04_20.py` | 14 | fixes Basin 1 uniquely on the active chamber |

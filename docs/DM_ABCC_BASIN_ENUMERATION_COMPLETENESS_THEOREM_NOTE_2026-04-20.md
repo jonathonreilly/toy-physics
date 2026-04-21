@@ -315,17 +315,18 @@ selects Basin 1 via the composition `(C1) chamber ∩ (C2) DPLE F_4`.
 Under the corrected five-basin enumeration:
 
 - (C1) chamber survivors: `{Basin 1, Basin 2, Basin X}`  (was {Basin 1, Basin X})
-- (C2) F_4 passers: need verification against Basin 2
+- (C2) F_4 passers: `{Basin 1}`. The missing Basin 2 check is now done in
+  `docs/DM_ABCC_FIVE_BASIN_CHAMBER_DPLE_SUPPORT_THEOREM_NOTE_2026-04-21.md`:
+  Basin 2 has `Δ_2 < 0`, no interior Morse-index-0 critical point, and
+  therefore `F_4(Basin 2) = FALSE`.
 
-The runner does not rerun F_4 on Basin 2 here; that is work for an
-amendment to the closure note. What this completeness theorem
-establishes is (i) the chart has five basins, not four, and (ii) the
-three in-chamber basins are `{Basin 1, Basin 2, Basin X}`. Whether
-`F_4(Basin 2)` passes or fails is a separate algebraic check; if it
-fails (which is the expected outcome given Basin 2's C_neg status),
-the A-BCC closure holds unchanged. If it passes, the Sylvester
-signature-forcing theorem independently excludes Basin 2 from the
-A-BCC physical-sheet selection.
+So the corrected composition remains
+
+```text
+{Basin 1, Basin 2, Basin X} ∩ {Basin 1} = {Basin 1}.
+```
+
+The older chamber+DPLE route survives the five-basin correction intact.
 
 ---
 
@@ -375,18 +376,15 @@ composes:
 2. **(C2) DPLE F_4 selector** on the chamber survivors.
 
 Basin 2 is in C_neg (det(H) = −70 539) so it is **Sylvester-excluded**
-from A-BCC's C_base physical-sheet restriction, regardless of whether
-(C2) passes or fails on Basin 2. Explicit F_4 evaluation on Basin 2
-(cubic coefficients `(c₀, c₁, c₂, c₃)` from the closure runner's
-`cubic_coeffs(H_BASE, J(Basin 2))`) is a straightforward runner
-extension; it should return `F_4 = FALSE` for consistency with
-Sylvester signature exclusion.
+from A-BCC's C_base physical-sheet restriction, and the explicit updated
+five-basin chamber+DPLE theorem now also shows
+`F_4(Basin 2) = FALSE` directly.
 
 **Net effect on A-BCC closure:** unchanged. Basin 1 remains the
 unique A-BCC physical-sheet ∩ chamber ∩ F_4 basin. The closure note
 `DM_ABCC_CLOSURE_VIA_CHAMBER_BOUND_AND_DPLE_F4_NOTE_2026-04-19.md`
 should be amended to list five basins, not four, in its §2
-enumeration table, with Basin 2 flagged as C_neg (Sylvester-excluded).
+enumeration table, with Basin 2 flagged as C_neg and `F_4 = FALSE`.
 
 ---
 

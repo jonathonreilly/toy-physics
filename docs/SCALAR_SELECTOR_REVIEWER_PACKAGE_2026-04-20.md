@@ -203,6 +203,13 @@ upstream; see
 
 **Theorem (DPLE dim-parametric extremum).** On any retained linear Hermitian pencil, `log|det H(t)|` has at most `⌊d/2⌋` interior Morse-index-0 critical points; at `d = 3` exactly one. On the corrected five-basin chart, the chamber survivors are `{Basin 1, Basin 2, Basin X}`. The cycle-2 completeness theorem and the retained signature results place Basin 2 and Basin X on the `C_neg` sheet, so the A-BCC sheet-restricted DPLE comparison remains the pair `{Basin 1, Basin X}` analyzed in the closure note, and the F_4 discriminant test `Δ = c_2² − 3 c_1 c_3 > 0` selects Basin 1 uniquely there.
 
+**2026-04-21 native-route sharpening.** The corrected five-basin chamber+DPLE
+support theorem now checks the previously missing Basin 2 case directly:
+`F_4(Basin 2) = FALSE` by a negative DPLE discriminant, so the corrected
+composition `chamber ∩ F_4` still selects Basin 1 uniquely on the retained
+five-basin chart. This sharpens the strongest current native A-BCC route,
+but it still does not by itself derive the source chart axiom-natively.
+
 **Proof.** Uhlig 1982 sign-characteristic matrix-pencil classification backbone; verified in `scripts/frontier_dm_dple_theorem.py` (19 PASS, 0 FAIL) and `scripts/frontier_dm_abcc_chamber_dple_closure.py` (39 PASS, 0 FAIL).
 
 ### §3.3 Supporting — 5-route assumptions audit
@@ -385,6 +392,7 @@ All runners pass with no hardcoded `True` PASS annotations. Every PASS is a nume
 | A-BCC PMNS-non-singularity | `frontier_dm_abcc_pmns_nonsingularity_theorem.py` | 33 | 0 |
 | A-BCC retained-measurement closure | `frontier_dm_abcc_retained_measurement_closure_2026_04_21.py` | 15 | 0 |
 | A-BCC chamber ∩ DPLE | `frontier_dm_abcc_chamber_dple_closure.py` | 39 | 0 |
+| A-BCC corrected five-basin chamber ∩ DPLE | `frontier_dm_abcc_five_basin_chamber_dple_support_2026_04_21.py` | 24 | 0 |
 | A-BCC 5-route audit | `frontier_dm_abcc_assumptions_audit.py` | 16 | 0 |
 | DPLE dim-parametric extremum | `frontier_dm_dple_theorem.py` | 19 | 0 |
 | Split-2 interval-certified dominance closure | `frontier_dm_split2_interval_certified_dominance_closure_2026_04_21.py` | 17 | 0 |
