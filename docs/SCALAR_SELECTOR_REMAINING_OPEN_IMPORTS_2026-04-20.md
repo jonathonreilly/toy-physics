@@ -215,6 +215,19 @@ live in the `1`-dimensional selected-line base itself; it has to come from
 ambient continuation/transport data or extra retained Wilson/lattice
 structure.
 
+**Further reduction (2026-04-20 late):** combining the actual Berry theorem,
+the selected-line cyclic-response bridge, the selected-line local no-go, and
+the retained anomaly-forced-time theorem now sharpens the live native route
+further. Since `δ(m)` is already the actual Berry holonomy and `δ = 2/9`
+already fixes one unique interior first-branch point `m_*`, while no local
+selected-line invariant packet can distinguish that point, the residual
+postulate `P` is now reduced to a **one-clock ambient `3+1`
+continuation/endpoint/transport law** or to an extra retained Wilson/lattice
+phase datum on that same ambient. In other words: the anomaly/time derivation
+does not close `P` by itself, but it does identify the only remaining native
+category where a closure law could still live. See
+`docs/KOIDE_P_ONE_CLOCK_3PLUS1_TRANSPORT_REDUCTION_NOTE_2026-04-20.md`.
+
 **Minimal additional inputs now known to suffice (any one closes `P`):**
 
 1. **Lattice propagator radian quantum.** A retained identity of the form

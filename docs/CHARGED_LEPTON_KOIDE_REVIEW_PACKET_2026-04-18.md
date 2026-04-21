@@ -153,6 +153,17 @@ If reviewer accepts: both I1 and I2/P close; if reviewer rejects:
 both remain retained-observational per note 21 and the open-imports
 register.
 
+**(April 20 late - reduction note 24)** Even if reviewer declines note 22 as
+full closure, the open content of `I2 / P` is now much sharper. The new
+selected-line local no-go proves the actual `CP^1` Berry packet is too simple
+to pick the interior point `delta = 2/9`, while the retained anomaly-forced-
+time theorem already fixes the native ambient as one-clock physical `3+1`.
+So the live native route is no longer "find a smarter local Berry scalar." It
+is now: derive a one-clock ambient `3+1` endpoint/transport law, or derive an
+extra Wilson/lattice phase datum on that ambient, whose pullback fixes the
+Koide point. This helps explain why the anomaly/time line materially supports
+the `I1/I2` evening route without yet forcing canonical promotion.
+
 Items that remain open:
 
 - overall lepton mass scale `v_0 ~ 17.72 sqrt(MeV)` is a separate hierarchy
