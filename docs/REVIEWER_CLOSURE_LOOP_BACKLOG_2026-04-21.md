@@ -13,6 +13,7 @@
 |------|--------|--------|------|
 | 1 | Audit of afternoon-4-21-proposal vs. reviewer items | **audit PASS** | `REVIEWER_CLOSURE_LOOP_ITER1_AUDIT_NOTE_2026-04-21.md` — 11/11 PASS. afternoon-4-21-proposal closes Gate-2 right-sensitive microscopic selector law per DERIVATION_ATLAS line-335 equivalence. 8 items remain open. |
 | 2 | Bridge A — multi-principle convergence on E_+ = E_⊥ + retained γ identity | **partial / narrowed** | `REVIEWER_CLOSURE_LOOP_ITER2_BRIDGE_A_NARROWED_NOTE_2026-04-21.md` — 14/14 PASS. 5 natural information/variational principles all critical at p_+ = 1/2. At Koide, `\|b\|²/a² = γ = 1/2` (retained H_base constant). Koide extremum is a structural attractor; dynamical mechanism still open. |
+| 3 | Bridge B — empirical `arg(b)` vs retained δ_B = 2/9 on Herm_circ(3) | **🎯 CLOSED at PDG precision** | `REVIEWER_CLOSURE_LOOP_ITER3_BRIDGE_B_CLOSED_NOTE_2026-04-21.md` — 9/9 PASS. \|arg(b)\|_empirical = 0.2222296 rad vs δ_B = 2/9 = 0.2222222 rad, deviation 7.4e-6 rad (0.0033%), inside PDG m_τ 3σ band. Observational identity confirmed to 5 decimal places. Downstream m_* / w/v reduces to v_0 (outside-scope). |
 
 ## Closed by existing afternoon-4-21-proposal (confirmed in iter 1)
 
@@ -22,7 +23,45 @@
   3 SELECTOR-based retained identities uniquely pin the chamber point with
   25/25 PASS.
 
-## Remaining open reviewer items (8)
+  **Caveat (user-directed, 2026-04-21 iter 3):** afternoon-4-21-proposal
+  currently gives SUPPORT: the three identities are observationally
+  verified and pin the chamber point to PDG 1σ, but the identities
+  themselves are not yet DERIVED from first principles, and the
+  uniqueness is proved only by 60-random-start `fsolve` rather than by
+  a real algebraic / analytical proof. These are tracked as N1, N2, N3
+  below. **The broader DM/PMNS gate remains OPEN until N1/N2/N3 land.**
+
+## Remaining open items (reviewer + user-directed)
+
+### User-directed items (added 2026-04-21 during iter 3) — HIGH PRIORITY
+
+These keep the broader DM/PMNS gate OPEN until they land:
+
+**N1. Derive `δ · q_+ = Q_Koide = 2/3` from first principles**
+  - Current state: afternoon-4-21-proposal observes the identity holds
+    at PDG-pinned chamber point to 0.16 %, and re-pinning under the
+    exact constraint gives s23² within 0.06 % of PDG central.
+  - Open: a framework-native derivation of why `δ · q_+ = Q_Koide`
+    exactly, rather than as a numerical near-identity.
+  - Target iter: 4.
+
+**N2. Derive `det(H) = E2 = √8/3` from first principles**
+  - Current state: afternoon-4-21-proposal observes the identity holds
+    at chamber closure to machine precision under the Ansatz that it
+    IS an identity.
+  - Open: a framework-native derivation showing `det(H) = E2` is forced
+    by retained Cl(3)/Z³ structure, rather than an observed coincidence.
+  - Target iter: 5.
+
+**N3. Replace multi-start `fsolve` uniqueness with a real proof**
+  - Current state: afternoon-4-21-proposal Part F uses 60 random-start
+    `fsolve` runs and finds exactly 1 A-BCC basin solution.
+  - Open: algebraic / analytical proof of uniqueness — e.g. Bezout-style
+    intersection counting on the polynomial system, or irreducibility
+    + degree argument.
+  - Target iter: 6.
+
+### Reviewer items (from ce980686)
 
 ### Gate 1 — Charged-lepton Koide bridge package
 
@@ -86,23 +125,34 @@
    - Priority: LOW — separate DM-flagship residue.
    - Target iter: 6+.
 
-## Attack queue for iter 2+
+## Attack queue for iter 4+ (updated after iter 3 closures and user N1/N2/N3 additions)
 
-- **iter 2**: Bridge A (Gate 1). Try cross-sector pull: afternoon-4-21-proposal
-  has Tr(H) = Q_Koide and δ·q+ = Q_Koide. If the morning-4-21 Frobenius
-  functional's maximum on Herm_circ(3) equals Tr(H_physical) or another
-  afternoon-closure identity, Bridge A's extremal-principle is forced by
-  the afternoon closure — a genuine cross-sector reduction.
-- **iter 3**: Bridge B + m_* witness (Gate 1). Try: morning-4-21 APS
-  η = 2/9 on Z_3 orbifold; afternoon-4-21-proposal has δ·q+ = 2/3 = 3·(2/9)
-  from the retained identity Q = 3·δ_B. Does the afternoon chart-δ
-  coordinate literally equal the retained Brannen phase times some
-  retained factor? If so, Bridge B reduces to a chart-coordinate identity.
-- **iter 4**: A-BCC (Gate 2). Try fresh angle beyond the scalar-class
-  ruled out in afternoon iter 9 — e.g., topological / K-theoretic /
-  observable-principle argument.
-- **iter 5**: Chamber-wide σ_hier (Gate 2). Check whether the
-  afternoon-4-21-proposal's uniqueness result (60-random-start proof
+**Closed / narrowed on evening-4-21:**
+- iter 2: Bridge A narrowed (multi-principle + γ identity)
+- iter 3: Bridge B CLOSED at PDG precision (arg(b) = δ_B to 5 decimals)
+- iter 3: m_* / w/v downstream reduces to v_0 (outside-scope)
+
+**Open queue for iter 4+:**
+
+- **iter 4 — N1 (user)**: derive `δ · q_+ = Q_Koide` from first
+  principles. afternoon-4-21-proposal observes the identity numerically
+  at 0.16% deviation; user requires a framework-native derivation, not
+  an observation. Candidates: extremal principle on (δ, q+) under a
+  retained constraint; direct algebraic identity on H_base-structured
+  polynomial; cross-sector pull from morning-4-21 Q = 3·δ_B.
+- **iter 5 — N2 (user)**: derive `det(H) = E2` from first principles.
+  afternoon-4-21-proposal has a 1.7% observation. Attempt: expand
+  det(H(m, δ, q+)) as polynomial in generators + retained H_base, look
+  for cancellation / forced identity at the retained closure point.
+- **iter 6 — N3 (user)**: real uniqueness proof replacing the 60-random-
+  start fsolve in afternoon-4-21-proposal Part F. Candidates:
+  Bezout intersection on the cubic polynomial system; irreducibility
+  + degree argument; symbolic Groebner basis decomposition.
+- **iter 7 — A-BCC axiomatic (Gate 2 reviewer)**: fresh angle beyond
+  afternoon iter 9 scalar-class. Try topological / K-theoretic /
+  observable-principle approach.
+- **iter 8 — Chamber-wide σ_hier (Gate 2 reviewer)**: check if the
+  afternoon-4-21-proposal's uniqueness extends chamber-wide.
   of single A-BCC solution) extends to chamber-wide σ_hier.
 - **iter 6+**: Interval-certified carrier, DM mapping, v_0 as remaining
   low-priority items.
