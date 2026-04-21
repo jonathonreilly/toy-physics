@@ -238,6 +238,46 @@ arXiv paper structure covering I1 + I2/P + (I5 conjecture or closure).
 - **Holographic / AdS correspondence**: if retained Cl(3)/Z³ has a
   gravity dual, PMNS comes from boundary CFT data.
 
+## Iteration 31+ specific attack candidates (sharpened by iter 31 setup)
+
+### Identify retained off-diagonal H' with h_{23} ~ √3·δQ·(m_2-m_3)
+
+From iter 31: first-order perturbation theory needs H' with:
+  h_{23} = <ν_2^{TBM}|H'|ν_3^{TBM}> proportional to √3·δ·Q·(m_2 - m_3)
+
+Specific candidates for iter 32+:
+
+**SA1: S_3-breaking Majorana mass with Brannen phase structure**
+  M_ν = α·I + β·(J-I) + ε·H_Brannen where H_Brannen is a Brannen-like
+  operator with phase δ. Check if specific H_Brannen gives h_{23} form.
+
+**SA2: Off-diagonal Cl(3) Yukawa**
+  If charged lepton Yukawa Y_l has off-diagonal (Q, δ)-dependent
+  coefficients in mass basis, check induced PMNS structure.
+
+**SA3: Pauli-like off-diagonal matrix element**
+  H'_{ij} = δ · ε_{ijk} · (component involving m_k). Specific retained
+  form based on Cl(3) vector structure.
+
+**SA4: Commutator [B_retained, M_0]**
+  where B_retained is the SELECTOR bivector and M_0 is the S_3-invariant
+  Majorana mass. Commutators with bivectors are natural off-diagonal
+  operators.
+
+**SA5: Modular form origin**
+  δ = 2/9 as APS Dedekind sum might connect to modular L-values.
+  Possibly unlocks h_{23} structure via L-function identities.
+
+### Sum Rule 1 factor-2 derivation (sub-sub-attack)
+
+Iter 18's SR1 (θ_13 = 2·(θ_23 − π/4)) requires explaining the factor 2.
+In perturbation theory, this means θ_13 responds at "rate 2α" while
+θ_23 responds at "rate α" for a single driving parameter α.
+
+Candidate: if H' has specific block structure coupling ν_3 to two
+degrees of freedom (V_{e,3} and V_{μ,3}/V_{τ,3} split), the 2:1 rate
+ratio may emerge naturally.
+
 ## Loop discipline
 
 1. **Each iteration**: pick ONE attack from the backlog. Execute to
