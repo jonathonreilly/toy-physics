@@ -214,6 +214,7 @@ end state is:
   point, but the current selector families still do not choose it
 - the remaining theorem gap is therefore a genuine right-sensitive
   microscopic selector-law problem, together with interval-certified
-  exact-carrier dominance/completeness and the final quantitative DM mapping
+  exact-carrier dominance/completeness. The reviewer-facing current-bank
+  quantitative mapping item is now closed separately.
 
 So the DM flagship gate remains open.

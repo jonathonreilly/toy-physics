@@ -707,8 +707,9 @@ local observable-curvature route, but they remain diagnostic rather than
 selector-closing. So the remaining positive theorem target is the
 right-sensitive microscopic selector law on `dW_e^H = Schur_Ee(D_-)`,
 equivalently the intrinsic `2`-real `Z_3` doublet-block point-selection law,
-together with the final quantitative DM mapping. That is why dark matter stays
-open.
+together with interval-certified exact-carrier dominance/completeness on the
+residual split-2 branch. The reviewer-facing current-bank quantitative
+mapping item is now closed separately. That is why dark matter stays open.
 
 The cosmology family is now cleaner than before and no longer needs to be
 treated as several unrelated blockers. The public package now carries a

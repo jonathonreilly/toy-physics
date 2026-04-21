@@ -11,8 +11,11 @@ theorem plus one named remaining source-side input `A-BCC`. The live G1
 PMNS-as-`f(H)` package is therefore now best read as a **bounded** package on
 an otherwise open flagship gate: `A-BCC` remains open, the observational
 hierarchy pairing `σ_hier = (2, 1, 0)` is fixed at the pinned chamber point
-but not yet as a chamber-wide / all-basin theorem, and the current-bank
-quantitative DM selector / mapping side is also still open. **The
+but not yet as a chamber-wide / all-basin theorem, the finer right-sensitive
+microscopic selector law remains open, and the residual carrier-side exact
+dominance/completeness item on the split-2 branch also remains open. The
+review-facing current-bank quantitative mapping item is now closed by
+`docs/DM_CURRENT_BANK_QUANTITATIVE_MAPPING_NOTE_2026-04-21.md`. **The
 previously-listed `q_H = 0` conditional has been discharged as GAUGE
 (retained)** via the Higgs `Z_3`-charge gauge-redundancy theorem.
 **Framework convention:** "axiom" means only the single framework axiom `Cl(3)` on `Z^3`.

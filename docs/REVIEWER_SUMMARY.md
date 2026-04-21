@@ -158,18 +158,19 @@ Current quantitative statuses:
   linear-path signature theorem at the pinned point, a reviewed selector
   obstruction stack that compresses selector-side ambiguity to intrinsic
   threshold-law nonrealization and exhausts the tested carrier-side pressure
-  to two explicit split-2 upper-face neighborhoods, and a reviewed Wilson
-  direct-descendant science stack showing that the current package carries no
-  hidden Wilson-to-`dW_e^H` descendant law while explicit structured positive
-  model classes and manifold-valued constructive positive exact closure
-  already exist on the fixed native `N_e` seed surface: the remaining live
-  blockers are the named baseline-connected-component input `A-BCC`, the
-  finer right-sensitive microscopic selector law for the physical source
-  branch / point, interval-certified exact-carrier
-  dominance/completeness on the residual split-2 selector branch, and
-  current-bank quantitative DM mapping; `σ_hier = (2, 1, 0)` is fixed
-  observationally at the pinned chamber point, but broader chamber-wide /
-  all-basin uniqueness is still out of scope
+  to two explicit split-2 upper-face neighborhoods, a new dense-grid /
+  empirical-Lipschitz support packet on those residual boxes, a closed
+  reviewer-facing current-bank quantitative mapping note, and a reviewed
+  Wilson direct-descendant science stack showing that the current package
+  carries no hidden Wilson-to-`dW_e^H` descendant law while explicit
+  structured positive model classes and manifold-valued constructive positive
+  exact closure already exist on the fixed native `N_e` seed surface: the
+  remaining live blockers are the named baseline-connected-component input
+  `A-BCC`, the finer right-sensitive microscopic selector law for the
+  physical source branch / point, and interval-certified exact-carrier
+  dominance/completeness on the residual split-2 selector branch;
+  `σ_hier = (2, 1, 0)` is fixed observationally at the pinned chamber point,
+  but broader chamber-wide / all-basin uniqueness is still out of scope
 - promoted CKM atlas/axiom package on the canonical tensor/projector surface, with older Cabibbo / NNI / partial Jarlskog notes retained only as route history
 - reviewer-facing [QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md](QUARK_MASS_RATIO_REVIEW_PACKET_2026-04-18.md) now bundles the live down-type CKM-dual lane, the bounded up-type inversion extension, the minimal-surface CP no-go, the reduced projector-ray closure, the parameter audit, the widened up-amplitude candidate scan, the restricted native-expression scan, the tensor-endpoint bridge and resolution, the endpoint-readout constraint lane, the new E-channel endpoint-quotient law candidate, the new endpoint-ratio-chain law, the new Route-2 exact readout/time-coupling theorem block, the scalar-comparison bridge band, the denominator-admissibility theorem, the `sqrt(7)` counterexample simplification, and the partition revisit: the current package now reduces the remaining non-derived quark-CP content to one sharply structured endpoint split whose resolved status is still bounded, because the exact `1/6` refit branch survives, the bounded slope-ratio anchored branch survives, the support surface fixes the readout coefficients exactly but only through channel ratios, the E-channel primitive narrows first to the bounded endpoint chain `{5/6, -2, -8/9} -> 15/8 -> 21/4 -> 21/8` and then to the exact missing readout-map entry `beta_E / alpha_E = 21/4` once the `T`-side candidates are granted, the slice backbone is exact but the induced `Theta_R -> Lambda_R` time-coupling law remains non-unique until that readout entry is derived, the scalar bridge windows remain disjoint, the admissible denominator class still contains `sqrt(42)`, and the old interior partition collapses to a phase-deformed edge, while the broader complex-carrier note remains as fallback existence proof
 - cosmology companions
@@ -215,10 +216,11 @@ Current quantitative statuses:
    proposed rather than retained-derived, and the current uniqueness statement
    is numerical rather than theorem-grade.
    The gate remains open because the named baseline-connected-component input
-   `A-BCC`, the finer right-sensitive microscopic selector law,
+   `A-BCC`, the finer right-sensitive microscopic selector law, and
    interval-certified exact-carrier dominance/completeness on the residual
-   split-2 selector branch, and current-bank quantitative DM mapping are
-   still open. The hierarchy pairing `σ_hier = (2, 1, 0)` is already fixed
+   split-2 selector branch are still open. The reviewer-facing current-bank
+   quantitative mapping item is now closed. The hierarchy pairing
+   `σ_hier = (2, 1, 0)` is already fixed
    observationally at the retained pin; what remains open there is any
    chamber-wide / all-basin extension beyond the pinned-point theorem.
 

@@ -197,7 +197,7 @@ Current status from that stack:
 
 ## Bounded Prediction Surface
 - W-boson same-surface EW consistency probe. Reviewer entry point: [W_MASS_DERIVED_NOTE.md](../../W_MASS_DERIVED_NOTE.md). Repo status: `bounded`. On the retained EW lane the framework-side readouts are `M_W^tree = 79.7956 GeV`, `M_W^RGE = 80.5573 GeV`, `M_Z^tree = 91.2663 GeV`. The remaining `~0.19 GeV` `M_W` gap tracks the existing retained `g_2(v)` precision and is therefore treated as a reviewer-facing same-surface consistency probe, not as a retained or few-MeV SM-indirect `M_W` prediction.
-- DM flagship gate, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` bounded package that now fixes `σ_hier = (2, 1, 0)` observationally at the pinned chamber point and gives a CP-phase no-go for the known `C_neg` chi²=0 basins under the physical pairing, and a reviewed selector obstruction stack together with a reviewed Wilson direct-descendant science stack showing that the current package carries no hidden Wilson-to-`dW_e^H` descendant law while explicit structured positive model classes and manifold-valued constructive positive exact closure already exist on the fixed native `N_e` seed surface: the remaining live blockers are `A-BCC` as an axiom-native branch-choice law, the finer right-sensitive microscopic selector law for the physical source branch / point, interval-certified exact-carrier dominance/completeness on the residual split-2 selector branch, and current-bank quantitative DM mapping
+- DM flagship gate, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` bounded package that now fixes `σ_hier = (2, 1, 0)` observationally at the pinned chamber point and gives a CP-phase no-go for the known `C_neg` chi²=0 basins under the physical pairing, a dense-grid / empirical-Lipschitz support packet on the two residual split-2 upper-face neighborhoods, a reviewer-facing current-bank quantitative mapping note, and a reviewed selector obstruction stack together with a reviewed Wilson direct-descendant science stack showing that the current package carries no hidden Wilson-to-`dW_e^H` descendant law while explicit structured positive model classes and manifold-valued constructive positive exact closure already exist on the fixed native `N_e` seed surface: the remaining live blockers are `A-BCC` as an axiom-native branch-choice law, the finer right-sensitive microscopic selector law for the physical source branch / point, and interval-certified exact-carrier dominance/completeness on the residual split-2 selector branch
 - persistent exact-lattice compact-object companion in the package, with one
   retained blended readout on the nearby family and a `top4` multistage floor
   that survives beyond the widened pocket, but still below persistent
@@ -241,9 +241,10 @@ Current status from that stack:
    `N_e` seed surface, while the tested carrier-side pressure is exhausted to
    two explicit split-2 upper-face neighborhoods. The gate remains open
    because `A-BCC` is still observationally grounded rather than axiom-native,
-   the finer right-sensitive microscopic selector law, interval-certified
+   the finer right-sensitive microscopic selector law, and interval-certified
    exact-carrier dominance/completeness on the residual split-2 selector
-   branch, and current-bank quantitative DM mapping are still open.
+   branch are still open. The reviewer-facing current-bank quantitative DM
+   mapping item is now closed.
 
 Outside the flagship paper surface, a curated neutrino boundary/support packet
 is now also live in the package:

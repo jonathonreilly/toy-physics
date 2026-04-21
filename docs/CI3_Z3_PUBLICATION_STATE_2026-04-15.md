@@ -256,8 +256,9 @@ The remaining live paper gates are:
    observationally grounded rather than axiom-native, and the finer
    right-sensitive microscopic selector law for the physical source
    branch / point, together with interval-certified exact-carrier
-   dominance/completeness on that residual split-2 selector branch and
-   current-bank quantitative DM mapping, is still missing.
+   dominance/completeness on that residual split-2 selector branch, is still
+   missing. The reviewer-facing current-bank quantitative mapping item is now
+   closed separately.
 
 Outside the flagship paper core, a live partial neutrino boundary/support
 packet is now also on `main`:
