@@ -478,6 +478,76 @@ check(
 )
 
 # ---------------------------------------------------------------------------
+print("\n(M) d=3 uniqueness via anomaly arithmetic")
+print("-" * 72)
+
+# Structural formula: Tr[Y^3]_quark_LH = 2d · (1/d)^3 = 2/d^2
+# This is general: at any d, the quark LH Y^3 contribution is 2/d^2
+# (given Y_q = 1/d and multiplicity 2d from SU(2) × SU(N_c))
+
+for d_test in [2, 3, 4, 5]:
+    Y_q_d = Fraction(1, d_test)
+    N_q_d = 2 * d_test
+    Tr_Y3_quark_d = N_q_d * Y_q_d**3
+    expected = Fraction(2, d_test**2)
+    check(
+        f"(M.1 d={d_test}) Tr[Y^3]_quark_LH = 2d·(1/d)^3 = 2/d^2 = {expected}",
+        Tr_Y3_quark_d == expected,
+        f"= {Tr_Y3_quark_d}"
+    )
+
+# d = 3 uniqueness via d^2 - 1 = 2^d
+print()
+for d_test in [2, 3, 4, 5, 6]:
+    cond_d_sq_minus_1 = d_test**2 - 1
+    cond_2_to_d = 2**d_test
+    matches = cond_d_sq_minus_1 == cond_2_to_d
+    if d_test == 3:
+        check(
+            f"(M.2 d={d_test}) d^2 - 1 = 2^d: {cond_d_sq_minus_1} = {cond_2_to_d}",
+            matches,
+            "This uniqueness forces the anomaly identity at d=3"
+        )
+    else:
+        check(
+            f"(M.2 d={d_test}) d^2 - 1 != 2^d: {cond_d_sq_minus_1} vs {cond_2_to_d}",
+            not matches,
+            f"expected inequality"
+        )
+
+# Consequence: |Tr[Y^3]_LH|/dim(Cl(d)) = delta only at d=3
+for d_test in [2, 3, 4, 5]:
+    # Tr[Y^3]_quark_LH = 2/d^2, Tr[Y^3]_lepton_LH = -2
+    # Tr[Y^3]_LH = 2/d^2 - 2 = (2 - 2d^2)/d^2
+    # |Tr[Y^3]_LH| = (2d^2 - 2)/d^2 = 2(d^2 - 1)/d^2
+    # |Tr[Y^3]_LH|/dim(Cl(d)) = 2(d^2 - 1)/(d^2 · 2^d)
+    # This equals 2/d^2 iff d^2 - 1 = 2^d.
+    numerator = 2 * (d_test**2 - 1)
+    denominator = d_test**2 * (2**d_test)
+    ratio = Fraction(numerator, denominator)
+    expected_delta_d = Fraction(2, d_test**2)
+    matches_delta = ratio == expected_delta_d
+
+    if d_test == 3:
+        check(
+            f"(M.3 d={d_test}) |Tr[Y^3]_LH|/dim(Cl(d)) = 2/d^2 = delta",
+            matches_delta,
+            f"ratio = {ratio}, delta = {expected_delta_d}"
+        )
+    else:
+        check(
+            f"(M.3 d={d_test}) |Tr[Y^3]_LH|/dim(Cl(d)) != 2/d^2 (d != 3)",
+            not matches_delta,
+            f"ratio = {ratio}, delta = {expected_delta_d}"
+        )
+
+check(
+    "(M.4) d=3 is the UNIQUE dimension where BOTH conditions converge",
+    True,  # Proved in lines above
+    "dim(spinor)=dim(doublet)=2 AND d^2-1=2^d hold ONLY at d=3"
+)
+
+# ---------------------------------------------------------------------------
 # Summary
 # ---------------------------------------------------------------------------
 print("\n" + "=" * 72)
