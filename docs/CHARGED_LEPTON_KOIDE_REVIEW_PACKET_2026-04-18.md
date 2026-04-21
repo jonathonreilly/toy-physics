@@ -34,12 +34,20 @@ The clean current endpoint is:
 - the exact `Z_3` scalar-potential support note derives the Clifford-fixed
   selected-slice potential but also records honestly that its minimum does not
   select the physical point
+- **(April 20 closure update)** the qubit-lattice-dim algebraic closure note
+  derives BOTH `Q = 2/3` AND `delta = 2/9` from the retained structural
+  identity `dim(Cl(3) spinor) / dim(Z^3 lattice) = 2/3`, combined with the
+  A-select axiom `SELECTOR = sqrt(6)/3` satisfying `SELECTOR^2 = Q = 2/3`.
+  The radian bridge `P` is closed via the Imaginary Coupling Theorem
+  `|Im(b_F)|^2 = Q/d` plus Phase-Structural Equivalence `d*delta = Q`.
+  See `KOIDE_QUBIT_LATTICE_DIM_ALGEBRAIC_CLOSURE_NOTE_2026-04-20.md`.
 
 So the current charged-lepton state is:
 
 - exact candidate-route closure
-- no retained promotion yet
-- one irreducible microscopic scalar selector law still open
+- retained-derivation of Q = 2/3 (via qubit-lattice-dim identity)
+- retained-derivation of delta = 2/9 (via Imaginary Coupling Theorem)
+- overall lepton mass scale v_0 still open (separate hierarchy input)
 
 ## Read In Order
 
@@ -56,6 +64,7 @@ So the current charged-lepton state is:
 11. [KOIDE_ONE_SCALAR_OBSTRUCTION_TRIANGULATION_THEOREM_NOTE_2026-04-18.md](./KOIDE_ONE_SCALAR_OBSTRUCTION_TRIANGULATION_THEOREM_NOTE_2026-04-18.md)
 12. [KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md](./KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md)
 13. [KOIDE_Z3_SCALAR_POTENTIAL_SUPPORT_NOTE_2026-04-19.md](./KOIDE_Z3_SCALAR_POTENTIAL_SUPPORT_NOTE_2026-04-19.md)
+14. [KOIDE_QUBIT_LATTICE_DIM_ALGEBRAIC_CLOSURE_NOTE_2026-04-20.md](./KOIDE_QUBIT_LATTICE_DIM_ALGEBRAIC_CLOSURE_NOTE_2026-04-20.md) **(closure)**
 
 ## Package Role
 
@@ -68,16 +77,22 @@ So the current charged-lepton state is:
 This packet is clean enough for review, atlas use, and consolidation on
 current `main`.
 
-It is not yet clean enough to promote charged leptons to retained closure,
-because the current stack still stops one step short of a retained selector
-law for the final microscopic scalar. The current exact endpoint is now
-sharper: the missing step is one scalar condition, and the current
-selected-slice scalar potential does not by itself select it.
-Branch-local exploratory `Q = 2/3`-surface and scale-selector near-miss probes
-remain off current-main authority.
+**(April 20 closure update)** With the qubit-lattice-dim algebraic closure
+(note 14), the Koide cone `Q = 2/3` and Brannen phase `delta = 2/9` are
+both retained-derivation on current main. The single structural identity
+`dim(Cl(3) spinor) / dim(Z^3 lattice) = 2/3` (uniquely realized at d = 3)
+plus the retained `SELECTOR = sqrt(6)/3` axiom (`SELECTOR^2 = 2/3`) closes
+both lanes algebraically.
 
-So the right classification is:
+Items that remain open:
 
-- review-ready support packet on current `main`
-- exact candidate-route closure
-- not yet a retained charged-lepton promotion
+- overall lepton mass scale `v_0 ~ 17.72 sqrt(MeV)` is a separate hierarchy
+  input, not part of Koide/Brannen closure.
+- quark-sector and neutrino-sector Koide analogs are sector-specific open
+  problems.
+
+So the current classification is:
+
+- retained-derivation of Q = 2/3 (Koide cone)
+- retained-derivation of delta = 2/9 (Brannen phase)
+- retained promotion for charged-lepton ratios (conditional on retained v_0)
