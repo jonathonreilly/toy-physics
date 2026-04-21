@@ -153,13 +153,21 @@ chosen. Key clarification: E_+ uses MATRIX-SPACE projector P_I
 and both forced. Iter 2 passes from "retained-derived + stress-tested"
 to **retained-forced** (no alternative consistent construction exists).
 
-### Attack E2 (I2/P analogous strengthening)
+### Attack E2 — COMPLETED (iter 10)
 
-**Target**: Produce an analogous "retained-forced" verification for
-iter 1 (δ = 2/9 via APS topological robustness) — a block-by-block
-check that each piece is forced, not chosen. Most of this is already
-in iter 1 + iter 6, but a dedicated runner would match iter 9's
-depth for I2/P.
+**Runner**: `scripts/frontier_koide_aps_block_by_block_forcing.py` (34/34 PASS).
+**Outcome**: I2/P RETAINED-FORCED. Each building block of iter 1's APS
+η = 2/9 derivation verified forced by retained axioms:
+- C_3[111] Rodrigues = cyclic permutation (symbolic)
+- Eigenvalues (1, ω, ω²) from char poly 1−λ³ (unique)
+- Tangent weights (1, 2) forced by eigenvalues
+- ABSS prerequisites all met (spin, Morse-Bott, compact)
+- Core identity (ω−1)(ω²−1) = 3 (exact)
+- η = 2/9 unique; alternative weights/p give different values
+
+**Both I1 and I2/P now RETAINED-FORCED** — user's stop criterion for
+these two gaps is fully met (no alternative consistent construction
+exists under retained axioms).
 
 ### Attack F (publication-draft consolidation)
 
