@@ -270,15 +270,15 @@ def main() -> int:
     # =========================================================================
     print_section("Part I — verdict on current-bank DM mapping")
 
+    all_pass = all(ok for _, ok, _ in PASSES)
+    record("I.1 Current-bank quantitative mapping explicit and consistent", all_pass)
+
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
     print(f"PASSED: {n_pass}/{n_total}")
     for name, ok, _ in PASSES:
         status = "PASS" if ok else "FAIL"
         print(f"  [{status}] {name}")
-
-    all_pass = n_pass == n_total
-    record("I.1 Current-bank quantitative mapping explicit and consistent", all_pass)
 
     print()
     print("VERDICT:")
