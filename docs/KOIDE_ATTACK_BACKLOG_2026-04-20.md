@@ -98,25 +98,19 @@ main now.
 
 ## Iteration 8+ specific candidates (ranked by concreteness)
 
-### Attack B1 (δ_CP sign from Cl(3) chirality — specific hypothesis)
+### Attack B1 — COMPLETED (iter 8)
 
-**Claim**: T2K preferred sin δ_CP < 0 follows from retained Cl(3)
-orientation combined with neutrino chirality.
+**Runner**: `scripts/frontier_koide_cl3_cp_orientation.py` (33/33 PASS).
+**Outcome**: Z₂ ORIENTATION DOF IDENTIFIED. The Cl(3) pseudoscalar
+I = e₁e₂e₃ satisfies I² = −1 and is central; both I ↔ +i and I ↔ −i
+are valid Cl(3) reps (complex-conjugate pair). T2K sin δ_CP < 0
+picks the negative orientation. Iter 8 REDUCES the δ_CP sign problem
+to a Z₂ choice but does not derive which is retained.
 
-Setup:
-- Cl(3) pseudoscalar I = e_1 e_2 e_3 has I² = −1, I central.
-- Under parity P: I → −I. Under C: I → ±I (convention-dependent).
-- Neutrinos are LH only (retained SM structure); charged leptons
-  are both LH and RH.
-- Conjecture: the "effective Cl(3) imaginary unit" is I for Dirac
-  (charged lepton), −I for Weyl-LH (neutrino).
-- Sign flip → sin δ_CP^neutrino = −sin δ_CP^charged-lepton.
-- If charged lepton sector has "natural" +π/2 CP phase (consistent
-  with SELECTOR > 0, δ = +2/9 > 0), then neutrino sector has −π/2,
-  giving sin δ_CP < 0 as T2K observes.
-
-**Test**: Write runner that verifies Cl(3) pseudoscalar acts opposite
-on LH vs RH Weyl spinors, quantifies the induced sign in J_CP.
+**Subsequent iter 9+ targets (post-iter 8)**:
+- Derive retained orientation from chirality (LH-only neutrinos).
+- Z₂ cobordism argument via Stiefel-Whitney class on PL S³ × R.
+- Consistency check with matter-antimatter asymmetry.
 
 ### Attack B2 (composite mechanism with Cl(3) operator identification)
 
