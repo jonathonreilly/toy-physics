@@ -65,12 +65,30 @@ The clean current endpoint is:
   `lambda_* = 0.015808703285395...`, giving direction cosine `0.996266...`
   to the PDG `sqrt(m)` direction; chamber slack is only a near-hit, not the
   exact root
+- **(April 20 evening — conditional closure support)** the qubit-lattice-dim
+  algebraic closure note packages a reviewer-facing route for BOTH
+  `Q = 2/3` and `delta = 2/9` from the retained structural identity
+  `dim(Cl(3) spinor) / dim(Z^3 lattice) = 2/3`, combined with the
+  A-select axiom `SELECTOR = sqrt(6)/3` satisfying `SELECTOR^2 = Q = 2/3`.
+  The strongest `I2 / P` route is dependent rather than standalone:
+  `|Im(b_F)|^2 = Q/d` plus Phase-Structural Equivalence `d*delta = Q`.
+  The quark-lepton bridge is explicit: the same unique traceless U(1) from
+  the `{SU(2)_weak, SWAP_{23}}` commutant forces `|Y(d_R)| = 2/3` via
+  tracelessness, and the factor 2 in `|Y(d_R)/Y(Q_L)| = 2` matches
+  `dim(Cl(3) spinor) = 2`. See
+  `KOIDE_QUBIT_LATTICE_DIM_ALGEBRAIC_CLOSURE_NOTE_2026-04-20.md` and
+  `HYPERCHARGE_IDENTIFICATION_NOTE.md`.
 
 So the current charged-lepton state is:
 
 - exact candidate-route closure
-- no retained promotion yet
-- one irreducible microscopic scalar selector law still open
+- **conditional** retained-derivation of Q = 2/3 (via qubit-lattice-dim +
+  anomaly-arithmetic identification; reviewer-facing, NOT overturning
+  the same-day radian-bridge no-go)
+- **conditional** retained-derivation of delta = 2/9 (via CPC chain from
+  conditional Q closure; does not overturn the no-go for P within
+  character-data surface)
+- overall lepton mass scale v_0 still open (separate hierarchy input)
 
 ## Read In Order
 
@@ -95,6 +113,7 @@ So the current charged-lepton state is:
 19. [KOIDE_TRANSPORT_GAP_CONSTANT_NO_GO_NOTE_2026-04-20.md](./KOIDE_TRANSPORT_GAP_CONSTANT_NO_GO_NOTE_2026-04-20.md)
 20. [KOIDE_WEIGHTED_CHARACTER_SOURCE_AXIS_THEOREM_NOTE_2026-04-20.md](./KOIDE_WEIGHTED_CHARACTER_SOURCE_AXIS_THEOREM_NOTE_2026-04-20.md)
 21. [KOIDE_HIGGS_DRESSED_RESOLVENT_ROOT_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_RESOLVENT_ROOT_THEOREM_NOTE_2026-04-20.md)
+22. [KOIDE_QUBIT_LATTICE_DIM_ALGEBRAIC_CLOSURE_NOTE_2026-04-20.md](./KOIDE_QUBIT_LATTICE_DIM_ALGEBRAIC_CLOSURE_NOTE_2026-04-20.md) **(evening closure)**
 
 ## Package Role
 
@@ -107,24 +126,46 @@ So the current charged-lepton state is:
 This packet is clean enough for review, atlas use, and consolidation on
 current `main`.
 
-It is not yet clean enough to promote charged leptons to retained closure,
-because the current stack still stops one step short of a retained selector
-law for the final microscopic scalar. The current exact endpoint is now
-sharper: the missing step is one scalar condition, and the current
-selected-slice scalar potential does not by itself select it, while the
-completed canonical `2 x 2` spectral carrier also does not provide a hidden
-low-complexity selector law. The strongest nearby assumption escapes have now
-also been formalized and closed honestly: the eigenvalue `Q = 2/3` route is
-only a one-real surface `beta_q23(m)`, the scale-selector near-miss
-`u*v*w = 1` is only a Koide-lane reparameterization built from `u_small(v,w)`,
-and the weighted character-source extension still cannot force anything but
-basis axes or degeneracies. The surviving Higgs-dressed transport avenue is
-now reduced to one scalar root law on the missing-axis resolvent lift, while
-the old transport-gap comparison is demoted to a constant-vs-constant bridge
-rather than an `m`-selection law.
+The cycle-1 no-go stack (notes 14-21) sharpened the open gap: the missing
+step was one scalar condition, not derivable from the selected-slice scalar
+potential or the canonical `2 x 2` spectral carrier. The strongest nearby
+assumption escapes (eigenvalue-`Q` surface, scale-selector near-miss,
+weighted character-source, Higgs-dressed resolvent, transport-gap constant)
+were all formalized and closed honestly as reparameterizations or
+constant-vs-constant bridges, not `m`-selection laws.
 
-So the right classification is:
+**(April 20 evening — conditional closure, note 22)** The qubit-lattice-dim
+algebraic closure proposes a derivation of BOTH `Q = 2/3` AND `delta = 2/9`
+from the retained structural identity `dim(Cl(3) spinor) / dim(Z^3 lattice)
+= 2/3` combined with the A-select axiom `SELECTOR = sqrt(6)/3`
+(`SELECTOR^2 = 2/3`). Supporting identities: `|Y(d_R)| = 2/3` (anomaly
+cancellation), and `delta = Tr[Y^3]_quark_LH = 2/9` (direct anomaly
+arithmetic at d=3). The quark-lepton bridge is explicit via the retained
+U(1) hypercharge commutant.
 
-- review-ready support packet on current `main`
-- exact candidate-route closure
-- not yet a retained charged-lepton promotion
+**Important caveat:** note 22 does NOT overturn note 21
+(`KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md`), which rules
+out four specific character-data candidates for the radian bridge P.
+Note 22 uses a DIFFERENT route: Q-closure via qubit-lattice-dim +
+anomaly arithmetic, then CPC d·delta = Q derives delta. Whether this
+constitutes a valid structural bridge is a reviewer judgment call.
+If reviewer accepts: both I1 and I2/P close; if reviewer rejects:
+both remain retained-observational per note 21 and the open-imports
+register.
+
+Items that remain open:
+
+- overall lepton mass scale `v_0 ~ 17.72 sqrt(MeV)` is a separate hierarchy
+  input, not part of Koide/Brannen closure.
+- quark-sector and neutrino-sector Koide analogs are sector-specific open
+  problems.
+
+So the current classification is:
+
+- **conditional** retained-derivation of Q = 2/3 (via qubit-lattice-dim
+  bridge acceptance; notes 21 and 22 together describe two compatible
+  views — no-go within character-data surface, closure via Q-chain)
+- **conditional** retained-derivation of delta = 2/9 (follows from Q
+  closure via CPC; same reviewer-decision dependency)
+- retained promotion for charged-lepton ratios (conditional on retained
+  v_0 AND acceptance of the Q closure bridge)
