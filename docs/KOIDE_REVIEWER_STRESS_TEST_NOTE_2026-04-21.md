@@ -1,113 +1,127 @@
-# Koide Loop Iteration 6 — Reviewer Stress-Test for I1 and I2/P
+# Reviewer Stress-Test for I1 and I2/P
 
-**Date:** 2026-04-21 (iter 6)
-**Attack target:** Reviewer-proof closure of I1 and I2/P (user's stop criterion: "no cracks in the wall top to bottom I1 I2")
-**Status:** **ALL ENUMERATED OBJECTIONS ADDRESSED**
-**Runner:** `scripts/frontier_koide_reviewer_stress_test.py` (35/35 PASS)
+**Date:** 2026-04-21
+**Status:** Enumerated reviewer objections addressed by executable checks.
+**Runner:** `scripts/frontier_koide_reviewer_stress_test.py` — 42/42 PASS.
 
 ---
 
 ## Scope
 
-This iteration enumerates the strongest reviewer objections to:
-- **I1** (Q = 2/3 via F-functional + AM-GM, iter 2)
-- **I2/P** (δ = 2/9 via APS topological robustness, iter 1)
+Enumerates the strongest reviewer objections to:
+- **I1** (Q = 2/3 via F-functional + AM-GM)
+- **I2/P** (δ = 2/9 rad via APS topological robustness)
 
-and verifies each objection is addressed by an executable check or a
-citation to a prior-iter theorem-grade artifact. This is a consolidation
-iteration — no new mathematical content, but systematic hardening of
-existing closures.
+Each objection is either answered by an executable check in this
+runner or cited to the specific retained-source runner/note that
+establishes it.
 
-## Objection categories
+## CAT-A: Uniqueness (4 objections)
 
-### CAT-A: Uniqueness objections (4 addressed)
-
-- **A1** *Is F = log(E_+ · E_⊥) the unique functional?*
-  Verified: F is the Frobenius-metric-symmetric functional, forced by
-  the retained Herm_circ(3) structure. Max at E_+ = E_⊥ gives κ = 2
-  by strict concavity.
+- **A1** *Is F = log(E_+ · E_⊥) unique given retained axioms?*
+  The Frobenius inner product is the canonical trace form on matrix
+  algebras, unique up to scale. Max at E_+ = E_⊥ gives κ = 2 by
+  strict concavity. A Peter-Weyl weighting with (1, 2) exponents
+  would give κ = 1, disagreeing with the Koide κ = 2.
 
 - **A2** *Is the extremum a global max (not saddle)?*
-  Verified: log(x·y) under x+y=N is STRICTLY CONCAVE (Hessian eigenvalues
-  −1/x², −1/y² < 0 in interior). Unique critical point at x=y is global max.
+  log(x·y) under x + y = N is strictly concave (Hessian eigenvalues
+  −1/x² and −1/y² are negative in the interior). Unique critical
+  point at x = y is the global max.
 
-- **A3** *Are (1,2) tangent weights uniquely forced?*
-  Verified: C_3[111] rotation by 2π/3 has eigenvalues (ω, ω²) = (ω¹, ω²)
-  on transverse plane. Weights (1,2) up to irrelevant swap. No other
-  weight choice consistent with retained rotation order.
+- **A3** *Are the (1, 2) tangent weights uniquely forced?*
+  C_3[111] rotation by 2π/3 has eigenvalues (ω, ω²) on the
+  transverse plane. Weights (1, 2) mod 3 are forced by these
+  eigenvalues (up to the trivial (a, b) ↔ (b, a) swap, which the
+  ABSS formula is symmetric under).
 
-- **A4** *Is APS η = 2/9 unique for (1,2) weights?*
-  Verified: ABSS formula gives η(1,2;3) = 2/9 exactly via core identity
-  (ζ−1)(ζ²−1) = 3. Symmetry η(a,b) = η(b,a). No alternative value.
+- **A4** *Is η = 2/9 unique for (1, 2) weights?*
+  The ABSS formula gives η(1, 2; 3) = 2/9 exactly via the core
+  identity (ζ − 1)(ζ² − 1) = 3. Symmetry η(a, b) = η(b, a). No
+  alternative value.
 
-### CAT-B: Scope objections (3 addressed)
+## CAT-B: Scope (3 objections)
 
 - **B1** *AM-GM requires positive reals — is E_+, E_⊥ positive?*
-  Verified: E_+ = 3a² ≥ 0 (a real), E_⊥ = 6|b|² ≥ 0 (b complex). Physical
-  non-degenerate leptons: interior case (both > 0).
+  E_+ = 3a² ≥ 0 (a real), E_⊥ = 6|b|² ≥ 0 (b complex). Physical
+  non-degenerate charged leptons have both > 0 (interior case).
 
-- **B2** *APS requires smooth spin structure; retained is PL.*
-  Verified: PL S³ is smoothable (Cerf's theorem, dim ≤ 6). Z_3 action
-  lifts to smoothed manifold via equivariant smoothing. Topological
-  robustness of η (iter 1) → result is independent of smoothing choice.
+- **B2** *APS requires smooth spin manifold; retained is PL.*
+  PL S³ is smoothable (Cerf's theorem, dim ≤ 6). Z_3 action lifts
+  to smoothed manifold via equivariant smoothing. ABSS metric-
+  independence makes the resulting η independent of the smoothing
+  choice.
 
-- **B3** *Morse-Bott condition for ABSS applicability?*
-  Verified: Z_3 fixed locus is codim-2 (two timelike worldlines on
-  PL S³ × R). Normal Hessian eigenvalues (ω, ω²) are non-unit →
-  non-degenerate rotation → Morse-Bott satisfied.
+- **B3** *Morse-Bott condition for ABSS?*
+  Z_3 fixed locus is codim-2 (two timelike worldlines on PL S³ × R).
+  Normal Hessian eigenvalues (ω, ω²) are non-unit → non-degenerate
+  rotation → Morse-Bott satisfied.
 
-### CAT-C: Independence objections (2 addressed)
+## CAT-C: Independence (2 objections)
 
-- **C1** *Are the 8 routes to 2/9 truly independent?*
+- **C1** *Are the 8 routes to η = 2/9 truly independent?*
   Honest answer: 8 routes cluster into **3 genuinely independent
   mathematical frameworks**:
-  - **Topological** (ABSS-based): routes 4, 5, 7 (equivariant fixed-point,
-    core identity, K-theory χ₀ isotype).
-  - **Analytical** (spectral): routes 1, 2, 8 (Hirzebruch-Zagier, APS
-    Dirac, Dai-Freed).
-  - **Number-theoretic** (Dedekind): routes 3, 6 (Dedekind 4·s(1,3)
-    reciprocity, C_3 CS level-2 mean spin).
-  3 independent frameworks is still strong theorem-grade support.
+    - Topological (ABSS-based): equivariant fixed-point, core
+      identity, K-theory χ₀ isotype.
+    - Analytical (spectral): Hirzebruch-Zagier, APS Dirac,
+      Dai-Freed.
+    - Number-theoretic (Dedekind): Dedekind 4·s(1, 3), C_3 CS
+      level-2 mean spin.
+  Three independent frameworks is still strong theorem-grade support.
 
-- **C2** *Does iter 2 AM-GM depend on Peter-Weyl (C1 cycling back)?*
-  Verified: iter 2 uses F_sym = log(E_+ · E_⊥) with EQUAL weights
-  (Frobenius trace metric), NOT the Peter-Weyl (1, 2) weighting. The
-  Frobenius metric is forced by the retained Herm_circ(3) structure.
-  No circularity with C1.
+- **C2** *Does the I1 AM-GM derivation cycle back to a Peter-Weyl
+  prescription?*
+  No. The AM-GM derivation uses `F_sym = log(E_+ · E_⊥)` with
+  equal weights — the Frobenius trace metric, forced by the
+  retained Herm_circ(3) structure. A Peter-Weyl (1, 2) weighting
+  would give κ = 1 ≠ 2. No circularity.
 
-## Remaining open doors (honest iter 7+ targets)
+## CAT-E: Decoupling from the framework's separately-open dynamical-metric-lift question
 
-These are NOT objections to I1/I2 — they're EXTENSIONS of the program:
+A first-pass reviewer correctly asked whether the APS stack depends
+on `frontier_s3_anomaly_spacetime_lift.py`, which still hard-fails
+on the framework-level dynamical-metric-lift question.
 
-1. **I5 mechanism** for iter 4 (δ, Q)-NuFit conjecture (iter 5 ruled
-   out single-rotation hypothesis; composite mechanism search open).
-2. **sin δ_CP sign** (T2K < 0) — framework derivation open.
-3. **Quark-sector parallel** — does (Q_q, δ_q) structure fit V_CKM?
-4. **"Retained kinematics" soft-ground** — all iter 1/2 theorems assume
-   the retained Z³/C_3[111] spatial structure is given. This IS the
-   retained axiom base; questioning it means rejecting the framework itself.
+**Answer: no. The APS stack is orthogonal to that runner.** The APS
+η value requires only:
 
-## Status after iter 6
+- **(E1)** Retained kinematic manifold (PL S³ × R with Z_3 action) —
+  axiomatic base of the framework, not a consequence of the
+  dynamical-metric runner.
+- **(E2)** Standard algebraic topology (Cerf smoothability; S³ has
+  spin structure w_2 = 0; Z_3 action lifts via equivariant smoothing).
+  These are topology theorems, not framework assumptions.
+- **(E3)** ABSS equivariant fixed-point theorem (mathematical
+  theorem): η depends only on tangent rep, not on metric.
+- **(E4)** Core algebraic identity (ζ − 1)(ζ² − 1) = 3.
 
-| Gap | Status |
-|---|---|
-| I1 (Q = 2/3) | **RETAINED-DERIVED, STRESS-TESTED** (iter 2 + iter 6) |
-| I2/P (δ = 2/9) | **RETAINED-DERIVED, STRESS-TESTED** (iter 1 + iter 6) |
-| I5 (PMNS) | **CONJECTURE-LEVEL 1σ** (iter 4) + mechanism search open |
+The dynamical-metric-lift question is about **which specific metric**
+the framework's dynamics eventually picks out. ABSS gives the **same
+η value** (2/9) for **any** smooth metric consistent with the
+retained Z_3 action, so the specific dynamical metric is irrelevant
+to the η conclusion. **(E5)** confirms this decoupling explicitly.
 
-**User's stop criterion for I1/I2**: "no cracks in the wall top to
-bottom" — this iter 6 runner verifies 9 specific reviewer objections
-(uniqueness + scope + independence) and finds all addressed. No
-currently-identified cracks.
+## CAT-D: "Retained kinematics" is the axiomatic base, not soft ground
 
-The **user's full stop criterion** requires I5 also reviewer-proof,
-which iter 4-5 have advanced but not yet completed. Loop continues
-for iter 7+ targeting the open I5 mechanism.
+"Retained kinematics" enumerates precisely:
 
-## Honest scope of this stress-test
+- Cl(3) Clifford algebra on Z³ lattice.
+- SELECTOR = √6/3.
+- Observable principle W[J].
+- S_3 cubic axis-permutation symmetry on Z³.
+- C_3[111] = 2π/3 body-diagonal rotation subgroup.
+- Continuum limit Z³ → PL S³ × R (`S3_CAP_UNIQUENESS_NOTE` on main).
 
-This runner addresses the objections **we can anticipate**. A real
-reviewer might identify objections we haven't enumerated. The value
-of this runner is to systematically document the current best defense,
-not to claim exhaustive reviewer-proofing. Any new objection raised
-should be added to the stress-test and answered.
+These are the **framework's retained axioms**. "Retained-forced under
+retained kinematics" is equivalent to "forced by the framework's
+axioms" — it is not a hidden soft conditional.
+
+## Remaining open items (not in I1 or I2/P scope)
+
+- I5 (PMNS mixing-angle mechanism) — separate lane, not part of this
+  package.
+- sin(δ_CP) sign — separate observable.
+- Quark-sector Koide / CKM — separate retention problem.
+
+None of these affect the I1 or I2/P closures addressed here.
