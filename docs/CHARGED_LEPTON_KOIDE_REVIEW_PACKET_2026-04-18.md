@@ -42,16 +42,30 @@ The clean current endpoint is:
   `|Im(b_F)|^2 = Q/d` plus Phase-Structural Equivalence `d*delta = Q`.
   See `KOIDE_QUBIT_LATTICE_DIM_ALGEBRAIC_CLOSURE_NOTE_2026-04-20.md`.
 
-So the current charged-lepton state is (updated 2026-04-20 late night):
+So the current charged-lepton state is (updated 2026-04-20 late night,
+REVISED per reviewer feedback):
 
 - exact candidate-route closure
-- **retained-derivation of Q = 2/3** (UNCONDITIONAL, via F-functional
-  Legendre + η-invariant G4 chain, 24 parallel agents 4 rounds)
-- **retained-derivation of delta = 2/9 rad** (UNCONDITIONAL, via APS
-  η-invariant on retained C_3[111] spatial-rotation fixed-locus)
+- **CONDITIONAL retained-derivation of Q = 2/3** on (C1): accepting the
+  Peter-Weyl rep-theoretic prescription as the "additional dynamical
+  input" `frontier_observable_principle_character_symmetry.py`
+  identifies as required. F-functional Legendre derivation is
+  theorem-grade (17/17 PASS in `frontier_koide_f_functional_legendre.py`).
+- **CONDITIONAL retained-derivation of delta = 2/9 rad** on (C2):
+  eventual compatibility of the dynamical spacetime metric on PL S³ × R
+  (currently blocked per `frontier_s3_anomaly_spacetime_lift.py`) with
+  the APS η-invariant calculation at the Z_3 fixed-locus. APS η = 2/9
+  is theorem-grade via 8 exact routes (21/21 PASS in
+  `frontier_koide_aps_eta_invariant.py`). Kinematic lift of C_3[111]
+  to spatial rotation verified (16/16 PASS in
+  `frontier_koide_c3_spatial_rotation.py`).
 - overall lepton mass scale v_0 still open (separate hierarchy input)
 
-See `KOIDE_UNCONDITIONAL_CLOSURE_2026-04-20.md` for the integrated closure.
+See `KOIDE_UNCONDITIONAL_CLOSURE_2026-04-20.md` for the full conditional
+chain with explicit (C1), (C2) retention steps and reconciliation with
+existing no-gos. The "unconditional" language in earlier versions
+outran its theorem stack; revised status is honest conditional with
+theorem-grade executable support for each piece.
 
 ## Read In Order
 
@@ -96,15 +110,25 @@ Items that remain open:
 - quark-sector and neutrino-sector Koide analogs are sector-specific open
   problems.
 
-So the current classification is (updated 2026-04-20 late night):
+So the current classification is (updated 2026-04-20 late night,
+honest revision):
 
-- **retained-derivation of Q = 2/3** (UNCONDITIONAL via F-functional Legendre
-  transform + η-invariant G4 algebra chain, 8+ independent routes)
-- **retained-derivation of delta = 2/9 rad** (UNCONDITIONAL via APS
-  η-invariant on retained C_3[111] spatial-rotation fixed-locus,
-  8 independent exact derivations)
+- **CONDITIONAL retained-derivation of Q = 2/3** on acceptance of (C1)
+  Peter-Weyl rep-theoretic prescription (the "additional dynamical
+  input" the character-symmetry no-go identifies as required).
+  Theorem-grade F-functional Legendre support via
+  `frontier_koide_f_functional_legendre.py` (17/17 PASS).
+- **CONDITIONAL retained-derivation of delta = 2/9 rad** on eventual
+  (C2) dynamical spacetime metric compatibility with APS η. APS η
+  theorem-grade via 8 exact routes (21/21 PASS in
+  `frontier_koide_aps_eta_invariant.py`); C_3[111] = spatial rotation
+  verified (16/16 PASS in `frontier_koide_c3_spatial_rotation.py`);
+  dynamical metric law still blocked per
+  `frontier_s3_anomaly_spacetime_lift.py`.
 - retained promotion for charged-lepton ratios (modulo overall scale v_0
   which remains a separate hierarchy input)
 
-See `KOIDE_UNCONDITIONAL_CLOSURE_2026-04-20.md` for full derivation chain
-from 24 parallel agent investigations across 4 rounds.
+The residue has MIGRATED: from a diffuse "2/9 isn't rational·π" no-go
+to two specific named retention steps (C1: Peter-Weyl prescription;
+C2: spacetime dynamics). That's progress, not closure. Not yet a
+main-branch landable promotion.

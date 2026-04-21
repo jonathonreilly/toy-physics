@@ -1,265 +1,229 @@
-# Koide UNCONDITIONAL Closure (late night 2026-04-20)
+# Koide Closure — Conditional on Two Named Retention Steps
 
-**Status:** **CLOSED UNCONDITIONALLY.** Both I1 (Koide Q = 2/3) and I2/P
-(Brannen δ = 2/9 rad) are retained-derivations from Cl(3)/Z³ + A-select
-axioms alone, with no observational input and no circularity, confirmed by
-**24 parallel agents across 4 rounds of investigation**.
+**Date:** 2026-04-20 (late-night revision after reviewer feedback)
+**Status:** **CONDITIONAL closure** with explicit, theorem-grade executable
+support for each claim AND explicit scope boundaries vs existing no-gos.
 
-The final residue (orbifold lift) was discharged by R4-6: the retained
-**C_3[111] operator IS the spatial 2π/3 rotation about the Z³ body-diagonal**
-— already in the retained framework, not a new axiom.
+**⚠️ Honest revision note (essential).** An earlier version of this note
+claimed "unconditional closure." That claim outran its theorem stack.
+After reviewer feedback (the unconditional claim conflicted with two
+still-passing retained runners — `frontier_observable_principle_character_symmetry.py`
+and `frontier_s3_anomaly_spacetime_lift.py`), the status has been
+downgraded to CONDITIONAL with the conditionals made explicit.
+
+The work remains valuable — multiple independent exact derivations of
+δ = 2/9 and κ = 2 — but the "closure" language is now CONDITIONAL on:
+
+- **(C1)** Acceptance of the Peter-Weyl prescription as the retained
+  rep-theoretic choice for the F-functional. (Addresses the "additional
+  dynamical input" the observable-principle character-symmetry no-go
+  requires.)
+- **(C2)** Eventual compatibility of the retained dynamical spacetime
+  metric on PL S³ × R with the APS η-invariant calculation at the
+  Z_3 fixed-locus. (The kinematic lift IS retained; the dynamical lift
+  is blocked per `frontier_s3_anomaly_spacetime_lift.py` and remains an
+  open program separate from Koide.)
 
 ---
 
 ## Executive summary
 
-### I1 (Koide Q = 2/3) — CLOSED
+Three new dedicated frontier runners back the specific closure claims:
 
-Three independent non-circular derivations:
-
-1. **F-functional via Legendre transform** (R1-V9 + R3-4): The functional
-   `F(G) = 2 log(tr G) + log(C_2)` has unique extremum at κ = 2 on
-   Herm_circ(3). F is derived from the retained observable principle
-   W[αI + β(C+C²)] via Legendre transform with Peter-Weyl dim-weighted
-   swap. No SO(2) postulate.
-
-2. **η-invariant chain via G4 algebra** (R2-6 + R3-6): `|Im(b_F)|² = SELECTOR²/d = 2/9`
-   (from A-select alone, no Q input). Combined with APS η = 2/9
-   and G4 Phase-Structural Equivalence: `d·δ = SELECTOR² = Q = 2/3`.
-   Q is OUTPUT, not input.
-
-3. **Qubit-lattice-dim + anomaly arithmetic** (prior): `Q = dim(Cl(3) spinor)/dim(Z³ lattice) = 2/3`
-   and `Q = |Y(d_R)| = 2/3` from retained hypercharge commutant.
-
-### I2/P (Brannen δ = 2/9 rad) — CLOSED
-
-**Eight independent exact derivations converge at 2/9:**
-
-| # | Route | Source |
+| Runner | What it verifies | PASS |
 |---|---|---|
-| 1 | Hirzebruch-Zagier `η_sig(L(3,1)) = (p−1)(p−2)/(3p)` at p=3 | R2-6 |
-| 2 | APS spin-Dirac `η_D(L(3,1)) = (1/12)(csc²(π/3)+csc²(2π/3))` | R2-6 |
-| 3 | Dedekind sum `4·s(1,3) = 4·(1/18)` | R2-6 |
-| 4 | Equivariant fixed-point η at R⁴/Z_3 with weights (1,2) | R2-6, R3-2 |
-| 5 | Algebraic `(ζ-1)(ζ²-1) = 3` identity | R3-2 |
-| 6 | Native C_3 CS level-2 mean topological spin | R4-1 |
-| 7 | Equivariant K-theory character formula on χ_0 isotype | R4-3 |
-| 8 | Dai-Freed inflow, Weyl at q=0 twisted sector, weights (1,-1) | R4-5 |
+| `frontier_koide_aps_eta_invariant.py` | APS η on L(3,1) / R⁴/Z_3 = 2/9 rad via 8 exact routes | 21/21 |
+| `frontier_koide_f_functional_legendre.py` | F = 2 log(tr G) + log(C_2) extremum at κ = 2 via Legendre + Peter-Weyl | 17/17 |
+| `frontier_koide_c3_spatial_rotation.py` | Rodrigues 2π/3 about (1,1,1) = cyclic permutation; weights (1,2) on transverse plane | 16/16 |
 
-All give 2/9 exactly. η-invariants are natively phase-valued in radians
-(spectral asymmetry = phase shift `exp(iπη)`), so 2/9 is a canonical
-geometric invariant, not a bare rational requiring unit conversion.
+Combined with the earlier algebraic-identity runner
+(`frontier_koide_qubit_lattice_dim_closure.py`, 62/62 PASS), total new
+executable support is **116 PASS checks backing the specific numerical
+identities**.
+
+**What this does NOT do:** the new runners do not SUPERSEDE the two
+existing no-gos. Both no-gos remain valid per their own scope. The
+new runners are explicit ADDENDA that specify what additional input
+would close the open questions.
 
 ---
 
-## The retained chain
+## Explicit reconciliation with existing no-gos
 
-### Axioms (unchanged)
+### vs `frontier_observable_principle_character_symmetry.py` (still PASSES, verdict FALSE)
 
-1. **A0**: Cl(3) on Z³ (Clifford algebra on 3-site cubic lattice).
-2. **A-select**: SELECTOR = √6/3 (retained via I3 closure, traces to observable-selector chain).
-3. **Observable principle**: W[J] = log|det(D+J)| - log|det D|.
+**That runner's exact claim** (from its own verdict line):
+  *"Raw observable principle W[J] = log|det(D+J)| with generator uniqueness,
+  additivity, and CPT-even does NOT force α = β on blocks where b ≠ 0.
+  Additional dynamical input required. CHARACTER_SYMMETRY_FORCES_KOIDE=FALSE."*
 
-### The retained C_3[111] IS the spatial rotation (R4-6)
+**Our claim (I1 Route A)**: With Peter-Weyl dim-swapped Legendre transform,
+F = 2 log(tr G) + log(C_2) has unique extremum at κ = 2.
 
-The key realization: `C_3[111]` is NOT an abstract internal symmetry —
-it IS the **spatial 2π/3 rotation about the (1,1,1) body-diagonal of the Z³ lattice**,
-as retained in `CL3_TASTE_GENERATION_THEOREM.md`, `S3_TASTE_CUBE_DECOMPOSITION_NOTE.md`,
-`KOIDE_TASTE_CUBE_CYCLIC_SOURCE_DESCENT_NOTE_2026-04-18.md`.
+**Reconciliation**: The Peter-Weyl prescription IS the "additional
+dynamical input" the no-go's verdict identifies as required. Our runner
+`frontier_koide_f_functional_legendre.py` SPECIFIES what that input is,
+rather than claiming the raw observable principle suffices. The no-go
+stands; our work makes the missing ingredient explicit.
 
-**Sympy verification:**
+**Honest caveat C1**: The Peter-Weyl prescription is a rep-theoretic
+choice. It is natural (counts each isotype as one mode) but not
+"forced by observable principle alone." Whether accepting Peter-Weyl as
+a retained prescription is legitimate is a reviewer decision. If yes,
+I1 closes via this route. If no, I1 remains retained-observational.
 
-```text
-Rodrigues rotation by 2π/3 about n = (1,1,1)/√3
-= cyclic permutation matrix P = [[0,0,1],[1,0,0],[0,1,0]]  EXACTLY
+### vs `frontier_s3_anomaly_spacetime_lift.py` (still FAILS on dynamics)
+
+**That runner's exact claim** (from its own summary):
+  *"KINEMATIC lift (PL S³ × R as background): PASS. DYNAMICAL lift
+  (exact dynamics bridge from PL S³ × R to metric law / GR closure):
+  FAIL. Missing theorem: exact dynamics bridge from PL S³ × R to the
+  metric law."*
+
+**Our claim (I2/P Route via APS η)**: The retained C_3[111] is the
+spatial 2π/3 rotation about (1,1,1) in Z³. Its fixed-locus on PL S³ × R
+is codim-2 (two timelike worldlines). Transverse tangent weights (1, 2)
+give APS η = 2/9 rad at the Z_3 orbifold geometry.
+
+**Reconciliation**: Our claim has TWO levels:
+- **Kinematic** (verified in `frontier_koide_c3_spatial_rotation.py`):
+  C_3[111] = spatial rotation (Rodrigues identity); tangent weights (1,2).
+- **Dynamical**: APS η at the fixed-locus requires a specific
+  Riemannian/spin structure, which depends on the dynamical spacetime
+  metric. That dynamical metric law IS still blocked per the s3-anomaly
+  runner.
+
+**Honest caveat C2**: The Koide I2/P closure via APS η is CONDITIONAL
+on the eventual retention of a dynamical metric law on PL S³ × R that
+is compatible with the APS evaluation. That compatibility is plausible
+(the kinematic structure IS retained; the APS formula is topological
+and depends on local orbifold structure at the fixed locus, which is
+kinematically retained), but not yet theorem-grade on main.
+
+---
+
+## The conditional closure chain
+
+### Retained axioms (unchanged on main)
+
+1. **A0**: Cl(3) on Z³.
+2. **A-select**: SELECTOR = √6/3 (retained via I3 closure).
+3. **Observable principle**: W[J] = log|det(D + J)| − log|det D|.
+
+### Retained spatial structure (verified kinematically)
+
+4. **Spatial cubic symmetry**: Z³ lattice has cubic S_3 axis-permutation
+   symmetry (retained per `CL3_TASTE_GENERATION_THEOREM`,
+   `S3_TASTE_CUBE_DECOMPOSITION_NOTE`,
+   `KOIDE_TASTE_CUBE_CYCLIC_SOURCE_DESCENT_NOTE`).
+5. **C_3[111] identification**: C_3 subgroup of S_3 IS the 2π/3 rotation
+   about the body-diagonal (1,1,1)/√3 — verified Rodrigues = cyclic
+   permutation in `frontier_koide_c3_spatial_rotation.py`.
+6. **Continuum limit**: Z³ → PL S³ via `S3_CAP_UNIQUENESS_NOTE`.
+7. **Fixed-point locus** (kinematic): on PL S³ × R, two codim-3
+   timelike worldlines at {origin, cone-apex}, with transverse tangent
+   weights (1, 2).
+
+### Derived identities (verified in new runners)
+
+- `|Im(b_F)|² = SELECTOR²/d = 2/9` from A-select alone (pure algebra).
+- `APS η on Z_3 orbifold with weights (1,2) = 2/9 rad` via 8 independent
+  routes: Hirzebruch-Zagier, APS spin-Dirac, Dedekind, equivariant
+  fixed-point, (ζ-1)(ζ²-1)=3 core identity, C_3 CS level-2 mean spin,
+  K-theory χ_0 isotype, Dai-Freed q=0 twist.
+- `F(G) = 2 log(tr G) + log(C_2)` unique extremum at κ = 2 via Peter-Weyl
+  Legendre (GIVEN C1).
+
+### Closure (conditional on C1 and C2)
+
+```
+Given C1 (Peter-Weyl accepted) + C2 (spacetime dynamics compatible):
+
+I1 Route A (F-functional):
+  F extremum κ = 2 ⟹ Q = (1 + 2/κ)/d = 2/3 (at d=3).
+
+I1 Route B (η-invariant chain, equivalent):
+  |Im(b_F)|² = SELECTOR²/d = 2/9   [algebra from A-select]
+  APS η at (1,2)-weight Z_3 locus = 2/9  [conditional on C2]
+  δ ≡ APS η = 2/9 rad              [η natively radian-valued]
+  G4: d·δ = d·|Im(b_F)|² = SELECTOR² = 2/3  [algebra]
+  Q = d·δ = 2/3                    [output]
+
+I2/P:
+  δ = 2/9 rad (direct from η-invariant, conditional on C2)
 ```
 
-### Fixed-point locus on retained PL S³ × R
-
-- R³ fixed-axis: the body-diagonal line through origin
-- PL S³ fixed-points: {origin, cone-cap apex} (two antipodes)
-- PL S³ × R_t fixed-locus: **two codim-3 timelike worldlines**
-- Local transverse geometry at fixed-lines: **R⁴/Z_3 with weights (1, 2)**
-
-### Weights (1, 2) are forced
-
-Eigenvalues of R = (1, ζ, ζ²) with ζ = e^{2πi/3}. Acting faithfully on
-the 2D plane normal to the body-diagonal forces tangent weights (1, 2).
-
-### APS η-invariant on the fixed-line transverse geometry
-
-Using the Z_3-equivariant fixed-point formula (sympy-verified, 4 routes agree):
-
-```text
-η_APS(R⁴/Z_3, weights (1,2)) = (1/3) · Σ_{k=1,2} 1/[(ζ^k - 1)(ζ^{2k} - 1)]
-                              = (1/3) · 2/3  [via (ζ-1)(ζ²-1) = 3]
-                              = 2/9 rad
-```
-
-### Integrated closure chain
-
-```text
-RETAINED AXIOMS
-  A0: Cl(3) on Z³                    [Clifford axiom]
-  A-select: SELECTOR = √6/3          [retained via I3]
-  Observable principle W[J]          [retained]
-
-RETAINED SPATIAL STRUCTURE
-  C_3[111] = spatial 2π/3 rotation about Z³ body-diagonal
-  Fixed locus in PL S³ × R = 2 timelike worldlines
-  Transverse geometry = R⁴/Z_3 with weights (1, 2)
-
-DERIVED (no Q input)
-  E2 = 2·SELECTOR/√d = 2√2/3        [Clifford H_BASE structure]
-  Im(b_F) = -E2/2                    [topologically protected]
-  |Im(b_F)|² = SELECTOR²/d = 2/9     [pure algebra from A-select]
-  APS η at fixed locus = 2/9 rad     [8 independent routes]
-
-RADIAN BRIDGE
-  δ := APS η = 2/9 rad               [η natively radian-valued]
-  δ ≡ |Im(b_F)|² = 2/9               [two independent chains agree]
-
-G4 PHASE-STRUCTURAL EQUIVALENCE (pure algebra)
-  d·δ = d·|Im(b_F)|² = SELECTOR² = 2/3
-
-OUTPUTS (closures)
-  Q ≡ d·δ = 2/3                      [I1 CLOSED — Q is output]
-  δ = 2/9 rad                        [I2/P CLOSED — native radian]
-```
-
-### Alternate I1 closure via F-functional
-
-```text
-W[αI + β(C+C²)] = log(1 + j_0/λ_0) + 2·log(1 + j_d/λ_d)
-                                ^^^ dim(doublet) = 2 from Peter-Weyl
-
-F = Legendre[W](tr G, C_2)
-  = dim(doublet)·log(tr G) + dim(trivial)·log(C_2)
-  = 2 log(tr G) + 1 log(C_2)
-
-dF/dκ = (2 − κ)/[κ(κ+2)] = 0  at unique extremum κ = 2 ⟹ Q = 2/3
-```
+**Both I1 and I2/P close** given (C1) and (C2). Without (C1), I1 via
+F-functional requires the observable-principle "additional input"
+(character-symmetry no-go stands). Without (C2), the APS interpretation
+of δ is kinematically suggestive but not theorem-grade tied to the
+retained spacetime metric.
 
 ---
 
-## Round-by-round summary (24 agents, 4 rounds)
+## What this means for main-branch promotion
 
-### Round 1 (brainstorm + 10 vectors → 3 probed)
+### Claim strength (honest)
 
-- **V9 (alternative entropy): STRONG** — F-functional 2 log(tr G) + log(C_2) has unique extremum κ = 2.
-- V2 (tensor product): reduces to qubit-lattice-dim.
-- V7 (pseudoscalar rotor): does not give 2/9 cleanly.
+- **I1 (Q = 2/3)**: CONDITIONAL-CLOSED on (C1). The F-functional via
+  Peter-Weyl Legendre is verified theorem-grade (17/17 PASS). Accepting
+  the Peter-Weyl prescription closes I1; rejecting it keeps I1 open
+  per the character-symmetry no-go.
+- **I2/P (δ = 2/9 rad)**: CONDITIONAL-CLOSED on (C2). The APS η = 2/9
+  is theorem-grade verified (21/21 PASS, 8 routes) as a pure
+  number-theoretic identity. Kinematic lift of C_3[111] to spatial
+  rotation is theorem-grade (16/16). Dynamical metric compatibility
+  awaits the s3-anomaly program.
 
-### Round 2 (6 agents)
+### Not promoted to retained-derivation (yet)
 
-- **R2-6 (SW/η-invariant): STRONG** — 4 exact routes to 2/9 on L(3,1).
-- **R2-4 (Brannen cosine): DUAL** — cosine FORM exact-retained, δ(m_PDG) = 2/9 + 7.4 µrad.
-- R2-1 (V9-deep): F as cumulant of W[αI].
-- R2-2, R2-3, R2-5: WEAK / NO-GO.
+Until (C1) is accepted as a retained prescription and (C2) is retired
+by the s3-anomaly dynamical theorem, the Koide lanes remain
+retained-observational-conditional. The conditional path is now much
+more specific than before: two named, actionable retention steps
+instead of a diffuse gap.
 
-### Round 3 (6 agents)
+### Value of this cycle anyway
 
-- **R3-2 (APS η on retained H_sel): STRONG** — exact via `(ζ-1)(ζ²-1)=3`.
-- **R3-4 (F weights from W[J]): STRONG** — Legendre + Peter-Weyl derivation.
-- **R3-6 (non-circular joint closure): STRONG** — Q as output of δ.
-- R3-5 (PDG offset): within 0.41σ (2024), 1-loop QED protected.
-- R3-1, R3-3: refinements.
-
-### Round 4 (6 agents)
-
-- **R4-1 (native C_3 CS level-2): STRONG** — 2/9 from Z_3 DW topological spins.
-- **R4-2 (KK reduction): STRONG** — tangent-lift gives R⁴/Z_3 germ.
-- **R4-3 (equivariant K-theory): STRONG** — Thom induction on χ_0.
-- **R4-5 (anomaly inflow): STRONG** — Dai-Freed at q=0 slot.
-- **R4-6 (Z_3 spacetime embedding): DEFINITIVE** — retained C_3[111] IS spatial rotation.
-- R4-4 (spectral flow): clean NO-GO.
-
----
-
-## What this means
-
-### Open-imports register
-
-Before this closure:
-- I1: retained-observational-conditional (with caveats)
-- I2/P: radian bridge no-go (bare rational vs rational×π obstruction)
-
-After this closure:
-- **I1: retained-derivation** via F-functional Legendre AND η-invariant G4 chain
-- **I2/P: retained-derivation** via APS η on retained spatial Z_3 fixed-locus
-
-### Physical interpretation
-
-- Koide Q = 2/3 and Brannen δ = 2/9 are NOT phenomenological fits.
-- They are **structural invariants of the retained Cl(3)/Z³ spatial action**.
-- The C_3[111] body-diagonal rotation on the Z³ lattice has fixed-point
-  worldlines in 4D spacetime. The transverse R⁴/Z_3 geometry at these
-  fixed-lines carries an APS η-invariant = 2/9 rad.
-- This is visible physics: it predicts the charged-lepton mass ratios
-  with zero free parameters (modulo overall scale v_0, still open).
-
-### 7.4 µrad PDG offset
-
-The offset between theoretical δ = 2/9 rad and observational
-δ(m_PDG) = 0.22223 rad is:
-- Within 0.41σ of PDG 2024 uncertainty.
-- Consistent with 2-loop QED correction scale (α/π)² ≈ 5.4 µrad.
-- Protected at 1-loop QED by Koide-ratio RG-invariance (Xing-Zhang theorem).
-- Future m_τ measurement with σ < 0.03 MeV would discriminate.
-
-### New physics produced this cycle
-
-1. **F-functional closure theorem**: Koide κ = 2 from observable-principle
-   Legendre transform with Peter-Weyl dim-weighted swap.
-2. **APS η-invariant Koide bridge theorem**: Brannen δ = 2/9 rad from
-   equivariant spectral asymmetry at retained C_3[111] fixed-locus.
-3. **Joint closure theorem**: both Q and δ derive from retained Cl(3)/Z³
-   + A-select, with Q as output of δ via G4 algebra.
-4. **Spatial embedding theorem**: retained C_3[111] = spatial 2π/3
-   rotation, fixed-locus gives R⁴/Z_3 transverse geometry supporting APS η.
+- Introduces the APS η = 2/9 identity via 8 independent exact routes
+  (genuinely new number-theoretic theorem connecting Z_3 orbifold APS
+  invariants to Brannen phase).
+- Derives the F-functional via Peter-Weyl Legendre (conditional closure
+  with specified missing input).
+- Verifies the C_3[111] = spatial rotation identification rigorously
+  with Rodrigues formula.
+- Identifies exactly WHAT additional inputs are needed for full closure
+  ((C1) Peter-Weyl, (C2) dynamical metric), rather than leaving the
+  residue as the diffuse "radian bridge" no-go.
 
 ---
 
-## Files produced this cycle
+## Relationship to earlier closure notes on this branch
 
-- `docs/KOIDE_QUBIT_LATTICE_DIM_ALGEBRAIC_CLOSURE_NOTE_2026-04-20.md` (initial sharpening)
-- `docs/KOIDE_ATTACK_VECTORS_BRAINSTORM_2026-04-20.md` (11 vectors)
-- `docs/KOIDE_ROUND_1_PARALLEL_ATTACK_RESULTS_2026-04-20.md` (Vector 9 success)
-- `docs/KOIDE_ROUND_2_PARALLEL_ATTACK_RESULTS_2026-04-20.md` (η-invariant breakthrough)
-- `docs/KOIDE_ROUND_3_INTEGRATED_CLOSURE_2026-04-20.md` (non-circular joint closure)
-- `docs/KOIDE_UNCONDITIONAL_CLOSURE_2026-04-20.md` (this note — final)
-- `scripts/frontier_koide_qubit_lattice_dim_closure.py` (62/62 PASS)
-
-Plus retained prior work incorporated:
-- `ANOMALY_FORCES_TIME_THEOREM.md` (spacetime 3+1 derivation)
-- `HYPERCHARGE_IDENTIFICATION_NOTE.md` (U(1)_Y from commutant)
-- `S3_CAP_UNIQUENESS_NOTE.md` (PL S³ compactification)
-- `CL3_TASTE_GENERATION_THEOREM.md` (S₃ axis permutation, spatial)
-- `KOIDE_BRANNEN_DELTA_Z3_QUANTIZATION_NOTE_2026-04-20.md` (CPC, G4)
-- All Round 2 cycle-1 no-go notes (narrowed the open gap)
+- `KOIDE_QUBIT_LATTICE_DIM_ALGEBRAIC_CLOSURE_NOTE_2026-04-20.md`: the
+  initial qubit-lattice-dim / anomaly-arithmetic chain (62/62 algebraic
+  identity runner). Weakest of the three closure routes.
+- `KOIDE_ROUND_1_PARALLEL_ATTACK_RESULTS_2026-04-20.md`: V9 F-functional
+  discovery — now backed by `frontier_koide_f_functional_legendre.py`.
+- `KOIDE_ROUND_2_PARALLEL_ATTACK_RESULTS_2026-04-20.md`: η-invariant
+  breakthrough — now backed by `frontier_koide_aps_eta_invariant.py`.
+- `KOIDE_ROUND_3_INTEGRATED_CLOSURE_2026-04-20.md`: "non-circular joint
+  closure" claim. Valid but CONDITIONAL on (C1) and (C2) as stated here,
+  which the Round 3 note did not make explicit.
 
 ---
 
-## Epilogue
+## Revised headline
 
-24 parallel agents, 4 rounds, one night. Six strong successes, multiple
-independent bridges, eight exact derivations of 2/9. Both Koide I1 and
-I2/P close unconditionally from retained Cl(3)/Z³ + A-select, with the
-final "orbifold lift" residue dissolved by recognizing that C_3[111]
-has always been the spatial rotation retained on main.
+The retained Cl(3)/Z³ framework plus the Peter-Weyl rep-theoretic
+prescription plus the eventual s3-anomaly dynamical closure JOINTLY
+imply Koide Q = 2/3 and Brannen δ = 2/9 rad, with all intermediate
+steps now theorem-grade executable (54 new PASS checks across 3 new
+dedicated runners, plus 62/62 on the earlier algebraic runner).
 
-We broke new ground in physics tonight. The charged-lepton mass spectrum
-is no longer a phenomenological puzzle — it is a structural invariant of
-the retained Z³ spatial lattice's cubic symmetry, computable from number
-theory (Dedekind sums, equivariant index theory) with zero free parameters.
+This is a significant tightening of the open-imports register — the
+Koide residue is now TWO specific retention steps ((C1), (C2)), not
+a diffuse "why 2/9 isn't rational·π" obstruction.
 
-The retained framework predicts:
-- Q = 2/3 (exact, from F-functional + G4 algebra)
-- δ = 2/9 rad (exact, from APS η at spatial fixed-locus)
-- Brannen cosine form (exact-retained, A = 1/√6)
-- Charged-lepton mass ratios from (Q, δ) with single scale v_0
-
-Residual open items (scope: separate program):
-- Overall scale v_0 ≈ 17.72 √MeV (hierarchy, separate from Koide)
-- Quark-sector Koide analog (sector-specific, open program)
-- Neutrino-sector Brannen phase (separate PMNS program)
+**Not a main-branch landable closure. A conditional closure with
+explicit named conditionals, ready for reviewer audit.**
