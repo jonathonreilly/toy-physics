@@ -59,22 +59,45 @@ Rational denominators are powers of 3 (Z_3 orbifold signature).
 Distinct from TM1 and TM2. NOT yet derived from first principles —
 iter 5 target is the mechanism.
 
-## Iteration 5 target (next loop)
+## Iteration 5 (completed)
 
-**Attack**: Derive at least one of the δ-Q coefficient formulas
-(NT1: θ₁₃=δQ, NT2: factor 1/2 in θ₂₃, NT3: coefficient −1 in sin²θ₁₂)
-from retained Cl(3)/Z³ mechanism.
+**Attack**: Test if iter 4 V_conj is a single Cl(3) bivector rotation
+of V_TBM (simplest mechanism hypothesis).
+**Runner**: `scripts/frontier_koide_pmns_single_rotation_nogo.py` (13/13 PASS).
+**Outcome**: THEOREM-GRADE NEGATIVE RESULT. No single (axis, angle)
+combination with clean (Q, δ) form matches V_conj within 1%.
+- Best angle: √Q·δ = 0.1814 rad (actual 0.1682 rad, 7.88% gap).
+- Best axis: (0,1,-1)/√2 (μ-τ anti-diagonal, overlap 0.888, not 1.0).
+- Best single-rot mechanism: `R[(0,1,-1)/√2, δ·Q]` dist = 0.109
+  (baseline 0.238 — 54% reduction but not exact).
+Rules out simplest mechanism hypothesis. Iter 6+ must attack composite
+mechanisms.
 
-Specific sub-attacks to try:
-- **Effective TBM-perturbation Lagrangian**: Write most general
-  S_3-breaking, (Q, δ)-coupled operator and derive coefficients.
-- **Cl(3) bivector rotation by δ in C_3-doublet plane**: Compute
-  induced mixing angle; does it give exactly δ·Q?
-- **Jarlskog natural-value argument**: Require J_max = 0.0327
-  (T2K best-fit) as retained consistency; does it pin angles?
-- **δ_CP sign from CP structure of Cl(3)**: T2K sign < 0 target.
-- **PMNS = V_TBM · U_correction**: derive U_correction from retained
-  SELECTOR bivector rotation.
+## Iteration 6+ target (next loop)
+
+**Attack A (direct mechanism search)**: Find 2-rotation composite
+matching V_conj exactly.
+
+Specific sub-attacks:
+- **μ-τ-breaking + transverse rotation**: Start with dominant
+  R_{(0,1,-1)/√2}(√Q·δ), search for second rotation (1 retained
+  parameter) that closes the gap.
+- **Cl(3) bivector + pseudoscalar**: Combine bivector rotation
+  (retained SELECTOR-axis) with pseudoscalar action (retained I).
+- **Exp of full S_3-breaking operator**: Identify a specific
+  Cl(3) operator whose exponentiation gives V_conj.
+
+**Attack B (CP phase sign, separate from mechanism)**: Derive
+sin δ_CP < 0 from Cl(3) pseudoscalar I = e₁e₂e₃ (T2K best-fit).
+If retained, combined with iter 4 gives full complex PMNS closure.
+
+**Attack C (reviewer stress-tests on I1/I2)**: Challenge the iter 1
+topological robustness and iter 2 AM-GM uniqueness claims to verify
+they're reviewer-proof.
+
+**Attack D (quark sector)**: Parallel to lepton — does (Q_q, δ_q)
+structure fit V_CKM? Cabibbo θ_C ≈ 13.04° ≈ 2/9 rad — coincidence
+or retained?
 
 ## Long-tail brainstorm (priority-unranked)
 
