@@ -6,45 +6,44 @@
 Berry lanes, with a specific statement of what derivation would close it from
 Cl(3)/Z³ framework ingredients alone. Items listed here are
 **retained-observational or structural-postulate inputs** that currently
-prevent the corresponding lane from being marked retained-derivation on main.
+prevent the corresponding lane from being marked retained-derivation on the
+review surface.
 
-**2026-04-21 canonical update.** The `morning-4-21` closure package is now
-landed on `review/scalar-selector-cycle1-theorems`. On this canonical review
-branch, `I1` (`Q = 2/3`) closes via the Frobenius-isotype / AM-GM route,
-`I2 / P` (`δ = 2/9`) closes via the ABSS fixed-point / topological-robustness
-route, and `I10` closes as the downstream selected-line corollary. The only
-still-open named import on the canonical branch is now `I5`. The detailed
-`I1` / `I2` / `I10` sections below are preserved as pre-closure archival
-record.
+**2026-04-21 package update.** The April 21 Koide closure package is now
+landed on the package review surface. The Koide relation `Q = 2/3`, the
+Brannen phase `δ = 2/9`, and the downstream selected-line witness all close.
+The only still-open named scalar-selector item is now the PMNS angle-triple
+point-selection law. The detailed Koide / Brannen / selected-line sections
+below are preserved as pre-closure archival record.
 
 ## §0 Summary table
 
-| # | Import | Lane | Current status | What closes it |
-|---|---|---|---|---|
-| I1 | Koide relation `Q = 2/3` | κ, θ | **closed on canonical 2026-04-21** via the Frobenius-isotype / AM-GM closure package (`docs/KOIDE_I1_I2_CLOSURE_PACKAGE_README_2026-04-21.md`) | closed |
-| I2 / P | Brannen phase `δ = 2/9` on the physical base | θ | **closed on canonical 2026-04-21** via the ABSS fixed-point / topological-robustness closure package (`docs/KOIDE_I1_I2_CLOSURE_PACKAGE_README_2026-04-21.md`) | closed |
-| I5 | PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)` | A-BCC (sigma-chain) | retained observational input; the new upper-octant / source-cubic selector theorems close the CP-sign / `σ_hier` half on the active chamber, and the fixed-`N_e` exact-source-manifold theorem shows the physical PMNS target already lies on a regular local `2`-real source manifold on the charged-lepton-side seed surface. The tested `Z_3` center law `delta_db = 1`, `q_+ = 0` is useful only conditionally: together with `I_src > 0` it still leaves a positive-sheet `3`-real locus and does not derive the PMNS target by itself | framework-native point-selection law stronger than the current `Z_3` center law on the exact PMNS / positive-center locus |
-| I10 | H_* witness ratio `w/v ≈ 4.101` | m_* (selected-line point) | **closed on canonical 2026-04-21** as a corollary of the `I2 / P` closure package | closed |
+| Import | Lane | Current status | What closes it |
+|---|---|---|---|
+| Koide relation `Q = 2/3` | κ, θ | **closed on 2026-04-21** via the Frobenius-isotype / AM-GM closure package (`docs/KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md`) | closed |
+| Brannen phase `δ = 2/9` on the physical base | θ | **closed on 2026-04-21** via the ABSS fixed-point / topological-robustness closure package (`docs/KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md`) | closed |
+| PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)` | A-BCC (sigma-chain) | retained observational input; the new upper-octant / source-cubic selector theorems close the CP-sign / `σ_hier` half on the active chamber, and the fixed-`N_e` exact-source-manifold theorem shows the physical PMNS target already lies on a regular local `2`-real source manifold on the charged-lepton-side seed surface. The tested `Z_3` center law `delta_db = 1`, `q_+ = 0` is useful only conditionally: together with `I_src > 0` it still leaves a positive-sheet `3`-real locus and does not derive the PMNS target by itself | framework-native point-selection law stronger than the current `Z_3` center law on the exact PMNS / positive-center locus |
+| Selected-line witness ratio `w/v ≈ 4.101` | m_* (selected-line point) | **closed on 2026-04-21** as a corollary of the Brannen-phase closure package | closed |
 
 ## §0a Closed in cycle 2
 
-- **I3 closed.** `H_sel(m) = H(m, √6/3, √6/3)` is now traced exactly to the
-  retained-on-`main` parity-compatible observable-selector chain in
+- **Selected-line provenance closed.** `H_sel(m) = H(m, √6/3, √6/3)` is now traced exactly to the
+  retained parity-compatible observable-selector chain in
   `docs/KOIDE_SELECTED_LINE_PROVENANCE_NOTE_2026-04-20.md`.
-- **I4 closed.** The chamber bound `q_+ + δ ≥ √(8/3)` now has a one-step
+- **Chamber bound closed.** The chamber bound `q_+ + δ ≥ √(8/3)` now has a one-step
   reviewer-grade inline derivation in
   `docs/DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md`.
-- **I6 closed by formal demotion.** The SO(2)-quotient is **not**
+- **MRU demotion closed.** The SO(2)-quotient is **not**
   retained-derived from the observable principle; MRU is now supplementary
   only, and the primary κ route is the spectrum/operator bridge plus the
   block-total Frobenius measure. See
   `docs/KOIDE_MRU_DEMOTION_NOTE_2026-04-20.md`.
-- **I11 closed.** Basin enumeration completeness is now certified in
+- **Basin enumeration completeness closed.** Basin enumeration completeness is now certified in
   `docs/DM_ABCC_BASIN_ENUMERATION_COMPLETENESS_THEOREM_NOTE_2026-04-20.md`.
   The corrected full χ²=0 chart is five basins
   `{Basin 1, Basin N, Basin P, Basin 2, Basin X}`; the active-chamber chart is
   `{Basin 1, Basin 2, Basin X}`.
-- **I12 closed.** The `σ_hier = (2,1,0)` ambiguity is now closed without
+- **Hierarchy-permutation ambiguity closed.** The `σ_hier = (2,1,0)` ambiguity is now closed without
   importing the T2K sign preference. The active-chamber support stack from
   `docs/DM_PMNS_CHAMBER_SPECTRAL_COMPLETENESS_THEOREM_NOTE_2026-04-20.md`,
   `docs/DM_PMNS_CP_ORIENTATION_PARITY_REDUCTION_NOTE_2026-04-20.md`,
@@ -54,8 +53,8 @@ record.
   proves that among the two `9/9`-magnitude-passing permutations only
   `(2,1,0)` satisfies the exact chamber upper-octant law, and the negative
   PMNS CP sign follows as a consequence. The branch-local proof chain is
-  packaged in `docs/DM_I12_SIGMA_HIER_CLOSURE_PACKET_NOTE_2026-04-20.md`.
-- **I7, I8 closed by review-surface provenance cleanup.** The quark lane now
+  packaged in `docs/DM_SIGMA_HIER_CLOSURE_PACKET_NOTE_2026-04-20.md`.
+- **Quark provenance surfaces closed.** The quark lane now
   states its retained bimodule and atom provenance inline in the reviewer
   package and headline theorem surfaces: `docs/SCALAR_SELECTOR_REVIEWER_PACKAGE_2026-04-20.md`,
   `docs/QUARK_JTS_AFFINE_PHYSICAL_CARRIER_THEOREM_NOTE_2026-04-19.md`, and
@@ -67,13 +66,13 @@ Closing any single item in the following ordered list produces the largest
 reduction in the retained-observational footprint of the scalar-selector
 cycle.
 
-### Priority 1: Archived pre-closure record for I1 (Koide `Q = 2/3`)
+### Priority 1: Archived pre-closure record for Koide `Q = 2/3`
 
 Closing `Q = 2/3` from Cl(3)/Z³ would immediately upgrade the Koide κ and θ
 lanes from "retained-observational-conditional" to "retained-derivation" on
-main. It is the single highest-leverage open item in the cycle.
+the review surface. It is the single highest-leverage open item in the cycle.
 
-**What is already ruled out (main):** six structural no-go theorems cover
+**What is already ruled out:** six structural no-go theorems cover
 Z₃-invariance alone, sectoral universality, color-sector correction,
 anomaly-forced cross-species, SU(2) gauge exchange mixing, and
 observable-principle character symmetry. None of these mechanisms forces the
@@ -83,7 +82,7 @@ cone point.
 potential that lands its physical minimum on the cone. The retained Z³ scalar
 potential `V(m) = const + (c1+c2/2)m + (3/2)m² + (1/6)m³` has a stationary
 point `m_V ≈ −0.433` which is **not** the Koide cone point
-`m_* ≈ −1.161` (documented on main as an honest gap). A successful
+`m_* ≈ −1.161` (documented in prior package notes as an honest gap). A successful
 derivation requires adding the first-principles retained ingredient that
 moves the effective minimum from `m_V` to `m_*`.
 
@@ -179,15 +178,16 @@ introduce any selected-line `m` dependence. See
 
 **Required retained ingredients for any of the above:** explicit lattice
 propagator or transport-integral definition on the retained Cl(3)/Z³ carrier;
-currently on main as partial support.
+currently present only as partial support.
 
-### Priority 2: Archived pre-closure record for I2 / P (radian bridge for `δ = 2/9`)
+### Priority 2: Archived pre-closure record for the Brannen-phase radian bridge
 
 The branch now carries two complementary results:
 
 1. **Brannen-phase reduction theorem.**
    `docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md`
-   shows that the candidate route `δ = Q/d` reduces I2 to I1.
+   shows that the candidate route `δ = Q/d` reduces the Brannen phase to the
+   Koide relation.
 2. **Cycle-2 linking theorem + direct no-go.**
    `docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md` and
    `docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md` sharpen the
@@ -250,7 +250,7 @@ See `docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md`,
 `docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md`, and
 `docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md`.
 
-### Priority 3: I5 (PMNS angle triple)
+### Priority 3: PMNS angle triple
 
 Scope is larger than the scalar-selector cycle; this is part of the broader
 charged-lepton flagship gate. Closing it requires framework-native PMNS
@@ -286,25 +286,25 @@ side fixed native `N_e` seed surface, and on the verified exact patch the
 PMNS-angle Jacobian has full rank `3`, so the physical target lies on a local
 regular `2`-real source manifold inside that `5`-real seed surface. The
 current exact nonlocal seed-surface selector families still miss that
-manifold. So the remaining live `I5` object is now sharper than “derive the
+manifold. So the remaining live PMNS object is now sharper than “derive the
 PMNS angle triple somehow”: it is the missing point-selection law on that
 exact `2`-real source manifold. See
 `docs/DM_PMNS_NE_SEED_SURFACE_EXACT_SOURCE_MANIFOLD_THEOREM_NOTE_2026-04-20.md`.
 
 **Tested center-law route (2026-04-20):** the proposed coefficient-free
 `Z_3` doublet-block center law `delta_db(H) = 1`, `q_+(H) = 0` does not close
-`I5` by itself, even after adding the already-closed sheet law `I_src(H) > 0`.
+this route by itself, even after adding the already-closed sheet law `I_src(H) > 0`.
 On the verified patch it leaves a local positive-sheet `3`-real center locus,
 and the PMNS angle triple varies macroscopically along that locus. So the
 center law is a useful conditional cut on the exact PMNS manifold, but not yet
 the missing native point-selection law. See
 `docs/DM_PMNS_Z3_DOUBLET_BLOCK_CENTER_POSITIVE_SHEET_NO_GO_THEOREM_NOTE_2026-04-20.md`.
 
-### Priority 4: Archived pre-closure record for I10 (selected-line physical point)
+### Priority 4: Archived pre-closure record for the selected-line physical point
 
 Now the only open content behind `m_*` is the scalar-phase pin itself. If
-`I2 / P` closes, `I10` closes immediately by the exact selected-line
-scalar-phase bridge.
+the Brannen-phase radian bridge closes, the selected-line witness closes
+immediately by the exact selected-line scalar-phase bridge.
 
 ## §2 What a Nature reviewer will still see after submission
 
@@ -333,19 +333,18 @@ Nature-grade statement for this cycle is:
 > current `delta_db = 1`, `q_+ = 0`, `I_src > 0` proposal is still
 > insufficient, and (v) a linear-algebra derivation of the up-sector
 > quark closure on the retained `1⊕5` bimodule and CKM-atlas atom package,
-> whose provenance is now surfaced inline on the review branch. Each retained
+> whose provenance is now surfaced inline on the review surface. Each retained
 > observational input or structural postulate still blocking native closure is
 > listed in the Remaining-Open-Imports register along with the derivation that
 > would close it.
 
-The cycle-2 housekeeping imports I3, I4, I6, I11, and I12 are now closed;
-with the 2026-04-21 Koide package, the remaining irreducible frontier on the
-canonical review branch is `I5` alone.
+The cycle-2 housekeeping imports are now closed; with the 2026-04-21 Koide
+package, the remaining irreducible frontier on the package surface is the
+PMNS angle-triple point-selection law alone.
 
 ## §3 Reproduction of current retained-conditional state
 
-All runners currently pass on canonical (branch
-`review/scalar-selector-cycle1-theorems`). For each of the four Tier-1 lanes
+All runners currently pass. For each of the four Tier-1 lanes
 the primary closure runner and its verification counts are:
 
 | Lane | Primary runner | PASS | Notes |
@@ -361,9 +360,9 @@ the primary closure runner and its verification counts are:
 | DM A-BCC (sigma-chain attack cascade) | `frontier_dm_pns_attack_cascade.py` | 47 | multi-observable chain |
 | DM A-BCC (assumptions audit) | `frontier_dm_abcc_assumptions_audit.py` | 21 | five-route structural no-go |
 | DM A-BCC (active-chamber completeness) | `frontier_dm_pmns_chamber_spectral_completeness_theorem_2026_04_20.py` | 11 | exact chamber `χ²=0` set = `{Basin 1, Basin 2, Basin X}` |
-| DM A-BCC (`σ_hier` upper-octant selector) | `frontier_dm_sigma_hier_upper_octant_selector_theorem_2026_04_20.py` | 14 | closes `I12` without importing T2K sign |
+| DM A-BCC (`σ_hier` upper-octant selector) | `frontier_dm_sigma_hier_upper_octant_selector_theorem_2026_04_20.py` | 14 | closes the hierarchy-permutation ambiguity without importing T2K sign |
 | DM A-BCC (upper-octant / source-cubic selector) | `frontier_dm_pmns_upper_octant_source_cubic_selector_theorem_2026_04_20.py` | 14 | fixes Basin 1 uniquely on the active chamber |
-| DM A-BCC (local-family no-go) | `frontier_dm_pmns_local_selector_family_no_go_theorem_2026_04_20.py` | 15 | reduces `I5` to nonlocal point-selection / angle triple only |
+| DM A-BCC (local-family no-go) | `frontier_dm_pmns_local_selector_family_no_go_theorem_2026_04_20.py` | 15 | reduces the remaining PMNS gate to nonlocal point-selection / angle triple only |
 | DM A-BCC (fixed-`N_e` exact-source manifold) | `frontier_dm_pmns_ne_seed_surface_exact_source_manifold_theorem_2026_04_20.py` | 12 | shows the physical PMNS target already lies on a regular local `2`-real source manifold |
 | DM A-BCC (center-law positive-sheet no-go) | `frontier_dm_pmns_z3_doublet_block_center_positive_sheet_no_go_2026_04_20.py` | 14 | shows `delta_db = 1`, `q_+ = 0`, `I_src > 0` still leaves a positive-sheet `3`-real locus |
 | Quark a_u (JTS-affine-physical-carrier + ISSR1) | `frontier_quark_issr1_bicac_forcing.py` | 13 | headline closure |

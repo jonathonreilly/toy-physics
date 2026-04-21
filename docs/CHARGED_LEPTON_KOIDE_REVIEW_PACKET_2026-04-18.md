@@ -2,22 +2,20 @@
 
 ## Scope
 
-This is the reviewer front door for the live charged-lepton Koide support stack
-on current `main`.
+This is the reviewer front door for the charged-lepton Koide package.
 
-It is a current-main review/support packet for honest review, consolidation,
-and downstream promotion work. It is not a claim that charged leptons are
-already retained closed on the current framework surface.
+It is the consolidated review, provenance, and closure packet for honest
+review, retention, and downstream weaving.
 
-**2026-04-21 canonical update.** On
-`review/scalar-selector-cycle1-theorems`, the `morning-4-21` package now lands
-retained-forced closure for both `I1` (`Q = 2/3`) and `I2 / P` (`δ = 2/9`).
-The older conditional/evening discussion below is preserved as historical
-provenance, not as the current canonical status.
+**2026-04-21 package update.** The April 21 Koide closure package now gives
+retained-forced closure for both the Koide relation `Q = 2/3` and the
+Brannen phase `δ = 2/9`. The older conditional evening discussion below is
+preserved as historical provenance, not as current package status.
 
-## Exact Current Endpoint
+## Historical Route-Pruning Record
 
-The clean current endpoint is:
+Before the final closure package, the stack passed through the following
+reductions:
 
 - the authoritative retained status is still the April 17 bounded review:
   no retained Koide derivation on the current surface
@@ -76,7 +74,7 @@ The clean current endpoint is:
   `Q = 2/3` and `delta = 2/9` from the retained structural identity
   `dim(Cl(3) spinor) / dim(Z^3 lattice) = 2/3`, combined with the
   A-select axiom `SELECTOR = sqrt(6)/3` satisfying `SELECTOR^2 = Q = 2/3`.
-  The strongest `I2 / P` route is dependent rather than standalone:
+  The strongest Brannen-phase route on that surface is dependent rather than standalone:
   `|Im(b_F)|^2 = Q/d` plus Phase-Structural Equivalence `d*delta = Q`.
   The quark-lepton bridge is explicit: the same unique traceless U(1) from
   the `{SU(2)_weak, SWAP_{23}}` commutant forces `|Y(d_R)| = 2/3` via
@@ -85,15 +83,15 @@ The clean current endpoint is:
   `KOIDE_QUBIT_LATTICE_DIM_ALGEBRAIC_CLOSURE_NOTE_2026-04-20.md` and
   `HYPERCHARGE_IDENTIFICATION_NOTE.md`.
 
-So the current charged-lepton state is:
+So the current charged-lepton package status is:
 
 - exact candidate-route closure
-- **retained-forced** derivation of `Q = 2/3` on the canonical review branch
-  via the Frobenius-isotype / AM-GM closure stack in
-  `KOIDE_I1_I2_CLOSURE_PACKAGE_README_2026-04-21.md`
-- **retained-forced** derivation of `delta = 2/9` on the canonical review
-  branch via the ABSS fixed-point / topological-robustness closure stack in
-  `KOIDE_I1_I2_CLOSURE_PACKAGE_README_2026-04-21.md`
+- **retained-forced** derivation of `Q = 2/3` via the Frobenius-isotype /
+  AM-GM closure stack in
+  `KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md`
+- **retained-forced** derivation of `δ = 2/9` via the ABSS fixed-point /
+  topological-robustness closure stack in
+  `KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md`
 - overall lepton mass scale v_0 still open (separate hierarchy input)
 
 ## Read In Order
@@ -123,14 +121,14 @@ So the current charged-lepton state is:
 
 ## Package Role
 
-- reviewer-facing charged-lepton intake for the live support stack on `main`
+- reviewer-facing charged-lepton intake for the current package
 - exact statement of what changed after the April 17 bounded review
 - one-place summary of what is truly closed and what is still open
 
 ## Review Standard
 
-This packet is clean enough for review, atlas use, and consolidation on
-current `main`.
+This packet is clean enough for review, atlas use, and consolidation on the
+current package surface.
 
 The cycle-1 no-go stack (notes 14-21) sharpened the open gap: the missing
 step was one scalar condition, not derivable from the selected-slice scalar
@@ -155,11 +153,11 @@ out four specific character-data candidates for the radian bridge P.
 Note 22 uses a DIFFERENT route: Q-closure via qubit-lattice-dim +
 anomaly arithmetic, then CPC d·delta = Q derives delta. Whether this
 constituted a valid structural bridge was the live reviewer question on the
-April 20 evening surface. On the canonical review branch, that historical
-state is now superseded by the landed `morning-4-21` closure package.
+April 20 evening surface. That historical state is now superseded by the
+April 21 closure package.
 
 **(April 20 late - reduction note 24)** Even if reviewer declines note 22 as
-full closure, the open content of `I2 / P` is now much sharper. The new
+full closure, the open content of the Brannen-phase radian-bridge step is now much sharper. The new
 selected-line local no-go proves the actual `CP^1` Berry packet is too simple
 to pick the interior point `delta = 2/9`, while the retained anomaly-forced-
 time theorem already fixes the native ambient as one-clock physical `3+1`.
@@ -177,12 +175,10 @@ Items that remain open:
 - quark-sector and neutrino-sector Koide analogs are sector-specific open
   problems.
 
-So the current canonical classification is:
+So the current package classification is:
 
-- **retained-forced** derivation of `Q = 2/3` on
-  `review/scalar-selector-cycle1-theorems` via the `morning-4-21` closure
+- **retained-forced** derivation of `Q = 2/3` via the April 21 closure
   package
-- **retained-forced** derivation of `delta = 2/9` on
-  `review/scalar-selector-cycle1-theorems` via the same package
+- **retained-forced** derivation of `delta = 2/9` via the same package
 - retained promotion for charged-lepton ratios, modulo the separate overall
   lepton scale input `v_0`

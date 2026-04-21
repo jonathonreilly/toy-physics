@@ -1,19 +1,19 @@
-# DM I12 σ_hier Closure Packet
+# DM Sigma-Hier Closure Packet
 
 **Date:** 2026-04-20  
-**Lane:** DM A-BCC sigma-chain / open import `I12`  
-**Status:** authoritative branch-local closure packet for `I12` on
-`morning-4-20`  
-**Claim:** `I12` is closed on this branch  
+**Lane:** DM A-BCC sigma-chain / hierarchy-permutation ambiguity  
+**Status:** authoritative closure packet for the hierarchy-permutation
+ambiguity  
+**Claim:** the hierarchy-permutation ambiguity is closed on this package  
 **Exact closure statement:** `sigma_hier = (2,1,0)` is selected on the active
 chamber package, and therefore `sin(delta_CP) < 0` follows as a consequence
 
 ## What this packet is for
 
-`morning-4-20` contains both:
+This package contains both:
 
 - an intermediate reduction note,
-- and the later theorem notes that actually close `I12`.
+- and the later theorem notes that actually close the hierarchy-permutation ambiguity.
 
 This packet names the exact closure chain so the branch owner does not have to
 reconstruct it from several notes.
@@ -42,8 +42,9 @@ J_sigma = parity(sigma) * I_src(H) / Delta,
 I_src(H) = Im(H_12 H_23 H_31).
 ```
 
-That note is important, but it does **not** by itself close `I12`. It only
-reduces the ambiguity to one parity bit.
+That note is important, but it does **not** by itself close the
+hierarchy-permutation ambiguity. It only reduces the ambiguity to one parity
+bit.
 
 ### 3. First actual closeout theorem: upper-octant + source cubic
 
@@ -62,7 +63,8 @@ selects Basin 1 uniquely on the exact chamber root set. Therefore
 Basin 1  =>  sigma_hier = (2,1,0)  =>  sin(delta_CP) < 0.
 ```
 
-This already closes `I12` on the active chamber.
+This already closes the hierarchy-permutation ambiguity on the active
+chamber.
 
 ### 4. Cleaner reformulation of the same closure
 
@@ -113,7 +115,7 @@ follows automatically.
 
 ## Verdict
 
-`I12` is closed on `morning-4-20`.
+The hierarchy-permutation ambiguity is closed on this package surface.
 
 The authoritative theorem to cite for the closeout is:
 

@@ -1,10 +1,10 @@
-# Koide I1 and I2/P Closure Package — Handoff for Canonical Branch Owner
+# Koide Closure Package — `Q = 2/3` and `δ = 2/9`
 
-**Branch:** `morning-4-21`
+**Package:** April 21, 2026 Koide closure handoff
 **Date:** 2026-04-21
-**Scope:** **Only** the I1 (Q = 2/3) and I2/P (δ = 2/9 rad) retained-forced
-closures, plus their connecting Q = 3·δ identity.
-**Status:** Ready for review / promotion to `main`.
+**Scope:** **Only** the Koide relation `Q = 2/3`, the Brannen phase
+`δ = 2/9 rad`, and their connecting identity `Q = 3·δ`.
+**Status:** Ready for review / retention.
 
 **Executability guarantee.** Every PASS check across the 8 runners is an
 actual executable computation — symbolic via sympy (solve, eigenvalues,
@@ -17,11 +17,11 @@ placeholders** in the package runners. Totals: **201 PASS / 0 FAIL.**
 
 ## Anticipated reviewer questions
 
-### Q1: Does any runner in this package say I2/P is "conditional on dynamical metric compatibility"?
+### Q1: Does any runner in this package say the Brannen-phase closure is "conditional on dynamical metric compatibility"?
 
-**No.** The full I2/P closure chain (`c3_spatial_rotation.py` +
+**No.** The full Brannen-phase closure chain (`c3_spatial_rotation.py` +
 `aps_eta_invariant.py` + `aps_topological_robustness.py` +
-`aps_block_by_block_forcing.py`) consistently concludes I2/P at
+`aps_block_by_block_forcing.py`) consistently concludes `δ = 2/9` at
 retained-forced grade. Metric-dependence is discharged by the
 Atiyah-Bott-Segal-Singer topological-robustness theorem
 (`aps_topological_robustness.py`, 41/41 PASS): the APS η value at an
@@ -35,7 +35,7 @@ requires only:
 
 1. **Retained kinematic manifold** — PL S³ × R with Z_3 = C_3[111]
    action. This is the framework's retained kinematic axiom base,
-   independently established on main (e.g. `S3_CAP_UNIQUENESS_NOTE`).
+   independently established elsewhere in the package (e.g. `S3_CAP_UNIQUENESS_NOTE`).
 2. **Standard algebraic topology** — PL S³ is smoothable (Cerf,
    dim ≤ 6); S³ has spin structure (w₂ = 0); the Z_3 action lifts
    via equivariant smoothing. These are topology theorems, not
@@ -70,32 +70,32 @@ axioms". Verified in `frontier_koide_reviewer_stress_test.py` checks
 D2a, D2b.
 
 The "remaining open doors" list in the stress-test contains only
-items genuinely outside I1 or I2/P scope (I5 mechanism, δ_CP sign,
-quark sector). None of these affect the I1 or I2/P closures.
+items genuinely outside the Koide / Brannen closure scope (PMNS
+angle-triple mechanism, `δ_CP` sign, quark sector). None of these affect the
+Koide / Brannen closures.
 
 ---
 
 ## What this package contains
 
 8 dedicated runners + 4 companion notes, selected from the larger
-`evening-4-20` loop work to cover **only** the I1 and I2/P closures.
+April 20 loop work to cover **only** the Koide / Brannen closures.
 
-**I5 (PMNS mixing angles) work is NOT included here** — it remains on
-`evening-4-20` as "observationally robust + structurally elegant" but
-with open mechanism derivation. That can be handled as a separate
+**PMNS mixing-angle work is NOT included here** — it remains a separate
+mechanism package with open derivation. That can be handled as a separate
 promotion decision.
 
 ## Closure grade: RETAINED-FORCED
 
-Both I1 and I2/P are at the **strongest closure grade**: each building
-block is verified forced by retained axioms, no alternative consistent
+Both closure components are at the **strongest closure grade**: each building
+block is verified forced by retained axioms, and no alternative consistent
 construction exists. See the block-by-block forcing runners
-(`frobenius_isotype_split_uniqueness.py` for I1 and
-`aps_block_by_block_forcing.py` for I2/P).
+(`frobenius_isotype_split_uniqueness.py` for `Q = 2/3` and
+`aps_block_by_block_forcing.py` for `δ = 2/9`).
 
 ---
 
-## I1: Q = 2/3 (Koide cone)
+## Koide relation: `Q = 2/3` (Koide cone)
 
 ### Mechanism (one-line)
 
@@ -130,7 +130,7 @@ on Herm_circ(3), which is the canonical inner product on matrix algebras
 
 ---
 
-## I2/P: δ = 2/9 rad (Brannen phase)
+## Brannen phase: `δ = 2/9 rad`
 
 ### Mechanism (one-line)
 
@@ -197,7 +197,8 @@ Numerically: 2/3 = 3 · (2/9). ✓
 ### Significance
 
 This identity is retained-forced (not a numerical coincidence). It shows
-I1 and I2/P are **two faces of the same Z_3 retained structure**:
+the Koide relation and the Brannen phase are **two faces of the same Z_3
+retained structure**:
 
 - From APS side: δ scales as 1/p² (quadratic in orbifold order)
 - From Koide side: Q scales as 1/d (linear in generation count)
@@ -213,7 +214,7 @@ I1 and I2/P are **two faces of the same Z_3 retained structure**:
 
 ---
 
-## Joint I1 + I2/P reviewer stress-test
+## Joint Koide / Brannen reviewer stress-test
 
 ### Runner
 
@@ -240,7 +241,7 @@ I1 and I2/P are **two faces of the same Z_3 retained structure**:
 - C1: 8 routes to η = 2/9 cluster into 3 independent mathematical
   frameworks (topological, analytical, number-theoretic) —
   honest downgrade from "8 independent" to "3 independent"
-- C2: I1 AM-GM uses Frobenius metric, NOT Peter-Weyl weighting,
+- C2: the `Q = 2/3` AM-GM route uses Frobenius metric, NOT Peter-Weyl weighting,
   so no circularity with C1 discharge
 
 ### Note
@@ -255,12 +256,12 @@ I1 and I2/P are **two faces of the same Z_3 retained structure**:
 
 | File | Purpose | PASS |
 |---|---|---|
-| `frontier_koide_aps_topological_robustness.py` | I2/P: ABSS metric-independence (executable) | 41/41 |
-| `frontier_koide_aps_eta_invariant.py` | I2/P: 8 routes to η = 2/9 | 21/21 |
-| `frontier_koide_c3_spatial_rotation.py` | I2/P: Rodrigues = cyclic permutation | 16/16 |
-| `frontier_koide_aps_block_by_block_forcing.py` | I2/P: block-by-block retained-forced (executable) | 29/29 |
-| `frontier_koide_peter_weyl_am_gm.py` | I1: AM-GM ⟹ Q = 2/3 | 22/22 |
-| `frontier_koide_frobenius_isotype_split_uniqueness.py` | I1: block-by-block retained-forced (executable) | 28/28 |
+| `frontier_koide_aps_topological_robustness.py` | Brannen phase: ABSS metric-independence (executable) | 41/41 |
+| `frontier_koide_aps_eta_invariant.py` | Brannen phase: 8 routes to η = 2/9 | 21/21 |
+| `frontier_koide_c3_spatial_rotation.py` | Brannen phase: Rodrigues = cyclic permutation | 16/16 |
+| `frontier_koide_aps_block_by_block_forcing.py` | Brannen phase: block-by-block retained-forced (executable) | 29/29 |
+| `frontier_koide_peter_weyl_am_gm.py` | Koide relation: AM-GM ⟹ Q = 2/3 | 22/22 |
+| `frontier_koide_frobenius_isotype_split_uniqueness.py` | Koide relation: block-by-block retained-forced (executable) | 28/28 |
 | `frontier_koide_Q_eq_3delta_identity.py` | **Bridge**: Q = 3·δ identity | 10/10 |
 | `frontier_koide_reviewer_stress_test.py` | **Joint**: 9-objection stress-test | 34/34 |
 
@@ -271,21 +272,21 @@ There are no literal `True` assertions anywhere in the package.
 
 ### Notes (4, `docs/`)
 
-- `KOIDE_APS_BLOCK_BY_BLOCK_FORCING_NOTE_2026-04-21.md` — I2/P
-- `KOIDE_FROBENIUS_ISOTYPE_SPLIT_UNIQUENESS_NOTE_2026-04-21.md` — I1
+- `KOIDE_APS_BLOCK_BY_BLOCK_FORCING_NOTE_2026-04-21.md` — Brannen phase
+- `KOIDE_FROBENIUS_ISOTYPE_SPLIT_UNIQUENESS_NOTE_2026-04-21.md` — Koide relation
 - `KOIDE_Q_EQ_3DELTA_IDENTITY_NOTE_2026-04-21.md` — Q = 3·δ bridge
 - `KOIDE_REVIEWER_STRESS_TEST_NOTE_2026-04-21.md` — joint stress-test
 
 ### This README
 
-- `KOIDE_I1_I2_CLOSURE_PACKAGE_README_2026-04-21.md` — this file
+- `KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md` — this file
 
 ---
 
 ## Verification
 
-All 8 runners tested on clean `morning-4-21` tree (from `origin/main`,
-no other dependencies):
+All 8 runners tested on a clean package tree with no local carry-over
+dependencies:
 
 ```
 scripts/frontier_koide_aps_topological_robustness.py: 41 PASS, 0 FAIL
@@ -308,10 +309,10 @@ Recommended review order:
 2. **`frontier_koide_aps_eta_invariant.py`** — see the APS η = 2/9 derivation
    via 8 independent routes.
 3. **`KOIDE_APS_BLOCK_BY_BLOCK_FORCING_NOTE_2026-04-21.md`** — understand
-   I2/P retained-forced argument chain.
+   the Brannen-phase retained-forced argument chain.
 4. **`frontier_koide_peter_weyl_am_gm.py`** — see the AM-GM ⟹ Q = 2/3.
 5. **`KOIDE_FROBENIUS_ISOTYPE_SPLIT_UNIQUENESS_NOTE_2026-04-21.md`** —
-   understand I1 retained-forced argument chain.
+   understand the Koide-relation retained-forced argument chain.
 6. **`KOIDE_Q_EQ_3DELTA_IDENTITY_NOTE_2026-04-21.md`** — the bridge.
 7. **`KOIDE_REVIEWER_STRESS_TEST_NOTE_2026-04-21.md`** — see the
    enumerated reviewer objections addressed.
@@ -321,16 +322,15 @@ Recommended review order:
 
 ## What's NOT in this package (deliberately excluded)
 
-- **I5 (PMNS mixing angles)** work: remains on `evening-4-20` branch.
-  I5 has observational robustness + sum rules + uniqueness among simple
-  (Q, δ)-expressions, but the product-structure mechanism derivation
-  (why θ_13 = δ·Q specifically) is open. Treat as separate promotion
-  decision — consolidate only if desired, not required for I1/I2 main-landing.
+- **PMNS mixing-angle work**: remains a separate open mechanism package.
+  It has observational robustness + sum rules + uniqueness among simple
+  `(Q, δ)`-expressions, but the product-structure mechanism derivation
+  (why `θ_13 = δ·Q` specifically) is open. Treat as a separate promotion
+  decision; it is not required for the Koide / Brannen closure landing.
 
 - **Meta iterations** (master-status notes, publication outline, abstract
   draft, honest critiques): useful history but not essential for the
-  I1/I2 closure. Available on `evening-4-20` if the canonical owner wants
-  them.
+  Koide / Brannen closure.
 
   content.
 
@@ -338,10 +338,10 @@ Recommended review order:
 
 ## Bottom line
 
-- I1 Q = 2/3: **RETAINED-FORCED** with block-by-block verification.
-- I2/P δ = 2/9: **RETAINED-FORCED** with block-by-block verification.
+- Q = 2/3: **RETAINED-FORCED** with block-by-block verification.
+- δ = 2/9: **RETAINED-FORCED** with block-by-block verification.
 - Q = 3·δ: retained arithmetic identity linking both.
 - 9 reviewer objections addressed.
-- **219 executable PASS checks**, 0 FAIL.
+- **201 executable PASS checks**, 0 FAIL.
 
 Ready for review and main-branch promotion.

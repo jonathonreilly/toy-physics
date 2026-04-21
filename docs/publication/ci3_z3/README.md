@@ -1,7 +1,7 @@
 # CI(3) / Z^3 Publication Package
 
-This directory is the publication-facing entrypoint for the current `main`
-package.
+This directory is the publication-facing entrypoint for the current package
+surface.
 
 Use this package instead of browsing raw repo chronology.
 
@@ -37,19 +37,25 @@ Framework statement:
 
 ## Current Package Shape
 
-The package has four layers:
+**2026-04-21 package update.** The charged-lepton Koide closure package is now
+part of the review surface. The older bounded observational-pin and route-
+pruning rows are historical baseline/provenance unless they are explicitly
+cited for that purpose.
+
+The package has five layers:
 
 1. retained theorem core
 2. retained standalone quantitative lanes (`alpha_s`, EW normalization,
    exact lattice-scale Yukawa/gauge Ward theorem)
-3. retained YT/top transport lane plus a derived Higgs/vacuum lane with a retention-decomposed budget
-4. bounded prediction surface plus live gates and frozen-out route history
+3. retained charged-lepton Koide closure package
+4. retained YT/top transport lane plus a derived Higgs/vacuum lane with a retention-decomposed budget
+5. bounded prediction surface plus one remaining live scalar-selector gate and frozen-out route history
 
-The public manuscript surface on `main` is arXiv-first. Journal-specific
-packaging is private and is not kept here as a competing public draft.
+The public manuscript surface is arXiv-first. Journal-specific packaging is
+private and is not kept here as a competing public draft.
 
 The package is already predictive in a reviewer-facing sense. For the shortest
-summary of what is already predicted on `main`, use
+summary of what is already predicted on the active package surface, use
 [PREDICTION_SURFACE_2026-04-15.md](./PREDICTION_SURFACE_2026-04-15.md).
 For the explicit package boundary, use:
 
@@ -59,7 +65,7 @@ For the explicit package boundary, use:
 
 ## Current Quantitative Component Stack
 
-The current canonical quantitative stack is modular:
+The current quantitative stack is modular:
 
 - [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md)
 - [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md)
@@ -106,7 +112,7 @@ Current package status:
   `m_H = 125.1 GeV` (framework-side 3-loop route),
   retention analysis `m_H = 125.04 ± 3.17 GeV`,
   with retained `119.8 GeV` (2-loop support route)
-- promoted CKM atlas/axiom package on the canonical tensor/projector surface
+- promoted CKM atlas/axiom package on the tensor/projector surface
   (no quark-mass or fitted CKM inputs; canonical CMT `alpha_s(v)` input):
   `|V_us| = 0.22727`,
   `|V_cb| = 0.04217`,
@@ -117,7 +123,7 @@ Current package status:
   `K_R(q) = 0` for every pure `A1` background on the seven-site support block
   via [KR_A1_VANISHING_SUPPORT_NOTE.md](../../KR_A1_VANISHING_SUPPORT_NOTE.md)
 - retained three-generation matter structure now also has an atlas-wired exact
-  flavor support packet on `main`:
+  flavor support packet in the package:
   the full BZ-corner site-phase / cube-shift bridge
   [SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md](../../SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md),
   the exact taste-cube `S_3` decomposition
@@ -128,8 +134,8 @@ Current package status:
   [Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md](../../Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md);
   these are support theorems for the retained matter lane and future flavor
   work, not additional flagship flavor-numerics claims
-- reviewed April 19 `Cl(3) -> SM` algebraic support packet also lives on
-  `main` for reviewer / atlas use only:
+- reviewed April 19 `Cl(3) -> SM` algebraic support packet also lives in the
+  package for reviewer / atlas use only:
   [CL3_SM_EMBEDDING_MASTER_NOTE.md](../../CL3_SM_EMBEDDING_MASTER_NOTE.md),
   [CL3_SM_EMBEDDING_THEOREM.md](../../CL3_SM_EMBEDDING_THEOREM.md),
   [CL3_COLOR_AUTOMORPHISM_THEOREM.md](../../CL3_COLOR_AUTOMORPHISM_THEOREM.md),
@@ -169,18 +175,18 @@ Current package status:
 
 ## Other Bounded Families
 
-- Charged-lepton mass-hierarchy observational-pin closure (Koide `Q = 2/3`), carried on the repo as a bounded charged-lepton package. Reviewer entry point: [CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md](../../CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md). Retained content: algebraic Koide-cone equivalence (Theorem 1); retained `hw=1` second-order-return shape theorem with three independent weight slots (Theorem 2, publication-grade robust); mass/mixing subspace disjointness theorem `dim(V_H ∩ V_D) = 0` (Theorem 3); six rigorous structural no-gos on retained non-Higgs-Yukawa mechanisms (§5); three higher-order structural theorems (transport identity, variational-principle survey with the real-irrep-block-democracy candidate primitive, fourth-order signed Clifford ordering cancellation — Theorems 4–6); observational-pin closure at 3-real PDG input (Theorem 7). The 3→3 pin produces no spare observable analogous to the retained neutrino-mixing 3→4 `δ_CP` forecast. Convention-invariant under mass-vs-mass-squared pin choice (Convention A/B cross-check). Pin is unique as a set up to positive scale; a residual `S_2` labeling ambiguity on `w_a ↔ w_b` persists on the retained surface and is invariant under Koide `Q` and the Σ spectrum. A reviewed April 18-19 Koide support stack now also lives on `main`: exact circulant/operator-space and positive selected-line reductions narrow one candidate route to one microscopic scalar selector law, the exact one-scalar obstruction theorem shows that the live promotion gap is precisely one real scalar condition, the exact Cl(3) doublet/Kramers selector-gap note closes that route negatively, and the exact `Z_3` scalar-potential support note records that the selected-slice potential still does not pick the physical point. This does not upgrade the package beyond bounded observational-pin compatibility. 19 runners, 518 PASS / 0 FAIL on origin/main base.
-- DM flagship gate, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` conditional/support package with a retained local P3 Sylvester linear-path signature theorem at the pinned point and an observational uniqueness theorem for `σ_hier = (2, 1, 0)` at that pin, a reviewed selector obstruction stack that compresses selector-side ambiguity to intrinsic threshold-law nonrealization and exhausts the tested carrier-side pressure to two explicit split-2 upper-face neighborhoods, and a reviewed Wilson direct-descendant science stack showing that current `main` carries no hidden Wilson-to-`dW_e^H` descendant law while explicit structured positive model classes and manifold-valued constructive positive exact closure already exist on the fixed native `N_e` seed surface: the remaining live blockers are the named baseline-connected-component input `A-BCC`, the finer right-sensitive microscopic selector law for the physical source branch / point, interval-certified exact-carrier dominance/completeness on the residual split-2 selector branch, and current-bank quantitative DM mapping; broader chamber-wide / all-basin uniqueness beyond the pinned `σ_hier` theorem remains out of scope
-- curated neutrino boundary/support packet on `main`, with exact current-stack
+- Historical charged-lepton mass-hierarchy observational-pin baseline, retained only as provenance behind the current Koide closure package. Reviewer entry point: [CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md](../../CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md). It contains the algebraic Koide-cone equivalence, the retained `hw=1` second-order-return shape theorem, the mass/mixing subspace disjointness theorem `dim(V_H ∩ V_D) = 0`, six rigorous structural no-gos on retained non-Higgs-Yukawa mechanisms, three higher-order structural theorems, and the observational-pin closure at 3-real PDG input. The reviewed April 18-20 Koide support stack remains useful provenance for route-pruning and compatibility checks, but the authoritative status is now the retained-forced April 21 closure package rather than bounded observational-pin compatibility.
+- DM flagship gate, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` conditional/support package with a retained local P3 Sylvester linear-path signature theorem at the pinned point and an observational uniqueness theorem for `σ_hier = (2, 1, 0)` at that pin, a reviewed selector obstruction stack that compresses selector-side ambiguity to intrinsic threshold-law nonrealization and exhausts the tested carrier-side pressure to two explicit split-2 upper-face neighborhoods, and a reviewed Wilson direct-descendant science stack showing that the current package carries no hidden Wilson-to-`dW_e^H` descendant law while explicit structured positive model classes and manifold-valued constructive positive exact closure already exist on the fixed native `N_e` seed surface: the remaining live blockers are the named baseline-connected-component input `A-BCC`, the finer right-sensitive microscopic selector law for the physical source branch / point, interval-certified exact-carrier dominance/completeness on the residual split-2 selector branch, and current-bank quantitative DM mapping; broader chamber-wide / all-basin uniqueness beyond the pinned `σ_hier` theorem remains out of scope
+- curated neutrino boundary/support packet in the package, with exact current-stack
   Majorana zero law, exact mass reduction to the Dirac lane, exact PMNS
   `sigma = 0` and right-conjugacy-invariant no-go closeouts, and exact
   last-mile reduction to `(J_chi, mu)`; still outside the manuscript surface
-- persistent exact-lattice compact-object companion on `main`, with one
+- persistent exact-lattice compact-object companion in the package, with one
   retained blended readout on the nearby family and a `top4` multistage floor
   that survives beyond the widened pocket, but still below persistent
   inertial-mass / matter closure because the inward-source directional
   boundary remains
-- live bounded quark mass-ratio review/support stack on `main`: the
+- live bounded quark mass-ratio review/support stack in the package: the
   reviewer-facing quark packet bundles the down-type CKM-dual lane, bounded
   up-type inversion, minimal Schur-NNI full-solve support, reduced
   projector-ray CKM+CP closure, the parameter/native/tensor-endpoint/readout
@@ -191,7 +197,7 @@ Current package status:
 - mixed cosmology surface: retained structural identity
   `\Lambda_{vac} = \lambda_1(S^3_R)` and retained `w = -1` corollary, with
   bounded numerical `\Lambda`, `\Omega_\Lambda`, `n_s`, and `m_g`
-- bounded secondary predictions already on `main`, plus the CKM-only
+- bounded secondary predictions already in the package, plus the CKM-only
   neutron-EDM corollary with bounded continuation:
   proton lifetime, down-type flavor-mass CKM-dual ratios, vacuum critical
   stability, taste-scalar near-degeneracy, benchmark gravitational

@@ -9,17 +9,16 @@
 
 Four Tier-1 Standard Model scalar-selector gates close this cycle via retained Cl(3)/Z³ framework ingredients plus named retained inputs. No new axioms are added. Each gate carries at least one primary closure route plus one or more independent corroborating routes. All runners pass with no hardcoded verifications. Open retained-observational inputs are enumerated separately in `docs/SCALAR_SELECTOR_REMAINING_OPEN_IMPORTS_2026-04-20.md`.
 
-**2026-04-21 canonical update.** The Koide `κ` / `θ` rows below are now
-superseded on `review/scalar-selector-cycle1-theorems` by the landed
-`morning-4-21` closure package:
-`docs/KOIDE_I1_I2_CLOSURE_PACKAGE_README_2026-04-21.md` plus its 8 executable
-runners (`201 PASS / 0 FAIL`). On the canonical review branch, `Q = 2/3` and
-`δ = 2/9` are no longer treated as named retained observational inputs.
+**2026-04-21 package update.** The April 21 Koide closure package
+(`docs/KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md`) supersedes the older
+κ / θ status lines below. `Q = 2/3` and `δ = 2/9` are now carried as
+retained-forced closure results rather than named retained observational
+inputs.
 
 | Gate | Observable | Closure routes | Retained inputs |
 |---|---|---|---|
-| **Koide κ** | Charged-lepton cone normalization `κ = 2` (equivalently `Q = 2/3`) | Canonical closure package: Frobenius-isotype / AM-GM forcing + executable reviewer stress-test | none beyond retained framework kinematics on the canonical review branch |
-| **Koide θ** | Brannen–Zenczykowski phase offset `δ = 2/9` | Canonical closure package: ABSS fixed-point / topological robustness + executable reviewer stress-test | none beyond retained framework kinematics on the canonical review branch |
+| **Koide κ** | Charged-lepton cone normalization `κ = 2` (equivalently `Q = 2/3`) | April 21 closure package: Frobenius-isotype / AM-GM forcing + executable reviewer stress-test | none beyond retained framework kinematics |
+| **Koide θ** | Brannen–Zenczykowski phase offset `δ = 2/9` | April 21 closure package: ABSS fixed-point / topological robustness + executable reviewer stress-test | none beyond retained framework kinematics |
 | **DM A-BCC** | Physical neutrino-source basin selection (Basin 1) | Sylvester signature-forcing + σ-chain + DPLE `F_4` + chamber bound + upper-octant / source-cubic selector | PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)`; now sharpened to a point-selection law on an exact local `2`-real PMNS source manifold beyond the currently tested `Z_3` center law |
 | **Quark a_u** | Up-sector reduced amplitude `a_u = 0.7748865611` | Affine-physical-carrier JTS + one-dimensional 5-channel residue + RPSR NLO | Bimodule `B = Cl(3)/Z₃ ⊗ Cl_CKM(1⊕5)`, retained atoms `ρ, supp, δ_A1` (CKM atlas) |
 
@@ -47,7 +46,10 @@ holds where `(a_0, z)` are the spectrum-side C₃ character components of `(√m
 
 **Consequence.** The spectrum-side Koide relation `Q = 2/3`, equivalent to `a_0² = 2|z|²`, implies the operator-side normalization `a² = 2|b|²`, i.e. `κ = 2`. The operator-side framing reduces algebraically to the spectrum-side framing under the retained cyclic-compression bridge.
 
-**Retained inputs.** `Q = 2/3` is the Koide observational relation (Foot 1994, PDG-verified; see `docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md` on main). No new axiom cost.
+**Package status.** `Q = 2/3` is no longer carried here as a retained
+observational input. It is recovered by the April 21 Frobenius-isotype /
+AM-GM closure package. The observational relation remains the physical target
+being matched.
 
 ### §1.2 Independent corroboration — block-total Frobenius measure
 
@@ -62,7 +64,7 @@ The equal-block-measure extremum `E_+ = E_⊥` at fixed `E_+ + E_⊥` recovers `
 
 **Dimensional uniqueness.** `d = 3` is the unique dimension where `Herm_circ(d)` decomposes as `1·trivial ⊕ 1·complex-doublet`, so the block-total Frobenius functional is itself dim-uniquely well-defined at `d = 3`.
 
-**Retained inputs.** Herm_circ(3) structure (C₃ representation theory; see `docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md`), `d = 3` (from `docs/DIMENSION_SELECTION_NOTE.md` and related on main).
+**Retained inputs.** Herm_circ(3) structure (C₃ representation theory; see `docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md`), `d = 3` (from `docs/DIMENSION_SELECTION_NOTE.md` and related dimensional-selection notes).
 
 ### §1.3 Supporting — Moment-Ratio Uniformity (MRU)
 
@@ -70,7 +72,7 @@ On `Herm_circ(3)` with Frobenius metric, the MRU principle — Frobenius-normali
 
 ### §1.4 Supporting obstructions — what is ruled out
 
-Six structural no-go theorems on main (`docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md`, total 250 PASS across 6 runners) rule out Z₃-invariance alone, sectoral universality, color-sector correction, anomaly-forced cross-species, SU(2) gauge-exchange mixing, and observable-principle character symmetry as candidate forcing mechanisms for `Q = 2/3`. These remain useful negative controls, but on the canonical review branch they are superseded by the landed Frobenius-isotype / AM-GM closure package rather than read as the final Koide status.
+Six structural no-go theorems in `docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md` (total 250 PASS across 6 runners) rule out Z₃-invariance alone, sectoral universality, color-sector correction, anomaly-forced cross-species, SU(2) gauge-exchange mixing, and observable-principle character symmetry as candidate forcing mechanisms for `Q = 2/3`. These remain useful negative controls, but they are superseded by the landed Frobenius-isotype / AM-GM closure package rather than read as the final Koide status.
 
 ---
 
@@ -127,18 +129,13 @@ remaining gap precisely: the structural count `2/d²` is available, but its
 identification with the physical Berry holonomy in radians is not forced on
 the retained base.
 
-### §2.3 Retained input and open-import status
+### §2.3 Package status and geometric context
 
-**Retained input.** The value `δ = 2/9` is the observational
-Brannen–Zenczykowski phase offset. The identification above gives this value
-its canonical geometric meaning as a Pancharatnam–Berry holonomy on the
-physical selected line; it does not independently quantize the specific value
-from topology alone. The cycle-2 linking theorem and no-go sharpen the open
-content to one named residual statement:
-
-```text
-P: the dimensionless structural ratio 2/d² is the physical Berry holonomy in radians.
-```
+**Package status.** `δ = 2/9` is no longer carried here as a retained
+observational input. The April 21 ABSS fixed-point / topological-robustness
+chain closes the old selected-line identification gap. The Berry-holonomy
+reading above remains the geometric context for that closure rather than an
+outstanding open item.
 
 See `docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md` and
 `docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md`.
@@ -236,8 +233,8 @@ The retained Clifford bimodule is
 
 with:
 
-- `Cl(3)/Z₃`: the core flavor algebra (retained framework; see `docs/CL3_SM_EMBEDDING_THEOREM.md` on main);
-- `Cl_CKM(1⊕5)`: the CKM 1⊕5 carrier, retained from the CKM-atlas closure (`docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md` on main);
+- `Cl(3)/Z₃`: the core flavor algebra (retained framework; see `docs/CL3_SM_EMBEDDING_THEOREM.md`);
+- `Cl_CKM(1⊕5)`: the CKM 1⊕5 carrier, retained from the CKM-atlas closure (`docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`);
 - retained unit projector ray `p = cos_d · e_1 + sin_d · e_5` with `cos_d = 1/√6`, `sin_d = √(5/6)`;
 - retained reduced physical carrier plane `H_{(1+5)} = span{e_1, e_5}`;
 - retained atom `a_d = ρ = 1/√42` (see `docs/QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`);
@@ -314,7 +311,7 @@ Retained inputs are: the Cl(3)/Z₃ ⊗ Cl_CKM(1⊕5) bimodule structure (framew
 
 ## §5 Runner status
 
-All runners pass on canonical branch `review/scalar-selector-cycle1-theorems` with no hardcoded `True` PASS annotations. Every PASS is a numeric or symbolic verification.
+All runners pass with no hardcoded `True` PASS annotations. Every PASS is a numeric or symbolic verification.
 
 | Lane | Runner | PASS | FAIL |
 |---|---|---|---|
@@ -348,11 +345,10 @@ All runners pass on canonical branch `review/scalar-selector-cycle1-theorems` wi
 
 ## §6 Retained observational inputs (complete list)
 
-**2026-04-21 canonical update.** After the landed `morning-4-21` closure
-package, Koide `Q = 2/3` and Brannen `δ = 2/9` are no longer counted here as
-retained observational inputs on the canonical review branch. The table below
-lists the remaining retained observational or atlas-level inputs across the
-four Tier-1 gates.
+**2026-04-21 package update.** After the landed April 21 closure package,
+Koide `Q = 2/3` and Brannen `δ = 2/9` are no longer counted here as retained
+observational inputs. The table below lists the remaining retained
+observational or atlas-level inputs across the four Tier-1 gates.
 
 | Label | Input | Used in | Provenance |
 |---|---|---|---|

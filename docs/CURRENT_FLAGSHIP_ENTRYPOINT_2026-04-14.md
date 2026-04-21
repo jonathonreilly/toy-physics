@@ -1,7 +1,7 @@
 # Current Flagship Entrypoint
 
 **Date:** 2026-04-15
-**Purpose:** one-page orientation to the actual current package on `main`
+**Purpose:** one-page orientation to the actual current package
 
 This is the correct root-level entrypoint for an external reviewer.
 
@@ -16,7 +16,7 @@ Framework scoping for reviewers:
   `Cl(3)` on `Z^3` is the physical theory
 - [MINIMAL_AXIOMS_2026-04-11.md](MINIMAL_AXIOMS_2026-04-11.md)
   records the accepted operational package boundary used to audit the current
-  public lanes on `main`
+  public package lanes
 - [SINGLE_AXIOM_INFORMATION_NOTE.md](SINGLE_AXIOM_INFORMATION_NOTE.md)
   and
   [SINGLE_AXIOM_HILBERT_NOTE.md](SINGLE_AXIOM_HILBERT_NOTE.md)
@@ -31,7 +31,8 @@ The current flagship package has five layers:
 1. retained theorem core
 2. retained standalone quantitative lanes (`alpha_s`, EW normalization)
 3. retained YT/top transport lane plus a derived Higgs/vacuum lane with a retention-decomposed budget
-4. one bounded charged-lepton package
+4. one charged-lepton package with retained-forced Koide closure plus a
+   separate bounded scale hierarchy item
 5. bounded prediction surface plus one live gate and an explicit history bucket
 
 Fast reviewer path after this page:
@@ -53,7 +54,7 @@ Fast reviewer path after this page:
   exact native `SU(2)`, graph-first structural `SU(3)`, anomaly-forced `3+1`,
   retained three-generation structure with atlas-wired exact taste-cube /
   residual-symmetry flavor support, plus a reviewed April 19 `Cl(3) -> SM`
-  algebraic support packet on `main` for reviewer / atlas use only (not part
+  algebraic support packet in the package for reviewer / atlas use only (not part
   of the accepted minimal-input stack), exact `I_3 = 0`, exact CPT, retained
   Bell/CHSH support on explicit two-species lattice systems with KS taste
   measurements, emergent Lorentz invariance, retained action-surface
@@ -65,18 +66,12 @@ Fast reviewer path after this page:
   canonical tensor/projector surface,
   retained YT/top transport, and derived Higgs/vacuum with a
   retention-decomposed budget
-- bounded charged-lepton package:
-  charged-lepton mass-hierarchy / Koide compatibility closes on an explicit
-  three-real PDG pin, with no spare observable beyond the pin; this is
-  compatibility with the observed charged-lepton hierarchy, not a retained
-  framework derivation of Koide. A reviewed April 18 Koide support stack now
-  lives on `main`: it closes an exact circulant/operator-space bridge and an
-  exact positive selected-line reduction stack down to one microscopic scalar
-  selector law. The exact one-scalar obstruction triangulation theorem, the
-  exact Cl(3) doublet/Kramers selector-gap closeout, and the exact `Z_3`
-  selected-slice scalar-potential support note now sharpen that route
-  further, but they still do not upgrade the authoritative package beyond
-  bounded status
+- charged-lepton Koide package:
+  the historical observational-pin baseline remains useful compatibility
+  provenance, and the April 18-20 route-pruning stack remains useful support
+  provenance, but the April 21 closure package now supplies retained-forced
+  derivations of both `Q = 2/3` and `δ = 2/9`; the only separate charged-
+  lepton hierarchy item left outside that closure is the overall scale `v_0`
 - bounded prediction surface plus one dual-status flavor corollary:
   proton lifetime, the CKM-only neutron-EDM corollary with bounded
   continuation, down-type flavor-mass CKM-dual ratios, vacuum critical
@@ -90,11 +85,11 @@ packaging.
 
 ## Other Bounded Families
 
-- DM flagship gate, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` conditional/support package that now fixes `σ_hier = (2, 1, 0)` observationally at the pinned chamber point and gives a CP-phase no-go for the known `C_neg` chi²=0 basins under the physical pairing, a reviewed selector obstruction stack that compresses selector-side ambiguity to intrinsic threshold-law nonrealization and exhausts the tested carrier-side pressure to two explicit split-2 upper-face neighborhoods, and a reviewed Wilson direct-descendant science stack showing that current `main` carries no hidden Wilson-to-`dW_e^H` descendant law while explicit structured positive model classes and manifold-valued constructive positive exact closure already exist on the fixed native `N_e` seed surface: the remaining live blockers are `A-BCC` as an axiom-native branch-choice law, the finer right-sensitive microscopic selector law for the physical source branch / point, interval-certified exact-carrier dominance/completeness on the residual split-2 selector branch, and current-bank quantitative DM mapping
-- persistent exact-lattice compact-object companion on `main`, with a bounded
+- DM flagship gate, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` conditional/support package that now fixes `σ_hier = (2, 1, 0)` observationally at the pinned chamber point and gives a CP-phase no-go for the known `C_neg` chi²=0 basins under the physical pairing, a reviewed selector obstruction stack that compresses selector-side ambiguity to intrinsic threshold-law nonrealization and exhausts the tested carrier-side pressure to two explicit split-2 upper-face neighborhoods, and a reviewed Wilson direct-descendant science stack showing that the current package carries no hidden Wilson-to-`dW_e^H` descendant law while explicit structured positive model classes and manifold-valued constructive positive exact closure already exist on the fixed native `N_e` seed surface: the remaining live blockers are `A-BCC` as an axiom-native branch-choice law, the finer right-sensitive microscopic selector law for the physical source branch / point, interval-certified exact-carrier dominance/completeness on the residual split-2 selector branch, and current-bank quantitative DM mapping
+- persistent exact-lattice compact-object companion in the package, with a bounded
   beyond-pocket compact-object-plus-response regime and a mapped inward-source
   directional boundary; still below persistent inertial-mass / matter closure
-- bounded Wilson two-body / Newton-companion lane on `main`, but intentionally
+- bounded Wilson two-body / Newton-companion lane in the package, but intentionally
   outside publication capture: open-boundary Wilson dynamics gives a clean
   genuine two-orbital mutual-attraction channel, the screening-mass sweep
   softens the distance exponent toward `-2`, and the same-convention
@@ -102,14 +97,14 @@ packaging.
   scaling on that Wilson surface; both-masses and action-reaction closure
   remain open, so this stays a bounded side lane rather than part of the
   flagship paper package
-- live bounded quark mass-ratio review/support stack on `main`: the
+- live bounded quark mass-ratio review/support stack in the package: the
   reviewer-facing quark packet now bundles the down-type CKM-dual lane, the
   bounded up-type inversion extension, the minimal Schur-NNI full-solve
   support, the reduced projector-ray CKM+CP closure extension, the
   parameter/candidate/native/affine audits, the tensor-endpoint bridge and
   resolution, the endpoint-readout constraint lane, the endpoint-chain / Route
   2 readout-theorem block, the scalar-comparison bridge band, the
-  denominator-admissibility no-go, and the partition revisit; current `main`
+  denominator-admissibility no-go, and the partition revisit; the current package
   therefore reduces the remaining non-derived quark-CP content to one sharply
   structured bounded endpoint split rather than a free scalar search, with an
   exact `1/6` refit branch, a bounded slope-ratio anchored branch, exact
@@ -117,7 +112,7 @@ packaging.
   `beta_E / alpha_E = 21/4` once the `T`-side candidates are granted, and an
   exact conditional Route-2 time-coupling family whose uniqueness is still
   obstructed by that unresolved readout entry; this sharpens the flavor status
-  on `main` without promoting full quark closure to retained
+  in the package without promoting full quark closure to retained
 - older bounded CKM mass-basis / Cabibbo / partial Jarlskog route history
 - mixed cosmology surface, organized around one fixed-gap vacuum scale:
   retained structural identity `Lambda_vac = lambda_1(S^3_R)`, retained
@@ -125,7 +120,7 @@ packaging.
   identity `m_g^2 = 2 hbar^2 Lambda_vac / c^2`, with bounded numerical
   `Lambda`, numerical `m_g`, and present-day `Omega_Lambda` still behind the
   matter bridge
-- bounded secondary predictions already on `main`, plus the CKM-only
+- bounded secondary predictions already in the package, plus the CKM-only
   neutron-EDM corollary with bounded continuation: proton lifetime, down-type
   flavor-mass CKM-dual ratios, vacuum critical stability, benchmark
   gravitational decoherence, BH entropy, and monopole mass
@@ -149,7 +144,7 @@ For optional historical context, use:
 - [work_history/publication/REMOTE_BRANCH_AUDIT_2026-04-14.md](work_history/publication/REMOTE_BRANCH_AUDIT_2026-04-14.md)
 - [work_history/repo/LANE_STATUS_BOARD.md](work_history/repo/LANE_STATUS_BOARD.md)
 
-For non-flagship live side lanes on current `main`, use:
+For non-flagship live side lanes on the current package surface, use:
 
 - [CANONICAL_HARNESS_INDEX.md](CANONICAL_HARNESS_INDEX.md)
 
