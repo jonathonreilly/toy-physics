@@ -22,6 +22,7 @@ This backlog tracks the attack candidates for the loop on
 | 1 | Doublet-block AM-GM on (E_sym, E_anti) | **negative** | `PMNS_SELECTOR_ITER1_DOUBLET_AMGM_NEGATIVE_NOTE_2026-04-21.md` |
 | 2 | `W[J] = log|det H|` under scalar Casimir constraints {‖J‖_F², Tr(H²), Tr(H), Tr(H³)} | **negative** | `PMNS_SELECTOR_ITER2_WDET_CONSTRAINED_NEGATIVE_NOTE_2026-04-21.md` — best alignment at cos(θ)=0.69 with Tr(H²), still 46° off |
 | 3 | Brannen-phase gate: 12 phase invariants vs retained I2/P values {2/9 rad, 2π/9, π−2/9, …} | **weak hint / negative at 1e-4** | `PMNS_SELECTOR_ITER3_BRANNEN_PHASE_WEAK_HINT_NOTE_2026-04-21.md` — best match \|dev\|=0.025 rad (1.4°), two clusters; chamber-blind `Im(a_*+b_*) = γ = 1/2` exactly |
+| 4 | Operator-commutation + scalar-invariant scan (33 scalars × retained simple values) | **mixed — strong hint on `δ · q_+ ≈ 2/3 = Q`** (0.15% dev) | `PMNS_SELECTOR_ITER4_OPERATOR_COMMUTATION_MIXED_NOTE_2026-04-21.md` — operator-commutation class ruled out; scalar scan finds `δ·q_+ = 2/3` and `Σλ/Σ\|λ\| = 1/6` both at 0.001 deviation — likely iter-5 candidates |
 
 ---
 
@@ -166,24 +167,25 @@ for its critical point.
 
 ---
 
-## Next up (iter 4)
+## Next up (iter 5)
 
-**Candidate**: A6 — simultaneous-eigenvector / operator-commutation
-attack. Reason: iters 1, 2, 3 ruled out (respectively) variational
-AM-GM, scalar-Casimir Lagrangian, and exact Brannen-phase-gate. The
-remaining natural class is **operator-valued constraints**: the pinned
-point might lie on the sub-manifold where `[H, O] = 0` for a specific
-retained operator `O`.
+**Candidate**: precision-sharpen test of `δ · q_+ = Q = 2/3`. The
+strongest signal from iter 4 by far. Iter 5 settles whether this is
+an exact retained identity or a 0.15%-level near-miss.
 
 Concrete plan:
-- For each retained operator `O` in the framework (candidates: the
-  cyclic shift `C`, the Z_3 isotype projectors `P_0`, `P_+`, `P_−`,
-  specific Cl(3) bivectors `B_1`, `B_2`, `B_3`, the SELECTOR matrix,
-  and the perturbation generators `T_m`, `T_Δ`, `T_q`), compute
-  `‖[H(m, δ, q_+), O]‖_F²` over the chamber.
-- Identify the zero-set of each commutator: `{[H, O] = 0}` is a
-  sub-variety of the chart.
-- Test whether any zero-set passes through the pinned point AND has
-  codim ≥ 1 (actually cuts the chamber).
-- Joint zero-sets of multiple commutators (if a single one doesn't
-  suffice) could cut to codim 2 or more, pinning the point.
+- Solve the chamber inversion at HIGH PRECISION (mpmath or symbolic
+  sympy), re-pinning `(m, δ, q_+)` to the PDG 2024 central values
+  `(sin²θ_12, sin²θ_13, sin²θ_23) = (0.307, 0.0218, 0.545)`.
+- At that high-precision pinned point, compute `δ · q_+` to 10+
+  digits. If it equals `2/3` to 10+ digits → retained identity
+  confirmed.
+- If confirmed: also test `Σλ / Σ|λ| = 1/6` at high precision (the
+  other iter 4 near-hit).
+- Additionally: re-pin under the CONSTRAINT `δ · q_+ = 2/3` exactly
+  (imposing this as one of the three equations), and check whether
+  the resulting PMNS angles are within PDG 3σ of central — this is
+  the predictive falsifiability test.
+- If both (retained exactness AND PDG-compatibility) hold, the gate
+  closes via cross-sector I1 → I5 linkage and iter 6 moves to
+  axiomatic derivation.
