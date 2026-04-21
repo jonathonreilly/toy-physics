@@ -25,6 +25,9 @@ The clean current endpoint is:
   to one scalar cyclic-response law
 - the selected-slice kernel now reduces further to a frozen slot/CP bank plus
   one real microscopic coefficient
+- the new endpoint-target theorem now identifies the single highest-value
+  theorem target on current `main`: one ambient one-clock endpoint law for
+  that microscopic scalar
 - the one-scalar obstruction triangulation theorem now shows that the live
   charged-lepton promotion gap is exactly one real scalar condition
   `kappa = 2`
@@ -56,6 +59,7 @@ So the current charged-lepton state is:
 11. [KOIDE_ONE_SCALAR_OBSTRUCTION_TRIANGULATION_THEOREM_NOTE_2026-04-18.md](./KOIDE_ONE_SCALAR_OBSTRUCTION_TRIANGULATION_THEOREM_NOTE_2026-04-18.md)
 12. [KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md](./KOIDE_CL3_SELECTOR_GAP_NOTE_2026-04-19.md)
 13. [KOIDE_Z3_SCALAR_POTENTIAL_SUPPORT_NOTE_2026-04-19.md](./KOIDE_Z3_SCALAR_POTENTIAL_SUPPORT_NOTE_2026-04-19.md)
+14. [KOIDE_ONE_CLOCK_ENDPOINT_TARGET_THEOREM_NOTE_2026-04-20.md](./KOIDE_ONE_CLOCK_ENDPOINT_TARGET_THEOREM_NOTE_2026-04-20.md)
 
 ## Package Role
 
@@ -73,6 +77,13 @@ because the current stack still stops one step short of a retained selector
 law for the final microscopic scalar. The current exact endpoint is now
 sharper: the missing step is one scalar condition, and the current
 selected-slice scalar potential does not by itself select it.
+The newest exact sharpening is constructive rather than negative: after the
+one-clock `3+1` ambient theorem, the semigroup reduction, the selected
+generator-line theorem, the selected-line closure note, and the microscopic
+scalar target note, the live theorem burden on current `main` is now singular
+and explicit. The next real target is not a generic parent or readout law; it
+is one ambient one-clock endpoint law for
+`m = Re K12 + 4 sqrt(2)/9 = Tr K_Z3`.
 Branch-local exploratory `Q = 2/3`-surface and scale-selector near-miss probes
 remain off current-main authority.
 
