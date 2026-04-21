@@ -21,6 +21,7 @@ This backlog tracks the attack candidates for the loop on
 |------|--------|--------|------|
 | 1 | Doublet-block AM-GM on (E_sym, E_anti) | **negative** | `PMNS_SELECTOR_ITER1_DOUBLET_AMGM_NEGATIVE_NOTE_2026-04-21.md` |
 | 2 | `W[J] = log|det H|` under scalar Casimir constraints {‖J‖_F², Tr(H²), Tr(H), Tr(H³)} | **negative** | `PMNS_SELECTOR_ITER2_WDET_CONSTRAINED_NEGATIVE_NOTE_2026-04-21.md` — best alignment at cos(θ)=0.69 with Tr(H²), still 46° off |
+| 3 | Brannen-phase gate: 12 phase invariants vs retained I2/P values {2/9 rad, 2π/9, π−2/9, …} | **weak hint / negative at 1e-4** | `PMNS_SELECTOR_ITER3_BRANNEN_PHASE_WEAK_HINT_NOTE_2026-04-21.md` — best match \|dev\|=0.025 rad (1.4°), two clusters; chamber-blind `Im(a_*+b_*) = γ = 1/2` exactly |
 
 ---
 
@@ -165,26 +166,24 @@ for its critical point.
 
 ---
 
-## Next up (iter 3)
+## Next up (iter 4)
 
-**Candidate**: A4 (Brannen-phase gate). Reason: iter 1 ruled out naive
-doublet AM-GM; iter 2 ruled out the entire class of scalar-Casimir
-Lagrangian extrema of `W[J]`. The next natural attack is a **cross-
-sector** one: does the retained Brannen phase δ = 2/9 rad (closed by
-I2/P on this repo) appear as an intrinsic phase of `H(m, δ, q_+)` on
-the chamber, and does the level set `phase(H) = 2/9 mod 1` pass
-through the pinned point? If yes, we have a direct I2/P → I5 retained
-linkage.
+**Candidate**: A6 — simultaneous-eigenvector / operator-commutation
+attack. Reason: iters 1, 2, 3 ruled out (respectively) variational
+AM-GM, scalar-Casimir Lagrangian, and exact Brannen-phase-gate. The
+remaining natural class is **operator-valued constraints**: the pinned
+point might lie on the sub-manifold where `[H, O] = 0` for a specific
+retained operator `O`.
 
 Concrete plan:
-- Compute `arg(det H)` over the chamber.
-- Compute the `Z_3`-isotype phase-composition of `H`: let `H_k =
-  Σ_j H_{jk} · ζ^{jk}` for k = 0, 1, 2, and define phase invariants
-  `arg(H_1)`, `arg(H_2)`, `arg(H_0)`.
-- Compute the APS η-like phase of the eigenvalue triple of `H`
-  (sum of arg(λ_i) weighted by Z_3 isotypes).
-- Test: does any such phase equal 2/9 (mod 1) at the pinned point and
-  NOT at nearby chamber points (i.e. is it a level-set cutting the
-  2-real family to a 1-real curve)?
-- If yes, identify a second retained condition that cuts the curve to
-  a point.
+- For each retained operator `O` in the framework (candidates: the
+  cyclic shift `C`, the Z_3 isotype projectors `P_0`, `P_+`, `P_−`,
+  specific Cl(3) bivectors `B_1`, `B_2`, `B_3`, the SELECTOR matrix,
+  and the perturbation generators `T_m`, `T_Δ`, `T_q`), compute
+  `‖[H(m, δ, q_+), O]‖_F²` over the chamber.
+- Identify the zero-set of each commutator: `{[H, O] = 0}` is a
+  sub-variety of the chart.
+- Test whether any zero-set passes through the pinned point AND has
+  codim ≥ 1 (actually cuts the chamber).
+- Joint zero-sets of multiple commutators (if a single one doesn't
+  suffice) could cut to codim 2 or more, pinning the point.
