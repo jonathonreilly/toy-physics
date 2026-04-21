@@ -6,6 +6,13 @@
 closures, plus their connecting Q = 3·δ identity.
 **Status:** Ready for review / promotion to `main`.
 
+**Executability guarantee.** Every PASS check across the 8 runners is an
+actual executable computation — symbolic via sympy (solve, eigenvalues,
+diff, free_symbols, rank), numeric via PDG lepton masses, or direct
+structural checks (sys.modules for the decoupling audit, H_1/H^1 tables
+for spin structure uniqueness). There are **zero** literal `True`
+placeholders anywhere in the package. Totals: **201 PASS / 0 FAIL.**
+
 ---
 
 ## Anticipated reviewer questions
@@ -112,9 +119,10 @@ on Herm_circ(3), which is the canonical inner product on matrix algebras
 
 - `scripts/frontier_koide_peter_weyl_am_gm.py` — **22/22 PASS**
   (AM-GM ⟹ κ = 2 ⟹ Q = 2/3)
-- `scripts/frontier_koide_frobenius_isotype_split_uniqueness.py` — **32/32 PASS**
-  (block-by-block forcing: each piece of the AM-GM setup is
-  retained-forced, not chosen)
+- `scripts/frontier_koide_frobenius_isotype_split_uniqueness.py` — **28/28 PASS**
+  (block-by-block forcing: canonical-trace Ad-invariance, P_0
+  uniqueness from C's eigenvectors, symbolic positivity over the reals,
+  PDG-mass interior check, AM-GM Hessian concavity — all executable)
 
 ### Note
 
@@ -151,11 +159,15 @@ dynamical PL-S³ × R problem.
 - `scripts/frontier_koide_aps_eta_invariant.py` — **21/21 PASS**
   (8 independent number-theoretic routes to η = 2/9)
 - `scripts/frontier_koide_aps_topological_robustness.py` — **41/41 PASS**
-  (metric-independence via ABSS)
+  (metric-independence: Z_3-invariant transverse metric forced scalar
+  via R^T G R = G solved symbolically; ABSS formula has no metric free
+  symbols; rep-class invariance executable)
 - `scripts/frontier_koide_c3_spatial_rotation.py` — **16/16 PASS**
   (Rodrigues identity verification)
-- `scripts/frontier_koide_aps_block_by_block_forcing.py` — **34/34 PASS**
-  (block-by-block forcing: each piece retained-forced)
+- `scripts/frontier_koide_aps_block_by_block_forcing.py` — **29/29 PASS**
+  (block-by-block forcing: ABSS applicability executively verified —
+  π_i(PL/O) = 0 for i ≤ 4, w_2(S³) = 0 via parallelization, SO(3)→SU(2)
+  lift computed as explicit quaternion q³ = −1)
 
 ### Note
 
@@ -205,7 +217,10 @@ I1 and I2/P are **two faces of the same Z_3 retained structure**:
 
 ### Runner
 
-- `scripts/frontier_koide_reviewer_stress_test.py` — **42/42 PASS**
+- `scripts/frontier_koide_reviewer_stress_test.py` — **34/34 PASS**
+  (every objection check is executable: AM-GM Hessian symbolic,
+  Z_p^*-orbit invariance, PDG-mass interior test, PL/O obstructions,
+  runtime-import graph check for decoupling from spacetime-lift)
 
 ### 9 objections addressed
 
@@ -240,16 +255,19 @@ I1 and I2/P are **two faces of the same Z_3 retained structure**:
 
 | File | Purpose | PASS |
 |---|---|---|
-| `frontier_koide_aps_topological_robustness.py` | I2/P: ABSS metric-independence | 41/41 |
+| `frontier_koide_aps_topological_robustness.py` | I2/P: ABSS metric-independence (executable) | 41/41 |
 | `frontier_koide_aps_eta_invariant.py` | I2/P: 8 routes to η = 2/9 | 21/21 |
 | `frontier_koide_c3_spatial_rotation.py` | I2/P: Rodrigues = cyclic permutation | 16/16 |
-| `frontier_koide_aps_block_by_block_forcing.py` | I2/P: block-by-block retained-forced | 34/34 |
+| `frontier_koide_aps_block_by_block_forcing.py` | I2/P: block-by-block retained-forced (executable) | 29/29 |
 | `frontier_koide_peter_weyl_am_gm.py` | I1: AM-GM ⟹ Q = 2/3 | 22/22 |
-| `frontier_koide_frobenius_isotype_split_uniqueness.py` | I1: block-by-block retained-forced | 32/32 |
+| `frontier_koide_frobenius_isotype_split_uniqueness.py` | I1: block-by-block retained-forced (executable) | 28/28 |
 | `frontier_koide_Q_eq_3delta_identity.py` | **Bridge**: Q = 3·δ identity | 10/10 |
-| `frontier_koide_reviewer_stress_test.py` | **Joint**: 9-objection stress-test | 42/42 |
+| `frontier_koide_reviewer_stress_test.py` | **Joint**: 9-objection stress-test | 34/34 |
 
-**Total: 218 PASS checks, 0 FAIL.**
+**Total: 201 PASS checks, 0 FAIL.**
+
+Every PASS is an actual executable symbolic or numeric computation.
+There are no literal `True` assertions anywhere in the package.
 
 ### Notes (4, `docs/`)
 
@@ -274,9 +292,9 @@ scripts/frontier_koide_aps_topological_robustness.py: 41 PASS, 0 FAIL
 scripts/frontier_koide_aps_eta_invariant.py:          21 PASS, 0 FAIL
 scripts/frontier_koide_c3_spatial_rotation.py:        16 PASS, 0 FAIL
 scripts/frontier_koide_peter_weyl_am_gm.py:           22 PASS, 0 FAIL
-scripts/frontier_koide_reviewer_stress_test.py:       42 PASS, 0 FAIL
-scripts/frontier_koide_frobenius_isotype_split_uniqueness.py: 32 PASS, 0 FAIL
-scripts/frontier_koide_aps_block_by_block_forcing.py: 34 PASS, 0 FAIL
+scripts/frontier_koide_reviewer_stress_test.py:       34 PASS, 0 FAIL
+scripts/frontier_koide_frobenius_isotype_split_uniqueness.py: 28 PASS, 0 FAIL
+scripts/frontier_koide_aps_block_by_block_forcing.py: 29 PASS, 0 FAIL
 scripts/frontier_koide_Q_eq_3delta_identity.py:       10 PASS, 0 FAIL
 ```
 
@@ -297,7 +315,7 @@ Recommended review order:
 6. **`KOIDE_Q_EQ_3DELTA_IDENTITY_NOTE_2026-04-21.md`** — the bridge.
 7. **`KOIDE_REVIEWER_STRESS_TEST_NOTE_2026-04-21.md`** — see the
    enumerated reviewer objections addressed.
-8. **Run all 8 runners** — verify 218/218 PASS locally.
+8. **Run all 8 runners** — verify 201/201 PASS locally.
 
 ---
 
