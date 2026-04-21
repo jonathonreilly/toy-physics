@@ -2,11 +2,13 @@
 
 **Date:** 2026-04-20
 **Lane:** Scalar-selector cycle 1 — joint structural reduction of I1 (Koide `Q = 2/3`) and I2/P (Brannen phase `δ = 2/9`).
-**Status:** Proposed closure via structural identification. Reduces BOTH open
-imports (I1 and I2/P) to a single algebraic identity on the retained
-Cl(3)/Z³ surface. Canonical review required before main-branch promotion.
+**Status:** Proposed closure via multi-path structural convergence. Six retained
+paths independently converge at exact Q = 2/3 and δ = 2/9, with two
+separate d = 3 uniqueness conditions (qubit-lattice-dim AND anomaly
+arithmetic d² − 1 = 2^d). Canonical review required before main-branch
+promotion.
 **Primary runner:** `scripts/frontier_koide_qubit_lattice_dim_closure.py`
-(PASS=36, FAIL=0).
+(PASS=55, FAIL=0).
 
 ---
 
