@@ -22,6 +22,9 @@ charged-lepton lane without changing that open status. What it adds is:
   `|η| = 2/9`;
 - explicit gauge-by-gauge Yukawa Casimir enumeration and BZ cross-check
   support for the charged-lepton radiative lane;
+- a new axiom-native support batch of selected-line/Fourier bridge tools,
+  positive-parent support constructions, set-equality / mass-assignment
+  reframings, and integrated regression runners;
 - a clean list of atlas issues and caveats that still matter for honest review.
 
 ## Historical Route-Pruning Record
@@ -110,6 +113,8 @@ So the current charged-lepton package status is:
   `KOIDE_A1_PHYSICAL_BRIDGE_ATTEMPT_2026-04-22.md`
 - April 22 explicit support calculations in
   `KOIDE_EXPLICIT_CALCULATIONS_NOTE.md`
+- April 22 axiom-native support batch summary in
+  `KOIDE_AXIOM_NATIVE_SUPPORT_BATCH_NOTE_2026-04-22.md`
 - remaining open bridge behind `Q = 2/3`: why the physical charged-lepton
   packet must extremize the block-total Frobenius functional
 - remaining open bridge behind `δ = 2/9`: why the physical selected-line
@@ -149,7 +154,8 @@ So the current charged-lepton package status is:
 25. [KOIDE_A1_LOOP_INVESTIGATION_SUMMARY.md](./KOIDE_A1_LOOP_INVESTIGATION_SUMMARY.md)
 26. [KOIDE_A1_PHYSICAL_BRIDGE_ATTEMPT_2026-04-22.md](./KOIDE_A1_PHYSICAL_BRIDGE_ATTEMPT_2026-04-22.md)
 27. [KOIDE_EXPLICIT_CALCULATIONS_NOTE.md](./KOIDE_EXPLICIT_CALCULATIONS_NOTE.md)
-28. [KOIDE_CLOSURE_ATLAS_ISSUES_FLAGGED.md](./KOIDE_CLOSURE_ATLAS_ISSUES_FLAGGED.md)
+28. [KOIDE_AXIOM_NATIVE_SUPPORT_BATCH_NOTE_2026-04-22.md](./KOIDE_AXIOM_NATIVE_SUPPORT_BATCH_NOTE_2026-04-22.md)
+29. [KOIDE_CLOSURE_ATLAS_ISSUES_FLAGGED.md](./KOIDE_CLOSURE_ATLAS_ISSUES_FLAGGED.md)
 
 ## Package Role
 

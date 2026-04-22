@@ -7,6 +7,13 @@ phase `δ = 2/9 rad`, and their compatibility identity `Q = 3·δ`.
 **Status:** Ready for review as the strongest current executable support
 package. Two explicit scientific bridges remain open.
 
+**2026-04-22 support addendum.** The April 22 axiom-native support batch
+adds new bridge-targeting tools, selected-line/Fourier bridge diagnostics,
+zero-mode / APS support models, and radiative Yukawa support calculations.
+These additions strengthen the package materially without changing the open
+status of the two physical bridges. See
+`docs/KOIDE_AXIOM_NATIVE_SUPPORT_BATCH_NOTE_2026-04-22.md`.
+
 **Executability guarantee.** Every PASS check across the 8 runners is an
 actual executable computation: symbolic via sympy, numeric via PDG lepton
 masses, or direct structural checks. Totals: **201 PASS / 0 FAIL**.
