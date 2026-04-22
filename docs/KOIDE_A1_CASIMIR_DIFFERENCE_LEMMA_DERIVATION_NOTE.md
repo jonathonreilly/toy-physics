@@ -206,6 +206,10 @@ On the SM Yukawa-doublet assignment, this equals 1/2 ⟺ Koide A1
 | X6 | `frontier_koide_a1_casimir_difference_x6_brannen_corollary.py` | 7 PASS — δ = Q/d = 2/9 follows on retained Brannen reduction; P residual flagged |
 | X7 | `frontier_koide_a1_casimir_difference_x7_existing_runner_consistency.py` | 6 PASS — re-runs existing yukawa_casimir runner (9/9), confirms consistency |
 
+**Lemma promoted to formal theorem statement.** See companion
+`KOIDE_A1_CASIMIR_DIFFERENCE_LEMMA_THEOREM_NOTE.md` for the
+package-facing reading and the no-go evasion summary.
+
 **Uniqueness sharpened.** The condition `3Y² = T(T+1)` admits no other
 rational `(T, Y)` with `T` half-integer ≥ 1/2 and `C_sum > 0`. The
 Cl(3) embedding's specific `(1/2, ±1/2)` Yukawa-doublet assignment is
