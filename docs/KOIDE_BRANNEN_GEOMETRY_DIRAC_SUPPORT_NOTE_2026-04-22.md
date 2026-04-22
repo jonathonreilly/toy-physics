@@ -19,6 +19,8 @@ What this note adds is narrower and useful:
    rational `2/9` can arise from a one-clock natural-time phase law;
 3. an explicit finite-lattice Wilson-Dirac illustration on the physical
    `L = 3` carrier, showing recurrence of per-fixed-site `2/9`.
+4. a concrete Callan-Harvey-style anomaly-descent candidate route on the
+   accepted physical-lattice reading of the framework.
 
 ## 1. Exact selected-line geometry
 
@@ -96,16 +98,24 @@ not change the public package status:
 - `δ = 2/9` remains open on the physical Brannen-phase bridge;
 - `v_0` remains a separate support lane.
 
+The new Callan-Harvey candidate route should be read the same way:
+
+- it sharpens the remaining physical-bridge target;
+- it does not itself identify the selected-line Berry phase with the ambient
+  descended anomaly object.
+
 ## 5. Artifacts
 
 ### Notes
 
 - `docs/KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`
+- `docs/KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md`
 
 ### Runners
 
 - `scripts/frontier_koide_brannen_route3_geometry_support.py`
 - `scripts/frontier_koide_brannen_dirac_support.py`
+- `scripts/frontier_koide_brannen_callan_harvey_candidate.py`
 
 ## 6. Bottom line
 

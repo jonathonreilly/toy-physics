@@ -7,17 +7,21 @@ phase `δ = 2/9 rad`, and their compatibility identity `Q = 3·δ`.
 **Status:** Ready for review as the strongest current executable support
 package. Two explicit scientific bridges remain open.
 
-**2026-04-22 support addendum.** The April 22 support work now comes in two
+**2026-04-22 support addendum.** The April 22 support work now comes in three
 layers. The first adds new bridge-targeting tools, selected-line/Fourier
 bridge diagnostics, zero-mode / APS support models, and radiative Yukawa
 support calculations. The second adds a Brannen-specific geometry/Dirac
 support layer: exact selected-line rotation geometry, octahedral-domain
 support, a conditional Route-3 Wilson-line law, and an explicit finite-lattice
-`L = 3` Wilson-Dirac illustration of the ambient `2/9` value. These additions
-strengthen the package materially without changing the open status of the two
-physical bridges. See
-`docs/KOIDE_AXIOM_NATIVE_SUPPORT_BATCH_NOTE_2026-04-22.md` and
-`docs/KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`.
+`L = 3` Wilson-Dirac illustration of the ambient `2/9` value. The third adds
+an explicit Callan-Harvey anomaly-descent candidate on the accepted
+physical-lattice reading, isolating the remaining Berry/inflow identification
+and exact descent-normalization theorems. These additions strengthen the
+package materially without changing the open status of the two physical
+bridges. See
+`docs/KOIDE_AXIOM_NATIVE_SUPPORT_BATCH_NOTE_2026-04-22.md`,
+`docs/KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`, and
+`docs/KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md`.
 
 **Executability guarantee.** Every PASS check across the current runner stack
 is an actual executable computation: symbolic via sympy, numeric via PDG
@@ -51,6 +55,15 @@ support grade:
 
 These additions materially strengthen the bridge search without changing the
 fact that the physical Brannen-phase bridge itself remains open.
+
+The April 22 Callan-Harvey candidate route sharpens that bridge further:
+
+- the per-generation ambient anomaly coefficient on the physical-lattice
+  carrier is exactly `2/9`;
+- the body-diagonal fixed-site generation carrier supplies a concrete descent
+  geometry on the accepted `Cl(3)` on `Z^3` reading;
+- but the actual theorem identifying the selected-line Berry phase with that
+  descended anomaly object, with exact normalization, remains open.
 
 ---
 
@@ -148,6 +161,7 @@ selected-line `CP^1` carrier equals this ambient APS invariant.
 
 - `docs/KOIDE_APS_BLOCK_BY_BLOCK_FORCING_NOTE_2026-04-21.md`
 - `docs/KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`
+- `docs/KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md`
 
 ---
 

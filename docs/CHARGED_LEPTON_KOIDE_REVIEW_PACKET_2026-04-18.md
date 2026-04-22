@@ -23,6 +23,9 @@ charged-lepton lane without changing that open status. What it adds is:
 - exact selected-line Brannen geometry on the retained first branch, plus a
   finite-lattice `L = 3` Wilson-Dirac support illustration of the ambient
   `2/9` value;
+- a concrete Callan-Harvey anomaly-descent candidate route on the accepted
+  physical-lattice reading, with the remaining Berry/inflow map isolated
+  explicitly rather than hidden;
 - explicit gauge-by-gauge Yukawa Casimir enumeration and BZ cross-check
   support for the charged-lepton radiative lane;
 - a new axiom-native support batch of selected-line/Fourier bridge tools,
@@ -120,6 +123,8 @@ So the current charged-lepton package status is:
   `KOIDE_AXIOM_NATIVE_SUPPORT_BATCH_NOTE_2026-04-22.md`
 - April 22 Brannen geometry / Dirac support addendum in
   `KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`
+- April 22 Callan-Harvey physical-bridge candidate in
+  `KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md`
 - remaining open bridge behind `Q = 2/3`: why the physical charged-lepton
   packet must extremize the block-total Frobenius functional
 - remaining open bridge behind `δ = 2/9`: why the physical selected-line
@@ -162,6 +167,7 @@ So the current charged-lepton package status is:
 28. [KOIDE_AXIOM_NATIVE_SUPPORT_BATCH_NOTE_2026-04-22.md](./KOIDE_AXIOM_NATIVE_SUPPORT_BATCH_NOTE_2026-04-22.md)
 29. [KOIDE_CLOSURE_ATLAS_ISSUES_FLAGGED.md](./KOIDE_CLOSURE_ATLAS_ISSUES_FLAGGED.md)
 30. [KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md](./KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md)
+31. [KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md](./KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md)
 
 ## Package Role
 
@@ -229,7 +235,8 @@ So the current package classification is:
   Brannen-phase bridge still open; the April 22 batch adds explicit
   Lefschetz/spectral-flow support, exact selected-line geometric support,
   a conditional Route-3 Wilson-line support law, and a finite-lattice
-  `L = 3` Wilson-Dirac illustration, but not the physical identification
-  theorem
+  `L = 3` Wilson-Dirac illustration; it also now packages a concrete
+  Callan-Harvey anomaly-descent candidate route, but not the physical
+  identification theorem
 - retained promotion for charged-lepton ratios is still conditional on those
   two bridges, modulo the separate overall lepton scale input `v_0`
