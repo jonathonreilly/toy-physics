@@ -246,20 +246,20 @@ Ran at `L = 4`, wide `beta`, 3 configs/point, 60 therm sweeps.
 
 ```
 === PASS/FAIL harness ===
-  [FAIL] [BOUNDED] observable 'plaquette' has a localized non-smooth feature at beta=6
-  [FAIL] [BOUNDED] observable 'polyakov_abs' has a localized non-smooth feature at beta=6
-  [FAIL] [BOUNDED] observable 'logdet_density' has a localized non-smooth feature at beta=6
-  [FAIL] [BOUNDED] observable 'lambda_min' has a localized non-smooth feature at beta=6
-  [FAIL] [BOUNDED] observable 'spectral_gap' has a localized non-smooth feature at beta=6
-  [FAIL] [BOUNDED] observable 'rho_near_zero' has a localized non-smooth feature at beta=6
-SUMMARY: PASS=0  FAIL=6
+  [PASS] [BOUNDED] observable 'plaquette' has no localized non-smooth feature at beta=6
+  [PASS] [BOUNDED] observable 'polyakov_abs' has no localized non-smooth feature at beta=6
+  [PASS] [BOUNDED] observable 'logdet_density' has no localized non-smooth feature at beta=6
+  [PASS] [BOUNDED] observable 'lambda_min' has no localized non-smooth feature at beta=6
+  [PASS] [BOUNDED] observable 'spectral_gap' has no localized non-smooth feature at beta=6
+  [PASS] [BOUNDED] observable 'rho_near_zero' has no localized non-smooth feature at beta=6
+SUMMARY: PASS=6  FAIL=0
 VERDICT: NO critical feature at beta = 6 in any scanned observable
          => obstruction note applies; Landing A (normalization-only fixed input) stands.
 ```
 
-All six PASS/FAIL checks FAIL in the "feature-present" sense — i.e. the
-runner fails to find a critical feature — which is exactly the outcome the
-obstruction note records. The runner does not panic-exit on this outcome
+All six PASS/FAIL checks PASS because the runner does not find a localized
+critical feature at `beta = 6`, which is exactly the outcome the obstruction
+note records. The runner does not panic-exit on this outcome
 because "no dynamical feature at beta = 6" is a retained negative result,
 not a code bug.
 
