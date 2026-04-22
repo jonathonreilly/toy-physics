@@ -341,3 +341,34 @@ Honest bottom line: the three open items of the candidate note are reduced to **
 | Combined | Dimensionless value derived (via ABSS) | Radian convention still load-bearing | **No**, but single residual is now precise |
 
 This is the current state. The residual step is the I2-lane I8 issue ("Fourier phase = radian Berry holonomy at natural units") flagged in `.claude/plans/brannen-p-assumption-enumeration.md` §I8, still open.
+
+---
+
+## 12. Iteration 2 probe — Wilson-line / natural-time attempt on the residual (negative result)
+
+Attempted route: derive the dimensionless↔radian identification from the retained ANOMALY_FORCES_TIME single-clock evolution + the "Route-3" Wilson-line relation `W^{d²} = exp(2i) · 𝟙`. Tested at the physical point m_*.
+
+**Finding**: The existing Route-3 `W^{d²} = exp(2i) · 𝟙` support (in `scripts/frontier_koide_brannen_route3_geometry_support.py`) constructs `W = exp(i · δ_per_step)` as a scalar with `δ_per_step = 2/9` pre-assigned, then verifies `W^9 = exp(2i)` tautologically. This is **not a derivation** of the radian identification; it is a numerical cleanup after δ = 2/9 has been assumed.
+
+**Direct test**: computing `W := exp(-i · H_sel(m_*) · τ)` for the retained selected-line Hermitian H_sel evaluated at the physical m_*, for any τ, `W^9` is not close to `exp(2i) · 𝟙` — numerically `|W^9 − exp(2i)·I| ≈ 2.58` at τ = 1. Required for exact equality: H would have to be proportional to the identity, but it has three distinct eigenvalues `{−2.507, −0.848, 2.195}`. **The Wilson-line relation does not arise from retained Hermitian time-evolution on the selected-line carrier.**
+
+**Conclusion (iteration 2)**: the retained ANOMALY_FORCES_TIME natural-time convention is not sufficient to derive the specific numerical value 2/9 rad at m_* on the selected-line without additional structure — either an independent axiom-native characterization of m_* (the I3 open lane), or a different natural-units identification not yet found.
+
+The **dimensionless↔radian residual remains genuinely open** after this probe. The ABSS alternate route (§10) is the strongest partial discharge achievable from currently retained framework data.
+
+---
+
+## 13. Honest verdict
+
+After two iterations:
+
+- The original CH-route "closure" (commit b947506b) did NOT close the three open items; reviewer P0s stand.
+- The ABSS alternate route (§10) DOES rigorously derive the dimensionless value 2/9 from retained Cl(3)/Z_3 representation theory on the 2-complex-dim transverse tangent at body-diagonal fixed points, **without** sector choice, flux-winding assumption, or target reuse. This discharges the **value-source** aspects of reviewer P0s 2 and 3.
+- The identification of **dimensionless** 2/9 with **radian** 2/9 on the physical selected-line observable remains open and cannot be discharged from currently retained framework data. Attempted Wilson-line / natural-time routes are either circular (as in the existing Route-3) or fail direct test (as in §12).
+- The charge is honest: **this is support-level sharpening, not closure.** The three gaps are reduced to one precise residual — the dimensionless↔radian identification — and the best-available discharge routes have been explored.
+
+Further closure would require either:
+- an axiom-native characterization of m_* (separate open lane, I3 in `.claude/plans/brannen-p-assumption-enumeration.md`), so that the radian value is determined by retained structure alone; or
+- a new retained theorem linking the CP¹ Pancharatnam-Berry arc length at natural units to the G-signature rational.
+
+Neither is achievable in this iteration. Loop halted honestly.
