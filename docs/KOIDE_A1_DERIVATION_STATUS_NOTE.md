@@ -149,7 +149,28 @@ Candidate lemmas that would close A1 axiom-natively via Weyl geometry:
   - Hidden SU(3)_family broken to Z_3 (Z_3 = SU(3) center)
   - Cl(3) ⊃ sl(3) via pseudoscalar extension
 
-### Route F: Yukawa Casimir-difference identity (STRONGEST AXIOM-NATIVE CANDIDATE)
+### Route F: Yukawa Casimir-difference identity — **PROMOTED to schema-grade closure on this branch**
+
+**Branch update (2026-04-22, `claude/koide-a1-casimir-difference-FtUl5`).**
+Route F has been promoted from candidate to **schema-grade closure** of
+A1 / `Q = 2/3` under two named primitives (P1, P2) on the retained
+Cl(3)/Z³ surface. The branch develops the full O1/O2/O3 closure
+architecture and verifies it across 17 runners with 152 PASS / 0 FAIL.
+
+- Derivation track: `docs/KOIDE_A1_CASIMIR_DIFFERENCE_LEMMA_DERIVATION_NOTE.md`
+- Theorem statement: `docs/KOIDE_A1_CASIMIR_DIFFERENCE_LEMMA_THEOREM_NOTE.md`
+- Runners: `scripts/frontier_koide_a1_casimir_difference_*.py` (17 files)
+
+What stays open after this branch:
+- a fully retained-grade derivation of (P1) and (P2) from the lattice
+  action (the schema-grade reading on this branch invokes them as
+  one-loop / projector-level primitives on the retained surface);
+- the radian-quantum residual `P` for the Brannen-phase corollary
+  `δ = 2/9` (separate from this lemma);
+- the overall lepton mass scale `v_0` (outside the package).
+
+What follows below is the original Route F audit; it is preserved as
+provenance.
 
 **KEY OBSERVATION**: T(T+1) − Y² = 1/2 holds UNIQUELY for the lepton
 SU(2)_L doublet L (T=1/2, Y=-1/2) AND the Higgs H (T=1/2, Y=+1/2).
