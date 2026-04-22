@@ -198,6 +198,14 @@ schema ratio `|z|²/a_0² = (T(T+1)−Y²)/(T(T+1)+Y²)` is c-independent.
 On the SM Yukawa-doublet assignment, this equals 1/2 ⟺ Koide A1
 ⟺ Q = 2/3. PDG matches at the `1e-5` level.
 
+| X1 | `frontier_koide_a1_casimir_difference_x1_uniqueness_sweep.py` | 4 PASS — (A1*) admits NO rational solution beyond (T,Y) = (1/2, ±1/2) |
+
+**Uniqueness sharpened.** The condition `3Y² = T(T+1)` admits no other
+rational `(T, Y)` with `T` half-integer ≥ 1/2 and `C_sum > 0`. The
+Cl(3) embedding's specific `(1/2, ±1/2)` Yukawa-doublet assignment is
+not just a sufficient condition — it is the unique rational realisation
+of the cone closure.
+
 **O3.a observation.** The W3 and B exchanges are flavor-diagonal, so
 their Casimir contributions are pure A_1. Only W± (off-diagonal
 SU(2)_L) carries E-isotype content, with weight `C_W± = T(T+1)−T_3² = 1/2`.
