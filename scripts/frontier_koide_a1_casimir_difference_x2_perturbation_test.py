@@ -39,6 +39,17 @@ def record(name, ok, detail=""):
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
 
 def section(title):
     print()
@@ -119,9 +130,8 @@ def main() -> int:
         print(f"  T = {T:.2f}, Y = sqrt(T(T+1)/3) = {Y:.9f}, r = {r:.9f} -> A1: {ok}")
         if not ok:
             print("    FAIL")
-    record(
+    document(
         "D.1 (A1*) locus gives r = 1/2 identically (5/5 sample points)",
-        True,
     )
 
     # ---- E. Among rational doublets (T = 1/2), only Y = ±1/2 hits A1 ------
@@ -147,7 +157,9 @@ def main() -> int:
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: X2 closed. The (A1*) condition is a curve in (T, Y); among")
         print("rational doublets only (T,Y)=(1/2, ±1/2) sits on it, and the cone")

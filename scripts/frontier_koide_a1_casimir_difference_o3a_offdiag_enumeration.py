@@ -48,6 +48,18 @@ def record(name: str, ok: bool, detail: str = "") -> None:
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
+
 
 def section(title: str) -> None:
     print()
@@ -131,9 +143,8 @@ def main() -> int:
 
     # For Q, E content is still C_W± = 1/2 from the W± channel, but the
     # LEPTON-form identity E_total = T(T+1)-Y^2 fails (because T_3^2 ≠ Y^2).
-    record(
+    document(
         "D.1 The E ↔ T(T+1)-Y^2 identification is special to the SM Yukawa-doublet hypercharge",
-        True,
         "Equivalent to T_3^2 = Y^2; selects (T, Y) = (1/2, ±1/2) given T = 1/2.",
     )
 
@@ -145,12 +156,14 @@ def main() -> int:
         "  (the only off-diagonal SU(2)_L piece) is the geometric source of\n"
         "  the E-isotype channel and carries C_W± = 1/2."
     )
-    record("E.1 Yukawa-vertex W±-loop is the natural carrier of E content", True)
+    document("E.1 Yukawa-vertex W±-loop is the natural carrier of E content")
 
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: O3.a closed. The E-isotype Casimir content of the 1-loop")
         print("self-energy is exactly C_W± = T(T+1) - T_3^2, which equals the")

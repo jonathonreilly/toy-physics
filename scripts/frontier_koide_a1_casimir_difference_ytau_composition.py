@@ -38,6 +38,17 @@ def record(name, ok, detail=""):
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
 
 def section(title):
     print()
@@ -115,7 +126,7 @@ def main() -> int:
         "  This is a STRONGER claim than the original Koide observation: it gives\n"
         "  not just the cone, but also the anchor scale.\n"
     )
-    record("D.1 Composed framework predicts full charged-lepton spectrum", True)
+    document("D.1 Composed framework predicts full charged-lepton spectrum")
 
     # ---- E. Status change: the charged-lepton package promotes -------------
     section("E. Status change for charged-lepton package")
@@ -134,12 +145,14 @@ def main() -> int:
         "  requires one more observable or one more selector lemma — it is NOT\n"
         "  closed by the Casimir-difference lemma alone.\n"
     )
-    record("E.1 Status change documented honestly", True)
+    document("E.1 Status change documented honestly")
 
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: y_tau composition closed. The retained absolute-scale package")
         print("plus the Casimir-difference cone closure compose into a charged-lepton")

@@ -45,6 +45,17 @@ def record(name, ok, detail=""):
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
 
 def section(title):
     print()
@@ -67,7 +78,7 @@ def main() -> int:
     ]
     for dep, role in dependencies:
         print(f"  - {dep}: {role}")
-    record("A.1 K_loop functional dependence documented", True)
+    document("A.1 K_loop functional dependence documented")
 
     # ---- B. MS-bar scheme argument ----------------------------------------
     section("B. MS-bar scheme makes K_loop generation-blind")
@@ -80,7 +91,7 @@ def main() -> int:
         "  is identical across generations (e, mu, tau) to the order at which\n"
         "  MS-bar has been carried out (YT_P1 BZ quadrature: through 1 loop).\n"
     )
-    record("B.1 MS-bar: K_loop depends on scheme not on fermion generation", True)
+    document("B.1 MS-bar: K_loop depends on scheme not on fermion generation")
 
     # ---- C. Ward identity preserves the structure -------------------------
     section("C. Ward identity compatibility")
@@ -93,7 +104,7 @@ def main() -> int:
         "  and matching conditions are flavour-diagonal at the operator\n"
         "  content.\n"
     )
-    record("C.1 Ward identity compatible with generation-blind K_loop", True)
+    document("C.1 Ward identity compatible with generation-blind K_loop")
 
     # ---- D. Consistency with retained m_tau value --------------------------
     section("D. Consistency with retained m_tau value")
@@ -123,7 +134,7 @@ def main() -> int:
         "  For the Koide RATIO (cone closure), these residuals are known\n"
         "  to be irrelevant at PDG precision (|Q - 2/3| ~ 1e-5).\n"
     )
-    record("E.1 Generation dependence absorbed into pole condition, not K_loop", True)
+    document("E.1 Generation dependence absorbed into pole condition, not K_loop")
 
     # ---- F. Explicit verification of Koide precision -----------------------
     section("F. Explicit Koide precision verification")
@@ -143,7 +154,9 @@ def main() -> int:
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: P1.blindness closed. K_loop is generation-blind by MS-bar")
         print("construction + Ward identity; generation-dependence lives only in")

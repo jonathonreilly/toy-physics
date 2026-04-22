@@ -35,6 +35,17 @@ def record(name, ok, detail=""):
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
 
 def section(title):
     print()
@@ -80,7 +91,7 @@ def main() -> int:
         "  does NOT by itself fix P. The δ-side closure on this lane is therefore\n"
         "  conditional on closing P (still open per docs/KOIDE_P_ONE_CLOCK_*).\n"
     )
-    record("D.1 P residual correctly flagged as still-open downstream", True)
+    document("D.1 P residual correctly flagged as still-open downstream")
 
     # ---- E. PDG cross-check on δ -----------------------------------------
     section("E. PDG cross-check on δ")
@@ -97,7 +108,9 @@ def main() -> int:
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: X6 closed. Once Q = 2/3 closes (this branch), δ = 2/9 follows")
         print("on the retained Brannen-phase reduction (δ = Q/d, d = 3). The radian-")

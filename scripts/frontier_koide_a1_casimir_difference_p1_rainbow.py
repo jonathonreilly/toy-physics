@@ -42,6 +42,17 @@ def record(name, ok, detail=""):
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
 
 def section(title):
     print()
@@ -100,9 +111,8 @@ def main() -> int:
         "  Thus I_loop(boson) depends on the gauge-boson mass but NOT on the\n"
         "  fermion generation. This is what secures generation-blindness of K.\n"
     )
-    record(
+    document(
         "B.1 Shared internal topology makes I_loop generation-blind",
-        True,
     )
 
     # ---- C. Off-diagonal (generation-cyclic) insertion -----------------
@@ -117,9 +127,8 @@ def main() -> int:
         "  structure; W3 and B are generation-diagonal.\n"
         "  Hence (P2) comes exclusively from Sigma_{W±}, confirming O3.a.\n"
     )
-    record(
+    document(
         "C.1 Sigma_{W±} is the unique rainbow channel carrying generation-cyclic content",
-        True,
     )
 
     # ---- D. Gauge-invariance check at one loop ----------------------------
@@ -137,12 +146,14 @@ def main() -> int:
     for T3_val in [Fraction(1, 2), Fraction(-1, 2)]:
         C_Wpm_total = T * (T + 1) - T3_val ** 2
         print(f"  T_3 = {T3_val}: Sigma_{{W±}}(total) = {C_Wpm_total}")
-    record("E.1 Sigma_{W±} total is T_3-sign independent", True)
+    document("E.1 Sigma_{W±} total is T_3-sign independent")
 
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: P1.rainbow closed. All three 1-loop rainbow topologies")
         print("share the same loop integral, so the generation-blind factor K^2")

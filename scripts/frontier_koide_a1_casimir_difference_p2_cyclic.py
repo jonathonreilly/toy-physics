@@ -34,6 +34,17 @@ def record(name, ok, detail=""):
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
 
 def section(title):
     print()
@@ -116,7 +127,7 @@ def main() -> int:
         "  flavour-dependent dilution enters.\n"
         "  Hence |z|^2 / a_0^2 = C_W± / C_tau = 1/2 exactly.\n"
     )
-    record("E.1 No flavour-dependent dilution enters the |z|^2/a_0^2 ratio", True)
+    document("E.1 No flavour-dependent dilution enters the |z|^2/a_0^2 ratio")
 
     # ---- F. Consistency with retained hw=1 structure ----------------------
     section("F. Consistency with retained hw=1 structure")
@@ -127,12 +138,14 @@ def main() -> int:
         "  on each isotype block. A_1 eigenvalue 2 is absorbed into the trivial\n"
         "  (generation-average) y_avg; E eigenvalue -1 is unit-magnitude.\n"
     )
-    record("F.1 Consistent with hw=1 (A_1 + E) decomposition", True)
+    document("F.1 Consistent with hw=1 (A_1 + E) decomposition")
 
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: P2.cyclic closed. The cyclic-C_3 flavour insertion Phi has")
         print("unit-magnitude eigenvalues on E, so |z|^2 inherits exactly")

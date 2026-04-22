@@ -28,6 +28,17 @@ def record(name, ok, detail=""):
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
 
 def section(title):
     print()
@@ -85,9 +96,8 @@ def main() -> int:
     for i, (name, why) in enumerate(NO_GOS, 1):
         print(f"  {i}. {name}")
         print(f"     -> {why}")
-        record(
+        document(
             f"X5.{i} Lemma evades '{name}'",
-            True,
             why,
         )
 
@@ -99,15 +109,16 @@ def main() -> int:
         "  - C_3 character / S_3 isotype split on hw=1                (algebraic, retained)\n"
         "  - Cl(3) embedding: T = 1/2 ∧ Y = ±1/2                       (retained, fixes the cone)\n"
     )
-    record(
+    document(
         "X5.10 Lemma fingerprint avoids each ruled-out mechanism",
-        True,
     )
 
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: X5 closed. The Casimir-difference lemma evades all 9 retained")
         print("structural no-gos. The closure path is structurally distinct from each")

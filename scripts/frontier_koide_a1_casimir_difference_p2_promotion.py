@@ -34,6 +34,17 @@ def record(name, ok, detail=""):
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
 
 def section(title):
     print()
@@ -62,7 +73,7 @@ def main() -> int:
     for name, status, role in inputs:
         print(f"  [{status}] {name}")
         print(f"    role: {role}")
-    record("A.1 All five inputs are retained or formalised", True)
+    document("A.1 All five inputs are retained or formalised")
 
     # ---- B. Promotion statement -------------------------------------------
     section("B. Promotion statement")
@@ -79,7 +90,7 @@ def main() -> int:
         "  explicit gauge-Casimir enumeration (O3.a: only W± is off-diagonal).\n"
         "  No free parameter, no observed-mass input.\n"
     )
-    record("B.1 Theorem (P2) is retained-grade modulo I_loop precision", True)
+    document("B.1 Theorem (P2) is retained-grade modulo I_loop precision")
 
     # ---- C. Compose (P1) + (P2) -------------------------------------------
     section("C. Compose (P1) + (P2)")
@@ -95,7 +106,7 @@ def main() -> int:
         "  on the retained Yukawa-doublet assignment (T = 1/2, Y^2 = 1/4).\n"
         "  This is Koide A1, hence Q = 2/3 via Theorem 1.\n"
     )
-    record("C.1 |z|^2 / a_0^2 = 1/2 on retained inputs", True)
+    document("C.1 |z|^2 / a_0^2 = 1/2 on retained inputs")
 
     # ---- D. Retained-surface status change ------------------------------
     section("D. Retained-surface status change")
@@ -111,7 +122,7 @@ def main() -> int:
         "    - Koide A1 cone: now an algebraic-theorem-grade result on `main`\n"
         "      modulo the named (P1), (P2) retained primitives.\n"
     )
-    record("D.1 Retained-surface status change: A1 cone → algebraic-theorem-grade", True)
+    document("D.1 Retained-surface status change: A1 cone → algebraic-theorem-grade")
 
     # ---- E. Full chain PDG ------------------------------------------------
     section("E. Full chain PDG verification")
@@ -131,7 +142,9 @@ def main() -> int:
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: P2.promotion closed. (P2) is retained-grade; (P1)+(P2) closure")
         print("of Koide A1 is now algebraic-theorem-grade on retained inputs.")

@@ -41,6 +41,17 @@ def record(name, ok, detail=""):
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
 
 def section(title):
     print()
@@ -103,7 +114,7 @@ def main() -> int:
         "  The Casimir multiplier enters as a SCALAR FACTOR multiplying G,\n"
         "  not as an integrand modifier.\n"
     )
-    record("B.1 G is independent of Casimir multiplier", True)
+    document("B.1 G is independent of Casimir multiplier")
 
     # ---- C. Statement of the common-c theorem ----------------------------
     section("C. Statement: common-c theorem")
@@ -121,7 +132,7 @@ def main() -> int:
         "  Immediate consequence: |z|^2 / a_0^2 = C_W± / C_tau = 1/2 on the\n"
         "  SM Yukawa-doublet assignment, i.e. Koide A1.\n"
     )
-    record("C.1 Common-c theorem stated", True)
+    document("C.1 Common-c theorem stated")
 
     # ---- D. The accounting is not a free choice --------------------------
     section("D. The accounting is not a free choice")
@@ -134,7 +145,7 @@ def main() -> int:
         "  This is NOT a free choice; it is forced by the square-root\n"
         "  construction on the hw=1 Plancherel formula.\n"
     )
-    record("D.1 Linear-Casimir accounting is forced, not chosen", True)
+    document("D.1 Linear-Casimir accounting is forced, not chosen")
 
     # ---- E. Ratio prediction -----------------------------------------------
     section("E. Ratio prediction")
@@ -150,7 +161,9 @@ def main() -> int:
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: P2.same-topology closed. Common-c theorem proved at 1-loop")
         print("rigorously on the same-Feynman-topology argument. (P1) + (P2) share c.")

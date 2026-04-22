@@ -32,6 +32,17 @@ def record(name, ok, detail=""):
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
 
 def section(title):
     print()
@@ -74,7 +85,7 @@ def main() -> int:
         "  lattice regularisation, etc. The cone closure is a pure\n"
         "  ratio statement — independent of absolute normalisation.\n"
     )
-    record("B.1 Cone closure independent of scheme/higher-loop corrections", True)
+    document("B.1 Cone closure independent of scheme/higher-loop corrections")
 
     # ---- C. Perturb c differently on (P1) and (P2) (common-c breaking) ----
     section("C. Common-c breaking test: perturb c_P1 vs c_P2 asymmetrically")
@@ -119,12 +130,14 @@ def main() -> int:
         "  is TIGHT (machine precision on the ratio) as long as (P1) and (P2)\n"
         "  share the same loop topology.\n"
     )
-    record("D.1 Physical significance: c-cancellation survives absolute-scale precision limits", True)
+    document("D.1 Physical significance: c-cancellation survives absolute-scale precision limits")
 
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: c-independence verified. Koide cone is ratio-tight regardless of")
         print("absolute c precision, as long as common-c condition holds.")

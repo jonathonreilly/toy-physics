@@ -36,6 +36,17 @@ def record(name, ok, detail=""):
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
 
 def section(title):
     print()
@@ -99,9 +110,8 @@ def main() -> int:
     # ---- E. Compose end-to-end ---------------------------------------------
     section("E. Compose Theorem 1 ⟺ X3 ⟸ retained inputs")
     # Compose the chain
-    record(
+    document(
         "E.1 Q = 2/3 (Theorem 1) ⟺ a_0² = 2|z|² ⟺ (X3) 3Y² = T(T+1) ⟸ (retained) T=1/2, Y²=1/4",
-        True,
         "End-to-end chain verified component-by-component on this branch.",
     )
 
@@ -118,7 +128,9 @@ def main() -> int:
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: X4 closed. End-to-end chain Q = 2/3 ⟺ a_0²=2|z|² ⟺ (A1*)")
         print("⟸ retained Cl(3) inputs is verified. The Casimir-difference lemma")

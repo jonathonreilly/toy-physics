@@ -41,6 +41,17 @@ def record(name, ok, detail=""):
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
 
 def section(title):
     print()
@@ -86,7 +97,7 @@ def main() -> int:
         "  matters; the Higgs rainbow contributes to both channels with the SAME\n"
         "  prefactor.\n"
     )
-    record("C.1 Higgs rainbow well-defined at 1-loop", True)
+    document("C.1 Higgs rainbow well-defined at 1-loop")
 
     # ---- D. Ratio preservation -------------------------------------------
     section("D. Cone ratio preserved even when Higgs loops are included")
@@ -98,7 +109,7 @@ def main() -> int:
         "\n"
         "  Hence |z|^2 / a_0^2 = 1/2 is preserved, even with Higgs-loop effects.\n"
     )
-    record("D.1 Cone ratio is Higgs-loop insensitive (by common-c)", True)
+    document("D.1 Cone ratio is Higgs-loop insensitive (by common-c)")
 
     # ---- E. Higgs equivalent of (A1*) --------------------------------------
     section("E. Higgs equivalent of (A1*): 3 Y_H^2 = T(T+1)")
@@ -114,12 +125,14 @@ def main() -> int:
         "  consistent on both legs — there is no hidden obstruction from\n"
         "  the Higgs side.\n"
     )
-    record("F.1 Both Yukawa-vertex legs cleanly support (A1*)", True)
+    document("F.1 Both Yukawa-vertex legs cleanly support (A1*)")
 
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: Higgs-side consistency closed. Both Yukawa-vertex legs (L, H)")
         print("satisfy (A1*); the cone ratio survives Higgs-loop effects by common-c.")

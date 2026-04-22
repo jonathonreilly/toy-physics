@@ -39,6 +39,17 @@ def record(name, ok, detail=""):
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
 
 def section(title):
     print()
@@ -67,7 +78,7 @@ def main() -> int:
     for name, status, role in inputs:
         print(f"  [{status}] {name}")
         print(f"    role: {role}")
-    record("A.1 All five inputs are retained or formalised", True)
+    document("A.1 All five inputs are retained or formalised")
 
     # ---- B. Promotion statement -------------------------------------------
     section("B. Promotion statement")
@@ -83,8 +94,8 @@ def main() -> int:
         "  parameter, no observed-mass input. The Koide RATIO\n"
         "  |z|^2 / a_0^2 = (T(T+1) - Y^2)/(T(T+1) + Y^2) is independent of K.\n"
     )
-    record("B.1 Theorem (P1) is retained-grade modulo I_loop precision", True)
-    record("B.2 Koide ratio is c-cancellative (independent of K precision)", True)
+    document("B.1 Theorem (P1) is retained-grade modulo I_loop precision")
+    document("B.2 Koide ratio is c-cancellative (independent of K precision)")
 
     # ---- C. Numerical confirmation on the lepton lane ---------------------
     section("C. Numerical confirmation")
@@ -116,7 +127,7 @@ def main() -> int:
     # If only m_tau matters (hierarchy), K ~ sqrt(sqrt(m_tau)/3) * sqrt(v_EW)... actually let's not go there.
     # Just confirm K^2 has the correct dimension.
     print(f"  Expected dimension of K^2: GeV (confirmed from above: {a0_sq:.6f} GeV)")
-    record("D.1 K^2 has correct GeV dimension", True)
+    document("D.1 K^2 has correct GeV dimension")
 
     # ---- E. Retained-surface status --------------------------------------
     section("E. Retained-surface status")
@@ -127,12 +138,14 @@ def main() -> int:
         "  The 5% I_loop precision caveat is confined to the absolute scale\n"
         "  K^2 and does NOT affect the Koide cone closure (ratio-only statement)."
     )
-    record("E.1 (P1) status upgraded: schema-grade → retained-grade (modulo I_loop)", True)
+    document("E.1 (P1) status upgraded: schema-grade → retained-grade (modulo I_loop)")
 
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: P1.promotion closed. (P1) is now retained-grade modulo")
         print("loop precision. The Casimir SUM side of the closure is complete.")

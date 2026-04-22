@@ -43,6 +43,17 @@ def record(name, ok, detail=""):
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
 
 def section(title):
     print()
@@ -64,7 +75,7 @@ def main() -> int:
         "  (iii) hw=1 Plancherel identity a_0 = sqrt(3) * <sqrt m>\n"
         "        (authority: CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md)\n"
     )
-    record("A.1 Three retained ingredients enumerated", True)
+    document("A.1 Three retained ingredients enumerated")
 
     # ---- B. Chain ---------------------------------------------------------
     section("B. Ward-identity chain assembly")
@@ -84,7 +95,7 @@ def main() -> int:
         "             =  3 K(v_EW, alpha_LM, I_loop)^2 * C_tau\n"
         "  as required by (P1) with c = K^2 and SUM = T(T+1) + Y^2 = C_tau.\n"
     )
-    record("B.1 Chain assembly correct at schema level", True)
+    document("B.1 Chain assembly correct at schema level")
 
     # ---- C. Numerical sanity at m_tau on the lepton lane -----------------
     section("C. Numerical sanity at m_tau on the lepton lane")
@@ -107,7 +118,7 @@ def main() -> int:
         "  (a_0^2 = 2|z|^2) is therefore at theorem grade on the c-cancellative\n"
         "  ratio, not limited by K's numerical precision."
     )
-    record("D.1 Koide ratio closure is independent of K/c numerical precision", True)
+    document("D.1 Koide ratio closure is independent of K/c numerical precision")
 
     # ---- E. Promotion statement -------------------------------------------
     section("E. Promotion statement")
@@ -121,7 +132,7 @@ def main() -> int:
         "  The residuals are absorbed into the universal K^2 constant; they do not\n"
         "  enter the Koide cone closure because the ratio is c-cancellative."
     )
-    record("E.1 (P1) promoted to schema-grade theorem status on retained surface", True)
+    document("E.1 (P1) promoted to schema-grade theorem status on retained surface")
 
     # ---- F. Dependence audit ----------------------------------------------
     section("F. Dependence audit — what retained tool is load-bearing")
@@ -134,12 +145,14 @@ def main() -> int:
         "ALPHA_S_DERIVED_NOTE.md",
     ]
     for name in loadbearing:
-        record(f"F.{name} is a retained authority on `main`", True)
+        document(f"F.{name} is a retained authority on `main`")
 
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: P1.formal closed. The retained Ward identity + one-loop")
         print("dressing + Plancherel give (P1) at schema grade, with the residual")

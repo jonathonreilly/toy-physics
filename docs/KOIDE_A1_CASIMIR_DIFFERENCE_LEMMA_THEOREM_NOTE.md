@@ -1,148 +1,138 @@
 # Casimir-Difference Lemma — Formal Theorem Statement
 
-**Date:** 2026-04-22 (phase 2 update)
-**Status:** **retained-grade** closure of Koide A1 / `Q = 2/3` via
-primitives (P1), (P2) on the retained Cl(3)/Z³ surface, modulo only
-the `~5%` lattice loop-integral precision (which cancels out of the
-cone ratio).
-**Companion derivation note:** `KOIDE_A1_CASIMIR_DIFFERENCE_LEMMA_DERIVATION_NOTE.md`
+**Date:** 2026-04-22
+**Status:** derivation of Koide A1 / `Q = 2/3` under two primitives
+(P1), (P2) on the retained Cl(3)/Z³ surface, with (P1) and (P2)
+themselves argued at retained grade from retained inputs at 1-loop.
+Absolute-scale precision (~5% lattice-integral) is **c-cancellative**
+for the cone ratio.
+**Companion derivation note:** [`KOIDE_A1_CASIMIR_DIFFERENCE_LEMMA_DERIVATION_NOTE.md`](./KOIDE_A1_CASIMIR_DIFFERENCE_LEMMA_DERIVATION_NOTE.md)
+**Verification surface:** 31 rigorous runners, 180 PASS / 0 FAIL;
+3 documentation-only runners, 96 DOC lines; hostile audit confirms
+0 hardcoded-`True` assertions inside `record()` calls.
 
-## Phase 2 update (2026-04-22)
+## 1. Theorem (Casimir-Difference Lemma)
 
-Since the initial schema-grade closure (17 runners, 152/152 PASS), the
-following additional work has been landed on this branch:
+Let `(T, Y)` be the SU(2)_L × U(1)_Y quantum numbers of an SM
+Yukawa-doublet participant on the retained Cl(3)/Z³ surface. Let
+`v = (√m_1, √m_2, √m_3)` be the charged-lepton mass-square-root
+vector on the retained `hw=1` carrier, and let `(a_0, z, z̄)` be its
+C_3 character coefficients (cf.
+[`CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md`](./CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md)).
 
-- **(P1) promoted to retained-grade** via Ward-identity chain,
-  gauge-boson rainbow enumeration, and MS-bar generation-blindness
-  (runners: `p1_formal`, `p1_rainbow`, `p1_blindness`, `p1_promotion`).
-- **(P2) promoted to retained-grade** via amplitude factorisation,
-  cyclic-C_3 flavour insertion analysis, and the common-c
-  same-topology theorem (runners: `p2_factorization`, `p2_cyclic`,
-  `p2_same_topology`, `p2_promotion`).
-- **Common-c theorem** proven rigorously via same-Feynman-topology
-  argument at 1-loop.
-- **c-independence** verified across 6 orders of magnitude.
-- **μ-invariance** confirmed at 1-loop.
-- **Brannen P residual** probed: arithmetic target `2/d² = 2/9` at
-  `d = 3` is uniquely consistent with both the retained Q = 2/3
-  reduction and the candidate `d² = 9` Wilson-line quantization.
-  Three candidate closure routes enumerated.
-- **Robustness**: 3-generation perturbation stress test, PDG
-  precision budget, Higgs-side consistency (both Yukawa-doublet legs
-  satisfy (A1*)).
-- **Composition**: retained `y_τ` chain + Casimir-difference lemma
-  gives full charged-lepton framework with one remaining parameter
-  (cone location / scale).
+**Primitives:**
 
-**Total verification surface: 33 runners, 266/266 PASS.**
-
-## Theorem (Casimir-Difference Lemma)
-
-Let `(T, Y)` be the SU(2)_L × U(1)_Y quantum numbers of an SM Yukawa-doublet
-participant on the retained Cl(3)/Z³ surface. Let
-`v = (√m_1, √m_2, √m_3)` be the mass-square-root vector of the
-charged-lepton sector on the retained `hw=1` carrier, and let
-`(a_0, z, z̄)` be its C_3 character coefficients (cf.
-`CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md`).
-
-**Assume the two primitives (each itself a one-loop / projector-level
-identity on the retained surface):**
-
-> **(P1)**  `a_0² = c · (T(T+1) + Y²) · v_EW²`
+> **(P1)** `a_0² = c · (T(T+1) + Y²) · v_EW²`
 >
-> **(P2)**  `|z|² = c · (T(T+1) − Y²) · v_EW²`,  with the **same** `c` as P1.
+> **(P2)** `|z|² = c · (T(T+1) − Y²) · v_EW²`, with the **same** `c` as (P1).
 
-**Then:**
+**Claim.**
 
 > `a_0² / |z|² = (T(T+1) + Y²) / (T(T+1) − Y²)`,
 >
-> and Koide's invariant
-> `Q = (∑ m_i)/(∑ √m_i)² = (a_0² + 2|z|²)/(3 a_0²)`
-> equals `2/3` if and only if
+> and Koide's invariant `Q = (∑ m_i)/(∑ √m_i)² = (a_0² + 2|z|²)/(3 a_0²)`
+> equals `2/3` **if and only if**
 >
-> `3 Y² = T(T+1)`        **(A1*)**
+> `3 Y² = T(T+1)`       (A1*)
 >
 > in the underlying group-theoretic data.
 
-**Corollary (Cl(3)-retained closure).**
-The retained Cl(3) embedding gives `T = 1/2` (from `Cl⁺(3) ≅ ℍ`) and
-`|Y| = 1/2` (from the ω-pseudoscalar central direction with the
-lepton/Higgs hypercharge assignment). Both inputs are package-grade
-on the retained surface. Substituting into (A1*) yields
-`3·(1/4) = 1/2 + 1/4 = 3/4 = T(T+1)` ✓, so the cone closes
-**unconditionally** on the retained Cl(3)/Z³ inputs.
+**Corollary (Cl(3)-retained closure).** The retained Cl(3) embedding
+gives `T = 1/2` (from `Cl⁺(3) ≅ ℍ`) and `|Y| = 1/2` (from the
+ω-pseudoscalar central direction with the lepton/Higgs assignment).
+Substituting into (A1*) yields `3·(1/4) = 3/4 = T(T+1)` ✓. The cone
+closes **unconditionally** on the retained Cl(3)/Z³ inputs.
 
-## Why this is a closure
+## 2. Why this is a closure
 
 | Object | Provenance | Status |
 |---|---|---|
-| `T = 1/2` | `Cl⁺(3) ≅ ℍ ⟹ Spin(3) = SU(2)_L` Casimir | retained |
-| `Y² = 1/4` (lepton/Higgs) | ω-pseudoscalar + assignment | retained |
-| C_3 character / S_3-isotype split | `S3_TASTE_CUBE_DECOMPOSITION_NOTE` | retained |
-| Plancherel/Parseval on `v` (Theorem 1) | `CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE` | retained |
-| (P1) trivial-character ↔ Casimir SUM | strengthens retained `C_τ = 1 ⟹ y_τ` (O2) | derived on this branch |
-| (P2) non-trivial-character ↔ Casimir DIFFERENCE | E-isotype enumeration (O3.a, O3.b) | derived on this branch |
-| Common-c condition | same Feynman topology argument (O3.b) | derived on this branch |
+| `T = 1/2` | `Cl⁺(3) ≅ ℍ ⟹ SU(2)_L` Casimir | retained on `main` |
+| `Y² = 1/4` (lepton / Higgs) | ω-pseudoscalar + assignment | retained on `main` |
+| C_3 character / S_3-isotype split on hw=1 | `S3_TASTE_CUBE_DECOMPOSITION_NOTE` | retained on `main` |
+| Plancherel identity (hw=1 Theorem 1) | `CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE` | retained on `main` |
+| Gauge-Casimir SUM `T(T+1) + Y² = 1` | `KOIDE_EXPLICIT_CALCULATIONS_NOTE` §Deliverable 2 | retained on `main` |
+| UV Ward identity `y_τ(M_Pl) / g_s(M_Pl) = 1/√6` | `YT_WARD_IDENTITY_DERIVATION_THEOREM` | retained on `main` |
+| (P1) sum proportionality | branch runners `p1_*` (rigorous + doc-only) | retained at 1-loop on branch |
+| (P2) difference proportionality | branch runners `p2_*` (rigorous) | retained at 1-loop on branch |
+| Common-c condition | branch runners `p2_same_topology`, `c_independence`, `mu_invariance` | rigorous at 1-loop on branch |
 
-(P1) and (P2) consume **only** retained inputs (gauge representation
-data + retained one-loop amplitudes), so the lemma is a closure on
-the retained surface — modulo the precision of the universal one-loop
-constant `c`, which **cancels out** of the Koide invariant.
+(P1) and (P2) consume **only** retained inputs. The only element
+imprecisely known is the absolute scale of `c`; it **cancels** from
+the Koide invariant. `c_independence` verifies this to machine
+precision across six orders of magnitude of `c`.
 
-## What the lemma does **not** claim
+## 3. What the lemma does **not** claim
 
-- It does **not** close the *physical* Brannen-phase bridge `δ = 2/9`.
-  That requires the separate radian-quantum residual `P` from
-  `KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md`. The
-  lemma fixes `Q`, and on the `δ = Q/d` reduction the *arithmetic*
-  `δ = 2/9` follows; the radian identification is separate.
+- **Does not** close the physical Brannen-phase bridge `δ = 2/9` on
+  its own. `δ = Q/d = 2/9` follows arithmetically on the retained
+  reduction, but the radian-quantum residual `P` (physical radian
+  = structural `2/d²`) remains open. Phase 2 narrowed this to three
+  concrete closure routes (see branch Brannen runners).
+- **Does not** fix the overall lepton mass scale `v_0`.
+- **Does not** universalise beyond Yukawa doublets. Only
+  `(T, Y) = (1/2, ±1/2)` sits on (A1*); see `x1_uniqueness_sweep`.
+- **Does not** include a 2+-loop derivation. (P1) and (P2) are
+  established at 1-loop; higher-loop corrections are out of scope
+  and **not needed** for the cone (ratio is c-cancellative).
+- **Does not** modify the canonical publication-package claim
+  surface. Propagation into `PUBLICATION_MATRIX.md` / `CLAIMS_TABLE.md`
+  is deferred pending explicit package authorisation.
 
-- It does **not** fix the overall lepton mass scale `v₀`. The cone
-  closure is a *ratio* statement; absolute scales remain set by
-  retained EW + Yukawa transport.
+## 4. No-go evasion
 
-- It does **not** universalise to other SM particles. Only the
-  Yukawa-doublet participants (L, H) sit on (A1*); see X1's
-  uniqueness sweep.
+The lemma evades all 9 retained no-go theorems in
+[`KOIDE_A1_DERIVATION_STATUS_NOTE.md`](./KOIDE_A1_DERIVATION_STATUS_NOTE.md):
 
-## No-go evasion
+- adds `3Y² = T(T+1)` (not Z_3 alone, not APBC refinement alone, not
+  observable-principle symmetry alone);
+- is not exchange-mixing, anomaly-forced cross-species,
+  sectoral-universality, or colour-correction;
+- is not a C_3-invariant variational principle on `hw=1` (uses
+  gauge-Casimir data — escapes Theorem 5);
+- uses quadratic Casimir, not 4th-order Clifford (escapes Theorem 6).
 
-The lemma evades all 9 retained no-gos in
-`KOIDE_A1_DERIVATION_STATUS_NOTE.md`. See `X5` runner audit.
+Executable audit: `x5_no_go_evasion` (documentation runner).
 
-## Verification surface
+## 5. Status change
 
-Total executable PASSes on this derivation track:
-
-| Group | Runners | PASS total |
+| Bridge | Before this branch | After this branch |
 |---|---|---|
-| Skeleton + O1 (3 runners) | skeleton, O1.a, O1.b, O1.c | 12 + 12 + 17 + 10 = **51** |
-| O2 (3 runners) | O2.a, O2.b, O2.c | 15 + 6 + 6 = **27** |
-| O3 (3 runners) | O3.a, O3.b, O3.c | 8 + 7 + 9 = **24** |
-| Cross-checks (X1–X7) | uniqueness sweep, perturbation, iff, Theorem 1, no-go evasion, Brannen, existing runner | 4 + 5 + 11 + 7 + 10 + 7 + 6 = **50** |
-| **Total** | **17 runners** | **152 PASS / 0 FAIL** |
+| `Q = 2/3` (Koide cone) | open flagship gate, no closure | closure under (P1) + (P2); both retained-grade at 1-loop; c-cancellative cone ratio |
+| `δ = 2/9` (Brannen phase) | open (P residual) | arithmetic `δ = Q/d = 2/9` follows; physical P residual narrowed to 3 routes |
+| `v_0` lepton scale | open, outside package | unchanged |
 
-## Status of Q vs δ on this branch
+## 6. Reading rule for reviewers
 
-| Bridge | Status before this branch | Status after this branch |
-|---|---|---|
-| `Q = 2/3` (Koide cone) | **OPEN** (executable support stack but no closure) | **CLOSED on schema (P1+P2 with common c) + retained Cl(3) inputs** |
-| `δ = 2/9` (Brannen phase) | OPEN (P residual) | arithmetic `δ = Q/d = 2/9` follows; **P residual still open** |
-| `v_0` lepton scale | open (outside the package) | unchanged (outside the package) |
+1. Confirm retained inputs `T = 1/2`, `Y² = 1/4`, and the hw=1
+   Plancherel identity (all on `main`).
+2. Accept (P1) via `p1_{rainbow,blindness,promotion}` (8 rigorous
+   PASSes across three runners) together with the narrative chain
+   assembled in `p1_formal`.
+3. Accept (P2) via `p2_{factorization,cyclic,same_topology,promotion}`
+   (14 rigorous PASSes across four runners).
+4. Verify c-cancellation via `c_independence` + `mu_invariance`
+   (11 rigorous PASSes).
+5. Then the cone closure `Q = 2/3` is automatic by (A1*) and the
+   retained Cl(3) inputs, with `x3_iff` (9 PASSes) providing the
+   symbolic iff and `x4_compose_hw1_theorem1` (6 PASSes) composing
+   with retained hw=1 Theorem 1.
 
-## Reading rule for reviewers
+All steps are executable in ≤ 30 s via:
 
-Before consuming this lemma:
+```
+python3 scripts/frontier_koide_a1_casimir_difference_master_closure.py
+```
 
-1. Confirm primitives (P1) and (P2) are accepted at the schema level
-   for the 1-loop charged-lepton self-energy on the retained surface.
-2. Confirm the retained Cl(3) inputs `T = 1/2` and `Y² = 1/4`.
-3. Then the closure of `Q = 2/3` is automatic.
+## 7. Open retained-grade work beyond this lemma
 
-The remaining derivation question is whether (P1) and (P2) themselves
-admit fully retained derivations from the lattice action, beyond the
-schema-grade reading developed here. The current package position is
-that they do — via the same one-loop closure surface that delivers
-`y_τ = (α_LM / 4π) · C_τ · I_loop`. A standalone retained-grade
-derivation of (P1) and (P2) would upgrade this lemma from
-schema-grade to package-grade.
+- A fully lattice-action-native derivation of (P1) and (P2) — the
+  branch argues them at retained-grade at the 1-loop amplitude level,
+  not from first principles of the lattice partition function.
+- Closure of the Brannen-phase radian-quantum residual `P` (three
+  named candidate routes).
+- A 2+-loop stability check of the common-c condition — not needed
+  for the cone (c-cancellative), but would be a welcome robustness
+  result.
+
+Tracked in the derivation note §8.

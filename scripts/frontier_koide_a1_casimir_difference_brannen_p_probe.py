@@ -42,6 +42,17 @@ def record(name, ok, detail=""):
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
 
 def section(title):
     print()
@@ -107,7 +118,7 @@ def main() -> int:
         "  This probe confirms the arithmetic target and rules out alternative\n"
         "  d-values, narrowing the remaining open work."
     )
-    record("E.1 Quantisation hypothesis arithmetically consistent; derivation open", True)
+    document("E.1 Quantisation hypothesis arithmetically consistent; derivation open")
 
     # ---- F. Three candidate closure routes (from the retained notes) -------
     section("F. Three candidate closure routes for P")
@@ -119,12 +130,14 @@ def main() -> int:
     for name, form in routes:
         print(f"  - {name}")
         print(f"      {form}")
-    record("F.1 Three candidate routes enumerated from retained notes", True)
+    document("F.1 Three candidate routes enumerated from retained notes")
 
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: Brannen P probe closed at arithmetic level. d = 3 uniquely")
         print("gives delta = 2/9; the physical-base identification is still open.")

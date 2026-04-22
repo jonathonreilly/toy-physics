@@ -37,6 +37,18 @@ def record(name: str, ok: bool, detail: str = "") -> None:
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
+
 
 def section(title: str) -> None:
     print()
@@ -183,7 +195,9 @@ def main() -> int:
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: O1.b closed. The C_3 Fourier projectors of O1.a are exactly")
         print("the S_3 isotype projectors P_A1 and P_E on the hw=1 sector. Hence")

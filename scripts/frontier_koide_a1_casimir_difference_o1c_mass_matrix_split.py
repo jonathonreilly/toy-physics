@@ -46,6 +46,18 @@ def record(name: str, ok: bool, detail: str = "") -> None:
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
+
 
 def section(title: str) -> None:
     print()
@@ -167,9 +179,8 @@ def main() -> int:
     # while a_0^2 = (sum sqrt m)^2 / 3.
     # So ||P_A1[M]||^2 = (sum m)^2 / 3 and a_0^2 = (sum sqrt m)^2 / 3.
     # The point: BOTH are A_1 isotypic norms in the SAME projector framework.
-    record(
+    document(
         "G.1 Matrix-side A_1 norm = (sum m)^2 / 3 ; vector-side A_1 norm = a_0^2 = (sum sqrt m)^2 / 3",
-        True,
         "Both are A_1 isotypic norms; the Koide A1 condition (a_0^2 = 2|z|^2)\n"
         "is the *vector-side* statement, but uses the same projector that\n"
         "drives the matrix-side trace decomposition.",
@@ -178,7 +189,9 @@ def main() -> int:
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: O1.c closed. The same A_1/E projectors that decompose the")
         print("sqrt-mass vector also decompose the diagonal mass matrix M into")

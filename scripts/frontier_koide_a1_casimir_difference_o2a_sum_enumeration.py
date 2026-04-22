@@ -43,6 +43,18 @@ def record(name: str, ok: bool, detail: str = "") -> None:
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
+
 
 def section(title: str) -> None:
     print()
@@ -157,7 +169,9 @@ def main() -> int:
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: O2.a closed. The retained C_tau = 1 derivation is reproduced")
         print("from the W±, W3, B contributions; identity Y_L Y_R / 2 = Y_L^2 lets it")

@@ -53,6 +53,17 @@ def record(name, ok, detail=""):
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
 
 def section(title):
     print()
@@ -88,7 +99,7 @@ def main() -> int:
         "  (Φ_ij is the generation-permutation factor; we treat it as a\n"
         "  generation-blind unit-magnitude weight for the magnitude argument.)"
     )
-    record("B.1 Same K_loop on diagonal and off-diagonal channels (loop-level)", True)
+    document("B.1 Same K_loop on diagonal and off-diagonal channels (loop-level)")
 
     # ---- C. Schema ratio is C_diff / C_sum ---------------------------------
     section("C. |z|^2 / a_0^2 = C_diff / C_sum")
@@ -130,12 +141,14 @@ def main() -> int:
         "  differ. Hence K_loop is identical and divides out of the ratio.\n"
         "  This is why the SAME c controls both (P1) and (P2)."
     )
-    record("E.1 Same Feynman topology ⟹ same K_loop", True)
+    document("E.1 Same Feynman topology ⟹ same K_loop")
 
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: O3.b closed. The off-diagonal E channel inherits the same")
         print("loop factor K_loop as the diagonal y_tau chain. Hence (P1) and (P2)")

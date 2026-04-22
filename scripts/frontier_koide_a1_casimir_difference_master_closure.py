@@ -59,16 +59,17 @@ STEP_RUNNERS = [
 ]
 
 
-def run_one(name: str) -> tuple[int, int, int]:
-    """Return (returncode, passes, total)."""
+def run_one(name: str) -> tuple[int, int, int, int]:
+    """Return (returncode, passes, total, docs)."""
     proc = subprocess.run(
         [sys.executable, str(SCRIPTS / name)],
         capture_output=True, text=True, timeout=60,
     )
-    m = re.search(r"PASSED:\s+(\d+)/(\d+)", proc.stdout)
-    if not m:
-        return proc.returncode, 0, 0
-    return proc.returncode, int(m.group(1)), int(m.group(2))
+    mp = re.search(r"PASSED:\s+(\d+)/(\d+)", proc.stdout)
+    md = re.search(r"DOCUMENTED:\s+(\d+)", proc.stdout)
+    passes, total = (int(mp.group(1)), int(mp.group(2))) if mp else (0, 0)
+    docs = int(md.group(1)) if md else 0
+    return proc.returncode, passes, total, docs
 
 
 def main() -> int:
@@ -76,29 +77,45 @@ def main() -> int:
     print("Master closure runner — Casimir-Difference Lemma derivation track")
     print("=" * 88)
     print()
-    print(f"  {'Runner':<58}{'rc':>4}{'PASS':>8}{'TOTAL':>8}")
-    print("  " + "-" * 78)
+    print(f"  {'Runner':<58}{'rc':>4}{'PASS':>8}{'DOC':>6}")
+    print("  " + "-" * 76)
     total_p = 0
     total_t = 0
-    bad = []
+    total_d = 0
+    rigorous_runners = 0
+    doc_only_runners = 0
+    failed = []
     for name in STEP_RUNNERS:
-        rc, p, t = run_one(name)
-        marker = "✓" if (rc == 0 and p == t and t > 0) else "✗"
-        # Strip the long prefix for display
+        rc, p, t, d = run_one(name)
+        if rc != 0 or p != t:
+            marker = "✗"
+            failed.append(name)
+        elif t > 0:
+            marker = "✓"
+            rigorous_runners += 1
+        else:
+            marker = "○"
+            doc_only_runners += 1
         short = name.replace("frontier_koide_a1_casimir_difference_", "*")
-        print(f"  {marker} {short:<56}{rc:>4}{p:>8}{t:>8}")
+        print(f"  {marker} {short:<56}{rc:>4}{p:>8}{d:>6}")
         total_p += p
         total_t += t
-        if rc != 0 or p != t:
-            bad.append(name)
-    print("  " + "-" * 78)
-    print(f"  TOTAL{'':>53}     {total_p:>8}/{total_t}")
+        total_d += d
+    print("  " + "-" * 76)
+    print(f"  {'TOTAL':<58}{'':>4}{total_p:>3}/{total_t:<4}{total_d:>6}")
     print()
-    if not bad:
-        print(f"VERDICT: ALL {len(STEP_RUNNERS)} step runners PASS — track closes ({total_p}/{total_t}).")
+    print("Legend:")
+    print("  ✓ = rigorous runner (PASS count > 0, no FAILs)")
+    print("  ○ = documentation-only runner (no rigorous PASS checks; narrative only)")
+    print("  ✗ = runner with FAIL(s) or non-zero exit code")
+    print()
+    if not failed:
+        print(f"VERDICT: ALL {len(STEP_RUNNERS)} step runners OK ({rigorous_runners} rigorous, "
+              f"{doc_only_runners} documentation-only).")
+        print(f"         Rigorous PASSes: {total_p}/{total_t}.  Documentation lines: {total_d}.")
         return 0
-    print(f"VERDICT: {len(bad)} step runner(s) FAILED:")
-    for name in bad:
+    print(f"VERDICT: {len(failed)} step runner(s) FAILED:")
+    for name in failed:
         print(f"  - {name}")
     return 1
 

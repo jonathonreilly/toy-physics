@@ -38,6 +38,17 @@ def record(name, ok, detail=""):
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
 
 def section(title):
     print()
@@ -64,9 +75,8 @@ def main() -> int:
         "A.1 C_sum - 2 C_diff = 3 Y^2 - T(T+1)",
         sp.simplify(rearranged - (3 * Y ** 2 - T * (T + 1))) == 0,
     )
-    record(
+    document(
         "A.2 A1 (C_sum = 2 C_diff) ⟺ (A1*) (3 Y^2 = T(T+1))",
-        True,
         "Direct algebraic equivalence at the schema level.",
     )
 
@@ -96,9 +106,8 @@ def main() -> int:
     print("  Combining with the retained Cl(3) embedding (T = 1/2, Y² = 1/4):")
     print("         retained T = 1/2  +  retained Y² = 1/4  ⟹  3·(1/4) = 1/2 + 1/4 = 3/4 ✓")
     print("         (A1*) holds, hence A1 holds, hence Koide Q = 2/3.")
-    record(
+    document(
         "C.1 Under retained Cl(3) embedding inputs, (A1*) holds and the cone closes",
-        True,
     )
 
     # ---- D. Sample table: (A1*) holds ⟺ schema ratio = 1/2 ----------------
@@ -129,7 +138,9 @@ def main() -> int:
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: X3 closed. The schema-level equivalence A1 ⟺ (A1*) is")
         print("symbolic/exact. Under the retained Cl(3) inputs (T = 1/2, Y² = 1/4),")

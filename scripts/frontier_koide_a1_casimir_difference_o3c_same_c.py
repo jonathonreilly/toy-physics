@@ -36,6 +36,17 @@ def record(name, ok, detail=""):
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
 
 def section(title):
     print()
@@ -120,12 +131,14 @@ def main() -> int:
         "  ratio is 2, equivalent to the Koide A1 condition a_0^2 = 2|z|^2 and\n"
         "  hence to Koide's relation Q = 2/3."
     )
-    record("E.1 Lemma stated and verified on Yukawa-doublet assignment", True)
+    document("E.1 Lemma stated and verified on Yukawa-doublet assignment")
 
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: O3.c closed. P1 + P2 with common c yield the schema ratio")
         print("|z|^2/a_0^2 = (T(T+1)-Y^2)/(T(T+1)+Y^2). On (T,Y) = (1/2, ±1/2) this")

@@ -33,6 +33,18 @@ def record(name: str, ok: bool, detail: str = "") -> None:
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
+
 
 def section(title: str) -> None:
     print()
@@ -198,9 +210,8 @@ def main() -> int:
     for tag, head, detail in obligations:
         print(f"  [{tag}] {head}")
         print(f"        {detail}")
-    record(
+    document(
         "H.1 Three named obligations isolated; closure follows from them + retained inputs",
-        True,
         "O1 + O2 + O3 + (Cl⁺(3) ⟹ T=1/2) + (ω-pseudoscalar ⟹ Y=±1/2) ⟹ A1.",
     )
 
@@ -208,7 +219,9 @@ def main() -> int:
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     for name, ok, _ in PASSES:
         status = "PASS" if ok else "FAIL"
         print(f"  [{status}] {name}")

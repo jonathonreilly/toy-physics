@@ -34,6 +34,17 @@ def record(name, ok, detail=""):
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
 
 def section(title):
     print()
@@ -90,7 +101,7 @@ def main() -> int:
         "  and the representation is chosen (doublet with hypercharge ±1/2),\n"
         "  these numbers cannot run. They are RG-invariant by construction.\n"
     )
-    record("B.1 (T(T+1), Y^2) are RG-invariant", True)
+    document("B.1 (T(T+1), Y^2) are RG-invariant")
 
     # ---- C. 1-loop same-topology enforces K-cancellation ------------------
     section("C. 1-loop same-topology ⟹ K-cancellation at all mu")
@@ -102,7 +113,7 @@ def main() -> int:
         "  3-loop corrections to y_tau share the same topology (the rainbow\n"
         "  dressing). So the cone closure is robust at least through 3-loop.\n"
     )
-    record("C.1 Same-topology structure preserves common-c through accessible loops", True)
+    document("C.1 Same-topology structure preserves common-c through accessible loops")
 
     # ---- D. Sanity: alpha_LM running does move K^2 -------------------------
     section("D. Sanity check: K^2 DOES run with mu (only the ratio is invariant)")
@@ -126,12 +137,14 @@ def main() -> int:
         "    - against higher-loop corrections as long as they preserve the\n"
         "      same-topology factorisation.\n"
     )
-    record("E.1 Cone closure survives realistic scheme/scale/loop variations", True)
+    document("E.1 Cone closure survives realistic scheme/scale/loop variations")
 
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: mu-invariance confirmed. Koide cone closure is RG-invariant")
         print("at 1-loop, preserved by same-topology structure through accessible loops.")

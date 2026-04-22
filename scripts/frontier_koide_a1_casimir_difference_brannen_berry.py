@@ -41,6 +41,17 @@ def record(name, ok, detail=""):
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
 
 def section(title):
     print()
@@ -61,7 +72,7 @@ def main() -> int:
         "      gamma_Berry = (1/2) * Omega(gamma)\n"
         "  where Omega is the signed solid angle subtended by gamma.\n"
     )
-    record("A.1 Berry phase formula gamma = Omega/2 is standard", True)
+    document("A.1 Berry phase formula gamma = Omega/2 is standard")
 
     # ---- B. Rational-winding subloops ----------------------------------
     section("B. Rational-winding subloop geometry")
@@ -100,9 +111,8 @@ def main() -> int:
         "  gives 2 pi / 9 ~ 0.698 per cell. Multiplying by 2/pi of a unit\n"
         "  solid angle gives... this is getting geometric, not algebraic.\n"
     )
-    record(
+    document(
         "C.2 The form Omega = 4/d^2 admits a 'd^2-cell + winding 2' reading",
-        True,
     )
 
     # ---- D. Single-clock / ambient 3+1 connection ------------------------
@@ -118,7 +128,7 @@ def main() -> int:
         "  9 * (2/9) = 2 radians — exactly the Wilson-line d^2-power\n"
         "  quantization of the previous probe.\n"
     )
-    record("D.1 Ambient one-clock transport consistent with d^2 = 9 winding", True)
+    document("D.1 Ambient one-clock transport consistent with d^2 = 9 winding")
 
     # ---- E. Obligations remaining for full physical closure ---------------
     section("E. Obligations remaining for full physical P closure")
@@ -135,12 +145,14 @@ def main() -> int:
         "  structural quantum). The framework has the algebraic tools; only\n"
         "  the physical-radian identification remains.\n"
     )
-    record("E.1 Remaining obligations correctly isolated as physical-radian identification", True)
+    document("E.1 Remaining obligations correctly isolated as physical-radian identification")
 
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: Brannen P Berry setup complete. The arithmetic target 2/9 =")
         print("2/d^2 is consistent with a d^2 = 9 winding at Berry-phase level. The")

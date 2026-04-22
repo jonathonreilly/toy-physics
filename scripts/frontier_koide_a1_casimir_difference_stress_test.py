@@ -30,6 +30,17 @@ def record(name, ok, detail=""):
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
 
 def section(title):
     print()
@@ -129,12 +140,14 @@ def main() -> int:
         "  from the Cl(3) retained (T=1/2, Y=±1/2) hypercharge assignment plus\n"
         "  the (P1)+(P2) common-c schema.\n"
     )
-    record("G.1 Cone closure is framework-derived, not accidental", True)
+    document("G.1 Cone closure is framework-derived, not accidental")
 
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: Stress test closed. PDG Q tight to 1e-5, robust under scale,")
         print("specific to A1 cone, non-trivially satisfied.")

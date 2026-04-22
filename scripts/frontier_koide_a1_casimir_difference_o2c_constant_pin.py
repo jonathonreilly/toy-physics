@@ -46,6 +46,18 @@ def record(name: str, ok: bool, detail: str = "") -> None:
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
+
 
 def section(title: str) -> None:
     print()
@@ -74,9 +86,8 @@ def main() -> int:
     print(f"  K^2   = a_0^2 / (3 C_tau)  = {K_sq:.9f} GeV")
 
     record("A.1 K^2 > 0 (positive number)", K_sq > 0)
-    record(
+    document(
         "A.2 K^2 has GeV dimensions (matches v_EW * loop scale)",
-        True,
         "Dimensions: a_0^2 ~ GeV (mass), C_tau dimensionless, so K^2 ~ GeV.",
     )
 
@@ -117,15 +128,14 @@ def main() -> int:
         "  off the lepton sector without circularity for the Koide RATIO\n"
         "  (which is c-independent)."
     )
-    record("C.1 c is fixed by retained inputs alone (modulo loop precision)", True)
+    document("C.1 c is fixed by retained inputs alone (modulo loop precision)")
 
     # ---- D. Independence of the Koide ratio from c ------------------------
     section("D. Koide RATIO is c-independent")
     # By construction: |z|^2 / a_0^2 = (T(T+1)-Y^2)/(T(T+1)+Y^2) when P1, P2 share c.
     # So even if c receives multiplicative loop corrections, A1 is unaffected.
-    record(
+    document(
         "D.1 |z|^2/a_0^2 is c-cancellative under the schema",
-        True,
         "The Koide invariant Q = 1/(1 + 2|z|^2/a_0^2 * 3) reduces to a c-free\n"
         "expression under (P1)+(P2) with common c.",
     )
@@ -133,7 +143,9 @@ def main() -> int:
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: O2.c closed. The constant c is a single positive number")
         print("determined by retained inputs (v_EW, alpha_LM(v_EW), I_loop, (4 pi)).")

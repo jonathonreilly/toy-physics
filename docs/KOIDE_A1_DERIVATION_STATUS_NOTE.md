@@ -149,13 +149,16 @@ Candidate lemmas that would close A1 axiom-natively via Weyl geometry:
   - Hidden SU(3)_family broken to Z_3 (Z_3 = SU(3) center)
   - Cl(3) ⊃ sl(3) via pseudoscalar extension
 
-### Route F: Yukawa Casimir-difference identity — **PROMOTED to schema-grade closure on this branch**
+### Route F: Yukawa Casimir-difference identity — **derivation track on branch**
 
 **Branch update (2026-04-22, `claude/koide-a1-casimir-difference-FtUl5`).**
-Route F has been promoted from candidate to **schema-grade closure** of
-A1 / `Q = 2/3` under two named primitives (P1, P2) on the retained
-Cl(3)/Z³ surface. The branch develops the full O1/O2/O3 closure
-architecture and verifies it across 17 runners with 152 PASS / 0 FAIL.
+Route F is developed into a closure of A1 / `Q = 2/3` under two named
+primitives (P1, P2) on the retained Cl(3)/Z³ surface, with (P1) and
+(P2) themselves argued at 1-loop from retained inputs. Verification
+surface: **31 rigorous runners with 180 PASS / 0 FAIL + 3
+documentation-only runners**, confirmed by a hostile-reviewer audit
+runner that certifies zero hardcoded-`True` assertions inside
+`record()` calls.
 
 - Derivation track: `docs/KOIDE_A1_CASIMIR_DIFFERENCE_LEMMA_DERIVATION_NOTE.md`
 - Theorem statement: `docs/KOIDE_A1_CASIMIR_DIFFERENCE_LEMMA_THEOREM_NOTE.md`

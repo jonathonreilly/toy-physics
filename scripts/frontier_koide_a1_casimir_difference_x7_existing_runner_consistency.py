@@ -32,6 +32,17 @@ def record(name, ok, detail=""):
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
 
 def section(title):
     print()
@@ -68,7 +79,7 @@ def main() -> int:
         return 1
     passes, total = int(m.group(1)), int(m.group(2))
     print(f"  Existing runner reports: {passes}/{total} PASS")
-    record("A.3 PASSED line parsed", True)
+    document("A.3 PASSED line parsed")
     record(f"A.4 Existing runner: {passes}/{total} PASS (full)", passes == total)
 
     # ---- B. Substantive consistency: both runners agree on the L, H Casimir
@@ -78,9 +89,8 @@ def main() -> int:
     assert "Lepton SU(2)_L doublet L" in existing_text
     assert "Higgs H" in existing_text
     assert "T(T+1) − Y²" in existing_text or "T(T+1) - Y" in existing_text
-    record(
+    document(
         "B.1 Existing runner asserts T(T+1) - Y² = 1/2 for L and H",
-        True,
         "Both notes agree on the lepton/Higgs Casimir difference identity.",
     )
 
@@ -92,12 +102,14 @@ def main() -> int:
         "  show that, under the (P1)+(P2) common-c schema, that identity forces\n"
         "  Q = 2/3 ⟺ Koide A1.\n"
     )
-    record("C.1 Branch extends existing observation into a closure derivation", True)
+    document("C.1 Branch extends existing observation into a closure derivation")
 
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: X7 closed. Existing yukawa_casimir_identity runner remains")
         print("9/9 PASS; this branch is fully consistent with its observation and")

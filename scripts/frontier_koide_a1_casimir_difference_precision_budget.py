@@ -29,6 +29,17 @@ def record(name, ok, detail=""):
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
 
 def section(title):
     print()
@@ -113,7 +124,7 @@ def main() -> int:
         "  uncertainty on m_tau (the dominant source). If m_tau is measured\n"
         "  more precisely in the future, the test tightens further.\n"
     )
-    record("D.1 Prediction is exact at 2/3; tested against PDG without free parameters", True)
+    document("D.1 Prediction is exact at 2/3; tested against PDG without free parameters")
 
     # ---- E. Historical context --------------------------------------------
     section("E. Historical context")
@@ -128,12 +139,14 @@ def main() -> int:
         "  gauge-representation data (no extra framework primitives), and it\n"
         "  evades all 9 retained no-gos.\n"
     )
-    record("E.1 Framework upgrades empirical observation to derived prediction", True)
+    document("E.1 Framework upgrades empirical observation to derived prediction")
 
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: PDG precision budget closed. Framework prediction of Q = 2/3")
         print("is within PDG uncertainty (few sigma) and matches the empirical")

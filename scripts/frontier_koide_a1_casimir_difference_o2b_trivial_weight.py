@@ -49,6 +49,18 @@ def record(name: str, ok: bool, detail: str = "") -> None:
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
+
 
 def section(title: str) -> None:
     print()
@@ -77,9 +89,8 @@ def main() -> int:
         "      m_tau = v_EW * y_tau = v_EW * (alpha_LM / (4 pi)) * C_tau * I_loop\n"
         "  i.e., m_tau ∝ C_tau,   and  sqrt(m_tau) ∝ sqrt(C_tau)."
     )
-    record(
+    document(
         "B.1 Generation-blind structure: sqrt(m) ∝ sqrt(C_tau) * sqrt(v_EW^2 * I_loop)",
-        True,
         "Universal generation-blind factor K = sqrt(alpha_LM v_EW^2 I_loop / (4 pi))",
     )
 
@@ -92,9 +103,8 @@ def main() -> int:
     )
     # Symbolic check: <sqrt m> ∝ sqrt(C_tau) ⟹ a_0^2 ∝ 3 (sqrt C_tau)^2 = 3 C_tau
     # under generation-blind scale-only inheritance.
-    record(
+    document(
         "C.1 a_0^2 = 3 <sqrt m>^2 = 3 K^2 C_tau (under generation-blind scale inheritance)",
-        True,
         "Holds whenever the per-generation Yukawa one-loop scale\n"
         "factor K is generation-independent. K is fixed by the retained\n"
         "YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT loop and is generation-blind.",
@@ -127,9 +137,8 @@ def main() -> int:
         "      a_0^2 = c_eff * (T(T+1) + Y^2) * v_EW^2,\n"
         "  which matches Primitive P1 in the closure note."
     )
-    record(
+    document(
         "E.1 a_0^2 takes the form c_eff * (T(T+1) + Y^2) * v_EW^2",
-        True,
         "Modulo the universal generation-blind scale c_eff (fixed by retained loop).",
     )
 
@@ -145,15 +154,16 @@ def main() -> int:
         "       which equals T(T+1) + Y_L^2 = 1 on the lepton chirality assignment).\n"
         "  These are addressed in O2.c, O3, and the closure synthesis."
     )
-    record(
+    document(
         "F.1 Caveats correctly listed",
-        True,
     )
 
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: O2.b closed. The trivial-character (e_+) weight inherits the")
         print("Casimir SUM as a multiplicative scale factor on the retained one-loop")

@@ -56,6 +56,17 @@ def record(name, ok, detail=""):
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
 
 def section(title):
     print()
@@ -78,7 +89,7 @@ def main() -> int:
         "  In the gauge-invariant flavour-diagonal A_1 projection, Phi -> 1.\n"
         "  In the E projection, Phi -> diag(omega, omega-bar).\n"
     )
-    record("A.1 Amplitude factorises as K_loop * C_W± * Phi_ij", True)
+    document("A.1 Amplitude factorises as K_loop * C_W± * Phi_ij")
 
     # ---- B. Construct Phi in the A_1 + E split --------------------------
     section("B. Phi_ij in the (A_1, E) decomposition")
@@ -147,9 +158,8 @@ def main() -> int:
         "  Hmm but then |z|^2 / a_0^2 = C_W±^2 / C_tau = 1/4 not 1/2. So the schema\n"
         "  (P1)+(P2) as I wrote it is NOT the correct accounting."
     )
-    record(
+    document(
         "D.1 NO-GO identified: amplitude-squared accounting gives ratio = 1/4 not 1/2",
-        True,
         "Documented as a genuine concern; requires revision of (P1)/(P2) accounting.",
     )
 
@@ -167,9 +177,8 @@ def main() -> int:
         "      |z|^2 ∝ K_loop^2 * C_W± * v^2                     (matches (P2))\n"
         "  So the correct schema exactly gives |z|^2 / a_0^2 = C_W± / C_tau = 1/2.\n"
     )
-    record(
+    document(
         "E.1 Correct accounting: a_0^2, |z|^2 both inherit LINEAR Casimir multipliers",
-        True,
         "The sqrt-mass vector carries linear amplitude, so squared norm gives linear Casimir.",
     )
 
@@ -196,7 +205,9 @@ def main() -> int:
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: P2.factorization closed. The linear-Casimir accounting on")
         print("the sqrt-mass vector v_i = sqrt(m_i) gives the correct schema ratio")

@@ -34,6 +34,17 @@ def record(name, ok, detail=""):
         for line in detail.splitlines():
             print(f"       {line}")
 
+DOCS: list[tuple[str, str]] = []
+
+
+def document(name: str, detail: str = "") -> None:
+    DOCS.append((name, detail))
+    print(f"[DOC ] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
 
 def section(title):
     print()
@@ -147,15 +158,16 @@ def main() -> int:
     #   T = 2   ⟹ Y^2 = 2   (irrational)
     #   ...
     # Only T = 1/2 with Y = ±1/2 admits a rational solution with positive C_sum.
-    record(
+    document(
         "D.1 Among rational (T, Y) with T half-integer >= 1/2 and C_sum > 0, only (T,Y)=(1/2, ±1/2) hits A1",
-        True,
     )
 
     section("SUMMARY")
     n_pass = sum(1 for _, ok, _ in PASSES if ok)
     n_total = len(PASSES)
+    n_docs = len(DOCS)
     print(f"PASSED: {n_pass}/{n_total}")
+    print(f"DOCUMENTED: {n_docs}")
     if n_pass == n_total:
         print("VERDICT: X1 closed. The lemma's Koide-cone implication is uniquely")
         print("realised on the SM Yukawa-doublet hypercharge assignment. The")
