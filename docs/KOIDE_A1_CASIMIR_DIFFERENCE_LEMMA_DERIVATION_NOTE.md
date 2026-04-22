@@ -1,0 +1,184 @@
+# Koide A1 from the Casimir-Difference Lemma — Derivation Track
+
+**Date:** 2026-04-22
+**Status:** active derivation track for the A1 / Q = 2/3 closure via the
+Yukawa-doublet Casimir difference `T(T+1) − Y² = 1/2`
+**Target:** axiom-native closure of Koide `Q = 2/3` using only retained
+gauge data — no new framework primitives.
+
+## 0. Scope
+
+The retained `C_τ = T(T+1) + Y² = 1` theorem gives the Yukawa-coupling
+SUM, derived from gauge-by-gauge enumeration of 1-loop diagrams in the
+charged-lepton self-energy (cf.
+`docs/KOIDE_EXPLICIT_CALCULATIONS_NOTE.md` §"Deliverable 2"). The
+candidate companion lemma — long flagged as the cleanest A1 closure
+route — is the Casimir DIFFERENCE identity
+
+```
+T(T+1) − Y² = 1/2     for both Yukawa-doublet participants (L, H).
+```
+
+This note develops the structural derivation that connects this
+group-theoretic fact to the Frobenius equipartition condition
+
+```
+a_0² = 2 |z|²
+```
+
+on the C_3 character decomposition of the mass-square-root vector
+`v = (√m_e, √m_μ, √m_τ)`, which is the exact algebraic equivalent of
+Koide's `Q = 2/3` (cf.
+`docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md`).
+
+## 1. The two-line observation that motivates the program
+
+Suppose, on the retained framework surface, we can establish proportionality
+constants `c, c'` such that
+
+```
+a_0²  =  c · ( T(T+1) + Y² )                                        (S)
+|z|²  =  c' · ( T(T+1) − Y² )                                       (D)
+```
+
+with the relative normalization `c' = c/2`. Then the A1 condition
+`a_0² = 2 |z|²` becomes
+
+```
+c · ( T(T+1) + Y² )  =  2 · ( c / 2 ) · ( T(T+1) − Y² )
+T(T+1) + Y²          =  T(T+1) − Y²    (after canceling)
+```
+
+— which trivially fails. So the *naive* relative normalization cannot
+be `c' = c/2`. The **non-trivial** relative normalization that makes
+A1 pop out is
+
+```
+a_0²  =  c · ( T(T+1) + Y² )
+|z|²  =  c · ( T(T+1) − Y² )           [SAME constant, no factor of 1/2]
+```
+
+with then
+```
+a_0² = 2 |z|²    ⟺    T(T+1) + Y² = 2 [ T(T+1) − Y² ]
+                 ⟺    3 Y² = T(T+1).                                (A1*)
+```
+
+For SU(2)_L doublets (T = 1/2, so T(T+1) = 3/4), condition (A1*) reads
+`3 Y² = 3/4` ⟺ `Y² = 1/4` ⟺ `Y = ±1/2`. **Exactly** the Yukawa-doublet
+hypercharges of L and H in the SM, and **exactly** the values that
+Cl(3) already retains via the pseudoscalar ω central direction.
+
+## 2. Closure architecture
+
+The derivation therefore reduces to two named primitives:
+
+**Primitive P1 (sum proportionality).** On the retained `hw=1` carrier,
+the trivial-character weight of the mass-square-root vector satisfies
+
+```
+a_0²  =  c · ( T(T+1) + Y² ) · v_EW²
+```
+
+with `c` independent of the SM particle assignment.
+
+**Primitive P2 (difference proportionality, same constant).** On the
+same carrier, with the *same* normalization constant `c`,
+
+```
+|z|²  =  c · ( T(T+1) − Y² ) · v_EW².
+```
+
+P1 is a strengthening of the retained `C_τ = 1` ⟹ `y_τ` chain — it
+states not only the overall scale of the trivial component but also
+that the proportionality is the gauge-Casimir SUM. P2 is the new
+identity. Together they force A1 / `Q = 2/3` once we plug in
+`(T, Y) = (1/2, ±1/2)` from the Cl(3) embedding.
+
+## 3. Where (T, Y) come from on the retained surface
+
+The retained CL3_SM_EMBEDDING_THEOREM and its ω-pseudoscalar extension
+already give:
+
+| Quantum number | Source | Value |
+|---|---|---|
+| `T(T+1)` | `Cl⁺(3) ≅ ℍ ⟹ Spin(3) = SU(2)_L` Casimir on the doublet | `3/4` |
+| `Y` (lepton doublet L) | central pseudoscalar ω + hypercharge assignment | `−1/2` |
+| `Y` (Higgs H) | same ω + opposite-sign assignment | `+1/2` |
+| `Y²` (both) | square of either | `1/4` |
+| `T(T+1) + Y²` | sum | `1` |
+| `T(T+1) − Y²` | difference | `1/2` |
+| `3 Y²` | three times the square hypercharge | `3/4` |
+| `T(T+1) − 3 Y²` | (A1*) deficit | `0` |
+
+Authority: `docs/CL3_SM_EMBEDDING_MASTER_NOTE.md`,
+`docs/CL3_SM_EMBEDDING_THEOREM.md`,
+`docs/KOIDE_EXPLICIT_CALCULATIONS_NOTE.md`.
+
+## 4. Proof obligations and execution path
+
+The lemma is reduced to three concrete proof obligations, each of which
+is a self-contained sub-derivation on the retained surface:
+
+**Obligation O1 (S_3 / C_3-irrep alignment).**
+Show that the C_3 character decomposition of the mass-square-root
+vector `v = (√m_1, √m_2, √m_3)` is the same as the S_3 / C_3-irrep
+decomposition of the hw=1 mass matrix into A_1 (trivial) ⊕ E (doublet)
+sectors, i.e. `a_0² ↔ ‖A_1 component‖²`, `|z|² ↔ (1/2)‖E component‖²`.
+
+**Obligation O2 (sum-Casimir matches A_1 weight).**
+Show that on the retained 1-loop self-energy chain that already
+delivers `y_τ` from `C_τ = T(T+1) + Y² = 1`, the same Wick contraction
+applied to the trivial character `e_+ = (1,1,1)/√3` recovers
+`a_0² ∝ (T(T+1) + Y²) · v_EW²`. This is the strengthening of the
+retained `y_τ` derivation from "scalar = 1" to "scalar = sum-Casimir".
+
+**Obligation O3 (difference-Casimir matches E weight, same constant).**
+Show that the same Wick contraction, applied instead to the
+non-trivial characters `e_ω, e_{ω̄}`, gives
+`|z|² ∝ (T(T+1) − Y²) · v_EW²` with the *same* normalization constant
+as O2. This is the new identity. Geometrically it follows if the
+trivial character carries the longitudinal/diagonal projector
+`P_= = T_3² + Y²` and the non-trivial characters carry the orthogonal
+complement `P_⊥ = T(T+1) − T_3² − Y²`.
+
+The third obligation is the load-bearing step. The other two are
+either retained (O2 strengthens an existing derivation) or already
+implicit in the retained `hw=1` algebraic equivalence (O1).
+
+## 5. Why this avoids the no-go theorems
+
+Nine retained no-go theorems rule out specific A1-forcing mechanisms
+(`KOIDE_A1_DERIVATION_STATUS_NOTE.md` §"Retained no-go theorems"). The
+Casimir-difference lemma evades all of them because:
+
+- it is **not** a C_3-invariant variational principle on the hw=1
+  block alone (Theorem 5 escape) — it imports SU(2)_L × U(1)_Y data;
+- it is **not** a 4th-order Clifford-product mechanism (Theorem 6
+  escape) — it is built from the *quadratic* Casimir on doublets;
+- it is **not** Z_3-invariance alone (§5.1 escape) — it adds the
+  hypercharge constraint `3Y² = T(T+1)`;
+- it is **not** sectoral universality (§5.6 escape) — it specifically
+  selects only Yukawa-doublet (T = 1/2, Y = ±1/2) participants;
+- it is **not** observable-principle character symmetry (§5.3 escape)
+  — it consumes the distinct character `e_+` vs `e_ω` separation, not
+  just their algebraic symmetry.
+
+## 6. Status and what each runner asserts
+
+Initial scaffolding (this commit):
+
+- `scripts/frontier_koide_a1_casimir_difference_lemma_skeleton.py`:
+  records the closure architecture, verifies (A1*), and isolates the
+  three named primitives O1, O2, O3 as concrete future runners.
+
+The derivation will be developed iteratively across subsequent commits.
+Each commit advances one obligation and updates this note in place.
+
+## 7. References
+
+- `docs/KOIDE_A1_DERIVATION_STATUS_NOTE.md` (Route F entry)
+- `docs/KOIDE_EXPLICIT_CALCULATIONS_NOTE.md` (Deliverable 2)
+- `docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md` (hw=1 carrier, C_3 decomposition)
+- `docs/CL3_SM_EMBEDDING_MASTER_NOTE.md`, `docs/CL3_SM_EMBEDDING_THEOREM.md` (T, Y assignments)
+- `scripts/frontier_koide_a1_yukawa_casimir_identity.py` (existing observation runner)
