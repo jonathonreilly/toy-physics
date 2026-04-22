@@ -22,7 +22,7 @@ This package does two things cleanly:
 2. It proves that the retained `Z_3` orbifold carries an exact ambient APS
    invariant `η = 2/9`, and that this value is topologically robust.
 
-These are strong results. They are not the same as full retained-forced
+These are strong results. They are not the same as full retained
 closure of the physical charged-lepton observables.
 
 ---
@@ -211,9 +211,9 @@ above.
 
 ## Bottom line
 
-- `Q = 2/3`: strongest current executable support, not yet retained-forced
+- `Q = 2/3`: strongest current executable support, not yet retained
   closure.
-- `δ = 2/9`: strongest current executable support, not yet retained-forced
+- `δ = 2/9`: strongest current executable support, not yet retained
   closure.
 - `Q = 3·δ`: exact compatibility identity between the two support routes.
 - Remaining open behind `Q`: the physical/source-law extremal-principle

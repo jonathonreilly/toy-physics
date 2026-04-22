@@ -1,7 +1,7 @@
 # Higher-Order Structural Theorems on the Charged-Lepton Sector
 
 **Date:** 2026-04-17
-**Status:** three exact structural theorems + one companion survey + observational-pin closure spec
+**Status:** exact structural theorem; bundled three-theorem note plus one companion survey and observational-pin closure spec
 **Runners (8):**
 - `scripts/frontier_higgs_dressed_propagator_v1.py` (7 PASS)
 - `scripts/frontier_higgs_dressed_propagator_transport_identity.py` (10 PASS)

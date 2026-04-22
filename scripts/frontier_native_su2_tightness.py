@@ -438,7 +438,7 @@ def part_f_three_generations_corollary() -> None:
     #   (7) 3 physical generations                              [retained hw-orbit semantics]
     #
     # Steps 1-4 are support-route (Version A of the main theorem).
-    # Steps 5-7 are support-grade (inherit the retained semantics dependency
+    # Steps 5-7 are support-only (inherit the retained semantics dependency
     # already documented in the earlier conditional-support note).
 
     print("  Dependency chain:")

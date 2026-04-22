@@ -1,7 +1,7 @@
 # hw=1 Second-Order-Return Shape Theorem
 
 **Date:** 2026-04-17
-**Status:** exact structural theorem + publication-grade robustness certification
+**Status:** exact structural theorem; publication-grade robustness certification
 **Runners:**
 - `scripts/frontier_hw1_second_order_return_shape_theorem.py` (20 PASS, 0 FAIL)
 - `scripts/frontier_shape_theorem_robustness_audit.py` (57 PASS, 0 FAIL)

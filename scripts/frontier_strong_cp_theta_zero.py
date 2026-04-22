@@ -16,7 +16,7 @@ TARGET CLAIM:
     (D) positive-weight topological-sector weighting away from θ = 0.
 
 SCOPE:
-  This is a retained-surface closure package, not a universal
+  This is a retained action-surface closure package, not a universal
   all-formulations strong-CP theorem.
 """
 
@@ -720,7 +720,7 @@ def main():
         return 1
 
     print()
-    print("All retained-surface closure checks passed. The strong sector closes at")
+    print("All retained action-surface closure checks passed. The strong sector closes at")
     print("θ_eff = 0 on the retained Wilson-plus-staggered action surface, while")
     print("CKM CP remains weak-sector only and the surviving neutron-EDM signal")
     print("stays in the separate bounded CKM lane.")

@@ -10,7 +10,7 @@ review, retention, and downstream weaving.
 **2026-04-21 package update.** The April 21 Koide package is now the
 authoritative review/support surface for the charged-lepton lane. It is much
 stronger than the April 18-20 state, but it does not yet give
-retained-forced closure for either `Q = 2/3` or `δ = 2/9`. The older
+retained closure for either `Q = 2/3` or `δ = 2/9`. The older
 conditional evening discussion below remains historical provenance.
 
 **2026-04-22 support update.** The April 22 batch materially strengthens the
@@ -98,9 +98,9 @@ reductions:
 So the current charged-lepton package status is:
 
 - exact candidate-route closure
-- reviewer-tested Frobenius-isotype / AM-GM support for `Q = 2/3` in
+- executable Frobenius-isotype / AM-GM support for `Q = 2/3` in
   `KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md`
-- reviewer-tested ABSS fixed-point / topological-robustness support for
+- executable ABSS fixed-point / topological-robustness support for
   `δ = 2/9` in
   `KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md`
 - April 22 support batch: explicit A1 route audit in

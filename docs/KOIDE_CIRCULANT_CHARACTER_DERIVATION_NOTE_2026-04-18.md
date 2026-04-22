@@ -286,7 +286,7 @@ review:
 - on the present retained surface, Koide is **structurally compatible** with the
   retained `hw=1` algebra;
 - the framework does **not** yet derive Koide as a sole-axiom theorem output;
-- charged-lepton closure remains a **bounded observational pin**.
+- charged-lepton closure remains a **bounded observational-pin package**.
 
 This note does not supersede that result. It contributes a new exact
 operator-space interpretation of the Brannen/Rivero ansatz and a cleaner

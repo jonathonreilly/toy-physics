@@ -39,8 +39,8 @@ physical Brannen-phase bridge by itself.
 
 | Import | Lane | Current status | What closes it |
 |---|---|---|---|
-| Koide relation `Q = 2/3` | κ, θ | reviewer-tested Frobenius-isotype / AM-GM support package isolates the Koide point as the unique extremum of the admitted block-total functional, but the physical/source-law extremal-principle bridge remains open | derive why the physical charged-lepton packet must extremize the block-total Frobenius functional, or an equivalent accepted source law that forces the same point |
-| Brannen phase `δ = 2/9` on the physical base | θ | reviewer-tested APS / ABSS support package isolates the exact ambient topological value `η = 2/9`, but the physical selected-line Brannen-phase bridge remains open | derive `δ_physical = η_APS`, equivalently an ambient one-clock `3+1` transport / endpoint / Wilson law whose selected-line pullback is the physical Brannen phase |
+| Koide relation `Q = 2/3` | κ, θ | executable Frobenius-isotype / AM-GM support package isolates the Koide point as the unique extremum of the admitted block-total functional, but the physical/source-law extremal-principle bridge remains open | derive why the physical charged-lepton packet must extremize the block-total Frobenius functional, or an equivalent accepted source law that forces the same point |
+| Brannen phase `δ = 2/9` on the physical base | θ | executable APS / ABSS support package isolates the exact ambient topological value `η = 2/9`, but the physical selected-line Brannen-phase bridge remains open | derive `δ_physical = η_APS`, equivalently an ambient one-clock `3+1` transport / endpoint / Wilson law whose selected-line pullback is the physical Brannen phase |
 | Selected-line witness ratio `w/v ≈ 4.101` | m_* (selected-line point) | conditionally pinned by the exact selected-line scalar-phase bridge once the physical Brannen phase is fixed; still open because the Brannen-phase bridge is open | the same physical Brannen-phase bridge that closes `δ = 2/9`, or an equivalent ambient endpoint law that fixes the selected-line point directly |
 
 ## §0a Closed in cycle 2
@@ -316,9 +316,9 @@ Nature-grade statement for this cycle is:
 > up-sector quark reduced
 > amplitude (a_u) — are all sharply compressed on the retained Cl(3)/Z^3
 > review surface, with no new axioms added this cycle. The framework
-> contributes (i) a reviewer-tested Frobenius-isotype / AM-GM support stack
+> contributes (i) an executable Frobenius-isotype / AM-GM support stack
 > that isolates the Koide point but still leaves open the physical/source-law
-> extremal-principle bridge, (ii) a reviewer-tested ABSS fixed-point /
+> extremal-principle bridge, (ii) an executable ABSS fixed-point /
 > topological-robustness support stack that isolates the exact ambient APS
 > value `η = 2/9` but still leaves open the physical Brannen-phase bridge, (iii) an exact
 > Fourier-bridge algebraic reduction of operator-side κ = 2 to spectrum-side Q = 2/3,

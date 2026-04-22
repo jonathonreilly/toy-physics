@@ -1,7 +1,7 @@
 # y_t EFT Bridge Theorem: Backward Ward Boundary Transfer at `v`
 
 **Date:** 2026-04-15  
-**Status:** closed subderivation on open lane; bridge-conditioned  
+**Status:** exact subderivation; bridge-conditioned on the open lane
 **Primary runner:** `scripts/frontier_yt_eft_bridge.py`
 
 ## Authority role

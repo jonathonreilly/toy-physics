@@ -227,7 +227,7 @@ Current quantitative statuses:
    `hw=1` response family. The reviewer-facing three-identity system remains in
    the package as support only: it is no longer a blocker, and its
    product/determinant identities and uniqueness statement are still
-   support-grade rather than theorem-grade.
+   support-only rather than retained theorem-grade.
 
 Outside the flagship spine, a curated neutrino boundary/support packet is now
 also live in the package:

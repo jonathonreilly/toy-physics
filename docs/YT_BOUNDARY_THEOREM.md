@@ -1,7 +1,7 @@
 # Boundary Selection Theorem: v is the Physical Crossover Endpoint
 
 **Date:** 2026-04-14
-**Status:** closed subderivation on open lane; bridge-conditioned
+**Status:** exact subderivation; bridge-conditioned on the open lane
 **Script:** `scripts/frontier_yt_boundary_consistency.py`
 
 **Authority role:** This theorem is part of the current zero-import authority
