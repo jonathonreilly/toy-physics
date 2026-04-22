@@ -178,6 +178,17 @@ A_1 / E isotypic decomposition of the sqrt-mass vector under S_3 axis
 permutation on the hw=1 carrier; the same projectors decompose the
 diagonal mass matrix into its trace (A_1) and traceless (E) pieces.
 
+| O2.a | `frontier_koide_a1_casimir_difference_o2a_sum_enumeration.py` | 15 PASS — gauge-by-gauge SUM enumeration; SUM=1 shared by {L, H, e_R} |
+
+**O2.a clarification.** The SUM `T(T+1) + Y² = 1` is *not* unique to
+the Yukawa-doublet participants — it also holds for `e_R` because
+`Q_{e_R}² = 1` (and the EM cross-check gives `C_γ = Q²`). What is
+load-bearing for the closure is **(i)** that the SUM = 1 holds for
+both Yukawa doublet participants (used as scale input via the retained
+`y_τ` derivation) and **(ii)** that the DIFFERENCE = 1/2 distinguishes
+{L, H} from {e_R, Q, u_R, d_R}. The DIFFERENCE is the unique
+discriminant of the Yukawa-doublet pair.
+
 **O1.a closed.** The C_3 character decomposition is symbolically
 self-consistent (sympy verification of both Parseval identities) and
 the A_1 (trivial) / E (nontrivial) projector pair satisfies
