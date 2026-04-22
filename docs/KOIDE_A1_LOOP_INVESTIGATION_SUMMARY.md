@@ -189,3 +189,45 @@ the structural lemma requires genuinely new theoretical work.
 Any of these three paths would close A1. The /loop has clarified the
 landscape sufficiently for the canonical-branch theorist to choose
 the most promising route based on retained-framework compatibility.
+
+## Iter 8 addendum: comprehensive 1/2 catalog
+
+After 8 /loop iterations producing 8 new A1-focused runners (181/181
+PASS total, was 142/142 pre-loop), the investigation has cataloged
+**9 distinct natural quantities in the retained framework all equal
+to 1/2**, all equivalent to the A1 condition `|b|²/a² = 1/2`:
+
+| # | Quantity | Origin |
+|---|---|---|
+| 1 | `dim(spinor) / dim(Cl⁺(3))` | Cl⁺(3) ≅ ℍ, spinor on ℂ² |
+| 2 | `dim(spinor) · g_2²(bare)` | g_2² = 1/dim(Cl⁺(3)) |
+| 3 | `T(T+1) − Y²` (lepton doublet) | unique to L doublet + Higgs |
+| 4 | `\|ω_{A_1, fund}\|²` (Kostant) | h̄(h̄+1)r/12 = 1/2 |
+| 5 | `\|ρ_{A_1}\|²` (Kostant) | rank 1: ρ = ω |
+| 6 | `C_2(adj) − dim(fund)·C_2(fund)` for SU(2) | = 1/N for SU(N), N=2 gives 1/2 |
+| 7 | σ at A1 = `a_0²/(a_0² + 2\|z\|²)` | C_3-character equipartition |
+| 8 | `cos²(45°) = sin²(45°)` | 45° latitude on S² |
+| 9 | `|b|²/a²` (A1 itself) | Frobenius equipartition condition |
+
+The DIVERSITY of representations all giving 1/2 strongly suggests
+this is a deep retained-framework invariant with multiple natural
+definitions converging on it. However, **mathematical equivalence is
+NOT the same as derivation** — multiple equivalent rephrasings of A1
+do not constitute proof that A1 holds.
+
+The /loop has reached the saturation point for THIS investigation:
+further iterations produce variants of the same observation rather
+than novel derivation routes. The closure path is well-mapped:
+
+- **Strongest candidate**: Clifford dim-ratio (Route F variant) with
+  the open lemma `|b|²/a² = dim(spinor)/dim(Cl⁺(3))`
+
+- **Next-cleanest**: Yukawa Casimir-difference (Route F) with lemma
+  `|b|²/a² = T(T+1) − Y²` for Yukawa participants
+
+- **Most rigorous backup**: Koide-Nishiura V(Φ) import (Route A)
+  as new retained primitive
+
+Recommendation: stop /loop iterations. Hand off to canonical-branch
+for theoretical work proving one of the open lemmas, or for adopting
+a new retained primitive based on the structural evidence accumulated.
