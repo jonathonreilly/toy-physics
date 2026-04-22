@@ -167,8 +167,14 @@ Current quantitative statuses:
   exact closure already exist on the fixed native `N_e` seed surface: A-BCC
   is now closed on the retained measurement surface, and the recovered-packet
   selector residue is now also closed on the review surface by the shifted
-  same-law packet theorem; what remains outside the current closure grade is
-  the stricter native source-chart / branch-choice derivation;
+  same-law packet theorem. The stricter/native map is now sharper too: once
+  the exact `chi^2 = 0` PMNS target surface is granted, the exact source-side
+  chamber plus the coefficient-free source cubic already select Basin 1
+  uniquely on the chamber roots `{Basin 1, Basin 2, Basin X}`. So what
+  remains outside the current closure grade is not a separate target-surface
+  branch-choice law. The remaining strict/native DM burden is exactly one
+  complex native nontrivial-character current `J_chi`, equivalently the
+  intrinsic `2`-real PMNS point-selection law;
   `σ_hier = (2, 1, 0)` is fixed observationally at the pinned chamber point,
   but broader chamber-wide / all-basin uniqueness is still out of scope
 - promoted CKM atlas/axiom package on the canonical tensor/projector surface, with older Cabibbo / NNI / partial Jarlskog notes retained only as route history
@@ -247,8 +253,13 @@ Current quantitative statuses:
    lift `0` across the full audited shift family and a dense admissible stress
    range, and that lift is exactly the unique recovered point with
    `Im(K_Z3[1,2]) > 0`. So there is no remaining DM blocker on the review
-   surface. What remains outside the current closure grade is the stricter
-   native source-chart / branch-choice derivation from `Cl(3)/Z^3` alone.
+   surface. On the stricter/native map, once the exact PMNS target surface is
+   granted, the exact chamber plus `I_src(H) > 0` already select Basin 1
+   uniquely on the exact chamber roots, so there is no separate target-
+   surface branch-choice residue beyond the PMNS last mile itself. That last
+   mile is now identified exactly with one complex native nontrivial-
+   character current `J_chi`, equivalently the intrinsic `2`-real PMNS
+   point-selection law.
    The reviewer-facing current-bank quantitative mapping item is now closed. The hierarchy pairing
    `σ_hier = (2, 1, 0)` is already fixed
    observationally at the retained pin; what remains open there is any

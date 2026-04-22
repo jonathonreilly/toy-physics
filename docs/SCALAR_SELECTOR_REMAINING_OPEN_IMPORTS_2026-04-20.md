@@ -26,7 +26,7 @@ The downstream selected-line witness remains conditional on the second bridge.
 |---|---|---|---|
 | Koide relation `Q = 2/3` | κ, θ | reviewer-tested Frobenius-isotype / AM-GM support package isolates the Koide point as the unique extremum of the admitted block-total functional, but the physical/source-law extremal-principle bridge remains open | derive why the physical charged-lepton packet must extremize the block-total Frobenius functional, or an equivalent accepted source law that forces the same point |
 | Brannen phase `δ = 2/9` on the physical base | θ | reviewer-tested APS / ABSS support package isolates the exact ambient topological value `η = 2/9`, but the physical selected-line Brannen-phase bridge remains open | derive `δ_physical = η_APS`, equivalently an ambient one-clock `3+1` transport / endpoint / Wilson law whose selected-line pullback is the physical Brannen phase |
-| PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)` | PMNS selector lane | On the review surface, the DM flagship gate is now closed at the current package grade. A-BCC is closed on the retained measurement framework via the sigma-chain, retained P3 Sylvester, PMNS nonsingularity, and Sylvester signature forcing; the split-2 carrier-side dominance/completeness blocker is interval-certified closed on the two explicit upper-face boxes; and the last selector-side residue is now closed on the current recovered packet by the same exact scalar observable-relative-action law, transported to the common positive windows `A_mu(H)=H+mu I`: across the full audited shift family and a dense admissible stress range, the preferred recovered lift `0` is always the unique minimizer, and it is exactly the unique recovered point on the positive side of `Im(K_Z3[1,2]) = 0` | derive the relevant five-basin source chart / branch-choice structure natively from `Cl(3)/Z³` alone, removing the retained-measurement pin and upgrading the DM lane from review-surface closure to full axiom-native closure |
+| PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)` | PMNS selector lane | On the review surface, the DM flagship gate is now closed at the current package grade. A-BCC is closed on the retained measurement framework via the sigma-chain, retained P3 Sylvester, PMNS nonsingularity, and Sylvester signature forcing; the split-2 carrier-side dominance/completeness blocker is interval-certified closed on the two explicit upper-face boxes; and the last selector-side residue is now closed on the current recovered packet by the same exact scalar observable-relative-action law, transported to the common positive windows `A_mu(H)=H+mu I`: across the full audited shift family and a dense admissible stress range, the preferred recovered lift `0` is always the unique minimizer, and it is exactly the unique recovered point on the positive side of `Im(K_Z3[1,2]) = 0`. On the stricter/native map, the separate A-BCC branch-choice residue is now reduced away on the exact target surface itself: the active-half-plane chamber is exact, the chamber `χ² = 0` roots are exactly `{Basin 1, Basin 2, Basin X}`, and the coefficient-free source cubic `I_src(H) > 0` selects Basin 1 uniquely there. The remaining strict/native DM burden is therefore no longer a separate A-BCC law plus a generic PMNS-angle statement; it is exactly one complex native nontrivial-character current `J_chi`, equivalently the intrinsic `2`-real point-selection law on the exact PMNS source manifold | derive a sole-axiom law producing nonzero `J_chi` on the retained `hw=1` response family, equivalently the missing native point-selection law on the exact local `2`-real PMNS source manifold |
 | Selected-line witness ratio `w/v ≈ 4.101` | m_* (selected-line point) | conditionally pinned by the exact selected-line scalar-phase bridge once the physical Brannen phase is fixed; still open because the Brannen-phase bridge is open | the same physical Brannen-phase bridge that closes `δ = 2/9`, or an equivalent ambient endpoint law that fixes the selected-line point directly |
 
 ## §0a Closed in cycle 2
@@ -78,6 +78,12 @@ The downstream selected-line witness remains conditional on the second bridge.
   stress range, and it is exactly the unique recovered point with
   `Im(K_Z3[1,2]) > 0`. See
   `docs/DM_SELECTOR_SHIFTED_RELATIVE_ACTION_RECOVERED_PACKET_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
+- **Strict/native DM last mile sharpened.** After the exact target-surface
+  source-cubic theorem removes any separate A-BCC residue on the exact PMNS
+  target surface, the native `C_3` current stack shows that the remaining
+  strict/native DM burden is exactly one complex nontrivial-character current
+  `J_chi`, equivalently the intrinsic `2`-real PMNS point-selection law. See
+  `docs/DM_PMNS_NATIVE_CURRENT_LAST_MILE_REDUCTION_THEOREM_NOTE_2026-04-21.md`.
 
 ## §1 Priority ordering for closure
 
@@ -298,6 +304,21 @@ two `9/9`-magnitude-passing permutations and then gets `sin δ_CP < 0` as a
 consequence. So the only remaining PMNS observational input on this branch is
 the angle triple itself, not the CP sign.
 
+**A-BCC target-surface sharpening (2026-04-21):** the remaining stricter DM
+branch-choice caveat is now smaller than it first appeared. The exact
+active-half-plane theorem already gives the native chamber
+`q_+ >= sqrt(8/3) - delta`, the basin-enumeration completeness theorem gives
+the exact target-surface chamber roots `{Basin 1, Basin 2, Basin X}`, and on
+that exact set the coefficient-free source cubic has signs
+`I_src(Basin 1) > 0`, `I_src(Basin 2) < 0`, `I_src(Basin X) < 0`. So once the
+PMNS angle triple is fixed, A-BCC is already downstream of native chamber
+geometry plus `I_src(H) > 0`; there is no longer a separate native A-BCC
+blocker beyond the angle triple itself. This does **not** contradict the
+global sign-blindness audit: outside the exact target chamber root set,
+`Basin N` and `Basin P` remain explicit counterexamples to any global
+equivalence between `I_src(H)` and `det(H)`. See
+`docs/DM_ABCC_EXACT_TARGET_SURFACE_SOURCE_CUBIC_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
+
 **Further same-branch reduction (2026-04-20):** the new fixed-`N_e`
 exact-source-manifold theorem closes an important existence loophole. The
 physical PMNS angle triple is already realized exactly on the charged-lepton-
@@ -352,10 +373,15 @@ the review surface. A-BCC is also now closed on the retained measurement
 surface via the sigma-chain, retained P3 Sylvester theorem, PMNS
 nonsingularity reduction, and Sylvester signature forcing. The recovered
 selector packet is now also closed on the review surface by the shifted
-same-law packet theorem. What remains outside the current closure grade is
-the stricter native source-chart / branch-choice derivation from `Cl(3)/Z^3`
-alone. See
-`docs/DM_SPLIT2_INTERVAL_CERTIFIED_DOMINANCE_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
+same-law packet theorem. A new exact target-surface sharpening then removes
+the last separate native A-BCC residue: the active-half-plane chamber is
+exact on the source side, the chamber `χ² = 0` roots are exactly
+`{Basin 1, Basin 2, Basin X}`, and the coefficient-free source cubic
+`I_src(H) > 0` selects Basin 1 uniquely on that exact target surface. So what
+remains outside the current closure grade is not a separate branch-choice law,
+but one complex native nontrivial-character current `J_chi`, equivalently the
+intrinsic `2`-real PMNS point-selection law. See
+`docs/DM_PMNS_NATIVE_CURRENT_LAST_MILE_REDUCTION_THEOREM_NOTE_2026-04-21.md`.
 
 ### Priority 4: Selected-line physical point
 

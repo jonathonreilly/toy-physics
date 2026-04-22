@@ -1,0 +1,234 @@
+# DM PMNS Native Current Last-Mile Reduction Theorem
+
+**Date:** 2026-04-21  
+**Lane:** strict/native DM last-mile sharpening  
+**Status:** exact reduction theorem; not a full positive closure  
+**Does not close:** a sole-axiom law producing the missing nonzero current  
+**Primary runner:**  
+`scripts/frontier_dm_pmns_native_current_last_mile_reduction_2026_04_21.py`
+
+---
+
+## 0. Executive summary
+
+The strict/native DM map is now sharper than:
+
+```text
+derive the PMNS angle triple somehow.
+```
+
+Two same-branch reductions now compose:
+
+1. the exact target-surface source-cubic theorem removes any separate
+   target-surface A-BCC residue;
+2. the native `C_3` character/current theorems identify the remaining PMNS
+   value problem with one exact complex current.
+
+The result is:
+
+> on the strict/native DM map, the remaining PMNS last mile is exactly a
+> sole-axiom law producing nonzero
+>
+> ```text
+> J_chi(A) = (h_0 + omega h_1 + omega^2 h_2) / 3
+> ```
+>
+> on the retained `hw=1` response family.
+
+Equivalently:
+
+- the old separate A-BCC branch-choice residue is gone once the exact PMNS
+  target surface is granted;
+- the old vague PMNS-angle residue is now the intrinsic `2`-real law carried
+  by
+  `Re J_chi` and `Im J_chi`.
+
+So the current exact remaining strict/native DM object is not "the PMNS angle
+triple" in an undifferentiated sense. It is one native complex nontrivial-
+character current.
+
+---
+
+## 1. Inputs
+
+### 1.1 Exact target-surface branch reduction
+
+The note
+
+`DM_ABCC_EXACT_TARGET_SURFACE_SOURCE_CUBIC_CLOSURE_THEOREM_NOTE_2026-04-21.md`
+
+proves:
+
+- the active-half-plane chamber is exact on the source side;
+- on the exact `chi^2 = 0` PMNS target surface, the chamber roots are exactly
+  `{Basin 1, Basin 2, Basin X}`;
+- on those roots, the coefficient-free source cubic `I_src(H) > 0` selects
+  `Basin 1` uniquely.
+
+So there is no longer a separate target-surface A-BCC residue once the exact
+PMNS target surface is fixed.
+
+### 1.2 Exact local `2`-real PMNS source manifold
+
+The note
+
+`DM_PMNS_NE_SEED_SURFACE_EXACT_SOURCE_MANIFOLD_THEOREM_NOTE_2026-04-20.md`
+
+proves that the physical PMNS target already lies on an exact local `2`-real
+regular source manifold on the fixed native `N_e` seed surface.
+
+So the remaining native burden is a `2`-real point-selection law.
+
+### 1.3 Native `C_3` current reduction
+
+The notes
+
+- `PMNS_C3_CHARACTER_HOLONOMY_CLOSURE_NOTE.md`
+- `PMNS_C3_CHARACTER_MODE_REDUCTION_NOTE.md`
+- `PMNS_C3_NONTRIVIAL_CURRENT_BOUNDARY_NOTE.md`
+
+prove:
+
+- the reduced graph-first PMNS cycle values admit an exact native
+  `C_3`-character holonomy readout;
+- on the reduced graph-first family
+
+  ```text
+  A_fwd(u,v,w) = (u + i v) E12 + w E23 + (u - i v) E31,
+  ```
+
+  the remaining nontrivial value datum is exactly one complex amplitude
+
+  ```text
+  chi = u + i v;
+  ```
+
+- the native nontrivial-character current satisfies
+
+  ```text
+  J_chi = chi.
+  ```
+
+So the reduced PMNS value problem is exactly `2` real dimensions, carried by
+one complex current.
+
+---
+
+## 2. The theorem
+
+> **Theorem (strict/native DM last mile reduces to one native complex PMNS
+> current).**
+>
+> Assume:
+>
+> 1. the exact target-surface source-cubic theorem;
+> 2. the exact local `2`-real PMNS source-manifold theorem;
+> 3. the native `C_3` character holonomy closure;
+> 4. the native `C_3` character-mode reduction;
+> 5. the native nontrivial-character current boundary theorem.
+>
+> Then:
+>
+> 1. no separate strict/native A-BCC branch-choice residue remains once the
+>    exact PMNS target surface is granted;
+> 2. the remaining strict/native PMNS value problem is exactly `2` real
+>    dimensional;
+> 3. that `2`-real datum is carried natively by one complex current
+>
+>    ```text
+>    J_chi(A) = (h_0 + omega h_1 + omega^2 h_2) / 3;
+>    ```
+>
+> 4. on the reduced graph-first family,
+>
+>    ```text
+>    J_chi = u + i v,
+>    ```
+>
+>    so `Re J_chi` and `Im J_chi` are exactly the remaining `2` real degrees of
+>    freedom;
+> 5. the current sole-axiom retained routes still set
+>
+>    ```text
+>    J_chi = 0.
+>    ```
+>
+> Therefore the remaining strict/native DM burden is exactly:
+>
+> ```text
+> derive a sole-axiom law producing nonzero J_chi
+> on the retained hw=1 response family.
+> ```
+
+### Proof sketch
+
+The first point is exactly the content of the target-surface source-cubic
+theorem: once the exact target surface is fixed, the chamber plus
+`I_src(H) > 0` select `Basin 1` uniquely.
+
+The second point is exactly the content of the exact source-manifold theorem:
+the physical PMNS target fiber is a local `2`-real manifold.
+
+The third and fourth points are exactly the content of the native
+`C_3` character-mode reduction and nontrivial-current boundary notes:
+the reduced PMNS data are already natively read by character holonomies,
+and the remaining nontrivial value datum is one complex current
+`J_chi = u + i v`.
+
+The fifth point is exactly the content of the nontrivial-current boundary on
+the current sole-axiom retained bank: the free route, the sole-axiom
+`hw=1` source/transfer route, and the retained scalar route all annihilate
+`J_chi`.
+
+So the exact remaining strict/native DM object is no longer a separate A-BCC
+law plus a vague PMNS angle-triple law. It is one complex current whose
+nonzero activation is still missing.
+
+QED.
+
+---
+
+## 3. Consequence for the open map
+
+Before this theorem, the strict/native DM burden could still be summarized too
+coarsely as:
+
+```text
+target-surface branch choice + PMNS angle triple.
+```
+
+After this theorem, the sharper exact statement is:
+
+```text
+no separate target-surface branch-choice residue remains;
+the remaining strict/native DM last mile is one complex native current J_chi.
+```
+
+This is equivalent to a `2`-real point-selection law, but it is now expressed
+in native current language rather than as a generic angle target.
+
+---
+
+## 4. What this does not close
+
+This note does **not** derive:
+
+- a sole-axiom law producing nonzero `J_chi`;
+- the Koide-side open bridges;
+- the broader full-neutrino pair `(J_chi, mu)` outside the flagship DM scope.
+
+It is a last-mile reduction theorem only.
+
+---
+
+## 5. Reproduction
+
+```bash
+PYTHONPATH=scripts python3 scripts/frontier_dm_pmns_native_current_last_mile_reduction_2026_04_21.py
+```
+
+Expected final line:
+
+```text
+SUMMARY: PASS=16 FAIL=0
+```

@@ -25,7 +25,7 @@ physical Brannen-phase bridge.
 |---|---|---|---|
 | **Koide κ** | Charged-lepton cone normalization `κ = 2` (equivalently `Q = 2/3`) | April 21 support package: Frobenius-isotype / AM-GM support + executable reviewer stress-test | physical/source-law bridge from retained framework physics to the block-total Frobenius extremal principle |
 | **Koide θ** | Brannen-Zenczykowski phase offset `δ = 2/9` | April 21 support package: ABSS fixed-point / topological robustness + executable reviewer stress-test | physical Brannen-phase bridge from the selected-line observable to the ambient APS invariant |
-| **DM A-BCC** | Physical neutrino-source basin selection (Basin 1) | Sylvester signature-forcing + σ-chain + DPLE `F_4` + chamber bound + upper-octant / source-cubic selector | PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)`; now sharpened to a point-selection law on an exact local `2`-real PMNS source manifold beyond the currently tested `Z_3` center law |
+| **DM A-BCC** | Physical neutrino-source basin selection (Basin 1) | Sylvester signature-forcing + σ-chain + DPLE `F_4` + chamber bound + upper-octant / source-cubic selector | PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)`; on the stricter/native map this is now sharpened further to one complex native nontrivial-character current `J_chi`, equivalently the intrinsic `2`-real PMNS point-selection law |
 | **Quark a_u** | Up-sector reduced amplitude `a_u = 0.7748865611` | Affine-physical-carrier JTS + one-dimensional 5-channel residue + RPSR NLO | Bimodule `B = Cl(3)/Z₃ ⊗ Cl_CKM(1⊕5)`, retained atoms `ρ, supp, δ_A1` (CKM atlas) |
 
 ---
@@ -210,6 +210,19 @@ composition `chamber ∩ F_4` still selects Basin 1 uniquely on the retained
 five-basin chart. This sharpens the strongest current native A-BCC route,
 but it still does not by itself derive the source chart axiom-natively.
 
+**2026-04-21 target-surface sharpening.** The separate strict/native A-BCC
+residue is now sharper than that. On the exact `chi^2 = 0` PMNS target
+surface, the active-half-plane theorem gives the native chamber exactly, the
+exact chamber roots are exactly `{Basin 1, Basin 2, Basin X}`, and the
+coefficient-free source cubic `I_src(H) = Im(H_12 H_23 H_31)` is positive on
+`Basin 1` and negative on `Basin 2` and `Basin X`. So once the exact PMNS
+target surface is granted, A-BCC is already downstream of the native chamber
+plus `I_src(H) > 0`; there is no longer a separate target-surface
+branch-choice residue beyond the PMNS last mile itself. This does **not**
+contradict the five-route audit globally: outside that exact chamber-root set,
+`I_src(H)` still does not determine `det(H)`. See
+`docs/DM_ABCC_EXACT_TARGET_SURFACE_SOURCE_CUBIC_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
+
 **Proof.** Uhlig 1982 sign-characteristic matrix-pencil classification backbone; verified in `scripts/frontier_dm_dple_theorem.py` (19 PASS, 0 FAIL) and `scripts/frontier_dm_abcc_chamber_dple_closure.py` (39 PASS, 0 FAIL).
 
 ### §3.3 Supporting — 5-route assumptions audit
@@ -220,10 +233,12 @@ but it still does not by itself derive the source chart axiom-natively.
 
 ### §3.4 Retained inputs
 
-Retained inputs are: the chamber bound `q_+ + δ ≥ √(8/3)` (now reproduced
-inline in `docs/DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md`) and the
-PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)`. The CP-sign / `σ_hier`
-half is no longer retained input on this branch: it is derived by the
+Retained inputs are: the PMNS angle triple
+`(sin² θ12, sin² θ13, sin² θ23)`. The chamber bound
+`q_+ + δ ≥ √(8/3)` is no longer retained input on this branch: it now has a
+reviewer-grade inline derivation in
+`docs/DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md`. The CP-sign /
+`σ_hier` half is also no longer retained input on this branch: it is derived by the
 active-chamber completeness theorem, the parity reduction, the upper-octant
 law, and the coefficient-free source-cubic selector. The new fixed-`N_e`
 exact-source-manifold theorem further sharpens the remaining angle-side gap:
@@ -249,8 +264,12 @@ projector-row intervals, and boxwise transport upper bounds
 surface: the retained-measurement integration theorem packages the
 already-landed sigma-chain, retained P3 Sylvester theorem, PMNS
 nonsingularity reduction, and Sylvester signature forcing into one explicit
-closure statement. The stricter axiom-native A-BCC target remains a boundary
-statement only, not a live review-surface blocker. See
+closure statement. The stricter/native map is now sharper too: once the exact
+PMNS target surface is granted, the separate A-BCC target-surface residue is
+already reduced away by the exact chamber-root theorem plus the coefficient-
+free source cubic. So the only remaining strict/native DM burden is the PMNS
+angle triple itself, not an additional branch-choice law on that same target
+surface. See
 `docs/DM_SPLIT2_INTERVAL_CERTIFIED_DOMINANCE_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
 The selector side is also slightly sharper than before: on the recovered bank,
 the exact intrinsic threshold-volume selector family now has a theorem-grade
@@ -303,9 +322,15 @@ positive windows `A_mu(H)=H+mu I`, uniquely minimizes at the preferred
 recovered lift `0` across the full audited shift family and a dense
 admissible stress range, and that lift is exactly the unique recovered point
 with `Im(K_Z3[1,2]) > 0`. So there is no remaining DM blocker on the review
-surface. What still remains outside the current closure grade is the stricter
-native source-chart / branch-choice derivation from `Cl(3)/Z^3` alone. See
-`docs/DM_SELECTOR_SHIFTED_RELATIVE_ACTION_RECOVERED_PACKET_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
+surface. On the stricter/native map, once the exact PMNS target surface is
+granted, the exact chamber plus `I_src(H) > 0` already select Basin 1
+uniquely on the exact chamber roots, so there is no separate target-surface
+branch-choice residue beyond the PMNS last mile itself. That last mile is now
+sharper than a generic angle-target statement: the native `C_3` character
+holonomy and current reductions identify the remaining strict/native datum
+with one complex nontrivial-character current `J_chi`, equivalently the
+intrinsic `2`-real PMNS point-selection law. See
+`docs/DM_PMNS_NATIVE_CURRENT_LAST_MILE_REDUCTION_THEOREM_NOTE_2026-04-21.md`.
 PNS is derived as a property of Basin 1, not axiomatized.
 
 ---
@@ -421,7 +446,9 @@ All runners pass with no hardcoded `True` PASS annotations. Every PASS is a nume
 | A-BCC retained-measurement closure | `frontier_dm_abcc_retained_measurement_closure_2026_04_21.py` | 15 | 0 |
 | A-BCC chamber ∩ DPLE | `frontier_dm_abcc_chamber_dple_closure.py` | 39 | 0 |
 | A-BCC corrected five-basin chamber ∩ DPLE | `frontier_dm_abcc_five_basin_chamber_dple_support_2026_04_21.py` | 24 | 0 |
+| A-BCC exact target-surface source-cubic closure | `frontier_dm_abcc_exact_target_surface_source_cubic_closure_2026_04_21.py` | 15 | 0 |
 | A-BCC 5-route audit | `frontier_dm_abcc_assumptions_audit.py` | 16 | 0 |
+| DM native current last-mile reduction | `frontier_dm_pmns_native_current_last_mile_reduction_2026_04_21.py` | 16 | 0 |
 | DPLE dim-parametric extremum | `frontier_dm_dple_theorem.py` | 19 | 0 |
 | Split-2 interval-certified dominance closure | `frontier_dm_split2_interval_certified_dominance_closure_2026_04_21.py` | 17 | 0 |
 | Selector relative-action recovered projection | `frontier_dm_selector_relative_action_recovered_projection_support_2026_04_21.py` | 12 | 0 |
@@ -450,7 +477,6 @@ observational or atlas-level inputs across the four Tier-1 gates.
 | Label | Input | Used in | Provenance |
 |---|---|---|---|
 | PMNS | PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)` | PMNS selector law on the retained-measurement physical branch | NuFit / pinned chamber target |
-| CHB | Chamber bound `q_+ + δ ≥ √(8/3)` | A-BCC | reviewer-grade inline derivation in `DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md` |
 | BIM | Bimodule `B = Cl(3)/Z₃ ⊗ Cl_CKM(1⊕5)` | a_u | `CL3_SM_EMBEDDING_THEOREM` + `CKM_ATLAS_AXIOM_CLOSURE_NOTE` (main) |
 | ATOM-ρ | `a_d = ρ = 1/√42` | a_u | CKM atlas |
 | ATOM-S | `supp = 6/7` | a_u | CKM atlas |
