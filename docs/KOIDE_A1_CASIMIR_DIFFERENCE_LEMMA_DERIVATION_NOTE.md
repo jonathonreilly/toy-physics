@@ -188,6 +188,14 @@ normalisation). Critically, the Koide A1 ratio is c-cancellative —
 A1 reduces to `(T(T+1)−Y²)/(T(T+1)+Y²) = 1/2`, which is independent
 of `c`.
 
+| O3.a | `frontier_koide_a1_casimir_difference_o3a_offdiag_enumeration.py` | 8 PASS — E-isotype channel = W± Casimir = T(T+1)−T_3²; reduces to T(T+1)−Y² for L/H |
+
+**O3.a observation.** The W3 and B exchanges are flavor-diagonal, so
+their Casimir contributions are pure A_1. Only W± (off-diagonal
+SU(2)_L) carries E-isotype content, with weight `C_W± = T(T+1)−T_3² = 1/2`.
+This equals `T(T+1)−Y²` exactly when `T_3² = Y²`, i.e. `(T,Y) = (1/2, ±1/2)` —
+the Yukawa-doublet assignment retained from Cl(3).
+
 **O2.a clarification.** The SUM `T(T+1) + Y² = 1` is *not* unique to
 the Yukawa-doublet participants — it also holds for `e_R` because
 `Q_{e_R}² = 1` (and the EM cross-check gives `C_γ = Q²`). What is
