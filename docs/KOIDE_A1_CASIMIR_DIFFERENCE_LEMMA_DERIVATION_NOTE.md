@@ -190,6 +190,13 @@ of `c`.
 
 | O3.a | `frontier_koide_a1_casimir_difference_o3a_offdiag_enumeration.py` | 8 PASS — E-isotype channel = W± Casimir = T(T+1)−T_3²; reduces to T(T+1)−Y² for L/H |
 | O3.b | `frontier_koide_a1_casimir_difference_o3b_same_loop.py` | 7 PASS — same K_loop on diagonal and off-diagonal channels (same Feynman topology) |
+| O3.c | `frontier_koide_a1_casimir_difference_o3c_same_c.py` | 9 PASS — same-c synthesis ⟹ Q = 2/3 on SM Yukawa doublet |
+
+**O3 closed end-to-end.** With P1 and P2 sharing a common loop-level
+constant c (justified by O3.b's same-Feynman-topology argument), the
+schema ratio `|z|²/a_0² = (T(T+1)−Y²)/(T(T+1)+Y²)` is c-independent.
+On the SM Yukawa-doublet assignment, this equals 1/2 ⟺ Koide A1
+⟺ Q = 2/3. PDG matches at the `1e-5` level.
 
 **O3.a observation.** The W3 and B exchanges are flavor-diagonal, so
 their Casimir contributions are pure A_1. Only W± (off-diagonal
