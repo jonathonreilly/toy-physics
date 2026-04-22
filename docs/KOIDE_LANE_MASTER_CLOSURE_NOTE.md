@@ -4,7 +4,7 @@
 from retained atlas + textbook mathematics, with honest documentation
 of what's derived, what's retained (possibly with observational
 pinning), and what's textbook.
-**End-to-end verification:** 175/175 PASS across 24 runners.
+**End-to-end verification:** 181/181 PASS across 25 runners.
 
 This note is the canonical-branch reviewer entry point. It surveys
 the closure chain, cross-references the verification runners, and —
@@ -200,10 +200,11 @@ Physical observables:
 | 22 | `frontier_koide_a1_a2_weyl_double_match.py` | 8/8 | **A1 DOUBLE Weyl-match: A_1 (|b|²/a²=1/2) AND A_2 (c²=2) simultaneously** |
 | 23 | `frontier_koide_a1_lie_theoretic_triple_match.py` | 10/10 | **A1 = |ω_{SU(2)_L, fund}|² — fundamental Lie-theoretic identification** |
 | 24 | `frontier_koide_a1_yukawa_casimir_identity.py` | 9/9 | **A1 = T(T+1) − Y² UNIQUE to Yukawa participants (L doublet AND Higgs)** |
+| 25 | `frontier_koide_a1_clifford_dimension_ratio.py` | 6/6 | **A1 = dim(spinor)/dim(Cl⁺(3)) — cleanest axiom-native expression** |
 
-**Total: 175/175 PASS** across 24 runners. Each runner independently
+**Total: 181/181 PASS** across 25 runners. Each runner independently
 verifiable with `python3 scripts/<name>.py`. Master regression:
-`python3 scripts/frontier_koide_lane_regression.py` (all 24 runners, 175/175).
+`python3 scripts/frontier_koide_lane_regression.py` (all 25 runners, 181/181).
 
 ## Derivation vs textbook vs retained — what depends on what
 
