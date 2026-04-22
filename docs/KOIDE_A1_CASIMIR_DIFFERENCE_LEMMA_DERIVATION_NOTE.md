@@ -210,6 +210,37 @@ On the SM Yukawa-doublet assignment, this equals 1/2 ⟺ Koide A1
 `KOIDE_A1_CASIMIR_DIFFERENCE_LEMMA_THEOREM_NOTE.md` for the
 package-facing reading and the no-go evasion summary.
 
+| MASTER | `frontier_koide_a1_casimir_difference_master_closure.py` | 17 runners, **152 / 152 PASS** end-to-end |
+
+## 8. Track summary
+
+The Casimir-Difference Lemma derivation track is closed at schema
+grade. Across 17 runners and 152 PASS / 0 FAIL:
+
+- **O1** (S_3 / C_3-irrep alignment of √m on hw=1) — closed in 3 sub-steps.
+- **O2** (sum-Casimir matches the trivial-character weight) — closed in 3 sub-steps.
+- **O3** (difference-Casimir matches the non-trivial-character weight, same constant) — closed in 3 sub-steps.
+- **X1–X7** (uniqueness sweep, perturbation, iff, Theorem 1 composition,
+  no-go evasion, Brannen corollary, existing-runner consistency) — all PASS.
+
+End-to-end claim: **under primitives (P1) and (P2) on the retained
+Cl(3)/Z³ surface, the Koide cone `Q = 2/3` closes from the retained
+inputs `T = 1/2` and `Y² = 1/4` alone.**
+
+The remaining derivation surface is:
+- a fully retained-grade derivation of (P1), (P2) from the lattice
+  action (this branch invokes them as one-loop/projector primitives);
+- the radian-quantum residual `P` for the Brannen-phase corollary.
+
+Both are flagged in `KOIDE_A1_CASIMIR_DIFFERENCE_LEMMA_THEOREM_NOTE.md`
+as the next-step targets.
+
+To reproduce the whole track:
+
+```
+python3 scripts/frontier_koide_a1_casimir_difference_master_closure.py
+```
+
 **Uniqueness sharpened.** The condition `3Y² = T(T+1)` admits no other
 rational `(T, Y)` with `T` half-integer ≥ 1/2 and `C_sum > 0`. The
 Cl(3) embedding's specific `(1/2, ±1/2)` Yukawa-doublet assignment is
