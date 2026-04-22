@@ -1,8 +1,9 @@
-# DM PMNS Graph-First Ordered-Chain Nonzero-Current Closure Theorem
+# DM PMNS Graph-First Ordered-Chain Nonzero-Current Activation Theorem
 
 **Date:** 2026-04-21  
-**Lane:** strict/native DM last-mile closure  
-**Status:** exact positive closure theorem on the retained `hw=1` response family  
+**Lane:** strict/native DM last-mile current activation  
+**Status:** exact positive current-activation theorem on the retained `hw=1`
+response family  
 **Primary runner:**  
 `scripts/frontier_dm_pmns_graph_first_ordered_chain_nonzero_current_closure_2026_04_21.py`
 
@@ -10,14 +11,15 @@
 
 ## 0. Executive summary
 
-The strict/native DM map had already been reduced to one final explicit task:
+The strict/native DM map had already been reduced to one final explicit
+constructive target:
 
 ```text
 derive a sole-axiom law producing nonzero J_chi
 on the retained hw=1 response family.
 ```
 
-That task is now closed positively.
+That target is now met constructively by one same-branch sole-axiom law.
 
 The key observation is that the branch already contains all of the structural
 ingredients needed to define one canonical ordered local law:
@@ -61,7 +63,8 @@ The current survives exactly after passage to the retained `hw=1` response
 family, and the same active law sits on a one-sided minimal PMNS class with a
 canonical monomial passive companion.
 
-So the final strict/native DM last mile is no longer open on the branch map.
+So the branch now carries one explicit canonical nonzero-current activation law
+on the retained `hw=1` response family.
 
 ---
 
@@ -211,8 +214,9 @@ This law uses no PMNS target values. It is built entirely from:
 > J_chi(A_ord) = 1 != 0.
 > ```
 >
-> Therefore the final strict/native DM burden identified by the native
-> last-mile reduction theorem is discharged.
+> Therefore the reduced sole-axiom current-activation target identified by the
+> native last-mile reduction theorem is met constructively on the retained
+> `hw=1` response family.
 
 ### Proof
 
@@ -242,21 +246,22 @@ J_chi = 1.
 So the law is not only an abstract block identity; it survives on the retained
 response family itself.
 
-Finally, the native last-mile reduction theorem stated that the only remaining
-strict/native DM burden was exactly a sole-axiom law producing nonzero `J_chi`
-on that response family. `A_ord` supplies exactly that law. Therefore the
-strict/native DM last mile is closed. □
+Finally, the native last-mile reduction theorem stated that the remaining
+strict/native constructive target was a sole-axiom law producing nonzero
+`J_chi` on that response family. `A_ord` supplies exactly such a law. This
+lands a positive native current-activation theorem on the retained `hw=1`
+response family. □
 
 ---
 
 ## 4. Consequences
 
-### 4.1 What is now closed
+### 4.1 What is now landed exactly
 
-- the strict/native DM last mile
 - the production of nonzero native nontrivial-character current on the retained
   `hw=1` response family
-- the final native PMNS point-selection residue as carried by `J_chi`
+- one canonical sole-axiom ordered-chain law with `J_chi = 1`
+- one explicit positive candidate for the native PMNS current law
 
 ### 4.2 What this uses
 
@@ -271,9 +276,12 @@ It does **not** import PMNS target values or fit data.
 
 ### 4.3 What remains outside this lane
 
-This theorem closes the DM flagship lane on the stricter/native map. It does
-not address the separate charged-lepton physical bridges or the overall lepton
-scale lane.
+This theorem does **not** by itself prove that the ordered-chain law is the
+physical PMNS last-mile law, rather than one exact sole-axiom nonzero-current
+activation route. So the stricter/native DM map is sharper, but it is not yet
+fully identified with the physical PMNS point-selection law by this theorem
+alone. It also does not address the separate charged-lepton physical bridges or
+the overall lepton scale lane.
 
 ---
 

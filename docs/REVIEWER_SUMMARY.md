@@ -174,9 +174,10 @@ Current quantitative statuses:
   remains outside the current closure grade is not a separate target-surface
   branch-choice law. The native last mile had already been reduced to one
   complex native nontrivial-character current `J_chi`, equivalently the
-  intrinsic `2`-real PMNS point-selection law; the new graph-first ordered-chain
-  theorem closes that remaining native target exactly with
-  `A_ord = diag(1,2,3) + (E12 + E23 + E31)` and `J_chi = 1`;
+  intrinsic `2`-real PMNS point-selection law; the new graph-first
+  ordered-chain theorem now provides one explicit sole-axiom nonzero-current
+  law on that target with `A_ord = diag(1,2,3) + (E12 + E23 + E31)` and
+  `J_chi = 1`, but physical identification of that law remains separate;
   `σ_hier = (2, 1, 0)` is fixed observationally at the pinned chamber point,
   but broader chamber-wide / all-basin uniqueness is still out of scope
 - promoted CKM atlas/axiom package on the canonical tensor/projector surface, with older Cabibbo / NNI / partial Jarlskog notes retained only as route history
@@ -203,22 +204,22 @@ Current quantitative statuses:
 
 2. DM flagship closure package
 
-   This lane is no longer open on either the review surface or the
-   stricter/native map. On the review surface, A-BCC closes by the retained
+   On the review surface, this lane is no longer open. A-BCC closes by the retained
    measurement integration theorem, the split-2 carrier-side residue closes by
    interval certification on the two explicit upper-face boxes, and the
    recovered selector packet closes by the shifted same-law theorem on the
    common positive windows `A_mu(H)=H+mu I`. On the stricter/native map, the
    exact target-surface chamber-root theorem removes the separate native A-BCC
-   residue, and the new graph-first ordered-chain theorem closes the remaining
-   current-activation target exactly:
+   residue, and the new graph-first ordered-chain theorem supplies one explicit
+   same-branch current-activation law:
 
    ```text
    A_ord = diag(1,2,3) + (E12 + E23 + E31),
    J_chi(A_ord) = 1.
    ```
 
-   So the native PMNS point-selection residue is now closed on the branch map.
+   What remains open there is whether that ordered-chain law is the physical
+   PMNS last-mile law, rather than one exact nonzero-current route.
    The reviewer-facing three-identity system remains in the package as support
    only: it is no longer a blocker, and its product/determinant identities and
    uniqueness statement are still support-grade rather than theorem-grade.

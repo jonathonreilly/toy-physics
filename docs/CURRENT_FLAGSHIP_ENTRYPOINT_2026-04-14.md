@@ -101,9 +101,10 @@ packaging.
   surface is granted the native source-side chamber plus the coefficient-free
   source cubic already select Basin 1 uniquely on `{Basin 1, Basin 2,
   Basin X}`, and a new graph-first ordered-chain current-activation theorem
-  closing the last strict/native residue with
+  supplying one explicit sole-axiom nonzero-current law with
   `A_ord = diag(1,2,3) + (E12 + E23 + E31)` and `J_chi = 1`. So the DM lane
-  is now closed on both the current package grade and the stricter/native map.
+  is closed on the current package grade, while the stricter/native map now
+  carries one remaining physical-identification question about that law.
   The reviewer-facing three-identity proposal is retained as support only: the
   product and determinant laws are not yet derived, and the present uniqueness
   evidence is numerical rather than theorem-grade
@@ -165,10 +166,11 @@ packaging.
 
 1. Charged-lepton Koide bridge package
 
-The DM flagship lane is no longer a live gate on this branch. It is closed on
-the current package grade and on the stricter/native map by the April 21 DM
-theorem stack, ending with the graph-first ordered-chain current-activation
-theorem.
+On the current package grade, the DM flagship lane is no longer a live gate on
+this branch. On the stricter/native map, the remaining question is now much
+sharper: whether the graph-first ordered-chain current-activation law is the
+physical PMNS last-mile law, rather than merely one exact same-branch
+nonzero-current route.
 
 ## Where The Package Lives
 

@@ -2,10 +2,10 @@
 
 **Date:** 2026-04-21
 **Lane:** strict/native DM last-mile sharpening
-**Status:** exact reduction theorem, now positively discharged by the graph-first
-ordered-chain nonzero-current closure theorem
-**Positive closeout:**
-`docs/DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_CLOSURE_THEOREM_NOTE_2026-04-21.md`
+**Status:** exact reduction theorem; one explicit same-branch current-activation
+theorem is now available
+**Positive activation theorem:**
+`docs/DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md`
 **Primary runner:**
 `scripts/frontier_dm_pmns_native_current_last_mile_reduction_2026_04_21.py`
 
@@ -47,8 +47,9 @@ Equivalently:
 
 So the current exact strict/native DM object is not "the PMNS angle triple" in
 an undifferentiated sense. It reduces to one native complex
-nontrivial-character current, and that reduced target is now closed
-positively by the graph-first ordered-chain theorem.
+nontrivial-character current. The graph-first ordered-chain theorem now lands
+one explicit sole-axiom nonzero-current law on that reduced target, but the
+physical identification of that law remains separate.
 
 ---
 
@@ -163,8 +164,8 @@ one complex current.
 > on the retained hw=1 response family.
 > ```
 >
-> This target is now satisfied by the graph-first ordered-chain current
-> activation theorem.
+> A positive same-branch current-activation theorem now supplies one explicit
+> sole-axiom nonzero-current law on that reduced target.
 
 ### Proof sketch
 
@@ -211,7 +212,10 @@ the remaining strict/native DM last mile is one complex native current J_chi.
 ```
 
 This is equivalent to a `2`-real point-selection law, but it is now expressed
-in native current language rather than as a generic angle target.
+in native current language rather than as a generic angle target. The
+graph-first ordered-chain theorem gives one explicit same-branch activation of
+that current, without by itself proving that the ordered-chain law is the
+physical PMNS last-mile law.
 
 ---
 

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-DM PMNS graph-first ordered-chain nonzero-current closure theorem.
+DM PMNS graph-first ordered-chain nonzero-current activation theorem.
 
 Question:
-  Can the remaining strict/native DM last mile be closed by a sole-axiom law
-  on the retained hw=1 response family itself?
+  Can one derive an explicit sole-axiom nonzero-current law on the retained
+  hw=1 response family itself?
 
 Answer:
   Yes.
@@ -34,8 +34,8 @@ Answer:
 
   and that current survives exactly on the retained hw=1 response family.
 
-  By the strict/native last-mile reduction theorem, this closes the remaining
-  native DM burden.
+  By the strict/native last-mile reduction theorem, this meets the reduced
+  constructive current-activation target on that response family.
 """
 
 from __future__ import annotations
@@ -230,9 +230,9 @@ def part4_the_nonzero_current_survives_exactly_on_the_response_family(a_ord: np.
     )
 
 
-def part5_strict_native_closure_consequence() -> None:
+def part5_reduction_consequence() -> None:
     print("\n" + "=" * 88)
-    print("PART 5: STRICT/NATIVE CLOSURE CONSEQUENCE")
+    print("PART 5: REDUCTION CONSEQUENCE")
     print("=" * 88)
 
     reduction_note = read(
@@ -242,14 +242,16 @@ def part5_strict_native_closure_consequence() -> None:
         "The prior last-mile reduction note records nonzero J_chi production as the exact remaining strict/native burden",
         "derive a sole-axiom law producing nonzero J_chi" in reduction_note,
     )
+    j = nontrivial_character_current(ordered_chain_active_law())
     check(
-        "The ordered-chain theorem supplies exactly that missing sole-axiom law",
-        True,
-        "graph-first ordered chain -> A_ord -> J_chi = 1",
+        "The ordered-chain theorem supplies one explicit sole-axiom nonzero-current law",
+        abs(j - 1.0) < 1e-12,
+        f"J_chi(A_ord)={j:.12f}",
     )
     check(
-        "So the strict/native DM last mile is closed on the branch map",
-        True,
+        "So the reduced constructive target is met on the retained hw=1 response family",
+        abs(j) > 1e-12 and "derive a sole-axiom law producing nonzero J_chi" in reduction_note,
+        "reduction target + exact current activation",
     )
 
 
@@ -276,31 +278,31 @@ def part6_circularity_guard() -> None:
 
 def main() -> int:
     print("=" * 88)
-    print("DM PMNS GRAPH-FIRST ORDERED-CHAIN NONZERO-CURRENT CLOSURE")
+    print("DM PMNS GRAPH-FIRST ORDERED-CHAIN NONZERO-CURRENT ACTIVATION")
     print("=" * 88)
     print()
     print("Question:")
-    print("  Can the remaining strict/native DM last mile be closed by a")
-    print("  sole-axiom law on the retained hw=1 response family?")
+    print("  Can one derive an explicit sole-axiom nonzero-current law on the")
+    print("  retained hw=1 response family?")
 
     part1_graph_first_and_chain_algebra_fix_the_ordered_carrier()
     part2_the_unique_normalized_chain_grading_is_diag123()
     a_ord = part3_the_ordered_chain_law_activates_the_native_current()
     part4_the_nonzero_current_survives_exactly_on_the_response_family(a_ord)
-    part5_strict_native_closure_consequence()
+    part5_reduction_consequence()
     part6_circularity_guard()
 
     print("\n" + "=" * 88)
     print("RESULT")
     print("=" * 88)
-    print("  Exact strict/native DM closure theorem on the retained hw=1 response family:")
+    print("  Exact same-branch current-activation theorem on the retained hw=1 response family:")
     print("    - graph-first selection and cycle-frame support fix the ordered carrier")
     print("    - the adjacent chain has a unique normalized grading N = diag(1,2,3)")
     print("    - the canonical ordered-chain law A_ord = N + C produces J_chi = 1")
     print("    - that current survives exactly on the retained response family")
     print()
-    print("  Therefore the sole-axiom nonzero-current target is achieved and the")
-    print("  strict/native DM last mile is closed on the branch map.")
+    print("  Therefore one explicit sole-axiom nonzero-current law is derived on")
+    print("  the retained hw=1 response family, meeting the reduced constructive target.")
     print()
     print(f"SUMMARY: PASS={PASS_COUNT} FAIL={FAIL_COUNT}")
     return 0 if FAIL_COUNT == 0 else 1

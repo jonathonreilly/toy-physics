@@ -1,8 +1,9 @@
 # PMNS `C3` Nontrivial-Character Current Boundary
 
 **Status:** historical pre-ordered-chain boundary on the old sole-axiom bank;
-the positive target identified here is now discharged by
-`docs/DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
+the positive target identified here now has one explicit same-branch
+current-activation theorem:
+`docs/DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md`.
 
 ## Question
 Once the retained PMNS lane has been reduced to the native `C3`-character
@@ -62,5 +63,4 @@ fully explicit:
 > derive a sole-axiom law producing nonzero `J_chi` on the retained `hw=1`
 > response family.
 
-That target is now met by the graph-first ordered-chain current-activation
-theorem cited above.
+That target now has one explicit same-branch activation theorem cited above.
