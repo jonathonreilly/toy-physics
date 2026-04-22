@@ -49,7 +49,7 @@ The package has five layers:
    exact lattice-scale Yukawa/gauge Ward theorem)
 3. charged-lepton Koide review/support package with two explicit bridge residues
 4. retained YT/top transport lane plus a derived Higgs/vacuum lane with a retention-decomposed budget
-5. bounded prediction surface plus two remaining live scientific gates and frozen-out route history
+5. bounded prediction surface plus one remaining live scientific gate, one closed DM flagship lane, and frozen-out route history
 
 The public manuscript surface is arXiv-first. Journal-specific packaging is
 private and is not kept here as a competing public draft.
