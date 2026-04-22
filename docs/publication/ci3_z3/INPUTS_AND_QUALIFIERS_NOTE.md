@@ -134,7 +134,7 @@ theorem core.
 
 The one live flagship gate is:
 
-- DM flagship gate
+- charged-lepton Koide review/support package
 
 That is the current missing flagship prediction bridge. It does not erase the
 rest of the retained or bounded prediction surface.

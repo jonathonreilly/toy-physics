@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-18
 **Status:** exact structural theorem on the charged-lepton Koide promotion
-gap; reviewer-facing support theorem on the bounded charged-lepton package
+gap;  support theorem on the bounded charged-lepton package
 **Target:** express the open scalar-selector conditional of the charged-lepton
 Koide lane as a structurally derived one-scalar gap rather than a diffuse
 miscellaneous-axiom search space

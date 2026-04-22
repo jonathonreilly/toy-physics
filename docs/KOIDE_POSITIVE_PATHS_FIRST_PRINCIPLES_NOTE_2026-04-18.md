@@ -77,6 +77,12 @@ Since that draft, one more exact reduction has closed:
     bank plus one real direction
     `K_Z3^sel(m) = K_frozen + m T_m^(K)`
     [KOIDE_SELECTED_SLICE_FROZEN_BANK_DECOMPOSITION_NOTE_2026-04-18.md](./KOIDE_SELECTED_SLICE_FROZEN_BANK_DECOMPOSITION_NOTE_2026-04-18.md).
+13. the natural weighted extension of the old `Z_3` character-source
+    cross-check is now also closed negatively: arbitrary central left/right
+    class-function weights still keep the source kernel diagonal in the
+    canonical source basis, so unique tops are basis axes off the Koide cone
+    and degenerate tops still do not force a unique ray
+    [KOIDE_WEIGHTED_CHARACTER_SOURCE_AXIS_THEOREM_NOTE_2026-04-20.md](./KOIDE_WEIGHTED_CHARACTER_SOURCE_AXIS_THEOREM_NOTE_2026-04-20.md).
 
 ## Top-line attack order
 
@@ -114,7 +120,10 @@ for the exact retained cyclic basis `B0,B1,B2`.
 machinery. This is the cleanest direct axiom-only route.
 
 **Current gap:** derive the actual local source law `dW(B_i)` on this cyclic
-bundle from the microscopic `D`.
+bundle from the microscopic `D`, with genuine off-axis circulant Fourier
+content. The new weighted-character-source theorem closes the nearby loophole
+that this might come from merely reweighting the canonical `Z_3` character
+sources: that whole class stays diagonal and cannot force Koide.
 
 ### 2. Exact matrix-unit source law, then cyclic projection
 

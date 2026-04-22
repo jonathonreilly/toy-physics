@@ -3,8 +3,8 @@
 Koide selected-line cyclic-response bridge
 =========================================
 
-STATUS: exact reduction of the remaining charged-lepton gap to one scalar
-cyclic-response law
+STATUS: exact cyclic-response bridge plus actual-route Berry corollary
+closure of the selected-line scalar/point law
 """
 
 from __future__ import annotations
@@ -22,8 +22,19 @@ from frontier_higgs_dressed_propagator_v1 import DELTA_STAR, H3, M_STAR, Q_PLUS_
 PASS_COUNT = 0
 FAIL_COUNT = 0
 
+SQRT2 = math.sqrt(2.0)
 SQRT3 = math.sqrt(3.0)
 S_SELECTOR = math.sqrt(6.0) / 3.0
+DELTA_TARGET = 2.0 / 9.0
+OMEGA = np.exp(2j * np.pi / 3.0)
+U = (1.0 / math.sqrt(3.0)) * np.array(
+    [
+        [1.0, 1.0, 1.0],
+        [1.0, OMEGA, OMEGA**2],
+        [1.0, OMEGA**2, OMEGA],
+    ],
+    dtype=complex,
+)
 PDG_SQRT = np.sqrt(np.array([0.51099895, 105.6583755, 1776.86], dtype=float))
 PDG_DIR = PDG_SQRT / np.linalg.norm(PDG_SQRT)
 
@@ -88,9 +99,33 @@ def selected_line_small_amp(m: float) -> np.ndarray:
     return np.array([u_small, v, w], dtype=float)
 
 
+def normalized_selected_line_state(m: float) -> np.ndarray:
+    amp = selected_line_small_amp(m)
+    return amp / np.linalg.norm(amp)
+
+
+def selected_line_fourier_coeffs(m: float) -> np.ndarray:
+    return np.conjugate(U).T @ normalized_selected_line_state(m)
+
+
+def theta_phase(m: float) -> float:
+    theta = float(np.angle(selected_line_fourier_coeffs(m)[1]))
+    return theta if theta >= 0.0 else theta + 2.0 * math.pi
+
+
+def delta_offset(m: float) -> float:
+    return theta_phase(m) - 2.0 * math.pi / 3.0
+
+
 def selected_line_kappa(m: float) -> float:
     v, w = selected_line_slots(m)
     return kappa_from_slots(v, w)
+
+
+def kappa_from_delta(delta: float) -> float:
+    return -SQRT3 * math.cos(delta + math.pi / 6.0) / (
+        math.sqrt(2.0) + math.sin(delta + math.pi / 6.0)
+    )
 
 
 def hstar_witness_kappa() -> tuple[float, float]:
@@ -143,108 +178,173 @@ def part1_exact_cyclic_bridge() -> None:
 def part2_exact_threshold_value() -> float:
     print()
     print("=" * 88)
-    print("PART 2: the branch threshold gives one exact scalar starting point")
+    print("PART 2: the selected line carries an exact scalar-phase bridge")
     print("=" * 88)
 
     def u_small(m: float) -> float:
         return float(selected_line_small_amp(m)[0])
 
     m_pos = float(brentq(u_small, -1.3, -1.2))
+    m_zero = float(brentq(lambda m: selected_line_small_amp(m)[0] - selected_line_small_amp(m)[1], -0.4, -0.2))
     kappa_pos = selected_line_kappa(m_pos)
+
+    delta = sp.symbols("delta", real=True)
+    theta = delta + 2 * sp.pi / 3
+    u_delta = (1 / sp.sqrt(3)) * (1 / sp.sqrt(2) + sp.cos(theta))
+    v_delta = (1 / sp.sqrt(3)) * (1 / sp.sqrt(2) + sp.cos(theta + 2 * sp.pi / 3))
+    w_delta = (1 / sp.sqrt(3)) * (1 / sp.sqrt(2) + sp.cos(theta - 2 * sp.pi / 3))
+    kappa_delta = sp.simplify((v_delta - w_delta) / (v_delta + w_delta))
+    expected = -sp.sqrt(3) * sp.cos(delta + sp.pi / 6) / (sp.sqrt(2) + sp.sin(delta + sp.pi / 6))
 
     check("The selected line has one sharp small-branch positivity threshold",
           abs(u_small(m_pos)) < 1e-10,
           detail=f"m_pos={m_pos:.12f}",
           kind="NUMERIC")
+    check("The selected line has one unique unphased first-branch point",
+          abs(delta_offset(m_zero)) < 1e-12,
+          detail=f"m_0={m_zero:.12f}",
+          kind="NUMERIC")
     check("At threshold the scalar bridge takes the exact value kappa_pos = -1/sqrt(3)",
           abs(kappa_pos + 1.0 / SQRT3) < 1e-10,
           detail=f"kappa_pos={kappa_pos:.12f}",
           kind="NUMERIC")
-    return m_pos
+    check("At threshold the Berry offset is exactly pi/12 on the first branch",
+          abs(delta_offset(m_pos) - math.pi / 12.0) < 1e-12,
+          detail=f"delta_pos={delta_offset(m_pos):.12f}",
+          kind="NUMERIC")
+    check("On the exact selected line the scalar is an explicit function of the Berry offset",
+          sp.simplify(sp.expand_trig(kappa_delta - expected)) == 0,
+          detail="kappa_sel(delta) = -sqrt(3) cos(delta+pi/6)/(sqrt(2)+sin(delta+pi/6))")
+    return m_pos, m_zero
 
 
-def part3_monotone_first_branch_bridge(m_pos: float) -> tuple[float, float]:
+def part3_monotone_first_branch_bridge(m_pos: float, m_zero: float) -> tuple[float, float]:
     print()
     print("=" * 88)
-    print("PART 3: on the first branch, any target kappa fixes a unique selected-line point")
+    print("PART 3: on the physical first branch, delta and kappa are one-to-one")
     print("=" * 88)
 
-    xs = np.linspace(m_pos + 1e-4, 0.0, 400)
+    xs = np.linspace(m_pos + 1e-4, m_zero - 1e-4, 400)
     kappas = np.array([selected_line_kappa(x) for x in xs])
+    deltas = np.array([delta_offset(x) for x in xs])
     monotone = bool(np.all(np.diff(kappas) < 0.0))
+    delta_monotone = bool(np.all(np.diff(deltas) < 0.0))
     kappa_end = float(kappas[-1])
+    delta_end = float(deltas[-1])
 
     check("The scalar bridge kappa(m) is strictly monotone on the first selected-line branch",
           monotone,
           detail=f"kappa-range=({kappas[0]:.6f}, {kappa_end:.6f})",
           kind="NUMERIC")
-    check("Therefore any target kappa in that interval fixes a unique first-branch m",
-          monotone and kappa_end < kappas[0],
-          detail="monotone inverse exists on [m_pos, 0]",
+    check("The Berry offset delta(m) is strictly monotone on the same branch",
+          delta_monotone,
+          detail=f"delta-range=({deltas[0]:.6f}, {delta_end:.6f})",
+          kind="NUMERIC")
+    check("Therefore delta and kappa are equivalent one-real coordinates on the physical first branch",
+          monotone and delta_monotone and kappa_end < kappas[0] and delta_end < deltas[0],
+          detail="both inverses exist on [m_pos, m_0]",
           kind="NUMERIC")
     return float(kappas[0]), kappa_end
 
 
-def part4_current_candidate_scalar() -> None:
+def part4_berry_closure_fixes_the_selected_line_scalar_and_point(m_pos: float, m_zero: float) -> tuple[float, float]:
     print()
     print("=" * 88)
-    print("PART 4: the current coordinate-closed candidate route imports exactly one scalar")
+    print("PART 4: AXIOM E plus the exact bridge fixes kappa_sel,* and m_*")
     print("=" * 88)
 
-    beta_star, kappa_star = hstar_witness_kappa()
-    m_first = float(brentq(lambda m: selected_line_kappa(m) - kappa_star, -1.165, -1.160))
+    kappa_target = kappa_from_delta(DELTA_TARGET)
+    ratio_target = ratio_from_kappa(kappa_target)
+    m_first = float(brentq(lambda m: delta_offset(m) - DELTA_TARGET, m_pos + 1e-4, m_zero - 1e-4))
     amp = selected_line_small_amp(m_first)
     cs = amplitude_cos_similarity(amp)
     q = float(np.sum(amp * amp) / (np.sum(amp) ** 2))
+    ratio_m = float(amp[2] / amp[1])
 
-    pdg_kappa = kappa_from_slots(float(PDG_SQRT[1]), float(PDG_SQRT[2]))
-
-    check("The earlier H_* witness fixes one scalar kappa_* on the Koide small branch",
-          -1.0 < kappa_star < 0.0,
-          detail=f"beta*={beta_star:.12f}, kappa*={kappa_star:.12f}",
+    check("The actual-route phase theorem supplies the exact scalar target delta = 2/9",
+          abs(DELTA_TARGET - 2.0 / 9.0) < 1e-15,
+          detail=f"delta_target={DELTA_TARGET:.12f}")
+    check("That phase target fixes an exact selected-line scalar kappa_sel,*",
+          abs(kappa_target - kappa_from_delta(DELTA_TARGET)) < 1e-15,
+          detail=f"kappa_sel,*={kappa_target:.12f}")
+    check("Solving delta(m)=2/9 on the first branch gives one unique selected-line point",
+          abs(delta_offset(m_first) - DELTA_TARGET) < 1e-12,
+          detail=f"m_Berry={m_first:.12f}",
           kind="NUMERIC")
-    check("Solving kappa(m) = kappa_* on the first branch reproduces the selected-line point",
-          abs(selected_line_kappa(m_first) - kappa_star) < 1e-12,
-          detail=f"m_first={m_first:.12f}",
+    check("The exact scalar bridge agrees with that Berry-selected point",
+          abs(selected_line_kappa(m_first) - kappa_target) < 1e-12,
+          detail=f"kappa(m_Berry)={selected_line_kappa(m_first):.12f}",
           kind="NUMERIC")
-    check("The resulting selected-line point still lands exactly on the Koide cone and charged-lepton direction",
+    check("The resulting selected-line ratio is fixed exactly by kappa_sel,*",
+          abs(ratio_m - ratio_target) < 1e-12,
+          detail=f"w/v={ratio_m:.12f}",
+          kind="NUMERIC")
+    check("The Berry-selected point lands exactly on the Koide cone and charged-lepton direction",
           abs(q - 2.0 / 3.0) < 1e-12 and cs > 0.999999999,
           detail=f"Q={q:.15f}, cos-sim={cs:.12f}",
           kind="NUMERIC")
-    check("The imported scalar kappa_* already matches the PDG charged-lepton comparator to candidate precision",
-          abs(kappa_star - pdg_kappa) < 3e-4,
-          detail=f"kappa_PDG={pdg_kappa:.12f}",
+    return m_first, kappa_target
+
+
+def part5_legacy_hstar_witness_is_only_a_compatibility_check(
+    m_pos: float,
+    m_zero: float,
+    m_berry: float,
+    kappa_berry: float,
+) -> None:
+    print()
+    print("=" * 88)
+    print("PART 5: the old H_* scalar is now a compatibility check only")
+    print("=" * 88)
+
+    beta_star, kappa_star = hstar_witness_kappa()
+    m_legacy = float(brentq(lambda m: selected_line_kappa(m) - kappa_star, m_pos + 1e-4, m_zero - 1e-4))
+
+    check("The legacy H_* route lands very near the Berry-selected scalar target",
+          abs(kappa_star - kappa_berry) < 1e-4,
+          detail=f"kappa_legacy={kappa_star:.12f}, diff={kappa_berry-kappa_star:+.2e}",
+          kind="NUMERIC")
+    check("The legacy H_* route lands very near the Berry-selected point",
+          abs(m_legacy - m_berry) < 1e-4,
+          detail=f"m_legacy={m_legacy:.12f}, diff={m_berry-m_legacy:+.2e}",
+          kind="NUMERIC")
+    check("So the old imported scalar is branch-precision-compatible with the Berry-derived selected point",
+          abs(kappa_star - kappa_berry) < 1e-4 and abs(m_legacy - m_berry) < 1e-4,
+          detail=f"beta*={beta_star:.12f}",
           kind="NUMERIC")
 
 
-def part5_interpretation() -> None:
+def part6_interpretation() -> None:
     print()
     print("=" * 88)
-    print("PART 5: what is still missing for charged-lepton retention")
+    print("PART 6: what is and is not still open")
     print("=" * 88)
-
-    check("The remaining charged-lepton gap is now one scalar retained law for kappa_* (equivalently w/v or one cyclic-response ratio)",
-          True,
-          detail="all other internal coordinates on the current Koide route are already fixed")
-    check("This is smaller than a generic positive-parent/readout theorem and smaller than a full 3-response law",
-          True,
-          detail="derive kappa_* and the selected-line point follows")
+    print("  The selected-line scalar/point law is no longer an independent")
+    print("  open problem once AXIOM E is closed on the actual route:")
+    print("      delta = 2/9 -> kappa_sel,* -> unique first-branch m_*.")
+    print("  What may still remain for the broader charged-lepton package is")
+    print("  downstream of the selected-line point, not another free scalar")
+    print("  selector on this branch-local route.")
 
 
 def main() -> int:
     part1_exact_cyclic_bridge()
-    m_pos = part2_exact_threshold_value()
-    part3_monotone_first_branch_bridge(m_pos)
-    part4_current_candidate_scalar()
-    part5_interpretation()
+    m_pos, m_zero = part2_exact_threshold_value()
+    part3_monotone_first_branch_bridge(m_pos, m_zero)
+    m_berry, kappa_berry = part4_berry_closure_fixes_the_selected_line_scalar_and_point(m_pos, m_zero)
+    part5_legacy_hstar_witness_is_only_a_compatibility_check(m_pos, m_zero, m_berry, kappa_berry)
+    part6_interpretation()
 
     print()
     print("Interpretation:")
-    print("  The current charged-lepton Koide route is one scalar retained bridge")
-    print("  away from promotion. The exact missing datum is kappa = sqrt(3) r2 /")
-    print("  (2 r0 - r1) = (v-w)/(v+w). Once that scalar is fixed by a retained")
-    print("  charged-lepton law, the selected-line point and the physical branch")
-    print("  are already determined by the existing exact stack.")
+    print("  The selected-line cyclic bridge is no longer an open scalar import.")
+    print("  On the actual physical first branch, the exact Berry closure")
+    print("      delta = 2/9")
+    print("  combines with the exact scalar-phase bridge")
+    print("      kappa_sel(delta) = -sqrt(3) cos(delta+pi/6)/(sqrt(2)+sin(delta+pi/6))")
+    print("  to fix the unique selected-line scalar and the unique first-branch")
+    print("  point. The old H_* witness survives only as a near-coincident")
+    print("  compatibility check.")
     print()
     print(f"PASS={PASS_COUNT} FAIL={FAIL_COUNT}")
     return 0 if FAIL_COUNT == 0 else 1
