@@ -180,6 +180,13 @@ diagonal mass matrix into its trace (A_1) and traceless (E) pieces.
 
 | O2.a | `frontier_koide_a1_casimir_difference_o2a_sum_enumeration.py` | 15 PASS — gauge-by-gauge SUM enumeration; SUM=1 shared by {L, H, e_R} |
 | O2.b | `frontier_koide_a1_casimir_difference_o2b_trivial_weight.py` | 6 PASS — trivial-character weight inherits SUM via generation-blind y_τ chain |
+| O2.c | `frontier_koide_a1_casimir_difference_o2c_constant_pin.py` | 6 PASS — c is fixed by retained inputs; ratio is c-cancellative |
+
+**O2 closed.** The proportionality constant `c` in `a_0^2 = c · SUM · v_EW^2`
+is fixed by retained inputs alone (`v_EW`, `α_LM`, `I_loop`, loop
+normalisation). Critically, the Koide A1 ratio is c-cancellative —
+A1 reduces to `(T(T+1)−Y²)/(T(T+1)+Y²) = 1/2`, which is independent
+of `c`.
 
 **O2.a clarification.** The SUM `T(T+1) + Y² = 1` is *not* unique to
 the Yukawa-doublet participants — it also holds for `e_R` because
