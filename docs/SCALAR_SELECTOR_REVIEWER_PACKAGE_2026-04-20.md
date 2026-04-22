@@ -4,8 +4,7 @@
 **Scope:** Historical reviewer-facing handoff note for the scalar-selector
 cycle. This is useful route-history context, but it is **not** the current
 primary claim surface. The authoritative package-facing status now lives in
-`CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md`, `REVIEWER_SUMMARY.md`,
-`publication/ci3_z3/CLAIMS_TABLE.md`, and
+`publication/ci3_z3/README.md`, `publication/ci3_z3/CLAIMS_TABLE.md`, and
 `publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md`.
 
 ---

@@ -36,9 +36,18 @@ For package status summaries and broader navigation:
 
 ## Current Package Shape
 
-**2026-04-21 package update.** The charged-lepton Koide April 21 package is
-now the strongest executable support stack in the charged-lepton lane. The
-older bounded observational-pin and route-pruning rows are historical
+**2026-04-21 package update.** The current package now contains:
+
+- an exact gravity/spacetime backbone extending from weak-field gravity
+  through exact discrete `3+1` GR and the chosen continuum/QG identification
+  chain
+- retained quantitative lanes for `alpha_s`, electroweak normalization,
+  YT/top transport, and the promoted CKM atlas/axiom package
+- a closed dark-matter exact-target package on the manuscript surface
+- a substantial charged-lepton Koide support program whose remaining work is
+  reduced to two explicit physical bridges
+
+Older bounded observational-pin and route-pruning rows are historical
 baseline/provenance unless they are explicitly cited for that purpose.
 
 The package has five layers:

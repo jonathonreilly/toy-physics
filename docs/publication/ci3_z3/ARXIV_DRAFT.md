@@ -41,9 +41,9 @@ retention-decomposed band.
 The package is already predictive beyond retrospective comparison,
 including proton lifetime, the CKM-only neutron-EDM corollary with bounded
 continuation, vacuum criticality, and benchmark gravitational decoherence.
-The dark-matter flagship lane is now closed on the current package grade and
-on the exact-target strict/native map; the sole remaining live flagship gate
-is the charged-lepton Koide bridge package. The paper separates exact,
+The dark-matter exact-target package is now closed on the manuscript surface;
+broader target-free global uniqueness is not claimed here. The remaining open
+flagship problem is the charged-lepton Koide bridge package. The paper separates exact,
 promoted, bounded, and open rows and pairs them with a public reproducibility
 surface.
 
@@ -84,14 +84,14 @@ structural theorem with a bounded string-tension readout. CKM is promoted as a
 canonical atlas/tensor/projector package with canonical CMT $\alpha_s(v)$
 input and no quark-mass or fitted-CKM derivation inputs. The package is already
 predictive beyond the theorem spine: it carries bounded secondary predictions,
-not only retrospective matches. The dark-matter flagship lane is no longer the
-live gate on the current package surface; the only live flagship gate left is
-the charged-lepton Koide bridge package.
+not only retrospective matches. The dark-matter package is no longer the
+remaining open flagship problem on the manuscript surface; that role is now
+played only by the charged-lepton Koide bridge package.
 
 The right reading of the manuscript is therefore no longer “promising
 framework with many open bridges.” It is “one discrete framework that already
 supports a broad exact backbone, a promoted quantitative stack, a bounded but
-real prediction surface, and one clearly identified flagship gate.”
+real prediction surface, and one clearly identified flagship bridge package.”
 
 ## 2. Framework, Inputs, and Claim Boundary
 
@@ -100,7 +100,7 @@ The retained framework surface has four layers:
 1. retained theorem core;
 2. retained standalone quantitative lanes;
 3. bounded quantitative and secondary prediction lanes;
-4. one live flagship gate.
+4. one remaining charged-lepton bridge package.
 
 The point of that split is methodological. Exact and promoted rows belong in
 the main derivation spine. Bounded rows belong in explicitly labeled
@@ -146,7 +146,7 @@ Figure 1 gives the high-level package map used throughout the paper.
 
 *Figure 1. Retained derivation backbone. The current paper surface is one
 discrete framework, a retained theorem core, a promoted quantitative stack, a
-bounded prediction surface, and one live flagship gate.*
+bounded prediction surface, and one remaining charged-lepton bridge package.*
 
 ## 3. Gravity and the QG/Continuum Chain
 
@@ -163,7 +163,7 @@ On the retained weak-field surface, the only self-consistent scalar fixed point
 is the lattice Poisson equation, and its Green function yields Newtonian
 $1/r$ behavior at large separation.
 
-The operational content is
+The concrete content is
 
 $$
 \Delta_{Z^3}\phi(x) = 4\pi G \rho(x), \qquad
@@ -636,7 +636,7 @@ We keep those consequences bounded, because they use the exact isotropy theorem
 plus a restricted one-loop gauge-splitting and finite-temperature model rather
 than a full nonperturbative electroweak-transition closure.
 
-## 6. Prediction Surface and the Remaining Live Gate
+## 6. Prediction Surface and the Remaining Bridge Package
 
 The framework is already predictive; the paper should not read as if prediction
 begins only after the remaining open bridge closes.
@@ -692,9 +692,9 @@ Figure A2 summarizes the current Yukawa/top transport lane together with its
 explicit systematic budget. Figure A3 records the older bounded CKM route
 history separately from the live promoted algebraic CKM package.
 
-### 6.3 The remaining live gate
+### 6.3 The remaining charged-lepton bridge package
 
-The only remaining live flagship gate is the charged-lepton Koide bridge
+The only remaining open flagship problem is the charged-lepton Koide bridge
 package. The current executable support stack already isolates the Koide point
 by the Frobenius-isotype / AM-GM route and isolates the ambient Brannen-phase
 value `η = 2/9` by the ABSS fixed-point / topological-robustness route. What
@@ -725,22 +725,6 @@ The practical rule is simple: every retained row in the manuscript must also
 appear as retained in the package, and every bounded row in the manuscript must
 carry the same bounded qualifier there.
 
-### 7.1 Disclosure and accountability
-
-This work was developed with extensive use of generative AI tools, especially
-Claude (Anthropic) and GPT-based OpenAI systems, including Codex. Those tools
-assisted with derivational drafting, verification infrastructure, repository
-integration, code-native figure generation, and manuscript execution. The
-author conceived and directed the research program, selected $Cl(3)$ on $Z^3$
-as the foundational surface, chose derivation targets, accepted or rejected
-proposed results, fixed the claim boundary, and is solely responsible for all
-scientific claims, interpretations, code, figures, and manuscript text. The AI
-systems are disclosed research tools rather than authors; accountability
-remains human.
-
-A package-level disclosure version of the same statement is recorded in
-[AI_ASSISTANCE_AND_ACCOUNTABILITY_NOTE.md](./AI_ASSISTANCE_AND_ACCOUNTABILITY_NOTE.md).
-
 ## 8. Conclusion
 
 The central claim of this paper is no longer speculative. On the retained
@@ -764,14 +748,18 @@ predictive beyond retrospective comparison through proton lifetime, the CKM-only
 neutron-EDM corollary with bounded continuation, vacuum criticality, and benchmark
 gravitational decoherence.
 
-The remaining flagship gap is explicit rather than hidden: dark-matter relic
-mapping. That open bridge matters, but it does not erase the rows that are
-already closed. The correct arXiv posture is therefore not “everything is
-solved,” and not “interesting reduced computational model awaiting future work.” It is “one
-discrete framework already carries a large exact backbone, a promoted
-quantitative stack, and a bounded prediction surface, with one major flagship
-gate still open.” If that claim is wrong, it is wrong specifically and
-publicly. If it is right, it deserves direct technical evaluation.
+The dark-matter lane is no longer the outstanding flagship gap on the current
+manuscript surface: the exact-target PMNS package is closed. What remains open
+is the charged-lepton Koide package, where the surviving work is now sharply
+isolated to two physical bridges rather than a broad unconstrained search.
+That matters, but it does not erase what is already established. The correct
+arXiv posture is therefore neither “everything is solved” nor “this is only a
+speculative toy model.” It is “one discrete framework already carries a large
+exact backbone, a substantial quantitative stack, a closed exact-target
+dark-matter package, and a bounded prediction surface, while the remaining
+charged-lepton bridge problems are explicit and technically testable.” If that
+claim is wrong, it is wrong specifically and publicly. If it is right, it
+deserves direct technical evaluation.
 
 ## Appendix A. Compact Proof Sketches
 

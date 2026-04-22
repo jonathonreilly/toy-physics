@@ -8,8 +8,8 @@ base than the one the selected-line theorem actually uses.
 **Status:** Historical recovery note only. This is **not** the current
 claim surface. It preserves valuable same-day material and route history, but
 its closure language is superseded by the current package-facing documents:
-`CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md`,
-`REVIEWER_SUMMARY.md`, `publication/ci3_z3/CLAIMS_TABLE.md`, and
+`publication/ci3_z3/README.md`,
+`publication/ci3_z3/CLAIMS_TABLE.md`, and
 `publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md`.
 **Audience:** Reviewer-grade. This note is the single read-me for what is on
 the Tier-1 scalar-selector branch after recovery; §1 gives the per-lane

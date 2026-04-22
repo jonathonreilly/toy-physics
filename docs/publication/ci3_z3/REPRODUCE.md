@@ -48,7 +48,8 @@ For GitHub or submission support:
 - archive retained logs under `logs/retained/` and figure-prep data under
   `outputs/figures/`
 - keep a one-line status ledger: `retained`, `bounded`, or `open`
-- before release, check [SUBMISSION_CHECKLIST.md](./SUBMISSION_CHECKLIST.md)
+- before release, confirm that the manuscript, claims table, inputs/qualifiers
+  note, and non-claims note agree on the released package boundary
 
 ## Current selective freeze
 

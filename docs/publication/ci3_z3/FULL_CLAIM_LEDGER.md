@@ -15,10 +15,8 @@ Use this file together with:
 
 - [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
 - [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
-- [Historical frozen-out registry](../../work_history/publication/FROZEN_OUT_REGISTRY.md)
 - [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
 - [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
-- [PUBLICATION_CONTROL_PLANE.md](./PUBLICATION_CONTROL_PLANE.md)
 - [Repo controlled vocabulary](../../repo/CONTROLLED_VOCABULARY.md)
 
 Terminology rule:
@@ -59,7 +57,7 @@ These rows correspond to Section A of
 
 | Claim family | Current decision | Why it is retained | Primary authority |
 |---|---|---|---|
-| `Cl(3)` on `Z^3` is the working physical theory | promoted | framework sentence and ontological surface for the manuscript | [CI3_Z3_PUBLICATION_STATE_2026-04-15.md](../../CI3_Z3_PUBLICATION_STATE_2026-04-15.md) |
+| `Cl(3)` on `Z^3` is the working physical theory | promoted | framework sentence and ontological surface for the manuscript | [ARXIV_DRAFT.md](./ARXIV_DRAFT.md), [MINIMAL_AXIOMS_2026-04-11.md](../../MINIMAL_AXIOMS_2026-04-11.md) |
 | anomaly-forced `3+1` | promoted | single-clock codimension-1 theorem survives direct audit | [ANOMALY_FORCES_TIME_THEOREM.md](../../ANOMALY_FORCES_TIME_THEOREM.md) |
 | retained `S^3` compactification / topology closure | promoted | cone-cap family now clears the accepted topology bar and is no longer a live gate | [S3_GENERAL_R_DERIVATION_NOTE.md](../../S3_GENERAL_R_DERIVATION_NOTE.md), [S3_CAP_UNIQUENESS_NOTE.md](../../S3_CAP_UNIQUENESS_NOTE.md) |
 
@@ -67,7 +65,7 @@ These rows correspond to Section A of
 
 | Claim family | Current decision | Why it is retained | Primary authority |
 |---|---|---|---|
-| weak-field Poisson / Newton chain | promoted | unique self-consistent local field equation plus lattice Green-function Newton law | [CI3_Z3_PUBLICATION_STATE_2026-04-15.md](../../CI3_Z3_PUBLICATION_STATE_2026-04-15.md) |
+| weak-field Poisson / Newton chain | promoted | unique self-consistent local field equation plus lattice Green-function Newton law | [SELF_CONSISTENCY_FORCES_POISSON_NOTE.md](../../SELF_CONSISTENCY_FORCES_POISSON_NOTE.md), [POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md](../../POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md), [NEWTON_LAW_DERIVED_NOTE.md](../../NEWTON_LAW_DERIVED_NOTE.md) |
 | weak-field WEP | promoted corollary | survives on the same retained action surface | [BROAD_GRAVITY_DERIVATION_NOTE.md](../../BROAD_GRAVITY_DERIVATION_NOTE.md) |
 | weak-field time dilation | promoted corollary | survives on the same retained action surface | [BROAD_GRAVITY_DERIVATION_NOTE.md](../../BROAD_GRAVITY_DERIVATION_NOTE.md) |
 | restricted strong-field closure | promoted restricted theorem | exact on the current star-supported finite-rank class under the static conformal bridge; important enough to retain, but still source-class restricted | [RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md](../../RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md) |
@@ -127,7 +125,7 @@ external reviewer will ask about them whether or not they are retained.
 
 | Quantity / lane | Current decision | Why not promoted | Primary authority | Matrix / freeze reference |
 |---|---|---|---|---|
-| DM transport / PMNS gate status | flagship closure package | exact transport chain is closed; the same-surface DM thermal layer is theorem-grade bounded with a certified current-bank numerator-selector no-go; retained-measurement A-BCC integration, interval-certified split-2 carrier closure, shifted same-law recovered-packet selector closure, exact target-surface chamber-root closure, and the ordered-chain current stack now close the lane on the review surface and on the exact-target strict/native map; broader chamber-wide / all-basin uniqueness beyond the pinned `σ_hier` theorem remains out of scope | [DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md](../../DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md), [DM_ABCC_RETAINED_MEASUREMENT_CLOSURE_THEOREM_NOTE_2026-04-21.md](../../DM_ABCC_RETAINED_MEASUREMENT_CLOSURE_THEOREM_NOTE_2026-04-21.md), [DM_SPLIT2_INTERVAL_CERTIFIED_DOMINANCE_CLOSURE_THEOREM_NOTE_2026-04-21.md](../../DM_SPLIT2_INTERVAL_CERTIFIED_DOMINANCE_CLOSURE_THEOREM_NOTE_2026-04-21.md), [DM_SELECTOR_SHIFTED_RELATIVE_ACTION_RECOVERED_PACKET_CLOSURE_THEOREM_NOTE_2026-04-21.md](../../DM_SELECTOR_SHIFTED_RELATIVE_ACTION_RECOVERED_PACKET_CLOSURE_THEOREM_NOTE_2026-04-21.md), [DM_PMNS_ORDERED_CHAIN_GRADED_CURRENT_DELTA_CLOSURE_THEOREM_NOTE_2026-04-21.md](../../DM_PMNS_ORDERED_CHAIN_GRADED_CURRENT_DELTA_CLOSURE_THEOREM_NOTE_2026-04-21.md) | matrix row `DM transport / PMNS gate status` |
+| DM transport / PMNS gate status | flagship closure package | exact transport chain is closed; the same-surface DM thermal layer is theorem-grade bounded with a certified current-bank numerator-selector no-go; retained-measurement A-BCC integration, interval-certified split-2 carrier closure, shifted same-law recovered-packet selector closure, exact target-surface chamber-root closure, and the ordered-chain current stack now close the lane for the exact PMNS-target formulation treated here, including the native/source-side selection problem on that exact target surface; broader chamber-wide / all-basin uniqueness beyond the pinned `σ_hier` theorem remains out of scope | [DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md](../../DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md), [DM_ABCC_RETAINED_MEASUREMENT_CLOSURE_THEOREM_NOTE_2026-04-21.md](../../DM_ABCC_RETAINED_MEASUREMENT_CLOSURE_THEOREM_NOTE_2026-04-21.md), [DM_SPLIT2_INTERVAL_CERTIFIED_DOMINANCE_CLOSURE_THEOREM_NOTE_2026-04-21.md](../../DM_SPLIT2_INTERVAL_CERTIFIED_DOMINANCE_CLOSURE_THEOREM_NOTE_2026-04-21.md), [DM_SELECTOR_SHIFTED_RELATIVE_ACTION_RECOVERED_PACKET_CLOSURE_THEOREM_NOTE_2026-04-21.md](../../DM_SELECTOR_SHIFTED_RELATIVE_ACTION_RECOVERED_PACKET_CLOSURE_THEOREM_NOTE_2026-04-21.md), [DM_PMNS_ORDERED_CHAIN_GRADED_CURRENT_DELTA_CLOSURE_THEOREM_NOTE_2026-04-21.md](../../DM_PMNS_ORDERED_CHAIN_GRADED_CURRENT_DELTA_CLOSURE_THEOREM_NOTE_2026-04-21.md) | matrix row `DM transport / PMNS gate status` |
 | curated neutrino retained boundary/support packet | bounded secondary lane | exact current-stack Majorana law is zero, neutrino mass in general reduces to the Dirac lane, the PMNS selector stack is reduced to one amplitude with current law `a_sel,current = 0`, the pure-retained PMNS bank also fixes `sigma = 0`, no right-conjugacy-invariant observable of `K = Y^dag Y` can intrinsicize the admitted right-Gram completion route, the charged-lepton-side minimal two-Higgs class also reduces exactly to seven real quantities, and the full retained-neutrino sole-axiom frontier reduces to `(J_chi, mu)` with current retained routes setting both to zero | [NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md](../../NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md), [NEUTRINO_TWO_AMPLITUDE_LAST_MILE_REDUCTION_NOTE.md](../../NEUTRINO_TWO_AMPLITUDE_LAST_MILE_REDUCTION_NOTE.md), [NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md](../../NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md), [NEUTRINO_MAJORANA_CURRENT_STACK_ZERO_LAW_NOTE.md](../../NEUTRINO_MAJORANA_CURRENT_STACK_ZERO_LAW_NOTE.md), [PMNS_SELECTOR_CURRENT_STACK_ZERO_LAW_NOTE.md](../../PMNS_SELECTOR_CURRENT_STACK_ZERO_LAW_NOTE.md), [PMNS_SIGMA_ZERO_NOGO_NOTE.md](../../PMNS_SIGMA_ZERO_NOGO_NOTE.md), [PMNS_RIGHT_CONJUGACY_INVARIANT_NO_GO_NOTE.md](../../PMNS_RIGHT_CONJUGACY_INVARIANT_NO_GO_NOTE.md), [CHARGED_LEPTON_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md](../../CHARGED_LEPTON_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md) | matrix row `neutrino retained boundary/support packet`, `F05` |
 | `\Omega_\Lambda` conditional chain | bounded | after the fixed-gap/de-Sitter scale reduction, the remaining blocker is present matter content, so this row is now primarily the DM/matter bridge question | [OMEGA_LAMBDA_DERIVATION_NOTE.md](../../OMEGA_LAMBDA_DERIVATION_NOTE.md), [COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md](../../COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md) | matrix row `\Omega_\Lambda conditional chain`, `F01`, `F04` |
 | Spectral tilt `n_s` | bounded | cosmology bridge remains conditional | [PRIMORDIAL_SPECTRUM_NOTE.md](../../PRIMORDIAL_SPECTRUM_NOTE.md) | matrix row `Spectral tilt \`n_s\``, `F04` |
@@ -182,8 +180,7 @@ These rows correspond to Section C of
 ## 5. Frozen-out families aligned to the matrix
 
 These rows correspond to Section D of
-[PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md) and the family details in
-[Historical frozen-out registry](../../work_history/publication/FROZEN_OUT_REGISTRY.md).
+[PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md).
 
 | Frozen family | Current decision | Why frozen out | Registry ref |
 |---|---|---|---|

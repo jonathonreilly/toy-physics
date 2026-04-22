@@ -158,7 +158,7 @@ The main missing flagship prediction remains:
 
 - full DM flagship-gate closure
 
-That is the main live prediction gate because it blocks the strongest matter/cosmology
+That is the main remaining prediction bridge because it blocks the strongest matter/cosmology
 promotion path. It does not erase the rest of the prediction surface.
 
 ## Bottom Line
@@ -168,9 +168,9 @@ The current package already has:
 - a retained quantitative prediction surface;
 - a sharp bounded secondary prediction surface;
 - exact structural predictions with delayed observability;
-- one live flagship gate.
+- one remaining charged-lepton bridge package.
 
 The paper should therefore read as:
 
 > exact discrete backbone + retained quantitative package + bounded prediction
-> surface + one open flagship gate.
+> surface + one remaining charged-lepton bridge package.

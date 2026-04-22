@@ -145,7 +145,7 @@ The partition and refinement theorems sharpen that remaining issue:
 Use this summary to orient the package documents:
 
 - [EXTERNAL_REVIEWER_GUIDE.md](./EXTERNAL_REVIEWER_GUIDE.md)
-- [PUBLICATION_CONTROL_PLANE.md](./PUBLICATION_CONTROL_PLANE.md)
+- [README.md](./README.md)
 - [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
 - [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
 - [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)

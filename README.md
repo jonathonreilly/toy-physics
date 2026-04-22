@@ -43,12 +43,13 @@ than the full repository chronology.
   retained EW normalization, promoted CKM atlas/axiom closure, bounded
   Yukawa/top transport, and bounded Higgs/vacuum closure
 - charged-lepton package:
-  strong Koide support stack with two explicit remaining bridge problems,
-  namely the physical extremal-principle bridge for `Q = 2/3` and the
-  physical Brannen-phase bridge for `delta = 2/9`
+  substantial Koide support stack that isolates the remaining work to two
+  explicit physical bridges, namely the extremal-principle bridge for
+  `Q = 2/3` and the Brannen-phase bridge for `delta = 2/9`
 - dark-matter package:
   closed for the exact PMNS-target formulation treated in the manuscript,
-  with the stronger target-free global uniqueness question left out of scope
+  including the source-selection and ordered-current closure chain, with the
+  stronger target-free global uniqueness question left out of scope
 - bounded companion lanes:
   quark review/support packet, proton lifetime, neutron EDM, down-type
   flavor-mass CKM-dual ratios, vacuum critical stability, benchmark

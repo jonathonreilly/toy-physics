@@ -130,9 +130,9 @@ theorem core.
 - dual-status corollary surface:
   - CKM-only neutron EDM with bounded `d_n(CKM)` continuation
 
-## 7. Live gate
+## 7. Remaining bridge package
 
-The one live flagship gate is:
+The remaining flagship bridge package is:
 
 - charged-lepton Koide review/support package
 

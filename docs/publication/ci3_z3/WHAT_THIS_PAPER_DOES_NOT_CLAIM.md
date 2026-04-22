@@ -61,7 +61,7 @@ The current package keeps:
 - a fully retained Yukawa/top UV-to-IR theorem;
 - a fully retained Higgs/vacuum UV-to-IR theorem;
 - bounded/conditional cosmology;
-- one live flagship gate: the charged-lepton Koide bridge package.
+- one remaining flagship bridge package: the charged-lepton Koide bridge package.
 
 ## 5. Prediction boundary
 

@@ -2,9 +2,10 @@
 
 ## Goal
 
-Use the retained backbone as the public manuscript surface on `main`, while
-carrying the full bounded component stacks, supporting notes, and explicit
-live-gate bookkeeping.
+Use the public manuscript surface to present the exact backbone, the retained
+quantitative lanes, the closed exact-target dark-matter package, the bounded
+companion surface, and the remaining charged-lepton Koide bridge problems in
+one coherent scientific package.
 
 The goal is an arXiv-first paper that is self-contained, reviewer-legible, and
 strong enough to drive any later journal invitation/adaptation. It is not a
@@ -17,7 +18,6 @@ Nature-first public package.
 - [Prediction surface](./PREDICTION_SURFACE_2026-04-15.md)
 - [Inputs and qualifiers](./INPUTS_AND_QUALIFIERS_NOTE.md)
 - [What this paper does not claim](./WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
-- [AI assistance and accountability](./AI_ASSISTANCE_AND_ACCOUNTABILITY_NOTE.md)
 - [Publication matrix](./PUBLICATION_MATRIX.md)
 - [Quantitative summary table](./QUANTITATIVE_SUMMARY_TABLE.md)
 - [Derivation atlas](./DERIVATION_ATLAS.md)
@@ -43,7 +43,15 @@ Current quantitative component package:
 
 Other bounded component families:
 
-- DM flagship closure package, with exact transport closure, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` support package, a retained-measurement A-BCC integration theorem, an interval-certified split-2 carrier closure, a shifted same-law recovered-packet selector closure, an exact target-surface chamber-root theorem, a graph-first ordered-chain current-activation theorem, an affine current-coordinate reduction theorem, and an ordered-chain graded-current delta closure theorem. So the DM lane is now closed on the current package grade and on the exact-target strict/native map.
+- DM exact-target package, with exact transport closure, same-surface thermal
+  bounding and a certified current-bank numerator-selector no-go,
+  source-side reduction to the `2`-real `Z_3` doublet-block law, a G1
+  PMNS-as-`f(H)` support package, retained-measurement A-BCC integration, an
+  interval-certified split-2 carrier closure, a shifted same-law
+  recovered-packet selector closure, an exact target-surface chamber-root
+  theorem, a graph-first ordered-chain current-activation theorem, an affine
+  current-coordinate reduction theorem, and an ordered-chain graded-current
+  delta closure theorem
 - curated neutrino boundary/support packet on `main`, with exact current-stack
   Majorana zero law, exact mass reduction to the Dirac lane, and exact
   retained-neutrino last-mile reduction to `(J_chi, mu)`; outside the
@@ -54,11 +62,6 @@ Other bounded component families:
 Promoted quantitative package additions:
 
 - CKM no-import atlas/axiom package
-
-Optional historical context:
-
-- [Historical frozen-out registry](../../work_history/publication/FROZEN_OUT_REGISTRY.md)
-- [Historical remote-branch audit](../../work_history/publication/REMOTE_BRANCH_AUDIT_2026-04-14.md)
 
 ## Exclude Or Quarantine
 

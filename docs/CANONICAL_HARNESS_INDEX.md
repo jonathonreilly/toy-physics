@@ -6,7 +6,7 @@ Use this file to find the current canonical note/runner pair on `main`.
 
 | lane | authority | primary runner |
 |---|---|---|
-| weak-field gravity | [CI3_Z3_PUBLICATION_STATE_2026-04-15.md](CI3_Z3_PUBLICATION_STATE_2026-04-15.md) | `frontier_self_consistent_field_equation.py`, `frontier_poisson_exhaustive_uniqueness.py`, `frontier_newton_derived.py` |
+| weak-field gravity | [SELF_CONSISTENCY_FORCES_POISSON_NOTE.md](SELF_CONSISTENCY_FORCES_POISSON_NOTE.md), [POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md](POISSON_EXHAUSTIVE_UNIQUENESS_NOTE.md), [NEWTON_LAW_DERIVED_NOTE.md](NEWTON_LAW_DERIVED_NOTE.md) | `frontier_self_consistent_field_equation.py`, `frontier_poisson_exhaustive_uniqueness.py`, `frontier_newton_derived.py` |
 | restricted strong-field gravity | [RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md](RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md) | `frontier_oh_static_constraint_lift.py`, `frontier_oh_schur_boundary_action.py`, `frontier_star_supported_bridge_class.py` |
 | exact native `SU(2)` | [NATIVE_GAUGE_CLOSURE_NOTE.md](NATIVE_GAUGE_CLOSURE_NOTE.md) | `frontier_non_abelian_gauge.py` |
 | graph-first structural `SU(3)` | [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) | `frontier_graph_first_su3_integration.py` |

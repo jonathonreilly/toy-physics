@@ -18,8 +18,7 @@ For framework scoping, keep two layers separate:
 
 - the accepted package statement is `Cl(3)` on `Z^3` as the physical theory
 - use [MINIMAL_AXIOMS_2026-04-11.md](../../MINIMAL_AXIOMS_2026-04-11.md) as
-  the operational package-boundary memo for the current audited
-  implementation surface
+  the package-boundary memo for the current scientific package
 - use [SINGLE_AXIOM_INFORMATION_NOTE.md](../../SINGLE_AXIOM_INFORMATION_NOTE.md)
   and
   [SINGLE_AXIOM_HILBERT_NOTE.md](../../SINGLE_AXIOM_HILBERT_NOTE.md)
@@ -40,7 +39,6 @@ For the explicit package boundary, use:
 
 - [INPUTS_AND_QUALIFIERS_NOTE.md](./INPUTS_AND_QUALIFIERS_NOTE.md)
 - [WHAT_THIS_PAPER_DOES_NOT_CLAIM.md](./WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
-- [AI_ASSISTANCE_AND_ACCOUNTABILITY_NOTE.md](./AI_ASSISTANCE_AND_ACCOUNTABILITY_NOTE.md)
 
 ## Retained Core
 
@@ -197,7 +195,7 @@ Current status from that stack:
 
 ## Bounded Prediction Surface
 - W-boson same-surface EW consistency probe. Reviewer entry point: [W_MASS_DERIVED_NOTE.md](../../W_MASS_DERIVED_NOTE.md). Repo status: `bounded`. On the retained EW lane the framework-side readouts are `M_W^tree = 79.7956 GeV`, `M_W^RGE = 80.5573 GeV`, `M_Z^tree = 91.2663 GeV`. The remaining `~0.19 GeV` `M_W` gap tracks the existing retained `g_2(v)` precision and is therefore treated as a reviewer-facing same-surface consistency probe, not as a retained or few-MeV SM-indirect `M_W` prediction.
-- DM flagship closure package, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` support package, a retained-measurement A-BCC integration theorem, an interval-certified split-2 carrier closure, a shifted same-law recovered-packet selector closure, an exact target-surface chamber-root theorem, a graph-first ordered-chain current-activation theorem, an affine current-coordinate reduction theorem, and an ordered-chain graded-current delta closure theorem. So the DM lane is now closed on the current package grade and on the exact-target strict/native map.
+- dark-matter exact-target package, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` support package, a retained-measurement A-BCC integration theorem, an interval-certified split-2 carrier closure, a shifted same-law recovered-packet selector closure, an exact target-surface chamber-root theorem, a graph-first ordered-chain current-activation theorem, an affine current-coordinate reduction theorem, and an ordered-chain graded-current delta closure theorem. So the DM lane is now closed for the exact PMNS-target formulation treated in the manuscript, with broader target-free global uniqueness left out of scope.
 - persistent exact-lattice compact-object companion in the package, with one
   retained blended readout on the nearby family and a `top4` multistage floor
   that survives beyond the widened pocket, but still below persistent
@@ -252,25 +250,16 @@ routes setting both to zero.
 ## Read The Package In Order
 
 1. [ARXIV_DRAFT.md](./ARXIV_DRAFT.md)
-2. [CI3_Z3_PUBLICATION_STATE_2026-04-15.md](../../CI3_Z3_PUBLICATION_STATE_2026-04-15.md)
-3. [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
+2. [README.md](./README.md)
+3. [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
 4. [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
-5. [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
-6. [DERIVATION_ATLAS.md](./DERIVATION_ATLAS.md)
-7. [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
+5. [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
+6. [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
+7. [DERIVATION_ATLAS.md](./DERIVATION_ATLAS.md)
 8. [FULL_CLAIM_LEDGER.md](./FULL_CLAIM_LEDGER.md)
 9. [RESULTS_INDEX.md](./RESULTS_INDEX.md)
-
-## Optional Historical Context
-
-- [Historical frozen-out registry](../../work_history/publication/FROZEN_OUT_REGISTRY.md)
-- [Historical remote-branch audit](../../work_history/publication/REMOTE_BRANCH_AUDIT_2026-04-14.md)
 
 ## Review Rule
 
 - if a result is not in the matrix, it is not publication-captured
 - if it is in the matrix but not in the claims table, it is not retained
-- if it is important but excluded, it should appear in the historical
-  frozen-out registry
-- if you are editing rather than reviewing, use
-  [PUBLICATION_CONTROL_PLANE.md](./PUBLICATION_CONTROL_PLANE.md)
