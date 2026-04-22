@@ -9,3 +9,4 @@ logs/*
 !logs/retained/
 !logs/retained/README.md
 .claude/worktrees/
+.claude/scheduled_tasks.lock
