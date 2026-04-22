@@ -496,7 +496,7 @@ All independent tests pass at <0.05% precision, well within the
 ## End-to-end verification
 
 ```bash
-# Single-command verification: 123/123 PASS across 16 runners
+# Single-command verification: 181/181 PASS across 25 runners
 python3 scripts/frontier_koide_lane_regression.py
 ```
 
@@ -519,7 +519,16 @@ for runner in \
   scripts/frontier_koide_p1_sqrtm_amplitude_derivation.py \
   scripts/frontier_koide_selected_line_axis_fourier_bridge.py \
   scripts/frontier_koide_positive_parent_operator_construction.py \
-  scripts/frontier_koide_name_free_set_equality.py; do
+  scripts/frontier_koide_name_free_set_equality.py \
+  scripts/frontier_koide_a1_quartic_potential_derivation.py \
+  scripts/frontier_koide_a1_n3_structural_uniqueness.py \
+  scripts/frontier_koide_a1_cv_equals_one.py \
+  scripts/frontier_koide_a1_block_democracy_max_entropy.py \
+  scripts/frontier_koide_a1_weyl_vector_kostant_coincidence.py \
+  scripts/frontier_koide_a1_a2_weyl_double_match.py \
+  scripts/frontier_koide_a1_lie_theoretic_triple_match.py \
+  scripts/frontier_koide_a1_yukawa_casimir_identity.py \
+  scripts/frontier_koide_a1_clifford_dimension_ratio.py; do
   python3 "$runner" | grep "^PASSED:" || echo "FAIL at $runner"
 done
 ```
