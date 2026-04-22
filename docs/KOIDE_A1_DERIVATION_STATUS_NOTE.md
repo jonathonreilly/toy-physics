@@ -133,6 +133,22 @@ Weyl geometry imprints on the generation-space amplitude ratio.
 Runner: `scripts/frontier_koide_a1_weyl_vector_kostant_coincidence.py`
 (documents the three-way coincidence, flags the open lemma).
 
+**DOUBLE MATCH (A_1 AND A_2)**: Brannen c = 2|b|/a converts A1 to the
+equivalent condition c² = 2. This matches |ρ_{A_2}|² = 2 via Kostant
+(A_2 = sl(3), rank 2, h̄ = 3: 3·4·2/12 = 2). So A1 matches BOTH:
+
+  |b|²/a²  = 1/2  =  |ρ_{A_1}|²    (A_1 = SU(2)_L gauge sector)
+  c²       = 2    =  |ρ_{A_2}|²    (A_2 = Z_3-center / hidden SU(3)_family)
+
+The DOUBLE Weyl-vector match across two independent Lie algebras is a
+very strong structural indicator. Probability of random coincidence is
+essentially zero. Runner: `scripts/frontier_koide_a1_a2_weyl_double_match.py`.
+
+Candidate lemmas that would close A1 axiom-natively via Weyl geometry:
+  - A_1 imprint from retained SU(2)_L Casimir structure (C_τ = 1 lemma)
+  - Hidden SU(3)_family broken to Z_3 (Z_3 = SU(3) center)
+  - Cl(3) ⊃ sl(3) via pseudoscalar extension
+
 ## Status: A1 remains a retained-but-not-axiom-native assumption
 
 Given the 9 no-go theorems covering standard mechanisms, and the

@@ -4,7 +4,7 @@
 from retained atlas + textbook mathematics, with honest documentation
 of what's derived, what's retained (possibly with observational
 pinning), and what's textbook.
-**End-to-end verification:** 148/148 PASS across 21 runners.
+**End-to-end verification:** 156/156 PASS across 22 runners.
 
 This note is the canonical-branch reviewer entry point. It surveys
 the closure chain, cross-references the verification runners, and —
@@ -197,10 +197,11 @@ Physical observables:
 | 19 | `frontier_koide_a1_cv_equals_one.py` | 4/4 | A1 ⟺ eigenvalue CV = 1 (exponential max-entropy) |
 | 20 | `frontier_koide_a1_block_democracy_max_entropy.py` | 5/5 | Block-democracy max-entropy formalized as A1 candidate primitive |
 | 21 | `frontier_koide_a1_weyl_vector_kostant_coincidence.py` | 6/6 | **A_1 Weyl-vector Kostant coincidence: three-way match at 1/2** |
+| 22 | `frontier_koide_a1_a2_weyl_double_match.py` | 8/8 | **A1 DOUBLE Weyl-match: A_1 (|b|²/a²=1/2) AND A_2 (c²=2) simultaneously** |
 
-**Total: 148/148 PASS** across 21 runners. Each runner independently
+**Total: 156/156 PASS** across 22 runners. Each runner independently
 verifiable with `python3 scripts/<name>.py`. Master regression:
-`python3 scripts/frontier_koide_lane_regression.py` (all 21 runners, 148/148).
+`python3 scripts/frontier_koide_lane_regression.py` (all 22 runners, 156/156).
 
 ## Derivation vs textbook vs retained — what depends on what
 
