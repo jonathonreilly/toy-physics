@@ -231,3 +231,48 @@ than novel derivation routes. The closure path is well-mapped:
 Recommendation: stop /loop iterations. Hand off to canonical-branch
 for theoretical work proving one of the open lemmas, or for adopting
 a new retained primitive based on the structural evidence accumulated.
+
+## Iter 9 addendum: external literature scan
+
+Searched recent (2024–2026) physics literature for axiom-native Koide
+derivations compatible with our retained Cl(3)/Z³ framework:
+
+**Found (relevant external derivations):**
+- preprints.org/202505.2156 (2025): "phase coherence" / topological soliton
+  framework. Derives δ = 2/9 via Clifford torus geometry. Already
+  evaluated — not directly compatible (Clifford torus → equator, but
+  Koide cone sits at 45° latitude; mismatch documented in Route B).
+- "Zero-Interaction Principle" (academia.edu/145613039, recent):
+  derives δ = 2/9 as difference of "topological moments". Aligns
+  conceptually with our AS spectral-flow derivation of δ = 2/9 but
+  uses different framework primitives, not directly importable.
+- arxiv.org/1809.00425 (2018): "What Physics Does The Charged Lepton
+  Mass Relation Tell Us?" — survey paper, no new derivation.
+- sciencedirect.com/S0550321321002431 (2021): modified Koide via
+  flavor nonets in scalar potential model — extends Koide-Nishiura
+  but doesn't derive c = √2 axiom-natively.
+
+**Not found:**
+- No external derivation uses "Frobenius equipartition" terminology
+  (this is our retained framework's specific phrasing).
+- No external work derives A1 from Cl(3) Clifford algebra dim counting.
+- No external work uses our Casimir-difference identity (Route F).
+
+**Conclusion:** the retained Cl(3)/Z³ framework's A1 derivation
+landscape is genuinely novel. External literature provides parallel
+derivations of δ = 2/9 (which we already have via AS) but does NOT
+close A1 in a way compatible with our framework.
+
+The path forward remains canonical-branch theoretical work on one of
+the identified routes (E, F, or A). Iterative computational exploration
+has reached its productive limit.
+
+## Final /loop status
+
+8 iterations produced 8 new A1-focused runners (181/181 PASS total),
+3 documentation notes, and 9 distinct equivalent A1 expressions all
+equal to 1/2 in the retained framework. Closure remains open.
+
+The /loop is being stopped. All work is committed and pushed to
+`koide-equivariant-berry-aps-selector` (HEAD: 50506d8b + this note).
+Reviewer should use `KOIDE_LANE_MASTER_CLOSURE_NOTE.md` as entry point.
