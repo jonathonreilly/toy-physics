@@ -1,375 +1,198 @@
-# Koide Brannen — Callan-Harvey Descent: Three-Gap Closure
+# Koide Brannen — Callan-Harvey Candidate: Sharpening & Alternate ABSS Route
 
 **Date:** 2026-04-22
 **Lane:** Charged-lepton Koide Brannen phase δ = 2/9.
-**Status:** Closes the three open items identified in `docs/KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md` §3 ("What is still missing"). That note isolated a concrete Callan-Harvey candidate route but flagged three load-bearing steps as undischarged. This note discharges them.
-**Primary runner:** `scripts/frontier_koide_brannen_ch_three_gap_closure.py` (16/16 PASS).
+**Status:** **Conditional support sharpening, NOT closure.** A first version of this note (commit b947506b) claimed to close the three open items in `docs/KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md` §3. A hostile review correctly identified that the closure was not achieved (P0 critiques reproduced in §1 below). This revision is honest about the support-level status of the Callan-Harvey route and offers an alternate ABSS-equivariant-descent attempt in §10.
+**Primary runner:** `scripts/frontier_koide_brannen_ch_three_gap_closure.py` (16/16 PASS — as a numerical consistency harness, not a closure theorem).
 
 ---
 
-## 0. The three open items
+## 0. The three open items being targeted
 
-The candidate note posited the bridge equation
+From `docs/KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md` §3, the bridge
 
 ```text
 δ_Berry = (anomaly inflow rate) × (1D integration length)
         → δ = (2/9) × 1 = 2/9 rad
 ```
 
-and flagged as still missing:
+was flagged as missing three load-bearing steps:
 
 1. a theorem that the charged-lepton **selected-line Berry phase** is the relevant Callan-Harvey descent quantity;
 2. a **derivation of the descent factor 1**, rather than the assertion "unit lattice cell = unit clock-tick = one generation";
 3. an actual constructed **anomaly-inflow current** or **operator map** from the ambient anomaly sector to the selected-line CP¹ carrier.
 
-Sections 3, 4, 5 below close items (3), (1), (2) in that order (constructing the operator map first makes the identification theorem and the descent-factor computation concrete). The closures use only retained axioms — no new postulates.
+Two routes are explored below:
+
+- **§3–§9 (CH route, support only).** The CH-descent attempt at these three items, preserved as the best-available support-level construction, with the reviewer's P0 critiques incorporated in-line as scope qualifiers. This does NOT constitute closure.
+- **§10 (ABSS alternate route).** An attempt to close via direct Z_3-equivariant Atiyah-Bott-Segal-Singer descent on the selected-line CP¹, which does not rely on a bulk-to-defect inflow current. Honest about what it achieves and what it still leaves open (the dimensionless↔radian identification).
 
 ---
 
-## 1. Retained ingredients used
+## 1. Reviewer P0 critiques (preserved verbatim for scope)
 
-All ingredients below are on `main`; references in the cross-reference section.
+The following three P0 critiques from hostile review were correctly identified and are preserved here as explicit scope qualifiers of the CH route:
 
-| Tag | Retained ingredient | Source |
-|-----|---------------------|--------|
-| A0 | Cl(3) on Z³ — one Clifford axiom | A0 |
-| LP | Lattice-physical axiom (Z³ is physical, not regulator) | User-retained |
-| AFT | ANOMALY_FORCES_TIME: 3+1 single-clock; retained hypercharges Y_q = 1/3, Y_L = −1/2, etc. | ANOMALY_FORCES_TIME_THEOREM |
-| TGO | THREE_GENERATION_OBSERVABLE_THEOREM: body-diagonal fixed sites ↔ 3 charged-lepton generations | THREE_GENERATION_OBSERVABLE_THEOREM_NOTE |
-| HYP | Hypercharge U(1)_Y = unique traceless U(1) in Cl(3) commutant (compact, globally defined) | HYPERCHARGE_IDENTIFICATION_NOTE |
-| LQC | Lattice U(1) is compact (θ ∈ [0, 2π)); magnetic charge through any cube is an integer; Dirac quantization automatic | MONOPOLE_DERIVED_NOTE §§1–2 |
-| KFS | Selected-line Koide amplitude Fourier form s(m) = (1/√2) v₁ + (1/2)e^{iθ(m)} v_ω + (1/2)e^{-iθ(m)} v_{ω̄}; σ₁ = 1/2 (forced by Koide Q = 2/3) | KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19 |
-| NEF | n_eff = 2 from conjugate-pair phase doubling of doublet ray | KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20 |
+- **P0 on Gap 3.** *"The claimed anomaly-to-CP¹ map collapses to a trivial charge operator and then switches to the pre-existing Koide phase generator. The note claims Q_Σ acts as Y_q σ_3 on the doublet, but the construction immediately before it makes Q_Σ homogeneous Y_q multiplication on generation sites, which Fourier-transforms to Y_q I, not a nontrivial doublet generator. The runner confirms exactly that: Q_site = Y_q I_3 is trivial on the projective ray, then replaces it with the already-known conjugate-pair phase winding from the selected-line Koide state. That does not construct a Callan-Harvey operator map from the ambient anomaly current to the selected-line CP^1 carrier; it reuses the target Berry structure as the generator."*
 
-## 2. Setup — defect, zero-mode bundle, ambient anomaly
+- **P0 on Gap 2.** *"The Ω = 1 step is still a chosen anomaly-active normalization, not a derived retained theorem. The proof of Ω = 1 sets both transverse and tangent windings to the minimal nonzero value 1, then later justifies that choice by saying the bridge must live in the anomaly-active sector and the zero-flux sector would be inconsistent with the desired mechanism. That is the same missing normalization in new language: the derivation does not force the physical defect tube to carry exactly one unit of each winding, it selects that sector because it yields the target bridge. So the load-bearing descent factor remains assumed rather than derived from retained framework data."*
+
+- **P0 on Gap 1.** *"Gap 1 is closed only by matching two preassigned numbers, not by proving Berry holonomy equals Callan-Harvey descent for the physical observable. The identification theorem says the Berry phase and CH phase are 'phases of the same wavefunction' and therefore equal, but that is exactly the missing bridge statement, not a derivation. The runner then implements this as δ_Berry from the existing Koide selected-line amplitude and δ_CH = c·Ω with the already-chosen Ω = 1, and calls the near-equality a closure. Nothing here derives a nontrivial map showing that the physical selected-line Berry observable is the Callan-Harvey descended phase; it only shows consistency after both sides have been normalized to 2/9."*
+
+These three critiques are accepted. The CH route as presented in §3–§9 below is **support-level consistency**, not closure.
+
+---
+
+## 2. Setup — defect, zero-mode bundle, ambient anomaly (unchanged from candidate note)
 
 ### 2.1 Bulk data
 
 - Bulk manifold M = Z³ × R (physical lattice × single clock, by LP + AFT).
-- U(1)_Y is compact (HYP). On each Z³ lattice plaquette p, the U(1)_Y field strength satisfies Dirac quantization (LQC):
+- U(1)_Y compact (HYP) with Dirac quantization of Y-flux (LQC):
   ```text
-  (1/2π) ∫_p F_Y  ∈  Z                                      (DQ-space)
+  (1/2π) ∫_{plaquette} F_Y ∈ Z    and    (1/2π) ∫_{edge × Δt} F_Y ∈ Z
   ```
-  and similarly in any timelike plaquette:
+- Per-generation 4D anomaly (retained arithmetic):
   ```text
-  (1/2π) ∫_{edge × Δt} F_Y  ∈  Z                              (DQ-time)
-  ```
-- Per-generation 4D anomaly (AFT arithmetic):
-  ```text
-  c := Tr[Y³]_{q_L} per generation = (2·d)·(1/d)³ = 2/d² = 2/9     (d = 3)
+  c := Tr[Y³]_{q_L} per gen = (2d)(1/d)³ = 2/d² = 2/9     (d = 3)
   ```
 
-### 2.2 Codim-2 defect Σ
+### 2.2 Codim-2 defect Σ and zero-mode bundle
 
-By TGO, a single generation's worth of charged-lepton data lives on one body-diagonal fixed site of Z³, carried along the time axis. Over one physical period (one clock-tick), this traces out a 1+1-dimensional defect worldsheet
-
-```text
-Σ = { (k·n̂, t) : k ∈ Z, t ∈ R }        n̂ = (1,1,1)
-```
-
-which is codim-2 in M (two transverse dimensions span the 2-plane normal to the body-diagonal at each time slice).
-
-### 2.3 Defect zero-mode bundle (retained Wilson-Dirac on Z³)
-
-The retained Wilson-Dirac operator D_W on Z³ admits, at the three body-diagonal fixed sites, a zero-mode subspace V = C³ indexed by the three fixed sites (this is the content of the Wilson-Dirac support note). Under the Z_3 action on V, KFS decomposes:
+Defect Σ = body-diagonal × time worldsheet (codim-2 in 4D). Zero-mode bundle at body-diagonal fixed sites: V = C³. Under retained Z_3 action (cyclic permutation):
 
 ```text
-V = L₁ ⊕ L_ω ⊕ L_{ω̄}                     (singlet ⊕ conjugate doublet)
+V = L₁ ⊕ L_ω ⊕ L_{ω̄}
 ```
 
-The singlet occupancy σ₁ = 1/2 is forced by Koide Q = 2/3 (KFS). The dynamical sector is therefore the doublet **C²** = L_ω ⊕ L_{ω̄}, and the physical ray lives in
+Koide constraint σ_1 = 1/2 (from Q = 2/3 ≡ KFS) fixes the singlet occupancy; dynamical CP¹ carrier is **P(L_ω ⊕ L_{ω̄})**.
 
-```text
-CP¹ := P(L_ω ⊕ L_{ω̄})                    (the selected-line CP¹ carrier)
-```
+### 2.3 Retained ingredients (unchanged)
 
-This is the **CP¹ carrier of the selected-line Berry phase** referenced throughout the Koide stack.
+| Tag | Ingredient | Reference |
+|-----|-----------|-----------|
+| A0  | Cl(3) on Z³ | retained |
+| LP  | Physical-lattice axiom | retained |
+| AFT | ANOMALY_FORCES_TIME (3+1 single-clock + retained Y) | ANOMALY_FORCES_TIME_THEOREM |
+| TGO | Body-diagonal ↔ generation | THREE_GENERATION_OBSERVABLE_THEOREM_NOTE |
+| HYP | U(1)_Y compact from commutant | HYPERCHARGE_IDENTIFICATION_NOTE |
+| LQC | Lattice U(1) compact + Dirac quantization | MONOPOLE_DERIVED_NOTE |
+| KFS | Koide Fourier form, σ_1 = 1/2 | KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19 |
+| NEF | Doublet conjugate-pair n_eff = 2 | KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20 |
 
 ---
 
-## 3. Gap 3 closure — the explicit anomaly-inflow current and the operator map
+## 3. CH Gap 3 attempt — anomaly-inflow current and operator map (**support only**)
 
-We construct the Callan-Harvey inflow current J^μ_CH and its bulk-to-defect restriction, and then show that the restriction defines the CP¹ tautological Berry connection on the zero-mode bundle.
+### 3.1 The bulk CS_3 form (mathematically clean)
 
-### 3.1 Bulk anomaly current and the CS_3 descent form
-
-The retained bulk Y-current J^μ_Y (left-handed quark bilinear weighted by Y_q) satisfies the standard anomaly equation
+The bulk Y-current anomaly ∂_μ J^μ_Y = −(c/8π²) F_Y ∧ F_Y admits descent via the Chern-Simons 3-form
 
 ```text
-∂_μ J^μ_Y  =  − (c / 24π²) · ε^{μνρσ} ∂_μ A^Y_ν ∂_ρ A^Y_σ          (ABJ-Y)
-           =  − (c / 8π²) · F_Y ∧ F_Y                                 (c = 2/9)
+CS_3 := (c/4π) A_Y ∧ dA_Y     with    dCS_3 = (c/4π) F_Y ∧ F_Y
 ```
 
-as a density 4-form. By descent (exterior calculus), the 3-form
+This is standard and mathematically unambiguous.
+
+### 3.2 Localized inflow current J^CH (mathematically clean)
+
+The CH inflow current `J^CH = CS_3 |_{T_Σ}` is a well-defined 3-form on the tube T_Σ around the defect. Its restriction formula `dJ^CH = c · δ²_⊥(Σ) · ω_tan` is standard.
+
+### 3.3 Where the CH identification fails on its own terms (**P0 Gap 3**)
+
+*Hostile critique preserved:*
+
+The retained U(1)_Y hypercharge Y_q = 1/d is **homogeneous across the three generations** — each body-diagonal fixed site carries the same Y_q. Therefore the bulk-to-defect restriction of J^μ_Y, integrated over the transverse plaquette, produces the site-diagonal operator
 
 ```text
-CS_3  :=  (c / 4π) · A_Y ∧ dA_Y                                       (3.1)
+Q_Σ = Y_q · I₃   on V = C³
 ```
 
-satisfies `dCS_3 = (c/4π) · F_Y ∧ F_Y = (2π) · (c/8π²) · F_Y ∧ F_Y`, which matches the anomaly density up to the conventional `2π` connecting 4-form Chern-Weil density to the flux integer. CS_3 is the descent 3-form of the 4D anomaly.
-
-### 3.2 The Callan-Harvey inflow current localized on Σ
-
-Callan-Harvey (1985) writes the bulk-to-defect inflow as an ambient 3-form current supported on a tube T_Σ around Σ:
+in the generation basis. Fourier-transforming to the Z_3 basis: `Q_Σ = Y_q · I₃` is **still** the scalar operator — the Fourier matrix is unitary, so the scalar identity pulls back to a scalar. Therefore
 
 ```text
-J^CH  :=  CS_3 |_{T_Σ}                                                 (3.2)
+Q_Σ |_{L_ω ⊕ L_{ω̄}} = Y_q · I₂,    not   Y_q · σ_3
 ```
 
-Its codim-1 exterior derivative is concentrated on Σ via a transverse 2-form δ-distribution:
+and its projective quotient on CP¹ = P(L_ω ⊕ L_{ω̄}) is the **identity**, which generates **zero** CP¹ rotation.
 
-```text
-dJ^CH  =  c · (F_Y ∧ F_Y / 8π²) |_{T_Σ}  =  c · δ²_⊥(Σ) · ω_tan       (3.3)
-```
+The earlier §3.3 claim that `Q_Σ = Y_q · σ_3` on the doublet was incorrect. The runner test 3.2 actually verifies the opposite: `"Homogeneous Y_q on generation sites gives trivial Q_Σ (Y-multiplication)"` is confirmed PASS. The subsequent invocation of the conjugate-pair phase winding as the "generator" is a **reuse of the target Koide structure**, not an output of the CH operator map.
 
-where `δ²_⊥(Σ)` is the 2-form delta on the transverse plaquette of T_Σ (unit-integral over the transverse cell) and `ω_tan` is the tangential 2-form (area element on Σ). This is the explicit Callan-Harvey inflow current — a genuine 3-form on M with prescribed restriction to the defect tube.
-
-### 3.3 The operator map (ambient anomaly sector → CP¹ carrier)
-
-The inflow current J^CH, when contracted against the defect zero-mode wavefunctions, produces a 1-form on the zero-mode moduli (the CP¹ base). This is the operator map. We make it explicit.
-
-**Zero-mode operator**: define, acting on V = C³,
-
-```text
-Q_Σ  :=  ∫_{transverse plaquette} J^CH                                 (3.4)
-```
-
-By the retained hypercharge HYP, `Q_Σ` acts as a diagonal Y-multiplication on V in the fixed-site basis — each body-diagonal fixed site carries the retained quark-LH hypercharge Y_q = 1/3 (TGO identifies each fixed site with one generation of charged-lepton data, which inherits Y_q via the retained commutant embedding).
-
-In the Fourier basis (KFS), `Q_Σ` decomposes as:
-
-```text
-Q_Σ |_{L₁}          =  (Y_q) · 1_{L₁}        (trivial singlet)
-Q_Σ |_{L_ω ⊕ L_{ω̄}}  =  (Y_q) · σ_3           (diagonal +1/−1 in (L_ω, L_{ω̄}))
-```
-
-The `σ_3` action on the doublet C² = L_ω ⊕ L_{ω̄} follows because the two lines carry Z_3-eigenvalues `ω` and `ω̄ = ω⁻¹`; the restriction of a Hermitian Y-charge respecting conjugation acts oppositely on the two lines. This is the conjugate-pair structure (NEF).
-
-**Projective descent to CP¹**. On the doublet subspace C² = L_ω ⊕ L_{ω̄}, `Q_Σ|_C² = (Y_q) σ_3` generates a U(1) subgroup of the U(2) action on C². Its projective quotient acts on CP¹ = P(C²) as rotation around the CP¹ equator (the locus Im ζ = 0 in homogeneous coordinates ζ = [z₁:z₂]):
-
-```text
-exp(i α Q_Σ) · [z₁ : z₂]  =  [e^{iα Y_q} z₁ : e^{-iα Y_q} z₂]  =  [1 : e^{-2i α Y_q} · z₂/z₁]
-```
-
-This is a rotation of the CP¹ fiber at rate `2 Y_q = 2/d = 2/3` in the homogeneous coordinate ζ = z₂/z₁. Pancharatnam-Berry theory then identifies the generator of this U(1) with the dual tangent vector to the canonical tautological connection `A_CP¹ = dθ` on CP¹ (standard result; cf. KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19).
-
-**Summary of the operator map**:
-
-```text
-bulk Y-current J^μ_Y
-     │
-     │  transverse integration (3.4)
-     ▼
-defect operator Q_Σ = Y_q σ_3 on the doublet sector
-     │
-     │  Pancharatnam-Berry dualization (standard CP¹ construction)
-     ▼
-tautological Berry connection A_CP¹ = dθ on CP¹
-```
-
-Every step is forced by a retained ingredient (A0, LP, TGO, HYP, KFS, NEF). **Gap 3 is closed**: the ambient anomaly sector maps concretely to the selected-line CP¹ carrier.
+**Conclusion (§3):** The CH route, taken on its own retained-data terms, produces a TRIVIAL operator map. A nontrivial CH operator map would require the bulk Y-background to be **Z_3-inhomogeneous across generations** — either Z_3-breaking or Z_3-equivariant with different per-site Y-flux. The retained framework does not force either. **Gap 3 remains open on the CH route.**
 
 ---
 
-## 4. Gap 1 closure — theorem: the selected-line Berry phase IS the CH descent quantity
+## 4. CH Gap 1 attempt — the identification theorem (**consistency only**)
 
-### 4.1 Statement
+### 4.1 What the CH identification would need
 
-**Theorem (Berry = CH descent on the selected line).** Let `δ_Berry(m₀ → m_*)` denote the Pancharatnam-Berry holonomy of the tautological line bundle on the selected-line CP¹ carrier (§2.3), from the unphased point m₀ to the physical point m_*. Let `δ_CH(Σ_gen)` denote the integrated Callan-Harvey inflow phase along one generation's worth of the defect worldsheet. Then, as scalar phases in radians,
+For δ_Berry(m₀ → m_*) to genuinely equal δ_CH(Σ_gen) as a derivation (not a coincidence), we would need an explicit construction of the CH descent connection 1-form `A^CH` on CP¹ that:
 
-```text
-δ_Berry(m₀ → m_*)  =  δ_CH(Σ_gen)  =  c · Ω                            (4.1)
-```
+- does not use the Koide amplitude's phase structure as input;
+- has integrated value `c · Ω = 2/9 · 1 = 2/9` on the selected-line arc;
+- is gauge-equivalent to the Pancharatnam-Berry `A_CP¹ = dθ`.
 
-where c = 2/9 is the retained per-generation anomaly coefficient (§2.1) and Ω = 1 is the descent factor derived in Gap 2 (§5).
+### 4.2 Where the CH identification fails (**P0 Gap 1**)
 
-### 4.2 Proof
+*Hostile critique preserved:*
 
-The key observation is that both quantities are **phases of the same wavefunction** — the defect zero-mode state — evaluated by two different constructions. Equality is forced by the anomaly-inflow consistency (bulk + defect anomalies cancel), not by term-by-term equality of the two connection 1-forms (which can differ by a gauge).
+The previous §4 "proof" was:
 
-**Step (i) — the zero-mode state is shared.** The defect zero-mode sector at the body-diagonal fixed locus is (V = C³) ⊃ (C² = L_ω ⊕ L_{ω̄}) (§2.3). The selected-line Koide amplitude `s(m)` is an explicit time-parametrized section of this zero-mode bundle over the moduli arc [m₀, m_*] (KFS):
+> *"A single wavefunction can have only one well-defined Berry holonomy; therefore δ_Berry = δ_CH."*
 
-```text
-s(m)  =  (1/√2) v₁ + (1/2) e^{iθ(m)} v_ω + (1/2) e^{-iθ(m)} v_{ω̄}         (4.2)
-```
+This is exactly the identification statement that needs to be proved, recast as its own proof. The runner's `|δ_Berry − δ_CH| ≈ 10⁻¹³` is consistency after both sides have been normalized to 2/9 (δ_Berry from the Koide amplitude, δ_CH via `c · Ω = 2/9 · 1`), not derivation.
 
-The projective part is `[z₁:z₂] = [e^{iθ} : e^{-iθ}]` on the CP¹ carrier. Call this common state `ψ`.
-
-**Step (ii) — `δ_Berry(ψ, m₀ → m_*)` is the Pancharatnam-Berry holonomy of `ψ` on CP¹.** By Pancharatnam-Berry theory (KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19):
-
-```text
-δ_Berry(ψ, m₀ → m_*)  =  arg⟨ψ(m_*) | P | ψ(m₀)⟩ + (gauge)
-                      =  θ(m_*) − θ(m₀)  (in the Fourier trivialization of KFS)
-```
-
-This is computable from the Koide-amplitude Fourier data; the runner verifies `δ_Berry = 2/9` to 10⁻¹³ at `m_*`.
-
-**Step (iii) — `δ_CH(ψ, Σ_gen)` is the anomaly-inflow phase acquired by `ψ` over one generation arc.** By the Callan-Harvey inflow equation applied to `ψ` (standard result, Callan-Harvey 1985 eq. 2.14 for axion-defect, or equivalently Naculich 1988 for general codim-2 descent):
-
-```text
-δ_CH(ψ, Σ_gen)  =  c · ∫_{T(Σ_gen)} F_Y ∧ F_Y / (8π²)  =  c · Ω        (4.3)
-```
-
-where `T(Σ_gen)` is the defect 4-tube of one generation (§5). The zero-mode `ψ` absorbs exactly this inflow phase because it is the unique charge-carrying zero-mode at the defect (constructed in Gap 3 as the doublet-sector ray).
-
-**Step (iv) — the two phases of the same state `ψ` are equal.** A single wavefunction can have only one well-defined Berry holonomy around a given closed loop in its parameter space (up to gauge, which is resolved by the chosen reference `m₀`). Therefore:
-
-```text
-δ_Berry(ψ, m₀ → m_*)  =  δ_CH(ψ, Σ_gen)                                (4.4)
-```
-
-The LHS is computed from the explicit Fourier form of `ψ`; the RHS is computed from anomaly-inflow on the defect. Their equality is a **consistency theorem** for the Callan-Harvey construction — not an independent assumption.
-
-**Gap 1 is closed**: the selected-line Berry phase equals the Callan-Harvey descent phase because they are two evaluations of the same quantity — the holonomy of the defect zero-mode wavefunction on its CP¹ moduli arc. The operator map of Gap 3 constructs the CH side explicitly; the Gap 2 calculation fixes the descent factor Ω = 1; numerical match to 10⁻¹³ is a sanity check, not additional input.
-
-### 4.3 What this theorem says and does not say
-
-This theorem establishes the **identification**: Berry holonomy = CH-descent phase as scalars on the selected-line CP¹. The identification does NOT require the two connection 1-forms on CP¹ to be literally equal — they can differ by a gauge, or by the normalization that multiplies `dθ` in a given coordinate. What the identification DOES force is that the integrated phases over one generation arc match.
-
-The numerical value 2/9 rad then follows from:
-
-- the per-generation anomaly coefficient c = 2/9 (retained arithmetic, §2.1), AND
-- the descent factor Ω = 1 (Gap 2, §5 below).
-
-Gap 2 is the computational step; this theorem is the structural identification.
-
-### 4.3 What this theorem says and does not say
-
-This theorem establishes the **identification**: Berry holonomy = CH-descent phase on the selected-line CP¹. It does NOT by itself fix the numerical value. The numerical value 2/9 rad follows from:
-
-- the per-generation anomaly coefficient c = 2/9 (retained arithmetic), AND
-- the descent volume factor Ω = 1 (Gap 2 below).
-
-Gap 2 is the computational step; this theorem is the structural identification.
+**Conclusion (§4):** The CH route provides **numerical consistency** between δ_Berry and the nominal δ_CH = c · Ω, but the identification of the physical Berry observable WITH the CH descent phase is not derived. **Gap 1 remains open on the CH route.**
 
 ---
 
-## 5. Gap 2 closure — derivation of the descent factor Ω = 1 by explicit integration
+## 5. CH Gap 2 attempt — the descent factor Ω = 1 (**sector choice, not derivation**)
 
-### 5.1 Statement
+### 5.1 The Fubini/Dirac computation (mathematically clean)
 
-**Theorem (descent factor Ω = 1).** Let T_Σ be the tube around a single-generation segment of the defect worldsheet Σ (one body-diagonal lattice step × one natural clock-tick). Then
-
-```text
-Ω  :=  ∫_{T_Σ} F_Y ∧ F_Y / (8π²)  =  1                                 (5.1)
-```
-
-as an integer-valued Chern number on the retained physical lattice.
-
-### 5.2 Proof (Dirac quantization + lattice combinatorics, not unit-sliding)
-
-Split `F_Y = F_⊥ + F_∥` where:
-- `F_⊥` spans the two directions transverse to the defect (the 2-plane normal to the body-diagonal in each time-slice);
-- `F_∥` spans the two directions tangent to Σ (one spatial body-diagonal direction + one timelike direction).
-
-Then
+On any minimum-nonzero U(1)_Y configuration with integer transverse and tangent windings `(n_⊥, n_∥) = (1, 1)`:
 
 ```text
-F_Y ∧ F_Y  =  2 · F_⊥ ∧ F_∥                                           (5.2)
+Ω = ∫_{T_Σ} F_Y ∧ F_Y / (8π²) = 2·(2π·n_⊥)·(2π·n_∥)/(8π²) = n_⊥ · n_∥ = 1
 ```
 
-(the other wedges vanish by dimension-counting). Integrating over T_Σ factorizes:
+This is a correct Fubini + Dirac-quantization computation on the tube T_Σ.
 
-```text
-∫_{T_Σ} F_⊥ ∧ F_∥  =  (∫_{transverse plaquette} F_⊥) · (∫_{Σ_step} F_∥)    (5.3)
-```
+### 5.2 Where the Ω = 1 derivation fails (**P0 Gap 2**)
 
-by Fubini on the product T_Σ = (transverse 2-cell) × (tangent 2-cell).
+*Hostile critique preserved:*
 
-**Compute each factor by retained Dirac quantization (LQC)**:
+The selection of `(n_⊥, n_∥) = (1, 1)` — rather than `(0, 0)`, `(1, 2)`, `(2, 0)`, etc. — is not forced by retained axioms. The previous §5.2.1 "justification" invoked:
 
-- **Transverse winding.** LQC DQ-space says `(1/2π) ∫_{plaquette} F_⊥ ∈ Z`. The minimal nontrivial transverse winding (one unit of magnetic Y-flux through one physical plaquette, automatically quantized by lattice compactness LQC) is the integer **1**:
-  ```text
-  (1/2π) · ∫_{transverse plaquette} F_⊥  =  1                            (5.4)
-  ```
-  This is NOT a unit-identification — it is the **minimal nonzero flux quantum** on the retained compact lattice. The retained U(1)_Y background carries at least this much topological flux through each unit transverse plaquette (standard result for physical compact gauge fields on Z³ lattices; equivalent to the lattice carrying a monopole-free unit sector, which is exactly the retained background from MONOPOLE_DERIVED_NOTE Step 2).
+- the bridge must live in the anomaly-active sector (zero-flux inconsistent with the target mechanism);
+- the retained Z_3 structure would be U(1)_Y-indistinguishable in the Y = 0 sector.
 
-- **Tangent winding.** LQC DQ-time similarly gives `(1/2π) ∫_{edge × Δt} F_∥ ∈ Z`. The defect segment spans one body-diagonal edge × one natural clock-tick. The tangent winding is **1** by the same compactness argument applied to the tangent 2-cell:
-  ```text
-  (1/2π) · ∫_{Σ_step} F_∥  =  1                                          (5.5)
-  ```
+Both are post-hoc appeals to the target, not derivations from retained data. No retained axiom specifies that the physical defect tube carries exactly `(n_⊥, n_∥) = (1, 1)`. Any nontrivial integer pair would satisfy compactness + Dirac quantization.
 
-**Combine:**
-
-```text
-∫_{T_Σ} F_Y ∧ F_Y / (8π²)  =  2 · (2π · 1) · (2π · 1) / (8π²)  =  1      (5.6)
-```
-
-**Ω = 1 is derived**, as an integer Chern number on the physical Z³ × R lattice tube, NOT by asserting "unit cell = unit tick = generation". The derivation uses:
-- `F_Y ∧ F_Y / 8π²` is an integer-valued 4-form (standard Chern-Weil on compact U(1); retained via LQC).
-- Each of the two transverse and tangent 2-cycles contributes exactly 1 flux quantum (minimal Dirac-quantized nonzero winding on the retained compact lattice).
-- The Fubini factorization (5.3) uses only that T_Σ is a product 4-tube.
-
-**Gap 2 is closed**: Ω = 1 is computed, and equals 1 because the minimum nonzero Chern class on a single-generation 4-tube is 1 by Dirac quantization of U(1)_Y on the retained physical lattice.
-
-### 5.2.1 What is assumed about the Y-background
-
-The derivation above gives Ω = n_⊥ · n_∥ and identifies Ω = 1 with the **minimum nonzero** winding pair (n_⊥, n_∥) = (1, 1). The choice of the minimum-nonzero value — rather than (0, 0) — is supported by two retained observations:
-
-- The anomaly equation `∂_μ J^μ_Y = (c/8π²) F_Y ∧ F_Y` is nonvanishing precisely when F_Y ≠ 0 in the defect neighborhood. For the CH bridge to BE the physical mechanism for δ = 2/9, the retained Y-background must carry at least one nontrivial flux quantum per unit transverse plaquette along the defect. This is a selection of the "anomaly-active" topological sector of the retained compact U(1)_Y, not an additional axiom beyond LQC + AFT.
-- The retained three-generation + body-diagonal + Z_3 structure (TGO) is itself a nontrivial topological configuration that the retained commutant gauge sector must support. A vacuum Y-background (identically zero flux everywhere) would be inconsistent with the retained Z_3 permutation acting nontrivially on the three generation fixed sites: the fixed sites would be U(1)_Y-indistinguishable in the Y = 0 sector, violating the retained generation-distinguishing content of TGO.
-
-So the minimum nonzero (n_⊥, n_∥) = (1, 1) is the unique consistent choice for the retained framework, not an externally imposed normalization.
-
-### 5.3 Consistency check — Ω is the right quantity
-
-We need Ω to be exactly the numerical factor multiplying `c` in the CH inflow formula. By the Callan-Harvey master formula, the integrated inflow phase on the defect worldsheet Σ_arc is
-
-```text
-δ_CH(Σ_arc)  =  c · ∫_{T(Σ_arc)} F_Y ∧ F_Y / (8π²)  =  c · Ω(Σ_arc)     (5.7)
-```
-
-(standard derivation from descent of the ABJ equation; cf. e.g. Naculich 1988 or the original Callan-Harvey 1985 eq. 2.14 for the axion case, which is the same up to dimensional reduction). For a single-generation arc on the retained lattice, Ω = 1, so
-
-```text
-δ_CH(one gen)  =  c  =  2/9 rad                                        (5.8)
-```
+**Conclusion (§5):** Ω = n_⊥ · n_∥ is correctly computed as an integer. The specific value **1** is a sector choice of the retained U(1)_Y topology, not a retained theorem. **Gap 2 remains open on the CH route.**
 
 ---
 
-## 6. Combined closure
+## 6. CH route summary (support-level)
 
-The Berry-CH identification (Gap 1) + the operator map (Gap 3) + the Ω = 1 derivation (Gap 2) combine to
+The CH route's best-available state:
 
-```text
-δ_Berry(m₀ → m_*)  =  δ_CH(one gen)  =  c · Ω  =  (2/9) · 1  =  2/9 rad
-```
+| Step | Status |
+|------|--------|
+| Bulk CS_3 and J^CH formulae (§3.1–3.2) | Mathematically clean; standard |
+| Operator map CH → CP¹ (§3.3) | **Fails**: uniform Y_q is trivial on CP¹ |
+| Descent factor Ω = 1 (§5) | **Sector choice**; not derived |
+| Identification Berry = CH descent (§4) | **Consistency** at 10⁻¹³, not derivation |
+| Combined δ = c · Ω = 2/9 rad (forward prediction) | Numerically correct; derivation pending |
+| Runner 16/16 PASS | Consistency harness, not closure proof |
 
-Every step is derived from retained ingredients (A0, LP, AFT, TGO, HYP, LQC, KFS, NEF) plus standard Callan-Harvey descent (physics of 1985 vintage). **No convention choices. No unit-sliding. No redefinition of m_*.**
-
-The physical m_* is then the unique first-branch point at which the framework-computed α(m) = δ_Berry(m₀ → m) equals the derived 2/9 rad. That equality is a forward prediction; the runner verifies it at m_* = -1.160443 440065 to 10⁻¹³, and the Brannen formula at this δ reproduces PDG charged-lepton masses to <0.03% (forward-predicted PDG match).
-
----
-
-## 7. Runner
-
-`scripts/frontier_koide_brannen_ch_three_gap_closure.py` verifies:
-
-1. Retained ingredients enumerated (A0, LP, AFT, TGO, HYP, LQC, KFS, NEF; all on main).
-2. 4D anomaly per generation c = 2/9 (sympy exact).
-3. **Gap 3 — operator map verified**:
-   (a) Z_3 Fourier decomposition of V = C³ into L_1 ⊕ L_ω ⊕ L_{ω̄} (numerical).
-   (b) `Q_Σ` on the doublet sector has matrix form `Y_q σ_3` with Y_q = 1/d (numerical check).
-   (c) `Q_Σ` generates CP¹ rotation at rate 2 Y_q = 2/d (algebra check).
-   (d) Dualization to Berry connection A_CP¹ = dθ verified on a Koide-state sample.
-4. **Gap 1 — Berry = CH identification verified numerically**:
-   (a) δ_Berry(m₀ → m_*) from the exact selected-line Koide amplitude = 2/9 to 10⁻¹³.
-   (b) δ_CH (one gen) from c × Ω = 2/9 × 1 = 2/9 exactly.
-   (c) Difference = 0 to floating precision.
-5. **Gap 2 — Ω = 1 derivation**:
-   (a) Transverse and tangent windings each = 1 (minimal Dirac-quantized flux; from LQC).
-   (b) Fubini factorization: Ω = 2 × 1 × 1 · (2π)² / 8π² = 1 (sympy exact).
-   (c) Ω is the integer Chern number of a single-generation 4-tube (not a unit-identification).
-6. Combined bridge chain: δ_per_gen = c × Ω = 2/9 rad (sympy).
-7. PDG forward prediction from derived δ: charged-lepton ratios to <0.03%.
-
-Expected: all PASS.
+This is useful as **support**: it makes the open questions much more precise than the original candidate note, and provides a numerical consistency harness. It is **not closure**.
 
 ---
 
-## 8. Cross-references (all retained, on main)
+## 7. Cross-references (unchanged, all on main)
 
-- `docs/KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md` — the candidate-route note this closure targets.
+- `docs/KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md` — the candidate-route note this sharpening targets.
 - `docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md` — n_eff = 2 derivation (NEF).
 - `docs/KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md` — selected-line Berry holonomy (KFS).
 - `docs/KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md` — Wilson-Dirac zero-mode realization.
@@ -378,13 +201,143 @@ Expected: all PASS.
 - `docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md` — body-diagonal ↔ generation (TGO).
 - `docs/ANOMALY_FORCES_TIME_THEOREM.md` — 3+1 single-clock & retained hypercharges (AFT).
 - Callan & Harvey, *Anomalies and Fermion Zero Modes on Strings and Domain Walls*, Nucl. Phys. B250 (1985) 427.
+- Atiyah, Bott, Singer, *The index of elliptic operators: III*, Ann. Math. 87 (1968) 546.
 
 ---
 
-## 9. Scope qualifiers
+## 8. Scope qualifiers (support-level claim, explicit)
 
-This note closes the three identified gaps in the Callan-Harvey descent chain. It does NOT:
+This note's CH route:
 
-- claim to close Q = 2/3 (Koide ratio) axiom-natively; that remains a separate open lane.
-- claim a regulator-independent continuum-limit theorem; the derivation is on the retained physical Z³ × R lattice with compact U(1)_Y, which is the framework's retained setting.
-- derive m_* from a variational principle; m_* remains the unique first-branch point where the framework-computed α(m) matches the derived 2/9 rad.
+- **Does NOT close** the three open items from `KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md` §3.
+- **Does** sharpen them: for (Gap 3) it exposes that uniform Y_q on homogeneous generations is structurally trivial on CP¹, making the open question more precise; for (Gap 2) it identifies Ω = n_⊥ · n_∥ as the relevant integer with open sector-choice question; for (Gap 1) it establishes numerical consistency at 10⁻¹³.
+- **Does not claim** regulator-independent continuum derivation, m_* from a variational principle, or Q = 2/3 axiom-natively (all remain separate open lanes).
+
+See §10 below for the alternate ABSS equivariant-descent attempt.
+
+---
+
+## 9. CH route artifacts
+
+- This note.
+- `scripts/frontier_koide_brannen_ch_three_gap_closure.py` (support-level consistency runner, 16/16 PASS; renaming is not required since tests pass as consistency, not closure).
+
+---
+
+## 10. Alternate route — ambient 4D equivariant-signature descent (partial discharge, with precise residual)
+
+The CH route fails the closure bar. This section attempts an alternate partial-closure path: use the **ambient 4D** equivariant G-signature at body-diagonal fixed points (the genuine source of the rigorous 2/9 value), and make the bridge to the selected-line CP¹ carrier through the *structural* identification of the transverse 2-complex-dim tangent with the doublet Hilbert space L_ω ⊕ L_{ω̄}. Companion runner: `scripts/frontier_koide_brannen_absss_equivariant_descent.py`.
+
+### 10.1 What this route does and does not attempt
+
+**Partial discharge attempt**:
+- Derive the dimensionless 2/9 as an ambient-4D equivariant-signature invariant with NO sector choice, NO flux winding, NO inflow-current reuse of Koide structure.
+- Make the ambient-to-CP¹ structural identification precise: the transverse 2-complex-dim tangent at each body-diagonal fixed point is naturally L_ω ⊕ L_{ω̄}, the same doublet Hilbert space that hosts the selected-line CP¹.
+
+**Residual that remains**:
+- The equivariant-signature invariant is dimensionless; the Brannen phase δ is radian. Identifying dimensionless 2/9 with radian 2/9 is the load-bearing **dimensionless↔radian residual** (same I2-lane I8 residual flagged in `.claude/plans/brannen-p-assumption-enumeration.md`).
+- This alternate route does NOT close the radian identification. It sharpens the CH route's three gaps to one genuine residual.
+
+### 10.2 Correction of an earlier mis-statement
+
+A prior draft of this section attempted to compute the ABSS/equivariant-signature contribution directly on the 1-complex-dimensional CP¹ = P(L_ω ⊕ L_{ω̄}). **That calculation gives 0 per fixed point, not 2/9** — because the G-signature contribution `(1+ω^w)/(1-ω^w)` at a 1-complex-dim fixed point with weight w on Z_3, summed over k = 1, 2, has opposite imaginary parts that cancel (verified symbolically).
+
+The correct source of the 2/9 value is the **2-complex-dimensional** tangent at an ambient-4D body-diagonal fixed point, where the contribution is `(1+ω^{w_1 k})(1+ω^{w_2 k}) / [(1-ω^{w_1 k})(1-ω^{w_2 k})]` — the product, not the sum, of two 1-dim factors.
+
+### 10.3 Ambient 4D setup (retained)
+
+The retained manifold is `M = Z^3 × R` with Z_3 acting by cyclic permutation of the three spatial axes. At a body-diagonal fixed point `p = (x_0, x_0, x_0, t_0)`:
+
+- Time tangent: invariant (Z_3 acts trivially).
+- Spatial tangent: C³ in the complexified decomposition, with retained Z_3-Fourier:
+  ```text
+  C³_{spatial} = L_1 ⊕ L_ω ⊕ L_{ω̄}
+  ```
+- L_1 direction = body-diagonal itself (invariant). The **transverse 2-complex-dim** tangent is
+  ```text
+  T_⊥ p  =  L_ω ⊕ L_{ω̄}                                                    (10.1)
+  ```
+  with Z_3 acting as `diag(ω, ω²)`, i.e. **tangent weights (1, 2)**.
+
+**This identification (10.1) is structural, retained, and not a choice**: it comes from Cl(3) representation theory + body-diagonal identification + Z_3 cyclic permutation.
+
+### 10.4 Single-fixed-point equivariant G-signature contribution = 2/9
+
+At a 4-real-dim fixed point with Z_d tangent weights (w_1, w_2) in a 2-complex-dim transverse tangent, the G-signature Lefschetz contribution per fixed point is:
+
+```text
+sign(ω^k, p)  =  Π_{j=1,2} (1 + ω^{w_j k}) / (1 - ω^{w_j k})                    (10.2)
+```
+
+Summed over nontrivial Z_d elements and divided by |Z_d| gives the fixed-point contribution to the equivariant-η invariant:
+
+```text
+η_p  =  (1/d) · Σ_{k=1}^{d-1} sign(ω^k, p)                                    (10.3)
+```
+
+For d = 3, weights (1, 2):
+
+```text
+sign(ω, p)    =  (1+ω)(1+ω²) / [(1-ω)(1-ω²)]  =  1 / 3         (since (1+ω)(1+ω²) = 1, (1-ω)(1-ω²) = 3)
+sign(ω², p)   =  (1+ω²)(1+ω)  / [(1-ω²)(1-ω)]  =  1 / 3
+
+η_p  =  (1/3) · (1/3 + 1/3)  =  2/9                                          (10.4)
+```
+
+This is sympy-exact and forced by retained Z_3 structure on the 2-complex-dim transverse tangent. **No sector choice, no flux winding, no background assumption.**
+
+### 10.5 The structural identification T_⊥ p = L_ω ⊕ L_{ω̄} = doublet Hilbert of the selected-line CP¹ carrier
+
+The 2-complex-dim transverse tangent at each body-diagonal 4D fixed point (§10.3) is L_ω ⊕ L_{ω̄}. This is **the same** doublet Hilbert space that hosts the selected-line CP¹ carrier (§2.2). This is a structural identification forced by:
+
+- body-diagonal = L_1 direction (TGO + Z_3 Fourier);
+- transverse 2-plane = L_ω ⊕ L_{ω̄} (orthocomplement to L_1 in C³);
+- selected-line CP¹ carrier = P(L_ω ⊕ L_{ω̄}) (retained KFS construction).
+
+**So the ambient 4D equivariant-signature fixed-point contribution 2/9 is computed on exactly the same C² space on which the selected-line Berry phase lives.**
+
+### 10.6 What this closes and what it doesn't
+
+**Closes (retained-structural, no sector choice)**:
+- ABSS/equivariant-signature gives dimensionless 2/9 as a rigorous invariant of the retained Z_3 action on the ambient C² = L_ω ⊕ L_{ω̄}.
+- The ambient C² at the 4D fixed point IS the CP¹'s doublet Hilbert space (identical, not analogous).
+- This discharges the **value-source** issue in both Gap 2 (no sector selection needed) and Gap 3 (the operator is the retained Z_3 action itself, not a reused target structure).
+
+**Does NOT close (single remaining residual)**:
+- The identification of **dimensionless rational 2/9** (G-signature invariant) with **radian Berry phase 2/9 rad** (observable). The G-signature is a regularized spectral sum, naturally a dimensionless rational; the Brannen phase is a radian-valued physical observable. Equating them requires a natural-radian convention.
+- This is the I8/I2 residual flagged in `.claude/plans/brannen-p-assumption-enumeration.md` — same residual every prior route encountered.
+
+### 10.7 Status after the alternate route
+
+The alternate ambient-4D ABSS/G-signature route:
+
+- **Rigorously derives** the dimensionless 2/9 from the retained Z_3 representation on ambient C². **No sector choice. No flux winding. No reuse of Koide target.**
+- **Structurally identifies** the ambient tangent space with the selected-line doublet Hilbert space (identical, retained).
+- **Does not close** the dimensionless↔radian identification. This residual is sharp: empirically forced by PDG (<0.03%), but not derived from the retained axiom set.
+
+Honest bottom line: the three open items of the candidate note are reduced to **one** precise residual — the natural-radian convention on the retained framework that identifies dimensionless G-signature rationals with radian Berry observables. This is strictly less open than the three gaps in the candidate note, but is **not** closure.
+
+### 10.8 Companion runner
+
+`scripts/frontier_koide_brannen_absss_equivariant_descent.py` verifies:
+
+1. Z_3 Fourier decomposition C³ = L_1 ⊕ L_ω ⊕ L_{ω̄} (standard).
+2. Body-diagonal = L_1 direction; transverse 2-plane at body-diagonal fixed points = L_ω ⊕ L_{ω̄} (linear algebra check).
+3. Z_3 tangent weights on L_ω ⊕ L_{ω̄} are (1, 2) (sympy).
+4. Verify CP¹-only single-fixed-point G-signature = **0**, per the correction in §10.2 (sympy, flagged as explicitly NOT the 2/9 source).
+5. Ambient-4D single-fixed-point G-signature contribution = **2/9** from the 2-complex-dim tangent (sympy exact).
+6. Structural identification: the ambient 2-complex-dim transverse tangent IS the selected-line CP¹'s doublet Hilbert space (linear algebra + retained structure).
+7. Selected-line Koide Berry holonomy δ(m_0 → m_*) = 2/9 to 10⁻¹³ (numerical; matches the dimensionless ambient G-signature value).
+8. Honest residual: dimensionless 2/9 identified with radian 2/9 is NOT derived (flagged).
+
+---
+
+## 11. Consolidated scope
+
+| Route | Dimensionless 2/9 | Radian bridge | Closure? |
+|-------|------------------|----------------|----------|
+| CH descent (§3–9) | Sector choice (Ω = 1 chosen) | Not addressed | **No** — support only |
+| ABSS equivariant descent (§10) | **Forced** from Z_3 rep theory | Not addressed | **No** — partial closure; one residual remains |
+| Combined | Dimensionless value derived (via ABSS) | Radian convention still load-bearing | **No**, but single residual is now precise |
+
+This is the current state. The residual step is the I2-lane I8 issue ("Fourier phase = radian Berry holonomy at natural units") flagged in `.claude/plans/brannen-p-assumption-enumeration.md` §I8, still open.
