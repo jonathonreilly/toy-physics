@@ -149,6 +149,41 @@ Candidate lemmas that would close A1 axiom-natively via Weyl geometry:
   - Hidden SU(3)_family broken to Z_3 (Z_3 = SU(3) center)
   - Cl(3) ⊃ sl(3) via pseudoscalar extension
 
+### Route F: Yukawa Casimir-difference identity (STRONGEST AXIOM-NATIVE CANDIDATE)
+
+**KEY OBSERVATION**: T(T+1) − Y² = 1/2 holds UNIQUELY for the lepton
+SU(2)_L doublet L (T=1/2, Y=-1/2) AND the Higgs H (T=1/2, Y=+1/2).
+
+NO other SM particle satisfies this identity:
+  - Quark doublet: T(T+1) − Y² = 3/4 − 1/36 = 13/18
+  - e_R: T(T+1) − Y² = 0 − 1 = −1
+  - u_R: 0 − 4/9 = −4/9
+  - d_R: 0 − 1/9 = −1/9
+
+The retained CL3_SM_EMBEDDING_THEOREM provides:
+  - T(T+1) = 3/4 from Cl⁺(3) ≅ ℍ ⟹ Spin(3) = SU(2)_L
+  - Y² = 1/4 from pseudoscalar ω ⟹ U(1)_Y, with L hypercharge = -1/2
+  - Difference: 1/2 = A1 condition
+
+The retained C_τ = T(T+1) + Y² = 1 theorem (already used to derive
+y_τ = α_LM/(4π)) gives the SUM. The proposed candidate gives the
+DIFFERENCE. Both are derivable from retained gauge structure alone.
+
+**OPEN STRUCTURAL LEMMA** (would close A1 axiom-natively):
+
+  |b|²/a²  =  T(T+1) − Y²  for Yukawa doublet participants
+
+If proven, this gives axiom-native A1 from:
+  - Cl⁺(3) ≅ ℍ ⟹ T(T+1) = 3/4 (retained)
+  - ω pseudoscalar ⟹ Y² = 1/4 (retained, L hypercharge)
+  - Casimir-difference lemma ⟹ |b|²/a² = 1/2 (proposed)
+  - ⟹ A1 (Frobenius equipartition) forced
+
+NO new retained primitives required. Only the structural lemma needs
+proof. This is the cleanest A1 closure candidate identified to date.
+
+Runner: `scripts/frontier_koide_a1_yukawa_casimir_identity.py` (9/9 PASS).
+
 ## Status: A1 remains a retained-but-not-axiom-native assumption
 
 Given the 9 no-go theorems covering standard mechanisms, and the
