@@ -1,87 +1,65 @@
 # Cl(3)/Z^3 Physics Framework
 
-This repository is the live review surface for a one-axiom discrete-physics
-program with one front-door statement:
+This repository contains the public scientific package for a one-axiom
+discrete-physics program based on `Cl(3)` on `Z^3`.
 
-> take `Cl(3)` on `Z^3` as the physical theory, then audit what is retained,
-> what is bounded, and what is still open.
+If you are coming from the paper, start with the publication package rather
+than the full repository chronology.
 
-The framework should be read as a one-axiom program. The reduction surface is
-recorded in
-[docs/SINGLE_AXIOM_INFORMATION_NOTE.md](docs/SINGLE_AXIOM_INFORMATION_NOTE.md)
-and
-[docs/SINGLE_AXIOM_HILBERT_NOTE.md](docs/SINGLE_AXIOM_HILBERT_NOTE.md). The
-separate memo
-[docs/MINIMAL_AXIOMS_2026-04-11.md](docs/MINIMAL_AXIOMS_2026-04-11.md)
-records the accepted operational package boundary currently used on `main`. It
-is not a competing foundation count.
+## Read First
 
-The front door on `main` is the publication package plus the canonical
-authority notes it points to. Historical material lives under
-[docs/work_history/README.md](docs/work_history/README.md) and is optional
-context, not part of the live reviewer path.
+1. [Public arXiv draft](docs/publication/ci3_z3/ARXIV_DRAFT.md)
+2. [Publication package README](docs/publication/ci3_z3/README.md)
+3. [Claims table](docs/publication/ci3_z3/CLAIMS_TABLE.md)
+4. [Prediction surface](docs/publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md)
+5. [Inputs and qualifiers](docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md)
+6. [What this paper does not claim](docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
+7. [Derivation / validation map](docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
+8. [Derivation atlas](docs/publication/ci3_z3/DERIVATION_ATLAS.md)
 
-## Start Here
+## Repository Map
 
-1. [Current flagship entrypoint](docs/CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md)
-2. [Public arXiv draft](docs/publication/ci3_z3/ARXIV_DRAFT.md)
-3. [Prediction surface](docs/publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md)
-4. [Inputs and qualifiers](docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md)
-5. [What this paper does not claim](docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
-6. [AI assistance and accountability](docs/publication/ci3_z3/AI_ASSISTANCE_AND_ACCOUNTABILITY_NOTE.md)
-7. [External reviewer guide](docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md)
-8. [Publication package README](docs/publication/ci3_z3/README.md)
-9. [Publication matrix](docs/publication/ci3_z3/PUBLICATION_MATRIX.md)
+- manuscript and package entry surfaces:
+  [docs/publication/ci3_z3](docs/publication/ci3_z3/README.md)
+- quantitative derivations and supporting theorem notes:
+  [docs/START_HERE.md](docs/START_HERE.md)
+- scientific boundaries and explicit non-claims:
+  [docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md](docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md)
+  and [docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md](docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
 
-## Current Package Snapshot
+## Scientific Scope
 
 - exact discrete backbone:
   weak-field gravity, restricted strong-field closure, full discrete `3+1`
-  GR, chosen-target QG/continuum closure, graph-first `SU(3)`, anomaly-forced
-  `3+1`, retained three-generation structure with atlas-wired exact
+  GR, chosen-target QG/continuum closure, graph-first `SU(3)`,
+  anomaly-forced `3+1`, retained three-generation structure with exact
   taste-cube / residual-symmetry flavor support, exact `I_3 = 0`, exact CPT,
-  retained Bell/CHSH support on explicit two-species lattice systems with KS
-  taste measurements, emergent Lorentz invariance, retained full strong-CP
-  closure on the retained action surface, exact `T = 0` confinement with
-  bounded `sqrt(sigma)`, and retained discrete evanescent-barrier lattice
-  transfer-matrix bound (with explicit `lambda_+(i) = (u_i +
-  sqrt(u_i^2 - 4))/2`, `u_i = 2 + (V_i - E)/t`) plus retained
-  Schwarzschild-interior tortoise-length identity on `Cl(3)/Z^3` with
-  `a = l_Planck`; the Planck-unit astrophysical echo-suppression exponent
-  remains a (C-rate)-conditional bounded companion, not a retained row
-- retained and promoted quantitative stack:
+  retained Bell/CHSH support on explicit two-species lattice systems,
+  emergent Lorentz invariance, retained strong-CP closure on the retained
+  action surface, exact `T = 0` confinement with bounded `sqrt(sigma)`, and
+  retained discrete evanescent-barrier and Schwarzschild-interior support
+- retained quantitative lanes:
   canonical `v = 246.282818290129 GeV`, retained `alpha_s(M_Z) = 0.1181`,
-  retained EW normalization, promoted CKM atlas/axiom closure,
-  bounded Yukawa/top, and bounded Higgs/vacuum
-- bounded prediction surface:
-  proton lifetime, CKM neutron EDM, down-type flavor-mass CKM-dual ratios,
-  the same-surface W-boson EW consistency probe, vacuum critical stability,
-  benchmark gravitational decoherence, the bounded exact-lattice
-  persistent-object companion, and bounded cosmology rows
-- curated neutrino boundary/support packet outside the flagship core:
-  exact current-stack Majorana zero law, exact mass reduction to the Dirac
-  lane, exact PMNS selector/current-stack zero law, and exact last-mile
-  reduction to `(J_chi, mu)`
-- one live flagship gate:
-  DM flagship gate, with exact transport closure, theorem-grade same-surface
-  thermal bounding and a certified current-bank numerator-selector no-go,
-  source-side reduction all the way to the `2`-real `Z_3` doublet-block law,
-  exact constructive `eta/eta_obs = 1` existence on the fixed native `N_e`
-  seed surface, and a remaining right-sensitive microscopic selector-law /
-  final DM-mapping gap
+  retained EW normalization, promoted CKM atlas/axiom closure, bounded
+  Yukawa/top transport, and bounded Higgs/vacuum closure
+- charged-lepton package:
+  strong Koide support stack with two explicit remaining bridge problems,
+  namely the physical extremal-principle bridge for `Q = 2/3` and the
+  physical Brannen-phase bridge for `delta = 2/9`
+- dark-matter package:
+  closed for the exact PMNS-target formulation treated in the manuscript,
+  with the stronger target-free global uniqueness question left out of scope
+- bounded companion lanes:
+  quark review/support packet, proton lifetime, neutron EDM, down-type
+  flavor-mass CKM-dual ratios, vacuum critical stability, benchmark
+  gravitational decoherence, compact-object companions, and bounded cosmology
 
-For the package-level gravity/gauge continuum positioning layer, use
-[docs/CONTINUUM_IDENTIFICATION_NOTE.md](docs/CONTINUUM_IDENTIFICATION_NOTE.md).
+## Scientific Boundaries
 
-## Review Rule
-
-- if a result is not in
-  [docs/publication/ci3_z3/PUBLICATION_MATRIX.md](docs/publication/ci3_z3/PUBLICATION_MATRIX.md),
-  it is not publication-captured
-- if it is in the matrix but not in
-  [docs/publication/ci3_z3/CLAIMS_TABLE.md](docs/publication/ci3_z3/CLAIMS_TABLE.md),
-  it is not on the retained flagship surface
-- the atlas and derivation/validation map are the reusable theorem and evidence
-  contract surfaces
-- historical route notes are not front-door authority unless the live package
-  links to them explicitly
+- package boundary:
+  [docs/MINIMAL_AXIOMS_2026-04-11.md](docs/MINIMAL_AXIOMS_2026-04-11.md)
+- one-axiom reduction context:
+  [docs/SINGLE_AXIOM_INFORMATION_NOTE.md](docs/SINGLE_AXIOM_INFORMATION_NOTE.md)
+  and [docs/SINGLE_AXIOM_HILBERT_NOTE.md](docs/SINGLE_AXIOM_HILBERT_NOTE.md)
+- package limits and explicit non-claims:
+  [docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md](docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)

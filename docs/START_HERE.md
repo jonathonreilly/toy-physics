@@ -1,20 +1,21 @@
 # Start Here
 
-Use this order on `main`:
+Use this order if you want the shortest route from paper to evidence:
 
-1. [Current flagship entrypoint](CURRENT_FLAGSHIP_ENTRYPOINT_2026-04-14.md)
+1. [Public arXiv draft](publication/ci3_z3/ARXIV_DRAFT.md)
 2. [Publication package README](publication/ci3_z3/README.md)
-3. [External reviewer guide](publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md)
+3. [Claims table](publication/ci3_z3/CLAIMS_TABLE.md)
 4. [Prediction surface](publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md)
-5. [Publication matrix](publication/ci3_z3/PUBLICATION_MATRIX.md)
-6. [Claims table](publication/ci3_z3/CLAIMS_TABLE.md)
+5. [Inputs and qualifiers](publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md)
+6. [What this paper does not claim](publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
 7. [Derivation / validation map](publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
 8. [Derivation atlas](publication/ci3_z3/DERIVATION_ATLAS.md)
 
-If you want historical route material after that, use the explicit history
-bucket:
+For a fuller package inventory, use:
 
-- [work_history/README.md](work_history/README.md)
+- [publication/ci3_z3/PUBLICATION_MATRIX.md](publication/ci3_z3/PUBLICATION_MATRIX.md)
+- [publication/ci3_z3/FULL_CLAIM_LEDGER.md](publication/ci3_z3/FULL_CLAIM_LEDGER.md)
+- [publication/ci3_z3/RESULTS_INDEX.md](publication/ci3_z3/RESULTS_INDEX.md)
 
 For the accepted package inputs, use
 [MINIMAL_AXIOMS_2026-04-11.md](MINIMAL_AXIOMS_2026-04-11.md).
@@ -24,8 +25,8 @@ For optional framework-compression / reduction context, use:
 - [SINGLE_AXIOM_INFORMATION_NOTE.md](SINGLE_AXIOM_INFORMATION_NOTE.md)
 - [SINGLE_AXIOM_HILBERT_NOTE.md](SINGLE_AXIOM_HILBERT_NOTE.md)
 
-Those one-axiom notes are support/reduction context for the current package.
-They are not the load-bearing input ledger for the reviewed `main` surface.
+Those one-axiom notes are reduction context for the current package. They are
+not the publication-facing input ledger.
 
 For the gravity/QG continuum bridge specifically, the current capstones are:
 
@@ -68,11 +69,7 @@ If you want the current bounded quark review/support packet, use:
 - [publication/ci3_z3/PUBLICATION_MATRIX.md](publication/ci3_z3/PUBLICATION_MATRIX.md)
 - [publication/ci3_z3/DERIVATION_VALIDATION_MAP.md](publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
 
-If you want the shortest publication-facing inventory of what the framework
-already predicts beyond the retained theorem core, use:
+If you want the shortest inventory of what the framework predicts beyond the
+retained theorem core, use:
 
 - [publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md](publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md)
-
-Remaining live gates are now:
-
-1. DM flagship gate

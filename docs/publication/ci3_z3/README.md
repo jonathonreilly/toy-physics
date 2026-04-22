@@ -1,44 +1,43 @@
 # CI(3) / Z^3 Publication Package
 
-This directory is the publication-facing entrypoint for the current package
-surface.
+This directory is the publication-facing entrypoint for the current scientific
+package.
 
-Use this package instead of browsing raw repo chronology.
+Use this package if you want the manuscript, claims, predictions, and evidence
+without browsing the full repository chronology.
 
 Framework statement:
 
 - the accepted package statement is `Cl(3)` on `Z^3` as the physical theory
 - [MINIMAL_AXIOMS_2026-04-11.md](../../MINIMAL_AXIOMS_2026-04-11.md) is the
-  operational package-boundary memo for the current audited implementation
-  surface
+  package-boundary memo for the current scientific package
 - [SINGLE_AXIOM_INFORMATION_NOTE.md](../../SINGLE_AXIOM_INFORMATION_NOTE.md)
   and
   [SINGLE_AXIOM_HILBERT_NOTE.md](../../SINGLE_AXIOM_HILBERT_NOTE.md)
   are optional reduction/support notes for framework compression and
-  physical-lattice scoping, not a competing or load-bearing front-door input
-  count
+  physical-lattice scoping, not a competing input count
 
-## External Reviewer Read Order
+## Read In This Order
 
 1. [Public arXiv draft](./ARXIV_DRAFT.md)
-2. [Prediction surface](./PREDICTION_SURFACE_2026-04-15.md)
-3. [Inputs and qualifiers](./INPUTS_AND_QUALIFIERS_NOTE.md)
-4. [What this paper does not claim](./WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
-5. [AI assistance and accountability](./AI_ASSISTANCE_AND_ACCOUNTABILITY_NOTE.md)
-6. [External reviewer guide](./EXTERNAL_REVIEWER_GUIDE.md)
-7. [Publication state](../../CI3_Z3_PUBLICATION_STATE_2026-04-15.md)
-8. [Publication matrix](./PUBLICATION_MATRIX.md)
-9. [Quantitative summary table](./QUANTITATIVE_SUMMARY_TABLE.md)
-10. [Claims table](./CLAIMS_TABLE.md)
-11. [Derivation atlas](./DERIVATION_ATLAS.md)
-12. [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
-13. [Full claim ledger](./FULL_CLAIM_LEDGER.md)
-14. [Results index](./RESULTS_INDEX.md)
+2. [Claims table](./CLAIMS_TABLE.md)
+3. [Prediction surface](./PREDICTION_SURFACE_2026-04-15.md)
+4. [Inputs and qualifiers](./INPUTS_AND_QUALIFIERS_NOTE.md)
+5. [What this paper does not claim](./WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
+6. [Quantitative summary table](./QUANTITATIVE_SUMMARY_TABLE.md)
+7. [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
+8. [Derivation atlas](./DERIVATION_ATLAS.md)
+9. [Results index](./RESULTS_INDEX.md)
+10. [Full claim ledger](./FULL_CLAIM_LEDGER.md)
+
+For package status summaries and broader navigation:
+
+- [Publication matrix](./PUBLICATION_MATRIX.md)
 
 ## Current Package Shape
 
 **2026-04-21 package update.** The charged-lepton Koide April 21 package is
-now part of the review surface as the strongest executable support stack. The
+now the strongest executable support stack in the charged-lepton lane. The
 older bounded observational-pin and route-pruning rows are historical
 baseline/provenance unless they are explicitly cited for that purpose.
 
@@ -47,21 +46,21 @@ The package has five layers:
 1. retained theorem core
 2. retained standalone quantitative lanes (`alpha_s`, EW normalization,
    exact lattice-scale Yukawa/gauge Ward theorem)
-3. charged-lepton Koide review/support package with two explicit bridge residues
+3. charged-lepton Koide support package with two explicit bridge residues
 4. retained YT/top transport lane plus a derived Higgs/vacuum lane with a retention-decomposed budget
-5. bounded prediction surface plus one remaining live scientific gate, one closed DM flagship lane, and frozen-out route history
+5. bounded prediction surface, one closed dark-matter lane, one remaining
+   charged-lepton bridge package, and optional route history
 
 The public manuscript surface is arXiv-first. Journal-specific packaging is
-private and is not kept here as a competing public draft.
+kept separate and is not presented here as a competing public draft.
 
-The package is already predictive in a reviewer-facing sense. For the shortest
-summary of what is already predicted on the active package surface, use
+For the shortest summary of what is already predicted on the active package,
+use
 [PREDICTION_SURFACE_2026-04-15.md](./PREDICTION_SURFACE_2026-04-15.md).
 For the explicit package boundary, use:
 
 - [INPUTS_AND_QUALIFIERS_NOTE.md](./INPUTS_AND_QUALIFIERS_NOTE.md)
 - [WHAT_THIS_PAPER_DOES_NOT_CLAIM.md](./WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
-- [AI_ASSISTANCE_AND_ACCOUNTABILITY_NOTE.md](./AI_ASSISTANCE_AND_ACCOUNTABILITY_NOTE.md)
 
 ## Current Quantitative Component Stack
 
@@ -134,14 +133,14 @@ Current package status:
   [Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md](../../Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md);
   these are support theorems for the retained matter lane and future flavor
   work, not additional flagship flavor-numerics claims
-- reviewed April 19 `Cl(3) -> SM` algebraic support packet also lives in the
-  package for reviewer / atlas use only:
+- April 19 `Cl(3) -> SM` algebraic support packet also lives in the
+  package as reusable background structure:
   [CL3_SM_EMBEDDING_MASTER_NOTE.md](../../CL3_SM_EMBEDDING_MASTER_NOTE.md),
   [CL3_SM_EMBEDDING_THEOREM.md](../../CL3_SM_EMBEDDING_THEOREM.md),
   [CL3_COLOR_AUTOMORPHISM_THEOREM.md](../../CL3_COLOR_AUTOMORPHISM_THEOREM.md),
   and [CL3_TASTE_GENERATION_THEOREM.md](../../CL3_TASTE_GENERATION_THEOREM.md);
-  this is an exact algebraic support packet behind the retained matter lane,
-  not part of the accepted minimal-input stack
+  this is exact algebraic support behind the retained matter lane, not part of
+  the accepted minimal-input stack
 - derived Higgs / vacuum package with retention-decomposed budget:
   canonical `m_H = 125.1 GeV` (framework-side 3-loop route),
   retention analysis `m_H = 125.04 ± 3.17 GeV`,
@@ -155,7 +154,7 @@ Current package status:
   `M_W^tree = 79.7956 GeV`,
   `M_W^RGE = 80.5573 GeV`,
   `M_Z^tree = 91.2663 GeV`;
-  useful as a reviewer-facing consistency probe, not promoted as a retained
+  useful as a consistency probe, not promoted as a retained
   or prediction-surface mass claim
 - retained Bell/CHSH support theorem on explicit two-species lattice systems:
   KS taste operators are constructed explicitly, `G=0` stays exactly at
@@ -175,8 +174,28 @@ Current package status:
 
 ## Other Bounded Families
 
-- Historical charged-lepton mass-hierarchy observational-pin baseline, retained only as provenance behind the current Koide review/support package. Reviewer entry point: [CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md](../../CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md). It contains the algebraic Koide-cone equivalence, the retained `hw=1` second-order-return shape theorem, the mass/mixing subspace disjointness theorem `dim(V_H ∩ V_D) = 0`, six rigorous structural no-gos on retained non-Higgs-Yukawa mechanisms, three higher-order structural theorems, and the observational-pin closure at 3-real PDG input. The reviewed April 18-20 Koide support stack remains useful provenance for route-pruning and compatibility checks, but the authoritative status is now the April 21 support package rather than bounded observational-pin compatibility.
-- DM flagship closure package, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` support package, a retained-measurement A-BCC integration theorem, an interval-certified split-2 carrier closure, a shifted same-law recovered-packet selector closure, an exact target-surface chamber-root theorem, a graph-first ordered-chain current-activation theorem, an affine current-coordinate reduction theorem, and an ordered-chain graded-current delta closure theorem. So the DM lane is now closed on the current package grade and on the exact-target strict/native map. Broader chamber-wide / all-basin uniqueness beyond the pinned `σ_hier` theorem remains out of scope.
+- historical charged-lepton mass-hierarchy observational-pin baseline, kept as
+  provenance behind the current Koide package:
+  [CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md](../../CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md).
+  It contains the algebraic Koide-cone equivalence, the retained `hw=1`
+  second-order-return shape theorem, the mass/mixing subspace disjointness
+  theorem `dim(V_H ∩ V_D) = 0`, six structural no-gos on retained
+  non-Higgs-Yukawa mechanisms, three higher-order structural theorems, and
+  the observational-pin closure at 3-real PDG input. The April 18-20 Koide
+  support stack remains useful provenance for route-pruning and compatibility
+  checks, but the current package stack is the April 21 support package.
+- dark-matter closure package, with exact transport-chain progress,
+  same-surface thermal bounding and a certified current-bank
+  numerator-selector no-go, source-side reduction to the `2`-real `Z_3`
+  doublet-block law, a G1 PMNS-as-`f(H)` support package, a
+  retained-measurement A-BCC integration theorem, an interval-certified
+  split-2 carrier closure, a shifted same-law recovered-packet selector
+  closure, an exact target-surface chamber-root theorem, a graph-first
+  ordered-chain current-activation theorem, an affine current-coordinate
+  reduction theorem, and an ordered-chain graded-current delta closure
+  theorem. The dark-matter lane is therefore closed for the exact PMNS-target
+  formulation treated in the manuscript. Broader chamber-wide / all-basin
+  uniqueness beyond the pinned `σ_hier` theorem remains out of scope.
 - curated neutrino boundary/support packet in the package, with exact current-stack
   Majorana zero law, exact mass reduction to the Dirac lane, exact PMNS
   `sigma = 0` and right-conjugacy-invariant no-go closeouts, and exact
@@ -187,7 +206,7 @@ Current package status:
   inertial-mass / matter closure because the inward-source directional
   boundary remains
 - live bounded quark mass-ratio review/support stack in the package: the
-  reviewer-facing quark packet bundles the down-type CKM-dual lane, bounded
+  quark packet bundles the down-type CKM-dual lane, bounded
   up-type inversion, minimal Schur-NNI full-solve support, reduced
   projector-ray CKM+CP closure, the parameter/native/tensor-endpoint/readout
   audits, and the Route-2 exact readout/time obstruction block; the remaining
@@ -206,17 +225,11 @@ Current package status:
 ## Package Rules
 
 - the matrix is the publication inventory
-- the claims table is the retained manuscript surface
-- the derivation / validation map is the retained evidence contract
+- the claims table is the manuscript claim surface
+- the derivation / validation map is the evidence map
 - the atlas is the reusable theorem / subderivation toolbox
-- each live lane gets one canonical authority stack, not multiple competing
-  route notes
+- each live lane is represented by one canonical note stack rather than
+  multiple competing route notes
 
-If an older note is not linked from the package, it is not front-door
-authority.
-
-## Optional History Bucket
-
-- [Historical frozen-out registry](../../work_history/publication/FROZEN_OUT_REGISTRY.md)
-- [Historical remote-branch audit](../../work_history/publication/REMOTE_BRANCH_AUDIT_2026-04-14.md)
-- [Historical stale-authority audit](../../work_history/publication/STALE_AUTHORITY_AUDIT_2026-04-14.md)
+If an older note is not linked from the package, treat it as background or
+history rather than the current manuscript-facing statement.
