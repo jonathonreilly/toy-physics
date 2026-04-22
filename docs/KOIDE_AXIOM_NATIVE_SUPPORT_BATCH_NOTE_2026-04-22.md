@@ -21,6 +21,15 @@ to the charged-lepton lane:
 
 These additions materially improve atlas reuse and future closure targeting.
 
+An additional April 22 support addendum now also lands:
+
+- exact selected-line Brannen geometry, including the rigid-triangle rotation
+  picture and the exact first-branch span `π/12 = 2π/|O|`;
+- a clearly named conditional Route-3 Wilson-line support law on the
+  one-clock natural-time route;
+- an explicit finite-lattice `L = 3` Wilson-Dirac illustration showing
+  recurrence of per-fixed-site `η = 2/9` on the natural 3-generation carrier.
+
 ## What this batch does not close
 
 The open scientific status is unchanged.
@@ -61,6 +70,8 @@ Use these scripts as:
 - `scripts/frontier_koide_lane_regression.py`
 - `scripts/frontier_koide_equivariant_berry_aps_selector.py`
 - `scripts/frontier_koide_dirac_zero_mode_phase_theorem.py`
+- `scripts/frontier_koide_brannen_route3_geometry_support.py`
+- `scripts/frontier_koide_brannen_dirac_support.py`
 - `scripts/frontier_charged_lepton_radiative_yukawa_theorem.py`
 
 ### Supporting bridge tools
@@ -84,3 +95,6 @@ closure work better tools, but it does not change the current public status:
 - `Q = 2/3` support is stronger, not closed;
 - `δ = 2/9` support is stronger, not closed;
 - `v_0` support is stronger, not closed.
+
+For the Brannen-specific addendum, see
+`docs/KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`.

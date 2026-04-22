@@ -20,6 +20,9 @@ charged-lepton lane without changing that open status. What it adds is:
   mechanisms and isolates the strongest remaining candidate routes;
 - explicit Lefschetz/spectral-flow support calculations for the APS value
   `|η| = 2/9`;
+- exact selected-line Brannen geometry on the retained first branch, plus a
+  finite-lattice `L = 3` Wilson-Dirac support illustration of the ambient
+  `2/9` value;
 - explicit gauge-by-gauge Yukawa Casimir enumeration and BZ cross-check
   support for the charged-lepton radiative lane;
 - a new axiom-native support batch of selected-line/Fourier bridge tools,
@@ -115,6 +118,8 @@ So the current charged-lepton package status is:
   `KOIDE_EXPLICIT_CALCULATIONS_NOTE.md`
 - April 22 axiom-native support batch summary in
   `KOIDE_AXIOM_NATIVE_SUPPORT_BATCH_NOTE_2026-04-22.md`
+- April 22 Brannen geometry / Dirac support addendum in
+  `KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`
 - remaining open bridge behind `Q = 2/3`: why the physical charged-lepton
   packet must extremize the block-total Frobenius functional
 - remaining open bridge behind `δ = 2/9`: why the physical selected-line
@@ -156,6 +161,7 @@ So the current charged-lepton package status is:
 27. [KOIDE_EXPLICIT_CALCULATIONS_NOTE.md](./KOIDE_EXPLICIT_CALCULATIONS_NOTE.md)
 28. [KOIDE_AXIOM_NATIVE_SUPPORT_BATCH_NOTE_2026-04-22.md](./KOIDE_AXIOM_NATIVE_SUPPORT_BATCH_NOTE_2026-04-22.md)
 29. [KOIDE_CLOSURE_ATLAS_ISSUES_FLAGGED.md](./KOIDE_CLOSURE_ATLAS_ISSUES_FLAGGED.md)
+30. [KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md](./KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md)
 
 ## Package Role
 
@@ -221,7 +227,9 @@ So the current package classification is:
   dimension-ratio lemma family, and the quartic-potential import route
 - strongest current executable support for `delta = 2/9`, with the physical
   Brannen-phase bridge still open; the April 22 batch adds explicit
-  Lefschetz/spectral-flow support and a numerical selected-line consistency
-  check, but not the physical identification theorem
+  Lefschetz/spectral-flow support, exact selected-line geometric support,
+  a conditional Route-3 Wilson-line support law, and a finite-lattice
+  `L = 3` Wilson-Dirac illustration, but not the physical identification
+  theorem
 - retained promotion for charged-lepton ratios is still conditional on those
   two bridges, modulo the separate overall lepton scale input `v_0`

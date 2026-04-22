@@ -7,16 +7,21 @@ phase `δ = 2/9 rad`, and their compatibility identity `Q = 3·δ`.
 **Status:** Ready for review as the strongest current executable support
 package. Two explicit scientific bridges remain open.
 
-**2026-04-22 support addendum.** The April 22 axiom-native support batch
-adds new bridge-targeting tools, selected-line/Fourier bridge diagnostics,
-zero-mode / APS support models, and radiative Yukawa support calculations.
-These additions strengthen the package materially without changing the open
-status of the two physical bridges. See
-`docs/KOIDE_AXIOM_NATIVE_SUPPORT_BATCH_NOTE_2026-04-22.md`.
+**2026-04-22 support addendum.** The April 22 support work now comes in two
+layers. The first adds new bridge-targeting tools, selected-line/Fourier
+bridge diagnostics, zero-mode / APS support models, and radiative Yukawa
+support calculations. The second adds a Brannen-specific geometry/Dirac
+support layer: exact selected-line rotation geometry, octahedral-domain
+support, a conditional Route-3 Wilson-line law, and an explicit finite-lattice
+`L = 3` Wilson-Dirac illustration of the ambient `2/9` value. These additions
+strengthen the package materially without changing the open status of the two
+physical bridges. See
+`docs/KOIDE_AXIOM_NATIVE_SUPPORT_BATCH_NOTE_2026-04-22.md` and
+`docs/KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`.
 
-**Executability guarantee.** Every PASS check across the 8 runners is an
-actual executable computation: symbolic via sympy, numeric via PDG lepton
-masses, or direct structural checks. Totals: **201 PASS / 0 FAIL**.
+**Executability guarantee.** Every PASS check across the current runner stack
+is an actual executable computation: symbolic via sympy, numeric via PDG
+lepton masses, or direct structural checks. Totals: **242 PASS / 0 FAIL**.
 
 ---
 
@@ -31,6 +36,21 @@ This package does two things cleanly:
 
 These are strong results. They are not the same as full retained
 closure of the physical charged-lepton observables.
+
+The April 22 Brannen addendum sharpens the `δ` lane further, but still at
+support grade:
+
+- the selected-line `δ(m)` is now backed by an exact Euclidean rotation
+  geometry on the retained first branch;
+- the branch span is exactly `π/12 = 2π/|O|` on the cubic/octahedral carrier;
+- the same `2/9` value appears on a conditional Route-3 one-clock Wilson-line
+  law;
+- an explicit finite-lattice `3 × 3 × 3` Wilson-Dirac construction realizes
+  per-fixed-site `η = 2/9` at discrete plateaus on the natural 3-generation
+  carrier.
+
+These additions materially strengthen the bridge search without changing the
+fact that the physical Brannen-phase bridge itself remains open.
 
 ---
 
@@ -121,10 +141,13 @@ selected-line `CP^1` carrier equals this ambient APS invariant.
 - `scripts/frontier_koide_aps_topological_robustness.py` — **41/41 PASS**
 - `scripts/frontier_koide_c3_spatial_rotation.py` — **16/16 PASS**
 - `scripts/frontier_koide_aps_block_by_block_forcing.py` — **29/29 PASS**
+- `scripts/frontier_koide_brannen_route3_geometry_support.py` — **30/30 PASS**
+- `scripts/frontier_koide_brannen_dirac_support.py` — **11/11 PASS**
 
 ### Main note
 
 - `docs/KOIDE_APS_BLOCK_BY_BLOCK_FORCING_NOTE_2026-04-21.md`
+- `docs/KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`
 
 ---
 
@@ -192,8 +215,10 @@ above.
 | `frontier_koide_frobenius_isotype_split_uniqueness.py` | Koide support: Frobenius-isotype forcing chain | 28/28 |
 | `frontier_koide_Q_eq_3delta_identity.py` | compatibility identity `Q = 3·δ` | 10/10 |
 | `frontier_koide_reviewer_stress_test.py` | reviewer stress-test | 34/34 |
+| `frontier_koide_brannen_route3_geometry_support.py` | Brannen support: exact selected-line geometry + conditional Route-3 support | 30/30 |
+| `frontier_koide_brannen_dirac_support.py` | Brannen support: explicit finite-lattice `L=3` Wilson-Dirac illustration | 11/11 |
 
-**Total: 201 PASS, 0 FAIL.**
+**Total: 242 PASS, 0 FAIL.**
 
 ### Notes
 
@@ -201,6 +226,7 @@ above.
 - `docs/KOIDE_FROBENIUS_ISOTYPE_SPLIT_UNIQUENESS_NOTE_2026-04-21.md`
 - `docs/KOIDE_Q_EQ_3DELTA_IDENTITY_NOTE_2026-04-21.md`
 - `docs/KOIDE_REVIEWER_STRESS_TEST_NOTE_2026-04-21.md`
+- `docs/KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`
 
 ---
 
@@ -213,6 +239,7 @@ above.
 5. `docs/KOIDE_APS_BLOCK_BY_BLOCK_FORCING_NOTE_2026-04-21.md`.
 6. `docs/KOIDE_Q_EQ_3DELTA_IDENTITY_NOTE_2026-04-21.md`.
 7. `docs/KOIDE_REVIEWER_STRESS_TEST_NOTE_2026-04-21.md`.
+8. `docs/KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`.
 
 ---
 

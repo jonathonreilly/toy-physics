@@ -23,6 +23,8 @@ SCRIPTS = ROOT / "scripts"
 RUNNERS = [
     ("frontier_koide_equivariant_berry_aps_selector.py", 15),
     ("frontier_koide_dirac_zero_mode_phase_theorem.py", 10),
+    ("frontier_koide_brannen_route3_geometry_support.py", 30),
+    ("frontier_koide_brannen_dirac_support.py", 11),
     ("frontier_charged_lepton_radiative_yukawa_theorem.py", 11),
     ("frontier_koide_eta_lefschetz_spectral_flow.py", 8),
     ("frontier_charged_lepton_yukawa_diagrammatic_enumeration.py", 8),
@@ -113,6 +115,10 @@ def main() -> int:
         print("  - Z_3 (1, 2)       : structurally unique on V_3")
         print("  - |η_AS| = 2/9     : ambient APS value fixed exactly")
         print("  - zero-mode / APS  : strengthened candidate bridge to physical δ")
+        print("  - Brannen geometry : exact selected-line rotation / octahedral-domain")
+        print("                      support on the retained first branch")
+        print("  - finite-lattice   : explicit L=3 Wilson-Dirac descent illustration")
+        print("                      for the ambient 2/9 value")
         print("  - C_τ = 1 route    : explicit radiative/Yukawa support calculation")
         print("  - Q = 2/3 support  : exact identities, A1 audits, bridge candidates")
         print("  - positive-parent, selected-line, and set-equality tools")
