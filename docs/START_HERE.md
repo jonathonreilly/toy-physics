@@ -75,4 +75,4 @@ already predicts beyond the retained theorem core, use:
 
 Remaining live gates are now:
 
-1. DM flagship gate
+1. charged-lepton Koide bridge package

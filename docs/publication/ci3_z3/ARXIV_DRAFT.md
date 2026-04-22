@@ -691,25 +691,15 @@ history separately from the live promoted algebraic CKM package.
 
 ### 6.3 The remaining live gate
 
-The only remaining live flagship gate is the dark-matter closure package. The
-exact one-flavor leptogenesis transport chain is now internally closed on the
-theorem-native radiation branch. On the same-surface DM side, the thermal layer
-is no longer only support: it is theorem-grade bounded, with a certified
-current-bank numerator-selector no-go and a certified unique root interval on
-the admitted one-scalar family. On the PMNS-assisted side, the constructive
-projected-source chamber now contains an exact `eta/eta_obs = 1` point on the
-fixed native `N_e` seed surface, so the last-mile blocker is no longer
-constructive existence. On the source-oriented side, the exact support stack
-still reduces the remaining `H`-side object all the way to the right-sensitive
-`2`-real `Z_3` doublet-block law and closes negatively at the current-bank
-level there. The new parity-compatible diagonal-baseline tools clarify the
-local observable-curvature route, but they remain diagnostic rather than
-selector-closing. So the remaining positive theorem target is the
-right-sensitive microscopic selector law on `dW_e^H = Schur_Ee(D_-)`,
-equivalently the intrinsic `2`-real `Z_3` doublet-block point-selection law,
-together with interval-certified exact-carrier dominance/completeness on the
-residual split-2 branch. The reviewer-facing current-bank quantitative
-mapping item is now closed separately. That is why dark matter stays open.
+The only remaining live flagship gate is the charged-lepton Koide bridge
+package. The current executable support stack already isolates the Koide point
+by the Frobenius-isotype / AM-GM route and isolates the ambient Brannen-phase
+value `η = 2/9` by the ABSS fixed-point / topological-robustness route. What
+remains open are the two physical bridges: why the physical charged-lepton
+packet must extremize the block-total Frobenius functional, and why the
+physical selected-line Brannen phase equals the ambient APS invariant. The
+selected-line witness `m_* / (w/v)` remains downstream of the second bridge,
+and the overall lepton scale `v_0` remains outside the package.
 
 The cosmology family is now cleaner than before and no longer needs to be
 treated as several unrelated blockers. The public package now carries a

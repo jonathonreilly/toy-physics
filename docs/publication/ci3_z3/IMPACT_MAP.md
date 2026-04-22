@@ -21,6 +21,6 @@
 
 ## What raises the score next
 
-1. close the DM flagship gate
+1. close the remaining charged-lepton Koide bridges
 2. close renormalized `y_t`
 3. close CKM / quantitative flavor

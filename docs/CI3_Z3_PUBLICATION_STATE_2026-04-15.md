@@ -236,29 +236,16 @@ surface:
 
 The remaining live paper gates are:
 
-1. DM flagship gate
+1. charged-lepton Koide bridge package
 
-   The live DM gate now includes a repo-tracked G1 PMNS-as-`f(H)`
-   conditional/support package: the PMNS map from `H` is fixed, `q_H`
-   is discharged as GAUGE-retained by the Higgs `Z_3` gauge-redundancy
-   theorem, `σ_hier = (2, 1, 0)` is observationally unique at the pinned
-   chamber point, and the known `C_neg` chi²=0 basins are CP-phase
-   excluded under the physical pairing. The reviewed selector obstruction
-   science stack further shows that selector-side ambiguity is already
-   compressed to intrinsic threshold-law nonrealization on the current
-   exact bank, and that the tested carrier-side pressure is exhausted to
-   two explicit split-2 upper-face neighborhoods. The reviewed Wilson
-   direct-descendant science stack further shows that current `main`
-   carries no hidden Wilson-to-`dW_e^H` descendant law, while explicit
-   structured positive model classes and manifold-valued constructive
-   positive exact closure already exist on the fixed native `N_e` seed
-   surface. The gate nevertheless remains open because `A-BCC` is still
-   observationally grounded rather than axiom-native, and the finer
-   right-sensitive microscopic selector law for the physical source
-   branch / point, together with interval-certified exact-carrier
-   dominance/completeness on that residual split-2 selector branch, is still
-   missing. The reviewer-facing current-bank quantitative mapping item is now
-   closed separately.
+   The live charged-lepton package now has a clean reviewer-facing support
+   stack: the Frobenius-isotype / AM-GM route isolates `Q = 2/3`, the
+   ABSS fixed-point / topological-robustness route isolates ambient
+   `eta = 2/9`, and the stress-test package is clean. What remains open is
+   not the arithmetic but the physical identification: the physical/source-law
+   bridge behind `Q = 2/3`, the physical Brannen-phase bridge behind
+   `delta = 2/9`, the downstream selected-line witness `m_* / (w/v)` as a
+   consequence of that second bridge, and the separate overall scale `v_0`.
 
 Outside the flagship paper core, a live partial neutrino boundary/support
 packet is now also on `main`:
@@ -368,5 +355,5 @@ batches:
 > infrastructure, a full-framework one-generation Standard Model closure, a
 > derived electroweak hierarchy / `v` scale on the exact minimal hierarchy
 > block, and a retained three-generation matter structure in the same
-> framework. The remaining live paper gates are the DM flagship gate, renormalized
+> framework. The remaining live paper gates are the charged-lepton Koide bridge package, renormalized
 > `y_t`, and quantitative flavor closure.

@@ -197,7 +197,7 @@ Current status from that stack:
 
 ## Bounded Prediction Surface
 - W-boson same-surface EW consistency probe. Reviewer entry point: [W_MASS_DERIVED_NOTE.md](../../W_MASS_DERIVED_NOTE.md). Repo status: `bounded`. On the retained EW lane the framework-side readouts are `M_W^tree = 79.7956 GeV`, `M_W^RGE = 80.5573 GeV`, `M_Z^tree = 91.2663 GeV`. The remaining `~0.19 GeV` `M_W` gap tracks the existing retained `g_2(v)` precision and is therefore treated as a reviewer-facing same-surface consistency probe, not as a retained or few-MeV SM-indirect `M_W` prediction.
-- DM flagship gate, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` bounded package that now fixes `σ_hier = (2, 1, 0)` observationally at the pinned chamber point and gives a CP-phase no-go for the known `C_neg` chi²=0 basins under the physical pairing, an interval-certified split-2 carrier closure, a reviewer-facing current-bank quantitative mapping note, and a reviewed selector obstruction stack that now closes the current recovered-packet selector by the shifted same-law theorem together with a reviewed Wilson direct-descendant science stack showing that the current package carries no hidden Wilson-to-`dW_e^H` descendant law while explicit structured positive model classes and manifold-valued constructive positive exact closure already exist on the fixed native `N_e` seed surface: the DM review surface is now closed at the current package grade; what remains outside that grade is the stricter native source-chart / branch-choice derivation from `Cl(3)/Z^3` alone
+- DM flagship closure package, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` support package, a retained-measurement A-BCC integration theorem, an interval-certified split-2 carrier closure, a shifted same-law recovered-packet selector closure, an exact target-surface chamber-root theorem, a graph-first ordered-chain current-activation theorem, an affine current-coordinate reduction theorem, and an ordered-chain graded-current delta closure theorem. So the DM lane is now closed on both the current package grade and the stricter/native map.
 - persistent exact-lattice compact-object companion in the package, with one
   retained blended readout on the nearby family and a `top4` multistage floor
   that survives beyond the widened pocket, but still below persistent
@@ -222,31 +222,17 @@ Current status from that stack:
 
 ## What Is Still Open
 
-1. DM flagship gate
+1. Charged-lepton Koide review/support package
 
-   The live DM gate already includes the repo-tracked G1 PMNS-as-`f(H)`
-   bounded package, the retained local P3 Sylvester linear-path signature
-   theorem, the observationally unique `σ_hier = (2, 1, 0)` pin theorem, the
-   known-`C_neg` CP-phase no-go support theorem, the reviewed selector
-   obstruction science stack, and the reviewed Wilson direct-descendant
-   science stack. So the current package already fixes the PMNS map from `H`,
-   discharges `q_H` as GAUGE-retained, proves the pointwise signature
-   `(2, 0, 1)` theorem-grade at the retained P3 pin, fixes the physical
-   hierarchy pairing observationally at that pin, grounds the known
-   component-choice competitors observationally, compresses selector-side
-   ambiguity to intrinsic threshold-law nonrealization on the current exact
-   bank, excludes any hidden Wilson-to-`dW_e^H` descendant law on the current
-   bank, and exhibits explicit structured positive model classes together with
-   manifold-valued constructive positive exact closure on the fixed native
-   `N_e` seed surface, while the tested carrier-side pressure is exhausted to
-   two explicit split-2 upper-face neighborhoods. The review-surface gate is
-   now closed at the current package grade because A-BCC closes on the
-   retained-measurement stack, the residual split-2 carrier pressure is
-   interval-certified closed, and the current recovered-packet selector closes
-   by the shifted same-law theorem. What remains outside that grade is the
-   stricter native source-chart / branch-choice derivation from `Cl(3)/Z^3`
-   alone. The reviewer-facing current-bank quantitative DM mapping item is
-   now closed.
+   The current package already isolates the charged-lepton Koide point by the
+   Frobenius-isotype / AM-GM support stack and isolates the ambient
+   Brannen-phase value `η = 2/9` by the ABSS fixed-point / topological
+   robustness route. What remains open are the two physical bridges: why the
+   physical charged-lepton packet must extremize the block-total Frobenius
+   functional, and why the physical selected-line Brannen phase equals the
+   ambient APS invariant. The selected-line witness `m_* / (w/v)` remains
+   downstream of the second bridge, and the overall lepton scale `v_0`
+   remains outside the package.
 
 Outside the flagship paper surface, a curated neutrino boundary/support packet
 is now also live in the package:

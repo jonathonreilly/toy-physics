@@ -15,7 +15,8 @@ Poisson/Newton chain together with weak-field WEP and time dilation, exact
 native `SU(2)`, graph-first structural `SU(3)`, anomaly-forced `3+1`, a
 retained `S^3` compactification / topology closure, a full-framework
 one-generation closure, and a retained three-generation matter structure. The
-remaining live DM bridge is shown separately as a bounded/open lane rather than
+remaining live charged-lepton Koide bridges are shown separately as an
+open/support lane rather than
 folded into the main claim.
 
 ### Figure 2. Graph-first structural `SU(3)`
