@@ -73,8 +73,10 @@ Fast reviewer path after this page:
   provenance; the April 21 package now supplies the strongest executable
   support for both `Q = 2/3` and `δ = 2/9`, but the physical/source-law
   extremal-principle bridge behind `Q` and the physical Brannen-phase bridge
-  behind `δ` remain open; the separate overall scale `v_0` also remains
-  outside that package
+  behind `δ` remain open; the April 22 support batch adds an explicit A1
+  landscape audit plus explicit APS/Yukawa support calculations and atlas
+  caveat cleanup, but it does not change those open bridges; the separate
+  overall scale `v_0` also remains outside that package
 - bounded prediction surface plus one dual-status flavor corollary:
   proton lifetime, the CKM-only neutron-EDM corollary with bounded
   continuation, down-type flavor-mass CKM-dual ratios, vacuum critical

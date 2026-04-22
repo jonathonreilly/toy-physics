@@ -149,7 +149,11 @@ Current quantitative statuses:
   strongest current executable support for both `Q = 2/3` and `δ = 2/9`; the
   remaining live charged-lepton blockers are the physical/source-law
   extremal-principle bridge behind `Q`, the physical Brannen-phase bridge
-  behind `δ`, and the separate overall lepton scale `v_0`
+  behind `δ`, and the separate overall lepton scale `v_0`; the April 22
+  support batch now adds an explicit A1 landscape audit, explicit
+  Lefschetz/spectral-flow support calculations, explicit gauge-by-gauge
+  Yukawa support calculations, and a clean atlas-issues note, but it does
+  not change those remaining open bridges
 - DM flagship closure package, with exact transport-chain progress, theorem-grade
   same-surface thermal bounding and a certified current-bank
   numerator-selector no-go, source-side reduction all the way to the `2`-real
@@ -202,6 +206,9 @@ Current quantitative statuses:
    the physical selected-line Brannen phase equals the ambient APS invariant.
    The selected-line witness `m_*` / `w/v` remains downstream of the second
    bridge. The overall lepton scale `v_0` also remains outside the package.
+   The April 22 support batch materially tightens this lane by mapping the
+   A1 failure landscape and isolating the strongest remaining candidate
+   bridges, but it does not eliminate either physical bridge.
 
 2. DM flagship closure package
 

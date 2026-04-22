@@ -13,6 +13,17 @@ stronger than the April 18-20 state, but it does not yet give
 retained-forced closure for either `Q = 2/3` or `δ = 2/9`. The older
 conditional evening discussion below remains historical provenance.
 
+**2026-04-22 support update.** The April 22 batch materially strengthens the
+charged-lepton lane without changing that open status. What it adds is:
+
+- an explicit A1 landscape audit that documents failed standard bridge
+  mechanisms and isolates the strongest remaining candidate routes;
+- explicit Lefschetz/spectral-flow support calculations for the APS value
+  `|η| = 2/9`;
+- explicit gauge-by-gauge Yukawa Casimir enumeration and BZ cross-check
+  support for the charged-lepton radiative lane;
+- a clean list of atlas issues and caveats that still matter for honest review.
+
 ## Historical Route-Pruning Record
 
 Before the final April 21 support package, the stack passed through the following
@@ -92,13 +103,22 @@ So the current charged-lepton package status is:
 - reviewer-tested ABSS fixed-point / topological-robustness support for
   `δ = 2/9` in
   `KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md`
+- April 22 support batch: explicit A1 route audit in
+  `KOIDE_A1_DERIVATION_STATUS_NOTE.md`,
+  `KOIDE_A1_CLOSURE_RECOMMENDATION_2026-04-22.md`,
+  `KOIDE_A1_LOOP_INVESTIGATION_SUMMARY.md`, and
+  `KOIDE_A1_PHYSICAL_BRIDGE_ATTEMPT_2026-04-22.md`
+- April 22 explicit support calculations in
+  `KOIDE_EXPLICIT_CALCULATIONS_NOTE.md`
 - remaining open bridge behind `Q = 2/3`: why the physical charged-lepton
   packet must extremize the block-total Frobenius functional
 - remaining open bridge behind `δ = 2/9`: why the physical selected-line
   Brannen phase equals the ambient APS invariant
 - selected-line witness `m_*` / `w/v` remains downstream of the physical
   Brannen-phase bridge
-- overall lepton mass scale v_0 still open (separate hierarchy input)
+- overall lepton mass scale `v_0` remains a separate support lane: the
+  April 22 radiative/Yukawa calculations strengthen it materially, but it is
+  still not promoted to closure on the review surface
 
 ## Read In Order
 
@@ -124,6 +144,12 @@ So the current charged-lepton package status is:
 20. [KOIDE_WEIGHTED_CHARACTER_SOURCE_AXIS_THEOREM_NOTE_2026-04-20.md](./KOIDE_WEIGHTED_CHARACTER_SOURCE_AXIS_THEOREM_NOTE_2026-04-20.md)
 21. [KOIDE_HIGGS_DRESSED_RESOLVENT_ROOT_THEOREM_NOTE_2026-04-20.md](./KOIDE_HIGGS_DRESSED_RESOLVENT_ROOT_THEOREM_NOTE_2026-04-20.md)
 22. [KOIDE_QUBIT_LATTICE_DIM_ALGEBRAIC_CLOSURE_NOTE_2026-04-20.md](./KOIDE_QUBIT_LATTICE_DIM_ALGEBRAIC_CLOSURE_NOTE_2026-04-20.md) **(evening closure)**
+23. [KOIDE_A1_DERIVATION_STATUS_NOTE.md](./KOIDE_A1_DERIVATION_STATUS_NOTE.md)
+24. [KOIDE_A1_CLOSURE_RECOMMENDATION_2026-04-22.md](./KOIDE_A1_CLOSURE_RECOMMENDATION_2026-04-22.md)
+25. [KOIDE_A1_LOOP_INVESTIGATION_SUMMARY.md](./KOIDE_A1_LOOP_INVESTIGATION_SUMMARY.md)
+26. [KOIDE_A1_PHYSICAL_BRIDGE_ATTEMPT_2026-04-22.md](./KOIDE_A1_PHYSICAL_BRIDGE_ATTEMPT_2026-04-22.md)
+27. [KOIDE_EXPLICIT_CALCULATIONS_NOTE.md](./KOIDE_EXPLICIT_CALCULATIONS_NOTE.md)
+28. [KOIDE_CLOSURE_ATLAS_ISSUES_FLAGGED.md](./KOIDE_CLOSURE_ATLAS_ISSUES_FLAGGED.md)
 
 ## Package Role
 
@@ -184,8 +210,12 @@ Items that remain open:
 So the current package classification is:
 
 - strongest current executable support for `Q = 2/3`, with the
-  extremal-principle bridge still open
+  extremal-principle bridge still open; strongest remaining A1 routes are now
+  the Yukawa Casimir-difference lemma, the Lie-theoretic / Clifford
+  dimension-ratio lemma family, and the quartic-potential import route
 - strongest current executable support for `delta = 2/9`, with the physical
-  Brannen-phase bridge still open
+  Brannen-phase bridge still open; the April 22 batch adds explicit
+  Lefschetz/spectral-flow support and a numerical selected-line consistency
+  check, but not the physical identification theorem
 - retained promotion for charged-lepton ratios is still conditional on those
   two bridges, modulo the separate overall lepton scale input `v_0`

@@ -20,6 +20,21 @@ Two scientific bridges remain open:
 
 The downstream selected-line witness remains conditional on the second bridge.
 
+**2026-04-22 support update.** The April 22 Koide batch does not change the
+open-import count, but it sharpens both live bridges. The A1 landscape is now
+explicitly audited, five standard bridge attempts are documented negative, and
+the strongest remaining A1 candidates are now isolated to:
+
+- the Yukawa Casimir-difference lemma;
+- the Lie-theoretic / Clifford-dimension-ratio lemma family;
+- the quartic-potential import route.
+
+On the Brannen side, the branch now also carries explicit Lefschetz /
+spectral-flow support for `|η| = 2/9`, explicit gauge-by-gauge Yukawa
+enumeration support, and a selected-line numerical compatibility check between
+the candidate APS pin and the retained `H_*` witness. None of those closes the
+physical Brannen-phase bridge by itself.
+
 ## §0 Summary table
 
 | Import | Lane | Current status | What closes it |
