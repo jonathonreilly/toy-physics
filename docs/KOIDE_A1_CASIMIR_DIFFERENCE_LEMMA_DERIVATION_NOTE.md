@@ -179,6 +179,7 @@ permutation on the hw=1 carrier; the same projectors decompose the
 diagonal mass matrix into its trace (A_1) and traceless (E) pieces.
 
 | O2.a | `frontier_koide_a1_casimir_difference_o2a_sum_enumeration.py` | 15 PASS — gauge-by-gauge SUM enumeration; SUM=1 shared by {L, H, e_R} |
+| O2.b | `frontier_koide_a1_casimir_difference_o2b_trivial_weight.py` | 6 PASS — trivial-character weight inherits SUM via generation-blind y_τ chain |
 
 **O2.a clarification.** The SUM `T(T+1) + Y² = 1` is *not* unique to
 the Yukawa-doublet participants — it also holds for `e_R` because
