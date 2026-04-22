@@ -189,6 +189,7 @@ A1 reduces to `(T(T+1)−Y²)/(T(T+1)+Y²) = 1/2`, which is independent
 of `c`.
 
 | O3.a | `frontier_koide_a1_casimir_difference_o3a_offdiag_enumeration.py` | 8 PASS — E-isotype channel = W± Casimir = T(T+1)−T_3²; reduces to T(T+1)−Y² for L/H |
+| O3.b | `frontier_koide_a1_casimir_difference_o3b_same_loop.py` | 7 PASS — same K_loop on diagonal and off-diagonal channels (same Feynman topology) |
 
 **O3.a observation.** The W3 and B exchanges are flavor-diagonal, so
 their Casimir contributions are pure A_1. Only W± (off-diagonal
