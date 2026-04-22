@@ -102,11 +102,12 @@ packaging.
   source cubic already select Basin 1 uniquely on `{Basin 1, Basin 2,
   Basin X}`, a new graph-first ordered-chain current-activation theorem
   supplying one explicit sole-axiom nonzero-current law with
-  `A_ord = diag(1,2,3) + (E12 + E23 + E31)` and `J_chi = 1`, and a new affine
-  current-coordinate theorem showing that on the physical affine chart the
-  native current reads only `J_chi(H) = q_+ - i/4`. So the DM lane is closed
-  on the current package grade, while the stricter/native map now carries one
-  remaining real `delta / Im K_Z3[1,2]` selector law beyond current activation.
+  `A_ord = diag(1,2,3) + (E12 + E23 + E31)` and `J_chi = 1`, a new affine
+  current-coordinate theorem identifying the remaining physical affine scalar
+  as the `delta / Im K_Z3[1,2]` direction, and a later ordered-chain
+  graded-current closure theorem closing that scalar exactly on the retained
+  `hw=1` response family. So the DM lane is now closed on both the current
+  package grade and the stricter/native map.
   The reviewer-facing three-identity proposal is retained as support only: the
   product and determinant laws are not yet derived, and the present uniqueness
   evidence is numerical rather than theorem-grade
@@ -114,7 +115,7 @@ packaging.
   canonical recovered-branch breakpoint candidate `tau_b,min`, but the
   strongest current framework-internal observable-relative-action selector does
   not yet land on that recovered branch and instead carries its own later
-  breakpoint. A new same-branch projection support theorem now shows that the
+  breakpoint. A new projection support theorem now shows that the
   exact internal selector nevertheless has one canonical recovered image
   already: across Frobenius, target, threshold-profile, affine-invariant, dual
   LogDet, and inverse-eigenvalue metrics, the unique nearest recovered point is
@@ -168,10 +169,9 @@ packaging.
 
 1. Charged-lepton Koide bridge package
 
-On the current package grade, the DM flagship lane is no longer a live gate on
-this branch. On the stricter/native map, the remaining question is now much
-sharper: derive the one additional real `delta / Im K_Z3[1,2]` law that
-remains after current activation has already closed the `q_+` coordinate.
+On the current package surface, the DM flagship lane is no longer a live gate on either the
+current package grade or the stricter/native map. The remaining flagship
+scientific gate is the charged-lepton Koide bridge package above.
 
 ## Where The Package Lives
 

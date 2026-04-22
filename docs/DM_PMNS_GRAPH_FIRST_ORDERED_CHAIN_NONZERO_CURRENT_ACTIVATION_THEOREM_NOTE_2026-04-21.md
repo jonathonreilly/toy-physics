@@ -3,7 +3,8 @@
 **Date:** 2026-04-21  
 **Lane:** strict/native DM last-mile current activation  
 **Status:** exact positive current-activation theorem on the retained `hw=1`
-response family  
+response family; historical precursor to the later same-day graded-current
+delta closure theorem on the physical affine/source family
 **Primary runner:**  
 `scripts/frontier_dm_pmns_graph_first_ordered_chain_nonzero_current_closure_2026_04_21.py`
 
@@ -278,12 +279,14 @@ It does **not** import PMNS target values or fit data.
 ### 4.3 What remains outside this lane
 
 This theorem does **not** by itself prove that the ordered-chain law is the
-physical PMNS last-mile law, rather than one exact sole-axiom nonzero-current
+full physical PMNS last-mile law, rather than one exact sole-axiom nonzero-current
 activation route. The later affine-current sharpening theorem is stronger than
 that boundary statement: on the physical affine chart the native current reads
-only `q_+`, so one additional real `delta / Im K_Z3[1,2]` law still remains
-beyond current activation. It also does not address the separate
-charged-lepton physical bridges or the overall lepton scale lane.
+only `q_+`, isolating the remaining real `delta / Im K_Z3[1,2]` direction
+exactly. The later ordered-chain graded-current closure theorem then closes
+that remaining scalar on the retained `hw=1` response family. It also does not
+address the separate charged-lepton physical bridges or the overall lepton
+scale lane.
 
 ---
 

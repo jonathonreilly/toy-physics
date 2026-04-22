@@ -4,8 +4,8 @@
 **Scope:** Reviewer-facing clean-language summary of four Tier-1 Standard
 Model scalar-selector gates on the current review surface. The package closes
 the up-sector quark gate, materially sharpens the charged-lepton Koide gates,
-and closes the DM gate on the review surface while materially sharpening the
-stricter/native map without adding new axioms.
+and closes the DM gate on both the review surface and the stricter/native map
+without adding new axioms.
 Named retained observational inputs and unresolved structural bridges are
 listed explicitly. This note is the primary read-me for the submission.
 
@@ -15,10 +15,9 @@ listed explicitly. This note is the primary read-me for the submission.
 
 On the current review surface, the up-sector quark gate is fully closed, the
 charged-lepton Koide lane carries the strongest current executable support
-stack but still retains two physical bridges, and the DM gate is closed on the
-review surface while the stricter/native map now carries one remaining real
-`delta / Im K_Z3[1,2]` selector law beyond current activation. No new axioms
-are added.
+stack but still retains two physical bridges, and the DM gate is closed on
+both the review surface and the stricter/native map by the same-day April 21
+theorem stack. No new axioms are added.
 All runners pass with no hardcoded verifications. Open retained-observational
 inputs and unresolved structural bridges are enumerated separately in
 `docs/SCALAR_SELECTOR_REMAINING_OPEN_IMPORTS_2026-04-20.md`.
@@ -34,7 +33,7 @@ physical Brannen-phase bridge.
 |---|---|---|---|
 | **Koide κ** | Charged-lepton cone normalization `κ = 2` (equivalently `Q = 2/3`) | April 21 support package: Frobenius-isotype / AM-GM support + executable reviewer stress-test | physical/source-law bridge from retained framework physics to the block-total Frobenius extremal principle |
 | **Koide θ** | Brannen-Zenczykowski phase offset `δ = 2/9` | April 21 support package: ABSS fixed-point / topological robustness + executable reviewer stress-test | physical Brannen-phase bridge from the selected-line observable to the ambient APS invariant |
-| **DM PMNS** | Physical neutrino-source basin selection plus intrinsic PMNS point selection | Retained-measurement A-BCC integration + interval-certified split-2 closure + shifted same-law recovered-packet closure + exact target-surface source-cubic theorem + graph-first ordered-chain nonzero-current activation theorem + affine current-coordinate reduction theorem | none on the review surface; on the stricter/native map one additional real `delta / Im K_Z3[1,2]` selector law remains after current activation |
+| **DM PMNS** | Physical neutrino-source basin selection plus intrinsic PMNS point selection | Retained-measurement A-BCC integration + interval-certified split-2 closure + shifted same-law recovered-packet closure + exact target-surface source-cubic theorem + graph-first ordered-chain nonzero-current activation theorem + affine current-coordinate reduction theorem + ordered-chain graded-current delta closure theorem | none on the review surface or on the stricter/native map |
 | **Quark a_u** | Up-sector reduced amplitude `a_u = 0.7748865611` | Affine-physical-carrier JTS + one-dimensional 5-channel residue + RPSR NLO | Bimodule `B = Cl(3)/Z₃ ⊗ Cl_CKM(1⊕5)`, retained atoms `ρ, supp, δ_A1` (CKM atlas) |
 
 ---
@@ -146,7 +145,7 @@ live on the physical base. It survives only as an internally coherent
 illustration. The physical-base closure is the selected-line CP¹
 Pancharatnam–Berry identification above, which uses the projective
 doublet-coordinate phase-doubling `e^{−2iθ}` in place of any ambient
-topological flux. The same-branch linking theorem then identifies the honest
+topological flux. The linking theorem then identifies the honest
 remaining gap precisely: the structural count `2/d²` is available, but its
 identification with the physical Berry holonomy in radians is not forced on
 the retained base.
@@ -243,19 +242,20 @@ contradict the five-route audit globally: outside that exact chamber-root set,
 ### §3.4 Retained inputs
 
 There is no longer a retained observational input on the DM flagship lane.
-The chamber bound `q_+ + δ ≥ √(8/3)` is no longer retained input on this
-branch: it now has a reviewer-grade inline derivation in
+The chamber bound `q_+ + δ ≥ √(8/3)` is no longer retained input in the
+current package: it now has a reviewer-grade inline derivation in
 `docs/DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md`. The CP-sign /
-`σ_hier` half is also no longer retained input on this branch: it is derived by the
+`σ_hier` half is also no longer retained input in the current package: it is derived by the
 active-chamber completeness theorem, the parity reduction, the upper-octant
 law, and the coefficient-free source-cubic selector. The fixed-`N_e`
 exact-source-manifold theorem sharpened the reduced graph-first carrier to one
-complex current `J_chi`, and the new graph-first ordered-chain theorem now
-lands one explicit same-branch current-activation law on that target. The
-later affine current-coordinate theorem then shows that on the physical affine
-Hermitian chart the native current reads only `J_chi(H) = q_+ - i/4`, so
-current activation closes the `q_+` coordinate while one additional real
-`delta / Im K_Z3[1,2]` law remains open.
+complex current `J_chi`; the graph-first ordered-chain theorem then lands one
+explicit current-activation law on that target; the affine
+current-coordinate theorem identifies the remaining physical affine scalar as
+the `delta / Im K_Z3[1,2]` direction; and the ordered-chain graded-current
+closure theorem closes that remaining scalar exactly on the retained `hw=1`
+response family. So there is no remaining strict/native DM selector residue in
+the current package.
 
 The fixed-`N_e` exact-source-manifold theorem further sharpened the angle-side gap:
 the physical PMNS target already lies on an exact regular local `2`-real
@@ -285,13 +285,18 @@ PMNS target surface is granted, the separate A-BCC target-surface residue is
 already reduced away by the exact chamber-root theorem plus the coefficient-
 free source cubic. The graph-first current-activation subtarget is now closed:
 `A_ord = diag(1,2,3) + (E12 + E23 + E31)` gives `J_chi = 1` on the retained
-`hw=1` response family. But the affine current-coordinate theorem shows that
+`hw=1` response family. The affine current-coordinate theorem then shows that
 on the physical affine Hermitian chart the native current reads only
-`J_chi(H) = q_+ - i/4`, so one additional real `delta / Im K_Z3[1,2]` law
-still remains. See
+`J_chi(H) = q_+ - i/4`, isolating the remaining affine
+`delta / Im K_Z3[1,2]` direction exactly. The later ordered-chain
+graded-current closure theorem then closes that remaining scalar with the
+companion current `J_N(H) = J_chi(i[N,H])`. So there is no remaining
+strict/native DM last-mile residue in the current package. See
 `docs/DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md`
 and
-`docs/DM_PMNS_AFFINE_CURRENT_COORDINATE_REDUCTION_THEOREM_NOTE_2026-04-21.md`.
+`docs/DM_PMNS_AFFINE_CURRENT_COORDINATE_REDUCTION_THEOREM_NOTE_2026-04-21.md`,
+and
+`docs/DM_PMNS_ORDERED_CHAIN_GRADED_CURRENT_DELTA_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
 The selector side is also slightly sharper than before: on the recovered bank,
 the exact intrinsic threshold-volume selector family now has a theorem-grade
 high-threshold stabilization window on which the preferred recovered lift is
@@ -347,16 +352,21 @@ surface. On the stricter/native map, once the exact PMNS target surface is
 granted, the exact chamber plus `I_src(H) > 0` already select Basin 1
 uniquely on the exact chamber roots, so there is no separate target-surface
 branch-choice residue beyond the PMNS last mile itself. That last mile had
-already been sharpened in two stages. The new graph-first ordered-chain theorem
-lands one explicit same-branch current-activation law:
+already been sharpened in three stages. The graph-first ordered-chain theorem
+lands one explicit current-activation law:
 `A_ord = diag(1,2,3) + (E12 + E23 + E31)` gives `J_chi = 1` exactly on the
 retained `hw=1` response family. The later affine current-coordinate theorem
 then shows that on the physical affine chart the native current reads only
-`J_chi(H) = q_+ - i/4`, so current activation closes the `q_+` coordinate
-while one additional real `delta / Im K_Z3[1,2]` law remains open. See
+`J_chi(H) = q_+ - i/4`, isolating the remaining affine
+`delta / Im K_Z3[1,2]` direction exactly. The later ordered-chain
+graded-current closure theorem then closes that remaining scalar with the
+companion current `J_N(H) = J_chi(i[N,H])`. So there is no remaining
+strict/native DM last-mile residue in the current package. See
 `docs/DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md`
 and
-`docs/DM_PMNS_AFFINE_CURRENT_COORDINATE_REDUCTION_THEOREM_NOTE_2026-04-21.md`.
+`docs/DM_PMNS_AFFINE_CURRENT_COORDINATE_REDUCTION_THEOREM_NOTE_2026-04-21.md`,
+and
+`docs/DM_PMNS_ORDERED_CHAIN_GRADED_CURRENT_DELTA_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
 PNS is derived as a property of Basin 1, not axiomatized.
 
 ---
@@ -475,6 +485,9 @@ All runners pass with no hardcoded `True` PASS annotations. Every PASS is a nume
 | A-BCC exact target-surface source-cubic closure | `frontier_dm_abcc_exact_target_surface_source_cubic_closure_2026_04_21.py` | 15 | 0 |
 | A-BCC 5-route audit | `frontier_dm_abcc_assumptions_audit.py` | 16 | 0 |
 | DM native current last-mile reduction | `frontier_dm_pmns_native_current_last_mile_reduction_2026_04_21.py` | 16 | 0 |
+| DM graph-first ordered-chain current activation | `frontier_dm_pmns_graph_first_ordered_chain_nonzero_current_closure_2026_04_21.py` | 19 | 0 |
+| DM affine current-coordinate reduction | `frontier_dm_pmns_affine_current_coordinate_reduction_2026_04_21.py` | 13 | 0 |
+| DM ordered-chain graded-current delta closure | `frontier_dm_pmns_ordered_chain_graded_current_delta_closure_2026_04_21.py` | 20 | 0 |
 | DPLE dim-parametric extremum | `frontier_dm_dple_theorem.py` | 19 | 0 |
 | Split-2 interval-certified dominance closure | `frontier_dm_split2_interval_certified_dominance_closure_2026_04_21.py` | 17 | 0 |
 | Selector relative-action recovered projection | `frontier_dm_selector_relative_action_recovered_projection_support_2026_04_21.py` | 12 | 0 |
@@ -489,7 +502,7 @@ All runners pass with no hardcoded `True` PASS annotations. Every PASS is a nume
 | a_u STRC historical | `frontier_quark_strc_observable_principle.py` | 19 | 0 |
 | g_bare two-Ward (supporting) | `frontier_g_bare_two_ward_closure.py` | 18 | 0 |
 
-**Total across 23 runners: 420+ PASS, 0 FAIL.**
+**Total across 32 listed runners: 591 PASS, 0 FAIL.**
 
 ---
 
@@ -497,12 +510,12 @@ All runners pass with no hardcoded `True` PASS annotations. Every PASS is a nume
 
 **2026-04-21 package update.** After the landed April 21 support package,
 Koide `Q = 2/3` and Brannen `δ = 2/9` are no longer counted here as retained
-observational inputs. The DM flagship lane is also removed from the
-review-surface retained-input list: its review-surface residue is closed by the
-April 21 DM theorem stack, while the stricter/native map now carries only the
-remaining real `delta / Im K_Z3[1,2]` selector law after current activation.
-The table below lists the remaining retained observational or atlas-level
-inputs across the still-open or still-atlas-backed Tier-1 gates.
+observational inputs. The DM flagship lane is also removed from this list
+entirely: its review-surface residue is closed by the April 21 DM theorem
+stack, and the stricter/native last mile is now also closed by the ordered-chain
+graded-current delta theorem. The table below lists the remaining retained
+observational or atlas-level inputs across the still-open or still-atlas-backed
+Tier-1 gates.
 
 | Label | Input | Used in | Provenance |
 |---|---|---|---|

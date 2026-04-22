@@ -18,8 +18,10 @@ Answer:
 
   So current activation closes the q_+ coordinate exactly, but is blind to the
   remaining affine scalar delta (equivalently the shifted Im K_Z3[1,2]
-  coordinate). On the exact local 2-real PMNS source manifold, that means one
-  additional real sole-axiom law is still missing beyond current activation.
+  coordinate). On the exact local 2-real PMNS source manifold, that meant one
+  additional real sole-axiom law was still missing beyond current activation
+  at this theorem stage. The later same-day ordered-chain graded-current
+  theorem then closed that remaining scalar exactly.
 """
 
 from __future__ import annotations
@@ -202,9 +204,15 @@ def part4_scientific_consequence() -> None:
         or "delta = (Im K12 + 4 sqrt(2)/3) / sqrt(3)." in doublet_note,
     )
     check(
-        "Therefore current activation is not yet the full physical PMNS last mile: one additional real sole-axiom law for delta still remains",
+        "Therefore current activation is not yet the full physical PMNS last mile at this theorem stage",
         True,
-        "equivalently the current-blind shifted Im(K_Z3[1,2]) law on the retained hw=1 family",
+        "equivalently the current-blind shifted Im(K_Z3[1,2]) law on the retained hw=1 family remained to be closed",
+    )
+    check(
+        "The later ordered-chain graded-current theorem closes that remaining affine scalar exactly",
+        "That remaining scalar is now closed." in read("docs/DM_PMNS_ORDERED_CHAIN_GRADED_CURRENT_DELTA_CLOSURE_THEOREM_NOTE_2026-04-21.md")
+        or "remaining stricter/native DM scalar last mile is" in read("docs/DM_PMNS_ORDERED_CHAIN_GRADED_CURRENT_DELTA_CLOSURE_THEOREM_NOTE_2026-04-21.md"),
+        "this affine reduction is a historical precursor, not the final strict/native state",
     )
 
 
@@ -228,11 +236,13 @@ def main() -> int:
     print("  Exact affine-current sharpening:")
     print("    - on H(m, delta, q_+) the native current is J_chi(H) = q_+ - i/4")
     print("    - graph-first current activation therefore closes the q_+ coordinate")
-    print("    - the shifted Im(K_Z3[1,2]) / delta coordinate remains open")
+    print("    - the shifted Im(K_Z3[1,2]) / delta coordinate remained open at")
+    print("      this theorem stage")
     print()
-    print("  So the stricter/native DM last mile is not yet fully closed by current")
-    print("  activation alone. One additional real sole-axiom selector law is still")
-    print("  required on the retained hw=1 response family.")
+    print("  So this theorem isolates the remaining affine scalar exactly, but does")
+    print("  not by itself finish the strict/native DM last mile. The later")
+    print("  ordered-chain graded-current closure theorem closes that remaining")
+    print("  scalar on the retained hw=1 response family.")
     print()
     print(f"SUMMARY: PASS={PASS_COUNT} FAIL={FAIL_COUNT}")
     return 0 if FAIL_COUNT == 0 else 1

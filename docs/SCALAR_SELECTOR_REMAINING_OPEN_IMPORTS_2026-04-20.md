@@ -27,7 +27,6 @@ The downstream selected-line witness remains conditional on the second bridge.
 | Koide relation `Q = 2/3` | κ, θ | reviewer-tested Frobenius-isotype / AM-GM support package isolates the Koide point as the unique extremum of the admitted block-total functional, but the physical/source-law extremal-principle bridge remains open | derive why the physical charged-lepton packet must extremize the block-total Frobenius functional, or an equivalent accepted source law that forces the same point |
 | Brannen phase `δ = 2/9` on the physical base | θ | reviewer-tested APS / ABSS support package isolates the exact ambient topological value `η = 2/9`, but the physical selected-line Brannen-phase bridge remains open | derive `δ_physical = η_APS`, equivalently an ambient one-clock `3+1` transport / endpoint / Wilson law whose selected-line pullback is the physical Brannen phase |
 | Selected-line witness ratio `w/v ≈ 4.101` | m_* (selected-line point) | conditionally pinned by the exact selected-line scalar-phase bridge once the physical Brannen phase is fixed; still open because the Brannen-phase bridge is open | the same physical Brannen-phase bridge that closes `δ = 2/9`, or an equivalent ambient endpoint law that fixes the selected-line point directly |
-| Native PMNS last-mile scalar on the stricter/native map | DM PMNS | review-surface DM closure is landed, the graph-first ordered-chain theorem closes the current-activation subtarget, and the affine current-coordinate theorem shows `J_chi(H) = q_+ - i/4`, so one additional real `delta / Im K_Z3[1,2]` law still remains | derive the sole-axiom `delta / Im K_Z3[1,2]` selector law on the retained `hw=1` response family, or an equivalent right-sensitive scalar law if the physical last mile is not most naturally affine-chart phrased |
 
 ## §0a Closed in cycle 2
 
@@ -56,7 +55,7 @@ The downstream selected-line witness remains conditional on the second bridge.
   `docs/DM_SIGMA_HIER_UPPER_OCTANT_SELECTOR_THEOREM_NOTE_2026-04-20.md`
   proves that among the two `9/9`-magnitude-passing permutations only
   `(2,1,0)` satisfies the exact chamber upper-octant law, and the negative
-  PMNS CP sign follows as a consequence. The branch-local proof chain is
+  PMNS CP sign follows as a consequence. The current proof chain is
   packaged in `docs/DM_SIGMA_HIER_CLOSURE_PACKET_NOTE_2026-04-20.md`.
 - **Quark provenance surfaces closed.** The quark lane now
   states its retained bimodule and atom provenance inline in the reviewer
@@ -78,19 +77,21 @@ The downstream selected-line witness remains conditional on the second bridge.
   stress range, and it is exactly the unique recovered point with
   `Im(K_Z3[1,2]) > 0`. See
   `docs/DM_SELECTOR_SHIFTED_RELATIVE_ACTION_RECOVERED_PACKET_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
-- **Strict/native DM current-activation subtarget landed, and the remaining
-  scalar is now sharper.** The graph-first ordered-chain theorem lands one
-  explicit sole-axiom nonzero-current law on the retained `hw=1` response
-  family:
-  `A_ord = diag(1,2,3) + (E12 + E23 + E31)` gives `J_chi = 1`. But the new
-  affine current-coordinate theorem shows that on the physical affine Hermitian
-  chart the native current reads only
-  `J_chi(H) = q_+ - i/4`. So current activation closes the `q_+` coordinate,
-  while the current-blind `delta / Im K_Z3[1,2]` direction remains the honest
-  stricter/native DM last mile. See
-  `docs/DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md`
+- **Stricter/native DM last mile closed.** The same-day graph-first
+  ordered-chain theorem first lands one explicit sole-axiom nonzero-current
+  law on the retained `hw=1` response family,
+  `A_ord = diag(1,2,3) + (E12 + E23 + E31)` with `J_chi = 1`. The affine
+  current-coordinate sharpening then shows that on the physical affine
+  Hermitian chart the native current reads only
+  `J_chi(H) = q_+ - i/4`, isolating the remaining real
+  `delta / Im(K_Z3[1,2])` direction exactly. The later ordered-chain
+  graded-current closure theorem adds the exact companion current
+  `J_N(H) = J_chi(i[N,H])` with `N = diag(1,2,3)` and closes that remaining
+  scalar exactly on the retained `hw=1` response family. See
+  `docs/DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md`,
+  `docs/DM_PMNS_AFFINE_CURRENT_COORDINATE_REDUCTION_THEOREM_NOTE_2026-04-21.md`,
   and
-  `docs/DM_PMNS_AFFINE_CURRENT_COORDINATE_REDUCTION_THEOREM_NOTE_2026-04-21.md`.
+  `docs/DM_PMNS_ORDERED_CHAIN_GRADED_CURRENT_DELTA_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
 
 ## §1 Priority ordering for closure
 
@@ -118,17 +119,17 @@ point `m_V ≈ −0.433` which is **not** the Koide cone point
 derivation requires adding the first-principles retained ingredient that
 moves the effective minimum from `m_V` to `m_*`.
 
-**New same-branch reduction (2026-04-20):** the previously vague `4 x 4`
+**New reduction (2026-04-20):** the previously vague `4 x 4`
 singlet/baryon route is now reduced exactly to a `C_3`-singlet Schur law
 `K_eff(m) = K_sel(m) - lambda(m) J` on the trivial Fourier projector
 `J = 3 P_+`. So the open object is not a generic non-uniform `4 x 4`
 correction anymore; it is one scalar function `lambda(m)`. In the
-fixed-coupling subclass (`lambda` constant), making the branch-local physical
+fixed-coupling subclass (`lambda` constant), making the current physical
 selected point `m_*` stationary forces one unique positive value
 `lambda_* ~= 0.5456253117`. See
 `docs/KOIDE_C3_SINGLET_EXTENSION_REDUCTION_THEOREM_NOTE_2026-04-20.md`.
 
-**Later same-branch sharpening (2026-04-20):** the fixed-coupling subclass is
+**Later sharpening (2026-04-20):** the fixed-coupling subclass is
 now understood more sharply. Solving the stationarity equation for constant
 `lambda` gives an explicit family `lambda_±(m)` on the physical first branch,
 so constant singlet dressing does **not** pick out `m_*` by itself. It
@@ -139,7 +140,7 @@ positive constant `lambda`"; it is still the microscopic law fixing `lambda`
 itself, equivalently fixing `m`. See
 `docs/KOIDE_C3_CONSTANT_SINGLET_REPARAMETERIZATION_THEOREM_NOTE_2026-04-20.md`.
 
-**Further same-branch sharpening (2026-04-20):** the canonical selected-slice
+**Further sharpening (2026-04-20):** the canonical selected-slice
 `2 x 2` `Z_3` doublet block also does **not** contain a hidden intrinsic
 spectral selector. Its completed spectral data are exact, but after freezing
 the bank they collapse to the sign-blind coordinate
@@ -239,7 +240,7 @@ closure candidates fail: selected-line PB per element, full-orbit Bargmann
 phase, bare Plancherel-weight identification, and the selected-slice midpoint
 rule do not produce `2/d²` in radians on the physical base.
 
-**Further same-branch sharpening (2026-04-20 evening):** the actual
+**Further sharpening (2026-04-20 evening):** the actual
 selected-line local packet is now proved too small to close `P`. On the
 physical selected-line `CP¹` carrier, the canonical local geometry is flat
 (`A = dθ`, `F = 0`) with constant equator metric density, while the structural

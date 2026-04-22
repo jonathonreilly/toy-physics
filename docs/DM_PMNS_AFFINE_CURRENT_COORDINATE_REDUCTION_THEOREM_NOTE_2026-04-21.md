@@ -2,7 +2,9 @@
 
 **Date:** 2026-04-21  
 **Lane:** strict/native DM last-mile sharpening  
-**Status:** exact affine-chart sharpening theorem  
+**Status:** exact affine-chart sharpening theorem; later same-day precursor to
+the closure theorem
+`DM_PMNS_ORDERED_CHAIN_GRADED_CURRENT_DELTA_CLOSURE_THEOREM_NOTE_2026-04-21.md`
 **Primary runner:**  
 `scripts/frontier_dm_pmns_affine_current_coordinate_reduction_2026_04_21.py`
 
@@ -16,7 +18,8 @@ The same-day graph-first ordered-chain theorem landed something real:
 one explicit sole-axiom nonzero-current law on the retained hw=1 response family.
 ```
 
-What it did **not** yet settle is the physical strict/native PMNS last mile.
+What it did **not** yet settle, at this stage of the same-day theorem stack,
+was the physical strict/native PMNS last mile.
 
 The reason is now exact on the retained affine Hermitian chart
 
@@ -51,7 +54,7 @@ DM last mile is now sharper than either of the older descriptions:
 - it is **not** a separate target-surface A-BCC residue,
 - and it is **not** fully discharged by current activation alone.
 
-The honest remaining native object is:
+At this stage, the honest remaining native object was:
 
 ```text
 one additional real sole-axiom selector law
@@ -138,10 +141,10 @@ The affine current formula above sharpens that further:
 So the graph-first ordered-chain theorem is best read as a genuine **current
 activation** theorem, not as the end of the strict/native PMNS last mile.
 
-What remains open is not “some generic PMNS law” and not “whether any
+What remained open was not “some generic PMNS law” and not “whether any
 nonzero-current law exists.” Those are already narrowed away.
 
-What remains open is:
+What remained open was:
 
 ```text
 the native selector law for delta,
@@ -172,8 +175,9 @@ after current activation has already fixed q_+.
 >
 > 2. current activation therefore fixes the affine `q_+` coordinate exactly;
 > 3. the affine `delta` coordinate remains current-blind;
-> 4. since the physical PMNS target already lies on an exact local `2`-real
->    source manifold, one additional real sole-axiom selector law is still
+> 4. at this stage of the theorem stack, since the physical PMNS target
+>    already lies on an exact local `2`-real source manifold, one additional
+>    real sole-axiom selector law is still
 >    required beyond current activation.
 >
 > Equivalently: the remaining strict/native DM last mile is the
@@ -218,7 +222,7 @@ coarsely as:
 is the ordered-chain current-activation law the physical PMNS law?
 ```
 
-After this theorem, the sharper exact statement is:
+After this theorem, the sharper exact statement was:
 
 ```text
 the ordered-chain theorem closes current activation,
@@ -226,7 +230,9 @@ but the current closes only q_+ on the physical affine chart;
 the remaining strict/native scalar is delta.
 ```
 
-This is a stronger and cleaner last-mile reduction than the older wording.
+This was a stronger and cleaner last-mile reduction than the older wording.
+The later same-day ordered-chain graded-current closure theorem then closed
+that remaining scalar exactly.
 
 ---
 

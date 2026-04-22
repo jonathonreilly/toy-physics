@@ -175,10 +175,10 @@ Current quantitative statuses:
   branch-choice law. The graph-first ordered-chain theorem now provides one
   explicit sole-axiom nonzero-current law on the retained `hw=1` response
   family with `A_ord = diag(1,2,3) + (E12 + E23 + E31)` and `J_chi = 1`. The
-  later affine current-coordinate theorem then shows that on the physical
-  affine Hermitian chart the native current reads only `J_chi(H) = q_+ - i/4`,
-  so current activation closes the `q_+` coordinate while one additional real
-  `delta / Im K_Z3[1,2]` law remains open;
+  later affine current-coordinate theorem then identifies the remaining
+  physical affine scalar as the `delta / Im K_Z3[1,2]` direction, and the
+  later ordered-chain graded-current closure theorem closes that scalar
+  exactly on the retained `hw=1` response family;
   `σ_hier = (2, 1, 0)` is fixed observationally at the pinned chamber point,
   but broader chamber-wide / all-basin uniqueness is still out of scope
 - promoted CKM atlas/axiom package on the canonical tensor/projector surface, with older Cabibbo / NNI / partial Jarlskog notes retained only as route history
@@ -205,25 +205,22 @@ Current quantitative statuses:
 
 2. DM flagship closure package
 
-   On the review surface, this lane is no longer open. A-BCC closes by the retained
-   measurement integration theorem, the split-2 carrier-side residue closes by
-   interval certification on the two explicit upper-face boxes, and the
-   recovered selector packet closes by the shifted same-law theorem on the
-   common positive windows `A_mu(H)=H+mu I`. On the stricter/native map, the
-   exact target-surface chamber-root theorem removes the separate native A-BCC
-   residue, and the new graph-first ordered-chain theorem supplies one explicit
-   same-branch current-activation law:
-
-   ```text
-   A_ord = diag(1,2,3) + (E12 + E23 + E31),
-   J_chi(A_ord) = 1.
-   ```
-
-   What remains open there is one additional real native selector law for the
-   current-blind `delta / Im K_Z3[1,2]` direction after current activation.
-   The reviewer-facing three-identity system remains in the package as support
-   only: it is no longer a blocker, and its product/determinant identities and
-   uniqueness statement are still support-grade rather than theorem-grade.
+   This lane is no longer open on the current package surface. On the review surface, A-BCC
+   closes by the retained-measurement integration theorem, the split-2
+   carrier-side residue closes by interval certification on the two explicit
+   upper-face boxes, and the recovered selector packet closes by the shifted
+   same-law theorem on the common positive windows `A_mu(H)=H+mu I`. On the
+   stricter/native map, the exact target-surface chamber-root theorem removes
+   the separate native A-BCC residue; the graph-first ordered-chain theorem
+   supplies one explicit current-activation law
+   `A_ord = diag(1,2,3) + (E12 + E23 + E31)` with `J_chi(A_ord) = 1`; the
+   affine current-coordinate theorem identifies the remaining physical affine
+   scalar as the `delta / Im K_Z3[1,2]` direction; and the ordered-chain
+   graded-current closure theorem closes that scalar exactly on the retained
+   `hw=1` response family. The reviewer-facing three-identity system remains in
+   the package as support only: it is no longer a blocker, and its
+   product/determinant identities and uniqueness statement are still
+   support-grade rather than theorem-grade.
 
 Outside the flagship spine, a curated neutrino boundary/support packet is now
 also live in the package:

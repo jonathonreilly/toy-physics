@@ -2,9 +2,9 @@
 
 **Date:** 2026-04-21
 **Lane:** strict/native DM last-mile sharpening
-**Status:** exact reduction theorem on the reduced graph-first carrier; later
-same-day affine sharpening shows that current activation is real but not by
-itself the full physical strict/native last mile
+**Status:** exact reduction theorem on the reduced graph-first carrier; the
+later same-day affine sharpening and ordered-chain graded-current closure
+theorems complete the physical strict/native last mile
 **Positive activation theorem:**
 `docs/DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md`
 **Primary runner:**
@@ -53,15 +53,17 @@ one explicit sole-axiom nonzero-current law on that reduced target.
 
 The later same-day affine sharpening theorem
 `DM_PMNS_AFFINE_CURRENT_COORDINATE_REDUCTION_THEOREM_NOTE_2026-04-21.md`
-shows that on the physical affine Hermitian chart this current reads only the
+showed that on the physical affine Hermitian chart this current reads only the
 `q_+` coordinate:
 
 ```text
 J_chi(H) = q_+ - i/4.
 ```
 
-So the current-activation subtarget is closed, but one additional real scalar
-law remains on the physical affine chart.
+The later same-day closure theorem
+`DM_PMNS_ORDERED_CHAIN_GRADED_CURRENT_DELTA_CLOSURE_THEOREM_NOTE_2026-04-21.md`
+then closes that remaining affine scalar exactly by the ordered-chain graded
+current.
 
 ---
 
@@ -203,9 +205,10 @@ So the exact remaining reduced-carrier DM object is no longer a separate A-BCC
 law plus a vague PMNS angle-triple law. It is one complex current whose
 nonzero activation was the current constructive subtarget.
 
-The later affine current-coordinate theorem then sharpens the physical
-strict/native last mile one step further: current activation fixes `q_+`, while
-the affine `delta` direction remains open.
+The later affine current-coordinate theorem sharpened the physical
+strict/native last mile one step further, and the later ordered-chain
+graded-current closure theorem then closed the remaining affine `delta`
+direction exactly.
 
 QED.
 
@@ -230,9 +233,9 @@ the reduced graph-first remaining datum is one complex native current J_chi.
 This is equivalent to a `2`-real reduced-carrier point-selection law, but it is
 now expressed in native current language rather than as a generic angle target.
 The graph-first ordered-chain theorem gives one explicit same-branch
-activation of that current. The later affine sharpening theorem then shows
-that the physical strict/native last mile is one additional real scalar beyond
-current activation.
+activation of that current. The later affine sharpening theorem identified the
+remaining real scalar, and the later ordered-chain graded-current closure
+theorem closed it.
 
 ---
 
@@ -240,8 +243,6 @@ current activation.
 
 This note does **not** derive:
 
-- the additional affine `delta / Im K_Z3[1,2]` law that remains after current
-  activation;
 - the Koide-side open bridges;
 - the broader full-neutrino pair `(J_chi, mu)` outside the flagship DM scope.
 

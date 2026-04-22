@@ -23,7 +23,8 @@ Answer:
   The later same-day affine sharpening theorem then shows that this does not
   finish the physical strict/native PMNS last mile by itself: on the affine
   Hermitian chart, J_chi(H) = q_+ - i/4, so one additional real delta-law
-  remains.
+  remained at that stage. The later ordered-chain graded-current closure
+  theorem then closes that remaining scalar exactly.
 """
 
 from __future__ import annotations
@@ -185,9 +186,15 @@ def part5_open_map_consequence() -> None:
         "equivalently the nontrivial 2-real reduced-carrier datum",
     )
     check(
-        "The later affine current-coordinate theorem reopens one additional real physical scalar beyond current activation",
+        "The later affine current-coordinate theorem isolates one additional real physical scalar beyond current activation",
         "J_chi(H) = q_+ - i/4" in read("docs/DM_PMNS_AFFINE_CURRENT_COORDINATE_REDUCTION_THEOREM_NOTE_2026-04-21.md"),
-        "the physical affine chart still needs one extra sole-axiom scalar law",
+        "the physical affine chart still needed one extra sole-axiom scalar law at that stage",
+    )
+    check(
+        "The later graded-current closure theorem closes that remaining affine scalar exactly",
+        "That remaining scalar is now closed." in read("docs/DM_PMNS_ORDERED_CHAIN_GRADED_CURRENT_DELTA_CLOSURE_THEOREM_NOTE_2026-04-21.md")
+        or "remaining stricter/native DM scalar last mile is" in read("docs/DM_PMNS_ORDERED_CHAIN_GRADED_CURRENT_DELTA_CLOSURE_THEOREM_NOTE_2026-04-21.md"),
+        "the ordered-chain companion current completes the physical affine/source pair",
     )
     check(
         "So this script is a real reduced-carrier reduction but not full strict/native DM closure",
@@ -220,9 +227,9 @@ def main() -> int:
     print("  derive a sole-axiom law producing nonzero J_chi on the retained hw=1")
     print("  response family.")
     print()
-    print("  The later affine sharpening theorem shows that after current activation")
-    print("  one additional real delta / Im(K12) law still remains on the physical")
-    print("  affine chart.")
+    print("  The later affine sharpening theorem isolated one additional real")
+    print("  delta / Im(K12) law on the physical affine chart, and the later")
+    print("  ordered-chain graded-current closure theorem then closed it exactly.")
     print()
     print(f"SUMMARY: PASS={PASS_COUNT} FAIL={FAIL_COUNT}")
     return 0 if FAIL_COUNT == 0 else 1
