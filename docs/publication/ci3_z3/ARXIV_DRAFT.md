@@ -41,9 +41,11 @@ retention-decomposed band.
 The package is already predictive beyond retrospective comparison,
 including proton lifetime, the CKM-only neutron-EDM corollary with bounded
 continuation, vacuum criticality, and benchmark gravitational decoherence.
-Dark-matter relic mapping is the sole remaining live
-flagship gate. The paper separates exact, promoted, bounded, and open rows and
-pairs them with a public reproducibility surface.
+The dark-matter flagship lane is now closed on the current package grade and
+on the exact-target strict/native map; the sole remaining live flagship gate
+is the charged-lepton Koide bridge package. The paper separates exact,
+promoted, bounded, and open rows and pairs them with a public reproducibility
+surface.
 
 ## 1. Introduction
 
@@ -82,8 +84,9 @@ structural theorem with a bounded string-tension readout. CKM is promoted as a
 canonical atlas/tensor/projector package with canonical CMT $\alpha_s(v)$
 input and no quark-mass or fitted-CKM derivation inputs. The package is already
 predictive beyond the theorem spine: it carries bounded secondary predictions,
-not only retrospective matches. The only live flagship gate left is dark matter
-relic mapping.
+not only retrospective matches. The dark-matter flagship lane is no longer the
+live gate on the current package surface; the only live flagship gate left is
+the charged-lepton Koide bridge package.
 
 The right reading of the manuscript is therefore no longer “promising
 framework with many open bridges.” It is “one discrete framework that already
