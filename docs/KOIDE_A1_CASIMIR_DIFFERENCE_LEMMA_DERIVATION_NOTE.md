@@ -170,6 +170,7 @@ Casimir-difference lemma evades all of them because:
 |---|---|---|
 | Skeleton | `frontier_koide_a1_casimir_difference_lemma_skeleton.py` | 12 PASS — closure architecture |
 | O1.a | `frontier_koide_a1_casimir_difference_o1a_c3_plancherel.py` | 12 PASS — C_3 Plancherel + A_1/E projector split |
+| O1.b | `frontier_koide_a1_casimir_difference_o1b_hw1_s3_alignment.py` | 17 PASS — hw=1 sector S_3-irrep projectors agree with C_3 Fourier |
 
 **O1.a closed.** The C_3 character decomposition is symbolically
 self-consistent (sympy verification of both Parseval identities) and
