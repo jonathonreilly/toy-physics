@@ -200,6 +200,7 @@ On the SM Yukawa-doublet assignment, this equals 1/2 ⟺ Koide A1
 
 | X1 | `frontier_koide_a1_casimir_difference_x1_uniqueness_sweep.py` | 4 PASS — (A1*) admits NO rational solution beyond (T,Y) = (1/2, ±1/2) |
 | X2 | `frontier_koide_a1_casimir_difference_x2_perturbation_test.py` | 5 PASS — first-order Y/T perturbations (∂r/∂Y = -3/2, ∂r/∂T = 1) |
+| X3 | `frontier_koide_a1_casimir_difference_x3_iff.py` | 11 PASS — symbolic A1 ⟺ (A1*) via sympy; 6/6 sample table |
 
 **Uniqueness sharpened.** The condition `3Y² = T(T+1)` admits no other
 rational `(T, Y)` with `T` half-integer ≥ 1/2 and `C_sum > 0`. The
