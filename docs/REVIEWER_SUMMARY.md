@@ -172,12 +172,13 @@ Current quantitative statuses:
   chamber plus the coefficient-free source cubic already select Basin 1
   uniquely on the chamber roots `{Basin 1, Basin 2, Basin X}`. So what
   remains outside the current closure grade is not a separate target-surface
-  branch-choice law. The native last mile had already been reduced to one
-  complex native nontrivial-character current `J_chi`, equivalently the
-  intrinsic `2`-real PMNS point-selection law; the new graph-first
-  ordered-chain theorem now provides one explicit sole-axiom nonzero-current
-  law on that target with `A_ord = diag(1,2,3) + (E12 + E23 + E31)` and
-  `J_chi = 1`, but physical identification of that law remains separate;
+  branch-choice law. The graph-first ordered-chain theorem now provides one
+  explicit sole-axiom nonzero-current law on the retained `hw=1` response
+  family with `A_ord = diag(1,2,3) + (E12 + E23 + E31)` and `J_chi = 1`. The
+  later affine current-coordinate theorem then shows that on the physical
+  affine Hermitian chart the native current reads only `J_chi(H) = q_+ - i/4`,
+  so current activation closes the `q_+` coordinate while one additional real
+  `delta / Im K_Z3[1,2]` law remains open;
   `σ_hier = (2, 1, 0)` is fixed observationally at the pinned chamber point,
   but broader chamber-wide / all-basin uniqueness is still out of scope
 - promoted CKM atlas/axiom package on the canonical tensor/projector surface, with older Cabibbo / NNI / partial Jarlskog notes retained only as route history
@@ -218,8 +219,8 @@ Current quantitative statuses:
    J_chi(A_ord) = 1.
    ```
 
-   What remains open there is whether that ordered-chain law is the physical
-   PMNS last-mile law, rather than one exact nonzero-current route.
+   What remains open there is one additional real native selector law for the
+   current-blind `delta / Im K_Z3[1,2]` direction after current activation.
    The reviewer-facing three-identity system remains in the package as support
    only: it is no longer a blocker, and its product/determinant identities and
    uniqueness statement are still support-grade rather than theorem-grade.

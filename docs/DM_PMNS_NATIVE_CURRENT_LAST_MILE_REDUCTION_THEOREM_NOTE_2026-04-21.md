@@ -2,8 +2,9 @@
 
 **Date:** 2026-04-21
 **Lane:** strict/native DM last-mile sharpening
-**Status:** exact reduction theorem; one explicit same-branch current-activation
-theorem is now available
+**Status:** exact reduction theorem on the reduced graph-first carrier; later
+same-day affine sharpening shows that current activation is real but not by
+itself the full physical strict/native last mile
 **Positive activation theorem:**
 `docs/DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md`
 **Primary runner:**
@@ -26,10 +27,10 @@ Two same-branch reductions now compose:
 2. the native `C_3` character/current theorems identify the remaining PMNS
    value problem with one exact complex current.
 
-The reduction result is:
+The reduced-carrier result is:
 
-> on the strict/native DM map, the remaining PMNS last mile is exactly a
-> sole-axiom law producing nonzero
+> on the reduced graph-first carrier, the remaining PMNS value datum is one
+> exact complex current
 >
 > ```text
 > J_chi(A) = (h_0 + omega h_1 + omega^2 h_2) / 3
@@ -45,11 +46,22 @@ Equivalently:
   by
   `Re J_chi` and `Im J_chi`.
 
-So the current exact strict/native DM object is not "the PMNS angle triple" in
-an undifferentiated sense. It reduces to one native complex
+So the reduced graph-first object is not "the PMNS angle triple" in an
+undifferentiated sense. It reduces to one native complex
 nontrivial-character current. The graph-first ordered-chain theorem now lands
-one explicit sole-axiom nonzero-current law on that reduced target, but the
-physical identification of that law remains separate.
+one explicit sole-axiom nonzero-current law on that reduced target.
+
+The later same-day affine sharpening theorem
+`DM_PMNS_AFFINE_CURRENT_COORDINATE_REDUCTION_THEOREM_NOTE_2026-04-21.md`
+shows that on the physical affine Hermitian chart this current reads only the
+`q_+` coordinate:
+
+```text
+J_chi(H) = q_+ - i/4.
+```
+
+So the current-activation subtarget is closed, but one additional real scalar
+law remains on the physical affine chart.
 
 ---
 
@@ -120,7 +132,7 @@ one complex current.
 
 ## 2. The theorem
 
-> **Theorem (strict/native DM last mile reduces to one native complex PMNS
+> **Theorem (reduced graph-first native PMNS last mile reduces to one complex
 > current).**
 >
 > Assume:
@@ -157,7 +169,7 @@ one complex current.
 >    J_chi = 0.
 >    ```
 >
-> Therefore the remaining strict/native DM burden is exactly:
+> Therefore the reduced graph-first carrier burden is exactly:
 >
 > ```text
 > derive a sole-axiom law producing nonzero J_chi
@@ -187,9 +199,13 @@ the current sole-axiom retained bank: the free route, the sole-axiom
 `hw=1` source/transfer route, and the retained scalar route all annihilate
 `J_chi`.
 
-So the exact remaining strict/native DM object is no longer a separate A-BCC
+So the exact remaining reduced-carrier DM object is no longer a separate A-BCC
 law plus a vague PMNS angle-triple law. It is one complex current whose
-nonzero activation is still missing.
+nonzero activation was the current constructive subtarget.
+
+The later affine current-coordinate theorem then sharpens the physical
+strict/native last mile one step further: current activation fixes `q_+`, while
+the affine `delta` direction remains open.
 
 QED.
 
@@ -204,18 +220,19 @@ coarsely as:
 target-surface branch choice + PMNS angle triple.
 ```
 
-After this theorem, the sharper exact statement is:
+After this theorem, the reduced-carrier exact statement is:
 
 ```text
 no separate target-surface branch-choice residue remains;
-the remaining strict/native DM last mile is one complex native current J_chi.
+the reduced graph-first remaining datum is one complex native current J_chi.
 ```
 
-This is equivalent to a `2`-real point-selection law, but it is now expressed
-in native current language rather than as a generic angle target. The
-graph-first ordered-chain theorem gives one explicit same-branch activation of
-that current, without by itself proving that the ordered-chain law is the
-physical PMNS last-mile law.
+This is equivalent to a `2`-real reduced-carrier point-selection law, but it is
+now expressed in native current language rather than as a generic angle target.
+The graph-first ordered-chain theorem gives one explicit same-branch
+activation of that current. The later affine sharpening theorem then shows
+that the physical strict/native last mile is one additional real scalar beyond
+current activation.
 
 ---
 
@@ -223,11 +240,12 @@ physical PMNS last-mile law.
 
 This note does **not** derive:
 
-- a sole-axiom law producing nonzero `J_chi`;
+- the additional affine `delta / Im K_Z3[1,2]` law that remains after current
+  activation;
 - the Koide-side open bridges;
 - the broader full-neutrino pair `(J_chi, mu)` outside the flagship DM scope.
 
-It is a last-mile reduction theorem only.
+It is a reduced-carrier reduction theorem only.
 
 ---
 
@@ -240,5 +258,5 @@ PYTHONPATH=scripts python3 scripts/frontier_dm_pmns_native_current_last_mile_red
 Expected final line:
 
 ```text
-SUMMARY: PASS=16 FAIL=0
+SUMMARY: PASS=17 FAIL=0
 ```

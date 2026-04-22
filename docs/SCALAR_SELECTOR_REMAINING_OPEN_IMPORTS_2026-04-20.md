@@ -27,7 +27,7 @@ The downstream selected-line witness remains conditional on the second bridge.
 | Koide relation `Q = 2/3` | κ, θ | reviewer-tested Frobenius-isotype / AM-GM support package isolates the Koide point as the unique extremum of the admitted block-total functional, but the physical/source-law extremal-principle bridge remains open | derive why the physical charged-lepton packet must extremize the block-total Frobenius functional, or an equivalent accepted source law that forces the same point |
 | Brannen phase `δ = 2/9` on the physical base | θ | reviewer-tested APS / ABSS support package isolates the exact ambient topological value `η = 2/9`, but the physical selected-line Brannen-phase bridge remains open | derive `δ_physical = η_APS`, equivalently an ambient one-clock `3+1` transport / endpoint / Wilson law whose selected-line pullback is the physical Brannen phase |
 | Selected-line witness ratio `w/v ≈ 4.101` | m_* (selected-line point) | conditionally pinned by the exact selected-line scalar-phase bridge once the physical Brannen phase is fixed; still open because the Brannen-phase bridge is open | the same physical Brannen-phase bridge that closes `δ = 2/9`, or an equivalent ambient endpoint law that fixes the selected-line point directly |
-| Native PMNS current law on the stricter/native map | DM PMNS | review-surface DM closure is landed, and the graph-first ordered-chain theorem constructs one explicit sole-axiom nonzero-current law with `J_chi = 1`, but the physical identification of that law remains open | derive why the ordered-chain current-activation law is the physical PMNS last-mile law, or derive the correct sole-axiom nonzero-current law if different |
+| Native PMNS last-mile scalar on the stricter/native map | DM PMNS | review-surface DM closure is landed, the graph-first ordered-chain theorem closes the current-activation subtarget, and the affine current-coordinate theorem shows `J_chi(H) = q_+ - i/4`, so one additional real `delta / Im K_Z3[1,2]` law still remains | derive the sole-axiom `delta / Im K_Z3[1,2]` selector law on the retained `hw=1` response family, or an equivalent right-sensitive scalar law if the physical last mile is not most naturally affine-chart phrased |
 
 ## §0a Closed in cycle 2
 
@@ -78,16 +78,19 @@ The downstream selected-line witness remains conditional on the second bridge.
   stress range, and it is exactly the unique recovered point with
   `Im(K_Z3[1,2]) > 0`. See
   `docs/DM_SELECTOR_SHIFTED_RELATIVE_ACTION_RECOVERED_PACKET_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
-- **Strict/native DM current-activation theorem landed.** The native last-mile
-  reduction had reduced the remaining strict/native DM burden to one complex
-  nontrivial-character current `J_chi`. The new graph-first ordered-chain
-  theorem lands one explicit sole-axiom nonzero-current law on that target: the
-  canonical ordered-chain law `A_ord = diag(1,2,3) + (E12 + E23 + E31)`
-  produces `J_chi = 1` exactly on the retained `hw=1` response family. What
-  remains open on the stricter/native map is the physical identification of
-  that ordered-chain law as the PMNS last-mile law, rather than the existence
-  of some nonzero-current law. See
-  `docs/DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md`.
+- **Strict/native DM current-activation subtarget landed, and the remaining
+  scalar is now sharper.** The graph-first ordered-chain theorem lands one
+  explicit sole-axiom nonzero-current law on the retained `hw=1` response
+  family:
+  `A_ord = diag(1,2,3) + (E12 + E23 + E31)` gives `J_chi = 1`. But the new
+  affine current-coordinate theorem shows that on the physical affine Hermitian
+  chart the native current reads only
+  `J_chi(H) = q_+ - i/4`. So current activation closes the `q_+` coordinate,
+  while the current-blind `delta / Im K_Z3[1,2]` direction remains the honest
+  stricter/native DM last mile. See
+  `docs/DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md`
+  and
+  `docs/DM_PMNS_AFFINE_CURRENT_COORDINATE_REDUCTION_THEOREM_NOTE_2026-04-21.md`.
 
 ## §1 Priority ordering for closure
 

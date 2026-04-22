@@ -7,7 +7,8 @@ Question:
   current reductions, what exact strict/native DM object still remains?
 
 Answer:
-  One native complex nontrivial-character current J_chi.
+  On the reduced graph-first carrier, one native complex
+  nontrivial-character current J_chi.
 
   The exact target-surface theorem removes any separate A-BCC residue once the
   PMNS target surface itself is fixed. The exact source-manifold theorem says
@@ -15,9 +16,14 @@ Answer:
   theorems identify that 2-real datum with one complex current J_chi = u + i v.
   The current retained sole-axiom routes still set J_chi = 0.
 
-  So the exact strict/native DM last mile is:
+  So the reduced current-activation subtarget is:
       derive a sole-axiom law producing nonzero J_chi
   on the retained hw=1 response family.
+
+  The later same-day affine sharpening theorem then shows that this does not
+  finish the physical strict/native PMNS last mile by itself: on the affine
+  Hermitian chart, J_chi(H) = q_+ - i/4, so one additional real delta-law
+  remains.
 """
 
 from __future__ import annotations
@@ -157,9 +163,9 @@ def part4_the_current_retained_bank_still_sets_jchi_to_zero() -> None:
     check("The sole-axiom hw=1 source/transfer route has J_chi = 0", abs(source_current) < 1.0e-12, f"J_chi={source_current:.6f}")
     check("The retained scalar route has J_chi = 0", abs(scalar_current) < 1.0e-12, f"J_chi={scalar_current:.6f}")
     check(
-        "So the current strict/native bank still lacks the nonzero current needed for PMNS closure",
+        "So the current strict/native bank still lacked the nonzero current needed for the current-activation subtarget",
         True,
-        "the remaining positive target is activation of nonzero J_chi",
+        "the reduced-carrier positive target was activation of nonzero J_chi",
     )
 
 
@@ -169,19 +175,24 @@ def part5_open_map_consequence() -> None:
     print("=" * 88)
 
     check(
-        "The remaining strict/native DM burden is not a separate A-BCC law plus a generic PMNS-angle statement",
+        "The reduced graph-first burden is not a separate A-BCC law plus a generic PMNS-angle statement",
         True,
         "the exact target-surface A-BCC residue is gone",
     )
     check(
-        "The remaining strict/native DM burden is exactly a sole-axiom law producing nonzero J_chi",
+        "On the reduced graph-first carrier the remaining constructive subtarget is exactly a sole-axiom law producing nonzero J_chi",
         True,
-        "equivalently the intrinsic 2-real PMNS point-selection law",
+        "equivalently the nontrivial 2-real reduced-carrier datum",
     )
     check(
-        "This is a real reduction but not yet full strict/native DM closure",
+        "The later affine current-coordinate theorem reopens one additional real physical scalar beyond current activation",
+        "J_chi(H) = q_+ - i/4" in read("docs/DM_PMNS_AFFINE_CURRENT_COORDINATE_REDUCTION_THEOREM_NOTE_2026-04-21.md"),
+        "the physical affine chart still needs one extra sole-axiom scalar law",
+    )
+    check(
+        "So this script is a real reduced-carrier reduction but not full strict/native DM closure",
         True,
-        "the nonzero-current production law is still missing",
+        "current activation is a subtarget, not the whole physical last mile",
     )
 
 
@@ -199,15 +210,19 @@ def main() -> int:
     print("\n" + "=" * 88)
     print("RESULT")
     print("=" * 88)
-    print("  Exact strict/native DM last-mile reduction:")
+    print("  Exact reduced-carrier DM last-mile reduction:")
     print("    - no separate target-surface A-BCC branch-choice residue remains")
-    print("    - the remaining PMNS source datum is exactly 2-real")
-    print("    - in native current language that datum is one complex current J_chi")
+    print("    - the remaining reduced-carrier PMNS source datum is exactly 2-real")
+    print("    - in native current language that reduced datum is one complex current J_chi")
     print("    - the current retained sole-axiom bank still sets J_chi = 0")
     print()
-    print("  So the remaining strict/native DM burden is exactly:")
+    print("  So the reduced current-activation subtarget was exactly:")
     print("  derive a sole-axiom law producing nonzero J_chi on the retained hw=1")
     print("  response family.")
+    print()
+    print("  The later affine sharpening theorem shows that after current activation")
+    print("  one additional real delta / Im(K12) law still remains on the physical")
+    print("  affine chart.")
     print()
     print(f"SUMMARY: PASS={PASS_COUNT} FAIL={FAIL_COUNT}")
     return 0 if FAIL_COUNT == 0 else 1
