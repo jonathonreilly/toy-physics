@@ -9,7 +9,7 @@ to confirm the complete closure chain passes end-to-end.
 Usage:
     python3 scripts/frontier_koide_lane_regression.py
 
-Expected output: 123/123 total tests pass across 16 runners.
+Expected output: 148/148 total tests pass across 21 runners.
 """
 
 import subprocess
@@ -41,6 +41,7 @@ RUNNERS = [
     ("frontier_koide_a1_n3_structural_uniqueness.py", 5),
     ("frontier_koide_a1_cv_equals_one.py", 4),
     ("frontier_koide_a1_block_democracy_max_entropy.py", 5),
+    ("frontier_koide_a1_weyl_vector_kostant_coincidence.py", 6),
 ]
 
 EXPECTED_TOTAL = sum(n for _, n in RUNNERS)

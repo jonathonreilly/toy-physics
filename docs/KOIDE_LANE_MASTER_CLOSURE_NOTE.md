@@ -4,7 +4,7 @@
 from retained atlas + textbook mathematics, with honest documentation
 of what's derived, what's retained (possibly with observational
 pinning), and what's textbook.
-**End-to-end verification:** 123/123 PASS across 16 runners.
+**End-to-end verification:** 148/148 PASS across 21 runners.
 
 This note is the canonical-branch reviewer entry point. It surveys
 the closure chain, cross-references the verification runners, and —
@@ -192,10 +192,15 @@ Physical observables:
 | 14 | `frontier_koide_selected_line_axis_fourier_bridge.py` | 5/5 | Axis-Fourier bridge on selected line |
 | 15 | `frontier_koide_positive_parent_operator_construction.py` | 9/9 | **Positive parent M = Y² constructed — closes P1** |
 | 16 | `frontier_koide_name_free_set_equality.py` | 5/5 | **Set-equality framing — eliminates naming smuggle** |
+| 17 | `frontier_koide_a1_quartic_potential_derivation.py` | 5/5 | Koide-Nishiura V(Φ) quartic has unique minimum at A1 |
+| 18 | `frontier_koide_a1_n3_structural_uniqueness.py` | 5/5 | Four natural Q-formulas converge at 2/3 only at n=3 |
+| 19 | `frontier_koide_a1_cv_equals_one.py` | 4/4 | A1 ⟺ eigenvalue CV = 1 (exponential max-entropy) |
+| 20 | `frontier_koide_a1_block_democracy_max_entropy.py` | 5/5 | Block-democracy max-entropy formalized as A1 candidate primitive |
+| 21 | `frontier_koide_a1_weyl_vector_kostant_coincidence.py` | 6/6 | **A_1 Weyl-vector Kostant coincidence: three-way match at 1/2** |
 
-**Total: 123/123 PASS** across 16 runners. Each runner independently
+**Total: 148/148 PASS** across 21 runners. Each runner independently
 verifiable with `python3 scripts/<name>.py`. Master regression:
-`python3 scripts/frontier_koide_lane_regression.py` (all 16 runners, 123/123).
+`python3 scripts/frontier_koide_lane_regression.py` (all 21 runners, 148/148).
 
 ## Derivation vs textbook vs retained — what depends on what
 

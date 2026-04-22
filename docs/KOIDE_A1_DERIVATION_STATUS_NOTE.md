@@ -100,6 +100,39 @@ coefficient 6 = n(n+1)/2 for n=3. This clean elementary-symmetric
 form suggests a natural polynomial structure, but doesn't by itself
 force the specific 6 coefficient.
 
+### Route E: A_1 Weyl-vector / Kostant-strange-formula coincidence
+
+**NEW**: three independent quantities ALL equal 1/2 in their natural
+normalizations:
+
+  1. **Kostant strange formula** for A_1 (sl(2)):
+     |ρ_{A_1}|² = h̄(h̄+1)·r/12 = 2·3·1/12 = 1/2
+
+  2. **Koide A1 condition** (Frobenius equipartition):
+     |b|²/a² = 1/2
+
+  3. **Retained Casimir imbalance** (C_τ = 1 decomposition):
+     C_2(SU(2)_L fund) − Y²(Higgs) = 3/4 − 1/4 = 1/2
+
+This three-way exact match is the STRONGEST structural hint yet for
+axiom-native A1 derivation. The retained Cl^+(3) ≅ H ⟹ Spin(3) =
+SU(2) = A_1 Lie algebra carries Weyl vector with |ρ|² = 1/2
+(Kostant), matching the charged-lepton amplitude ratio.
+
+**Candidate structural lemma** (open, would close A1 if proved):
+the charged-lepton Yukawa amplitude ratio |b|²/a² is FIXED by the
+SU(2)_L × U(1)_Y Casimir imbalance:
+
+  |b|²/a² = C_2(SU(2)_L fund) − Y²(U(1)_Y, Higgs) = 1/2
+
+Combined with the retained C_τ = 1 theorem, this would derive A1
+axiom-natively. The required lemma is NOT currently established —
+it needs a specific Yukawa-structure argument showing how the A_1
+Weyl geometry imprints on the generation-space amplitude ratio.
+
+Runner: `scripts/frontier_koide_a1_weyl_vector_kostant_coincidence.py`
+(documents the three-way coincidence, flags the open lemma).
+
 ## Status: A1 remains a retained-but-not-axiom-native assumption
 
 Given the 9 no-go theorems covering standard mechanisms, and the
