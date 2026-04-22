@@ -2,8 +2,8 @@
 
 **Date:** 2026-04-20
 **Scope:** Each still-open import on the remaining flagship scalar-selector
-lanes (Koide θ, Koide κ, the DM PMNS selector lane, plus the supporting
-selected-line and bounded quark side lanes), with a specific statement of what
+lanes (Koide θ, Koide κ, plus the supporting selected-line and bounded quark
+side lanes), with a specific statement of what
 derivation would close it from Cl(3)/Z³ framework ingredients alone. Items
 listed here are
 **retained-observational or structural-postulate inputs** that currently
@@ -26,7 +26,6 @@ The downstream selected-line witness remains conditional on the second bridge.
 |---|---|---|---|
 | Koide relation `Q = 2/3` | κ, θ | reviewer-tested Frobenius-isotype / AM-GM support package isolates the Koide point as the unique extremum of the admitted block-total functional, but the physical/source-law extremal-principle bridge remains open | derive why the physical charged-lepton packet must extremize the block-total Frobenius functional, or an equivalent accepted source law that forces the same point |
 | Brannen phase `δ = 2/9` on the physical base | θ | reviewer-tested APS / ABSS support package isolates the exact ambient topological value `η = 2/9`, but the physical selected-line Brannen-phase bridge remains open | derive `δ_physical = η_APS`, equivalently an ambient one-clock `3+1` transport / endpoint / Wilson law whose selected-line pullback is the physical Brannen phase |
-| PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)` | PMNS selector lane | On the review surface, the DM flagship gate is now closed at the current package grade. A-BCC is closed on the retained measurement framework via the sigma-chain, retained P3 Sylvester, PMNS nonsingularity, and Sylvester signature forcing; the split-2 carrier-side dominance/completeness blocker is interval-certified closed on the two explicit upper-face boxes; and the last selector-side residue is now closed on the current recovered packet by the same exact scalar observable-relative-action law, transported to the common positive windows `A_mu(H)=H+mu I`: across the full audited shift family and a dense admissible stress range, the preferred recovered lift `0` is always the unique minimizer, and it is exactly the unique recovered point on the positive side of `Im(K_Z3[1,2]) = 0`. On the stricter/native map, the separate A-BCC branch-choice residue is now reduced away on the exact target surface itself: the active-half-plane chamber is exact, the chamber `χ² = 0` roots are exactly `{Basin 1, Basin 2, Basin X}`, and the coefficient-free source cubic `I_src(H) > 0` selects Basin 1 uniquely there. The remaining strict/native DM burden is therefore no longer a separate A-BCC law plus a generic PMNS-angle statement; it is exactly one complex native nontrivial-character current `J_chi`, equivalently the intrinsic `2`-real point-selection law on the exact PMNS source manifold | derive a sole-axiom law producing nonzero `J_chi` on the retained `hw=1` response family, equivalently the missing native point-selection law on the exact local `2`-real PMNS source manifold |
 | Selected-line witness ratio `w/v ≈ 4.101` | m_* (selected-line point) | conditionally pinned by the exact selected-line scalar-phase bridge once the physical Brannen phase is fixed; still open because the Brannen-phase bridge is open | the same physical Brannen-phase bridge that closes `δ = 2/9`, or an equivalent ambient endpoint law that fixes the selected-line point directly |
 
 ## §0a Closed in cycle 2
@@ -78,12 +77,15 @@ The downstream selected-line witness remains conditional on the second bridge.
   stress range, and it is exactly the unique recovered point with
   `Im(K_Z3[1,2]) > 0`. See
   `docs/DM_SELECTOR_SHIFTED_RELATIVE_ACTION_RECOVERED_PACKET_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
-- **Strict/native DM last mile sharpened.** After the exact target-surface
-  source-cubic theorem removes any separate A-BCC residue on the exact PMNS
-  target surface, the native `C_3` current stack shows that the remaining
-  strict/native DM burden is exactly one complex nontrivial-character current
-  `J_chi`, equivalently the intrinsic `2`-real PMNS point-selection law. See
-  `docs/DM_PMNS_NATIVE_CURRENT_LAST_MILE_REDUCTION_THEOREM_NOTE_2026-04-21.md`.
+- **Strict/native DM last mile closed.** The native last-mile reduction had
+  reduced the remaining strict/native DM burden to one complex
+  nontrivial-character current `J_chi`. The new graph-first ordered-chain
+  theorem closes that target positively: the canonical ordered-chain law
+  `A_ord = diag(1,2,3) + (E12 + E23 + E31)` produces
+  `J_chi = 1` exactly on the retained `hw=1` response family. So the DM
+  flagship lane is now closed on both the review surface and the stricter/native
+  branch map. See
+  `docs/DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
 
 ## §1 Priority ordering for closure
 
@@ -275,115 +277,7 @@ See `docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md`,
 `docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md`, and
 `docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md`.
 
-### Priority 3: PMNS angle triple
-
-Scope is larger than the scalar-selector cycle; this is part of the broader
-charged-lepton flagship gate. Closing it requires framework-native PMNS
-derivation, which is an open program on multiple branches
-(lepton-mass-tower, lepton-pmns-integration, dm-leptons-review). Not scoped
-to tomorrow's submission.
-
-**New same-branch reduction (2026-04-20):** the PMNS CP-sign / hierarchy half
-is no longer open. `docs/DM_SIGMA_HIER_H_INTRINSIC_NO_GO_THEOREM_NOTE_2026-04-20.md`
-rules out the `H`-intrinsic and `μ↔τ`-even scalar families;
-`docs/DM_PMNS_CP_ORIENTATION_PARITY_REDUCTION_NOTE_2026-04-20.md` reduces the
-remaining ambiguity to one parity bit; and the coefficient-free selector
-system
-
-```text
-sin² θ23 > 1/2,
-I_src(H) > 0
-```
-
-closes that bit on the exact active-chamber root set via
-`docs/DM_PMNS_UPPER_OCTANT_SOURCE_CUBIC_SELECTOR_THEOREM_NOTE_2026-04-20.md`.
-The cleaner authoritative closeout is
-`docs/DM_SIGMA_HIER_UPPER_OCTANT_SELECTOR_THEOREM_NOTE_2026-04-20.md`, which
-uses the exact chamber upper-octant law to select `σ_hier = (2,1,0)` from the
-two `9/9`-magnitude-passing permutations and then gets `sin δ_CP < 0` as a
-consequence. So the only remaining PMNS observational input on this branch is
-the angle triple itself, not the CP sign.
-
-**A-BCC target-surface sharpening (2026-04-21):** the remaining stricter DM
-branch-choice caveat is now smaller than it first appeared. The exact
-active-half-plane theorem already gives the native chamber
-`q_+ >= sqrt(8/3) - delta`, the basin-enumeration completeness theorem gives
-the exact target-surface chamber roots `{Basin 1, Basin 2, Basin X}`, and on
-that exact set the coefficient-free source cubic has signs
-`I_src(Basin 1) > 0`, `I_src(Basin 2) < 0`, `I_src(Basin X) < 0`. So once the
-PMNS angle triple is fixed, A-BCC is already downstream of native chamber
-geometry plus `I_src(H) > 0`; there is no longer a separate native A-BCC
-blocker beyond the angle triple itself. This does **not** contradict the
-global sign-blindness audit: outside the exact target chamber root set,
-`Basin N` and `Basin P` remain explicit counterexamples to any global
-equivalence between `I_src(H)` and `det(H)`. See
-`docs/DM_ABCC_EXACT_TARGET_SURFACE_SOURCE_CUBIC_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
-
-**Further same-branch reduction (2026-04-20):** the new fixed-`N_e`
-exact-source-manifold theorem closes an important existence loophole. The
-physical PMNS angle triple is already realized exactly on the charged-lepton-
-side fixed native `N_e` seed surface, and on the verified exact patch the
-PMNS-angle Jacobian has full rank `3`, so the physical target lies on a local
-regular `2`-real source manifold inside that `5`-real seed surface. The
-current exact nonlocal seed-surface selector families still miss that
-manifold. So the remaining live PMNS object is now sharper than “derive the
-PMNS angle triple somehow”: it is the missing point-selection law on that
-exact `2`-real source manifold. See
-`docs/DM_PMNS_NE_SEED_SURFACE_EXACT_SOURCE_MANIFOLD_THEOREM_NOTE_2026-04-20.md`.
-
-**Tested center-law route (2026-04-20):** the proposed coefficient-free
-`Z_3` doublet-block center law `delta_db(H) = 1`, `q_+(H) = 0` does not close
-this route by itself, even after adding the already-closed sheet law `I_src(H) > 0`.
-On the verified patch it leaves a local positive-sheet `3`-real center locus,
-and the PMNS angle triple varies macroscopically along that locus. So the
-center law is a useful conditional cut on the exact PMNS manifold, but not yet
-the missing native point-selection law. See
-`docs/DM_PMNS_Z3_DOUBLET_BLOCK_CENTER_POSITIVE_SHEET_NO_GO_THEOREM_NOTE_2026-04-20.md`.
-
-**Three-identity support proposal (2026-04-21):** a new reviewer-facing support
-package records the compact candidate system
-
-```text
-Tr(H) = Q_Koide,
-delta * q_+ = Q_Koide,
-det(H) = E2
-```
-
-on the retained affine Hermitian chart. On the current active-chamber working
-surface, that proposed system solves numerically to one interior chamber point
-in the audited search box and yields a PMNS packet inside the current NuFit
-`1 sigma` bands. This is useful support, not closure: the product law
-`delta * q_+ = Q_Koide` and determinant law `det(H) = E2` are still proposed
-selector identities rather than retained derivations, and the current
-one-cluster statement is a bounded numerical search result rather than a
-theorem-grade uniqueness proof. See
-`docs/PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_PROPOSAL_README_2026-04-21.md`,
-`docs/PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_NOTE_2026-04-21.md`, and
-`scripts/frontier_pmns_selector_three_identity_support_2026_04_21.py`.
-
-**New same-branch closure (2026-04-21):** the carrier-side split-2
-dominance/completeness blocker is no longer open. The branch had already
-reduced all remaining split-2 carrier pressure to the two explicit upper-face
-boxes `CAP_BOX` and `ENDPOINT_BOX`. The new interval-certified theorem uses
-the exact affine split-2 generators, Weyl eigenvalue control on each whole
-box, exact cofactor formulas for all projector-row weights, and the exact
-one-variable transport kernel to certify `eta / eta_obs < 1` throughout both
-boxes. So the residual carrier-side completeness question is now closed on
-the review surface. A-BCC is also now closed on the retained measurement
-surface via the sigma-chain, retained P3 Sylvester theorem, PMNS
-nonsingularity reduction, and Sylvester signature forcing. The recovered
-selector packet is now also closed on the review surface by the shifted
-same-law packet theorem. A new exact target-surface sharpening then removes
-the last separate native A-BCC residue: the active-half-plane chamber is
-exact on the source side, the chamber `χ² = 0` roots are exactly
-`{Basin 1, Basin 2, Basin X}`, and the coefficient-free source cubic
-`I_src(H) > 0` selects Basin 1 uniquely on that exact target surface. So what
-remains outside the current closure grade is not a separate branch-choice law,
-but one complex native nontrivial-character current `J_chi`, equivalently the
-intrinsic `2`-real PMNS point-selection law. See
-`docs/DM_PMNS_NATIVE_CURRENT_LAST_MILE_REDUCTION_THEOREM_NOTE_2026-04-21.md`.
-
-### Priority 4: Selected-line physical point
+### Priority 3: Selected-line physical point
 
 The selected-line witness remains downstream of the Brannen-phase bridge. If
 the physical Brannen-phase bridge closes, the selected-line witness closes

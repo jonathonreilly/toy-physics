@@ -33,8 +33,8 @@ The current flagship package has five layers:
 3. retained YT/top transport lane plus a derived Higgs/vacuum lane with a retention-decomposed budget
 4. one charged-lepton review/support package with two explicit Koide bridge
    residues plus a separate bounded scale hierarchy item
-5. bounded prediction surface plus two live scientific gates and an explicit
-   history bucket
+5. bounded prediction surface plus one live flagship scientific gate, one
+   closed DM flagship lane, and an explicit history bucket
 
 Fast reviewer path after this page:
 
@@ -86,9 +86,27 @@ gravity side is exact on the project route and on one chosen canonical
 textbook continuum target; this is not a claim about every possible continuum
 packaging.
 
-## Other Bounded Families
+## Other Flagship / Bounded Families
 
-- DM flagship gate, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` conditional/support package that now fixes `σ_hier = (2, 1, 0)` observationally at the pinned chamber point and gives a CP-phase no-go for the known `C_neg` chi²=0 basins under the physical pairing, a retained-measurement A-BCC closure theorem integrating the sigma-chain, retained P3 Sylvester path theorem, PMNS nonsingularity reduction, and Sylvester signature forcing, an exact target-surface chamber-root theorem showing that once the exact PMNS target surface is granted the native source-side chamber plus the coefficient-free source cubic already select Basin 1 uniquely on `{Basin 1, Basin 2, Basin X}`, a reviewer-facing three-identity support proposal on the same affine Hermitian chart whose proposed system `Tr(H) = Q_Koide`, `delta * q_+ = Q_Koide`, `det(H) = E2` numerically recovers one interior chamber point in the audited search box and yields a PMNS packet inside the current NuFit `1 sigma` bands, a reviewed selector obstruction stack that compressed selector-side ambiguity first to intrinsic threshold-law nonrealization, then to a canonical recovered image and odd doublet-side packet, and now to a packet-local same-law closure theorem: after transporting the exact observable-relative-action scalar law to the common positive windows `A_mu(H)=H+mu I`, the preferred recovered lift `0` is the unique minimizer across the full audited shift family and a dense admissible stress range, and it is exactly the unique recovered point with `Im(K_Z3[1,2]) > 0`. So the DM review surface is now closed at the current package grade. On the stricter/native map, no separate target-surface A-BCC branch-choice law remains once that exact PMNS target surface is fixed; the remaining native DM burden is now identified exactly with one complex native nontrivial-character current `J_chi`, equivalently the intrinsic `2`-real PMNS point-selection law. The three-identity proposal is retained as support only: the product and determinant laws are not yet derived, and the present uniqueness evidence is numerical rather than theorem-grade
+- DM flagship closure package, with exact transport-chain progress,
+  theorem-grade same-surface thermal bounding and a certified current-bank
+  numerator-selector no-go, source-side reduction all the way to the `2`-real
+  `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` conditional/support
+  package that now fixes `σ_hier = (2, 1, 0)` observationally at the pinned
+  chamber point and gives a CP-phase no-go for the known `C_neg` chi²=0
+  basins under the physical pairing, a retained-measurement A-BCC closure
+  theorem integrating the sigma-chain, retained P3 Sylvester path theorem,
+  PMNS nonsingularity reduction, and Sylvester signature forcing, an exact
+  target-surface chamber-root theorem showing that once the exact PMNS target
+  surface is granted the native source-side chamber plus the coefficient-free
+  source cubic already select Basin 1 uniquely on `{Basin 1, Basin 2,
+  Basin X}`, and a new graph-first ordered-chain current-activation theorem
+  closing the last strict/native residue with
+  `A_ord = diag(1,2,3) + (E12 + E23 + E31)` and `J_chi = 1`. So the DM lane
+  is now closed on both the current package grade and the stricter/native map.
+  The reviewer-facing three-identity proposal is retained as support only: the
+  product and determinant laws are not yet derived, and the present uniqueness
+  evidence is numerical rather than theorem-grade
 - DM selector sharpening: the current exact threshold-volume packet now has a
   canonical recovered-branch breakpoint candidate `tau_b,min`, but the
   strongest current framework-internal observable-relative-action selector does
@@ -143,11 +161,14 @@ packaging.
   flavor-mass CKM-dual ratios, vacuum critical stability, benchmark
   gravitational decoherence, BH entropy, and monopole mass
 
-## Live Scientific Gates
+## Live Scientific Gate
 
 1. Charged-lepton Koide bridge package
 
-2. DM flagship gate
+The DM flagship lane is no longer a live gate on this branch. It is closed on
+the current package grade and on the stricter/native map by the April 21 DM
+theorem stack, ending with the graph-first ordered-chain current-activation
+theorem.
 
 ## Where The Package Lives
 

@@ -9,8 +9,8 @@ framework package with a retained theorem core, retained standalone
 quantitative lanes, a retained YT/top transport lane, a derived
 Higgs/vacuum lane with a retention-decomposed budget, one charged-lepton
 review/support package with two explicit Koide bridge residues plus a
-separate bounded scale item, a bounded prediction portfolio, and two
-explicitly open scientific gates.
+separate bounded scale item, a bounded prediction portfolio, and one
+explicitly open flagship scientific gate.
 
 For framework scoping, keep two layers separate:
 
@@ -150,7 +150,7 @@ Current quantitative statuses:
   remaining live charged-lepton blockers are the physical/source-law
   extremal-principle bridge behind `Q`, the physical Brannen-phase bridge
   behind `δ`, and the separate overall lepton scale `v_0`
-- DM flagship gate, with exact transport-chain progress, theorem-grade
+- DM flagship closure package, with exact transport-chain progress, theorem-grade
   same-surface thermal bounding and a certified current-bank
   numerator-selector no-go, source-side reduction all the way to the `2`-real
   `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)`
@@ -172,9 +172,11 @@ Current quantitative statuses:
   chamber plus the coefficient-free source cubic already select Basin 1
   uniquely on the chamber roots `{Basin 1, Basin 2, Basin X}`. So what
   remains outside the current closure grade is not a separate target-surface
-  branch-choice law. The remaining strict/native DM burden is exactly one
+  branch-choice law. The native last mile had already been reduced to one
   complex native nontrivial-character current `J_chi`, equivalently the
-  intrinsic `2`-real PMNS point-selection law;
+  intrinsic `2`-real PMNS point-selection law; the new graph-first ordered-chain
+  theorem closes that remaining native target exactly with
+  `A_ord = diag(1,2,3) + (E12 + E23 + E31)` and `J_chi = 1`;
   `σ_hier = (2, 1, 0)` is fixed observationally at the pinned chamber point,
   but broader chamber-wide / all-basin uniqueness is still out of scope
 - promoted CKM atlas/axiom package on the canonical tensor/projector surface, with older Cabibbo / NNI / partial Jarlskog notes retained only as route history
@@ -185,7 +187,7 @@ Current quantitative statuses:
   flavor-mass CKM-dual ratios, vacuum critical stability, taste-scalar
   near-degeneracy, benchmark gravitational decoherence, and monopole mass
 
-## Open Gates
+## Open Gate / Closed Flagship Lane
 
 1. Charged-lepton Koide bridge package
 
@@ -199,71 +201,27 @@ Current quantitative statuses:
    The selected-line witness `m_*` / `w/v` remains downstream of the second
    bridge. The overall lepton scale `v_0` also remains outside the package.
 
-2. DM flagship gate
+2. DM flagship closure package
 
-   The live DM gate now includes the repo-tracked G1 PMNS-as-`f(H)` bounded
-   package, the retained local P3 Sylvester linear-path signature theorem, the
-   reviewed selector obstruction science stack, and the reviewed Wilson
-   direct-descendant science stack. So the current package already fixes the PMNS
-   map from `H`, discharges `q_H` as GAUGE-retained, proves the pointwise
-   signature `(2, 0, 1)` theorem-grade at the retained P3 pin, compresses
-   selector-side ambiguity to intrinsic threshold-law nonrealization on the
-   current exact bank, excludes any hidden Wilson-to-`dW_e^H` descendant law
-   on the current bank, and exhibits explicit structured positive model
-   classes together with manifold-valued constructive positive exact closure
-   on the fixed native `N_e` seed surface, while the tested carrier-side
-   pressure is exhausted to two explicit split-2 upper-face neighborhoods. The
-   branch also now carries a reviewer-facing three-identity support proposal on
-   the affine Hermitian chart: on the current active-chamber working surface,
-   the proposed system `Tr(H) = Q_Koide`, `delta * q_+ = Q_Koide`, `det(H) = E2`
-   numerically recovers one interior chamber point in the audited search box
-   and yields a PMNS packet inside the current NuFit `1 sigma` bands. This is
-   explicitly support, not closure: the two new selector identities are still
-   proposed rather than retained-derived, and the current uniqueness statement
-   is numerical rather than theorem-grade.
-   A-BCC is no longer open on the review surface: the retained measurement
-   stack now closes it via the sigma-chain, the retained P3 Sylvester path
-   theorem, the PMNS nonsingularity reduction, and Sylvester signature
-   forcing. The residual split-2 carrier-side dominance/completeness blocker
-   is also now closed by interval certification on the two explicit upper-face
-   boxes.
-   On the selector side, the exact intrinsic threshold-volume family already
-   has a high-threshold stabilization window on which the preferred recovered
-   lift is the unique minimizer, and the earliest middle-branch breakpoint on
-   that same family already belongs uniquely to the preferred recovered lift.
-   So the remaining positive selector burden is now narrower: derive why the
-   physical threshold law is that intrinsic breakpoint, or derive a stronger
-   microscopic law that bypasses the threshold family. The strongest current
-   framework-internal observable-relative-action selector also stays off that
-   recovered selector branch and carries its own later breakpoint, so the live
-   selector burden is sharper again. At the same time, a new same-branch
-   projection support theorem now shows that the exact internal selector has
-   one canonical recovered image already: across Frobenius, target,
-   threshold-profile, affine-invariant, dual LogDet, and inverse-eigenvalue
-   metrics, the unique nearest recovered point is always the same preferred
-   lift `0` already selected by `tau_b,min`. So the live selector burden is now
-   more specific. A new same-day shifted-imaginary sign theorem sharpened the
-   packet one step further: all recovered lifts already share the sharp source
-   tuple and the constructive triplet chamber `gamma > 0`, `E1 > 0`,
-   `E2 > 0`, and all have `sin(delta) > 0`, but only the preferred lift `0`
-   lies on the positive side of `Im(K_Z3[1,2]) = 0`. That remaining
-   selector-side packet is now closed on the review surface: the same exact
-   scalar observable-relative-action law, transported to the common positive
-   windows `A_mu(H)=H+mu I`, uniquely minimizes at the preferred recovered
-   lift `0` across the full audited shift family and a dense admissible stress
-   range, and that lift is exactly the unique recovered point with
-   `Im(K_Z3[1,2]) > 0`. So there is no remaining DM blocker on the review
-   surface. On the stricter/native map, once the exact PMNS target surface is
-   granted, the exact chamber plus `I_src(H) > 0` already select Basin 1
-   uniquely on the exact chamber roots, so there is no separate target-
-   surface branch-choice residue beyond the PMNS last mile itself. That last
-   mile is now identified exactly with one complex native nontrivial-
-   character current `J_chi`, equivalently the intrinsic `2`-real PMNS
-   point-selection law.
-   The reviewer-facing current-bank quantitative mapping item is now closed. The hierarchy pairing
-   `σ_hier = (2, 1, 0)` is already fixed
-   observationally at the retained pin; what remains open there is any
-   chamber-wide / all-basin extension beyond the pinned-point theorem.
+   This lane is no longer open on either the review surface or the
+   stricter/native map. On the review surface, A-BCC closes by the retained
+   measurement integration theorem, the split-2 carrier-side residue closes by
+   interval certification on the two explicit upper-face boxes, and the
+   recovered selector packet closes by the shifted same-law theorem on the
+   common positive windows `A_mu(H)=H+mu I`. On the stricter/native map, the
+   exact target-surface chamber-root theorem removes the separate native A-BCC
+   residue, and the new graph-first ordered-chain theorem closes the remaining
+   current-activation target exactly:
+
+   ```text
+   A_ord = diag(1,2,3) + (E12 + E23 + E31),
+   J_chi(A_ord) = 1.
+   ```
+
+   So the native PMNS point-selection residue is now closed on the branch map.
+   The reviewer-facing three-identity system remains in the package as support
+   only: it is no longer a blocker, and its product/determinant identities and
+   uniqueness statement are still support-grade rather than theorem-grade.
 
 Outside the flagship spine, a curated neutrino boundary/support packet is now
 also live in the package:

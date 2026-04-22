@@ -4,7 +4,8 @@
 **Scope:** Reviewer-facing clean-language summary of four Tier-1 Standard
 Model scalar-selector gates on the current review surface. The package closes
 the up-sector quark gate, materially sharpens the charged-lepton Koide gates,
-and reduces the DM gate to two explicit named blockers without adding new axioms.
+and now closes the DM gate on both the review surface and the stricter/native
+map without adding new axioms.
 Named retained observational inputs and unresolved structural bridges are
 listed explicitly. This note is the primary read-me for the submission.
 
@@ -12,7 +13,13 @@ listed explicitly. This note is the primary read-me for the submission.
 
 ## §0 Bottom line
 
-On the current review surface, the up-sector quark gate is fully closed, the charged-lepton Koide lane carries the strongest current executable support stack but still retains two physical bridges, and the DM gate is reduced to two explicit named blockers after the new split-2 interval certification. No new axioms are added. All runners pass with no hardcoded verifications. Open retained-observational inputs and unresolved structural bridges are enumerated separately in `docs/SCALAR_SELECTOR_REMAINING_OPEN_IMPORTS_2026-04-20.md`.
+On the current review surface, the up-sector quark gate is fully closed, the
+charged-lepton Koide lane carries the strongest current executable support
+stack but still retains two physical bridges, and the DM gate is now closed on
+both the review surface and the stricter/native map. No new axioms are added.
+All runners pass with no hardcoded verifications. Open retained-observational
+inputs and unresolved structural bridges are enumerated separately in
+`docs/SCALAR_SELECTOR_REMAINING_OPEN_IMPORTS_2026-04-20.md`.
 
 **2026-04-21 package update.** The April 21 Koide package
 (`docs/KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md`) supersedes the
@@ -25,7 +32,7 @@ physical Brannen-phase bridge.
 |---|---|---|---|
 | **Koide κ** | Charged-lepton cone normalization `κ = 2` (equivalently `Q = 2/3`) | April 21 support package: Frobenius-isotype / AM-GM support + executable reviewer stress-test | physical/source-law bridge from retained framework physics to the block-total Frobenius extremal principle |
 | **Koide θ** | Brannen-Zenczykowski phase offset `δ = 2/9` | April 21 support package: ABSS fixed-point / topological robustness + executable reviewer stress-test | physical Brannen-phase bridge from the selected-line observable to the ambient APS invariant |
-| **DM A-BCC** | Physical neutrino-source basin selection (Basin 1) | Sylvester signature-forcing + σ-chain + DPLE `F_4` + chamber bound + upper-octant / source-cubic selector | PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)`; on the stricter/native map this is now sharpened further to one complex native nontrivial-character current `J_chi`, equivalently the intrinsic `2`-real PMNS point-selection law |
+| **DM PMNS** | Physical neutrino-source basin selection plus intrinsic PMNS point selection | Retained-measurement A-BCC integration + interval-certified split-2 closure + shifted same-law recovered-packet closure + exact target-surface source-cubic theorem + graph-first ordered-chain nonzero-current theorem | none on the review surface; no strict/native residue remains after graph-first ordered-chain current activation |
 | **Quark a_u** | Up-sector reduced amplitude `a_u = 0.7748865611` | Affine-physical-carrier JTS + one-dimensional 5-channel residue + RPSR NLO | Bimodule `B = Cl(3)/Z₃ ⊗ Cl_CKM(1⊕5)`, retained atoms `ρ, supp, δ_A1` (CKM atlas) |
 
 ---
@@ -233,15 +240,18 @@ contradict the five-route audit globally: outside that exact chamber-root set,
 
 ### §3.4 Retained inputs
 
-Retained inputs are: the PMNS angle triple
-`(sin² θ12, sin² θ13, sin² θ23)`. The chamber bound
-`q_+ + δ ≥ √(8/3)` is no longer retained input on this branch: it now has a
-reviewer-grade inline derivation in
+There is no longer a retained observational input on the DM flagship lane.
+The chamber bound `q_+ + δ ≥ √(8/3)` is no longer retained input on this
+branch: it now has a reviewer-grade inline derivation in
 `docs/DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md`. The CP-sign /
 `σ_hier` half is also no longer retained input on this branch: it is derived by the
 active-chamber completeness theorem, the parity reduction, the upper-octant
-law, and the coefficient-free source-cubic selector. The new fixed-`N_e`
-exact-source-manifold theorem further sharpens the remaining angle-side gap:
+law, and the coefficient-free source-cubic selector. The fixed-`N_e`
+exact-source-manifold theorem sharpened the native last mile to one complex
+current `J_chi`, and the new graph-first ordered-chain theorem closes that
+remaining current-activation target exactly.
+
+The fixed-`N_e` exact-source-manifold theorem further sharpened the angle-side gap:
 the physical PMNS target already lies on an exact regular local `2`-real
 source manifold on the charged-lepton-side seed surface, so the live missing
 object is the point-selection law on that manifold, not target existence. The
@@ -267,10 +277,11 @@ nonsingularity reduction, and Sylvester signature forcing into one explicit
 closure statement. The stricter/native map is now sharper too: once the exact
 PMNS target surface is granted, the separate A-BCC target-surface residue is
 already reduced away by the exact chamber-root theorem plus the coefficient-
-free source cubic. So the only remaining strict/native DM burden is the PMNS
-angle triple itself, not an additional branch-choice law on that same target
-surface. See
-`docs/DM_SPLIT2_INTERVAL_CERTIFIED_DOMINANCE_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
+free source cubic. The native last mile had then reduced to one complex
+nontrivial-character current `J_chi`, and the new graph-first ordered-chain
+theorem closes that target positively with
+`A_ord = diag(1,2,3) + (E12 + E23 + E31)` and `J_chi = 1`. See
+`docs/DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
 The selector side is also slightly sharper than before: on the recovered bank,
 the exact intrinsic threshold-volume selector family now has a theorem-grade
 high-threshold stabilization window on which the preferred recovered lift is
@@ -325,12 +336,13 @@ with `Im(K_Z3[1,2]) > 0`. So there is no remaining DM blocker on the review
 surface. On the stricter/native map, once the exact PMNS target surface is
 granted, the exact chamber plus `I_src(H) > 0` already select Basin 1
 uniquely on the exact chamber roots, so there is no separate target-surface
-branch-choice residue beyond the PMNS last mile itself. That last mile is now
-sharper than a generic angle-target statement: the native `C_3` character
-holonomy and current reductions identify the remaining strict/native datum
-with one complex nontrivial-character current `J_chi`, equivalently the
-intrinsic `2`-real PMNS point-selection law. See
-`docs/DM_PMNS_NATIVE_CURRENT_LAST_MILE_REDUCTION_THEOREM_NOTE_2026-04-21.md`.
+branch-choice residue beyond the PMNS last mile itself. That last mile had
+already been reduced to one complex nontrivial-character current `J_chi`,
+equivalently the intrinsic `2`-real PMNS point-selection law, and it is now
+closed positively by the graph-first ordered-chain theorem:
+`A_ord = diag(1,2,3) + (E12 + E23 + E31)` gives `J_chi = 1` exactly on the
+retained `hw=1` response family. See
+`docs/DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
 PNS is derived as a property of Basin 1, not axiomatized.
 
 ---
@@ -471,18 +483,20 @@ All runners pass with no hardcoded `True` PASS annotations. Every PASS is a nume
 
 **2026-04-21 package update.** After the landed April 21 support package,
 Koide `Q = 2/3` and Brannen `δ = 2/9` are no longer counted here as retained
-observational inputs. The table below lists the remaining retained
-observational or atlas-level inputs across the four Tier-1 gates.
+observational inputs. The DM flagship lane is now also removed from this list:
+its review-surface and strict/native residues are closed by the April 21 DM
+theorem stack. The table below lists the remaining retained observational or
+atlas-level inputs across the still-open or still-atlas-backed Tier-1 gates.
 
 | Label | Input | Used in | Provenance |
 |---|---|---|---|
-| PMNS | PMNS angle triple `(sin² θ12, sin² θ13, sin² θ23)` | PMNS selector law on the retained-measurement physical branch | NuFit / pinned chamber target |
 | BIM | Bimodule `B = Cl(3)/Z₃ ⊗ Cl_CKM(1⊕5)` | a_u | `CL3_SM_EMBEDDING_THEOREM` + `CKM_ATLAS_AXIOM_CLOSURE_NOTE` (main) |
 | ATOM-ρ | `a_d = ρ = 1/√42` | a_u | CKM atlas |
 | ATOM-S | `supp = 6/7` | a_u | CKM atlas |
 | ATOM-A | `δ_{A1} = 1/42` | a_u | CKM atlas |
 
-No other observational or structural-postulate inputs enter the four Tier-1 closures this cycle.
+No other observational or structural-postulate inputs enter the still-open or
+still-atlas-backed Tier-1 closures this cycle.
 
 ---
 

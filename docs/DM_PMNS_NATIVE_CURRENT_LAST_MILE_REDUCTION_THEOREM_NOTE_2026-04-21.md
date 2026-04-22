@@ -1,10 +1,12 @@
 # DM PMNS Native Current Last-Mile Reduction Theorem
 
-**Date:** 2026-04-21  
-**Lane:** strict/native DM last-mile sharpening  
-**Status:** exact reduction theorem; not a full positive closure  
-**Does not close:** a sole-axiom law producing the missing nonzero current  
-**Primary runner:**  
+**Date:** 2026-04-21
+**Lane:** strict/native DM last-mile sharpening
+**Status:** exact reduction theorem, now positively discharged by the graph-first
+ordered-chain nonzero-current closure theorem
+**Positive closeout:**
+`docs/DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_CLOSURE_THEOREM_NOTE_2026-04-21.md`
+**Primary runner:**
 `scripts/frontier_dm_pmns_native_current_last_mile_reduction_2026_04_21.py`
 
 ---
@@ -24,7 +26,7 @@ Two same-branch reductions now compose:
 2. the native `C_3` character/current theorems identify the remaining PMNS
    value problem with one exact complex current.
 
-The result is:
+The reduction result is:
 
 > on the strict/native DM map, the remaining PMNS last mile is exactly a
 > sole-axiom law producing nonzero
@@ -43,9 +45,10 @@ Equivalently:
   by
   `Re J_chi` and `Im J_chi`.
 
-So the current exact remaining strict/native DM object is not "the PMNS angle
-triple" in an undifferentiated sense. It is one native complex nontrivial-
-character current.
+So the current exact strict/native DM object is not "the PMNS angle triple" in
+an undifferentiated sense. It reduces to one native complex
+nontrivial-character current, and that reduced target is now closed
+positively by the graph-first ordered-chain theorem.
 
 ---
 
@@ -159,6 +162,9 @@ one complex current.
 > derive a sole-axiom law producing nonzero J_chi
 > on the retained hw=1 response family.
 > ```
+>
+> This target is now satisfied by the graph-first ordered-chain current
+> activation theorem.
 
 ### Proof sketch
 

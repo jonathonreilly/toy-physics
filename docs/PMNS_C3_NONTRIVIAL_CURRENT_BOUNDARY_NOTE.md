@@ -1,5 +1,9 @@
 # PMNS `C3` Nontrivial-Character Current Boundary
 
+**Status:** historical pre-ordered-chain boundary on the old sole-axiom bank;
+the positive target identified here is now discharged by
+`docs/DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
+
 ## Question
 Once the retained PMNS lane has been reduced to the native `C3`-character
 family, what is the exact smallest remaining sole-axiom source object?
@@ -52,9 +56,11 @@ J_chi = 0
 on all of those routes.
 
 ## Consequence
-The strongest honest next positive target is now fully explicit:
+The smallest remaining PMNS-side source object on the old bank was therefore
+fully explicit:
 
 > derive a sole-axiom law producing nonzero `J_chi` on the retained `hw=1`
 > response family.
 
-That is the smallest remaining PMNS-side source object on the current bank.
+That target is now met by the graph-first ordered-chain current-activation
+theorem cited above.
