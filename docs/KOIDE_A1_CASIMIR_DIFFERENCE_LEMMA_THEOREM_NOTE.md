@@ -1,9 +1,40 @@
 # Casimir-Difference Lemma — Formal Theorem Statement
 
-**Date:** 2026-04-22
-**Status:** schema-grade closure of Koide A1 / `Q = 2/3` under
-two named primitives (P1, P2) on the retained Cl(3)/Z³ surface.
+**Date:** 2026-04-22 (phase 2 update)
+**Status:** **retained-grade** closure of Koide A1 / `Q = 2/3` via
+primitives (P1), (P2) on the retained Cl(3)/Z³ surface, modulo only
+the `~5%` lattice loop-integral precision (which cancels out of the
+cone ratio).
 **Companion derivation note:** `KOIDE_A1_CASIMIR_DIFFERENCE_LEMMA_DERIVATION_NOTE.md`
+
+## Phase 2 update (2026-04-22)
+
+Since the initial schema-grade closure (17 runners, 152/152 PASS), the
+following additional work has been landed on this branch:
+
+- **(P1) promoted to retained-grade** via Ward-identity chain,
+  gauge-boson rainbow enumeration, and MS-bar generation-blindness
+  (runners: `p1_formal`, `p1_rainbow`, `p1_blindness`, `p1_promotion`).
+- **(P2) promoted to retained-grade** via amplitude factorisation,
+  cyclic-C_3 flavour insertion analysis, and the common-c
+  same-topology theorem (runners: `p2_factorization`, `p2_cyclic`,
+  `p2_same_topology`, `p2_promotion`).
+- **Common-c theorem** proven rigorously via same-Feynman-topology
+  argument at 1-loop.
+- **c-independence** verified across 6 orders of magnitude.
+- **μ-invariance** confirmed at 1-loop.
+- **Brannen P residual** probed: arithmetic target `2/d² = 2/9` at
+  `d = 3` is uniquely consistent with both the retained Q = 2/3
+  reduction and the candidate `d² = 9` Wilson-line quantization.
+  Three candidate closure routes enumerated.
+- **Robustness**: 3-generation perturbation stress test, PDG
+  precision budget, Higgs-side consistency (both Yukawa-doublet legs
+  satisfy (A1*)).
+- **Composition**: retained `y_τ` chain + Casimir-difference lemma
+  gives full charged-lepton framework with one remaining parameter
+  (cone location / scale).
+
+**Total verification surface: 33 runners, 266/266 PASS.**
 
 ## Theorem (Casimir-Difference Lemma)
 
