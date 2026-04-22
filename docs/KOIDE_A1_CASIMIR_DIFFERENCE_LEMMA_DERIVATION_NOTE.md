@@ -166,14 +166,22 @@ Casimir-difference lemma evades all of them because:
 
 ## 6. Status and what each runner asserts
 
-Initial scaffolding (this commit):
+| Step | Runner | Status |
+|---|---|---|
+| Skeleton | `frontier_koide_a1_casimir_difference_lemma_skeleton.py` | 12 PASS — closure architecture |
+| O1.a | `frontier_koide_a1_casimir_difference_o1a_c3_plancherel.py` | 12 PASS — C_3 Plancherel + A_1/E projector split |
 
-- `scripts/frontier_koide_a1_casimir_difference_lemma_skeleton.py`:
-  records the closure architecture, verifies (A1*), and isolates the
-  three named primitives O1, O2, O3 as concrete future runners.
+**O1.a closed.** The C_3 character decomposition is symbolically
+self-consistent (sympy verification of both Parseval identities) and
+the A_1 (trivial) / E (nontrivial) projector pair satisfies
+`P_+ + P_E = 1_3` with `v^T P_+ v = a_0^2` and `v^T P_E v = 2 |z|^2`.
+The PDG charged-lepton √m vector lies within `~1e-5` of the A1 cone
+on this projector split.
 
-The derivation will be developed iteratively across subsequent commits.
-Each commit advances one obligation and updates this note in place.
+**Next:** O1.b — lift the projector split from the 3-dim generation
+space to the hw=1 carrier mass-matrix algebra (S_3-irrep
+decomposition `8 = 1 + 1 + 3 + 3` from
+`docs/S3_TASTE_CUBE_DECOMPOSITION_NOTE.md`).
 
 ## 7. References
 
