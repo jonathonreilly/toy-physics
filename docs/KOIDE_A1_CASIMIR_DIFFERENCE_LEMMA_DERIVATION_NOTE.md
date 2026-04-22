@@ -204,6 +204,7 @@ On the SM Yukawa-doublet assignment, this equals 1/2 ⟺ Koide A1
 | X4 | `frontier_koide_a1_casimir_difference_x4_compose_hw1_theorem1.py` | 7 PASS — end-to-end chain Q=2/3 ⟺ a_0²=2|z|² ⟺ (A1*) ⟸ retained inputs |
 | X5 | `frontier_koide_a1_casimir_difference_x5_no_go_evasion.py` | 10 PASS — evades all 9 retained no-go theorems |
 | X6 | `frontier_koide_a1_casimir_difference_x6_brannen_corollary.py` | 7 PASS — δ = Q/d = 2/9 follows on retained Brannen reduction; P residual flagged |
+| X7 | `frontier_koide_a1_casimir_difference_x7_existing_runner_consistency.py` | 6 PASS — re-runs existing yukawa_casimir runner (9/9), confirms consistency |
 
 **Uniqueness sharpened.** The condition `3Y² = T(T+1)` admits no other
 rational `(T, Y)` with `T` half-integer ≥ 1/2 and `C_sum > 0`. The
