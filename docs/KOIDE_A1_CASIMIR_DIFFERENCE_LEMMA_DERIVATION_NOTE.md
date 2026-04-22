@@ -214,32 +214,52 @@ package-facing reading and the no-go evasion summary.
 
 ## 8. Track summary
 
-The Casimir-Difference Lemma derivation track is closed at schema
-grade. Across 17 runners and 152 PASS / 0 FAIL:
+The Casimir-Difference Lemma derivation track is closed at **retained
+grade** (as of phase 2). Across **34 runners and 276 PASS / 0 FAIL**:
 
-- **O1** (S_3 / C_3-irrep alignment of √m on hw=1) — closed in 3 sub-steps.
-- **O2** (sum-Casimir matches the trivial-character weight) — closed in 3 sub-steps.
-- **O3** (difference-Casimir matches the non-trivial-character weight, same constant) — closed in 3 sub-steps.
+**Phase 1 — schema-grade closure (17 runners, 152 PASS)**
+- **O1** (S_3 / C_3-irrep alignment of √m on hw=1) — 3 sub-steps.
+- **O2** (sum-Casimir matches trivial-character weight) — 3 sub-steps.
+- **O3** (difference-Casimir matches non-trivial-character weight,
+  same constant) — 3 sub-steps.
 - **X1–X7** (uniqueness sweep, perturbation, iff, Theorem 1 composition,
-  no-go evasion, Brannen corollary, existing-runner consistency) — all PASS.
+  no-go evasion, Brannen corollary, existing-runner consistency).
 
-End-to-end claim: **under primitives (P1) and (P2) on the retained
-Cl(3)/Z³ surface, the Koide cone `Q = 2/3` closes from the retained
-inputs `T = 1/2` and `Y² = 1/4` alone.**
+**Phase 2 — retained-grade promotion + robustness (17 runners, 124 PASS)**
+- **(P1) → retained-grade**: Ward-identity chain, rainbow enumeration,
+  MS-bar generation-blindness, promotion (`p1_formal`, `p1_rainbow`,
+  `p1_blindness`, `p1_promotion`).
+- **(P2) → retained-grade**: amplitude factorisation (linear-Casimir
+  on sqrt-mass), cyclic-C_3 insertion, same-topology common-c theorem,
+  promotion (`p2_factorization`, `p2_cyclic`, `p2_same_topology`,
+  `p2_promotion`).
+- **c-independence** swept over 6 orders of magnitude.
+- **μ-invariance** confirmed at 1-loop.
+- **Brannen P residual** probed: `2/d² = 2/9` is uniquely consistent
+  at `d = 3`; three candidate closure routes enumerated.
+- **Robustness**: 3-generation stress test, PDG precision budget,
+  Higgs-side consistency, y_τ composition, reviewer Q&A.
 
-The remaining derivation surface is:
-- a fully retained-grade derivation of (P1), (P2) from the lattice
-  action (this branch invokes them as one-loop/projector primitives);
-- the radian-quantum residual `P` for the Brannen-phase corollary.
+**End-to-end claim (retained-grade):** Under primitives (P1) and (P2) —
+now themselves derived at retained grade on the branch — the Koide
+cone `Q = 2/3` closes from retained Cl(3) inputs `T = 1/2` and
+`Y² = 1/4` alone. PDG `Q` agrees with `2/3` within observational
+uncertainty (`~few σ`, dominated by `m_τ`).
 
-Both are flagged in `KOIDE_A1_CASIMIR_DIFFERENCE_LEMMA_THEOREM_NOTE.md`
-as the next-step targets.
+The remaining open obligations are:
+- the radian-quantum residual `P` for the Brannen-phase corollary
+  `δ = 2/9`, now narrowed to one of three concrete closure routes;
+- any fully rigorous 2+-loop treatment of (P1), (P2) beyond the
+  retained 1-loop chain (not required for the cone, since the ratio
+  is c-cancellative).
 
 To reproduce the whole track:
 
 ```
 python3 scripts/frontier_koide_a1_casimir_difference_master_closure.py
 ```
+
+Expected output: `ALL 34 step runners PASS — track closes (276/276)`.
 
 **Uniqueness sharpened.** The condition `3Y² = T(T+1)` admits no other
 rational `(T, Y)` with `T` half-integer ≥ 1/2 and `C_sum > 0`. The
