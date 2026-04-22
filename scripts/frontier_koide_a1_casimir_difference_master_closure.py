@@ -20,6 +20,7 @@ REPO = Path(__file__).resolve().parents[1]
 SCRIPTS = REPO / "scripts"
 
 STEP_RUNNERS = [
+    # Phase 1 — schema grade closure
     "frontier_koide_a1_casimir_difference_lemma_skeleton.py",
     "frontier_koide_a1_casimir_difference_o1a_c3_plancherel.py",
     "frontier_koide_a1_casimir_difference_o1b_hw1_s3_alignment.py",
@@ -37,6 +38,23 @@ STEP_RUNNERS = [
     "frontier_koide_a1_casimir_difference_x5_no_go_evasion.py",
     "frontier_koide_a1_casimir_difference_x6_brannen_corollary.py",
     "frontier_koide_a1_casimir_difference_x7_existing_runner_consistency.py",
+    # Phase 2 — retained-grade promotion + brannen P attack + robustness
+    "frontier_koide_a1_casimir_difference_p1_formal.py",
+    "frontier_koide_a1_casimir_difference_p1_rainbow.py",
+    "frontier_koide_a1_casimir_difference_p1_blindness.py",
+    "frontier_koide_a1_casimir_difference_p1_promotion.py",
+    "frontier_koide_a1_casimir_difference_p2_factorization.py",
+    "frontier_koide_a1_casimir_difference_p2_cyclic.py",
+    "frontier_koide_a1_casimir_difference_p2_same_topology.py",
+    "frontier_koide_a1_casimir_difference_p2_promotion.py",
+    "frontier_koide_a1_casimir_difference_c_independence.py",
+    "frontier_koide_a1_casimir_difference_mu_invariance.py",
+    "frontier_koide_a1_casimir_difference_brannen_p_probe.py",
+    "frontier_koide_a1_casimir_difference_brannen_berry.py",
+    "frontier_koide_a1_casimir_difference_stress_test.py",
+    "frontier_koide_a1_casimir_difference_ytau_composition.py",
+    "frontier_koide_a1_casimir_difference_precision_budget.py",
+    "frontier_koide_a1_casimir_difference_higgs_consistency.py",
 ]
 
 
