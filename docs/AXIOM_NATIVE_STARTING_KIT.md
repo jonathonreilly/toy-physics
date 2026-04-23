@@ -164,3 +164,15 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   "2^(-16) universal" conjecture is refuted /
   `frontier_axiom_native_unit_cube_partition.py` /
   Target 2 sub-step 2b.
+- Unifying formula: on every kit-derivable bipartite-balanced Z^3
+  subgraph `G` tested (edge, 4-line, plaquette, 2x3 grid, unit
+  cube), the K3 staggered-phase orientation realizes the Kasteleyn-
+  like identity `|det(B_G)| = #PM(G)` (verified case-by-case),
+  giving the closed form `C_G = (#PM(G))^{16} / 2^{8 * n_sites}`.
+  Specific values: `C_edge = C_plaq = 1^{16}/2^{16} = 2^{16}/2^{32}
+  = 2^{-16}`; `C_{4line} = 2^{-32}`; `C_{2x3_grid} = 3^{16}/2^{48}`
+  (new); `C_cube = 9^{16}/2^{64} = (3/4)^{32}`. Removing the
+  staggered signs (unsigned adjacency) breaks the identity: for the
+  cube, unsigned det = -3 while #PM = 9 /
+  `frontier_axiom_native_perfect_matching_formula.py` /
+  Target 2 sub-step 2c.

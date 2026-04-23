@@ -273,3 +273,35 @@ C_edge, C_plaq, C_cube into a single sharper prediction, or (c)
 move toward Target 3 if Target 2 has at least 2 distinct
 prediction surfaces (current count).
 
+[2026-04-23 05:35] Target 2, sub-step 2c (perfect-matching formula) — PASS
+Tried: unify the scattered C_G predictions into a single formula via
+the Kasteleyn-like identity |det(B_G)| = #PM(G). Wrote
+scripts/frontier_axiom_native_perfect_matching_formula.py which:
+(i) builds the bipartite block B_G from K3 staggered phases for each
+of 5 test graphs (edge, plaquette, 4-line, 2x3 grid NEW, unit cube),
+(ii) enumerates perfect matchings directly via itertools.permutations
+(verifying #PM = 1, 2, 1, 3, 9 respectively),
+(iii) computes det(B_G) via sympy (gets 1, -2, 1, -3, 9 respectively),
+(iv) verifies |det(B_G)| = #PM on each graph,
+(v) derives the closed-form C_G = (#PM)^16 / 2^(8 * n_sites) and
+verifies it matches ledger C_edge, C_plaq, C_cube,
+(vi) introduces new kit constant: C_{2x3_grid} = 3^16 / 2^48,
+(vii) deletion test: unsigned cube block gives |det| = 3, distinct
+from #PM = 9 (K3 staggered signs are load-bearing for the identity).
+Target 2 structural signature now has a UNIFIED formula:
+C_G = (#PM(G))^16 / 2^(8 n_sites). This ties K3 partition theory to
+perfect-matching combinatorics on Z^3 bipartite subgraphs.
+Accepted because: hostile audit verdict = clean. 18 computed record()
+booleans, no narrative PASSes.
+Target 2 now satisfies Target 2 success criteria with a general
+formula + 5 test-case verifications + new prediction (2x3 grid).
+Next vector: possibilities --
+(a) attempt to PROVE the Kasteleyn-like identity for the kit (not
+just verify case-by-case), showing K3's staggered phases satisfy
+the Kasteleyn condition on all embedded Z^3 subgraphs,
+(b) extend to non-bipartite-balanced graphs where #PM = 0 and
+compare with det(A) = 0,
+(c) move to Target 3 (Koide Q = 2/3 via K = 0), since Target 2 now
+has 3 distinct successful sub-steps (2a, 2b, 2c) with a unifying
+formula.
+
