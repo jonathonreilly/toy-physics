@@ -17,11 +17,15 @@ SUBCHECKS = [
     "frontier_planck_one_axiom_extension_acceptance_theorem.py",
     "frontier_planck_one_axiom_conservative_semantics_bridge_theorem.py",
     "frontier_planck_p1_decomposition_and_counting_trace_reduction.py",
+    "frontier_planck_atomic_naturality_from_primitive_universality_theorem.py",
     "frontier_planck_universal_primitive_counting_trace_theorem.py",
     "frontier_planck_event_frame_no_information_state_theorem.py",
     "frontier_planck_source_free_default_datum_from_one_axiom_theorem.py",
     "frontier_planck_gravitational_area_action_carrier_identification_theorem.py",
+    "frontier_planck_gravity_carrier_from_sector_identification_theorem.py",
     "frontier_planck_area_action_normalization_theorem.py",
+    "frontier_planck_planck_normalization_non_tautology_audit.py",
+    "frontier_planck_claim_scope_hostile_audit.py",
 ]
 
 
@@ -57,6 +61,7 @@ def main() -> int:
     total = 0
 
     packet = read("docs/PLANCK_SCALE_NATIVE_DERIVATION_THEOREM_PACKET_2026-04-23.md")
+    reviewer = read("docs/PLANCK_SCALE_REVIEWER_CANONICAL_SUBMISSION_PACKET_2026-04-23.md")
 
     for script in SUBCHECKS:
         total += 1
@@ -101,7 +106,8 @@ def main() -> int:
     passed += expect(
         "packet-reduces-p1-to-counting-trace-reading",
         "P1's no-preferred-primitive-event law plus additivity/naturality reduces"
-        in packet,
+        in packet
+        and "ATOMIC_NATURALITY_FROM_PRIMITIVE_UNIVERSALITY" in packet,
     )
 
     total += 1
@@ -114,10 +120,29 @@ def main() -> int:
 
     total += 1
     passed += expect(
+        "packet-records-non-tautology-audit",
+        "PLANCK_SCALE_PLANCK_NORMALIZATION_NON_TAUTOLOGY_AUDIT_2026-04-23.md"
+        in packet,
+    )
+
+    total += 1
+    passed += expect(
         "packet-derives-planck-length",
         "`a^2 = l_P^2`" in packet
         and "`a = l_P`" in packet
         and "standard gravitational area/action normalization" in packet,
+    )
+
+    total += 1
+    passed += expect(
+        "reviewer-packet-includes-final-hardening-notes",
+        "PLANCK_SCALE_ATOMIC_NATURALITY_FROM_PRIMITIVE_UNIVERSALITY_THEOREM_2026-04-23.md"
+        in reviewer
+        and "PLANCK_SCALE_GRAVITY_CARRIER_FROM_SECTOR_IDENTIFICATION_THEOREM_2026-04-23.md"
+        in reviewer
+        and "PLANCK_SCALE_PLANCK_NORMALIZATION_NON_TAUTOLOGY_AUDIT_2026-04-23.md"
+        in reviewer
+        and "PLANCK_SCALE_CLAIM_SCOPE_HOSTILE_AUDIT_2026-04-23.md" in reviewer,
     )
 
     print(f"SUMMARY: PASS={passed} FAIL={total - passed}")
