@@ -201,3 +201,39 @@ falsification surface). Five distinct successful attack vectors
 logged on Target 1 (1a, 1b, 1c, 1d, 1e), exceeding the threshold
 in LOOP_PROMPT rule 7 for moving on to a closed target.
 
+[2026-04-23 04:25] Target 2, sub-step 2a (plaquette partition universality) — PASS
+Tried: produce ONE specific kit-derivable observable with specific
+predicted value and falsification threshold, per Target 2 criteria.
+Wrote scripts/frontier_axiom_native_plaquette_partition_universality.py
+which constructs the K3 free action on an elementary 2x2 plaquette
+of Z^3 (mu_1-mu_2 plane at origin, open BCs) and computes:
+(i) staggered phases eta on 4 plaquette sites,
+(ii) the 4x4 hopping matrix A (entries in {-1, 0, +1}) via direct
+K3 action evaluation,
+(iii) det(A) = 4 via sympy,
+(iv) per-Cl(3)-sector partition Z_B = (a^2/2)^4 * 4,
+(v) total Z_plaq = (a^2/2)^32 * 2^16,
+(vi) normalized C_plaq = Z_plaq / a^64 = 2^(-16) EXACTLY,
+(vii) C_plaq = C_edge (plaquette-edge universality; both equal 2^(-16)),
+(viii) contrast: 4-site open line has det(A)=1, C_4line = 2^(-32),
+NOT 2^(-16). So universality is specific to the closed-plaquette
+case, not generic.
+(ix) isolating a plaquette vertex gives det = 0 (connectivity load-
+bearing),
+(x) removing one plaquette edge gives C = 2^(-32), distinct from
+C_plaq = 2^(-16) (closure load-bearing for the specific value).
+Target 2 success criteria met:
+(observable)   C_plaq;
+(predicted)    2^(-16) = 1/65536;
+(falsification) any different value refutes the K3 free plaquette
+                partition, and an alternative stencil/action would
+                change the value.
+Accepted because: hostile audit verdict = clean. 14 computed record()
+booleans, no narrative PASSes. (One earlier test mis-specified; fixed
+in iteration.)
+Next vector (sub-step 2b): extend universality. Compute C on other
+kit-derivable graphs (e.g., multi-plaquette 2x3 grid, 3D unit cube
+with 8 vertices and 12 edges) and see if C retains 2^(-16) or scales
+with topology. This would sharpen the "2^(-16) is universal for
+unicyclic even-length Z^3 graphs" conjecture, or disprove it.
+

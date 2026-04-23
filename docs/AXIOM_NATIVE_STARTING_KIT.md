@@ -143,3 +143,13 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   exponent 16 derived (1a-1c) AND second scale constructed (1e) /
   `frontier_axiom_native_c_equals_log_two_from_stencil.py` /
   Target 1 sub-step 1e.
+- The K3 free Berezin partition on an elementary 2x2 Z^3 plaquette
+  evaluates to `Z_plaq = (a^2/2)^32 * 2^16` via the 4x4 hopping
+  matrix with `det(A) = 4`; normalized by the measure dimension
+  a^64, the kit constant is `C_plaq = 2^(-16)`, EXACTLY equal to
+  `C_edge`. This "plaquette-edge universality of 2^(-16)" is a
+  kit-specific structural signature: a 4-site open line (no loop)
+  gives `C_4line = 2^(-32)` instead, and isolating a vertex gives
+  `C = 0` /
+  `frontier_axiom_native_plaquette_partition_universality.py` /
+  Target 2 sub-step 2a.
