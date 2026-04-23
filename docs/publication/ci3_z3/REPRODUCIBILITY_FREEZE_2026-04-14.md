@@ -1,13 +1,13 @@
-# Reproducibility Freeze
+# Archival Reproducibility Freeze
 
 **Date:** 2026-04-14  
-**Purpose:** selective reproducibility freeze for the current publication
-package before full submission freeze.
+**Purpose:** archival selective reproducibility freeze for an earlier
+publication slice before full submission freeze.
 
-This is not the final full release freeze. It is the first pinned package slice
-that makes the current paper surface reproducible in a controlled way.
-Later bounded-intake addenda may be appended when they are reviewed against the
-same matrix-ledger package without changing the retained claim surface.
+This is not the current active package freeze and not the final full release
+freeze. It is an earlier pinned package slice kept for provenance.
+Current validation should start from [REPRODUCE.md](./REPRODUCE.md) and the
+current package surfaces rather than from this archival note alone.
 
 ## Freeze base
 

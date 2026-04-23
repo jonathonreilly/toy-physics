@@ -859,7 +859,7 @@ Its purpose is to display what is exact, derived, bounded, and still open in
 the DM gate, but that language should track the live curated transport/PMNS
 status rather than get ahead of it.
 
-A separate neutrino retained-lane reviewer packet is live on `main` outside
+A separate neutrino retained-lane support packet is live on `main` outside
 this manuscript core. Its exact sole-axiom endpoint is a negative boundary:
 the current retained bank reduces the remaining neutrino frontier to the pair
 `(J_chi, mu)` and sets both to zero on the currently retained routes.

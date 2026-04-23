@@ -3,7 +3,7 @@
 This compatibility front door exists so the retained neutrino review runners on
 `main` can verify that the Dirac / PMNS lane is publication-captured.
 
-Use the live reviewer-facing packet instead:
+Use the live support packet instead:
 
 - [NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md](../../NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md)
 - [NEUTRINO_RETAINED_LANES_REVIEW_PACKET_2026-04-16.md](../../NEUTRINO_RETAINED_LANES_REVIEW_PACKET_2026-04-16.md)

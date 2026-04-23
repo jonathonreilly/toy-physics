@@ -3,10 +3,14 @@
 This repository contains the public scientific package for a one-axiom
 discrete-physics program based on `Cl(3)` on `Z^3`.
 
-If you are coming from the paper, start with the publication package rather
-than the full repository chronology. If you want the shortest path to what the
-current package already predicts, start with the prediction and quantitative
-summary surfaces before the deeper derivation map.
+If you are coming from the paper, use the publication package rather than the
+full repository chronology. The public package is now organized around four
+questions:
+
+- what the current package claims
+- what it already predicts
+- how to validate and reproduce the active package
+- how the science is organized by domain
 
 ## Read First
 
@@ -14,11 +18,13 @@ summary surfaces before the deeper derivation map.
 2. [Prediction surface](docs/publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md)
 3. [Quantitative summary table](docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md)
 4. [Publication package README](docs/publication/ci3_z3/README.md)
-5. [Claims table](docs/publication/ci3_z3/CLAIMS_TABLE.md)
-6. [Inputs and qualifiers](docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md)
-7. [What this paper does not claim](docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
-8. [Derivation / validation map](docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
-9. [Derivation atlas](docs/publication/ci3_z3/DERIVATION_ATLAS.md)
+5. [Science map by domain](docs/publication/ci3_z3/SCIENCE_MAP.md)
+6. [Reproduce guide](docs/publication/ci3_z3/REPRODUCE.md)
+7. [Claims table](docs/publication/ci3_z3/CLAIMS_TABLE.md)
+8. [Inputs and qualifiers](docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md)
+9. [What this paper does not claim](docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
+10. [Derivation / validation map](docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
+11. [Derivation atlas](docs/publication/ci3_z3/DERIVATION_ATLAS.md)
 
 ## What Is Already Predicted
 
@@ -43,11 +49,25 @@ summary surfaces before the deeper derivation map.
 
 - manuscript and package entry surfaces:
   [docs/publication/ci3_z3](docs/publication/ci3_z3/README.md)
+- science organized by domain:
+  [docs/publication/ci3_z3/SCIENCE_MAP.md](docs/publication/ci3_z3/SCIENCE_MAP.md)
+- reproduction and validation:
+  [docs/publication/ci3_z3/REPRODUCE.md](docs/publication/ci3_z3/REPRODUCE.md)
 - quantitative derivations and supporting theorem notes:
   [docs/START_HERE.md](docs/START_HERE.md)
 - scientific boundaries and explicit non-claims:
   [docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md](docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md)
   and [docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md](docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
+
+## Scientific Areas
+
+- spacetime, gravity, and quantum gravity
+- gauge structure, matter structure, and strong CP
+- quantitative electroweak, QCD, Yukawa, and Higgs lanes
+- flavor, CKM, quark, and charged-lepton packages
+- neutrino and dark-matter packages
+- cosmology and companion phenomenology
+- Planck-scale absolute-scale lane and derivation program
 
 ## Scientific Scope
 

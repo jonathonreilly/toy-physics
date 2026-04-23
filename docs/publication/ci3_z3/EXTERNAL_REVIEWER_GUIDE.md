@@ -59,7 +59,7 @@ For the explicit package boundary, use:
 - confinement:
   exact `T = 0` confinement of the graph-first `SU(3)` gauge sector, with
   bounded `sqrt(sigma) ≈ 465 MeV`
-- reviewer-facing three-generation / chirality boundary:
+- three-generation / chirality boundary:
   physical-lattice species structure + no-rooting in Hamiltonian `Cl(3)` +
   exact retained-generation no-proper-quotient closure + anomaly-forced
   full-framework chirality, not a conventional regulator loophole theorem
@@ -194,7 +194,7 @@ Current status from that stack:
 - **Charged-lepton Koide review/support package** (`Q = 2/3`, `δ = 2/9`). Reviewer entry points: [KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md](../../KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md) and [CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md](../../CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md). Package status: strongest current executable support, not retained closure. The historical observational-pin baseline and route-pruning notes remain provenance and compatibility context. The remaining live issues are the extremal-principle bridge behind `Q`, the physical Brannen-phase bridge behind `δ`, and the separate overall scale `v_0`. The April 22 addendum also lands exact selected-line geometry plus a finite-lattice `L = 3` Wilson-Dirac support illustration for the Brannen lane. 10 runners, 242 PASS / 0 FAIL.
 
 ## Bounded Prediction Surface
-- W-boson same-surface EW consistency probe. Reviewer entry point: [W_MASS_DERIVED_NOTE.md](../../W_MASS_DERIVED_NOTE.md). Repo status: `bounded`. On the retained EW lane the framework-side readouts are `M_W^tree = 79.7956 GeV`, `M_W^RGE = 80.5573 GeV`, `M_Z^tree = 91.2663 GeV`. The remaining `~0.19 GeV` `M_W` gap tracks the existing retained `g_2(v)` precision and is therefore treated as a reviewer-facing same-surface consistency probe, not as a retained or few-MeV SM-indirect `M_W` prediction.
+- W-boson same-surface EW consistency probe. Entry point: [W_MASS_DERIVED_NOTE.md](../../W_MASS_DERIVED_NOTE.md). Repo status: `bounded`. On the retained EW lane the framework-side readouts are `M_W^tree = 79.7956 GeV`, `M_W^RGE = 80.5573 GeV`, `M_Z^tree = 91.2663 GeV`. The remaining `~0.19 GeV` `M_W` gap tracks the existing retained `g_2(v)` precision and is therefore treated as a same-surface consistency probe, not as a retained or few-MeV SM-indirect `M_W` prediction.
 - dark-matter exact-target package, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` support package, a retained-measurement A-BCC integration theorem, an interval-certified split-2 carrier closure, a shifted same-law recovered-packet selector closure, an exact target-surface chamber-root theorem, a graph-first ordered-chain current-activation theorem, an affine current-coordinate reduction theorem, and an ordered-chain graded-current delta closure theorem. So the DM lane is now closed for the exact PMNS-target formulation treated in the manuscript, with broader target-free global uniqueness left out of scope.
 - persistent exact-lattice compact-object companion in the package, with one
   retained blended readout on the nearby family and a `top4` multistage floor
@@ -202,7 +202,7 @@ Current status from that stack:
   inertial-mass / matter closure because the inward-source directional
   boundary remains
 - live bounded quark mass-ratio review/support stack in the package: the
-  reviewer-facing quark packet bundles the down-type CKM-dual lane, bounded
+  quark support packet bundles the down-type CKM-dual lane, bounded
   up-type inversion, minimal Schur-NNI full-solve support, reduced
   projector-ray CKM+CP closure, the parameter/native/tensor-endpoint/readout
   audits, and the Route-2 exact readout/time obstruction block; the remaining

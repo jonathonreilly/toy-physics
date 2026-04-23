@@ -120,8 +120,8 @@ generating the boundary character data of `Z_6^env`, equivalently the Perron eig
 |---|---:|---|---|---|---|
 | `g_1(v)` | `0.4644` | derived | same-surface plaquette derivative + derived `R_conn` support | EW normalization, Higgs/top support | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md) |
 | `g_2(v)` | `0.6480` | derived | same-surface plaquette derivative + derived `R_conn` support | EW normalization, Higgs/top support | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md) |
-| `sin^2(theta_W)(M_Z)` | `0.2306` | derived | same-surface plaquette derivative + derived `R_conn` support + running bridge | reviewer-facing EW lane, low-energy comparison | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md) |
-| `1/alpha_EM(M_Z)` | `127.67` | derived | same-surface plaquette derivative + derived `R_conn` support + running bridge | reviewer-facing EW lane, low-energy comparison | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md) |
+| `sin^2(theta_W)(M_Z)` | `0.2306` | derived | same-surface plaquette derivative + derived `R_conn` support + running bridge | same-surface EW lane, low-energy comparison | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md) |
+| `1/alpha_EM(M_Z)` | `127.67` | derived | same-surface plaquette derivative + derived `R_conn` support + running bridge | same-surface EW lane, low-energy comparison | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md) |
 | `alpha_s(M_Z)` | `0.1181` | derived | same-surface plaquette derivative + one-decade running bridge | standalone strong-coupling lane, confinement, continuum positioning | [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md) |
 
 ## C. Closed flavor package values
