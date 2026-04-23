@@ -52,6 +52,36 @@ That last item is the explicit package-boundary move. It is not a new numerical
 input or scale-setting assumption. It authorizes local source-free state
 language on the already-fixed primitive physical cell.
 
+## Cosmic-address imports
+
+The packet permits present-time / present-age observables as "where we are on
+the map" imports, but only as address data. They may select the present
+macroscopic surface on which the microscopic boundary density is compared to
+the gravitational area/action density. They may not be used as hidden
+microscopic tick counts.
+
+On a present surface of area `A_U`, the same-surface comparison is
+
+`c_cell A_U / a^2 = A_U / (4 l_P^2)`.
+
+Since `A_U > 0`, the address-dependent area cancels, giving the same
+normalization equation
+
+`a^2 = 4 c_cell l_P^2`.
+
+Thus cosmic-address imports do not fit `a`, do not replace GSI, and do not
+change the native coefficient `c_cell = 1/4`. They only make explicit that a
+macroscopic address may choose the comparison surface without smuggling in the
+Planck spacing.
+
+An observed EWSB scale can similarly be used as a phenomenological calibration
+anchor for a separate hierarchy lane if a native dimensionless hierarchy factor
+has already been derived. It is not a substitute for the direct gravitational
+area/action normalization.
+
+Load-bearing protocol note:
+- [PLANCK_SCALE_COSMIC_ADDRESS_IMPORT_UNIT_MAP_THEOREM_2026-04-23.md](./PLANCK_SCALE_COSMIC_ADDRESS_IMPORT_UNIT_MAP_THEOREM_2026-04-23.md)
+
 ## Load-bearing chain
 
 ### 1. Primitive physical cell
@@ -197,6 +227,9 @@ This packet does not claim:
 - packet-preserving symmetry alone forces the tracial state;
 - the gravitational area/action normalization can be dropped while keeping the
   exact statement `a = l_P`.
+- present-age/current-time imports by themselves fix the microscopic tick or
+  lattice spacing;
+- an EWSB calibration import is the same thing as a native Planck derivation.
 
 ## What would still stop the theorem
 

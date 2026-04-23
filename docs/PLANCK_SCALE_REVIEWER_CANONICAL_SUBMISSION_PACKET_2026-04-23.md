@@ -53,6 +53,9 @@ and since both lengths are positive,
 6. **Standard constants.** The final dimensional step imports the standard
    gravitational boundary/action law and the convention
    `l_P^2 := hbar G / c_light^3`.
+7. **Cosmic-address data.** Present-time / present-age observables are allowed
+   only as coordinates selecting the present macroscopic surface, not as
+   microscopic scale setters or hidden tick counts.
 
 ## Theorem Chain
 
@@ -94,6 +97,11 @@ and since both lengths are positive,
    [GSI carrier theorem](./PLANCK_SCALE_GRAVITY_CARRIER_FROM_SECTOR_IDENTIFICATION_THEOREM_2026-04-23.md),
    [area/action normalization theorem](./PLANCK_SCALE_AREA_ACTION_NORMALIZATION_THEOREM_2026-04-23.md),
    [non-tautology audit](./PLANCK_SCALE_PLANCK_NORMALIZATION_NON_TAUTOLOGY_AUDIT_2026-04-23.md).
+9. **Cosmic-address import protocol.** A present age/current-time import may
+   choose a concrete surface `A_U`, but the equation
+   `c_cell A_U/a^2 = A_U/(4 l_P^2)` cancels `A_U`. The address data therefore
+   do not fit `a`; they only specify where the same-surface comparison is made:
+   [cosmic-address theorem](./PLANCK_SCALE_COSMIC_ADDRESS_IMPORT_UNIT_MAP_THEOREM_2026-04-23.md).
 
 ## Exact Imports
 
@@ -110,6 +118,14 @@ Imported into the reviewer claim:
    `S_grav/k_B = A c_light^3/(4 G hbar)` and
    `l_P^2 = hbar G / c_light^3`.
 
+Cosmic-address imports are permitted only in the following non-scale-setting
+sense:
+
+1. present cosmic time / age may select the present macroscopic surface for the
+   same-surface comparison;
+2. EWSB may be used as an explicit phenomenological calibration input in a
+   separate hierarchy lane if the dimensionless hierarchy factor is derived.
+
 ## Exact Non-Imports
 
 Not imported into the reviewer claim:
@@ -124,6 +140,8 @@ Not imported into the reviewer claim:
 8. no arbitrary `U(2)^4` presentation-gauge argument;
 9. no claim that the older minimal ledger alone proves the P1 state law;
 10. no tautological assumption that the lattice spacing is already Planck sized.
+11. no hidden use of the present universe age as a microscopic tick count;
+12. no claim that an EWSB calibration import is a native Planck proof.
 
 ## Denial Points
 
@@ -180,6 +198,7 @@ python3 scripts/frontier_planck_gravitational_area_action_carrier_identification
 python3 scripts/frontier_planck_gravity_carrier_from_sector_identification_theorem.py
 python3 scripts/frontier_planck_area_action_normalization_theorem.py
 python3 scripts/frontier_planck_planck_normalization_non_tautology_audit.py
+python3 scripts/frontier_planck_cosmic_address_import_unit_map_theorem.py
 python3 scripts/frontier_planck_claim_scope_hostile_audit.py
 python3 scripts/frontier_planck_remaining_denials_target_change_theorem.py
 ```
@@ -214,6 +233,7 @@ python3 scripts/frontier_planck_remaining_denials_target_change_theorem.py
 - [PLANCK_SCALE_GRAVITY_CARRIER_FROM_SECTOR_IDENTIFICATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_GRAVITY_CARRIER_FROM_SECTOR_IDENTIFICATION_THEOREM_2026-04-23.md) - GSI-scoped carrier theorem forcing `N_grav = P_A`.
 - [PLANCK_SCALE_AREA_ACTION_NORMALIZATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_AREA_ACTION_NORMALIZATION_THEOREM_2026-04-23.md) - `c_cell = 1/4 -> a = l_P` algebra with constants.
 - [PLANCK_SCALE_PLANCK_NORMALIZATION_NON_TAUTOLOGY_AUDIT_2026-04-23.md](./PLANCK_SCALE_PLANCK_NORMALIZATION_NON_TAUTOLOGY_AUDIT_2026-04-23.md) - audit showing the Planck result is not assumed by dimensional matching.
+- [PLANCK_SCALE_COSMIC_ADDRESS_IMPORT_UNIT_MAP_THEOREM_2026-04-23.md](./PLANCK_SCALE_COSMIC_ADDRESS_IMPORT_UNIT_MAP_THEOREM_2026-04-23.md) - protocol for present-time/present-age/EWSB imports as address/calibration data, not hidden Planck inputs.
 - [PLANCK_SCALE_REMAINING_DENIALS_TARGET_CHANGE_THEOREM_2026-04-23.md](./PLANCK_SCALE_REMAINING_DENIALS_TARGET_CHANGE_THEOREM_2026-04-23.md) - final audit showing the remaining denials change the target rather than expose hidden algebra gaps.
 
 ### Risk and stop-condition context
