@@ -6,9 +6,6 @@ actually reused across lanes, together with their claim class and authority.
 
 This is an **atlas helper index**, not a manuscript claim surface.
 
-Use [repo/CONTROLLED_VOCABULARY.md](../../repo/CONTROLLED_VOCABULARY.md) for
-the repo-wide status taxonomy.
-
 Use this file when the question is:
 
 - what exact or retained numeric value should downstream work reuse?

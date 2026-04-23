@@ -17,7 +17,6 @@ Use this file together with:
 - [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
 - [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
 - [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
-- [Repo controlled vocabulary](../../repo/CONTROLLED_VOCABULARY.md)
 
 Terminology rule:
 

@@ -25,7 +25,6 @@ For paper claims and release evidence, use:
 - [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
 - [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
 - [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
-- [Repo controlled vocabulary](../../repo/CONTROLLED_VOCABULARY.md)
 
 ## Canonicalization rule
 
@@ -53,8 +52,8 @@ not marked `zero-input structural` or `axiom-dependent support`, do not reuse
 it as a pure internal theorem without carrying its bridge/import conditions
 forward explicitly.
 
-Use the controlled vocabulary note for the repo-wide meanings of labels like
-`retained`, `derived`, `bounded companion`, and `conditional / support`.
+Use the local status/import wording in each row directly. This atlas is a
+toolbox surface, not a separate public terminology guide.
 
 For every derived claim retained on the package surface, the load-bearing reusable proof
 mechanisms should appear here as separate atlas rows when they can support

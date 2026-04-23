@@ -19,7 +19,6 @@ Use this file together with:
 - [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
 - [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
 - [FULL_CLAIM_LEDGER.md](./FULL_CLAIM_LEDGER.md)
-- [Repo controlled vocabulary](../../repo/CONTROLLED_VOCABULARY.md)
 
 Terminology rule:
 

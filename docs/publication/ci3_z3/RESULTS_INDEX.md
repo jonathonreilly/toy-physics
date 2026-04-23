@@ -10,7 +10,6 @@ Use alongside:
 - [FULL_CLAIM_LEDGER.md](./FULL_CLAIM_LEDGER.md)
 - [SCIENCE_MAP.md](./SCIENCE_MAP.md)
 - [REPRODUCE.md](./REPRODUCE.md)
-- [Repo controlled vocabulary](../../repo/CONTROLLED_VOCABULARY.md)
 
 ## Retained Core
 
