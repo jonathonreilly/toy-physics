@@ -7,6 +7,7 @@
 **Bare-axiom unit-map audit:** [PLANCK_SCALE_AXIOM_ONLY_GRAVITY_UNIT_MAP_FINAL_AUDIT_2026-04-23.md](./PLANCK_SCALE_AXIOM_ONLY_GRAVITY_UNIT_MAP_FINAL_AUDIT_2026-04-23.md)
 **Clean closure criterion:** [PLANCK_SCALE_CLEAN_CLOSURE_CRITERION_THEOREM_2026-04-23.md](./PLANCK_SCALE_CLEAN_CLOSURE_CRITERION_THEOREM_2026-04-23.md)
 **Boundary action unit reduction:** [PLANCK_SCALE_PRIMITIVE_BOUNDARY_ACTION_UNIT_REDUCTION_THEOREM_2026-04-23.md](./PLANCK_SCALE_PRIMITIVE_BOUNDARY_ACTION_UNIT_REDUCTION_THEOREM_2026-04-23.md)
+**Boundary density three-mechanism audit:** [PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md)
 
 ## Final Scope Warning
 
@@ -18,6 +19,14 @@ standard gravitational boundary/action density.
 
 The bare physical `Cl(3)` / `Z^3` axioms alone do not yet force that last
 gravitational unit-map identification.
+
+The latest hardening removes the broad multiplicative boundary-unit ambiguity
+but does not close the additive boundary-density law. The remaining exact
+bare-closure target is
+
+`nu - lambda_min(L_Sigma) = Tr(rho_cell P_A)`,
+
+equivalently `delta = m_axis`.
 
 ## Submission Claim
 
@@ -117,6 +126,12 @@ and since both lengths are positive,
    `c_cell A_U/a^2 = A_U/(4 l_P^2)` cancels `A_U`. The address data therefore
    do not fit `a`; they only specify where the same-surface comparison is made:
    [cosmic-address theorem](./PLANCK_SCALE_COSMIC_ADDRESS_IMPORT_UNIT_MAP_THEOREM_2026-04-23.md).
+10. **Boundary-density hardening.** The three serious native closure routes are
+    now audited directly. Source-response Ward identities do not see the
+    additive density, action-phase quantization reduces the target to an
+    unproved `q_* / eps_*` ratio, and semiclassical boundary-term normalization
+    is a microscopic proof only if the boundary term is derived on the lattice:
+    [boundary density three-mechanism audit](./PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md).
 
 ## Exact Imports
 
@@ -157,6 +172,8 @@ Not imported into the reviewer claim:
 10. no tautological assumption that the lattice spacing is already Planck sized.
 11. no hidden use of the present universe age as a microscopic tick count;
 12. no claim that an EWSB calibration import is a native Planck proof.
+13. no claim that current Ward, action-phase, or boundary-term machinery has
+    already derived the additive density `nu = 5/4`.
 
 ## Denial Points
 
@@ -178,14 +195,23 @@ The hostile-review denials are now explicit.
 5. **Minimal-ledger-only objection.** If the reviewer says the older minimal
    ledger alone does not prove the result, concede. That is not the submitted
    claim.
+6. **Bare-density objection.** If the reviewer asks for a derivation of
+   `nu = 5/4` from a Ward identity, action-phase quantization, or microscopic
+   boundary-term normalization, concede that the current branch has reduced
+   this to the exact law `delta = m_axis`, not yet proved it.
 
 The final denial-status theorem records that denials 2 and 4 change the target:
 they either replace the primitive coefficient with an enriched state/readout
 object, or refuse the sector bridge needed to make a Planck-length statement:
 [remaining-denials target-change theorem](./PLANCK_SCALE_REMAINING_DENIALS_TARGET_CHANGE_THEOREM_2026-04-23.md).
 
-If denials 2 through 4 are rejected on the physical package, the direct Planck
-route closes on the authorized P1 surface.
+If denials 2 through 4 are rejected on the physical package and the standard
+gravitational area/action normalization is accepted as the physical boundary
+normalization, the conditional direct Planck route closes on the authorized P1
+surface.
+
+For the stronger unqualified bare-axiom claim, denial 6 must also be removed by
+a new same-surface density theorem.
 
 ## Verifier Commands
 
@@ -219,6 +245,7 @@ python3 scripts/frontier_planck_remaining_denials_target_change_theorem.py
 python3 scripts/frontier_planck_axiom_only_gravity_unit_map_final_audit.py
 python3 scripts/frontier_planck_clean_closure_criterion_theorem.py
 python3 scripts/frontier_planck_primitive_boundary_action_unit_reduction_theorem.py
+python3 scripts/frontier_planck_boundary_density_three_mechanism_audit.py
 ```
 
 ## Appendix Map
@@ -230,6 +257,7 @@ python3 scripts/frontier_planck_primitive_boundary_action_unit_reduction_theorem
 - [PLANCK_SCALE_AXIOM_ONLY_GRAVITY_UNIT_MAP_FINAL_AUDIT_2026-04-23.md](./PLANCK_SCALE_AXIOM_ONLY_GRAVITY_UNIT_MAP_FINAL_AUDIT_2026-04-23.md) - final audit showing the remaining bare-axiom unit-map multiplier is not yet derived.
 - [PLANCK_SCALE_CLEAN_CLOSURE_CRITERION_THEOREM_2026-04-23.md](./PLANCK_SCALE_CLEAN_CLOSURE_CRITERION_THEOREM_2026-04-23.md) - exact closure criterion: the unconditional claim is closed iff the stack derives `mu = 1`.
 - [PLANCK_SCALE_PRIMITIVE_BOUNDARY_ACTION_UNIT_REDUCTION_THEOREM_2026-04-23.md](./PLANCK_SCALE_PRIMITIVE_BOUNDARY_ACTION_UNIT_REDUCTION_THEOREM_2026-04-23.md) - direct attack showing multiplicative `mu` is not same-surface on the primitive/exact-action object, reducing the open target to the additive density `nu = 5/4`.
+- [PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md) - direct audit showing current Ward, action-phase, and boundary-term routes reduce but do not derive the additive law `delta = m_axis`.
 - [PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md) - explicit P1 package-boundary move.
 - [PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md) - hostile-review context, with its supersession note respected.
 
@@ -257,6 +285,7 @@ python3 scripts/frontier_planck_primitive_boundary_action_unit_reduction_theorem
 - [PLANCK_SCALE_PLANCK_NORMALIZATION_NON_TAUTOLOGY_AUDIT_2026-04-23.md](./PLANCK_SCALE_PLANCK_NORMALIZATION_NON_TAUTOLOGY_AUDIT_2026-04-23.md) - audit showing the Planck result is not assumed by dimensional matching.
 - [PLANCK_SCALE_COSMIC_ADDRESS_IMPORT_UNIT_MAP_THEOREM_2026-04-23.md](./PLANCK_SCALE_COSMIC_ADDRESS_IMPORT_UNIT_MAP_THEOREM_2026-04-23.md) - protocol for present-time/present-age/EWSB imports as address/calibration data, not hidden Planck inputs.
 - [PLANCK_SCALE_REMAINING_DENIALS_TARGET_CHANGE_THEOREM_2026-04-23.md](./PLANCK_SCALE_REMAINING_DENIALS_TARGET_CHANGE_THEOREM_2026-04-23.md) - final audit showing the remaining denials change the target rather than expose hidden algebra gaps.
+- [PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md) - exact final density target after Ward, action-phase, and microscopic boundary-term stress testing.
 
 ### Risk and stop-condition context
 

@@ -7,6 +7,7 @@
 **Bare-axiom unit-map audit:** [PLANCK_SCALE_AXIOM_ONLY_GRAVITY_UNIT_MAP_FINAL_AUDIT_2026-04-23.md](./PLANCK_SCALE_AXIOM_ONLY_GRAVITY_UNIT_MAP_FINAL_AUDIT_2026-04-23.md)
 **Clean closure criterion:** [PLANCK_SCALE_CLEAN_CLOSURE_CRITERION_THEOREM_2026-04-23.md](./PLANCK_SCALE_CLEAN_CLOSURE_CRITERION_THEOREM_2026-04-23.md)
 **Boundary action unit reduction:** [PLANCK_SCALE_PRIMITIVE_BOUNDARY_ACTION_UNIT_REDUCTION_THEOREM_2026-04-23.md](./PLANCK_SCALE_PRIMITIVE_BOUNDARY_ACTION_UNIT_REDUCTION_THEOREM_2026-04-23.md)
+**Boundary density three-mechanism audit:** [PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md)
 
 ## External-Review Scope Warning
 
@@ -19,6 +20,15 @@ The branch derives the native dimensionless primitive coefficient `c_cell =
 the primitive one-step worldtube count with the standard gravitational
 boundary/action density. The bare physical lattice axioms alone do not yet
 derive that final unit-map identification.
+
+The latest boundary-density audit sharpens the remaining issue. The broad
+multiplicative ambiguity is gone on the primitive/exact-action object classes,
+but the additive density law
+
+`nu - lambda_min(L_Sigma) = Tr(rho_cell P_A)`
+
+is still not derived by the current Ward, action-phase, or microscopic
+boundary-term machinery.
 
 ## Claim
 
@@ -230,6 +240,7 @@ Load-bearing notes:
 - [PLANCK_SCALE_AREA_ACTION_NORMALIZATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_AREA_ACTION_NORMALIZATION_THEOREM_2026-04-23.md)
 - [PLANCK_SCALE_PLANCK_NORMALIZATION_NON_TAUTOLOGY_AUDIT_2026-04-23.md](./PLANCK_SCALE_PLANCK_NORMALIZATION_NON_TAUTOLOGY_AUDIT_2026-04-23.md)
 - [PLANCK_SCALE_REMAINING_DENIALS_TARGET_CHANGE_THEOREM_2026-04-23.md](./PLANCK_SCALE_REMAINING_DENIALS_TARGET_CHANGE_THEOREM_2026-04-23.md)
+- [PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md)
 
 ## What this does not claim
 
@@ -246,10 +257,12 @@ This packet does not claim:
 - present-age/current-time imports by themselves fix the microscopic tick or
   lattice spacing;
 - an EWSB calibration import is the same thing as a native Planck derivation.
+- current Ward, action-phase, or boundary-term machinery already derives the
+  additive density `nu = 5/4`.
 
 ## What would still stop the theorem
 
-Two explicit package-level denials remain:
+For the conditional packet, two explicit package-level denials remain:
 
 1. deny that the elementary Planck coefficient belongs to the universal
    primitive additive/natural counting-trace object class;
@@ -261,11 +274,22 @@ object from a primitive universal coefficient to an enriched state/readout
 object. The second refuses the sector bridge needed to turn the dimensionless
 coefficient into a Planck-length statement.
 
+A stronger bare-axiom version must also prove the additive same-surface density
+law
+
+`delta = m_axis`.
+
+The three-mechanism audit shows that this is not yet obtained from the current
+Ward identities, action-phase quantization, or microscopic boundary-term
+normalization.
+
 If either denial is made, the exact `4/16 = 1/4` cell coefficient remains, but
 the fully normalized `a = l_P` claim must be scoped accordingly.
 
-If both denials are rejected, the direct Planck route is closed on the
-authorized physical-lattice package surface with Axiom Extension P1.
+If both denials are rejected and the standard gravitational area/action
+normalization is accepted as the physical boundary normalization, the
+conditional direct Planck route is closed on the authorized physical-lattice
+package surface with Axiom Extension P1.
 
 ## Reviewer-safe status
 

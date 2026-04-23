@@ -31,6 +31,7 @@ SUBCHECKS = [
     "frontier_planck_axiom_only_gravity_unit_map_final_audit.py",
     "frontier_planck_clean_closure_criterion_theorem.py",
     "frontier_planck_primitive_boundary_action_unit_reduction_theorem.py",
+    "frontier_planck_boundary_density_three_mechanism_audit.py",
 ]
 
 
@@ -70,6 +71,7 @@ def main() -> int:
     nature_status = read("docs/PLANCK_SCALE_NATURE_REVIEW_PLAIN_LANGUAGE_STATUS_2026-04-23.md")
     closure = read("docs/PLANCK_SCALE_CLEAN_CLOSURE_CRITERION_THEOREM_2026-04-23.md")
     primitive_unit = read("docs/PLANCK_SCALE_PRIMITIVE_BOUNDARY_ACTION_UNIT_REDUCTION_THEOREM_2026-04-23.md")
+    density_audit = read("docs/PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md")
 
     for script in SUBCHECKS:
         total += 1
@@ -215,6 +217,19 @@ def main() -> int:
         in reviewer
         and "multiplicative `mu != 1` is not same-surface" in primitive_unit
         and "This note does not derive `nu = 5/4`" in primitive_unit,
+    )
+
+    total += 1
+    passed += expect(
+        "three-mechanism-density-audit-records-open-final-law",
+        "PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md"
+        in reviewer
+        and "PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md"
+        in packet
+        and "`nu = 5/4`" in density_audit
+        and "`delta = m_axis`" in density_audit
+        and "not yet derived by the current Ward,\n> phase, or boundary-term machinery"
+        in density_audit,
     )
 
     print(f"SUMMARY: PASS={passed} FAIL={total - passed}")
