@@ -57,7 +57,7 @@ The retained statement is structural, not maximal:
 
 - retained: physical three-generation structure in the framework
 - retained: no-proper-quotient theorem on the retained `hw=1` generation surface
-- retained: reviewer-facing physical-lattice / no-rooting boundary for the
+- retained: public physical-lattice / no-rooting boundary for the
   triplet sectors
 - not retained: a first-principles `1+1+1` mass hierarchy
 - not retained: a pure-spatial chiral-regulator theorem divorced from the
@@ -66,11 +66,11 @@ The retained statement is structural, not maximal:
 The remaining open work now belongs to:
 
 - stronger theorem packaging of the one-axiom substrate-necessity result if we
-  ever want to move it from support theorem to front-door theorem box
+  ever want to move it from support theorem to public theorem box
 - generation hierarchy / flavor structure
 - full chirality / mass-spectrum tasks beyond the retained generation surface
 
-For the clean reviewer-facing chirality / anti-rooting boundary, see
+For the clean public chirality / anti-rooting boundary, see
 [THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md](./THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md).
 For the exact retained-generation algebra theorem, see
 [THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md](./THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md).

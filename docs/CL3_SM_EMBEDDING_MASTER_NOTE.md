@@ -217,7 +217,7 @@ This master note provides the synthesis of the Cl(3) → SM embedding theorem.
 This synthesis sharpens four algebraic targets on current `main`. Use the
 individual sub-theorem notes as claim boundaries for those support statements.
 Do not treat this packet as superseding [MINIMAL_AXIOMS_2026-04-11.md](MINIMAL_AXIOMS_2026-04-11.md),
-the retained three-generation matter package, or the reviewer-facing chirality boundary.
+the retained three-generation matter package, or the public chirality boundary.
 
 Sub-theorem notes (all dated 2026-04-19, status: reviewed support):
 - [CL3_SM_EMBEDDING_THEOREM.md](CL3_SM_EMBEDDING_THEOREM.md)

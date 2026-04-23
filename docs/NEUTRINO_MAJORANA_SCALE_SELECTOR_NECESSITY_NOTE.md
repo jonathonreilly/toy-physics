@@ -1,11 +1,11 @@
 # Majorana Scale-Selector Necessity
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact historical necessity theorem on the earlier logarithmic
 observable family; superseded in part by the later quadratic-comparator and
-background-normalization theorems  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+background-normalization theorems
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_majorana_scale_selector_necessity.py`
 
 ## Question
@@ -191,7 +191,7 @@ positively:
    supplies the exact local background-normalized response curve
    `W_rel = (1/2) log(1 + rho^2)`, `Q_rel = rho^2`
 
-So the live blocker is now narrower than this old note:
+So the remaining blocker is now narrower than this old note:
 
 > finite-point selection on the already-normalized local response curve
 

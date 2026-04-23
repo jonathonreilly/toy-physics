@@ -1,10 +1,10 @@
 # PMNS Minimal-Branch Current-Atlas Nonselection Theorem
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact current-atlas/package theorem on the surviving minimal
-PMNS-producing branches  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+PMNS-producing branches
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_pmns_minimal_branch_nonselection.py`
 
 ## Question
@@ -53,7 +53,7 @@ The package already encodes three exact facts:
 1. the minimal neutrino-side non-monomial branch exists and is canonical
 2. the minimal charged-lepton-side non-monomial branch exists and is canonical
 3. flavor closure remains open because Higgs-`Z_3` universality is still a
-   live blocker
+   remaining blocker
 
 The current atlas therefore supports a precise theorem:
 

@@ -1,12 +1,12 @@
 # DM Wilson Direct-Descendant Transport-Fiber Spectral Completion Theorem
 
-**Date:** 2026-04-19  
+**Date:** 2026-04-19
 **Status:** exact local sharpening of the same-day canonical transport-column
 fiber theorem. The remaining `3`-real source ambiguity above the canonical
 favored transport column is already an explicit microscopic spectral object,
 not an undifferentiated source-side blur.
 
-**Primary runner:**  
+**Primary runner:**
 `scripts/frontier_dm_wilson_direct_descendant_transport_fiber_spectral_completion_theorem_2026_04_19.py`
 (`PASS=12 FAIL=0`).
 
@@ -144,7 +144,7 @@ the local Schur-side object.
   data;
 - a proof that a smaller canonical subset of those scalars is already fixed by
   reviewer-grade microscopic structure;
-- the final DM flagship gate.
+- the final DM flagship lane.
 
 ## Relation to the earlier same-day DM theorems
 

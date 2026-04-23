@@ -1,9 +1,9 @@
 # DM Neutrino Positive-Polar Hermitian CP Theorem
 
-**Date:** 2026-04-15  
-**Status:** exact Hermitian-data theorem for the intrinsic DM CP tensor  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+**Date:** 2026-04-15
+**Status:** exact Hermitian-data theorem for the intrinsic DM CP tensor
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_dm_neutrino_positive_polar_h_cp_theorem.py`
 
 ## Question

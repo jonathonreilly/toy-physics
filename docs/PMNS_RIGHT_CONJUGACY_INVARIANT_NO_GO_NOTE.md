@@ -1,10 +1,10 @@
 # PMNS Right-Conjugacy-Invariant No-Go
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact current-bank no-go theorem on intrinsic right-sensitive PMNS
-completion  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+completion
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_pmns_right_conjugacy_invariant_nogo.py`
 
 ## Question

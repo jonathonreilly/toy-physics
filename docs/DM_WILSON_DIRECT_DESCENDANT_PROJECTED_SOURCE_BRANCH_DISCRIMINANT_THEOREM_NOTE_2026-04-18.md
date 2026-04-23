@@ -7,7 +7,7 @@ rule into projected-source language on `dW_e^H`
 
 ## Question
 
-After collapsing the live DM flagship frontier to the right-sensitive
+After collapsing the live DM flagship lanes to the right-sensitive
 microscopic law on
 `L_e = Schur_{E_e}(D_-)`,
 can the current imposed PMNS branch-choice rule be rewritten exactly at the

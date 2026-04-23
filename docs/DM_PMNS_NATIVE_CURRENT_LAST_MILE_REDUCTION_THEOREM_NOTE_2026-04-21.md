@@ -1,10 +1,10 @@
 # DM PMNS Native Current Last-Mile Reduction Theorem
 
 **Date:** 2026-04-21
-**Lane:** strict/native DM last-mile sharpening
+**Lane:** native/source DM last-mile sharpening
 **Status:** exact reduction theorem on the reduced graph-first carrier; the
 later same-day affine sharpening and ordered-chain graded-current closure
-theorems complete the physical strict/native last mile
+theorems complete the physical native/source last mile
 **Positive activation theorem:**
 `docs/DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md`
 **Primary runner:**
@@ -14,7 +14,7 @@ theorems complete the physical strict/native last mile
 
 ## 0. Executive summary
 
-The strict/native DM map is now sharper than:
+The native/source DM map is now sharper than:
 
 ```text
 derive the PMNS angle triple somehow.
@@ -147,9 +147,9 @@ one complex current.
 >
 > Then:
 >
-> 1. no separate strict/native A-BCC branch-choice residue remains once the
+> 1. no separate native/source A-BCC branch-choice residue remains once the
 >    exact PMNS target surface is granted;
-> 2. the remaining strict/native PMNS value problem is exactly `2` real
+> 2. the remaining native/source PMNS value problem is exactly `2` real
 >    dimensional;
 > 3. that `2`-real datum is carried natively by one complex current
 >
@@ -206,7 +206,7 @@ law plus a vague PMNS angle-triple law. It is one complex current whose
 nonzero activation was the current constructive subtarget.
 
 The later affine current-coordinate theorem sharpened the physical
-strict/native last mile one step further, and the later ordered-chain
+native/source last mile one step further, and the later ordered-chain
 graded-current closure theorem then closed the remaining affine `delta`
 direction exactly.
 
@@ -216,7 +216,7 @@ QED.
 
 ## 3. Consequence for the open map
 
-Before this theorem, the strict/native DM burden could still be summarized too
+Before this theorem, the native/source DM burden could still be summarized too
 coarsely as:
 
 ```text

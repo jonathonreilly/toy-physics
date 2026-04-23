@@ -210,7 +210,7 @@ transport chain is blind to the chamber.
 - Appropriate placement: obstruction row under the DM neutrino
  source-surface / selector family in
  `docs/publication/ci3_z3/DERIVATION_ATLAS.md`.
-- This note does not close the DM flagship gate (the integrated closure
+- This note does not close the DM flagship lane (the integrated closure
   is the downstream PMNS-as-f(H) closure).
 - The Schur-baseline partial closure, the three the info-geometric selection obstruction/B/C obstruction
  theorems, and this physics-validation obstruction together delimit

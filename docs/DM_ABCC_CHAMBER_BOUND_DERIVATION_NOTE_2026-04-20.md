@@ -282,4 +282,4 @@ form fixes `s = +√(r_{31}² − 1/4) ≥ 0`, giving `q_+ − E_1 + δ ≥ 0`,
 i.e. `q_+ + δ ≥ √(8/3)`, with equality on the boundary
 `r_{31} = 1/2 ⇔ φ_+ = π/2`. The bound is a structural retained
 inequality, not an observational filter, and is the first of the two
-conjuncts that close A-BCC on the DM flagship gate.
+conjuncts that close A-BCC on the DM flagship lane.

@@ -1,7 +1,7 @@
 # Paper Scope Note
 
 **Date:** 2026-04-04  
-**Status:** reviewer-facing scope note for the current action-law fork
+**Status:** public scope note for the current action-law fork
 
 ## Recommended paper scope
 

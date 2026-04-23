@@ -25,7 +25,7 @@ The outcome is **not** a closure. It is:
  `(delta, q_+)` that **disagrees** with the Schur-Q variational candidate
  `(sqrt(6)/3, sqrt(6)/3)`.
 
-This note does not close the DM flagship gate or the selector gate.
+This note does not close the DM flagship lane or the selector gate.
 Neither the Schur-Q variational candidate nor any microscopic candidate
 is promoted to theorem-grade here. The integrated closure is the
 downstream PMNS-as-f(H) closure.
@@ -236,7 +236,7 @@ No new axioms are introduced in this note.
 ## What this file must never say
 
 - that selector is closed
-- that the DM flagship gate is closed
+- that the DM flagship lane is closed
 - that the Schur-Q variational candidate has been promoted to theorem-
  native by the Z_3 parity-split theorem (it has not; the Z_3 parity-split theorem cross-check actively
  disagrees)

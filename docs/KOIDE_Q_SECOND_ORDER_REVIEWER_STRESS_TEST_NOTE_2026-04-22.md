@@ -1,16 +1,16 @@
-# Koide Q Second-Order Reviewer Stress Test
+# Koide Q Second-Order Stress Test
 
 **Date:** 2026-04-22
-**Status:** science-only reviewer support packet for the second-order `Q`
-route; not a closure theorem
+**Status:** science-only support packet for the second-order `Q` route; not a
+closure theorem
 **Primary runner:** `scripts/frontier_koide_q_second_order_reviewer_stress_test.py`
 
 ---
 
 ## Purpose
 
-This note is the reviewer-facing stress test for the **second-order** `Q`
-support route, not for the older Frobenius-only support chain.
+This note is the dedicated stress test for the **second-order** `Q` support
+route, not for the older Frobenius-only support chain.
 
 It checks four objection classes:
 
@@ -21,7 +21,7 @@ It checks four objection classes:
 
 The runner is meant to answer the question:
 
-> if a strict reviewer accepts the retained `Γ_1 / T_1` grammar, does the new
+> if one accepts the retained `Γ_1 / T_1` grammar, does the new
 > second-order route still hide a soft step?
 
 Current answer on this branch-local packet: the core objections are executable
@@ -47,6 +47,6 @@ and clean.
 
 ## Bottom line
 
-This is the dedicated executable objection pack for the current branch-local
-second-order `Q` support route. It is useful reviewer support, but it does not
-by itself discharge the remaining physical/source-law bridge.
+This is the dedicated executable objection pack for the current second-order
+`Q` support route. It is useful support infrastructure, but it does not by
+itself discharge the remaining physical/source-law bridge.

@@ -1,7 +1,7 @@
-# Neutrino Dirac / PMNS Boundary Packet (compatibility front door)
+# Neutrino Dirac / PMNS Boundary Packet
 
-This compatibility front door exists so the retained neutrino review runners on
-`main` can verify that the Dirac / PMNS lane is publication-captured.
+This compatibility note exists so the retained neutrino runners on `main` can
+verify that the Dirac / PMNS lane is publication-captured.
 
 Use the live support packet instead:
 

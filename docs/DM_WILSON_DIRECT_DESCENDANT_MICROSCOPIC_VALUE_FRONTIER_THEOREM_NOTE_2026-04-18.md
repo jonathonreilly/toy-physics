@@ -1,8 +1,8 @@
 # DM Wilson Direct-Descendant Microscopic-Value Frontier Theorem
 
-**Date:** 2026-04-18  
+**Date:** 2026-04-18
 **Status:** exact current-`main` frontier theorem clarifying what remains open
-on the direct Wilson-descendant route after auditing the local Schur note  
+on the direct Wilson-descendant route after auditing the local Schur note
 **Script:** `scripts/frontier_dm_wilson_direct_descendant_microscopic_value_frontier_theorem_2026_04_18.py`
 
 ## Question
@@ -219,4 +219,4 @@ That is the tightest direct route that still moves the science.
 - an actual value law for `D_-` or `L_e`
 - Wilson-native support provenance for `E_e`
 - the right-sensitive selector law on the descended family
-- the DM flagship gate
+- the DM flagship lane

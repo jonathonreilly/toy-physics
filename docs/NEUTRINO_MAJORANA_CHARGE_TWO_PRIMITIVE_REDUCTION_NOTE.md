@@ -1,9 +1,9 @@
 # Majorana Charge-Two Primitive Reduction
 
-**Date:** 2026-04-15  
-**Status:** exact frontier reduction on the current neutrino lane  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+**Date:** 2026-04-15
+**Status:** exact frontier reduction on the current neutrino lane
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_majorana_charge_two_primitive_reduction.py`
 
 ## Question

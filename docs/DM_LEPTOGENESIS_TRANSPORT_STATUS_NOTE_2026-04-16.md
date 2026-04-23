@@ -140,7 +140,7 @@ What is now additionally exact on `main`:
 So the reviewed Wilson direct-descendant stack does real science work for the
 repo: it closes off fake remaining branches, certifies explicit positive model
 families, and shows that constructive positive exact closure is already too
-large to be the final selector. But it still leaves the DM flagship gate open
+large to be the final selector. But it still leaves the DM flagship lane open
 at the same final place:
 
 - the finer right-sensitive microscopic selector law on
@@ -156,7 +156,7 @@ What is now additionally exact on `main`:
 - the selector-class side is compressed by the microscopic positive-probe
   representation theorem: once exact family-threshold semantics are fixed,
   admissible scalarizations collapse to the canonical extremal law, so the old
-  family/weight/scalarization ambiguity is no longer the live blocker;
+  family/weight/scalarization ambiguity is no longer the remaining blocker;
 - the current exact bank still does not force a unique selector even on the
   canonical full-family witness-volume functional: different exact thresholds
   choose different recovered winners, so the selector-side obstruction is now
@@ -176,7 +176,7 @@ What is now additionally exact on `main`:
 So the reviewed selector science stack does real science work for the repo:
 it removes fake selector-family freedom, localizes the carrier pressure to one
 small residual geometric region, and turns the remaining open object into a
-much narrower theorem target. But it still leaves the DM flagship gate open at
+much narrower theorem target. But it still leaves the DM flagship lane open at
 the same final place:
 
 - the finer right-sensitive microscopic selector law for the physical source
@@ -214,7 +214,7 @@ end state is:
   point, but the current selector families still do not choose it
 - the remaining theorem gap is therefore a genuine right-sensitive
   microscopic selector-law problem, together with interval-certified
-  exact-carrier dominance/completeness. The reviewer-facing current-bank
+  exact-carrier dominance/completeness. The public current-bank
   quantitative mapping item is now closed separately.
 
-So the DM flagship gate remains open.
+So the DM flagship lane remains open.

@@ -1,12 +1,13 @@
 # DM Split-2 Interval-Certified Dominance Closure Theorem
 
-**Date:** 2026-04-21  
-**Status:** review-surface theorem note  
+**Date:** 2026-04-21
+**Status:** package-surface theorem note
 **Primary runner:** `scripts/frontier_dm_split2_interval_certified_dominance_closure_2026_04_21.py`
 
 ## Claim
 
-The residual split-2 carrier-side dominance/completeness blocker on the dark-matter flagship gate is closed on the current review surface.
+The residual split-2 carrier-side dominance/completeness blocker on the
+dark-matter flagship lane is closed on the current package surface.
 
 More precisely: after the prior carrier-side reduction localized all remaining split-2 pressure to the two explicit upper-face neighborhoods
 
@@ -132,21 +133,21 @@ upper bounds strictly below `eta = 1` on both whole boxes. Verified in
 `scripts/frontier_dm_split2_interval_certified_dominance_closure_2026_04_21.py`
 with `17 PASS, 0 FAIL`.
 
-## Consequence for the DM flagship gate
+## Consequence for the DM flagship lane
 
 The split-2 carrier-side dominance/completeness blocker is no longer open on
-the review surface.
+the current package surface.
 
 At the point of this theorem alone, what remained open on the dark-matter
-flagship gate was strictly selector-side on the review surface:
+flagship lane was strictly selector-side on the current package surface:
 
 - the finer right-sensitive microscopic selector law for the physical source
   branch / point
 
 The stricter axiom-native A-BCC target remained a boundary/no-go statement,
-but not a live review-surface blocker. The later same-day shifted same-law
+but not a live package-surface blocker. The later same-day shifted same-law
 packet theorem and ordered-chain current stack close the remaining
-review-surface selector/current burden.
+package-surface selector/current burden.
 
 This theorem does not close the PMNS gate by itself. It removes the last
 carrier-side completeness obstruction on the reviewed split-2 residual branch.

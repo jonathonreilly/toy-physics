@@ -1,12 +1,12 @@
 # Gravity Publication Package Summary
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Purpose:** compact package-facing summary of the gravity ladder and claim
 boundaries
 
 This file is the publication-package view of the gravity route. Use it as the
-front-door summary for reviewers who want the theorem ladder without reading
-raw chronology.
+entry summary for readers who want the theorem ladder without reading raw
+chronology.
 
 ## Package-level gravity ladder
 
@@ -150,7 +150,7 @@ Use this summary to orient the package documents:
 - [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
 - [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
 
-## Reviewer-safe phrasing
+## Safe phrasing
 
 Prefer:
 
@@ -165,6 +165,5 @@ Avoid unless the relevant separate theorem is explicitly present:
 
 ## Integration note
 
-This summary is intended to be linked from the package front door and from the
-external reviewer guide. It does not change the claim tables by itself; it
-explains them.
+This summary is intended to be linked from the package entry path. It does not
+change the claim tables by itself; it explains them.

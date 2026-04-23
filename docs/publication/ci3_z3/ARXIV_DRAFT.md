@@ -539,7 +539,7 @@ after the retained running bridge below $v$.
 
 ### 5.3 Promoted algebraic CKM package
 
-Flavor is no longer an open flagship gate. The current package carries a
+Flavor is no longer an open flagship lane. The current package carries a
 promoted algebraic CKM atlas/axiom package on the canonical
 atlas/tensor/projector surface, with canonical CMT $\alpha_s(v)$ as the
 quantitative coupling input, exact atlas counts, exact projector structure,

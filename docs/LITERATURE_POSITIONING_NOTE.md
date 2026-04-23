@@ -1,6 +1,6 @@
 # Literature Positioning Note
 
-**Status:** reviewer-facing comparison note  
+**Status:** public comparison note
 **Date:** 2026-04-01
 
 ## Purpose
@@ -33,7 +33,8 @@ Closest in spirit:
 Why the comparison matters:
 
 - same basic ambition: recover physics-like structure from discrete local rules
-- same main reviewer vulnerability: importing too much of the desired physics into the effective rules
+- same main external vulnerability: importing too much of the desired physics
+  into the effective rules
 
 What is different here:
 
@@ -67,7 +68,8 @@ Closest on the geometry side:
 
 Why the comparison matters:
 
-- reviewer criticism about the Laplacian field / Poisson-like behavior lands in this neighborhood
+- criticism about the Laplacian field / Poisson-like behavior lands in this
+  neighborhood
 - the project needs a clearer continuum/asymptotic story if it wants to speak more directly to this audience
 
 What is different here:
@@ -102,7 +104,7 @@ Why the comparison matters:
 
 - the valley-linear result is a bounded action fork, not a universal law
 - the ordered-lattice kernel branch is a propagator fork, not a theorem
-- the reviewer should read both as replayable comparison studies, not as
+- these should be read as replayable comparison studies, not as
   finished fundamental-physics derivations
 
 What is missing relative to that literature:
@@ -122,7 +124,7 @@ It is only saying:
 
 - these are the nearest mathematical conversations
 - future writeups should name them explicitly
-- doing so will make the project feel less insular and more review-ready
+- doing so will make the project feel less insular and easier to situate
 
 ## New results that sharpen the positioning (2026-04-01 session)
 

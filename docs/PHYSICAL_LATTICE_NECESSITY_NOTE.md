@@ -453,7 +453,7 @@ reusable across:
 
 - three-generation defenses,
 - anti-rooting arguments,
-- reviewer-facing “isn’t this just a regulator?” objections,
+- standard “isn’t this just a regulator?” objections,
 - any future lane that depends on the physical-lattice reading of the retained
   matter/gauge surface.
 

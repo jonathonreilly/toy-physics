@@ -1,8 +1,8 @@
 # DM Wilson-to-`dW_e^H` Hermitian Source-Family Target
 
-**Date:** 2026-04-18  
+**Date:** 2026-04-18
 **Status:** exact current-`main` target theorem isolating the weakest honest
-constructive Wilson-side object upstream of the DM selector  
+constructive Wilson-side object upstream of the DM selector
 **Script:** `scripts/frontier_dm_wilson_to_dweh_hermitian_source_family_target_2026_04_18.py`
 
 ## Question
@@ -151,7 +151,7 @@ Only after that should the branch attack:
 - a positive Wilson-to-`dW_e^H` theorem;
 - a positive Wilson-to-`D_-` theorem;
 - a replacement for the current imposed source-branch rule;
-- the DM flagship gate itself.
+- the DM flagship lane itself.
 
 ## Why this matters
 

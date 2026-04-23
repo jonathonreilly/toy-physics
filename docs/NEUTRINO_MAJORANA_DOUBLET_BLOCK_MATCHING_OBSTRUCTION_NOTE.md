@@ -1,10 +1,10 @@
 # Majorana Doublet-Block Matching Obstruction
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact blocker-sharpening theorem on the obvious normalized
-local-to-doublet matching class  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+local-to-doublet matching class
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_majorana_doublet_block_matching_obstruction.py`
 
 ## Question
@@ -140,7 +140,7 @@ This closes one real remaining loophole:
 
 Answer: no.
 
-So the live blocker is now narrower:
+So the remaining blocker is now narrower:
 
 - not staircase placement
 - not the residual-ratio class in the abstract

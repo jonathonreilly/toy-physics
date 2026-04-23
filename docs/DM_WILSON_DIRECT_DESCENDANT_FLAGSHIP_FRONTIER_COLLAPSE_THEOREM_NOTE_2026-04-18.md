@@ -1,8 +1,8 @@
 # DM Wilson Direct-Descendant Flagship Frontier Collapse Theorem
 
-**Date:** 2026-04-18  
+**Date:** 2026-04-18
 **Status:** exact flagship-route refinement theorem after the Wilson-parent audit
-and the local-Schur-note audit  
+and the local-Schur-note audit
 **Script:** `scripts/frontier_dm_wilson_direct_descendant_flagship_frontier_collapse_theorem_2026_04_18.py`
 
 ## Question
@@ -79,7 +79,7 @@ So the flagship path only needs the microscopic law on the fixed charged
 support. It does not need a second independent support-identification theorem
 to keep the downstream chain moving.
 
-### 3. The remaining flagship gate is already identified as the right-sensitive selector law on `dW_e^H`
+### 3. The remaining flagship lane is already identified as the right-sensitive selector law on `dW_e^H`
 
 From
 [DM_LEPTOGENESIS_PMNS_MICROSCOPIC_SELECTOR_REDUCTION_THEOREM_NOTE_2026-04-17.md](./DM_LEPTOGENESIS_PMNS_MICROSCOPIC_SELECTOR_REDUCTION_THEOREM_NOTE_2026-04-17.md):
@@ -88,7 +88,7 @@ From
   law on `dW_e^H = Schur_Ee(D_-)`,
 - equivalently the intrinsic `2`-real `Z_3` doublet-block point-selection law.
 
-So the flagship gate is already scoped more sharply than the broader
+So the flagship lane is already scoped more sharply than the broader
 Wilson-native descendant program.
 
 ### 4. The publication authority files already classify the gate that way
@@ -100,7 +100,7 @@ remaining positive theorem target:
 - equivalently the right-sensitive microscopic selector law on
   `dW_e^H = Schur_Ee(D_-)`.
 
-That is already the manuscript-facing statement of the open flagship gate.
+That is already the manuscript-facing statement of the open flagship lane.
 
 ### 5. The Wilson-parent audit stays important, but for a stronger upstream program
 
@@ -175,7 +175,7 @@ The next positive theorem should therefore attack one of the following:
   law to that `L_e` law.
 
 The next flagship move should not spend its main effort on Wilson-native
-support provenance unless we explicitly switch goals from flagship gate closeout
+support provenance unless we explicitly switch goals from flagship lane closeout
 to the stronger Wilson-native descendant program.
 
 ## What this closes

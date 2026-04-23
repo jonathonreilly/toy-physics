@@ -1,6 +1,6 @@
 # DM Wilson Direct-Descendant Local Schur Branch-Discriminant Theorem
 
-**Date:** 2026-04-19  
+**Date:** 2026-04-19
 **Status:** exact source-side reduction theorem on the open DM gate. The
 current positive-branch discriminator is local to the descended charged Schur
 block `L_e = Schur_{E_e}(D_-)`: once `L_e` is fixed, the descended Hermitian
@@ -8,7 +8,7 @@ law reconstructs `H_e` exactly, and the explicit branch scalar is
 `Delta_src(dW_e^H) = det(H_e(L_e))`. This is not yet a derivation of the
 physical sign law from `Cl(3)` on `Z^3`; it is an exact reduction of the live
 branch-choice object to the local descended block.
-**Primary runner:**  
+**Primary runner:**
 `scripts/frontier_dm_wilson_direct_descendant_local_schur_branch_discriminant_theorem_2026_04_19.py`
 (`PASS=10 FAIL=0`).
 
@@ -149,7 +149,7 @@ right-sensitive, exactly as the reviewed transport-status note claimed.
 
 - the actual microscopic law for `L_e`;
 - a derivation of the positive sign from `Cl(3)` on `Z^3`;
-- the final DM flagship gate.
+- the final DM flagship lane.
 
 ## Cross-references
 

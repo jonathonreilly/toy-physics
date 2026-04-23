@@ -659,5 +659,5 @@ are:
 What is **not** justified by this branch:
 
 - claiming the charged-lepton Koide gate is now scientifically closed;
-- claiming the DM flagship gate is now closed through DPLE;
+- claiming the DM flagship lane is now closed through DPLE;
 - claiming total scalar-selector axiom cost is now zero.

@@ -36,7 +36,7 @@ That is the honest current boundary on the package.
 
 ## What is exact
 
-These parts of the `y_t` lane are no longer the live blocker:
+These parts of the `y_t` lane are no longer the remaining blocker:
 
 1. the canonical-surface Ward theorem
    `y_t(M_Pl) / g_s(M_Pl) = 1 / sqrt(6)`

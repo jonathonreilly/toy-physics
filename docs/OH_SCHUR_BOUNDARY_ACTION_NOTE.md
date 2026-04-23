@@ -1,7 +1,7 @@
 # Exact Schur-Complement Boundary Action for the `O_h` Strong-Field Shell Law
 
-**Date:** 2026-04-13  
-**Script:** `scripts/frontier_oh_schur_boundary_action.py`  
+**Date:** 2026-04-13
+**Script:** `scripts/frontier_oh_schur_boundary_action.py`
 **Status:** Exact microscopic shell-boundary action on current strong-field source classes
 
 ## Purpose
@@ -109,6 +109,6 @@ After this note, the remaining gravity problem is narrower again:
 
 - the microscopic shell-boundary action is no longer open on the current
   source classes
-- the live blocker is the final extension from this exact boundary-action-plus-
+- the remaining blocker is the final extension from this exact boundary-action-plus-
   bridge closure to a broader pointwise Einstein/Regge theorem beyond the
   current bridge surface

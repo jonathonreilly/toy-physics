@@ -1,7 +1,7 @@
 # DM Current-Bank Quantitative Mapping
 
 **Date:** 2026-04-21
-**Status:** reviewer-facing mapping item closed. This note closes the
+**Status:** public mapping item closed. This note closes the
 quantitative mapping item only; the full DM closure package uses this note
 alongside the same-day A-BCC, selector-packet, split-2, and ordered-chain
 current theorems.
@@ -16,7 +16,7 @@ One of the remaining DM review items was purely quantitative packaging:
 > explicit quantitative DM observable mapping from the current exact bank.
 
 This note closes that item by assembling the already-retained exact bank into
-one reviewer-facing table and checking that every mapped quantity is finite,
+one public table and checking that every mapped quantity is finite,
 internally consistent, and physically interpretable.
 
 This is **not** a new selector theorem and does **not by itself** close the
@@ -89,20 +89,20 @@ The accompanying runner passes `17/17` checks across:
 
 What closes here:
 
-- the reviewer-facing **current-bank quantitative DM mapping** item
+- the public **current-bank quantitative DM mapping** item
 - explicit quantitative exposure of the current exact bank
 - completeness of the mapping table for the retained bank quantities used in
   the current leptogenesis package
 
 What does **not** close here by itself:
 
-- the full DM flagship gate as a standalone consequence of this mapping note
+- the full DM flagship lane as a standalone consequence of this mapping note
 - any selector theorem
 - any branch-choice theorem
 
 So the right package read is:
 
-> the quantitative mapping item is closed as bookkeeping and reviewer-facing
+> the quantitative mapping item is closed as bookkeeping and public
 > presentation of the exact bank. The same-day April 21 A-BCC, split-2,
 > shifted same-law selector, and ordered-chain current notes carry the
 > remaining flagship closure load.

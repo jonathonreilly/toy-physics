@@ -351,8 +351,8 @@ live-sheet non-commutation witness).
 - that `Q = 6(δ² + q_+²)/m²` is the live-sheet source-response
   curvature (it is NOT; it is the commutant-class reference)
 - that **this note** closes the selector gate (it does not)
-- that **this note** closes the DM flagship gate (it does not; the
-  DM flagship gate is NOT declared closed on the current branch tip —
+- that **this note** closes the DM flagship lane (it does not; the
+  DM flagship lane is NOT declared closed on the current branch tip —
   its honest status is conditional / support; see the flagship
   closure review note)
 - that this note "narrows the gap" from two unknowns to one (the
@@ -365,5 +365,5 @@ If any future revision tightens those boundaries, it must cite a
 source on the live retained surface (Option B: derive the live-sheet
 Schur commutation premise). Until then, the safe read is: **Schur is
 a commutant-class conditional lemma only; the live sheet does NOT
-satisfy its premise; the flagship gate is conditional / support, NOT
+satisfy its premise; the flagship lane is conditional / support, NOT
 closed**.

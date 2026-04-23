@@ -265,7 +265,7 @@ Cl(3)/Z³, but an exhaustive observational elimination of known competitors.
     converts the C_base-connectivity topological fact into a selection rule.
 
 Neither is currently available at the retained axiom level. A-BCC remains
-the single named open input on the DM flagship gate.
+the single named open input on the DM flagship lane.
 
 ---
 
@@ -310,7 +310,7 @@ Expected: PASS=21 FAIL=0.
 
 ## 7. Implications for the axiom stack
 
-**Current status of the DM flagship gate:**
+**Current status of the DM flagship lane:**
 
 | Item | Status |
 |------|--------|

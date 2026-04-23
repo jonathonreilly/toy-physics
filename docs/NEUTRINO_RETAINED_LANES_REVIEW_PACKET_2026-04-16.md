@@ -1,8 +1,8 @@
-# Neutrino Retained Lanes Review Packet (2026-04-16)
+# Neutrino Retained Lanes Support Packet (2026-04-16)
 
 ## Scope
 
-This is the reviewer front door for the live neutrino boundary/support packet
+This is the primary entry point for the live neutrino boundary/support packet
 on `main`.
 
 It is a package for honest review, atlas reuse, and downstream scoping. It is
@@ -27,7 +27,7 @@ The exact current endpoint is:
 
 ## Package Role
 
-- reviewer-facing neutrino lane intake
+- neutrino lane intake
 - main-only boundary/support packet outside the flagship paper core
 - authoritative current-bank summary for what is closed, what is open, and
   what is now sharply reduced
@@ -45,5 +45,5 @@ surface, because:
 So the correct package classification is:
 
 - live on `main`
-- atlas-wired and reviewer-ready
+- atlas-wired and ready for validation
 - outside flagship manuscript claims

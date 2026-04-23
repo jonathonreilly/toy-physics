@@ -283,7 +283,7 @@ IMPOSSIBLE. This theorem does not promote any selector candidate; it
 sharpens the obstruction structure by showing the axiom itself cannot
 close the gap with local content, and routes any closure through
 either a nonlocal axiom-native principle or an observational promotion
-lane. The integrated closure of the DM flagship gate is the downstream
+lane. The integrated closure of the DM flagship lane is the downstream
 PMNS-as-f(H) closure via the observational-promotion (P3) lane, which
 is consistent with this impossibility theorem.
 
@@ -337,7 +337,7 @@ Current: `PASS = 35, FAIL = 0`.
 ## What this file must never say
 
 - that selector is closed
-- that the DM flagship gate is closed
+- that the DM flagship lane is closed
 - that any of the retained candidate points (Schur-Q, det(H), Tr(H^2),
  F1, K_12) has been promoted to theorem-grade by this note (it has not;
  the theorem explicitly shows none of them is microscopically forced)
@@ -355,5 +355,5 @@ read is: **microscopic Cl(3)/Z^3 axiom is genuinely silent on
 `(delta, q_+)` at the local-polynomial level; the "gauge direction"
 interpretation is legitimized as the correct reading of the residual;
 sole-axiom closure via local-polynomial content is ruled out; closure
-of the DM flagship gate is via the downstream PMNS-as-f(H)
+of the DM flagship lane is via the downstream PMNS-as-f(H)
 observational-promotion lane.**

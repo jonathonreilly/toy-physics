@@ -343,7 +343,7 @@ The reduction is:
          + det(H_base) > 0 (computed fact)
 
 PNS is weaker, physically motivated, and observationally grounded. It is
-the single remaining input on the DM flagship gate — the same input
+the single remaining input on the DM flagship lane — the same input
 identified as the "single continuity axiom" target in the assumptions
 audit.
 

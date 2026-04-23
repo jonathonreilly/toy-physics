@@ -162,7 +162,7 @@ the structural lemma requires genuinely new theoretical work.
 - Support picture unchanged: the strongest current executable support still
   isolates `δ = 2/9`, `Q = 2/3`, and a tight charged-lepton scale lane, but
   the physical/source-law A1 bridge and the physical Brannen-phase bridge
-  remain open on the canonical review surface
+  remain open on the canonical package surface
 
 ## References
 

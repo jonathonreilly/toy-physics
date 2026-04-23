@@ -26,7 +26,7 @@ The honest answer is **NO**. This note produces the obstruction theorem
 with **five independent converging derivations**, each of which rules out
 bifundamental invariance from the retained structure. The Frobenius-route
 conditional closure gate is therefore closed as unavailable at this
-note's scope. The integrated closure of the DM flagship gate is the
+note's scope. The integrated closure of the DM flagship lane is the
 downstream PMNS-as-f(H) observational-promotion closure, which does not
 depend on bifundamental invariance.
 
@@ -326,7 +326,7 @@ bifundamental invariance that this note proves unavailable.
 ## What this note does NOT do
 
 - does not close the selector gate at its own scope (the integrated
- closure of the DM flagship gate is the downstream PMNS-as-f(H)
+ closure of the DM flagship lane is the downstream PMNS-as-f(H)
  closure, which does not depend on bifundamental invariance)
 - does not rule out F1 as a **physical** candidate; it rules out the
  sole-axiom promotion of F1 via bifundamental invariance
@@ -469,7 +469,7 @@ PYTHONPATH=scripts python3 scripts/frontier_dm_neutrino_source_surface_bifundame
 ## What this file must never say
 
 - that selector is closed
-- that the DM flagship gate is closed
+- that the DM flagship lane is closed
 - that F1 is uniquely pinned by any sole-axiom invariance
 - that bifundamental invariance is axiom-native retained (the opposite
  is proven)
@@ -484,5 +484,5 @@ safe read is: **bifundamental gauge invariance is NOT derivable from
 Cl(3)/Z^3 on the active doublet block (CASE 3 obstruction). The
 Frobenius-route conditional closure gate is unavailable at this note's
 scope; five inequivalent candidate points are on record, none promoted
-to theorem-grade here. The integrated closure of the DM flagship gate
+to theorem-grade here. The integrated closure of the DM flagship lane
 is the downstream PMNS-as-f(H) observational-promotion closure.**

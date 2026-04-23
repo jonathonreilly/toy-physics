@@ -42,7 +42,7 @@ It is directly reusable for:
 
 - three-generation defenses
 - anti-rooting / physical-lattice arguments
-- reviewer-facing taste-artifact objections
+- public taste-artifact objections
 - future flavor and mass-hierarchy work that builds on the triplet sectors
 - no-same-stack / no-same-surface regulator-reinterpretation arguments
 

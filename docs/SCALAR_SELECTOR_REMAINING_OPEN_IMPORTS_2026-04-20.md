@@ -8,10 +8,10 @@ derivation would close it from Cl(3)/Z³ framework ingredients alone. Items
 listed here are
 **retained-observational or structural-postulate inputs** that currently
 prevent the corresponding lane from being marked retained-derivation on the
-review surface.
+package surface.
 
 **2026-04-21 package update.** The April 21 Koide package is now landed on
-the package review surface as the strongest current executable support stack.
+the package package surface as the strongest current executable support stack.
 It materially sharpens the charged-lepton lane, but it does not yet close it.
 Two scientific bridges remain open:
 
@@ -84,7 +84,7 @@ physical Brannen-phase bridge by itself.
   eigenvalue control, exact cofactor projector-row intervals, and boxwise
   transport upper bounds `eta / eta_obs < 1` throughout. See
   `docs/DM_SPLIT2_INTERVAL_CERTIFIED_DOMINANCE_CLOSURE_THEOREM_NOTE_2026-04-21.md`.
-- **Recovered-packet selector residue closed on the review surface.** The same
+- **Recovered-packet selector residue closed on the package surface.** The same
   exact scalar observable-relative-action law now closes the current recovered
   selector packet after transport to the common positive windows
   `A_mu(H)=H+mu I`: on the recovered bank, the preferred lift `0` is the
@@ -118,7 +118,7 @@ cycle.
 
 Closing `Q = 2/3` from Cl(3)/Z³ would immediately upgrade the Koide κ and θ
 lanes from "retained-observational-conditional" to "retained-derivation" on
-the review surface. It is the single highest-leverage open item in the cycle.
+the package surface. It is the single highest-leverage open item in the cycle.
 
 **What is already ruled out:** six structural no-go theorems cover
 Z₃-invariance alone, sectoral universality, color-sector correction,
@@ -315,7 +315,7 @@ Nature-grade statement for this cycle is:
 > dark-matter basin choice on the retained measurement surface, and the
 > up-sector quark reduced
 > amplitude (a_u) — are all sharply compressed on the retained Cl(3)/Z^3
-> review surface, with no new axioms added this cycle. The framework
+> package surface, with no new axioms added this cycle. The framework
 > contributes (i) an executable Frobenius-isotype / AM-GM support stack
 > that isolates the Koide point but still leaves open the physical/source-law
 > extremal-principle bridge, (ii) an executable ABSS fixed-point /
@@ -331,7 +331,7 @@ Nature-grade statement for this cycle is:
 > current `delta_db = 1`, `q_+ = 0`, `I_src > 0` proposal is still
 > insufficient, and (v) a linear-algebra derivation of the up-sector
 > quark closure on the retained `1⊕5` bimodule and CKM-atlas atom package,
-> whose provenance is now surfaced inline on the review surface. Each retained
+> whose provenance is now surfaced inline on the package surface. Each retained
 > observational input or structural postulate still blocking native closure is
 > listed in the Remaining-Open-Imports register along with the derivation that
 > would close it.
@@ -356,7 +356,7 @@ the primary closure runner and its verification counts are:
 | DM A-BCC (Sylvester signature-forcing) | `frontier_dm_abcc_signature_forcing_theorem.py` | 54 | path-independent via IVT + det sign |
 | DM A-BCC (PMNS Non-Singularity conditional) | `frontier_dm_abcc_pmns_nonsingularity_theorem.py` | 38 | conditional closure |
 | DM A-BCC (sigma-chain attack cascade) | `frontier_dm_pns_attack_cascade.py` | 47 | multi-observable chain |
-| DM A-BCC (retained measurement closure) | `frontier_dm_abcc_retained_measurement_closure_2026_04_21.py` | 15 | integration theorem; review-surface closure grade |
+| DM A-BCC (retained measurement closure) | `frontier_dm_abcc_retained_measurement_closure_2026_04_21.py` | 15 | integration theorem; package-surface closure grade |
 | DM A-BCC (assumptions audit) | `frontier_dm_abcc_assumptions_audit.py` | 21 | five-route structural no-go |
 | DM A-BCC (corrected five-basin chamber ∩ DPLE) | `frontier_dm_abcc_five_basin_chamber_dple_support_2026_04_21.py` | 24 | Basin 2 fails `F_4`; corrected native chamber+DPLE route still selects Basin 1 |
 | DM A-BCC (active-chamber completeness) | `frontier_dm_pmns_chamber_spectral_completeness_theorem_2026_04_20.py` | 11 | exact chamber `χ²=0` set = `{Basin 1, Basin 2, Basin X}` |

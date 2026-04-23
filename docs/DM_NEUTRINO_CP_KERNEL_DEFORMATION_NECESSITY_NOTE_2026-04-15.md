@@ -1,9 +1,9 @@
 # DM Neutrino CP-Kernel Deformation Necessity
 
-**Date:** 2026-04-15  
-**Status:** exact necessary-condition theorem for the missing Dirac texture  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+**Date:** 2026-04-15
+**Status:** exact necessary-condition theorem for the missing Dirac texture
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_dm_neutrino_cp_kernel_deformation_necessity.py`
 
 ## Question

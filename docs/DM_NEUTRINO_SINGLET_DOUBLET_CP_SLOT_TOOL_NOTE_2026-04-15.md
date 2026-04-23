@@ -1,10 +1,10 @@
 # DM Neutrino Singlet-Doublet CP Slot Tool
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact structural tool identifying the minimal physical
-non-circulant CP carrier after the exact circulant no-go  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+non-circulant CP carrier after the exact circulant no-go
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_dm_neutrino_singlet_doublet_cp_slot_tool.py`
 
 ## Question

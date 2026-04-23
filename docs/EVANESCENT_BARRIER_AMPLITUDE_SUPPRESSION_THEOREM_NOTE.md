@@ -251,7 +251,7 @@ carves out a restricted exterior-shell closure and explicitly lists
 "no-horizon / no-echo as theorem-level downstream consequences" among
 the things not yet promotable.  The present note does not promote the
 no-echo consequence.  It promotes the narrower retained surface above
-(theorems A + B) which can be used as a reviewer-facing structural
+(theorems A + B) which can be used as a public structural
 backbone for the bounded companion without changing the restricted
 strong-field boundary.
 

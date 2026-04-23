@@ -1,10 +1,10 @@
 # PMNS Branch-Conditioned Quadratic-Sheet Closure
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact branch-conditioned coefficient-reconstruction theorem on the
-minimal PMNS branches  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+minimal PMNS branches
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_pmns_branch_conditioned_quadratic_sheet_closure.py`
 
 ## Question

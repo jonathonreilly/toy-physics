@@ -8,7 +8,7 @@
 
 ## Review-surface target
 
-The live carrier-side blocker on the DM flagship gate is narrower than the
+The live carrier-side blocker on the DM flagship lane is narrower than the
 older broad-box search. The active residual neighborhoods are the two
 explicit split-2 upper-face boxes isolated by
 `DM_NEUTRINO_SOURCE_SURFACE_CARRIER_SIDE_CONCLUSION_NOTE_2026-04-18.md`.
@@ -107,7 +107,7 @@ What it does **not** establish:
 - a certified ODE/transport enclosure
 - full exact-carrier dominance/completeness on the residual split-2 branch
 
-So the review-surface status should now read:
+So the package-surface status should now read:
 
 > the residual split-2 carrier blocker is materially narrowed by dense-grid
 > and empirical-Lipschitz support, but the strict interval-certified

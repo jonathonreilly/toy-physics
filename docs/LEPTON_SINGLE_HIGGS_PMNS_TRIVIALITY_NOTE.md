@@ -1,10 +1,10 @@
 # Lepton Single-Higgs PMNS Triviality Theorem
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact obstruction theorem on the shared single-Higgs lepton Yukawa
-lane  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+lane
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_lepton_single_higgs_pmns_triviality.py`
 
 ## Question

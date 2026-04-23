@@ -85,7 +85,7 @@ The PMNS-as-f(H) closure theorem pinned
 `(m_*, δ_*, q_+*) = (0.657061, 0.933806, 0.715042)` via direct
 diagonalisation of the retained affine Hermitian
 `H(m, δ, q_+) = H_base + m T_m + δ T_δ + q_+ T_q` and the PDG 2024 PMNS
-central values. A first-pass adversarial review surfaced four issues that
+central values. A first-pass adversarial package surfaced four issues that
 had to be tightened before Nature reviewer handoff:
 
 1. **Basin non-uniqueness (Critical).** Multi-start over a widened box
@@ -574,7 +574,7 @@ Taylor-convergence boundary) are flagged honestly in-situ.
  canonical Higgs Z_3 assignment)
 - that θ_23 is derived (it is not; the closure yields the
  upper-octant conditionality, not the θ_23 value)
-- that the DM flagship gate is CLOSED as a consequence of this note
+- that the DM flagship lane is CLOSED as a consequence of this note
  (the honest status is conditional / support; see
  DM_FLAGSHIP_CLOSURE_REVIEW_NOTE_2026-04-17.md)
 - that the PMNS-closure theorem's pinning point is numerically different

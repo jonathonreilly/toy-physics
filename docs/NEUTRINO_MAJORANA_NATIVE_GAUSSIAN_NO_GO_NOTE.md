@@ -1,10 +1,10 @@
 # Native-Gaussian Majorana No-Go
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact boundary result on the current native quadratic surface;
-not a full interacting no-go  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+not a full interacting no-go
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_majorana_native_gaussian_nogo.py`
 
 ## Question

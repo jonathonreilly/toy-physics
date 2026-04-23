@@ -1,7 +1,7 @@
 # Evolving Network Prototype V3 Note
 
 **Date:** 2026-04-04  
-**Status:** reviewer-facing Gate B control audit, not a promoted dynamics result
+**Status:** public Gate B control audit, not a promoted dynamics result
 
 ## One-line read
 
@@ -39,7 +39,7 @@ v3 instead:
 - leaves a longer detector-side tail untouched
 - spends the removal budget outside that protected corridor where possible
 
-That is a better reviewer-facing imposed control because it answers a fair
+That is a better public imposed control because it answers a fair
 question:
 
 - what happens if the control preserves a visible source-to-detector route?
@@ -78,7 +78,7 @@ That means Gate B remains open.
 - the v3 audit closes the dynamics question
 - the current control proves a generated-geometry advantage over the imposed lane
 
-## Safe reviewer-facing summary
+## Safe public summary
 
 Use this note to explain the control discipline:
 

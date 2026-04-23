@@ -1,6 +1,6 @@
 # DM Wilson Direct-Descendant Canonical Transport-Column Fiber Theorem
 
-**Date:** 2026-04-19  
+**Date:** 2026-04-19
 **Status:** exact current-branch theorem sharpening the DM transport-side
 selector object. Exact flavored transport on the probability-simplex column
 space already selects a unique current-branch maximizer orbit
@@ -19,7 +19,7 @@ So the remaining DM issue is no longer “what favored column does transport
 want?” The branch now answers that. The remaining issue is the **microscopic
 law that selects a source in the fiber over that canonical column orbit.**
 
-**Primary runner:**  
+**Primary runner:**
 `scripts/frontier_dm_wilson_direct_descendant_canonical_transport_column_fiber_theorem_2026_04_19.py`
 (`PASS=16 FAIL=0`).
 
@@ -150,13 +150,13 @@ So the remaining science is now sharply identified as:
 
 This theorem sits downstream of four already-landed same-day sharpenings:
 
-1. **local Schur branch-discriminant theorem**  
+1. **local Schur branch-discriminant theorem**
    The branch sign is already local to `L_e = Schur_{E_e}(D_-)`.
-2. **local observable-coordinate theorem**  
+2. **local observable-coordinate theorem**
    `(eta_1, gamma, E1, E2, Delta_src)` already gives local coordinates.
-3. **canonical path-selector theorem**  
+3. **canonical path-selector theorem**
    the branch carries an explicit path-selected law candidate.
-4. **constructive transport plateau theorem**  
+4. **constructive transport plateau theorem**
    constructive transport extremality alone does not pick a unique endpoint.
 
 The new theorem explains that last obstruction structurally:
@@ -176,7 +176,7 @@ The new theorem explains that last obstruction structurally:
 - the microscopic value law on `L_e`;
 - a reviewer-grade derivation of the direct-descendant source from retained
   physics;
-- the final DM flagship gate.
+- the final DM flagship lane.
 
 ## Cross-references
 

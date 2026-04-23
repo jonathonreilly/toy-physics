@@ -1,9 +1,9 @@
 # Majorana Staircase-Blindness Theorem
 
-**Date:** 2026-04-15  
-**Status:** exact scale-boundary theorem on the current Majorana source stack  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+**Date:** 2026-04-15
+**Status:** exact scale-boundary theorem on the current Majorana source stack
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_majorana_staircase_blindness_theorem.py`
 
 ## Question

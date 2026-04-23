@@ -1,7 +1,7 @@
 # DM Neutrino Yukawa Cascade Candidate
 
-**Date:** 2026-04-14  
-**Branch:** `codex/dm-main-derived`  
+**Date:** 2026-04-14
+**Branch:** `codex/dm-main-derived`
 **Script:** `scripts/frontier_dm_neutrino_yukawa_candidate.py`
 
 ---
@@ -65,9 +65,9 @@ the observed denominator lane.
 
 The new point is that the EWSB cascade already used elsewhere on branch gives:
 
-- one-step factor  
+- one-step factor
   `epsilon_weak * log(M_Pl / v) ~ 1.04e-1`
-- two-step factor  
+- two-step factor
   `(epsilon_weak * log(M_Pl / v))^2 ~ 1.08e-2`
 
 Multiplying that **two-step** factor by a bounded `O(0.5-0.65)` sector base
@@ -130,7 +130,7 @@ the Majorana side:
 So the correct current statement is:
 
 > this note remains the bounded precursor that anticipated the right scale,
-> while the live blocker has moved to the Majorana / `Z_3` activation law.
+> while the remaining blocker has moved to the Majorana / `Z_3` activation law.
 
 ---
 

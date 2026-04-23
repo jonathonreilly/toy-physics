@@ -1,7 +1,7 @@
 # DM Selector Branch Conclusion
 
-**Date:** 2026-04-17  
-**Branch:** `codex/dm-selector-rebuild-2026-04-17`  
+**Date:** 2026-04-17
+**Branch:** `codex/dm-selector-rebuild-2026-04-17`
 **Final verdict:** `obstruction`.
 
 ## Summary
@@ -12,9 +12,9 @@ It does, however, collapse the branch to a small exact theorem packet:
 
 1. the selector-class side is compressed by the microscopic positive-probe
    representation theorem;
-2. the selector-side live blocker is identified exactly as
+2. the selector-side remaining blocker is identified exactly as
    **observable-grammar exhaustion / intrinsic-family descent**;
-3. the carrier-side live blocker is identified exactly as
+3. the carrier-side remaining blocker is identified exactly as
    **exact-carrier completeness / global dominance**.
 
 So the branch now ends with a publishable obstruction, not an open-ended search

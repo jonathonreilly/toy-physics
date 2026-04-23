@@ -1,9 +1,9 @@
 # Majorana Scalar-Datum Transplant Obstruction
 
-**Date:** 2026-04-15  
-**Status:** exact frontier boundary on the current scalar-atlas reuse class  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+**Date:** 2026-04-15
+**Status:** exact frontier boundary on the current scalar-atlas reuse class
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_majorana_scalar_datum_transplant_obstruction.py`
 
 ## Question

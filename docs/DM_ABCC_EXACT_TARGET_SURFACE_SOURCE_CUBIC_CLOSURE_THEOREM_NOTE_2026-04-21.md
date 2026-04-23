@@ -1,29 +1,29 @@
 # DM A-BCC Exact Target-Surface Source-Cubic Closure Theorem
 
-**Date:** 2026-04-21  
-**Lane:** strict/native DM A-BCC sharpening  
+**Date:** 2026-04-21
+**Lane:** native/source DM A-BCC sharpening
 **Status:** exact target-surface closure theorem. Once the exact PMNS target
 surface is granted, no separate native branch-choice residue remains: the
 active half-plane chamber is already exact on the source side, the exact
 target-surface chamber roots are exactly `{Basin 1, Basin 2, Basin X}`, and
 the coefficient-free source cubic `I_src(H) > 0` selects `Basin 1` uniquely.
-So the remaining strict/native DM burden is not a separate A-BCC sign law; it
-is the PMNS angle triple itself.  
+So the remaining native/source DM burden is not a separate A-BCC sign law; it
+is the PMNS angle triple itself.
 **Boundary:** this does **not** contradict the global sign-blindness audit.
 Outside the exact target chamber root set, `I_src(H)` does **not** determine
 `det(H)` globally: `Basin N` and `Basin P` remain explicit counterexamples.
 This is therefore a target-surface theorem, not a pure `Cl(3)/Z^3` sign law on
-all of source space.  
-**Primary runner:**  
+all of source space.
+**Primary runner:**
 `scripts/frontier_dm_abcc_exact_target_surface_source_cubic_closure_2026_04_21.py`
 
 ---
 
 ## 0. Executive summary
 
-The strict/native DM map had been carrying one residual A-BCC caveat:
+The native/source DM map had been carrying one residual A-BCC caveat:
 
-> even though the review-surface gate is closed, does a separate native
+> even though the current package surface is closed, does a separate native
 > branch-choice / source-chart problem still remain outside the PMNS angle
 > triple itself?
 
@@ -79,8 +79,8 @@ itself.
 
 That is the real scientific reduction:
 
-- A-BCC no longer survives as a separate strict/native blocker;
-- the remaining strict/native DM content is just the PMNS angle triple.
+- A-BCC no longer survives as a separate native/source blocker;
+- the remaining native/source DM content is just the PMNS angle triple.
 
 ---
 
@@ -245,7 +245,7 @@ target PMNS surface itself.
 
 ## 4. Consequence for the DM open map
 
-Before this theorem, the strict/native open map was phrased as if DM still had
+Before this theorem, the native/source open map was phrased as if DM still had
 two separable residues:
 
 1. source-chart / branch-choice derivation;
@@ -255,9 +255,9 @@ After this theorem, the sharper statement is:
 
 - on the exact PMNS target surface, A-BCC is already downstream of the native
   chamber plus `I_src(H) > 0`;
-- the review-surface selector residue is already closed on the current
+- the package-surface selector residue is already closed on the current
   recovered packet;
-- therefore the only remaining strict/native DM burden is the PMNS angle
+- therefore the only remaining native/source DM burden is the PMNS angle
   triple itself, equivalently the missing point-selection law on the exact
   local `2`-real PMNS source manifold.
 
@@ -271,7 +271,7 @@ something narrower and more useful:
 
 ## 5. What this closes
 
-- the claim that DM still has a separate strict/native branch-choice residue
+- the claim that DM still has a separate native/source branch-choice residue
   once the exact PMNS target surface is fixed;
 - the need to keep treating A-BCC as independent of the PMNS angle-triple
   problem on that exact target surface.

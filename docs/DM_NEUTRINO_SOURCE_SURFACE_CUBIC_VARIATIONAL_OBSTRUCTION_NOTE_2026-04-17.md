@@ -242,7 +242,7 @@ Appropriate placement:
  [DERIVATION_ATLAS.md](./publication/ci3_z3/DERIVATION_ATLAS.md)
  under the DM neutrino source-surface family, labeled as **narrowed gap
  / obstruction**
-- this note does not close the DM flagship gate (the integrated closure
+- this note does not close the DM flagship lane (the integrated closure
   is the downstream PMNS-as-f(H) closure, which uses this obstruction
   as one retained input in the chain)
 - paired with the upstream Schur-baseline partial closure; the two notes
@@ -255,7 +255,7 @@ quantitative section.
 ## What this file must never say
 
 - that selector is closed
-- that the DM flagship gate is closed
+- that the DM flagship lane is closed
 - that the cubic route is theorem-grade selector-compatible
 - that the Z_3 axis `w = sqrt(8/3)` or the Schur-Q point `sqrt(6)/3` is
  axiom-native-forced by the cubic variational selection obstruction

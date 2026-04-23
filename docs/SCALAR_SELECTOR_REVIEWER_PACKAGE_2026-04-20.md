@@ -1,7 +1,7 @@
 # Scalar-Selector Cycle 1 — Reviewer Package
 
 **Date:** 2026-04-20
-**Scope:** Historical reviewer-facing handoff note for the scalar-selector
+**Scope:** Historical public handoff note for the scalar-selector
 cycle. This is useful route-history context, but it is **not** the current
 primary claim surface. The authoritative package-facing status now lives in
 `publication/ci3_z3/README.md`, `publication/ci3_z3/CLAIMS_TABLE.md`, and
@@ -17,7 +17,7 @@ The honest current-package read is:
   support stack but still retains two physical bridges plus the separate
   scale item `v_0`;
 - the DM lane is closed on the current package surface and on the exact-target
-  strict/native map by the April 21 theorem stack;
+  native/source map by the April 21 theorem stack;
 - the quark lane is materially sharpened by the added JTS / ISSR1 /
   shell-normalization work, but the authoritative package still treats full
   quark closure as bounded rather than promoted.
@@ -222,7 +222,7 @@ composition `chamber ∩ F_4` still selects Basin 1 uniquely on the retained
 five-basin chart. This sharpens the strongest current native A-BCC route,
 but it still does not by itself derive the source chart axiom-natively.
 
-**2026-04-21 target-surface sharpening.** The separate strict/native A-BCC
+**2026-04-21 target-surface sharpening.** The separate native/source A-BCC
 residue is now sharper than that. On the exact `chi^2 = 0` PMNS target
 surface, the active-half-plane theorem gives the native chamber exactly, the
 exact chamber roots are exactly `{Basin 1, Basin 2, Basin X}`, and the
@@ -258,7 +258,7 @@ explicit current-activation law on that target; the affine
 current-coordinate theorem identifies the remaining physical affine scalar as
 the `delta / Im K_Z3[1,2]` direction; and the ordered-chain graded-current
 closure theorem closes that remaining scalar exactly on the retained `hw=1`
-response family. So there is no remaining strict/native DM selector residue in
+response family. So there is no remaining native/source DM selector residue in
 the current package.
 
 The fixed-`N_e` exact-source-manifold theorem further sharpened the angle-side gap:
@@ -295,7 +295,7 @@ on the physical affine Hermitian chart the native current reads only
 `delta / Im K_Z3[1,2]` direction exactly. The later ordered-chain
 graded-current closure theorem then closes that remaining scalar with the
 companion current `J_N(H) = J_chi(i[N,H])`. So there is no remaining
-strict/native DM last-mile residue in the current package. See
+native/source DM last-mile residue in the current package. See
 `docs/DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md`
 and
 `docs/DM_PMNS_AFFINE_CURRENT_COORDINATE_REDUCTION_THEOREM_NOTE_2026-04-21.md`,
@@ -346,7 +346,7 @@ right-sensitive datum that does is the shifted-imaginary doublet sign: the
 exact internal selector lies on the positive side of `Im(K_Z3[1,2]) = 0`, and
 among recovered lifts only the preferred lift `0` shares that positive side.
 See `docs/DM_SELECTOR_SHIFTED_DOUBLET_IMAG_SIGN_SUPPORT_THEOREM_NOTE_2026-04-21.md`.
-That remaining selector packet is now closed on the review surface. The same
+That remaining selector packet is now closed on the package surface. The same
 exact scalar observable-relative-action law, transported to the common
 positive windows `A_mu(H)=H+mu I`, uniquely minimizes at the preferred
 recovered lift `0` across the full audited shift family and a dense
@@ -365,7 +365,7 @@ then shows that on the physical affine chart the native current reads only
 `delta / Im K_Z3[1,2]` direction exactly. The later ordered-chain
 graded-current closure theorem then closes that remaining scalar with the
 companion current `J_N(H) = J_chi(i[N,H])`. So there is no remaining
-strict/native DM last-mile residue in the current package. See
+native/source DM last-mile residue in the current package. See
 `docs/DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md`
 and
 `docs/DM_PMNS_AFFINE_CURRENT_COORDINATE_REDUCTION_THEOREM_NOTE_2026-04-21.md`,
@@ -398,7 +398,7 @@ with:
 - retained atom `a_d = ρ = 1/√42` (see `docs/QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`);
 - retained NLO atoms `supp = 6/7` and `δ_{A1} = 1/42` (CKM atlas).
 
-This is the review-surface provenance closure for the quark lane: the
+This is the package-surface provenance closure for the quark lane: the
 headline theorem now names the retained bimodule, the projector ray, the
 physical carrier plane, and the CKM-atlas atom bank inline instead of leaving
 those sources distributed implicitly across older quark notes.
@@ -515,7 +515,7 @@ All runners pass with no hardcoded `True` PASS annotations. Every PASS is a nume
 **2026-04-21 package update.** After the landed April 21 support package,
 Koide `Q = 2/3` and Brannen `δ = 2/9` are no longer counted here as retained
 observational inputs. The DM flagship lane is also removed from this list
-entirely: its review-surface residue is closed by the April 21 DM theorem
+entirely: its package-surface residue is closed by the April 21 DM theorem
 stack, and the stricter/native last mile is now also closed by the ordered-chain
 graded-current delta theorem. The table below lists the remaining retained
 observational or atlas-level inputs across the still-open or still-atlas-backed
@@ -535,7 +535,7 @@ still-atlas-backed Tier-1 closures this cycle.
 
 ## §7 Reading order for the reviewer
 
-1. This note (reviewer package) — primary read.
+1. This note (support package) — primary read.
 2. `docs/SCALAR_SELECTOR_REMAINING_OPEN_IMPORTS_2026-04-20.md` — retained-observational inputs with candidate closing derivations.
 3. Per-lane theorem notes referenced in §1–§4 — supporting detail.
 4. Runner scripts — numerical / symbolic verification.

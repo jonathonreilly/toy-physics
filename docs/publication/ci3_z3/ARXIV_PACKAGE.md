@@ -7,13 +7,12 @@ quantitative lanes, the closed exact-target dark-matter package, the bounded
 companion surface, and the remaining charged-lepton Koide bridge problems in
 one coherent scientific package.
 
-The goal is an arXiv-first paper that is self-contained, reviewer-legible, and
+The goal is an arXiv-first paper that is self-contained, legible, and
 strong enough to drive any later journal invitation/adaptation. It is not a
 Nature-first public package.
 
 ## Include
 
-- [External reviewer guide](./EXTERNAL_REVIEWER_GUIDE.md)
 - [arXiv draft](./ARXIV_DRAFT.md)
 - [Prediction surface](./PREDICTION_SURFACE_2026-04-15.md)
 - [Inputs and qualifiers](./INPUTS_AND_QUALIFIERS_NOTE.md)
@@ -65,7 +64,7 @@ Promoted quantitative package additions:
 
 ## Exclude Or Quarantine
 
-- stale review packets
+- stale support packets
 - older pitch / acceptance cards as if they were science authority
 - duplicated route notes that disagree with the canonical package stack
 

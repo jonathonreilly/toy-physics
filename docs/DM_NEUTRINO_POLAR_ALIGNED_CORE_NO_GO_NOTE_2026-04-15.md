@@ -1,9 +1,9 @@
 # DM Neutrino Positive-Polar Aligned-Core No-Go
 
-**Date:** 2026-04-15  
-**Status:** exact Hermitian-core no-go after the positive-polar-section bridge  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+**Date:** 2026-04-15
+**Status:** exact Hermitian-core no-go after the positive-polar-section bridge
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_dm_neutrino_polar_aligned_core_nogo.py`
 
 ## Question

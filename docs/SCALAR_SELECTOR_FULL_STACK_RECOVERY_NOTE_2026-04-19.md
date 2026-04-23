@@ -28,13 +28,13 @@ package read is narrower:
   `Q = 2/3`, the physical Brannen-phase bridge behind `δ = 2/9`, and the
   separate scale item `v_0`;
 - the DM flagship lane is closed on the current package surface and on the
-  exact-target strict/native map by the later April 21 theorem stack;
+  exact-target native/source map by the later April 21 theorem stack;
 - the quark lane is materially sharpened by the added JTS / ISSR1 /
   shell-normalization work, but the authoritative package still keeps full
   quark closure bounded rather than promoted.
 
 Read this note as recovered route history and theorem inventory, not as the
-current front-door status statement.
+current public status statement.
 
 ---
 
@@ -165,7 +165,7 @@ charged-lepton carrier actually obeys.
 **Reviewer-bar status:** closed conditional on DPLE acceptance. Alternative
 routes (cycles 11/12/13) provide multi-observable corroboration. No named
 residue on A-BCC itself; the open source-side law sits downstream on the
-DM flagship gate, not on A-BCC.
+DM flagship lane, not on A-BCC.
 
 ### §1.4 Quark `a_u` (up-sector reduced amplitude `a_u = 0.7748865611`)
 

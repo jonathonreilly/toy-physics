@@ -1,6 +1,6 @@
 # Inputs And Qualifiers
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Purpose:** one canonical public note for the explicit inputs, derived
 constants, bridge-conditioned rows, bounded rows, and live gates on the
 current paper surface.
@@ -142,14 +142,14 @@ theorem core.
 
 The remaining flagship bridge package is:
 
-- charged-lepton Koide review/support package
+- charged-lepton Koide support package
 
 That is the current missing flagship prediction bridge. It does not erase the
 rest of the retained or bounded prediction surface.
 
 ## 8. Reading rule
 
-When a reviewer asks “is this exact, derived, bounded, or bridge-conditioned?”
+When someone asks “is this exact, derived, bounded, or bridge-conditioned?”
 the answer should come from this note together with:
 
 - [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)

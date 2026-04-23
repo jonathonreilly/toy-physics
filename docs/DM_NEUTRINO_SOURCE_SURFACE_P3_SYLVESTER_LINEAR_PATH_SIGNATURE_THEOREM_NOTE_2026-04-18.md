@@ -1,15 +1,15 @@
 # P3 Sylvester Linear-Path Signature Theorem on the DM Neutrino Source Surface
 
-**Date:** 2026-04-18  
-**Status:** **RETAINED local theorem at the P3 observational pin**  
+**Date:** 2026-04-18
+**Status:** **RETAINED local theorem at the P3 observational pin**
 **Scope:** proves the pointwise signature continuation
 `signature(H_base + J_*) = signature(H_base) = (2, 0, 1)` along the linear
-Path-A segment from `H_base` to the retained P3 pin  
+Path-A segment from `H_base` to the retained P3 pin
 **Does not close:** the baseline-connected-component identification axiom
 `A-BCC`, the observational hierarchy pairing `σ_hier = (2, 1, 0)`, the
-chamber-wide source-branch selector, or the overall DM flagship gate  
-**Dedicated verifier:**  
-`scripts/frontier_dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_2026_04_18.py`  
+chamber-wide source-branch selector, or the overall DM flagship lane
+**Dedicated verifier:**
+`scripts/frontier_dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_2026_04_18.py`
 **Verifier result on land:** `PASS = 11`, `FAIL = 0`
 
 ## Summary
@@ -42,7 +42,7 @@ pointwise "imposed branch-choice rule" language at the retained P3 pin and
 replaces it with a retained local theorem plus one smaller named open input
 (`A-BCC`). The G1 PMNS-as-`f(H)` package remains below retained because
 `A-BCC` and the observational hierarchy pairing `σ_hier = (2, 1, 0)` are
-still open, and the overall DM flagship gate remains open because the
+still open, and the overall DM flagship lane remains open because the
 current-bank selector / mapping side is also still unresolved.
 
 ## Unit system and dimensional conventions
@@ -297,12 +297,12 @@ On `main`, this theorem should be used narrowly:
 3. The G1 PMNS-as-`f(H)` package remains **bounded**, not retained, because
    it still depends on `A-BCC` and the observational hierarchy pairing
    `σ_hier = (2, 1, 0)`.
-4. The overall DM flagship gate remains **open**, because even beyond the
+4. The overall DM flagship lane remains **open**, because even beyond the
    source-side P3 package the current-bank selector / mapping side is still
    unresolved on the live package surface.
 
 This is a strict refinement of the earlier imposed rule, not a closure of the
-DM flagship gate.
+DM flagship lane.
 
 ## Remaining open inputs
 

@@ -217,4 +217,4 @@ python3 scripts/frontier_koide_radian_bridge_numerical_verification.py          
 - Srednicki, *Quantum Field Theory* ch. 62-63
 - Retained: `YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18`
 - Retained companions: the April 21 Koide support package plus the April 22
-  A1/APS/Yukawa support notes on the canonical review surface
+  A1/APS/Yukawa support notes on the canonical package surface

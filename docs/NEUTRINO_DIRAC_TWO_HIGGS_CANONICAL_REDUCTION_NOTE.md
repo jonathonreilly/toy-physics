@@ -1,10 +1,10 @@
 # Neutrino Dirac Two-Higgs Canonical Reduction Theorem
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact reduction/counting theorem on the minimal surviving
-neutrino-side extension class  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+neutrino-side extension class
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_dirac_two_higgs_canonical_reduction.py`
 
 ## Question

@@ -1,10 +1,10 @@
 # DM Neutrino Post-Canonical Right-Frame Obstruction
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact current-stack obstruction theorem on intrinsic derivation of
-the post-canonical slot-supported bridge  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+the post-canonical slot-supported bridge
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_dm_neutrino_postcanonical_right_frame_obstruction.py`
 
 ## Question

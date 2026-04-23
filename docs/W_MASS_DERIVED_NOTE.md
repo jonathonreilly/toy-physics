@@ -2,9 +2,9 @@
 
 **Date:** 2026-04-18 (revised after review)
 **Status:** package-captured **bounded same-surface consistency probe** on the
-retained EW lane. Reviewer-facing comparison against PDG / CDF / ATLAS / CMS /
-LHCb pole measurements only; **not** a retained or manuscript-facing
-quantitative claim.
+retained EW lane. Comparison against PDG / CDF / ATLAS / CMS / LHCb pole
+measurements only; **not** a retained or manuscript-facing quantitative
+claim.
 **Primary runner:** `scripts/frontier_w_mass_prediction.py`
 **Upstream authorities:**
 [`YT_EW_COLOR_PROJECTION_THEOREM.md`](YT_EW_COLOR_PROJECTION_THEOREM.md),

@@ -1,10 +1,10 @@
 # DM Neutrino Post-Canonical Slot-Supported Support Class
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact support-class theorem after the canonical denominator lanes
-close negatively  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+close negatively
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_dm_neutrino_postcanonical_slot_support_class.py`
 
 ## Question

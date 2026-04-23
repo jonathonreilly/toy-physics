@@ -1,11 +1,11 @@
 # DM PMNS Affine Current-Coordinate Reduction Theorem
 
-**Date:** 2026-04-21  
-**Lane:** strict/native DM last-mile sharpening  
+**Date:** 2026-04-21
+**Lane:** native/source DM last-mile sharpening
 **Status:** exact affine-chart sharpening theorem; later same-day precursor to
 the closure theorem
 `DM_PMNS_ORDERED_CHAIN_GRADED_CURRENT_DELTA_CLOSURE_THEOREM_NOTE_2026-04-21.md`
-**Primary runner:**  
+**Primary runner:**
 `scripts/frontier_dm_pmns_affine_current_coordinate_reduction_2026_04_21.py`
 
 ---
@@ -19,7 +19,7 @@ one explicit sole-axiom nonzero-current law on the retained hw=1 response family
 ```
 
 What it did **not** yet settle, at this stage of the same-day theorem stack,
-was the physical strict/native PMNS last mile.
+was the physical native/source PMNS last mile.
 
 The reason is now exact on the retained affine Hermitian chart
 
@@ -48,7 +48,7 @@ So:
   still open.
 
 Since the physical PMNS target already lives on an exact local `2`-real source
-manifold on the fixed native `N_e` seed surface, this means the strict/native
+manifold on the fixed native `N_e` seed surface, this means the native/source
 DM last mile is now sharper than either of the older descriptions:
 
 - it is **not** a separate target-surface A-BCC residue,
@@ -139,7 +139,7 @@ The affine current formula above sharpens that further:
 - it is blind to the second.
 
 So the graph-first ordered-chain theorem is best read as a genuine **current
-activation** theorem, not as the end of the strict/native PMNS last mile.
+activation** theorem, not as the end of the native/source PMNS last mile.
 
 What remained open was not “some generic PMNS law” and not “whether any
 nonzero-current law exists.” Those are already narrowed away.
@@ -180,7 +180,7 @@ after current activation has already fixed q_+.
 >    real sole-axiom selector law is still
 >    required beyond current activation.
 >
-> Equivalently: the remaining strict/native DM last mile is the
+> Equivalently: the remaining native/source DM last mile is the
 > `delta / Im K_Z3[1,2]` law, not merely the existence of a nonzero-current
 > route.
 
@@ -215,7 +215,7 @@ QED.
 
 ## 5. What this changes in the open map
 
-Before this theorem, the strict/native DM remainder could still be phrased too
+Before this theorem, the native/source DM remainder could still be phrased too
 coarsely as:
 
 ```text
@@ -227,7 +227,7 @@ After this theorem, the sharper exact statement was:
 ```text
 the ordered-chain theorem closes current activation,
 but the current closes only q_+ on the physical affine chart;
-the remaining strict/native scalar is delta.
+the remaining native/source scalar is delta.
 ```
 
 This was a stronger and cleaner last-mile reduction than the older wording.

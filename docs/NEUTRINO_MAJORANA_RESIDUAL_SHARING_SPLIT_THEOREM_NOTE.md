@@ -1,10 +1,10 @@
 # Majorana Residual-Sharing Split Theorem
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact positive split theorem on the minimal symmetric
-residual-sharing lift  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+residual-sharing lift
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_majorana_residual_sharing_split_theorem.py`
 
 ## Question

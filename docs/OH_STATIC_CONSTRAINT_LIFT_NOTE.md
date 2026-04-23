@@ -1,7 +1,7 @@
 # Exact Local Static-Constraint Lift on the Current Bridge Surface
 
-**Date:** 2026-04-13  
-**Script:** `scripts/frontier_oh_static_constraint_lift.py`  
+**Date:** 2026-04-13
+**Script:** `scripts/frontier_oh_static_constraint_lift.py`
 **Status:** Exact local shell-to-`3+1` constraint lift on the current static conformal bridge surface
 
 ## Purpose
@@ -99,6 +99,6 @@ This note still does **not** close:
 After this note, the remaining gravity problem is narrower again:
 
 - the shell-to-`3+1` lift is no longer open on the current bridge surface
-- the live blocker is now the final pointwise Einstein/Regge interpretation of
+- the remaining blocker is now the final pointwise Einstein/Regge interpretation of
   that bridge closure, and then any broader extension beyond the current exact
   source classes

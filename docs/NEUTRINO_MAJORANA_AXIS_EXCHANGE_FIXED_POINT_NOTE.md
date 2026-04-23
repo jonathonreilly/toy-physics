@@ -1,10 +1,10 @@
 # Majorana Axis-Exchange Fixed-Point Theorem
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact local finite-point selector theorem on the admitted
-background-normalized Majorana block, conditional on axis-exchange covariance  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+background-normalized Majorana block, conditional on axis-exchange covariance
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_majorana_axis_exchange_fixed_point.py`
 
 ## Question
@@ -235,7 +235,7 @@ theorem.
 - the admitted background-normalized Majorana block now has an exact local
   self-dual point under the canonical normal-pairing axis exchange
 - the selected local point is `rho = 1`
-- the local finite-point selector is therefore no longer the live blocker
+- the local finite-point selector is therefore no longer the remaining blocker
 - the remaining blocker is the absolute staircase embedding and three-
   generation lift
 

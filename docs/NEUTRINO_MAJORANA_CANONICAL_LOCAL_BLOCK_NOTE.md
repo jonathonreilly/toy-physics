@@ -1,10 +1,10 @@
 # Majorana Canonical One-Generation Local Block Theorem
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact one-generation local normal-form theorem on the current
-neutrino lane; not an existence theorem  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+neutrino lane; not an existence theorem
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_majorana_canonical_local_block.py`
 
 ## Question

@@ -1,10 +1,10 @@
 # DM Neutrino Canonical Two-Higgs Slot No-Go
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact no-go theorem on the full admitted canonical two-Higgs
-right-Gram lane at exact source phase  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+right-Gram lane at exact source phase
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_dm_neutrino_canonical_two_higgs_slot_nogo.py`
 
 ## Question

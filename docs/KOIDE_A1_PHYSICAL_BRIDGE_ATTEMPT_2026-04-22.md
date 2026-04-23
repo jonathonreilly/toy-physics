@@ -4,7 +4,7 @@
 **References:**
 - `origin/review/scalar-selector-cycle1-theorems`: KOIDE_FROBENIUS_ISOTYPE_SPLIT_UNIQUENESS,
   KOIDE_KAPPA_BLOCK_TOTAL_FROBENIUS_MEASURE, KOIDE_Q_DELTA_CLOSURE_PACKAGE_README
-- current charged-lepton review/support packet plus the April 22 support runners
+- current charged-lepton support packet plus the April 22 support runners
 
 ## Problem statement
 

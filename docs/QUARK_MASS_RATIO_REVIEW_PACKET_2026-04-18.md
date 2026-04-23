@@ -2,7 +2,7 @@
 
 ## Scope
 
-This is the front door for the live quark mass-ratio support lane on
+This is the entry packet for the live quark mass-ratio support lane on
 current `main`.
 
 It bundles the live down-type, up-type, minimal full-solve, and bounded
@@ -182,7 +182,7 @@ Bridge/support context when needed:
 
 -  intake for the live quark mass-ratio package on `main`
 - one-place summary of what is numerically strong versus what is still bounded
-- validation front door for the current down-type and up-type replay runners
+- validation entry point for the current down-type and up-type replay runners
 
 ## Validation
 

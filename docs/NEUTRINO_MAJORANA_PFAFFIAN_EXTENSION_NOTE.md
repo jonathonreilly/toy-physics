@@ -1,10 +1,10 @@
 # Minimal Pfaffian `Delta L = 2` Extension
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact construction on a constructed microscopic extension; not yet
-axiom-forced  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+axiom-forced
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_majorana_pfaffian_extension.py`
 
 ## Question

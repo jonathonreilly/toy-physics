@@ -1,10 +1,10 @@
 # DM Neutrino Minimal `Z_3` Circulant CP Tool
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact structural tool identifying the minimal `Z_3`-covariant
-Dirac texture family that can support a nonzero leptogenesis CP kernel  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+Dirac texture family that can support a nonzero leptogenesis CP kernel
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_dm_neutrino_z3_circulant_cp_tool.py`
 
 ## Question

@@ -6,7 +6,10 @@
 
 ## 0. Scope
 
-Retained Cl(3)/Z³ lanes on `main` are documented and validated separately (each with its own runner). This note packages the **algebraic identities that couple those lanes** into a single runner so that reviewers can verify cross-lane numerical coherence in one place.
+Retained Cl(3)/Z³ lanes on `main` are documented and validated separately
+(each with its own runner). This note packages the **algebraic identities
+that couple those lanes** into a single runner so that readers can verify
+cross-lane numerical coherence in one place.
 
 The runner is organized into eight blocks, each touching a different retained lane:
 
@@ -26,7 +29,7 @@ The runner is organized into eight blocks, each touching a different retained la
 Each block's identities are already retained separately. The support runner:
 
 - makes cross-block identities explicit (e.g. `(E2/2)² = SELECTOR²/3 = Q/3 = 2/9` ties Koide chart to Brannen phase);
-- gives reviewers a single check-list entry for cross-lane coherence;
+- gives readers a single check-list entry for cross-lane coherence;
 - isolates any single identity that might silently drift in future updates before it propagates;
 - provides downstream notes a clean citation target ("see cross-lane consistency runner").
 

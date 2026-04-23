@@ -1,9 +1,9 @@
 # Majorana No-Stationary-Scale Theorem
 
-**Date:** 2026-04-15  
-**Status:** exact scale-selection no-go on the admitted Majorana source class  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+**Date:** 2026-04-15
+**Status:** exact scale-selection no-go on the admitted Majorana source class
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_majorana_no_stationary_scale_theorem.py`
 
 ## Question
@@ -40,7 +40,7 @@ On the current admitted source class:
 So the current admitted Pfaffian/Nambu family has **no intrinsic stationary
 scale** and **no internal staircase anchor**.
 
-The live blocker is therefore even sharper than the staircase-blindness note:
+The remaining blocker is therefore even sharper than the staircase-blindness note:
 
 > any full Majorana scale-setting law must introduce a genuinely new
 > non-homogeneous ingredient beyond the present admitted source class.
@@ -209,7 +209,7 @@ So the branch no longer needs to describe the blocker vaguely as
 
 Later branch work closes that wording partially: the branch now has both a
 local non-homogeneous comparator and a local background-normalized response
-curve. So the live blocker is narrower:
+curve. So the remaining blocker is narrower:
 
 > derive the finite-point selection / staircase-embedding law on that already-
 > normalized local curve, then lift it to the full three-generation
@@ -235,7 +235,7 @@ It is a theorem about the **current admitted source class** only.
   scale
 - the remaining exact class invariants are scale-invariant
 - on the earlier logarithmic family, no intrinsic stationary scale existed
-- later branch work narrows the live blocker further to finite-point
+- later branch work narrows the remaining blocker further to finite-point
   selection on the already-normalized local response curve
 
 **Cannot claim**

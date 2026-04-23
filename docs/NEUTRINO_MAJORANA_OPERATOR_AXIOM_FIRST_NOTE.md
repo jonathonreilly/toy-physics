@@ -1,9 +1,9 @@
 # Axiom-First Majorana Operator Classification
 
-**Date:** 2026-04-15  
-**Status:** exact operator-classification result; not a mass-spectrum closure  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+**Date:** 2026-04-15
+**Status:** exact operator-classification result; not a mass-spectrum closure
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Authority stack on this branch:** `MINIMAL_AXIOM_INVENTORY.md`,
 `UNIFIED_AXIOM_BOUNDARY_NOTE.md`, `ANOMALY_FORCES_TIME_THEOREM.md`,
 `frontier_right_handed_sector.py`

@@ -95,7 +95,7 @@ not as:
 
 - retained closure,
 - derived physical-bridge theorem,
-- or a front-door status change.
+- or a public status change.
 
 ## 5. Artifacts
 

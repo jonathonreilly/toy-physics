@@ -1,10 +1,10 @@
 # DM Neutrino Post-Canonical Extension Class
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact extension-class theorem after the full canonical two-Higgs
-source-phase route closes negatively  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+source-phase route closes negatively
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_dm_neutrino_postcanonical_extension_class.py`
 
 ## Question

@@ -184,7 +184,7 @@ Alt C   — PNS attack cascade: sigma-chain chamber + σ-hier + χ²=0 + T2K
 
 **Status:** closed at axiom level conditional on DPLE acceptance. Three
 recovered alternative routes corroborate. No named residue on A-BCC
-itself; open source-side law sits downstream on the DM flagship gate.
+itself; open source-side law sits downstream on the DM flagship lane.
 
 ---
 

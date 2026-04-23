@@ -1,10 +1,10 @@
 # PMNS Selector-Bank Nonrealization
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact current-bank theorem on the existing selector toolkit versus
-the remaining PMNS selector gap  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+the remaining PMNS selector gap
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_pmns_selector_bank_nonrealization.py`
 
 ## Question

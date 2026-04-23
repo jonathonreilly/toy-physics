@@ -20,7 +20,7 @@ exact closure now proved on the retained `3d+1` ambient is:
    the live DM target exactly.
 
 This is an exact Wilson-side retained-ambient closure/support packet on the
-still-open DM flagship gate.
+still-open DM flagship lane.
 
 It does **not** prove:
 

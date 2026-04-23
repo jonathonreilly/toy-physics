@@ -1,8 +1,8 @@
 # Axiom Reduction: Honest Minimal Assumption Inventory
 
 **Date:** 2026-04-12
-**Purpose:** Reviewer-facing document counting every assumption in the framework.
-A Nature reviewer will count. We must be honest about what is assumed vs derived.
+**Purpose:** document counting every assumption in the framework. The point is
+to be explicit about what is assumed versus what is derived.
 
 ---
 

@@ -24,7 +24,7 @@ retained atlas already supports. The "minimum-information selector" in
 remains atlas-flagged as "invented post-axiom dynamical selector law";
 this note does not override that flag.
 
-This note does not close the DM flagship gate; it strictly narrows the
+This note does not close the DM flagship lane; it strictly narrows the
 selector gap. The integrated closure is the downstream PMNS-as-f(H)
 closure.
 
@@ -287,11 +287,11 @@ Appropriate placement:
 
 - atlas entry under the selector family, beside the Schur-baseline partial
  closure note
-- DM flagship gate status row notes the strictly smaller gap structure
+- DM flagship lane status row notes the strictly smaller gap structure
 
 This note must not be used to promote any selector to theorem-grade. It
 is an obstruction/narrowed-gap result; the integrated closure of the DM
-flagship gate is the downstream PMNS-as-f(H) closure.
+flagship lane is the downstream PMNS-as-f(H) closure.
 
 ## Command
 
@@ -304,7 +304,7 @@ Current expected: `PASS = 26, FAIL = 0`.
 ## What this file must never say
 
 - that selector is closed
-- that the DM flagship gate is closed
+- that the DM flagship lane is closed
 - that any information-geometric selector has been promoted to
  theorem-grade
 - that the minimum-information law has been promoted from post-axiom

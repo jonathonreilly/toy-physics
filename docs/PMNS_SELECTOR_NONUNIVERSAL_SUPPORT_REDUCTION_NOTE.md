@@ -1,10 +1,10 @@
 # PMNS Selector Non-Universal Support Reduction
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact reduction theorem on the support locus of any future PMNS
-sector selector  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+sector selector
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_pmns_selector_nonuniversal_support_reduction.py`
 
 ## Question

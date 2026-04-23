@@ -18,7 +18,7 @@ support package. The honest read now is:
   stack, but still leaves open the physical/source-law bridge behind `Q = 2/3`
   and the physical Brannen-phase bridge behind `δ = 2/9`;
 - the DM flagship lane is closed on the current package surface and on the
-  exact-target strict/native map by the later April 21 theorem stack;
+  exact-target native/source map by the later April 21 theorem stack;
 - at the **meta-axiom layer**, with STRC derived from `1(+)5` channel
   completeness (`37c4f2bf`) and the Koide `kappa` gate now carried
   primarily by the spectrum/operator bridge plus block-total Frobenius,
@@ -61,7 +61,7 @@ scalar selections:
 |---|---|---|
 | **Koide `kappa`** | Charged-lepton cone normalization `kappa = 2` | **Support only on the current package surface.** Multiple exact internal routes isolate the Koide point, but the physical/source-law bridge behind `Q = 2/3` remains open. |
 | **Koide `theta`** | Doublet-phase offset `delta = 2/9` (Brannen–Zenczykowski) | **Support only on the current package surface.** The actual-route Berry and ambient APS stacks are mathematically strong, but the physical Brannen-phase bridge remains open. |
-| **DM A-BCC basin** | Interior-minimum linear-path Sylvester discriminator `F_4` | **Open as part of the broader DM flagship gate.** The source-side reductions are much sharper than earlier in the cycle, but the package still leaves named open blockers on the physical PMNS/selector side. |
+| **DM A-BCC basin** | Interior-minimum linear-path Sylvester discriminator `F_4` | **Open as part of the broader DM flagship lane.** The source-side reductions are much sharper than earlier in the cycle, but the package still leaves named open blockers on the physical PMNS/selector side. |
 | **Quark `a_u`** | Up-sector reduced amplitude `a_u = 0.7748865611` | **Closed.** Jon's JTS-affine-physical-carrier theorem (linear-algebra derivation: `Pert(p) = H_(1+5)` since `cos_d ≠ 0`) + ISSR1 Schur-rank-1 forcing + exact `1(+)5` channel completeness (which derives STRC, see §3) + RPSR NLO + shell-normalization independent corroboration + JTS physical-point closure (second route). No named residue. |
 
 §2 presents the four routes; §3 presents STRC; §4 records the

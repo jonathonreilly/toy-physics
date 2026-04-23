@@ -1,10 +1,10 @@
 # DM Neutrino CKM Texture Transfer No-Go
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact no-transfer theorem for the current CKM/NNI atlas tools on
-the universal Dirac bridge  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+the universal Dirac bridge
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_dm_neutrino_ckm_texture_transfer_nogo.py`
 
 ## Question

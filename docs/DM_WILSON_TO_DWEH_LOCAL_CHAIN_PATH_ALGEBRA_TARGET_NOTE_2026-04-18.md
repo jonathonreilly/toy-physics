@@ -1,9 +1,9 @@
 # DM Wilson-to-`dW_e^H` Local Chain Path-Algebra Target
 
-**Date:** 2026-04-18  
+**Date:** 2026-04-18
 **Status:** exact current-`main` target theorem sharpening the generic
 Wilson-side `9`-channel source-family target to one structured local algebra
-generator target upstream of the DM selector  
+generator target upstream of the DM selector
 **Script:** `scripts/frontier_dm_wilson_to_dweh_local_chain_path_algebra_target_2026_04_18.py`
 
 ## Question
@@ -205,7 +205,7 @@ This is a better target than:
 - a positive theorem that the descended Wilson first variation equals
   `dW_e^H`
 - the DM microscopic selector law
-- the DM flagship gate
+- the DM flagship lane
 
 ## Why this matters
 

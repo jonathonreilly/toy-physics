@@ -1,10 +1,10 @@
 # Majorana Endpoint-Exchange Midpoint Theorem
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact positive bridge theorem on the minimal non-homogeneous
-finite-register lift  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+finite-register lift
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_majorana_endpoint_exchange_midpoint_theorem.py`
 
 ## Question

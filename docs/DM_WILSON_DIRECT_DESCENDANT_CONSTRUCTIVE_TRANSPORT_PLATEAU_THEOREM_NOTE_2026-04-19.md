@@ -1,6 +1,6 @@
 # DM Wilson Direct-Descendant Constructive Transport Plateau Theorem
 
-**Date:** 2026-04-19  
+**Date:** 2026-04-19
 **Status:** exact current-branch nonuniqueness theorem for constructive-sign
 transport extremality. On the fixed native `N_e` seed surface, maximizing the
 favored constructive transport column inside the constructive sign chamber
@@ -20,7 +20,7 @@ eta_1 = 1.052220313052...
 So transport extremality alone cannot canonicalize the endpoint of the new
 canonical path law.
 
-**Primary runner:**  
+**Primary runner:**
 `scripts/frontier_dm_wilson_direct_descendant_constructive_transport_plateau_theorem_2026_04_19.py`
 (`PASS=18 FAIL=0`).
 
@@ -177,7 +177,7 @@ So the path theorem’s honest scope becomes even sharper:
 - a reviewer-grade derivation of the constructive endpoint from retained
   physics;
 - the microscopic value law on `L_e = Schur_{E_e}(D_-)`;
-- the final DM flagship gate.
+- the final DM flagship lane.
 
 ## Cross-references
 

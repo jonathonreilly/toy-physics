@@ -177,7 +177,7 @@ All theorems cited above are verified present on `main`:
 
 Audit trace. The scalar-selector open-imports table
 (`docs/SCALAR_SELECTOR_REMAINING_OPEN_IMPORTS_2026-04-20.md` row I3) and the
-reviewer package
+support package
 (`docs/SCALAR_SELECTOR_REVIEWER_PACKAGE_2026-04-20.md`, `HSEL` row) name the
 "retained two-Higgs canonical reduction" as the provenance citation for I3.
 On direct `git ls-tree main` check, the files
@@ -191,7 +191,7 @@ quantities, but it does **not** by itself fix the numeric values `(√6/3,
 retained parity-compatible observable-selector theorem on `main` named in §3.
 This note therefore upgrades the I3 citation from "cited as retained
 two-Higgs reduction" (imprecise) to the exact `main` chain in §3 (precise).
-The reviewer package should be amended accordingly when I3 is closed.
+The support package should be amended accordingly when I3 is closed.
 
 ## Reproduction
 

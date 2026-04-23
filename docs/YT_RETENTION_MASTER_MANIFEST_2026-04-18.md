@@ -58,7 +58,7 @@ reading order for reviewers entering from different directions.
 
 ### Scope discipline
 
-- This manifest is reviewer-facing navigation. It is **not** a
+- This manifest is public navigation. It is **not** a
   publication-surface file and does **not** alter the packaged claim
   envelope.
 - The retained YT-lane precision recorded below (`Δ_R = −3.77 % ± 0.45 %`

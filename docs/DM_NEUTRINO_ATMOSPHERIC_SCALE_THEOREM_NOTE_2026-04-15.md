@@ -1,10 +1,10 @@
 # DM Neutrino Atmospheric-Scale Theorem
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact positive atmospheric-scale theorem on the current diagonal
-benchmark  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+benchmark
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_dm_neutrino_atmospheric_scale_theorem.py`
 
 ## Question

@@ -1,7 +1,7 @@
 # DM Flagship Gate — Open-Gate Review
 
 **Date:** 2026-04-17 (2026-04-18 P3 Sylvester update applied)
-**Status:** **OPEN flagship gate.** On the live DM-neutrino source-oriented
+**Status:** **OPEN flagship lane.** On the live DM-neutrino source-oriented
 sheet the old pointwise P3 branch-choice rule is no longer merely imposed:
 the pointwise signature statement at the retained P3 pin is now carried by
 the retained local theorem
@@ -9,7 +9,7 @@ the retained local theorem
 That sharpens the old source-branch conditional into one retained local
 theorem plus one named remaining source-side input `A-BCC`. The live G1
 PMNS-as-`f(H)` package is therefore now best read as a **bounded** package on
-an otherwise open flagship gate: `A-BCC` remains open, the observational
+an otherwise open flagship lane: `A-BCC` remains open, the observational
 hierarchy pairing `σ_hier = (2, 1, 0)` is fixed at the pinned chamber point
 but not yet as a chamber-wide / all-basin theorem, the finer right-sensitive
 microscopic selector law remains open, and the residual carrier-side exact
@@ -28,7 +28,7 @@ historical sense except where superseded by the status block above.
 ## Scope
 
 This note is the single-document reviewer entry point for the integrated
-closure of the DM flagship gate's last-mile selector problem — the
+closure of the DM flagship lane's last-mile selector problem — the
 right-sensitive 2-real selector law on the active pair `(δ, q_+)` on the
 live DM-neutrino source-oriented sheet.
 
@@ -76,7 +76,7 @@ The story has four movements:
 
 ## Why this matters
 
-The DM flagship gate was the sole remaining live flagship gate on the
+The DM flagship lane was the sole remaining live flagship lane on the
 retained publication surface. Closing this gate lifts the DM flagship into
 the retained publication-grade package AND unlocks downstream observational
 lanes (PMNS angles, leptogenesis transport, flavor sector) that route
@@ -228,7 +228,7 @@ retained symmetry.
 ## The three tightening theorems
 
 After the initial obstruction tour + closure was laid down, adversarial
-review surfaced five issues. Three dedicated theorems close them.
+package surfaced five issues. Three dedicated theorems close them.
 
 ### Source-branch selector (branch-choice / conditional admissibility rule, NOT retained-theorem)
 → [DM_NEUTRINO_SOURCE_SURFACE_PERTURBATIVE_UNIQUENESS_THEOREM_NOTE_2026-04-17.md](./DM_NEUTRINO_SOURCE_SURFACE_PERTURBATIVE_UNIQUENESS_THEOREM_NOTE_2026-04-17.md)
@@ -385,7 +385,7 @@ point lie inside the NuFit 5.3 NO 3σ ranges (9/9 PASS).
 
 ### What is NOT claimed
 
-- **NOT flagship gate `CLOSED`.** The earlier `CLOSED` headline has been
+- **NOT flagship lane `CLOSED`.** The earlier `CLOSED` headline has been
   retracted. The honest label is `conditional / support`.
 - **NOT Schur-derived live-sheet curvature.** The Schur lemma is used
   strictly as a commutant-class conditional reference; the live-sheet
@@ -484,7 +484,7 @@ Expected: total PASS = 502, FAIL = 0.
 
 ## Position on the flagship paper surface (honest Option-A labels)
 
-The DM flagship gate is **NOT** declared CLOSED on the current branch tip.
+The DM flagship lane is **NOT** declared CLOSED on the current branch tip.
 Its honest current status is **conditional / support closure** via the
 observational-promotion (P3) lane under the imposed branch-choice
 admissibility rule. No ARXIV_DRAFT change is required for the flagship-row
@@ -511,7 +511,7 @@ current arxiv-level promotion):
 
 ## What this file must never say
 
-- that the DM flagship gate is CLOSED (it is conditional / support closure
+- that the DM flagship lane is CLOSED (it is conditional / support closure
   on this branch tip).
 - that the Schur result is a theorem-native promotion of live-sheet
   curvature (it is a commutant-class structural lemma only; the live-sheet

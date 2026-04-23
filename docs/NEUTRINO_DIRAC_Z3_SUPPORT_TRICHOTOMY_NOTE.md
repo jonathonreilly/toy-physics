@@ -1,10 +1,10 @@
 # Neutrino Dirac `Z_3` Support Trichotomy
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact support theorem on the retained Dirac-neutrino lane,
-conditioned on a single Higgs doublet with definite `Z_3` charge  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+conditioned on a single Higgs doublet with definite `Z_3` charge
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_dirac_z3_support_trichotomy.py`
 
 ## Question

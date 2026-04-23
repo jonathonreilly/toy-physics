@@ -1,10 +1,10 @@
 # Majorana Continuum-Bridge Transplant Obstruction
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact frontier boundary on the inverse-limit / continuum-bridge
-transplant route  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+transplant route
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_majorana_continuum_bridge_transplant_obstruction.py`
 
 ## Question

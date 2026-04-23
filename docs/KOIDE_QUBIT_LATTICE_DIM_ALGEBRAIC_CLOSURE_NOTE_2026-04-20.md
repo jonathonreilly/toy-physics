@@ -1,9 +1,9 @@
 # Koide Qubit–Lattice-Dimension Algebraic Closure
 
 **Date:** 2026-04-20
-**Lane:** Scalar-selector cycle 1 — reviewer-facing support on I1 (Koide
+**Lane:** Scalar-selector cycle 1 — public support on I1 (Koide
 `Q = 2/3`) and I2/P (Brannen phase `δ = 2/9`).
-**Status:** **Conditional closure — reviewer-facing.** Six independent
+**Status:** **Conditional closure — public.** Six independent
 retained paths at d = 3 converge at exact Q = 2/3 and δ = 2/9, but the
 closure rests on accepting the qubit-lattice-dim / anomaly-arithmetic
 identification (`Q_Koide = dim(Cl(3) spinor)/dim(Z³ lattice) = |Y(d_R)|`)
@@ -338,7 +338,7 @@ Q_spectrum = (1 + 1)/3 = 2/3.
 
 Hence `Q_spectrum = Q_struct = 2/3`, closing the spectrum–operator bridge.
 
-### 3.5 Summary: reviewer-facing I1 support
+### 3.5 Summary: public I1 support
 
 The chain:
 
@@ -403,7 +403,7 @@ canonical tautological form `A = dθ` in radians.
 
 **Radian-unit identification (candidate reading):** The Berry holonomy is
 inherently a radian angle (arc length on a unit-radius projective line). The
-reviewer-facing route reads the structural constant `|Im(b_F)|²` on that same
+public route reads the structural constant `|Im(b_F)|²` on that same
 line via the constant imaginary coupling in the Fourier parametrization and
 the selected-line phase variable `θ(m)`.
 
@@ -425,7 +425,7 @@ m_* = -1.160443440065,   δ(m_*) = 2/9.
 This `m_*` is the physical charged-lepton selected point. The uniqueness is
 confirmed numerically to 15-digit precision.
 
-### 4.5 Summary: reviewer-facing I2/P support
+### 4.5 Summary: public I2/P support
 
 The chain:
 
@@ -489,9 +489,9 @@ is the only dimension where Cl(d) spinor dim coincides with Z_d doublet dim.
 
 This note is intentionally weaker than a canonical closeout.
 
-- `Q = 2/3` is presented here as a **reviewer-facing candidate
+- `Q = 2/3` is presented here as a **public candidate
   retained-derivation** downstream of retained `I3 / A-select`.
-- `δ = 2/9` is presented here as a **dependent reviewer-facing support
+- `δ = 2/9` is presented here as a **dependent public support
   route** through `Q → CPC → δ`; it does not by itself compel the review
   branch to retire `I2 / P`.
 
@@ -507,7 +507,7 @@ The derivation at **retained d = 3** (from A0 axiom) rests entirely on:
 | Fourier bridge `Q = (1+2/κ)/d` | exact algebra | standard circulant identity |
 | `Im(b_F) = -E2/2` constant | algebraic theorem | G1 (DFT-invariance of T_M) |
 | `|Im(b_F)|² = Q/d` | algebraic theorem | from E2 and SELECTOR |
-| `SELECTOR² = Q_Koide` identification | **reviewer-facing structural bridge** | explained by qubit-lattice-dim |
+| `SELECTOR² = Q_Koide` identification | **public structural bridge** | explained by qubit-lattice-dim |
 | CPC: `d·δ(m_*) = Q` | conditional theorem | load-bearing step on the dependent `Q → CPC → δ` route |
 | FP2 uniqueness of m_* | numerical to 15 digits | analytic uniqueness argument available |
 
@@ -768,13 +768,13 @@ I2/P: open, but now with a stronger dependent Q -> CPC -> δ route
 
 ### 9.2 Reviewer package updates
 
-The reviewer package
+The support package
 `docs/CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md` should be updated
 to reflect the narrower landing:
 
-- evening reviewer-facing support for `Q = 2/3` via the qubit-lattice /
+- evening public support for `Q = 2/3` via the qubit-lattice /
   anomaly route
-- evening reviewer-facing dependent support for `δ = 2/9` via
+- evening public dependent support for `δ = 2/9` via
   `Q -> CPC -> δ`
 
 The strongest chain recorded here is:

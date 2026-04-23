@@ -44,5 +44,5 @@ In this table:
   import caveats still live in the qualifier column
 - `bounded companion` and `bounded secondary lane` rows remain package-captured
   and must carry their explicit qualifiers
-- `open flagship gate` rows are live status rows, not closed quantitative
+- `open flagship lane` rows are live status rows, not closed quantitative
   predictions

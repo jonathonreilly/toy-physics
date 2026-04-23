@@ -1,6 +1,6 @@
 # DM Wilson Direct-Descendant Local Observable-Coordinate Theorem
 
-**Date:** 2026-04-19  
+**Date:** 2026-04-19
 **Status:** exact local differential theorem on the open DM selector gate. On
 the fixed native `N_e` seed surface, the projected-source observable pack
 
@@ -11,7 +11,7 @@ So the remaining selector gap is **not** a hidden-coordinate problem. It is a
 missing value-law problem: current conditions impose one exact equality
 `eta_1 = 1` together with four open sign conditions, and that semantic package
 does not isolate a point.
-**Primary runner:**  
+**Primary runner:**
 `scripts/frontier_dm_wilson_direct_descendant_local_observable_coordinate_theorem_2026_04_19.py`
 (`PASS=10 FAIL=0`).
 
@@ -161,7 +161,7 @@ Together, these two results say:
 ## What this does not close
 
 - the actual value law selecting the physical point;
-- the final DM flagship gate;
+- the final DM flagship lane;
 - a global uniqueness theorem away from the local neighborhood of the
   constructive positive root.
 

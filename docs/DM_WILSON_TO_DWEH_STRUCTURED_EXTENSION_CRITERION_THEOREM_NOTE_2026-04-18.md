@@ -1,9 +1,9 @@
 # DM Wilson-to-`dW_e^H` Structured Extension Criterion Theorem
 
-**Date:** 2026-04-18  
+**Date:** 2026-04-18
 **Status:** exact current-stack theorem identifying the weakest honest test for
 when a generic Wilson Hermitian source family extends to the structured
-rank-`3` embedding class  
+rank-`3` embedding class
 **Script:** `scripts/frontier_dm_wilson_to_dweh_structured_extension_criterion_theorem_2026_04_18.py`
 
 ## Question
@@ -245,7 +245,7 @@ or
 - a proof that the current Wilson bank satisfies the extension criterion
 - a positive theorem that `dW_W o Phi_chain = dW_e^H`
 - the DM microscopic selector law
-- the DM flagship gate
+- the DM flagship lane
 
 ## Why this matters
 

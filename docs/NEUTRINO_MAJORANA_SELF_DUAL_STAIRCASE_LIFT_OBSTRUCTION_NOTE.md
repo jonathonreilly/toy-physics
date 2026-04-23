@@ -1,9 +1,9 @@
 # Majorana Self-Dual Staircase-Lift Obstruction Theorem
 
-**Date:** 2026-04-15  
-**Status:** exact frontier boundary after the local self-dual selector theorem  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+**Date:** 2026-04-15
+**Status:** exact frontier boundary after the local self-dual selector theorem
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_majorana_self_dual_staircase_lift_obstruction.py`
 
 ## Question
@@ -51,7 +51,7 @@ positive rescaling:
 So the exact selected local point does **not** by itself lift to an absolute
 staircase anchor on the present stack.
 
-The live blocker sharpens again:
+The remaining blocker sharpens again:
 
 > full closure now requires a genuinely new non-homogeneous local-to-generation
 > bridge, or a new absolute-scale datum, beyond the current exact stack

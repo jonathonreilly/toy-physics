@@ -32,7 +32,7 @@ The three `q_H ∈ {0, ±1}` branches give identical `Y_e Y_e†` on `L_L`
 axes, hence identical `U_e = I`, hence identical `|U_PMNS|`; the choice
 `q_H = 0` is a right-basis relabeling that PMNS does not see.
 
-The DM flagship gate status on the current branch tip is therefore
+The DM flagship lane status on the current branch tip is therefore
 **open**, NOT `CLOSED`, and this note should be read as a bounded package on
 that open gate.
 
@@ -485,7 +485,7 @@ not explicitly constructed.
  `sin(delta_CP) = -0.987`, `delta_CP ~ -81 deg (= 279 deg)`.
 - The solar-gap `Dm^2_21`, absolute-mass scale, and Majorana phases
  remain atlas-open (different carriers than the Hermitian `H`).
-- The DM flagship gate overall status on the current branch tip is
+- The DM flagship lane overall status on the current branch tip is
  **conditional / support**, NOT `CLOSED`.
 
 ## Runner-verified content
@@ -543,7 +543,7 @@ This note **positively claims** (under the honest-label revision):
 This note **does not claim**:
 - unconditional retention of PMNS on the chamber (it is conditional on
  the three items flagged above);
-- that the DM flagship gate is `CLOSED` (it is conditional / support,
+- that the DM flagship lane is `CLOSED` (it is conditional / support,
  NOT closed; see the flagship closure review note);
 - closure of the solar-gap `Dm^2_21` (different carrier);
 - closure of the absolute neutrino mass scale (different carrier);
@@ -614,7 +614,7 @@ This note is a **conditional / support closure** on the publication surface:
 
 ## What this file must never say
 
-- that the DM flagship gate is `CLOSED` (it is conditional / support
+- that the DM flagship lane is `CLOSED` (it is conditional / support
  on the current branch tip; see the flagship closure review note);
 - that the Sylvester inertia-preservation selector is a retained
  theorem (it is an IMPOSED branch-choice admissibility rule; Sylvester

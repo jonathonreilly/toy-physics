@@ -1,9 +1,9 @@
 # Three-Generation `Z_3` Majorana Non-Activation Theorem
 
-**Date:** 2026-04-15  
-**Status:** exact non-activation theorem on the current retained stack  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+**Date:** 2026-04-15
+**Status:** exact non-activation theorem on the current retained stack
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_majorana_z3_nonactivation_theorem.py`
 
 ## Question

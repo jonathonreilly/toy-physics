@@ -124,12 +124,12 @@ is upgraded to derived-theorem status.
 
 Current state (Scenario A):
 
-- reviewer-facing: support/conditional packet, not full closure
+- public: support/conditional packet, not full closure
 - meta-axiom layer: `DIM-UNIQ + STRC`
 
 If the bimodule ray-saturation theorem is proven:
 
-- reviewer-facing: still requires the separate per-lane object derivations
+- public: still requires the separate per-lane object derivations
 - meta-axiom layer: tighter than `DIM-UNIQ + STRC`, because STRC is no longer
   carried separately as an observable principle
 

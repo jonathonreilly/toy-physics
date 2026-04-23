@@ -82,7 +82,7 @@ extremum is the RIGHT primitive to adopt. It's the cleanest axiom-native
 expression of A1 using retained CL3_SM_EMBEDDING quantum numbers.
 
 **Cost**: 1 new retained primitive.
-**Benefit**: would close A1 if the primitive is accepted on the review surface.
+**Benefit**: would close A1 if the primitive is accepted on the package surface.
 
 ### Route B: Import Koide-Nishiura quartic V(Φ)
 
@@ -139,7 +139,7 @@ retained CL3_SM_EMBEDDING quantum numbers.
 
 **If this primitive is accepted, it closes the A1 bridge directly.**
 Downstream Koide consequences would then need to be re-evaluated on the
-canonical review surface together with the still-open Brannen physical
+canonical package surface together with the still-open Brannen physical
 bridge and the separate lepton-scale support lane.
 
 ## Conclusion

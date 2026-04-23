@@ -1,10 +1,10 @@
 # Majorana Unique Source Slot Theorem
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact local-form theorem on the current neutrino lane; not yet an
-axiom-forced existence theorem  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+axiom-forced existence theorem
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_majorana_unique_source_slot.py`
 
 ## Question

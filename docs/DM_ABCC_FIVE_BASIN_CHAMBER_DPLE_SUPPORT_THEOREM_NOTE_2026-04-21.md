@@ -1,19 +1,19 @@
 # DM A-BCC Corrected Five-Basin Chamber-DPLE Support Theorem
 
-**Date:** 2026-04-21  
-**Lane:** Dark-matter A-BCC native chamber+DPLE route  
+**Date:** 2026-04-21
+**Lane:** Dark-matter A-BCC native chamber+DPLE route
 **Status:** SUPPORT THEOREM. The old chamber+DPLE route survives the
 five-basin correction: on the corrected retained chart
 `{Basin 1, Basin N, Basin P, Basin 2, Basin X}`, the active-chamber
 survivors are `{Basin 1, Basin 2, Basin X}`, Basin 2 fails the DPLE
 `F_4` selector outright, and the corrected composition
-`(C1) chamber ∩ (C2) F_4` still selects Basin 1 uniquely.  
-**Boundary:** This is **not** yet full axiom closure of the DM flagship gate.
+`(C1) chamber ∩ (C2) F_4` still selects Basin 1 uniquely.
+**Boundary:** This is **not** yet full axiom closure of the DM flagship lane.
 It sharpens the strongest current native A-BCC route, but it still works on
 the retained five-basin source chart rather than deriving that chart from
 `Cl(3)/Z^3` alone. It therefore does not supersede the review branch’s
-retained-measurement A-BCC closure grade.  
-**Primary runner:**  
+retained-measurement A-BCC closure grade.
+**Primary runner:**
 `scripts/frontier_dm_abcc_five_basin_chamber_dple_support_2026_04_21.py`
 
 ---
@@ -176,7 +176,7 @@ QED.
 
 ### 5.2 What it does not close
 
-- full axiom closure of the DM flagship gate;
+- full axiom closure of the DM flagship lane;
 - derivation of the five-basin source chart from `Cl(3)/Z^3` alone;
 - the finer right-sensitive microscopic selector law.
 
@@ -189,7 +189,7 @@ So the honest status is:
 
 ## 6. Review consequence
 
-This theorem does **not** change the branch’s review-surface headline, which
+This theorem does **not** change the branch’s package-surface headline, which
 already uses the retained-measurement A-BCC closure theorem as the operative
 closure grade. What it does change is the native-route map behind that review
 surface:

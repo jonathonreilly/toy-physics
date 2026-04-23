@@ -295,7 +295,7 @@ Sylvester signature-forcing (this cycle; algebraic, path-independent)
   └─→ C_neg endpoints require det=0 crossing on any path
   └─→ PNS → A-BCC
 
-  ⟹ A-BCC: J_phys ∈ C_base (det > 0) — DM flagship gate closes
+  ⟹ A-BCC: J_phys ∈ C_base (det > 0) — DM flagship lane closes
 ```
 
 **Observational inputs retained in the chain:**
@@ -332,7 +332,7 @@ A-BCC is fully closed within the retained measurement framework
 (Cl(3)/Z³ + NuFit + T2K). The derivation chain:
 
     T2K + NuFit + Cl(3)/Z³
-      → sigma-chain → PNS → A-BCC → DM flagship gate
+      → sigma-chain → PNS → A-BCC → DM flagship lane
 
 does not require any axiom beyond what was already retained. If the
 retained inputs are accepted, A-BCC is a theorem.
@@ -409,7 +409,7 @@ The A-BCC closure chain is complete:
     T2K + NuFit + Cl(3)/Z³
       → PNS (sigma-chain, this cycle)
       → A-BCC (Sylvester forcing, this cycle)
-      → DM flagship gate closes
+      → DM flagship lane closes
 
 **Status: CONDITIONAL THEOREM (sigma-chain). PASS=47 FAIL=0.**
 

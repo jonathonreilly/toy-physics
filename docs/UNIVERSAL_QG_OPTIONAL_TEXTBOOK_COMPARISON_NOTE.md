@@ -13,7 +13,7 @@ gauge-fixings, normalizations, and presentation conventions.
 
 This note may be used for:
 
-- reviewer-facing convention comparison;
+- public convention comparison;
 - manuscript appendix packaging;
 - notation / normalization crosswalks against alternate textbook packages.
 

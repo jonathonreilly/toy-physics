@@ -1,6 +1,6 @@
 # DM Neutrino Operator Selection Obstruction Note
 
-**Date:** 2026-04-14  
+**Date:** 2026-04-14
 **Branch:** `codex/dm-across-the-line`
 
 ---
@@ -15,7 +15,7 @@ post-EWSB surface is now addressed by
 [`docs/DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md`](/Users/jonBridger/Toy%20Physics-dm/docs/DM_NEUTRINO_DIRAC_BRIDGE_THEOREM_NOTE_2026-04-15.md).
 
 So this note remains useful as the obstruction audit, but it is no longer the
-final authority on the live blocker.
+final authority on the remaining blocker.
 
 The neutrino-Yukawa blocker is now sharper than "the scale is not derived."
 Before normalization, the branch still has not derived **which operator**

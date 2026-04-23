@@ -1,8 +1,8 @@
 # DM Leptogenesis PMNS/Mainline CP Bridge Boundary
 
-**Date:** 2026-04-16  
+**Date:** 2026-04-16
 **Status:** exact boundary theorem connecting the PMNS near-closing comparator
-to the mainline post-canonical leptogenesis CP package  
+to the mainline post-canonical leptogenesis CP package
 **Script:** `scripts/frontier_dm_leptogenesis_pmns_cp_bridge_boundary.py`
 
 ## Question
@@ -57,7 +57,7 @@ But it is **not yet** a constructive witness for the live mainline CP package,
 because the canonical near-closing PMNS sample does not land on the same CP
 sheet.
 
-## Meaning for the live blocker
+## Meaning for the remaining blocker
 
 The remaining bridge is now sharper.
 

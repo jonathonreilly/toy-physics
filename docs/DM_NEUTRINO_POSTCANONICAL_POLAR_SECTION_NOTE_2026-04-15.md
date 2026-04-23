@@ -1,10 +1,10 @@
 # DM Neutrino Post-Canonical Positive Polar Section
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact generic positive-section theorem on the intrinsic DM
-post-canonical bridge  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+post-canonical bridge
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_dm_neutrino_postcanonical_polar_section.py`
 
 ## Question

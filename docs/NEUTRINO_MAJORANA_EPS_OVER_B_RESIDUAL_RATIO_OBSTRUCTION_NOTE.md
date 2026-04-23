@@ -1,9 +1,9 @@
 # Majorana `eps/B` Residual-Ratio Obstruction
 
-**Date:** 2026-04-15  
-**Status:** exact blocker-sharpening theorem on the fixed staircase placement  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+**Date:** 2026-04-15
+**Status:** exact blocker-sharpening theorem on the fixed staircase placement
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_majorana_eps_over_b_residual_ratio_obstruction.py`
 
 ## Question

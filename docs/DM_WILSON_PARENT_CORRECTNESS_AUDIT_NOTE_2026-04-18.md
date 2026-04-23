@@ -1,8 +1,8 @@
 # DM Wilson Parent Correctness Audit Note
 
-**Date:** 2026-04-18  
+**Date:** 2026-04-18
 **Status:** exact repo audit of how far the current Wilson-parent story can be
-trusted for the DM Wilson-to-`dW_e^H` route  
+trusted for the DM Wilson-to-`dW_e^H` route
 **Script:** `scripts/frontier_dm_wilson_parent_correctness_audit_2026_04_18.py`
 
 ## Question
@@ -202,7 +202,7 @@ This audit does **not** kill the Wilson route. It sharpens it.
 
 There are now two honest positive continuations:
 
-1. **Effective-parent route.**  
+1. **Effective-parent route.**
    Derive an exact retained parent operator for the determinant-dressed
    effective action
 
@@ -211,7 +211,7 @@ There are now two honest positive continuations:
    or an equivalent one-clock retained transfer law. That would remove the
    parent-identity mismatch directly.
 
-2. **Direct-descendant route.**  
+2. **Direct-descendant route.**
    Bypass the global parent-identification issue and derive a Wilson Hermitian
    source family / `Psi` directly from the observable principle and the
    microscopic charged block, without assuming the stronger parent story
@@ -234,4 +234,4 @@ Those are the two routes that remain positive **and** audit-clean.
 - a positive Wilson-native derivation of `I_e / P_e`
 - a positive Wilson-to-`dW_e^H` descendant theorem
 - the right-sensitive DM selector law
-- the DM flagship gate
+- the DM flagship lane

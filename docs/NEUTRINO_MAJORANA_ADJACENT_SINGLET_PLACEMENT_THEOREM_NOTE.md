@@ -1,10 +1,10 @@
 # Majorana Adjacent Singlet-Placement Theorem
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact positive placement theorem on the minimal adjacent
-local-to-generation lift  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+local-to-generation lift
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_majorana_adjacent_singlet_placement_theorem.py`
 
 ## Question
@@ -144,7 +144,7 @@ This closes one real denominator-side gap:
 
 - the singlet/doublet placement no longer needs to remain a benchmark
 
-So the live blocker is no longer:
+So the remaining blocker is no longer:
 
 - absolute staircase anchor
 - singlet/doublet placement

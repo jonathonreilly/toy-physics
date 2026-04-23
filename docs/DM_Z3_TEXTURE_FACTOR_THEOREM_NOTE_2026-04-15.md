@@ -1,9 +1,9 @@
 # Exact `Z_3` Texture-Factor Theorem
 
-**Date:** 2026-04-15  
-**Status:** exact positive overlap theorem on the retained `Z_3` basis bridge  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+**Date:** 2026-04-15
+**Status:** exact positive overlap theorem on the retained `Z_3` basis bridge
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_dm_z3_texture_factor_theorem.py`
 
 ## Question

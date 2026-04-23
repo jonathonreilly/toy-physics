@@ -1,9 +1,9 @@
 # Current Atlas Charge-Two Primitive Non-Realization
 
-**Date:** 2026-04-15  
-**Status:** exact current-atlas boundary on the main-derived neutrino lane  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+**Date:** 2026-04-15
+**Status:** exact current-atlas boundary on the main-derived neutrino lane
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_majorana_current_atlas_nonrealization.py`
 
 ## Question

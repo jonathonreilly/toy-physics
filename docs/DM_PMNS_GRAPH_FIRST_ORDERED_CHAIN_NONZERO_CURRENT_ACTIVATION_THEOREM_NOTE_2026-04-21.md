@@ -1,18 +1,18 @@
 # DM PMNS Graph-First Ordered-Chain Nonzero-Current Activation Theorem
 
-**Date:** 2026-04-21  
-**Lane:** strict/native DM last-mile current activation  
+**Date:** 2026-04-21
+**Lane:** native/source DM last-mile current activation
 **Status:** exact positive current-activation theorem on the retained `hw=1`
 response family; historical precursor to the later same-day graded-current
 delta closure theorem on the physical affine/source family
-**Primary runner:**  
+**Primary runner:**
 `scripts/frontier_dm_pmns_graph_first_ordered_chain_nonzero_current_closure_2026_04_21.py`
 
 ---
 
 ## 0. Executive summary
 
-The strict/native DM map had already been reduced, on the reduced graph-first
+The native/source DM map had already been reduced, on the reduced graph-first
 carrier, to one final explicit current-activation subtarget:
 
 ```text
@@ -108,7 +108,7 @@ The note
 
 `DM_PMNS_NATIVE_CURRENT_LAST_MILE_REDUCTION_THEOREM_NOTE_2026-04-21.md`
 
-proved that, once the exact target surface is fixed, the remaining strict/native
+proved that, once the exact target surface is fixed, the remaining native/source
 DM burden is exactly:
 
 ```text

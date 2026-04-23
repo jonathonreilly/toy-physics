@@ -1,7 +1,7 @@
-# Gravity Reviewer Derivation Summary
+# Gravity Derivation Summary
 
-**Date:** 2026-04-15  
-**Scope:** reviewer-facing summary of the gravity ladder only  
+**Date:** 2026-04-15
+**Scope:** concise summary of the gravity ladder only
 **Boundary:** direct-universal gravity and weak/Gaussian continuum bridge on the chosen smooth realization, not stronger textbook geometric/action comparison beyond that level
 
 ## One-line verdict

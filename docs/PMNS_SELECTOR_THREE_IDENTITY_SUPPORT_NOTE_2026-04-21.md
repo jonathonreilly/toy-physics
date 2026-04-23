@@ -1,6 +1,6 @@
 # PMNS Selector Three-Identity Support Note
 
-**Date:** 2026-04-21  
+**Date:** 2026-04-21
 **Status:** Support proposal on the affine Hermitian PMNS chart. Not a retained
 closure theorem.
 
@@ -103,7 +103,7 @@ Three scientific gaps remain explicit:
    derivations.
 2. The uniqueness statement is based on a bounded multi-start search, not an
    analytic uniqueness theorem.
-3. The broader PMNS/DM flagship gate remains open on the current package
+3. The broader PMNS/DM flagship lane remains open on the current package
    surface; this proposal gives one compact candidate law on the current chart
    but does not settle the remaining selector-side or sheet-choice obligations.
 

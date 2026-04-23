@@ -7,7 +7,7 @@
 `scripts/frontier_three_generation_observable_theorem.py`,
 `scripts/frontier_generation_axiom_boundary.py`,
 `scripts/frontier_anomaly_forces_time.py`
-**Authority role:** canonical reviewer-facing support note for the
+**Authority role:** canonical public support note for the
 three-generation / chirality boundary on the current package surface
 
 ## Safe statement
@@ -24,7 +24,7 @@ The framework's retained matter claim is:
   only in the full framework through anomaly-forced time and the resulting
   one-generation right-handed completion
 
-This is the safe reviewer-facing boundary for the current paper.
+This is the safe public boundary for the current paper.
 
 ## What the framework is and is not claiming
 
@@ -54,7 +54,7 @@ This is the safe reviewer-facing boundary for the current paper.
 4. A full flavor-hierarchy or mass-spectrum closure from the generation note
    alone.
 
-## Reviewer-facing interpretation
+## Interpretation
 
 The clean response to the usual rooting / Nielsen-Ninomiya objection is:
 

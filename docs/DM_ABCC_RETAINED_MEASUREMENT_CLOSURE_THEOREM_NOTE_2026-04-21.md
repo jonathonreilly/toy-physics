@@ -1,7 +1,7 @@
 # DM A-BCC Retained Measurement Closure Theorem
 
-**Date:** 2026-04-21  
-**Lane:** Dark-matter PMNS branch choice / A-BCC basin selection  
+**Date:** 2026-04-21
+**Lane:** Dark-matter PMNS branch choice / A-BCC basin selection
 **Status:** RETAINED-MEASUREMENT CLOSURE ON THE CURRENT PACKAGE SURFACE. On
 the retained measurement framework already carried in the package, the
 physical basin choice is no longer open: the sigma-chain fixes `J_phys = Basin 1`, the retained P3
@@ -14,8 +14,8 @@ point; the later same-day selector/current notes close that residual.
 **Boundary:** This is **not** an axiom-native derivation of A-BCC from
 `Cl(3)/Z^3` alone. The five-route assumptions audit still rules out a pure
 algebraic sign closure, so the stricter axiom-native version remains outside
-the current closure grade.  
-**Primary runner:**  
+the current closure grade.
+**Primary runner:**
 `scripts/frontier_dm_abcc_retained_measurement_closure_2026_04_21.py`
 
 ---
@@ -49,7 +49,7 @@ So on the retained measurement framework:
   + Sylvester signature-forcing
   => A-BCC.
 
-The current-package consequence is immediate: the DM flagship gate is no
+The current-package consequence is immediate: the DM flagship lane is no
 longer blocked by branch choice. At this stage of the April 21 stack, the
 only remaining current-package burden was the finer right-sensitive microscopic
 selector law; that burden is later closed by the shifted same-law packet
@@ -88,7 +88,7 @@ of A-BCC from `Cl(3)/Z^3` alone is still ruled out.
 
 ### Proof
 
-**Step 1: active-chamber completeness.**  
+**Step 1: active-chamber completeness.**
 The retained chamber-completeness theorem fixes the active-chamber
 `chi^2 = 0` chart exactly as
 
@@ -96,7 +96,7 @@ The retained chamber-completeness theorem fixes the active-chamber
 
 No other active-chamber PMNS-compatible basin survives on that chart.
 
-**Step 2: sigma-chain collapse.**  
+**Step 2: sigma-chain collapse.**
 The retained parity reduction, exact chamber upper-octant law, and
 coefficient-free source-cubic selector imply:
 
@@ -109,7 +109,7 @@ Hence the physical source is
 
     J_phys = J_{Basin 1}.
 
-**Step 3: physical-path PMNS Non-Singularity.**  
+**Step 3: physical-path PMNS Non-Singularity.**
 For Basin 1 the retained P3 Sylvester theorem computes
 
     min_{t in [0,1]} det(H_base + t J_1) = 0.878... > 0.
@@ -121,7 +121,7 @@ So the physical path is nonsingular:
 This is PMNS Non-Singularity, now as a derived property of the physical path
 rather than as a residual axiom.
 
-**Step 4: endpoint chamber identification.**  
+**Step 4: endpoint chamber identification.**
 The PMNS Non-Singularity theorem gives the linear-path implication
 
     PNS => endpoint in C_base.
@@ -162,7 +162,7 @@ current-package blocker.
 
 ## 4. Review-surface consequence
 
-At the point of this theorem alone, the DM flagship gate is no longer:
+At the point of this theorem alone, the DM flagship lane is no longer:
 
     A-BCC  +  microscopic selector law.
 

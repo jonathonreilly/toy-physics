@@ -281,7 +281,7 @@ object:
  info-geometric / cubic-variational / parity-split obstructions, the
  parity-mixing F1 candidate, and the transport chamber-blindness
  theorem.
-- This note does not close the DM flagship gate on its own. It names
+- This note does not close the DM flagship lane on its own. It names
  the three promotion lanes (P1, P2, P3) that can close it. The
  integrated closure is the downstream PMNS-as-f(H) closure, which
  realises P3 explicitly.
@@ -301,7 +301,7 @@ Current expected: `PASS = 36, FAIL = 0`.
 ## What this file must never say
 
 - that selector is closed;
-- that the DM flagship gate is closed;
+- that the DM flagship lane is closed;
 - that PMNS angles are on the retained atlas as `f(H(m, delta, q_+))`
  (they are not — PMNS closure is atlas-open);
 - that the pure `H`-reader invariants have an atlas-retained

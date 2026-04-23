@@ -1,9 +1,9 @@
 # DM Wilson-to-`dW_e^H` Adjacent-Chain Normal-Form Theorem
 
-**Date:** 2026-04-18  
+**Date:** 2026-04-18
 **Status:** exact current-stack theorem clarifying that the adjacent-chain
 Wilson route is a normal form inside the structured rank-`3` embedding class,
-not an extra ad hoc restriction  
+not an extra ad hoc restriction
 **Script:** `scripts/frontier_dm_wilson_to_dweh_adjacent_chain_normal_form_theorem_2026_04_18.py`
 
 ## Question
@@ -223,7 +223,7 @@ That is the real place where over-specificity could still enter.
   rank-`3` embedding
 - a positive theorem that `dW_W o Phi_chain = dW_e^H`
 - the DM microscopic selector law
-- the DM flagship gate
+- the DM flagship lane
 
 ## Why this matters
 

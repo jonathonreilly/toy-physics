@@ -1,10 +1,10 @@
 # Majorana Nambu Quadratic Comparator
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact local non-homogeneous comparator theorem on the admitted
-Nambu family  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+Nambu family
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_majorana_nambu_quadratic_comparator.py`
 
 ## Question

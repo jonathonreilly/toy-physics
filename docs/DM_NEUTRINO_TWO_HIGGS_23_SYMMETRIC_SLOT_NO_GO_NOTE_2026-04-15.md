@@ -1,10 +1,10 @@
 # DM Neutrino Two-Higgs `2↔3`-Symmetric Slot No-Go
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact no-go theorem on the simplest `2↔3`-symmetric canonical
-two-Higgs sublane  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+two-Higgs sublane
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_dm_neutrino_two_higgs_23_symmetric_slot_nogo.py`
 
 ## Question

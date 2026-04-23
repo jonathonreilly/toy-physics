@@ -1,8 +1,8 @@
 # DM Wilson-to-`dW_e^H` Hermitian Source-Family Current-Bank Boundary
 
-**Date:** 2026-04-18  
+**Date:** 2026-04-18
 **Status:** current-`main` boundary note on whether the weakest Wilson-side
-source-family target is already realized under another name  
+source-family target is already realized under another name
 **Script:** `scripts/frontier_dm_wilson_to_dweh_hermitian_source_family_current_bank_boundary_2026_04_18.py`
 
 ## Question
@@ -122,7 +122,7 @@ The honest next step is positive construction of:
 - a positive Wilson-to-`dW_e^H` theorem;
 - a positive Wilson-side Hermitian source family;
 - the DM selector law;
-- the DM flagship gate.
+- the DM flagship lane.
 
 ## Why this matters
 

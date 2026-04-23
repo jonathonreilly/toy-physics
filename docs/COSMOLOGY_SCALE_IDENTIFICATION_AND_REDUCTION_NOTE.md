@@ -1,6 +1,6 @@
 # Cosmology Scale Identification and Reduction
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** bounded/conditional cosmology-lane synthesis on `main`
 
 ## Verdict
@@ -14,7 +14,7 @@ On the current post-closure gravity/QG stack:
 2. the natural scale is the de Sitter curvature radius
    `R_Lambda = sqrt(3/Lambda) = c/H_inf`, not the present-day Hubble radius
    `c/H_0`;
-3. therefore the remaining live blocker for promoting the cosmology package is
+3. therefore the remaining remaining blocker for promoting the cosmology package is
    not a second independent `Lambda` or `w` theorem, but the matter-content
    bridge behind present-day `Omega_Lambda`.
 

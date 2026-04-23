@@ -166,5 +166,5 @@ A-BCC. The source-side physical-sheet identification remains the single
 open input on the DM flagship.
 
 The this cycle synthesis description "DM A-BCC basin: axiom cost 1 -> 0"
-refers to the F4 scalar-selector axiom only. The DM flagship gate remains
+refers to the F4 scalar-selector axiom only. The DM flagship lane remains
 open pending A-BCC closure.

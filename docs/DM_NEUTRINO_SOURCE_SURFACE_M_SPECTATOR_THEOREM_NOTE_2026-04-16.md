@@ -1,9 +1,9 @@
 # DM Neutrino Source-Surface `m`-Spectator Theorem
 
-**Date:** 2026-04-16  
-**Status:** exact blocker-reduction theorem on the live source-oriented sheet  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+**Date:** 2026-04-16
+**Status:** exact blocker-reduction theorem on the live source-oriented sheet
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_dm_neutrino_source_surface_m_spectator_theorem.py`
 
 ## Question

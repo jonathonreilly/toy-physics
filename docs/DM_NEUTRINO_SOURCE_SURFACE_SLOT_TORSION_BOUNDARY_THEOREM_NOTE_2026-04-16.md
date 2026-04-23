@@ -1,9 +1,9 @@
 # DM Neutrino Source-Surface Slot-Torsion Boundary Theorem
 
-**Date:** 2026-04-16  
-**Status:** exact atlas-supported boundary theorem on the live source-oriented sheet  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+**Date:** 2026-04-16
+**Status:** exact atlas-supported boundary theorem on the live source-oriented sheet
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_dm_neutrino_source_surface_slot_torsion_boundary_theorem.py`
 
 ## Question

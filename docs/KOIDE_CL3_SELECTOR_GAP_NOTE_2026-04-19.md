@@ -127,7 +127,7 @@ The one-clock semigroup (gamma_orbit note) provides a positive witness: `H_* = H
 
 ## main
 
-This note sharpens the charged-lepton review/support stack already on `main`.
+This note sharpens the charged-lepton support stack already on `main`.
 It does **not** upgrade the authoritative bounded charged-lepton package, and it
 does **not** promote the exploratory `Q = 2/3`-surface or
 scale-selector near-miss probes into 

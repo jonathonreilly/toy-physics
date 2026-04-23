@@ -1,10 +1,10 @@
 # Majorana Local Pfaffian Uniqueness
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact one-generation local bilinear uniqueness theorem on the
-main-derived neutrino lane  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+main-derived neutrino lane
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_majorana_local_pfaffian_uniqueness.py`
 
 ## Question

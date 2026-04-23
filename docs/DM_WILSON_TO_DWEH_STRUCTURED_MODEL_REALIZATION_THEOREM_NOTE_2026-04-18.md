@@ -1,9 +1,9 @@
 # DM Wilson-to-`dW_e^H` Structured Model Realization Theorem
 
-**Date:** 2026-04-18  
+**Date:** 2026-04-18
 **Status:** exact constructive theorem showing the structured Wilson response
 class is positively realizable for arbitrary Hermitian target `H_e`, even
-though the Wilson-native bridge from the current bank remains open  
+though the Wilson-native bridge from the current bank remains open
 **Script:** `scripts/frontier_dm_wilson_to_dweh_structured_model_realization_theorem_2026_04_18.py`
 
 ## Question
@@ -201,7 +201,7 @@ The answer is yes.
   bank
 - a positive theorem that the current Wilson parent realizes this model class
 - the right-sensitive selector law on `dW_e^H`
-- the DM flagship gate
+- the DM flagship lane
 
 ## Why this matters
 

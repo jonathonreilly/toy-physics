@@ -1,10 +1,10 @@
 # Neutrino Mass Reduction To The Dirac Lane
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact retained-stack reduction theorem, conditional on the admitted
-Higgs / CW electroweak-scalar lane; not a full neutrino-mass closure  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+Higgs / CW electroweak-scalar lane; not a full neutrino-mass closure
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_mass_reduction_to_dirac.py`
 
 ## Question

@@ -1,7 +1,7 @@
 # Chiral Expanded Core Card
 
 **Date:** 2026-04-10  
-**Scope:** replace the old 10-row closure card as the primary front-door card
+**Scope:** replace the old 10-row closure card as the primary public card
 with an expanded core card that catches both operating-point health and the
 structural bottlenecks that keep surfacing later.
 
@@ -93,7 +93,7 @@ problem.
 The best current core card is not “10 rows plus some moonshots later.”
 
 It is:
-- **a 17-row front-door card**
+- **a 17-row public card**
 - with the old closure rows kept
 - and the seven structural bottleneck rows promoted into the core path
 

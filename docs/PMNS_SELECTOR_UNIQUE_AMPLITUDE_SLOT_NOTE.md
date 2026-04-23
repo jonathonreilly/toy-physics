@@ -1,10 +1,10 @@
 # PMNS Selector Unique Amplitude Slot
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact reduced-form theorem on the microscopic bridge amplitude
-slot  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+slot
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_pmns_selector_unique_amplitude_slot.py`
 
 ## Question

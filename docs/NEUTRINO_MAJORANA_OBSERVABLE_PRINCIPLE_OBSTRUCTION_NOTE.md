@@ -1,9 +1,9 @@
 # Majorana Observable-Principle Obstruction
 
-**Date:** 2026-04-15  
-**Status:** exact current-atlas obstruction on the main-derived neutrino lane  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+**Date:** 2026-04-15
+**Status:** exact current-atlas obstruction on the main-derived neutrino lane
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_majorana_observable_principle_obstruction.py`
 
 ## Question

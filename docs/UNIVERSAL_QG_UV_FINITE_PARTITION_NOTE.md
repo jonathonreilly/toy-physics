@@ -66,7 +66,7 @@ Likewise the connected two-point response is exactly
 which is the inverse of the same universal GR operator controlling the local
 quadratic theory.
 
-This is precisely the reviewer-facing point:
+This is precisely the public point:
 
 > the discrete partition structure is finite, and its semiclassical/stationary
 > sector reproduces the project’s own discrete `3+1` GR closure.

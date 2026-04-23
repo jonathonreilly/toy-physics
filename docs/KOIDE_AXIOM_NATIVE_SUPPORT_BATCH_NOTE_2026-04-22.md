@@ -75,7 +75,7 @@ Use these scripts as:
 
 - atlas tools for future Koide bridge work;
 - executable support when reviewing the charged-lepton lane;
-- candidate-bridge diagnostics, not as authority for front-door closure claims.
+- candidate-bridge diagnostics, not as authority for public closure claims.
 
 ## Main artifacts
 

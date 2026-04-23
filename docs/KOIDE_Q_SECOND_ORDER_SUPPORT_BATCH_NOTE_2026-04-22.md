@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-22
 **Scope:** Charged-lepton Koide `Q = 2/3` support additions from the
-second-order readout / reduced-carrier review packet.
+second-order readout / reduced-carrier support packet.
 **Status:** Support batch only. This note does **not** promote `Q` closure.
 
 ## What this batch adds
@@ -20,7 +20,7 @@ lane:
   carrier;
 - a no-hidden-source audit showing that any nonzero reduced source simply
   re-parameterizes the selector family;
-- a reviewer stress-test harness consolidating the second-order route.
+- a dedicated stress-test harness consolidating the second-order route.
 
 The practical scientific gain is a sharper statement of the remaining open
 step on the `Q` lane.
@@ -83,7 +83,7 @@ functional” posture.
 ## Bottom line
 
 This batch should be read as a **second-order support expansion** of the Koide
-review package.
+support package.
 
 It strengthens the `Q` lane by turning the remaining gap into one named
 physical-identification problem, but it does not change the current package

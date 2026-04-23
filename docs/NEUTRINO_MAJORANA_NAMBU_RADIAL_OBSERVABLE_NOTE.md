@@ -1,9 +1,9 @@
 # Majorana Nambu Radial Observable
 
-**Date:** 2026-04-15  
-**Status:** exact local bosonic-observable theorem on the admitted Nambu family  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+**Date:** 2026-04-15
+**Status:** exact local bosonic-observable theorem on the admitted Nambu family
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_majorana_nambu_radial_observable.py`
 
 ## Question
@@ -175,7 +175,7 @@ In fact it clarifies the remaining blocker:
 
 on the pure-pairing ray this observable is still only `log(mu)`. Later branch
 work adds the exact local quadratic comparator `Q_2 = ||s||^2` and the exact
-background-normalized local response curve, so the live blocker is no longer
+background-normalized local response curve, so the remaining blocker is no longer
 comparator/background existence. It is finite-point selection on that
 already-normalized curve.
 

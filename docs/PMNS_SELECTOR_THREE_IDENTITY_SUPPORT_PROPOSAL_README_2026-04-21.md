@@ -1,8 +1,8 @@
 # PMNS Selector Three-Identity Support Proposal
 
-**Date:** 2026-04-21  
-**Status:** Reviewer-facing support proposal on the current affine Hermitian
-chart. This is not a retained closure claim.
+**Date:** 2026-04-21
+**Status:** support proposal on the current affine Hermitian chart. This is
+not a retained closure claim.
 
 ## What this package does
 
@@ -57,7 +57,7 @@ Open scientific obligations remain:
 
 ## Why it is still worth keeping
 
-Even with those gaps, the proposal is useful reviewer-facing support:
+Even with those gaps, the proposal is still useful support:
 
 - it gives a very small candidate law on the existing affine Hermitian chart;
 - it ties two of the proposed equations directly to the already-supported Koide
@@ -75,10 +75,10 @@ interesting candidate point-selection law
 
 ## Artifacts
 
-- [PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_NOTE_2026-04-21.md](/Users/jonreilly/Projects/Physics/.claude/worktrees/charming-stonebraker-7078d0/docs/PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_NOTE_2026-04-21.md)
-- [frontier_pmns_selector_three_identity_support_2026_04_21.py](/Users/jonreilly/Projects/Physics/.claude/worktrees/charming-stonebraker-7078d0/scripts/frontier_pmns_selector_three_identity_support_2026_04_21.py)
+- [PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_NOTE_2026-04-21.md](/Users/jonreilly/Projects/Physics/docs/PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_NOTE_2026-04-21.md)
+- [frontier_pmns_selector_three_identity_support_2026_04_21.py](/Users/jonreilly/Projects/Physics/scripts/frontier_pmns_selector_three_identity_support_2026_04_21.py)
 
-## Review instructions
+## Validation instructions
 
 1. Read the note for the exact retained-vs-proposed boundary.
 2. Run:
@@ -95,5 +95,5 @@ PYTHONPATH=scripts python3 scripts/frontier_pmns_selector_three_identity_support
 
 ## Bottom line
 
-This is a clean support proposal worth retaining in the reviewer package while
-the remaining PMNS closure obligations are worked in parallel.
+This is a clean support proposal worth keeping in the PMNS support package
+while the remaining closure obligations are worked in parallel.

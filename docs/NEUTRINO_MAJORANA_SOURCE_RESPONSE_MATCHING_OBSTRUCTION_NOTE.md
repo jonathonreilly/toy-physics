@@ -1,9 +1,9 @@
 # Majorana Source-Response Matching Obstruction
 
-**Date:** 2026-04-15  
-**Status:** exact frontier boundary on the current source-response matching class  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+**Date:** 2026-04-15
+**Status:** exact frontier boundary on the current source-response matching class
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_majorana_source_response_matching_obstruction.py`
 
 ## Question
@@ -19,7 +19,7 @@ scalar-datum routes:
 - not "build a cleverer finite algebraic bridge"
 - but rather:
 
-> equate the exact local self-dual values  
+> equate the exact local self-dual values
 > `W_rel = (1/2) log 2`, `Q_rel = 1`
 > to exact generation-side pairing observables and solve for the absolute
 > staircase scale

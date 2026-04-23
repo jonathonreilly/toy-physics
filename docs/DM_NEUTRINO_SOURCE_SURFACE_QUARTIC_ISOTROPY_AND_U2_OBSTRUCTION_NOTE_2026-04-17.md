@@ -214,7 +214,7 @@ m-dependence.
 **Classification:** **CASE 3 — three new obstruction theorems + narrower gap.**
 
 **At this note's scope the selector gate is not closed.** The integrated
-closure of the DM flagship gate is the downstream PMNS-as-f(H) closure,
+closure of the DM flagship lane is the downstream PMNS-as-f(H) closure,
 which uses the present obstructions as retained inputs in the chain.
 
 ## What this note strictly NEWLY CLOSES
@@ -312,7 +312,7 @@ Current expected: `PASS = 18, FAIL = 0`.
 
 ## What this file must never say
 
-- that **this note** closes the selector gate or the DM flagship gate
+- that **this note** closes the selector gate or the DM flagship lane
   (it does not; the integrated closure is the downstream PMNS-as-f(H)
   closure, which uses these obstructions as retained inputs)
 - that F1 is the uniquely axiom-forced parity-mixing functional

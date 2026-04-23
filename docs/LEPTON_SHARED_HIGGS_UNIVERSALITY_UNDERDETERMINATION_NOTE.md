@@ -1,10 +1,10 @@
 # Lepton Shared-Higgs Universality Underdetermination
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact current-stack theorem on shared-Higgs universality versus
-non-universality on the lepton Yukawa lanes  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+non-universality on the lepton Yukawa lanes
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_lepton_shared_higgs_universality_underdetermination.py`
 
 ## Question

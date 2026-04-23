@@ -31,7 +31,7 @@ It is a curated boundary/support packet:
   charge-preserving lane
 - exact negative sole-axiom closeout for the current retained neutrino bank
 
-Reviewer-facing packet front doors:
+Primary package entry points:
 
 - [NEUTRINO_RETAINED_LANES_REVIEW_PACKET_2026-04-16.md](./NEUTRINO_RETAINED_LANES_REVIEW_PACKET_2026-04-16.md)
 - [NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md](./NEUTRINO_DIRAC_PMNS_RETAINED_LANE_PACKET_2026-04-16.md)

@@ -1,8 +1,8 @@
 # DM Wilson-to-`dW_e^H` Local Chain Path-Algebra Current-Bank Boundary
 
-**Date:** 2026-04-18  
+**Date:** 2026-04-18
 **Status:** exact current-stack nonrealization theorem for the sharpest local
-Wilson object on the DM route  
+Wilson object on the DM route
 **Script:** `scripts/frontier_dm_wilson_to_dweh_local_chain_path_algebra_current_bank_boundary_2026_04_18.py`
 
 ## Question
@@ -136,7 +136,7 @@ It is positive construction of:
 - a positive realization of `Phi_chain`
 - a positive theorem that `dW_W o Phi_chain = dW_e^H`
 - the DM microscopic selector law
-- the DM flagship gate
+- the DM flagship lane
 
 ## Why this matters
 

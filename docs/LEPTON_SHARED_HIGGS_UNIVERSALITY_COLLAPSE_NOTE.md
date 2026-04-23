@@ -1,10 +1,10 @@
 # Lepton Shared-Higgs Universality Collapse
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact extension-class theorem on the PMNS branch split under
-shared-Higgs universality  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+shared-Higgs universality
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_lepton_shared_higgs_universality_collapse.py`
 
 ## Question

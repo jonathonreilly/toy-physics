@@ -1,10 +1,10 @@
 # DM Wilson Direct Descendant Local Schur Source-Family Reduction Note
 
-**Date:** 2026-04-18  
+**Date:** 2026-04-18
 **Status:** exact conditional local Schur reduction note: once an invertible
 charged microscopic block `D_-` and charged support `E_e` are supplied, the
 descended determinant-response law reduces exactly to the charged Schur block
-`L_e`; this is not itself a Wilson-native derivation of that data  
+`L_e`; this is not itself a Wilson-native derivation of that data
 **Script:** `scripts/DM_WILSON_DIRECT_DESCENDANT_LOCAL_SCHUR_SOURCE_FAMILY_THEOREM_2026_04_18.py`
 
 ## Question
@@ -322,7 +322,7 @@ So the next positive task is now sharper:
 - a proof that the currently intended Wilson stack supplies the correct charge
   split and charged support data;
 - the right-sensitive selector law on the descended family;
-- the DM flagship gate.
+- the DM flagship lane.
 
 ## Why this matters
 

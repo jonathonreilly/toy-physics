@@ -23,13 +23,13 @@ The remaining untested class is Z_3-parity-MIXING functionals. This note:
 5. produces a new closure-candidate point for Physics-Validation
  cross-check.
 
-**This note does not close the DM flagship gate at its own scope.**
+**This note does not close the DM flagship lane at its own scope.**
 Nothing in this note is promoted to theorem-grade beyond the retained
 atlas. The parity-mixing route produces a **new candidate selector
 point** that is strictly inequivalent to every previously-tested
 candidate; cross-confirmation via the retained transport chain
 (`eta / eta_obs`) is chamber-blind. The integrated closure of the DM
-flagship gate is the downstream PMNS-as-f(H) closure.
+flagship lane is the downstream PMNS-as-f(H) closure.
 
 ## Survey of retained-atlas parity-mixing candidates
 
@@ -347,7 +347,7 @@ Current expected: `PASS = 27, FAIL = 0`.
 ## What this file must never say
 
 - that selector is closed
-- that the DM flagship gate is closed
+- that the DM flagship lane is closed
 - that the parity-mixing F1-min candidate is the physical `(delta_*, q_+*)`
  (it is a closure-candidate-pending-physics-cross-check, not a selector
  theorem)
@@ -363,4 +363,4 @@ cite a new source on the live retained/promoted surface. Until then, the
 safe read is: **parity-mixing class narrower-gap + closure-candidate-
 pending-physics-cross-check at this note's scope; five inequivalent
 candidate points are on record. The integrated closure of the DM
-flagship gate is the downstream PMNS-as-f(H) closure**.
+flagship lane is the downstream PMNS-as-f(H) closure**.

@@ -170,7 +170,7 @@ careful form:
 > are then read in the current axis basis (`U_e = I_3`), nondegenerate
 > hierarchy is still impossible.
 
-So the actual live blocker is:
+So the actual remaining blocker is:
 
 - not "you assumed bare `hw=1` too early";
 - but "you kept the same reduction and readout class."

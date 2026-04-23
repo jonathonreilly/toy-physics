@@ -1,8 +1,8 @@
 # DM Neutrino Source-Surface Global Dominance Completeness Obstruction
 
-**Date:** 2026-04-17  
+**Date:** 2026-04-17
 **Status:** exact obstruction note for the carrier side of the top-down selector
-attack; publishable even without selector closure  
+attack; publishable even without selector closure
 **Primary runner:** `scripts/frontier_dm_neutrino_source_surface_global_dominance_completeness_obstruction.py`
 
 ## Question
@@ -15,7 +15,7 @@ exact-carrier winner?
 
 No.
 
-After the representation-theorem compression, the live blocker is not more
+After the representation-theorem compression, the remaining blocker is not more
 selector-family freedom. It is exactly **global dominance / exact-carrier
 completeness**.
 

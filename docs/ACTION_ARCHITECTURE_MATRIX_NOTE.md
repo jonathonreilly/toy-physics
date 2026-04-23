@@ -1,7 +1,7 @@
 # Action / Architecture Matrix Note
 
 **Date:** 2026-04-04  
-**Status:** bounded support note; reviewer-facing synthesis, not a unification theorem
+**Status:** bounded support note; public synthesis, not a unification theorem
 
 ## Purpose
 

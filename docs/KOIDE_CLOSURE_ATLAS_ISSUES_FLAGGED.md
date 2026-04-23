@@ -5,7 +5,7 @@
 April 22 Koide support batch.
 
 Flagging for reviewer attention; several are genuine caveats that matter for
-how strongly the Koide lane can be stated on the review surface.
+how strongly the Koide lane can be stated on the package surface.
 
 ---
 

@@ -24,7 +24,7 @@ derived quantitative rows, and still-open companion lanes.
 | renormalized `y_t` endpoint | derived | `y_t(v) = 0.9176` is a zero-import central value, but it inherits an approximately `3%` QFP/RGE-surrogate systematic. |
 | top pole mass package | derived | `m_t(pole) = 172.57 GeV` (2-loop) and `173.10 GeV` (3-loop) inherit the bounded `y_t` systematic. |
 | Higgs CW/stability package | bounded | the mechanism, `lambda(M_Pl)=0` boundary, and framework-native full 3-loop Higgs implementation now exist; exact `m_H` and vacuum stability remain bounded only because they inherit the bounded `y_t` / QFP route. |
-| DM flagship gate | open flagship gate | Exact transport-chain progress is real, but final DM quantitative closure is still not closed. |
+| DM flagship lane | open flagship lane | Exact transport-chain progress is real, but final DM quantitative closure is still not closed. |
 | CKM quantitative package | promoted quantitative package | The canonical atlas/axiom package on the tensor/projector surface is promoted on `main`; older Cabibbo / mass-basis / partial-Jarlskog routes remain route history only. |
 
 ## Writing rule

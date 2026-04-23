@@ -1,10 +1,10 @@
 # Majorana One-Generation Phase Removal Theorem
 
-**Date:** 2026-04-15  
+**Date:** 2026-04-15
 **Status:** exact one-generation local-form refinement on the current neutrino
-lane; not an existence theorem  
-**Atlas front door:** canonical toolkit on `main` at
-`docs/publication/ci3_z3/DERIVATION_ATLAS.md`  
+lane; not an existence theorem
+**Atlas placement:** canonical toolkit on `main` at
+`docs/publication/ci3_z3/DERIVATION_ATLAS.md`
 **Script:** `scripts/frontier_neutrino_majorana_phase_removal.py`
 
 ## Question

@@ -1,9 +1,9 @@
 # DM Wilson-to-`dW_e^H` Local Path-Algebra Minimal Certificate
 
-**Date:** 2026-04-18  
+**Date:** 2026-04-18
 **Status:** exact current-stack theorem packaging the whole structured
 Wilson-to-`dW_e^H` route as one minimal local certificate upstream of the DM
-selector  
+selector
 **Script:** `scripts/frontier_dm_wilson_to_dweh_local_path_algebra_minimal_certificate_2026_04_18.py`
 
 ## Question
@@ -33,7 +33,7 @@ That is already enough, because current `main` has already proved:
 - the exact flavored transport selector then determines the relevant column
   algorithmically.
 
-So the sharpest reviewer-facing DM Wilson target is no longer:
+So the sharpest public DM Wilson target is no longer:
 
 - `9` unrelated Wilson probes.
 
@@ -114,7 +114,7 @@ realization of the DM last-mile source law.
 Therefore the whole route is exactly equivalent to the displayed minimal local
 certificate.
 
-## Corollary 1: the reviewer-facing Wilson/DM checklist is now finite and local
+## Corollary 1: the public Wilson/DM checklist is now finite and local
 
 A future positive theorem on this lane may now be judged by the checklist:
 
@@ -146,7 +146,7 @@ So the route is already minimal in target shape.
 - a positive realization of `Phi_chain`
 - a positive theorem that `dW_W o Phi_chain = dW_e^H`
 - the DM microscopic selector law
-- the DM flagship gate
+- the DM flagship lane
 
 ## Why this matters
 
