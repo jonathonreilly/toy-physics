@@ -110,6 +110,7 @@ Load-bearing notes:
 - [PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md)
 - [PLANCK_SCALE_ONE_AXIOM_CONSERVATIVE_SEMANTICS_BRIDGE_THEOREM_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_CONSERVATIVE_SEMANTICS_BRIDGE_THEOREM_2026-04-23.md)
 - [PLANCK_SCALE_P1_DECOMPOSITION_AND_COUNTING_TRACE_REDUCTION_2026-04-23.md](./PLANCK_SCALE_P1_DECOMPOSITION_AND_COUNTING_TRACE_REDUCTION_2026-04-23.md)
+- [PLANCK_SCALE_UNIVERSAL_PRIMITIVE_COUNTING_TRACE_THEOREM_2026-04-23.md](./PLANCK_SCALE_UNIVERSAL_PRIMITIVE_COUNTING_TRACE_THEOREM_2026-04-23.md)
 
 ### 5. Source-free default datum
 
@@ -125,8 +126,9 @@ presentation changes. It uses the physical primitive event frame directly:
 - packet-preserving symmetry alone would only give a two-block state and is not
   enough;
 - under the kinematic primitive-counting object-class reading, Axiom Extension
-  P1's no-preferred-primitive-event law reduces to the normalized counting trace
-  on the bare source-free event frame, represented by
+  P1's no-preferred-primitive-event law plus additivity/naturality reduces to
+  the unique normalized counting trace on the bare source-free event frame,
+  represented by
 
 `rho_cell = I_16 / 16`.
 
@@ -142,10 +144,13 @@ Since `P_A` has rank `4` inside a `16`-dimensional source-free cell,
 
 This is the exact dimensionless primitive boundary coefficient.
 
-### 7. Planck length
+### 7. Gravitational carrier identification and Planck length
 
-The standalone area/action normalization theorem equates the microscopic
-dimensionless boundary density
+The gravitational carrier-identification theorem says that, if this Planck lane
+is the microscopic gravitational boundary/action lane, the primitive worldtube
+count is the unique available local codimension-1 carrier. The standalone
+area/action normalization theorem then equates the microscopic dimensionless
+boundary density
 
 `S_cell / k_B = c_cell A / a^2`
 
@@ -172,7 +177,8 @@ Because `a` and `l_P` are positive lengths,
 This is the standard gravitational area/action normalization with all
 dimensional constants shown.
 
-Load-bearing note:
+Load-bearing notes:
+- [PLANCK_SCALE_GRAVITATIONAL_AREA_ACTION_CARRIER_IDENTIFICATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_GRAVITATIONAL_AREA_ACTION_CARRIER_IDENTIFICATION_THEOREM_2026-04-23.md)
 - [PLANCK_SCALE_AREA_ACTION_NORMALIZATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_AREA_ACTION_NORMALIZATION_THEOREM_2026-04-23.md)
 
 ## What this does not claim
@@ -192,8 +198,8 @@ This packet does not claim:
 
 Two explicit package-level denials remain:
 
-1. deny Axiom Extension P1's no-preferred-primitive-event state law for the bare
-   source-free primitive cell;
+1. deny that the elementary Planck coefficient belongs to the universal
+   primitive additive/natural counting-trace object class;
 2. deny that the primitive-cell count realizes the gravitational area/action
    density.
 

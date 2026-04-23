@@ -4,6 +4,15 @@
 **Status:** branch-local standalone normalization theorem for the final `c_cell = 1/4 -> a = l_P` step
 **Audit runner:** `scripts/frontier_planck_area_action_normalization_theorem.py`
 
+## Scope
+
+The carrier-selection part of this step is separated in:
+
+- [PLANCK_SCALE_GRAVITATIONAL_AREA_ACTION_CARRIER_IDENTIFICATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_GRAVITATIONAL_AREA_ACTION_CARRIER_IDENTIFICATION_THEOREM_2026-04-23.md)
+
+This file handles the algebraic normalization after the primitive count has
+been identified as the microscopic gravitational boundary/action carrier.
+
 ## Question
 
 Given the dimensionless primitive-cell coefficient

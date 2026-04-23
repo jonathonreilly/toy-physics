@@ -27,6 +27,12 @@ def main() -> int:
 
     checks = [
         (
+            "note-delegates-carrier-selection",
+            "GRAVITATIONAL_AREA_ACTION_CARRIER_IDENTIFICATION" in note
+            and "carrier-selection" in note,
+            "carrier identification should be separated from algebraic normalization",
+        ),
+        (
             "quarter-gives-one-planck-area",
             a2_over_lp2 == 1,
             f"a^2/l_P^2={a2_over_lp2}",

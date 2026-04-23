@@ -184,3 +184,16 @@ So the next axiom-native target is not vague. It is:
 That target is already supported by the kinematic cell-coefficient and
 primitive-coefficient object-class theorems. This note isolates it as the exact
 place where P1 can be reduced rather than merely promoted.
+
+## Follow-up close
+
+The normalized counting-trace object class is now proved directly in:
+
+- [PLANCK_SCALE_UNIVERSAL_PRIMITIVE_COUNTING_TRACE_THEOREM_2026-04-23.md](./PLANCK_SCALE_UNIVERSAL_PRIMITIVE_COUNTING_TRACE_THEOREM_2026-04-23.md)
+
+That theorem shows that object-class locality, positivity, normalization,
+finite additivity, and atomic naturality uniquely force
+
+`tau(P) = rank(P) / 16`
+
+on the primitive `C^16` event frame.

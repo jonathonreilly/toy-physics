@@ -17,8 +17,10 @@ SUBCHECKS = [
     "frontier_planck_one_axiom_extension_acceptance_theorem.py",
     "frontier_planck_one_axiom_conservative_semantics_bridge_theorem.py",
     "frontier_planck_p1_decomposition_and_counting_trace_reduction.py",
+    "frontier_planck_universal_primitive_counting_trace_theorem.py",
     "frontier_planck_event_frame_no_information_state_theorem.py",
     "frontier_planck_source_free_default_datum_from_one_axiom_theorem.py",
+    "frontier_planck_gravitational_area_action_carrier_identification_theorem.py",
     "frontier_planck_area_action_normalization_theorem.py",
 ]
 
@@ -98,7 +100,7 @@ def main() -> int:
     total += 1
     passed += expect(
         "packet-reduces-p1-to-counting-trace-reading",
-        "P1's no-preferred-primitive-event law reduces to the normalized counting trace"
+        "P1's no-preferred-primitive-event law plus additivity/naturality reduces"
         in packet,
     )
 
@@ -106,7 +108,8 @@ def main() -> int:
     passed += expect(
         "packet-records-standalone-area-action-normalization",
         "S_grav / k_B = A c_light^3 / (4 G hbar)" in packet
-        and "`a^2 = 4 c_cell l_P^2`" in packet,
+        and "`a^2 = 4 c_cell l_P^2`" in packet
+        and "unique available local codimension-1 carrier" in packet,
     )
 
     total += 1
