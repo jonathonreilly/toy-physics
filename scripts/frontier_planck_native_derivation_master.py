@@ -26,6 +26,7 @@ SUBCHECKS = [
     "frontier_planck_area_action_normalization_theorem.py",
     "frontier_planck_planck_normalization_non_tautology_audit.py",
     "frontier_planck_claim_scope_hostile_audit.py",
+    "frontier_planck_remaining_denials_target_change_theorem.py",
 ]
 
 
@@ -127,6 +128,13 @@ def main() -> int:
 
     total += 1
     passed += expect(
+        "packet-records-remaining-denials-target-change",
+        "PLANCK_SCALE_REMAINING_DENIALS_TARGET_CHANGE_THEOREM_2026-04-23.md"
+        in packet,
+    )
+
+    total += 1
+    passed += expect(
         "packet-derives-planck-length",
         "`a^2 = l_P^2`" in packet
         and "`a = l_P`" in packet
@@ -143,6 +151,13 @@ def main() -> int:
         and "PLANCK_SCALE_PLANCK_NORMALIZATION_NON_TAUTOLOGY_AUDIT_2026-04-23.md"
         in reviewer
         and "PLANCK_SCALE_CLAIM_SCOPE_HOSTILE_AUDIT_2026-04-23.md" in reviewer,
+    )
+
+    total += 1
+    passed += expect(
+        "reviewer-packet-includes-final-denial-theorem",
+        "PLANCK_SCALE_REMAINING_DENIALS_TARGET_CHANGE_THEOREM_2026-04-23.md"
+        in reviewer,
     )
 
     print(f"SUMMARY: PASS={passed} FAIL={total - passed}")

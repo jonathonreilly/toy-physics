@@ -146,6 +146,11 @@ The hostile-review denials are now explicit.
    ledger alone does not prove the result, concede. That is not the submitted
    claim.
 
+The final denial-status theorem records that denials 2 and 4 change the target:
+they either replace the primitive coefficient with an enriched state/readout
+object, or refuse the sector bridge needed to make a Planck-length statement:
+[remaining-denials target-change theorem](./PLANCK_SCALE_REMAINING_DENIALS_TARGET_CHANGE_THEOREM_2026-04-23.md).
+
 If denials 2 through 4 are rejected on the physical package, the direct Planck
 route closes on the authorized P1 surface.
 
@@ -176,6 +181,7 @@ python3 scripts/frontier_planck_gravity_carrier_from_sector_identification_theor
 python3 scripts/frontier_planck_area_action_normalization_theorem.py
 python3 scripts/frontier_planck_planck_normalization_non_tautology_audit.py
 python3 scripts/frontier_planck_claim_scope_hostile_audit.py
+python3 scripts/frontier_planck_remaining_denials_target_change_theorem.py
 ```
 
 ## Appendix Map
@@ -208,6 +214,7 @@ python3 scripts/frontier_planck_claim_scope_hostile_audit.py
 - [PLANCK_SCALE_GRAVITY_CARRIER_FROM_SECTOR_IDENTIFICATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_GRAVITY_CARRIER_FROM_SECTOR_IDENTIFICATION_THEOREM_2026-04-23.md) - GSI-scoped carrier theorem forcing `N_grav = P_A`.
 - [PLANCK_SCALE_AREA_ACTION_NORMALIZATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_AREA_ACTION_NORMALIZATION_THEOREM_2026-04-23.md) - `c_cell = 1/4 -> a = l_P` algebra with constants.
 - [PLANCK_SCALE_PLANCK_NORMALIZATION_NON_TAUTOLOGY_AUDIT_2026-04-23.md](./PLANCK_SCALE_PLANCK_NORMALIZATION_NON_TAUTOLOGY_AUDIT_2026-04-23.md) - audit showing the Planck result is not assumed by dimensional matching.
+- [PLANCK_SCALE_REMAINING_DENIALS_TARGET_CHANGE_THEOREM_2026-04-23.md](./PLANCK_SCALE_REMAINING_DENIALS_TARGET_CHANGE_THEOREM_2026-04-23.md) - final audit showing the remaining denials change the target rather than expose hidden algebra gaps.
 
 ### Risk and stop-condition context
 

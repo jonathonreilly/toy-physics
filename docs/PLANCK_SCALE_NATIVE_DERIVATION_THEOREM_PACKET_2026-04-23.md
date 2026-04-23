@@ -183,6 +183,7 @@ Load-bearing notes:
 - [PLANCK_SCALE_GRAVITY_CARRIER_FROM_SECTOR_IDENTIFICATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_GRAVITY_CARRIER_FROM_SECTOR_IDENTIFICATION_THEOREM_2026-04-23.md)
 - [PLANCK_SCALE_AREA_ACTION_NORMALIZATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_AREA_ACTION_NORMALIZATION_THEOREM_2026-04-23.md)
 - [PLANCK_SCALE_PLANCK_NORMALIZATION_NON_TAUTOLOGY_AUDIT_2026-04-23.md](./PLANCK_SCALE_PLANCK_NORMALIZATION_NON_TAUTOLOGY_AUDIT_2026-04-23.md)
+- [PLANCK_SCALE_REMAINING_DENIALS_TARGET_CHANGE_THEOREM_2026-04-23.md](./PLANCK_SCALE_REMAINING_DENIALS_TARGET_CHANGE_THEOREM_2026-04-23.md)
 
 ## What this does not claim
 
@@ -205,6 +206,11 @@ Two explicit package-level denials remain:
    primitive additive/natural counting-trace object class;
 2. deny that the primitive-cell count realizes the gravitational area/action
    density.
+
+The target-change theorem records what those denials mean. The first changes the
+object from a primitive universal coefficient to an enriched state/readout
+object. The second refuses the sector bridge needed to turn the dimensionless
+coefficient into a Planck-length statement.
 
 If either denial is made, the exact `4/16 = 1/4` cell coefficient remains, but
 the fully normalized `a = l_P` claim must be scoped accordingly.
