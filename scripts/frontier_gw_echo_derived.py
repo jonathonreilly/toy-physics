@@ -468,7 +468,7 @@ def step5_prediction():
     All inputs are observationally determined or fixed by the framework:
       M = 62 M_sun (LIGO measurement)
       chi = 0.67 (LIGO measurement)
-      a = l_Planck (framework axiom)
+      a^(-1) = M_Pl on the current Planck-scale package pin
       m = m_nucleon (Standard Model)
 
     The echo time formula has NO free parameters.

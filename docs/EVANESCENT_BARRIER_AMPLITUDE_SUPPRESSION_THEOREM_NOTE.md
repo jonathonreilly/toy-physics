@@ -73,7 +73,8 @@ standard discrete-Schroedinger evanescent bound.
 
 ### Framework-retained ingredients
 
-1. lattice spacing `a = l_Planck` [axiom]
+1. lattice spacing carried on the current Planck-scale package pin,
+   `a^(-1) = M_Pl`, on the accepted physical-lattice reading
 2. `Cl(3)/Z^3` nearest-neighbor Laplacian [retained; free-field sector
    of the retained Wilson-plus-staggered action surface]
 3. lattice hard floor `R_min >= l_Planck` [retained corollary of a
@@ -126,7 +127,8 @@ lapse.  Its framework content is: on the retained restricted
 strong-field closure surface
 ([RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md](./RESTRICTED_STRONG_FIELD_CLOSURE_NOTE.md)),
 `f(r) = 1 - R_S/r` is the exterior bridge function, and
-`R_min >= l_Planck` is the retained lattice hard floor.
+`R_min >= l_Planck` is the retained lattice hard floor on the current
+Planck-scale package pin.
 
 ### Scope discipline
 

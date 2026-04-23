@@ -1,7 +1,7 @@
 # Rep-B Bare-Scale Independence Theorem for the Two-Ward `g_bare` Route
 
 **Date:** 2026-04-19
-**Status:** DERIVED — load-bearing support theorem for Path 2 closure
+**Status:** DERIVED — load-bearing support theorem for the two-Ward `g_bare` route
 **Role:** proves the missing Rep-B independence step on the retained block
 
 ---

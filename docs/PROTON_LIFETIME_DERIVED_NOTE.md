@@ -24,8 +24,9 @@ proton decay at tau < 10^40 years would rule out the framework.
 
 ## Assumptions
 
-1. **Framework axiom:** The physical theory is Cl(3) on Z^3 with lattice spacing
-   a = l_Planck.
+1. **Framework package pin:** The physical theory is `Cl(3)` on `Z^3`, and on
+   the accepted physical-lattice reading the absolute spacing is carried as the
+   current package pin `a^(-1) = M_Pl`.
 
 2. **Taste space decomposition:** (C^2)^3 = C^8 decomposes under Hamming-weight
    grading as 8 = 1 + 3 + 3* + 1, where the triplets are the quark sector and
@@ -39,8 +40,9 @@ proton decay at tau < 10^40 years would rule out the framework.
    singlet subspaces. These are leptoquark operators. **[EXACT]**
 
 5. **Mediating scale:** Since the leptoquark operators arise from the full lattice
-   algebra (not the gauge sector), their effective mass is the lattice cutoff
-   M_X = M_Planck ~ 1.22 x 10^19 GeV. **[FRAMEWORK AXIOM]**
+   algebra (not the gauge sector), their effective mass is taken at the lattice
+   cutoff `M_X = M_Pl ~ 1.22 x 10^19 GeV` on the current Planck-scale package
+   pin. **[PACKAGE PIN, not yet a derived theorem]**
 
 6. **Decay rate formula:** The standard dimension-6 EFT formula applies:
    Gamma = alpha^2 * m_p^5 / M_X^4. **[IMPORTED from EFT]**
@@ -71,8 +73,8 @@ proton decay at tau < 10^40 years would rule out the framework.
 
 ### Framework-dependent results:
 
-- M_X = M_Planck. This follows from the axiom that the lattice spacing is the
-  Planck length. It is not derived from dynamics.
+- `M_X = M_Pl`. This follows from the current Planck-scale package pin for the
+  physical lattice. It is not yet derived from dynamics.
 
 ### Imported physics:
 

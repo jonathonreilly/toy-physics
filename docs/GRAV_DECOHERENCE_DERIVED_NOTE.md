@@ -21,7 +21,7 @@ The gravitational decoherence rate follows from the single axiom (Cl(3) on Z^3) 
 
 4. **Field distinguishability => decoherence rate.** The decoherence rate gamma = E_G / hbar = (G m^2)/(hbar delta_x) * F(delta_x / a). This is the Penrose-Diosi rate modified by the lattice form factor.
 
-5. **Form factor F -> 1 in continuum limit.** For delta_x >> a (the lattice spacing), F = 1 + O(a/delta_x)^2. At physical separations with a = l_Planck: |F - 1| ~ 10^{-58}. The lattice correction is undetectable.
+5. **Form factor F -> 1 in continuum limit.** For `delta_x >> a`, `F = 1 + O(a/delta_x)^2`. On the current Planck-scale package pin for the physical lattice, `a = l_Planck`, so at physical separations `|F - 1| ~ 10^{-58}` and the lattice correction is undetectable.
 
 ---
 
@@ -50,7 +50,7 @@ The form factor converges to 1 as r increases, confirming the continuum limit. T
 
 ### Lattice Correction at Physical Scales
 
-For a = l_Planck = 1.616e-35 m:
+On the current Planck-scale package pin `a = l_Planck = 1.616e-35 m`:
 
     delta_x = 1 um:   delta_x/a = 6.2e28,  |F-1| ~ 6.5e-58
     delta_x = 250 um: delta_x/a = 1.5e31,  |F-1| ~ 10^{-62}

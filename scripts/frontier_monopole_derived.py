@@ -3,7 +3,7 @@
 Magnetic Monopole Mass from First Principles
 =============================================
 
-QUESTION: Can the monopole mass M_mono ~ 1.6 M_Planck be derived from the
+QUESTION: Can the monopole mass M_mono ~ 0.8 M_Planck be derived from the
 lattice axioms alone, with every step traceable?
 
 CONTEXT:
@@ -24,10 +24,10 @@ WHAT IS DERIVED vs WHAT IS ASSUMED:
     - Charge quantization (from compactness)
     - Dirac condition (from periodicity)
     - Monopole existence (from pi_1(U(1)) = Z via compact lattice)
-    - Mass scale ~ M_Planck (from a = l_Planck)
+    - Mass scale ~ M_Planck (on the current Planck-scale package pin)
     - Inflation requirement (from overclosure)
   ASSUMED:
-    - Lattice spacing a = l_Planck (framework axiom)
+    - Planck-scale package pin a^(-1) = M_Pl on the accepted physical-lattice reading
     - Wilson action S = -beta * sum cos(theta_P) (simplest compact action)
     - Standard cosmology (FRW, entropy conservation) for abundance calc
     - alpha(M_Pl) ~ 1/40 from SM RG running (external input)
@@ -402,8 +402,7 @@ def step3_monopole_mass_analytic():
 
     # Compare with the claimed 1.6
     ratio = M_mono / M_PLANCK_GEV
-    print(f"\n    Claimed value: 1.6 M_Planck")
-    print(f"    Derived value: {ratio:.2f} M_Planck")
+    print(f"\n    Current runner-consistent value: {ratio:.2f} M_Planck")
 
     # --- 3d. Comparison with GUT monopoles ---
     M_GUT = 2e16  # GeV
@@ -426,7 +425,7 @@ def step3_monopole_mass_analytic():
               f"M_mono = {M_test/M_PLANCK_GEV:.2f} M_Pl = {M_test:.2e} GeV")
 
     print(f"\n    The mass is WEAKLY SENSITIVE to alpha(M_Pl).")
-    print(f"    For alpha^{{-1}} in [30, 60], M_mono in [1.0, 2.4] M_Pl.")
+    print(f"    For alpha^{{-1}} in [30, 60], M_mono in [0.60, 1.21] M_Pl.")
     print(f"    The order-of-magnitude prediction M ~ M_Planck is ROBUST.")
 
     return {
@@ -777,7 +776,7 @@ def synthesis(results_step3, results_step5):
   +-------------------------------------------------------------------+
   | Claim                        | Status    | Comment                |
   |------------------------------+-----------+------------------------|
-  | M ~ 1.6 M_Pl                | DERIVED   | c*beta*M_Pl, c from   |
+  | M ~ 0.8 M_Pl                | DERIVED   | c*beta*M_Pl, c from   |
   |                              |           | lattice Green's fn     |
   | Dirac quantization auto     | PROVED    | From compactness of    |
   |                              |           | U(1) on Z^3 edges     |
@@ -787,7 +786,7 @@ def synthesis(results_step3, results_step5):
   +-------------------------------------------------------------------+
 
   ASSUMPTIONS (explicit):
-  1. Lattice spacing a = l_Planck (framework axiom)
+  1. Planck-scale package pin a^(-1) = M_Pl on the accepted physical-lattice reading
   2. Wilson action (simplest compact U(1) action)
   3. alpha_EM(M_Pl) ~ 1/40 (SM RG running -- external input)
   4. Standard FRW cosmology for abundance calculation

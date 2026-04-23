@@ -26,7 +26,7 @@ The discrete lattice approximating S^3 shifts eigenvalues by:
 
     lambda_1^latt = lambda_1^cont * [1 - (1/4)(a/R)^2 + ...]
 
-With a = l_Planck, R = R_Hubble:
+On the current Planck-scale package pin `a = l_Planck`, with `R = R_Hubble`:
 
     delta = -(1/4)(l_P/R_H)^2 ~ -3.5 x 10^-123
 
@@ -44,7 +44,7 @@ Only Model A (fixed graph size) survives observational constraints.
 
 ### CPL Parametrization (Part 4)
 
-Framework prediction:
+Companion forecast on the current package surface:
 
     w_0 = -1.0000 (exact to 10^-120)
     w_a = 0.0000  (exact to 10^-120)

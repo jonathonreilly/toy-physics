@@ -108,7 +108,7 @@ carried by the current package.
   - authority:
     [GRAV_DECOHERENCE_DERIVED_NOTE.md](../../GRAV_DECOHERENCE_DERIVED_NOTE.md)
 - magnetic monopole mass:
-  - `M_mono ~ 1.43 M_Pl`
+  - `M_mono ~ 0.80 M_Pl`
   - authority:
     [MONOPOLE_DERIVED_NOTE.md](../../MONOPOLE_DERIVED_NOTE.md)
 

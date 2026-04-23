@@ -1,7 +1,7 @@
 # Two-Representation Ward Closure on `g_bare`
 
 **Date:** 2026-04-19
-**Status:** CLOSED — Path 2 closure established
+**Status:** CLOSED — two-Ward closure established on the accepted Wilson surface
 **Primary runner:** `scripts/frontier_g_bare_two_ward_closure.py`
 **Load-bearing theorems:**
 - [G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md](G_BARE_TWO_WARD_REP_B_INDEPENDENCE_THEOREM_NOTE_2026-04-19.md)
@@ -91,7 +91,7 @@ The remaining issue was whether the equality was only a canonical-surface
 consistency check. The answer is now **no**.
 
 The load-bearing statement is no longer the subordinate bridge note. It is the
-Path-2 theorem
+two-Ward same-1PI pinning theorem
 [G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md](G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md),
 which isolates the exact off-surface identity needed for closure:
 
