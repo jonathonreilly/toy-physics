@@ -93,6 +93,12 @@ The April 22 second-order support batch sharpens that residue further:
 > step is exactly why the physical charged-lepton selector is source-free
 > (`K = 0`) there.
 
+The April 22 `O_h` covariance no-go sharpens the structural side as well:
+
+> the retained affine Hermitian chart is not `O_h`-covariant beyond parity, so
+> any genuine `SO(3)` / spin-1 completion route must come from a different
+> mechanism rather than inherited cubic-point-group covariance.
+
 ### 2. Brannen phase `δ = 2/9`
 
 The April 21 APS stack proves the exact ambient topological number

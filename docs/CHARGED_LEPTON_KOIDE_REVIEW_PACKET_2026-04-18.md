@@ -35,6 +35,9 @@ charged-lepton lane without changing that open status. What it adds is:
   factorization, the reduced two-block observable law, a normalized
   effective-action candidate route, and a no-hidden-source audit that compress
   the remaining `Q` gap to one explicit primitive;
+- a new `O_h` covariance no-go showing the retained affine Hermitian chart is
+  not cubic-point-group covariant beyond parity, so the surviving spin-1
+  structural route cannot be justified by inherited `O_h` isotropy alone;
 - a clean list of atlas issues and caveats that still matter for honest review.
 
 ## Historical Route-Pruning Record
