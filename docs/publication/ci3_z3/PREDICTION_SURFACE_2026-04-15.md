@@ -10,18 +10,23 @@ This note is the shortest honest answer to:
 > what does the current package already predict, beyond retrospective
 > structural closure?
 
+It is intentionally prediction-first: positive outputs, bounded companions,
+structural signatures, and current pressure points are all part of the public
+scientific surface.
+
 ## Reading Rule
 
-The current package has three predictive layers:
+The current package has four predictive layers:
 
 1. retained quantitative outputs already safe for the paper surface;
 2. bounded secondary predictions already worth stating explicitly;
-3. conditional cosmology predictions whose promotion still depends on the DM /
-   matter bridge.
+3. structural predictions with delayed observability;
+4. current pressure points and open bridges that define the falsification and
+   completion surface.
 
 The point of this split is simple: the framework is already predictive. The
-paper should not read as if prediction begins only after the remaining live
-gate closes.
+paper should not read as if prediction begins only after every open bridge
+closes.
 
 ## Retained quantitative outputs already on the paper surface
 
@@ -110,6 +115,30 @@ carried by the current package.
 These rows belong in a dedicated bounded-prediction section or appendix, not
 in route history.
 
+## Immediate falsification and pressure points
+
+The prediction surface is not only the list of successful rows. It also
+includes the places where the current package is already under quantitative or
+conceptual pressure.
+
+- hierarchy lane:
+  the canonical electroweak row is numerically sharp, but the current package
+  still imports `M_Pl` and still does not derive the exponent `16` from a
+  closed first-principles hierarchy theorem
+- CKM:
+  the atlas/axiom package is quantitatively strong overall, but
+  `|V_us| = 0.22727` remains high against the PDG comparator
+- strong CP:
+  the exact statement is `theta_eff = 0` on the retained action surface;
+  this is not yet a full instanton-measure or `eta'` closure claim
+- PMNS:
+  the retained positive PMNS lane is still absent on current routes, with the
+  current frontier reducing to the missing nonzero current `J_chi`
+- charged-lepton Koide:
+  both physical bridges remain open:
+  the extremal/source-law bridge behind `Q = 2/3` and the physical
+  Brannen-phase bridge behind `delta = 2/9`
+
 ## Structural predictions with delayed observability
 
 - emergent Lorentz invariance:
@@ -136,7 +165,8 @@ space. The retained surface now carries:
 - `w = -1` exactly on the same fixed-gap stationary-vacuum surface
 
 The remaining numerical cosmology predictions remain bounded because the
-matter bridge and cosmology-scale identification are still open:
+cosmology-scale identification and broader matter/cosmology bridge remain
+open:
 
 - numerical `Lambda` from the fixed-gap / de Sitter scale route
 - numerical graviton compactness-mass companion from the same
@@ -152,14 +182,22 @@ Authority:
 - [DARK_ENERGY_EOS_NOTE.md](../../DARK_ENERGY_EOS_NOTE.md)
 - [GRAVITON_MASS_DERIVED_NOTE.md](../../GRAVITON_MASS_DERIVED_NOTE.md)
 
-## What the current package still does not predict cleanly
+## Open predictive bridges
 
-The main missing flagship prediction remains:
+The main remaining flagship bridge package is now the charged-lepton Koide
+lane:
 
-- full DM flagship-gate closure
+- `Q = 2/3` still requires a physical/source-law bridge
+- `delta = 2/9` still requires the physical Brannen-phase bridge
 
-That is the main remaining prediction bridge because it blocks the strongest matter/cosmology
-promotion path. It does not erase the rest of the prediction surface.
+Outside that flagship lane, the main open promotions are:
+
+- a first-principles hierarchy closure that removes the imported `M_Pl`
+  / exponent-`16` qualifiers
+- a positive retained PMNS lane
+- broader target-free dark-matter uniqueness beyond the exact PMNS-target
+  manuscript package
+- numerical cosmology promotion beyond the retained structural identities
 
 ## Bottom Line
 
@@ -168,9 +206,11 @@ The current package already has:
 - a retained quantitative prediction surface;
 - a sharp bounded secondary prediction surface;
 - exact structural predictions with delayed observability;
+- an explicit falsification and pressure surface;
 - one remaining charged-lepton bridge package.
 
 The paper should therefore read as:
 
 > exact discrete backbone + retained quantitative package + bounded prediction
-> surface + one remaining charged-lepton bridge package.
+> surface + explicit pressure points + one remaining charged-lepton bridge
+> package.

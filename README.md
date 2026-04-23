@@ -4,18 +4,38 @@ This repository contains the public scientific package for a one-axiom
 discrete-physics program based on `Cl(3)` on `Z^3`.
 
 If you are coming from the paper, start with the publication package rather
-than the full repository chronology.
+than the full repository chronology. If you want the shortest path to what the
+current package already predicts, start with the prediction and quantitative
+summary surfaces before the deeper derivation map.
 
 ## Read First
 
 1. [Public arXiv draft](docs/publication/ci3_z3/ARXIV_DRAFT.md)
-2. [Publication package README](docs/publication/ci3_z3/README.md)
-3. [Claims table](docs/publication/ci3_z3/CLAIMS_TABLE.md)
-4. [Prediction surface](docs/publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md)
-5. [Inputs and qualifiers](docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md)
-6. [What this paper does not claim](docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
-7. [Derivation / validation map](docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
-8. [Derivation atlas](docs/publication/ci3_z3/DERIVATION_ATLAS.md)
+2. [Prediction surface](docs/publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md)
+3. [Quantitative summary table](docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md)
+4. [Publication package README](docs/publication/ci3_z3/README.md)
+5. [Claims table](docs/publication/ci3_z3/CLAIMS_TABLE.md)
+6. [Inputs and qualifiers](docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md)
+7. [What this paper does not claim](docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
+8. [Derivation / validation map](docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
+9. [Derivation atlas](docs/publication/ci3_z3/DERIVATION_ATLAS.md)
+
+## What Is Already Predicted
+
+- retained quantitative package:
+  canonical `v = 246.282818290129 GeV`, retained `alpha_s(M_Z) = 0.1181`,
+  electroweak normalization, retained top/Yukawa transport, promoted CKM
+  atlas/axiom numerics, and bounded confinement-string readout
+- bounded but explicit forward/companion surface:
+  proton lifetime, CKM-only neutron EDM continuation, vacuum criticality,
+  taste-scalar near-degeneracy, benchmark gravitational decoherence, and
+  monopole mass
+- exact structural predictions with delayed observability:
+  emergent-Lorentz dimension-6 onset and action-surface `theta_eff = 0`
+- remaining open flagship bridge package:
+  charged-lepton Koide (`Q = 2/3`, `delta = 2/9`);
+  the dark-matter exact-target package is already closed on the manuscript
+  surface
 
 ## Repository Map
 

@@ -6,6 +6,9 @@ package.
 Use this package if you want the manuscript, claims, predictions, and evidence
 without browsing the full repository chronology.
 
+For a prediction-first read, start with the prediction surface and the
+quantitative summary table, then move to claims and qualifiers.
+
 Framework statement:
 
 - the accepted package statement is `Cl(3)` on `Z^3` as the physical theory
@@ -20,11 +23,11 @@ Framework statement:
 ## Read In This Order
 
 1. [Public arXiv draft](./ARXIV_DRAFT.md)
-2. [Claims table](./CLAIMS_TABLE.md)
-3. [Prediction surface](./PREDICTION_SURFACE_2026-04-15.md)
-4. [Inputs and qualifiers](./INPUTS_AND_QUALIFIERS_NOTE.md)
-5. [What this paper does not claim](./WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
-6. [Quantitative summary table](./QUANTITATIVE_SUMMARY_TABLE.md)
+2. [Prediction surface](./PREDICTION_SURFACE_2026-04-15.md)
+3. [Quantitative summary table](./QUANTITATIVE_SUMMARY_TABLE.md)
+4. [Claims table](./CLAIMS_TABLE.md)
+5. [Inputs and qualifiers](./INPUTS_AND_QUALIFIERS_NOTE.md)
+6. [What this paper does not claim](./WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
 7. [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
 8. [Derivation atlas](./DERIVATION_ATLAS.md)
 9. [Results index](./RESULTS_INDEX.md)
@@ -59,6 +62,26 @@ The package has five layers:
 4. retained YT/top transport lane plus a derived Higgs/vacuum lane with a retention-decomposed budget
 5. bounded prediction surface, one closed dark-matter lane, one remaining
    charged-lepton bridge package, and optional route history
+
+## Prediction And Falsification Snapshot
+
+- already on the quantitative surface:
+  `v`, `alpha_s(M_Z)`, electroweak normalization, the retained top/Yukawa
+  transport lane, and the promoted CKM atlas/axiom package
+- already on the bounded prediction surface:
+  proton lifetime, CKM-only neutron EDM continuation, vacuum criticality,
+  taste-scalar near-degeneracy, benchmark gravitational decoherence, and
+  monopole mass
+- already on the structural prediction surface:
+  emergent-Lorentz dimension-6 onset and action-surface `theta_eff = 0`
+- current pressure points:
+  hierarchy still imports `M_Pl` and the exponent `16` is not yet closed from
+  first principles; `|V_us|` sits high against PDG; PMNS remains a negative
+  retained lane; charged-lepton Koide still needs its two physical bridges
+
+This package therefore already contains real quantitative and bounded
+prediction content, but it does not yet claim a near-term decisive new
+experimental discriminator.
 
 The public manuscript surface is arXiv-first. Journal-specific packaging is
 kept separate and is not presented here as a competing public draft.

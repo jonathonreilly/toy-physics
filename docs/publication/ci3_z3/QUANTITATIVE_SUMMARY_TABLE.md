@@ -4,6 +4,11 @@
 **Purpose:** public summary of the current quantitative lanes plus the
 remaining bounded companions
 
+This is the fastest single table for the package's current quantitative
+prediction/comparator surface. For the broader falsification surface, open
+bridges, and delayed-observability rows, pair it with
+[PREDICTION_SURFACE_2026-04-15.md](./PREDICTION_SURFACE_2026-04-15.md).
+
 Use [repo/CONTROLLED_VOCABULARY.md](../../repo/CONTROLLED_VOCABULARY.md) for
 the repo-wide status taxonomy.
 
