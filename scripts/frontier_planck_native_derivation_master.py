@@ -16,6 +16,7 @@ SUBCHECKS = [
     "frontier_planck_primitive_coefficient_object_class_theorem.py",
     "frontier_planck_one_axiom_extension_acceptance_theorem.py",
     "frontier_planck_one_axiom_conservative_semantics_bridge_theorem.py",
+    "frontier_planck_p1_decomposition_and_counting_trace_reduction.py",
     "frontier_planck_event_frame_no_information_state_theorem.py",
     "frontier_planck_source_free_default_datum_from_one_axiom_theorem.py",
     "frontier_planck_area_action_normalization_theorem.py",
@@ -92,6 +93,13 @@ def main() -> int:
         "does **not** use arbitrary factor-local `U(2)^4`" in packet
         and "`P_A` is invariantly defined" in packet
         and "packet-preserving symmetry alone" in packet,
+    )
+
+    total += 1
+    passed += expect(
+        "packet-reduces-p1-to-counting-trace-reading",
+        "P1's no-preferred-primitive-event law reduces to the normalized counting trace"
+        in packet,
     )
 
     total += 1

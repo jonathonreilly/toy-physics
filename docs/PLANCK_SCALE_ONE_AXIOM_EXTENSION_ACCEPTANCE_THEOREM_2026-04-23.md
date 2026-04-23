@@ -88,3 +88,15 @@ With P1 accepted, the last state-law step is no longer an ambiguous appeal to
 
 The remaining Planck normalization is then a separate area/action matching
 theorem, not part of the state-law axiom extension.
+
+## Reduction status
+
+P1 should not be treated as one undifferentiated new axiom. Its load-bearing
+content is isolated in:
+
+- [PLANCK_SCALE_P1_DECOMPOSITION_AND_COUNTING_TRACE_REDUCTION_2026-04-23.md](./PLANCK_SCALE_P1_DECOMPOSITION_AND_COUNTING_TRACE_REDUCTION_2026-04-23.md)
+
+That note shows that the only genuinely Planck-fixing clause is the
+no-preferred-primitive-event law. On the kinematic primitive-counting
+object-class reading, that clause reduces to the normalized counting trace on
+the finite primitive event frame, represented by `I_16/16`.

@@ -109,6 +109,7 @@ It does not change `H_cell`, `P_A`, or any numerical scale.
 Load-bearing notes:
 - [PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md)
 - [PLANCK_SCALE_ONE_AXIOM_CONSERVATIVE_SEMANTICS_BRIDGE_THEOREM_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_CONSERVATIVE_SEMANTICS_BRIDGE_THEOREM_2026-04-23.md)
+- [PLANCK_SCALE_P1_DECOMPOSITION_AND_COUNTING_TRACE_REDUCTION_2026-04-23.md](./PLANCK_SCALE_P1_DECOMPOSITION_AND_COUNTING_TRACE_REDUCTION_2026-04-23.md)
 
 ### 5. Source-free default datum
 
@@ -123,8 +124,9 @@ presentation changes. It uses the physical primitive event frame directly:
   `1_{N_evt = 1}` of the primitive event-count readout;
 - packet-preserving symmetry alone would only give a two-block state and is not
   enough;
-- Axiom Extension P1's no-preferred-primitive-event law on the bare source-free
-  event frame forces
+- under the kinematic primitive-counting object-class reading, Axiom Extension
+  P1's no-preferred-primitive-event law reduces to the normalized counting trace
+  on the bare source-free event frame, represented by
 
 `rho_cell = I_16 / 16`.
 
