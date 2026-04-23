@@ -104,3 +104,12 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   integer 16 to the `Z^3` dimensionality n = 3 directly /
   `frontier_axiom_native_clifford_signed_cube_group.py` /
   Target 1 sub-step 1b.
+- The free K3 Berezin partition on a single Z^3 edge patch (two
+  adjacent sites with open BCs, scalar-part projection of
+  psi-bar psi) evaluates exactly to `Z_edge = (a^2/2)^16`; hence the
+  integer 16 is the exact exponent of `(a^2/2)` in `Z_edge`, a
+  kit-derivable partition-function exponent. Equivalently, the
+  coefficient of `log(a)` in `log Z_edge` is 32. Universality note:
+  for Cl(n) on a Z^n edge the exponent is `2^(n+1)` /
+  `frontier_axiom_native_edge_partition_exponent_sixteen.py` /
+  Target 1 sub-step 1c.

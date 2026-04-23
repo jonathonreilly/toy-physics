@@ -89,3 +89,33 @@ Z^3, (b) P-equivariant cohomology rank on a finite Z^3 patch,
 action term. Any of these would produce an object whose "exponent"
 could be 16.
 
+[2026-04-23 02:57] Target 1, sub-step 1c (edge-partition exponent) — PASS
+Tried: Went beyond counting/group-order statements and attacked the
+actual question "what kit-derivable object has 16 as its exponent?"
+The minimal non-trivial K3 object is a single-edge patch of Z^3 (two
+adjacent sites n, n+mu-hat with open BCs). Wrote
+scripts/frontier_axiom_native_edge_partition_exponent_sixteen.py
+which proves via sympy symbolic computation:
+(i) scalar parts sigma_B = scalar(e_B^2) are +1 for grades 0, 1 and
+-1 for grades 2, 3 (verified in Pauli realization),
+(ii) the K3 action restricted to the edge block-diagonalizes in the
+Cl(3) basis into 8 independent 2x2 hopping matrices,
+(iii) each block has det = (sigma_B a^2/2)^2 = a^4/4 (sigma^2=1),
+(iv) det(M) = prod_B det(M_B) = (a^4/4)^8 = (a^2/2)^16 exactly,
+(v) log(Z_edge) / log(a^2/2) = 16 EXACTLY (verified symbolically),
+(vi) equivalently, the coefficient of log(a) in log(Z_edge) is 32,
+(vii) deleting the edge coupling sends Z_edge -> 0 (vacuum Berezin
+vanishes); the coupling is load-bearing,
+(viii) the universal pattern "edge exponent = 2^(n+1) = per-site-
+generator count" holds for Cl(n) on Z^n edges for n = 2, 3, 4.
+Accepted because: hostile audit verdict = clean. 13 computed record()
+booleans, no narrative PASSes.
+This is GENUINE progress on Target 1: the integer 16 is now attached
+to a concrete partition-function exponent, not merely to a count.
+Next vector (sub-step 1d): build on the edge result toward a
+multi-edge or lattice-level partition function and examine whether
+the exponent 16 extends, saturates, or integrates to a hierarchy
+ratio. Also: examine the separate question of whether the second
+scale in a hierarchy ratio is kit-derivable or requires an
+independent primitive.
+
