@@ -76,8 +76,11 @@ The package has five layers:
   emergent-Lorentz dimension-6 onset and action-surface `theta_eff = 0`
 - current pressure points:
   hierarchy still imports `M_Pl` and the exponent `16` is not yet closed from
-  first principles; `|V_us|` sits high against PDG; PMNS remains a negative
-  retained lane; charged-lepton Koide still needs its two physical bridges
+  first principles; the absolute lattice scale is now tracked explicitly on the
+  dedicated Planck-scale lane as a current package pin on the physical-lattice
+  reading rather than left implicit across hierarchy / Higgs / gravity
+  companions; `|V_us|` sits high against PDG; PMNS remains a negative retained
+  lane; charged-lepton Koide still needs its two physical bridges
 
 This package therefore already contains real quantitative and bounded
 prediction content, but it does not yet claim a near-term decisive new

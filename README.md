@@ -25,7 +25,9 @@ summary surfaces before the deeper derivation map.
 - retained quantitative package:
   canonical `v = 246.282818290129 GeV`, retained `alpha_s(M_Z) = 0.1181`,
   electroweak normalization, retained top/Yukawa transport, promoted CKM
-  atlas/axiom numerics, and bounded confinement-string readout
+  atlas/axiom numerics, and bounded confinement-string readout; the absolute
+  lattice scale is tracked explicitly on a dedicated Planck-scale lane as the
+  current package pin `a^(-1) = M_Pl` on the physical-lattice reading
 - bounded but explicit forward/companion surface:
   proton lifetime, CKM-only neutron EDM continuation, vacuum criticality,
   taste-scalar near-degeneracy, benchmark gravitational decoherence, and

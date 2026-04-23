@@ -52,6 +52,14 @@ explicit observational pin behind the charged-lepton bounded row.
 These are not experimental fit parameters or hidden free knobs. They are the
 current canonical same-surface evaluated constants on `main`.
 
+Current absolute-scale package rule:
+
+- on the accepted physical-lattice reading, the package currently carries
+  `a^(-1) = M_Pl` as an explicit Planck-scale pin
+- that pin is not yet derived from the minimal accepted theorem stack
+- authority:
+  [PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md](../../PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md)
+
 - plaquette surface:
   - `<P> = 0.5934`
   - authority:
