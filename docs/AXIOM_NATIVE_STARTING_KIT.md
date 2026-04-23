@@ -176,3 +176,14 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   cube, unsigned det = -3 while #PM = 9 /
   `frontier_axiom_native_perfect_matching_formula.py` /
   Target 2 sub-step 2c.
+- Koide `Q = 2/3` is ACHIEVABLE with kit constants: the triple
+  `(u_1, u_2, u_3) = (4 + 3*sqrt(2), 1, 1)` satisfies
+  `Q(u) = (Sigma u_i^2)/(Sigma u_i)^2 = 2/3` exactly (sympy
+  symbolic verification). A second family point `(6 + sqrt(39),
+  2, 1)` also gives `Q = 2/3`. The Q = 2/3 solution set is a
+  1-parameter family; no all-integer triple with u_i in [1, 20]
+  matches; `sqrt(2)` (from K3 stencil width, ledger 1e) is
+  load-bearing. Uniqueness blocker remains: kit does not single
+  out a specific physical triple /
+  `frontier_axiom_native_koide_Q_kit_solutions.py` /
+  Target 3 sub-step 3a.

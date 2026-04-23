@@ -305,3 +305,39 @@ compare with det(A) = 0,
 has 3 distinct successful sub-steps (2a, 2b, 2c) with a unifying
 formula.
 
+[2026-04-23 06:10] Target 3, sub-step 3a (Koide Q kit solutions) — PASS
+Tried: opened Target 3 with an achievability attempt — find a kit-
+derivable positive-sqrt-m triple (u_1, u_2, u_3) for which Koide
+Q = (Σ u_i^2) / (Σ u_i)^2 equals exactly 2/3.
+Wrote scripts/frontier_axiom_native_koide_Q_kit_solutions.py which:
+(i) symbolically verifies Q(4+3*sqrt(2), 1, 1) = 2/3 exactly,
+(ii) parametrizes the 1-parameter family of Q = 2/3 solutions via
+x(y) = 2(y+1) + sqrt(3(y^2+4y+1)), w = 1; verified for y = 1 and
+y = 2 (giving 6+sqrt(39), 2, 1),
+(iii) tests 8 simple kit-natural triples (all-ones, grade dims,
+PM counts, consecutive squares, integer AP, small primes, subalg
+dims); NONE give Q = 2/3,
+(iv) exhaustive search over all-integer triples with 1 <= u_i <= 20:
+0 solutions,
+(v) deletion test: rational (4, 1, 1) gives Q = 1/2; sqrt(2) is
+load-bearing for the minimal kit-solution.
+Target 3 status after 3a:
+- Q = 2/3 ACHIEVABILITY: yes, demonstrated with explicit kit-
+  derivable triple (4+3*sqrt(2), 1, 1). sqrt(2) = sqrt(K3 stencil
+  width) is kit-derivable via sub-step 1e.
+- Q = 2/3 UNIQUENESS: not yet achieved. 1-parameter family of
+  solutions; kit does not single out a specific physical triple.
+- K = 0 (selector current): not yet identified in kit terms.
+Accepted because: hostile audit verdict = clean. 16 computed
+record() booleans, no narrative PASSes.
+Next vector (sub-step 3b): address the uniqueness blocker and/or
+connect K = 0 to a kit-natural selector. Candidates:
+(a) identify a kit-natural "normalized reduced carrier" whose
+eigenvalues or mode structure singles out one specific triple in
+the Q = 2/3 family,
+(b) define K as a specific kit quantity (e.g., dim ker D_cube = 0
+from det(A_cube)=81 != 0) and derive that K = 0 implies Q = 2/3,
+(c) prove the 1-parameter family's freedom IS the last remaining
+kit-external primitive, giving a reclassification blocker in the
+spirit of Target 1's second-scale reclassification.
+
