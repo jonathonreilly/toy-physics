@@ -88,4 +88,12 @@ NOT commit — they write a one-paragraph entry in
 
 Populated as the loop proceeds. Format: fact / runner / commit hash.
 
-(empty at session start)
+- `2 * dim_R(Cl(3)) = 16` is a kit-derivable exact integer invariant
+  on Cl(3) x Z^3, equal to the per-site real Grassmann generator count
+  in the K3 partition; also = `|unit_cube(Z^3)|_sites * 2` and
+  `dim_R(Cl(3)) * 2` / `frontier_axiom_native_cl3_z3_integer_inventory.py`
+  / Target 1 sub-step 1a.
+- Cl(3) is a closed real algebra of dimension 8 with every
+  right-multiplication map `R_b` invertible on Cl(3) /
+  `frontier_axiom_native_cl3_z3_integer_inventory.py` /
+  Target 1 sub-step 1a.

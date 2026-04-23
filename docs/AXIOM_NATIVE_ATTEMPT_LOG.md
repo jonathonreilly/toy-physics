@@ -39,3 +39,26 @@ dimensionless exponential ratio with exponent 16" without naming
 either scale. Keep the substance (basis enumeration, K1
 verification, closure, Grassmann doubling) and purge the prose.
 
+[2026-04-23 02:15] Target 1, sub-step 1a retry (integer inventory) — PASS
+Tried: Rewrote the substance of the first attempt with prose free of
+forbidden scale tokens, into scripts/frontier_axiom_native_cl3_z3_integer_inventory.py.
+Proved from K1 + K3 alone (Pauli realization + numpy):
+(i) the 6 K1 anticommutators hold,
+(ii) the K1 basis {1, e_i, e_i e_j, omega} has cardinality 8,
+(iii) those 8 basis elements are R-linearly independent (rank 8),
+(iv) all 64 basis products lie in the real span (algebra is closed),
+(v) the per-site Grassmann real-generator count under K3 is 2 * dim_R(Cl(3)) = 16,
+(vi) deleting the (psi-bar, psi) doubling reduces the count to 8, so the factor 2 is load-bearing,
+(vii) at least two kit-derivable invariants equal exactly 16,
+(viii) right-multiplication R_b : Cl(3) -> Cl(3) is invertible for every basis element b.
+Accepted because: hostile audit verdict = clean. Nine computed
+record() booleans, no narrative PASSes, no forbidden doc citations,
+no forbidden numeric constants.
+Next vector to try (sub-step 1b): attempt to tie the integer 16 to
+a per-site or per-unit-cube quantity that plays the role of an
+exponential-ratio exponent -- e.g. the log of a free-Gaussian
+Grassmann partition function, or a cohomology rank on the staggered
+hypercube decomposition. The integer 16 is now available as a proven
+invariant; the remaining work is to identify the object whose
+exponent it is.
+
