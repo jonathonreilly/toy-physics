@@ -237,3 +237,39 @@ with 8 vertices and 12 edges) and see if C retains 2^(-16) or scales
 with topology. This would sharpen the "2^(-16) is universal for
 unicyclic even-length Z^3 graphs" conjecture, or disprove it.
 
+[2026-04-23 05:00] Target 2, sub-step 2b (unit cube partition) — PASS
+Tried: compute the K3 free partition on the 3D unit cube of Z^3 (8
+vertices, 12 edges) and test whether C retains 2^(-16) universality.
+Wrote scripts/frontier_axiom_native_unit_cube_partition.py which:
+(i) enumerates 8 cube vertices and 12 edges,
+(ii) computes staggered phases eta_mu(n) at all 8 vertices,
+(iii) builds the 8x8 antisymmetric hopping matrix A,
+(iv) verifies A is antisymmetric (A + A^T = 0),
+(v) computes det(A_cube) = 81 = 3^4 via sympy,
+(vi) verifies det(A) = det(B)^2 with B a 4x4 bipartite block having
+det(B) = 9,
+(vii) computes Z_cube = (a^2/2)^64 * 3^32 symbolically,
+(viii) computes C_cube = 3^32 / 2^64 = (3/4)^32,
+(ix) confirms C_cube differs from C_edge = C_plaq = 2^(-16),
+REFUTING the naive universality conjecture,
+(x) deletion test: removing mu=3 edges decouples cube into two
+disjoint plaquettes with det = 16 = 4^2.
+Target 2 now has TWO distinct kit-derivable predictions:
+- C_plaq = 2^(-16) on the 2x2 plaquette (2a).
+- C_cube = (3/4)^32 on the 3D unit cube (2b).
+Both with specific observables, exact values, and falsification
+thresholds. The normalized K3 partition is NOT a universal
+constant; it depends on graph topology in a specific, computable
+way. The factor 3 in C_cube emerges from the 3 mu-directions at
+each cube vertex, combined with bipartite structure and K3
+staggered phases.
+Accepted because: hostile audit verdict = clean. 18 computed record()
+booleans, no narrative PASSes.
+Next vector (sub-step 2c or other): possible directions --
+(a) characterize the general formula det(A) = f(graph topology)
+for kit-derivable Z^3 graphs (partial chip-firing / spanning-
+tree count), (b) identify a kit-natural observable that combines
+C_edge, C_plaq, C_cube into a single sharper prediction, or (c)
+move toward Target 3 if Target 2 has at least 2 distinct
+prediction surfaces (current count).
+

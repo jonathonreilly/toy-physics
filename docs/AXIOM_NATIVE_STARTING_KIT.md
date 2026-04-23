@@ -153,3 +153,14 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   `C = 0` /
   `frontier_axiom_native_plaquette_partition_universality.py` /
   Target 2 sub-step 2a.
+- The K3 free Berezin partition on the 3D unit cube of Z^3 (8
+  vertices, 12 edges, open BCs) has antisymmetric 8x8 hopping
+  matrix `A_cube` with `det(A_cube) = 81 = 3^4` (verified both
+  directly and via the bipartite block `det(B) = 9`); hence
+  `Z_cube = (a^2/2)^64 * 3^32` and the normalized constant is
+  `C_cube = 3^32 / 2^64 = (3/4)^32`, DIFFERENT from `C_edge =
+  C_plaq = 2^(-16)`. The factor 3 in det(A) traces to the 3
+  mu-directions meeting at each cube vertex; the naive
+  "2^(-16) universal" conjecture is refuted /
+  `frontier_axiom_native_unit_cube_partition.py` /
+  Target 2 sub-step 2b.
