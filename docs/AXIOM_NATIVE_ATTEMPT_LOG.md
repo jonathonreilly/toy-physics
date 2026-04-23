@@ -119,3 +119,47 @@ ratio. Also: examine the separate question of whether the second
 scale in a hierarchy ratio is kit-derivable or requires an
 independent primitive.
 
+[2026-04-23 03:17] Target 1, sub-step 1d (scale inventory + C_edge) — PASS
+Tried: Directly attacked the second half of Target 1 -- the
+reclassification question. Wrote
+scripts/frontier_axiom_native_scale_inventory_and_edge_constant.py
+which proves via L-exponent bookkeeping and sympy:
+(i) all 8 K1 algebra primitives are dimensionless,
+(ii) K2 carries exactly one dim primitive: a, with L-exponent 1,
+(iii) K3 action dim-freeness constraint 3 + dim(psi-bar) + dim(psi) - 1 = 0
+combined with psi <-> psi-bar symmetry uniquely gives
+dim(psi) = dim(psi-bar) = -1 (solved symbolically),
+(iv) per-site Berezin measure has L-exp +16 and edge measure +32,
+(v) sub-step 1c's Z_edge = (a^2/2)^16 has L-exp exactly 32,
+matching the measure count,
+(vi) C_edge := Z_edge / a^32 = 1/2^16 = 2^{-16} is a kit-dim-less
+constant (simplified symbolically),
+(vii) log_2(C_edge) = -16 (symbolic verification),
+(viii) kit-derivable mass scales all have form c/a for c dim-less;
+multiplying by a makes them dim-less as verified symbolically,
+(ix) ratio of two kit-mass-scales is dim-less rational (example: 1/2),
+(x) enumerable kit-integer set includes at least 9 distinct
+primitives (sizes 1, 3, 6, 8, 16, 2^16, etc.),
+(xi) the kit-dim-less closure is countable,
+(xii) choosing c_2 fixes the hierarchy ratio to 1/c_2 (example with
+c_2 = 2^16).
+Accepted because: hostile audit verdict = clean. 14 computed record()
+booleans, no narrative PASSes.
+Target 1 is now substantially advanced:
+- Integer 16 derived (1a, 1b, 1c).
+- Exponent 16 attached to a concrete partition (1c).
+- Scale inventory complete (1d).
+- Reclassification narrowed: second scale = c_2 / a with c_2
+  kit-dim-less; identifying c_2 is the remaining blocker at free K3.
+Next vector (sub-step 1e or jump to Target 2): either (a) attack the
+remaining blocker by identifying a natural c_2 from kit (e.g.,
+asking whether any iterated lattice operation gives a natural
+2^{large} kit-integer), or (b) move to Target 2 since Target 1 has
+at least partial closure (exponent derived, M-scale narrowed).
+LOOP_PROMPT rule 7 says sequential targets: only move on after 6
+attack vectors on same target. Current count on Target 1:
+1a, 1a-retry, 1b, 1c, 1d = 5 successful + 1 rejected = 6 total.
+Target 1 can honestly progress to closure note + move to Target 2
+on next iteration, OR continue with one more attack vector (1e)
+before deciding.
+

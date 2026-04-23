@@ -113,3 +113,21 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   for Cl(n) on a Z^n edge the exponent is `2^(n+1)` /
   `frontier_axiom_native_edge_partition_exponent_sixteen.py` /
   Target 1 sub-step 1c.
+- K1 + K2 + K3 has exactly ONE independent dimensional primitive
+  (the lattice spacing `a`); K3 action dim-freeness + psi/psi-bar
+  symmetry uniquely forces `dim(psi) = dim(psi-bar) = -1` /
+  `frontier_axiom_native_scale_inventory_and_edge_constant.py` /
+  Target 1 sub-step 1d.
+- The dim-less normalization of the edge partition is the kit
+  constant `C_edge = Z_edge / a^{32} = 2^{-16}`, so
+  `log_2(C_edge) = -16` appears as a base-2 exponent of a concrete
+  kit-dim-less number derived from K3 /
+  `frontier_axiom_native_scale_inventory_and_edge_constant.py` /
+  Target 1 sub-step 1d.
+- Every kit-derivable mass scale at free K3 level has the form
+  `c / a` with `c` a kit-dim-less constant; therefore any ratio of
+  two kit-mass-scales is a kit-dim-less number, and the "second
+  scale" in a mass hierarchy is EITHER specified by a kit-derivable
+  `c_2` OR is an independent primitive outside the kit /
+  `frontier_axiom_native_scale_inventory_and_edge_constant.py` /
+  Target 1 sub-step 1d.
