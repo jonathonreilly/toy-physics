@@ -31,6 +31,10 @@ charged-lepton lane without changing that open status. What it adds is:
 - a new axiom-native support batch of selected-line/Fourier bridge tools,
   positive-parent support constructions, set-equality / mass-assignment
   reframings, and integrated regression runners;
+- a new exact second-order `Q` support batch that lands first-live readout
+  factorization, the reduced two-block observable law, a normalized
+  effective-action candidate route, and a no-hidden-source audit that compress
+  the remaining `Q` gap to one explicit primitive;
 - a clean list of atlas issues and caveats that still matter for honest review.
 
 ## Historical Route-Pruning Record
@@ -121,12 +125,17 @@ So the current charged-lepton package status is:
   `KOIDE_EXPLICIT_CALCULATIONS_NOTE.md`
 - April 22 axiom-native support batch summary in
   `KOIDE_AXIOM_NATIVE_SUPPORT_BATCH_NOTE_2026-04-22.md`
+- April 22 second-order `Q` support batch summary in
+  `KOIDE_Q_SECOND_ORDER_SUPPORT_BATCH_NOTE_2026-04-22.md`
 - April 22 Brannen geometry / Dirac support addendum in
   `KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`
 - April 22 Callan-Harvey physical-bridge candidate in
   `KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md`
 - remaining open bridge behind `Q = 2/3`: why the physical charged-lepton
-  packet must extremize the block-total Frobenius functional
+  packet must extremize the block-total Frobenius functional; after the
+  second-order support batch this is now sharpened further to the source-free
+  law `K = 0` on the normalized second-order reduced carrier if that carrier is
+  accepted
 - remaining open bridge behind `δ = 2/9`: why the physical selected-line
   Brannen phase equals the ambient APS invariant
 - selected-line witness `m_*` / `w/v` remains downstream of the physical

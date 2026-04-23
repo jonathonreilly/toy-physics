@@ -30,6 +30,15 @@ An additional April 22 support addendum now also lands:
 - an explicit finite-lattice `L = 3` Wilson-Dirac illustration showing
   recurrence of per-fixed-site `η = 2/9` on the natural 3-generation carrier.
 
+A further April 22 support layer now also lands:
+
+- an exact second-order `Q` support batch that isolates the first-live
+  second-order readout quotient, the unique minimal scale-free selector
+  variable on that carrier, the exact reduced two-block observable law, and a
+  no-hidden-source audit that compresses the remaining `Q` gap to one explicit
+  primitive: why the physical charged-lepton selector is source-free on the
+  normalized second-order carrier.
+
 ## What this batch does not close
 
 The open scientific status is unchanged.
@@ -40,6 +49,11 @@ The package still does not derive why the physical charged-lepton packet must
 extremize the block-total Frobenius functional. The new April 22 scripts add
 bridge candidates, consistency checks, and reformulations, but they do not
 discharge that physical identification theorem.
+
+The second-order addendum sharpens that statement further: the remaining
+primitive is no longer best read as “find the right extremal functional,” but
+as “derive why the physical charged-lepton selector is source-free on the
+normalized second-order reduced carrier.”
 
 ### 2. The `δ = 2/9` physical Brannen-phase bridge remains open
 
@@ -98,3 +112,5 @@ closure work better tools, but it does not change the current public status:
 
 For the Brannen-specific addendum, see
 `docs/KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`.
+For the second-order `Q` addendum, see
+`docs/KOIDE_Q_SECOND_ORDER_SUPPORT_BATCH_NOTE_2026-04-22.md`.

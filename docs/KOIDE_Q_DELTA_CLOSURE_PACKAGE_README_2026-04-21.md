@@ -7,7 +7,7 @@ phase `δ = 2/9 rad`, and their compatibility identity `Q = 3·δ`.
 **Status:** Ready for review as the strongest current executable support
 package. Two explicit scientific bridges remain open.
 
-**2026-04-22 support addendum.** The April 22 support work now comes in three
+**2026-04-22 support addendum.** The April 22 support work now comes in four
 layers. The first adds new bridge-targeting tools, selected-line/Fourier
 bridge diagnostics, zero-mode / APS support models, and radiative Yukawa
 support calculations. The second adds a Brannen-specific geometry/Dirac
@@ -16,12 +16,18 @@ support, a conditional Route-3 Wilson-line law, and an explicit finite-lattice
 `L = 3` Wilson-Dirac illustration of the ambient `2/9` value. The third adds
 an explicit Callan-Harvey anomaly-descent candidate on the accepted
 physical-lattice reading, isolating the remaining Berry/inflow identification
-and exact descent-normalization theorems. These additions strengthen the
-package materially without changing the open status of the two physical
-bridges. See
+and exact descent-normalization theorems. The fourth adds an exact
+second-order `Q` support batch: first-live readout factorization, a unique
+minimal scale-free selector variable on the admitted carrier, an exact reduced
+two-block observable law, a normalized effective-action candidate route, and a
+no-hidden-source audit that compresses the remaining `Q` gap to one explicit
+primitive `K = 0` on the normalized second-order carrier. These additions
+strengthen the package materially without changing the open status of the two
+physical bridges. See
 `docs/KOIDE_AXIOM_NATIVE_SUPPORT_BATCH_NOTE_2026-04-22.md`,
 `docs/KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`, and
-`docs/KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md`.
+`docs/KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md`, and
+`docs/KOIDE_Q_SECOND_ORDER_SUPPORT_BATCH_NOTE_2026-04-22.md`.
 
 **Executability guarantee.** Every PASS check across the current runner stack
 is an actual executable computation: symbolic via sympy, numeric via PDG
@@ -80,6 +86,12 @@ functional is extremized. What remains open is the physical/source-law bridge:
 This is the same residue still named in
 `docs/KOIDE_KAPPA_BLOCK_TOTAL_FROBENIUS_MEASURE_THEOREM_NOTE_2026-04-19.md`:
 the unresolved choice of canonical extremal principle.
+
+The April 22 second-order support batch sharpens that residue further:
+
+> if the admitted second-order reduced carrier is accepted, the remaining open
+> step is exactly why the physical charged-lepton selector is source-free
+> (`K = 0`) there.
 
 ### 2. Brannen phase `δ = 2/9`
 
