@@ -97,3 +97,10 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   right-multiplication map `R_b` invertible on Cl(3) /
   `frontier_axiom_native_cl3_z3_integer_inventory.py` /
   Target 1 sub-step 1a.
+- The set `P = {±1, ±e_i, ±e_ie_j, ±ω}` of signed Cl(3)-basis
+  elements forms a group of order 16 under the K1 product, with
+  `{±1}` normal and `P/{±1} ≅ (Z_2)^3 ≅` unit-cube vertex group
+  of `Z^3`; hence `|P| = 2^(1 + dim_Z^3) = 2^4 = 16`, tying the
+  integer 16 to the `Z^3` dimensionality n = 3 directly /
+  `frontier_axiom_native_clifford_signed_cube_group.py` /
+  Target 1 sub-step 1b.

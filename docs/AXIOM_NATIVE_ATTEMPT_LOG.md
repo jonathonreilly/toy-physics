@@ -62,3 +62,30 @@ hypercube decomposition. The integer 16 is now available as a proven
 invariant; the remaining work is to identify the object whose
 exponent it is.
 
+[2026-04-23 02:35] Target 1, sub-step 1b (signed cube group) — PASS
+Tried: Instead of tying 16 to a Grassmann count (already in ledger),
+introduced a genuinely different structural object: the Clifford-
+signed basis group P = {+/- Cl(3)_basis} under the K1 product.
+Wrote scripts/frontier_axiom_native_clifford_signed_cube_group.py
+which proves by direct multiplication-table construction:
+(i) P has 16 pairwise-distinct elements,
+(ii) P is closed under the K1 product (all 256 products land in P),
+(iii) P has unique identity +1, every element has a two-sided
+inverse in P, and associativity holds (verified on 256 random triples),
+(iv) {+/-1} is a normal subgroup of order 2,
+(v) P/{+/-1} is elementary abelian of order 8 isomorphic to (Z_2)^3,
+(vi) the quotient is isomorphic to the unit-cube vertex group of
+Z^3 under componentwise XOR, via the bijection e_S <-> chi_S,
+(vii) |P| = 2^(1 + dim_Z^3) = 2^4 = 16, relating 16 to the spatial
+dimension n = 3 directly,
+(viii) deleting the sign subgroup {+/-1} reduces the order to 8;
+the Clifford sign is load-bearing.
+Accepted because: hostile audit verdict = clean. 15 computed record()
+booleans, no narrative PASSes, no forbidden tokens.
+Next vector (sub-step 1c): tie |P| = 16 to a kit-derivable log-scale
+or trace. Candidates: (a) |P|-orbit count on a function space over
+Z^3, (b) P-equivariant cohomology rank on a finite Z^3 patch,
+(c) log of a free Grassmann partition function with a P-invariant
+action term. Any of these would produce an object whose "exponent"
+could be 16.
+
