@@ -1,8 +1,20 @@
 # Planck-Scale Source-Free Local Traciality Event-Frame Route
 
 **Date:** 2026-04-23  
-**Status:** science-only direct event-frame route to the last Planck blocker; exact reduction plus sharp obstruction  
+**Status:** historical event-frame reduction; superseded for the canonical packet by Axiom Extension P1 and `PLANCK_SCALE_EVENT_FRAME_NO_INFORMATION_STATE_THEOREM_2026-04-23.md`
 **Audit runner:** `scripts/frontier_planck_source_free_local_traciality_event_frame_route.py`
+
+## Supersession note
+
+This note remains useful because it proves that the older retained direct stack
+with only residual `S_3` symmetry does **not** force traciality. The canonical
+Planck packet no longer claims that `S_3` closes the state law. It explicitly
+promotes Axiom Extension P1, whose no-preferred-primitive-event law supplies the
+missing transitivity on the bare source-free primitive event frame.
+
+The hardened state theorem is:
+
+- [PLANCK_SCALE_EVENT_FRAME_NO_INFORMATION_STATE_THEOREM_2026-04-23.md](./PLANCK_SCALE_EVENT_FRAME_NO_INFORMATION_STATE_THEOREM_2026-04-23.md)
 
 ## Question
 
@@ -335,6 +347,10 @@ So the strongest honest status is:
   preferred primitive projector on the full source-free `C^16` cell
 
 ## Safe wording
+
+The following safe/cannot-claim split applies to the older retained direct stack
+**without** Axiom Extension P1. The canonical packet now closes the state law by
+explicitly adding P1.
 
 **Can claim**
 

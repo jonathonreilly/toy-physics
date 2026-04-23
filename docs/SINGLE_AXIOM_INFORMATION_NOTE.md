@@ -10,6 +10,13 @@ the current paper package, whose framework statement remains `Cl(3)` on `Z^3`
 with the audited package boundary recorded in
 `docs/MINIMAL_AXIOMS_2026-04-11.md`.
 
+**Planck-branch update:** for the Planck-scale branch, this surface is now
+explicitly promoted as Axiom Extension P1 for local source-free state semantics;
+see
+`docs/PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md`.
+This file remains the reduction/support note; the Planck packet's load-bearing
+governance move is recorded in that extension theorem.
+
 ## The claim
 
 The two axioms of the model (graph substrate + unitary dynamics) are not

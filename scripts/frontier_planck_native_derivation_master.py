@@ -14,8 +14,11 @@ SUBCHECKS = [
     "frontier_planck_worldtube_to_boundary_cell_counting_theorem_lane.py",
     "frontier_planck_universal_cell_coefficient_not_vacuum_expectation_theorem.py",
     "frontier_planck_primitive_coefficient_object_class_theorem.py",
+    "frontier_planck_one_axiom_extension_acceptance_theorem.py",
     "frontier_planck_one_axiom_conservative_semantics_bridge_theorem.py",
+    "frontier_planck_event_frame_no_information_state_theorem.py",
     "frontier_planck_source_free_default_datum_from_one_axiom_theorem.py",
+    "frontier_planck_area_action_normalization_theorem.py",
 ]
 
 
@@ -73,7 +76,7 @@ def main() -> int:
     passed += expect(
         "packet-states-authorized-surface",
         "Authorized surface" in packet
-        and "one-axiom information / Hilbert / locality surface" in packet,
+        and "Axiom Extension P1" in packet,
     )
 
     total += 1
@@ -85,8 +88,25 @@ def main() -> int:
 
     total += 1
     passed += expect(
+        "packet-replaces-u2-with-event-frame-state-law",
+        "does **not** use arbitrary factor-local `U(2)^4`" in packet
+        and "`P_A` is invariantly defined" in packet
+        and "packet-preserving symmetry alone" in packet,
+    )
+
+    total += 1
+    passed += expect(
+        "packet-records-standalone-area-action-normalization",
+        "S_grav / k_B = A c_light^3 / (4 G hbar)" in packet
+        and "`a^2 = 4 c_cell l_P^2`" in packet,
+    )
+
+    total += 1
+    passed += expect(
         "packet-derives-planck-length",
-        "`a^2 = l_P^2`" in packet and "`a = l_P`" in packet,
+        "`a^2 = l_P^2`" in packet
+        and "`a = l_P`" in packet
+        and "standard gravitational area/action normalization" in packet,
     )
 
     print(f"SUMMARY: PASS={passed} FAIL={total - passed}")

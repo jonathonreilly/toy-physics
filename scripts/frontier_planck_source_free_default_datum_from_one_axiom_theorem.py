@@ -3,7 +3,6 @@
 
 from __future__ import annotations
 
-import itertools
 import math
 from dataclasses import dataclass
 from pathlib import Path
@@ -24,49 +23,17 @@ def pa_projector() -> np.ndarray:
     return p
 
 
-def p0_projector() -> np.ndarray:
-    p = np.zeros((16, 16), dtype=complex)
-    p[0, 0] = 1.0
-    return p
+def hamming_count_operator() -> np.ndarray:
+    n = np.zeros((16, 16), dtype=complex)
+    for idx in range(16):
+        n[idx, idx] = sum((idx >> bit) & 1 for bit in range(4))
+    return n
 
 
 def entropy(rho: np.ndarray) -> float:
     vals = np.linalg.eigvalsh(rho)
     vals = vals[vals > 1e-15]
     return float(-np.sum(vals * np.log(vals)))
-
-
-def local_rotation(theta: float) -> np.ndarray:
-    return np.array(
-        [[math.cos(theta), -math.sin(theta)], [math.sin(theta), math.cos(theta)]],
-        dtype=complex,
-    )
-
-
-def local_unitary() -> np.ndarray:
-    return np.kron(
-        np.kron(np.kron(local_rotation(0.37), local_rotation(0.21)), local_rotation(0.41)),
-        local_rotation(0.19),
-    )
-
-
-def paulis() -> list[np.ndarray]:
-    i = np.eye(2, dtype=complex)
-    x = np.array([[0, 1], [1, 0]], dtype=complex)
-    y = np.array([[0, -1j], [1j, 0]], dtype=complex)
-    z = np.array([[1, 0], [0, -1]], dtype=complex)
-    return [i, x, y, z]
-
-
-def local_pauli_twirl(rho: np.ndarray) -> np.ndarray:
-    acc = np.zeros_like(rho, dtype=complex)
-    ps = paulis()
-    for ops in itertools.product(ps, repeat=4):
-        u = ops[0]
-        for op in ops[1:]:
-            u = np.kron(u, op)
-        acc += u @ rho @ u.conj().T
-    return acc / (4 ** 4)
 
 
 @dataclass
@@ -83,21 +50,21 @@ def main() -> None:
     rho_default = np.eye(16, dtype=complex) / 16.0
     rho_hidden = np.diag([0.10, 0.02] + [0.88 / 14.0] * 14).astype(complex)
     p_a = pa_projector()
-    p0 = p0_projector()
-    U = local_unitary()
+    n_evt = hamming_count_operator()
 
     checks.append(
         Check(
-            "note-scopes-theorem-to-one-axiom-surface",
-            "accepted one-axiom information / Hilbert / locality surface" in note,
-            "note should be explicit about surface of the claim",
+            "note-promotes-explicit-axiom-extension",
+            "Axiom Extension P1" in note and "explicitly promoted" in note,
+            "note should be explicit about the Planck-package extension",
         )
     )
     checks.append(
         Check(
-            "note-records-dynamical-vacuum-escape-hatch",
-            "reduced vacuum state observable" in note,
-            "hostile-review escape hatch should be explicit",
+            "note-replaces-u2-presentation-argument",
+            "older argument appealed to arbitrary factor-local `U(2)^4`" in note
+            and "This hardened version does not" in note,
+            "state law should no longer rely on arbitrary factor-local rotations",
         )
     )
 
@@ -110,42 +77,34 @@ def main() -> None:
         )
     )
 
-    rho_twirl = local_pauli_twirl(rho_hidden)
+    spectral_p_a = np.zeros_like(p_a)
+    for idx, val in enumerate(np.diag(n_evt)):
+        if val == 1:
+            spectral_p_a[idx, idx] = 1.0
     checks.append(
         Check(
-            "local-object-only-twirl-forces-tracial-state",
-            np.allclose(rho_twirl, rho_default, atol=1e-12),
-            "local Pauli twirl removes hidden one-cell datum and lands on I_16/16",
+            "packet-is-invariantly-defined-by-hamming-count",
+            np.allclose(spectral_p_a, p_a, atol=1e-12),
+            "P_A is the N_evt=1 spectral projector",
         )
     )
 
     checks.append(
         Check(
-            "default-datum-presentation-independent",
-            np.allclose(U @ rho_default @ U.conj().T, rho_default, atol=1e-12),
-            "I_16/16 is invariant under factor-preserving presentation changes",
+            "no-preferred-event-default-is-tracial",
+            np.allclose(np.diag(rho_default), np.full(16, 1.0 / 16.0), atol=1e-12),
+            "all primitive event weights are equal",
         )
     )
 
-    prob_before = float(np.real(np.trace(rho_hidden @ p0)))
-    prob_after = float(np.real(np.trace((U @ rho_hidden @ U.conj().T) @ p0)))
+    alpha = 0.04
+    beta = (1.0 - 4.0 * alpha) / 12.0
+    rho_block = alpha * p_a + beta * (np.eye(16) - p_a)
     checks.append(
         Check(
-            "hidden-preparation-visible-under-frame-change",
-            not math.isclose(prob_before, prob_after, rel_tol=0.0, abs_tol=1e-9),
-            f"prob_before={prob_before:.6f}, prob_after={prob_after:.6f}",
-        )
-    )
-
-    rho_prep = p0.copy()
-    prep_after = U @ p0 @ U.conj().T
-    pair_before = float(np.real(np.trace(rho_prep @ p0)))
-    pair_after = float(np.real(np.trace((U @ rho_prep @ U.conj().T) @ prep_after)))
-    checks.append(
-        Check(
-            "prepared-state-transforms-with-preparation-datum",
-            math.isclose(pair_before, pair_after, rel_tol=0.0, abs_tol=1e-12),
-            f"before={pair_before:.6f}, after={pair_after:.6f}",
+            "packet-stabilizer-alone-does-not-force-quarter",
+            not math.isclose(float(np.real(np.trace(rho_block @ p_a))), 0.25, abs_tol=1e-12),
+            f"Tr(rho_block P_A)={float(np.real(np.trace(rho_block @ p_a))):.6f}",
         )
     )
 

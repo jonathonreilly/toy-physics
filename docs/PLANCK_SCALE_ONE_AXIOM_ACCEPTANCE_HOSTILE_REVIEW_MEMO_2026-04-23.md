@@ -4,6 +4,20 @@
 **Status:** branch-local hostile-review memo on whether the one-axiom default-datum route is native enough to carry the Planck lane  
 **Audit runner:** `scripts/frontier_planck_one_axiom_acceptance_hostile_review_memo.py`
 
+## Supersession note
+
+This memo predates the explicit Planck-package axiom-extension hardening. The
+canonical packet now promotes the one-axiom surface as Axiom Extension P1 and
+uses the event-frame no-information state theorem plus a standalone area/action
+normalization theorem:
+
+- [PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md)
+- [PLANCK_SCALE_EVENT_FRAME_NO_INFORMATION_STATE_THEOREM_2026-04-23.md](./PLANCK_SCALE_EVENT_FRAME_NO_INFORMATION_STATE_THEOREM_2026-04-23.md)
+- [PLANCK_SCALE_AREA_ACTION_NORMALIZATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_AREA_ACTION_NORMALIZATION_THEOREM_2026-04-23.md)
+
+So any older wording here about a "candidate" or "conservative bridge" should be
+read as historical risk analysis, not the final canonical claim.
+
 ## Question
 
 After the primitive cell, counting operator, and object-class issues are

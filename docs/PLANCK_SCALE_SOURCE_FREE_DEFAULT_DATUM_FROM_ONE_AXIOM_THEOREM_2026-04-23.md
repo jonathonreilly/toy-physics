@@ -1,7 +1,7 @@
 # Planck-Scale Source-Free Default Datum from One Axiom Theorem
 
 **Date:** 2026-04-23  
-**Status:** branch-local theorem candidate on the accepted one-axiom information / Hilbert / locality surface  
+**Status:** branch-local theorem on the explicit Axiom Extension P1 information / Hilbert / locality surface
 **Audit runner:** `scripts/frontier_planck_source_free_default_datum_from_one_axiom_theorem.py`
 
 ## Question
@@ -21,7 +21,7 @@ interacting theory is tracial. The target is narrower:
 
 ## Bottom line
 
-Yes, in theorem-candidate form.
+Yes, on the explicit Axiom Extension P1 surface.
 
 On the accepted one-axiom surface, the primitive physical substrate is a real
 local object and information is conserved and local. A nontrivial local state
@@ -35,11 +35,11 @@ So on that surface:
 > a source-free primitive-cell state is the default datum of the bare physical
 > cell object, not an arbitrary unknown prepared state.
 
-For the exact time-locked primitive cell
+For the exact time-locked primitive event frame
 
-`H_cell = C^2_t ⊗ C^2_x ⊗ C^2_y ⊗ C^2_z ~= C^16`,
+`E = {P_eta : eta in {0,1}^4}`,
 
-default-datum status plus factor-preserving presentation independence forces
+default-datum status plus no-preferred-primitive-event forces
 
 `rho_cell = I_16 / 16`.
 
@@ -61,11 +61,12 @@ hence
 
 ## Scope and exact claim
 
-This note works on the **accepted one-axiom information / Hilbert / locality
-surface**, not on the smaller front-door minimal input ledger by itself. That
-surface is already used in the package to support physical-lattice ontology and
-Hilbert-semantics claims; see:
+This note works on **Axiom Extension P1**, the explicitly promoted one-axiom
+information / Hilbert / locality surface for the Planck packet, not on the
+smaller front-door minimal input ledger by itself. The older reduction notes are
+supporting background; the governance promotion is recorded in:
 
+- [PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md)
 - [SINGLE_AXIOM_INFORMATION_NOTE.md](./SINGLE_AXIOM_INFORMATION_NOTE.md)
 - [SINGLE_AXIOM_HILBERT_NOTE.md](./SINGLE_AXIOM_HILBERT_NOTE.md)
 - [PHYSICAL_LATTICE_NECESSITY_NOTE.md](./PHYSICAL_LATTICE_NECESSITY_NOTE.md)
@@ -91,6 +92,7 @@ It claims only:
 - [PHYSICAL_LATTICE_NECESSITY_NOTE.md](./PHYSICAL_LATTICE_NECESSITY_NOTE.md)
 - [PLANCK_SCALE_TIMELOCKED_FACTOR_CELL_OBJECT_DERIVATION_2026-04-23.md](./PLANCK_SCALE_TIMELOCKED_FACTOR_CELL_OBJECT_DERIVATION_2026-04-23.md)
 - [PLANCK_SCALE_KINEMATIC_CELL_COEFFICIENT_THEOREM_CANDIDATE_2026-04-23.md](./PLANCK_SCALE_KINEMATIC_CELL_COEFFICIENT_THEOREM_CANDIDATE_2026-04-23.md)
+- [PLANCK_SCALE_EVENT_FRAME_NO_INFORMATION_STATE_THEOREM_2026-04-23.md](./PLANCK_SCALE_EVENT_FRAME_NO_INFORMATION_STATE_THEOREM_2026-04-23.md)
 
 ## Three distinct notions
 
@@ -166,39 +168,51 @@ Therefore:
 > default datum of the bare physical cell object, not an arbitrary hidden
 > preparation.
 
-## Theorem 2: default datum on the exact primitive cell is tracial
+## Theorem 2: default datum on the exact primitive event frame is tracial
 
-On the direct Planck lane, the exact primitive cell object is
+On the direct Planck lane, the exact primitive cell has physical event frame
 
-`H_cell = C^2_t ⊗ C^2_x ⊗ C^2_y ⊗ C^2_z ~= C^16`.
+`E = {P_eta : eta in {0,1}^4}`.
 
-The factor labels `t, x, y, z` are physical, but a basis choice inside each
-`C^2` factor is only a presentation of the same object. So a default datum
-attached to the bare object itself must be well-defined under factor-preserving
-presentation changes:
+The older argument appealed to arbitrary factor-local `U(2)^4` presentation
+changes. This hardened version does not. The physical event frame is retained.
 
-`rho_sf = (U_t ⊗ U_x ⊗ U_y ⊗ U_z) rho_sf (U_t ⊗ U_x ⊗ U_y ⊗ U_z)^dagger`
+Define
 
-for all `U_mu in U(2)`.
+`N_evt = sum_eta |eta| P_eta`.
 
-This forces `rho_sf = I_16 / 16`.
+The packet is invariantly defined as
 
-### Proof
+`P_A = 1_{N_evt = 1}`.
 
-Invariance under arbitrary `U_t` forces
+So `P_A` is a physical readout projector on the event frame, not an arbitrary
+basis choice.
 
-`rho_sf = (I_2 / 2) ⊗ A_xyz`
+Now apply Axiom Extension P1: a source-free bare primitive cell has no preferred
+primitive event unless such a preference is supplied by a source, preparation,
+boundary condition, or dynamical embedding. For the bare source-free cell no such
+datum is supplied.
 
-for some normalized positive `A_xyz`.
+Therefore all primitive event weights are equal:
 
-Applying the same argument successively to the `x`, `y`, and `z` factors gives
+`rho_sf = sum_eta p P_eta`.
 
-`rho_sf = (I_2 / 2)^⊗4 = I_16 / 16`.
+Normalization gives
 
-Equivalently: the commutant of the full factor-preserving local unitary action
-is scalar on the bare labeled factorized cell.
+`16 p = 1`,
 
-So the unique normalized default datum of the bare primitive cell is tracial.
+so
+
+`p = 1/16`.
+
+Hence
+
+`rho_sf = I_16 / 16`.
+
+Packet-preserving symmetry alone would not be enough: it would allow
+`rho = alpha P_A + beta (I - P_A)`. The state law is instead no preferred
+primitive event for the bare source-free cell, while `P_A` remains the fixed
+worldtube readout evaluated afterward.
 
 ## Corollary 1: quarter and Planck
 
@@ -210,7 +224,7 @@ one gets
 
 `c_cell = Tr((I_16/16) P_A) = 4/16 = 1/4`.
 
-Therefore the direct route gives
+The area/action normalization theorem then gives
 
 `a^2 = l_P^2`,
 
@@ -240,20 +254,18 @@ matters.
 
 ## Honest status
 
-This is the sharpest one-axiom route on the branch so far.
+This is the hardened one-axiom route on the branch.
 
 My honest read is:
 
-- on the accepted one-axiom information / Hilbert / locality surface, this is
-  a serious theorem candidate and arguably the cleanest native version of the
-  default-datum step;
-- on the smaller front-door minimal input ledger alone, it is still upstream of
-  what has been explicitly retained.
+- on Axiom Extension P1, this is a theorem-level state-law close;
+- on the smaller front-door minimal input ledger alone, it remains an explicit
+  axiom-extension move rather than a derivation.
 
-So the exact remaining hostile-review escape hatch is now very narrow:
+So the exact remaining hostile-review escape hatch is now explicit:
 
-> deny that the elementary Planck coefficient is kinematic primitive-cell
-> counting data, and reclassify it as a dynamical reduced-state observable.
+> deny Axiom Extension P1's no-preferred-primitive-event state law, or
+> reclassify the elementary Planck coefficient as a dynamical reduced-state
+> observable rather than kinematic primitive-cell counting data.
 
-If that reclassification is rejected, the one-axiom default-datum route closes
-cleanly.
+If those denials are rejected, the one-axiom default-datum route closes cleanly.

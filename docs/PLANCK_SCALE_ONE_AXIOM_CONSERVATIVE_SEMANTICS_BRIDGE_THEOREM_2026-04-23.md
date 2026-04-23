@@ -1,8 +1,21 @@
 # Planck-Scale One-Axiom Conservative Semantics Bridge Theorem
 
 **Date:** 2026-04-23  
-**Status:** branch-local bridge theorem for authorizing the one-axiom surface in the Planck lane  
+**Status:** branch-local bridge theorem; superseded as governance by explicit Axiom Extension P1
 **Audit runner:** `scripts/frontier_planck_one_axiom_conservative_semantics_bridge_theorem.py`
+
+## Supersession note
+
+This note showed that using the one-axiom information / Hilbert / locality
+surface did not import a numerical scale. The canonical Planck packet now makes
+the governance step explicit instead of leaving it as a "conservative bridge":
+
+- [PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md)
+
+So the current branch status is stronger and cleaner:
+
+> the one-axiom surface is an accepted Planck-package axiom extension for local
+> source-free state semantics, not merely an implicit support note.
 
 ## Question
 
