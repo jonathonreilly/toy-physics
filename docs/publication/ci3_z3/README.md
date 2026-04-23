@@ -1,4 +1,4 @@
-# CI(3) / Z^3 Publication Package
+# Cl(3) / Z^3 Publication Package
 
 This directory is the public scientific package for the current `main` branch.
 
@@ -14,14 +14,14 @@ Use it if you want:
 1. [Public arXiv draft](./ARXIV_DRAFT.md)
 2. [Prediction surface](./PREDICTION_SURFACE_2026-04-15.md)
 3. [Quantitative summary table](./QUANTITATIVE_SUMMARY_TABLE.md)
-4. [Claims table](./CLAIMS_TABLE.md)
-5. [Science map by domain](./SCIENCE_MAP.md)
-6. [Reproduce guide](./REPRODUCE.md)
+4. [Reproduce guide](./REPRODUCE.md)
+5. [Manuscript claims surface](./CLAIMS_TABLE.md)
+6. [Science map by domain](./SCIENCE_MAP.md)
 7. [Inputs and qualifiers](./INPUTS_AND_QUALIFIERS_NOTE.md)
 8. [What this paper does not claim](./WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
 9. [Derivation / validation map](./DERIVATION_VALIDATION_MAP.md)
-10. [Derivation atlas](./DERIVATION_ATLAS.md)
-11. [Results index](./RESULTS_INDEX.md)
+10. [Results index](./RESULTS_INDEX.md)
+11. [Derivation atlas](./DERIVATION_ATLAS.md)
 12. [Full claim ledger](./FULL_CLAIM_LEDGER.md)
 
 For the full package-capture inventory, use:
@@ -67,7 +67,7 @@ The package is organized around four distinct surfaces:
 
 Those surfaces are intentionally separate:
 
-- [CLAIMS_TABLE.md](./CLAIMS_TABLE.md) is the manuscript claim surface
+- [CLAIMS_TABLE.md](./CLAIMS_TABLE.md) is the short manuscript claim surface
 - [PREDICTION_SURFACE_2026-04-15.md](./PREDICTION_SURFACE_2026-04-15.md) is the
   shortest public prediction/falsification surface
 - [SCIENCE_MAP.md](./SCIENCE_MAP.md) is the domain-organized science map
@@ -103,8 +103,9 @@ Those surfaces are intentionally separate:
 Use these in order:
 
 1. [REPRODUCE.md](./REPRODUCE.md)
-2. [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
-3. [RESULTS_INDEX.md](./RESULTS_INDEX.md)
+2. [RELEASE_ENVIRONMENT.md](./RELEASE_ENVIRONMENT.md)
+3. [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md)
+4. [RESULTS_INDEX.md](./RESULTS_INDEX.md)
 
 Validation rule:
 

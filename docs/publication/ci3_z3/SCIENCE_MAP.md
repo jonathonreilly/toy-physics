@@ -25,11 +25,15 @@ For reproduction, use [REPRODUCE.md](./REPRODUCE.md).
   [INPUTS_AND_QUALIFIERS_NOTE.md](./INPUTS_AND_QUALIFIERS_NOTE.md) and
   [WHAT_THIS_PAPER_DOES_NOT_CLAIM.md](./WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
 
-Start with:
+If you are arriving for the first time, start with:
 
 - [ARXIV_DRAFT.md](./ARXIV_DRAFT.md)
+- [PREDICTION_SURFACE_2026-04-15.md](./PREDICTION_SURFACE_2026-04-15.md)
+- [REPRODUCE.md](./REPRODUCE.md)
 - [CLAIMS_TABLE.md](./CLAIMS_TABLE.md)
-- [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md)
+
+Use [PUBLICATION_MATRIX.md](./PUBLICATION_MATRIX.md) only when you want the
+full package-capture inventory rather than the shortest public route.
 
 ## Spacetime, Gravity, and Quantum Gravity
 
@@ -211,7 +215,8 @@ Validate with:
   [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md),
   [RESULTS_INDEX.md](./RESULTS_INDEX.md)
 - reproduction path:
-  [REPRODUCE.md](./REPRODUCE.md)
+  [REPRODUCE.md](./REPRODUCE.md),
+  [RELEASE_ENVIRONMENT.md](./RELEASE_ENVIRONMENT.md)
 - reusable theorem/value path:
   [DERIVATION_ATLAS.md](./DERIVATION_ATLAS.md),
   [USABLE_DERIVED_VALUES_INDEX.md](./USABLE_DERIVED_VALUES_INDEX.md)

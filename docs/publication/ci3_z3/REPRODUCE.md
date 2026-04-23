@@ -1,16 +1,34 @@
 # Reproduce Guide
 
-Run these from the repo root on the current `main`.
+Run these from the repo root on the checked-out public package state.
 
 This file is the quickest route to validating the active package. For claim
 boundaries, pair it with [DERIVATION_VALIDATION_MAP.md](./DERIVATION_VALIDATION_MAP.md).
-For domain routing, pair it with [SCIENCE_MAP.md](./SCIENCE_MAP.md).
+For domain routing, pair it with [SCIENCE_MAP.md](./SCIENCE_MAP.md). For the
+exact validated runtime, use [RELEASE_ENVIRONMENT.md](./RELEASE_ENVIRONMENT.md).
+
+## Pinned Environment
+
+The public validation surface is pinned to:
+
+- Python `3.13.5`
+- `numpy==2.4.4`
+- `scipy==1.17.1`
+
+Install with:
+
+```bash
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements-release.txt
+```
 
 ## Fastest Validation Paths
 
 Choose the slice that matches what you are trying to check.
 
-### Retained backbone
+### Manuscript-core retained backbone
 
 ```bash
 python3 scripts/frontier_self_consistent_field_equation.py
@@ -25,7 +43,7 @@ python3 scripts/frontier_three_generation_observable_theorem.py
 python3 scripts/frontier_strong_cp_theta_zero.py
 ```
 
-### Quantitative package
+### Manuscript-core quantitative package
 
 ```bash
 python3 scripts/frontier_hierarchy_observable_principle_from_axiom.py
@@ -36,12 +54,17 @@ python3 scripts/frontier_higgs_mass_full_3loop.py
 python3 scripts/frontier_ckm_atlas_axiom_closure.py
 ```
 
-### Flagship/open and package-support lanes
+### Manuscript-surface dark-matter package
 
 ```bash
 python3 scripts/frontier_dm_leptogenesis_transport_status.py
 python3 scripts/frontier_dm_abcc_retained_measurement_closure_2026_04_21.py
 python3 scripts/frontier_dm_pmns_ordered_chain_graded_current_delta_closure_2026_04_21.py
+```
+
+### Open and support lanes
+
+```bash
 python3 scripts/frontier_koide_reviewer_stress_test.py
 python3 scripts/frontier_koide_lane_regression.py
 python3 scripts/frontier_planck_scale_program_audit.py
@@ -55,6 +78,9 @@ python3 scripts/frontier_planck_scale_program_audit.py
 - use [RESULTS_INDEX.md](./RESULTS_INDEX.md) when you want the canonical
   note/runner path for a specific lane
 - do not elevate bounded or support lanes from raw stdout alone
+- treat the first three validation blocks above as the release-grade public
+  validation path; treat the open/support block as package context rather than
+  manuscript-core validation
 
 Historical runner-name caveats:
 
@@ -77,6 +103,7 @@ Historical runner-name caveats:
 
 Before release:
 
+- use the pinned environment above
 - pin the exact commit hash
 - confirm that the manuscript, claims table, inputs/qualifiers note, and
   non-claims note agree on the released package boundary
