@@ -5,6 +5,7 @@
 **Master verifier:** `scripts/frontier_planck_native_derivation_master.py`
 **Plain-language external-review status:** [PLANCK_SCALE_NATURE_REVIEW_PLAIN_LANGUAGE_STATUS_2026-04-23.md](./PLANCK_SCALE_NATURE_REVIEW_PLAIN_LANGUAGE_STATUS_2026-04-23.md)
 **Bare-axiom unit-map audit:** [PLANCK_SCALE_AXIOM_ONLY_GRAVITY_UNIT_MAP_FINAL_AUDIT_2026-04-23.md](./PLANCK_SCALE_AXIOM_ONLY_GRAVITY_UNIT_MAP_FINAL_AUDIT_2026-04-23.md)
+**Clean closure criterion:** [PLANCK_SCALE_CLEAN_CLOSURE_CRITERION_THEOREM_2026-04-23.md](./PLANCK_SCALE_CLEAN_CLOSURE_CRITERION_THEOREM_2026-04-23.md)
 
 ## External-Review Scope Warning
 

@@ -29,6 +29,7 @@ SUBCHECKS = [
     "frontier_planck_claim_scope_hostile_audit.py",
     "frontier_planck_remaining_denials_target_change_theorem.py",
     "frontier_planck_axiom_only_gravity_unit_map_final_audit.py",
+    "frontier_planck_clean_closure_criterion_theorem.py",
 ]
 
 
@@ -66,6 +67,7 @@ def main() -> int:
     packet = read("docs/PLANCK_SCALE_NATIVE_DERIVATION_THEOREM_PACKET_2026-04-23.md")
     reviewer = read("docs/PLANCK_SCALE_REVIEWER_CANONICAL_SUBMISSION_PACKET_2026-04-23.md")
     nature_status = read("docs/PLANCK_SCALE_NATURE_REVIEW_PLAIN_LANGUAGE_STATUS_2026-04-23.md")
+    closure = read("docs/PLANCK_SCALE_CLEAN_CLOSURE_CRITERION_THEOREM_2026-04-23.md")
 
     for script in SUBCHECKS:
         total += 1
@@ -192,6 +194,16 @@ def main() -> int:
         and "conditional Planck derivation" in nature_status
         and "not yet Nature-grade as an unconditional bare-axiom derivation"
         in nature_status,
+    )
+
+    total += 1
+    passed += expect(
+        "closure-criterion-records-exact-remaining-mu-theorem",
+        "PLANCK_SCALE_CLEAN_CLOSURE_CRITERION_THEOREM_2026-04-23.md"
+        in reviewer
+        and "Only one dimensionless statement remains:" in closure
+        and "`mu = 1`" in closure
+        and "mathematically clean closure is conditional" in closure,
     )
 
     print(f"SUMMARY: PASS={passed} FAIL={total - passed}")

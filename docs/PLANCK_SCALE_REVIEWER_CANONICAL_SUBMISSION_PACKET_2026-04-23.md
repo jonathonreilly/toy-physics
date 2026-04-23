@@ -5,6 +5,7 @@
 **Primary theorem packet:** [PLANCK_SCALE_NATIVE_DERIVATION_THEOREM_PACKET_2026-04-23.md](./PLANCK_SCALE_NATIVE_DERIVATION_THEOREM_PACKET_2026-04-23.md)
 **Plain-language final status:** [PLANCK_SCALE_NATURE_REVIEW_PLAIN_LANGUAGE_STATUS_2026-04-23.md](./PLANCK_SCALE_NATURE_REVIEW_PLAIN_LANGUAGE_STATUS_2026-04-23.md)
 **Bare-axiom unit-map audit:** [PLANCK_SCALE_AXIOM_ONLY_GRAVITY_UNIT_MAP_FINAL_AUDIT_2026-04-23.md](./PLANCK_SCALE_AXIOM_ONLY_GRAVITY_UNIT_MAP_FINAL_AUDIT_2026-04-23.md)
+**Clean closure criterion:** [PLANCK_SCALE_CLEAN_CLOSURE_CRITERION_THEOREM_2026-04-23.md](./PLANCK_SCALE_CLEAN_CLOSURE_CRITERION_THEOREM_2026-04-23.md)
 
 ## Final Scope Warning
 
@@ -215,6 +216,7 @@ python3 scripts/frontier_planck_cosmic_address_import_unit_map_theorem.py
 python3 scripts/frontier_planck_claim_scope_hostile_audit.py
 python3 scripts/frontier_planck_remaining_denials_target_change_theorem.py
 python3 scripts/frontier_planck_axiom_only_gravity_unit_map_final_audit.py
+python3 scripts/frontier_planck_clean_closure_criterion_theorem.py
 ```
 
 ## Appendix Map
@@ -224,6 +226,7 @@ python3 scripts/frontier_planck_axiom_only_gravity_unit_map_final_audit.py
 - [PLANCK_SCALE_NATIVE_DERIVATION_THEOREM_PACKET_2026-04-23.md](./PLANCK_SCALE_NATIVE_DERIVATION_THEOREM_PACKET_2026-04-23.md) - canonical theorem packet for the direct route.
 - [PLANCK_SCALE_NATURE_REVIEW_PLAIN_LANGUAGE_STATUS_2026-04-23.md](./PLANCK_SCALE_NATURE_REVIEW_PLAIN_LANGUAGE_STATUS_2026-04-23.md) - reviewer-facing final status without project-local shorthand.
 - [PLANCK_SCALE_AXIOM_ONLY_GRAVITY_UNIT_MAP_FINAL_AUDIT_2026-04-23.md](./PLANCK_SCALE_AXIOM_ONLY_GRAVITY_UNIT_MAP_FINAL_AUDIT_2026-04-23.md) - final audit showing the remaining bare-axiom unit-map multiplier is not yet derived.
+- [PLANCK_SCALE_CLEAN_CLOSURE_CRITERION_THEOREM_2026-04-23.md](./PLANCK_SCALE_CLEAN_CLOSURE_CRITERION_THEOREM_2026-04-23.md) - exact closure criterion: the unconditional claim is closed iff the stack derives `mu = 1`.
 - [PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md) - explicit P1 package-boundary move.
 - [PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md) - hostile-review context, with its supersession note respected.
 
