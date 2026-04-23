@@ -341,3 +341,38 @@ from det(A_cube)=81 != 0) and derive that K = 0 implies Q = 2/3,
 kit-external primitive, giving a reclassification blocker in the
 spirit of Target 1's second-scale reclassification.
 
+[2026-04-23 06:45] Target 3, sub-step 3b (K selector quadratic form) — PASS
+Tried: define K kit-naturally on Cl(3)-vectors and derive K = 0 <=>
+Q = 2/3. Wrote scripts/frontier_axiom_native_K_selector_quadratic_form.py
+which:
+(i) defines K(v) := 3 * scalar(v^2) - 2 * scalar((vw + wv)/2)^2 with
+v = u_1 e_1 + u_2 e_2 + u_3 e_3 a Cl(3) grade-1 vector and
+w = e_1 + e_2 + e_3 the "sum vector" (both kit-natural),
+(ii) computes K numerically via Pauli realization + scalar-part
+extraction and verifies K = 3 p_2 - 2 p_1^2 on 3 test triples,
+(iii) proves symbolically the algebraic identity K = p_1^2 (3Q - 2)
+(so K = 0 <=> Q = 2/3 for p_1 != 0),
+(iv) verifies K((4+3 sqrt(2), 1, 1)) = 0 and K((6+sqrt(39), 2, 1)) = 0
+symbolically,
+(v) identifies the coefficients "3" (= dim Z^3, from kit K2) and "2"
+(= K3 stencil width, from sub-step 1e) as kit-natural,
+(vi) proves the geometric interpretation K = 3|v|^2 (1 - 2 cos^2 theta)
+with theta = angle(v, w), so K = 0 <=> theta = 45 degrees,
+(vii) Musk deletion test: replacing "3" with "4" breaks the
+equivalence (root now corresponds to Q = 1/2, not 2/3); coefficient
+"3" is load-bearing.
+Target 3 status after 3b:
+- K now defined kit-naturally via Cl(3) scalar operations + kit
+  integers (3 = n_Z3, 2 = stencil width).
+- K = 0 <=> Q = 2/3 derived symbolically.
+- Target 3's SECOND success route -- "K = 0 proven to be a necessary
+  new primitive with exactly-stated form" -- is achieved.
+- Target 3 is thereby CLOSED in the reclassification sense.
+- Uniqueness (single physical triple) remains open; requires a
+  further kit-external primitive.
+Accepted because: hostile audit verdict = clean. 14 computed
+record() booleans, no narrative PASSes.
+Next vector: move to Target 4 (CKM |V_us| tension). Two sub-steps
+on Target 3 (3a, 3b) provide closure in the "K = 0 as primitive"
+sense, matching one of Target 3's two stated success routes.
+

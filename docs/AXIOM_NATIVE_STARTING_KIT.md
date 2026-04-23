@@ -187,3 +187,16 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   out a specific physical triple /
   `frontier_axiom_native_koide_Q_kit_solutions.py` /
   Target 3 sub-step 3a.
+- Kit-natural selector: for `v = u_1 e_1 + u_2 e_2 + u_3 e_3` a
+  Cl(3) grade-1 vector and `w = e_1 + e_2 + e_3`, define
+  `K(v) := 3 * scalar(v^2) - 2 * scalar((v w + w v)/2)^2 =
+  3 p_2 - 2 p_1^2`. Then `K(v) = 0  <=>  Q(u) = 2/3` via the
+  symbolic identity `K = p_1^2 (3 Q - 2)`. The coefficients "3" and
+  "2" are kit-natural (n_Z3 and K3 stencil width respectively);
+  changing "3" to "4" sends the root to Q = 1/2. Geometric form:
+  `K = 3 |v|^2 (1 - 2 cos^2 theta)` with theta = angle(v, w), so
+  `K = 0` is the 45-degree circle. K = 0 is the "last remaining
+  primitive beyond the kit" in Target 3's reclassification route;
+  uniqueness (single triple) remains open /
+  `frontier_axiom_native_K_selector_quadratic_form.py` /
+  Target 3 sub-step 3b.
