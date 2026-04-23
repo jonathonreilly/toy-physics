@@ -8,7 +8,8 @@ package rather than raw repo history.
 The current package is:
 
 1. a retained theorem core
-2. retained standalone quantitative lanes for `alpha_s` and EW normalization
+2. retained standalone quantitative lanes for the no-import hierarchy theorem,
+   `alpha_s`, and EW normalization
 3. a charged-lepton Koide review/support package with two explicit bridge residues
 4. promoted CKM atlas/axiom package plus a retained YT/top transport lane and a derived Higgs/vacuum lane with a retention-decomposed budget
 5. a bounded prediction surface plus an explicit history bucket for important
@@ -81,42 +82,51 @@ That is a package-framing fact, not a new standalone quantitative lane.
 
 Review this as a modular component stack:
 
-1. `alpha_s`: [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md)
-2. color-factor support: [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md)
-3. EW normalization: [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md)
-4. EW matching retention audit:
+1. no-import hierarchy status / review packet:
+   [HIERARCHY_NO_IMPORT_STATUS_NOTE_2026-04-22.md](../../HIERARCHY_NO_IMPORT_STATUS_NOTE_2026-04-22.md),
+   [HIERARCHY_PLANCK_CALIBRATED_REVIEW_PACKET_2026-04-22.md](./HIERARCHY_PLANCK_CALIBRATED_REVIEW_PACKET_2026-04-22.md)
+2. `alpha_s`: [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md)
+3. color-factor support: [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md)
+4. EW normalization: [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md)
+5. EW matching retention audit:
    [YT_EW_DELTA_R_RETENTION_ANALYSIS_NOTE_2026-04-18.md](../../YT_EW_DELTA_R_RETENTION_ANALYSIS_NOTE_2026-04-18.md)
-5. YT / top transport authority stack:
+6. YT / top transport authority stack:
    [YT_WARD_IDENTITY_DERIVATION_THEOREM.md](../../YT_WARD_IDENTITY_DERIVATION_THEOREM.md),
    [YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md](../../YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md),
    [YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md](../../YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md),
    [YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md](../../YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md)
-6. Higgs / vacuum plus retention analysis:
+7. Higgs / vacuum plus retention analysis:
    [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](../../HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md),
    [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md),
    [HIGGS_MASS_RETENTION_ANALYSIS_NOTE_2026-04-18.md](../../HIGGS_MASS_RETENTION_ANALYSIS_NOTE_2026-04-18.md)
-7. CKM atlas/axiom package and carrier-side support:
+8. CKM atlas/axiom package and carrier-side support:
    [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md),
    [KR_A1_VANISHING_SUPPORT_NOTE.md](../../KR_A1_VANISHING_SUPPORT_NOTE.md)
-8. three-generation observable closure:
+9. three-generation observable closure:
    [THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md](../../THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md)
-9. three-generation / flavor representation-theory support packet:
+10. three-generation / flavor representation-theory support packet:
    [SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md](../../SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md),
    [S3_TASTE_CUBE_DECOMPOSITION_NOTE.md](../../S3_TASTE_CUBE_DECOMPOSITION_NOTE.md),
    [S3_MASS_MATRIX_NO_GO_NOTE.md](../../S3_MASS_MATRIX_NO_GO_NOTE.md),
    [Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md](../../Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md)
-10. reviewed `Cl(3) -> SM` algebraic support packet:
-   [CL3_SM_EMBEDDING_MASTER_NOTE.md](../../CL3_SM_EMBEDDING_MASTER_NOTE.md),
-   [CL3_SM_EMBEDDING_THEOREM.md](../../CL3_SM_EMBEDDING_THEOREM.md),
-   [CL3_COLOR_AUTOMORPHISM_THEOREM.md](../../CL3_COLOR_AUTOMORPHISM_THEOREM.md),
-   [CL3_TASTE_GENERATION_THEOREM.md](../../CL3_TASTE_GENERATION_THEOREM.md)
-11. physical-lattice necessity boundary:
-   [PHYSICAL_LATTICE_NECESSITY_NOTE.md](../../PHYSICAL_LATTICE_NECESSITY_NOTE.md)
-12. three-generation / chirality boundary:
-   [THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md](../../THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md)
+11. reviewed `Cl(3) -> SM` algebraic support packet:
+    [CL3_SM_EMBEDDING_MASTER_NOTE.md](../../CL3_SM_EMBEDDING_MASTER_NOTE.md),
+    [CL3_SM_EMBEDDING_THEOREM.md](../../CL3_SM_EMBEDDING_THEOREM.md),
+    [CL3_COLOR_AUTOMORPHISM_THEOREM.md](../../CL3_COLOR_AUTOMORPHISM_THEOREM.md),
+    [CL3_TASTE_GENERATION_THEOREM.md](../../CL3_TASTE_GENERATION_THEOREM.md)
+12. physical-lattice necessity boundary:
+    [PHYSICAL_LATTICE_NECESSITY_NOTE.md](../../PHYSICAL_LATTICE_NECESSITY_NOTE.md)
+13. three-generation / chirality boundary:
+    [THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md](../../THREE_GENERATION_CHIRALITY_BOUNDARY_NOTE.md)
 
 Current status from that stack:
 
+- retained no-import hierarchy theorem on the exact minimal `3+1` block:
+  `a v = (7/8)^(1/4) * alpha_LM^16`
+- bounded absolute electroweak companion on the Planck-calibrated review
+  surface:
+  `v = 246.282818290129 GeV` only after the extra identification
+  `a^(-1) = M_Pl`
 - retained `alpha_s(M_Z) = 0.1181`
 - retained EW normalization package:
   `sin^2(theta_W)(M_Z) = 0.2306`,
@@ -165,7 +175,7 @@ Current status from that stack:
   requires extra continuum/rooting/RG structure absent from the accepted
   framework stack and cannot preserve the accepted canonical quantitative surface
   (`g_bare = 1`, `beta = 6`, plaquette/hierarchy chain), and any
-  regulator-style family preserving both accepted `alpha_s(v)` and `v` is
+  regulator-style family preserving both accepted `alpha_s(v)` and `a v` is
   trivial at the canonical point; on that retained package contract the
   physical-lattice reading is the unique surviving interpretation, and on the
   accepted one-axiom Hilbert/locality/information surface substrate physicality

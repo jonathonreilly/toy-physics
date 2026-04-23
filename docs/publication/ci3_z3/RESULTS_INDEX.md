@@ -102,7 +102,8 @@ Use alongside:
   - exact `T = 0` confinement of the graph-first `SU(3)` gauge sector, with
     bounded `sqrt(sigma) ≈ 465 MeV`
   - `3+1` closure
-  - electroweak hierarchy / `v` scale
+  - no-import electroweak hierarchy theorem `a v = (7/8)^(1/4) * alpha_LM^16`
+    plus bounded absolute `v` companion under `a^(-1) = M_Pl`
   - retained `S^3` compactification / topology closure
   - full-framework one-generation closure
   - three-generation matter structure

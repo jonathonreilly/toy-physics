@@ -14,8 +14,9 @@ quantitative claim.
 ## Authority Role
 
 This note records the W-boson pole-mass lane as a **same-surface consistency
-probe** on the retained EW normalization surface. Its readouts use only
-retained same-surface values plus the SM 1-loop SU(2) beta coefficient
+probe** on the retained EW normalization surface. Its readouts use retained
+same-surface EW values plus the bounded absolute electroweak companion
+`v = 246.282818290129 GeV` under `a^(-1) = M_Pl`, together with the SM 1-loop SU(2) beta coefficient
 `b_2 = 19/6` (the same pure group-theory coefficient already used by the
 retained sin^2(theta_W) / alpha_EM running bridge and by
 [`ALPHA_S_DERIVED_NOTE.md`](ALPHA_S_DERIVED_NOTE.md)).
@@ -30,8 +31,8 @@ be read as an SM-parity prediction. It is an internal consistency probe only.
 
 On the current retained EW normalization surface on `main`, solving the
 fixed-point equation `M_W = g_2(M_W) * v / 2` with `g_2` run by the SM
-1-loop SU(2) beta function from the retained `g_2(v)` (no pole value
-imported into the solve):
+1-loop SU(2) beta function from the retained `g_2(v)` and the bounded
+absolute electroweak companion `v` (no pole value imported into the solve):
 
 - tree readout:
   `M_W^tree = g_2(v) * v / 2 = 79.7956 GeV`
@@ -60,7 +61,8 @@ normalization precision.
 
 ```
 Cl(3) on Z^3
-  |-> v = 246.282818290129 GeV                 [OBSERVABLE_PRINCIPLE]
+  |-> a v = (7/8)^(1/4) * alpha_LM^16          [RETAINED HIERARCHY THEOREM]
+  |-> v = 246.282818290129 GeV                 [BOUNDED PLANCK-CALIBRATED COMPANION]
   |-> g_2(v) = 0.6480                           [YT_EW_COLOR_PROJECTION]
   |-> g_1_GUT(v) = 0.4644                       [YT_EW_COLOR_PROJECTION]
   |-> g_Y(v) = g_1_GUT(v) * sqrt(3/5) = 0.3597  [SM convention]
@@ -95,9 +97,10 @@ Cl(3) on Z^3
 ## Package Role
 
 This lane is a framework-side bounded same-surface consistency probe. Its tree
-readout uses only retained same-surface values; the RGE fixed-point solve adds
-only the SM 1-loop SU(2) coefficient `b_2 = 19/6`, reused from the retained
-EW normalization and `alpha_s` lanes.
+readout uses retained same-surface EW values plus the bounded absolute
+electroweak companion `v`; the RGE fixed-point solve adds only the SM 1-loop
+SU(2) coefficient `b_2 = 19/6`, reused from the retained EW normalization and
+`alpha_s` lanes.
 
 Publication placement on `main`: bounded companion section / appendix only.
 

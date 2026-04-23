@@ -51,6 +51,7 @@ The current retained claim is:
 
 The paper does **not** claim:
 
+- a retained no-import absolute electroweak-scale theorem in GeV;
 - fully retained top/Yukawa closure;
 - fully retained Higgs/vacuum closure;
 - promoted cosmology closure;
@@ -58,6 +59,10 @@ The paper does **not** claim:
 
 The current package keeps:
 
+- a retained no-import dimensionless hierarchy theorem
+  `a v = (7/8)^(1/4) * alpha_LM^16`;
+- a bounded absolute electroweak companion
+  `v = 246.282818290129 GeV` under `a^(-1) = M_Pl`;
 - a fully retained Yukawa/top UV-to-IR theorem;
 - a fully retained Higgs/vacuum UV-to-IR theorem;
 - bounded/conditional cosmology;

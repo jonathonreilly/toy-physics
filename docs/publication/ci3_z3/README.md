@@ -44,8 +44,9 @@ For package status summaries and broader navigation:
 - an exact gravity/spacetime backbone extending from weak-field gravity
   through exact discrete `3+1` GR and the chosen continuum/QG identification
   chain
-- retained quantitative lanes for `alpha_s`, electroweak normalization,
-  YT/top transport, and the promoted CKM atlas/axiom package
+- retained quantitative lanes for the no-import hierarchy theorem,
+  `alpha_s`, electroweak normalization, YT/top transport, and the promoted
+  CKM atlas/axiom package
 - a closed dark-matter exact-target package on the manuscript surface
 - a substantial charged-lepton Koide support program whose remaining work is
   reduced to two explicit physical bridges
@@ -56,8 +57,8 @@ baseline/provenance unless they are explicitly cited for that purpose.
 The package has five layers:
 
 1. retained theorem core
-2. retained standalone quantitative lanes (`alpha_s`, EW normalization,
-   exact lattice-scale Yukawa/gauge Ward theorem)
+2. retained standalone quantitative lanes (no-import hierarchy theorem,
+   `alpha_s`, EW normalization, exact lattice-scale Yukawa/gauge Ward theorem)
 3. charged-lepton Koide support package with two explicit bridge residues
 4. retained YT/top transport lane plus a derived Higgs/vacuum lane with a retention-decomposed budget
 5. bounded prediction surface, one closed dark-matter lane, one remaining
@@ -66,18 +67,22 @@ The package has five layers:
 ## Prediction And Falsification Snapshot
 
 - already on the quantitative surface:
-  `v`, `alpha_s(M_Z)`, electroweak normalization, the retained top/Yukawa
-  transport lane, and the promoted CKM atlas/axiom package
+  the retained no-import hierarchy theorem
+  `a v = (7/8)^(1/4) * alpha_LM^16`, `alpha_s(M_Z)`, electroweak
+  normalization, the retained top/Yukawa transport lane, and the promoted
+  CKM atlas/axiom package
 - already on the bounded prediction surface:
-  proton lifetime, CKM-only neutron EDM continuation, vacuum criticality,
-  taste-scalar near-degeneracy, benchmark gravitational decoherence, and
-  monopole mass
+  the absolute electroweak companion `v = 246.282818290129 GeV` under
+  `a^(-1) = M_Pl`, proton lifetime, CKM-only neutron EDM continuation,
+  vacuum criticality, taste-scalar near-degeneracy, benchmark gravitational
+  decoherence, and monopole mass
 - already on the structural prediction surface:
   emergent-Lorentz dimension-6 onset and action-surface `theta_eff = 0`
 - current pressure points:
-  hierarchy still imports `M_Pl` and the exponent `16` is not yet closed from
-  first principles; `|V_us|` sits high against PDG; PMNS remains a negative
-  retained lane; charged-lepton Koide still needs its two physical bridges
+  the hierarchy exponent `16` is now closed, but the absolute GeV row still
+  imports the lattice-spacing anchor `a^(-1) = M_Pl`; `|V_us|` sits high
+  against PDG; PMNS remains a negative retained lane; charged-lepton Koide
+  still needs its two physical bridges
 
 This package therefore already contains real quantitative and bounded
 prediction content, but it does not yet claim a near-term decisive new
@@ -98,6 +103,7 @@ For the explicit package boundary, use:
 
 The current quantitative stack is modular:
 
+- [HIERARCHY_NO_IMPORT_STATUS_NOTE_2026-04-22.md](../../HIERARCHY_NO_IMPORT_STATUS_NOTE_2026-04-22.md)
 - [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md)
 - [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md)
 - [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md)
@@ -114,6 +120,10 @@ The current quantitative stack is modular:
 
 Current package status:
 
+- retained no-import hierarchy theorem:
+  `a v = (7/8)^(1/4) * alpha_LM^16`
+- bounded absolute electroweak companion:
+  `v = 246.282818290129 GeV` under `a^(-1) = M_Pl`
 - retained `alpha_s(M_Z) = 0.1181`
 - retained EW normalization package:
   `sin^2(theta_W)(M_Z) = 0.2306`,

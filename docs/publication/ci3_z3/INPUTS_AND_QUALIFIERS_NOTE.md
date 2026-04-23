@@ -63,10 +63,16 @@ current canonical same-surface evaluated constants on `main`.
   - `alpha_s(v)`
   - authority:
     [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md)
-- electroweak hierarchy:
-  - `v = 246.282818290129 GeV`
+- no-import electroweak hierarchy theorem:
+  - `a v = (7/8)^(1/4) * alpha_LM^16`
   - authority:
-    [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](../../OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
+    [HIERARCHY_NO_IMPORT_STATUS_NOTE_2026-04-22.md](../../HIERARCHY_NO_IMPORT_STATUS_NOTE_2026-04-22.md)
+- absolute electroweak companion:
+  - `v = 246.282818290129 GeV`
+  - qualifier:
+    same-surface hierarchy theorem plus `a^(-1) = M_Pl`
+  - authority:
+    [HIERARCHY_NO_IMPORT_STATUS_NOTE_2026-04-22.md](../../HIERARCHY_NO_IMPORT_STATUS_NOTE_2026-04-22.md)
 - color normalization support:
   - `R_conn = 8/9 + O(1/N_c^4)`
   - authority:
@@ -91,6 +97,10 @@ bridge layer beyond the exact structural core.
 
 - `alpha_s(M_Z)` and the `M_Z` EW rows:
   - same-surface derived framework values plus the retained running bridge
+- absolute electroweak scale companion `v = 246.282818290129 GeV`:
+  - exact same-surface hierarchy theorem for the lattice-unit quantity
+    `a v`, plus the separate bounded Planck-lattice identification
+    `a^(-1) = M_Pl`
 - bounded string tension readout:
   - exact confinement theorem plus low-energy EFT bridge
 - CKM-only neutron-EDM corollary + bounded continuation:
@@ -116,6 +126,7 @@ theorem core.
 
 - charged-lepton bounded observational-pin package
   (explicit three-real PDG pin; no spare forecast beyond the pin)
+- absolute electroweak companion `v = 246.282818290129 GeV`
 - retained YT/top transport lane
 - derived Higgs/vacuum lane with retention-decomposed budget
 - cosmology lanes

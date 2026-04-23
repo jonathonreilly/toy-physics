@@ -60,9 +60,11 @@ More precisely:
   - `g_bare = 1`,
   - Wilson `beta = 6`,
   - the accepted same-surface plaquette theorem at `beta = 6`,
-  - the downstream plaquette / `u_0` / `alpha_s(v)` / `v` chain.
+  - the downstream plaquette / `u_0` / `alpha_s(v)` / `a v` chain, with the
+    absolute GeV companion `v` sitting separately on the bounded
+    Planck-identified surface `a^(-1) = M_Pl`.
 - even if one allows compensating `u_0` motion, any regulator-style family
-  that tries to preserve the live package invariants `alpha_s(v)` and `v`
+  that tries to preserve the live package invariants `alpha_s(v)` and `a v`
   is trivial: it collapses to the single canonical point
   `beta = 6`, `u_0 = u_{0,\mathrm{can}}`.
 
@@ -149,7 +151,7 @@ interpretation remains.
 > Therefore any regulator reading requires adjoining extra structure not
 > licensed by that stack, and any regulator-family deformation leaves the
 > accepted canonical quantitative surface. Moreover, preserving the accepted
-> live package invariants `alpha_s(v)` and `v` forces the canonical point
+> live package invariants `alpha_s(v)` and `a v` forces the canonical point
 > `beta = 6`, `u_0 = u_{0,\mathrm{can}}`. So on the retained package contract,
 > the physical-lattice reading is the unique surviving interpretation. It is
 > not an equivalent reading of the same accepted framework surface.
@@ -269,7 +271,7 @@ Then the two accepted live package invariants scale as
 
 and
 
-`v / v_can = (x / y)^16`.
+`(a v) / (a v)_{can} = (x / y)^16`.
 
 If a regulator-style family is required to preserve **both** accepted
 invariants, then one must have
@@ -307,8 +309,8 @@ the two-invariant collapse above.
 Because the accepted stack is fixed and the regulator reading requires added
 structure while also leaving the accepted canonical quantitative surface, the
 regulator reading is not a mere change of words. It is a different theory
-package, and any family preserving the accepted `alpha_s(v)` and `v` invariants
-collapses to the trivial canonical point.
+package, and any family preserving the accepted `alpha_s(v)` and `a v`
+invariants collapses to the trivial canonical point.
 
 This closes the anti-regulator question on the current package surface:
 
@@ -353,14 +355,14 @@ If one requires the current retained package contract
 - physical `hw=1` triplet species structure,
 - no proper exact quotient/rooting on the retained generation surface,
 - accepted `alpha_s(v)`,
-- accepted `v`,
+- accepted `a v`,
 
 then the regulator reading does not survive. The previous sections show:
 
 - it requires extra continuum/rooting/RG structure;
 - it leaves the accepted fixed quantitative surface;
 - even with compensating `u_0` motion, it cannot preserve both accepted live
-  invariants `alpha_s(v)` and `v` except at the canonical point.
+  invariants `alpha_s(v)` and `a v` except at the canonical point.
 
 Therefore the physical-lattice reading is forced as the unique surviving
 interpretation **on the retained package contract**.
@@ -411,7 +413,7 @@ This note now closes a stronger exact point than the older audit did:
 - exact observable-sector semantics already force the retained `hw=1` triplet
   to be physically distinct species sectors on the accepted Hilbert surface;
 - any regulator-style family preserving the accepted live package invariants
-  `alpha_s(v)` and `v` is trivial at the canonical point
+  `alpha_s(v)` and `a v` is trivial at the canonical point
   `beta = 6`, `u_0 = u_{0,\mathrm{can}}`;
 - once the retained matter closure and live quantitative package are imposed,
   the physical-lattice reading is the unique surviving interpretation;

@@ -62,8 +62,8 @@ Retained current consequences:
   physical-lattice reading now derived on the accepted one-axiom surface and
   the older reduced-stack witness isolated by
   [GENERATION_AXIOM_BOUNDARY_NOTE.md](GENERATION_AXIOM_BOUNDARY_NOTE.md)
-- retained electroweak hierarchy / `v` via
-  [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
+- retained no-import electroweak hierarchy theorem via
+  [HIERARCHY_NO_IMPORT_STATUS_NOTE_2026-04-22.md](HIERARCHY_NO_IMPORT_STATUS_NOTE_2026-04-22.md)
 - retained gravity and topology stack as captured in the publication package
 
 ## Current Quantitative Package Built On The Same Stack
@@ -82,13 +82,15 @@ The current canonical quantitative stack is:
 
 Safe current result:
 
-- retained `v = 246.282818290129 GeV`
+- retained no-import `a v = (7/8)^(1/4) * alpha_LM^16`
 - retained `alpha_s(M_Z) = 0.1181`
 - retained `sin^2(theta_W)(M_Z) = 0.2306`
 - retained `1/alpha_EM(M_Z) = 127.67`
 - retained `g_1(v) = 0.4644`
 - retained `g_2(v) = 0.6480`
 - retained exact lattice-scale `y_t(M_Pl) / g_s(M_Pl) = 1 / sqrt(6)`
+- bounded companion absolute `v = 246.282818290129 GeV` under
+  `a^(-1) = M_Pl`
 - derived `y_t(v) = 0.9176`
 - derived `m_t(pole) = 172.57 GeV` (2-loop),
   `173.10 GeV` (3-loop)

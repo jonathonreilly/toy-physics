@@ -1,8 +1,23 @@
-# Zero-Import y_t Derivation: Definitive Authority Note
+# Zero-Import y_t Derivation: Historical Authority Note
 
 **Date:** 2026-04-14
-**Status:** DERIVED (zero SM imports)
+**Status:** historical / superseded for current package import discipline
 **Script:** `scripts/frontier_yt_zero_import_chain.py`
+
+**Update 2026-04-22:** This note is retained only as route history. It is not
+the current authority for hierarchy import discipline or for the absolute
+electroweak scale. The current package boundary is:
+
+- retained no-import theorem:
+  `a v = (7/8)^(1/4) * alpha_LM^16`
+- bounded absolute companion:
+  `v = 246.282818290129 GeV` only after `a^(-1) = M_Pl`
+
+Use [HIERARCHY_NO_IMPORT_STATUS_NOTE_2026-04-22.md](./HIERARCHY_NO_IMPORT_STATUS_NOTE_2026-04-22.md),
+[OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](./OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md),
+and the publication package docs under
+[docs/publication/ci3_z3](./publication/ci3_z3/README.md) for the current
+review surface.
 
 ---
 
@@ -95,7 +110,11 @@ Cl(3) on Z^3                                            [AXIOM]
 | lambda(v)              | 0.1908       | DERIVED        | Full 1-loop CW on lattice BZ         |
 | m_b, m_c thresholds    | 4.18, 1.27   | INFRASTRUCTURE | v -> M_Z running only                |
 
-**No row says IMPORTED or BOUNDED.**  Every v-scale quantity is derived from the axiom plus the canonical same-surface plaquette evaluation.  INFRASTRUCTURE items affect only the v -> M_Z cross-check transfer.
+**Historical state only.** This older chain treated every `v`-scale quantity
+as derived. The current package does not accept that import discipline. The
+retained hierarchy theorem is `a v = (7/8)^(1/4) * alpha_LM^16`, while the
+absolute `v` row and any downstream GeV-valued companion that consumes
+`a^(-1) = M_Pl` sit on a bounded Planck-calibrated surface.
 
 ---
 

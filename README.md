@@ -23,13 +23,15 @@ summary surfaces before the deeper derivation map.
 ## What Is Already Predicted
 
 - retained quantitative package:
-  canonical `v = 246.282818290129 GeV`, retained `alpha_s(M_Z) = 0.1181`,
+  retained no-import hierarchy theorem
+  `a v = (7/8)^(1/4) * alpha_LM^16`, retained `alpha_s(M_Z) = 0.1181`,
   electroweak normalization, retained top/Yukawa transport, promoted CKM
   atlas/axiom numerics, and bounded confinement-string readout
 - bounded but explicit forward/companion surface:
-  proton lifetime, CKM-only neutron EDM continuation, vacuum criticality,
-  taste-scalar near-degeneracy, benchmark gravitational decoherence, and
-  monopole mass
+  absolute electroweak companion `v = 246.282818290129 GeV` under
+  `a^(-1) = M_Pl`, proton lifetime, CKM-only neutron EDM continuation,
+  vacuum criticality, taste-scalar near-degeneracy, benchmark gravitational
+  decoherence, and monopole mass
 - exact structural predictions with delayed observability:
   emergent-Lorentz dimension-6 onset and action-surface `theta_eff = 0`
 - remaining open flagship bridge package:
@@ -59,9 +61,12 @@ summary surfaces before the deeper derivation map.
   action surface, exact `T = 0` confinement with bounded `sqrt(sigma)`, and
   retained discrete evanescent-barrier and Schwarzschild-interior support
 - retained quantitative lanes:
-  canonical `v = 246.282818290129 GeV`, retained `alpha_s(M_Z) = 0.1181`,
+  retained no-import hierarchy theorem
+  `a v = (7/8)^(1/4) * alpha_LM^16`, retained `alpha_s(M_Z) = 0.1181`,
   retained EW normalization, promoted CKM atlas/axiom closure, bounded
-  Yukawa/top transport, and bounded Higgs/vacuum closure
+  absolute electroweak companion `v = 246.282818290129 GeV` under
+  `a^(-1) = M_Pl`, bounded Yukawa/top transport, and bounded Higgs/vacuum
+  closure
 - charged-lepton package:
   substantial Koide support stack that isolates the remaining work to two
   explicit physical bridges, namely the extremal-principle bridge for

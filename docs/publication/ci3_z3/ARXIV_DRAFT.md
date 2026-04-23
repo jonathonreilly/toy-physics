@@ -27,10 +27,12 @@ invariance, retained action-surface strong-CP closure in the form
 $\theta_{\mathrm{eff}}=0$ on the retained Wilson-plus-staggered action
 surface, and exact $T=0$ confinement with bounded
 $\sqrt{\sigma}\approx 465\,\mathrm{MeV}$.
-Quantitatively, the current package gives the canonical hierarchy evaluation
-$v=246.282818290129\,\mathrm{GeV}$, retains
-$\alpha_s(M_Z)=0.1181$ and electroweak normalization lanes, retains the exact
-lattice-scale Ward identity $y_t(M_{\mathrm{Pl}})/g_s(M_{\mathrm{Pl}})
+Quantitatively, the current package retains the no-import hierarchy theorem
+$a v=(7/8)^{1/4}\alpha_{LM}^{16}$, carries the absolute electroweak companion
+$v=246.282818290129\,\mathrm{GeV}$ only on the extra Planck-calibrated surface
+$a^{-1}=M_{\mathrm{Pl}}$, retains $\alpha_s(M_Z)=0.1181$ and electroweak
+normalization lanes, retains the exact lattice-scale Ward identity
+$y_t(M_{\mathrm{Pl}})/g_s(M_{\mathrm{Pl}})
 =1/\sqrt{6}$, carries a retained YT/top transport lane with canonical
 full-staggered-PT $\Delta_R=-3.77\% \pm 0.45\%$ and retained canonical
 $m_t(\mathrm{pole})=172.57 \pm 6.50\,\mathrm{GeV}$, promotes an algebraic CKM
@@ -118,11 +120,10 @@ H_0 = 67.4\,\mathrm{km\,s^{-1}\,Mpc^{-1}}. \tag{1}
 $$
 
 These are not inputs to the retained structural core. They are epoch-selection
-data for the bounded cosmology portfolio. By contrast, the electroweak scale is
-not an external datum on the current paper surface. The exact hierarchy theorem
-fixes the source-response structure on the minimal block, and the quoted number
-is the canonical same-surface evaluation on the current plaquette-derived
-normalization chain.
+data for the bounded cosmology portfolio. By contrast, the retained hierarchy
+theorem fixes the lattice-unit product `a v` on the minimal block. The quoted
+absolute electroweak companion in GeV is only on the extra Planck-calibrated
+surface `a^{-1}=M_{\mathrm{Pl}}`; it is not the retained no-import theorem.
 
 ### 2.2 What is and is not claimed
 
@@ -478,12 +479,12 @@ that bridge.
 
 ## 5. Hierarchy and the Quantitative Package
 
-### 5.1 Observable principle and the electroweak scale
+### 5.1 Observable principle and the hierarchy lane
 
-The electroweak hierarchy lane is retained on the exact minimal $3+1$ block.
-The finite Grassmann Gaussian makes $\log|Z|$ the unique additive CPT-even
-scalar generator on that surface, and the resulting source-response theorem
-fixes the hierarchy kernel.
+The electroweak hierarchy lane is retained on the exact minimal $3+1$ block in
+lattice units. The finite Grassmann Gaussian makes $\log|Z|$ the unique
+additive CPT-even scalar generator on that surface, and the resulting
+source-response theorem fixes the hierarchy kernel.
 
 **Theorem 5 (Observable principle on the minimal block).**
 For a source-deformed lattice Dirac operator $D[J]=D+J$, exact Grassmann
@@ -496,18 +497,21 @@ $$
 as the unique additive CPT-even scalar generator, up to normalization and the
 zero-source subtraction.
 
-On the current plaquette-derived normalization chain, the canonical evaluation
-is
+On the current plaquette-derived normalization chain, the retained no-import
+hierarchy theorem is
 
 $$
-v = M_{\mathrm{Pl}}\left(\frac{7}{8}\right)^{1/4}\alpha_{LM}^{16}
-  = 246.282818290129\,\mathrm{GeV}, \tag{11}
+a v = \left(\frac{7}{8}\right)^{1/4}\alpha_{LM}^{16}. \tag{11}
 $$
 
-which is $+0.0255\%$ relative to the comparator $246.22\,\mathrm{GeV}$. The
-exact theorem is the source-response structure on the minimal block. The quoted
-number is the canonical same-surface evaluation on the live package surface,
-not a fitted datum.
+With the extra Planck-lattice identification
+$a^{-1}=M_{\mathrm{Pl}}$,
+the companion evaluation is
+$v = 246.282818290129\,\mathrm{GeV}$,
+which is $+0.0255\%$ relative to the comparator
+$246.22\,\mathrm{GeV}$. The exact theorem is the source-response structure on
+the minimal block in lattice units. The quoted GeV number is a calibrated
+companion on the Planck-identified surface, not the retained no-import theorem.
 
 ### 5.2 Retained standalone quantitative lanes
 
@@ -647,7 +651,8 @@ The fastest way to read the quantitative package is Table 1.
 
 | Row | Canonical output | Status on current paper surface |
 | --- | --- | --- |
-| Electroweak scale | $v = 246.282818290129\,\mathrm{GeV}$ | exact theorem + canonical same-surface evaluation |
+| No-import hierarchy theorem | $a v = (7/8)^{1/4}\alpha_{LM}^{16}$ | retained exact theorem |
+| Absolute electroweak companion | $v = 246.282818290129\,\mathrm{GeV}$ under $a^{-1}=M_{\mathrm{Pl}}$ | bounded Planck-calibrated companion |
 | Strong coupling | $\alpha_s(M_Z)=0.1181$ | retained standalone quantitative lane |
 | Electroweak normalization | $g_1(v)=0.4644$, $g_2(v)=0.6480$ | retained standalone quantitative lane |
 | CKM | $|V_{us}|=0.22727$, $|V_{cb}|=0.04217$, $|V_{ub}|=0.003913$ | promoted algebraic package |

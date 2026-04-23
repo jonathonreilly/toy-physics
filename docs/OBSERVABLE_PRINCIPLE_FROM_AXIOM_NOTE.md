@@ -16,6 +16,11 @@ Yes, on the exact minimal hierarchy block.
 The key step is not another determinant fit. It is the additive structure of
 the exact Grassmann Gaussian.
 
+This note closes the observable-principle / source-response part of the
+hierarchy lane. The full no-import status of the lane, including the remaining
+absolute-scale obstruction, is now carried by
+[HIERARCHY_NO_IMPORT_STATUS_NOTE_2026-04-22.md](./HIERARCHY_NO_IMPORT_STATUS_NOTE_2026-04-22.md).
+
 Given the source-deformed lattice Dirac operator
 
 `D[J] = D + J`,
@@ -135,11 +140,21 @@ bosonic-bilinear selector route. On the APBC temporal circle:
 
 So the `L_t = 4` selector is now internal to the axiom-plus-source response.
 
-## Consequence for `v`
+## Consequence for the hierarchy lane
 
 The exact selector correction is
 
 `C = (7/8)^(1/4) = 0.967168210134`.
+
+So the retained no-import hierarchy statement closed by this note is
+
+`a v = (7/8)^(1/4) * alpha_LM^16`.
+
+Using the extra Planck-lattice identification
+
+`a^(-1) = M_Pl`,
+
+the same source-response theorem gives the canonical companion numbers
 
 Using the current hierarchy baseline
 
@@ -161,7 +176,7 @@ the difference is:
 ## What this closes
 
 This removes the last hierarchy-specific interpretive import on the current
-exact minimal block.
+exact minimal block **source-response** chain.
 
 The scalar observable principle is no longer:
 
@@ -178,10 +193,14 @@ hierarchy normalization surface.
 
 ## Honest status
 
-At this point the hierarchy closure is as clean as the current framework can
-make it.
+At this point the hierarchy source-response closure is as clean as the current
+framework can make it.
 
-The remaining `0.03%` is no longer an open theorem gap in the observable
-principle. It sits in the canonical same-surface plaquette evaluation and its
-downstream normalization chain rather than in the axiom-to-observable map
-itself.
+What remains open is not the observable principle. It is the absolute-scale
+anchor. The retained theorem is the lattice-unit quantity
+
+`a v = (7/8)^(1/4) * alpha_LM^16`,
+
+while the absolute GeV companion still requires the separate identification
+
+`a^(-1) = M_Pl`.

@@ -30,11 +30,11 @@ closes.
 
 ## Retained quantitative outputs already on the paper surface
 
-- electroweak hierarchy:
-  - `v = 246.282818290129 GeV`
-  - current comparator: `246.22 GeV`
+- no-import electroweak hierarchy theorem:
+  - `a v = (7/8)^(1/4) * alpha_LM^16`
+  - exact minimal-block retained theorem; no direct experimental comparator
   - authority:
-    [OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md](../../OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md)
+    [HIERARCHY_NO_IMPORT_STATUS_NOTE_2026-04-22.md](../../HIERARCHY_NO_IMPORT_STATUS_NOTE_2026-04-22.md)
 - strong coupling:
   - `alpha_s(M_Z) = 0.1181`
   - current comparator: `0.1179`
@@ -111,6 +111,14 @@ carried by the current package.
   - `M_mono ~ 1.43 M_Pl`
   - authority:
     [MONOPOLE_DERIVED_NOTE.md](../../MONOPOLE_DERIVED_NOTE.md)
+- absolute electroweak companion:
+  - `v = 246.282818290129 GeV`
+  - current comparator: `246.22 GeV`
+  - qualifier:
+    same-surface hierarchy theorem plus the bounded Planck-lattice
+    identification `a^(-1) = M_Pl`
+  - authority:
+    [HIERARCHY_NO_IMPORT_STATUS_NOTE_2026-04-22.md](../../HIERARCHY_NO_IMPORT_STATUS_NOTE_2026-04-22.md)
 
 These rows belong in a dedicated bounded-prediction section or appendix, not
 in route history.
@@ -122,9 +130,10 @@ includes the places where the current package is already under quantitative or
 conceptual pressure.
 
 - hierarchy lane:
-  the canonical electroweak row is numerically sharp, but the current package
-  still imports `M_Pl` and still does not derive the exponent `16` from a
-  closed first-principles hierarchy theorem
+  the exponent `16` is now closed exactly, but the absolute electroweak GeV
+  row still depends on the lattice-spacing anchor `a^(-1) = M_Pl`; the
+  retained no-import theorem is the lattice-unit quantity
+  `a v = (7/8)^(1/4) * alpha_LM^16`
 - CKM:
   the atlas/axiom package is quantitatively strong overall, but
   `|V_us| = 0.22727` remains high against the PDG comparator
@@ -144,7 +153,8 @@ conceptual pressure.
 - emergent Lorentz invariance:
   - leading anisotropic correction first appears at dimension 6
   - unique cubic-harmonic `ell = 4` fingerprint
-  - hierarchy-surface suppression `(E/M_Pl)^2`
+  - exact hierarchy-surface suppression `(E a)^2`; bounded Planck-lattice
+    rewriting `(E/M_Pl)^2`
   - authority:
     [EMERGENT_LORENTZ_INVARIANCE_NOTE.md](../../EMERGENT_LORENTZ_INVARIANCE_NOTE.md)
 - strong CP:
@@ -192,8 +202,8 @@ lane:
 
 Outside that flagship lane, the main open promotions are:
 
-- a first-principles hierarchy closure that removes the imported `M_Pl`
-  / exponent-`16` qualifiers
+- a retained lattice-spacing anchor that would promote the bounded absolute
+  electroweak companion beyond the current Planck-identified companion status
 - a positive retained PMNS lane
 - broader target-free dark-matter uniqueness beyond the exact PMNS-target
   manuscript package
