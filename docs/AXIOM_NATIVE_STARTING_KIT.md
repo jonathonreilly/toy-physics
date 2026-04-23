@@ -200,3 +200,17 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   uniqueness (single triple) remains open /
   `frontier_axiom_native_K_selector_quadratic_form.py` /
   Target 3 sub-step 3b.
+- Kit-derivable CKM candidate `|V_us|_kit = 2/9 = 0.2222...`
+  emerges from TWO independent kit constructions: (a) the
+  characteristic polynomial of the unit-cube K3 Dirac matrix
+  A_cube is `(x^2 + 3)^4 = x^8 + 12 x^6 + 54 x^4 + 108 x^2 + 81`,
+  giving `coeff(x^6)/coeff(x^4) = 12/54 = 2/9`; (b) the
+  perfect-matching ratio `#PM(plaq) / #PM(cube) = 2/9`. The
+  agreement is non-trivial (Dirac spectrum vs matching
+  combinatorics). Relative deviation from retained-row value
+  `22727/100000` is approximately 2.3%. The kit has no flavor
+  structure at free K3 level; 2/9 is a STRUCTURAL kit candidate
+  for Target 4, providing an exact error budget without yet a
+  correction theorem /
+  `frontier_axiom_native_Vus_candidate_two_ninths.py` /
+  Target 4 sub-step 4a.

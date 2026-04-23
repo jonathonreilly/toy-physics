@@ -376,3 +376,40 @@ Next vector: move to Target 4 (CKM |V_us| tension). Two sub-steps
 on Target 3 (3a, 3b) provide closure in the "K = 0 as primitive"
 sense, matching one of Target 3's two stated success routes.
 
+[2026-04-23 07:20] Target 4, sub-step 4a (Vus_kit = 2/9 via two constructions) — PASS
+Tried: open Target 4 with a specific kit-derivable CKM candidate.
+Wrote scripts/frontier_axiom_native_Vus_candidate_two_ninths.py which:
+(i) rebuilds A_cube (sub-step 2b) and verifies det = 81 (sanity),
+(ii) computes the characteristic polynomial of A_cube via sympy:
+charpoly = (x^2 + 3)^4 = x^8 + 12 x^6 + 54 x^4 + 108 x^2 + 81,
+(iii) extracts coefficients and ratios: coeff(x^6)/coeff(x^4) = 12/54 = 2/9,
+(iv) independently computes #PM(plaq)/#PM(cube) = 2/9 from the
+unifying formula of sub-step 2c,
+(v) verifies the two independent constructions agree at 2/9,
+(vi) computes deviations from representative retained/target values
+(22727/100000 and 22438/100000): relative differences are 2.3%
+and 0.97% respectively -- a quantitative error budget,
+(vii) structural observation: free K3 has 1 flavor per site; no
+mass matrix. 2/9 is a structural kit ratio, not a mass-matrix
+derivation.
+(viii) Musk deletion: replacing A_cube's 4-fold degenerate
+eigenvalue ±i*sqrt(3) with a mixed spectrum gives charpoly ratio
+5/18, not 2/9. The specific A_cube spectrum is load-bearing.
+Target 4 status after 4a:
+- Error-budget route (a): delivered. 2/9 is the kit candidate.
+  Deviation from target 22727/100000 is about 2.3%.
+- Correction-theorem route (b): not yet achieved. A future sub-step
+  could attempt to derive the 2.3% correction from kit extensions.
+- Alternative-readout route (c): partially open. The 2/9 kit
+  candidate might itself BE the final kit-native readout (making
+  the retained 22727/100000 wrong), or the retained readout might
+  be correct with 2/9 representing a different quantity.
+Accepted because: hostile audit verdict = clean. 11 computed
+record() booleans, no narrative PASSes.
+Next vector (sub-step 4b): attempt route (b) or (c):
+(a) search for kit-derivable correction terms that bring 2/9 closer
+to a retained target value,
+(b) identify a different kit-native readout (e.g., a specific
+eigenvalue ratio from a larger Z^3 patch) that could be the true
+V_us.
+
