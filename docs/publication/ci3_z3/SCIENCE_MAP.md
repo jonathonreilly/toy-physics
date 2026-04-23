@@ -122,7 +122,7 @@ Validate with:
 - promoted quantitative flavor package:
   CKM atlas/axiom closure
 - bounded secondary flavor lanes:
-  down-type CKM-dual mass-ratio lane, bounded quark review/support packet
+  down-type CKM-dual mass-ratio lane, bounded quark support packet
 - retained corollary:
   CKM-only neutron EDM on the retained `theta_eff = 0` surface
 - open flagship package:

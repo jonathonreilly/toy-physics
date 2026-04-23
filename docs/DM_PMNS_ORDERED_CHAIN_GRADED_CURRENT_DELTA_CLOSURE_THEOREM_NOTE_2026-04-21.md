@@ -1,7 +1,7 @@
 # DM PMNS Ordered-Chain Graded-Current Delta Closure Theorem
 
 **Date:** 2026-04-21  
-**Lane:** strict/native DM last-mile closure  
+**Lane:** exact-target native/source-map completion
 **Status:** exact closure theorem on the physical affine/source family  
 **Primary runner:**  
 `scripts/frontier_dm_pmns_ordered_chain_graded_current_delta_closure_2026_04_21.py`
@@ -10,7 +10,7 @@
 
 ## 0. Executive summary
 
-The strict/native DM last mile had already been reduced to one exact remaining
+The exact-target native/source-map last mile had already been reduced to one exact remaining
 real object:
 
 ```text
@@ -63,8 +63,8 @@ delta(H) = E1 - 2 Im J_N(H) - 3 Re J_chi(H).
 ```
 
 The same two-current law survives exactly after passage to the retained `hw=1`
-response columns. So the remaining stricter/native DM scalar last mile is
-closed on the physical affine/source family.
+response columns. So the remaining exact-target native/source-map scalar
+last mile is closed on the physical affine/source family.
 
 ---
 
@@ -220,7 +220,7 @@ now determine the entire physical affine point-selection pair.
 >
 > 4. the same recovery survives exactly on the retained `hw=1` response family.
 >
-> Therefore no strict/native DM last-mile residue remains on the physical
+> Therefore no exact-target native/source-map last-mile residue remains on the physical
 > affine/source family.
 
 ### Proof sketch
@@ -252,7 +252,7 @@ QED.
 
 ## 6. Consequence for the open map
 
-Before this theorem, the honest stricter/native DM wording was:
+Before this theorem, the honest exact-target native/source-map wording was:
 
 ```text
 current activation closes q_+,
@@ -261,10 +261,10 @@ but one additional real delta / Im(K_Z3[1,2]) law remains.
 
 After this theorem, that residual is gone.
 
-The review-surface DM package was already closed. Now the stricter/native DM
-map is closed too: the same graph-first ordered-chain structure supplies both
-native currents needed to recover the full physical affine point-selection
-pair on the retained `hw=1` response family.
+The current-package DM lane was already closed. Now the exact-target
+native/source map is closed too: the same graph-first ordered-chain structure
+supplies both native currents needed to recover the full physical affine
+point-selection pair on the retained `hw=1` response family.
 
 ---
 
@@ -276,7 +276,7 @@ This theorem does **not** address:
 - the downstream lepton scale lane,
 - the quark bounded endpoint/readout lane.
 
-It is only the DM stricter/native last-mile closure.
+It is only the DM exact-target native/source-map last-mile closure.
 
 ---
 

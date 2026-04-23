@@ -1,14 +1,15 @@
-# Charged-Lepton Koide Review Packet (2026-04-18)
+# Charged-Lepton Koide Support Packet (2026-04-18)
 
 ## Scope
 
-This is the reviewer front door for the charged-lepton Koide package.
+This is the current support packet for the charged-lepton Koide lane.
 
-It is the consolidated review, provenance, and closure packet for honest
-review, retention, and downstream weaving.
+It consolidates the package-level support stack, the open-bridge boundaries,
+and the archived route-pruning record needed to understand how the lane was
+compressed.
 
 **2026-04-21 package update.** The April 21 Koide package is now the
-authoritative review/support surface for the charged-lepton lane. It is much
+authoritative support surface for the charged-lepton lane. It is much
 stronger than the April 18-20 state, but it does not yet give
 retained closure for either `Q = 2/3` or `δ = 2/9`. The older
 conditional evening discussion below remains historical provenance.
@@ -38,14 +39,16 @@ charged-lepton lane without changing that open status. What it adds is:
 - a new `O_h` covariance no-go showing the retained affine Hermitian chart is
   not cubic-point-group covariant beyond parity, so the surviving spin-1
   structural route cannot be justified by inherited `O_h` isotropy alone;
-- a clean list of atlas issues and caveats that still matter for honest review.
+- a clean list of atlas issues and caveats that still matter for honest
+  package scoping.
 
-## Historical Route-Pruning Record
+## Historical Route-Pruning Record (Archival)
 
 Before the final April 21 support package, the stack passed through the following
 reductions:
 
-- the authoritative retained status is still the April 17 bounded review:
+- the authoritative retained status before the April 21 support package was
+  still the April 17 bounded review:
   no retained Koide derivation on the current surface
 - the April 18 support stack closes the exact circulant/character bridge to the
   April 17 Koide package
@@ -98,7 +101,7 @@ reductions:
   to the PDG `sqrt(m)` direction; chamber slack is only a near-hit, not the
   exact root
 - **(April 20 evening — conditional closure support)** the qubit-lattice-dim
-  algebraic closure note packages a reviewer-facing route for BOTH
+  algebraic closure note packages a candidate route for BOTH
   `Q = 2/3` and `delta = 2/9` from the retained structural identity
   `dim(Cl(3) spinor) / dim(Z^3 lattice) = 2/3`, combined with the
   A-select axiom `SELECTOR = sqrt(6)/3` satisfying `SELECTOR^2 = Q = 2/3`.
@@ -145,7 +148,7 @@ So the current charged-lepton package status is:
   Brannen-phase bridge
 - overall lepton mass scale `v_0` remains a separate support lane: the
   April 22 radiative/Yukawa calculations strengthen it materially, but it is
-  still not promoted to closure on the review surface
+  still not promoted on the current package surface
 
 ## Read In Order
 
@@ -183,14 +186,14 @@ So the current charged-lepton package status is:
 
 ## Package Role
 
-- reviewer-facing charged-lepton intake for the current package
-- exact statement of what changed after the April 17 bounded review
+- charged-lepton intake for the current package
+- exact statement of what changed after the April 17 bounded support baseline
 - one-place summary of what is truly closed and what is still open
 
-## Review Standard
+## Package Standard
 
-This packet is clean enough for review, atlas use, and consolidation on the
-current package surface.
+This packet is clean enough for package use, atlas use, and consolidation on
+the current package surface.
 
 The cycle-1 no-go stack (notes 14-21) sharpened the open gap: the missing
 step was one scalar condition, not derivable from the selected-slice scalar
@@ -214,11 +217,11 @@ U(1) hypercharge commutant.
 out four specific character-data candidates for the radian bridge P.
 Note 22 uses a DIFFERENT route: Q-closure via qubit-lattice-dim +
 anomaly arithmetic, then CPC d·delta = Q derives delta. Whether this
-constituted a valid structural bridge was the live reviewer question on the
+constituted a valid structural bridge was the live package question on the
 April 20 evening surface. That historical state is now superseded by the
 April 21 support package.
 
-**(April 20 late - reduction note 24)** Even if reviewer declines note 22 as
+**(April 20 late - reduction note 24)** Even if note 22 is treated only as
 full closure, the open content of the Brannen-phase radian-bridge step is now much sharper. The new
 selected-line local no-go proves the actual `CP^1` Berry packet is too simple
 to pick the interior point `delta = 2/9`, while the retained anomaly-forced-

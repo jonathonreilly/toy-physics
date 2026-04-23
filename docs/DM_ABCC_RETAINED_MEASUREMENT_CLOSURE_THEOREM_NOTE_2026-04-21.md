@@ -2,13 +2,13 @@
 
 **Date:** 2026-04-21  
 **Lane:** Dark-matter PMNS branch choice / A-BCC basin selection  
-**Status:** RETAINED MEASUREMENT CLOSURE. On the retained measurement
-framework already admitted on the review branch, the physical basin choice is
-no longer open: the sigma-chain fixes `J_phys = Basin 1`, the retained P3
+**Status:** RETAINED-MEASUREMENT CLOSURE ON THE CURRENT PACKAGE SURFACE. On
+the retained measurement framework already carried in the package, the
+physical basin choice is no longer open: the sigma-chain fixes `J_phys = Basin 1`, the retained P3
 Sylvester theorem gives PMNS Non-Singularity on that physical path, and the
 Sylvester signature-forcing theorem then puts the physical endpoint in
-`C_base`. This closes A-BCC on the review surface. At this stage of the
-April 21 stack, the remaining review-surface burden was the finer
+`C_base`. This closes A-BCC on the current package surface. At this stage of
+the April 21 stack, the remaining current-package burden was the finer
 right-sensitive microscopic selector law for the physical source branch /
 point; the later same-day selector/current notes close that residual.
 **Boundary:** This is **not** an axiom-native derivation of A-BCC from
@@ -22,7 +22,7 @@ the current closure grade.
 
 ## 0. Executive summary
 
-The review branch already contains the full theorem stack needed to stop
+The April 21 package already contains the full theorem stack needed to stop
 treating A-BCC as a live DM blocker on the retained measurement surface.
 What was missing was an integration theorem that states that fact plainly.
 
@@ -49,9 +49,9 @@ So on the retained measurement framework:
   + Sylvester signature-forcing
   => A-BCC.
 
-The review-surface consequence is immediate: the DM flagship gate is no longer
-blocked by branch choice. At this stage of the April 21 stack, the only
-remaining review-surface burden was the finer right-sensitive microscopic
+The current-package consequence is immediate: the DM flagship gate is no
+longer blocked by branch choice. At this stage of the April 21 stack, the
+only remaining current-package burden was the finer right-sensitive microscopic
 selector law; that burden is later closed by the shifted same-law packet
 theorem together with the ordered-chain current stack.
 
@@ -60,7 +60,7 @@ theorem together with the ordered-chain current stack.
 ## 1. Inputs already retained on the branch
 
 This note does **not** add a new scientific input. It integrates inputs and
-theorems already carried elsewhere on the review branch:
+theorems already carried elsewhere in the April 21 package:
 
 - the retained affine Hermitian source family `H_base + J(m, delta, q_+)`;
 - the chamber bound `q_+ + delta >= sqrt(8/3)`;
@@ -80,7 +80,7 @@ of A-BCC from `Cl(3)/Z^3` alone is still ruled out.
 
 > **Theorem (A-BCC closes on the retained measurement framework).**
 >
-> On the retained measurement framework already admitted on the review branch,
+> On the retained measurement framework already carried in the package,
 > the physical DM source is `J_phys = J_{Basin 1}` and the physical endpoint
 > lies in the baseline-connected Sylvester chamber `C_base`.
 >
@@ -141,10 +141,10 @@ which is exactly A-BCC. QED.
 
 ## 3. What is now closed, and what is not
 
-### 3.1 Closed on the review surface
+### 3.1 Closed on the current package surface
 
 - physical basin choice / A-BCC on the retained measurement surface;
-- the old DM branch-choice blocker on the review branch.
+- the old DM branch-choice blocker in the April 21 package.
 
 ### 3.2 Still open
 
@@ -156,7 +156,7 @@ which is exactly A-BCC. QED.
 The first item was still the live DM flagship blocker at the moment this
 integration theorem landed. The later same-day packet/current notes close it.
 The second item is a closure-grade boundary statement rather than a
-review-surface blocker.
+current-package blocker.
 
 ---
 

@@ -1,7 +1,7 @@
 # DM Selector Shifted-Relative-Action Recovered-Packet Closure Theorem
 
 **Date:** 2026-04-21  
-**Status:** packet-local closure theorem on the DM review surface  
+**Status:** current-package closure theorem on the recovered selector packet
 **Primary runner:** `scripts/frontier_dm_selector_shifted_relative_action_recovered_packet_closure_2026_04_21.py`
 
 ## Statement
@@ -40,7 +40,7 @@ Then on the current recovered bank of five lifts:
 - and that same lift `0` is exactly the unique recovered point with
   `Im(K_Z3[1,2]) > 0`.
 
-So the current review-surface selector residue is closed on the recovered
+So the current-package selector residue is closed on the recovered
 packet by the **same exact scalar law** already present in the internal
 selector grammar.
 
@@ -62,7 +62,7 @@ Four earlier same-day results are integrated here.
    positive side of the canonical odd doublet boundary
    `Im(K_Z3[1,2]) = 0`.
 
-Those results still left one live review-surface burden:
+Those results still left one live current-package burden:
 
 - justify the recovered selector law itself, rather than only a projection
   toward it.
@@ -144,15 +144,15 @@ selector closure stack:
 
 all pick the same preferred recovered lift `0`.
 
-So the **review-surface DM selector residue is closed** on the current
+So the **current-package DM selector residue is closed** on the current
 recovered packet.
 
 ## What this does and does not close
 
 ### Closed at this grade
 
-- current recovered-packet point selection on the DM review surface
-- the last live review-surface selector residue after the retained-measurement
+- current recovered-packet point selection on the DM current package surface
+- the last live current-package selector residue after the retained-measurement
   A-BCC closure and split-2 interval certification
 
 ### Still not closed
@@ -166,12 +166,12 @@ What remains outside the grade of this theorem by itself is:
   the exact PMNS target surface.
 
 But after the companion exact target-surface source-cubic closure theorem,
-that is no longer a live strict/native DM blocker on the exact target map.
+that is no longer a live exact-target native/source-map blocker.
 
 So the branch now separates cleanly:
 
-- **review surface:** DM flagship gate closed
-- **exact-target strict/native map:** no separate native A-BCC residue remains
+- **current package surface:** DM flagship gate closed
+- **exact-target native/source map:** no separate native A-BCC residue remains
 - **pure target-free global sign law:** still outside the package grade
 
 ## Reproduction

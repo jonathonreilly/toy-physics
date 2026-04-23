@@ -1,11 +1,11 @@
-# Koide Review Package — `Q = 2/3` and `δ = 2/9`
+# Koide Support Package — `Q = 2/3` and `δ = 2/9`
 
-**Package:** April 21, 2026 Koide review/support handoff
+**Package:** April 21, 2026 Koide support handoff
 **Date:** 2026-04-21
 **Scope:** Only the charged-lepton Koide relation `Q = 2/3`, the Brannen
 phase `δ = 2/9 rad`, and their compatibility identity `Q = 3·δ`.
-**Status:** Ready for review as the strongest current executable support
-package. Two explicit scientific bridges remain open.
+**Status:** Strongest current executable support package. Two explicit
+scientific bridges remain open.
 
 **2026-04-22 support addendum.** The April 22 support work now comes in four
 layers. The first adds new bridge-targeting tools, selected-line/Fourier
@@ -207,7 +207,7 @@ routes. It does not by itself discharge either remaining physical bridge.
 
 ---
 
-## Reviewer stress-test
+## Stress-test
 
 ### Runner
 
@@ -246,7 +246,7 @@ above.
 | `frontier_koide_peter_weyl_am_gm.py` | Koide support: AM-GM gives `Q = 2/3` | 22/22 |
 | `frontier_koide_frobenius_isotype_split_uniqueness.py` | Koide support: Frobenius-isotype forcing chain | 28/28 |
 | `frontier_koide_Q_eq_3delta_identity.py` | compatibility identity `Q = 3·δ` | 10/10 |
-| `frontier_koide_reviewer_stress_test.py` | reviewer stress-test | 34/34 |
+| `frontier_koide_reviewer_stress_test.py` | stress-test | 34/34 |
 | `frontier_koide_brannen_route3_geometry_support.py` | Brannen support: exact selected-line geometry + conditional Route-3 support | 30/30 |
 | `frontier_koide_brannen_dirac_support.py` | Brannen support: explicit finite-lattice `L=3` Wilson-Dirac illustration | 11/11 |
 
@@ -288,4 +288,4 @@ above.
   `δ_physical = η_APS`.
 - `m_*` / `w/v` remains downstream of the Brannen-phase bridge.
 
-Ready for review as the strongest current Koide support package.
+This is the strongest current Koide support package.

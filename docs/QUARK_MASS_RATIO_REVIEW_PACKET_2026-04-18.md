@@ -1,12 +1,12 @@
-# Quark Mass-Ratio Review Packet (2026-04-18)
+# Quark Mass-Ratio Support Packet (2026-04-18)
 
 ## Scope
 
-This is the  front door for the live quark mass-ratio lane on
+This is the front door for the live quark mass-ratio support lane on
 current `main`.
 
 It bundles the live down-type, up-type, minimal full-solve, and bounded
-quark-CP closure notes into one review path. It does not promote the full
+quark-CP closure notes into one support path. It does not promote the full
 quark spectrum to retained closure.
 
 ## Exact Current Endpoint
@@ -124,7 +124,7 @@ The clean current endpoint is:
 
 So the current quark-mass-ratio state is:
 
-- review-ready quark packet on current `main`
+- current quark support packet on `main`
 - strong down-type lane
 - explicit bounded up-type extension
 - bounded full-solve support for the quark magnitudes on a minimal Schur-NNI carrier
@@ -215,9 +215,9 @@ Current expected result on this branch:
 - `frontier_quark_cp_primitive_projector_scan.py`: strongest candidate
   `J/J_atlas = 1.075`
 
-## Review Standard
+## Package Standard
 
-This packet is clean enough for review, consolidation, and downstream
+This packet is clean enough for package use, consolidation, and downstream
 quark-sector work on current `main`.
 
 It is not a retained-spectrum promotion. The honest package status remains:
