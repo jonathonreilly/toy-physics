@@ -3,6 +3,20 @@
 **Date:** 2026-04-23  
 **Status:** canonical branch-local theorem packet for the direct Planck route  
 **Master verifier:** `scripts/frontier_planck_native_derivation_master.py`
+**Plain-language external-review status:** [PLANCK_SCALE_NATURE_REVIEW_PLAIN_LANGUAGE_STATUS_2026-04-23.md](./PLANCK_SCALE_NATURE_REVIEW_PLAIN_LANGUAGE_STATUS_2026-04-23.md)
+**Bare-axiom unit-map audit:** [PLANCK_SCALE_AXIOM_ONLY_GRAVITY_UNIT_MAP_FINAL_AUDIT_2026-04-23.md](./PLANCK_SCALE_AXIOM_ONLY_GRAVITY_UNIT_MAP_FINAL_AUDIT_2026-04-23.md)
+
+## External-Review Scope Warning
+
+This internal theorem packet uses branch-local labels for already accepted
+surfaces. For hostile external review, use the plain-language status note
+linked above.
+
+The branch derives the native dimensionless primitive coefficient `c_cell =
+1/4`. The conventional length statement `a = l_P` still depends on identifying
+the primitive one-step worldtube count with the standard gravitational
+boundary/action density. The bare physical lattice axioms alone do not yet
+derive that final unit-map identification.
 
 ## Claim
 

@@ -28,6 +28,7 @@ SUBCHECKS = [
     "frontier_planck_cosmic_address_import_unit_map_theorem.py",
     "frontier_planck_claim_scope_hostile_audit.py",
     "frontier_planck_remaining_denials_target_change_theorem.py",
+    "frontier_planck_axiom_only_gravity_unit_map_final_audit.py",
 ]
 
 
@@ -64,6 +65,7 @@ def main() -> int:
 
     packet = read("docs/PLANCK_SCALE_NATIVE_DERIVATION_THEOREM_PACKET_2026-04-23.md")
     reviewer = read("docs/PLANCK_SCALE_REVIEWER_CANONICAL_SUBMISSION_PACKET_2026-04-23.md")
+    nature_status = read("docs/PLANCK_SCALE_NATURE_REVIEW_PLAIN_LANGUAGE_STATUS_2026-04-23.md")
 
     for script in SUBCHECKS:
         total += 1
@@ -145,6 +147,15 @@ def main() -> int:
 
     total += 1
     passed += expect(
+        "reviewer-front-door-records-final-unit-map-audit",
+        "PLANCK_SCALE_NATURE_REVIEW_PLAIN_LANGUAGE_STATUS_2026-04-23.md"
+        in reviewer
+        and "PLANCK_SCALE_AXIOM_ONLY_GRAVITY_UNIT_MAP_FINAL_AUDIT_2026-04-23.md"
+        in reviewer,
+    )
+
+    total += 1
+    passed += expect(
         "packet-derives-planck-length",
         "`a^2 = l_P^2`" in packet
         and "`a = l_P`" in packet
@@ -170,6 +181,17 @@ def main() -> int:
         "reviewer-packet-includes-final-denial-theorem",
         "PLANCK_SCALE_REMAINING_DENIALS_TARGET_CHANGE_THEOREM_2026-04-23.md"
         in reviewer,
+    )
+
+    total += 1
+    passed += expect(
+        "nature-status-avoids-project-shorthand-and-keeps-conditional-scope",
+        "P1" not in nature_status
+        and "GSI" not in nature_status
+        and "Axiom Extension" not in nature_status
+        and "conditional Planck derivation" in nature_status
+        and "not yet Nature-grade as an unconditional bare-axiom derivation"
+        in nature_status,
     )
 
     print(f"SUMMARY: PASS={passed} FAIL={total - passed}")

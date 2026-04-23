@@ -3,6 +3,19 @@
 **Date:** 2026-04-23
 **Status:** canonical reviewer-facing compression of the direct Planck packet
 **Primary theorem packet:** [PLANCK_SCALE_NATIVE_DERIVATION_THEOREM_PACKET_2026-04-23.md](./PLANCK_SCALE_NATIVE_DERIVATION_THEOREM_PACKET_2026-04-23.md)
+**Plain-language final status:** [PLANCK_SCALE_NATURE_REVIEW_PLAIN_LANGUAGE_STATUS_2026-04-23.md](./PLANCK_SCALE_NATURE_REVIEW_PLAIN_LANGUAGE_STATUS_2026-04-23.md)
+**Bare-axiom unit-map audit:** [PLANCK_SCALE_AXIOM_ONLY_GRAVITY_UNIT_MAP_FINAL_AUDIT_2026-04-23.md](./PLANCK_SCALE_AXIOM_ONLY_GRAVITY_UNIT_MAP_FINAL_AUDIT_2026-04-23.md)
+
+## Final Scope Warning
+
+For hostile external review, lead with the plain-language final status note.
+The current branch supports a native derivation of the dimensionless primitive
+coefficient `c_cell = 1/4`. The conventional Planck length follows only after
+the primitive one-step worldtube count is physically identified with the
+standard gravitational boundary/action density.
+
+The bare physical `Cl(3)` / `Z^3` axioms alone do not yet force that last
+gravitational unit-map identification.
 
 ## Submission Claim
 
@@ -201,6 +214,7 @@ python3 scripts/frontier_planck_planck_normalization_non_tautology_audit.py
 python3 scripts/frontier_planck_cosmic_address_import_unit_map_theorem.py
 python3 scripts/frontier_planck_claim_scope_hostile_audit.py
 python3 scripts/frontier_planck_remaining_denials_target_change_theorem.py
+python3 scripts/frontier_planck_axiom_only_gravity_unit_map_final_audit.py
 ```
 
 ## Appendix Map
@@ -208,6 +222,8 @@ python3 scripts/frontier_planck_remaining_denials_target_change_theorem.py
 ### Primary entrypoints
 
 - [PLANCK_SCALE_NATIVE_DERIVATION_THEOREM_PACKET_2026-04-23.md](./PLANCK_SCALE_NATIVE_DERIVATION_THEOREM_PACKET_2026-04-23.md) - canonical theorem packet for the direct route.
+- [PLANCK_SCALE_NATURE_REVIEW_PLAIN_LANGUAGE_STATUS_2026-04-23.md](./PLANCK_SCALE_NATURE_REVIEW_PLAIN_LANGUAGE_STATUS_2026-04-23.md) - reviewer-facing final status without project-local shorthand.
+- [PLANCK_SCALE_AXIOM_ONLY_GRAVITY_UNIT_MAP_FINAL_AUDIT_2026-04-23.md](./PLANCK_SCALE_AXIOM_ONLY_GRAVITY_UNIT_MAP_FINAL_AUDIT_2026-04-23.md) - final audit showing the remaining bare-axiom unit-map multiplier is not yet derived.
 - [PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md) - explicit P1 package-boundary move.
 - [PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md) - hostile-review context, with its supersession note respected.
 
