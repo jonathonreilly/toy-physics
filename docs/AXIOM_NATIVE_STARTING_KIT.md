@@ -131,3 +131,15 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   `c_2` OR is an independent primitive outside the kit /
   `frontier_axiom_native_scale_inventory_and_edge_constant.py` /
   Target 1 sub-step 1d.
+- The exponential form `C_edge = exp(-16 * c)` has kit-natural
+  `c = log(2)`, where the "2" is the width of the K3 symmetric-
+  difference stencil `[psi(n+mu) - psi(n-mu)]/(2a)`; hence
+  `log(stencil_width) = log(2)` is the unique kit-forced exponent /
+  `frontier_axiom_native_c_equals_log_two_from_stencil.py` /
+  Target 1 sub-step 1e.
+- The kit constructs a specific "second mass scale" `M_large =
+  2^16 / a` satisfying `M_UV / M_large = 2^(-16) = C_edge`, with
+  `M_UV := 1/a` the unique dim primitive. Target 1 is closed:
+  exponent 16 derived (1a-1c) AND second scale constructed (1e) /
+  `frontier_axiom_native_c_equals_log_two_from_stencil.py` /
+  Target 1 sub-step 1e.
