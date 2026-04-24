@@ -174,6 +174,10 @@ space. The retained surface now carries:
 
 - `Lambda_vac = lambda_1(S^3_R)` as an exact structural identity
 - `w = -1` exactly on the same fixed-gap stationary-vacuum surface
+- FRW late-time kinematic identities reducing `q_0`, acceleration onset
+  `z_*`, matter-Lambda equality `z_{mLambda}`, and asymptotic `H_inf` to the
+  same open ratio `H_inf/H_0`; these are structural relations, not point
+  predictions
 
 The remaining numerical cosmology predictions remain bounded because the
 cosmology-scale identification and broader matter/cosmology bridge remain
@@ -183,12 +187,15 @@ open:
 - numerical graviton compactness-mass companion from the same
   vacuum/topology scale
 - present-day `Omega_Lambda` once the matter bridge closes
+- point values for `q_0`, `z_*`, and `z_{mLambda}` beyond the same open
+  `H_inf/H_0` bridge
 
 Authority:
 
 - [COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md](../../COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md)
 - [DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md](../../DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md)
 - [COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md](../../COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md)
+- [COSMOLOGY_FRW_KINEMATIC_REDUCTION_THEOREM_NOTE_2026-04-24.md](../../COSMOLOGY_FRW_KINEMATIC_REDUCTION_THEOREM_NOTE_2026-04-24.md)
 - [COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md](../../COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md)
 - [DARK_ENERGY_EOS_NOTE.md](../../DARK_ENERGY_EOS_NOTE.md)
 - [GRAVITON_MASS_DERIVED_NOTE.md](../../GRAVITON_MASS_DERIVED_NOTE.md)

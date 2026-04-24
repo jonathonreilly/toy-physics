@@ -37,7 +37,10 @@ Current cosmology-facing rows are conditioned on:
 - `H_0 = 67.4 km/s/Mpc`
 
 These are not inputs to the retained structural core. They are explicit
-boundary data for the bounded cosmology lane.
+boundary data for the bounded cosmology lane. The FRW kinematic reduction
+adds no new point input; `q_0`, `z_*`, `z_{mLambda}`, and asymptotic `H_inf`
+remain functions of the same open `H_inf/H_0` ratio, with listed cosmology
+numbers used only as comparators.
 
 The charged-lepton bounded package is additionally conditioned on
 an explicit three-real observational pin:
@@ -131,6 +134,8 @@ bridge layer beyond the exact structural core.
   - exact operator content + imported dimension-6 EFT decay-rate bridge
 - cosmology windows:
   - fixed-gap vacuum/topology route plus the still-open matter bridge
+  - FRW kinematic identities are structural support only until that bridge
+    fixes `H_inf/H_0`
 
 ## 6. Bounded rows
 

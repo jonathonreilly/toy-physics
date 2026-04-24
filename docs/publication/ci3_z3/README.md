@@ -40,7 +40,8 @@ For the full package-capture inventory, use:
 - retained structural/corollary surface:
   strong CP on the retained action surface, emergent Lorentz invariance,
   `S^3` topology closure, exact `I_3 = 0`, exact CPT, Bell/CHSH support,
-  retained cosmology identities/corollaries
+  retained cosmology identities/corollaries, including the FRW kinematic
+  reduction of late-time cosmology observables to the open `H_inf/H_0` ratio
 - flagship closed package:
   dark-matter exact-target PMNS package on the manuscript surface
 - flagship open package:

@@ -58,6 +58,8 @@ The paper does **not** claim:
 - fully retained top/Yukawa closure;
 - fully retained Higgs/vacuum closure;
 - promoted cosmology closure;
+- point predictions for `Omega_Lambda`, `Omega_m`, `q_0`, `z_*`, or
+  `z_{mLambda}` without closing the `H_inf/H_0` matter bridge;
 - full DM relic closure.
 
 The current package keeps:

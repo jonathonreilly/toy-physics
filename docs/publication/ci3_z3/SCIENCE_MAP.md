@@ -204,7 +204,8 @@ Validate with:
 
 - retained cosmology identities/corollaries:
   `Lambda_vac = lambda_1(S^3_R)`, `w = -1`, graviton spectral compactness-mass
-  identity
+  identity, and the FRW kinematic reduction of `q_0`, `z_*`, `z_{mLambda}`,
+  and asymptotic `H_inf` to the same open `H_inf/H_0` ratio
 - bounded cosmology numerics:
   numerical `Lambda`, `Omega_Lambda`, numerical `m_g`, `n_s`, bounded `r`
 - bounded phenomenology companions:
@@ -216,12 +217,14 @@ Start with:
 - [PREDICTION_SURFACE_2026-04-15.md](./PREDICTION_SURFACE_2026-04-15.md)
 - [COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md](../../COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md)
 - [OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md](../../OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md)
+- [COSMOLOGY_FRW_KINEMATIC_REDUCTION_THEOREM_NOTE_2026-04-24.md](../../COSMOLOGY_FRW_KINEMATIC_REDUCTION_THEOREM_NOTE_2026-04-24.md)
 
 Validate with:
 
 - `python3 scripts/frontier_cosmological_constant_spectral_gap_identity.py`
 - `python3 scripts/frontier_dark_energy_eos_retained_corollary.py`
 - `python3 scripts/frontier_omega_lambda_matter_bridge.py`
+- `python3 scripts/frontier_cosmology_frw_kinematic_reduction.py`
 - `python3 scripts/frontier_tensor_scalar_ratio_consolidation.py`
 
 ## Validation Paths
