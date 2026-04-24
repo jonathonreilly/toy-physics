@@ -693,3 +693,39 @@ cycle" (from prior iteration) can be used without destroying the
 matching elsewhere. Need to count how many distinct hexagonal
 cycles exist in each cuboid and correlate with minority count.
 
+[2026-04-23 21:50] V2 iteration: Pfaffian search on 3x3x2 — PASS (striking result)
+Tried: adversarial test of option (b) from the prior iteration's
+"next vectors" list -- search for a sign reassignment that restores
+Kasteleyn on 3x3x2. If any such assignment exists, 3x3x2 is
+Pfaffian; if not, it's classically non-Pfaffian.
+Wrote scripts/frontier_axiom_native_pfaffian_search_3x3x2.py:
+(i) built the K3-signed bipartite block B_0, |det| = 225.
+(ii) constructed BFS spanning tree (17 edges, 16 chord edges) to
+enumerate gauge classes.
+(iii) iterated over 2^16 = 65536 subsets of chord-sign flips,
+computed |det| for each via numpy, tracked max over all classes.
+(iv) searched 65536 classes in 0.5s. Max |det| = 225, exact hits
+at 229 = 0.
+Result: H2 holds. The 3x3x2 prism is CLASSICALLY NON-PFAFFIAN --
+NO edge-sign assignment gives |det| = #PM = 229. Max achievable
+is 225, same as K3. The off-by-4 gap is a graph-theoretic
+obstruction of the prism, NOT a K3-specific quirk.
+Striking corollary: K3 OPTIMAL. K3's staggered orientation
+achieves the maximum |det| = 225 achievable by any sign
+assignment on this graph. In the space of all Pfaffian-like
+attempts, K3 is at the best one available.
+This matches the Little-1975 / Vazirani-Yannakakis-1989
+characterization: non-Pfaffian bipartite graphs contain an even
+K_{3,3} subdivision. The 3x3x2 prism must contain such.
+Accepted because: hostile audit verdict = clean. 6 computed
+record() booleans, no narrative PASSes.
+This is a major sharpening of the Kasteleyn thread: the scope
+limit on ledger 2d is not "K3 fails on non-planar", it's "the
+prism itself has no Pfaffian orientation; K3 is optimal within
+what's possible".
+Next V2 vector: run the same Pfaffian search on (4,3,2) and
+(4,4,2) to verify the "K3 is optimal" pattern extends. The gauge
+dims are 14 and 25, so searches are feasible (16K and 33M classes).
+Alternatively, find the explicit even-K_{3,3} subdivision inside
+the 3x3x2 prism -- a concrete graph-theoretic structural object.
+

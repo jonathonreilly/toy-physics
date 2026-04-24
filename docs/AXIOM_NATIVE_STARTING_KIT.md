@@ -245,6 +245,19 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   on planar bipartite Z^3 subgraphs /
   `frontier_axiom_native_kasteleyn_plaquette_sign.py` /
   Target 2 sub-step 2d.
+- The 3x3x2 prism is CLASSICALLY NON-PFAFFIAN. Exhaustive
+  enumeration of all `2^16 = 65536` gauge-equivalence classes of
+  edge-sign assignments (cycle-space dimension = `|E| - |V| + 1 =
+  33 - 18 + 1 = 16`) gives max `|det(B)| = 225` across all
+  assignments. No assignment whatsoever achieves `|det(B)| = #PM =
+  229`. Hence the 3x3x2 prism has no Pfaffian orientation at all,
+  independent of K3's specific sign pattern. This matches the
+  Little-1975 / Vazirani-Yannakakis-1989 characterization (bipartite
+  non-Pfaffian iff contains an even K_{3,3} subdivision). NOTE: K3
+  achieves the max `|det| = 225`, so K3 is OPTIMAL on this graph --
+  the off-by-4 gap cannot be reduced by any sign reassignment /
+  `frontier_axiom_native_pfaffian_search_3x3x2.py` /
+  Target 2 sub-step 2d-V2-pfaffian-classification.
 - Minority matchings inhabit a "low-to-medium vertical-edge
   band" on non-planar cuboids. Direct DFS enumeration verifies
   gap-identity minority counts (2, 20, 512 on (3,3,2), (4,3,2),
