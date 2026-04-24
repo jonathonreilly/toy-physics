@@ -42,7 +42,14 @@ Current science/open-lane follow-ups:
   and monotonically decreasing in G, but the gravity-induced suppression ratio
   `slope(G=10)/slope(G=0)` is NOT size-coherent (37% spread across
   sides 8/10/12/14, trending toward 1.0 with size — apparent finite-size
-  effect, see [`BOUNDARY_LAW_COEFFICIENT_STABILITY_NOTE_2026-04-24.md`](../BOUNDARY_LAW_COEFFICIENT_STABILITY_NOTE_2026-04-24.md))
+  effect, see [`BOUNDARY_LAW_COEFFICIENT_STABILITY_NOTE_2026-04-24.md`](../BOUNDARY_LAW_COEFFICIENT_STABILITY_NOTE_2026-04-24.md));
+  extended to side in {16, 18, 20} in
+  [`BOUNDARY_LAW_FINITE_SIZE_ASYMPTOTE_NOTE_2026-04-24.md`](../BOUNDARY_LAW_FINITE_SIZE_ASYMPTOTE_NOTE_2026-04-24.md):
+  the suppression ratio fits `1 - C(G)/side` with RMS < 2%, asymptote at
+  `side -> infinity` is approximately 1.0 within ~4% (consistent with no
+  thermodynamic-limit gravity coefficient renormalization), and the
+  finite-size constant `C(G)` grows monotonically and sub-linearly in G
+  (C(5)=2.63, C(10)=4.21, C(20)=6.09)
 - memory lane: protocol- and geometry-stable observable remains open
 - emergent-geometry growth: multi-size, multi-seed stability remains open;
   failure pattern is now frozen with a `G=0` null control in
