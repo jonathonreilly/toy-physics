@@ -806,3 +806,47 @@ same |det|. This probes whether the local plaquette property is
 sufficient (multiple satisfying classes with same |det|) or unique
 (full rank, exactly one class).
 
+[2026-04-23 23:10] V2 iteration: plaquette-rank on larger cuboids — PASS (theorem found)
+Tried: compute F_2 rank of plaquette-incidence matrix on gauge
+quotient for (3,3,2), (4,3,2), (4,4,2). Via Gaussian elimination
+over F_2 (no exhaustive enumeration needed on (4,4,2) 2^33 space).
+Wrote scripts/frontier_axiom_native_plaquette_rank_larger_cuboids.py.
+Results:
+- (3,3,2): rank 16 = gauge_dim 16. 1 satisfying class. ✓
+- (4,3,2): rank 23 = gauge_dim 23. 1 satisfying class. ✓
+- (4,4,2): rank 33 = gauge_dim 33. 1 satisfying class. ✓
+Observed arithmetic: plaquettes - cubes = gauge_dim on all three.
+Specifically:
+  20 - 4 = 16 = E(33) - V(18) + 1 ✓
+  29 - 6 = 23 = E(46) - V(24) + 1 ✓
+  42 - 9 = 33 = E(64) - V(32) + 1 ✓
+This is NOT a coincidence but an Euler-formula identity.
+For a contractible 3D cuboid X:
+  chi(X) = |V| - |E| + |F| - |cubes| = 1
+  => |F| - |cubes| = |E| - |V| + 1 = gauge_dim.
+Only F_2 linear dependencies among plaquette constraints come from
+cube-boundary relations (each 1x1x1 cube: sum of 6 face plaquettes
+= 0 in Z_2). So rank of plaquette-incidence mod gauge = |F| -
+|cubes| = gauge_dim.
+THEOREM (proven structurally, verified on 3 cases):
+  For every Z^3 cuboid, the K3 staggered-phase orientation is the
+  unique (up to vertex-star gauge) edge-sign assignment satisfying
+  sign product = -1 on every elementary plaquette.
+This elevates the Kasteleyn thread's main result from "conjectural
+across 4 test cuboids" to "theorem with structural proof via
+Euler characteristic of contractible 3-space".
+Accepted because: hostile audit verdict = clean. 5 computed record()
+booleans, no narrative PASSes.
+V2 thread now yields a genuine theorem AND a matching empirical
+observation (K3 is optimal across tested non-planar cuboids).
+Combined claim: K3 is characterized by the universal plaquette-(-1)
+property, and that property empirically correlates with
+Pfaffian-maximization. The remaining open question: prove that
+plaquette-satisfying => |det| max (for any cuboid; currently only
+verified empirically on 4 cuboids).
+Next V2 vector: (a) try to prove "plaquette-satisfying => |det|
+max" via a direct argument linking plaquette signs to matching
+cycle contributions, or (b) step back and investigate whether the
+same uniqueness theorem holds for non-cuboid Z^3 subgraphs (e.g.,
+corners removed, L-shapes).
+

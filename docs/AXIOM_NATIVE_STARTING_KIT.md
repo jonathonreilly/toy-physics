@@ -245,6 +245,25 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   on planar bipartite Z^3 subgraphs /
   `frontier_axiom_native_kasteleyn_plaquette_sign.py` /
   Target 2 sub-step 2d.
+- PLAQUETTE-UNIQUENESS THEOREM on every Z^3 cuboid: for any
+  `(L1, L2, L3)` cuboid, the plaquette-edge incidence matrix over
+  F_2 has rank = gauge_dim = `|E| - |V| + 1`. Hence K3 is the
+  UNIQUE (up to vertex-star gauge) edge-sign assignment satisfying
+  "sign product = -1 on every elementary plaquette". Verified via
+  F_2 Gaussian elimination on (3,3,2), (4,3,2), (4,4,2):
+    * (3,3,2): 20 plaquettes, 4 cubes, gauge_dim 16, rank 16.
+    * (4,3,2): 29 plaquettes, 6 cubes, gauge_dim 23, rank 23.
+    * (4,4,2): 42 plaquettes, 9 cubes, gauge_dim 33, rank 33.
+  Structural proof: Euler's formula on contractible 3D cuboid gives
+  `|F| - |cubes| = |E| - |V| + 1`. The only F_2 dependencies among
+  plaquette constraints come from the `|cubes|` cube-boundary
+  relations (each 1x1x1 cube: sum of 6 face-plaquettes = 0). So
+  rank of plaquette-incidence mod gauge = `|F| - |cubes|` =
+  `|E| - |V| + 1` = gauge_dim. Combined with the empirical K3
+  optimality across cuboids, K3 is now CHARACTERIZED by the local
+  plaquette property on every Z^3 cuboid /
+  `frontier_axiom_native_plaquette_rank_larger_cuboids.py` /
+  Target 2 sub-step 2d-V2-plaquette-uniqueness-theorem.
 - K3 is the UNIQUE plaquette-satisfying gauge class on (3,3,2).
   Enumeration of all 2^16 = 65536 gauge classes finds exactly ONE
   class satisfying "sign product = -1 on all 20 elementary
