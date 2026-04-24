@@ -229,3 +229,19 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   achieved with exact missing primitive named /
   `frontier_axiom_native_J_chi_no_go.py` /
   Target 5 sub-step 5a.
+- UNIVERSAL Kasteleyn plaquette-sign theorem on Z^3: for every
+  pair `(i, j)` with `i != j` in `{1, 2, 3}` and every base point
+  `n` in `Z^3`, the K3 staggered-phase sign product around the
+  elementary `mu_i-mu_j` plaquette at `n` equals `-1`,
+      `eta_i(n) * eta_j(n+mu_i) * eta_i(n+mu_j) * eta_j(n) = -1`,
+  identically. Proven by algebraic parity argument on integer
+  exponents (the constant term is odd and all linear coefficients
+  in `n_k` are even) plus exhaustive numerical verification on
+  2058 (i, j, n) combinations across 6 pairs and 343 base points.
+  Combined with the classical Kasteleyn theorem (for planar
+  bipartite graphs, universal plaquette-sign `-1` implies
+  `|Pf(A_signed)| = #PM`), this upgrades the iteration 2c
+  case-by-case identity `|det(B_G)| = #PM(G)` to a GENERAL theorem
+  on planar bipartite Z^3 subgraphs /
+  `frontier_axiom_native_kasteleyn_plaquette_sign.py` /
+  Target 2 sub-step 2d.
