@@ -98,7 +98,8 @@ Validate with:
 - retained quantitative lanes:
   `alpha_s(M_Z)`, EW normalization, retained YT/top transport
 - promoted quantitative flavor lane:
-  CKM atlas/axiom package
+  CKM atlas/axiom package, including the standalone CP-phase structural
+  identity `cos^2(delta_CKM) = 1/6`
 - derived quantitative lane:
   Higgs/vacuum package with explicit retention budget
 - bounded quantitative companions:
@@ -158,6 +159,7 @@ Current charged-lepton status:
 Start with:
 
 - [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
+- [CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md](../../CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
 - [KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md](../../KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md)
 - [CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md](../../CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md)
 - [KOIDE_NATIVE_DIMENSIONLESS_REVIEW_PACKET_2026-04-24.md](../../KOIDE_NATIVE_DIMENSIONLESS_REVIEW_PACKET_2026-04-24.md)
@@ -165,6 +167,7 @@ Start with:
 Validate with:
 
 - `python3 scripts/frontier_ckm_atlas_axiom_closure.py`
+- `python3 scripts/frontier_ckm_cp_phase_structural_identity.py`
 - `python3 scripts/frontier_ckm_no_import_audit.py`
 - `python3 scripts/frontier_koide_native_zero_section_nature_review.py`
 - `python3 scripts/frontier_koide_q_delta_residual_cohomology_obstruction_no_go.py`

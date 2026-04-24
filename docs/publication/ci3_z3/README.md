@@ -36,7 +36,8 @@ For the full package-capture inventory, use:
   identification chain
 - retained quantitative package:
   electroweak scale `v`, `alpha_s(M_Z)`, electroweak normalization,
-  retained YT/top transport, and the promoted CKM atlas/axiom package
+  retained YT/top transport, and the promoted CKM atlas/axiom package,
+  including the standalone `cos^2(delta_CKM) = 1/6` structural identity
 - retained structural/corollary surface:
   strong CP on the retained action surface, emergent Lorentz invariance,
   `S^3` topology closure, SM hypercharge uniqueness/electric-charge

@@ -31,7 +31,8 @@ questions:
 - retained quantitative package:
   canonical `v = 246.282818290129 GeV`, retained `alpha_s(M_Z) = 0.1181`,
   electroweak normalization, retained top/Yukawa transport, promoted CKM
-  atlas/axiom numerics, and bounded confinement-string readout; the absolute
+  atlas/axiom numerics including `cos^2(delta_CKM) = 1/6`, and bounded
+  confinement-string readout; the absolute
   lattice scale is tracked explicitly on a dedicated Planck-scale lane as the
   current package pin `a^(-1) = M_Pl` on the physical-lattice reading, with a
   conditional completion theorem and finite-boundary density extension reducing

@@ -565,6 +565,11 @@ $$
 \delta_{\mathrm{std}} = \arctan\sqrt{5} = \arccos\frac{1}{\sqrt{6}}. \tag{15}
 $$
 
+The phase subtheorem is exact on the same surface:
+$\cos^2\delta_{\mathrm{std}}=1/6$, $\sin^2\delta_{\mathrm{std}}=5/6$,
+$\tan\delta_{\mathrm{std}}=\sqrt{5}$, and
+$J=\alpha_s(v)^3\sqrt{5}/72$ once the retained $\alpha_s(v)$ input is supplied.
+
 The promoted package reports
 
 - $|V_{us}| = 0.22727$,

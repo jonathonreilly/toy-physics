@@ -53,10 +53,13 @@ closes.
   - `|V_us| = 0.22727`
   - `|V_cb| = 0.04217`
   - `|V_ub| = 0.003913`
-  - `delta = 65.905 deg`
-  - `J = 3.331 x 10^-5`
+  - `delta = arccos(1/sqrt(6)) = 65.905 deg`
+  - `cos^2(delta) = 1/6`, `tan(delta) = sqrt(5)`
+  - `J = alpha_s(v)^3 sqrt(5)/72` (`~3.3-3.4 x 10^-5` on the
+    retained `alpha_s(v)` surface)
   - authority:
-    [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
+    [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md),
+    [CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md](../../CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
 - confinement readout on top of the exact graph-first confinement theorem:
   - `sqrt(sigma) ≈ 465 MeV`
   - authority:

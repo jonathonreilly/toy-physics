@@ -27,24 +27,17 @@ projection of this exact carrier on the canonical A1 family.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from importlib.machinery import SourceFileLoader
 
 import numpy as np
 
+from _frontier_loader import load_frontier
 
-ROOT = "/private/tmp/physics-review-active"
 R_TEST = [0.0, 0.25, 0.5, 1.0, 1.5, 2.0]
 R_BOUND = [0.0, 0.5, 1.5]
 
 
-same = SourceFileLoader(
-    "same_source_metric",
-    f"{ROOT}/scripts/frontier_same_source_metric_ansatz_scan.py",
-).load_module()
-center = SourceFileLoader(
-    "tensor_center_excess",
-    f"{ROOT}/scripts/frontier_tensor_support_center_excess_law.py",
-).load_module()
+same = load_frontier("same_source_metric", "frontier_same_source_metric_ansatz_scan.py")
+center = load_frontier("tensor_center_excess", "frontier_tensor_support_center_excess_law.py")
 
 
 @dataclass

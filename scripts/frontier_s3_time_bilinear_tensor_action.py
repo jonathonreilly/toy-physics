@@ -23,28 +23,21 @@ all.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from importlib.machinery import SourceFileLoader
 
 import numpy as np
 from scipy.linalg import expm
 
+from _frontier_loader import load_frontier
 
-ROOT = "/private/tmp/physics-review-active"
 TIMES = [0.0, 0.5, 1.0, 2.0]
 
 
-same = SourceFileLoader(
-    "same_source_metric",
-    f"{ROOT}/scripts/frontier_same_source_metric_ansatz_scan.py",
-).load_module()
-schur = SourceFileLoader(
-    "oh_schur_boundary_action",
-    f"{ROOT}/scripts/frontier_oh_schur_boundary_action.py",
-).load_module()
-bilinear = SourceFileLoader(
+same = load_frontier("same_source_metric", "frontier_same_source_metric_ansatz_scan.py")
+schur = load_frontier("oh_schur_boundary_action", "frontier_oh_schur_boundary_action.py")
+bilinear = load_frontier(
     "s3_time_bilinear_tensor_primitive",
-    f"{ROOT}/scripts/frontier_s3_time_bilinear_tensor_primitive.py",
-).load_module()
+    "frontier_s3_time_bilinear_tensor_primitive.py",
+)
 
 
 @dataclass
