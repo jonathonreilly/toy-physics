@@ -1731,3 +1731,65 @@ Kasteleyn thread conjecture doc and update the localization
 signature claim to reflect that it's shape-dependent beyond
 singletons.
 
+[2026-04-24 06:30] V2 iteration: SH3 non-reflection degeneracy investigation — PASS (partial)
+Tried: identify the mechanism behind iter 28's SH3 anomaly
+(det_K3 = 0 on (4,4,2) \ {(1,0,0),(2,0,0),(3,0,0),(0,3,1)}
+despite defect not being central-reflection-paired and n_bi
+even). Wrote scripts/frontier_axiom_native_sh3_degeneracy
+_investigation.py.
+Investigation steps:
+  (1) Enumerated full D_4 x Z_2 symmetry group of (4,4,2)
+      (16 elements, including 90-degree rotations and
+      diagonal reflections since L1=L2=4).
+      Result: ONLY identity fixes SH3 defect set. SH3 has no
+      non-trivial symmetry in the cuboid's full automorphism
+      group.
+  (2) Computed det_K3(SH3) via sympy exact integer
+      arithmetic: det = 0 exactly (not just numerical zero).
+  (3) Enumerated all 1490 PMs of SH3, classified by K3 sign:
+      n_plus = 745 = n_minus exactly. Perfect splitting
+      without any apparent symmetry.
+  (4) Tested 7 nearby configurations (same y=0 line-3 +
+      different isolated balanced singletons). Striking
+      pattern discovered:
+        z=1 singletons (4 tested): all give det = 0.
+          (0,1,1), (0,3,1)[SH3], (2,3,1), (2,1,1)
+        z=0 singletons (3 tested): all give det != 0.
+          (0,2,0)=880, (1,3,0)=-880, (3,3,0)=1056
+      4/4 z-separated and 3/3 z-same split perfectly.
+  (5) Tested alternative line-3 at y=2 (still z=0). 3 z=1
+      singletons: 2 give det=0, but (3,0,1) gives
+      det=-880. So the "z-plane separation forces det=0"
+      pattern holds on y=0 line but has exceptions for y=2
+      line. Rotated line at x=0 (y-direction) had 0 valid
+      balanced tests after filtering.
+Interpretation: SH3 det=0 is NOT explained by any
+D_4 x Z_2 symmetry. There IS a strong empirical pattern --
+line-3 in z=0 + singleton in z=1 forces det=0 in many
+configurations, but not all. The exact condition is not
+characterized. The n_plus = n_minus = 745 equality on SH3
+is a perfect PM-pairing that does not come from any
+axis-aligned symmetry of the graph.
+Accepted because: hostile audit verdict = clean. 15 record()
+booleans. 2 FAILs are computed correctly:
+  - all_line3_plus_singleton_give_det_zero: FAIL (4/7, not
+    all -- but this is honest, the overall hypothesis fails).
+  - SH3_has_nontrivial_symmetry: FAIL (no non-identity
+    symmetry fixes SH3, confirmed empirically).
+  - alt_line3_z_separated_singletons_det_zero: FAIL (2/3,
+    one z-separated singleton gives non-zero).
+All FAILs are truthful computed results.
+Bonus: discovered z-plane-separation pattern as a candidate
+mechanism, though with exceptions. Suggests there is some
+PM-pairing intrinsic to line-3 structures + z-separated
+singletons that needs further investigation.
+Next V2 vector: (a) systematically map which (line-3, z=1
+singleton) configurations on (4,4,2) give det=0 vs not.
+Look for another parameter (e.g., x-parity of singleton,
+or graph-distance between singleton and line-3 endpoint)
+that determines the outcome. (b) Test line-3 on other cuboid
+sizes ((5,5,2), (4,4,4)) to see if the pattern is
+(4,4,2)-specific or generalizes. (c) Try line-4 + singleton
+instead of line-3 + singleton: does the pattern hold for
+longer lines?
+

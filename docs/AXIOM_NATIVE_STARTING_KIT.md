@@ -739,6 +739,31 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   "emitters" of sign inconsistency /
   `frontier_axiom_native_mixed_defect_localization.py` /
   Target 2 sub-step 2d-V2-mixed-defect-singleton-specificity.
+- SH3 non-reflection degeneracy explained partially by a
+  z-plane separation pattern. On (4,4,2), the defect
+  {(1,0,0), (2,0,0), (3,0,0), (0,3,1)} = line-3 at z=0 +
+  singleton at z=1 gives det_K3 = 0 exactly (verified via
+  sympy integer det; n_plus = n_minus = 745 exactly). The
+  defect is fixed ONLY by the identity element of
+  D_4 x Z_2 (the 16-element symmetry group of (4,4,2)).
+  Investigation:
+  - For the y=0 line-3 at z=0, varying the singleton through
+    7 isolated balanced positions: all 4 z=1 singletons give
+    det=0, all 3 z=0 singletons give det != 0. 7/7 split by
+    z-plane separation.
+  - For an alternative y=2 line-3 at z=0, 3 z=1 singletons
+    tested: 2 give det=0 (including (0,3,1), (0,1,1)), but
+    (3,0,1) gives det=-880. So the z-plane-separation
+    pattern has exceptions beyond the simplest y=0 case.
+  This is a new partial-empirical pattern: a line-3 in one
+  z-plane plus certain singletons in the opposite z-plane
+  forces det_K3 = 0 by a mechanism distinct from the iter 23
+  reflection lemma (since the defect is NOT
+  central-reflection-paired). Not yet a proven lemma;
+  requires further investigation to identify exactly which
+  z-separated singletons force det=0 /
+  `frontier_axiom_native_sh3_degeneracy_investigation.py` /
+  Target 2 sub-step 2d-V2-sh3-z-plane-separation.
 - Non-singleton shape type AFFECTS signal preservation
   (iter 27 singleton-specific signal is fragile). Swept 6
   mixed-defect shapes on (4,4,2) with different non-singleton
