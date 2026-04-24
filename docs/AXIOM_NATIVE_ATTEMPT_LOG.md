@@ -1152,3 +1152,45 @@ structurally via the relationship between singleton defects and
 K3's translation-invariance. (c) write up summary since the
 Kasteleyn thread has converged on a specific characterization.
 
+[2026-04-24 02:30] V2 iteration: mixed-defect test of singleton hypothesis — PASS (3/3)
+Tried: construct shapes with singletons + larger defects to test
+whether singletons always break K3 or larger defects absorb them.
+Wrote scripts/frontier_axiom_native_mixed_defect_test.py.
+Shapes tested:
+- Shape I: intended as "2 singletons + 1 pair" but actual
+  components = [3, 1] (my "singleton" at (0,0,0) was adjacent to
+  (1,0,0) which was in the "pair"). 1 singleton + 1 triple.
+  K3 det=4 < max=8. K3 FAILS. ✓ hypothesis.
+- Shape E: intended as "2 singletons + 2 pairs" but actual
+  components = [3, 3]. No singletons. K3 det=1 = max. K3 OPTIMAL.
+  ✓ hypothesis (no singleton).
+- Shape J: 2 pairs {(0,0,0)-(0,0,1)} + {(2,2,0)-(2,2,1)},
+  components [2, 2], no singletons. K3 det=45 = max. K3 OPTIMAL.
+  ✓ hypothesis.
+Design insight: when I picked "singleton" sites adjacent to other
+removed sites (sharing a coordinate-1 neighbor), they merged into
+larger components. So my "singleton + adjacent pair" was actually
+a 3-site connected defect. This is why Shape E showed "no
+singletons" when I thought I was designing 2 singletons + 2 pairs.
+Nonetheless, Shape I accidentally tested the actual question --
+"singleton + separate triple" -- and K3 FAILED there, confirming
+singletons break K3 even when larger defects coexist.
+Accepted because: hostile audit verdict = clean. 12 computed
+record() booleans (all PASS). No narrative PASSes.
+Net: singleton hypothesis now has 14+ data points across V2
+iterations 11-18, 0 counterexamples. Hypothesis strongly
+supported.
+Conclusion for this thread: the refined characterization of K3
+Pfaffian-optimality on Z^3 subgraphs is:
+  K3 optimal iff (a) graph contractible AND (b) defect contains
+  no isolated singleton components.
+This is a concrete combinatorial/topological theorem candidate,
+grounded in 14+ computed cases and 0 counterexamples.
+Next V2 vector: (a) attempt a structural proof of the singleton
+hypothesis via analyzing how singleton defects force non-local
+matching corrections. (b) Test one more type of adversarial case:
+LARGE cuboid (4,4,2) with a single singleton defect far from
+boundary. Does K3 fail even with a large bulk of defect-free
+graph? If yes, confirms singleton criterion is local (about the
+singleton itself, not surrounding graph structure).
+

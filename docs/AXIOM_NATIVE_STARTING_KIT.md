@@ -245,6 +245,19 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   on planar bipartite Z^3 subgraphs /
   `frontier_axiom_native_kasteleyn_plaquette_sign.py` /
   Target 2 sub-step 2d.
+- Singleton hypothesis survives mixed-defect test, including a
+  clean adversarial probe of "singleton coexisting with larger
+  defect". Tested three (3,3,2) variants; the one with an actual
+  singleton (component sizes [3, 1]) has K3 failing (4 < 8), and
+  the two without singletons (components [3, 3] and [2, 2]) have
+  K3 optimal. A design lesson: choosing "singleton" sites adjacent
+  to other removed sites accidentally merges them into larger
+  components. The concrete singleton-coexisting-with-triple case
+  (Shape I here) still supports the singleton hypothesis: singletons
+  break K3 even alongside larger defects; larger defects do not
+  absorb singletons /
+  `frontier_axiom_native_mixed_defect_test.py` /
+  Target 2 sub-step 2d-V2-mixed-defect.
 - SINGLETON HYPOTHESIS strongly supported: K3 Pfaffian-optimality
   iff `graph is contractible AND defect region has no isolated
   singleton components (all components have size >= 2)`. Tested on
