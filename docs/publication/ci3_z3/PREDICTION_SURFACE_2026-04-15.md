@@ -172,6 +172,13 @@ conceptual pressure.
     gauged, a `Z'` mass/coupling, or a Majorana structure
   - authority:
     [BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24.md](../../BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24.md)
+- `SU(2)` Witten `Z_2` global anomaly cancellation:
+  - on retained weak-doublet matter, `N_D = 4` per generation and `12` over
+    three generations, so the nonperturbative `SU(2)` Witten anomaly cancels
+  - this is a fundamental Weyl-doublet count; it does not constrain bosonic
+    Higgs doublets or classify higher-isospin `SU(2)` representations
+  - authority:
+    [SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md](../../SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md)
 - emergent Lorentz invariance:
   - leading anisotropic correction first appears at dimension 6
   - unique cubic-harmonic `ell = 4` fingerprint

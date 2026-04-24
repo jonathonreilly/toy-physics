@@ -41,6 +41,8 @@ The paper does **not** claim:
   evasion theorem;
 - that SM hypercharge uniqueness derives the neutral-singlet input
   `Y(nu_R)=0`, cross-generation uniqueness, or alternative gauge groups;
+- that the `SU(2)` Witten anomaly theorem constrains bosonic Higgs doublets,
+  classifies higher-isospin `SU(2)` representations, or derives `N_c = 3`;
 - that every older Cabibbo / NNI / partial-Jarlskog route is current
   authority.
 - a full retained neutrino point-prediction package for the solar gap, PMNS
@@ -52,6 +54,8 @@ The current retained claim is:
 - one-generation SM hypercharge uniqueness/electric-charge quantization
   conditional on the retained left-handed content, singlet right-handed
   completion, anomaly equations, `Y(nu_R)=0`, and charge labelling;
+- nonperturbative `SU(2)` Witten global-anomaly cancellation on the retained
+  fundamental weak-doublet content;
 - promoted atlas/axiom CKM closure on the current chosen package surface.
 - bounded retained-package neutrino observable inequalities from the retained
   atmospheric scale plus normal ordering.

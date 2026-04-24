@@ -35,6 +35,10 @@ Evaluating the standard anomaly traces:
 | Tr[SU(2)^2 Y]           | 0       | OK        |
 | Witten SU(2) (doublets) | 4 (even)| OK        |
 
+The Witten row is the nonperturbative global `SU(2)` anomaly count; its
+standalone retained packaging is
+[`SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md`](SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md).
+
 Two anomaly coefficients are nonzero. By the Adler--Bell--Jackiw theorem
 [1,2], the gauge theory violates unitarity: Ward identities break and
 longitudinal gauge boson modes fail to decouple. The theory is
