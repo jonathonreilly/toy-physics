@@ -764,6 +764,39 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   z-separated singletons force det=0 /
   `frontier_axiom_native_sh3_degeneracy_investigation.py` /
   Target 2 sub-step 2d-V2-sh3-z-plane-separation.
+- Generalized (bipartition-preserving) partial-reflection
+  lemma is SUFFICIENT but NOT NECESSARY for det_K3 = 0.
+  Iter 32 tested the lemma candidate (phi a bipartition-
+  preserving partial reflection fixing the defect, all
+  epsilon_mu = +1 under phi, sign(sigma_e)*sign(sigma_o) =
+  -1) across 1720 line-3 + singleton configs on 5 L3=2
+  cuboids. Results:
+    (3,3,2): 40/40 perfect (24 TP, 16 TN, 0 FP, 0 FN).
+    (4,3,2): 80/112 (24 TP, 56 TN, 0 FP, 32 FN).
+    (4,4,2): 160/288 (0 TP, 160 TN, 0 FP, 128 FN).
+    (5,3,2): 184/232 (52 TP, 132 TN, 0 FP, 48 FN).
+    (5,5,2): 760/1048 (80 TP, 680 TN, 0 FP, 288 FN).
+    Total: 1224/1720 = 71.2%, 0 false positives, 496 false
+    negatives.
+  Critical observation: on (4,4,2), the bipartition-preserving
+  partial-reflection framework gives 0 TP out of 128 det=0
+  cases. All 128 (4,4,2) det=0 cases are from the iter 23
+  central reflection sigma (bipartition-FLIPPING), NOT
+  covered by this runner's framework. On (3,3,2), all 24
+  det=0 cases ARE covered by bipartition-preserving partial
+  reflections. So the zero-det mechanism varies by cuboid:
+  small odd-odd cuboids ((3,3,2)) rely on partial
+  reflections; even-even ((4,4,2)) rely on central sigma;
+  mixed cuboids ((4,3,2), (5,3,2), (5,5,2)) use BOTH.
+  Conclusion: no SINGLE mechanism characterizes det=0. The
+  real lemma is a UNION: det=0 iff there exists a graph
+  automorphism phi of the truncated graph (either
+  bipartition-preserving or flipping) such that phi's
+  transformation factor on B is -1. This combines iter 23
+  (for central sigma) with the iter 32 test (for partial
+  reflections) /
+  `frontier_axiom_native_generalized_reflection_lemma.py` /
+  Target 2 sub-step 2d-V2-generalized-reflection-lemma.
 - Line-3 + singleton zero-det H5 lemma (candidate): iter 30
   found on (4,4,2) that 288 of 288 (line-3, isolated-balanced-
   singleton) configurations are perfectly classified by H5

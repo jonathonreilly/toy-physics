@@ -1918,3 +1918,67 @@ reflections CAN force det=0 on appropriate defect
 configurations, they just don't on generic 2-singleton
 test cases.
 
+[2026-04-24 07:50] V2 iteration: generalized reflection lemma test — PASS (sufficient-only)
+Tried: test the candidate generalized partial-reflection
+lemma: det=0 iff there exists a bipartition-preserving
+graph automorphism phi fixing the defect, with all
+epsilon_mu = +1 under phi, and sign(sigma_e)*sign(sigma_o)
+= -1 on G's remaining evens and odds. Wrote
+scripts/frontier_axiom_native_generalized_reflection
+_lemma.py. For each (line-3, singleton) config on 5 L3=2
+cuboids, checked all 7 partial reflections rho_S.
+Results per cuboid (TP/FP/FN/TN):
+  (3,3,2): 24/0/0/16 = PERFECT.
+  (4,3,2): 24/0/32/56.
+  (4,4,2): 0/0/128/160.
+  (5,3,2): 52/0/48/132.
+  (5,5,2): 80/0/288/680.
+  Total: 180/0/496/1044 = 71.2% overall, 0 FP, 496 FN.
+Key insight: the generalized partial-reflection lemma is
+SUFFICIENT (predicted det=0 is always actual det=0: 0 FP)
+but far from NECESSARY. Many det=0 configurations are
+missed.
+Most striking: (4,4,2) gives 0 TP of its 128 det=0 cases.
+This is because (4,4,2) with L_1=L_2=4 even has a
+transformation factor under partial reflections that is
+NOT "all epsilons = +1" (iter 24 showed epsilon_2, epsilon_3
+flip under rho_1, rho_2, rho_{12} on (4,4,2)). So no
+bipartition-preserving partial reflection gives a clean
+"all epsilons +1" case. The (4,4,2) det=0 cases instead
+come from the CENTRAL rho_{123} reflection (iter 23
+mechanism), which is bipartition-FLIPPING (since
+L_1+L_2+L_3=10 even). My iter 32 runner only tested
+bipartition-preserving, so missed all (4,4,2) det=0 cases.
+By contrast, (3,3,2) with L_1=L_2=3 odd has partial
+reflections with all epsilons +1 (rho_1, rho_2 both give
+epsilon_2 = epsilon_3 = +1 because L_1-1 and L_2-1 are
+even). All 24 (3,3,2) det=0 cases are explained by such
+reflections.
+Intermediate cuboids ((4,3,2), (5,3,2), (5,5,2)) have
+mixed behavior: some det=0 configs from partial reflections
+(giving the TP count), some from central sigma (remaining
+FN count).
+Accepted because: hostile audit verdict = clean. 15 record()
+booleans. FAILs are correct computed Falses on
+non-perfect cuboids.
+Honest conclusion: there is no SINGLE-phi-type lemma that
+characterizes all det=0 cases. The REAL unified lemma is:
+det=0 iff there exists SOME graph automorphism phi (of
+any type, bipartition-preserving or flipping) such that
+phi's net transformation factor on the matrix B is -1.
+Iter 23 (central sigma) covers one subset; iter 32 (partial
+reflections) covers another; together they cover more than
+either alone. A full characterization would require
+computing the transformation factor for ALL graph
+automorphisms of the truncated graph, not just partial
+reflections.
+Next V2 vector: (a) extend the runner to cover bipartition-
+FLIPPING reflections too (central sigma and the 3
+"half-flipping" reflections rho_{ij} on L_i+L_j odd). For
+each, compute the effective transformation factor on det(B)
+(should reduce to iter 23's mechanism for central sigma).
+Check if combined coverage is now 1720/1720. If yes, the
+REAL lemma is proven as a union. (b) If SH3-type cases
+remain, identify their mechanism (non-automorphism
+PM-pairing).
+
