@@ -1235,3 +1235,58 @@ falls into at least 2 orbits under K3 sign symmetries, with
 opposite signs. K3 can align one orbit but not both simultaneously,
 forcing |det(B)| < #PM. Formalize via matching-polytope arguments.
 
+[2026-04-24 03:20] V2 iteration: singleton structural proof attempt — PASS (PARTIAL)
+Tried: enumerate all perfect matchings on (3,3,2) minus the
+iter-14 D defect {(0,0,0), (2,2,1)}, split by signed K3
+contribution, look for a single structural witness (e.g., one
+edge appearing in every minority matching, or a universal
+alternating cycle) that would constitute a structural proof of
+the singleton obstruction. Wrote
+scripts/frontier_axiom_native_singleton_proof_attempt.py.
+Enumerated all 40,320 = 8! permutations of the 8-site bipartite
+block, found 42 perfect matchings:
+  n_plus = 36, n_minus = 6, |det(B)| = 30 (matches iter-14 D).
+  minority_count = gap/2 = 6 exactly.
+Structural analyses:
+- Top 5 minority-biased edges (edges with higher minority:majority
+  ratio than the graph average): (2,0,0)-(2,0,1), (0,2,0)-(0,2,1),
+  (2,1,0)-(2,1,1), (0,1,0)-(0,1,1), (1,0,0)-(1,1,0). Avg Manhattan
+  distance from removed sites: 0.000 (edges are incident to the
+  6 neighbors of removed sites).
+- Top majority-biased edges (most suppressed in minority):
+  avg Manhattan distance from removed sites: 1.365.
+- No edge appears in ALL 6 minority matchings (falsifies
+  "universal witness edge" hypothesis).
+- Minority and majority matchings use the SAME average number
+  (6.000) of edges incident to singleton-neighbors, so it is
+  not mere frequency — it is specific pairings.
+Interpretation: the signature IS spatial localization
+(minority-biased edges cluster around removed singletons,
+majority-biased edges live in the bulk), but NOT a single
+combinatorial witness. The obstruction involves multiple
+distinct alternating cycles threading the singleton
+neighborhoods. This is a PARTIAL structural proof -- it
+rigorously confirms what the empirical locality test showed
+(obstruction is tied to singletons), but it does not reduce to
+a single-cycle or single-edge certificate that could serve as
+a closed-form "structural lemma".
+Accepted because: hostile audit verdict = clean. 13 computed
+record() booleans. No narrative PASSes.
+Honest self-critique: I expected to find either (a) a universal
+witness edge (1 edge in all 6 minority), or (b) a universal
+3-cycle. Neither appeared. What DID appear is spatial
+localization (distance 0 vs 1.365), which is a numerical
+confirmation of the qualitative locality claim but not a
+closed-form structural lemma. The 6 minority matchings are
+heterogeneous -- they all live near the singletons, but they
+differ in HOW. A closed-form structural proof probably needs
+to exhibit the matching-set as a union of orbits under some
+K3-symmetry subgroup, not as a single-witness structure.
+Next V2 vector: (a) try larger (4,3,2) singleton case to see
+if minority count = (max - det)/2 pattern holds and whether
+localization persists at larger scale. (b) try to find a
+K3-sign-inverting symmetry that acts on PMs and has orbit
+sizes matching 36/6 split. (c) write formal conjecture doc
+summarizing what the singleton hypothesis now IS, what data
+supports it, and what a proof would require.
+

@@ -540,3 +540,26 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   success route is achieved /
   `frontier_axiom_native_strong_cp_structural_absence.py` /
   Target 6 sub-step 6a.
+- PARTIAL structural signature of singleton obstruction on
+  (3,3,2) minus {(0,0,0), (2,2,1)}. Exhaustive permutation
+  enumeration over the 8x8 bipartite block gives 42 perfect
+  matchings: 36 contribute +1 to `det(B)`, 6 contribute -1, so
+  `|det(B)| = |36 - 6| = 30`, matching iter-14 D (max=36 PM-count).
+  Structural signal: the 5 most minority-biased edges
+  (higher minority/majority incidence ratio than the graph
+  average) are ALL incident to a neighbor of a removed singleton
+  -- avg distance 0.000 from removed sites, versus 1.365 for the
+  most majority-biased edges. So the Pfaffian obstruction is
+  SPATIALLY LOCALIZED around singletons (empirical signature of
+  the locality result). However the signature is not a single
+  "universal witness edge": NO edge appears in all 6 minority
+  matchings, and minority vs majority matchings use the same
+  average number (6) of edges incident to singleton-neighbors.
+  So the obstruction involves multiple distinct alternating
+  cycles threading the singleton neighborhoods, not one shared
+  cycle. This falls SHORT of a complete structural proof of the
+  singleton hypothesis (no single combinatorial witness
+  identified), but confirms the obstruction is localized and
+  heterogeneous /
+  `frontier_axiom_native_singleton_proof_attempt.py` /
+  Target 2 sub-step 2d-V2-singleton-partial-proof.
