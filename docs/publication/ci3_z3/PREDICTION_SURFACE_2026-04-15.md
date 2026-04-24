@@ -232,6 +232,9 @@ lane:
 - `Q = 2/3` is reduced to the zero-source source-response readout theorem
 - `delta = 2/9` is reduced to the Brannen real-primitive endpoint plus
   based/unit endpoint readout theorem
+- pointed-origin exhaustion proves origin-free retained data cannot select the
+  closing representative; the remaining theorem must derive the pointed
+  source/boundary-origin law itself
 
 Outside that flagship lane, the main open promotions are:
 

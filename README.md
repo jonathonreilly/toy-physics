@@ -98,9 +98,10 @@ questions:
   Yukawa/top transport, and bounded Higgs/vacuum closure
 - charged-lepton package:
   substantial Koide support stack; the latest native zero-section review
-  rejects full dimensionless closure but sharpens the remaining work to the
-  zero-source charged-lepton readout, the Brannen real-primitive endpoint
-  identification, and the based/unit endpoint readout
+  and pointed-origin exhaustion theorem reject full dimensionless closure but
+  sharpen the remaining work to one pointed source/boundary-origin law:
+  zero-source charged-lepton readout, Brannen real-primitive endpoint
+  identification, and based/unit endpoint readout
 - dark-matter package:
   closed for the exact PMNS-target formulation treated in the manuscript,
   including the source-selection and ordered-current closure chain, with the

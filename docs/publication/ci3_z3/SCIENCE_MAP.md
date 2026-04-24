@@ -157,6 +157,9 @@ Current charged-lepton status:
   zero-source source-response identification theorem
 - `delta = 2/9` support is strong, but the physical Brannen endpoint is still
   reduced to the real-primitive endpoint plus based/unit endpoint theorem
+- pointed-origin exhaustion shows that origin-free retained data cannot select
+  the simultaneous zero-source / real-primitive / unit-endpoint representative;
+  the next positive theorem must derive that pointed source/boundary-origin law
 - the separate overall lepton scale `v_0` also remains open
 
 Start with:
@@ -164,6 +167,7 @@ Start with:
 - [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
 - [CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md](../../CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
 - [KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md](../../KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md)
+- [KOIDE_POINTED_ORIGIN_EXHAUSTION_THEOREM_NOTE_2026-04-24.md](../../KOIDE_POINTED_ORIGIN_EXHAUSTION_THEOREM_NOTE_2026-04-24.md)
 - [CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md](../../CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md)
 - [KOIDE_NATIVE_DIMENSIONLESS_REVIEW_PACKET_2026-04-24.md](../../KOIDE_NATIVE_DIMENSIONLESS_REVIEW_PACKET_2026-04-24.md)
 

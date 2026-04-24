@@ -60,6 +60,12 @@ NEXT_NATIVE_THEOREM=
    the endpoint offset.  This is the clearest next theorem target, not current
    closure.
 
+6. **Pointed-origin exhaustion.** Origin-free retained data cannot select the
+   simultaneous zero-source, no-CP1-selector, unit-endpoint representative.
+   The reviewed positive pointed-origin closure proposal is therefore not
+   retained as closure; what lands is the sharper residual theorem naming the
+   needed pointed source/boundary-origin law.
+
 ## Explicitly not landed
 
 The branch's stronger `KOIDE_NATIVE_BRANNEN_REAL_PRIMITIVE_CLOSURE_THEOREM`
@@ -83,6 +89,7 @@ python3 scripts/frontier_koide_q_delta_residual_cohomology_obstruction_no_go.py
 python3 scripts/frontier_koide_q_delta_readout_retention_split_no_go.py
 python3 scripts/frontier_koide_delta_marked_relative_cobordism_no_go.py
 python3 scripts/frontier_koide_delta_lattice_wilson_selected_eigenline_no_go.py
+python3 scripts/frontier_koide_pointed_origin_exhaustion_theorem.py
 python3 scripts/frontier_koide_native_zero_section_closure_route.py
 python3 scripts/frontier_koide_native_zero_section_nature_review.py
 python3 scripts/frontier_koide_hostile_review_guard.py
