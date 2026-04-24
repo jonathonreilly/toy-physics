@@ -38,7 +38,11 @@ Current science/open-lane follow-ups:
   sharpened obstruction now identified as self-Hartree contamination of the
   heavier packet in the SHARED-SELF_ONLY differential protocol
 - boundary-law / holographic lane: keep the effect bounded and do not overread
-  it as a holography derivation
+  it as a holography derivation; the area-law slope is seed-stable to ~2% CV
+  and monotonically decreasing in G, but the gravity-induced suppression ratio
+  `slope(G=10)/slope(G=0)` is NOT size-coherent (37% spread across
+  sides 8/10/12/14, trending toward 1.0 with size — apparent finite-size
+  effect, see [`BOUNDARY_LAW_COEFFICIENT_STABILITY_NOTE_2026-04-24.md`](../BOUNDARY_LAW_COEFFICIENT_STABILITY_NOTE_2026-04-24.md))
 - memory lane: protocol- and geometry-stable observable remains open
 - emergent-geometry growth: multi-size, multi-seed stability remains open;
   failure pattern is now frozen with a `G=0` null control in
