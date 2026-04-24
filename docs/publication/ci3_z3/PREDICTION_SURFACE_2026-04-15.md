@@ -205,8 +205,9 @@ Authority:
 The main remaining flagship bridge package is now the charged-lepton Koide
 lane:
 
-- `Q = 2/3` still requires a physical/source-law bridge
-- `delta = 2/9` still requires the physical Brannen-phase bridge
+- `Q = 2/3` is reduced to the zero-source source-response readout theorem
+- `delta = 2/9` is reduced to the Brannen real-primitive endpoint plus
+  based/unit endpoint readout theorem
 
 Outside that flagship lane, the main open promotions are:
 

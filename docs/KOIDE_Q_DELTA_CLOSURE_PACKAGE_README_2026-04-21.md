@@ -29,9 +29,27 @@ physical bridges. See
 `docs/KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md`, and
 `docs/KOIDE_Q_SECOND_ORDER_SUPPORT_BATCH_NOTE_2026-04-22.md`.
 
-**Executability guarantee.** Every PASS check across the current runner stack
-is an actual executable computation: symbolic via sympy, numeric via PDG
-lepton masses, or direct structural checks. Totals: **242 PASS / 0 FAIL**.
+**2026-04-24 native dimensionless review.** The April 24 native packet does
+not promote full retained dimensionless closure.  It sharpens the remaining
+work:
+
+- the `Q` bridge is reduced to the physical identification of the
+  zero-source source-response readout;
+- the `δ` bridge is reduced to deriving the physical Brannen endpoint as the
+  whole real nontrivial `Z_3` primitive and deriving the open endpoint readout
+  as based/unit-preserving;
+- exactness/cohomology, marked relative-cobordism, and finite-Wilson
+  selected-eigenline routes do not choose those missing sections;
+- the finite-Wilson selected-eigenline audit should be read as a negative
+  endpoint-selection diagnostic, not as a new finite-lattice derivation of the
+  APS value.
+
+See `docs/KOIDE_NATIVE_DIMENSIONLESS_REVIEW_PACKET_2026-04-24.md`.
+
+**Executability guarantee.** Every PASS check across the runner stack is an
+actual executable computation: symbolic via sympy, numeric via PDG lepton
+masses, or direct structural checks.  The April 21 core stack reports
+**242 PASS / 0 FAIL**; later addenda carry their own runner closeouts.
 
 ---
 
@@ -89,9 +107,8 @@ the unresolved choice of canonical extremal principle.
 
 The April 22 second-order support batch sharpens that residue further:
 
-> if the admitted second-order reduced carrier is accepted, the remaining open
-> step is exactly why the physical charged-lepton selector is source-free
-> (`K = 0`) there.
+> the remaining open step is exactly why the physical charged-lepton scalar
+> readout is the zero-source source-response coefficient on that carrier.
 
 The April 22 `O_h` covariance no-go sharpens the structural side as well:
 
@@ -104,8 +121,9 @@ The April 22 `O_h` covariance no-go sharpens the structural side as well:
 The April 21 APS stack proves the exact ambient topological number
 `η = 2/9`. What remains open is the physical-observable bridge:
 
-> why the physical Brannen phase on the actual selected-line `CP^1` carrier is
-> this APS invariant.
+> why the physical Brannen endpoint is the whole real nontrivial `Z_3`
+> primitive with a based/unit-preserving endpoint readout, rather than an
+> unbased rank-one selected-line coordinate.
 
 This is the same residual postulate sharpened in
 `docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md` and

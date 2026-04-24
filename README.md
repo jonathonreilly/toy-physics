@@ -91,9 +91,10 @@ questions:
   retained EW normalization, promoted CKM atlas/axiom closure, bounded
   Yukawa/top transport, and bounded Higgs/vacuum closure
 - charged-lepton package:
-  substantial Koide support stack that isolates the remaining work to two
-  explicit physical bridges, namely the extremal-principle bridge for
-  `Q = 2/3` and the Brannen-phase bridge for `delta = 2/9`
+  substantial Koide support stack; the latest native zero-section review
+  rejects full dimensionless closure but sharpens the remaining work to the
+  zero-source charged-lepton readout, the Brannen real-primitive endpoint
+  identification, and the based/unit endpoint readout
 - dark-matter package:
   closed for the exact PMNS-target formulation treated in the manuscript,
   including the source-selection and ordered-current closure chain, with the

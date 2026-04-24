@@ -164,6 +164,9 @@ theorem core.
 The remaining flagship bridge package is:
 
 - charged-lepton Koide support package
+  - April 24 native dimensionless review/no-go packet sharpens but does not
+    close the lane; zero-source readout, real-primitive endpoint, and
+    based/unit endpoint identifications remain theorem targets
 
 That is the current missing flagship prediction bridge. It does not erase the
 rest of the retained or bounded prediction surface.

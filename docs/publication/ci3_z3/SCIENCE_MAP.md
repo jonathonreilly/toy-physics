@@ -147,9 +147,10 @@ Validate with:
 
 Current charged-lepton status:
 
-- `Q = 2/3` support is strong, but the physical/source-law bridge remains open
-- `delta = 2/9` support is strong, but the physical Brannen-phase bridge
-  remains open
+- `Q = 2/3` support is strong, but the physical readout is still reduced to a
+  zero-source source-response identification theorem
+- `delta = 2/9` support is strong, but the physical Brannen endpoint is still
+  reduced to the real-primitive endpoint plus based/unit endpoint theorem
 - the separate overall lepton scale `v_0` also remains open
 
 Start with:
@@ -157,11 +158,15 @@ Start with:
 - [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
 - [KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md](../../KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md)
 - [CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md](../../CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md)
+- [KOIDE_NATIVE_DIMENSIONLESS_REVIEW_PACKET_2026-04-24.md](../../KOIDE_NATIVE_DIMENSIONLESS_REVIEW_PACKET_2026-04-24.md)
 
 Validate with:
 
 - `python3 scripts/frontier_ckm_atlas_axiom_closure.py`
 - `python3 scripts/frontier_ckm_no_import_audit.py`
+- `python3 scripts/frontier_koide_native_zero_section_nature_review.py`
+- `python3 scripts/frontier_koide_q_delta_residual_cohomology_obstruction_no_go.py`
+- `python3 scripts/frontier_koide_hostile_review_guard.py`
 - `python3 scripts/frontier_koide_reviewer_stress_test.py`
 - `python3 scripts/frontier_koide_lane_regression.py`
 
