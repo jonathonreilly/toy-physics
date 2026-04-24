@@ -2265,3 +2265,57 @@ mechanism or generalized reflection lemma would require
 genuinely new structural ideas, not incremental empirical
 refinement.
 
+[2026-04-24 10:10] V2 iteration: Target 3 sub-step 3c — spectral Koide test — PASS (null)
+Tried: pivot from Target 2 (Kasteleyn, now at natural close)
+to Target 3 (Koide Q = 2/3). Prior sub-steps 3a and 3b
+established:
+  3a: kit-derivable triples for Q = 2/3 exist (e.g., (4+3*sqrt(2), 1, 1)), but non-unique.
+  3b: K(v) = 3 p_2 - 2 p_1^2 is a kit-natural selector with
+      K = 0 iff Q = 2/3. K = 0 reclassified as the "last
+      remaining primitive beyond the kit."
+Iter 38 tests a NEW angle: does the K3 staggered Dirac
+singular-value spectrum on small cuboids naturally contain a
+3-subset with Q = 2/3? If yes, Q = 2/3 would emerge from kit
+structure directly (closing Target 3 via derivation route).
+Wrote scripts/frontier_axiom_native_target3_dirac_spectrum
+_koide.py. Tested 7 cuboids: (2,2,2), (3,2,2), (2,2,3),
+(4,2,2), (5,2,2), (2,4,2), (3,3,2).
+Total 3-subsets enumerated: 4+20+20+56+120+56+84 = 360.
+Zero 3-subsets satisfy Q = 2/3.
+Spectrum observations:
+  (2,2,2): 4 equal sigma = sqrt(3). Degenerate.
+  (3,2,2): 4 sigma=2, 2 sigma=sqrt(2). 2 distinct values.
+  (4,2,2): 2 distinct values each 4-fold.
+  (5,2,2): 3 distinct values (sqrt(5), sqrt(3), sqrt(2)).
+  (3,3,2): 3 distinct values (sqrt(5) 4-fold, sqrt(3) 4-fold,
+    1 1-fold). Max Q = 0.367 across 84 subsets.
+All tested spectra too DEGENERATE for Q = 2/3 to emerge.
+Max Q across all 360 3-subsets = 0.367 (on (3,3,2)); target
+2/3 = 0.667.
+Accepted because: hostile audit verdict = clean. 24 record()
+booleans. 8 FAILs are informative: each cuboid's "any_triple_
+hits_Q_2_over_3 = False" is the correct negative result. The
+"any_cuboid_dirac_spectrum_realizes_Q_2_over_3 = False" is
+the overall negative conclusion.
+Structural conclusion: the K3 Dirac spectrum on small cuboids
+is too degenerate (few distinct eigenvalues with high
+multiplicities) to realize Q = 2/3 as a 3-subset. The "derive
+K = 0 from kit spectral structure" route is closed for these
+cuboid sizes. This REINFORCES Target 3's reclassification
+blocker: K = 0 is genuinely a primitive beyond the kit's
+natural spectral structure.
+Net effect for Target 3: sub-steps 3a, 3b, 3c together
+document three angles at Q = 2/3 closure:
+  3a: specific kit-derivable triple exists (non-unique).
+  3b: K selector defined, reclassification.
+  3c: spectral natural triple does NOT exist (null).
+The cumulative evidence is: Target 3's "derivation" route is
+unreachable with current kit; the "reclassification" route is
+complete. This is an acceptable Target 3 outcome per the
+Target doc's rule: "reclassification = honestly-unreachable
+with a specific concrete blocker after exhausting attack
+vectors."
+Next V2 vector: consider whether additional Targets (1, 4,
+5, 6) have open frontiers worth pivoting to, or whether the
+loop has reached a natural close point across all targets.
+

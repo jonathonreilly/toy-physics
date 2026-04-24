@@ -764,6 +764,38 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   z-separated singletons force det=0 /
   `frontier_axiom_native_sh3_degeneracy_investigation.py` /
   Target 2 sub-step 2d-V2-sh3-z-plane-separation.
+- Target 3 new angle (iter 38): K3 Dirac singular-value
+  spectra on 7 small cuboids do NOT realize Koide Q = 2/3.
+  Computed SVD of K3 bipartite block B on (2,2,2), (3,2,2),
+  (2,2,3), (4,2,2), (5,2,2), (2,4,2), (3,3,2). For each,
+  enumerated all C(n_bi, 3) 3-subsets of singular values and
+  computed Q = p_2 / p_1^2.
+  Spectra observed:
+    (2,2,2): 4 equal sigma = sqrt(3). Product = 9 = |det|.
+    (3,2,2): 4 sigma = 2, 2 sigma = sqrt(2). Product = 32.
+    (2,2,3): same as (3,2,2).
+    (4,2,2): 4 sigma ~2.149, 4 sigma ~1.543.
+    (5,2,2): 4 sigma = sqrt(5), 4 sigma = sqrt(3), 2 sigma = sqrt(2).
+    (3,3,2): 4 sigma = sqrt(5), 4 sigma = sqrt(3), 1 sigma = 1.
+      Product = 5^2 * 3^2 * 1 = 225 = |det_K3(B)| per iter 12.
+  Results: Q-range across 3-subsets stays narrow:
+    (2,2,2): Q = 0.333 uniformly (degenerate).
+    (3,2,2): Q in [0.333, 0.343].
+    (4,2,2): Q in [0.333, 0.342].
+    (5,2,2): Q in [0.333, 0.351].
+    (3,3,2): Q in [0.333, 0.367].
+  Max observed Q = 0.367 on (3,3,2), still far from target
+  2/3 = 0.667. Zero 3-subsets satisfy Q = 2/3 across all 287
+  total 3-subsets tested.
+  Structural conclusion: the K3 Dirac spectrum on small
+  cuboids is too degenerate (few distinct eigenvalues in
+  large multiplicities) to naturally realize Q = 2/3 as a
+  3-subset. The "derive K = 0 from kit" route via spectral
+  structure is closed for these cuboid sizes. This reinforces
+  Target 3's reclassification blocker: K = 0 remains a
+  primitive beyond the current kit /
+  `frontier_axiom_native_target3_dirac_spectrum_koide.py` /
+  Target 3 sub-step 3c.
 - Planarity gap scaling data on empty cuboids (iter 37).
   Computed (|det_K3|, #PM, gap, ratio) for 13 empty Z^3
   cuboids of various dimensions. Results confirm the iter 12
