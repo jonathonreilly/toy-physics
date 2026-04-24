@@ -664,3 +664,19 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   structurally non-extensible /
   `frontier_axiom_native_partial_reflection_lemmas.py` /
   Target 2 sub-step 2d-V2-partial-reflection-extensibility.
+- Kasteleyn thread consolidated into standalone conjecture
+  document `docs/KASTELEYN_THREAD_CONJECTURE.md`. Covers (i)
+  axiom-native setup and notation, (ii) empirical singleton
+  hypothesis with 15+ data points and falsification history,
+  (iii) localization signature definition and 3-scale
+  validation table, (iv) reflection-degeneracy lemma
+  statement, proof sketch, and uniqueness-to-central
+  observation, (v) open questions including structural
+  singleton proof, other candidate symmetries, 3+ singleton
+  localization, and continuum-limit interpretation. Serves
+  as permanent reference so subsequent V2 iterations can
+  cite a specific stable claim rather than scanning the
+  attempt log. No new computational result, but formalizes
+  the thread's current state /
+  `docs/KASTELEYN_THREAD_CONJECTURE.md` /
+  Target 2 sub-step 2d-V2-thread-consolidation.
