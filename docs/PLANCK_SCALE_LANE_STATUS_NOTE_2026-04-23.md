@@ -27,6 +27,21 @@ So the current lane status is:
 - **absolute scale `a^(-1) = M_Pl`:** current package pin
 - **derivation of that pin from the accepted stack:** open program
 
+The 2026-04-24 Planck conditional packet sharpened this posture. It is retained
+in
+[PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md](./PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md):
+
+- exact primitive coefficient `c_cell = Tr((I_16/16) P_A) = 4/16 = 1/4`;
+- exact same-surface normalization algebra
+  `c_cell/a^2 = 1/(4 l_P^2)`, hence `a/l_P = 1`;
+- explicit finite-only, parent-source, and SI-unit blockers.
+
+This improves the derivation program, but it does not make the older minimal
+finite stack alone derive the SI Planck length. The public package pin remains
+the correct manuscript posture unless the conditional gravitational
+boundary/action carrier identification is promoted as part of the accepted
+Planck package.
+
 ## 2. Why this lane exists
 
 Older notes in the repository often speak in the stronger shorthand
@@ -107,6 +122,15 @@ Current blocker:
 - [GRAVITY_CLEAN_DERIVATION_NOTE.md](./GRAVITY_CLEAN_DERIVATION_NOTE.md)
   explicitly stops at lattice units.
 
+2026-04-24 progress:
+
+- the conditional completion packet derives `c_cell = 1/4` and proves that the
+  standard gravitational area/action normalization gives `a/l_P = 1`;
+- the remaining load-bearing question is whether the primitive one-step
+  boundary/worldtube count is derived as the microscopic carrier of the
+  gravitational boundary/action density, rather than accepted as the Planck
+  package's carrier identification.
+
 ### Target 2: horizon entropy carrier with exact `1/4`
 
 Alternative route.
@@ -138,12 +162,22 @@ Current blocker:
 - the one-axiom notes reduce structure and physical-lattice ontology, but do
   not yet fix an absolute unit map.
 
+2026-04-24 progress:
+
+- the conditional completion packet identifies the source-free primitive
+  counting trace as the state semantics needed for the exact `1/4` coefficient;
+- it also separates structural action-phase statements from any claim to
+  predict the SI decimal value of `hbar`.
+
 ## 6. Package rule on `main`
 
 Until one of the three targets closes, the correct package statement is:
 
 - `a^(-1) = M_Pl` is a **current package pin on the physical-lattice reading**
 - it is **not yet** a theorem of the minimal accepted stack
+- the new conditional-completion theorem records exactly what would be needed
+  to promote the pin: accept or derive the primitive boundary count as the
+  gravitational boundary/action carrier
 
 That is the canonical posture to use when wiring hierarchy, YT/Higgs,
 neutrino/DM mass ladders, gravity/cosmology companions, and compact-object

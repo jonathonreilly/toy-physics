@@ -33,7 +33,9 @@ questions:
   electroweak normalization, retained top/Yukawa transport, promoted CKM
   atlas/axiom numerics, and bounded confinement-string readout; the absolute
   lattice scale is tracked explicitly on a dedicated Planck-scale lane as the
-  current package pin `a^(-1) = M_Pl` on the physical-lattice reading
+  current package pin `a^(-1) = M_Pl` on the physical-lattice reading, with a
+  conditional completion theorem reducing the remaining Planck question to the
+  gravitational boundary/action carrier identification
 - bounded but explicit forward/companion surface:
   proton lifetime, CKM-only neutron EDM continuation, vacuum criticality,
   taste-scalar near-degeneracy, benchmark gravitational decoherence, and

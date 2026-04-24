@@ -104,14 +104,17 @@ Validate with:
   vacuum critical stability
 - absolute-scale scoping:
   the current package carries `a^(-1) = M_Pl` as a Planck-scale package pin on
-  the accepted physical-lattice reading, while derivation of the absolute scale
-  remains an open program
+  the accepted physical-lattice reading; the 2026-04-24 conditional-completion
+  packet derives `c_cell = 1/4` and `a/l_P = 1` once the primitive boundary
+  count is accepted as the gravitational boundary/action carrier, while the
+  minimal-stack derivation of that carrier identification remains open
 
 Start with:
 
 - [QUANTITATIVE_SUMMARY_TABLE.md](./QUANTITATIVE_SUMMARY_TABLE.md)
 - [USABLE_DERIVED_VALUES_INDEX.md](./USABLE_DERIVED_VALUES_INDEX.md)
 - [PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md](../../PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md)
+- [PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md](../../PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md)
 
 Validate with:
 
@@ -120,6 +123,7 @@ Validate with:
 - `python3 scripts/frontier_yt_p1_bz_quadrature_full_staggered_pt.py`
 - `python3 scripts/frontier_higgs_mass_full_3loop.py`
 - `python3 scripts/frontier_planck_scale_program_audit.py`
+- `python3 scripts/frontier_planck_conditional_completion_audit.py`
 
 ## Flavor, CP, and Charged-Lepton Structure
 

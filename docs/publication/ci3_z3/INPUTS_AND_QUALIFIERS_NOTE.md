@@ -57,8 +57,13 @@ Current absolute-scale package rule:
 - on the accepted physical-lattice reading, the package currently carries
   `a^(-1) = M_Pl` as an explicit Planck-scale pin
 - that pin is not yet derived from the minimal accepted theorem stack
+- the 2026-04-24 conditional-completion packet derives `c_cell = 1/4` and
+  `a/l_P = 1` after the primitive boundary count is accepted as the
+  gravitational boundary/action carrier; that carrier identification is still
+  the explicit Planck-lane condition
 - authority:
-  [PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md](../../PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md)
+  [PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md](../../PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md),
+  [PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md](../../PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md)
 
 - plaquette surface:
   - `<P> = 0.5934`

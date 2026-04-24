@@ -68,6 +68,7 @@ python3 scripts/frontier_dm_pmns_ordered_chain_graded_current_delta_closure_2026
 python3 scripts/frontier_koide_reviewer_stress_test.py
 python3 scripts/frontier_koide_lane_regression.py
 python3 scripts/frontier_planck_scale_program_audit.py
+python3 scripts/frontier_planck_conditional_completion_audit.py
 ```
 
 ## How To Read The Output
