@@ -70,13 +70,35 @@ requires
 
 `kappa_info = 1/32 per bit`.
 
+## Trace-Reduction Update
+
+The primitive phase trace theorem sharpens this target. On the source-free full
+`C^16` event cell, any natural additive reduced action-phase functional has
+
+`q_atom = gamma / 16`.
+
+The time-locked axis carrier has `2` bits, so
+
+`kappa_info = gamma / 32 per bit`.
+
+Thus this theorem's exact target is the special case
+
+`gamma = 1`.
+
+The remaining action-unit statement is no longer "find some unexplained
+`1/16`." It is:
+
+> prove that one complete primitive `C^16` event cell carries one reduced
+> action unit.
+
 ## What Would Count As Hbar Progress
 
 The next theorem must derive one of the following without using the Planck
 normalization backward:
 
-1. `q_* = 1/16` as a graph-native primitive phase quantum;
-2. `kappa_info = 1/32` per bit as a phase-per-information theorem;
+1. `gamma = 1` in the trace-reduced law `q_atom = gamma/16`;
+2. `kappa_info = 1/32` per bit as the `gamma = 1` case of the
+   phase-per-information theorem;
 3. an equivalent finite Weyl/commutator central unit that reproduces the same
    primitive phase;
 4. a dimensionless observable such as `alpha` from the same action-phase unit.

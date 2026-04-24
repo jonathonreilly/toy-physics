@@ -47,6 +47,7 @@ SUBCHECKS = [
     "frontier_planck_hbar_status_and_remaining_objections_audit.py",
     "frontier_planck_hbar_attack_order_theorem.py",
     "frontier_planck_action_phase_conversion_target_theorem.py",
+    "frontier_planck_primitive_phase_trace_reduction_theorem.py",
 ]
 
 
@@ -102,6 +103,7 @@ def main() -> int:
     hbar_audit = read("docs/PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md")
     hbar_attack = read("docs/PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md")
     action_phase = read("docs/PLANCK_SCALE_ACTION_PHASE_CONVERSION_TARGET_THEOREM_2026-04-23.md")
+    phase_trace = read("docs/PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md")
 
     for script in SUBCHECKS:
         total += 1
@@ -408,7 +410,7 @@ def main() -> int:
         and "`hbar = a^2 c_light^3 / G`" in hbar_attack
         and "To turn this into a prediction, `a` must\nbe fixed independently of `hbar`"
         in hbar_attack
-        and "`kappa_info^(bit) = q_*/2 = 1/32`" in hbar_attack,
+        and "`kappa_info^(bit) = gamma/32`" in hbar_attack,
     )
 
     total += 1
@@ -419,6 +421,16 @@ def main() -> int:
         and "`q_* = 1/16`" in action_phase
         and "`kappa_info = 1/32 per bit`" in action_phase
         and "It does not derive the action-to-phase\nconversion itself" in action_phase,
+    )
+
+    total += 1
+    passed += expect(
+        "primitive-phase-trace-reduces-hbar-target-to-gamma",
+        "PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md"
+        in reviewer
+        and "`Phi(P) = gamma Tr(P) / 16`" in phase_trace
+        and "`q_atom = gamma/16`" in hbar_attack
+        and "`gamma = 1`" in phase_trace,
     )
 
     print(f"SUMMARY: PASS={passed} FAIL={total - passed}")

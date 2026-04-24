@@ -27,6 +27,7 @@ def main() -> int:
     information = read("docs/PLANCK_SCALE_INFORMATION_ACTION_UNIT_MAP_THEOREM_LANE_2026-04-23.md")
     timelock = read("docs/PLANCK_SCALE_TIMELOCKED_CONVERTED_INFORMATION_ACTION_CONSTANT_LANE_2026-04-23.md")
     action_phase = read("docs/PLANCK_SCALE_ELEMENTARY_ACTION_PHASE_REDUCTION_THEOREM_2026-04-23.md")
+    phase_trace = read("docs/PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md")
     reviewer = read("docs/PLANCK_SCALE_REVIEWER_CANONICAL_SUBMISSION_PACKET_2026-04-23.md")
 
     passed = 0
@@ -80,6 +81,16 @@ def main() -> int:
 
     total += 1
     passed += expect(
+        "phase-trace-reduces-target-to-gamma",
+        "`q_atom = gamma/16`" in note
+        and "`kappa_info^(bit) = gamma/32`" in note
+        and "`Phi(P) = gamma Tr(P) / 16`" in phase_trace
+        and "`gamma = 1`" in note,
+        "the first target is now the total-cell reduced action scalar",
+    )
+
+    total += 1
+    passed += expect(
         "existing-information-obstructions-respected",
         "direct information-as-action is log-base dependent" in note
         and "raw `log Z` is chart-density dependent" in note
@@ -122,7 +133,7 @@ def main() -> int:
     total += 1
     passed += expect(
         "safe-unsafe-claims-recorded",
-        "The first target is\n> `kappa_info = 1/32` per bit" in note
+        "The first target is now\n> `gamma = 1`" in note
         and "> Deriving `a = l_P` already predicts `hbar`" in note,
         "the note states the next target and bans the circular claim",
     )

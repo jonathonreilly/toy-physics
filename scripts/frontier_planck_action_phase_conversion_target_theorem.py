@@ -25,6 +25,7 @@ def main() -> int:
     hbar_status = read("docs/PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md")
     hbar_attack = read("docs/PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md")
     info = read("docs/PLANCK_SCALE_INFORMATION_ACTION_UNIT_MAP_THEOREM_LANE_2026-04-23.md")
+    phase_trace = read("docs/PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md")
     reviewer = read("docs/PLANCK_SCALE_REVIEWER_CANONICAL_SUBMISSION_PACKET_2026-04-23.md")
 
     passed = 0
@@ -72,6 +73,15 @@ def main() -> int:
         "`kappa_info^(bit) = q_*/2 = 1/32`" in hbar_attack
         and "`q_* = kappa_info I_*`" in info,
         "the new target matches existing hbar/information reductions",
+    )
+
+    total += 1
+    passed += expect(
+        "trace-reduction-sharpens-target-to-gamma",
+        "`q_atom = gamma / 16`" in note
+        and "`kappa_info = gamma / 32 per bit`" in note
+        and "`Phi(P) = gamma Tr(P) / 16`" in phase_trace,
+        "the target is now reduced to the gamma = 1 action-unit scalar",
     )
 
     total += 1

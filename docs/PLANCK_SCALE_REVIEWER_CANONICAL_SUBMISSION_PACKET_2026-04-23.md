@@ -23,6 +23,7 @@
 **Hbar/unit-convention audit:** [PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md](./PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md)
 **Hbar attack order:** [PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md](./PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md)
 **Action-phase conversion target:** [PLANCK_SCALE_ACTION_PHASE_CONVERSION_TARGET_THEOREM_2026-04-23.md](./PLANCK_SCALE_ACTION_PHASE_CONVERSION_TARGET_THEOREM_2026-04-23.md)
+**Primitive phase trace reduction:** [PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md](./PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md)
 
 ## Final Scope Warning
 
@@ -46,6 +47,14 @@ non-circular target is a phase-per-information theorem deriving
 `kappa_info = 1/32` per bit; the fallback targets are a projective phase /
 central-extension theorem, a finite Weyl/commutator unit theorem, an independent
 lattice-spacing count, or a separate dimensionless prediction such as `alpha`.
+
+The primitive phase trace reduction now fixes the hbar/action-phase shape up
+to one scalar. On the source-free primitive `C^16` event algebra, any natural
+additive phase functional is `Phi(P) = gamma Tr(P)/16`, so
+`q_atom = gamma/16` and `kappa_info = gamma/32` per bit. Exact
+`q_atom = 1/16` is equivalent to `gamma = 1`, i.e. one complete primitive
+event cell carries one reduced action unit. This is structural hbar progress,
+not an SI-value prediction.
 
 The final Planck closure is now stated as an airtight theorem on the accepted
 physical-gravity review contract. The old GSI wording is replaced by
@@ -230,7 +239,12 @@ and since both lengths are positive,
     normal-ordered primitive boundary action-source density, not the scalar
     Schur free-energy pressure. The scalar Schur pressure is not `1/4`:
     [action-source versus pressure theorem](./PLANCK_SCALE_BOUNDARY_ACTION_SOURCE_VS_PRESSURE_CLASSIFICATION_THEOREM_2026-04-23.md).
-17. **Airtight review closure.** On the accepted physical-gravity review
+17. **Primitive phase trace reduction.** The hbar/action-phase lane now derives
+    the trace shape `q_atom = gamma/16`, hence
+    `kappa_info = gamma/32` per bit. Exact `1/16` requires the remaining
+    scalar action-unit statement `gamma = 1`:
+    [primitive phase trace theorem](./PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md).
+18. **Airtight review closure.** On the accepted physical-gravity review
     contract, the Planck theorem is closed. Remaining denials are rejections of
     that review contract, not hidden coefficient or algebra gaps:
     [airtight review closure theorem](./PLANCK_SCALE_AIRTIGHT_REVIEW_CLOSURE_THEOREM_2026-04-23.md).
@@ -279,6 +293,8 @@ Not imported into the reviewer claim:
 14. no hidden insertion of `nu = 5/4`; the value enters only through
     `lambda_min(L_Sigma) = 1` and `Tr(rho_cell P_A) = 1/4`.
 15. no claim that the packet derives `hbar` or predicts its SI numerical value.
+16. no claim that bare algebra alone derives `gamma = 1` in the primitive
+    phase trace reduction.
 
 ## Denial Points
 
@@ -324,6 +340,10 @@ The hostile-review denials are now explicit.
     pressure" means the additive scalar Schur free-energy observable, concede:
     that object is `(1/(2n)) log det(L_Sigma)`, not `1/4`. The submitted Planck
     lane is instead a primitive boundary action-source density theorem.
+11. **Hbar-gamma objection.** If the reviewer asks whether `hbar` itself is now
+    derived, answer: not as an SI number. The action-phase lane now reduces the
+    problem to `gamma = 1`, where `gamma` is the total reduced action phase of
+    one complete primitive `C^16` event cell.
 
 The final denial-status theorem records that denials 2 and 4 change the target:
 they either replace the primitive coefficient with an enriched state/readout
@@ -387,6 +407,7 @@ python3 scripts/frontier_planck_bare_boundary_representative_after_gravity_theor
 python3 scripts/frontier_planck_hbar_status_and_remaining_objections_audit.py
 python3 scripts/frontier_planck_hbar_attack_order_theorem.py
 python3 scripts/frontier_planck_action_phase_conversion_target_theorem.py
+python3 scripts/frontier_planck_primitive_phase_trace_reduction_theorem.py
 ```
 
 ## Appendix Map
@@ -412,6 +433,7 @@ python3 scripts/frontier_planck_action_phase_conversion_target_theorem.py
 - [PLANCK_SCALE_BARE_GRAVITY_SECTOR_DERIVATION_STATUS_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_GRAVITY_SECTOR_DERIVATION_STATUS_THEOREM_2026-04-23.md) - B3 status/reduction: gravity-sector-from-algebra remains the hard open theorem.
 - [PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md) - B4 conditional closure: once B3 derives gravity, the primitive representative is forced to be `P_A`.
 - [PLANCK_SCALE_ACTION_PHASE_CONVERSION_TARGET_THEOREM_2026-04-23.md](./PLANCK_SCALE_ACTION_PHASE_CONVERSION_TARGET_THEOREM_2026-04-23.md) - hbar/action-phase target: exact Planck on the minimal defect requires `q_* = 1/16`, equivalently `kappa_info = 1/32` per bit.
+- [PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md](./PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md) - hbar/action-phase reduction: source-free primitive phase functionals have trace shape `q_atom = gamma/16`; exact `1/16` is the `gamma = 1` scalar.
 - [PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md) - explicit P1 package-boundary move.
 - [PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md) - hostile-review context, with its supersession note respected.
 - [PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md](./PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md) - hbar/unit-convention audit: the packet derives a dimensionless Planck coefficient, not the quantum of action.

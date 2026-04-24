@@ -26,6 +26,7 @@ def main() -> int:
     action_phase = read("docs/PLANCK_SCALE_ELEMENTARY_ACTION_PHASE_REDUCTION_THEOREM_2026-04-23.md")
     information = read("docs/PLANCK_SCALE_INFORMATION_ACTION_UNIT_MAP_THEOREM_LANE_2026-04-23.md")
     parent_source = read("docs/PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md")
+    phase_trace = read("docs/PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md")
 
     passed = 0
     total = 0
@@ -34,7 +35,7 @@ def main() -> int:
     passed += expect(
         "audit-denies-hbar-derivation",
         "does **not** derive `hbar`" in audit
-        and "not yet a structural\nderivation of the quantum of action" in audit,
+        and "not a\nnumerical SI prediction of `hbar`" in audit,
         "the audit does not overclaim the hbar axis",
     )
 
@@ -83,18 +84,20 @@ def main() -> int:
 
     total += 1
     passed += expect(
-        "action-phase-ratio-not-solved",
+        "action-phase-ratio-reduced-to-gamma",
         "`a^2 / l_P^2 = 8 pi q_* / eps_*`" in action_phase
-        and "`q_* / eps_* = 1 / (8 pi)`" in audit,
-        "the first-principles action-phase lane remains a reduction, not closure",
+        and "`a^2/l_P^2 = gamma`" in audit
+        and "`gamma = 1`" in phase_trace,
+        "the first-principles action-phase lane is reduced to gamma = 1",
     )
 
     total += 1
     passed += expect(
-        "information-action-kappa-not-derived",
+        "information-action-kappa-reduced-to-gamma",
         "`q_* = kappa_info I_*`" in information
-        and "No such `kappa_info` theorem is currently derived" in audit,
-        "the information/action unit map remains open",
+        and "`kappa_info = gamma/32 per bit`" in audit
+        and "`kappa_info = q_* / I_* = gamma / 32 per bit`" in phase_trace,
+        "the information/action unit map has the same gamma scalar obstruction",
     )
 
     total += 1

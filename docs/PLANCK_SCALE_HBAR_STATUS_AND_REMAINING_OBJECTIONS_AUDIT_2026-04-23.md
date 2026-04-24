@@ -8,6 +8,28 @@
 
 The current branch does **not** derive `hbar`.
 
+Post-trace-reduction update: the branch now derives the source-free primitive
+phase **shape** on the full `C^16` event cell. Any natural additive primitive
+phase functional has the form
+
+`Phi(P) = gamma Tr(P) / 16`.
+
+Thus
+
+`q_atom = gamma / 16`
+
+and
+
+`kappa_info = gamma / 32 per bit`.
+
+The exact hbar/action-unit scalar left open is
+
+`gamma = 1`.
+
+So the hbar lane has advanced from "find `1/16`" to "derive the total reduced
+action phase of one complete primitive `C^16` event cell." It is still not a
+numerical SI prediction of `hbar`.
+
 It derives a native dimensionless primitive boundary coefficient
 
 `c_cell = 1/4`
@@ -28,7 +50,7 @@ derivation of the quantum of action.
 
 | Claim axis | Current status | Reason |
 | --- | --- | --- |
-| Structural derivation of `hbar` from graph/combinatorics | **Not achieved** | `hbar` enters through unitary action phases and the standard gravitational area/action law. |
+| Structural derivation of `hbar` from graph/combinatorics | **Reduced, not closed** | The primitive phase trace theorem derives `q_atom = gamma/16`; exact hbar/action closure requires `gamma = 1`. |
 | Numerical prediction of `hbar` in SI units | **Not a physical target** | Since the 2019 SI revision, the Planck constant `h` has an exact fixed SI value; predicting that number would predict a unit convention. |
 | Dimensionless prediction involving `hbar` | **Not yet achieved** | The branch derives `a^2/l_P^2 = 1` only after importing the standard gravitational normalization containing `hbar`, `G`, and `c_light`. |
 | Native dimensionless microscopic coefficient | **Achieved on the retained object class** | The packet derives `rank(P_A)/dim(H_cell) = 4/16 = 1/4`. |
@@ -115,7 +137,7 @@ different weights or no exact `a = l_P`.
 This is not a contradiction if the object classes are separated. It is a review
 risk if the paper blurs them.
 
-### O7. The information/action route is still open, not closed
+### O7. The information/action route is reduced to one scalar, not closed
 
 The current information/action audit rules out the obvious direct versions:
 
@@ -124,9 +146,22 @@ The current information/action audit rules out the obvious direct versions:
 - exact Planck would require a new phase-per-information theorem
   `q_* = kappa_info I_*`.
 
-No such `kappa_info` theorem is currently derived.
+No exact `kappa_info = 1/32` theorem is currently derived unless the remaining
+`gamma = 1` scalar is supplied.
 
-### O8. The elementary action-phase route is reduced, not solved
+The primitive phase trace theorem now improves this: on the source-free
+primitive phase-functional object class,
+
+`kappa_info = gamma/32 per bit`.
+
+The exact value `kappa_info = 1/32 per bit` is derived if and only if
+
+`gamma = 1`.
+
+So the surviving information/action target is no longer a loose conversion
+constant. It is the same total-cell reduced action scalar `gamma`.
+
+### O8. The elementary action-phase route is reduced to gamma, not fully solved
 
 The first-principles action-phase reduction gives
 
@@ -136,8 +171,19 @@ Exact conventional `a = l_P` requires
 
 `q_* / eps_* = 1 / (8 pi)`.
 
-The current branch does not derive that ratio. The boundary-density route is the
-current closure route instead.
+The primitive phase trace theorem gives
+
+`q_* = gamma/16`
+
+on the minimal primitive atom. On the minimal cubical defect this yields
+
+`a^2/l_P^2 = gamma`.
+
+Thus exact `a = l_P` on the action-phase route is now equivalent to
+
+`gamma = 1`.
+
+The current branch does not yet derive `gamma = 1` from bare algebra alone.
 
 ### O9. No independent dimensionless phenomenological prediction is yet attached
 
@@ -165,8 +211,8 @@ discrete structure itself, for example:
    process contributes exactly one fixed action phase;
 2. a combinatorial commutator/symplectic theorem deriving the unit in
    `[q,p] = i hbar`;
-3. an information/action theorem deriving a base-independent
-   `q_* = kappa_info I_*`;
+3. an information/action theorem deriving the remaining scalar `gamma = 1` in
+   `q_atom = gamma/16` and `kappa_info = gamma/32`;
 4. a microscopic boundary-term theorem deriving the gravitational action
    normalization without importing `hbar`;
 5. a dimensionless prediction such as a fixed value of `alpha` or another

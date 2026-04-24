@@ -38,6 +38,30 @@ phase-per-information constant
 
 `q_* = kappa_info I_*`.
 
+Post-trace-reduction update: the structural action-unit route now has a sharper
+normal form. The primitive phase trace theorem proves that any source-free
+natural additive phase functional on the full `C^16` event cell is
+
+`Phi(P) = gamma Tr(P)/16`.
+
+Therefore
+
+`q_atom = gamma/16`
+
+and
+
+`kappa_info^(bit) = gamma/32`.
+
+Exact `q_atom = 1/16` and `kappa_info = 1/32` are now equivalent to one scalar
+statement:
+
+`gamma = 1`.
+
+So the first target is no longer a free search for `1/32`; it is a specific
+action-unit theorem:
+
+> one complete primitive `C^16` event cell carries one reduced action unit.
+
 ## Why Planck Does Not Automatically Predict Hbar
 
 The current Planck conclusion is
@@ -128,14 +152,15 @@ Because `I_* = 2 bits`,
 
 `kappa_info^(bit) = q_*/2 = 1/32`.
 
-Therefore the first serious hbar-lane theorem target is:
+Therefore the first serious hbar-lane theorem target was:
 
 > derive `kappa_info = 1/32` per bit from the primitive time-locked
 > `Cl(3)/Z^3` event/action structure.
 
-This is not yet proved. It is the sharpest next target.
+The primitive phase trace theorem reduces this to `gamma = 1`. The exact trace
+shape is proved; the total-cell reduced action unit is not yet proved.
 
-### Step 3: If `kappa_info` Fails, Attack Central Extensions
+### Step 3: If `gamma = 1` Fails, Attack Central Extensions
 
 The fallback structural route is to derive the action unit as a projective phase
 or central extension of the primitive translation/rotation/event algebra.
@@ -178,8 +203,9 @@ proof.
 
 ## Priority Ranking
 
-1. **`kappa_info = 1/32` per bit.** Best immediate target because the current
-   repo already isolates exactly this missing constant.
+1. **`gamma = 1`.** Best immediate target because the primitive phase trace
+   theorem now gives `q_atom = gamma/16` and
+   `kappa_info = gamma/32` per bit.
 2. **Projective phase / central-extension theorem.** Best first-principles route
    if information conversion remains underived.
 3. **Discrete symplectic/Weyl commutator theorem.** Strong but likely requires
@@ -196,8 +222,9 @@ Use:
 > The current Planck lane derives `a^2/l_P^2 = 1` conditionally on the
 > gravitational boundary-action carrier. A future hbar/action-quantum prediction
 > requires one additional non-circular theorem: independent `a`, structural
-> action phase, or a dimensionless observable. The first target is
-> `kappa_info = 1/32` per bit.
+> action phase, or a dimensionless observable. The first target is now
+> `gamma = 1` in the trace-reduced primitive phase law
+> `q_atom = gamma/16`.
 
 Do not use:
 
