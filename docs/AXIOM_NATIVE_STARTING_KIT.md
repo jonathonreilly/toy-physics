@@ -245,6 +245,22 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   on planar bipartite Z^3 subgraphs /
   `frontier_axiom_native_kasteleyn_plaquette_sign.py` /
   Target 2 sub-step 2d.
+- Minority matchings inhabit a "low-to-medium vertical-edge
+  band" on non-planar cuboids. Direct DFS enumeration verifies
+  gap-identity minority counts (2, 20, 512 on (3,3,2), (4,3,2),
+  (4,4,2)) and gives vertical-edge histograms:
+  (3,3,2) minority `{v=1: 2}`;
+  (4,3,2) minority `{v=2: 16, v=4: 4}`;
+  (4,4,2) minority `{v=2: 176, v=4: 248, v=6: 80, v=8: 8}`.
+  Minority always AVOIDS `v=0` and high-`v` extremes; minority
+  avg v is always < majority avg v. Vertical-edge parity is also
+  constrained by layer-balance: `v even` if L1*L2 even; `v odd`
+  if L1*L2 odd (derivable from bipartite accounting). So the
+  minority matchings correspond to configurations where the 3D
+  lattice approximately separates into layered 2D matchings with
+  moderate but not minimal cross-layer coupling /
+  `frontier_axiom_native_minority_structure_larger_cuboids.py` /
+  Target 2 sub-step 2d-V2-minority-structure.
 - Kasteleyn gap scaling across Z^3 cuboids: defining
   `gap(G) := #PM(G) - |det(B_G)|` under K3 staggered phases, we
   find on 7 tested cuboids that `gap(G) = 0` iff G is planar, and

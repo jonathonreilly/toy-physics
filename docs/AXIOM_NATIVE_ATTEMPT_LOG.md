@@ -667,3 +667,29 @@ Next V2 vector: factor the matching signed-sum to understand the
 2^8 structure in (4,4,2). Either it's a combinatorial property of
 the graph or an artifact of K3's specific sign pattern.
 
+[2026-04-23 10:55] V2 iteration: minority structure on larger cuboids — PASS
+Tried: verify minority-count predictions and characterize vertical-
+edge signatures on (3,3,2), (4,3,2), (4,4,2). Wrote
+scripts/frontier_axiom_native_minority_structure_larger_cuboids.py
+with DFS matching enumeration (~0.2s on 4x4x2).
+Results:
+(3,3,2): gap=4 (ok), minority=2 (ok). Minority v-hist {1: 2}.
+(4,3,2): gap=40 (ok), minority=20 (ok). Minority v-hist {2:16, 4:4}.
+(4,4,2): gap=1024 (ok), minority=512 (ok). Minority v-hist
+{2:176, 4:248, 6:80, 8:8}.
+The arithmetic predictions (via gap = 2*minority) all hold exactly.
+NEW structural finding: minority matchings across all 3 cuboids
+inhabit a specific "low-to-medium vertical-edge band" -- they avoid
+both v=0 (fully horizontal) and high-v (mostly vertical) extremes.
+Minority average v is always < majority average v.
+Additional derivable fact: v parity is tied to layer balance:
+v even iff L1*L2 even, v odd iff L1*L2 odd (bipartite accounting
+within each z-layer).
+Accepted because: hostile audit verdict = clean. 9 computed
+record() booleans, no narrative PASSes.
+Next V2 vector: explore WHY minority avoids extremes. Hypothesis:
+minority matchings are those where the 2x2x2 "hexagonal obstruction
+cycle" (from prior iteration) can be used without destroying the
+matching elsewhere. Need to count how many distinct hexagonal
+cycles exist in each cuboid and correlate with minority count.
+
