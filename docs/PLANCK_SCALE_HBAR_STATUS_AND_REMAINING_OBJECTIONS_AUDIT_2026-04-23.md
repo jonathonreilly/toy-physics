@@ -30,6 +30,16 @@ So the hbar lane has advanced from "find `1/16`" to "derive the total reduced
 action phase of one complete primitive `C^16` event cell." It is still not a
 numerical SI prediction of `hbar`.
 
+Post-gamma-attempt update: the current trace/naturality/time-lock and
+boundary-counting premises are scale-homogeneous under
+
+`Phi -> lambda Phi`.
+
+They therefore cannot select `gamma = 1`. The exact missing input is a
+non-homogeneous primitive action-unit law:
+
+`Phi(I_16) = 1`.
+
 It derives a native dimensionless primitive boundary coefficient
 
 `c_cell = 1/4`
@@ -161,6 +171,10 @@ The exact value `kappa_info = 1/32 per bit` is derived if and only if
 So the surviving information/action target is no longer a loose conversion
 constant. It is the same total-cell reduced action scalar `gamma`.
 
+The gamma-one attempt proves that this scalar is not derivable from another
+homogeneous trace/naturality theorem. A successful route must add or derive a
+non-homogeneous primitive action-unit law.
+
 ### O8. The elementary action-phase route is reduced to gamma, not fully solved
 
 The first-principles action-phase reduction gives
@@ -184,6 +198,9 @@ Thus exact `a = l_P` on the action-phase route is now equivalent to
 `gamma = 1`.
 
 The current branch does not yet derive `gamma = 1` from bare algebra alone.
+The gamma-one attempt explains why: every currently stated primitive phase
+premise survives positive rescaling of `Phi`, so it defines a ray of action
+functionals rather than a unit point on that ray.
 
 ### O9. No independent dimensionless phenomenological prediction is yet attached
 
@@ -211,8 +228,8 @@ discrete structure itself, for example:
    process contributes exactly one fixed action phase;
 2. a combinatorial commutator/symplectic theorem deriving the unit in
    `[q,p] = i hbar`;
-3. an information/action theorem deriving the remaining scalar `gamma = 1` in
-   `q_atom = gamma/16` and `kappa_info = gamma/32`;
+3. an information/action theorem deriving the remaining non-homogeneous scalar
+   `gamma = 1` in `q_atom = gamma/16` and `kappa_info = gamma/32`;
 4. a microscopic boundary-term theorem deriving the gravitational action
    normalization without importing `hbar`;
 5. a dimensionless prediction such as a fixed value of `alpha` or another

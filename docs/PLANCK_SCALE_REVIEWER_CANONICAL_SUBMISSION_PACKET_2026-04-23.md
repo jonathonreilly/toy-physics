@@ -19,11 +19,13 @@
 **Bare physical-lattice ontology:** [PLANCK_SCALE_BARE_PHYSICAL_LATTICE_OBSERVABLE_ONTOLOGY_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_PHYSICAL_LATTICE_OBSERVABLE_ONTOLOGY_THEOREM_2026-04-23.md)
 **Bare finite-cell canonical state:** [PLANCK_SCALE_BARE_FINITE_CELL_CANONICAL_STATE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_FINITE_CELL_CANONICAL_STATE_THEOREM_2026-04-23.md)
 **Bare gravity-sector status:** [PLANCK_SCALE_BARE_GRAVITY_SECTOR_DERIVATION_STATUS_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_GRAVITY_SECTOR_DERIVATION_STATUS_THEOREM_2026-04-23.md)
+**Bare gravity-sector uniqueness attempt:** [PLANCK_SCALE_BARE_GRAVITY_SECTOR_UNIQUENESS_ATTEMPT_2026-04-24.md](./PLANCK_SCALE_BARE_GRAVITY_SECTOR_UNIQUENESS_ATTEMPT_2026-04-24.md)
 **Bare boundary representative:** [PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md)
 **Hbar/unit-convention audit:** [PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md](./PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md)
 **Hbar attack order:** [PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md](./PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md)
 **Action-phase conversion target:** [PLANCK_SCALE_ACTION_PHASE_CONVERSION_TARGET_THEOREM_2026-04-23.md](./PLANCK_SCALE_ACTION_PHASE_CONVERSION_TARGET_THEOREM_2026-04-23.md)
 **Primitive phase trace reduction:** [PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md](./PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md)
+**Primitive action-unit gamma-one attempt:** [PLANCK_SCALE_PRIMITIVE_ACTION_UNIT_GAMMA_ONE_ATTEMPT_2026-04-24.md](./PLANCK_SCALE_PRIMITIVE_ACTION_UNIT_GAMMA_ONE_ATTEMPT_2026-04-24.md)
 
 ## Final Scope Warning
 
@@ -56,6 +58,11 @@ additive phase functional is `Phi(P) = gamma Tr(P)/16`, so
 event cell carries one reduced action unit. This is structural hbar progress,
 not an SI-value prediction.
 
+The gamma-one attempt now shows that the current trace/naturality/time-lock
+premises are scale-homogeneous under `Phi -> lambda Phi`; they cannot derive
+`gamma = 1`. The exact missing hbar/action-unit input is a non-homogeneous
+primitive action-unit law selecting `Phi(I_16) = 1`.
+
 The final Planck closure is now stated as an airtight theorem on the accepted
 physical-gravity review contract. The old GSI wording is replaced by
 same-surface single-sector compatibility: the accepted gravitational
@@ -75,6 +82,12 @@ automorphism-natural state of the bare no-extra-structure finite cell,
 `rho_cell = I_16/16`. The gravity-sector-from-algebra theorem remains the hard
 open B3 target; once B3 closes, the boundary representative is already forced to
 be `P_A`.
+
+The B3 uniqueness attempt reduces that hard target to one exact object-class
+theorem: derive from retained `Cl(3)` / `Z^3` that primitive translation defects
+assemble into one soldered metric/coframe carrier with the conserved symmetric
+spin-2 Ward identity. Without that, the bare algebra still admits multiple
+local continuum action symbols.
 
 The prior hardening removed the broad multiplicative boundary-unit ambiguity
 and reduced the additive boundary-density law to
@@ -244,7 +257,16 @@ and since both lengths are positive,
     `kappa_info = gamma/32` per bit. Exact `1/16` requires the remaining
     scalar action-unit statement `gamma = 1`:
     [primitive phase trace theorem](./PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md).
-18. **Airtight review closure.** On the accepted physical-gravity review
+18. **Primitive gamma-one attempt.** The current source-free trace,
+    information, time-lock, and boundary-counting premises are homogeneous
+    under `Phi -> lambda Phi`; they reduce the hbar/action-unit lock to one
+    missing non-homogeneous law `Phi(I_16)=1`:
+    [primitive gamma-one attempt](./PLANCK_SCALE_PRIMITIVE_ACTION_UNIT_GAMMA_ONE_ATTEMPT_2026-04-24.md).
+19. **Bare gravity-sector uniqueness attempt.** B3 is not closed; it is reduced
+    to deriving a soldered metricity / equivalence Ward identity from retained
+    `Cl(3)` / `Z^3`:
+    [bare gravity uniqueness attempt](./PLANCK_SCALE_BARE_GRAVITY_SECTOR_UNIQUENESS_ATTEMPT_2026-04-24.md).
+20. **Airtight review closure.** On the accepted physical-gravity review
     contract, the Planck theorem is closed. Remaining denials are rejections of
     that review contract, not hidden coefficient or algebra gaps:
     [airtight review closure theorem](./PLANCK_SCALE_AIRTIGHT_REVIEW_CLOSURE_THEOREM_2026-04-23.md).
@@ -295,6 +317,8 @@ Not imported into the reviewer claim:
 15. no claim that the packet derives `hbar` or predicts its SI numerical value.
 16. no claim that bare algebra alone derives `gamma = 1` in the primitive
     phase trace reduction.
+17. no claim that bare `Cl(3)` / `Z^3` alone derives the soldered metricity /
+    symmetric spin-2 Ward identity needed to close B3.
 
 ## Denial Points
 
@@ -344,6 +368,14 @@ The hostile-review denials are now explicit.
     derived, answer: not as an SI number. The action-phase lane now reduces the
     problem to `gamma = 1`, where `gamma` is the total reduced action phase of
     one complete primitive `C^16` event cell.
+12. **Gamma homogeneity objection.** If the reviewer asks why `gamma = 1`
+    follows, concede it does not yet follow from the current trace/naturality
+    premises. Those premises are invariant under `Phi -> lambda Phi`; a
+    non-homogeneous primitive action-unit law is still needed.
+13. **B3 metricity objection.** If the reviewer asks whether bare
+    `Cl(3)` / `Z^3` derives gravity, concede not yet. The exact missing theorem
+    is a soldered metric/coframe carrier with the conserved symmetric spin-2
+    Ward identity.
 
 The final denial-status theorem records that denials 2 and 4 change the target:
 they either replace the primitive coefficient with an enriched state/readout
@@ -403,11 +435,13 @@ python3 scripts/frontier_planck_bare_cell_alone_closure_program.py
 python3 scripts/frontier_planck_bare_physical_lattice_observable_ontology_theorem.py
 python3 scripts/frontier_planck_bare_finite_cell_canonical_state_theorem.py
 python3 scripts/frontier_planck_bare_gravity_sector_derivation_status_theorem.py
+python3 scripts/frontier_planck_bare_gravity_sector_uniqueness_attempt.py
 python3 scripts/frontier_planck_bare_boundary_representative_after_gravity_theorem.py
 python3 scripts/frontier_planck_hbar_status_and_remaining_objections_audit.py
 python3 scripts/frontier_planck_hbar_attack_order_theorem.py
 python3 scripts/frontier_planck_action_phase_conversion_target_theorem.py
 python3 scripts/frontier_planck_primitive_phase_trace_reduction_theorem.py
+python3 scripts/frontier_planck_primitive_action_unit_gamma_one_attempt.py
 ```
 
 ## Appendix Map
@@ -431,9 +465,11 @@ python3 scripts/frontier_planck_primitive_phase_trace_reduction_theorem.py
 - [PLANCK_SCALE_BARE_PHYSICAL_LATTICE_OBSERVABLE_ONTOLOGY_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_PHYSICAL_LATTICE_OBSERVABLE_ONTOLOGY_THEOREM_2026-04-23.md) - B1 closure on the retained observable-algebra reading: `Z^3` is physical support, not removable regulator coordinate.
 - [PLANCK_SCALE_BARE_FINITE_CELL_CANONICAL_STATE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_FINITE_CELL_CANONICAL_STATE_THEOREM_2026-04-23.md) - B2 closure: the source-free state is the unique automorphism-natural state of the bare no-extra-structure finite cell.
 - [PLANCK_SCALE_BARE_GRAVITY_SECTOR_DERIVATION_STATUS_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_GRAVITY_SECTOR_DERIVATION_STATUS_THEOREM_2026-04-23.md) - B3 status/reduction: gravity-sector-from-algebra remains the hard open theorem.
+- [PLANCK_SCALE_BARE_GRAVITY_SECTOR_UNIQUENESS_ATTEMPT_2026-04-24.md](./PLANCK_SCALE_BARE_GRAVITY_SECTOR_UNIQUENESS_ATTEMPT_2026-04-24.md) - B3 uniqueness attempt: conditional Einstein/Regge uniqueness after soldered metricity / symmetric spin-2 Ward identity; not a bare closure.
 - [PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md) - B4 conditional closure: once B3 derives gravity, the primitive representative is forced to be `P_A`.
 - [PLANCK_SCALE_ACTION_PHASE_CONVERSION_TARGET_THEOREM_2026-04-23.md](./PLANCK_SCALE_ACTION_PHASE_CONVERSION_TARGET_THEOREM_2026-04-23.md) - hbar/action-phase target: exact Planck on the minimal defect requires `q_* = 1/16`, equivalently `kappa_info = 1/32` per bit.
 - [PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md](./PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md) - hbar/action-phase reduction: source-free primitive phase functionals have trace shape `q_atom = gamma/16`; exact `1/16` is the `gamma = 1` scalar.
+- [PLANCK_SCALE_PRIMITIVE_ACTION_UNIT_GAMMA_ONE_ATTEMPT_2026-04-24.md](./PLANCK_SCALE_PRIMITIVE_ACTION_UNIT_GAMMA_ONE_ATTEMPT_2026-04-24.md) - gamma-one no-go/reduction: current premises are scale-homogeneous and cannot derive `Phi(I_16)=1`.
 - [PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md) - explicit P1 package-boundary move.
 - [PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md) - hostile-review context, with its supersession note respected.
 - [PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md](./PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md) - hbar/unit-convention audit: the packet derives a dimensionless Planck coefficient, not the quantum of action.

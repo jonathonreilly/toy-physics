@@ -69,7 +69,7 @@ def main() -> int:
     passed += expect(
         "gravity-hardest-step-identified",
         "Gravity-from-algebra theorem" in note
-        and "This is the hardest step" in note
+        and "Still open: derive soldered metricity" in note
         and "same-surface single-sector compatibility forces GSI" in same_surface,
         "the note does not pretend gravity-sector derivation is already done",
     )

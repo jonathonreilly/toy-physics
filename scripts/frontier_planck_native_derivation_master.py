@@ -43,11 +43,13 @@ SUBCHECKS = [
     "frontier_planck_bare_physical_lattice_observable_ontology_theorem.py",
     "frontier_planck_bare_finite_cell_canonical_state_theorem.py",
     "frontier_planck_bare_gravity_sector_derivation_status_theorem.py",
+    "frontier_planck_bare_gravity_sector_uniqueness_attempt.py",
     "frontier_planck_bare_boundary_representative_after_gravity_theorem.py",
     "frontier_planck_hbar_status_and_remaining_objections_audit.py",
     "frontier_planck_hbar_attack_order_theorem.py",
     "frontier_planck_action_phase_conversion_target_theorem.py",
     "frontier_planck_primitive_phase_trace_reduction_theorem.py",
+    "frontier_planck_primitive_action_unit_gamma_one_attempt.py",
 ]
 
 
@@ -99,11 +101,13 @@ def main() -> int:
     bare_lattice = read("docs/PLANCK_SCALE_BARE_PHYSICAL_LATTICE_OBSERVABLE_ONTOLOGY_THEOREM_2026-04-23.md")
     bare_cell_state = read("docs/PLANCK_SCALE_BARE_FINITE_CELL_CANONICAL_STATE_THEOREM_2026-04-23.md")
     bare_gravity_status = read("docs/PLANCK_SCALE_BARE_GRAVITY_SECTOR_DERIVATION_STATUS_THEOREM_2026-04-23.md")
+    bare_gravity_attempt = read("docs/PLANCK_SCALE_BARE_GRAVITY_SECTOR_UNIQUENESS_ATTEMPT_2026-04-24.md")
     bare_boundary = read("docs/PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md")
     hbar_audit = read("docs/PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md")
     hbar_attack = read("docs/PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md")
     action_phase = read("docs/PLANCK_SCALE_ACTION_PHASE_CONVERSION_TARGET_THEOREM_2026-04-23.md")
     phase_trace = read("docs/PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md")
+    gamma_attempt = read("docs/PLANCK_SCALE_PRIMITIVE_ACTION_UNIT_GAMMA_ONE_ATTEMPT_2026-04-24.md")
 
     for script in SUBCHECKS:
         total += 1
@@ -385,6 +389,16 @@ def main() -> int:
 
     total += 1
     passed += expect(
+        "bare-gravity-uniqueness-attempt-reduces-to-metricity-ward",
+        "PLANCK_SCALE_BARE_GRAVITY_SECTOR_UNIQUENESS_ATTEMPT_2026-04-24.md"
+        in reviewer
+        and "`B3 status: OPEN`" in bare_gravity_attempt
+        and "soldered metricity / equivalence Ward identity" in bare_gravity_attempt
+        and "multiple inequivalent sectors" in bare_gravity_attempt,
+    )
+
+    total += 1
+    passed += expect(
         "bare-boundary-representative-b4-conditional",
         "PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md"
         in reviewer
@@ -431,6 +445,17 @@ def main() -> int:
         and "`Phi(P) = gamma Tr(P) / 16`" in phase_trace
         and "`q_atom = gamma/16`" in hbar_attack
         and "`gamma = 1`" in phase_trace,
+    )
+
+    total += 1
+    passed += expect(
+        "gamma-one-attempt-proves-scale-homogeneity-obstruction",
+        "PLANCK_SCALE_PRIMITIVE_ACTION_UNIT_GAMMA_ONE_ATTEMPT_2026-04-24.md"
+        in reviewer
+        and "`Phi -> lambda Phi`" in gamma_attempt
+        and "`Phi(I_16) = 1`" in gamma_attempt
+        and "must not claim:\n\n> `gamma = 1` follows from the current source-free trace theorem"
+        in gamma_attempt,
     )
 
     print(f"SUMMARY: PASS={passed} FAIL={total - passed}")

@@ -160,6 +160,12 @@ Therefore the first serious hbar-lane theorem target was:
 The primitive phase trace theorem reduces this to `gamma = 1`. The exact trace
 shape is proved; the total-cell reduced action unit is not yet proved.
 
+The gamma-one attempt adds a no-go: current trace/naturality/time-lock and
+boundary-counting premises are homogeneous under `Phi -> lambda Phi`, so they
+cannot select `gamma = 1`. The next theorem must be non-homogeneous: it must
+derive the complete primitive event cell as the unit generator of reduced
+action phase.
+
 ### Step 3: If `gamma = 1` Fails, Attack Central Extensions
 
 The fallback structural route is to derive the action unit as a projective phase
@@ -205,7 +211,9 @@ proof.
 
 1. **`gamma = 1`.** Best immediate target because the primitive phase trace
    theorem now gives `q_atom = gamma/16` and
-   `kappa_info = gamma/32` per bit.
+   `kappa_info = gamma/32` per bit. The gamma-one attempt shows this cannot
+   come from another homogeneous trace/naturality argument; it needs a
+   primitive action-unit law.
 2. **Projective phase / central-extension theorem.** Best first-principles route
    if information conversion remains underived.
 3. **Discrete symplectic/Weyl commutator theorem.** Strong but likely requires

@@ -103,6 +103,8 @@ Current status:
   sector as part of the review contract.
 - reduced by:
   [PLANCK_SCALE_BARE_GRAVITY_SECTOR_DERIVATION_STATUS_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_GRAVITY_SECTOR_DERIVATION_STATUS_THEOREM_2026-04-23.md).
+- sharpened by:
+  [PLANCK_SCALE_BARE_GRAVITY_SECTOR_UNIQUENESS_ATTEMPT_2026-04-24.md](./PLANCK_SCALE_BARE_GRAVITY_SECTOR_UNIQUENESS_ATTEMPT_2026-04-24.md).
 
 Success condition:
 
@@ -113,6 +115,11 @@ Current upgrade status:
 
 `B3` is the remaining hard open theorem. The current branch has the accepted
 gravity/action stack; it does not yet derive that stack from bare algebra alone.
+The uniqueness attempt shows the exact missing object-class theorem: derive a
+soldered metric/coframe carrier, or equivalently the conserved symmetric
+spin-2 Ward identity, from the retained event/translation algebra. With that
+criterion, the accepted Einstein/Regge boundary/action sector is conditionally
+unique up to normalization/topological ambiguity.
 
 ### B4. Same-Surface Boundary Representative From Algebra
 
@@ -205,10 +212,10 @@ maps. This matches the cosmic-address import theorem.
    operationally distinguishable on the retained event/translation algebra.
 2. **Canonical-state theorem.** Closed: the source-free primitive-cell state is
    the unique automorphism-natural finite-cell state.
-3. **Gravity-from-algebra theorem.** Still open: derive the accepted
-   gravity/action sector
-   as the unique local tensor/action continuum of the `Cl(3)` / `Z^3` dynamics.
-   This is the hardest step.
+3. **Gravity-from-algebra theorem.** Still open: derive soldered metricity /
+   the conserved symmetric spin-2 Ward identity from retained `Cl(3)` / `Z^3`.
+   Once that object class is earned, conditional local-action uniqueness
+   recovers the accepted gravity/action sector.
 4. **Boundary representative theorem.** Conditionally closed: use the already
    written same-surface closure to force `N_grav = P_A` once the gravity sector
    is algebra-derived.
