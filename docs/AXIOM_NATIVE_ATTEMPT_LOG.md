@@ -1457,3 +1457,59 @@ to in the reflection-paired case: does the structural form
 of the 1684 "minority" matchings show any symmetry-specific
 pattern? (c) Consolidate into a conjecture document.
 
+[2026-04-24 04:35] V2 iteration: partial-reflection lemma family attempt — PASS (but family REFUTED)
+Tried: extend iter 23's reflection-degeneracy lemma to a family
+over the 7 non-identity axis-aligned reflections rho_S
+(S subset of {1,2,3}) of a Z^3 cuboid. Wrote
+scripts/frontier_axiom_native_partial_reflection_lemmas.py.
+Constructed 55 test cases (cuboid, removed-singleton-pair,
+reflection) triples such that each reflection rho_S is a graph
+automorphism of G (rho_S swaps removed pair) and removal is
+balanced (bipartition flip condition met).
+Hypothesis: for each reflection rho_S, there is an analog
+lemma: det_K3 = 0 iff (some epsilon_mu = -1) AND n_bi odd.
+Result: hypothesis FALSIFIED. Only rho_{123} (full central
+reflection / point inversion) produces det = 0 in tested
+cases. All 6 partial reflections (rho_1 through rho_{23})
+preserve det != 0 across their test sets despite having
+various epsilon_mu flips.
+Zero-det count by reflection:
+  rho_1_x: 0 of 7 tested shapes give det=0
+  rho_2_y: 0 of 7
+  rho_3_z: 0 of 6
+  rho_{12}_xy: 0 of 9
+  rho_{13}_xz: 0 of 9
+  rho_{23}_yz: 0 of 9
+  rho_{123}_xyz: 6 of 8 (all with (L1, L2, L3) all even and
+    n_bi odd, reproducing iter 23 lemma; the 2 non-zeros
+    had n_bi even).
+The naive "epsilon-flip + odd-n_bi forces det=0" hypothesis
+has 31/55 false positives. Refuted.
+Accepted because: hostile audit verdict = clean after
+removing a literal True I initially had in the record()
+call. 55 record() booleans (1 literal FAIL "hypothesis_
+exact_match" which is the expected negative result). No
+narrative PASSes.
+Structural interpretation: iter 23's lemma is SPECIFIC to
+the central reflection, not a member of a broader family.
+The central reflection uniquely reverses every edge direction
+globally (point inversion), while planar/axial reflections
+preserve some axes. This global coherent direction-reversal
+is what forces det=0 on odd-n_bi shapes. So the lemma is
+a property of the POINT-INVERSION symmetry, not of
+"reflections" generally.
+Bonus insight: this sharpens the structural characterization.
+The iter 23 lemma is less general than hoped, but more
+structurally specific: it's genuinely tied to point inversion.
+Next V2 vector: (a) look for OTHER symmetries that might
+force det=0 or induce structural lemmas (e.g., translations
+combined with phase twists, Clifford unit multiplications,
+color-swap transformations).
+(b) Consolidate Kasteleyn thread into docs/KASTELEYN_
+THREAD_CONJECTURE.md summarizing singleton hypothesis
+(empirical), localization signature (scale-invariant 3-size),
+reflection-degeneracy lemma (proven for central only).
+(c) Attempt a different axis: what happens on defect shapes
+with 3+ singletons -- does the localization signature
+generalize?
+

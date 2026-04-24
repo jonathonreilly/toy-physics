@@ -643,3 +643,24 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   derived from K1 + K2 + K3 alone /
   `frontier_axiom_native_reflection_degeneracy_lemma.py` /
   Target 2 sub-step 2d-V2-reflection-lemma.
+- Reflection-degeneracy is UNIQUE to the central reflection:
+  the iter 23 lemma does NOT extend to a family over partial
+  reflections. Tested 55 (cuboid, removed-pair, reflection)
+  triples across all 7 non-identity axis-aligned reflections
+  rho_S for S subset of {1,2,3}. Result: zero-det count by
+  reflection = {rho_1: 0/7, rho_2: 0/7, rho_3: 0/6,
+  rho_{12}: 0/9, rho_{13}: 0/9, rho_{23}: 0/9,
+  rho_{123}: 6/8}. Only the full central reflection
+  (point inversion, all three axes flipped) produces |det|=0;
+  all 6 partial reflections preserve det != 0 on their
+  rho_S-symmetric shape families, INCLUDING cases where
+  epsilon_mu factors flip and n_bi is odd. So the naive
+  "any epsilon flip plus odd n_bi forces det=0" hypothesis
+  is FALSIFIED (31/55 false positives). The structural cause
+  of iter 23's degeneracy is specifically the point-
+  inversion property of the full central reflection -- it
+  reverses every edge's direction globally in a coherent way
+  that planar/axial reflections cannot. iter 23 lemma is
+  structurally non-extensible /
+  `frontier_axiom_native_partial_reflection_lemmas.py` /
+  Target 2 sub-step 2d-V2-partial-reflection-extensibility.
