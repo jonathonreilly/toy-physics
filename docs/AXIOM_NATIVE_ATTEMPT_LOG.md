@@ -1848,3 +1848,73 @@ axis parity matches line center. (c) Test line-4 or line-5
 configurations to see if similar parity-based lemmas hold
 for longer lines.
 
+[2026-04-24 07:20] V2 iteration: H5 generalization — PASS (H5 is (4,4,2)-SPECIFIC)
+Tried: test iter 30's H5 line-3 + singleton lemma on
+additional L3=2 cuboids ((3,3,2), (4,3,2), (5,3,2), (5,5,2))
+to see if it generalizes beyond (4,4,2). Wrote
+scripts/frontier_axiom_native_line3_lemma_generalization.py.
+Exhaustively enumerated (line-3, isolated balanced singleton)
+configurations per cuboid, classified by det_K3, tested H5
+predictions.
+Results:
+  (3,3,2): 32/40 = 80%. 8 false-negatives.
+  (4,3,2): 104/112 = 92.9%. 8 false-negatives.
+  (4,4,2): 288/288 = 100%. (iter 30 reference.)
+  (5,3,2): 212/232 = 91.4%. 20 false-negatives.
+  (5,5,2): 1016/1048 = 96.9%. 32 false-negatives.
+H5 has ZERO false positives across all 1720 tested
+configurations. When H5 predicts det=0, det IS zero. But
+there are 68 false-negatives: det=0 configurations that H5
+incorrectly predicts non-zero.
+So H5 is a SUFFICIENT but not NECESSARY condition for det=0.
+Investigation of false negatives: most are z-SAME cases
+(both line and singleton at same z-plane). On (3,3,2), 8
+false-negatives are all z-same. Example: line x-direction
+(0,0,0)-(1,0,0)-(2,0,0) at z=0 + singleton (1,2,0) at z=0.
+Defect is partial-reflection rho_1-invariant (line spans
+full x-axis on L_1=3, singleton at x=1 is rho_1-fixed).
+Under rho_1 on (3,3,2): delta = L_1 + 1 = 0 mod 2 preserves
+parity. All epsilon_mu = +1 (no sign flips). Computed
+sign(pi_e) * sign(pi_o) = (+1) * (-1) = -1 via direct site
+permutation analysis. So det = -det forces det = 0.
+This mechanism is iter 23's reflection-degeneracy lemma
+applied to a PARTIAL reflection, which iter 24 concluded
+doesn't force det=0 on 2-singleton tests. Iter 24's conclusion
+is right for its test cases, but wrong for the general
+story: partial reflections CAN force det=0 on larger defects
+when the induced permutation sign product is -1.
+Similarly (4,3,2) false-negatives involve partial reflection
+rho_y (y-flip) fixing the defect.
+Accepted because: hostile audit verdict = clean. 16 record()
+booleans. Multiple FAILs on H5_perfect_on_* and
+H5_accuracy_on_* are computed truthful (H5 isn't perfect
+on those cuboids).
+Key structural insight: the REAL lemma underlying H5 is a
+GENERALIZED REFLECTION LEMMA: det=0 is forced by any graph
+automorphism phi of the truncated graph such that the net
+transformation factor (epsilon_mu product across edges
+combined with permutation sign product from pi_e, pi_o) is
+-1. Both iter 23 (central sigma) and partial reflections
+(rho_1, rho_2, rho_y, rho_z etc.) satisfy this for specific
+defect configurations. H5 is an empirical fingerprint
+capturing a SUBSET of such automorphism-forced cases on
+(4,4,2) only. For other cuboids, different partial reflections
+fix different defects, giving det=0 cases that H5 doesn't
+predict.
+Corrective update: H5 on (4,4,2) had 288/288 because every
+det=0 case there happened to satisfy H5's specific condition.
+On other cuboids, this coincidence breaks -- some det=0
+cases come from partial reflections in a way H5 doesn't
+capture.
+Next V2 vector: (a) Formalize the GENERALIZED reflection
+lemma: det=0 iff there exists a bipartition-preserving graph
+automorphism with net transformation factor -1. Test this
+across the full set of line-3 + singleton configurations
+on all L3=2 cuboids. (b) Identify the automorphism subgroup
+that fixes each false-negative defect and compute its
+transformation factor. (c) Correct iter 24's partial-
+reflection conclusion: update docs to reflect that partial
+reflections CAN force det=0 on appropriate defect
+configurations, they just don't on generic 2-singleton
+test cases.
+

@@ -764,40 +764,49 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   z-separated singletons force det=0 /
   `frontier_axiom_native_sh3_degeneracy_investigation.py` /
   Target 2 sub-step 2d-V2-sh3-z-plane-separation.
-- Line-3 + singleton zero-det LEMMA (candidate, 288/288
-  validation on (4,4,2)). Exhaustively enumerated all
-  (line-3, isolated-balanced-singleton) defect
-  configurations on (4,4,2): 32 line-3 positions (16 x-
-  oriented, 16 y-oriented, z-direction impossible on L3=2)
-  times all valid isolated balanced singletons = 288
-  configurations. Classifier hypothesis H5:
-    det_K3(B) = 0 IFF (a) singleton in opposite z-plane from
-    line-3 AND (b) singleton's parallel-axis coordinate
-    (singleton_x for x-oriented line, singleton_y for
-    y-oriented line) has the SAME parity as the line-3
-    center's parallel-axis coordinate.
-  Classifier performance: TP = 128, TN = 160, FP = 0, FN = 0.
-  288 of 288 cases correctly classified. Both conditions are
-  jointly necessary: 64 z-separated configurations violate
-  parity condition and give det != 0; 96 z-same configurations
-  give det != 0 regardless of parity. The z-same 0-of-96
-  result shows z-separation is strictly necessary, and the
-  z-separated 128+64 split cleanly along the parity condition.
-  Significance: NEW structural degeneracy mechanism distinct
-  from iter 23 reflection-degeneracy lemma. The line-3 +
-  singleton configurations here are NOT central-reflection-
-  paired (confirmed via iter 29: only identity in D_4 x Z_2
-  fixes SH3). The lemma candidate therefore identifies a
-  second family of zero-det configurations beyond the
-  reflection lemma. Conditions generalize iter 23's specific
-  geometry -- they require only a defect COMPONENT structure
-  (a line-3 component + a singleton component with specific
-  parity alignment), not the symmetry of the full defect set.
-  Proof open; derivation would likely go through matching-
-  polynomial cancellation involving the line-3's internal
-  alternating-cycle structure /
-  `frontier_axiom_native_line3_singleton_sweep.py` /
-  Target 2 sub-step 2d-V2-line3-singleton-lemma.
+- Line-3 + singleton zero-det H5 lemma (candidate): iter 30
+  found on (4,4,2) that 288 of 288 (line-3, isolated-balanced-
+  singleton) configurations are perfectly classified by H5
+  (z-separation AND singleton parallel-axis parity matches
+  line-3 center axis parity). IMPORTANT: iter 31 showed H5 is
+  (4,4,2)-SPECIFIC, not a general lemma: on (3,3,2) (32/40,
+  80%), (4,3,2) (104/112, 92.9%), (5,3,2) (212/232, 91.4%),
+  (5,5,2) (1016/1048, 96.9%), H5 has false-negative errors
+  (det=0 cases that H5 incorrectly predicts non-zero).
+  Crucially, H5 NEVER has false positives: when H5 predicts
+  det=0, det IS zero across all 5 tested L3=2 cuboids.
+  So H5 gives a SUFFICIENT condition for det=0 universally,
+  but it is NOT NECESSARY -- other det=0 configurations exist
+  beyond H5's predictions. Examples of missed cases on (3,3,2):
+  line (x-direction, (0,0,0)-(2,0,0)) + singleton (1,2,0)
+  with BOTH line and singleton at z=0 (z-same). This is
+  z-same so H5 rejects, but det = 0 actually.
+  Mechanism hint: on (3,3,2), the line spans the full x-axis
+  (L_1 = 3 = line length) making the defect partial-reflection
+  (rho_1, x-flip) invariant. Combined with singleton at x=1
+  (rho_1-fixed), the whole defect set is rho_1-invariant.
+  iter 24 previously concluded partial reflections don't
+  force det=0, but that conclusion was based on 2-singleton
+  tests where sign(pi_e) * sign(pi_o) happened to be +1.
+  For 4-site defects with rho_1-symmetric structure, the
+  induced permutation sign product can be -1, forcing det=0
+  via the same mechanism as iter 23 but under partial
+  reflections. So the full story is: det=0 is forced by ANY
+  graph automorphism of the truncated graph that preserves
+  bipartition AND has net transformation factor = -1 (from
+  epsilon-flips combined with permutation-sign product).
+  H5 is an empirical fingerprint of a SUBSET of such
+  automorphism-forced cases on (4,4,2).
+  Current status: H5 is only a sufficient condition; a full
+  characterization of det=0 line-3+singleton configurations
+  requires the generalized-reflection framework. Open problem:
+  can we state "det=0 iff there exists a graph automorphism
+  phi with the appropriate transformation factor" as an
+  exact lemma? If yes, both iter 23 (central) and partial
+  reflections fall under it naturally /
+  `frontier_axiom_native_line3_singleton_sweep.py`,
+  `frontier_axiom_native_line3_lemma_generalization.py` /
+  Target 2 sub-step 2d-V2-line3-singleton-lemma-refinement.
 - Non-singleton shape type AFFECTS signal preservation
   (iter 27 singleton-specific signal is fragile). Swept 6
   mixed-defect shapes on (4,4,2) with different non-singleton
