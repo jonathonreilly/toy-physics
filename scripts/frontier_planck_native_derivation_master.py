@@ -38,6 +38,7 @@ SUBCHECKS = [
     "frontier_planck_boundary_parent_source_equivalence_theorem.py",
     "frontier_planck_gravity_sector_same_surface_closure_theorem.py",
     "frontier_planck_airtight_review_closure_theorem.py",
+    "frontier_planck_bare_cell_alone_closure_program.py",
     "frontier_planck_hbar_status_and_remaining_objections_audit.py",
     "frontier_planck_hbar_attack_order_theorem.py",
 ]
@@ -86,6 +87,7 @@ def main() -> int:
     parent_source = read("docs/PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md")
     same_surface_gravity = read("docs/PLANCK_SCALE_GRAVITY_SECTOR_SAME_SURFACE_CLOSURE_THEOREM_2026-04-23.md")
     airtight = read("docs/PLANCK_SCALE_AIRTIGHT_REVIEW_CLOSURE_THEOREM_2026-04-23.md")
+    bare_cell_program = read("docs/PLANCK_SCALE_BARE_CELL_ALONE_CLOSURE_PROGRAM_2026-04-23.md")
     hbar_audit = read("docs/PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md")
     hbar_attack = read("docs/PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md")
 
@@ -317,6 +319,15 @@ def main() -> int:
         in airtight
         and "`a = l_P`" in airtight
         and "theory-surface rejections, not\ninternal Planck proof gaps" in airtight,
+    )
+
+    total += 1
+    passed += expect(
+        "bare-cell-alone-upgrade-program-is-scoped",
+        "PLANCK_SCALE_BARE_CELL_ALONE_CLOSURE_PROGRAM_2026-04-23.md" in reviewer
+        and "not the submitted Planck theorem" in bare_cell_program
+        and "Do not claim the stronger sentence until B1-B4 are theorem-grade"
+        in bare_cell_program,
     )
 
     total += 1
