@@ -245,6 +245,20 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   on planar bipartite Z^3 subgraphs /
   `frontier_axiom_native_kasteleyn_plaquette_sign.py` /
   Target 2 sub-step 2d.
+- 3x3x2 Kasteleyn anomaly is localized to EXACTLY 2 matchings:
+  enumerating all 229 perfect matchings of the 3x3x2 prism and
+  computing their signed contributions to `det(B)` under K3
+  staggered phases, 227 matchings contribute `+1` and 2 contribute
+  `-1`, so `det(B) = 227 - 2 = 225`. The 2 minority-sign matchings
+  each use EXACTLY 1 vertical (mu=3) edge, while the 227 majority
+  matchings average 3.115 vertical edges each. The Pfaffian
+  obstruction is thus carried by a specific structural sub-class
+  of matchings -- those that minimize vertical z-coupling -- not
+  by diffuse cancellation across the whole matching set. This
+  isolates the non-planar obstruction to a concrete combinatorial
+  feature /
+  `frontier_axiom_native_kasteleyn_anomaly_3x3x2.py` /
+  Target 2 sub-step 2d-V2-diagnostic.
 - SCOPE LIMIT on ledger 2d: the K3 Kasteleyn identity
   `|det(B_G)| = #PM(G)` holds on 2x2x1 (plaquette), 2x2x2 (cube Q_3),
   2x2x3, and 3x2x2 cuboids (all planar, all equality), but BREAKS

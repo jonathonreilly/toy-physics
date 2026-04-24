@@ -553,3 +553,40 @@ small (225 vs 229, off by 4). Understanding the specific
 alternating cycles that contribute to #PM but not to det(B) would
 give structural insight into where K3's Pfaffian property fails.
 
+[2026-04-23 09:45] V2 iteration: 3x3x2 anomaly structural diagnosis — PASS
+Tried: the immediate follow-up per V2 rules -- pick a specific
+falsifiable claim about the 3x3x2 break and test adversarially.
+Claim tested: on the 3x3x2 prism, exactly 2 perfect matchings
+among 229 contribute with the minority sign to det(B) under K3.
+Wrote scripts/frontier_axiom_native_kasteleyn_anomaly_3x3x2.py which:
+(i) builds the 3x3x2 signed bipartite block B and unsigned B_un,
+(ii) enumerates all perfect matchings by iterating over 9!=362,880
+permutations and filtering for those where all edges exist,
+(iii) for each PM, computes sign(permutation) * product(B entries),
+(iv) counts +1 vs -1 contributions,
+(v) extracts the minority matchings and analyzes structural features.
+Results:
+- n_pos = 227, n_neg = 2. n_pos - n_neg = 225 = |det(B)| (matches).
+- Sympy det(B) = 225 (independent verification).
+- Both minority matchings use EXACTLY 1 vertical (mu=3) edge.
+- Majority matchings average 3.115 vertical edges each.
+Interpretation: the Pfaffian obstruction on the 3x3x2 prism is
+carried by 2 specific matchings that MINIMIZE vertical z-coupling.
+Each 3x3 layer has 9 vertices (5+4 bipartite, unbalanced), so a
+PM with only 1 vertical edge pairs one vertex across layers and
+matches the remaining 8+8 within a "layer augmented by removal of
+one vertex". The anomaly is localized, not diffuse.
+Accepted because: hostile audit verdict = clean. 9 computed
+record() booleans (all PASS now because we correctly identified
+the minority count 2), no narrative PASSes.
+Value: structural characterization of where K3 fails to be
+Pfaffian on a non-planar Z^3 graph. Combined with the universal
+plaquette-sign (2d) and the scope-limit (2d-V2), we now have a
+refined picture: K3 is Pfaffian on planar Z^3, and its first
+failure on non-planar Z^3 is carried by z-minimizing matchings.
+Next vector: compute the symmetric difference of a minority
+matching with a majority matching. This gives an alternating
+cycle that's the "non-planar obstruction cycle". Its K3-sign
+product should be +1 (not -1) -- confirming it's the specific
+cycle where Kasteleyn fails.
+
