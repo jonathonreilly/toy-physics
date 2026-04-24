@@ -49,6 +49,7 @@ SUBCHECKS = [
     "frontier_planck_edge_clifford_kinematic_soldering_theorem.py",
     "frontier_planck_b3_dynamical_metricity_obstruction_theorem.py",
     "frontier_planck_b3_bare_ward_identity_no_go_2026_04_24.py",
+    "frontier_planck_b3_clifford_realification_metric_ward_theorem_2026_04_24.py",
     "frontier_planck_bare_boundary_representative_after_gravity_theorem.py",
     "frontier_planck_hbar_status_and_remaining_objections_audit.py",
     "frontier_planck_hbar_attack_order_theorem.py",
@@ -58,6 +59,7 @@ SUBCHECKS = [
     "frontier_planck_gamma_phase_period_obstruction_theorem.py",
     "frontier_planck_hbar_strong_routes_status_theorem.py",
     "frontier_planck_hbar_nonhomogeneous_real_action_unit_reduction_2026_04_24.py",
+    "frontier_planck_primitive_integral_action_count_theorem_2026_04_24.py",
     "frontier_planck_overnight_closure_status_theorem.py",
 ]
 
@@ -116,6 +118,7 @@ def main() -> int:
     edge_soldering = read("docs/PLANCK_SCALE_EDGE_CLIFFORD_KINEMATIC_SOLDERING_THEOREM_2026-04-24.md")
     b3_metricity_obstruction = read("docs/PLANCK_SCALE_B3_DYNAMICAL_METRICITY_OBSTRUCTION_THEOREM_2026-04-24.md")
     b3_bare_ward_no_go = read("docs/PLANCK_SCALE_B3_BARE_WARD_IDENTITY_NO_GO_2026-04-24.md")
+    b3_realification = read("docs/PLANCK_SCALE_B3_CLIFFORD_REALIFICATION_METRIC_WARD_THEOREM_2026-04-24.md")
     bare_boundary = read("docs/PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md")
     hbar_audit = read("docs/PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md")
     hbar_attack = read("docs/PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md")
@@ -125,6 +128,7 @@ def main() -> int:
     gamma_period = read("docs/PLANCK_SCALE_GAMMA_PHASE_PERIOD_OBSTRUCTION_THEOREM_2026-04-24.md")
     hbar_strong = read("docs/PLANCK_SCALE_HBAR_STRONG_ROUTES_STATUS_THEOREM_2026-04-24.md")
     hbar_nonhomogeneous = read("docs/PLANCK_SCALE_HBAR_NONHOMOGENEOUS_REAL_ACTION_UNIT_REDUCTION_THEOREM_2026-04-24.md")
+    integral_action_count = read("docs/PLANCK_SCALE_PRIMITIVE_INTEGRAL_ACTION_COUNT_THEOREM_2026-04-24.md")
     overnight_status = read("docs/PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md")
 
     for script in SUBCHECKS:
@@ -483,6 +487,21 @@ def main() -> int:
 
     total += 1
     passed += expect(
+        "b3-clifford-realification-closes-metric-ward-surface",
+        "PLANCK_SCALE_B3_CLIFFORD_REALIFICATION_METRIC_WARD_THEOREM_2026-04-24.md"
+        in reviewer
+        and "positive B3 closure on the canonical real linear-response envelope"
+        in b3_realification
+        and "`T_R = T_Z tensor_Z R`" in b3_realification
+        and "`delta g_ij = h_ij + h_ji`" in b3_realification
+        and "antisymmetric channel has `delta g = 0`" in b3_realification
+        and "`d^* T = 0`" in b3_realification
+        and "If that rejection is accepted, the older finite-automorphism B3 no-go applies"
+        in b3_realification,
+    )
+
+    total += 1
+    passed += expect(
         "bare-boundary-representative-b4-conditional",
         "PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md"
         in reviewer
@@ -496,8 +515,8 @@ def main() -> int:
         "PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md"
         in reviewer
         and "does **not** derive `hbar`" in hbar_audit
-        and "conditional structural Planck-length result, not a derivation of `hbar`"
-        in hbar_audit
+        and "closes `gamma=1` in reduced action-count units, not\n"
+        "> the SI value of `hbar`" in hbar_audit
         and "no claim that the packet derives `hbar`" in reviewer,
     )
 
@@ -561,14 +580,16 @@ def main() -> int:
 
     total += 1
     passed += expect(
-        "hbar-strong-routes-remain-open",
+        "hbar-strong-routes-integral-route-closed-but-others-open",
         "PLANCK_SCALE_HBAR_STRONG_ROUTES_STATUS_THEOREM_2026-04-24.md"
         in reviewer
         and "`0 -> R -> G_hat -> G -> 1`" in hbar_strong
         and "`Index(D_cell) = 1`" in hbar_strong
         and "`Phi(A_cell) = 1`" in hbar_strong
         and "Reusing it for hbar would be circular" in hbar_strong
-        and "None is closed in the current branch" in hbar_strong,
+        and "primitive action route now closed in reduced count units"
+        in hbar_strong
+        and "Those routes are not closed in the current branch" in hbar_strong,
     )
 
     total += 1
@@ -587,12 +608,27 @@ def main() -> int:
 
     total += 1
     passed += expect(
+        "primitive-integral-action-count-closes-reduced-gamma",
+        "PLANCK_SCALE_PRIMITIVE_INTEGRAL_ACTION_COUNT_THEOREM_2026-04-24.md"
+        in reviewer
+        and "positive reduced-action closure" in integral_action_count
+        and "`M_cell = N [A_cell]`" in integral_action_count
+        and "`Phi(I_16) = ell([A_cell]) = 1`" in integral_action_count
+        and "`gamma = 1`" in integral_action_count
+        and "not a prediction of\nthe SI value of `hbar`" in integral_action_count,
+    )
+
+    total += 1
+    passed += expect(
         "overnight-status-classifies-conditional-not-bare",
         "PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md"
         in reviewer
-        and "not** a bare `Cl(3)` / `Z^3`-alone derivation" in overnight_status
-        and "conditional retained physical-gravity Planck theorem" in overnight_status
-        and "The branch has not derived `gamma = 1` or `hbar`" in overnight_status
+        and "not** a finite-automorphism-only derivation" in overnight_status
+        and "Planck closure on the canonical realified `Cl(3)` / `Z^3`"
+        in overnight_status
+        and "B3 realified metric/coframe Ward response" in overnight_status
+        and "closed: `gamma=1` as reduced primitive action count" in overnight_status
+        and "not claimed: SI `hbar`" in overnight_status
         and "Nature-grade bare-axiom Planck and hbar closure has been achieved"
         in overnight_status,
     )

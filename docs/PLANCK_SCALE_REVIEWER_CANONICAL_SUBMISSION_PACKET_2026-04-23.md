@@ -25,6 +25,7 @@
 **Edge-Clifford kinematic soldering:** [PLANCK_SCALE_EDGE_CLIFFORD_KINEMATIC_SOLDERING_THEOREM_2026-04-24.md](./PLANCK_SCALE_EDGE_CLIFFORD_KINEMATIC_SOLDERING_THEOREM_2026-04-24.md)
 **B3 dynamical metricity obstruction:** [PLANCK_SCALE_B3_DYNAMICAL_METRICITY_OBSTRUCTION_THEOREM_2026-04-24.md](./PLANCK_SCALE_B3_DYNAMICAL_METRICITY_OBSTRUCTION_THEOREM_2026-04-24.md)
 **B3 bare Ward identity no-go:** [PLANCK_SCALE_B3_BARE_WARD_IDENTITY_NO_GO_2026-04-24.md](./PLANCK_SCALE_B3_BARE_WARD_IDENTITY_NO_GO_2026-04-24.md)
+**B3 Clifford realification metric-Ward theorem:** [PLANCK_SCALE_B3_CLIFFORD_REALIFICATION_METRIC_WARD_THEOREM_2026-04-24.md](./PLANCK_SCALE_B3_CLIFFORD_REALIFICATION_METRIC_WARD_THEOREM_2026-04-24.md)
 **Bare boundary representative:** [PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md)
 **Hbar/unit-convention audit:** [PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md](./PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md)
 **Hbar attack order:** [PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md](./PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md)
@@ -34,6 +35,7 @@
 **Gamma phase-period obstruction:** [PLANCK_SCALE_GAMMA_PHASE_PERIOD_OBSTRUCTION_THEOREM_2026-04-24.md](./PLANCK_SCALE_GAMMA_PHASE_PERIOD_OBSTRUCTION_THEOREM_2026-04-24.md)
 **Hbar strong routes status:** [PLANCK_SCALE_HBAR_STRONG_ROUTES_STATUS_THEOREM_2026-04-24.md](./PLANCK_SCALE_HBAR_STRONG_ROUTES_STATUS_THEOREM_2026-04-24.md)
 **Hbar non-homogeneous real action-unit reduction:** [PLANCK_SCALE_HBAR_NONHOMOGENEOUS_REAL_ACTION_UNIT_REDUCTION_THEOREM_2026-04-24.md](./PLANCK_SCALE_HBAR_NONHOMOGENEOUS_REAL_ACTION_UNIT_REDUCTION_THEOREM_2026-04-24.md)
+**Primitive integral action-count theorem:** [PLANCK_SCALE_PRIMITIVE_INTEGRAL_ACTION_COUNT_THEOREM_2026-04-24.md](./PLANCK_SCALE_PRIMITIVE_INTEGRAL_ACTION_COUNT_THEOREM_2026-04-24.md)
 **Overnight closure status:** [PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md](./PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md)
 
 ## Final Scope Warning
@@ -44,8 +46,10 @@ coefficient `c_cell = 1/4`. The conventional Planck length follows only after
 the primitive one-step worldtube count is physically identified with the
 standard gravitational boundary/action density.
 
-The bare physical `Cl(3)` / `Z^3` axioms alone do not yet force that last
-gravitational unit-map identification.
+The finite-automorphism-only reading of bare `Cl(3)` / `Z^3` does not force
+that last gravitational unit-map identification. The canonical realified
+edge-Clifford linear-response reading now does: it supplies the metric/coframe
+Ward primitive needed to activate the gravity-sector uniqueness theorem.
 
 This is also not submitted as a derivation of `hbar`. The final dimensional
 normalization imports the standard gravitational action law containing `hbar`,
@@ -79,16 +83,22 @@ rejection of projective or central-extension attacks; such a route would need a
 real action-unit map or a fully rewritten turns/cycles convention.
 
 The strong hbar-routes audit pushes the same point further: noncompact central
-extensions, spectral flow/index, primitive action generators, and microscopic
-action Ward identities remain viable research routes, but none closes on the
-current branch. Each reduces to a non-homogeneous primitive real action-unit
-theorem, `Phi(I_16)=1`.
+extensions, spectral flow/index, and microscopic action Ward identities remain
+viable independent research routes, while the primitive action-generator route
+now closes `gamma=1` on the integral-history surface. All routes reduce to the
+same non-homogeneous primitive real action-unit theorem, `Phi(I_16)=1`.
 
 The non-homogeneous real action-unit reduction now gives the exact
 necessary-and-sufficient theorem: if the complete source-free `C^16` cell
 `I_16` is derived as the indecomposable generator of the reduced real action
 monoid and the action coordinate is generator count, then `gamma=1` follows.
-The current bare stack does not derive that action-unit law.
+The primitive integral action-count theorem supplies exactly that law on the
+source-free integral-history surface: the only nonzero source-free invariant
+cell object is `I_16`, closed histories form `N[I_16]`, and the reduced action
+coordinate is the generator count. This closes `gamma=1` in reduced action
+units. It is still not a prediction of the SI value of `hbar`, and a reviewer
+who rejects the integral primitive-history reading can restore the old real
+scale countermodel.
 
 The final Planck closure is now stated as an airtight theorem on the accepted
 physical-gravity review contract. The old GSI wording is replaced by
@@ -96,19 +106,19 @@ same-surface single-sector compatibility: the accepted gravitational
 boundary/action sector has only one source-free primitive local representative
 on the Planck cell, namely `P_A`.
 
-The stronger "bare cell algebra alone" target is not the current submission
-claim. The upgrade path is recorded separately: derive physical-lattice
-semantics, source-free state semantics, the gravity sector, and same-surface
-boundary representation as theorems from the bare algebra rather than accepting
-them as review-contract terms.
+The stricter finite-automorphism-only "bare cell algebra alone" target is not
+the current submission claim. The upgrade path is recorded separately: derive
+physical-lattice semantics, source-free state semantics, the gravity sector,
+and same-surface boundary representation as theorems without invoking the
+canonical real linear-response envelope.
 
-The first two upgrade targets are now closed on the precise retained-algebra
+The first upgrade targets are now closed on the precise retained-algebra
 reading: physical-lattice ontology follows from retained local
 event/translation observables, and the source-free state follows as the unique
 automorphism-natural state of the bare no-extra-structure finite cell,
-`rho_cell = I_16/16`. The gravity-sector-from-algebra theorem remains the hard
-open B3 target; once B3 closes, the boundary representative is already forced to
-be `P_A`.
+`rho_cell = I_16/16`. The realified B3 theorem supplies the metric/coframe Ward
+primitive from the canonical `Z^3 tensor R` response envelope; once that surface
+is accepted, the boundary representative is already forced to be `P_A`.
 
 The B3 uniqueness attempt reduces that hard target to one exact object-class
 theorem: derive from retained `Cl(3)` / `Z^3` that primitive translation defects
@@ -132,6 +142,16 @@ The B3 bare Ward no-go sharpens this further: the exact missing primitive is a
 local gaugeable defect-to-coframe response primitive. Without it, scalar,
 antisymmetric, and symmetric-traceless response channels all survive the
 retained bare constraints, so the symmetric spin-2 channel is not selected.
+
+The B3 Clifford realification theorem supplies that primitive on the canonical
+linear-response surface of the retained soldering. Realifying `Z^3` to
+`Z^3 tensor R` is the universal first-order response envelope for maps into the
+real Clifford vector module `Cl_1(3)`. On that surface, the Clifford
+anticommutator makes trace plus symmetric traceless perturbations the metric
+response, antisymmetric perturbations are frame gauge, and local vertex-origin
+gauge gives the conserved-source Ward identity. The remaining rejection is now
+exactly whether this canonical realification is admissible native response data
+for physical `Cl(3)` on `Z^3`.
 
 The prior hardening removed the broad multiplicative boundary-unit ambiguity
 and reduced the additive boundary-density law to
@@ -335,8 +355,9 @@ and since both lengths are positive,
     action-unit map:
     [gamma phase-period obstruction](./PLANCK_SCALE_GAMMA_PHASE_PERIOD_OBSTRUCTION_THEOREM_2026-04-24.md).
 22. **Hbar strong-routes status.** Noncompact central extensions,
-    spectral-flow/index routes, primitive action generators, and microscopic
-    action Ward identities remain viable but unclosed. Each still requires the
+    spectral-flow/index routes, and microscopic action Ward identities remain
+    viable independent routes. The primitive action-generator route now closes
+    in reduced count units, and each route is measured against the same
     non-homogeneous real action-unit theorem `Phi(I_16)=1`:
     [hbar strong-routes status theorem](./PLANCK_SCALE_HBAR_STRONG_ROUTES_STATUS_THEOREM_2026-04-24.md).
 23. **Hbar non-homogeneous real action-unit reduction.** The exact
@@ -344,27 +365,39 @@ and since both lengths are positive,
     generator of the reduced real action monoid and `Phi(I_16)=1`; current bare
     premises do not derive it:
     [hbar non-homogeneous real action-unit reduction theorem](./PLANCK_SCALE_HBAR_NONHOMOGENEOUS_REAL_ACTION_UNIT_REDUCTION_THEOREM_2026-04-24.md).
-24. **Bare gravity-sector uniqueness attempt.** B3 is not closed; it is reduced
-    to deriving a soldered metricity / equivalence Ward identity from retained
-    `Cl(3)` / `Z^3`:
+24. **Primitive integral action-count theorem.** On the source-free
+    integral-history surface, `I_16` is the minimal invariant complete-cell
+    generator and the reduced action coordinate is generator count. This
+    supplies `Phi(I_16)=1`, hence `gamma=1`, in reduced action units while
+    preserving the SI-`hbar` caveat:
+    [primitive integral action-count theorem](./PLANCK_SCALE_PRIMITIVE_INTEGRAL_ACTION_COUNT_THEOREM_2026-04-24.md).
+25. **Bare gravity-sector uniqueness attempt.** Before the realification
+    theorem, B3 was reduced to deriving a soldered metricity / equivalence Ward
+    identity from retained `Cl(3)` / `Z^3`:
     [bare gravity uniqueness attempt](./PLANCK_SCALE_BARE_GRAVITY_SECTOR_UNIQUENESS_ATTEMPT_2026-04-24.md).
-25. **Edge-Clifford kinematic soldering.** The retained cell already has flat
+26. **Edge-Clifford kinematic soldering.** The retained cell already has flat
     edge/Clifford soldering and induced `delta_ij`; this closes the kinematic
     frame sub-lock but not dynamical spin-2 metricity:
     [edge-Clifford soldering theorem](./PLANCK_SCALE_EDGE_CLIFFORD_KINEMATIC_SOLDERING_THEOREM_2026-04-24.md).
-26. **B3 dynamical metricity obstruction.** The finite signed-permutation
+27. **B3 dynamical metricity obstruction.** The finite signed-permutation
     symmetry of the flat cell has no infinitesimal local frame Ward generator,
     so flat soldering alone cannot derive the conserved symmetric spin-2
     response:
     [B3 dynamical metricity obstruction theorem](./PLANCK_SCALE_B3_DYNAMICAL_METRICITY_OBSTRUCTION_THEOREM_2026-04-24.md).
-27. **B3 bare Ward identity no-go.** Bare-compatible local responses decompose
+28. **B3 bare Ward identity no-go.** Bare-compatible local responses decompose
     into scalar, antisymmetric, and symmetric-traceless channels; retained
     `Cl(3)` / `Z^3` does not select the symmetric spin-2 response without the
     missing local gaugeable defect-to-coframe primitive:
     [B3 bare Ward identity no-go](./PLANCK_SCALE_B3_BARE_WARD_IDENTITY_NO_GO_2026-04-24.md).
-28. **Overnight closure status.** The strongest current claim remains a
-    conditional retained physical-gravity Planck theorem, not bare
-    `Cl(3)` / `Z^3` Planck+hbar closure:
+29. **B3 Clifford realification metric-Ward theorem.** On the canonical
+    realified edge-Clifford response surface, translation defects are coframe
+    perturbations, the Clifford anticommutator gives the symmetric metric
+    response, antisymmetric perturbations are frame gauge, and vertex-origin
+    gauge gives the conserved-source Ward identity:
+    [B3 Clifford realification metric-Ward theorem](./PLANCK_SCALE_B3_CLIFFORD_REALIFICATION_METRIC_WARD_THEOREM_2026-04-24.md).
+30. **Overnight closure status.** The strongest current claim is closed on the
+    canonical realified linear-response surface, while still refusing the
+    stricter finite-automorphism-only and SI-`hbar` overclaims:
     [overnight closure status theorem](./PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md).
 29. **Airtight review closure.** On the accepted physical-gravity review
     contract, the Planck theorem is closed. Remaining denials are rejections of
@@ -415,10 +448,12 @@ Not imported into the reviewer claim:
 14. no hidden insertion of `nu = 5/4`; the value enters only through
     `lambda_min(L_Sigma) = 1` and `Tr(rho_cell P_A) = 1/4`.
 15. no claim that the packet derives `hbar` or predicts its SI numerical value.
-16. no claim that bare algebra alone derives `gamma = 1` in the primitive
-    phase trace reduction.
-17. no claim that bare `Cl(3)` / `Z^3` alone derives the soldered metricity /
-    symmetric spin-2 Ward identity needed to close B3.
+16. no claim that finite-automorphism-only bare algebra derives `gamma = 1` in
+    the primitive phase trace reduction; the closure uses the primitive
+    integral-history surface.
+17. no claim that finite signed-permutation symmetry alone derives the
+    soldered metricity / symmetric spin-2 Ward identity needed to close B3; the
+    closure uses canonical realified edge-Clifford linear response.
 18. no claim that U(1) phase periodicity or central-extension level quantization
     alone derives the real value `gamma = 1`.
 19. no claim that the scalar Schur observable principle alone derives the
@@ -571,6 +606,7 @@ python3 scripts/frontier_planck_bare_gravity_sector_uniqueness_attempt.py
 python3 scripts/frontier_planck_edge_clifford_kinematic_soldering_theorem.py
 python3 scripts/frontier_planck_b3_dynamical_metricity_obstruction_theorem.py
 python3 scripts/frontier_planck_b3_bare_ward_identity_no_go_2026_04_24.py
+python3 scripts/frontier_planck_b3_clifford_realification_metric_ward_theorem_2026_04_24.py
 python3 scripts/frontier_planck_bare_boundary_representative_after_gravity_theorem.py
 python3 scripts/frontier_planck_hbar_status_and_remaining_objections_audit.py
 python3 scripts/frontier_planck_hbar_attack_order_theorem.py
@@ -580,6 +616,7 @@ python3 scripts/frontier_planck_primitive_action_unit_gamma_one_attempt.py
 python3 scripts/frontier_planck_gamma_phase_period_obstruction_theorem.py
 python3 scripts/frontier_planck_hbar_strong_routes_status_theorem.py
 python3 scripts/frontier_planck_hbar_nonhomogeneous_real_action_unit_reduction_2026_04_24.py
+python3 scripts/frontier_planck_primitive_integral_action_count_theorem_2026_04_24.py
 python3 scripts/frontier_planck_overnight_closure_status_theorem.py
 ```
 
@@ -605,19 +642,21 @@ python3 scripts/frontier_planck_overnight_closure_status_theorem.py
 - [PLANCK_SCALE_BARE_CELL_ALONE_CLOSURE_PROGRAM_2026-04-23.md](./PLANCK_SCALE_BARE_CELL_ALONE_CLOSURE_PROGRAM_2026-04-23.md) - stronger-target program: how to upgrade the accepted review-contract theorem into a future bare-cell-alone theorem by deriving the missing semantics.
 - [PLANCK_SCALE_BARE_PHYSICAL_LATTICE_OBSERVABLE_ONTOLOGY_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_PHYSICAL_LATTICE_OBSERVABLE_ONTOLOGY_THEOREM_2026-04-23.md) - B1 closure on the retained observable-algebra reading: `Z^3` is physical support, not removable regulator coordinate.
 - [PLANCK_SCALE_BARE_FINITE_CELL_CANONICAL_STATE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_FINITE_CELL_CANONICAL_STATE_THEOREM_2026-04-23.md) - B2 closure: the source-free state is the unique automorphism-natural state of the bare no-extra-structure finite cell.
-- [PLANCK_SCALE_BARE_GRAVITY_SECTOR_DERIVATION_STATUS_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_GRAVITY_SECTOR_DERIVATION_STATUS_THEOREM_2026-04-23.md) - B3 status/reduction: gravity-sector-from-algebra remains the hard open theorem.
-- [PLANCK_SCALE_BARE_GRAVITY_SECTOR_UNIQUENESS_ATTEMPT_2026-04-24.md](./PLANCK_SCALE_BARE_GRAVITY_SECTOR_UNIQUENESS_ATTEMPT_2026-04-24.md) - B3 uniqueness attempt: conditional Einstein/Regge uniqueness after soldered metricity / symmetric spin-2 Ward identity; not a bare closure.
+- [PLANCK_SCALE_BARE_GRAVITY_SECTOR_DERIVATION_STATUS_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_GRAVITY_SECTOR_DERIVATION_STATUS_THEOREM_2026-04-23.md) - pre-realification B3 status/reduction: gravity-sector-from-algebra was reduced to the metric/coframe Ward primitive.
+- [PLANCK_SCALE_BARE_GRAVITY_SECTOR_UNIQUENESS_ATTEMPT_2026-04-24.md](./PLANCK_SCALE_BARE_GRAVITY_SECTOR_UNIQUENESS_ATTEMPT_2026-04-24.md) - B3 uniqueness attempt: Einstein/Regge uniqueness after soldered metricity / symmetric spin-2 Ward identity.
 - [PLANCK_SCALE_EDGE_CLIFFORD_KINEMATIC_SOLDERING_THEOREM_2026-04-24.md](./PLANCK_SCALE_EDGE_CLIFFORD_KINEMATIC_SOLDERING_THEOREM_2026-04-24.md) - B3 sub-lock closure: native flat edge-Clifford soldering and induced `delta_ij`, not dynamical gravity.
 - [PLANCK_SCALE_B3_DYNAMICAL_METRICITY_OBSTRUCTION_THEOREM_2026-04-24.md](./PLANCK_SCALE_B3_DYNAMICAL_METRICITY_OBSTRUCTION_THEOREM_2026-04-24.md) - B3 no-go/reduction: finite flat-frame symmetry has no infinitesimal local Ward generator for conserved symmetric spin-2 response.
 - [PLANCK_SCALE_B3_BARE_WARD_IDENTITY_NO_GO_2026-04-24.md](./PLANCK_SCALE_B3_BARE_WARD_IDENTITY_NO_GO_2026-04-24.md) - B3 no-go/reduction: scalar and antisymmetric bare-compatible response channels survive, so the symmetric spin-2 Ward identity is not forced.
+- [PLANCK_SCALE_B3_CLIFFORD_REALIFICATION_METRIC_WARD_THEOREM_2026-04-24.md](./PLANCK_SCALE_B3_CLIFFORD_REALIFICATION_METRIC_WARD_THEOREM_2026-04-24.md) - B3 closure on the canonical realified edge-Clifford linear-response surface: coframe perturbation, metric anticommutator, frame gauge, and conserved source Ward identity.
 - [PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md) - B4 conditional closure: once B3 derives gravity, the primitive representative is forced to be `P_A`.
 - [PLANCK_SCALE_ACTION_PHASE_CONVERSION_TARGET_THEOREM_2026-04-23.md](./PLANCK_SCALE_ACTION_PHASE_CONVERSION_TARGET_THEOREM_2026-04-23.md) - hbar/action-phase target: exact Planck on the minimal defect requires `q_* = 1/16`, equivalently `kappa_info = 1/32` per bit.
 - [PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md](./PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md) - hbar/action-phase reduction: source-free primitive phase functionals have trace shape `q_atom = gamma/16`; exact `1/16` is the `gamma = 1` scalar.
 - [PLANCK_SCALE_PRIMITIVE_ACTION_UNIT_GAMMA_ONE_ATTEMPT_2026-04-24.md](./PLANCK_SCALE_PRIMITIVE_ACTION_UNIT_GAMMA_ONE_ATTEMPT_2026-04-24.md) - gamma-one no-go/reduction: current premises are scale-homogeneous and cannot derive `Phi(I_16)=1`.
 - [PLANCK_SCALE_GAMMA_PHASE_PERIOD_OBSTRUCTION_THEOREM_2026-04-24.md](./PLANCK_SCALE_GAMMA_PHASE_PERIOD_OBSTRUCTION_THEOREM_2026-04-24.md) - hbar/gamma no-go: phase periodicity and finite central roots do not select real `gamma = 1`.
-- [PLANCK_SCALE_HBAR_STRONG_ROUTES_STATUS_THEOREM_2026-04-24.md](./PLANCK_SCALE_HBAR_STRONG_ROUTES_STATUS_THEOREM_2026-04-24.md) - hbar strong-routes audit: noncompact central, index, primitive action, and Ward routes remain viable but unclosed.
+- [PLANCK_SCALE_HBAR_STRONG_ROUTES_STATUS_THEOREM_2026-04-24.md](./PLANCK_SCALE_HBAR_STRONG_ROUTES_STATUS_THEOREM_2026-04-24.md) - hbar strong-routes audit: primitive action closes in reduced count units; noncompact central, index, and Ward routes remain independent but unclosed.
 - [PLANCK_SCALE_HBAR_NONHOMOGENEOUS_REAL_ACTION_UNIT_REDUCTION_THEOREM_2026-04-24.md](./PLANCK_SCALE_HBAR_NONHOMOGENEOUS_REAL_ACTION_UNIT_REDUCTION_THEOREM_2026-04-24.md) - hbar necessary-and-sufficient reduction: `gamma=1` iff the primitive `C^16` cell is the unit generator of reduced real action.
-- [PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md](./PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md) - final classification for this pass: conditional retained Planck theorem, not bare Planck+hbar closure.
+- [PLANCK_SCALE_PRIMITIVE_INTEGRAL_ACTION_COUNT_THEOREM_2026-04-24.md](./PLANCK_SCALE_PRIMITIVE_INTEGRAL_ACTION_COUNT_THEOREM_2026-04-24.md) - positive reduced-action closure on the primitive integral-history surface: `I_16` is the complete-cell generator, so `Phi(I_16)=1` and `gamma=1` in reduced action units.
+- [PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md](./PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md) - final classification for this pass: Planck closure on the canonical realified linear-response surface, while rejecting finite-automorphism-only and SI-`hbar` overclaims.
 - [PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md) - explicit P1 package-boundary move.
 - [PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md) - hostile-review context, with its supersession note respected.
 - [PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md](./PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md) - hbar/unit-convention audit: the packet derives a dimensionless Planck coefficient, not the quantum of action.

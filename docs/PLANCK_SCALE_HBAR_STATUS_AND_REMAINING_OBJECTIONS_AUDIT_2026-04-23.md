@@ -40,6 +40,16 @@ non-homogeneous primitive action-unit law:
 
 `Phi(I_16) = 1`.
 
+Post-integral-action-count update: the branch now supplies that
+non-homogeneous law on the primitive integral-history surface. The source-free
+complete `C^16` cell is the only nonzero invariant primitive cell object,
+closed source-free histories form the free monoid `N[I_16]`, and the reduced
+action coordinate is generator count. Therefore `Phi(I_16)=1` and `gamma=1` in
+reduced action units.
+
+This still does **not** derive the SI value of `hbar`. It derives the
+dimensionless reduced action unit used by the internal action-phase lane.
+
 It derives a native dimensionless primitive boundary coefficient
 
 `c_cell = 1/4`
@@ -53,14 +63,14 @@ that coefficient gives
 
 `a^2 / l_P^2 = 1`.
 
-That is a serious conditional Planck-length result. It is not yet a structural
-derivation of the quantum of action.
+That is a serious Planck-length result on the accepted gravitational
+normalization. It is not a prediction of the SI value of the quantum of action.
 
 ## Axis Placement
 
 | Claim axis | Current status | Reason |
 | --- | --- | --- |
-| Structural derivation of `hbar` from graph/combinatorics | **Reduced, not closed** | The primitive phase trace theorem derives `q_atom = gamma/16`; exact hbar/action closure requires `gamma = 1`. |
+| Structural reduced-action unit from graph/combinatorics | **Closed on the primitive integral-history surface** | The primitive phase trace theorem derives `q_atom = gamma/16`, and the integral action-count theorem supplies `Phi(I_16)=1`, hence `gamma=1`, in reduced units. |
 | Numerical prediction of `hbar` in SI units | **Not a physical target** | Since the 2019 SI revision, the Planck constant `h` has an exact fixed SI value; predicting that number would predict a unit convention. |
 | Dimensionless prediction involving `hbar` | **Not yet achieved** | The branch derives `a^2/l_P^2 = 1` only after importing the standard gravitational normalization containing `hbar`, `G`, and `c_light`. |
 | Native dimensionless microscopic coefficient | **Achieved on the retained object class** | The packet derives `rank(P_A)/dim(H_cell) = 4/16 = 1/4`. |
@@ -147,7 +157,7 @@ different weights or no exact `a = l_P`.
 This is not a contradiction if the object classes are separated. It is a review
 risk if the paper blurs them.
 
-### O7. The information/action route is reduced to one scalar, not closed
+### O7. The information/action route is closed only in reduced action-count units
 
 The current information/action audit rules out the obvious direct versions:
 
@@ -156,8 +166,8 @@ The current information/action audit rules out the obvious direct versions:
 - exact Planck would require a new phase-per-information theorem
   `q_* = kappa_info I_*`.
 
-No exact `kappa_info = 1/32` theorem is currently derived unless the remaining
-`gamma = 1` scalar is supplied.
+No exact `kappa_info = 1/32` theorem is derived from homogeneous information
+measures alone.
 
 The primitive phase trace theorem now improves this: on the source-free
 primitive phase-functional object class,
@@ -172,8 +182,10 @@ So the surviving information/action target is no longer a loose conversion
 constant. It is the same total-cell reduced action scalar `gamma`.
 
 The gamma-one attempt proves that this scalar is not derivable from another
-homogeneous trace/naturality theorem. A successful route must add or derive a
-non-homogeneous primitive action-unit law.
+homogeneous trace/naturality theorem. The primitive integral action-count
+theorem supplies the needed non-homogeneous law on the source-free
+integral-history surface, so `kappa_info = 1/32 per bit` is now closed in
+reduced action-count units.
 
 The phase-period obstruction adds a second guardrail: bare U(1) periodicity or
 finite roots alone cannot select the real reduced action value `gamma = 1`.
@@ -181,7 +193,7 @@ This is deliberately narrow. It does not reject projective/central-extension
 attacks that derive an additional real unit map or consistently rewrite the
 action-phase lane in turns/cycles.
 
-### O8. The elementary action-phase route is reduced to gamma, not fully solved
+### O8. The elementary action-phase route is closed in reduced action-count units
 
 The first-principles action-phase reduction gives
 
@@ -203,10 +215,13 @@ Thus exact `a = l_P` on the action-phase route is now equivalent to
 
 `gamma = 1`.
 
-The current branch does not yet derive `gamma = 1` from bare algebra alone.
-The gamma-one attempt explains why: every currently stated primitive phase
-premise survives positive rescaling of `Phi`, so it defines a ray of action
-functionals rather than a unit point on that ray.
+The primitive integral action-count theorem derives `gamma = 1` on the
+source-free integral-history surface: `I_16` is the complete-cell generator and
+the reduced action coordinate is generator count.
+
+This is still not a dimensionful `hbar` derivation. If a reviewer allows
+arbitrary positive real action measures instead of the integral primitive-count
+coordinate, the gamma-one scale countermodel returns.
 
 The phase-period obstruction also explains why a 16th root of unity is only a
 candidate route, not a closure: in the current `exp(i Phi)` convention it gives
@@ -245,7 +260,8 @@ discrete structure itself, for example:
 5. a dimensionless prediction such as a fixed value of `alpha` or another
    measured ratio involving the same action unit.
 
-None of those is currently in hand.
+Item 3 is now in hand on the primitive integral-history surface. Items 1, 2,
+4, and 5 are not currently in hand.
 
 ## Safe Claim
 
@@ -254,7 +270,9 @@ Use:
 > The branch derives a native dimensionless boundary-cell coefficient `c_cell =
 > 1/4` on the retained primitive boundary-action object class. With the standard
 > gravitational area/action normalization, this gives `a^2/l_P^2 = 1`. This is a
-> conditional structural Planck-length result, not a derivation of `hbar`.
+> conditional structural Planck-length result. Separately, the primitive
+> integral-history theorem closes `gamma=1` in reduced action-count units, not
+> the SI value of `hbar`.
 
 Do not use:
 

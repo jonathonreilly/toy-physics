@@ -28,6 +28,7 @@ def main() -> int:
     parent_source = read("docs/PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md")
     phase_trace = read("docs/PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md")
     gamma_period = read("docs/PLANCK_SCALE_GAMMA_PHASE_PERIOD_OBSTRUCTION_THEOREM_2026-04-24.md")
+    integral_count = read("docs/PLANCK_SCALE_PRIMITIVE_INTEGRAL_ACTION_COUNT_THEOREM_2026-04-24.md")
 
     passed = 0
     total = 0
@@ -94,6 +95,17 @@ def main() -> int:
 
     total += 1
     passed += expect(
+        "integral-action-count-closes-reduced-gamma",
+        "Closed on the primitive integral-history surface" in audit
+        and "The primitive integral action-count\n"
+        "theorem supplies the needed non-homogeneous law" in audit
+        and "Therefore `Phi(I_16)=1` and `gamma=1` in\nreduced action units" in audit
+        and "`Phi(I_16) = ell([A_cell]) = 1`" in integral_count,
+        "gamma=1 is now closed as a reduced integral count, not as SI hbar",
+    )
+
+    total += 1
+    passed += expect(
         "information-action-kappa-reduced-to-gamma",
         "`q_* = kappa_info I_*`" in information
         and "`kappa_info = gamma/32 per bit`" in audit
@@ -120,7 +132,9 @@ def main() -> int:
     total += 1
     passed += expect(
         "safe-claim-preserved",
-        "conditional structural Planck-length result, not a derivation of `hbar`" in audit
+        "conditional structural Planck-length result" in audit
+        and "closes `gamma=1` in reduced action-count units, not\n"
+        "> the SI value of `hbar`" in audit
         and "Do not use:\n\n> The branch derives the Planck constant." in audit,
         "safe and unsafe claims are explicit",
     )

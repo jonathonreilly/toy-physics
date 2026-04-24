@@ -11,11 +11,12 @@ strongest honest claim?
 
 ## Result
 
-The branch is **not** a bare `Cl(3)` / `Z^3`-alone derivation of Planck length
-or `hbar`.
+The branch is **not** a finite-automorphism-only derivation of Planck length
+or SI `hbar`.
 
-It is a hardened conditional Planck theorem on an explicit retained
-physical-gravity parent-source boundary-action object class.
+It is now a Planck closure on the canonical realified `Cl(3)` / `Z^3`
+linear-response surface, plus a reduced `gamma=1` action-count closure on the
+primitive integral-history surface.
 
 ## What Is Closed
 
@@ -25,34 +26,45 @@ The following pieces are closed on the retained surface:
 2. source-free finite-cell state on the authorized local Hilbert surface;
 3. primitive `C^16` cell count and `rank(P_A)/16 = 1/4`;
 4. flat edge-Clifford soldering `edge_i <-> Gamma_i`;
-5. finite event Ward derivative
+5. B3 realified metric/coframe Ward response: `Z^3 tensor R` supplies the
+   coframe response, the Clifford anticommutator supplies the symmetric metric
+   perturbation, antisymmetric perturbations are frame gauge, and vertex-origin
+   gauge gives `d^*T = 0`;
+6. finite event Ward derivative
    `d/ds log Tr(rho_cell exp(s P_A))|_(s=0) = Tr(rho_cell P_A)`;
-6. source-functorial Schur/event equality inside the retained parent-source
+7. source-functorial Schur/event equality inside the retained parent-source
    boundary-action object class;
-7. conditional Planck normalization
+8. Planck normalization
    `a^2/l_P^2 = 1` after standard gravitational area/action normalization is
    accepted.
+9. reduced action-count normalization `Phi(I_16)=1`, hence `gamma=1`, on the
+   primitive integral-history surface.
 
 ## What Is Not Closed
 
-Three hard items remain open for bare axiom-grade closure:
+The finite-automorphism-only target remains rejected:
 
-1. **B3 dynamical gravity.** Bare `Cl(3)` / `Z^3` has not derived local
-   metric/coframe response or the conserved symmetric spin-2 Ward identity.
-2. **Boundary object-class derivation.** The Schur/event Ward bridge is closed
-   inside parent-source functoriality, but bare algebra has not forced that the
-   physical gravitational boundary action must be this parent-source object.
-3. **Hbar/action unit.** The branch has not derived `gamma = 1` or `hbar`. The
-   exact survivor is the primitive real action-unit theorem
-   `Phi(I_16)=1`.
+1. If the reviewer refuses canonical realification
+   `Z^3 tensor_Z R` as native first-order response data, the older B3 no-go
+   applies.
+2. If the reviewer accepts canonical realification, B3 supplies the
+   metric/coframe Ward primitive and B4 forces the boundary representative
+   `P_A`.
+
+The hbar axis is now separated:
+
+- closed: `gamma=1` as reduced primitive action count on the
+  integral-history surface;
+- not claimed: SI `hbar`, central-extension, spectral-flow, or microscopic
+  Ward derivations of the quantum of action.
 
 ## Classification
 
 The strongest current classification is:
 
-> conditional retained physical-gravity Planck theorem, with bare-axiom closure
-> reduced to B3 dynamical metricity plus parent-source boundary-action object
-> derivation; hbar remains a separate open action-unit program.
+> Planck closure on the canonical realified `Cl(3)` / `Z^3` linear-response
+> surface; reduced `gamma=1` is closed as primitive integral action count,
+> while SI `hbar` remains unclaimed.
 
 It is not:
 
@@ -65,21 +77,21 @@ It is not:
 ## Next Exact Theorem Targets
 
 1. Derive a local metric/coframe gauge response from primitive translation
-   defects.
-2. Derive the parent-source boundary-action object class from that gravity
-   response, rather than accepting it as the retained physical-gravity surface.
-3. Derive a primitive real action-unit theorem, preferably by constructing an
-   index-one primitive event Dirac/Fredholm pair or a noncompact central action
-   generator with canonical unit normalization.
+   defects without invoking canonical realification. This is only needed for
+   the stricter finite-automorphism-only claim.
+2. If pursuing an independent hbar program, derive a central-extension,
+   spectral-flow, commutator, or microscopic Ward theorem that reproduces the
+   same reduced action unit without relying on the integral count surface.
 
 ## Reviewer-Safe Claim
 
 Use:
 
 > The Planck coefficient is internally closed on the retained physical-gravity
-> parent-source boundary-action object class. The stronger bare
-> `Cl(3)` / `Z^3` closure is reduced to named open theorems, not hidden
-> arithmetic or normalization gaps.
+> parent-source boundary-action object class and on the canonical realified
+> `Cl(3)` / `Z^3` linear-response surface. The remaining stricter rejection is
+> refusal of realification as native response data, not an arithmetic or
+> normalization gap.
 
 Do not use:
 

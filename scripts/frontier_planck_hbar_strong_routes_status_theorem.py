@@ -26,6 +26,7 @@ def main() -> int:
     phase_trace = read("docs/PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md")
     gamma_attempt = read("docs/PLANCK_SCALE_PRIMITIVE_ACTION_UNIT_GAMMA_ONE_ATTEMPT_2026-04-24.md")
     gamma_period = read("docs/PLANCK_SCALE_GAMMA_PHASE_PERIOD_OBSTRUCTION_THEOREM_2026-04-24.md")
+    integral_count = read("docs/PLANCK_SCALE_PRIMITIVE_INTEGRAL_ACTION_COUNT_THEOREM_2026-04-24.md")
     reviewer = read("docs/PLANCK_SCALE_REVIEWER_CANONICAL_SUBMISSION_PACKET_2026-04-23.md")
 
     passed = 0
@@ -73,8 +74,10 @@ def main() -> int:
         "primitive-action-generator-is-exact-survivor",
         "`A_cell := I_16`" in note
         and "`Phi(A_cell) = 1`" in note
-        and "Additivity fixes shape; it does not fix unit scale" in note,
-        "the direct route is a primitive action monoid unit theorem",
+        and "This closes `gamma = 1` once the source-free closed histories are treated as\n"
+        "the free integral monoid `N[A_cell]`" in note
+        and "`Phi(I_16) = ell([A_cell]) = 1`" in integral_count,
+        "the direct primitive action route is now closed in reduced count units",
     )
 
     total += 1
@@ -101,6 +104,15 @@ def main() -> int:
         "reviewer-links-hbar-strong-routes",
         "PLANCK_SCALE_HBAR_STRONG_ROUTES_STATUS_THEOREM_2026-04-24.md" in reviewer,
         "canonical packet links the hbar strong-routes theorem",
+    )
+
+    total += 1
+    passed += expect(
+        "si-hbar-still-not-claimed",
+        "It is closed as reduced action count, not as an SI-value derivation of `hbar`" in note
+        and "Those routes are not closed in the current branch" in note
+        and "Do not use:\n\n> The branch derives `hbar`." in note,
+        "reduced gamma closure is separated from SI hbar and independent routes",
     )
 
     print(f"SUMMARY: PASS={passed} FAIL={total - passed}")

@@ -1,7 +1,7 @@
 # Planck-Scale Hbar Strong Routes Status Theorem
 
 **Date:** 2026-04-24
-**Status:** hbar/gamma route audit; no closure of `gamma = 1`
+**Status:** hbar/gamma route audit; primitive action route now closed in reduced count units
 **Verifier:** `scripts/frontier_planck_hbar_strong_routes_status_theorem.py`
 
 ## Question
@@ -19,18 +19,26 @@ periodicity?
 
 ## Result
 
-Not yet.
-
 The current branch has reduced the hbar/action-unit target to one
 non-homogeneous real unit statement:
 
 `Phi(I_16) = 1`.
 
-The stronger routes do not close it on the current bare surface. They sharpen
-the exact missing theorem:
+The original strong-route audit showed that homogeneous trace/naturality,
+periodicity, finite roots, noncompact central lines, spectral flow without an
+action-index unit map, and ordinary Ward balance do not close that statement.
+The primitive action-generator route is now closed on the primitive
+integral-history surface by
+[PLANCK_SCALE_PRIMITIVE_INTEGRAL_ACTION_COUNT_THEOREM_2026-04-24.md](./PLANCK_SCALE_PRIMITIVE_INTEGRAL_ACTION_COUNT_THEOREM_2026-04-24.md).
+
+The exact theorem supplied there is:
 
 > derive a primitive real action generator whose complete `C^16` event cell has
 > unit reduced action before exponentiation.
+
+It is closed as reduced action count, not as an SI-value derivation of `hbar`.
+The other strong routes remain useful independent attacks, but they are not
+needed for `gamma=1` once the integral primitive-history surface is accepted.
 
 ## Route 1: noncompact central extension
 
@@ -94,9 +102,14 @@ is normalized by generator count:
 
 `Phi(A_cell) = 1`.
 
-This would close `gamma = 1`. The current algebra has the cell identity and
-additivity, but it does not yet contain the non-homogeneous generator-count
-normalization. Additivity fixes shape; it does not fix unit scale.
+This closes `gamma = 1` once the source-free closed histories are treated as
+the free integral monoid `N[A_cell]`. The integral action-count theorem proves
+that `A_cell = I_16` is the minimal invariant complete-cell generator and that
+the reduced action coordinate is generator count.
+
+The hostile-review caveat is narrow: if a reviewer refuses the integral
+primitive-history reading and instead allows arbitrary positive real action
+measures on the same cell histories, the old scale ray returns.
 
 ## Route 4: microscopic Ward/action normalization
 
@@ -112,15 +125,22 @@ area/action normalization.
 
 ## Consequence
 
-The hbar lane remains open. The exact survivor is not a vague conversion
-constant. It is a specific non-homogeneous theorem:
+The hbar lane is now split:
+
+1. reduced action-count `gamma=1` is closed on the primitive integral-history
+   surface;
+2. SI `hbar`, central-extension, spectral-flow, and microscopic Ward
+   derivations remain unclaimed.
+
+The exact survivor for any non-count route is still not a vague conversion
+constant. It is the same specific non-homogeneous theorem:
 
 > the complete primitive `C^16` event cell is the unit generator of reduced
 > real action.
 
-This may still be attacked through a noncompact central extension,
-spectral-flow/index theorem, primitive action monoid theorem, or microscopic
-action Ward identity. None is closed in the current branch.
+This may still be attacked independently through a noncompact central
+extension, spectral-flow/index theorem, or microscopic action Ward identity.
+Those routes are not closed in the current branch.
 
 ## Safe Claim
 
@@ -128,7 +148,8 @@ Use:
 
 > The branch derives the trace shape `q_atom = gamma/16` and proves that
 > homogeneous, periodic, and finite-root arguments do not select `gamma = 1`.
-> The remaining hbar target is a primitive real action-unit theorem.
+> The primitive integral-history theorem supplies `gamma=1` in reduced
+> action-count units. This is not an SI-value derivation of `hbar`.
 
 Do not use:
 
