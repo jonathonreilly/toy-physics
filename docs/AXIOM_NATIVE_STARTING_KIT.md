@@ -245,6 +245,21 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   on planar bipartite Z^3 subgraphs /
   `frontier_axiom_native_kasteleyn_plaquette_sign.py` /
   Target 2 sub-step 2d.
+- SHARPER SCOPE LIMIT: K3 optimality does NOT extend to all
+  contractible non-cuboid Z^3 subgraphs. Concrete counterexample:
+  (3,3,2) with opposite corners (0,0,0) and (2,2,1) removed is
+  contractible (chi = 16 - 27 + 14 - 2 = 1) and has K3 as the
+  unique plaquette-satisfying gauge class (plaquette rank 12 =
+  gauge_dim 12 via Euler). But K3 gives |det(B)| = 30 while the
+  max over all 4096 gauge classes is 36. So K3 is NOT optimal
+  here, even though plaquette-uniqueness holds. Meanwhile K3 IS
+  optimal on the 3D L-shape (10 sites, planar) giving |det| = 8
+  = #PM = 8. So the scope of K3 optimality appears to be
+  "contractible AND cuboidal" (or related to regular shape),
+  strictly narrower than "contractible"; plaquette-uniqueness
+  follows from contractibility alone but optimality needs more /
+  `frontier_axiom_native_contractible_non_cuboid_test.py` /
+  Target 2 sub-step 2d-V2-non-cuboid-scope.
 - SCOPE LIMIT on K3 optimality: the "K3 is Pfaffian-optimal"
   conjecture is TIED TO CONTRACTIBILITY of the ambient graph.
   Concrete counterexample: (3,3,2) minus the central column

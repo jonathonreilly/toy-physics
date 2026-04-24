@@ -895,3 +895,41 @@ structural relationship between K3's class and the optimal class
 (what does the kit need to add to pick the right cohomology
 class?).
 
+[2026-04-24 00:05] V2 iteration: contractible non-cuboid K3-optimality — MIXED (falsification found)
+Tried: adversarial test of scope expansion. Does K3 optimality
+extend from cuboids to all contractible Z^3 subgraphs?
+Tested two shapes:
+1. 3D L-shape: {(i,0,k)} ∪ {(0,j,k)} for i,j ∈ {0,1,2}, k ∈ {0,1}.
+   10 sites, planar Z^3 subgraph.
+2. (3,3,2) with opposite corners (0,0,0) and (2,2,1) removed.
+   16 sites, contractible non-cuboid non-planar.
+Results:
+- L-shape: K3 is unique plaquette-satisfying (gauge_dim 4 =
+  plaquette rank 4). K3 |det| = 8 = max = #PM = 8. Works.
+- Clipped (3,3,2): contractible (chi = 1), K3 UNIQUE
+  plaquette-satisfying (gauge_dim 12 = plaquette rank 12 via
+  Euler). But K3 |det| = 30, max over 4096 classes = 36. #PM = 42.
+  K3 IS NOT OPTIMAL.
+Falsification: K3 optimality is narrower than "contractible Z^3
+subgraph". Specifically, K3 can be the unique plaquette-satisfying
+class (given contractibility) WITHOUT achieving the max |det|.
+Scope map so far:
+- Cuboids (contractible + regular): K3 optimal.
+- Planar Z^3 (L-shape): K3 optimal = #PM (classical Kasteleyn).
+- Contractible non-cuboid non-planar (clipped 332): K3 UNIQUE but
+  NOT OPTIMAL. 36 > 30.
+- Non-contractible (ring): K3 NOT unique and NOT OPTIMAL.
+So "K3 optimal" appears to be: "planar OR cuboid" — not just
+"contractible". The cuboid structure provides something beyond
+contractibility that K3 exploits. Specifically, cuboid regularity
+aligns K3's translation-invariant staggered phases with the graph's
+combinatorial structure. Non-regular contractibles break this.
+Accepted because: hostile audit verdict = clean. 9 computed record()
+booleans (2 FAILs are the falsifications), no narrative PASSes.
+Next V2 vector: (a) characterize what distinguishes clipped-332
+from cuboids -- the "missing cubes" at corners might be the
+culprit; test whether the optimal class on clipped-332 corresponds
+to a boundary-correction on K3. (b) test a T-shape (3D) or pyramid
+to see if planar-like contractibles work but 3D-core non-cuboid
+fail. (c) step back to V_us = 2/9 thread.
+
