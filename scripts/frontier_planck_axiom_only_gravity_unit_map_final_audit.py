@@ -121,7 +121,9 @@ def main() -> int:
         (
             "final-verdict-is-event-ward-closed-with-explicit-rejection",
             "proposed native closure of the last value-law gap" in audit
-            and "Nature-grade on the retained primitive boundary-action"
+            and "conditionally closed on the retained primitive boundary-action"
+            in plain
+            and "should not be presented as bare `Cl(3)` / `Z^3` Nature-grade closure"
             in plain,
             "final status should state closure and the remaining rejection target",
         ),

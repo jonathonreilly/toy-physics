@@ -35,11 +35,12 @@ is now supplied by the normal-ordered primitive boundary event Ward theorem.
 Ordinary Schur source-response Ward identities still do not derive this
 constant term; the closure uses the finite-source event insertion Ward
 identity on the primitive boundary-action surface. The Ward derivative is
-derived from `U_A(s) = exp(s P_A)`, and same-source covariance is derived by
-excluding a hidden quotient source group between the Schur and event
-generators. The parent-source theorem derives the common-source bridge from the
-unique full axis parent `P_A`; Schur is the quotient shape plus retained
-multiplicity, not a separate source.
+derived from `U_A(s) = exp(s P_A)`. Same-source covariance follows once the
+Schur and event descriptions are accepted as functorial representations of the
+same parent source, because any mismatch would be a hidden quotient source
+group. The parent-source theorem derives the common-source bridge inside the
+retained parent-source object class from the unique full axis parent `P_A`;
+Schur is the quotient shape plus retained multiplicity, not a separate source.
 
 ## Claim
 
@@ -296,10 +297,11 @@ density law
 
 The boundary event Ward derivation gives the direct closure route: the unique
 primitive incidence insertion group is `exp(s P_A)`, its identity-source Ward
-derivative is `Tr(rho_cell P_A)`, and same-source covariance identifies this
-with the Schur normal-ordered pressure. The same-source covariance theorem
-proves that any mismatch would be a hidden source-free boundary-action scalar.
-The parent-source theorem then proves that the event and Schur descriptions are
+derivative is `Tr(rho_cell P_A)`, and parent-source functoriality identifies
+this with the Schur normal-ordered pressure. The same-source covariance theorem
+proves that any mismatch would be a hidden source-free boundary-action scalar
+once the two source representations are accepted as the same parent source. The
+parent-source theorem then proves that the event and Schur descriptions are
 reductions of the unique full parent source `P_A` inside the retained primitive
 boundary-action object class.
 

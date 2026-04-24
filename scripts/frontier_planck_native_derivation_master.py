@@ -46,6 +46,7 @@ SUBCHECKS = [
     "frontier_planck_bare_gravity_sector_derivation_status_theorem.py",
     "frontier_planck_bare_gravity_sector_uniqueness_attempt.py",
     "frontier_planck_edge_clifford_kinematic_soldering_theorem.py",
+    "frontier_planck_b3_dynamical_metricity_obstruction_theorem.py",
     "frontier_planck_bare_boundary_representative_after_gravity_theorem.py",
     "frontier_planck_hbar_status_and_remaining_objections_audit.py",
     "frontier_planck_hbar_attack_order_theorem.py",
@@ -53,6 +54,8 @@ SUBCHECKS = [
     "frontier_planck_primitive_phase_trace_reduction_theorem.py",
     "frontier_planck_primitive_action_unit_gamma_one_attempt.py",
     "frontier_planck_gamma_phase_period_obstruction_theorem.py",
+    "frontier_planck_hbar_strong_routes_status_theorem.py",
+    "frontier_planck_overnight_closure_status_theorem.py",
 ]
 
 
@@ -107,6 +110,7 @@ def main() -> int:
     bare_gravity_status = read("docs/PLANCK_SCALE_BARE_GRAVITY_SECTOR_DERIVATION_STATUS_THEOREM_2026-04-23.md")
     bare_gravity_attempt = read("docs/PLANCK_SCALE_BARE_GRAVITY_SECTOR_UNIQUENESS_ATTEMPT_2026-04-24.md")
     edge_soldering = read("docs/PLANCK_SCALE_EDGE_CLIFFORD_KINEMATIC_SOLDERING_THEOREM_2026-04-24.md")
+    b3_metricity_obstruction = read("docs/PLANCK_SCALE_B3_DYNAMICAL_METRICITY_OBSTRUCTION_THEOREM_2026-04-24.md")
     bare_boundary = read("docs/PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md")
     hbar_audit = read("docs/PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md")
     hbar_attack = read("docs/PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md")
@@ -114,6 +118,8 @@ def main() -> int:
     phase_trace = read("docs/PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md")
     gamma_attempt = read("docs/PLANCK_SCALE_PRIMITIVE_ACTION_UNIT_GAMMA_ONE_ATTEMPT_2026-04-24.md")
     gamma_period = read("docs/PLANCK_SCALE_GAMMA_PHASE_PERIOD_OBSTRUCTION_THEOREM_2026-04-24.md")
+    hbar_strong = read("docs/PLANCK_SCALE_HBAR_STRONG_ROUTES_STATUS_THEOREM_2026-04-24.md")
+    overnight_status = read("docs/PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md")
 
     for script in SUBCHECKS:
         total += 1
@@ -335,7 +341,9 @@ def main() -> int:
         and "`B_parent := (H_A, P_A)`" in parent_source
         and "`P_A = P_q + P_E`" in parent_source
         and "`nu - lambda_min(L_Sigma) = Tr(rho_cell P_A)`" in parent_source
-        and "deny that the physical gravitational boundary-action source belongs to the\n> retained primitive one-step boundary/worldtube object class"
+        and "deny that the physical gravitational boundary-action source belongs to the"
+        in parent_source
+        and "deny that the Schur normal-ordered boundary action is the functorial Schur"
         in parent_source,
     )
 
@@ -431,6 +439,19 @@ def main() -> int:
 
     total += 1
     passed += expect(
+        "b3-dynamical-metricity-obstruction-keeps-bare-gravity-open",
+        "PLANCK_SCALE_B3_DYNAMICAL_METRICITY_OBSTRUCTION_THEOREM_2026-04-24.md"
+        in reviewer
+        and "Lie algebra is zero-dimensional" in b3_metricity_obstruction
+        and "cannot produce a differential conservation identity"
+        in b3_metricity_obstruction
+        and "B3 remains open" in b3_metricity_obstruction
+        and "Do not use:\n\n> Flat edge-Clifford soldering derives gravity."
+        in b3_metricity_obstruction,
+    )
+
+    total += 1
+    passed += expect(
         "bare-boundary-representative-b4-conditional",
         "PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md"
         in reviewer
@@ -505,6 +526,30 @@ def main() -> int:
         and "central-extension quantization can produce a level, but it\n"
         "does not produce the dimensionless radian value `gamma = 1`"
         in gamma_period,
+    )
+
+    total += 1
+    passed += expect(
+        "hbar-strong-routes-remain-open",
+        "PLANCK_SCALE_HBAR_STRONG_ROUTES_STATUS_THEOREM_2026-04-24.md"
+        in reviewer
+        and "`0 -> R -> G_hat -> G -> 1`" in hbar_strong
+        and "`Index(D_cell) = 1`" in hbar_strong
+        and "`Phi(A_cell) = 1`" in hbar_strong
+        and "Reusing it for hbar would be circular" in hbar_strong
+        and "None is closed in the current branch" in hbar_strong,
+    )
+
+    total += 1
+    passed += expect(
+        "overnight-status-classifies-conditional-not-bare",
+        "PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md"
+        in reviewer
+        and "not** a bare `Cl(3)` / `Z^3`-alone derivation" in overnight_status
+        and "conditional retained physical-gravity Planck theorem" in overnight_status
+        and "The branch has not derived `gamma = 1` or `hbar`" in overnight_status
+        and "Nature-grade bare-axiom Planck and hbar closure has been achieved"
+        in overnight_status,
     )
 
     print(f"SUMMARY: PASS={passed} FAIL={total - passed}")

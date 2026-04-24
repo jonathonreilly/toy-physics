@@ -216,8 +216,10 @@ maps. This matches the cosmic-address import theorem.
    metricity / the conserved symmetric spin-2 Ward identity from retained
    `Cl(3)` / `Z^3`. The flat edge-Clifford soldering sub-lock is now closed:
    `edge_i <-> Gamma_i` gives the kinematic local frame and induced `delta_ij`.
-   Once the dynamical object class is earned, conditional local-action
-   uniqueness recovers the accepted gravity/action sector.
+   The B3 dynamical metricity obstruction now proves why this does not close
+   gravity: finite signed-permutation frame symmetry has no infinitesimal local
+   Ward generator. Once the dynamical object class is earned, conditional
+   local-action uniqueness recovers the accepted gravity/action sector.
 4. **Boundary representative theorem.** Conditionally closed: use the already
    written same-surface closure to force `N_grav = P_A` once the gravity sector
    is algebra-derived.

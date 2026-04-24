@@ -42,8 +42,9 @@ Therefore every primitive event atom has phase share
 
 `Phi(P_eta) = gamma / 16`.
 
-The algebraic `1/16` is now derived. The remaining hbar/action-unit question is
-the single scalar:
+The algebraic trace denominator `1/16` is now derived. The exact physical value
+`q_atom = 1/16` is not derived until the remaining hbar/action-unit scalar is
+closed:
 
 `gamma = 1`.
 

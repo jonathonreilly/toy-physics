@@ -122,11 +122,13 @@ def main() -> int:
             f"nu={nu_closed}",
         ),
         (
-            "remaining-rejection-is-upstream-object-class",
-            "deny that the physical gravitational boundary-action source belongs to the\n> retained primitive one-step boundary/worldtube object class"
+            "remaining-rejections-are-object-class-and-functoriality",
+            "deny that the physical gravitational boundary-action source belongs to the" in note
+            and "deny that the Schur normal-ordered boundary action is the functorial Schur" in note
+            and "turns\nthe finite event derivative into the Schur normal-ordered boundary-action\nsource"
             in note
             and "Within the retained primitive boundary-action object class" in note,
-            "final remaining denial changes the physical object class",
+            "remaining denials target object class or Schur functorial representation",
         ),
     ]
 

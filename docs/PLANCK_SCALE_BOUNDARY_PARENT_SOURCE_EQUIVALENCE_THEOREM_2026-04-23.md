@@ -57,8 +57,10 @@ It is the multiplicity-completed parent mass
 `Tr(rho_cell P_A) = Tr(rho_cell(P_q + P_E)) = 1/4`.
 
 So the Schur normal-ordered pressure and the event insertion generator are two
-reductions of one parent source. Same-source covariance is no longer an
-independent bridge; it follows from parent-source uniqueness.
+reductions of one parent source inside the retained parent-source object class.
+Same-source covariance is no longer an independent bridge once that
+functorial representation class is accepted; it follows from parent-source
+uniqueness on that surface.
 
 ## Inputs
 
@@ -221,15 +223,17 @@ Equating the same physical boundary density gives
 
 ## Remaining Rejection
 
-The remaining possible rejection is now only upstream:
+The remaining possible rejections are now:
 
-> deny that the physical gravitational boundary-action source belongs to the
-> retained primitive one-step boundary/worldtube object class.
+1. deny that the physical gravitational boundary-action source belongs to the
+   retained primitive one-step boundary/worldtube object class;
+2. deny that the Schur normal-ordered boundary action is the functorial Schur
+   representation of the same parent source `B_parent = (H_A, P_A)`.
 
-If that denial is made, the reviewer is no longer contesting the coefficient
-or the Schur/event common-source bridge. They are rejecting the physical
-identification of the Planck lane as the primitive gravitational boundary
-action lane.
+If either denial is made, the reviewer is no longer contesting the coefficient
+arithmetic. They are rejecting the physical/functorial object class that turns
+the finite event derivative into the Schur normal-ordered boundary-action
+source.
 
 Within the retained primitive boundary-action object class, the parent source
 is unique and the Schur/event equivalence is closed.

@@ -195,7 +195,7 @@ Thus the microscopic one-step gravitational boundary incidence charge is
 
 This statement contains no value `1/4`; it is an operator statement.
 
-## Theorem 3: finite event Ward identity fixes the normal-ordered pressure
+## Theorem 3: finite event Ward plus parent-source functoriality fixes the normal-ordered pressure
 
 Let `N_grav` be the primitive boundary incidence charge and let `rho_cell` be
 the source-free primitive-cell state.

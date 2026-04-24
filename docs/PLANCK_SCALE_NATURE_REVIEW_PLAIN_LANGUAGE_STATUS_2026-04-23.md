@@ -151,8 +151,11 @@ Do not use this:
 
 ## Review Outcome
 
-The package is now Nature-grade on the retained primitive boundary-action
+The package is conditionally closed on the retained primitive boundary-action
 object class, with no inserted Planck value.
 
-The remaining review question is whether the reviewer accepts that object class
-as the physical gravitational boundary-action lane.
+This should not be presented as bare `Cl(3)` / `Z^3` Nature-grade closure. The
+remaining review question is whether the reviewer accepts that object class as
+the physical gravitational boundary-action lane, or demands a separate
+bare-algebra derivation of the gravity sector and parent-source boundary
+object.
