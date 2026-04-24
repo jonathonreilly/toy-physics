@@ -12,12 +12,17 @@
 **Boundary event Ward derivation:** [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md)
 **Boundary same-source covariance:** [PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md)
 **Boundary parent source equivalence:** [PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md)
+**Boundary action-source versus pressure:** [PLANCK_SCALE_BOUNDARY_ACTION_SOURCE_VS_PRESSURE_CLASSIFICATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_ACTION_SOURCE_VS_PRESSURE_CLASSIFICATION_THEOREM_2026-04-23.md)
 **Gravity-sector same-surface closure:** [PLANCK_SCALE_GRAVITY_SECTOR_SAME_SURFACE_CLOSURE_THEOREM_2026-04-23.md](./PLANCK_SCALE_GRAVITY_SECTOR_SAME_SURFACE_CLOSURE_THEOREM_2026-04-23.md)
 **Airtight review closure:** [PLANCK_SCALE_AIRTIGHT_REVIEW_CLOSURE_THEOREM_2026-04-23.md](./PLANCK_SCALE_AIRTIGHT_REVIEW_CLOSURE_THEOREM_2026-04-23.md)
 **Bare-cell-alone upgrade program:** [PLANCK_SCALE_BARE_CELL_ALONE_CLOSURE_PROGRAM_2026-04-23.md](./PLANCK_SCALE_BARE_CELL_ALONE_CLOSURE_PROGRAM_2026-04-23.md)
+**Bare physical-lattice ontology:** [PLANCK_SCALE_BARE_PHYSICAL_LATTICE_OBSERVABLE_ONTOLOGY_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_PHYSICAL_LATTICE_OBSERVABLE_ONTOLOGY_THEOREM_2026-04-23.md)
 **Bare finite-cell canonical state:** [PLANCK_SCALE_BARE_FINITE_CELL_CANONICAL_STATE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_FINITE_CELL_CANONICAL_STATE_THEOREM_2026-04-23.md)
+**Bare gravity-sector status:** [PLANCK_SCALE_BARE_GRAVITY_SECTOR_DERIVATION_STATUS_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_GRAVITY_SECTOR_DERIVATION_STATUS_THEOREM_2026-04-23.md)
+**Bare boundary representative:** [PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md)
 **Hbar/unit-convention audit:** [PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md](./PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md)
 **Hbar attack order:** [PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md](./PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md)
+**Action-phase conversion target:** [PLANCK_SCALE_ACTION_PHASE_CONVERSION_TARGET_THEOREM_2026-04-23.md](./PLANCK_SCALE_ACTION_PHASE_CONVERSION_TARGET_THEOREM_2026-04-23.md)
 
 ## Final Scope Warning
 
@@ -54,9 +59,13 @@ semantics, source-free state semantics, the gravity sector, and same-surface
 boundary representation as theorems from the bare algebra rather than accepting
 them as review-contract terms.
 
-The first upgrade target is now closed: the source-free state follows as the
-unique automorphism-natural state of the bare no-extra-structure finite cell,
-`rho_cell = I_16/16`.
+The first two upgrade targets are now closed on the precise retained-algebra
+reading: physical-lattice ontology follows from retained local
+event/translation observables, and the source-free state follows as the unique
+automorphism-natural state of the bare no-extra-structure finite cell,
+`rho_cell = I_16/16`. The gravity-sector-from-algebra theorem remains the hard
+open B3 target; once B3 closes, the boundary representative is already forced to
+be `P_A`.
 
 The prior hardening removed the broad multiplicative boundary-unit ambiguity
 and reduced the additive boundary-density law to
@@ -77,6 +86,13 @@ remaining hostile-review target is no longer the number `5/4`, the Ward
 derivative, or same-source covariance; it is whether the physical
 gravitational boundary-action source belongs to the retained primitive
 one-step boundary/worldtube object class.
+
+The packet also separates "pressure" into object classes. The scalar Schur
+free-energy pressure is `(1/(2n)) log det(L_Sigma)` and is not the Planck
+quarter. The Planck readout is the normal-ordered primitive boundary
+action-source density, identified with the event insertion source
+`Tr(rho_cell P_A)`. Do not present the result as a scalar Schur-pressure
+theorem.
 
 ## Submission Claim
 
@@ -210,7 +226,11 @@ and since both lengths are positive,
     are read on one physical boundary surface, whose unique source-free
     primitive local representative is `P_A`:
     [gravity-sector same-surface closure theorem](./PLANCK_SCALE_GRAVITY_SECTOR_SAME_SURFACE_CLOSURE_THEOREM_2026-04-23.md).
-16. **Airtight review closure.** On the accepted physical-gravity review
+16. **Action-source versus pressure classification.** The Planck readout is the
+    normal-ordered primitive boundary action-source density, not the scalar
+    Schur free-energy pressure. The scalar Schur pressure is not `1/4`:
+    [action-source versus pressure theorem](./PLANCK_SCALE_BOUNDARY_ACTION_SOURCE_VS_PRESSURE_CLASSIFICATION_THEOREM_2026-04-23.md).
+17. **Airtight review closure.** On the accepted physical-gravity review
     contract, the Planck theorem is closed. Remaining denials are rejections of
     that review contract, not hidden coefficient or algebra gaps:
     [airtight review closure theorem](./PLANCK_SCALE_AIRTIGHT_REVIEW_CLOSURE_THEOREM_2026-04-23.md).
@@ -300,6 +320,10 @@ The hostile-review denials are now explicit.
    stack, same-surface single-sector compatibility, or standard gravitational
    area/action normalization, the theorem no longer applies. That is a rejection
    of the submitted physical review contract, not a hidden Planck proof gap.
+10. **Scalar-pressure objection.** If the reviewer insists that "physical
+    pressure" means the additive scalar Schur free-energy observable, concede:
+    that object is `(1/(2n)) log det(L_Sigma)`, not `1/4`. The submitted Planck
+    lane is instead a primitive boundary action-source density theorem.
 
 The final denial-status theorem records that denials 2 and 4 change the target:
 they either replace the primitive coefficient with an enriched state/readout
@@ -352,12 +376,17 @@ python3 scripts/frontier_planck_boundary_event_ward_identity_closure_theorem.py
 python3 scripts/frontier_planck_boundary_event_ward_identity_derivation_theorem.py
 python3 scripts/frontier_planck_boundary_same_source_covariance_theorem.py
 python3 scripts/frontier_planck_boundary_parent_source_equivalence_theorem.py
+python3 scripts/frontier_planck_boundary_action_source_vs_pressure_classification_theorem.py
 python3 scripts/frontier_planck_gravity_sector_same_surface_closure_theorem.py
 python3 scripts/frontier_planck_airtight_review_closure_theorem.py
 python3 scripts/frontier_planck_bare_cell_alone_closure_program.py
+python3 scripts/frontier_planck_bare_physical_lattice_observable_ontology_theorem.py
 python3 scripts/frontier_planck_bare_finite_cell_canonical_state_theorem.py
+python3 scripts/frontier_planck_bare_gravity_sector_derivation_status_theorem.py
+python3 scripts/frontier_planck_bare_boundary_representative_after_gravity_theorem.py
 python3 scripts/frontier_planck_hbar_status_and_remaining_objections_audit.py
 python3 scripts/frontier_planck_hbar_attack_order_theorem.py
+python3 scripts/frontier_planck_action_phase_conversion_target_theorem.py
 ```
 
 ## Appendix Map
@@ -374,10 +403,15 @@ python3 scripts/frontier_planck_hbar_attack_order_theorem.py
 - [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md) - finite-source derivation of the event Ward identity from `U_A(s) = exp(s P_A)`.
 - [PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md) - quotient/no-hidden-scalar derivation of same-source covariance between the Schur and event generators.
 - [PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md) - parent source theorem showing event and Schur are faithful/lifted reductions of the same full axis source.
+- [PLANCK_SCALE_BOUNDARY_ACTION_SOURCE_VS_PRESSURE_CLASSIFICATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_ACTION_SOURCE_VS_PRESSURE_CLASSIFICATION_THEOREM_2026-04-23.md) - object-class hardening: Planck uses boundary action-source density, not scalar Schur pressure.
 - [PLANCK_SCALE_GRAVITY_SECTOR_SAME_SURFACE_CLOSURE_THEOREM_2026-04-23.md](./PLANCK_SCALE_GRAVITY_SECTOR_SAME_SURFACE_CLOSURE_THEOREM_2026-04-23.md) - final hardening of GSI as same-surface single-sector compatibility with the accepted gravity/action stack.
 - [PLANCK_SCALE_AIRTIGHT_REVIEW_CLOSURE_THEOREM_2026-04-23.md](./PLANCK_SCALE_AIRTIGHT_REVIEW_CLOSURE_THEOREM_2026-04-23.md) - final reviewer-gate theorem: closed on the accepted physical-gravity review contract, while explicitly refusing the bare-cell-alone overclaim.
 - [PLANCK_SCALE_BARE_CELL_ALONE_CLOSURE_PROGRAM_2026-04-23.md](./PLANCK_SCALE_BARE_CELL_ALONE_CLOSURE_PROGRAM_2026-04-23.md) - stronger-target program: how to upgrade the accepted review-contract theorem into a future bare-cell-alone theorem by deriving the missing semantics.
+- [PLANCK_SCALE_BARE_PHYSICAL_LATTICE_OBSERVABLE_ONTOLOGY_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_PHYSICAL_LATTICE_OBSERVABLE_ONTOLOGY_THEOREM_2026-04-23.md) - B1 closure on the retained observable-algebra reading: `Z^3` is physical support, not removable regulator coordinate.
 - [PLANCK_SCALE_BARE_FINITE_CELL_CANONICAL_STATE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_FINITE_CELL_CANONICAL_STATE_THEOREM_2026-04-23.md) - B2 closure: the source-free state is the unique automorphism-natural state of the bare no-extra-structure finite cell.
+- [PLANCK_SCALE_BARE_GRAVITY_SECTOR_DERIVATION_STATUS_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_GRAVITY_SECTOR_DERIVATION_STATUS_THEOREM_2026-04-23.md) - B3 status/reduction: gravity-sector-from-algebra remains the hard open theorem.
+- [PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md) - B4 conditional closure: once B3 derives gravity, the primitive representative is forced to be `P_A`.
+- [PLANCK_SCALE_ACTION_PHASE_CONVERSION_TARGET_THEOREM_2026-04-23.md](./PLANCK_SCALE_ACTION_PHASE_CONVERSION_TARGET_THEOREM_2026-04-23.md) - hbar/action-phase target: exact Planck on the minimal defect requires `q_* = 1/16`, equivalently `kappa_info = 1/32` per bit.
 - [PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md) - explicit P1 package-boundary move.
 - [PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md) - hostile-review context, with its supersession note respected.
 - [PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md](./PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md) - hbar/unit-convention audit: the packet derives a dimensionless Planck coefficient, not the quantum of action.

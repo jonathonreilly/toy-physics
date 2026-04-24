@@ -44,13 +44,18 @@ Needed theorem:
 
 Current status:
 
-- partially supported by the physical-lattice necessity note;
-- not yet a bare-cell-alone theorem if it still appeals to the wider accepted
-  package contract.
+- closed on the retained observable-algebra reading by:
+  [PLANCK_SCALE_BARE_PHYSICAL_LATTICE_OBSERVABLE_ONTOLOGY_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_PHYSICAL_LATTICE_OBSERVABLE_ONTOLOGY_THEOREM_2026-04-23.md).
 
 Success condition:
 
 `Z^3` becomes a physical substrate theorem, not a premise.
+
+Current upgrade status:
+
+`B1` is closed, provided "bare `Cl(3)` / `Z^3`" means the retained local
+event/translation observable algebra and not a stripped matrix algebra with all
+locality forgotten.
 
 ### B2. Source-Free State From Algebra
 
@@ -96,11 +101,18 @@ Current status:
 - the repo has a canonical gravity/action stack and same-surface closure;
 - but the final airtight Planck theorem still treats the accepted gravity/action
   sector as part of the review contract.
+- reduced by:
+  [PLANCK_SCALE_BARE_GRAVITY_SECTOR_DERIVATION_STATUS_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_GRAVITY_SECTOR_DERIVATION_STATUS_THEOREM_2026-04-23.md).
 
 Success condition:
 
 the gravitational boundary/action sector is derived from the algebraic dynamics,
 not accepted as an external physical sector.
+
+Current upgrade status:
+
+`B3` is the remaining hard open theorem. The current branch has the accepted
+gravity/action stack; it does not yet derive that stack from bare algebra alone.
 
 ### B4. Same-Surface Boundary Representative From Algebra
 
@@ -114,10 +126,16 @@ Current status:
 
 - essentially closed conditional on same-surface single-sector compatibility;
 - would become bare-cell-alone once B3 derives the gravity sector itself.
+- recorded by:
+  [PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md).
 
 Success condition:
 
 `N_grav = P_A` follows without a separate GSI/same-surface contract term.
+
+Current upgrade status:
+
+`B4` is conditionally closed. It becomes unconditional as soon as `B3` is closed.
 
 ## What Bare Algebra Can Already Give
 
@@ -182,18 +200,18 @@ maps. This matches the cosmic-address import theorem.
 
 ## Ordered Attack
 
-1. **Canonical-state theorem.** Prove the source-free primitive-cell state is the
-   unique automorphism-natural finite-cell state. This is now closed by the bare
-   finite-cell canonical state theorem.
-2. **Physical-lattice theorem.** Strengthen the existing no-regulator note into
-   a bare observable-ontology theorem: local translation/event sectors are
-   physical because they are operationally distinguishable on the retained
-   Hilbert/event algebra.
-3. **Gravity-from-algebra theorem.** Derive the accepted gravity/action sector
+1. **Physical-lattice theorem.** Closed on the retained observable-algebra
+   reading: local translation/event sectors are physical because they are
+   operationally distinguishable on the retained event/translation algebra.
+2. **Canonical-state theorem.** Closed: the source-free primitive-cell state is
+   the unique automorphism-natural finite-cell state.
+3. **Gravity-from-algebra theorem.** Still open: derive the accepted
+   gravity/action sector
    as the unique local tensor/action continuum of the `Cl(3)` / `Z^3` dynamics.
    This is the hardest step.
-4. **Boundary representative theorem.** Use the already written same-surface
-   closure to force `N_grav = P_A` once the gravity sector is algebra-derived.
+4. **Boundary representative theorem.** Conditionally closed: use the already
+   written same-surface closure to force `N_grav = P_A` once the gravity sector
+   is algebra-derived.
 5. **Planck normalization.** Then the existing area/action theorem gives
    `a = l_P`.
 

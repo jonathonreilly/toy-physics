@@ -36,12 +36,17 @@ SUBCHECKS = [
     "frontier_planck_boundary_event_ward_identity_derivation_theorem.py",
     "frontier_planck_boundary_same_source_covariance_theorem.py",
     "frontier_planck_boundary_parent_source_equivalence_theorem.py",
+    "frontier_planck_boundary_action_source_vs_pressure_classification_theorem.py",
     "frontier_planck_gravity_sector_same_surface_closure_theorem.py",
     "frontier_planck_airtight_review_closure_theorem.py",
     "frontier_planck_bare_cell_alone_closure_program.py",
+    "frontier_planck_bare_physical_lattice_observable_ontology_theorem.py",
     "frontier_planck_bare_finite_cell_canonical_state_theorem.py",
+    "frontier_planck_bare_gravity_sector_derivation_status_theorem.py",
+    "frontier_planck_bare_boundary_representative_after_gravity_theorem.py",
     "frontier_planck_hbar_status_and_remaining_objections_audit.py",
     "frontier_planck_hbar_attack_order_theorem.py",
+    "frontier_planck_action_phase_conversion_target_theorem.py",
 ]
 
 
@@ -86,12 +91,17 @@ def main() -> int:
     event_ward_derivation = read("docs/PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md")
     same_source = read("docs/PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md")
     parent_source = read("docs/PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md")
+    source_vs_pressure = read("docs/PLANCK_SCALE_BOUNDARY_ACTION_SOURCE_VS_PRESSURE_CLASSIFICATION_THEOREM_2026-04-23.md")
     same_surface_gravity = read("docs/PLANCK_SCALE_GRAVITY_SECTOR_SAME_SURFACE_CLOSURE_THEOREM_2026-04-23.md")
     airtight = read("docs/PLANCK_SCALE_AIRTIGHT_REVIEW_CLOSURE_THEOREM_2026-04-23.md")
     bare_cell_program = read("docs/PLANCK_SCALE_BARE_CELL_ALONE_CLOSURE_PROGRAM_2026-04-23.md")
+    bare_lattice = read("docs/PLANCK_SCALE_BARE_PHYSICAL_LATTICE_OBSERVABLE_ONTOLOGY_THEOREM_2026-04-23.md")
     bare_cell_state = read("docs/PLANCK_SCALE_BARE_FINITE_CELL_CANONICAL_STATE_THEOREM_2026-04-23.md")
+    bare_gravity_status = read("docs/PLANCK_SCALE_BARE_GRAVITY_SECTOR_DERIVATION_STATUS_THEOREM_2026-04-23.md")
+    bare_boundary = read("docs/PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md")
     hbar_audit = read("docs/PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md")
     hbar_attack = read("docs/PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md")
+    action_phase = read("docs/PLANCK_SCALE_ACTION_PHASE_CONVERSION_TARGET_THEOREM_2026-04-23.md")
 
     for script in SUBCHECKS:
         total += 1
@@ -306,6 +316,18 @@ def main() -> int:
 
     total += 1
     passed += expect(
+        "action-source-versus-pressure-prevents-scalar-overclaim",
+        "PLANCK_SCALE_BOUNDARY_ACTION_SOURCE_VS_PRESSURE_CLASSIFICATION_THEOREM_2026-04-23.md"
+        in reviewer
+        and "`p_scalar(L_Sigma) = (1/(2n)) log det(L_Sigma)`"
+        in source_vs_pressure
+        and "`p_action = p_event = Tr(rho_cell P_A)`" in source_vs_pressure
+        and "Do not present the result as a scalar Schur-pressure\ntheorem"
+        in reviewer,
+    )
+
+    total += 1
+    passed += expect(
         "same-surface-gravity-sector-closes-gsi",
         "PLANCK_SCALE_GRAVITY_SECTOR_SAME_SURFACE_CLOSURE_THEOREM_2026-04-23.md"
         in reviewer
@@ -334,11 +356,38 @@ def main() -> int:
 
     total += 1
     passed += expect(
+        "bare-physical-lattice-ontology-closes-b1",
+        "PLANCK_SCALE_BARE_PHYSICAL_LATTICE_OBSERVABLE_ONTOLOGY_THEOREM_2026-04-23.md"
+        in reviewer
+        and "This closes B1 of the bare-cell-alone upgrade program" in bare_lattice
+        and "not a removable\nregulator coordinate" in bare_lattice,
+    )
+
+    total += 1
+    passed += expect(
         "bare-finite-cell-canonical-state-closes-b2",
         "PLANCK_SCALE_BARE_FINITE_CELL_CANONICAL_STATE_THEOREM_2026-04-23.md"
         in reviewer
         and "This closes B2 of the bare-cell-alone upgrade program" in bare_cell_state
         and "`rho_cell = I_16 / 16`" in bare_cell_state,
+    )
+
+    total += 1
+    passed += expect(
+        "bare-gravity-sector-b3-remains-exact-target",
+        "PLANCK_SCALE_BARE_GRAVITY_SECTOR_DERIVATION_STATUS_THEOREM_2026-04-23.md"
+        in reviewer
+        and "B3 is not closed" in bare_gravity_status
+        and "unique nontrivial long-distance" in bare_gravity_status,
+    )
+
+    total += 1
+    passed += expect(
+        "bare-boundary-representative-b4-conditional",
+        "PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md"
+        in reviewer
+        and "Once B3 is closed, B4 follows" in bare_boundary
+        and "`N_grav = P_A`" in bare_boundary,
     )
 
     total += 1
@@ -360,6 +409,16 @@ def main() -> int:
         and "To turn this into a prediction, `a` must\nbe fixed independently of `hbar`"
         in hbar_attack
         and "`kappa_info^(bit) = q_*/2 = 1/32`" in hbar_attack,
+    )
+
+    total += 1
+    passed += expect(
+        "action-phase-conversion-target-is-exact",
+        "PLANCK_SCALE_ACTION_PHASE_CONVERSION_TARGET_THEOREM_2026-04-23.md"
+        in reviewer
+        and "`q_* = 1/16`" in action_phase
+        and "`kappa_info = 1/32 per bit`" in action_phase
+        and "It does not derive the action-to-phase\nconversion itself" in action_phase,
     )
 
     print(f"SUMMARY: PASS={passed} FAIL={total - passed}")

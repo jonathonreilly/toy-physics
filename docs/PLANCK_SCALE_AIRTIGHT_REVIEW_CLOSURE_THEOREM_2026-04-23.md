@@ -86,6 +86,13 @@ On the rational witness `lambda_min(L_Sigma) = 1`,
 
 `nu = 5/4`.
 
+This is a boundary action-source density statement, not the scalar Schur
+free-energy pressure. The scalar Schur pressure is
+
+`(1/(2n)) log det(L_Sigma)`,
+
+and is not the Planck quarter on the rational witness.
+
 ### 6. Same-surface gravity-sector closure
 
 The accepted gravity/action route supplies the gravitational boundary/action
@@ -156,3 +163,7 @@ Do not use:
 Do not use:
 
 > The lattice spacing was assumed to be Planck sized.
+
+Do not use:
+
+> The scalar Schur free-energy pressure equals `1/4`.
