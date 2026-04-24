@@ -28,17 +28,18 @@ Current science/open-lane follow-ups:
 
 - irregular off-lattice sign lane: portability beyond the bounded centered
   core-packet surface remains open
-- periodic 2D torus diagnostics: nearby torus probes still need code audit
-  before reuse outside the corrected retained notes; the static-analysis
-  audit in
+- periodic 2D torus diagnostics: eligible for closure. Full sequence: the
+  static-analysis audit in
   [`PERIODIC_TORUS_DIAGNOSTICS_CODE_AUDIT_NOTE_2026-04-24.md`](../PERIODIC_TORUS_DIAGNOSTICS_CODE_AUDIT_NOTE_2026-04-24.md)
-  froze a 9-script `NEEDS_REVIEW` list, then batch-1 manual review in
+  froze a 9-script `NEEDS_REVIEW` list, batch-1 manual review in
   [`PERIODIC_TORUS_AUDIT_BATCH_1_MANUAL_REVIEW_NOTE_2026-04-24.md`](../PERIODIC_TORUS_AUDIT_BATCH_1_MANUAL_REVIEW_NOTE_2026-04-24.md)
-  resolved 8 as false positives (regex tightened to catch `min(abs(x), n-abs(x))`
-  and `np.minimum(np.abs(...), n-np.abs(...))` idioms) and confirmed 1 TRUE
-  BUG: `frontier_shapiro_delay.py` 1D periodic ring case uses raw `math.hypot`
-  for hopping weights, giving wraparound edge weight `1/(n-1)` instead of `1/1`.
-  The fix or quarantine of `frontier_shapiro_delay.py` is the next step
+  resolved 8 as false positives and confirmed 1 TRUE BUG in
+  `frontier_shapiro_delay.py`, and the inline minimum-image fix in
+  [`PERIODIC_TORUS_AUDIT_SHAPIRO_DELAY_FIX_NOTE_2026-04-24.md`](../PERIODIC_TORUS_AUDIT_SHAPIRO_DELAY_FIX_NOTE_2026-04-24.md)
+  moves the script to `CLEAN_INLINE`. The audit now reports `NEEDS_REVIEW: 0`
+  across all 2050 `scripts/*.py` files under the current regex rules; further
+  closure requires either a stronger detection method or manual review of any
+  future new periodic script
 - Wilson two-body lane: both-masses scaling closes at smoke-test level on the
   side=9 open-boundary cross-coupling acceleration (`a_a^cross / m_b` constant
   at `3.6%` CV across n=5 mass configs, see

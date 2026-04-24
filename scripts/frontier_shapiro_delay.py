@@ -78,12 +78,33 @@ def make_layered(seed=42, layers=12, width=6):
     return "layered", pos, col, {k:list(v) for k,v in adj.items()}, layer_nodes
 
 
+def _min_image_hypot(pos, i, j):
+    """Minimum-image Euclidean distance between sites i and j.
+
+    Detects per-axis period from the extent of pos; applies
+    min(|d|, period - |d|) when period > 1. Collapses to raw hypot on axes
+    with only one distinct coordinate, so it is safe for 1D/2D/open and
+    periodic configurations alike. Fixes the 2026-04-11 wraparound bug on
+    the 1D periodic ring path (run_shapiro("1d_lattice", ...)).
+    """
+    dsq = 0.0
+    for ax in range(pos.shape[1]):
+        lo = int(round(float(pos[:, ax].min())))
+        hi = int(round(float(pos[:, ax].max())))
+        period = hi - lo + 1
+        d = abs(pos[j, ax] - pos[i, ax])
+        if period > 1:
+            d = min(d, period - d)
+        dsq += d * d
+    return math.sqrt(dsq)
+
+
 def _build_L(pos, adj, n):
     L = lil_matrix((n,n), dtype=float)
     for i, nbs in adj.items():
         for j in nbs:
             if i >= j: continue
-            d = math.hypot(pos[j,0]-pos[i,0], pos[j,1]-pos[i,1])
+            d = _min_image_hypot(pos, i, j)
             w = 1./max(d, 0.5); L[i,j] -= w; L[j,i] -= w; L[i,i] += w; L[j,j] += w
     return L.tocsr()
 
@@ -95,7 +116,7 @@ def _build_H(pos, col, adj, n, phi):
     for i, nbs in adj.items():
         for j in nbs:
             if i >= j: continue
-            d = math.hypot(pos[j,0]-pos[i,0], pos[j,1]-pos[i,1])
+            d = _min_image_hypot(pos, i, j)
             w = 1./max(d, 0.5); H[i,j] += -0.5j*w; H[j,i] += 0.5j*w
     return H.tocsr()
 
