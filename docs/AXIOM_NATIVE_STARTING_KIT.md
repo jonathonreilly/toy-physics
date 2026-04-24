@@ -764,6 +764,40 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   z-separated singletons force det=0 /
   `frontier_axiom_native_sh3_degeneracy_investigation.py` /
   Target 2 sub-step 2d-V2-sh3-z-plane-separation.
+- Line-3 + singleton zero-det LEMMA (candidate, 288/288
+  validation on (4,4,2)). Exhaustively enumerated all
+  (line-3, isolated-balanced-singleton) defect
+  configurations on (4,4,2): 32 line-3 positions (16 x-
+  oriented, 16 y-oriented, z-direction impossible on L3=2)
+  times all valid isolated balanced singletons = 288
+  configurations. Classifier hypothesis H5:
+    det_K3(B) = 0 IFF (a) singleton in opposite z-plane from
+    line-3 AND (b) singleton's parallel-axis coordinate
+    (singleton_x for x-oriented line, singleton_y for
+    y-oriented line) has the SAME parity as the line-3
+    center's parallel-axis coordinate.
+  Classifier performance: TP = 128, TN = 160, FP = 0, FN = 0.
+  288 of 288 cases correctly classified. Both conditions are
+  jointly necessary: 64 z-separated configurations violate
+  parity condition and give det != 0; 96 z-same configurations
+  give det != 0 regardless of parity. The z-same 0-of-96
+  result shows z-separation is strictly necessary, and the
+  z-separated 128+64 split cleanly along the parity condition.
+  Significance: NEW structural degeneracy mechanism distinct
+  from iter 23 reflection-degeneracy lemma. The line-3 +
+  singleton configurations here are NOT central-reflection-
+  paired (confirmed via iter 29: only identity in D_4 x Z_2
+  fixes SH3). The lemma candidate therefore identifies a
+  second family of zero-det configurations beyond the
+  reflection lemma. Conditions generalize iter 23's specific
+  geometry -- they require only a defect COMPONENT structure
+  (a line-3 component + a singleton component with specific
+  parity alignment), not the symmetry of the full defect set.
+  Proof open; derivation would likely go through matching-
+  polynomial cancellation involving the line-3's internal
+  alternating-cycle structure /
+  `frontier_axiom_native_line3_singleton_sweep.py` /
+  Target 2 sub-step 2d-V2-line3-singleton-lemma.
 - Non-singleton shape type AFFECTS signal preservation
   (iter 27 singleton-specific signal is fragile). Swept 6
   mixed-defect shapes on (4,4,2) with different non-singleton

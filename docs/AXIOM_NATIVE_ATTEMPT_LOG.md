@@ -1793,3 +1793,58 @@ sizes ((5,5,2), (4,4,4)) to see if the pattern is
 instead of line-3 + singleton: does the pattern hold for
 longer lines?
 
+[2026-04-24 06:55] V2 iteration: line-3 + singleton exhaustive sweep — PASS (NEW LEMMA 288/288)
+Tried: systematically characterize which (line-3, singleton)
+configurations on (4,4,2) give det_K3 = 0. Wrote
+scripts/frontier_axiom_native_line3_singleton_sweep.py.
+Enumerated all 32 line-3 positions (16 x-oriented, 16 y-oriented)
+on (4,4,2), and for each, all isolated balanced singletons.
+288 total configurations tested.
+Tested hypotheses:
+  H1 z-sep: singleton in opposite z-plane from line-3.
+    77.8% accuracy (64 z-sep configs give det != 0 as
+    false positives).
+  H2 corner: singleton at cuboid corner.
+    Imperfect (corner and non-corner mix).
+  H4 shared z-column: singleton shares (x,y) with a line-3
+    site at opposite z.
+    Vacuous: 0 configurations meet criterion because line-3
+    neighbors are excluded.
+  H5 (refined): z-sep AND singleton's parallel-axis coord
+    has same parity as line-3 center's parallel-axis coord.
+    PERFECT 288/288: TP=128, TN=160, FP=0, FN=0.
+H5 is a candidate structural lemma: On (4,4,2), the defect
+set {line-3-at-z=z0, singleton-at-z=1-z0 with
+(singleton_axis - line_center_axis) even} forces
+det_K3(B) = 0. This mechanism is DISTINCT from iter 23
+reflection-degeneracy:
+  - iter 23 required defect fixed by central reflection sigma.
+  - iter 30 line-3 lemma works on defects that are NOT
+    sigma-fixed (confirmed iter 29: only identity fixes SH3).
+  - iter 23 required n_bi odd. Iter 30 lemma's test configs
+    all have n_bi even (since 4-site removal: line-3 removes
+    2 of one parity + 1 of other, singleton adds 1 of the
+    minority, total 2 of each parity; remaining 14 each).
+So this is a second, independent family of zero-det
+configurations.
+Accepted because: hostile audit verdict = clean. 16 record()
+booleans. 4 FAILs all correct: H1, H2, H4 and H4_shares are
+computed False (hypotheses fail / vacuous). No narrative
+PASSes.
+Key finding: NEW STRUCTURAL LEMMA candidate, 100% validated
+on (4,4,2). Distinct mechanism from iter 23's reflection
+lemma. Candidate becomes a theorem once a proof is found
+(proof sketch likely through matching-polynomial arguments
+on the line-3's alternating-cycle structure combined with
+the singleton's position parity).
+Next V2 vector: (a) test the H5 lemma on (5,5,2) or (6,4,2)
+to see if it generalizes beyond (4,4,2). If yes, stronger
+lemma. If no, it's (4,4,2)-specific. (b) Attempt a structural
+proof: the n_bi-even case doesn't fit iter 23's proof
+mechanism. Need a new argument. Candidate: line-3 can be
+"paired" with its reflection via a constrained bijection
+on PMs that flips K3 sign when the singleton's parallel-
+axis parity matches line center. (c) Test line-4 or line-5
+configurations to see if similar parity-based lemmas hold
+for longer lines.
+
