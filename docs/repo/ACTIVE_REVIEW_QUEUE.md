@@ -27,13 +27,21 @@ open lanes rather than review-hygiene debt.
 Current science/open-lane follow-ups:
 
 - irregular off-lattice sign lane: portability beyond the bounded centered
-  core-packet surface is partly established and partly refuted by
-  [`IRREGULAR_SIGN_G_PORTABILITY_SWEEP_NOTE_2026-04-24.md`](../IRREGULAR_SIGN_G_PORTABILITY_SWEEP_NOTE_2026-04-24.md):
-  at `mu^2=0.1`, the sign separator passes at every `G in {1, 3, 5, 10, 20}`
-  (15/15 positive margins per cell); at `mu^2=0.001`, portability is refuted
-  (pass rates `[1.00, 0.67, 1.00, 0.87, 0.33]`, with the median margin
-  flipping sign at G=20). The mu^2=0.001 gate should be downgraded to
-  marginal-positive; the mu^2=0.1 finding extends cleanly to `G in [1, 20]`
+  core-packet surface is partly established and partly refuted. Two axes
+  tested: (a) G-portability, in
+  [`IRREGULAR_SIGN_G_PORTABILITY_SWEEP_NOTE_2026-04-24.md`](../IRREGULAR_SIGN_G_PORTABILITY_SWEEP_NOTE_2026-04-24.md)
+  — passes at `mu^2=0.1` across `G in {1, 3, 5, 10, 20}` on the 3 original
+  families (15/15 per cell); refuted at `mu^2=0.001` (pass rates
+  `[1.00, 0.67, 1.00, 0.87, 0.33]`, sign flip at G=20). (b) Family-portability,
+  in
+  [`IRREGULAR_SIGN_FAMILY_PORTABILITY_SWEEP_NOTE_2026-04-24.md`](../IRREGULAR_SIGN_FAMILY_PORTABILITY_SWEEP_NOTE_2026-04-24.md)
+  — tested on a 4th family (bipartite Erdős–Rényi random, n=64) at
+  `mu^2=0.1`: `ball2` is fully family-robust (5/5 at every G); `ball1` fails
+  the 80% gate at 4/5 G values (60% pass rate); `depth` fails at G=20. Median
+  ball1 is still positive at every G, so the SIGN is correct on average but
+  the observable is seed-fragile on this topology. Ball2 is the most
+  topology-robust observable and is a candidate for promotion as the primary
+  sign separator
 - periodic 2D torus diagnostics: eligible for closure. Full sequence: the
   static-analysis audit in
   [`PERIODIC_TORUS_DIAGNOSTICS_CODE_AUDIT_NOTE_2026-04-24.md`](../PERIODIC_TORUS_DIAGNOSTICS_CODE_AUDIT_NOTE_2026-04-24.md)
