@@ -2211,3 +2211,57 @@ close for the iter-35 phase. Remaining options:
       output and close the overnight autonomous loop at a
       clean point.
 
+[2026-04-24 09:45] V2 iteration: planarity gap scaling — PASS (null scaling result, iter 12 validated)
+Tried: investigate whether the iter 35 observation that empty
+(5,4,2) and (6,4,2) cuboids give |det_K3|/#PM ratios of 0.95
+and 0.94 follows a scaling pattern, or is just an unstructured
+cuboid-by-cuboid numerical result. Wrote
+scripts/frontier_axiom_native_planarity_gap_scaling.py.
+Exhaustively computed (|det|, #PM, gap, ratio) for 13 empty
+cuboids covering sizes (2,2,1) through (6,4,2).
+Results:
+  PLANAR (7 cuboids, ratio=1.0):
+    (2,2,1):  #PM=2
+    (2,2,2):  #PM=9 = 3^2
+    (2,2,3):  #PM=32
+    (3,2,2):  #PM=32
+    (4,2,2):  #PM=121 = 11^2
+    (5,2,2):  #PM=450
+    (6,2,2):  #PM=1681 = 41^2
+  NON-PLANAR (5 cuboids, ratio<1):
+    (3,3,2):  ratio 0.9825, gap 4
+    (4,3,2):  ratio 0.9783, gap 40
+    (5,3,2):  ratio 0.9654, gap 496
+    (4,4,2):  ratio 0.9680, gap 1024
+    (5,4,2):  ratio 0.9506, gap 26424
+  CAPPED: (6,4,2) too large to enumerate; iter 35 reported
+    #PM=9049169, |det|=8473921, ratio 0.9364.
+Pattern analysis:
+  - Ratio NOT monotonic in V: (5,3,2) V=30 ratio=0.9654 <
+    (4,4,2) V=32 ratio=0.9680.
+  - Gap / #PM NOT constant: ranges 0.0175 (3,3,2) to 0.0494
+    (5,4,2). No simple scaling.
+  - log(gap) vs V shows rough correlation but not clean.
+  - #PM for (n,2,2) even n follows Lucas-like square recursion
+    (a_{k+1}=4a_k - a_{k-1}); not derived from first
+    principles here.
+No simple scaling law found. The ratio depends on cuboid
+dimensions in a complex way, as expected for a graph-
+theoretic quantity (matching polynomial). The iter 12
+planarity dichotomy (planar iff K3 optimal) is cleanly
+validated on 13 new data points (12 computed + iter 35
+reference).
+Accepted because: hostile audit verdict = clean. 26 record()
+booleans. 3 FAILs are informative: (6,4,2) capped,
+ratio-monotonic-in-V false, gap-ratio-constant false.
+Net effect: null result on scaling law, but iter 12 planarity
+remains the clean dichotomy. The K3 gap on non-planar
+cuboids has no simple closed form discoverable from the
+empirical data alone. This is consistent with the
+complexity of general-graph permanent / Pfaffian theory.
+Status update: the Kasteleyn thread has reached the "no more
+low-hanging fruit" state. Further progress on the SH3-type
+mechanism or generalized reflection lemma would require
+genuinely new structural ideas, not incremental empirical
+refinement.
+

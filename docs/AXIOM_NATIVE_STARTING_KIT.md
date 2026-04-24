@@ -764,6 +764,46 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   z-separated singletons force det=0 /
   `frontier_axiom_native_sh3_degeneracy_investigation.py` /
   Target 2 sub-step 2d-V2-sh3-z-plane-separation.
+- Planarity gap scaling data on empty cuboids (iter 37).
+  Computed (|det_K3|, #PM, gap, ratio) for 13 empty Z^3
+  cuboids of various dimensions. Results confirm the iter 12
+  planarity dichotomy:
+  PLANAR (K3 optimal, ratio = 1), all with one L_i = 2 AND
+  min(L_1, L_2) <= 2:
+    (2,2,1) #PM=2
+    (2,2,2) #PM=9 = 3^2
+    (2,2,3) #PM=32
+    (3,2,2) #PM=32
+    (4,2,2) #PM=121 = 11^2
+    (5,2,2) #PM=450
+    (6,2,2) #PM=1681 = 41^2
+    (Observation: for (n, 2, 2) even n, #PM = a_{n/2}^2
+     where a_{k+1} = 4 a_k - a_{k-1}, a_0=1, a_1=3.
+     Lucas-like recursion for dimer counts, not derived
+     here.)
+  NON-PLANAR (K3 sub-optimal, ratio < 1), all with
+  L_1, L_2 >= 3 AND L_3 >= 2:
+    (3,3,2) #PM=229, |det|=225, gap=4, ratio 0.9825
+    (4,3,2) #PM=1845, |det|=1805, gap=40, ratio 0.9783
+    (5,3,2) #PM=14320, |det|=13824, gap=496, ratio 0.9654
+    (4,4,2) #PM=32000, |det|=30976, gap=1024=2^10, ratio 0.9680
+    (5,4,2) #PM=535229, |det|=508805, gap=26424, ratio 0.9506
+  Scaling analysis:
+    - Ratio monotonic in V (volume)? NO. (5,3,2) V=30 has
+      ratio 0.9654 < (4,4,2) V=32 ratio 0.9680.
+    - Gap / #PM constant? NO. Values range 0.0175 to 0.0494.
+    - log(gap) vs V roughly linear but not cleanly so.
+    - No single simple invariant predicts the ratio.
+  Conclusion: the iter 12 planarity dichotomy is cleanly
+  validated on 13 cuboids (7 planar ratio=1, 5 non-planar
+  ratio<1, 1 too large to enumerate). The gap's numerical
+  value follows no simple closed-form rule discovered here.
+  The gap = 2 * n_minus arithmetic identity (from iter 14)
+  holds but n_minus itself varies by cuboid without a clear
+  scaling pattern. Null result on further scaling laws
+  beyond the iter 12 dichotomy /
+  `frontier_axiom_native_planarity_gap_scaling.py` /
+  Target 2 sub-step 2d-V2-planarity-gap-scaling.
 - SINGLETON HYPOTHESIS REFUTED on larger cuboids. Iter 35
   adversarially tested the singleton hypothesis ("K3 optimal
   iff contractible AND no singleton components") on 3 new
