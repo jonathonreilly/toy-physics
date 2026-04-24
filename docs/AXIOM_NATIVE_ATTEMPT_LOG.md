@@ -2091,3 +2091,66 @@ clean result. Consider whether the next iter should try a
 different thread direction (e.g., revisit the original
 singleton hypothesis via a different approach).
 
+[2026-04-24 09:05] V2 iteration: singleton hypothesis REFUTED on larger cuboids — PASS (negative result)
+Tried: stress-test the singleton hypothesis on 3 new cuboid
+sizes (5,4,2), (4,4,3), (6,4,2) by testing both empty (no
+defect) and 2-singleton configs. Wrote
+scripts/frontier_axiom_native_singleton_adversarial_L5.py.
+Critical result: the singleton hypothesis is REFUTED.
+- (5,4,2) EMPTY, chi=1 contractible, zero defect. Yet:
+  #PM = 535229, |det_K3| = 508805, ratio 0.95. K3 NOT optimal.
+  Hypothesis predicted OPTIMAL. Counterexample #1.
+- (6,4,2) EMPTY, chi=1 contractible, zero defect. Yet:
+  #PM = 9049169, |det_K3| = 8473921, ratio 0.94. K3 NOT optimal.
+  Hypothesis predicted OPTIMAL. Counterexample #2.
+These are CLEAN falsifications: contractible empty cuboids
+where K3 is not Pfaffian-optimal. The "contractible + no
+singletons => K3 optimal" direction of the singleton
+hypothesis is FALSE.
+Deeper fact: iter 12 ledger established that K3 is
+Pfaffian-optimal iff the graph is PLANAR. Contractibility is
+necessary but not sufficient; non-planar contractible cuboids
+(like generic Z^3 cuboids with L_1*L_2 > 6 and L_3 >= 2) have
+K3 failing even without defects.
+Why iter 14+ did not catch this: the singleton hypothesis
+was tested primarily on (3,3,2), (4,3,2), (4,4,2) with 2-
+singleton defects and adjacent-pair controls. The adjacent
+pair removal happened to restore K3 compatibility on those
+specific shapes (removing 2 sites from a non-planar cuboid
+can restore planar-compatibility). That coincidence validated
+the hypothesis on the restricted test set. On LARGER cuboids
+and EMPTY configurations, the underlying non-planarity of K3
+becomes visible, breaking the hypothesis.
+The correct statement of K3 Pfaffian-optimality, per iter 12:
+K3 is Pfaffian-optimal on a Z^3 subgraph G iff G is planar.
+The singleton hypothesis adds no value beyond this and is
+partially misleading. It should be retracted.
+Further: (4,4,3) and (6,4,2) with 2 singletons give det=0,
+suggesting new reflection/degeneracy mechanisms on L3=3 and
+L1=6 that haven't been explored. But these are details within
+the non-K3-optimal regime.
+Accepted because: hostile audit verdict = clean. 20 record()
+booleans. 4 FAILs are informative computed Falses: the
+hypothesis-prediction mismatches (2) and the PM-enumeration
+cap FAILs (2).
+Net effect: the Kasteleyn thread's strongest empirical claim
+(singleton hypothesis) has been refuted on larger cuboids.
+The planarity result (iter 12) remains as the clean fundamental
+statement. The conjecture document docs/KASTELEYN_THREAD_
+CONJECTURE.md needs updating to reflect that the singleton
+hypothesis is NOT correct as stated.
+Next V2 vector: (a) UPDATE the Kasteleyn thread conjecture
+doc to correct the singleton hypothesis. State the iter 12
+planarity result as the fundamental statement. Revise
+previously "confirming" data points as consistent with
+iter 12 rather than with a stronger singleton-specific
+hypothesis. (b) Run focused adversarial tests to identify
+PRECISELY which cuboid+defect configurations give K3
+optimality vs not, beyond just planarity (there may be
+interesting sub-statements). (c) Given this refutation,
+accept the Kasteleyn thread as having produced iter 12
+(planarity) and iter 23 (reflection-degeneracy lemma) as
+its concrete results, with the SH3-type and localization
+signatures as open phenomena; consider pivoting to a
+different target.
+

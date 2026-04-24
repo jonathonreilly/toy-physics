@@ -764,6 +764,40 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   z-separated singletons force det=0 /
   `frontier_axiom_native_sh3_degeneracy_investigation.py` /
   Target 2 sub-step 2d-V2-sh3-z-plane-separation.
+- SINGLETON HYPOTHESIS REFUTED on larger cuboids. Iter 35
+  adversarially tested the singleton hypothesis ("K3 optimal
+  iff contractible AND no singleton components") on 3 new
+  cuboid sizes: (5,4,2), (4,4,3), (6,4,2). Results:
+    (5,4,2) empty: chi=1 (contractible), no defect. #PM=
+      535229, |det_K3|=508805. Ratio 0.95. K3 NOT optimal.
+      Hypothesis predicted OPTIMAL -- FAILED.
+    (5,4,2) + 2 singletons: K3 not optimal as predicted. OK.
+    (6,4,2) empty: chi=1, no defect. #PM=9049169, |det_K3|=
+      8473921. Ratio 0.94. K3 NOT optimal. Hypothesis
+      predicted OPTIMAL -- FAILED.
+    (6,4,2) + 2 singletons: K3 det=0, clearly not optimal. OK.
+    (4,4,3) empty: PM enumeration capped (#PM >= 6.8M in 90s,
+      |det|=9M, inconclusive due to cap).
+    (4,4,3) + 2 singletons: K3 det=0, not optimal. OK.
+  Two clear counterexamples: (5,4,2) and (6,4,2) empty cuboids
+  have chi=1 contractibility and zero defect, yet K3 is NOT
+  Pfaffian-optimal. The singleton hypothesis as stated
+  ("contractible + no singletons") is REFUTED. The correct
+  fundamental statement is the iter 12 planarity result: K3
+  is Pfaffian-optimal iff the graph is planar. Contractibility
+  is a necessary but NOT sufficient condition. Non-planar
+  contractible cuboids (like generic Z^3 cuboids with L_1*L_2
+  > 3*2 and L_3 >= 2) have K3 failing even without any defect.
+  The singleton hypothesis worked coincidentally on (3,3,2),
+  (4,3,2), (4,4,2) with 2-singleton defects because (a) those
+  specific cuboid+defect shapes happened to be K3-compatible
+  (removing sites can restore compatibility) and (b) the tests
+  focused on defect effects rather than baseline non-planarity.
+  The iter 12 planarity statement is the ground truth; the
+  singleton hypothesis is a restricted and partially-misleading
+  refinement that fails to hold universally /
+  `frontier_axiom_native_singleton_adversarial_L5.py` /
+  Target 2 sub-step 2d-V2-singleton-refutation.
 - SH3 PM-pairing bijection search: multiple features are
   SYMMETRIC between plus (745) and minus (745) PMs; one
   feature shows SMALL asymmetry. Iter 34 enumerated all
