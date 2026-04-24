@@ -11,11 +11,11 @@ event Ward theorem closes the remaining additive boundary-density law on the
 primitive boundary-event action surface, so the conventional Planck length
 follows without inserting `a = l_P` or `nu = 5/4` as values.
 
-The remaining hostile-review pressure is now physical, not numerical:
+The remaining hostile-review pressure is now upstream and physical, not
+numerical:
 
-> reject or accept that the Schur boundary action and primitive event insertion
-> source are two descriptions of the same physical gravitational boundary
-> action.
+> reject or accept that the physical gravitational boundary-action source
+> belongs to the retained primitive one-step boundary/worldtube object class.
 
 ## What Is Derived
 
@@ -64,10 +64,14 @@ Normal-order the exact Schur floor by writing
 
 `G_nu = (nu - lambda_min(L_Sigma)) I - (L_Sigma - lambda_min(L_Sigma) I)`.
 
-The same-source covariance theorem then says that if the Schur action and the
-event insertion are the same physical boundary-action source, their
-infinitesimal generators must agree. Otherwise their quotient is a hidden
-source-free boundary-action scalar.
+The parent-source theorem identifies the common source. The parent is the full
+axis source `P_A`. The event representation is faithful. The Schur
+representation is quotient shape plus retained doublet multiplicity
+`P_A = P_q + P_E`, so quotient-only Schur changes the physical source.
+
+The same-source covariance theorem then says the two infinitesimal generators
+must agree. Otherwise their quotient is a hidden source-free boundary-action
+scalar.
 
 Thus
 
@@ -122,13 +126,13 @@ The new answer is:
 > `Tr(rho_cell P_A)`, and same-source covariance identifies that derivative
 > with the Schur normal-ordered boundary pressure.
 
-A reviewer can still reject that the Schur and event descriptions are the same
-physical source. If they do, the package falls back to the earlier conditional
-result: exact native `1/4`, with Planck length conditional on the gravitational
+A reviewer can still reject the retained primitive boundary-action object
+class. If they do, the package falls back to the earlier conditional result:
+exact native `1/4`, with Planck length conditional on the gravitational
 boundary/action identification.
 
-If they accept the common-source identification, the boundary density is closed
-and the Planck normalization follows.
+If they accept that object class, the parent source is unique, the boundary
+density is closed, and the Planck normalization follows.
 
 ## Safe Submission Claim
 
@@ -136,10 +140,10 @@ Use this:
 
 > The physical `Cl(3)` / `Z^3` packet derives `c_cell = 1/4`. On the primitive
 > boundary-event action surface, the finite source `exp(s P_A)` gives the Ward
-> derivative `Tr(rho_cell P_A) = 1/4`; the same-source covariance theorem
-> identifies this with the Schur normal-ordered pressure, giving
-> `nu - lambda_min(L_Sigma) = 1/4`; with the standard gravitational
-> area/action normalization this gives `a = l_P` exactly.
+> derivative `Tr(rho_cell P_A) = 1/4`; the parent-source theorem identifies
+> Schur as the quotient-shape/multiplicity-lift representation of the same
+> source, giving `nu - lambda_min(L_Sigma) = 1/4`; with the standard
+> gravitational area/action normalization this gives `a = l_P` exactly.
 
 Do not use this:
 
@@ -147,9 +151,8 @@ Do not use this:
 
 ## Review Outcome
 
-The package is now Nature-grade conditional on accepting that the Schur and
-event descriptions are the same physical gravitational boundary-action source,
-with no inserted Planck value.
+The package is now Nature-grade on the retained primitive boundary-action
+object class, with no inserted Planck value.
 
-The remaining review question is whether those two descriptions are indeed the
-same physical boundary-action generator.
+The remaining review question is whether the reviewer accepts that object class
+as the physical gravitational boundary-action lane.

@@ -35,6 +35,7 @@ SUBCHECKS = [
     "frontier_planck_boundary_event_ward_identity_closure_theorem.py",
     "frontier_planck_boundary_event_ward_identity_derivation_theorem.py",
     "frontier_planck_boundary_same_source_covariance_theorem.py",
+    "frontier_planck_boundary_parent_source_equivalence_theorem.py",
 ]
 
 
@@ -78,6 +79,7 @@ def main() -> int:
     event_ward = read("docs/PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md")
     event_ward_derivation = read("docs/PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md")
     same_source = read("docs/PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md")
+    parent_source = read("docs/PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md")
 
     for script in SUBCHECKS:
         total += 1
@@ -197,12 +199,12 @@ def main() -> int:
 
     total += 1
     passed += expect(
-        "nature-status-avoids-project-shorthand-and-names-same-source-covariance",
+        "nature-status-avoids-project-shorthand-and-names-parent-source-object-class",
         "P1" not in nature_status
         and "GSI" not in nature_status
         and "Axiom Extension" not in nature_status
-        and "same physical gravitational boundary-action source" in nature_status
-        and "The remaining review question is whether those two descriptions"
+        and "The parent-source theorem identifies the common source" in nature_status
+        and "belongs to the retained primitive one-step boundary/worldtube object class"
         in nature_status,
     )
 
@@ -274,6 +276,20 @@ def main() -> int:
         and "`nu - lambda_min(L_Sigma) = Tr(rho_cell P_A)`" in same_source
         and "deny that the Schur boundary action and the primitive event insertion source"
         in same_source,
+    )
+
+    total += 1
+    passed += expect(
+        "parent-source-equivalence-closes-schur-event-common-source",
+        "PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md"
+        in reviewer
+        and "PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md"
+        in packet
+        and "`B_parent := (H_A, P_A)`" in parent_source
+        and "`P_A = P_q + P_E`" in parent_source
+        and "`nu - lambda_min(L_Sigma) = Tr(rho_cell P_A)`" in parent_source
+        and "deny that the physical gravitational boundary-action source belongs to the\n> retained primitive one-step boundary/worldtube object class"
+        in parent_source,
     )
 
     print(f"SUMMARY: PASS={passed} FAIL={total - passed}")

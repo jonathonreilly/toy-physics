@@ -11,6 +11,7 @@
 **Boundary event Ward closure:** [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md)
 **Boundary event Ward derivation:** [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md)
 **Boundary same-source covariance:** [PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md)
+**Boundary parent source equivalence:** [PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md)
 
 ## Final Scope Warning
 
@@ -35,9 +36,13 @@ boundary-event action surface. The finite-source derivation theorem derives
 the Ward derivative from the primitive insertion group `exp(s P_A)`. The
 same-source covariance theorem derives equality with the Schur normal-ordered
 pressure by showing that any mismatch is a hidden source-free boundary-action
-scalar. The remaining hostile-review target is no longer the number `5/4`; it
-is whether the Schur boundary action and primitive event insertion source are
-two representations of the same physical gravitational boundary action.
+scalar. The parent-source theorem then derives the common-source bridge: the
+event source is the faithful representation of the full parent `P_A`, and the
+Schur source is its quotient shape plus retained doublet multiplicity. The
+remaining hostile-review target is no longer the number `5/4`, the Ward
+derivative, or same-source covariance; it is whether the physical
+gravitational boundary-action source belongs to the retained primitive
+one-step boundary/worldtube object class.
 
 ## Submission Claim
 
@@ -160,6 +165,11 @@ and since both lengths are positive,
     quotient group `exp(s Delta)`, which is hidden source-free boundary-action
     data. Therefore the generators agree:
     [boundary same-source covariance theorem](./PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md).
+14. **Parent-source equivalence.** The common source is the unique full axis
+    parent `P_A`. The event representation is faithful; the Schur
+    representation is quotient shape plus retained multiplicity
+    `P_A = P_q + P_E`. Quotient-only Schur changes the source:
+    [boundary parent source equivalence theorem](./PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md).
 
 ## Exact Imports
 
@@ -227,9 +237,10 @@ The hostile-review denials are now explicit.
    claim.
 6. **Bare-density objection.** If the reviewer asks for a derivation of
    `nu = 5/4` from a Ward identity, action-phase quantization, or microscopic
-   boundary-term normalization, point to the boundary event Ward theorem. The
-   live objection is now whether the Schur and event descriptions are the same
-   physical gravitational boundary-action source.
+   boundary-term normalization, point to the boundary event Ward and parent
+   source theorems. The live objection is now whether the physical
+   gravitational boundary-action source belongs to the retained primitive
+   one-step boundary/worldtube object class.
 
 The final denial-status theorem records that denials 2 and 4 change the target:
 they either replace the primitive coefficient with an enriched state/readout
@@ -242,9 +253,8 @@ normalization, the conditional direct Planck route closes on the authorized P1
 surface.
 
 For the stronger unqualified bare-axiom claim, denial 6 is the remaining
-pressure point: reject or accept that the Schur boundary action and primitive
-event insertion source describe the same physical gravitational boundary
-action.
+pressure point: reject or accept the retained primitive boundary-action object
+class itself.
 
 ## Verifier Commands
 
@@ -282,6 +292,7 @@ python3 scripts/frontier_planck_boundary_density_three_mechanism_audit.py
 python3 scripts/frontier_planck_boundary_event_ward_identity_closure_theorem.py
 python3 scripts/frontier_planck_boundary_event_ward_identity_derivation_theorem.py
 python3 scripts/frontier_planck_boundary_same_source_covariance_theorem.py
+python3 scripts/frontier_planck_boundary_parent_source_equivalence_theorem.py
 ```
 
 ## Appendix Map
@@ -297,6 +308,7 @@ python3 scripts/frontier_planck_boundary_same_source_covariance_theorem.py
 - [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md) - constant-term event Ward identity deriving `delta = m_axis` on the primitive boundary-event action surface.
 - [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md) - finite-source derivation of the event Ward identity from `U_A(s) = exp(s P_A)`.
 - [PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md) - quotient/no-hidden-scalar derivation of same-source covariance between the Schur and event generators.
+- [PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md) - parent source theorem showing event and Schur are faithful/lifted reductions of the same full axis source.
 - [PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md) - explicit P1 package-boundary move.
 - [PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md) - hostile-review context, with its supersession note respected.
 
@@ -328,6 +340,7 @@ python3 scripts/frontier_planck_boundary_same_source_covariance_theorem.py
 - [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md) - proposed closure of that target by the normal-ordered primitive boundary event Ward identity.
 - [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md) - derivation of that identity from the finite primitive incidence source calculus.
 - [PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md) - derivation that two same-source scalar generators must agree or else introduce hidden source-free boundary-action data.
+- [PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md) - final bridge deriving common source from the unique full `P_A` parent and the Schur quotient-plus-multiplicity reduction.
 
 ### Risk and stop-condition context
 

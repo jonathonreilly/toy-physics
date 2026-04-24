@@ -11,6 +11,7 @@
 **Boundary event Ward closure:** [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md)
 **Boundary event Ward derivation:** [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md)
 **Boundary same-source covariance:** [PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md)
+**Boundary parent source equivalence:** [PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md)
 
 ## External-Review Scope Warning
 
@@ -36,7 +37,9 @@ constant term; the closure uses the finite-source event insertion Ward
 identity on the primitive boundary-action surface. The Ward derivative is
 derived from `U_A(s) = exp(s P_A)`, and same-source covariance is derived by
 excluding a hidden quotient source group between the Schur and event
-generators.
+generators. The parent-source theorem derives the common-source bridge from the
+unique full axis parent `P_A`; Schur is the quotient shape plus retained
+multiplicity, not a separate source.
 
 ## Claim
 
@@ -252,6 +255,7 @@ Load-bearing notes:
 - [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md)
 - [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md)
 - [PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md)
+- [PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md)
 
 ## What this does not claim
 
@@ -295,6 +299,9 @@ primitive incidence insertion group is `exp(s P_A)`, its identity-source Ward
 derivative is `Tr(rho_cell P_A)`, and same-source covariance identifies this
 with the Schur normal-ordered pressure. The same-source covariance theorem
 proves that any mismatch would be a hidden source-free boundary-action scalar.
+The parent-source theorem then proves that the event and Schur descriptions are
+reductions of the unique full parent source `P_A` inside the retained primitive
+boundary-action object class.
 
 If either denial is made, the exact `4/16 = 1/4` cell coefficient remains, but
 the fully normalized `a = l_P` claim must be scoped accordingly.

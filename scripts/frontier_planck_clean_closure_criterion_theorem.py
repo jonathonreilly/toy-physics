@@ -99,16 +99,16 @@ def main() -> int:
         ),
         (
             "nature-status-and-closure-note-agree",
-            "same physical gravitational boundary-action source" in nature_status
-            and "mathematically clean closure is therefore conditional on the common-source"
+            "retained primitive one-step boundary/worldtube object class" in nature_status
+            and "mathematically clean closure is therefore conditional on the retained"
             in note,
-            "front-door status should identify common-source identification as the closure pressure point",
+            "front-door status should identify the retained object class as the closure pressure point",
         ),
         (
             "theorem-states-next-new-science-target",
             "no positive `mu != 1` is compatible" in note
-            and "finite-source event Ward\nderivative and the same-source covariance theorem" in note,
-            "the closure target should now name the finite-source Ward theorem",
+            and "parent-source equivalence" in note,
+            "the closure target should now name the parent-source theorem",
         ),
     ]
 
