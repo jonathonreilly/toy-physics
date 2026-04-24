@@ -30,7 +30,13 @@ Current science/open-lane follow-ups:
   core-packet surface remains open
 - periodic 2D torus diagnostics: nearby torus probes still need code audit
   before reuse outside the corrected retained notes
-- Wilson two-body lane: full both-masses law and action-reaction remain open
+- Wilson two-body lane: both-masses scaling closes at smoke-test level on the
+  side=9 open-boundary cross-coupling acceleration (`a_a^cross / m_b` constant
+  at `3.6%` CV across n=5 mass configs, see
+  [`WILSON_TWO_BODY_ACTION_REACTION_BOTH_MASSES_NOTE_2026-04-23.md`](../WILSON_TWO_BODY_ACTION_REACTION_BOTH_MASSES_NOTE_2026-04-23.md));
+  action-reaction at the per-packet centroid level remains open with the
+  sharpened obstruction now identified as self-Hartree contamination of the
+  heavier packet in the SHARED-SELF_ONLY differential protocol
 - boundary-law / holographic lane: keep the effect bounded and do not overread
   it as a holography derivation
 - memory lane: protocol- and geometry-stable observable remains open
