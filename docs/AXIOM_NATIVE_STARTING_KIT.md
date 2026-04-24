@@ -702,3 +702,40 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   signal on tested shapes /
   `frontier_axiom_native_multi_singleton_localization.py` /
   Target 2 sub-step 2d-V2-multi-singleton-extension.
+- Localization signature targets SINGLETONS specifically, NOT
+  non-singleton defect components. Tested 3 mixed-defect
+  shapes (balanced, contractible, with a mix of singleton
+  and non-singleton components):
+  M1 (4,3,2) \ {corner pair (0,0,0)-(0,0,1) + 2 singletons
+    (3,0,0), (3,2,1)}: #PM=184, det=148.
+    min-dist-to-singleton=1.118, maj-dist-to-singleton=1.255
+    (minority-biased closer to singletons).
+    min-dist-to-nonsingleton=2.693, maj-dist-to-nonsingleton=
+    2.496 (minority-biased FARTHER from pair, NOT localizing
+    to the pair).
+    corr(frac, dist-to-singleton)=-0.144 (negative),
+    corr(frac, dist-to-nonsingleton)=+0.225 (POSITIVE -- opposite!).
+    Signature prefers singletons specifically. ✓
+  M2 (4,4,2) \ {singleton (0,0,0) + triple line}: overall
+    signature fails (avg_min = avg_maj = 1.118 at the top-5
+    level). Larger defect cluster drowns the signal.
+  M3 (4,4,2) \ {corner pair (0,0,0)-(0,0,1) + 2 singletons
+    (3,0,0), (3,3,0)}: #PM=2016, det=1440.
+    min-dist-to-singleton=1.307, maj-dist-to-singleton=1.500;
+    min-dist-to-nonsingleton=3.047, maj-dist-to-nonsingleton=
+    2.902 (minority-biased FARTHER from pair).
+    corr(frac, dist-to-singleton)=-0.170,
+    corr(frac, dist-to-nonsingleton)=+0.170.
+    Signature prefers singletons specifically. ✓
+  Result: 2 of 3 shapes show the minority-biased edges
+  concentrate around singletons AND ANTI-concentrate around
+  non-singleton components (correlation has OPPOSITE sign
+  between the two distance metrics). This is a strong
+  structural refinement: the K3 sign obstruction is specific
+  to singleton defect components -- larger defects do not
+  carry the same minority-biased signal. Triples (M2)
+  overwhelm the signal rather than localize to it, suggesting
+  non-singleton components act as "absorbers" rather than
+  "emitters" of sign inconsistency /
+  `frontier_axiom_native_mixed_defect_localization.py` /
+  Target 2 sub-step 2d-V2-mixed-defect-singleton-specificity.
