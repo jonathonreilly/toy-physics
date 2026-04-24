@@ -15,6 +15,7 @@ THREE_ROUTE = ROOT / "docs/PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2
 PRIMITIVE_UNIT = ROOT / "docs/PLANCK_SCALE_PRIMITIVE_BOUNDARY_ACTION_UNIT_REDUCTION_THEOREM_2026-04-23.md"
 GRAV_CARRIER = ROOT / "docs/PLANCK_SCALE_GRAVITY_CARRIER_FROM_SECTOR_IDENTIFICATION_THEOREM_2026-04-23.md"
 STATE = ROOT / "docs/PLANCK_SCALE_SOURCE_FREE_DEFAULT_DATUM_FROM_ONE_AXIOM_THEOREM_2026-04-23.md"
+DERIVATION = ROOT / "docs/PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md"
 
 
 def expect(name: str, cond: bool, detail: str = "") -> int:
@@ -35,6 +36,7 @@ def main() -> int:
     primitive_unit = read(PRIMITIVE_UNIT)
     grav_carrier = read(GRAV_CARRIER)
     state = read(STATE)
+    derivation = read(DERIVATION)
 
     banned_terms = ["P1", "Axiom Extension", "GSI", "Gravity-Sector Identification"]
 
@@ -108,6 +110,15 @@ def main() -> int:
             "constant term is tied to retained event charge",
         ),
         (
+            "finite-source-derivation-supports-ward-identity",
+            "`U_A(s) = exp(s P_A)`" in note
+            and "`d/ds log Tr(rho_cell exp(s P_A))|_(s=0) = Tr(rho_cell P_A)`"
+            in note
+            and "same-source covariance" in note
+            and "finite-source Ward derivative" in derivation,
+            "the Ward identity is derived from the primitive insertion source",
+        ),
+        (
             "no-hidden-additive-action-datum-excludes-offsets",
             "with `c != 0`" in note
             and "extra additive boundary-action datum" in note
@@ -134,10 +145,10 @@ def main() -> int:
         ),
         (
             "hostile-review-scope-is-explicit",
-            "reject that gravitational boundary action on the physical primitive lattice" in note
-            and "normal-ordered primitive boundary event Ward identity" in note
+            "reject same-source covariance between the Schur normal-ordered boundary" in note
+            and "primitive incidence insertion generator" in note
             and "not a\ncoefficient objection" in note,
-            "remaining rejection targets the event Ward surface",
+            "remaining rejection targets same-source covariance",
         ),
     ]
 

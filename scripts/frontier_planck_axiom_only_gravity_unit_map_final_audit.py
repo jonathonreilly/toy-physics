@@ -113,14 +113,15 @@ def main() -> int:
             "plain-status-has-safe-and-unsafe-claims",
             "Use this:" in plain
             and "Do not use this:" in plain
-            and "normal-ordered boundary event Ward\n> identity derives" in plain
+            and "the same-source covariance theorem\n> identifies this with the Schur"
+            in plain
             and "Ordinary Schur source-response Ward identities alone" in plain,
             "reviewer front door must name the actual closure surface",
         ),
         (
             "final-verdict-is-event-ward-closed-with-explicit-rejection",
             "proposed native closure of the last value-law gap" in audit
-            and "Nature-grade as a conditional-on-the-boundary-event-Ward-\nsurface"
+            and "Nature-grade conditional on accepting that the Schur and"
             in plain,
             "final status should state closure and the remaining rejection target",
         ),

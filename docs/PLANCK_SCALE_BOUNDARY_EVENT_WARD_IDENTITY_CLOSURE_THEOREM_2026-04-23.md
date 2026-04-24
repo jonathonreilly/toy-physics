@@ -3,6 +3,7 @@
 **Date:** 2026-04-23
 **Status:** proposed closure theorem for the additive boundary-density law
 **Verifier:** `scripts/frontier_planck_boundary_event_ward_identity_closure_theorem.py`
+**Derivation theorem:** [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md)
 
 ## Question
 
@@ -24,6 +25,12 @@ inserted as the remaining physical readout law?
 ## Result
 
 Yes, on the primitive boundary-event action surface.
+
+The follow-up derivation theorem shows that the Ward identity used here is not
+an extra value postulate. It is the derivative at the identity source of the
+unique primitive incidence insertion group
+
+`U_A(s) = exp(s P_A)`.
 
 The key point is that the relevant Ward identity is not a source-response Ward
 identity on the Schur variables. Those identities erase additive constants.
@@ -115,14 +122,19 @@ This theorem uses already isolated ingredients:
 
    `rho_cell = I_16 / 16`;
 
-5. the no-hidden-boundary-action-datum rule:
-   a source-free primitive boundary cell may not carry an additive action
-   density that is not the expectation of a retained primitive boundary
-   charge.
+5. the finite-source event Ward derivation:
 
-The fifth item is not a numerical input. It forbids invisible additive
-boundary-action data in exactly the same sense that the source-free state law
-forbids invisible preparation data.
+   `d/ds log Tr(rho_cell exp(s P_A))|_(s=0) = Tr(rho_cell P_A)`;
+
+6. same-source covariance:
+   the Schur normal-ordered pressure and the primitive event insertion
+   generator are two representations of the same one-cell boundary action
+   source.
+
+Neither item contains the numerical density `5/4`. The finite-source Ward
+derivation fixes the primitive event derivative; same-source covariance says
+that this derivative is the same physical infinitesimal boundary action
+generator as the Schur normal-ordered pressure.
 
 ## Theorem 1: normal-ordering removes the Schur floor uniquely
 
@@ -182,14 +194,25 @@ This statement contains no value `1/4`; it is an operator statement.
 Let `N_grav` be the primitive boundary incidence charge and let `rho_cell` be
 the source-free primitive-cell state.
 
-The normal-ordered event Ward identity is
+The finite-source derivation theorem proves
+
+`d/ds log Tr(rho_cell exp(s N_grav))|_(s=0) = Tr(rho_cell N_grav)`.
+
+Same-source covariance identifies this primitive event-source generator with
+the Schur normal-ordered pressure:
+
+`sup spec(G_nu) = d/ds log Tr(rho_cell exp(s N_grav))|_(s=0)`.
+
+Therefore
 
 `sup spec(G_nu) = Tr(rho_cell N_grav)`.
 
 ### Reason
 
-A primitive boundary cell has only one source-free unit-bearing action datum:
-the expectation of its primitive boundary incidence charge.
+A primitive boundary cell has only one source-free unit-bearing insertion
+group:
+
+`exp(s N_grav)`.
 
 If the normal-ordered growth were
 
@@ -205,7 +228,8 @@ If the normal-ordered growth were
 with `alpha != 1`, then the primitive incidence unit would be rescaled or
 copied, which the primitive boundary action unit theorem already excludes.
 
-Therefore the source-free primitive boundary event Ward identity forces
+Therefore the finite-source event Ward derivative plus same-source covariance
+forces
 
 `p_normal = Tr(rho_cell N_grav)`.
 
@@ -286,13 +310,14 @@ does not insert `nu = 5/4`; it derives it from:
 - the Schur spectral floor `lambda_min(L_Sigma) = 1`;
 - the forced primitive boundary incidence charge `P_A`;
 - the source-free event state `I_16/16`;
-- no hidden additive boundary-action datum;
+- the finite-source Ward derivative of `exp(s P_A)`;
+- same-source covariance with the Schur normal-ordered pressure;
 - primitive unit-count semantics.
 
 The remaining possible rejection is now sharper:
 
-> reject that gravitational boundary action on the physical primitive lattice
-> is governed by the normal-ordered primitive boundary event Ward identity.
+> reject same-source covariance between the Schur normal-ordered boundary
+> pressure and the primitive incidence insertion generator.
 
 That is a rejection of the primitive boundary-event action surface, not a
 coefficient objection. If the event Ward identity is accepted, the additive

@@ -9,6 +9,8 @@
 **Boundary action unit reduction:** [PLANCK_SCALE_PRIMITIVE_BOUNDARY_ACTION_UNIT_REDUCTION_THEOREM_2026-04-23.md](./PLANCK_SCALE_PRIMITIVE_BOUNDARY_ACTION_UNIT_REDUCTION_THEOREM_2026-04-23.md)
 **Boundary density three-mechanism audit:** [PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md)
 **Boundary event Ward closure:** [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md)
+**Boundary event Ward derivation:** [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md)
+**Boundary same-source covariance:** [PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md)
 
 ## External-Review Scope Warning
 
@@ -30,8 +32,11 @@ and the additive density law
 
 is now supplied by the normal-ordered primitive boundary event Ward theorem.
 Ordinary Schur source-response Ward identities still do not derive this
-constant term; the closure uses the event insertion Ward identity on the
-primitive boundary-action surface.
+constant term; the closure uses the finite-source event insertion Ward
+identity on the primitive boundary-action surface. The Ward derivative is
+derived from `U_A(s) = exp(s P_A)`, and same-source covariance is derived by
+excluding a hidden quotient source group between the Schur and event
+generators.
 
 ## Claim
 
@@ -245,6 +250,8 @@ Load-bearing notes:
 - [PLANCK_SCALE_REMAINING_DENIALS_TARGET_CHANGE_THEOREM_2026-04-23.md](./PLANCK_SCALE_REMAINING_DENIALS_TARGET_CHANGE_THEOREM_2026-04-23.md)
 - [PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md)
 - [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md)
+- [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md)
+- [PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md)
 
 ## What this does not claim
 
@@ -283,9 +290,11 @@ density law
 
 `delta = m_axis`.
 
-The boundary event Ward theorem gives the direct closure route: normal-order
-the Schur floor and identify the source-free primitive boundary action growth
-with the expectation of the forced incidence charge.
+The boundary event Ward derivation gives the direct closure route: the unique
+primitive incidence insertion group is `exp(s P_A)`, its identity-source Ward
+derivative is `Tr(rho_cell P_A)`, and same-source covariance identifies this
+with the Schur normal-ordered pressure. The same-source covariance theorem
+proves that any mismatch would be a hidden source-free boundary-action scalar.
 
 If either denial is made, the exact `4/16 = 1/4` cell coefficient remains, but
 the fully normalized `a = l_P` claim must be scoped accordingly.

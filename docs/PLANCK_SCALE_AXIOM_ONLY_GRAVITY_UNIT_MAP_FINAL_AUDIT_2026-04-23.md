@@ -37,7 +37,19 @@ so
 
 `c_cell = Tr(rho_cell P_A) = 4/16 = 1/4`.
 
-The new boundary event Ward theorem then derives the additive density law
+The boundary event Ward derivation starts from the unique primitive incidence
+source
+
+`U_A(s) = exp(s P_A)`.
+
+Its Ward derivative is
+
+`d/ds log Tr(rho_cell U_A(s))|_(s=0) = Tr(rho_cell P_A)`.
+
+The same-source covariance theorem then shows that, if the Schur and event
+generators are the same physical boundary-action source, they must agree:
+otherwise their quotient is hidden source-free boundary-action data. This gives
+the additive density law
 
 `nu - lambda_min(L_Sigma) = Tr(rho_cell P_A)`.
 
@@ -93,9 +105,9 @@ coefficient:
    native Planck proof;
 6. ordinary Schur source-response Ward identities erase additive constants.
 
-The event Ward theorem is different because it is a constant-term Ward identity
+The event Ward theorem is different because it is a finite-source Ward identity
 for primitive boundary-cell insertion. It ties the normal-ordered action growth
-to the expectation of the retained primitive incidence charge.
+to the source derivative of the retained primitive incidence charge.
 
 ## Countermodel Family Status
 
@@ -110,9 +122,9 @@ The old consistency test was:
 Those rows remain valid countermodels if the boundary-event Ward identity is
 rejected.
 
-If the identity is accepted, the rows with `mu != 1` are excluded because they
-either rescale the primitive incidence unit or add hidden boundary-action
-density not attached to a retained primitive event charge.
+If the common-source identification is accepted, the rows with `mu != 1` are
+excluded because they either rescale the primitive incidence unit or add hidden
+boundary-action density not attached to a retained primitive event charge.
 
 ## Planck Normalization
 
@@ -145,9 +157,10 @@ The strongest reviewer-safe claim currently supported by the branch is:
 
 > The physical `Cl(3)` / `Z^3` Planck packet derives the native primitive
 > coefficient `c_cell = 1/4`. On the primitive boundary-event action surface,
-> the normal-ordered event Ward identity derives
-> `nu - lambda_min(L_Sigma) = Tr(rho_cell P_A) = 1/4`. With the standard
-> gravitational area/action normalization, this gives `a = l_P` exactly.
+> the finite source `exp(s P_A)` gives the Ward derivative
+> `Tr(rho_cell P_A) = 1/4`; the same-source covariance theorem gives
+> `nu - lambda_min(L_Sigma) = 1/4`. With the standard gravitational
+> area/action normalization, this gives `a = l_P` exactly.
 
 The branch should not claim:
 
@@ -158,8 +171,8 @@ The branch should not claim:
 
 The remaining rejection is now exact:
 
-> reject that gravitational boundary action on the physical primitive lattice
-> is governed by the normal-ordered primitive boundary event Ward identity.
+> reject that the Schur boundary action and primitive event insertion source
+> are two descriptions of the same physical gravitational boundary action.
 
 If that rejection is made, the branch falls back to the older conditional
 status: exact native `1/4`, with Planck length conditional on the gravitational

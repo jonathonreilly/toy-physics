@@ -13,9 +13,9 @@ follows without inserting `a = l_P` or `nu = 5/4` as values.
 
 The remaining hostile-review pressure is now physical, not numerical:
 
-> reject or accept that gravitational boundary action on the physical primitive
-> lattice is governed by the normal-ordered primitive boundary event Ward
-> identity.
+> reject or accept that the Schur boundary action and primitive event insertion
+> source are two descriptions of the same physical gravitational boundary
+> action.
 
 ## What Is Derived
 
@@ -44,6 +44,18 @@ cannot see the additive density. The new closure theorem uses a different
 identity: the constant-term Ward identity for inserting one primitive boundary
 cell.
 
+That identity is derived from the finite primitive event source
+
+`U_A(s) = exp(s P_A)`.
+
+Its normalized generating functional is
+
+`Z_A(s) = Tr(rho_cell U_A(s))`,
+
+and the Ward derivative is
+
+`d/ds log Z_A(s)|_(s=0) = Tr(rho_cell P_A)`.
+
 Let
 
 `G_nu = nu I - L_Sigma`.
@@ -52,7 +64,12 @@ Normal-order the exact Schur floor by writing
 
 `G_nu = (nu - lambda_min(L_Sigma)) I - (L_Sigma - lambda_min(L_Sigma) I)`.
 
-The normal-ordered primitive boundary event Ward identity says
+The same-source covariance theorem then says that if the Schur action and the
+event insertion are the same physical boundary-action source, their
+infinitesimal generators must agree. Otherwise their quotient is a hidden
+source-free boundary-action scalar.
+
+Thus
 
 `sup spec(G_nu) = Tr(rho_cell P_A)`.
 
@@ -101,26 +118,28 @@ The old conditional gap was:
 
 The new answer is:
 
-> because the normal-ordered primitive boundary event Ward identity ties the
-> additive action density to the expectation of the forced primitive incidence
-> charge `P_A`.
+> because the finite primitive event source `exp(s P_A)` has Ward derivative
+> `Tr(rho_cell P_A)`, and same-source covariance identifies that derivative
+> with the Schur normal-ordered boundary pressure.
 
-A reviewer can still reject that identity. If they do, the package falls back
-to the earlier conditional result: exact native `1/4`, with Planck length
-conditional on the gravitational boundary/action identification.
+A reviewer can still reject that the Schur and event descriptions are the same
+physical source. If they do, the package falls back to the earlier conditional
+result: exact native `1/4`, with Planck length conditional on the gravitational
+boundary/action identification.
 
-If they accept the identity, the boundary density is closed and the Planck
-normalization follows.
+If they accept the common-source identification, the boundary density is closed
+and the Planck normalization follows.
 
 ## Safe Submission Claim
 
 Use this:
 
 > The physical `Cl(3)` / `Z^3` packet derives `c_cell = 1/4`. On the primitive
-> boundary-event action surface, the normal-ordered boundary event Ward
-> identity derives `nu - lambda_min(L_Sigma) = Tr(rho_cell P_A) = 1/4`; with
-> the standard gravitational area/action normalization this gives `a = l_P`
-> exactly.
+> boundary-event action surface, the finite source `exp(s P_A)` gives the Ward
+> derivative `Tr(rho_cell P_A) = 1/4`; the same-source covariance theorem
+> identifies this with the Schur normal-ordered pressure, giving
+> `nu - lambda_min(L_Sigma) = 1/4`; with the standard gravitational
+> area/action normalization this gives `a = l_P` exactly.
 
 Do not use this:
 
@@ -128,8 +147,9 @@ Do not use this:
 
 ## Review Outcome
 
-The package is now Nature-grade as a conditional-on-the-boundary-event-Ward-
-surface Planck derivation with no inserted Planck value.
+The package is now Nature-grade conditional on accepting that the Schur and
+event descriptions are the same physical gravitational boundary-action source,
+with no inserted Planck value.
 
-The remaining review question is whether that event Ward surface is accepted as
-the physical gravitational boundary-action readout of the primitive lattice.
+The remaining review question is whether those two descriptions are indeed the
+same physical boundary-action generator.

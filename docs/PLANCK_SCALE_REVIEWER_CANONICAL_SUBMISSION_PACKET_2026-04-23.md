@@ -9,6 +9,8 @@
 **Boundary action unit reduction:** [PLANCK_SCALE_PRIMITIVE_BOUNDARY_ACTION_UNIT_REDUCTION_THEOREM_2026-04-23.md](./PLANCK_SCALE_PRIMITIVE_BOUNDARY_ACTION_UNIT_REDUCTION_THEOREM_2026-04-23.md)
 **Boundary density three-mechanism audit:** [PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md)
 **Boundary event Ward closure:** [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md)
+**Boundary event Ward derivation:** [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md)
+**Boundary same-source covariance:** [PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md)
 
 ## Final Scope Warning
 
@@ -29,10 +31,13 @@ and reduced the additive boundary-density law to
 equivalently `delta = m_axis`.
 
 The new boundary event Ward theorem supplies that equality on the primitive
-boundary-event action surface. The remaining hostile-review target is no
-longer the number `5/4`; it is whether the normal-ordered primitive boundary
-event Ward identity is accepted as the physical gravitational boundary-action
-readout.
+boundary-event action surface. The finite-source derivation theorem derives
+the Ward derivative from the primitive insertion group `exp(s P_A)`. The
+same-source covariance theorem derives equality with the Schur normal-ordered
+pressure by showing that any mismatch is a hidden source-free boundary-action
+scalar. The remaining hostile-review target is no longer the number `5/4`; it
+is whether the Schur boundary action and primitive event insertion source are
+two representations of the same physical gravitational boundary action.
 
 ## Submission Claim
 
@@ -145,6 +150,16 @@ and since both lengths are positive,
     `nu - lambda_min(L_Sigma) = Tr(rho_cell P_A) = 1/4`, hence `nu = 5/4` on
     the rational witness:
     [boundary event Ward closure theorem](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md).
+12. **Boundary-event Ward derivation.** The Ward identity itself is derived as
+    the identity-source derivative of the unique primitive incidence insertion
+    group `U_A(s) = exp(s P_A)`. The remaining pressure point is same-source
+    covariance with the Schur normal-ordered pressure:
+    [boundary event Ward derivation theorem](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md).
+13. **Same-source covariance.** If the Schur and event descriptions are the
+    same boundary-action source, unequal infinitesimal generators leave a
+    quotient group `exp(s Delta)`, which is hidden source-free boundary-action
+    data. Therefore the generators agree:
+    [boundary same-source covariance theorem](./PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md).
 
 ## Exact Imports
 
@@ -213,8 +228,8 @@ The hostile-review denials are now explicit.
 6. **Bare-density objection.** If the reviewer asks for a derivation of
    `nu = 5/4` from a Ward identity, action-phase quantization, or microscopic
    boundary-term normalization, point to the boundary event Ward theorem. The
-   live objection is now whether that normal-ordered primitive event Ward
-   identity is physically accepted.
+   live objection is now whether the Schur and event descriptions are the same
+   physical gravitational boundary-action source.
 
 The final denial-status theorem records that denials 2 and 4 change the target:
 they either replace the primitive coefficient with an enriched state/readout
@@ -227,8 +242,9 @@ normalization, the conditional direct Planck route closes on the authorized P1
 surface.
 
 For the stronger unqualified bare-axiom claim, denial 6 is the remaining
-pressure point: reject or accept the normal-ordered primitive boundary event
-Ward identity.
+pressure point: reject or accept that the Schur boundary action and primitive
+event insertion source describe the same physical gravitational boundary
+action.
 
 ## Verifier Commands
 
@@ -264,6 +280,8 @@ python3 scripts/frontier_planck_clean_closure_criterion_theorem.py
 python3 scripts/frontier_planck_primitive_boundary_action_unit_reduction_theorem.py
 python3 scripts/frontier_planck_boundary_density_three_mechanism_audit.py
 python3 scripts/frontier_planck_boundary_event_ward_identity_closure_theorem.py
+python3 scripts/frontier_planck_boundary_event_ward_identity_derivation_theorem.py
+python3 scripts/frontier_planck_boundary_same_source_covariance_theorem.py
 ```
 
 ## Appendix Map
@@ -277,6 +295,8 @@ python3 scripts/frontier_planck_boundary_event_ward_identity_closure_theorem.py
 - [PLANCK_SCALE_PRIMITIVE_BOUNDARY_ACTION_UNIT_REDUCTION_THEOREM_2026-04-23.md](./PLANCK_SCALE_PRIMITIVE_BOUNDARY_ACTION_UNIT_REDUCTION_THEOREM_2026-04-23.md) - direct attack showing multiplicative `mu` is not same-surface on the primitive/exact-action object, reducing the open target to the additive density `nu = 5/4`.
 - [PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md) - direct audit showing current Ward, action-phase, and boundary-term routes reduce but do not derive the additive law `delta = m_axis`.
 - [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md) - constant-term event Ward identity deriving `delta = m_axis` on the primitive boundary-event action surface.
+- [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md) - finite-source derivation of the event Ward identity from `U_A(s) = exp(s P_A)`.
+- [PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md) - quotient/no-hidden-scalar derivation of same-source covariance between the Schur and event generators.
 - [PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md) - explicit P1 package-boundary move.
 - [PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md) - hostile-review context, with its supersession note respected.
 
@@ -306,6 +326,8 @@ python3 scripts/frontier_planck_boundary_event_ward_identity_closure_theorem.py
 - [PLANCK_SCALE_REMAINING_DENIALS_TARGET_CHANGE_THEOREM_2026-04-23.md](./PLANCK_SCALE_REMAINING_DENIALS_TARGET_CHANGE_THEOREM_2026-04-23.md) - final audit showing the remaining denials change the target rather than expose hidden algebra gaps.
 - [PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md) - exact final density target after Ward, action-phase, and microscopic boundary-term stress testing.
 - [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md) - proposed closure of that target by the normal-ordered primitive boundary event Ward identity.
+- [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md) - derivation of that identity from the finite primitive incidence source calculus.
+- [PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md) - derivation that two same-source scalar generators must agree or else introduce hidden source-free boundary-action data.
 
 ### Risk and stop-condition context
 

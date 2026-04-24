@@ -33,6 +33,8 @@ SUBCHECKS = [
     "frontier_planck_primitive_boundary_action_unit_reduction_theorem.py",
     "frontier_planck_boundary_density_three_mechanism_audit.py",
     "frontier_planck_boundary_event_ward_identity_closure_theorem.py",
+    "frontier_planck_boundary_event_ward_identity_derivation_theorem.py",
+    "frontier_planck_boundary_same_source_covariance_theorem.py",
 ]
 
 
@@ -74,6 +76,8 @@ def main() -> int:
     primitive_unit = read("docs/PLANCK_SCALE_PRIMITIVE_BOUNDARY_ACTION_UNIT_REDUCTION_THEOREM_2026-04-23.md")
     density_audit = read("docs/PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md")
     event_ward = read("docs/PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md")
+    event_ward_derivation = read("docs/PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md")
+    same_source = read("docs/PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md")
 
     for script in SUBCHECKS:
         total += 1
@@ -193,12 +197,12 @@ def main() -> int:
 
     total += 1
     passed += expect(
-        "nature-status-avoids-project-shorthand-and-names-event-ward-surface",
+        "nature-status-avoids-project-shorthand-and-names-same-source-covariance",
         "P1" not in nature_status
         and "GSI" not in nature_status
         and "Axiom Extension" not in nature_status
-        and "normal-ordered primitive boundary event Ward\n> identity" in nature_status
-        and "The remaining review question is whether that event Ward surface is accepted"
+        and "same physical gravitational boundary-action source" in nature_status
+        and "The remaining review question is whether those two descriptions"
         in nature_status,
     )
 
@@ -245,6 +249,31 @@ def main() -> int:
         and "`nu = 1 + 1/4 = 5/4`" in event_ward
         and "If the event Ward identity is accepted, the additive\ndensity is closed"
         in event_ward,
+    )
+
+    total += 1
+    passed += expect(
+        "boundary-event-ward-identity-is-derived-from-finite-source",
+        "PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md"
+        in reviewer
+        and "PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md"
+        in packet
+        and "`U_A(s) = exp(s P_A)`" in event_ward_derivation
+        and "`d/ds log Z_A(s)|_(s=0) = Tr(rho_cell P_A)`" in event_ward_derivation
+        and "reject same-source covariance" in event_ward_derivation,
+    )
+
+    total += 1
+    passed += expect(
+        "same-source-covariance-is-derived-by-quotient-no-hidden-scalar",
+        "PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md"
+        in reviewer
+        and "PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md"
+        in packet
+        and "`Q(s) = exp(s (p_1 - p_2))`" in same_source
+        and "`nu - lambda_min(L_Sigma) = Tr(rho_cell P_A)`" in same_source
+        and "deny that the Schur boundary action and the primitive event insertion source"
+        in same_source,
     )
 
     print(f"SUMMARY: PASS={passed} FAIL={total - passed}")

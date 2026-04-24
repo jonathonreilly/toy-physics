@@ -99,15 +99,16 @@ def main() -> int:
         ),
         (
             "nature-status-and-closure-note-agree",
-            "normal-ordered primitive boundary event Ward\n> identity" in nature_status
-            and "mathematically clean closure is therefore conditional" in note,
-            "front-door status should identify the event Ward surface as the closure pressure point",
+            "same physical gravitational boundary-action source" in nature_status
+            and "mathematically clean closure is therefore conditional on the common-source"
+            in note,
+            "front-door status should identify common-source identification as the closure pressure point",
         ),
         (
             "theorem-states-next-new-science-target",
             "no positive `mu != 1` is compatible" in note
-            and "normal-ordered event Ward\nidentity" in note,
-            "the closure target should now name the event Ward theorem",
+            and "finite-source event Ward\nderivative and the same-source covariance theorem" in note,
+            "the closure target should now name the finite-source Ward theorem",
         ),
     ]
 

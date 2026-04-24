@@ -48,11 +48,15 @@ statement on the primitive boundary-event action surface:
 
 `nu - lambda_min(L_Sigma) = Tr(rho_cell P_A) = 1/4`.
 
+The Ward identity is derived from the finite primitive incidence source
+`U_A(s) = exp(s P_A)`. Same-source covariance is then derived by showing that
+any mismatch between the Schur and event generators would be a hidden
+source-free boundary-action scalar.
+
 Together with primitive unit-count semantics, this collapses the live
 multiplier family to the `mu = 1` row. The remaining reviewer pressure is not
-the numerical coefficient; it is whether the normal-ordered primitive boundary
-event Ward identity is accepted as the physical gravitational boundary-action
-readout.
+the numerical coefficient; it is whether the Schur and event descriptions are
+accepted as the same physical gravitational boundary-action source.
 
 ## The Closure Criterion
 
@@ -155,8 +159,9 @@ The closure theorem now in the packet proves one concrete statement:
 > action unit on the primitive same-surface cell.
 
 It lands by the first route: derive the gravitational boundary action unit
-directly from the primitive worldtube count via the normal-ordered event Ward
-identity.
+directly from the primitive worldtube count via the finite-source event Ward
+derivative and the same-source covariance theorem.
 
-The mathematically clean closure is therefore conditional on the primitive
-boundary-event Ward surface, not on an inserted numerical coefficient.
+The mathematically clean closure is therefore conditional on the common-source
+identification of the Schur and event boundary-action descriptions, not on an
+inserted numerical coefficient.
