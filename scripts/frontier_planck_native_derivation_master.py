@@ -65,6 +65,7 @@ SUBCHECKS = [
     "frontier_planck_si_hbar_objection_discharge_theorem_2026_04_24.py",
     "frontier_planck_action_phase_representation_hbar_theorem_2026_04_24.py",
     "frontier_planck_primitive_weyl_hbar_representation_theorem_2026_04_24.py",
+    "frontier_planck_finish_line_completion_and_cosmic_pin_theorem_2026_04_24.py",
     "frontier_planck_overnight_closure_status_theorem.py",
 ]
 
@@ -139,6 +140,7 @@ def main() -> int:
     si_hbar_discharge = read("docs/PLANCK_SCALE_SI_HBAR_OBJECTION_DISCHARGE_THEOREM_2026-04-24.md")
     action_phase_hbar = read("docs/PLANCK_SCALE_ACTION_PHASE_REPRESENTATION_HBAR_THEOREM_2026-04-24.md")
     weyl_hbar = read("docs/PLANCK_SCALE_PRIMITIVE_WEYL_HBAR_REPRESENTATION_THEOREM_2026-04-24.md")
+    finish_line = read("docs/PLANCK_SCALE_FINISH_LINE_COMPLETION_AND_COSMIC_PIN_THEOREM_2026-04-24.md")
     overnight_status = read("docs/PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md")
 
     for script in SUBCHECKS:
@@ -690,6 +692,18 @@ def main() -> int:
         and "`J_i = (hbar/2) sigma_i`" in weyl_hbar
         and "finite-dimensional canonical commutator `[X,P]=i hbar I` is impossible"
         in weyl_hbar,
+    )
+
+    total += 1
+    passed += expect(
+        "finish-line-theorem-scopes-native-completion-and-cosmic-pins",
+        "PLANCK_SCALE_FINISH_LINE_COMPLETION_AND_COSMIC_PIN_THEOREM_2026-04-24.md"
+        in reviewer
+        and "strongest retained endpoint and SI-pinning obstruction" in finish_line
+        and "Frozen finite\nautomorphisms alone cannot force Planck plus hbar" in reviewer
+        and "Cosmic where/when pins are allowed address data" in finish_line
+        and "they do not set SI units unless a separate dimensionless cosmic count\nis derived"
+        in reviewer,
     )
 
     total += 1
