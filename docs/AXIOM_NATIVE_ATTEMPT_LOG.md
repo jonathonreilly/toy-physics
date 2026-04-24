@@ -475,3 +475,41 @@ Next vector: move to Target 6 (Strong CP beyond action-surface).
 Target 2 now has a genuine theorem (2d); the remaining unclaimed
 target is 6.
 
+[2026-04-23 08:55] Target 6, sub-step 6a (Strong CP structural absence) — PASS
+Tried: deliver Target 6's non-circular-absence route by establishing
+three INDEPENDENT structural obstructions to defining theta at kit
+level.
+Wrote scripts/frontier_axiom_native_strong_cp_structural_absence.py
+which proves:
+(i) K2 has 3 spatial + 0 time dimensions; total kit = 3D. The 4-form
+F wedge F-dual has no 4D integration measure in kit -- dim gap = 1.
+(ii) K3 action has no gauge link variable U_mu(n); without U, the
+plaquette holonomy and hence field strength F_{mu nu}(n) are
+undefined in kit.
+(iii) K3 free Dirac on balanced bipartite patches (edge, plaquette,
+2x3 grid, cube) has |det(B)| != 0, so ker = 0 on both bipartite
+halves, index = 0 identically.
+(iv) Staggered chirality epsilon(n) = (-1)^{n1+n2+n3} anticommutes
+with D on the cube (verified numerically: epsilon*A + A*epsilon = 0).
+(v) Four specific missing primitives enumerated (time dim, gauge
+link, F_{mu nu}, topological density); Musk test confirms adding
+just one is insufficient to define theta.
+(vi) Three obstructions verified independently: dimensionality, gauge
+freedom, index triviality.
+Target 6 non-circular-absence route is CLOSED. theta is
+structurally undefinable, not merely tuned to zero. Each of the
+three obstructions is independently verifiable and each alone
+suffices; together they form a strong structural forbiddance.
+Accepted because: hostile audit verdict = clean. 10 computed
+record() booleans, no narrative PASSes.
+All six targets now have at least one committed sub-step:
+  Target 1: closed via construction (1a-1e).
+  Target 2: closed via general theorem (2a-2d, including
+    universal Kasteleyn plaquette sign).
+  Target 3: closed via reclassification (3a-3b, K = 0 primitive).
+  Target 4: opened via kit candidate 2/9 with error budget (4a).
+  Target 5: closed via no-go + specific missing primitive (5a).
+  Target 6: closed via non-circular structural absence (6a).
+Next vector: write the end-of-night summary doc
+AXIOM_NATIVE_OVERNIGHT_SUMMARY.md per LOOP_PROMPT instructions.
+

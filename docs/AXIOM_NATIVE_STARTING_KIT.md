@@ -245,3 +245,20 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   on planar bipartite Z^3 subgraphs /
   `frontier_axiom_native_kasteleyn_plaquette_sign.py` /
   Target 2 sub-step 2d.
+- Strong CP theta-vacuum is STRUCTURALLY ABSENT from the kit via
+  three independent obstructions: (a) K2 has only 3 spatial
+  dimensions (no time), so the 4-form `theta * F wedge F-dual`
+  cannot be integrated; (b) K3 action has NO gauge link variable
+  `U_mu(n)`, so `F_{mu nu}` is undefined (no plaquette holonomy);
+  (c) the K3 free Dirac is antisymmetric with det(B) != 0 on
+  balanced bipartite patches, so index = 0 identically, ruling
+  out non-trivial topological sectors; additionally the staggered
+  chirality operator `epsilon(n) = (-1)^{sum n_k}` anticommutes
+  with D (verified numerically on the cube). Hence theta is NOT
+  definable in the kit, not merely tuned to zero -- the four
+  missing primitives for theta are explicitly listed (4D extension,
+  gauge link, F_{mu nu}, topological density), and adding any
+  single one is insufficient. Target 6's non-circular-absence
+  success route is achieved /
+  `frontier_axiom_native_strong_cp_structural_absence.py` /
+  Target 6 sub-step 6a.
