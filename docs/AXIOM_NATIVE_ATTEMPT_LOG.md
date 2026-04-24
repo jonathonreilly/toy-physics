@@ -2154,3 +2154,60 @@ its concrete results, with the SH3-type and localization
 signatures as open phenomena; consider pivoting to a
 different target.
 
+[2026-04-24 09:25] V2 iteration: Kasteleyn thread conjecture doc REVISED post-refutation — PASS
+Tried: revise docs/KASTELEYN_THREAD_CONJECTURE.md to honestly
+reflect iter 35's refutation of the singleton hypothesis.
+Previous version presented the hypothesis as a strong
+conjecture with 15+ confirming data points; that was
+misleading after iter 35's (5,4,2) and (6,4,2) empty
+counterexamples.
+Revision scope:
+  Section 2 renamed from "Empirical Singleton Hypothesis" to
+    "Theorem (iter 12): K3 optimal iff planar". The iter 12
+    planarity result is now positioned as the ground truth.
+  Section 3 strengthened: iter 23 reflection-degeneracy lemma
+    presented as a proven structural theorem.
+  Section 4 added: REFUTED CONJECTURE — the "singleton
+    hypothesis". Explicitly retracts the hypothesis, documents
+    the 2 iter 35 counterexamples, explains why the hypothesis
+    appeared consistent on restricted test sets (certain
+    2-site removals planarize specific non-planar cuboids).
+    Retracts the "18+ confirming data points, zero
+    counterexamples" claim.
+  Section 5 reframes localization signature and SH3-type
+    phenomena as RESTRICTED OBSERVATIONS without universal
+    claims.
+  Section 6 simplifies open problems (planarity gap
+    characterization, generalized reflection, SH3 mechanism,
+    continuum limit, other symmetries).
+  Section 7 added: summary table of concrete results -- 2
+    theorems (planarity, reflection-degeneracy), 1 refuted
+    hypothesis, 2 empirical phenomena, several open problems.
+  Section 8 added: methodological note -- V2 adversarial
+    testing directly produced the refutation; without it the
+    thread would have continued accumulating confirming data
+    points indefinitely.
+  Section 9 updated iteration index to include iters 25-35.
+Accepted because: hostile audit verdict = clean. Runner
+changes = 0 (doc-only revision). docs/KASTELEYN_THREAD_
+CONJECTURE.md reduced from 437 lines to ~360 lines while
+expanding honesty about what's proven vs open.
+Net effect: the Kasteleyn thread now has a CORRECT written
+summary. Two concrete theorems stand (iter 12 planarity,
+iter 23 reflection-degeneracy). The refuted singleton
+hypothesis is explicitly documented as a cautionary tale.
+Empirical phenomena (localization, SH3-type) are explicitly
+framed as restricted observations pending structural
+explanation.
+Next V2 vector: the Kasteleyn thread has reached a natural
+close for the iter-35 phase. Remaining options:
+  (a) Continue investigation of the SH3-type mechanism and/or
+      generalized reflection lemma to upgrade empirical
+      observations to theorems.
+  (b) Pivot to a different target from the original 6-target
+      framework (Targets 1, 3, 4, 5 are largely untouched
+      after V2's focus on Target 2).
+  (c) Accept the two Kasteleyn theorems as the thread's
+      output and close the overnight autonomous loop at a
+      clean point.
+

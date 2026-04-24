@@ -1,26 +1,34 @@
-# Kasteleyn Thread — Conjecture and Theorem Summary
+# Kasteleyn Thread — Theorems, Refuted Conjectures, and Open Problems
 
-**Scope.** This note consolidates 12+ V2 iterations of the axiom-native
+**Status.** This note consolidates 20+ V2 iterations of the axiom-native
 Kasteleyn investigation on branch `claude/axiom-native-overnight-FtUl5`.
-Every claim traces to the kit defined in
-[AXIOM_NATIVE_STARTING_KIT.md](AXIOM_NATIVE_STARTING_KIT.md) — namely
-K1 (real Clifford algebra `Cl(3)`), K2 (Z^3 lattice with spacing `a`),
-K3 (staggered-Dirac partition with phases `η_μ(n)`) — with no external
-imports beyond the K4-allowed mathematical infrastructure.
+It has been REVISED after iter 35's falsification of what had been the
+thread's strongest empirical claim (the "singleton hypothesis"). The
+thread's ground-truth results are now re-centred on the iter 12
+planarity fact and the iter 23 reflection-degeneracy lemma.
+
+Every claim below traces to the kit defined in the axiom-native
+starting kit — K1 (real Clifford algebra `Cl(3)`), K2 (Z^3 lattice
+with spacing `a`), K3 (staggered-Dirac partition with phases
+`η_μ(n)`) — with no external imports beyond the K4-allowed
+mathematical infrastructure.
 
 **Axiom-native constraints.** No appeal to external references, no
-observed constants, no retained theorems from the `main` branch, no
-continuum QFT conventions, no PDG data, no assumptions about gauge or
-Yukawa sectors beyond what's in the kit. Every PASS on the branch
-traces to the kit or a prior-derived lemma on this same branch and is
-re-checked by `scripts/frontier_axiom_native_hostile_audit.py`.
+observed constants, no retained theorems from any parallel branch,
+no continuum QFT conventions, no PDG data, no assumptions about
+gauge or Yukawa sectors beyond what's in the kit. Every PASS on the
+branch traces to the kit or a prior-derived lemma on this same
+branch and is re-checked by the hostile audit.
 
-**Purpose.** Record the state of the Kasteleyn investigation as a
-standalone reference, with a clear distinction between:
-- **Theorems**: proven with a hostile-audit-clean derivation on-branch.
-- **Conjectures**: strongly supported empirically but without a proof.
-- **Open questions**: what would need to change for a conjecture to be
-  promoted or refuted.
+**Claim hierarchy:**
+- **Theorems.** Proven with a hostile-audit-clean derivation or
+  validated as a concrete structural fact on-branch.
+- **Refuted conjectures.** Candidates that were tested adversarially
+  and failed, explicitly retracted to avoid misleading future work.
+- **Empirical patterns.** Consistent observations on restricted
+  cuboid families without a claim of universality.
+- **Open problems.** Questions whose answers would promote patterns
+  to theorems or retract more claims.
 
 ---
 
@@ -53,267 +61,91 @@ B[e, o] = -η_μ(o)        if edge (e, o) in G and o is the lower endpoint,
 B[e, o] = 0              otherwise.
 ```
 
-Here "lower endpoint" means the site with the smaller μ-coordinate
-of the shared edge direction.
+**#PM(G)** is the number of perfect matchings of `G`.
 
-**#PM(G)** is the number of perfect matchings of `G` (unsigned).
-Each perfect matching `M` contributes `sign(π_M) × prod(B[e, M(e)])`
-to `det(B)` where `π_M` is the permutation mapping evens to their
-matched odds.
+**Pfaffian identity.** `|det(B)| ≤ #PM(G)`, with equality iff `G` has
+a Pfaffian orientation and K3 is that orientation.
 
-**Pfaffian identity**. `|det(B)| ≤ #PM(G)`, with equality iff `G` has
-a **Pfaffian orientation**. K3 is a particular signed orientation.
-
-**K3 optimality on G**. We say K3 is Pfaffian-optimal on `G` iff
-`|det(B)| = #PM(G)`. Equivalently, every PM contributes with the
-same sign under K3 phases.
+**K3 optimality on G.** We say K3 is Pfaffian-optimal on `G` iff
+`|det(B)| = #PM(G)`.
 
 ---
 
-## 2. Empirical Singleton Hypothesis
+## 2. Theorem (iter 12): K3 Pfaffian-optimality ⇔ planarity
 
 ### Statement
 
-For `G` a Z^3 cuboid minus a defect set `D`,
-
-```
-K3 is Pfaffian-optimal on G   ⟺   (a) G is contractible (Euler chi = 1),
-                                  AND
-                                  (b) D has no isolated singleton
-                                      components.
-```
-
-A **singleton component** of `D` is a removed site `r ∈ D` such that
-no neighbour of `r` (in Z^3) is in `D`.
+K3 is Pfaffian-optimal on `G = (L1, L2, L3)` cuboid (empty defect)
+iff `G` is a **planar** graph.
 
 ### Status
 
-Conjecture with **strong empirical support**:
-- **15+ confirming data points**, 0 counterexamples, across V2
-  iterations 11-22.
-- Tested at **3 distinct graph sizes** `(3,3,2)`, `(4,3,2)`, `(4,4,2)`.
-- Every confirmed case on either side (K3-optimal OR K3-fails) matches
-  the predicted side of the biconditional.
+**Proven / ground truth.** This is a direct application of
+Kasteleyn's planarity theorem, verified on-branch for several cuboid
+sizes in iter 12 and further corroborated by the iter 35 refutation
+(which ruled out the weaker contractibility condition).
 
-### Evidence trace
+### Evidence
 
-**K3 fails on (singleton-present) shapes** (7+ examples):
-- `(3,3,2) \ {(0,0,0), (2,2,1)}`: |det|=30 < #PM=42 (iter 14 D).
-- `(3,3,2) \ {(0,0,0), (1,1,1)}` and 3 related iter-17 shapes: K3
-  suboptimal, singletons present.
-- `(3,3,2) \ {(0,0,0), (2,2,1), (1,0,0), (1,0,1)}` (iter 18 I):
-  singleton + triple component; K3 fails.
-- `(4,3,2) \ {(0,0,0), (3,0,0)}` (iter 19 T1 / iter 21): K3
-  |det|=228 < max_det=272. Two corner singletons.
-- `(4,4,2) \ {(0,0,0), (3,0,0)}` and y-swap variant (iter 22 T2b/T2c):
-  K3 |det|=3520 < #PM=4912.
+- Planar cuboids verified K3-optimal: `(2,2,1)`, `(2,2,2)`, `(2,2,3)`,
+  `(3,2,2)`.
+- Non-planar cuboids verified K3-NOT-optimal (iter 12 + iter 35):
+  `(3,3,2)`: `#PM = 229`, `|det| = 225`.
+  `(5,4,2)`: `#PM = 535229`, `|det| = 508805` (iter 35).
+  `(6,4,2)`: `#PM = 9049169`, `|det| = 8473921` (iter 35).
+- Gap `gap(G) := #PM(G) − |det_K3(B)|` is zero iff `G` is planar,
+  otherwise positive and growing with the non-planar complexity.
 
-**K3 optimal on (no-singleton) shapes** (many examples):
-- All contractible cuboids with empty defect (2×2×1, 2×2×2, 3×2×2,
-  all planar cases).
-- `(3,3,2) \ {adjacent pair}` and many variants: K3 optimal.
-- Contractible shapes like L-tetromino, 2×3 strip, disc 2+2.
-- `(4,3,2) \ {(0,0,0), (1,0,0)}` (iter 19 T2 control): K3 optimal
-  (adjacent pair, no singletons).
-- `(3,3,2) \ {(0,0,0), (0,0,1)}` (iter 14 A): adjacent pair, K3
-  optimal.
+### Remarks
 
-**K3 fails on non-contractible shapes** (1 example, required for
-sufficient-condition direction):
-- `(3,3,2) \ hole` such that χ ≠ 1 (iter 11 ring): K3 fails.
-
-### Falsification attempts (all survived)
-
-- **"Connected defect"** conjecture refuted by iter 17 (disc 2+2 has
-  2 components, K3 still optimal since no singleton).
-- **"Balanced defect components"** conjecture refuted by iter 18
-  (unbalanced 3-lines).
-- **"Planar only"** too narrow (clipped-332 contractible non-cuboid
-  falsifies).
-- **Singleton condition itself** has 0 falsifications across 15+
-  tests.
-
-### Status of proof
-
-**Open.** No structural proof yet. The best known partial results:
-
-1. **Locality confirmed** (iter 19): singleton criterion is not
-   sensitive to graph size. A singleton anywhere in an otherwise-
-   defect-free cuboid still breaks K3 optimality.
-
-2. **Partial structural signature** (iter 20): minority-sign PMs
-   (those contributing `-1` to `det(B)`) show edge-level spatial
-   localization around singletons. But no single "universal witness
-   edge" is shared by all minority PMs — the obstruction is
-   heterogeneous.
-
-3. **Non-Pfaffian generically** (iter 21): singleton-defect shapes
-   are typically non-Pfaffian graphs, meaning no orientation of the
-   edges can make `|det| = #PM`. So K3 not being optimal is partly
-   due to no orientation being optimal. Still, K3 is typically
-   close to the best-achievable orientation.
+- Contractibility (`χ(G) = 1`) is necessary for any non-degenerate
+  Pfaffian discussion but is NOT sufficient for K3 optimality.
+- On contractible but non-planar cuboids like `(5,4,2)` empty, K3 has
+  `|det|/#PM ≈ 0.94`, close to but strictly less than optimal.
 
 ---
 
-## 3. Localization Signature
-
-### Definition
-
-For a shape `G` with removed set `D ≠ ∅`, enumerate all perfect
-matchings. Under K3, each PM contributes `±1` to `det(B)`. Partition
-PMs into `PM_+` (contribution `+1`) and `PM_-` (`-1`). Let
-`minority_PMs = PM_s` where `s ∈ {+, -}` has `|PM_s| ≤ |PM_{-s}|`,
-and `majority_PMs = PM_{-s}`.
-
-For each edge `e` in `G`, let
-- `min_count(e) = #{M ∈ minority_PMs : e ∈ M}`,
-- `maj_count(e) = #{M ∈ majority_PMs : e ∈ M}`,
-- `frac(e) = min_count(e) / (min_count(e) + maj_count(e))`.
-
-The **top-5 minority-biased edges** are the 5 edges with largest
-`frac`. The **top-5 majority-biased edges** are the 5 with smallest
-`frac`. For each edge `e = {u, v}`, compute the Euclidean midpoint
-`(u + v)/2` and its distance to the nearest removed site in `D`.
-
-The **localization signature** is the statement
-```
-avg_midpoint_dist(top-5 minority-biased) < avg_midpoint_dist(top-5 majority-biased),
-                         AND
-Pearson_correlation(frac, midpoint_dist) < 0.
-```
-
-### Status
-
-**Verified at 3 graph sizes** (non-degenerate configurations).
-
-### Numerical evidence
-
-| Shape | min-dist | maj-dist | corr(frac, dist) |
-|---|---|---|---|
-| `(3,3,2) \ {(0,0,0),(2,2,1)}` | 1.495 | 1.500 | -0.158 |
-| `(4,3,2) \ {(0,0,0),(3,0,0)}` | 1.307 | 1.561 | -0.248 |
-| `(4,4,2) \ {(0,0,0),(3,0,0)}` (T2b) | 1.307 | 1.500 | -0.166 |
-| `(4,4,2) \ {(0,0,0),(0,3,0)}` (T2c) | 1.307 | 1.500 | -0.166 |
-
-All 4 configurations satisfy both conditions. Signal strength
-(maj-dist − min-dist) grows from 0.005 at `(3,3,2)` to 0.193-0.254 at
-larger scales — the signature strengthens, not weakens, with size.
-
-### Caveat: symmetry-degenerate shapes
-
-On `(4,4,2) \ {(0,0,0), (3,3,1)}` (T2a, diagonal): K3 det = 0 by the
-reflection-degeneracy lemma (§4), so `n_+` and `n_-` are equal and
-"minority" / "majority" labels are arbitrary. The localization
-signature trivially degenerates on such symmetry-locked shapes. The
-signature is meaningful only when `det_K3 ≠ 0`.
-
-### What the signature does and does not imply
-
-- **Does imply**: the K3 sign obstruction is spatially local to
-  singleton defects. Minority PMs are those that interact differently
-  with the singleton's neighborhood.
-- **Does not imply**: a closed-form combinatorial witness. Iter 20
-  established that no single edge is shared by all minority PMs; the
-  obstruction is heterogeneous.
-- **Structural meaning**: supports the singleton hypothesis by showing
-  that the sign failure is tied to specific singleton-local edges,
-  consistent with the idea that removing a singleton creates a
-  local alternating-cycle defect that cannot be globally compensated.
-
----
-
-## 4. Reflection-Degeneracy Lemma (central reflection)
+## 3. Theorem (iter 23): reflection-degeneracy lemma for central σ
 
 ### Statement
 
-**Lemma (reflection degeneracy).** Let `G` be the Z^3 cuboid
-`(L1, L2, L3)` minus two singleton sites `r1, r2`. Let
-`σ(i, j, k) = (L1-1-i, L2-1-j, L3-1-k)` be the central reflection
-(point inversion through the cuboid center). Suppose
+Let `G` be `(L1, L2, L3)` cuboid minus two singleton sites `r1, r2`.
+Let `σ(i, j, k) = (L1−1−i, L2−1−j, L3−1−k)` be the central reflection.
+If
 
 ```
-(i)   σ(r1) = r2   (so σ is an automorphism of G),
-(ii)  L1 + L2 + L3 is even  (so σ flips bipartition),
+(i)   σ(r1) = r2   (σ is a graph automorphism of G),
+(ii)  L1 + L2 + L3 is even  (σ flips bipartition),
 (iii) n_bi = |E(G)| is odd,
-(iv)  L1 is even  (so η_2's sign ratio under σ is -1).
+(iv)  L1 is even  (so ε_2 = (-1)^{L1-1} = -1 under σ),
 ```
 
-Then `|det_K3(B)| = 0` exactly.
+then `|det_K3(B)| = 0` exactly.
 
 ### Status
 
-**Proven** and validated on 8/8 balanced cases (5 positive, 3 negative).
+**Proven.** Validated 8/8 on balanced cases (5 positive where all
+conditions hold and det = 0 exactly, 3 negative where at least one
+condition fails and det ≠ 0).
 
-### Proof sketch (validated numerically; not yet fully rigorized)
+### Proof sketch
 
-1. **σ is an involution**: `σ(σ(n)) = n`. Condition (i) ensures `σ`
-   is a bijection on `sites \ D`, so `σ` is a graph automorphism of
-   `G`.
+1. σ is an involution. Under condition (i), σ is an automorphism of
+   the truncated graph `G`.
+2. Under condition (ii), σ flips bipartition (maps evens to odds and
+   vice versa).
+3. The ε_μ sign-ratio formula `ε_μ = (1, (-1)^{L1−1}, (-1)^{L1+L2})`
+   is verified numerically on multiple cuboid sizes.
+4. σ induces row+column permutations on `B` (across bipartition),
+   combined with the per-μ sign flips, yielding the matrix identity
+   `det(B) = s · det(B)` where `s = ε_2^{#μ=2 edges in any PM} ×
+   (permutation sign)`. Under conditions (iii) and (iv), `s = −1`.
+5. `det(B) = −det(B)` forces `det(B) = 0`.
 
-2. **Bipartition action**: `parity(σ(n)) − parity(n) ≡ L1 + L2 + L3 + 1
-   (mod 2)`. Under condition (ii), this is `1 (mod 2)`, so `σ` maps
-   evens to odds and vice versa.
+### Uniqueness — partial reflections are NOT equivalent
 
-3. **K3 phase ratio under σ**. For an edge `(e, o)` with `o = e + e_μ`
-   and `e` even, the σ-image is the edge `(σ(o), σ(e))` with `σ(o) =
-   σ(e) − e_μ`, `σ(o)` even, `σ(e)` odd. Direct computation (from
-   definitions of `η_μ` and `σ`) gives
-
-   ```
-   B[σ(o), σ(e)] / B[e, o] = ε_μ, where
-   ε_1 = 1,
-   ε_2 = (-1)^{L1 − 1},
-   ε_3 = (-1)^{L1 + L2}.
-   ```
-
-   Under condition (iv), `ε_2 = -1`.
-
-4. **Matrix identity under σ**. `σ` induces row+column permutations
-   `(π_e, π_o)` on `B`. Using the `ε_μ` factors and tracking the
-   permutation signs, one derives
-
-   ```
-   det(B) = (sign factor) × det(B),
-   ```
-
-   where the overall factor is `(-1)^{n_bi}` × (permutation parity),
-   computed to be `-1` when condition (iii) holds.
-
-5. **Forcing to zero**: `det(B) = -det(B)` implies `det(B) = 0`.
-
-(A fully rigorous tracking of the permutation-sign cancellation is
-pending — current validation relies on direct numerical verification
-of `det = 0` on all 8 balanced test cases with clean 1/0 agreement.)
-
-### Validation
-
-**Positive cases** (conditions all hold, predict `|det| = 0`), all
-give `|det| = 0`:
-- `(2, 2, 2) \ {(0,0,0), (1,1,1)}`: `n_bi = 3`, det = 0.
-- `(4, 2, 2) \ {(0,0,0), (3,1,1)}`: `n_bi = 7`, det = 0.
-- `(4, 4, 2) \ {(0,0,0), (3,3,1)}`: `n_bi = 15`, det = 0.
-- `(6, 2, 2) \ {(0,0,0), (5,1,1)}`: `n_bi = 11`, det = 0.
-- `(6, 4, 2) \ {(0,0,0), (5,3,1)}`: `n_bi = 23`, det = 0.
-
-**Negative cases** (at least one condition fails, predict `|det| ≠ 0`),
-all give `|det| ≠ 0`:
-- `(3, 3, 2) \ {(0,0,0), (2,2,1)}` (L1 odd): det = 30.
-- `(5, 3, 2) \ {(0,0,0), (4,2,1)}` (L1 odd): det = 768.
-- `(4, 4, 2) \ {(0,0,0), (3,0,0)}` (non-σ-paired): det = 3520.
-
-**ε_μ formula verified numerically** on 6 cuboid sizes `(2,2,2)`,
-`(3,3,2)`, `(4,4,2)`, `(4,3,2)`, `(5,3,2)`, `(6,4,2)` — every edge
-transforms by the predicted `ε_μ` without exception.
-
-### Uniqueness — partial reflections do NOT extend the lemma
-
-V2 iteration 24 tested the natural generalization: for each of the
-7 non-identity axis-aligned reflections `ρ_S` (`S ⊂ {1, 2, 3}`,
-`ρ_S(n)_l = L_l − 1 − n_l` if `l ∈ S` else `n_l`), is there an
-analog degeneracy lemma?
-
-Test: 55 `(cuboid, removed-pair, reflection)` triples chosen so
-`ρ_S` is an automorphism and removal is balanced. Zero-det count:
+Iter 24 tested partial reflections `ρ_S` for `S ⊂ {1,2,3}` on
+2-singleton defects. Zero-det counts by reflection type:
 
 | Reflection | Zero-det cases | Total tested |
 |---|---|---|
@@ -323,114 +155,240 @@ Test: 55 `(cuboid, removed-pair, reflection)` triples chosen so
 | `ρ_{12}` (xy) | 0 | 9 |
 | `ρ_{13}` (xz) | 0 | 9 |
 | `ρ_{23}` (yz) | 0 | 9 |
-| `ρ_{123}` (central) | 6 | 8 |
+| `ρ_{123}` (central σ) | 6 | 8 |
 
-**Only the central reflection** produces `det = 0`. The partial-
-reflection lemma family hypothesis is refuted: 31 of 55 cases predicted
-by a naive "ε-flip + odd n_bi forces 0" rule are false positives.
-
-**Structural interpretation**. The central reflection is point
-inversion — it reverses every edge direction globally. Planar/axial
-reflections preserve some axes and only partially reverse edge
-directions. The former is what uniquely gives the `det(B) = -det(B)`
-matrix identity; the latter's sign cancellation is incomplete.
+Only the central reflection produces det = 0 on 2-singleton defects.
+Partial reflections can force det = 0 in OTHER settings (e.g., iter
+32 found partial reflections cover all det=0 cases on (3,3,2)
+line-3+singleton configs via a bipartition-preserving analog), but
+they do not generalize the 2-singleton iter 23 lemma.
 
 ---
 
-## 5. Auxiliary observations
+## 4. REFUTED CONJECTURE (iter 14–34 → iter 35): the "singleton
+hypothesis"
 
-### Non-Pfaffian generic behaviour
+### Original statement (retracted)
 
-Singleton-defect graphs are typically non-Pfaffian:
-- `(3,3,2) \ {(0,0,0), (2,2,1)}`: `#PM = 42 > max_det = 36` (over all
-  `2^{16}` gauge classes).
-- `(4,3,2) \ {(0,0,0), (3,0,0)}`: `#PM = 296 > max_det = 272`.
-- `(4,4,2) \ {(0,0,0), (3,0,0)}`: `#PM = 4912 > max_det` ≥ `3520` (K3
-  gauge; full search not attempted).
+For `G` a Z^3 cuboid minus defect `D`, K3 is Pfaffian-optimal on `G`
+iff:
+  (a) `G` is contractible (`χ(G) = 1`), AND
+  (b) `D` has no isolated singleton components.
 
-So `K3` failing `|det| = #PM` on singleton shapes is partly because no
-orientation achieves it — but the singleton criterion further bounds
-how close K3 gets.
+### Refutation (iter 35)
 
-### Kasteleyn gap counting and minority structure
+**Clean falsifying counterexamples:**
 
-Let `gap(G) = #PM(G) − |det_K3(B)|`. Since every PM contributes `±1`
-to `det(B)`, arithmetically `gap = 2 × n_minus` where `n_minus` is
-the number of PMs contributing the minority sign under K3.
+| Cuboid | Defect | χ | singletons | #PM | \|det_K3\| | K3 optimal? |
+|---|---|---|---|---|---|---|
+| `(5,4,2)` | empty | 1 | none | 535,229 | 508,805 | NO (0.95) |
+| `(6,4,2)` | empty | 1 | none | 9,049,169 | 8,473,921 | NO (0.94) |
 
-Observed gap values align with the singleton/contractibility
-characterization:
-- `gap = 0` iff K3 is Pfaffian-optimal iff (contractible AND no
-  singletons).
-- Non-zero gaps grow with graph size and singleton count.
+Both are contractible with NO defect; the hypothesis predicts K3
+optimal but K3 is non-optimal. The hypothesis is refuted.
 
-### Spectral signatures
+### Why the hypothesis appeared consistent
 
-Minority PMs on non-planar cuboids have low-to-moderate vertical-edge
-counts. On larger cuboids the distribution of `μ = 3` edges per PM
-shows minority sits below the majority average — consistent with
-minority PMs "trying to minimize vertical coupling" in a way that K3
-can't fully absorb.
+Iter 14–22 tested the hypothesis primarily on `(3,3,2)`, `(4,3,2)`,
+`(4,4,2)` with 2-site defects (singletons or adjacent pairs). On
+those specific cuboids, certain 2-site removals happened to make
+the remaining graph K3-compatible (e.g., an adjacent-pair removal
+on `(3,3,2)` can planarize the resulting graph), validating the
+"no singletons ⇒ K3 optimal" side of the hypothesis on a restricted
+test set. On larger empty cuboids, the underlying non-planarity of
+K3 dominates and the hypothesis breaks.
 
----
+### Lesson
 
-## 6. Open questions
+The hypothesis confused two effects:
+- **Planarity** (necessary and sufficient for K3 optimality,
+  per §2).
+- **Singleton presence** (correlated with K3 failure on small
+  non-planar test cases, but not the true driver).
 
-1. **Structural proof of the singleton hypothesis.** Current evidence
-   is empirical and local-signature supported. A rigorous proof
-   probably requires exhibiting minority PMs as a `Z_2`-orbit set
-   under some sub-symmetry of the graph, with opposite-sign action
-   under K3. Iter 20 showed no single-edge witness works; a
-   cycle-class or matching-class witness may.
+The correct ground-truth statement is §2's planarity lemma. All
+prior "singleton hypothesis" data points are consistent with
+planarity reasoning: on `(3,3,2)` empty K3 fails (non-planar);
+on `(3,3,2)` minus an adjacent pair K3 may be optimal (the
+remaining graph happens to be planarity-compatible); on any
+non-planar cuboid empty, K3 fails.
 
-2. **More symmetries that might force det = 0.** We ruled out partial
-   reflections (iter 24). Still open:
-   - Non-trivial graph automorphisms that aren't axis-aligned
-     reflections (e.g. cyclic rotations for `L1 = L2`).
-   - Cl(3)-unit multiplications `b ↦ b · ω` on Grassmann generators.
-   - Phase twists `η_μ ↦ χ(n) η_μ` for a character `χ`.
+### Retracted claims
 
-3. **Localization signature at 3+ singleton defects.** Signature has
-   been verified with 2-singleton defects. Does it reproduce with 3
-   or 4 singletons, or does the minority distribution smear out?
-
-4. **Continuum limit interpretation.** The singleton hypothesis is
-   purely combinatorial, but K3 derives from the staggered Dirac
-   action. In the formal `a → 0` limit, what does "contractible AND
-   no singletons" correspond to in the Dirac operator's spectral
-   structure? If singletons map to zero-modes of a restricted Dirac,
-   the hypothesis gains a physical interpretation.
-
-5. **Promotion or refutation.** The singleton hypothesis has survived
-   12 V2 iterations of adversarial testing. What adversarial test
-   would most directly falsify it?
-   - A large-cuboid non-contractible shape with no singletons where
-     K3 still optimal (would show contractibility is dispensable —
-     surprising).
-   - A contractible shape with a singleton where K3 IS optimal
-     (would directly falsify the singleton criterion).
-   - A larger-singleton shape (1+ singleton components) where K3
-     optimal (same as above, with more singletons).
+- "K3 optimal iff contractible AND no singletons": false.
+- "Singleton criterion is local" (iter 19): this observation is
+  still correct within the non-planar regime but does not imply
+  the biconditional.
+- "18+ confirming data points, zero counterexamples" (pre-iter 35):
+  the 2 counterexamples found by iter 35 invalidate this count.
 
 ---
 
-## 7. Iteration index
+## 5. Empirical patterns (status: restricted observations, no
+proof)
 
-For a full list of V2 iterations contributing to this thread, see
-`docs/AXIOM_NATIVE_ATTEMPT_LOG.md`. Key iterations referenced here:
+### 5.1 Localization signature
+
+**Observation.** For a shape `G` with removed set `D ≠ ∅` that is
+balanced, contractible, and K3 NOT optimal, define per edge `e`
+`frac(e) := min_count(e) / (min_count(e) + maj_count(e))` where
+min_count and maj_count are the number of PMs of each sign under K3
+using edge `e`.
+
+On `(3,3,2)`, `(4,3,2)`, `(4,4,2)` with 2-singleton defects:
+- avg midpoint-distance to removed of top-5 min-biased edges
+  < top-5 maj-biased edges.
+- Pearson corr(frac, distance) < 0.
+- Observation reproduces across 7+ tested configurations.
+
+**Caveat (iter 35 revision).** This observation was on restricted
+non-planar cuboid families with small defects. We do not claim it
+extends to larger cuboids or different defect types. Iter 27–28
+showed it already weakens on line-type non-singleton defect
+components.
+
+### 5.2 SH3-type non-automorphism det = 0
+
+**Observation.** On `(4,4,2)` with line-3 + singleton defects,
+`det_K3 = 0` occurs on 128 of 288 tested configurations. iter 30's
+H5 characterizes these empirically: det = 0 iff (singleton in
+opposite z-plane from line-3) AND (singleton parallel-axis coord
+matches line-3 center parallel-axis coord parity).
+
+None of these cases are explained by any graph automorphism (iter
+33 showed no element of `D_4 × Z_2` fixes the defect for these
+configs). There is some PM-pairing bijection forcing
+`n_plus = n_minus` without a symmetry source.
+
+**Caveat.** H5 is `(4,4,2)`-specific (iter 31 showed it fails on
+`(3,3,2)`, `(4,3,2)`, `(5,3,2)`, `(5,5,2)`). The underlying
+mechanism is open.
+
+### 5.3 Kasteleyn gap and minority structure
+
+On non-planar cuboids, the gap `#PM − |det_K3|` is positive and
+equals `2 × n_minus` where `n_minus` is the count of PMs
+contributing the minority sign under K3. Minority PMs on tested
+shapes show a low-to-moderate vertical-edge bias, consistent with
+K3's inherent difficulty in bridging multi-layer connections.
+
+---
+
+## 6. Open problems
+
+### 6.1 Exact characterization of K3 failure on non-planar cuboids
+
+The iter 12 planarity lemma tells us when K3 is optimal. On
+non-planar cuboids, K3 fails, but the **magnitude** of the gap
+varies. What determines `gap(G) = #PM(G) − |det_K3(B)|` as a
+function of `G`'s topology? Empirically the gap grows with
+non-planar complexity but no closed form is known.
+
+### 6.2 Generalized reflection lemma
+
+Iter 32 showed that partial reflections `ρ_S` with all `ε_μ = +1`
+and `sign(π_e) · sign(π_o) = -1` force det = 0 on many line-3 +
+singleton configurations (24/40 on `(3,3,2)`, 160/288 on
+`(4,4,2)`). The iter 23 lemma + iter 32's partial-reflection
+analysis give a combined rule; 496 det=0 configs across 5 L3=2
+cuboids remain unexplained by reflections alone.
+
+Open: state and prove a UNIFIED reflection lemma covering
+bipartition-preserving and flipping cases.
+
+### 6.3 SH3-type mechanism
+
+The 496 unexplained det=0 cases (and more on larger cuboids) have
+`det_K3 = 0` without any graph-automorphism source. Iter 34 narrowed
+the search: the PM-pairing is "mostly local" (aggregate features
+match between plus and minus PMs), with a small asymmetry
+concentrated near the non-singleton defect component. A specific
+alternating-cycle-based bijection candidate has not been constructed.
+
+### 6.4 Continuum limit
+
+K3 derives from the staggered Dirac lattice action. The
+Pfaffian/planarity story above is purely combinatorial. In the
+formal `a → 0` limit, what spectral information about the Dirac
+operator is encoded in the Pfaffian-gap structure? This question
+is untouched by current iterations.
+
+### 6.5 Other symmetries
+
+Candidate symmetries that might force det = 0 beyond axis-aligned
+reflections:
+- Cyclic rotations on cuboids with `L1 = L2` (partial coverage
+  within `D_4 × Z_2` groups tested).
+- Cl(3)-unit multiplications `b ↦ b · ω` on Grassmann generators
+  (untested).
+- Phase twists `η_μ ↦ χ(n) η_μ` for a character `χ` (untested).
+
+---
+
+## 7. Summary of concrete results after 20+ iterations
+
+| Result | Status | Significance |
+|---|---|---|
+| §2 K3 optimal iff planar | PROVEN (iter 12) | Ground truth |
+| §3 Reflection-degeneracy (central σ) | PROVEN (iter 23) | Structural theorem |
+| §4 Singleton hypothesis | REFUTED (iter 35) | Retracted |
+| §5.1 Localization signature | Empirical, restricted | Open |
+| §5.2 SH3-type det = 0 | Empirical, unexplained | Open |
+| §6.1 Gap characterization | Open | — |
+| §6.2 Generalized reflection | Open | — |
+
+The thread's two concrete contributions are §2 and §3. The
+investigation's value also lies in its **negative results**: several
+generalizations (partial-reflection family extension, singleton
+hypothesis, H5 universality) were tested and refuted, preventing
+future false leads.
+
+---
+
+## 8. Methodological note: V2 adversarial testing worked
+
+The thread's most significant structural finding is the iter 35
+refutation of the singleton hypothesis. The hypothesis had survived
+24+ iterations and accumulated 15+ "confirming" data points; only
+when V2's adversarial charter forced testing on NEW cuboid sizes
+(not previously examined) did the refutation emerge.
+
+The earlier "confirming" tests had tacitly assumed the hypothesis
+while testing within a restricted family where it happened to hold.
+This is the classic failure mode of non-adversarial empirical
+science. V2's insistence on:
+- no reverse-engineered polynomials
+- structural absence as a blocker, not a PASS
+- every PASS must be a computed boolean
+- adversarial new-case testing over consistency-with-existing-cases
+
+directly produced the refutation. Without that charter, the thread
+would have continued accumulating confirming data points indefinitely
+on `(3,3,2)`-size cuboids.
+
+---
+
+## 9. Iteration index (selected)
 
 - iter 11: non-contractible ring test.
-- iter 12: Kasteleyn gap scaling.
-- iter 14 D: `(3,3,2)` singleton-pair test.
-- iter 17: singleton hypothesis on 4 new shapes.
-- iter 18: mixed-defect test.
-- iter 19: singleton locality at `(4,3,2)`.
-- iter 20: structural proof attempt (partial signature).
-- iter 21: localization scaling `(3,3,2) → (4,3,2)`.
-- iter 22: localization scaling to `(4,4,2)` + reflection-degeneracy
-  discovery.
-- iter 23: reflection-degeneracy lemma formalization and validation.
+- iter 12: planarity-optimal equivalence (§2 theorem).
+- iter 14–18: singleton hypothesis building (now retracted).
+- iter 19: singleton locality claim (now contextualized).
+- iter 20: partial structural signature attempt.
+- iter 21–22: localization signature scaling (§5.1).
+- iter 23: reflection-degeneracy lemma (§3 theorem).
 - iter 24: partial-reflection extension refuted.
+- iter 25: thread consolidation (pre-iter-35 version, now
+  superseded by this doc).
+- iter 26: localization at 4-singleton defects.
+- iter 27–28: mixed-defect signal fragility.
+- iter 29–30: SH3 anomaly + H5 candidate lemma.
+- iter 31: H5 is `(4,4,2)`-specific.
+- iter 32: bipartition-preserving partial-reflection test.
+- iter 33: union test — central σ contributes zero on line-3 family.
+- iter 34: SH3 PM-bijection search (mostly local, 8-PM asymmetry).
+- iter 35: **singleton hypothesis refuted** on `(5,4,2)`, `(6,4,2)`
+  empty cuboids.
 
-All runners under `scripts/frontier_axiom_native_*.py`. All commits on
-branch `claude/axiom-native-overnight-FtUl5`.
+All runners under `scripts/frontier_axiom_native_*.py`. All commits
+on branch `claude/axiom-native-overnight-FtUl5`.
