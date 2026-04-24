@@ -1,0 +1,120 @@
+# Planck Boundary-Density Extension Theorem
+
+**Date:** 2026-04-24
+**Status:** retained positive support theorem for the conditional Planck lane
+**Runner:** `scripts/frontier_planck_boundary_density_extension.py`
+
+## Purpose
+
+This note closes a constructive sub-gap in the conditional Planck packet.
+
+The packet already derives the primitive source-free coefficient
+
+```text
+c_cell = Tr((I_16 / 16) P_A) = 4 / 16 = 1/4.
+```
+
+What was implicit is the finite-boundary extension: if the primitive boundary
+count is accepted as the microscopic gravitational boundary/action carrier,
+does the one-cell coefficient extend consistently from one primitive face to
+arbitrary finite boundary patches?
+
+Yes.  Locality, additivity, and cubic-frame orientation symmetry force the
+unique finite-boundary density
+
+```text
+N_A(P) = c_cell * A(P) / a^2
+```
+
+on every finite rectangular boundary patch `P` tiled by primitive faces.
+
+## The theorem
+
+Let `P` be a finite boundary patch tiled by primitive lattice faces.  Assume:
+
+1. **locality:** the boundary count is a sum of primitive face contributions;
+2. **additivity:** disjoint primitive-face unions add;
+3. **cubic-frame orientation symmetry:** `xy`, `yz`, and `zx` primitive faces
+   carry the same source-free coefficient;
+4. **primitive normalization:** one primitive face carries `c_cell = 1/4`.
+
+Then for any finite rectangular patch with `n` primitive faces,
+
+```text
+N_A(P) = n * c_cell.
+```
+
+Since `A(P) = n a^2`, this is equivalently
+
+```text
+N_A(P) = c_cell * A(P) / a^2.
+```
+
+The extension is unique: any local additive rule agreeing on one primitive
+face must agree on every finite patch because every finite patch is a finite
+union of primitive faces.
+
+## Planck normalization consequence
+
+With the gravitational carrier premise accepted, the extended microscopic
+boundary/action density is
+
+```text
+S_patch / k_B = c_cell * A / a^2.
+```
+
+Equating it to the standard gravitational area/action density,
+
+```text
+S_grav / k_B = A / (4 l_P^2),
+```
+
+gives
+
+```text
+c_cell / a^2 = 1 / (4 l_P^2),
+a / l_P = sqrt(4 c_cell) = 1.
+```
+
+So the positive closure here is not merely single-cell arithmetic.  The exact
+`1/4` coefficient now has a unique additive finite-boundary extension on the
+conditional carrier surface.
+
+## What this closes
+
+This closes the finite-boundary extension sub-gap:
+
+> Once the primitive boundary count is accepted as the microscopic
+> gravitational boundary/action carrier, the primitive `c_cell = 1/4`
+> coefficient extends uniquely and additively to finite boundary patches.
+
+This is a positive support theorem for the Planck conditional packet.
+
+## What remains open
+
+This note still does **not** derive the carrier premise itself.
+
+The remaining positive Planck target is:
+
+> derive that the primitive one-step boundary/worldtube count is the
+> microscopic carrier of the gravitational boundary/action density.
+
+The no-go notes remove two shortcuts to that target; this note adds the
+positive extension theorem that applies once the target is accepted or derived.
+
+## Verification
+
+Run:
+
+```bash
+python3 scripts/frontier_planck_boundary_density_extension.py
+```
+
+The runner checks:
+
+1. `c_cell = 1/4`;
+2. constant density on multiple finite rectangular patches;
+3. subdivision invariance;
+4. cubic-frame orientation symmetry;
+5. uniqueness from unit-cell normalization;
+6. the extended density still yields conditional `a/l_P = 1`.

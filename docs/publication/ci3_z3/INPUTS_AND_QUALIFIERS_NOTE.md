@@ -58,6 +58,7 @@ Current absolute-scale package rule:
   `a^(-1) = M_Pl` as an explicit Planck-scale pin
 - that pin is not yet derived from the minimal accepted theorem stack
 - the 2026-04-24 conditional-completion packet derives `c_cell = 1/4` and
+  the unique additive finite-boundary density extension, then gives
   `a/l_P = 1` after the primitive boundary count is accepted as the
   gravitational boundary/action carrier; that carrier identification is still
   the explicit Planck-lane condition
@@ -70,6 +71,7 @@ Current absolute-scale package rule:
 - authority:
   [PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md](../../PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md),
   [PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md](../../PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md),
+  [PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md](../../PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md),
   [PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md](../../PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md),
   [PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md](../../PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md)
 

@@ -32,6 +32,11 @@ in
 [PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md](./PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md):
 
 - exact primitive coefficient `c_cell = Tr((I_16/16) P_A) = 4/16 = 1/4`;
+- positive finite-boundary density extension:
+  [PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md](./PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md)
+  proves the unique additive finite-patch law
+  `N_A(P) = c_cell A(P)/a^2` once the primitive boundary count is accepted as
+  the gravitational boundary/action carrier;
 - exact same-surface normalization algebra
   `c_cell/a^2 = 1/(4 l_P^2)`, hence `a/l_P = 1`;
 - explicit finite-only, parent-source, and SI-unit blockers.
@@ -134,6 +139,10 @@ Current blocker:
 
 - the conditional completion packet derives `c_cell = 1/4` and proves that the
   standard gravitational area/action normalization gives `a/l_P = 1`;
+- the finite-boundary density extension is closed positively: locality,
+  additivity, cubic-frame orientation symmetry, and primitive normalization
+  uniquely extend the `1/4` cell coefficient to finite rectangular boundary
+  patches;
 - the remaining load-bearing question is whether the primitive one-step
   boundary/worldtube count is derived as the microscopic carrier of the
   gravitational boundary/action density, rather than accepted as the Planck
@@ -197,6 +206,8 @@ Until one of the three targets closes, the correct package statement is:
 - the new conditional-completion theorem records exactly what would be needed
   to promote the pin: accept or derive the primitive boundary count as the
   gravitational boundary/action carrier
+- the finite-boundary density extension is a retained positive support theorem
+  on that conditional carrier surface
 - the finite-automorphism-only response route is a retained no-go, not an
   alternate promotion path
 - the carrier-only parent-source scalar route is a retained no-go, not an

@@ -105,11 +105,12 @@ Validate with:
 - absolute-scale scoping:
   the current package carries `a^(-1) = M_Pl` as a Planck-scale package pin on
   the accepted physical-lattice reading; the 2026-04-24 conditional-completion
-  packet derives `c_cell = 1/4` and `a/l_P = 1` once the primitive boundary
-  count is accepted as the gravitational boundary/action carrier, while the
+  packet derives `c_cell = 1/4`, closes the unique finite-boundary density
+  extension positively, and gives `a/l_P = 1` once the primitive boundary count
+  is accepted as the gravitational boundary/action carrier, while the
   minimal-stack derivation of that carrier identification remains open; the
-  finite-automorphism-only response route and carrier-only parent-source
-  scalar route are closed negatively
+  finite-automorphism-only response route and carrier-only parent-source scalar
+  route are closed negatively
 
 Start with:
 
@@ -117,6 +118,7 @@ Start with:
 - [USABLE_DERIVED_VALUES_INDEX.md](./USABLE_DERIVED_VALUES_INDEX.md)
 - [PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md](../../PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md)
 - [PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md](../../PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md)
+- [PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md](../../PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md)
 - [PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md](../../PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md)
 - [PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md](../../PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md)
 
@@ -128,6 +130,7 @@ Validate with:
 - `python3 scripts/frontier_higgs_mass_full_3loop.py`
 - `python3 scripts/frontier_planck_scale_program_audit.py`
 - `python3 scripts/frontier_planck_conditional_completion_audit.py`
+- `python3 scripts/frontier_planck_boundary_density_extension.py`
 - `python3 scripts/frontier_planck_finite_response_nogo.py`
 - `python3 scripts/frontier_planck_parent_source_hidden_character_nogo.py`
 

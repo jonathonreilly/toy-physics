@@ -4,6 +4,8 @@
 **Status:** retained support / conditional completion packet, not an
 unqualified minimal-stack derivation
 **Runner:** `scripts/frontier_planck_conditional_completion_audit.py`
+**Companion support runner:**
+`scripts/frontier_planck_boundary_density_extension.py`
 **Companion no-go runners:**
 `scripts/frontier_planck_finite_response_nogo.py`,
 `scripts/frontier_planck_parent_source_hidden_character_nogo.py`
@@ -20,8 +22,9 @@ result is a conditional completion theorem:
 > On the physical-lattice package, with explicit source-free primitive-cell
 > state semantics and with the primitive one-step boundary count identified as
 > the microscopic carrier of the standard gravitational area/action density,
-> the dimensionless cell coefficient is `1/4`, and the normalization gives
-> `a/l_P = 1`.
+> the dimensionless cell coefficient is `1/4`, the coefficient extends
+> uniquely and additively to finite boundary patches, and the normalization
+> gives `a/l_P = 1`.
 
 The current public package may use that as a support theorem for the Planck
 pin. It should not replace the public statement that the minimal-stack
@@ -81,7 +84,24 @@ This is not a numerical fit for `a`; it is the algebraic consequence of the
 primitive coefficient once the gravitational carrier identification is
 accepted.
 
-### 3. Finite-only target is blocked
+### 3. Finite-boundary density extension
+
+The primitive result is not only single-cell arithmetic. Under locality,
+additivity, cubic-frame orientation symmetry, and the primitive normalization
+`c_cell = 1/4`, every finite rectangular boundary patch tiled by primitive
+faces has the unique additive density
+
+```text
+N_A(P) = c_cell A(P) / a^2.
+```
+
+This is closed positively in
+[PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md](./PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md):
+once the primitive boundary count is accepted as the microscopic
+gravitational boundary/action carrier, the `1/4` coefficient extends
+consistently from one primitive face to arbitrary finite boundary patches.
+
+### 4. Finite-only target is blocked
 
 The branch correctly separates the conditional completion from a stronger
 finite-automorphism-only claim.
@@ -110,7 +130,7 @@ identity, and the infinitesimal tangent available from finite automorphisms
 alone is zero-dimensional. It cannot supply the local metric/coframe response
 directions required for the gravitational carrier identification.
 
-### 4. Realified response is a conditional response surface
+### 5. Realified response is a conditional response surface
 
 The branch also sharpens the role of realification. If one asks for
 first-order physical response maps from the retained translation module
@@ -128,7 +148,7 @@ gravity questions. It does not erase the distinction between:
 - deriving `a/l_P = 1` on the realified physical-response surface plus the
   gravitational boundary/action carrier identification.
 
-### 5. Cosmic pins and SI hbar remain nonclaims
+### 6. Cosmic pins and SI hbar remain nonclaims
 
 Present age, present radius, or other cosmic address data can select a
 macroscopic comparison surface. They do not determine the microscopic tick or
@@ -152,7 +172,16 @@ The exact open blockers are now sharper than before:
    no-hidden-character law fixing `delta = 0`; the carrier-only scalar diagram
    is now closed negatively.
 
-Closed negative route:
+Closed positive support theorem:
+
+- **Finite-boundary density extension.**
+  [PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md](./PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md)
+  closes the finite-patch extension positively. Given the gravitational
+  carrier identification, locality, additivity, and cubic-frame orientation
+  symmetry uniquely extend `c_cell = 1/4` to `N_A(P) = c_cell A(P)/a^2` on
+  finite rectangular boundary patches.
+
+Closed negative routes:
 
 - **Finite-response-only route.**
   [PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md](./PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md)
@@ -170,9 +199,10 @@ Closed negative route:
 Use:
 
 > The conditional Planck packet derives an exact primitive coefficient
-> `c_cell = 1/4` and a conditional same-surface normalization `a/l_P = 1` once
-> the primitive boundary count is accepted as the microscopic gravitational
-> area/action carrier.
+> `c_cell = 1/4`, a unique additive finite-boundary density extension, and a
+> conditional same-surface normalization `a/l_P = 1` once the primitive
+> boundary count is accepted as the microscopic gravitational area/action
+> carrier.
 
 Do not use:
 
