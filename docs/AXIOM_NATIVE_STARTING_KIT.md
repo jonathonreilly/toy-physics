@@ -245,6 +245,27 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   on planar bipartite Z^3 subgraphs /
   `frontier_axiom_native_kasteleyn_plaquette_sign.py` /
   Target 2 sub-step 2d.
+- SHARPER SCOPE CHARACTERIZATION: K3 Pfaffian-optimality iff
+  contractible AND each defect component bipartite-balanced.
+  Tested (3,3,2) minus 4 sites in three patterns:
+  * Connected L-tetromino {(0,0,0), (1,0,0), (2,0,0), (2,1,0)}:
+    1 defect component with 2 even + 2 odd. K3 optimal (20=20).
+  * Connected 2x2 square {(0,0,0), (1,0,0), (0,1,0), (1,1,0)}:
+    1 component, 2+2 balanced. K3 optimal (24=24).
+  * Disconnected 2+2 {(0,0,0),(1,0,0)}u{(2,2,0),(2,2,1)}:
+    2 components, EACH 1+1 balanced. K3 optimal (30=30).
+  This third case DISPROVES the simpler "connected defect"
+  conjecture but supports the sharper criterion: each component
+  must have equal evens and odds. Combined with iter-14 2-site
+  diagonal case (two singleton components, each unbalanced) where
+  K3 FAILED: the data strongly supports "balanced components" as
+  the criterion, not "connectedness". Physical intuition: balanced
+  components have no parity flow across the boundary; K3's
+  translation-invariant phases can accommodate them locally.
+  Unbalanced components create a parity imbalance that K3 cannot
+  correct /
+  `frontier_axiom_native_defect_connectedness_test.py` /
+  Target 2 sub-step 2d-V2-balanced-defect-components.
 - SCOPE REFINEMENT: K3 optimality depends on CONNECTEDNESS of
   the defect region, not just contractibility. Tested (3,3,2)
   minus two sites in four configurations, all contractible
