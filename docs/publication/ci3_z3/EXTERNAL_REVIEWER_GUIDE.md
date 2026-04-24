@@ -50,8 +50,10 @@ For the explicit package boundary, use:
 - gauge and matter:
   exact native `SU(2)`, graph-first structural `SU(3)`, anomaly-forced `3+1`,
   retained `S^3` topology closure, one-generation closure, SM hypercharge
-  uniqueness/electric-charge quantization, retained three-generation structure
-  on the no-rooting / residual substrate boundary, with an exact retained
+  uniqueness/electric-charge quantization, `SU(2)` Witten global-anomaly
+  cancellation, `SU(3)^3` cubic gauge anomaly cancellation, B-L anomaly
+  freedom as a gaugeable option, retained three-generation structure on the
+  no-rooting / residual substrate boundary, with an exact retained
   `hw=1` observable no-proper-quotient theorem,
   exact `I_3 = 0`, exact CPT, retained Bell/CHSH support on explicit
   two-species lattice systems with KS taste measurements, emergent Lorentz

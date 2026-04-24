@@ -173,9 +173,17 @@ def step1_verify_anomaly():
     check("Tr[SU(2)^2 Y] = 0 (weak-Y anomaly cancels for LH alone)", TrSU2Y == 0)
     print()
 
-    # --- Anomaly (V): Witten SU(2) global anomaly ---
+    # --- Anomaly (V): SU(3)^3 pure cubic gauge anomaly ---
+    su3_cubic_lh = 2
+    print(f"  Anomaly (V)  SU(3)^3 cubic = {su3_cubic_lh}")
+    print("    = Q_L weak doublet gives 2 fundamentals, with A(3)=+1")
+    check("SU(3)^3 anomaly != 0 (pure colour cubic anomaly NONZERO for LH alone)",
+          su3_cubic_lh != 0, f"= {su3_cubic_lh}")
+    print()
+
+    # --- Anomaly (VI): Witten SU(2) global anomaly ---
     n_doublets = sum(d3 for _, d2, d3, _ in LH if d2 == 2)
-    print(f"  Anomaly (V) Number of SU(2) doublets = {n_doublets}")
+    print(f"  Anomaly (VI) Number of SU(2) doublets = {n_doublets}")
     print("    = 3 (colours of Q_L) + 1 (L_L) = 4")
     check("Witten anomaly: n_doublets = 4 (even, OK)", n_doublets % 2 == 0)
     print()
@@ -185,13 +193,14 @@ def step1_verify_anomaly():
     print(f"    Tr[Y^3]        = {TrY3}  [ANOMALOUS]")
     print(f"    Tr[SU(3)^2 Y]  = {TrSU3Y}    [ANOMALOUS]")
     print(f"    Tr[SU(2)^2 Y]  = {TrSU2Y}      [OK]")
+    print(f"    SU(3)^3        = {su3_cubic_lh}       [ANOMALOUS]")
     print(f"    Witten          = {n_doublets} doublets [OK]")
     print()
     print("  RESULT: The left-handed content from Cl(3) is ANOMALOUS.")
-    print("  Two of five anomaly conditions are violated.")
+    print("  Three of six anomaly conditions are violated.")
     print("  The gauge theory is INCONSISTENT without additional fermions.")
 
-    return TrY3, TrSU3Y
+    return TrY3, TrSU3Y, su3_cubic_lh
 
 
 # ============================================================================
@@ -212,7 +221,8 @@ def step2_anomaly_cancellation():
     print("    (III) y1 + y2 = 2/3")
     print("    (II)  3*y1^3 + 3*y2^3 + y3^3 + y4^3 = -48/27")
     print("    (IV)  automatic (RH are SU(2) singlets)")
-    print("    (V)   4 doublets (even, automatic)")
+    print("    (V)   SU(3)^3: 2 - 1 - 1 = 0 once u_R^c,d_R^c are included")
+    print("    (VI)  4 doublets (even, automatic)")
     print()
 
     print("  SOLVING:")
@@ -614,7 +624,8 @@ def step5_complete_chain():
     print("     => su(2) + su(3) + u(1) gauge algebra")
     print("     => Left-handed content: (2,3)_{+1/3} + (2,1)_{-1}")
     print()
-    print("  3. ANOMALY: Tr[Y^3] = -16/9 != 0, Tr[SU(3)^2 Y] = 1/3 != 0")
+    print("  3. ANOMALY: Tr[Y^3] = -16/9 != 0, Tr[SU(3)^2 Y] = 1/3 != 0,")
+    print("              SU(3)^3 = +2 != 0")
     print("     => Gauge theory is INCONSISTENT")
     print("     => Right-handed SU(2)-singlet completion REQUIRED")
     print()

@@ -33,13 +33,17 @@ Evaluating the standard anomaly traces:
 | Tr[Y^3]                 | -16/9   | Nonzero   |
 | Tr[SU(3)^2 Y]           | 1/3     | Nonzero   |
 | Tr[SU(2)^2 Y]           | 0       | OK        |
+| SU(3)^3                 | +2      | Nonzero   |
 | Witten SU(2) (doublets) | 4 (even)| OK        |
 
 The Witten row is the nonperturbative global `SU(2)` anomaly count; its
 standalone retained packaging is
 [`SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md`](SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md).
+The pure color `SU(3)^3` row is the nontrivial cubic gauge anomaly; its
+standalone retained packaging is
+[`SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md`](SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md).
 
-Two anomaly coefficients are nonzero. By the Adler--Bell--Jackiw theorem
+Three anomaly coefficients are nonzero. By the Adler--Bell--Jackiw theorem
 [1,2], the gauge theory violates unitarity: Ward identities break and
 longitudinal gauge boson modes fail to decouple. The theory is
 inconsistent as a quantum field theory.
@@ -64,10 +68,11 @@ identification `nu_R = 0` selects the Standard Model branch:
 
     y_1 = 4/3,   y_2 = -2/3,   y_3 = -2,   y_4 = 0
 
-These are exactly the Standard Model hypercharge assignments. All five
-anomaly traces vanish for the completed spectrum. The time theorem only
-needs the existence of an SU(2)-singlet opposite-chirality completion; it
-does not rely on uniqueness from anomaly arithmetic alone.
+These are exactly the Standard Model hypercharge assignments. The
+hypercharge anomaly traces, the `SU(3)^3` cubic anomaly, and the Witten
+`SU(2)` count vanish for the completed spectrum. The time theorem only needs
+the existence of an SU(2)-singlet opposite-chirality completion; it does not
+rely on uniqueness from anomaly arithmetic alone.
 
 *Remark (alternative chirality mechanisms).* In a local quantum field
 theory on a lattice, the only algebraic source of a chirality grading

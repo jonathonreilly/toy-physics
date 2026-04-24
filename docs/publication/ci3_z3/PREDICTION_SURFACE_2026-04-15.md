@@ -179,6 +179,14 @@ conceptual pressure.
     Higgs doublets or classify higher-isospin `SU(2)` representations
   - authority:
     [SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md](../../SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md)
+- `SU(3)^3` cubic gauge anomaly cancellation:
+  - on retained color-charged matter, the pure cubic color anomaly index is
+    `+2 - 1 - 1 = 0`
+  - this is a colored-sector anomaly closure; it does not derive `N_c=3`,
+    the color-singlet lepton completion, or uniqueness among all
+    `SU(3)^3`-free extensions
+  - authority:
+    [SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md](../../SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md)
 - emergent Lorentz invariance:
   - leading anisotropic correction first appears at dimension 6
   - unique cubic-harmonic `ell = 4` fingerprint

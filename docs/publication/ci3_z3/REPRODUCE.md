@@ -41,6 +41,7 @@ python3 scripts/frontier_graph_first_su3_integration.py
 python3 scripts/frontier_anomaly_forces_time.py
 python3 scripts/frontier_sm_hypercharge_uniqueness.py
 python3 scripts/frontier_su2_witten_z2_anomaly.py
+python3 scripts/frontier_su3_cubic_anomaly_cancellation.py
 python3 scripts/frontier_bminusl_anomaly_freedom.py
 python3 scripts/frontier_three_generation_observable_theorem.py
 python3 scripts/frontier_strong_cp_theta_zero.py

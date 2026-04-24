@@ -68,10 +68,10 @@ Validate with:
   confinement on the graph-first color sector
 - retained matter structure:
   one-generation closure, SM hypercharge uniqueness/electric-charge
-  quantization, `SU(2)` Witten global-anomaly cancellation, B-L anomaly
-  freedom as a gaugeable option, three-generation observable/species closure,
-  exact `I_3 = 0`, exact CPT, Bell/CHSH support on explicit two-species lattice
-  systems
+  quantization, `SU(2)` Witten global-anomaly cancellation, `SU(3)^3` cubic
+  gauge anomaly cancellation, B-L anomaly freedom as a gaugeable option,
+  three-generation observable/species closure, exact `I_3 = 0`, exact CPT,
+  Bell/CHSH support on explicit two-species lattice systems
 - retained package-support lanes:
   `g_bare = 1` structural normalization and two-Ward 1PI closure
 - package-support atlas:
@@ -84,6 +84,7 @@ Start with:
 - [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](../../GRAPH_FIRST_SU3_INTEGRATION_NOTE.md)
 - [STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md](../../STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md)
 - [SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md](../../SU2_WITTEN_Z2_ANOMALY_THEOREM_NOTE_2026-04-24.md)
+- [SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md](../../SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md)
 - [BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24.md](../../BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24.md)
 - [THREE_GENERATION_STRUCTURE_NOTE.md](../../THREE_GENERATION_STRUCTURE_NOTE.md)
 - [STRONG_CP_THETA_ZERO_NOTE.md](../../STRONG_CP_THETA_ZERO_NOTE.md)
@@ -94,6 +95,7 @@ Validate with:
 - `python3 scripts/frontier_graph_first_su3_integration.py`
 - `python3 scripts/frontier_sm_hypercharge_uniqueness.py`
 - `python3 scripts/frontier_su2_witten_z2_anomaly.py`
+- `python3 scripts/frontier_su3_cubic_anomaly_cancellation.py`
 - `python3 scripts/frontier_bminusl_anomaly_freedom.py`
 - `python3 scripts/frontier_generation_fermi_point.py`
 - `python3 scripts/frontier_three_generation_observable_theorem.py`

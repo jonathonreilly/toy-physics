@@ -43,6 +43,9 @@ The paper does **not** claim:
   `Y(nu_R)=0`, cross-generation uniqueness, or alternative gauge groups;
 - that the `SU(2)` Witten anomaly theorem constrains bosonic Higgs doublets,
   classifies higher-isospin `SU(2)` representations, or derives `N_c = 3`;
+- that the `SU(3)^3` cubic anomaly theorem derives `N_c = 3`, sees the
+  color-singlet lepton sector, or proves uniqueness among all color-anomaly-free
+  completions;
 - that every older Cabibbo / NNI / partial-Jarlskog route is current
   authority.
 - a full retained neutrino point-prediction package for the solar gap, PMNS
@@ -56,6 +59,8 @@ The current retained claim is:
   completion, anomaly equations, `Y(nu_R)=0`, and charge labelling;
 - nonperturbative `SU(2)` Witten global-anomaly cancellation on the retained
   fundamental weak-doublet content;
+- pure `SU(3)^3` cubic gauge anomaly cancellation on the retained
+  color-charged matter content;
 - promoted atlas/axiom CKM closure on the current chosen package surface.
 - bounded retained-package neutrino observable inequalities from the retained
   atmospheric scale plus normal ordering.
