@@ -615,3 +615,31 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   interactions on reflection-paired singleton configurations /
   `frontier_axiom_native_singleton_scaling_442.py` /
   Target 2 sub-step 2d-V2-singleton-scaling-442.
+- Reflection-degeneracy lemma (VALIDATED, candidate theorem):
+  For Z^3 cuboid (L1, L2, L3) minus two singletons r1, r2,
+  if (i) sigma(r1) = r2 with sigma(i,j,k) = (L1-1-i, L2-1-j,
+  L3-1-k) being central reflection, (ii) L1+L2+L3 is even
+  (sigma flips bipartition, so r1, r2 have opposite parity
+  and removal is balanced), (iii) n_bi (= |evens \ removed|)
+  is odd, and (iv) L1 is even (so the per-edge sign ratio
+  epsilon_2 = (-1)^{L1-1} under sigma is -1), then
+  |det_K3(B)| = 0 exactly. The ratio formulas for sigma's
+  action on K3 phases are derived from K3 directly:
+  eta_mu(sigma(o)) / eta_mu(e) = {+1, (-1)^{L1-1},
+  (-1)^{L1+L2}} for mu = 1, 2, 3, verified numerically on
+  (2,2,2), (3,3,2), (4,4,2), (4,3,2), (5,3,2), (6,4,2).
+  Lemma checked on 9 cuboid shapes: 5 positives where all
+  four conditions hold give |det| = 0 exactly
+  ((2,2,2)/(4,4,2)/(4,2,2)/(6,2,2)/(6,4,2) paired-diagonals);
+  3 negatives where at least one condition fails give
+  |det| != 0 ((3,3,2) L1 odd, (4,4,2) non-sigma-paired
+  control, (5,3,2) L1 odd); 1 unbalanced case excluded. The
+  lemma combines (a) sigma maps the truncated graph to
+  itself, (b) sigma induces a row+column swap on B (since
+  sigma flips parity), (c) eta_2 flips sign under sigma on
+  L1 even. This gives det(B) proportional to (-1)^{n_bi}
+  times det(B), forcing zero when n_bi is odd. First
+  CONCRETE structural theorem on axiom-native branch
+  derived from K1 + K2 + K3 alone /
+  `frontier_axiom_native_reflection_degeneracy_lemma.py` /
+  Target 2 sub-step 2d-V2-reflection-lemma.
