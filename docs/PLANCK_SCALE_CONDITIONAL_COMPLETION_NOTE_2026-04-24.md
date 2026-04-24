@@ -88,8 +88,8 @@ accepted.
 
 The primitive result is not only single-cell arithmetic. Under locality,
 additivity, cubic-frame orientation symmetry, and the primitive normalization
-`c_cell = 1/4`, every finite rectangular boundary patch tiled by primitive
-faces has the unique additive density
+`c_cell = 1/4`, every finite boundary patch that is a finite disjoint union of
+primitive faces has the unique additive density
 
 ```text
 N_A(P) = c_cell A(P) / a^2.
@@ -99,7 +99,7 @@ This is closed positively in
 [PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md](./PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md):
 once the primitive boundary count is accepted as the microscopic
 gravitational boundary/action carrier, the `1/4` coefficient extends
-consistently from one primitive face to arbitrary finite boundary patches.
+consistently from one primitive face to finite boundary patches.
 
 ### 4. Finite-only target is blocked
 
@@ -179,7 +179,7 @@ Closed positive support theorem:
   closes the finite-patch extension positively. Given the gravitational
   carrier identification, locality, additivity, and cubic-frame orientation
   symmetry uniquely extend `c_cell = 1/4` to `N_A(P) = c_cell A(P)/a^2` on
-  finite rectangular boundary patches.
+  finite face-union boundary patches.
 
 Closed negative routes:
 

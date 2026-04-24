@@ -141,7 +141,7 @@ Current blocker:
   standard gravitational area/action normalization gives `a/l_P = 1`;
 - the finite-boundary density extension is closed positively: locality,
   additivity, cubic-frame orientation symmetry, and primitive normalization
-  uniquely extend the `1/4` cell coefficient to finite rectangular boundary
+  uniquely extend the `1/4` cell coefficient to finite face-union boundary
   patches;
 - the remaining load-bearing question is whether the primitive one-step
   boundary/worldtube count is derived as the microscopic carrier of the

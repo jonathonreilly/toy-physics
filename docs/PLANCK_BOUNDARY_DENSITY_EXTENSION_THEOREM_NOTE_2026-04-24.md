@@ -19,18 +19,20 @@ count is accepted as the microscopic gravitational boundary/action carrier,
 does the one-cell coefficient extend consistently from one primitive face to
 arbitrary finite boundary patches?
 
-Yes.  Locality, additivity, and cubic-frame orientation symmetry force the
+Yes. Locality, additivity, and cubic-frame orientation symmetry force the
 unique finite-boundary density
 
 ```text
 N_A(P) = c_cell * A(P) / a^2
 ```
 
-on every finite rectangular boundary patch `P` tiled by primitive faces.
+on every finite boundary patch `P` that is a finite disjoint union of
+primitive faces. Rectangular patches are the simplest examples; the theorem is
+really a finite face-union extension.
 
 ## The theorem
 
-Let `P` be a finite boundary patch tiled by primitive lattice faces.  Assume:
+Let `P` be a finite boundary patch tiled by primitive lattice faces. Assume:
 
 1. **locality:** the boundary count is a sum of primitive face contributions;
 2. **additivity:** disjoint primitive-face unions add;
@@ -38,7 +40,7 @@ Let `P` be a finite boundary patch tiled by primitive lattice faces.  Assume:
    carry the same source-free coefficient;
 4. **primitive normalization:** one primitive face carries `c_cell = 1/4`.
 
-Then for any finite rectangular patch with `n` primitive faces,
+Then for any finite patch with `n` primitive faces,
 
 ```text
 N_A(P) = n * c_cell.
@@ -76,7 +78,7 @@ c_cell / a^2 = 1 / (4 l_P^2),
 a / l_P = sqrt(4 c_cell) = 1.
 ```
 
-So the positive closure here is not merely single-cell arithmetic.  The exact
+So the positive closure here is not merely single-cell arithmetic. The exact
 `1/4` coefficient now has a unique additive finite-boundary extension on the
 conditional carrier surface.
 
@@ -115,6 +117,9 @@ The runner checks:
 1. `c_cell = 1/4`;
 2. constant density on multiple finite rectangular patches;
 3. subdivision invariance;
-4. cubic-frame orientation symmetry;
-5. uniqueness from unit-cell normalization;
-6. the extended density still yields conditional `a/l_P = 1`.
+4. constant density on non-rectangular finite face unions;
+5. cubic-frame orientation symmetry;
+6. uniqueness from unit-cell normalization on rectangular and non-rectangular
+   finite face unions;
+7. the extended density still yields conditional `a/l_P = 1`;
+8. the result is an extension theorem, not a carrier-identification theorem.

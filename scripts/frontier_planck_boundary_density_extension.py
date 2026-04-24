@@ -6,6 +6,8 @@ from __future__ import annotations
 import math
 import sys
 
+Face = tuple[str, int, int]
+
 
 def check(name: str, passed: bool, detail: str) -> bool:
     status = "PASS" if passed else "FAIL"
@@ -25,6 +27,18 @@ def rectangle_count(width: int, height: int, c_cell: float) -> float:
 
 def tile_count(tiles: list[tuple[int, int]], c_cell: float) -> float:
     return sum(rectangle_count(width, height, c_cell) for width, height in tiles)
+
+
+def rectangle_faces(orientation: str, width: int, height: int) -> set[Face]:
+    return {
+        (orientation, x, y)
+        for x in range(width)
+        for y in range(height)
+    }
+
+
+def face_union_count(faces: set[Face], c_cell: float) -> float:
+    return len(faces) * c_cell
 
 
 def density(count: float, area_units: int) -> float:
@@ -64,10 +78,39 @@ def main() -> int:
         f"whole={whole:.12f}, tiled={tiled:.12f}",
     )
 
+    l_patch = {
+        ("xy", 0, 0),
+        ("xy", 1, 0),
+        ("xy", 2, 0),
+        ("xy", 0, 1),
+        ("xy", 0, 2),
+    }
+    zigzag_patch = {
+        ("xy", 0, 0),
+        ("xy", 1, 0),
+        ("xy", 1, 1),
+        ("xy", 2, 1),
+        ("xy", 2, 2),
+        ("xy", 3, 2),
+    }
+    total += 1
+    passed += check(
+        "non-rectangular finite face unions have the same local density",
+        abs(density(face_union_count(l_patch, c_cell), len(l_patch)) - c_cell)
+        < 1e-15
+        and abs(
+            density(face_union_count(zigzag_patch, c_cell), len(zigzag_patch))
+            - c_cell
+        )
+        < 1e-15,
+        f"L-patch density={density(face_union_count(l_patch, c_cell), len(l_patch)):.12f}; "
+        f"zigzag density={density(face_union_count(zigzag_patch, c_cell), len(zigzag_patch)):.12f}",
+    )
+
     orientation_counts = {
-        "xy": rectangle_count(5, 7, c_cell),
-        "yz": rectangle_count(5, 7, c_cell),
-        "zx": rectangle_count(5, 7, c_cell),
+        "xy": face_union_count(rectangle_faces("xy", 5, 7), c_cell),
+        "yz": face_union_count(rectangle_faces("yz", 5, 7), c_cell),
+        "zx": face_union_count(rectangle_faces("zx", 5, 7), c_cell),
     }
     total += 1
     passed += check(
@@ -84,11 +127,16 @@ def main() -> int:
         unit_sum = tile_count([(1, 1)] * (width * height), c_cell)
         direct = rectangle_count(width, height, c_cell)
         unique_extension_ok &= abs(unit_sum - direct) < 1e-15
+    unique_extension_ok &= abs(
+        face_union_count(l_patch | zigzag_patch, c_cell)
+        - face_union_count(l_patch, c_cell)
+        - face_union_count(zigzag_patch - l_patch, c_cell)
+    ) < 1e-15
     total += 1
     passed += check(
-        "unit-cell normalization uniquely fixes every finite rectangular patch",
+        "unit-cell normalization uniquely fixes finite face-union patches",
         unique_extension_ok,
-        "all sampled patches equal the sum of their unit-face tiles",
+        "sampled rectangles and non-rectangular unions equal the sum of their unit-face tiles",
     )
 
     # Same-surface normalization remains the conditional Planck result.
