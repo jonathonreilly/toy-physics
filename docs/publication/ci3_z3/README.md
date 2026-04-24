@@ -47,9 +47,10 @@ For the full package-capture inventory, use:
   charged-lepton Koide, with the remaining work reduced to two explicit
   physical bridges plus the separate overall lepton scale `v_0`
 - bounded companion surface:
-  Higgs/vacuum, down-type CKM-dual ratios, proton lifetime, neutron EDM
-  continuation, taste-scalar companion, gravitational decoherence, monopole
-  mass, cosmology numerics, BH entropy companion, GW echo null result
+  Higgs/vacuum, down-type CKM-dual ratios, neutrino absolute-mass observable
+  bounds, proton lifetime, neutron EDM continuation, taste-scalar companion,
+  gravitational decoherence, monopole mass, cosmology numerics, BH entropy
+  companion, GW echo null result
 
 ## What Is Publicly Surfaced Here
 

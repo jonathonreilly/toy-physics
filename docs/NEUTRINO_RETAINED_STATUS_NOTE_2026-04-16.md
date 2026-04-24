@@ -30,6 +30,9 @@ It is a curated boundary/support packet:
 - exact negative Majorana lower-level pairing result on the retained
   charge-preserving lane
 - exact negative sole-axiom closeout for the current retained neutrino bank
+- retained-package observable bounds from the retained atmospheric scale plus
+  retained normal ordering: `Σm_ν > 50.58 meV`, `m_β ≤ 50.58 meV`,
+  `m_ββ ≤ 50.58 meV`, and `0 < Δm²_21 < Δm²_31`
 
 Primary package entry points:
 
@@ -90,6 +93,8 @@ Primary package entry points:
   [NEUTRINO_TWO_AMPLITUDE_LAST_MILE_REDUCTION_NOTE.md](./NEUTRINO_TWO_AMPLITUDE_LAST_MILE_REDUCTION_NOTE.md)
 - exact retained-neutrino sole-axiom negative closeout:
   [NEUTRINO_SOLE_AXIOM_FULL_CLOSURE_BOUNDARY_NOTE.md](./NEUTRINO_SOLE_AXIOM_FULL_CLOSURE_BOUNDARY_NOTE.md)
+- retained-package absolute-mass observable bounds:
+  [NEUTRINO_RETAINED_OBSERVABLE_BOUNDS_THEOREM_NOTE_2026-04-24.md](./NEUTRINO_RETAINED_OBSERVABLE_BOUNDS_THEOREM_NOTE_2026-04-24.md)
 
 ## What Is Not Claimed
 
@@ -99,6 +104,8 @@ This packet does **not** claim:
 - a positive neutrino Dirac Yukawa activation law
 - a theorem-grade PMNS value-selection law from the current exact bank
 - a positive retained Majorana realization
+- robust point predictions for `m_1`, `m_2`, `m_β`, `m_ββ`, `Σm_ν`, or
+  `Δm²_21` beyond the retained-package inequality bounds
 - promotion to the flagship retained paper surface
 
 So the live status is:
@@ -125,3 +132,4 @@ So the live status is:
 - [frontier_pmns_right_conjugacy_invariant_nogo.py](../scripts/frontier_pmns_right_conjugacy_invariant_nogo.py)
 - [frontier_neutrino_two_amplitude_last_mile.py](../scripts/frontier_neutrino_two_amplitude_last_mile.py)
 - [frontier_neutrino_sole_axiom_full_closure_boundary.py](../scripts/frontier_neutrino_sole_axiom_full_closure_boundary.py)
+- [frontier_neutrino_retained_observable_bounds.py](../scripts/frontier_neutrino_retained_observable_bounds.py)

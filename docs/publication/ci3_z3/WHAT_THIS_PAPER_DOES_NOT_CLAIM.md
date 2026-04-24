@@ -41,11 +41,15 @@ The paper does **not** claim:
   evasion theorem;
 - that every older Cabibbo / NNI / partial-Jarlskog route is current
   authority.
+- a full retained neutrino point-prediction package for the solar gap, PMNS
+  angles, Majorana phases, or absolute mass sum.
 
 The current retained claim is:
 
 - three-generation matter structure on the physical-lattice surface;
 - promoted atlas/axiom CKM closure on the current chosen package surface.
+- bounded retained-package neutrino observable inequalities from the retained
+  atmospheric scale plus normal ordering.
 
 ## 4. Higgs, top, and cosmology
 

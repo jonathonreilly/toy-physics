@@ -39,9 +39,9 @@ questions:
   identification; finite-response-only and carrier-only parent-source
   shortcuts are retained no-gos
 - bounded but explicit forward/companion surface:
-  proton lifetime, CKM-only neutron EDM continuation, vacuum criticality,
-  taste-scalar near-degeneracy, benchmark gravitational decoherence, and
-  monopole mass
+  neutrino absolute-mass observable bounds, proton lifetime, CKM-only neutron
+  EDM continuation, vacuum criticality, taste-scalar near-degeneracy,
+  benchmark gravitational decoherence, and monopole mass
 - exact structural predictions with delayed observability:
   emergent-Lorentz dimension-6 onset and action-surface `theta_eff = 0`
 - remaining open flagship bridge package:

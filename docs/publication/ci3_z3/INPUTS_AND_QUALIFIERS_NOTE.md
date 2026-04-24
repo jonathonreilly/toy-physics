@@ -145,6 +145,7 @@ theorem core.
 - bounded secondary prediction surface:
   - proton lifetime
   - down-type CKM-dual mass ratios
+  - neutrino absolute-mass observable bounds
   - vacuum critical stability
   - taste-scalar near-degeneracy
   - benchmark gravitational decoherence

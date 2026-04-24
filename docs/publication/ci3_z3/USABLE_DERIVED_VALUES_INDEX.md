@@ -143,6 +143,18 @@ These are usable, but only with their qualifiers attached.
 | `m_H` framework-side 3-loop | `125.1 GeV` | derived | derived Higgs route with an explicit retention-decomposed budget `125.04 ± 3.17 GeV` on the accepted package route | Higgs/vacuum reuse is safe with the retention-analysis budget carried explicitly when precision matters | [HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md](../../HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md), [HIGGS_MASS_DERIVED_NOTE.md](../../HIGGS_MASS_DERIVED_NOTE.md), [HIGGS_MASS_RETENTION_ANALYSIS_NOTE_2026-04-18.md](../../HIGGS_MASS_RETENTION_ANALYSIS_NOTE_2026-04-18.md) |
 | `sqrt(sigma)` | `465 MeV` | bounded companion | retained `alpha_s` + EFT bridge | bounded confinement phenomenology only | [CONFINEMENT_STRING_TENSION_NOTE.md](../../CONFINEMENT_STRING_TENSION_NOTE.md) |
 
+## E. Neutrino Bounded Observable Values
+
+These are reusable as retained-package inequality bounds, not as positive
+point predictions for the full neutrino lane.
+
+| Quantity | Canonical value on `main` | Claim class | Import class | Safe reuse | Authority |
+|---|---:|---|---|---|---|
+| retained atmospheric light scale `m_3` | `50.58 meV` | retained support | retained atmospheric-scale package | upper/lower endpoint for retained neutrino-observable bounds | [DM_NEUTRINO_ATMOSPHERIC_SCALE_THEOREM_NOTE_2026-04-15.md](../../DM_NEUTRINO_ATMOSPHERIC_SCALE_THEOREM_NOTE_2026-04-15.md), [NEUTRINO_RETAINED_OBSERVABLE_BOUNDS_THEOREM_NOTE_2026-04-24.md](../../NEUTRINO_RETAINED_OBSERVABLE_BOUNDS_THEOREM_NOTE_2026-04-24.md) |
+| `Σm_ν` strict floor | `> 50.58 meV` | bounded companion | retained `m_3` + retained normal ordering | cosmology falsification floor; not a point prediction for the mass sum | [NEUTRINO_RETAINED_OBSERVABLE_BOUNDS_THEOREM_NOTE_2026-04-24.md](../../NEUTRINO_RETAINED_OBSERVABLE_BOUNDS_THEOREM_NOTE_2026-04-24.md) |
+| tritium endpoint `m_β` ceiling | `≤ 50.58 meV` | bounded companion | retained `m_3` + retained normal ordering + PMNS unitarity | beta-decay endpoint ceiling; not a point prediction for `m_β` | [NEUTRINO_RETAINED_OBSERVABLE_BOUNDS_THEOREM_NOTE_2026-04-24.md](../../NEUTRINO_RETAINED_OBSERVABLE_BOUNDS_THEOREM_NOTE_2026-04-24.md) |
+| Majorana effective mass `m_ββ` ceiling | `≤ 50.58 meV` | bounded companion | retained `m_3` + retained normal ordering + triangle inequality | `0νββ` ceiling only; not a positive Majorana signal claim | [NEUTRINO_RETAINED_OBSERVABLE_BOUNDS_THEOREM_NOTE_2026-04-24.md](../../NEUTRINO_RETAINED_OBSERVABLE_BOUNDS_THEOREM_NOTE_2026-04-24.md) |
+
 ## Rule for downstream work
 
 Before reusing a number elsewhere in the repo:

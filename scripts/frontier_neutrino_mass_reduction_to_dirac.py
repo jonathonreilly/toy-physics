@@ -202,7 +202,8 @@ def current_atlas_gap_check() -> None:
     has_majorana_row = "| Three-generation Majorana current-stack zero matrix |" in atlas
     has_higgs_row = (
         "| Higgs / vacuum package |" in matrix
-        and "[HIGGS_MASS_BOUNDARY_NOTE.md]" in matrix
+        and "[HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md]" in matrix
+        and "[HIGGS_MASS_DERIVED_NOTE.md]" in matrix
     )
     has_dirac_reduction_row = "| Neutrino mass reduction to Dirac lane |" in atlas
 

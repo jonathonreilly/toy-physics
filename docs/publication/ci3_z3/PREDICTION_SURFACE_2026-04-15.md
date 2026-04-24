@@ -90,6 +90,15 @@ carried by the current package.
     scale closure of the `5/6` bridge remains open
   - authority:
     [DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md](../../DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md)
+- neutrino absolute-mass observable bounds:
+  - `Σm_ν > 50.58 meV` as a strict retained-package floor
+  - `m_β ≤ 50.58 meV` and `m_ββ ≤ 50.58 meV` as PMNS/phase-free ceilings
+  - qualifier:
+    these are bounds from the retained atmospheric scale plus retained normal
+    ordering, not point predictions for the solar gap, PMNS angles, or
+    Majorana phases
+  - authority:
+    [NEUTRINO_RETAINED_OBSERVABLE_BOUNDS_THEOREM_NOTE_2026-04-24.md](../../NEUTRINO_RETAINED_OBSERVABLE_BOUNDS_THEOREM_NOTE_2026-04-24.md)
 - vacuum critical stability:
   - the current `lambda(M_Pl) = 0` route lands on the critical /
     non-metastable side of the usual Standard Model comparison surface
@@ -133,7 +142,9 @@ conceptual pressure.
   this is not yet a full instanton-measure or `eta'` closure claim
 - PMNS:
   the retained positive PMNS lane is still absent on current routes, with the
-  current frontier reducing to the missing nonzero current `J_chi`
+  current frontier reducing to the missing nonzero current `J_chi`; the
+  absolute-mass lane nevertheless now carries retained-package observable
+  bounds rather than a full PMNS or solar-gap closure
 - charged-lepton Koide:
   both physical bridges remain open:
   the extremal/source-law bridge behind `Q = 2/3` and the physical

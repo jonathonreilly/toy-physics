@@ -170,7 +170,8 @@ Validate with:
 - flagship closed package on the manuscript surface:
   dark-matter exact-target PMNS package
 - bounded retained/support packet:
-  neutrino reduction/current/no-go stack
+  neutrino reduction/current/no-go stack plus retained-package absolute-mass
+  observable bounds
 
 Current status:
 
@@ -179,11 +180,16 @@ Current status:
 - broader target-free global uniqueness remains out of scope
 - the neutrino positive retained lane remains absent; current retained routes
   reduce the open frontier to the missing nonzero current `J_chi`
+- the retained atmospheric scale plus retained normal ordering force bounded
+  neutrino-observable statements, including `Σm_ν > 50.58 meV`,
+  `m_β ≤ 50.58 meV`, and `m_ββ ≤ 50.58 meV`; these are not point predictions
+  for the solar gap, PMNS angles, or Majorana phases
 
 Start with:
 
 - [DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md](../../DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md)
 - [NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md](../../NEUTRINO_RETAINED_STATUS_NOTE_2026-04-16.md)
+- [NEUTRINO_RETAINED_OBSERVABLE_BOUNDS_THEOREM_NOTE_2026-04-24.md](../../NEUTRINO_RETAINED_OBSERVABLE_BOUNDS_THEOREM_NOTE_2026-04-24.md)
 
 Validate with:
 
@@ -192,6 +198,7 @@ Validate with:
 - `python3 scripts/frontier_dm_pmns_ordered_chain_graded_current_delta_closure_2026_04_21.py`
 - `python3 scripts/frontier_neutrino_mass_reduction_to_dirac.py`
 - `python3 scripts/frontier_pmns_selector_current_stack_zero_law.py`
+- `python3 scripts/frontier_neutrino_retained_observable_bounds.py`
 
 ## Cosmology and Companion Phenomenology
 
