@@ -39,6 +39,7 @@ SUBCHECKS = [
     "frontier_planck_gravity_sector_same_surface_closure_theorem.py",
     "frontier_planck_airtight_review_closure_theorem.py",
     "frontier_planck_bare_cell_alone_closure_program.py",
+    "frontier_planck_bare_finite_cell_canonical_state_theorem.py",
     "frontier_planck_hbar_status_and_remaining_objections_audit.py",
     "frontier_planck_hbar_attack_order_theorem.py",
 ]
@@ -88,6 +89,7 @@ def main() -> int:
     same_surface_gravity = read("docs/PLANCK_SCALE_GRAVITY_SECTOR_SAME_SURFACE_CLOSURE_THEOREM_2026-04-23.md")
     airtight = read("docs/PLANCK_SCALE_AIRTIGHT_REVIEW_CLOSURE_THEOREM_2026-04-23.md")
     bare_cell_program = read("docs/PLANCK_SCALE_BARE_CELL_ALONE_CLOSURE_PROGRAM_2026-04-23.md")
+    bare_cell_state = read("docs/PLANCK_SCALE_BARE_FINITE_CELL_CANONICAL_STATE_THEOREM_2026-04-23.md")
     hbar_audit = read("docs/PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md")
     hbar_attack = read("docs/PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md")
 
@@ -328,6 +330,15 @@ def main() -> int:
         and "not the submitted Planck theorem" in bare_cell_program
         and "Do not claim the stronger sentence until B1-B4 are theorem-grade"
         in bare_cell_program,
+    )
+
+    total += 1
+    passed += expect(
+        "bare-finite-cell-canonical-state-closes-b2",
+        "PLANCK_SCALE_BARE_FINITE_CELL_CANONICAL_STATE_THEOREM_2026-04-23.md"
+        in reviewer
+        and "This closes B2 of the bare-cell-alone upgrade program" in bare_cell_state
+        and "`rho_cell = I_16 / 16`" in bare_cell_state,
     )
 
     total += 1

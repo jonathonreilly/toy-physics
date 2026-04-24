@@ -70,13 +70,18 @@ This is plausible because:
 Current status:
 
 - closed on the explicit source-free/default-datum surface;
-- can be made closer to bare algebra if reformulated as a canonical-state
-  naturality theorem rather than an axiom-extension theorem.
+- upgraded to a bare finite-cell naturality theorem in:
+  [PLANCK_SCALE_BARE_FINITE_CELL_CANONICAL_STATE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_FINITE_CELL_CANONICAL_STATE_THEOREM_2026-04-23.md).
 
 Success condition:
 
 `rho_cell = I_16/16` follows from "no extra structure on the bare finite cell,"
 not from an added state-semantics postulate.
+
+Current upgrade status:
+
+`B2` is closed, provided "bare cell alone" is read in the standard
+no-extra-structure / automorphism-natural sense.
 
 ### B3. Gravity Sector From Algebra
 
@@ -149,11 +154,37 @@ Therefore the stronger target cannot be achieved by algebraic counting alone.
 It can only be achieved by deriving the missing physical semantics from the
 algebra.
 
+## Where/When Pins
+
+The whole program may use present-location, present-time, or present-age data as
+**address pins**. That is not the problem.
+
+Allowed:
+
+- use the current cosmic time/age to select which macroscopic worldtube or
+  horizon surface is being evaluated;
+- use present-location data to say where the observer sits in the already
+  derived/accepted physical history;
+- use the selected macroscopic surface as the common surface for a same-density
+  comparison.
+
+Forbidden:
+
+- choose a microscopic tick count `N = T_U / t_P` and then claim the tick is
+  derived;
+- choose a horizon cell count `A_U / l_P^2` and then claim the lattice spacing is
+  derived;
+- use present-time data to smuggle in `G`, `hbar`, `l_P`, or the gravitational
+  area/action density.
+
+So the pins are fair as coordinates on the map. They are not fair as hidden unit
+maps. This matches the cosmic-address import theorem.
+
 ## Ordered Attack
 
 1. **Canonical-state theorem.** Prove the source-free primitive-cell state is the
-   unique automorphism-natural finite-cell state. This is the most tractable
-   upgrade and would remove the source-free-state premise.
+   unique automorphism-natural finite-cell state. This is now closed by the bare
+   finite-cell canonical state theorem.
 2. **Physical-lattice theorem.** Strengthen the existing no-regulator note into
    a bare observable-ontology theorem: local translation/event sectors are
    physical because they are operationally distinguishable on the retained

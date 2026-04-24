@@ -15,6 +15,7 @@
 **Gravity-sector same-surface closure:** [PLANCK_SCALE_GRAVITY_SECTOR_SAME_SURFACE_CLOSURE_THEOREM_2026-04-23.md](./PLANCK_SCALE_GRAVITY_SECTOR_SAME_SURFACE_CLOSURE_THEOREM_2026-04-23.md)
 **Airtight review closure:** [PLANCK_SCALE_AIRTIGHT_REVIEW_CLOSURE_THEOREM_2026-04-23.md](./PLANCK_SCALE_AIRTIGHT_REVIEW_CLOSURE_THEOREM_2026-04-23.md)
 **Bare-cell-alone upgrade program:** [PLANCK_SCALE_BARE_CELL_ALONE_CLOSURE_PROGRAM_2026-04-23.md](./PLANCK_SCALE_BARE_CELL_ALONE_CLOSURE_PROGRAM_2026-04-23.md)
+**Bare finite-cell canonical state:** [PLANCK_SCALE_BARE_FINITE_CELL_CANONICAL_STATE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_FINITE_CELL_CANONICAL_STATE_THEOREM_2026-04-23.md)
 **Hbar/unit-convention audit:** [PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md](./PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md)
 **Hbar attack order:** [PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md](./PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md)
 
@@ -52,6 +53,10 @@ claim. The upgrade path is recorded separately: derive physical-lattice
 semantics, source-free state semantics, the gravity sector, and same-surface
 boundary representation as theorems from the bare algebra rather than accepting
 them as review-contract terms.
+
+The first upgrade target is now closed: the source-free state follows as the
+unique automorphism-natural state of the bare no-extra-structure finite cell,
+`rho_cell = I_16/16`.
 
 The prior hardening removed the broad multiplicative boundary-unit ambiguity
 and reduced the additive boundary-density law to
@@ -350,6 +355,7 @@ python3 scripts/frontier_planck_boundary_parent_source_equivalence_theorem.py
 python3 scripts/frontier_planck_gravity_sector_same_surface_closure_theorem.py
 python3 scripts/frontier_planck_airtight_review_closure_theorem.py
 python3 scripts/frontier_planck_bare_cell_alone_closure_program.py
+python3 scripts/frontier_planck_bare_finite_cell_canonical_state_theorem.py
 python3 scripts/frontier_planck_hbar_status_and_remaining_objections_audit.py
 python3 scripts/frontier_planck_hbar_attack_order_theorem.py
 ```
@@ -371,6 +377,7 @@ python3 scripts/frontier_planck_hbar_attack_order_theorem.py
 - [PLANCK_SCALE_GRAVITY_SECTOR_SAME_SURFACE_CLOSURE_THEOREM_2026-04-23.md](./PLANCK_SCALE_GRAVITY_SECTOR_SAME_SURFACE_CLOSURE_THEOREM_2026-04-23.md) - final hardening of GSI as same-surface single-sector compatibility with the accepted gravity/action stack.
 - [PLANCK_SCALE_AIRTIGHT_REVIEW_CLOSURE_THEOREM_2026-04-23.md](./PLANCK_SCALE_AIRTIGHT_REVIEW_CLOSURE_THEOREM_2026-04-23.md) - final reviewer-gate theorem: closed on the accepted physical-gravity review contract, while explicitly refusing the bare-cell-alone overclaim.
 - [PLANCK_SCALE_BARE_CELL_ALONE_CLOSURE_PROGRAM_2026-04-23.md](./PLANCK_SCALE_BARE_CELL_ALONE_CLOSURE_PROGRAM_2026-04-23.md) - stronger-target program: how to upgrade the accepted review-contract theorem into a future bare-cell-alone theorem by deriving the missing semantics.
+- [PLANCK_SCALE_BARE_FINITE_CELL_CANONICAL_STATE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_FINITE_CELL_CANONICAL_STATE_THEOREM_2026-04-23.md) - B2 closure: the source-free state is the unique automorphism-natural state of the bare no-extra-structure finite cell.
 - [PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md) - explicit P1 package-boundary move.
 - [PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md) - hostile-review context, with its supersession note respected.
 - [PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md](./PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md) - hbar/unit-convention audit: the packet derives a dimensionless Planck coefficient, not the quantum of action.

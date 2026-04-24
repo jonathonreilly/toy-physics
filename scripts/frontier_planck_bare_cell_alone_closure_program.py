@@ -93,6 +93,16 @@ def main() -> int:
 
     total += 1
     passed += expect(
+        "where-when-pins-are-address-not-units",
+        "Where/When Pins" in note
+        and "address pins" in note
+        and "choose a microscopic tick count" in note
+        and "not fair as hidden unit\nmaps" in note,
+        "where/when pins are admitted only as address data",
+    )
+
+    total += 1
+    passed += expect(
         "reviewer-packet-links-program",
         "PLANCK_SCALE_BARE_CELL_ALONE_CLOSURE_PROGRAM_2026-04-23.md" in reviewer,
         "canonical packet links the stronger-target program as non-current scope",
