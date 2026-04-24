@@ -245,6 +245,20 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   on planar bipartite Z^3 subgraphs /
   `frontier_axiom_native_kasteleyn_plaquette_sign.py` /
   Target 2 sub-step 2d.
+- Kasteleyn gap scaling across Z^3 cuboids: defining
+  `gap(G) := #PM(G) - |det(B_G)|` under K3 staggered phases, we
+  find on 7 tested cuboids that `gap(G) = 0` iff G is planar, and
+  non-planar gaps grow sharply:
+  `(2,2,1)=0, (2,2,2)=0, (2,2,3)=0, (3,2,2)=0` (all planar),
+  `(3,3,2)=4, (4,3,2)=40, (4,4,2)=1024=2^10` (all non-planar).
+  Since every matching contributes `+/-1` to `det(B)`, arithmetic
+  identity `gap = 2 * minority_matching_count` holds universally
+  (so (4,3,2) has 20 minority matchings and (4,4,2) has 512
+  predicted). The 2^8 shared factor of `#PM(4,4,2)=32000` and
+  `|det|(4,4,2)=30976` points toward a `2^8`-multiplicity
+  structure in the matching signed-sum decomposition /
+  `frontier_axiom_native_kasteleyn_gap_scaling.py` /
+  Target 2 sub-step 2d-V2-gap-scaling.
 - 3x3x2 Kasteleyn obstruction cycle is a specific length-6
   alternating cycle. Finding the smallest single-cycle difference
   between a minority matching and a majority matching gives a

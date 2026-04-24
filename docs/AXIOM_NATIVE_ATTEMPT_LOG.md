@@ -630,3 +630,40 @@ alternative sign assignment that adjusts for the non-local
 embedding (a "3D Kasteleyn orientation"), or characterize what
 additional sign flip on which edges would restore |det| = #PM.
 
+[2026-04-23 10:30] V2 iteration: Kasteleyn gap scaling — PASS
+Tried: V2 claim "planar iff gap(G) = 0" on 7 cuboids, spanning
+planar (2,2,1) through non-planar (4,4,2). Wrote
+scripts/frontier_axiom_native_kasteleyn_gap_scaling.py which:
+(i) computes |det(B_G)| via sympy symbolic det,
+(ii) computes #PM(G) via Ryser permanent of unsigned block
+(fast O(n*2^n) on a balanced 2n-vertex bipartite graph),
+(iii) reports gap and planarity classification.
+Results:
+  (2,2,1) planar:     gap = 0
+  (2,2,2) planar:     gap = 0
+  (2,2,3) planar:     gap = 0
+  (3,2,2) planar:     gap = 0
+  (3,3,2) non-planar: gap = 4
+  (4,3,2) non-planar: gap = 40
+  (4,4,2) non-planar: gap = 1024 = 2^10
+Pattern: "planar iff gap = 0" holds on all tested cuboids. Non-
+planar gaps grow sharply -- 4, 40, 1024 -- with striking arithmetic
+(e.g., #PM(4,4,2) = 32000 = 2^8 * 125, |det| = 30976 = 2^8 * 121,
+gap = 2^8 * (125-121) = 2^10). The shared 2^8 factor hints at a
+multiplicity structure in the matching signed sum.
+Arithmetic identity: each matching contributes +/-1, so
+gap = 2 * minority_count. Predicts minority = 20 on (4,3,2) and
+minority = 512 on (4,4,2) (not yet verified by enumeration).
+Accepted because: hostile audit verdict = clean. 9 computed
+record() booleans, no narrative PASSes.
+This is the third V2 iteration on the Kasteleyn thread. Cumulative
+V2 progress:
+  - Scope limit discovered: K3 Kasteleyn fails beyond planar.
+  - Specific break: 3x3x2 gap = 4, 2 minority matchings.
+  - Obstruction cycle: length-6, in a 2x2x2 sub-cube.
+  - Scaling: planar iff gap=0 holds on 7 cuboids; gaps 4, 40, 1024.
+  - Shared 2^8 factor in (4,4,2) case hints at hidden structure.
+Next V2 vector: factor the matching signed-sum to understand the
+2^8 structure in (4,4,2). Either it's a combinatorial property of
+the graph or an artifact of K3's specific sign pattern.
+
