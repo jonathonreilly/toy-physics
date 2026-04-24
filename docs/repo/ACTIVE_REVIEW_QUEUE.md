@@ -40,7 +40,13 @@ Current science/open-lane follow-ups:
 - boundary-law / holographic lane: keep the effect bounded and do not overread
   it as a holography derivation
 - memory lane: protocol- and geometry-stable observable remains open
-- emergent-geometry growth: multi-size, multi-seed stability remains open
+- emergent-geometry growth: multi-size, multi-seed stability remains open;
+  failure pattern is now frozen with a `G=0` null control in
+  [`EMERGENT_GEOMETRY_MULTISIZE_NULL_CONTROL_NOTE_2026-04-24.md`](../EMERGENT_GEOMETRY_MULTISIZE_NULL_CONTROL_NOTE_2026-04-24.md):
+  the matter-coupling materially exceeds the null floor (force battery: G=100
+  beats G=0 by `>= 2` ROBUST_TOWARD counts at all 5 sizes), but never reaches
+  the unanimous 5/5 size-stability gate on either the force battery or the
+  displacement test (max 4/5 at `n=80`)
 
 ## Intake Format
 
