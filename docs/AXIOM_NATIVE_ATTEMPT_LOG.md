@@ -1348,3 +1348,51 @@ localization signature as supporting structural evidence.
 under best-gauge-candidate) is a cleaner invariant than
 n_minus_K3 for characterizing singleton obstruction.
 
+[2026-04-24 03:55] V2 iteration: localization scaling to (4,4,2) + symmetry discovery — PASS
+Tried: scale iter 21 localization signature to a third graph
+size (4,4,2) with 2 singleton corners. First attempt used
+{(0,0,0), (3,3,1)} (diagonal corners). Unexpected failure: K3
+det came out EXACTLY zero, n_plus = n_minus = 1684. Analyzed
+the cause: reflection through the cuboid center (1.5, 1.5,
+0.5) swaps the two removed sites; since L1 = 4 is even,
+eta_2(n) = (-1)^n1 flips sign under reflection; this induces
+det(B) -> (-1)^n_bi * det(B), and with n_bi = 15 odd the
+equation forces det(B) = 0. Rewrote the runner
+scripts/frontier_axiom_native_singleton_scaling_442.py to
+test three shapes:
+  T2a diagonal {(0,0,0), (3,3,1)}: reflection-paired, n_bi=15
+    odd, K3 det=0 by forced symmetry.
+  T2b x-opposite {(0,0,0), (3,0,0)}: not reflection-paired
+    through center, det=3520.
+  T2c y-opposite {(0,0,0), (0,3,0)}: not reflection-paired
+    through center, det=3520 (x-y symmetric twin of T2b).
+Results:
+  T2a: #PM=3368, n_plus=n_minus=1684, K3 det=0. Localization
+    degenerates trivially (min and maj labels symmetric).
+  T2b: #PM=4912, n_plus=4216, n_minus=696, K3 det=3520.
+    Top-5 min-biased avg midpoint-dist=1.307, top-5 maj=1.500,
+    Pearson corr=-0.166. Localization holds.
+  T2c: #PM=4912, n_plus=696, n_minus=4216, K3 det=3520.
+    Identical numbers to T2b with +/- labels swapped.
+    Top-5 min-biased avg dist=1.307, top-5 maj=1.500,
+    corr=-0.166. Localization holds.
+Hence localization reproduces at 3 graph sizes (3,3,2),
+(4,3,2), (4,4,2) on non-degenerate singleton configurations,
+with a newly discovered symmetry-degeneracy rule: reflection-
+paired singletons with odd bipartite dim on L_1 even force
+det=0.
+Accepted because: hostile audit verdict = clean. 27 record()
+booleans (all PASS). No narrative PASSes.
+Bonus discovery: the T2a symmetry-degeneracy is itself a
+new structural fact about K3: reflection-paired singleton
+configurations on even-L1 cuboids give det(B) = 0 when
+|even sites minus removed evens| is odd. This is a CONCRETE
+STRUCTURAL LEMMA (not just empirical) -- the symmetry
+argument is a proof. Worth writing up separately.
+Next V2 vector: (a) Formalize the reflection-degeneracy lemma
+as a standalone result, generalized to any L_1, L_2, L_3 with
+appropriate parity conditions. (b) Run the singleton
+scaling test on asymmetric 3-singleton shapes to see if
+signature holds beyond the 2-singleton case. (c) Consolidate
+the Kasteleyn thread into a formal conjecture document.
+

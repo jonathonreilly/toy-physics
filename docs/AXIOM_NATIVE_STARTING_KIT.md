@@ -590,3 +590,28 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   resolves this to n_minus_under_K3 = 34, n_minus_optimal = 12 /
   `frontier_axiom_native_singleton_scaling_test.py` /
   Target 2 sub-step 2d-V2-singleton-scaling.
+- Localization signature holds at (4,4,2) third graph size on
+  NON-degenerate singleton configurations. On (4,4,2) minus
+  {(0,0,0), (3,0,0)} (T2b): #PM = 4912, det_K3 = 3520,
+  top-5 minority-biased avg midpoint-dist 1.307, top-5 majority
+  1.500, Pearson corr -0.166. On (4,4,2) minus {(0,0,0), (0,3,0)}
+  (T2c): identical values (T2b and T2c are geometrically x-y
+  swapped). Localization (min<maj AND corr<0) holds on both.
+  Hence the signature now reproduces across three graph sizes
+  (3,3,2)/(4,3,2)/(4,4,2) with consistent direction; the
+  Pfaffian obstruction carried by singleton defects is an
+  O(1)-radius local property, not a small-graph artifact.
+  IMPORTANT CAVEAT: on the diagonal shape (4,4,2) minus
+  {(0,0,0), (3,3,1)} (T2a), the reflection of the cuboid
+  through its center swaps the two removed singletons;
+  combined with odd bipartite dimension n_bi=15 and the
+  eta_2 = (-1)^n1 sign flip under L1=4 reflection, this
+  forces K3 |det(B)| = 0 exactly (n_plus = n_minus = 1684).
+  In this symmetry-locked configuration, 'minority' and
+  'majority' labels are arbitrary and the localization
+  signature degenerates trivially -- not a counterexample to
+  localization, but a reminder that any structural statement
+  about K3 PM signs must account for reflection/eta-phase
+  interactions on reflection-paired singleton configurations /
+  `frontier_axiom_native_singleton_scaling_442.py` /
+  Target 2 sub-step 2d-V2-singleton-scaling-442.
