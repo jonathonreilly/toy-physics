@@ -60,7 +60,15 @@ Current science/open-lane follow-ups:
   thermodynamic-limit gravity coefficient renormalization), and the
   finite-size constant `C(G)` grows monotonically and sub-linearly in G
   (C(5)=2.63, C(10)=4.21, C(20)=6.09)
-- memory lane: protocol- and geometry-stable observable remains open
+- memory lane: protocol- and geometry-stable observable remains open; the
+  fixed-protocol size sweep in
+  [`MEMORY_LANE_FIXED_PROTOCOL_SIZE_STABILITY_NOTE_2026-04-24.md`](../MEMORY_LANE_FIXED_PROTOCOL_SIZE_STABILITY_NOTE_2026-04-24.md)
+  identifies the prior protocol-fragility as an artifact of
+  `steps = max(60, N)` scaling the evolution window. With steps=60, pulse
+  window=[10,20], and fixed positions, the memory signal is size-stable across
+  `N in {61, 81, 101, 121}` at spread/median = 21.8%, with control drift
+  ~0%, consistent positive sign, and median shift +1.5e-2. Multi-parameter
+  (pulse amplitude, mu^2, damping) stability remains the next step
 - emergent-geometry growth: multi-size, multi-seed stability remains open;
   failure pattern is now frozen with a `G=0` null control in
   [`EMERGENT_GEOMETRY_MULTISIZE_NULL_CONTROL_NOTE_2026-04-24.md`](../EMERGENT_GEOMETRY_MULTISIZE_NULL_CONTROL_NOTE_2026-04-24.md):
