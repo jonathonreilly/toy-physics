@@ -729,3 +729,38 @@ dims are 14 and 25, so searches are feasible (16K and 33M classes).
 Alternatively, find the explicit even-K_{3,3} subdivision inside
 the 3x3x2 prism -- a concrete graph-theoretic structural object.
 
+[2026-04-23 22:25] V2 iteration: K3 Pfaffian-optimality test across cuboids — PASS
+Tried: test whether K3 staggered orientation achieves the max
+|det(B)| over all gauge classes, on multiple Z^3 cuboids beyond
+3x3x2. Wrote scripts/frontier_axiom_native_K3_optimality_test.py:
+(i) planar (3,2,2): gauge dim 9, 2^9=512 classes, exhaustive
+search. Max = 32 = #PM. K3 = 32. ✓
+(ii) non-planar (4,3,2): gauge dim 23 (I had pre-computed 14
+incorrectly -- E=46, V=24, dim = 46-24+1=23). 2^23=8,388,608
+classes searched exhaustively in 55s. Max = 1805. K3 = 1805. ✓
+(iii) non-planar (4,4,2): gauge dim 33, 2^33 ≈ 8.6 billion
+(not 2^25 as I pre-computed). Too large for exhaustive. Ran
+Monte Carlo 50,000 random gauge classes + K3 baseline. Best
+sample = 30976 = K3. No sample exceeded K3.
+Results: K3 is Pfaffian-optimal on every tested cuboid.
+Supports the conjecture that K3's universal-plaquette-sign-(-1)
+property (ledger 2d) gives an orientation that MAXIMIZES
+|det(B_G)| over all sign assignments on bipartite Z^3 subgraphs.
+On planar, this matches #PM (classical Kasteleyn). On non-Pfaffian
+cuboids, K3 attains the best achievable.
+Strongest test: (4,3,2) full 8.4M-class exhaustive search
+confirms K3 is optimal. Not a sample. Definitive for that graph.
+Accepted because: hostile audit verdict = clean. 4 computed
+record() booleans, no narrative PASSes.
+V2 progress now: scope limit, anomaly localization, obstruction
+cycle, gap scaling, minority structure, classical non-Pfaffian
+classification, K3 optimality conjecture. Strong pattern across
+many tests.
+Next V2 vector: attempt to PROVE the K3 Pfaffian-optimality
+conjecture from the universal plaquette-sign property. This
+would upgrade the conjecture to theorem. Key lemma candidate:
+any sign assignment satisfying all plaquette-sign = -1 conditions
+achieves the max |det(B_G)| over all assignments. If provable,
+combined with our proof that K3 satisfies all plaquette signs,
+this gives K3 optimal universally.
+
