@@ -739,3 +739,39 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   "emitters" of sign inconsistency /
   `frontier_axiom_native_mixed_defect_localization.py` /
   Target 2 sub-step 2d-V2-mixed-defect-singleton-specificity.
+- Non-singleton shape type AFFECTS signal preservation
+  (iter 27 singleton-specific signal is fragile). Swept 6
+  mixed-defect shapes on (4,4,2) with different non-singleton
+  component types:
+  SH1 pair + 2 singletons: non-corner edge sites made chi=0,
+    excluded (broke contractibility);
+  SH2 L-triple (x=0 face corner) + singleton: chi=1, det=1040,
+    signal FAILS (minority-biased are closer to the L-triple
+    than to the singleton, opposite of desired);
+  SH3 horizontal line-3 on y=0/z=0 edge + singleton (0,3,1):
+    chi=1 but det_K3 = 0 even though defect is NOT
+    sigma-invariant. A NEW non-reflection degeneracy
+    mechanism (n_bi=14 even so reflection-lemma does not
+    apply);
+  SH4 line-4 (full y-edge at x=0,z=0) + 2 singletons: chi=1,
+    det=380, signal FAILS (line absorbs signal);
+  SH5 2x2 face-square (x=0 face, y=0..1, z=0..1) + 2 singletons:
+    chi=1, det=780, signal SURVIVES singleton-specifically
+    (corr-single=-0.196, corr-nonsingle NOT in localization
+    direction);
+  SH6 two corner pairs + 2 singletons: chi=1 but det_K3 = 0
+    (this configuration is sigma-invariant with n_bi=13 odd,
+    reflection-degeneracy lemma applies).
+  Summary: 1 of 3 VALID tests (non-degenerate, contractible,
+  mixed) shows singleton-specific signal (SH5 with 2x2 square
+  non-singleton). Lines of 3+ sites drown the signal.
+  Interpretation: signal preservation is NOT simply about
+  non-singleton size -- a 2x2 square (4 sites) preserves while
+  a line-3 (3 sites) drowns. The distinguishing factor seems
+  to be SHAPE: compact or symmetric non-singletons preserve
+  the signal; elongated/line-like non-singletons drown it.
+  Additional discovery: SH3 gives det_K3=0 without being
+  sigma-invariant, suggesting other degeneracy mechanisms
+  beyond the iter 23 reflection lemma /
+  `frontier_axiom_native_nonsingleton_shape_sweep.py` /
+  Target 2 sub-step 2d-V2-nonsingleton-shape-sweep.

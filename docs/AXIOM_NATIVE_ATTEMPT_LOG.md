@@ -1671,3 +1671,63 @@ proof: can we partition minority PMs into "singleton-local"
 classes?
 (c) Explore open-question-6.2 on other symmetries.
 
+[2026-04-24 06:05] V2 iteration: non-singleton shape sweep — PASS (signal is FRAGILE)
+Tried: map which non-singleton component shape types preserve
+the iter 27 singleton-specific signal vs drown it. Wrote
+scripts/frontier_axiom_native_nonsingleton_shape_sweep.py.
+Designed 6 mixed-defect shapes on (4,4,2) with different
+non-singleton types (pair, L-triple, horizontal line-3,
+line-4, 2x2 face square, 2 pairs).
+Results:
+  SH1 pair + 2 non-corner singletons: chi=0 (non-corner
+    singleton site broke contractibility despite my design
+    intent). EXCLUDED.
+  SH2 L-triple + singleton: chi=1, det=1040, signal FAILS.
+    Minority-biased edges closer to the L-triple than the
+    singleton (opposite direction).
+  SH3 line-3 + singleton: chi=1, det_K3 = 0 EVEN THOUGH
+    defect is NOT sigma-invariant. A new non-reflection
+    degeneracy. n_bi=14 even so iter 23 lemma doesn't apply.
+  SH4 line-4 + 2 singletons: chi=1, det=380, signal FAILS.
+  SH5 2x2 face-square + 2 singletons: chi=1, det=780,
+    signal SURVIVES singleton-specifically! (corr-single=
+    -0.196, corr-nonsingle=+0.060 which is NOT in the
+    localization direction -- minority-biased edges are
+    further from the 2x2 square, closer to singletons).
+  SH6 two pairs + 2 singletons: chi=1 but det_K3 = 0 by
+    reflection-degeneracy lemma (sigma-invariant with n_bi=
+    13 odd). Expected.
+Signal breakdown by non-singleton type:
+  pair: excluded (design issue)
+  L-triple: 0/1 survives
+  line3: test invalid (det=0 degeneracy)
+  line4: 0/1 survives
+  2x2_square: 1/1 survives singleton-specifically
+  two_pairs: test invalid (det=0 by reflection lemma)
+Net: signal survives on 1 of 3 VALID tests (after excluding
+degenerate cases). Iter 27 singleton-specific signal is
+FRAGILE -- it holds for pair non-singletons (iter 27 M1, M3)
+and 2x2 square (SH5) but not for line-type non-singletons
+(L-triple, line-4, and iter 27's M2 triple line).
+Interpretation: the distinguishing factor is not size.
+Line-4 (4 sites) drowns signal; 2x2 square (also 4 sites)
+preserves it. The SHAPE matters: compact or symmetric
+non-singletons preserve; elongated/line-like non-singletons
+drown. Lines may support more "alternating cycles" in PMs,
+absorbing the sign obstruction. 2x2 squares are more
+"rigid" and let the singleton signal pass.
+Accepted because: hostile audit verdict = clean. 38 record()
+booleans. No narrative PASSes, no forbidden tokens.
+Bonus discovery: SH3 det=0 without being sigma-invariant.
+This is a new non-reflection degeneracy mechanism. Worth
+future investigation -- may reveal more symmetries that
+force det=0.
+Next V2 vector: (a) investigate the SH3 non-reflection det=0
+mechanism -- is there some other automorphism or structural
+property causing it? (b) test more compact non-singleton
+shapes (T-tetromino, 3x1 L, 1x3 L, 2x2x1 cube face) to
+refine the shape-preservation pattern. (c) Return to the
+Kasteleyn thread conjecture doc and update the localization
+signature claim to reflect that it's shape-dependent beyond
+singletons.
+
