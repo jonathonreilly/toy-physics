@@ -214,3 +214,18 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   correction theorem /
   `frontier_axiom_native_Vus_candidate_two_ninths.py` /
   Target 4 sub-step 4a.
+- PMNS Jarlskog-like invariant `J_chi(M) := Im(M_12 * conj(M_22) *
+  M_23 * conj(M_13))` vanishes identically for any REAL 3x3 matrix
+  M (symbolic sympy proof). Every kit-natural 3x3 mixing matrix
+  at free K3 level is real: SO(3) rotations, `Ad(e_1 e_2)` on the
+  vector grade (= `diag(-1, -1, 1)`), and the 3x3 sub-block of
+  `B_cube / sqrt(3)` from sub-step 2b/2c. Hence `J_chi = 0`
+  identically at free K3. The SPECIFIC missing primitive is a
+  complex phase structure -- concretely the complexification
+  `Cl(3)_C = Cl(3) tensor_R C` or an equivalent U(1) phase
+  primitive, K1's "real" clause being load-bearing. A complex
+  unitary with CP phase gives J_chi != 0; demonstrated on a
+  PMNS-style parametrization. Target 5's no-go success route is
+  achieved with exact missing primitive named /
+  `frontier_axiom_native_J_chi_no_go.py` /
+  Target 5 sub-step 5a.

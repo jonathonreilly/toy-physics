@@ -413,3 +413,28 @@ to a retained target value,
 eigenvalue ratio from a larger Z^3 patch) that could be the true
 V_us.
 
+[2026-04-23 07:50] Target 5, sub-step 5a (J_chi = 0 no-go) — PASS
+Tried: deliver the no-go route for Target 5 (PMNS Jarlskog). Wrote
+scripts/frontier_axiom_native_J_chi_no_go.py which proves:
+(i) J(I_3) = 0 (trivially),
+(ii) J = 0 on 12 tested SO(3) rotations (R_x, R_y, R_z at 4 angles),
+(iii) Ad(e_1 e_2) on the vector grade of Cl(3) equals diag(-1, -1, 1),
+a real SO(3) element; J vanishes on it,
+(iv) a 3x3 sub-block of B_cube/sqrt(3) (from sub-step 2b/2c) is real
+with entries in {+/- 1/sqrt(3), 0}; J vanishes on it,
+(v) symbolic sympy proof: for any real 3x3 matrix, J(M) = 0
+identically (Im of a product of real entries is 0),
+(vi) a complex unitary with generic CKM-like phase has J != 0
+(numerical verification: J = 0.0197 on a specific parametrized U),
+(vii) introducing a complex diagonal phase matrix diag(e^{i theta},
+1, e^{-i theta}) preserves the nonzero J.
+Target 5 no-go success route is CLOSED. Specific missing primitive
+named: complex phase structure from the complexification Cl(3)_C =
+Cl(3) tensor_R C, or an equivalent U(1) phase primitive. K1's
+"real Clifford algebra" clause is the load-bearing clause.
+Accepted because: hostile audit verdict = clean. 10 computed
+record() booleans, no narrative PASSes.
+Next vector: move to Target 6 (Strong CP beyond action-surface).
+Target 5's no-go with specific missing primitive matches one of the
+two stated success routes, providing closure.
+
