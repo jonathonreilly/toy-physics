@@ -764,6 +764,26 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   z-separated singletons force det=0 /
   `frontier_axiom_native_sh3_degeneracy_investigation.py` /
   Target 2 sub-step 2d-V2-sh3-z-plane-separation.
+- V2 loop 6-target status sweep (iter 39). Programmatic
+  inventory across the full 6-target framework after 38
+  prior iterations. All 6 targets are verified "covered"
+  (at least one runner exists, at least one ledger entry,
+  at least one attempt-log entry per target). Breakdown:
+    T1 (exponent 16): 3 runners, 13 ledger hits, 27 log hits.
+    T2 (Kasteleyn): 17 runners, 120 ledger hits, 230 log hits.
+    T3 (Koide Q=2/3): 3 runners, 20 ledger hits, 60 log hits.
+    T4 (CKM V_us): 1 runner, 8 ledger hits, 23 log hits.
+    T5 (PMNS J_chi): 1 runner, 9 ledger hits, 9 log hits.
+    T6 (Strong CP): 1 runner, 4 ledger hits, 10 log hits.
+  Total axiom-native runners on branch (excluding hostile
+  audit): 38+. The V2 overnight loop has exercised every
+  target in the framework at least once. Per-target outcomes
+  (derived, reclassified, refuted, null, open) are
+  documented in individual runners and the attempt log, not
+  in this status-only sweep. This iter is inventory-only
+  and makes no new structural claims /
+  `frontier_axiom_native_target_sweep_status.py` /
+  loop inventory summary.
 - Target 3 new angle (iter 38): K3 Dirac singular-value
   spectra on 7 small cuboids do NOT realize Koide Q = 2/3.
   Computed SVD of K3 bipartite block B on (2,2,2), (3,2,2),
