@@ -296,6 +296,10 @@ theorem now packages the arithmetic: with the retained left-handed content, an
 $SU(2)$-singlet right-handed completion, the anomaly equations,
 $Y(\nu_R)=0$, and the positive up-type label, the singlet hypercharges are
 uniquely $(4/3,-2/3,-2,0)$ up to the removed $u_R \leftrightarrow d_R$ swap.
+On the same retained $16$-state one-generation content, the six-trace
+$B-L$ anomaly packet also cancels exactly, so $U(1)_{B-L}$ is gaugeable
+without adding fermions; this is an extension option, not a claim that the
+retained gauge group contains a new $B-L$ boson.
 
 **Theorem 3 (Anomaly-forced time).**
 Starting from the left-handed content $(2,3)_{+1/3} + (2,1)_{-1}$, anomaly

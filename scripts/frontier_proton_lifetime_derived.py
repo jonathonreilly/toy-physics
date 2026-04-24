@@ -32,7 +32,8 @@ DERIVATION CHAIN (every step traced to Cl(3) on Z^3):
   Step 5: Baryon number B (= 1/3 on triplets, 0 on singlets) commutes
           with all SU(3) generators but NOT with SU(2) generators.
           This is exactly the sphaleron structure: B+L is violated by
-          SU(2) instantons, but B-L is exactly conserved.
+          SU(2) instantons, while the full retained B-L anomaly packet
+          cancels on the 16-state one-generation content.
 
   Step 6: The proton decay rate from dimension-6 leptoquark exchange is
           Gamma = alpha^2 * m_p^5 / M_X^4
@@ -56,6 +57,7 @@ from __future__ import annotations
 import math
 import sys
 import time
+from fractions import Fraction
 
 import numpy as np
 
@@ -331,17 +333,17 @@ def step4_mediating_scale():
 
 
 # =============================================================================
-# STEP 5: B-L conservation, B+L violation by sphalerons
+# STEP 5: B-L anomaly packet, B+L violation by sphalerons
 # =============================================================================
 
 def step5_b_l_structure(B_op):
     """
-    Check B-L and B+L conservation properties.
-    B-L must be exactly conserved (anomaly-free).
+    Check B-L and B+L anomaly/bookkeeping properties.
+    B-L is anomaly-free on the retained 16-state one-generation content.
     B+L is violated by SU(2) instantons (sphalerons).
     """
     print("\n" + "=" * 78)
-    print("STEP 5: B-L EXACT CONSERVATION, B+L SPHALERON VIOLATION")
+    print("STEP 5: B-L ANOMALY PACKET, B+L SPHALERON VIOLATION")
     print("=" * 78)
 
     # Lepton number operator: L=1 on singlets (S0, S3)
@@ -390,20 +392,50 @@ def step5_b_l_structure(B_op):
     # that B-L is anomaly-free.
     print(f"\n  [B-L, SU(2)] = 0?  {bml_su2}")
 
-    # Anomaly cancellation check (per generation)
-    # Quarks: 6 states with B-L = 1/3, Leptons: 2 states with B-L = -1
+    # Taste-space linear check. The full 16-state anomaly packet is checked
+    # below and in frontier_bminusl_anomaly_freedom.py.
     sum_bml = 6 * (1.0/3.0) + 2 * (-1.0)
     sum_bml3 = 6 * (1.0/3.0)**3 + 2 * (-1.0)**3
-    print(f"\n  Anomaly cancellation (per generation of 8 taste states):")
+    print(f"\n  Taste-space B-L check (8 left-handed taste states):")
     print(f"    Sum(B-L)   = 6*(1/3) + 2*(-1) = {sum_bml:.4f}")
     print(f"    Sum(B-L)^3 = 6*(1/3)^3 + 2*(-1)^3 = {sum_bml3:.4f}")
 
     check(abs(sum_bml) < 1e-10,
           f"Linear B-L anomaly cancels: Sum(B-L) = {sum_bml:.1f}")
 
-    # Note: cubic anomaly does not cancel with this simple assignment because
-    # the SM has more structure (doublets vs singlets, color). The taste-space
-    # check is for the linear (gravitational) anomaly.
+    full_fields = [
+        # (name, multiplicity, weak_mult, colour_mult, su3_charged, su2_doublet, Y, B-L)
+        ("Q_L", 6, 2, 3, True, True, Fraction(1, 3), Fraction(1, 3)),
+        ("L_L", 2, 2, 1, False, True, Fraction(-1, 1), Fraction(-1, 1)),
+        ("u_R^c", 3, 1, 3, True, False, Fraction(-4, 3), Fraction(-1, 3)),
+        ("d_R^c", 3, 1, 3, True, False, Fraction(2, 3), Fraction(-1, 3)),
+        ("e_R^c", 1, 1, 1, False, False, Fraction(2, 1), Fraction(1, 1)),
+        ("nu_R^c", 1, 1, 1, False, False, Fraction(0, 1), Fraction(1, 1)),
+    ]
+    full_packet = {
+        "grav^2(B-L)": sum(mult * bl for _, mult, _, _, _, _, _, bl in full_fields),
+        "(B-L)^3": sum(mult * bl**3 for _, mult, _, _, _, _, _, bl in full_fields),
+        "SU(3)^2(B-L)": sum(weak * bl for _, _, weak, _, su3, _, _, bl in full_fields if su3),
+        "SU(2)^2(B-L)": sum(colour * bl for _, _, _, colour, _, su2, _, bl in full_fields if su2),
+        "Y^2(B-L)": sum(mult * y**2 * bl for _, mult, _, _, _, _, y, bl in full_fields),
+        "Y(B-L)^2": sum(mult * y * bl**2 for _, mult, _, _, _, _, y, bl in full_fields),
+    }
+    print("\n  Full 16-state B-L anomaly packet:")
+    for name, value in full_packet.items():
+        print(f"    {name:<15s} = {value}")
+
+    check(
+        all(value == 0 for value in full_packet.values()),
+        "Full six-trace B-L anomaly packet cancels with retained nu_R",
+    )
+
+    without_nu = [row for row in full_fields if row[0] != "nu_R^c"]
+    g1_without_nu = sum(mult * bl for _, mult, _, _, _, _, _, bl in without_nu)
+    g2_without_nu = sum(mult * bl**3 for _, mult, _, _, _, _, _, bl in without_nu)
+    check(
+        g1_without_nu == -1 and g2_without_nu == -1,
+        "Without nu_R, the linear and cubic B-L traces both fail by -1",
+    )
 
     return BmL, BpL
 
@@ -598,7 +630,7 @@ def main():
     - The existence of leptoquark operators (exact Cl(3) algebra fact)
     - Their location outside the gauge sector (exact)
     - The mediating scale M_X = M_Planck (framework axiom: lattice = Planck)
-    - B-L exact conservation (anomaly cancellation)
+    - B-L six-trace anomaly cancellation on the retained 16-state content
     - B+L violation by SU(2) instantons (sphaleron structure)
 
   WHAT IS IMPORTED:

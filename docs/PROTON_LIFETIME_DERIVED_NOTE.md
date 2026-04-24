@@ -66,10 +66,14 @@ proton decay at tau < 10^40 years would rule out the framework.
 
 - Baryon number B (= 1/3 on triplets, 0 on singlets) commutes with all SU(3)
   generators. B does NOT commute with SU(2) generators -- this is the sphaleron
-  structure (B+L violated, B-L conserved).
+  structure (B+L anomalous, B-L anomaly-free on the retained content).
 
-- B-L is anomaly-free: the linear gravitational anomaly Sum(B-L) = 6*(1/3) + 2*(-1)
-  = 0 cancels exactly.
+- B-L is anomaly-free on the retained 16-state one-generation content:
+  the six-trace packet
+  `grav^2(B-L)`, `(B-L)^3`, `SU(3)^2(B-L)`, `SU(2)^2(B-L)`,
+  `Y^2(B-L)`, and `Y(B-L)^2` cancels exactly; the retained `nu_R`
+  slot is load-bearing for the linear and cubic B-L traces. See
+  [`BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24.md`](BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24.md).
 
 ### Framework-dependent results:
 

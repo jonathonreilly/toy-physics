@@ -164,6 +164,14 @@ conceptual pressure.
     `{0, +/-1/3, +/-2/3, +/-1}`
   - authority:
     [STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md](../../STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md)
+- B-L anomaly freedom / gaugeable option:
+  - on the retained 16-state one-generation content including `nu_R`, all six
+    anomaly traces needed to gauge `U(1)_{B-L}` alongside the retained SM gauge
+    group vanish exactly
+  - this proves the gaugeable option only; it does not predict that `B-L` is
+    gauged, a `Z'` mass/coupling, or a Majorana structure
+  - authority:
+    [BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24.md](../../BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24.md)
 - emergent Lorentz invariance:
   - leading anisotropic correction first appears at dimension 6
   - unique cubic-harmonic `ell = 4` fingerprint
