@@ -13,6 +13,7 @@
 **Boundary same-source covariance:** [PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md)
 **Boundary parent source equivalence:** [PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md)
 **Hbar/unit-convention audit:** [PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md](./PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md)
+**Hbar attack order:** [PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md](./PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md)
 
 ## Final Scope Warning
 
@@ -30,6 +31,12 @@ normalization imports the standard gravitational action law containing `hbar`,
 `G`, and `c_light`. The nontrivial Planck statement is the dimensionless
 conditional result `a^2/l_P^2 = 1`, not a prediction of the post-2019 SI decimal
 value of the Planck constant.
+
+The ordered hbar program is now separated from the Planck proof. The first
+non-circular target is a phase-per-information theorem deriving
+`kappa_info = 1/32` per bit; the fallback targets are a projective phase /
+central-extension theorem, a finite Weyl/commutator unit theorem, an independent
+lattice-spacing count, or a separate dimensionless prediction such as `alpha`.
 
 The prior hardening removed the broad multiplicative boundary-unit ambiguity
 and reduced the additive boundary-density law to
@@ -254,6 +261,10 @@ The hostile-review denials are now explicit.
    boundary coefficient and then uses the standard gravitational area/action
    normalization. A true `hbar` theorem would need a separate structural
    action-quantum or dimensionless phase-per-information derivation.
+8. **Backward-Planck objection.** If the reviewer asks whether `a = l_P` can be
+   solved backward to predict `hbar`, answer: only if `a` is independently fixed
+   in non-Planck units. Otherwise the equation just restates the Planck-length
+   definition.
 
 The final denial-status theorem records that denials 2 and 4 change the target:
 they either replace the primitive coefficient with an enriched state/readout
@@ -307,6 +318,7 @@ python3 scripts/frontier_planck_boundary_event_ward_identity_derivation_theorem.
 python3 scripts/frontier_planck_boundary_same_source_covariance_theorem.py
 python3 scripts/frontier_planck_boundary_parent_source_equivalence_theorem.py
 python3 scripts/frontier_planck_hbar_status_and_remaining_objections_audit.py
+python3 scripts/frontier_planck_hbar_attack_order_theorem.py
 ```
 
 ## Appendix Map
@@ -326,6 +338,7 @@ python3 scripts/frontier_planck_hbar_status_and_remaining_objections_audit.py
 - [PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md) - explicit P1 package-boundary move.
 - [PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md) - hostile-review context, with its supersession note respected.
 - [PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md](./PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md) - hbar/unit-convention audit: the packet derives a dimensionless Planck coefficient, not the quantum of action.
+- [PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md](./PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md) - ordered non-circular hbar program: independent `a`, structural action unit, or dimensionless prediction, with `kappa_info = 1/32` per bit as the first target.
 
 ### Primitive cell and count
 

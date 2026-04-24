@@ -37,6 +37,7 @@ SUBCHECKS = [
     "frontier_planck_boundary_same_source_covariance_theorem.py",
     "frontier_planck_boundary_parent_source_equivalence_theorem.py",
     "frontier_planck_hbar_status_and_remaining_objections_audit.py",
+    "frontier_planck_hbar_attack_order_theorem.py",
 ]
 
 
@@ -82,6 +83,7 @@ def main() -> int:
     same_source = read("docs/PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md")
     parent_source = read("docs/PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md")
     hbar_audit = read("docs/PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md")
+    hbar_attack = read("docs/PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md")
 
     for script in SUBCHECKS:
         total += 1
@@ -303,6 +305,16 @@ def main() -> int:
         and "conditional structural Planck-length result, not a derivation of `hbar`"
         in hbar_audit
         and "no claim that the packet derives `hbar`" in reviewer,
+    )
+
+    total += 1
+    passed += expect(
+        "hbar-attack-order-is-noncircular-and-prioritized",
+        "PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md" in reviewer
+        and "`hbar = a^2 c_light^3 / G`" in hbar_attack
+        and "To turn this into a prediction, `a` must\nbe fixed independently of `hbar`"
+        in hbar_attack
+        and "`kappa_info^(bit) = q_*/2 = 1/32`" in hbar_attack,
     )
 
     print(f"SUMMARY: PASS={passed} FAIL={total - passed}")
