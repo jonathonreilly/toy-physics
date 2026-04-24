@@ -29,6 +29,10 @@ def main() -> int:
     phase_trace = read("docs/PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md")
     gamma_period = read("docs/PLANCK_SCALE_GAMMA_PHASE_PERIOD_OBSTRUCTION_THEOREM_2026-04-24.md")
     integral_count = read("docs/PLANCK_SCALE_PRIMITIVE_INTEGRAL_ACTION_COUNT_THEOREM_2026-04-24.md")
+    si_discharge = read("docs/PLANCK_SCALE_SI_HBAR_OBJECTION_DISCHARGE_THEOREM_2026-04-24.md")
+    parent_discharge = read(
+        "docs/PLANCK_SCALE_PARENT_SOURCE_DISCHARGE_AFTER_REALIFICATION_THEOREM_2026-04-24.md"
+    )
 
     passed = 0
     total = 0
@@ -46,6 +50,8 @@ def main() -> int:
         "audit-denies-si-numerical-prediction",
         "Numerical prediction of `hbar` in SI units" in audit
         and "unit convention" in audit
+        and "SI-`hbar` objection is not a remaining physical\nblocker" in audit
+        and "SI decimal value of `hbar` is not a physical\n> prediction target" in si_discharge
         and "BIPM" in audit
         and "NIST" in audit,
         "post-2019 SI guardrail is explicit",
@@ -70,10 +76,12 @@ def main() -> int:
 
     total += 1
     passed += expect(
-        "audit-keeps-object-class-objection-live",
-        "primitive boundary-action object class remains the top live denial" in audit
+        "audit-discharges-object-class-after-realification",
+        "primitive boundary-action object class is discharged after realified B3" in audit
+        and "the parent-source discharge theorem forces\n`B_parent=(H_A,P_A)`" in audit
+        and "`B_parent = (H_A, P_A)`" in parent_discharge
         and "retained primitive one-step boundary/worldtube object class" in parent_source,
-        "the top remaining rejection is physical object-class identification",
+        "parent-source object class is no longer an independent blocker after B3 realification",
     )
 
     total += 1

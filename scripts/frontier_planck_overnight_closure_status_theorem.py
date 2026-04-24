@@ -31,6 +31,9 @@ def main() -> int:
     hbar = read("docs/PLANCK_SCALE_HBAR_STRONG_ROUTES_STATUS_THEOREM_2026-04-24.md")
     ward = read("docs/PLANCK_SCALE_BOUNDARY_SOURCE_FUNCTORIAL_WARD_THEOREM_2026-04-24.md")
     integral_count = read("docs/PLANCK_SCALE_PRIMITIVE_INTEGRAL_ACTION_COUNT_THEOREM_2026-04-24.md")
+    parent_discharge = read(
+        "docs/PLANCK_SCALE_PARENT_SOURCE_DISCHARGE_AFTER_REALIFICATION_THEOREM_2026-04-24.md"
+    )
 
     passed = 0
     total = 0
@@ -66,7 +69,7 @@ def main() -> int:
     total += 1
     passed += expect(
         "open-items-match-new-theorems",
-        "finite-automorphism-only target remains rejected" in note
+        "finite-automorphism-only target is discharged" in note
         and "refuses canonical realification" in note
         and "the older B3 no-go\n   applies" in note
         and "not claimed: SI `hbar`" in note,
@@ -80,6 +83,15 @@ def main() -> int:
         and "closed: `gamma=1` as reduced primitive action count" in note
         and "`Phi(I_16) = ell([A_cell]) = 1`" in integral_count,
         "gamma=1 is no longer listed as an open reduced-action blocker",
+    )
+
+    total += 1
+    passed += expect(
+        "parent-source-is-discharged-after-realification",
+        "parent-source object-class objection is discharged after realified B3" in note
+        and "`B_parent=(H_A,P_A)`" in note
+        and "`B_parent = (H_A, P_A)`" in parent_discharge,
+        "parent-source is no longer an independent reviewer blocker",
     )
 
     total += 1

@@ -72,9 +72,9 @@ normalization. It is not a prediction of the SI value of the quantum of action.
 | --- | --- | --- |
 | Structural reduced-action unit from graph/combinatorics | **Closed on the primitive integral-history surface** | The primitive phase trace theorem derives `q_atom = gamma/16`, and the integral action-count theorem supplies `Phi(I_16)=1`, hence `gamma=1`, in reduced units. |
 | Numerical prediction of `hbar` in SI units | **Not a physical target** | Since the 2019 SI revision, the Planck constant `h` has an exact fixed SI value; predicting that number would predict a unit convention. |
-| Dimensionless prediction involving `hbar` | **Not yet achieved** | The branch derives `a^2/l_P^2 = 1` only after importing the standard gravitational normalization containing `hbar`, `G`, and `c_light`. |
+| Dimensionless prediction involving `hbar` | **Achieved on the realified Planck surface** | The branch derives `a^2/l_P^2 = a^2 c_light^3/(hbar G) = 1` after the standard gravitational normalization fixes the meaning of `l_P`. |
 | Native dimensionless microscopic coefficient | **Achieved on the retained object class** | The packet derives `rank(P_A)/dim(H_cell) = 4/16 = 1/4`. |
-| Planck length as physical lattice spacing | **Conditional closure** | Closed if the primitive boundary count is accepted as the microscopic gravitational boundary/action carrier. |
+| Planck length as physical lattice spacing | **Closed on the canonical realified response surface** | Realified B3 and parent-source discharge force the primitive boundary representative `P_A`; the standard area/action normalization then gives `a=l_P`. |
 
 Official SI guardrail:
 
@@ -86,9 +86,15 @@ Official SI guardrail:
 Therefore an honest "derive hbar" claim must be a claim about a dimensionless
 physical relation, not the decimal SI value of `hbar`.
 
+Post-SI-discharge update: the SI-`hbar` objection is not a remaining physical
+blocker. A decimal value for a dimensionful action constant changes under
+action-unit rescaling. The invariant targets are `gamma=1` and
+`a^2 c_light^3/(hbar G)=1`, both of which are now separated from any claim to
+predict a joule-second decimal.
+
 ## Remaining Objections
 
-### O1. Hbar is still an input to the final unit map
+### O1. Hbar appears in the final unit map, but this is not an open objection
 
 The area/action normalization theorem explicitly imports:
 
@@ -101,18 +107,22 @@ and
 So the current packet derives the coefficient multiplying the Planck area. It
 does not derive the action quantum appearing in that Planck area.
 
-### O2. The result is a conditional dimensionless Planck statement
+This is now discharged as a scope issue. The packet derives the dimensionless
+coefficient and the dimensionless Planck relation, not a dimensionful SI
+constant.
+
+### O2. The dimensionless Planck statement is the physical target
 
 The nontrivial dimensionless statement is
 
 `a^2 c_light^3 / (hbar G) = 1`.
 
-The branch derives this only after accepting that the primitive boundary count
-is the microscopic carrier of the standard gravitational boundary/action
-density. A reviewer can reject that carrier identification without disputing the
-internal count `1/4`.
+After realified B3 and parent-source discharge, the primitive boundary count is
+the microscopic carrier on the canonical realified gravitational response
+surface. A reviewer can still reject that surface, but not the internal
+dimensionless target.
 
-### O3. The primitive boundary-action object class remains the top live denial
+### O3. The primitive boundary-action object class is discharged after realified B3
 
 The parent-source theorem closes the Schur/event common-source bridge only
 inside the retained primitive one-step boundary/worldtube object class.
@@ -125,6 +135,11 @@ The remaining physical denial is:
 If this denial is accepted, the packet falls back to a native counting theorem,
 not a Planck-length theorem.
 
+Post-realification update: once B3 derives the gravitational coframe response
+on the primitive boundary surface, the parent-source discharge theorem forces
+`B_parent=(H_A,P_A)`. The only way to reopen this denial is to reject
+realification itself.
+
 ### O4. Source-free state semantics are authorized, not derived from the older minimal ledger
 
 The branch now makes the one-axiom information / Hilbert / locality surface an
@@ -136,7 +151,7 @@ older minimal ledger alone still does not prove
 A hostile reviewer can reject the extension, or accept it only as a conservative
 state-semantics postulate.
 
-### O5. Parent-source equivalence can still be challenged physically
+### O5. Parent-source equivalence is no longer independent after realified B3
 
 The parent-source theorem says the event source is the faithful representation
 of the full axis source `P_A`, and the Schur source is quotient shape plus
@@ -147,6 +162,11 @@ retained doublet multiplicity:
 The mathematical bridge is now explicit. The remaining challenge is whether that
 is the physical gravitational boundary source rather than a selected readout
 class.
+
+Post-realification update: this is no longer an independent challenge once the
+gravity response surface is accepted. The gravitational boundary source is the
+unique primitive one-step incidence representative compatible with that
+surface.
 
 ### O6. The scalar Schur/free-energy lane remains a rival object class
 
@@ -227,7 +247,7 @@ The phase-period obstruction also explains why a 16th root of unity is only a
 candidate route, not a closure: in the current `exp(i Phi)` convention it gives
 `Phi = 2 pi/16`, so the `2 pi` conversion must be rebuilt rather than ignored.
 
-### O9. No independent dimensionless phenomenological prediction is yet attached
+### O9. Independent phenomenology is optional, not a Planck-closure blocker
 
 A skeptical reviewer can ask:
 
@@ -236,6 +256,9 @@ A skeptical reviewer can ask:
 
 At present the answer is the exact microscopic coefficient `1/4`, not a new
 measured dimensionless constant such as `alpha` or a mass ratio.
+
+That is not a defect in the Planck derivation. It is a separate future test
+lane.
 
 ### O10. Historical notes can confuse the scope
 

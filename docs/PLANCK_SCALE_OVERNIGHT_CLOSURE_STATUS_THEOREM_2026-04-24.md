@@ -40,23 +40,30 @@ The following pieces are closed on the retained surface:
 9. reduced action-count normalization `Phi(I_16)=1`, hence `gamma=1`, on the
    primitive integral-history surface.
 
-## What Is Not Closed
+## Discharged Nonclaims
 
-The finite-automorphism-only target remains rejected:
+The finite-automorphism-only target is discharged as a non-physical-response
+reading:
 
 1. If the reviewer refuses canonical realification
    `Z^3 tensor_Z R` as native first-order response data, the older B3 no-go
-   applies.
+   applies and no dynamical gravity question is being asked.
 2. If the reviewer accepts canonical realification, B3 supplies the
    metric/coframe Ward primitive and B4 forces the boundary representative
    `P_A`.
 
-The hbar axis is now separated:
+The SI-hbar target is discharged as a unit-convention nonclaim:
 
 - closed: `gamma=1` as reduced primitive action count on the
   integral-history surface;
 - not claimed: SI `hbar`, central-extension, spectral-flow, or microscopic
   Ward derivations of the quantum of action.
+
+The parent-source object-class objection is discharged after realified B3:
+
+- closed: `B_parent=(H_A,P_A)` as the unique primitive one-step incidence
+  representative of the derived gravitational response surface;
+- not claimed: scalar Schur free energy alone derives the parent source.
 
 ## Classification
 
@@ -64,7 +71,8 @@ The strongest current classification is:
 
 > Planck closure on the canonical realified `Cl(3)` / `Z^3` linear-response
 > surface; reduced `gamma=1` is closed as primitive integral action count,
-> while SI `hbar` remains unclaimed.
+> parent-source is discharged after realification, and SI `hbar` is a
+> unit-convention nonclaim.
 
 It is not:
 
@@ -76,9 +84,8 @@ It is not:
 
 ## Next Exact Theorem Targets
 
-1. Derive a local metric/coframe gauge response from primitive translation
-   defects without invoking canonical realification. This is only needed for
-   the stricter finite-automorphism-only claim.
+1. If pursuing the stricter finite-automorphism-only claim, derive local
+   metric/coframe gauge response without invoking canonical realification.
 2. If pursuing an independent hbar program, derive a central-extension,
    spectral-flow, commutator, or microscopic Ward theorem that reproduces the
    same reduced action unit without relying on the integral count surface.

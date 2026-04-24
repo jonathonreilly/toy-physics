@@ -50,6 +50,8 @@ SUBCHECKS = [
     "frontier_planck_b3_dynamical_metricity_obstruction_theorem.py",
     "frontier_planck_b3_bare_ward_identity_no_go_2026_04_24.py",
     "frontier_planck_b3_clifford_realification_metric_ward_theorem_2026_04_24.py",
+    "frontier_planck_realification_admissibility_theorem_2026_04_24.py",
+    "frontier_planck_parent_source_discharge_after_realification_theorem_2026_04_24.py",
     "frontier_planck_bare_boundary_representative_after_gravity_theorem.py",
     "frontier_planck_hbar_status_and_remaining_objections_audit.py",
     "frontier_planck_hbar_attack_order_theorem.py",
@@ -60,6 +62,7 @@ SUBCHECKS = [
     "frontier_planck_hbar_strong_routes_status_theorem.py",
     "frontier_planck_hbar_nonhomogeneous_real_action_unit_reduction_2026_04_24.py",
     "frontier_planck_primitive_integral_action_count_theorem_2026_04_24.py",
+    "frontier_planck_si_hbar_objection_discharge_theorem_2026_04_24.py",
     "frontier_planck_overnight_closure_status_theorem.py",
 ]
 
@@ -119,6 +122,8 @@ def main() -> int:
     b3_metricity_obstruction = read("docs/PLANCK_SCALE_B3_DYNAMICAL_METRICITY_OBSTRUCTION_THEOREM_2026-04-24.md")
     b3_bare_ward_no_go = read("docs/PLANCK_SCALE_B3_BARE_WARD_IDENTITY_NO_GO_2026-04-24.md")
     b3_realification = read("docs/PLANCK_SCALE_B3_CLIFFORD_REALIFICATION_METRIC_WARD_THEOREM_2026-04-24.md")
+    realification_admissibility = read("docs/PLANCK_SCALE_REALIFICATION_ADMISSIBILITY_THEOREM_2026-04-24.md")
+    parent_source_discharge = read("docs/PLANCK_SCALE_PARENT_SOURCE_DISCHARGE_AFTER_REALIFICATION_THEOREM_2026-04-24.md")
     bare_boundary = read("docs/PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md")
     hbar_audit = read("docs/PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md")
     hbar_attack = read("docs/PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md")
@@ -129,6 +134,7 @@ def main() -> int:
     hbar_strong = read("docs/PLANCK_SCALE_HBAR_STRONG_ROUTES_STATUS_THEOREM_2026-04-24.md")
     hbar_nonhomogeneous = read("docs/PLANCK_SCALE_HBAR_NONHOMOGENEOUS_REAL_ACTION_UNIT_REDUCTION_THEOREM_2026-04-24.md")
     integral_action_count = read("docs/PLANCK_SCALE_PRIMITIVE_INTEGRAL_ACTION_COUNT_THEOREM_2026-04-24.md")
+    si_hbar_discharge = read("docs/PLANCK_SCALE_SI_HBAR_OBJECTION_DISCHARGE_THEOREM_2026-04-24.md")
     overnight_status = read("docs/PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md")
 
     for script in SUBCHECKS:
@@ -502,6 +508,29 @@ def main() -> int:
 
     total += 1
     passed += expect(
+        "realification-admissibility-discharges-response-objection",
+        "PLANCK_SCALE_REALIFICATION_ADMISSIBILITY_THEOREM_2026-04-24.md"
+        in reviewer
+        and "closes the realification-admissibility objection" in realification_admissibility
+        and "`f_R : T_Z tensor_Z R -> W`" in realification_admissibility
+        and "finite automorphisms alone do not give dynamics" in realification_admissibility
+        and "not a live\nobjection to the submitted physical-response theorem" in reviewer,
+    )
+
+    total += 1
+    passed += expect(
+        "parent-source-discharged-after-realification",
+        "PLANCK_SCALE_PARENT_SOURCE_DISCHARGE_AFTER_REALIFICATION_THEOREM_2026-04-24.md"
+        in reviewer
+        and "closes the parent-source object-class objection after B3 realification"
+        in parent_source_discharge
+        and "`B_parent = (H_A, P_A)`" in parent_source_discharge
+        and "`delta = 0`" in parent_source_discharge
+        and "no longer a separate\nphysical primitive after realified B3" in reviewer,
+    )
+
+    total += 1
+    passed += expect(
         "bare-boundary-representative-b4-conditional",
         "PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md"
         in reviewer
@@ -620,6 +649,17 @@ def main() -> int:
 
     total += 1
     passed += expect(
+        "si-hbar-objection-discharged-as-unit-convention",
+        "PLANCK_SCALE_SI_HBAR_OBJECTION_DISCHARGE_THEOREM_2026-04-24.md"
+        in reviewer
+        and "discharges the SI-`hbar` objection" in si_hbar_discharge
+        and "`[S]_{U_A'} = [S]_{U_A} / lambda`" in si_hbar_discharge
+        and "`a^2 c_light^3 / (hbar G) = 1`" in si_hbar_discharge
+        and "unit-convention demand, not a physical reviewer blocker" in reviewer,
+    )
+
+    total += 1
+    passed += expect(
         "overnight-status-classifies-conditional-not-bare",
         "PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md"
         in reviewer
@@ -627,8 +667,11 @@ def main() -> int:
         and "Planck closure on the canonical realified `Cl(3)` / `Z^3`"
         in overnight_status
         and "B3 realified metric/coframe Ward response" in overnight_status
+        and "parent-source object-class objection is discharged after realified B3"
+        in overnight_status
         and "closed: `gamma=1` as reduced primitive action count" in overnight_status
-        and "not claimed: SI `hbar`" in overnight_status
+        and "SI-hbar target is discharged as a unit-convention nonclaim"
+        in overnight_status
         and "Nature-grade bare-axiom Planck and hbar closure has been achieved"
         in overnight_status,
     )
