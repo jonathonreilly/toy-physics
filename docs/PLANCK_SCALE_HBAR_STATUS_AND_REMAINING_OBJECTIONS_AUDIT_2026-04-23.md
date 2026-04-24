@@ -7,9 +7,9 @@
 ## Verdict
 
 The current branch derives the structural action-to-phase role of `hbar` on the
-primitive coherent-history surface. It does **not** derive the SI value of
-`hbar`, and it does not derive every downstream quantum-mechanical appearance
-of `hbar`.
+primitive coherent-history surface and the standard Weyl/commutator
+appearances on the coherent realified representation surface. It does **not**
+derive the SI value of `hbar`.
 
 Post-trace-reduction update: the branch now derives the source-free primitive
 phase **shape** on the full `C^16` event cell. Any natural additive primitive
@@ -69,6 +69,13 @@ For one complete primitive cell, `Phi(A_cell)=1`, so `S(A_cell)=hbar`. This is
 the structural hbar result. It is still not a joule-second numerical
 prediction.
 
+Post-Weyl-representation update: retained `Z^3` translations and their
+characters give the exact finite Weyl law. On the realified regular
+representation envelope this differentiates to `[X,P]=i hbar`; then
+`p=hbar k`, `E=hbar omega`, `Delta X Delta P >= hbar/2`, and angular-momentum
+units of `hbar` follow as representation corollaries. This does not make the
+finite automorphism group itself an infinitesimal commutator theory.
+
 It derives a native dimensionless primitive boundary coefficient
 
 `c_cell = 1/4`
@@ -91,6 +98,7 @@ normalization. It is not a prediction of the SI value of the quantum of action.
 | --- | --- | --- |
 | Structural reduced-action unit from graph/combinatorics | **Closed on the primitive integral-history surface** | The primitive phase trace theorem derives `q_atom = gamma/16`, and the integral action-count theorem supplies `Phi(I_16)=1`, hence `gamma=1`, in reduced units. |
 | Structural action-phase role of `hbar` | **Closed on the primitive coherent-history surface** | Coherent gluing gives an additive universal-cover phase coordinate and same-source/no-hidden-character identifies it with `Phi`, so `S/hbar=Phi` and `S(A_cell)=hbar`. |
+| Textbook Weyl/commutator appearances of `hbar` | **Closed on the coherent realified representation surface** | Retained translations and characters give Weyl; the realified regular representation gives `[X,P]=i hbar`; Robertson and rotation representations give uncertainty and angular-momentum units. |
 | Numerical prediction of `hbar` in SI units | **Not a physical target** | Since the 2019 SI revision, the Planck constant `h` has an exact fixed SI value; predicting that number would predict a unit convention. |
 | Dimensionless prediction involving `hbar` | **Achieved on the realified Planck surface** | The branch derives `a^2/l_P^2 = a^2 c_light^3/(hbar G) = 1` after the standard gravitational normalization fixes the meaning of `l_P`. |
 | Native dimensionless microscopic coefficient | **Achieved on the retained object class** | The packet derives `rank(P_A)/dim(H_cell) = 4/16 = 1/4`. |
@@ -303,13 +311,20 @@ history structure in the narrow phase-representation sense:
    `lambda != 1`;
 4. therefore `theta=Phi`, so `S/hbar=Phi` and `S(A_cell)=hbar`.
 
+The primitive Weyl hbar representation theorem then derives the standard
+representation appearances on the coherent realified Weyl surface:
+
+1. translation-character duality gives the Weyl relation;
+2. realified regular representation gives `[X,P] = i hbar`;
+3. spatial and time characters give `p = hbar k` and `E = hbar omega`;
+4. Robertson gives `Delta X Delta P >= hbar/2`;
+5. Clifford spin representations measure angular momentum in units of `hbar`.
+
 Still not in hand:
 
-1. a separate combinatorial commutator/symplectic theorem deriving the unit in
-   `[q,p] = i hbar`;
-2. a microscopic boundary-term theorem deriving the gravitational action
+1. a microscopic boundary-term theorem deriving the gravitational action
    normalization without importing the standard `hbar`-containing law;
-3. a dimensionless prediction such as a fixed value of `alpha` or another
+2. a dimensionless prediction such as a fixed value of `alpha` or another
    measured ratio involving the same action unit.
 
 ## Safe Claim
@@ -321,8 +336,10 @@ Use:
 > gravitational area/action normalization, this gives `a^2/l_P^2 = 1`. This is a
 > conditional structural Planck-length result. Separately, the primitive
 > integral-history theorem closes `gamma=1`, and coherent-history phase
-> representation gives `S/hbar=Phi`, hence `S(A_cell)=hbar`. This is a
-> structural hbar result, not a prediction of the SI value of `hbar`.
+> representation gives `S/hbar=Phi`, hence `S(A_cell)=hbar`. The coherent
+> realified Weyl representation then gives `p=hbar k`, `E=hbar omega`,
+> `[X,P]=i hbar`, uncertainty, and angular-momentum units. This is not a
+> prediction of the SI value of `hbar`.
 
 Do not use:
 
@@ -334,6 +351,5 @@ Do not use:
 
 Do not use:
 
-> Bare `Cl(3)` / `Z^3` alone, without the explicit state-semantics,
-> coherent-history, and gravitational carrier assumptions, forces every role of
-> `hbar`.
+> Finite automorphisms alone, without the coherent-history and realified
+> representation surfaces, force the canonical commutator.

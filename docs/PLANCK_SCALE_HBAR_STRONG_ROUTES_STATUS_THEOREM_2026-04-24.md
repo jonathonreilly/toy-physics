@@ -32,16 +32,19 @@ integral-history surface by
 [PLANCK_SCALE_PRIMITIVE_INTEGRAL_ACTION_COUNT_THEOREM_2026-04-24.md](./PLANCK_SCALE_PRIMITIVE_INTEGRAL_ACTION_COUNT_THEOREM_2026-04-24.md).
 The structural action-phase representation is then closed by
 [PLANCK_SCALE_ACTION_PHASE_REPRESENTATION_HBAR_THEOREM_2026-04-24.md](./PLANCK_SCALE_ACTION_PHASE_REPRESENTATION_HBAR_THEOREM_2026-04-24.md).
+The Weyl/commutator representation appearances are closed by
+[PLANCK_SCALE_PRIMITIVE_WEYL_HBAR_REPRESENTATION_THEOREM_2026-04-24.md](./PLANCK_SCALE_PRIMITIVE_WEYL_HBAR_REPRESENTATION_THEOREM_2026-04-24.md).
 
 The exact theorem supplied there is:
 
 > derive a primitive real action generator whose complete `C^16` event cell has
 > unit reduced action before exponentiation.
 
-It is closed as reduced action count and as structural `S/hbar=Phi`, not as an
-SI-value derivation of `hbar`. The other strong routes remain useful
-independent attacks, but they are not needed for `gamma=1` once the integral
-primitive-history surface is accepted.
+It is closed as reduced action count, as structural `S/hbar=Phi`, and as Weyl
+representation appearances, not as an SI-value derivation of `hbar`. The other
+strong routes remain useful independent attacks, but they are not needed for
+`gamma=1` or textbook hbar appearances once the integral primitive-history and
+coherent realified Weyl surfaces are accepted.
 
 ## Route 1: noncompact central extension
 
@@ -152,8 +155,10 @@ Use:
 > The branch derives the trace shape `q_atom = gamma/16` and proves that
 > homogeneous, periodic, and finite-root arguments do not select `gamma = 1`.
 > The primitive integral-history theorem supplies `gamma=1` in reduced
-> action-count units, and the action-phase representation theorem gives
-> `S/hbar=Phi`. This is not an SI-value derivation of `hbar`.
+> action-count units, the action-phase representation theorem gives
+> `S/hbar=Phi`, and the Weyl representation theorem gives the standard
+> commutator/uncertainty/angular-momentum appearances. This is not an SI-value
+> derivation of `hbar`.
 
 Do not use:
 

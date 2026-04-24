@@ -17,7 +17,8 @@ or SI `hbar`.
 It is now a Planck closure on the canonical realified `Cl(3)` / `Z^3`
 linear-response surface, plus a reduced `gamma=1` action-count closure on the
 primitive integral-history surface and a structural action-phase hbar closure
-on the primitive coherent-history surface.
+on the primitive coherent-history surface, with Weyl/commutator appearances
+closed on the coherent realified representation surface.
 
 ## What Is Closed
 
@@ -42,6 +43,10 @@ The following pieces are closed on the retained surface:
    primitive integral-history surface.
 10. structural action-phase hbar identification `S/hbar=Phi`, hence
     `S(A_cell)=hbar`, on the primitive coherent-history surface.
+11. Weyl/commutator hbar representation appearances:
+    `p=hbar k`, `E=hbar omega`, `[X,P]=i hbar`,
+    `Delta X Delta P >= hbar/2`, and angular-momentum units of `hbar`, on the
+    coherent realified representation surface.
 
 ## Discharged Nonclaims
 
@@ -61,9 +66,12 @@ The SI-hbar target is discharged as a unit-convention nonclaim:
   integral-history surface;
 - closed: structural `S/hbar=Phi` as the coherent-history action-phase
   representation;
-- not claimed: SI decimal `hbar`, central-extension, spectral-flow,
-  commutator, uncertainty, angular-momentum, or microscopic Ward derivations of
-  the same action unit.
+- closed: Weyl/commutator, uncertainty, energy-frequency,
+  momentum-wavenumber, and angular-momentum appearances on the coherent
+  realified representation surface;
+- not claimed: SI decimal `hbar`, finite-automorphism-only commutator closure,
+  or independent central-extension, spectral-flow, or microscopic Ward
+  derivations of the same action unit.
 
 The parent-source object-class objection is discharged after realified B3:
 
@@ -78,8 +86,9 @@ The strongest current classification is:
 > Planck closure on the canonical realified `Cl(3)` / `Z^3` linear-response
 > surface; reduced `gamma=1` is closed as primitive integral action count,
 > structural `S/hbar=Phi` is closed as coherent-history phase representation,
-> parent-source is discharged after realification, and SI decimal `hbar` is a
-> unit-convention nonclaim.
+> Weyl/commutator hbar appearances are closed on the coherent realified
+> representation surface, parent-source is discharged after realification, and
+> SI decimal `hbar` is a unit-convention nonclaim.
 
 It is not:
 
@@ -95,8 +104,8 @@ It is not:
 1. If pursuing the stricter finite-automorphism-only claim, derive local
    metric/coframe gauge response without invoking canonical realification.
 2. If pursuing stronger hbar programs, derive a central-extension,
-   spectral-flow, commutator, uncertainty, angular-momentum, or microscopic
-   Ward theorem that reproduces the same reduced action unit.
+   spectral-flow, or microscopic Ward theorem that independently reproduces
+   the same reduced action unit.
 
 ## Reviewer-Safe Claim
 

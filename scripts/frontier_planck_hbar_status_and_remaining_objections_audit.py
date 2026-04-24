@@ -31,6 +31,7 @@ def main() -> int:
     integral_count = read("docs/PLANCK_SCALE_PRIMITIVE_INTEGRAL_ACTION_COUNT_THEOREM_2026-04-24.md")
     si_discharge = read("docs/PLANCK_SCALE_SI_HBAR_OBJECTION_DISCHARGE_THEOREM_2026-04-24.md")
     action_phase_hbar = read("docs/PLANCK_SCALE_ACTION_PHASE_REPRESENTATION_HBAR_THEOREM_2026-04-24.md")
+    weyl_hbar = read("docs/PLANCK_SCALE_PRIMITIVE_WEYL_HBAR_REPRESENTATION_THEOREM_2026-04-24.md")
     parent_discharge = read(
         "docs/PLANCK_SCALE_PARENT_SOURCE_DISCHARGE_AFTER_REALIFICATION_THEOREM_2026-04-24.md"
     )
@@ -42,9 +43,10 @@ def main() -> int:
     passed += expect(
         "audit-separates-structural-hbar-from-si-hbar",
         "derives the structural action-to-phase role of `hbar`" in audit
-        and "does **not** derive the SI value of\n`hbar`" in audit
-        and "does not derive every downstream quantum-mechanical appearance\nof `hbar`" in audit,
-        "the audit claims structural S/hbar=Phi but refuses SI and downstream overclaims",
+        and "standard Weyl/commutator\nappearances" in audit
+        and "does **not**\nderive the SI value of `hbar`" in audit
+        and "does not make the\nfinite automorphism group itself an infinitesimal commutator theory" in audit,
+        "the audit claims structural and Weyl hbar but refuses SI overclaim",
     )
 
     total += 1
@@ -128,6 +130,18 @@ def main() -> int:
 
     total += 1
     passed += expect(
+        "weyl-representation-closes-textbook-hbar-appearances",
+        "Textbook Weyl/commutator appearances of `hbar`" in audit
+        and "`[X,P] = i hbar`" in audit
+        and "`p = hbar k` and `E = hbar omega`" in audit
+        and "`Delta X Delta P >= hbar/2`" in audit
+        and "`[X,P] = i hbar I`" in weyl_hbar
+        and "`J_i = (hbar/2) sigma_i`" in weyl_hbar,
+        "Weyl, commutator, uncertainty, and angular-momentum roles are represented",
+    )
+
+    total += 1
+    passed += expect(
         "information-action-kappa-reduced-to-gamma",
         "`q_* = kappa_info I_*`" in information
         and "`kappa_info = gamma/32 per bit`" in audit
@@ -157,9 +171,11 @@ def main() -> int:
         "conditional structural Planck-length result" in audit
         and "coherent-history phase\n"
         "> representation gives `S/hbar=Phi`, hence `S(A_cell)=hbar`" in audit
+        and "realified Weyl representation then gives `p=hbar k`, `E=hbar omega`,\n"
+        "> `[X,P]=i hbar`, uncertainty, and angular-momentum units" in audit
         and "Do not use:\n\n> The branch predicts the numerical SI value of the Planck constant."
         in audit,
-        "safe structural hbar claim and unsafe SI claim are explicit",
+        "safe structural/Weyl hbar claim and unsafe SI claim are explicit",
     )
 
     print(f"SUMMARY: PASS={passed} FAIL={total - passed}")

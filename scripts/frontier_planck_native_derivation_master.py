@@ -64,6 +64,7 @@ SUBCHECKS = [
     "frontier_planck_primitive_integral_action_count_theorem_2026_04_24.py",
     "frontier_planck_si_hbar_objection_discharge_theorem_2026_04_24.py",
     "frontier_planck_action_phase_representation_hbar_theorem_2026_04_24.py",
+    "frontier_planck_primitive_weyl_hbar_representation_theorem_2026_04_24.py",
     "frontier_planck_overnight_closure_status_theorem.py",
 ]
 
@@ -137,6 +138,7 @@ def main() -> int:
     integral_action_count = read("docs/PLANCK_SCALE_PRIMITIVE_INTEGRAL_ACTION_COUNT_THEOREM_2026-04-24.md")
     si_hbar_discharge = read("docs/PLANCK_SCALE_SI_HBAR_OBJECTION_DISCHARGE_THEOREM_2026-04-24.md")
     action_phase_hbar = read("docs/PLANCK_SCALE_ACTION_PHASE_REPRESENTATION_HBAR_THEOREM_2026-04-24.md")
+    weyl_hbar = read("docs/PLANCK_SCALE_PRIMITIVE_WEYL_HBAR_REPRESENTATION_THEOREM_2026-04-24.md")
     overnight_status = read("docs/PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md")
 
     for script in SUBCHECKS:
@@ -546,9 +548,9 @@ def main() -> int:
         "PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md"
         in reviewer
         and "derives the structural action-to-phase role of `hbar`" in hbar_audit
-        and "does **not** derive the SI value of\n`hbar`" in hbar_audit
-        and "structural hbar result, not a prediction of the SI value of `hbar`"
-        in hbar_audit
+        and "standard Weyl/commutator\nappearances" in hbar_audit
+        and "does **not**\nderive the SI value of `hbar`" in hbar_audit
+        and "not a\n> prediction of the SI value of `hbar`" in hbar_audit
         and "no claim that the packet predicts the SI numerical value of `hbar`"
         in reviewer,
     )
@@ -677,6 +679,21 @@ def main() -> int:
 
     total += 1
     passed += expect(
+        "primitive-weyl-representation-derives-textbook-hbar-appearances",
+        "PLANCK_SCALE_PRIMITIVE_WEYL_HBAR_REPRESENTATION_THEOREM_2026-04-24.md"
+        in reviewer
+        and "structural textbook-appearance closure" in weyl_hbar
+        and "`p = hbar k`" in weyl_hbar
+        and "`E = hbar omega`" in weyl_hbar
+        and "`[X,P] = i hbar I`" in weyl_hbar
+        and "`Delta X Delta P >= hbar/2`" in weyl_hbar
+        and "`J_i = (hbar/2) sigma_i`" in weyl_hbar
+        and "finite-dimensional canonical commutator `[X,P]=i hbar I` is impossible"
+        in weyl_hbar,
+    )
+
+    total += 1
+    passed += expect(
         "overnight-status-classifies-conditional-not-bare",
         "PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md"
         in reviewer
@@ -688,6 +705,7 @@ def main() -> int:
         in overnight_status
         and "closed: `gamma=1` as reduced primitive action count" in overnight_status
         and "closed: structural `S/hbar=Phi`" in overnight_status
+        and "closed: Weyl/commutator, uncertainty, energy-frequency" in overnight_status
         and "SI-hbar target is discharged as a unit-convention nonclaim"
         in overnight_status
         and "Nature-grade bare-axiom Planck and hbar closure has been achieved"

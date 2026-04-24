@@ -27,6 +27,7 @@ def main() -> int:
     gamma_attempt = read("docs/PLANCK_SCALE_PRIMITIVE_ACTION_UNIT_GAMMA_ONE_ATTEMPT_2026-04-24.md")
     gamma_period = read("docs/PLANCK_SCALE_GAMMA_PHASE_PERIOD_OBSTRUCTION_THEOREM_2026-04-24.md")
     integral_count = read("docs/PLANCK_SCALE_PRIMITIVE_INTEGRAL_ACTION_COUNT_THEOREM_2026-04-24.md")
+    weyl = read("docs/PLANCK_SCALE_PRIMITIVE_WEYL_HBAR_REPRESENTATION_THEOREM_2026-04-24.md")
     reviewer = read("docs/PLANCK_SCALE_REVIEWER_CANONICAL_SUBMISSION_PACKET_2026-04-23.md")
 
     passed = 0
@@ -109,12 +110,13 @@ def main() -> int:
     total += 1
     passed += expect(
         "si-hbar-still-not-claimed",
-        "It is closed as reduced action count and as structural `S/hbar=Phi`, not as an\n"
-        "SI-value derivation of `hbar`" in note
-        and "Those routes are not closed in the current branch" in note
+        "It is closed as reduced action count, as structural `S/hbar=Phi`, and as Weyl\n"
+        "representation appearances, not as an SI-value derivation of `hbar`" in note
+        and "standard\n> commutator/uncertainty/angular-momentum appearances" in note
+        and "`[X,P] = i hbar I`" in weyl
         and "Do not use:\n\n> The branch predicts the SI numerical value of `hbar`."
         in note,
-        "structural hbar closure is separated from SI hbar and independent routes",
+        "structural/Weyl hbar closure is separated from SI hbar and independent routes",
     )
 
     print(f"SUMMARY: PASS={passed} FAIL={total - passed}")
