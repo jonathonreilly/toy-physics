@@ -32,6 +32,7 @@ SUBCHECKS = [
     "frontier_planck_clean_closure_criterion_theorem.py",
     "frontier_planck_primitive_boundary_action_unit_reduction_theorem.py",
     "frontier_planck_boundary_density_three_mechanism_audit.py",
+    "frontier_planck_boundary_event_ward_identity_closure_theorem.py",
 ]
 
 
@@ -72,6 +73,7 @@ def main() -> int:
     closure = read("docs/PLANCK_SCALE_CLEAN_CLOSURE_CRITERION_THEOREM_2026-04-23.md")
     primitive_unit = read("docs/PLANCK_SCALE_PRIMITIVE_BOUNDARY_ACTION_UNIT_REDUCTION_THEOREM_2026-04-23.md")
     density_audit = read("docs/PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md")
+    event_ward = read("docs/PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md")
 
     for script in SUBCHECKS:
         total += 1
@@ -191,12 +193,12 @@ def main() -> int:
 
     total += 1
     passed += expect(
-        "nature-status-avoids-project-shorthand-and-keeps-conditional-scope",
+        "nature-status-avoids-project-shorthand-and-names-event-ward-surface",
         "P1" not in nature_status
         and "GSI" not in nature_status
         and "Axiom Extension" not in nature_status
-        and "conditional Planck derivation" in nature_status
-        and "not yet Nature-grade as an unconditional bare-axiom derivation"
+        and "normal-ordered primitive boundary event Ward\n> identity" in nature_status
+        and "The remaining review question is whether that event Ward surface is accepted"
         in nature_status,
     )
 
@@ -207,7 +209,7 @@ def main() -> int:
         in reviewer
         and "Only one dimensionless statement remains:" in closure
         and "`mu = 1`" in closure
-        and "mathematically clean closure is conditional" in closure,
+        and "mathematically clean closure is therefore conditional" in closure,
     )
 
     total += 1
@@ -230,6 +232,19 @@ def main() -> int:
         and "`delta = m_axis`" in density_audit
         and "not yet derived by the current Ward,\n> phase, or boundary-term machinery"
         in density_audit,
+    )
+
+    total += 1
+    passed += expect(
+        "boundary-event-ward-identity-closes-additive-density",
+        "PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md"
+        in reviewer
+        and "PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md"
+        in packet
+        and "`nu - lambda_min(L_Sigma) = Tr(rho_cell P_A)`" in event_ward
+        and "`nu = 1 + 1/4 = 5/4`" in event_ward
+        and "If the event Ward identity is accepted, the additive\ndensity is closed"
+        in event_ward,
     )
 
     print(f"SUMMARY: PASS={passed} FAIL={total - passed}")

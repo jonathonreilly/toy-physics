@@ -4,6 +4,20 @@
 **Status:** direct hostile-review audit of the last boundary-density step
 **Verifier:** `scripts/frontier_planck_boundary_density_three_mechanism_audit.py`
 
+## Post-Audit Note
+
+This audit records the pre-closure state: ordinary source-response Ward
+identities, action-phase quantization, and imported semiclassical boundary-term
+normalization did not derive the additive density.
+
+The follow-up closure attempt is:
+
+- [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md)
+
+That theorem supplies a different Ward identity: the normal-ordered primitive
+boundary event insertion identity. The no-go statements below remain valid for
+the three mechanisms as formulated here.
+
 ## Question
 
 Can the remaining boundary density

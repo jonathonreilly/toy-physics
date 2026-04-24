@@ -87,8 +87,8 @@ def main() -> int:
             "candidate-classification-supports-menu-exhaustion",
             "no currently admitted same-surface observable can break the Planck scale ray"
             in classification
-            and "existing menu is exhausted" in note,
-            "the current same-surface menu does not already contain the missing theorem",
+            and "pre-closure menu was exhausted" in note,
+            "the old same-surface menu did not already contain the missing theorem",
         ),
         (
             "horizon-and-info-lanes-are-not-fake-closures",
@@ -99,15 +99,15 @@ def main() -> int:
         ),
         (
             "nature-status-and-closure-note-agree",
-            "conditional Planck derivation" in nature_status
-            and "mathematically clean closure is conditional" in note,
-            "front-door status should match the closure criterion",
+            "normal-ordered primitive boundary event Ward\n> identity" in nature_status
+            and "mathematically clean closure is therefore conditional" in note,
+            "front-door status should identify the event Ward surface as the closure pressure point",
         ),
         (
             "theorem-states-next-new-science-target",
             "no positive `mu != 1` is compatible" in note
-            and "primitive same-surface cell" in note,
-            "the next proof target should be exact enough to attack",
+            and "normal-ordered event Ward\nidentity" in note,
+            "the closure target should now name the event Ward theorem",
         ),
     ]
 

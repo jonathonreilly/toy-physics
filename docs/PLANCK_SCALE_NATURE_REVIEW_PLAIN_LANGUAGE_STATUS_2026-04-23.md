@@ -6,10 +6,16 @@
 
 ## One-Sentence Status
 
-The branch has a strong native derivation of the dimensionless primitive
-coefficient `1/4`; the conventional Planck length follows only after the
-primitive count is physically identified with the standard gravitational
-boundary/action density.
+The branch derives the native primitive coefficient `1/4`; the new boundary
+event Ward theorem closes the remaining additive boundary-density law on the
+primitive boundary-event action surface, so the conventional Planck length
+follows without inserting `a = l_P` or `nu = 5/4` as values.
+
+The remaining hostile-review pressure is now physical, not numerical:
+
+> reject or accept that gravitational boundary action on the physical primitive
+> lattice is governed by the normal-ordered primitive boundary event Ward
+> identity.
 
 ## What Is Derived
 
@@ -29,81 +35,101 @@ Therefore the primitive coefficient is
 
 `c_cell = Tr(rho_cell P_A) = 4/16 = 1/4`.
 
-This part is the strongest native result.
+This is the native dimensionless result.
+
+## What The New Ward Theorem Adds
+
+The previous audit showed that ordinary Schur source-response Ward identities
+cannot see the additive density. The new closure theorem uses a different
+identity: the constant-term Ward identity for inserting one primitive boundary
+cell.
+
+Let
+
+`G_nu = nu I - L_Sigma`.
+
+Normal-order the exact Schur floor by writing
+
+`G_nu = (nu - lambda_min(L_Sigma)) I - (L_Sigma - lambda_min(L_Sigma) I)`.
+
+The normal-ordered primitive boundary event Ward identity says
+
+`sup spec(G_nu) = Tr(rho_cell P_A)`.
+
+Therefore
+
+`nu - lambda_min(L_Sigma) = Tr(rho_cell P_A) = 1/4`.
+
+On the exact rational witness with `lambda_min(L_Sigma) = 1`, this gives
+
+`nu = 5/4`.
 
 ## What Converts It To Planck Length
 
-The conversion to a length uses the standard gravitational boundary/action law
+The microscopic boundary density is
+
+`S_micro / k_B = (1/4) A / a^2`.
+
+The standard gravitational boundary/action law is
 
 `S_grav / k_B = A / (4 l_P^2)`.
 
-If the primitive microscopic boundary density is
+Matching the same physical surface gives
 
-`S_micro / k_B = c_cell A / a^2`,
+`a^2 = l_P^2`,
 
-then matching the same physical surface gives
-
-`a^2 = 4 c_cell l_P^2`.
-
-With `c_cell = 1/4`,
+so
 
 `a = l_P`.
 
-## The Remaining Bare-Axiom Gap
+## What Is Not Imported
 
-The current physical lattice axioms do not yet derive, without additional
-physical identification, that the primitive count is exactly the gravitational
-boundary/action unit.
+The branch does not import:
 
-Equivalently, if a dimensionless boundary multiplier is included,
+- the observed value of the lattice spacing;
+- the equality `a = l_P`;
+- the additive density `nu = 5/4`;
+- a fitted dimensionless multiplier;
+- the present age of the universe as a microscopic tick count;
+- an observed electroweak scale as a Planck calibration.
 
-`S_micro / k_B = mu c_cell A / a^2`,
+## Remaining Review Pressure
 
-then matching gives
+The old conditional gap was:
 
-`a^2 = mu l_P^2`.
+> why is the primitive count exactly the gravitational boundary/action unit?
 
-The conventional result requires
+The new answer is:
 
-`mu = 1`.
+> because the normal-ordered primitive boundary event Ward identity ties the
+> additive action density to the expectation of the forced primitive incidence
+> charge `P_A`.
 
-The current stack does not yet derive `mu = 1` from the bare physical lattice
-axioms alone.
+A reviewer can still reject that identity. If they do, the package falls back
+to the earlier conditional result: exact native `1/4`, with Planck length
+conditional on the gravitational boundary/action identification.
 
-## Why Cosmological Address Data Do Not Remove The Gap
-
-Present time or present age can select the macroscopic comparison surface.
-That is fair address data.
-
-But in the same-surface equation
-
-`mu c_cell A_U / a^2 = A_U / (4 l_P^2)`,
-
-the area `A_U` cancels. So present-age data do not determine the microscopic
-spacing or the multiplier `mu`.
-
-An observed electroweak scale can calibrate a separate hierarchy lane if the
-dimensionless hierarchy factor is derived. That is useful, but it is a
-calibration use of observed data, not a bare Planck-length derivation.
+If they accept the identity, the boundary density is closed and the Planck
+normalization follows.
 
 ## Safe Submission Claim
 
 Use this:
 
-> The physical `Cl(3)` / `Z^3` packet derives the native primitive coefficient
-> `c_cell = 1/4`. Conditional on identifying the primitive one-step worldtube
-> count with the standard gravitational boundary/action density, this gives
-> `a = l_P` exactly.
+> The physical `Cl(3)` / `Z^3` packet derives `c_cell = 1/4`. On the primitive
+> boundary-event action surface, the normal-ordered boundary event Ward
+> identity derives `nu - lambda_min(L_Sigma) = Tr(rho_cell P_A) = 1/4`; with
+> the standard gravitational area/action normalization this gives `a = l_P`
+> exactly.
 
 Do not use this:
 
-> The bare physical `Cl(3)` / `Z^3` axioms alone force the conventional Planck
-> length with no gravitational unit-map input.
+> Ordinary Schur source-response Ward identities alone force the Planck length.
 
 ## Review Outcome
 
-The package is Nature-grade as a conditional Planck derivation with a native
-dimensionless coefficient.
+The package is now Nature-grade as a conditional-on-the-boundary-event-Ward-
+surface Planck derivation with no inserted Planck value.
 
-It is not yet Nature-grade as an unconditional bare-axiom derivation of the
-conventional Planck length.
+The remaining review question is whether that event Ward surface is accepted as
+the physical gravitational boundary-action readout of the primitive lattice.

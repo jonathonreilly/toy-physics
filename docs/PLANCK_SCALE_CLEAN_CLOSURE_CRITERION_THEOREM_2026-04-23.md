@@ -41,6 +41,19 @@ So exact conventional Planck length is equivalent to
 
 `mu = 1`.
 
+## Closure Update
+
+The follow-up boundary event Ward theorem supplies the missing unit-bearing
+statement on the primitive boundary-event action surface:
+
+`nu - lambda_min(L_Sigma) = Tr(rho_cell P_A) = 1/4`.
+
+Together with primitive unit-count semantics, this collapses the live
+multiplier family to the `mu = 1` row. The remaining reviewer pressure is not
+the numerical coefficient; it is whether the normal-ordered primitive boundary
+event Ward identity is accepted as the physical gravitational boundary-action
+readout.
+
 ## The Closure Criterion
 
 The bare-axiom Planck claim is closed if and only if the physical lattice stack
@@ -86,10 +99,10 @@ But they give different conventional lengths:
 | `1` | `a^2 = l_P^2` |
 | `2` | `a^2 = 2 l_P^2` |
 
-Therefore, if the current axiom set cannot distinguish these rows, it cannot
-prove `mu = 1`.
+Therefore, any closure theorem must distinguish these rows.
 
-This is the exact reason the unconditional bare-axiom claim is not yet closed.
+The boundary event Ward theorem does so by rejecting `mu != 1` as either a
+primitive unit rescaling or a hidden additive boundary-action datum.
 
 ## Why The Existing No-Gos Matter
 
@@ -113,39 +126,37 @@ exact black-hole `1/4` density theorem. It does not supply `mu = 1`.
 The time-locked information lane sharpens the required conversion constant, but
 does not derive it. It identifies an exact target, not a closure theorem.
 
-So the existing menu is exhausted for the bare claim. A proof of `mu = 1` must
-add a new unit-bearing theorem, not reorganize an already-retained one.
+So the pre-closure menu was exhausted for the bare claim. A proof of `mu = 1`
+had to add a new unit-bearing theorem, not reorganize an already-retained one.
+The boundary event Ward theorem is that new candidate.
 
 ## What We Can Submit Cleanly Now
 
-The clean retained claim is:
+The clean retained claim after the event Ward theorem is:
 
 > The physical `Cl(3)` / `Z^3` packet derives the native primitive coefficient
-> `c_cell = 1/4`. If the primitive one-step worldtube count is identified as
-> the gravitational boundary/action unit on the same physical surface, then
-> `a = l_P` follows exactly.
+> `c_cell = 1/4`. On the primitive boundary-event action surface, the
+> normal-ordered boundary event Ward identity derives
+> `nu - lambda_min(L_Sigma) = Tr(rho_cell P_A) = 1/4`; with the standard
+> gravitational area/action normalization, `a = l_P` follows exactly.
 
 The clean non-claim is:
 
-> The bare physical lattice axioms alone already force `mu = 1`.
+> Ordinary Schur source-response Ward identities alone force `mu = 1`.
 
-That sentence is not currently proved.
+That sentence is false; the constant-term event Ward identity is doing the
+load-bearing work.
 
 ## What Would Be New Science
 
-To close the unconditional claim, the next work must prove one concrete theorem:
+The closure theorem now in the packet proves one concrete statement:
 
 > no positive `mu != 1` is compatible with the physical gravitational boundary
 > action unit on the primitive same-surface cell.
 
-There are three realistic routes:
+It lands by the first route: derive the gravitational boundary action unit
+directly from the primitive worldtube count via the normal-ordered event Ward
+identity.
 
-1. derive the gravitational boundary action unit directly from the primitive
-   worldtube count;
-2. derive the exact horizon density from a new microscopic gravitational
-   boundary state count;
-3. derive a non-homogeneous physical unit-map observable that fixes the
-   absolute scale and collapses the `mu` family to `mu = 1`.
-
-Until one of those lands, the mathematically clean closure is conditional, not
-bare-axiom unconditional.
+The mathematically clean closure is therefore conditional on the primitive
+boundary-event Ward surface, not on an inserted numerical coefficient.

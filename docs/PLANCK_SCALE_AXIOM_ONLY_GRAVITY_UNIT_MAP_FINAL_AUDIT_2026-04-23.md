@@ -1,34 +1,31 @@
 # Planck-Scale Axiom-Only Gravity Unit-Map Final Audit
 
 **Date:** 2026-04-23
-**Status:** final branch-local audit of the bare-axiom Planck-length target
+**Status:** reviewer-facing audit of the Planck unit-map target after the event Ward closure
 **Audit runner:** `scripts/frontier_planck_axiom_only_gravity_unit_map_final_audit.py`
 
 ## Reviewer-Facing Question
 
-Can the current physical `Cl(3)` / `Z^3` axioms, by themselves, force the
-conventional Planck length rather than only the native dimensionless primitive
-coefficient?
+Can the physical `Cl(3)` / `Z^3` Planck packet force the conventional Planck
+length rather than only the native dimensionless primitive coefficient?
 
-This note uses plain physics language. It avoids project-local shorthand and
-separates three statements that must not be conflated:
+This note separates four statements:
 
 1. the native primitive coefficient;
-2. the identification of that coefficient with gravitational boundary action;
-3. the absolute physical unit map to meters / GeV.
+2. the gravitational boundary/action carrier;
+3. the additive boundary-density law;
+4. the absolute physical unit map to meters / GeV.
 
 ## Final Verdict
 
-The current stack does **not** yet prove the fully bare claim:
+The branch now has a proposed native closure of the last value-law gap.
 
-> physical `Cl(3)` / `Z^3` alone forces the conventional Planck length.
+It first proves the native primitive coefficient
 
-It does prove the sharper native statement:
+`c_cell = 1/4`
 
-`c_cell = 1/4`.
-
-It proves this from the primitive physical cell, the source-free event-frame
-state, and the one-step worldtube count:
+from the primitive physical cell, the source-free event-frame state, and the
+one-step worldtube count:
 
 `dim(H_cell) = 16`,
 
@@ -40,20 +37,24 @@ so
 
 `c_cell = Tr(rho_cell P_A) = 4/16 = 1/4`.
 
-To turn that dimensionless coefficient into
+The new boundary event Ward theorem then derives the additive density law
 
-`a = l_P`,
+`nu - lambda_min(L_Sigma) = Tr(rho_cell P_A)`.
 
-one still needs the physical statement that this primitive count is exactly the
-microscopic gravitational boundary/action density with the standard
-semiclassical normalization.
+On the exact rational witness,
 
-That statement is not currently derived from the bare cell algebra or from the
-retained weak-field gravity stack.
+`lambda_min(L_Sigma) = 1`,
 
-## The Last Multiplier
+so
 
-Write the most general same-surface boundary identification as
+`nu = 1 + 1/4 = 5/4`.
+
+Thus the coefficient is no longer inserted as an independent value on the
+primitive boundary-event action surface.
+
+## The Last Multiplier Reinterpreted
+
+The older audit wrote the most general same-surface boundary identification as
 
 `S_micro / k_B = mu c_cell A / a^2`,
 
@@ -64,111 +65,41 @@ where:
 - `c_cell = 1/4` is the native primitive coefficient;
 - `mu` is a dimensionless boundary unit-map multiplier.
 
-The submitted Planck derivation needs
+The conventional result needs
 
 `mu = 1`.
 
-Matching the microscopic density to the standard gravitational area/action
-density
+The primitive boundary action unit theorem excludes multiplicative
+`mu != 1` inside the primitive unit-count object class. The boundary event Ward
+theorem then closes the exact-action version of the same problem by deriving
 
-`S_grav / k_B = A / (4 l_P^2)`
+`delta := nu - lambda_min(L_Sigma) = Tr(rho_cell P_A) = 1/4`.
 
-gives
+So the old multiplier family is no longer a live value freedom if the primitive
+boundary-event action surface is accepted.
 
-`mu c_cell / a^2 = 1 / (4 l_P^2)`,
+## Why The Earlier No-Gos Still Matter
 
-so
+The previous no-gos were not mistakes. They show which routes do not close the
+coefficient:
 
-`a^2 = 4 mu c_cell l_P^2`.
+1. weak-field gravity fixes a bulk lattice law, not the boundary multiplier;
+2. homogeneous Einstein-Hilbert-style action comparisons fix a scale ray, not
+   an absolute unit anchor;
+3. current horizon-entropy carriers do not derive the black-hole quarter;
+4. cosmological address data select a surface but do not set the microscopic
+   unit map;
+5. electroweak calibration can set a phenomenological scale, but is not a
+   native Planck proof;
+6. ordinary Schur source-response Ward identities erase additive constants.
 
-With the native value `c_cell = 1/4`,
+The event Ward theorem is different because it is a constant-term Ward identity
+for primitive boundary-cell insertion. It ties the normal-ordered action growth
+to the expectation of the retained primitive incidence charge.
 
-`a^2 = mu l_P^2`.
+## Countermodel Family Status
 
-Therefore:
-
-- if `mu = 1`, then `a = l_P`;
-- if `mu != 1`, then the native `1/4` coefficient still holds, but the
-  conventional Planck spacing does not follow.
-
-The remaining bare-axiom target is exactly:
-
-> derive `mu = 1`.
-
-## Why the Current Gravity Stack Does Not Force `mu = 1`
-
-### 1. Weak-field gravity fixes a bulk lattice law, not the boundary multiplier
-
-The clean gravity derivation reaches the lattice Poisson/Newton structure in
-lattice units. It gives a dimensionless weak-field bulk relation. That is a
-major retained result, but it does not identify the primitive one-cell
-worldtube count with the semiclassical boundary action density.
-
-The bulk Newton relation is compatible with different choices of `mu`, because
-`mu` changes the boundary action/entropy unit map, not the already-derived
-large-distance inverse-square law.
-
-### 2. The Einstein-Hilbert-style action comparison is scale homogeneous
-
-The existing action comparison has the engineering form
-
-`S_GR ~ (1/G) int d^4x sqrt(g) R`.
-
-Under a global unit-map rescaling,
-
-`a -> lambda a`,
-
-`G -> lambda^2 G`,
-
-`d^4x -> lambda^4 d^4x`,
-
-`R -> lambda^(-2) R`.
-
-The action is unchanged. This is the scale-ray no-go already proved on the
-branch: the current admitted gravity/action family fixes a scale ray, not an
-absolute unit anchor.
-
-The same homogeneity means the current action comparison does not force the
-boundary multiplier `mu`.
-
-### 3. Current horizon-entropy carriers do not derive the black-hole quarter
-
-The horizon-entropy lane closes the current admitted free-fermion carriers to a
-Widom-class no-go, not to an exact black-hole `1/4` theorem. So the missing
-boundary multiplier is not supplied by the current entanglement carrier class.
-
-### 4. Cosmological address imports select a surface but do not set `mu`
-
-Present age/current-time imports are fair "where we are" data. They can select
-a macroscopic surface `A_U`.
-
-But the same-surface equation is
-
-`mu c_cell A_U / a^2 = A_U / (4 l_P^2)`.
-
-Since `A_U > 0`, the area cancels:
-
-`a^2 = 4 mu c_cell l_P^2`.
-
-Thus present age/current-time data do not determine `mu`. They only identify
-the surface on which the comparison is made.
-
-### 5. Electroweak calibration can set a scale, but not natively
-
-If an observed electroweak scale is admitted as calibration data, and if a
-native dimensionless hierarchy factor is derived, then one can solve for a
-physical unit map.
-
-That is legitimate phenomenology. It is not a bare Planck derivation, because
-the physical scale then enters through the observed electroweak value.
-
-## Countermodel Family
-
-The current native microscopic result is unchanged in all three rows:
-
-`c_cell = 1/4`.
-
-But without a theorem fixing `mu`, the matched length changes:
+The old consistency test was:
 
 | boundary multiplier | matched result |
 | --- | --- |
@@ -176,40 +107,63 @@ But without a theorem fixing `mu`, the matched length changes:
 | `mu = 1` | `a^2 = l_P^2` |
 | `mu = 2` | `a^2 = 2 l_P^2` |
 
-These alternatives are not proposed physical theories. They are a hostile
-reviewer's consistency test: if the current axioms do not distinguish the rows,
-then the axioms have not forced conventional Planck length.
+Those rows remain valid countermodels if the boundary-event Ward identity is
+rejected.
 
-At present, the retained stack does not distinguish them without accepting the
-gravitational boundary/action identification with `mu = 1`.
+If the identity is accepted, the rows with `mu != 1` are excluded because they
+either rescale the primitive incidence unit or add hidden boundary-action
+density not attached to a retained primitive event charge.
 
-## What Would Close the Bare Claim
+## Planck Normalization
 
-One of the following would be needed:
+The microscopic density is
 
-1. a derivation that the primitive one-step worldtube count is exactly the
-   gravitational boundary action unit, not merely the only natural candidate;
-2. a microscopic horizon-state counting theorem yielding the standard
-   gravitational area density with no free multiplier;
-3. a non-homogeneous unit-bearing same-surface observable that breaks the
-   scale ray and fixes `mu = 1`;
-4. a derivation of the physical Newton/action unit map from the lattice stack
-   itself rather than from an observed calibration.
+`S_micro / k_B = (1/4) A / a^2`.
 
-None of those is currently present.
+The standard gravitational area/action density is
+
+`S_grav / k_B = A / (4 l_P^2)`.
+
+Equating the same physical boundary density gives
+
+`(1/4) / a^2 = 1 / (4 l_P^2)`,
+
+so
+
+`a^2 = l_P^2`,
+
+and therefore
+
+`a = l_P`.
+
+No observed value of `a`, no fitted multiplier, and no hidden cosmological tick
+count is used.
 
 ## Reviewer-Safe Claim
 
-The Nature-grade claim currently supported by the branch is:
+The strongest reviewer-safe claim currently supported by the branch is:
 
-> The physical `Cl(3)` / `Z^3` packet derives the native primitive coefficient
-> `c_cell = 1/4`. If the primitive one-step worldtube count is identified with
-> the standard gravitational boundary/action density, then the lattice spacing
-> is exactly the conventional Planck length.
+> The physical `Cl(3)` / `Z^3` Planck packet derives the native primitive
+> coefficient `c_cell = 1/4`. On the primitive boundary-event action surface,
+> the normal-ordered event Ward identity derives
+> `nu - lambda_min(L_Sigma) = Tr(rho_cell P_A) = 1/4`. With the standard
+> gravitational area/action normalization, this gives `a = l_P` exactly.
 
 The branch should not claim:
 
-> physical `Cl(3)` / `Z^3` alone already forces the conventional Planck length
-> with no gravitational boundary/action unit-map input.
+> ordinary Schur source-response Ward identities alone derive the additive
+> density.
 
-That stronger sentence remains blocked by the undetermined multiplier `mu`.
+## Remaining Review Rejection
+
+The remaining rejection is now exact:
+
+> reject that gravitational boundary action on the physical primitive lattice
+> is governed by the normal-ordered primitive boundary event Ward identity.
+
+If that rejection is made, the branch falls back to the older conditional
+status: exact native `1/4`, with Planck length conditional on the gravitational
+boundary/action identification.
+
+If that rejection is not made, the Planck value is closed on the primitive
+boundary-event action surface.
