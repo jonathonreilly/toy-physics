@@ -680,3 +680,25 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   the thread's current state /
   `docs/KASTELEYN_THREAD_CONJECTURE.md` /
   Target 2 sub-step 2d-V2-thread-consolidation.
+- Localization signature extends to 4-singleton defect
+  configurations (signal does NOT smear with more defects).
+  Tested 3 new shapes with 4 balanced isolated singletons:
+  S1 (4,3,2) \ {(0,0,0), (3,0,0), (0,2,0), (3,2,0)} (4 bottom
+  corners): n_bi=10, #PM=27, det_K3=19, signature holds
+  (min_dist=1.118, maj_dist=1.500, corr=-0.503).
+  S2 (4,4,2) \ {(0,0,0), (3,0,0), (0,3,0), (3,3,0)} (4 bottom
+  corners, not sigma-invariant): n_bi=14, #PM=1248, det=800,
+  signature holds (min=1.118, maj=1.500, corr=-0.371).
+  S3 (4,4,2) \ {(0,0,0), (3,0,0), (0,3,1), (3,3,1)} (sigma-
+  invariant 4-set, but n_bi=14 even so reflection-degeneracy
+  lemma does not apply): #PM=624, det=400, signature holds
+  (min=1.118, maj=1.621, corr=-0.458).
+  All 3 shapes pass; signature holds 3/3. The iter 21-22
+  signature (top-5 minority-biased edges have smaller midpoint
+  distance to removed sites; Pearson corr(frac, dist) < 0) is
+  NOT limited to 2-singleton configs -- it is robust to
+  defect-count scaling as long as removals are balanced and
+  isolated. Multi-singleton interactions do not smear the
+  signal on tested shapes /
+  `frontier_axiom_native_multi_singleton_localization.py` /
+  Target 2 sub-step 2d-V2-multi-singleton-extension.
