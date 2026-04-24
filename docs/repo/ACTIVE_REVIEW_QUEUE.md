@@ -59,13 +59,16 @@ Current science/open-lane follow-ups:
   at `3.6%` CV across n=5 mass configs, see
   [`WILSON_TWO_BODY_ACTION_REACTION_BOTH_MASSES_NOTE_2026-04-23.md`](../WILSON_TWO_BODY_ACTION_REACTION_BOTH_MASSES_NOTE_2026-04-23.md));
   the action-reaction analog (`(m_a + m_b)` scaling on separation acceleration)
-  is qualitatively correct (attractive sign on all 7 mass configs) but
-  quantitatively only approximate (CV = 28.7%) and breaks packet-exchange
-  symmetry at large mass asymmetry (41.9% at (2,3) vs (3,2)) on side=11, see
-  [`WILSON_TWO_BODY_SEPARATION_ACCELERATION_SCALING_NOTE_2026-04-24.md`](../WILSON_TWO_BODY_SEPARATION_ACCELERATION_SCALING_NOTE_2026-04-24.md).
-  Both protocols inherit nonlinear self-Hartree feedback failures at large
-  mass asymmetry; the obstruction is sharp and physical, not a fitting
-  artifact
+  is qualitatively correct (attractive sign) but the
+  [`WILSON_TWO_BODY_SEPARATION_ACCELERATION_SCALING_NOTE_2026-04-24.md`](../WILSON_TWO_BODY_SEPARATION_ACCELERATION_SCALING_NOTE_2026-04-24.md)
+  finite-size hypothesis is REFUTED in
+  [`WILSON_TWO_BODY_FINITE_SIZE_REFUTATION_NOTE_2026-04-24.md`](../WILSON_TWO_BODY_FINITE_SIZE_REFUTATION_NOTE_2026-04-24.md):
+  CV stays at 28.5% and (2,3)/(3,2) asymmetry at 40.3% even at side=17, with
+  per-config ratios stable to 1-2% across sides. The obstruction is a
+  thermodynamic-limit physical effect; the Wilson 2-body open-boundary Hartree
+  system is intrinsically non-Newtonian. A Newton-scaling action-reaction
+  proof on this carrier is impossible; alternative protocols (periodic,
+  static-source, or analytic continuum-limit) are needed
 - boundary-law / holographic lane: keep the effect bounded and do not overread
   it as a holography derivation; the area-law slope is seed-stable to ~2% CV
   and monotonically decreasing in G, but the gravity-induced suppression ratio
