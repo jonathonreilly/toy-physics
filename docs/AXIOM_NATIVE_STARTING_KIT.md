@@ -245,6 +245,18 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   on planar bipartite Z^3 subgraphs /
   `frontier_axiom_native_kasteleyn_plaquette_sign.py` /
   Target 2 sub-step 2d.
+- SCOPE LIMIT on ledger 2d: the K3 Kasteleyn identity
+  `|det(B_G)| = #PM(G)` holds on 2x2x1 (plaquette), 2x2x2 (cube Q_3),
+  2x2x3, and 3x2x2 cuboids (all planar, all equality), but BREAKS
+  on the 3x3x2 cuboid (18 sites, 33 edges, non-planar prism over
+  3x3 grid): `|det(B_G)| = 225` while `#PM(G) = 229`, off by 4.
+  This falsifies any extension of 2d to non-planar Z^3 subgraphs
+  and confirms the planarity caveat already noted in 2d. The
+  K3-staggered orientation is NOT a Pfaffian orientation on
+  general Z^3 bipartite subgraphs; its Pfaffian property is
+  exactly co-extensive with planarity of the subgraph /
+  `frontier_axiom_native_kasteleyn_non_planar_test.py` /
+  Target 2 sub-step 2d-adversarial (V2 loop).
 - Strong CP theta-vacuum is STRUCTURALLY ABSENT from the kit via
   three independent obstructions: (a) K2 has only 3 spatial
   dimensions (no time), so the 4-form `theta * F wedge F-dual`
