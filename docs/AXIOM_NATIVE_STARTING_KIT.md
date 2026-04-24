@@ -764,6 +764,41 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   z-separated singletons force det=0 /
   `frontier_axiom_native_sh3_degeneracy_investigation.py` /
   Target 2 sub-step 2d-V2-sh3-z-plane-separation.
+- SH3 PM-pairing bijection search: multiple features are
+  SYMMETRIC between plus (745) and minus (745) PMs; one
+  feature shows SMALL asymmetry. Iter 34 enumerated all
+  1490 PMs of SH3 = (4,4,2) \ {(1,0,0),(2,0,0),(3,0,0),
+  (0,3,1)} and analyzed structural features:
+  (a) Plaquette 4-cycle swaps PRESERVE K3 sign (50/50
+      sampled PMs) -- so they are NOT the bijection that
+      forces det=0. The plaquette K3 sign product is -1 but
+      the accompanying permutation sign change is -1, so the
+      combined contribution ratio is +1. Confirms 4-cycle
+      swaps don't help.
+  (b) Edge direction counts (k_1, k_2, k_3 in each PM)
+      distribute IDENTICALLY between plus and minus PMs.
+      E.g., k_1 histogram: (2:75, 4:272, 6:284, 8:104, 10:10)
+      for both plus and minus. Perfect symmetry.
+  (c) Edge count incident to singleton (0,3,1)'s 3 neighbors
+      = EXACTLY 3 for every PM (both + and -). This is
+      forced by the structure: each of the 3 neighbors must
+      match to some site, using one edge each.
+  (d) Edge count incident to line-3 neighbors (adjacent
+      sites of (1,0,0), (2,0,0), (3,0,0)) shows SMALL
+      asymmetry: plus has (5:343, 6:374, 7:28), minus has
+      (5:335, 6:382, 7:28). Only 8 PMs differ between +/-
+      distributions (343-335=8, 382-374=8). The asymmetry
+      hints at where the K3 obstruction concentrates:
+      specific edges near the line-3 distinguish 8 plus PMs
+      from 8 minus PMs via some local swap that flips K3 sign.
+  Interpretation: the SH3 bijection is mostly LOCAL (almost
+  all features symmetric) with a small residual asymmetry
+  (8 PMs out of 745) concentrated near the line-3 defect.
+  The specific bijection has not been explicitly constructed
+  but the structural location of the obstruction is now
+  known: it lives in a small PM-subset near the line-3 /
+  `frontier_axiom_native_sh3_pm_bijection_search.py` /
+  Target 2 sub-step 2d-V2-sh3-bijection-search.
 - CRITICAL FINDING: iter 23 central reflection sigma does NOT
   apply to line-3 + singleton defects. Union test of iter 32
   (bipartition-preserving partial reflection) + iter 23

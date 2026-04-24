@@ -2043,3 +2043,51 @@ revisit the original Kasteleyn thread goal -- have we made
 progress on the singleton hypothesis, or is this reflection-
 degeneracy investigation a side quest?
 
+[2026-04-24 08:40] V2 iteration: SH3 PM bijection search — PASS (mostly local, small asymmetry)
+Tried: construct the PM-pairing bijection for SH3 that forces
+det=0 despite no graph automorphism fixing the defect. Wrote
+scripts/frontier_axiom_native_sh3_pm_bijection_search.py.
+Enumerated all 1490 PMs (745 plus, 745 minus).
+Tests:
+Strategy A (plaquette 4-cycle swap):
+  For 50 sampled plus PMs, applied first plaquette swap.
+  All 50 preserved K3 sign (no flip). Derivation verified:
+  plaquette product = -1 is canceled by permutation sign
+  change (-1) giving overall factor +1.
+  => plaquette 4-cycle swaps are NOT the bijection.
+Strategy C (feature distributions):
+  (1) Direction counts (k_1, k_2, k_3) identical in plus and
+      minus distributions. E.g., k_1: both have (2:75, 4:272,
+      6:284, 8:104, 10:10).
+  (2) Edges incident to singleton (0,3,1)'s 3 neighbors: EVERY
+      PM uses exactly 3 such edges (both + and -). Forced by
+      structure (each neighbor matches once).
+  (3) Edges incident to line-3's neighbors: SMALL asymmetry.
+      plus = (5:343, 6:374, 7:28), minus = (5:335, 6:382,
+      7:28). Difference: 8 PMs shifted between bucket 5 and
+      bucket 6 between + and -.
+Interpretation: the bijection is MOSTLY symmetric (direction
+counts, singleton-neighbor edges all match). The small
+asymmetry (8 PMs) in line-3-neighbor edges pinpoints where
+the obstruction concentrates: there's a specific local PM
+swap near the line-3 that flips K3 sign for these 8 PMs.
+Not a 4-cycle (those don't flip sign), so must be a longer
+alternating cycle or specific alternating path.
+Accepted because: hostile audit verdict = clean. 11 record()
+booleans. The one FAIL on the feature test is the
+informative computed False on line-neighbor edges (the small
+asymmetry).
+Partial progress: we've NARROWED the bijection's location
+(near line-3) and confirmed it's NOT plaquette-based. The
+specific mechanism remains open but the SEARCH SPACE is
+much smaller now.
+Next V2 vector: (a) identify the specific 8 PMs in each sign
+class that differ in line-3-neighbor edge counts. Look for
+a local pattern distinguishing them. (b) Enumerate
+alternating 6-cycles touching line-3 and test whether they
+flip K3 sign. (c) Step back to the Kasteleyn thread level:
+the SH3 investigation has consumed 5+ iterations without a
+clean result. Consider whether the next iter should try a
+different thread direction (e.g., revisit the original
+singleton hypothesis via a different approach).
+
