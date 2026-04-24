@@ -6,7 +6,10 @@
 
 ## Verdict
 
-The current branch does **not** derive `hbar`.
+The current branch derives the structural action-to-phase role of `hbar` on the
+primitive coherent-history surface. It does **not** derive the SI value of
+`hbar`, and it does not derive every downstream quantum-mechanical appearance
+of `hbar`.
 
 Post-trace-reduction update: the branch now derives the source-free primitive
 phase **shape** on the full `C^16` event cell. Any natural additive primitive
@@ -50,6 +53,22 @@ reduced action units.
 This still does **not** derive the SI value of `hbar`. It derives the
 dimensionless reduced action unit used by the internal action-phase lane.
 
+Post-action-phase-representation update: coherent source-free primitive
+histories compose multiplicatively as phases. On the universal cover their
+phase coordinate is additive. The same-source/no-hidden-character rule excludes
+an extra scale character `theta_lambda = lambda Phi`, so `theta=Phi`. In
+conventional notation
+
+`U(H)=exp(i S(H)/hbar)`,
+
+this gives
+
+`S(H)/hbar = Phi(H)`.
+
+For one complete primitive cell, `Phi(A_cell)=1`, so `S(A_cell)=hbar`. This is
+the structural hbar result. It is still not a joule-second numerical
+prediction.
+
 It derives a native dimensionless primitive boundary coefficient
 
 `c_cell = 1/4`
@@ -71,6 +90,7 @@ normalization. It is not a prediction of the SI value of the quantum of action.
 | Claim axis | Current status | Reason |
 | --- | --- | --- |
 | Structural reduced-action unit from graph/combinatorics | **Closed on the primitive integral-history surface** | The primitive phase trace theorem derives `q_atom = gamma/16`, and the integral action-count theorem supplies `Phi(I_16)=1`, hence `gamma=1`, in reduced units. |
+| Structural action-phase role of `hbar` | **Closed on the primitive coherent-history surface** | Coherent gluing gives an additive universal-cover phase coordinate and same-source/no-hidden-character identifies it with `Phi`, so `S/hbar=Phi` and `S(A_cell)=hbar`. |
 | Numerical prediction of `hbar` in SI units | **Not a physical target** | Since the 2019 SI revision, the Planck constant `h` has an exact fixed SI value; predicting that number would predict a unit convention. |
 | Dimensionless prediction involving `hbar` | **Achieved on the realified Planck surface** | The branch derives `a^2/l_P^2 = a^2 c_light^3/(hbar G) = 1` after the standard gravitational normalization fixes the meaning of `l_P`. |
 | Native dimensionless microscopic coefficient | **Achieved on the retained object class** | The packet derives `rank(P_A)/dim(H_cell) = 4/16 = 1/4`. |
@@ -239,9 +259,14 @@ The primitive integral action-count theorem derives `gamma = 1` on the
 source-free integral-history surface: `I_16` is the complete-cell generator and
 the reduced action coordinate is generator count.
 
-This is still not a dimensionful `hbar` derivation. If a reviewer allows
+The action-phase representation theorem then identifies that primitive count
+with the coherent-history phase generator. Hence conventional notation gives
+`S/hbar=Phi`, and the one-cell action quantum is `S(A_cell)=hbar`.
+
+This is still not a dimensionful SI-`hbar` derivation. If a reviewer allows
 arbitrary positive real action measures instead of the integral primitive-count
-coordinate, the gamma-one scale countermodel returns.
+coordinate or rejects the no-hidden-character phase rule, the scale
+countermodel returns.
 
 The phase-period obstruction also explains why a 16th root of unity is only a
 candidate route, not a closure: in the current `exp(i Phi)` convention it gives
@@ -267,24 +292,25 @@ history, but a reviewer packet must lead with the canonical submission packet
 and this hbar-status audit. Otherwise a hostile reader can cite superseded
 "not yet closed" language as if it were the current claim.
 
-## What Would Count As A Structural Hbar Derivation
+## Structural Hbar Status
 
-A real structural `hbar` theorem would need to derive an action quantum from the
-discrete structure itself, for example:
+The structural hbar theorem now derives the action quantum from the discrete
+history structure in the narrow phase-representation sense:
 
-1. a graph-native projective phase theorem showing why one primitive closed
-   process contributes exactly one fixed action phase;
-2. a combinatorial commutator/symplectic theorem deriving the unit in
+1. the primitive integral-history theorem gives `Phi(A_cell)=1`;
+2. coherent history gluing gives an additive universal-cover phase coordinate;
+3. same-source/no-hidden-character excludes `theta_lambda=lambda Phi` for
+   `lambda != 1`;
+4. therefore `theta=Phi`, so `S/hbar=Phi` and `S(A_cell)=hbar`.
+
+Still not in hand:
+
+1. a separate combinatorial commutator/symplectic theorem deriving the unit in
    `[q,p] = i hbar`;
-3. an information/action theorem deriving the remaining non-homogeneous scalar
-   `gamma = 1` in `q_atom = gamma/16` and `kappa_info = gamma/32`;
-4. a microscopic boundary-term theorem deriving the gravitational action
-   normalization without importing `hbar`;
-5. a dimensionless prediction such as a fixed value of `alpha` or another
+2. a microscopic boundary-term theorem deriving the gravitational action
+   normalization without importing the standard `hbar`-containing law;
+3. a dimensionless prediction such as a fixed value of `alpha` or another
    measured ratio involving the same action unit.
-
-Item 3 is now in hand on the primitive integral-history surface. Items 1, 2,
-4, and 5 are not currently in hand.
 
 ## Safe Claim
 
@@ -294,12 +320,13 @@ Use:
 > 1/4` on the retained primitive boundary-action object class. With the standard
 > gravitational area/action normalization, this gives `a^2/l_P^2 = 1`. This is a
 > conditional structural Planck-length result. Separately, the primitive
-> integral-history theorem closes `gamma=1` in reduced action-count units, not
-> the SI value of `hbar`.
+> integral-history theorem closes `gamma=1`, and coherent-history phase
+> representation gives `S/hbar=Phi`, hence `S(A_cell)=hbar`. This is a
+> structural hbar result, not a prediction of the SI value of `hbar`.
 
 Do not use:
 
-> The branch derives the Planck constant.
+> The branch predicts the numerical SI value of the Planck constant.
 
 Do not use:
 
@@ -307,5 +334,6 @@ Do not use:
 
 Do not use:
 
-> Bare `Cl(3)` / `Z^3` alone, without the explicit state-semantics and
-> gravitational carrier assumptions, forces `hbar`.
+> Bare `Cl(3)` / `Z^3` alone, without the explicit state-semantics,
+> coherent-history, and gravitational carrier assumptions, forces every role of
+> `hbar`.

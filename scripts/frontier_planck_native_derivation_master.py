@@ -63,6 +63,7 @@ SUBCHECKS = [
     "frontier_planck_hbar_nonhomogeneous_real_action_unit_reduction_2026_04_24.py",
     "frontier_planck_primitive_integral_action_count_theorem_2026_04_24.py",
     "frontier_planck_si_hbar_objection_discharge_theorem_2026_04_24.py",
+    "frontier_planck_action_phase_representation_hbar_theorem_2026_04_24.py",
     "frontier_planck_overnight_closure_status_theorem.py",
 ]
 
@@ -135,6 +136,7 @@ def main() -> int:
     hbar_nonhomogeneous = read("docs/PLANCK_SCALE_HBAR_NONHOMOGENEOUS_REAL_ACTION_UNIT_REDUCTION_THEOREM_2026-04-24.md")
     integral_action_count = read("docs/PLANCK_SCALE_PRIMITIVE_INTEGRAL_ACTION_COUNT_THEOREM_2026-04-24.md")
     si_hbar_discharge = read("docs/PLANCK_SCALE_SI_HBAR_OBJECTION_DISCHARGE_THEOREM_2026-04-24.md")
+    action_phase_hbar = read("docs/PLANCK_SCALE_ACTION_PHASE_REPRESENTATION_HBAR_THEOREM_2026-04-24.md")
     overnight_status = read("docs/PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md")
 
     for script in SUBCHECKS:
@@ -540,13 +542,15 @@ def main() -> int:
 
     total += 1
     passed += expect(
-        "hbar-axis-is-scoped-as-not-derived",
+        "hbar-axis-separates-structural-from-si",
         "PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md"
         in reviewer
-        and "does **not** derive `hbar`" in hbar_audit
-        and "closes `gamma=1` in reduced action-count units, not\n"
-        "> the SI value of `hbar`" in hbar_audit
-        and "no claim that the packet derives `hbar`" in reviewer,
+        and "derives the structural action-to-phase role of `hbar`" in hbar_audit
+        and "does **not** derive the SI value of\n`hbar`" in hbar_audit
+        and "structural hbar result, not a prediction of the SI value of `hbar`"
+        in hbar_audit
+        and "no claim that the packet predicts the SI numerical value of `hbar`"
+        in reviewer,
     )
 
     total += 1
@@ -566,7 +570,8 @@ def main() -> int:
         in reviewer
         and "`q_* = 1/16`" in action_phase
         and "`kappa_info = 1/32 per bit`" in action_phase
-        and "It does not derive the action-to-phase\nconversion itself" in action_phase,
+        and "later action-phase representation\nhbar theorem also derives the structural conversion statement"
+        in action_phase,
     )
 
     total += 1
@@ -660,6 +665,18 @@ def main() -> int:
 
     total += 1
     passed += expect(
+        "action-phase-representation-derives-structural-hbar",
+        "PLANCK_SCALE_ACTION_PHASE_REPRESENTATION_HBAR_THEOREM_2026-04-24.md"
+        in reviewer
+        and "structural `hbar` derivation as primitive action-to-phase conversion"
+        in action_phase_hbar
+        and "`S(H)/hbar = Phi(H)`" in action_phase_hbar
+        and "`S(A_cell) = hbar`" in action_phase_hbar
+        and "not a prediction of the SI decimal value of `hbar`" in action_phase_hbar,
+    )
+
+    total += 1
+    passed += expect(
         "overnight-status-classifies-conditional-not-bare",
         "PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md"
         in reviewer
@@ -670,6 +687,7 @@ def main() -> int:
         and "parent-source object-class objection is discharged after realified B3"
         in overnight_status
         and "closed: `gamma=1` as reduced primitive action count" in overnight_status
+        and "closed: structural `S/hbar=Phi`" in overnight_status
         and "SI-hbar target is discharged as a unit-convention nonclaim"
         in overnight_status
         and "Nature-grade bare-axiom Planck and hbar closure has been achieved"

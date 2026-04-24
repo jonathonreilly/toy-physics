@@ -1,7 +1,7 @@
 # Planck-Scale Hbar Attack Order Theorem
 
 **Date:** 2026-04-23
-**Status:** ordered science program for non-circular hbar / action-quantum prediction
+**Status:** ordered science program for non-circular hbar / action-quantum prediction, with later structural closure noted
 **Verifier:** `scripts/frontier_planck_hbar_attack_order_theorem.py`
 
 ## Question
@@ -32,11 +32,19 @@ There are exactly three non-circular ways forward:
    in which `hbar` appears, such as `alpha`, or derive a dimensionless relation
    that fixes the action unit against other already-fixed physical constants.
 
-The current branch has not completed any of these three routes. It has narrowed
-the most promising one: the structural action-unit route should first attack the
+The current branch has now completed the structural action-unit route in the
+narrow action-phase representation sense. It has not completed the independent
+SI-value, commutator, spectral-flow, or dimensionless-constant routes.
+
+Historically, the most promising route was narrowed to the
 phase-per-information constant
 
 `q_* = kappa_info I_*`.
+
+Post-closure update: the primitive integral-history and action-phase
+representation theorems now supply `Phi(A_cell)=1`, `S/hbar=Phi`, and
+`S(A_cell)=hbar`. This does not convert the result into an SI decimal
+prediction of `hbar`.
 
 Post-trace-reduction update: the structural action-unit route now has a sharper
 normal form. The primitive phase trace theorem proves that any source-free
@@ -237,11 +245,12 @@ proof.
 Use:
 
 > The current Planck lane derives `a^2/l_P^2 = 1` conditionally on the
-> gravitational boundary-action carrier. A future hbar/action-quantum prediction
-> requires one additional non-circular theorem: independent `a`, structural
-> action phase, or a dimensionless observable. The first target is now
+> gravitational boundary-action carrier. The first hbar target was
 > `gamma = 1` in the trace-reduced primitive phase law
-> `q_atom = gamma/16`.
+> `q_atom = gamma/16`; the primitive integral-history and action-phase
+> representation theorems now close that target as `S/hbar=Phi`. Independent
+> SI-value, commutator, spectral-flow, or dimensionless-constant routes remain
+> separate.
 
 Do not use:
 

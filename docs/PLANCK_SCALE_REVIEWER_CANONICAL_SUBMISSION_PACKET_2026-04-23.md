@@ -39,6 +39,7 @@
 **Hbar non-homogeneous real action-unit reduction:** [PLANCK_SCALE_HBAR_NONHOMOGENEOUS_REAL_ACTION_UNIT_REDUCTION_THEOREM_2026-04-24.md](./PLANCK_SCALE_HBAR_NONHOMOGENEOUS_REAL_ACTION_UNIT_REDUCTION_THEOREM_2026-04-24.md)
 **Primitive integral action-count theorem:** [PLANCK_SCALE_PRIMITIVE_INTEGRAL_ACTION_COUNT_THEOREM_2026-04-24.md](./PLANCK_SCALE_PRIMITIVE_INTEGRAL_ACTION_COUNT_THEOREM_2026-04-24.md)
 **SI hbar objection discharge:** [PLANCK_SCALE_SI_HBAR_OBJECTION_DISCHARGE_THEOREM_2026-04-24.md](./PLANCK_SCALE_SI_HBAR_OBJECTION_DISCHARGE_THEOREM_2026-04-24.md)
+**Action-phase representation hbar theorem:** [PLANCK_SCALE_ACTION_PHASE_REPRESENTATION_HBAR_THEOREM_2026-04-24.md](./PLANCK_SCALE_ACTION_PHASE_REPRESENTATION_HBAR_THEOREM_2026-04-24.md)
 **Overnight closure status:** [PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md](./PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md)
 
 ## Final Scope Warning
@@ -54,11 +55,11 @@ that last gravitational unit-map identification. The canonical realified
 edge-Clifford linear-response reading now does: it supplies the metric/coframe
 Ward primitive needed to activate the gravity-sector uniqueness theorem.
 
-This is also not submitted as a derivation of `hbar`. The final dimensional
-normalization imports the standard gravitational action law containing `hbar`,
-`G`, and `c_light`. The nontrivial Planck statement is the dimensionless
-conditional result `a^2/l_P^2 = 1`, not a prediction of the post-2019 SI decimal
-value of the Planck constant.
+This is also not submitted as a prediction of the SI decimal value of `hbar`.
+The final dimensional normalization imports the standard gravitational action
+law containing `hbar`, `G`, and `c_light`. The new action-phase representation
+theorem closes the structural role `S/hbar = Phi` on the primitive
+coherent-history surface, but it does not predict a joule-second decimal.
 
 The ordered hbar program is now separated from the Planck proof. The first
 non-circular target is a phase-per-information theorem deriving
@@ -108,6 +109,14 @@ value for a dimensionful action constant changes when the action unit is
 rescaled; the invariant targets are `gamma=1` and
 `a^2 c_light^3/(hbar G)=1`. Demanding a prediction of the SI decimal value of
 `hbar` is therefore a unit-convention demand, not a physical reviewer blocker.
+
+The structural hbar lane is now closed in its narrow invariant form. The
+primitive integral action count supplies `Phi(A_cell)=1`; coherent history
+gluing gives a universal-cover phase coordinate; and the no-hidden-character
+rule identifies that phase with `Phi`. Therefore conventional notation gives
+`S/hbar = Phi`, so one complete primitive cell has action `hbar`. This still
+does not derive the SI decimal value of `hbar` or all downstream commutator,
+uncertainty, and angular-momentum appearances.
 
 The final Planck closure is now stated as an airtight theorem on the accepted
 physical-gravity review contract. The old GSI wording is replaced by
@@ -400,45 +409,51 @@ and since both lengths are positive,
     target is `a^2 c_light^3/(hbar G)=1`, and the branch closes the reduced
     action target `gamma=1`:
     [SI hbar objection discharge theorem](./PLANCK_SCALE_SI_HBAR_OBJECTION_DISCHARGE_THEOREM_2026-04-24.md).
-26. **Bare gravity-sector uniqueness attempt.** Before the realification
+26. **Action-phase representation hbar theorem.** Coherent primitive histories
+    compose by phase multiplication; on the universal cover their phase
+    coordinate is additive. Same-source/no-hidden-character excludes an extra
+    scale character, so the primitive count is the phase generator:
+    `S/hbar = Phi`, and `S(A_cell)=hbar`:
+    [action-phase representation hbar theorem](./PLANCK_SCALE_ACTION_PHASE_REPRESENTATION_HBAR_THEOREM_2026-04-24.md).
+27. **Bare gravity-sector uniqueness attempt.** Before the realification
     theorem, B3 was reduced to deriving a soldered metricity / equivalence Ward
     identity from retained `Cl(3)` / `Z^3`:
     [bare gravity uniqueness attempt](./PLANCK_SCALE_BARE_GRAVITY_SECTOR_UNIQUENESS_ATTEMPT_2026-04-24.md).
-27. **Edge-Clifford kinematic soldering.** The retained cell already has flat
+28. **Edge-Clifford kinematic soldering.** The retained cell already has flat
     edge/Clifford soldering and induced `delta_ij`; this closes the kinematic
     frame sub-lock but not dynamical spin-2 metricity:
     [edge-Clifford soldering theorem](./PLANCK_SCALE_EDGE_CLIFFORD_KINEMATIC_SOLDERING_THEOREM_2026-04-24.md).
-28. **B3 dynamical metricity obstruction.** The finite signed-permutation
+29. **B3 dynamical metricity obstruction.** The finite signed-permutation
     symmetry of the flat cell has no infinitesimal local frame Ward generator,
     so flat soldering alone cannot derive the conserved symmetric spin-2
     response:
     [B3 dynamical metricity obstruction theorem](./PLANCK_SCALE_B3_DYNAMICAL_METRICITY_OBSTRUCTION_THEOREM_2026-04-24.md).
-29. **B3 bare Ward identity no-go.** Bare-compatible local responses decompose
+30. **B3 bare Ward identity no-go.** Bare-compatible local responses decompose
     into scalar, antisymmetric, and symmetric-traceless channels; retained
     `Cl(3)` / `Z^3` does not select the symmetric spin-2 response without the
     missing local gaugeable defect-to-coframe primitive:
     [B3 bare Ward identity no-go](./PLANCK_SCALE_B3_BARE_WARD_IDENTITY_NO_GO_2026-04-24.md).
-30. **B3 Clifford realification metric-Ward theorem.** On the canonical
+31. **B3 Clifford realification metric-Ward theorem.** On the canonical
     realified edge-Clifford response surface, translation defects are coframe
     perturbations, the Clifford anticommutator gives the symmetric metric
     response, antisymmetric perturbations are frame gauge, and vertex-origin
     gauge gives the conserved-source Ward identity:
     [B3 Clifford realification metric-Ward theorem](./PLANCK_SCALE_B3_CLIFFORD_REALIFICATION_METRIC_WARD_THEOREM_2026-04-24.md).
-31. **Realification admissibility theorem.** The universal property of
+32. **Realification admissibility theorem.** The universal property of
     `Z^3 tensor_Z R` forces realification for any first-order response into a
     real Clifford vector response space. Refusing it is refusal of first-order
     response, not a live objection to the submitted physical-response theorem:
     [realification admissibility theorem](./PLANCK_SCALE_REALIFICATION_ADMISSIBILITY_THEOREM_2026-04-24.md).
-32. **Parent-source discharge after realification.** Once realified B3 derives
+33. **Parent-source discharge after realification.** Once realified B3 derives
     the gravitational response on the primitive boundary surface, the unique
     source-free one-step incidence representative is `P_A`; the affine hidden
     character is excluded:
     [parent-source discharge after realification theorem](./PLANCK_SCALE_PARENT_SOURCE_DISCHARGE_AFTER_REALIFICATION_THEOREM_2026-04-24.md).
-33. **Overnight closure status.** The strongest current claim is closed on the
+34. **Overnight closure status.** The strongest current claim is closed on the
     canonical realified linear-response surface, while still refusing the
     stricter finite-automorphism-only and SI-`hbar` overclaims:
     [overnight closure status theorem](./PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md).
-34. **Airtight review closure.** On the accepted physical-gravity review
+35. **Airtight review closure.** On the accepted physical-gravity review
     contract, the Planck theorem is closed. Remaining denials are rejections of
     that review contract, not hidden coefficient or algebra gaps:
     [airtight review closure theorem](./PLANCK_SCALE_AIRTIGHT_REVIEW_CLOSURE_THEOREM_2026-04-23.md).
@@ -486,7 +501,7 @@ Not imported into the reviewer claim:
     the additive density `nu = 5/4`;
 14. no hidden insertion of `nu = 5/4`; the value enters only through
     `lambda_min(L_Sigma) = 1` and `Tr(rho_cell P_A) = 1/4`.
-15. no claim that the packet derives `hbar` or predicts its SI numerical value.
+15. no claim that the packet predicts the SI numerical value of `hbar`.
 16. no claim that finite-automorphism-only bare algebra derives `gamma = 1` in
     the primitive phase trace reduction; the closure uses the primitive
     integral-history surface.
@@ -503,6 +518,8 @@ Not imported into the reviewer claim:
     theorem currently derives `gamma = 1`.
 22. no claim that finite cubic signed-permutation symmetry derives the local
     metric/coframe Ward identity.
+23. no claim that the structural `S/hbar=Phi` theorem derives all canonical
+    commutator, uncertainty, or angular-momentum appearances of `hbar`.
 
 ## Denial Points
 
@@ -533,10 +550,11 @@ The hostile-review denials are now explicit.
    the Schur normal-ordered boundary action is a functorial representation of
    that same parent source.
 7. **Hbar-axis objection.** If the reviewer asks whether the packet derives the
-   quantum of action itself, concede no. The packet derives the primitive
-   boundary coefficient and then uses the standard gravitational area/action
-   normalization. A true `hbar` theorem would need a separate structural
-   action-quantum or dimensionless phase-per-information derivation.
+   SI numerical quantum of action itself, concede no. The packet derives the
+   primitive boundary coefficient and then uses the standard gravitational
+   area/action normalization. The separate structural hbar theorem identifies
+   `hbar` as the action conversion for the primitive phase count,
+   `S/hbar=Phi`, but not as a joule-second numerical prediction.
 8. **Backward-Planck objection.** If the reviewer asks whether `a = l_P` can be
    solved backward to predict `hbar`, answer: only if `a` is independently fixed
    in non-Planck units. Otherwise the equation just restates the Planck-length
@@ -551,9 +569,11 @@ The hostile-review denials are now explicit.
     that object is `(1/(2n)) log det(L_Sigma)`, not `1/4`. The submitted Planck
     lane is instead a primitive boundary action-source density theorem.
 11. **Hbar-gamma objection.** If the reviewer asks whether `hbar` itself is now
-    derived, answer: not as an SI number. The action-phase lane now reduces the
-    problem to `gamma = 1`, where `gamma` is the total reduced action phase of
-    one complete primitive `C^16` event cell.
+    derived, answer: structurally yes on the primitive coherent-history
+    surface, not as an SI number. The action-phase lane reduces the problem to
+    `gamma = 1`, where `gamma` is the total reduced action phase of one
+    complete primitive `C^16` event cell, and the integral-history theorem
+    supplies that unit.
 12. **Gamma homogeneity objection.** If the reviewer asks why `gamma = 1`
     follows, concede it does not yet follow from the current trace/naturality
     premises. Those premises are invariant under `Phi -> lambda Phi`; a
@@ -577,8 +597,9 @@ The hostile-review denials are now explicit.
     infinitesimal local frame Ward generator.
 17. **Strong hbar-route objection.** If the reviewer asks whether noncompact
     central extension, spectral flow, or an index theorem now derives hbar,
-    answer no. Those remain possible routes only after a primitive real
-    action-unit or index-one theorem is derived.
+    answer no. The branch closes the primitive coherent-history
+    action-to-phase route; those remain independent routes to the same unit,
+    not current derivations.
 
 The final denial-status theorem records that denials 2 and 4 change the target:
 they either replace the primitive coefficient with an enriched state/readout
@@ -593,7 +614,9 @@ surface.
 For the stronger unqualified bare-axiom claim, the remaining pressure points
 are exact: derive B3 dynamical gravity from retained `Cl(3)` / `Z^3`, derive
 the parent-source boundary-action object class from that gravity sector, and
-derive the hbar/action unit `Phi(I_16)=1` if the claim is to include `hbar`.
+derive an independent commutator, central-extension, spectral-flow, or
+microscopic Ward representation if the claim is to include those additional
+appearances of `hbar`.
 
 ## Verifier Commands
 
@@ -659,6 +682,7 @@ python3 scripts/frontier_planck_hbar_strong_routes_status_theorem.py
 python3 scripts/frontier_planck_hbar_nonhomogeneous_real_action_unit_reduction_2026_04_24.py
 python3 scripts/frontier_planck_primitive_integral_action_count_theorem_2026_04_24.py
 python3 scripts/frontier_planck_si_hbar_objection_discharge_theorem_2026_04_24.py
+python3 scripts/frontier_planck_action_phase_representation_hbar_theorem_2026_04_24.py
 python3 scripts/frontier_planck_overnight_closure_status_theorem.py
 ```
 
@@ -701,10 +725,11 @@ python3 scripts/frontier_planck_overnight_closure_status_theorem.py
 - [PLANCK_SCALE_HBAR_NONHOMOGENEOUS_REAL_ACTION_UNIT_REDUCTION_THEOREM_2026-04-24.md](./PLANCK_SCALE_HBAR_NONHOMOGENEOUS_REAL_ACTION_UNIT_REDUCTION_THEOREM_2026-04-24.md) - hbar necessary-and-sufficient reduction: `gamma=1` iff the primitive `C^16` cell is the unit generator of reduced real action.
 - [PLANCK_SCALE_PRIMITIVE_INTEGRAL_ACTION_COUNT_THEOREM_2026-04-24.md](./PLANCK_SCALE_PRIMITIVE_INTEGRAL_ACTION_COUNT_THEOREM_2026-04-24.md) - positive reduced-action closure on the primitive integral-history surface: `I_16` is the complete-cell generator, so `Phi(I_16)=1` and `gamma=1` in reduced action units.
 - [PLANCK_SCALE_SI_HBAR_OBJECTION_DISCHARGE_THEOREM_2026-04-24.md](./PLANCK_SCALE_SI_HBAR_OBJECTION_DISCHARGE_THEOREM_2026-04-24.md) - discharges SI-`hbar` as a unit-convention nonclaim; the invariant targets are `gamma=1` and `a^2 c_light^3/(hbar G)=1`.
+- [PLANCK_SCALE_ACTION_PHASE_REPRESENTATION_HBAR_THEOREM_2026-04-24.md](./PLANCK_SCALE_ACTION_PHASE_REPRESENTATION_HBAR_THEOREM_2026-04-24.md) - structural hbar closure: coherent primitive histories have universal-cover phase `Phi`, hence conventional notation gives `S/hbar=Phi` and `S(A_cell)=hbar`.
 - [PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md](./PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md) - final classification for this pass: Planck closure on the canonical realified linear-response surface, while rejecting finite-automorphism-only and SI-`hbar` overclaims.
 - [PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md) - explicit P1 package-boundary move.
 - [PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md) - hostile-review context, with its supersession note respected.
-- [PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md](./PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md) - hbar/unit-convention audit: the packet derives a dimensionless Planck coefficient, not the quantum of action.
+- [PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md](./PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md) - hbar/unit-convention audit: the packet derives the structural action-phase role, not the SI decimal value or all quantum-mechanical appearances.
 - [PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md](./PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md) - ordered non-circular hbar program: independent `a`, structural action unit, or dimensionless prediction, with `kappa_info = 1/32` per bit as the first target.
 
 ### Primitive cell and count

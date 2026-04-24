@@ -14,9 +14,10 @@ Where are we on the statement:
 
 That statement is exactly the right target.
 
-The branch currently derives the Planck boundary coefficient and Planck spacing
-on the accepted gravity/action surface. It does not derive the action-to-phase
-conversion itself.
+The branch now derives the Planck boundary coefficient and Planck spacing on
+the accepted gravity/action surface. The later action-phase representation
+hbar theorem also derives the structural conversion statement `S/hbar = Phi`
+on the primitive coherent-history surface.
 
 In quantum mechanics, a path contributes
 
@@ -91,10 +92,11 @@ The remaining action-unit statement is no longer "find some unexplained
 > prove that one complete primitive `C^16` event cell carries one reduced
 > action unit.
 
-## What Would Count As Hbar Progress
+## What Counts As Hbar Progress
 
-The next theorem must derive one of the following without using the Planck
-normalization backward:
+The first item below is now closed by the primitive integral action-count and
+action-phase representation theorems without using the Planck normalization
+backward:
 
 1. `gamma = 1` in the trace-reduced law `q_atom = gamma/16`;
 2. `kappa_info = 1/32` per bit as the `gamma = 1` case of the
@@ -104,6 +106,10 @@ normalization backward:
 4. a dimensionless observable such as `alpha` from the same action-phase unit.
 
 Any of these would be genuine action-unit physics.
+
+The closed structural route is:
+
+`Phi(A_cell)=1 -> theta=Phi -> S/hbar=Phi -> S(A_cell)=hbar`.
 
 ## What Would Not Count
 
@@ -119,11 +125,12 @@ The following do not derive `hbar`:
 
 Use:
 
-> The current Planck lane identifies the exact phase target required for a
-> native action-unit theorem: on the minimal cubical defect, the primitive phase
-> must be `q_* = 1/16`, equivalently `kappa_info = 1/32` per bit for the
-> time-locked two-bit carrier.
+> The Planck lane identifies the exact phase target required for a native
+> action-unit theorem: on the minimal cubical defect, the primitive phase must
+> be `q_* = 1/16`, equivalently `kappa_info = 1/32` per bit for the time-locked
+> two-bit carrier. The later primitive integral-history and action-phase
+> representation theorems close this target as `S/hbar=Phi`.
 
 Do not use:
 
-> The branch already derives `hbar`.
+> The branch predicts the SI numerical value of `hbar`.

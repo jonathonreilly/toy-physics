@@ -45,6 +45,16 @@ def main() -> int:
 
     total += 1
     passed += expect(
+        "structural-route-closure-is-noted",
+        "completed the structural action-unit route in the\nnarrow action-phase representation sense"
+        in note
+        and "`Phi(A_cell)=1`, `S/hbar=Phi`, and\n`S(A_cell)=hbar`" in note
+        and "does not convert the result into an SI decimal\nprediction of `hbar`" in note,
+        "the historical attack order records the later structural hbar closure",
+    )
+
+    total += 1
+    passed += expect(
         "planck-hbar-algebra-recorded",
         "`hbar = a^2 c_light^3 / G`" in note
         and "`a^2 c_light^3 / (hbar G) = 1`" in status,
@@ -145,7 +155,8 @@ def main() -> int:
     total += 1
     passed += expect(
         "safe-unsafe-claims-recorded",
-        "The first target is now\n> `gamma = 1`" in note
+        "The first hbar target was\n> `gamma = 1`" in note
+        and "representation theorems now close that target as `S/hbar=Phi`" in note
         and "> Deriving `a = l_P` already predicts `hbar`" in note,
         "the note states the next target and bans the circular claim",
     )

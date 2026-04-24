@@ -45,10 +45,11 @@ def main() -> int:
 
     total += 1
     passed += expect(
-        "not-currently-derived",
-        "It does not derive the action-to-phase\nconversion itself" in note
-        and "does **not** derive `hbar`" in hbar_status,
-        "the theorem does not overclaim current hbar closure",
+        "later-structural-conversion-is-recorded",
+        "later action-phase representation\nhbar theorem also derives the structural conversion statement" in note
+        and "derives the structural action-to-phase role of `hbar`" in hbar_status
+        and "does **not** derive the SI value of\n`hbar`" in hbar_status,
+        "the target note is superseded by structural S/hbar=Phi while refusing SI hbar",
     )
 
     total += 1

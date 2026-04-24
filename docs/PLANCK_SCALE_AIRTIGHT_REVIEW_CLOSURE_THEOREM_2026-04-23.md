@@ -154,7 +154,8 @@ Use:
 
 Do not use:
 
-> The branch derives `hbar`.
+> The branch predicts the SI numerical value of `hbar` or derives every
+> canonical representation of it.
 
 Do not use:
 

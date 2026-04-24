@@ -109,10 +109,12 @@ def main() -> int:
     total += 1
     passed += expect(
         "si-hbar-still-not-claimed",
-        "It is closed as reduced action count, not as an SI-value derivation of `hbar`" in note
+        "It is closed as reduced action count and as structural `S/hbar=Phi`, not as an\n"
+        "SI-value derivation of `hbar`" in note
         and "Those routes are not closed in the current branch" in note
-        and "Do not use:\n\n> The branch derives `hbar`." in note,
-        "reduced gamma closure is separated from SI hbar and independent routes",
+        and "Do not use:\n\n> The branch predicts the SI numerical value of `hbar`."
+        in note,
+        "structural hbar closure is separated from SI hbar and independent routes",
     )
 
     print(f"SUMMARY: PASS={passed} FAIL={total - passed}")

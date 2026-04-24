@@ -31,6 +31,7 @@ def main() -> int:
     hbar = read("docs/PLANCK_SCALE_HBAR_STRONG_ROUTES_STATUS_THEOREM_2026-04-24.md")
     ward = read("docs/PLANCK_SCALE_BOUNDARY_SOURCE_FUNCTORIAL_WARD_THEOREM_2026-04-24.md")
     integral_count = read("docs/PLANCK_SCALE_PRIMITIVE_INTEGRAL_ACTION_COUNT_THEOREM_2026-04-24.md")
+    action_phase_hbar = read("docs/PLANCK_SCALE_ACTION_PHASE_REPRESENTATION_HBAR_THEOREM_2026-04-24.md")
     parent_discharge = read(
         "docs/PLANCK_SCALE_PARENT_SOURCE_DISCHARGE_AFTER_REALIFICATION_THEOREM_2026-04-24.md"
     )
@@ -72,7 +73,7 @@ def main() -> int:
         "finite-automorphism-only target is discharged" in note
         and "refuses canonical realification" in note
         and "the older B3 no-go\n   applies" in note
-        and "not claimed: SI `hbar`" in note,
+        and "not claimed: SI decimal `hbar`" in note,
         "remaining rejection is realification admissibility plus SI hbar scope",
     )
 
@@ -83,6 +84,16 @@ def main() -> int:
         and "closed: `gamma=1` as reduced primitive action count" in note
         and "`Phi(I_16) = ell([A_cell]) = 1`" in integral_count,
         "gamma=1 is no longer listed as an open reduced-action blocker",
+    )
+
+    total += 1
+    passed += expect(
+        "structural-hbar-is-now-closed",
+        "structural action-phase hbar identification `S/hbar=Phi`" in note
+        and "closed: structural `S/hbar=Phi`" in note
+        and "`S(H)/hbar = Phi(H)`" in action_phase_hbar
+        and "`S(A_cell) = hbar`" in action_phase_hbar,
+        "structural hbar is closed but SI and downstream roles are scoped",
     )
 
     total += 1

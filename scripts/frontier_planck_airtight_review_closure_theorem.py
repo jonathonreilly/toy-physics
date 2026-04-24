@@ -87,8 +87,9 @@ def main() -> int:
         "no observed lattice spacing" in note
         and "no fitted Planck multiplier" in note
         and "no SI numerical prediction of `hbar`" in note
-        and "does **not** derive `hbar`" in hbar,
-        "the final closure does not claim hbar or assume a=l_P",
+        and "does **not** derive the SI value of\n`hbar`" in hbar
+        and "derives the structural action-to-phase role of `hbar`" in hbar,
+        "the final closure does not predict SI hbar or assume a=l_P",
     )
 
     total += 1

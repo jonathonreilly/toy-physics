@@ -16,7 +16,8 @@ or SI `hbar`.
 
 It is now a Planck closure on the canonical realified `Cl(3)` / `Z^3`
 linear-response surface, plus a reduced `gamma=1` action-count closure on the
-primitive integral-history surface.
+primitive integral-history surface and a structural action-phase hbar closure
+on the primitive coherent-history surface.
 
 ## What Is Closed
 
@@ -39,6 +40,8 @@ The following pieces are closed on the retained surface:
    accepted.
 9. reduced action-count normalization `Phi(I_16)=1`, hence `gamma=1`, on the
    primitive integral-history surface.
+10. structural action-phase hbar identification `S/hbar=Phi`, hence
+    `S(A_cell)=hbar`, on the primitive coherent-history surface.
 
 ## Discharged Nonclaims
 
@@ -56,8 +59,11 @@ The SI-hbar target is discharged as a unit-convention nonclaim:
 
 - closed: `gamma=1` as reduced primitive action count on the
   integral-history surface;
-- not claimed: SI `hbar`, central-extension, spectral-flow, or microscopic
-  Ward derivations of the quantum of action.
+- closed: structural `S/hbar=Phi` as the coherent-history action-phase
+  representation;
+- not claimed: SI decimal `hbar`, central-extension, spectral-flow,
+  commutator, uncertainty, angular-momentum, or microscopic Ward derivations of
+  the same action unit.
 
 The parent-source object-class objection is discharged after realified B3:
 
@@ -71,7 +77,8 @@ The strongest current classification is:
 
 > Planck closure on the canonical realified `Cl(3)` / `Z^3` linear-response
 > surface; reduced `gamma=1` is closed as primitive integral action count,
-> parent-source is discharged after realification, and SI `hbar` is a
+> structural `S/hbar=Phi` is closed as coherent-history phase representation,
+> parent-source is discharged after realification, and SI decimal `hbar` is a
 > unit-convention nonclaim.
 
 It is not:
@@ -80,15 +87,16 @@ It is not:
 
 It is not:
 
-> the branch derives the quantum of action.
+> the branch predicts the SI decimal value of the quantum of action or derives
+> every representation of it.
 
 ## Next Exact Theorem Targets
 
 1. If pursuing the stricter finite-automorphism-only claim, derive local
    metric/coframe gauge response without invoking canonical realification.
-2. If pursuing an independent hbar program, derive a central-extension,
-   spectral-flow, commutator, or microscopic Ward theorem that reproduces the
-   same reduced action unit without relying on the integral count surface.
+2. If pursuing stronger hbar programs, derive a central-extension,
+   spectral-flow, commutator, uncertainty, angular-momentum, or microscopic
+   Ward theorem that reproduces the same reduced action unit.
 
 ## Reviewer-Safe Claim
 

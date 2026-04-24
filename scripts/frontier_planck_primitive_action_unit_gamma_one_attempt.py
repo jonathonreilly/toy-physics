@@ -124,9 +124,9 @@ def main() -> int:
     passed += expect(
         "prior-open-step-preserved",
         "the final missing step is the physical selector law" in c16
-        and "The first target is now\n> `gamma = 1`" in hbar_order
-        and "It does not derive the action-to-phase\nconversion itself" in action_phase,
-        "the new attempt is consistent with prior hbar-lane caveats",
+        and "The first hbar target was\n> `gamma = 1`" in hbar_order
+        and "later action-phase representation\nhbar theorem also derives the structural conversion statement" in action_phase,
+        "the no-go is preserved as historical reduction and superseded by later closure",
     )
 
     total += 1

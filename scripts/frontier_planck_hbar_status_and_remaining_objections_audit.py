@@ -30,6 +30,7 @@ def main() -> int:
     gamma_period = read("docs/PLANCK_SCALE_GAMMA_PHASE_PERIOD_OBSTRUCTION_THEOREM_2026-04-24.md")
     integral_count = read("docs/PLANCK_SCALE_PRIMITIVE_INTEGRAL_ACTION_COUNT_THEOREM_2026-04-24.md")
     si_discharge = read("docs/PLANCK_SCALE_SI_HBAR_OBJECTION_DISCHARGE_THEOREM_2026-04-24.md")
+    action_phase_hbar = read("docs/PLANCK_SCALE_ACTION_PHASE_REPRESENTATION_HBAR_THEOREM_2026-04-24.md")
     parent_discharge = read(
         "docs/PLANCK_SCALE_PARENT_SOURCE_DISCHARGE_AFTER_REALIFICATION_THEOREM_2026-04-24.md"
     )
@@ -39,10 +40,11 @@ def main() -> int:
 
     total += 1
     passed += expect(
-        "audit-denies-hbar-derivation",
-        "does **not** derive `hbar`" in audit
-        and "not a\nnumerical SI prediction of `hbar`" in audit,
-        "the audit does not overclaim the hbar axis",
+        "audit-separates-structural-hbar-from-si-hbar",
+        "derives the structural action-to-phase role of `hbar`" in audit
+        and "does **not** derive the SI value of\n`hbar`" in audit
+        and "does not derive every downstream quantum-mechanical appearance\nof `hbar`" in audit,
+        "the audit claims structural S/hbar=Phi but refuses SI and downstream overclaims",
     )
 
     total += 1
@@ -114,6 +116,18 @@ def main() -> int:
 
     total += 1
     passed += expect(
+        "action-phase-representation-closes-structural-hbar",
+        "Structural action-phase role of `hbar`" in audit
+        and "S/hbar=Phi" in audit
+        and "`S(A_cell)=hbar`" in audit
+        and "`S(H)/hbar = Phi(H)`" in action_phase_hbar
+        and "`S(A_cell) = hbar`" in action_phase_hbar
+        and "not a prediction of the SI decimal value of `hbar`" in action_phase_hbar,
+        "structural hbar is closed as action-to-phase conversion",
+    )
+
+    total += 1
+    passed += expect(
         "information-action-kappa-reduced-to-gamma",
         "`q_* = kappa_info I_*`" in information
         and "`kappa_info = gamma/32 per bit`" in audit
@@ -141,10 +155,11 @@ def main() -> int:
     passed += expect(
         "safe-claim-preserved",
         "conditional structural Planck-length result" in audit
-        and "closes `gamma=1` in reduced action-count units, not\n"
-        "> the SI value of `hbar`" in audit
-        and "Do not use:\n\n> The branch derives the Planck constant." in audit,
-        "safe and unsafe claims are explicit",
+        and "coherent-history phase\n"
+        "> representation gives `S/hbar=Phi`, hence `S(A_cell)=hbar`" in audit
+        and "Do not use:\n\n> The branch predicts the numerical SI value of the Planck constant."
+        in audit,
+        "safe structural hbar claim and unsafe SI claim are explicit",
     )
 
     print(f"SUMMARY: PASS={passed} FAIL={total - passed}")
