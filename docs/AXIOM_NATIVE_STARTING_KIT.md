@@ -245,6 +245,25 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   on planar bipartite Z^3 subgraphs /
   `frontier_axiom_native_kasteleyn_plaquette_sign.py` /
   Target 2 sub-step 2d.
+- SCOPE REFINEMENT: K3 optimality depends on CONNECTEDNESS of
+  the defect region, not just contractibility. Tested (3,3,2)
+  minus two sites in four configurations, all contractible
+  non-cuboid non-planar:
+  * A: minus {(0,0,0), (1,0,0)} (x-adjacent): K3 optimal, |det|=60.
+  * B: minus {(0,0,0), (0,1,0)} (y-adjacent): K3 optimal, |det|=60.
+  * C: minus {(0,0,0), (0,0,1)} (z-adjacent): K3 optimal, |det|=105.
+  * D: minus {(0,0,0), (2,2,1)} (diagonal): K3 NOT optimal,
+    |det|=30 < max=36.
+  A, B, D have identical (V, E, F, cubes) = (16, 27, 14, 2); only
+  the defect position differs. When removed sites are ADJACENT
+  (defect region connected), K3 remains optimal. When SEPARATED
+  (two disjoint defects), K3 fails. Refined conjecture: K3 is
+  Pfaffian-optimal iff the graph is contractible AND the defect
+  region (complement in bounding cuboid) is connected. Translation-
+  invariant K3 handles ONE connected defect implicitly but cannot
+  accommodate two independent defect regions simultaneously /
+  `frontier_axiom_native_contractible_scope_map.py` /
+  Target 2 sub-step 2d-V2-defect-connectedness.
 - Optimal flip structure on clipped-(3,3,2): the 4096 gauge classes
   split into K3 (plaquette-satisfying, |det|=30) plus exactly 2
   "optimal" classes (|det|=36, both plaquette-VIOLATING with

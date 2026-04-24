@@ -968,3 +968,42 @@ cycle or cocycle in the clipped graph), or (b) broaden the scope
 test to a T-shape or more examples to map out the "K3 optimal"
 region more carefully.
 
+[2026-04-24 00:50] V2 iteration: scope map with adjacent vs diagonal removals — SURPRISE
+Tried: test K3 optimality on 4 shapes, all (3,3,2) minus 2 sites.
+Each contractible (chi=1), non-cuboid, non-planar. Only the
+REMOVAL PATTERN differs.
+Wrote scripts/frontier_axiom_native_contractible_scope_map.py.
+Results:
+- A, minus {(0,0,0), (1,0,0)} (x-adjacent): K3 |det|=60=max.
+- B, minus {(0,0,0), (0,1,0)} (y-adjacent): K3 |det|=60=max.
+- C, minus {(0,0,0), (0,0,1)} (z-adjacent): K3 |det|=105=max.
+- D, minus {(0,0,0), (2,2,1)} (diagonal): K3 |det|=30 < 36=max.
+A, B, D have identical invariants (V=16, E=27, F=14, cubes=2).
+C has slightly different (V=16, E=28, F=16, cubes=3) since z-
+removal preserves more plaquettes.
+Critical observation: K3 optimality holds on A, B, C (adjacent
+removals) and fails on D (diagonal). The distinction is NOT
+topological (all contractible, same (V,E,F,cubes) for A,B,D).
+The distinction is the CONNECTEDNESS of the defect region:
+- A, B, C: removed sites are adjacent -> one connected defect.
+- D: removed sites are far apart -> two separate defects.
+REFINED CONJECTURE: K3 is Pfaffian-optimal iff the graph is
+contractible AND the defect region (complement of the graph in
+its bounding cuboid) is CONNECTED.
+Physical interpretation: K3's translation-invariant staggered
+phases handle ONE connected defect implicitly (local correction
+propagates), but CANNOT simultaneously correct for two
+independent defects at different locations.
+Accepted because: hostile audit verdict = clean. 13 computed
+record() booleans (2 FAILs are the expected discriminators).
+This is a real structural finding: the scope boundary is more
+subtle than we initially thought. "Planar or cuboid" isn't
+complete; "contractible with connected defect" extends the
+valid region.
+Next V2 vector: (a) TEST the refined "connected defect" conjecture
+by removing 3 sites in either connected or disconnected patterns.
+Prediction: K3 works with connected 3-site defects, fails with
+disconnected 2+1 defects. (b) Try to PROVE the connected-defect
+theorem via analyzing how K3's translation-invariance interacts
+with boundary corrections.
+
