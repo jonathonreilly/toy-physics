@@ -245,6 +245,22 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   on planar bipartite Z^3 subgraphs /
   `frontier_axiom_native_kasteleyn_plaquette_sign.py` /
   Target 2 sub-step 2d.
+- 3x3x2 Kasteleyn obstruction cycle is a specific length-6
+  alternating cycle. Finding the smallest single-cycle difference
+  between a minority matching and a majority matching gives a
+  length-6 cycle visiting `(0,0,0), (0,1,0), (1,1,0), (1,1,1),
+  (1,0,1), (0,0,1)` -- entirely within a 2x2x2 sub-region of the
+  3x3x2 prism, spanning both z-layers, using 2 vertical edges out
+  of 6. The K3 sign product around this cycle is `-1`; combined
+  with the +1 permutation sign of a 3-cycle (the cycle has 3+3
+  bipartite halves), the contribution ratio is `-1`, explaining
+  how this cycle flips the sign of 2 matchings. The ANOMALY is
+  non-local: the same 2x2x2 sub-cube standalone has no Kasteleyn
+  violation (cube det = #PM = 9), so the phenomenon depends on
+  how this cycle is embedded in the larger graph, not on the
+  cycle itself /
+  `frontier_axiom_native_obstruction_cycle_3x3x2.py` /
+  Target 2 sub-step 2d-V2-obstruction.
 - 3x3x2 Kasteleyn anomaly is localized to EXACTLY 2 matchings:
   enumerating all 229 perfect matchings of the 3x3x2 prism and
   computing their signed contributions to `det(B)` under K3
