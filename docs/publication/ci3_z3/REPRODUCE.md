@@ -50,6 +50,7 @@ python3 scripts/frontier_strong_cp_theta_zero.py
 ```bash
 python3 scripts/frontier_hierarchy_observable_principle_from_axiom.py
 python3 scripts/frontier_complete_prediction_chain.py
+python3 scripts/frontier_alpha_lm_geometric_mean_identity.py
 python3 scripts/frontier_yt_ward_identity_derivation.py
 python3 scripts/frontier_yt_p1_bz_quadrature_full_staggered_pt.py
 python3 scripts/frontier_higgs_mass_full_3loop.py

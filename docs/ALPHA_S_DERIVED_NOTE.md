@@ -19,6 +19,8 @@ lane, not merely as a hidden subcomponent of a larger synthesis memo.
 The current retained lane gives:
 
 - `alpha_s(v) = alpha_bare / u_0^2 = 0.1033`
+- `alpha_LM^2 = alpha_bare * alpha_s(v)` as an exact retained
+  coupling-chain identity
 - one-decade low-energy transfer from `v` to `M_Z` on the retained running
   bridge
 - `alpha_s(M_Z) = 0.1181`
@@ -39,6 +41,7 @@ Cl(3) on Z^3
   |
   |-> vertex-power theorem:
         alpha_s(v) = alpha_bare / u_0^2 = 0.1033
+        alpha_LM^2 = alpha_bare * alpha_s(v)
   |
   |-> low-energy transfer:
         alpha_s(M_Z) = 0.1181

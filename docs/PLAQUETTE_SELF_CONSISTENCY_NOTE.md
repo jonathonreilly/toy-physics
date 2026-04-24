@@ -252,6 +252,8 @@ evaluated quantities:
 - `<P> = 0.5934`
 - `u_0 = <P>^(1/4)`
 - `alpha_s(v) = alpha_bare / u_0^2`
+- `alpha_LM^2 = alpha_bare * alpha_s(v)` on the retained coupling
+  definitions
 
 with the understanding that the number is:
 

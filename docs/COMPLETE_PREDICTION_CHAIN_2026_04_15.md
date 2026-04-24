@@ -39,10 +39,13 @@ From this single number, the entire prediction chain unfolds.
 | u_0 | <P>^{1/4} | 0.8776 | DERIVED |
 | alpha_LM | alpha_bare / u_0 | 0.09066 | DERIVED |
 | alpha_s(v) | alpha_bare / u_0^2 (CMT, n_link = 2) | 0.1033 | DERIVED |
+| alpha_LM^2 | alpha_bare alpha_s(v) | 0.00822066 | RETAINED IDENTITY |
 
 The Coupling Map Theorem (CMT) establishes that the bare coupling g_bare = 1
 maps to the physical coupling at scale v through n_link mean-field factors.
 With n_link = 2 (one gauge link per vertex leg): alpha_s(v) = 1/(4 pi u_0^2).
+The intermediate coupling is therefore the exact geometric mean:
+alpha_LM^2 = alpha_bare alpha_s(v).
 
 ### 3.2 From Cl(3) algebra and Z^3 lattice geometry
 
@@ -330,6 +333,7 @@ derived from the 1/N_c expansion (not a second MC input).
 | u_0 | 0.8776 | <P>^{1/4} |
 | alpha_LM | 0.09066 | alpha_bare / u_0 |
 | alpha_s(v) | 0.1033 | CMT: alpha_bare / u_0^2 |
+| alpha_LM^2 | 0.00822066 | alpha_bare alpha_s(v) |
 | v | 246.28 GeV | Hierarchy theorem |
 | R_conn | 8/9 | 1/N_c expansion (RCONN_DERIVED_NOTE) |
 | SU(3) x SU(2) x U(1) | -- | Cl(3) algebra |

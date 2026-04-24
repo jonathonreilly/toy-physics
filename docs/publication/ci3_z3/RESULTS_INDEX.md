@@ -63,6 +63,7 @@ Use alongside:
 | Component | Note | Runner |
 |---|---|---|
 | retained `alpha_s` lane | [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md) | [frontier_yt_zero_import_chain.py](../../../scripts/frontier_yt_zero_import_chain.py) |
+| `alpha_LM` geometric-mean identity | [ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md](../../ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md) | [frontier_alpha_lm_geometric_mean_identity.py](../../../scripts/frontier_alpha_lm_geometric_mean_identity.py) |
 | color-factor support `R_conn = 8/9` | [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md) | [frontier_color_projection_mc.py](../../../scripts/frontier_color_projection_mc.py) |
 | retained EW normalization package | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md), [YT_EW_DELTA_R_RETENTION_ANALYSIS_NOTE_2026-04-18.md](../../YT_EW_DELTA_R_RETENTION_ANALYSIS_NOTE_2026-04-18.md), [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md) | [frontier_complete_prediction_chain.py](../../../scripts/frontier_complete_prediction_chain.py), [frontier_color_projection_mc.py](../../../scripts/frontier_color_projection_mc.py), [frontier_yt_ew_delta_r_retention.py](../../../scripts/frontier_yt_ew_delta_r_retention.py) |
 | retained lattice-scale Yukawa/gauge Ward theorem | [YT_WARD_IDENTITY_DERIVATION_THEOREM.md](../../YT_WARD_IDENTITY_DERIVATION_THEOREM.md) | [frontier_yt_ward_identity_derivation.py](../../../scripts/frontier_yt_ward_identity_derivation.py) |

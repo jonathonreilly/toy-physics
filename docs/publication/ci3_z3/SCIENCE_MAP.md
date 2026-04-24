@@ -131,6 +131,7 @@ Start with:
 Validate with:
 
 - `python3 scripts/frontier_complete_prediction_chain.py`
+- `python3 scripts/frontier_alpha_lm_geometric_mean_identity.py`
 - `python3 scripts/frontier_yt_ward_identity_derivation.py`
 - `python3 scripts/frontier_yt_p1_bz_quadrature_full_staggered_pt.py`
 - `python3 scripts/frontier_higgs_mass_full_3loop.py`

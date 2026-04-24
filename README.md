@@ -30,6 +30,7 @@ questions:
 
 - retained quantitative package:
   canonical `v = 246.282818290129 GeV`, retained `alpha_s(M_Z) = 0.1181`,
+  the retained coupling-chain identity `alpha_LM^2 = alpha_bare alpha_s(v)`,
   electroweak normalization, retained top/Yukawa transport, promoted CKM
   atlas/axiom numerics including `cos^2(delta_CKM) = 1/6`, and bounded
   confinement-string readout; the absolute
@@ -94,8 +95,9 @@ questions:
   compactness spectral tower on `S^3`
 - retained quantitative lanes:
   canonical `v = 246.282818290129 GeV`, retained `alpha_s(M_Z) = 0.1181`,
-  retained EW normalization, promoted CKM atlas/axiom closure, bounded
-  Yukawa/top transport, and bounded Higgs/vacuum closure
+  retained `alpha_LM` geometric-mean coupling identity, retained EW
+  normalization, promoted CKM atlas/axiom closure, bounded Yukawa/top
+  transport, and bounded Higgs/vacuum closure
 - charged-lepton package:
   substantial Koide support stack; the latest native zero-section review
   and pointed-origin exhaustion theorem reject full dimensionless closure but

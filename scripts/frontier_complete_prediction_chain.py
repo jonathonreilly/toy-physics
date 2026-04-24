@@ -8,6 +8,7 @@ prints the single reviewer-facing prediction card on `main`.
 
 Subcomponent provenance:
   - plaquette/u0/alpha_LM/alpha_s(v)/v: hierarchy + zero-import chain
+  - alpha_LM^2 = alpha_bare alpha_s(v): coupling-chain identity
   - R_conn, g_1(v), g_2(v), sin^2(theta_W), 1/alpha_EM: color projection stack
   - y_t(v), m_t(pole): Ward + color-singlet projection stack
   - m_H (2-loop): corrected-y_t stability boundary
@@ -70,6 +71,7 @@ def main() -> None:
     print(f"  u_0             = {U0:.6f}")
     print(f"  alpha_LM        = {ALPHA_LM:.6f}")
     print(f"  alpha_s(v)      = {ALPHA_S_V:.6f}")
+    print(f"  alpha_LM^2      = {ALPHA_LM ** 2:.6f} (= alpha_bare * alpha_s(v))")
     print(f"  v               = {V:.2f} GeV")
     print(f"  R_conn          = {R_CONN:.6f}")
     print(f"  taste_weight    = {TASTE_WEIGHT:.6f} (= 7/18)")
@@ -98,6 +100,7 @@ def main() -> None:
     print()
     print("Primary support stack")
     print("  COMPLETE_PREDICTION_CHAIN_2026_04_15.md")
+    print("  ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md")
     print("  RCONN_DERIVED_NOTE.md")
     print("  YT_EW_COLOR_PROJECTION_THEOREM.md")
     print("  YT_COLOR_PROJECTION_CORRECTION_NOTE.md")
