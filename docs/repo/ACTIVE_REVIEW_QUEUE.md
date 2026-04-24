@@ -29,7 +29,13 @@ Current science/open-lane follow-ups:
 - irregular off-lattice sign lane: portability beyond the bounded centered
   core-packet surface remains open
 - periodic 2D torus diagnostics: nearby torus probes still need code audit
-  before reuse outside the corrected retained notes
+  before reuse outside the corrected retained notes; the static-analysis
+  audit in
+  [`PERIODIC_TORUS_DIAGNOSTICS_CODE_AUDIT_NOTE_2026-04-24.md`](../PERIODIC_TORUS_DIAGNOSTICS_CODE_AUDIT_NOTE_2026-04-24.md)
+  freezes a 9-script `NEEDS_REVIEW` list (out of 2048 scripts/*.py scanned),
+  with all 9 canonical-corrected scripts validated as `CLEAN_*`. Manual
+  per-script confirmation against the helper at
+  `scripts/periodic_geometry.py` is the next step
 - Wilson two-body lane: both-masses scaling closes at smoke-test level on the
   side=9 open-boundary cross-coupling acceleration (`a_a^cross / m_b` constant
   at `3.6%` CV across n=5 mass configs, see
