@@ -36,6 +36,8 @@ SUBCHECKS = [
     "frontier_planck_boundary_event_ward_identity_derivation_theorem.py",
     "frontier_planck_boundary_same_source_covariance_theorem.py",
     "frontier_planck_boundary_parent_source_equivalence_theorem.py",
+    "frontier_planck_gravity_sector_same_surface_closure_theorem.py",
+    "frontier_planck_airtight_review_closure_theorem.py",
     "frontier_planck_hbar_status_and_remaining_objections_audit.py",
     "frontier_planck_hbar_attack_order_theorem.py",
 ]
@@ -82,6 +84,8 @@ def main() -> int:
     event_ward_derivation = read("docs/PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md")
     same_source = read("docs/PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md")
     parent_source = read("docs/PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md")
+    same_surface_gravity = read("docs/PLANCK_SCALE_GRAVITY_SECTOR_SAME_SURFACE_CLOSURE_THEOREM_2026-04-23.md")
+    airtight = read("docs/PLANCK_SCALE_AIRTIGHT_REVIEW_CLOSURE_THEOREM_2026-04-23.md")
     hbar_audit = read("docs/PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md")
     hbar_attack = read("docs/PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md")
 
@@ -294,6 +298,25 @@ def main() -> int:
         and "`nu - lambda_min(L_Sigma) = Tr(rho_cell P_A)`" in parent_source
         and "deny that the physical gravitational boundary-action source belongs to the\n> retained primitive one-step boundary/worldtube object class"
         in parent_source,
+    )
+
+    total += 1
+    passed += expect(
+        "same-surface-gravity-sector-closes-gsi",
+        "PLANCK_SCALE_GRAVITY_SECTOR_SAME_SURFACE_CLOSURE_THEOREM_2026-04-23.md"
+        in reviewer
+        and "same-surface single-sector compatibility forces GSI" in same_surface_gravity
+        and "`N_grav = P_A`" in same_surface_gravity,
+    )
+
+    total += 1
+    passed += expect(
+        "airtight-review-closure-is-scoped-and-final",
+        "PLANCK_SCALE_AIRTIGHT_REVIEW_CLOSURE_THEOREM_2026-04-23.md" in reviewer
+        and "Yes, as a theorem on the accepted physical-gravity review contract"
+        in airtight
+        and "`a = l_P`" in airtight
+        and "theory-surface rejections, not\ninternal Planck proof gaps" in airtight,
     )
 
     total += 1
