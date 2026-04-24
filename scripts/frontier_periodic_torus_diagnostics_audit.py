@@ -78,7 +78,10 @@ MIN_IMAGE_INLINE = re.compile(
     # Centered-modulo idiom: (x - x0 + L // 2) % L - L // 2 returns a signed
     # minimum-image displacement in [-L/2, L/2]. Catch any "% L - L // 2" or
     # "% side - side // 2" form.
-    r"%\s*\w+\s*-\s*\w+\s*//\s*2"
+    r"%\s*\w+\s*-\s*\w+\s*//\s*2|"
+    # min(abs(x - x0), n - abs(x - x0)) idiom: very common minimum-image form.
+    # Catches both `abs(` and `np.abs(` (and similar np.* prefixes).
+    r"\b\w+\s*-\s*(?:np\.|numpy\.)?abs\("
 )
 
 # Distance computation in Hamiltonian-relevant context.

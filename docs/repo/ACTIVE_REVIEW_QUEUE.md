@@ -32,10 +32,13 @@ Current science/open-lane follow-ups:
   before reuse outside the corrected retained notes; the static-analysis
   audit in
   [`PERIODIC_TORUS_DIAGNOSTICS_CODE_AUDIT_NOTE_2026-04-24.md`](../PERIODIC_TORUS_DIAGNOSTICS_CODE_AUDIT_NOTE_2026-04-24.md)
-  freezes a 9-script `NEEDS_REVIEW` list (out of 2048 scripts/*.py scanned),
-  with all 9 canonical-corrected scripts validated as `CLEAN_*`. Manual
-  per-script confirmation against the helper at
-  `scripts/periodic_geometry.py` is the next step
+  froze a 9-script `NEEDS_REVIEW` list, then batch-1 manual review in
+  [`PERIODIC_TORUS_AUDIT_BATCH_1_MANUAL_REVIEW_NOTE_2026-04-24.md`](../PERIODIC_TORUS_AUDIT_BATCH_1_MANUAL_REVIEW_NOTE_2026-04-24.md)
+  resolved 8 as false positives (regex tightened to catch `min(abs(x), n-abs(x))`
+  and `np.minimum(np.abs(...), n-np.abs(...))` idioms) and confirmed 1 TRUE
+  BUG: `frontier_shapiro_delay.py` 1D periodic ring case uses raw `math.hypot`
+  for hopping weights, giving wraparound edge weight `1/(n-1)` instead of `1/1`.
+  The fix or quarantine of `frontier_shapiro_delay.py` is the next step
 - Wilson two-body lane: both-masses scaling closes at smoke-test level on the
   side=9 open-boundary cross-coupling acceleration (`a_a^cross / m_b` constant
   at `3.6%` CV across n=5 mass configs, see
