@@ -35,7 +35,8 @@ questions:
   lattice scale is tracked explicitly on a dedicated Planck-scale lane as the
   current package pin `a^(-1) = M_Pl` on the physical-lattice reading, with a
   conditional completion theorem reducing the remaining Planck question to the
-  gravitational boundary/action carrier identification
+  gravitational boundary/action carrier identification; finite-response-only
+  and carrier-only parent-source shortcuts are retained no-gos
 - bounded but explicit forward/companion surface:
   proton lifetime, CKM-only neutron EDM continuation, vacuum criticality,
   taste-scalar near-degeneracy, benchmark gravitational decoherence, and

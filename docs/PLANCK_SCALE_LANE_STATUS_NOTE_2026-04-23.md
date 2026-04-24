@@ -35,6 +35,14 @@ in
 - exact same-surface normalization algebra
   `c_cell/a^2 = 1/(4 l_P^2)`, hence `a/l_P = 1`;
 - explicit finite-only, parent-source, and SI-unit blockers.
+- the finite-automorphism-only response route is now closed negatively in
+  [PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md](./PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md):
+  the primitive finite frame has a positive identity gap and no infinitesimal
+  metric/coframe tangent.
+- the carrier-only parent-source scalar shortcut is now closed negatively in
+  [PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md](./PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md):
+  carrier commutation leaves an affine hidden character `delta`, so Schur/event
+  scalar equality still needs an extra law `delta = 0`.
 
 This improves the derivation program, but it does not make the older minimal
 finite stack alone derive the SI Planck length. The public package pin remains
@@ -130,6 +138,11 @@ Current blocker:
   boundary/worldtube count is derived as the microscopic carrier of the
   gravitational boundary/action density, rather than accepted as the Planck
   package's carrier identification.
+- the finite-response-only fallback is no longer live: finite primitive-cell
+  automorphisms cannot supply the required local response surface.
+- the carrier-only parent-source shortcut is no longer live: it cannot eliminate
+  the affine hidden character `delta` without a separate no-hidden-character
+  law.
 
 ### Target 2: horizon entropy carrier with exact `1/4`
 
@@ -168,6 +181,12 @@ Current blocker:
   counting trace as the state semantics needed for the exact `1/4` coefficient;
 - it also separates structural action-phase statements from any claim to
   predict the SI decimal value of `hbar`.
+- the finite-response no-go closes the finite static cell route negatively, so
+  this framework-compression target must use a realified/local response or a
+  separate carrier theorem rather than bare finite automorphisms.
+- the parent-source no-go closes a carrier-only scalar promotion; a positive
+  information/action bridge must either derive `delta = 0` or avoid that scalar
+  route entirely.
 
 ## 6. Package rule on `main`
 
@@ -178,6 +197,10 @@ Until one of the three targets closes, the correct package statement is:
 - the new conditional-completion theorem records exactly what would be needed
   to promote the pin: accept or derive the primitive boundary count as the
   gravitational boundary/action carrier
+- the finite-automorphism-only response route is a retained no-go, not an
+  alternate promotion path
+- the carrier-only parent-source scalar route is a retained no-go, not an
+  alternate promotion path without a separate no-hidden-character law
 
 That is the canonical posture to use when wiring hierarchy, YT/Higgs,
 neutrino/DM mass ladders, gravity/cosmology companions, and compact-object

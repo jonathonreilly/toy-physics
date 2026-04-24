@@ -4,6 +4,9 @@
 **Status:** retained support / conditional completion packet, not an
 unqualified minimal-stack derivation
 **Runner:** `scripts/frontier_planck_conditional_completion_audit.py`
+**Companion no-go runners:**
+`scripts/frontier_planck_finite_response_nogo.py`,
+`scripts/frontier_planck_parent_source_hidden_character_nogo.py`
 
 ## Purpose
 
@@ -99,6 +102,14 @@ So the branch does not prove:
 bare finite Cl(3)/Z^3 automorphisms alone force a = l_P and hbar.
 ```
 
+This finite-response route is now closed negatively in
+[PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md](./PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md):
+the primitive finite frame automorphism group is finite
+(`|B_4| = 384`), every nonidentity element has positive distance from the
+identity, and the infinitesimal tangent available from finite automorphisms
+alone is zero-dimensional. It cannot supply the local metric/coframe response
+directions required for the gravitational carrier identification.
+
 ### 4. Realified response is a conditional response surface
 
 The branch also sharpens the role of realification. If one asks for
@@ -130,20 +141,29 @@ chosen.
 
 ## Remaining Blockers
 
-The exact blockers are now sharper than before:
+The exact open blockers are now sharper than before:
 
 1. **Minimal-stack blocker.** The older minimal finite stack alone still does
    not derive the absolute lattice spacing.
 2. **Carrier-identification blocker.** To promote the conditional theorem to
    a stronger derivation, derive that the primitive one-step worldtube count
-   is the microscopic carrier of the gravitational boundary/action density.
-3. **Parent-source scalar blocker.** The branch finds an affine hidden
-   character obstruction in the Schur/event scalar equality. The carrier-level
-   diagram can commute while an additive scalar `delta` remains free unless a
-   no-hidden-character parent-source law is derived.
-4. **Finite-response blocker.** A finite-automorphism-only route still needs a
-   positive theorem deriving local metric/coframe response without invoking
-   the canonical realified response envelope.
+   is the microscopic carrier of the gravitational boundary/action density. If
+   this is attempted through the parent-source scalar route, it must include a
+   no-hidden-character law fixing `delta = 0`; the carrier-only scalar diagram
+   is now closed negatively.
+
+Closed negative route:
+
+- **Finite-response-only route.**
+  [PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md](./PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md)
+  closes the finite-automorphism-only response target negatively. Bare finite
+  primitive-cell automorphisms have no infinitesimal tangent, so they cannot
+  replace the realified local response surface.
+- **Carrier-only parent-source scalar route.**
+  [PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md](./PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md)
+  closes the unconstrained Schur/event scalar shortcut negatively. Carrier
+  commutation alone leaves an affine hidden character `delta`, and scalar
+  equality is equivalent to the extra law `delta = 0`.
 
 ## Package Status
 
@@ -164,4 +184,6 @@ Do not use:
 
 The current public package may continue to carry `a^(-1) = M_Pl` as the
 Planck-scale package pin, now with a sharper conditional-completion theorem
-and a precise list of remaining blockers.
+and a precise list of remaining blockers. The finite-automorphism-only route
+and the carrier-only parent-source scalar route are no longer live positive
+targets; both are retained no-gos.

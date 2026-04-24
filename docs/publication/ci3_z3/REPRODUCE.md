@@ -69,6 +69,8 @@ python3 scripts/frontier_koide_reviewer_stress_test.py
 python3 scripts/frontier_koide_lane_regression.py
 python3 scripts/frontier_planck_scale_program_audit.py
 python3 scripts/frontier_planck_conditional_completion_audit.py
+python3 scripts/frontier_planck_finite_response_nogo.py
+python3 scripts/frontier_planck_parent_source_hidden_character_nogo.py
 ```
 
 ## How To Read The Output

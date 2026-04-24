@@ -61,9 +61,17 @@ Current absolute-scale package rule:
   `a/l_P = 1` after the primitive boundary count is accepted as the
   gravitational boundary/action carrier; that carrier identification is still
   the explicit Planck-lane condition
+- the finite-automorphism-only response route is closed negatively; finite
+  primitive-cell automorphisms have no infinitesimal metric/coframe response
+  tangent and cannot replace the realified response surface
+- the carrier-only parent-source scalar route is closed negatively; carrier
+  data alone leave an affine hidden character `delta`, so scalar equality
+  requires a separate no-hidden-character law
 - authority:
   [PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md](../../PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md),
-  [PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md](../../PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md)
+  [PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md](../../PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md),
+  [PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md](../../PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md),
+  [PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md](../../PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md)
 
 - plaquette surface:
   - `<P> = 0.5934`
