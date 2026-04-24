@@ -245,6 +245,23 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   on planar bipartite Z^3 subgraphs /
   `frontier_axiom_native_kasteleyn_plaquette_sign.py` /
   Target 2 sub-step 2d.
+- Optimal flip structure on clipped-(3,3,2): the 4096 gauge classes
+  split into K3 (plaquette-satisfying, |det|=30) plus exactly 2
+  "optimal" classes (|det|=36, both plaquette-VIOLATING with
+  exactly 2 violated plaquettes each). The 2 optimal masks are
+  related by the Z_2 center-reflection symmetry of the clipped
+  graph (which swaps the two removed corners). The minimal optimal
+  flip pattern has just 3 edge flips out of 12 chords; concrete
+  example: `(0,1,0)-(1,1,0) via mu=1`, `(0,2,0)-(1,2,0) via mu=1`,
+  `(1,2,0)-(1,2,1) via mu=3`. Average distance of these edges from
+  removed corners is 1.365 vs 1.460 for all chords; violated
+  plaquettes are on average 1.225 vs 1.428 for all plaquettes.
+  Both metrics confirm a modest (not dramatic) concentration near
+  the clipped-corner region, suggesting K3's translation-invariant
+  staggered phases fail to self-correct across the broken-symmetry
+  boundary /
+  `frontier_axiom_native_clipped332_optimal_flip_structure.py` /
+  Target 2 sub-step 2d-V2-clipped-flip-analysis.
 - SHARPER SCOPE LIMIT: K3 optimality does NOT extend to all
   contractible non-cuboid Z^3 subgraphs. Concrete counterexample:
   (3,3,2) with opposite corners (0,0,0) and (2,2,1) removed is

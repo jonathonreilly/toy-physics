@@ -933,3 +933,38 @@ to a boundary-correction on K3. (b) test a T-shape (3D) or pyramid
 to see if planar-like contractibles work but 3D-core non-cuboid
 fail. (c) step back to V_us = 2/9 thread.
 
+[2026-04-24 00:25] V2 iteration: clipped-332 optimal flip structure — PASS
+Tried: characterize the specific edge-flip pattern that transforms
+K3 (|det|=30, suboptimal) into the optimal class (|det|=36) on
+the clipped-(3,3,2) graph. Extracted structural features of the
+optimal masks.
+Wrote scripts/frontier_axiom_native_clipped332_optimal_flip_structure.py.
+Results:
+- Exactly 2 optimal masks (|det|=36) out of 4096.
+- Both violate exactly 2 plaquettes (each).
+- The 2 optimal masks are related by Z_2 center-reflection symmetry.
+- Smallest optimal mask: 3 edge flips total.
+- Minimal flip: (0,1,0)-(1,1,0) mu_1, (0,2,0)-(1,2,0) mu_1,
+  (1,2,0)-(1,2,1) mu_3. (A compact "flap" near the z=0/z=1
+  boundary on the y=2 side.)
+- Violated plaquettes are on average 1.225 units from removed
+  corners vs 1.428 for all plaquettes (modest concentration).
+- Flipped edges are on average 1.365 vs 1.460 for all chords.
+Interpretation: the optimal flip has some corner concentration but
+is not sharply localized. It's a specific 3-edge "correction patch"
+that K3's translation-invariant phase assignment can't produce.
+The 3-edge minimum suggests the optimal class is CLOSE to K3 in
+edge-distance (only 3 sign flips away, minimum), so K3 is a LOCAL
+optimum but not the global one on this graph.
+Accepted because: hostile audit verdict = clean. 8 computed
+record() booleans, no narrative PASSes.
+V2 thread now has: scope boundaries established (planar,
+cuboid-contractible are the "easy" cases; non-contractible and
+contractible-non-cuboid break K3 optimality), plus structural
+characterization of specific flip corrections.
+Next V2 vector: (a) test whether the 3-edge flip pattern has a
+graph-theoretic interpretation (e.g., corresponds to a specific
+cycle or cocycle in the clipped graph), or (b) broaden the scope
+test to a T-shape or more examples to map out the "K3 optimal"
+region more carefully.
+
