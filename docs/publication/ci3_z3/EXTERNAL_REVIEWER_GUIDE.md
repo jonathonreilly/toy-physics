@@ -49,9 +49,10 @@ For the explicit package boundary, use:
   closure on one chosen canonical textbook target
 - gauge and matter:
   exact native `SU(2)`, graph-first structural `SU(3)`, anomaly-forced `3+1`,
-  retained `S^3` topology closure, one-generation closure, retained
-  three-generation structure on the no-rooting / residual substrate boundary,
-  with an exact retained `hw=1` observable no-proper-quotient theorem,
+  retained `S^3` topology closure, one-generation closure, SM hypercharge
+  uniqueness/electric-charge quantization, retained three-generation structure
+  on the no-rooting / residual substrate boundary, with an exact retained
+  `hw=1` observable no-proper-quotient theorem,
   exact `I_3 = 0`, exact CPT, retained Bell/CHSH support on explicit
   two-species lattice systems with KS taste measurements, emergent Lorentz
   invariance, and retained action-surface strong-CP closure /

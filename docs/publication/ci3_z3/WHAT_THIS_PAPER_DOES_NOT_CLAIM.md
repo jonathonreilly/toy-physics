@@ -39,6 +39,8 @@ The paper does **not** claim:
 
 - a conventional rooted-staggered loophole or a general Nielsen–Ninomiya
   evasion theorem;
+- that SM hypercharge uniqueness derives the neutral-singlet input
+  `Y(nu_R)=0`, cross-generation uniqueness, or alternative gauge groups;
 - that every older Cabibbo / NNI / partial-Jarlskog route is current
   authority.
 - a full retained neutrino point-prediction package for the solar gap, PMNS
@@ -47,6 +49,9 @@ The paper does **not** claim:
 The current retained claim is:
 
 - three-generation matter structure on the physical-lattice surface;
+- one-generation SM hypercharge uniqueness/electric-charge quantization
+  conditional on the retained left-handed content, singlet right-handed
+  completion, anomaly equations, `Y(nu_R)=0`, and charge labelling;
 - promoted atlas/axiom CKM closure on the current chosen package surface.
 - bounded retained-package neutrino observable inequalities from the retained
   atmospheric scale plus normal ordering.

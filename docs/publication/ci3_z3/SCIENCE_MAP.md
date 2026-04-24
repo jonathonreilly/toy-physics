@@ -67,9 +67,9 @@ Validate with:
   exact native `SU(2)`, graph-first structural `SU(3)`, exact `T = 0`
   confinement on the graph-first color sector
 - retained matter structure:
-  one-generation closure, three-generation observable/species closure,
-  exact `I_3 = 0`, exact CPT, Bell/CHSH support on explicit two-species
-  lattice systems
+  one-generation closure, SM hypercharge uniqueness/electric-charge
+  quantization, three-generation observable/species closure, exact `I_3 = 0`,
+  exact CPT, Bell/CHSH support on explicit two-species lattice systems
 - retained package-support lanes:
   `g_bare = 1` structural normalization and two-Ward 1PI closure
 - package-support atlas:
@@ -80,6 +80,7 @@ Start with:
 
 - [NATIVE_GAUGE_CLOSURE_NOTE.md](../../NATIVE_GAUGE_CLOSURE_NOTE.md)
 - [GRAPH_FIRST_SU3_INTEGRATION_NOTE.md](../../GRAPH_FIRST_SU3_INTEGRATION_NOTE.md)
+- [STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md](../../STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md)
 - [THREE_GENERATION_STRUCTURE_NOTE.md](../../THREE_GENERATION_STRUCTURE_NOTE.md)
 - [STRONG_CP_THETA_ZERO_NOTE.md](../../STRONG_CP_THETA_ZERO_NOTE.md)
 
@@ -87,6 +88,7 @@ Validate with:
 
 - `python3 scripts/frontier_non_abelian_gauge.py`
 - `python3 scripts/frontier_graph_first_su3_integration.py`
+- `python3 scripts/frontier_sm_hypercharge_uniqueness.py`
 - `python3 scripts/frontier_generation_fermi_point.py`
 - `python3 scripts/frontier_three_generation_observable_theorem.py`
 - `python3 scripts/frontier_strong_cp_theta_zero.py`

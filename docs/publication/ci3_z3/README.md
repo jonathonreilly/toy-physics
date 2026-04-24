@@ -39,7 +39,8 @@ For the full package-capture inventory, use:
   retained YT/top transport, and the promoted CKM atlas/axiom package
 - retained structural/corollary surface:
   strong CP on the retained action surface, emergent Lorentz invariance,
-  `S^3` topology closure, exact `I_3 = 0`, exact CPT, Bell/CHSH support,
+  `S^3` topology closure, SM hypercharge uniqueness/electric-charge
+  quantization, exact `I_3 = 0`, exact CPT, Bell/CHSH support,
   retained cosmology identities/corollaries, including the FRW kinematic
   reduction of late-time cosmology observables to the open `H_inf/H_0` ratio
   and the retained TT compactness spectral tower on `S^3`

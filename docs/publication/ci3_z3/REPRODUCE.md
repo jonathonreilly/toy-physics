@@ -39,6 +39,7 @@ python3 scripts/frontier_universal_qg_canonical_textbook_continuum_gr_closure.py
 python3 scripts/frontier_non_abelian_gauge.py
 python3 scripts/frontier_graph_first_su3_integration.py
 python3 scripts/frontier_anomaly_forces_time.py
+python3 scripts/frontier_sm_hypercharge_uniqueness.py
 python3 scripts/frontier_three_generation_observable_theorem.py
 python3 scripts/frontier_strong_cp_theta_zero.py
 ```

@@ -291,7 +291,11 @@ $+1/3$ and $-1$ charge matching. The one-generation matter story then becomes
 full-framework rather than purely spatial. The spatial graph fixes the
 left-handed gauge/matter surface. Anomaly-forced time supplies chirality
 through single-clock $3+1$. Anomaly cancellation then fixes the right-handed
-completion on the Standard Model branch.
+completion on the Standard Model branch. The separate hypercharge-uniqueness
+theorem now packages the arithmetic: with the retained left-handed content, an
+$SU(2)$-singlet right-handed completion, the anomaly equations,
+$Y(\nu_R)=0$, and the positive up-type label, the singlet hypercharges are
+uniquely $(4/3,-2/3,-2,0)$ up to the removed $u_R \leftrightarrow d_R$ swap.
 
 **Theorem 3 (Anomaly-forced time).**
 Starting from the left-handed content $(2,3)_{+1/3} + (2,1)_{-1}$, anomaly

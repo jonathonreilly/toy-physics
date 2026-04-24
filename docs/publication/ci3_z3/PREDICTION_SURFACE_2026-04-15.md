@@ -20,7 +20,8 @@ The current package has four predictive layers:
 
 1. retained quantitative outputs already safe for the paper surface;
 2. bounded secondary predictions already worth stating explicitly;
-3. structural predictions with delayed observability;
+3. structural predictions and signatures, including delayed-observability
+   channels;
 4. current pressure points and open bridges that define the falsification and
    completion surface.
 
@@ -150,8 +151,16 @@ conceptual pressure.
   the extremal/source-law bridge behind `Q = 2/3` and the physical
   Brannen-phase bridge behind `delta = 2/9`
 
-## Structural predictions with delayed observability
+## Structural predictions and signatures
 
+- SM hypercharge uniqueness / electric-charge quantization:
+  - under the retained one-generation hypotheses, anomaly cancellation and
+    `Y(nu_R)=0` uniquely fix right-handed hypercharges
+    `(4/3, -2/3, -2, 0)` up to the removed `u_R <-> d_R` label swap
+  - the one-generation electric-charge set is therefore
+    `{0, +/-1/3, +/-2/3, +/-1}`
+  - authority:
+    [STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md](../../STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md)
 - emergent Lorentz invariance:
   - leading anisotropic correction first appears at dimension 6
   - unique cubic-harmonic `ell = 4` fingerprint
@@ -164,8 +173,9 @@ conceptual pressure.
   - authority:
     [STRONG_CP_THETA_ZERO_NOTE.md](../../STRONG_CP_THETA_ZERO_NOTE.md)
 
-These are part of the framework's falsification surface even when present
-experimental sensitivity is limited.
+These are part of the framework's falsification surface; some are already
+observed structural signatures, while others are delayed by present
+experimental sensitivity.
 
 ## Mixed cosmology surface
 
@@ -227,7 +237,7 @@ The current package already has:
 
 - a retained quantitative prediction surface;
 - a sharp bounded secondary prediction surface;
-- exact structural predictions with delayed observability;
+- exact structural predictions and signatures;
 - an explicit falsification and pressure surface;
 - one remaining charged-lepton bridge package.
 
