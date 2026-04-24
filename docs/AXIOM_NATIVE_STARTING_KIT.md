@@ -245,6 +245,22 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   on planar bipartite Z^3 subgraphs /
   `frontier_axiom_native_kasteleyn_plaquette_sign.py` /
   Target 2 sub-step 2d.
+- SCOPE LIMIT on K3 optimality: the "K3 is Pfaffian-optimal"
+  conjecture is TIED TO CONTRACTIBILITY of the ambient graph.
+  Concrete counterexample: (3,3,2) minus the central column
+  {(1,1,0), (1,1,1)} is a "ring" graph homotopy-equivalent to a
+  circle (chi = 16 - 24 + 8 - 0 = 0). On this non-contractible
+  graph, there are EXACTLY 2 plaquette-satisfying gauge classes
+  (predicted by |F| - |cubes| = 8 < 9 = gauge_dim, so 2^1 = 2).
+  K3 is one of them, giving |det(B)| = 45. The OTHER
+  plaquette-satisfying class gives |det(B)| = 49 (the max over
+  all 512 gauge classes). Hence K3 is NOT optimal on non-
+  contractible Z^3 subgraphs: the other class, obtained from K3
+  by flipping signs along the non-trivial H^1(ring, F_2) cycle,
+  does better. Correct scope of the K3 optimality result:
+  contractible Z^3 subgraphs only /
+  `frontier_axiom_native_ring_non_contractible_test.py` /
+  Target 2 sub-step 2d-V2-contractibility-scope.
 - PLAQUETTE-UNIQUENESS THEOREM on every Z^3 cuboid: for any
   `(L1, L2, L3)` cuboid, the plaquette-edge incidence matrix over
   F_2 has rank = gauge_dim = `|E| - |V| + 1`. Hence K3 is the

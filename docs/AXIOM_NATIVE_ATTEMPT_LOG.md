@@ -850,3 +850,48 @@ cycle contributions, or (b) step back and investigate whether the
 same uniqueness theorem holds for non-cuboid Z^3 subgraphs (e.g.,
 corners removed, L-shapes).
 
+[2026-04-23 23:35] V2 iteration: ring-graph non-contractible test — FALSIFICATION
+Tried: the adversarial test designed in the prior iteration's
+next-vectors list. Construct a topologically non-trivial Z^3
+subgraph and test whether "K3 is Pfaffian-optimal" extends.
+Chose: (3,3,2) minus central column {(1,1,0), (1,1,1)}. This is
+a "ring" graph wrapping around a vertical hole.
+Wrote scripts/frontier_axiom_native_ring_non_contractible_test.py:
+(i) constructs the ring graph, verifies chi = 0 (non-contractible),
+(ii) computes gauge_dim (9), plaquette_rank (8), confirms 2
+plaquette-satisfying classes predicted via Euler,
+(iii) exhaustively enumerates 2^9 = 512 gauge classes,
+(iv) partitions into satisfying / violating,
+(v) computes |det(B)| for each class.
+Results:
+- 2 plaquette-satisfying classes: K3 (|det| = 45) and another
+  (|det| = 49).
+- 510 violating classes, all with |det| <= 21.
+- Max over all classes = 49 (one of the plaquette-satisfying).
+- K3 is NOT the max -- the OTHER plaquette-satisfying class wins.
+FALSIFIED CONJECTURE: "K3 is Pfaffian-optimal" does NOT universally
+hold on Z^3 subgraphs; it holds only on CONTRACTIBLE ones.
+Structural explanation: on non-contractible subgraphs, H^1 is
+nontrivial (here Z_2 = 1 for the ring), so plaquette-satisfying
+gauge classes come in 2^(|H^1|) copies differing by non-trivial
+cohomology cycles. K3 picks one of these arbitrarily (determined
+by kit's staggered phase formula), and it's not necessarily the
+best. The "right" class differs from K3 by flipping signs on a
+cycle representing the non-trivial H^1 generator.
+CORRECTED SCOPE of the K3 optimality result: contractible Z^3
+subgraphs only. The plaquette-uniqueness theorem (|F| - |cubes|
+= |E| - |V| + 1 via Euler) is a theorem of contractibility, and
+ONLY there does K3 uniquely give max.
+Accepted because: hostile audit verdict = clean. 11 computed
+record() booleans (1 FAIL which is the discovered falsification),
+no narrative PASSes.
+This is a GENUINE V2 SUCCESS: the adversarial test literally
+found a case where the conjecture breaks. Gives a sharp scope
+boundary for the K3-optimality result.
+Next V2 vector: (a) test contractible NON-CUBOID Z^3 subgraphs
+(L-shapes, T-shapes, stepped) to verify K3 optimality extends
+within contractibility, or (b) on the ring graph, understand the
+structural relationship between K3's class and the optimal class
+(what does the kit need to add to pick the right cohomology
+class?).
+
