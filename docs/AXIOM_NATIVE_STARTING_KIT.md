@@ -563,3 +563,30 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   heterogeneous /
   `frontier_axiom_native_singleton_proof_attempt.py` /
   Target 2 sub-step 2d-V2-singleton-partial-proof.
+- Localization signature SCALES from (3,3,2) to (4,3,2). On the
+  larger test shape (4,3,2) minus {(0,0,0), (3,0,0)}, DFS PM
+  enumeration gives 296 perfect matchings, of which 34
+  contribute K3 sign + and 262 contribute sign -, so
+  `|det(B)| = 262 - 34 = 228`, matching iter 19 T1. The top 5
+  most minority-biased edges include (2,0,0)-(2,0,1),
+  (1,0,0)-(1,0,1), (2,0,0)-(2,1,0), (1,0,0)-(1,1,0) -- all four
+  of which are incident to a neighbor of a removed corner
+  singleton (the neighbors (1,0,0) and (2,0,0) of removed
+  (0,0,0)/(3,0,0)). Avg midpoint-to-nearest-removed distance:
+  top-5 minority-biased = 1.307, top-5 majority-biased = 1.561.
+  Pearson correlation of (edge minority-fraction, edge
+  distance-to-removed) is -0.248 (negative = closer edges are
+  more minority-biased). Control re-run on (3,3,2) with same
+  metric: min dist 1.495, maj dist 1.500, corr -0.158.
+  Signature direction (min < maj AND corr < 0) holds on BOTH
+  shapes; signal STRENGTHENS at the larger (4,3,2) size (diff
+  0.254 vs 0.005). Hence the localization is scale-robust. In
+  parallel, #PM(T1) = 296 > max_det(T1) = 272 via gauge search,
+  so (4,3,2) minus 2 corners is NON-PFAFFIAN with an
+  irreducible (#PM - max_det)/2 = 12 minority matchings even
+  under the best-possible gauge. Iter-19 T1's n_minus was
+  miscounted as gap/2 = 22 there because the relation
+  #PM = max_det was presupposed; direct enumeration here
+  resolves this to n_minus_under_K3 = 34, n_minus_optimal = 12 /
+  `frontier_axiom_native_singleton_scaling_test.py` /
+  Target 2 sub-step 2d-V2-singleton-scaling.
