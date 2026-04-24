@@ -58,9 +58,14 @@ Current science/open-lane follow-ups:
   side=9 open-boundary cross-coupling acceleration (`a_a^cross / m_b` constant
   at `3.6%` CV across n=5 mass configs, see
   [`WILSON_TWO_BODY_ACTION_REACTION_BOTH_MASSES_NOTE_2026-04-23.md`](../WILSON_TWO_BODY_ACTION_REACTION_BOTH_MASSES_NOTE_2026-04-23.md));
-  action-reaction at the per-packet centroid level remains open with the
-  sharpened obstruction now identified as self-Hartree contamination of the
-  heavier packet in the SHARED-SELF_ONLY differential protocol
+  the action-reaction analog (`(m_a + m_b)` scaling on separation acceleration)
+  is qualitatively correct (attractive sign on all 7 mass configs) but
+  quantitatively only approximate (CV = 28.7%) and breaks packet-exchange
+  symmetry at large mass asymmetry (41.9% at (2,3) vs (3,2)) on side=11, see
+  [`WILSON_TWO_BODY_SEPARATION_ACCELERATION_SCALING_NOTE_2026-04-24.md`](../WILSON_TWO_BODY_SEPARATION_ACCELERATION_SCALING_NOTE_2026-04-24.md).
+  Both protocols inherit nonlinear self-Hartree feedback failures at large
+  mass asymmetry; the obstruction is sharp and physical, not a fitting
+  artifact
 - boundary-law / holographic lane: keep the effect bounded and do not overread
   it as a holography derivation; the area-law slope is seed-stable to ~2% CV
   and monotonically decreasing in G, but the gravity-induced suppression ratio
