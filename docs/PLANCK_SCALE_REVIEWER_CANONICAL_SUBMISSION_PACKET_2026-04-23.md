@@ -12,6 +12,7 @@
 **Boundary event Ward derivation:** [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md)
 **Boundary same-source covariance:** [PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md)
 **Boundary parent source equivalence:** [PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md)
+**Hbar/unit-convention audit:** [PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md](./PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md)
 
 ## Final Scope Warning
 
@@ -23,6 +24,12 @@ standard gravitational boundary/action density.
 
 The bare physical `Cl(3)` / `Z^3` axioms alone do not yet force that last
 gravitational unit-map identification.
+
+This is also not submitted as a derivation of `hbar`. The final dimensional
+normalization imports the standard gravitational action law containing `hbar`,
+`G`, and `c_light`. The nontrivial Planck statement is the dimensionless
+conditional result `a^2/l_P^2 = 1`, not a prediction of the post-2019 SI decimal
+value of the Planck constant.
 
 The prior hardening removed the broad multiplicative boundary-unit ambiguity
 and reduced the additive boundary-density law to
@@ -214,6 +221,7 @@ Not imported into the reviewer claim:
     the additive density `nu = 5/4`;
 14. no hidden insertion of `nu = 5/4`; the value enters only through
     `lambda_min(L_Sigma) = 1` and `Tr(rho_cell P_A) = 1/4`.
+15. no claim that the packet derives `hbar` or predicts its SI numerical value.
 
 ## Denial Points
 
@@ -241,6 +249,11 @@ The hostile-review denials are now explicit.
    source theorems. The live objection is now whether the physical
    gravitational boundary-action source belongs to the retained primitive
    one-step boundary/worldtube object class.
+7. **Hbar-axis objection.** If the reviewer asks whether the packet derives the
+   quantum of action itself, concede no. The packet derives the primitive
+   boundary coefficient and then uses the standard gravitational area/action
+   normalization. A true `hbar` theorem would need a separate structural
+   action-quantum or dimensionless phase-per-information derivation.
 
 The final denial-status theorem records that denials 2 and 4 change the target:
 they either replace the primitive coefficient with an enriched state/readout
@@ -293,6 +306,7 @@ python3 scripts/frontier_planck_boundary_event_ward_identity_closure_theorem.py
 python3 scripts/frontier_planck_boundary_event_ward_identity_derivation_theorem.py
 python3 scripts/frontier_planck_boundary_same_source_covariance_theorem.py
 python3 scripts/frontier_planck_boundary_parent_source_equivalence_theorem.py
+python3 scripts/frontier_planck_hbar_status_and_remaining_objections_audit.py
 ```
 
 ## Appendix Map
@@ -311,6 +325,7 @@ python3 scripts/frontier_planck_boundary_parent_source_equivalence_theorem.py
 - [PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md) - parent source theorem showing event and Schur are faithful/lifted reductions of the same full axis source.
 - [PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md) - explicit P1 package-boundary move.
 - [PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md) - hostile-review context, with its supersession note respected.
+- [PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md](./PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md) - hbar/unit-convention audit: the packet derives a dimensionless Planck coefficient, not the quantum of action.
 
 ### Primitive cell and count
 

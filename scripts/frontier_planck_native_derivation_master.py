@@ -36,6 +36,7 @@ SUBCHECKS = [
     "frontier_planck_boundary_event_ward_identity_derivation_theorem.py",
     "frontier_planck_boundary_same_source_covariance_theorem.py",
     "frontier_planck_boundary_parent_source_equivalence_theorem.py",
+    "frontier_planck_hbar_status_and_remaining_objections_audit.py",
 ]
 
 
@@ -80,6 +81,7 @@ def main() -> int:
     event_ward_derivation = read("docs/PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md")
     same_source = read("docs/PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md")
     parent_source = read("docs/PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md")
+    hbar_audit = read("docs/PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md")
 
     for script in SUBCHECKS:
         total += 1
@@ -290,6 +292,17 @@ def main() -> int:
         and "`nu - lambda_min(L_Sigma) = Tr(rho_cell P_A)`" in parent_source
         and "deny that the physical gravitational boundary-action source belongs to the\n> retained primitive one-step boundary/worldtube object class"
         in parent_source,
+    )
+
+    total += 1
+    passed += expect(
+        "hbar-axis-is-scoped-as-not-derived",
+        "PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md"
+        in reviewer
+        and "does **not** derive `hbar`" in hbar_audit
+        and "conditional structural Planck-length result, not a derivation of `hbar`"
+        in hbar_audit
+        and "no claim that the packet derives `hbar`" in reviewer,
     )
 
     print(f"SUMMARY: PASS={passed} FAIL={total - passed}")
