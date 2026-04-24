@@ -16,6 +16,7 @@ PRIMITIVE_UNIT = ROOT / "docs/PLANCK_SCALE_PRIMITIVE_BOUNDARY_ACTION_UNIT_REDUCT
 GRAV_CARRIER = ROOT / "docs/PLANCK_SCALE_GRAVITY_CARRIER_FROM_SECTOR_IDENTIFICATION_THEOREM_2026-04-23.md"
 STATE = ROOT / "docs/PLANCK_SCALE_SOURCE_FREE_DEFAULT_DATUM_FROM_ONE_AXIOM_THEOREM_2026-04-23.md"
 DERIVATION = ROOT / "docs/PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md"
+FUNCTORIAL = ROOT / "docs/PLANCK_SCALE_BOUNDARY_SOURCE_FUNCTORIAL_WARD_THEOREM_2026-04-24.md"
 
 
 def expect(name: str, cond: bool, detail: str = "") -> int:
@@ -37,6 +38,7 @@ def main() -> int:
     grav_carrier = read(GRAV_CARRIER)
     state = read(STATE)
     derivation = read(DERIVATION)
+    functorial = read(FUNCTORIAL)
 
     banned_terms = ["P1", "Axiom Extension", "GSI", "Gravity-Sector Identification"]
 
@@ -117,6 +119,14 @@ def main() -> int:
             and "same-source covariance" in note
             and "finite-source Ward derivative" in derivation,
             "the Ward identity is derived from the primitive insertion source",
+        ),
+        (
+            "functorial-ward-limit-is-recorded",
+            "source-functorial Ward hardening theorem isolates the remaining bridge"
+            in note
+            and "not a\nconventional continuum path-integral Ward identity" in note
+            and "finite parent-source functoriality theorem" in functorial,
+            "closure is scoped to the retained parent-source object class",
         ),
         (
             "no-hidden-additive-action-datum-excludes-offsets",

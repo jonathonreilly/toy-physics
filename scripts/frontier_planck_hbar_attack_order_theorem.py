@@ -28,6 +28,7 @@ def main() -> int:
     timelock = read("docs/PLANCK_SCALE_TIMELOCKED_CONVERTED_INFORMATION_ACTION_CONSTANT_LANE_2026-04-23.md")
     action_phase = read("docs/PLANCK_SCALE_ELEMENTARY_ACTION_PHASE_REDUCTION_THEOREM_2026-04-23.md")
     phase_trace = read("docs/PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md")
+    gamma_period = read("docs/PLANCK_SCALE_GAMMA_PHASE_PERIOD_OBSTRUCTION_THEOREM_2026-04-24.md")
     reviewer = read("docs/PLANCK_SCALE_REVIEWER_CANONICAL_SUBMISSION_PACKET_2026-04-23.md")
 
     passed = 0
@@ -121,6 +122,17 @@ def main() -> int:
         and "Discrete symplectic/Weyl commutator theorem" in note
         and "`alpha` prediction" in note,
         "fallbacks are explicit and not mixed into the current Planck proof",
+    )
+
+    total += 1
+    passed += expect(
+        "bare-periodicity-and-central-roots-demoted",
+        "Demote Bare Periodicity And Central Roots" in note
+        and "root-of-unity result alone is not enough" in note
+        and "This does not block the route; it makes the route's extra burden explicit"
+        in note
+        and "do not select the real reduced action value `gamma = 1`" in gamma_period,
+        "central-extension route now requires a real action-unit map",
     )
 
     total += 1

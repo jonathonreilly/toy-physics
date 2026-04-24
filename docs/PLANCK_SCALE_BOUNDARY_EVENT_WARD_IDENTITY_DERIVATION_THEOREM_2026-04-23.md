@@ -245,8 +245,14 @@ gives
 
 ## Hostile-Review Status
 
-This theorem converts the event Ward identity from a readout postulate into a
-finite-source Ward derivative.
+This theorem converts the event side of the Ward identity from a readout
+postulate into a finite-source Ward derivative.
+
+It does not, by itself, prove that the Schur normal-ordered pressure is the
+same source. That bridge is isolated in the source-functorial Ward hardening
+theorem and the parent-source equivalence theorem. A reviewer who rejects the
+parent-source object class can accept the finite derivative here while still
+denying that it determines `nu`.
 
 The remaining possible rejection is now:
 

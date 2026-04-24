@@ -166,18 +166,25 @@ cannot select `gamma = 1`. The next theorem must be non-homogeneous: it must
 derive the complete primitive event cell as the unit generator of reduced
 action phase.
 
-### Step 3: If `gamma = 1` Fails, Attack Central Extensions
+### Step 3: Demote Bare Periodicity And Central Roots
 
-The fallback structural route is to derive the action unit as a projective phase
-or central extension of the primitive translation/rotation/event algebra.
+The phase-period obstruction theorem now rules out only the simplest fallback:
+U(1) phase periodicity and finite central roots **alone** do not select the real
+reduced action value `gamma = 1`. They select an equivalence class modulo
+`2 pi`, or a root/level measured in fractions of `2 pi`.
+
+So a projective phase / central-extension theorem remains viable only if it
+supplies more than periodicity. It must derive a non-periodic real action-unit
+normalization on the primitive event cell.
 
 The theorem target is:
 
 > the primitive closed event loop carries a unique nontrivial cocycle whose
 > normalized phase is `q_* = 1/16` on the minimal cubical defect carrier.
 
-This would bypass the information-unit convention problem by deriving the phase
-directly from the graph algebra.
+This would bypass the information-unit convention problem only if the cocycle
+comes with a real action-unit map. A root-of-unity result alone is not enough.
+This does not block the route; it makes the route's extra burden explicit.
 
 ### Step 4: If Central Extensions Fail, Attack Discrete Symplectic/Commutator Units
 
@@ -214,8 +221,10 @@ proof.
    `kappa_info = gamma/32` per bit. The gamma-one attempt shows this cannot
    come from another homogeneous trace/naturality argument; it needs a
    primitive action-unit law.
-2. **Projective phase / central-extension theorem.** Best first-principles route
-   if information conversion remains underived.
+2. **Projective phase / central-extension theorem with a real unit map.** Still
+   a possible first-principles route, but bare U(1) periodicity and finite
+   central roots alone are now demoted by the gamma phase-period obstruction
+   theorem.
 3. **Discrete symplectic/Weyl commutator theorem.** Strong but likely requires
    more structure than the present Planck packet.
 4. **Independent `a` from cosmic count.** Viable only if the dimensionless count

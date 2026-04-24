@@ -175,6 +175,12 @@ The gamma-one attempt proves that this scalar is not derivable from another
 homogeneous trace/naturality theorem. A successful route must add or derive a
 non-homogeneous primitive action-unit law.
 
+The phase-period obstruction adds a second guardrail: bare U(1) periodicity or
+finite roots alone cannot select the real reduced action value `gamma = 1`.
+This is deliberately narrow. It does not reject projective/central-extension
+attacks that derive an additional real unit map or consistently rewrite the
+action-phase lane in turns/cycles.
+
 ### O8. The elementary action-phase route is reduced to gamma, not fully solved
 
 The first-principles action-phase reduction gives
@@ -201,6 +207,10 @@ The current branch does not yet derive `gamma = 1` from bare algebra alone.
 The gamma-one attempt explains why: every currently stated primitive phase
 premise survives positive rescaling of `Phi`, so it defines a ray of action
 functionals rather than a unit point on that ray.
+
+The phase-period obstruction also explains why a 16th root of unity is only a
+candidate route, not a closure: in the current `exp(i Phi)` convention it gives
+`Phi = 2 pi/16`, so the `2 pi` conversion must be rebuilt rather than ignored.
 
 ### O9. No independent dimensionless phenomenological prediction is yet attached
 

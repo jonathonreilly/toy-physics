@@ -32,6 +32,12 @@ unique primitive incidence insertion group
 
 `U_A(s) = exp(s P_A)`.
 
+The source-functorial Ward hardening theorem isolates the remaining bridge:
+the finite event derivative determines the Schur normal-ordered pressure only
+if both are retained as functorial representations of the same parent one-cell
+boundary source. This is not the scalar Schur observable principle and not a
+conventional continuum path-integral Ward identity.
+
 The key point is that the relevant Ward identity is not a source-response Ward
 identity on the Schur variables. Those identities erase additive constants.
 The needed identity is the **normal-ordered boundary event Ward identity**:

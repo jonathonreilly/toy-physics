@@ -14,6 +14,7 @@ NOTE = ROOT / "docs/PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM
 CLOSURE = ROOT / "docs/PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md"
 GRAV_CARRIER = ROOT / "docs/PLANCK_SCALE_GRAVITY_CARRIER_FROM_SECTOR_IDENTIFICATION_THEOREM_2026-04-23.md"
 STATE = ROOT / "docs/PLANCK_SCALE_SOURCE_FREE_DEFAULT_DATUM_FROM_ONE_AXIOM_THEOREM_2026-04-23.md"
+FUNCTORIAL = ROOT / "docs/PLANCK_SCALE_BOUNDARY_SOURCE_FUNCTORIAL_WARD_THEOREM_2026-04-24.md"
 
 
 def expect(name: str, cond: bool, detail: str = "") -> int:
@@ -33,6 +34,7 @@ def main() -> int:
     closure = read(CLOSURE)
     grav_carrier = read(GRAV_CARRIER)
     state = read(STATE)
+    functorial = read(FUNCTORIAL)
 
     banned_terms = ["P1", "Axiom Extension", "GSI", "Gravity-Sector Identification"]
 
@@ -82,6 +84,14 @@ def main() -> int:
             and "`nu - lambda_min(L_Sigma) = d/ds log Z_A(s)|_(s=0)`" in note
             and "remaining possible rejection" in note,
             "the theorem names the remaining physical identification precisely",
+        ),
+        (
+            "event-derivative-is-separated-from-schur-bridge",
+            "does not, by itself, prove that the Schur normal-ordered pressure is the\nsame source"
+            in note
+            and "source-functorial Ward hardening" in note
+            and "not derived from the\nscalar Schur observable grammar alone" in functorial,
+            "finite derivative is not overclaimed as Schur equality by itself",
         ),
         (
             "hidden-source-family-reduces-to-alpha-m-plus-c",

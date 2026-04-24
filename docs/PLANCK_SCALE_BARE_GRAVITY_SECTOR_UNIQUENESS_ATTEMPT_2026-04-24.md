@@ -141,8 +141,11 @@ implies:
 ## Why This Does Not Close B3
 
 The conditional proof uses a theorem about metric/coframe geometric actions.
-The bare `Cl(3)` / `Z^3` event/translation algebra has not yet supplied the
-metric/coframe object class or the equivalence Ward identity.
+The edge-Clifford kinematic soldering theorem now supplies the flat primitive
+edge/Clifford pairing `edge_i <-> Gamma_i` and the induced cell metric
+`delta_ij`. That closes the "is there any native tangent frame?" subproblem.
+It does not supply the dynamical metric/coframe object class or the equivalence
+Ward identity.
 
 If the phrase "geometric action sector" already means "metric/coframe action
 with the conserved symmetric spin-2 Ward identity," then the uniqueness theorem

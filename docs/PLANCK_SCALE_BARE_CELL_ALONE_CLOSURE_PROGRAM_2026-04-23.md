@@ -212,10 +212,12 @@ maps. This matches the cosmic-address import theorem.
    operationally distinguishable on the retained event/translation algebra.
 2. **Canonical-state theorem.** Closed: the source-free primitive-cell state is
    the unique automorphism-natural finite-cell state.
-3. **Gravity-from-algebra theorem.** Still open: derive soldered metricity /
-   the conserved symmetric spin-2 Ward identity from retained `Cl(3)` / `Z^3`.
-   Once that object class is earned, conditional local-action uniqueness
-   recovers the accepted gravity/action sector.
+3. **Gravity-from-algebra theorem.** Still open: derive dynamical soldered
+   metricity / the conserved symmetric spin-2 Ward identity from retained
+   `Cl(3)` / `Z^3`. The flat edge-Clifford soldering sub-lock is now closed:
+   `edge_i <-> Gamma_i` gives the kinematic local frame and induced `delta_ij`.
+   Once the dynamical object class is earned, conditional local-action
+   uniqueness recovers the accepted gravity/action sector.
 4. **Boundary representative theorem.** Conditionally closed: use the already
    written same-surface closure to force `N_grav = P_A` once the gravity sector
    is algebra-derived.

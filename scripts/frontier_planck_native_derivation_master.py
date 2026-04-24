@@ -34,6 +34,7 @@ SUBCHECKS = [
     "frontier_planck_boundary_density_three_mechanism_audit.py",
     "frontier_planck_boundary_event_ward_identity_closure_theorem.py",
     "frontier_planck_boundary_event_ward_identity_derivation_theorem.py",
+    "frontier_planck_boundary_source_functorial_ward_theorem.py",
     "frontier_planck_boundary_same_source_covariance_theorem.py",
     "frontier_planck_boundary_parent_source_equivalence_theorem.py",
     "frontier_planck_boundary_action_source_vs_pressure_classification_theorem.py",
@@ -44,12 +45,14 @@ SUBCHECKS = [
     "frontier_planck_bare_finite_cell_canonical_state_theorem.py",
     "frontier_planck_bare_gravity_sector_derivation_status_theorem.py",
     "frontier_planck_bare_gravity_sector_uniqueness_attempt.py",
+    "frontier_planck_edge_clifford_kinematic_soldering_theorem.py",
     "frontier_planck_bare_boundary_representative_after_gravity_theorem.py",
     "frontier_planck_hbar_status_and_remaining_objections_audit.py",
     "frontier_planck_hbar_attack_order_theorem.py",
     "frontier_planck_action_phase_conversion_target_theorem.py",
     "frontier_planck_primitive_phase_trace_reduction_theorem.py",
     "frontier_planck_primitive_action_unit_gamma_one_attempt.py",
+    "frontier_planck_gamma_phase_period_obstruction_theorem.py",
 ]
 
 
@@ -92,6 +95,7 @@ def main() -> int:
     density_audit = read("docs/PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md")
     event_ward = read("docs/PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md")
     event_ward_derivation = read("docs/PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md")
+    source_functorial_ward = read("docs/PLANCK_SCALE_BOUNDARY_SOURCE_FUNCTORIAL_WARD_THEOREM_2026-04-24.md")
     same_source = read("docs/PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md")
     parent_source = read("docs/PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md")
     source_vs_pressure = read("docs/PLANCK_SCALE_BOUNDARY_ACTION_SOURCE_VS_PRESSURE_CLASSIFICATION_THEOREM_2026-04-23.md")
@@ -102,12 +106,14 @@ def main() -> int:
     bare_cell_state = read("docs/PLANCK_SCALE_BARE_FINITE_CELL_CANONICAL_STATE_THEOREM_2026-04-23.md")
     bare_gravity_status = read("docs/PLANCK_SCALE_BARE_GRAVITY_SECTOR_DERIVATION_STATUS_THEOREM_2026-04-23.md")
     bare_gravity_attempt = read("docs/PLANCK_SCALE_BARE_GRAVITY_SECTOR_UNIQUENESS_ATTEMPT_2026-04-24.md")
+    edge_soldering = read("docs/PLANCK_SCALE_EDGE_CLIFFORD_KINEMATIC_SOLDERING_THEOREM_2026-04-24.md")
     bare_boundary = read("docs/PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md")
     hbar_audit = read("docs/PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md")
     hbar_attack = read("docs/PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md")
     action_phase = read("docs/PLANCK_SCALE_ACTION_PHASE_CONVERSION_TARGET_THEOREM_2026-04-23.md")
     phase_trace = read("docs/PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md")
     gamma_attempt = read("docs/PLANCK_SCALE_PRIMITIVE_ACTION_UNIT_GAMMA_ONE_ATTEMPT_2026-04-24.md")
+    gamma_period = read("docs/PLANCK_SCALE_GAMMA_PHASE_PERIOD_OBSTRUCTION_THEOREM_2026-04-24.md")
 
     for script in SUBCHECKS:
         total += 1
@@ -295,6 +301,19 @@ def main() -> int:
 
     total += 1
     passed += expect(
+        "source-functorial-ward-hardens-schur-event-bridge",
+        "PLANCK_SCALE_BOUNDARY_SOURCE_FUNCTORIAL_WARD_THEOREM_2026-04-24.md"
+        in reviewer
+        and "`chi_Delta(s) = exp(s Delta)`" in source_functorial_ward
+        and "not derived from the\nscalar Schur observable grammar alone"
+        in source_functorial_ward
+        and "a conventional path-integral Ward identity" in source_functorial_ward
+        and "If that rejection is accepted, the finite event Ward derivative remains true\nbut does not determine `nu`"
+        in source_functorial_ward,
+    )
+
+    total += 1
+    passed += expect(
         "same-source-covariance-is-derived-by-quotient-no-hidden-scalar",
         "PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md"
         in reviewer
@@ -399,6 +418,19 @@ def main() -> int:
 
     total += 1
     passed += expect(
+        "edge-clifford-soldering-closes-only-flat-sublock",
+        "PLANCK_SCALE_EDGE_CLIFFORD_KINEMATIC_SOLDERING_THEOREM_2026-04-24.md"
+        in reviewer
+        and "`edge_i <-> Gamma_i`" in edge_soldering
+        and "`g_ij = (1/2) Tr_norm(Gamma_i Gamma_j + Gamma_j Gamma_i) = delta_ij`"
+        in edge_soldering
+        and "This does **not** derive the gravitational sector" in edge_soldering
+        and "metric/coframe response with the conserved symmetric spin-2 Ward identity"
+        in edge_soldering,
+    )
+
+    total += 1
+    passed += expect(
         "bare-boundary-representative-b4-conditional",
         "PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md"
         in reviewer
@@ -456,6 +488,23 @@ def main() -> int:
         and "`Phi(I_16) = 1`" in gamma_attempt
         and "must not claim:\n\n> `gamma = 1` follows from the current source-free trace theorem"
         in gamma_attempt,
+    )
+
+    total += 1
+    passed += expect(
+        "gamma-phase-period-obstruction-demotes-periodic-closure",
+        "PLANCK_SCALE_GAMMA_PHASE_PERIOD_OBSTRUCTION_THEOREM_2026-04-24.md"
+        in reviewer
+        and "`Phi ~ Phi + 2 pi n`" in gamma_period
+        and "`gamma = 2 pi k / N`" in gamma_period
+        and "Do not use:\n\n> U(1) phase periodicity derives `gamma = 1`."
+        in gamma_period
+        and "This is a narrow no-go theorem" in gamma_period
+        and "does **not** block every central-extension\nor projective-phase route"
+        in gamma_period
+        and "central-extension quantization can produce a level, but it\n"
+        "does not produce the dimensionless radian value `gamma = 1`"
+        in gamma_period,
     )
 
     print(f"SUMMARY: PASS={passed} FAIL={total - passed}")

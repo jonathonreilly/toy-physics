@@ -10,6 +10,7 @@
 **Boundary density three-mechanism audit:** [PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md)
 **Boundary event Ward closure:** [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md)
 **Boundary event Ward derivation:** [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md)
+**Boundary source-functorial Ward hardening:** [PLANCK_SCALE_BOUNDARY_SOURCE_FUNCTORIAL_WARD_THEOREM_2026-04-24.md](./PLANCK_SCALE_BOUNDARY_SOURCE_FUNCTORIAL_WARD_THEOREM_2026-04-24.md)
 **Boundary same-source covariance:** [PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md)
 **Boundary parent source equivalence:** [PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md)
 **Boundary action-source versus pressure:** [PLANCK_SCALE_BOUNDARY_ACTION_SOURCE_VS_PRESSURE_CLASSIFICATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_ACTION_SOURCE_VS_PRESSURE_CLASSIFICATION_THEOREM_2026-04-23.md)
@@ -20,12 +21,14 @@
 **Bare finite-cell canonical state:** [PLANCK_SCALE_BARE_FINITE_CELL_CANONICAL_STATE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_FINITE_CELL_CANONICAL_STATE_THEOREM_2026-04-23.md)
 **Bare gravity-sector status:** [PLANCK_SCALE_BARE_GRAVITY_SECTOR_DERIVATION_STATUS_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_GRAVITY_SECTOR_DERIVATION_STATUS_THEOREM_2026-04-23.md)
 **Bare gravity-sector uniqueness attempt:** [PLANCK_SCALE_BARE_GRAVITY_SECTOR_UNIQUENESS_ATTEMPT_2026-04-24.md](./PLANCK_SCALE_BARE_GRAVITY_SECTOR_UNIQUENESS_ATTEMPT_2026-04-24.md)
+**Edge-Clifford kinematic soldering:** [PLANCK_SCALE_EDGE_CLIFFORD_KINEMATIC_SOLDERING_THEOREM_2026-04-24.md](./PLANCK_SCALE_EDGE_CLIFFORD_KINEMATIC_SOLDERING_THEOREM_2026-04-24.md)
 **Bare boundary representative:** [PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md)
 **Hbar/unit-convention audit:** [PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md](./PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md)
 **Hbar attack order:** [PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md](./PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md)
 **Action-phase conversion target:** [PLANCK_SCALE_ACTION_PHASE_CONVERSION_TARGET_THEOREM_2026-04-23.md](./PLANCK_SCALE_ACTION_PHASE_CONVERSION_TARGET_THEOREM_2026-04-23.md)
 **Primitive phase trace reduction:** [PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md](./PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md)
 **Primitive action-unit gamma-one attempt:** [PLANCK_SCALE_PRIMITIVE_ACTION_UNIT_GAMMA_ONE_ATTEMPT_2026-04-24.md](./PLANCK_SCALE_PRIMITIVE_ACTION_UNIT_GAMMA_ONE_ATTEMPT_2026-04-24.md)
+**Gamma phase-period obstruction:** [PLANCK_SCALE_GAMMA_PHASE_PERIOD_OBSTRUCTION_THEOREM_2026-04-24.md](./PLANCK_SCALE_GAMMA_PHASE_PERIOD_OBSTRUCTION_THEOREM_2026-04-24.md)
 
 ## Final Scope Warning
 
@@ -63,6 +66,12 @@ premises are scale-homogeneous under `Phi -> lambda Phi`; they cannot derive
 `gamma = 1`. The exact missing hbar/action-unit input is a non-homogeneous
 primitive action-unit law selecting `Phi(I_16) = 1`.
 
+The phase-period obstruction also rules out a tempting false closure: U(1)
+periodicity and finite central roots alone quantize phase classes, but they do
+not select the real reduced action value `gamma = 1`. This is not a blanket
+rejection of projective or central-extension attacks; such a route would need a
+real action-unit map or a fully rewritten turns/cycles convention.
+
 The final Planck closure is now stated as an airtight theorem on the accepted
 physical-gravity review contract. The old GSI wording is replaced by
 same-surface single-sector compatibility: the accepted gravitational
@@ -89,6 +98,11 @@ assemble into one soldered metric/coframe carrier with the conserved symmetric
 spin-2 Ward identity. Without that, the bare algebra still admits multiple
 local continuum action symbols.
 
+The edge-Clifford theorem closes a smaller B3 sub-lock: the retained primitive
+translation axes are already kinematically soldered to Clifford vectors,
+`edge_i <-> Gamma_i`, with induced flat metric `delta_ij`. What remains is the
+dynamical upgrade from flat soldering to metric/coframe response.
+
 The prior hardening removed the broad multiplicative boundary-unit ambiguity
 and reduced the additive boundary-density law to
 
@@ -98,16 +112,20 @@ equivalently `delta = m_axis`.
 
 The new boundary event Ward theorem supplies that equality on the primitive
 boundary-event action surface. The finite-source derivation theorem derives
-the Ward derivative from the primitive insertion group `exp(s P_A)`. The
-same-source covariance theorem derives equality with the Schur normal-ordered
-pressure by showing that any mismatch is a hidden source-free boundary-action
-scalar. The parent-source theorem then derives the common-source bridge: the
-event source is the faithful representation of the full parent `P_A`, and the
-Schur source is its quotient shape plus retained doublet multiplicity. The
-remaining hostile-review target is no longer the number `5/4`, the Ward
-derivative, or same-source covariance; it is whether the physical
-gravitational boundary-action source belongs to the retained primitive
-one-step boundary/worldtube object class.
+the event derivative from the primitive insertion group `exp(s P_A)`. The
+source-functorial Ward hardening makes the load-bearing bridge explicit:
+equality with the Schur normal-ordered pressure follows only when Schur and
+event are functorial representations of the same parent one-cell boundary
+source `B_parent = (H_A, P_A)`. Under that retained parent-source object class,
+any mismatch is an extra source-free one-dimensional boundary-action
+character. The parent-source theorem then derives the common-source bridge:
+the event source is the faithful representation of the full parent `P_A`, and
+the Schur source is its quotient shape plus retained doublet multiplicity. The
+remaining hostile-review target is no longer the number `5/4` or the finite
+event derivative; it is whether the physical gravitational boundary-action
+source belongs to the retained primitive one-step boundary/worldtube object
+class and whether the Schur normal-ordered boundary action is a functorial
+representation of that same parent source.
 
 The packet also separates "pressure" into object classes. The scalar Schur
 free-energy pressure is `(1/(2n)) log det(L_Sigma)` and is not the Planck
@@ -232,41 +250,55 @@ and since both lengths are positive,
     group `U_A(s) = exp(s P_A)`. The remaining pressure point is same-source
     covariance with the Schur normal-ordered pressure:
     [boundary event Ward derivation theorem](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md).
-13. **Same-source covariance.** If the Schur and event descriptions are the
+13. **Source-functorial Ward hardening.** The event derivative determines the
+    Schur normal-ordered pressure only inside the retained parent-source object
+    class. A mismatch would be an extra source-free one-dimensional
+    boundary-action character:
+    [boundary source-functorial Ward theorem](./PLANCK_SCALE_BOUNDARY_SOURCE_FUNCTORIAL_WARD_THEOREM_2026-04-24.md).
+14. **Same-source covariance.** If the Schur and event descriptions are the
     same boundary-action source, unequal infinitesimal generators leave a
     quotient group `exp(s Delta)`, which is hidden source-free boundary-action
     data. Therefore the generators agree:
     [boundary same-source covariance theorem](./PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md).
-14. **Parent-source equivalence.** The common source is the unique full axis
+15. **Parent-source equivalence.** The common source is the unique full axis
     parent `P_A`. The event representation is faithful; the Schur
     representation is quotient shape plus retained multiplicity
     `P_A = P_q + P_E`. Quotient-only Schur changes the source:
     [boundary parent source equivalence theorem](./PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md).
-15. **Same-surface gravity-sector closure.** The old GSI wording is closed as
+16. **Same-surface gravity-sector closure.** The old GSI wording is closed as
     same-surface single-sector compatibility: the already accepted
     gravitational boundary/action sector and the primitive Planck boundary cell
     are read on one physical boundary surface, whose unique source-free
     primitive local representative is `P_A`:
     [gravity-sector same-surface closure theorem](./PLANCK_SCALE_GRAVITY_SECTOR_SAME_SURFACE_CLOSURE_THEOREM_2026-04-23.md).
-16. **Action-source versus pressure classification.** The Planck readout is the
+17. **Action-source versus pressure classification.** The Planck readout is the
     normal-ordered primitive boundary action-source density, not the scalar
     Schur free-energy pressure. The scalar Schur pressure is not `1/4`:
     [action-source versus pressure theorem](./PLANCK_SCALE_BOUNDARY_ACTION_SOURCE_VS_PRESSURE_CLASSIFICATION_THEOREM_2026-04-23.md).
-17. **Primitive phase trace reduction.** The hbar/action-phase lane now derives
+18. **Primitive phase trace reduction.** The hbar/action-phase lane now derives
     the trace shape `q_atom = gamma/16`, hence
     `kappa_info = gamma/32` per bit. Exact `1/16` requires the remaining
     scalar action-unit statement `gamma = 1`:
     [primitive phase trace theorem](./PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md).
-18. **Primitive gamma-one attempt.** The current source-free trace,
+19. **Primitive gamma-one attempt.** The current source-free trace,
     information, time-lock, and boundary-counting premises are homogeneous
     under `Phi -> lambda Phi`; they reduce the hbar/action-unit lock to one
     missing non-homogeneous law `Phi(I_16)=1`:
     [primitive gamma-one attempt](./PLANCK_SCALE_PRIMITIVE_ACTION_UNIT_GAMMA_ONE_ATTEMPT_2026-04-24.md).
-19. **Bare gravity-sector uniqueness attempt.** B3 is not closed; it is reduced
+20. **Gamma phase-period obstruction.** U(1) periodicity and finite central
+    extensions alone do not select the real reduced action value `gamma = 1`;
+    they only quantize phase classes or levels unless supplemented by a real
+    action-unit map:
+    [gamma phase-period obstruction](./PLANCK_SCALE_GAMMA_PHASE_PERIOD_OBSTRUCTION_THEOREM_2026-04-24.md).
+21. **Bare gravity-sector uniqueness attempt.** B3 is not closed; it is reduced
     to deriving a soldered metricity / equivalence Ward identity from retained
     `Cl(3)` / `Z^3`:
     [bare gravity uniqueness attempt](./PLANCK_SCALE_BARE_GRAVITY_SECTOR_UNIQUENESS_ATTEMPT_2026-04-24.md).
-20. **Airtight review closure.** On the accepted physical-gravity review
+22. **Edge-Clifford kinematic soldering.** The retained cell already has flat
+    edge/Clifford soldering and induced `delta_ij`; this closes the kinematic
+    frame sub-lock but not dynamical spin-2 metricity:
+    [edge-Clifford soldering theorem](./PLANCK_SCALE_EDGE_CLIFFORD_KINEMATIC_SOLDERING_THEOREM_2026-04-24.md).
+23. **Airtight review closure.** On the accepted physical-gravity review
     contract, the Planck theorem is closed. Remaining denials are rejections of
     that review contract, not hidden coefficient or algebra gaps:
     [airtight review closure theorem](./PLANCK_SCALE_AIRTIGHT_REVIEW_CLOSURE_THEOREM_2026-04-23.md).
@@ -319,6 +351,12 @@ Not imported into the reviewer claim:
     phase trace reduction.
 17. no claim that bare `Cl(3)` / `Z^3` alone derives the soldered metricity /
     symmetric spin-2 Ward identity needed to close B3.
+18. no claim that U(1) phase periodicity or central-extension level quantization
+    alone derives the real value `gamma = 1`.
+19. no claim that the scalar Schur observable principle alone derives the
+    quarter.
+20. no claim that the boundary Ward bridge is a conventional continuum
+    path-integral Ward identity.
 
 ## Denial Points
 
@@ -342,10 +380,12 @@ The hostile-review denials are now explicit.
    claim.
 6. **Bare-density objection.** If the reviewer asks for a derivation of
    `nu = 5/4` from a Ward identity, action-phase quantization, or microscopic
-   boundary-term normalization, point to the boundary event Ward and parent
-   source theorems. The live objection is now whether the physical
-   gravitational boundary-action source belongs to the retained primitive
-   one-step boundary/worldtube object class.
+   boundary-term normalization, point to the boundary event Ward,
+   source-functorial Ward, and parent-source theorems. The live objection is
+   now whether the physical gravitational boundary-action source belongs to
+   the retained primitive one-step boundary/worldtube object class and whether
+   the Schur normal-ordered boundary action is a functorial representation of
+   that same parent source.
 7. **Hbar-axis objection.** If the reviewer asks whether the packet derives the
    quantum of action itself, concede no. The packet derives the primitive
    boundary coefficient and then uses the standard gravitational area/action
@@ -372,10 +412,19 @@ The hostile-review denials are now explicit.
     follows, concede it does not yet follow from the current trace/naturality
     premises. Those premises are invariant under `Phi -> lambda Phi`; a
     non-homogeneous primitive action-unit law is still needed.
-13. **B3 metricity objection.** If the reviewer asks whether bare
+13. **Gamma periodicity objection.** If the reviewer proposes phase periodicity
+    or central roots alone as the closure, answer no: they select classes
+    modulo `2 pi` or integer levels, not the real value `gamma = 1`. If the
+    reviewer proposes a central cocycle with a real unit map, that remains a
+    live hbar-lane target, not a closed or rejected theorem.
+14. **B3 metricity objection.** If the reviewer asks whether bare
     `Cl(3)` / `Z^3` derives gravity, concede not yet. The exact missing theorem
     is a soldered metric/coframe carrier with the conserved symmetric spin-2
     Ward identity.
+15. **Path-integral Ward objection.** If the reviewer demands a conventional
+    continuum path-integral Ward identity, concede that this packet supplies a
+    finite parent-source functorial Ward identity instead. The result is closed
+    only on the retained primitive boundary-action object class.
 
 The final denial-status theorem records that denials 2 and 4 change the target:
 they either replace the primitive coefficient with an enriched state/readout
@@ -426,6 +475,7 @@ python3 scripts/frontier_planck_primitive_boundary_action_unit_reduction_theorem
 python3 scripts/frontier_planck_boundary_density_three_mechanism_audit.py
 python3 scripts/frontier_planck_boundary_event_ward_identity_closure_theorem.py
 python3 scripts/frontier_planck_boundary_event_ward_identity_derivation_theorem.py
+python3 scripts/frontier_planck_boundary_source_functorial_ward_theorem.py
 python3 scripts/frontier_planck_boundary_same_source_covariance_theorem.py
 python3 scripts/frontier_planck_boundary_parent_source_equivalence_theorem.py
 python3 scripts/frontier_planck_boundary_action_source_vs_pressure_classification_theorem.py
@@ -436,12 +486,14 @@ python3 scripts/frontier_planck_bare_physical_lattice_observable_ontology_theore
 python3 scripts/frontier_planck_bare_finite_cell_canonical_state_theorem.py
 python3 scripts/frontier_planck_bare_gravity_sector_derivation_status_theorem.py
 python3 scripts/frontier_planck_bare_gravity_sector_uniqueness_attempt.py
+python3 scripts/frontier_planck_edge_clifford_kinematic_soldering_theorem.py
 python3 scripts/frontier_planck_bare_boundary_representative_after_gravity_theorem.py
 python3 scripts/frontier_planck_hbar_status_and_remaining_objections_audit.py
 python3 scripts/frontier_planck_hbar_attack_order_theorem.py
 python3 scripts/frontier_planck_action_phase_conversion_target_theorem.py
 python3 scripts/frontier_planck_primitive_phase_trace_reduction_theorem.py
 python3 scripts/frontier_planck_primitive_action_unit_gamma_one_attempt.py
+python3 scripts/frontier_planck_gamma_phase_period_obstruction_theorem.py
 ```
 
 ## Appendix Map
@@ -456,6 +508,7 @@ python3 scripts/frontier_planck_primitive_action_unit_gamma_one_attempt.py
 - [PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_DENSITY_THREE_MECHANISM_AUDIT_2026-04-23.md) - direct audit showing current Ward, action-phase, and boundary-term routes reduce but do not derive the additive law `delta = m_axis`.
 - [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md) - constant-term event Ward identity deriving `delta = m_axis` on the primitive boundary-event action surface.
 - [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md) - finite-source derivation of the event Ward identity from `U_A(s) = exp(s P_A)`.
+- [PLANCK_SCALE_BOUNDARY_SOURCE_FUNCTORIAL_WARD_THEOREM_2026-04-24.md](./PLANCK_SCALE_BOUNDARY_SOURCE_FUNCTORIAL_WARD_THEOREM_2026-04-24.md) - hardens the Schur/event Ward bridge as parent-source functoriality and records the path-integral Ward limitation.
 - [PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md) - quotient/no-hidden-scalar derivation of same-source covariance between the Schur and event generators.
 - [PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md) - parent source theorem showing event and Schur are faithful/lifted reductions of the same full axis source.
 - [PLANCK_SCALE_BOUNDARY_ACTION_SOURCE_VS_PRESSURE_CLASSIFICATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_ACTION_SOURCE_VS_PRESSURE_CLASSIFICATION_THEOREM_2026-04-23.md) - object-class hardening: Planck uses boundary action-source density, not scalar Schur pressure.
@@ -466,10 +519,12 @@ python3 scripts/frontier_planck_primitive_action_unit_gamma_one_attempt.py
 - [PLANCK_SCALE_BARE_FINITE_CELL_CANONICAL_STATE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_FINITE_CELL_CANONICAL_STATE_THEOREM_2026-04-23.md) - B2 closure: the source-free state is the unique automorphism-natural state of the bare no-extra-structure finite cell.
 - [PLANCK_SCALE_BARE_GRAVITY_SECTOR_DERIVATION_STATUS_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_GRAVITY_SECTOR_DERIVATION_STATUS_THEOREM_2026-04-23.md) - B3 status/reduction: gravity-sector-from-algebra remains the hard open theorem.
 - [PLANCK_SCALE_BARE_GRAVITY_SECTOR_UNIQUENESS_ATTEMPT_2026-04-24.md](./PLANCK_SCALE_BARE_GRAVITY_SECTOR_UNIQUENESS_ATTEMPT_2026-04-24.md) - B3 uniqueness attempt: conditional Einstein/Regge uniqueness after soldered metricity / symmetric spin-2 Ward identity; not a bare closure.
+- [PLANCK_SCALE_EDGE_CLIFFORD_KINEMATIC_SOLDERING_THEOREM_2026-04-24.md](./PLANCK_SCALE_EDGE_CLIFFORD_KINEMATIC_SOLDERING_THEOREM_2026-04-24.md) - B3 sub-lock closure: native flat edge-Clifford soldering and induced `delta_ij`, not dynamical gravity.
 - [PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md) - B4 conditional closure: once B3 derives gravity, the primitive representative is forced to be `P_A`.
 - [PLANCK_SCALE_ACTION_PHASE_CONVERSION_TARGET_THEOREM_2026-04-23.md](./PLANCK_SCALE_ACTION_PHASE_CONVERSION_TARGET_THEOREM_2026-04-23.md) - hbar/action-phase target: exact Planck on the minimal defect requires `q_* = 1/16`, equivalently `kappa_info = 1/32` per bit.
 - [PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md](./PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md) - hbar/action-phase reduction: source-free primitive phase functionals have trace shape `q_atom = gamma/16`; exact `1/16` is the `gamma = 1` scalar.
 - [PLANCK_SCALE_PRIMITIVE_ACTION_UNIT_GAMMA_ONE_ATTEMPT_2026-04-24.md](./PLANCK_SCALE_PRIMITIVE_ACTION_UNIT_GAMMA_ONE_ATTEMPT_2026-04-24.md) - gamma-one no-go/reduction: current premises are scale-homogeneous and cannot derive `Phi(I_16)=1`.
+- [PLANCK_SCALE_GAMMA_PHASE_PERIOD_OBSTRUCTION_THEOREM_2026-04-24.md](./PLANCK_SCALE_GAMMA_PHASE_PERIOD_OBSTRUCTION_THEOREM_2026-04-24.md) - hbar/gamma no-go: phase periodicity and finite central roots do not select real `gamma = 1`.
 - [PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md) - explicit P1 package-boundary move.
 - [PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md) - hostile-review context, with its supersession note respected.
 - [PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md](./PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md) - hbar/unit-convention audit: the packet derives a dimensionless Planck coefficient, not the quantum of action.

@@ -27,6 +27,7 @@ def main() -> int:
     information = read("docs/PLANCK_SCALE_INFORMATION_ACTION_UNIT_MAP_THEOREM_LANE_2026-04-23.md")
     parent_source = read("docs/PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md")
     phase_trace = read("docs/PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md")
+    gamma_period = read("docs/PLANCK_SCALE_GAMMA_PHASE_PERIOD_OBSTRUCTION_THEOREM_2026-04-24.md")
 
     passed = 0
     total = 0
@@ -98,6 +99,15 @@ def main() -> int:
         and "`kappa_info = gamma/32 per bit`" in audit
         and "`kappa_info = q_* / I_* = gamma / 32 per bit`" in phase_trace,
         "the information/action unit map has the same gamma scalar obstruction",
+    )
+
+    total += 1
+    passed += expect(
+        "phase-period-obstruction-is-narrow",
+        "bare U(1) periodicity or\nfinite roots alone cannot select" in audit
+        and "does not reject projective/central-extension\nattacks" in audit
+        and "A 16th root gives phase\n`exp(2 pi i / 16)`" in gamma_period,
+        "the audit scrutinizes the no-go before blocking central-extension routes",
     )
 
     total += 1

@@ -28,6 +28,7 @@ def main() -> int:
     status = read("docs/PLANCK_SCALE_BARE_GRAVITY_SECTOR_DERIVATION_STATUS_THEOREM_2026-04-23.md")
     program = read("docs/PLANCK_SCALE_BARE_CELL_ALONE_CLOSURE_PROGRAM_2026-04-23.md")
     same_surface = read("docs/PLANCK_SCALE_GRAVITY_SECTOR_SAME_SURFACE_CLOSURE_THEOREM_2026-04-23.md")
+    edge_soldering = read("docs/PLANCK_SCALE_EDGE_CLIFFORD_KINEMATIC_SOLDERING_THEOREM_2026-04-24.md")
 
     passed = 0
     total = 0
@@ -81,6 +82,16 @@ def main() -> int:
         and "one soldered coframe" in note
         and "conserved symmetric source" in note,
         "the exact missing primitive is named rather than hidden",
+    )
+
+    total += 1
+    passed += expect(
+        "flat-soldering-sublock-integrated",
+        "edge/Clifford pairing `edge_i <-> Gamma_i`" in note
+        and "It does not supply the dynamical metric/coframe object class" in note
+        and "`edge_i <-> Gamma_i`" in edge_soldering
+        and "This does **not** derive the gravitational sector" in edge_soldering,
+        "the attempt incorporates the new flat-soldering closure without overclaiming B3",
     )
 
     total += 1
