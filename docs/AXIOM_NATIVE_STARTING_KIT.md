@@ -245,6 +245,21 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   on planar bipartite Z^3 subgraphs /
   `frontier_axiom_native_kasteleyn_plaquette_sign.py` /
   Target 2 sub-step 2d.
+- ADVERSARIAL FALSIFICATION of "balanced-components" conjecture:
+  on (3,3,2) minus two 3-site lines {(0,0,0),(1,0,0),(2,0,0)} and
+  {(0,2,1),(1,2,1),(2,2,1)} — 2 defect components, each
+  parity-UNBALANCED (2+1 and 1+2 respectively), overall graph
+  balanced (3+3) — K3 gives |det| = 11 = max over all gauge
+  classes. K3 is OPTIMAL despite unbalanced components. This
+  refutes the iter-15 "balanced components" conjecture. Revised
+  hypothesis (tentative, needs further testing): K3 fails iff
+  graph non-contractible OR defect contains ISOLATED SINGLETON
+  components (size-1 components). All previous positive cases have
+  defect components of size >= 2 (except cuboids with no defect).
+  Only iter-14 D (two singleton components) and iter-11 ring
+  (non-contractible) show K3 failure /
+  `frontier_axiom_native_unbalanced_component_test.py` /
+  Target 2 sub-step 2d-V2-singleton-hypothesis.
 - SHARPER SCOPE CHARACTERIZATION: K3 Pfaffian-optimality iff
   contractible AND each defect component bipartite-balanced.
   Tested (3,3,2) minus 4 sites in three patterns:

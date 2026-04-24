@@ -1053,3 +1053,58 @@ adjacent sites forming a line). If K3 fails on this, conjecture
 predicted correctly. (b) try to prove the balanced-component
 conjecture structurally.
 
+[2026-04-24 01:40] V2 iteration: unbalanced components test — CONJECTURE FALSIFIED
+Tried: adversarially test the "balanced defect components"
+conjecture (from iter 15) with connected-but-unbalanced-component
+defects. Used 6-site removals on (3,3,2) since 3-site alone
+breaks overall balance.
+Wrote scripts/frontier_axiom_native_unbalanced_component_test.py.
+Shape X: two 3-site line defects at y=0/z=0 and y=2/z=1.
+  Each component 3 sites: (2+1) and (1+2) parity-unbalanced.
+  Overall 3+3 balanced.
+Shape Y (control): one 2x3 strip at z=0.
+  1 component 6 sites, 3+3 balanced.
+Predictions:
+  Shape X: K3 FAILS (conjecture requires balanced components).
+  Shape Y: K3 OPTIMAL.
+Results:
+  Shape X: K3 |det|=11=max. K3 OPTIMAL. Prediction FALSIFIED.
+  Shape Y: K3 |det|=11=max. K3 OPTIMAL. Prediction confirmed.
+The balanced-components conjecture is REFUTED by Shape X.
+Reviewing all data to find new pattern:
+  K3 FAILS:
+  - Iter 11 ring (non-contractible).
+  - Iter 14 D: 2 singleton defect components (each 1 site
+    unbalanced).
+  K3 OPTIMAL:
+  - All cuboids (no defect).
+  - Iter 14 A, B, C: 1 component of 2 sites (1+1 balanced).
+  - Iter 15 L-tetromino: 1 component of 4 sites (2+2 balanced).
+  - Iter 15 2x2 square: 1 component of 4 sites (2+2 balanced).
+  - Iter 15 disc 2+2: 2 components of 2 sites each (1+1 balanced).
+  - Iter 16 X (TODAY): 2 components of 3 sites each (2+1 and 1+2,
+    UNBALANCED).
+  - Iter 16 Y: 1 component of 6 sites (3+3 balanced).
+  - All planar shapes.
+New tentative hypothesis: K3 fails iff:
+  (a) graph is non-contractible, OR
+  (b) defect has SINGLETON components (isolated single sites).
+All 9 positive cases have defect components of size >= 2. The
+unique K3-failing contractible case (iter 14 D) has 2 singleton
+components.
+Physical intuition: singleton defect components are "point defects"
+that K3's translation-invariant phases cannot self-correct around,
+forcing global matching adjustments. Larger defect components
+have boundary edges that K3 can handle locally.
+Accepted because: hostile audit verdict = clean. 10 computed
+record() booleans (3 FAILs reflecting the conjecture refutation
+and prediction mismatches).
+Value: the V2 loop found a SECOND falsification of an "easy"
+conjecture, driving a third refinement. Each iteration is pulling
+the scope characterization closer to truth via concrete
+counterexamples.
+Next V2 vector: test the singleton hypothesis. Try a (4,3,2)
+cuboid with two isolated singletons at non-adjacent positions --
+if K3 fails, hypothesis survives. Alternatively, find a singleton
++ connected-pair configuration to see if mixed sizes matter.
+
