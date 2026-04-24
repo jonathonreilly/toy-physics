@@ -764,6 +764,37 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   z-separated singletons force det=0 /
   `frontier_axiom_native_sh3_degeneracy_investigation.py` /
   Target 2 sub-step 2d-V2-sh3-z-plane-separation.
+- CRITICAL FINDING: iter 23 central reflection sigma does NOT
+  apply to line-3 + singleton defects. Union test of iter 32
+  (bipartition-preserving partial reflection) + iter 23
+  (bipartition-flipping central sigma) gives 1224/1720 = 71.2%
+  accuracy -- IDENTICAL to iter 32 alone. The reason: for
+  central sigma to fix a line-3 + singleton defect, the
+  line-3 center would need integer coordinates matching
+  (L1-1)/2, (L2-1)/2, (L3-1)/2 simultaneously -- impossible
+  on even L_l. Hence central sigma never fixes any line-3 on
+  L1 or L2 even cuboids like (4,4,2). All (4,4,2) 128 det=0
+  cases are NEITHER partial-reflection NOR central-sigma
+  explained: they are SH3-type non-automorphism cases, where
+  some PM-pairing mechanism other than a graph automorphism
+  causes det=0. The iter 30 H5 empirical characterization
+  (z-sep + axis parity match) perfectly predicts these 128
+  cases on (4,4,2) but without a symmetry explanation. The
+  per-cuboid decomposition for line-3 + singleton configs
+  by mechanism:
+    (3,3,2): A-only=24, neither=16 (16 TN). Perfect coverage.
+    (4,3,2): A-only=24, neither=88 (56 TN + 32 FN). 32 SH3.
+    (4,4,2): all=neither (no axis-aligned symmetry), 128 FN.
+    (5,3,2): A-only=52, neither=180 (132 TN + 48 FN).
+    (5,5,2): A-only=80, neither=968 (680 TN + 288 FN).
+  Total: 180 from partial reflections + 0 from central sigma
+  + 496 SH3-type non-automorphism det=0 cases still
+  unexplained. The SH3-type cases are thus the DOMINANT
+  mechanism (496 of 676 total det=0 cases = 73%) on
+  line-3 + singleton defects, with partial reflections
+  covering only the (3,3,2) + (4,3,2) + odd-cuboid subset /
+  `frontier_axiom_native_full_reflection_union_test.py` /
+  Target 2 sub-step 2d-V2-union-lemma-test.
 - Generalized (bipartition-preserving) partial-reflection
   lemma is SUFFICIENT but NOT NECESSARY for det_K3 = 0.
   Iter 32 tested the lemma candidate (phi a bipartition-

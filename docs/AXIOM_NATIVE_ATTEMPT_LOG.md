@@ -1982,3 +1982,64 @@ REAL lemma is proven as a union. (b) If SH3-type cases
 remain, identify their mechanism (non-automorphism
 PM-pairing).
 
+[2026-04-24 08:15] V2 iteration: iter 23 + iter 32 union test — PASS (Central sigma contributes ZERO)
+Tried: test the UNION of iter 32 partial-reflection test and
+iter 23 central-sigma test as a single classifier for det=0
+on line-3 + singleton defects across 5 L3=2 cuboids. Wrote
+scripts/frontier_axiom_native_full_reflection_union_test.py.
+Results:
+  (3,3,2): 40/40 PERFECT. A=24, B=0, both=0, neither=16.
+  (4,3,2): 80/112. A=24, B=0, neither=88.
+  (4,4,2): 160/288. A=0, B=0, neither=288 (ALL).
+  (5,3,2): 184/232. A=52, B=0, neither=180.
+  (5,5,2): 760/1048. A=80, B=0, neither=968.
+  Total: 1224/1720 = 71.2%. TP=180, FP=0, FN=496, TN=1044.
+STRIKING: Test B (iter 23 central sigma) contributes ZERO TP
+across all 5 cuboids. The union accuracy is IDENTICAL to iter
+32 alone.
+Reason (algebraic): iter 23 conditions require L1+L2+L3 even
+AND L1 even AND n_bi odd AND central sigma fixes the defect.
+For central sigma to fix a line-3 defect, the line-3 center
+must have integer coordinates matching the reflection center
+(L_l-1)/2 for each axis. On cuboids with even L_1 (like 4),
+(L_1-1)/2 = 1.5 is not integer, so no line-3 with integer
+start can be sigma-symmetric. Hence central sigma NEVER fixes
+any line-3 on even-L_1 cuboids, and Test B gives 0 TP
+universally on these configs.
+Conclusion: all (4,4,2) 128 det=0 cases are neither partial-
+reflection-explained nor central-sigma-explained -- they are
+SH3-type NON-AUTOMORPHISM cases where det=0 arises from some
+PM-pairing mechanism distinct from any graph automorphism.
+Iter 30's H5 captures these empirically (288/288 on (4,4,2))
+but without a symmetry explanation. Other cuboids with even
+L_1 or L_2 similarly have SH3-type cases (496 total across
+all 5 tested cuboids).
+Across all 5 L3=2 cuboids tested with line-3 + singleton
+defects:
+  180 det=0 from partial-reflection mechanism (iter 32).
+  0 from central-sigma mechanism (iter 23, doesn't apply to
+    this defect family).
+  496 from SH3-type non-automorphism mechanism (unexplained
+    structurally).
+  Total det=0 cases: 676. So SH3-type is the DOMINANT
+  mechanism (73%) for this defect family.
+Accepted because: hostile audit verdict = clean. 14 record()
+booleans. FAILs on non-perfect cuboids and perfect_all are
+computed correctly.
+Honest structural picture: the K3 det=0 phenomenon on
+line-3 + singleton defects has at least THREE mechanisms:
+1. Iter 32 partial reflections (clean, covers odd-L cuboids
+   and some intermediate).
+2. Iter 23 central sigma (applies to OTHER defect families
+   but not to line-3 + singleton due to integer-center
+   constraint).
+3. SH3-type non-automorphism (unexplained structural
+   mechanism, dominant on even-L cuboids).
+Next V2 vector: (a) understand the SH3-type mechanism. Iter
+30's H5 suggests some PM-pairing bijection that flips K3
+sign without being a graph automorphism. Can we construct
+this bijection explicitly? (b) alternatively, step back and
+revisit the original Kasteleyn thread goal -- have we made
+progress on the singleton hypothesis, or is this reflection-
+degeneracy investigation a side quest?
+
