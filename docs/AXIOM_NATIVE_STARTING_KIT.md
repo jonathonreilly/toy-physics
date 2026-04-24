@@ -245,6 +245,26 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   on planar bipartite Z^3 subgraphs /
   `frontier_axiom_native_kasteleyn_plaquette_sign.py` /
   Target 2 sub-step 2d.
+- SINGLETON HYPOTHESIS strongly supported: K3 Pfaffian-optimality
+  iff `graph is contractible AND defect region has no isolated
+  singleton components (all components have size >= 2)`. Tested on
+  four (3,3,2) shapes with singleton defects:
+  * A: minus {(0,0,0), (2,0,1)} -- K3=45 < max=53. Fails.
+  * B: minus {(0,0,0), (1,2,0)} -- K3=15 < max=33. Fails.
+  * C: minus {(0,0,0), (2,0,0), (0,2,1), (2,2,1)} (4 corners)
+       -- K3=5 < max=9. Fails.
+  * D: minus {(0,0,0), (2,2,1)} (iter-14 re-verify) -- K3=30 < 36.
+  All four confirm K3 fails when singleton components present.
+  Combined with ~10 prior shapes where defects have size >= 2 and
+  K3 succeeds (cuboids, adjacent 2-site, L-tetromino, 2x2 square,
+  disconnected 2+2, 2 unbalanced 3-lines, 2x3 strip): the
+  hypothesis fits all 13+ data points with no counterexamples.
+  Physical intuition: singleton defect components are point defects
+  that force non-local matching corrections; K3's translation-
+  invariant phases cannot provide them. Defect components of size
+  >= 2 have boundary edges that K3 can accommodate locally /
+  `frontier_axiom_native_singleton_hypothesis_test.py` /
+  Target 2 sub-step 2d-V2-singleton-hypothesis-confirmed.
 - ADVERSARIAL FALSIFICATION of "balanced-components" conjecture:
   on (3,3,2) minus two 3-site lines {(0,0,0),(1,0,0),(2,0,0)} and
   {(0,2,1),(1,2,1),(2,2,1)} — 2 defect components, each

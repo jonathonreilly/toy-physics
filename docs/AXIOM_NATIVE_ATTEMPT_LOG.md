@@ -1108,3 +1108,47 @@ cuboid with two isolated singletons at non-adjacent positions --
 if K3 fails, hypothesis survives. Alternatively, find a singleton
 + connected-pair configuration to see if mixed sizes matter.
 
+[2026-04-24 02:05] V2 iteration: singleton hypothesis confirmed on 4 new shapes — PASS
+Tried: adversarial test of the singleton-components hypothesis
+from iter 16. Used four (3,3,2) shapes with singleton defects:
+A. {(0,0,0), (2,0,1)}: 2 singletons, non-diagonal positions.
+B. {(0,0,0), (1,2,0)}: 2 singletons, different offset.
+C. {(0,0,0), (2,0,0), (0,2,1), (2,2,1)}: 4 singletons at corners.
+D. {(0,0,0), (2,2,1)}: iter-14 D re-verify.
+Wrote scripts/frontier_axiom_native_singleton_hypothesis_test.py.
+All 4 shapes contractible, balanced bipartite.
+Results:
+- A: K3 det=45, max=53. K3 FAILS.
+- B: K3 det=15, max=33. K3 FAILS.
+- C: K3 det=5, max=9. K3 FAILS.
+- D: K3 det=30, max=36. K3 FAILS.
+All 4/4 predictions match: K3 fails on every tested
+singleton-defect shape.
+Combined data summary (across all V2 iterations):
+  K3 optimal (12+ cases):
+  - Cuboids: (2,2,1), (2,2,2), (2,2,3), (3,2,2), (3,3,2), (4,3,2),
+    (4,4,2).
+  - Planar shapes: L-shape (10 sites).
+  - Defect components size >= 2 (contractible):
+    iter-14 A, B, C (2-site pairs), iter-15 L-tetromino, 2x2
+    square, disconnected 2+2, iter-16 two 3-lines, 2x3 strip.
+  K3 fails (6+ cases):
+  - Non-contractible: iter-11 ring.
+  - Singleton defect components: iter-14 D, iter-17 A, B, C, D.
+Hypothesis now well-supported: K3 Pfaffian-optimal iff
+contractible AND no singleton defect components.
+Accepted because: hostile audit verdict = clean. 13 computed
+record() booleans (all PASS), no narrative PASSes.
+This iteration DIDN'T falsify the singleton hypothesis -- instead
+it confirmed the hypothesis on 4 new adversarial tests, each of
+which could have failed. The "singleton hypothesis" now has 13+
+consistent data points and 0 counterexamples across V2
+iterations 11-17.
+Next V2 vector: (a) try harder to break the singleton hypothesis
+by constructing "singleton-adjacent" cases (e.g., a graph with
+singletons PLUS larger components and see if K3 fails or works).
+(b) step back and try to PROVE the singleton hypothesis
+structurally via the relationship between singleton defects and
+K3's translation-invariance. (c) write up summary since the
+Kasteleyn thread has converged on a specific characterization.
+
