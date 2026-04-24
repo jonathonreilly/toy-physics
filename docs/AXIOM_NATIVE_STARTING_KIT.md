@@ -245,6 +245,18 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   on planar bipartite Z^3 subgraphs /
   `frontier_axiom_native_kasteleyn_plaquette_sign.py` /
   Target 2 sub-step 2d.
+- K3 is the UNIQUE plaquette-satisfying gauge class on (3,3,2).
+  Enumeration of all 2^16 = 65536 gauge classes finds exactly ONE
+  class satisfying "sign product = -1 on all 20 elementary
+  plaquettes": K3 itself. All other 65535 gauge classes violate at
+  least one plaquette and yield strictly smaller |det(B)|, with the
+  best violator giving only 161 (vs K3's 225). Gap = 64. So on
+  (3,3,2) the universal plaquette-sign-(-1) property from ledger 2d
+  is NECESSARY AND SUFFICIENT for achieving the Pfaffian-maximum
+  |det(B)|. K3's distinction is not just "good" -- it's the UNIQUE
+  orientation with that local plaquette property /
+  `frontier_axiom_native_plaquette_satisfying_assignments.py` /
+  Target 2 sub-step 2d-V2-plaquette-partition.
 - K3 is PFAFFIAN-OPTIMAL across every tested Z^3 cuboid:
   exhaustively searched gauge-class Pfaffian spaces find K3 achieves
   the max `|det(B)|` over all sign-assignment classes on (3,2,2)

@@ -764,3 +764,45 @@ achieves the max |det(B_G)| over all assignments. If provable,
 combined with our proof that K3 satisfies all plaquette signs,
 this gives K3 optimal universally.
 
+[2026-04-23 22:45] V2 iteration: plaquette-satisfying partition on (3,3,2) — PASS
+Tried: adversarial test of the claim "any gauge class satisfying
+all plaquette signs = -1 achieves max |det(B)|; any violating class
+strictly smaller". If either direction fails, the K3-optimality
+conjecture breaks concretely on (3,3,2).
+Wrote scripts/frontier_axiom_native_plaquette_satisfying_assignments.py:
+(i) enumerates all 20 elementary plaquettes of (3,3,2),
+(ii) verifies K3 satisfies all plaquette signs = -1 (reproducing
+ledger 2d),
+(iii) iterates over 2^16=65536 gauge classes, computing per-class
+plaquette signs and |det(B)|,
+(iv) partitions classes into "all-plaquette-(-1) satisfying" vs
+"at least one plaquette violating",
+(v) tests C2 (all satisfying give same |det|) and C3 (all violating
+give strictly smaller |det|).
+Results:
+- Exactly 1 gauge class satisfies all plaquette signs: K3 itself.
+- That class achieves |det| = 225.
+- 65535 classes violate at least one plaquette.
+- Best violating class: |det| = 161 (vs K3's 225). Gap = 64.
+So on (3,3,2): K3 is the UNIQUE plaquette-satisfying gauge class,
+and the plaquette property IS necessary and sufficient for
+achieving max |det|. The K3 optimality conjecture's reason is
+exposed: K3 is characterized by satisfying the Kasteleyn local
+plaquette condition, and satisfying that condition uniquely
+achieves the max over all sign assignments.
+Mathematical note: the plaquette-sign constraints on (3,3,2) have
+FULL RANK on the 16-dim gauge space (hence exactly 1 satisfying
+class = 2^0). This is a non-trivial graph-theoretic property of
+the 3x3x2 prism. For other cuboids this rank may be less, giving
+multiple plaquette-satisfying classes.
+Accepted because: hostile audit verdict = clean. 9 computed
+record() booleans, no narrative PASSes.
+Next V2 vector: test this plaquette-uniqueness on (4,3,2) and
+(4,4,2). On (4,3,2), gauge dim 23, plaquette count = 8+12+12 = 32.
+If rank of plaquette constraints on (4,3,2) gauge space is 23
+(full rank), then K3 is also unique there. If rank < 23, multiple
+plaquette-satisfying classes exist; check whether they all give
+same |det|. This probes whether the local plaquette property is
+sufficient (multiple satisfying classes with same |det|) or unique
+(full rank, exactly one class).
+
