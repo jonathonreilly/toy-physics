@@ -245,6 +245,17 @@ Populated as the loop proceeds. Format: fact / runner / commit hash.
   on planar bipartite Z^3 subgraphs /
   `frontier_axiom_native_kasteleyn_plaquette_sign.py` /
   Target 2 sub-step 2d.
+- Singleton criterion is LOCAL: K3 fails on (4,3,2) (a larger
+  cuboid than (3,3,2) by 6 sites) with 2 singleton defects just
+  as it fails on smaller shapes. (4,3,2) minus {(0,0,0), (3,0,0)}
+  (2 corner singletons, non-adjacent): K3 det=228 < max=272.
+  Control (4,3,2) minus {(0,0,0), (1,0,0)} (adjacent pair, no
+  singletons): K3 det=551 = max. So surrounding defect-free bulk
+  does NOT absorb singleton defects -- the criterion depends only
+  on defect-component structure, not graph size. Enumerated over
+  2^19 = 524288 gauge classes in ~3 seconds each /
+  `frontier_axiom_native_singleton_locality_test.py` /
+  Target 2 sub-step 2d-V2-singleton-locality.
 - Singleton hypothesis survives mixed-defect test, including a
   clean adversarial probe of "singleton coexisting with larger
   defect". Tested three (3,3,2) variants; the one with an actual

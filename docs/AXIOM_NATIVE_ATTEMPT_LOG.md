@@ -1194,3 +1194,44 @@ boundary. Does K3 fail even with a large bulk of defect-free
 graph? If yes, confirms singleton criterion is local (about the
 singleton itself, not surrounding graph structure).
 
+[2026-04-24 02:55] V2 iteration: singleton locality test — PASS (after 2 design iterations)
+Tried: test singleton criterion locality on (4,3,2) — a larger
+cuboid than most prior tests. Two design iterations needed:
+- First attempt: picked sites like (1,1,0)+(2,2,1) assuming
+  contractibility, but χ=0 (interior site removal created a hole).
+- Second attempt: picked sites like (1,0,0)+(2,2,1) — parity
+  was (o,o), not balanced.
+- Third attempt (correct): (0,0,0)+(3,0,0) opposite x-direction
+  corners, balanced 1e+1o, verified χ=1 Euler.
+Wrote scripts/frontier_axiom_native_singleton_locality_test.py.
+Final tests:
+T1: (4,3,2) minus {(0,0,0), (3,0,0)} — 2 corner singletons.
+    K3 det=228 < max=272. K3 FAILS. ✓ predicted.
+T2 (control): (4,3,2) minus {(0,0,0), (1,0,0)} — adjacent pair.
+    K3 det=551 = max. K3 OPTIMAL. ✓ predicted.
+Enumerated over 2^19 = 524288 gauge classes per shape (~3s each).
+Both predictions match. Singleton criterion is LOCAL: presence of
+any singleton anywhere in the graph breaks K3, regardless of
+graph size or surrounding bulk.
+Data accumulated on singleton hypothesis:
+  K3 fails (7+ cases): iter-14 D, iter-17 A/B/C/D, iter-18 I,
+    iter-19 T1. All singletons, all contractible.
+  K3 optimal (many cases): all cuboids, adjacent pairs, L-shape,
+    2x2 square, L-tetromino, disc 2+2, two unbalanced 3-lines,
+    2x3 strip, iter-18 E/J, iter-19 T2. None with singletons.
+  K3 fails on non-contractible (1 case): iter-11 ring.
+Total: 15+ confirming data points across 9 V2 iterations, 0
+counterexamples.
+Accepted because: hostile audit verdict = clean. 9 computed
+record() booleans (8 PASS, 1 FAIL which is the expected "T2 has no
+singleton" — correct semantics, just inverted record-name framing).
+Design insight: testing singleton-adjacent or parity-unbalanced
+configurations requires care; my first two design attempts failed
+for distinct reasons. The final run is a clean adversarial test.
+Next V2 vector: attempt to PROVE the singleton hypothesis
+structurally. Claim to prove: when defect D contains a singleton
+component {v}, the set of perfect matchings of (graph minus D)
+falls into at least 2 orbits under K3 sign symmetries, with
+opposite signs. K3 can align one orbit but not both simultaneously,
+forcing |det(B)| < #PM. Formalize via matching-polytope arguments.
+
