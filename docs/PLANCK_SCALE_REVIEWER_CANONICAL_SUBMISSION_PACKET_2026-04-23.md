@@ -11,6 +11,7 @@
 **Boundary event Ward closure:** [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md)
 **Boundary event Ward derivation:** [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md)
 **Boundary source-functorial Ward hardening:** [PLANCK_SCALE_BOUNDARY_SOURCE_FUNCTORIAL_WARD_THEOREM_2026-04-24.md](./PLANCK_SCALE_BOUNDARY_SOURCE_FUNCTORIAL_WARD_THEOREM_2026-04-24.md)
+**Parent-source naturality obstruction:** [PLANCK_SCALE_PARENT_SOURCE_NATURALITY_OBSTRUCTION_THEOREM_2026-04-24.md](./PLANCK_SCALE_PARENT_SOURCE_NATURALITY_OBSTRUCTION_THEOREM_2026-04-24.md)
 **Boundary same-source covariance:** [PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md)
 **Boundary parent source equivalence:** [PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md)
 **Boundary action-source versus pressure:** [PLANCK_SCALE_BOUNDARY_ACTION_SOURCE_VS_PRESSURE_CLASSIFICATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_ACTION_SOURCE_VS_PRESSURE_CLASSIFICATION_THEOREM_2026-04-23.md)
@@ -23,6 +24,7 @@
 **Bare gravity-sector uniqueness attempt:** [PLANCK_SCALE_BARE_GRAVITY_SECTOR_UNIQUENESS_ATTEMPT_2026-04-24.md](./PLANCK_SCALE_BARE_GRAVITY_SECTOR_UNIQUENESS_ATTEMPT_2026-04-24.md)
 **Edge-Clifford kinematic soldering:** [PLANCK_SCALE_EDGE_CLIFFORD_KINEMATIC_SOLDERING_THEOREM_2026-04-24.md](./PLANCK_SCALE_EDGE_CLIFFORD_KINEMATIC_SOLDERING_THEOREM_2026-04-24.md)
 **B3 dynamical metricity obstruction:** [PLANCK_SCALE_B3_DYNAMICAL_METRICITY_OBSTRUCTION_THEOREM_2026-04-24.md](./PLANCK_SCALE_B3_DYNAMICAL_METRICITY_OBSTRUCTION_THEOREM_2026-04-24.md)
+**B3 bare Ward identity no-go:** [PLANCK_SCALE_B3_BARE_WARD_IDENTITY_NO_GO_2026-04-24.md](./PLANCK_SCALE_B3_BARE_WARD_IDENTITY_NO_GO_2026-04-24.md)
 **Bare boundary representative:** [PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md)
 **Hbar/unit-convention audit:** [PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md](./PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md)
 **Hbar attack order:** [PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md](./PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md)
@@ -31,6 +33,7 @@
 **Primitive action-unit gamma-one attempt:** [PLANCK_SCALE_PRIMITIVE_ACTION_UNIT_GAMMA_ONE_ATTEMPT_2026-04-24.md](./PLANCK_SCALE_PRIMITIVE_ACTION_UNIT_GAMMA_ONE_ATTEMPT_2026-04-24.md)
 **Gamma phase-period obstruction:** [PLANCK_SCALE_GAMMA_PHASE_PERIOD_OBSTRUCTION_THEOREM_2026-04-24.md](./PLANCK_SCALE_GAMMA_PHASE_PERIOD_OBSTRUCTION_THEOREM_2026-04-24.md)
 **Hbar strong routes status:** [PLANCK_SCALE_HBAR_STRONG_ROUTES_STATUS_THEOREM_2026-04-24.md](./PLANCK_SCALE_HBAR_STRONG_ROUTES_STATUS_THEOREM_2026-04-24.md)
+**Hbar non-homogeneous real action-unit reduction:** [PLANCK_SCALE_HBAR_NONHOMOGENEOUS_REAL_ACTION_UNIT_REDUCTION_THEOREM_2026-04-24.md](./PLANCK_SCALE_HBAR_NONHOMOGENEOUS_REAL_ACTION_UNIT_REDUCTION_THEOREM_2026-04-24.md)
 **Overnight closure status:** [PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md](./PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md)
 
 ## Final Scope Warning
@@ -81,6 +84,12 @@ action Ward identities remain viable research routes, but none closes on the
 current branch. Each reduces to a non-homogeneous primitive real action-unit
 theorem, `Phi(I_16)=1`.
 
+The non-homogeneous real action-unit reduction now gives the exact
+necessary-and-sufficient theorem: if the complete source-free `C^16` cell
+`I_16` is derived as the indecomposable generator of the reduced real action
+monoid and the action coordinate is generator count, then `gamma=1` follows.
+The current bare stack does not derive that action-unit law.
+
 The final Planck closure is now stated as an airtight theorem on the accepted
 physical-gravity review contract. The old GSI wording is replaced by
 same-surface single-sector compatibility: the accepted gravitational
@@ -119,6 +128,11 @@ generate the conserved symmetric spin-2 Ward identity. Bare B3 therefore
 requires a new positive theorem deriving local metric/coframe response from
 primitive translation defects.
 
+The B3 bare Ward no-go sharpens this further: the exact missing primitive is a
+local gaugeable defect-to-coframe response primitive. Without it, scalar,
+antisymmetric, and symmetric-traceless response channels all survive the
+retained bare constraints, so the symmetric spin-2 channel is not selected.
+
 The prior hardening removed the broad multiplicative boundary-unit ambiguity
 and reduced the additive boundary-density law to
 
@@ -142,6 +156,14 @@ event derivative; it is whether the physical gravitational boundary-action
 source belongs to the retained primitive one-step boundary/worldtube object
 class and whether the Schur normal-ordered boundary action is a functorial
 representation of that same parent source.
+
+The parent-source naturality obstruction proves the strongest positive
+carrier-level statement available here: the diagram with `exp(s P_A)`, Schur
+quotient reduction, floor subtraction, and multiplicity lift commutes. The
+remaining scalar obstruction is exactly the affine hidden character
+`chi_delta(s)=exp(s delta)`. Thus the Schur/event bridge is conditional on the
+no-hidden-character parent-source object class, not derived from Schur carrier
+naturality alone.
 
 The packet also separates "pressure" into object classes. The scalar Schur
 free-energy pressure is `(1/(2n)) log det(L_Sigma)` and is not the Planck
@@ -271,64 +293,80 @@ and since both lengths are positive,
     class. A mismatch would be an extra source-free one-dimensional
     boundary-action character:
     [boundary source-functorial Ward theorem](./PLANCK_SCALE_BOUNDARY_SOURCE_FUNCTORIAL_WARD_THEOREM_2026-04-24.md).
-14. **Same-source covariance.** If the Schur and event descriptions are the
+14. **Parent-source naturality obstruction.** The Schur parent-source carrier
+    diagram commutes through quotient reduction, floor subtraction, and
+    multiplicity lift, but the affine hidden character
+    `chi_delta(s)=exp(s delta)` remains unless no-hidden-character
+    functoriality is accepted:
+    [parent-source naturality obstruction theorem](./PLANCK_SCALE_PARENT_SOURCE_NATURALITY_OBSTRUCTION_THEOREM_2026-04-24.md).
+15. **Same-source covariance.** If the Schur and event descriptions are the
     same boundary-action source, unequal infinitesimal generators leave a
     quotient group `exp(s Delta)`, which is hidden source-free boundary-action
     data. Therefore the generators agree:
     [boundary same-source covariance theorem](./PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md).
-15. **Parent-source equivalence.** The common source is the unique full axis
+16. **Parent-source equivalence.** The common source is the unique full axis
     parent `P_A`. The event representation is faithful; the Schur
     representation is quotient shape plus retained multiplicity
     `P_A = P_q + P_E`. Quotient-only Schur changes the source:
     [boundary parent source equivalence theorem](./PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md).
-16. **Same-surface gravity-sector closure.** The old GSI wording is closed as
+17. **Same-surface gravity-sector closure.** The old GSI wording is closed as
     same-surface single-sector compatibility: the already accepted
     gravitational boundary/action sector and the primitive Planck boundary cell
     are read on one physical boundary surface, whose unique source-free
     primitive local representative is `P_A`:
     [gravity-sector same-surface closure theorem](./PLANCK_SCALE_GRAVITY_SECTOR_SAME_SURFACE_CLOSURE_THEOREM_2026-04-23.md).
-17. **Action-source versus pressure classification.** The Planck readout is the
+18. **Action-source versus pressure classification.** The Planck readout is the
     normal-ordered primitive boundary action-source density, not the scalar
     Schur free-energy pressure. The scalar Schur pressure is not `1/4`:
     [action-source versus pressure theorem](./PLANCK_SCALE_BOUNDARY_ACTION_SOURCE_VS_PRESSURE_CLASSIFICATION_THEOREM_2026-04-23.md).
-18. **Primitive phase trace reduction.** The hbar/action-phase lane now derives
+19. **Primitive phase trace reduction.** The hbar/action-phase lane now derives
     the trace shape `q_atom = gamma/16`, hence
     `kappa_info = gamma/32` per bit. Exact `1/16` requires the remaining
     scalar action-unit statement `gamma = 1`:
     [primitive phase trace theorem](./PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md).
-19. **Primitive gamma-one attempt.** The current source-free trace,
+20. **Primitive gamma-one attempt.** The current source-free trace,
     information, time-lock, and boundary-counting premises are homogeneous
     under `Phi -> lambda Phi`; they reduce the hbar/action-unit lock to one
     missing non-homogeneous law `Phi(I_16)=1`:
     [primitive gamma-one attempt](./PLANCK_SCALE_PRIMITIVE_ACTION_UNIT_GAMMA_ONE_ATTEMPT_2026-04-24.md).
-20. **Gamma phase-period obstruction.** U(1) periodicity and finite central
+21. **Gamma phase-period obstruction.** U(1) periodicity and finite central
     extensions alone do not select the real reduced action value `gamma = 1`;
     they only quantize phase classes or levels unless supplemented by a real
     action-unit map:
     [gamma phase-period obstruction](./PLANCK_SCALE_GAMMA_PHASE_PERIOD_OBSTRUCTION_THEOREM_2026-04-24.md).
-21. **Hbar strong-routes status.** Noncompact central extensions,
+22. **Hbar strong-routes status.** Noncompact central extensions,
     spectral-flow/index routes, primitive action generators, and microscopic
     action Ward identities remain viable but unclosed. Each still requires the
     non-homogeneous real action-unit theorem `Phi(I_16)=1`:
     [hbar strong-routes status theorem](./PLANCK_SCALE_HBAR_STRONG_ROUTES_STATUS_THEOREM_2026-04-24.md).
-22. **Bare gravity-sector uniqueness attempt.** B3 is not closed; it is reduced
+23. **Hbar non-homogeneous real action-unit reduction.** The exact
+    necessary-and-sufficient closure law is now isolated: derive `I_16` as the
+    generator of the reduced real action monoid and `Phi(I_16)=1`; current bare
+    premises do not derive it:
+    [hbar non-homogeneous real action-unit reduction theorem](./PLANCK_SCALE_HBAR_NONHOMOGENEOUS_REAL_ACTION_UNIT_REDUCTION_THEOREM_2026-04-24.md).
+24. **Bare gravity-sector uniqueness attempt.** B3 is not closed; it is reduced
     to deriving a soldered metricity / equivalence Ward identity from retained
     `Cl(3)` / `Z^3`:
     [bare gravity uniqueness attempt](./PLANCK_SCALE_BARE_GRAVITY_SECTOR_UNIQUENESS_ATTEMPT_2026-04-24.md).
-23. **Edge-Clifford kinematic soldering.** The retained cell already has flat
+25. **Edge-Clifford kinematic soldering.** The retained cell already has flat
     edge/Clifford soldering and induced `delta_ij`; this closes the kinematic
     frame sub-lock but not dynamical spin-2 metricity:
     [edge-Clifford soldering theorem](./PLANCK_SCALE_EDGE_CLIFFORD_KINEMATIC_SOLDERING_THEOREM_2026-04-24.md).
-24. **B3 dynamical metricity obstruction.** The finite signed-permutation
+26. **B3 dynamical metricity obstruction.** The finite signed-permutation
     symmetry of the flat cell has no infinitesimal local frame Ward generator,
     so flat soldering alone cannot derive the conserved symmetric spin-2
     response:
     [B3 dynamical metricity obstruction theorem](./PLANCK_SCALE_B3_DYNAMICAL_METRICITY_OBSTRUCTION_THEOREM_2026-04-24.md).
-25. **Overnight closure status.** The strongest current claim remains a
+27. **B3 bare Ward identity no-go.** Bare-compatible local responses decompose
+    into scalar, antisymmetric, and symmetric-traceless channels; retained
+    `Cl(3)` / `Z^3` does not select the symmetric spin-2 response without the
+    missing local gaugeable defect-to-coframe primitive:
+    [B3 bare Ward identity no-go](./PLANCK_SCALE_B3_BARE_WARD_IDENTITY_NO_GO_2026-04-24.md).
+28. **Overnight closure status.** The strongest current claim remains a
     conditional retained physical-gravity Planck theorem, not bare
     `Cl(3)` / `Z^3` Planck+hbar closure:
     [overnight closure status theorem](./PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md).
-26. **Airtight review closure.** On the accepted physical-gravity review
+29. **Airtight review closure.** On the accepted physical-gravity review
     contract, the Planck theorem is closed. Remaining denials are rejections of
     that review contract, not hidden coefficient or algebra gaps:
     [airtight review closure theorem](./PLANCK_SCALE_AIRTIGHT_REVIEW_CLOSURE_THEOREM_2026-04-23.md).
@@ -519,6 +557,7 @@ python3 scripts/frontier_planck_boundary_density_three_mechanism_audit.py
 python3 scripts/frontier_planck_boundary_event_ward_identity_closure_theorem.py
 python3 scripts/frontier_planck_boundary_event_ward_identity_derivation_theorem.py
 python3 scripts/frontier_planck_boundary_source_functorial_ward_theorem.py
+python3 scripts/frontier_planck_parent_source_naturality_obstruction_theorem_2026_04_24.py
 python3 scripts/frontier_planck_boundary_same_source_covariance_theorem.py
 python3 scripts/frontier_planck_boundary_parent_source_equivalence_theorem.py
 python3 scripts/frontier_planck_boundary_action_source_vs_pressure_classification_theorem.py
@@ -531,6 +570,7 @@ python3 scripts/frontier_planck_bare_gravity_sector_derivation_status_theorem.py
 python3 scripts/frontier_planck_bare_gravity_sector_uniqueness_attempt.py
 python3 scripts/frontier_planck_edge_clifford_kinematic_soldering_theorem.py
 python3 scripts/frontier_planck_b3_dynamical_metricity_obstruction_theorem.py
+python3 scripts/frontier_planck_b3_bare_ward_identity_no_go_2026_04_24.py
 python3 scripts/frontier_planck_bare_boundary_representative_after_gravity_theorem.py
 python3 scripts/frontier_planck_hbar_status_and_remaining_objections_audit.py
 python3 scripts/frontier_planck_hbar_attack_order_theorem.py
@@ -539,6 +579,7 @@ python3 scripts/frontier_planck_primitive_phase_trace_reduction_theorem.py
 python3 scripts/frontier_planck_primitive_action_unit_gamma_one_attempt.py
 python3 scripts/frontier_planck_gamma_phase_period_obstruction_theorem.py
 python3 scripts/frontier_planck_hbar_strong_routes_status_theorem.py
+python3 scripts/frontier_planck_hbar_nonhomogeneous_real_action_unit_reduction_2026_04_24.py
 python3 scripts/frontier_planck_overnight_closure_status_theorem.py
 ```
 
@@ -555,6 +596,7 @@ python3 scripts/frontier_planck_overnight_closure_status_theorem.py
 - [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md) - constant-term event Ward identity deriving `delta = m_axis` on the primitive boundary-event action surface.
 - [PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md) - finite-source derivation of the event Ward identity from `U_A(s) = exp(s P_A)`.
 - [PLANCK_SCALE_BOUNDARY_SOURCE_FUNCTORIAL_WARD_THEOREM_2026-04-24.md](./PLANCK_SCALE_BOUNDARY_SOURCE_FUNCTORIAL_WARD_THEOREM_2026-04-24.md) - hardens the Schur/event Ward bridge as parent-source functoriality and records the path-integral Ward limitation.
+- [PLANCK_SCALE_PARENT_SOURCE_NATURALITY_OBSTRUCTION_THEOREM_2026-04-24.md](./PLANCK_SCALE_PARENT_SOURCE_NATURALITY_OBSTRUCTION_THEOREM_2026-04-24.md) - proves the Schur parent-source carrier diagram commutes but leaves the affine hidden-character obstruction.
 - [PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md) - quotient/no-hidden-scalar derivation of same-source covariance between the Schur and event generators.
 - [PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md) - parent source theorem showing event and Schur are faithful/lifted reductions of the same full axis source.
 - [PLANCK_SCALE_BOUNDARY_ACTION_SOURCE_VS_PRESSURE_CLASSIFICATION_THEOREM_2026-04-23.md](./PLANCK_SCALE_BOUNDARY_ACTION_SOURCE_VS_PRESSURE_CLASSIFICATION_THEOREM_2026-04-23.md) - object-class hardening: Planck uses boundary action-source density, not scalar Schur pressure.
@@ -567,12 +609,14 @@ python3 scripts/frontier_planck_overnight_closure_status_theorem.py
 - [PLANCK_SCALE_BARE_GRAVITY_SECTOR_UNIQUENESS_ATTEMPT_2026-04-24.md](./PLANCK_SCALE_BARE_GRAVITY_SECTOR_UNIQUENESS_ATTEMPT_2026-04-24.md) - B3 uniqueness attempt: conditional Einstein/Regge uniqueness after soldered metricity / symmetric spin-2 Ward identity; not a bare closure.
 - [PLANCK_SCALE_EDGE_CLIFFORD_KINEMATIC_SOLDERING_THEOREM_2026-04-24.md](./PLANCK_SCALE_EDGE_CLIFFORD_KINEMATIC_SOLDERING_THEOREM_2026-04-24.md) - B3 sub-lock closure: native flat edge-Clifford soldering and induced `delta_ij`, not dynamical gravity.
 - [PLANCK_SCALE_B3_DYNAMICAL_METRICITY_OBSTRUCTION_THEOREM_2026-04-24.md](./PLANCK_SCALE_B3_DYNAMICAL_METRICITY_OBSTRUCTION_THEOREM_2026-04-24.md) - B3 no-go/reduction: finite flat-frame symmetry has no infinitesimal local Ward generator for conserved symmetric spin-2 response.
+- [PLANCK_SCALE_B3_BARE_WARD_IDENTITY_NO_GO_2026-04-24.md](./PLANCK_SCALE_B3_BARE_WARD_IDENTITY_NO_GO_2026-04-24.md) - B3 no-go/reduction: scalar and antisymmetric bare-compatible response channels survive, so the symmetric spin-2 Ward identity is not forced.
 - [PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md](./PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md) - B4 conditional closure: once B3 derives gravity, the primitive representative is forced to be `P_A`.
 - [PLANCK_SCALE_ACTION_PHASE_CONVERSION_TARGET_THEOREM_2026-04-23.md](./PLANCK_SCALE_ACTION_PHASE_CONVERSION_TARGET_THEOREM_2026-04-23.md) - hbar/action-phase target: exact Planck on the minimal defect requires `q_* = 1/16`, equivalently `kappa_info = 1/32` per bit.
 - [PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md](./PLANCK_SCALE_PRIMITIVE_PHASE_TRACE_REDUCTION_THEOREM_2026-04-24.md) - hbar/action-phase reduction: source-free primitive phase functionals have trace shape `q_atom = gamma/16`; exact `1/16` is the `gamma = 1` scalar.
 - [PLANCK_SCALE_PRIMITIVE_ACTION_UNIT_GAMMA_ONE_ATTEMPT_2026-04-24.md](./PLANCK_SCALE_PRIMITIVE_ACTION_UNIT_GAMMA_ONE_ATTEMPT_2026-04-24.md) - gamma-one no-go/reduction: current premises are scale-homogeneous and cannot derive `Phi(I_16)=1`.
 - [PLANCK_SCALE_GAMMA_PHASE_PERIOD_OBSTRUCTION_THEOREM_2026-04-24.md](./PLANCK_SCALE_GAMMA_PHASE_PERIOD_OBSTRUCTION_THEOREM_2026-04-24.md) - hbar/gamma no-go: phase periodicity and finite central roots do not select real `gamma = 1`.
 - [PLANCK_SCALE_HBAR_STRONG_ROUTES_STATUS_THEOREM_2026-04-24.md](./PLANCK_SCALE_HBAR_STRONG_ROUTES_STATUS_THEOREM_2026-04-24.md) - hbar strong-routes audit: noncompact central, index, primitive action, and Ward routes remain viable but unclosed.
+- [PLANCK_SCALE_HBAR_NONHOMOGENEOUS_REAL_ACTION_UNIT_REDUCTION_THEOREM_2026-04-24.md](./PLANCK_SCALE_HBAR_NONHOMOGENEOUS_REAL_ACTION_UNIT_REDUCTION_THEOREM_2026-04-24.md) - hbar necessary-and-sufficient reduction: `gamma=1` iff the primitive `C^16` cell is the unit generator of reduced real action.
 - [PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md](./PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md) - final classification for this pass: conditional retained Planck theorem, not bare Planck+hbar closure.
 - [PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_EXTENSION_ACCEPTANCE_THEOREM_2026-04-23.md) - explicit P1 package-boundary move.
 - [PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md](./PLANCK_SCALE_ONE_AXIOM_ACCEPTANCE_HOSTILE_REVIEW_MEMO_2026-04-23.md) - hostile-review context, with its supersession note respected.

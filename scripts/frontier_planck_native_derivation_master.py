@@ -35,6 +35,7 @@ SUBCHECKS = [
     "frontier_planck_boundary_event_ward_identity_closure_theorem.py",
     "frontier_planck_boundary_event_ward_identity_derivation_theorem.py",
     "frontier_planck_boundary_source_functorial_ward_theorem.py",
+    "frontier_planck_parent_source_naturality_obstruction_theorem_2026_04_24.py",
     "frontier_planck_boundary_same_source_covariance_theorem.py",
     "frontier_planck_boundary_parent_source_equivalence_theorem.py",
     "frontier_planck_boundary_action_source_vs_pressure_classification_theorem.py",
@@ -47,6 +48,7 @@ SUBCHECKS = [
     "frontier_planck_bare_gravity_sector_uniqueness_attempt.py",
     "frontier_planck_edge_clifford_kinematic_soldering_theorem.py",
     "frontier_planck_b3_dynamical_metricity_obstruction_theorem.py",
+    "frontier_planck_b3_bare_ward_identity_no_go_2026_04_24.py",
     "frontier_planck_bare_boundary_representative_after_gravity_theorem.py",
     "frontier_planck_hbar_status_and_remaining_objections_audit.py",
     "frontier_planck_hbar_attack_order_theorem.py",
@@ -55,6 +57,7 @@ SUBCHECKS = [
     "frontier_planck_primitive_action_unit_gamma_one_attempt.py",
     "frontier_planck_gamma_phase_period_obstruction_theorem.py",
     "frontier_planck_hbar_strong_routes_status_theorem.py",
+    "frontier_planck_hbar_nonhomogeneous_real_action_unit_reduction_2026_04_24.py",
     "frontier_planck_overnight_closure_status_theorem.py",
 ]
 
@@ -99,6 +102,7 @@ def main() -> int:
     event_ward = read("docs/PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_CLOSURE_THEOREM_2026-04-23.md")
     event_ward_derivation = read("docs/PLANCK_SCALE_BOUNDARY_EVENT_WARD_IDENTITY_DERIVATION_THEOREM_2026-04-23.md")
     source_functorial_ward = read("docs/PLANCK_SCALE_BOUNDARY_SOURCE_FUNCTORIAL_WARD_THEOREM_2026-04-24.md")
+    parent_source_naturality = read("docs/PLANCK_SCALE_PARENT_SOURCE_NATURALITY_OBSTRUCTION_THEOREM_2026-04-24.md")
     same_source = read("docs/PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md")
     parent_source = read("docs/PLANCK_SCALE_BOUNDARY_PARENT_SOURCE_EQUIVALENCE_THEOREM_2026-04-23.md")
     source_vs_pressure = read("docs/PLANCK_SCALE_BOUNDARY_ACTION_SOURCE_VS_PRESSURE_CLASSIFICATION_THEOREM_2026-04-23.md")
@@ -111,6 +115,7 @@ def main() -> int:
     bare_gravity_attempt = read("docs/PLANCK_SCALE_BARE_GRAVITY_SECTOR_UNIQUENESS_ATTEMPT_2026-04-24.md")
     edge_soldering = read("docs/PLANCK_SCALE_EDGE_CLIFFORD_KINEMATIC_SOLDERING_THEOREM_2026-04-24.md")
     b3_metricity_obstruction = read("docs/PLANCK_SCALE_B3_DYNAMICAL_METRICITY_OBSTRUCTION_THEOREM_2026-04-24.md")
+    b3_bare_ward_no_go = read("docs/PLANCK_SCALE_B3_BARE_WARD_IDENTITY_NO_GO_2026-04-24.md")
     bare_boundary = read("docs/PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md")
     hbar_audit = read("docs/PLANCK_SCALE_HBAR_STATUS_AND_REMAINING_OBJECTIONS_AUDIT_2026-04-23.md")
     hbar_attack = read("docs/PLANCK_SCALE_HBAR_ATTACK_ORDER_THEOREM_2026-04-23.md")
@@ -119,6 +124,7 @@ def main() -> int:
     gamma_attempt = read("docs/PLANCK_SCALE_PRIMITIVE_ACTION_UNIT_GAMMA_ONE_ATTEMPT_2026-04-24.md")
     gamma_period = read("docs/PLANCK_SCALE_GAMMA_PHASE_PERIOD_OBSTRUCTION_THEOREM_2026-04-24.md")
     hbar_strong = read("docs/PLANCK_SCALE_HBAR_STRONG_ROUTES_STATUS_THEOREM_2026-04-24.md")
+    hbar_nonhomogeneous = read("docs/PLANCK_SCALE_HBAR_NONHOMOGENEOUS_REAL_ACTION_UNIT_REDUCTION_THEOREM_2026-04-24.md")
     overnight_status = read("docs/PLANCK_SCALE_OVERNIGHT_CLOSURE_STATUS_THEOREM_2026-04-24.md")
 
     for script in SUBCHECKS:
@@ -320,6 +326,18 @@ def main() -> int:
 
     total += 1
     passed += expect(
+        "parent-source-naturality-commutes-but-leaves-hidden-character",
+        "PLANCK_SCALE_PARENT_SOURCE_NATURALITY_OBSTRUCTION_THEOREM_2026-04-24.md"
+        in reviewer
+        and "carrier-level naturality diagram commutes" in parent_source_naturality
+        and "`chi_delta(s) = exp(s delta)`" in parent_source_naturality
+        and "functorial Schur representation remains an object-class input"
+        in parent_source_naturality
+        and "not a bare closure" in parent_source_naturality,
+    )
+
+    total += 1
+    passed += expect(
         "same-source-covariance-is-derived-by-quotient-no-hidden-scalar",
         "PLANCK_SCALE_BOUNDARY_SAME_SOURCE_COVARIANCE_THEOREM_2026-04-23.md"
         in reviewer
@@ -452,6 +470,19 @@ def main() -> int:
 
     total += 1
     passed += expect(
+        "b3-bare-ward-no-go-names-defect-to-coframe-primitive",
+        "PLANCK_SCALE_B3_BARE_WARD_IDENTITY_NO_GO_2026-04-24.md"
+        in reviewer
+        and "local gaugeable defect-to-coframe response primitive"
+        in b3_bare_ward_no_go
+        and "scalar trace channel" in b3_bare_ward_no_go
+        and "antisymmetric channel" in b3_bare_ward_no_go
+        and "symmetric traceless channel" in b3_bare_ward_no_go
+        and "B3 status is sharply reduced but not closed" in b3_bare_ward_no_go,
+    )
+
+    total += 1
+    passed += expect(
         "bare-boundary-representative-b4-conditional",
         "PLANCK_SCALE_BARE_BOUNDARY_REPRESENTATIVE_AFTER_GRAVITY_THEOREM_2026-04-23.md"
         in reviewer
@@ -538,6 +569,20 @@ def main() -> int:
         and "`Phi(A_cell) = 1`" in hbar_strong
         and "Reusing it for hbar would be circular" in hbar_strong
         and "None is closed in the current branch" in hbar_strong,
+    )
+
+    total += 1
+    passed += expect(
+        "hbar-nonhomogeneous-real-action-unit-is-necessary-and-sufficient",
+        "PLANCK_SCALE_HBAR_NONHOMOGENEOUS_REAL_ACTION_UNIT_REDUCTION_THEOREM_2026-04-24.md"
+        in reviewer
+        and "necessary-and-sufficient reduction" in hbar_nonhomogeneous
+        and "`Phi(A_cell) = Phi(I_16) = 1`" in hbar_nonhomogeneous
+        and "`q_atom = 1/16`" in hbar_nonhomogeneous
+        and "hbar/action-unit status is **conditional**, not\nunconditionally closed"
+        in hbar_nonhomogeneous
+        and "Ward route must derive a unit-calibrated microscopic action"
+        in hbar_nonhomogeneous,
     )
 
     total += 1
