@@ -174,6 +174,9 @@ space. The retained surface now carries:
 
 - `Lambda_vac = lambda_1(S^3_R)` as an exact structural identity
 - `w = -1` exactly on the same fixed-gap stationary-vacuum surface
+- the TT compactness spectral tower on `S^3`, with exact rational
+  squared-mass ratios and Higuchi margins, while numerical tower masses stay
+  bounded by the same open `R` identification
 - FRW late-time kinematic identities reducing `q_0`, acceleration onset
   `z_*`, matter-Lambda equality `z_{mLambda}`, and asymptotic `H_inf` to the
   same open ratio `H_inf/H_0`; these are structural relations, not point

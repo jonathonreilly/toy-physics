@@ -85,7 +85,8 @@ questions:
   action surface, exact `T = 0` confinement with bounded `sqrt(sigma)`, and
   retained discrete evanescent-barrier and Schwarzschild-interior support,
   plus retained/admitted cosmology identities including `w = -1` and the FRW
-  kinematic reduction to the open `H_inf/H_0` ratio
+  kinematic reduction to the open `H_inf/H_0` ratio, and the retained TT
+  compactness spectral tower on `S^3`
 - retained quantitative lanes:
   canonical `v = 246.282818290129 GeV`, retained `alpha_s(M_Z) = 0.1181`,
   retained EW normalization, promoted CKM atlas/axiom closure, bounded

@@ -42,6 +42,7 @@ For the full package-capture inventory, use:
   `S^3` topology closure, exact `I_3 = 0`, exact CPT, Bell/CHSH support,
   retained cosmology identities/corollaries, including the FRW kinematic
   reduction of late-time cosmology observables to the open `H_inf/H_0` ratio
+  and the retained TT compactness spectral tower on `S^3`
 - flagship closed package:
   dark-matter exact-target PMNS package on the manuscript surface
 - flagship open package:
