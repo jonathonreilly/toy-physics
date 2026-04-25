@@ -102,8 +102,9 @@ The current package keeps:
 - a fully retained Higgs/vacuum UV-to-IR theorem;
 - bounded/conditional cosmology;
 - one remaining flagship bridge package: charged-lepton Koide, now sharpened
-  to the zero-source readout, real-primitive endpoint, and based/unit endpoint
-  theorem targets without promoting full retained closure.
+  to physical background-zero / `Z`-erasure for `Q` and selected-line local
+  boundary-source plus based endpoint for `delta`, without promoting full
+  retained closure.
 
 ## 5. Prediction boundary
 

@@ -2,8 +2,7 @@
 
 **Date:** 2026-04-24
 **Runner:** `scripts/frontier_koide_q_delta_readout_retention_split_no_go.py`
-**Status:** split result; Q is reduced to a zero-source identification, full
-lane does not close
+**Status:** conditional support; neither Q nor the full lane closes retained-only
 
 ## Theorem Attempt
 
@@ -12,11 +11,11 @@ from existing retained source-response and APS observability notes.
 
 ## Result
 
-Split.
+Split, but not a retained closure on either side.
 
 ## Q Side
 
-The retained observable-principle notes support strict zero-source local scalar
+The retained observable-principle notes support local scalar source-response
 readout:
 
 ```text
@@ -24,24 +23,25 @@ physical scalar observables = coefficients in the local source expansion
 of W[J] after subtracting the zero-source baseline.
 ```
 
-On the exact normalized second-order carrier:
+On the exact normalized second-order carrier, the zero-background member gives:
 
 ```text
 W_red(K) = log(1+K_plus) + log(1+K_perp)
 dW/dK |_{K=0} = (1,1).
 ```
 
-If this strict zero-source source-response readout is separately retained as
-the physical charged-lepton scalar selector, then:
+Conditionally, this gives:
 
 ```text
 K_TL = 0
 Q = 2/3.
 ```
 
-This reframes nonzero `K` as an external probe/source coordinate, not the
-physical baseline readout.  It does not by itself prove that the physical
-charged-lepton selector must use that zero-source baseline.
+But source-response coefficients are zero-probe coefficients around a chosen
+background. The current retained packet does not prove that the physical
+charged-lepton background source is zero. A nonzero traceless background is
+still an exact source-response background and is the surviving `Z` source
+coordinate.
 
 ## Delta Side
 
@@ -69,21 +69,23 @@ bridge, not a derivation from APS alone.
 ## Residual
 
 ```text
-RESIDUAL_SCALAR = closed_APS_to_open_selected_line_endpoint_functor
+RESIDUAL_Q = derive_physical_background_source_zero_equiv_Z_erasure
+RESIDUAL_SCALAR = derive_Q_background_zero_and_closed_APS_to_open_endpoint_functor
 RESIDUAL_DELTA = selected_line_endpoint_transition_tau_not_removed_by_closed_readout
 ```
 
 ## Consequence
 
-The condition is partly reduced:
+The condition is sharpened:
 
 ```text
-Q source condition:       reduced to the strict zero-source readout theorem;
+Q source condition:       zero-probe readout is retained, but zero physical
+                          background remains to be derived;
 delta endpoint condition: still open.
 ```
 
 Full dimensionless Koide closure still needs the endpoint functor/descent
-theorem.
+theorem and the Q background-zero/Z-erasure theorem.
 
 ## Verification
 
@@ -99,9 +101,10 @@ Expected closeout:
 ```text
 KOIDE_Q_DELTA_READOUT_RETENTION_SPLIT_NO_GO=TRUE
 Q_DELTA_READOUT_RETENTION_SPLIT_CLOSES_Q=FALSE
-Q_DELTA_READOUT_RETENTION_SPLIT_REDUCES_Q_TO_ZERO_SOURCE_READOUT=TRUE
 Q_DELTA_READOUT_RETENTION_SPLIT_CLOSES_DELTA=FALSE
 Q_DELTA_READOUT_RETENTION_SPLIT_CLOSES_FULL_LANE=FALSE
-RESIDUAL_SCALAR=closed_APS_to_open_selected_line_endpoint_functor
+CONDITIONAL_Q_CLOSES_IF_PHYSICAL_BACKGROUND_SOURCE_IS_ZERO=TRUE
+RESIDUAL_Q=derive_physical_background_source_zero_equiv_Z_erasure
+RESIDUAL_SCALAR=derive_Q_background_zero_and_closed_APS_to_open_endpoint_functor
 RESIDUAL_DELTA=selected_line_endpoint_transition_tau_not_removed_by_closed_readout
 ```

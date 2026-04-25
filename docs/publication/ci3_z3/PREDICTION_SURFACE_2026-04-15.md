@@ -163,8 +163,9 @@ conceptual pressure.
   bounds rather than a full PMNS or solar-gap closure
 - charged-lepton Koide:
   both physical bridges remain open:
-  the extremal/source-law bridge behind `Q = 2/3` and the physical
-  Brannen-phase bridge behind `delta = 2/9`
+  the physical background-zero / `Z`-erasure law behind `Q = 2/3` and the
+  selected-line local boundary-source plus based-endpoint law behind
+  `delta = 2/9`
 
 ## Structural predictions and signatures
 
@@ -276,12 +277,13 @@ Authority:
 The main remaining flagship bridge package is now the charged-lepton Koide
 lane:
 
-- `Q = 2/3` is reduced to the zero-source source-response readout theorem
-- `delta = 2/9` is reduced to the Brannen real-primitive endpoint plus
-  based/unit endpoint readout theorem
+- `Q = 2/3` is conditionally reduced to zero background source, but retained
+  completeness still carries the traceless `Z` source coordinate
+- `delta = 2/9` is conditionally reduced to selected-line local boundary
+  source plus based endpoint
 - pointed-origin exhaustion proves origin-free retained data cannot select the
-  closing representative; the remaining theorem must derive the pointed
-  source/boundary-origin law itself
+  closing representative; the remaining theorem must derive the physical
+  source/boundary-origin laws themselves
 
 Outside that flagship lane, the main open promotions are:
 

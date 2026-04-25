@@ -14,22 +14,22 @@ data cannot select the closing representative.
 The stronger branch claim,
 
 ```text
-pointed source/boundary origin law is already derived
+physical source/boundary origin law is already derived
 -> Q = 2/3 and delta = 2/9 are retained/native closure
 ```
 
 is not landed. It still requires the physical theorem identifying the
-charged-lepton readout with the pointed source-free baseline, the physical
-Brannen endpoint with the whole real nontrivial `Z3` primitive, and the open
-endpoint readout with a based/unit determinant or Pfaffian functor.
+charged-lepton readout with background-zero / `Z`-erasure, the physical
+Brannen endpoint with selected-line local boundary-source support, and the
+open endpoint readout with a based endpoint section.
 
 ## Theorem
 
 Let the residual dimensionless Koide atlas carry three unpointed freedoms:
 
 ```text
-Q source-response:       source-origin translation
-Brannen endpoint:        CP1 line choice in the rank-two real primitive
+Q source-response:       background-source translation
+Brannen endpoint:        CP1/selected-line source choice in the rank-two primitive
 open endpoint readout:   endpoint torsor translation
 ```
 
@@ -38,12 +38,12 @@ open charged-lepton readouts change. Therefore origin-free retained data do
 not force the simultaneous closing representative
 
 ```text
-source origin = 0
-CP1 selector absent / real primitive descends whole
+physical background source = 0 / Z erased
+selected-line local boundary source selected
 endpoint torsor basepoint = 0
 ```
 
-The next positive theorem remains a retained pointed source/boundary-origin
+The next positive theorem remains a retained physical source/boundary-origin
 law, not a value-matching argument.
 
 ## Exact Checks
@@ -70,7 +70,8 @@ constant:
 P(a+r) = P(a) for all r  =>  P is constant.
 ```
 
-Thus unpointed source data cannot choose the zero-source representative.
+Thus unpointed source data cannot choose the zero-background / `Z`-erased
+representative.
 
 ### Brannen endpoint line fibre
 
@@ -107,9 +108,9 @@ demoted to an open proposal.
 ## Explicit Non-Claims
 
 - Does not claim retained/native Koide dimensionless closure.
-- Does not derive the physical zero-source charged-lepton readout.
-- Does not derive the Brannen endpoint as the whole real primitive.
-- Does not derive the open endpoint functor as based/unit-preserving.
+- Does not derive the physical background-zero / `Z`-erasure law for `Q`.
+- Does not derive the selected-line local boundary-source law for `delta`.
+- Does not derive the open endpoint section as based/unit-preserving.
 - Does not address the separate overall lepton scale `v_0`.
 
 ## Verification
@@ -126,5 +127,6 @@ RETAINED_UNPOINTED_DATA_FORCE_POINTED_ORIGIN=FALSE
 POINTED_ORIGIN_LAW_WOULD_CLOSE_DIMENSIONLESS_LANE_WITHIN_RESIDUAL_ATLAS=TRUE
 POINTED_ORIGIN_LAW_IS_NECESSARY_WITHIN_RESIDUAL_ATLAS=TRUE
 KOIDE_DIMENSIONLESS_LANE_CLOSED_BY_THIS_RUNNER=FALSE
-RESIDUAL_PRIMITIVE=retained_pointed_source_boundary_origin_law
+RESIDUAL_PRIMITIVE=retained_physical_source_boundary_origin_laws
+NEXT_THEOREM=derive_physical_source_boundary_origin_laws_from_retained_charged_lepton_physics
 ```

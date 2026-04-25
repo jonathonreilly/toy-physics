@@ -110,10 +110,10 @@ questions:
   transport, and bounded Higgs/vacuum closure
 - charged-lepton package:
   substantial Koide support stack; the latest native zero-section review
-  and pointed-origin exhaustion theorem reject full dimensionless closure but
-  sharpen the remaining work to one pointed source/boundary-origin law:
-  zero-source charged-lepton readout, Brannen real-primitive endpoint
-  identification, and based/unit endpoint readout
+  pointed-origin exhaustion theorem, and objection-closure review reject full
+  dimensionless closure but sharpen the remaining work to a physical
+  background-zero / `Z`-erasure theorem for `Q`, plus a selected-line local
+  boundary-source and based-endpoint theorem for `delta`
 - dark-matter package:
   closed for the exact PMNS-target formulation treated in the manuscript,
   including the source-selection and ordered-current closure chain, with the

@@ -13,17 +13,18 @@ What lands here is narrower:
 
 ```text
 Q:
-  strict zero-source source-response readout
+  zero-probe source-response about a zero physical background
   -> K_TL = 0
   -> Q = 2/3
-  remains a physical-readout identification theorem unless separately derived.
+  remains a physical background-zero / Z-erasure theorem unless separately
+  derived.
 
 delta:
-  whole real nontrivial Z3 primitive + unit-preserving endpoint readout
+  selected-line local boundary source + based endpoint readout
   -> spectator = 0 and c = 0
   -> delta = eta_APS = 2/9
-  remains conditional until the Brannen endpoint is derived as that primitive
-  and the endpoint readout is derived as based/unit-preserving.
+  remains conditional until the physical selected-line endpoint source algebra
+  and endpoint basepoint are derived.
 ```
 
 So the strongest retained statement is:
@@ -32,7 +33,9 @@ So the strongest retained statement is:
 KOIDE_DIMENSIONLESS_NATIVE_CLOSURE=FALSE
 KOIDE_NATIVE_ZERO_SECTION_ROUTE=CONDITIONAL
 NEXT_NATIVE_THEOREM=
-  derive_Brannen_endpoint_as_real_Z3_primitive_and_unit_determinant_readout
+  derive_physical_background_source_zero_equiv_Z_erasure
+  derive_selected_line_local_boundary_source_law
+  derive_based_endpoint_section
 ```
 
 ## Landed science
@@ -41,8 +44,8 @@ NEXT_NATIVE_THEOREM=
    kernels but does not choose their zero section.  The missing statement is a
    retained canonical-section / primitive-readout theorem.
 
-2. **Readout-retention split.**  The Q side is reduced to the strict
-   zero-source source-response readout question.  The delta side still needs a
+2. **Readout-retention split.**  The Q side is reduced to the physical
+   background-zero / `Z`-erasure question.  The delta side still needs a
    closed-APS to open-endpoint functor.
 
 3. **Marked relative-cobordism no-go.**  A boundary mark derived from retained
@@ -61,10 +64,18 @@ NEXT_NATIVE_THEOREM=
    closure.
 
 6. **Pointed-origin exhaustion.** Origin-free retained data cannot select the
-   simultaneous zero-source, no-CP1-selector, unit-endpoint representative.
+   simultaneous zero-background / `Z`-erased, no-CP1-selector, unit-endpoint
+   representative.
    The reviewed positive pointed-origin closure proposal is therefore not
    retained as closure; what lands is the sharper residual theorem naming the
-   needed pointed source/boundary-origin law.
+   needed physical source/boundary-origin laws.
+
+7. **Dimensionless objection-closure review.** The later objection-closure
+   branch does not close the dimensionless lane. It sharpens Q to a physical
+   background-zero / `Z`-erasure theorem and sharpens delta to a selected-line
+   local boundary-source law plus based endpoint section. The positive
+   source-domain closure language is kept as conditional support, not retained
+   closure.
 
 ## Explicitly not landed
 
@@ -74,11 +85,22 @@ claim is not landed as retained closure.  Its decisive steps identify:
 ```text
 physical Brannen endpoint = whole real nontrivial Z3 primitive
 open endpoint readout = based/unit-preserving determinant functor
-physical charged-lepton scalar selector = zero-source readout
+physical charged-lepton scalar selector = zero physical background / Z-erasure
 ```
 
 Those identifications are exactly the remaining scientific work unless a later
 retained theorem derives them from the accepted charged-lepton construction.
+
+The later source-domain closure claim is also not landed as retained closure.
+Its decisive steps identify:
+
+```text
+physical charged-lepton background source has z = 0 / erases Z
+physical Brannen endpoint source algebra = End(L_chi)
+physical open endpoint section has c = 0
+```
+
+Those are now the named residuals.
 
 ## Verification
 
@@ -90,6 +112,7 @@ python3 scripts/frontier_koide_q_delta_readout_retention_split_no_go.py
 python3 scripts/frontier_koide_delta_marked_relative_cobordism_no_go.py
 python3 scripts/frontier_koide_delta_lattice_wilson_selected_eigenline_no_go.py
 python3 scripts/frontier_koide_pointed_origin_exhaustion_theorem.py
+python3 scripts/frontier_koide_dimensionless_objection_closure_review.py
 python3 scripts/frontier_koide_native_zero_section_closure_route.py
 python3 scripts/frontier_koide_native_zero_section_nature_review.py
 python3 scripts/frontier_koide_hostile_review_guard.py

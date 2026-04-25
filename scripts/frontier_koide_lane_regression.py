@@ -44,6 +44,7 @@ RUNNERS = [
     ("frontier_koide_a1_cv_equals_one.py", 4),
     ("frontier_koide_a1_block_democracy_max_entropy.py", 5),
     ("frontier_koide_pointed_origin_exhaustion_theorem.py", 15),
+    ("frontier_koide_dimensionless_objection_closure_review.py", 21),
 ]
 
 EXPECTED_TOTAL = sum(n for _, n in RUNNERS)
@@ -126,11 +127,12 @@ def main() -> int:
         print("                      : added as support diagnostics and atlas tools")
         print("  - pointed-origin    : exhaustion theorem shows origin-free retained data")
         print("                      cannot select the closing representative")
+        print("  - objection review  : source-domain closure demoted to conditional")
+        print("                      support with explicit Q and delta residuals")
         print()
         print("Open package status is unchanged:")
-        print("  - pointed source/boundary-origin law remains open")
-        print("  - physical/source-law bridge behind Q = 2/3 remains open")
-        print("  - physical Brannen-phase bridge behind δ = 2/9 remains open")
+        print("  - physical background-zero / Z-erasure behind Q = 2/3 remains open")
+        print("  - selected-line local boundary source plus based endpoint behind δ = 2/9 remains open")
         print("  - overall scale lane v_0 remains separate support")
         return 0
     else:

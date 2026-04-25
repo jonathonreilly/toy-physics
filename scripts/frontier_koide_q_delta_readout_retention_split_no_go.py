@@ -10,15 +10,14 @@ Result:
   Split.
 
   Q side:
-    The retained observable-principle notes do support a strict zero-source
-    local scalar readout: physical scalar observables are coefficients in the
-    local source expansion of W[J] at the zero-source baseline.  On the exact
-    normalized second-order carrier, that readout gives Y=I_2, hence K_TL=0
-    and Q=2/3.
+    The retained observable-principle notes support local scalar readout as
+    source-response coefficients. On the exact normalized second-order
+    carrier, the zero-background member gives Y=I_2, hence K_TL=0 and Q=2/3.
 
-    This is stronger than generic central observability, because arbitrary
-    nonzero K is an external probe/source coordinate rather than the physical
-    baseline readout.
+    But source-response coefficients are probe-zero coefficients around a
+    chosen background. The current retained packet does not prove that the
+    physical charged-lepton background source is zero. Thus the Q result is
+    conditional support, not retained-only closure.
 
   Delta side:
     The same readout idea does not remove the Brannen bridge.  Closed APS
@@ -27,8 +26,9 @@ Result:
     identifies it with the closed holonomy.  Replacing the open endpoint by the
     closed APS value is a readout change, not a derivation.
 
-Therefore this route can advance Q, but it does not close the full
-dimensionless Koide lane without the endpoint descent/functor law.
+Therefore this route sharpens both sides, but it does not close the full
+dimensionless Koide lane without the Q background-zero law and the delta
+endpoint descent/functor law.
 
 No PDG masses, target fitted value, or H_* pin is used.
 """
@@ -98,12 +98,12 @@ def main() -> int:
         and "local curvature of the effective action" in hierarchy_note
     )
     record(
-        "A.1 retained notes support zero-source local scalar source-response readout",
+        "A.1 retained notes support local scalar source-response readout",
         source_response_supported,
         "observable principle + hierarchy selector notes identify physical scalar readout with source-expansion coefficients.",
     )
 
-    section("B. Q consequence of strict zero-source readout")
+    section("B. Q consequence of zero-background source-response")
 
     k_plus, k_perp = sp.symbols("k_plus k_perp", real=True)
     w_red = sp.log(1 + k_plus) + sp.log(1 + k_perp)
@@ -111,21 +111,21 @@ def main() -> int:
     y_perp = sp.simplify(sp.diff(w_red, k_perp))
     y0 = (sp.simplify(y_plus.subs(k_plus, 0)), sp.simplify(y_perp.subs(k_perp, 0)))
     record(
-        "B.1 exact reduced generator gives Y=(1,1) at zero source",
+        "B.1 exact reduced generator gives Y=(1,1) at zero background source",
         y0 == (1, 1),
         f"W_red={w_red}; dW/dK|0={y0}",
     )
     record(
-        "B.2 zero-source readout gives K_TL=0 and Q=2/3",
+        "B.2 zero-background readout gives K_TL=0 and Q=2/3",
         ktl_from_y(*y0) == 0 and q_from_y(*y0) == sp.Rational(2, 3),
         f"K_TL={ktl_from_y(*y0)}, Q={q_from_y(*y0)}",
     )
     y = sp.symbols("y", positive=True, real=True)
     k_probe = (sp.simplify(1 / y - 1), sp.simplify(1 / (2 - y) - 1))
     record(
-        "B.3 nonzero K remains an external probe coordinate, not the strict physical baseline",
+        "B.3 zero-background source is the extra Q condition, not a readout consequence",
         sp.solve([sp.Eq(k_probe[0], 0), sp.Eq(k_probe[1], 0)], [y], dict=True) == [{y: 1}],
-        f"K(y)={k_probe}; zero source only at y=1.",
+        f"K(y)={k_probe}; zero background only at y=1.",
     )
 
     section("C. Delta does not follow from closed readout alone")
@@ -152,9 +152,9 @@ def main() -> int:
     section("D. Full-lane verdict")
 
     record(
-        "D.1 strict source-response readout reduces the Q residual to one physical identification",
+        "D.1 strict source-response readout conditionally closes the Q residual",
         True,
-        "Q is removed only if the charged-lepton scalar selector is the retained zero-source source-response coefficient.",
+        "Q residual is removed only if the charged-lepton scalar selector is proven to have zero physical background source.",
     )
     record(
         "D.2 strict readout does not close the delta residual",
@@ -162,9 +162,9 @@ def main() -> int:
         "Delta still needs the closed-APS-to-open-selected-line endpoint functor or descent law.",
     )
     record(
-        "D.3 full operational-quotient descent condition is not fully removed",
+        "D.3 full operational-quotient descent condition is not removed",
         True,
-        "The endpoint part of the condition remains.",
+        "The Q background-zero part and delta endpoint part both remain as retention questions.",
     )
 
     print()
@@ -179,13 +179,14 @@ def main() -> int:
 
     print()
     if n_pass == n_total:
-        print("VERDICT: strict readout reduces the Q source condition but does not close the full lane.")
+        print("VERDICT: strict readout is conditional support, not retained closure.")
         print("KOIDE_Q_DELTA_READOUT_RETENTION_SPLIT_NO_GO=TRUE")
         print("Q_DELTA_READOUT_RETENTION_SPLIT_CLOSES_Q=FALSE")
-        print("Q_DELTA_READOUT_RETENTION_SPLIT_REDUCES_Q_TO_ZERO_SOURCE_READOUT=TRUE")
         print("Q_DELTA_READOUT_RETENTION_SPLIT_CLOSES_DELTA=FALSE")
         print("Q_DELTA_READOUT_RETENTION_SPLIT_CLOSES_FULL_LANE=FALSE")
-        print("RESIDUAL_SCALAR=closed_APS_to_open_selected_line_endpoint_functor")
+        print("CONDITIONAL_Q_CLOSES_IF_PHYSICAL_BACKGROUND_SOURCE_IS_ZERO=TRUE")
+        print("RESIDUAL_Q=derive_physical_background_source_zero_equiv_Z_erasure")
+        print("RESIDUAL_SCALAR=derive_Q_background_zero_and_closed_APS_to_open_endpoint_functor")
         print("RESIDUAL_DELTA=selected_line_endpoint_transition_tau_not_removed_by_closed_readout")
         return 0
 
@@ -194,7 +195,7 @@ def main() -> int:
     print("Q_DELTA_READOUT_RETENTION_SPLIT_CLOSES_Q=FALSE")
     print("Q_DELTA_READOUT_RETENTION_SPLIT_CLOSES_DELTA=FALSE")
     print("Q_DELTA_READOUT_RETENTION_SPLIT_CLOSES_FULL_LANE=FALSE")
-    print("RESIDUAL_SCALAR=closed_APS_to_open_selected_line_endpoint_functor")
+    print("RESIDUAL_SCALAR=derive_Q_background_zero_and_closed_APS_to_open_endpoint_functor")
     return 1
 
 

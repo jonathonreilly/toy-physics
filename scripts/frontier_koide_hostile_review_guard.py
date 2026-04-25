@@ -20,10 +20,12 @@ ROOT = Path(__file__).resolve().parents[1]
 DOC_GLOBS = [
     "docs/KOIDE_Q_*NO_GO_NOTE_2026-04-24.md",
     "docs/KOIDE_DELTA_*NO_GO_NOTE_2026-04-24.md",
+    "docs/KOIDE_DIMENSIONLESS_OBJECTION_CLOSURE_REVIEW_PACKET_2026-04-24.md",
 ]
 SCRIPT_GLOBS = [
     "scripts/frontier_koide_q_*no_go.py",
     "scripts/frontier_koide_delta_*no_go.py",
+    "scripts/frontier_koide_dimensionless_objection_closure_review.py",
 ]
 
 FORBIDDEN_PROMOTION_PATTERNS = [

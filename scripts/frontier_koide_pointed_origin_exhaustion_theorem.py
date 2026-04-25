@@ -201,9 +201,9 @@ def main() -> int:
         "The residual fibres are translation/line torsors under the unpointed tests.",
     )
     record(
-        "E.2 the next positive theorem is a retained pointed source/boundary-origin law",
+        "E.2 the next positive theorem is a retained physical source/boundary-origin law",
         True,
-        "It must derive source origin, CP1 descent/absence, and endpoint unit basepoint.",
+        "It must derive background-zero/Z-erasure, selected-line boundary source, and endpoint basepoint.",
     )
     record(
         "E.3 this theorem does not claim retained Koide closure",
@@ -228,8 +228,8 @@ def main() -> int:
         print("POINTED_ORIGIN_LAW_WOULD_CLOSE_DIMENSIONLESS_LANE_WITHIN_RESIDUAL_ATLAS=TRUE")
         print("POINTED_ORIGIN_LAW_IS_NECESSARY_WITHIN_RESIDUAL_ATLAS=TRUE")
         print("KOIDE_DIMENSIONLESS_LANE_CLOSED_BY_THIS_RUNNER=FALSE")
-        print("RESIDUAL_PRIMITIVE=retained_pointed_source_boundary_origin_law")
-        print("NEXT_THEOREM=derive_pointed_origin_law_from_retained_charged_lepton_physics")
+        print("RESIDUAL_PRIMITIVE=retained_physical_source_boundary_origin_laws")
+        print("NEXT_THEOREM=derive_physical_source_boundary_origin_laws_from_retained_charged_lepton_physics")
         return 0
 
     print("KOIDE_POINTED_ORIGIN_EXHAUSTION_THEOREM=FALSE")

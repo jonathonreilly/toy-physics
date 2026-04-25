@@ -59,10 +59,11 @@ For the full package-capture inventory, use:
   dark-matter exact-target PMNS package on the manuscript surface
 - flagship open package:
   charged-lepton Koide, with full dimensionless closure still open after the
-  native zero-section review and pointed-origin exhaustion theorem; the live
-  target is now one pointed source/boundary-origin theorem covering the
-  zero-source readout, real-primitive Brannen endpoint, and based/unit endpoint
-  readout, plus the separate overall lepton scale `v_0`
+  native zero-section review, pointed-origin exhaustion theorem, and
+  objection-closure review; the live target is now a physical background-zero /
+  `Z`-erasure theorem for `Q`, plus a selected-line local boundary-source and
+  based-endpoint theorem for `delta`, plus the separate overall lepton scale
+  `v_0`
 - bounded companion surface:
   Higgs/vacuum, down-type CKM-dual ratios, neutrino absolute-mass observable
   bounds, proton lifetime, neutron EDM continuation, taste-scalar companion,
