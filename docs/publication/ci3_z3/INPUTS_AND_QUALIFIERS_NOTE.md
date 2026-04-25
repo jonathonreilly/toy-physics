@@ -88,6 +88,10 @@ Current absolute-scale package rule:
 - the carrier-only parent-source scalar route is closed negatively; carrier
   data alone leave an affine hidden character `delta`, so scalar equality
   requires a separate no-hidden-character law
+- the simple-fiber Widom entropy-carrier route is closed negatively; straight
+  cuts with at most one occupied `k_x` interval per transverse momentum fiber,
+  plus consistently normalized Schur/direct-sum descendants, obey
+  `c_Widom <= 1/6`, not `1/4`
 - authority:
   [PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md](../../PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md),
   [PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md](../../PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md),

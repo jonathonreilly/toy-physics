@@ -142,3 +142,14 @@ If a reviewer wants the positive statement, use:
 - [PREDICTION_SURFACE_2026-04-15.md](./PREDICTION_SURFACE_2026-04-15.md)
 
 If a reviewer wants the negative boundary, use this note.
+
+## 7. Planck / entropy-carrier boundary
+
+- The package does not derive `a = l_P` from the minimal stack. It carries the
+  Planck scale as the current physical-lattice package pin, with conditional
+  completion once the gravitational boundary/action carrier is accepted.
+- The primitive `c_cell = 1/4` boundary-density statement is not an
+  entanglement theorem by itself. The simple-fiber Widom class is now closed
+  negatively at `c_Widom <= 1/6`; a positive entropy route to `1/4` still needs
+  a physical multi-pocket/multi-interval Fermi carrier or a gapped
+  horizon-sector primitive-boundary theorem.

@@ -57,7 +57,16 @@ def main() -> int:
         f"current carrier gives {widom_coeff:.6f}; target is {bh_target:.6f}",
     )
 
-    # 5. Naive vacuum-energy back-out is the wrong mechanism and points to an IR scale.
+    # 5. The broader simple-fiber Widom class cannot reach the quarter either.
+    simple_fiber_bound = 2.0 / 12.0
+    total += 1
+    passed += check(
+        "Simple-fiber Widom class is also bounded below the quarter",
+        simple_fiber_bound == widom_coeff and simple_fiber_bound < bh_target,
+        f"simple-fiber upper bound = {simple_fiber_bound:.6f}; target is {bh_target:.6f}",
+    )
+
+    # 6. Naive vacuum-energy back-out is the wrong mechanism and points to an IR scale.
     lambda_obs = 1.1e-52  # m^-2
     l_planck = 1.616255e-35  # m
     implied_radius = math.sqrt(3.0 / lambda_obs)

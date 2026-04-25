@@ -52,7 +52,8 @@ questions:
   conditional completion theorem and finite-boundary density extension reducing
   the remaining Planck question to the gravitational boundary/action carrier
   identification; finite-response-only and carrier-only parent-source
-  shortcuts are retained no-gos
+  shortcuts are retained no-gos, and the simple-fiber Widom entropy-carrier
+  class is now closed negatively at `c_Widom <= 1/6`, not `1/4`
 - bounded but explicit forward/companion surface:
   neutrino absolute-mass observable bounds, proton lifetime, CKM-only neutron
   EDM continuation, vacuum criticality, taste-scalar near-degeneracy,

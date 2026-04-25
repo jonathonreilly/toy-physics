@@ -137,7 +137,10 @@ Validate with:
   is accepted as the gravitational boundary/action carrier, while the
   minimal-stack derivation of that carrier identification remains open; the
   finite-automorphism-only response route and carrier-only parent-source scalar
-  route are closed negatively
+  route are closed negatively; the simple-fiber Widom entropy-carrier class is
+  also closed negatively at `c_Widom <= 1/6`, so a positive `1/4` entropy route
+  must use a physically selected multi-pocket/multi-interval carrier or a
+  gapped horizon-sector primitive-boundary theorem
 
 Start with:
 
@@ -148,6 +151,7 @@ Start with:
 - [PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md](../../PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md)
 - [PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md](../../PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md)
 - [PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md](../../PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md)
+- [AREA_LAW_QUARTER_BROADER_NO_GO_NOTE_2026-04-25.md](../../AREA_LAW_QUARTER_BROADER_NO_GO_NOTE_2026-04-25.md)
 
 Validate with:
 
@@ -164,6 +168,7 @@ Validate with:
 - `python3 scripts/frontier_planck_boundary_density_extension.py`
 - `python3 scripts/frontier_planck_finite_response_nogo.py`
 - `python3 scripts/frontier_planck_parent_source_hidden_character_nogo.py`
+- `python3 scripts/frontier_area_law_quarter_broader_no_go.py`
 
 ## Flavor, CP, and Charged-Lepton Structure
 

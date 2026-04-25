@@ -1,7 +1,7 @@
 # Area-Law Quarter Broader No-Go Note
 
 **Date:** 2026-04-25
-**Status:** retained Phase 2 no-go candidate for Planck Target 2
+**Status:** retained no-go support theorem for Planck Target 2
 **Runner:** `scripts/frontier_area_law_quarter_broader_no_go.py`
 
 ## Purpose

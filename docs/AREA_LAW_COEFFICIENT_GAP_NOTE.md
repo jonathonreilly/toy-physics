@@ -1,7 +1,7 @@
 # Area-Law Coefficient Gap Audit
 
 **Date:** 2026-04-25
-**Status:** Phase 1 audit for Planck Target 2
+**Status:** Planck Target 2 audit / support note
 
 ## Purpose
 
@@ -144,9 +144,10 @@ real residual axiom, not a numerical tuning problem.
 ## Audit conclusion
 
 The question is not implicitly closed by the existing single-carrier no-go, but
-the available positive routes are not theorem-ready. The clean Phase 2 result is
-a broader Widom-class no-go for simple-fiber free-fermion and Schur/direct-sum
-descendants. A future positive Target 2 route must add a physical axiom selecting
+the available positive routes are not theorem-ready. The clean retained result
+is a broader Widom-class no-go for simple-fiber free-fermion and
+Schur/direct-sum descendants. A future positive Target 2 route must add a
+physical axiom selecting
 either:
 
 1. a non-engineered multi-pocket/multi-interval Fermi carrier with projected
