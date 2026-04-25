@@ -44,24 +44,36 @@ def main() -> int:
 
     q_bare = 1.0
     bare_monopole = q_bare * g_kernel
-    bare_flux = omega_2 * bare_monopole
+    bare_flux_magnitude = omega_2 * bare_monopole
+    bare_normalized_gauss_charge = bare_flux_magnitude / omega_2
     record(
         checks,
         "unit bare delta has unit Gauss flux, not unit Newton monopole",
-        close(bare_monopole, 1.0 / omega_2) and close(bare_flux, 1.0),
-        f"phi~{bare_monopole:.15f}/r; flux={bare_flux:.12f}",
+        close(bare_monopole, 1.0 / omega_2)
+        and close(bare_flux_magnitude, 1.0)
+        and close(bare_normalized_gauss_charge, bare_monopole),
+        (
+            f"phi~{bare_monopole:.15f}/r; |flux|={bare_flux_magnitude:.12f}; "
+            f"normalized_charge={bare_normalized_gauss_charge:.15f}"
+        ),
     )
 
     m_phys = 1.0
     source_unit = omega_2
     q_for_unit_mass = source_unit * m_phys
     physical_monopole = q_for_unit_mass * g_kernel
-    physical_flux = omega_2 * physical_monopole
+    physical_flux_magnitude = omega_2 * physical_monopole
+    physical_normalized_gauss_charge = physical_flux_magnitude / omega_2
     record(
         checks,
-        "Gauss/Newton source unit gives unit 1/r monopole",
-        close(physical_monopole, m_phys) and close(physical_flux, omega_2),
-        f"q_bare=4*pi*M_phys gives phi~{physical_monopole:.12f}/r",
+        "normalized Gauss charge equals the physical monopole mass",
+        close(physical_monopole, m_phys)
+        and close(physical_flux_magnitude, omega_2)
+        and close(physical_normalized_gauss_charge, m_phys),
+        (
+            f"q_bare=4*pi*M_phys gives phi~{physical_monopole:.12f}/r; "
+            f"normalized_charge={physical_normalized_gauss_charge:.12f}"
+        ),
     )
 
     trial_source_units = [1.0, omega_2 / 2.0, omega_2, 2.0 * omega_2]

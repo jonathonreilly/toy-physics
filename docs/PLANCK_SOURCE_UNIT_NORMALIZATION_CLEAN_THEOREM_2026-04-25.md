@@ -108,13 +108,59 @@ yet identified the physical mass unit.
 The Gauss flux of the bare unit source is normalized:
 
 ```text
-4 pi r^2 partial_r phi -> 1.
+-4 pi r^2 partial_r phi -> 1.
 ```
 
 So `1/(4 pi)` is exactly the angular kernel coefficient required by a unit
 bare source in three spatial dimensions.
 
-## Lemma 2: Physical Mass Is the Monopole Source Unit
+## Lemma 2: Physical Mass Is the Unique Exterior Monopole Charge
+
+This step is the proof obligation behind the phrase "physical Newton mass."
+It is not a bare algebra identity. It is a uniqueness theorem from three
+operational requirements:
+
+1. **Exterior observability.** A gravitational source charge must be readable
+   from the field outside any compact source. Two compact sources with the
+   same exterior field have the same active gravitational mass.
+2. **Additivity.** Disjoint compact sources have additive gravitational mass.
+3. **Newton normalization.** A unit source mass is the source whose far-field
+   Newton potential has unit `1/r` coefficient in lattice natural units.
+
+For any compact source, the exterior solution is harmonic and has multipole
+expansion
+
+```text
+phi(r,Omega) = C/r + dipole/r^2 + ...
+```
+
+The only rotational scalar visible at leading exterior order is the monopole
+coefficient `C`. Additivity of the field makes `C` additive under disjoint
+sources. Newton normalization fixes the proportionality constant, so the
+unique physical active mass readout in these units is
+
+```text
+M_phys = C.
+```
+
+The same statement can be written as normalized Gauss charge:
+
+```text
+M_phys = -(1/(4 pi)) lim_{R -> infinity} int_{S_R} n . grad phi dA.
+```
+
+For a positive Green response `phi -> C/r`, the oriented outward flux of
+`grad phi` is `-4 pi C`, while the normalized Gauss charge is `C`. Thus the
+physical mass is the normalized Gauss charge / asymptotic monopole
+coefficient, not the raw coefficient of a chosen regulator delta in the source
+equation.
+
+The bare regulator coefficient fails the exterior-observability test as a
+physical definition: changing the source variable normalization changes the
+coefficient called `q_bare`, while the exterior field and normalized Gauss
+charge are unchanged. The observable object is the exterior monopole.
+
+## Lemma 3: Source Conversion Is Forced
 
 The Newton field observes a mass through its asymptotic monopole coefficient:
 
@@ -150,7 +196,7 @@ sigma/(4 pi).
 
 Unit monopole readout requires `sigma/(4 pi) = 1`, so `sigma = 4 pi`.
 
-## Lemma 3: Physical Lattice Newton Coefficient Is One
+## Lemma 4: Physical Lattice Newton Coefficient Is One
 
 With `q_bare = 4 pi M_phys`,
 
@@ -174,7 +220,7 @@ mass units as
 
 which is the standard Poisson normalization with `G_Newton,lat = 1`.
 
-## Lemma 4: The Product Law Uses the Same Physical Mass Unit
+## Lemma 5: The Product Law Uses the Same Physical Mass Unit
 
 The source conversion must also be used on the test-mass side. In physical
 mass units, a source `M_2` has bare strength
@@ -208,7 +254,7 @@ This is not a second normalization. It is the same source-unit theorem applied
 consistently to source and test masses. Any submission formula using an
 unqualified `M` before this conversion is ambiguous.
 
-## Lemma 5: The Old `2 sqrt(pi)` Result Is the Bare-Source Failure Mode
+## Lemma 6: The Old `2 sqrt(pi)` Result Is the Bare-Source Failure Mode
 
 If the bare kernel coefficient is mislabeled as the physical Newton constant,
 
@@ -229,7 +275,7 @@ This remains the correct rejection result for the bare-source convention. The
 positive theorem does not deny it. It says that the bare-source convention is
 not the physical Newton/Gauss mass convention.
 
-## Lemma 6: The Primitive Carrier Is the Planck-Area Carrier
+## Lemma 7: The Primitive Carrier Is the Planck-Area Carrier
 
 The primitive source-free event cell gives
 
@@ -297,7 +343,8 @@ The result is a unit-normalization closure, not an SI decimal prediction.
 The proof uses only:
 
 - the retained lattice Green theorem and its `4 pi` angular normalization;
-- the native divergence/Gauss readout of source strength;
+- the native divergence/Gauss readout of source strength, normalized by
+  exterior monopole observability and additivity;
 - the primitive event-cell count `c_cell = 1/4`;
 - the conventional target definition of Planck units.
 
@@ -311,8 +358,8 @@ It does not use:
 
 The finite primitive carrier supplies `1/4`. The continuum Green/Gauss theorem
 supplies the already-retained `4 pi` angular normalization. The new theorem is
-only the operational identification of physical mass with the Gauss/asymptotic
-monopole source unit.
+the operational uniqueness of physical mass as the normalized
+Gauss/asymptotic monopole source unit.
 
 ## Reviewer Hinge
 
@@ -320,6 +367,11 @@ The whole closure stands or falls on one reviewer-facing proposition:
 
 > Physical Newton mass is the Gauss/asymptotic monopole source unit, not the
 > coefficient of a regulator delta source in the unnormalized Green equation.
+
+In proof form, this is the exterior-observable additive source-charge theorem:
+the only scalar active gravitational charge visible at infinity is the
+normalized Gauss charge / monopole coefficient. The bare delta coefficient is
+only a source-coordinate label until a source unit has been chosen.
 
 If accepted, the proof has no remaining free factor:
 

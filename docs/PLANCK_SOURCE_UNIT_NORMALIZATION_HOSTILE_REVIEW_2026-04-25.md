@@ -46,12 +46,31 @@ This is the correct action-to-area bookkeeping.
 `G_Newton,lat = 1`, then declares the lattice spacing to be Planckian.
 
 **Resolution.** The theorem does not choose `G_Newton,lat = 1` directly. It
-chooses the physical source unit operationally: a unit physical mass is the
-unit asymptotic `1/r` monopole source. Given the retained kernel
-`1/(4 pi r)`, this uniquely forces `q_bare = 4 pi M_phys`. The runner checks
-that other source units fail the unit-monopole readout. The submission must
-present this as an operational Gauss/Newton mass-readout theorem, not as a
-free normalization choice.
+proves a uniqueness statement from exterior observability, additivity, and
+Newton normalization. The only scalar active charge visible outside a compact
+source is the normalized Gauss charge, equivalently the asymptotic `1/r`
+monopole coefficient. Given the retained kernel `1/(4 pi r)`, unit physical
+mass therefore forces `q_bare = 4 pi M_phys`. The runner checks that other
+source units fail the unit-monopole readout. The submission must present this
+as an operational Gauss/Newton mass-readout theorem, not as a free
+normalization choice.
+
+### Finding 1b: Raw Gauss flux could be confused with normalized charge
+
+**Pressure.** A bare unit delta has raw flux one, so a reviewer may object that
+the theorem arbitrarily prefers a source with raw flux `4 pi`.
+
+**Resolution.** The physical mass is not the raw flux of `phi`; it is the
+normalized Gauss charge
+
+```text
+M_phys = -(1/(4 pi)) int n.grad(phi) dA.
+```
+
+For a positive Green response `phi -> C/r`, the oriented outward flux of
+`grad phi` is `-4 pi C` and normalized charge is `C`. The bare unit delta has
+`C = 1/(4 pi)`, while a unit Newton mass has `C = 1`. This is exactly the same
+distinction as `G_kernel = 1/(4 pi)` versus `G_Newton,lat = 1`.
 
 ### Finding 2: The old `G_lat = 1/(4 pi)` statement conflicts with closure
 
@@ -173,16 +192,18 @@ Before harsh external review, update the submitted text as follows:
 
 1. Replace physical `G_lat = 1/(4 pi)` with bare
    `G_kernel = 1/(4 pi)`.
-2. Add the theorem statement `q_bare = 4 pi M_phys` with the one-line proof
-   `q_bare/(4 pi) = M_phys`.
-3. Introduce `G_Newton,lat = 1` only after the source-unit proof.
-4. Change any sentence saying `c_cell` equals the EH prefactor to say
+2. Add the exterior-charge theorem: physical Newton mass is the normalized
+   Gauss charge / asymptotic monopole coefficient.
+3. Add the source-conversion theorem statement `q_bare = 4 pi M_phys` with
+   the proof `q_bare/(4 pi) = M_phys`.
+4. Introduce `G_Newton,lat = 1` only after the source-unit proof.
+5. Change any sentence saying `c_cell` equals the EH prefactor to say
    `c_cell` equals the boundary/Wald/Planck-area coefficient.
-5. State the EH prefactor as `c_cell/(4 pi)`.
-6. Mark every mass/source symbol as `q_bare`, `rho_phys`, or `M_phys`.
-7. Include the explicit fallback calculation
+6. State the EH prefactor as `c_cell/(4 pi)`.
+7. Mark every mass/source symbol as `q_bare`, `rho_phys`, or `M_phys`.
+8. Include the explicit fallback calculation
    `G_kernel = 1/(4 pi) => a/l_P = 2 sqrt(pi)`.
-8. Avoid SI decimal claims and avoid saying the finite cell derives `pi`.
+9. Avoid SI decimal claims and avoid saying the finite cell derives `pi`.
 
 ## Backpressure Verdict
 
