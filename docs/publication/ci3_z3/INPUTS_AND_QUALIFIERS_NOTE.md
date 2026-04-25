@@ -174,6 +174,12 @@ bridge layer beyond the exact structural core.
   - exact corollary for theta-sourced EDM components only; independent CKM,
     qCEDM, Weinberg, CP-odd four-fermion, and BSM source directions are not
     set to zero by this theorem
+- CKM Jarlskog exact NLO closed form:
+  - promoted CKM atlas/axiom package + retained protected-`gamma_bar` NLO
+    surface + standard NLO Wolfenstein `J = A^2 lambda^6 eta_bar`
+  - exact claim is the surface algebra
+    `J_bar = sqrt(5) alpha_s(v)^3(4-alpha_s(v))/288`; physical NNLO /
+    all-orders CKM Jarlskog corrections remain outside this theorem
 - kaon epsilon_K Jarlskog decomposition:
   - promoted CKM atlas/axiom package + standard leading non-trivial
     Wolfenstein epsilon_K CKM bracket

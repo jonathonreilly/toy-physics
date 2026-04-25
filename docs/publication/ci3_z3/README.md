@@ -55,6 +55,8 @@ For the full package-capture inventory, use:
   plus the surface-exact barred circumradius and circumcenter closure
   `R_bar^2 = 1/4 + alpha_s(v)^2/320` and
   `(x_cc,y_cc)=(1/2,-alpha_s(v)sqrt(5)/40)`,
+  plus the NLO Jarlskog closed form
+  `J_bar = sqrt(5) alpha_s(v)^3(4-alpha_s(v))/288`,
   `|V_cs|_0^2 = 1 - alpha_s(v)/2 - alpha_s(v)^2/6`,
   `|V_cb|_0^2 = alpha_s(v)^2/6`, and atlas-leading third-row identities
   `|V_td|_0^2 = 5 alpha_s(v)^3/72`,

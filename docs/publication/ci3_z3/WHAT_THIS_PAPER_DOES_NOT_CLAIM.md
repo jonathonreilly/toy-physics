@@ -69,6 +69,9 @@ The paper does **not** claim:
 - that the CKM barred-circumradius or circumcenter exact closed forms extend
   the protected-`gamma_bar` NLO surface to physical NNLO or all-orders CKM
   control.
+- that the CKM Jarlskog exact NLO closed form eliminates higher-order
+  Wolfenstein corrections to the physical CKM Jarlskog beyond the retained
+  protected-`gamma_bar` NLO surface.
 - that the atlas/Wolfenstein area factor
   `J_0 = alpha_s(v)^3 sqrt(5)/72` replaces the parent atlas' exact
   finite-`lambda` standard-matrix `J` readout.
