@@ -55,7 +55,8 @@ questions:
 - bounded but explicit forward/companion surface:
   neutrino absolute-mass observable bounds, proton lifetime, CKM-only neutron
   EDM continuation, vacuum criticality, taste-scalar near-degeneracy,
-  benchmark gravitational decoherence, and monopole mass
+  benchmark gravitational decoherence, monopole mass, and bounded atomic
+  lattice/scaffold lanes
 - exact structural predictions and signatures:
   SM hypercharge uniqueness/electric-charge quantization, fractional-charge
   denominator from `N_c`, `SU(2)` Witten global-anomaly cancellation,
