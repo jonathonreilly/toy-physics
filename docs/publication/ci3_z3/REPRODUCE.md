@@ -46,6 +46,7 @@ python3 scripts/frontier_su3_cubic_anomaly_cancellation.py
 python3 scripts/frontier_bminusl_anomaly_freedom.py
 python3 scripts/frontier_three_generation_observable_theorem.py
 python3 scripts/frontier_strong_cp_theta_zero.py
+python3 scripts/frontier_universal_theta_induced_edm_vanishing.py
 ```
 
 ### Manuscript-core quantitative package
@@ -60,6 +61,7 @@ python3 scripts/frontier_higgs_mass_full_3loop.py
 python3 scripts/frontier_ckm_atlas_axiom_closure.py
 python3 scripts/frontier_wolfenstein_lambda_a_structural_identities.py
 python3 scripts/frontier_ckm_cp_phase_structural_identity.py
+python3 scripts/frontier_ckm_neutron_edm_bound.py
 ```
 
 ### Manuscript-surface dark-matter package

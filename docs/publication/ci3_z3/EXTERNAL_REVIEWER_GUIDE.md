@@ -59,7 +59,8 @@ For the explicit package boundary, use:
   exact `I_3 = 0`, exact CPT, retained Bell/CHSH support on explicit
   two-species lattice systems with KS taste measurements, emergent Lorentz
   invariance, and retained action-surface strong-CP closure /
-  `theta_eff = 0` on the retained Wilson-plus-staggered action surface
+  `theta_eff = 0` on the retained Wilson-plus-staggered action surface,
+  with universal vanishing of theta-induced EDM response components only
 - confinement:
   exact `T = 0` confinement of the graph-first `SU(3)` gauge sector, with
   bounded `sqrt(sigma) ≈ 465 MeV`
@@ -226,9 +227,10 @@ Current status from that stack:
   bounded numerical
   `Lambda`, `Omega_Lambda`, numerical `m_g`, and `n_s`
 - bounded secondary predictions already in the package, plus the CKM-only
-  neutron-EDM corollary with bounded continuation: proton lifetime, down-type
-  flavor-mass CKM-dual ratios, vacuum critical stability, taste-scalar
-  near-degeneracy, benchmark gravitational decoherence, and monopole mass
+  neutron-EDM corollary and universal theta-induced EDM-response corollary:
+  proton lifetime, down-type flavor-mass CKM-dual ratios, vacuum critical
+  stability, taste-scalar near-degeneracy, benchmark gravitational
+  decoherence, and monopole mass
 
 ## What Is Still Open
 

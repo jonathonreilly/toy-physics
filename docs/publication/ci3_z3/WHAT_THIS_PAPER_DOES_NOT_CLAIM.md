@@ -27,11 +27,15 @@ The paper does **not** claim:
 
 - a full dynamical instanton/measure suppression theorem;
 - complete radiative/chiral/topological closure in every formulation;
-- a universal axion-exclusion theorem.
+- a universal axion-exclusion theorem;
+- that independent qCEDM, Weinberg, CP-odd four-fermion, or BSM CP-odd
+  operators vanish.
 
 The current exact claim is:
 
 - `theta_eff = 0` on the retained axiom-determined action surface.
+- all EDM components sourced by that QCD theta angle vanish on the retained
+  surface.
 
 ## 3. Flavor and matter
 

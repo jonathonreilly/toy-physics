@@ -140,6 +140,11 @@ bridge layer beyond the exact structural core.
   - retained strong-CP closure package + promoted CKM package
   - exact corollary `d_n(QCD) = 0` on the retained surface; EFT bridge only
     for the bounded `d_n(CKM)` number
+- universal theta-induced EDM response:
+  - retained strong-CP closure package + source-decomposition bookkeeping
+  - exact corollary for theta-sourced EDM components only; independent CKM,
+    qCEDM, Weinberg, CP-odd four-fermion, and BSM source directions are not
+    set to zero by this theorem
 - down-type CKM-dual mass ratios:
   - promoted CKM atlas/axiom package + GST + bounded `5/6` mass-ratio bridge; no observed
     masses as derivation inputs
@@ -175,6 +180,8 @@ theorem core.
   - Bekenstein-Hawking entropy comparison
 - dual-status corollary surface:
   - CKM-only neutron EDM with bounded `d_n(CKM)` continuation
+  - universal theta-induced EDM response vanishing, with no new bounded
+    numerical EDM estimate and no independent CP-odd EFT operator-zero claim
 
 ## 7. Remaining bridge package
 

@@ -90,6 +90,7 @@ Start with:
 - [BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24.md](../../BMINUSL_ANOMALY_FREEDOM_THEOREM_NOTE_2026-04-24.md)
 - [THREE_GENERATION_STRUCTURE_NOTE.md](../../THREE_GENERATION_STRUCTURE_NOTE.md)
 - [STRONG_CP_THETA_ZERO_NOTE.md](../../STRONG_CP_THETA_ZERO_NOTE.md)
+- [UNIVERSAL_THETA_INDUCED_EDM_VANISHING_THEOREM_NOTE_2026-04-24.md](../../UNIVERSAL_THETA_INDUCED_EDM_VANISHING_THEOREM_NOTE_2026-04-24.md)
 
 Validate with:
 
@@ -103,6 +104,7 @@ Validate with:
 - `python3 scripts/frontier_generation_fermi_point.py`
 - `python3 scripts/frontier_three_generation_observable_theorem.py`
 - `python3 scripts/frontier_strong_cp_theta_zero.py`
+- `python3 scripts/frontier_universal_theta_induced_edm_vanishing.py`
 
 ## Quantitative Electroweak, QCD, Yukawa, and Higgs Package
 
@@ -156,8 +158,9 @@ Validate with:
   CKM atlas/axiom closure
 - bounded secondary flavor lanes:
   down-type CKM-dual mass-ratio lane, bounded quark support packet
-- retained corollary:
-  CKM-only neutron EDM on the retained `theta_eff = 0` surface
+- retained corollaries:
+  CKM-only neutron EDM on the retained `theta_eff = 0` surface, plus
+  source-scoped vanishing of all theta-induced EDM response components
 - open flagship package:
   charged-lepton Koide `Q = 2/3`, `delta = 2/9`
 
@@ -177,6 +180,8 @@ Start with:
 - [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md)
 - [WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md](../../WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md)
 - [CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md](../../CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
+- [CKM_NEUTRON_EDM_BOUND_NOTE.md](../../CKM_NEUTRON_EDM_BOUND_NOTE.md)
+- [UNIVERSAL_THETA_INDUCED_EDM_VANISHING_THEOREM_NOTE_2026-04-24.md](../../UNIVERSAL_THETA_INDUCED_EDM_VANISHING_THEOREM_NOTE_2026-04-24.md)
 - [KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md](../../KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md)
 - [KOIDE_POINTED_ORIGIN_EXHAUSTION_THEOREM_NOTE_2026-04-24.md](../../KOIDE_POINTED_ORIGIN_EXHAUSTION_THEOREM_NOTE_2026-04-24.md)
 - [CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md](../../CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md)
@@ -188,6 +193,8 @@ Validate with:
 - `python3 scripts/frontier_wolfenstein_lambda_a_structural_identities.py`
 - `python3 scripts/frontier_ckm_cp_phase_structural_identity.py`
 - `python3 scripts/frontier_ckm_no_import_audit.py`
+- `python3 scripts/frontier_ckm_neutron_edm_bound.py`
+- `python3 scripts/frontier_universal_theta_induced_edm_vanishing.py`
 - `python3 scripts/frontier_koide_native_zero_section_nature_review.py`
 - `python3 scripts/frontier_koide_q_delta_residual_cohomology_obstruction_no_go.py`
 - `python3 scripts/frontier_koide_hostile_review_guard.py`

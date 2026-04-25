@@ -42,6 +42,8 @@ For the full package-capture inventory, use:
   `cos^2(delta_CKM) = 1/6` structural identities
 - retained structural/corollary surface:
   strong CP on the retained action surface, emergent Lorentz invariance,
+  universal theta-induced EDM-response vanishing on that retained strong-CP
+  surface,
   `S^3` topology closure, SM hypercharge uniqueness/electric-charge
   quantization, fractional-charge denominator from `N_c`, `SU(2)` Witten
   global-anomaly cancellation, `SU(3)^3` cubic gauge anomaly cancellation,

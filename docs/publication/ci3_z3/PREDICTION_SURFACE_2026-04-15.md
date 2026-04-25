@@ -87,6 +87,13 @@ carried by the current package.
   - bounded continuation: `d_n(CKM) ~ 8 x 10^-33 e cm`
   - authority:
     [CKM_NEUTRON_EDM_BOUND_NOTE.md](../../CKM_NEUTRON_EDM_BOUND_NOTE.md)
+- universal theta-induced EDM response:
+  - exactly, every EDM component sourced by QCD `theta_eff` vanishes on the
+    retained action surface
+  - CKM weak EDMs and independent BSM CP-odd EFT sources are separate source
+    directions and are not set to zero by this corollary
+  - authority:
+    [UNIVERSAL_THETA_INDUCED_EDM_VANISHING_THEOREM_NOTE_2026-04-24.md](../../UNIVERSAL_THETA_INDUCED_EDM_VANISHING_THEOREM_NOTE_2026-04-24.md)
 - down-type flavor-mass CKM-dual lane:
   - `m_d/m_s = 0.05165`
   - `m_s/m_b = 0.02239`
@@ -146,7 +153,9 @@ conceptual pressure.
   `|V_us| = 0.22727` remains high against the PDG comparator
 - strong CP:
   the exact statement is `theta_eff = 0` on the retained action surface;
-  this is not yet a full instanton-measure or `eta'` closure claim
+  the universal EDM-response corollary is source-scoped to theta-induced
+  components and is not a full instanton-measure, `eta'`, or independent
+  CP-odd EFT operator-zero claim
 - PMNS:
   the retained positive PMNS lane is still absent on current routes, with the
   current frontier reducing to the missing nonzero current `J_chi`; the
@@ -205,8 +214,10 @@ conceptual pressure.
 - strong CP:
   - retained action-surface `theta_eff = 0` on the retained
     axiom-determined Wilson-plus-staggered action surface
+  - source-scoped vanishing of all theta-induced EDM response components
   - authority:
-    [STRONG_CP_THETA_ZERO_NOTE.md](../../STRONG_CP_THETA_ZERO_NOTE.md)
+    [STRONG_CP_THETA_ZERO_NOTE.md](../../STRONG_CP_THETA_ZERO_NOTE.md),
+    [UNIVERSAL_THETA_INDUCED_EDM_VANISHING_THEOREM_NOTE_2026-04-24.md](../../UNIVERSAL_THETA_INDUCED_EDM_VANISHING_THEOREM_NOTE_2026-04-24.md)
 
 These are part of the framework's falsification surface; some are already
 observed structural signatures, while others are delayed by present

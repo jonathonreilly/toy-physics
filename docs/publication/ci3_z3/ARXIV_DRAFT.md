@@ -478,6 +478,11 @@ full closure package only on the retained Wilson-plus-staggered
 `Cl(3)/Z^3` surface. The positivity logic is aligned with the standard
 Vafa-Witten sign discipline [10].
 
+The immediate EDM corollary is source-scoped: every EDM response component
+proportional to $\theta_{\mathrm{eff}}$ vanishes on the retained action
+surface. This does not set CKM weak EDMs, independent quark chromo-EDMs,
+Weinberg operators, four-fermion CP-odd operators, or BSM CP sources to zero.
+
 ### 4.6 Confinement
 
 The graph-first $SU(3)$ gauge sector now also carries an exact $T=0$
@@ -697,6 +702,10 @@ corollary:
   exactly, $d_n^{\mathrm{QCD}}=0$ and the surviving neutron-EDM signal is
   CKM-only; bounded continuation gives
   $d_n^{\mathrm{CKM}} \sim 8\times 10^{-33}\,e\,\mathrm{cm}$;
+- universal theta-induced EDM response:
+  all EDM components sourced by QCD $\theta_{\mathrm{eff}}$ vanish on the
+  retained action surface, while CKM and independent BSM source directions
+  remain outside that zero theorem;
 - down-type flavor-mass CKM-dual lane:
   $m_d/m_s = 0.05165$, $m_s/m_b = 0.02239$, and $m_d/m_b = 0.001156$
   against the threshold-local PDG self-scale comparator

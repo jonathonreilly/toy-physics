@@ -59,6 +59,7 @@ Use alongside:
 | CHSH Bell support theorem | [BELL_INEQUALITY_DERIVED_NOTE.md](../../BELL_INEQUALITY_DERIVED_NOTE.md) | [frontier_bell_inequality.py](../../../scripts/frontier_bell_inequality.py) |
 | Emergent Lorentz invariance | [EMERGENT_LORENTZ_INVARIANCE_NOTE.md](../../EMERGENT_LORENTZ_INVARIANCE_NOTE.md) | [frontier_emergent_lorentz_invariance.py](../../../scripts/frontier_emergent_lorentz_invariance.py) |
 | Strong CP / retained action-surface `θ_eff = 0` closure | [STRONG_CP_THETA_ZERO_NOTE.md](../../STRONG_CP_THETA_ZERO_NOTE.md) | [frontier_strong_cp_theta_zero.py](../../../scripts/frontier_strong_cp_theta_zero.py) |
+| Universal theta-induced EDM response vanishing | [UNIVERSAL_THETA_INDUCED_EDM_VANISHING_THEOREM_NOTE_2026-04-24.md](../../UNIVERSAL_THETA_INDUCED_EDM_VANISHING_THEOREM_NOTE_2026-04-24.md) | [frontier_universal_theta_induced_edm_vanishing.py](../../../scripts/frontier_universal_theta_induced_edm_vanishing.py) |
 | Discrete evanescent-barrier lattice transfer-matrix bound + Schwarzschild tortoise-length identity (bounded-companion Planck-unit astrophysical exponent is (C-rate)-conditional) | [EVANESCENT_BARRIER_AMPLITUDE_SUPPRESSION_THEOREM_NOTE.md](../../EVANESCENT_BARRIER_AMPLITUDE_SUPPRESSION_THEOREM_NOTE.md) | [frontier_evanescent_barrier_amplitude_suppression.py](../../../scripts/frontier_evanescent_barrier_amplitude_suppression.py) |
 
 ## Quantitative Component Package

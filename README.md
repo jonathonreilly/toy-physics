@@ -50,7 +50,8 @@ questions:
   denominator from `N_c`, `SU(2)` Witten global-anomaly cancellation,
   `SU(3)^3` cubic gauge anomaly cancellation, B-L anomaly freedom as a
   gaugeable option on the retained content,
-  emergent-Lorentz dimension-6 onset, and action-surface `theta_eff = 0`
+  emergent-Lorentz dimension-6 onset, action-surface `theta_eff = 0`, and
+  the source-scoped vanishing of all theta-induced EDM response components
 - remaining open flagship bridge package:
   charged-lepton Koide (`Q = 2/3`, `delta = 2/9`);
   the dark-matter exact-target package is already closed on the manuscript
