@@ -124,11 +124,13 @@ Validate with:
   `|V_cb|_0^2 = alpha_s(v)^2/6`, and atlas-leading third-row identities
   `|V_td|_0^2 = 5 alpha_s(v)^3/72`,
   `|V_ts|_0^2 = alpha_s(v)^2/6`, plus the atlas-leading B_s mixing phase
-  `phi_s = -alpha_s(v) sqrt(5)/6` and the NLO barred-triangle protected
+  `phi_s = -alpha_s(v) sqrt(5)/6`, the NLO phase guardrail
+  `phi_s = -(alpha_s(v) sqrt(5)/6)(1+alpha_s(v)/6)`, and the NLO barred-triangle protected
   invariant `gamma_bar = arctan(sqrt(5))`, plus the Thales-mediated
   cross-system CP ratio `phi_s / sin(2 beta_d) = -alpha_s(v)/2`
   and CP-product estimator
-  `alpha_s(v) = (18/5) sin(2 beta_d) sin(2 beta_s)` at atlas-leading order
+  `alpha_s(v) = (18/5) sin(2 beta_d) sin(2 beta_s)` at atlas-leading order,
+  plus the leading pure-tree ratio `sin(2 alpha_bar)/phi_s = 3/5 + O(alpha_s)`,
   plus the
   kaon epsilon_K CKM-bracket factorization through atlas `J_0`
 - derived quantitative lane:

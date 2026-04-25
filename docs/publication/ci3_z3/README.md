@@ -56,11 +56,13 @@ For the full package-capture inventory, use:
   `|V_ub|_0^2 = alpha_s(v)^3/(8 n_color^2)`,
   `|V_td|_0^2 = (n_quark-1) alpha_s(v)^3/(8 n_color^2)`,
   with explicit `n_pair` cancellation in `|V_ub|_0^2`, plus the atlas-leading
-  B_s mixing phase `phi_s = -alpha_s(v) sqrt(5)/6 = -0.03850 rad` and the NLO barred-triangle
-  protected invariant `gamma_bar = arctan(sqrt(5))`, plus the
+  B_s mixing phase `phi_s = -alpha_s(v) sqrt(5)/6 = -0.03850 rad`, the
+  NLO phase guardrail `phi_s = -(alpha_s(v) sqrt(5)/6)(1+alpha_s(v)/6)`,
+  and the NLO barred-triangle protected invariant `gamma_bar = arctan(sqrt(5))`, plus the
   Thales-mediated cross-system CP ratio
   `phi_s / sin(2 beta_d) = -alpha_s(v)/2` and CP-product estimator
-  `alpha_s(v) = (18/5) sin(2 beta_d) sin(2 beta_s)` at atlas-leading order
+  `alpha_s(v) = (18/5) sin(2 beta_d) sin(2 beta_s)` at atlas-leading order,
+  plus the leading pure-tree ratio `sin(2 alpha_bar)/phi_s = 3/5 + O(alpha_s)`,
   plus the kaon epsilon_K
   CKM-bracket factorization through atlas `J_0`
 - retained structural/corollary surface:
