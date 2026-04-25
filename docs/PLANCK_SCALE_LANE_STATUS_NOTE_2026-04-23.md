@@ -169,6 +169,21 @@ Current blocker:
   `1/4`, via
   [BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md](./BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md).
 
+2026-04-25 algebraic-spectrum progress:
+
+- [AREA_LAW_ALGEBRAIC_SPECTRUM_ENTROPY_NO_GO_NOTE_2026-04-25.md](./AREA_LAW_ALGEBRAIC_SPECTRUM_ENTROPY_NO_GO_NOTE_2026-04-25.md)
+  strengthens the gapped primitive-edge obstruction: any nonzero finite
+  von Neumann entropy from an algebraic Schmidt spectrum is transcendental by
+  Baker's theorem on linear forms in logarithms of algebraic numbers. Since
+  `1/4` is algebraic, no exact finite algebraic-spectrum edge carrier can
+  deliver the Bekenstein-Hawking coefficient as ordinary entanglement entropy.
+
+Residual Target 2 requirement:
+
+- derive a transcendental Schmidt-spectrum selector, derive a multipocket
+  Widom selector, or justify a non-von-Neumann primitive-boundary entropy
+  functional.
+
 ### Target 3: one-axiom information/action bridge
 
 Framework-compression route.

@@ -33,6 +33,9 @@ Current science/open-lane follow-ups:
 - Wilson two-body lane: full both-masses law and action-reaction remain open
 - boundary-law / holographic lane: keep the effect bounded and do not overread
   it as a holography derivation
+- Planck Target 2 / algebraic spectra: finite algebraic Schmidt spectra cannot
+  give exact nonzero von Neumann entropy `1/4`; a positive gapped carrier needs
+  a transcendental spectrum selector or justified non-vN primitive entropy
 - memory lane: protocol- and geometry-stable observable remains open
 - emergent-geometry growth: multi-size, multi-seed stability remains open
 
