@@ -25,6 +25,12 @@ two bridge steps outside the exact internal core:
 Both bridges now have explicit current-`main` support notes. The lane is still
 bounded because neither bridge is yet promoted to the retained theorem core.
 
+The newer follow-up
+[QUARK_MASS_RATIOS_TASTE_STAIRCASE_SUPPORT_NOTE_2026-04-25.md](./QUARK_MASS_RATIOS_TASTE_STAIRCASE_SUPPORT_NOTE_2026-04-25.md)
+does not change that status. It sharpens the same bounded route by making the
+zero-import cascade presentation explicit and by verifying that a cubic-exact
+NNI texture reproduces the framework ratios with admissible `c_12, c_23 = O(1)`.
+
 The lane is still useful. It converts the promoted CKM package into a reusable
 down-type flavor-mass tool that can support later `y_b`, flavor-hierarchy, and
 flavor-dependent cosmology / baryogenesis work.
@@ -145,6 +151,7 @@ It does provide a clean reusable bridge:
 - exact SU(3) constants
 - GST support
 - bounded `5/6` bridge support
+- bounded taste-staircase / cubic-exact NNI support
 - bounded down-type flavor-mass extraction
 
 That is useful downstream for:
@@ -174,6 +181,7 @@ python3 scripts/frontier_mass_ratio_ckm_dual.py
 Current expected results on `main`:
 
 - `frontier_mass_ratio_ckm_dual.py`: `PASS=23 FAIL=0`
+- `frontier_quark_mass_ratios_taste_staircase_support.py`: `PASS=55 FAIL=0`
 - `frontier_ckm_five_sixths_bridge_support.py`: `EXACT PASS=5`, `BOUNDED PASS=7`, `FAIL=0`
 
 The primary lane runner verifies:
@@ -191,3 +199,6 @@ The support runner verifies:
 - bounded `m_s/m_b` extraction from `|V_cb|`
 - one-loop transport from same-scale to threshold-local self-scale comparator
 - exact multiplicative decomposition of the remaining `m_s/m_b` deviation
+- the explicit zero-import taste-staircase presentation of the same bounded
+  route
+- cubic-exact NNI self-consistency with admissible `c_12, c_23 = O(1)`
