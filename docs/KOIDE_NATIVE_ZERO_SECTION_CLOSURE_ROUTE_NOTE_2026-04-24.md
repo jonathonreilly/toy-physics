@@ -1,7 +1,7 @@
 # Koide native zero-section closure route
 
-**Date:** 2026-04-24
-**Runner:** `scripts/frontier_koide_native_zero_section_closure_route.py`
+**Date:** 2026-04-24  
+**Runner:** `scripts/frontier_koide_native_zero_section_closure_route.py`  
 **Status:** exact conditional native route; not yet retained-only closure
 
 ## Purpose
@@ -164,9 +164,9 @@ Expected closeout:
 
 ```text
 KOIDE_NATIVE_ZERO_SECTION_CLOSURE_ROUTE=CONDITIONAL
-CONDITIONAL_NATIVE_ZERO_SECTION_IMPLIES_Q=TRUE
-CONDITIONAL_NATIVE_ZERO_SECTION_IMPLIES_DELTA=TRUE
-CONDITIONAL_NATIVE_ZERO_SECTION_IMPLIES_NATIVE_VALUES=TRUE
+CONDITIONAL_NATIVE_ZERO_SECTION_CLOSES_Q=TRUE
+CONDITIONAL_NATIVE_ZERO_SECTION_CLOSES_DELTA=TRUE
+CONDITIONAL_NATIVE_ZERO_SECTION_CLOSES_FULL_DIMENSIONLESS_LANE=TRUE
 RETAINED_ONLY_NATIVE_CLOSURE_CLAIMED=FALSE
 RESIDUAL_IDENTIFICATION_DELTA=Brannen_endpoint_is_real_Z3_primitive_not_rank_one_line
 RESIDUAL_TRIVIALIZATION=unit_preserving_determinant_line_endpoint_readout

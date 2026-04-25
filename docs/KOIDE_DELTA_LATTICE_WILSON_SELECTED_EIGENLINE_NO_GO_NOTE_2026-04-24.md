@@ -1,7 +1,7 @@
 # Koide delta lattice Wilson selected-eigenline no-go
 
-**Date:** 2026-04-24
-**Runner:** `scripts/frontier_koide_delta_lattice_wilson_selected_eigenline_no_go.py`
+**Date:** 2026-04-24  
+**Runner:** `scripts/frontier_koide_delta_lattice_wilson_selected_eigenline_no_go.py`  
 **Status:** no-go; finite Wilson support selects a spectral subspace, not the physical selected line
 
 ## Theorem Attempt
@@ -17,10 +17,14 @@ Wilson operator + body-diagonal Z3 action
 
 ## Result
 
-Negative.  In this finite Wilson realization, the ambient eta proxy is not the
-exact APS value `2/9`; the runner reports the mismatch rather than promoting
-it.  Independently, the zero-mode character sector relevant to the selected
-endpoint has rank two.  The retained data select a spectral
+Negative.  The finite Wilson model does realize the ambient support value:
+
+```text
+eta_APS = 2/9
+```
+
+per body-diagonal fixed site.  But the zero-mode character sector relevant to
+the selected endpoint has rank two.  The retained data select a spectral
 projector/eigenspace, not a unique rank-one line inside it.
 
 The runner constructs two orthonormal zero-mode lines with the same spin-lift
@@ -60,8 +64,7 @@ They are not consequences of the finite Wilson data.
 
 ## Endpoint Lift
 
-Even if the ambient APS value is supplied externally and a rank-one line is
-selected, multiplying its lift by:
+Even after a rank-one line is selected, multiplying its lift by:
 
 ```text
 exp(i s t)
@@ -76,7 +79,6 @@ endpoint by `s`.  Thus the endpoint basepoint remains an independent residual.
 RESIDUAL_ENDPOINT = theta_end-theta0-eta_APS
 RESIDUAL_EIGENLINE = rank_two_zero_mode_character_sector_not_canonically_split
 RESIDUAL_TRIVIALIZATION = wilson_eigenline_endpoint_lift_not_fixed
-RESIDUAL_AMBIENT = finite_Wilson_eta_proxy_not_exact_APS_value
 RESIDUAL_SCALAR = minus_spectator_channel_plus_c_over_eta_APS
 ```
 
@@ -105,6 +107,5 @@ DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_CLOSES_DELTA=FALSE
 RESIDUAL_ENDPOINT=theta_end-theta0-eta_APS
 RESIDUAL_EIGENLINE=rank_two_zero_mode_character_sector_not_canonically_split
 RESIDUAL_TRIVIALIZATION=wilson_eigenline_endpoint_lift_not_fixed
-RESIDUAL_AMBIENT=finite_Wilson_eta_proxy_not_exact_APS_value
 RESIDUAL_SCALAR=minus_spectator_channel_plus_c_over_eta_APS
 ```

@@ -1,9 +1,8 @@
 # Koide Hostile-Review Guard
 
-**Date:** 2026-04-24
-**Runner:** `scripts/frontier_koide_hostile_review_guard.py`
-**Status:** reusable reviewer guard for the 2026-04-24 Koide no-go /
-objection-review packet
+**Date:** 2026-04-24  
+**Runner:** `scripts/frontier_koide_hostile_review_guard.py`  
+**Status:** reusable reviewer guard for the 2026-04-24 Koide no-go packet
 
 ## Purpose
 
@@ -16,8 +15,8 @@ It does not prove a physics theorem and does not close `Q` or `delta`.
 
 ## Checks
 
-The runner scans current 2026-04-24 Koide no-go notes, the consolidated
-objection-review packet, and their no-go scripts, and verifies:
+The runner scans current 2026-04-24 Koide no-go notes and no-go scripts and
+verifies:
 
 1. no-go notes exist;
 2. every no-go note names a residual scalar or primitive;
@@ -59,6 +58,6 @@ RESIDUAL_SCALAR=not_applicable_review_guard
 
 This guard is an automation support artifact.  It should be run after future
 frontier Koide no-go or closure attempts, but passing it is not evidence of
-positive closure.  A positive closure must still derive the relevant physical
-source/boundary-origin laws from retained structure and survive the substantive
-hostile-review checks.
+positive closure.  A positive closure must still derive the relevant residual
+scalar from retained structure and survive the substantive hostile-review
+checks.

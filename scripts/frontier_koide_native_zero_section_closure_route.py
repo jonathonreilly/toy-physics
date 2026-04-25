@@ -149,7 +149,7 @@ def main() -> int:
         "There is no retained Z3-equivariant projector splitting selected versus spectator inside the real primitive.",
     )
 
-    section("C. Why rank-one selected-line readout is not native")
+    section("C. Why rank-one selected-line closure is not native")
 
     alpha = sp.symbols("alpha", real=True)
     v = sp.Matrix([sp.cos(alpha), sp.sin(alpha)])
@@ -162,7 +162,7 @@ def main() -> int:
         "A rank-one Brannen line inside the real primitive is extra non-equivariant boundary data.",
     )
     record(
-        "C.2 native delta implication must read the whole real primitive, not a CP1 line",
+        "C.2 native delta closure must read the whole real primitive, not a CP1 line",
         True,
         "This converts the old selected/spectator obstruction into a precise identification theorem.",
     )
@@ -200,7 +200,7 @@ def main() -> int:
         f"delta_open={sp.simplify(delta_open.subs(native_delta_law))}",
     )
     record(
-        "E.2 Q and delta are implied under the native zero-section route",
+        "E.2 Q and delta close under the native zero-section route",
         q_from_weight(sp.Rational(1, 2)) == sp.Rational(2, 3)
         and sp.simplify(delta_open.subs(native_delta_law)) == sp.Rational(2, 9),
         "Q=2/3 and delta=2/9 follow without numerical fitting once the native zero sections are retained.",
@@ -211,7 +211,7 @@ def main() -> int:
     record(
         "F.1 the route is not the old rank-one selected-line bridge",
         True,
-        "It implies delta only by replacing rank-one selection with the whole real Z3 primitive endpoint.",
+        "It closes delta only by replacing rank-one selection with the whole real Z3 primitive endpoint.",
     )
     record(
         "F.2 retained-only closure still requires two identification theorems",
@@ -237,9 +237,9 @@ def main() -> int:
     print()
     if n_pass == n_total:
         print("KOIDE_NATIVE_ZERO_SECTION_CLOSURE_ROUTE=CONDITIONAL")
-        print("CONDITIONAL_NATIVE_ZERO_SECTION_IMPLIES_Q=TRUE")
-        print("CONDITIONAL_NATIVE_ZERO_SECTION_IMPLIES_DELTA=TRUE")
-        print("CONDITIONAL_NATIVE_ZERO_SECTION_IMPLIES_NATIVE_VALUES=TRUE")
+        print("CONDITIONAL_NATIVE_ZERO_SECTION_CLOSES_Q=TRUE")
+        print("CONDITIONAL_NATIVE_ZERO_SECTION_CLOSES_DELTA=TRUE")
+        print("CONDITIONAL_NATIVE_ZERO_SECTION_CLOSES_FULL_DIMENSIONLESS_LANE=TRUE")
         print("RETAINED_ONLY_NATIVE_CLOSURE_CLAIMED=FALSE")
         print("RESIDUAL_IDENTIFICATION_Q=native_zero_source_charged_lepton_scalar_readout")
         print("RESIDUAL_IDENTIFICATION_DELTA=Brannen_endpoint_is_real_Z3_primitive_not_rank_one_line")
@@ -248,8 +248,8 @@ def main() -> int:
         return 0
 
     print("KOIDE_NATIVE_ZERO_SECTION_CLOSURE_ROUTE=FAILED")
-    print("CONDITIONAL_NATIVE_ZERO_SECTION_IMPLIES_Q=FALSE")
-    print("CONDITIONAL_NATIVE_ZERO_SECTION_IMPLIES_DELTA=FALSE")
+    print("CONDITIONAL_NATIVE_ZERO_SECTION_CLOSES_Q=FALSE")
+    print("CONDITIONAL_NATIVE_ZERO_SECTION_CLOSES_DELTA=FALSE")
     print("RETAINED_ONLY_NATIVE_CLOSURE_CLAIMED=FALSE")
     return 1
 

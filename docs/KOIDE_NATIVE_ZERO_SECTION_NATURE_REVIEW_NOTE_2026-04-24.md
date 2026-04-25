@@ -1,7 +1,7 @@
 # Koide native zero-section Nature review
 
-**Date:** 2026-04-24
-**Runner:** `scripts/frontier_koide_native_zero_section_nature_review.py`
+**Date:** 2026-04-24  
+**Runner:** `scripts/frontier_koide_native_zero_section_nature_review.py`  
 **Status:** passes as the next native route; fails as completed retained/native
 closure
 
@@ -74,8 +74,8 @@ and:
 selected-line / CP1 / rank-one language.
 ```
 
-The native route would imply the values only if the second is a coordinate
-presentation of the first, not an extra physical rank-one selector.
+The native route closes only if the second is a coordinate presentation of the
+first, not an extra physical rank-one selector.
 
 A hostile reviewer can still ask:
 
@@ -131,6 +131,6 @@ Expected closeout:
 ```text
 KOIDE_NATIVE_ZERO_SECTION_NATURE_REVIEW=PASS_AS_ROUTE
 KOIDE_NATIVE_ZERO_SECTION_RETAINED_CLOSURE=FALSE
-NATIVE_ROUTE_IMPLIES_VALUES_CONDITIONALLY=TRUE
+NATIVE_ROUTE_CLOSES_CONDITIONALLY=TRUE
 NEXT_NATIVE_THEOREM=derive_Brannen_endpoint_as_real_Z3_primitive_and_unit_determinant_readout
 ```

@@ -11,12 +11,12 @@ Result:
 
   Q side:
     The retained observable-principle notes support local scalar readout as
-    source-response coefficients. On the exact normalized second-order
+    source-response coefficients.  On the exact normalized second-order
     carrier, the zero-background member gives Y=I_2, hence K_TL=0 and Q=2/3.
 
     But source-response coefficients are probe-zero coefficients around a
-    chosen background. The current retained packet does not prove that the
-    physical charged-lepton background source is zero. Thus the Q result is
+    chosen background.  The current retained packet does not prove that the
+    physical charged-lepton background source is zero.  Thus the Q result is
     conditional support, not retained-only closure.
 
   Delta side:
@@ -98,12 +98,12 @@ def main() -> int:
         and "local curvature of the effective action" in hierarchy_note
     )
     record(
-        "A.1 retained notes support local scalar source-response readout",
+        "A.1 retained notes support zero-source local scalar source-response readout",
         source_response_supported,
         "observable principle + hierarchy selector notes identify physical scalar readout with source-expansion coefficients.",
     )
 
-    section("B. Q consequence of zero-background source-response")
+    section("B. Q consequence of strict zero-source readout")
 
     k_plus, k_perp = sp.symbols("k_plus k_perp", real=True)
     w_red = sp.log(1 + k_plus) + sp.log(1 + k_perp)
@@ -111,12 +111,12 @@ def main() -> int:
     y_perp = sp.simplify(sp.diff(w_red, k_perp))
     y0 = (sp.simplify(y_plus.subs(k_plus, 0)), sp.simplify(y_perp.subs(k_perp, 0)))
     record(
-        "B.1 exact reduced generator gives Y=(1,1) at zero background source",
+        "B.1 exact reduced generator gives Y=(1,1) at zero source",
         y0 == (1, 1),
         f"W_red={w_red}; dW/dK|0={y0}",
     )
     record(
-        "B.2 zero-background readout gives K_TL=0 and Q=2/3",
+        "B.2 zero-source readout gives K_TL=0 and Q=2/3",
         ktl_from_y(*y0) == 0 and q_from_y(*y0) == sp.Rational(2, 3),
         f"K_TL={ktl_from_y(*y0)}, Q={q_from_y(*y0)}",
     )

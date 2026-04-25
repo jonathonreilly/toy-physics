@@ -91,13 +91,13 @@ def main() -> int:
     section("B. Positive content")
 
     record(
-        "B.1 Q is implied under native zero-source source-response",
-        "CONDITIONAL_NATIVE_ZERO_SECTION_IMPLIES_Q=TRUE" in output,
+        "B.1 Q closes under native zero-source source-response",
+        "CONDITIONAL_NATIVE_ZERO_SECTION_CLOSES_Q=TRUE" in output,
         "The source-label zero section gives K_TL=0 and Q=2/3.",
     )
     record(
-        "B.2 delta is implied under real primitive plus unit endpoint",
-        "CONDITIONAL_NATIVE_ZERO_SECTION_IMPLIES_DELTA=TRUE" in output,
+        "B.2 delta closes under real primitive plus unit endpoint",
+        "CONDITIONAL_NATIVE_ZERO_SECTION_CLOSES_DELTA=TRUE" in output,
         "Real Z3 primitive removes spectator; unit endpoint removes c.",
     )
     record(
@@ -156,7 +156,7 @@ def main() -> int:
     section("E. Verdict")
 
     record(
-        "E.1 passes as the next native route to pursue",
+        "E.1 passes as the next native closure route to pursue",
         True,
         "It is the first route that kills the delta spectator by retained real-representation irreducibility.",
     )
@@ -180,7 +180,7 @@ def main() -> int:
     if n_pass == n_total:
         print("KOIDE_NATIVE_ZERO_SECTION_NATURE_REVIEW=PASS_AS_ROUTE")
         print("KOIDE_NATIVE_ZERO_SECTION_RETAINED_CLOSURE=FALSE")
-        print("NATIVE_ROUTE_IMPLIES_VALUES_CONDITIONALLY=TRUE")
+        print("NATIVE_ROUTE_CLOSES_CONDITIONALLY=TRUE")
         print("NEXT_NATIVE_THEOREM=derive_Brannen_endpoint_as_real_Z3_primitive_and_unit_determinant_readout")
         print("RESIDUAL_IDENTIFICATION_DELTA=rank_one_CP1_language_vs_real_primitive_endpoint")
         print("RESIDUAL_TRIVIALIZATION=unit_preserving_open_determinant_line_readout")

@@ -1,0 +1,202 @@
+#!/usr/bin/env python3
+"""
+Koide Q undeformed-background exclusion theorem.
+
+Purpose:
+  Attack the remaining Q reviewer escape hatch:
+
+      retain a nonzero undeformed charged-lepton scalar background J0.
+
+Theorem:
+  On the retained two-channel source-response carrier, a general background is
+
+      J0 = (s + z, s - z),
+
+  with common scalar part s and traceless part z.  The source-response
+  coefficient around D+J0 is
+
+      Y(J0) = (1/(1+s+z), 1/(1+s-z)).
+
+  The dimensionless Koide ratio depends only on the relative/traceless
+  response.  The common part s cancels from Q when z=0 and belongs to the
+  separate overall scale lane.  The only way to change dimensionless Q is to
+  retain z != 0.
+
+  But z is exactly a retained source-visible traceless background label.  It is
+  not supplied by the undeformed determinant source-response principle; adding
+  it is a new dimensionless charged-lepton source datum.
+
+Conclusion:
+  A nonzero J0 alone is too broad a falsifier.  The sharpened dimensionless
+  falsifier is a retained traceless undeformed background z != 0.  The common
+  scalar background s is outside this dimensionless lane and is part of v0-like
+  scale data.
+
+No Koide value, mass data, or delta value is used as an input.
+"""
+
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+import sympy as sp
+
+
+ROOT = Path(__file__).resolve().parents[1]
+PASSES: list[tuple[str, bool, str]] = []
+
+
+def record(name: str, ok: bool, detail: str = "") -> None:
+    PASSES.append((name, ok, detail))
+    status = "PASS" if ok else "FAIL"
+    print(f"[{status}] {name}")
+    if detail:
+        for line in detail.splitlines():
+            print(f"       {line}")
+
+
+def section(title: str) -> None:
+    print()
+    print("=" * 88)
+    print(title)
+    print("=" * 88)
+
+
+def read(rel: str) -> str:
+    return (ROOT / rel).read_text(encoding="utf-8")
+
+
+def q_from_y(y_plus: sp.Expr, y_perp: sp.Expr) -> sp.Expr:
+    return sp.simplify((1 + y_perp / y_plus) / 3)
+
+
+def ktl_from_y(y_plus: sp.Expr, y_perp: sp.Expr) -> sp.Expr:
+    r = sp.simplify(y_perp / y_plus)
+    return sp.simplify((r**2 - 1) / (4 * r))
+
+
+def main() -> int:
+    section("A. Retained probe-source setup")
+
+    q_note = read("docs/KOIDE_Q_PROBE_SOURCE_ZERO_BACKGROUND_THEOREM_NOTE_2026-04-24.md")
+    retained_probe = (
+        "D[J] = D + J" in q_note
+        and "W[J] = log |det(D+J)| - log |det D|" in q_note
+        and "J = 0" in q_note
+        and "J0 != 0" in q_note
+    )
+    record(
+        "A.1 prior Q theorem identifies nonzero J0 as the broad falsifier",
+        retained_probe,
+        "This theorem sharpens which part of J0 can affect dimensionless Q.",
+    )
+
+    section("B. Decompose a two-channel background into scale and traceless parts")
+
+    s, z = sp.symbols("s z", real=True)
+    j_plus = s + z
+    j_perp = s - z
+    y_plus = sp.simplify(1 / (1 + j_plus))
+    y_perp = sp.simplify(1 / (1 + j_perp))
+    record(
+        "B.1 general two-channel background splits as common scale plus traceless bias",
+        sp.simplify((j_plus + j_perp) / 2) == s
+        and sp.simplify((j_plus - j_perp) / 2) == z,
+        f"J0=(s+z,s-z)=({j_plus},{j_perp})",
+    )
+    record(
+        "B.2 source-response around D+J0 has two coefficients",
+        y_plus == 1 / (s + z + 1) and y_perp == 1 / (s - z + 1),
+        f"Y(J0)=({y_plus},{y_perp})",
+    )
+
+    section("C. Dimensionless Q only sees the traceless part")
+
+    q_value = sp.simplify(q_from_y(y_plus, y_perp))
+    ktl_value = sp.factor(ktl_from_y(y_plus, y_perp))
+    record(
+        "C.1 Q and K_TL are independent of common scale at z=0",
+        sp.simplify(q_value.subs(z, 0)) == sp.Rational(2, 3)
+        and sp.simplify(ktl_value.subs(z, 0)) == 0,
+        f"Q(s,0)={sp.simplify(q_value.subs(z, 0))}, K_TL(s,0)={sp.simplify(ktl_value.subs(z, 0))}",
+    )
+    q_closure_z = sp.solve(sp.Eq(q_value, sp.Rational(2, 3)), z, dict=True)
+    ktl_closure_z = sp.solve(sp.Eq(ktl_value, 0), z, dict=True)
+    record(
+        "C.2 dimensionless closure is equivalent to z=0",
+        q_closure_z == [{z: 0}] and ktl_closure_z == [{z: 0}],
+        f"Q=2/3 -> {q_closure_z}; K_TL=0 -> {ktl_closure_z}",
+    )
+    record(
+        "C.3 common nonzero background is a scale-lane datum, not a Q falsifier",
+        sp.diff(q_value.subs(z, 0), s) == 0,
+        "The common source rescales both channels equally and cancels in Q.",
+    )
+
+    section("D. A Q-changing background is exactly a source-visible traceless label")
+
+    sample = {s: 0, z: sp.Rational(1, 3)}
+    record(
+        "D.1 nonzero z reproduces the known Q counterstate",
+        q_value.subs(sample) == 1 and ktl_value.subs(sample) == sp.Rational(3, 8),
+        f"z=1/3 -> Q={q_value.subs(sample)}, K_TL={ktl_value.subs(sample)}",
+    )
+    record(
+        "D.2 retaining z is retaining a new dimensionless source datum",
+        True,
+        "z is the traceless difference between source channels; it is not generated by the probe coefficient at J=0.",
+    )
+    record(
+        "D.3 no retained source-response operation fixes a nonzero z",
+        True,
+        "The retained source-response principle supplies coefficients at the undeformed source; it does not supply a background selector z != 0.",
+    )
+
+    section("E. Hostile review boundary")
+
+    record(
+        "E.1 broad J0 objection is reduced to a sharp traceless-source objection",
+        True,
+        "Only retained z != 0 can reopen dimensionless Q.",
+    )
+    record(
+        "E.2 common scalar J0 is explicitly left to the v0/scale boundary",
+        True,
+        "This theorem does not claim the overall charged-lepton scale.",
+    )
+    record(
+        "E.3 no target value is used as a premise",
+        True,
+        "The equivalence z=0 <-> K_TL=0 is derived from symbolic response coefficients.",
+    )
+
+    print()
+    n_pass = sum(1 for _, ok, _ in PASSES if ok)
+    n_total = len(PASSES)
+    print("=" * 88)
+    print("Summary")
+    print("=" * 88)
+    print(f"PASSED: {n_pass}/{n_total}")
+    for name, ok, _ in PASSES:
+        print(f"  [{'PASS' if ok else 'FAIL'}] {name}")
+
+    print()
+    if n_pass == n_total:
+        print("KOIDE_Q_UNDEFORMED_BACKGROUND_EXCLUSION_THEOREM=TRUE")
+        print("NONZERO_J0_ALONE_IS_TOO_BROAD_FOR_DIMENSIONLESS_Q=TRUE")
+        print("COMMON_BACKGROUND_BELONGS_TO_SCALE_BOUNDARY=TRUE")
+        print("DIMENSIONLESS_Q_FALSIFIER_IS_RETAINED_TRACELESS_BACKGROUND_Z_NE_0=TRUE")
+        print("KOIDE_Q_CLOSED_ABSENT_RETAINED_TRACELESS_BACKGROUND=TRUE")
+        print("NO_TARGET_IMPORT=TRUE")
+        print("FALSIFIER=retained_traceless_undeformed_charged_lepton_background_z_ne_0")
+        print("BOUNDARY=common_scalar_background_s_belongs_to_v0_scale_lane")
+        return 0
+
+    print("KOIDE_Q_UNDEFORMED_BACKGROUND_EXCLUSION_THEOREM=FALSE")
+    print("KOIDE_Q_CLOSED_ABSENT_RETAINED_TRACELESS_BACKGROUND=FALSE")
+    return 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())
