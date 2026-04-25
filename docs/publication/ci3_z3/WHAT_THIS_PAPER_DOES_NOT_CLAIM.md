@@ -88,7 +88,8 @@ The paper does **not** claim:
   `z_{mLambda}` without closing the `H_inf/H_0` matter bridge;
 - a native prediction of matter-radiation equality `z_mr` without supplied
   `Omega_m,0` and observational `Omega_r,0`;
-- a derivation of `T_CMB`, `N_eff`, recombination, the sound horizon, or BBN;
+- a derivation of `T_CMB`, the standard `0.046` thermal correction in
+  `N_eff = 3.046`, recombination, the sound horizon, or BBN;
 - full DM relic closure.
 
 The current package keeps:

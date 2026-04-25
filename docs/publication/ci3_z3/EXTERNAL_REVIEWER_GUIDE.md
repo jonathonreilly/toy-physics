@@ -221,7 +221,8 @@ Current status from that stack:
   retained `w = -1` corollary, exact `R_base = 31/9` support inside the
   bounded DM/cosmology cascade, and retained graviton spectral compactness-mass
   identity `m_g^2 = 2 hbar^2 Lambda_vac / c^2`, plus the FRW
-  matter-radiation equality identity `1 + z_mr = Omega_m,0/Omega_r,0`, with
+  matter-radiation equality identity `1 + z_mr = Omega_m,0/Omega_r,0` and
+  active-neutrino-count support for standard `N_eff = 3.046`, with
   bounded numerical
   `Lambda`, `Omega_Lambda`, numerical `m_g`, and `n_s`
 - bounded secondary predictions already in the package, plus the CKM-only

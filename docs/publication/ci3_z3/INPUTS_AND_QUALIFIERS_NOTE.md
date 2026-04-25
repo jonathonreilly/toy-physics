@@ -47,6 +47,12 @@ The matter-radiation equality identity adds no new native density derivation:
 the readout `z_mr ~= 3423` uses supplied `Omega_m,0` and observational
 `Omega_r,0` from `T_CMB` plus relativistic-species bookkeeping.
 
+The `N_eff` support theorem connects the retained three-generation matter
+content to the active-neutrino count `N_active = 3`. The public value
+`N_eff = 3.046` still includes the standard external `0.046` thermal-history
+correction and uses observational photon-temperature data when converted into
+`Omega_r,0`.
+
 The dark-matter/cosmology cascade also uses the exact support identity
 `R_base = 31/9`, which depends on the admitted Georgi-Glashow/GUT
 normalization factor `3/5`. That identity is now packaged separately, but it

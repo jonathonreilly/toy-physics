@@ -232,6 +232,9 @@ space. The retained surface now carries:
 - the early-time matter-radiation equality identity
   `1 + z_mr = Omega_m,0/Omega_r,0`; the comparator readout `z_mr ~= 3423`
   requires supplied `Omega_m,0` and observational `Omega_r,0`
+- active-neutrino-count support for the standard radiation input:
+  retained three-generation matter content gives `N_active = 3`, and standard
+  thermal-history bookkeeping then gives `N_eff = 3.046`
 
 The remaining numerical cosmology predictions remain bounded because the
 cosmology-scale identification and broader matter/cosmology bridge remain
@@ -251,6 +254,7 @@ Authority:
 - [COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md](../../COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md)
 - [COSMOLOGY_FRW_KINEMATIC_REDUCTION_THEOREM_NOTE_2026-04-24.md](../../COSMOLOGY_FRW_KINEMATIC_REDUCTION_THEOREM_NOTE_2026-04-24.md)
 - [MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md](../../MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
+- [N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md](../../N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md)
 - [R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md](../../R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md)
 - [COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md](../../COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md)
 - [DARK_ENERGY_EOS_NOTE.md](../../DARK_ENERGY_EOS_NOTE.md)

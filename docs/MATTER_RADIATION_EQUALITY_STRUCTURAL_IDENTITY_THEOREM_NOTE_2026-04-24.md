@@ -130,8 +130,10 @@ Omega_r,0 = Omega_gamma,0 [1 + N_eff (7/8) (4/11)^(4/3)].
 With `T_CMB ~= 2.725 K`, `h ~= 0.674`, and `N_eff = 3.046`, this gives
 `Omega_r,0 ~= 9.2e-5`, matching the value used above. The framework's retained
 three-generation matter structure is consistent with three active neutrino
-flavours, but this note does not derive the thermal-history value of `N_eff`
-or the observed CMB temperature.
+flavours; that active-count support is packaged separately in
+`N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md`. This note does not
+derive the standard thermal-history correction, the observed CMB temperature,
+or the photon-density conversion.
 
 ## Scope
 
@@ -147,7 +149,8 @@ This note claims:
 This note does not claim:
 
 - a native-axiom derivation of `Omega_m,0`;
-- a native-axiom derivation of `Omega_r,0`, `T_CMB`, or `N_eff`;
+- a native-axiom derivation of `Omega_r,0`, `T_CMB`, or the standard
+  `N_eff` thermal correction;
 - a prediction of photon decoupling `z_rec`;
 - a sound-horizon, BAO, CMB acoustic-peak, or BBN calculation;
 - a promoted numerical cosmology package.
@@ -174,6 +177,8 @@ The runner uses the Python standard library only.
   - bounded matter-density cascade context.
 - [`R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md`](R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md)
   - exact support identity inside the bounded DM/cosmology cascade.
+- [`N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md`](N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md)
+  - active-neutrino-count support for the standard `N_eff = 3.046` radiation input.
 - [`DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md`](DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md)
   - retained `w=-1` late-time companion.
 - [`THREE_GENERATION_STRUCTURE_NOTE.md`](THREE_GENERATION_STRUCTURE_NOTE.md)

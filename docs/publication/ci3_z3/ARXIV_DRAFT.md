@@ -739,8 +739,11 @@ plus the exact group-theory support identity $R_{base}=31/9$ inside the
 bounded dark-matter/cosmology cascade. The FRW/EOS surface also carries the
 early-time ratio identity $1+z_{mr}=\Omega_{m,0}/\Omega_{r,0}$; the associated
 readout $z_{mr}\simeq3423$ is conditioned on supplied present-day matter and
-radiation fractions. The $R_{base}$ identity does not by itself promote the
-Sommerfeld continuation or the full $\Omega_{\mathrm{DM}}/\Omega_b$ value.
+radiation fractions. The retained matter surface also fixes three active
+neutrino flavours, giving the standard-cosmology readout $N_{\rm eff}=3.046$
+after the external finite-temperature correction. The $R_{base}$ identity does
+not by itself promote the Sommerfeld continuation or the full
+$\Omega_{\mathrm{DM}}/\Omega_b$ value.
 The numerical $\Lambda$, the present $\Omega_\Lambda$ row, and the remaining
 cosmology numerics still reduce to one fixed-gap vacuum scale plus the
 remaining matter-content bridge.
