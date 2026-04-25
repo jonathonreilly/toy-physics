@@ -112,6 +112,7 @@ python3 scripts/frontier_n_eff_from_three_generations.py
 python3 scripts/frontier_graviton_spectral_tower.py
 python3 scripts/frontier_vector_gauge_field_kk_tower.py
 python3 scripts/frontier_scalar_harmonic_tower.py
+python3 scripts/frontier_gravity_cosmology_tower_lambda_spectral_bridge.py
 ```
 
 ## How To Read The Output

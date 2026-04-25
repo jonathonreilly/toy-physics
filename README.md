@@ -134,7 +134,8 @@ questions:
   matter-radiation equality identity `1 + z_mr = Omega_m,0/Omega_r,0`, and
   the retained active-neutrino-count support `N_eff = 3 + 0.046 = 3.046`
   after the standard thermal correction, and the retained scalar, vector, and
-  TT compactness spectral towers on `S^3`
+  TT compactness spectral towers on `S^3`, including their pure-`Lambda`
+  bridge with `m_TT(2)/m_vec(1) = sqrt(3)` as a structural ratio only
 - retained quantitative lanes:
   canonical `v = 246.282818290129 GeV`, retained `alpha_s(M_Z) = 0.1181`,
   retained `alpha_LM` geometric-mean coupling identity, retained EW

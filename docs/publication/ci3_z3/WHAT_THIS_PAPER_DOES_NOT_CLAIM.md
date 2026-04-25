@@ -125,6 +125,9 @@ The paper does **not** claim:
 - direct observation, independent 4D particle-state promotion, scalar-species
   existence, or optional new gauge-sector promotion from the retained
   compactness spectral towers;
+- a direct gravitational-wave mass falsification claim from the
+  gravity/cosmology tower Lambda bridge without separately promoting the
+  bounded particle interpretation of the compactness towers;
 - full DM relic closure.
 
 The current package keeps:

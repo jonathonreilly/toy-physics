@@ -283,7 +283,8 @@ Validate with:
 
 - retained cosmology identities/corollaries:
   `Lambda_vac = lambda_1(S^3_R)`, `w = -1`, graviton spectral compactness-mass
-  identity, the retained TT and vector compactness spectral towers, the exact
+  identity, the retained scalar/vector/TT compactness spectral towers, their
+  pure-`Lambda` bridge with `m_TT(2)/m_vec(1)=sqrt(3)`, the exact
   `R_base = 31/9` group-theory support identity for the bounded
   DM/cosmology cascade, and the FRW kinematic reduction of `q_0`, `z_*`,
   `z_{mLambda}`, and asymptotic `H_inf` to the same open `H_inf/H_0` ratio,
@@ -321,6 +322,7 @@ Validate with:
 - `python3 scripts/frontier_graviton_spectral_tower.py`
 - `python3 scripts/frontier_vector_gauge_field_kk_tower.py`
 - `python3 scripts/frontier_scalar_harmonic_tower.py`
+- `python3 scripts/frontier_gravity_cosmology_tower_lambda_spectral_bridge.py`
 - `python3 scripts/frontier_tensor_scalar_ratio_consolidation.py`
 
 ## Validation Paths

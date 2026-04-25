@@ -277,6 +277,10 @@ space. The retained surface now carries:
   `m_l^2 = l(l+2) hbar^2/(c^2 R^2)`, exact rational squared-mass ratios for
   non-zero modes, and first non-zero coefficient `m_1^2 = hbar^2 Lambda/c^2`;
   scalar-species existence and particle interpretation remain bounded
+- the gravity/cosmology tower Lambda bridge, which rewrites all three compactness
+  towers in pure-`Lambda` units, gives the structural ratio
+  `m_TT(2)/m_vec(1) = sqrt(3)`, and keeps benchmark mass scales/GW comparisons
+  conditional on the bounded particle-interpretation promotion
 - `R_base = 31/9` as an exact group-theory support identity inside the
   bounded DM/cosmology cascade; the Sommerfeld factor and full
   `Omega_DM/Omega_b` value remain bounded

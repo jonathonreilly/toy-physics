@@ -73,7 +73,9 @@ For the full package-capture inventory, use:
   reduction of late-time cosmology observables to the open `H_inf/H_0` ratio,
   the matter-radiation equality identity `1 + z_mr = Omega_m,0/Omega_r,0`,
   the retained active-neutrino-count support for standard `N_eff = 3.046`,
-  and the retained scalar, vector, and TT compactness spectral towers on `S^3`
+  and the retained scalar, vector, and TT compactness spectral towers on `S^3`,
+  including their pure-`Lambda` bridge and Lambda-independent
+  `m_TT(2)/m_vec(1) = sqrt(3)` structural ratio
 - flagship closed package:
   dark-matter exact-target PMNS package on the manuscript surface
 - flagship open package:
