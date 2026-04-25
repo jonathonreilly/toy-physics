@@ -45,9 +45,10 @@ questions:
   EDM continuation, vacuum criticality, taste-scalar near-degeneracy,
   benchmark gravitational decoherence, and monopole mass
 - exact structural predictions and signatures:
-  SM hypercharge uniqueness/electric-charge quantization, `SU(2)` Witten
-  global-anomaly cancellation, `SU(3)^3` cubic gauge anomaly cancellation,
-  B-L anomaly freedom as a gaugeable option on the retained content,
+  SM hypercharge uniqueness/electric-charge quantization, fractional-charge
+  denominator from `N_c`, `SU(2)` Witten global-anomaly cancellation,
+  `SU(3)^3` cubic gauge anomaly cancellation, B-L anomaly freedom as a
+  gaugeable option on the retained content,
   emergent-Lorentz dimension-6 onset, and action-surface `theta_eff = 0`
 - remaining open flagship bridge package:
   charged-lepton Koide (`Q = 2/3`, `delta = 2/9`);
@@ -84,9 +85,10 @@ questions:
   weak-field gravity, restricted strong-field closure, full discrete `3+1`
   GR, chosen-target QG/continuum closure, graph-first `SU(3)`,
   anomaly-forced `3+1`, retained three-generation structure with exact
-  SM hypercharge uniqueness/electric-charge quantization, `SU(2)` Witten
-  global-anomaly cancellation, `SU(3)^3` cubic gauge anomaly cancellation,
-  B-L anomaly freedom as a gaugeable option, and exact taste-cube /
+  SM hypercharge uniqueness/electric-charge quantization, fractional-charge
+  denominator from `N_c`, `SU(2)` Witten global-anomaly cancellation,
+  `SU(3)^3` cubic gauge anomaly cancellation, B-L anomaly freedom as a
+  gaugeable option, and exact taste-cube /
   residual-symmetry flavor support, exact `I_3 = 0`, exact CPT,
   retained Bell/CHSH support on explicit two-species lattice systems,
   emergent Lorentz invariance, retained strong-CP closure on the retained

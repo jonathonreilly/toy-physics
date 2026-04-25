@@ -41,6 +41,9 @@ The paper does **not** claim:
   evasion theorem;
 - that SM hypercharge uniqueness derives the neutral-singlet input
   `Y(nu_R)=0`, cross-generation uniqueness, or alternative gauge groups;
+- that the fractional-charge denominator theorem derives native-axiom
+  uniqueness of `N_c = 3`, excludes altered left-handed templates, or
+  classifies beyond-SM charge assignments;
 - that the `SU(2)` Witten anomaly theorem constrains bosonic Higgs doublets,
   classifies higher-isospin `SU(2)` representations, or derives `N_c = 3`;
 - that the `SU(3)^3` cubic anomaly theorem derives `N_c = 3`, sees the
@@ -57,6 +60,9 @@ The current retained claim is:
 - one-generation SM hypercharge uniqueness/electric-charge quantization
   conditional on the retained left-handed content, singlet right-handed
   completion, anomaly equations, `Y(nu_R)=0`, and charge labelling;
+- the exact fractional-charge denominator rule from `N_c` on the retained
+  left-handed trace surface, with retained `N_c=3` giving third-integer quark
+  charge;
 - nonperturbative `SU(2)` Witten global-anomaly cancellation on the retained
   fundamental weak-doublet content;
 - pure `SU(3)^3` cubic gauge anomaly cancellation on the retained

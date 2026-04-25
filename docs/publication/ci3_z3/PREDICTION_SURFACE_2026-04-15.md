@@ -162,8 +162,14 @@ conceptual pressure.
     `(4/3, -2/3, -2, 0)` up to the removed `u_R <-> d_R` label swap
   - the one-generation electric-charge set is therefore
     `{0, +/-1/3, +/-2/3, +/-1}`
+  - the left-handed trace relation also packages a separate denominator rule:
+    `Y(Q_L):Y(L_L) = 1:-N_c`, so the nonzero quark-charge denominator is
+    `N_c` for odd `N_c` and `2 N_c` for even `N_c`; on the Witten-consistent
+    retained-style set this reduces to denominator `N_c`, and retained
+    graph-first `N_c=3` gives the observed third-integer pattern
   - authority:
     [STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md](../../STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md)
+    and [FRACTIONAL_CHARGE_DENOMINATOR_FROM_N_C_THEOREM_NOTE_2026-04-24.md](../../FRACTIONAL_CHARGE_DENOMINATOR_FROM_N_C_THEOREM_NOTE_2026-04-24.md)
 - B-L anomaly freedom / gaugeable option:
   - on the retained 16-state one-generation content including `nu_R`, all six
     anomaly traces needed to gauge `U(1)_{B-L}` alongside the retained SM gauge

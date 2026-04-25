@@ -296,6 +296,11 @@ theorem now packages the arithmetic: with the retained left-handed content, an
 $SU(2)$-singlet right-handed completion, the anomaly equations,
 $Y(\nu_R)=0$, and the positive up-type label, the singlet hypercharges are
 uniquely $(4/3,-2/3,-2,0)$ up to the removed $u_R \leftrightarrow d_R$ swap.
+The left-handed trace relation also isolates the charge-denominator origin:
+for a retained-style color multiplicity $N_c$, $Y(Q_L):Y(L_L)=1:-N_c$ and
+the nonzero quark-charge denominator is $N_c$ on the Witten-consistent
+odd-$N_c$ branch, giving the observed third-integer pattern at the retained
+graph-first value $N_c=3$.
 On the same retained matter surface, the nonperturbative $SU(2)$ Witten
 count is even and the pure $SU(3)^3$ cubic gauge anomaly cancels as
 $+2-1-1=0$. The six-trace $B-L$ anomaly packet also cancels exactly, so
