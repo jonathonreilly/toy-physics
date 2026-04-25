@@ -169,6 +169,26 @@ Current blocker:
   `1/4`, via
   [BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md](./BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md).
 
+2026-04-25 progress:
+
+- [AREA_LAW_COEFFICIENT_GAP_NOTE.md](./AREA_LAW_COEFFICIENT_GAP_NOTE.md)
+  audits the gap between the Planck primitive `c_cell = 1/4` and the retained
+  entanglement carriers.
+- [AREA_LAW_QUARTER_BROADER_NO_GO_NOTE_2026-04-25.md](./AREA_LAW_QUARTER_BROADER_NO_GO_NOTE_2026-04-25.md)
+  closes the simple-fiber Widom class negatively: any straight-cut
+  free-fermion carrier with at most one occupied `k_x` interval per transverse
+  momentum fiber has `c_Widom <= 1/6`, and Schur/direct-sum descendants remain
+  bounded by the same convexity argument under consistent boundary-rank
+  normalization.
+
+Residual Target 2 route:
+
+- derive a non-engineered multi-pocket/multi-interval Fermi carrier whose
+  projected crossing multiplicity is exactly `3`; or
+- derive a gapped horizon/edge carrier whose strict area-law coefficient is the
+  same `16`-state primitive boundary count
+  `Tr((I_16/16) P_A) = 1/4`.
+
 ### Target 3: one-axiom information/action bridge
 
 Framework-compression route.
