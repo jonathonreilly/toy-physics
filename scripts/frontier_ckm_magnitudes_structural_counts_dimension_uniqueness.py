@@ -1,20 +1,33 @@
 #!/usr/bin/env python3
-"""CKM atlas-LO magnitudes from structural counts theorem audit.
+"""CKM atlas-LO magnitudes structural-counts SUPPORT NOTE audit.
 
-Verifies the new unified structural-counts form for all atlas-LO CKM
-magnitudes in
-  docs/CKM_MAGNITUDES_STRUCTURAL_COUNTS_DIMENSION_UNIQUENESS_THEOREM_NOTE_2026-04-25.md
+Two-layer audit per
+  docs/CKM_MAGNITUDES_STRUCTURAL_COUNTS_DIMENSION_UNIQUENESS_SUPPORT_NOTE_2026-04-25.md
 
+LAYER 1 (retained, no conditional inputs needed):
   (M1) |V_us|^2  =  alpha_s(v)/N_pair                        =  alpha_s/2
   (M2) |V_cb|^2  =  alpha_s(v)^2/(N_pair N_color)             =  alpha_s^2/6
   (M3) |V_ts|^2  =  alpha_s(v)^2/(N_pair N_color)             =  alpha_s^2/6
   (M4) |V_ub|^2  =  alpha_s(v)^3/(8 N_color^2)                =  alpha_s^3/72
-  (M5) |V_td|^2  =  (N_pair N_color - 1) alpha_s(v)^3/(8 N_color^2) = 5 alpha_s^3/72
-  (M6) |V_ub|^2  =  alpha_s(v)^3/(8 (2d+3))                   [d-dependent]
+  (M5) |V_td|^2  =  (N_pair N_color - 1) alpha_s(v)^3/(8 N_color^2)
+                                                              = 5 alpha_s^3/72
 
-DIMENSION UNIQUENESS via |V_ub|: integer solutions to 2d+3 = N_color^2
-give (d, N_color) = (3,3), (11,5), (23,7), .... Only (3,3) matches PDG
-|V_ub|^2 within atlas-LO precision; alternatives excluded at 60-80%.
+These follow from retained CKM atlas inputs only.
+
+LAYER 2 (CONDITIONAL on premise P1):
+  (P1) (alpha_3/alpha_em)(bare) = 2d + 3 = N_color^2
+       Carrier on main is itself a SUPPORT note, not retained closure.
+
+  (M6) |V_ub|^2  =  alpha_s(v)^3/(8 (2d+3))                   [conditional]
+
+Under (P1), integer solutions to 2d+3 = N_color^2 give
+(d, N_color) = (3,3), (11,5), (23,7), .... PDG |V_ub| is conditionally
+consistent with (3,3) and conditionally excludes (11,5), (23,7) at
+60-80% deviation. This is a falsification template, NOT a retained
+empirical proof of d = 3.
+
+This is a falsification and cross-extraction template. It is NOT
+part of the accepted minimal-input stack on main.
 """
 
 from __future__ import annotations
@@ -91,16 +104,24 @@ def audit_inputs() -> None:
           2 * D + 3 == N_COLOR ** 2)
 
     repo_root = Path(__file__).resolve().parents[1]
-    upstream = (
+    # Layer 1 retained authorities (used by all of M1-M5):
+    upstream_retained = (
         "docs/ALPHA_S_DERIVED_NOTE.md",
         "docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md",
         "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
         "docs/CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md",
         "docs/CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md",
     )
-    for rel in upstream:
+    for rel in upstream_retained:
         path = repo_root / rel
-        check(f"upstream authority present: {rel}", path.exists())
+        check(f"retained upstream authority present: {rel}", path.exists())
+
+    # Layer 2 CONDITIONAL premise (P1) source. This is a SUPPORT note on
+    # main, NOT retained closure. Layer 2 results below depend on it.
+    p1_carrier = "docs/FRAMEWORK_BARE_ALPHA_3_ALPHA_EM_DIMENSION_FIXED_RATIO_SUPPORT_NOTE_2026-04-25.md"
+    path_p1 = repo_root / p1_carrier
+    check(f"(P1) conditional carrier present (SUPPORT note, not retained): {p1_carrier}",
+          path_p1.exists())
 
 
 def audit_m1_v_us() -> None:
@@ -134,7 +155,7 @@ def audit_m2_m3_v_cb_v_ts() -> None:
 
 
 def audit_m4_v_ub() -> None:
-    banner("(M4) NEW closed form: |V_ub|^2 = alpha_s(v)^3 / (8 N_color^2)")
+    banner("(M4) Layer 1 retained: |V_ub|^2 = alpha_s(v)^3 / (8 N_color^2)")
 
     closed_form = ALPHA_S_V ** 3 / (8 * N_COLOR ** 2)
     retained = ALPHA_S_V ** 3 / 72
@@ -176,7 +197,7 @@ def audit_m6_d_dependent_form() -> None:
 
 
 def audit_dimension_uniqueness() -> None:
-    banner("DIMENSION UNIQUENESS: PDG |V_ub| picks d=3 from integer alternatives")
+    banner("Layer 2 CONDITIONAL: under (P1), PDG |V_ub| consistent with d=3 only")
 
     print(f"  PDG |V_ub|^2 = {V_UB_PDG ** 2:.4e} +/- {2 * V_UB_PDG * V_UB_PDG_ERR:.4e}")
     print()
@@ -211,8 +232,10 @@ def audit_dimension_uniqueness() -> None:
     check("framework (d=3) is the smallest integer solution",
           solutions_passed > 0)
     print()
-    print("  Conclusion: PDG |V_ub| empirically excludes d>=11 alternatives.")
-    print("              Framework d=3 is uniquely consistent.")
+    print("  CONDITIONAL conclusion (assumes premise P1):")
+    print("    Under (P1), PDG |V_ub| is conditionally consistent with d=3")
+    print("    and conditionally excludes d>=11 alternatives at 60-80% deviation.")
+    print("    NOT a retained empirical proof of d=3 — depends on (P1) closure.")
 
 
 def audit_pdg_comparators() -> None:
@@ -286,32 +309,36 @@ def audit_n_pair_cancellation() -> None:
 
 
 def audit_summary() -> None:
-    banner("Summary: NEW CKM atlas-LO magnitudes from structural counts")
+    banner("Summary: two-layer audit (Layer 1 retained, Layer 2 conditional)")
 
-    print("  Unified structural-counts CKM magnitudes (NEW):")
+    print("  LAYER 1 (RETAINED, no conditional inputs):")
+    print("    Unified structural-counts CKM magnitudes from retained CKM atlas:")
     print()
     print("    |V_us|^2 = alpha_s(v) / N_pair")
     print("    |V_cb|^2 = alpha_s(v)^2 / (N_pair N_color)")
     print("    |V_ts|^2 = alpha_s(v)^2 / (N_pair N_color) (= |V_cb|^2 atlas-LO)")
-    print("    |V_ub|^2 = alpha_s(v)^3 / (8 N_color^2)              (NEW, N_pair cancels)")
+    print("    |V_ub|^2 = alpha_s(v)^3 / (8 N_color^2)        (N_pair cancels)")
     print("    |V_td|^2 = (N_quark - 1) alpha_s(v)^3 / (8 N_color^2)")
     print()
-    print("  Combined with retained 2d+3 = N_color^2:")
+    print("  LAYER 2 (CONDITIONAL on premise P1):")
+    print("    (P1) (alpha_3/alpha_em)(bare) = 2d + 3 = N_color^2")
+    print("         carrier on main is itself a SUPPORT note, not retained.")
     print()
-    print("    |V_ub|^2 = alpha_s(v)^3 / (8 (2d+3))")
+    print("    Under (P1): |V_ub|^2 = alpha_s(v)^3 / (8 (2d+3))")
+    print("    Integer (d, N_color) solutions: (3,3), (11,5), (23,7), ...")
     print()
-    print("  DIMENSION UNIQUENESS via PDG |V_ub|:")
-    print("    Integer solutions: (d, N_color) = (3,3), (11,5), (23,7), ...")
-    print("    PDG |V_ub| empirically excludes d>=11 alternatives.")
-    print("    Framework d=3 is uniquely consistent at 5% precision.")
+    print("    PDG |V_ub| is conditionally consistent with d=3 at 5% precision.")
+    print("    Alternatives (d=11, 23) conditionally excluded at 60-80%.")
+    print("    NOT a retained empirical proof of d=3.")
     print()
-    print("  PDG match quality: 4-7% across all atlas-LO magnitudes.")
+    print("  PDG match quality (Layer 1, retained): 4-7% across all magnitudes.")
+    print("  This note is NOT part of the accepted minimal-input stack on main.")
 
 
 def main() -> int:
     print("=" * 88)
-    print("CKM atlas-LO magnitudes from structural counts theorem audit")
-    print("See docs/CKM_MAGNITUDES_STRUCTURAL_COUNTS_DIMENSION_UNIQUENESS_THEOREM_NOTE_2026-04-25.md")
+    print("CKM atlas-LO magnitudes structural-counts SUPPORT NOTE audit")
+    print("See docs/CKM_MAGNITUDES_STRUCTURAL_COUNTS_DIMENSION_UNIQUENESS_SUPPORT_NOTE_2026-04-25.md")
     print("=" * 88)
 
     audit_inputs()
