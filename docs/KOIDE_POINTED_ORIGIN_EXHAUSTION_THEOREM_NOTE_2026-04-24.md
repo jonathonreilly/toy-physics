@@ -108,7 +108,9 @@ demoted to an open proposal.
 ## Explicit Non-Claims
 
 - Does not claim retained/native Koide dimensionless closure.
-- Does not derive the physical background-zero / `Z`-erasure law for `Q`.
+- Does not derive physical source-free reduced-carrier selection for `Q`;
+  the April 25 background-zero / `Z`-erasure criterion closes only the internal
+  algebra once that carrier is admitted.
 - Does not derive the selected-line local boundary-source law for `delta`.
 - Does not derive the open endpoint section as based/unit-preserving.
 - Does not address the separate overall lepton scale `v_0`.

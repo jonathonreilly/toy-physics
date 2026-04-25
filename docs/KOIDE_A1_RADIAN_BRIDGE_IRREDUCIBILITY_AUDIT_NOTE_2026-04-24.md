@@ -156,7 +156,8 @@ packet. It does not replace that packet's residuals:
 
 ```text
 Q remains:
-  physical background-zero / Z-erasure.
+  physical source-free reduced-carrier selection after the April 25
+  background-zero / Z-erasure criterion closes the internal algebra.
 
 delta remains:
   selected-line local boundary-source law

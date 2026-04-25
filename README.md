@@ -115,8 +115,9 @@ questions:
 - charged-lepton package:
   substantial Koide support stack; the latest native zero-section review
   pointed-origin exhaustion theorem, and objection-closure review reject full
-  dimensionless closure but sharpen the remaining work to a physical
-  background-zero / `Z`-erasure theorem for `Q`, plus a selected-line local
+  dimensionless closure. The April 25 criterion theorem lands the exact
+  background-zero / `Z`-erasure algebra for `Q` while leaving physical
+  source-free reduced-carrier selection open, plus a selected-line local
   boundary-source and based-endpoint theorem for `delta`
 - dark-matter package:
   closed for the exact PMNS-target formulation treated in the manuscript,

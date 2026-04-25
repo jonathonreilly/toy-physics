@@ -44,6 +44,20 @@ work:
   endpoint-selection diagnostic, not as a new finite-lattice derivation of the
   APS value.
 
+**2026-04-25 `Q` criterion addendum.** The background-zero / `Z`-erasure
+criterion theorem closes the exact algebra inside the admitted normalized
+reduced carrier:
+
+```text
+K = 0 <=> Y = I_2 <=> z = 0 <=> <Z> = 0 <=> Q = 2/3.
+```
+
+This is a useful tightening, not retained native Koide closure. The remaining
+`Q` primitive is now specifically:
+
+> derive physical source-free reduced-carrier selection for the charged-lepton
+> lane.
+
 See `docs/KOIDE_NATIVE_DIMENSIONLESS_REVIEW_PACKET_2026-04-24.md`.
 
 **Executability guarantee.** Every PASS check across the runner stack is an
@@ -109,6 +123,12 @@ The April 22 second-order support batch sharpens that residue further:
 
 > the remaining open step is exactly why the physical charged-lepton scalar
 > readout is the zero-source source-response coefficient on that carrier.
+
+The April 25 criterion theorem sharpens the same residue one step more:
+
+> on the admitted normalized reduced carrier, zero source is exactly
+> `Z`-erasure and is exactly equivalent to `Q = 2/3`; what remains open is the
+> physical theorem selecting that source-free reduced-carrier representative.
 
 The April 22 `O_h` covariance no-go sharpens the structural side as well:
 
@@ -267,8 +287,9 @@ above.
 | `frontier_koide_reviewer_stress_test.py` | stress-test | 34/34 |
 | `frontier_koide_brannen_route3_geometry_support.py` | Brannen support: exact selected-line geometry + conditional Route-3 support | 30/30 |
 | `frontier_koide_brannen_dirac_support.py` | Brannen support: explicit finite-lattice `L=3` Wilson-Dirac illustration | 11/11 |
+| `frontier_koide_q_background_zero_z_erasure_criterion.py` | `Q` support: exact background-zero / `Z`-erasure criterion on admitted reduced carrier | 25/25 |
 
-**Total: 242 PASS, 0 FAIL.**
+**Total: 267 PASS, 0 FAIL.**
 
 ### Notes
 
@@ -277,6 +298,7 @@ above.
 - `docs/KOIDE_Q_EQ_3DELTA_IDENTITY_NOTE_2026-04-21.md`
 - `docs/KOIDE_REVIEWER_STRESS_TEST_NOTE_2026-04-21.md`
 - `docs/KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`
+- `docs/KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md`
 
 ---
 
@@ -295,13 +317,13 @@ above.
 
 ## Bottom line
 
-- `Q = 2/3`: strongest current executable support, not yet retained
-  closure.
+- `Q = 2/3`: exact source-free / `Z`-erasure criterion on the admitted
+  normalized reduced carrier, but still not retained closure.
 - `δ = 2/9`: strongest current executable support, not yet retained
   closure.
 - `Q = 3·δ`: exact compatibility identity between the two support routes.
-- Remaining open behind `Q`: the physical/source-law extremal-principle
-  bridge.
+- Remaining open behind `Q`: the physical source-free reduced-carrier
+  selection theorem.
 - Remaining open behind `δ`: the physical Brannen-phase bridge
   `δ_physical = η_APS`.
 - `m_*` / `w/v` remains downstream of the Brannen-phase bridge.

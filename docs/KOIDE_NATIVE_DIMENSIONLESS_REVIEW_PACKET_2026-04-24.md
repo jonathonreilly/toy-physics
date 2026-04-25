@@ -16,8 +16,9 @@ Q:
   zero-probe source-response about a zero physical background
   -> K_TL = 0
   -> Q = 2/3
-  remains a physical background-zero / Z-erasure theorem unless separately
-  derived.
+  remains a physical source-free reduced-carrier selection theorem; the
+  April 25 background-zero / Z-erasure criterion derives the internal algebra
+  but not the physical selection law.
 
 delta:
   selected-line local boundary source + based endpoint readout
@@ -72,10 +73,11 @@ NEXT_NATIVE_THEOREM=
 
 7. **Dimensionless objection-closure review.** The later objection-closure
    branch does not close the dimensionless lane. It sharpens Q to a physical
-   background-zero / `Z`-erasure theorem and sharpens delta to a selected-line
-   local boundary-source law plus based endpoint section. The positive
-   source-domain closure language is kept as conditional support, not retained
-   closure.
+   source-free reduced-carrier selection theorem, with the April 25
+   background-zero / `Z`-erasure criterion closing only the internal algebra,
+   and sharpens delta to a selected-line local boundary-source law plus based
+   endpoint section. The positive source-domain closure language is kept as
+   conditional support, not retained closure.
 
 8. **A1 radian-bridge irreducibility audit.** The later A1 branch contributes
    a useful Type-A / Type-B no-go: retained periodic lattice phase sources

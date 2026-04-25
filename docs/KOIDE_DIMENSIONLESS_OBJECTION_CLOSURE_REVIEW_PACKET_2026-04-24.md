@@ -23,8 +23,9 @@ The branch usefully sharpens the two remaining dimensionless questions:
 ```text
 Q:
   zero-probe source-response coefficient -> Q = 2/3,
-  but the physical charged-lepton background-zero / Z-erasure theorem is still
-  not derived.
+  and the April 25 criterion theorem proves the background-zero / Z-erasure
+  equivalence inside the admitted carrier, but physical source-free
+  reduced-carrier selection is still not derived.
 
 delta:
   selected-line local boundary source + based endpoint -> delta = eta_APS = 2/9,
@@ -61,9 +62,10 @@ Z = P_plus - P_perp.
 ```
 
 Since `Z` is invariant and distinguishes non-midpoint source states, retained
-observable completeness by itself does not erase it. The missing theorem is a
-physical background-zero / `Z`-erasure law, not another numerical Koide
-calculation.
+observable completeness by itself does not erase it. The April 25 criterion
+theorem proves that background-zero, `Z`-erasure, and `Q = 2/3` are equivalent
+inside the admitted reduced carrier; the missing theorem is now physical
+source-free reduced-carrier selection, not another numerical Koide calculation.
 
 ### Delta selected-line boundary sharpening
 

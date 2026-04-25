@@ -63,10 +63,12 @@ For the full package-capture inventory, use:
 - flagship open package:
   charged-lepton Koide, with full dimensionless closure still open after the
   native zero-section review, pointed-origin exhaustion theorem, and
-  objection-closure review and A1/radian audit; the live target is now a
-  physical background-zero / `Z`-erasure theorem for `Q`, plus selected-line
-  local boundary-source, based-endpoint, and Type-B rational-to-radian readout
-  theorems for `delta`, plus the separate overall lepton scale `v_0`
+  objection-closure review and A1/radian audit; the April 25 criterion theorem
+  closes the background-zero / `Z`-erasure algebra for `Q` inside the admitted
+  reduced carrier, but the physical source-free carrier-selection theorem
+  remains open, alongside selected-line local boundary-source, based-endpoint,
+  and Type-B rational-to-radian readout theorems for `delta`, plus the
+  separate overall lepton scale `v_0`
 - bounded companion surface:
   Higgs/vacuum, down-type CKM-dual ratios, neutrino absolute-mass observable
   bounds, proton lifetime, neutron EDM continuation, taste-scalar companion,
