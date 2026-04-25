@@ -242,7 +242,7 @@ def audit_cross_sector_cubic() -> None:
 
     print()
     print("  These lines are deliberately not counted as PASS conditions because")
-    print("  this runner does not prove Koide, cos^2(theta_K), or N_gen = N_color.")
+    print("  this runner does not prove Koide, cos^2(theta_K), or a structural Koide mechanism.")
 
 
 def audit_summary() -> None:
@@ -269,7 +269,8 @@ def audit_summary() -> None:
     print("  Complete 4x3 Bernoulli tower (12 elements) derivable from retained inputs.")
     print("  Conditional Koide-relevant target matches are printed but not counted.")
     print()
-    print("  Does NOT close A^2 below W2, Koide 2/9, cos^2(theta_K), or N_gen = N_color.")
+    print("  Does NOT close A^2 below W2, Koide 2/9, cos^2(theta_K),")
+    print("  or any structural Koide mechanism beyond retained N_gen = N_color = 3.")
     print("  All counted checks use retained CKM inputs only; no open inputs are used.")
 
 

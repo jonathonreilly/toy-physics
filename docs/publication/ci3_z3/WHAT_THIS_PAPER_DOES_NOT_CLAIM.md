@@ -108,26 +108,40 @@ The paper does **not** claim:
 - that the cross-sector Koide/CKM `V_cb` bridge closes charged-lepton Koide
   or promotes `Q_l = 2/3`; it is a conditional support target using the
   retained CKM atlas plus the open Koide `Q_l` target.
+- that the retained generation/color `Z3` numeric equality closes
+  charged-lepton Koide; it only identifies `N_gen=N_color=3` by direct
+  retained equality of the three-generation and CKM-count authorities, with
+  CL3 support-tier readings left auxiliary.
+- that the retained EW-CKM lattice `A^4` bridge derives `A^2=2/3` below the
+  retained W2 surface or predicts the low-energy `M_Z` weak angle; it only
+  packages `sin^2(theta_W)|_lattice=A^4=4/9` and the gauge-dimension
+  `A^2=2/3` consistency equality.
 - that the CKM Bernoulli `2/9` Koide-bridge support note closes
   charged-lepton Koide, derives `A^2=2/3` below the retained W2 surface, or
-  promotes the cross-sector `N_gen=N_color` identification; it only packages
-  exact CKM-side pair/color arithmetic.
+  supplies a structural Koide mechanism beyond the separately retained
+  numeric equality `N_gen=N_color=3`; it only packages exact CKM-side
+  pair/color arithmetic.
 - that the CKM `n/9` structural-family Koide-bridge support note proves a
-  Koide-side `n/9` family or promotes `N_gen=N_color`; it only packages exact
-  CKM-side target-class arithmetic from retained CKM inputs.
+  Koide-side `n/9` family or supplies a structural Koide mechanism beyond
+  the separately retained numeric equality `N_gen=N_color=3`; it only
+  packages exact CKM-side target-class arithmetic from retained CKM inputs.
 - that the CKM cubic Bernoulli Koide-bridge support note proves Koide
-  `cos^2(theta_K)`, Koide cubic variance, or `N_gen=N_color`; it only
+  `cos^2(theta_K)`, Koide cubic variance, or a structural Koide mechanism
+  beyond the separately retained numeric equality `N_gen=N_color=3`; it only
   packages exact CKM-side cubic target-class arithmetic from retained CKM
   inputs, and its cross-sector readings are conditional support.
 - that the CKM Egyptian-fraction Bernoulli Koide-bridge support note proves
-  Koide ternary unitarity, Koide `cos^2(theta_K)`, charged-lepton Koide, or
-  `N_gen=N_color`; it only packages exact CKM-side Egyptian-fraction and
+  Koide ternary unitarity, Koide `cos^2(theta_K)`, charged-lepton Koide, or a
+  structural Koide mechanism beyond the separately retained numeric equality
+  `N_gen=N_color=3`; it only packages exact CKM-side Egyptian-fraction and
   Bernoulli-sum arithmetic from retained CKM inputs, and its cross-sector
   readings are conditional support.
 - that the CKM consecutive-primes / `S_3` Koide-bridge support note proves
-  charged-lepton Koide, PMNS closure, or `N_gen=N_color`; it only packages
-  exact CKM-side prime, divisor, and `S_3` representation bookkeeping from
-  retained CKM counts, and its cross-sector readings are conditional support.
+  charged-lepton Koide, PMNS closure, or a structural Koide mechanism beyond
+  the separately retained numeric equality `N_gen=N_color=3`; it only
+  packages exact CKM-side prime, divisor, and `S_3` representation
+  bookkeeping from retained CKM counts, and its cross-sector readings are
+  conditional support.
 - that the bare `alpha_3/alpha_em = 9` support card promotes the reviewed
   `Cl(3)->SM` support packet into the accepted minimal-input stack, predicts a
   direct low-energy `alpha_3/alpha_em` ratio without the retained EW

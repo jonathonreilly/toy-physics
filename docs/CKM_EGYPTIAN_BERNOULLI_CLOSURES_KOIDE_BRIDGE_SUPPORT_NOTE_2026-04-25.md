@@ -4,7 +4,8 @@
 
 **Status:** exact CKM-side support corollary plus conditional cross-sector
 commentary. This is not a retained charged-lepton Koide theorem, not a
-derivation of `cos^2(theta_K)`, and not a retained `N_gen = N_color` bridge.
+derivation of `cos^2(theta_K)`, and not a structural Koide mechanism beyond
+the separately retained numeric equality `N_gen = N_color = 3`.
 
 The useful retained-input content is number-theoretic. With the CKM structural
 counts
@@ -189,13 +190,15 @@ sin^2(theta_K) = 1 - 1/N_pair = 1/N_color + 1/N_quark = 1/3 + 1/6.
 ```
 
 That is useful bookkeeping, but it is not a proof of `cos^2(theta_K)`, not a
-proof of charged-lepton Koide, and not a proof of `N_gen = N_color`.
+proof of charged-lepton Koide, and not a structural mechanism beyond the
+separately retained numeric equality `N_gen = N_color = 3`.
 
 ## What This Does Not Claim
 
 - It does not close charged-lepton Koide or promote `Q_l = 2/3`.
 - It does not derive `cos^2(theta_K) = 1/2`.
-- It does not derive or promote `N_gen = N_color`.
+- It does not derive or use the separately retained numeric equality
+  `N_gen = N_color = 3` as an input to its CKM-side arithmetic.
 - It does not derive `A^2 = 2/3` below the already-retained W2 surface.
 - It does not use Koide, PDG data, or support-tier cross-sector premises as
   derivation inputs.

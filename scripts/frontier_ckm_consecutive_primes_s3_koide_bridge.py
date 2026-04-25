@@ -229,7 +229,7 @@ def audit_conditional_koide_reading() -> None:
     banner("Conditional Koide/S3 reading (not counted)")
 
     print("  Koide is symmetric under permutations of charged-lepton masses.")
-    print("  If a separate retained theorem supplies N_gen=N_color=3, then")
+    print("  With the separately retained numeric equality N_gen=N_color=3,")
     print("  the Koide permutation group is S3 and the natural representation")
     print("  decomposes as trivial + standard with dimensions 1 + N_pair.")
     print()
@@ -245,7 +245,7 @@ def audit_summary() -> None:
     print("    Fibonacci triple, mixing-angle count, and combined uniqueness.")
     print()
     print("  Not certified here:")
-    print("    charged-lepton Koide, Q_l=2/3, PMNS closure, or N_gen=N_color.")
+    print("    charged-lepton Koide, Q_l=2/3, PMNS closure, or structural Koide mechanism.")
 
 
 def main() -> int:

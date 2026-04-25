@@ -27,7 +27,7 @@ ALL INPUTS RETAINED on current main:
 
 NO SUPPORT-tier or open inputs used as DERIVATION inputs.
 Cross-sector reading is commentary, NOT input. The runner does not close Koide
-or promote N_gen=N_color.
+or use the separately retained numeric equality N_gen=N_color=3.
 
 Uses Python's fractions.Fraction for exact-rational arithmetic.
 """
@@ -221,19 +221,19 @@ def audit_cross_sector_reading() -> None:
     banner("Cross-sector reading (SUPPORT, NOT closure)")
 
     print("  If a separate Koide-side theorem produces ratios n/N_gen^2,")
-    print("  and if a separate cross-sector theorem identifies N_gen = N_color = 3,")
-    print("  then the CKM-side support family here supplies matching n/9 expressions.")
+    print("  then the separately retained numeric equality N_gen = N_color = 3")
+    print("  lets the CKM-side support family here supply matching n/9 expressions.")
     print()
     print("  CKM-side support family: F1-F9 cover all n/9 for n in {1,...,9}.")
     print()
     print("  This does not close Koide 2/9, does not derive a Koide n/9 family,")
-    print("  and does not promote N_gen = N_color.")
+    print("  and does not use N_gen = N_color as a CKM input.")
     print()
     print("  It only packages the CKM-side target class exactly.")
 
     # Documentation check
     check("Cross-sector reading: CKM support family covers n/9 target class", True)
-    check("Cross-sector identification N_gen = N_color is SUPPORT-tier (NOT used as input)",
+    check("Retained numeric equality N_gen = N_color is NOT used as input",
           True)
 
 
@@ -255,7 +255,7 @@ def audit_summary() -> None:
     print("            N_quark, N_quark+1, N_color^2-1, N_color^2 fills n=1..9.")
     print()
     print("  Cross-sector reading: CKM support family covers the n/9 target class.")
-    print("  Koide-side derivations and N_gen = N_color remain separate open problems.")
+    print("  Koide-side derivations remain separate open problems.")
     print()
     print("  All inputs retained on main; no SUPPORT-tier or open inputs used as input.")
 

@@ -21,7 +21,8 @@ values produce a compact 4x3 tower and new CKM-side factorizations.
 
 This note is **not a closure of A^2 below W2** and **not a closure of Koide
 2/9**. The cross-sector reading remains conditional on a separate Koide-side
-result and a separate `N_gen = N_color` bridge. It pushes the *supporting*
+result, even though the numeric equality `N_gen = N_color = 3` is now retained
+separately. It pushes the *supporting*
 structure by:
 
 1. Introducing the **cubic Bernoulli level k = 3** with `W(N) = (N - 1)/N^3`,
@@ -284,8 +285,9 @@ Koide cubic variance (= ?)  =  (N_gen - 1)/N_gen^3  =  W(N_color) = 2/27       [
 
 Without retained Koide cubic structure on main, the specific physical interpretation of
 2/27 in Koide is conjectural. But the structural FORM (N − 1)/N³ at N = N_color in CKM
-matches the Koide-form (N − 1)/N³ at N = N_gen if the cross-sector identification
-N_gen = N_color holds.
+matches the Koide-form (N − 1)/N³ at N = N_gen once the separately retained
+numeric equality N_gen = N_color is applied. The Koide-side source/readout
+mechanism remains open.
 
 ## Numerical Verification
 

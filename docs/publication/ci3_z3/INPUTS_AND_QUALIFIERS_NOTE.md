@@ -192,34 +192,48 @@ bridge layer beyond the exact structural core.
     support target `Q_l = 2/3`
   - exact claim is conditional: if the Koide target is granted, then
     `Q_l alpha_s(v)^2 = 4 |V_cb|^2`; this does not promote Koide closure
+- generation/color `Z3` numeric equality:
+  - retained `THREE_GENERATION_STRUCTURE_NOTE.md` + retained CKM structural
+    counts
+  - exact claim is only `N_gen=N_color=3` by direct retained equality; this
+    does not promote CL3 support-tier readings or charged-lepton Koide
+- EW-CKM lattice `A^4` bridge:
+  - retained YT_EW lattice normalization + retained W2
+  - exact claim is only `sin^2(theta_W)|_lattice=A^4=4/9`; the
+    gauge-dimension equality for `A^2=2/3` is consistency only, not an
+    independent below-W2 derivation
 - CKM Bernoulli `2/9` Koide-bridge support:
   - promoted CKM `A^2`, `rho`, and pair/color counts only
   - exact claim is CKM-side arithmetic: `K1`, `K2`, `K5`, and `K6` all read
     `2/9`, and their simultaneous value is equivalent to
     `N_pair=2`, `N_color=3` over positive integers
-  - the cross-sector Koide reading still depends on the open
-    `N_gen=N_color` bridge and is not a retained input
+  - the cross-sector Koide reading still depends on open Koide-side
+    structure beyond the separately retained numeric equality
+    `N_gen=N_color=3`
 - CKM `n/9` structural-family Koide-bridge support:
   - promoted CKM `A^2`, `rho`, `eta^2`, and pair/color counts only
   - exact claim is CKM-side arithmetic: explicit `F_n=n/9` readouts for
     `n=1,...,9`, with two retained-input paths to `F5=5/9`
-  - the note does not derive a Koide `n/9` family and does not promote
-    `N_gen=N_color`; the cross-sector reading is conditional support
+  - the note does not derive a Koide `n/9` family or structural Koide
+    mechanism beyond the separately retained numeric equality
+    `N_gen=N_color=3`; the cross-sector reading is conditional support
 - CKM cubic Bernoulli Koide-bridge support:
   - promoted CKM `A^2`, `rho`, `eta^2`, and pair/color counts only
   - exact claim is CKM-side arithmetic: the 4x3 `M^(k)(N)` tower through
     `k=3`, including `W(2)=1/8`, `W(3)=2/27`, `W(6)=5/216`,
     `eta^2=V(2)M(3)M(6)`, and `rho eta^2=W(6)`
   - the note does not derive Koide `cos^2(theta_K)`, a Koide cubic
-    variance, or `N_gen=N_color`; cross-sector readings are conditional
-    support and not verifier pass conditions
+    variance, or structural Koide mechanism beyond the separately retained
+    numeric equality `N_gen=N_color=3`; cross-sector readings are
+    conditional support and not verifier pass conditions
 - CKM Egyptian-fraction Bernoulli Koide-bridge support:
   - promoted CKM structural counts and already-retained CKM identities only
   - exact claim is CKM-side arithmetic: `1/2+1/3+1/6=1`, unique `(2,3,6)`
     pinning under the pair/color primitives, exact Bernoulli-series sums, and
     `sum_N W(N)=2/9`
   - the note does not derive Koide `cos^2(theta_K)`, Koide ternary unitarity,
-    charged-lepton Koide, or `N_gen=N_color`; cross-sector readings are
+    charged-lepton Koide, or structural Koide mechanism beyond the separately
+    retained numeric equality `N_gen=N_color=3`; cross-sector readings are
     conditional support and not verifier pass conditions
 - CKM consecutive-primes / `S_3` Koide-bridge support:
   - promoted CKM structural counts only
@@ -227,8 +241,9 @@ bridge layer beyond the exact structural core.
     unique consecutive-prime pair, `|S_3|=6`, conjugacy-class sizes are
     `{1,2,3}`, `1^2+1^2+2^2=6`, and `dim(std S_3)=2`
   - the note does not derive charged-lepton Koide, PMNS closure, or
-    `N_gen=N_color`; cross-sector readings are conditional support and not
-    verifier pass conditions
+    structural Koide mechanism beyond the separately retained numeric
+    equality `N_gen=N_color=3`; cross-sector readings are conditional
+    support and not verifier pass conditions
 - down-type CKM-dual mass ratios:
   - promoted CKM atlas/axiom package + GST + bounded `5/6` mass-ratio bridge; no observed
     masses as derivation inputs

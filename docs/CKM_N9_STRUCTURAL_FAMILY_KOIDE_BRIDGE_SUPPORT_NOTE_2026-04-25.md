@@ -201,13 +201,14 @@ This note does not derive Koide. The only cross-sector reading is conditional:
 
 ```text
 If a separate Koide-side derivation produces ratios n/N_gen^2,
-and if a separate cross-sector theorem identifies N_gen = N_color = 3,
-then this CKM support family supplies matching n/9 expressions.
+then the separately retained numeric equality N_gen = N_color = 3 lets this
+CKM support family supply matching n/9 target-class expressions.
 ```
 
-Both requirements remain open outside this note. The CKM-side family is useful
-because it makes the target class explicit and exact; it does not close
-charged-lepton Koide, `A^2` below W2, or `N_gen=N_color`.
+The Koide-side requirement remains open outside this note. The CKM-side family
+is useful because it makes the target class explicit and exact; it does not
+close charged-lepton Koide, `A^2` below W2, or any structural Koide mechanism
+beyond the retained numeric equality `N_gen=N_color=3`.
 
 ## What This Packages
 
@@ -223,7 +224,8 @@ charged-lepton Koide, `A^2` below W2, or `N_gen=N_color`.
 - It does not close `A^2` deeper than retained W2.
 - It does not close charged-lepton Koide or any specific Koide `n/9`.
 - It does not prove that the Koide sector produces a complete `n/9` family.
-- It does not promote `N_gen=N_color` to retained status.
+- It does not derive or use the separately retained numeric equality
+  `N_gen=N_color=3` as an input to its CKM-side arithmetic.
 - It does not use cross-sector support notes as derivation inputs.
 - It does not add a physical observable prediction; this is CKM-side algebraic
   support and package bookkeeping.

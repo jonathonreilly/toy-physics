@@ -269,13 +269,14 @@ structural consistency consequence of the retained pair-color counts.
 The conjectural Koide variance ratio `(N_gen − 1)/N_gen² = 2/9` with
 `N_gen = 3` has the **identical structural form** as K6's color-Bernoulli
 readout `(N_color − 1)/N_color² = 2/9` with `N_color = 3`. Under the cross-sector
-identification `N_gen = N_color = 3` (which is in the framework only as
-support context), the Koide variance ratio has the same closed form as the CKM
-color-projected Bernoulli readout K6.
+identification `N_gen = N_color = 3` (now separately retained only as a
+numeric equality), the target-class generation ratio has the same closed form
+as the CKM color-projected Bernoulli readout K6.
 
-This does not by itself close Koide 2/9. It only says that once a separate
-retained theorem identifies `N_gen = N_color`, the CKM-side Bernoulli algebra
-needed for the shared `(N - 1)/N²` value is already exact.
+This does not by itself close Koide 2/9. It only says that after the separate
+retained numeric equality `N_gen = N_color = 3`, the CKM-side Bernoulli algebra
+needed for the shared target-class `(N - 1)/N²` value is already exact. The
+charged-lepton source/readout mechanism remains open.
 
 ### What this does NOT close
 
@@ -283,12 +284,11 @@ needed for the shared `(N - 1)/N²` value is already exact.
   NOT provide a deeper derivation of A² from below the structural counts
   (e.g., from CL3 lattice/algebraic foundations). Closing A² "deeper than
   W2" remains an open problem in the framework.
-- **Koide 2/9 is not closed by this note alone**. The cross-sector
-  identification `N_gen = N_color` is a structural conjecture, currently a
-  `_SUPPORT_NOTE_`. Promoting it to retained closure requires a separate
-  derivation of the lepton-sector counting `N_gen = 3` from CL3 first
-  principles, OR an explicit algebraic identification of `N_gen` with
-  `N_color` in the lepton mixing / Koide mass structure.
+- **Koide 2/9 is not closed by this note alone**. The separate retained
+  equality `N_gen = N_color = 3` is only a numeric equality of retained
+  values. Koide closure still requires an explicit charged-lepton
+  source/readout theorem identifying the relevant Koide ratio with the
+  generation-side target class.
 - This note does NOT use the existing `CROSS_SECTOR_A_SQUARED_KOIDE_VCB_BRIDGE_SUPPORT_NOTE_2026-04-25.md` as INPUT; the K1-K6 derivations stand on retained
   CKM inputs alone. The cross-sector reading is **commentary**, not derivation.
 
@@ -318,14 +318,16 @@ Three layers of new content beyond retained `(W2)`:
    to the retained pair-color counts `(N_pair, N_color) = (2, 3)`.
 
 3. **Explicit cross-sector reading** (clearly labeled as SUPPORT, not
-   closure): the K6 color-Bernoulli form `(N_color − 1)/N_color²` is identical to the
-   conjectured Koide variance `(N_gen − 1)/N_gen²` with `N_gen = N_color`;
-   this isolates, but does not close, the cross-sector identification.
+   closure): the K6 color-Bernoulli form `(N_color − 1)/N_color²` matches the
+   target-class generation ratio `(N_gen − 1)/N_gen²` at the separately
+   retained numeric equality `N_gen = N_color = 3`; this does not close a
+   charged-lepton Koide source/readout theorem.
 
 This **pushes the supporting science forward**: it doesn't close A² or Koide
 2/9, but it exhibits `2/9` as a CKM-native multiply-determined structural
-constant, and articulates exactly what additional input (cross-sector
-N_gen = N_color identification) would be needed for Koide 2/9 closure.
+constant, and articulates exactly what additional input (a charged-lepton
+source/readout theorem beyond the retained numeric equality
+`N_gen = N_color = 3`) would be needed for Koide 2/9 closure.
 
 ## What This Claims
 
@@ -345,12 +347,13 @@ N_gen = N_color identification) would be needed for Koide 2/9 closure.
 - It does NOT close `A²` deeper than the retained structural-counts level
   (W2 still required).
 - It does NOT close `Koide 2/9`. The cross-sector reading is explicitly
-  conditional on the `N_gen = N_color` identification (a `_SUPPORT_NOTE_`,
-  not retained closure).
+  conditional on the separately retained numeric equality
+  `N_gen = N_color = 3`, plus still-open Koide source/readout structure.
 - It does NOT use the existing cross-sector `_SUPPORT_NOTE_` as derivation
   input. K1-K6 stand on retained CKM inputs alone.
 - It does NOT promote the cross-sector A²-Koide bridge to retained status.
-- It does NOT prove or use a retained `N_gen = N_color` theorem.
+- It does NOT derive or use the retained `N_gen = N_color = 3` theorem as an
+  input to its CKM-side arithmetic.
 - It does NOT modify any retained CKM atlas, Wolfenstein, CP-phase, NLO-
   protected-γ̄, magnitudes structural counts, or Brannen-Koide CH-three-gap
   theorem.

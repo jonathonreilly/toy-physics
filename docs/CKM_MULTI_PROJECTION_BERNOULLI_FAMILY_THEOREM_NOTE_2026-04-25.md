@@ -319,8 +319,8 @@ Three layers of new content beyond prior branches:
 ## What This Does NOT Claim
 
 - It does NOT close any charged-lepton Koide target or cross-sector bridge.
-- It does NOT promote `N_gen = N_color` or any other cross-sector
-  identification.
+- It does NOT derive or use `N_gen = N_color` or any other cross-sector
+  identification as a CKM-side input.
 - It does NOT use SUPPORT-tier or open inputs as derivation inputs.
 
 ## Reproduction

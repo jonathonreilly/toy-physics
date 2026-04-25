@@ -4,7 +4,8 @@
 
 **Status:** exact CKM-side support corollary plus conditional cross-sector
 commentary. This is not a retained charged-lepton Koide theorem, not a
-derivation of `N_gen = N_color`, and not a derivation of `Q_l = 2/3`.
+structural Koide mechanism beyond the separately retained numeric equality
+`N_gen = N_color = 3`, and not a derivation of `Q_l = 2/3`.
 
 The retained CKM structural counts
 
@@ -168,13 +169,16 @@ mass eigenvalues. If a separate retained cross-sector theorem later identifies
 abstract `S_3` group used in this support card, and the natural three-dimensional
 permutation representation would decompose as `1 + 2`.
 
-That is useful target-class bookkeeping. It is not a proof of `N_gen=N_color`,
-not a proof of charged-lepton Koide, and not a proof of any Koide readout.
+That is useful target-class bookkeeping. It is not a proof of a structural
+Koide mechanism beyond the separately retained numeric equality
+`N_gen=N_color=3`, not a proof of charged-lepton Koide, and not a proof of any
+Koide readout.
 
 ## What This Does Not Claim
 
 - It does not close charged-lepton Koide or promote `Q_l = 2/3`.
-- It does not derive `N_gen = N_color`.
+- It does not derive or use the separately retained numeric equality
+  `N_gen = N_color = 3` as an input to its CKM-side arithmetic.
 - It does not derive `A^2 = 2/3` below the retained W2/counting surface.
 - It does not prove a PMNS theorem; PMNS references are conditional
   cross-sector commentary.

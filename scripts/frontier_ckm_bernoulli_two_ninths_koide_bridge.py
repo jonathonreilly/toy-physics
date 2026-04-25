@@ -213,26 +213,26 @@ def audit_k6_color_projected_bernoulli() -> None:
 def audit_cross_sector_reading() -> None:
     banner("Cross-sector reading (SUPPORT, NOT closure): Koide 2/9 shares K6 form")
 
-    # The conjectural Koide variance ratio: (N_gen - 1)/N_gen^2 with N_gen = 3
-    N_GEN_CONJ = 3  # CONJECTURED, NOT retained as N_gen = N_color
+    # Target-class generation ratio: (N_gen - 1)/N_gen^2 with retained N_gen = 3.
+    N_GEN_CONJ = 3  # separate retained numeric equality, not used as CKM input
     Koide_variance_conj = Fraction(N_GEN_CONJ - 1, N_GEN_CONJ ** 2)
 
     print(f"  CKM K6 color form: (N_color - 1)/N_color^2 = {Fraction(N_COLOR - 1, N_COLOR ** 2)}")
-    print(f"  Koide conj.       : (N_gen - 1)/N_gen^2     = {Koide_variance_conj}  [CONJECTURED with N_gen = 3]")
+    print(f"  Koide target form : (N_gen - 1)/N_gen^2     = {Koide_variance_conj}  [target-class with N_gen = 3]")
     print()
     print(f"  Both equal 2/9?   {Fraction(N_COLOR-1, N_COLOR**2) == Koide_variance_conj == TARGET}")
     print()
     print("  CROSS-SECTOR READING (SUPPORT, not closure):")
-    print("    If N_gen = N_color (conjectural cross-sector identification),")
-    print("    then Koide variance ratio = CKM color-Bernoulli form K6 = 2/9 EXACTLY.")
+    print("    With the separately retained numeric equality N_gen = N_color = 3,")
+    print("    the generation target ratio and CKM color-Bernoulli form K6 both equal 2/9.")
     print("    This SUPPORTS but does NOT CLOSE Koide 2/9.")
     print()
-    print("  This note does NOT promote the N_gen = N_color identification to retained.")
-    print("  Closing Koide 2/9 requires a separate derivation grounding N_gen in CL3 algebra.")
+    print("  This note does NOT derive or use the retained N_gen = N_color equality.")
+    print("  Closing Koide 2/9 still requires a separate charged-lepton source/readout theorem.")
 
     check("CKM K6 = Koide variance form (BOTH equal 2/9, SAME structural form)",
           Fraction(N_COLOR-1, N_COLOR**2) == Koide_variance_conj)
-    check("Cross-sector identification N_gen = N_color is SUPPORT-tier (NOT used as input)",
+    check("Retained numeric equality N_gen = N_color is NOT used as a CKM input here",
           True)  # documentation check
 
 
@@ -272,15 +272,16 @@ def audit_summary() -> None:
     print("  NEW (K6): (1/N_color)(1 - 1/N_color) = (N_color - 1)/N_color^2 = 2/9")
     print("            Color-projected Bernoulli variance.")
     print()
-    print("  Cross-sector reading (SUPPORT, NOT closure): K6 form matches conjectural")
-    print("  Koide variance (N_gen - 1)/N_gen^2 = 2/9 with N_gen = 3 = N_color.")
+    print("  Cross-sector reading (SUPPORT, NOT closure): K6 form matches the")
+    print("  generation target-class ratio (N_gen - 1)/N_gen^2 = 2/9 at")
+    print("  the separately retained numeric equality N_gen = N_color = 3.")
     print()
     print("  All four CKM readouts of 2/9 derived from retained inputs only.")
     print("  Does NOT close A^2 (already retained at W2) or Koide 2/9 (cross-sector).")
     print()
     print("  Push to science: 2/9 is multiply-determined in CKM by retained structure;")
-    print("  closing Koide 2/9 reduces to closing the cross-sector N_gen = N_color")
-    print("  identification (separately, not provided here).")
+    print("  closing Koide 2/9 still requires a charged-lepton source/readout theorem")
+    print("  beyond the separately retained numeric equality N_gen = N_color = 3.")
 
 
 def main() -> int:
