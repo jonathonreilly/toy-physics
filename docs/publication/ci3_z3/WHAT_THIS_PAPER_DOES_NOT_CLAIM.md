@@ -63,7 +63,7 @@ The paper does **not** claim:
 - that the atlas/Wolfenstein area factor
   `J_0 = alpha_s(v)^3 sqrt(5)/72` replaces the parent atlas' exact
   finite-`lambda` standard-matrix `J` readout.
-- that the CKM first- or third-row atlas-leading monomials are exact
+- that the CKM first-, second-, or third-row atlas-leading monomials are exact
   all-orders standard-matrix entries; the finite-`lambda` row readouts are
   retained as separate guardrails.
 - a full retained neutrino point-prediction package for the solar gap, PMNS

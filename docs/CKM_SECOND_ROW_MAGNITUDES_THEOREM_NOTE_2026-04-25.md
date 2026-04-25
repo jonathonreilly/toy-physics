@@ -3,12 +3,11 @@
 **Date:** 2026-04-25
 
 **Status:** retained structural-identity subtheorem of the promoted CKM
-atlas/axiom package. Companion to
-[`CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md)
-and
-[`CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md).
-Closes the second row of the leading-Wolfenstein structural CKM-magnitude
-surface.
+atlas/axiom package. Companion to the mainline
+[`CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
+[`CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md)
+and parent CKM package. This note closes the second row of the
+leading-Wolfenstein structural CKM-magnitude surface.
 
 **Primary runner:** `scripts/frontier_ckm_second_row_magnitudes.py`
 
@@ -70,7 +69,7 @@ and (M3) follows by subtraction.
 
 ## Cabibbo and Third-Row Equivalences
 
-Together with my retained first-row and third-row companions:
+Together with the retained first-row and third-row companions:
 
 ```text
 |V_cd|^2 = |V_us|^2     = alpha_s(v) / 2     (Cabibbo equivalence at leading order),
@@ -103,15 +102,16 @@ Cross-check against PDG 2024:
 | `|V_cs|` | `0.97292` | `0.99700 +/- 0.01100` | `-2.4%` |
 | `|V_cb|` | `0.04217` | `0.04100 +/- 0.00140` | `+2.9%` |
 
-The framework `|V_cs|` undershoot reflects the truncated leading-Wolfenstein
-form; higher-order Wolfenstein corrections (outside this retained subtheorem)
-restore agreement.
+The `|V_cs|` line is a post-derivation direct-extraction comparator, not an
+input. The retained theorem is the atlas-leading row-unitarity identity; it
+does not claim a hadronic semileptonic extraction or use the direct `|V_cs|`
+number to tune the row.
 
 ## Combined CKM Magnitude Surface
 
-Combined with the retained first-row, third-row, Wolfenstein, and CP-phase
-companions, every leading-Wolfenstein squared magnitude on the retained
-atlas surface is now packaged:
+Combined with the retained Wolfenstein, CP-phase, first-row, third-row, and
+parent CKM atlas package, every leading-Wolfenstein squared magnitude on the
+retained atlas surface is now packaged:
 
 | Element | Structural identity | Order in `alpha_s(v)` |
 | --- | --- | :---: |
@@ -125,8 +125,9 @@ atlas surface is now packaged:
 | `|V_ts|^2` | `alpha_s^2 / 6` | square |
 | `|V_tb|^2` | `1 - alpha_s^2/6 - 5 alpha_s^3/72` | leading 1 |
 
-Each is a rational coefficient times an integer power of `alpha_s(v)`. Each
-row sum is forced to one by exact CKM unitarity.
+Each listed atlas-leading squared magnitude is a rational coefficient times an
+integer power of `alpha_s(v)`. Each packaged row sum is forced to one by exact
+CKM unitarity.
 
 ## Scope
 
@@ -158,7 +159,7 @@ python3 scripts/frontier_ckm_second_row_magnitudes.py
 Expected result:
 
 ```text
-TOTAL: PASS=22, FAIL=0
+TOTAL: PASS=25, FAIL=0
 ```
 
 The runner uses the Python standard library plus the already-mainline
@@ -176,7 +177,7 @@ The runner uses the Python standard library plus the already-mainline
   - `lambda` and `A` identities.
 - [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
   - `rho`, `eta`, CP-phase identities.
-- [`CKM_UNITARITY_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`](CKM_UNITARITY_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md)
-  - `alpha = 90` unitarity-triangle companion.
+- [`CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`](CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md)
+  - atlas `alpha_0 = 90` triangle companion.
 - [`ALPHA_S_DERIVED_NOTE.md`](ALPHA_S_DERIVED_NOTE.md)
   - canonical `alpha_s(v)` input.

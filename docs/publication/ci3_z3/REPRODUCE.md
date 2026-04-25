@@ -63,6 +63,7 @@ python3 scripts/frontier_wolfenstein_lambda_a_structural_identities.py
 python3 scripts/frontier_ckm_cp_phase_structural_identity.py
 python3 scripts/frontier_ckm_atlas_triangle_right_angle.py
 python3 scripts/frontier_ckm_first_row_magnitudes.py
+python3 scripts/frontier_ckm_second_row_magnitudes.py
 python3 scripts/frontier_ckm_third_row_magnitudes.py
 python3 scripts/frontier_ckm_neutron_edm_bound.py
 ```

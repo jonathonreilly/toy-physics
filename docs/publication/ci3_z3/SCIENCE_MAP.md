@@ -117,8 +117,11 @@ Validate with:
   atlas-triangle right-angle identity `alpha_0 = 90 deg`, atlas-leading
   first-row identities `|V_us|_0^2 = alpha_s(v)/2`,
   `|V_ub|_0^2 = alpha_s(v)^3/72`,
-  `|V_ud|_0^2 = 1 - alpha_s(v)/2 - alpha_s(v)^3/72`, and atlas-leading
-  third-row identities `|V_td|_0^2 = 5 alpha_s(v)^3/72`,
+  `|V_ud|_0^2 = 1 - alpha_s(v)/2 - alpha_s(v)^3/72`,
+  second-row identities `|V_cd|_0^2 = alpha_s(v)/2`,
+  `|V_cs|_0^2 = 1 - alpha_s(v)/2 - alpha_s(v)^2/6`,
+  `|V_cb|_0^2 = alpha_s(v)^2/6`, and atlas-leading third-row identities
+  `|V_td|_0^2 = 5 alpha_s(v)^3/72`,
   `|V_ts|_0^2 = alpha_s(v)^2/6`
 - derived quantitative lane:
   Higgs/vacuum package with explicit retention budget
