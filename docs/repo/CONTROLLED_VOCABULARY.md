@@ -1,6 +1,9 @@
 # Controlled Vocabulary
 
 Use this note as the repo-wide status taxonomy and wording style guide.
+For paper-facing prose, also use
+[`../WRITING_VOICE_GUIDE_2026-04-25.md`](../WRITING_VOICE_GUIDE_2026-04-25.md):
+plain question, object, check, result, and caveat.
 
 Goals:
 
@@ -31,10 +34,10 @@ Use these on publication-control-plane surfaces such as
 | Label | Use |
 |---|---|
 | `retained` | live retained family on the current paper-authority surface |
-| `promoted` | flagship-facing publication-core family carried directly in the current paper package |
-| `bounded` | live captured family kept outside the flagship core with explicit caveats |
+| `promoted` | main-paper publication-core family carried directly in the current paper package |
+| `bounded` | live captured family kept outside the main paper core with explicit caveats |
 | `open` | live gate / blocker that is not yet closed |
-| `frozen-out` | intentionally excluded from the flagship paper while still recorded |
+| `frozen-out` | intentionally excluded from the main paper while still recorded |
 
 These are package-capture decisions, not generic adjectives.
 
@@ -63,15 +66,15 @@ Use these on notes, claims tables, quantitative tables, and runner summaries.
 | `exact negative boundary` / `exact negative closeout` / `exact post-selector reduction` | accepted exact-result specializations for explicit no-go/closeout/post-selector roles on atlas and reviewer surfaces |
 | `exact support/boundary theorem` | accepted mixed exact-role label when a row simultaneously contributes a reusable exact support input and an exact open-lane boundary statement |
 | `exact support tool` | reusable exact tool/subderivation that supports other lanes without being the headline claim |
-| `bounded support theorem` / `bounded support note` / `bounded support tool` | bounded supporting result/tool carried for atlas, reviewer, or secondary-lane use; not a flagship closure claim |
+| `bounded support theorem` / `bounded support note` / `bounded support tool` | bounded supporting result/tool carried for atlas, reviewer, or secondary-lane use; not a main closure claim |
 | `bounded support batch` | coherent bounded batch of support tools/calculations carried for atlas or reviewer reuse |
-| `promoted quantitative package` | quantitative package strong enough for the current flagship-facing surface |
-| `bounded companion` | live bounded supporting lane outside the flagship core |
+| `promoted quantitative package` | quantitative package strong enough for the current main-paper surface |
+| `bounded companion` | live bounded supporting lane outside the main paper core |
 | `bounded secondary lane` | live bounded lane worth carrying, but clearly secondary to the main package |
 | `bounded frontier` / `bounded negative boundary` / `bounded Route 2 build candidate` | bounded frontier/result classes kept for ongoing design work rather than current-package promotion |
-| `flagship closure package` | package-level flagship-facing closure claim on the current review/package surface; stronger than support, but not automatically the retained quantitative paper core |
+| `main closure package` | package-level main-paper closure claim on the current review/package surface; stronger than support, but not automatically the retained quantitative paper core |
 | `conditional / support` | useful positive package whose load-bearing step is still conditional, imposed, or support-only |
-| `open flagship gate` | still-open flagship closure target |
+| `open main gate` | still-open main closure target |
 | `historical / diagnostic` | preserved for audit/history/instrumentation, not live evidence |
 | `historical support / provenance` / `exact transport provenance` | provenance-only rows kept for route history, reviewer handoff, or closure bookkeeping rather than live promotion |
 | `negative-result` | useful negative or no-go result |
@@ -112,9 +115,9 @@ Allowed composite forms should be built from the labels above and kept narrow:
 - `bounded frontier`
 - `bounded negative boundary`
 - `bounded Route 2 build candidate`
-- `flagship closure package`
+- `main closure package`
 - `promoted quantitative package`
-- `open flagship gate`
+- `open main gate`
 
 Avoid minting new slash-composites when a nearby qualifier/import column can
 carry the caveat instead.
@@ -151,7 +154,7 @@ Short scope qualifiers may follow an accepted label when they state where the
 claim lives, for example:
 
 - `exact boundary theorem on open gate`
-- `exact reduction theorem outside flagship core`
+- `exact reduction theorem outside main core`
 - `exact support theorem on the bounded charged-lepton package`
 - `exact support theorem with bounded downstream reuse`
 - `retained support theorem on the current package surface`
@@ -169,7 +172,7 @@ Use these only on historical repo-map surfaces such as
 |---|---|
 | `primary-retained` | current best-supported lane in the historical lane-board sense |
 | `retained-companion` | real, replayable companion lane, but not the single default entrypoint |
-| `open-blocker` | active blocker limiting the historical lane claim surface |
+| `open-blocker` | active blocker limiting the historical lane claim boundary |
 | `exploratory-reopen` | partially positive lane worth more work, but not promoted |
 | `historical-control` | historical comparison/control lane |
 | `historical-retained` | older retained major program, no longer the default |

@@ -51,7 +51,7 @@ The labels below are the historical lane-board subset of that vocabulary.
   - real, replayable, and worth citing
   - but not the single top-level entrypoint
 - `open-blocker`
-  - a real missing piece that currently limits the main claim surface
+  - a real missing piece that currently limits the main claim boundary
 - `exploratory-reopen`
   - partially positive but not yet promoted
 - `historical-control`
@@ -59,7 +59,7 @@ The labels below are the historical lane-board subset of that vocabulary.
 - `historical-retained`
   - older retained major program still worth navigating directly
 - `historical-bounded`
-  - scientifically useful but no longer current flagship
+  - scientifically useful but no longer a current main lane
 - `historical-blocked`
   - a lane with a diagnosed mechanism-level blocker
 

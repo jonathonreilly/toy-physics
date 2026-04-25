@@ -15,16 +15,17 @@ questions:
 ## Read First
 
 1. [Public arXiv draft](docs/publication/ci3_z3/ARXIV_DRAFT.md)
-2. [Prediction surface](docs/publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md)
-3. [Quantitative summary table](docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md)
-4. [Reproduce guide](docs/publication/ci3_z3/REPRODUCE.md)
-5. [Publication package README](docs/publication/ci3_z3/README.md)
-6. [Manuscript claims surface](docs/publication/ci3_z3/CLAIMS_TABLE.md)
-7. [Science map by domain](docs/publication/ci3_z3/SCIENCE_MAP.md)
-8. [Inputs and qualifiers](docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md)
-9. [What this paper does not claim](docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
-10. [Derivation / validation map](docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
-11. [Derivation atlas](docs/publication/ci3_z3/DERIVATION_ATLAS.md)
+2. [Writing voice guide](docs/WRITING_VOICE_GUIDE_2026-04-25.md)
+3. [Prediction surface](docs/publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md)
+4. [Quantitative summary table](docs/publication/ci3_z3/QUANTITATIVE_SUMMARY_TABLE.md)
+5. [Reproduce guide](docs/publication/ci3_z3/REPRODUCE.md)
+6. [Publication package README](docs/publication/ci3_z3/README.md)
+7. [Manuscript claim boundary](docs/publication/ci3_z3/CLAIMS_TABLE.md)
+8. [Science map by domain](docs/publication/ci3_z3/SCIENCE_MAP.md)
+9. [Inputs and qualifiers](docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md)
+10. [What this paper does not claim](docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
+11. [Derivation / validation map](docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md)
+12. [Derivation atlas](docs/publication/ci3_z3/DERIVATION_ATLAS.md)
 
 ## What Is Already Predicted
 
@@ -57,14 +58,7 @@ questions:
   atlas-leading B_s mixing phase
   `phi_s = -alpha_s(v) sqrt(5)/6 = -0.03850 rad` and the NLO barred-triangle
   protected invariant `gamma_bar = arctan(sqrt(5))` with
-  `rho_bar=(4-alpha_s(v))/24`, the retained NLO beta-ratio corollary
-  `sin(2 beta_bar)/sin(2 beta_0) = 1 - alpha_s(v)/5`, the exact
-  barred-triangle sum rule
-  `R_b_bar^2 + R_t_bar^2 + rho_bar lambda^2 = 1` with
-  `R_t_bar^2 = (80 + alpha_s(v)^2)/96`, and the exact apex-angle closure
-  `alpha_bar = pi/2 + arctan((sqrt(5)/20) alpha_s(v))` with
-  `tan(alpha_bar) = -4 sqrt(5)/alpha_s(v)`, plus the
-  Thales-mediated cross-system CP ratio
+  `rho_bar=(4-alpha_s(v))/24`, plus the Thales-mediated cross-system CP ratio
   `phi_s / sin(2 beta_d) = -alpha_s(v)/2` and CP-product estimator
   `alpha_s(v) = (18/5) sin(2 beta_d) sin(2 beta_s)` at atlas-leading order,
   plus the kaon epsilon_K CKM-bracket factorization through atlas `J_0`;
@@ -93,7 +87,7 @@ questions:
   boost-covariant free-scalar 2-point closure and fixed-`H_lat` unitary-kernel
   closure, action-surface `theta_eff = 0`, and the source-scoped vanishing of
   all theta-induced EDM response components
-- remaining open flagship bridge package:
+- remaining open main bridge package:
   charged-lepton Koide (`Q = 2/3`, `delta = 2/9`);
   the dark-matter exact-target package is already closed on the manuscript
   surface

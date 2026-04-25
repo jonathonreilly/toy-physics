@@ -1,0 +1,7 @@
+interface:
+  display_name: "Reviewer Backpressure Integrator"
+  short_description: "Turn review pressure into repo changes"
+  default_prompt: "Use $reviewer-backpressure-integrator to convert these review findings into narrow honest repo changes, demotions, or landing decisions."
+
+policy:
+  allow_implicit_invocation: true

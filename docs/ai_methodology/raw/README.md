@@ -9,8 +9,8 @@ material for later grooming, not the methodology paper itself.
 Content files in this raw annex, excluding this README:
 
 ```text
-23 raw content files
-42,275 lines
+61 raw content files
+93,099 lines
 ```
 
 ## Existing Archive Capture
@@ -40,7 +40,8 @@ science_scaffolding.md
 workflow_tooling.md
 ```
 
-Line count before the current Codex desktop packet:
+Line count before later prompt-session expansion and the current Codex desktop
+packet:
 
 ```text
 20 files
@@ -86,3 +87,11 @@ This folder is allowed to contain:
 
 Later methodology-paper work should normalize, deduplicate, and cite from this
 annex rather than treating it as polished prose.
+
+## Current Expansion Note
+
+The raw annex now also includes the larger prompt-session expansion visible on
+`main` as of `origin/main` commit `ccd30b82`. The working line/file counts at
+this capture are the authoritative counts for the current raw annex; the
+per-packet counts above are preserved as provenance for the earlier import
+steps.

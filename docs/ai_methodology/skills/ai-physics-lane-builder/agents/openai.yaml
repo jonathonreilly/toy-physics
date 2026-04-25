@@ -1,0 +1,7 @@
+interface:
+  display_name: "AI Physics Lane Builder"
+  short_description: "Open bounded AI physics lanes"
+  default_prompt: "Use $ai-physics-lane-builder to turn this physics idea into a bounded repo lane with artifact and review gates."
+
+policy:
+  allow_implicit_invocation: true

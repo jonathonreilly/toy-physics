@@ -1,0 +1,7 @@
+interface:
+  display_name: "Methodology Paper Synthesizer"
+  short_description: "Synthesize AI-method evidence"
+  default_prompt: "Use $methodology-paper-synthesizer to turn raw prompt, repo-history, review, and case-study evidence into methods-paper source material."
+
+policy:
+  allow_implicit_invocation: true

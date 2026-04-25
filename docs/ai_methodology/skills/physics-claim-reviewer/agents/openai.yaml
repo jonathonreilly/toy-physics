@@ -1,0 +1,7 @@
+interface:
+  display_name: "Physics Claim Reviewer"
+  short_description: "Adversarially review physics claims"
+  default_prompt: "Use $physics-claim-reviewer to review this theorem note, runner, or branch for overclaims and missing artifact-chain support."
+
+policy:
+  allow_implicit_invocation: true

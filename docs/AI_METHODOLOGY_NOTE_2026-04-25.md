@@ -11,7 +11,7 @@ method by which claims were produced and controlled.
 
 ## 1. Reading Rule
 
-This lane is separate from the physics claim surface.
+This lane is separate from the physics claim boundary.
 
 - For the current scientific package, use the publication surfaces in
   [`docs/publication/ci3_z3/`](./publication/ci3_z3/README.md).
@@ -143,8 +143,7 @@ stories. The repo's no-go surface is one of the main controls against that bias.
 
 ### 4.5 Review is not cosmetic
 
-The repo has an explicit review workflow for deciding what becomes live truth on
-`main`:
+The repo has an explicit review workflow for deciding what belongs on `main`:
 
 - [`docs/repo/REVIEW_FEEDBACK_WORKFLOW.md`](./repo/REVIEW_FEEDBACK_WORKFLOW.md)
 
@@ -166,7 +165,7 @@ The standard `main` move is often:
 
 This selective-landing discipline is central to how AI-produced material was
 made usable without allowing every high-volume branch to rewrite the live claim
-surface.
+boundary.
 
 ## 5. Repo Hygiene As Methodology
 
@@ -189,8 +188,8 @@ These files encode a reproducibility discipline:
 - stale or superseded material is pushed into `docs/work_history/` instead of
   polluting the front door.
 
-In other words, repo hygiene is part of the epistemic control surface, not just
-an engineering nicety.
+In other words, repo hygiene is part of the check on the science, not just an
+engineering nicety.
 
 ## 6. Current Evidence Surface
 
@@ -204,9 +203,25 @@ The curated methodology lane on `main` now consists of:
 - a package-level accountability note:
   [`docs/ai_methodology/AI_ACCOUNTABILITY_AND_DISCLOSURE_NOTE_2026-04-25.md`](./ai_methodology/AI_ACCOUNTABILITY_AND_DISCLOSURE_NOTE_2026-04-25.md);
 - a raw methodology annex:
-  [`docs/ai_methodology/raw/README.md`](./ai_methodology/raw/README.md).
+  [`docs/ai_methodology/raw/README.md`](./ai_methodology/raw/README.md);
+- a synthesized methodology surface:
+  [`docs/ai_methodology/METHODOLOGY_SYNTHESIS_2026-04-25.md`](./ai_methodology/METHODOLOGY_SYNTHESIS_2026-04-25.md);
+- a case-study packet:
+  [`docs/ai_methodology/METHODOLOGY_CASE_STUDIES_2026-04-25.md`](./ai_methodology/METHODOLOGY_CASE_STUDIES_2026-04-25.md);
+- a first methods-paper draft:
+  [`docs/ai_methodology/METHODOLOGY_PAPER_DRAFT_2026-04-25.md`](./ai_methodology/METHODOLOGY_PAPER_DRAFT_2026-04-25.md);
+- an adversarial review of the synthesis packet:
+  [`docs/ai_methodology/METHODOLOGY_SYNTHESIS_REVIEW_2026-04-25.md`](./ai_methodology/METHODOLOGY_SYNTHESIS_REVIEW_2026-04-25.md);
+- a methodology-paper source packet:
+  [`docs/ai_methodology/METHODOLOGY_PAPER_SOURCE_PACKET_2026-04-25.md`](./ai_methodology/METHODOLOGY_PAPER_SOURCE_PACKET_2026-04-25.md);
+- a repo trajectory / governance evidence note:
+  [`docs/ai_methodology/REPO_TRAJECTORY_AND_GOVERNANCE_EVIDENCE_2026-04-25.md`](./ai_methodology/REPO_TRAJECTORY_AND_GOVERNANCE_EVIDENCE_2026-04-25.md);
+- a reusable LLM skill pack:
+  [`docs/ai_methodology/LLM_SKILL_PACK_2026-04-25.md`](./ai_methodology/LLM_SKILL_PACK_2026-04-25.md).
 
-The first four items are the publishable part of the methodology lane.
+The first four items are the current publishable disclosure surface. The
+synthesis, derivation-centered case-study, draft, trajectory, and skill-pack
+files are the working bridge toward a methods-and-case-studies paper.
 
 The raw annex is now on `main` as evidence for the later methodology paper, but
 it remains intentionally unpolished: machine-local paths, prompt excerpts,
@@ -247,12 +262,19 @@ The next methodology pass should groom and extend the raw annex:
 5. Cross-tool disagreement/reconciliation events where one system caught an
    overclaim or premise gap introduced by the other.
 
-That grooming pass is the one that turns this raw evidence archive into a
-usable methodology-paper source packet.
+This pass also adds the reusable-method layer requested for the methodology
+lane: a full synthesis from raw evidence, case studies, a first paper draft,
+and LLM skill specifications for lane building, adversarial claim review,
+reviewer-backpressure integration, and methodology-paper synthesis. Those
+skills are repo-native instructions that another LLM agent can reuse or adapt.
+
+The remaining grooming work is now editorial rather than structural: choose
+final case studies, sanitize representative excerpts, and turn the first draft
+into submission-quality prose.
 
 ## 9. Bottom Line
 
-The central methodological fact of this repository is not merely that AI was
+The central methodological fact of this repository is not just that AI was
 used. It is that AI-assisted theorem production was embedded inside an explicit
 control structure:
 

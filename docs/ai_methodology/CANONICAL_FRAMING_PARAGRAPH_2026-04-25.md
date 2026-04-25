@@ -10,15 +10,12 @@ default manuscript/talk insertion point.
 ## Verbatim Paragraph
 
 > This work was developed using AI-assisted theoretical-physics tools
-> (Claude Sonnet 4.5, OpenAI Codex). All derivations are accompanied by
-> executable runner harnesses available at [repo URL]. Each retained claim is
-> supported by explicit no-go theorems on alternative routes and
-> bounded-vs-retained labeling. The accumulated runner trace constitutes a fully
-> auditable derivation history. The author bears full responsibility for all
-> physics claims; AI tools were used for theorem proving, exhaustive structural
-> search, candidate construction, and obstruction identification, with physical
-> interpretation, foundational choices, and scope judgments retained by the
-> author.
+> (Claude Sonnet 4.5, OpenAI Codex). The tools were used to generate candidate
+> derivations, write and run checks, search for obstructions, and review claim
+> boundaries. A retained claim is paired with a note, a runner or proof surface,
+> and an explicit status label at [repo URL]. The author is responsible for the
+> physics: the framework choice, physical interpretation, acceptance or
+> rejection of results, and final scope of the claims.
 
 ## Usage Guidance
 

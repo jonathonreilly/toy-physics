@@ -36,11 +36,12 @@ The human author retained responsibility for:
 AI systems were used as research and engineering instruments inside that
 decision structure, not as the final authority on scientific truth.
 
-## Why This Is A Methodological Asset
+## Why This Matters
 
-The important point is not simply that AI was used. The important point is that
-the repo was organized so that correctness could be checked independently of the
-origin of a sentence.
+The important point is not that AI was used. The important point is that a
+sentence was not trusted just because an AI system wrote it. The repo was
+organized so the claim could be checked against notes, runners, review, and
+status labels.
 
 That control surface includes:
 
@@ -51,9 +52,8 @@ That control surface includes:
 - explicit negative-boundary notes;
 - active review and hygiene workflows.
 
-The methodology claim is therefore stronger than "AI helped write the paper."
-It is that AI-assisted theorem production was embedded in a repo structure that
-made the results auditable.
+The method is therefore plain: let the models generate and attack ideas, but
+make the repo decide what is live.
 
 ## Reading Rule
 

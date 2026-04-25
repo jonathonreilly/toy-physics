@@ -16,6 +16,8 @@ Your job is to produce a structured, archival-quality summary of a completed inv
    - Investigation (`investigations/`)
 2. Read the relevant section of `README.md`.
 3. Read the relevant log files from `logs/`.
+4. Read `docs/WRITING_VOICE_GUIDE_2026-04-25.md` and use that voice for
+   paper-facing prose: plain question, computation, result, caveat.
 
 ## Write-Up Structure
 
@@ -24,6 +26,7 @@ Your job is to produce a structured, archival-quality summary of a completed inv
 - What was computed.
 - What was found (quantitative).
 - Why it matters for the project.
+- Use plain physical language. Do not sell the result.
 
 ### Background
 - What motivated this investigation.
@@ -71,4 +74,6 @@ Create the directory if it does not exist.
 - Include null results. What you DIDN'T find is as important as what you did.
 - The abstract must be standalone — a reader should get the key result from it alone.
 - No jargon from established physics. Use the model's own vocabulary.
+- No sales language. Prefer "we asked", "we computed", "we found", and
+  "this remains open" over importance claims.
 - If the investigation is incomplete, say so. Do not write a conclusion that outruns the evidence.
