@@ -3,6 +3,8 @@
 **Date:** 2026-04-15  
 **Status:** promoted no-import quantitative package on the canonical tensor/projector surface
 **Script:** `scripts/frontier_ckm_atlas_axiom_closure.py`
+**Named subtheorems:** [`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md),
+[`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
 
 ## Claim
 
@@ -120,6 +122,8 @@ comparison surface, but it is not the theorem value for the bright/tensor
 
 The theorem package is therefore:
 
+- `lambda^2 = alpha_s(v)/2`
+- `A^2 = 2/3`
 - `|V_cb| = A lambda^2 = alpha_s(v)/sqrt(6)`
 - `|V_ub| = A lambda^3 / sqrt(6) = alpha_s(v)^(3/2)/(6 sqrt(2))`
 - `rho = 1/6`

@@ -32,7 +32,8 @@ questions:
   canonical `v = 246.282818290129 GeV`, retained `alpha_s(M_Z) = 0.1181`,
   the retained coupling-chain identity `alpha_LM^2 = alpha_bare alpha_s(v)`,
   electroweak normalization, retained top/Yukawa transport, promoted CKM
-  atlas/axiom numerics including `cos^2(delta_CKM) = 1/6`, and bounded
+  atlas/axiom numerics including `lambda^2 = alpha_s(v)/2`,
+  `A^2 = 2/3`, and `cos^2(delta_CKM) = 1/6`, and bounded
   confinement-string readout; the absolute
   lattice scale is tracked explicitly on a dedicated Planck-scale lane as the
   current package pin `a^(-1) = M_Pl` on the physical-lattice reading, with a

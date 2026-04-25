@@ -58,6 +58,7 @@ python3 scripts/frontier_yt_ward_identity_derivation.py
 python3 scripts/frontier_yt_p1_bz_quadrature_full_staggered_pt.py
 python3 scripts/frontier_higgs_mass_full_3loop.py
 python3 scripts/frontier_ckm_atlas_axiom_closure.py
+python3 scripts/frontier_wolfenstein_lambda_a_structural_identities.py
 python3 scripts/frontier_ckm_cp_phase_structural_identity.py
 ```
 

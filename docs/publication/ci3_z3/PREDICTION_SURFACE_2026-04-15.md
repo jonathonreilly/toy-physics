@@ -50,6 +50,8 @@ closes.
     [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md),
     [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md)
 - CKM atlas/axiom package on the canonical tensor/projector surface:
+  - `lambda^2 = alpha_s(v)/2`
+  - `A^2 = 2/3`
   - `|V_us| = 0.22727`
   - `|V_cb| = 0.04217`
   - `|V_ub| = 0.003913`
@@ -59,6 +61,7 @@ closes.
     retained `alpha_s(v)` surface)
   - authority:
     [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md),
+    [WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md](../../WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md),
     [CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md](../../CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
 - confinement readout on top of the exact graph-first confinement theorem:
   - `sqrt(sigma) ≈ 465 MeV`

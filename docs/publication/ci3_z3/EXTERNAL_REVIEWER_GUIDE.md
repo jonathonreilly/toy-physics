@@ -101,6 +101,8 @@ Review this as a modular component stack:
    [HIGGS_MASS_RETENTION_ANALYSIS_NOTE_2026-04-18.md](../../HIGGS_MASS_RETENTION_ANALYSIS_NOTE_2026-04-18.md)
 7. CKM atlas/axiom package and carrier-side support:
    [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md),
+   [WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md](../../WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md),
+   [CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md](../../CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md),
    [KR_A1_VANISHING_SUPPORT_NOTE.md](../../KR_A1_VANISHING_SUPPORT_NOTE.md)
 8. three-generation observable closure:
    [THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md](../../THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md)
@@ -151,6 +153,8 @@ Current status from that stack:
   with retained `119.8 GeV` (2-loop support route)
 - promoted CKM atlas/axiom package on the canonical tensor/projector surface
   (no quark-mass or fitted CKM inputs; canonical CMT `alpha_s(v)` input):
+  `lambda^2 = alpha_s(v)/2`,
+  `A^2 = 2/3`,
   `|V_us| = 0.22727`,
   `|V_cb| = 0.04217`,
   `|V_ub| = 0.003913`,

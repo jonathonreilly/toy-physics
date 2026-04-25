@@ -59,6 +59,10 @@ J = lambda^6 A^2 eta
   = alpha_s(v)^3 sqrt(5) / 72.
 ```
 
+The `lambda^2 = alpha_s(v)/2` and `A^2 = 2/3` factors used in this
+factorisation are named separately in
+[`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md).
+
 The phase identities are pure structural numbers. The numerical value of `J`
 still inherits the separately retained `alpha_s(v)` input from the canonical
 plaquette/CMT surface.
@@ -191,6 +195,7 @@ depend on `sympy`.
 | Row | Status after this note |
 | --- | --- |
 | Full CKM atlas/axiom package | unchanged parent authority |
+| `lambda^2 = alpha_s(v)/2`, `A^2 = 2/3` | standalone retained Wolfenstein structural identities in the companion note |
 | `cos^2(delta_CKM) = 1/6` | standalone retained structural identity |
 | `rho = 1/6`, `eta = sqrt(5)/6` | standalone retained coordinate identities |
 | `J = alpha_s(v)^3 sqrt(5)/72` | standalone retained factorisation conditioned on parent `alpha_s(v)` |

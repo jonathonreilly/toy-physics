@@ -577,6 +577,12 @@ $$
 \delta_{\mathrm{std}} = \arctan\sqrt{5} = \arccos\frac{1}{\sqrt{6}}. \tag{15}
 $$
 
+The Wolfenstein counting subtheorem is exact on the same surface:
+$\lambda^2=\alpha_s(v)/2$, $A^2=2/3$, and
+$A^2\lambda^2=\alpha_s(v)/3$. These identities package the atlas counts
+separately from the CP-phase projector identity; they do not derive
+$\alpha_s(v)$ independently.
+
 The phase subtheorem is exact on the same surface:
 $\cos^2\delta_{\mathrm{std}}=1/6$, $\sin^2\delta_{\mathrm{std}}=5/6$,
 $\tan\delta_{\mathrm{std}}=\sqrt{5}$, and
@@ -671,7 +677,7 @@ The fastest way to read the quantitative package is Table 1.
 | Electroweak scale | $v = 246.282818290129\,\mathrm{GeV}$ | exact theorem + canonical same-surface evaluation |
 | Strong coupling | $\alpha_s(M_Z)=0.1181$ | retained standalone quantitative lane |
 | Electroweak normalization | $g_1(v)=0.4644$, $g_2(v)=0.6480$ | retained standalone quantitative lane |
-| CKM | $|V_{us}|=0.22727$, $|V_{cb}|=0.04217$, $|V_{ub}|=0.003913$ | promoted algebraic package |
+| CKM | $\lambda^2=\alpha_s(v)/2$, $A^2=2/3$, $|V_{us}|=0.22727$, $|V_{cb}|=0.04217$, $|V_{ub}|=0.003913$ | promoted algebraic package |
 | Top sector | $y_t(v)=0.9176$, $m_t^{\mathrm{pole}}=172.57 \pm 6.50\,\mathrm{GeV}$ | retained quantitative lane |
 | Higgs sector | $m_H=125.1\,\mathrm{GeV}$ with retention analysis $125.04 \pm 3.17\,\mathrm{GeV}$ | derived quantitative lane |
 | Confinement readout | $\sqrt{\sigma}\approx 465\,\mathrm{MeV}$ | bounded quantitative readout on exact structural theorem |

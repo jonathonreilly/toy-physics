@@ -51,6 +51,8 @@ The paper does **not** claim:
   completions;
 - that every older Cabibbo / NNI / partial-Jarlskog route is current
   authority.
+- that the standalone Wolfenstein `lambda` and `A` identities derive
+  `alpha_s(v)` or stand independently of the promoted CKM atlas/axiom surface.
 - a full retained neutrino point-prediction package for the solar gap, PMNS
   angles, Majorana phases, or absolute mass sum.
 
