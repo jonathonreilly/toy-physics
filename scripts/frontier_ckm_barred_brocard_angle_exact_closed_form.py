@@ -45,6 +45,8 @@ from pathlib import Path
 
 import sympy as sp
 
+from canonical_plaquette_surface import CANONICAL_ALPHA_S_V
+
 
 PASS_COUNT = 0
 FAIL_COUNT = 0
@@ -451,10 +453,9 @@ def audit_numerical_readout(N: dict, tan_omega: sp.Expr, cot_omega: sp.Expr) -> 
 
     a_s = sp.symbols("alpha_s", real=True)
 
-    # Use a typical alpha_s(v) = 0.118 (PDG-ish at M_Z) for readout.
     samples = [
         ("alpha_s -> 0  (LO)", 0.0),
-        ("alpha_s = 0.118 (PDG-ish at M_Z)", 0.118),
+        ("canonical alpha_s(v)", CANONICAL_ALPHA_S_V),
         ("alpha_s = 0.30 (mid-range)", 0.30),
     ]
 
@@ -496,7 +497,7 @@ def audit_summary() -> None:
     print("                         / (alpha_s^2 - N_pair^2 alpha_s + N_pair^4 N_quark).")
     print()
     print("    (B4) tan(omega_bar | LO) = sqrt(N_quark - 1)/N_quark = eta | LO = sqrt(5)/6.")
-    print("         omega_bar | LO = arctan(eta | LO) ~ 20.45 deg.")
+    print("         omega_bar | LO = arctan(eta | LO) ~ 20.44 deg.")
     print()
     print("    (B5) sin^2(omega_bar | LO) = (N_quark - 1)/(N_quark^2 + N_quark - 1) = 5/41.")
     print("         cos^2(omega_bar | LO) = N_quark^2    /(N_quark^2 + N_quark - 1) = 36/41.")

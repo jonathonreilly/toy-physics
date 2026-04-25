@@ -3,7 +3,7 @@
 **Date:** 2026-04-25
 
 **Status:** retained CKM-structure corollary on the promoted CKM atlas
-+ NLO Wolfenstein protected-γ̄ surfaces. This note derives the
+and NLO Wolfenstein protected-γ̄ surfaces. This note derives the
 **EXACT closed form for the Brocard angle `ω̄`** of the barred unitarity
 triangle, plus the supporting closed forms for the perimeter-squared
 `a² + b² + c²`, `tan(ω̄)`, `cot(ω̄)`, the `(sin², cos²)` pair at LO in
@@ -68,7 +68,7 @@ closed form `(N5)`):
 
 (B4)  LO recovery:
         tan(omega_bar | LO)  =  sqrt(N_quark - 1) / N_quark  =  eta | LO  =  sqrt(5)/6
-        omega_bar | LO       =  arctan(eta | LO)            ≈  20.4517 deg.
+        omega_bar | LO       =  arctan(eta | LO)            ≈  20.4393 deg.
 
 (B5)  Pure structural-integer LO trig:
         sin^2(omega_bar | LO)  =  (N_quark - 1)  /  (N_quark^2 + N_quark - 1)  =  5/41,
@@ -92,8 +92,8 @@ closed form `(N5)`):
 (B8)  Brocard - Jarlskog identity in the barred plane:
         2 J_bar (Wolfenstein-normalized)  =  (a^2 + b^2 + c^2) tan(omega_bar)
 
-      i.e. the Jarlskog (twice the area, in the unit-base barred plane)
-      factors as the perimeter-squared times `tan(omega_bar)`.
+      i.e. twice the normalized Jarlskog factors as the perimeter-squared
+      times `tan(omega_bar)` in the unit-base barred plane.
 ```
 
 ## Retained Inputs
@@ -208,7 +208,7 @@ tan(omega_bar | LO)  =  4 sqrt(5) * 4 / 96  =  16 sqrt(5)/96  =  sqrt(5)/6
 
 So at LO the Brocard angle of the barred triangle is `arctan(eta | LO)`,
 i.e. the angle the apex `V_3 = (rho_LO, eta_LO) = (1/6, sqrt(5)/6)` makes
-with the unit base in the LO plane. Numerically `omega_bar | LO ~ 20.4517°`,
+with the unit base in the LO plane. Numerically `omega_bar | LO ~ 20.4393°`,
 well inside the Brocard bound `pi/6 = 30°`.
 
 ### B5: pure structural-integer `(sin², cos²)` at LO
@@ -328,15 +328,15 @@ All identities verified to **exact symbolic algebra** via sympy:
 | B5 cos²\|LO | `36/41` | sympy `simplify(diff) == 0` |
 | B5 sin²+cos² | `1` | sympy `simplify(diff) == 0` |
 | B6 Brocard ineq | `cot(ω̄) ≥ √3` on sweep | numerical sweep PASS |
-| B7 cot-sum | `cot(α̃) + cot(β̄) + cot(γ̄) = cot(ω̄)` | sympy `simplify(diff) == 0` |
+| B7 cot-sum | `cot(ᾱ) + cot(β̄) + cot(γ̄) = cot(ω̄)` | sympy `simplify(diff) == 0` |
 | B8 Brocard-Jarlskog | `2 J̄ = (a²+b²+c²) tan(ω̄)` | sympy `simplify(diff) == 0` |
 
 Numerical readout at canonical sample points:
 
 | `α_s(v)` | `tan(ω̄)` | `cot(ω̄)` | `ω̄` (deg) |
 | ---: | ---: | ---: | ---: |
-| 0 (LO) | 0.3727 | 2.6833 | 20.4517 |
-| 0.118 (PDG-ish at M_Z) | 0.3640 | 2.7472 | 19.9907 |
+| 0 (LO) | 0.3727 | 2.6833 | 20.4393 |
+| canonical `α_s(v)=0.103303816...` | 0.3646 | 2.7429 | 20.0310 |
 | 0.30 (mid-range) | 0.3488 | 2.8673 | 19.2267 |
 
 The Brocard angle stays in a narrow band around 20° across the
@@ -400,7 +400,7 @@ quantity of the protected-γ̄ surface it is:
   the triangle's shape up to similarity. Combined with `R̄`
   (already retained) it fixes the triangle's size and shape.
 - **CP-symmetric**: invariant under permutations of the three vertices,
-  so it doesn't privilege any one of `(α̃, β̄, γ̄)`. This makes it a
+  so it doesn't privilege any one of `(ᾱ, β̄, γ̄)`. This makes it a
   natural "shape parameter" for the CKM triangle complementing the
   vertex-specific angles.
 - **Bounded by `π/6`** with equality at equilateral. The actual value
@@ -440,7 +440,7 @@ shifting `N_quark` would shift both numerator and the
 - `(B6)`: NEW verification of the Brocard inequality
   `cot(ω̄) ≥ √3` on the retained surface.
 - `(B7)`: independent recovery of `cot(ω̄)` via the classical cot-sum
-  identity `cot(α̃) + cot(β̄) + cot(γ̄)`.
+  identity `cot(ᾱ) + cot(β̄) + cot(γ̄)`.
 - `(B8)`: NEW Brocard - Jarlskog identity
   `2 J̄ (normalized) = (a² + b² + c²) tan(ω̄)` in the barred plane.
 
