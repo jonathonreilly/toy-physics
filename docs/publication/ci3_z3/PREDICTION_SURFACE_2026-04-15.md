@@ -196,8 +196,9 @@ conceptual pressure.
 - charged-lepton Koide:
   both physical bridges remain open: physical source-free reduced-carrier
   selection behind `Q = 2/3` remains open after the exact background-zero /
-  `Z`-erasure criterion theorem, and the selected-line local boundary-source
-  plus based-endpoint law behind `delta = 2/9` remains open
+  `Z`-erasure criterion theorem and the unique strict-onsite canonical
+  descent theorem, and the selected-line local boundary-source plus
+  based-endpoint law behind `delta = 2/9` remains open
 
 ## Structural predictions and signatures
 

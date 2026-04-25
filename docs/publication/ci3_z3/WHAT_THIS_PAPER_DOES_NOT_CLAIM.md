@@ -187,8 +187,9 @@ The current package keeps:
 - bounded/conditional cosmology;
 - one remaining flagship bridge package: charged-lepton Koide, now sharpened
   by the exact background-zero / `Z`-erasure criterion and onsite-vs-commutant
-  source-domain no-go for `Q` while still requiring physical source-domain /
-  source-free reduced-carrier selection, plus selected-line local
+  source-domain no-go for `Q`; the canonical source-domain descent is unique
+  and erases reduced `Z` modulo common scalar, but still requires physical
+  source-domain / source-free reduced-carrier selection, plus selected-line local
   boundary-source, based endpoint, and Type-B rational-to-radian readout for
   `delta`, without promoting full retained closure.
 

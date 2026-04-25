@@ -279,9 +279,10 @@ The remaining flagship bridge package is:
 - charged-lepton Koide support package
   - April 24 native dimensionless review/no-go packet sharpens but does not
     close the lane; the April 25 criterion theorem closes the background-zero /
-    `Z`-erasure algebra for `Q`, but physical source-free reduced-carrier
-    selection, selected-line local boundary source, and based endpoint remain
-    theorem targets
+    `Z`-erasure algebra for `Q`, and the April 25 canonical-descent theorem
+    proves the unique trace-preserving strict-onsite descent erases reduced
+    `Z` modulo common scalar; physical source-domain selection, selected-line
+    local boundary source, and based endpoint remain theorem targets
 
 That is the current missing flagship prediction bridge. It does not erase the
 rest of the retained or bounded prediction surface.
