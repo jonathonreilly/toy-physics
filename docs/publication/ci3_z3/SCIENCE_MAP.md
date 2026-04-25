@@ -38,7 +38,8 @@ full package-capture inventory rather than the shortest public route.
 ## Spacetime, Gravity, and Quantum Gravity
 
 - retained weak-field gravity:
-  Poisson uniqueness, Newton law, WEP, and time dilation
+  Poisson uniqueness, Newton law, phase-valley distance-law universality
+  support, WEP, and time dilation
 - retained strong-field/gravity backbone:
   restricted strong-field closure on the current supported class, exact discrete
   `3+1` GR on the project route, and the chosen continuum/QG identification
