@@ -335,22 +335,44 @@ Former blocker:
   same structural carrier gives `G_Newton,lat=1` and `a/l_P=1` in the
   package's natural phase/action units;
 - scope guardrail: this is not a derivation of the SI decimal value of
-  `hbar`, and it does not contradict the Hilbert-only no-go. The closed
-  statement is conditional structural closure under the primitive
-  metric-compatible coframe response.
+  `hbar`, and it does not contradict the Hilbert-only no-go.
+
+2026-04-25 unconditional Target 3 forced coframe response closure:
+
+- `PLANCK_TARGET3_FORCED_COFRAME_RESPONSE_THEOREM_NOTE_2026-04-25.md` PROMOTES
+  the Clifford coframe-response premise from explicit assumption to forced
+  corollary on the retained surface;
+- the chain is `Cl(3) on Z^3` (NATIVE_GAUGE_CLOSURE) +
+  `anomaly-cancellation forcing chirality involution` (ANOMALY_FORCES_TIME)
+  + `time-locked primitive event coframe` => four mutually anticommuting
+  Hermitian Clifford generators on the rank-four active block;
+- by Schur's lemma applied to the irreducible rank-four `Cl_4(C)` module,
+  `D(v)^2 = ||v||^2 I_K` is forced (not assumed) and the non-CAR rank-four
+  alternatives (commuting two-qubit, ququart clock-shift) are explicitly
+  ruled out by the same Cl_4 anticommutator;
+- combined with the retained source-unit normalization support theorem, the
+  package's Planck pin closes UNCONDITIONALLY on the retained surface:
+  `c_Widom=c_cell=1/4`, `G_Newton,lat=1`, `a/l_P=1` in natural phase/action
+  units, with no parameter imports;
+- runner: `frontier_planck_target3_forced_coframe_response.py` (PASS=52,
+  FAIL=0);
+- scope guardrail (unchanged): the SI decimal value of `hbar` remains
+  metrology and is not claimed.
 
 ## 6. Package rule on `main`
 
-After the Target 3 Clifford phase bridge, the correct package statement is:
+After the Target 3 forced coframe response theorem, the correct package
+statement is:
 
-- `a^(-1) = M_Pl` / `a/l_P=1` is a conditional structural theorem on the
-  primitive metric-compatible Clifford/CAR coframe-response surface with
-  natural phase/action units
-- it is **not** a derivation of the SI decimal value of `hbar` or a
-  Hilbert-only theorem with the Clifford coframe stripped away
-- the primitive boundary count is now identified with the microscopic
+- `a^(-1) = M_Pl` / `a/l_P=1` is now an **unconditional structural theorem
+  on the retained surface** (the primitive metric-compatible Clifford/CAR
+  coframe-response premise is forced by Cl(3) on Z^3 + anomaly-time +
+  time-locked event coframe);
+- it is **not** a derivation of the SI decimal value of `hbar`, and it does
+  not contradict the Hilbert-only boundary theorem on the stripped surface;
+- the primitive boundary count is identified with the microscopic
   gravitational and entanglement boundary/action carrier through the
-  Clifford-CAR bridge:
+  forced Clifford-CAR bridge:
   `P_A H_cell -> Cl_4(C) irreducible module -> F(C^2) -> c_Widom=c_cell=1/4`
 - the source-unit normalization support theorem resolves the bare-source
   `4 pi` mismatch on the same carrier surface and gives
@@ -361,9 +383,10 @@ After the Target 3 Clifford phase bridge, the correct package statement is:
   alternate promotion path
 - the carrier-only parent-source scalar route is a retained no-go, not an
   alternate promotion path without a separate no-hidden-character law
-- until that coframe response is independently forced from the retained
-  minimal stack, the package must keep the explicit conditional wording
-  recorded in the Hilbert-only boundary theorem
+- the Hilbert-only Target 3 boundary theorem remains correct **on the
+  stripped Hilbert-only surface**; the forced coframe theorem operates on
+  the framework's actual richer surface that includes the retained
+  Cl(3)/Z^3 + anomaly-time + time-locked event coframe inputs.
 
 That is the canonical posture to use when wiring hierarchy, YT/Higgs,
 neutrino/DM mass ladders, gravity/cosmology companions, and compact-object

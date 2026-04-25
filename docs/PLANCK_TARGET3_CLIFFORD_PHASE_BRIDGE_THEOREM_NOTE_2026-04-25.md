@@ -1,10 +1,15 @@
 # Planck Target 3 Clifford Phase Bridge Theorem
 
 **Date:** 2026-04-25
-**Status:** conditional structural Target 3 bridge on the primitive
-Clifford/coframe response; not a standalone retained closure of Target 3 and
+**Status:** UNCONDITIONAL on the retained surface (the primitive Clifford
+coframe-response premise is forced by
+[`PLANCK_TARGET3_FORCED_COFRAME_RESPONSE_THEOREM_NOTE_2026-04-25.md`](PLANCK_TARGET3_FORCED_COFRAME_RESPONSE_THEOREM_NOTE_2026-04-25.md));
 not an SI decimal derivation of `hbar`
 **Runner:** `scripts/frontier_planck_target3_clifford_phase_bridge.py`
+**Promoted by:**
+[`PLANCK_TARGET3_FORCED_COFRAME_RESPONSE_THEOREM_NOTE_2026-04-25.md`](PLANCK_TARGET3_FORCED_COFRAME_RESPONSE_THEOREM_NOTE_2026-04-25.md)
+-- the metric-compatible coframe-response premise is forced by Cl(3) on Z^3
++ anomaly-cancellation chirality + time-locked primitive event coframe.
 
 ## Purpose
 

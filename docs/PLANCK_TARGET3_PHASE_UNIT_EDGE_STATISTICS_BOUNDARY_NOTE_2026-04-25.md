@@ -1,9 +1,17 @@
 # Planck Target 3 Phase-Unit / Edge-Statistics Boundary Note
 
 **Date:** 2026-04-25
-**Status:** retained Target 3 boundary theorem; positive dimensionless phase
-unit, negative absolute-action/CAR derivation on the current one-axiom surface
+**Status:** retained Target 3 boundary theorem on the **stripped Hilbert-only
+surface**; positive dimensionless phase unit, negative absolute-action/CAR
+derivation on the bare Hilbert-only surface
 **Runner:** `scripts/frontier_planck_target3_phase_unit_edge_statistics.py`
+**Resolved on the retained surface by:**
+[`PLANCK_TARGET3_FORCED_COFRAME_RESPONSE_THEOREM_NOTE_2026-04-25.md`](PLANCK_TARGET3_FORCED_COFRAME_RESPONSE_THEOREM_NOTE_2026-04-25.md)
+-- on the framework's actual retained surface (Cl(3) on Z^3 + anomaly-time
++ time-locked event coframe), the metric-compatible Clifford coframe
+response on `P_A H_cell` is forced, not assumed; the rank-four ambiguity
+is removed and the primitive Clifford-CAR edge carrier closes
+unconditionally.
 
 ## Purpose
 
