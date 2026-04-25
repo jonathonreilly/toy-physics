@@ -242,8 +242,12 @@ conceptual pressure.
   - leading anisotropic correction first appears at dimension 6
   - unique cubic-harmonic `ell = 4` fingerprint
   - hierarchy-surface suppression `(E/M_Pl)^2`
+  - fixed-`H_lat` boost-covariance kernel closes as
+    `U(a)=exp(-i a H_lat)` by Stone's theorem; the gravity-card
+    directional-measure kernel remains separate/open
   - authority:
-    [EMERGENT_LORENTZ_INVARIANCE_NOTE.md](../../EMERGENT_LORENTZ_INVARIANCE_NOTE.md)
+    [EMERGENT_LORENTZ_INVARIANCE_NOTE.md](../../EMERGENT_LORENTZ_INVARIANCE_NOTE.md),
+    [LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md](../../LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md)
 - strong CP:
   - retained action-surface `theta_eff = 0` on the retained
     axiom-determined Wilson-plus-staggered action surface

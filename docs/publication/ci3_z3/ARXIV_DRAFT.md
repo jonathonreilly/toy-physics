@@ -432,6 +432,11 @@ theorems. On top of that surface, exact cubic symmetry, exact CPT, and exact
 parity force the first Lorentz-violating correction to appear only at
 dimension $6$, with a unique cubic-harmonic $\ell=4$ signature and
 $(E/M_{\mathrm{Pl}})^2$ suppression on the retained hierarchy surface.
+On the same fixed Hamiltonian-lattice surface, the continuum-limit
+1+1D and 3+1D free-scalar two-point functions close as Lorentz scalars, and
+Stone's theorem fixes the per-step unitary propagator
+$U(a)=\exp(-i a H_{\rm lat})$. The separate directional-measure gravity-card
+kernel remains outside that closure.
 
 ### 4.5 Strong CP
 

@@ -74,8 +74,9 @@ questions:
   `SU(3)^3` cubic gauge anomaly cancellation, B-L anomaly freedom as a
   gaugeable option on the retained content,
   emergent-Lorentz dimension-6 onset plus exact continuum-limit 1+1D / 3+1D
-  boost-covariant free-scalar 2-point closure, action-surface `theta_eff = 0`, and
-  the source-scoped vanishing of all theta-induced EDM response components
+  boost-covariant free-scalar 2-point closure and fixed-`H_lat` unitary-kernel
+  closure, action-surface `theta_eff = 0`, and the source-scoped vanishing of
+  all theta-induced EDM response components
 - remaining open flagship bridge package:
   charged-lepton Koide (`Q = 2/3`, `delta = 2/9`);
   the dark-matter exact-target package is already closed on the manuscript
@@ -118,7 +119,8 @@ questions:
   residual-symmetry flavor support, exact `I_3 = 0`, exact CPT,
   retained Bell/CHSH support on explicit two-species lattice systems,
   emergent Lorentz invariance plus exact continuum-limit 1+1D / 3+1D
-  boost-covariant free-scalar 2-point closure, retained strong-CP closure on the retained
+  boost-covariant free-scalar 2-point closure and fixed-`H_lat` unitary-kernel
+  closure, retained strong-CP closure on the retained
   action surface, exact `T = 0` confinement with bounded `sqrt(sigma)`, and
   retained discrete evanescent-barrier and Schwarzschild-interior support,
   plus retained/admitted cosmology identities including `w = -1`, exact

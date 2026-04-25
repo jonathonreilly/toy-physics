@@ -59,7 +59,8 @@ For the full package-capture inventory, use:
   CKM-bracket factorization through atlas `J_0`
 - retained structural/corollary surface:
   strong CP on the retained action surface, emergent Lorentz invariance plus
-  exact continuum-limit 1+1D / 3+1D boost-covariant free-scalar 2-point closure,
+  exact continuum-limit 1+1D / 3+1D boost-covariant free-scalar 2-point closure
+  and fixed-`H_lat` unitary-kernel closure,
   universal theta-induced EDM-response vanishing on that retained strong-CP
   surface,
   `S^3` topology closure, SM hypercharge uniqueness/electric-charge

@@ -15,6 +15,9 @@ The paper does **not** claim:
 - unrestricted background-independent sum-over-geometries quantum gravity;
 - every nonlinear continuum completion beyond the chosen canonical textbook
   target.
+- a derivation of the separate gravity-card directional-measure kernel from
+  the fixed-`H_lat` Lorentz lane; the positive Lorentz-kernel closure is only
+  Stone uniqueness for the retained `H_lat` unitary propagator.
 
 The current exact claim is:
 

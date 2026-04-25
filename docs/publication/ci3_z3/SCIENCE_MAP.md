@@ -46,8 +46,9 @@ full package-capture inventory rather than the shortest public route.
 - retained topology:
   `S^3` compactification/topology closure
 - retained structural companions:
-  emergent Lorentz invariance, exact evanescent-barrier transfer-matrix bound +
-  tortoise-length identity, BH-entropy Widom no-go on the current carrier
+  emergent Lorentz invariance with fixed-`H_lat` unitary-kernel closure,
+  exact evanescent-barrier transfer-matrix bound + tortoise-length identity,
+  BH-entropy Widom no-go on the current carrier
 
 Start with:
 

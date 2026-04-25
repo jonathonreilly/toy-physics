@@ -47,6 +47,7 @@ python3 scripts/frontier_bminusl_anomaly_freedom.py
 python3 scripts/frontier_three_generation_observable_theorem.py
 python3 scripts/frontier_strong_cp_theta_zero.py
 python3 scripts/frontier_universal_theta_induced_edm_vanishing.py
+python3 scripts/frontier_lorentz_kernel_positive_closure.py
 ```
 
 ### Manuscript-core quantitative package
