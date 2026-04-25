@@ -2,8 +2,8 @@
 
 **Date:** 2026-04-25
 **Status:** standalone positive closure packet for the remaining
-`a^(-1) = M_Pl` gate, subject to reviewer acceptance of the Gauss/Newton
-source-unit theorem
+`a^(-1) = M_Pl` gate, closed on the stated Gauss/Newton exterior-charge
+theorem
 **Runner:**
 `scripts/frontier_planck_source_unit_normalization_clean_theorem.py`
 

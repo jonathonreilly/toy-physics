@@ -207,9 +207,10 @@ Before harsh external review, update the submitted text as follows:
 
 ## Backpressure Verdict
 
-After the above corrections, the theorem is review-ready as a clean closure
-candidate. It is not a broad literature claim and does not need repo-wide
-weaving to stand. The remaining external decision is sharply localized:
+After the above corrections, the theorem is review-ready as a clean closure on
+its stated premises. It is not a broad literature claim and does not need
+repo-wide weaving to stand. The remaining external decision is sharply
+localized:
 
 ```text
 Is physical Newton mass the Gauss/asymptotic monopole unit?

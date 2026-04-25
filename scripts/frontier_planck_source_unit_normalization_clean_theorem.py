@@ -179,7 +179,7 @@ def main() -> int:
     print(f"Summary: {passed}/{total} checks passed.")
     if passed == total:
         print(
-            "Verdict: positive clean-science closure candidate. The retained "
+            "Verdict: positive clean-science closure on stated premises. The retained "
             "1/(4*pi) is the bare Green-kernel coefficient; the physical "
             "Gauss/Newton source unit is q_bare=4*pi*M_phys; therefore "
             "G_Newton,lat=1, c_cell=1/(4G), EH=c_cell/(4*pi), and a/l_P=1."
