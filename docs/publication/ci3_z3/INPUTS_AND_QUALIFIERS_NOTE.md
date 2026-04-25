@@ -162,6 +162,11 @@ bridge layer beyond the exact structural core.
     `J_0`;
     Inami-Lim functions, QCD running factors, `B_K`, `f_K`, `M_K`,
     `Delta M_K`, and absolute `|epsilon_K|` remain external
+- cross-sector Koide/CKM `V_cb` bridge:
+  - promoted CKM atlas/axiom package + canonical `alpha_s(v)` + open Koide
+    support target `Q_l = 2/3`
+  - exact claim is conditional: if the Koide target is granted, then
+    `Q_l alpha_s(v)^2 = 4 |V_cb|^2`; this does not promote Koide closure
 - down-type CKM-dual mass ratios:
   - promoted CKM atlas/axiom package + GST + bounded `5/6` mass-ratio bridge; no observed
     masses as derivation inputs

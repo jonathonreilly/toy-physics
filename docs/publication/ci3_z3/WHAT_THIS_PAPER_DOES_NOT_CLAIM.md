@@ -82,6 +82,9 @@ The paper does **not** claim:
   factors, `B_K`, `f_K`, `M_K`, `Delta M_K`, or the standard epsilon_K formula;
   it only factors the CKM-imaginary bracket through atlas `J_0` at
   atlas-leading order.
+- that the cross-sector Koide/CKM `V_cb` bridge closes charged-lepton Koide
+  or promotes `Q_l = 2/3`; it is a conditional support target using the
+  retained CKM atlas plus the open Koide `Q_l` target.
 - a full retained neutrino point-prediction package for the solar gap, PMNS
   angles, Majorana phases, or absolute mass sum.
 - that the charged-lepton Koide A1/radian bridge is closed by the exact
