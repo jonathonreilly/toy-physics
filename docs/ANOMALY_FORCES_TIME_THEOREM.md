@@ -42,6 +42,9 @@ standalone retained packaging is
 The pure color `SU(3)^3` row is the nontrivial cubic gauge anomaly; its
 standalone retained packaging is
 [`SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md`](SU3_CUBIC_ANOMALY_CANCELLATION_THEOREM_NOTE_2026-04-24.md).
+The four perturbative left-handed traces and the LH-only Witten count are
+now also packaged as the standalone retained subtheorem
+[`LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md`](LH_ANOMALY_TRACE_CATALOG_THEOREM_NOTE_2026-04-25.md).
 
 Three anomaly coefficients are nonzero. By the Adler--Bell--Jackiw theorem
 [1,2], the gauge theory violates unitarity: Ward identities break and
