@@ -38,8 +38,8 @@ Current science/open-lane follow-ups:
 
 ### New as of 2026-04-25
 
-- **Lorentz boost-covariance lane** (review-ready): four-phase landing on
-  `lorentz-boost-covariance` branch off main:
+- **Lorentz boost-covariance lane** (review-ready, full positive closure):
+  five-phase landing on `lorentz-boost-covariance` branch off main:
   1. [LORENTZ_BOOST_COVARIANCE_GAP_NOTE](../LORENTZ_BOOST_COVARIANCE_GAP_NOTE.md)
      -- scope clarification.
   2. [LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE](../LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md)
@@ -52,11 +52,20 @@ Current science/open-lane follow-ups:
      -- 3+1D SO(3,1) boost covariance of the continuum 2-point function with
      closed form `m K_1(m sqrt(-s²))/(4π² sqrt(-s²))` and dim-6 cubic-harmonic
      LV at finite `a`; `frontier_lorentz_boost_3plus1d.py` PASS=55.
+  5. [LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE](../LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md)
+     -- new primitives (P5a Causal Locality, P5b Per-Step Unitarity,
+     P5c Reflection Symmetry, P5d Klein-Gordon Continuum Limit) jointly
+     determine the kernel uniquely as the canonical Hamiltonian heat-kernel.
+     Directional measure with `w = exp(-beta theta^2)` is explicitly excluded
+     by (P5b) for any (beta, k); minimum unitarity defect 0.067 vs canonical
+     machine-precision 7e-16. `frontier_lorentz_kernel_positive_closure.py`
+     PASS=33.
 
-  Lane status: strict extension of EMERGENT_LORENTZ_INVARIANCE_NOTE from
-  on-shell dispersion isotropy to off-shell 2-point boost covariance.
-  Disposition: ready for review on the feature branch; merge depends on
-  reviewer sign-off.
+  Lane status: full positive closure. Strict extension of
+  EMERGENT_LORENTZ_INVARIANCE_NOTE from on-shell dispersion isotropy to
+  off-shell SO(3,1) boost covariance, with the angular-kernel question
+  uniquely closed under explicit primitives. Total tally: 191 PASS / 0 FAIL
+  across 5 runners. Disposition: ready for review on the feature branch.
 
 ## Intake Format
 
