@@ -230,6 +230,10 @@ If a reviewer wants the negative boundary, use this note.
 - The package does not derive `a = l_P` from the minimal stack. It carries the
   Planck scale as the current physical-lattice package pin, with conditional
   completion once the gravitational boundary/action carrier is accepted.
+- The primitive coframe boundary-carrier support theorem identifies `P_A` as
+  the unique first-order coframe-slot carrier under stated hypotheses and
+  recovers `c_cell=1/4`; it does not prove that physical gravitational
+  boundary/action density must be identified with that carrier.
 - The primitive `c_cell = 1/4` boundary-density statement is not an
   entanglement theorem by itself. The simple-fiber Widom class is now closed
   negatively at `c_Widom <= 1/6`; the multipocket-selector, primitive

@@ -4,7 +4,12 @@
 from __future__ import annotations
 
 import math
+from pathlib import Path
 import sys
+
+
+ROOT = Path(__file__).resolve().parents[1]
+PRIMITIVE_COFRAME_NOTE = ROOT / "docs" / "PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md"
 
 
 def check(name: str, passed: bool, detail: str) -> bool:
@@ -46,12 +51,29 @@ def main() -> int:
     passed += check(
         "Absolute scale remains a package pin",
         True,
-        "Current retained package has c_cell=1/4, finite-boundary extension, "
-        "and source-unit normalization support on the carrier surface, but "
+        "Current retained package has c_cell=1/4, primitive coframe-carrier "
+        "support, finite-boundary extension, and source-unit normalization "
+        "support on the carrier surface, but "
         "a^(-1) = M_Pl remains the explicit package pin on main.",
     )
 
-    # 4. Current BH entropy carrier is a no-go for the 1/4 route.
+    # 4. The new primitive coframe note sharpens the carrier target without
+    # closing the remaining physical identification premise.
+    coframe_note_text = (
+        PRIMITIVE_COFRAME_NOTE.read_text(encoding="utf-8")
+        if PRIMITIVE_COFRAME_NOTE.exists()
+        else ""
+    )
+    total += 1
+    passed += check(
+        "Primitive coframe carrier support is present but non-closing",
+        PRIMITIVE_COFRAME_NOTE.exists()
+        and "FIRST_ORDER_COFRAME_CARRIER_EQUALS_P_A=TRUE" in coframe_note_text
+        and "PLANCK_MINIMAL_STACK_CLOSURE=FALSE" in coframe_note_text,
+        "P_A carrier support is audited separately; minimal-stack closure flag remains false",
+    )
+
+    # 5. Current BH entropy carrier is a no-go for the 1/4 route.
     widom_coeff = 1.0 / 6.0
     bh_target = 1.0 / 4.0
     total += 1
@@ -61,7 +83,7 @@ def main() -> int:
         f"current carrier gives {widom_coeff:.6f}; target is {bh_target:.6f}",
     )
 
-    # 5. The broader simple-fiber Widom class cannot reach the quarter either.
+    # 6. The broader simple-fiber Widom class cannot reach the quarter either.
     simple_fiber_bound = 2.0 / 12.0
     total += 1
     passed += check(
@@ -70,7 +92,7 @@ def main() -> int:
         f"simple-fiber upper bound = {simple_fiber_bound:.6f}; target is {bh_target:.6f}",
     )
 
-    # 6. Naive vacuum-energy back-out is the wrong mechanism and points to an IR scale.
+    # 7. Naive vacuum-energy back-out is the wrong mechanism and points to an IR scale.
     lambda_obs = 1.1e-52  # m^-2
     l_planck = 1.616255e-35  # m
     implied_radius = math.sqrt(3.0 / lambda_obs)
@@ -88,8 +110,8 @@ def main() -> int:
         print(
             "Verdict: carry a^(-1) = M_Pl as a pinned package scale on the "
             "physical-lattice reading while the minimal-stack Planck derivation "
-            "remains open; the conditional packet now includes source-unit "
-            "normalization support."
+            "remains open; the conditional packet now includes primitive coframe-carrier "
+            "and source-unit normalization support."
         )
         return 0
     return 1

@@ -5,6 +5,7 @@
 not a standalone minimal-stack derivation of `a^(-1) = M_Pl`
 **Scope:** first-order coframe/worldtube boundary carrier on the time-locked
 primitive event cell
+**Runner:** `scripts/frontier_planck_primitive_coframe_boundary_carrier.py`
 
 ## Purpose
 
@@ -28,7 +29,7 @@ boundary/action carrier?
 This note proves the positive theorem available on the coframe surface:
 
 > On the time-locked primitive event cell, the unique source-free, additive,
-> cubic-frame symmetric first-order coframe boundary/worldtube carrier is
+> coframe-slot symmetric first-order coframe boundary/worldtube carrier is
 > exactly the Hamming-weight-one packet `P_A`.
 
 This moves the Planck lane forward because the `1/4` coefficient is no longer
@@ -183,8 +184,9 @@ Assume:
    B = sum_{a in E} b_a P_{ {a} }.
    ```
 
-3. **Cubic coframe symmetry.** The source-free primitive frame does not
-   distinguish the four primitive coframe axes on this carrier surface:
+3. **Time-locked coframe-slot symmetry.** The source-free primitive register
+   does not distinguish the four primitive coframe slots on this carrier
+   surface:
 
    ```text
    b_t = b_x = b_y = b_z.
@@ -211,7 +213,7 @@ By first-order locality and axis additivity,
 B = b_t P_{ {t} } + b_x P_{ {x} } + b_y P_{ {y} } + b_z P_{ {z} }.
 ```
 
-Cubic coframe symmetry gives one common coefficient `b`. Unit primitive
+Coframe-slot symmetry gives one common coefficient `b`. Unit primitive
 response normalization gives `b=1`. Hence
 
 ```text
@@ -340,14 +342,16 @@ rank(P_A)=4,
 Tr((I_16/16)P_A)=1/4.
 ```
 
-### Does cubic symmetry really include the time slot?
+### Does coframe-slot symmetry really include the time slot?
 
 On this theorem's surface the primitive cell is time-locked: the local
 worldtube boundary carrier counts one active coframe axis in the four-axis
 event cell `(t,x,y,z)`. The theorem is not claiming an independent Euclidean
-spacetime symmetry; it uses the source-free coframe register before selecting
-a macroscopic face. Once a face normal is selected, the later Target 2/3 notes
-split the active block into normal and tangent response channels.
+spacetime symmetry or ordinary cubic spatial symmetry acting on time. It uses
+the source-free coframe-slot symmetry of the Boolean event register before a
+macroscopic face/normal is selected. Once a face normal is selected, the later
+Target 2/3 notes split the active block into normal and tangent response
+channels.
 
 ### Could a higher-order packet also have coefficient `1/4`?
 
@@ -369,6 +373,20 @@ No. It proves the exact carrier available once the gravitational boundary
 object is read as a first-order coframe/worldtube variation. It does not prove
 that this is the physical gravitational boundary/action readout of the older
 minimal stack.
+
+## Verification
+
+Run:
+
+```bash
+python3 scripts/frontier_planck_primitive_coframe_boundary_carrier.py
+```
+
+Expected result:
+
+```text
+TOTAL: PASS=14, FAIL=0
+```
 
 ## Closeout flags
 

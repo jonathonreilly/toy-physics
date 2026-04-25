@@ -32,6 +32,12 @@ in
 [PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md](./PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md):
 
 - exact primitive coefficient `c_cell = Tr((I_16/16) P_A) = 4/16 = 1/4`;
+- positive primitive coframe boundary-carrier support:
+  [PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md](./PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md)
+  proves that `P_A` is the unique first-order coframe-slot carrier on the
+  time-locked primitive event cell under the stated source-free locality,
+  additivity, symmetry, and unit-response hypotheses; it does not by itself
+  identify gravitational boundary/action density with that carrier;
 - positive finite-boundary density extension:
   [PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md](./PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md)
   proves the unique additive finite-patch law
