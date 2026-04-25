@@ -176,6 +176,44 @@ SO(2)-invariant by Theorem 1.
 
 ---
 
+### 3a. Notes on the principles invoked (per review #3 documentation request)
+
+**Carrier-choice principle.** The structural principle invoked in T2 is:
+*the natural source-response carrier for an observable matches the
+observable's functional DOF count*. This is not a free choice. Once OP
+is applied (which gives different `W` on different carriers — block-total
+on reduced, det log-law on unreduced), the carrier choice determines the
+observable law. For Q specifically, the SO(2)-invariance (T1) means:
+- on the reduced carrier, OP gives `W_red = log E_+ + log E_perp` — the
+  block-total form fully captures Q's source-response;
+- on the unreduced 1⊕2 vector-slot carrier, OP gives the rank-weighted
+  det log-law, which carries spurious DOF (`arg b`) irrelevant to Q.
+
+The Q-natural carrier is the reduced one because it's the **minimal
+carrier on which Q's source-response is non-degenerate**. This is a
+standard structural principle in observable physics, made rigorous here
+by Q's SO(2)-invariance.
+
+**Ground-state interpretation.** OP gives `Z = det(D[Y_e])` as the
+Grassmann partition amplitude with `W = log Z` as the effective action
+for the Yukawa background. In standard lattice fermionic QFT (the
+framework's setting per A0 + Cl(3)/Z³), the physical (equilibrium /
+ground) state extremizes the effective action under fixed-scale
+constraints. This is textbook QFT, retained implicitly by the framework's
+lattice Grassmann partition structure. On the Q-natural reduced
+carrier, the ground-state extremum is the saddle of `W_red` —
+mathematically the AM-GM extremum at fixed `Tr Y_red`.
+
+**SO(2) measure invariance.** The doublet `b → e^{iθ} b` rotation is a
+continuous symmetry of the C_3-equivariant Hermitian carrier. The
+Frobenius inner product on Herm_circ(3) is invariant under this rotation
+(verified in `KOIDE_FROBENIUS_ISOTYPE_SPLIT_UNIQUENESS_NOTE_2026-04-21.md`
+T1: Ad-invariance verified for the canonical form). The path-integral
+measure on the reduced carrier inherits this invariance. Hence the
+SO(2)-quotient on the doublet is a measure-preserving reduction.
+
+---
+
 ## 4. Theorem 3: Saddle of W_red on the Q-natural carrier ⇒ Q_l = 2/3
 
 > **Theorem (Q saddle).** On the Q-natural reduced two-slot carrier
