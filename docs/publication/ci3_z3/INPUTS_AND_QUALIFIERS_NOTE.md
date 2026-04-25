@@ -124,6 +124,16 @@ Current absolute-scale package rule:
   - `R_conn = 8/9 + O(1/N_c^4)`
   - authority:
     [RCONN_DERIVED_NOTE.md](../../RCONN_DERIVED_NOTE.md)
+- bare EW/color dimension-ratio support:
+  - exact support identity `alpha_3(bare)/alpha_em(bare) = 2d + 3 = 9`
+    at `d = 3`
+  - authority:
+    [FRAMEWORK_BARE_ALPHA_3_ALPHA_EM_DIMENSION_FIXED_RATIO_SUPPORT_NOTE_2026-04-25.md](../../FRAMEWORK_BARE_ALPHA_3_ALPHA_EM_DIMENSION_FIXED_RATIO_SUPPORT_NOTE_2026-04-25.md)
+  - qualifier:
+    this reuses the retained EW-normalization bookkeeping and the reviewed
+    `Cl(3)->SM` support counts; it does not promote that support packet into
+    the accepted minimal-input stack and is not a direct low-energy
+    `alpha_3/alpha_em` prediction.
 
 ## 4. Chosen-target qualifiers
 

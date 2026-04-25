@@ -85,6 +85,10 @@ The paper does **not** claim:
 - that the cross-sector Koide/CKM `V_cb` bridge closes charged-lepton Koide
   or promotes `Q_l = 2/3`; it is a conditional support target using the
   retained CKM atlas plus the open Koide `Q_l` target.
+- that the bare `alpha_3/alpha_em = 9` support card promotes the reviewed
+  `Cl(3)->SM` support packet into the accepted minimal-input stack, predicts a
+  direct low-energy `alpha_3/alpha_em` ratio without the retained EW
+  running/projection lane, or implies SU(5) unification.
 - a full retained neutrino point-prediction package for the solar gap, PMNS
   angles, Majorana phases, or absolute mass sum.
 - that the charged-lepton Koide A1/radian bridge is closed by the exact
