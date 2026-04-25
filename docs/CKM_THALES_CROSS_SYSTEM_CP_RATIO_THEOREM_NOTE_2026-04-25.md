@@ -2,20 +2,19 @@
 
 **Date:** 2026-04-25
 
-**Status:** Retained derivation theorem on `main`. **Pushes the framework
-forward** by deriving a sharp **pure-framework** relation between the
-CP-asymmetry observables of the B_d and B_s systems:
+**Status:** Retained atlas-leading CKM structural-ratio theorem. It derives
+a framework-side relation between the B_d and B_s CP-phase readouts:
 
 ```text
-sin(2 beta_s,0) / sin(2 beta_d,0)  =  lambda^2  =  alpha_s(v) / 2,
+sin(2 beta_s,0)_LO / sin(2 beta_d,0)  =  lambda^2  =  alpha_s(v) / 2,
 
 phi_s,0 / sin(2 beta_d,0)          =  -lambda^2  =  -alpha_s(v) / 2.
 ```
 
-Both relations are exact at atlas-leading Wolfenstein order, with no
-hadronic input -- the canonical coupling `alpha_s(v)` controls the
-cross-system CP ratio entirely through the framework-retained Thales
-circle `eta^2 = rho(1 - rho)`.
+Both relations are exact for the atlas-leading Wolfenstein readout, with
+no hadronic mixing-amplitude input on the framework side. The canonical
+coupling `alpha_s(v)` controls the cross-system CP ratio through the
+framework-retained Thales circle `eta^2 = rho(1 - rho)`.
 
 The B_d -> B_s correspondence is measured cleanly:
 
@@ -26,12 +25,11 @@ framework prediction -lambda^2    =  -0.0517,
 
 at `0.11 sigma` agreement.
 
-This is a **non-trivial structural prediction**: it eliminates the
-hadronic factor `f_Bs / f_Bd`, the bag parameters `B_Bs / B_Bd`, the
-mass ratio `M_Bs / M_Bd`, and the running factor `eta_B`, all of which
-otherwise dominate the precision of any individual `phi_s` or
-`sin(2 beta_d)` extraction. The ratio depends only on the canonical
-plaquette/CMT coupling.
+This is a non-trivial structural prediction: unlike amplitude-ratio
+comparators such as `Delta m_s / Delta m_d`, the framework-side phase
+ratio is not built from decay constants, bag parameters, meson-mass
+ratios, or the short-distance factor `eta_B`. The retained readout
+depends only on the canonical plaquette/CMT coupling.
 
 The B_s-mixing-phase derivation
 [`CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md`](CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md)
@@ -61,10 +59,10 @@ with the retained framework values `rho = 1/6`, `eta = sqrt(5)/6`,
 (C2)  sin(2 beta_d,0)  =  2 eta (1 - rho) / R_t^2
                        =  2 eta                     (Thales simplification),
 
-(C3)  sin(2 beta_s,0)  =  2 beta_s,0  (small-angle, leading)
+(C3)  sin(2 beta_s,0)_LO  :=  2 beta_s,0  (small-angle, leading)
                        =  2 lambda^2 eta,
 
-(C4)  sin(2 beta_s,0) / sin(2 beta_d,0)  =  lambda^2  =  alpha_s(v) / 2,
+(C4)  sin(2 beta_s,0)_LO / sin(2 beta_d,0)  =  lambda^2  =  alpha_s(v) / 2,
 
 (C5)  phi_s,0 / sin(2 beta_d,0)          =  -lambda^2 =  -alpha_s(v) / 2.
 ```
@@ -73,7 +71,7 @@ Identity `(C1)` exposes the structural simplification driven by the
 retained Thales-circle relation `eta^2 = rho(1 - rho)`. Identity `(C2)`
 expresses `sin(2 beta_d,0)` in terms of `eta` alone, with the
 `(1-rho)/R_t^2` factor canceling exactly. The ratios `(C4)` and `(C5)`
-are the new pure-framework cross-system CP-asymmetry predictions.
+are the retained atlas-leading cross-system CP-asymmetry predictions.
 
 ## Retained Inputs
 
@@ -86,8 +84,9 @@ are the new pure-framework cross-system CP-asymmetry predictions.
 | `beta_s,0 = lambda^2 eta`, `phi_s,0 = -2 beta_s,0` (leading) | [`CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md`](CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md) |
 
 No fitted CKM observable, B-meson decay constant, lattice bag parameter,
-or hadronic mixing factor enters. The B_s phase convention `phi_s = -2 beta_s`
-is the standard observation bridge already used in the parent B_s note.
+or hadronic mixing-amplitude factor enters the framework-side identity.
+The B_s phase convention `phi_s = -2 beta_s` is the standard observation
+bridge already used in the parent B_s note.
 
 ## Derivation
 
@@ -144,28 +143,28 @@ Wolfenstein order
 beta_s,0  =  lambda^2 eta.
 ```
 
-In the small-angle regime (numerically `beta_s,0 = 1.10 deg`), the sine
-of the doubled angle is
+In the small-angle regime (numerically `beta_s,0 = 1.10 deg`), define
+the atlas-leading sine readout by
 
 ```text
-sin(2 beta_s,0)  ~=  2 beta_s,0  =  2 lambda^2 eta,
+sin(2 beta_s,0)_LO  :=  2 beta_s,0  =  2 lambda^2 eta,
 ```
 
-with the residual to the exact `sin(2 beta_s,0)` smaller than `1e-4`
-relative.
+with the residual to the exact trigonometric `sin(2 beta_s,0)` about
+`2.5e-4` relative.
 
 ### 4. The cross-system ratio `(C4)`
 
 Combining `(C2)` and `(C3)`, the `2 eta` factor cancels:
 
 ```text
-sin(2 beta_s,0) / sin(2 beta_d,0)
+sin(2 beta_s,0)_LO / sin(2 beta_d,0)
    =  (2 lambda^2 eta) / (2 eta)
    =  lambda^2
    =  alpha_s(v) / 2.
 ```
 
-This is the new pure-framework structural identity. Note the cancellation
+This is the retained structural-ratio identity. Note the cancellation
 mechanism: the `eta` factor enters identically in both numerator and
 denominator after the Thales simplification, so the ratio carries
 *only* the `lambda^2` from the B_s mixing phase. The structural
@@ -174,13 +173,13 @@ identity makes the cross-system ratio independent of `rho`, `eta`,
 
 ### 5. The phi_s ratio `(C5)`
 
-Using `phi_s,0 = -2 beta_s,0` and `sin(2 beta_s,0) = 2 beta_s,0` at
+Using `phi_s,0 = -2 beta_s,0` and `sin(2 beta_s,0)_LO = 2 beta_s,0` at
 leading order,
 
 ```text
 phi_s,0 / sin(2 beta_d,0)
    =  -2 beta_s,0 / sin(2 beta_d,0)
-   =  -sin(2 beta_s,0) / sin(2 beta_d,0)
+   =  -sin(2 beta_s,0)_LO / sin(2 beta_d,0)
    =  -lambda^2
    =  -alpha_s(v) / 2.
 ```
@@ -195,9 +194,9 @@ With canonical `alpha_s(v) = 0.10330381612227...`:
 | --- | --- | ---: |
 | `R_t^2` (Thales) | `1 - rho` | `5/6` |
 | `sin(2 beta_d,0)` | `2 eta` | `sqrt(5)/3 = 0.745356` |
-| `sin(2 beta_s,0)` | `2 lambda^2 eta` | `0.038499` |
+| `sin(2 beta_s,0)_LO` | `2 lambda^2 eta` | `0.038499` |
 | `phi_s,0` | `-2 lambda^2 eta` | `-0.038499` |
-| `sin(2 beta_s,0) / sin(2 beta_d,0)` | `lambda^2` | `0.051652` |
+| `sin(2 beta_s,0)_LO / sin(2 beta_d,0)` | `lambda^2` | `0.051652` |
 | `phi_s,0 / sin(2 beta_d,0)` | `-lambda^2` | `-0.051652` |
 | `phi_s,0 / (2 eta)` | `-alpha_s(v)/2` | `-0.051652` |
 
@@ -213,20 +212,19 @@ The cross-system **ratio** lands at `0.11 sigma`. The atlas-LO
 *absolute* `sin(2 beta_d)` retains its known `3.6 sigma` tension with
 B_d -> J/psi K_S; the absolute `phi_s` matches at `0.02 sigma`. The
 ratio identity `phi_s / sin(2 beta_d) = -lambda^2` is therefore
-**substantially sharper than either numerator or denominator alone**
-because the systematic-leading hadronic factors that affect both
-observables cancel in the framework's structural ratio.
+sharper than the current individual atlas-LO comparison surface because
+the retained ratio isolates the shared `2 eta` factor and leaves only
+`lambda^2`.
 
-## Why This Pushes the Framework Forward
+## Scientific Role
 
-The ratio `phi_s / sin(2 beta_d)` is **one of the cleanest cross-system
-CP-violation tests** in the SM, because the dominant hadronic
-uncertainties `f_Bs/f_Bd`, `B_Bs/B_Bd`, `M_Bs/M_Bd`, and the running
-factor `eta_B` all cancel in this combination. Until now the framework
-predicted the numerator and the denominator separately at atlas-LO,
-each carrying its own match-to-data status.
+The ratio `phi_s / sin(2 beta_d)` is a clean cross-system CP-phase
+comparator. It is not an amplitude-ratio extraction and does not require
+framework-side inputs such as `f_Bs/f_Bd`, `B_Bs/B_Bd`, `M_Bs/M_Bd`, or
+`eta_B`. Until now the framework predicted the numerator and denominator
+separately at atlas-LO, each carrying its own match-to-data status.
 
-This note packages the *ratio* as a sharp pure-framework prediction
+This note packages the *ratio* as a sharp framework-side prediction
 controlled solely by the canonical `alpha_s(v)`. The mechanism is the
 retained Thales-circle structure `eta^2 = rho(1 - rho)` -- a structural
 geometric fact of the framework's CKM atlas surface, not a fitted
@@ -239,7 +237,7 @@ individual atlas-LO prediction.
 - `R_t^2 = 1 - rho` exactly at atlas-LO, as a Thales-circle corollary.
 - `sin(2 beta_d,0) = 2 eta = sqrt(5)/3` at atlas-LO, with the
   `(1-rho)/R_t^2` factor canceling.
-- `sin(2 beta_s,0) / sin(2 beta_d,0) = lambda^2 = alpha_s(v)/2`
+- `sin(2 beta_s,0)_LO / sin(2 beta_d,0) = lambda^2 = alpha_s(v)/2`
   exactly at atlas-LO Wolfenstein.
 - `phi_s,0 / sin(2 beta_d,0) = -lambda^2 = -alpha_s(v)/2` exactly at
   atlas-LO Wolfenstein.
@@ -259,6 +257,9 @@ individual atlas-LO prediction.
   prediction is pure SM at atlas-leading.
 - It does not promote `phi_s = -2 beta_s` as a new framework theorem;
   this is the standard B_s mixing convention.
+- It does not claim an all-orders trigonometric identity for
+  `sin(2 beta_s,0)`; the sine readout is the atlas-leading small-angle
+  readout, with the exact-sine residual tracked by the runner.
 
 ## Reproduction
 
@@ -269,7 +270,7 @@ python3 scripts/frontier_ckm_thales_cross_system_cp_ratio.py
 Expected result:
 
 ```text
-TOTAL: PASS=34, FAIL=0
+TOTAL: PASS=35, FAIL=0
 ```
 
 The runner uses the Python standard library plus the canonical
@@ -285,7 +286,5 @@ The runner uses the Python standard library plus the canonical
   -- retained right-angle theorem, alpha_0 = pi/2.
 - [`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md)
   -- retained `lambda^2 = alpha_s(v)/2`.
-- [`CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md`](CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md)
-  -- companion NLO barred-triangle / protected-gamma theorem.
 - [`ALPHA_S_DERIVED_NOTE.md`](ALPHA_S_DERIVED_NOTE.md)
   -- canonical `alpha_s(v)` derivation.

@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 """CKM Thales-mediated cross-system CP-asymmetry ratio theorem audit.
 
-Verifies the new pure-framework structural identities in
+Verifies the retained atlas-leading structural identities in
   docs/CKM_THALES_CROSS_SYSTEM_CP_RATIO_THEOREM_NOTE_2026-04-25.md
 
   (C1) R_t^2          = (1 - rho)^2 + eta^2 = 1 - rho
   (C2) sin(2 beta_d,0) = 2 eta (1 - rho)/R_t^2 = 2 eta
-  (C3) sin(2 beta_s,0) = 2 lambda^2 eta (small-angle)
-  (C4) sin(2 beta_s,0) / sin(2 beta_d,0) = lambda^2 = alpha_s(v)/2
+  (C3) sin(2 beta_s,0)_LO = 2 lambda^2 eta (small-angle)
+  (C4) sin(2 beta_s,0)_LO / sin(2 beta_d,0) = lambda^2 = alpha_s(v)/2
   (C5) phi_s,0 / sin(2 beta_d,0)         = -lambda^2 = -alpha_s(v)/2
 
-The ratio identities (C4), (C5) are pure-framework: no hadronic input.
+The ratio identities (C4), (C5) use no hadronic mixing-amplitude input.
 PDG comparison: phi_s/sin(2 beta_d) = -0.0552 +/- 0.031 (combined PDG
 + LHCb propagation) vs framework -0.0517 at 0.11 sigma.
 """
@@ -87,6 +87,7 @@ def audit_inputs() -> None:
         "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
         "docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md",
         "docs/CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md",
+        "docs/CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md",
     )
     for rel in upstream:
         path = repo_root / rel
@@ -156,7 +157,7 @@ def audit_c2_sin_2beta_d_simplification() -> None:
 
 
 def audit_c3_sin_2beta_s_leading() -> None:
-    banner("(C3): sin(2 beta_s,0) = 2 lambda^2 eta (small-angle leading)")
+    banner("(C3): sin(2 beta_s,0)_LO = 2 lambda^2 eta (small-angle leading)")
 
     beta_s_leading = LAMBDA_SQ * ETA_VAL
     sin_2bs_leading = 2 * beta_s_leading
@@ -171,23 +172,23 @@ def audit_c3_sin_2beta_s_leading() -> None:
     relative_error = abs(sin_2bs_exact - sin_2bs_leading) / abs(sin_2bs_leading)
     print(f"  small-angle residual = {relative_error:.6e}")
 
-    check("(C3) sin(2 beta_s,0) = alpha_s(v) sqrt(5)/6 (small-angle)",
+    check("(C3) sin(2 beta_s,0)_LO = alpha_s(v) sqrt(5)/6",
           close(sin_2bs_leading, closed_form))
     check("(C3) small-angle approximation accurate to 1e-3",
           relative_error < 1e-3)
-    check("(C3) sin(2 beta_s,0) = 2 lambda^2 eta (closed form)",
+    check("(C3) sin(2 beta_s,0)_LO = 2 lambda^2 eta (closed form)",
           close(sin_2bs_leading, 2 * LAMBDA_SQ * ETA_VAL))
 
 
 def audit_c4_cross_system_ratio() -> None:
-    banner("(C4) NEW PURE-FRAMEWORK IDENTITY: sin(2 beta_s,0) / sin(2 beta_d,0) = lambda^2")
+    banner("(C4) atlas-leading structural ratio: sin(2 beta_s,0)_LO / sin(2 beta_d,0) = lambda^2")
 
     sin_2bd = 2 * ETA_VAL  # = sqrt(5)/3 by (C2)
     sin_2bs = 2 * LAMBDA_SQ * ETA_VAL  # = lambda^2 * 2 eta
 
     ratio = sin_2bs / sin_2bd
     print(f"  sin(2 beta_d,0)              = {sin_2bd:.15f}")
-    print(f"  sin(2 beta_s,0)              = {sin_2bs:.15f}")
+    print(f"  sin(2 beta_s,0)_LO           = {sin_2bs:.15f}")
     print(f"  ratio                         = {ratio:.15f}")
     print(f"  lambda^2 = alpha_s(v)/2       = {LAMBDA_SQ:.15f}")
 
@@ -217,7 +218,7 @@ def audit_c4_cross_system_ratio() -> None:
 
 
 def audit_c5_phi_s_ratio() -> None:
-    banner("(C5) NEW PURE-FRAMEWORK IDENTITY: phi_s,0 / sin(2 beta_d,0) = -lambda^2")
+    banner("(C5) atlas-leading structural ratio: phi_s,0 / sin(2 beta_d,0) = -lambda^2")
 
     phi_s = -2 * LAMBDA_SQ * ETA_VAL  # = -alpha_s(v) sqrt(5)/6
     sin_2bd = 2 * ETA_VAL  # = sqrt(5)/3
@@ -287,28 +288,28 @@ def audit_pdg_comparator() -> None:
           abs(deviation) < 1.0)
     check("framework atlas ratio agrees with PDG/LHCb within 0.5 sigma",
           abs(deviation) < 0.5)
-    check("framework atlas ratio agrees at 0.2 sigma (sharp prediction)",
+    check("framework atlas ratio agrees with PDG/LHCb within 0.2 sigma",
           abs(deviation) < 0.2)
 
 
 def audit_summary() -> None:
     banner("Summary of new content")
 
-    print("  THALES-MEDIATED CROSS-SYSTEM CP RATIO (NEW PURE-FRAMEWORK IDENTITY):")
+    print("  THALES-MEDIATED CROSS-SYSTEM CP RATIO (ATLAS-LEADING STRUCTURAL IDENTITY):")
     print()
-    print("    sin(2 beta_s,0) / sin(2 beta_d,0)  =  lambda^2  =  alpha_s(v)/2")
+    print("    sin(2 beta_s,0)_LO / sin(2 beta_d,0)  =  lambda^2  =  alpha_s(v)/2")
     print("    phi_s,0 / sin(2 beta_d,0)          = -lambda^2  = -alpha_s(v)/2")
     print()
     print("  STRUCTURAL CHAIN:")
     print("    1. retained Thales: eta^2 = rho(1 - rho)")
     print("    2. corollary (C1):  R_t^2 = 1 - rho")
     print("    3. simplified (C2): sin(2 beta_d,0) = 2 eta")
-    print("    4. leading (C3):    sin(2 beta_s,0) = 2 lambda^2 eta")
-    print("    5. ratio (C4):      sin(2 beta_s,0)/sin(2 beta_d,0) = lambda^2")
+    print("    4. leading (C3):    sin(2 beta_s,0)_LO = 2 lambda^2 eta")
+    print("    5. ratio (C4):      sin(2 beta_s,0)_LO/sin(2 beta_d,0) = lambda^2")
     print()
     print("  At canonical alpha_s(v) = 0.103304:")
     print(f"    sin(2 beta_d,0) = 2 eta              = {2 * ETA_VAL:.6f}")
-    print(f"    sin(2 beta_s,0) = 2 lambda^2 eta     = {2 * LAMBDA_SQ * ETA_VAL:.6f}")
+    print(f"    sin(2 beta_s,0)_LO = 2 lambda^2 eta  = {2 * LAMBDA_SQ * ETA_VAL:.6f}")
     print(f"    cross-system ratio = lambda^2        = {LAMBDA_SQ:.6f}")
     print(f"    PDG comparison: 0.11 sigma agreement")
 

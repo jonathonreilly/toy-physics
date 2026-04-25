@@ -45,7 +45,8 @@ questions:
   `|V_td|_0^2 = 5 alpha_s(v)^3/72`, and
   `|V_ts|_0^2 = alpha_s(v)^2/6`, with finite-`lambda` standard-matrix
   corrections guarded separately, plus the atlas-leading B_s mixing phase
-  `phi_s = -alpha_s(v) sqrt(5)/6 = -0.03850 rad`; and bounded
+  `phi_s = -alpha_s(v) sqrt(5)/6 = -0.03850 rad` and Thales-mediated
+  cross-system CP ratio `phi_s / sin(2 beta_d) = -alpha_s(v)/2`; and bounded
   confinement-string readout; the absolute
   lattice scale is tracked explicitly on a dedicated Planck-scale lane as the
   current package pin `a^(-1) = M_Pl` on the physical-lattice reading, with a

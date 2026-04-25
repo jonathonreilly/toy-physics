@@ -171,6 +171,7 @@ Current status from that stack:
   atlas-leading `|V_ts|_0 = 0.04217`,
   atlas-leading `|V_tb|_0 = 0.99907`,
   atlas-leading `phi_s(B_s) = -0.03850 rad`,
+  Thales-mediated `phi_s/sin(2 beta_d) = -0.05165`,
   `delta = 65.905 deg`,
   rescaled atlas-triangle `alpha_0 = 90 deg`,
   `J = 3.331 x 10^-5`
