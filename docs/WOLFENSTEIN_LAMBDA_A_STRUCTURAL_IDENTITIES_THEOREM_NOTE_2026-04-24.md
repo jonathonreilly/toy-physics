@@ -10,6 +10,12 @@ companion to
 [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
 and does not expand the parent CKM theorem's scope.
 
+The third-row companion
+[`CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md)
+uses these same `lambda` and `A` identities to name
+`|V_td|_0^2 = 5 alpha_s(v)^3/72` and
+`|V_ts|_0^2 = alpha_s(v)^2/6` on the atlas-leading surface.
+
 **Primary runner:** `scripts/frontier_wolfenstein_lambda_a_structural_identities.py`
 
 ## Statement
@@ -198,6 +204,8 @@ The runner uses the Python standard library plus the canonical
   - parent CKM package.
 - [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
   - companion `rho`, `eta`, phase, and `J` identities.
+- [`CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md)
+  - companion third-row atlas-leading magnitude identities.
 - [`ALPHA_S_DERIVED_NOTE.md`](ALPHA_S_DERIVED_NOTE.md)
   - canonical `alpha_s(v)` input.
 - [`ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md`](ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md)

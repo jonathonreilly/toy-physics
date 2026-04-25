@@ -151,6 +151,9 @@ J_0 = lambda^6 A^2 eta
 - It does not derive `alpha_s(v)`; that remains the separate plaquette/CMT
   input already used by the CKM atlas.
 - It does not derive CKM magnitudes beyond the parent atlas package.
+- Third-row magnitude identities are named separately in
+  [`CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
+  which preserves the finite-`lambda` standard-matrix guardrail.
 - It does not promote the older bounded Cabibbo, mass-basis NNI, or partial
   Jarlskog route-history notes as controlling authority.
 - It does not claim BSM CP phases, PMNS phases, or Majorana phases.
@@ -201,6 +204,7 @@ depend on `sympy`.
 | `rho = 1/6`, `eta = sqrt(5)/6` | standalone retained coordinate identities |
 | `J_0 = alpha_s(v)^3 sqrt(5)/72` | standalone retained atlas factorisation conditioned on parent `alpha_s(v)` |
 | CKM-only neutron EDM | unchanged downstream corollary on the retained `theta_eff = 0` surface |
+| Third-row CKM magnitudes | standalone atlas-leading identities with finite-`lambda` guardrail in the third-row companion note |
 
 This is the same extraction pattern as
 [`STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md`](STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md):

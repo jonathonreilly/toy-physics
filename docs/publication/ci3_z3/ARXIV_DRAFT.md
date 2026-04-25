@@ -598,12 +598,20 @@ readout keeps the finite-$\lambda$ cosine factors.
 The same atlas coordinates also put the rescaled CKM atlas triangle on the
 Thales circle, so its atlas angle is exactly $\alpha_0=90^\circ$. This is not
 promoted as an exact finite-$\lambda$ barred-unitarity-triangle right angle.
+The same leading atlas surface gives the named third-row identities
+$|V_{td}|_0^2=5\alpha_s(v)^3/72$ and
+$|V_{ts}|_0^2=\alpha_s(v)^2/6$, with the finite-$\lambda$ exact
+standard-matrix third row kept as a guardrail rather than collapsed into an
+all-orders monomial claim.
 
 The promoted package reports
 
 - $|V_{us}| = 0.22727$,
 - $|V_{cb}| = 0.04217$,
 - $|V_{ub}| = 0.003913$,
+- atlas-leading $|V_{td}|_0 = 0.008750$,
+- atlas-leading $|V_{ts}|_0 = 0.04217$,
+- atlas-leading $|V_{tb}|_0 = 0.99907$,
 - $\delta = 65.905^\circ$,
 - atlas $\alpha_0 = 90^\circ$,
 - $J = 3.331\times 10^{-5}$.

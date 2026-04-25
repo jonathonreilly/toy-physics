@@ -40,7 +40,9 @@ For the full package-capture inventory, use:
   YT/top transport, and the promoted CKM atlas/axiom package, including the
   standalone `lambda^2 = alpha_s(v)/2`, `A^2 = 2/3`, and
   `cos^2(delta_CKM) = 1/6` structural identities plus the rescaled atlas-triangle
-  right-angle identity `alpha_0 = 90 deg`
+  right-angle identity `alpha_0 = 90 deg` and atlas-leading third-row
+  identities `|V_td|_0^2 = 5 alpha_s(v)^3/72`,
+  `|V_ts|_0^2 = alpha_s(v)^2/6`
 - retained structural/corollary surface:
   strong CP on the retained action surface, emergent Lorentz invariance,
   universal theta-induced EDM-response vanishing on that retained strong-CP

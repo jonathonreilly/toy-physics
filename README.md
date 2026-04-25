@@ -34,7 +34,10 @@ questions:
   electroweak normalization, retained top/Yukawa transport, promoted CKM
   atlas/axiom numerics including `lambda^2 = alpha_s(v)/2`,
   `A^2 = 2/3`, `cos^2(delta_CKM) = 1/6`, and the rescaled atlas-triangle
-  right-angle identity `alpha_0 = 90 deg`, and bounded
+  right-angle identity `alpha_0 = 90 deg`; the named leading third-row CKM
+  atlas identities now include `|V_td|_0^2 = 5 alpha_s(v)^3/72` and
+  `|V_ts|_0^2 = alpha_s(v)^2/6`, with finite-`lambda` standard-matrix
+  corrections guarded separately; and bounded
   confinement-string readout; the absolute
   lattice scale is tracked explicitly on a dedicated Planck-scale lane as the
   current package pin `a^(-1) = M_Pl` on the physical-lattice reading, with a

@@ -114,7 +114,9 @@ Validate with:
   CKM atlas/axiom package, including the standalone Wolfenstein structural
   identities `lambda^2 = alpha_s(v)/2`, `A^2 = 2/3`, and the CP-phase
   structural identity `cos^2(delta_CKM) = 1/6`, plus the rescaled
-  atlas-triangle right-angle identity `alpha_0 = 90 deg`
+  atlas-triangle right-angle identity `alpha_0 = 90 deg` and atlas-leading
+  third-row identities `|V_td|_0^2 = 5 alpha_s(v)^3/72`,
+  `|V_ts|_0^2 = alpha_s(v)^2/6`
 - derived quantitative lane:
   Higgs/vacuum package with explicit retention budget
 - bounded quantitative companions:
