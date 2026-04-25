@@ -1,0 +1,200 @@
+========================================================================================
+Barred unitarity triangle NLO Pythagorean rho-lambda sum-rule theorem audit
+See docs/CKM_BARRED_TRIANGLE_PYTHAGOREAN_RHO_LAMBDA_SUM_RULE_THEOREM_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Retained inputs on current main
+----------------------------------------------------------------------------------------
+  alpha_s(v)                      = 0.103303816122267
+  lambda^2 = alpha_s(v)/2         = 0.051651908061134
+  A^2 = 2/3                       = 0.666666666666667
+
+  rho = 1/6                       = 0.166666666666667
+  eta^2 = 5/36                    = 0.138888888888889
+
+  alpha_0 = pi/2                   = 90.000000 deg
+  atlas-LO R_b^2 = 1/6            = 0.1666666667
+  atlas-LO R_t^2 = 5/6            = 0.8333333333
+
+  N_pair                           = 2  (retained)
+  N_color                          = 3  (retained)
+  N_quark = N_pair x N_color       = 6
+
+  rho_bar  = (4 - alpha_s)/24     = 0.162362340994906
+  eta_bar  = sqrt(5)(4-alpha_s)/24 = 0.363053231450610
+  N7 slope = sqrt(5)/20            = 0.1118033989
+  [PASS] alpha_s(v) > 0
+  [PASS] lambda^2 = alpha_s(v)/2 (retained)
+  [PASS] A^2 = 2/3 (retained)
+  [PASS] rho = 1/6 (retained)
+  [PASS] eta^2 = 5/36 (retained)
+  [PASS] alpha_0 = pi/2 (retained right-angle)
+  [PASS] atlas-LO R_b^2 + R_t^2 = 1 (retained)
+  [PASS] N_quark = 6 (retained)
+  [PASS] rho_bar = (4-alpha_s)/24 (retained N1)
+  [PASS] eta_bar = sqrt(5)(4-alpha_s)/24 (retained N2)
+  [PASS] N7 slope = sqrt(5)/20 (retained)
+  [PASS] retained on main: docs/ALPHA_S_DERIVED_NOTE.md
+  [PASS] retained on main: docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md
+  [PASS] retained on main: docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md
+  [PASS] retained on main: docs/CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md
+  [PASS] retained on main: docs/CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md
+  [PASS] retained on main: docs/CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md
+
+----------------------------------------------------------------------------------------
+(P1) [retained N3]: R_b_bar^2 = (4 - alpha_s)^2 / 96
+----------------------------------------------------------------------------------------
+  rho_bar^2 + eta_bar^2 (direct)  = 0.158169178640076
+  (4 - alpha_s)^2 / 96 (closed)   = 0.158169178640076
+  [PASS] (P1) R_b_bar^2 closed form matches direct
+  [PASS] (P1) R_b_bar^2 = retained N3 form
+
+----------------------------------------------------------------------------------------
+(P2) NEW: R_t_bar^2 = (80 + alpha_s^2) / 96
+----------------------------------------------------------------------------------------
+  (1 - rho_bar)^2 + eta_bar^2     = 0.833444496650265
+  (80 + alpha_s^2)/96 (closed)    = 0.833444496650265
+
+  Expansion check:
+  (20 + alpha_s)^2                = 404.1428243233
+  5(4 - alpha_s)^2                = 75.9212057472
+  Sum                              = 480.0640300706
+  6(80 + alpha_s^2)                = 480.0640300706
+  [PASS] (P2) R_t_bar^2 direct = closed form
+  [PASS] (P2) algebraic expansion: (20+a)^2 + 5(4-a)^2 = 6(80+a^2)
+
+  Atlas-LO limit: R_t_bar^2|_{alpha_s=0} = 80/96 = 5/6 = 0.8333333333
+  Retained atlas-LO R_t^2 = 5/6 = 0.8333333333
+  [PASS] (P2) atlas-LO limit R_t_bar^2 -> 5/6 (retained)
+
+----------------------------------------------------------------------------------------
+(P3) NEW: R_b_bar^2 + R_t_bar^2 = 1 - alpha_s/12 + alpha_s^2/48
+----------------------------------------------------------------------------------------
+  R_b_bar^2                        = 0.158169178640076
+  R_t_bar^2                        = 0.833444496650265
+  Sum (direct)                     = 0.991613675290341
+  1 - alpha_s/12 + alpha_s^2/48    = 0.991613675290341
+  (96 - 8 alpha_s + 2 alpha_s^2)/96 = 0.991613675290341
+  [PASS] (P3) R_b_bar^2 + R_t_bar^2 = closed form 1 - a/12 + a^2/48
+  [PASS] (P3) numerator form (96 - 8 a + 2 a^2)/96 matches
+
+  Defect 1 - sum (direct)          = 0.008386324709659
+  alpha_s/12 - alpha_s^2/48        = 0.008386324709659
+  alpha_s(4 - alpha_s)/48 (factored) = 0.008386324709659
+  [PASS] (P3) defect = alpha_s/12 - alpha_s^2/48
+  [PASS] (P3) defect = alpha_s(4 - alpha_s)/48 (factored)
+
+  Atlas-LO limit: sum -> 1 (recovers Pythagorean)
+  [PASS] (P3) atlas-LO limit recovers R_b^2 + R_t^2 = 1
+
+----------------------------------------------------------------------------------------
+(P4) NEW EXACT: R_b_bar^2 + R_t_bar^2 + rho_bar * lambda^2 = 1
+----------------------------------------------------------------------------------------
+  rho_bar * lambda^2 (direct)      = 0.008386324709659
+  alpha_s(4 - alpha_s)/48          = 0.008386324709659
+  alpha_s/12 - alpha_s^2/48        = 0.008386324709659
+
+  R_b_bar^2 + R_t_bar^2            = 0.991613675290341
+  rho_bar * lambda^2               = 0.008386324709659
+  TOTAL                             = 1.000000000000000
+  (target = 1 EXACTLY, no O(alpha_s^3) corrections)
+  [PASS] (P4) rho_bar * lambda^2 = alpha_s(4-alpha_s)/48
+  [PASS] (P4) rho_bar * lambda^2 = NLO Pythagorean defect (exact)
+  [PASS] (P4) EXACT sum rule: R_b_bar^2 + R_t_bar^2 + rho_bar*lambda^2 = 1
+
+  alpha_s independence test (sum must = 1 EXACTLY at all alpha_s):
+    alpha_s = 0.050000: sum = 1.000000000000000  (OK)
+    alpha_s = 0.100000: sum = 1.000000000000000  (OK)
+    alpha_s = 0.103304: sum = 1.000000000000000  (OK)
+    alpha_s = 0.150000: sum = 1.000000000000000  (OK)
+    alpha_s = 0.200000: sum = 1.000000000000000  (OK)
+    alpha_s = 0.300000: sum = 1.000000000000000  (OK)
+  [PASS] (P4) sum rule EXACT at multiple alpha_s values (no O(alpha_s^3) drift)
+
+----------------------------------------------------------------------------------------
+(P5) Defect coefficient = 1/(N_quark * N_pair); sub-leading = 1/(N_quark * N_pair^3)
+----------------------------------------------------------------------------------------
+  Leading coefficient        = 1/12 = 0.0833333333
+  1/(N_quark * N_pair)       = 1/(6*2) = 1/12 = 0.0833333333
+
+  Sub-leading coefficient    = 1/48 = 0.0208333333
+  1/(N_quark * N_pair^3)     = 1/(6*8) = 1/48 = 0.0208333333
+  [PASS] (P5) leading defect coeff 1/12 = 1/(N_quark * N_pair)
+  [PASS] (P5) sub-leading defect coeff 1/48 = 1/(N_quark * N_pair^3)
+  [PASS] (P5) N_pair^3 = 8 (structural)
+
+----------------------------------------------------------------------------------------
+(P6) Geometric: defect = -2 R_b_bar R_t_bar cos(alpha_bar) [law of cosines]
+----------------------------------------------------------------------------------------
+  R_b_bar                          = 0.3977048889
+  R_t_bar                          = 0.9129318138
+  alpha_bar = pi/2 + slope x a_s   = 90.661750 deg
+  cos(alpha_bar)                    = -0.011549460979952
+
+  -2 R_b_bar R_t_bar cos(alpha_bar) = 0.008386697580483
+  Defect 1 - (R_b_bar^2+R_t_bar^2)  = 0.008386324709659
+
+  Relative difference (alpha_s^2)   = 4.446177e-05
+  [PASS] (P6) law of cosines defect matches algebraic at NLO leading
+
+  cos(alpha_bar) leading approx     = -slope x alpha_s = -0.0115497178
+  cos(alpha_bar) direct             = -0.0115494610
+  Relative difference (alpha_s^2)   = 2.223252e-05
+  [PASS] (P6) cos(alpha_bar) ~ -sqrt(5)/20 alpha_s at NLO leading
+
+----------------------------------------------------------------------------------------
+Atlas-LO limit (alpha_s -> 0): recovers retained Pythagorean
+----------------------------------------------------------------------------------------
+  At alpha_s -> 0:
+    R_b_bar^2 -> 16/96 = 1/6      = 0.1666666667
+    R_t_bar^2 -> 80/96 = 5/6      = 0.8333333333
+    sum -> 1                       = 1.0000000000
+    rho_bar -> 4/24 = 1/6          = 0.1666666667
+    rho_bar * lambda^2 -> 0        (no defect)
+  [PASS] Atlas-LO: R_b_bar^2 -> 1/6 (retained)
+  [PASS] Atlas-LO: R_t_bar^2 -> 5/6 (retained)
+  [PASS] Atlas-LO: sum -> 1 (retained Pythagorean)
+  [PASS] Atlas-LO: rho_bar -> 1/6 = retained rho
+
+----------------------------------------------------------------------------------------
+PDG comparator: side lengths from B-physics
+----------------------------------------------------------------------------------------
+  Framework atlas-NLO predictions:
+    R_b_bar  = sqrt((4-a)^2/96)   = 0.3977    PDG: 0.39 +/- 0.03
+    R_t_bar  = sqrt((80+a^2)/96)  = 0.9129    PDG: 0.93 +/- 0.05
+    alpha_bar = pi/2 + slope x a   = 90.662 deg   PDG: 92.4 +/- 1.5 deg
+    Pythagorean defect             = 0.839%
+
+  Deviations from PDG:
+    R_b: 0.26 sigma
+    R_t: 0.34 sigma
+    alpha: 1.16 sigma
+  [PASS] R_b_bar within 1 sigma of PDG
+  [PASS] R_t_bar within 1 sigma of PDG
+
+----------------------------------------------------------------------------------------
+Summary of new content
+----------------------------------------------------------------------------------------
+  NEW (P2): R_t_bar^2 = (80 + alpha_s^2) / 96
+  NEW (P3): R_b_bar^2 + R_t_bar^2 = 1 - alpha_s/12 + alpha_s^2/48
+  NEW (P4): R_b_bar^2 + R_t_bar^2 + rho_bar * lambda^2 = 1   [EXACT]
+  NEW (P5): defect coefficient = 1/(N_quark * N_pair)
+            sub-leading = 1/(N_quark * N_pair^3)
+  NEW (P6): defect = -2 R_b_bar R_t_bar cos(alpha_bar)   [law of cosines]
+
+  At canonical alpha_s = 0.103304:
+    R_b_bar^2 (retained)            = 0.158169
+    R_t_bar^2 (NEW)                  = 0.833444
+    rho_bar * lambda^2 (NEW)         = 0.008386
+    SUM (NEW EXACT)                  = 1.000000000000000
+    target                           = 1.0 EXACTLY
+
+  Structural fingerprint: defect coefficients factor through
+  N_quark = 6 and N_pair = 2.
+
+  All inputs retained on main; no SUPPORT-tier or open inputs used.
+
+========================================================================================
+TOTAL: PASS=42, FAIL=0
+========================================================================================

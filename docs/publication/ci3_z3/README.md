@@ -46,6 +46,12 @@ For the full package-capture inventory, use:
   `|V_ud|_0^2 = 1 - alpha_s(v)/2 - alpha_s(v)^3/72`,
   atlas-leading second-row identities
   `|V_cd|_0^2 = alpha_s(v)/2`,
+  the retained NLO barred-triangle closure
+  `R_t_bar^2 = (80 + alpha_s(v)^2)/96` and
+  `R_b_bar^2 + R_t_bar^2 + rho_bar lambda^2 = 1`,
+  the exact NLO barred-triangle sum rule
+  `R_b_bar^2 + R_t_bar^2 + rho_bar lambda^2 = 1` with
+  `R_t_bar^2 = (80 + alpha_s(v)^2)/96`,
   `|V_cs|_0^2 = 1 - alpha_s(v)/2 - alpha_s(v)^2/6`,
   `|V_cb|_0^2 = alpha_s(v)^2/6`, and atlas-leading third-row identities
   `|V_td|_0^2 = 5 alpha_s(v)^3/72`,
