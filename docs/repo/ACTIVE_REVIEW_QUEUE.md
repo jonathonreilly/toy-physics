@@ -33,6 +33,10 @@ Current science/open-lane follow-ups:
 - Wilson two-body lane: full both-masses law and action-reaction remain open
 - boundary-law / holographic lane: keep the effect bounded and do not overread
   it as a holography derivation
+- Planck Target 2 / primitive-edge entropy: direct relabeling of the `4/16`
+  primitive trace as von Neumann entanglement is now blocked; a positive
+  gapped carrier needs an entropy-spectrum selector or a justified non-vN
+  primitive-boundary entropy functional
 - memory lane: protocol- and geometry-stable observable remains open
 - emergent-geometry growth: multi-size, multi-seed stability remains open
 
