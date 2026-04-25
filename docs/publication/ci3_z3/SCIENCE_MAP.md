@@ -122,7 +122,8 @@ Validate with:
   `|V_cs|_0^2 = 1 - alpha_s(v)/2 - alpha_s(v)^2/6`,
   `|V_cb|_0^2 = alpha_s(v)^2/6`, and atlas-leading third-row identities
   `|V_td|_0^2 = 5 alpha_s(v)^3/72`,
-  `|V_ts|_0^2 = alpha_s(v)^2/6`
+  `|V_ts|_0^2 = alpha_s(v)^2/6`, plus the atlas-leading B_s mixing phase
+  `phi_s = -alpha_s(v) sqrt(5)/6`
 - derived quantitative lane:
   Higgs/vacuum package with explicit retention budget
 - bounded quantitative companions:

@@ -608,6 +608,19 @@ $|V_{ts}|_0^2=\alpha_s(v)^2/6$, with the finite-$\lambda$ exact
 standard-matrix row readouts kept as guardrails rather than collapsed into
 all-orders monomial claims.
 
+The same leading non-trivial Wolfenstein surface gives a new $B_s$ mixing
+phase prediction:
+
+$$
+\beta_s=\lambda^2\eta=\frac{\alpha_s(v)\sqrt{5}}{12},\qquad
+\phi_s=-2\beta_s=-\frac{\alpha_s(v)\sqrt{5}}{6}=-0.03850~\mathrm{rad}.
+\tag{16}
+$$
+
+This uses no fitted CKM or $B$-mixing input. It should be read as an
+atlas-leading Standard Model phase prediction, not as an all-orders theorem
+including higher-order Wolfenstein, hadronic, or BSM mixing effects.
+
 The promoted package reports
 
 - atlas-leading $|V_{ud}|_0 = 0.973824$,
@@ -617,6 +630,7 @@ The promoted package reports
 - atlas-leading $|V_{td}|_0 = 0.008750$,
 - atlas-leading $|V_{ts}|_0 = 0.04217$,
 - atlas-leading $|V_{tb}|_0 = 0.99907$,
+- atlas-leading $\phi_s(B_s) = -0.03850\,\mathrm{rad}$,
 - $\delta = 65.905^\circ$,
 - atlas $\alpha_0 = 90^\circ$,
 - $J = 3.331\times 10^{-5}$.
@@ -702,7 +716,7 @@ The fastest way to read the quantitative package is Table 1.
 | Electroweak scale | $v = 246.282818290129\,\mathrm{GeV}$ | exact theorem + canonical same-surface evaluation |
 | Strong coupling | $\alpha_s(M_Z)=0.1181$ | retained standalone quantitative lane |
 | Electroweak normalization | $g_1(v)=0.4644$, $g_2(v)=0.6480$ | retained standalone quantitative lane |
-| CKM | $\lambda^2=\alpha_s(v)/2$, $A^2=2/3$, atlas-leading $|V_{ud}|_0=0.973824$, $|V_{us}|_0=0.22727$, $|V_{cb}|=0.04217$, $|V_{ub}|_0=0.003913$ | promoted algebraic package |
+| CKM | $\lambda^2=\alpha_s(v)/2$, $A^2=2/3$, atlas-leading $|V_{ud}|_0=0.973824$, $|V_{us}|_0=0.22727$, $|V_{cb}|=0.04217$, $|V_{ub}|_0=0.003913$, $\phi_s(B_s)=-0.03850\,\mathrm{rad}$ | promoted algebraic package |
 | Top sector | $y_t(v)=0.9176$, $m_t^{\mathrm{pole}}=172.57 \pm 6.50\,\mathrm{GeV}$ | retained quantitative lane |
 | Higgs sector | $m_H=125.1\,\mathrm{GeV}$ with retention analysis $125.04 \pm 3.17\,\mathrm{GeV}$ | derived quantitative lane |
 | Confinement readout | $\sqrt{\sigma}\approx 465\,\mathrm{MeV}$ | bounded quantitative readout on exact structural theorem |
@@ -809,9 +823,9 @@ algebraic CKM atlas/axiom package. The quantitative side is no longer just a set
 promising near-misses: it contains a canonical same-surface electroweak-scale
 evaluation, retained electroweak and strong-coupling lanes, and bounded
 Yukawa/Higgs authority surfaces with named downstream budgets. The package is already
-predictive beyond retrospective comparison through proton lifetime, the CKM-only
-neutron-EDM corollary with bounded continuation, vacuum criticality, and benchmark
-gravitational decoherence.
+predictive beyond retrospective comparison through the atlas-leading $B_s$
+mixing phase, proton lifetime, the CKM-only neutron-EDM corollary with bounded
+continuation, vacuum criticality, and benchmark gravitational decoherence.
 
 The dark-matter lane is no longer the outstanding flagship gap on the current
 manuscript surface: the exact-target PMNS package is closed. What remains open

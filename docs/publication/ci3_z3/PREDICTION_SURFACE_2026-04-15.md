@@ -61,6 +61,8 @@ closes.
   - atlas-leading `|V_td|_0 = 0.008750`
   - atlas-leading `|V_ts|_0 = 0.04217`
   - atlas-leading `|V_tb|_0 = 0.99907`
+  - atlas-leading B_s mixing phase
+    `phi_s = -alpha_s(v) sqrt(5)/6 = -0.03850 rad`
   - `delta = arccos(1/sqrt(6)) = 65.905 deg`
   - `cos^2(delta) = 1/6`, `tan(delta) = sqrt(5)`
   - rescaled CKM atlas triangle: `alpha_0 = 90 deg`, `beta_0 =
@@ -77,6 +79,7 @@ closes.
     [CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md](../../CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
     [CKM_SECOND_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-25.md](../../CKM_SECOND_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-25.md),
     [CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md](../../CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
+    [CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md](../../CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md),
     [CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md](../../CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md)
 - confinement readout on top of the exact graph-first confinement theorem:
   - `sqrt(sigma) ≈ 465 MeV`

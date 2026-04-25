@@ -17,9 +17,9 @@ Verifies the structural identities and the derived B_s mixing prediction in
   (B3) sin(2 beta_s) = alpha_s(v) sqrt(5)/6 (small-angle)
 
 The CP-asymmetry sin(2 beta_0) = sqrt(5)/3 and the side-length R_t^2 = 5/6
-are new named structural identities. The B_s mixing phase prediction
-phi_s = -alpha_s(v) sqrt(5)/6 = -3.85e-2 rad is the new derived prediction;
-it lies inside the LHCb 1-sigma band -0.039 +/- 0.022 rad at 0.02 sigma.
+are new named structural identities. The atlas-leading B_s mixing phase
+prediction phi_s = -alpha_s(v) sqrt(5)/6 = -3.85e-2 rad lies within the
+quoted LHCb comparator band -0.039 +/- 0.022 rad at 0.02 sigma.
 """
 
 from __future__ import annotations
@@ -76,8 +76,8 @@ SIN_2BETA_PDG = 0.706
 SIN_2BETA_PDG_ERR = 0.011
 PHI_S_LHCB = -0.039
 PHI_S_LHCB_ERR = 0.022
-BETA_S_LHCB = 0.0188
-BETA_S_LHCB_ERR = 0.0030
+BETA_S_CKM_FIT = 0.0188
+BETA_S_CKM_FIT_ERR = 0.0030
 RT_OVER_RB_PDG = 2.27
 RT_OVER_RB_PDG_ERR = 0.07
 R_B_PDG = 0.435
@@ -342,11 +342,11 @@ def audit_observation_comparators() -> None:
           abs(deviation_R_b) < 2.0)
 
     beta_s = ALPHA_S_V * math.sqrt(5.0) / 12.0
-    deviation_beta_s = (beta_s - BETA_S_LHCB) / BETA_S_LHCB_ERR
+    deviation_beta_s = (beta_s - BETA_S_CKM_FIT) / BETA_S_CKM_FIT_ERR
     print(f"  beta_s atlas              = {beta_s:.6e} rad ({math.degrees(beta_s):.4f} deg)")
-    print(f"  beta_s LHCb               = {BETA_S_LHCB:.4f} +/- {BETA_S_LHCB_ERR:.4f} rad")
+    print(f"  beta_s CKM-fit comparator = {BETA_S_CKM_FIT:.4f} +/- {BETA_S_CKM_FIT_ERR:.4f} rad")
     print(f"  deviation                 = {deviation_beta_s:+.3f} sigma")
-    check("atlas beta_s agrees with LHCb within 1 sigma",
+    check("atlas beta_s agrees with CKM-fit comparator within 1 sigma",
           abs(deviation_beta_s) < 1.0)
 
     phi_s = -ALPHA_S_V * math.sqrt(5.0) / 6.0
@@ -356,7 +356,7 @@ def audit_observation_comparators() -> None:
     print(f"  deviation                 = {deviation_phi_s:+.3f} sigma")
     check("atlas phi_s agrees with LHCb within 1 sigma",
           abs(deviation_phi_s) < 1.0)
-    check("atlas phi_s agrees with LHCb within 0.1 sigma (sharp prediction)",
+    check("atlas phi_s agrees with quoted LHCb comparator within 0.1 sigma",
           abs(deviation_phi_s) < 0.1)
 
 

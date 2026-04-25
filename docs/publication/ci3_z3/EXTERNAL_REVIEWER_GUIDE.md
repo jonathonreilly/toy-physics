@@ -108,6 +108,7 @@ Review this as a modular component stack:
    [CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md](../../CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
    [CKM_SECOND_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-25.md](../../CKM_SECOND_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-25.md),
    [CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md](../../CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
+   [CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md](../../CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md),
    [KR_A1_VANISHING_SUPPORT_NOTE.md](../../KR_A1_VANISHING_SUPPORT_NOTE.md)
 8. three-generation observable closure:
    [THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md](../../THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md)
@@ -169,6 +170,7 @@ Current status from that stack:
   atlas-leading `|V_td|_0 = 0.008750`,
   atlas-leading `|V_ts|_0 = 0.04217`,
   atlas-leading `|V_tb|_0 = 0.99907`,
+  atlas-leading `phi_s(B_s) = -0.03850 rad`,
   `delta = 65.905 deg`,
   rescaled atlas-triangle `alpha_0 = 90 deg`,
   `J = 3.331 x 10^-5`

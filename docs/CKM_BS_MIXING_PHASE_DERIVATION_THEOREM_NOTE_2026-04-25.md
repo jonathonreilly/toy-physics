@@ -2,8 +2,8 @@
 
 **Date:** 2026-04-25
 
-**Status:** Retained derivation theorem on `main`. This note **derives a new
-prediction** by combining three retained inputs --
+**Status:** Retained derivation theorem on `main`. This note derives a new
+atlas-leading prediction by combining three retained inputs --
 `alpha_s(v)` (canonical plaquette/CMT surface),
 `lambda^2 = alpha_s(v)/2` (Wolfenstein structural identity), and
 `eta = sqrt(5)/6` (CP-phase structural identity) -- with the standard
@@ -21,9 +21,9 @@ of doubled atlas-triangle angles `(sin/cos)(2 alpha_0, 2 beta_0, 2 gamma_0)`
 and the missing right-leg side-length identity `R_t^2 = 5/6` Pythagorean
 companion to the retained `R_b^2 = 1/6`.
 
-The numerical prediction `phi_s = -3.850e-2 rad = -2.206 deg` lies inside the
-LHCb 1-sigma band `phi_s = -0.039 +/- 0.022 rad` at the `0.02 sigma` level
-without any free parameter.
+The numerical prediction `phi_s = -3.850e-2 rad = -2.206 deg` lies within the
+quoted LHCb comparator band `phi_s = -0.039 +/- 0.022 rad` at the `0.02 sigma`
+level, with no fitted CKM or B-mixing input.
 
 **Primary runner:** `scripts/frontier_ckm_bs_mixing_phase_derivation.py`
 
@@ -229,18 +229,19 @@ With the canonical `alpha_s(v) = 0.10330381612227...`,
 | `phi_s` | `-alpha_s(v) sqrt(5)/6` | `-0.038499 rad` | `-0.039 +/- 0.022 rad` | `+0.02 sigma` |
 | `sin(2 beta_s)` | `~ alpha_s(v) sqrt(5)/6` | `0.038490` | `~0.038 +/- 0.022` | `+0.02 sigma` |
 
-The B_s phase prediction sits *exactly inside* the LHCb 1-sigma band. The
+The B_s phase prediction lies within the quoted LHCb 1-sigma band. The
 atlas-leading `sin(2 beta_0)` retains a `3.6 sigma` tension relative to the
 B_d -> J/psi K_S measurement, which is precisely the residual that the
 finite-lambda barred-unitarity-triangle correction in
 [`CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`](CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md)
-is designed to absorb. This note keeps the atlas-leading and finite-lambda
-predictions clearly separated.
+keeps outside the exact atlas-leading claim. This note keeps the
+atlas-leading and finite-lambda predictions clearly separated.
 
 ## What This Claims
 
 - `phi_s = -alpha_s(v) sqrt(5)/6` as an atlas-leading retained prediction
-  for B_s mixing, with no free parameter, agreeing with LHCb at `0.02 sigma`.
+  for B_s mixing, with no fitted CKM or B-mixing input and a quoted LHCb
+  comparator offset of `0.02 sigma`.
 - `beta_s = alpha_s(v) sqrt(5)/12` as the corresponding leading-order
   B_s unitarity triangle angle.
 - `sin(2 beta_0) = sin(2 gamma_0) = sqrt(5)/3`, `cos(2 beta_0) = 2/3`,
