@@ -34,7 +34,10 @@ questions:
   electroweak normalization, retained top/Yukawa transport, promoted CKM
   atlas/axiom numerics including `lambda^2 = alpha_s(v)/2`,
   `A^2 = 2/3`, `cos^2(delta_CKM) = 1/6`, and the rescaled atlas-triangle
-  right-angle identity `alpha_0 = 90 deg`; the named leading CKM atlas
+  right-angle identity `alpha_0 = 90 deg`; the Thales-pinned
+  `alpha_s`-independent ratio class now includes
+  `|V_ts|/|V_cb| = 1`, `|V_td|/|V_ub| = sqrt(5)`, and the cross-row
+  identity `|V_td V_cb|^2 / |V_ts V_ub|^2 = 5`; the named leading CKM atlas
   identities now include
   `|V_us|_0^2 = alpha_s(v)/2`,
   `|V_ub|_0^2 = alpha_s(v)^3/72`,
