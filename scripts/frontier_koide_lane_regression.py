@@ -48,6 +48,7 @@ RUNNERS = [
     ("frontier_koide_q_background_zero_z_erasure_criterion.py", 25),
     ("frontier_koide_q_onsite_source_domain_no_go_synthesis.py", 23),
     ("frontier_koide_q_source_domain_canonical_descent.py", 55),
+    ("frontier_koide_q_so2_phase_erasure_support.py", 23),
     ("frontier_koide_a1_radian_bridge_irreducibility_audit.py", 36),
 ]
 
@@ -139,6 +140,8 @@ def main() -> int:
         print("                      but retained commutant/projected sources still admit Z")
         print("  - Q descent         : unique trace-preserving onsite descent is diagonal")
         print("                      compression and erases reduced Z modulo common scalar")
+        print("  - Q SO(2) erasure   : Brannen carrier gives Q=(c^2+2)/6,")
+        print("                      independent of scale and phase; support only")
         print("  - A1/radian audit   : retained phase sources remain q*pi; Type-B")
         print("                      rational-to-radian readout remains primitive")
         print()

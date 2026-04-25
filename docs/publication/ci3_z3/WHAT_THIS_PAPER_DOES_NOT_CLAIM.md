@@ -151,6 +151,10 @@ The paper does **not** claim:
 - that the charged-lepton Koide A1/radian bridge is closed by the exact
   rational `2/9` witnesses alone; the Type-B rational-to-radian observable law
   remains a primitive unless separately derived.
+- that Brannen-carrier SO(2) phase erasure closes charged-lepton Koide.  The
+  exact support theorem proves `Q=(c^2+2)/6` and `Q=2/3 <=> c^2=2` on that
+  carrier, but it does not derive the physical carrier/source law, retained
+  `c^2=2`, or `delta_Brannen=2/9 rad`.
 
 The current retained claim is:
 
