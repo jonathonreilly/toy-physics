@@ -598,6 +598,21 @@ readout keeps the finite-$\lambda$ cosine factors.
 The same atlas coordinates also put the rescaled CKM atlas triangle on the
 Thales circle, so its atlas angle is exactly $\alpha_0=90^\circ$. This is not
 promoted as an exact finite-$\lambda$ barred-unitarity-triangle right angle.
+The standard NLO Wolfenstein barred-apex map then supplies a finite-$\lambda$
+guardrail with a protected angle invariant:
+
+$$
+\bar\rho=\frac{4-\alpha_s(v)}{24},\qquad
+\bar\eta=\frac{\sqrt{5}(4-\alpha_s(v))}{24},\qquad
+\bar\gamma=\gamma_0=\arctan\sqrt{5}.
+\tag{16}
+$$
+
+The protection is only an NLO statement: it follows because $\bar\rho$ and
+$\bar\eta$ receive the same multiplicative factor through this order, and it
+does not assert an all-orders barred-triangle closure beyond the
+$O(\lambda^4)$ remainder.
+
 The same leading atlas surface gives the named first-row identities
 $|V_{us}|_0^2=\alpha_s(v)/2$,
 $|V_{ub}|_0^2=\alpha_s(v)^3/72$, and
@@ -614,7 +629,7 @@ phase prediction:
 $$
 \beta_s=\lambda^2\eta=\frac{\alpha_s(v)\sqrt{5}}{12},\qquad
 \phi_s=-2\beta_s=-\frac{\alpha_s(v)\sqrt{5}}{6}=-0.03850~\mathrm{rad}.
-\tag{16}
+\tag{17}
 $$
 
 This uses no fitted CKM or $B$-mixing input. It should be read as an
@@ -632,6 +647,8 @@ The promoted package reports
 - atlas-leading $|V_{tb}|_0 = 0.99907$,
 - atlas-leading $\phi_s(B_s) = -0.03850\,\mathrm{rad}$,
 - Thales-mediated $\phi_s/\sin(2\beta_d) = -0.05165$,
+- NLO protected $\bar\gamma = 65.905^\circ$ with
+  $\bar\rho=0.16236$, $\bar\eta=0.36305$,
 - $\delta = 65.905^\circ$,
 - atlas $\alpha_0 = 90^\circ$,
 - $J = 3.331\times 10^{-5}$.
@@ -717,7 +734,7 @@ The fastest way to read the quantitative package is Table 1.
 | Electroweak scale | $v = 246.282818290129\,\mathrm{GeV}$ | exact theorem + canonical same-surface evaluation |
 | Strong coupling | $\alpha_s(M_Z)=0.1181$ | retained standalone quantitative lane |
 | Electroweak normalization | $g_1(v)=0.4644$, $g_2(v)=0.6480$ | retained standalone quantitative lane |
-| CKM | $\lambda^2=\alpha_s(v)/2$, $A^2=2/3$, atlas-leading $|V_{ud}|_0=0.973824$, $|V_{us}|_0=0.22727$, $|V_{cb}|=0.04217$, $|V_{ub}|_0=0.003913$, $\phi_s(B_s)=-0.03850\,\mathrm{rad}$, $\phi_s/\sin(2\beta_d)=-0.05165$ | promoted algebraic package |
+| CKM | $\lambda^2=\alpha_s(v)/2$, $A^2=2/3$, atlas-leading $|V_{ud}|_0=0.973824$, $|V_{us}|_0=0.22727$, $|V_{cb}|=0.04217$, $|V_{ub}|_0=0.003913$, $\phi_s(B_s)=-0.03850\,\mathrm{rad}$, $\phi_s/\sin(2\beta_d)=-0.05165$, NLO protected $\bar\gamma=65.905^\circ$ | promoted algebraic package |
 | Top sector | $y_t(v)=0.9176$, $m_t^{\mathrm{pole}}=172.57 \pm 6.50\,\mathrm{GeV}$ | retained quantitative lane |
 | Higgs sector | $m_H=125.1\,\mathrm{GeV}$ with retention analysis $125.04 \pm 3.17\,\mathrm{GeV}$ | derived quantitative lane |
 | Confinement readout | $\sqrt{\sigma}\approx 465\,\mathrm{MeV}$ | bounded quantitative readout on exact structural theorem |

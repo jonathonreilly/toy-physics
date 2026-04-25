@@ -65,6 +65,9 @@ closes.
     `phi_s = -alpha_s(v) sqrt(5)/6 = -0.03850 rad`
   - Thales-mediated atlas-leading CP ratio
     `phi_s / sin(2 beta_d) = -alpha_s(v)/2 = -0.05165`
+  - NLO barred-triangle protected invariant
+    `gamma_bar = gamma_0 = arctan(sqrt(5)) = 65.905 deg`, with
+    `rho_bar = (4-alpha_s(v))/24`
   - `delta = arccos(1/sqrt(6)) = 65.905 deg`
   - `cos^2(delta) = 1/6`, `tan(delta) = sqrt(5)`
   - rescaled CKM atlas triangle: `alpha_0 = 90 deg`, `beta_0 =

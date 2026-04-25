@@ -60,6 +60,9 @@ The paper does **not** claim:
 - that the CKM atlas-triangle right-angle identity is an exact physical barred
   unitarity-triangle theorem; finite-`lambda` corrections move the exact
   barred apex and angles.
+- that the CKM NLO protected-gamma identity is an all-orders barred-triangle
+  theorem; the protection is retained only through the standard NLO
+  barred-apex scaling, with `O(lambda^4)` terms left outside the claim.
 - that the atlas/Wolfenstein area factor
   `J_0 = alpha_s(v)^3 sqrt(5)/72` replaces the parent atlas' exact
   finite-`lambda` standard-matrix `J` readout.

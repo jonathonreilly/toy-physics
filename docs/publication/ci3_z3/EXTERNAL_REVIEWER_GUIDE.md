@@ -106,6 +106,7 @@ Review this as a modular component stack:
    [WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md](../../WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md),
    [CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md](../../CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md),
    [CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md](../../CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md),
+   [CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md](../../CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md),
    [CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md](../../CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
    [CKM_SECOND_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-25.md](../../CKM_SECOND_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-25.md),
    [CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md](../../CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
@@ -173,11 +174,15 @@ Current status from that stack:
   atlas-leading `|V_tb|_0 = 0.99907`,
   atlas-leading `phi_s(B_s) = -0.03850 rad`,
   Thales-mediated `phi_s/sin(2 beta_d) = -0.05165`,
+  NLO protected `gamma_bar = 65.905 deg`,
+  NLO `rho_bar = 0.16236`, `eta_bar = 0.36305`,
   `delta = 65.905 deg`,
   rescaled atlas-triangle `alpha_0 = 90 deg`,
   `J = 3.331 x 10^-5`
   where the exact right-angle identity is atlas-only and the exact
-  barred-unitarity-triangle angles retain finite-`lambda` corrections
+  barred-unitarity-triangle angles retain finite-`lambda` corrections; the
+  protected `gamma_bar` identity is retained only at NLO under the standard
+  barred-apex scaling and is not an all-orders barred-triangle theorem
 - exact CKM carrier-side support theorem:
   `K_R(q) = 0` for every pure `A1` background on the seven-site support block
   via [KR_A1_VANISHING_SUPPORT_NOTE.md](../../KR_A1_VANISHING_SUPPORT_NOTE.md)

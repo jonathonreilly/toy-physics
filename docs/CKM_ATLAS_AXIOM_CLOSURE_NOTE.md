@@ -6,8 +6,11 @@
 **Named subtheorems:** [`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md),
 [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md),
 [`CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`](CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md),
+[`CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md`](CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md),
 [`CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
-[`CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md)
+[`CKM_SECOND_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-25.md`](CKM_SECOND_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-25.md),
+[`CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
+[`CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md`](CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md)
 
 ## Claim
 
@@ -130,6 +133,8 @@ The theorem package is therefore:
 - `|V_us|_0^2 = alpha_s(v)/2` on the atlas-leading first row
 - `|V_ub|_0^2 = alpha_s(v)^3/72` on the atlas-leading first row
 - `|V_ud|_0^2 = 1 - alpha_s(v)/2 - alpha_s(v)^3/72`
+- `|V_cd|_0^2 = alpha_s(v)/2` on the atlas-leading second row
+- `|V_cs|_0^2 = 1 - alpha_s(v)/2 - alpha_s(v)^2/6`
 - `|V_cb| = A lambda^2 = alpha_s(v)/sqrt(6)`
 - `|V_ub|_0 = A lambda^3 / sqrt(6) = alpha_s(v)^(3/2)/(6 sqrt(2))`
 - `|V_td|_0^2 = 5 alpha_s(v)^3/72` on the atlas-leading third row
@@ -137,10 +142,16 @@ The theorem package is therefore:
 - `|V_tb|_0^2 = 1 - |V_td|_0^2 - |V_ts|_0^2`
 - `rho = 1/6`
 - `eta = sqrt(5)/6`
+- NLO barred-apex guardrail: `rho_bar=(4-alpha_s(v))/24`,
+  `eta_bar=sqrt(5)(4-alpha_s(v))/24`, and protected
+  `gamma_bar=gamma_0=arctan(sqrt(5))` through the NLO multiplicative
+  barred-apex map
+- atlas-leading B_s phase: `phi_s,0=-alpha_s(v)sqrt(5)/6`
 
-The first- and third-row subscript `0` marks the leading atlas/Wolfenstein
-surface. The finite-`lambda` exact standard-matrix row readouts remain guarded
-parent-atlas calculations, not all-orders monomial promotions.
+The row-level subscript `0` marks the leading atlas/Wolfenstein surface. The
+finite-`lambda` exact standard-matrix row readouts and the NLO barred-triangle
+closed forms remain guarded parent-atlas calculations, not all-orders
+monomial or exact barred-angle promotions.
 
 The retained scalar comparison package is:
 

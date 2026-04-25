@@ -50,8 +50,10 @@ For the full package-capture inventory, use:
   `|V_cb|_0^2 = alpha_s(v)^2/6`, and atlas-leading third-row identities
   `|V_td|_0^2 = 5 alpha_s(v)^3/72`,
   `|V_ts|_0^2 = alpha_s(v)^2/6`, plus the atlas-leading B_s mixing phase
-  `phi_s = -alpha_s(v) sqrt(5)/6 = -0.03850 rad` and Thales-mediated
-  cross-system CP ratio `phi_s / sin(2 beta_d) = -alpha_s(v)/2`
+  `phi_s = -alpha_s(v) sqrt(5)/6 = -0.03850 rad` and the NLO barred-triangle
+  protected invariant `gamma_bar = arctan(sqrt(5))`, plus the
+  Thales-mediated cross-system CP ratio
+  `phi_s / sin(2 beta_d) = -alpha_s(v)/2`
 - retained structural/corollary surface:
   strong CP on the retained action surface, emergent Lorentz invariance plus
   exact continuum-limit 1+1D / 3+1D boost-covariant free-scalar 2-point closure,
