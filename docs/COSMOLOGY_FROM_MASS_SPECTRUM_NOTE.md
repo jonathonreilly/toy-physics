@@ -114,7 +114,14 @@ therefore sharply named:
 > Candidates (already partly constructed on the branch):
 >   1. exact one-flavor theorem-native transport closure;
 >   2. PMNS reduced-surface selector closure;
->   3. combined transport + selector + normalization integration.
+>   3. combined transport + selector + normalization integration;
+>   4. **freeze-out-bypass route** via the candidate structural mass identity
+>      `m_DM = N_sites * v = 16 * v ~ 3940 GeV`, which sets
+>      `eta = C * m_DM^2 = 6.4e-10` (within 5% of observation under bounded
+>      `(x_F, S_vis/S_dark)` band that brackets `eta_obs`); see
+>      [`DM_ETA_FREEZEOUT_BYPASS_QUANTITATIVE_THEOREM_NOTE_2026-04-25.md`](DM_ETA_FREEZEOUT_BYPASS_QUANTITATIVE_THEOREM_NOTE_2026-04-25.md).
+>      Promotion to retained requires deriving `m_DM = N_sites * v` from a
+>      Wilson-action theorem on the dark `hw=3` singlet (G1).
 
 ## What is not claimed
 
