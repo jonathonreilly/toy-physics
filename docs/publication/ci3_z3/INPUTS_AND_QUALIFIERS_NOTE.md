@@ -213,6 +213,14 @@ bridge layer beyond the exact structural core.
   - the note does not derive Koide `cos^2(theta_K)`, a Koide cubic
     variance, or `N_gen=N_color`; cross-sector readings are conditional
     support and not verifier pass conditions
+- CKM Egyptian-fraction Bernoulli Koide-bridge support:
+  - promoted CKM structural counts and already-retained CKM identities only
+  - exact claim is CKM-side arithmetic: `1/2+1/3+1/6=1`, unique `(2,3,6)`
+    pinning under the pair/color primitives, exact Bernoulli-series sums, and
+    `sum_N W(N)=2/9`
+  - the note does not derive Koide `cos^2(theta_K)`, Koide ternary unitarity,
+    charged-lepton Koide, or `N_gen=N_color`; cross-sector readings are
+    conditional support and not verifier pass conditions
 - down-type CKM-dual mass ratios:
   - promoted CKM atlas/axiom package + GST + bounded `5/6` mass-ratio bridge; no observed
     masses as derivation inputs
