@@ -49,8 +49,14 @@ For the full package-capture inventory, use:
   `|V_cs|_0^2 = 1 - alpha_s(v)/2 - alpha_s(v)^2/6`,
   `|V_cb|_0^2 = alpha_s(v)^2/6`, and atlas-leading third-row identities
   `|V_td|_0^2 = 5 alpha_s(v)^3/72`,
-  `|V_ts|_0^2 = alpha_s(v)^2/6`, plus the atlas-leading B_s mixing phase
-  `phi_s = -alpha_s(v) sqrt(5)/6 = -0.03850 rad` and the NLO barred-triangle
+  `|V_ts|_0^2 = alpha_s(v)^2/6`; the structural-counts packaging theorem
+  now isolates the common off-diagonal surface
+  `|V_us|_0^2 = alpha_s(v)/n_pair`,
+  `|V_cb|_0^2 = |V_ts|_0^2 = alpha_s(v)^2/(n_pair n_color)`,
+  `|V_ub|_0^2 = alpha_s(v)^3/(8 n_color^2)`,
+  `|V_td|_0^2 = (n_quark-1) alpha_s(v)^3/(8 n_color^2)`,
+  with explicit `n_pair` cancellation in `|V_ub|_0^2`, plus the atlas-leading
+  B_s mixing phase `phi_s = -alpha_s(v) sqrt(5)/6 = -0.03850 rad` and the NLO barred-triangle
   protected invariant `gamma_bar = arctan(sqrt(5))`, plus the
   Thales-mediated cross-system CP ratio
   `phi_s / sin(2 beta_d) = -alpha_s(v)/2` and CP-product estimator
