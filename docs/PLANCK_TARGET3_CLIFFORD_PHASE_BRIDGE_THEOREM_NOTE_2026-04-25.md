@@ -88,6 +88,13 @@ for every primitive coframe vector `v`. This is the bridge premise. It is a
 native algebraic coframe hypothesis, not an entropy-coefficient fit, but it is
 not proved here from rank four or from the bare Hilbert-flow axioms alone.
 
+The companion coframe-response support theorem
+[PLANCK_TARGET3_COFRAME_RESPONSE_DERIVATION_THEOREM_NOTE_2026-04-25.md](./PLANCK_TARGET3_COFRAME_RESPONSE_DERIVATION_THEOREM_NOTE_2026-04-25.md)
+constructs this premise from time-lock grading plus spatial `Cl(3)` bivector
+readout. That companion narrows the hinge to the provenance of the explicit
+time-locked coframe-response surface; it does not turn rank four or Hilbert
+flow alone into a CAR derivation.
+
 Then:
 
 1. polarization gives the complex `Cl_4` relations

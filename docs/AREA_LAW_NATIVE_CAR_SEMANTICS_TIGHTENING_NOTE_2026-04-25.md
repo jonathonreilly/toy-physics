@@ -149,6 +149,12 @@ edge carrier. Thus the native-CAR premise is now a precise coframe-response
 target rather than an unstructured selector, while the Hilbert-only warning
 remains valid if that coframe structure is not supplied.
 
+`PLANCK_TARGET3_COFRAME_RESPONSE_DERIVATION_THEOREM_NOTE_2026-04-25.md` then
+gives a concrete support route for that coframe target: time-lock grading plus
+spatial `Cl(3)` bivector readout force the `Gamma_t, Gamma_i` construction and
+verify `D(v)^2=||v||^2 I` on `P_A H_cell`. This narrows the premise; it is not a
+Hilbert-only derivation.
+
 ## Package wording
 
 Safe wording:

@@ -339,6 +339,18 @@ Former blocker:
   statement is conditional structural closure under the primitive
   metric-compatible coframe response.
 
+2026-04-25 coframe-response support theorem:
+
+- `PLANCK_TARGET3_COFRAME_RESPONSE_DERIVATION_THEOREM_NOTE_2026-04-25.md`
+  gives a concrete realization of the bridge premise: time-lock grading plus
+  spatial `Cl(3)` bivector readout force
+  `Gamma_t=tau_x otimes I`, `Gamma_i=tau_y otimes sigma_i`, hence
+  `D(v)^2=||v||^2 I` on `P_A H_cell`;
+- it is a conditional support theorem, not a Hilbert-only theorem. It proves
+  the square law once the explicit time-locked `Cl(3)/Z^3` coframe-response
+  surface is accepted, and leaves the minimal-stack provenance of that surface
+  open.
+
 ## 6. Package rule on `main`
 
 After the Target 3 Clifford phase bridge, the correct package statement is:
