@@ -234,6 +234,9 @@ space. The retained surface now carries:
 - the TT compactness spectral tower on `S^3`, with exact rational
   squared-mass ratios and Higuchi margins, while numerical tower masses stay
   bounded by the same open `R` identification
+- the vector gauge-field compactness spectral tower on `S^3`, with
+  `m_l^2 = [l(l+2)-1] hbar^2/(c^2 R^2)` and exact rational squared-mass
+  ratios; numerical masses and the 4D particle interpretation remain bounded
 - `R_base = 31/9` as an exact group-theory support identity inside the
   bounded DM/cosmology cascade; the Sommerfeld factor and full
   `Omega_DM/Omega_b` value remain bounded
@@ -268,6 +271,8 @@ Authority:
 - [MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md](../../MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
 - [N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md](../../N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md)
 - [R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md](../../R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md)
+- [GRAVITON_SPECTRAL_TOWER_THEOREM_NOTE_2026-04-24.md](../../GRAVITON_SPECTRAL_TOWER_THEOREM_NOTE_2026-04-24.md)
+- [VECTOR_GAUGE_FIELD_KK_TOWER_THEOREM_NOTE_2026-04-24.md](../../VECTOR_GAUGE_FIELD_KK_TOWER_THEOREM_NOTE_2026-04-24.md)
 - [COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md](../../COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md)
 - [DARK_ENERGY_EOS_NOTE.md](../../DARK_ENERGY_EOS_NOTE.md)
 - [GRAVITON_MASS_DERIVED_NOTE.md](../../GRAVITON_MASS_DERIVED_NOTE.md)

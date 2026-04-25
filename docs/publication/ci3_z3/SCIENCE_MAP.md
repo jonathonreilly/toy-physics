@@ -244,7 +244,7 @@ Validate with:
 
 - retained cosmology identities/corollaries:
   `Lambda_vac = lambda_1(S^3_R)`, `w = -1`, graviton spectral compactness-mass
-  identity, the retained TT compactness spectral tower, the exact
+  identity, the retained TT and vector compactness spectral towers, the exact
   `R_base = 31/9` group-theory support identity for the bounded
   DM/cosmology cascade, and the FRW kinematic reduction of `q_0`, `z_*`,
   `z_{mLambda}`, and asymptotic `H_inf` to the same open `H_inf/H_0` ratio,
@@ -267,6 +267,7 @@ Start with:
 - [MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md](../../MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
 - [N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md](../../N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md)
 - [GRAVITON_SPECTRAL_TOWER_THEOREM_NOTE_2026-04-24.md](../../GRAVITON_SPECTRAL_TOWER_THEOREM_NOTE_2026-04-24.md)
+- [VECTOR_GAUGE_FIELD_KK_TOWER_THEOREM_NOTE_2026-04-24.md](../../VECTOR_GAUGE_FIELD_KK_TOWER_THEOREM_NOTE_2026-04-24.md)
 
 Validate with:
 
@@ -278,6 +279,7 @@ Validate with:
 - `python3 scripts/frontier_matter_radiation_equality_structural_identity.py`
 - `python3 scripts/frontier_n_eff_from_three_generations.py`
 - `python3 scripts/frontier_graviton_spectral_tower.py`
+- `python3 scripts/frontier_vector_gauge_field_kk_tower.py`
 - `python3 scripts/frontier_tensor_scalar_ratio_consolidation.py`
 
 ## Validation Paths
