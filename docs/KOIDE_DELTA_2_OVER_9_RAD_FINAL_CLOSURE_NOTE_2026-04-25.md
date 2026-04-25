@@ -1,8 +1,29 @@
 # Koide δ_Brannen = 2/9 rad — Final Closure on Retained Main
 
+> **⚠️ STATUS DOWNGRADE NOTICE (post-review):** This note's original
+> "closure" framing was demoted to **conditional closure** by the hostile
+> review on this branch (see `REVIEW_HOSTILE_FINDINGS_2026-04-25.md` and
+> the review-response note
+> `docs/KOIDE_DELTA_2_OVER_9_RAD_REVIEW_RESPONSE_NOTE_2026-04-25.md`).
+>
+> The chain composition is **conditional** on the source-domain retention
+> law selecting the reduced two-slot block algebra (RED + CRIT are
+> explicitly support-grade per their own headers; April 20 IDENTIFICATION
+> is partial). The claim "δ_Brannen = 2/9 rad on retained main" should be
+> read as: "δ = 2/9 rad if the reduced two-slot carrier is the operative
+> source representation".
+>
+> **Use the review-response note as the authoritative current statement.**
+> The composition algebra in this note is correct (16/16 PASS), but the
+> "Status: closure" line on this note is superseded.
+
 **Date:** 2026-04-25
-**Status:** **closure** of `δ_Brannen = 2/9 rad` on the live authority surface,
-by composition of retained main inputs only. No new framework axiom.
+**Status:** **conditional closure** of `δ_Brannen = 2/9 rad` on the live
+authority surface, conditional on source-domain retention (open primitive,
+per `REVIEW_HOSTILE_FINDINGS_2026-04-25.md` §1). The composition algebra
+is correct (16/16 PASS), but the original "unconditional retained closure"
+framing was demoted.
+No new framework axiom.
 **Branch:** `koide-closure-targets-AB` (this branch). Three commits add:
 - Target B (cross-sector identification)
 - Target A (Yukawa Casimir-difference candidate, support-grade only)

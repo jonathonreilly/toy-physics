@@ -1,8 +1,28 @@
 # Koide Q_l = 2/3 Closure via Observable-Principle Locality on the C_3 Generation Orbit
 
+> **⚠️ STATUS DOWNGRADE NOTICE (post-review):** This note's original
+> "closure of Q_l = 2/3 on the live authority surface" framing was demoted
+> to **conditional closure** by the hostile review on this branch (see
+> `REVIEW_HOSTILE_FINDINGS_2026-04-25.md` and the review-response note
+> `docs/KOIDE_DELTA_2_OVER_9_RAD_REVIEW_RESPONSE_NOTE_2026-04-25.md`).
+>
+> The OP-locality argument is **conditional** on the source-domain
+> retention law selecting the reduced two-slot block algebra (RED + CRIT
+> are explicitly support-grade, not retained closures, per their own
+> headers). The claim "Q_l = 2/3 retained closure on origin/main" should
+> be read as: "Q_l = 2/3 if the reduced two-slot carrier is the operative
+> source representation".
+>
+> **Use the review-response note as the authoritative current statement,
+> not this note's "Status: closure" line.**
+
 **Date:** 2026-04-25
-**Status:** **closure of `Q_l = 2/3`** on the live authority surface, by
-composition of retained main inputs only. Fills the explicit residual
+**Status:** **conditional closure of `Q_l = 2/3`** on the live authority
+surface, conditional on the source-domain retention law (open primitive,
+per `REVIEW_HOSTILE_FINDINGS_2026-04-25.md` §1). The composition step in
+this note is correct algebraically (21/21 PASS), but the original
+"unconditional retained closure" framing was demoted.
+Fills (CONDITIONALLY) the explicit residual
 theorem target named in
 [`KOIDE_Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS_NOTE_2026-04-25.md`](KOIDE_Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS_NOTE_2026-04-25.md)
 §7:
