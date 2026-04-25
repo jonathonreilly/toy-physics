@@ -1,7 +1,9 @@
 # Down-Type Mass Ratios from the CKM Dual
 
 **Date:** 2026-04-16
-**Status:** bounded secondary lane
+**Status:** SUPERSEDED as the CKM gate quark-mass route — see
+[`QUARK_MASS_RATIOS_TASTE_STAIRCASE_THEOREM_NOTE_2026-04-25.md`](./QUARK_MASS_RATIOS_TASTE_STAIRCASE_THEOREM_NOTE_2026-04-25.md). This note remains the historical bounded-lane support runner.
+**Predecessor status (preserved for reference):** bounded secondary lane.
 **Primary runner:** `scripts/frontier_mass_ratio_ckm_dual.py`
 
 ## Safe statement

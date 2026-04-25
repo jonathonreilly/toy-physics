@@ -1,7 +1,12 @@
 # CKM Five-Sixths Bridge Support Note
 
 **Date:** 2026-04-16
-**Status:** bounded support tool for the down-type CKM-dual mass-ratio lane
+**Status:** bounded support tool for the down-type mass-ratio route. The
+gate-closing authority is now the taste-staircase theorem note
+[`QUARK_MASS_RATIOS_TASTE_STAIRCASE_THEOREM_NOTE_2026-04-25.md`](./QUARK_MASS_RATIOS_TASTE_STAIRCASE_THEOREM_NOTE_2026-04-25.md);
+this note remains the support-level evidence for the bounded `5/6`
+strong-coupling exponentiation mechanism at `g=1`, which the gate-closing
+note explicitly leaves as bounded support.
 **Primary runner:** `scripts/frontier_ckm_five_sixths_bridge_support.py`
 
 ## Safe statement
