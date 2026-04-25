@@ -1,342 +1,294 @@
-# Cross-Sector Closure N_gen = N_color = dim(Z³) = 3: Z³ Spatial Origin Unifies Generation Count and Color Count
+# Cross-Sector Closure N_gen = N_color = 3 via Retained Three-Generation Structure and Retained Magnitudes Counts
 
 **Date:** 2026-04-25
 
-**Status:** retained CKM × Koide cross-sector CLOSURE theorem on retained `main` inputs.
-This note **CLOSES** the cross-sector residual problem identified across the prior
-eight Koide-bridge support branches by combining TWO retained CL3 theorems on
-`main`:
+**Status:** retained CKM × Koide cross-sector CLOSURE theorem grounded in
+**retained-tier** authorities on `main`. This note CLOSES the cross-sector
+identification `N_gen = N_color = 3` directly via two **retained-status**
+authorities (no support-tier promotion):
 
-1. `CL3_COLOR_AUTOMORPHISM_THEOREM` (retained), which establishes
-   `N_color = dim(Z³) = 3` as the algebraic image of the CL3 spatial substrate's
-   3 independent coordinate axes.
+1. `THREE_GENERATION_STRUCTURE_NOTE.md` — **status: retained** — canonical
+   main-branch note for the retained three-generation matter-structure row.
+   Establishes physical `N_gen = 3` on the retained surface.
 
-2. `CL3_TASTE_GENERATION_THEOREM` (retained), which establishes
-   `N_gen = 3` from the Z³ axes via staggered-fermion taste doubling and Z₃
-   cyclic permutation, giving exactly 3 generation candidates.
+2. `CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md` — retained
+   theorem. Establishes `N_color = 3` (via retained `n_color = 3` in the
+   CKM magnitudes structural-counts package).
 
-Both retained theorems trace **N = 3** to the **same structural source**: the
-3 independent coordinate axes of the CL3 spatial substrate Z³. The
-cross-sector identification
+Both authorities are RETAINED on current main. Their independent retention
+of the value 3 closes the cross-sector identification by **direct
+numerical equality of two retained values**, without invoking any
+support-tier authority promotion.
+
+The headline closure:
 
 ```text
-N_gen  =  N_color  =  dim(Z^3)  =  3                        EXACTLY
+N_gen   =  3   [retained, THREE_GENERATION_STRUCTURE_NOTE]
+N_color =  3   [retained, CKM_MAGNITUDES_STRUCTURAL_COUNTS]
+N_gen   =  N_color  =  3      EXACTLY (direct retained equality).
 ```
 
-now follows from retained inputs alone — **not as a conjecture or
-SUPPORT-tier identification**, but as a closed corollary of two retained CL3
-theorems with a common Z³ spatial origin.
+**Auxiliary structural reading (NOT load-bearing for closure):**
+The CL3 support-tier theorems `CL3_COLOR_AUTOMORPHISM_THEOREM` and
+`CL3_TASTE_GENERATION_THEOREM` exhibit a **shared Z³ provenance motif**
+across the color and generation surfaces — both relate the value 3 to the
+3 independent coordinate axes of the retained Z³ spatial substrate. This
+reading is **explanatory only**: it is consistent with the retained
+closure but not load-bearing. The closure stands on the two retained-tier
+authorities above.
 
-**This closes the residual problem articulated across the eight prior Koide-bridge
-support branches** (Bernoulli-2/9, Multiplicative-A-rho, n/9-family,
-Multi-projection Bernoulli, Cubic Bernoulli, Egyptian-Bernoulli closures,
-Perfect/Triangular/Mersenne, Consecutive Primes / S_3). With cross-sector
-N_gen = N_color now retained, the prior eight branches' SUPPORT-tier
-constructions (Bernoulli paths to 2/9, multi-projection families, Egyptian
-fraction, S_3 representation theory) become **unconditionally retained** as
-cross-sector identities — the supporting structure they exhibited is now
-grounded in the common Z³ spatial origin.
+**This note explicitly does NOT:**
+- Promote either CL3 support-tier theorem to retained.
+- Upgrade "generation candidates / generation-analogous structures" from
+  the CL3 taste-generation note to physical `N_gen` (that upgrade was a
+  prior reviewer-flagged overclaim now corrected).
+- Promote any of the prior eight Koide-bridge support-tier branches to
+  retained closure.
+- Derive any new physical content beyond the closure of `N_gen = N_color`
+  by direct retained equality.
+
+The closure is structurally minimal: it uses ONLY the retention of
+`N_gen = 3` and `N_color = 3` on current main, and the trivial fact that
+3 = 3.
 
 **Primary runner:**
 `scripts/frontier_ckm_koide_cross_sector_z3_closure.py`
 
 ## Statement
 
-On retained CL3 + CKM `main` inputs:
+On the **retained-tier** authority surface of current `main`:
 
 ```text
-(Z1)  CL3 spatial substrate is Z^3 with 3 independent coordinate axes:
-        dim(Z^3) = 3.                                        [retained CL3 substrate]
-
-(Z2)  N_color = dim(Z^3) = 3.                                [CL3_COLOR_AUTOMORPHISM_THEOREM]
-
-      "N_c = 3 from the spatial dimension of Z^3 — the number of
-       independent coordinate axes equals the size of the hw=1 orbit
-       (3 states) and the rank of SU(3)_c."  [direct quote, retained theorem]
-
-(Z3)  N_gen = 3 from Z^3 staggered-fermion taste doubling.   [CL3_TASTE_GENERATION_THEOREM]
-
-      "Z^3 spatial lattice has cubic symmetry S_3 (axis permutations);
-       staggered doubling maps each spatial axis to a taste direction;
-       Z_3 subgroup cyclically permutes the three taste-axis states;
-       three Z_3-orbit copies yield three families with the same
-       quantum number structure."  [direct quote, retained theorem]
-
-(Z4)  Cross-sector closure:
-        N_gen  =  3  =  N_color                              EXACTLY,
-
-      where both equalities trace to dim(Z^3) = 3 as the common source.
-
-(Z5)  Promotion of prior eight Koide-bridge support branches to retained:
-        With N_gen = N_color now retained from (Z2), (Z3), the prior eight
-        Koide-bridge branches' identities (Bernoulli-2/9 paths, multi-
-        projection Bernoulli family, Egyptian fraction unitarity, perfect-
-        number/triangular/Mersenne characterizations, S_3 representation-
-        theoretic primitive) are unconditionally retained as cross-sector
-        identities.
-
-(Z6)  Cross-sector retained Koide variance:
-        2/9  =  (N_gen - 1) / N_gen^2  =  (N_color - 1) / N_color^2     [now retained, was conjectural]
-
-(Z7)  Cross-sector retained sin^2(theta_K) decomposition (Egyptian):
-        sin^2(theta_K)  =  1/N_color + 1/N_quark  =  1/3 + 1/6 = 1/2      [now retained]
-
-(Z8)  Cross-sector retained A^2 = Q_l identification:
-        A^2  =  N_pair / N_color  =  2/3                     (W2 retained)
-        Q_l  =  (N_gen - 1) / N_gen  =  2/3                  (Koide formula, now grounded by Z4)
-        Therefore A^2 = Q_l = 2/3                            EXACTLY, both grounded in Z^3.
+(R1)  N_gen = 3.                                              [retained, THREE_GENERATION_STRUCTURE_NOTE]
+(R2)  N_color = 3.                                            [retained, CKM_MAGNITUDES_STRUCTURAL_COUNTS]
+(R3)  N_gen = N_color = 3.                                    [direct retained equality]
 ```
 
-`(Z1)`-`(Z8)` are the closure. The cross-sector identification N_gen = N_color
-that was articulated as the residual problem in eight prior support branches
-is now **closed via the common Z³ spatial origin** retained on `main`.
+`(R1)`, `(R2)` are independently retained on main. `(R3)` is the closure of
+the cross-sector identification by trivial equality of two retained values.
 
-## Retained Inputs
+**Auxiliary reading (support-tier, not load-bearing):**
 
-All inputs below are retained on current `main`:
+```text
+(S1)  CL3_COLOR_AUTOMORPHISM_THEOREM (support-tier on main, "reviewed exact algebraic
+       support theorem"; explicitly notes it does not upgrade the accepted minimal-input
+       surface): N_color = dim(Z^3) = 3 from Z^3 axes count.
 
-| Input | Authority on `main` |
-| --- | --- |
-| CL3 spatial substrate Z³ with 3 axes; `N_c = 3` from `dim(Z³)`; SU(3)_c on 3D symmetric base | [`CL3_COLOR_AUTOMORPHISM_THEOREM.md`](CL3_COLOR_AUTOMORPHISM_THEOREM.md) |
-| Staggered taste doubling on Z³; `C^8 = 4A_1 + 2E` under S_3; hw=1 sector = 3 states giving 3 generation candidates via Z_3 cyclic | [`CL3_TASTE_GENERATION_THEOREM.md`](CL3_TASTE_GENERATION_THEOREM.md) |
-| `(W2)` `A² = N_pair/N_color = 2/3` | [`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md) |
-| `N_pair = 2`, `N_color = 3`, `N_quark = N_pair × N_color = 6`; primitive `N_pair = N_color − 1` | [`CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`](CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md) |
-| Eight prior Koide-bridge support branches | [`CKM_BERNOULLI_TWO_NINTHS_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`](CKM_BERNOULLI_TWO_NINTHS_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md), [`CKM_N9_STRUCTURAL_FAMILY_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`](CKM_N9_STRUCTURAL_FAMILY_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md), [`CKM_CUBIC_BERNOULLI_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`](CKM_CUBIC_BERNOULLI_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md), [`CKM_EGYPTIAN_BERNOULLI_CLOSURES_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`](CKM_EGYPTIAN_BERNOULLI_CLOSURES_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md), [`CKM_CONSECUTIVE_PRIMES_S3_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`](CKM_CONSECUTIVE_PRIMES_S3_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md), and unmerged Multiplicative-A-rho, Multi-projection, Perfect/Triangular branches |
+(S2)  CL3_TASTE_GENERATION_THEOREM (support-tier on main, "reviewed exact algebraic
+       support theorem"; establishes 3 generation CANDIDATES, not physical N_gen):
+       hw=1 sector of Z^3 taste cube has 3 states, providing 3 generation candidates
+       via Z_3 cyclic symmetry.
 
-No PDG observable enters as a derivation input. No SUPPORT-tier or open
-inputs are USED as derivation inputs.
+(S3)  Shared Z^3 provenance motif: both (S1) and (S2) trace the value 3 to the
+       3 independent coordinate axes of the retained Z^3 spatial substrate
+       (axiom 2 of MINIMAL_AXIOMS_2026-04-11.md, retained framework primitive).
+
+       This motif is EXPLANATORY only and does not upgrade either support-tier
+       theorem to retained closure authority. The closure (R3) is established
+       independently by (R1) + (R2) numerical equality.
+```
+
+## Retained Inputs (Explicitly Tagged by Authority Tier)
+
+| Input | Authority on `main` | Tier |
+| --- | --- | --- |
+| `N_gen = 3` (physical three-generation matter structure) | [`THREE_GENERATION_STRUCTURE_NOTE.md`](THREE_GENERATION_STRUCTURE_NOTE.md) | **retained** |
+| `N_color = 3` (= n_color in retained CKM magnitudes counts) | [`CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`](CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md) | **retained** |
+| Z³ spatial substrate (axiom 2) | [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md) | retained framework primitive |
+| `N_color = dim(Z³)` (auxiliary structural reading) | [`CL3_COLOR_AUTOMORPHISM_THEOREM.md`](CL3_COLOR_AUTOMORPHISM_THEOREM.md) | **support-tier** (NOT load-bearing) |
+| `hw=1` Y spectrum {+1/3, +1/3, -1} giving 3 generation candidates (auxiliary) | [`CL3_TASTE_GENERATION_THEOREM.md`](CL3_TASTE_GENERATION_THEOREM.md) | **support-tier** (NOT load-bearing) |
+
+The closure uses the two **retained** tier inputs and trivial arithmetic.
+The two support-tier CL3 inputs and the framework primitive are explicit
+support reading only; they do not appear in the closure derivation chain.
+
+No PDG observable enters as a derivation input. No SUPPORT-tier inputs are
+USED as derivation inputs for the closure (R3). The CL3 support-tier
+content is explanatory motif (S1)-(S3).
 
 ## Derivation
 
-### Step 1: N_color = dim(Z³) = 3 (retained)
+### R1: N_gen = 3 retained
 
-From `CL3_COLOR_AUTOMORPHISM_THEOREM`, retained on main:
+From [`THREE_GENERATION_STRUCTURE_NOTE.md`](THREE_GENERATION_STRUCTURE_NOTE.md),
+status "retained":
 
-```text
-N_c = |hw=1 states| = dim(Z^3) = 3.
-```
+> "The framework retains a three-generation matter structure on the
+> physical-lattice surface."
+> "exact observable-sector semantics on the accepted Hilbert surface already
+> force the retained `hw=1` triplet to be physically distinct species
+> structure within the accepted theory"
 
-The CL3 spatial substrate is Z³ — 3-dimensional integer lattice with 3
-independent coordinate axes. Staggered-fermion doubling on Z³ produces
-the taste cube `C^8 = (ℂ²)^{⊗3}`, with the hw=1 sector spanned by exactly
-3 states `{e_1, e_2, e_3}` (one per axis). SU(3)_c acts on the 3D symmetric
-base of `C^8`, with rank `N_c = 3` matching the spatial dimension of Z³.
+This is the canonical retained authority for physical `N_gen = 3` on main.
+The retention is grounded in the framework's accepted Hilbert/locality/
+information surface plus the exact observable-sector lemma. It is a
+**retained** claim, not a support-tier claim.
 
-So `N_color = 3` is the algebraic image of the CL3 spatial dimension.
+### R2: N_color = 3 retained
 
-### Step 2: N_gen = 3 from Z³ taste doubling (retained)
+From [`CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`](CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md),
+retained on main:
 
-From `CL3_TASTE_GENERATION_THEOREM`, retained on main:
+> "n_color = 3"
 
-```text
-The S_3 -> Z_3 -> 3 generations chain is:
-1. Z^3 spatial lattice has cubic symmetry S_3 (axis permutations)
-2. Staggered doubling maps each spatial axis to a taste direction
-3. Z_3 subgroup cyclically permutes the three taste-axis states
-4. Each copy has Y spectrum {+1/3, +1/3, −1} → 3 generation-analogous structures.
-```
+`N_color = 3` is a retained structural integer in the CKM magnitudes counts
+package. The framework retains this value via the canonical CKM atlas
+surface.
 
-So `N_gen = 3` is also the algebraic image of dim(Z³) = 3, via the same
-3 independent coordinate axes of Z³.
-
-### Step 3: Cross-sector closure N_gen = N_color (Z4)
-
-Both `N_color = 3` (from Step 1) and `N_gen = 3` (from Step 2) trace to
-**dim(Z³) = 3** as the common structural source. Therefore:
+### R3: Cross-sector closure by direct retained equality
 
 ```text
-N_gen  =  N_color  =  3  =  dim(Z^3).
+N_gen   =  3   (R1, retained)
+N_color =  3   (R2, retained)
+==> N_gen = N_color = 3   EXACTLY.
 ```
 
-This is the closure. Both equalities are not conjectural — they follow from
-the retained CL3 theorems' explicit identification of N = 3 with the spatial
-dimension of Z³.
+The cross-sector identification holds by direct numerical equality of two
+retained values on current main. No support-tier promotion is needed. No
+upgrade of "generation candidates" is involved. The closure is structurally
+minimal.
 
-### Step 4: Promotion of prior support branches (Z5)
+### Auxiliary reading S1-S3 (support-tier, not load-bearing)
 
-The eight prior Koide-bridge support branches articulated identities under
-the conjectural `N_gen = N_color` identification:
+The shared Z³ provenance reading is consistent with R1 and R2:
+- CL3_COLOR_AUTOMORPHISM_THEOREM (support-tier) exhibits N_color = dim(Z³).
+- CL3_TASTE_GENERATION_THEOREM (support-tier) exhibits 3 generation
+  candidates from Z³ axes.
+- Both relate the value 3 to the 3 axes of Z³.
 
-| Prior branch | Conditional identity |
-|---|---|
-| Bernoulli-2/9 | A²(1−A²) = 2/9 (with N_color = N_gen = 3) |
-| Multiplicative-A-rho | A²·ρ = 1/N_color² = 1/9 (etc.) |
-| n/9 family | Complete n/9 family at N_color² = N_gen² = 9 |
-| Multi-projection Bernoulli | M(N_pair), M(N_color), M(N_quark) with N_color = N_gen |
-| Cubic Bernoulli | W(N) tower with N_color = N_gen |
-| Egyptian-Bernoulli closures | 1/N_pair + 1/N_color + 1/N_quark = 1 with N_color = N_gen |
-| Perfect/Triangular/Mersenne | N_color = M_2 (Mersenne prime) with N_color = N_gen |
-| Consecutive Primes / S_3 | N_color = N_gen as group-rep input |
-
-With the closure (Z4), each of these conditional identities is now **retained
-as a cross-sector identity**. The eight branches' "SUPPORT" status (conditional
-on cross-sector identification) is upgraded to retained.
-
-### Step 5: Specific Koide closures (Z6, Z7, Z8)
-
-**(Z6) Koide variance ratio 2/9:**
-
-```text
-(N_gen - 1)/N_gen^2  =  (N_color - 1)/N_color^2  =  2/9     [now retained via Z4]
-```
-
-The Bernoulli variance form (N − 1)/N² evaluated at N = N_gen = N_color = 3
-gives 2/9 in BOTH sectors by SAME structural input.
-
-**(Z7) Koide sin²(θ_K) ternary refinement (from Egyptian-Bernoulli branch):**
-
-```text
-sin^2(theta_K)  =  1/N_color + 1/N_quark                    [now retained via Z4]
-                =  1/3 + 1/6  =  1/2.
-```
-
-**(Z8) Cross-sector A² = Q_l identification:**
-
-```text
-A^2  =  N_pair / N_color = 2/3                              [W2 retained]
-Q_l  =  (N_gen - 1)/N_gen = 2/3                             [Koide formula × Z4]
-A^2  =  Q_l  =  2/3                                         EXACTLY, common Z^3 origin.
-```
+This is a structural motif, not a closure derivation. It explains WHY both
+sectors share value 3 by pointing to a common Z³ origin, but R3 does not
+depend on this explanation.
 
 ## Numerical Verification
 
-All identities verified with retained framework values:
+All identities verified to **exact integer arithmetic**:
 
-| Identity | Source | Value | Match? |
+| Identity | Authority | Value | Match? |
 | --- | --- | ---: | --- |
-| dim(Z³) | retained CL3 substrate | 3 | ✓ |
-| N_color = dim(Z³) | CL3 color automorphism theorem | 3 | ✓ |
-| N_gen = dim(Z³) | CL3 taste-generation theorem | 3 | ✓ |
-| N_gen = N_color | (Z4) closure | 3 = 3 | ✓ |
-| Koide variance (N_gen − 1)/N_gen² | (Z6) | 2/9 | ✓ |
-| Koide Q_l = (N_gen − 1)/N_gen | (Z8) | 2/3 | ✓ |
-| A² = N_pair/N_color | (W2) retained | 2/3 | ✓ |
-| A² = Q_l | (Z8) cross-sector closure | 2/3 = 2/3 | ✓ |
+| R1 N_gen | THREE_GENERATION_STRUCTURE_NOTE retained | 3 | ✓ |
+| R2 N_color | CKM_MAGNITUDES_STRUCTURAL_COUNTS retained | 3 | ✓ |
+| R3 N_gen = N_color = 3 | direct equality | 3 = 3 | ✓ |
+| Auxiliary S1 dim(Z³) | CL3_COLOR_AUTOMORPHISM (support) | 3 | ✓ (consistent) |
+| Auxiliary S2 generation candidates count | CL3_TASTE_GENERATION (support) | 3 | ✓ (consistent) |
 
 ## Science Value
 
-### What this lets the framework predict that it could not before
+### What this lets the framework state that it did not state cleanly before
 
-Previously the cross-sector identification `N_gen = N_color = 3` was a
-conjectural SUPPORT-tier statement, articulated as the residual closure
-problem across eight prior Koide-bridge branches. The framework had:
-
-- Retained CKM N_color = 3 (from magnitudes structural counts).
-- Conjectural Koide N_gen = 3 (taken from the 3 lepton generations, but not
-  retained as derived from CL3 first principles in any single closure note).
-- Eight prior branches articulating supporting structure that depended on
-  `N_gen = N_color` for cross-sector unification.
+Previously the cross-sector identification `N_gen = N_color = 3` was either
+treated as a conjectural SUPPORT_NOTE (CROSS_SECTOR_A²-Koide_VCB_BRIDGE_SUPPORT_NOTE)
+or argued via a chain that overclaimed support-tier CL3 theorems as retained
+closure authorities (the prior version of this note, reviewer-flagged P0/P1).
 
 This note CLOSES the cross-sector identification by exhibiting that BOTH
-`N_color = 3` and `N_gen = 3` are retained on main, and BOTH derive from
-the SAME structural source: dim(Z³) = 3, the 3 independent coordinate axes
-of the CL3 spatial substrate.
+`N_gen = 3` AND `N_color = 3` are independently RETAINED on current main:
 
-### The closure mechanism
+- `THREE_GENERATION_STRUCTURE_NOTE.md` (status: retained) for `N_gen = 3`.
+- `CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md` (retained) for `N_color = 3`.
 
-The cross-sector identification
+By trivial arithmetic, `N_gen = N_color = 3`. The closure is structurally
+minimal and uses only retained-tier authorities — no support-tier
+promotion, no upgrade of "candidates" to physical, no over-promotion of
+prior support branches.
 
-```text
-N_gen  =  N_color  =  3
-```
+### What changed from the prior reviewer-flagged version
 
-is **not a conjectural ansatz** — it follows from two retained CL3 theorems
-that share a common Z³ origin:
+The prior version of this branch (now superseded) attempted to close
+`N_gen = N_color` by treating CL3_COLOR_AUTOMORPHISM and CL3_TASTE_GENERATION
+as retained closure authorities and silently upgrading "generation
+candidates" to physical `N_gen`. The reviewer flagged four P0/P1 issues:
 
-- `CL3_COLOR_AUTOMORPHISM_THEOREM` retains `N_color = dim(Z³) = 3`.
-- `CL3_TASTE_GENERATION_THEOREM` retains `N_gen = 3` from Z³ axes via
-  staggered-fermion taste doubling.
+- P0: Support-only CL3 notes promoted to retained authorities.
+- P0: Generation candidates upgraded to physical N_gen without proof.
+- P1: Retained-input table including support notes and unmerged branches.
+- P1: Runner hard-coded the closure instead of verifying it.
 
-The structural source — 3 independent coordinate axes of Z³ — is the same
-in both theorems. Therefore N_gen = N_color = 3 by direct algebraic equality
-of the common source.
+This rebuilt version uses **retained-tier authorities only** for the
+closure derivation chain. The CL3 support-tier theorems appear as auxiliary
+structural reading (S1-S3), explicitly tagged as support-tier and explicitly
+not load-bearing. The runner now independently verifies that both retained
+authorities exist on main with their declared retained-tier status.
 
-### Promotion of prior eight Koide-bridge branches
+### What this does NOT promote
 
-The eight prior support branches (Bernoulli-2/9 paths, Multiplicative-A-rho
-identities, complete n/9 family, Multi-projection Bernoulli, Cubic Bernoulli,
-Egyptian fraction unitarity, Perfect/Triangular/Mersenne characterization,
-Consecutive Primes / S_3 group theory) all articulated identities valid IF
-N_gen = N_color = 3. With this closure, those identities are **unconditionally
-retained as cross-sector identities** — their conditional structure was
-exactly the residual now closed.
+This note does NOT promote:
+- CL3_COLOR_AUTOMORPHISM_THEOREM from support-tier to retained.
+- CL3_TASTE_GENERATION_THEOREM from support-tier to retained.
+- Any of the prior eight Koide-bridge support-tier branches to retained.
+- The cross-sector A²-Q_l identification beyond what THREE_GENERATION +
+  CKM_MAGNITUDES retained values already establish.
 
-In particular:
-- Eight independent paths to 2/9 (5 product paths from Bernoulli-2/9 +
-  Multiplicative branches, 1 cross-N sum from Egyptian-Bernoulli, 1
-  multi-projection from Cubic Bernoulli at k=2, 1 numerator-ladder from
-  n/9 family) all converge at the cross-sector Koide variance.
-- The complete n/N_color² = n/N_gen² structural family now spans both
-  sectors with matching expressions.
-- The Egyptian fraction `1/N_pair + 1/N_color + 1/N_quark = 1` is a
-  ternary refinement of Koide unitarity in the cross-sector reading.
-- The S_3 representation-theoretic primitive `N_pair = dim(std rep S_{N_color})`
-  applies equally to N_gen.
+The closure is exactly: `N_gen = 3 = N_color`. Anything more (specific
+Koide identities, promotion of prior support branches, upgrade of
+auxiliary CL3 readings) requires its own separate retained derivation
+chain and is NOT discharged by this note.
+
+### Cross-sector reading available given R3
+
+With `N_gen = N_color = 3` retained:
+- Numerically, `(N_gen − 1)/N_gen² = (N_color − 1)/N_color² = 2/9` (both 2/9).
+- The framework's `(N_color − 1)/N_color² = 2/9` is independently derivable
+  from retained N_color = 3 (basic arithmetic).
+- The Koide variance ratio `2/9 = (N_gen − 1)/N_gen²` is also independently
+  derivable from retained N_gen = 3.
+- These two derivations agree at 2/9 because both N_color and N_gen equal 3.
+
+This is **numerical agreement** of two retained values, not a structural
+unification. The structural unification motif (shared Z³ provenance) is
+support-tier reading only.
 
 ### Falsifiable structural claim
 
-The closure (Z4) is a sharp algebraic claim:
+The closure (R3) is sharp:
 
 ```text
-N_gen = N_color = 3 EXACTLY, with both equalities tracing to dim(Z^3) = 3.
+N_gen and N_color are BOTH retained on main with value 3, and therefore
+N_gen = N_color = 3 EXACTLY.
 ```
 
-If a future framework revision dissociated the lepton-sector generation count
-from the CKM-sector color count (e.g., separate spatial substrates, or a
-non-Z³ underlying lattice), the cross-sector closure would break.
-
-The CL3 framework's retained Z³ spatial substrate provides the common
-structural anchor. Any modification of this anchor would simultaneously
-modify both N_gen and N_color, preserving their equality but possibly shifting
-their value away from 3.
-
-### What this rules out
-
-The closure rules out:
-- Independent variation of N_gen and N_color (they share a structural source).
-- N_gen ≠ N_color frameworks (would require separate substrates for lepton
-  and CKM sectors, breaking CL3 unification).
-- Non-Z³ frameworks where the spatial dimension differs from N_color.
+If a future revision of `THREE_GENERATION_STRUCTURE_NOTE` or of
+`CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE` modified either retained
+value, the closure would correspondingly shift. The closure is grounded in
+the retained surface as it currently stands on main.
 
 ### Why this counts as pushing the science forward
 
-This note **CLOSES** the cross-sector residual problem articulated across
-eight prior Koide-bridge branches. It is the **closure** that the prior
-support branches were building toward. With this closure:
+This note CLOSES the cross-sector identification `N_gen = N_color` by direct
+retained equality. The closure mechanism is **structurally minimal**:
 
-- The eight prior support branches' conditional identities become retained.
-- Koide's `Q_l = 2/3 = (N_gen − 1)/N_gen` is closed from CL3 retained inputs.
-- Koide variance 2/9 = (N_gen − 1)/N_gen² is closed.
-- The cross-sector A² = Q_l identification is closed.
-- The Koide-bridge programme attains its endpoint: cross-sector unification
-  via common Z³ origin.
+1. `N_gen = 3` retained (THREE_GENERATION_STRUCTURE).
+2. `N_color = 3` retained (CKM_MAGNITUDES_STRUCTURAL_COUNTS).
+3. Therefore `N_gen = N_color = 3`.
 
-The Koide formula's Q_l = 2/3 numerical value, viewed as `(N_gen − 1)/N_gen`
-with N_gen = 3, is now structurally derived rather than empirically fitted.
+The closure does NOT rely on support-tier CL3 theorems, does NOT upgrade
+"generation candidates" to physical, and does NOT promote any prior support
+branches. It uses only the retained-tier authority surface of current main.
+
+The auxiliary Z³ provenance reading (support-tier) is consistent with the
+closure and provides explanatory structural motif, but is NOT load-bearing.
 
 ## What This Claims
 
-- `(Z1)`-`(Z3)`: Both `N_color = 3` and `N_gen = 3` are retained on `main`,
-  with explicit `dim(Z³) = 3` as the common derivational source.
-- `(Z4)`: NEW closure `N_gen = N_color = dim(Z³) = 3` EXACTLY.
-- `(Z5)`: NEW promotion of the eight prior Koide-bridge support branches to
-  retained cross-sector identities.
-- `(Z6)`: NEW retained Koide variance `2/9 = (N_gen − 1)/N_gen²`.
-- `(Z7)`: NEW retained sin²(θ_K) ternary refinement.
-- `(Z8)`: NEW retained A² = Q_l = 2/3 cross-sector identification.
+- `(R1)`: `N_gen = 3` retained (THREE_GENERATION_STRUCTURE_NOTE retained).
+- `(R2)`: `N_color = 3` retained (CKM_MAGNITUDES_STRUCTURAL_COUNTS retained).
+- `(R3)`: `N_gen = N_color = 3` EXACTLY by direct retained equality.
+
+That is the entirety of what this note claims to close.
 
 ## What This Does NOT Claim
 
-- It does NOT modify the retained CL3 color automorphism or taste-generation
-  theorems; it identifies their COMMON Z³ origin to derive the cross-sector
-  closure.
-- It does NOT close the deeper question of WHY the CL3 spatial substrate is
-  Z³ (3-dimensional). That is a separate retained framework primitive.
-- It does NOT predict any new lepton or quark mass; the closure is at the
-  structural-integer level, not at the mass-eigenvalue level.
-- It does NOT close A² at a deeper level than W2 (A² = N_pair/N_color is
-  retained from W2; this closure grounds N_color in Z³, but does not derive
-  A² below W2).
+- Does NOT promote CL3_COLOR_AUTOMORPHISM_THEOREM or CL3_TASTE_GENERATION_THEOREM
+  to retained.
+- Does NOT upgrade "generation candidates" to physical `N_gen`.
+- Does NOT promote any prior Koide-bridge support-tier branch to retained.
+- Does NOT derive `A² = Q_l = 2/3` cross-sector identification (W2 retains
+  `A² = 2/3` independently; Koide `Q_l = 2/3` is empirical input outside
+  the retained framework derivation chain on main).
+- Does NOT promote the auxiliary shared-Z³-provenance reading (S1-S3) to
+  load-bearing closure authority.
+- Does NOT close the deeper question of why CL3 spatial substrate is Z³
+  (3-dimensional). That remains a retained framework primitive (axiom 2).
 
 ## Reproduction
 
@@ -347,34 +299,49 @@ python3 scripts/frontier_ckm_koide_cross_sector_z3_closure.py
 Expected result:
 
 ```text
-TOTAL: PASS=23, FAIL=0
+TOTAL: PASS=17, FAIL=0
 ```
 
-The runner uses Python's `fractions.Fraction` for exact-rational arithmetic
-and verifies all retained-input cross-references for both `CL3_COLOR_AUTOMORPHISM_THEOREM`
-and `CL3_TASTE_GENERATION_THEOREM` exist on `main`.
+The runner explicitly extracts the verbatim `Status:` line from each cited
+authority on disk and prints it as ground-truth proof:
+
+```text
+Extracted Status: 'retained'                                       [THREE_GENERATION_STRUCTURE_NOTE]
+Extracted Status: 'retained structural-identity subtheorem ...'    [CKM_MAGNITUDES_STRUCTURAL_COUNTS]
+Extracted Status: 'reviewed exact algebraic support theorem ...'   [CL3_COLOR / CL3_TASTE (support-tier)]
+```
+
+Tier classification is by direct text containment of "retained" / "support"
+in the extracted Status text, not by assumption.
+
+The runner uses Python's integer arithmetic and verifies BOTH retained
+authorities exist on main, BOTH are tier-tagged "retained", and the
+direct equality N_gen = N_color = 3 holds. It does NOT hard-code the
+closure; it independently verifies each retained value and then checks
+equality.
 
 ## Cross-References
 
-- [`CL3_COLOR_AUTOMORPHISM_THEOREM.md`](CL3_COLOR_AUTOMORPHISM_THEOREM.md) -- retained
-  N_color = dim(Z³) = 3.
-- [`CL3_TASTE_GENERATION_THEOREM.md`](CL3_TASTE_GENERATION_THEOREM.md) -- retained
-  N_gen = 3 from Z³ axes via staggered-fermion taste doubling.
+**Retained-tier authorities used in closure:**
+
+- [`THREE_GENERATION_STRUCTURE_NOTE.md`](THREE_GENERATION_STRUCTURE_NOTE.md)
+  -- status: retained; canonical authority for physical N_gen = 3.
 - [`CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`](CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md)
-  -- retained N_pair, N_color, N_quark structural integers.
-- [`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md)
-  -- retained `(W2)` `A² = N_pair/N_color = 2/3`.
-- [`CKM_BERNOULLI_TWO_NINTHS_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`](CKM_BERNOULLI_TWO_NINTHS_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md)
-  -- prior Bernoulli-2/9 support branch (now closed by Z4).
-- [`CKM_N9_STRUCTURAL_FAMILY_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`](CKM_N9_STRUCTURAL_FAMILY_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md)
-  -- prior n/9 family support branch (now closed).
-- [`CKM_CUBIC_BERNOULLI_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`](CKM_CUBIC_BERNOULLI_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md)
-  -- prior cubic Bernoulli support branch (now closed).
-- [`CKM_EGYPTIAN_BERNOULLI_CLOSURES_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`](CKM_EGYPTIAN_BERNOULLI_CLOSURES_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md)
-  -- prior Egyptian-Bernoulli support branch (now closed).
-- [`CKM_CONSECUTIVE_PRIMES_S3_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`](CKM_CONSECUTIVE_PRIMES_S3_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md)
-  -- prior consecutive primes / S_3 support branch (now closed).
-- (Pending unmerged) Multiplicative-A-rho, Multi-projection Bernoulli, and
-  Perfect/Triangular/Mersenne support branches (now closed pending integration).
-- (NOT cited as derivation input) cross-sector A²-Koide bridge SUPPORT_NOTE
-  (this note CLOSES that bridge from common Z³ origin).
+  -- retained authority for N_color = 3.
+- [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md)
+  -- framework primitives axiom 2 (Z³ spatial substrate); retained.
+
+**Support-tier auxiliary readings (NOT load-bearing for closure):**
+
+- [`CL3_COLOR_AUTOMORPHISM_THEOREM.md`](CL3_COLOR_AUTOMORPHISM_THEOREM.md)
+  -- support-tier; auxiliary structural reading N_color = dim(Z³).
+- [`CL3_TASTE_GENERATION_THEOREM.md`](CL3_TASTE_GENERATION_THEOREM.md)
+  -- support-tier; auxiliary structural reading 3 generation candidates from Z³.
+
+**NOT cited as derivation input (and NOT promoted by this note):**
+
+- Prior eight Koide-bridge support-tier branches on main and any pending
+  unmerged Koide-bridge branches. They remain support-tier under this
+  closure; their conditional readings are numerically consistent with
+  R3 but are NOT promoted to retained by this note.
+- Cross-sector A²-Koide bridge SUPPORT_NOTE (remains support-tier).
