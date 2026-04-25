@@ -36,8 +36,10 @@ Current science/open-lane follow-ups:
 - Planck Target 2 / area-law carrier: the simple-fiber Widom class is now
   closed negatively, and multipocket Widom carriers can be tuned to `1/4` only
   with an extra selector; direct relabeling of the `4/16` primitive trace as
-  von Neumann entanglement is also blocked, so derive a selector or justified
-  non-vN primitive-boundary entropy functional before promotion
+  von Neumann entanglement is also blocked; finite algebraic Schmidt spectra
+  cannot give exact nonzero vN entropy `1/4`, so derive a transcendental
+  spectrum/Widom selector or justified non-vN primitive entropy before
+  promotion
 - memory lane: protocol- and geometry-stable observable remains open
 - emergent-geometry growth: multi-size, multi-seed stability remains open
 

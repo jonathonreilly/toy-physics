@@ -214,13 +214,18 @@ Current blocker:
 - A gapped edge pair can be tuned to entropy `1/4`, but the required Schmidt
   parameter is an additional entropy-spectrum selector; the mass gap supplies
   area-law form, not the exact Bekenstein-Hawking coefficient.
+- [AREA_LAW_ALGEBRAIC_SPECTRUM_ENTROPY_NO_GO_NOTE_2026-04-25.md](./AREA_LAW_ALGEBRAIC_SPECTRUM_ENTROPY_NO_GO_NOTE_2026-04-25.md)
+  strengthens the gapped primitive-edge obstruction: any nonzero finite
+  von Neumann entropy from an algebraic Schmidt spectrum is transcendental by
+  Baker's theorem on linear forms in logarithms of algebraic numbers. Since
+  `1/4` is algebraic, no exact finite algebraic-spectrum edge carrier can
+  deliver the Bekenstein-Hawking coefficient as ordinary entanglement entropy.
 
 Residual Target 2 requirement:
 
-- derive the pocket-measure, sector-weight, or entropy-spectrum selector from
-  the primitive boundary semantics; or supply an operational argument that the
-  primitive trace itself is the entropy functional rather than ordinary
-  von Neumann entanglement entropy.
+- derive a transcendental Schmidt-spectrum selector, derive a multipocket
+  Widom selector, or justify a non-von-Neumann primitive-boundary entropy
+  functional.
 
 ### Target 3: one-axiom information/action bridge
 
