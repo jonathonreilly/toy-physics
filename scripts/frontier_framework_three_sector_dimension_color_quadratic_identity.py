@@ -1,18 +1,30 @@
 #!/usr/bin/env python3
-"""Three-sector dimension-color quadratic identity theorem audit.
+"""Three-sector dimension-color quadratic identity SUPPORT NOTE audit.
 
-Verifies the new three-sector cross-identity in
-  docs/FRAMEWORK_THREE_SECTOR_DIMENSION_COLOR_QUADRATIC_IDENTITY_THEOREM_NOTE_2026-04-25.md
+Verifies the CONDITIONAL three-sector identity in
+  docs/FRAMEWORK_THREE_SECTOR_DIMENSION_COLOR_QUADRATIC_IDENTITY_SUPPORT_NOTE_2026-04-25.md
 
+The runner verifies the conditional algebra AFTER the load-bearing
+premises are assumed. It does NOT establish retention of those
+premises.
+
+Load-bearing PREMISES (conditional):
+  (P1) (alpha_3/alpha_em)(bare) = 2d + 3
+       Carrier on main is itself a SUPPORT note, not retained closure.
+  (P2) Q_l = N_pair/N_color = 2/3
+       Open Koide support target on main, not retained closure.
+
+Conditional algebraic content (assuming P1 and P2):
   (I1) (alpha_3/alpha_em)(bare) x Q_l = N_quark = 6
   (I2) (2d+3) x (N_pair/N_color)      = N_pair x N_color
   (I3) 2d + 3                          = N_color^2
   (I4) d                               = (N_color^2 - 3)/2
-  (I5) For framework N_color = 3:        d = 3 (smallest integer solution)
-  (I6) Four-sector composition:        (alpha_3/alpha_em)(bare) x Q_l x eta = sqrt(5)
+  (I5) Framework N_color = 3 -> d = 3 (smallest integer solution)
+  (I6) Composition with retained eta = sqrt(5)/6:
+       (alpha_3/alpha_em)(bare) x Q_l x eta = sqrt(5)
 
-Three sectors: COLOR + EW + LEPTON, plus CKM CP-phase for the
-sqrt(5) form. Only ODD N_color gives integer d in (I4).
+This is a falsification and cross-extraction template, not a
+retained closure. It is not part of the accepted minimal-input stack.
 """
 
 from __future__ import annotations
@@ -95,10 +107,18 @@ def audit_inputs() -> None:
     check("N_quark = N_pair x N_color = 6", N_QUARK == N_PAIR * N_COLOR)
 
     repo_root = Path(__file__).resolve().parents[1]
+    # Confirm the load-bearing carriers exist on main with the correct
+    # status. Both (P1) and (P2) sources are flagged on main as
+    # "support" / "open", not retained closure.
     upstream = (
-        "docs/CL3_SM_EMBEDDING_THEOREM.md",
-        "docs/YT_EW_COLOR_PROJECTION_THEOREM.md",
+        # (P1) bare-alpha ratio carrier — explicitly a SUPPORT note on main
+        "docs/FRAMEWORK_BARE_ALPHA_3_ALPHA_EM_DIMENSION_FIXED_RATIO_SUPPORT_NOTE_2026-04-25.md",
+        # (P2) Koide Q_l = 2/3 — open support target investigation on main
+        "docs/KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md",
+        # Retained CKM CP-phase eta = sqrt(5)/6 (used in I5)
         "docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md",
+        # Algebraic support theorem (explicitly NOT in minimal-input stack)
+        "docs/CL3_SM_EMBEDDING_THEOREM.md",
     )
     for rel in upstream:
         path = repo_root / rel
@@ -106,7 +126,7 @@ def audit_inputs() -> None:
 
 
 def audit_i1_three_sector_identity() -> None:
-    banner("(I1) NEW: (alpha_3/alpha_em)(bare) x Q_l = N_quark = 6")
+    banner("(I1) CONDITIONAL: (alpha_3/alpha_em)(bare) x Q_l = N_quark = 6 [given P1, P2]")
 
     LHS = ALPHA_RATIO_BARE * Q_L
     print(f"  (alpha_3/alpha_em)(bare) x Q_l = {ALPHA_RATIO_BARE} x {Q_L} = {LHS}")
@@ -132,7 +152,7 @@ def audit_i2_substituted_form() -> None:
 
 
 def audit_i3_dimension_color_relation() -> None:
-    banner("(I3) NEW: 2d + 3 = N_color^2 (dimension-color quadratic relation)")
+    banner("(I3) CONDITIONAL: 2d + 3 = N_color^2 (dimension-color quadratic) [given P1, P2]")
 
     LHS = 2 * D + 3
     RHS = N_COLOR ** 2
@@ -185,7 +205,7 @@ def audit_i5_integer_solutions() -> None:
 
 
 def audit_i6_four_sector_sqrt5() -> None:
-    banner("(I6) NEW: Four-sector identity (alpha_3/alpha_em) x Q_l x eta = sqrt(5)")
+    banner("(I6) CONDITIONAL: (alpha_3/alpha_em) x Q_l x eta = sqrt(5) [given P1, P2; eta retained]")
 
     LHS = float(ALPHA_RATIO_BARE) * float(Q_L) * ETA_VAL
     RHS = math.sqrt(5.0)
@@ -254,39 +274,39 @@ def audit_d_extraction() -> None:
 
 
 def audit_summary() -> None:
-    banner("Summary: NEW three-sector dimension-color quadratic identity")
+    banner("Summary: CONDITIONAL three-sector dimension-color quadratic identity")
 
-    print("  THREE-SECTOR IDENTITY (NEW):")
+    print("  CONDITIONAL THREE-SECTOR IDENTITY:")
+    print("    (held only if both load-bearing premises P1 and P2 are accepted)")
     print()
     print("    (alpha_3/alpha_em)(bare) x Q_l = N_quark = 6")
     print()
-    print("  Sectors:")
-    print("    1. COLOR + ELECTROWEAK: (alpha_3/alpha_em)(bare) = 2d + 3 = 9")
-    print("    2. LEPTON (Koide):      Q_l = N_pair/N_color = 2/3")
-    print("    3. SM QUARK COUNT:      N_quark = N_pair x N_color = 6")
+    print("  Premises (NOT retained closure on main):")
+    print("    (P1) (alpha_3/alpha_em)(bare) = 2d + 3 = 9")
+    print("         carrier on main is itself a SUPPORT note")
+    print("    (P2) Q_l = N_pair/N_color = 2/3")
+    print("         open Koide support target on main")
     print()
-    print("  IMPLIES NEW DIMENSION-COLOR QUADRATIC RELATION:")
-    print()
+    print("  Conditional consequence (algebraic):")
     print("    2d + 3 = N_color^2,      d = (N_color^2 - 3)/2")
     print()
-    print("  Integer solutions:")
-    print("    N_color = 3 -> d = 3 (FRAMEWORK)")
-    print("    N_color = 5 -> d = 11")
+    print("  Integer solutions to (I4):")
+    print("    N_color = 3 -> d = 3 (smallest integer solution; framework-consistent)")
+    print("    N_color = 5 -> d = 11 (algebraically allowed; SM-excluded)")
     print("    N_color = 7 -> d = 23")
-    print("    Only odd N_color gives integer d.")
     print()
-    print("  FOUR-SECTOR sqrt(5) IDENTITY (with retained eta):")
+    print("  Conditional composition with retained eta = sqrt(5)/6:")
+    print("    (alpha_3/alpha_em)(bare) x Q_l x eta = sqrt(5)")
     print()
-    print("    (alpha_3/alpha_em)(bare) x Q_l x eta = 9 x (2/3) x sqrt(5)/6 = sqrt(5)")
-    print()
-    print("  This binds COLOR, ELECTROWEAK, LEPTON, and CKM CP-PHASE")
-    print("  sectors into a single irrational identity at framework values.")
+    print("  This is a falsification and cross-extraction template, NOT")
+    print("  a retained closure. It is NOT part of the accepted")
+    print("  minimal-input stack on main.")
 
 
 def main() -> int:
     print("=" * 88)
-    print("Three-sector dimension-color quadratic identity theorem audit")
-    print("See docs/FRAMEWORK_THREE_SECTOR_DIMENSION_COLOR_QUADRATIC_IDENTITY_THEOREM_NOTE_2026-04-25.md")
+    print("Three-sector dimension-color quadratic identity SUPPORT NOTE audit")
+    print("See docs/FRAMEWORK_THREE_SECTOR_DIMENSION_COLOR_QUADRATIC_IDENTITY_SUPPORT_NOTE_2026-04-25.md")
     print("=" * 88)
 
     audit_inputs()
