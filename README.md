@@ -90,6 +90,8 @@ questions:
   [docs/publication/ci3_z3](docs/publication/ci3_z3/README.md)
 - science organized by domain:
   [docs/publication/ci3_z3/SCIENCE_MAP.md](docs/publication/ci3_z3/SCIENCE_MAP.md)
+- methodology and AI-accountability lane:
+  [docs/ai_methodology/README.md](docs/ai_methodology/README.md)
 - reproduction and validation:
   [docs/publication/ci3_z3/REPRODUCE.md](docs/publication/ci3_z3/REPRODUCE.md)
 - quantitative derivations and supporting theorem notes:
