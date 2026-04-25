@@ -24,6 +24,23 @@ The current exact claim is:
 - exact discrete `3+1` gravity on the project route;
 - exact QG / continuum identification on one chosen canonical textbook target.
 
+## 1A. Chronology Protection
+
+The paper does **not** claim:
+
+- a universal theorem over arbitrary multi-time theories or all possible CTC
+  toy models;
+- that postselected or final-boundary ensembles are ordinary controllable
+  signals to the past;
+- an interacting CPT theorem or a final ontology of measurement records.
+
+The current exact support theorem is:
+
+- on the retained single-clock Hilbert/local-data surface, a later
+  nonselective CPTP operation preserves the earlier durable-record marginal;
+- the broader chronology-protection lane remains open for cycle-insertion,
+  Loschmidt-record, and advanced-vs-retarded probes.
+
 ## 2. Strong CP
 
 The paper does **not** claim:

@@ -266,6 +266,11 @@ theorem core.
   - CKM-only neutron EDM with bounded `d_n(CKM)` continuation
   - universal theta-induced EDM response vanishing, with no new bounded
     numerical EDM estimate and no independent CP-odd EFT operator-zero claim
+- chronology-protection support:
+  - exact operational no-past-signaling theorem on the retained single-clock
+    Hilbert/local-data surface
+  - no claim over postselected/final-boundary ensembles, directed causal
+    cycles, arbitrary multi-time theories, or full lane closure
 
 ## 7. Remaining bridge package
 

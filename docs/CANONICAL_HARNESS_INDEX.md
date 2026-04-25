@@ -98,5 +98,5 @@ surfaces.
 | lane | authority | primary runner |
 |---|---|---|
 | native taste-qubit teleportation (opened bounded protocol lane; planning only) | [FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md](FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md) | `n/a` |
-| chronology protection (opened bounded no-go lane; planning only) | [FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md](FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md) | `n/a` |
+| chronology protection (opened bounded no-go lane; exact operational no-past-signaling support theorem, lane still open) | [FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md](FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md), [CHRONOLOGY_PROTECTION_OPERATIONAL_NO_PAST_SIGNALING_THEOREM_NOTE_2026-04-25.md](CHRONOLOGY_PROTECTION_OPERATIONAL_NO_PAST_SIGNALING_THEOREM_NOTE_2026-04-25.md) | `frontier_chronology_operational_no_past_signaling.py` |
 | signed gravitational response sector (opened high-risk discovery lane; planning only) | [FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md](FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md) | `n/a` |
