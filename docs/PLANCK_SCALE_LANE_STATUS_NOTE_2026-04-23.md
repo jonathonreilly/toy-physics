@@ -290,6 +290,24 @@ Current blocker:
 - without such a derivation, Target 3 remains open and Target 2 should be
   worded as conditional on native edge statistics.
 
+2026-04-25 Target 3 boundary theorem:
+
+- `PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25.md`
+  isolates exactly what the current one-axiom bridge can and cannot do;
+- the bridge does derive a native dimensionless phase unit, namely the
+  `U(1)` phase class `theta mod 2 pi`;
+- it does not fix an absolute dimensional action quantum, because amplitudes
+  depend only on `S/kappa` and are invariant under
+  `(S,kappa) -> (lambda S, lambda kappa)`;
+- it also does not derive the primitive Clifford-Majorana/CAR edge-statistics
+  principle, because the same rank-four block `P_A H_cell ~= C^4` admits CAR,
+  two-qubit, and ququart semantics while satisfying the same Hilbert/unitary
+  information-flow axioms;
+- consequently Target 3 remains open as a positive closure problem. The next
+  load-bearing theorem must derive the edge-statistics principle from a
+  stronger native input, derive an action-unit metrology map that breaks the
+  rescaling degeneracy, or record those items as added carrier axioms.
+
 ## 6. Package rule on `main`
 
 Until one of the three targets closes, the correct package statement is:

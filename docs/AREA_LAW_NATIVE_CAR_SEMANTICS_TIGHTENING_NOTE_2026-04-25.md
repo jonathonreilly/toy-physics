@@ -130,6 +130,12 @@ If Target 3 can derive that edge-statistics principle, it would remove the last
 conditional premise from the positive Target 2 chain. If not, Target 2 remains
 publication-grade conditional on a clearly stated native-statistics axiom.
 
+The Target 3 boundary theorem now records the current status in
+`PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25.md`: the
+one-axiom Hilbert-flow bridge supplies a dimensionless `U(1)` phase unit, but
+does not by itself fix the dimensional action scale or force CAR rather than
+two-qubit/ququart semantics on the same rank-four block.
+
 ## Package wording
 
 Safe wording:

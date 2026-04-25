@@ -45,6 +45,12 @@ Current science/open-lane follow-ups:
   the remaining review decision to one concrete premise: accept irreducible
   Clifford-Majorana edge statistics on `P_A H_cell`, or keep Target 2
   conditional.
+- Planck Target 3 / information-action bridge: the current one-axiom
+  Hilbert-flow surface now has a boundary theorem. It derives a native
+  dimensionless `U(1)` phase unit, but it does not fix an absolute dimensional
+  action quantum or derive the primitive Clifford-Majorana/CAR edge statistics;
+  those still require a stronger native statistics/action-unit principle or an
+  explicit carrier axiom.
 - memory lane: protocol- and geometry-stable observable remains open
 - emergent-geometry growth: multi-size, multi-seed stability remains open
 
