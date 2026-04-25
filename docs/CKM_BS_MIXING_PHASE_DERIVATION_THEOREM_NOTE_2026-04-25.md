@@ -2,8 +2,9 @@
 
 **Date:** 2026-04-25
 
-**Status:** Retained derivation theorem on `main`. This note derives a new
-atlas-leading prediction by combining three retained inputs --
+**Status:** retained CKM-structure prediction with a standard B_s-mixing
+phase-convention bridge. This note derives a new leading CKM prediction by
+combining three retained inputs --
 `alpha_s(v)` (canonical plaquette/CMT surface),
 `lambda^2 = alpha_s(v)/2` (Wolfenstein structural identity), and
 `eta = sqrt(5)/6` (CP-phase structural identity) -- with the standard
@@ -11,8 +12,8 @@ Wolfenstein expansion of the CKM matrix to the leading non-trivial order in
 `lambda`. The output is the atlas-leading B_s-meson mixing phase
 
 ```text
-beta_s   = alpha_s(v) sqrt(5) / 12,
-phi_s    = -2 beta_s = -alpha_s(v) sqrt(5) / 6,
+beta_s,0   = alpha_s(v) sqrt(5) / 12,
+phi_s,0    = -2 beta_s,0 = -alpha_s(v) sqrt(5) / 6,
 ```
 
 which has not previously been carried as a named retained framework
@@ -21,9 +22,13 @@ of doubled atlas-triangle angles `(sin/cos)(2 alpha_0, 2 beta_0, 2 gamma_0)`
 and the missing right-leg side-length identity `R_t^2 = 5/6` Pythagorean
 companion to the retained `R_b^2 = 1/6`.
 
-The numerical prediction `phi_s = -3.850e-2 rad = -2.206 deg` lies within the
-quoted LHCb comparator band `phi_s = -0.039 +/- 0.022 rad` at the `0.02 sigma`
-level, with no fitted CKM or B-mixing input.
+The leading numerical prediction `phi_s,0 = -3.850e-2 rad = -2.206 deg` lies
+inside the LHCb single-measurement 1-sigma band
+`phi_s = -0.039 +/- 0.022(stat) +/- 0.006(syst) rad` at the `0.02 sigma`
+level if the statistical uncertainty is used as the comparator. The exact
+finite-`lambda` standard-matrix readout from the parent CKM atlas is
+`phi_s = -3.922e-2 rad`; it is retained here as a guardrail, not as a
+replacement for the compact leading identity.
 
 **Primary runner:** `scripts/frontier_ckm_bs_mixing_phase_derivation.py`
 
@@ -59,14 +64,14 @@ beta_s = arg[ -V_ts V_tb^* / (V_cs V_cb^*) ]
 evaluates at leading non-trivial order to
 
 ```text
-(B1)  beta_s   = lambda^2 eta + O(lambda^4)
+(B1)  beta_s,0 = lambda^2 eta + O(lambda^4)
               = (alpha_s(v)/2)(sqrt(5)/6)
               = alpha_s(v) sqrt(5) / 12.
 
-(B2)  phi_s    = -2 beta_s = -alpha_s(v) sqrt(5) / 6.
+(B2)  phi_s,0  = -2 beta_s,0 = -alpha_s(v) sqrt(5) / 6.
 
-(B3)  sin(2 beta_s) = 2 lambda^2 eta + O(lambda^4)
-                    = alpha_s(v) sqrt(5) / 6.
+(B3)  sin(2 beta_s,0) = 2 lambda^2 eta + O(lambda^4)
+                      = alpha_s(v) sqrt(5) / 6.
 ```
 
 In addition, the atlas-leading triangle trigonometric catalog evaluates to
@@ -89,7 +94,7 @@ and the side-length catalog evaluates to
 ```
 
 Identity `(S2)` and the catalog `(T1)-(T3)` are new named structural rows; the
-identities `(B1)-(B3)` are the new derived numerical prediction.
+identities `(B1)-(B3)` are the new leading CKM-derived numerical prediction.
 
 ## Retained Inputs
 
@@ -100,9 +105,11 @@ identities `(B1)-(B3)` are the new derived numerical prediction.
 | `rho = 1/6`, `eta = sqrt(5)/6`, `rho^2 + eta^2 = 1/6` | [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md) |
 | `alpha_0 = pi/2` (atlas-leading right angle) | [`CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`](CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md) |
 | Standard Wolfenstein expansion of the CKM matrix | textbook CKM phenomenology |
+| Standard relation `phi_s = -2 beta_s` for the SM B_s mixing phase | textbook B_s-mixing convention |
 
 No fitted CKM observable, B-meson lifetime, or lattice-QCD parameter is used
-as a derivation input.
+as a derivation input. The B_s phase convention is a standard observation
+bridge, not a new framework-native hadronic mixing theorem.
 
 ## Derivation
 
@@ -206,11 +213,41 @@ beta_s = (alpha_s(v)/2) (sqrt(5)/6)
 The B_s mixing CP-violating phase is the standard
 
 ```text
-phi_s = -2 beta_s = -alpha_s(v) sqrt(5) / 6.
+phi_s,0 = -2 beta_s,0 = -alpha_s(v) sqrt(5) / 6.
 ```
 
 The small-angle expansion of `sin(2 beta_s)` matches `2 beta_s` to better
 than one part in `1e4`.
+
+### 4. Finite-lambda standard-matrix guardrail
+
+The compact identities above are the atlas-leading CKM surface. If the same
+retained inputs are inserted into the exact standard CKM parameterization,
+with
+
+```text
+s12 = lambda,
+s23 = A lambda^2,
+s13 = A lambda^3 sqrt(rho^2 + eta^2),
+delta = arctan(sqrt(5)),
+```
+
+then the direct standard-matrix ratio
+
+```text
+beta_s = arg[-V_ts V_tb^* / (V_cs V_cb^*)]
+```
+
+gives
+
+```text
+beta_s = 1.9609e-2 rad,
+phi_s  = -3.9218e-2 rad.
+```
+
+This differs from the compact leading identity by `1.9%`, an `O(lambda^2)`
+finite-CKM correction. The exact readout is a guardrail against promoting the
+leading identity as an all-orders B_s-mixing theorem.
 
 ## Numerical Predictions
 
@@ -225,8 +262,9 @@ With the canonical `alpha_s(v) = 0.10330381612227...`,
 | `R_b` | `1/sqrt(6)` | `0.408248` | `0.435 +/- 0.014` | `-1.9 sigma` |
 | `R_t` | `sqrt(5/6)` | `0.912871` | `0.92 +/- 0.02` | `-0.4 sigma` |
 | `R_t / R_b` | `sqrt(5)` | `2.236068` | `~2.27 +/- 0.07` | `-0.5 sigma` |
-| `beta_s` | `alpha_s(v) sqrt(5)/12` | `0.019250 rad` | `0.0188 +/- 0.0030 rad` | `+0.16 sigma` |
-| `phi_s` | `-alpha_s(v) sqrt(5)/6` | `-0.038499 rad` | `-0.039 +/- 0.022 rad` | `+0.02 sigma` |
+| `beta_s,0` | `alpha_s(v) sqrt(5)/12` | `0.019250 rad` | `0.0188 +/- 0.0030 rad` | `+0.15 sigma` |
+| `phi_s,0` | `-alpha_s(v) sqrt(5)/6` | `-0.038499 rad` | `-0.039 +/- 0.022(stat) +/- 0.006(syst) rad` | `+0.02 sigma` |
+| exact standard `phi_s` guardrail | standard CKM matrix | `-0.039218 rad` | `-0.039 +/- 0.022(stat) +/- 0.006(syst) rad` | `-0.01 sigma` |
 | `sin(2 beta_s)` | `~ alpha_s(v) sqrt(5)/6` | `0.038490` | `~0.038 +/- 0.022` | `+0.02 sigma` |
 
 The B_s phase prediction lies within the quoted LHCb 1-sigma band. The
@@ -239,11 +277,13 @@ atlas-leading and finite-lambda predictions clearly separated.
 
 ## What This Claims
 
-- `phi_s = -alpha_s(v) sqrt(5)/6` as an atlas-leading retained prediction
-  for B_s mixing, with no fitted CKM or B-mixing input and a quoted LHCb
-  comparator offset of `0.02 sigma`.
-- `beta_s = alpha_s(v) sqrt(5)/12` as the corresponding leading-order
+- `phi_s,0 = -alpha_s(v) sqrt(5)/6` as an atlas-leading retained CKM
+  prediction for B_s mixing, with no fitted CKM or B-mixing input and a quoted
+  LHCb comparator offset of `0.02 sigma`.
+- `beta_s,0 = alpha_s(v) sqrt(5)/12` as the corresponding leading-order
   B_s unitarity triangle angle.
+- The exact finite-`lambda` standard-matrix readout is carried only as a
+  guardrail on the compact leading identity.
 - `sin(2 beta_0) = sin(2 gamma_0) = sqrt(5)/3`, `cos(2 beta_0) = 2/3`,
   `cos(2 gamma_0) = -2/3` as exact atlas-triangle trigonometric identities.
 - `R_t^2 = 5/6` as the Pythagorean companion to the retained `R_b^2 = 1/6`,
@@ -255,6 +295,9 @@ atlas-leading and finite-lambda predictions clearly separated.
   input.
 - It does not claim higher-order Wolfenstein corrections; the prediction is
   the leading non-trivial term, as is standard.
+- It does not derive the hadronic B_s mixing amplitude, bag parameters,
+  decay constants, lifetimes, penguin corrections, or a new lattice-QCD
+  extraction of `phi_s`.
 - It does not promote any BSM contribution to B_s mixing.
 - It does not modify the parent CKM atlas/axiom or right-angle theorems; the
   atlas-leading `sin(2 beta_0) = sqrt(5)/3` retains its known tension with
@@ -270,7 +313,7 @@ python3 scripts/frontier_ckm_bs_mixing_phase_derivation.py
 Expected result:
 
 ```text
-TOTAL: PASS=47, FAIL=0
+TOTAL: PASS=53, FAIL=0
 ```
 
 The runner uses the Python standard library plus the canonical

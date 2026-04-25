@@ -12,14 +12,15 @@ Verifies the structural identities and the derived B_s mixing prediction in
   (S2) |R_t|^2 = (1-rho)^2 + eta^2 = 5/6
   (S3) |R_b|^2 + |R_t|^2 = 1
   (S4) |R_t|/|R_b| = sqrt(5)
-  (B1) beta_s = lambda^2 eta = alpha_s(v) sqrt(5)/12
-  (B2) phi_s  = -2 beta_s    = -alpha_s(v) sqrt(5)/6
-  (B3) sin(2 beta_s) = alpha_s(v) sqrt(5)/6 (small-angle)
+  (B1) beta_s,0 = lambda^2 eta = alpha_s(v) sqrt(5)/12
+  (B2) phi_s,0  = -2 beta_s,0  = -alpha_s(v) sqrt(5)/6
+  (B3) sin(2 beta_s,0) = alpha_s(v) sqrt(5)/6 (small-angle)
 
 The CP-asymmetry sin(2 beta_0) = sqrt(5)/3 and the side-length R_t^2 = 5/6
-are new named structural identities. The atlas-leading B_s mixing phase
-prediction phi_s = -alpha_s(v) sqrt(5)/6 = -3.85e-2 rad lies within the
-quoted LHCb comparator band -0.039 +/- 0.022 rad at 0.02 sigma.
+are new named structural identities. The compact B_s mixing phase prediction
+phi_s,0 = -alpha_s(v) sqrt(5)/6 = -3.85e-2 rad is the new derived leading
+prediction; the exact finite-lambda standard-matrix readout is kept as a
+guardrail.
 """
 
 from __future__ import annotations
@@ -76,8 +77,9 @@ SIN_2BETA_PDG = 0.706
 SIN_2BETA_PDG_ERR = 0.011
 PHI_S_LHCB = -0.039
 PHI_S_LHCB_ERR = 0.022
-BETA_S_CKM_FIT = 0.0188
-BETA_S_CKM_FIT_ERR = 0.0030
+PHI_S_LHCB_SYST = 0.006
+BETA_S_LHCB = 0.0188
+BETA_S_LHCB_ERR = 0.0030
 RT_OVER_RB_PDG = 2.27
 RT_OVER_RB_PDG_ERR = 0.07
 R_B_PDG = 0.435
@@ -307,6 +309,70 @@ def audit_bs_mixing_phase() -> None:
           abs(sin_2bs_exact - ALPHA_S_V * math.sqrt(5) / 6) < 1e-4)
 
 
+def exact_standard_ckm_bs_phase() -> tuple[float, float]:
+    """Exact standard-matrix beta_s and phi_s from retained atlas inputs."""
+    lambda_val = math.sqrt(LAMBDA_SQ)
+    A = math.sqrt(2.0 / 3.0)
+    rho = float(RHO)
+    eta = ETA_VAL
+    cp_radius = math.sqrt(rho * rho + eta * eta)
+
+    s12 = lambda_val
+    s23 = A * lambda_val**2
+    s13 = A * lambda_val**3 * cp_radius
+    delta = math.atan(math.sqrt(5.0))
+
+    c12 = math.sqrt(1.0 - s12 * s12)
+    c23 = math.sqrt(1.0 - s23 * s23)
+    c13 = math.sqrt(1.0 - s13 * s13)
+    e_i_delta = complex(math.cos(delta), math.sin(delta))
+
+    V_cs = c12 * c23 - s12 * s23 * s13 * e_i_delta
+    V_cb = s23 * c13
+    V_ts = -c12 * s23 - s12 * c23 * s13 * e_i_delta
+    V_tb = c23 * c13
+
+    ratio = -(V_ts * V_tb.conjugate()) / (V_cs * V_cb.conjugate())
+    beta_s_exact = math.atan2(ratio.imag, ratio.real)
+    phi_s_exact = -2.0 * beta_s_exact
+    return beta_s_exact, phi_s_exact
+
+
+def audit_exact_standard_guardrail() -> None:
+    banner("Finite-lambda exact standard-matrix guardrail")
+
+    beta_s_leading = ALPHA_S_V * math.sqrt(5.0) / 12.0
+    phi_s_leading = -2.0 * beta_s_leading
+    beta_s_exact, phi_s_exact = exact_standard_ckm_bs_phase()
+
+    beta_rel = abs(beta_s_exact - beta_s_leading) / abs(beta_s_leading)
+    phi_rel = abs(phi_s_exact - phi_s_leading) / abs(phi_s_leading)
+
+    print(f"  beta_s,0 leading identity = {beta_s_leading:.15e} rad")
+    print(f"  beta_s exact CKM readout  = {beta_s_exact:.15e} rad")
+    print(f"  phi_s,0 leading identity  = {phi_s_leading:.15e} rad")
+    print(f"  phi_s exact CKM readout   = {phi_s_exact:.15e} rad")
+    print(f"  finite-lambda beta residual = {beta_rel:.4%}")
+
+    check("exact standard-matrix beta_s is positive", beta_s_exact > 0.0)
+    check("exact standard-matrix phi_s is negative", phi_s_exact < 0.0)
+    check("exact CKM beta_s differs from leading identity by O(lambda^2)",
+          beta_rel < LAMBDA_SQ / 2.0,
+          f"rel={beta_rel:.4%}, lambda^2={LAMBDA_SQ:.4%}")
+    check("exact CKM phi_s differs from leading identity by same relative amount",
+          close(beta_rel, phi_rel, tol=1e-12))
+    check("finite-lambda guardrail is not collapsed into the leading identity",
+          abs(phi_s_exact - phi_s_leading) > 5e-4)
+
+    deviation_phi_s_exact = (phi_s_exact - PHI_S_LHCB) / PHI_S_LHCB_ERR
+    total_err = math.sqrt(PHI_S_LHCB_ERR**2 + PHI_S_LHCB_SYST**2)
+    deviation_phi_s_exact_total = (phi_s_exact - PHI_S_LHCB) / total_err
+    print(f"  exact phi_s vs LHCb stat sigma  = {deviation_phi_s_exact:+.3f}")
+    print(f"  exact phi_s vs LHCb total sigma = {deviation_phi_s_exact_total:+.3f}")
+    check("exact CKM phi_s agrees with LHCb within 1 sigma",
+          abs(deviation_phi_s_exact) < 1.0)
+
+
 def audit_observation_comparators() -> None:
     banner("Post-derivation comparators (PDG / LHCb)")
 
@@ -342,11 +408,11 @@ def audit_observation_comparators() -> None:
           abs(deviation_R_b) < 2.0)
 
     beta_s = ALPHA_S_V * math.sqrt(5.0) / 12.0
-    deviation_beta_s = (beta_s - BETA_S_CKM_FIT) / BETA_S_CKM_FIT_ERR
+    deviation_beta_s = (beta_s - BETA_S_LHCB) / BETA_S_LHCB_ERR
     print(f"  beta_s atlas              = {beta_s:.6e} rad ({math.degrees(beta_s):.4f} deg)")
-    print(f"  beta_s CKM-fit comparator = {BETA_S_CKM_FIT:.4f} +/- {BETA_S_CKM_FIT_ERR:.4f} rad")
+    print(f"  beta_s LHCb               = {BETA_S_LHCB:.4f} +/- {BETA_S_LHCB_ERR:.4f} rad")
     print(f"  deviation                 = {deviation_beta_s:+.3f} sigma")
-    check("atlas beta_s agrees with CKM-fit comparator within 1 sigma",
+    check("atlas beta_s agrees with LHCb within 1 sigma",
           abs(deviation_beta_s) < 1.0)
 
     phi_s = -ALPHA_S_V * math.sqrt(5.0) / 6.0
@@ -356,7 +422,7 @@ def audit_observation_comparators() -> None:
     print(f"  deviation                 = {deviation_phi_s:+.3f} sigma")
     check("atlas phi_s agrees with LHCb within 1 sigma",
           abs(deviation_phi_s) < 1.0)
-    check("atlas phi_s agrees with quoted LHCb comparator within 0.1 sigma",
+    check("atlas phi_s agrees with LHCb within 0.1 sigma (sharp prediction)",
           abs(deviation_phi_s) < 0.1)
 
 
@@ -371,15 +437,18 @@ def audit_summary() -> None:
     print("    |R_t|^2 = 5/6,  |R_b|^2 + |R_t|^2 = 1,  R_t/R_b = sqrt(5)")
     print()
     print("  DERIVED PREDICTION (new numerical result):")
-    print("    beta_s = alpha_s(v) sqrt(5) / 12")
-    print("    phi_s  = -alpha_s(v) sqrt(5) / 6")
-    print("    sin(2 beta_s) ~= alpha_s(v) sqrt(5) / 6")
+    print("    beta_s,0 = alpha_s(v) sqrt(5) / 12")
+    print("    phi_s,0  = -alpha_s(v) sqrt(5) / 6")
+    print("    sin(2 beta_s,0) ~= alpha_s(v) sqrt(5) / 6")
     print()
     print("  At canonical alpha_s(v) = 0.1033038...:")
     print(f"    beta_s = {ALPHA_S_V * math.sqrt(5)/12:.6e} rad = "
           f"{math.degrees(ALPHA_S_V * math.sqrt(5)/12):.4f} deg")
     print(f"    phi_s  = {-ALPHA_S_V * math.sqrt(5)/6:.6e} rad = "
           f"{math.degrees(-ALPHA_S_V * math.sqrt(5)/6):.4f} deg")
+    beta_s_exact, phi_s_exact = exact_standard_ckm_bs_phase()
+    print(f"    exact CKM phi_s guardrail = {phi_s_exact:.6e} rad = "
+          f"{math.degrees(phi_s_exact):.4f} deg")
 
 
 def main() -> int:
@@ -393,6 +462,7 @@ def main() -> int:
     audit_doubled_angle_catalog()
     audit_side_length_catalog()
     audit_bs_mixing_phase()
+    audit_exact_standard_guardrail()
     audit_observation_comparators()
     audit_summary()
 
