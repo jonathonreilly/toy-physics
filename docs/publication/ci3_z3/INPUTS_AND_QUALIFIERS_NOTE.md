@@ -192,6 +192,13 @@ bridge layer beyond the exact structural core.
     support target `Q_l = 2/3`
   - exact claim is conditional: if the Koide target is granted, then
     `Q_l alpha_s(v)^2 = 4 |V_cb|^2`; this does not promote Koide closure
+- CKM Bernoulli `2/9` Koide-bridge support:
+  - promoted CKM `A^2`, `rho`, and pair/color counts only
+  - exact claim is CKM-side arithmetic: `K1`, `K2`, `K5`, and `K6` all read
+    `2/9`, and their simultaneous value is equivalent to
+    `N_pair=2`, `N_color=3` over positive integers
+  - the cross-sector Koide reading still depends on the open
+    `N_gen=N_color` bridge and is not a retained input
 - down-type CKM-dual mass ratios:
   - promoted CKM atlas/axiom package + GST + bounded `5/6` mass-ratio bridge; no observed
     masses as derivation inputs
