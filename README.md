@@ -117,6 +117,9 @@ questions:
   retained discrete evanescent-barrier and Schwarzschild-interior support,
   plus retained/admitted cosmology identities including `w = -1`, exact
   `R_base = 31/9` group-theory support for the bounded DM/cosmology cascade,
+  a bounded freeze-out-bypass eta support route with candidate
+  `m_DM = N_sites * v = 16 * v`, an honest SU(3) one-loop obstruction note
+  on the simplest `8/3` enhancement route,
   the FRW kinematic reduction to the open `H_inf/H_0` ratio, the
   matter-radiation equality identity `1 + z_mr = Omega_m,0/Omega_r,0`, and
   the retained active-neutrino-count support `N_eff = 3 + 0.046 = 3.046`

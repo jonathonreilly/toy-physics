@@ -114,7 +114,14 @@ therefore sharply named:
 > Candidates (already partly constructed on the branch):
 >   1. exact one-flavor theorem-native transport closure;
 >   2. PMNS reduced-surface selector closure;
->   3. combined transport + selector + normalization integration.
+>   3. combined transport + selector + normalization integration;
+>   4. bounded freeze-out-bypass support via the candidate structural mass
+>      identity `m_DM = N_sites * v = 16 * v ~ 3940 GeV`, which on the
+>      canonical surface gives `eta = C * m_DM^2` and a bounded `eta_pred`
+>      band that brackets `eta_obs`; see
+>      [`DM_ETA_FREEZEOUT_BYPASS_QUANTITATIVE_THEOREM_NOTE_2026-04-25.md`](DM_ETA_FREEZEOUT_BYPASS_QUANTITATIVE_THEOREM_NOTE_2026-04-25.md).
+>      The structural mass identity remains open (G1), and the route keeps
+>      bounded `x_F`, `alpha_X`, and Sommerfeld inputs even if G1 is solved.
 
 ## What is not claimed
 
