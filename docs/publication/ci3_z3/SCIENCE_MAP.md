@@ -126,6 +126,8 @@ Validate with:
   `phi_s = -alpha_s(v) sqrt(5)/6` and the NLO barred-triangle protected
   invariant `gamma_bar = arctan(sqrt(5))`, plus the Thales-mediated
   cross-system CP ratio `phi_s / sin(2 beta_d) = -alpha_s(v)/2`
+  and CP-product estimator
+  `alpha_s(v) = (18/5) sin(2 beta_d) sin(2 beta_s)` at atlas-leading order
 - derived quantitative lane:
   Higgs/vacuum package with explicit retention budget
 - bounded quantitative companions:

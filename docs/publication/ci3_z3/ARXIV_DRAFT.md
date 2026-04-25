@@ -634,7 +634,12 @@ $$
 
 This uses no fitted CKM or $B$-mixing input. It should be read as an
 atlas-leading Standard Model phase prediction, not as an all-orders theorem
-including higher-order Wolfenstein, hadronic, or BSM mixing effects.
+including higher-order Wolfenstein, hadronic, or BSM mixing effects. Combined
+with the Thales-mediated $B_d/B_s$ ratio, the same surface gives the
+CP-product estimator
+$\alpha_s(v)=(18/5)\sin(2\beta_d)\sin(2\beta_s)$, a consistency check against
+the canonical plaquette/CMT value rather than an independent all-order QCD
+coupling derivation.
 
 The promoted package reports
 
@@ -647,6 +652,9 @@ The promoted package reports
 - atlas-leading $|V_{tb}|_0 = 0.99907$,
 - atlas-leading $\phi_s(B_s) = -0.03850\,\mathrm{rad}$,
 - Thales-mediated $\phi_s/\sin(2\beta_d) = -0.05165$,
+- CP-product estimator
+  $\alpha_s(v)=(18/5)\sin(2\beta_d)\sin(2\beta_s)$
+  (PDG/LHCb 2024 baseline $0.098\pm0.056$ versus canonical $0.10330$),
 - NLO protected $\bar\gamma = 65.905^\circ$ with
   $\bar\rho=0.16236$, $\bar\eta=0.36305$,
 - $\delta = 65.905^\circ$,
@@ -734,7 +742,7 @@ The fastest way to read the quantitative package is Table 1.
 | Electroweak scale | $v = 246.282818290129\,\mathrm{GeV}$ | exact theorem + canonical same-surface evaluation |
 | Strong coupling | $\alpha_s(M_Z)=0.1181$ | retained standalone quantitative lane |
 | Electroweak normalization | $g_1(v)=0.4644$, $g_2(v)=0.6480$ | retained standalone quantitative lane |
-| CKM | $\lambda^2=\alpha_s(v)/2$, $A^2=2/3$, atlas-leading $|V_{ud}|_0=0.973824$, $|V_{us}|_0=0.22727$, $|V_{cb}|=0.04217$, $|V_{ub}|_0=0.003913$, $\phi_s(B_s)=-0.03850\,\mathrm{rad}$, $\phi_s/\sin(2\beta_d)=-0.05165$, NLO protected $\bar\gamma=65.905^\circ$ | promoted algebraic package |
+| CKM | $\lambda^2=\alpha_s(v)/2$, $A^2=2/3$, atlas-leading $|V_{ud}|_0=0.973824$, $|V_{us}|_0=0.22727$, $|V_{cb}|=0.04217$, $|V_{ub}|_0=0.003913$, $\phi_s(B_s)=-0.03850\,\mathrm{rad}$, $\phi_s/\sin(2\beta_d)=-0.05165$, CP-product $\alpha_s$ estimator, NLO protected $\bar\gamma=65.905^\circ$ | promoted algebraic package |
 | Top sector | $y_t(v)=0.9176$, $m_t^{\mathrm{pole}}=172.57 \pm 6.50\,\mathrm{GeV}$ | retained quantitative lane |
 | Higgs sector | $m_H=125.1\,\mathrm{GeV}$ with retention analysis $125.04 \pm 3.17\,\mathrm{GeV}$ | derived quantitative lane |
 | Confinement readout | $\sqrt{\sigma}\approx 465\,\mathrm{MeV}$ | bounded quantitative readout on exact structural theorem |

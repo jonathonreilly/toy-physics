@@ -48,7 +48,9 @@ questions:
   `phi_s = -alpha_s(v) sqrt(5)/6 = -0.03850 rad` and the NLO barred-triangle
   protected invariant `gamma_bar = arctan(sqrt(5))` with
   `rho_bar=(4-alpha_s(v))/24`, plus the Thales-mediated cross-system CP ratio
-  `phi_s / sin(2 beta_d) = -alpha_s(v)/2`; and bounded
+  `phi_s / sin(2 beta_d) = -alpha_s(v)/2` and CP-product estimator
+  `alpha_s(v) = (18/5) sin(2 beta_d) sin(2 beta_s)` at atlas-leading order;
+  and bounded
   confinement-string readout; the absolute
   lattice scale is tracked explicitly on a dedicated Planck-scale lane as the
   current package pin `a^(-1) = M_Pl` on the physical-lattice reading, with a

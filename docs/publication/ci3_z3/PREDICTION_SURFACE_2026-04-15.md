@@ -65,6 +65,9 @@ closes.
     `phi_s = -alpha_s(v) sqrt(5)/6 = -0.03850 rad`
   - Thales-mediated atlas-leading CP ratio
     `phi_s / sin(2 beta_d) = -alpha_s(v)/2 = -0.05165`
+  - CP-product atlas-leading estimator
+    `alpha_s(v) = (18/5) sin(2 beta_d) sin(2 beta_s)`, with
+    PDG/LHCb 2024 baseline `0.098 +/- 0.056` versus canonical `0.10330`
   - NLO barred-triangle protected invariant
     `gamma_bar = gamma_0 = arctan(sqrt(5)) = 65.905 deg`, with
     `rho_bar = (4-alpha_s(v))/24`
@@ -86,6 +89,7 @@ closes.
     [CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md](../../CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
     [CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md](../../CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md),
     [CKM_THALES_CROSS_SYSTEM_CP_RATIO_THEOREM_NOTE_2026-04-25.md](../../CKM_THALES_CROSS_SYSTEM_CP_RATIO_THEOREM_NOTE_2026-04-25.md),
+    [CKM_CP_PRODUCT_ALPHA_S_CROSS_SECTOR_EXTRACTION_THEOREM_NOTE_2026-04-25.md](../../CKM_CP_PRODUCT_ALPHA_S_CROSS_SECTOR_EXTRACTION_THEOREM_NOTE_2026-04-25.md),
     [CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md](../../CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md)
 - confinement readout on top of the exact graph-first confinement theorem:
   - `sqrt(sigma) ≈ 465 MeV`

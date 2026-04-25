@@ -68,6 +68,7 @@ python3 scripts/frontier_ckm_second_row_magnitudes.py
 python3 scripts/frontier_ckm_third_row_magnitudes.py
 python3 scripts/frontier_ckm_bs_mixing_phase_derivation.py
 python3 scripts/frontier_ckm_thales_cross_system_cp_ratio.py
+python3 scripts/frontier_ckm_cp_product_alpha_s_cross_sector_extraction.py
 python3 scripts/frontier_ckm_neutron_edm_bound.py
 ```
 

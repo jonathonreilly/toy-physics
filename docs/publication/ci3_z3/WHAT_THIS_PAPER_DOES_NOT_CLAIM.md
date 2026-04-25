@@ -69,10 +69,11 @@ The paper does **not** claim:
 - that the CKM first-, second-, or third-row atlas-leading monomials are exact
   all-orders standard-matrix entries; the finite-`lambda` row readouts are
   retained as separate guardrails.
-- that the B_s mixing phase or Thales-mediated B_d/B_s CP-ratio identities
-  include all higher-order Wolfenstein, exact-sine, hadronic, or BSM mixing
-  effects; they are atlas-leading Standard Model phase predictions from the
-  promoted CKM surface.
+- that the B_s mixing phase, Thales-mediated B_d/B_s CP-ratio, or CP-product
+  alpha_s estimator include all higher-order Wolfenstein, exact-sine, hadronic,
+  or BSM mixing effects; they are atlas-leading Standard Model phase
+  predictions from the promoted CKM surface, and the CP-product estimator does
+  not replace the canonical plaquette/CMT alpha_s determination.
 - a full retained neutrino point-prediction package for the solar gap, PMNS
   angles, Majorana phases, or absolute mass sum.
 - that the charged-lepton Koide A1/radian bridge is closed by the exact
