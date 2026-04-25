@@ -3,7 +3,7 @@
 **Branch:** `claude/ai-methodology-capture-2026-04-25` (off `origin/main` at `9d0fbabf`)
 **Date:** 2026-04-25
 **Status:** RAW INFO CAPTURE — to be cleaned, groomed, and organized later
-**Scope:** Claude/Anthropic + Codex/OpenAI raw capture on this pass. Other tools (Gemini, etc.) will be added if used.
+**Scope:** Claude/Anthropic + Codex/OpenAI raw capture on this pass. Both tools now have machine-local raw packets in `docs/ai_methodology/raw/` (Claude side from the `jonreilly` machine, Codex side from `~/.codex`). Other tools (Gemini, etc.) will be added if used.
 
 This note is the seed file for the AI-methodology paper that frames the Cl(3)/Z³ retained content as a case study in AI-assisted theoretical physics. The objective on this pass is **information capture, not synthesis**. Subsequent passes will compress, organize, and shape into a publishable methodology paper.
 
@@ -252,6 +252,18 @@ The following raw extracts are produced on this info-capture pass. Each file is 
 - [docs/ai_methodology/raw/codex_review_structure.md](./ai_methodology/raw/codex_review_structure.md) — **raw review-loop evidence** (repo review workflow, retainability note anchors, `review.md` inventory, methodology-branch review packet excerpt)
 - [docs/ai_methodology/raw/codex_repo_hygiene.md](./ai_methodology/raw/codex_repo_hygiene.md) — **raw repo-hygiene evidence** (`origin/codex/*` branch inventory, live `codex/*` worktree inventory, recent `origin/main` landing cadence)
 
+### 5.4b Claude raw capture, machine-local (this pass)
+
+Companion four-file packet for the Claude/Anthropic side of the workflow,
+captured directly from the `/Users/jonreilly/` machine (separate machine from
+the `/Users/jonBridger/` machine that produced the prompt-extract files in
+§5.1):
+
+- [docs/ai_methodology/raw/claude_machine_dump.md](./ai_methodology/raw/claude_machine_dump.md) — **machine-local Claude/Anthropic store inventory** (`~/.claude` top-level objects, project-store sizes and counts, largest session jsonl files, memory store, user-global rules and commands, active plugins, current session evidence)
+- [docs/ai_methodology/raw/claude_prompt_capture.md](./ai_methodology/raw/claude_prompt_capture.md) — **raw Claude prompt evidence from the `jonreilly` machine**, with verbatim excerpts from the current capture session, adjacent live worktrees (`crazy-pascal`, `romantic-chatterjee`, `zen-turing`), and a representative subagent invocation
+- [docs/ai_methodology/raw/claude_review_structure.md](./ai_methodology/raw/claude_review_structure.md) — **raw review-loop evidence on the Claude side** (incoming `review.md` of this very branch, repo-side `*_REVIEW_PACKET_*.md` inventory, branch-summary / session-synthesis surfaces, project-level review-driving slash commands, cross-tool review interaction in commit log, memory-encoded review-feedback rule)
+- [docs/ai_methodology/raw/claude_repo_hygiene.md](./ai_methodology/raw/claude_repo_hygiene.md) — **raw repo-hygiene evidence on the Claude side** (35 remote `origin/claude/*` branches, branch-naming families, live worktree inventory, project-store fanout vs. attached worktrees, recent `origin/main` landing cadence with the `land <X>` selective-merge pattern, cleanup-style hygiene commits, authorship histogram, recent Claude-attributed commits with PASS counts and grade tags)
+
 ### 5.5 Memory + accountability
 
 - [docs/ai_methodology/raw/canonical_framing_paragraph.md](./ai_methodology/raw/canonical_framing_paragraph.md) — **canonical AI-methodology framing paragraph adopted for every paper submission from this framework** (human-authored 2026-04-25). To appear verbatim (with `[repo URL]` substituted) in arXiv preprints, journal manuscripts, conference papers, and supplementary methods sections. Paper-facing successor to the longer package-level note below.
@@ -264,11 +276,14 @@ The following raw extracts are produced on this info-capture pass. Each file is 
 
 ### 5.7 Total info-capture volume
 
-**40,741 lines, ~2.4 MB of raw verbatim data** across **16 files** in
+**41,804 lines of raw verbatim data** across **20 files** in
 `docs/ai_methodology/raw/`.
 
 The raw archive now includes both the Claude-side and Codex-side evidence
-surfaces in one place under `docs/ai_methodology/raw/`.
+surfaces in one place under `docs/ai_methodology/raw/`. The Claude-side
+material is split between earlier prompt-extract files (§5.1, captured from
+the `jonBridger` machine) and the four-file machine-local packet (§5.4b,
+captured from the `jonreilly` machine). The Codex-side material is in §5.4.
 
 ---
 
