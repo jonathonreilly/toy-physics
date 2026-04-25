@@ -169,6 +169,21 @@ Current blocker:
   `1/4`, via
   [BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md](./BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md).
 
+2026-04-25 residual progress:
+
+- [AREA_LAW_MULTIPOCKET_SELECTOR_NO_GO_NOTE_2026-04-25.md](./AREA_LAW_MULTIPOCKET_SELECTOR_NO_GO_NOTE_2026-04-25.md)
+  closes the obvious residual multipocket loophole as a framework derivation:
+  invented multipocket Widom carriers can be calibrated to `c_Widom = 1/4`,
+  but only by adding a transverse pocket-measure selector, such as `mu = 1/2`,
+  or an exact Schur/direct-sum sector-weight selector. The retained
+  `Cl(3)/Z^3` primitive boundary trace `4/16` does not derive either selector.
+
+Residual Target 2 requirement:
+
+- derive the pocket-measure, sector-weight, or gapped edge-entropy selector
+  from the primitive boundary semantics; otherwise the multipocket route is a
+  tuned comparison family, not a Bekenstein-Hawking carrier theorem.
+
 ### Target 3: one-axiom information/action bridge
 
 Framework-compression route.
