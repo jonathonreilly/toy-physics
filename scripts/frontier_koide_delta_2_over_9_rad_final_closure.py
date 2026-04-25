@@ -295,29 +295,31 @@ def main() -> int:
         print(f"  [{'PASS' if ok else 'FAIL'}] {label}")
 
     print()
-    print("Final closure flags:")
-    print("  KOIDE_BRANNEN_DELTA_2_OVER_9_RAD_RETAINED_CLOSURE_ON_ORIGIN_MAIN=TRUE")
-    print("  Q_L_EQ_2_OVER_3_RETAINED_CLOSURE_ON_ORIGIN_MAIN=TRUE")
-    print("  P_Q_EQ_HALF_CLOSED_VIA_OP_LOCALITY=TRUE")
+    print("Honest closeout flags (post-review-response, see")
+    print("docs/KOIDE_DELTA_2_OVER_9_RAD_REVIEW_RESPONSE_NOTE_2026-04-25.md):")
+    print("  KOIDE_BRANNEN_DELTA_2_OVER_9_RAD_RETAINED_FULL_CLOSURE_ON_ORIGIN_MAIN=FALSE")
+    print("  KOIDE_BRANNEN_DELTA_2_OVER_9_RAD_CONDITIONAL_CLOSURE_ON_RETAINED_MAIN=TRUE")
+    print("  CONDITION_REQUIRED=SOURCE_DOMAIN_RETENTION_LAW_REDUCED_TWO_SLOT_CARRIER")
     print("  N_COLOR_EQ_N_GEN_EQ_3_RETAINED_VIA_TARGET_B=TRUE")
-    print("  APRIL_20_IDENTIFICATION_RETAINED=TRUE")
-    print("  P_A1_CONVENTION_RESIDUAL_MOOT_UNDER_BERRY_HOLONOMY_READING=TRUE")
-    print("  NUMBER_OF_OPEN_PRIMITIVES_FOR_DELTA_CLOSURE=0")
-    print("  DELTA_CLOSURE_CHAIN_IS_FULLY_RETAINED_ON_MAIN=TRUE")
-    print("  NO_NEW_FRAMEWORK_AXIOM_INTRODUCED=TRUE")
+    print("  NUMBER_OF_OPEN_PRIMITIVES_FOR_DELTA_CLOSURE=1")
+    print("  SINGLE_REMAINING_PRIMITIVE=SOURCE_DOMAIN_RETENTION_REDUCED_VS_UNREDUCED_CARRIER")
+    print("  PRIOR_FULL_CLOSURE_FRAMING_DOWNGRADED_PER_REVIEW=TRUE")
 
     if n_fail == 0:
         print()
         print("=" * 88)
-        print("VERDICT: δ_Brannen = 2/9 rad CLOSED on retained main, by composition of")
-        print("  retained framework theorems (A0 + 8 main + 3 branch). No new axiom,")
-        print("  no postulate, no R/Z lift. The audit's P_A1 framing is moot under")
-        print("  the live April 20 IDENTIFICATION (δ = Berry holonomy).")
+        print("VERDICT (post-review): δ_Brannen = 2/9 rad CONDITIONAL closure on retained")
+        print("  main. The algebraic chain (A0 + 8 main + 3 branch) verifies in 16/16,")
+        print("  but is conditional on the source-domain retention law selecting the")
+        print("  reduced two-slot carrier. That primitive remains open in the framework")
+        print("  (per MRU demotion: Path A failed; per kappa note §4: 'single-named")
+        print("  residue'). Target B retains cross-sector identification unconditionally;")
+        print("  open-primitive count for δ closure reduced from 2 to 1.")
         print("=" * 88)
         return 0
     else:
         print()
-        print(f"VERDICT: closure not all verified — {n_fail} FAIL.")
+        print(f"VERDICT: chain algebra not all verified — {n_fail} FAIL.")
         return 1
 
 
