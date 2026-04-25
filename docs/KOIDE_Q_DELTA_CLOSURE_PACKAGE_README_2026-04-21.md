@@ -58,7 +58,24 @@ This is a useful tightening, not retained native Koide closure. The remaining
 > derive physical source-free reduced-carrier selection for the charged-lepton
 > lane.
 
-See `docs/KOIDE_NATIVE_DIMENSIONLESS_REVIEW_PACKET_2026-04-24.md`.
+**2026-04-25 source-domain addendum.** The full Koide workstream adds one
+further safe tightening.  Strict onsite `C3`-invariant scalar source functions
+on the three-generation orbit are only common scalars, so an onsite-only
+undeformed source grammar would erase the residual `Z` coordinate and
+conditionally close the `Q` support chain.  The current retained
+central/projected commutant source grammar, however, still admits
+`Z = P_plus - P_perp`; the exact counterdomain includes
+`z = -1/3 -> Q = 1, K_TL = 3/8`.  Therefore this lands as a source-domain
+no-go synthesis, not as retained `Q` closure.  The residual theorem is now:
+
+> derive that the physical undeformed charged-lepton scalar source domain is
+> the onsite function algebra, not the broader `C3` commutant/projected source
+> domain.
+
+See `docs/KOIDE_NATIVE_DIMENSIONLESS_REVIEW_PACKET_2026-04-24.md`,
+`docs/KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md`,
+and
+`docs/KOIDE_Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS_NOTE_2026-04-25.md`.
 
 **Executability guarantee.** Every PASS check across the runner stack is an
 actual executable computation: symbolic via sympy, numeric via PDG lepton
@@ -129,6 +146,13 @@ The April 25 criterion theorem sharpens the same residue one step more:
 > on the admitted normalized reduced carrier, zero source is exactly
 > `Z`-erasure and is exactly equivalent to `Q = 2/3`; what remains open is the
 > physical theorem selecting that source-free reduced-carrier representative.
+
+The April 25 onsite source-domain synthesis sharpens the residue again:
+
+> strict onsite `C3` source functions would select that representative, but
+> the retained central/projected source grammar still admits the nonclosing
+> `Z` direction; what remains open is the source-domain theorem excluding
+> `Z` as undeformed charged-lepton source data.
 
 The April 22 `O_h` covariance no-go sharpens the structural side as well:
 
@@ -288,8 +312,9 @@ above.
 | `frontier_koide_brannen_route3_geometry_support.py` | Brannen support: exact selected-line geometry + conditional Route-3 support | 30/30 |
 | `frontier_koide_brannen_dirac_support.py` | Brannen support: explicit finite-lattice `L=3` Wilson-Dirac illustration | 11/11 |
 | `frontier_koide_q_background_zero_z_erasure_criterion.py` | `Q` support: exact background-zero / `Z`-erasure criterion on admitted reduced carrier | 25/25 |
+| `frontier_koide_q_onsite_source_domain_no_go_synthesis.py` | `Q` support/no-go: onsite source-domain separation from retained commutant `Z` | 23/23 |
 
-**Total: 267 PASS, 0 FAIL.**
+**Total: 290 PASS, 0 FAIL.**
 
 ### Notes
 
@@ -299,6 +324,7 @@ above.
 - `docs/KOIDE_REVIEWER_STRESS_TEST_NOTE_2026-04-21.md`
 - `docs/KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`
 - `docs/KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md`
+- `docs/KOIDE_Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS_NOTE_2026-04-25.md`
 
 ---
 
@@ -312,18 +338,22 @@ above.
 6. `docs/KOIDE_Q_EQ_3DELTA_IDENTITY_NOTE_2026-04-21.md`.
 7. `docs/KOIDE_REVIEWER_STRESS_TEST_NOTE_2026-04-21.md`.
 8. `docs/KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`.
+9. `docs/KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md`.
+10. `docs/KOIDE_Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS_NOTE_2026-04-25.md`.
 
 ---
 
 ## Bottom line
 
 - `Q = 2/3`: exact source-free / `Z`-erasure criterion on the admitted
-  normalized reduced carrier, but still not retained closure.
+  normalized reduced carrier plus exact onsite-vs-commutant source-domain
+  separation, but still not retained closure.
 - `δ = 2/9`: strongest current executable support, not yet retained
   closure.
 - `Q = 3·δ`: exact compatibility identity between the two support routes.
-- Remaining open behind `Q`: the physical source-free reduced-carrier
-  selection theorem.
+- Remaining open behind `Q`: the physical source-domain theorem selecting
+  onsite/source-free reduced-carrier data over the retained commutant `Z`
+  source.
 - Remaining open behind `δ`: the physical Brannen-phase bridge
   `δ_physical = η_APS`.
 - `m_*` / `w/v` remains downstream of the Brannen-phase bridge.

@@ -188,7 +188,10 @@ Current charged-lepton status:
 
 - `Q = 2/3` support is strong, but the physical readout is still reduced to a
   source-free reduced-carrier selection theorem; the background-zero /
-  `Z`-erasure algebra on that carrier is now an exact criterion theorem
+  `Z`-erasure algebra on that carrier is now an exact criterion theorem, and
+  strict onsite `C3` source functions would erase `Z`; retained
+  central/projected commutant sources still admit `Z`, so the source-domain
+  theorem remains open
 - `delta = 2/9` support is strong, but the physical Brannen endpoint is still
   reduced to the selected-line local boundary-source law plus based endpoint
   section

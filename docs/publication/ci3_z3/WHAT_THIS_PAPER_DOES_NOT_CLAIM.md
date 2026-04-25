@@ -124,10 +124,11 @@ The current package keeps:
 - a fully retained Higgs/vacuum UV-to-IR theorem;
 - bounded/conditional cosmology;
 - one remaining flagship bridge package: charged-lepton Koide, now sharpened
-  by the exact background-zero / `Z`-erasure criterion for `Q` while still
-  requiring physical source-free reduced-carrier selection, plus selected-line
-  local boundary-source, based endpoint, and Type-B rational-to-radian readout
-  for `delta`, without promoting full retained closure.
+  by the exact background-zero / `Z`-erasure criterion and onsite-vs-commutant
+  source-domain no-go for `Q` while still requiring physical source-domain /
+  source-free reduced-carrier selection, plus selected-line local
+  boundary-source, based endpoint, and Type-B rational-to-radian readout for
+  `delta`, without promoting full retained closure.
 
 ## 5. Prediction boundary
 
