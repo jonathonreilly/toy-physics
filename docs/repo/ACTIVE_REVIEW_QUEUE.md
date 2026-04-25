@@ -33,6 +33,10 @@ Current science/open-lane follow-ups:
 - Wilson two-body lane: full both-masses law and action-reaction remain open
 - boundary-law / holographic lane: keep the effect bounded and do not overread
   it as a holography derivation
+- Planck Target 2 / area-law carrier: the simple-fiber Widom class is now
+  closed negatively; any positive `1/4` entropy carrier needs a physical
+  multi-pocket/multi-interval law or a gapped horizon-sector primitive-boundary
+  theorem
 - memory lane: protocol- and geometry-stable observable remains open
 - emergent-geometry growth: multi-size, multi-seed stability remains open
 
