@@ -199,6 +199,12 @@ bridge layer beyond the exact structural core.
     `N_pair=2`, `N_color=3` over positive integers
   - the cross-sector Koide reading still depends on the open
     `N_gen=N_color` bridge and is not a retained input
+- CKM `n/9` structural-family Koide-bridge support:
+  - promoted CKM `A^2`, `rho`, `eta^2`, and pair/color counts only
+  - exact claim is CKM-side arithmetic: explicit `F_n=n/9` readouts for
+    `n=1,...,9`, with two retained-input paths to `F5=5/9`
+  - the note does not derive a Koide `n/9` family and does not promote
+    `N_gen=N_color`; the cross-sector reading is conditional support
 - down-type CKM-dual mass ratios:
   - promoted CKM atlas/axiom package + GST + bounded `5/6` mass-ratio bridge; no observed
     masses as derivation inputs
