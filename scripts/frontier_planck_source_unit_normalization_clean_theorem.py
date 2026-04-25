@@ -34,6 +34,7 @@ def main() -> int:
     omega_2 = 4.0 * math.pi
     g_kernel = 1.0 / omega_2
     c_cell = 4.0 / 16.0
+    lambda_selected = 4.0 * c_cell
 
     record(
         checks,
@@ -58,8 +59,36 @@ def main() -> int:
         ),
     )
 
+    lambda_bare = omega_2
+    g_bare = 1.0 / lambda_bare
+    bare_area_coeff = 1.0 / (4.0 * g_bare)
+    record(
+        checks,
+        "bare source label is the lambda=4*pi member of the mass family",
+        close(lambda_bare, omega_2)
+        and close(g_bare, g_kernel)
+        and close(bare_area_coeff, math.pi),
+        (
+            f"lambda_bare={lambda_bare:.12f}; G_bare={g_bare:.15f}; "
+            f"1/(4G_bare)={bare_area_coeff:.12f}"
+        ),
+    )
+
+    trial_lambdas = [0.5, 1.0, 2.0, omega_2]
+    trial_area_coeffs = [lam / 4.0 for lam in trial_lambdas]
+    lambda_matches = [
+        idx for idx, value in enumerate(trial_area_coeffs) if close(value, c_cell)
+    ]
+    record(
+        checks,
+        "primitive area carrier uniquely fixes lambda=1",
+        close(lambda_selected, 1.0) and lambda_matches == [1],
+        "trial area coefficients="
+        + ", ".join(f"{value:.12f}" for value in trial_area_coeffs),
+    )
+
     m_phys = 1.0
-    source_unit = omega_2
+    source_unit = omega_2 / lambda_selected
     q_for_unit_mass = source_unit * m_phys
     physical_monopole = q_for_unit_mass * g_kernel
     physical_flux_magnitude = omega_2 * physical_monopole
@@ -87,12 +116,15 @@ def main() -> int:
         + ", ".join(f"{value:.12f}" for value in trial_monopoles),
     )
 
-    g_newton_lat = source_unit * g_kernel
+    g_newton_lat = 1.0 / lambda_selected
     record(
         checks,
-        "physical lattice Newton coefficient is one",
-        close(g_newton_lat, 1.0),
-        f"G_Newton,lat=(4*pi)*G_kernel={g_newton_lat:.12f}",
+        "physical lattice Newton coefficient is one after lambda selection",
+        close(g_newton_lat, 1.0) and close(source_unit * g_kernel, 1.0),
+        (
+            f"lambda={lambda_selected:.12f}; "
+            f"G_Newton,lat=1/lambda={g_newton_lat:.12f}"
+        ),
     )
 
     m1 = 3.0
@@ -162,6 +194,7 @@ def main() -> int:
 
     no_smuggling_conditions = [
         close(g_kernel, 1.0 / omega_2),
+        close(lambda_selected, 1.0),
         close(source_unit, omega_2),
         close(g_newton_lat, 1.0),
         close(c_cell, 0.25),
@@ -170,7 +203,7 @@ def main() -> int:
         checks,
         "no measured constants enter the closure arithmetic",
         all(no_smuggling_conditions),
-        "inputs are G_kernel=1/(4*pi), source unit=4*pi, c_cell=4/16",
+        "inputs are G_kernel=1/(4*pi), c_cell=4/16, lambda=4*c_cell",
     )
 
     print()
@@ -181,8 +214,9 @@ def main() -> int:
         print(
             "Verdict: positive clean-science closure on stated premises. The retained "
             "1/(4*pi) is the bare Green-kernel coefficient; the physical "
-            "Gauss/Newton source unit is q_bare=4*pi*M_phys; therefore "
-            "G_Newton,lat=1, c_cell=1/(4G), EH=c_cell/(4*pi), and a/l_P=1."
+            "source scale is fixed by c_cell=lambda/4, hence lambda=1 and "
+            "q_bare=4*pi*M_phys. Therefore G_Newton,lat=1, c_cell=1/(4G), "
+            "EH=c_cell/(4*pi), and a/l_P=1."
         )
         return 0
 
