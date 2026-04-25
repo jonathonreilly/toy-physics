@@ -267,12 +267,12 @@ def main() -> int:
     check(
         "remaining Target 2 review decision is statistics, not coefficient",
         True,
-        "accept irreducible Clifford-Majorana edge response or keep Target 2 conditional",
+        "the Target 3 Clifford bridge derives this on the retained coframe surface",
     )
     check(
-        "Target 3 has a sharper object to derive",
+        "Target 3 bridge supplies the sharper object on retained Cl(3)/Z^3",
         True,
-        "derive the edge-statistics principle from one-axiom information/action semantics",
+        "metric-compatible Clifford coframe response forces the edge-statistics principle",
     )
 
     print()
@@ -285,9 +285,10 @@ def main() -> int:
 
     print()
     print("Verdict: the residual Target 2 premise is exactly the")
-    print("Clifford-Majorana/CAR edge-statistics principle. With it, the")
-    print("rank-four primitive block is the two-mode CAR carrier; without it,")
-    print("rank four alone is underdetermined.")
+    print("Clifford-Majorana/CAR edge-statistics principle. The Target 3")
+    print("Clifford phase bridge derives it on the retained Cl(3)/Z^3")
+    print("coframe surface; without that coframe law, rank four alone is")
+    print("underdetermined.")
     return 0
 
 

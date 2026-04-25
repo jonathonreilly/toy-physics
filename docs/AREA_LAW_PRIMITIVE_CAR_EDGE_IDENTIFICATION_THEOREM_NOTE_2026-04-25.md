@@ -1,7 +1,8 @@
 # Area-Law Primitive CAR Edge Identification Theorem Note
 
 **Date:** 2026-04-25
-**Status:** conditional Target 2 bridge theorem
+**Status:** Target 2 bridge theorem; CAR premise discharged on retained
+`Cl(3)/Z^3` coframe surface by the Target 3 Clifford phase bridge
 **Runner:** `scripts/frontier_area_law_primitive_car_edge_identification.py`
 
 ## Purpose
@@ -175,16 +176,24 @@ primitive-CAR edge axioms. It upgrades the earlier parity-gate theorem from
 "a candidate multipocket selector" to "the unique minimal local-CAR edge
 carrier."
 
-The remaining question is exactly whether the primitive-CAR edge axioms are
-accepted as native `Cl(3)/Z^3` horizon semantics. If accepted, Target 2 has a
-positive exact entanglement carrier. If rejected, the result remains a sharp
-conditional theorem and the retained no-go packet still describes the
-selector-free surface.
+At the time of this bridge theorem, the remaining question was exactly whether
+the primitive-CAR edge axioms are accepted as native `Cl(3)/Z^3` horizon
+semantics. The Target 3 Clifford phase bridge now discharges that question on
+the retained coframe surface. If that coframe response is rejected or stripped
+away, this result remains a sharp conditional theorem and the retained no-go
+packet still describes the selector-free surface.
 
 [AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md](./AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md)
 tightens this question further: primitive-CAR semantics are equivalent to
 accepting irreducible Clifford-Majorana edge statistics on the rank-four
 active block. Rank four alone does not force that statistics choice.
+
+[PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md](./PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md)
+discharges that remaining premise on the retained `Cl(3)/Z^3` coframe surface:
+metric-compatible primitive coframe response forces the complex `Cl_4`
+relations on `P_A H_cell`, and the rank-four irreducible module is equivalent
+to the two-mode CAR carrier. On a stripped Hilbert-only surface the conditional
+wording still applies.
 
 ## Relation to retained no-gos
 

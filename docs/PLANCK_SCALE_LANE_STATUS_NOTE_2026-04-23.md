@@ -246,12 +246,16 @@ Current blocker:
 
 Residual Target 2 requirement:
 
-- promote or reject the primitive Clifford-Majorana/CAR edge-statistics
-  principle. If accepted, Target 2 has a positive Widom carrier with exact
-  `1/4`. If rejected, the retained status falls back to the no-go packet and
-  the remaining routes are a transcendental Schmidt-spectrum selector, a
-  different multipocket Widom selector, or a justified non-von-Neumann
-  primitive-boundary entropy functional.
+- resolved on the retained `Cl(3)/Z^3` coframe surface by
+  `PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md`: the
+  metric-compatible primitive coframe response polarizes to the complex
+  `Cl_4` relations on `P_A H_cell`; since `rank(P_A)=4`, the active block is
+  the irreducible `Cl_4(C) ~= M_4(C)` module, equivalently two complex CAR
+  modes. Thus the native edge-statistics principle is derived from the
+  retained Clifford coframe, not added as a coefficient axiom.
+- if a stripped Hilbert-only review surface removes the Clifford coframe
+  response, the Target 3 boundary theorem still applies and Target 2 should
+  be kept conditional there.
 
 ### Target 3: one-axiom information/action bridge
 
@@ -263,7 +267,7 @@ Goal:
   information/Hilbert reduction and connect that unit to the gravity/action
   normalization.
 
-Current blocker:
+Former blocker:
 
 - the one-axiom notes reduce structure and physical-lattice ontology, but do
   not yet fix an absolute unit map.
@@ -287,8 +291,9 @@ Current blocker:
   primitive Clifford-Majorana/CAR edge-statistics principle on `P_A H_cell`;
 - deriving that principle from a one-axiom information/action bridge would
   remove the last conditional premise from the positive Target 2 chain;
-- without such a derivation, Target 3 remains open and Target 2 should be
-  worded as conditional on native edge statistics.
+- without such a derivation, the stripped Hilbert-only Target 3 surface
+  remains open and Target 2 should be worded as conditional on native edge
+  statistics.
 
 2026-04-25 Target 3 boundary theorem:
 
@@ -303,29 +308,58 @@ Current blocker:
   principle, because the same rank-four block `P_A H_cell ~= C^4` admits CAR,
   two-qubit, and ququart semantics while satisfying the same Hilbert/unitary
   information-flow axioms;
-- consequently Target 3 remains open as a positive closure problem. The next
-  load-bearing theorem must derive the edge-statistics principle from a
-  stronger native input, derive an action-unit metrology map that breaks the
-  rescaling degeneracy, or record those items as added carrier axioms.
+- consequently the stripped Hilbert-only surface cannot close Target 3. A
+  positive retained-surface theorem must restore or derive a stronger native
+  input, derive an action-unit metrology map that breaks the rescaling
+  degeneracy, or record those items as added carrier axioms.
+
+2026-04-25 positive Target 3 closure on the retained `Cl(3)/Z^3` surface:
+
+- `PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md` restores
+  the native Clifford coframe input that the Hilbert-only boundary theorem
+  deliberately stripped away;
+- metric-compatible primitive coframe response gives
+  `D(v)^2=||v||^2 I`, hence by polarization
+  `{D(u),D(v)}=2<u,v>I`, the complex `Cl_4` relation on the time-locked
+  primitive coframe `(t,n,tau_1,tau_2)`;
+- on `K=P_A H_cell` with `dim K=4`, this is the irreducible `Cl_4(C)` module,
+  so oriented Majorana pairing gives the two complex CAR modes required by
+  the primitive edge theorem;
+- non-CAR rank-four readings such as two-qubit or ququart semantics are
+  excluded because they fail the metric-compatible coframe law;
+- the Target 2 carrier is therefore native to the retained Clifford coframe:
+  `c_Widom=3/12=1/4=c_cell`;
+- together with the retained source-unit normalization support theorem, the
+  same structural carrier gives `G_Newton,lat=1` and `a/l_P=1` in the
+  package's natural phase/action units;
+- scope guardrail: this is not a derivation of the SI decimal value of
+  `hbar`, and it does not contradict the Hilbert-only no-go. The closed
+  statement is structural closure on the retained `Cl(3)/Z^3` coframe surface.
 
 ## 6. Package rule on `main`
 
-Until one of the three targets closes, the correct package statement is:
+After the Target 3 Clifford phase bridge, the correct package statement is:
 
-- `a^(-1) = M_Pl` is a **current package pin on the physical-lattice reading**
-- it is **not yet** a theorem of the minimal accepted stack
-- the new conditional-completion theorem records exactly what would be needed
-  to promote the pin: accept or derive the primitive boundary count as the
-  gravitational boundary/action carrier
+- `a^(-1) = M_Pl` / `a/l_P=1` is a structural theorem on the retained
+  `Cl(3)/Z^3` coframe surface with natural phase/action units
+- it is **not** a derivation of the SI decimal value of `hbar` or a
+  Hilbert-only theorem with the Clifford coframe stripped away
+- the primitive boundary count is now identified with the microscopic
+  gravitational and entanglement boundary/action carrier through the
+  Clifford-CAR bridge:
+  `P_A H_cell -> Cl_4(C) irreducible module -> F(C^2) -> c_Widom=c_cell=1/4`
 - the source-unit normalization support theorem resolves the bare-source
-  `4 pi` mismatch inside that conditional packet, but it does not remove the
-  carrier premise itself
-- the finite-boundary density extension is a retained positive support theorem
-  on that conditional carrier surface
+  `4 pi` mismatch on the same carrier surface and gives
+  `G_Newton,lat=1`
+- the finite-boundary density extension remains the additive finite-patch
+  theorem for that carrier
 - the finite-automorphism-only response route is a retained no-go, not an
   alternate promotion path
 - the carrier-only parent-source scalar route is a retained no-go, not an
   alternate promotion path without a separate no-hidden-character law
+- if a review surface rejects the retained Clifford coframe response as native,
+  the package must fall back to the explicit conditional wording recorded in
+  the Hilbert-only boundary theorem
 
 That is the canonical posture to use when wiring hierarchy, YT/Higgs,
 neutrino/DM mass ladders, gravity/cosmology companions, and compact-object

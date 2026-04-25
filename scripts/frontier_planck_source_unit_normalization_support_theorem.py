@@ -212,12 +212,12 @@ def main() -> int:
     print(f"Summary: {passed}/{total} checks passed.")
     if passed == total:
         print(
-            "Verdict: positive support-theorem closure on the stated conditional "
-            "carrier premise. The retained 1/(4*pi) is the bare Green-kernel "
-            "coefficient; the physical source scale is fixed by c_cell=lambda/4, "
-            "hence lambda=1 and q_bare=4*pi*M_phys. Therefore G_Newton,lat=1, "
-            "c_cell=1/(4G), EH=c_cell/(4*pi), and a/l_P=1 on the conditional "
-            "Planck packet."
+            "Verdict: positive support-theorem closure on the stated carrier "
+            "premise, which the Target 3 Clifford bridge discharges on the "
+            "retained coframe surface. The retained 1/(4*pi) is the bare "
+            "Green-kernel coefficient; the physical source scale is fixed by "
+            "c_cell=lambda/4, hence lambda=1 and q_bare=4*pi*M_phys. Therefore "
+            "G_Newton,lat=1, c_cell=1/(4G), EH=c_cell/(4*pi), and a/l_P=1."
         )
         return 0
 

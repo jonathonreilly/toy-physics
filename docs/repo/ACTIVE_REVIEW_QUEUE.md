@@ -37,20 +37,21 @@ Current science/open-lane follow-ups:
   closed negatively, and multipocket Widom carriers can be tuned to `1/4` only
   with an extra selector; direct relabeling of the `4/16` primitive trace as
   von Neumann entanglement is also blocked; finite algebraic Schmidt spectra
-  cannot give exact nonzero vN entropy `1/4`. A new conditional positive
-  carrier is on the table: the primitive residual `Z_2` self-dual
-  Laplacian-gated two-orbital edge block gives exact `c_Widom=1/4`, and the
+  cannot give exact nonzero vN entropy `1/4`. The positive retained carrier is
+  now the primitive residual `Z_2` self-dual
+  Laplacian-gated two-orbital edge block; it gives exact `c_Widom=1/4`, and the
   primitive-CAR identification theorem derives that block from rank `4` plus
-  minimal local complex-CAR edge semantics. The native-CAR tightening reduces
-  the remaining review decision to one concrete premise: accept irreducible
-  Clifford-Majorana edge statistics on `P_A H_cell`, or keep Target 2
-  conditional.
+  minimal local complex-CAR edge semantics. The Target 3 Clifford phase bridge
+  derives those CAR edge statistics from the retained metric-compatible
+  Clifford coframe response on `P_A H_cell`; only a stripped Hilbert-only
+  review surface keeps Target 2 conditional.
 - Planck Target 3 / information-action bridge: the current one-axiom
-  Hilbert-flow surface now has a boundary theorem. It derives a native
-  dimensionless `U(1)` phase unit, but it does not fix an absolute dimensional
-  action quantum or derive the primitive Clifford-Majorana/CAR edge statistics;
-  those still require a stronger native statistics/action-unit principle or an
-  explicit carrier axiom.
+  Hilbert-flow surface has a boundary theorem, and the retained `Cl(3)/Z^3`
+  surface now has a positive structural closure. The Clifford bridge derives
+  the primitive edge CAR semantics, matches `c_Widom=c_cell=1/4`, and with
+  source-unit normalization gives `G_Newton,lat=1` and `a/l_P=1` in natural
+  phase/action units. Guardrail: do not state this as a Hilbert-only theorem
+  or an SI decimal derivation of `hbar`.
 - memory lane: protocol- and geometry-stable observable remains open
 - emergent-geometry growth: multi-size, multi-seed stability remains open
 

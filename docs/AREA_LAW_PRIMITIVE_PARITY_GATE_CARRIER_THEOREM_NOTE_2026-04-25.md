@@ -1,7 +1,8 @@
 # Area-Law Primitive Parity-Gate Carrier Theorem Note
 
 **Date:** 2026-04-25
-**Status:** conditional positive Target 2 carrier theorem
+**Status:** positive Target 2 carrier theorem on retained `Cl(3)/Z^3` coframe
+surface; conditional only on stripped Hilbert-only surfaces
 **Runner:** `scripts/frontier_area_law_primitive_parity_gate_carrier.py`
 
 ## Purpose
@@ -214,6 +215,13 @@ The remaining review question is therefore no longer numerical:
 Does the existing Cl(3)/Z^3 primitive boundary semantics force this residual
 self-dual Laplacian edge block, or is it an additional carrier axiom?
 ```
+
+The Target 3 Clifford phase bridge answers this on the retained coframe
+surface: metric-compatible primitive Clifford response forces the rank-four
+active block to be the irreducible `Cl_4(C)`/two-mode CAR module, and the
+primitive-CAR edge theorem then forces the normal plus self-dual tangent
+carrier. The result remains conditional only on stripped surfaces that reject
+the Clifford coframe response as native.
 
 ## Relation to the action-side `1/4`
 

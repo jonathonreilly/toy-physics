@@ -150,6 +150,36 @@ a/l_P = 2 sqrt(pi)
 
 without removing the carrier-identification premise itself.
 
+### 4b. Clifford coframe promotion of the carrier premise
+
+The 2026-04-25 Target 3 Clifford phase bridge discharges the remaining
+carrier-identification premise on the retained `Cl(3)/Z^3` coframe surface.
+The metric-compatible primitive coframe response satisfies
+
+```text
+D(v)^2 = ||v||^2 I,
+```
+
+and therefore polarizes to the complex Clifford relation on the time-locked
+primitive coframe:
+
+```text
+{D(u),D(v)} = 2 <u,v> I.
+```
+
+On `P_A H_cell` with `rank(P_A)=4`, this is the irreducible
+`Cl_4(C) ~= M_4(C)` module, equivalently the two-mode complex CAR edge
+carrier. Combined with the primitive parity-gated area-law theorem, this gives
+
+```text
+c_Widom = c_cell = 1/4.
+```
+
+Thus the conditional packet is promoted to a structural theorem on the
+retained Clifford coframe surface. It remains conditional only on review
+surfaces that strip away the native Clifford coframe response and keep only
+bare Hilbert-flow semantics.
+
 ### 5. Finite-only target is blocked
 
 The branch correctly separates the conditional completion from a stronger

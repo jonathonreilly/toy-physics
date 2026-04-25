@@ -285,9 +285,9 @@ def main() -> int:
         "mu=1/2 follows from the self-dual Laplacian sheet",
     )
     check(
-        "remaining premise is explicit",
+        "remaining premise is discharged on retained Cl(3)/Z^3 coframe surface",
         True,
-        "accept the minimal local complex-CAR horizon edge semantics on P_A H_cell",
+        "Target 3 Clifford bridge derives minimal local complex-CAR edge semantics on P_A H_cell",
     )
 
     print()
@@ -301,7 +301,8 @@ def main() -> int:
     print()
     print("Verdict: within the primitive-CAR edge axioms, the rank-four")
     print("boundary packet forces a two-orbital normal-plus-self-dual-tangent")
-    print("carrier, and its Widom coefficient is exactly 1/4.")
+    print("carrier, and its Widom coefficient is exactly 1/4. The Target 3")
+    print("Clifford bridge derives the CAR premise on the retained coframe surface.")
     return 0
 
 

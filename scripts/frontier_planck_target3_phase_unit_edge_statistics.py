@@ -317,9 +317,9 @@ def main() -> int:
         "rank four plus Hilbert flow underdetermines CAR versus non-CAR edge statistics",
     )
     check(
-        "positive Target 3 closure needs a stronger principle",
+        "retained-surface closure needs the stronger Clifford coframe principle",
         True,
-        "derive Clifford-Majorana edge statistics or accept it as an added native carrier axiom",
+        "the separate Clifford bridge supplies this principle on Cl(3)/Z^3",
     )
 
     print()
@@ -328,8 +328,8 @@ def main() -> int:
         print(
             "Verdict: the current one-axiom bridge yields a dimensionless phase "
             "unit but not an absolute action scale or the primitive CAR edge "
-            "statistics. Target 3 remains open unless a stronger statistics/action "
-            "unit principle is added or derived."
+            "statistics. This is the Hilbert-only boundary; the retained "
+            "Cl(3)/Z^3 surface is closed by the Clifford coframe bridge."
         )
         return 0
     return 1

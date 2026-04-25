@@ -207,8 +207,15 @@ Hilbert/information flow  -/-> absolute dimensional action quantum
 Hilbert/information flow  -/-> primitive CAR edge statistics
 ```
 
-The next positive Target 3 theorem must therefore do at least one of the
-following:
+The positive closure is therefore not obtained by bare Hilbert flow. It is
+obtained in
+`PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md` by restoring
+the retained `Cl(3)/Z^3` coframe response that this note deliberately omits.
+There, metric compatibility gives the `Cl_4` anticommutator on `P_A H_cell`,
+and the rank-four irreducible module is equivalent to two-mode CAR.
+
+Before the Clifford bridge was added, a positive Target 3 theorem had to do at
+least one of the following:
 
 1. derive irreducible Clifford-Majorana/CAR edge statistics from a stronger
    native principle, such as a lattice spin-statistics theorem, reflection
@@ -218,6 +225,8 @@ following:
    that breaks the `(S,kappa)` rescaling degeneracy;
 3. state the primitive edge-statistics principle as an added carrier axiom and
    keep Target 3 as a separate open normalization lane.
+
+The Clifford bridge follows the first route on the retained package surface.
 
 ## Package wording
 

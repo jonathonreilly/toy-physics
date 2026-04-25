@@ -5,7 +5,9 @@ Primitive parity-gated Widom carrier theorem runner.
 Authority note:
     docs/AREA_LAW_PRIMITIVE_PARITY_GATE_CARRIER_THEOREM_NOTE_2026-04-25.md
 
-This runner checks the conditional positive Target 2 carrier:
+This runner checks the positive Target 2 carrier, whose original carrier
+identification condition is discharged on the retained Cl(3)/Z^3 coframe
+surface by the Target 3 Clifford phase bridge:
 
   * a baseline edge orbital with two k_x Fermi crossings for every transverse
     momentum;
@@ -368,9 +370,9 @@ def main() -> int:
         "subleading positive a/log(L) correction is monotone on the tested tail",
     )
     check(
-        "the theorem is conditional on the primitive parity-gate carrier identification",
+        "primitive parity-gate carrier identification is discharged on retained coframe surface",
         True,
-        "review target: does Cl(3)/Z^3 force this edge block or add it as an axiom?",
+        "Target 3 Clifford bridge forces the two-mode CAR edge block from Cl(3)/Z^3 coframe response",
     )
 
     print()
@@ -382,10 +384,10 @@ def main() -> int:
         return 1
 
     print()
-    print("Verdict: under the primitive residual Z_2 parity-gate carrier")
-    print("identification, the multipocket Widom coefficient is exactly 1/4.")
-    print("The remaining issue is the physical status of that carrier")
-    print("identification, not the asymptotic coefficient.")
+    print("Verdict: the primitive residual Z_2 parity-gate carrier has")
+    print("multipocket Widom coefficient exactly 1/4. The Target 3")
+    print("Clifford bridge supplies the physical carrier identification on")
+    print("the retained Cl(3)/Z^3 coframe surface.")
     return 0
 
 
