@@ -67,6 +67,6 @@ The longer accountability note remains useful as the **package-level disclosure*
 
 ## Cross-reference
 
-- Master methodology MD: [`docs/AI_METHODOLOGY_NOTE_2026-04-25.md`](../AI_METHODOLOGY_NOTE_2026-04-25.md)
-- Recovered package-level note: [`docs/ai_methodology/raw/ai_accountability_note.md`](raw/ai_accountability_note.md)
+- Master methodology MD: [`docs/AI_METHODOLOGY_NOTE_2026-04-25.md`](../../AI_METHODOLOGY_NOTE_2026-04-25.md)
+- Recovered package-level note: [`./ai_accountability_note.md`](./ai_accountability_note.md)
 - This file is referenced from §5.4 of the master methodology MD.

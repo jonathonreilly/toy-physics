@@ -241,9 +241,9 @@ The following raw extracts are produced on this info-capture pass. Each file is 
 
 ### 5.4 Memory + accountability
 
-- [docs/ai_methodology/CANONICAL_FRAMING_PARAGRAPH.md](./ai_methodology/CANONICAL_FRAMING_PARAGRAPH.md) — **the canonical AI-methodology framing paragraph adopted for every paper submission from this framework**. Authored 2026-04-25 by the human author. To appear verbatim (with `[repo URL]` substituted) in arXiv preprints, journal manuscripts, conference papers, and supplementary methods sections. This is the paper-facing successor to the longer package-level note below.
+- [docs/ai_methodology/raw/canonical_framing_paragraph.md](./ai_methodology/raw/canonical_framing_paragraph.md) — **canonical AI-methodology framing paragraph adopted for every paper submission from this framework** (human-authored 2026-04-25). To appear verbatim (with `[repo URL]` substituted) in arXiv preprints, journal manuscripts, conference papers, and supplementary methods sections. Paper-facing successor to the longer package-level note below.
 - [docs/ai_methodology/raw/memory_files.md](./ai_methodology/raw/memory_files.md) — **full memory file content** (6 files), 319 lines
-- [docs/ai_methodology/raw/ai_accountability_note.md](./ai_methodology/raw/ai_accountability_note.md) — **AI-assistance disclosure note recovered from git history** (`56876669^`); the note was removed from public package on 2026-04-23 in commit `56876669` "Clean public package surface and remove internal docs" and is preserved here as the package-level disclosure precedent (the longer companion to the canonical per-paper framing paragraph above)
+- [docs/ai_methodology/raw/ai_accountability_note.md](./ai_methodology/raw/ai_accountability_note.md) — **AI-assistance disclosure note recovered from git history** (`56876669^`); the note was removed from public package on 2026-04-23 in commit `56876669` "Clean public package surface and remove internal docs" and is preserved here as the package-level disclosure precedent (longer companion to the canonical per-paper framing paragraph above)
 
 ### 5.5 Repo audit
 
