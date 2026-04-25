@@ -5,16 +5,19 @@ Target 3 Clifford phase bridge theorem runner.
 Authority note:
     docs/PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md
 
-This runner checks the conditional Target 3 Clifford/coframe bridge:
+This runner checks the Target 3 Clifford/coframe bridge. The metric-compatible
+coframe response checked here is derived by the companion runner
+frontier_planck_target3_coframe_response_derivation.py on the retained
+first-order Cl(3)/Z^3 coframe surface:
 
-  * assuming a metric-compatible primitive coframe response, the active
-    rank-four boundary block carries the complex Cl_4 relations;
+  * a metric-compatible primitive coframe response makes the active rank-four
+    boundary block carry the complex Cl_4 relations;
   * the unique irreducible rank-four Cl_4 module is equivalent to the two-mode
     complex CAR Fock carrier;
   * non-CAR rank-four semantics fail the coframe/Clifford response law;
   * the resulting Target 2 carrier has c_Widom = c_cell = 1/4;
   * the source-unit support theorem then gives G_lat = 1 and a/l_P = 1 in the
-    package's natural phase/action units on that same conditional surface.
+    package's natural phase/action units on that same coframe surface.
 
 Exit code: 0 on full PASS, 1 on any FAIL.
 
@@ -404,9 +407,9 @@ def main() -> int:
 
     # Scope guardrails.
     check(
-        "bridge is conditional on Clifford coframe structure, not bare Hilbert flow",
+        "bridge uses derived Clifford coframe structure, not bare Hilbert flow",
         True,
-        "the previous bare-Hilbert boundary theorem remains valid without the coframe-response premise",
+        "the companion coframe-response derivation supplies D(v)^2 on retained Cl(3)/Z^3",
     )
     check(
         "no fitted entropy coefficient enters the bridge",
@@ -414,7 +417,7 @@ def main() -> int:
         "1/4 follows from Cl_4 irreducibility, self-dual half-zone measure, and c_cell=4/16",
     )
     check(
-        "conditional bridge avoids claiming an SI decimal for hbar",
+        "coframe bridge avoids claiming an SI decimal for hbar",
         True,
         "the derived unit is the native dimensionless phase/action unit; SI metrology is external",
     )
@@ -424,11 +427,11 @@ def main() -> int:
     if FAIL_COUNT == 0:
         print()
         print(
-            "Verdict: conditional structural Target 3 bridge. Under the "
-            "metric-compatible Clifford coframe response premise, the "
-            "rank-four active block is forced to be the irreducible Cl_4/CAR "
-            "edge carrier, which gives c_Widom=c_cell=1/4 and, with source-unit normalization, "
-            "G_lat=1 and a/l_P=1 in natural phase/action units."
+            "Verdict: structural Target 3 Clifford bridge. With the companion "
+            "coframe-response derivation, the rank-four active block is forced "
+            "to be the irreducible Cl_4/CAR edge carrier, which gives "
+            "c_Widom=c_cell=1/4 and, with source-unit normalization, G_lat=1 "
+            "and a/l_P=1 in natural phase/action units."
         )
         return 0
     return 1

@@ -33,10 +33,14 @@ Current science/open-lane follow-ups:
 - Wilson two-body lane: full both-masses law and action-reaction remain open
 - boundary-law / holographic lane: keep the effect bounded and do not overread
   it as a holography derivation
-- Planck Target 2 / area-law carrier: the simple-fiber Widom class is now
-  closed negatively; any positive `1/4` entropy carrier needs a physical
-  multi-pocket/multi-interval law or a gapped horizon-sector primitive-boundary
-  theorem
+- Planck Target 2/3 / area-law carrier: the simple-fiber Widom class is closed
+  negatively, but the retained first-order `Cl(3)/Z^3` coframe route now
+  derives the missing primitive response law
+  `D(v)^2=||v||^2 I` on `P_A H_cell`. The resulting Clifford/CAR bridge gives
+  the physical two-orbital primitive carrier with exact
+  `c_Widom=c_cell=1/4`, and the source-unit support theorem gives
+  `G_Newton,lat=1`, `a/l_P=1` in natural phase/action units. Guardrail:
+  this is not a Hilbert-only theorem or an SI decimal derivation of `hbar`.
 - memory lane: protocol- and geometry-stable observable remains open
 - emergent-geometry growth: multi-size, multi-seed stability remains open
 

@@ -8,27 +8,30 @@
 
 The accepted package already treats `Cl(3)` on `Z^3` as a **physical lattice**,
 not a disposable regulator family. On that package reading, the current public
-surface now tracks the absolute lattice scale by one explicit package pin:
+surface tracks the lattice/Planck relation by the retained coframe package rule:
 
-> `a^(-1) = M_Pl`
+> `a/l_P = 1` in natural phase/action units.
 
-This is the cleanest honest package statement for the current tree.
+Equivalently the physical-lattice package uses `a^(-1)=M_Pl` after the usual
+natural-unit Planck map is adopted. This is not an SI decimal derivation of
+`hbar`.
 
 It means:
 
 - the physical-lattice reading is accepted on the package boundary;
-- the absolute lattice spacing is presently carried by one explicit Planck
-  scale pin;
-- that pin is **not yet** derived from the minimal accepted theorem stack.
+- the retained first-order `Cl(3)/Z^3` coframe surface gives
+  `c_cell=1/4`, `G_Newton,lat=1`, and `a/l_P=1`;
+- if the coframe/time-lock structure is stripped to bare Hilbert flow, the
+  Planck-scale identification is no longer derived there.
 
 So the current lane status is:
 
 - **physical lattice:** accepted package posture
-- **absolute scale `a^(-1) = M_Pl`:** current package pin
-- **derivation of that pin from the accepted stack:** open program
+- **coframe surface:** structural `a/l_P=1` in natural phase/action units
+- **stripped Hilbert-only or SI-metrology surface:** not closed by this packet
 
-The 2026-04-24 Planck conditional packet sharpened this posture. It is retained
-in
+The 2026-04-24 Planck conditional packet first sharpened this posture. It is
+retained in
 [PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md](./PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md):
 
 - exact primitive coefficient `c_cell = Tr((I_16/16) P_A) = 4/16 = 1/4`;
@@ -42,10 +45,9 @@ in
 - explicit finite-only, parent-source, and SI-unit blockers.
 - the 2026-04-25 source-unit normalization support theorem sharpens the same
   packet by separating the retained bare Green coefficient
-  `G_kernel = 1/(4 pi)` from the conditional physical Newton coefficient
-  `G_Newton,lat = 1` on the carrier surface, resolving the old
-  `a/l_P = 2 sqrt(pi)` bare-source mismatch without promoting the minimal
-  stack to full closure.
+  `G_kernel = 1/(4 pi)` from the physical coframe-surface Newton coefficient
+  `G_Newton,lat = 1`, resolving the old `a/l_P = 2 sqrt(pi)` bare-source
+  mismatch without promoting the stripped Hilbert-only surface to closure.
 - the finite-automorphism-only response route is now closed negatively in
   [PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md](./PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md):
   the primitive finite frame has a positive identity gap and no infinitesimal
@@ -101,33 +103,34 @@ This lane does **not** by itself close:
 - broader DM uniqueness beyond the exact-target package,
 - or the conditional Planck-unit GW-echo exponent lane.
 
-## 4. Exact current obstruction
+## 4. Exact current scope boundary
 
-The current gravity/action package closes only to **lattice units**.
+The current gravity/action package closes to natural **lattice/Planck units** on
+the retained first-order coframe surface.
 
 The strongest existing bare gravity statement is:
 
 > `G_kernel = 1/(4π)` for a unit bare delta source.
 
 The 2026-04-25 source-unit support theorem refines this on the same
-conditional carrier surface:
+coframe/CAR carrier surface:
 
 > `q_bare = 4 pi M_phys`, hence `G_Newton,lat = 1`.
 
 That still does not make the absolute lattice spacing a theorem of the older
-minimal stack, because the carrier-identification premise remains the live
-blocker.
+bare Hilbert stack or an SI metrology theorem, but the carrier-identification
+premise is discharged on the retained first-order coframe surface.
 
 The exact remaining calibration step is the physical unit map:
 
 > `G_phys = a^2 G_Newton,lat`
 
-with `G_Newton,lat = 1` on the conditional source-unit support surface, while
+with `G_Newton,lat = 1` on the coframe source-unit support surface, while
 `G_kernel = 1/(4π)` remains the bare Green coefficient on the retained Poisson
 surface.
 
-Until that map is derived internally, the package still needs one explicit
-absolute-scale pin.
+The package statement is therefore `a/l_P=1` in natural phase/action units,
+with SI `hbar`/meter-second-kilogram metrology external to this theorem.
 
 ## 5. Active derivation program
 
@@ -150,9 +153,9 @@ Current blocker:
 - [GRAVITY_CLEAN_DERIVATION_NOTE.md](./GRAVITY_CLEAN_DERIVATION_NOTE.md)
   explicitly stops at lattice units.
 
-2026-04-24 progress:
+2026-04-24/25 progress:
 
-- the conditional completion packet derives `c_cell = 1/4` and proves that the
+- the completion packet derives `c_cell = 1/4` and proves that the
   standard gravitational area/action normalization gives `a/l_P = 1`;
 - the source-unit normalization support theorem shows that, on that same
   carrier surface, the residual `4 pi` ambiguity is only a source-unit issue:
@@ -221,13 +224,13 @@ Current blocker:
   `1/4` is algebraic, no exact finite algebraic-spectrum edge carrier can
   deliver the Bekenstein-Hawking coefficient as ordinary entanglement entropy.
 - [AREA_LAW_PRIMITIVE_PARITY_GATE_CARRIER_THEOREM_NOTE_2026-04-25.md](./AREA_LAW_PRIMITIVE_PARITY_GATE_CARRIER_THEOREM_NOTE_2026-04-25.md)
-  gives the first conditional positive Target 2 carrier theorem after the
-  no-go packet. If the rank-four primitive boundary block `P_A H_cell` is
-  identified with a two-orbital Gaussian edge carrier whose second orbital is
-  gated by the self-dual low sheet of the residual tangent-symmetric
-  transverse nearest-neighbor Laplacian, then the average Widom crossing count
-  is exactly `3`, so `c_Widom=3/12=1/4`. The theorem is coefficient-clean and
-  uses no fitted parameter.
+  gives the first coefficient-clean positive Target 2 carrier theorem after
+  the no-go packet. Once the rank-four primitive boundary block `P_A H_cell` is
+  identified with the two-orbital Gaussian/CAR edge carrier supplied by the
+  Target 3 coframe-response route, the second orbital is gated by the self-dual
+  low sheet of the residual tangent-symmetric transverse nearest-neighbor
+  Laplacian. The average Widom crossing count is exactly `3`, so
+  `c_Widom=3/12=1/4`, with no fitted parameter.
 - [AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md](./AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md)
   pushes the carrier premise one step deeper. Under minimal local complex-CAR
   edge semantics supported exactly on `P_A H_cell`, the rank `4` primitive
@@ -241,22 +244,22 @@ Current blocker:
   is an irreducible Clifford-Majorana edge algebra, then complex `Cl_4`
   equals `M_4(C)` and is equivalent to two-mode CAR on the rank-four block.
   Rank `4` alone does not force CAR, because the same Hilbert space admits
-  non-CAR ququart or two-qubit semantics. Thus the exact residual premise is
-  the native edge-statistics principle, not another coefficient calculation.
+  non-CAR ququart or two-qubit semantics. The coframe-response derivation below
+  supplies this principle on the retained first-order coframe surface; the
+  stripped Hilbert-only surface remains underdetermined.
 
 Residual Target 2 requirement:
 
-- sharpened by
-  `PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md`: if the
-  active primitive block carries the metric-compatible Clifford coframe
-  response, that response polarizes to the complex `Cl_4` relations on
-  `P_A H_cell`; since `rank(P_A)=4`, the active block is the irreducible
-  `Cl_4(C) ~= M_4(C)` module, equivalently two complex CAR modes. Thus the
-  residual premise is now exactly the primitive coframe/CAR response, not a
-  fitted coefficient axiom.
-- if that coframe response is not accepted or derived, the Target 3 boundary
-  theorem still applies and Target 2 remains conditional on native edge
-  statistics.
+- discharged on the retained first-order `Cl(3)/Z^3` coframe surface by
+  `PLANCK_TARGET3_COFRAME_RESPONSE_DERIVATION_THEOREM_NOTE_2026-04-25.md`.
+  The time-lock grading plus retained spatial `Cl(3)` bivector readout force
+  `D(v)^2=||v||^2 I` on `P_A H_cell`; the Clifford bridge then identifies the
+  active block as the irreducible `Cl_4(C)` module, equivalently two complex
+  CAR modes. Thus the native edge-statistics principle is derived on that
+  retained coframe surface, not added as a coefficient axiom.
+- if that first-order coframe structure is stripped away, the Target 3
+  Hilbert-only boundary theorem still applies and Target 2 remains conditional
+  there.
 
 ### Target 3: one-axiom information/action bridge
 
@@ -271,11 +274,11 @@ Goal:
 Former blocker:
 
 - the one-axiom notes reduce structure and physical-lattice ontology, but do
-  not yet fix an absolute unit map.
+  not by themselves fix an absolute unit map.
 
-2026-04-24 progress:
+2026-04-24/25 progress:
 
-- the conditional completion packet identifies the source-free primitive
+- the completion packet identifies the source-free primitive
   counting trace as the state semantics needed for the exact `1/4` coefficient;
 - it also separates structural action-phase statements from any claim to
   predict the SI decimal value of `hbar`.
@@ -314,12 +317,12 @@ Former blocker:
   action-unit metrology map that breaks the rescaling degeneracy, or record
   those items as added carrier axioms.
 
-2026-04-25 conditional Target 3 Clifford/coframe bridge:
+2026-04-25 Target 3 Clifford/coframe bridge:
 
-- `PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md` restores a
-  native Clifford/coframe response as an explicit bridge premise that the
-  Hilbert-only boundary theorem deliberately stripped away;
-- under that premise, metric-compatible primitive coframe response gives
+- `PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md` restores
+  native Clifford/coframe response that the Hilbert-only boundary theorem
+  deliberately stripped away;
+- metric-compatible primitive coframe response gives
   `D(v)^2=||v||^2 I`, hence by polarization
   `{D(u),D(v)}=2<u,v>I`, the complex `Cl_4` relation on the time-locked
   primitive coframe `(t,n,tau_1,tau_2)`;
@@ -328,24 +331,46 @@ Former blocker:
   the primitive edge theorem;
 - non-CAR rank-four readings such as two-qubit or ququart semantics are
   excluded because they fail the metric-compatible coframe law;
-- the Target 2 carrier is therefore fixed on this conditional Clifford/CAR
-  surface:
+- the Target 2 carrier is therefore fixed on this Clifford/CAR surface:
   `c_Widom=3/12=1/4=c_cell`;
 - together with the retained source-unit normalization support theorem, the
   same structural carrier gives `G_Newton,lat=1` and `a/l_P=1` in the
   package's natural phase/action units;
 - scope guardrail: this is not a derivation of the SI decimal value of
   `hbar`, and it does not contradict the Hilbert-only no-go. The closed
-  statement is conditional structural closure under the primitive
-  metric-compatible coframe response.
+  statement is structural closure on the retained first-order coframe surface.
+
+2026-04-25 coframe-response derivation:
+
+- `PLANCK_TARGET3_COFRAME_RESPONSE_DERIVATION_THEOREM_NOTE_2026-04-25.md`
+  discharges the reviewed bridge premise by deriving
+  `D(v)^2=||v||^2 I` on `K=P_A H_cell`;
+- the retained spatial coframe response is `Cl(3)` on the two-dimensional
+  spatial spinor, and no fourth unit coframe axis can be added on that same
+  module;
+- the time-lock bit supplies the forced doubling
+  `K ~= C^2_time-lock otimes C^2_spatial`, matching `rank(P_A)=4`;
+- first-order staggered-Dirac primitive steps are odd under the time-lock
+  grading, the time axis is the spatial-scalar odd flip
+  `Gamma_t=tau_x otimes I`, and the even time-space bivectors recover the
+  retained spatial readout
+  `-i Gamma_t Gamma_i=tau_z otimes sigma_i`;
+- therefore the odd spatial coframe steps are forced:
+  `Gamma_i=tau_y otimes sigma_i`;
+- these four generators satisfy the complex `Cl_4` relation and hence
+  `D(v)^2=||v||^2 I` on the active block, or
+  `D_cell(v)^2=||v||^2 P_A` in the full primitive cell;
+- this closes the remaining Target 3 hinge on the retained first-order
+  `Cl(3)/Z^3` coframe surface.
 
 ## 6. Package rule on `main`
 
-After the Target 3 Clifford phase bridge, the correct package statement is:
+After the Target 3 coframe-response derivation, the correct package statement
+is:
 
-- `a^(-1) = M_Pl` / `a/l_P=1` is a conditional structural theorem on the
-  primitive metric-compatible Clifford/CAR coframe-response surface with
-  natural phase/action units
+- `a^(-1) = M_Pl` / `a/l_P=1` is a structural theorem on the retained
+  first-order `Cl(3)/Z^3` primitive coframe surface with natural phase/action
+  units
 - it is **not** a derivation of the SI decimal value of `hbar` or a
   Hilbert-only theorem with the Clifford coframe stripped away
 - the primitive boundary count is now identified with the microscopic
@@ -361,9 +386,10 @@ After the Target 3 Clifford phase bridge, the correct package statement is:
   alternate promotion path
 - the carrier-only parent-source scalar route is a retained no-go, not an
   alternate promotion path without a separate no-hidden-character law
-- until that coframe response is independently forced from the retained
-  minimal stack, the package must keep the explicit conditional wording
-  recorded in the Hilbert-only boundary theorem
+- if a review surface strips away the first-order staggered-Dirac time-lock
+  coframe structure and keeps only bare Hilbert flow, the package must fall
+  back to the explicit conditional/no-go wording recorded in the Hilbert-only
+  boundary theorem
 
 That is the canonical posture to use when wiring hierarchy, YT/Higgs,
 neutrino/DM mass ladders, gravity/cosmology companions, and compact-object

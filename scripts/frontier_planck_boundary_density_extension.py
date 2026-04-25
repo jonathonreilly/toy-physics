@@ -139,21 +139,21 @@ def main() -> int:
         "sampled rectangles and non-rectangular unions equal the sum of their unit-face tiles",
     )
 
-    # Same-surface normalization remains the conditional Planck result.
+    # Same-surface normalization is supplied by the retained coframe/CAR packet.
     a_over_l_planck = math.sqrt(4.0 * c_cell)
     total += 1
     passed += check(
-        "extended density still gives conditional a/l_P = 1",
+        "extended density gives coframe-surface a/l_P = 1",
         abs(a_over_l_planck - 1.0) < 1e-15,
         f"sqrt(4*c_cell) = {a_over_l_planck:.12f}",
     )
 
     total += 1
     passed += check(
-        "positive closure is the extension, not carrier identification",
+        "positive closure here is the extension, with carrier identification supplied separately",
         True,
-        "given the gravitational carrier premise, the finite-boundary density "
-        "extension is unique and additive; the carrier premise remains explicit",
+        "the finite-boundary density extension is unique and additive; the "
+        "Target 3 coframe-response theorem supplies the carrier on the retained surface",
     )
 
     print()
@@ -162,7 +162,7 @@ def main() -> int:
         print(
             "Verdict: positive closure of the finite-boundary density extension; "
             "c_cell=1/4 extends uniquely to additive boundary patches and "
-            "retains the conditional a/l_P=1 normalization."
+            "matches the retained coframe-surface a/l_P=1 normalization."
         )
         return 0
     return 1

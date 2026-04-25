@@ -139,22 +139,18 @@ Validate with:
   W-boson same-surface probe, taste-scalar near-degeneracy,
   vacuum critical stability
 - absolute-scale scoping:
-  the current package carries `a^(-1) = M_Pl` as a Planck-scale package pin on
-  the accepted physical-lattice reading; the 2026-04-24 conditional-completion
-  packet derives `c_cell = 1/4`, closes the unique finite-boundary density
-  extension positively, and gives `a/l_P = 1` once the primitive boundary count
-  is accepted as the gravitational boundary/action carrier; the 2026-04-25
-  source-unit normalization support theorem on that same carrier surface
-  separates the retained bare Green coefficient `G_kernel = 1/(4 pi)` from the
-  conditional physical Newton coefficient `G_Newton,lat = 1`, resolving the old
-  bare-source `2 sqrt(pi)` mismatch without removing the remaining carrier
-  premise; the minimal-stack derivation of that carrier identification remains
-  open; the finite-automorphism-only response route and carrier-only
-  parent-source scalar route are closed negatively; the simple-fiber Widom
-  entropy-carrier class is also closed negatively at `c_Widom <= 1/6`, so a
-  positive `1/4` entropy route must use a physically selected
-  multi-pocket/multi-interval carrier or a gapped horizon-sector
-  primitive-boundary theorem
+  the accepted physical-lattice reading now carries `a/l_P = 1` on the retained
+  first-order `Cl(3)/Z^3` coframe surface; the 2026-04-24
+  conditional-completion packet derives `c_cell = 1/4` and closes the unique
+  finite-boundary density extension positively; the 2026-04-25 source-unit
+  normalization theorem separates the retained bare Green coefficient
+  `G_kernel = 1/(4 pi)` from the physical coframe-surface coefficient
+  `G_Newton,lat = 1`; the Target 3 coframe-response derivation forces
+  `D(v)^2=||v||^2 I` on `P_A H_cell`, supplying the primitive Clifford/CAR
+  carrier and giving `c_Widom=c_cell=1/4`; the finite-automorphism-only
+  response route, carrier-only parent-source scalar route, and simple-fiber
+  Widom entropy-carrier class remain closed negatively; this is not a
+  Hilbert-only or SI `hbar` decimal derivation
 
 Start with:
 
@@ -162,6 +158,7 @@ Start with:
 - [USABLE_DERIVED_VALUES_INDEX.md](./USABLE_DERIVED_VALUES_INDEX.md)
 - [PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md](../../PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md)
 - [PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md](../../PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md)
+- [PLANCK_TARGET3_COFRAME_RESPONSE_DERIVATION_THEOREM_NOTE_2026-04-25.md](../../PLANCK_TARGET3_COFRAME_RESPONSE_DERIVATION_THEOREM_NOTE_2026-04-25.md)
 - [PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md](../../PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md)
 - [PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md](../../PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md)
 - [PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md](../../PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md)
@@ -180,6 +177,7 @@ Validate with:
 - `python3 scripts/frontier_higgs_mass_full_3loop.py`
 - `python3 scripts/frontier_planck_scale_program_audit.py`
 - `python3 scripts/frontier_planck_conditional_completion_audit.py`
+- `python3 scripts/frontier_planck_target3_coframe_response_derivation.py`
 - `python3 scripts/frontier_planck_source_unit_normalization_support_theorem.py`
 - `python3 scripts/frontier_planck_boundary_density_extension.py`
 - `python3 scripts/frontier_planck_finite_response_nogo.py`

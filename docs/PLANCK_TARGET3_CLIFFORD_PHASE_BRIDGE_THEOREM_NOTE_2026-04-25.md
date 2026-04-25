@@ -1,9 +1,10 @@
 # Planck Target 3 Clifford Phase Bridge Theorem
 
 **Date:** 2026-04-25
-**Status:** conditional structural Target 3 bridge on the primitive
-Clifford/coframe response; not a standalone retained closure of Target 3 and
-not an SI decimal derivation of `hbar`
+**Status:** structural Target 3 bridge; coframe-response premise discharged on
+the retained first-order `Cl(3)/Z^3` coframe surface by
+`PLANCK_TARGET3_COFRAME_RESPONSE_DERIVATION_THEOREM_NOTE_2026-04-25.md`;
+not a Hilbert-only theorem and not an SI decimal derivation of `hbar`
 **Runner:** `scripts/frontier_planck_target3_clifford_phase_bridge.py`
 
 ## Purpose
@@ -21,19 +22,15 @@ packet uses the time-locked primitive event coframe
 E = span(t, x, y, z).
 ```
 
-This note records the positive bridge under one explicit additional premise:
-the active primitive boundary response realizes the metric-compatible
-Clifford coframe response on the rank-four block. Under that premise the active
-primitive boundary block carries the irreducible complex `Cl_4` module, which
-is equivalent to two complex CAR modes. Therefore the last Target 2 carrier
-premise is reduced to the primitive Clifford/coframe response, not to a fitted
-entropy axiom.
+This note records the bridge from metric-compatible Clifford coframe response
+to the two-mode CAR carrier. The companion coframe-response derivation theorem
+now proves that response on the retained first-order `Cl(3)/Z^3`
+staggered-Dirac coframe surface. Therefore the last Target 2 carrier premise
+is reduced to retained coframe structure, not to a fitted entropy axiom.
 
-The distinction is important: the current retained `Cl(3)/Z^3` input does not
-by itself prove that this four-axis active block carries the metric-compatible
-complex `Cl_4` response. If the coframe-response premise is not accepted or
-derived separately, the surface falls back to the stripped Hilbert-only
-boundary no-go.
+The distinction is important: if the time-lock grading, first-order
+staggered-Dirac oddness, or spatial `Cl(3)` bivector readout is stripped away,
+the surface falls back to the Hilbert-only boundary no-go.
 
 ## Import ledger
 
@@ -42,7 +39,7 @@ boundary no-go.
 | local `Cl(3)` on `Z^3` | native spatial Clifford/coframe algebra | accepted framework input |
 | time-locked primitive event cell `C^2_t otimes C^2_x otimes C^2_y otimes C^2_z` | four-axis primitive event coframe | retained Planck packet |
 | `P_A H_cell`, `rank(P_A)=4` | active primitive boundary block | retained Planck packet |
-| metric-compatible Clifford response `D(v)^2=||v||^2 I` | primitive active-block coframe response needed for the bridge | explicit structural premise; native candidate, not yet independently forced |
+| metric-compatible Clifford response `D(v)^2=||v||^2 I` | primitive active-block coframe response needed for the bridge | derived in `PLANCK_TARGET3_COFRAME_RESPONSE_DERIVATION_THEOREM_NOTE_2026-04-25.md` from retained first-order coframe structure |
 | source-unit normalization theorem | maps `c_cell=1/4` to `G_Newton,lat=1` and `a/l_P=1` | retained support theorem |
 
 No measured value of `G`, `hbar`, `l_P`, or `M_Pl` is imported.
@@ -84,9 +81,9 @@ that is metric-compatible:
 D(v)^2 = ||v||^2 I_K
 ```
 
-for every primitive coframe vector `v`. This is the bridge premise. It is a
-native algebraic coframe hypothesis, not an entropy-coefficient fit, but it is
-not proved here from rank four or from the bare Hilbert-flow axioms alone.
+for every primitive coframe vector `v`. This is the bridge premise inside this
+note; the companion coframe-response derivation theorem proves it from the
+retained time-lock/spatial-`Cl(3)` first-order coframe structure.
 
 Then:
 
@@ -121,7 +118,7 @@ Then:
    ```
 
 Together with the source-unit normalization support theorem, the same
-conditional structural carrier gives
+structural carrier gives
 
 ```text
 G_Newton,lat = 1,
@@ -318,21 +315,22 @@ theorem.
 - The finite algebraic Schmidt-spectrum no-go is untouched because this is a
   gapless Widom leading-log carrier, not a finite-cell Schmidt entropy.
 - The Target 3 Hilbert-only boundary theorem remains true on the stripped
-  surface. This theorem does not close that boundary by itself; it shows that
-  the specific metric-compatible primitive coframe response is sufficient to
-  force the CAR carrier and exact coefficient.
+  surface. This theorem plus the coframe-response derivation closes the
+  retained first-order `Cl(3)/Z^3` coframe surface, not the stripped
+  Hilbert-only surface.
 
 ## Package wording
 
 Safe wording:
 
-> Conditional on the primitive metric-compatible Clifford/coframe response on
-> `P_A H_cell`, the active block is the irreducible `Cl_4(C)` module,
-> equivalently two complex CAR modes. The Target 2 area-law carrier is then
-> fixed without an entropy fit, and its exact coefficient equals the Planck
-> primitive trace, `c_Widom=c_cell=1/4`. With the source-unit normalization
-> support theorem this gives `G_Newton,lat=1` and `a/l_P=1` in natural
-> phase/action units on that same conditional carrier surface.
+> On the retained first-order `Cl(3)/Z^3` primitive coframe surface, the
+> companion coframe-response theorem derives `D(v)^2=||v||^2 I` on
+> `P_A H_cell`. This bridge then identifies the active block as the
+> irreducible `Cl_4(C)` module, equivalently two complex CAR modes. The Target
+> 2 area-law carrier is fixed without an entropy fit, and its exact coefficient
+> equals the Planck primitive trace, `c_Widom=c_cell=1/4`. With the source-unit
+> normalization support theorem this gives `G_Newton,lat=1` and `a/l_P=1` in
+> natural phase/action units.
 
 Unsafe wording:
 

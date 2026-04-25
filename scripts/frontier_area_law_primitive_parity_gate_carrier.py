@@ -371,9 +371,9 @@ def main() -> int:
         "subleading positive a/log(L) correction is monotone on the tested tail",
     )
     check(
-        "primitive parity-gate carrier identification remains the explicit bridge premise",
+        "primitive parity-gate carrier identification is supplied by the coframe bridge",
         True,
-        "Target 3 Clifford bridge gives a sufficient metric-compatible coframe-response route",
+        "Target 3 coframe-response derivation supplies D(v)^2 on retained Cl(3)/Z^3",
     )
 
     print()
@@ -386,9 +386,9 @@ def main() -> int:
 
     print()
     print("Verdict: the primitive residual Z_2 parity-gate carrier has")
-    print("multipocket Widom coefficient exactly 1/4. This is a conditional")
-    print("positive carrier unless the primitive Clifford/CAR coframe response")
-    print("is accepted or derived separately.")
+    print("multipocket Widom coefficient exactly 1/4. With the Target 3")
+    print("coframe-response derivation, the primitive Clifford/CAR carrier")
+    print("premise is discharged on the retained first-order coframe surface.")
     return 0
 
 

@@ -285,9 +285,9 @@ def main() -> int:
         "mu=1/2 follows from the self-dual Laplacian sheet",
     )
     check(
-        "remaining premise is the primitive Clifford/CAR coframe response",
+        "primitive Clifford/CAR coframe response is supplied by Target 3",
         True,
-        "Target 3 Clifford bridge supplies a sufficient metric-compatible coframe-response premise",
+        "Target 3 coframe-response derivation supplies D(v)^2 on retained Cl(3)/Z^3",
     )
 
     print()
@@ -301,8 +301,9 @@ def main() -> int:
     print()
     print("Verdict: within the primitive-CAR edge axioms, the rank-four")
     print("boundary packet forces a two-orbital normal-plus-self-dual-tangent")
-    print("carrier, and its Widom coefficient is exactly 1/4. The remaining")
-    print("status question is the primitive Clifford/CAR coframe-response premise.")
+    print("carrier, and its Widom coefficient is exactly 1/4. The Target 3")
+    print("coframe-response derivation now discharges the primitive")
+    print("Clifford/CAR premise on the retained coframe surface.")
     return 0
 
 

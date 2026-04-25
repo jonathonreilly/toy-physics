@@ -1,12 +1,12 @@
 # Planck Boundary-Density Extension Theorem
 
 **Date:** 2026-04-24
-**Status:** retained positive support theorem for the conditional Planck lane
+**Status:** retained positive support theorem for the Planck coframe lane
 **Runner:** `scripts/frontier_planck_boundary_density_extension.py`
 
 ## Purpose
 
-This note closes a constructive sub-gap in the conditional Planck packet.
+This note closes a constructive sub-gap in the Planck packet.
 
 The packet already derives the primitive source-free coefficient
 
@@ -14,9 +14,9 @@ The packet already derives the primitive source-free coefficient
 c_cell = Tr((I_16 / 16) P_A) = 4 / 16 = 1/4.
 ```
 
-What was implicit is the finite-boundary extension: if the primitive boundary
-count is accepted as the microscopic gravitational boundary/action carrier,
-does the one-cell coefficient extend consistently from one primitive face to
+What was implicit is the finite-boundary extension: once the primitive boundary
+count is used as the microscopic gravitational boundary/action carrier, does
+the one-cell coefficient extend consistently from one primitive face to
 arbitrary finite boundary patches?
 
 Yes. Locality, additivity, and cubic-frame orientation symmetry force the
@@ -58,7 +58,7 @@ union of primitive faces.
 
 ## Planck normalization consequence
 
-With the gravitational carrier premise accepted, the extended microscopic
+With the retained coframe/CAR carrier supplied separately, the extended microscopic
 boundary/action density is
 
 ```text
@@ -80,7 +80,7 @@ a / l_P = sqrt(4 c_cell) = 1.
 
 So the positive closure here is not merely single-cell arithmetic. The exact
 `1/4` coefficient now has a unique additive finite-boundary extension on the
-conditional carrier surface.
+retained coframe carrier surface.
 
 ## What this closes
 
@@ -90,19 +90,20 @@ This closes the finite-boundary extension sub-gap:
 > gravitational boundary/action carrier, the primitive `c_cell = 1/4`
 > coefficient extends uniquely and additively to finite boundary patches.
 
-This is a positive support theorem for the Planck conditional packet.
+This is a positive support theorem for the Planck coframe packet.
 
-## What remains open
+## Guardrail
 
-This note still does **not** derive the carrier premise itself.
+This note still does **not** derive the carrier premise by itself.
 
-The remaining positive Planck target is:
+The carrier premise is supplied by:
 
-> derive that the primitive one-step boundary/worldtube count is the
-> microscopic carrier of the gravitational boundary/action density.
+> `PLANCK_TARGET3_COFRAME_RESPONSE_DERIVATION_THEOREM_NOTE_2026-04-25.md`,
+> which derives `D(v)^2=||v||^2 I` on `P_A H_cell` from the retained
+> first-order coframe structure.
 
-The no-go notes remove two shortcuts to that target; this note adds the
-positive extension theorem that applies once the target is accepted or derived.
+The no-go notes remove shortcuts to that target; this note adds the positive
+extension theorem that applies on the retained coframe/CAR carrier surface.
 
 ## Verification
 
@@ -121,5 +122,5 @@ The runner checks:
 5. cubic-frame orientation symmetry;
 6. uniqueness from unit-cell normalization on rectangular and non-rectangular
    finite face unions;
-7. the extended density still yields conditional `a/l_P = 1`;
+7. the extended density still yields coframe-surface `a/l_P = 1`;
 8. the result is an extension theorem, not a carrier-identification theorem.

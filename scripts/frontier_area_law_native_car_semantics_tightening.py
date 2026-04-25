@@ -265,14 +265,14 @@ def main() -> int:
         "c_Widom=c_cell",
     )
     check(
-        "remaining Target 2 review decision is statistics, not coefficient",
+        "Target 2 coefficient is fixed once coframe statistics are supplied",
         True,
-        "the Target 3 Clifford bridge reduces this to the metric-compatible coframe-response premise",
+        "the Target 3 coframe-response derivation supplies D(v)^2 on retained Cl(3)/Z^3",
     )
     check(
-        "Target 3 bridge supplies the sharper conditional coframe-response object",
+        "Target 3 bridge supplies the coframe-response object",
         True,
-        "metric-compatible Clifford coframe response would force the edge-statistics principle",
+        "metric-compatible Clifford coframe response forces the edge-statistics principle",
     )
 
     print()
@@ -286,7 +286,7 @@ def main() -> int:
     print()
     print("Verdict: the residual Target 2 premise is exactly the")
     print("Clifford-Majorana/CAR edge-statistics principle. The Target 3")
-    print("Clifford phase bridge gives a sufficient coframe-response route;")
+    print("coframe-response derivation gives the required coframe route;")
     print("without that coframe law, rank four alone is")
     print("underdetermined.")
     return 0

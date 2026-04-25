@@ -172,14 +172,14 @@ If a reviewer wants the negative boundary, use this note.
 
 ## 7. Planck / entropy-carrier boundary
 
-- The package does not derive `a = l_P` from the minimal stack. It carries the
-  Planck scale as the current physical-lattice package pin, with conditional
-  completion once the gravitational boundary/action carrier is accepted.
+- The package does not derive `a = l_P` from bare Hilbert flow or from SI
+  metrology. It carries `a/l_P=1` on the retained first-order `Cl(3)/Z^3`
+  coframe surface with the usual natural-unit Planck map.
 - The primitive `c_cell = 1/4` boundary-density statement is not an
-  entanglement theorem by itself. The simple-fiber Widom class is now closed
+  entanglement theorem by itself. The simple-fiber Widom class is closed
   negatively at `c_Widom <= 1/6`; the multipocket-selector, primitive
   finite-edge entropy, and algebraic finite-Schmidt-spectrum shortcuts are also
   closed negatively. The positive primitive-CAR route gives `c_Widom=1/4` only
-  conditional on the metric-compatible Clifford/CAR coframe response on the
-  active rank-four block; that response is not yet derived from the minimal
-  retained stack.
+  after importing the retained first-order `Cl(3)/Z^3` coframe/time-lock
+  structure, which derives `D(v)^2=||v||^2 I` on `P_A H_cell`. It is not a
+  Hilbert-only consequence of rank four.

@@ -1,11 +1,14 @@
 # Planck-Scale Conditional Completion Note
 
 **Date:** 2026-04-24
-**Status:** retained support / conditional completion packet, not an
-unqualified minimal-stack derivation
+**Status:** retained structural support packet; the original carrier premise is
+discharged on the retained first-order coframe surface by
+`PLANCK_TARGET3_COFRAME_RESPONSE_DERIVATION_THEOREM_NOTE_2026-04-25.md`; not a
+Hilbert-only theorem and not an SI decimal derivation of `hbar`
 **Runner:** `scripts/frontier_planck_conditional_completion_audit.py`
-**Companion support runner:**
-`scripts/frontier_planck_boundary_density_extension.py`
+**Companion support runners:**
+`scripts/frontier_planck_boundary_density_extension.py`,
+`scripts/frontier_planck_target3_coframe_response_derivation.py`
 **Companion no-go runners:**
 `scripts/frontier_planck_finite_response_nogo.py`,
 `scripts/frontier_planck_parent_source_hidden_character_nogo.py`
@@ -15,9 +18,9 @@ unqualified minimal-stack derivation
 This note records the science worth retaining from the
 `codex/planck-scale-program-2026-04-23` branch.
 
-The branch substantially sharpens the Planck-scale program. It does **not**
-make the older minimal stack alone derive the SI Planck length. Its durable
-result is a conditional completion theorem:
+The branch substantially sharpened the Planck-scale program. It does **not**
+make the older minimal Hilbert/finite stack alone derive the SI Planck length.
+Its durable result was a conditional completion theorem:
 
 > On the physical-lattice package, with explicit source-free primitive-cell
 > state semantics and with the primitive one-step boundary count identified as
@@ -26,9 +29,10 @@ result is a conditional completion theorem:
 > uniquely and additively to finite boundary patches, and the normalization
 > gives `a/l_P = 1`.
 
-The current public package may use that as a support theorem for the Planck
-pin. It should not replace the public statement that the minimal-stack
-derivation of the absolute scale remains open.
+The current public package uses that theorem together with the 2026-04-25
+coframe-response derivation: the carrier premise is now supplied on the
+retained first-order `Cl(3)/Z^3` coframe surface, while stripped Hilbert-only
+and SI-metrology readings remain nonclaims.
 
 ## Retained Results
 
@@ -104,7 +108,7 @@ consistently from one primitive face to finite boundary patches.
 ### 4. Source-unit normalization support theorem
 
 The 2026-04-25 source-unit normalization support theorem sharpens the same
-conditional packet by resolving the residual `4 pi` source-unit ambiguity.
+packet by resolving the residual `4 pi` source-unit ambiguity.
 
 The retained lattice Poisson/Green theorem gives the bare unit-source
 coefficient
@@ -123,7 +127,7 @@ G_lambda = 1/lambda,
 ```
 
 where `C` is the normalized Gauss charge / asymptotic monopole coefficient.
-On the same conditional carrier surface,
+On the same coframe/CAR carrier surface,
 
 ```text
 c_cell = 1/(4 G_lambda) = lambda / 4
@@ -136,7 +140,7 @@ q_bare = 4 pi M_phys,
 G_Newton,lat = 1.
 ```
 
-So the conditional completion packet now has both:
+So the completion packet now has both:
 
 - the primitive coefficient `c_cell = 1/4`, and
 - the source-unit clarification that `1/(4 pi)` is a bare Green coefficient,
@@ -148,14 +152,14 @@ This resolves the old bare-source failure mode
 a/l_P = 2 sqrt(pi)
 ```
 
-without removing the carrier-identification premise itself.
+with the carrier-identification premise supplied on the retained coframe
+surface by the Target 3 coframe-response derivation.
 
-### 4b. Conditional Clifford coframe bridge for the carrier premise
+### 4b. Clifford coframe bridge for the carrier premise
 
-The 2026-04-25 Target 3 Clifford phase bridge gives a sufficient route for the
-remaining carrier-identification premise: assume the active primitive boundary
-response is the metric-compatible Clifford coframe response on `P_A H_cell`.
-That response satisfies
+The 2026-04-25 Target 3 coframe-response derivation and Clifford phase bridge
+give the carrier-identification route. On the retained first-order
+`Cl(3)/Z^3` coframe surface, the active primitive boundary response satisfies
 
 ```text
 D(v)^2 = ||v||^2 I,
@@ -176,10 +180,9 @@ carrier. Combined with the primitive parity-gated area-law theorem, this gives
 c_Widom = c_cell = 1/4.
 ```
 
-Thus the conditional packet has a precise positive carrier route under the
-primitive coframe-response premise. It is not promoted here to a minimal-stack
-retained theorem, because the coframe response on the active block remains the
-explicit bridge premise.
+Thus the packet has a precise positive carrier route on the retained coframe
+surface. It is not promoted to a Hilbert-only theorem, because the stripped
+rank-four Hilbert block still admits non-CAR semantics.
 
 ### 5. Finite-only target is blocked
 
@@ -224,9 +227,8 @@ Z^3 tensor_Z R.
 That makes the realified Clifford response surface natural for linear-response
 gravity questions. It does not erase the distinction between:
 
-- deriving Planck scale from the older minimal finite stack alone, and
-- deriving `a/l_P = 1` on the realified physical-response surface plus the
-  gravitational boundary/action carrier identification.
+- deriving Planck scale from the older minimal finite/Hilbert stack alone, and
+- deriving `a/l_P = 1` on the retained first-order coframe response surface.
 
 ### 7. Cosmic pins and SI hbar remain nonclaims
 
@@ -241,16 +243,13 @@ chosen.
 
 ## Remaining Blockers
 
-The exact open blockers are now sharper than before:
+The exact guardrails are now sharper than before:
 
-1. **Minimal-stack blocker.** The older minimal finite stack alone still does
-   not derive the absolute lattice spacing.
-2. **Carrier-identification blocker.** To promote the conditional theorem to
-   a stronger derivation, derive that the primitive one-step worldtube count
-   is the microscopic carrier of the gravitational boundary/action density. If
-   this is attempted through the parent-source scalar route, it must include a
-   no-hidden-character law fixing `delta = 0`; the carrier-only scalar diagram
-   is now closed negatively.
+1. **Hilbert-only blocker.** The older minimal finite/Hilbert stack alone still
+   does not derive the absolute lattice spacing or CAR edge semantics.
+2. **Wrong-route blockers.** The finite-automorphism-only, carrier-only
+   parent-source scalar, and simple-fiber Widom routes remain closed
+   negatively. The positive route uses retained first-order coframe response.
 
 Closed positive support theorem:
 
@@ -260,6 +259,10 @@ Closed positive support theorem:
   carrier identification, locality, additivity, and cubic-frame orientation
   symmetry uniquely extend `c_cell = 1/4` to `N_A(P) = c_cell A(P)/a^2` on
   finite face-union boundary patches.
+- **Target 3 coframe response.**
+  [PLANCK_TARGET3_COFRAME_RESPONSE_DERIVATION_THEOREM_NOTE_2026-04-25.md](./PLANCK_TARGET3_COFRAME_RESPONSE_DERIVATION_THEOREM_NOTE_2026-04-25.md)
+  derives `D(v)^2=||v||^2 I` on `P_A H_cell`, supplying the Clifford/CAR
+  carrier premise on the retained first-order coframe surface.
 
 Closed negative routes:
 
@@ -278,13 +281,12 @@ Closed negative routes:
 
 Use:
 
-> The conditional Planck packet derives an exact primitive coefficient
-> `c_cell = 1/4`, a unique additive finite-boundary density extension, and a
-> conditional same-surface normalization `a/l_P = 1` once the primitive
-> boundary count is accepted as the microscopic gravitational area/action
-> carrier; the companion source-unit normalization support theorem shows that
-> the retained `1/(4 pi)` is only the bare Green coefficient and that the
-> physical lattice Newton coefficient is `1` on that same carrier surface.
+> The Planck packet derives an exact primitive coefficient `c_cell = 1/4`, a
+> unique additive finite-boundary density extension, and `a/l_P = 1` on the
+> retained first-order `Cl(3)/Z^3` coframe/CAR surface. The source-unit
+> normalization support theorem shows that the retained `1/(4 pi)` is only the
+> bare Green coefficient and that the physical lattice Newton coefficient is
+> `1` on that same carrier surface.
 
 Do not use:
 
@@ -294,8 +296,7 @@ Do not use:
 
 > Finite `Cl(3)` / `Z^3` automorphisms alone force Planck scale and `hbar`.
 
-The current public package may continue to carry `a^(-1) = M_Pl` as the
-Planck-scale package pin, now with a sharper conditional-completion theorem
-and a precise list of remaining blockers. The finite-automorphism-only route
-and the carrier-only parent-source scalar route are no longer live positive
-targets; both are retained no-gos.
+The current public package may carry `a^(-1) = M_Pl` via the natural-unit
+physical-lattice map on the retained coframe surface. The
+finite-automorphism-only route and the carrier-only parent-source scalar route
+are no longer live positive targets; both are retained no-gos.

@@ -74,17 +74,17 @@ current canonical same-surface evaluated constants on `main`.
 
 Current absolute-scale package rule:
 
-- on the accepted physical-lattice reading, the package currently carries
-  `a^(-1) = M_Pl` as an explicit Planck-scale pin
-- that pin is not yet derived from the minimal accepted theorem stack
+- on the accepted physical-lattice reading, the package now carries
+  `a^(-1) = M_Pl` on the retained first-order `Cl(3)/Z^3` coframe surface
+- this is not a Hilbert-only result: if the first-order coframe/time-lock
+  structure is stripped away, the earlier conditional/no-go wording applies
 - the 2026-04-24 conditional-completion packet derives `c_cell = 1/4` and
   the unique additive finite-boundary density extension, then gives
   `a/l_P = 1` after the primitive boundary count is accepted as the
-  gravitational boundary/action carrier; that carrier identification is still
-  the explicit Planck-lane condition
+  gravitational boundary/action carrier
 - the 2026-04-25 source-unit normalization support theorem sharpens that same
-  conditional packet by separating the retained bare Green coefficient
-  `G_kernel = 1/(4 pi)` from the conditional physical Newton coefficient
+  packet by separating the retained bare Green coefficient
+  `G_kernel = 1/(4 pi)` from the physical coframe-surface Newton coefficient
   `G_Newton,lat = 1`; equivalently, the bare delta-source label is
   `q_bare = 4 pi M_phys` on the same carrier surface
 - the finite-automorphism-only response route is closed negatively; finite
@@ -99,12 +99,13 @@ Current absolute-scale package rule:
   `c_Widom <= 1/6`, not `1/4`
 - the 2026-04-25 area-law selector packet closes the multipocket-selector,
   primitive finite-edge entropy, and algebraic finite-Schmidt-spectrum shortcuts
-  negatively; its positive primitive-CAR carrier route is conditional on the
-  metric-compatible Clifford/CAR coframe response on `P_A H_cell`, which is a
-  sharp remaining bridge premise rather than a minimal-stack retained closure
+  negatively; the coframe-response derivation then forces
+  `D(v)^2=||v||^2 I` on `P_A H_cell`, discharging the primitive Clifford/CAR
+  bridge premise on the retained first-order coframe surface
 - authority:
   [PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md](../../PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md),
   [PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md](../../PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md),
+  [PLANCK_TARGET3_COFRAME_RESPONSE_DERIVATION_THEOREM_NOTE_2026-04-25.md](../../PLANCK_TARGET3_COFRAME_RESPONSE_DERIVATION_THEOREM_NOTE_2026-04-25.md),
   [PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md](../../PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md),
   [PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md](../../PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md),
   [PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md](../../PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md),

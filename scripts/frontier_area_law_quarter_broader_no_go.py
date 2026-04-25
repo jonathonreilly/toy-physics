@@ -266,9 +266,9 @@ def main() -> int:
 
     print()
     print("Verdict: the simple-fiber Widom class cannot deliver c_inf = 1/4.")
-    print("A positive Target 2 carrier must add multi-pocket/multi-interval Fermi")
-    print("geometry selected by a physical law, or a gapped horizon-sector area law")
-    print("with a derived primitive-boundary coefficient.")
+    print("The retained positive route is therefore outside this class: the")
+    print("Target 3 coframe/CAR carrier supplies the needed primitive edge")
+    print("semantics rather than a simple-fiber Widom geometry.")
     return 0
 
 

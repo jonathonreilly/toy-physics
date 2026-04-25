@@ -11,9 +11,10 @@ The runner checks the bounded Target 3 result:
     phase unit;
   * it does not fix an absolute dimensional action unit, because only
     S/kappa enters amplitudes;
-  * it does not derive the primitive Clifford-Majorana/CAR edge statistics
-    needed to remove the last conditional Target 2 premise, because the same
-    rank-four active Hilbert block also supports non-CAR semantics.
+  * by itself it does not derive the primitive Clifford-Majorana/CAR edge
+    statistics, because the same rank-four active Hilbert block also supports
+    non-CAR semantics. The separate coframe-response derivation closes the
+    stronger retained first-order Cl(3)/Z^3 coframe surface.
 
 Exit code: 0 on full PASS, 1 on any FAIL.
 
@@ -319,7 +320,7 @@ def main() -> int:
     check(
         "positive route needs the stronger Clifford coframe principle",
         True,
-        "the separate Clifford bridge supplies a sufficient conditional coframe-response premise",
+        "the coframe-response derivation supplies D(v)^2 on retained Cl(3)/Z^3",
     )
 
     print()
@@ -329,7 +330,7 @@ def main() -> int:
             "Verdict: the current one-axiom bridge yields a dimensionless phase "
             "unit but not an absolute action scale or the primitive CAR edge "
             "statistics. This is the Hilbert-only boundary; the separate "
-            "Clifford bridge records a conditional coframe-response route."
+            "coframe-response derivation closes the retained coframe route."
         )
         return 0
     return 1

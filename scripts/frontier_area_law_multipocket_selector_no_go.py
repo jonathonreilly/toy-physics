@@ -213,9 +213,9 @@ def main() -> int:
         "c=1/4 iff <N_x>=3, implemented here by mu=1/2 or equal sector weights",
     )
     check(
-        "Target 2 remains open without a selector/bridge theorem",
+        "multipocket route remains open without a selector/bridge theorem",
         True,
-        "need to derive pocket measure, sector weight, or gapped edge entropy from Cl(3)/Z^3",
+        "this no-go does not cover the separate Target 3 coframe/CAR bridge route",
     )
 
     print()
@@ -228,8 +228,9 @@ def main() -> int:
 
     print()
     print("Verdict: multipocket Widom carriers can be calibrated to c=1/4,")
-    print("but the calibration is exactly an extra selector. It is not yet a")
-    print("primitive-boundary entanglement theorem on Cl(3)/Z^3.")
+    print("but the calibration is exactly an extra selector inside this route.")
+    print("The retained positive carrier now lives in the separate Target 3")
+    print("coframe/CAR bridge packet, not in this selector-only shortcut.")
     return 0
 
 

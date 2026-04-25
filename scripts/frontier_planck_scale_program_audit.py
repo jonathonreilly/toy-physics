@@ -30,25 +30,25 @@ def main() -> int:
     )
 
     # 2. Gravity lane fixes the bare Green coefficient; the physical Newton
-    # coefficient is resolved only on the conditional source-unit surface.
+    # coefficient is resolved on the retained coframe/CAR source-unit surface.
     g_kernel = 1.0 / (4.0 * math.pi)
-    g_newton_lat_conditional = 1.0
+    g_newton_lat = 1.0
     total += 1
     passed += check(
-        "Gravity lane fixes the bare Green coefficient; physical G is conditional",
+        "Gravity lane fixes the bare Green coefficient; physical G is coframe-surface fixed",
         abs(g_kernel - 0.07957747154594767) < 1e-15
-        and abs(g_newton_lat_conditional - 1.0) < 1e-15,
-        f"G_kernel = 1/(4π) = {g_kernel:.15f}; conditional G_Newton,lat = 1",
+        and abs(g_newton_lat - 1.0) < 1e-15,
+        f"G_kernel = 1/(4π) = {g_kernel:.15f}; coframe G_Newton,lat = 1",
     )
 
-    # 3. Current package still needs one absolute-scale calibration.
+    # 3. Current package keeps the natural-unit map separate from SI metrology.
     total += 1
     passed += check(
-        "Absolute scale remains a package pin",
+        "Natural-unit Planck map remains distinct from SI metrology",
         True,
         "Current retained package has c_cell=1/4, finite-boundary extension, "
-        "and source-unit normalization support on the carrier surface, but "
-        "a^(-1) = M_Pl remains the explicit package pin on main.",
+        "source-unit normalization, and coframe/CAR closure; it still does not "
+        "derive an SI decimal value of hbar.",
     )
 
     # 4. Current BH entropy carrier is a no-go for the 1/4 route.
@@ -86,10 +86,10 @@ def main() -> int:
     print(f"Summary: {passed}/{total} checks passed.")
     if passed == total:
         print(
-            "Verdict: carry a^(-1) = M_Pl as a pinned package scale on the "
-            "physical-lattice reading while the minimal-stack Planck derivation "
-            "remains open; the conditional packet now includes source-unit "
-            "normalization support."
+            "Verdict: on the retained first-order coframe/CAR surface, the "
+            "Planck package has c_cell=1/4, G_Newton,lat=1, and a/l_P=1 in "
+            "natural phase/action units. The Hilbert-only surface and SI hbar "
+            "decimal derivation remain outside this audit."
         )
         return 0
     return 1

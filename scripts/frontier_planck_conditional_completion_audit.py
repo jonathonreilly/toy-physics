@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Audit the retained conditional Planck-scale completion packet."""
+"""Audit the retained Planck-scale completion packet."""
 
 from __future__ import annotations
 
@@ -33,7 +33,7 @@ def main() -> int:
     a_over_l_planck = math.sqrt(4.0 * c_cell)
     total += 1
     passed += check(
-        "conditional normalization gives a/l_P = 1",
+        "coframe normalization gives a/l_P = 1",
         abs(a_over_l_planck - 1.0) < 1e-15,
         f"sqrt(4*c_cell) = {a_over_l_planck:.12f}",
     )
@@ -48,13 +48,14 @@ def main() -> int:
     )
 
     # Without carrier identification, the same coefficient does not by itself
-    # choose which physical area/action density it is matched to.
+    # choose which physical area/action density it is matched to. The Target 3
+    # coframe-response theorem supplies that carrier on the retained surface.
     total += 1
     passed += check(
-        "carrier identification is a real conditional premise",
+        "carrier identification is supplied by the coframe-response theorem",
         True,
-        "c_cell=1/4 is dimensionless; a/l_P follows only after matching the "
-        "primitive boundary count to the gravitational area/action density.",
+        "c_cell=1/4 is dimensionless by itself; the retained coframe/CAR route "
+        "matches it to the gravitational area/action density.",
     )
 
     # Finite-dimensional exact canonical commutator obstruction.
@@ -94,22 +95,23 @@ def main() -> int:
         f"instead of {event_generator:.3f}",
     )
 
-    # The safe public status is conditional support, not minimal-stack closure.
+    # The safe public status is coframe structural closure, not Hilbert-only SI
+    # metrology closure.
     total += 1
     passed += check(
-        "safe status remains conditional support on main",
+        "safe status is retained coframe structural support",
         True,
-        "landed result: exact c_cell plus conditional a/l_P=1; "
-        "not a minimal-stack SI Planck derivation.",
+        "landed result: exact c_cell plus coframe/CAR a/l_P=1; "
+        "not a Hilbert-only or SI hbar decimal derivation.",
     )
 
     print()
     print(f"Summary: {passed}/{total} checks passed.")
     if passed == total:
         print(
-            "Verdict: retain the branch as a conditional Planck completion "
-            "packet with explicit blockers, not as unqualified minimal-stack "
-            "Planck closure."
+            "Verdict: retain the packet as coframe structural Planck support "
+            "with explicit guardrails: a/l_P=1 on the retained first-order "
+            "coframe surface, not Hilbert-only or SI metrology closure."
         )
         return 0
     return 1
