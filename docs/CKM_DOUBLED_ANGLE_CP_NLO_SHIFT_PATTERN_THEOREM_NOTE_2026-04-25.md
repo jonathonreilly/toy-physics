@@ -219,31 +219,116 @@ NLO formulas |
 The closed-form values match the direct NLO computations within
 `O(alpha_s^2) ~ 1%` residual, as expected.
 
-## Why This Pushes the Framework Forward
+## Science Value
 
-The retained NLO-protected-γ̄ theorem on `main` already provides the
-first three angle deviations and `sin(2 beta_bar)`, `sin(2 gamma_bar)`
-explicit forms. What this note adds:
+### What this lets the framework predict that it could not before
 
-1. **NEW closed form for `sin(2 alpha_bar)`** — the atlas-triangle
-   right-angle constraint `alpha_0 = pi/2` makes `sin(2 alpha_0) = 0`
-   exactly, so `sin(2 alpha_bar)` is a pure NLO observable. The
-   linear coefficient `-sqrt(5)/10` is structurally fixed.
+The retained NLO-protected-γ̄ theorem provides explicit closed forms
+for `sin(2 beta_bar)` and `sin(2 gamma_bar)` at NLO Wolfenstein, but
+gives only the *linear angle deviation* `alpha_bar - pi/2 = (sqrt(5)/20) alpha_s`
+without translating that into the directly measurable doubled-angle
+CP observable `sin(2 alpha_bar)`. `(D1)` closes this gap with a
+quantitative prediction:
 
-2. **NEW shift-pattern identity** `-3 : -2 : 0` — a structural
-   fingerprint of the framework's atlas Thales geometry that emerges
-   from combining γ̄-protection with the specific atlas-LO cosines.
-   It does not depend on `alpha_s(v)`'s numerical value (the ratio
-   is dimensionless).
+```text
+sin(2 alpha_bar)  =  -(sqrt(5)/10) alpha_s(v)  =  -0.0231  at canonical alpha_s.
+```
 
-3. **NEW sum rule** with explicit linear `alpha_s` coefficient
-   `-sqrt(5)/6`, providing a unified joint test of all three CP
-   asymmetry observables at NLO.
+This number is now a sharp framework prediction sitting on `main`,
+ready to be pushed against future precision B → π+π− isospin
+analyses (LHCb upgrade I and II, Belle II Stage II).
 
-These give a sharper picture of the framework's CP-asymmetry
-predictions, distinguishing the small `sin(2 alpha_bar)` (a pure
-NLO effect) from the protected `sin(2 gamma_bar)` and the linearly-
-shifted `sin(2 beta_bar)`.
+### Why `sin(2 alpha_bar)` is a uniquely clean test
+
+The atlas-triangle right angle `alpha_0 = pi/2` makes `sin(2 alpha_0) = 0`
+**exactly**. So at atlas-LO the framework predicts a strict null,
+and any non-zero value is **entirely a NLO Wolfenstein effect**.
+This decouples `sin(2 alpha_bar)` from atlas-LO uncertainties:
+
+- `sin(2 beta_bar) = sqrt(5)/3 + corrections` — non-zero at atlas-LO
+  already; experiments must distinguish atlas-LO accuracy from NLO
+  refinement.
+- `sin(2 gamma_bar) = sqrt(5)/3` is **protected** at NLO — first
+  correction enters at relative `O(lambda^4) ~ 0.25%`, currently
+  unobservable.
+- `sin(2 alpha_bar) = -(sqrt(5)/10) alpha_s + O(alpha_s^2)` — **pure
+  NLO**: any deviation from `0` directly probes the NLO structure.
+
+The framework therefore stratifies the three CP asymmetries by what
+they test: γ̄ tests atlas-LO Thales geometry, β̄ tests atlas-LO Thales
++ NLO multiplicative scaling, and α̅ tests *only* NLO multiplicative
+scaling. Each angle is a different precision lever.
+
+### What the `-3 : -2 : 0` shift ratio rules out
+
+The structural shift pattern `(D4)` is **dimensionless and independent
+of `alpha_s(v)`'s numerical value**. It is purely a consequence of
+two retained framework facts:
+
+- atlas-LO right angle: `cos(2 alpha_0) = -1` (from `alpha_0 = pi/2`),
+  `cos(2 beta_0) = +2/3`, `cos(2 gamma_0) = -2/3`;
+- NLO γ̄-protection: `Delta gamma = 0`, so `Delta alpha + Delta beta = 0`
+  (forced by `alpha + beta + gamma = pi`).
+
+The ratio collapses to integers `-3 : -2 : 0`, which is **falsifiable
+without any precision on the canonical coupling**. If a future
+precision measurement of all three CKM angles gives shifts whose
+ratios differ from `-3 : -2 : 0` (within errors), the framework's
+atlas Thales geometry is falsified. This is a particularly sharp
+falsification target because it tests the *geometric structure*
+(γ̄-protection, atlas-LO right angle) directly, not its numerical
+realization.
+
+### How this sharpens the framework's empirical surface
+
+Combined with the previously-retained CKM theorems, this note
+completes the framework's atlas-NLO CP-asymmetry catalog:
+
+| Observable | Framework prediction (atlas-NLO) | Source |
+| --- | --- | --- |
+| `sin(2 beta_bar)` | `sqrt(5)/3 - (sqrt(5)/15) alpha_s` | retained N9 + (D2) |
+| `sin(2 gamma_bar)` | `sqrt(5)/3` (PROTECTED at NLO) | retained N8 |
+| `sin(2 alpha_bar)` | `-(sqrt(5)/10) alpha_s` (pure NLO) | **NEW (D1)** |
+| `sin(2 beta_s)` | `alpha_s sqrt(5)/6` (B_s mixing) | retained `phi_s` derivation |
+| `phi_s` | `-alpha_s sqrt(5)/6` | retained `phi_s` derivation |
+| `J` (Jarlskog) | `alpha_s^3 sqrt(5)/72` | retained CP-phase theorem |
+| Sum rule | `2 sqrt(5)/3 - (sqrt(5)/6) alpha_s` | **NEW (D5)** |
+
+Every CP-violation observable in B_d, B_s, and K systems now has
+an explicit closed form in `alpha_s(v)` alone. Future precision
+experiments can be compared directly against this catalog without
+intermediate fits.
+
+### Connection to experiment
+
+| Experiment | What it tests | Framework prediction |
+| --- | --- | --- |
+| Belle II / LHCb sin(2 beta) from B → ψK_S | `sin(2 beta_bar)` directly | `0.7300` (atlas-NLO) |
+| LHCb / Belle II isospin analysis of B → ππ | extracts `alpha_bar` (and hence `sin(2 alpha_bar)`) | `alpha_bar = 90.66°`, `sin(2 alpha_bar) = -0.023` |
+| LHCb B → DK γ extraction | `gamma_bar` directly | `arctan(sqrt(5)) = 65.91°` (PROTECTED at NLO) |
+| HL-LHC + Belle II Stage II precision | sub-degree on all three angles | `-3 : -2 : 0` shift-pattern test |
+
+The HL-LHC era is projected to give sub-degree precision on `alpha`,
+`beta`, `gamma`. At that precision, the framework's `-3 : -2 : 0`
+shift ratio becomes a multi-σ test of γ̄-protection — providing the
+first direct experimental check of the framework's atlas Thales
+geometry independently of any α_s precision question.
+
+### Why the structural mechanism matters
+
+The `-3 : -2 : 0` ratio is derivable from **just three retained
+framework facts**: `alpha_0 = pi/2`, `tan(beta_0) = 1/sqrt(5)`, and
+γ̄-protection at NLO. None of these are tunable — they are forced by
+the framework's atlas Thales surface. So the ratio is not just a
+sharp prediction but a **direct test of the framework's structural
+identity**. Any departure from `-3 : -2 : 0` would not just falsify
+a closed-form coefficient — it would falsify the underlying Thales
+geometry from which the entire CP-asymmetry sector is derived.
+
+This is the sense in which the theorem **pushes the science forward**:
+it converts a previously-implicit consequence of atlas Thales geometry
+into an explicit, dimensionless, α_s-independent falsification target
+that can be tested with future precision CP measurements.
 
 ## Falsification Use
 
