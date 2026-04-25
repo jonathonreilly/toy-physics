@@ -47,7 +47,8 @@ edge orbitals are:
 1. a baseline simple-fiber horizon channel;
 2. a residual `Z_2` parity-gated channel.
 
-The parity gate can be written either as the sign character
+In a `2D` boundary slice, the parity gate can be written either as the sign
+character
 
 ```text
 Q_+ = { q : cos(q_y) > 0 }.
@@ -74,20 +75,31 @@ The physical content is therefore not "choose `mu=1/2` because it fits." It is
 "the minimal local transverse Laplacian has a self-dual primitive threshold,
 and the second edge channel is active on the low-Laplacian sheet."
 
+For a `3D` bulk cut with two tangent directions, use the tangent-symmetric
+mean transverse Laplacian
+
+```text
+Delta_perp(k_y,k_z) = 1 - (cos(k_y)+cos(k_z))/2.
+```
+
+The all-tangent half-period map `(k_y,k_z) -> (k_y+pi,k_z+pi)` again sends
+`Delta_perp -> 2-Delta_perp`, so the low sheet `Delta_perp<1` has measure
+`1/2` without choosing one tangent direction over the other.
+
 ## Primitive half-zone selector lemma
 
 Let the graph-first axis selector have chosen the cut normal `e_x`. On either
-remaining transverse primitive direction, the minimal even nearest-neighbor
-lattice symbol is
+the single transverse direction in `2D` or the tangent-symmetric transverse
+plane in `3D`, the minimal even nearest-neighbor lattice symbol is
 
 ```text
-Delta_y(q_y) = 1 - cos(q_y).
+Delta_perp(q) = 1 - (1/n_perp) sum_j cos(q_j).
 ```
 
-The residual half-period involution `tau(q_y)=q_y+pi` obeys
+The residual all-tangent half-period involution `tau(q)=q+pi*(1,...,1)` obeys
 
 ```text
-Delta_y(tau q_y) = 2 - Delta_y(q_y).
+Delta_perp(tau q) = 2 - Delta_perp(q).
 ```
 
 Hence the only threshold fixed by the involution is `Delta_y=1`, and the two
@@ -104,19 +116,20 @@ boundary lattice. In `3D` notation, with transverse momentum
 
 ```text
 epsilon_0(k) = cos(k_x),
-epsilon_1(k) = cos(k_x) + 1 - cos(k_y).
+epsilon_1(k) = cos(k_x) + Delta_perp(q),
+Delta_perp(q) = 1 - (cos(k_y)+cos(k_z))/2.
 ```
 
-Both are local finite-range lattice dispersions. The second is independent of
-`k_z`, so the same construction applies to a `2D` boundary slice and to the
-`3D` bulk cut.
+Both are local finite-range lattice dispersions. In `2D`, where there is only
+one transverse momentum, this reduces to `Delta_perp(k_y)=1-cos(k_y)`.
 
 For fixed transverse momentum:
 
 - `epsilon_0` has one occupied `k_x` interval and hence two Fermi crossings
   for every `q`;
 - `epsilon_1` has one occupied `k_x` interval iff
-  `|1 - cos(k_y)| < 1`, equivalently `cos(k_y)>0`, and otherwise has none.
+  `|Delta_perp(q)| < 1`, equivalently `Delta_perp(q)<1`, and otherwise has
+  none.
 
 Therefore the average crossing count is
 
@@ -143,9 +156,9 @@ Assume:
 1. the primitive rank-four boundary block `P_A H_cell` is the edge Fock space
    of two complex Gaussian horizon orbitals;
 2. the graph-first selected axis leaves the residual transverse
-   nearest-neighbor symbol `Delta_y=1-cos(q_y)`;
+   nearest-neighbor symbol `Delta_perp=1-(1/n_perp) sum_j cos(q_j)`;
 3. the second edge orbital is present exactly on the self-dual low-Laplacian
-   sheet `Delta_y<1`;
+   sheet `Delta_perp<1`;
 4. the entropy asymptotics are governed by the Widom-Gioev-Klich theorem for
    the resulting piecewise smooth Fermi surface;
 5. the primitive boundary area is counted by the same face-counting convention
@@ -189,6 +202,11 @@ still has one load-bearing physical premise:
 If that premise is accepted, the exact entropy coefficient is closed. If it is
 not accepted, the result should be treated as a sharp candidate carrier and the
 previous no-go packet remains the retained status.
+
+[AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md](./AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md)
+pushes this premise one step deeper: under minimal local complex-CAR edge
+semantics on the rank-four primitive packet, the two-orbital normal-plus-
+self-dual-tangent carrier is forced.
 
 The remaining review question is therefore no longer numerical:
 

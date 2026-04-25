@@ -224,21 +224,27 @@ Current blocker:
   gives the first conditional positive Target 2 carrier theorem after the
   no-go packet. If the rank-four primitive boundary block `P_A H_cell` is
   identified with a two-orbital Gaussian edge carrier whose second orbital is
-  gated by the self-dual low sheet of the residual transverse
-  nearest-neighbor Laplacian `1-cos(q_y)<1`, then the average Widom crossing
-  count is exactly `3`, so `c_Widom=3/12=1/4`. The theorem is
-  coefficient-clean and uses no fitted parameter; its remaining review
-  question is whether the primitive `Cl(3)/Z^3` semantics force this
-  Laplacian-gated edge carrier or whether it is an additional carrier axiom.
+  gated by the self-dual low sheet of the residual tangent-symmetric
+  transverse nearest-neighbor Laplacian, then the average Widom crossing count
+  is exactly `3`, so `c_Widom=3/12=1/4`. The theorem is coefficient-clean and
+  uses no fitted parameter.
+- [AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md](./AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md)
+  pushes the carrier premise one step deeper. Under minimal local complex-CAR
+  edge semantics supported exactly on `P_A H_cell`, the rank `4` primitive
+  block forces `F(C^2)`, hence exactly two complex edge orbitals. The selected
+  face supplies one normal channel; the unique tangent-symmetric nearest-
+  neighbor response is the self-dual low-Laplacian sheet of measure `1/2`.
+  Inside these primitive-CAR edge axioms, the `1/4` entanglement coefficient is
+  a theorem rather than a fitted multipocket calibration.
 
 Residual Target 2 requirement:
 
-- promote or reject the primitive Laplacian-gated edge-carrier identification.
-  If accepted, Target 2 has a positive Widom carrier with exact `1/4`. If
-  rejected, the retained status falls back to the no-go packet and the
-  remaining routes are a transcendental Schmidt-spectrum selector, a different
-  multipocket Widom selector, or a justified non-von-Neumann primitive-boundary
-  entropy functional.
+- promote or reject the primitive-CAR edge semantics. If accepted, Target 2
+  has a positive Widom carrier with exact `1/4`. If rejected, the retained
+  status falls back to the no-go packet and the remaining routes are a
+  transcendental Schmidt-spectrum selector, a different multipocket Widom
+  selector, or a justified non-von-Neumann primitive-boundary entropy
+  functional.
 
 ### Target 3: one-axiom information/action bridge
 

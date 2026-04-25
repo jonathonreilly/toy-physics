@@ -149,6 +149,11 @@ count `3` and `c_Widom=1/4`. This does not invalidate the no-go above; it
 identifies the exact additional carrier premise that the no-go said was
 missing.
 
+[AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md](./AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md)
+sharpens the premise: in the minimal local complex-CAR edge class supported
+exactly on the rank-four primitive packet, the normal-plus-self-dual-tangent
+carrier is the unique minimal two-mode option that gives `1/4`.
+
 ## Package wording
 
 Safe wording:

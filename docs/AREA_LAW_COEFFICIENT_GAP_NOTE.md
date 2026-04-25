@@ -168,3 +168,11 @@ the Widom coefficient is exactly `1/4`. This resolves the coefficient problem
 if the rank-four primitive boundary block is accepted as that two-orbital
 Laplacian-gated edge carrier. Otherwise, the broader no-go packet remains the
 retained status.
+
+[AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md](./AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md)
+then identifies the exact remaining physical premise: accept the rank-four
+primitive packet as a minimal local complex-CAR edge algebra. With that premise,
+`rank(P_A)=4` forces `F(C^2)`, the selected face supplies one normal channel,
+and the unique tangent-symmetric nearest-neighbor response is the self-dual
+Laplacian-gated channel. Inside those primitive-CAR edge axioms, the positive
+`1/4` carrier is forced.

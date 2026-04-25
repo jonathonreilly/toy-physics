@@ -62,46 +62,58 @@ def baseline_crossings(_ky: float, _kz: float = 0.0) -> int:
     return 2
 
 
-def gated_mass(ky: float) -> float:
-    return 1.0 - math.cos(ky)
+def transverse_laplacian(*qs: float) -> float:
+    """Tangent-symmetric nearest-neighbor Laplacian normalized to [0, 2]."""
+    if not qs:
+        raise ValueError("at least one transverse momentum is required")
+    return 1.0 - sum(math.cos(q) for q in qs) / len(qs)
 
 
-def transverse_laplacian(ky: float) -> float:
-    return 1.0 - math.cos(ky)
+def gated_mass(*qs: float) -> float:
+    return transverse_laplacian(*qs)
 
 
-def half_period_partner_laplacian(ky: float) -> float:
-    return transverse_laplacian(ky + math.pi)
+def half_period_partner_laplacian(*qs: float) -> float:
+    return transverse_laplacian(*(q + math.pi for q in qs))
 
 
-def gated_active(ky: float) -> bool:
-    # |1 - cos(ky)| < 1 is equivalent to cos(ky) > 0.
-    return transverse_laplacian(ky) < 1.0
+def gated_active(*qs: float) -> bool:
+    return transverse_laplacian(*qs) < 1.0
+
+
+def gated_interval_weight(*qs: float) -> float:
+    """One interval on the low sheet, zero on the high sheet, half on tangency."""
+    delta = transverse_laplacian(*qs)
+    if abs(delta - 1.0) < 1.0e-14:
+        return 0.5
+    return 1.0 if delta < 1.0 else 0.0
 
 
 def gated_crossings(ky: float, _kz: float = 0.0) -> int:
-    return 2 if gated_active(ky) else 0
+    return 2 if gated_active(ky, _kz) else 0
 
 
-def finite_grid_average_crossings_2d(ny: int) -> tuple[float, int]:
+def finite_grid_average_crossings_2d(ny: int) -> tuple[float, float]:
     kys = apbc_momenta(ny)
-    counts = [baseline_crossings(ky) + gated_crossings(ky) for ky in kys]
-    active = sum(1 for ky in kys if gated_active(float(ky)))
+    counts = [
+        baseline_crossings(float(ky)) + 2.0 * gated_interval_weight(float(ky))
+        for ky in kys
+    ]
+    active = sum(gated_interval_weight(float(ky)) for ky in kys)
     return float(np.mean(counts)), active
 
 
-def finite_grid_average_crossings_3d(ny: int, nz: int) -> tuple[float, int]:
+def finite_grid_average_crossings_3d(ny: int, nz: int) -> tuple[float, float]:
     kys = apbc_momenta(ny)
     kzs = apbc_momenta(nz)
-    total = 0
-    active = 0
+    total = 0.0
+    active = 0.0
     for ky in kys:
         for kz in kzs:
             total += baseline_crossings(float(ky), float(kz))
-            g = gated_crossings(float(ky), float(kz))
-            total += g
-            if g:
-                active += 1
+            interval_weight = gated_interval_weight(float(ky), float(kz))
+            total += 2.0 * interval_weight
+            active += interval_weight
     return total / float(ny * nz), active
 
 
@@ -198,11 +210,12 @@ def main() -> int:
     check(
         "residual Z_2 half-zone has normalized measure 1/2",
         math.isclose(mu, 0.5, abs_tol=1.0e-15),
-        "q_y -> q_y + pi exchanges cos(q_y)>0 and cos(q_y)<0",
+        "q -> q + pi*(1,...,1) exchanges the low and high Laplacian sheets",
     )
     sample_ky = 0.37
-    lam = transverse_laplacian(sample_ky)
-    lam_partner = half_period_partner_laplacian(sample_ky)
+    sample_kz = -0.81
+    lam = transverse_laplacian(sample_ky, sample_kz)
+    lam_partner = half_period_partner_laplacian(sample_ky, sample_kz)
     check(
         "nearest-neighbor transverse Laplacian has self-dual partner",
         math.isclose(lam_partner, 2.0 - lam, abs_tol=1.0e-15),
@@ -215,8 +228,8 @@ def main() -> int:
     )
     check(
         "gated activity is the low transverse-Laplacian sheet",
-        gated_active(0.0) and not gated_active(math.pi),
-        "Delta_y(0)=0<1 and Delta_y(pi)=2>1",
+        gated_active(0.0, 0.0) and not gated_active(math.pi, math.pi),
+        "Delta_perp(0,0)=0<1 and Delta_perp(pi,pi)=2>1",
     )
     check(
         "baseline channel contributes two crossings for every transverse momentum",
@@ -226,7 +239,7 @@ def main() -> int:
     check(
         "gated channel is active exactly on cos(k_y)>0",
         gated_active(0.0) and not gated_active(math.pi),
-        "epsilon_1=cos(k_x)+1-cos(k_y)",
+        "in 2D, epsilon_1=cos(k_x)+1-cos(k_y)",
     )
     check(
         "gated channel contributes average crossing count one",
@@ -272,8 +285,8 @@ def main() -> int:
         c_grid = widom_from_average_crossings(avg)
         check(
             f"2D grid Ly={ny} has exact half-zone active count",
-            active * 2 == ny,
-            f"active={active}/{ny}",
+            math.isclose(active * 2.0, ny, abs_tol=1.0e-12),
+            f"active_weight={active:.1f}/{ny}",
         )
         check(
             f"2D grid Ly={ny} gives c=1/4",
@@ -286,8 +299,8 @@ def main() -> int:
         c_grid = widom_from_average_crossings(avg)
         check(
             f"3D grid {ny}x{nz} has exact half-zone active count",
-            active * 2 == ny * nz,
-            f"active={active}/{ny*nz}",
+            math.isclose(active * 2.0, ny * nz, abs_tol=1.0e-12),
+            f"active_weight={active:.1f}/{ny*nz}",
         )
         check(
             f"3D grid {ny}x{nz} gives c=1/4",
@@ -299,12 +312,12 @@ def main() -> int:
     check(
         "dispersion representative is finite-range local",
         True,
-        "cos(k_x)+1-cos(k_y) uses onsite plus nearest-neighbor x/y terms",
+        "cos(k_x)+Delta_perp uses onsite plus nearest-neighbor normal/tangent terms",
     )
     check(
         "gate boundary is measure zero",
         True,
-        "cos(k_y)=0 is a codimension-one transverse boundary and does not affect the integral",
+        "Delta_perp=1 is a codimension-one transverse boundary and does not affect the integral",
     )
     check(
         "no fitted continuous parameter enters the coefficient",

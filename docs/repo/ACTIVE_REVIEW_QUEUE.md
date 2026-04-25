@@ -39,9 +39,11 @@ Current science/open-lane follow-ups:
   von Neumann entanglement is also blocked; finite algebraic Schmidt spectra
   cannot give exact nonzero vN entropy `1/4`. A new conditional positive
   carrier is on the table: the primitive residual `Z_2` self-dual
-  Laplacian-gated two-orbital edge block gives exact `c_Widom=1/4`. Review
-  question before promotion: does `Cl(3)/Z^3` force that gated edge carrier,
-  or is it an additional carrier axiom?
+  Laplacian-gated two-orbital edge block gives exact `c_Widom=1/4`, and the
+  primitive-CAR identification theorem derives that block from rank `4` plus
+  minimal local complex-CAR edge semantics. Review question before promotion:
+  accept primitive-CAR edge semantics as native horizon physics, or treat it as
+  an additional carrier axiom.
 - memory lane: protocol- and geometry-stable observable remains open
 - emergent-geometry growth: multi-size, multi-seed stability remains open
 
