@@ -277,6 +277,7 @@ Start with:
 - [N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md](../../N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md)
 - [GRAVITON_SPECTRAL_TOWER_THEOREM_NOTE_2026-04-24.md](../../GRAVITON_SPECTRAL_TOWER_THEOREM_NOTE_2026-04-24.md)
 - [VECTOR_GAUGE_FIELD_KK_TOWER_THEOREM_NOTE_2026-04-24.md](../../VECTOR_GAUGE_FIELD_KK_TOWER_THEOREM_NOTE_2026-04-24.md)
+- [SCALAR_HARMONIC_TOWER_THEOREM_NOTE_2026-04-24.md](../../SCALAR_HARMONIC_TOWER_THEOREM_NOTE_2026-04-24.md)
 
 Validate with:
 
@@ -289,6 +290,7 @@ Validate with:
 - `python3 scripts/frontier_n_eff_from_three_generations.py`
 - `python3 scripts/frontier_graviton_spectral_tower.py`
 - `python3 scripts/frontier_vector_gauge_field_kk_tower.py`
+- `python3 scripts/frontier_scalar_harmonic_tower.py`
 - `python3 scripts/frontier_tensor_scalar_ratio_consolidation.py`
 
 ## Validation Paths

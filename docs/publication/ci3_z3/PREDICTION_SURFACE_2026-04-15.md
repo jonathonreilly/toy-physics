@@ -247,6 +247,10 @@ space. The retained surface now carries:
 - the vector gauge-field compactness spectral tower on `S^3`, with
   `m_l^2 = [l(l+2)-1] hbar^2/(c^2 R^2)` and exact rational squared-mass
   ratios; numerical masses and the 4D particle interpretation remain bounded
+- the scalar harmonic compactness spectral tower on `S^3`, with
+  `m_l^2 = l(l+2) hbar^2/(c^2 R^2)`, exact rational squared-mass ratios for
+  non-zero modes, and first non-zero coefficient `m_1^2 = hbar^2 Lambda/c^2`;
+  scalar-species existence and particle interpretation remain bounded
 - `R_base = 31/9` as an exact group-theory support identity inside the
   bounded DM/cosmology cascade; the Sommerfeld factor and full
   `Omega_DM/Omega_b` value remain bounded

@@ -106,8 +106,9 @@ The paper does **not** claim:
   `Omega_m,0` and observational `Omega_r,0`;
 - a derivation of `T_CMB`, the standard `0.046` thermal correction in
   `N_eff = 3.046`, recombination, the sound horizon, or BBN;
-- direct observation, independent 4D particle-state promotion, or optional
-  new gauge-sector promotion from the retained compactness spectral towers;
+- direct observation, independent 4D particle-state promotion, scalar-species
+  existence, or optional new gauge-sector promotion from the retained
+  compactness spectral towers;
 - full DM relic closure.
 
 The current package keeps:

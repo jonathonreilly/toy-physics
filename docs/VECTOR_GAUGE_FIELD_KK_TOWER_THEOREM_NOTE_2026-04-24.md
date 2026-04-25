@@ -97,7 +97,7 @@ share a simple curvature-shift pattern:
 
 | carrier | compactness eigenvalue numerator | lowest level | status |
 |---|---:|---:|---|
-| scalar | `l(l+2)` | `l = 0` zero mode | standard support |
+| scalar | `l(l+2)` | `l = 0` zero compactness mode; `l = 1` first non-zero mode | retained scalar tower |
 | vector transverse one-form | `l(l+2) - 1` | `l = 1` | this theorem |
 | spin-2 transverse-traceless | `l(l+2) - 2` | `l = 2` | retained graviton tower |
 
