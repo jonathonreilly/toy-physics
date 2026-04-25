@@ -29,6 +29,14 @@ P_A1:
 
 `P_A1` is a sharp candidate primitive, not a retained theorem.
 
+**Round-10 addendum.** The fractional-topology / math-literature batch on
+current `main` adds five further no-go probes
+(orbifold Chern, `η`-lift, FQHE analog, twisted K-theory, and
+Cheeger-Simons). None derives the bridge. What they add is a sharper
+formulation of the same residual: on the cleanest cohomological reading, the
+missing step is the choice of a period-`1 rad` convention rather than the
+canonical period-`2π rad` convention for the selected-line observable.
+
 ## Landed science
 
 ### 1. Type-A / Type-B split
@@ -138,6 +146,7 @@ KOIDE_A1_RADIAN_BRIDGE_AUDIT_CLOSES_DELTA=FALSE
 POSTULATE_P_A1_RETAINED_FRAMEWORK_AXIOM=FALSE
 TYPE_B_TO_RADIAN_IDENTIFICATION_REMAINS_PRIMITIVE=TRUE
 RESIDUAL_PRIMITIVE=type_b_rational_to_radian_observable_law
+RESIDUAL_PRIMITIVE_SHARPENED_FORM=period_1_rad_vs_2pi_rad_convention_choice
 ```
 
 ## Relationship to the April 24 Koide packet
@@ -153,6 +162,14 @@ delta remains:
   selected-line local boundary-source law
   plus based endpoint section
   plus Type-B rational-to-radian observable law.
+```
+
+The Round-10 batch does not change those residuals' status. It only sharpens
+the last item to its cleanest current statement:
+
+```text
+Type-B rational-to-radian observable law
+  ≃  period-1 rad vs canonical period-2π rad convention choice
 ```
 
 ## Verification

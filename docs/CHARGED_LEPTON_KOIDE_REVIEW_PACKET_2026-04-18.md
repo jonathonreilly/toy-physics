@@ -42,6 +42,15 @@ charged-lepton lane without changing that open status. What it adds is:
 - a clean list of atlas issues and caveats that still matter for honest
   package scoping.
 
+**2026-04-24 support/no-go update.** The April 24 native-dimensionless packet
+is now the authoritative guardrail on the open dimensionless side. The new
+Round-10 fractional-topology / math-literature batch adds five further no-go
+probes (orbifold Chern, `η`-lift, FQHE analog, twisted K-theory, and
+Cheeger-Simons). These do not close `δ = 2/9`; they sharpen the remaining
+Type-B-to-radian primitive to the cleanest current statement: a period-`1 rad`
+vs canonical period-`2π rad` convention choice on the selected-line
+observable.
+
 ## Historical Route-Pruning Record (Archival)
 
 Before the final April 21 support package, the stack passed through the following
@@ -137,13 +146,24 @@ So the current charged-lepton package status is:
   `KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`
 - April 22 Callan-Harvey physical-bridge candidate in
   `KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md`
+- April 24 native-dimensionless / objection-review packet in
+  `KOIDE_NATIVE_DIMENSIONLESS_REVIEW_PACKET_2026-04-24.md`,
+  `KOIDE_POINTED_ORIGIN_EXHAUSTION_THEOREM_NOTE_2026-04-24.md`,
+  and `KOIDE_DIMENSIONLESS_OBJECTION_CLOSURE_REVIEW_PACKET_2026-04-24.md`
+- April 24 A1/radian audit plus Round-10 fractional-topology batch in
+  `KOIDE_A1_RADIAN_BRIDGE_IRREDUCIBILITY_AUDIT_NOTE_2026-04-24.md`,
+  `KOIDE_A1_FRACTIONAL_TOPOLOGY_NO_GO_SYNTHESIS_NOTE_2026-04-24.md`, and
+  `KOIDE_A1_O13_CHEEGER_SIMONS_RZ_NO_GO_NOTE_2026-04-24.md`
 - remaining open bridge behind `Q = 2/3`: why the physical charged-lepton
   packet must extremize the block-total Frobenius functional; after the
   second-order support batch this is now sharpened further to the source-free
   law `K = 0` on the normalized second-order reduced carrier if that carrier is
   accepted
 - remaining open bridge behind `δ = 2/9`: why the physical selected-line
-  Brannen phase equals the ambient APS invariant
+  Brannen phase equals the ambient APS invariant; after the Round-10
+  fractional-topology batch, the residual Type-B-to-radian step is sharpened
+  further to the period-`1 rad` vs canonical period-`2π rad` convention choice
+  on the selected-line observable
 - selected-line witness `m_*` / `w/v` remains downstream of the physical
   Brannen-phase bridge
 - overall lepton mass scale `v_0` remains a separate support lane: the
@@ -183,6 +203,12 @@ So the current charged-lepton package status is:
 29. [KOIDE_CLOSURE_ATLAS_ISSUES_FLAGGED.md](./KOIDE_CLOSURE_ATLAS_ISSUES_FLAGGED.md)
 30. [KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md](./KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md)
 31. [KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md](./KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md)
+32. [KOIDE_NATIVE_DIMENSIONLESS_REVIEW_PACKET_2026-04-24.md](./KOIDE_NATIVE_DIMENSIONLESS_REVIEW_PACKET_2026-04-24.md)
+33. [KOIDE_POINTED_ORIGIN_EXHAUSTION_THEOREM_NOTE_2026-04-24.md](./KOIDE_POINTED_ORIGIN_EXHAUSTION_THEOREM_NOTE_2026-04-24.md)
+34. [KOIDE_DIMENSIONLESS_OBJECTION_CLOSURE_REVIEW_PACKET_2026-04-24.md](./KOIDE_DIMENSIONLESS_OBJECTION_CLOSURE_REVIEW_PACKET_2026-04-24.md)
+35. [KOIDE_A1_RADIAN_BRIDGE_IRREDUCIBILITY_AUDIT_NOTE_2026-04-24.md](./KOIDE_A1_RADIAN_BRIDGE_IRREDUCIBILITY_AUDIT_NOTE_2026-04-24.md)
+36. [KOIDE_A1_FRACTIONAL_TOPOLOGY_NO_GO_SYNTHESIS_NOTE_2026-04-24.md](./KOIDE_A1_FRACTIONAL_TOPOLOGY_NO_GO_SYNTHESIS_NOTE_2026-04-24.md)
+37. [KOIDE_A1_O13_CHEEGER_SIMONS_RZ_NO_GO_NOTE_2026-04-24.md](./KOIDE_A1_O13_CHEEGER_SIMONS_RZ_NO_GO_NOTE_2026-04-24.md)
 
 ## Package Role
 
