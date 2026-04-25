@@ -34,9 +34,9 @@ Current science/open-lane follow-ups:
 - boundary-law / holographic lane: keep the effect bounded and do not overread
   it as a holography derivation
 - Planck Target 2 / area-law carrier: the simple-fiber Widom class is now
-  closed negatively; any positive `1/4` entropy carrier needs a physical
-  multi-pocket/multi-interval law or a gapped horizon-sector primitive-boundary
-  theorem
+  closed negatively, and multipocket Widom carriers can be tuned to `1/4` only
+  with an extra pocket-measure or sector-weight selector; derive the selector
+  from primitive boundary semantics before promotion
 - memory lane: protocol- and geometry-stable observable remains open
 - emergent-geometry growth: multi-size, multi-seed stability remains open
 

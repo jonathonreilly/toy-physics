@@ -188,7 +188,7 @@ Current blocker:
   `1/4`, via
   [BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md](./BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE.md).
 
-2026-04-25 progress:
+2026-04-25 area-law update:
 
 - [AREA_LAW_COEFFICIENT_GAP_NOTE.md](./AREA_LAW_COEFFICIENT_GAP_NOTE.md)
   audits the gap between the Planck primitive `c_cell = 1/4` and the retained
@@ -199,14 +199,19 @@ Current blocker:
   momentum fiber has `c_Widom <= 1/6`, and Schur/direct-sum descendants remain
   bounded by the same convexity argument under consistent boundary-rank
   normalization.
+- [AREA_LAW_MULTIPOCKET_SELECTOR_NO_GO_NOTE_2026-04-25.md](./AREA_LAW_MULTIPOCKET_SELECTOR_NO_GO_NOTE_2026-04-25.md)
+  closes the obvious residual multipocket loophole as a framework derivation:
+  invented multipocket Widom carriers can be calibrated to `c_Widom = 1/4`,
+  but only by adding a transverse pocket-measure selector, such as `mu = 1/2`,
+  or an exact Schur/direct-sum sector-weight selector. The retained
+  `Cl(3)/Z^3` primitive boundary trace `4/16` does not derive either selector.
 
-Residual Target 2 route:
+Residual Target 2 requirement:
 
-- derive a non-engineered multi-pocket/multi-interval Fermi carrier whose
-  projected crossing multiplicity is exactly `3`; or
-- derive a gapped horizon/edge carrier whose strict area-law coefficient is the
-  same `16`-state primitive boundary count
-  `Tr((I_16/16) P_A) = 1/4`.
+- derive the pocket-measure, sector-weight, or gapped edge-entropy selector
+  from the primitive boundary semantics; otherwise the residual Widom/gapped
+  routes are tuned comparison families, not Bekenstein-Hawking carrier
+  theorems.
 
 ### Target 3: one-axiom information/action bridge
 
