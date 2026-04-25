@@ -21,11 +21,13 @@ DOC_GLOBS = [
     "docs/KOIDE_Q_*NO_GO_NOTE_2026-04-24.md",
     "docs/KOIDE_DELTA_*NO_GO_NOTE_2026-04-24.md",
     "docs/KOIDE_DIMENSIONLESS_OBJECTION_CLOSURE_REVIEW_PACKET_2026-04-24.md",
+    "docs/KOIDE_A1_RADIAN_BRIDGE_IRREDUCIBILITY_AUDIT_NOTE_2026-04-24.md",
 ]
 SCRIPT_GLOBS = [
     "scripts/frontier_koide_q_*no_go.py",
     "scripts/frontier_koide_delta_*no_go.py",
     "scripts/frontier_koide_dimensionless_objection_closure_review.py",
+    "scripts/frontier_koide_a1_radian_bridge_irreducibility_audit.py",
 ]
 
 FORBIDDEN_PROMOTION_PATTERNS = [

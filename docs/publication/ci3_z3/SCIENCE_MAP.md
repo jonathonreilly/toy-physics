@@ -175,6 +175,9 @@ Current charged-lepton status:
 - `delta = 2/9` support is strong, but the physical Brannen endpoint is still
   reduced to the selected-line local boundary-source law plus based endpoint
   section
+- the A1/radian audit shows retained periodic phase sources are `q*pi`, so the
+  exact Type-B rational witnesses for `2/9` still need a rational-to-radian
+  observable law
 - pointed-origin exhaustion shows that origin-free retained data cannot select
   the simultaneous zero-source / real-primitive / unit-endpoint representative;
   the objection-closure review keeps the branch's source-domain closure claims

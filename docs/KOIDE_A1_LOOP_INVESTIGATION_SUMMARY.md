@@ -156,13 +156,15 @@ the structural lemma requires genuinely new theoretical work.
 
 ## Regression status
 
-- **175/175 PASS** across 24 runners
-- Master regression: `python3 scripts/frontier_koide_lane_regression.py`
+- Historical loop-local status: **175/175 PASS** across the original 24
+  support runners.
+- Current master regression: `python3 scripts/frontier_koide_lane_regression.py`
 - All charged-lepton observables match PDG at <0.03%
 - Support picture unchanged: the strongest current executable support still
   isolates `δ = 2/9`, `Q = 2/3`, and a tight charged-lepton scale lane, but
-  the physical/source-law A1 bridge and the physical Brannen-phase bridge
-  remain open on the canonical package surface
+  the physical/source-law A1 bridge, physical Brannen-phase bridge, and
+  Type-B rational-to-radian readout remain open on the canonical package
+  surface
 
 ## References
 

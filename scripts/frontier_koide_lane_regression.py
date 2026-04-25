@@ -45,6 +45,7 @@ RUNNERS = [
     ("frontier_koide_a1_block_democracy_max_entropy.py", 5),
     ("frontier_koide_pointed_origin_exhaustion_theorem.py", 15),
     ("frontier_koide_dimensionless_objection_closure_review.py", 21),
+    ("frontier_koide_a1_radian_bridge_irreducibility_audit.py", 36),
 ]
 
 EXPECTED_TOTAL = sum(n for _, n in RUNNERS)
@@ -129,10 +130,13 @@ def main() -> int:
         print("                      cannot select the closing representative")
         print("  - objection review  : source-domain closure demoted to conditional")
         print("                      support with explicit Q and delta residuals")
+        print("  - A1/radian audit   : retained phase sources remain q*pi; Type-B")
+        print("                      rational-to-radian readout remains primitive")
         print()
         print("Open package status is unchanged:")
         print("  - physical background-zero / Z-erasure behind Q = 2/3 remains open")
         print("  - selected-line local boundary source plus based endpoint behind δ = 2/9 remains open")
+        print("  - Type-B rational-to-radian readout behind δ = 2/9 remains open")
         print("  - overall scale lane v_0 remains separate support")
         return 0
     else:

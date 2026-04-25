@@ -77,6 +77,12 @@ NEXT_NATIVE_THEOREM=
    source-domain closure language is kept as conditional support, not retained
    closure.
 
+8. **A1 radian-bridge irreducibility audit.** The later A1 branch contributes
+   a useful Type-A / Type-B no-go: retained periodic lattice phase sources
+   give `q*pi` phases, while the selected-line Brannen target uses the pure
+   rational `2/9` as a radian.  Multiple exact `2/9` rational witnesses do
+   not provide the missing rational-to-radian observable law.
+
 ## Explicitly not landed
 
 The branch's stronger `KOIDE_NATIVE_BRANNEN_REAL_PRIMITIVE_CLOSURE_THEOREM`
@@ -115,6 +121,7 @@ python3 scripts/frontier_koide_pointed_origin_exhaustion_theorem.py
 python3 scripts/frontier_koide_dimensionless_objection_closure_review.py
 python3 scripts/frontier_koide_native_zero_section_closure_route.py
 python3 scripts/frontier_koide_native_zero_section_nature_review.py
+python3 scripts/frontier_koide_a1_radian_bridge_irreducibility_audit.py
 python3 scripts/frontier_koide_hostile_review_guard.py
 ```
 
@@ -127,4 +134,5 @@ KOIDE_Q_DELTA_RESIDUAL_COHOMOLOGY_CLOSES_FULL_LANE=FALSE
 Q_DELTA_READOUT_RETENTION_SPLIT_CLOSES_FULL_LANE=FALSE
 DELTA_MARKED_RELATIVE_COBORDISM_CLOSES_DELTA=FALSE
 DELTA_LATTICE_WILSON_SELECTED_EIGENLINE_CLOSES_DELTA=FALSE
+TYPE_B_TO_RADIAN_IDENTIFICATION_REMAINS_PRIMITIVE=TRUE
 ```

@@ -292,6 +292,9 @@ lane:
   completeness still carries the traceless `Z` source coordinate
 - `delta = 2/9` is conditionally reduced to selected-line local boundary
   source plus based endpoint
+- the A1/radian audit shows retained periodic phase sources remain `q*pi`;
+  exact rational `2/9` witnesses do not remove the Type-B rational-to-radian
+  readout primitive
 - pointed-origin exhaustion proves origin-free retained data cannot select the
   closing representative; the remaining theorem must derive the physical
   source/boundary-origin laws themselves

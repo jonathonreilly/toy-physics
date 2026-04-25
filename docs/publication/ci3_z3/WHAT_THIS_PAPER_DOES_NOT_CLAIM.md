@@ -65,6 +65,9 @@ The paper does **not** claim:
   finite-`lambda` standard-matrix `J` readout.
 - a full retained neutrino point-prediction package for the solar gap, PMNS
   angles, Majorana phases, or absolute mass sum.
+- that the charged-lepton Koide A1/radian bridge is closed by the exact
+  rational `2/9` witnesses alone; the Type-B rational-to-radian observable law
+  remains a primitive unless separately derived.
 
 The current retained claim is:
 
@@ -111,8 +114,8 @@ The current package keeps:
 - bounded/conditional cosmology;
 - one remaining flagship bridge package: charged-lepton Koide, now sharpened
   to physical background-zero / `Z`-erasure for `Q` and selected-line local
-  boundary-source plus based endpoint for `delta`, without promoting full
-  retained closure.
+  boundary-source plus based endpoint plus Type-B rational-to-radian readout
+  for `delta`, without promoting full retained closure.
 
 ## 5. Prediction boundary
 
