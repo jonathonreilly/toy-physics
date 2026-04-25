@@ -1,6 +1,6 @@
 # DM eta Freezeout-Bypass Quantitative Theorem
 
-**Date:** 2026-04-25
+**Date:** 2026-04-25 (revised same day after adversarial review)
 **Status:** **bounded-grade theorem** for the DM gate eta-blocker, with a
 named structural candidate `m_DM = N_sites * v = 16 * v` discovered by
 systematic mass-identity audit. The freeze-out-bypass identity `eta = C * m_DM^2`
@@ -8,8 +8,35 @@ is exact-structural; the absolute mass scale `m_DM` is a CANDIDATE structural
 identity (open lane G1).
 **Primary runner:** `scripts/frontier_dm_eta_freezeout_bypass_quantitative_theorem.py`
 **Runner result:** `PASS = 14, FAIL = 0`.
+**G1 Wilson-mass attempt:**
+`scripts/frontier_dm_eta_freezeout_bypass_g1_wilson_mass_attempt.py` (`PASS = 5, FAIL = 0`).
+**Null-distribution audit:**
+`scripts/frontier_dm_eta_freezeout_bypass_null_distribution_audit.py` (`PASS = 4, FAIL = 0`).
+**Adversarial self-review:**
+[`DM_ETA_FREEZEOUT_BYPASS_ADVERSARIAL_REVIEW_NOTE_2026-04-25.md`](DM_ETA_FREEZEOUT_BYPASS_ADVERSARIAL_REVIEW_NOTE_2026-04-25.md)
 **Framework convention:** "axiom" means only the single framework axiom
 `Cl(3)` on `Z^3`.
+
+## Honest framing (post-adversarial-review)
+
+The numerical fact is: among 22 single-block structural multipliers
+`m = v * x` (with x drawn from `{alpha_LM, u_0, pi, 2, 3, N_c, N_sites,
+hw_dark, R_base, alpha_s(v), dim(adj_3)}` and powers `+/-2`), exactly one
+candidate -- `m = N_sites * v` -- lands within 5% of the freeze-out target;
+the next-closest is at `-29.63%` (a 14x gap). Among 10,743 structural
+identities of complexity up to 4, only 81 (0.75%) land within 5%. This is
+**rigorous, audit-discovered numerical structure**, not a fit.
+
+The structural mechanism that fixes the dark singlet's collective mode at
+exactly `N_sites * v` is **OPEN**. Two distinct candidate origin stories
+are tabulated: Origin A from the spacetime APBC block (`16 = N_sites`),
+Origin B from the Cl(3) chiral cube + SU(3) Casimir (`16 = (2 hw_dark) *
+(dim(adj_3)/N_c)`). Both are post-hoc factorizations until a unifying
+Coleman-Weinberg derivation is supplied (open lane G1).
+
+Hierarchy compression of the dark sector by the same `(7/8)^(1/4) *
+alpha_LM^16` factor that gives v from M_Pl is treated as **assumption A0**;
+its independent derivation is also an open lane.
 
 ## What this theorem establishes
 
@@ -153,6 +180,30 @@ of the freeze-out target is `N_sites * v`. The next-closest lands at
 **ten times the deviation**. This is a strong audit-discovered structural
 match, not a parameter fit.
 
+### C2. Null-distribution audit (addresses adversarial review F2)
+
+A separate runner
+(`scripts/frontier_dm_eta_freezeout_bypass_null_distribution_audit.py`)
+enumerates `10,743` structural identities of the form `m = v * prod_i x_i^{p_i}`
+with `x_i` drawn from the framework's standard structural counts and
+`p_i in {-2,-1,0,1,2}` with total complexity `<= 4`. The percentile of
+`m_DM = N_sites * v` in this null distribution:
+
+- **Among complexity-1 single-block multipliers (22 candidates):** rank 1
+  of 22, with the next-closest (`v / alpha_LM`) at `-29.63%` -- a `14x`
+  gap.
+- **Among complexity-2 candidates (241 total):** rank 1 of 241.
+- **Among complexity-3 candidates (1,698 total):** rank 1 of 1,698.
+- **Among all candidates (10,743 total):** rank 36 of 10,743 (top
+  `0.335%`).
+
+Of the 35 candidates that beat `N_sites * v` on raw deviation, every one
+has complexity 4 (maximally tuned 4-factor products); none has complexity
+`<= 3`. Under Occam's razor, `N_sites * v` is the **uniquely simplest
+structural identity** that closely matches the freeze-out target. The
+multiple-comparisons concern is decisively addressed: the candidate is
+not a chance match in a large search space.
+
 ### D. Combined prediction and bounded-input sensitivity
 
 With `m_DM = N_sites * v = 16 * v = 3940.53 GeV` substituted into Eq. (2),
@@ -173,6 +224,30 @@ The **bounded band** `[x_F in [22,28], S_vis/S_dark in [1.4, 1.7]]` gives
 value `eta_obs = 6.12e-10`**.
 
 ## Honest gaps (Option A labels)
+
+### A0 -- Hierarchy compression of the dark sector (assumption)
+
+The bare chiral Wilson mass for the dark hw=3 singlet is
+`m_S3_bare = 6 * M_Pl` in lattice units (rigorous on the Cl(3) chiral
+cube). To convert to physical mass we apply the **EW hierarchy
+compression**
+
+```
+m_S3_phys = 6 * M_Pl * (7/8)^(1/4) * alpha_LM^16 = 6 * v.
+```
+
+The retained hierarchy theorem
+([`OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`](OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md))
+gives `v` as the **EWSB condensate** scale on the visible sector. Applying
+the same compression to the dark sector requires either (a) a separate
+hierarchy theorem for the dark sector, or (b) the assumption that visible
+and dark sectors share the same hierarchy compression.
+
+Currently this is the latter -- assumed.
+
+**Status:** A0 is an explicit assumption, not yet a derived theorem. This
+is the most load-bearing assumption in the chain after G1. A separate
+`DARK_SECTOR_HIERARCHY_THEOREM_NOTE` would close it.
 
 ### G1 -- Structural derivation of `m_DM = N_sites * v` (open lane)
 
@@ -199,13 +274,20 @@ What is **not yet** retained:
   `N_sites` taste sites coherently rather than per-channel, is the open
   lane.
 
-A structural slogan compatible with the audit: the Higgs is the
-**per-channel** taste-singlet mode (`m_H = v / (2 u_0)`), and the dark singlet
-is the **all-channel coherent** mode that scales as `N_sites * (m_H * 2 u_0)
-/ 1 = N_sites * v`. The open lane is to make this slogan into a derived
-theorem.
+**TWO COMPETING ORIGIN STORIES (post-hoc factorizations).** The audit-
+selected number `16` admits at least two distinct structural readings,
+which are NOT YET unified by a derived theorem. They are listed here as
+**competing candidate origin stories** for follow-up; the eventual
+retained closure must select one (or unify them).
 
-**Equivalent factorization (suggestive, not yet retained).** Within the same
+**Origin A -- spacetime APBC block.** A structural slogan compatible
+with the audit: the Higgs is the **per-channel** taste-singlet mode
+(`m_H = v / (2 u_0)`), and the dark singlet is the **all-channel
+coherent** mode that scales as `N_sites * v`, where `N_sites = 2^d = 16`
+is the size of the minimal APBC block on Z^4. Open lane: derive the
+"all-channel coherent" mass identity from a Coleman-Weinberg argument.
+
+**Origin B -- Cl(3) chiral cube + SU(3) Casimir.** Within the same
 audit, `N_sites * v = 16 v` factors as
 
 ```
@@ -229,12 +311,24 @@ to the audit-selected `m_DM = 16 v`. A theorem of the form
 
 > `m_DM = (dim(adj_3) / N_c) * 2 * hw_dark * v = (8/3) * 6 * v = 16 v`
 
-is the cleanest candidate-statement of G1, but the `(dim(adj_3)/N_c)` color
-enhancement step is **not yet a retained theorem** -- it is a numerically
-suggestive product of standard SU(3) Casimir constants that exactly
-reproduces the audit result, and would need a Coleman-Weinberg-style
-derivation on the SU(3)-gauged staggered minimal block to reach
-retained-grade.
+is the cleanest candidate-statement of G1 in **Origin B**, but the
+`(dim(adj_3)/N_c)` color enhancement step is **not yet a retained
+theorem** -- it is a numerically suggestive product of standard SU(3)
+Casimir constants that exactly reproduces the audit result, and would
+need a Coleman-Weinberg-style derivation on the SU(3)-gauged staggered
+minimal block to reach retained-grade.
+
+**Reviewer-honesty caveat (F1).** Origins A and B are NOT YET unified
+by a derived theorem. They use three different lattice/algebra
+structures (Z^4 spacetime APBC; Z_2^3 Cl(3) chiral cube; SU(3)
+fundamental/adjoint), and the integer identity `16 = 6 * (8/3) = N_sites`
+reduces to arithmetic that any reviewer can replicate without knowing
+the theorem. Until either Origin A or Origin B (or a unified version) is
+promoted via a Coleman-Weinberg derivation, the structural cleanness of
+`m_DM = 16 v` rests on the audit-discovered numerical fact, not on a
+derived mechanism. The null-distribution analysis (section C2) shows
+that this numerical fact is statistically nontrivial; the open lane is
+the structural derivation that converts numerology into theorem.
 
 ### G2 -- Sommerfeld continuation in R
 
