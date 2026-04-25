@@ -97,8 +97,9 @@ questions:
   retained discrete evanescent-barrier and Schwarzschild-interior support,
   plus retained/admitted cosmology identities including `w = -1`, exact
   `R_base = 31/9` group-theory support for the bounded DM/cosmology cascade,
-  the FRW kinematic reduction to the open `H_inf/H_0` ratio, and the retained
-  TT compactness spectral tower on `S^3`
+  the FRW kinematic reduction to the open `H_inf/H_0` ratio, the
+  matter-radiation equality identity `1 + z_mr = Omega_m,0/Omega_r,0`, and
+  the retained TT compactness spectral tower on `S^3`
 - retained quantitative lanes:
   canonical `v = 246.282818290129 GeV`, retained `alpha_s(M_Z) = 0.1181`,
   retained `alpha_LM` geometric-mean coupling identity, retained EW

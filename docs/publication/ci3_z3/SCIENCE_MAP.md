@@ -236,7 +236,9 @@ Validate with:
   identity, the retained TT compactness spectral tower, the exact
   `R_base = 31/9` group-theory support identity for the bounded
   DM/cosmology cascade, and the FRW kinematic reduction of `q_0`, `z_*`,
-  `z_{mLambda}`, and asymptotic `H_inf` to the same open `H_inf/H_0` ratio
+  `z_{mLambda}`, and asymptotic `H_inf` to the same open `H_inf/H_0` ratio,
+  plus the early-time matter-radiation equality identity
+  `1 + z_mr = Omega_m,0/Omega_r,0`
 - bounded cosmology numerics:
   numerical `Lambda`, `Omega_Lambda`, numerical `m_g`, `n_s`, bounded `r`
 - bounded phenomenology companions:
@@ -250,6 +252,7 @@ Start with:
 - [R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md](../../R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md)
 - [OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md](../../OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md)
 - [COSMOLOGY_FRW_KINEMATIC_REDUCTION_THEOREM_NOTE_2026-04-24.md](../../COSMOLOGY_FRW_KINEMATIC_REDUCTION_THEOREM_NOTE_2026-04-24.md)
+- [MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md](../../MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
 - [GRAVITON_SPECTRAL_TOWER_THEOREM_NOTE_2026-04-24.md](../../GRAVITON_SPECTRAL_TOWER_THEOREM_NOTE_2026-04-24.md)
 
 Validate with:
@@ -259,6 +262,7 @@ Validate with:
 - `python3 scripts/frontier_r_base_group_theory_derivation.py`
 - `python3 scripts/frontier_omega_lambda_matter_bridge.py`
 - `python3 scripts/frontier_cosmology_frw_kinematic_reduction.py`
+- `python3 scripts/frontier_matter_radiation_equality_structural_identity.py`
 - `python3 scripts/frontier_graviton_spectral_tower.py`
 - `python3 scripts/frontier_tensor_scalar_ratio_consolidation.py`
 

@@ -277,6 +277,11 @@ The cosmology matter-bridge open item — one open number `H_inf/H_0` — now ca
 - Closure of the matter-bridge open number itself.
 - Anything beyond late-time (matter + Λ) FRW kinematics.
 
+The early-time matter-radiation equality identity is packaged separately in
+`MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`.
+It is not a late-time `H_inf/H_0` reduction; its numerical readout is instead
+conditioned on `Omega_m,0` and observational `Omega_r,0`.
+
 ## 12. Reproduction
 
 ```bash
@@ -290,6 +295,7 @@ Expected: all checks pass.
 - `docs/COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md` — `Λ = 3/R²`
 - `docs/DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md` — `w = −1` retained
 - `docs/OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md` — `Ω_Λ = (H_inf/H_0)²`
+- `docs/MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md` — early-time matter-radiation equality identity
 - `docs/COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md` — open `H_inf/H_0` lane
 - `docs/COSMOLOGY_FROM_MASS_SPECTRUM_NOTE.md` — Phase-5 cascade (not altered here)
 - Weinberg, *Cosmology*, ch. 1 — standard FRW kinematics

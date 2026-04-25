@@ -229,6 +229,9 @@ space. The retained surface now carries:
   `z_*`, matter-Lambda equality `z_{mLambda}`, and asymptotic `H_inf` to the
   same open ratio `H_inf/H_0`; these are structural relations, not point
   predictions
+- the early-time matter-radiation equality identity
+  `1 + z_mr = Omega_m,0/Omega_r,0`; the comparator readout `z_mr ~= 3423`
+  requires supplied `Omega_m,0` and observational `Omega_r,0`
 
 The remaining numerical cosmology predictions remain bounded because the
 cosmology-scale identification and broader matter/cosmology bridge remain
@@ -247,6 +250,7 @@ Authority:
 - [DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md](../../DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md)
 - [COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md](../../COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md)
 - [COSMOLOGY_FRW_KINEMATIC_REDUCTION_THEOREM_NOTE_2026-04-24.md](../../COSMOLOGY_FRW_KINEMATIC_REDUCTION_THEOREM_NOTE_2026-04-24.md)
+- [MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md](../../MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
 - [R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md](../../R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md)
 - [COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md](../../COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md)
 - [DARK_ENERGY_EOS_NOTE.md](../../DARK_ENERGY_EOS_NOTE.md)

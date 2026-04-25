@@ -42,6 +42,11 @@ adds no new point input; `q_0`, `z_*`, `z_{mLambda}`, and asymptotic `H_inf`
 remain functions of the same open `H_inf/H_0` ratio, with listed cosmology
 numbers used only as comparators.
 
+The matter-radiation equality identity adds no new native density derivation:
+`1 + z_mr = Omega_m,0/Omega_r,0` is exact on the admitted FRW/EOS surface, but
+the readout `z_mr ~= 3423` uses supplied `Omega_m,0` and observational
+`Omega_r,0` from `T_CMB` plus relativistic-species bookkeeping.
+
 The dark-matter/cosmology cascade also uses the exact support identity
 `R_base = 31/9`, which depends on the admitted Georgi-Glashow/GUT
 normalization factor `3/5`. That identity is now packaged separately, but it
