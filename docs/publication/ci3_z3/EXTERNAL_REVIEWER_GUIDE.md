@@ -213,9 +213,10 @@ Current status from that stack:
   bounded endpoint split rather than a free scalar search
 - older bounded CKM mass-basis / Cabibbo / partial Jarlskog route history
 - mixed cosmology surface: retained `Lambda_vac = lambda_1(S^3_R)` identity,
-  retained `w = -1` corollary, and retained graviton spectral
-  compactness-mass identity `m_g^2 = 2 hbar^2 Lambda_vac / c^2`, with
-  bounded numerical `Lambda`, `Omega_Lambda`, numerical `m_g`, and `n_s`
+  retained `w = -1` corollary, exact `R_base = 31/9` support inside the
+  bounded DM/cosmology cascade, and retained graviton spectral compactness-mass
+  identity `m_g^2 = 2 hbar^2 Lambda_vac / c^2`, with bounded numerical
+  `Lambda`, `Omega_Lambda`, numerical `m_g`, and `n_s`
 - bounded secondary predictions already in the package, plus the CKM-only
   neutron-EDM corollary with bounded continuation: proton lifetime, down-type
   flavor-mass CKM-dual ratios, vacuum critical stability, taste-scalar

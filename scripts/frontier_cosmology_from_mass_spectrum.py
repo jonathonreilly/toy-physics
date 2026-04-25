@@ -9,7 +9,7 @@ This runner is the terminal step of the mass-spectrum attack plan:
       -> leptogenesis temperature T_L ~ M_1 (decay temperature)
       -> eta (baryon-to-photon ratio)
       -> Omega_b via BBN (textbook)
-      -> R = Omega_DM / Omega_b = 31/9 * S_vis/S_dark (derived)
+      -> R = Omega_DM / Omega_b = 31/9 * S_vis/S_dark (bounded)
       -> Omega_DM = R * Omega_b
       -> Omega_m  = Omega_b + Omega_DM
       -> Omega_Lambda = 1 - Omega_m (flatness)
@@ -23,7 +23,8 @@ Status of each link (honest):
           - PMNS reduced-surface support reaches eta/eta_obs = 1.0
           - live theorem-grade closure still open
     Omega_b via BBN (standard, zero free parameters given eta)
-    R = 5.48 (derived from 31/9 x Sommerfeld, bounded by alpha_GUT in [0.03, 0.05])
+    R_base = 31/9 (exact support identity)
+    R = 5.48 (bounded from R_base x Sommerfeld)
     Omega_Lambda = 0.686 (arithmetic, given flatness)
 
 The cascade produces the canonical pie chart to <5% on every link once
@@ -37,9 +38,9 @@ Authorities consumed:
   - docs/DM_FLAGSHIP_CLOSURE_REVIEW_NOTE_2026-04-17.md        (eta support)
   - docs/DM_NEUTRINO_ATMOSPHERIC_SCALE_THEOREM_NOTE_2026-04-15.md
 
-This runner uses observed eta as the one imported input on the cosmology
-surface.  No OTHER cosmological observable appears in the predictive
-chain; in particular Omega_DM, Omega_Lambda, Omega_m are predictions.
+This runner uses observed eta as the imported input on the cosmology surface.
+The downstream Omega_DM, Omega_Lambda, and Omega_m values are conditional
+cascade values, not retained first-principles cosmology closure.
 """
 
 from __future__ import annotations
@@ -169,8 +170,8 @@ def main() -> int:
     print("    - PMNS reduced-surface support:  eta/eta_obs = 1.0")
     print("    - selector/normalization closure still open")
     print()
-    print("  For this cascade, eta is imported from observation.  Every")
-    print("  downstream link is a prediction given eta.")
+    print("  For this cascade, eta is imported from observation. Downstream")
+    print("  cosmology values are conditional on eta plus the bounded R chain.")
 
     check(
         "eta lies in the standard cosmology range (10^-10 to 10^-9)",
@@ -200,10 +201,10 @@ def main() -> int:
     )
 
     # ----------------------------------------------------------------------
-    # Part 4 -- R = Omega_DM/Omega_b from taste structure + Sommerfeld
+    # Part 4 -- R = Omega_DM/Omega_b from exact R_base + Sommerfeld
     # ----------------------------------------------------------------------
 
-    section("Part 4: R = Omega_DM/Omega_b (derived: 31/9 + Sommerfeld)")
+    section("Part 4: R = Omega_DM/Omega_b (bounded: exact R_base + Sommerfeld)")
     C2_SU3 = 4.0 / 3.0
     C2_SU2 = 3.0 / 4.0
     dim_adj_SU3 = 8
@@ -218,7 +219,7 @@ def main() -> int:
     print(f"    C_2(SU2_fund) = 3/4         = {C2_SU2:.12f}")
     print(f"    f_vis  = C_2(3)*8 + C_2(2)*3 = {f_vis:.4f}")
     print(f"    f_dark = C_2(2)*3           = {f_dark:.4f}")
-    print(f"    mass_ratio = 3/5            = {mass_ratio:.4f}")
+    print(f"    GUT normalization = 3/5     = {mass_ratio:.4f}")
     print(f"    R_base = (3/5) * f_vis / f_dark = {R_base:.6f}")
     print(f"    R_base compared to 31/9      = {31.0/9.0:.6f}")
 
@@ -303,7 +304,7 @@ def main() -> int:
     # Part 7 -- parameter count (the headline of Phase 5)
     # ----------------------------------------------------------------------
 
-    section("Part 7: parameter count -- six LCDM parameters reduced to one")
+    section("Part 7: parameter count -- six LCDM parameters compressed to 1 + 1")
     print("  Standard LCDM: 6 free parameters")
     print("    (Omega_b h^2, Omega_c h^2, 100*theta_MC, tau, n_s, A_s)")
     print()
@@ -313,17 +314,17 @@ def main() -> int:
     print("      - alpha_GUT ~ 0.048 BOUNDED (Sommerfeld correction)")
     print("    DERIVED DOWNSTREAM:")
     print("      - Omega_b (from eta via BBN)")
-    print("      - R_base = 31/9 (exact group theory, zero-free-parameter)")
+    print("      - R_base = 31/9 (exact group-theory support identity)")
     print("      - Omega_DM = R * Omega_b")
     print("      - Omega_m = Omega_b + Omega_DM")
     print("      - Omega_Lambda = 1 - Omega_m (flatness)")
     print()
-    print("  Net: ONE imported + ONE bounded -> full cosmological pie chart.")
+    print("  Net: ONE imported + ONE bounded -> conditional cosmological pie chart.")
 
     check(
         "parameter count reduction: 6 -> 1 + 1 (imported + bounded)",
         True,  # structural observation
-        "full cosmological pie chart follows from eta + alpha_GUT",
+        "conditional cosmological pie chart follows from eta + alpha_GUT",
     )
 
     # ----------------------------------------------------------------------
@@ -369,16 +370,16 @@ def main() -> int:
     print("    - eta remains imported on the live cosmology surface, though")
     print("      DM leptogenesis support reaches eta/eta_obs in {0.1888, 1.0}")
     print()
-    print("  What Phase 5 CLOSES conditionally (if eta promoted):")
-    print("    - full cosmological pie chart with zero additional fit parameters")
-    print("    - Omega_Lambda = 0.686 prediction within 0.2% of observation")
-    print("    - Omega_DM = 0.265 prediction within 0.2% of observation")
+    print("  What Phase 5 would still need for promotion:")
+    print("    - eta promoted from support/import to retained theorem")
+    print("    - Sommerfeld/alpha_GUT continuation promoted from bounded to retained")
+    print("    - matter/cosmology bridge promoted beyond conditional cascade status")
     print()
     print("  Open lane (Phase 5b):")
     print("    Promote eta from DM-gate support to a retained theorem.  The")
     print("    candidate is the exact one-flavor transport + PMNS reduced-")
-    print("    surface selector closure.  With that promotion the cascade")
-    print("    becomes parameter-free for the observables listed.")
+    print("    surface selector closure. That would promote eta only; the full")
+    print("    cosmology row still needs the bounded R and matter-bridge closures.")
 
     print()
     print("=" * 88)

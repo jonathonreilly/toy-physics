@@ -72,6 +72,10 @@ The paper does **not** claim:
 - fully retained top/Yukawa closure;
 - fully retained Higgs/vacuum closure;
 - promoted cosmology closure;
+- native-axiom derivation of the `3/5` GUT normalization used in the
+  `R_base = 31/9` support identity;
+- promotion of the Sommerfeld factor or the full `Omega_DM/Omega_b` value
+  from the `R_base` identity alone;
 - point predictions for `Omega_Lambda`, `Omega_m`, `q_0`, `z_*`, or
   `z_{mLambda}` without closing the `H_inf/H_0` matter bridge;
 - full DM relic closure.

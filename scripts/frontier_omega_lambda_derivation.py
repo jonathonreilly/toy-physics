@@ -4,23 +4,24 @@ Omega_Lambda Derivation: The Cosmological Pie Chart
 =====================================================
 
 CHAIN:
-  eta (baryon-to-photon) -> Omega_b (BBN) -> R(derived) -> Omega_DM
+  eta (baryon-to-photon) -> Omega_b (BBN) -> R(bounded) -> Omega_DM
   -> Omega_m -> Omega_Lambda = 1 - Omega_m  (flatness)
 
 STATUS OF EACH LINK:
   1. eta = 6.12e-10          -- IMPORTED from observation (Planck 2018)
   2. Omega_b from eta        -- STANDARD (BBN, no free parameters)
-  3. R = Omega_DM/Omega_b    -- DERIVED (Sommerfeld + group theory)
+  3. R = Omega_DM/Omega_b    -- BOUNDED (exact R_base + Sommerfeld)
   4. Omega_DM = R * Omega_b  -- ARITHMETIC
   5. Omega_m = Omega_b + Omega_DM  -- ARITHMETIC
   6. Omega_Lambda = 1 - Omega_m    -- FLATNESS (from S^3 or inflation)
 
 KEY RESULT:
-  Given observed Omega_b = 0.0493, the framework predicts
-  Omega_Lambda with ZERO additional free parameters.
+  Given observed Omega_b = 0.0493 and the bounded R chain, the framework
+  gives a conditional Omega_Lambda cascade value.
 
-  The only derived input is R = Omega_DM/Omega_b ~ 5.48,
-  which comes from:
+  The exact support input is R_base = 31/9. The full
+  R = Omega_DM/Omega_b ~ 5.48 additionally uses a bounded Sommerfeld
+  continuation:
     R_base = (3/5) * [C_2(3)*8 + C_2(2)*3] / [C_2(2)*3] = 31/9 = 3.444
     R = R_base * S_vis/S_dark (Sommerfeld correction from QCD)
 
@@ -31,9 +32,9 @@ KEY RESULT:
 
 HONEST ACCOUNTING:
   - eta is imported (not yet first-principles)
-  - R is derived (group theory + Sommerfeld, bounded by alpha_GUT range)
+  - R_base is exact; full R is bounded by the Sommerfeld/alpha_GUT lane
   - flatness is assumed (from S^3 topology or inflation)
-  - Omega_Lambda prediction follows with zero additional parameters
+  - Omega_Lambda is a conditional cascade result, not retained closure
 
 PStack experiment: frontier-omega-lambda-chain
 """
@@ -239,11 +240,11 @@ def link2_omega_b(eta):
 
 
 # ===========================================================================
-# LINK 3: R = Omega_DM / Omega_b  (DERIVED)
+# LINK 3: R = Omega_DM / Omega_b  (BOUNDED)
 # ===========================================================================
 def link3_R_derived():
     """
-    The DM-to-baryon ratio from the taste structure + Sommerfeld enhancement.
+    The DM-to-baryon ratio from exact R_base plus Sommerfeld enhancement.
 
     R_base = (3/5) * [C_2(SU3)*8 + C_2(SU2)*3] / [C_2(SU2)*3]
            = (3/5) * [32/3 + 9/4] / [9/4]
@@ -257,11 +258,10 @@ def link3_R_derived():
     With Sommerfeld correction S_vis/S_dark ~ 1.59:
       R = R_base * (S_vis/S_dark) ~ 5.48
 
-    The Sommerfeld correction depends on alpha_GUT (range 0.03-0.05).
-    At the self-consistent value alpha_s ~ 0.048, R = 5.47 exactly.
+    The Sommerfeld correction depends on alpha_GUT and is the bounded part.
     """
     print("=" * 72)
-    print("LINK 3: R = Omega_DM / Omega_b  (DERIVED from framework)")
+    print("LINK 3: R = Omega_DM / Omega_b  (BOUNDED: exact R_base + Sommerfeld)")
     print("=" * 72)
     print()
 
@@ -274,7 +274,7 @@ def link3_R_derived():
     f_vis  = C2_SU3 * dim_adj_SU3 + C2_SU2 * dim_adj_SU2
     f_dark = C2_SU2 * dim_adj_SU2
 
-    mass_ratio = 3.0 / 5.0    # from Hamming-weight mass spectrum
+    mass_ratio = 3.0 / 5.0    # admitted Georgi-Glashow/GUT normalization
 
     R_base = mass_ratio * f_vis / f_dark
 
@@ -283,7 +283,7 @@ def link3_R_derived():
     print(f"    C_2(SU2_fund) = {C2_SU2:.4f}")
     print(f"    f_vis  = C_2(3)*8 + C_2(2)*3 = {f_vis:.4f}")
     print(f"    f_dark = C_2(2)*3 = {f_dark:.4f}")
-    print(f"    mass ratio = 3/5 = {mass_ratio:.4f}")
+    print(f"    GUT normalization = 3/5 = {mass_ratio:.4f}")
     print(f"    R_base = (3/5) * f_vis/f_dark = 31/9 = {R_base:.4f}")
     print()
 
@@ -405,21 +405,20 @@ def link3_R_derived():
 
     print()
 
-    # Summary of R derivation
-    R_derived = R_exact
-    frac_err_R = abs(R_derived - R_OBS) / R_OBS
+    # Summary of R chain
+    R_bounded = R_exact
+    frac_err_R = abs(R_bounded - R_OBS) / R_OBS
 
     check("R matches observation",
           frac_err_R < 0.05,
-          f"R(derived) = {R_derived:.3f}, R(obs) = {R_OBS:.3f}, "
+          f"R(bounded) = {R_bounded:.3f}, R(obs) = {R_OBS:.3f}, "
           f"err = {frac_err_R*100:.1f}%")
 
-    bounded("R derivation depends on alpha_GUT within [0.03, 0.05]",
-            "Sommerfeld factor is the only model-dependent input; "
-            "group theory and mass spectrum are exact")
+    bounded("Full R depends on the Sommerfeld/alpha_GUT continuation",
+            "R_base = 31/9 is exact; the full Omega_DM/Omega_b value is bounded")
     print()
 
-    return R_derived
+    return R_bounded
 
 
 # ===========================================================================
@@ -506,7 +505,7 @@ def link6_omega_lambda(Omega_m):
 # ===========================================================================
 def sensitivity_analysis(Omega_b):
     """
-    How sensitive is Omega_Lambda to the derived R?
+    How sensitive is Omega_Lambda to the bounded R continuation?
     R varies with alpha_GUT in [0.03, 0.05].
     """
     print("=" * 72)
@@ -564,7 +563,7 @@ def sensitivity_analysis(Omega_b):
 
     print("  " + "-" * 60)
     print()
-    print(f"  The prediction is ROBUST:")
+    print(f"  The conditional cascade is stable across the scan:")
     print(f"    alpha_GUT in [0.03, 0.05] -> Omega_Lambda in ~[0.66, 0.71]")
     print(f"    Observed: {OMEGA_L_OBS}")
     print(f"    The observed value falls well within the predicted range.")
@@ -579,15 +578,18 @@ def honest_accounting():
     Separate what is derived from what is imported.
     """
     print("=" * 72)
-    print("HONEST ACCOUNTING: Derived vs Imported")
+    print("HONEST ACCOUNTING: Exact, Bounded, Imported")
     print("=" * 72)
     print()
 
-    print(f"  DERIVED (from framework, zero free parameters):")
-    print(f"    - R_base = 31/9 from taste structure (exact group theory)")
+    print(f"  EXACT SUPPORT:")
+    print(f"    - R_base = 31/9 from group theory plus admitted 3/5 normalization")
+    print(f"    - flatness algebra: Omega_Lambda = 1 - Omega_m - Omega_r once flatness is assumed")
+    print()
+    print(f"  BOUNDED / CONDITIONAL:")
     print(f"    - Sommerfeld correction S_vis/S_dark ~ 1.6 (QCD + freeze-out)")
-    print(f"    - R = R_base * S_vis/S_dark ~ 5.5 (one bounded parameter: alpha_GUT)")
-    print(f"    - flatness: Omega_total = 1 (from S^3 or inflation)")
+    print(f"    - R = R_base * S_vis/S_dark ~ 5.5 (bounded by alpha_GUT)")
+    print(f"    - flatness mechanism: S^3 topology or inflation")
     print()
     print(f"  IMPORTED (from observation):")
     print(f"    - eta = 6.12e-10 (baryon-to-photon ratio)")
@@ -599,28 +601,24 @@ def honest_accounting():
     print(f"    - BBN: eta -> Omega_b")
     print(f"    - Friedmann equation: Omega_Lambda = 1 - Omega_m")
     print()
-    print(f"  PARAMETER COUNT for Omega_Lambda prediction:")
-    print(f"    Given Omega_b (observed): ZERO additional free parameters")
-    print(f"      R is derived, flatness is assumed")
-    print(f"    Given eta (observed): ZERO additional free parameters")
-    print(f"      BBN + R + flatness, all derived/standard")
-    print(f"    Full first-principles: ONE bounded parameter")
-    print(f"      alpha_GUT in [0.03, 0.05] from unification")
-    print(f"      (eta still requires lattice EWPT confirmation)")
+    print(f"  PARAMETER / STATUS COUNT for Omega_Lambda cascade:")
+    print(f"    Given Omega_b (observed): requires bounded R plus flatness")
+    print(f"    Given eta (observed): adds standard BBN to bounded R plus flatness")
+    print(f"    Full first-principles closure: still needs eta and Sommerfeld/alpha_GUT closure")
     print()
 
-    info("The chain Omega_b(obs) -> R(derived) -> Omega_Lambda is a genuine",
-         "prediction: given observed baryon density, the framework predicts "
-         "the cosmological constant fraction with zero additional parameters")
+    info("The chain Omega_b(obs) -> R(bounded) -> Omega_Lambda is a conditional",
+         "cascade: the exact new piece is R_base = 31/9, while the full "
+         "Omega_Lambda row remains bounded")
 
     print()
-    print(f"  COMPARISON: What other frameworks predict with one input")
+    print(f"  COMPARISON: What other frameworks condition on")
     print(f"  " + "-" * 60)
     print(f"  {'Framework':30s}  {'Inputs':20s}  {'Predicts':15s}")
     print(f"  " + "-" * 60)
     print(f"  {'Standard LCDM':30s}  {'6 parameters':20s}  {'everything':15s}")
     print(f"  {'Anthropic (Weinberg)':30s}  {'rho_Lambda < 500':20s}  {'O(1) bound':15s}")
-    print(f"  {'This framework':30s}  {'Omega_b':20s}  {'Omega_L = 0.682':15s}")
+    print(f"  {'This framework':30s}  {'Omega_b + bounded R':20s}  {'Omega_L = 0.682':15s}")
     print(f"  " + "-" * 60)
     print()
 
@@ -668,7 +666,7 @@ def main():
     print()
     print("*" * 72)
     print("* Omega_Lambda Derivation: The Cosmological Pie Chart              *")
-    print("* Chain: eta -> Omega_b -> R(derived) -> Omega_DM -> Omega_Lambda  *")
+    print("* Chain: eta -> Omega_b -> R(bounded) -> Omega_DM -> Omega_Lambda  *")
     print("*" * 72)
     print()
 

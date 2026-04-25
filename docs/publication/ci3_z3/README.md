@@ -45,8 +45,9 @@ For the full package-capture inventory, use:
   quantization, `SU(2)` Witten global-anomaly cancellation, `SU(3)^3`
   cubic gauge anomaly cancellation, B-L anomaly freedom as a gaugeable option
   on the retained content, exact `I_3 = 0`, exact CPT, Bell/CHSH support,
-  retained cosmology identities/corollaries, including the FRW kinematic
-  reduction of late-time cosmology observables to the open `H_inf/H_0` ratio
+  retained cosmology identities/corollaries, including exact `R_base = 31/9`
+  group-theory support for the bounded DM/cosmology cascade, the FRW kinematic
+  reduction of late-time cosmology observables to the open `H_inf/H_0` ratio,
   and the retained TT compactness spectral tower on `S^3`
 - flagship closed package:
   dark-matter exact-target PMNS package on the manuscript surface

@@ -86,6 +86,7 @@ python3 scripts/frontier_planck_boundary_density_extension.py
 python3 scripts/frontier_planck_finite_response_nogo.py
 python3 scripts/frontier_planck_parent_source_hidden_character_nogo.py
 python3 scripts/frontier_neutrino_retained_observable_bounds.py
+python3 scripts/frontier_r_base_group_theory_derivation.py
 python3 scripts/frontier_cosmology_frw_kinematic_reduction.py
 python3 scripts/frontier_graviton_spectral_tower.py
 ```

@@ -2,24 +2,25 @@
 
 ## Status
 
-**BOUNDED** -- Omega_Lambda = 0.686 is predicted with 0.2% accuracy given
-observed Omega_b. The chain uses one derived quantity (R) with zero
-additional free parameters. Eta is still not promoted as a live derived row,
-but the current DM gate now provides nontrivial exact/support structure rather
-than leaving eta completely route-less.
+**BOUNDED** -- Omega_Lambda = 0.686 is a conditional cascade value given
+observed Omega_b and the bounded dark-matter ratio chain. The base factor
+`R_base = 31/9` is now packaged as an exact group-theory support identity,
+but the Sommerfeld continuation, eta, and the matter/cosmology bridge remain
+outside retained first-principles closure.
 
 **Current publication disposition:** bounded/conditional cosmology companion
 only. Not on the retained flagship claim surface.
 
 ## Theorem / Claim
 
-Given the observed baryon density Omega_b = 0.0493, the framework predicts
-the dark energy fraction Omega_Lambda = 0.686 (observed: 0.685) with zero
-additional free parameters beyond the derived DM-to-baryon ratio R.
+Given the observed baryon density Omega_b = 0.0493 and the bounded
+DM-to-baryon ratio chain, the framework gives the dark-energy fraction
+Omega_Lambda = 0.686 (observed: 0.685). This is a conditional cascade result,
+not a retained first-principles cosmology closure.
 
 The full chain:
 
-    eta(obs) -> Omega_b(BBN) -> R(derived) -> Omega_DM -> Omega_m -> Omega_Lambda
+    eta(obs) -> Omega_b(BBN) -> R(bounded) -> Omega_DM -> Omega_m -> Omega_Lambda
 
 Each link:
 
@@ -30,8 +31,10 @@ Each link:
    low-action branch with `eta/eta_obs = 1`. That support stack is not yet
    promoted as live theorem-grade closure, so eta remains imported here.
 2. **Omega_b = 0.0492**: standard BBN, zero free parameters given eta
-3. **R = 5.38**: derived from taste structure (R_base = 31/9 = 3.444)
-   plus Sommerfeld correction (S_vis/S_dark ~ 1.56)
+3. **R = 5.38**: bounded from the exact support identity
+   `R_base = 31/9 = 3.444` (see
+   [`R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md`](R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md))
+   plus the Sommerfeld correction (`S_vis/S_dark ~ 1.56`)
 4. **Omega_DM = R * Omega_b = 0.264**: arithmetic
 5. **Omega_m = Omega_b + Omega_DM = 0.314**: arithmetic
 6. **Omega_Lambda = 1 - Omega_m = 0.686**: flatness (from S^3 or inflation)
@@ -47,7 +50,8 @@ Each link:
    This is materially stronger than a pure import, but the selector /
    normalization closure is still open, so eta remains imported on this chain.
 
-2. **R derivation bounded by alpha_GUT** -- the Sommerfeld correction
+2. **R derivation bounded by alpha_GUT** -- the base identity
+   `R_base = 31/9` is exact, but the Sommerfeld correction
    depends on alpha_GUT in [0.03, 0.05].  Within this range, R varies
    from ~4.8 to ~5.3.  The self-consistent match gives alpha_GUT ~ 0.062.
 
@@ -61,14 +65,14 @@ Each link:
 
 The derivation establishes:
 
-- Given Omega_b (observed), the framework predicts Omega_Lambda with
-  ZERO additional free parameters.  R is the only derived input, and it
-  comes from group theory (exact) plus Sommerfeld enhancement (bounded).
+- Given Omega_b (observed), the framework gives a conditional Omega_Lambda
+  value once the bounded `R` chain is supplied. The exact part of that chain
+  is `R_base = 31/9`; the Sommerfeld enhancement is still bounded.
 
-- The prediction is robust: alpha_GUT in [0.03, 0.05] gives
+- The conditional cascade is robust: alpha_GUT in [0.03, 0.05] gives
   Omega_Lambda in [0.66, 0.71], comfortably containing the observed 0.685.
 
-- The chain is a genuine conditional prediction: if R ~ 5.4 (derived),
+- The chain is a genuine conditional cascade: if bounded `R ~ 5.4` is supplied,
   then the entire cosmological pie chart follows from Omega_b alone.
 
 Numerical results (using BBN-calibrated Omega_b):
@@ -88,8 +92,9 @@ Numerical results (using BBN-calibrated Omega_b):
    taste-scalar EWPT baryogenesis route is not currently a closure path.
    The active eta route is now the DM leptogenesis gate:
    exact one-flavor transport reaches `0.1888`, while reduced-surface PMNS
-   support reaches `1.0`. If that gate is promoted from support/open status to
-   live closure, the entire pie chart becomes parameter-free.
+   support reaches `1.0`. Promoting that gate would remove the eta import, but
+   the full pie chart would still need the Sommerfeld/alpha_GUT and
+   matter-bridge statuses promoted.
 
 2. **Alpha_GUT from the framework** -- the Sommerfeld correction uses
    alpha_GUT as a bounded input.  If gauge coupling unification is
@@ -104,13 +109,13 @@ Numerical results (using BBN-calibrated Omega_b):
 
 ## How This Changes The Paper
 
-The chain Omega_b(obs) -> R(derived) -> Omega_Lambda is a strong
+The chain Omega_b(obs) -> R(bounded) -> Omega_Lambda is a strong
 bounded result for the paper:
 
-- **Safe claim**: Given the observed baryon density, the framework
-  predicts Omega_Lambda = 0.686 with zero additional parameters, using
-  only the derived DM-to-baryon ratio R = 5.4 from taste structure and
-  Sommerfeld enhancement.
+- **Safe claim**: Given the observed baryon density and the bounded
+  DM-to-baryon ratio chain, the framework gives Omega_Lambda = 0.686.
+  The exact piece of the ratio chain is `R_base = 31/9`; the Sommerfeld
+  continuation remains bounded.
 
 - **Not safe**: Claiming Omega_Lambda is derived from first principles.
   Eta is still imported on the live cosmology surface, even though the current
@@ -119,7 +124,7 @@ bounded result for the paper:
 - **Paper placement**: This belongs in the cosmological predictions
   section as a conditional chain.  The honest framing is: "the framework
   reduces the six LCDM parameters to one observable input (eta or
-  equivalently Omega_b), with R derived and flatness assumed."
+  equivalently Omega_b), exact `R_base`, bounded Sommerfeld, and flatness."
 
 ## Commands Run
 

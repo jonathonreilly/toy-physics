@@ -213,6 +213,9 @@ space. The retained surface now carries:
 - the TT compactness spectral tower on `S^3`, with exact rational
   squared-mass ratios and Higuchi margins, while numerical tower masses stay
   bounded by the same open `R` identification
+- `R_base = 31/9` as an exact group-theory support identity inside the
+  bounded DM/cosmology cascade; the Sommerfeld factor and full
+  `Omega_DM/Omega_b` value remain bounded
 - FRW late-time kinematic identities reducing `q_0`, acceleration onset
   `z_*`, matter-Lambda equality `z_{mLambda}`, and asymptotic `H_inf` to the
   same open ratio `H_inf/H_0`; these are structural relations, not point
@@ -235,6 +238,7 @@ Authority:
 - [DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md](../../DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md)
 - [COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md](../../COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md)
 - [COSMOLOGY_FRW_KINEMATIC_REDUCTION_THEOREM_NOTE_2026-04-24.md](../../COSMOLOGY_FRW_KINEMATIC_REDUCTION_THEOREM_NOTE_2026-04-24.md)
+- [R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md](../../R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md)
 - [COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md](../../COSMOLOGICAL_CONSTANT_RESULT_2026-04-12.md)
 - [DARK_ENERGY_EOS_NOTE.md](../../DARK_ENERGY_EOS_NOTE.md)
 - [GRAVITON_MASS_DERIVED_NOTE.md](../../GRAVITON_MASS_DERIVED_NOTE.md)

@@ -13,7 +13,7 @@ lane is promotion of `eta` from DM-gate support to retained theorem.
 Given the Phase 4 retained taste-staircase level `k_B = 8` — which fixes
 the lightest right-handed neutrino Majorana mass
 `M_1 = M_Pl * alpha_LM^8 * (1 - alpha_LM/2) = 5.32e10 GeV` — and given the
-promoted exact group-theory factor `R_base = 31/9`, the framework admits a
+named exact group-theory support identity `R_base = 31/9`, the framework admits a
 single chain
 
 ```
@@ -22,8 +22,8 @@ single chain
 ```
 
 with **one imported input (`eta`) and one bounded parameter (`alpha_GUT`)**
-that predicts every other entry of the Planck cosmological pie chart to
-within 1% of observation:
+that gives conditional values for the remaining Planck cosmological pie-chart
+entries to within 1% of observation:
 
 | Quantity | Predicted | Observed | Error |
 |---|---|---|---|
@@ -33,8 +33,8 @@ within 1% of observation:
 | `Omega_m`       | 0.3188 | 0.315  | 1.2% |
 | `Omega_Lambda`  | 0.6811 | 0.685  | 0.6% |
 
-The six LCDM parameters are reduced to **one imported (`eta`) + one bounded
-(`alpha_GUT`)**.
+On this bounded surface, the six LCDM parameters are compressed to **one
+imported (`eta`) + one bounded (`alpha_GUT`)** plus flatness.
 
 ## Inputs and provenance
 
@@ -43,7 +43,8 @@ The six LCDM parameters are reduced to **one imported (`eta`) + one bounded
 - Phase 4: `k_B = 8`, `M_1 = M_Pl * alpha_LM^8 * (1 - alpha_LM/2)` from the
   adjacent-placement + residual-sharing theorem stack.
 - Exact group theory: `R_base = (3/5) * [C_2(3)*8 + C_2(2)*3] / [C_2(2)*3]
-  = 31/9 = 3.4444...`.
+  = 31/9 = 3.4444...`; see
+  [`R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md`](R_BASE_GROUP_THEORY_DERIVATION_THEOREM_NOTE_2026-04-24.md).
 - Flatness `Omega_total = 1` (from S^3 topology or inflation, Planck
   bound `|Omega_k| < 0.002`).
 - BBN link `Omega_b * h^2 = 3.6515e-3 * eta_10` (Cyburt+ 2016, textbook).
@@ -85,7 +86,7 @@ materially supports `eta` without yet closing it:
 
 ## What Phase 5 retains
 
-- `R_base = 31/9` as an exact group-theory consequence.
+- `R_base = 31/9` as an exact group-theory support identity.
 - the BBN link `Omega_b * h^2 = 3.6515e-3 * eta_10` as textbook standard
   physics.
 - the arithmetic cascade `Omega_DM = R * Omega_b`, `Omega_m`, `Omega_Lambda`.
@@ -103,9 +104,10 @@ materially supports `eta` without yet closing it:
 ## What Phase 5 conditionally closes
 
 If `eta` is promoted from DM-gate support to a retained theorem (Phase 5b),
-the entire cosmological pie chart becomes parameter-free up to the bounded
-Sommerfeld correction.  The remaining open lane is therefore sharply
-named:
+one imported input disappears. The full cosmological pie-chart row would still
+need the bounded Sommerfeld/`alpha_GUT` continuation and the matter/cosmology
+bridge promoted before it becomes retained closure. The next open lane is
+therefore sharply named:
 
 > **Phase 5b: promote `eta` to retained.**
 >

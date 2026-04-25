@@ -42,6 +42,12 @@ adds no new point input; `q_0`, `z_*`, `z_{mLambda}`, and asymptotic `H_inf`
 remain functions of the same open `H_inf/H_0` ratio, with listed cosmology
 numbers used only as comparators.
 
+The dark-matter/cosmology cascade also uses the exact support identity
+`R_base = 31/9`, which depends on the admitted Georgi-Glashow/GUT
+normalization factor `3/5`. That identity is now packaged separately, but it
+does not derive the Sommerfeld correction, the full `Omega_DM/Omega_b` value,
+or the downstream `Omega_Lambda` numerics.
+
 The charged-lepton bounded package is additionally conditioned on
 an explicit three-real observational pin:
 
