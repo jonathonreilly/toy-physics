@@ -157,3 +157,27 @@ either:
 
 The second route is more compatible with the Planck packet, but it still needs a
 new carrier-identification theorem rather than another bounded area-law probe.
+
+## Post-audit update
+
+[AREA_LAW_PRIMITIVE_PARITY_GATE_CARRIER_THEOREM_NOTE_2026-04-25.md](./AREA_LAW_PRIMITIVE_PARITY_GATE_CARRIER_THEOREM_NOTE_2026-04-25.md)
+implements the first route conditionally. It supplies the missing
+multi-pocket measure by the self-dual half-zone of the primitive transverse
+nearest-neighbor Laplacian, so the average crossing count is exactly `3` and
+the Widom coefficient is exactly `1/4`. This resolves the coefficient problem
+if the rank-four primitive boundary block is accepted as that two-orbital
+Laplacian-gated edge carrier. Otherwise, the broader no-go packet remains the
+retained status.
+
+[AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md](./AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md)
+then identifies the exact remaining physical premise: accept the rank-four
+primitive packet as a minimal local complex-CAR edge algebra. With that premise,
+`rank(P_A)=4` forces `F(C^2)`, the selected face supplies one normal channel,
+and the unique tangent-symmetric nearest-neighbor response is the self-dual
+Laplacian-gated channel. Inside those primitive-CAR edge axioms, the positive
+`1/4` carrier is forced.
+
+[AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md](./AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md)
+reduces the premise to irreducible Clifford-Majorana edge statistics. This is
+native to the fermionic/Clifford response language, but it is not forced by
+rank four alone.

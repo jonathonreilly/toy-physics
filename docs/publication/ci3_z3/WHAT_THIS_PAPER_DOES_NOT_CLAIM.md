@@ -174,6 +174,9 @@ If a reviewer wants the negative boundary, use this note.
   completion once the gravitational boundary/action carrier is accepted.
 - The primitive `c_cell = 1/4` boundary-density statement is not an
   entanglement theorem by itself. The simple-fiber Widom class is now closed
-  negatively at `c_Widom <= 1/6`; a positive entropy route to `1/4` still needs
-  a physical multi-pocket/multi-interval Fermi carrier or a gapped
-  horizon-sector primitive-boundary theorem.
+  negatively at `c_Widom <= 1/6`; the multipocket-selector, primitive
+  finite-edge entropy, and algebraic finite-Schmidt-spectrum shortcuts are also
+  closed negatively. The positive primitive-CAR route gives `c_Widom=1/4` only
+  conditional on the metric-compatible Clifford/CAR coframe response on the
+  active rank-four block; that response is not yet derived from the minimal
+  retained stack.

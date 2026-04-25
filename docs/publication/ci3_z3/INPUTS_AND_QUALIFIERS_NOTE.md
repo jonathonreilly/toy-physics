@@ -97,13 +97,22 @@ Current absolute-scale package rule:
   cuts with at most one occupied `k_x` interval per transverse momentum fiber,
   plus consistently normalized Schur/direct-sum descendants, obey
   `c_Widom <= 1/6`, not `1/4`
+- the 2026-04-25 area-law selector packet closes the multipocket-selector,
+  primitive finite-edge entropy, and algebraic finite-Schmidt-spectrum shortcuts
+  negatively; its positive primitive-CAR carrier route is conditional on the
+  metric-compatible Clifford/CAR coframe response on `P_A H_cell`, which is a
+  sharp remaining bridge premise rather than a minimal-stack retained closure
 - authority:
   [PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md](../../PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md),
   [PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md](../../PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md),
   [PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md](../../PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md),
   [PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md](../../PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md),
   [PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md](../../PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md),
-  [PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md](../../PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md)
+  [PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md](../../PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md),
+  [AREA_LAW_MULTIPOCKET_SELECTOR_NO_GO_NOTE_2026-04-25.md](../../AREA_LAW_MULTIPOCKET_SELECTOR_NO_GO_NOTE_2026-04-25.md),
+  [AREA_LAW_PRIMITIVE_EDGE_ENTROPY_SELECTOR_NO_GO_NOTE_2026-04-25.md](../../AREA_LAW_PRIMITIVE_EDGE_ENTROPY_SELECTOR_NO_GO_NOTE_2026-04-25.md),
+  [AREA_LAW_ALGEBRAIC_SPECTRUM_ENTROPY_NO_GO_NOTE_2026-04-25.md](../../AREA_LAW_ALGEBRAIC_SPECTRUM_ENTROPY_NO_GO_NOTE_2026-04-25.md),
+  [PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md](../../PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md)
 
 - plaquette surface:
   - `<P> = 0.5934`

@@ -112,6 +112,17 @@ The only external input is the conventional target definition
 This theorem is therefore a support theorem for the existing conditional
 Planck packet, not a replacement for the current package pin.
 
+The later Target 3 Clifford phase bridge supplies a sufficient carrier route
+under the primitive metric-compatible coframe-response premise. Under that
+conditional bridge, this support theorem becomes the source-unit leg of the
+structural Planck packet:
+
+```text
+c_Widom = c_cell = 1/4,
+G_Newton,lat = 1,
+a/l_P = 1.
+```
+
 ## Lemma 1: Green Kernel Is a Bare-Source Statement
 
 Let the native lattice field equation be

@@ -150,6 +150,37 @@ a/l_P = 2 sqrt(pi)
 
 without removing the carrier-identification premise itself.
 
+### 4b. Conditional Clifford coframe bridge for the carrier premise
+
+The 2026-04-25 Target 3 Clifford phase bridge gives a sufficient route for the
+remaining carrier-identification premise: assume the active primitive boundary
+response is the metric-compatible Clifford coframe response on `P_A H_cell`.
+That response satisfies
+
+```text
+D(v)^2 = ||v||^2 I,
+```
+
+and therefore polarizes to the complex Clifford relation on the time-locked
+primitive coframe:
+
+```text
+{D(u),D(v)} = 2 <u,v> I.
+```
+
+On `P_A H_cell` with `rank(P_A)=4`, this is the irreducible
+`Cl_4(C) ~= M_4(C)` module, equivalently the two-mode complex CAR edge
+carrier. Combined with the primitive parity-gated area-law theorem, this gives
+
+```text
+c_Widom = c_cell = 1/4.
+```
+
+Thus the conditional packet has a precise positive carrier route under the
+primitive coframe-response premise. It is not promoted here to a minimal-stack
+retained theorem, because the coframe response on the active block remains the
+explicit bridge premise.
+
 ### 5. Finite-only target is blocked
 
 The branch correctly separates the conditional completion from a stronger
