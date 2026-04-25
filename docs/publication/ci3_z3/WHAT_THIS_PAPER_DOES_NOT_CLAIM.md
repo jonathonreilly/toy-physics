@@ -66,6 +66,9 @@ The paper does **not** claim:
 - that the CKM NLO protected-gamma identity is an all-orders barred-triangle
   theorem; the protection is retained only through the standard NLO
   barred-apex scaling, with `O(lambda^4)` terms left outside the claim.
+- that the CKM barred-circumradius or circumcenter exact closed forms extend
+  the protected-`gamma_bar` NLO surface to physical NNLO or all-orders CKM
+  control.
 - that the atlas/Wolfenstein area factor
   `J_0 = alpha_s(v)^3 sqrt(5)/72` replaces the parent atlas' exact
   finite-`lambda` standard-matrix `J` readout.
