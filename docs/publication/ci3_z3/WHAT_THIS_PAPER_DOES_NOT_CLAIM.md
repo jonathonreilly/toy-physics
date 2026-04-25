@@ -107,6 +107,10 @@ The paper does **not** claim:
   `N_gen=N_color`; it only packages exact CKM-side Egyptian-fraction and
   Bernoulli-sum arithmetic from retained CKM inputs, and its cross-sector
   readings are conditional support.
+- that the CKM consecutive-primes / `S_3` Koide-bridge support note proves
+  charged-lepton Koide, PMNS closure, or `N_gen=N_color`; it only packages
+  exact CKM-side prime, divisor, and `S_3` representation bookkeeping from
+  retained CKM counts, and its cross-sector readings are conditional support.
 - that the bare `alpha_3/alpha_em = 9` support card promotes the reviewed
   `Cl(3)->SM` support packet into the accepted minimal-input stack, predicts a
   direct low-energy `alpha_3/alpha_em` ratio without the retained EW

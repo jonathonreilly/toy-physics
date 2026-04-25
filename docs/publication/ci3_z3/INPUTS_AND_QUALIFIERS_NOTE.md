@@ -221,6 +221,14 @@ bridge layer beyond the exact structural core.
   - the note does not derive Koide `cos^2(theta_K)`, Koide ternary unitarity,
     charged-lepton Koide, or `N_gen=N_color`; cross-sector readings are
     conditional support and not verifier pass conditions
+- CKM consecutive-primes / `S_3` Koide-bridge support:
+  - promoted CKM structural counts only
+  - exact claim is CKM-side arithmetic/group bookkeeping: `(2,3)` is the
+    unique consecutive-prime pair, `|S_3|=6`, conjugacy-class sizes are
+    `{1,2,3}`, `1^2+1^2+2^2=6`, and `dim(std S_3)=2`
+  - the note does not derive charged-lepton Koide, PMNS closure, or
+    `N_gen=N_color`; cross-sector readings are conditional support and not
+    verifier pass conditions
 - down-type CKM-dual mass ratios:
   - promoted CKM atlas/axiom package + GST + bounded `5/6` mass-ratio bridge; no observed
     masses as derivation inputs
