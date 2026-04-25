@@ -101,7 +101,56 @@ once the primitive boundary count is accepted as the microscopic
 gravitational boundary/action carrier, the `1/4` coefficient extends
 consistently from one primitive face to finite boundary patches.
 
-### 4. Finite-only target is blocked
+### 4. Source-unit normalization support theorem
+
+The 2026-04-25 source-unit normalization support theorem sharpens the same
+conditional packet by resolving the residual `4 pi` source-unit ambiguity.
+
+The retained lattice Poisson/Green theorem gives the bare unit-source
+coefficient
+
+```text
+G_kernel = 1/(4 pi),
+```
+
+which is the response to a chosen regulator delta source. Exterior
+observability and additivity leave a one-parameter family of physical source
+units
+
+```text
+M_lambda = lambda C,
+G_lambda = 1/lambda,
+```
+
+where `C` is the normalized Gauss charge / asymptotic monopole coefficient.
+On the same conditional carrier surface,
+
+```text
+c_cell = 1/(4 G_lambda) = lambda / 4
+```
+
+forces `lambda = 1`, hence
+
+```text
+q_bare = 4 pi M_phys,
+G_Newton,lat = 1.
+```
+
+So the conditional completion packet now has both:
+
+- the primitive coefficient `c_cell = 1/4`, and
+- the source-unit clarification that `1/(4 pi)` is a bare Green coefficient,
+  not the physical Newton coefficient on the carrier-normalized surface.
+
+This resolves the old bare-source failure mode
+
+```text
+a/l_P = 2 sqrt(pi)
+```
+
+without removing the carrier-identification premise itself.
+
+### 5. Finite-only target is blocked
 
 The branch correctly separates the conditional completion from a stronger
 finite-automorphism-only claim.
@@ -130,7 +179,7 @@ identity, and the infinitesimal tangent available from finite automorphisms
 alone is zero-dimensional. It cannot supply the local metric/coframe response
 directions required for the gravitational carrier identification.
 
-### 5. Realified response is a conditional response surface
+### 6. Realified response is a conditional response surface
 
 The branch also sharpens the role of realification. If one asks for
 first-order physical response maps from the retained translation module
@@ -148,7 +197,7 @@ gravity questions. It does not erase the distinction between:
 - deriving `a/l_P = 1` on the realified physical-response surface plus the
   gravitational boundary/action carrier identification.
 
-### 6. Cosmic pins and SI hbar remain nonclaims
+### 7. Cosmic pins and SI hbar remain nonclaims
 
 Present age, present radius, or other cosmic address data can select a
 macroscopic comparison surface. They do not determine the microscopic tick or
@@ -202,7 +251,9 @@ Use:
 > `c_cell = 1/4`, a unique additive finite-boundary density extension, and a
 > conditional same-surface normalization `a/l_P = 1` once the primitive
 > boundary count is accepted as the microscopic gravitational area/action
-> carrier.
+> carrier; the companion source-unit normalization support theorem shows that
+> the retained `1/(4 pi)` is only the bare Green coefficient and that the
+> physical lattice Newton coefficient is `1` on that same carrier surface.
 
 Do not use:
 

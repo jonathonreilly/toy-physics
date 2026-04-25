@@ -40,6 +40,12 @@ in
 - exact same-surface normalization algebra
   `c_cell/a^2 = 1/(4 l_P^2)`, hence `a/l_P = 1`;
 - explicit finite-only, parent-source, and SI-unit blockers.
+- the 2026-04-25 source-unit normalization support theorem sharpens the same
+  packet by separating the retained bare Green coefficient
+  `G_kernel = 1/(4 pi)` from the conditional physical Newton coefficient
+  `G_Newton,lat = 1` on the carrier surface, resolving the old
+  `a/l_P = 2 sqrt(pi)` bare-source mismatch without promoting the minimal
+  stack to full closure.
 - the finite-automorphism-only response route is now closed negatively in
   [PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md](./PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md):
   the primitive finite frame has a positive identity gap and no infinitesimal
@@ -99,17 +105,26 @@ This lane does **not** by itself close:
 
 The current gravity/action package closes only to **lattice units**.
 
-The strongest existing gravity statement is:
+The strongest existing bare gravity statement is:
 
-> `G_N = 1/(4π)` in lattice units.
+> `G_kernel = 1/(4π)` for a unit bare delta source.
 
-That is not yet the same thing as deriving the physical lattice spacing.
+The 2026-04-25 source-unit support theorem refines this on the same
+conditional carrier surface:
+
+> `q_bare = 4 pi M_phys`, hence `G_Newton,lat = 1`.
+
+That still does not make the absolute lattice spacing a theorem of the older
+minimal stack, because the carrier-identification premise remains the live
+blocker.
 
 The exact remaining calibration step is the physical unit map:
 
-> `G_phys = a^2 G_lat`
+> `G_phys = a^2 G_Newton,lat`
 
-with `G_lat = 1/(4π)` on the retained gravity surface.
+with `G_Newton,lat = 1` on the conditional source-unit support surface, while
+`G_kernel = 1/(4π)` remains the bare Green coefficient on the retained Poisson
+surface.
 
 Until that map is derived internally, the package still needs one explicit
 absolute-scale pin.
@@ -139,6 +154,10 @@ Current blocker:
 
 - the conditional completion packet derives `c_cell = 1/4` and proves that the
   standard gravitational area/action normalization gives `a/l_P = 1`;
+- the source-unit normalization support theorem shows that, on that same
+  carrier surface, the residual `4 pi` ambiguity is only a source-unit issue:
+  exterior observability leaves `M_lambda = lambda C`, and the same carrier
+  match fixes `lambda = 1`, so `q_bare = 4 pi M_phys` and `G_Newton,lat = 1`;
 - the finite-boundary density extension is closed positively: locality,
   additivity, cubic-frame orientation symmetry, and primitive normalization
   uniquely extend the `1/4` cell coefficient to finite face-union boundary
@@ -226,6 +245,9 @@ Until one of the three targets closes, the correct package statement is:
 - the new conditional-completion theorem records exactly what would be needed
   to promote the pin: accept or derive the primitive boundary count as the
   gravitational boundary/action carrier
+- the source-unit normalization support theorem resolves the bare-source
+  `4 pi` mismatch inside that conditional packet, but it does not remove the
+  carrier premise itself
 - the finite-boundary density extension is a retained positive support theorem
   on that conditional carrier surface
 - the finite-automorphism-only response route is a retained no-go, not an

@@ -141,13 +141,18 @@ Validate with:
   the accepted physical-lattice reading; the 2026-04-24 conditional-completion
   packet derives `c_cell = 1/4`, closes the unique finite-boundary density
   extension positively, and gives `a/l_P = 1` once the primitive boundary count
-  is accepted as the gravitational boundary/action carrier, while the
-  minimal-stack derivation of that carrier identification remains open; the
-  finite-automorphism-only response route and carrier-only parent-source scalar
-  route are closed negatively; the simple-fiber Widom entropy-carrier class is
-  also closed negatively at `c_Widom <= 1/6`, so a positive `1/4` entropy route
-  must use a physically selected multi-pocket/multi-interval carrier or a
-  gapped horizon-sector primitive-boundary theorem
+  is accepted as the gravitational boundary/action carrier; the 2026-04-25
+  source-unit normalization support theorem on that same carrier surface
+  separates the retained bare Green coefficient `G_kernel = 1/(4 pi)` from the
+  conditional physical Newton coefficient `G_Newton,lat = 1`, resolving the old
+  bare-source `2 sqrt(pi)` mismatch without removing the remaining carrier
+  premise; the minimal-stack derivation of that carrier identification remains
+  open; the finite-automorphism-only response route and carrier-only
+  parent-source scalar route are closed negatively; the simple-fiber Widom
+  entropy-carrier class is also closed negatively at `c_Widom <= 1/6`, so a
+  positive `1/4` entropy route must use a physically selected
+  multi-pocket/multi-interval carrier or a gapped horizon-sector
+  primitive-boundary theorem
 
 Start with:
 
@@ -155,6 +160,7 @@ Start with:
 - [USABLE_DERIVED_VALUES_INDEX.md](./USABLE_DERIVED_VALUES_INDEX.md)
 - [PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md](../../PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md)
 - [PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md](../../PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md)
+- [PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md](../../PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md)
 - [PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md](../../PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md)
 - [PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md](../../PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md)
 - [PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md](../../PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md)
@@ -172,6 +178,7 @@ Validate with:
 - `python3 scripts/frontier_higgs_mass_full_3loop.py`
 - `python3 scripts/frontier_planck_scale_program_audit.py`
 - `python3 scripts/frontier_planck_conditional_completion_audit.py`
+- `python3 scripts/frontier_planck_source_unit_normalization_support_theorem.py`
 - `python3 scripts/frontier_planck_boundary_density_extension.py`
 - `python3 scripts/frontier_planck_finite_response_nogo.py`
 - `python3 scripts/frontier_planck_parent_source_hidden_character_nogo.py`

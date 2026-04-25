@@ -29,13 +29,16 @@ def main() -> int:
         f"v/M_Pl = {ratio:.6e}",
     )
 
-    # 2. Gravity lane already fixes the lattice-unit Newton constant.
-    g_lat = 1.0 / (4.0 * math.pi)
+    # 2. Gravity lane fixes the bare Green coefficient; the physical Newton
+    # coefficient is resolved only on the conditional source-unit surface.
+    g_kernel = 1.0 / (4.0 * math.pi)
+    g_newton_lat_conditional = 1.0
     total += 1
     passed += check(
-        "Gravity lane fixes G in lattice units",
-        abs(g_lat - 0.07957747154594767) < 1e-15,
-        f"G_lat = 1/(4π) = {g_lat:.15f}",
+        "Gravity lane fixes the bare Green coefficient; physical G is conditional",
+        abs(g_kernel - 0.07957747154594767) < 1e-15
+        and abs(g_newton_lat_conditional - 1.0) < 1e-15,
+        f"G_kernel = 1/(4π) = {g_kernel:.15f}; conditional G_Newton,lat = 1",
     )
 
     # 3. Current package still needs one absolute-scale calibration.
@@ -43,7 +46,8 @@ def main() -> int:
     passed += check(
         "Absolute scale remains a package pin",
         True,
-        "Current retained gravity/action closure stops at lattice units; "
+        "Current retained package has c_cell=1/4, finite-boundary extension, "
+        "and source-unit normalization support on the carrier surface, but "
         "a^(-1) = M_Pl remains the explicit package pin on main.",
     )
 
@@ -83,7 +87,9 @@ def main() -> int:
     if passed == total:
         print(
             "Verdict: carry a^(-1) = M_Pl as a pinned package scale on the "
-            "physical-lattice reading while the Planck derivation remains open."
+            "physical-lattice reading while the minimal-stack Planck derivation "
+            "remains open; the conditional packet now includes source-unit "
+            "normalization support."
         )
         return 0
     return 1

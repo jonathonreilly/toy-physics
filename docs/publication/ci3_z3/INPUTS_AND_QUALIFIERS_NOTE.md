@@ -82,6 +82,11 @@ Current absolute-scale package rule:
   `a/l_P = 1` after the primitive boundary count is accepted as the
   gravitational boundary/action carrier; that carrier identification is still
   the explicit Planck-lane condition
+- the 2026-04-25 source-unit normalization support theorem sharpens that same
+  conditional packet by separating the retained bare Green coefficient
+  `G_kernel = 1/(4 pi)` from the conditional physical Newton coefficient
+  `G_Newton,lat = 1`; equivalently, the bare delta-source label is
+  `q_bare = 4 pi M_phys` on the same carrier surface
 - the finite-automorphism-only response route is closed negatively; finite
   primitive-cell automorphisms have no infinitesimal metric/coframe response
   tangent and cannot replace the realified response surface
@@ -95,6 +100,7 @@ Current absolute-scale package rule:
 - authority:
   [PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md](../../PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md),
   [PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md](../../PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md),
+  [PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md](../../PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md),
   [PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md](../../PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md),
   [PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md](../../PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md),
   [PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md](../../PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md)

@@ -58,8 +58,10 @@ questions:
   confinement-string readout; the absolute
   lattice scale is tracked explicitly on a dedicated Planck-scale lane as the
   current package pin `a^(-1) = M_Pl` on the physical-lattice reading, with a
-  conditional completion theorem and finite-boundary density extension reducing
-  the remaining Planck question to the gravitational boundary/action carrier
+  conditional completion theorem, a source-unit normalization support theorem
+  separating bare `G_kernel = 1/(4 pi)` from conditional physical
+  `G_Newton,lat = 1`, and a finite-boundary density extension reducing the
+  remaining Planck question to the gravitational boundary/action carrier
   identification; finite-response-only and carrier-only parent-source
   shortcuts are retained no-gos, and the simple-fiber Widom entropy-carrier
   class is now closed negatively at `c_Widom <= 1/6`, not `1/4`
