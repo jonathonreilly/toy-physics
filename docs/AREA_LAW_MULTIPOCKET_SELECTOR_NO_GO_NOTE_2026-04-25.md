@@ -139,6 +139,16 @@ Absent one of those selector laws, the residual multipocket Widom route is not
 a physical derivation of Bekenstein-Hawking. It is a parameterized family that
 can be made to contain the desired number.
 
+## Subsequent conditional positive carrier
+
+[AREA_LAW_PRIMITIVE_PARITY_GATE_CARRIER_THEOREM_NOTE_2026-04-25.md](./AREA_LAW_PRIMITIVE_PARITY_GATE_CARRIER_THEOREM_NOTE_2026-04-25.md)
+supplies one such selector conditionally: a residual primitive `Z_2` parity
+gate, equivalently the self-dual low sheet of the transverse nearest-neighbor
+Laplacian, selects a transverse half-zone `mu=1/2`, giving average crossing
+count `3` and `c_Widom=1/4`. This does not invalidate the no-go above; it
+identifies the exact additional carrier premise that the no-go said was
+missing.
+
 ## Package wording
 
 Safe wording:

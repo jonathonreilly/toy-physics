@@ -37,9 +37,11 @@ Current science/open-lane follow-ups:
   closed negatively, and multipocket Widom carriers can be tuned to `1/4` only
   with an extra selector; direct relabeling of the `4/16` primitive trace as
   von Neumann entanglement is also blocked; finite algebraic Schmidt spectra
-  cannot give exact nonzero vN entropy `1/4`, so derive a transcendental
-  spectrum/Widom selector or justified non-vN primitive entropy before
-  promotion
+  cannot give exact nonzero vN entropy `1/4`. A new conditional positive
+  carrier is on the table: the primitive residual `Z_2` self-dual
+  Laplacian-gated two-orbital edge block gives exact `c_Widom=1/4`. Review
+  question before promotion: does `Cl(3)/Z^3` force that gated edge carrier,
+  or is it an additional carrier axiom?
 - memory lane: protocol- and geometry-stable observable remains open
 - emergent-geometry growth: multi-size, multi-seed stability remains open
 
