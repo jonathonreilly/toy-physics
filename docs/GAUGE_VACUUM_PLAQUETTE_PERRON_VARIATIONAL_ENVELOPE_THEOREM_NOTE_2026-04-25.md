@@ -6,7 +6,7 @@ gauge-vacuum plaquette Perron problem; this proves the uniqueness,
 certification, and source-derivative envelope for the `beta = 6` tensor-transfer
 Perron datum, but does not evaluate the still-open boundary coefficients
 `rho_(p,q)(6)` or repin the canonical plaquette value
-**Script:** none; proof-only note
+**Script:** `scripts/frontier_gauge_vacuum_plaquette_perron_variational_envelope.py`
 
 ## Question
 
@@ -392,6 +392,22 @@ So the next constructive task is sharply reviewable:
 5. **The source derivative is an identity, not a fit.** It follows from
    symmetric source insertion and the simplicity of the Perron eigenvalue; no
    perturbative expansion, constant lift, or empirical matching enters.
+
+## Executable audit boundary
+
+The runner is intentionally a finite-dimensional theorem audit, not a
+framework-point plaquette evaluation. It verifies:
+
+- Rayleigh-Perron uniqueness on a strictly positive self-adjoint transfer
+  proxy;
+- Collatz-Wielandt upper/lower certificates on positive trial vectors;
+- the symmetric-source Hellmann-Feynman derivative
+  `d log lambda(s) / ds = <psi, B psi>`;
+- the note's explicit open-boundary language against numeric repinning of
+  `P(6)`, `u_0`, `rho_(p,q)(6)`, or Jacobi data.
+
+It does not compute `rho_(p,q)(6)` or replace the still-open tensor-transfer
+solve.
 
 ## What this closes
 
