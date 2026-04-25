@@ -128,6 +128,8 @@ Validate with:
   cross-system CP ratio `phi_s / sin(2 beta_d) = -alpha_s(v)/2`
   and CP-product estimator
   `alpha_s(v) = (18/5) sin(2 beta_d) sin(2 beta_s)` at atlas-leading order
+  plus the
+  kaon epsilon_K CKM-bracket factorization through atlas `J_0`
 - derived quantitative lane:
   Higgs/vacuum package with explicit retention budget
 - bounded quantitative companions:

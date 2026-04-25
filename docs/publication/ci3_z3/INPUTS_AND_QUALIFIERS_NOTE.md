@@ -149,6 +149,13 @@ bridge layer beyond the exact structural core.
   - exact corollary for theta-sourced EDM components only; independent CKM,
     qCEDM, Weinberg, CP-odd four-fermion, and BSM source directions are not
     set to zero by this theorem
+- kaon epsilon_K Jarlskog decomposition:
+  - promoted CKM atlas/axiom package + standard leading non-trivial
+    Wolfenstein epsilon_K CKM bracket
+  - exact claim is only the CKM-imaginary bracket factorization through atlas
+    `J_0`;
+    Inami-Lim functions, QCD running factors, `B_K`, `f_K`, `M_K`,
+    `Delta M_K`, and absolute `|epsilon_K|` remain external
 - down-type CKM-dual mass ratios:
   - promoted CKM atlas/axiom package + GST + bounded `5/6` mass-ratio bridge; no observed
     masses as derivation inputs

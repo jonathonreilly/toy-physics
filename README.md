@@ -49,7 +49,8 @@ questions:
   protected invariant `gamma_bar = arctan(sqrt(5))` with
   `rho_bar=(4-alpha_s(v))/24`, plus the Thales-mediated cross-system CP ratio
   `phi_s / sin(2 beta_d) = -alpha_s(v)/2` and CP-product estimator
-  `alpha_s(v) = (18/5) sin(2 beta_d) sin(2 beta_s)` at atlas-leading order;
+  `alpha_s(v) = (18/5) sin(2 beta_d) sin(2 beta_s)` at atlas-leading order,
+  plus the kaon epsilon_K CKM-bracket factorization through atlas `J_0`;
   and bounded
   confinement-string readout; the absolute
   lattice scale is tracked explicitly on a dedicated Planck-scale lane as the

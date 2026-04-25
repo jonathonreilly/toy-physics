@@ -641,6 +641,21 @@ $\alpha_s(v)=(18/5)\sin(2\beta_d)\sin(2\beta_s)$, a consistency check against
 the canonical plaquette/CMT value rather than an independent all-order QCD
 coupling derivation.
 
+For kaon CP violation, the same atlas-leading CKM surface factors the
+imaginary CKM bracket in the standard $\epsilon_K$ formula through the single
+atlas Jarlskog-area scale:
+
+$$
+\operatorname{Im}(\lambda_c^2)=2J_0,\qquad
+\operatorname{Im}(\lambda_c\lambda_t)=-J_0,\qquad
+\operatorname{Im}(\lambda_t^2)=-\frac{5\alpha_s(v)^2}{18}J_0.
+\tag{18}
+$$
+
+This is only the CKM-bracket factorization. The Inami-Lim functions,
+short-distance QCD factors, bag parameter, kaon decay constant and masses, and
+the absolute value of $|\epsilon_K|$ remain standard external inputs.
+
 The promoted package reports
 
 - atlas-leading $|V_{ud}|_0 = 0.973824$,
@@ -655,6 +670,8 @@ The promoted package reports
 - CP-product estimator
   $\alpha_s(v)=(18/5)\sin(2\beta_d)\sin(2\beta_s)$
   (PDG/LHCb 2024 baseline $0.098\pm0.056$ versus canonical $0.10330$),
+- kaon $\epsilon_K$ CKM factors
+  $(2J_0,-J_0,-5\alpha_s(v)^2J_0/18)$,
 - NLO protected $\bar\gamma = 65.905^\circ$ with
   $\bar\rho=0.16236$, $\bar\eta=0.36305$,
 - $\delta = 65.905^\circ$,
@@ -742,7 +759,7 @@ The fastest way to read the quantitative package is Table 1.
 | Electroweak scale | $v = 246.282818290129\,\mathrm{GeV}$ | exact theorem + canonical same-surface evaluation |
 | Strong coupling | $\alpha_s(M_Z)=0.1181$ | retained standalone quantitative lane |
 | Electroweak normalization | $g_1(v)=0.4644$, $g_2(v)=0.6480$ | retained standalone quantitative lane |
-| CKM | $\lambda^2=\alpha_s(v)/2$, $A^2=2/3$, atlas-leading $|V_{ud}|_0=0.973824$, $|V_{us}|_0=0.22727$, $|V_{cb}|=0.04217$, $|V_{ub}|_0=0.003913$, $\phi_s(B_s)=-0.03850\,\mathrm{rad}$, $\phi_s/\sin(2\beta_d)=-0.05165$, CP-product $\alpha_s$ estimator, NLO protected $\bar\gamma=65.905^\circ$ | promoted algebraic package |
+| CKM | $\lambda^2=\alpha_s(v)/2$, $A^2=2/3$, atlas-leading $|V_{ud}|_0=0.973824$, $|V_{us}|_0=0.22727$, $|V_{cb}|=0.04217$, $|V_{ub}|_0=0.003913$, $\phi_s(B_s)=-0.03850\,\mathrm{rad}$, $\phi_s/\sin(2\beta_d)=-0.05165$, CP-product $\alpha_s$ estimator, kaon $\epsilon_K$ CKM factors $(2J_0,-J_0,-5\alpha_s(v)^2J_0/18)$, NLO protected $\bar\gamma=65.905^\circ$ | promoted algebraic package |
 | Top sector | $y_t(v)=0.9176$, $m_t^{\mathrm{pole}}=172.57 \pm 6.50\,\mathrm{GeV}$ | retained quantitative lane |
 | Higgs sector | $m_H=125.1\,\mathrm{GeV}$ with retention analysis $125.04 \pm 3.17\,\mathrm{GeV}$ | derived quantitative lane |
 | Confinement readout | $\sqrt{\sigma}\approx 465\,\mathrm{MeV}$ | bounded quantitative readout on exact structural theorem |
@@ -850,8 +867,9 @@ promising near-misses: it contains a canonical same-surface electroweak-scale
 evaluation, retained electroweak and strong-coupling lanes, and bounded
 Yukawa/Higgs authority surfaces with named downstream budgets. The package is already
 predictive beyond retrospective comparison through the atlas-leading $B_s$
-mixing phase, proton lifetime, the CKM-only neutron-EDM corollary with bounded
-continuation, vacuum criticality, and benchmark gravitational decoherence.
+mixing phase, kaon $\epsilon_K$ CKM-bracket factorization, proton lifetime,
+the CKM-only neutron-EDM corollary with bounded continuation, vacuum
+criticality, and benchmark gravitational decoherence.
 
 The dark-matter lane is no longer the outstanding flagship gap on the current
 manuscript surface: the exact-target PMNS package is closed. What remains open

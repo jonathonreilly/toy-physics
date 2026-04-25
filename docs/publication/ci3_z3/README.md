@@ -55,6 +55,8 @@ For the full package-capture inventory, use:
   Thales-mediated cross-system CP ratio
   `phi_s / sin(2 beta_d) = -alpha_s(v)/2` and CP-product estimator
   `alpha_s(v) = (18/5) sin(2 beta_d) sin(2 beta_s)` at atlas-leading order
+  plus the kaon epsilon_K
+  CKM-bracket factorization through atlas `J_0`
 - retained structural/corollary surface:
   strong CP on the retained action surface, emergent Lorentz invariance plus
   exact continuum-limit 1+1D / 3+1D boost-covariant free-scalar 2-point closure,

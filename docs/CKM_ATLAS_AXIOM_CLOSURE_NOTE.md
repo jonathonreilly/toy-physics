@@ -10,7 +10,9 @@
 [`CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
 [`CKM_SECOND_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-25.md`](CKM_SECOND_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-25.md),
 [`CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
-[`CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md`](CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md)
+[`CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md`](CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md),
+[`CKM_THALES_CROSS_SYSTEM_CP_RATIO_THEOREM_NOTE_2026-04-25.md`](CKM_THALES_CROSS_SYSTEM_CP_RATIO_THEOREM_NOTE_2026-04-25.md),
+[`CKM_KAON_EPSILON_K_JARLSKOG_DECOMPOSITION_THEOREM_NOTE_2026-04-25.md`](CKM_KAON_EPSILON_K_JARLSKOG_DECOMPOSITION_THEOREM_NOTE_2026-04-25.md)
 
 ## Claim
 
@@ -147,11 +149,17 @@ The theorem package is therefore:
   `gamma_bar=gamma_0=arctan(sqrt(5))` through the NLO multiplicative
   barred-apex map
 - atlas-leading B_s phase: `phi_s,0=-alpha_s(v)sqrt(5)/6`
+- atlas-leading kaon epsilon_K CKM-bracket factorization:
+  `Im(lambda_c^2)=+2J_0`, `Im(lambda_c lambda_t)=-J_0`, and
+  `Im(lambda_t^2)=-(5 alpha_s(v)^2/18)J_0`, where
+  `lambda_q=V_qs^* V_qd`
 
 The row-level subscript `0` marks the leading atlas/Wolfenstein surface. The
 finite-`lambda` exact standard-matrix row readouts and the NLO barred-triangle
 closed forms remain guarded parent-atlas calculations, not all-orders
-monomial or exact barred-angle promotions.
+monomial or exact barred-angle promotions. The kaon epsilon_K row is a
+CKM-bracket factorization only; standard Inami-Lim, QCD-running, bag, decay
+constant, mass, and absolute `|epsilon_K|` inputs remain external.
 
 The retained scalar comparison package is:
 
@@ -171,6 +179,9 @@ Using the canonical plaquette/CMT coupling gives the theorem package:
 - atlas-leading `|V_ts|_0 = 0.042174`
 - atlas-leading `|V_tb|_0 = 0.999072`
 - `J = 3.331e-5`
+- atlas-leading kaon factors: `Im(lambda_c^2)=+2J_0`,
+  `Im(lambda_c lambda_t)=-J_0`, and
+  `Im(lambda_t^2)=-(5 alpha_s(v)^2/18)J_0`
 - `delta_std = 65.905 deg`
 
 Against the current branch-local angle-facing comparator package:

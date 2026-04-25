@@ -68,6 +68,9 @@ closes.
   - CP-product atlas-leading estimator
     `alpha_s(v) = (18/5) sin(2 beta_d) sin(2 beta_s)`, with
     PDG/LHCb 2024 baseline `0.098 +/- 0.056` versus canonical `0.10330`
+  - kaon epsilon_K CKM-bracket factorization:
+    `Im(lambda_c^2)=+2J_0`, `Im(lambda_c lambda_t)=-J_0`, and
+    `Im(lambda_t^2)=-(5 alpha_s(v)^2/18)J_0` at atlas-leading order
   - NLO barred-triangle protected invariant
     `gamma_bar = gamma_0 = arctan(sqrt(5)) = 65.905 deg`, with
     `rho_bar = (4-alpha_s(v))/24`
@@ -90,6 +93,7 @@ closes.
     [CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md](../../CKM_BS_MIXING_PHASE_DERIVATION_THEOREM_NOTE_2026-04-25.md),
     [CKM_THALES_CROSS_SYSTEM_CP_RATIO_THEOREM_NOTE_2026-04-25.md](../../CKM_THALES_CROSS_SYSTEM_CP_RATIO_THEOREM_NOTE_2026-04-25.md),
     [CKM_CP_PRODUCT_ALPHA_S_CROSS_SECTOR_EXTRACTION_THEOREM_NOTE_2026-04-25.md](../../CKM_CP_PRODUCT_ALPHA_S_CROSS_SECTOR_EXTRACTION_THEOREM_NOTE_2026-04-25.md),
+    [CKM_KAON_EPSILON_K_JARLSKOG_DECOMPOSITION_THEOREM_NOTE_2026-04-25.md](../../CKM_KAON_EPSILON_K_JARLSKOG_DECOMPOSITION_THEOREM_NOTE_2026-04-25.md),
     [CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md](../../CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md)
 - confinement readout on top of the exact graph-first confinement theorem:
   - `sqrt(sigma) ≈ 465 MeV`

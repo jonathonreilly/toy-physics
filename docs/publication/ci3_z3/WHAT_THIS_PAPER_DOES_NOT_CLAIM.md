@@ -74,6 +74,11 @@ The paper does **not** claim:
   or BSM mixing effects; they are atlas-leading Standard Model phase
   predictions from the promoted CKM surface, and the CP-product estimator does
   not replace the canonical plaquette/CMT alpha_s determination.
+- that the kaon epsilon_K Jarlskog decomposition is an absolute `|epsilon_K|`
+  prediction or a native derivation of Inami-Lim functions, QCD running
+  factors, `B_K`, `f_K`, `M_K`, `Delta M_K`, or the standard epsilon_K formula;
+  it only factors the CKM-imaginary bracket through atlas `J_0` at
+  atlas-leading order.
 - a full retained neutrino point-prediction package for the solar gap, PMNS
   angles, Majorana phases, or absolute mass sum.
 - that the charged-lepton Koide A1/radian bridge is closed by the exact
