@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Multi-projection Bernoulli family at N_pair, N_color, N_quark: Koide-bridge support audit.
+"""Multi-projection Bernoulli family at N_pair, N_color, N_quark audit.
 
 Verifies the new identities in
-  docs/CKM_MULTI_PROJECTION_BERNOULLI_KOIDE_BRIDGE_THEOREM_NOTE_2026-04-25.md
+  docs/CKM_MULTI_PROJECTION_BERNOULLI_FAMILY_THEOREM_NOTE_2026-04-25.md
 
 Six-element family {M(N), V(N) for N in {N_pair, N_color, N_quark}}:
   M(N) = (N-1)/N      (Bernoulli mean)
@@ -11,7 +11,7 @@ Six-element family {M(N), V(N) for N in {N_pair, N_color, N_quark}}:
   B1: M(N_pair)  = 1/2     [framework-native]
   B2: M(N_color) = 2/3     = A^2 [retained W2]
   B3: M(N_quark) = 5/6     = 1 - rho = sin^2(gamma_bar) [retained]
-  B4: V(N_pair)  = 1/4     [framework-native, NEW reading]
+  B4: V(N_pair)  = 1/4
   B5: V(N_color) = 2/9     [from prior 2/9 branches]
   B6: V(N_quark) = 5/36    = eta^2 [retained Thales]
 
@@ -19,11 +19,7 @@ Six-element family {M(N), V(N) for N in {N_pair, N_color, N_quark}}:
 
 Cross-level decompositions (NEW):
   D1: rho = V(N_pair) * M(N_color) = (1/4)(2/3) = 1/6
-  D2: M1 = rho * A^2 = V(N_color) * M(N_pair) = (2/9)(1/2) = 1/9
-
-Cross-sector reading (SUPPORT, NOT closure):
-  CS1: cos^2(theta_K) = M(N_pair) = 1/2 (under conjectural Q_l = A^2)
-  CS2: cos^4(theta_K) = V(N_pair) = 1/4 (NEW, under conjectural Q_l = A^2)
+  D2: A^2 rho = V(N_color) * M(N_pair) = (2/9)(1/2) = 1/9
 
 ALL INPUTS RETAINED on current main:
 - W2 A^2 = N_pair/N_color = M(N_color) (WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES)
@@ -31,9 +27,6 @@ ALL INPUTS RETAINED on current main:
   (CKM_CP_PHASE_STRUCTURAL_IDENTITY)
 - N_pair=2, N_color=3, N_quark=6 (CKM_MAGNITUDES_STRUCTURAL_COUNTS)
 - sin^2(gamma_bar) = 5/6 = M(N_quark) (N4 PROTECTED, NLO theorem)
-
-NO SUPPORT-tier or open inputs used as DERIVATION inputs. Cross-sector
-reading is commentary only.
 
 Uses Python's fractions.Fraction for exact-rational arithmetic.
 """
@@ -130,14 +123,14 @@ def audit_six_element_family() -> None:
     print(f"    B3: M(N_quark) = 5/6  = {M_quark}  = 1 - rho = sin^2(gamma_bar)")
     print()
     print("  Variance form V(N) = (N-1)/N^2:")
-    print(f"    B4: V(N_pair)  = 1/4  = {V_pair}  [NEW reading]")
+    print(f"    B4: V(N_pair)  = 1/4  = {V_pair}")
     print(f"    B5: V(N_color) = 2/9  = {V_color}  [from prior branches]")
     print(f"    B6: V(N_quark) = 5/36 = {V_quark}  = eta^2 [Thales retained]")
 
     check("(B1) M(N_pair) = 1/2", M_pair == Fraction(1, 2))
     check("(B2) M(N_color) = A^2 = 2/3", M_color == Fraction(2, 3))
     check("(B3) M(N_quark) = 1 - rho = 5/6", M_quark == Fraction(5, 6))
-    check("(B4) V(N_pair) = 1/4 [NEW]", V_pair == Fraction(1, 4))
+    check("(B4) V(N_pair) = 1/4", V_pair == Fraction(1, 4))
     check("(B5) V(N_color) = 2/9", V_color == Fraction(2, 9))
     check("(B6) V(N_quark) = eta^2 = 5/36", V_quark == Fraction(5, 36))
 
@@ -176,8 +169,8 @@ def audit_d1_cross_level_decomposition_rho() -> None:
     check("(D1) rho = V(N_pair) * M(N_color) EXACTLY", product == rho)
 
 
-def audit_d2_cross_level_decomposition_m1() -> None:
-    banner("(D2) NEW Cross-level decomposition: M1 = V(N_color) * M(N_pair)")
+def audit_d2_cross_level_decomposition_a2_rho() -> None:
+    banner("(D2) NEW Cross-level decomposition: A^2 rho = V(N_color) * M(N_pair)")
 
     V_color = V(N_COLOR)
     M_pair = M(N_PAIR)
@@ -185,17 +178,17 @@ def audit_d2_cross_level_decomposition_m1() -> None:
 
     A_sq = Fraction(N_PAIR, N_COLOR)
     rho = Fraction(1, N_QUARK)
-    M1 = A_sq * rho  # = 1/9 from prior branch
+    a2_rho = A_sq * rho
 
     print(f"  V(N_color) = (N_color - 1)/N_color^2 = {V_color}")
     print(f"  M(N_pair)  = (N_pair - 1)/N_pair    = {M_pair}")
     print(f"  V(N_color) * M(N_pair)               = {product}")
-    print(f"  M1 = rho * A^2                         = {M1}")
+    print(f"  A^2 rho = rho * A^2                    = {a2_rho}")
     print()
     print(f"  Structurally: V(N_color) * M(N_pair) = ((N_color-1)/N_color^2)(1/N_pair)")
-    print(f"               (with N_pair = N_color - 1, simplifies to 1/N_color^2 = M1)")
+    print(f"               (with N_pair = N_color - 1, simplifies to 1/N_color^2 = A^2 rho)")
 
-    check("(D2) M1 = V(N_color) * M(N_pair) EXACTLY", product == M1)
+    check("(D2) A^2 rho = V(N_color) * M(N_pair) EXACTLY", product == a2_rho)
     check("(D2) Both equal 1/N_color^2 = 1/9", product == Fraction(1, N_COLOR ** 2))
 
 
@@ -210,39 +203,13 @@ def audit_d1_d2_duality() -> None:
     print(f"  D1: rho = V(N_pair) * M(N_color)  [pair-variance × color-mean]")
     print(f"      = {V_pair} * {M_color} = {V_pair * M_color}")
     print()
-    print(f"  D2: M1 = V(N_color) * M(N_pair)  [color-variance × pair-mean]")
+    print(f"  D2: A^2 rho = V(N_color) * M(N_pair)  [color-variance × pair-mean]")
     print(f"      = {V_color} * {M_pair} = {V_color * M_pair}")
     print()
     print(f"  Duality: pair↔color and variance↔mean SWAP between D1 and D2")
 
     check("D1, D2 swap symmetry: pair-variance, color-mean → color-variance, pair-mean",
           True)
-
-
-def audit_cs_cross_sector() -> None:
-    banner("Cross-sector reading (SUPPORT, NOT closure)")
-
-    M_pair = M(N_PAIR)  # 1/2
-    V_pair = V(N_PAIR)  # 1/4
-    M_color = M(N_COLOR)  # 2/3
-    V_color = V(N_COLOR)  # 2/9
-
-    print("  Under conjectural cross-sector A^2 ↔ Q_l = 2/3 and N_gen = N_color = 3:")
-    print()
-    print(f"    Koide Q_l                  = M(N_color) = {M_color}     [conjectural ↔ A^2]")
-    print(f"    Koide variance              = V(N_color) = {V_color}     [conjectural ↔ 2/9]")
-    print(f"    Koide cos^2(theta_K) = 1/(3 Q_l) = 1/2  =  M(N_pair) = {M_pair}  [conjectural]")
-    print(f"    Koide cos^4(theta_K) = (cos^2)^2 = 1/4  =  V(N_pair) = {V_pair}  [NEW reading]")
-    print()
-    print("  Four Koide-relevant ratios with framework counterparts in multi-projection family.")
-
-    cos_sq_theta_K_conj = Fraction(1, 2)
-    cos_4_theta_K_conj = cos_sq_theta_K_conj ** 2
-
-    check("(CS1) Koide cos^2(theta_K) = M(N_pair) = 1/2 [conjectural]",
-          M_pair == cos_sq_theta_K_conj)
-    check("(CS2 NEW) Koide cos^4(theta_K) = V(N_pair) = 1/4 [conjectural]",
-          V_pair == cos_4_theta_K_conj)
 
 
 def audit_summary() -> None:
@@ -259,33 +226,26 @@ def audit_summary() -> None:
     print("  NEW (D1):   rho = V(N_pair) * M(N_color) = (1/4)(2/3) = 1/6")
     print("              [Cross-level decomposition of CP-phase rho]")
     print()
-    print("  NEW (D2):   M1 = V(N_color) * M(N_pair) = (2/9)(1/2) = 1/9")
-    print("              [Cross-level decomposition of M1 = rho * A^2]")
+    print("  NEW (D2):   A^2 rho = V(N_color) * M(N_pair) = (2/9)(1/2) = 1/9")
+    print("              [Cross-level decomposition of the retained A^2 rho product]")
     print()
     print("  Duality: D1 and D2 swap pair↔color and variance↔mean roles.")
     print()
-    print("  NEW (CS1, CS2): Cross-sector reading (SUPPORT)")
-    print("              cos^2(theta_K) = M(N_pair) = 1/2")
-    print("              cos^4(theta_K) = V(N_pair) = 1/4 [NEW reading]")
-    print()
-    print("  Does NOT close A^2 (already retained at W2) or Koide 2/9 (cross-sector).")
-    print()
-    print("  All inputs retained on main; no SUPPORT-tier or open inputs as derivation input.")
+    print("  All inputs retained on main; no SUPPORT-tier or open inputs are used.")
 
 
 def main() -> int:
     print("=" * 88)
     print("Multi-projection Bernoulli family at N_pair, N_color, N_quark audit")
-    print("See docs/CKM_MULTI_PROJECTION_BERNOULLI_KOIDE_BRIDGE_THEOREM_NOTE_2026-04-25.md")
+    print("See docs/CKM_MULTI_PROJECTION_BERNOULLI_FAMILY_THEOREM_NOTE_2026-04-25.md")
     print("=" * 88)
 
     audit_inputs()
     audit_six_element_family()
     audit_universal_bernoulli_relation()
     audit_d1_cross_level_decomposition_rho()
-    audit_d2_cross_level_decomposition_m1()
+    audit_d2_cross_level_decomposition_a2_rho()
     audit_d1_d2_duality()
-    audit_cs_cross_sector()
     audit_summary()
 
     print()

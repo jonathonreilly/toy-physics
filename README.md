@@ -53,7 +53,14 @@ questions:
   `|V_cb|_0^2 = |V_ts|_0^2 = alpha_s(v)^2/(n_pair n_color)`,
   `|V_ub|_0^2 = alpha_s(v)^3/(8 n_color^2)`,
   `|V_td|_0^2 = (n_quark-1) alpha_s(v)^3/(8 n_color^2)`,
-  making the exact `n_pair` cancellation in `|V_ub|_0^2` explicit; with
+  making the exact `n_pair` cancellation in `|V_ub|_0^2` explicit; the
+  retained CKM Bernoulli-family packaging now also carries the exact
+  six-element family
+  `M(2)=1/2`, `M(3)=2/3`, `M(6)=5/6`,
+  `V(2)=1/4`, `V(3)=2/9`, `V(6)=5/36`,
+  the universal relation `V(N)=M(N)/N`, and the exact dual decompositions
+  `rho = V(N_pair) M(N_color)` and
+  `A^2 rho = V(N_color) M(N_pair) = 1/9`; with
   finite-`lambda` standard-matrix corrections guarded separately, plus the
   atlas-leading B_s mixing phase
   `phi_s = -alpha_s(v) sqrt(5)/6 = -0.03850 rad` and the NLO barred-triangle
