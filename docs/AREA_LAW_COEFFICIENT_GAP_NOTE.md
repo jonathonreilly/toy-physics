@@ -176,3 +176,8 @@ primitive packet as a minimal local complex-CAR edge algebra. With that premise,
 and the unique tangent-symmetric nearest-neighbor response is the self-dual
 Laplacian-gated channel. Inside those primitive-CAR edge axioms, the positive
 `1/4` carrier is forced.
+
+[AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md](./AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md)
+reduces the premise to irreducible Clifford-Majorana edge statistics. This is
+native to the fermionic/Clifford response language, but it is not forced by
+rank four alone.

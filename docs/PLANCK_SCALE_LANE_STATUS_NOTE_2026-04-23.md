@@ -236,15 +236,22 @@ Current blocker:
   neighbor response is the self-dual low-Laplacian sheet of measure `1/2`.
   Inside these primitive-CAR edge axioms, the `1/4` entanglement coefficient is
   a theorem rather than a fitted multipocket calibration.
+- [AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md](./AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md)
+  tightens the last review decision. If the active primitive boundary response
+  is an irreducible Clifford-Majorana edge algebra, then complex `Cl_4`
+  equals `M_4(C)` and is equivalent to two-mode CAR on the rank-four block.
+  Rank `4` alone does not force CAR, because the same Hilbert space admits
+  non-CAR ququart or two-qubit semantics. Thus the exact residual premise is
+  the native edge-statistics principle, not another coefficient calculation.
 
 Residual Target 2 requirement:
 
-- promote or reject the primitive-CAR edge semantics. If accepted, Target 2
-  has a positive Widom carrier with exact `1/4`. If rejected, the retained
-  status falls back to the no-go packet and the remaining routes are a
-  transcendental Schmidt-spectrum selector, a different multipocket Widom
-  selector, or a justified non-von-Neumann primitive-boundary entropy
-  functional.
+- promote or reject the primitive Clifford-Majorana/CAR edge-statistics
+  principle. If accepted, Target 2 has a positive Widom carrier with exact
+  `1/4`. If rejected, the retained status falls back to the no-go packet and
+  the remaining routes are a transcendental Schmidt-spectrum selector, a
+  different multipocket Widom selector, or a justified non-von-Neumann
+  primitive-boundary entropy functional.
 
 ### Target 3: one-axiom information/action bridge
 
@@ -273,6 +280,15 @@ Current blocker:
 - the parent-source no-go closes a carrier-only scalar promotion; a positive
   information/action bridge must either derive `delta = 0` or avoid that scalar
   route entirely.
+
+2026-04-25 Target 2 feedback into Target 3:
+
+- the area-law packet gives Target 3 a sharper object to derive: the
+  primitive Clifford-Majorana/CAR edge-statistics principle on `P_A H_cell`;
+- deriving that principle from a one-axiom information/action bridge would
+  remove the last conditional premise from the positive Target 2 chain;
+- without such a derivation, Target 3 remains open and Target 2 should be
+  worded as conditional on native edge statistics.
 
 ## 6. Package rule on `main`
 

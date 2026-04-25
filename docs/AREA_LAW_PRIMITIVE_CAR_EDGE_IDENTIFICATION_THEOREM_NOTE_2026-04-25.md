@@ -181,6 +181,11 @@ positive exact entanglement carrier. If rejected, the result remains a sharp
 conditional theorem and the retained no-go packet still describes the
 selector-free surface.
 
+[AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md](./AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md)
+tightens this question further: primitive-CAR semantics are equivalent to
+accepting irreducible Clifford-Majorana edge statistics on the rank-four
+active block. Rank four alone does not force that statistics choice.
+
 ## Relation to retained no-gos
 
 - The half-filled nearest-neighbor no-go is untouched; it is a different

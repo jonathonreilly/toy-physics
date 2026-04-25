@@ -41,9 +41,10 @@ Current science/open-lane follow-ups:
   carrier is on the table: the primitive residual `Z_2` self-dual
   Laplacian-gated two-orbital edge block gives exact `c_Widom=1/4`, and the
   primitive-CAR identification theorem derives that block from rank `4` plus
-  minimal local complex-CAR edge semantics. Review question before promotion:
-  accept primitive-CAR edge semantics as native horizon physics, or treat it as
-  an additional carrier axiom.
+  minimal local complex-CAR edge semantics. The native-CAR tightening reduces
+  the remaining review decision to one concrete premise: accept irreducible
+  Clifford-Majorana edge statistics on `P_A H_cell`, or keep Target 2
+  conditional.
 - memory lane: protocol- and geometry-stable observable remains open
 - emergent-geometry growth: multi-size, multi-seed stability remains open
 
