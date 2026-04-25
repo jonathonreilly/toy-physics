@@ -1,0 +1,224 @@
+========================================================================================
+Barred unitarity triangle apex-angle EXACT closed-form theorem audit
+See docs/CKM_BARRED_APEX_ANGLE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Retained inputs on current main
+----------------------------------------------------------------------------------------
+  alpha_s(v)                       = 0.103303816122267
+  N_pair                            = 2  (retained)
+  N_color                           = 3  (retained)
+  N_quark = N_pair x N_color        = 6
+  N_quark - 1                       = 5
+
+  alpha_0 = pi/2                    = 90.000000 deg
+  gamma_0 = arctan(sqrt(5))         = 65.905157 deg
+
+  N4: tan(gamma_bar) = sqrt(5)      = 2.236067977499790
+  N5: tan(beta_bar) = sqrt(5)(4-a)/(20+a) = 0.433425154119535
+  [PASS] alpha_s(v) > 0
+  [PASS] N_quark = 6 (retained)
+  [PASS] N_pair = 2 (retained)
+  [PASS] N_quark - 1 = 5 (retained)
+  [PASS] alpha_0 = pi/2 (retained right-angle)
+  [PASS] gamma_0 = arctan(sqrt(5)) (retained)
+  [PASS] N4: tan(gamma_bar) = sqrt(5) (retained PROTECTED)
+  [PASS] N5: tan(beta_bar) = sqrt(5)(4-a)/(20+a) (retained)
+  [PASS] retained on main: docs/ALPHA_S_DERIVED_NOTE.md
+  [PASS] retained on main: docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md
+  [PASS] retained on main: docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md
+  [PASS] retained on main: docs/CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md
+  [PASS] retained on main: docs/CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md
+  [PASS] retained on main: docs/CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md
+
+----------------------------------------------------------------------------------------
+(A1) NEW EXACT: tan(alpha_bar) = -4 sqrt(5) / alpha_s(v)
+----------------------------------------------------------------------------------------
+  Derivation (from N4+N5+N6):
+    tan(beta_bar) + tan(gamma_bar)   = 2.669493131619325
+    tan(beta_bar) * tan(gamma_bar)   = 0.969168107769603
+    1 - tan(beta_bar) tan(gamma_bar) = 0.030831892230397
+    -[sum]/[1 - prod]                 = -86.582202340066829
+
+  Closed form -4 sqrt(5) / alpha_s   = -86.582202340066530
+  diff                                = -2.984e-13
+  [PASS] (A1) tan(alpha_bar) derived from N4+N5+N6 = -4 sqrt(5)/alpha_s [EXACT]
+
+  Algebraic factor cancellation:
+    numerator   = 24 sqrt(5)/(20+a) = 2.669493131619325
+    denominator = 6 alpha_s/(20+a)  = 0.030831892230397
+    -num/den    = -24 sqrt(5)/(6 alpha_s) = -4 sqrt(5)/alpha_s
+  [PASS] (A1) sum-of-tangents matches 24 sqrt(5)/(20+a)
+  [PASS] (A1) (1 - prod) matches 6 alpha_s/(20+a)
+
+----------------------------------------------------------------------------------------
+(A2)(A3) NEW EXACT: cot(alpha_bar) and tan(alpha_bar - pi/2)
+----------------------------------------------------------------------------------------
+  cot(alpha_bar) = 1/tan(alpha_bar)  = -0.011549717759226
+  Closed -alpha_s/(4 sqrt(5))        = -0.011549717759226
+  [PASS] (A2) cot(alpha_bar) = -alpha_s/(4 sqrt(5)) [EXACT]
+
+  tan(alpha_bar - pi/2) = -cot(alpha_bar) = 0.011549717759226
+  Closed +(sqrt(5)/20) alpha_s            = 0.011549717759226
+  [PASS] (A3) tan(alpha_bar - pi/2) = +(sqrt(5)/20) alpha_s [EXACT]
+
+----------------------------------------------------------------------------------------
+(A4) NEW EXACT: alpha_bar = pi/2 + arctan((sqrt(5)/20) alpha_s)
+----------------------------------------------------------------------------------------
+  alpha_bar from N4+N5+N6 (sum)       = 90.6617206596 deg
+  alpha_bar from arctan closed form   = 90.6617206596 deg
+  diff                                 = 0.000e+00 deg
+  [PASS] (A4) alpha_bar (sum N4+N5+N6) = pi/2 + arctan((sqrt(5)/20) alpha_s) [EXACT]
+
+  N7 linear (alpha_s):  alpha_bar - pi/2 = 1.154971775922640e-02
+  EXACT (arctan):       alpha_bar - pi/2 = 1.154920423835248e-02
+  diff (alpha_s^3 corr)              = -5.135209e-07
+  predicted -(1/3)((sqrt(5)/20)a)^3   = -5.135620e-07
+  [PASS] (A4) NLO leading matches retained N7 linear
+  [PASS] (A4) leading correction beyond N7 = -(1/3)((sqrt(5)/20)alpha_s)^3
+
+----------------------------------------------------------------------------------------
+(A5)(A6) NEW EXACT: sin^2(alpha_bar) = 80/(80+a^2), cos^2(alpha_bar) = a^2/(80+a^2)
+----------------------------------------------------------------------------------------
+  sin^2(alpha_bar) closed         = 0.999866621811796
+  sin^2(alpha_bar) direct         = 0.999866621811796
+  cos^2(alpha_bar) closed         = 0.000133378188204
+  cos^2(alpha_bar) direct         = 0.000133378188204
+  sin^2 + cos^2 closed             = 1.000000000000000
+  [PASS] (A5) sin^2(alpha_bar) = 80/(80+alpha_s^2) [EXACT]
+  [PASS] (A6) cos^2(alpha_bar) = alpha_s^2/(80+alpha_s^2) [EXACT]
+  [PASS] Pythagorean: sin^2 + cos^2 = 1 (closed form)
+
+----------------------------------------------------------------------------------------
+(A7)(A8) NEW EXACT: sin(2 alpha_bar), cos(2 alpha_bar)
+----------------------------------------------------------------------------------------
+  sin(2 alpha_bar) closed         = -0.023096354557595
+  sin(2 alpha_bar) direct         = -0.023096354557595
+  cos(2 alpha_bar) closed         = -0.999733243623593
+  cos(2 alpha_bar) direct         = -0.999733243623593
+  sin^2(2a)+cos^2(2a) (closed)    = 1.000000000000000
+  [PASS] (A7) sin(2 alpha_bar) = -8 sqrt(5) alpha_s/(80+a^2) [EXACT]
+  [PASS] (A8) cos(2 alpha_bar) = -(80-a^2)/(80+a^2) [EXACT]
+  [PASS] Pythagorean for double angle: sin^2(2a)+cos^2(2a)=1
+
+----------------------------------------------------------------------------------------
+(A9) NEW EXACT: 80 + alpha_s^2 = 96 R_t_bar^2
+----------------------------------------------------------------------------------------
+  80 + alpha_s^2                    = 80.010671678425425
+  96 R_t_bar^2                       = 80.010671678425425
+  R_t_bar^2 = (80+a^2)/96            = 0.833444496650265
+  [PASS] (A9) Common denominator: 80 + a^2 = 96 R_t_bar^2
+
+----------------------------------------------------------------------------------------
+(A10) NEW Selection Rule: alpha_bar - pi/2 has ONLY ODD POWERS of alpha_s
+----------------------------------------------------------------------------------------
+  Extract Taylor coefficients of alpha_bar - pi/2 in alpha_s:
+    arctan series: x - x^3/3 + x^5/5 - ... where x = (sqrt(5)/20) alpha_s
+
+  Predicted Taylor coefficients (from arctan structure):
+    [alpha_s^1]: +1.118034e-01  
+    [alpha_s^2]: +0.000000e+00  (ZERO)
+    [alpha_s^3]: -4.658475e-04  
+    [alpha_s^4]: +0.000000e+00  (ZERO)
+    [alpha_s^5]: +3.493856e-06  
+    [alpha_s^6]: +0.000000e+00  (ZERO)
+
+  Numerical verification at alpha_s in {0.05, 0.1, 0.15, 0.2, 0.3}:
+    alpha_s=0.05: actual=5.590112e-03, residual after 5 terms = -2.342e-17, pred a^7 = -2.437e-17
+    alpha_s=0.1: actual=1.117987e-02, residual after 5 terms = -3.121e-15, pred a^7 = -3.120e-15
+    alpha_s=0.15: actual=1.676894e-02, residual after 5 terms = -5.329e-14, pred a^7 = -5.330e-14
+    alpha_s=0.2: actual=2.235695e-02, residual after 5 terms = -3.991e-13, pred a^7 = -3.993e-13
+    alpha_s=0.3: actual=3.352845e-02, residual after 5 terms = -6.816e-12, pred a^7 = -6.822e-12
+
+  Scaling test (selection rule): halve alpha_s, look at (shift - linear) ratio
+    alpha_s_1 = 0.001: (shift - linear) = -4.658e-13
+    alpha_s_2 = 0.0005: (shift - linear) = -5.823e-14
+    actual ratio s1/s2     = 8.000000
+    expected if alpha_s^3  = 8.000000  (selection rule TRUE)
+    expected if alpha_s^2  = 4.000000  (selection rule FALSE)
+  [PASS] (A10) (shift - linear) scales as alpha_s^3 (not alpha_s^2): ratio = 8
+  [PASS] (A10) ratio is FAR from alpha_s^2 prediction (4): rules out alpha_s^2 term
+
+  Extracted alpha_s^3 coefficient (at alpha_s=0.001): -4.658475e-04
+  Predicted -(sqrt(5)/20)^3/3                        : -4.658475e-04
+  [PASS] (A10) alpha_s^3 coefficient = -(sqrt(5)/20)^3/3 (predicted)
+  [PASS] (A10) alpha_s^4 coefficient is ZERO (selection rule)
+  [PASS] (A10) alpha_s^6 coefficient is ZERO (selection rule)
+
+----------------------------------------------------------------------------------------
+(A11) NEW Structural form: tan(alpha_bar) = -N_pair^2 sqrt(N_quark - 1)/alpha_s
+----------------------------------------------------------------------------------------
+  N_pair^2                          = 4
+  N_quark - 1                       = 5
+  sqrt(N_quark - 1)                 = 2.2360679775
+  N_pair^2 sqrt(N_quark - 1)        = 8.9442719100
+  4 sqrt(5) (numerical)             = 8.9442719100
+  [PASS] (A11) coefficient 4 = N_pair^2 = 2^2
+  [PASS] (A11) coefficient sqrt(5) = sqrt(N_quark - 1)
+  [PASS] (A11) tan(alpha_bar) = -N_pair^2 sqrt(N_quark-1)/alpha_s [EXACT]
+
+----------------------------------------------------------------------------------------
+EXACT-status verification: closed forms hold at multiple alpha_s
+----------------------------------------------------------------------------------------
+  Verifying that ALL identities (A1, A4, A5, A6, A7, A8) hold
+  EXACTLY at alpha_s in {0.05, 0.10, 0.103303816, 0.15, 0.20, 0.30}:
+    alpha_s = 0.050000000: A1=True, A5=True, A6=True, A7=True, A8=True  (OK)
+    alpha_s = 0.100000000: A1=True, A5=True, A6=True, A7=True, A8=True  (OK)
+    alpha_s = 0.103303816: A1=True, A5=True, A6=True, A7=True, A8=True  (OK)
+    alpha_s = 0.150000000: A1=True, A5=True, A6=True, A7=True, A8=True  (OK)
+    alpha_s = 0.200000000: A1=True, A5=True, A6=True, A7=True, A8=True  (OK)
+    alpha_s = 0.300000000: A1=True, A5=True, A6=True, A7=True, A8=True  (OK)
+  [PASS] EXACT closed forms hold at ALL tested alpha_s (no leading-order drift)
+
+----------------------------------------------------------------------------------------
+Atlas-LO limit (alpha_s -> 0): recovers retained right-angle
+----------------------------------------------------------------------------------------
+  At alpha_s -> 0:
+    sin^2(alpha_bar) -> 1     = 1.0000000000
+    cos^2(alpha_bar) -> 0     = 0.0000000000
+    sin(2 alpha_bar) -> 0    = 0.0000000000
+    cos(2 alpha_bar) -> -1   = -1.0000000000
+    alpha_bar -> pi/2 (right-angle)
+  [PASS] Atlas-LO: sin^2(alpha_0) -> 1 (right-angle)
+  [PASS] Atlas-LO: cos^2(alpha_0) -> 0 (right-angle)
+  [PASS] Atlas-LO: sin(2 alpha_0) -> 0 (right-angle: sin(pi)=0)
+  [PASS] Atlas-LO: cos(2 alpha_0) -> -1 (right-angle: cos(pi)=-1)
+
+----------------------------------------------------------------------------------------
+PDG comparator: alpha from B -> pi pi isospin
+----------------------------------------------------------------------------------------
+  Framework alpha_bar (linear N7)     = 90.661750 deg (-1.16 sigma)
+  Framework alpha_bar (EXACT A4)      = 90.661721 deg (-1.16 sigma)
+  PDG alpha (B -> pi pi isospin)      = 92.4 +/- 1.5 deg
+  N7-vs-EXACT difference (alpha_s^3 corr) = 2.942258e-05 deg
+  [PASS] alpha_bar within 2 sigma of PDG (atlas-NLO vs physical-alpha gap)
+  [PASS] EXACT correction beyond N7 below experimental sensitivity (< 0.001 deg)
+
+----------------------------------------------------------------------------------------
+Summary of new content
+----------------------------------------------------------------------------------------
+  NEW (A1):  tan(alpha_bar) = -4 sqrt(5)/alpha_s            [EXACT all-orders]
+  NEW (A2):  cot(alpha_bar) = -alpha_s/(4 sqrt(5))           [EXACT]
+  NEW (A3):  tan(alpha_bar - pi/2) = +(sqrt(5)/20) alpha_s   [EXACT]
+  NEW (A4):  alpha_bar = pi/2 + arctan((sqrt(5)/20) alpha_s) [EXACT]
+  NEW (A5):  sin^2(alpha_bar) = 80/(80+alpha_s^2)            [EXACT]
+  NEW (A6):  cos^2(alpha_bar) = alpha_s^2/(80+alpha_s^2)     [EXACT]
+  NEW (A7):  sin(2 alpha_bar) = -8 sqrt(5) alpha_s/(80+a^2)  [EXACT]
+  NEW (A8):  cos(2 alpha_bar) = -(80-a^2)/(80+a^2)           [EXACT]
+  NEW (A9):  Common denom 80 + alpha_s^2 = 96 R_t_bar^2      [structural]
+  NEW (A10): SELECTION RULE: alpha_bar - pi/2 has only ODD powers of alpha_s
+             All even-order coefficients EXACTLY ZERO (NNLO predicts!)
+  NEW (A11): tan(alpha_bar) = -N_pair^2 sqrt(N_quark-1)/alpha_s
+
+  At canonical alpha_s = 0.1033038161:
+    tan(alpha_bar) = -4 sqrt(5)/alpha_s  = -86.582202
+    alpha_bar (linear N7)                 = 90.661750 deg
+    alpha_bar (EXACT A4 arctan)           = 90.661721 deg
+    alpha_s^3 correction (predicted)      = -2.942493e-05 deg
+
+  All inputs retained on main; no SUPPORT-tier or open inputs used.
+
+========================================================================================
+TOTAL: PASS=44, FAIL=0
+========================================================================================

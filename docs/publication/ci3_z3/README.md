@@ -49,9 +49,9 @@ For the full package-capture inventory, use:
   the retained NLO barred-triangle closure
   `R_t_bar^2 = (80 + alpha_s(v)^2)/96` and
   `R_b_bar^2 + R_t_bar^2 + rho_bar lambda^2 = 1`,
-  the exact NLO barred-triangle sum rule
-  `R_b_bar^2 + R_t_bar^2 + rho_bar lambda^2 = 1` with
-  `R_t_bar^2 = (80 + alpha_s(v)^2)/96`,
+  plus the exact barred-apex-angle closure
+  `alpha_bar = pi/2 + arctan((sqrt(5)/20) alpha_s(v))` and
+  `tan(alpha_bar) = -4 sqrt(5)/alpha_s(v)`,
   `|V_cs|_0^2 = 1 - alpha_s(v)/2 - alpha_s(v)^2/6`,
   `|V_cb|_0^2 = alpha_s(v)^2/6`, and atlas-leading third-row identities
   `|V_td|_0^2 = 5 alpha_s(v)^3/72`,

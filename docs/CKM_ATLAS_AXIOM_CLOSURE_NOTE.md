@@ -9,6 +9,7 @@
 [`CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md`](CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md),
 [`CKM_SIN_2_BETA_BAR_NLO_N_QUARK_RATIO_THEOREM_NOTE_2026-04-25.md`](CKM_SIN_2_BETA_BAR_NLO_N_QUARK_RATIO_THEOREM_NOTE_2026-04-25.md),
 [`CKM_BARRED_TRIANGLE_PYTHAGOREAN_RHO_LAMBDA_SUM_RULE_THEOREM_NOTE_2026-04-25.md`](CKM_BARRED_TRIANGLE_PYTHAGOREAN_RHO_LAMBDA_SUM_RULE_THEOREM_NOTE_2026-04-25.md),
+[`CKM_BARRED_APEX_ANGLE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md`](CKM_BARRED_APEX_ANGLE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md),
 [`CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
 [`CKM_SECOND_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-25.md`](CKM_SECOND_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-25.md),
 [`CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
@@ -153,6 +154,10 @@ The theorem package is therefore:
 - retained NLO beta-ratio corollary:
   `sin(2 beta_bar)/sin(2 beta_0) = 1 - alpha_s(v)/(n_quark-1)
   = 1 - alpha_s(v)/5 + O(alpha_s(v)^2)`
+- retained exact barred-apex-angle closure on the protected-`gamma_bar`
+  surface: `tan(alpha_bar) = -4 sqrt(5)/alpha_s(v)`,
+  `alpha_bar = pi/2 + arctan((sqrt(5)/20) alpha_s(v))`, and
+  `sin(2 alpha_bar) = -8 sqrt(5) alpha_s(v)/(80 + alpha_s(v)^2)`
 - atlas-leading B_s phase: `phi_s,0=-alpha_s(v)sqrt(5)/6`
 - atlas-leading kaon epsilon_K CKM-bracket factorization:
   `Im(lambda_c^2)=+2J_0`, `Im(lambda_c lambda_t)=-J_0`, and
