@@ -60,7 +60,16 @@ questions:
   `V(2)=1/4`, `V(3)=2/9`, `V(6)=5/36`,
   the universal relation `V(N)=M(N)/N`, and the exact dual decompositions
   `rho = V(N_pair) M(N_color)` and
-  `A^2 rho = V(N_color) M(N_pair) = 1/9`; with
+  `A^2 rho = V(N_color) M(N_pair) = 1/9`; the retained CKM integer package
+  now also carries a classical number-theory characterization of the same
+  structural counts `(2,3,6)` via the perfect-number identity
+  `N_quark = 1 + N_pair + N_color`, the sigma-perfect condition
+  `sigma(N_quark) = 2 N_quark`, the triangular ladder
+  `N_color = T_{N_pair}`, `N_quark = T_{N_color}`, the Lie-dimensional
+  identity `N_color = N_pair^2 - 1`, the Mersenne/Euclid-Euler identities
+  `N_color = 2^{N_pair} - 1` and
+  `N_quark = 2^{N_pair-1}(2^{N_pair} - 1)`, and five independent
+  three-constraint routes that each recover `(N_pair,N_color,N_quark)=(2,3,6)`; with
   finite-`lambda` standard-matrix corrections guarded separately, plus the
   atlas-leading B_s mixing phase
   `phi_s = -alpha_s(v) sqrt(5)/6 = -0.03850 rad` and the NLO barred-triangle

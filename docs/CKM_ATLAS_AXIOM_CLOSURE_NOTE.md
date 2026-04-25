@@ -12,6 +12,7 @@
 [`CKM_BARRED_APEX_ANGLE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md`](CKM_BARRED_APEX_ANGLE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md),
 [`CKM_BARRED_ORTHOCENTER_EULER_LINE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md`](CKM_BARRED_ORTHOCENTER_EULER_LINE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md),
 [`CKM_MULTI_PROJECTION_BERNOULLI_FAMILY_THEOREM_NOTE_2026-04-25.md`](CKM_MULTI_PROJECTION_BERNOULLI_FAMILY_THEOREM_NOTE_2026-04-25.md),
+[`CKM_CLASSICAL_NUMBER_THEORY_INTEGER_CHARACTERIZATION_THEOREM_NOTE_2026-04-25.md`](CKM_CLASSICAL_NUMBER_THEORY_INTEGER_CHARACTERIZATION_THEOREM_NOTE_2026-04-25.md),
 [`CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
 [`CKM_SECOND_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-25.md`](CKM_SECOND_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-25.md),
 [`CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
@@ -154,6 +155,15 @@ The theorem package is therefore:
   `V(N_pair)=1/4`, `V(N_color)=2/9`, `V(N_quark)=eta^2=5/36`,
   exact `V(N)=M(N)/N`, exact `rho = V(N_pair) M(N_color)`, and
   exact `A^2 rho = V(N_color) M(N_pair) = 1/9`
+- retained classical number-theory characterization of the same CKM counts:
+  `N_quark = 1 + N_pair + N_color`,
+  `sigma(N_quark) = 2 N_quark`,
+  `N_color = T_{N_pair}`,
+  `N_quark = T_{N_color}`,
+  `N_color = N_pair^2 - 1`,
+  `N_color = 2^{N_pair} - 1`,
+  `N_quark = 2^{N_pair-1}(2^{N_pair} - 1)`,
+  and five independent three-constraint routes recovering `(2,3,6)`
 - NLO barred-apex guardrail: `rho_bar=(4-alpha_s(v))/24`,
   `eta_bar=sqrt(5)(4-alpha_s(v))/24`, and protected
   `gamma_bar=gamma_0=arctan(sqrt(5))` through the NLO multiplicative
