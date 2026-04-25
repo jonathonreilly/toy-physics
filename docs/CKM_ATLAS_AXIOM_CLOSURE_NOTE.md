@@ -7,6 +7,7 @@
 [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md),
 [`CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`](CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md),
 [`CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md`](CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md),
+[`CKM_SIN_2_BETA_BAR_NLO_N_QUARK_RATIO_THEOREM_NOTE_2026-04-25.md`](CKM_SIN_2_BETA_BAR_NLO_N_QUARK_RATIO_THEOREM_NOTE_2026-04-25.md),
 [`CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
 [`CKM_SECOND_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-25.md`](CKM_SECOND_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-25.md),
 [`CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
@@ -148,6 +149,9 @@ The theorem package is therefore:
   `eta_bar=sqrt(5)(4-alpha_s(v))/24`, and protected
   `gamma_bar=gamma_0=arctan(sqrt(5))` through the NLO multiplicative
   barred-apex map
+- retained NLO beta-ratio corollary:
+  `sin(2 beta_bar)/sin(2 beta_0) = 1 - alpha_s(v)/(n_quark-1)
+  = 1 - alpha_s(v)/5 + O(alpha_s(v)^2)`
 - atlas-leading B_s phase: `phi_s,0=-alpha_s(v)sqrt(5)/6`
 - atlas-leading kaon epsilon_K CKM-bracket factorization:
   `Im(lambda_c^2)=+2J_0`, `Im(lambda_c lambda_t)=-J_0`, and

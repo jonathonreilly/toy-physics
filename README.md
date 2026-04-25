@@ -57,7 +57,9 @@ questions:
   atlas-leading B_s mixing phase
   `phi_s = -alpha_s(v) sqrt(5)/6 = -0.03850 rad` and the NLO barred-triangle
   protected invariant `gamma_bar = arctan(sqrt(5))` with
-  `rho_bar=(4-alpha_s(v))/24`, plus the Thales-mediated cross-system CP ratio
+  `rho_bar=(4-alpha_s(v))/24`, the retained NLO beta-ratio corollary
+  `sin(2 beta_bar)/sin(2 beta_0) = 1 - alpha_s(v)/5`, plus the
+  Thales-mediated cross-system CP ratio
   `phi_s / sin(2 beta_d) = -alpha_s(v)/2` and CP-product estimator
   `alpha_s(v) = (18/5) sin(2 beta_d) sin(2 beta_s)` at atlas-leading order,
   plus the kaon epsilon_K CKM-bracket factorization through atlas `J_0`;

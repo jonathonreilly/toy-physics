@@ -1,0 +1,168 @@
+========================================================================================
+sin(2 beta_bar) NLO ratio with N_quark structural fingerprint theorem audit
+See docs/CKM_SIN_2_BETA_BAR_NLO_N_QUARK_RATIO_THEOREM_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Retained inputs on current main
+----------------------------------------------------------------------------------------
+  alpha_s(v)                   = 0.103303816122267
+  N_pair                        = 2  (retained)
+  N_color                       = 3  (retained)
+  N_quark = N_pair x N_color    = 6
+  N_quark - 1                   = 5
+
+  alpha_0 = pi/2                = 90.000000 deg
+  beta_0 = arctan(1/sqrt(5))    = 24.094843 deg
+  gamma_0 = arctan(sqrt(5))     = 65.905157 deg
+  sin(2 beta_0) = sqrt(5)/3     = 0.7453559925
+  cos(2 beta_0) = 2/3           = 0.6666666667
+  N7 slope = sqrt(5)/20         = 0.1118033989
+  [PASS] alpha_s(v) > 0
+  [PASS] N_quark = 6 (retained from CKM magnitudes structural counts)
+  [PASS] N_quark - 1 = 5
+  [PASS] sin(2 beta_0) = sqrt(5)/3 (retained)
+  [PASS] cos(2 beta_0) = 2/3 (retained)
+  [PASS] alpha_0 = pi/2 (retained right-angle)
+  [PASS] retained on main: docs/ALPHA_S_DERIVED_NOTE.md
+  [PASS] retained on main: docs/WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md
+  [PASS] retained on main: docs/CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md
+  [PASS] retained on main: docs/CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md
+  [PASS] retained on main: docs/CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md
+  [PASS] retained on main: docs/CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md
+
+----------------------------------------------------------------------------------------
+(B1) NEW: sin(2 beta_bar)/sin(2 beta_0) = 1 - alpha_s(v)/(N_quark - 1)
+----------------------------------------------------------------------------------------
+  sin(2 beta_bar) linearized        = 0.7299563688
+  sin(2 beta_bar) direct (N9)       = 0.7297595943
+
+  ratio (linearized)                  = 0.9793392368
+  ratio (direct N9)                    = 0.9790752361
+  Closed form 1 - alpha_s/(N_quark-1)  = 0.9793392368
+  Equivalent at framework: 1 - alpha_s/5 = 0.9793392368
+  [PASS] (B1) linearized ratio matches closed form 1 - alpha_s/(N_quark-1)
+  [PASS] (B1) direct N9 matches at NLO leading (O(alpha_s^2) residual)
+  [PASS] (B1) at framework, ratio = 1 - alpha_s/5
+
+----------------------------------------------------------------------------------------
+Derivation of 1/(N_quark - 1) factor from retained inputs
+----------------------------------------------------------------------------------------
+  Step 1: retained N7 slope = sqrt(5)/20 = 0.1118033989
+  Step 2: beta_0 - beta_bar = slope x alpha_s = 1.1549717759e-02
+  Step 3: factor 2 cos(2 beta_0) = 4/3 = 1.3333333333
+  Step 4: |delta sin(2 beta_bar)| = factor x delta_beta = 0.0153996237
+          = (4/3)(sqrt(5)/20) alpha_s = (sqrt(5)/15) alpha_s
+  [PASS] |delta sin(2 beta_bar)| = (sqrt(5)/15) alpha_s
+
+  Step 5: divide by sin(2 beta_0) = sqrt(5)/3
+  Step 6: coefficient = (sqrt(5)/15)/(sqrt(5)/3) = 3/15 = 1/5
+  Numerical: 0.2000000000
+  [PASS] coefficient = 1/5 = 1/(N_quark - 1) (sqrt(5) cancels!)
+  [PASS] coefficient = 1/(N_quark - 1) where N_quark = 6
+
+----------------------------------------------------------------------------------------
+alpha_s-INDEPENDENCE of the 1/(N_quark - 1) coefficient
+----------------------------------------------------------------------------------------
+  Testing at multiple alpha_s values:
+    alpha_s = 0.05: ratio = 0.990000, extracted coefficient = 0.2000000000
+  [PASS] coefficient at alpha_s=0.05 is exactly 1/(N_quark - 1)
+    alpha_s = 0.10: ratio = 0.980000, extracted coefficient = 0.2000000000
+  [PASS] coefficient at alpha_s=0.1 is exactly 1/(N_quark - 1)
+    alpha_s = 0.15: ratio = 0.970000, extracted coefficient = 0.2000000000
+  [PASS] coefficient at alpha_s=0.15 is exactly 1/(N_quark - 1)
+    alpha_s = 0.20: ratio = 0.960000, extracted coefficient = 0.2000000000
+  [PASS] coefficient at alpha_s=0.2 is exactly 1/(N_quark - 1)
+
+----------------------------------------------------------------------------------------
+(B3) PROTECTED: sin(2 gamma_bar)/sin(2 gamma_0) = 1 + O(alpha_s^4)
+----------------------------------------------------------------------------------------
+  sin(2 gamma_0)                = 0.7453559925
+  sin(2 gamma_bar) (= gamma_0)  = 0.7453559925
+  Ratio                          = 1.0000000000
+  [PASS] (B3) sin(2 gamma_bar)/sin(2 gamma_0) = 1 (PROTECTED at NLO, retained N8)
+
+----------------------------------------------------------------------------------------
+(B4) Atlas right-angle: sin(2 alpha_0) = 0; sin(2 alpha_bar) is pure NLO
+----------------------------------------------------------------------------------------
+  sin(2 alpha_0) = sin(pi)      = 0.000000000000000
+  [PASS] (B4) sin(2 alpha_0) = 0 exactly (atlas right-angle)
+  alpha_bar = pi/2 + slope * alpha_s = 90.661750 deg
+  sin(2 alpha_bar) (pure NLO)  = -0.0230973813
+  No multiplicative ratio (sin(2 alpha_0) = 0)
+  [PASS] (B4) sin(2 alpha_bar) is non-zero (pure NLO observable)
+
+----------------------------------------------------------------------------------------
+Three-tier NLO hierarchy: gamma PROTECTED, beta LINEAR, alpha PURE-NLO
+----------------------------------------------------------------------------------------
+  Doubled-angle | NLO ratio                    | Source
+  --------------|------------------------------|----------------
+  gamma_bar     | 1 + O(alpha_s^4) PROTECTED  | retained N8
+  beta_bar      | 1 - alpha_s/(N_quark-1)     | NEW (B1)
+  alpha_bar     | UNDEFINED (sin(2 alpha_0)=0)| atlas right-angle
+
+  All three tiers from retained inputs only.
+
+  At canonical alpha_s = 0.1033:
+    sin(2 gamma_bar)/sin(2 gamma_0) = 1.000000  (NLO-protected)
+    sin(2 beta_bar)/sin(2 beta_0)   = 0.979339  (1 - alpha_s/5)
+    sin(2 alpha_bar)                 = -0.023099  (pure NLO; sin(2 alpha_0) = 0)
+  [PASS] Hierarchy holds at canonical alpha_s
+
+----------------------------------------------------------------------------------------
+Connection to retained atlas 1+5 quark-block decomposition
+----------------------------------------------------------------------------------------
+  Retained 1+5 decomposition:
+    w_A1   = 1/N_quark         = 1/6
+    w_perp = (N_quark - 1)/N_quark = 5/6
+    Numerator of w_perp: 5
+
+  NEW (B1) ratio coefficient: 1/(N_quark - 1)
+    = inverse of orthogonal-channel weight numerator
+    = 1/5 = 0.200000
+
+  This is a structural fingerprint: the framework's NLO sin(2 beta)
+  ratio correction is set by the orthogonal-channel weight numerator
+  in the retained 1+5 quark-block decomposition.
+  [PASS] 1/(N_quark - 1) coefficient = inverse of w_perp numerator
+  [PASS] w_perp = 5/6 in framework (retained CP-phase 1+5)
+
+----------------------------------------------------------------------------------------
+PDG comparator
+----------------------------------------------------------------------------------------
+  PDG sin(2 beta) (B → ψK_S) = 0.706 +/- 0.011
+  framework atlas-LO          = 0.7454  (+3.58 sigma)
+  framework atlas-NLO via (B1) = 0.7300  (+2.18 sigma)
+  NLO improvement: factor 1 - alpha_s/5 = 0.9793
+  [PASS] atlas-LO sin(2 beta_0) above PDG (known atlas-vs-physical residual)
+  [PASS] atlas-NLO sin(2 beta_bar) closer to PDG than atlas-LO
+
+----------------------------------------------------------------------------------------
+Summary of new content
+----------------------------------------------------------------------------------------
+  NEW (B1): sin(2 beta_bar)/sin(2 beta_0) = 1 - alpha_s(v)/(N_quark - 1)
+
+  Structural origin of 1/(N_quark - 1):
+    - Retained 1+5 decomposition in CKM CP-phase theorem
+    - w_perp = (N_quark - 1)/N_quark = 5/6
+    - 1/(N_quark - 1) = 1/5 = inverse of orthogonal-channel weight numerator
+
+  alpha_s-INDEPENDENT coefficient: pure rational 1/5, testable
+  independently of canonical coupling precision.
+
+  Three-tier NLO hierarchy:
+    gamma_bar/gamma_0 = 1 + O(alpha_s^4) PROTECTED  [retained N8]
+    beta_bar/beta_0  = 1 - alpha_s/(N_quark - 1)   [NEW (B1)]
+    alpha_bar        = pure NLO (sin(2 alpha_0) = 0)
+
+  All inputs retained on main; no SUPPORT-tier or open inputs used.
+
+  At canonical alpha_s = 0.1033:
+    sin(2 beta_bar)/sin(2 beta_0) = 1 - alpha_s/5 = 0.9793
+    sin(2 beta_0) = sqrt(5)/3   = 0.7454
+    sin(2 beta_bar) NLO          = 0.7300
+    PDG sin(2 beta)              = 0.706 +/- 0.011
+
+========================================================================================
+TOTAL: PASS=30, FAIL=0
+========================================================================================
