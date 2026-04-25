@@ -181,11 +181,19 @@ Any operational past-signaling construction must do at least one of:
 
 ### Initial artifact targets
 
-- `docs/CHRONOLOGY_PROTECTION_THEOREM_NOTE.md`
+- `docs/CHRONOLOGY_PROTECTION_OPERATIONAL_NO_PAST_SIGNALING_THEOREM_NOTE_2026-04-25.md`
+- `docs/CHRONOLOGY_IMPORT_CLASSIFICATION_NOTE.md`
+- `docs/CHRONOLOGY_IMPORT_BUDGET_NOTE.md`
+- `docs/CHRONOLOGY_OPERATOR_ALGEBRA_BOUNDARY_NOTE.md`
+- `docs/DURABLE_RECORD_FORMATION_BOUNDARY_NOTE.md`
 - `docs/U_MINUS_T_VS_PAST_SIGNALING_NOTE.md`
+- `docs/CTC_FIXED_POINT_TAXONOMY_NOTE.md`
+- `docs/POSTSELECTION_NO_SIGNALING_AUDIT.md`
+- `docs/MULTI_TIME_SUPPORT_CONSTRAINT_NOTE.md`
 - `scripts/chronology_cycle_insertion_probe.py`
 - `scripts/loschmidt_echo_record_probe.py`
 - `scripts/advanced_vs_retarded_field_probe.py`
+- `scripts/chronology_protection_suite.py`
 
 ### First retained-safe statement if the lane works
 
