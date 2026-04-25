@@ -5,14 +5,14 @@
 microscopic object `L_e = Schur_{E_e}(D_-)`; this proves the boundary-resolvent,
 Feshbach-elimination, and positive Dirichlet variational character of `L_e`
 once the charged microscopic block is supplied, but does not evaluate `D_-`,
-does not select the final DM source point, and does not claim Wilson-native
-parent closure
-**Script:** none; proof-only note
+does not by itself select the final DM source point, and does not claim
+Wilson-native parent closure
+**Script:** `scripts/frontier_dm_wilson_direct_descendant_schur_feshbach_boundary_variational.py`
 
 ## Question
 
-The current DM Wilson direct-descendant stack has reduced the live flagship
-frontier to a right-sensitive microscopic value law on
+The DM Wilson direct-descendant local-support stack isolates a right-sensitive
+microscopic boundary value law on
 
 `L_e = Schur_{E_e}(D_-)`,
 
@@ -58,9 +58,10 @@ Any future Wilson-native derivation of `D_-` must reproduce the same boundary
 resolvent, the same Feshbach-eliminated equation, and, in the positive
 Hermitian case, the same Dirichlet minimum and monotonicity certificates.
 
-The theorem moves the program forward without closing the DM lane: it proves
-what `L_e` is as a boundary object once `D_-` is supplied, while leaving the
-actual microscopic evaluation and right-sensitive selector law open.
+The theorem moves the program forward without independently closing the DM
+lane: it proves what `L_e` is as a boundary object once `D_-` is supplied,
+while leaving the actual microscopic evaluation and right-sensitive selector
+law to the separate selector/closure stack.
 
 ## Setup
 
@@ -367,8 +368,9 @@ boundary-value theorem with exact algebraic and variational certificates.
 
 ## Reviewer-pressure checks
 
-1. **No final DM selector is claimed.** The note does not select a point on the
-   constructive transport fiber and does not close the DM flagship lane.
+1. **No final DM selector is claimed by this theorem.** The note does not
+   select a point on the constructive transport fiber and does not
+   independently close the DM flagship lane.
 
 2. **No microscopic values are invented.** The theorem does not evaluate
    `D_-`, `L_e`, `H_e`, any transport column, or any dark-matter number.
@@ -402,6 +404,6 @@ boundary-value theorem with exact algebraic and variational certificates.
 
 - actual evaluation of `D_-` from `Cl(3)` on `Z^3`
 - Wilson-native proof of the intended charged support split
-- the right-sensitive microscopic selector law on `L_e`
+- the right-sensitive microscopic selector law on `L_e` by itself
 - the local `3`-real source fiber above the canonical favored transport column
-- the final DM flagship lane
+- the final DM flagship lane by itself

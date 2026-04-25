@@ -244,6 +244,13 @@ Current status from that stack:
   no-go and not a closure of the full chronology lane.
 - W-boson same-surface EW consistency probe. Entry point: [W_MASS_DERIVED_NOTE.md](../../W_MASS_DERIVED_NOTE.md). Repo status: `bounded`. On the retained EW lane the framework-side readouts are `M_W^tree = 79.7956 GeV`, `M_W^RGE = 80.5573 GeV`, `M_Z^tree = 91.2663 GeV`. The remaining `~0.19 GeV` `M_W` gap tracks the existing retained `g_2(v)` precision and is therefore treated as a same-surface consistency probe, not as a retained or few-MeV SM-indirect `M_W` prediction.
 - dark-matter exact-target package, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` support package, a retained-measurement A-BCC integration theorem, an interval-certified split-2 carrier closure, a shifted same-law recovered-packet selector closure, an exact target-surface chamber-root theorem, a graph-first ordered-chain current-activation theorem, an affine current-coordinate reduction theorem, and an ordered-chain graded-current delta closure theorem. So the DM lane is now closed for the exact PMNS-target formulation treated in the manuscript, with broader target-free global uniqueness left out of scope.
+- DM Wilson direct-descendant Schur-Feshbach boundary support theorem. Entry
+  point: [DM_WILSON_DIRECT_DESCENDANT_SCHUR_FESHBACH_BOUNDARY_VARIATIONAL_THEOREM_NOTE_2026-04-25.md](../../DM_WILSON_DIRECT_DESCENDANT_SCHUR_FESHBACH_BOUNDARY_VARIATIONAL_THEOREM_NOTE_2026-04-25.md).
+  Repo status: exact boundary/support theorem for the open microscopic selector
+  gate. It verifies the boundary Green compression, Feshbach elimination,
+  positive Dirichlet variational form, and monotone transfer certificates for a
+  supplied charged block `D_-`; it does not evaluate `D_-`, select the charged
+  support split, or independently close final DM selector physics.
 - persistent exact-lattice compact-object companion in the package, with one
   retained blended readout on the nearby family and a `top4` multistage floor
   that survives beyond the widened pocket, but still below persistent

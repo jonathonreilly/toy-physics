@@ -196,6 +196,11 @@ The paper does **not** claim:
 - a direct gravitational-wave mass falsification claim from the
   gravity/cosmology tower Lambda bridge without separately promoting the
   bounded particle interpretation of the compactness towers;
+- evaluation of the DM microscopic charged block `D_-`, selection of the
+  charged support split, derivation of the right-sensitive selector law on
+  `L_e`, or independent final DM closure from the
+  [DM Wilson direct-descendant Schur-Feshbach boundary theorem](../../DM_WILSON_DIRECT_DESCENDANT_SCHUR_FESHBACH_BOUNDARY_VARIATIONAL_THEOREM_NOTE_2026-04-25.md)
+  alone;
 - full DM relic closure.
 
 The current package keeps:
