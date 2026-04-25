@@ -3,7 +3,7 @@
 **Branch:** `claude/ai-methodology-capture-2026-04-25` (off `origin/main` at `9d0fbabf`)
 **Date:** 2026-04-25
 **Status:** RAW INFO CAPTURE — to be cleaned, groomed, and organized later
-**Scope:** Claude/Anthropic interaction history only on this pass. Codex/OpenAI history will be added in a later pass. Other tools (Gemini, etc.) will be added if used.
+**Scope:** Claude/Anthropic + Codex/OpenAI raw capture on this pass. Other tools (Gemini, etc.) will be added if used.
 
 This note is the seed file for the AI-methodology paper that frames the Cl(3)/Z³ retained content as a case study in AI-assisted theoretical physics. The objective on this pass is **information capture, not synthesis**. Subsequent passes will compress, organize, and shape into a publishable methodology paper.
 
@@ -48,9 +48,15 @@ This note is the seed file for the AI-methodology paper that frames the Cl(3)/Z�
 - **Subagent invocation jsonl files:** ~745 across worktrees
 - **Total Claude session storage:** 284 MB
 
-### 1.5 Codex/OpenAI activity
+### 1.5 Codex/OpenAI activity (first raw pass)
 
-To be added on next pass. Expected scope based on memory file: Codex runs review on `codex/review-active` branch and `codex/*` branches. The repo has dozens of `codex/*` branch names visible in git history.
+- **Codex raw session store (`~/.codex/sessions`):** 1,010 files
+- **Codex archived session store (`~/.codex/archived_sessions`):** 1,253 files
+- **Codex log database:** `logs_2.sqlite` = 553,996,288 bytes
+- **Remote `origin/codex/*` branches visible from repo:** 59
+- **Live `codex/*` worktrees attached during capture:** 37
+- **Review packets found in active Codex temp/worktree space:** 3 `review.md` files
+- **Prompt capture added on this pass:** April 1 Physics-repo onboarding prompts plus April 25 multi-agent green-field exploration prompts (teleportation / time travel / antigravity)
 
 ---
 
@@ -59,7 +65,7 @@ To be added on next pass. Expected scope based on memory file: Codex runs review
 ### 2.1 Primary tools used
 
 - **Claude (Anthropic Sonnet 4.5 / Sonnet 4.7):** primary theorem-production / derivation / write-up surface. Session history captured in `~/.claude/projects/-Users-jonBridger-Toy-Physics/`.
-- **Codex (OpenAI):** adversarial review, independent re-derivation, branch-wise verification. Visible via `codex/*` branch names on `origin`.
+- **Codex (OpenAI):** adversarial review, independent re-derivation, branch-wise verification, selective landing, and repo-hygiene / claim-surface correction. Raw capture added this pass in `docs/ai_methodology/raw/codex_*`.
 - **Other:** TBD — to be enumerated on next pass.
 
 ### 2.2 Workflow tooling — custom slash commands
@@ -239,33 +245,45 @@ The following raw extracts are produced on this info-capture pass. Each file is 
 
 - [docs/ai_methodology/raw/protocols.md](./ai_methodology/raw/protocols.md) — **autopilot protocols (full) + review hardening backlog + canonical harness index + reproducibility freeze**, 18,503 lines (1.3 MB — the AUTOPILOT_WORKLOG dominates)
 
-### 5.4 Memory + accountability
+### 5.4 Codex raw capture
+
+- [docs/ai_methodology/raw/codex_machine_dump.md](./ai_methodology/raw/codex_machine_dump.md) — **machine-local Codex/OpenAI store inventory** (`~/.codex` state objects, session stores, representative file inventory, physics-scoped session paths)
+- [docs/ai_methodology/raw/codex_prompt_capture.md](./ai_methodology/raw/codex_prompt_capture.md) — **raw Codex prompt evidence** from the Physics repo, including April 1 onboarding prompts and the April 25 multi-agent teleportation / chronology / antigravity orchestration thread
+- [docs/ai_methodology/raw/codex_review_structure.md](./ai_methodology/raw/codex_review_structure.md) — **raw review-loop evidence** (repo review workflow, retainability note anchors, `review.md` inventory, methodology-branch review packet excerpt)
+- [docs/ai_methodology/raw/codex_repo_hygiene.md](./ai_methodology/raw/codex_repo_hygiene.md) — **raw repo-hygiene evidence** (`origin/codex/*` branch inventory, live `codex/*` worktree inventory, recent `origin/main` landing cadence)
+
+### 5.5 Memory + accountability
 
 - [docs/ai_methodology/raw/canonical_framing_paragraph.md](./ai_methodology/raw/canonical_framing_paragraph.md) — **canonical AI-methodology framing paragraph adopted for every paper submission from this framework** (human-authored 2026-04-25). To appear verbatim (with `[repo URL]` substituted) in arXiv preprints, journal manuscripts, conference papers, and supplementary methods sections. Paper-facing successor to the longer package-level note below.
 - [docs/ai_methodology/raw/memory_files.md](./ai_methodology/raw/memory_files.md) — **full memory file content** (6 files), 319 lines
 - [docs/ai_methodology/raw/ai_accountability_note.md](./ai_methodology/raw/ai_accountability_note.md) — **AI-assistance disclosure note recovered from git history** (`56876669^`); the note was removed from public package on 2026-04-23 in commit `56876669` "Clean public package surface and remove internal docs" and is preserved here as the package-level disclosure precedent (longer companion to the canonical per-paper framing paragraph above)
 
-### 5.5 Repo audit
+### 5.6 Repo audit
 
 - [docs/ai_methodology/raw/repo_audit.md](./ai_methodology/raw/repo_audit.md) — **directory tree, file counts, frontier inventory, branch list, commits-per-day timeline, top-level theorem-grade pattern counts, claims-table + quantitative-summary headers**, 457 lines
 
-### 5.6 Total info-capture volume
+### 5.7 Total info-capture volume
 
-**40,009 lines, ~2.4 MB of raw verbatim data** across 11 files in `docs/ai_methodology/raw/`. All material is unprocessed source data ready for cleaning, organization, and synthesis on subsequent passes.
+**40,741 lines, ~2.4 MB of raw verbatim data** across **16 files** in
+`docs/ai_methodology/raw/`.
+
+The raw archive now includes both the Claude-side and Codex-side evidence
+surfaces in one place under `docs/ai_methodology/raw/`.
 
 ---
 
 ## 6. Open Items for Subsequent Passes
 
-1. **Codex prompt history extraction** — locate Codex session logs (likely at `~/.codex/` or similar; investigate)
-2. **Subagent prompt capture** — extract prompts FROM Claude TO subagents from the 745 subagent jsonl files; this captures the tree-search / parallel-attack patterns
+1. **Full Codex prompt-history extraction** — current pass only captures representative / first-pass Physics prompts, not the full deduplicated Codex corpus
+2. **Subagent prompt capture on the Claude side** — extract prompts FROM Claude TO subagents from the 745 subagent jsonl files; this captures the tree-search / parallel-attack patterns
 3. **Branch-summary extraction** — every `BRANCH_SUMMARY_*.md` and `SESSION_SYNTHESIS_*.md` in `docs/` documents an AI-driven research session and should be inventoried
-4. **Commit message corpus** — 2,658 commit messages document the actual research increments; should be extracted as a research-velocity time series
-5. **Codex review notes** — `codex/review-active` branch and historical Codex review surfaces; cross-reference with current Claude work
+4. **Commit message corpus** — main now moved beyond the 2,658-commit count stated above; extract the full commit corpus as a research-velocity time series
+5. **Historical Codex review notes** — expand beyond the first `review.md` inventory to the broader `codex/review-active` and historical review surfaces
 6. **Time-on-task analysis** — from session timestamps, derive actual human attention vs AI autonomous time
 7. **Failure / no-go inventory** — every `*NO_GO*.md` and `*FAILURE*.md` is an AI-generated obstruction theorem; these are key methodology evidence
-8. **Worktree purpose documentation** — each of 25 worktrees represents a parallel investigation; document what each was for
+8. **Worktree purpose documentation** — current pass captures live worktree inventory, but not yet a per-worktree purpose table
 9. **Cross-tool reconciliation events** — places where Codex caught Claude errors (or vice versa) — these are critical methodology evidence
+10. **Sanitization/indexing pass** — the raw annex is intentionally machine-local; later methodology consolidation should normalize paths, deduplicate session captures, and distinguish raw evidence from curated narrative
 
 ---
 
