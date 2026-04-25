@@ -252,17 +252,64 @@ The following raw extracts are produced on this info-capture pass. Each file is 
 - [docs/ai_methodology/raw/codex_review_structure.md](./ai_methodology/raw/codex_review_structure.md) — **raw review-loop evidence** (repo review workflow, retainability note anchors, `review.md` inventory, methodology-branch review packet excerpt)
 - [docs/ai_methodology/raw/codex_repo_hygiene.md](./ai_methodology/raw/codex_repo_hygiene.md) — **raw repo-hygiene evidence** (`origin/codex/*` branch inventory, live `codex/*` worktree inventory, recent `origin/main` landing cadence)
 
-### 5.4b Claude raw capture, machine-local (this pass)
+### 5.4b Claude raw capture, machine-local — overview packet
 
-Companion four-file packet for the Claude/Anthropic side of the workflow,
-captured directly from the `/Users/jonreilly/` machine (separate machine from
-the `/Users/jonBridger/` machine that produced the prompt-extract files in
-§5.1):
+Companion four-file overview packet for the Claude/Anthropic side of the
+workflow, captured directly from the `/Users/jonreilly/` machine (separate
+machine from the `/Users/jonBridger/` machine that produced the
+prompt-extract files in §5.1):
 
 - [docs/ai_methodology/raw/claude_machine_dump.md](./ai_methodology/raw/claude_machine_dump.md) — **machine-local Claude/Anthropic store inventory** (`~/.claude` top-level objects, project-store sizes and counts, largest session jsonl files, memory store, user-global rules and commands, active plugins, current session evidence)
 - [docs/ai_methodology/raw/claude_prompt_capture.md](./ai_methodology/raw/claude_prompt_capture.md) — **raw Claude prompt evidence from the `jonreilly` machine**, with verbatim excerpts from the current capture session, adjacent live worktrees (`crazy-pascal`, `romantic-chatterjee`, `zen-turing`), and a representative subagent invocation
 - [docs/ai_methodology/raw/claude_review_structure.md](./ai_methodology/raw/claude_review_structure.md) — **raw review-loop evidence on the Claude side** (incoming `review.md` of this very branch, repo-side `*_REVIEW_PACKET_*.md` inventory, branch-summary / session-synthesis surfaces, project-level review-driving slash commands, cross-tool review interaction in commit log, memory-encoded review-feedback rule)
 - [docs/ai_methodology/raw/claude_repo_hygiene.md](./ai_methodology/raw/claude_repo_hygiene.md) — **raw repo-hygiene evidence on the Claude side** (35 remote `origin/claude/*` branches, branch-naming families, live worktree inventory, project-store fanout vs. attached worktrees, recent `origin/main` landing cadence with the `land <X>` selective-merge pattern, cleanup-style hygiene commits, authorship histogram, recent Claude-attributed commits with PASS counts and grade tags)
+
+### 5.4c Claude raw capture, machine-local — full bodies
+
+Verbatim full-body dumps that back up the overview packet above. These files
+are the raw evidence the methodology paper will draw on, not summaries:
+
+- [docs/ai_methodology/raw/claude_user_global_rules.md](./ai_methodology/raw/claude_user_global_rules.md) — **full bodies of all 5 user-global rule files** loaded into every Claude session on this machine: `autonomous-dev.md`, `coding-style.md`, `git-workflow.md`, `performance.md`, `security.md` (1,475 lines)
+- [docs/ai_methodology/raw/claude_user_global_commands.md](./ai_methodology/raw/claude_user_global_commands.md) — **full bodies of all 6 user-global slash commands** (`codemap`, `rc`, `refactor-clean`, `review`, `tdd`, `verify`) (228 lines)
+- [docs/ai_methodology/raw/claude_project_commands.md](./ai_methodology/raw/claude_project_commands.md) — **full bodies of all 14 project-level slash commands** in this Physics repo: the science-workflow scaffolding (`analyze`, `autopilot`, `design-experiment`, `first-principles`, `frontier`, `hypothesis`, `investigate-physics`, `progress`, `pstack`, `sanity`, `sweep`, `theory-review`, `validate`, `write-up`) (1,399 lines)
+- [docs/ai_methodology/raw/claude_settings_and_state.md](./ai_methodology/raw/claude_settings_and_state.md) — **full bodies of `settings.json`, `settings.local.json` (user + project), and the 6 memory files** on this machine: the deterministic state shaping every session (342 lines)
+- [docs/ai_methodology/raw/claude_subagent_dispatches.md](./ai_methodology/raw/claude_subagent_dispatches.md) — **7 verbatim subagent dispatch prompts** showing how the parent Claude session decomposes a research problem into focused parallel subqueries with explicit context and length budget. Sampled from the `angry-feynman` and `eloquent-bouman` worktrees out of **871 total subagent jsonl files** on this machine (549 lines)
+- [docs/ai_methodology/raw/claude_review_packets_full.md](./ai_methodology/raw/claude_review_packets_full.md) — **full bodies of representative review artifacts**: the incoming `review.md` of this branch, `BRANCH_SUMMARY_DISTRACTED_NAPIER.md`, `CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md`, `ACTIVE_REVIEW_QUEUE.md`, `REVIEW_FEEDBACK_WORKFLOW.md`, `SESSION_SYNTHESIS_2026-04-09.md` (835 lines)
+- [docs/ai_methodology/raw/claude_git_evidence_full.md](./ai_methodology/raw/claude_git_evidence_full.md) — **full git evidence dump**: complete `git worktree list` (90+ entries), full remote-branch list (321 refs), full all-branches list (471 refs), full 69-commit recent log, full 401-line hygiene-commit filter, full 46-entry all-time Claude-attributed commit list, full author histogram, full 2,664-commit project total (1,508 lines)
+
+### 5.4d Claude raw capture, machine-local — full prompt corpus
+
+Verbatim full extraction of every user prompt from every session on the
+`jonreilly` machine that touched the Physics repo. One markdown file per
+session, named `prompts_session_<short-id>_jonreilly.md` with the
+8-character session-id prefix to disambiguate from the older `jonBridger`
+extracts in §5.1.
+
+**Sessions extracted on this pass: 31 files, 44,488 lines, ~2,099 user
+prompts captured verbatim.**
+
+Top sessions by prompt count (full file list in
+`docs/ai_methodology/raw/`):
+
+| File | Prompts | Worktree |
+|---|---:|---|
+| `prompts_session_4ffea772_jonreilly.md` | 519 | youthful-neumann |
+| `prompts_session_049708ba_jonreilly.md` | 376 | sleepy-cerf |
+| `prompts_session_fe95a681_jonreilly.md` | 346 | distracted-napier |
+| `prompts_session_1e4222c2_jonreilly.md` | 228 | intelligent-jepsen |
+| `prompts_session_596e9a60_jonreilly.md` | 205 | angry-feynman |
+| `prompts_session_9fc3990b_jonreilly.md` | 62 | upbeat-williamson |
+| `prompts_session_6c2d4f26_jonreilly.md` | 61 | eloquent-bouman |
+| `prompts_session_5e7ed16d_jonreilly.md` | 48 | gracious-pasteur |
+| `prompts_session_e9f79d2e_jonreilly.md` | 39 | romantic-chatterjee |
+| `prompts_session_3024a28f_jonreilly.md` | 28 | angry-feynman (alt session) |
+
+Plus 21 smaller sessions (1–26 prompts each) covering all other live and
+recently-active jonreilly worktrees, including the current-session capture
+(`prompts_session_8c1087ee_jonreilly.md`).
+
+**Counts and time ranges per session are recorded inside each file's
+header.** The corpus is verbatim — no editing, no summarization.
 
 ### 5.5 Memory + accountability
 
@@ -276,14 +323,36 @@ the `/Users/jonBridger/` machine that produced the prompt-extract files in
 
 ### 5.7 Total info-capture volume
 
-**41,804 lines of raw verbatim data** across **20 files** in
+**92,628 lines of raw verbatim data** across **58 files** in
 `docs/ai_methodology/raw/`.
+
+Breakdown:
+
+- §5.1 prompt extracts (jonBridger machine, 5 files): ~18,300 lines
+- §5.2 workflow tooling (2 files): 2,369 lines
+- §5.3 process protocols (1 file): 18,503 lines
+- §5.4 Codex four-file overview packet (4 files): ~600 lines
+- §5.4b Claude four-file overview packet (4 files): 1,063 lines
+- §5.4c Claude full-body dumps (7 files): 6,336 lines
+- §5.4d Claude full prompt corpus (31 files): 44,488 lines
+- §5.5 memory + accountability (3 files): ~430 lines
+- §5.6 repo audit (1 file): 457 lines
 
 The raw archive now includes both the Claude-side and Codex-side evidence
 surfaces in one place under `docs/ai_methodology/raw/`. The Claude-side
-material is split between earlier prompt-extract files (§5.1, captured from
-the `jonBridger` machine) and the four-file machine-local packet (§5.4b,
-captured from the `jonreilly` machine). The Codex-side material is in §5.4.
+material is split between:
+
+- **§5.1**: earlier prompt-extract files captured from the `jonBridger` machine
+- **§5.4b**: four-file overview packet from the `jonreilly` machine
+- **§5.4c**: seven full-body bundles for rules, commands, settings, memory,
+  subagent dispatches, review packets, and git evidence on the `jonreilly`
+  machine
+- **§5.4d**: 31-file full prompt corpus from every Physics-touching session
+  on the `jonreilly` machine (~2,099 user prompts)
+
+The Codex-side material is in §5.4. Subsequent passes can extend §5.4 with
+the analogous Codex full-body and full-prompt-corpus dumps without changing
+the §5.4b–d structure for Claude.
 
 ---
 
