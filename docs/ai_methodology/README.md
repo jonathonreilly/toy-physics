@@ -21,6 +21,10 @@ Use it to answer:
 3. [`AI_ACCOUNTABILITY_AND_DISCLOSURE_NOTE_2026-04-25.md`](./AI_ACCOUNTABILITY_AND_DISCLOSURE_NOTE_2026-04-25.md)  
    The longer package-level accountability statement.
 
+4. [`raw/README.md`](./raw/README.md)
+   Raw methodology annex: prompt excerpts, machine-local stores, branch/worktree
+   inventories, review evidence, and repo-hygiene traces for later grooming.
+
 ## Core Workflow Surfaces Elsewhere In The Repo
 
 - review workflow:
@@ -43,6 +47,7 @@ This methodology lane is not part of the live physics claim surface. It exists
 to document the production, review, and accountability method around the
 science.
 
-Raw prompt dumps and machine-local archive captures are intentionally **not**
-part of this initial `main` landing. Those belong to later sanitized capture
-passes, especially once the Codex-side history is added.
+The curated notes above are the citable front-door surface. The raw annex under
+[`raw/`](./raw/README.md) is deliberately unpolished source evidence for a later
+methodology paper. It contains machine-local paths, prompt excerpts, and direct
+command outputs, and should be groomed before reuse in polished prose.

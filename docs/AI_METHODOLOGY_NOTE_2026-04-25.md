@@ -202,47 +202,53 @@ The curated methodology lane on `main` now consists of:
 - a canonical per-paper disclosure paragraph:
   [`docs/ai_methodology/CANONICAL_FRAMING_PARAGRAPH_2026-04-25.md`](./ai_methodology/CANONICAL_FRAMING_PARAGRAPH_2026-04-25.md);
 - a package-level accountability note:
-  [`docs/ai_methodology/AI_ACCOUNTABILITY_AND_DISCLOSURE_NOTE_2026-04-25.md`](./ai_methodology/AI_ACCOUNTABILITY_AND_DISCLOSURE_NOTE_2026-04-25.md).
+  [`docs/ai_methodology/AI_ACCOUNTABILITY_AND_DISCLOSURE_NOTE_2026-04-25.md`](./ai_methodology/AI_ACCOUNTABILITY_AND_DISCLOSURE_NOTE_2026-04-25.md);
+- a raw methodology annex:
+  [`docs/ai_methodology/raw/README.md`](./ai_methodology/raw/README.md).
 
-These are the publishable part of the methodology lane.
+The first four items are the publishable part of the methodology lane.
 
-They are intentionally smaller than the raw archive branch material. The point
-on `main` is to keep the lane readable, citable, and honest.
+The raw annex is now on `main` as evidence for the later methodology paper, but
+it remains intentionally unpolished: machine-local paths, prompt excerpts,
+branch/worktree inventories, review traces, and direct command outputs.
 
-## 7. What Is Not On `main` In This Pass
+## 7. Raw Annex Boundary
 
-The branch that motivated this landing carried a much larger raw-capture
-archive, including:
+This pass lands the raw-capture material that was previously branch-local,
+plus a current Codex desktop raw packet from the `/Users/jonBridger` machine.
+
+The raw annex includes:
 
 - prompt/session dumps;
 - full protocol captures;
 - machine-local path inventories;
-- partial Claude-only capture without the Codex side completed.
+- Claude-side and Codex-side raw capture files;
+- branch-review and repo-hygiene evidence;
+- the current Codex desktop prompt/session, branch/worktree, and landing trace.
 
-That material is useful, but it is not the right `main` surface yet.
+That material is useful precisely because it is raw. It should not be treated as
+the final methodology paper or as polished disclosure language.
 
-In particular, the following still need a dedicated capture/sanitization pass
-before they should be promoted:
+The following still need a dedicated grooming pass before publication use:
 
-- Codex prompt/session history;
-- `review.md` corpus and selective-landing history;
-- branch-review and repo-hygiene examples across the `codex/*` work;
-- normalized raw transcript archives that do not depend on one machine-local
-  path layout.
+- deduplication across repeated prompt/session captures;
+- normalized citations for machine-local paths;
+- separation of representative examples from exhaustive inventories;
+- selection of case studies from the raw review and selective-landing history.
 
 ## 8. Next Capture Targets
 
-The next methodology pass should add the Codex side explicitly:
+The next methodology pass should groom and extend the raw annex:
 
-1. Codex prompt/session capture.
-2. Review-note corpus capture (`review.md` on science branches).
+1. Full Codex prompt/session extraction beyond the representative current pass.
+2. Review-note corpus expansion (`review.md` on science branches).
 3. Selective-landing case studies.
 4. Repo-hygiene and claim-surface correction examples.
 5. Cross-tool disagreement/reconciliation events where one system caught an
    overclaim or premise gap introduced by the other.
 
-That second pass is the one that will turn this from a Claude-first methodology
-capture into a true Claude-plus-Codex methodology lane.
+That grooming pass is the one that turns this raw evidence archive into a
+usable methodology-paper source packet.
 
 ## 9. Bottom Line
 
