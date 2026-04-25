@@ -1,10 +1,10 @@
 # Koide Q Minimal Scale-Free Selector
 
 **Date:** 2026-04-22
-**Status:** science-only branch-local strengthening note; not woven through
-review or publication surfaces
-**Purpose:** tighten the `Q` route once the second-order returned carrier is
-accepted by showing that the selector variable is not an arbitrary quadratic
+**Status:** exact support theorem on the admitted second-order `Q` carrier;
+does not close native Koide `Q`
+**Purpose:** tighten the `Q` route on the admitted second-order returned
+carrier by showing that the selector variable is not an arbitrary quadratic
 choice.
 
 The key statement is:
@@ -16,8 +16,9 @@ The key statement is:
 That ratio is equivalently:
 
 - `E_perp / E_+`,
-- `(r1^2 + r2^2) / r0^2`,
-- `1 / kappa`,
+- `(r1^2 + r2^2) / (2 r0^2)` in the Fourier-coordinate normalization used
+  below,
+- `2 / kappa`,
 - or `Q`.
 
 So once the second-order carrier is admitted, the selector variable itself is
@@ -91,16 +92,28 @@ Both basis elements are degree-2, so after quotienting by overall scale there
 is exactly one nontrivial ratio:
 
 ```text
-rho = (r1^2 + r2^2) / r0^2
-    = 2 E_perp / E_+
-    = 2 / kappa.
+rho_Q = E_perp / E_+
+      = (r1^2 + r2^2) / (2 r0^2)
+      = 2 / kappa.
 ```
+
+Here `kappa` is the existing circulant convention `a^2 / |b|^2`, under which
+the doublet block carries the factor `2`.
 
 Equivalently,
 
 ```text
-Q = (1 + rho) / 3.
+Q = (1 + rho_Q) / 3.
 ```
+
+The raw Fourier-coordinate ratio
+
+```text
+rho_F = (r1^2 + r2^2) / r0^2
+```
+
+therefore satisfies `rho_F = 2 rho_Q`. This note uses `rho_Q` for the
+physical block-energy ratio that appears in the Koide scalar.
 
 Therefore the minimal nontrivial scale-free invariant selector on the returned
 carrier is unique up to reparametrization.
@@ -109,7 +122,7 @@ carrier is unique up to reparametrization.
 
 ## 4. Consequence
 
-This removes another apparent choice from the branch-local `Q` close candidate.
+This removes another apparent choice from the support `Q` route.
 
 The remaining theory choices are now:
 
@@ -128,7 +141,7 @@ Once the second-order returned carrier is accepted, the unique minimal
 scale-free `C_3`-invariant selector variable is already fixed:
 
 ```text
-E_perp / E_+   <->   1/kappa   <->   Q.
+E_perp / E_+   <->   2/kappa   <->   Q.
 ```
 
 So the only remaining substantive question is not "which invariant?" but

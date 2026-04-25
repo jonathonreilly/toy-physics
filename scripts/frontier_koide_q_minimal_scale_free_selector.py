@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
-Science-only strengthening runner:
-on the exact second-order returned carrier, the minimal nontrivial scale-free
-C3-invariant selector variable is unique up to reparametrization.
+Exact support runner on the admitted second-order returned carrier:
+the minimal nontrivial scale-free C3-invariant selector variable is unique up
+to reparametrization, with a corrected distinction between the block-energy
+ratio rho_Q and the raw Fourier ratio rho_Fourier.
 """
 
 from __future__ import annotations
@@ -109,22 +110,23 @@ def main() -> int:
 
     E_plus = sp.simplify(r0**2 / 3)
     E_perp = sp.simplify((r1**2 + r2**2) / 6)
-    rho = sp.simplify((r1**2 + r2**2) / r0**2)
+    rho_fourier = sp.simplify((r1**2 + r2**2) / r0**2)
+    rho_q = sp.simplify(E_perp / E_plus)
     rho_sym = sp.symbols("rho_sym", positive=True, real=True)
     kappa = sp.symbols("kappa", positive=True, real=True)
-    q_expr = sp.simplify((1 + rho) / 3)
+    q_expr = sp.simplify((1 + rho_q) / 3)
     q_sym = sp.simplify((1 + rho_sym) / 3)
     record(
         "C.1 after quotienting by scale, the quadratic invariant sector has exactly one nontrivial ratio",
         True,
-        f"rho = {rho}",
+        f"rho_Q = {rho_q}; rho_Fourier = {rho_fourier}",
     )
     record(
-        "C.2 rho = 2 E_perp / E_+",
-        sp.simplify(rho - 2 * E_perp / E_plus) == 0,
+        "C.2 rho_Fourier = 2 rho_Q with rho_Q = E_perp / E_+",
+        sp.simplify(rho_fourier - 2 * rho_q) == 0,
     )
     record(
-        "C.3 rho = 2 / kappa and Q = (1 + rho) / 3",
+        "C.3 rho_Q = 2 / kappa and Q = (1 + rho_Q) / 3",
         sp.simplify(q_sym.subs(rho_sym, 2 / kappa) - (1 + 2 / kappa) / 3) == 0,
         f"Q = {q_expr}",
     )
@@ -144,9 +146,9 @@ def main() -> int:
         print("nontrivial scale-free C3-invariant at linear order, and at quadratic")
         print("order there is exactly one nontrivial ratio after removing overall")
         print("scale. So the selector variable is unique up to reparametrization:")
-        print("E_perp/E_+, 1/kappa, and Q all encode the same one-dimensional data.")
+        print("E_perp/E_+, 2/kappa, and Q all encode the same one-dimensional data.")
         print()
-        print("This is science-only and does not modify the repo's authority surfaces.")
+        print("This is an exact support result on the admitted second-order carrier.")
         return 0
 
     print("VERDICT: minimal-selector strengthening has FAILs.")
