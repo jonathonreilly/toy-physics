@@ -20,7 +20,7 @@ truth surface.
 
 ## Current State
 
-As of `2026-04-18`, there are **no live repo-governance or claim-surface
+As of `2026-04-25`, there are **no live repo-governance or claim-surface
 blockers** waiting in the review queue. The remaining items are science-facing
 open lanes rather than review-hygiene debt.
 
@@ -35,6 +35,28 @@ Current science/open-lane follow-ups:
   it as a holography derivation
 - memory lane: protocol- and geometry-stable observable remains open
 - emergent-geometry growth: multi-size, multi-seed stability remains open
+
+### New as of 2026-04-25
+
+- **Lorentz boost-covariance lane** (review-ready): four-phase landing on
+  `lorentz-boost-covariance` branch off main:
+  1. [LORENTZ_BOOST_COVARIANCE_GAP_NOTE](../LORENTZ_BOOST_COVARIANCE_GAP_NOTE.md)
+     -- scope clarification.
+  2. [LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE](../LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md)
+     -- 1+1D SO(1,1) full boost covariance of the path-sum 2-point function;
+     `frontier_lorentz_boost_2d.py` PASS=39.
+  3. [ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE](../ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md)
+     -- bounded no-go on the directional-measure kernel + decoupling theorem
+     for Phase 4; `frontier_angular_kernel_underdetermination_nogo.py` PASS=64.
+  4. [LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE](../LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md)
+     -- 3+1D SO(3,1) boost covariance of the continuum 2-point function with
+     closed form `m K_1(m sqrt(-s²))/(4π² sqrt(-s²))` and dim-6 cubic-harmonic
+     LV at finite `a`; `frontier_lorentz_boost_3plus1d.py` PASS=55.
+
+  Lane status: strict extension of EMERGENT_LORENTZ_INVARIANCE_NOTE from
+  on-shell dispersion isotropy to off-shell 2-point boost covariance.
+  Disposition: ready for review on the feature branch; merge depends on
+  reviewer sign-off.
 
 ## Intake Format
 
