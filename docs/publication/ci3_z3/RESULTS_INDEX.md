@@ -60,6 +60,9 @@ Use alongside:
 | Exact CPT | [CPT_EXACT_NOTE.md](../../CPT_EXACT_NOTE.md) | [frontier_cpt_exact.py](../../../scripts/frontier_cpt_exact.py) |
 | CHSH Bell support theorem | [BELL_INEQUALITY_DERIVED_NOTE.md](../../BELL_INEQUALITY_DERIVED_NOTE.md) | [frontier_bell_inequality.py](../../../scripts/frontier_bell_inequality.py) |
 | Emergent Lorentz invariance | [EMERGENT_LORENTZ_INVARIANCE_NOTE.md](../../EMERGENT_LORENTZ_INVARIANCE_NOTE.md) | [frontier_emergent_lorentz_invariance.py](../../../scripts/frontier_emergent_lorentz_invariance.py) |
+| 1+1D continuum-limit boost covariance of the free-scalar 2-point function | [LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md](../../LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md) | [frontier_lorentz_boost_2d.py](../../../scripts/frontier_lorentz_boost_2d.py) |
+| 3+1D continuum-limit boost covariance of the free-scalar 2-point function | [LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md](../../LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md) | [frontier_lorentz_boost_3plus1d.py](../../../scripts/frontier_lorentz_boost_3plus1d.py) |
+| Angular-kernel underdetermination no-go with boost-lane decoupling clarification | [ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md](../../ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md) | [frontier_angular_kernel_underdetermination_nogo.py](../../../scripts/frontier_angular_kernel_underdetermination_nogo.py) |
 | Strong CP / retained action-surface `θ_eff = 0` closure | [STRONG_CP_THETA_ZERO_NOTE.md](../../STRONG_CP_THETA_ZERO_NOTE.md) | [frontier_strong_cp_theta_zero.py](../../../scripts/frontier_strong_cp_theta_zero.py) |
 | Universal theta-induced EDM response vanishing | [UNIVERSAL_THETA_INDUCED_EDM_VANISHING_THEOREM_NOTE_2026-04-24.md](../../UNIVERSAL_THETA_INDUCED_EDM_VANISHING_THEOREM_NOTE_2026-04-24.md) | [frontier_universal_theta_induced_edm_vanishing.py](../../../scripts/frontier_universal_theta_induced_edm_vanishing.py) |
 | Discrete evanescent-barrier lattice transfer-matrix bound + Schwarzschild tortoise-length identity (bounded-companion Planck-unit astrophysical exponent is (C-rate)-conditional) | [EVANESCENT_BARRIER_AMPLITUDE_SUPPRESSION_THEOREM_NOTE.md](../../EVANESCENT_BARRIER_AMPLITUDE_SUPPRESSION_THEOREM_NOTE.md) | [frontier_evanescent_barrier_amplitude_suppression.py](../../../scripts/frontier_evanescent_barrier_amplitude_suppression.py) |
@@ -121,7 +124,7 @@ Use alongside:
     freedom as a gaugeable option
   - three-generation matter structure
   - exact `I_3 = 0` and CPT as compact supporting theorems
-  - emergent Lorentz invariance with first anisotropic correction at dimension 6 and unique cubic-harmonic `\ell = 4` signature
+  - emergent Lorentz invariance with first anisotropic correction at dimension 6, exact continuum-limit 1+1D / 3+1D boost-covariant free-scalar 2-point closure, and a conservative support-side angular-kernel no-go / decoupling clarification
   - retained action-surface strong-CP closure / `theta_eff = 0` on the retained Wilson-plus-staggered action surface
   - promoted CKM atlas/axiom package as part of the quantitative manuscript surface
 - Public package companions / appendices:

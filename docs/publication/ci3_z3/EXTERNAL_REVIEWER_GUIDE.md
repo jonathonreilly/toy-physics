@@ -58,7 +58,8 @@ For the explicit package boundary, use:
   `hw=1` observable no-proper-quotient theorem,
   exact `I_3 = 0`, exact CPT, retained Bell/CHSH support on explicit
   two-species lattice systems with KS taste measurements, emergent Lorentz
-  invariance, and retained action-surface strong-CP closure /
+  invariance plus exact continuum-limit 1+1D / 3+1D boost-covariant
+  free-scalar 2-point closure, and retained action-surface strong-CP closure /
   `theta_eff = 0` on the retained Wilson-plus-staggered action surface,
   with universal vanishing of theta-induced EDM response components only
 - confinement:

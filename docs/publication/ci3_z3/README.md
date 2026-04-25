@@ -53,7 +53,8 @@ For the full package-capture inventory, use:
   `phi_s = -alpha_s(v) sqrt(5)/6 = -0.03850 rad` and Thales-mediated
   cross-system CP ratio `phi_s / sin(2 beta_d) = -alpha_s(v)/2`
 - retained structural/corollary surface:
-  strong CP on the retained action surface, emergent Lorentz invariance,
+  strong CP on the retained action surface, emergent Lorentz invariance plus
+  exact continuum-limit 1+1D / 3+1D boost-covariant free-scalar 2-point closure,
   universal theta-induced EDM-response vanishing on that retained strong-CP
   surface,
   `S^3` topology closure, SM hypercharge uniqueness/electric-charge
