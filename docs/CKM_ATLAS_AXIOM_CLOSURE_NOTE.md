@@ -6,6 +6,7 @@
 **Named subtheorems:** [`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md),
 [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md),
 [`CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`](CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md),
+[`CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
 [`CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md)
 
 ## Claim
@@ -126,17 +127,20 @@ The theorem package is therefore:
 
 - `lambda^2 = alpha_s(v)/2`
 - `A^2 = 2/3`
+- `|V_us|_0^2 = alpha_s(v)/2` on the atlas-leading first row
+- `|V_ub|_0^2 = alpha_s(v)^3/72` on the atlas-leading first row
+- `|V_ud|_0^2 = 1 - alpha_s(v)/2 - alpha_s(v)^3/72`
 - `|V_cb| = A lambda^2 = alpha_s(v)/sqrt(6)`
-- `|V_ub| = A lambda^3 / sqrt(6) = alpha_s(v)^(3/2)/(6 sqrt(2))`
+- `|V_ub|_0 = A lambda^3 / sqrt(6) = alpha_s(v)^(3/2)/(6 sqrt(2))`
 - `|V_td|_0^2 = 5 alpha_s(v)^3/72` on the atlas-leading third row
 - `|V_ts|_0^2 = alpha_s(v)^2/6` on the atlas-leading third row
 - `|V_tb|_0^2 = 1 - |V_td|_0^2 - |V_ts|_0^2`
 - `rho = 1/6`
 - `eta = sqrt(5)/6`
 
-The third-row subscript `0` marks the leading atlas/Wolfenstein surface. The
-finite-`lambda` exact standard-matrix third-row readout remains a guarded
-parent-atlas calculation, not an all-orders monomial promotion.
+The first- and third-row subscript `0` marks the leading atlas/Wolfenstein
+surface. The finite-`lambda` exact standard-matrix row readouts remain guarded
+parent-atlas calculations, not all-orders monomial promotions.
 
 The retained scalar comparison package is:
 
@@ -148,9 +152,10 @@ The retained scalar comparison package is:
 
 Using the canonical plaquette/CMT coupling gives the theorem package:
 
-- `|V_us| = 0.227269`
+- atlas-leading `|V_us|_0 = 0.227269`
 - `|V_cb| = 0.042174`
-- `|V_ub| = 0.003913`
+- atlas-leading `|V_ub|_0 = 0.003913`
+- atlas-leading `|V_ud|_0 = 0.973824`
 - atlas-leading `|V_td|_0 = 0.008750`
 - atlas-leading `|V_ts|_0 = 0.042174`
 - atlas-leading `|V_tb|_0 = 0.999072`
@@ -159,9 +164,9 @@ Using the canonical plaquette/CMT coupling gives the theorem package:
 
 Against the current branch-local angle-facing comparator package:
 
-- `|V_us|`: about `+1.3%`
+- atlas-leading `|V_us|_0`: about `+1.3%`
 - `|V_cb|`: about `-0.1%`
-- `|V_ub|`: about `-0.7%`
+- atlas-leading `|V_ub|_0`: about `-0.7%`
 - `J` versus angle-reconstructed `J`: about `+0.8%`
 - `delta_std`: about `+0.6%`
 

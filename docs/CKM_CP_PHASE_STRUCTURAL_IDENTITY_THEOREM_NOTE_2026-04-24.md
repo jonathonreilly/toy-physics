@@ -151,7 +151,9 @@ J_0 = lambda^6 A^2 eta
 - It does not derive `alpha_s(v)`; that remains the separate plaquette/CMT
   input already used by the CKM atlas.
 - It does not derive CKM magnitudes beyond the parent atlas package.
-- Third-row magnitude identities are named separately in
+- First- and third-row magnitude identities are named separately in
+  [`CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md)
+  and
   [`CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
   which preserves the finite-`lambda` standard-matrix guardrail.
 - It does not promote the older bounded Cabibbo, mass-basis NNI, or partial

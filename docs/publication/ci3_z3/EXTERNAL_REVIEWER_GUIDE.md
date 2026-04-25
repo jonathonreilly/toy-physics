@@ -105,6 +105,7 @@ Review this as a modular component stack:
    [WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md](../../WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md),
    [CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md](../../CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md),
    [CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md](../../CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md),
+   [CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md](../../CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
    [CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md](../../CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
    [KR_A1_VANISHING_SUPPORT_NOTE.md](../../KR_A1_VANISHING_SUPPORT_NOTE.md)
 8. three-generation observable closure:
@@ -158,9 +159,10 @@ Current status from that stack:
   (no quark-mass or fitted CKM inputs; canonical CMT `alpha_s(v)` input):
   `lambda^2 = alpha_s(v)/2`,
   `A^2 = 2/3`,
-  `|V_us| = 0.22727`,
+  atlas-leading `|V_ud|_0 = 0.973824`,
+  atlas-leading `|V_us|_0 = 0.22727`,
   `|V_cb| = 0.04217`,
-  `|V_ub| = 0.003913`,
+  atlas-leading `|V_ub|_0 = 0.003913`,
   atlas-leading `|V_td|_0 = 0.008750`,
   atlas-leading `|V_ts|_0 = 0.04217`,
   atlas-leading `|V_tb|_0 = 0.99907`,

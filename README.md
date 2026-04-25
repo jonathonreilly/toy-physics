@@ -34,8 +34,12 @@ questions:
   electroweak normalization, retained top/Yukawa transport, promoted CKM
   atlas/axiom numerics including `lambda^2 = alpha_s(v)/2`,
   `A^2 = 2/3`, `cos^2(delta_CKM) = 1/6`, and the rescaled atlas-triangle
-  right-angle identity `alpha_0 = 90 deg`; the named leading third-row CKM
-  atlas identities now include `|V_td|_0^2 = 5 alpha_s(v)^3/72` and
+  right-angle identity `alpha_0 = 90 deg`; the named leading first- and
+  third-row CKM atlas identities now include
+  `|V_us|_0^2 = alpha_s(v)/2`,
+  `|V_ub|_0^2 = alpha_s(v)^3/72`,
+  `|V_ud|_0^2 = 1 - alpha_s(v)/2 - alpha_s(v)^3/72`,
+  `|V_td|_0^2 = 5 alpha_s(v)^3/72`, and
   `|V_ts|_0^2 = alpha_s(v)^2/6`, with finite-`lambda` standard-matrix
   corrections guarded separately; and bounded
   confinement-string readout; the absolute

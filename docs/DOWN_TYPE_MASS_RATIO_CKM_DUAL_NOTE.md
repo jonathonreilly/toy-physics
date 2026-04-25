@@ -37,7 +37,7 @@ flavor-dependent cosmology / baryogenesis work.
   canonical same-surface `alpha_s(v) = 0.103303816122`
 - [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](./CKM_ATLAS_AXIOM_CLOSURE_NOTE.md):
   promoted CKM package on the canonical tensor/projector surface
-  - `|V_us| = sqrt(alpha_s(v)/2)`
+  - atlas-leading `|V_us|_0 = sqrt(alpha_s(v)/2)`
   - `|V_cb| = alpha_s(v)/sqrt(6)`
 - exact SU(3) group constants:
   - `C_F = 4/3`

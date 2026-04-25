@@ -598,17 +598,22 @@ readout keeps the finite-$\lambda$ cosine factors.
 The same atlas coordinates also put the rescaled CKM atlas triangle on the
 Thales circle, so its atlas angle is exactly $\alpha_0=90^\circ$. This is not
 promoted as an exact finite-$\lambda$ barred-unitarity-triangle right angle.
-The same leading atlas surface gives the named third-row identities
+The same leading atlas surface gives the named first-row identities
+$|V_{us}|_0^2=\alpha_s(v)/2$,
+$|V_{ub}|_0^2=\alpha_s(v)^3/72$, and
+$|V_{ud}|_0^2=1-\alpha_s(v)/2-\alpha_s(v)^3/72$, plus the named third-row
+identities
 $|V_{td}|_0^2=5\alpha_s(v)^3/72$ and
 $|V_{ts}|_0^2=\alpha_s(v)^2/6$, with the finite-$\lambda$ exact
-standard-matrix third row kept as a guardrail rather than collapsed into an
-all-orders monomial claim.
+standard-matrix row readouts kept as guardrails rather than collapsed into
+all-orders monomial claims.
 
 The promoted package reports
 
-- $|V_{us}| = 0.22727$,
+- atlas-leading $|V_{ud}|_0 = 0.973824$,
+- atlas-leading $|V_{us}|_0 = 0.22727$,
 - $|V_{cb}| = 0.04217$,
-- $|V_{ub}| = 0.003913$,
+- atlas-leading $|V_{ub}|_0 = 0.003913$,
 - atlas-leading $|V_{td}|_0 = 0.008750$,
 - atlas-leading $|V_{ts}|_0 = 0.04217$,
 - atlas-leading $|V_{tb}|_0 = 0.99907$,
@@ -697,7 +702,7 @@ The fastest way to read the quantitative package is Table 1.
 | Electroweak scale | $v = 246.282818290129\,\mathrm{GeV}$ | exact theorem + canonical same-surface evaluation |
 | Strong coupling | $\alpha_s(M_Z)=0.1181$ | retained standalone quantitative lane |
 | Electroweak normalization | $g_1(v)=0.4644$, $g_2(v)=0.6480$ | retained standalone quantitative lane |
-| CKM | $\lambda^2=\alpha_s(v)/2$, $A^2=2/3$, $|V_{us}|=0.22727$, $|V_{cb}|=0.04217$, $|V_{ub}|=0.003913$ | promoted algebraic package |
+| CKM | $\lambda^2=\alpha_s(v)/2$, $A^2=2/3$, atlas-leading $|V_{ud}|_0=0.973824$, $|V_{us}|_0=0.22727$, $|V_{cb}|=0.04217$, $|V_{ub}|_0=0.003913$ | promoted algebraic package |
 | Top sector | $y_t(v)=0.9176$, $m_t^{\mathrm{pole}}=172.57 \pm 6.50\,\mathrm{GeV}$ | retained quantitative lane |
 | Higgs sector | $m_H=125.1\,\mathrm{GeV}$ with retention analysis $125.04 \pm 3.17\,\mathrm{GeV}$ | derived quantitative lane |
 | Confinement readout | $\sqrt{\sigma}\approx 465\,\mathrm{MeV}$ | bounded quantitative readout on exact structural theorem |

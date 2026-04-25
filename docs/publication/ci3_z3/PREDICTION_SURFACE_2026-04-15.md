@@ -52,9 +52,10 @@ closes.
 - CKM atlas/axiom package on the canonical tensor/projector surface:
   - `lambda^2 = alpha_s(v)/2`
   - `A^2 = 2/3`
-  - `|V_us| = 0.22727`
+  - atlas-leading `|V_ud|_0 = 0.973824`
+  - atlas-leading `|V_us|_0 = 0.22727`
   - `|V_cb| = 0.04217`
-  - `|V_ub| = 0.003913`
+  - atlas-leading `|V_ub|_0 = 0.003913`
   - atlas-leading `|V_td|_0 = 0.008750`
   - atlas-leading `|V_ts|_0 = 0.04217`
   - atlas-leading `|V_tb|_0 = 0.99907`
@@ -71,6 +72,7 @@ closes.
     [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md),
     [WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md](../../WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md),
     [CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md](../../CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md),
+    [CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md](../../CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
     [CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md](../../CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
     [CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md](../../CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md)
 - confinement readout on top of the exact graph-first confinement theorem:
@@ -160,7 +162,7 @@ conceptual pressure.
   closed first-principles hierarchy theorem
 - CKM:
   the atlas/axiom package is quantitatively strong overall, but
-  `|V_us| = 0.22727` remains high against the PDG comparator
+  atlas-leading `|V_us|_0 = 0.22727` remains high against the PDG comparator
 - strong CP:
   the exact statement is `theta_eff = 0` on the retained action surface;
   the universal EDM-response corollary is source-scoped to theta-induced

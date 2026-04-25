@@ -10,7 +10,12 @@ companion to
 [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
 and does not expand the parent CKM theorem's scope.
 
-The third-row companion
+The first-row companion
+[`CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md)
+uses these same `lambda` and `A` identities to name
+`|V_us|_0^2 = alpha_s(v)/2`, `|V_ub|_0^2 = alpha_s(v)^3/72`, and
+`|V_ud|_0^2 = 1 - alpha_s(v)/2 - alpha_s(v)^3/72` on the atlas-leading
+surface. The third-row companion
 [`CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md)
 uses these same `lambda` and `A` identities to name
 `|V_td|_0^2 = 5 alpha_s(v)^3/72` and
@@ -97,23 +102,23 @@ The `n_pair` factor cancels exactly.
 The leading Wolfenstein forms on the parent atlas surface give
 
 ```text
-|V_us| = lambda,
+|V_us|_0 = lambda,
 |V_cb| = A lambda^2,
-|V_ub| = A lambda^3 sqrt(rho^2 + eta^2).
+|V_ub|_0 = A lambda^3 sqrt(rho^2 + eta^2).
 ```
 
 Using `(W1)` and `(W2)`,
 
 ```text
-|V_us| = sqrt(alpha_s(v)/2),
+|V_us|_0 = sqrt(alpha_s(v)/2),
 |V_cb| = sqrt(2/3) alpha_s(v)/2 = alpha_s(v)/sqrt(6).
 ```
 
 Using the CP-phase subtheorem `rho^2 + eta^2 = 1/6`,
 
 ```text
-|V_ub| = sqrt(2/3) (alpha_s(v)/2)^(3/2) sqrt(1/6)
-        = alpha_s(v)^(3/2) / (6 sqrt(2)).
+|V_ub|_0 = sqrt(2/3) (alpha_s(v)/2)^(3/2) sqrt(1/6)
+          = alpha_s(v)^(3/2) / (6 sqrt(2)).
 ```
 
 The cleanest structural readout is therefore
@@ -140,9 +145,11 @@ the identities give
 | `A` | `sqrt(2/3)` | `0.816496580928` |
 | `A^2 lambda^2` | `alpha_s(v)/3` | `0.0344346053741` |
 | `|V_cb|` | `alpha_s(v)/sqrt(6)` | `0.0421736063303` |
-| `|V_ub|` | `alpha_s(v)^(3/2)/(6 sqrt(2))` | `0.0039129860468` |
+| atlas-leading `|V_ub|_0` | `alpha_s(v)^(3/2)/(6 sqrt(2))` | `0.0039129860468` |
 
-These are the same CKM magnitude values carried by the parent atlas package.
+These are the same CKM magnitude values carried by the parent atlas package;
+the first-row entries are atlas-leading values, with finite-`lambda`
+standard-matrix readouts guarded by the first-row companion note.
 Observation-facing comparison remains the parent atlas' downstream comparator,
 not an input to this theorem.
 
@@ -171,8 +178,8 @@ This note claims:
 - `lambda^2 = alpha_s(v)/2` on the retained CKM atlas surface;
 - `A^2 = 2/3` as an exact counting identity;
 - `A^2 lambda^2 = alpha_s(v)/3`;
-- `|V_cb| = alpha_s(v)/sqrt(6)` and
-  `|V_ub| = alpha_s(v)^(3/2)/(6 sqrt(2))` as CKM atlas corollaries when
+- `|V_cb| = alpha_s(v)/sqrt(6)` and atlas-leading
+  `|V_ub|_0 = alpha_s(v)^(3/2)/(6 sqrt(2))` as CKM atlas corollaries when
   paired with the CP-radius theorem.
 
 This note does not claim:
@@ -204,6 +211,8 @@ The runner uses the Python standard library plus the canonical
   - parent CKM package.
 - [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
   - companion `rho`, `eta`, phase, and `J` identities.
+- [`CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md)
+  - companion first-row atlas-leading magnitude identities.
 - [`CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md)
   - companion third-row atlas-leading magnitude identities.
 - [`ALPHA_S_DERIVED_NOTE.md`](ALPHA_S_DERIVED_NOTE.md)
