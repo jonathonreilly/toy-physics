@@ -98,6 +98,10 @@ The paper does **not** claim:
 - that the CKM `n/9` structural-family Koide-bridge support note proves a
   Koide-side `n/9` family or promotes `N_gen=N_color`; it only packages exact
   CKM-side target-class arithmetic from retained CKM inputs.
+- that the CKM cubic Bernoulli Koide-bridge support note proves Koide
+  `cos^2(theta_K)`, Koide cubic variance, or `N_gen=N_color`; it only
+  packages exact CKM-side cubic target-class arithmetic from retained CKM
+  inputs, and its cross-sector readings are conditional support.
 - that the bare `alpha_3/alpha_em = 9` support card promotes the reviewed
   `Cl(3)->SM` support packet into the accepted minimal-input stack, predicts a
   direct low-energy `alpha_3/alpha_em` ratio without the retained EW

@@ -205,6 +205,14 @@ bridge layer beyond the exact structural core.
     `n=1,...,9`, with two retained-input paths to `F5=5/9`
   - the note does not derive a Koide `n/9` family and does not promote
     `N_gen=N_color`; the cross-sector reading is conditional support
+- CKM cubic Bernoulli Koide-bridge support:
+  - promoted CKM `A^2`, `rho`, `eta^2`, and pair/color counts only
+  - exact claim is CKM-side arithmetic: the 4x3 `M^(k)(N)` tower through
+    `k=3`, including `W(2)=1/8`, `W(3)=2/27`, `W(6)=5/216`,
+    `eta^2=V(2)M(3)M(6)`, and `rho eta^2=W(6)`
+  - the note does not derive Koide `cos^2(theta_K)`, a Koide cubic
+    variance, or `N_gen=N_color`; cross-sector readings are conditional
+    support and not verifier pass conditions
 - down-type CKM-dual mass ratios:
   - promoted CKM atlas/axiom package + GST + bounded `5/6` mass-ratio bridge; no observed
     masses as derivation inputs
