@@ -57,6 +57,12 @@ The paper does **not** claim:
   authority.
 - that the standalone Wolfenstein `lambda` and `A` identities derive
   `alpha_s(v)` or stand independently of the promoted CKM atlas/axiom surface.
+- that the CKM atlas-triangle right-angle identity is an exact physical barred
+  unitarity-triangle theorem; finite-`lambda` corrections move the exact
+  barred apex and angles.
+- that the atlas/Wolfenstein area factor
+  `J_0 = alpha_s(v)^3 sqrt(5)/72` replaces the parent atlas' exact
+  finite-`lambda` standard-matrix `J` readout.
 - a full retained neutrino point-prediction package for the solar gap, PMNS
   angles, Majorana phases, or absolute mass sum.
 

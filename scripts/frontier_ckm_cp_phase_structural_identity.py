@@ -12,7 +12,7 @@ atlas/axiom closure:
   eta       = r sqrt(w_perp) = sqrt(5)/6
   cos^2(delta_CKM) = 1/6
   tan(delta_CKM)   = sqrt(5)
-  J = alpha_s(v)^3 sqrt(5) / 72
+  J_0 = alpha_s(v)^3 sqrt(5) / 72
 
 It does not derive alpha_s(v), individual CKM magnitudes, or any BSM phase.
 """
@@ -126,21 +126,21 @@ def part2_phase_identities() -> None:
 
 
 def part3_jarlskog_factorisation() -> None:
-    banner("Part 3: Jarlskog factorisation")
+    banner("Part 3: atlas-Jarlskog factorisation")
 
-    j_direct = (LAMBDA_SQUARED**3) * float(A_SQUARED) * ETA
-    j_factored = (ALPHA_S_V**3) * math.sqrt(5.0) / 72.0
+    j0_direct = (LAMBDA_SQUARED**3) * float(A_SQUARED) * ETA
+    j0_factored = (ALPHA_S_V**3) * math.sqrt(5.0) / 72.0
 
     check("lambda^2 = alpha_s(v)/2", abs(LAMBDA_SQUARED - ALPHA_S_V / 2.0) < 1e-15)
     check("A^2 = 2/3", A_SQUARED == Fraction(2, 3), f"A^2 = {A_SQUARED}")
     check(
-        "J = lambda^6 A^2 eta = alpha_s(v)^3 sqrt(5)/72",
-        abs(j_direct - j_factored) / j_factored < 1e-15,
-        f"J = {j_factored:.6e}",
+        "J_0 = lambda^6 A^2 eta = alpha_s(v)^3 sqrt(5)/72",
+        abs(j0_direct - j0_factored) / j0_factored < 1e-15,
+        f"J_0 = {j0_factored:.6e}",
     )
 
     print(f"  alpha_s(v) from canonical plaquette surface = {ALPHA_S_V:.12f}")
-    print(f"  J structural factorisation                  = {j_factored:.6e}")
+    print(f"  J_0 structural factorisation                = {j0_factored:.6e}")
 
 
 def part4_post_derivation_comparators() -> None:
@@ -148,11 +148,11 @@ def part4_post_derivation_comparators() -> None:
 
     delta_framework_deg = math.degrees(math.acos(1.0 / math.sqrt(6.0)))
     delta_deviation = delta_framework_deg - DELTA_COMPARATOR_DEG
-    j_framework = (ALPHA_S_V**3) * math.sqrt(5.0) / 72.0
+    j0_framework = (ALPHA_S_V**3) * math.sqrt(5.0) / 72.0
 
     print(f"  framework delta = {delta_framework_deg:.6f} deg")
     print(f"  comparator delta = {DELTA_COMPARATOR_DEG:.3f} +/- {DELTA_COMPARATOR_ERR_DEG:.3f} deg")
-    print(f"  framework J = {j_framework:.6e}")
+    print(f"  framework atlas J_0 = {j0_framework:.6e}")
     print(f"  angle-reconstructed comparator J = {J_ANGLE_RECON_COMPARATOR:.6e}")
     print(f"  PDG-style scalar comparator J    = {J_PDG_COMPARATOR:.6e}")
 
@@ -162,12 +162,12 @@ def part4_post_derivation_comparators() -> None:
         f"deviation = {delta_deviation:+.6f} deg",
     )
     check(
-        "framework J lies within 5% of the angle-reconstructed comparator",
-        abs(j_framework - J_ANGLE_RECON_COMPARATOR) / J_ANGLE_RECON_COMPARATOR < 0.05,
+        "framework atlas J_0 lies within 5% of the angle-reconstructed comparator",
+        abs(j0_framework - J_ANGLE_RECON_COMPARATOR) / J_ANGLE_RECON_COMPARATOR < 0.05,
     )
     check(
-        "framework J lies within 5% of the scalar PDG-style comparator",
-        abs(j_framework - J_PDG_COMPARATOR) / J_PDG_COMPARATOR < 0.05,
+        "framework atlas J_0 lies within 5% of the scalar PDG-style comparator",
+        abs(j0_framework - J_PDG_COMPARATOR) / J_PDG_COMPARATOR < 0.05,
     )
 
 
@@ -182,7 +182,7 @@ def part5_summary() -> None:
     print("    sin^2(delta_CKM) = 5/6")
     print("    tan(delta_CKM) = sqrt(5)")
     print("    delta_CKM = arccos(1/sqrt(6)) = arctan(sqrt(5))")
-    print("    J = alpha_s(v)^3 sqrt(5) / 72")
+    print("    J_0 = alpha_s(v)^3 sqrt(5) / 72")
     print()
     print("  BOUNDARIES:")
     print("    no new alpha_s(v) derivation")

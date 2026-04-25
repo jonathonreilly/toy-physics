@@ -153,7 +153,7 @@ surface is:
 | `eta` | `sqrt(5)/6` | CKM CP-phase structural identity |
 | `rho^2 + eta^2` | `1/6` | CKM CP-phase structural identity |
 | `cos^2(delta_CKM)` | `1/6` | CKM CP-phase structural identity |
-| `J` | `alpha_s(v)^3 sqrt(5)/72` | combined package |
+| atlas `J_0` | `alpha_s(v)^3 sqrt(5)/72` | combined package |
 
 This is an extraction of the parent CKM atlas identities into named,
 regression-tested rows.

@@ -140,22 +140,22 @@ def audit_joint_cp_surface() -> None:
     a_sq = 2 / 3
     eta = math.sqrt(5) / 6
 
-    j_from_surface = (lambda_sq**3) * a_sq * eta
-    j_clean = ALPHA_S_V**3 * math.sqrt(5) / 72
+    j0_from_surface = (lambda_sq**3) * a_sq * eta
+    j0_clean = ALPHA_S_V**3 * math.sqrt(5) / 72
 
     print(f"  rho^2 + eta^2 = {radius_sq}")
-    print(f"  J surface      = {j_from_surface:.15e}")
-    print(f"  J clean        = {j_clean:.15e}")
+    print(f"  J_0 surface    = {j0_from_surface:.15e}")
+    print(f"  J_0 clean      = {j0_clean:.15e}")
 
     check("rho^2 + eta^2 = 1/6", radius_sq == Fraction(1, 6))
-    check("J factorization equals alpha_s(v)^3 sqrt(5)/72", close(j_from_surface, j_clean))
+    check("J_0 factorization equals alpha_s(v)^3 sqrt(5)/72", close(j0_from_surface, j0_clean))
     surface_complete = (
         close(lambda_sq, ALPHA_S_V / N_PAIR)
         and close(a_sq, N_PAIR / N_COLOR)
         and radius_sq == Fraction(1, 6)
-        and close(j_from_surface, j_clean)
+        and close(j0_from_surface, j0_clean)
     )
-    check("complete named surface covers lambda, A, rho, eta, delta, J", surface_complete)
+    check("complete named surface covers lambda, A, rho, eta, delta, J_0", surface_complete)
 
 
 def main() -> int:

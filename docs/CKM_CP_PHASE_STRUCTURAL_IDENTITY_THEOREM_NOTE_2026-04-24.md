@@ -51,21 +51,22 @@ delta_CKM        = arccos(1/sqrt(6)) = arctan(sqrt(5))
                  = 65.905157447889... degrees.
 ```
 
-The Jarlskog invariant factorises as
+The atlas/Wolfenstein Jarlskog-area factor factorises as
 
 ```text
-J = lambda^6 A^2 eta
-  = (alpha_s(v)/2)^3 * (2/3) * (sqrt(5)/6)
-  = alpha_s(v)^3 sqrt(5) / 72.
+J_0 = lambda^6 A^2 eta
+    = (alpha_s(v)/2)^3 * (2/3) * (sqrt(5)/6)
+    = alpha_s(v)^3 sqrt(5) / 72.
 ```
 
 The `lambda^2 = alpha_s(v)/2` and `A^2 = 2/3` factors used in this
 factorisation are named separately in
 [`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md).
 
-The phase identities are pure structural numbers. The numerical value of `J`
-still inherits the separately retained `alpha_s(v)` input from the canonical
-plaquette/CMT surface.
+The phase identities are pure structural numbers. The numerical value of
+`J_0` still inherits the separately retained `alpha_s(v)` input from the
+canonical plaquette/CMT surface. The parent CKM atlas note separately carries
+the finite-`lambda` exact standard-matrix `J` readout.
 
 ## 2. Retained Inputs
 
@@ -125,13 +126,13 @@ Thus
 delta_CKM = arccos(1/sqrt(6)) = arctan(sqrt(5)).
 ```
 
-For `J`, use the parent atlas inputs `lambda^2 = alpha_s(v)/2` and
+For `J_0`, use the parent atlas inputs `lambda^2 = alpha_s(v)/2` and
 `A^2 = 2/3`:
 
 ```text
-J = lambda^6 A^2 eta
-  = (alpha_s(v)/2)^3 * (2/3) * (sqrt(5)/6)
-  = alpha_s(v)^3 sqrt(5) / 72.
+J_0 = lambda^6 A^2 eta
+    = (alpha_s(v)/2)^3 * (2/3) * (sqrt(5)/6)
+    = alpha_s(v)^3 sqrt(5) / 72.
 ```
 
 ## 4. What This Claims
@@ -140,8 +141,8 @@ J = lambda^6 A^2 eta
 - Equivalently, `tan(delta_CKM) = sqrt(5)` exactly.
 - `rho = 1/6`, `eta = sqrt(5)/6`, and `rho^2 + eta^2 = 1/6` exactly on the
   same atlas surface.
-- `J = alpha_s(v)^3 sqrt(5) / 72` as a retained factorisation once the parent
-  atlas `alpha_s(v)` input is supplied.
+- `J_0 = alpha_s(v)^3 sqrt(5) / 72` as a retained atlas-area factorisation
+  once the parent atlas `alpha_s(v)` input is supplied.
 - The structural origin is the retained `1 + 5` center-excess projector split
   plus the retained bright/tensor CP radius.
 
@@ -167,12 +168,12 @@ theorem, not an input.
 | --- | ---: | --- |
 | `delta_CKM` | `65.905157... deg` | angle-facing global-fit comparator |
 | `cos^2(delta_CKM)` | `1/6` | exact falsification surface |
-| `J` | `alpha_s(v)^3 sqrt(5)/72` | depends on separately retained `alpha_s(v)` |
+| atlas `J_0` | `alpha_s(v)^3 sqrt(5)/72` | depends on separately retained `alpha_s(v)` |
 
 The current canonical plaquette value used by the executable gives
-`J = 3.4237e-5`, which remains within the parent atlas' observation-comparator
-band. The exact theorem content is the factorisation, not a new independent
-`alpha_s(v)` determination.
+`J_0 = 3.4237e-5`, which remains within the parent atlas' observation-comparator
+band. The exact theorem content is the atlas factorisation, not a new
+independent `alpha_s(v)` determination.
 
 ## 7. Reproduction
 
@@ -198,7 +199,7 @@ depend on `sympy`.
 | `lambda^2 = alpha_s(v)/2`, `A^2 = 2/3` | standalone retained Wolfenstein structural identities in the companion note |
 | `cos^2(delta_CKM) = 1/6` | standalone retained structural identity |
 | `rho = 1/6`, `eta = sqrt(5)/6` | standalone retained coordinate identities |
-| `J = alpha_s(v)^3 sqrt(5)/72` | standalone retained factorisation conditioned on parent `alpha_s(v)` |
+| `J_0 = alpha_s(v)^3 sqrt(5)/72` | standalone retained atlas factorisation conditioned on parent `alpha_s(v)` |
 | CKM-only neutron EDM | unchanged downstream corollary on the retained `theta_eff = 0` surface |
 
 This is the same extraction pattern as

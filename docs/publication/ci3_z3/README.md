@@ -39,7 +39,8 @@ For the full package-capture inventory, use:
   `alpha_LM^2 = alpha_bare alpha_s(v)`, electroweak normalization, retained
   YT/top transport, and the promoted CKM atlas/axiom package, including the
   standalone `lambda^2 = alpha_s(v)/2`, `A^2 = 2/3`, and
-  `cos^2(delta_CKM) = 1/6` structural identities
+  `cos^2(delta_CKM) = 1/6` structural identities plus the rescaled atlas-triangle
+  right-angle identity `alpha_0 = 90 deg`
 - retained structural/corollary surface:
   strong CP on the retained action surface, emergent Lorentz invariance,
   universal theta-induced EDM-response vanishing on that retained strong-CP

@@ -104,6 +104,7 @@ Review this as a modular component stack:
    [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md),
    [WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md](../../WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md),
    [CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md](../../CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md),
+   [CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md](../../CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md),
    [KR_A1_VANISHING_SUPPORT_NOTE.md](../../KR_A1_VANISHING_SUPPORT_NOTE.md)
 8. three-generation observable closure:
    [THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md](../../THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md)
@@ -160,7 +161,10 @@ Current status from that stack:
   `|V_cb| = 0.04217`,
   `|V_ub| = 0.003913`,
   `delta = 65.905 deg`,
+  rescaled atlas-triangle `alpha_0 = 90 deg`,
   `J = 3.331 x 10^-5`
+  where the exact right-angle identity is atlas-only and the exact
+  barred-unitarity-triangle angles retain finite-`lambda` corrections
 - exact CKM carrier-side support theorem:
   `K_R(q) = 0` for every pure `A1` background on the seven-site support block
   via [KR_A1_VANISHING_SUPPORT_NOTE.md](../../KR_A1_VANISHING_SUPPORT_NOTE.md)

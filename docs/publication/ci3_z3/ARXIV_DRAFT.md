@@ -591,7 +591,13 @@ $\alpha_s(v)$ independently.
 The phase subtheorem is exact on the same surface:
 $\cos^2\delta_{\mathrm{std}}=1/6$, $\sin^2\delta_{\mathrm{std}}=5/6$,
 $\tan\delta_{\mathrm{std}}=\sqrt{5}$, and
-$J=\alpha_s(v)^3\sqrt{5}/72$ once the retained $\alpha_s(v)$ input is supplied.
+$J_0=\alpha_s(v)^3\sqrt{5}/72$ for the atlas/Wolfenstein area factor once the
+retained $\alpha_s(v)$ input is supplied. The parent exact standard-matrix
+readout keeps the finite-$\lambda$ cosine factors.
+
+The same atlas coordinates also put the rescaled CKM atlas triangle on the
+Thales circle, so its atlas angle is exactly $\alpha_0=90^\circ$. This is not
+promoted as an exact finite-$\lambda$ barred-unitarity-triangle right angle.
 
 The promoted package reports
 
@@ -599,6 +605,7 @@ The promoted package reports
 - $|V_{cb}| = 0.04217$,
 - $|V_{ub}| = 0.003913$,
 - $\delta = 65.905^\circ$,
+- atlas $\alpha_0 = 90^\circ$,
 - $J = 3.331\times 10^{-5}$.
 
 The observation-facing comparison should be read against the coherent angle

@@ -113,7 +113,8 @@ Validate with:
 - promoted quantitative flavor lane:
   CKM atlas/axiom package, including the standalone Wolfenstein structural
   identities `lambda^2 = alpha_s(v)/2`, `A^2 = 2/3`, and the CP-phase
-  structural identity `cos^2(delta_CKM) = 1/6`
+  structural identity `cos^2(delta_CKM) = 1/6`, plus the rescaled
+  atlas-triangle right-angle identity `alpha_0 = 90 deg`
 - derived quantitative lane:
   Higgs/vacuum package with explicit retention budget
 - bounded quantitative companions:
@@ -143,6 +144,9 @@ Validate with:
 
 - `python3 scripts/frontier_complete_prediction_chain.py`
 - `python3 scripts/frontier_alpha_lm_geometric_mean_identity.py`
+- `python3 scripts/frontier_wolfenstein_lambda_a_structural_identities.py`
+- `python3 scripts/frontier_ckm_cp_phase_structural_identity.py`
+- `python3 scripts/frontier_ckm_atlas_triangle_right_angle.py`
 - `python3 scripts/frontier_yt_ward_identity_derivation.py`
 - `python3 scripts/frontier_yt_p1_bz_quadrature_full_staggered_pt.py`
 - `python3 scripts/frontier_higgs_mass_full_3loop.py`

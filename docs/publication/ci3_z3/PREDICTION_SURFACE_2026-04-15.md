@@ -57,12 +57,18 @@ closes.
   - `|V_ub| = 0.003913`
   - `delta = arccos(1/sqrt(6)) = 65.905 deg`
   - `cos^2(delta) = 1/6`, `tan(delta) = sqrt(5)`
-  - `J = alpha_s(v)^3 sqrt(5)/72` (`~3.3-3.4 x 10^-5` on the
-    retained `alpha_s(v)` surface)
+  - rescaled CKM atlas triangle: `alpha_0 = 90 deg`, `beta_0 =
+    arctan(1/sqrt(5))`, `gamma_0 = arctan(sqrt(5))`, with finite-`lambda`
+    barred-triangle corrections explicitly not promoted as an exact right angle
+  - atlas/Wolfenstein area factor
+    `J_0 = alpha_s(v)^3 sqrt(5)/72` (`3.4237 x 10^-5` on the
+    retained `alpha_s(v)` surface), with the parent exact standard-matrix
+    readout `J = 3.331 x 10^-5`
   - authority:
     [CKM_ATLAS_AXIOM_CLOSURE_NOTE.md](../../CKM_ATLAS_AXIOM_CLOSURE_NOTE.md),
     [WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md](../../WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md),
-    [CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md](../../CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
+    [CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md](../../CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md),
+    [CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md](../../CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md)
 - confinement readout on top of the exact graph-first confinement theorem:
   - `sqrt(sigma) ≈ 465 MeV`
   - authority:
