@@ -55,6 +55,11 @@ For the full package-capture inventory, use:
   plus the surface-exact barred circumradius and circumcenter closure
   `R_bar^2 = 1/4 + alpha_s(v)^2/320` and
   `(x_cc,y_cc)=(1/2,-alpha_s(v)sqrt(5)/40)`,
+  plus the exact barred-triangle center / Euler-line closure
+  `H=(rho_bar,(20+alpha_s(v))/(24 sqrt(5)))`,
+  `H-V_3=(0,alpha_s(v) sqrt(5)/20)`,
+  `G=((28-alpha_s(v))/72,sqrt(5)(4-alpha_s(v))/72)`,
+  and exact `H=3G-2O`,
   plus the NLO Jarlskog closed form
   `J_bar = sqrt(5) alpha_s(v)^3(4-alpha_s(v))/288`,
   `|V_cs|_0^2 = 1 - alpha_s(v)/2 - alpha_s(v)^2/6`,
