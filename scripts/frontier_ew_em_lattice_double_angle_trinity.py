@@ -365,6 +365,34 @@ def audit_t5_sin_sq_2_theta_w(N_pair: int, N_color: int, N_quark: int
     return sin_sq_2_theta_W
 
 
+def audit_t6_sin_2_theta_w_positive_root(sin_sq_2_theta_W: Fraction,
+                                         N_pair: int, N_color: int,
+                                         N_quark: int) -> None:
+    """T6: sin(2 theta_W) positive-root structural form.
+
+    The runner keeps the surd symbolic: it verifies that the proposed positive
+    root N_pair^2 sqrt(N_quark - 1) / N_color^2 squares back to T5.
+    """
+    banner("T6: sin(2 theta_W) positive-root structural form (NEW)")
+
+    root_sq = Fraction(N_pair ** 4 * (N_quark - 1), N_color ** 4)
+
+    print("  Positive root because theta_W is in the first quadrant at lattice scale:")
+    print("    sin^2(theta_W) = 4/9, cos^2(theta_W) = 5/9.")
+    print("  Proposed structural root:")
+    print("    sin(2 theta_W) = N_pair^2 * sqrt(N_quark - 1) / N_color^2")
+    print(f"                   = {N_pair}^2 * sqrt({N_quark - 1}) / {N_color}^2")
+    print("                   = 4 sqrt(5) / 9")
+    print(f"  Squared structural root = {root_sq}")
+
+    check("T6: positive-root square matches T5 sin^2(2 theta_W)",
+          root_sq == sin_sq_2_theta_W)
+    check("T6: numerator coefficient is N_pair^2 = 4",
+          N_pair ** 2 == 4)
+    check("T6: denominator is N_color^2 = 9",
+          N_color ** 2 == 9)
+
+
 def audit_t7_pythagorean_closure(cos_2_theta_W: Fraction,
                                   sin_sq_2_theta_W: Fraction) -> None:
     """T7: Pythagorean closure cos^2(2 theta_W) + sin^2(2 theta_W) = 1."""
@@ -526,6 +554,7 @@ def main() -> int:
     audit_t4_aux_support_comparator(cos_2_theta_W)
 
     sin_sq_2_theta_W = audit_t5_sin_sq_2_theta_w(N_pair, N_color, N_quark)
+    audit_t6_sin_2_theta_w_positive_root(sin_sq_2_theta_W, N_pair, N_color, N_quark)
     audit_t7_pythagorean_closure(cos_2_theta_W, sin_sq_2_theta_W)
     audit_t8_tan_sq_2_theta_w(cos_2_theta_W, sin_sq_2_theta_W, N_pair, N_quark)
     audit_t9_alpha_em_lattice_s1_backed(e_sq, N_color)

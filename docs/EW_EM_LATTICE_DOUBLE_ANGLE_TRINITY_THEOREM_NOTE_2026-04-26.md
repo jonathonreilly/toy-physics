@@ -48,7 +48,7 @@ preceding `A^4` and `cos²(θ_W)` complement bridges and the lesson from
                               =  80/81
                               =  N_pair^4 × (N_quark - 1) / N_color^4    [NEW closed form]
 
-(C3)  sin(2 θ_W) | _lattice  =  4 √(N_quark - 1) × N_pair / N_color²
+(C3)  sin(2 θ_W) | _lattice  =  N_pair² √(N_quark - 1) / N_color²
                               =  4 √5 / 9 ≈ 0.9938                       [NEW closed form]
 
 (C4)  α_EM | _lattice         =  e² / (4 π)
@@ -65,7 +65,7 @@ preceding `A^4` and `cos²(θ_W)` complement bridges and the lesson from
          =  (1 + 80) / 81
          =  81 / 81  =  1.                                                [EXACT]
 
-(C7)  tan(2 θ_W) | _lattice  =  4 N_pair √(N_quark - 1)
+(C7)  tan(2 θ_W) | _lattice  =  N_pair² √(N_quark - 1)
                               =  4 √5 ≈ 8.944                            [NEW closed form]
 ```
 
@@ -149,7 +149,7 @@ On retained-tier authorities of current `main`:
       so sin²(2 θ_W) | _lattice  =  N_pair^4 × (N_quark - 1) / N_color^4.
 
 (T6)  sin(2 θ_W) | _lattice    =  √(80/81)  =  4 √5 / 9
-                                =  4 N_pair √(N_quark - 1) / N_color².
+                                =  N_pair² √(N_quark - 1) / N_color².
 
 (T7)  Pythagorean closure (consistency):
         cos²(2 θ_W) + sin²(2 θ_W) | _lattice  =  (1/9)² + 80/81
@@ -159,7 +159,6 @@ On retained-tier authorities of current `main`:
 (T8)  tan(2 θ_W) | _lattice    =  sin(2 θ_W) / cos(2 θ_W) | _lattice
                                 =  (4 √5 / 9) / (1/9)
                                 =  4 √5
-                                =  4 N_pair √(N_quark - 1) / N_pair  ... wait
                                 =  N_pair² × √(N_quark - 1)            [structural form]
                                 =  4 × √5 ≈ 8.944.
 
