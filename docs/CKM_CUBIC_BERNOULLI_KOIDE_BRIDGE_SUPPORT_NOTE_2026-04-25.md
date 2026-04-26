@@ -19,8 +19,8 @@ family. The value is that the retained CKM surface supplies named structural
 integers and retained `rho`, `eta^2`, and `A^2` readouts whose exact Fraction
 values produce a compact 4x3 tower and new CKM-side factorizations.
 
-This note is **not a closure of A^2 below W2** and **not a closure of Koide
-2/9**. The cross-sector reading remains conditional on a separate Koide-side
+This note is **not a closure of Koide 2/9**. The cross-sector reading remains
+conditional on a separate Koide-side
 result, even though the numeric equality `N_gen = N_color = 3` is now retained
 separately. It pushes the *supporting*
 structure by:

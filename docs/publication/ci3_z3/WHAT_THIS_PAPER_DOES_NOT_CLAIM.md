@@ -133,15 +133,16 @@ The paper does **not** claim:
   charged-lepton Koide; it only identifies `N_gen=N_color=3` by direct
   retained equality of the three-generation and CKM-count authorities, with
   CL3 support-tier readings left auxiliary.
-- that the retained EW-CKM lattice `A^4` bridge derives `A^2=2/3` below the
-  retained W2 surface or predicts the low-energy `M_Z` weak angle; it only
-  packages `sin^2(theta_W)|_lattice=A^4=4/9` and the gauge-dimension
-  `A^2=2/3` consistency equality.
+- that the retained EW-CKM lattice `A^4` bridge by itself predicts the
+  low-energy `M_Z` weak angle or carries an independent below-`W2`
+  derivation of `A^2`; the separate retained quark-doublet source theorem
+  closes `A^2=2/3` below `W2`, while the bridge note packages only
+  `sin^2(theta_W)|_lattice=A^4=4/9` plus corroborative gauge-dimension
+  consistency.
 - that the CKM Bernoulli `2/9` Koide-bridge support note closes
-  charged-lepton Koide, derives `A^2=2/3` below the retained W2 surface, or
-  supplies a structural Koide mechanism beyond the separately retained
-  numeric equality `N_gen=N_color=3`; it only packages exact CKM-side
-  pair/color arithmetic.
+  charged-lepton Koide or supplies a structural Koide mechanism beyond the
+  separately retained numeric equality `N_gen=N_color=3`; it only packages
+  exact CKM-side pair/color arithmetic.
 - that the CKM `n/9` structural-family Koide-bridge support note proves a
   Koide-side `n/9` family or supplies a structural Koide mechanism beyond
   the separately retained numeric equality `N_gen=N_color=3`; it only

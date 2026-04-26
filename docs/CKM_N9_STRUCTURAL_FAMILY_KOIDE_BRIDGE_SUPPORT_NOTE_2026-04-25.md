@@ -207,7 +207,7 @@ CKM support family supply matching n/9 target-class expressions.
 
 The Koide-side requirement remains open outside this note. The CKM-side family
 is useful because it makes the target class explicit and exact; it does not
-close charged-lepton Koide, `A^2` below W2, or any structural Koide mechanism
+close charged-lepton Koide or any structural Koide mechanism
 beyond the retained numeric equality `N_gen=N_color=3`.
 
 ## What This Packages

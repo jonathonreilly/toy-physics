@@ -34,7 +34,8 @@ questions:
   the retained coupling-chain identity `alpha_LM^2 = alpha_bare alpha_s(v)`,
   electroweak normalization, retained top/Yukawa transport, promoted CKM
   atlas/axiom numerics including `lambda^2 = alpha_s(v)/2`,
-  `A^2 = 2/3`, `cos^2(delta_CKM) = 1/6`, and the rescaled atlas-triangle
+  `A^2 = 2/3` with a retained below-`W2` quark-doublet grounding theorem,
+  `cos^2(delta_CKM) = 1/6`, and the rescaled atlas-triangle
   right-angle identity `alpha_0 = 90 deg`; the Thales-pinned
   `alpha_s`-independent ratio class now includes
   `|V_ts|/|V_cb| = 1`, `|V_td|/|V_ub| = sqrt(5)`, and the cross-row

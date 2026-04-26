@@ -208,8 +208,7 @@ def audit_summary() -> None:
     print("    CS1/CS2/CS3 cross-N sums, K2 reciprocal decomposition, and K3 products.")
     print()
     print("  Not certified here:")
-    print("    charged-lepton Koide, cos^2(theta_K), structural Koide mechanism,")
-    print("    or A^2 below W2.")
+    print("    charged-lepton Koide, cos^2(theta_K), or structural Koide mechanism.")
 
 
 def main() -> int:

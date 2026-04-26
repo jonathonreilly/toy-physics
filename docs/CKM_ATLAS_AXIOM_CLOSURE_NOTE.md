@@ -4,6 +4,7 @@
 **Status:** promoted no-import quantitative package on the canonical tensor/projector surface
 **Script:** `scripts/frontier_ckm_atlas_axiom_closure.py`
 **Named subtheorems:** [`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md),
+[`CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md`](CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md),
 [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md),
 [`CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`](CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md),
 [`CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md`](CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md),
@@ -75,6 +76,10 @@ Let
 - `n_pair = 2` from the exact EWSB residual pair
 - `n_color = 3` from structural `SU(3)`
 - `n_quark = 2 x 3 = 6` from `Q_L = (2,3)`
+
+The companion below-`W2` theorem now grounds the `A^2` count ratio directly
+from the retained quark-doublet source `Q_L : (2,3)_{+1/3}` on the accepted
+matter-content surface.
 
 Then
 

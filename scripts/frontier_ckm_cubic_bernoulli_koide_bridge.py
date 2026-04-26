@@ -269,7 +269,7 @@ def audit_summary() -> None:
     print("  Complete 4x3 Bernoulli tower (12 elements) derivable from retained inputs.")
     print("  Conditional Koide-relevant target matches are printed but not counted.")
     print()
-    print("  Does NOT close A^2 below W2, Koide 2/9, cos^2(theta_K),")
+    print("  Does NOT close Koide 2/9, cos^2(theta_K),")
     print("  or any structural Koide mechanism beyond retained N_gen = N_color = 3.")
     print("  All counted checks use retained CKM inputs only; no open inputs are used.")
 

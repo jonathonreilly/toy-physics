@@ -9,8 +9,9 @@ and the retained consistency equality
 
     A^2 = dim_fund(SU(2)) / dim_fund(SU(3)) = 2/3.
 
-It explicitly does not certify an independent below-W2 derivation of the
-Wolfenstein A^2 law.
+The below-W2 derivation of the Wolfenstein `A^2` law now lives in the
+companion quark-doublet source theorem; this runner keeps the bridge identity
+and the gauge-dimension consistency corollary isolated.
 """
 
 from __future__ import annotations
@@ -23,6 +24,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 NOTE = ROOT / "docs" / "CKM_EW_LATTICE_A4_BRIDGE_RETAINED_IDENTITY_NOTE_2026-04-25.md"
+SOURCE_NOTE = ROOT / "docs" / "CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md"
 
 AUTHORITY_FILES = {
     "minimal_axioms": ROOT / "docs" / "MINIMAL_AXIOMS_2026-04-11.md",
@@ -83,6 +85,7 @@ def main() -> int:
     print("=" * 88)
 
     note = text(NOTE)
+    source_note = text(SOURCE_NOTE)
     authorities = {name: text(path) for name, path in AUTHORITY_FILES.items()}
 
     section("Authority and status boundary")
@@ -100,9 +103,14 @@ def main() -> int:
     check("CL3 taste remains support-tier",
           "support" in status_line(authorities["cl3_taste"]).lower())
 
+    check("companion below-W2 source theorem exists", SOURCE_NOTE.exists())
+    check("companion theorem states A^2 = N_pair / N_color = 2/3",
+          contains_normalized(source_note, "A² = N_pair / N_color = 2/3")
+          or contains_normalized(source_note, "A^2 = N_pair / N_color = 2/3"))
+
     required_boundaries = [
-        "not an `A^2`-below-`W2` derivation",
-        "A2_BELOW_W2_DERIVATION_CLOSED=FALSE",
+        "companion corollary to the retained below-`W2` `A^2` source theorem",
+        "A2_BELOW_W2_DERIVATION_CLOSED=TRUE",
         "SUPPORT_TIER_PROMOTION=FALSE",
         "KOIDE_CLOSURE=FALSE",
         "Support-tier CL3 taste-generation readings are not used.",
@@ -111,7 +119,6 @@ def main() -> int:
         check(f"note states boundary: {phrase}", contains_normalized(note, phrase))
 
     forbidden_promotions = [
-        "A2_BELOW_W2_DERIVATION_CLOSED=TRUE",
         "SUPPORT_TIER_PROMOTION=TRUE",
         "KOIDE_CLOSURE=TRUE",
         "therefore closes Koide",
@@ -170,16 +177,18 @@ def main() -> int:
           gauge_ratio == Fraction(2, 3))
     check("gauge-dimension ratio equals retained A^2 at values",
           gauge_ratio == a_sq == Fraction(2, 3))
-    check("runner does not certify below-W2 A^2 derivation",
-          contains_normalized(note, "not, by itself, a derivation of the Wolfenstein `A^2` law below `W2`"))
+    check("note keeps the gauge-dimension equality as a consistency corollary",
+          contains_normalized(note, "the equality in this note remains the gauge-dimension corollary"))
 
     section("Summary")
     print("  Certified:")
     print("    sin^2(theta_W)|_lattice = A^4 = 4/9")
     print("    A^2 = dim_fund(SU(2))/dim_fund(SU(3)) = 2/3 as retained consistency")
+    print("    companion source theorem closes A^2 below W2 on current main")
     print()
     print("  Not certified:")
-    print("    independent below-W2 derivation of A^2, support-tier promotion,")
+    print("    an independent below-W2 derivation inside this bridge note alone,")
+    print("    support-tier promotion,")
     print("    physical M_Z weak-angle prediction, or Koide closure.")
 
     print("\n" + "=" * 88)

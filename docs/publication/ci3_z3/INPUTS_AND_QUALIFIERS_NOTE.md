@@ -205,9 +205,10 @@ bridge layer beyond the exact structural core.
     does not promote CL3 support-tier readings or charged-lepton Koide
 - EW-CKM lattice `A^4` bridge:
   - retained YT_EW lattice normalization + retained W2
-  - exact claim is only `sin^2(theta_W)|_lattice=A^4=4/9`; the
-    gauge-dimension equality for `A^2=2/3` is consistency only, not an
-    independent below-W2 derivation
+  - exact claim here is `sin^2(theta_W)|_lattice=A^4=4/9`
+  - the separate retained quark-doublet source theorem closes `A^2=2/3`
+    below `W2`; the gauge-dimension equality in this bridge note remains
+    corroborative consistency only
 - CKM Bernoulli `2/9` Koide-bridge support:
   - promoted CKM `A^2`, `rho`, and pair/color counts only
   - exact claim is CKM-side arithmetic: `K1`, `K2`, `K5`, and `K6` all read
