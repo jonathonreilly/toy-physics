@@ -77,17 +77,37 @@ See `docs/KOIDE_NATIVE_DIMENSIONLESS_REVIEW_PACKET_2026-04-24.md`,
 and
 `docs/KOIDE_Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS_NOTE_2026-04-25.md`.
 
-**2026-04-25 `δ` closure addendum.** The April 25 Euclidean-rotation-angle
-theorem closes `δ = 2/9 rad` on the retained selected-line carrier. The
-theorem identifies the physical Brannen observable as the literal Euclidean
-rotation angle of the mass-square-root vector in the 2-plane orthogonal to
-the singlet axis, measured in the natural radian unit (arc-length-over-
-radius). It bypasses the period-1 vs period-2π convention obstruction
-sharpened by the A1 audit / round-10 fractional-topology no-go batch by
-reading the observable from `cos(.)` of an angle rather than from any
-`R/Z → U(1)` map. The theorem is consistent with the Berry-bundle obstruction
-(in fact supports it: a trivial bundle removes the competing U(1)-holonomy
-reading on the same physical base).
+**2026-04-25 `δ` closure addendum (revised 2026-04-26).** The April 25
+Euclidean-rotation-angle theorem closes `δ = 2/9 rad` on the retained
+selected-line carrier.
+
+The 2026-04-26 revision adds the load-bearing physical-observable
+identification step in **closed form**, in response to the `review.md`
+finding (commit 2faa434f) that the original draft only certified
+*compatibility* of the rotation-angle reading with the existing Brannen
+support data, not the missing physical-identification theorem. The
+load-bearing content is now Lemma 2.7:
+
+> On the retained selected-line first branch with the standard `C_3`
+> Fourier amplitude, the framework's Brannen offset `δ(m)` and the
+> Euclidean rotation angle `α(s)` in the 2-plane orthogonal to the
+> singlet axis satisfy the **closed-form algebraic identity**
+> `α(s(m)) = −π/2 − δ(m)`, equivalently `δ(m) = α(s(m_0)) − α(s(m))`,
+> as an equality of real-valued functions on the entire first branch.
+
+This is sympy-verified symbolically in the runner's new Block 5 (added in
+the same revision), and is structurally different from numerical
+agreement at a single point: `f(x) = g(x)` for all `x` in a domain forces
+identification of the two functions, not merely of their values.
+
+The theorem bypasses (does not cross) the period-1 vs period-2π convention
+obstruction sharpened by the A1 audit / round-10 fractional-topology no-go
+batch by reading the observable from `cos(.)` of an angle rather than from
+any `R/Z → U(1)` map. The Berry-bundle obstruction now figures as a
+**forcing argument** (not just consistency): it forces any non-trivial
+`δ` reading OUT of the U(1)-bundle/holonomy category, leaving the
+Euclidean-rotation-angle category as the only retained alternative for
+non-trivial `δ_phys`.
 
 Effect on the closure package:
 
@@ -265,7 +285,7 @@ than from any `R/Z → U(1)` map. **This closes the `δ = 2/9` bridge.**
 
 ### Main runners
 
-- `scripts/frontier_koide_delta_euclidean_rotation_angle.py` — **24/24 PASS** (retained closure runner)
+- `scripts/frontier_koide_delta_euclidean_rotation_angle.py` — **32/32 PASS** (retained closure runner; revised 2026-04-26 with closed-form analytic identification Block 5)
 - `scripts/frontier_koide_aps_eta_invariant.py` — **21/21 PASS**
 - `scripts/frontier_koide_aps_topological_robustness.py` — **41/41 PASS**
 - `scripts/frontier_koide_c3_spatial_rotation.py` — **16/16 PASS**
@@ -350,9 +370,9 @@ above.
 | `frontier_koide_brannen_dirac_support.py` | Brannen support: explicit finite-lattice `L=3` Wilson-Dirac illustration | 11/11 |
 | `frontier_koide_q_background_zero_z_erasure_criterion.py` | `Q` support: exact background-zero / `Z`-erasure criterion on admitted reduced carrier | 25/25 |
 | `frontier_koide_q_onsite_source_domain_no_go_synthesis.py` | `Q` support/no-go: onsite source-domain separation from retained commutant `Z` | 23/23 |
-| `frontier_koide_delta_euclidean_rotation_angle.py` | **`δ` retained closure**: physical Brannen observable IS the Euclidean rotation angle in the doublet 2-plane (April 25 theorem) | 24/24 |
+| `frontier_koide_delta_euclidean_rotation_angle.py` | **`δ` retained closure**: physical Brannen observable IS the Euclidean rotation angle in the doublet 2-plane (April 25 theorem; revised 2026-04-26 with closed-form analytic identification block 5) | 32/32 |
 
-**Total: 314 PASS, 0 FAIL.**
+**Total: 322 PASS, 0 FAIL.**
 
 ### Notes
 
