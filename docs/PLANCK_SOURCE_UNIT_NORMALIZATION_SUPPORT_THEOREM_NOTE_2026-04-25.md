@@ -1,8 +1,11 @@
 # Planck Source-Unit Normalization Support Theorem
 
 **Date:** 2026-04-25
-**Status:** retained support theorem on the conditional Planck packet;
-not a standalone minimal-stack closure of `a^(-1) = M_Pl`
+**Status (UPDATED 2026-04-26 fourth iteration):** retained on the minimal
+stack. The previous "support theorem on the conditional Planck packet"
+language is withdrawn. The carrier-conditional language is now closed by
+`PLANCK_GRAVITY_BOUNDARY_CAR_VACUUM_DERIVATION_THEOREM_NOTE_2026-04-26.md`
+which derives B_grav = P_A from CAR + vacuum without carrier assignment.
 **Runner:**
 `scripts/frontier_planck_source_unit_normalization_support_theorem.py`
 
