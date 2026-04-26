@@ -190,6 +190,9 @@ The paper does **not** claim:
   from the `R_base` identity alone;
 - point predictions for `Omega_Lambda`, `Omega_m`, `q_0`, `z_*`, or
   `z_{mLambda}` without closing the `H_inf/H_0` matter bridge;
+- that the [FRW single-ratio inverse reconstruction certificate](../../COSMOLOGY_SINGLE_RATIO_INVERSE_RECONSTRUCTION_THEOREM_NOTE_2026-04-25.md)
+  closes the numerical value of `H_inf/H_0`, `Omega_Lambda`, `Omega_m`,
+  `q_0`, `z_*`, or `z_{mLambda}`;
 - a native prediction of matter-radiation equality `z_mr` without supplied
   `Omega_m,0` and observational `Omega_r,0`;
 - a derivation of `T_CMB`, the standard `0.046` thermal correction in

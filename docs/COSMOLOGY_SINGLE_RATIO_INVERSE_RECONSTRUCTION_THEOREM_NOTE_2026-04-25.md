@@ -1,14 +1,14 @@
 # Cosmology Single-Ratio Inverse Reconstruction Theorem
 
 **Date:** 2026-04-25
-**Status:** exact positive inverse-reconstruction theorem on the retained /
-admitted flat-FRW, `w_Lambda = -1` cosmology surface. This proves that the
-single open late-time number `H_inf / H_0` is uniquely reconstructible from
-several independent FRW observables and supplies exact consistency
+**Status:** exact retained/admitted-surface structural-support theorem on
+`main`. On the retained/admitted flat-FRW, `w_Lambda = -1` cosmology surface,
+the single open late-time number `H_inf / H_0` is uniquely reconstructible
+from several independent FRW observables and supplies exact consistency
 certificates for future cosmology work. It does not derive the numerical value
 of `H_inf / H_0`, does not promote `Omega_Lambda`, and does not close the
 matter-content bridge.
-**Script:** none; proof-only note
+**Primary runner:** `scripts/frontier_cosmology_single_ratio_inverse_reconstruction.py`
 
 ## Question
 
@@ -92,6 +92,11 @@ FRW kinematic notes:
 The previous forward theorem proves that `q_0`, `z_*`, `z_mLambda`, and
 `H_inf` are functions of this same `L`. This note proves the inverse direction
 and the resulting consistency certificates.
+
+This is an inverse certificate on the existing FRW support surface, not a
+promoted numerical cosmology closure.
+
+It does not close the matter-content bridge.
 
 ## Theorem 1: one-point expansion-history reconstruction
 
