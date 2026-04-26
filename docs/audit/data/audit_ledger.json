@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-26T22:25:49.607095+00:00",
-  "generated_at": "2026-04-26T22:25:47.151645+00:00",
-  "invalidation_run_at": "2026-04-26T22:25:49.503591+00:00",
+  "effective_status_computed_at": "2026-04-26T22:47:29.861740+00:00",
+  "generated_at": "2026-04-26T22:47:27.331580+00:00",
+  "invalidation_run_at": "2026-04-26T22:47:29.756536+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-26T22:25:49.299009+00:00",
+  "load_bearing_computed_at": "2026-04-26T22:47:29.548642+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,

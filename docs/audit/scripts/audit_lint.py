@@ -31,6 +31,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -60,6 +61,15 @@ ALLOWED_CURRENT_STATUSES = {
 RATIFIED_BY_AUDIT_ONLY = {"retained", "promoted"}
 ALLOWED_INDEPENDENCE = {"weak", "cross_family", "strong", "external", None}
 
+# After relabel, the raw Status: text on a source note must not contain
+# the bare ratified-tier words; only the audit lane may grant them.
+# This regex matches `retained` / `promoted` only when NOT prefixed with
+# `proposed_`.
+RAW_FORBIDDEN_TIER_RE = re.compile(
+    r"(?<!proposed_)\b(?:retained|promoted)\b",
+    re.IGNORECASE,
+)
+
 
 def load_json(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
@@ -73,6 +83,16 @@ def hash_note_on_disk(note_path_str: str) -> str | None:
 
 
 def main() -> int:
+    import argparse
+    p = argparse.ArgumentParser()
+    p.add_argument(
+        "--strict",
+        action="store_true",
+        help="Fail on raw 'retained'/'promoted' in Status: lines (post-relabel mode).",
+    )
+    args, _ = p.parse_known_args()
+    strict = args.strict or bool(__import__("os").environ.get("AUDIT_LINT_STRICT_RAW"))
+
     if not LEDGER_PATH.exists():
         print("FAIL: audit_ledger.json missing", file=sys.stderr)
         return 1
@@ -96,6 +116,18 @@ def main() -> int:
             )
         if cs not in ALLOWED_CURRENT_STATUSES:
             errors.append(f"{cid}: current_status={cs!r} not in allowed set")
+
+        # Raw Status: line on the source note must not contain bare
+        # `retained` or `promoted` — those are audit-only tiers.
+        # Authors must declare `proposed_retained` / `proposed_promoted`.
+        # Pre-relabel: warning. Post-relabel (--strict or env var): error.
+        raw = row.get("current_status_raw") or ""
+        if raw and RAW_FORBIDDEN_TIER_RE.search(raw):
+            msg = (
+                f"{cid}: source note Status line contains bare 'retained' or 'promoted'; "
+                f"use proposed_retained / proposed_promoted (raw={raw!r})"
+            )
+            (errors if strict else warnings).append(msg)
         if a not in ALLOWED_AUDIT_STATUSES:
             errors.append(f"{cid}: audit_status={a!r} not in allowed set")
         if ind not in ALLOWED_INDEPENDENCE:
