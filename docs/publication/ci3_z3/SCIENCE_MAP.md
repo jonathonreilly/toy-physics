@@ -129,7 +129,11 @@ Validate with:
   corollary `sin(2 beta_bar)/sin(2 beta_0) = 1 - alpha_s(v)/5`, the exact
   barred-triangle Napoleon closure `N_outer^2=W_+/6`,
   `N_inner^2=W_-/6`, and
-  `N_outer^2 N_inner^2=P(alpha_s(v))/82944`, the Brocard-polynomial
+  `N_outer^2 N_inner^2=P(alpha_s(v))/82944`, the orthic-triangle
+  altitude-foot package with alpha_s-invariant `H_b=(1/6,sqrt(5)/6)`
+  and orthic area
+  `sqrt(5) alpha_s(v)(4-alpha_s(v))(20+alpha_s(v))/(144(80+alpha_s(v)^2))`,
+  the Brocard-polynomial
   structural-integer skeleton with `p_2=2e_1^2`, plus the
   Thales-mediated
   cross-system CP ratio `phi_s / sin(2 beta_d) = -alpha_s(v)/2`
