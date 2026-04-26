@@ -63,6 +63,13 @@ addresses:
 - Q = 2/3 closure (source-domain selector theorem target)
 - δ = 2/9 closure (period convention / Euclidean rotation interpretation)
 
+The OP-locality / C3-fixed source route
+([KOIDE_Q_OP_LOCALITY_C3_FIXED_SOURCE_SUPPORT_NOTE_2026-04-27.md](../../KOIDE_Q_OP_LOCALITY_C3_FIXED_SOURCE_SUPPORT_NOTE_2026-04-27.md))
+is landed as conditional support only: it proves that a strict-onsite
+C3-fixed undeformed source implies `z=0` and hence `Q=2/3` on the admitted
+criterion carrier. It does not prove that physical charged-lepton readout
+forces that source choice.
+
 These together pin v's direction in R³ modulo overall scale. **Closure of the
 Koide flagship lane retains the dimensionless ratios m_e/m_μ and m_μ/m_τ.**
 It does NOT retain the absolute scale.
