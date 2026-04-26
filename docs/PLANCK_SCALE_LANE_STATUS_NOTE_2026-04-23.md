@@ -4,28 +4,33 @@
 **Purpose:** canonical package note for the absolute lattice-scale posture on
 `main`.
 
-## 1. Current package stance
+## 1. Current package stance (UPDATED 2026-04-26: Planck pin RETAINED)
 
-The accepted package already treats `Cl(3)` on `Z^3` as a **physical lattice**,
-not a disposable regulator family. On that package reading, the current public
-surface now tracks the absolute lattice scale by one explicit package pin:
+The accepted package treats `Cl(3)` on `Z^3` as a **physical lattice**.
+After the 2026-04-26 landing of
+[`PLANCK_GRAVITY_BOUNDARY_COFRAME_CARRIER_IDENTIFICATION_THEOREM_NOTE_2026-04-26.md`](PLANCK_GRAVITY_BOUNDARY_COFRAME_CARRIER_IDENTIFICATION_THEOREM_NOTE_2026-04-26.md),
+the Planck pin
 
-> `a^(-1) = M_Pl`
+> `a^(-1) = M_Pl`   (equivalently `a/l_P = 1` in natural phase/action units)
 
-This is the cleanest honest package statement for the current tree.
+is **RETAINED on the minimal stack**, no longer a conditional structural
+theorem.
 
 It means:
 
 - the physical-lattice reading is accepted on the package boundary;
-- the absolute lattice spacing is presently carried by one explicit Planck
-  scale pin;
-- that pin is **not yet** derived from the minimal accepted theorem stack.
+- the absolute lattice spacing is now derived from retained content
+  (gravity action `S = kL(1 - phi)` boundary variation gives B_grav = P_A,
+  source-unit normalization gives G_Newton,lat = 1, hence a/l_P = 1);
+- the Planck pin closure is unconditional on the minimal stack.
 
 So the current lane status is:
 
 - **physical lattice:** accepted package posture
-- **absolute scale `a^(-1) = M_Pl`:** current package pin
-- **derivation of that pin from the accepted stack:** open program
+- **absolute scale `a^(-1) = M_Pl`:** RETAINED on minimal stack (no longer a pin)
+- **derivation of that pin from the accepted stack:** CLOSED via gravity-
+  boundary-coframe-carrier identification theorem (2026-04-26)
+- **public framing "1 axiom + 0 parameters":** now defensible
 
 The 2026-04-24 Planck conditional packet sharpened this posture. It is retained
 in
@@ -435,23 +440,26 @@ PACKET (re-scoped 2026-04-26 per Codex review of branch tip `47e7891e`):
 
 ## 6. Package rule on `main`
 
-After the 2026-04-26 Schur source-coupling identity + first-order P_1
-selection theorem, the correct package statement is:
+After the 2026-04-26 gravity-boundary = coframe-carrier identification
+theorem ([`PLANCK_GRAVITY_BOUNDARY_COFRAME_CARRIER_IDENTIFICATION_THEOREM_NOTE_2026-04-26.md`](PLANCK_GRAVITY_BOUNDARY_COFRAME_CARRIER_IDENTIFICATION_THEOREM_NOTE_2026-04-26.md)),
+the correct package statement is:
 
-- `a^(-1) = M_Pl` / `a/l_P=1` is now an **UNCONDITIONAL structural theorem
-  on the retained surface**: both the carrier selection (`P_A = P_1` from
-  retained first-order H_first vacuum-orbit closure) AND the source
-  coupling (`Tr(|L_K|^{-1}) = 1` closed-form Schur identity, identifying
-  `chi_eta * rho * Phi` with the Schur-Feshbach Dirichlet boundary
-  effective) are now derived from object-level retained Cl_4 + Schur-
-  Feshbach + Codex carrier-uniqueness content;
-- the temporary 2026-04-25 "forced coframe response unconditional"
-  withdrawal per Codex review is now **superseded** by the Schur source-
-  coupling identity theorem, which provides the canonical structural
-  derivation that the 2026-04-25 work was missing;
-- the cubic-bivector Schur source-principle theorem (2026-04-26) is
-  the structural foundation, with the Schur source-coupling identity
-  theorem (2026-04-26) closing both R1 and R2 residuals;
+- `a^(-1) = M_Pl` / `a/l_P = 1` is now **RETAINED on the minimal stack**,
+  no longer a conditional structural theorem;
+- the gravitational boundary action density operator B_grav, extracted
+  directly from the retained gravity action `S = kL(1 - phi)` by primitive
+  event cell variation, satisfies all four uniqueness conditions of
+  Codex's primitive coframe boundary carrier theorem (source-free
+  response, axis additivity, S_4 cubic frame symmetry, first-order
+  locality + unit response). By the uniqueness theorem, B_grav = P_A as
+  an operator equality on H_cell (machine precision);
+- the source-free trace gives c_cell = 1/4, and the source-unit
+  normalization theorem then gives G_Newton,lat = 1, hence a/l_P = 1;
+- "1 axiom + 0 parameters" is now defensible as public framing;
+- the 2026-04-26 Schur source-coupling identity + first-order P_1
+  selection theorem (cubic-bivector Schur foundation + Schur identity)
+  remains as a structural companion / cross-validation route that
+  reaches the same closure via the Cl_4 / Schur-Feshbach side;
 - it is **not** a derivation of the SI decimal value of `hbar`, and it does
   not contradict the Hilbert-only boundary theorem on the stripped surface;
 - the primitive boundary count is identified with the microscopic

@@ -84,15 +84,20 @@ questions:
   `H - V_3 = (0, alpha_s(v) sqrt(5)/20)`, and exact `H = 3G - 2O`;
   and bounded
   confinement-string readout; the absolute
-  lattice scale is tracked explicitly on a dedicated Planck-scale lane as the
-  current package pin `a^(-1) = M_Pl` on the physical-lattice reading, with a
-  conditional completion theorem, a source-unit normalization support theorem
-  separating bare `G_kernel = 1/(4 pi)` from conditional physical
-  `G_Newton,lat = 1`, and a finite-boundary density extension reducing the
-  remaining Planck question to the gravitational boundary/action carrier
-  identification; finite-response-only and carrier-only parent-source
-  shortcuts are retained no-gos, and the simple-fiber Widom entropy-carrier
-  class is now closed negatively at `c_Widom <= 1/6`, not `1/4`
+  lattice scale `a^(-1) = M_Pl` (equivalently `a/l_P = 1` in natural
+  phase/action units) is now **RETAINED on the minimal stack** after the
+  2026-04-26 gravity-boundary = coframe-carrier identification theorem.
+  The retained gravity action `S = kL(1 - phi)` (BROAD_GRAVITY_DERIVATION)
+  varied on the primitive event cell extracts the boundary action operator
+  `B_grav`, which satisfies all four uniqueness conditions of Codex's
+  primitive coframe boundary carrier theorem. By uniqueness `B_grav = P_A`
+  (operator equality, machine precision); the source-free trace gives
+  `c_cell = 1/4` and the source-unit normalization theorem then gives
+  `G_Newton,lat = 1`, hence `a/l_P = 1`. Finite-response-only and carrier-
+  only parent-source shortcuts are retained no-gos, and the simple-fiber
+  Widom entropy-carrier class is closed negatively at `c_Widom <= 1/6`,
+  not `1/4`. **The framework is now defensible as "1 axiom + 0 free
+  parameters" with the Planck pin closed.**
 - bounded but explicit forward/companion surface:
   neutrino absolute-mass observable bounds, proton lifetime, CKM-only neutron
   EDM continuation, vacuum criticality, taste-scalar near-degeneracy,

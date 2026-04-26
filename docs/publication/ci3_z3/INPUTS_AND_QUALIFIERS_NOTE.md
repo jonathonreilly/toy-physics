@@ -72,26 +72,31 @@ explicit observational pin behind the charged-lepton bounded row.
 These are not experimental fit parameters or hidden free knobs. They are the
 current canonical same-surface evaluated constants on `main`.
 
-Current absolute-scale package rule:
+Current absolute-scale package rule (UPDATED 2026-04-26: Planck pin
+RETAINED on minimal stack, no longer an explicit pin):
 
-- on the accepted physical-lattice reading, the package currently carries
-  `a^(-1) = M_Pl` as an explicit Planck-scale pin
-- that pin is not yet derived from the minimal accepted theorem stack
-- the 2026-04-24 conditional-completion packet derives `c_cell = 1/4` and
-  the unique additive finite-boundary density extension, then gives
-  `a/l_P = 1` after the primitive boundary count is accepted as the
-  gravitational boundary/action carrier; that carrier identification is still
-  the explicit Planck-lane condition
-- the 2026-04-25 primitive coframe boundary-carrier support theorem identifies
-  `P_A` as the unique first-order coframe-slot carrier on the time-locked
-  primitive Boolean event cell under the stated locality/additivity/symmetry
-  hypotheses, explaining the `c_cell = 1/4` carrier provenance without closing
-  the physical gravitational boundary/action density identification
-- the 2026-04-25 source-unit normalization support theorem sharpens that same
-  conditional packet by separating the retained bare Green coefficient
-  `G_kernel = 1/(4 pi)` from the conditional physical Newton coefficient
-  `G_Newton,lat = 1`; equivalently, the bare delta-source label is
-  `q_bare = 4 pi M_phys` on the same carrier surface
+- on the accepted physical-lattice reading, the package now derives
+  `a^(-1) = M_Pl` (equivalently `a/l_P = 1`) from the retained gravity
+  action by the 2026-04-26 gravity-boundary = coframe-carrier
+  identification theorem; this is no longer an explicit input
+- the chain is: retained `S = kL(1 - phi)` (BROAD_GRAVITY_DERIVATION) ->
+  primitive event cell variation extracts `B_grav` -> `B_grav` satisfies
+  Codex's four uniqueness conditions for the primitive coframe carrier
+  -> `B_grav = P_A` operator equality -> `c_cell = 1/4` from the source-
+  free trace -> source-unit normalization gives `G_Newton,lat = 1` ->
+  `a/l_P = 1`
+- the 2026-04-24 conditional-completion packet's open carrier-
+  identification residual is now closed by the 2026-04-26 identification
+  theorem; `c_cell = 1/4` is no longer a conditional carrier coefficient
+  but a derived consequence of the retained gravity action
+- the 2026-04-25 primitive coframe boundary-carrier support theorem
+  (Codex) provides the uniqueness theorem that the 2026-04-26 theorem
+  applies; `P_A` is the unique first-order coframe-slot carrier and is
+  also the gravity-action boundary operator
+- the 2026-04-25 source-unit normalization support theorem's carrier-
+  conditional language is now closed by the 2026-04-26 identification
+  theorem (the carrier is identified as `B_grav = P_A`), making the
+  source-unit normalization theorem fully retained on the minimal stack
 - the finite-automorphism-only response route is closed negatively; finite
   primitive-cell automorphisms have no infinitesimal metric/coframe response
   tangent and cannot replace the realified response surface

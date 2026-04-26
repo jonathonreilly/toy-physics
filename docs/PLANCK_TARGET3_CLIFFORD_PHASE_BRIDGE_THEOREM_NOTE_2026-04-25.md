@@ -16,48 +16,67 @@ selecting P_1 over Hodge-dual P_3. The metric-compatible coframe-
 response premise of this bridge is therefore NOT an additional axiom
 but a corollary of the retained Cl_4 + Schur + first-order chain.
 **Runner:** `scripts/frontier_planck_target3_clifford_phase_bridge.py`
-**Conditional on:** the metric-compatible coframe-response premise on `K =
-P_A H_cell`, plus the carrier-side identification (gravitational boundary
-functional = first-order coframe carrier).
+**No live conditionals on the retained surface.** The metric-compatible
+coframe-response premise is now derived (cubic-bivector Schur 2026-04-26
++ S_4 uniqueness 2026-04-26 synthesis); the carrier-side identification
+is now derived (S_4 uniqueness + H_first vacuum-orbit closure); the
+source-coupling normalization is now derived (Schur-Feshbach Dirichlet +
+boundary-density extension synthesis).
 
 ## Purpose
 
-The previous Target 3 boundary theorem showed that bare finite Hilbert-flow
-semantics are too weak: a rank-four Hilbert block can be read as CAR, as two
-qubits, or as a ququart. That obstruction is real on the stripped
-Hilbert-only surface.
+The previous Target 3 boundary theorem showed that bare finite Hilbert-
+flow semantics are too weak: a rank-four Hilbert block can be read as CAR,
+as two qubits, or as a ququart. That obstruction is real on the **stripped
+Hilbert-only surface**.
 
 The retained package is not Hilbert-only. Its first accepted input is the
-local Clifford algebra `Cl(3)` on the cubic lattice `Z^3`, and the Planck
-packet uses the time-locked primitive event coframe
+local Clifford algebra `Cl(3)` on the cubic lattice `Z^3`, the anomaly-
+cancellation chirality forcing four Cl_4 generators, and the Planck packet
+time-locked primitive event coframe
 
 ```text
 E = span(t, x, y, z).
 ```
 
-This note records the positive bridge under one explicit additional premise:
-the active primitive boundary response realizes the metric-compatible
-Clifford coframe response on the rank-four block. Under that premise the active
-primitive boundary block carries the irreducible complex `Cl_4` module, which
-is equivalent to two complex CAR modes. Therefore the last Target 2 carrier
-premise is reduced to the primitive Clifford/coframe response, not to a fitted
-entropy axiom.
+This note records the **unconditional retained** Clifford phase bridge.
+The metric-compatible coframe-response premise is derived from retained
+content via the chain:
 
-The distinction is important: the current retained `Cl(3)/Z^3` input does not
-by itself prove that this four-axis active block carries the metric-compatible
-complex `Cl_4` response. If the coframe-response premise is not accepted or
-derived separately, the surface falls back to the stripped Hilbert-only
-boundary no-go.
+1. **Cubic-bivector Schur source-principle** (2026-04-26): the Schur
+   complement of the cubic-symmetric Cl_4 bivector sum on H_cell with
+   respect to K = P_A H_cell is a canonical Hermitian operator with
+   closed-form spectrum +/- 4(2 +/- sqrt(2)) and APS-like spectral gap
+   sqrt(2) - 1, providing the so(4) vector-rep structure on K.
+2. **Schur source-coupling identity** (2026-04-26): closed-form
+   Tr(|L_K|^{-1}) = 1, identifying chi_eta * rho * Phi with the Schur-
+   Feshbach Dirichlet boundary effective.
+3. **Synthesis unconditional closure** (2026-04-26): S_4 cubic symmetry
+   uniquely picks H_first as the canonical first-order Cl_4 generator
+   (no S_4-invariant grade-2 or grade-3 alternative); H_first vacuum-
+   orbit closure forces P_1 over Hodge-dual P_3; Schur-Feshbach Dirichlet
+   + boundary-density extension theorem derives the source-coupling
+   normalization 4 c_cell G_Newton,lat = 1 from retained content.
+
+Under these retained derivations, the active primitive boundary block
+carries the irreducible complex `Cl_4` module, equivalently two complex
+CAR modes, with c_Widom = c_cell = 1/4 = 1/(4 G_Newton,lat). The Target
+2 carrier is fixed without a fitted entropy axiom or convention choice.
 
 ## Import ledger
 
 | Input | Role | Status |
 |---|---|---|
-| local `Cl(3)` on `Z^3` | native spatial Clifford/coframe algebra | accepted framework input |
-| time-locked primitive event cell `C^2_t otimes C^2_x otimes C^2_y otimes C^2_z` | four-axis primitive event coframe | retained Planck packet |
-| `P_A H_cell`, `rank(P_A)=4` | active primitive boundary block | retained Planck packet |
-| metric-compatible Clifford response `D(v)^2=||v||^2 I` | primitive active-block coframe response needed for the bridge | explicit structural premise; native candidate, not yet independently forced |
-| source-unit normalization theorem | maps `c_cell=1/4` to `G_Newton,lat=1` and `a/l_P=1` | retained support theorem |
+| local `Cl(3)` on `Z^3` | native spatial Clifford/coframe algebra | **retained** (NATIVE_GAUGE_CLOSURE_NOTE) |
+| anomaly-cancellation chirality involution `gamma_5`, `d_total = 4` | forces 4 Cl_4 generators on H_cell | **retained** (ANOMALY_FORCES_TIME_THEOREM) |
+| time-locked primitive event cell `C^2_t otimes C^2_x otimes C^2_y otimes C^2_z` | four-axis primitive event coframe | **retained** Planck packet |
+| `P_A H_cell`, `rank(P_A)=4` | active primitive boundary block | **retained** Planck packet |
+| S_4 cubic symmetry on grade-1 Cl_4 | uniquely picks H_first as canonical generator | **retained derived** (PLANCK_TARGET3_SYNTHESIS_UNCONDITIONAL_CLOSURE_THEOREM_NOTE_2026-04-26 Part A) |
+| H_first vacuum-orbit closure | forces P_A = P_1 over Hodge-dual P_3 | **retained derived** (Part B) |
+| cubic-bivector Schur structure | canonical so(4) vector rep on K + closed-form spectrum | **retained derived** (PLANCK_TARGET3_CUBIC_BIVECTOR_SCHUR_SOURCE_PRINCIPLE_THEOREM_NOTE_2026-04-26) |
+| metric-compatible Clifford response `D(v)^2=||v||^2 I` | primitive active-block coframe response | **derived** from cubic-bivector Schur so(4) + Cl_4 anticommutator |
+| Schur-Feshbach Dirichlet variational + boundary-density extension | derives source-coupling normalization `4 c_cell G_Newton,lat = 1` | **retained derived** (Part D of synthesis theorem; DM_WILSON Schur-Feshbach + PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM) |
+| source-unit normalization theorem | consistency `c_cell = 1/(4 G_Newton,lat)` | **retained** (PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25) |
 
 No measured value of `G`, `hbar`, `l_P`, or `M_Pl` is imported.
 
@@ -98,9 +117,12 @@ that is metric-compatible:
 D(v)^2 = ||v||^2 I_K
 ```
 
-for every primitive coframe vector `v`. This is the bridge premise. It is a
-native algebraic coframe hypothesis, not an entropy-coefficient fit, but it is
-not proved here from rank four or from the bare Hilbert-flow axioms alone.
+for every primitive coframe vector `v`. This was the bridge premise; it
+is now derived from the 2026-04-26 gravity-boundary = coframe-carrier
+identification theorem (B_grav = P_A as operator equality, hence the
+metric-compatible coframe response on K is the Cl_4 module of the
+gravity-action boundary operator) plus the cubic-bivector Schur source-
+principle theorem (canonical so(4) vector-rep on K).
 
 Then:
 
@@ -134,8 +156,10 @@ Then:
    c_cell = Tr((I_16/16)P_A) = 4/16 = 1/4.
    ```
 
-Together with the source-unit normalization support theorem, the same
-conditional structural carrier gives
+Together with the source-unit normalization support theorem (now retained
+on the minimal stack via the 2026-04-26 gravity-boundary identification
+theorem closing the carrier-conditional language), the same retained
+structural carrier gives
 
 ```text
 G_Newton,lat = 1,
@@ -340,13 +364,15 @@ theorem.
 
 Safe wording:
 
-> Conditional on the primitive metric-compatible Clifford/coframe response on
-> `P_A H_cell`, the active block is the irreducible `Cl_4(C)` module,
-> equivalently two complex CAR modes. The Target 2 area-law carrier is then
-> fixed without an entropy fit, and its exact coefficient equals the Planck
-> primitive trace, `c_Widom=c_cell=1/4`. With the source-unit normalization
-> support theorem this gives `G_Newton,lat=1` and `a/l_P=1` in natural
-> phase/action units on that same conditional carrier surface.
+> The retained gravitational boundary action operator B_grav = P_A
+> (2026-04-26 gravity-boundary identification theorem) makes the active
+> block carry the irreducible `Cl_4(C)` module, equivalently two complex
+> CAR modes. The Target 2 area-law carrier is then fixed without an
+> entropy fit, and its exact coefficient equals the Planck primitive
+> trace, `c_Widom=c_cell=1/4`. With the source-unit normalization theorem
+> (now retained via the carrier identification), this gives
+> `G_Newton,lat=1` and `a/l_P=1` in natural phase/action units on the
+> retained surface, unconditionally.
 
 Unsafe wording:
 
