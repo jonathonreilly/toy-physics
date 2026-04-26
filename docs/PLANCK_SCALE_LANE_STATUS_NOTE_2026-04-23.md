@@ -357,22 +357,58 @@ Former blocker:
   alternatives (commuting two-qubit, ququart clock-shift) are explicitly
   ruled out by the same Cl_4 anticommutator;
 - combined with the retained source-unit normalization support theorem, the
-  package's Planck pin closes UNCONDITIONALLY on the retained surface:
+  package's Planck pin closes on the response side of the bridge:
   `c_Widom=c_cell=1/4`, `G_Newton,lat=1`, `a/l_P=1` in natural phase/action
-  units, with no parameter imports;
+  units;
 - runner: `frontier_planck_target3_forced_coframe_response.py` (PASS=52,
   FAIL=0);
 - scope guardrail (unchanged): the SI decimal value of `hbar` remains
   metrology and is not claimed.
 
+2026-04-25 Gauss-flux first-order coframe carrier closure (carrier side):
+
+- `PLANCK_TARGET3_GAUSS_FLUX_FIRST_ORDER_CARRIER_THEOREM_NOTE_2026-04-25.md`
+  closes the explicit residual called out by the primitive coframe carrier
+  support theorem, namely
+  `derive_gravitational_boundary_action_density_as_first_order_coframe_carrier`;
+- the chain is: retained lattice Poisson `(-Delta_lat) phi = rho` (Newton/
+  Green package) + standard discrete divergence theorem (calculus identity
+  `(-Delta_lat) = sum_a G_a^T G_a`) + standard exterior-calculus
+  identification `HW=k <-> Lambda^k` (built into Codex's coframe response
+  polynomial `G(u) = prod_a (1 + u_a)`) =>
+  the Gauss flux of the gravitational potential through a codimension-1
+  surface is a 1-form, supported on the Hamming-weight-one packet `P_1 = P_A`;
+- this derives Codex Theorem 2's first-order locality hypothesis from
+  retained content (rather than assuming it as part of the carrier-class
+  hypotheses), so the gravitational boundary/action density carrier on the
+  primitive event cell is uniquely `P_A`;
+- runner: `frontier_planck_target3_gauss_flux_first_order_carrier.py`
+  (PASS=40, FAIL=0);
+- scope guardrail: this is a weak-field/Newtonian Gauss-flux closure of the
+  carrier-side residual; the strong-field generalization beyond the
+  retained Poisson regime is not claimed, and the SI decimal value of
+  `hbar` remains metrology and is not claimed.
+
+Combined Target 3 closure (response side + carrier side):
+
+- with both halves of the Clifford bridge premise now derived from retained
+  content, the entire Planck Target 3 chain is unconditional on the
+  retained surface:
+  ```
+  retained Poisson  +  Codex carrier-selection  +  forced coframe response  +  source-unit normalization
+  =>  c_Widom = c_cell = 1/4  =>  G_Newton,lat = 1  =>  a/l_P = 1
+  ```
+  in the package's natural phase/action units, with no parameter imports.
+
 ## 6. Package rule on `main`
 
-After the Target 3 forced coframe response theorem, the correct package
-statement is:
+After the Target 3 forced coframe response theorem and the Gauss-flux
+first-order carrier theorem, the correct package statement is:
 
 - `a^(-1) = M_Pl` / `a/l_P=1` is now an **unconditional structural theorem
-  on the retained surface** (the primitive metric-compatible Clifford/CAR
-  coframe-response premise is forced by Cl(3) on Z^3 + anomaly-time +
+  on the retained surface**: both the carrier selection (`P_A`) and the
+  metric-compatible Cl_4 response on `K = P_A H_cell` are forced by
+  retained content (Newton/Green Poisson + Cl(3) on Z^3 + anomaly-time +
   time-locked event coframe);
 - it is **not** a derivation of the SI decimal value of `hbar`, and it does
   not contradict the Hilbert-only boundary theorem on the stripped surface;
