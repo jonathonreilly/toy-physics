@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Brocard / Q polynomial perfect-square decomposition (algebraic structure).
+"""Brocard / Q polynomial scalar-multiple square decomposition.
 
 Verifies the NEW retained closed forms in
   docs/CKM_BROCARD_Q_POLYNOMIAL_PERFECT_SQUARE_DECOMPOSITION_THEOREM_NOTE_2026-04-25.md
@@ -12,43 +12,44 @@ Key NEW identities on the retained NLO Wolfenstein protected-gamma_bar surface:
         Q(alpha_s)  =  (alpha_s^2 - 4 alpha_s + 96)^2  +  80 (4 - alpha_s)^2
                      [Brocard-points denominator polynomial].
 
-  (D2) NEW perfect-square decomposition (1):
+  (D2) NEW scalar-multiple square decomposition (1):
         Q(alpha_s) - P(alpha_s)  =  320 (4 - alpha_s)^2
                                   =  N_pair^6 (N_quark - 1) (N_pair^2 - alpha_s)^2.
 
-       The DIFFERENCE Q - P is exactly a perfect square in (N_pair^2 - alpha_s)
+       The DIFFERENCE Q - P is a scalar multiple of a square in
+       (N_pair^2 - alpha_s)
        with structural-integer scaling N_pair^6 (N_quark - 1).
 
-  (D3) NEW perfect-square decomposition (2):
+  (D3) NEW scalar-multiple square decomposition (2):
         P(alpha_s) + 3 Q(alpha_s)  =  4 (alpha_s^2 - 4 alpha_s + 96)^2
                                     =  (N_pair^4 N_quark)^2 perim_sq^2 * 4
                                     =  4 (N_pair^4 N_quark perim_sq)^2.
 
-       The combination P + 3Q is exactly a perfect square in
+       The combination P + 3Q is a scalar multiple of a square in
        (alpha_s^2 - 4 alpha_s + 96) = 48 perim_sq, with structural-integer
        scaling 4 = N_pair^2.
 
-  (D4) Two perfect-square SUBSPACES of the (P, Q) module:
-        - Q - P  perfect square in (N_pair^2 - alpha_s),
-        - P + 3Q perfect square in (alpha_s^2 - 4 alpha_s + 96).
-       Every other linear combination alpha P + beta Q is a perfect square
-       only if it lies on one of these two lines:
-         * beta = -alpha  (proportional to Q - P, perfect square in (4 - alpha_s)),
-         * beta = 3 alpha (proportional to P + 3Q, perfect square in (alpha_s^2 - 4 alpha_s + 96)).
+  (D4) Two scalar-multiple square subspaces of the (P, Q) module:
+        - Q - P  square channel in (N_pair^2 - alpha_s),
+        - P + 3Q square channel in (alpha_s^2 - 4 alpha_s + 96).
+       Every other linear combination alpha P + beta Q is a scalar multiple
+       of one square polynomial only if it lies on one of these two lines:
+         * beta = -alpha  (proportional to Q - P, square in (4 - alpha_s)),
+         * beta = 3 alpha (proportional to P + 3Q, square in (alpha_s^2 - 4 alpha_s + 96)).
 
   (D5) Physical interpretation:
         - (4 - alpha_s) is proportional to eta_bar (and therefore to the
           Jarlskog J_bar in Wolfenstein-normalized form).
         - (alpha_s^2 - 4 alpha_s + 96) is exactly 48 * perim_sq, i.e. 48
           times the sum of squared sides of the unitarity triangle.
-       So the perfect-square decomposition algebraically separates:
+       So the scalar-multiple-square decomposition algebraically separates:
         - "Jarlskog channel" (Q - P): proportional to J_bar^2 with structural
-          integer scaling N_pair^11 N_quark^2.
+          integer scaling N_pair^10 N_quark^2.
         - "Perimeter channel" (P + 3Q): proportional to perim_sq^2 with
-          structural integer scaling 4 (N_pair^4 N_quark)^2 = N_pair^10 N_quark^2.
+          structural integer scaling (N_pair^4 N_quark)^2 = N_pair^8 N_quark^2.
 
   (D6) Cross-channel identity (NEW):
-        4 (P + 3Q)(Q - P)  =  perfect-square cross-product
+        4 (P + 3Q)(Q - P)  =  scalar-multiple square cross-product
                             =  16 N_pair^6 (N_quark - 1) (N_pair^2 - alpha_s)^2
                                 (alpha_s^2 - 4 alpha_s + 96)^2.
 
@@ -57,10 +58,10 @@ Key NEW identities on the retained NLO Wolfenstein protected-gamma_bar surface:
                                  (N_pair^3 sqrt(N_quark - 1)(N_pair^2 - alpha_s)))^2
                                  / N_pair^? ... (structural form).
 
-  (D7) The (P, Q) algebraic system is "perfect-square-decomposable" --
+  (D7) The (P, Q) algebraic system is scalar-multiple-square-decomposable --
        on the retained NLO Wolfenstein protected-gamma_bar surface, the
        polynomial pair admits a complete factorization into two
-       structural-integer-scaled perfect squares.
+       structural-integer-scaled square channels.
 
 Ground-up status verification: each cited authority's tier extracted from its
 Status: line; closure derived only at extracted retained values.
@@ -203,7 +204,7 @@ def setup_symbolic(N: dict):
 
 
 def audit_d2_q_minus_p(N: dict, S: dict) -> None:
-    banner("D2: Q - P perfect square in (N_pair^2 - alpha_s)")
+    banner("D2: Q - P scalar-multiple square in (N_pair^2 - alpha_s)")
 
     a_s = S["a_s"]
     P = S["P_poly"]
@@ -233,7 +234,7 @@ def audit_d2_q_minus_p(N: dict, S: dict) -> None:
 
 
 def audit_d3_p_plus_3q(N: dict, S: dict) -> None:
-    banner("D3: P + 3Q perfect square in (alpha_s^2 - 4 alpha_s + 96)")
+    banner("D3: P + 3Q scalar-multiple square in (alpha_s^2 - 4 alpha_s + 96)")
 
     a_s = S["a_s"]
     P = S["P_poly"]
@@ -257,23 +258,27 @@ def audit_d3_p_plus_3q(N: dict, S: dict) -> None:
 
 
 def audit_d4_perfect_square_subspaces(N: dict, S: dict) -> None:
-    banner("D4: Two perfect-square subspaces of the (P, Q) module")
+    banner("D4: Two scalar-multiple square subspaces of the (P, Q) module")
 
     a_s = S["a_s"]
     P = S["P_poly"]
     Q = S["Q_poly"]
 
     # General linear combination alpha P + beta Q.
-    # Has form (alpha + beta)(alpha_s^2 - 4 alpha_s + 96)^2 + (-240 alpha + 80 beta)(4 - alpha_s)^2.
-    # For this to be a perfect square, either:
+    # Has form A*X^2 + B*Y^2, with
+    #   A = alpha + beta,
+    #   B = -240 alpha + 80 beta,
+    #   X = alpha_s^2 - 4 alpha_s + 96,
+    #   Y = 4 - alpha_s.
+    # For this to be a scalar multiple of one square polynomial, either:
     #   (a) beta = 3 alpha (then -240 alpha + 240 alpha = 0, gives multiple of (alpha_s^2 - 4 alpha_s + 96)^2),
     #   (b) beta = -alpha (then alpha - alpha = 0, gives multiple of (4 - alpha_s)^2).
-    # These are the two perfect-square lines.
+    # These are the two scalar-multiple square lines.
 
     print("  alpha P + beta Q = (alpha + beta)(alpha_s^2 - 4 alpha_s + 96)^2")
     print("                   + (-240 alpha + 80 beta)(4 - alpha_s)^2.")
     print()
-    print("  Perfect-square iff either:")
+    print("  Scalar-multiple square iff either:")
     print("    Line A: beta = 3 alpha   =>   alpha P + beta Q proportional to (alpha_s^2 - 4 alpha_s + 96)^2,")
     print("    Line B: beta = -alpha    =>   alpha P + beta Q proportional to (4 - alpha_s)^2.")
 
@@ -289,8 +294,35 @@ def audit_d4_perfect_square_subspaces(N: dict, S: dict) -> None:
     check("D4 Line B: -P + Q = Q - P = 320 (4 - alpha_s)^2",
           sp.simplify(line_B - line_B_expected) == 0)
 
-    # Check that off-line combinations are NOT perfect squares.
-    # Take alpha = 1, beta = 2 (between the two lines).
+    # Generic classification: if A*X^2+B*Y^2 is a quadratic square and A != 0,
+    # coefficient comparison forces B = 0.  The A = 0 case is exactly the
+    # other single-square line.
+    A, B, u = sp.symbols("A B u")
+    X = a_s ** 2 - 4 * a_s + 96
+    Y = 4 - a_s
+    square_lhs = sp.expand(A * X ** 2 + B * Y ** 2)
+    # A nonzero quartic square has leading coefficient u^2 and cubic
+    # coefficient -8u^2, hence the candidate square starts
+    # (u*alpha_s^2 - 4u*alpha_s + w)^2.  Matching the quadratic coefficient
+    # fixes w, and matching the linear coefficient leaves exactly 4B.
+    w = (192 * u ** 2 + B) / (2 * u)
+    candidate = sp.expand((u * a_s ** 2 - 4 * u * a_s + w) ** 2)
+    generic_residual = sp.simplify(
+        sp.Poly(candidate - square_lhs.subs(A, u ** 2), a_s).coeff_monomial(a_s)
+    )
+    check("D4 generic square classification: quartic-square case forces B=0",
+          sp.simplify(generic_residual - 4 * B) == 0)
+
+    alpha, beta = sp.symbols("alpha beta")
+    A_expr = alpha + beta
+    B_expr = -240 * alpha + 80 * beta
+    check("D4 B=0 translates to beta=3 alpha",
+          sp.solve(sp.Eq(B_expr, 0), beta)[0] == 3 * alpha)
+    check("D4 A=0 translates to beta=-alpha",
+          sp.solve(sp.Eq(A_expr, 0), beta)[0] == -alpha)
+
+    # Check that a representative off-line combination is not one of the two
+    # scalar-multiple-square channels.  Take alpha = 1, beta = 2.
     off_line = sp.expand(P + 2 * Q)
     print(f"\n  Off-line example: P + 2 Q = {off_line}")
     # Has both (alpha_s^2-4alpha_s+96)^2 and (4-alpha_s)^2 contributions, neither zero.
@@ -298,8 +330,8 @@ def audit_d4_perfect_square_subspaces(N: dict, S: dict) -> None:
     coeff_4ms = -240 + 160  # = -80
     print(f"    Coefficient of (alpha_s^2 - 4 alpha_s + 96)^2: {coeff_pq}")
     print(f"    Coefficient of (4 - alpha_s)^2:                {coeff_4ms}")
-    print(f"    Both nonzero  =>  NOT a perfect square.")
-    check("D4: P + 2Q has BOTH perfect-square components, not a single perfect square",
+    print(f"    Both nonzero  =>  NOT a single-square channel.")
+    check("D4: P + 2Q has BOTH square components, not a single-square channel",
           coeff_pq != 0 and coeff_4ms != 0)
 
 
@@ -336,10 +368,8 @@ def audit_d5_physical_interpretation(N: dict, S: dict) -> None:
     check("D5 Jarlskog channel: Q - P = 36864 eta_bar^2",
           diff_jarlskog == 0)
 
-    # Check structural form: 36864 = N_pair^11 * N_quark^2 / (N_quark - 1)? Hmm.
-    # 36864 = 320 * 576 / 5 = 64 * 576 = 36864. And 576 = 24^2 = (N_pair^2 N_quark)^2 / ? 24 = N_pair^2 N_quark / N_pair = N_pair N_quark. Yes.
-    # 24 = N_pair * N_quark? N_pair * N_quark = 2 * 6 = 12. NO.
-    # 24 = N_pair^2 N_quark? = 4 * 6 = 24 YES.
+    # Check structural form:
+    # 24 = N_pair^2 N_quark, so 576 = N_pair^4 N_quark^2.
     # So 576 = (N_pair^2 N_quark)^2 = N_pair^4 N_quark^2.
     # And 320 = N_pair^6 (N_quark - 1).
     # 320 * 576 / 5 = N_pair^6 (N_quark - 1) * N_pair^4 N_quark^2 / (N_quark - 1) = N_pair^10 N_quark^2.
@@ -389,7 +419,7 @@ def audit_d6_cross_channel_identity(N: dict, S: dict) -> None:
     check("D6 structural: 1280 = N_pair^8 (N_quark - 1) = 256 * 5",
           expected_scaling == 1280)
 
-    # Cross-product as perfect square of cross-product:
+    # Cross-product as scalar-multiple square of cross-product:
     # (P + 3Q)(Q - P) = (4 (...)^2) * (320 (4 - alpha_s)^2)
     #                = 4 * 320 * ((alpha_s^2 - 4 alpha_s + 96)(4 - alpha_s))^2
     # is the SQUARE of structural integer * (alpha_s^2 - 4 alpha_s + 96)(4 - alpha_s).
@@ -402,21 +432,21 @@ def audit_d6_cross_channel_identity(N: dict, S: dict) -> None:
 
 
 def audit_d7_module_structure(N: dict, S: dict) -> None:
-    banner("D7: (P, Q) algebraic system - perfect-square decomposition")
+    banner("D7: (P, Q) algebraic system - scalar-multiple square decomposition")
 
     print("  The (P, Q) module on the retained surface has the structure:")
     print("    {alpha P + beta Q : alpha, beta in Q}")
     print("    = (alpha + beta)(alpha_s^2 - 4 alpha_s + 96)^2 + (-240 alpha + 80 beta)(4 - alpha_s)^2.")
     print()
-    print("  The 'perfect-square' subset is the union of two 1-D lines:")
+    print("  The scalar-multiple-square subset is the union of two 1-D lines:")
     print("    Line A: {(alpha, 3 alpha) : alpha in Q}, generated by P + 3Q,")
     print("    Line B: {(alpha, -alpha) : alpha in Q}, generated by Q - P.")
     print()
     print("  Other linear combinations (off the two lines) have BOTH")
     print("  (alpha_s^2 - 4 alpha_s + 96)^2 and (4 - alpha_s)^2 components,")
-    print("  and are therefore NOT perfect squares as polynomials in alpha_s.")
+    print("  and are therefore not scalar multiples of one square polynomial.")
     print()
-    print("  The two perfect-square forms encode:")
+    print("  The two scalar-multiple square forms encode:")
     print("    P + 3Q proportional to perim_sq^2  (Perimeter channel),")
     print("    Q - P proportional to eta_bar^2     (Jarlskog channel).")
     print()
@@ -448,16 +478,17 @@ def audit_summary() -> None:
     print("  NEW retained closed forms:")
     print()
     print("    (D2) Q(alpha_s) - P(alpha_s)  =  N_pair^6 (N_quark - 1) (N_pair^2 - alpha_s)^2,")
-    print("         a perfect square in (4 - alpha_s) with structural-integer scaling.")
+    print("         a scalar-multiple square in (4 - alpha_s) with structural-integer scaling.")
     print()
     print("    (D3) P(alpha_s) + 3 Q(alpha_s)  =  N_pair^2 (alpha_s^2 - 4 alpha_s + 96)^2,")
-    print("         a perfect square in (alpha_s^2 - 4 alpha_s + 96) = 48 perim_sq.")
+    print("         a scalar-multiple square in (alpha_s^2 - 4 alpha_s + 96) = 48 perim_sq.")
     print()
-    print("    (D4) Two perfect-square SUBSPACES of the (P, Q) module:")
+    print("    (D4) Two scalar-multiple square SUBSPACES of the (P, Q) module:")
     print("         Line A (beta = 3 alpha):   alpha P + 3 alpha Q  =  4 alpha (alpha_s^2 - 4 alpha_s + 96)^2,")
     print("         Line B (beta = -alpha):    alpha P - alpha Q    =  -320 alpha (4 - alpha_s)^2.")
-    print("         All other (alpha, beta) give linear combinations that are NOT")
-    print("         perfect squares in alpha_s (have both (alpha_s^2 - 4 alpha_s + 96)^2 and")
+    print("         Generic coefficient comparison shows all other (alpha, beta) give")
+    print("         mixed channels rather than scalar multiples of one square (both")
+    print("         (alpha_s^2 - 4 alpha_s + 96)^2 and")
     print("         (4 - alpha_s)^2 components).")
     print()
     print("    (D5) Physical interpretation:")
@@ -468,8 +499,8 @@ def audit_summary() -> None:
     print("         (P + 3Q)(Q - P)  =  N_pair^8 (N_quark - 1) (alpha_s^2 - 4 alpha_s + 96)^2 (4 - alpha_s)^2.")
     print("         sqrt((P + 3Q)(Q - P))  =  N_pair^4 sqrt(N_quark - 1) (alpha_s^2 - 4 alpha_s + 96)(4 - alpha_s).")
     print()
-    print("    (D7) The (P, Q) algebraic module is perfect-square-decomposable on")
-    print("         the retained surface. The two perfect-square forms span the module:")
+    print("    (D7) The (P, Q) algebraic module is scalar-multiple-square-decomposable on")
+    print("         the retained surface. The two scalar-multiple square forms span the module:")
     print("           P  =  ((P + 3Q) - 3(Q - P))/4,")
     print("           Q  =  ((P + 3Q) + (Q - P))/4.")
     print()
@@ -478,7 +509,7 @@ def audit_summary() -> None:
 
 def main() -> int:
     print("=" * 88)
-    print("Brocard / Q polynomial perfect-square decomposition audit")
+    print("Brocard / Q polynomial scalar-multiple square decomposition audit")
     print("See docs/CKM_BROCARD_Q_POLYNOMIAL_PERFECT_SQUARE_DECOMPOSITION_THEOREM_NOTE_2026-04-25.md")
     print("=" * 88)
 

@@ -133,7 +133,8 @@ Validate with:
   barred-triangle Napoleon closure `N_outer^2=W_+/6`,
   `N_inner^2=W_-/6`, and
   `N_outer^2 N_inner^2=P(alpha_s(v))/82944`, the Brocard-polynomial
-  structural-integer skeleton with `p_2=2e_1^2`, plus the
+  structural-integer skeleton with `p_2=2e_1^2`, the Brocard/Q
+  square-channel decomposition into Jarlskog and perimeter channels, plus the
   Thales-mediated
   cross-system CP ratio `phi_s / sin(2 beta_d) = -alpha_s(v)/2`
   and CP-product estimator

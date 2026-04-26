@@ -7,7 +7,7 @@
 **EXACT algebraic decomposition** of the polynomial pair
 `(P(α_s), Q(α_s))` — the two fundamental quartic polynomials of the
 retained NLO Wolfenstein protected-γ̄ surface — into **two distinct
-perfect-square linear combinations**, each tied to a specific
+scalar-multiple square-channel linear combinations**, each tied to a specific
 physical observable channel (Jarlskog vs Perimeter).
 
 The headline closed forms:
@@ -16,18 +16,18 @@ The headline closed forms:
 (D2)  Q(alpha_s) - P(alpha_s)  =  N_pair^6 (N_quark - 1) (N_pair^2 - alpha_s)^2
                                  =  320 (4 - alpha_s)^2.
 
-      Perfect square in (4 - alpha_s); proportional to Wolfenstein
+      Scalar-multiple square channel in (4 - alpha_s); proportional to Wolfenstein
       eta_bar (and hence to Jarlskog J_bar).
 
 (D3)  P(alpha_s) + 3 Q(alpha_s)  =  N_pair^2 (alpha_s^2 - 4 alpha_s + 96)^2
                                   =  4 (48 perim_sq)^2
                                   =  N_pair^8 N_quark^2 perim_sq^2.
 
-      Perfect square in (alpha_s^2 - 4 alpha_s + 96) = 48 perim_sq;
+      Scalar-multiple square channel in (alpha_s^2 - 4 alpha_s + 96) = 48 perim_sq;
       proportional to perimeter-squared of the unitarity triangle.
 ```
 
-So **the (P, Q) algebraic module decomposes into two perfect-square
+So **the (P, Q) algebraic module decomposes into two scalar-multiple square
 channels**:
 - **Jarlskog channel** `Q − P = N_pair^10 N_quark^2 · η̄²`
   (proportional to `J̄²` in the normalized Wolfenstein plane),
@@ -38,6 +38,12 @@ Together they span the (P, Q) module:
 P  =  ((P + 3Q) − 3(Q − P))/4  =  (perimeter-channel − 3 Jarlskog-channel)/4,
 Q  =  ((P + 3Q) + (Q − P))/4   =  (perimeter-channel + Jarlskog-channel)/4.
 ```
+
+Throughout this note, "perfect-square channel" means a scalar multiple of
+one square polynomial in `alpha_s`. With the displayed structural prefactors,
+each channel is a literal square over the corresponding real quadratic
+coefficient field; over `Q[alpha_s]` the line classification is the
+classification of scalar-multiple square channels.
 
 **Primary runner:**
 `scripts/frontier_ckm_brocard_q_polynomial_perfect_square_decomposition.py`
@@ -67,32 +73,32 @@ Brocard-points branch).
        alpha P + beta Q  =  (alpha + beta) (alpha_s^2 - 4 alpha_s + 96)^2
                             + (-240 alpha + 80 beta) (4 - alpha_s)^2.
 
-(D2) NEW perfect-square decomposition (1) -- Jarlskog channel:
+(D2) NEW scalar-multiple square decomposition (1) -- Jarlskog channel:
        Q(alpha_s) - P(alpha_s)  =  N_pair^6 (N_quark - 1) (N_pair^2 - alpha_s)^2
                                   =  320 (4 - alpha_s)^2.
 
-     This is a perfect square in (N_pair^2 - alpha_s) = (4 - alpha_s),
+     This is a scalar-multiple square in (N_pair^2 - alpha_s) = (4 - alpha_s),
      with structural-integer scaling N_pair^6 (N_quark - 1) = 64 * 5 = 320.
 
-(D3) NEW perfect-square decomposition (2) -- Perimeter channel:
+(D3) NEW scalar-multiple square decomposition (2) -- Perimeter channel:
        P(alpha_s) + 3 Q(alpha_s)  =  N_pair^2 (alpha_s^2 - 4 alpha_s + 96)^2
                                    =  4 (alpha_s^2 - 4 alpha_s + 96)^2.
 
-     This is a perfect square in (alpha_s^2 - 4 alpha_s + 96) = 48 perim_sq,
+     This is a scalar-multiple square in (alpha_s^2 - 4 alpha_s + 96) = 48 perim_sq,
      with structural-integer scaling N_pair^2 = 4. Equivalently:
        P + 3Q  =  N_pair^8 N_quark^2 perim_sq^2  =  9216 perim_sq^2.
 
-(D4) Two perfect-square SUBSPACES of the (P, Q) module:
+(D4) Two scalar-multiple square subspaces of the (P, Q) module:
        Line A: {(alpha, 3 alpha) : alpha in Q}  ->  P + 3Q channel,
        Line B: {(alpha, -alpha) : alpha in Q}  ->  Q - P channel.
 
      ALL other linear combinations alpha P + beta Q (with (alpha, beta)
      not on either line) have BOTH (alpha_s^2 - 4 alpha_s + 96)^2 and
-     (4 - alpha_s)^2 components, and are therefore NOT perfect squares
+     (4 - alpha_s)^2 components, and are therefore NOT single-square channels
      in alpha_s.
 
      The two lines are independent in the (alpha, beta) parameter space,
-     so the perfect-square subset = (Line A) union (Line B), a
+     so the scalar-multiple square-channel subset = (Line A) union (Line B), a
      1-dimensional union of two 1-D affine subspaces (modulo origin).
 
 (D5) Physical interpretation -- Jarlskog vs Perimeter channels:
@@ -109,15 +115,15 @@ Brocard-points branch).
        (P + 3Q)(Q - P)  =  N_pair^8 (N_quark - 1) (alpha_s^2 - 4 alpha_s + 96)^2 (4 - alpha_s)^2
                          =  1280 (alpha_s^2 - 4 alpha_s + 96)^2 (4 - alpha_s)^2.
 
-     The product of the two perfect-square channels is itself a perfect
+     The product of the two square channels is itself a scalar-multiple
      square (squared-cross-product), with structural integer 1280 = N_pair^8 (N_quark - 1).
 
-(D7) The (P, Q) module is fully perfect-square-decomposable on the
+(D7) The (P, Q) module is fully scalar-multiple-square-decomposable on the
      retained surface:
        P  =  ((P + 3Q) - 3(Q - P)) / 4,
        Q  =  ((P + 3Q) + (Q - P)) / 4.
 
-     The two perfect-square channels span the module under linear
+     The two scalar-multiple square channels span the module under linear
      combination over Q.
 ```
 
@@ -149,20 +155,21 @@ alpha P + beta Q  =  alpha [(alpha_s^2 - 4 alpha_s + 96)^2 - 240 (4 - alpha_s)^2
                      + (-240 alpha + 80 beta) (4 - alpha_s)^2.
 ```
 
-For this to be a **perfect square** in `α_s`, exactly one of the two
-coefficients must vanish:
+For this to be a **single-square channel** in `α_s`, exactly one of the two
+components must remain:
 
 - **Line A**: `−240 α + 80 β = 0 ⟺ β = 3α`. Combination becomes
   `(α + 3α)(α_s² − 4α_s + 96)² = 4α (α_s² − 4α_s + 96)²`.
 - **Line B**: `α + β = 0 ⟺ β = −α`. Combination becomes
   `(−240α + 80(−α))(4 − α_s)² = −320α (4 − α_s)²`.
 
-These are the only two perfect-square subspaces. Every other `(α, β)`
-gives a combination with both perfect-square components, which is not
-itself a perfect square (it factors algebraically only into the
-`(α_s² − 4α_s + 96)` and `(4 − α_s)` channels combined).
+These are the only two scalar-multiple square subspaces. Every other `(α, β)`
+gives a combination with both square components, which is not itself a
+single-square channel. The runner verifies this generically by coefficient
+comparison against an arbitrary quadratic square, not only by testing one
+off-line example.
 
-### D2: Q − P perfect-square (Jarlskog channel)
+### D2: Q − P scalar-multiple square channel (Jarlskog channel)
 
 Setting `α = −1, β = 1` in Line B:
 
@@ -176,7 +183,7 @@ In structural integers: `320 = 64 · 5 = N_pair⁶ (N_quark − 1)`. So:
 Q - P  =  N_pair^6 (N_quark - 1) (4 - alpha_s)^2  =  N_pair^6 (N_quark - 1) (N_pair^2 - alpha_s)^2.
 ```
 
-### D3: P + 3Q perfect-square (Perimeter channel)
+### D3: P + 3Q scalar-multiple square channel (Perimeter channel)
 
 Setting `α = 1, β = 3` in Line A:
 
@@ -193,7 +200,7 @@ P + 3Q  =  N_pair^2 (48 perim_sq)^2
         =  N_pair^10 N_color^2 perim_sq^2
 ```
 
-Wait, `N_pair² × 2304 = 4 × 2304 = 9216 = (N_pair⁴ N_quark)² = N_pair⁸ N_quark²`.
+Because `N_pair² × 2304 = 4 × 2304 = 9216 = (N_pair⁴ N_quark)² = N_pair⁸ N_quark²`,
 
 So:
 
@@ -206,7 +213,7 @@ clean structural-integer form.
 
 ### D5: physical interpretation
 
-The two perfect-square channels are tied to **physical CKM observables**:
+The two scalar-multiple square channels are tied to **physical CKM observables**:
 
 - **Jarlskog channel** `Q − P`: proportional to `(4 − α_s)²` and hence to
   `η̄² = 5(4 − α_s)²/576`. So `Q − P = 320(4−α_s)² = 320 × 576/5 × η̄² = 36864 η̄²`.
@@ -266,8 +273,6 @@ solving for `(P, Q)`:
 P + 3Q  =  X,
 Q - P  =  Y.
 
-Adding: 4Q = X + Y - 2(Q - P) - 4Q + 4Q ... hmm let me re-derive.
-
 Adding the two: P + 3Q + Q - P = X + Y => 4Q = X + Y => Q = (X + Y)/4.
 Subtracting: (P + 3Q) - 3(Q - P) = X - 3Y => P + 3Q - 3Q + 3P = X - 3Y => 4P = X - 3Y => P = (X - 3Y)/4.
 ```
@@ -279,7 +284,7 @@ P  =  ((P + 3Q) - 3(Q - P)) / 4  =  (perimeter channel - 3 * Jarlskog channel) /
 Q  =  ((P + 3Q) + (Q - P)) / 4   =  (perimeter channel + Jarlskog channel) / 4.
 ```
 
-This is the **inverse decomposition**. The two perfect-square channels
+This is the **inverse decomposition**. The two scalar-multiple square channels
 `(X, Y) = (P + 3Q, Q − P)` form a complete basis for the (P, Q)
 module, with `(P, Q)` recovered by linear combinations of `(X, Y)`.
 
@@ -294,7 +299,7 @@ All identities verified via sympy:
 | D3 P + 3Q | `4 (α_s² − 4α_s + 96)² = N_pair² (α_s² − 4α_s + 96)²` | sympy `simplify(diff) == 0` |
 | D4 Line A | `P + 3Q proportional to (α_s² − 4α_s + 96)²` | sympy exact |
 | D4 Line B | `Q − P proportional to (4 − α_s)²` | sympy exact |
-| D4 off-line | `P + 2Q has both components` (non-perfect-square) | numerical check |
+| D4 generic classification | coefficient comparison against an arbitrary quadratic square forces `β = 3α` or `β = −α` | sympy exact |
 | D5 Jarlskog | `Q − P = 36864 η̄² = N_pair^10 N_quark² η̄²` | sympy `simplify(diff) == 0` |
 | D5 Perimeter | `P + 3Q = 9216 perim_sq² = N_pair⁸ N_quark² perim_sq²` | sympy `simplify(diff) == 0` |
 | D6 cross | `(P + 3Q)(Q − P) = 1280 (α_s²−4α_s+96)² (4−α_s)²` | sympy `simplify(diff) == 0` |
@@ -317,27 +322,27 @@ structure of linear combinations** had not been characterized.
 
 This note delivers:
 
-1. **NEW perfect-square decomposition** of the (P, Q) module into two
+1. **NEW scalar-multiple square decomposition** of the (P, Q) module into two
    distinct channels, each with structural-integer scaling:
    - Jarlskog channel `Q − P = N_pair^10 N_quark² η̄²`,
    - Perimeter channel `P + 3Q = N_pair⁸ N_quark² perim_sq²`.
 
-2. **NEW characterization of perfect-square linear combinations**: the
-   set of `(α, β)` such that `αP + βQ` is a perfect square consists
-   of exactly two lines `(Line A: β = 3α)` and `(Line B: β = −α)`. All
-   other `(α, β)` give non-perfect-square combinations with mixed
-   components.
+2. **NEW characterization of scalar-multiple square channels**: the
+   set of `(α, β)` such that `αP + βQ` is a scalar multiple of one
+   square polynomial consists of exactly two lines `(Line A: β = 3α)`
+   and `(Line B: β = −α)`. All other `(α, β)` give mixed-channel
+   combinations.
 
-3. **NEW physical interpretation**: the two perfect-square channels
+3. **NEW physical interpretation**: the two scalar-multiple square channels
    correspond to two specific physical observables — Jarlskog squared
    and perimeter-squared — and their structural-integer scalings are
    exact powers of `N_pair, N_quark`.
 
 4. **NEW cross-channel identity**: the product of the two channels is
-   itself a perfect square of `N_pair⁴ √(N_quark − 1) (α_s² − 4α_s + 96)(4 − α_s)`.
+   itself a scalar-multiple square of `N_pair⁴ √(N_quark − 1) (α_s² − 4α_s + 96)(4 − α_s)`.
 
 5. **NEW module decomposition**: `P` and `Q` are recovered as linear
-   combinations of the two perfect-square channels:
+   combinations of the two scalar-multiple square channels:
    `P = (perimeter − 3·Jarlskog)/4`, `Q = (perimeter + Jarlskog)/4`.
 
 ### Why this counts as pushing the science forward
@@ -345,18 +350,18 @@ This note delivers:
 The Brocard polynomial `P(α_s)` and Q-polynomial `Q(α_s)` are the
 **two fundamental quartic polynomials** of the retained NLO Wolfenstein
 protected-γ̄ surface. This note shows that the algebraic structure of
-the (P, Q) pair has a **canonical perfect-square decomposition** into
+the (P, Q) pair has a **canonical scalar-multiple square decomposition** into
 two channels, each tied to a specific physical observable:
 
-- The **Jarlskog channel** `Q − P` is purely a perfect square in
+- The **Jarlskog channel** `Q − P` is purely a scalar-multiple square in
   `(4 − α_s)`, proportional to `J̄²`. This decouples the
   CP-violation magnitude from the rest.
-- The **Perimeter channel** `P + 3Q` is purely a perfect square in
+- The **Perimeter channel** `P + 3Q` is purely a scalar-multiple square in
   `(α_s² − 4α_s + 96)`, proportional to `perim_sq²`. This decouples
   the triangle-shape magnitude from the rest.
 
 The fact that the (P, Q) module decomposes **exactly** into these two
-perfect-square channels — with structural-integer scaling factors —
+scalar-multiple square channels — with structural-integer scaling factors —
 is a strong algebraic statement about the retained surface. It says:
 the protected-γ̄ structure forces a clean separation of the algebraic
 content into "CP-violation magnitude" and "perimeter magnitude"
@@ -378,23 +383,23 @@ forces:
   Q - P  =  N_pair^6 (N_quark - 1) (N_pair^2 - alpha_s)^2  (Jarlskog channel),
   P + 3Q  =  N_pair^8 N_quark^2 perim_sq^2                  (Perimeter channel).
 
-  The set of perfect-square linear combinations alpha P + beta Q is
+  The set of scalar-multiple square-channel linear combinations alpha P + beta Q is
   exactly the union of two lines (beta = 3 alpha) and (beta = -alpha).
 ```
 
 Any framework revision moving `(rho_bar, eta_bar)` off the retained
-protected-γ̄ surface would break the perfect-square structure of both
+protected-γ̄ surface would break the square-channel structure of both
 combinations simultaneously, since the algebraic identity
 `P = (alpha_s^2 - 4 alpha_s + 96)^2 - 240(4 - alpha_s)^2` and the
 analogous one for Q are tied to the retained `tan(γ̄) = √5`.
 
 ## What This Claims
 
-- `(D2)`: NEW retained perfect-square decomposition
+- `(D2)`: NEW retained scalar-multiple square decomposition
   `Q − P = N_pair⁶ (N_quark − 1) (N_pair² − α_s)²`.
-- `(D3)`: NEW retained perfect-square decomposition
+- `(D3)`: NEW retained scalar-multiple square decomposition
   `P + 3Q = N_pair² (α_s² − 4α_s + 96)²`.
-- `(D4)`: NEW retained characterization of the two perfect-square
+- `(D4)`: NEW retained characterization of the two scalar-multiple square
   subspaces of the (P, Q) module.
 - `(D5)`: NEW retained physical interpretation: Jarlskog channel
   `Q − P = N_pair^10 N_quark² η̄²`; Perimeter channel
@@ -413,7 +418,7 @@ analogous one for Q are tied to the retained `tan(γ̄) = √5`.
   all structural integers are retained inputs.
 - Does **not** depend on any α_s-running pipeline.
 - Does **not** make a direct CKM-observable claim about the (P, Q) pair;
-  the perfect-square channels are derived algebraic structures of the
+  the scalar-multiple square channels are derived algebraic structures of the
   Brocard polynomial and the Q-polynomial.
 
 ## Reproduction
@@ -425,7 +430,7 @@ python3 scripts/frontier_ckm_brocard_q_polynomial_perfect_square_decomposition.p
 Expected:
 
 ```text
-TOTAL: PASS=25, FAIL=0
+TOTAL: PASS=28, FAIL=0
 ```
 
 The runner:
@@ -436,7 +441,7 @@ The runner:
 - Independently extracts retained inputs (`N_pair`, `N_color`, `N_quark`).
 - Computes `P, Q` symbolically and verifies all six identities (D2-D7)
   by `simplify(diff) == 0` via sympy.
-- Checks that off-line linear combinations are NOT perfect squares.
+- Checks that off-line linear combinations are NOT single-square channels.
 - Verifies the cross-channel identity and the module decomposition
   inverse relations.
 
@@ -458,7 +463,7 @@ The Brocard polynomial `P(α_s)` and Q-polynomial `Q(α_s)` appear in
 9+ companion closed-form theorems (Brocard angle, Symmedian/Brocard
 circle, Steiner-Marden, Weitzenbock, Pedoe, Brocard points,
 Napoleon, nine-point pencil, Vieta structural integers, Orthic
-triangle). This note provides the perfect-square decomposition of
+triangle). This note provides the scalar-multiple square decomposition of
 the (P, Q) module that completes the algebraic characterization.
 
 **NOT cited as derivation input:**
