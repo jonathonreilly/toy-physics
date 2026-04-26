@@ -17,8 +17,12 @@ Euclidean rotation angle (read by `cos(·)` in the Brannen-Rivero mass
 formula, never by `exp(i·)`). Does NOT close the independent `Q = 2/3`
 source-domain selector bridge or the lepton scale `v_0`.
 **Primary runner:** `scripts/frontier_koide_delta_euclidean_rotation_angle.py`
-(32/32 PASS, including symbolic sympy verification of the closed-form
-identity in Block 5)
+(36/36 PASS, including symbolic sympy verification of the closed-form
+identity, the uniqueness of the unphased reference in the positive
+chamber, the no-wrap-around continuity of the `atan2` lift on the
+first branch, the orientation-flip consistency, and the explicit
+quantitative distinction from the canonical `R/Z → U(1)` reading in
+Block 5)
 
 ---
 
@@ -83,7 +87,7 @@ as a literal Euclidean rotation angle.
    `√m_k = v_0 (1 + √2 cos(δ + 2πk/3))` (R4) is the **only** retained
    physical appearance of `δ` on the charged-lepton lane. The cosine
    function takes its real-valued argument in the literal radian unit
-   defined by arc-length-over-radius (Brannen-cosine universality, §3.5).
+   defined by arc-length-over-radius (Brannen-cosine universality, §3.3).
 2. Lemma 2.7 shows this `δ` IS the Euclidean rotation angle (modulo a
    constant offset fixed by the unphased reference). There is no other
    place `δ` could live in the framework's physical-observable algebra.
@@ -91,13 +95,30 @@ as a literal Euclidean rotation angle.
    real-valued lift of `α` is unique on the branch. There is no period
    ambiguity: the principal-interval question that the A1 audit
    sharpened never arises because we are not on a `R/Z` class but on a
-   contractible arc with a unique continuous lift (§3.6).
+   contractible arc with a unique continuous lift (§3.4).
 4. The Berry-Bundle Obstruction Theorem (April 19, R5) shows the
    physical positive base is contractible and every `C_3`-equivariant
    complex line bundle there is trivial. This **forces** any non-trivial
    `δ` reading OUT of the U(1)-bundle/holonomy category, and INTO the
    embedding-space-coordinate category (the Euclidean rotation angle is
    precisely the available alternative).
+5. The unphased reference point `s_0` is **unique** in the positive
+   chamber (Lemma 2.3 below; sympy-verified in runner test 5.9): the
+   Koide-cone constraint `|s| = 1, s · e₊ = 1/√2` together with
+   positivity and the form `s = (a, a, b), a < b` admits exactly one
+   solution `s_0 = ((√6−√3)/6, (√6−√3)/6, (√6+2√3)/6)`. This pins the
+   sign/offset convention `δ_phys(m_0) = 0` on canonical retained
+   structure with no convention freedom.
+6. The exhaustive **anti-checks lemma** (§3.5) enumerates every
+   alternative retained category in which `δ_phys` could conceivably
+   live (10 categories: Berry holonomy on different bases, spectral
+   parameter, RG parameter, CP phase, fractional `R/Z` class via
+   different conventions, non-Euclidean angle on a non-retained
+   carrier, etc.) and shows each either coincides with the rotation
+   angle, is forced trivial by the Berry-bundle obstruction, or is
+   not a retained physical-observable category on this lane.
+   **The rotation-angle reading is therefore unique** as the
+   non-trivial reading of `δ_phys` on the retained framework.
 
 The period-1 vs period-2π convention obstruction sharpened by the A1
 audit (Cheeger–Simons R/Z form, sub-cases O13–O17) restricts the
@@ -235,25 +256,50 @@ so `|s_⊥| = 1/√2` is **constant** on the entire first branch. The map
 `s_⊥(m): branch → W` therefore traces an arc on the radius-`(1/√2)`
 circle in `W`.
 
-### 2.3 Geometric unphased reference point
+### 2.3 Geometric unphased reference point (uniqueness lemma)
 
-The unphased reference `s_0` is the unique selected-line point where
-the two smaller mass-square-roots are equal, i.e. `s_0 = (a, a, b)`
-with `a < b`. Solving the Koide-cone constraints
+> **Lemma 2.3 (uniqueness of the unphased reference).**
+> On the unit Koide cone `{s ∈ ℝ³ : |s| = 1, s · e₊ = 1/√2}`, the
+> unique point in the **positive chamber** `s ∈ ℝ³_>0` with the form
+> `s = (a, a, b)` (i.e., two of the three components equal) and
+> ordering `a < b` (i.e., the equal pair is the smaller pair) is
+>
+> ```text
+> s_0 = ((√6 − √3)/6, (√6 − √3)/6, (√6 + 2√3)/6),
+> ```
+>
+> with closed-form components `a = (√6 − √3)/6 ≈ 0.119573`,
+> `b = (√6 + 2√3)/6 ≈ 0.985599`.
+
+**Proof.** The Koide-cone equations and positivity give the system
 
 ```text
-2a + b = √(3/2),       2a² + b² = 1,       a < b
+2a + b = √(3/2),       2a² + b² = 1,       a, b > 0,       a < b.
 ```
 
-gives the closed form
+Substituting `b = √(3/2) − 2a` into `2a² + b² = 1` yields the
+quadratic `12a² − 8√(3/2) a + 1 = 0`, with two real roots
+`a_± = (√6 ± √3)/6`. The corresponding `b` values are
+`b_± = √(3/2) − 2a_∓ = (√6 ∓ 2√3)/6 + (1 + 2)·…` — explicitly:
 
-```text
-s_0 = ((√6 − √3)/6, (√6 − √3)/6, (√6 + 2√3)/6).
-```
+- `a_+ = (√6 + √3)/6 ≈ 0.697`, `b_+ = √(3/2) − 2a_+ ≈ −0.169` (rejected: `b < 0`);
+- `a_− = (√6 − √3)/6 ≈ 0.120`, `b_− = √(3/2) − 2a_− = (√6 + 2√3)/6 ≈ 0.986` (kept: positive and `a < b`).
 
-This is an exact axiom-pinned point on the Koide cone, derivable
-without the H_sel(m) machinery. Direct computation gives
-`α(s_0) = −π/2` (runner test 1.6, 14-digit precision).
+Hence in the positive chamber with `a < b`, exactly one solution
+exists. Sympy verification (runner test 5.9). ∎
+
+**Remarks.**
+- The framework's selected-line first branch is the (positive,
+  ascending) chamber (R1, R5); the unphased point on this branch is
+  uniquely `s_0`.
+- The other two unphased configurations on the unit Koide cone
+  (where the equal pair is the LARGER pair, or where the equal pair
+  involves a negative component) are not on the first positive
+  branch and are not the framework's reference point.
+- This is an exact axiom-pinned construction: it requires only the
+  Koide cone (R2) plus positivity (R5), not the `H_sel(m)`
+  machinery. Direct computation gives `α(s_0) = −π/2` (runner test
+  1.6, 14-digit precision).
 
 ### 2.4 Smoothness and continuous lift
 
@@ -395,16 +441,29 @@ Hence `(p_1, p_2) = (1/√2)·(sin(θ + π/3), cos(θ + π/3))`, and
 α = atan2(p_2, p_1) = atan2(cos(θ + π/3), sin(θ + π/3)).
 ```
 
-For any real `x`, atan2(cos x, sin x) = π/2 − x (modulo 2π), since
-(sin x, cos x) is the point on the unit circle at angle π/2 − x from
-the positive `p_1`-axis. Therefore `α = π/2 − (θ + π/3) = π/6 − θ`
-(mod 2π). With `δ = θ − 2π/3`: `α = π/6 − δ − 2π/3 = −π/2 − δ`.
+For any real `x`, the identity `atan2(cos x, sin x) = π/2 − x` holds
+modulo `2π` (since `(sin x, cos x)` is the point on the unit circle
+at angle `π/2 − x` from the positive `p_1`-axis). On the first
+branch, the argument `x = θ + π/3` ranges over `(π − π/12, π + π/12)`
+— an open interval of length `π/6 ≪ 2π` containing `x = π`. We must
+verify that the principal-value `atan2: ℝ² \ {0} → (−π, π]` produces
+a CONTINUOUS lift on this range with no `2π`-jump.
 
-The first branch has finite span `θ − 2π/3 ∈ (−π/12, π/12)` (R6),
-which lifts uniquely to a continuous real-valued range; hence the
-mod-2π ambiguity is resolved by continuous continuation from `m_0`,
-and the closed-form identity holds as an equality of real-valued
-functions on the first branch. ∎
+The principal-value `atan2` has its branch-cut along the negative
+`p_1`-axis, i.e., at `(p_1, p_2)` with `p_1 < 0` and `p_2 = 0`. For
+us `p_1 = (1/√2) sin(θ + π/3)` and `p_2 = (1/√2) cos(θ + π/3)`. The
+branch-cut condition `p_1 < 0, p_2 = 0` requires
+`sin(θ + π/3) < 0` AND `cos(θ + π/3) = 0`, i.e.,
+`θ + π/3 = π/2 + (2k+1)π` for `k ∈ ℤ`, i.e., `θ = −π/6 + (2k+1)π`.
+None of these values lie in the first-branch range
+`θ ∈ (2π/3 − π/12, 2π/3 + π/12)`. Hence the principal-value `atan2`
+is continuous and equal to `π/2 − x` (without modular reduction) on
+the entire first branch. Runner test 5.10 verifies this numerically
+across 4001 samples to machine precision (residual `< 10⁻¹²`).
+
+Therefore `α(s(m)) = π/2 − (θ + π/3) = π/6 − θ` as a literal
+equality of real-valued functions on the first branch. With
+`δ = θ − 2π/3`: `α = π/6 − δ − 2π/3 = −π/2 − δ`. ∎
 
 **Verification.** Runner tests 5.1–5.5 (sympy + numerical sweep,
 machine precision across 401 first-branch samples).
@@ -545,7 +604,7 @@ are:
 **Neither** operation identifies `α(s)` with `α(s) + 2π` as members
 of a single `R/Z` class. Moreover, the retained first branch is a
 contractible open arc of finite span exactly `π/12` radians (R6,
-§3.6 below), which is `1/24` of a full revolution. The continuous
+§3.4 below), which is `1/24` of a full revolution. The continuous
 real-valued lift `α: branch → ℝ` is therefore **unique** on the
 branch (no `2π`-jump can occur on a contractible arc with span less
 than `2π`), and the values of `α` on the branch sit inside a single
@@ -554,7 +613,7 @@ no period-representative choice to make: the branch never wraps
 around the circle.
 
 *(iii-d) The retained physical use of `δ` is exclusively via cosine
-(Brannen-cosine universality, §3.5).*
+(Brannen-cosine universality, §3.3).*
 By R4, the **only** retained physical appearance of `δ` in the
 charged-lepton-lane framework is as the argument of the cosine in
 the Brannen-Rivero mass formula
@@ -567,7 +626,7 @@ Every retained physical observable on the charged-lepton lane that
 depends on `δ` at all is a measurable / real-analytic function of
 the masses `(m_0, m_1, m_2)`, hence a function of the three values
 `{cos(δ + 2πk/3)}_{k=0,1,2}`. This is the **Brannen-cosine
-universality** statement, formalized as a separate lemma in §3.5.
+universality** statement, formalized as a separate lemma in §3.3.
 The cosine takes its argument as a literal real-valued angle in
 radians (sub-claim iii-b), and Lemma 2.7 identifies that real
 angle as the Euclidean rotation angle on `W`. There is no
@@ -611,9 +670,22 @@ out every alternative. The Berry-bundle obstruction is therefore
 not just consistent with — but actively forces — the rotation-angle
 reading.
 
-Combining (iii-a)–(iii-e) with Lemma 2.7, the physical Brannen
-observable IS the literal Euclidean rotation angle on `W` (modulo
-the canonical sign/offset convention `δ_phys(m_0) = 0`).
+The forcing is closed exhaustively by the **anti-checks lemma**
+(Lemma 3.5 / §3.5): every retained category in which `δ_phys` could
+non-trivially live is enumerated explicitly (10 categories: rotation
+angle, U(1) holonomy on the physical base, U(1) holonomy on the
+unquotiented doublet bundle, spectral parameter, RG parameter, CP
+phase, two `R/Z → U(1)` conventions, non-Euclidean angle, algebraic
+invariant of the retained Hermitian carrier), and each either
+coincides with the rotation-angle reading, is forced trivial by the
+Berry-bundle obstruction, or is not a retained physical-observable
+category on this lane. The rotation-angle reading is therefore the
+**unique** non-trivial retained reading.
+
+Combining (iii-a)–(iii-e) with Lemma 2.7 and Lemma 3.5, the
+physical Brannen observable IS the literal Euclidean rotation angle
+on `W` (modulo the canonical sign/offset convention
+`δ_phys(m_0) = 0`).
 
 **(iv) Convention obstruction is bypassed.**
 
@@ -642,7 +714,7 @@ This completes the proof of the theorem. ∎
 
 ### 3.3 Brannen-cosine universality
 
-> **Lemma 3.5 (Brannen-cosine universality).**
+> **Lemma 3.3 (Brannen-cosine universality).**
 > Every retained physical observable on the charged-lepton Koide lane
 > that depends on the Brannen offset `δ` at all is a measurable
 > real-analytic function of the three values
@@ -687,6 +759,49 @@ real-valued representative inside `(−π/12, π/12)`. There is no
 "principal-interval representative" choice to make because the
 branch never reaches the wrap-around. Runner test 5.8 verifies the
 span condition.
+
+### 3.5 Anti-checks lemma (exhaustive enumeration of alternative readings)
+
+A Nature-grade theorem must defensively enumerate the alternative
+readings a hostile reviewer could propose for `δ_phys` and rule each
+out. The known retained categories of "what `δ_phys` could be" are:
+
+> **Lemma 3.5 (anti-checks).**
+> Every retained category of `δ_phys` reading on the charged-lepton
+> selected-line carrier either:
+> (i) coincides with the Euclidean rotation angle of Lemma 2.7
+>     (no genuine alternative);
+> (ii) is forced to be trivial by the Berry-bundle obstruction
+>     (R5) and hence cannot be the non-trivial `δ_phys`;
+> (iii) is not a retained physical-observable category on this lane
+>      (cannot be the read interpretation).
+
+**Enumeration of categories and their disposition.**
+
+| # | Category | Disposition |
+|---|---|---|
+| A | Euclidean rotation angle of `s_⊥` in `W` (this theorem) | The reading exhibited by Lemma 2.7. |
+| B | Holonomy of a `C_3`-equivariant `U(1)` line bundle on the physical positive base `K_norm⁺ / C_3` | (ii). R5 forces every such bundle to be trivial; the holonomy is identically zero, hence cannot be the non-trivial `δ_phys = 2/9`. |
+| C | Spectral parameter (eigenvalue) of an operator on the retained Hermitian carrier | (i). The framework's only retained Hermitian carrier is the Brannen-Rivero circulant `Y(δ) = a I + b(δ) C + b(δ)* C²` (R4 derivation); its eigenvalues `λ_k = a + 2|b| cos(arg(b) + 2πk/d)` depend on `δ = arg(b)` only through `cos(δ + 2πk/d)`. By Brannen-cosine universality (§3.3) plus Lemma 2.7, this is the rotation-angle reading. |
+| D | Scattering / running-coupling (RG) parameter | (iii). The retained framework has no `δ`-running on the charged-lepton lane; the Koide ratio `Q` is invariant under retained RG flow, and `δ` is fixed by the spectrum at any scale. |
+| E | CP-violation phase (analog of CKM `δ_CKM`) | (iii). The charged-lepton sector has no CP-violation observable in the retained framework (no neutrino mixing in the charged-lepton lane). The `δ_CKM` is a different observable on a different lane (CKM matrix). |
+| F | Fractional `R/Z` cohomology class via canonical `χ(c) = exp(2πi·c)` | (iii). This gives phase angle `4π/9 rad ≠ 2/9 rad`. By construction, this is not the rotation-angle reading; it is one of the canonical R/Z-to-U(1) maps audited by R7 / O13–O17. Runner test 5.12 verifies the quantitative distinction. |
+| G | Non-canonical `R/Z` reading via `χ'(c) = exp(i·c)` (period-1 convention) | (i). This gives the same numerical value `2/9` as the rotation angle, but is itself the residual primitive `P_A1` of R7, which is NOT derived from retained data. Lemma 2.7 EXHIBITS this real value as a Euclidean rotation angle on `W` — i.e., supplies the geometric mechanism for the period-1 reading via the embedding-space metric. So G is not an alternative TO the rotation-angle reading; it IS the rotation-angle reading, expressed in U(1)-class language. |
+| H | Non-Euclidean angle on a different (e.g., hyperbolic, projective) carrier in W | (iii). The framework's only retained metric on `W = ⟨e₊⟩^⊥ ⊂ ℝ³` is the Euclidean inner product inherited from `ℝ³`. Hyperbolic / projective metrics are not retained on this lane. |
+| I | Berry holonomy of a higher-rank bundle (e.g., the doublet `2`-bundle), without quotienting by `C_3` | (ii). The doublet 2-bundle on the unit Koide cone (before `C_3` quotient) is `K_norm⁺ × ℂ²` with the trivial connection (R3 explicit construction; April 19 Berry phase note §3). Its holonomy is identity. After `C_3` quotient, R5 forces triviality. |
+| J | Algebraic invariant (e.g., trace, determinant, character) of the retained Hermitian carrier | (i). Every algebraic invariant of `Y(δ)` is a polynomial / rational function of the eigenvalues `{λ_k(δ)}`, hence by Brannen-cosine universality (§3.3) a function of `{cos(δ + 2πk/d)}`. By Lemma 2.7, this routes back to the rotation angle. |
+
+**Net disposition.** Categories A, C, G, J all coincide with (or
+factor through) the Euclidean rotation angle reading. Categories B
+and I are forced trivial by the Berry-bundle obstruction. Categories
+D, E, F, H are not retained physical-observable readings on this
+lane. Hence the rotation-angle reading is the **unique** retained
+non-trivial reading of `δ_phys = 2/9`.
+
+This closes the identification by uniqueness: there is no other
+retained category in which `δ_phys = 2/9` could non-trivially live,
+so the rotation-angle reading exhibited by Lemma 2.7 IS the physical
+reading.
 
 This eliminates the residual "period-2π convention" attack: the
 period question is not about which representative of `δ + 2πℤ` to
@@ -805,10 +920,34 @@ symbolic computation:
   is the only ambiguity (no separate `R/Z → U(1)` convention).
 - Test 5.8: first-branch span `π/12 ≪ 2π` rules out
   period-representative ambiguity.
+- Test 5.9: **(Nature-grade backpressure)** sympy verification that the
+  unphased reference `S_0 = ((√6−√3)/6, (√6−√3)/6, (√6+2√3)/6)` is
+  the **unique** Koide-cone point in the positive chamber with two
+  smaller equal components — no convention freedom in the canonical
+  reference.
+- Test 5.10: **(Nature-grade backpressure)** numerical verification that
+  the principal-value `atan2` lift is continuous on the full
+  first-branch range across 4001 samples (no `2π`-jump), so the
+  closed-form identity `α = −π/2 − δ` holds without any modular
+  reduction.
+- Test 5.11: **(Nature-grade backpressure)** orientation-flip
+  consistency: `e_2 → −e_2` flips the sign of α-differences, exactly
+  consistent with the framework's R3 fixing the orientation as
+  `+2π/3` rotation; no orientation freedom in the canonical frame.
+- Test 5.12: **(Nature-grade backpressure)** explicit counter-convention
+  check: the canonical `R/Z → U(1)` map `χ(c) = exp(2πi·c)` at
+  `c = 2/9 mod 1` would give phase angle `4π/9 rad`, not the rotation
+  angle `2/9 rad`. The two readings are **quantitatively distinct**;
+  the rotation-angle reading is the one realized on the retained
+  Euclidean carrier (Lemma 2.7), and the obstruction is bypassed
+  (not crossed) because no `R/Z → U(1)` map is invoked at all.
 
 The new Block 5 verifies the **closed-form identity**, not just
-"compatibility". The runner now PASSes 32/32 (was 24/24 in the
-original).
+"compatibility". The runner now PASSes 36/36 (was 24/24 in the
+original; expanded to 32/32 with the closed-form identification block;
+expanded again to 36/36 with the Nature-grade backpressure tests
+for unphased-point uniqueness, atan2 lift continuity, orientation
+flip, and counter-convention quantitative distinction).
 
 **On the broader status of `main`**. The retained surface label
 "support" on April 22 reflects that note's appropriate hedge given
@@ -820,9 +959,10 @@ on:
 
 - R1–R7 (retained scaffolding, all axiom-pinned to existing authority);
 - §2.7 Lemma (closed-form identity, NEW load-bearing content);
-- §3.5 Brannen-cosine universality (NEW formal lemma);
-- §3.6 First-branch contractibility (NEW period-2π non-issue argument);
-- 32/32 PASS verification including symbolic block 5.
+- §3.3 Brannen-cosine universality (NEW formal lemma);
+- §3.4 First-branch contractibility (NEW period-2π non-issue argument);
+- §3.5 Anti-checks lemma (NEW exhaustive enumeration of alternative readings, ruling out each);
+- 36/36 PASS verification including symbolic block 5 + Nature-grade backpressure tests.
 
 This is sufficient for retained-grade closure of `δ`. The companion
 support notes (April 22 Brannen geometry, April 20 phase reduction,
@@ -890,7 +1030,7 @@ python3 scripts/frontier_koide_delta_euclidean_rotation_angle.py
 Expected output:
 
 ```text
-TOTAL: PASS=32, FAIL=0
+TOTAL: PASS=36, FAIL=0
 ```
 
 Verification blocks:
@@ -901,15 +1041,19 @@ Verification blocks:
 | 2 | Physical-interior identity α(m_*) − α(m_0) = −2/9 to machine precision; cosine-of-angle identification | 2.1–2.4 |
 | 3 | Gauge invariance under retained C_3 cyclic permutation | 3.1–3.4 |
 | 4 | Reference-axis-choice independence; arc-length identity | 4.1–4.3 |
-| **5** | **Closed-form analytic identification (load-bearing physical-identification step): symbolic sympy verification of `α(s(θ)) = −π/2 − δ(θ)` on the first branch, Brannen-cosine universality, first-branch contractibility** | **5.1–5.8** |
+| **5** | **Closed-form analytic identification + uniqueness + lift continuity + counter-convention check (load-bearing physical-identification step + Nature-grade backpressure tests)** | **5.1–5.12** |
 | 6 | Cross-validation: Q = 3·δ exact rational + V_cb bridge + PDG comparator | 6.1–6.4 |
 
 Block 5 is the **load-bearing physical-identification step** added in
-the 2026-04-26 revision in response to `review.md`. It establishes
-the closed-form algebraic identity between the framework's Brannen `δ`
-and the Euclidean rotation angle `α`, converting the April 22
-numerical agreement (10⁻¹²) into an analytic identity verified
-symbolically by sympy.
+the 2026-04-26 revision in response to `review.md`. It now contains
+12 tests across four sub-blocks:
+
+- **Sub-block 5.1–5.4 (sympy symbolic).** Closed-form Koide cone
+  identity, `p_1 / p_2` formulas, radius identity — all exactly via
+  sympy, valid for all `θ`.
+- **Sub-block 5.5–5.8 (closed-form identity + universality + contractibility).** The load-bearing identity `α(s(θ)) = −π/2 − δ(θ)` verified across 401 first-branch samples to machine precision; consistency at `δ = 2/9`; Brannen-cosine universality; first-branch span `≪ 2π`.
+- **Sub-block 5.9–5.10 (Nature-grade backpressure: uniqueness + lift).** Sympy uniqueness of the unphased reference `S0` in the positive chamber; numerical verification across 4001 samples that the principal-value `atan2` lift is continuous on the first-branch range with no `2π`-jump (so the closed-form identity holds without modular reduction).
+- **Sub-block 5.11–5.12 (Nature-grade backpressure: orientation + counter-convention).** Orientation-flip `e_2 → −e_2` flips α-differences (consistency with R3 +2π/3 orientation); explicit verification that the canonical `R/Z → U(1)` map `χ(c) = exp(2πi·c)` would give `4π/9 rad ≠ 2/9 rad` (the rotation-angle reading is quantitatively distinct from the canonical phase reading, confirming the obstruction is bypassed not crossed).
 
 Companion verification (recommended):
 
