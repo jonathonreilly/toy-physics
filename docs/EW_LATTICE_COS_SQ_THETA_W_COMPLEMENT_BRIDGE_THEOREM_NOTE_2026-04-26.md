@@ -1,11 +1,21 @@
-# EW-CKM Lattice cos²(θ_W) Complement Bridge: Five-Way Identity and M_W/M_Z Closed Form
+# EW-CKM Lattice cos²(θ_W) Complement Bridge: Four-Way Retained Identity, Support-Tier F5 Companion, and M_W/M_Z Closed Form
 
 **Date:** 2026-04-26
 
 **Status:** retained EW-CKM lattice-scale identity theorem; NEW
 COMPLEMENT to the retained `sin²(θ_W)|_lattice = A^4 = 4/9` bridge.
-This note derives a NEW retained five-way equality at lattice scale,
-plus a NEW closed form for the lattice-scale W/Z mass-squared ratio.
+This note derives a **NEW retained FOUR-way equality at lattice scale
+plus a SUPPORT-TIER F5 COMPANION reading**, plus a NEW closed form
+for the lattice-scale W/Z mass-squared ratio.
+
+**Reviewer correction (2026-04-26)**: an earlier draft of this note
+claimed a "five-way retained identity" that included F5 from the
+support-tier `CKM_N9_STRUCTURAL_FAMILY_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`
+inside the load-bearing equality. That overpromoted the support-tier
+Koide-bridge surface. The retained result is correctly framed here as
+a FOUR-way EW/CKM equality at retained tier, plus a SEPARATE
+support-tier F5 companion reading that is auxiliary corroboration
+only (not load-bearing for the bridge).
 
 **Explicitly not a below-Wn closure**: like its retained sister bridge
 `CKM_EW_LATTICE_A4_BRIDGE_RETAINED_IDENTITY_NOTE_2026-04-25.md`, this
@@ -25,7 +35,13 @@ theorems but not load-bearing below-Wn closures.
                           =  1 - A^4
                           =  (N_color² - N_pair²) / N_color²
                           =  (N_quark - 1) / N_color²
-                          =  5/9                                  [FIVE-WAY EQUALITY]
+                          =  5/9                                  [FOUR-WAY RETAINED EQUALITY]
+
+(C1.aux) Support-tier companion reading (NOT part of the retained
+         four-way equality; auxiliary corroboration only):
+            F5 (CKM n/9 family, support-tier) = 5/9.
+         The matching value 5/9 is a NUMERICAL coincidence with the
+         four-way retained equality, not a fifth retained route.
 
 (C2)  M_W / M_Z |_lattice =  √(N_quark - 1) / N_color
                           =  √5 / 3
@@ -56,10 +72,16 @@ This note explicitly:
   `1 - A^4`, or `M_W² / M_Z² |_lattice`. Each side is RETAINED on main via
   its own retained authority, and their numerical coincidence at `5/9` is
   a CONSISTENCY EQUALITY at retained values.
-- **Does claim**: a NEW retained five-way identity at lattice scale, a
-  NEW closed form for the lattice-scale W/Z mass-squared ratio, NEW
-  structural-integer interpretations of YT_EW bare couplings via S1,
-  and a NEW SM-specific structural identity `N_color² - N_pair² = N_quark - 1`.
+- **Does claim**: a NEW retained FOUR-way EW/CKM identity at lattice
+  scale (cos²(θ_W) = 1 - A^4 = (N_color² - N_pair²)/N_color² = (N_quark - 1)/N_color²,
+  all retained-tier), a NEW closed form for the lattice-scale W/Z
+  mass-squared ratio, NEW structural-integer interpretations of YT_EW
+  bare couplings via S1, and a NEW SM-specific structural identity
+  `N_color² - N_pair² = N_quark - 1`.
+- **Auxiliary support reading**: F5 = 5/9 from the support-tier
+  `CKM_N9_STRUCTURAL_FAMILY_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`
+  is reported as a NUMERICAL companion reading only — NOT a load-bearing
+  fifth route inside the retained equality.
 
 The lesson from `feedback_consistency_vs_derivation_below_w2.md`:
 consistency equalities are valid retained identity theorems but cannot
@@ -153,15 +175,25 @@ On retained-tier authorities of current `main`:
 | `cos²(θ_W) = g²/(g²+g_Y²)`, `M_W²/M_Z² = cos²(θ_W)`, `ρ_tree = 1` | [`EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md`](EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md) | **retained** (tree theorem) | T1, T5 dictionary |
 | `(W2)` `A² = N_pair/N_color = 2/3` | [`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md) | **retained** | T2, T3 source |
 | `Q_L : (2,3)_{+1/3}` (S1 source); `u_R, d_R : (1,3)` cross-check | [`LEFT_HANDED_CHARGE_MATCHING_NOTE.md`](LEFT_HANDED_CHARGE_MATCHING_NOTE.md), [`ONE_GENERATION_MATTER_CLOSURE_NOTE.md`](ONE_GENERATION_MATTER_CLOSURE_NOTE.md) | **retained corollary**, **retained** | S1 / P4 source for N_pair, N_color |
-| F5 = 5/9 = (N_quark-1)/N_color² = 1 - A^4 | [`CKM_N9_STRUCTURAL_FAMILY_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`](CKM_N9_STRUCTURAL_FAMILY_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md) | **support-tier** | T4 fifth equality (NOT load-bearing for the bridge) |
 | `sin²(θ_W)|_lattice = A^4 = 4/9` (sister bridge) | [`CKM_EW_LATTICE_A4_BRIDGE_RETAINED_IDENTITY_NOTE_2026-04-25.md`](CKM_EW_LATTICE_A4_BRIDGE_RETAINED_IDENTITY_NOTE_2026-04-25.md) | **retained** | T2 complement source |
 | `N_pair = N_color - 1`; `N_pair = 2`, `N_color = 3` | [`CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md`](CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md) | **retained** | T8 derivation |
 | Z³ spatial substrate; SU(3)_c via graph-first integration | [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md), [`GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md) | **retained** framework + **bounded-retained** | P6: ties d = N_color via graph-first construction |
 
-The five-way identity uses ONLY retained-tier authorities (T1-T4 main
-chain). T7 structural readings are consistency-at-retained-values
-interpretations (NOT derivations). T8 is an SM-specific structural
-identity derivable from retained W2 + N_color = 3.
+**Auxiliary support-tier reading (NOT load-bearing for the bridge):**
+
+| Input | Authority on `main` | Tier | Role |
+| --- | --- | --- | --- |
+| F5 = 5/9 = (N_quark-1)/N_color² = 1 - A^4 | [`CKM_N9_STRUCTURAL_FAMILY_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`](CKM_N9_STRUCTURAL_FAMILY_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md) | **support-tier** | T4-aux: companion numerical reading; NOT counted in retained four-way equality |
+
+The retained FOUR-way equality uses ONLY retained-tier authorities
+(T1, T2, T3a, T3b — the four routes are EW Higgs+YT_EW, sister A^4
+complement, S1-derived (N_color²-N_pair²)/N_color², S1-derived
+(N_quark-1)/N_color²). The F5 reading is reported as a SEPARATE
+support-tier auxiliary companion at the same numerical value — NOT a
+load-bearing fifth route. T7 structural readings are
+consistency-at-retained-values interpretations (NOT derivations). T8
+is an SM-specific structural identity derivable from retained W2 +
+N_color = 3.
 
 ## Derivation
 
@@ -209,16 +241,24 @@ S1 (Identification Source Theorem) gives `N_pair = 2`, `N_color = 3`,
 ```
 
 These match `cos²(θ_W)|_lattice = 5/9` from T1 and `1 - A^4 = 5/9` from
-T2 at retained values, completing the **FIVE-WAY EQUALITY**:
+T2 at retained values, completing the **FOUR-WAY RETAINED EQUALITY**:
 
 ```text
 cos²(θ_W)|_lattice  =  1 - A^4  =  (N_color² - N_pair²)/N_color²
                                 =  (N_quark - 1)/N_color²
-                                =  F5  =  5/9.
+                                =  5/9                    [FOUR-WAY RETAINED].
+```
+
+A SEPARATE support-tier numerical companion reading at the same value:
+
+```text
+F5 (CKM n/9 family, support-tier) = 5/9  [auxiliary, NOT load-bearing].
 ```
 
 `F5` is from `CKM_N9_STRUCTURAL_FAMILY_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md`
-(support-tier; NOT load-bearing for T1-T4 chain).
+(support-tier; explicitly NOT a fifth retained route inside the
+four-way equality — its agreement at 5/9 is a numerical companion,
+not load-bearing for the retained T1-T3b chain).
 
 ### T5: M_W²/M_Z²|_lattice closed form (NEW)
 
@@ -293,12 +333,12 @@ All identities verified to **exact integer/Fraction arithmetic** in the runner.
 
 | Identity | Source | Value | Match? |
 | --- | --- | ---: | --- |
-| T1: cos²(θ_W) = g_2²/(g_2² + g_Y²) | YT_EW + EW Higgs diag | 5/9 | ✓ |
-| T2: cos²(θ_W) = 1 - A^4 | sister bridge + W2 | 5/9 | ✓ |
-| T3a: (N_color² - N_pair²)/N_color² | S1 | 5/9 | ✓ |
-| T3b: (N_quark - 1)/N_color² | S1 | 5/9 | ✓ |
-| T3c: F5 (CKM n/9 family) | CKM_N9_FAMILY support | 5/9 | ✓ |
-| T4: Five-way equality at 5/9 | T1 ∧ T2 ∧ T3 | 5/9 | ✓ |
+| T1: cos²(θ_W) = g_2²/(g_2² + g_Y²) | YT_EW + EW Higgs diag (retained) | 5/9 | ✓ |
+| T2: cos²(θ_W) = 1 - A^4 | sister bridge + W2 (retained) | 5/9 | ✓ |
+| T3a: (N_color² - N_pair²)/N_color² | S1 (retained) | 5/9 | ✓ |
+| T3b: (N_quark - 1)/N_color² | S1 (retained) | 5/9 | ✓ |
+| T4: FOUR-WAY RETAINED equality at 5/9 | T1 ∧ T2 ∧ T3a ∧ T3b (all retained) | 5/9 | ✓ |
+| T4-aux: F5 support-tier companion at 5/9 | CKM_N9_FAMILY (support, NOT load-bearing) | 5/9 | ✓ (auxiliary only) |
 | T5: M_W²/M_Z²|_lattice | T1 + EW Higgs | 5/9 | ✓ |
 | T5b: M_W/M_Z|_lattice | square root of T5 | √5/3 ≈ 0.7454 | ✓ |
 | T6: tan²(θ_W)|_lattice | sin²/cos² | 4/5 | ✓ |
@@ -318,9 +358,13 @@ retained two-way consistency equality.
 
 This complement bridge tightens that to:
 
-1. **Five-way equality**: `cos²(θ_W)|_lattice = 1 - A^4 = (N_color² - N_pair²)/N_color² = (N_quark - 1)/N_color² = F5 = 5/9`,
-   tying EW gauge sector, Wolfenstein A, S1 structural integers, and
-   CKM n/9 family at one common value.
+1. **Four-way retained equality + support-tier F5 companion**:
+   `cos²(θ_W)|_lattice = 1 - A^4 = (N_color² - N_pair²)/N_color² = (N_quark - 1)/N_color² = 5/9`
+   ties the EW gauge sector, Wolfenstein A, and S1 structural integers
+   in a four-way RETAINED-tier equality. The support-tier F5 = 5/9
+   reading from the CKM n/9 family is a SEPARATE numerical companion
+   at the same value, NOT a load-bearing fifth route inside the
+   retained equality.
 
 2. **NEW W/Z mass ratio**: `M_W/M_Z|_lattice = √(N_quark - 1)/N_color = √5/3`,
    a NEW closed form for a directly observable physical quantity at
@@ -393,15 +437,20 @@ EW Higgs diagonalization, not via the structural reading.
    ratio prediction at lattice scale).
 3. `N_color² - N_pair² = N_quark - 1` (SM-specific structural identity;
    FAILS for any other N_color consistent with W2 primitive).
-4. Five-way equality `cos²(θ_W)|_lattice = 1 - A^4 = (N_color² - N_pair²)/N_color²
-   = (N_quark - 1)/N_color² = F5 = 5/9` at retained values (NEW unification).
+4. Four-way RETAINED equality `cos²(θ_W)|_lattice = 1 - A^4 = (N_color² - N_pair²)/N_color²
+   = (N_quark - 1)/N_color² = 5/9` at retained values (NEW unification),
+   plus a separate support-tier F5 = 5/9 numerical companion that is
+   auxiliary, not a fifth retained route.
 
 ### Why this counts as pushing the science forward
 
-1. **NEW unified five-way equality at lattice scale**: previously
-   only `4/9` had been bridged across EW-CKM. Now the COMPLEMENT `5/9`
-   is bridged across FIVE retained surfaces (EW gauge, Wolfenstein A,
-   structural integers via S1, CKM n/9 family, M_W/M_Z mass ratio).
+1. **NEW unified FOUR-WAY RETAINED equality at lattice scale (plus
+   support-tier F5 companion)**: previously only `4/9` had been
+   bridged across EW-CKM. Now the COMPLEMENT `5/9` is bridged across
+   FOUR retained surfaces (EW gauge, Wolfenstein A, structural
+   integers via S1 in two equivalent forms, M_W/M_Z mass ratio), with
+   the support-tier F5 = 5/9 reading from the CKM n/9 family included
+   only as a separate numerical companion (not a fifth retained route).
 
 2. **NEW W/Z mass ratio closed form at lattice scale**: `M_W/M_Z|_lattice
    = √(N_quark - 1)/N_color = √5/3` is a direct physical observable

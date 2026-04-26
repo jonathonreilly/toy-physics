@@ -1,13 +1,25 @@
 #!/usr/bin/env python3
-"""EW-CKM Lattice cos^2(theta_W) Complement Bridge: Five-Way Identity Runner.
+"""EW-CKM Lattice cos^2(theta_W) Complement Bridge: Four-Way Retained Equality Runner.
 
-Derives a NEW retained EW-CKM lattice-scale COMPLEMENT bridge identity:
+Derives a NEW retained EW-CKM lattice-scale COMPLEMENT bridge identity
+(FOUR-WAY RETAINED equality plus a SEPARATE support-tier F5 numerical
+companion):
 
   cos^2(theta_W) | _lattice  =  1 - A^4
                               =  (N_color^2 - N_pair^2) / N_color^2
                               =  (N_quark - 1) / N_color^2
-                              =  F5 (CKM n/9 family)
-                              =  5/9                  [FIVE-WAY EQUALITY]
+                              =  5/9                  [FOUR-WAY RETAINED]
+
+Auxiliary support-tier numerical companion (NOT load-bearing for the
+retained four-way equality):
+
+  F5 (CKM n/9 family, support-tier)  =  5/9            [auxiliary only]
+
+Reviewer correction (2026-04-26): an earlier version of this runner
+labelled a "five-way" identity that included F5 inside the load-bearing
+PASS. The retained equality is FOUR-WAY across retained-tier sources
+only; F5 is a SEPARATE support-tier auxiliary check at the same
+numerical value, not a fifth retained route.
 
 Plus NEW closed forms:
 
@@ -302,28 +314,60 @@ def audit_t3_via_s1(N_pair: int, N_color: int, N_quark: int,
     return val_a, val_b
 
 
-def audit_t4_five_way_equality(t1_val: Fraction, t2_val: Fraction,
-                               t3a: Fraction, t3b: Fraction) -> None:
-    """T4: Five-way equality at 5/9 across all four retained surfaces + F5."""
-    banner("T4: FIVE-WAY EQUALITY at 5/9 (load-bearing identity)")
+def audit_t4_four_way_retained_equality(t1_val: Fraction, t2_val: Fraction,
+                                        t3a: Fraction, t3b: Fraction) -> None:
+    """T4: FOUR-WAY RETAINED equality at 5/9 (load-bearing).
 
-    # F5 from CKM_N9_STRUCTURAL_FAMILY (support-tier; auxiliary)
+    Reviewer fix (2026-04-26): the load-bearing equality is FOUR-WAY across
+    retained-tier sources only (T1, T2, T3a, T3b). The support-tier F5
+    reading is checked SEPARATELY in audit_t4_aux_f5_companion as a
+    non-load-bearing auxiliary companion at the same numerical value.
+    """
+    banner("T4: FOUR-WAY RETAINED EQUALITY at 5/9 (load-bearing; retained tier only)")
+
+    print(f"  T1  (EW Higgs + YT_EW retained):   cos^2(theta_W) | _lattice = {t1_val}")
+    print(f"  T2  (1 - A^4 sister bridge):       cos^2(theta_W) | _lattice = {t2_val}")
+    print(f"  T3a ((N_c^2 - N_p^2)/N_c^2 via S1): structural reading       = {t3a}")
+    print(f"  T3b ((N_q - 1)/N_c^2 via S1):       structural reading       = {t3b}")
+
+    four_way = t1_val == t2_val == t3a == t3b == Fraction(5, 9)
+    check("T4: FOUR-WAY RETAINED EQUALITY cos^2(theta_W) = 1 - A^4 = (Nc^2 - Np^2)/Nc^2 = (Nq-1)/Nc^2 = 5/9",
+          four_way)
+
+
+def audit_t4_aux_f5_companion(four_way_val: Fraction) -> None:
+    """T4-aux: support-tier F5 companion reading at the SAME numerical value.
+
+    F5 = 5/9 from CKM_N9_STRUCTURAL_FAMILY_KOIDE_BRIDGE_SUPPORT_NOTE is
+    explicitly NOT a fifth retained route inside the four-way equality.
+    It is reported here as a SEPARATE auxiliary numerical companion only.
+    The retained four-way equality T4 is independent of this auxiliary.
+    """
+    banner("T4-aux: support-tier F5 numerical companion (NOT load-bearing)")
+
     n9_content = read_authority("docs/CKM_N9_STRUCTURAL_FAMILY_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md")
-    has_f5 = "F5" in n9_content and "5/9" in n9_content
-    F5_val = Fraction(5, 9)  # retained literal in support-tier doc
-    print(f"  F5 = 5/9 found in CKM_N9 support note?  {has_f5}")
-    check("T4 fifth-way: F5 = 5/9 retained in CKM_N9 support note", has_f5)
+    n9_status = extract_status_line(n9_content)
+    has_f5_phrase = "F5" in n9_content and "5/9" in n9_content
+    is_support = "support" in n9_status.lower()
 
+    print("  This check is AUXILIARY ONLY: F5 from a support-tier note.")
+    print("  The retained four-way equality T4 above is independent of F5.")
     print()
-    print(f"  T1 (EW Higgs + YT_EW):        cos^2(theta_W) | _lattice = {t1_val}")
-    print(f"  T2 (1 - A^4 sister bridge):   cos^2(theta_W) | _lattice = {t2_val}")
-    print(f"  T3a ((N_c^2 - N_p^2)/N_c^2):  structural reading       = {t3a}")
-    print(f"  T3b ((N_q - 1)/N_c^2):        structural reading       = {t3b}")
-    print(f"  F5 (CKM n/9 family):          fifth-way reading        = {F5_val}")
+    print(f"  CKM_N9_STRUCTURAL_FAMILY status: {n9_status!r}")
+    print(f"  Tier verified support-tier?      {is_support}")
+    print(f"  'F5' AND '5/9' phrase present in support doc? {has_f5_phrase}")
+    print()
+    print(f"  T4-aux: F5 (support-tier) = 5/9 numerical match to T4 four-way value {four_way_val}?")
 
-    five_way = t1_val == t2_val == t3a == t3b == F5_val == Fraction(5, 9)
-    check("T4: FIVE-WAY EQUALITY cos^2(theta_W) = 1 - A^4 = (Nc^2 - Np^2)/Nc^2 = (Nq-1)/Nc^2 = F5 = 5/9",
-          five_way)
+    # Auxiliary readout — labeled as such; NOT counted toward the load-bearing
+    # T4 four-way retained PASS condition above.
+    f5_companion_present = is_support and has_f5_phrase
+    print(f"  Support-tier auxiliary companion present at 5/9? {f5_companion_present}")
+    check(
+        "T4-aux (auxiliary, NOT load-bearing): support-tier F5 companion at 5/9 present",
+        f5_companion_present,
+        detail="auxiliary readout; T4 four-way retained PASS does not depend on this",
+    )
 
 
 def audit_t5_m_w_m_z_lattice(cos_sq_theta_W: Fraction, N_color: int,
@@ -471,7 +515,10 @@ def audit_no_closure_overclaim() -> None:
     print("  - T7 (structural readings g_2^2 = 1/N_pair^2, g_Y^2 = 1/(N_quark-1))")
     print("    are explicitly labeled as CONSISTENCY-AT-RETAINED-VALUES,")
     print("    NOT load-bearing for any closure.")
-    print("  - Five-way equality T4 is a NEW retained identity, not a closure.")
+    print("  - T4 four-way RETAINED equality (T1, T2, T3a, T3b) is a NEW")
+    print("    retained identity, not a closure.")
+    print("  - T4-aux F5 support-tier reading is reported SEPARATELY as a")
+    print("    non-load-bearing auxiliary companion (NOT a fifth retained route).")
     print("  - M_W/M_Z lattice-scale ratio T5 is a NEW closed form, with")
     print("    explicit running-to-physical-scale caveat (NOT a PDG prediction).")
 
@@ -483,15 +530,18 @@ def audit_summary(cos_sq_theta_W: Fraction, N_pair: int, N_color: int,
                   N_quark: int) -> None:
     banner("Summary of EW-CKM Lattice cos^2(theta_W) Complement Bridge")
 
-    print(f"  cos^2(theta_W) | _lattice = {cos_sq_theta_W} (FIVE-WAY EQUALITY)")
+    print(f"  cos^2(theta_W) | _lattice = {cos_sq_theta_W} (FOUR-WAY RETAINED EQUALITY)")
     print()
-    print("  The five equal forms at retained values:")
+    print("  The four equal RETAINED-tier forms (load-bearing):")
     print("    1. cos^2(theta_W) | _lattice  [from EW Higgs + YT_EW retained]")
     print("    2. 1 - A^4                   [from W2 + sister A^4 = 4/9 bridge]")
     print(f"    3. (N_color^2 - N_pair^2)/N_color^2 = ({N_color**2}-{N_pair**2})/{N_color**2}  [via S1]")
     print(f"    4. (N_quark - 1)/N_color^2 = ({N_quark - 1})/{N_color**2}  [via S1]")
-    print("    5. F5 (CKM n/9 family)       [auxiliary support-tier reading]")
-    print(f"    All equal {cos_sq_theta_W}.")
+    print(f"    All four equal {cos_sq_theta_W} (retained tier).")
+    print()
+    print("  Auxiliary support-tier numerical companion (NOT load-bearing):")
+    print("    F5 (CKM n/9 family, support-tier) = 5/9")
+    print("    [reported separately as non-load-bearing auxiliary; NOT a fifth retained route]")
     print()
     print(f"  M_W^2 / M_Z^2 | _lattice = (N_quark - 1)/N_color^2 = {Fraction(N_quark-1, N_color**2)}")
     print(f"                            = sqrt(5)/3 squared")
@@ -525,7 +575,10 @@ def main() -> int:
     cos_sq_theta_W = audit_t1_cos_sq_theta_w_via_yt_ew(g_2_sq, g_Y_sq)
     cos_sq_theta_W_complement = audit_t2_complement_via_a4(cos_sq_theta_W)
     t3a, t3b = audit_t3_via_s1(N_pair, N_color, N_quark, cos_sq_theta_W)
-    audit_t4_five_way_equality(cos_sq_theta_W, cos_sq_theta_W_complement, t3a, t3b)
+    audit_t4_four_way_retained_equality(
+        cos_sq_theta_W, cos_sq_theta_W_complement, t3a, t3b
+    )
+    audit_t4_aux_f5_companion(cos_sq_theta_W)
     audit_t5_m_w_m_z_lattice(cos_sq_theta_W, N_color, N_quark)
     audit_t6_tan_sq_theta_w(cos_sq_theta_W, N_pair, N_quark)
     audit_t7_structural_readings_g_couplings(g_2_sq, g_Y_sq, N_pair, N_quark)
