@@ -1,14 +1,22 @@
 # Lane 4 — Neutrino Quantitative Closure
 
 **Date:** 2026-04-26
-**Status:** ACCEPTED PLANNING LANE on `main`; no theorem or claim promotion
-**Lethality (external):** HIGH. Most experimentally-active sector. Current
-experimental program (KATRIN, JUNO, DUNE, Hyper-K) is targeting these.
+**Status:** ACCEPTED CRITICAL OPEN SCIENCE LANE on `main`; no theorem or claim
+promotion
+**Science priority:** HIGH. Current experimental programs (KATRIN, JUNO, DUNE,
+Hyper-K) are targeting these quantities.
 **Approachability:** Tier B-C (3–9 months for full closure)
+**Primary closure targets:** absolute neutrino mass scale, Δm² splittings,
+Dirac/Majorana status, Majorana phases if applicable, and carrier-level mass
+mechanism.
+**First parallel-worker target:** inventory retained neutrino/DM inputs and
+separate direct quantitative targets from bounded or phenomenological forecasts.
+**Non-claim boundary:** δ_CP and θ_23 support do not close absolute masses or
+mass splittings.
 
-## 1. Outside-judge framing
+## 1. Missing-science framing
 
-A neutrino physicist or cosmologist evaluating the framework asks:
+The framework still needs direct answers to:
 
 - "What is the absolute mass of the lightest neutrino?"
 - "Δm²_21 (solar) and Δm²_31 (atmospheric) — what does the framework predict?"
@@ -22,9 +30,9 @@ the charged-lepton Koide structure. The DM closed package gives δ_CP ≈ -81° 
 θ_23 upper octant, but absolute mass scales and Δm² values are bounded
 companion at best.
 
-**External judges treat the neutrino sector as the most experimentally testable
-near-term lane.** Not closing it means leaving the most active experimental
-front open.
+**The neutrino sector is one of the most experimentally testable near-term
+lanes.** Not closing it means leaving a major quantitative matter-sector front
+open.
 
 ## 2. Current state of repo content
 

@@ -1,15 +1,21 @@
 # Lane 2 — Atomic-Scale Predictions
 
 **Date:** 2026-04-26
-**Status:** ACCEPTED PLANNING LANE on `main`; no theorem or claim promotion
-**Lethality (external):** HIGH-VISCERAL. "If you can't derive -13.6 eV, why
-should anyone believe Λ?"
+**Status:** ACCEPTED CRITICAL OPEN SCIENCE LANE on `main`; no theorem or claim
+promotion
+**Science priority:** HIGH. Hydrogen/Rydberg/fine-structure predictions are
+basic quantitative checks once absolute charged-lepton scales are available.
 **Approachability:** Tier A post-Koide (substitution exercise) / Tier B pre-Koide
+**Primary closure targets:** retained Rydberg constant, hydrogen ground-state
+energy, fine-structure corrections, and Lamb/hyperfine follow-ons.
+**First parallel-worker target:** isolate the exact dependency chain from
+`m_e`, α, and retained electroweak/QED inputs to the first Rydberg theorem.
+**Non-claim boundary:** current atomic content remains scaffold-only until
+those dependencies are retained.
 
-## 1. Outside-judge framing
+## 1. Missing-science framing
 
-Every atomic / molecular / precision physicist evaluating the framework
-asks the same first question:
+The framework still needs direct answers to:
 
 > "Does the framework reproduce the Rydberg constant from first principles?
 > Does it predict -13.6 eV without textbook inputs?"
@@ -95,7 +101,7 @@ Standard hadronic vacuum polarization calculation requires:
 - Hadronic loop contributions (depends on Lane 1)
 
 **This is a currently-active BSM search lane.** A clean prediction here would
-be a major external-judge defense.
+be a major quantitative closure point.
 
 **Approachability:** Tier B-C.
 
@@ -164,5 +170,5 @@ H_2, HeH⁺, He_2, etc. via standard quantum chemistry.
    Rydberg? QED-precision on Lamb shift? Standard atomic-physics precision?
 3. Should muon g-2 be its own dedicated lane given current BSM-search
    context, or scoped within this atomic-scale lane?
-4. Should the existing atomic-scaffold lane be folded into this proposal
+4. Should the existing atomic-scaffold lane be folded into this open lane
    or remain as an exploratory scaffold?

@@ -85,7 +85,7 @@ Use this file to find the current canonical note/runner pair on `main`.
 | bounded BH entropy companion: selector no-gos and conditional primitive-CAR carrier | [AREA_LAW_MULTIPOCKET_SELECTOR_NO_GO_NOTE_2026-04-25.md](AREA_LAW_MULTIPOCKET_SELECTOR_NO_GO_NOTE_2026-04-25.md), [AREA_LAW_PRIMITIVE_EDGE_ENTROPY_SELECTOR_NO_GO_NOTE_2026-04-25.md](AREA_LAW_PRIMITIVE_EDGE_ENTROPY_SELECTOR_NO_GO_NOTE_2026-04-25.md), [AREA_LAW_ALGEBRAIC_SPECTRUM_ENTROPY_NO_GO_NOTE_2026-04-25.md](AREA_LAW_ALGEBRAIC_SPECTRUM_ENTROPY_NO_GO_NOTE_2026-04-25.md), [AREA_LAW_PRIMITIVE_PARITY_GATE_CARRIER_THEOREM_NOTE_2026-04-25.md](AREA_LAW_PRIMITIVE_PARITY_GATE_CARRIER_THEOREM_NOTE_2026-04-25.md), [AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md](AREA_LAW_PRIMITIVE_CAR_EDGE_IDENTIFICATION_THEOREM_NOTE_2026-04-25.md), [AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md](AREA_LAW_NATIVE_CAR_SEMANTICS_TIGHTENING_NOTE_2026-04-25.md) | `frontier_area_law_multipocket_selector_no_go.py`, `frontier_area_law_primitive_edge_entropy_selector_no_go.py`, `frontier_area_law_algebraic_spectrum_entropy_no_go.py`, `frontier_area_law_primitive_parity_gate_carrier.py`, `frontier_area_law_primitive_car_edge_identification.py`, `frontier_area_law_native_car_semantics_tightening.py` |
 | retained Lorentz support packet | [EMERGENT_LORENTZ_INVARIANCE_NOTE.md](EMERGENT_LORENTZ_INVARIANCE_NOTE.md), [LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md](LORENTZ_BOOST_COVARIANCE_2D_THEOREM_NOTE.md), [LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md](LORENTZ_BOOST_COVARIANCE_3PLUS1D_THEOREM_NOTE.md), [LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md](LORENTZ_KERNEL_POSITIVE_CLOSURE_NOTE.md), [ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md](ANGULAR_KERNEL_UNDERDETERMINATION_NO_GO_NOTE.md) | `frontier_emergent_lorentz_invariance.py`, `frontier_lorentz_boost_2d.py`, `frontier_lorentz_boost_3plus1d.py`, `frontier_lorentz_kernel_positive_closure.py`, `frontier_angular_kernel_underdetermination_nogo.py` |
 
-## Live Science Outside Flagship Core
+## Live Science Beyond Flagship Core
 
 | lane | authority | primary runner |
 |---|---|---|
@@ -111,7 +111,7 @@ Use this file to find the current canonical note/runner pair on `main`.
 
 ## Open Frontier Lanes
 
-These are accepted planning lanes on `main`, not theorem or publication
+These are accepted open lanes on `main`, not theorem or publication
 surfaces.
 
 | lane | authority | primary runner |
@@ -120,4 +120,4 @@ surfaces.
 | native taste-qubit teleportation (opened bounded protocol lane; planning only) | [FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md](FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md) | `n/a` |
 | chronology protection (opened bounded no-go lane; exact operational no-past-signaling support theorem, lane still open) | [FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md](FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md), [CHRONOLOGY_PROTECTION_OPERATIONAL_NO_PAST_SIGNALING_THEOREM_NOTE_2026-04-25.md](CHRONOLOGY_PROTECTION_OPERATIONAL_NO_PAST_SIGNALING_THEOREM_NOTE_2026-04-25.md) | `frontier_chronology_operational_no_past_signaling.py` |
 | signed gravitational response sector (opened high-risk discovery lane; planning only) | [FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md](FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md) | `n/a` |
-| outside-judge flagship closure lanes (hadron masses, atomic scales, quark masses, neutrino quantitative closure, Hubble constant closure; planning only) | [lanes/outside_judge/README.md](lanes/outside_judge/README.md) | `n/a` |
+| critical open science closure lanes (hadron masses, atomic scales, quark masses, neutrino quantitative closure, Hubble constant closure; open work only) | [lanes/open_science/README.md](lanes/open_science/README.md) | `n/a` |

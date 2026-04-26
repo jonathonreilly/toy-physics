@@ -1,17 +1,24 @@
 # Lane 3 — Quark Masses Retention
 
 **Date:** 2026-04-26
-**Status:** ACCEPTED PLANNING LANE on `main`; no theorem or claim promotion
-**Lethality (external):** HIGHEST. Every flavor physicist will push hardest
-here. CKM closing in α_s + rationals does NOT satisfy "quark masses derived."
+**Status:** ACCEPTED CRITICAL OPEN SCIENCE LANE on `main`; no theorem or claim
+promotion
+**Science priority:** HIGHEST. CKM closing in α_s + rationals does NOT satisfy
+"quark masses derived."
 **Approachability:** Tier B-C (4–8 months for full closure; first sub-targets
 landable in 4–8 weeks)
+**Primary closure targets:** retained `m_u`, `m_d`, `m_s`, `m_c`, and `m_b`
+from framework-native amplitudes and threshold-local retention.
+**First parallel-worker target:** separate the bounded companion matches from
+actual load-bearing theorem targets, then attack one up-type and one down-type
+sub-target.
+**Non-claim boundary:** the top mass is retained; the remaining five quark
+masses are not.
 
-## 1. Outside-judge framing
+## 1. Missing-science framing
 
-A flavor physicist evaluating the framework reads the CKM atlas/axiom package
-and is genuinely impressed by the closed-form structural identities. Then they
-ask:
+The CKM atlas/axiom package closes many mixing identities, but the framework
+still needs direct answers to:
 
 > "Wait — what about m_u, m_d, m_s, m_c, m_b? You closed CKM without using
 > quark masses, but where are the quark masses themselves?"
@@ -25,7 +32,7 @@ shortlist (7/9, √(3/5), atan(√5)−√5/6, ...) but no derivation principle 
 one.
 
 **Result: 5 of 6 quark masses are effectively pinned to PDG values via the
-bounded companion lane. This is the single most lethal external attack on
+bounded companion lane. This is a central missing-science issue for
 the framework's TOE claim after Koide.** Closing CKM structurally without
 closing the quark mass values themselves is a partial result, not a full
 flavor-sector closure.

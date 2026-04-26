@@ -134,8 +134,8 @@ questions:
   [docs/FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md](docs/FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md)
 - active working-lanes tracker:
   [docs/lanes/ACTIVE_WORKING_LANES_2026-04-26.md](docs/lanes/ACTIVE_WORKING_LANES_2026-04-26.md)
-- accepted outside-judge flagship lane planning package:
-  [docs/lanes/outside_judge/README.md](docs/lanes/outside_judge/README.md)
+- accepted critical open science lanes:
+  [docs/lanes/open_science/README.md](docs/lanes/open_science/README.md)
 - scientific boundaries and explicit non-claims:
   [docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md](docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md)
   and [docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md](docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
@@ -152,7 +152,7 @@ questions:
 - active working-lanes tracking for open/support/planning issues
 - frontier extension planning: teleportation, chronology protection, and
   signed gravitational response
-- outside-judge flagship planning: hadron masses, atomic scales, quark masses,
+- critical open science lanes: hadron masses, atomic scales, quark masses,
   neutrino quantitative closure, and Hubble constant closure
 
 ## Scientific Scope

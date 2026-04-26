@@ -12,10 +12,10 @@ These manifests organize the whole repo by major research lane.
   — repo-level tracker for active open/support/planning lanes. This is the
   first stop for "what is currently open and being worked."
 
-## Accepted Planning Packages
+## Critical Open Science Lanes
 
-- [`outside_judge/README.md`](outside_judge/README.md) — five external-judge
-  flagship lanes opened for planning only: hadron masses, atomic scales,
+- [`open_science/README.md`](open_science/README.md) — five critical open
+  science lanes accepted for active work: hadron masses, atomic scales,
   quark masses, neutrino quantitative closure, and Hubble constant closure.
 
 ## Historical And Comparison Lanes

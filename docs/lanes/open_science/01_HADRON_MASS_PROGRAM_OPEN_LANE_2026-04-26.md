@@ -1,15 +1,22 @@
 # Lane 1 — Hadron Mass Program
 
 **Date:** 2026-04-26
-**Status:** ACCEPTED PLANNING LANE on `main`; no theorem or claim promotion
-**Lethality (external):** HIGHEST. Every hadron / nuclear / lattice-QCD physicist
-asks for m_p. Bounded confinement + bounded √σ does not satisfy this.
+**Status:** ACCEPTED CRITICAL OPEN SCIENCE LANE on `main`; no theorem or claim
+promotion
+**Science priority:** HIGHEST. Bounded confinement + bounded √σ does not
+satisfy hadron-mass retention.
 **Approachability:** Tier B-C (1–6 months for first results; full closure 6–18 months)
+**Primary closure targets:** retained `m_p`, `m_n`, `m_pi`, hadron spectroscopy,
+and form-factor derivation paths.
+**First parallel-worker target:** reduce the lane to a retained pion/proton
+mass theorem plan using current confinement, α_s running, and Lane 3 quark-mass
+dependencies.
+**Non-claim boundary:** this file opens the lane only; it does not derive any
+hadron mass.
 
-## 1. Outside-judge framing
+## 1. Missing-science framing
 
-A hadron / nuclear / lattice-QCD physicist asked to evaluate the framework
-will immediately ask:
+The framework still needs direct answers to:
 
 - "What does the framework predict for the proton mass?"
 - "What about the pion mass and chiral symmetry breaking?"
@@ -18,12 +25,10 @@ will immediately ask:
 
 **The current package has confinement T=0 retained as a structural theorem and
 √σ ≈ 465 MeV as a bounded numerical readout. This does NOT constitute
-"hadron physics derived."** A serious external referee will say: "you have a
-QCD-equivalent gauge sector but you haven't produced a single hadron observable."
+"hadron physics derived."**
 
-This is the most viscerally lethal external attack vector for a TOE claim.
-Every lattice QCD specialist evaluating the framework will demand quantitative
-hadron observables.
+This is a direct missing-science lane for a TOE claim. Quantitative hadron
+observables have to be retained or the QCD sector remains incomplete.
 
 ## 2. Current state of repo content
 

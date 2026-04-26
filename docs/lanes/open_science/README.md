@@ -1,13 +1,9 @@
-# Outside-Judge Open Lanes — Proposal Package
+# Critical Open Science Lanes
 
 **Date:** 2026-04-26
-**Status:** ACCEPTED PLANNING PACKAGE on `main`. Not retained, not bounded,
-and not on the manuscript surface. This package opens / clarifies five lanes
-that an external referee or senior physicist would identify as genuinely-open
-flagship questions, distinct from the project's internal "Open Flagship Lane"
-scoping.
-
-**Source branch:** `claude/outside-judge-lanes-proposal-2026-04-26`
+**Status:** ACCEPTED OPEN SCIENCE LANE PACKAGE on `main`. Not retained,
+not bounded, and not on the manuscript surface. This package records five
+missing science lanes that need active work.
 
 ## Why this package exists
 
@@ -20,20 +16,18 @@ priorities:
 - Plus several CKM-side support bridges for the Koide question
 
 These are real and worth closing. But they are **project-internal scoping**,
-not what an external Nature/PRL/JHEP referee would call the open flagship lanes.
-A hostile or rigorous external reviewer reads the package and sees a much larger
-surface of un-derived observables than the internal "open flagship lane" list
-implies. The bounded-companion + scaffold-lane categories absorb significant
-content that an outside judge would treat as un-derived.
+not the full missing-science surface of the repo. The bounded-companion and
+scaffold-lane categories absorb significant content that still needs direct
+derivation work.
 
-This package opens / clarifies **five lanes** that should be treated as
-outside-judge open flagship lanes, each with explicit derivation targets,
-existing scaffolding, and recommended attack approaches. **It does not promote
-any claim or close any theorem.** It only records lane scoping and priority.
+This package accepts **five critical open science lanes** on `main`, each with
+explicit derivation targets, existing scaffolding, and recommended attack
+approaches. **It does not promote any claim or close any theorem.** It only
+records the work that still needs to be done.
 
 ## The five lanes
 
-| # | Lane | Lethality (external) | Approachability | Status today |
+| # | Lane | Science priority | Approachability | Status today |
 |---|---|---|---|---|
 | 1 | Hadron mass program (m_p, m_π, hadron spectroscopy) | HIGHEST | Tier B-C | confinement T=0 retained; √σ ≈ 465 MeV bounded; m_p, m_π not derived |
 | 2 | Atomic-scale predictions (Rydberg, Lamb shift, fine structure) | HIGH-VISCERAL | Tier A (post-Koide) / B (pre-Koide) | scaffold uses textbook inputs |
@@ -41,24 +35,29 @@ any claim or close any theorem.** It only records lane scoping and priority.
 | 4 | Neutrino quantitative closure (m_ν, Δm², Majorana phases) | HIGH | Tier B-C | "different carriers"; bounded |
 | 5 | Hubble constant H_0 derivation (cosmology matter bridge) | HIGH | Tier B | external input; structural identities retained |
 
-Per-lane proposal documents:
+Per-lane open-lane documents:
 
-- [`01_HADRON_MASS_PROGRAM_LANE_PROPOSAL_2026-04-26.md`](./01_HADRON_MASS_PROGRAM_LANE_PROPOSAL_2026-04-26.md)
-- [`02_ATOMIC_SCALE_PROGRAM_LANE_PROPOSAL_2026-04-26.md`](./02_ATOMIC_SCALE_PROGRAM_LANE_PROPOSAL_2026-04-26.md)
-- [`03_QUARK_MASS_RETENTION_LANE_PROPOSAL_2026-04-26.md`](./03_QUARK_MASS_RETENTION_LANE_PROPOSAL_2026-04-26.md)
-- [`04_NEUTRINO_QUANTITATIVE_LANE_PROPOSAL_2026-04-26.md`](./04_NEUTRINO_QUANTITATIVE_LANE_PROPOSAL_2026-04-26.md)
-- [`05_HUBBLE_CONSTANT_DERIVATION_LANE_PROPOSAL_2026-04-26.md`](./05_HUBBLE_CONSTANT_DERIVATION_LANE_PROPOSAL_2026-04-26.md)
+- [`01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md`](./01_HADRON_MASS_PROGRAM_OPEN_LANE_2026-04-26.md)
+- [`02_ATOMIC_SCALE_PROGRAM_OPEN_LANE_2026-04-26.md`](./02_ATOMIC_SCALE_PROGRAM_OPEN_LANE_2026-04-26.md)
+- [`03_QUARK_MASS_RETENTION_OPEN_LANE_2026-04-26.md`](./03_QUARK_MASS_RETENTION_OPEN_LANE_2026-04-26.md)
+- [`04_NEUTRINO_QUANTITATIVE_OPEN_LANE_2026-04-26.md`](./04_NEUTRINO_QUANTITATIVE_OPEN_LANE_2026-04-26.md)
+- [`05_HUBBLE_CONSTANT_DERIVATION_OPEN_LANE_2026-04-26.md`](./05_HUBBLE_CONSTANT_DERIVATION_OPEN_LANE_2026-04-26.md)
+
+Each lane stub is intended to be a parallel-worker handoff surface. The top
+metadata block names the primary closure targets, the first worker target, and
+the non-claim boundary. The body preserves the current retained/bounded/scaffold
+state, derivation targets, scaffolding, and recommended attack path.
 
 ## Common scoping principles for all five lanes
 
-Each lane proposal follows the same structural template:
+Each open-lane document follows the same structural template:
 
-1. **Outside-judge framing.** What an external Nature/PRL/JHEP referee actually
-   asks about this sector.
+1. **Missing-science framing.** What the repo still cannot derive in this
+   sector.
 2. **Current state of repo content.** What's retained, bounded, scaffold-only,
    or absent — pulled from the live `origin/main` package.
 3. **Derivation targets.** Specific named theorems / identities the lane would
-   need to retain to close from an outside-judge perspective.
+   need to retain to close the lane.
 4. **Existing scaffolding to build on.** Concrete file references to retained
    theorem notes that provide ingredients for the derivation targets.
 5. **Approachability rating.** Tier A (1–4 weeks), Tier B (1–4 months),
@@ -68,22 +67,21 @@ Each lane proposal follows the same structural template:
    to close, to keep scope honest.
 8. **Cross-references.** Connections to other lanes and to the manuscript surface.
 
-## Full external-judge open-item inventory
+## Full Missing-Science Inventory
 
-This is the **complete** list of items an outside Nature/PRL/JHEP referee
-would identify as open, ranked by reviewer-impact / lethality. The five active
-lanes proposed above are the top five by lethality × approachability product.
-The remaining items are deferred to follow-on lanes — they remain open from
-an outside-judge perspective but are either lower lethality, lower
-approachability on the current scaffolding, or already addressed by
+This is the **complete** list of missing-science items captured in this pass,
+ranked by scientific impact and approachability. The five active lanes above
+are the top five by priority × approachability product. The remaining items are
+deferred to follow-on lanes — they remain open but are either lower priority,
+lower approachability on the current scaffolding, or already addressed by
 non-active-lane mechanisms in the framework.
 
-The status labels in this inventory are planning shorthand only. They do not
+The status labels in this inventory are tracking shorthand only. They do not
 create new authority, upgrade support notes, or supersede the canonical claim
 ledger and theorem notes. If this inventory conflicts with a retained/support
 status elsewhere, the canonical theorem surface wins.
 
-### Tier 1 — HIGHEST lethality (top-priority external concerns)
+### Tier 1 — Highest-priority missing science
 
 | # | Item | Status | In active package? |
 |---|---|---|---|
@@ -93,7 +91,7 @@ status elsewhere, the canonical theorem surface wins.
 | 4 | **Atomic-scale predictions (Rydberg / -13.6 eV)** | scaffold uses textbook inputs | **Active — Lane 2** |
 | 5 | **Neutrino sector quantitative (m_ν, Δm², Majorana phases)** | "different carriers" / bounded | **Active — Lane 4** |
 
-### Tier 2 — HIGH lethality
+### Tier 2 — HIGH science priority
 
 | # | Item | Status | In active package? |
 |---|---|---|---|
@@ -108,14 +106,14 @@ status elsewhere, the canonical theorem surface wins.
 | 14 | **Dark matter particle / detection mechanism** | DM relic ratio R = 5.48 retained, but not particle ID | **Deferred — DM closed package follow-on** |
 | 15 | **Lattice scale ⟨P⟩ = 0.5934 dependence on action choice** | computed via Monte Carlo | **Deferred — methodology audit lane** |
 
-### Tier 3 — MEDIUM lethality
+### Tier 3 — MEDIUM science priority
 
 | # | Item | Status | In active package? |
 |---|---|---|---|
 | 16 | **Black hole interior physics / singularities** | no quantitative | **Deferred — strong-field gravity research lane** |
 | 17 | **Hawking radiation quantitative** | no quantitative | **Deferred — same lane as 16** |
 | 18 | **Information paradox** | no statement | **Deferred — same lane as 16** |
-| 19 | **BMS / asymptotic symmetries** | open | **Active externally — Pate co-author P4 paper target** |
+| 19 | **BMS / asymptotic symmetries** | open | **Active separately — Pate co-author P4 paper target** |
 | 20 | **Decoherence law universal** | bounded | **Deferred — Gate A in older review-hardening backlog** |
 | 21 | **Galaxy rotation curves / DM detection cross-section** | absent | **Deferred — DM follow-on** |
 | 22 | **Hierarchy stability under quantum corrections** | implicitly retained via v derivation | **Argued retained** (the v derivation is not just tree-level) |
@@ -123,7 +121,7 @@ status elsewhere, the canonical theorem surface wins.
 | 24 | **Form factors (B → π, K → π, etc.)** | absent | **Deferred — Lane 1 follow-on** |
 | 25 | **Hadron spectroscopy (excited states)** | absent | **Deferred — Lane 1 follow-on** |
 
-### Tier 4 — LOW-MEDIUM lethality / specialist concerns
+### Tier 4 — LOW-MEDIUM science priority / specialist concerns
 
 | # | Item | Status | In active package? |
 |---|---|---|---|
@@ -161,29 +159,26 @@ the item away structurally (acknowledged for completeness):
 | 49 | Discrete-to-continuum gravity | RETAINED on canonical textbook target |
 | 50 | Top quark mass m_t | RETAINED (172.57 GeV at 0.07%) |
 
-### Why these specific five lanes are the active proposal
+### Why these specific five lanes are active
 
 The five active lanes are selected by:
 
-> A lane is **included as active** if and only if (a) an external particle/
-> cosmology/atomic/hadron/gravity referee would name it as a top-priority
-> open question, AND (b) closing it produces meaningful change in the
+> A lane is **included as active** if and only if (a) it is a top-priority
+> open science question, AND (b) closing it produces meaningful change in the
 > framework's defensibility as a TOE candidate, AND (c) closing it is
 > approachable on a months-to-year timescale given existing repo scaffolding.
 
-Tier 1 items 1, 3, 4, 5 are all in the active proposal as Lanes 3, 1, 2, 4
+Tier 1 items 1, 3, 4, 5 are all active as Lanes 3, 1, 2, 4
 respectively. Tier 1 item 2 (charged-lepton masses) is partially covered by
 the existing Koide flagship lane work in flight. Tier 2 item 6 (H_0) is in
-the active proposal as Lane 5.
+the active package as Lane 5.
 
-All other Tier 2-4 items are deferred — they remain open from an outside-judge
-perspective and should be tracked as such. **A reviewer can make the case for
-moving any deferred item into active status if priorities change** (e.g., if
-muon g-2 becomes a hotter BSM topic, or if a hostile referee specifically
-attacks a deferred item).
+All other Tier 2-4 items are deferred — they remain open and should be tracked
+as such. Any deferred item can be moved into active status if priorities change
+or if a worker finds a tractable attack path.
 
 The Tier 5 items are listed for completeness — they show what the framework
-has already retained or argued away from the outside-judge inventory, so the
+has already retained or argued away from the missing-science inventory, so the
 total picture is honest rather than only listing the open items.
 
 ## Recommended priority order (subject to review)
@@ -219,15 +214,15 @@ Lane scoping. Specifically:
 - The frontier extension lanes (teleportation, chronology, signed gravity)
   are exploratory expansion lanes and remain separately scoped.
 
-The relationship is additive: the five outside-judge lanes are the lanes
-**an external reviewer would say still need closing for a defensible TOE claim**,
-on top of the internal lanes already prioritized.
+The relationship is additive: these five lanes are missing science that still
+needs closing for a defensible TOE claim, on top of the internal lanes already
+prioritized.
 
 ## Possible Manuscript-Surface Follow-Up
 
 - Add a new section to [CLAIMS_TABLE.md](../../publication/ci3_z3/CLAIMS_TABLE.md)
-  titled "External-Judge Open Lanes" listing these five lanes with status
-  pointers to the per-lane proposal documents.
+  titled "Critical Open Science Lanes" listing these five lanes with status
+  pointers to the per-lane open-lane documents.
 - Update [WHAT_THIS_PAPER_DOES_NOT_CLAIM.md](../../publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
   to explicitly call out each of these five lanes as "currently bounded /
   open / scaffold-only" rather than implying they're already addressed by
@@ -237,7 +232,8 @@ on top of the internal lanes already prioritized.
   vs. external-input vs. scaffold-only.
 
 Those publication-surface updates are deliberately deferred. This landing only
-opens the planning package; it does not change the manuscript claim surface.
+opens the critical open science lane package; it does not change the manuscript
+claim surface.
 
 ## Open Review Questions
 
@@ -249,18 +245,17 @@ Future reviewers should evaluate:
    theorems to attack?
 4. **Are the approachability ratings calibrated?** Are any of these actually
    harder or easier than rated?
-5. **Should any lane be promoted from planning package to a retained-grade
+5. **Should any lane be promoted from open-lane tracking to a retained-grade
    lane-opening note after its first theorem target is scoped?**
 6. **What should the manuscript-surface treatment be?** Add to CLAIMS_TABLE
-   as "External-Judge Open Lanes," or keep this off the manuscript surface
+   as "Critical Open Science Lanes," or keep this off the manuscript surface
    entirely until specific lane closures land?
 
 ## Honest framing
 
-This proposal package does not contain new physics. It contains scoping and
-strategy. The five lanes are real open lanes from an outside-judge perspective.
-Whether and how to attack them is a separate question from whether they are
-correctly identified.
+This open-lane package does not contain new physics. It contains scoping and
+strategy. The five lanes are real missing-science lanes. Whether and how to
+attack them is a separate question from whether they are correctly identified.
 
 This is roughly a 6–18 month closure program. Each lane is months of focused
 work, though lanes 2 and 5 are likely closer to single-month first closures.

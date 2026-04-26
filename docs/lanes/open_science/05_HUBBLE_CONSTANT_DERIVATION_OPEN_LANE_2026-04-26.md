@@ -1,17 +1,25 @@
 # Lane 5 — Hubble Constant H_0 Derivation
 
 **Date:** 2026-04-26
-**Status:** ACCEPTED PLANNING LANE on `main`; no theorem or claim promotion
-**Lethality (external):** HIGH. Hubble tension is the most active cosmology
+**Status:** ACCEPTED CRITICAL OPEN SCIENCE LANE on `main`; no theorem or claim
+promotion
+**Science priority:** HIGH. Hubble tension is the most active cosmology
 debate. Currently external input.
 **Approachability:** Tier B (1–4 months — substantial recent structural-identity
 landings have made this materially closer)
+**Primary closure targets:** retained `H_0`, internal matter-density bridge,
+and a clear framework position on the low/high Hubble tension values.
+**First parallel-worker target:** isolate which existing Λ, H_inf, Ω_Λ, N_eff,
+and matter-radiation-equality identities can load-bear an internal `H_0`
+derivation.
+**Non-claim boundary:** current `H_0` usage remains external-input until a
+retained derivation lands.
 
-## 1. Outside-judge framing
+## 1. Missing-science framing
 
-A cosmologist evaluating the framework reads
+The framework currently records
 [INPUTS_AND_QUALIFIERS_NOTE.md](../../publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md)
-§2 and immediately flags:
+§2:
 
 > "H_0 = 67.4 km/s/Mpc is taken as external input. The framework structurally
 > distinguishes H_0 from H_inf via Ω_Λ = (H_inf/H_0)², so the framework cares
