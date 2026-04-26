@@ -77,6 +77,33 @@ See `docs/KOIDE_NATIVE_DIMENSIONLESS_REVIEW_PACKET_2026-04-24.md`,
 and
 `docs/KOIDE_Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS_NOTE_2026-04-25.md`.
 
+**2026-04-25 `δ` closure addendum.** The April 25 Euclidean-rotation-angle
+theorem closes `δ = 2/9 rad` on the retained selected-line carrier. The
+theorem identifies the physical Brannen observable as the literal Euclidean
+rotation angle of the mass-square-root vector in the 2-plane orthogonal to
+the singlet axis, measured in the natural radian unit (arc-length-over-
+radius). It bypasses the period-1 vs period-2π convention obstruction
+sharpened by the A1 audit / round-10 fractional-topology no-go batch by
+reading the observable from `cos(.)` of an angle rather than from any
+`R/Z → U(1)` map. The theorem is consistent with the Berry-bundle obstruction
+(in fact supports it: a trivial bundle removes the competing U(1)-holonomy
+reading on the same physical base).
+
+Effect on the closure package:
+
+- `Q = 2/3`: still open (source-domain selector bridge unchanged).
+- `δ = 2/9`: **retained** via the Euclidean-rotation-angle theorem.
+- `v_0`: still open (separate scale bridge).
+
+The cross-validation `Q = 3 · δ` retained arithmetic identity now operates as
+a one-way constraint: closing the open `Q` source-domain bridge will be
+automatically consistent with the retained `δ` value.
+
+See `docs/KOIDE_DELTA_EUCLIDEAN_ROTATION_ANGLE_THEOREM_NOTE_2026-04-25.md`
+(theorem statement, four-step proof, and explicit non-claim section) and
+`scripts/frontier_koide_delta_euclidean_rotation_angle.py` (24/24 PASS
+across five verification blocks).
+
 **Executability guarantee.** Every PASS check across the runner stack is an
 actual executable computation: symbolic via sympy, numeric via PDG lepton
 masses, or direct structural checks.  The April 21 core stack reports
@@ -223,13 +250,22 @@ Atiyah-Bott-Segal-Singer equivariant fixed-point formula for the APS
 - The value is topologically robust: it depends on the tangent
   representation, not on the choice of smooth `Z_3`-compatible metric.
 
-### What this does not yet prove
+### What this proves on the April 25 surface (retained)
 
-It does not yet prove that the physical Brannen phase on the actual
-selected-line `CP^1` carrier equals this ambient APS invariant.
+The April 25 Euclidean-rotation-angle theorem
+(`docs/KOIDE_DELTA_EUCLIDEAN_ROTATION_ANGLE_THEOREM_NOTE_2026-04-25.md`)
+identifies the physical Brannen observable on the retained selected-line
+charged-lepton carrier as the literal Euclidean rotation angle of the
+mass-square-root vector `v = (sqrt(m_e), sqrt(m_mu), sqrt(m_tau))` in the
+2-plane orthogonal to the singlet axis `(1,1,1)/sqrt(3)`. At the physical
+interior point: `δ_phys(m_*) = +2/9 rad EXACTLY` as a Euclidean angle.
+The theorem routes around the period-1 vs period-2π convention
+obstruction by reading the observable from `cos(.)` of an angle rather
+than from any `R/Z → U(1)` map. **This closes the `δ = 2/9` bridge.**
 
 ### Main runners
 
+- `scripts/frontier_koide_delta_euclidean_rotation_angle.py` — **24/24 PASS** (retained closure runner)
 - `scripts/frontier_koide_aps_eta_invariant.py` — **21/21 PASS**
 - `scripts/frontier_koide_aps_topological_robustness.py` — **41/41 PASS**
 - `scripts/frontier_koide_c3_spatial_rotation.py` — **16/16 PASS**
@@ -239,6 +275,7 @@ selected-line `CP^1` carrier equals this ambient APS invariant.
 
 ### Main note
 
+- `docs/KOIDE_DELTA_EUCLIDEAN_ROTATION_ANGLE_THEOREM_NOTE_2026-04-25.md` (retained closure)
 - `docs/KOIDE_APS_BLOCK_BY_BLOCK_FORCING_NOTE_2026-04-21.md`
 - `docs/KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`
 - `docs/KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md`
@@ -313,8 +350,9 @@ above.
 | `frontier_koide_brannen_dirac_support.py` | Brannen support: explicit finite-lattice `L=3` Wilson-Dirac illustration | 11/11 |
 | `frontier_koide_q_background_zero_z_erasure_criterion.py` | `Q` support: exact background-zero / `Z`-erasure criterion on admitted reduced carrier | 25/25 |
 | `frontier_koide_q_onsite_source_domain_no_go_synthesis.py` | `Q` support/no-go: onsite source-domain separation from retained commutant `Z` | 23/23 |
+| `frontier_koide_delta_euclidean_rotation_angle.py` | **`δ` retained closure**: physical Brannen observable IS the Euclidean rotation angle in the doublet 2-plane (April 25 theorem) | 24/24 |
 
-**Total: 290 PASS, 0 FAIL.**
+**Total: 314 PASS, 0 FAIL.**
 
 ### Notes
 
@@ -325,6 +363,7 @@ above.
 - `docs/KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`
 - `docs/KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md`
 - `docs/KOIDE_Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS_NOTE_2026-04-25.md`
+- `docs/KOIDE_DELTA_EUCLIDEAN_ROTATION_ANGLE_THEOREM_NOTE_2026-04-25.md` (`δ` retained closure)
 
 ---
 
@@ -340,6 +379,7 @@ above.
 8. `docs/KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`.
 9. `docs/KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md`.
 10. `docs/KOIDE_Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS_NOTE_2026-04-25.md`.
+11. `docs/KOIDE_DELTA_EUCLIDEAN_ROTATION_ANGLE_THEOREM_NOTE_2026-04-25.md` and `scripts/frontier_koide_delta_euclidean_rotation_angle.py` (the `δ` retained closure).
 
 ---
 
@@ -348,14 +388,17 @@ above.
 - `Q = 2/3`: exact source-free / `Z`-erasure criterion on the admitted
   normalized reduced carrier plus exact onsite-vs-commutant source-domain
   separation, but still not retained closure.
-- `δ = 2/9`: strongest current executable support, not yet retained
-  closure.
-- `Q = 3·δ`: exact compatibility identity between the two support routes.
+- `δ = 2/9`: **retained via the April 25 Euclidean-rotation-angle theorem**
+  (`docs/KOIDE_DELTA_EUCLIDEAN_ROTATION_ANGLE_THEOREM_NOTE_2026-04-25.md`).
+  The physical Brannen observable IS the literal Euclidean rotation angle
+  in the doublet 2-plane, measured in the natural radian unit.
+- `Q = 3·δ`: exact compatibility identity, now operating as a one-way
+  consistency constraint on the open `Q` bridge.
 - Remaining open behind `Q`: the physical source-domain theorem selecting
   onsite/source-free reduced-carrier data over the retained commutant `Z`
-  source.
-- Remaining open behind `δ`: the physical Brannen-phase bridge
-  `δ_physical = η_APS`.
-- `m_*` / `w/v` remains downstream of the Brannen-phase bridge.
+  source. **This is now the unique open flagship bridge for the charged-
+  lepton Koide lane.**
+- `m_*` / `w/v` remains downstream of the Q bridge.
 
-This is the strongest current Koide support package.
+After the April 25 `δ` closure, `Q = 2/3` is the single remaining bridge
+between the support package and full retained Koide closure.
