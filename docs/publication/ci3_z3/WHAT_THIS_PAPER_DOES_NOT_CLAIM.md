@@ -171,6 +171,12 @@ The paper does **not** claim:
   exact support theorem proves `Q=(c^2+2)/6` and `Q=2/3 <=> c^2=2` on that
   carrier, but it does not derive the physical carrier/source law, retained
   `c^2=2`, or `delta_Brannen=2/9 rad`.
+- that Frobenius-reciprocity measure selection closes charged-lepton Koide.
+  The exact support theorem proves that Frobenius reciprocity selects the
+  `(1,1)` block-total multiplicity measure and that conditional use of that
+  measure gives `kappa=2` and `Q=2/3`; it does not derive that the physical
+  charged-lepton source law must select that measure or the source-free
+  reduced carrier.
 
 The current retained claim is:
 

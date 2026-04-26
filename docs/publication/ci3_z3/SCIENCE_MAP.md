@@ -212,8 +212,12 @@ Current charged-lepton status:
   source-free reduced-carrier selection theorem; the background-zero /
   `Z`-erasure algebra on that carrier is now an exact criterion theorem, and
   strict onsite `C3` source functions would erase `Z`; retained
-  central/projected commutant sources still admit `Z`, so the source-domain
-  theorem remains open
+  central/projected commutant sources still admit `Z`.  The
+  Frobenius-reciprocity measure-selection support theorem also sharpens the
+  measure side: Frobenius reciprocity selects the `(1,1)` block-total
+  multiplicity measure and conditionally gives `kappa=2`, `Q=2/3`.  It still
+  does not derive that the physical source law selects that measure or the
+  source-free reduced carrier, so the source-domain theorem remains open
 - `delta = 2/9` support is strong, but the physical Brannen endpoint is still
   reduced to the selected-line local boundary-source law plus based endpoint
   section
@@ -234,6 +238,7 @@ Start with:
 - [CKM_NEUTRON_EDM_BOUND_NOTE.md](../../CKM_NEUTRON_EDM_BOUND_NOTE.md)
 - [UNIVERSAL_THETA_INDUCED_EDM_VANISHING_THEOREM_NOTE_2026-04-24.md](../../UNIVERSAL_THETA_INDUCED_EDM_VANISHING_THEOREM_NOTE_2026-04-24.md)
 - [KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md](../../KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md)
+- [KOIDE_Q_FROBENIUS_RECIPROCITY_MEASURE_SELECTION_SUPPORT_NOTE_2026-04-25.md](../../KOIDE_Q_FROBENIUS_RECIPROCITY_MEASURE_SELECTION_SUPPORT_NOTE_2026-04-25.md)
 - [KOIDE_POINTED_ORIGIN_EXHAUSTION_THEOREM_NOTE_2026-04-24.md](../../KOIDE_POINTED_ORIGIN_EXHAUSTION_THEOREM_NOTE_2026-04-24.md)
 - [KOIDE_DIMENSIONLESS_OBJECTION_CLOSURE_REVIEW_PACKET_2026-04-24.md](../../KOIDE_DIMENSIONLESS_OBJECTION_CLOSURE_REVIEW_PACKET_2026-04-24.md)
 - [CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md](../../CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md)
