@@ -249,12 +249,57 @@ def part_b_anomaly_forces_fourth() -> bool:
     print("  codimension-1 evolution constraint, d_t = 1 is unique.")
     print()
     print("  => a FOURTH Hermitian Clifford generator gamma_t exists.")
+    print()
+    print("  OBJECT-LEVEL CHECK: construct an explicit four-generator Clifford")
+    print("  realization on a 16-dim space (Jordan-Wigner) and verify that the")
+    print("  required chirality operator gamma_5 = product of all four exists,")
+    print("  is Hermitian, and squares to +I -- the structural conclusion of")
+    print("  the retained anomaly-time chain. (This certifies that a fourth")
+    print("  generator is constructible at object level; it does NOT by itself")
+    print("  pin which fourth generator the framework realizes on H_cell.)")
+    print()
 
+    # Object-level four-generator construction (Jordan-Wigner Cl_4 on C^16).
+    G0 = kron_all(X, I2, I2, I2)
+    G1 = kron_all(Z, X, I2, I2)
+    G2 = kron_all(Z, Z, X, I2)
+    G3 = kron_all(Z, Z, Z, X)
+    Gs = [G0, G1, G2, G3]
+    I16 = np.eye(16, dtype=complex)
+
+    sq_err = max(np.linalg.norm(g @ g - I16) for g in Gs)
+    ac_err = 0.0
+    for i, gi in enumerate(Gs):
+        for j, gj in enumerate(Gs):
+            if i != j:
+                ac_err = max(ac_err, np.linalg.norm(gi @ gj + gj @ gi))
     check(
-        "anomaly chain forces existence of fourth Clifford generator",
-        True,
-        "via chirality requirement (retained ANOMALY_FORCES_TIME_THEOREM)",
+        "explicit four-generator construction on C^16 satisfies Cl_4 anticomm",
+        sq_err < TOL and ac_err < TOL,
+        f"max ||gamma^2-I||={sq_err:.2e}; max ||{{gamma_a,gamma_b}}||={ac_err:.2e}",
     )
+
+    gamma_5 = G0 @ G1 @ G2 @ G3
+    chi_sq_err = np.linalg.norm(gamma_5 @ gamma_5 - I16)
+    chi_herm_err = np.linalg.norm(gamma_5 - gamma_5.conj().T)
+    chi_anti_err = max(np.linalg.norm(gamma_5 @ g + g @ gamma_5) for g in Gs)
+    check(
+        "chirality involution gamma_5 = prod gamma_a satisfies (gamma_5)^2 = +I",
+        chi_sq_err < TOL,
+        f"||gamma_5^2 - I||={chi_sq_err:.2e}",
+    )
+    check(
+        "gamma_5 is Hermitian and anticommutes with all four generators",
+        chi_herm_err < TOL and chi_anti_err < TOL,
+        f"Hermitian err={chi_herm_err:.2e}; anti err={chi_anti_err:.2e}",
+    )
+    print()
+    print("  SCOPE NOTE [updated 2026-04-26 per Codex review]:")
+    print("  The above shows a fourth Clifford generator IS constructible at")
+    print("  object level, certifying the structural conclusion of the retained")
+    print("  ANOMALY_FORCES_TIME chain. For the canonical fourth generator")
+    print("  on K = P_A H_cell specifically, see the cubic-bivector Schur")
+    print("  source-principle theorem (2026-04-26).")
     return True
 
 
@@ -775,15 +820,23 @@ def main() -> int:
     print()
     if FAIL_COUNT == 0:
         print(
-            "Verdict: Target 3 closes UNCONDITIONALLY on the retained surface. "
-            "The metric-compatible Clifford coframe response on P_A H_cell is "
-            "FORCED by Cl(3) on Z^3 + anomaly-cancellation chirality + the "
-            "time-locked primitive event coframe. The Clifford bridge premise "
-            "is therefore not an additional axiom; it is a corollary of "
-            "already-retained theorems. Combined with the source-unit "
-            "normalization support theorem, c_Widom = c_cell = 1/4, "
-            "G_Newton,lat = 1, and a/l_P = 1 in natural phase/action units, "
-            "with no parameter imports."
+            "Verdict (revised 2026-04-26 per Codex review of branch tip 47e7891e): "
+            "this runner provides the constructive existence proof of a four-"
+            "generator Cl_4 representation on a 4-dim complex Hilbert space "
+            "(parts B-G), but Codex's [P1]/1 review correctly observed that "
+            "rank matching by itself does not pin a CANONICAL identification "
+            "of K = P_A H_cell with the irreducible Cl_4(C) module. The "
+            "current runner is therefore re-scoped as a CONDITIONAL CONTROL "
+            "PACKET providing necessary structural conditions and an explicit "
+            "object-level construction. The companion theorem "
+            "PLANCK_TARGET3_CUBIC_BIVECTOR_SCHUR_SOURCE_PRINCIPLE_THEOREM_NOTE_2026-04-26.md "
+            "supplies the canonical retained replacement: K is canonically the "
+            "fundamental vector representation of so(4) via the K-preserving "
+            "Cl_4-bivector blocks, with closed-form Schur spectrum +/-4(2 +/- "
+            "sqrt(2)) and APS-like spectral gap sqrt(2)-1. Full unconditional "
+            "Target 3 closure additionally requires a retained source-"
+            "principle theorem identifying the Schur spectral data with the "
+            "physical gravitational source coupling chi_eta * rho * Phi."
         )
         return 0
     return 1

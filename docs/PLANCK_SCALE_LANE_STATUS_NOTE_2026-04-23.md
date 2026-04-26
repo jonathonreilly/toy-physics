@@ -343,73 +343,85 @@ Former blocker:
 - scope guardrail: this is not a derivation of the SI decimal value of
   `hbar`, and it does not contradict the Hilbert-only no-go.
 
-2026-04-25 unconditional Target 3 forced coframe response closure:
+2026-04-25 forced coframe response: now CONDITIONAL CONTROL PACKET
+(re-scoped 2026-04-26 per Codex review of branch tip `47e7891e`):
 
-- `PLANCK_TARGET3_FORCED_COFRAME_RESPONSE_THEOREM_NOTE_2026-04-25.md` PROMOTES
-  the Clifford coframe-response premise from explicit assumption to forced
-  corollary on the retained surface;
-- the chain is `Cl(3) on Z^3` (NATIVE_GAUGE_CLOSURE) +
-  `anomaly-cancellation forcing chirality involution` (ANOMALY_FORCES_TIME)
-  + `time-locked primitive event coframe` => four mutually anticommuting
-  Hermitian Clifford generators on the rank-four active block;
-- by Schur's lemma applied to the irreducible rank-four `Cl_4(C)` module,
-  `D(v)^2 = ||v||^2 I_K` is forced (not assumed) and the non-CAR rank-four
-  alternatives (commuting two-qubit, ququart clock-shift) are explicitly
-  ruled out by the same Cl_4 anticommutator;
-- combined with the retained source-unit normalization support theorem, the
-  package's Planck pin closes on the response side of the bridge:
-  `c_Widom=c_cell=1/4`, `G_Newton,lat=1`, `a/l_P=1` in natural phase/action
-  units;
-- runner: `frontier_planck_target3_forced_coframe_response.py` (PASS=52,
-  FAIL=0);
-- scope guardrail (unchanged): the SI decimal value of `hbar` remains
-  metrology and is not claimed.
+- `PLANCK_TARGET3_FORCED_COFRAME_RESPONSE_THEOREM_NOTE_2026-04-25.md` was
+  initially landed as "unconditional closure on the retained surface" via
+  the rank-matching argument that any rank-four complex Hilbert space carries
+  a unique faithful Cl_4(C) module up to similarity;
+- Codex review [P1]/1 correctly observed that rank matching does not pin a
+  CANONICAL Cl_4 identification on `K = P_A H_cell` from the accepted
+  structure -- it shows existence, not uniqueness of the boundary
+  representation;
+- the headline is now downgraded to **retained CONDITIONAL CONTROL PACKET**:
+  the runner provides necessary structural conditions and an explicit
+  constructive existence proof (PASS=54 after object-level update);
+- the canonical retained replacement is the cubic-bivector Schur source
+  principle (see below).
 
-2026-04-25 Gauss-flux first-order coframe carrier closure (carrier side):
+2026-04-25 Gauss-flux first-order coframe carrier: now CONDITIONAL CONTROL
+PACKET (re-scoped 2026-04-26 per Codex review of branch tip `47e7891e`):
 
 - `PLANCK_TARGET3_GAUSS_FLUX_FIRST_ORDER_CARRIER_THEOREM_NOTE_2026-04-25.md`
-  closes the explicit residual called out by the primitive coframe carrier
-  support theorem, namely
-  `derive_gravitational_boundary_action_density_as_first_order_coframe_carrier`;
-- the chain is: retained lattice Poisson `(-Delta_lat) phi = rho` (Newton/
-  Green package) + standard discrete divergence theorem (calculus identity
-  `(-Delta_lat) = sum_a G_a^T G_a`) + standard exterior-calculus
-  identification `HW=k <-> Lambda^k` (built into Codex's coframe response
-  polynomial `G(u) = prod_a (1 + u_a)`) =>
-  the Gauss flux of the gravitational potential through a codimension-1
-  surface is a 1-form, supported on the Hamming-weight-one packet `P_1 = P_A`;
-- this derives Codex Theorem 2's first-order locality hypothesis from
-  retained content (rather than assuming it as part of the carrier-class
-  hypotheses), so the gravitational boundary/action density carrier on the
-  primitive event cell is uniquely `P_A`;
-- runner: `frontier_planck_target3_gauss_flux_first_order_carrier.py`
-  (PASS=40, FAIL=0);
-- scope guardrail: this is a weak-field/Newtonian Gauss-flux closure of the
-  carrier-side residual; the strong-field generalization beyond the
-  retained Poisson regime is not claimed, and the SI decimal value of
-  `hbar` remains metrology and is not claimed.
+  was initially landed as "closes the carrier-side physical-identification
+  residual" via the chain: retained lattice Poisson + discrete divergence
+  theorem + exterior-calculus identification HW=k <-> Lambda^k => Gauss
+  flux of the gravitational potential is a 1-form, hence supported on
+  HW=1 = P_A;
+- Codex review [P1]/3 correctly observed that this CHOOSES the 1-form
+  carrier convention rather than deriving it from a retained source
+  principle: applying the same construction to the Hodge-dual P_3 packet
+  gives an identical structural picture, and the selection of P_1 over
+  P_3 is at the convention level;
+- the headline is now downgraded to **retained CONDITIONAL CONTROL
+  PACKET**: the runner provides positive Gauss-flux/1-form derivation
+  (PASS=41 after object-level update);
+- the residual `derive_gravitational_boundary_action_density_as_first_order_coframe_carrier`
+  remains OPEN at retained level; the Schur source-principle theorem
+  below provides candidate canonical structure but does not by itself
+  close the carrier convention either.
 
-Combined Target 3 closure (response side + carrier side):
+2026-04-26 cubic-bivector Schur boundary source principle (NEW):
 
-- with both halves of the Clifford bridge premise now derived from retained
-  content, the entire Planck Target 3 chain is unconditional on the
-  retained surface:
-  ```
-  retained Poisson  +  Codex carrier-selection  +  forced coframe response  +  source-unit normalization
-  =>  c_Widom = c_cell = 1/4  =>  G_Newton,lat = 1  =>  a/l_P = 1
-  ```
-  in the package's natural phase/action units, with no parameter imports.
+- `PLANCK_TARGET3_CUBIC_BIVECTOR_SCHUR_SOURCE_PRINCIPLE_THEOREM_NOTE_2026-04-26.md`
+  responds to Codex's 2026-04-26 review of `claude/relaxed-wu-a56584` by
+  building canonical retained structural content on `K = P_A H_cell` at
+  the object level (no literal-`True` for any load-bearing claim);
+- construction: form the cubic-symmetric Cl_4 bivector sum
+  `H_biv = i sum_{a<b} gamma_a gamma_b` on `H_cell`; block-decompose with
+  respect to `K` vs `K^perp`; the bulk block `F` has APS-like spectral gap
+  `min |spec(F)| = sqrt(2) - 1 > 0`; the Schur complement `L_K = A - B
+  F^{-1} C` has closed-form spectrum `+/- 4(2 +/- sqrt(2))`, chiral
+  balance `Tr(L_K) = 0`, and `Tr(L_K^2) = 384`; the canonical 2+2 chiral
+  split `K = K_+ + K_-` is forced by the spectrum;
+- key new structural identification: each K-preserving Cl_4-bivector
+  block is exactly the `so(4)` generator `J_{ab} = E_{ab} - E_{ba}` in
+  the fundamental vector representation, identifying `K` canonically
+  with the four-axis primitive coframe `E = span(t,x,y,z)`;
+- runner: `frontier_planck_target3_cubic_bivector_schur_source_principle.py`
+  (PASS=42, FAIL=0);
+- what this DOES NOT close: the Hodge-dual P_3 reading (the same Schur
+  construction applied to P_3 gives identical spectrum, verified); and
+  the identification of the L_K spectral data with the gravitational
+  source coupling `chi_eta * rho * Phi`. Both remain open residuals
+  for follow-on retained source-principle theorems.
 
 ## 6. Package rule on `main`
 
-After the Target 3 forced coframe response theorem and the Gauss-flux
-first-order carrier theorem, the correct package statement is:
+After the Codex 2026-04-26 review and the cubic-bivector Schur source-
+principle theorem, the correct package statement is:
 
-- `a^(-1) = M_Pl` / `a/l_P=1` is now an **unconditional structural theorem
-  on the retained surface**: both the carrier selection (`P_A`) and the
-  metric-compatible Cl_4 response on `K = P_A H_cell` are forced by
-  retained content (Newton/Green Poisson + Cl(3) on Z^3 + anomaly-time +
-  time-locked event coframe);
+- `a^(-1) = M_Pl` / `a/l_P=1` remains a **conditional structural theorem
+  on the metric-compatible Clifford/CAR coframe-response surface** with
+  natural phase/action units; the temporary 2026-04-25 promotion to
+  "unconditional via the forced coframe response" is **withdrawn** per
+  Codex review [P1]/1;
+- the cubic-bivector Schur source-principle theorem (2026-04-26) supplies
+  object-level canonical retained structural content on `K = P_A H_cell`
+  (so(4) vector rep + closed-form Schur spectrum + APS-like gap), but
+  does NOT by itself close the gravitational source coupling identification
+  nor select P_1 over P_3;
 - it is **not** a derivation of the SI decimal value of `hbar`, and it does
   not contradict the Hilbert-only boundary theorem on the stripped surface;
 - the primitive boundary count is identified with the microscopic

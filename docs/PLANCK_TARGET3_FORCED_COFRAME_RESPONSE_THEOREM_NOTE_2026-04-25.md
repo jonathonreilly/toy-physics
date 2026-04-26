@@ -1,18 +1,29 @@
 # Planck Target 3 Forced Primitive Coframe Response Theorem
 
 **Date:** 2026-04-25
-**Status:** retained UNCONDITIONAL Target 3 closure on the retained surface;
-no imports, no fits, no SI decimal claim
+**Status (UPDATED 2026-04-26 per Codex review of branch tip `47e7891e`):**
+**RE-SCOPED to retained conditional / control packet.** The earlier
+"unconditional closure" headline is downgraded. See
+[`review.md`](../review.md) for the [P1] findings: rank matching does not
+force the coframe response on `K`, and the load-bearing existence step was
+hard-coded as a literal `True`. The current canonical retained replacement is
+[`PLANCK_TARGET3_CUBIC_BIVECTOR_SCHUR_SOURCE_PRINCIPLE_THEOREM_NOTE_2026-04-26.md`](PLANCK_TARGET3_CUBIC_BIVECTOR_SCHUR_SOURCE_PRINCIPLE_THEOREM_NOTE_2026-04-26.md),
+which supplies an object-level canonical so(4) vector-rep structure on `K`
+plus closed-form Schur spectrum and APS-like gap protection.
 **Runner:** `scripts/frontier_planck_target3_forced_coframe_response.py`
-(PASS=52, FAIL=0)
-**Promotes:**
+(PASS=54, FAIL=0 after 2026-04-26 update; the runner now constructs the
+four-generator realization explicitly and reports honest scope statements).
+**Provides:** necessary structural conditions for the Cl_4 / coframe response
+on `K`, plus an explicit constructive existence proof of the four-generator
+Clifford realization.
+**Does not by itself promote:**
 [`PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md`](PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md)
-from conditional to unconditional on the retained surface.
-**Resolves:** the open route called out in
+to retained unconditional closure -- the bridge premise's canonical
+identification on `K` is supplied by the cubic-bivector Schur theorem above
+at object level, but the full physical-identification residual is still open.
+**Open vector reference:**
 [`PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25.md`](PLANCK_TARGET3_PHASE_UNIT_EDGE_STATISTICS_BOUNDARY_NOTE_2026-04-25.md)
-under "derive irreducible Clifford-Majorana/CAR edge statistics from a stronger
-native principle" (Route 1D: coframe response from native Cl(3) bivector
-structure, extended by the anomaly-forced time axis).
+remains correct on the stripped Hilbert-only surface.
 
 ## Verdict
 

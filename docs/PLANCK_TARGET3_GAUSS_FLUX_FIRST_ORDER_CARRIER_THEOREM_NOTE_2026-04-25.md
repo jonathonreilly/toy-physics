@@ -1,16 +1,28 @@
 # Planck Target 3 Gauss-Flux First-Order Coframe Carrier Theorem
 
 **Date:** 2026-04-25
-**Status:** retained closure of the explicit residual called out by
-[`PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md`](PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md);
-combined with the upstream landings on the Planck packet, the Target 3
-chain `c_Widom = c_cell = 1/4 -> G_Newton,lat = 1 -> a/l_P = 1` closes
-unconditionally on the retained surface in the package's natural
-phase/action units; no parameter imports and no SI decimal claim
+**Status (UPDATED 2026-04-26 per Codex review of branch tip `47e7891e`):**
+**RE-SCOPED to retained conditional / control packet.** The earlier
+"closes the physical-identification residual" headline is downgraded. See
+[`review.md`](../review.md) finding [P1]/3: the Gauss-flux/1-form derivation
+chooses the carrier convention rather than deriving it from a retained
+source principle (the Hodge-dual P_3 reading is not excluded), and the
+two decisive new claims were marked as literal `True` in the runner. The
+current canonical retained replacement structural content is in
+[`PLANCK_TARGET3_CUBIC_BIVECTOR_SCHUR_SOURCE_PRINCIPLE_THEOREM_NOTE_2026-04-26.md`](PLANCK_TARGET3_CUBIC_BIVECTOR_SCHUR_SOURCE_PRINCIPLE_THEOREM_NOTE_2026-04-26.md).
 **Runner:** `scripts/frontier_planck_target3_gauss_flux_first_order_carrier.py`
-(PASS=40, FAIL=0)
-**Closes residual:**
+(PASS=41, FAIL=0 after 2026-04-26 update; the literal-`True` closure
+checks are replaced by explicit scope statements).
+**Provides:** the positive Gauss-flux/1-form derivation, conditional on the
+1-form carrier convention. This is necessary structural content but not
+sufficient by itself for retained unconditional Target 3 closure; the
+Hodge-dual P_3 reading remains a separate convention choice that the
+retained source principle has not yet derived.
+**Open residual:**
 `derive_gravitational_boundary_action_density_as_first_order_coframe_carrier`
+(specifically: select P_1 over P_3 from a retained source principle, and
+identify the boundary spectral data with the gravitational source coupling
+chi_eta * rho * Phi).
 
 ## Verdict
 

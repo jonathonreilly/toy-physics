@@ -1,15 +1,21 @@
 # Planck Target 3 Clifford Phase Bridge Theorem
 
 **Date:** 2026-04-25
-**Status:** UNCONDITIONAL on the retained surface (the primitive Clifford
-coframe-response premise is forced by
-[`PLANCK_TARGET3_FORCED_COFRAME_RESPONSE_THEOREM_NOTE_2026-04-25.md`](PLANCK_TARGET3_FORCED_COFRAME_RESPONSE_THEOREM_NOTE_2026-04-25.md));
-not an SI decimal derivation of `hbar`
+**Status (UPDATED 2026-04-26 per Codex review of branch tip `47e7891e`):**
+**Conditional structural Target 3 bridge** under the metric-compatible
+primitive Clifford / coframe-response premise on `P_A H_cell`. The
+2026-04-25 promotion to "unconditional via the forced coframe response
+theorem" is **withdrawn** -- Codex's [P1]/1 review found that rank
+matching alone does not canonically pin the Cl_4 module on `K`. The
+companion 2026-04-26 cubic-bivector Schur source-principle theorem
+([`PLANCK_TARGET3_CUBIC_BIVECTOR_SCHUR_SOURCE_PRINCIPLE_THEOREM_NOTE_2026-04-26.md`](PLANCK_TARGET3_CUBIC_BIVECTOR_SCHUR_SOURCE_PRINCIPLE_THEOREM_NOTE_2026-04-26.md))
+supplies object-level canonical retained content (so(4) vector rep + Schur
+spectrum + APS gap), but does not by itself derive the gravitational
+source coupling chi_eta * rho * Phi nor select P_1 over P_3.
 **Runner:** `scripts/frontier_planck_target3_clifford_phase_bridge.py`
-**Promoted by:**
-[`PLANCK_TARGET3_FORCED_COFRAME_RESPONSE_THEOREM_NOTE_2026-04-25.md`](PLANCK_TARGET3_FORCED_COFRAME_RESPONSE_THEOREM_NOTE_2026-04-25.md)
--- the metric-compatible coframe-response premise is forced by Cl(3) on Z^3
-+ anomaly-cancellation chirality + time-locked primitive event coframe.
+**Conditional on:** the metric-compatible coframe-response premise on `K =
+P_A H_cell`, plus the carrier-side identification (gravitational boundary
+functional = first-order coframe carrier).
 
 ## Purpose
 

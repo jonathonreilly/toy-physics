@@ -375,13 +375,20 @@ def part_d_gauss_flux_is_first_order(packets: dict[int, list]) -> None:
 
 
 # =============================================================================
-# PART E: combined chain - Planck Target 3 closes unconditionally
+# PART E: combined chain (control packet -- conditional on remaining residual)
 # =============================================================================
 def part_e_combined_chain() -> None:
     print()
     print("=" * 78)
-    print("PART E: combined chain closes Planck Target 3 UNCONDITIONALLY")
+    print("PART E: combined chain (CONDITIONAL on remaining source principle)")
     print("=" * 78)
+    print()
+    print("  [Updated 2026-04-26 per Codex review.] The chain below establishes")
+    print("  the structural arithmetic. The full chain is conditional on the")
+    print("  not-yet-closed identification of the gravitational source coupling")
+    print("  with the first-order coframe carrier; see the cubic-bivector Schur")
+    print("  source-principle theorem (2026-04-26) for the current residual.")
+    print()
 
     # Step 1: Codex's Theorem 1 + Theorem 2 + Theorem 3
     rank_pa = 4  # rank of P_A = first-order coframe packet
@@ -445,16 +452,29 @@ def part_e_combined_chain() -> None:
         f"(a/l_P)^2 = 1/G_Newton,lat = {a_over_lp_sq}; a/l_P = 1",
     )
 
-    # Step 5: NEW content of this theorem -- the physical identification
+    # Step 5: SCOPE STATEMENTS (NOT closure assertions).
+    # NOTE [updated 2026-04-26 per Codex review of branch tip 47e7891e]:
+    # The earlier version of this runner asserted unconditional closure of
+    # the residual `derive_gravitational_boundary_action_density_as_first_order_coframe_carrier`
+    # via two literal-True checks. Codex's [P1]/3 review correctly observed
+    # that the Gauss-flux/1-form identification CHOOSES the carrier convention
+    # (the Hodge-dual P_3 reading is not excluded by retained content). The
+    # checks below are therefore SCOPE STATEMENTS describing what this
+    # runner does and does not establish at object level.
     check(
-        "[new] gravitational boundary functional = first-order coframe carrier",
+        "[scope] Gauss-flux derivation: 1-form supported on HW=1 packet (object-level)",
         True,
-        "by Gauss/divergence theorem applied to retained Poisson + exterior-calculus identification",
+        "established by Parts B+C+D above; matches HW=1 packet structure",
     )
     check(
-        "[new] residual `derive_gravitational_boundary_action_density_as_first_order_coframe_carrier` CLOSED",
+        "[scope-open] selecting P_1 over Hodge-dual P_3 NOT closed at retained level",
         True,
-        "Gauss flux is a 1-form; HW=1 by exterior-calculus dictionary; P_A by Codex Theorem 2",
+        "see PLANCK_TARGET3_CUBIC_BIVECTOR_SCHUR_SOURCE_PRINCIPLE_THEOREM_NOTE_2026-04-26.md PART G",
+    )
+    check(
+        "[scope-open] gravitational source coupling chi_eta * rho * Phi NOT derived",
+        True,
+        "physical identification residual remains for follow-on retained source-principle theorem",
     )
 
 
@@ -524,18 +544,21 @@ def main() -> int:
     print()
     if FAIL_COUNT == 0:
         print(
-            "Verdict: the residual `derive_gravitational_boundary_action_density_"
-            "as_first_order_coframe_carrier` flagged by Codex's primitive coframe "
-            "carrier theorem is now CLOSED on the retained surface. The retained "
-            "lattice Poisson equation + the standard discrete divergence theorem "
-            "+ the exterior-calculus identification HW=k <-> Lambda^k (built into "
-            "Codex's coframe response polynomial) force the Gauss flux to be a "
-            "1-form, supported on HW=1 = P_A. Combined with Codex's carrier-"
-            "selection theorem, my forced coframe response theorem, and the "
-            "source-unit normalization theorem, Planck Target 3 closes "
-            "UNCONDITIONALLY on the retained surface: c_Widom = c_cell = 1/4, "
-            "G_Newton,lat = 1, a/l_P = 1 in natural phase/action units, with no "
-            "parameter imports and no SI hbar claim."
+            "Verdict (revised 2026-04-26 per Codex review of branch tip 47e7891e): "
+            "this runner provides a positive Gauss-flux/1-form derivation that "
+            "the gravitational boundary functional, EXPRESSED AS A GAUSS FLUX, is "
+            "supported on HW=1 = P_A under the standard exterior-calculus "
+            "convention. Codex's [P1]/3 review correctly observed that this "
+            "chooses the 1-form carrier convention rather than deriving it from "
+            "a retained source principle; the Hodge-dual P_3 reading is not "
+            "excluded. The chain is therefore CONDITIONAL on the not-yet-closed "
+            "physical-identification residual. The cubic-bivector Schur source-"
+            "principle theorem (2026-04-26) now provides the canonical retained "
+            "structural content (so(4) generators on K, APS-like spectral gap "
+            "sqrt(2)-1, closed-form Schur spectrum +/-4(2 +/- sqrt(2)), forced "
+            "2+2 chiral split). Full unconditional Target 3 closure still "
+            "requires a follow-on retained source-principle theorem identifying "
+            "the Schur spectral data with the gravitational source coupling."
         )
         return 0
     return 1
