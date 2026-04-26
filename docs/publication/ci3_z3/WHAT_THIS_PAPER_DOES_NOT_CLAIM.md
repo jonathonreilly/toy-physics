@@ -94,6 +94,10 @@ The paper does **not** claim:
   [CKM_BARRED_NAPOLEON_TRIANGLES_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md](../../CKM_BARRED_NAPOLEON_TRIANGLES_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md)
   are direct measured-CKM observables or extend beyond the retained NLO
   protected-`gamma_bar` surface.
+- that the CKM Brocard-polynomial Vieta structural-integer skeleton in
+  [CKM_BROCARD_POLYNOMIAL_VIETA_STRUCTURAL_INTEGERS_THEOREM_NOTE_2026-04-25.md](../../CKM_BROCARD_POLYNOMIAL_VIETA_STRUCTURAL_INTEGERS_THEOREM_NOTE_2026-04-25.md)
+  is a direct measured-CKM observable, an all-orders CKM theorem, or a new
+  independent selector for the retained structural counts.
 - that the CKM Jarlskog exact NLO closed form eliminates higher-order
   Wolfenstein corrections to the physical CKM Jarlskog beyond the retained
   protected-`gamma_bar` NLO surface.
