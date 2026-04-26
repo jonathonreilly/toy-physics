@@ -59,6 +59,7 @@ python3 scripts/frontier_complete_prediction_chain.py
 python3 scripts/frontier_alpha_lm_geometric_mean_identity.py
 python3 scripts/frontier_ew_higgs_gauge_mass_diagonalization.py
 python3 scripts/frontier_sm_one_higgs_yukawa_gauge_selection.py
+python3 scripts/frontier_sm_gim_neutral_current_ckm_unitarity.py
 python3 scripts/frontier_yt_ward_identity_derivation.py
 python3 scripts/frontier_yt_p1_bz_quadrature_full_staggered_pt.py
 python3 scripts/frontier_higgs_mass_full_3loop.py
