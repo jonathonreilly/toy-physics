@@ -190,6 +190,10 @@ Current status from that stack:
   Pedoe two-triangle similarity deficit
   `PedoeDeficit(alpha_s,alpha_s') = (alpha_s-alpha_s')^2/48`
   on the retained NLO protected-`gamma_bar` surface,
+  Napoleon-triangle side-square closure
+  `N_outer^2=W_+/6`, `N_inner^2=W_-/6`, and
+  `N_outer^2 N_inner^2=P(alpha_s(v))/82944`
+  on the same retained NLO protected-`gamma_bar` surface,
   `delta = 65.905 deg`,
   rescaled atlas-triangle `alpha_0 = 90 deg`,
   `J = 3.331 x 10^-5`

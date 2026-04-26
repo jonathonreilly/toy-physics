@@ -90,6 +90,10 @@ The paper does **not** claim:
   [CKM_BARRED_PEDOE_SIMILARITY_DEFICIT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md](../../CKM_BARRED_PEDOE_SIMILARITY_DEFICIT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md)
   is a direct metric on measured CKM observables or extends beyond the
   retained NLO protected-`gamma_bar` surface.
+- that the CKM barred-triangle Napoleon-triangle exact closed forms in
+  [CKM_BARRED_NAPOLEON_TRIANGLES_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md](../../CKM_BARRED_NAPOLEON_TRIANGLES_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md)
+  are direct measured-CKM observables or extend beyond the retained NLO
+  protected-`gamma_bar` surface.
 - that the CKM Jarlskog exact NLO closed form eliminates higher-order
   Wolfenstein corrections to the physical CKM Jarlskog beyond the retained
   protected-`gamma_bar` NLO surface.
