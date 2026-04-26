@@ -20,20 +20,9 @@ Key NEW identities on the retained NLO Wolfenstein protected-gamma_bar surface:
                                         =  60 R_bar^2 / alpha_s.
 
   (C3) Equivalent form (eliminating alpha_s via |V_us|^2 = alpha_s/N_pair):
-        (|V_td V_us| / |V_cb V_ub|)^2  =  (N_pair^3 N_color (N_quark - 1)) R_bar^2 / |V_us|^2
-                                        =  120 R_bar^2 / |V_us|^2,
-       since alpha_s = N_pair |V_us|^2 implies 1/alpha_s = 1/(N_pair |V_us|^2),
-       so 60/alpha_s = 60/(N_pair |V_us|^2) = 30/|V_us|^2... hmm let me re-check.
-
-       Actually 60 R_bar^2/alpha_s = 60 R_bar^2 / (N_pair |V_us|^2) = 30 R_bar^2/|V_us|^2.
-
-       So (|V_td V_us| / |V_cb V_ub|)^2 = 30 R_bar^2/|V_us|^2,
-       i.e., |V_td V_us|^2 / |V_cb V_ub|^2 = 30 R_bar^2 / |V_us|^2,
-       so   |V_td|^2 |V_us|^4 = 30 R_bar^2 |V_cb|^2 |V_ub|^2.
-
-       Let me re-verify the structural integer factor.
-       In structural form: 30 = N_pair × N_color × (N_quark - 1) = 2 * 3 * 5 = 30.
-       Yes 30 = N_pair N_color (N_quark - 1).
+        (|V_td V_us| / |V_cb V_ub|)^2  =  N_pair * N_color * (N_quark - 1)
+                                          * R_bar^2 / |V_us|^2
+                                        =  30 R_bar^2 / |V_us|^2.
 
   (C4) PDG numerical comparison.
 """
@@ -253,12 +242,7 @@ def audit_c2_four_magnitude_bridge(N: dict, S: dict) -> None:
           diff == 0)
 
     # Alternative form using |V_us|^2 = alpha_s/N_pair: alpha_s = N_pair |V_us|^2.
-    expected_alt = sp.simplify(
-        N_pair ** 3 * N_color * (N_quark - 1) * R_bar_sq / (N_pair * Vus_sq)
-        # = N_pair^2 N_color (N_quark - 1) R_bar^2 / |V_us|^2
-    )
-    # Wait: 60/alpha_s = 60/(N_pair |V_us|^2) = (60/N_pair)/|V_us|^2 = 30/|V_us|^2.
-    # In structural integers: 30 = N_pair N_color (N_quark - 1).
+    # Thus 60/alpha_s = 60/(N_pair |V_us|^2) = 30/|V_us|^2.
     expected_alt2 = sp.simplify(N_pair * N_color * (N_quark - 1) * R_bar_sq / Vus_sq)
     diff_alt = sp.simplify(compound_sq - expected_alt2)
     print(f"\n  Equivalent form: 30 R_bar^2 / |V_us|^2")

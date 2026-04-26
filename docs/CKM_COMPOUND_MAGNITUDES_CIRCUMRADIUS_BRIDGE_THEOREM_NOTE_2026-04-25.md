@@ -78,8 +78,15 @@ is load-bearing.
 
 ### C1: three-magnitude bridge
 
-Starting from `|V_td|² = α_s³(80+α_s²)/1152` (from the Cabibbo Power Tower
-companion theorem, T4 in expanded form):
+Starting directly from the retained NLO barred-apex and Wolfenstein
+definitions,
+
+```text
+|V_td|^2 = A^2 lambda^6 ((1-rho_bar)^2 + eta_bar^2)
+         = alpha_s^3 (80+alpha_s^2)/1152.
+```
+
+Then:
 
 ```text
 |V_td|^2  =  alpha_s^3 (80 + alpha_s^2)/1152.
@@ -138,7 +145,7 @@ Substituting:
                     =  20 R_bar^2.
 ```
 
-So `|V_td/V_ub|² = N_pair²(N_quark − 1) R̄² = 20 R̄²` (companion theorem T6).
+So the retained inputs also give `|V_td/V_ub|² = N_pair²(N_quark − 1) R̄² = 20 R̄²`.
 
 Now multiplying both sides by `|V_us|²/|V_cb|²`:
 
@@ -200,12 +207,11 @@ framework against PDG.
 
 ### What this lets the framework state cleanly
 
-Previously, the framework had retained:
-- The Cabibbo Power Tower of CKM magnitudes (companion theorem):
-  each magnitude is a structural-integer-scaled power of `|V_us|²`
-  with `R̄²` for `V_td`.
-- Pairwise circumradius bridges: `|V_td/V_ts|² = (5/3) α_s R̄²` and
-  `|V_us V_td/(V_cb V_ts)|² = 5 R̄²` (companion theorem).
+Previously, the framework had retained the NLO circumradius closed form and
+the row/structural-count magnitude identities separately. Their direct
+combination already implies single- and pairwise `R̄²` readouts for `V_td`;
+this note packages the compound three- and four-magnitude versions as their
+own theorem.
 
 This note delivers:
 
@@ -304,9 +310,7 @@ are forced by the specific structural identifications
 
 - Does **not** modify any retained authority.
 - Does **not** promote any support-tier theorem to retained.
-- Does **not** cite unmerged branches as load-bearing (companion
-  Cabibbo Power Tower and circumradius-bridge branches are
-  referenced for context).
+- Does **not** cite unmerged branches as load-bearing.
 - Does **not** introduce a new `d`-selector or `N_color`-selector;
   all structural integers are retained inputs.
 - Does **not** depend on any α_s-running pipeline.
