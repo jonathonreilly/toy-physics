@@ -204,8 +204,9 @@ corrections, and Lamb shift. All of these depend on `α_EM` at low energy
 The present note **contributes one structural ingredient** to this lane:
 the asymptotic / above-all-thresholds `b_QED` β-coefficient now has a
 structural closed form `(2/3)(N_color + 1)²` via S1 + retained Q_u, Q_d
-charges + retained `N_gen = N_color`. Combined with the freshly-retained
-lattice-scale anchor `1/α_EM|_lattice = 4π × N_color²`, this gives:
+charges + retained `N_gen = N_color`. Combined with the lattice-scale anchor
+derived inline here from retained EW Higgs diagonalization + retained YT_EW +
+S1, `1/α_EM|_lattice = 4π × N_color²`, this gives:
 
 ```text
 1/α_EM(Q)  =  4π × N_color²  -  ((N_color + 1)² / (3π)) × ln(Q/Q_lattice)
@@ -358,9 +359,9 @@ Standard 1-loop α_EM running formula:
               =  1 / α_EM(Q_0)  -  ((N_color + 1)² / (3π)) × ln(Q / Q_0)        [via T4]
 ```
 
-With the retained lattice-scale anchor `1/α_EM|_lattice = 4π × N_color² = 36π`
-(P5, retained on main via the recently-landed EW-EM lattice double-angle
-trinity), the asymptotic / above-all-thresholds running formula is:
+With the lattice-scale anchor `1/α_EM|_lattice = 4π × N_color² = 36π`
+(P5, derived above from retained EW Higgs diagonalization + retained YT_EW +
+S1), the asymptotic / above-all-thresholds running formula is:
 
 ```text
 1 / α_EM(Q)  =  4π × N_color²  -  ((N_color + 1)² / (3π)) × ln(Q / Q_lattice).
@@ -441,8 +442,9 @@ structural closed form via S1, not a numerical coincidence.
 
 4. **Direct contribution to Open Atomic-Scale Lane (Lane 2)**: the
    asymptotic / above-all-thresholds QED running formula now has a
-   structural β-coefficient. Combined with the freshly-retained
-   `1/α_EM|_lattice = 36π = 4π × N_color²` lattice anchor, this gives
+   structural β-coefficient. Combined with the lattice-scale
+   `1/α_EM|_lattice = 36π = 4π × N_color²` anchor derived inline from
+   retained EW Higgs diagonalization + retained YT_EW + S1, this gives
    a structural closed form `1/α_EM(Q) = 4π N_color² − ((N_color+1)²/(3π)) ln(Q/Q_lattice)`
    for the asymptotic running. The threshold-resolved physical running
    through `M_t, M_b, ..., M_e` still requires open-lane lepton/quark
@@ -486,8 +488,9 @@ structural closed form via S1, not a numerical coincidence.
 
 - Does NOT close the open Atomic-Scale Lane (Lane 2).
 - Does NOT derive `1/α_EM(M_Z)` or `1/α_EM(0)` from first principles.
-- Does NOT modify retained sister bridges (`A^4`, `cos²` complement,
-  EW-EM trinity); this note BUILDS ON them.
+- Does NOT modify retained sister bridges (`A^4`, `cos²` complement);
+  this note builds on the same retained EW/YT/S1 inputs for the lattice
+  `α_EM` anchor.
 - Does NOT use the support-tier `α_3(bare)/α_em(bare) = 9` or
   `Q_u² + Q_d² = 5/9` (QUARK_STRC) as load-bearing routes; they are
   comparators only.

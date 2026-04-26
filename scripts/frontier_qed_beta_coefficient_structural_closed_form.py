@@ -26,8 +26,9 @@ Plus per-sector breakdown and SM-pin verification.
 
 This contributes one structural ingredient to the OPEN ATOMIC-SCALE LANE
 (Lane 2): the asymptotic / above-all-thresholds QED beta-coefficient now
-has a structural closed form, combined with the recently-retained
-1/alpha_EM|_lattice = 4 pi N_color^2 = 36 pi anchor.
+has a structural closed form, combined with the lattice-scale
+1/alpha_EM|_lattice = 4 pi N_color^2 = 36 pi anchor derived here from
+retained EW Higgs diagonalization + retained YT_EW + S1.
 
 Status: retained QED-running structural corollary; explicitly NOT a
 closure of Lane 2 (threshold-resolved running through M_t, M_b, ..., M_e
