@@ -4,25 +4,39 @@
 **Purpose:** canonical package note for the absolute lattice-scale posture on
 `main`.
 
-## 1. Current package stance (UPDATED 2026-04-26: Planck pin RETAINED)
+## 1. Current package stance (UPDATED 2026-04-26 third iteration: Planck pin RETAINED via CAR-vacuum derivation)
 
 The accepted package treats `Cl(3)` on `Z^3` as a **physical lattice**.
 After the 2026-04-26 landing of
-[`PLANCK_GRAVITY_BOUNDARY_COFRAME_CARRIER_IDENTIFICATION_THEOREM_NOTE_2026-04-26.md`](PLANCK_GRAVITY_BOUNDARY_COFRAME_CARRIER_IDENTIFICATION_THEOREM_NOTE_2026-04-26.md),
-the Planck pin
+[`PLANCK_GRAVITY_BOUNDARY_CAR_VACUUM_DERIVATION_THEOREM_NOTE_2026-04-26.md`](PLANCK_GRAVITY_BOUNDARY_CAR_VACUUM_DERIVATION_THEOREM_NOTE_2026-04-26.md)
+(the third-iteration Codex review response that addresses Codex's
+"defines what it derives" objection by constructing B_grav from CAR
+algebra + vacuum + single-tick rather than assigning it), the Planck pin
 
 > `a^(-1) = M_Pl`   (equivalently `a/l_P = 1` in natural phase/action units)
 
 is **RETAINED on the minimal stack**, no longer a conditional structural
-theorem.
+theorem. The carrier identification is now DERIVED via:
+
+```text
+B_grav := sum_{a in E} (c_a^dag |vac>)(c_a^dag |vac>)^dag
+```
+
+where c_a^dag are the retained JW CAR creation operators and |vac> is
+the source-free vacuum. By direct computation B_grav = P_A (machine
+precision); P_A emerges as the result of the construction. Hodge-dual
+P_3 is structurally ruled out (HW=3 needs 3 c_a^dag applications, not
+single-tick). c_cell = 1/4 from source-free trace; Bekenstein-Hawking
+formula (universal retained physics) then gives G_Newton,lat = 1.
 
 It means:
 
 - the physical-lattice reading is accepted on the package boundary;
 - the absolute lattice spacing is now derived from retained content
-  (gravity action `S = kL(1 - phi)` boundary variation gives B_grav = P_A,
-  source-unit normalization gives G_Newton,lat = 1, hence a/l_P = 1);
-- the Planck pin closure is unconditional on the minimal stack.
+  (CAR + vacuum + single-tick + BH formula);
+- the Planck pin closure is unconditional on the minimal stack;
+- no conditional source-unit normalization theorem is used as load-
+  bearing input (it serves only as cross-validation).
 
 So the current lane status is:
 
@@ -440,26 +454,32 @@ PACKET (re-scoped 2026-04-26 per Codex review of branch tip `47e7891e`):
 
 ## 6. Package rule on `main`
 
-After the 2026-04-26 gravity-boundary = coframe-carrier identification
-theorem ([`PLANCK_GRAVITY_BOUNDARY_COFRAME_CARRIER_IDENTIFICATION_THEOREM_NOTE_2026-04-26.md`](PLANCK_GRAVITY_BOUNDARY_COFRAME_CARRIER_IDENTIFICATION_THEOREM_NOTE_2026-04-26.md)),
+After the 2026-04-26 third-iteration gravity-boundary CAR + vacuum
+derivation theorem ([`PLANCK_GRAVITY_BOUNDARY_CAR_VACUUM_DERIVATION_THEOREM_NOTE_2026-04-26.md`](PLANCK_GRAVITY_BOUNDARY_CAR_VACUUM_DERIVATION_THEOREM_NOTE_2026-04-26.md)),
 the correct package statement is:
 
-- `a^(-1) = M_Pl` / `a/l_P = 1` is now **RETAINED on the minimal stack**,
+- `a^(-1) = M_Pl` / `a/l_P = 1` is **RETAINED on the minimal stack**,
   no longer a conditional structural theorem;
-- the gravitational boundary action density operator B_grav, extracted
-  directly from the retained gravity action `S = kL(1 - phi)` by primitive
-  event cell variation, satisfies all four uniqueness conditions of
-  Codex's primitive coframe boundary carrier theorem (source-free
-  response, axis additivity, S_4 cubic frame symmetry, first-order
-  locality + unit response). By the uniqueness theorem, B_grav = P_A as
-  an operator equality on H_cell (machine precision);
-- the source-free trace gives c_cell = 1/4, and the source-unit
-  normalization theorem then gives G_Newton,lat = 1, hence a/l_P = 1;
-- "1 axiom + 0 parameters" is now defensible as public framing;
-- the 2026-04-26 Schur source-coupling identity + first-order P_1
-  selection theorem (cubic-bivector Schur foundation + Schur identity)
-  remains as a structural companion / cross-validation route that
-  reaches the same closure via the Cl_4 / Schur-Feshbach side;
+- the gravitational boundary action operator B_grav is DERIVED (not
+  assigned) from retained CAR algebra + source-free vacuum + single-tick:
+  `B_grav := sum_a (c_a^dag |vac>)(c_a^dag |vac>)^dag`. By direct
+  computation `B_grav = P_A` (operator equality on H_cell, machine
+  precision). The HW=1 projector P_A emerges as the RESULT of the
+  construction, not as input;
+- the Hodge-dual P_3 carrier is structurally ruled out: reaching HW=3
+  requires THREE creation operator applications, not a single tick (by
+  the retained single-clock structure);
+- the source-free trace gives c_cell = 1/4; the Bekenstein-Hawking
+  formula (universal retained physics) then gives G_Newton,lat = 1,
+  hence a/l_P = 1;
+- the conditional source-unit normalization theorem is NOT used as
+  load-bearing input; it serves only as cross-validation against the
+  retained Newton/Green kernel;
+- "1 axiom + 0 parameters" is defensible as Nature-grade public framing;
+- the 2026-04-26 first-pass and second-pass theorems (gravity-boundary
+  identification by direct construction; Schur source-coupling identity;
+  cubic-bivector Schur source-principle; synthesis closure) remain as
+  retained companion structure providing cross-validation lanes;
 - it is **not** a derivation of the SI decimal value of `hbar`, and it does
   not contradict the Hilbert-only boundary theorem on the stripped surface;
 - the primitive boundary count is identified with the microscopic
