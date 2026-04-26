@@ -20,12 +20,12 @@ not the full missing-science surface of the repo. The bounded-companion and
 scaffold-lane categories absorb significant content that still needs direct
 derivation work.
 
-This package accepts **five critical open science lanes** on `main`, each with
+This package accepts **six critical open science lanes** on `main`, each with
 explicit derivation targets, existing scaffolding, and recommended attack
 approaches. **It does not promote any claim or close any theorem.** It only
 records the work that still needs to be done.
 
-## The five lanes
+## The six lanes
 
 | # | Lane | Science priority | Approachability | Status today |
 |---|---|---|---|---|
@@ -34,6 +34,7 @@ records the work that still needs to be done.
 | 3 | Quark masses retention (5 quark masses) | HIGHEST | Tier B-C | bounded companion via threshold-local + up-type extension |
 | 4 | Neutrino quantitative closure (m_ν, Δm², Majorana phases) | HIGH | Tier B-C | "different carriers"; bounded |
 | 5 | Hubble constant H_0 derivation (cosmology matter bridge) | HIGH | Tier B | external input; structural identities retained |
+| 6 | Charged-lepton mass retention (full closure: ratios + V_0) | HIGHEST | Tier A-B | Koide flagship lane in flight (ratios); V_0 absolute scale separately open |
 
 Per-lane open-lane documents:
 
@@ -42,13 +43,21 @@ Per-lane open-lane documents:
 - [`03_QUARK_MASS_RETENTION_OPEN_LANE_2026-04-26.md`](./03_QUARK_MASS_RETENTION_OPEN_LANE_2026-04-26.md)
 - [`04_NEUTRINO_QUANTITATIVE_OPEN_LANE_2026-04-26.md`](./04_NEUTRINO_QUANTITATIVE_OPEN_LANE_2026-04-26.md)
 - [`05_HUBBLE_CONSTANT_DERIVATION_OPEN_LANE_2026-04-26.md`](./05_HUBBLE_CONSTANT_DERIVATION_OPEN_LANE_2026-04-26.md)
+- [`06_CHARGED_LEPTON_MASS_RETENTION_OPEN_LANE_2026-04-26.md`](./06_CHARGED_LEPTON_MASS_RETENTION_OPEN_LANE_2026-04-26.md)
 
 Each lane stub is intended to be a parallel-worker handoff surface. The top
 metadata block names the primary closure targets, the first worker target, and
 the non-claim boundary. The body preserves the current retained/bounded/scaffold
 state, derivation targets, scaffolding, and recommended attack path.
 
-## Common scoping principles for all five lanes
+Lane 6 (charged-lepton mass retention) was added 2026-04-26 to close the gap
+where Tier 1 missing-science item #2 had no dedicated active lane. The Koide
+flagship lane (in `ACTIVE_WORKING_LANES_2026-04-26.md`) covers the ratios
+sub-target; Lane 6 holds the full charged-lepton mass retention scope
+including the V_0 absolute scale. Lane 6 is a parent surface for the Koide
+flagship work, not a duplicate of it.
+
+## Common scoping principles for all six lanes
 
 Each open-lane document follows the same structural template:
 
@@ -70,8 +79,8 @@ Each open-lane document follows the same structural template:
 ## Full Missing-Science Inventory
 
 This is the **complete** list of missing-science items captured in this pass,
-ranked by scientific impact and approachability. The five active lanes above
-are the top five by priority × approachability product. The remaining items are
+ranked by scientific impact and approachability. The six active lanes above
+are the top six by priority × approachability product. The remaining items are
 deferred to follow-on lanes — they remain open but are either lower priority,
 lower approachability on the current scaffolding, or already addressed by
 non-active-lane mechanisms in the framework.
@@ -86,7 +95,7 @@ status elsewhere, the canonical theorem surface wins.
 | # | Item | Status | In active package? |
 |---|---|---|---|
 | 1 | **Quark masses (m_u, m_d, m_s, m_c, m_b)** | bounded companion only | **Active — Lane 3** |
-| 2 | **Charged-lepton masses (m_e, m_μ, m_τ)** | bounded via 3-real PDG pin; Koide closure in flight | partially via existing Koide flagship lane |
+| 2 | **Charged-lepton masses (m_e, m_μ, m_τ)** | bounded via 3-real PDG pin; Koide closure in flight | **Active — Lane 6** (parent lane covering ratios + V_0); Koide flagship lane is the ratios dependency |
 | 3 | **Proton / hadron masses (m_p, m_π, m_K, etc.)** | bounded via confinement only | **Active — Lane 1** |
 | 4 | **Atomic-scale predictions (Rydberg / -13.6 eV)** | scaffold uses textbook inputs | **Active — Lane 2** |
 | 5 | **Neutrino sector quantitative (m_ν, Δm², Majorana phases)** | "different carriers" / bounded | **Active — Lane 4** |
@@ -159,19 +168,23 @@ the item away structurally (acknowledged for completeness):
 | 49 | Discrete-to-continuum gravity | RETAINED on canonical textbook target |
 | 50 | Top quark mass m_t | RETAINED (172.57 GeV at 0.07%) |
 
-### Why these specific five lanes are active
+### Why these specific six lanes are active
 
-The five active lanes are selected by:
+The six active lanes are selected by:
 
 > A lane is **included as active** if and only if (a) it is a top-priority
 > open science question, AND (b) closing it produces meaningful change in the
 > framework's defensibility as a TOE candidate, AND (c) closing it is
 > approachable on a months-to-year timescale given existing repo scaffolding.
 
-Tier 1 items 1, 3, 4, 5 are all active as Lanes 3, 1, 2, 4
-respectively. Tier 1 item 2 (charged-lepton masses) is partially covered by
-the existing Koide flagship lane work in flight. Tier 2 item 6 (H_0) is in
-the active package as Lane 5.
+All five Tier 1 items now have active-lane coverage:
+- Tier 1 item 1 (quark masses) → Lane 3
+- Tier 1 item 2 (charged-lepton masses) → **Lane 6** (added 2026-04-26;
+  parent lane with Koide flagship as the ratios dependency)
+- Tier 1 item 3 (hadron masses) → Lane 1
+- Tier 1 item 4 (atomic-scale) → Lane 2
+- Tier 1 item 5 (neutrino sector) → Lane 4
+- Tier 2 item 6 (H_0) → Lane 5
 
 All other Tier 2-4 items are deferred — they remain open and should be tracked
 as such. Any deferred item can be moved into active status if priorities change
@@ -183,20 +196,24 @@ total picture is honest rather than only listing the open items.
 
 ## Recommended priority order (subject to review)
 
-1. **Lane 2 (atomic-scale)** first as a fast-win — depends on Koide closure
-   for m_e (in flight), then becomes Tier A substitution. **Visceral defense
-   against "you can't even do hydrogen" attack.**
-2. **Lane 5 (Hubble)** in parallel — has the most recent structural-identity
+1. **Lane 6 (charged-lepton mass retention)** first — Koide flagship is in
+   flight; the y_τ Ward identity (the V_0 dependency) is the highest-leverage
+   single derivation in flight on the matter-mass program. Closing 6 unlocks
+   Lane 2 as a Tier A substitution exercise.
+2. **Lane 2 (atomic-scale)** in parallel with 6 — once Lane 6 lands m_e,
+   substituting into the existing H/He scaffold is a Tier A exercise.
+   **Visceral defense against "you can't even do hydrogen" attack.**
+3. **Lane 5 (Hubble)** in parallel — has the most recent structural-identity
    landings (single-ratio inverse reconstruction, FRW kinematic reduction,
    R_base = 31/9, N_eff, matter-radiation equality). Closer to closure than
    it looks.
-3. **Lane 3 (quark masses)** — substantial, but the up-type amplitude
+4. **Lane 3 (quark masses)** — substantial, but the up-type amplitude
    shortlist (7/9, √(3/5), atan(√5)−√5/6, ...) is short and the down-type
    5/6 NP proof has a clear taste-staircase route.
-4. **Lane 1 (hadron masses)** — depends on Lane 3. After quark masses retain,
+5. **Lane 1 (hadron masses)** — depends on Lane 3. After quark masses retain,
    standard lattice-QCD methodology applies and m_π via chiral SB +
    m_p ab initio QCD become tractable.
-5. **Lane 4 (neutrino)** — substantial structural extension, but the DM
+6. **Lane 4 (neutrino)** — substantial structural extension, but the DM
    closed package gives δ_CP + θ_23 forecast as cross-validation. Likely
    the longest lane to close.
 
@@ -206,25 +223,27 @@ This package does NOT replace or override the existing project Open Flagship
 Lane scoping. Specifically:
 
 - The Koide closure work (Q = 2/3 + δ = 2/9) remains a project priority.
-  Closing it advances Lane 2 (atomic-scale, via m_e retention) and is itself
-  a prerequisite for Lane 3 absolute scales.
+  It is now formally the **ratios sub-target** of Lane 6 (charged-lepton
+  mass retention). Closing the Koide flagship lane advances Lane 6, which
+  in turn advances Lane 2 (atomic-scale, via m_e retention) and Lane 3
+  absolute scales.
 - The Planck pin completion work (a^(-1) = M_Pl unconditional) remains a
-  project priority. It is orthogonal to these five lanes and addresses the
+  project priority. It is orthogonal to these six lanes and addresses the
   claim-framing question rather than the matter-mass question.
 - The frontier extension lanes (teleportation, chronology, signed gravity)
   are exploratory expansion lanes and remain separately scoped.
 
-The relationship is additive: these five lanes are missing science that still
+The relationship is additive: these six lanes are missing science that still
 needs closing for a defensible TOE claim, on top of the internal lanes already
 prioritized.
 
 ## Possible Manuscript-Surface Follow-Up
 
 - Add a new section to [CLAIMS_TABLE.md](../../publication/ci3_z3/CLAIMS_TABLE.md)
-  titled "Critical Open Science Lanes" listing these five lanes with status
+  titled "Critical Open Science Lanes" listing these six lanes with status
   pointers to the per-lane open-lane documents.
 - Update [WHAT_THIS_PAPER_DOES_NOT_CLAIM.md](../../publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
-  to explicitly call out each of these five lanes as "currently bounded /
+  to explicitly call out each of these six lanes as "currently bounded /
   open / scaffold-only" rather than implying they're already addressed by
   the bounded-companion category.
 - Update [INPUTS_AND_QUALIFIERS_NOTE.md](../../publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md)
@@ -239,7 +258,7 @@ claim surface.
 
 Future reviewers should evaluate:
 
-1. **Are these the right five lanes?** Should others be substituted?
+1. **Are these the right six lanes?** Should others be substituted?
 2. **Is the priority ordering right?** Should Hubble go first instead of atomic?
 3. **Are the derivation targets correctly specified?** Are they the right
    theorems to attack?
@@ -254,7 +273,7 @@ Future reviewers should evaluate:
 ## Honest framing
 
 This open-lane package does not contain new physics. It contains scoping and
-strategy. The five lanes are real missing-science lanes. Whether and how to
+strategy. The six lanes are real missing-science lanes. Whether and how to
 attack them is a separate question from whether they are correctly identified.
 
 This is roughly a 6–18 month closure program. Each lane is months of focused

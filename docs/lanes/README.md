@@ -14,9 +14,13 @@ These manifests organize the whole repo by major research lane.
 
 ## Critical Open Science Lanes
 
-- [`open_science/README.md`](open_science/README.md) — five critical open
+- [`open_science/README.md`](open_science/README.md) — six critical open
   science lanes accepted for active work: hadron masses, atomic scales,
-  quark masses, neutrino quantitative closure, and Hubble constant closure.
+  quark masses, neutrino quantitative closure, Hubble constant closure,
+  and charged-lepton mass retention (full closure: Koide ratios + V_0
+  absolute scale). Lane 6 (charged-lepton mass retention) was added
+  2026-04-26 to give Tier 1 missing-science item #2 a dedicated active
+  lane; the existing Koide flagship lane is its ratios dependency.
 
 ## Historical And Comparison Lanes
 

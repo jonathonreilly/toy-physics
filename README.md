@@ -152,8 +152,9 @@ questions:
 - active working-lanes tracking for open/support/planning issues
 - frontier extension planning: teleportation, chronology protection, and
   signed gravitational response
-- critical open science lanes: hadron masses, atomic scales, quark masses,
-  neutrino quantitative closure, and Hubble constant closure
+- critical open science lanes: charged-lepton masses, hadron masses, atomic
+  scales, quark masses, neutrino quantitative closure, and Hubble constant
+  closure
 
 ## Scientific Scope
 

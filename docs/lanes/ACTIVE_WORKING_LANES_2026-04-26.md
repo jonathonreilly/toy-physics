@@ -21,6 +21,7 @@ bounded companions, or publication-surface claims.
 | Quark mass retention | critical open science lane | The top mass is retained, but five quark masses remain bounded/scaffolded. | [open_science/03_QUARK_MASS_RETENTION_OPEN_LANE_2026-04-26.md](open_science/03_QUARK_MASS_RETENTION_OPEN_LANE_2026-04-26.md) |
 | Neutrino quantitative closure | critical open science lane | Absolute neutrino masses, splittings, and Majorana-phase structure remain quantitative open work. | [open_science/04_NEUTRINO_QUANTITATIVE_OPEN_LANE_2026-04-26.md](open_science/04_NEUTRINO_QUANTITATIVE_OPEN_LANE_2026-04-26.md) |
 | Hubble constant derivation | critical open science lane | Cosmology identities exist, but `H_0` remains an external-input/bridge closure target. | [open_science/05_HUBBLE_CONSTANT_DERIVATION_OPEN_LANE_2026-04-26.md](open_science/05_HUBBLE_CONSTANT_DERIVATION_OPEN_LANE_2026-04-26.md) |
+| Charged-lepton mass retention (full closure) | critical open science lane | Tier 1 missing-science item #2. Koide flagship lane covers `Q=2/3, δ=2/9` ratios in flight; full closure requires the absolute lepton scale `V_0` via a `y_τ` Ward identity (analog of retained `y_t/g_s = 1/√6`). Parent active-lane surface for the Koide ratios work. | [open_science/06_CHARGED_LEPTON_MASS_RETENTION_OPEN_LANE_2026-04-26.md](open_science/06_CHARGED_LEPTON_MASS_RETENTION_OPEN_LANE_2026-04-26.md) |
 | Frontier extension lanes | exploratory planning lanes | Teleportation, chronology protection, and signed gravitational response are deliberately opened as bounded/exploratory future work. | [../FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md](../FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md) |
 | AI methodology and repo-governance lane | active methodology lane | The repo is capturing how AI systems were used for science generation, adversarial review, repo hygiene, and claim governance; this remains a live paper/workflow lane. | [../ai_methodology/README.md](../ai_methodology/README.md), [../ai_methodology/METHODOLOGY_PAPER_DRAFT_2026-04-25.md](../ai_methodology/METHODOLOGY_PAPER_DRAFT_2026-04-25.md), [../ai_methodology/raw/README.md](../ai_methodology/raw/README.md) |
 
@@ -28,7 +29,8 @@ bounded companions, or publication-surface claims.
 
 The full open-science inventory is tracked in
 [open_science/README.md](open_science/README.md). That file records the
-top five active flagship lanes plus deferred open concerns such as muon
+top six active flagship lanes (Lane 6 added 2026-04-26 for charged-lepton
+mass retention full closure) plus deferred open concerns such as muon
 `g-2`, strong-field gravity, BBN, CMB anisotropies, dark-sector follow-ons,
 form factors, and hadron spectroscopy.
 
