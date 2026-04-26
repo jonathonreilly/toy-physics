@@ -1,0 +1,148 @@
+========================================================================================
+Classical number-theory characterization of the retained CKM counts
+See docs/CKM_CLASSICAL_NUMBER_THEORY_INTEGER_CHARACTERIZATION_THEOREM_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Retained inputs on current main
+----------------------------------------------------------------------------------------
+  N_pair  = 2
+  N_color = 3
+  N_quark = N_pair × N_color = 6
+  Consecutive scaffold: N_pair = N_color - 1? True
+  [PASS] N_pair = 2 (retained)
+  [PASS] N_color = 3 (retained)
+  [PASS] N_quark = 6 (= N_pair × N_color)
+  [PASS] Consecutive scaffold: N_pair = N_color - 1
+  [PASS] retained on main: docs/CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md
+
+----------------------------------------------------------------------------------------
+(P1) NEW: Perfect number identity N_quark = 1 + N_pair + N_color
+----------------------------------------------------------------------------------------
+  Proper divisors of N_quark = 6: [1, 2, 3]
+  In framework: {1, N_pair, N_color} = {1, 2, 3}
+  Sum of proper divisors:         6
+  1 + N_pair + N_color:            6
+  N_quark:                         6
+  [PASS] (P1) Proper divisors of N_quark are {1, N_pair, N_color}
+  [PASS] (P1) N_quark = 1 + N_pair + N_color (perfect number identity)
+  [PASS] (P1) Sum of proper divisors of N_quark equals N_quark
+
+----------------------------------------------------------------------------------------
+(P2) NEW: sigma(N_quark) = 2 N_quark (sigma-perfect condition)
+----------------------------------------------------------------------------------------
+  sigma(N_quark) = sigma(6) = 12
+  2 × N_quark = 12
+  sigma(N) = 2N is the formal definition of N as a perfect number.
+  [PASS] (P2) sigma(N_quark) = 2 N_quark (perfect)
+
+----------------------------------------------------------------------------------------
+(P3) Sum-product coincidence for the proper divisors of 6
+----------------------------------------------------------------------------------------
+  Sum of proper divisors:    1 + N_pair + N_color = 6
+  Product of proper divisors: 1 × N_pair × N_color = 6
+  Both equal N_quark = 6
+  [PASS] (P3) Sum of proper divisors = N_quark
+  [PASS] (P3) Product of proper divisors = N_quark
+  [PASS] (P3) Sum = Product = N_quark
+
+----------------------------------------------------------------------------------------
+(P4) NEW: Deficient/Perfect classification of structural integers
+----------------------------------------------------------------------------------------
+  N_pair=2: proper divisors = [1], sum = 1, sigma(2) = 3, classification: DEFICIENT
+  N_color=3: proper divisors = [1], sum = 1, sigma(3) = 4, classification: DEFICIENT
+  N_quark=6: proper divisors = [1, 2, 3], sum = 6, sigma(6) = 12, classification: PERFECT
+  [PASS] (P4) N_pair = 2 is DEFICIENT
+  [PASS] (P4) N_color = 3 is DEFICIENT (3 is prime)
+  [PASS] (P4) N_quark = 6 is PERFECT
+
+----------------------------------------------------------------------------------------
+(T1) NEW: Triangular ladder N_pair=2 -> N_color=T_2 -> N_quark=T_3
+----------------------------------------------------------------------------------------
+  T_n = n(n+1)/2  triangular numbers: T_1=1, T_2=3, T_3=6, T_4=10, T_5=15, ...
+
+  T_{N_pair}  = T_2 = 2(3)/2 = 3
+  N_color                                  = 3
+  Equal? True
+
+  T_{N_color} = T_3 = 3(4)/2 = 6
+  N_quark                                  = 6
+  Equal? True
+
+  Triangular ladder: N_pair = 2 -> N_color = T_2 = 3 -> N_quark = T_3 = 6
+  [PASS] (T1) N_color = T_{N_pair} (= triangular of N_pair)
+  [PASS] (T1) N_quark = T_{N_color} (= triangular of N_color)
+
+----------------------------------------------------------------------------------------
+(L1) NEW: Lie-dimensional identity N_color = dim(adjoint SU(N_pair))
+----------------------------------------------------------------------------------------
+  dim(adjoint SU(N)) = N^2 - 1
+  dim(adjoint SU(N_pair)) = N_pair^2 - 1 = 2^2 - 1 = 3
+  N_color                                = 3
+  Equal? True
+
+  In particular: SU(2) has 3 generators (the Pauli matrices), and N_color = 3.
+  [PASS] (L1) N_color = N_pair^2 - 1 = dim(adjoint SU(N_pair))
+
+----------------------------------------------------------------------------------------
+(M1)(M2) NEW: Mersenne prime and Mersenne-form perfect number
+----------------------------------------------------------------------------------------
+  Mersenne primes: M_p = 2^p - 1 for p prime
+    M_2 = 2^2 - 1 = 3  (smallest Mersenne prime)
+    M_3 = 2^3 - 1 = 7  (next Mersenne prime)
+
+  N_color = 2^{N_pair} - 1 = 2^2 - 1 = 3
+  N_color retained = 3
+  [PASS] (M1) N_color = 2^{N_pair} - 1 = M_{N_pair}
+
+  Euclid-Euler theorem: even perfect numbers = 2^(p-1) * (2^p - 1)
+  At p = N_pair = 2: 2^1 * (2^2 - 1) = 6
+  N_quark retained = 6
+  N_quark IS the smallest Mersenne-form perfect number.
+  [PASS] (M2) N_quark = 2^{N_pair-1} * (2^{N_pair} - 1) (Mersenne-form perfect)
+
+----------------------------------------------------------------------------------------
+(U1) Five independent three-constraint uniqueness routes
+----------------------------------------------------------------------------------------
+  Common scaffold:
+    (a) N_pair = N_color - 1
+    (b) N_quark = N_pair × N_color
+
+  Exhaustive positive-integer search on audited ranges:
+    1 <= N_pair <= 9,  2 <= N_color <= 19
+
+  Route (a)+(b)+(c) [perfect-number identity] -> [(2, 3, 6)]
+  [PASS] (U1.c) Unique solution (2, 3, 6) for route c
+
+  Route (a)+(b)+(d) [triangular identity] -> [(2, 3, 6)]
+  [PASS] (U1.d) Unique solution (2, 3, 6) for route d
+
+  Route (a)+(b)+(e) [Egyptian-fraction identity] -> [(2, 3, 6)]
+  [PASS] (U1.e) Unique solution (2, 3, 6) for route e
+
+  Route (a)+(b)+(f) [Lie-dimensional identity] -> [(2, 3, 6)]
+  [PASS] (U1.f) Unique solution (2, 3, 6) for route f
+
+  Route (a)+(b)+(g) [Mersenne-prime identity] -> [(2, 3, 6)]
+  [PASS] (U1.g) Unique solution (2, 3, 6) for route g
+
+----------------------------------------------------------------------------------------
+Summary of new content
+----------------------------------------------------------------------------------------
+  P1: N_quark = 1 + N_pair + N_color = 6.
+  P2: sigma(N_quark) = 2 N_quark.
+  P3: proper-divisor sum/product coincidence for 6.
+  P4: N_pair, N_color deficient; N_quark perfect.
+  T1: triangular ladder 2 -> 3 -> 6.
+  L1: N_color = N_pair^2 - 1 = dim(adjoint SU(2)) = 3.
+  M1: N_color = 2^{N_pair} - 1 = 3.
+  M2: N_quark = 2^{N_pair-1}(2^{N_pair} - 1) = 6.
+  U1: each of the five routes (a)+(b)+(x), x in {c,d,e,f,g},
+      independently forces the unique solution (2, 3, 6).
+
+  All inputs are retained on main.
+  No cross-sector or Koide closure is claimed here.
+
+========================================================================================
+TOTAL: PASS=25, FAIL=0
+========================================================================================

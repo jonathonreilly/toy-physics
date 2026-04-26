@@ -107,6 +107,7 @@ Review this as a modular component stack:
    [CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md](../../CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md),
    [CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md](../../CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md),
    [CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md](../../CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md),
+   [CKM_BARRED_PEDOE_SIMILARITY_DEFICIT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md](../../CKM_BARRED_PEDOE_SIMILARITY_DEFICIT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md),
    [CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md](../../CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
    [CKM_SECOND_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-25.md](../../CKM_SECOND_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-25.md),
    [CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md](../../CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
@@ -186,6 +187,13 @@ Current status from that stack:
   kaon epsilon_K CKM factors `(+2J_0, -J_0, -(5 alpha_s(v)^2/18)J_0)`,
   NLO protected `gamma_bar = 65.905 deg`,
   NLO `rho_bar = 0.16236`, `eta_bar = 0.36305`,
+  Pedoe two-triangle similarity deficit
+  `PedoeDeficit(alpha_s,alpha_s') = (alpha_s-alpha_s')^2/48`
+  on the retained NLO protected-`gamma_bar` surface,
+  Napoleon-triangle side-square closure
+  `N_outer^2=W_+/6`, `N_inner^2=W_-/6`, and
+  `N_outer^2 N_inner^2=P(alpha_s(v))/82944`
+  on the same retained NLO protected-`gamma_bar` surface,
   `delta = 65.905 deg`,
   rescaled atlas-triangle `alpha_0 = 90 deg`,
   `J = 3.331 x 10^-5`
@@ -232,11 +240,25 @@ Current status from that stack:
 
 ## Charged-Lepton Koide Closure
 
-- **Charged-lepton Koide review/support package** (`Q = 2/3`, `δ = 2/9`). Reviewer entry points: [KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md](../../KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md), [CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md](../../CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md), [KOIDE_DIMENSIONLESS_OBJECTION_CLOSURE_REVIEW_PACKET_2026-04-24.md](../../KOIDE_DIMENSIONLESS_OBJECTION_CLOSURE_REVIEW_PACKET_2026-04-24.md), and [KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md](../../KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md). Package status: strongest current executable support, not retained closure. The historical observational-pin baseline and route-pruning notes remain provenance and compatibility context. The remaining live issues are physical source-free reduced-carrier selection behind `Q`, selected-line local boundary source plus based endpoint behind `δ`, Type-B rational-to-radian readout, and the separate overall scale `v_0`. The April 22 addendum also lands exact selected-line geometry plus a finite-lattice `L = 3` Wilson-Dirac support illustration for the Brannen lane; the April 24 objection review demotes source-domain closure to conditional support; the April 25 criterion theorem closes only the background-zero / `Z`-erasure algebra inside the admitted `Q` carrier.
+- **Charged-lepton Koide review/support package** (`Q = 2/3`, `δ = 2/9`). Reviewer entry points: [KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md](../../KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md), [CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md](../../CHARGED_LEPTON_KOIDE_REVIEW_PACKET_2026-04-18.md), [KOIDE_DIMENSIONLESS_OBJECTION_CLOSURE_REVIEW_PACKET_2026-04-24.md](../../KOIDE_DIMENSIONLESS_OBJECTION_CLOSURE_REVIEW_PACKET_2026-04-24.md), [KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md](../../KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_NOTE_2026-04-25.md), [CKM_KOIDE_CROSS_SECTOR_Z3_CLOSURE_THEOREM_NOTE_2026-04-25.md](../../CKM_KOIDE_CROSS_SECTOR_Z3_CLOSURE_THEOREM_NOTE_2026-04-25.md), and the CKM-side support cards [CKM_BERNOULLI_TWO_NINTHS_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md](../../CKM_BERNOULLI_TWO_NINTHS_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md), [CKM_N9_STRUCTURAL_FAMILY_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md](../../CKM_N9_STRUCTURAL_FAMILY_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md), [CKM_CUBIC_BERNOULLI_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md](../../CKM_CUBIC_BERNOULLI_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md), [CKM_EGYPTIAN_BERNOULLI_CLOSURES_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md](../../CKM_EGYPTIAN_BERNOULLI_CLOSURES_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md), and [CKM_CONSECUTIVE_PRIMES_S3_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md](../../CKM_CONSECUTIVE_PRIMES_S3_KOIDE_BRIDGE_SUPPORT_NOTE_2026-04-25.md). Package status: strongest current executable support, not retained Koide closure. The historical observational-pin baseline and route-pruning notes remain provenance and compatibility context. The remaining live issues are physical source-free reduced-carrier selection behind `Q`, selected-line local boundary source plus based endpoint behind `δ`, Type-B rational-to-radian readout, and the separate overall scale `v_0`. The April 22 addendum also lands exact selected-line geometry plus a finite-lattice `L = 3` Wilson-Dirac support illustration for the Brannen lane; the April 24 objection review demotes source-domain closure to conditional support; the April 25 criterion theorem closes only the background-zero / `Z`-erasure algebra inside the admitted `Q` carrier; the new retained Z3 card closes only the numeric equality `N_gen=N_color=3`; the CKM-side Koide-bridge cards provide exact target-class arithmetic only and do not promote `Q_l`, `cos^2(theta_K)`, PMNS closure, or any structural Koide mechanism.
+- **Koide Q source-domain canonical descent.** Reviewer entry point: [KOIDE_Q_SOURCE_DOMAIN_CANONICAL_DESCENT_THEOREM_NOTE_2026-04-25.md](../../KOIDE_Q_SOURCE_DOMAIN_CANONICAL_DESCENT_THEOREM_NOTE_2026-04-25.md). Status: exact support/criterion theorem only. It proves the unique trace-preserving strict-onsite descent `A -> D^C3`, identifies it with diagonal compression, and erases reduced `Z` modulo common scalar; it does not prove the physical charged-lepton source-domain law or promote retained Koide closure.
+- **Koide Q SO(2) phase-erasure support.** Reviewer entry point: [KOIDE_Q_SO2_PHASE_ERASURE_SUPPORT_NOTE_2026-04-25.md](../../KOIDE_Q_SO2_PHASE_ERASURE_SUPPORT_NOTE_2026-04-25.md). Status: exact support/criterion theorem only. It proves `Q=(c^2+2)/6` on the Brannen square-root carrier and therefore shows `Q` is independent of the carrier scale and SO(2) phase; it does not select the physical carrier/source law, prove retained `c^2=2`, or promote `Q=2/3` / `delta=2/9 rad`.
 
 ## Bounded Prediction Surface
+- chronology-protection support theorem. Entry point:
+  [CHRONOLOGY_PROTECTION_OPERATIONAL_NO_PAST_SIGNALING_THEOREM_NOTE_2026-04-25.md](../../CHRONOLOGY_PROTECTION_OPERATIONAL_NO_PAST_SIGNALING_THEOREM_NOTE_2026-04-25.md).
+  Repo status: exact operational no-past-signaling theorem on the retained
+  single-clock Hilbert/local-data surface; not a universal CTC/multi-time
+  no-go and not a closure of the full chronology lane.
 - W-boson same-surface EW consistency probe. Entry point: [W_MASS_DERIVED_NOTE.md](../../W_MASS_DERIVED_NOTE.md). Repo status: `bounded`. On the retained EW lane the framework-side readouts are `M_W^tree = 79.7956 GeV`, `M_W^RGE = 80.5573 GeV`, `M_Z^tree = 91.2663 GeV`. The remaining `~0.19 GeV` `M_W` gap tracks the existing retained `g_2(v)` precision and is therefore treated as a same-surface consistency probe, not as a retained or few-MeV SM-indirect `M_W` prediction.
 - dark-matter exact-target package, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` support package, a retained-measurement A-BCC integration theorem, an interval-certified split-2 carrier closure, a shifted same-law recovered-packet selector closure, an exact target-surface chamber-root theorem, a graph-first ordered-chain current-activation theorem, an affine current-coordinate reduction theorem, and an ordered-chain graded-current delta closure theorem. So the DM lane is now closed for the exact PMNS-target formulation treated in the manuscript, with broader target-free global uniqueness left out of scope.
+- DM Wilson direct-descendant Schur-Feshbach boundary support theorem. Entry
+  point: [DM_WILSON_DIRECT_DESCENDANT_SCHUR_FESHBACH_BOUNDARY_VARIATIONAL_THEOREM_NOTE_2026-04-25.md](../../DM_WILSON_DIRECT_DESCENDANT_SCHUR_FESHBACH_BOUNDARY_VARIATIONAL_THEOREM_NOTE_2026-04-25.md).
+  Repo status: exact boundary/support theorem for the open microscopic selector
+  gate. It verifies the boundary Green compression, Feshbach elimination,
+  positive Dirichlet variational form, and monotone transfer certificates for a
+  supplied charged block `D_-`; it does not evaluate `D_-`, select the charged
+  support split, or independently close final DM selector physics.
 - persistent exact-lattice compact-object companion in the package, with one
   retained blended readout on the nearby family and a `top4` multistage floor
   that survives beyond the widened pocket, but still below persistent

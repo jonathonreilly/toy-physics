@@ -24,6 +24,23 @@ The current exact claim is:
 - exact discrete `3+1` gravity on the project route;
 - exact QG / continuum identification on one chosen canonical textbook target.
 
+## 1A. Chronology Protection
+
+The paper does **not** claim:
+
+- a universal theorem over arbitrary multi-time theories or all possible CTC
+  toy models;
+- that postselected or final-boundary ensembles are ordinary controllable
+  signals to the past;
+- an interacting CPT theorem or a final ontology of measurement records.
+
+The current exact support theorem is:
+
+- on the retained single-clock Hilbert/local-data surface, a later
+  nonselective CPTP operation preserves the earlier durable-record marginal;
+- the broader chronology-protection lane remains open for cycle-insertion,
+  Loschmidt-record, and advanced-vs-retarded probes.
+
 ## 2. Strong CP
 
 The paper does **not** claim:
@@ -69,6 +86,21 @@ The paper does **not** claim:
 - that the CKM barred-circumradius or circumcenter exact closed forms extend
   the protected-`gamma_bar` NLO surface to physical NNLO or all-orders CKM
   control.
+- that the CKM barred-triangle Pedoe similarity-deficit metric in
+  [CKM_BARRED_PEDOE_SIMILARITY_DEFICIT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md](../../CKM_BARRED_PEDOE_SIMILARITY_DEFICIT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md)
+  is a direct metric on measured CKM observables or extends beyond the
+  retained NLO protected-`gamma_bar` surface.
+- that the CKM barred-triangle Napoleon-triangle exact closed forms in
+  [CKM_BARRED_NAPOLEON_TRIANGLES_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md](../../CKM_BARRED_NAPOLEON_TRIANGLES_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md)
+  are direct measured-CKM observables or extend beyond the retained NLO
+  protected-`gamma_bar` surface.
+- that the CKM Brocard-polynomial Vieta structural-integer skeleton in
+  [CKM_BROCARD_POLYNOMIAL_VIETA_STRUCTURAL_INTEGERS_THEOREM_NOTE_2026-04-25.md](../../CKM_BROCARD_POLYNOMIAL_VIETA_STRUCTURAL_INTEGERS_THEOREM_NOTE_2026-04-25.md)
+  is a direct measured-CKM observable, an all-orders CKM theorem, or a new
+  independent selector for the retained structural counts.
+- that the CKM Jarlskog exact NLO closed form eliminates higher-order
+  Wolfenstein corrections to the physical CKM Jarlskog beyond the retained
+  protected-`gamma_bar` NLO surface.
 - that the atlas/Wolfenstein area factor
   `J_0 = alpha_s(v)^3 sqrt(5)/72` replaces the parent atlas' exact
   finite-`lambda` standard-matrix `J` readout.
@@ -88,6 +120,40 @@ The paper does **not** claim:
 - that the cross-sector Koide/CKM `V_cb` bridge closes charged-lepton Koide
   or promotes `Q_l = 2/3`; it is a conditional support target using the
   retained CKM atlas plus the open Koide `Q_l` target.
+- that the retained generation/color `Z3` numeric equality closes
+  charged-lepton Koide; it only identifies `N_gen=N_color=3` by direct
+  retained equality of the three-generation and CKM-count authorities, with
+  CL3 support-tier readings left auxiliary.
+- that the retained EW-CKM lattice `A^4` bridge derives `A^2=2/3` below the
+  retained W2 surface or predicts the low-energy `M_Z` weak angle; it only
+  packages `sin^2(theta_W)|_lattice=A^4=4/9` and the gauge-dimension
+  `A^2=2/3` consistency equality.
+- that the CKM Bernoulli `2/9` Koide-bridge support note closes
+  charged-lepton Koide, derives `A^2=2/3` below the retained W2 surface, or
+  supplies a structural Koide mechanism beyond the separately retained
+  numeric equality `N_gen=N_color=3`; it only packages exact CKM-side
+  pair/color arithmetic.
+- that the CKM `n/9` structural-family Koide-bridge support note proves a
+  Koide-side `n/9` family or supplies a structural Koide mechanism beyond
+  the separately retained numeric equality `N_gen=N_color=3`; it only
+  packages exact CKM-side target-class arithmetic from retained CKM inputs.
+- that the CKM cubic Bernoulli Koide-bridge support note proves Koide
+  `cos^2(theta_K)`, Koide cubic variance, or a structural Koide mechanism
+  beyond the separately retained numeric equality `N_gen=N_color=3`; it only
+  packages exact CKM-side cubic target-class arithmetic from retained CKM
+  inputs, and its cross-sector readings are conditional support.
+- that the CKM Egyptian-fraction Bernoulli Koide-bridge support note proves
+  Koide ternary unitarity, Koide `cos^2(theta_K)`, charged-lepton Koide, or a
+  structural Koide mechanism beyond the separately retained numeric equality
+  `N_gen=N_color=3`; it only packages exact CKM-side Egyptian-fraction and
+  Bernoulli-sum arithmetic from retained CKM inputs, and its cross-sector
+  readings are conditional support.
+- that the CKM consecutive-primes / `S_3` Koide-bridge support note proves
+  charged-lepton Koide, PMNS closure, or a structural Koide mechanism beyond
+  the separately retained numeric equality `N_gen=N_color=3`; it only
+  packages exact CKM-side prime, divisor, and `S_3` representation
+  bookkeeping from retained CKM counts, and its cross-sector readings are
+  conditional support.
 - that the bare `alpha_3/alpha_em = 9` support card promotes the reviewed
   `Cl(3)->SM` support packet into the accepted minimal-input stack, predicts a
   direct low-energy `alpha_3/alpha_em` ratio without the retained EW
@@ -97,6 +163,10 @@ The paper does **not** claim:
 - that the charged-lepton Koide A1/radian bridge is closed by the exact
   rational `2/9` witnesses alone; the Type-B rational-to-radian observable law
   remains a primitive unless separately derived.
+- that Brannen-carrier SO(2) phase erasure closes charged-lepton Koide.  The
+  exact support theorem proves `Q=(c^2+2)/6` and `Q=2/3 <=> c^2=2` on that
+  carrier, but it does not derive the physical carrier/source law, retained
+  `c^2=2`, or `delta_Brannen=2/9 rad`.
 
 The current retained claim is:
 
@@ -128,6 +198,9 @@ The paper does **not** claim:
   from the `R_base` identity alone;
 - point predictions for `Omega_Lambda`, `Omega_m`, `q_0`, `z_*`, or
   `z_{mLambda}` without closing the `H_inf/H_0` matter bridge;
+- that the [FRW single-ratio inverse reconstruction certificate](../../COSMOLOGY_SINGLE_RATIO_INVERSE_RECONSTRUCTION_THEOREM_NOTE_2026-04-25.md)
+  closes the numerical value of `H_inf/H_0`, `Omega_Lambda`, `Omega_m`,
+  `q_0`, `z_*`, or `z_{mLambda}`;
 - a native prediction of matter-radiation equality `z_mr` without supplied
   `Omega_m,0` and observational `Omega_r,0`;
 - a derivation of `T_CMB`, the standard `0.046` thermal correction in
@@ -138,6 +211,11 @@ The paper does **not** claim:
 - a direct gravitational-wave mass falsification claim from the
   gravity/cosmology tower Lambda bridge without separately promoting the
   bounded particle interpretation of the compactness towers;
+- evaluation of the DM microscopic charged block `D_-`, selection of the
+  charged support split, derivation of the right-sensitive selector law on
+  `L_e`, or independent final DM closure from the
+  [DM Wilson direct-descendant Schur-Feshbach boundary theorem](../../DM_WILSON_DIRECT_DESCENDANT_SCHUR_FESHBACH_BOUNDARY_VARIATIONAL_THEOREM_NOTE_2026-04-25.md)
+  alone;
 - full DM relic closure.
 
 The current package keeps:
@@ -147,8 +225,9 @@ The current package keeps:
 - bounded/conditional cosmology;
 - one remaining flagship bridge package: charged-lepton Koide, now sharpened
   by the exact background-zero / `Z`-erasure criterion and onsite-vs-commutant
-  source-domain no-go for `Q` while still requiring physical source-domain /
-  source-free reduced-carrier selection, plus selected-line local
+  source-domain no-go for `Q`; the canonical source-domain descent is unique
+  and erases reduced `Z` modulo common scalar, but still requires physical
+  source-domain / source-free reduced-carrier selection, plus selected-line local
   boundary-source, based endpoint, and Type-B rational-to-radian readout for
   `delta`, without promoting full retained closure.
 
@@ -175,6 +254,10 @@ If a reviewer wants the negative boundary, use this note.
 - The package does not derive `a = l_P` from the minimal stack. It carries the
   Planck scale as the current physical-lattice package pin, with conditional
   completion once the gravitational boundary/action carrier is accepted.
+- The primitive coframe boundary-carrier support theorem identifies `P_A` as
+  the unique first-order coframe-slot carrier under stated hypotheses and
+  recovers `c_cell=1/4`; it does not prove that physical gravitational
+  boundary/action density must be identified with that carrier.
 - The primitive `c_cell = 1/4` boundary-density statement is not an
   entanglement theorem by itself. The simple-fiber Widom class is now closed
   negatively at `c_Widom <= 1/6`; the multipocket-selector, primitive

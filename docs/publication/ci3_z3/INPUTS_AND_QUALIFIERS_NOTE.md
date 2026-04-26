@@ -82,6 +82,11 @@ Current absolute-scale package rule:
   `a/l_P = 1` after the primitive boundary count is accepted as the
   gravitational boundary/action carrier; that carrier identification is still
   the explicit Planck-lane condition
+- the 2026-04-25 primitive coframe boundary-carrier support theorem identifies
+  `P_A` as the unique first-order coframe-slot carrier on the time-locked
+  primitive Boolean event cell under the stated locality/additivity/symmetry
+  hypotheses, explaining the `c_cell = 1/4` carrier provenance without closing
+  the physical gravitational boundary/action density identification
 - the 2026-04-25 source-unit normalization support theorem sharpens that same
   conditional packet by separating the retained bare Green coefficient
   `G_kernel = 1/(4 pi)` from the conditional physical Newton coefficient
@@ -105,6 +110,7 @@ Current absolute-scale package rule:
 - authority:
   [PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md](../../PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md),
   [PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md](../../PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md),
+  [PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md](../../PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md),
   [PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md](../../PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md),
   [PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md](../../PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md),
   [PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md](../../PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md),
@@ -174,6 +180,12 @@ bridge layer beyond the exact structural core.
   - exact corollary for theta-sourced EDM components only; independent CKM,
     qCEDM, Weinberg, CP-odd four-fermion, and BSM source directions are not
     set to zero by this theorem
+- CKM Jarlskog exact NLO closed form:
+  - promoted CKM atlas/axiom package + retained protected-`gamma_bar` NLO
+    surface + standard NLO Wolfenstein `J = A^2 lambda^6 eta_bar`
+  - exact claim is the surface algebra
+    `J_bar = sqrt(5) alpha_s(v)^3(4-alpha_s(v))/288`; physical NNLO /
+    all-orders CKM Jarlskog corrections remain outside this theorem
 - kaon epsilon_K Jarlskog decomposition:
   - promoted CKM atlas/axiom package + standard leading non-trivial
     Wolfenstein epsilon_K CKM bracket
@@ -186,6 +198,58 @@ bridge layer beyond the exact structural core.
     support target `Q_l = 2/3`
   - exact claim is conditional: if the Koide target is granted, then
     `Q_l alpha_s(v)^2 = 4 |V_cb|^2`; this does not promote Koide closure
+- generation/color `Z3` numeric equality:
+  - retained `THREE_GENERATION_STRUCTURE_NOTE.md` + retained CKM structural
+    counts
+  - exact claim is only `N_gen=N_color=3` by direct retained equality; this
+    does not promote CL3 support-tier readings or charged-lepton Koide
+- EW-CKM lattice `A^4` bridge:
+  - retained YT_EW lattice normalization + retained W2
+  - exact claim is only `sin^2(theta_W)|_lattice=A^4=4/9`; the
+    gauge-dimension equality for `A^2=2/3` is consistency only, not an
+    independent below-W2 derivation
+- CKM Bernoulli `2/9` Koide-bridge support:
+  - promoted CKM `A^2`, `rho`, and pair/color counts only
+  - exact claim is CKM-side arithmetic: `K1`, `K2`, `K5`, and `K6` all read
+    `2/9`, and their simultaneous value is equivalent to
+    `N_pair=2`, `N_color=3` over positive integers
+  - the cross-sector Koide reading still depends on open Koide-side
+    structure beyond the separately retained numeric equality
+    `N_gen=N_color=3`
+- CKM `n/9` structural-family Koide-bridge support:
+  - promoted CKM `A^2`, `rho`, `eta^2`, and pair/color counts only
+  - exact claim is CKM-side arithmetic: explicit `F_n=n/9` readouts for
+    `n=1,...,9`, with two retained-input paths to `F5=5/9`
+  - the note does not derive a Koide `n/9` family or structural Koide
+    mechanism beyond the separately retained numeric equality
+    `N_gen=N_color=3`; the cross-sector reading is conditional support
+- CKM cubic Bernoulli Koide-bridge support:
+  - promoted CKM `A^2`, `rho`, `eta^2`, and pair/color counts only
+  - exact claim is CKM-side arithmetic: the 4x3 `M^(k)(N)` tower through
+    `k=3`, including `W(2)=1/8`, `W(3)=2/27`, `W(6)=5/216`,
+    `eta^2=V(2)M(3)M(6)`, and `rho eta^2=W(6)`
+  - the note does not derive Koide `cos^2(theta_K)`, a Koide cubic
+    variance, or structural Koide mechanism beyond the separately retained
+    numeric equality `N_gen=N_color=3`; cross-sector readings are
+    conditional support and not verifier pass conditions
+- CKM Egyptian-fraction Bernoulli Koide-bridge support:
+  - promoted CKM structural counts and already-retained CKM identities only
+  - exact claim is CKM-side arithmetic: `1/2+1/3+1/6=1`, unique `(2,3,6)`
+    pinning under the pair/color primitives, exact Bernoulli-series sums, and
+    `sum_N W(N)=2/9`
+  - the note does not derive Koide `cos^2(theta_K)`, Koide ternary unitarity,
+    charged-lepton Koide, or structural Koide mechanism beyond the separately
+    retained numeric equality `N_gen=N_color=3`; cross-sector readings are
+    conditional support and not verifier pass conditions
+- CKM consecutive-primes / `S_3` Koide-bridge support:
+  - promoted CKM structural counts only
+  - exact claim is CKM-side arithmetic/group bookkeeping: `(2,3)` is the
+    unique consecutive-prime pair, `|S_3|=6`, conjugacy-class sizes are
+    `{1,2,3}`, `1^2+1^2+2^2=6`, and `dim(std S_3)=2`
+  - the note does not derive charged-lepton Koide, PMNS closure, or
+    structural Koide mechanism beyond the separately retained numeric
+    equality `N_gen=N_color=3`; cross-sector readings are conditional
+    support and not verifier pass conditions
 - down-type CKM-dual mass ratios:
   - promoted CKM atlas/axiom package + GST + bounded `5/6` mass-ratio bridge; no observed
     masses as derivation inputs
@@ -223,6 +287,11 @@ theorem core.
   - CKM-only neutron EDM with bounded `d_n(CKM)` continuation
   - universal theta-induced EDM response vanishing, with no new bounded
     numerical EDM estimate and no independent CP-odd EFT operator-zero claim
+- chronology-protection support:
+  - exact operational no-past-signaling theorem on the retained single-clock
+    Hilbert/local-data surface
+  - no claim over postselected/final-boundary ensembles, directed causal
+    cycles, arbitrary multi-time theories, or full lane closure
 
 ## 7. Remaining bridge package
 
@@ -231,9 +300,10 @@ The remaining flagship bridge package is:
 - charged-lepton Koide support package
   - April 24 native dimensionless review/no-go packet sharpens but does not
     close the lane; the April 25 criterion theorem closes the background-zero /
-    `Z`-erasure algebra for `Q`, but physical source-free reduced-carrier
-    selection, selected-line local boundary source, and based endpoint remain
-    theorem targets
+    `Z`-erasure algebra for `Q`, and the April 25 canonical-descent theorem
+    proves the unique trace-preserving strict-onsite descent erases reduced
+    `Z` modulo common scalar; physical source-domain selection, selected-line
+    local boundary source, and based endpoint remain theorem targets
 
 That is the current missing flagship prediction bridge. It does not erase the
 rest of the retained or bounded prediction surface.

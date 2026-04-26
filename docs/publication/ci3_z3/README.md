@@ -55,6 +55,16 @@ For the full package-capture inventory, use:
   plus the surface-exact barred circumradius and circumcenter closure
   `R_bar^2 = 1/4 + alpha_s(v)^2/320` and
   `(x_cc,y_cc)=(1/2,-alpha_s(v)sqrt(5)/40)`,
+  plus the exact barred-triangle center / Euler-line closure
+  `H=(rho_bar,(20+alpha_s(v))/(24 sqrt(5)))`,
+  `H-V_3=(0,alpha_s(v) sqrt(5)/20)`,
+  `G=((28-alpha_s(v))/72,sqrt(5)(4-alpha_s(v))/72)`,
+  and exact `H=3G-2O`,
+  plus the exact barred-triangle Napoleon closure
+  `N_outer^2=W_+/6`, `N_inner^2=W_-/6`, and
+  `N_outer^2 N_inner^2=P(alpha_s(v))/82944`,
+  plus the NLO Jarlskog closed form
+  `J_bar = sqrt(5) alpha_s(v)^3(4-alpha_s(v))/288`,
   `|V_cs|_0^2 = 1 - alpha_s(v)/2 - alpha_s(v)^2/6`,
   `|V_cb|_0^2 = alpha_s(v)^2/6`, and atlas-leading third-row identities
   `|V_td|_0^2 = 5 alpha_s(v)^3/72`,
@@ -87,6 +97,7 @@ For the full package-capture inventory, use:
   retained cosmology identities/corollaries, including exact `R_base = 31/9`
   group-theory support for the bounded DM/cosmology cascade, the FRW kinematic
   reduction of late-time cosmology observables to the open `H_inf/H_0` ratio,
+  the [single-ratio inverse reconstruction certificate](../../COSMOLOGY_SINGLE_RATIO_INVERSE_RECONSTRUCTION_THEOREM_NOTE_2026-04-25.md),
   the matter-radiation equality identity `1 + z_mr = Omega_m,0/Omega_r,0`,
   the retained active-neutrino-count support for standard `N_eff = 3.046`,
   and the retained scalar, vector, and TT compactness spectral towers on `S^3`,

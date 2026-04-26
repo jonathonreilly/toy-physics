@@ -10,6 +10,9 @@
 [`CKM_SIN_2_BETA_BAR_NLO_N_QUARK_RATIO_THEOREM_NOTE_2026-04-25.md`](CKM_SIN_2_BETA_BAR_NLO_N_QUARK_RATIO_THEOREM_NOTE_2026-04-25.md),
 [`CKM_BARRED_TRIANGLE_PYTHAGOREAN_RHO_LAMBDA_SUM_RULE_THEOREM_NOTE_2026-04-25.md`](CKM_BARRED_TRIANGLE_PYTHAGOREAN_RHO_LAMBDA_SUM_RULE_THEOREM_NOTE_2026-04-25.md),
 [`CKM_BARRED_APEX_ANGLE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md`](CKM_BARRED_APEX_ANGLE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md),
+[`CKM_BARRED_ORTHOCENTER_EULER_LINE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md`](CKM_BARRED_ORTHOCENTER_EULER_LINE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md),
+[`CKM_MULTI_PROJECTION_BERNOULLI_FAMILY_THEOREM_NOTE_2026-04-25.md`](CKM_MULTI_PROJECTION_BERNOULLI_FAMILY_THEOREM_NOTE_2026-04-25.md),
+[`CKM_CLASSICAL_NUMBER_THEORY_INTEGER_CHARACTERIZATION_THEOREM_NOTE_2026-04-25.md`](CKM_CLASSICAL_NUMBER_THEORY_INTEGER_CHARACTERIZATION_THEOREM_NOTE_2026-04-25.md),
 [`CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
 [`CKM_SECOND_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-25.md`](CKM_SECOND_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-25.md),
 [`CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_THIRD_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
@@ -147,6 +150,20 @@ The theorem package is therefore:
 - `|V_tb|_0^2 = 1 - |V_td|_0^2 - |V_ts|_0^2`
 - `rho = 1/6`
 - `eta = sqrt(5)/6`
+- retained CKM Bernoulli-family corollary:
+  `M(N_pair)=1/2`, `M(N_color)=A^2=2/3`, `M(N_quark)=1-rho=5/6`,
+  `V(N_pair)=1/4`, `V(N_color)=2/9`, `V(N_quark)=eta^2=5/36`,
+  exact `V(N)=M(N)/N`, exact `rho = V(N_pair) M(N_color)`, and
+  exact `A^2 rho = V(N_color) M(N_pair) = 1/9`
+- retained classical number-theory characterization of the same CKM counts:
+  `N_quark = 1 + N_pair + N_color`,
+  `sigma(N_quark) = 2 N_quark`,
+  `N_color = T_{N_pair}`,
+  `N_quark = T_{N_color}`,
+  `N_color = N_pair^2 - 1`,
+  `N_color = 2^{N_pair} - 1`,
+  `N_quark = 2^{N_pair-1}(2^{N_pair} - 1)`,
+  and five independent three-constraint routes recovering `(2,3,6)`
 - NLO barred-apex guardrail: `rho_bar=(4-alpha_s(v))/24`,
   `eta_bar=sqrt(5)(4-alpha_s(v))/24`, and protected
   `gamma_bar=gamma_0=arctan(sqrt(5))` through the NLO multiplicative
@@ -158,6 +175,13 @@ The theorem package is therefore:
   surface: `tan(alpha_bar) = -4 sqrt(5)/alpha_s(v)`,
   `alpha_bar = pi/2 + arctan((sqrt(5)/20) alpha_s(v))`, and
   `sin(2 alpha_bar) = -8 sqrt(5) alpha_s(v)/(80 + alpha_s(v)^2)`
+- retained exact barred-triangle center/Euler-line closure on the
+  protected-`gamma_bar` surface:
+  `H = (rho_bar, (20 + alpha_s(v))/(24 sqrt(5)))`,
+  `H - V_3 = (0, alpha_s(v) sqrt(5)/20)`,
+  `G = ((28 - alpha_s(v))/72, sqrt(5)(4 - alpha_s(v))/72)`,
+  `O = (1/2, -alpha_s(v) sqrt(5)/40)`, and exact Euler relation
+  `H = 3G - 2O`
 - atlas-leading B_s phase: `phi_s,0=-alpha_s(v)sqrt(5)/6`
 - atlas-leading kaon epsilon_K CKM-bracket factorization:
   `Im(lambda_c^2)=+2J_0`, `Im(lambda_c lambda_t)=-J_0`, and

@@ -53,7 +53,23 @@ questions:
   `|V_cb|_0^2 = |V_ts|_0^2 = alpha_s(v)^2/(n_pair n_color)`,
   `|V_ub|_0^2 = alpha_s(v)^3/(8 n_color^2)`,
   `|V_td|_0^2 = (n_quark-1) alpha_s(v)^3/(8 n_color^2)`,
-  making the exact `n_pair` cancellation in `|V_ub|_0^2` explicit; with
+  making the exact `n_pair` cancellation in `|V_ub|_0^2` explicit; the
+  retained CKM Bernoulli-family packaging now also carries the exact
+  six-element family
+  `M(2)=1/2`, `M(3)=2/3`, `M(6)=5/6`,
+  `V(2)=1/4`, `V(3)=2/9`, `V(6)=5/36`,
+  the universal relation `V(N)=M(N)/N`, and the exact dual decompositions
+  `rho = V(N_pair) M(N_color)` and
+  `A^2 rho = V(N_color) M(N_pair) = 1/9`; the retained CKM integer package
+  now also carries a classical number-theory characterization of the same
+  structural counts `(2,3,6)` via the perfect-number identity
+  `N_quark = 1 + N_pair + N_color`, the sigma-perfect condition
+  `sigma(N_quark) = 2 N_quark`, the triangular ladder
+  `N_color = T_{N_pair}`, `N_quark = T_{N_color}`, the Lie-dimensional
+  identity `N_color = N_pair^2 - 1`, the Mersenne/Euclid-Euler identities
+  `N_color = 2^{N_pair} - 1` and
+  `N_quark = 2^{N_pair-1}(2^{N_pair} - 1)`, and five independent
+  three-constraint routes that each recover `(N_pair,N_color,N_quark)=(2,3,6)`; with
   finite-`lambda` standard-matrix corrections guarded separately, plus the
   atlas-leading B_s mixing phase
   `phi_s = -alpha_s(v) sqrt(5)/6 = -0.03850 rad` and the NLO barred-triangle
@@ -61,7 +77,11 @@ questions:
   `rho_bar=(4-alpha_s(v))/24`, plus the Thales-mediated cross-system CP ratio
   `phi_s / sin(2 beta_d) = -alpha_s(v)/2` and CP-product estimator
   `alpha_s(v) = (18/5) sin(2 beta_d) sin(2 beta_s)` at atlas-leading order,
-  plus the kaon epsilon_K CKM-bracket factorization through atlas `J_0`;
+  plus the kaon epsilon_K CKM-bracket factorization through atlas `J_0`; the
+  retained protected-`gamma_bar` NLO surface now also carries exact
+  orthocenter / centroid / circumcenter / Euler-line closure with
+  `H = (rho_bar, (20 + alpha_s(v))/(24 sqrt(5)))`,
+  `H - V_3 = (0, alpha_s(v) sqrt(5)/20)`, and exact `H = 3G - 2O`;
   and bounded
   confinement-string readout; the absolute
   lattice scale is tracked explicitly on a dedicated Planck-scale lane as the
