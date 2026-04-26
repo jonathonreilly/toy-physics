@@ -35,6 +35,7 @@ and follow.
 |---|---|---|
 | `ai-physics-lane-builder` | Open and develop a bounded physics lane with note/runner pairing, status labels, and landing gates. | [`skills/ai-physics-lane-builder/SKILL.md`](./skills/ai-physics-lane-builder/SKILL.md) |
 | `physics-claim-reviewer` | Perform adversarial review of a candidate theorem, runner, or branch and classify findings into actionable dispositions. | [`skills/physics-claim-reviewer/SKILL.md`](./skills/physics-claim-reviewer/SKILL.md) |
+| `review-loop` | Run an iterative physics review loop across code/runners, claim boundaries, imported values, Nature-grade retention, and repo-governance surfaces. | [`skills/review-loop/SKILL.md`](./skills/review-loop/SKILL.md) |
 | `reviewer-backpressure-integrator` | Convert review pressure into narrow honest fixes, demotions, rejections, or selective landings. | [`skills/reviewer-backpressure-integrator/SKILL.md`](./skills/reviewer-backpressure-integrator/SKILL.md) |
 | `methodology-paper-synthesizer` | Turn raw prompt, repo-history, review, and landing evidence into methods-paper source material. | [`skills/methodology-paper-synthesizer/SKILL.md`](./skills/methodology-paper-synthesizer/SKILL.md) |
 
@@ -46,9 +47,12 @@ For a new AI-assisted theoretical-physics project:
    count as retained, bounded, support, open, no-go, or rejected;
 2. use `physics-claim-reviewer` to attack the note, runner, assumptions, and
    claim boundary, including semantic bridge failures;
-3. use `reviewer-backpressure-integrator` to convert findings into repo-facing
+3. use `review-loop` when a branch needs repeated parallel pressure across
+   runners, claim status, imported values, support-only demotions, and
+   Nature-grade retention gates;
+4. use `reviewer-backpressure-integrator` to convert findings into repo-facing
    changes without burying useful negative results;
-4. use `methodology-paper-synthesizer` to preserve the process as reusable
+5. use `methodology-paper-synthesizer` to preserve the process as reusable
    evidence.
 
 These skills are intentionally repo-native and portable. A downstream user can

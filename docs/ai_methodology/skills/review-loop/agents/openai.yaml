@@ -1,0 +1,7 @@
+interface:
+  display_name: "Review Loop"
+  short_description: "Run physics-specific parallel review loops"
+  default_prompt: "Use $review-loop to review branch changes with physics claim, import, runner, retention, and repo-governance pressure."
+
+policy:
+  allow_implicit_invocation: true

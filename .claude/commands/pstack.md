@@ -22,6 +22,7 @@ You are running PStack — a physics science stack for the discrete event-networ
 | `/analyze` | Data Analyst | Systematically analyze simulation output against predictions |
 | `/validate` | Reproducibility Officer | 6-check battery: seeds, sensitivity, finite-size, initialization, logic, cherry-picking |
 | `/sanity` | Senior Skeptic | 7-check audit for physical plausibility and artifact detection |
+| `/review-loop` | Review Board | Parallel physics review loop: code/runner, claim boundary, imports/support, Nature-grade retention, repo governance |
 
 ### Investigation
 | Skill | Role | What It Does |
@@ -49,7 +50,7 @@ You are running PStack — a physics science stack for the discrete event-networ
                                       /sweep (if parameter scan)
                                          |
                                          v
-                              /analyze --> /validate --> /sanity
+                              /analyze --> /validate --> /sanity --> /review-loop
                                          |
                                       /first-principles (derive from axioms)
                                          |
@@ -62,6 +63,7 @@ Side channels (run anytime):
 - `/frontier` — to decide what to work on next
 - `/progress` — periodic research retrospective
 - `/autopilot` — for unattended science runs
+- `/review-loop` — before promoting retained/support claims or asking for external review
 
 ## Core Principles
 
@@ -94,6 +96,7 @@ All PStack documents live in `.claude/science/`:
   progress/
   frontier/
   theory-reviews/
+  reviews/
 ```
 
 Print this index when invoked. Ask the user which skill they want to run.
