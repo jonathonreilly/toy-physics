@@ -115,9 +115,12 @@ def render_summary_block(rows: dict[str, dict], summary: dict | None) -> str:
         e = r.get("effective_status", "unknown")
         counts[e] = counts.get(e, 0) + 1
     audit_status_counts: dict[str, int] = {}
+    crit_counts: dict[str, int] = {}
     for r in rows.values():
         a = r.get("audit_status", "unaudited")
         audit_status_counts[a] = audit_status_counts.get(a, 0) + 1
+        c = r.get("criticality") or "leaf"
+        crit_counts[c] = crit_counts.get(c, 0) + 1
     lines = [
         "| effective_status | count |",
         "|---|---:|",
@@ -130,11 +133,44 @@ def render_summary_block(rows: dict[str, dict], summary: dict | None) -> str:
     lines.append("|---|---:|")
     for k in sorted(audit_status_counts):
         lines.append(f"| `{k}` | {audit_status_counts[k]} |")
+    lines.append("")
+    lines.append("| criticality | count |")
+    lines.append("|---|---:|")
+    for k in ("critical", "high", "medium", "leaf"):
+        if crit_counts.get(k, 0) > 0:
+            lines.append(f"| `{k}` | {crit_counts[k]} |")
     if summary:
         lines.append("")
         lines.append(f"- **Proposed claims demoted by upstream:** "
                      f"{summary.get('proposed_demoted_by_upstream_count', 0)}")
         lines.append(f"- **Citation cycles detected:** {summary.get('cycles_detected', 0)}")
+    return "\n".join(lines) + "\n"
+
+
+def render_top_load_bearing(rows: dict[str, dict], n: int = 25) -> str:
+    sortable = [
+        r for r in rows.values()
+        if r.get("load_bearing_score") is not None
+    ]
+    sortable.sort(key=lambda r: -float(r.get("load_bearing_score") or 0))
+    top = sortable[:n]
+    lines = [
+        "| # | claim_id | criticality | desc | flagship | score | audit_status | effective |",
+        "|---:|---|---|---:|:---:|---:|---|---|",
+    ]
+    for i, r in enumerate(top, 1):
+        lines.append(
+            "| {i} | `{cid}` | {crit} | {td} | {fg} | {sc:.2f} | `{a}` | {e} |".format(
+                i=i,
+                cid=r.get("claim_id"),
+                crit=r.get("criticality") or "leaf",
+                td=r.get("transitive_descendants") or 0,
+                fg="Y" if r.get("gates_flagship") else "",
+                sc=float(r.get("load_bearing_score") or 0),
+                a=r.get("audit_status") or "unaudited",
+                e=render_status_badge(r.get("effective_status") or "unknown"),
+            )
+        )
     return "\n".join(lines) + "\n"
 
 

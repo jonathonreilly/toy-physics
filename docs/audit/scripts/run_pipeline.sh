@@ -21,23 +21,38 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "${SCRIPT_DIR}/../../.." && pwd)"
 cd "${REPO_ROOT}"
 
-echo "==> 1/6 build_citation_graph.py"
+echo "==> 1/9 build_citation_graph.py"
 python3 docs/audit/scripts/build_citation_graph.py
 
-echo "==> 2/6 seed_audit_ledger.py"
+echo "==> 2/9 seed_audit_ledger.py"
 python3 docs/audit/scripts/seed_audit_ledger.py
 
-echo "==> 3/6 classify_runner_passes.py"
+echo "==> 3/9 classify_runner_passes.py"
 python3 docs/audit/scripts/classify_runner_passes.py
 
-echo "==> 4/6 compute_effective_status.py"
+echo "==> 4/9 compute_load_bearing.py"
+python3 docs/audit/scripts/compute_load_bearing.py
+
+echo "==> 5/9 compute_effective_status.py"
 python3 docs/audit/scripts/compute_effective_status.py
 
-echo "==> 5/6 audit_lint.py"
+echo "==> 6/9 invalidate_stale_audits.py"
+python3 docs/audit/scripts/invalidate_stale_audits.py
+
+# Effective status may need to be recomputed after invalidation.
+echo "==> 5/9 (re-run) compute_effective_status.py post-invalidation"
+python3 docs/audit/scripts/compute_effective_status.py
+
+echo "==> 7/9 compute_audit_queue.py"
+python3 docs/audit/scripts/compute_audit_queue.py
+
+echo "==> 8/9 audit_lint.py"
 python3 docs/audit/scripts/audit_lint.py
 
-echo "==> 6/6 render_audit_ledger.py"
+echo "==> 9/9 render_audit_ledger.py"
 python3 docs/audit/scripts/render_audit_ledger.py
 
 echo
-echo "Pipeline complete. Read docs/audit/AUDIT_LEDGER.md for the rendered view."
+echo "Pipeline complete."
+echo "  Read docs/audit/AUDIT_LEDGER.md for the rendered ledger."
+echo "  Read docs/audit/AUDIT_QUEUE.md   for the next-up audit queue."

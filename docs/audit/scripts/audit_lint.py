@@ -117,6 +117,31 @@ def main() -> int:
                 warnings.append(
                     f"{cid}: audited_clean but effective_status={e!r} (likely demoted by upstream dep)"
                 )
+            # Criticality-aware independence rules.
+            criticality = row.get("criticality") or "leaf"
+            if criticality in {"critical", "high"} and ind == "weak":
+                errors.append(
+                    f"{cid}: criticality={criticality} requires independence != 'weak' for audited_clean"
+                )
+            if criticality == "critical":
+                xc = row.get("cross_confirmation") or {}
+                if xc.get("status") != "confirmed":
+                    errors.append(
+                        f"{cid}: critical claim requires cross_confirmation.status='confirmed'; "
+                        f"got {xc.get('status')!r}"
+                    )
+
+        # Criticality bump after audit (warn that re-audit may be needed).
+        snap = row.get("audit_state_snapshot")
+        if snap is not None:
+            crit_now = row.get("criticality") or "leaf"
+            crit_at_audit = snap.get("criticality") or "leaf"
+            crit_rank = {"leaf": 0, "medium": 1, "high": 2, "critical": 3}
+            if crit_rank.get(crit_now, 0) > crit_rank.get(crit_at_audit, 0):
+                warnings.append(
+                    f"{cid}: criticality bumped {crit_at_audit}->{crit_now} since audit; "
+                    "invalidate_stale_audits.py should reset"
+                )
 
         # Hash drift.
         on_disk = hash_note_on_disk(row.get("note_path", ""))

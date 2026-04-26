@@ -68,6 +68,11 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
     if verdict == "audited_clean" and independence == "weak":
         return False, "audited_clean requires independence != 'weak'"
 
+    # Criticality-aware independence rule.
+    criticality = row.get("criticality") or "leaf"
+    if verdict == "audited_clean" and criticality in {"critical", "high"} and independence == "weak":
+        return False, f"criticality={criticality} requires independence >= cross_family for audited_clean"
+
     # Hash drift check.
     on_disk_path = REPO_ROOT / row.get("note_path", "")
     if on_disk_path.exists():
@@ -77,6 +82,61 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
         ).hexdigest()
         if on_disk_hash != row.get("note_hash"):
             return False, "note_hash drift; rerun seed_audit_ledger.py before applying audit"
+
+    # Cross-confirmation flow for critical claims.
+    # First audit on a critical claim with audited_clean lands as
+    # audit_in_progress and waits for a second independent auditor.
+    # Second matching audit promotes to audited_clean.
+    if verdict == "audited_clean" and criticality == "critical":
+        prior = row.get("cross_confirmation") or {}
+        first = prior.get("first_audit")
+        if first is None:
+            row["cross_confirmation"] = {
+                "first_audit": {
+                    "auditor": audit["auditor"],
+                    "auditor_family": audit["auditor_family"],
+                    "audit_date": audit.get("audit_date") or datetime.now(timezone.utc).isoformat(),
+                    "load_bearing_step_class": audit.get("load_bearing_step_class"),
+                    "verdict": "audited_clean",
+                },
+                "second_audit": None,
+                "status": "awaiting_second",
+            }
+            row["audit_status"] = "audit_in_progress"
+            row["blocker"] = "awaiting_cross_confirmation"
+            rows[cid] = row
+            ledger["rows"] = rows
+            return True, "first audit recorded; awaiting independent second auditor"
+        # We have a first audit on file; this is the second.
+        if first.get("auditor_family") == audit["auditor_family"]:
+            return False, "second auditor must be from a different auditor_family than the first"
+        if first.get("load_bearing_step_class") != audit.get("load_bearing_step_class"):
+            row["cross_confirmation"]["second_audit"] = {
+                "auditor": audit["auditor"],
+                "auditor_family": audit["auditor_family"],
+                "audit_date": audit.get("audit_date") or datetime.now(timezone.utc).isoformat(),
+                "load_bearing_step_class": audit.get("load_bearing_step_class"),
+                "verdict": "audited_clean",
+            }
+            row["cross_confirmation"]["status"] = "disagreement"
+            row["audit_status"] = "audit_in_progress"
+            row["blocker"] = "cross_confirmation_disagreement"
+            rows[cid] = row
+            ledger["rows"] = rows
+            return False, (
+                "first and second audits disagree on load_bearing_step_class "
+                f"({first.get('load_bearing_step_class')!r} vs {audit.get('load_bearing_step_class')!r}); "
+                "promote to third-auditor review"
+            )
+        # Concordant second audit: promote.
+        row["cross_confirmation"]["second_audit"] = {
+            "auditor": audit["auditor"],
+            "auditor_family": audit["auditor_family"],
+            "audit_date": audit.get("audit_date") or datetime.now(timezone.utc).isoformat(),
+            "load_bearing_step_class": audit.get("load_bearing_step_class"),
+            "verdict": "audited_clean",
+        }
+        row["cross_confirmation"]["status"] = "confirmed"
 
     # Apply the audit fields.
     row["audit_status"] = verdict
@@ -95,6 +155,24 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
     if "runner_check_breakdown" in audit:
         row["runner_check_breakdown"] = audit["runner_check_breakdown"]
     row["blocker"] = None
+
+    # Snapshot the state at audit time so invalidate_stale_audits.py can
+    # detect changes that warrant re-audit (dep added/removed, dep status
+    # changed, criticality bumped).
+    deps = sorted(row.get("deps", []))
+    row["audit_state_snapshot"] = {
+        "deps": deps,
+        "dep_effective_status": {
+            d: rows.get(d, {}).get("effective_status")
+            or rows.get(d, {}).get("current_status")
+            or "unknown"
+            for d in deps
+        },
+        "criticality": row.get("criticality"),
+        "load_bearing_score": row.get("load_bearing_score"),
+        "transitive_descendants": row.get("transitive_descendants"),
+        "gates_flagship": row.get("gates_flagship"),
+    }
 
     rows[cid] = row
     ledger["rows"] = rows

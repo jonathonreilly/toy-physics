@@ -1,0 +1,115 @@
+# CI Integration
+
+The audit lane has two integration surfaces: pre-commit (fast, mandatory)
+and CI (full, scheduled). Both call into `scripts/`; neither performs
+audits — those are done by Codex GPT-5.5 (or any independent auditor)
+via `AUDIT_AGENT_PROMPT_TEMPLATE.md`.
+
+## Pre-commit
+
+Runs `build_citation_graph.py` + `seed_audit_ledger.py` + `audit_lint.py`
+only. Fast. Catches:
+
+- New note added without a ledger seed.
+- Hash drift on an audited claim (note edited after audit landed).
+- Hard-rule violation (author-declared `retained`, missing auditor on
+  `audited_clean`, etc.).
+
+Install:
+
+```bash
+ln -sf ../../docs/audit/scripts/pre_commit_audit_check.sh .git/hooks/pre-commit
+chmod +x docs/audit/scripts/pre_commit_audit_check.sh
+```
+
+## CI / cron (full pipeline)
+
+Run `bash docs/audit/scripts/run_pipeline.sh` on a regular cadence
+(suggested: every push to `main`, plus a daily cron). The full pipeline
+adds:
+
+- `classify_runner_passes.py` — heuristic A/B/C/D classifier.
+- `compute_load_bearing.py` — descendants, flagship reach, criticality.
+- `invalidate_stale_audits.py` — auto-archives audits where deps changed
+  or criticality bumped.
+- `compute_audit_queue.py` — sorted next-up queue.
+- `render_audit_ledger.py` — markdown render.
+
+A minimal GitHub Actions workflow (drop into `.github/workflows/audit.yml`):
+
+```yaml
+name: audit-lane
+on:
+  push:
+    branches: [main, audit-lane]
+  pull_request:
+  schedule:
+    - cron: "0 6 * * *"   # daily 06:00 UTC
+
+jobs:
+  audit_pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run audit pipeline
+        run: bash docs/audit/scripts/run_pipeline.sh
+      - name: Commit refreshed ledger if changed
+        if: github.event_name == 'schedule' || github.ref == 'refs/heads/main'
+        run: |
+          if [[ -n "$(git status --porcelain docs/audit/data docs/audit/AUDIT_LEDGER.md docs/audit/AUDIT_QUEUE.md)" ]]; then
+            git config user.name  "audit-bot"
+            git config user.email "audit-bot@local"
+            git add docs/audit/data docs/audit/AUDIT_LEDGER.md docs/audit/AUDIT_QUEUE.md
+            git commit -m "audit: refresh ledger + queue (automated)"
+            git push
+          fi
+      - name: Upload audit queue artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: audit-queue
+          path: docs/audit/data/audit_queue.json
+```
+
+## Codex audit invocation (recommended pattern)
+
+The pipeline does not invoke Codex itself. Recommended pattern: a
+separate workflow (manual trigger or scheduled) reads the top of
+`data/audit_queue.json`, constructs the prompt from
+`AUDIT_AGENT_PROMPT_TEMPLATE.md`, sends it to Codex, captures the JSON
+response, and pipes it through `apply_audit.py`. Steps:
+
+```bash
+# Pseudocode for the wrapper script (not yet implemented):
+top_n=10
+python3 docs/audit/scripts/build_audit_prompts.py --top "${top_n}" \
+    > /tmp/prompts.jsonl
+
+while read -r prompt; do
+    response=$(call_codex_api "${prompt}")
+    echo "${response}" | python3 docs/audit/scripts/apply_audit.py
+done < /tmp/prompts.jsonl
+
+bash docs/audit/scripts/run_pipeline.sh
+```
+
+The Codex invocation itself depends on which transport you use; the
+audit lane is transport-agnostic — anything that returns the prompt
+template's JSON schema is acceptable.
+
+## Reading the artifacts
+
+After a pipeline run, four files are the canonical output:
+
+| File | Purpose |
+|---|---|
+| `docs/audit/AUDIT_LEDGER.md` | Human-readable rendered ledger; effective_status table; per-claim audit findings. |
+| `docs/audit/AUDIT_QUEUE.md` | Top-50 next-to-audit claims, sorted by criticality. |
+| `docs/audit/data/audit_ledger.json` | Source of truth (machine-readable). |
+| `docs/audit/data/audit_queue.json` | Full pending queue. |
+
+Publication-facing tables (`CLAIMS_TABLE.md`, `PUBLICATION_MATRIX.md`,
+`ARXIV_DRAFT.md`) should read `effective_status` from
+`audit_ledger.json` (or the rendered markdown), not `current_status`.
