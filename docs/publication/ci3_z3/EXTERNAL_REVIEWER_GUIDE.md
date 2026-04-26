@@ -250,6 +250,12 @@ Current status from that stack:
   Repo status: exact operational no-past-signaling theorem on the retained
   single-clock Hilbert/local-data surface; not a universal CTC/multi-time
   no-go and not a closure of the full chronology lane.
+- signed gravitational response lane status. Entry point:
+  [SIGNED_GRAVITY_RESPONSE_LANE_STATUS_NOTE_2026-04-26.md](../../SIGNED_GRAVITY_RESPONSE_LANE_STATUS_NOTE_2026-04-26.md).
+  Repo status: conditional locked-response consequence harness plus
+  selector/source no-go boundaries; not a physical antigravity,
+  negative-mass, shielding, propulsion, reactionless-force, or
+  switchable-gravity claim.
 - W-boson same-surface EW consistency probe. Entry point: [W_MASS_DERIVED_NOTE.md](../../W_MASS_DERIVED_NOTE.md). Repo status: `bounded`. On the retained EW lane the framework-side readouts are `M_W^tree = 79.7956 GeV`, `M_W^RGE = 80.5573 GeV`, `M_Z^tree = 91.2663 GeV`. The remaining `~0.19 GeV` `M_W` gap tracks the existing retained `g_2(v)` precision and is therefore treated as a same-surface consistency probe, not as a retained or few-MeV SM-indirect `M_W` prediction.
 - dark-matter exact-target package, with exact transport-chain progress, theorem-grade same-surface thermal bounding and a certified current-bank numerator-selector no-go, source-side reduction all the way to the `2`-real `Z_3` doublet-block law, a repo-live G1 PMNS-as-`f(H)` support package, a retained-measurement A-BCC integration theorem, an interval-certified split-2 carrier closure, a shifted same-law recovered-packet selector closure, an exact target-surface chamber-root theorem, a graph-first ordered-chain current-activation theorem, an affine current-coordinate reduction theorem, and an ordered-chain graded-current delta closure theorem. So the DM lane is now closed for the exact PMNS-target formulation treated in the manuscript, with broader target-free global uniqueness left out of scope.
 - DM Wilson direct-descendant Schur-Feshbach boundary support theorem. Entry

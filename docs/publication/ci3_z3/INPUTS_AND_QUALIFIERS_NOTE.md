@@ -293,6 +293,13 @@ theorem core.
     Hilbert/local-data surface
   - no claim over postselected/final-boundary ensembles, directed causal
     cycles, arbitrary multi-time theories, or full lane closure
+- signed gravitational response support/no-go lane:
+  - conditional locked source/response consequence harness passes action-reaction
+    with positive inertial mass
+  - strict local/taste-cell selector and local signed source primitive remain
+    blocked
+  - determinant-orientation support hosts the `chi_eta` grammar but does not
+    select the physical source section or source action
 
 ## 7. Remaining bridge package
 
