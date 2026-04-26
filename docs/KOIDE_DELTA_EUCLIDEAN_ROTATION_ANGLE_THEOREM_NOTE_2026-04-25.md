@@ -17,10 +17,14 @@ Euclidean rotation angle (read by `cos(·)` in the Brannen-Rivero mass
 formula, never by `exp(i·)`). Does NOT close the independent `Q = 2/3`
 source-domain selector bridge or the lepton scale `v_0`.
 **Primary runner:** `scripts/frontier_koide_delta_euclidean_rotation_angle.py`
-(36/36 PASS, including symbolic sympy verification of the closed-form
-identity, the uniqueness of the unphased reference in the positive
-chamber, the no-wrap-around continuity of the `atan2` lift on the
-first branch, the orientation-flip consistency, and the explicit
+(40/40 PASS, including symbolic sympy verification of the closed-form
+identity in two equivalent forms — the (sin, cos) form
+`p_1 = (1/√2) sin(θ + π/3)`, `p_2 = (1/√2) cos(θ + π/3)` and the
+complex-coordinate form `z := p_1 + i p_2 = (1/√2) e^{i(π/6 − θ)}` —
+the uniqueness of the unphased reference in the positive chamber,
+the no-wrap-around continuity of the `atan2` lift on the first
+branch, the orientation-flip consistency including 180-degree
+sign-flip, the framework R1 sign convention check, and the explicit
 quantitative distinction from the canonical `R/Z → U(1)` reading in
 Block 5)
 
@@ -133,6 +137,40 @@ crossed.
 
 A response to the support-vs-closure distinction (`review.md` finding 2,
 2026-04-26) is given in §5 below.
+
+**Scope clarification: what this theorem CLOSES vs INHERITS.**
+
+A reviewer could reasonably ask: "where does the value `δ = 2/9`
+itself come from? Is it derived by the rotation-angle theorem?"
+
+The answer separates VALUE from IDENTIFICATION:
+
+- **The value `δ = 2/9`** is established by the convergent retained
+  supporting derivations on the framework's existing surface: the
+  ABSS / APS η-invariant on `L(3,1) / R⁴/Z_3` (eight independent
+  exact routes; `frontier_koide_aps_eta_invariant.py`), the
+  G-signature Cl(3)/Z_3 evaluation (`frontier_koide_brannen_route3_geometry_support.py`
+  test 4.1e), the LH-quark anomaly trace `Tr[Y³]_q = 2/d² = 2/9`,
+  the `(ω−1)(ω²−1) = 3` core algebraic identity, etc. The value's
+  multi-route convergence is established INDEPENDENTLY of this
+  theorem (cf. `KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md`).
+  This theorem inherits the value `2/9`; it does not re-derive it.
+
+- **The IDENTIFICATION** of this value as the literal Euclidean
+  rotation angle `α(s_0) − α(s_*)` on the doublet 2-plane is what
+  this theorem closes (Lemma 2.7 + the forcing argument of §3.2.iii
+  + the anti-checks lemma of §3.5). Before this theorem, the value
+  `2/9` was retained at "support" level only: numerical agreement
+  was established but the physical-observable interpretation was
+  open (the A1 audit's residual). After this theorem, the
+  identification with the Euclidean rotation angle is closed in
+  closed form, promoting `δ = 2/9` from "support" to "retained".
+
+In other words: **this theorem closes the identification of the
+already-converged value `2/9` as a literal Euclidean rotation angle**.
+It does not derive `2/9` from first principles (that derivation is
+the convergent supporting work cited above), and it does not close
+`Q = 2/3` or `v_0` (which are independent open bridges).
 
 ---
 
@@ -435,35 +473,44 @@ p_2 = s_⊥ · e₂ = (1/√3)(1/√6)·[cos θ + cos(θ + 2π/3) − 2 cos(θ �
 using the C₃-character sum identities `Σ_k cos(θ + 2πk/3) = 0` plus
 direct simplification.
 
-Hence `(p_1, p_2) = (1/√2)·(sin(θ + π/3), cos(θ + π/3))`, and
+Hence `(p_1, p_2) = (1/√2)·(sin(θ + π/3), cos(θ + π/3))`.
+
+**Cleanest form via complex coordinate.** The doublet 2-plane `W` is
+naturally a complex line via the chart `z := p_1 + i p_2`. Using
+the elementary Euler identity
 
 ```text
-α = atan2(p_2, p_1) = atan2(cos(θ + π/3), sin(θ + π/3)).
+sin(x) + i cos(x) = e^{i(π/2 − x)}     (for all real x)
 ```
 
-For any real `x`, the identity `atan2(cos x, sin x) = π/2 − x` holds
-modulo `2π` (since `(sin x, cos x)` is the point on the unit circle
-at angle `π/2 − x` from the positive `p_1`-axis). On the first
-branch, the argument `x = θ + π/3` ranges over `(π − π/12, π + π/12)`
-— an open interval of length `π/6 ≪ 2π` containing `x = π`. We must
-verify that the principal-value `atan2: ℝ² \ {0} → (−π, π]` produces
-a CONTINUOUS lift on this range with no `2π`-jump.
+we obtain the **closed complex form**
 
-The principal-value `atan2` has its branch-cut along the negative
-`p_1`-axis, i.e., at `(p_1, p_2)` with `p_1 < 0` and `p_2 = 0`. For
-us `p_1 = (1/√2) sin(θ + π/3)` and `p_2 = (1/√2) cos(θ + π/3)`. The
-branch-cut condition `p_1 < 0, p_2 = 0` requires
-`sin(θ + π/3) < 0` AND `cos(θ + π/3) = 0`, i.e.,
-`θ + π/3 = π/2 + (2k+1)π` for `k ∈ ℤ`, i.e., `θ = −π/6 + (2k+1)π`.
-None of these values lie in the first-branch range
+```text
+z(θ) = p_1(θ) + i p_2(θ) = (1/√2) e^{i(π/6 − θ)}.
+```
+
+Sympy verification: `sin(θ + π/3) + i cos(θ + π/3) = (√3 + i)/2 · e^{−iθ}`,
+and `(√3 + i)/2 = e^{i·π/6}`, so the product is `e^{i(π/6 − θ)}`
+(runner test 5.13). This complex-coordinate form makes the rotation
+angle immediate: `arg(z(θ)) = π/6 − θ` (mod 2π), and `|z(θ)| = 1/√2`
+is constant.
+
+**Branch-cut argument (atan2 lift continuity).** The principal-value
+`atan2: ℝ² \ {0} → (−π, π]` has its branch-cut along the negative
+`p_1`-axis, i.e., at `(p_1, p_2)` with `p_1 < 0` and `p_2 = 0`. The
+branch-cut condition `sin(θ + π/3) < 0, cos(θ + π/3) = 0` requires
+`θ + π/3 = π/2 + (2k+1)π`, i.e., `θ = −π/6 + (2k+1)π`. None of
+these values lie in the first-branch range
 `θ ∈ (2π/3 − π/12, 2π/3 + π/12)`. Hence the principal-value `atan2`
-is continuous and equal to `π/2 − x` (without modular reduction) on
-the entire first branch. Runner test 5.10 verifies this numerically
-across 4001 samples to machine precision (residual `< 10⁻¹²`).
+is continuous on the entire first branch with no `2π`-jump, and
+`arg(z(θ)) = π/6 − θ` holds as an equality of real-valued functions
+on the first branch (without modular reduction). Runner test 5.10
+verifies this numerically across 4001 samples to machine precision
+(residual `< 10⁻¹²`).
 
-Therefore `α(s(m)) = π/2 − (θ + π/3) = π/6 − θ` as a literal
-equality of real-valued functions on the first branch. With
-`δ = θ − 2π/3`: `α = π/6 − δ − 2π/3 = −π/2 − δ`. ∎
+Therefore `α(s(m)) = arg(z(θ(m))) = π/6 − θ(m)` as a literal
+equality on the first branch. With `δ = θ − 2π/3`:
+`α = π/6 − δ − 2π/3 = −π/2 − δ`. ∎
 
 **Verification.** Runner tests 5.1–5.5 (sympy + numerical sweep,
 machine precision across 401 first-branch samples).
@@ -803,6 +850,40 @@ retained category in which `δ_phys = 2/9` could non-trivially live,
 so the rotation-angle reading exhibited by Lemma 2.7 IS the physical
 reading.
 
+### 3.6 Convention vs derivation
+
+A Nature-grade theorem must transparently distinguish what is a
+**convention choice** (where multiple equivalent options exist) from
+what is a **derivation** (where the result is forced by retained
+data). For the rotation-angle theorem:
+
+| Item | Status | Justification |
+|---|---|---|
+| Embedding `ℝ³ ↦` mass-square-root space (each axis labels one generation) | **derivation (R3)** | Forced by the framework's `C_3` action permuting generations; the singlet axis `e₊ = (1,1,1)/√3` is the unique `C_3`-fixed direction. |
+| The Euclidean metric on `ℝ³` | **derivation (mathematics-as-such)** | The standard Euclidean inner product; not a choice of metric among options. |
+| The doublet 2-plane `W = ⟨e₊⟩^⊥` | **derivation (R3)** | The orthogonal complement of the singlet axis, uniquely defined by `e₊` and the Euclidean metric. |
+| The radian unit on `W` | **derivation (geometry-as-such)** | Defined by arc-length-over-radius on the Euclidean 2-plane; unique. |
+| The rotation angle `α(s)` as the angular coordinate of `s_⊥` in `W` | **derivation (Lemma 2.7)** | A canonical real-valued coordinate on the radius-`(1/√2)` circle in `W`. |
+| The closed-form `α = −π/2 − δ` | **derivation (Lemma 2.7)** | Proved from the framework's R1 ansatz + R3 frame. |
+| The unphased reference `s_0` | **derivation (Lemma 2.3)** | Unique positive-chamber Koide-cone point with two equal smaller components. |
+| Sign of the C₃ generator (C vs C^{-1}) | **convention (R3)** | Either generator is valid; framework picks `C: (s_0,s_1,s_2) → (s_2,s_0,s_1)`, giving `+2π/3` rotation. The DIFFERENCE `α(s_0) − α(s)` is C₃-invariant (test 3.2). |
+| Sign of the Brannen offset (`δ = θ − 2π/3` vs `−(θ − 2π/3)`) | **convention (R1)** | Either sign is valid; framework picks `δ(m_0) = 0` increasing in physical direction. The ABSOLUTE VALUE `|δ_phys| = 2/9` is convention-independent. |
+| Frame `(e_1, e_2)` orientation in `W` | **convention (modulo discrete sign-flip)** | Up to simultaneous sign-flip `(e_1, e_2) → (−e_1, −e_2)` (= 180° rotation), the frame is canonical. The DIFFERENCE `α(s_0) − α(s)` is invariant under any frame rotation (test 4.1) and under sign-flip (test 5.11). |
+| The "first branch" (one of three C₃-related arcs) | **convention (R5)** | Three C₃-related arcs exist; picking one is convention. The OTHER two arcs give `δ_phys` values shifted by ±2π/3, which give the same physical mass spectrum (since the masses are C₃-invariant). |
+
+**Net result.** The rotation-angle reading and its specific value
+`α(s_0) − α(s_*) = −2/9` are derived from the framework's retained
+data. The conventions are limited to: (i) sign of one generator;
+(ii) sign of the Brannen offset; (iii) sign-flip of the frame; (iv)
+choice of one of three C₃-related arcs. None of these conventions
+affects the physical observable `|δ_phys| = 2/9 rad` (the absolute
+value of the rotation-angle difference at the physical interior
+point). All four conventions are convention-equivalent to choosing
+an orientation on a one-dimensional symmetry group; together they
+form a discrete `Z_2 × Z_3` ambiguity that is absorbed by the
+framework's R1, R3, R5 conventions and does not introduce hidden
+physics.
+
 This eliminates the residual "period-2π convention" attack: the
 period question is not about which representative of `δ + 2πℤ` to
 pick (the first branch picks itself, uniquely), but about which
@@ -943,11 +1024,14 @@ symbolic computation:
   (not crossed) because no `R/Z → U(1)` map is invoked at all.
 
 The new Block 5 verifies the **closed-form identity**, not just
-"compatibility". The runner now PASSes 36/36 (was 24/24 in the
+"compatibility". The runner now PASSes 40/40 (was 24/24 in the
 original; expanded to 32/32 with the closed-form identification block;
-expanded again to 36/36 with the Nature-grade backpressure tests
+expanded to 36/36 with the Round-1 Nature-grade backpressure tests
 for unphased-point uniqueness, atan2 lift continuity, orientation
-flip, and counter-convention quantitative distinction).
+flip, and counter-convention quantitative distinction; expanded to
+40/40 with the Round-2 Nature-grade backpressure tests for the
+cleanest complex-coordinate form `z = (1/√2) e^{i(π/6 − θ)}`,
+framework R1 sign convention check, and 180-degree frame sign-flip).
 
 **On the broader status of `main`**. The retained surface label
 "support" on April 22 reflects that note's appropriate hedge given
@@ -962,7 +1046,10 @@ on:
 - §3.3 Brannen-cosine universality (NEW formal lemma);
 - §3.4 First-branch contractibility (NEW period-2π non-issue argument);
 - §3.5 Anti-checks lemma (NEW exhaustive enumeration of alternative readings, ruling out each);
-- 36/36 PASS verification including symbolic block 5 + Nature-grade backpressure tests.
+- §3.6 Convention vs derivation (NEW transparent table separating
+  derivations from conventions);
+- 40/40 PASS verification including symbolic block 5 + Round 1 + Round 2
+  Nature-grade backpressure tests.
 
 This is sufficient for retained-grade closure of `δ`. The companion
 support notes (April 22 Brannen geometry, April 20 phase reduction,
@@ -1030,7 +1117,7 @@ python3 scripts/frontier_koide_delta_euclidean_rotation_angle.py
 Expected output:
 
 ```text
-TOTAL: PASS=36, FAIL=0
+TOTAL: PASS=40, FAIL=0
 ```
 
 Verification blocks:
@@ -1041,19 +1128,20 @@ Verification blocks:
 | 2 | Physical-interior identity α(m_*) − α(m_0) = −2/9 to machine precision; cosine-of-angle identification | 2.1–2.4 |
 | 3 | Gauge invariance under retained C_3 cyclic permutation | 3.1–3.4 |
 | 4 | Reference-axis-choice independence; arc-length identity | 4.1–4.3 |
-| **5** | **Closed-form analytic identification + uniqueness + lift continuity + counter-convention check (load-bearing physical-identification step + Nature-grade backpressure tests)** | **5.1–5.12** |
+| **5** | **Closed-form analytic identification (load-bearing physical-identification step) + Nature-grade backpressure (Round 1 and Round 2)** | **5.1–5.17** |
 | 6 | Cross-validation: Q = 3·δ exact rational + V_cb bridge + PDG comparator | 6.1–6.4 |
 
 Block 5 is the **load-bearing physical-identification step** added in
-the 2026-04-26 revision in response to `review.md`. It now contains
-12 tests across four sub-blocks:
+the 2026-04-26 revision in response to `review.md`. It contains
+17 tests across five sub-blocks:
 
 - **Sub-block 5.1–5.4 (sympy symbolic).** Closed-form Koide cone
-  identity, `p_1 / p_2` formulas, radius identity — all exactly via
-  sympy, valid for all `θ`.
+  identity, `p_1 / p_2` formulas (sin/cos form), radius identity —
+  all exactly via sympy, valid for all `θ`.
 - **Sub-block 5.5–5.8 (closed-form identity + universality + contractibility).** The load-bearing identity `α(s(θ)) = −π/2 − δ(θ)` verified across 401 first-branch samples to machine precision; consistency at `δ = 2/9`; Brannen-cosine universality; first-branch span `≪ 2π`.
-- **Sub-block 5.9–5.10 (Nature-grade backpressure: uniqueness + lift).** Sympy uniqueness of the unphased reference `S0` in the positive chamber; numerical verification across 4001 samples that the principal-value `atan2` lift is continuous on the first-branch range with no `2π`-jump (so the closed-form identity holds without modular reduction).
-- **Sub-block 5.11–5.12 (Nature-grade backpressure: orientation + counter-convention).** Orientation-flip `e_2 → −e_2` flips α-differences (consistency with R3 +2π/3 orientation); explicit verification that the canonical `R/Z → U(1)` map `χ(c) = exp(2πi·c)` would give `4π/9 rad ≠ 2/9 rad` (the rotation-angle reading is quantitatively distinct from the canonical phase reading, confirming the obstruction is bypassed not crossed).
+- **Sub-block 5.9–5.11 (Round-1 backpressure: uniqueness + lift + orientation).** Sympy uniqueness of the unphased reference `S0` in the positive chamber; numerical verification across 4001 samples that the principal-value `atan2` lift is continuous on the first-branch range with no `2π`-jump; orientation-flip `e_2 → −e_2` flips α-differences (consistency with R3 +2π/3 orientation).
+- **Sub-block 5.13–5.16 (Round-2 backpressure: complex-coordinate cleanest form + sign convention + 180-flip).** Sympy verification of the complex-coordinate closed form `z := p_1 + i p_2 = (1/√2) e^{i(π/6 − θ)}` (cleanest form of Lemma 2.7); numerical verification across 401 samples; framework R1 sign convention check (`+iθ` for `v_ω` gives `δ_phys = +2/9`, not `−2/9`); 180-degree frame sign-flip preserves α-differences.
+- **Sub-block 5.17 (Round-1 backpressure: counter-convention).** Explicit verification that the canonical `R/Z → U(1)` map `χ(c) = exp(2πi·c)` would give `4π/9 rad ≠ 2/9 rad` (the rotation-angle reading is quantitatively distinct from the canonical phase reading, confirming the obstruction is bypassed not crossed).
 
 Companion verification (recommended):
 

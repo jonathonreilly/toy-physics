@@ -46,14 +46,20 @@ The runner has SIX verification blocks:
                       atan2 lift continuity on the first-branch range
                       (4001 samples; no 2pi-jump, so the closed-form
                       identity holds without modular reduction).
-             5.11-5.12: NATURE-GRADE BACKPRESSURE - orientation-flip
-                      consistency (e_2 -> -e_2 flips alpha-differences,
+             5.11, 5.16, 5.17: NATURE-GRADE BACKPRESSURE - orientation-
+                      flip consistency (e_2 -> -e_2 and 180-degree
+                      sign-flip both flip / preserve alpha-differences
                       consistent with R3 +2pi/3 orientation); explicit
                       counter-convention check (canonical R/Z->U(1) map
                       chi(c)=exp(2*pi*i*c) at c=2/9 gives 4*pi/9 rad,
                       quantitatively distinct from the 2/9 rad rotation-
                       angle reading; confirms the obstruction is bypassed
                       not crossed).
+             5.13-5.15: ROUND-2 BACKPRESSURE - cleanest closed-form via
+                      complex coordinate p_1 + i p_2 = (1/sqrt(2))
+                      e^{i(pi/6 - theta)} (sympy + numerical); framework
+                      R1 sign convention check (gives delta_phys = +2/9,
+                      not -2/9).
            This upgrades the April 22 numerical agreement (10^-12) to
            a closed-form algebraic identity verified across 4400+
            samples, addressing the missing physical-observable
@@ -728,7 +734,81 @@ def main() -> int:
         f"the framework's R3 +2pi/3 rotation fixes orientation; the unflipped frame is canonical.",
     )
 
-    # ---- 5.12: Counter-convention check: exp(i delta) reading does NOT give 2/9 rad ----
+    # ---- 5.13: Complex-coordinate form of Lemma 2.7 (cleanest closed form) ----
+    # The doublet 2-plane W is naturally a complex line via z := p_1 + i p_2.
+    # Using sin(x) + i cos(x) = e^{i(pi/2 - x)}, we get
+    #     z(theta) = (1/sqrt(2)) e^{i(pi/6 - theta)}
+    # which immediately gives arg(z) = pi/6 - theta as the rotation angle.
+    # Sympy verification: sin(theta+pi/3) + i cos(theta+pi/3) = (sqrt(3)+i)/2 e^{-i theta}
+    # and (sqrt(3)+i)/2 = e^{i pi/6}, so the product = e^{i(pi/6 - theta)}.
+    sp_z = sp_p1 + sp.I * sp_p2
+    sp_z_target = sp.exp(sp.I * (sp.pi / 6 - sp_theta)) / sp.sqrt(2)
+    sp_z_simp = sp.simplify(sp.expand_complex(sp_z - sp_z_target))
+    check(
+        "5.13 Symbolic complex-coordinate form: p_1 + i p_2 = (1/sqrt(2)) e^{i(pi/6 - theta)}",
+        sp_z_simp == 0,
+        f"sympy simplification of (z - target) = {sp_z_simp}",
+    )
+
+    # Numerical verification of the complex form
+    max_complex_err = 0.0
+    for theta_val in np.linspace(THETA_MIN, THETA_MAX, 401):
+        p1_n = math.sin(theta_val + math.pi / 3.0) / math.sqrt(2.0)
+        p2_n = math.cos(theta_val + math.pi / 3.0) / math.sqrt(2.0)
+        z_actual = complex(p1_n, p2_n)
+        ang = math.pi / 6.0 - theta_val
+        z_pred = (math.cos(ang) + 1j * math.sin(ang)) / math.sqrt(2.0)
+        max_complex_err = max(max_complex_err, abs(z_actual - z_pred))
+
+    check(
+        "5.14 Numerical verification of complex-coordinate identity across first branch",
+        max_complex_err < 1e-13,
+        f"max |z(theta) - (1/sqrt(2)) e^{{i(pi/6 - theta)}}| = {max_complex_err:.3e}",
+    )
+
+    # ---- 5.15: Sign-convention check: framework's +iθ convention (R1) gives δ > 0 ----
+    # The framework's R1 ansatz uses +i*theta for v_omega and -i*theta for v_omegabar.
+    # The OPPOSITE sign convention would give s = (1/sqrt(2)) v_1 + (1/2) e^{-i theta} v_omega
+    #                                               + (1/2) e^{+i theta} v_omegabar,
+    # which is the same ansatz with theta -> -theta. The closed-form would give
+    # alpha = pi/6 - (-theta) = pi/6 + theta, so delta_phys = -alpha + alpha(s_0) would
+    # give -2/9 instead of +2/9.
+    # Verify that the framework's R1 convention is the one giving +2/9 (positive delta).
+    delta_pos = -(alpha_star_h - alpha_0_h)  # framework convention
+    check(
+        "5.15 Framework R1 sign convention (+i theta for v_omega) gives delta_phys = +2/9 (NOT -2/9)",
+        abs(delta_pos - 2.0 / 9.0) < 1e-12 and delta_pos > 0,
+        f"delta_phys = {delta_pos:+.15f}, target +2/9 = {2.0/9.0:.15f}\n"
+        f"the opposite sign convention would give delta_phys = -2/9 (unphysical sign for the framework's first branch)",
+    )
+
+    # ---- 5.16: 180-degree frame flip preserves alpha-differences ----
+    # Simultaneous sign-flip (e_1, e_2) -> (-e_1, -e_2) is a 180-degree
+    # rotation in W. It shifts alpha by pi (mod 2pi); differences remain
+    # invariant.
+    def alpha_180_flip(s: np.ndarray) -> float:
+        s_perp = s - np.dot(s, SINGLET) * SINGLET
+        p1f = float(np.dot(s_perp, -E1))
+        p2f = float(np.dot(s_perp, -E2))
+        return math.atan2(p2f, p1f)
+
+    a0_180 = alpha_180_flip(s0_hsel)
+    a_star_180 = alpha_180_flip(s_star_hsel)
+    diff_180 = a_star_180 - a0_180
+    # Reduce to (-pi, pi]
+    while diff_180 > math.pi:
+        diff_180 -= 2.0 * math.pi
+    while diff_180 <= -math.pi:
+        diff_180 += 2.0 * math.pi
+
+    check(
+        "5.16 180-degree frame sign-flip (e_i -> -e_i) preserves rotation-angle DIFFERENCES",
+        abs(diff_180 - delta_alpha) < 1e-12,
+        f"unflipped: alpha(s_*) - alpha(s_0) = {delta_alpha:+.15f}\n"
+        f"180-flip:  alpha(s_*) - alpha(s_0) = {diff_180:+.15f}\n"
+        f"|diff| = {abs(diff_180 - delta_alpha):.3e}",
+    )
+
     # If the framework's physical observable were exp(i delta) (a U(1) phase
     # class) and one used the canonical R/Z -> U(1) map chi(c) = exp(2 pi i c)
     # with c = 2/9 mod 1, the resulting phase angle would be 4 pi / 9 rad,
@@ -738,7 +818,7 @@ def main() -> int:
     canonical_phase_angle = 2.0 * math.pi * (2.0 / 9.0)  # = 4pi/9 rad
     rotation_angle_value = 2.0 / 9.0  # rad
     check(
-        "5.12 Counter-convention: chi(2/9) = exp(2 pi i * 2/9) gives 4 pi / 9 rad, NOT 2/9 rad (convention-distinct from rotation angle)",
+        "5.17 Counter-convention: chi(2/9) = exp(2 pi i * 2/9) gives 4 pi / 9 rad, NOT 2/9 rad (convention-distinct from rotation angle)",
         abs(canonical_phase_angle - 4.0 * math.pi / 9.0) < 1e-13
         and abs(canonical_phase_angle - rotation_angle_value) > 1.0,
         f"canonical R/Z -> U(1) phase: {canonical_phase_angle:.6f} rad = 4 pi / 9 = {4.0*math.pi/9.0:.6f}\n"
