@@ -6,6 +6,18 @@ These manifests organize the whole repo by major research lane.
 
 - [`staggered/README.md`](staggered/README.md)
 
+## Active Working Lanes
+
+- [`ACTIVE_WORKING_LANES_2026-04-26.md`](ACTIVE_WORKING_LANES_2026-04-26.md)
+  — repo-level tracker for active open/support/planning lanes. This is the
+  first stop for "what is currently open and being worked."
+
+## Accepted Planning Packages
+
+- [`outside_judge/README.md`](outside_judge/README.md) — five external-judge
+  flagship lanes opened for planning only: hadron masses, atomic scales,
+  quark masses, neutrino quantitative closure, and Hubble constant closure.
+
 ## Historical And Comparison Lanes
 
 - [`mirror/README.md`](mirror/README.md)
