@@ -126,7 +126,8 @@ Validate with:
   `|V_ts|_0^2 = alpha_s(v)^2/6`, plus the atlas-leading B_s mixing phase
   `phi_s = -alpha_s(v) sqrt(5)/6` and the NLO barred-triangle protected
   invariant `gamma_bar = arctan(sqrt(5))`, the retained NLO beta-ratio
-  corollary `sin(2 beta_bar)/sin(2 beta_0) = 1 - alpha_s(v)/5`, the exact
+  corollary `sin(2 beta_bar)/sin(2 beta_0) = 1 - alpha_s(v)/5`, the
+  moduli-only area guardrail `R=4J^2`, the exact
   barred-triangle Napoleon closure `N_outer^2=W_+/6`,
   `N_inner^2=W_-/6`, and
   `N_outer^2 N_inner^2=P(alpha_s(v))/82944`, the Brocard-polynomial

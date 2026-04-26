@@ -8,6 +8,9 @@ magnitude table into its unitarity-triangle area and Jarlskog magnitude,
 using only the moduli. It does not modify, promote, or close any retained CKM
 atlas, Wolfenstein, alpha_s, Koide, PMNS, dark-sector, or cosmology lane.
 
+**Primary runner:**
+`scripts/frontier_ckm_moduli_only_unitarity_jarlskog_area_certificate.py`
+
 ## 1. Claim
 
 For a 3x3 unitary matrix `V`, the squared moduli
@@ -455,3 +458,20 @@ The present note supplies the independent algebraic certificate underneath
 all such uses of triangle area: in three generations, the common unitarity
 triangle area and `|J|` are already fixed by the squared magnitudes whenever
 the moduli table is genuinely unitary.
+
+## 9. Reproduction
+
+```bash
+python3 scripts/frontier_ckm_moduli_only_unitarity_jarlskog_area_certificate.py
+```
+
+Expected:
+
+```text
+TOTAL: PASS=14, FAIL=0
+```
+
+The runner verifies the exact Fourier-unitary case, the symbolic Heron
+side-square identity, the symbolic third-row modulus recovery in the
+constructive 3x3 converse, a nondegenerate numeric bistochastic lift, and the
+scope/status guardrails above.

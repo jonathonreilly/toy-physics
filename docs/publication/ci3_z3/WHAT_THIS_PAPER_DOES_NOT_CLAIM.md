@@ -101,6 +101,10 @@ The paper does **not** claim:
 - that the CKM Jarlskog exact NLO closed form eliminates higher-order
   Wolfenstein corrections to the physical CKM Jarlskog beyond the retained
   protected-`gamma_bar` NLO surface.
+- that the CKM moduli-only unitarity / Jarlskog area certificate in
+  [CKM_MODULI_ONLY_UNITARITY_JARLSKOG_AREA_CERTIFICATE_THEOREM_NOTE_2026-04-26.md](../../CKM_MODULI_ONLY_UNITARITY_JARLSKOG_AREA_CERTIFICATE_THEOREM_NOTE_2026-04-26.md)
+  supplies a new CKM numerical prediction, modifies the retained atlas, or
+  extends to a 4x4/higher-generation analogue.
 - that the atlas/Wolfenstein area factor
   `J_0 = alpha_s(v)^3 sqrt(5)/72` replaces the parent atlas' exact
   finite-`lambda` standard-matrix `J` readout.
