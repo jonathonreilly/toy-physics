@@ -162,6 +162,7 @@ qualifiers explicitly.
 | cosmology companion portfolio | conditional / bounded | `F04` |
 | Higgs, mass-spectrum, and partial neutrino programs beyond the promoted package | not part of the flagship spine; the curated neutrino boundary/support packet is now explicitly package-tracked in the package, but it remains outside the retained manuscript surface | `F05` |
 | gravity companions beyond the retained core | bounded / later-paper material | `F06` |
+| native taste-qubit teleportation planning lane | parked after the terminal boundary packet: current evidence supports ordinary state teleportation on encoded taste-qubit registers with causal classical-record delivery, but nature-grade closure is on hold pending selector, scaling, and hardware/material obligations; no matter, mass, charge, energy, object, or FTL transfer is claimed | `F09` |
 | historical inventories and stale strategy docs | inventory only, not authority | `F08` |
 
 ## Matrix rule

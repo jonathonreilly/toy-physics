@@ -160,6 +160,14 @@ The package already carries a bounded prediction surface, but these rows are
 not promoted to retained theorem-core status unless the package says so
 explicitly.
 
+The parked native taste-qubit teleportation planning lane does **not** claim
+matter, mass, charge, energy, object, or FTL transport; nor does it claim a
+retained physical implementation of native resource preparation, taste-only
+readout hardware, durable measurement records, Bell-circuit synthesis,
+finite-time dynamics, or physical classical-channel delivery. It is bounded
+ordinary quantum state-teleportation planning on encoded taste qubits, with
+nature-grade closure explicitly held open.
+
 ## 6. Reading rule
 
 If a reviewer wants the positive statement, use:

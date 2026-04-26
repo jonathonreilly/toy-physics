@@ -104,8 +104,9 @@ questions:
   [docs/publication/ci3_z3/REPRODUCE.md](docs/publication/ci3_z3/REPRODUCE.md)
 - quantitative derivations and supporting theorem notes:
   [docs/START_HERE.md](docs/START_HERE.md)
-- accepted frontier-lane planning note:
-  [docs/FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md](docs/FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md)
+- accepted frontier-lane planning note and parked teleportation boundary:
+  [docs/FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md](docs/FRONTIER_EXTENSION_LANE_OPENING_NOTE_2026-04-25.md),
+  [docs/TELEPORTATION_CONCLUSION_BOUNDARY_NOTE.md](docs/TELEPORTATION_CONCLUSION_BOUNDARY_NOTE.md)
 - scientific boundaries and explicit non-claims:
   [docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md](docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md)
   and [docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md](docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md)
@@ -119,8 +120,9 @@ questions:
 - neutrino and dark-matter packages
 - cosmology and companion phenomenology
 - Planck-scale absolute-scale lane and derivation program
-- frontier extension planning: teleportation, chronology protection, and
-  signed gravitational response
+- frontier extension planning: teleportation (parked as conditional
+  state-teleportation planning with nature-grade closure on hold), chronology
+  protection, and signed gravitational response
 
 ## Scientific Scope
 

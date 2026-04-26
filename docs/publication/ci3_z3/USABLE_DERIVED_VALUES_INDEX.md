@@ -26,6 +26,15 @@ Use this file when the question is:
   retained framework surface rather than imported from experiment or chosen as
   a free parameter
 
+## Non-Reusable Planning Boundaries
+
+These rows are indexed here only to prevent downstream misuse as derived
+values.
+
+| Lane | Reusable value | Safe reuse | Authority |
+|---|---|---|---|
+| Native taste-qubit teleportation planning boundary | none; acceptance telemetry only (`8/8` required probes passed in the current suite) | do not reuse as a physical prediction or retained theorem; the lane is parked as conditional ordinary state-teleportation planning with nature-grade closure on hold | [TELEPORTATION_CONCLUSION_BOUNDARY_NOTE.md](../../TELEPORTATION_CONCLUSION_BOUNDARY_NOTE.md), [TELEPORTATION_ACCEPTANCE_SUITE_NOTE.md](../../TELEPORTATION_ACCEPTANCE_SUITE_NOTE.md) |
+
 ## A. Core reusable numbers
 
 | Quantity | Canonical value on `main` | Claim class | Import class | Safe reuse | Authority |

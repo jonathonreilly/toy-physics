@@ -216,6 +216,7 @@ These rows correspond to Section D of
 | cosmology companion portfolio | frozen-out of flagship core | conditional/bounded companion layer | `F04` |
 | Higgs, mass-spectrum, and partial neutrino programs beyond the promoted package | frozen-out of flagship core | the promoted Higgs/vacuum package is live, and a curated neutrino boundary/support packet is now live in the package, but the broader mass-spectrum and neutrino programs remain outside the flagship spine | `F05` |
 | gravity companions beyond the retained core | frozen-out of flagship core | weak-field GR-signature companions and broader non-flagship gravity phenomenology remain outside the flagship core even though the direct-universal discrete GR and canonical textbook continuum-QG route are now promoted | `F06` |
+| native taste-qubit teleportation planning lane | parked outside the flagship core | the terminal boundary packet supports ordinary state teleportation on encoded taste-qubit registers and passes the bounded acceptance suite, but it explicitly holds nature-grade promotion until selector derivation, all-even-side scaling, and hardware/material evidence are supplied; no matter, mass, charge, energy, object, or FTL transfer is claimed | `F09` |
 | historical inventories and stale strategy docs | frozen-out as authority | useful for capture, unsafe as publication authority | `F08` |
 
 ## 6. Historical and stale surfaces not to confuse with the matrix
