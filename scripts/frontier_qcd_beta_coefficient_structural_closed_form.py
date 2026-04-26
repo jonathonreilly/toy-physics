@@ -9,9 +9,10 @@ integers + retained N_gen = N_color cross-sector identity:
         =  N_color * (11 - 2 N_pair) / 3
         =  7                              [SM value, asymptotic / above all SM thresholds]
 
-Sister to the recently-landed QED b_QED = (2/3)(N_color + 1)^2 = 32/3
-structural closed form. Together they provide the COMPLETE QED + QCD
-beta-coefficients in S1-structural form, contributing to:
+Inline QED companion calculation gives
+  b_QED = (2/3)(N_color + 1)^2 = 32/3.
+Together they provide the COMPLETE asymptotic QED + QCD beta-coefficients
+in S1-structural form, contributing to:
   - Lane 1 (Hadron Mass Program) via QCD running formula
   - Lane 2 (Atomic-Scale Program) via QED running formula
 
@@ -116,15 +117,21 @@ def audit_authority_status_lines() -> None:
         ("docs/CKM_KOIDE_CROSS_SECTOR_Z3_CLOSURE_THEOREM_NOTE_2026-04-25.md",
          "P2: N_gen = N_color = 3 retained cross-sector identity",
          ("retained",)),
+        ("docs/FRACTIONAL_CHARGE_DENOMINATOR_FROM_N_C_THEOREM_NOTE_2026-04-24.md",
+         "P5: retained Q_u, Q_d structural forms for inline b_QED companion",
+         ("retained",)),
+        ("docs/EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md",
+         "T7 QED anchor: 1/e^2 = 1/g_2^2 + 1/g_Y^2",
+         ("retained", "standalone positive")),
+        ("docs/YT_EW_COLOR_PROJECTION_THEOREM.md",
+         "T7 QED anchor: retained g_2^2, g_Y^2 lattice inputs",
+         ("retained", "derived")),
         ("docs/MINIMAL_AXIOMS_2026-04-11.md",
          "P6: g_3^2 = 1 framework primitive (lattice anchor)",
          ("framework",)),
         ("docs/PHYSICAL_LATTICE_NECESSITY_NOTE.md",
          "P6: g_3^2 = 1 -> beta = 6 lattice anchor support",
          ("retained",)),
-        ("docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
-         "P6: g_3^2 = 1 derived load-bearing Path-2 theorem (Ward-pinning)",
-         ("derived",)),
         ("docs/ONE_GENERATION_MATTER_CLOSURE_NOTE.md",
          "S1 cross-check: u_R, d_R : (1,3) on N_color",
          ("retained",)),
@@ -152,6 +159,9 @@ def audit_authority_status_lines() -> None:
          (".",)),
         ("docs/YT_EW_COUPLING_BRIDGE_NOTE.md",
          "Comparator: b_3 = -(11/3 C_A - 4/3 T_F n_f) standard form",
+         (".",)),
+        ("docs/G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md",
+         "Comparator: alternate g_bare=1 route-history theorem; not load-bearing here",
          (".",)),
     )
     for rel_path, role, kws in comparator_authorities:
@@ -300,27 +310,45 @@ def audit_t3_per_sector_decomposition(N_color: int, N_quark: int) -> None:
     check("T3 total: 11 - 4 = 7", total == Fraction(7, 1))
 
 
-def audit_t4_cross_coupling_ratio(b_3: Fraction, N_color: int,
+def audit_t4_cross_coupling_ratio(b_3: Fraction, N_color: int, N_gen: int,
                                   N_quark: int) -> Fraction:
     """T4: b_3 / b_QED = (11 N_color - 2 N_quark) / (2 (N_color + 1)^2)."""
-    banner("T4: cross-coupling ratio b_3 / b_QED via S1 structural form")
+    banner("T4: inline b_QED companion and cross-coupling ratio")
 
-    # Sister b_QED from recently-landed theorem
-    b_QED = Fraction(2, 3) * (N_color + 1) ** 2  # = (2/3)(N_color + 1)^2 = 32/3 at SM
+    # Inline b_QED derivation from retained quark charges:
+    # Q_u=(N_color+1)/(2N_color), Q_d=(1-N_color)/(2N_color),
+    # Tr[Q^2]_SM = N_gen * (1 + N_color*(Q_u^2+Q_d^2)).
+    Q_u = Fraction(N_color + 1, 2 * N_color)
+    Q_d = Fraction(1 - N_color, 2 * N_color)
+    quark_charge_sum = Q_u * Q_u + Q_d * Q_d
+    per_generation_sum = 1 + N_color * quark_charge_sum
+    tr_q_sq = N_gen * per_generation_sum
+    b_QED = Fraction(4, 3) * tr_q_sq
+    b_QED_struct = Fraction(2, 3) * (N_color + 1) ** 2
 
     # Cross-coupling ratio
     ratio = b_3 / b_QED
     ratio_struct = Fraction(11 * N_color - 2 * N_quark, 2 * (N_color + 1) ** 2)
 
-    print(f"  Sister theorem: b_QED = (2/3)(N_color + 1)^2 = (2/3)*{(N_color+1)**2} = {b_QED}")
+    print(f"  Inline QED companion from retained charges:")
+    print(f"    Q_u = (N_color + 1)/(2 N_color) = {Q_u}")
+    print(f"    Q_d = (1 - N_color)/(2 N_color) = {Q_d}")
+    print(f"    Q_u^2 + Q_d^2 = {quark_charge_sum}")
+    print(f"    per-generation Sum N_c Q^2 = 1 + N_color*(Q_u^2+Q_d^2) = {per_generation_sum}")
+    print(f"    Tr[Q^2]_SM = N_gen * per-gen = {N_gen} * {per_generation_sum} = {tr_q_sq}")
+    print(f"    b_QED = (4/3) Tr[Q^2]_SM = {b_QED}")
+    print(f"    structural form: (2/3)(N_color + 1)^2 = {b_QED_struct}")
+    print()
     print(f"  Cross-coupling ratio: b_3 / b_QED = {b_3} / {b_QED} = {ratio}")
     print(f"  Structural form: (11 N_color - 2 N_quark) / (2 (N_color + 1)^2)")
     print(f"                   = ({11*N_color} - {2*N_quark}) / (2 * {(N_color+1)**2})")
     print(f"                   = {11*N_color - 2*N_quark} / {2*(N_color+1)**2}")
     print(f"                   = {ratio_struct}")
 
-    check("T4: b_QED = 32/3 from sister theorem (recently landed)",
+    check("T4: inline b_QED = 32/3 from retained charges/counts",
           b_QED == Fraction(32, 3))
+    check("T4: inline b_QED matches structural form (2/3)(N_color+1)^2",
+          b_QED == b_QED_struct)
     check("T4: b_3 / b_QED = 21/32 (NEW S1-structural cross-coupling ratio)",
           ratio == Fraction(21, 32))
     check("T4: b_3 / b_QED structural form = (11 N_color - 2 N_quark)/(2(N_color+1)^2)",
@@ -425,9 +453,9 @@ def audit_no_closure_overclaim() -> None:
     print("    lanes) is needed for the full physical alpha_s(Q) curve below")
     print("    heavy-quark thresholds; this note does NOT close threshold")
     print("    matching or predict m_p, m_pi, hadron spectroscopy.")
-    print("  - Sister theorem b_QED = (2/3)(N_color + 1)^2 = 32/3 (recently")
-    print("    landed) provides the PAIRED QED beta-coefficient; together they")
-    print("    give the COMPLETE asymptotic QED + QCD beta-coefficient package")
+    print("  - The paired QED beta-coefficient b_QED = (2/3)(N_color + 1)^2")
+    print("    = 32/3 is derived inline from retained charges/counts; together")
+    print("    they give the COMPLETE asymptotic QED + QCD beta-coefficient package")
     print("    in S1-structural form.")
     print("  - Comparators (PDG, YT_P1_DELTA_R, etc.) numerical agreements with")
     print("    b_3 = +/-7 are reported as comparators, NOT load-bearing.")
@@ -481,7 +509,7 @@ def main() -> int:
     b_3 = audit_t1_b3_structural_closed_form(N_color, N_quark)
     audit_t2_factored_form(b_3, N_pair, N_color)
     audit_t3_per_sector_decomposition(N_color, N_quark)
-    ratio = audit_t4_cross_coupling_ratio(b_3, N_color, N_quark)
+    ratio = audit_t4_cross_coupling_ratio(b_3, N_color, N_gen, N_quark)
     audit_t5_t6_running_formulas(b_3, N_color, N_quark, inv_alpha_s_lattice_over_pi)
     audit_t7_joint_qed_qcd_running(N_color, N_quark, b_3)
     audit_comparator_b3_eq_minus_7()

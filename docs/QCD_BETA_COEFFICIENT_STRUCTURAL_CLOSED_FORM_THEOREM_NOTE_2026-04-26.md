@@ -14,13 +14,13 @@ terms of S1 structural integers:
             =  7                              [SM value, in the convention b > 0 ↔ asymptotic freedom]
 ```
 
-This complements the (separately-submitted) sister
-`QED_BETA_COEFFICIENT_STRUCTURAL_CLOSED_FORM_THEOREM` derivation
-(`b_QED = (2/3)(N_color + 1)² = 32/3`, derivable inline from
+This note also derives the QED companion coefficient inline:
+`b_QED = (2/3)(N_color + 1)² = 32/3`, from
 `b_QED = (4/3) Σ N_c Q²` with retained quark electric charges from
-`FRACTIONAL_CHARGE_DENOMINATOR_FROM_N_C_THEOREM`). Together the two
-theorems provide the COMPLETE QED + QCD β-coefficients in
-S1-structural form, contributing to **Lane 1 (Hadron Mass Program)**
+`FRACTIONAL_CHARGE_DENOMINATOR_FROM_N_C_THEOREM` and retained
+`N_gen = N_color`. Together the two expressions provide the COMPLETE
+asymptotic QED + QCD β-coefficients in S1-structural form, contributing to
+**Lane 1 (Hadron Mass Program)**
 by giving the QCD running formula a structural form, and to **Lane 2
 (Atomic-Scale Program)** through the paired QED β-coefficient.
 
@@ -46,8 +46,8 @@ non-perturbative QCD computation, an open lane).
          - Quark contribution:                       −(4/3) × T(F) × n_F = −(2/3) × N_quark = −4
          Sum:                                         11 − 4 = 7
 
-(C3)  Sister coupling `b_QED = (2/3)(N_color + 1)²`
-      (recently landed in QED_BETA_COEFFICIENT_STRUCTURAL_CLOSED_FORM_THEOREM):
+(C3)  Inline QED companion `b_QED = (2/3)(N_color + 1)²`
+      (derived here from retained quark charges/counts):
          b_QED  =  (2/3) × (N_color + 1)²  =  32/3                 [SM value]
 
 (C4)  Cross-coupling ratio `b_3 / b_QED` in S1-structural form:
@@ -60,8 +60,8 @@ non-perturbative QCD computation, an open lane).
                        =  1 / α_s(Q_0)  +  ((11 N_color − 2 N_quark) / (6π)) × ln(Q / Q_0)
 
 (C6)  Lattice-scale anchor `1/α_s|_lattice = 4π`:
-         Derivable from retained `g_3² = 1` (PHYSICAL_LATTICE_NECESSITY,
-         G_BARE_TWO_WARD_SAME_1PI_PINNING, MINIMAL_AXIOMS), giving
+         Derivable from retained `g_3² = 1` (MINIMAL_AXIOMS and
+         PHYSICAL_LATTICE_NECESSITY), giving
          `α_s(bare) = g_3²/(4π) = 1/(4π)` and hence `1/α_s|_lattice = 4π`.
 
 (C7)  Combined asymptotic α_s closed form running from the lattice anchor:
@@ -86,9 +86,10 @@ This note explicitly:
   still requires open-lane lepton masses.
 - **Does claim**: a NEW retained structural closed form for `b_3`
   expressible as `(11 N_color − 2 N_quark)/3` via S1 + retained
-  `N_gen = N_color`; sister-paired with the recently-landed
+  `N_gen = N_color`; paired with the inline-derived
   `b_QED = (2/3)(N_color + 1)²` to give the COMPLETE asymptotic
-  QED + QCD β-coefficients in S1-structural form.
+  QED + QCD β-coefficients in S1-structural form without depending on
+  an unmerged sibling branch.
 
 The lessons from `feedback_retained_tier_purity_and_package_wiring.md`
 and `feedback_consistency_vs_derivation_below_w2.md`: this is a
@@ -120,7 +121,7 @@ On retained-tier authorities of current `main`:
               =  N_quark               [via P1: N_quark = N_pair × N_color]
         For SM (N_pair = 2, N_color = 3): n_F = N_quark = 6.
 
-(P5)  Sister QED β-coefficient (derivable inline on retained main):
+(P5)  QED companion β-coefficient (derivable inline on retained main):
         b_QED  =  (4/3) × Σ_f N_c × Q_f²
               =  (2/3) × (N_color + 1)²  =  32/3   [SM]
         Derivable on retained main from `b_QED = (4/3) × Tr[Q²]_SM` plus
@@ -131,9 +132,15 @@ On retained-tier authorities of current `main`:
 (P6)  Lattice-scale α_s anchor (retained):
         g_3²|_lattice = 1 (canonical CMT bare strong coupling)
         Hence 1/α_s|_lattice = 4π / g_3² = 4π.
-        Source: PHYSICAL_LATTICE_NECESSITY_NOTE.md;
-        G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md;
-        MINIMAL_AXIOMS_2026-04-11.md.
+        Source: MINIMAL_AXIOMS_2026-04-11.md and
+        PHYSICAL_LATTICE_NECESSITY_NOTE.md. The two-Ward pinning packet is
+        route-history/comparator context only for this QCD-running theorem.
+
+(P7)  Lattice-scale α_EM anchor (retained, for the joint QED companion):
+        retained EW Higgs diagonalization gives 1/e² = 1/g_2² + 1/g_Y²;
+        retained YT_EW gives g_2² = 1/(d+1), g_Y² = 1/(d+2);
+        at d=3 this gives 1/e² = 9 = N_color² and therefore
+        1/α_EM|_lattice = 4π N_color².
 ```
 
 ### Headline conclusions
@@ -159,7 +166,7 @@ On retained-tier authorities of current `main`:
                                      [from T(F_quark) = 1/2 and n_F = N_quark]
         Total:                       11 − 4 = 7.
 
-(T4)  Cross-coupling ratio with sister `b_QED` (NEW structural form):
+(T4)  Cross-coupling ratio with inline companion `b_QED` (NEW structural form):
         b_3 / b_QED  =  ((11 N_color − 2 N_quark) / 3) / ((2/3)(N_color + 1)²)
                       =  (11 N_color − 2 N_quark) / (2 (N_color + 1)²)
 
@@ -220,11 +227,10 @@ closure, not a closure of the lane by itself.
 
 ## Connection to the Open Atomic-Scale Lane (Lane 2)
 
-The sister `b_QED = (2/3)(N_color + 1)² = 32/3` is derivable inline
+The companion `b_QED = (2/3)(N_color + 1)² = 32/3` is derivable inline
 from `b_QED = (4/3) Σ N_c Q²` plus retained quark charges from
 `FRACTIONAL_CHARGE_DENOMINATOR_FROM_N_C_THEOREM` (the runner derives
-this in T4). It is also the subject of a separately-submitted sister
-theorem branch.
+this in T4). No sibling theorem branch is load-bearing here.
 
 Together, the QED + QCD β-coefficients now have **paired structural
 closed forms via S1**:
@@ -245,8 +251,9 @@ This is the COMPLETE asymptotic / above-all-thresholds QED + QCD
 | S1 Identification Source Theorem | [`CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md`](CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md) | **retained** | P1 |
 | `N_gen = N_color = 3` (cross-sector numeric identity) | [`CKM_KOIDE_CROSS_SECTOR_Z3_CLOSURE_THEOREM_NOTE_2026-04-25.md`](CKM_KOIDE_CROSS_SECTOR_Z3_CLOSURE_THEOREM_NOTE_2026-04-25.md) | **retained** cross-sector numeric identity | P2 |
 | Standard QCD 1-loop β-function `b = (11/3) C_2(G) − (4/3) T(F) n_F` | textbook QFT / Peskin-Schroeder | external (math) | P3 (β-function definition) |
-| `g_3² = 1` (canonical CMT bare strong coupling) | [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md), [`PHYSICAL_LATTICE_NECESSITY_NOTE.md`](PHYSICAL_LATTICE_NECESSITY_NOTE.md), [`G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md`](G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md) | **retained** framework primitive + DERIVED corollary | P6 (lattice α_s anchor) |
-| Sister `b_QED = (2/3)(N_color + 1)² = 32/3` (derivable inline from retained `b_QED = (4/3) Σ N_c Q²` + retained `Q_u, Q_d` from FRACTIONAL_CHARGE_DENOMINATOR + retained `N_gen = N_color`) | [`FRACTIONAL_CHARGE_DENOMINATOR_FROM_N_C_THEOREM_NOTE_2026-04-24.md`](FRACTIONAL_CHARGE_DENOMINATOR_FROM_N_C_THEOREM_NOTE_2026-04-24.md), [`CKM_KOIDE_CROSS_SECTOR_Z3_CLOSURE_THEOREM_NOTE_2026-04-25.md`](CKM_KOIDE_CROSS_SECTOR_Z3_CLOSURE_THEOREM_NOTE_2026-04-25.md) | **retained** retained quark-charge formula + retained N_gen identity | P5 (cross-coupling ratio T4, joint package T7) |
+| `g_3² = 1` (canonical CMT bare strong coupling) | [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md), [`PHYSICAL_LATTICE_NECESSITY_NOTE.md`](PHYSICAL_LATTICE_NECESSITY_NOTE.md) | **retained** framework primitive + retained physical-lattice surface | P6 (lattice α_s anchor) |
+| Inline `b_QED = (2/3)(N_color + 1)² = 32/3` (from retained `b_QED = (4/3) Σ N_c Q²` + retained `Q_u, Q_d` from FRACTIONAL_CHARGE_DENOMINATOR + retained `N_gen = N_color`) | [`FRACTIONAL_CHARGE_DENOMINATOR_FROM_N_C_THEOREM_NOTE_2026-04-24.md`](FRACTIONAL_CHARGE_DENOMINATOR_FROM_N_C_THEOREM_NOTE_2026-04-24.md), [`CKM_KOIDE_CROSS_SECTOR_Z3_CLOSURE_THEOREM_NOTE_2026-04-25.md`](CKM_KOIDE_CROSS_SECTOR_Z3_CLOSURE_THEOREM_NOTE_2026-04-25.md) | **retained** retained quark-charge formula + retained N_gen identity | P5 (cross-coupling ratio T4, joint package T7) |
+| `1/α_EM|_lattice = 4π N_color²` (for the joint QED companion) | [`EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md`](EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md), [`YT_EW_COLOR_PROJECTION_THEOREM.md`](YT_EW_COLOR_PROJECTION_THEOREM.md), [`CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md`](CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md) | **retained** EW diagonalization + retained EW normalization + retained S1 | P7 (joint QED running anchor) |
 
 The structural closed form (T1) uses ONLY retained-tier authorities.
 P3 is a standard textbook QFT identity (definition of the SU(N) 1-loop
@@ -269,9 +276,9 @@ appears on main in several places as a derived SM result:
 The NUMERIC value `7` is therefore well-known on main. The NEW
 content of the present note is the **explicit S1 structural decomposition
 `b_3 = (11 N_color − 2 N_quark)/3` via the recently-landed S1 source
-theorem + retained `N_gen = N_color`**, paired with the sister
+theorem + retained `N_gen = N_color`**, paired with the inline-derived
 `b_QED = (2/3)(N_color + 1)²` to give the COMPLETE asymptotic QED + QCD
-β-coefficient package.
+β-coefficient package without importing a sibling branch.
 
 These prior usages are referenced as comparators only, NOT as
 authorities for the structural closed form.
@@ -339,9 +346,16 @@ The `11` in the gauge-boson contribution is `(11/3) × N_color` = 11 at
 N_color = 3. The `−4` in the quark contribution is `−(2/3) × N_quark = −4`
 at N_quark = 6. The sum is the SM `b_3 = 7`.
 
-### T4: cross-coupling ratio with sister b_QED
+### T4: cross-coupling ratio with inline b_QED
 
-From the sister theorem (P5, recently landed): `b_QED = (2/3)(N_color + 1)²`.
+From P5, derived inline:
+
+```text
+Q_u = (N_color + 1)/(2 N_color),      Q_d = (1 - N_color)/(2 N_color),
+Tr[Q²]_SM = N_gen [1 + N_color(Q_u² + Q_d²)]
+          = (N_color + 1)²/2,
+b_QED = (4/3) Tr[Q²]_SM = (2/3)(N_color + 1)².
+```
 
 ```text
 b_3 / b_QED  =  ((11 N_color − 2 N_quark) / 3) / ((2/3)(N_color + 1)²)
@@ -395,7 +409,7 @@ the full physical α_s(Q) curve below the heavy-quark thresholds.
 
 ### T7: paired QED + QCD asymptotic running closed forms
 
-Combined with the sister `b_QED` and the recently-retained
+Combined with the inline-derived `b_QED` and the retained EW/YT/S1
 `1/α_EM|_lattice = 4π × N_color² = 36π` lattice anchor:
 
 ```text
@@ -418,7 +432,7 @@ All identities verified to exact `Fraction` arithmetic in the runner.
 | T3 quark sector: −(2/3) × N_quark | per-sector | −4 | ✓ |
 | T3 total: 11 − 4 = 7 | sum of T3 | 7 | ✓ |
 | T4 ratio: b_3 / b_QED = (11 N_color − 2 N_quark) / (2(N_color+1)²) | T1 / P5 | 21/32 | ✓ |
-| Sister b_QED reference: (2/3)(N_color + 1)² = 32/3 | from sister theorem | 32/3 | ✓ |
+| Inline b_QED companion: (2/3)(N_color + 1)² = 32/3 | retained charges/counts | 32/3 | ✓ |
 | Lattice anchor: 1/α_s|_lattice = 4π | g_3² = 1 retained | 4π | ✓ |
 
 Plus structural cross-checks:
@@ -463,7 +477,7 @@ structural closed form via S1, not a numerical coincidence.
    tying QED and QCD β-coefficients via S1.
 
 3. **NEW JOINT QED + QCD asymptotic running closed form**: combined
-   with the sister `b_QED` and the lattice-scale anchors,
+   with the inline-derived `b_QED` and the lattice-scale anchors,
    ```text
    1/α_s(Q)   =  4π  +  ((11 N_color − 2 N_quark)/(6π)) × ln(Q/Q_lattice)
    1/α_EM(Q)  =  4π × N_color²  −  ((N_color + 1)²/(3π)) × ln(Q/Q_lattice)
@@ -555,20 +569,23 @@ The runner:
 - [`CKM_KOIDE_CROSS_SECTOR_Z3_CLOSURE_THEOREM_NOTE_2026-04-25.md`](CKM_KOIDE_CROSS_SECTOR_Z3_CLOSURE_THEOREM_NOTE_2026-04-25.md)
   — retained `N_gen = N_color = 3` cross-sector numeric identity.
 - [`MINIMAL_AXIOMS_2026-04-11.md`](MINIMAL_AXIOMS_2026-04-11.md),
-  [`PHYSICAL_LATTICE_NECESSITY_NOTE.md`](PHYSICAL_LATTICE_NECESSITY_NOTE.md),
-  [`G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md`](G_BARE_TWO_WARD_SAME_1PI_PINNING_THEOREM_NOTE_2026-04-19.md)
+  [`PHYSICAL_LATTICE_NECESSITY_NOTE.md`](PHYSICAL_LATTICE_NECESSITY_NOTE.md)
   — retained `g_3² = 1` lattice anchor; gives `1/α_s|_lattice = 4π`.
 - [`ONE_GENERATION_MATTER_CLOSURE_NOTE.md`](ONE_GENERATION_MATTER_CLOSURE_NOTE.md)
   — retained `u_R, d_R : (1,3)` cross-check on N_color via S1.
 
-**Sister-coupling derivation (inline, retained):**
+**Companion-coupling derivation (inline, retained):**
 
-- The sister `b_QED = (2/3)(N_color + 1)² = 32/3` is derivable inline
+- The companion `b_QED = (2/3)(N_color + 1)² = 32/3` is derivable inline
   from `b_QED = (4/3) Σ N_c Q²` (textbook QED β-function definition)
   plus retained quark electric charges from
   [`FRACTIONAL_CHARGE_DENOMINATOR_FROM_N_C_THEOREM_NOTE_2026-04-24.md`](FRACTIONAL_CHARGE_DENOMINATOR_FROM_N_C_THEOREM_NOTE_2026-04-24.md)
-  and retained `N_gen = N_color`. The runner derives this in T4. It is
-  also the subject of a separately-submitted sister theorem branch.
+  and retained `N_gen = N_color`. The runner derives this in T4.
+- The QED lattice anchor used in T7 is derived from retained
+  [`EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md`](EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md)
+  plus retained
+  [`YT_EW_COLOR_PROJECTION_THEOREM.md`](YT_EW_COLOR_PROJECTION_THEOREM.md)
+  and S1.
 
 **Open lane connection:**
 
