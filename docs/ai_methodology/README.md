@@ -55,8 +55,8 @@ Use it to answer:
 
 12. [`LLM_SKILL_PACK_2026-04-25.md`](./LLM_SKILL_PACK_2026-04-25.md)
     Reusable LLM skill pack derived from the synthesis and case studies:
-    lane building, claim review, backpressure integration, and methodology
-    synthesis.
+    lane building, claim review, review loops, backpressure integration, and
+    methodology synthesis.
 
 ## Core Workflow Surfaces Elsewhere In The Repo
 
@@ -76,6 +76,7 @@ Use it to answer:
 - reusable methodology skills:
   [`skills/ai-physics-lane-builder/SKILL.md`](./skills/ai-physics-lane-builder/SKILL.md),
   [`skills/physics-claim-reviewer/SKILL.md`](./skills/physics-claim-reviewer/SKILL.md),
+  [`skills/review-loop/SKILL.md`](./skills/review-loop/SKILL.md),
   [`skills/reviewer-backpressure-integrator/SKILL.md`](./skills/reviewer-backpressure-integrator/SKILL.md),
   [`skills/methodology-paper-synthesizer/SKILL.md`](./skills/methodology-paper-synthesizer/SKILL.md)
 
