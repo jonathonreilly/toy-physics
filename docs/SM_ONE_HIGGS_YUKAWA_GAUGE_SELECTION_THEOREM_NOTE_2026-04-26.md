@@ -9,6 +9,8 @@ hypercharge and EW notes. It does not derive any Yukawa eigenvalue, mixing
 angle, CKM/PMNS entry, neutrino Majorana scale, Higgs mass, top-Yukawa
 normalization, time-travel, teleportation, or antigravity claim.
 
+**Primary runner:** `scripts/frontier_sm_one_higgs_yukawa_gauge_selection.py`
+
 ## 1. Claim
 
 Use the doubled-hypercharge convention of the retained anomaly notes:
@@ -16,6 +18,16 @@ Use the doubled-hypercharge convention of the retained anomaly notes:
 ```text
 Q_em = T_3 + Y/2.
 ```
+
+The retained EW Higgs gauge-mass note uses the SM-normalized convention
+`Q_em = T_3 + Y_EW`. The dictionary is
+
+```text
+Y = 2 Y_EW.
+```
+
+Thus its `Y_EW(H)=1/2` one-doublet Higgs is the same field as the
+`Y(H)=+1` Higgs used here.
 
 One generation has
 
@@ -342,7 +354,8 @@ outside this renormalizable one-Higgs Dirac classification.
 - `STANDARD_MODEL_HYPERCHARGE_UNIQUENESS_THEOREM_NOTE_2026-04-24.md` supplies
   the hypercharge table used here.
 - `EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md` supplies
-  the one-Higgs-doublet EW bookkeeping and neutral vacuum convention.
+  the one-Higgs-doublet EW bookkeeping and neutral vacuum convention, using
+  the equivalent SM-normalized hypercharge convention `Y_EW=Y/2`.
 - `YUKAWA_COLOR_PROJECTION_THEOREM.md` concerns a downstream normalization
   factor for the top-Yukawa lane; this note only proves the gauge-allowed
   operator skeleton.
