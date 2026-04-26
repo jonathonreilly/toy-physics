@@ -1,0 +1,225 @@
+========================================================================================
+Barred unitarity-triangle Weitzenbock + Brocard polynomial unification audit
+See docs/CKM_BARRED_WEITZENBOCK_BROCARD_POLYNOMIAL_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Ground-up status verification of each cited authority
+----------------------------------------------------------------------------------------
+  RETAINED-TIER (load-bearing for closure):
+
+    [CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md]
+      Status (extracted): 'retained NLO CKM-structure corollary on the promoted atlas/axiom'
+      Tier classification: retained
+  [PASS] Retained-tier verified: CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md
+
+    [CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md]
+      Status (extracted): 'retained structural-identity subtheorem of the promoted CKM'
+      Tier classification: retained
+  [PASS] Retained-tier verified: CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md
+
+    [CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md]
+      Status (extracted): 'retained standalone structural-identity theorem on `main`.'
+      Tier classification: retained
+  [PASS] Retained-tier verified: CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md
+
+    [CKM_JARLSKOG_EXACT_NLO_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md]
+      Status (extracted): 'retained CKM-structure corollary on the promoted CKM atlas'
+      Tier classification: retained
+  [PASS] Retained-tier verified: CKM_JARLSKOG_EXACT_NLO_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md
+
+
+----------------------------------------------------------------------------------------
+Extracting retained inputs from authority text
+----------------------------------------------------------------------------------------
+  rho_bar = (4 - alpha_s)/24:        FOUND
+  eta_bar = sqrt(5)(4 - alpha_s)/24: FOUND
+  N_pair extracted:                  n_pair  = 2
+  N_color extracted:                 n_color = 3
+  N_quark = N_pair * N_color:        FOUND
+  Jarlskog retained closed form:     FOUND
+  [PASS] NLO retains rho_bar = (4 - alpha_s)/24
+  [PASS] NLO retains eta_bar = sqrt(5)(4 - alpha_s)/24
+  [PASS] MAGNITUDES retains N_pair = 2
+  [PASS] MAGNITUDES retains N_color = 3
+  [PASS] MAGNITUDES retains N_quark = N_pair * N_color (=6)
+  [PASS] Jarlskog retained authority cited
+
+----------------------------------------------------------------------------------------
+W1: Weitzenbock inequality on retained surface
+----------------------------------------------------------------------------------------
+  Weitzenbock: a^2 + b^2 + c^2 >= 4 sqrt(3) Area_triangle.
+  perim_sq = a^2 + b^2 + c^2 = alpha_s**2/48 - alpha_s/12 + 2
+  4 sqrt(3) Area = sqrt(15)*(4 - alpha_s)/12
+                  = sqrt(15)(4 - alpha_s)/12
+
+  alpha_s   perim_sq    4 sqrt(3) Area  excess
+   0.000   2.000000   1.290994      0.709006   OK
+   0.118   1.990457   1.252910      0.737547   OK
+   0.300   1.976875   1.194170      0.782705   OK
+   1.000   1.937500   0.968246      0.969254   OK
+   2.000   1.916667   0.645497      1.271169   OK
+   3.000   1.937500   0.322749      1.614751   OK
+  [PASS] W1: Weitzenbock inequality strict on physical alpha_s range
+
+----------------------------------------------------------------------------------------
+W2 / W3: Weitzenbock sum and gap closed forms
+----------------------------------------------------------------------------------------
+  W_+ = perim_sq + 4 sqrt(3) Area
+      = alpha_s**2/48 - alpha_s/12 + sqrt(15)*(4 - alpha_s)/12 + 2
+  Expected: ((alpha_s^2 - 4 alpha_s + 96) + 4 sqrt(15)(4 - alpha_s))/48 = alpha_s**2/48 - alpha_s/12 + sqrt(15)*(4 - alpha_s)/12 + 2
+  Difference: 0
+  [PASS] W2: W_+ = ((alpha_s^2 - 4 alpha_s + 96) + 4 sqrt(15)(4 - alpha_s))/48
+
+  W_- = perim_sq - 4 sqrt(3) Area
+      = alpha_s**2/48 - alpha_s/12 + sqrt(15)*(alpha_s - 4)/12 + 2
+  Expected: ((alpha_s^2 - 4 alpha_s + 96) - 4 sqrt(15)(4 - alpha_s))/48 = alpha_s**2/48 - alpha_s/12 + sqrt(15)*(alpha_s - 4)/12 + 2
+  Difference: 0
+  [PASS] W3: W_- = ((alpha_s^2 - 4 alpha_s + 96) - 4 sqrt(15)(4 - alpha_s))/48
+
+----------------------------------------------------------------------------------------
+W4: Product factorization -- W_+ * W_- = P(alpha_s)/2304
+----------------------------------------------------------------------------------------
+  W_+ * W_- (computed) = alpha_s**4/2304 - alpha_s**3/288 - alpha_s**2/72 + alpha_s/2 + 7/3
+  Expected: P(alpha_s)/2304 = alpha_s**4/2304 - alpha_s**3/288 - alpha_s**2/72 + alpha_s/2 + 7/3
+  Difference: 0
+  [PASS] W4: W_+ * W_- = P(alpha_s)/2304
+
+  Scaling factor: 2304 = N_pair^8 N_color^2 = 256 * 9 = 2304
+  [PASS] W4 structural: 2304 = N_pair^8 N_color^2
+
+----------------------------------------------------------------------------------------
+W5: LO recovery -- W_+|LO * W_-|LO = (N_quark + 1)/N_color
+----------------------------------------------------------------------------------------
+  W_+ | LO = sqrt(15)/3 + 2
+  Expected: (N_quark + sqrt(N_color (N_quark - 1)))/N_color = (6 + sqrt(15))/3 = sqrt(15)/3 + 2
+  Difference: 0
+  [PASS] W5: W_+ | LO = (N_quark + sqrt(N_color (N_quark - 1)))/N_color = (6 + sqrt(15))/3
+
+  W_- | LO = 2 - sqrt(15)/3
+  Expected: (N_quark - sqrt(N_color (N_quark - 1)))/N_color = (6 - sqrt(15))/3 = 2 - sqrt(15)/3
+  Difference: 0
+  [PASS] W5: W_- | LO = (N_quark - sqrt(N_color (N_quark - 1)))/N_color = (6 - sqrt(15))/3
+
+  W_+ | LO * W_- | LO = 7/3
+  Expected: (N_quark + 1)/N_color = 7/3 = 7/3
+  Difference: 0
+  [PASS] W5: W_+ | LO * W_- | LO = (N_quark + 1)/N_color = 7/3
+
+----------------------------------------------------------------------------------------
+W6: Squared form -- (perim_sq)^2 - 48 Area^2 = P(alpha_s)/2304
+----------------------------------------------------------------------------------------
+  (perim_sq)^2 - 48 Area^2 (computed) = -5*(alpha_s - 4)**2/48 + (alpha_s**2 - 4*alpha_s + 96)**2/2304
+  Expected: P(alpha_s)/2304 = alpha_s**4/2304 - alpha_s**3/288 - alpha_s**2/72 + alpha_s/2 + 7/3
+  Difference: 0
+  [PASS] W6: (perim_sq)^2 - 48 Area^2 = P(alpha_s)/2304
+
+  Structural: 48 = N_pair^4 N_color, 2304 = (N_pair^4 N_color)^2
+  [PASS] W6 structural: 48 = N_pair^4 N_color, 2304 = N_pair^8 N_color^2
+
+----------------------------------------------------------------------------------------
+W7: Five-form unification of P(alpha_s)
+----------------------------------------------------------------------------------------
+  [PASS] W7(a): Raw P(alpha_s) = (alpha_s^2 - 4 alpha_s + 96)^2 - 240 (4 - alpha_s)^2
+  (b) Brocard form: P = 80 (4 - alpha_s)^2 (cot^2(omega_bar) - 3)
+      = -240*(alpha_s - 4)**2 + (alpha_s**2 - 4*alpha_s + 96)**2
+  [PASS] W7(b): Brocard form: P(alpha_s) = 80 (4 - alpha_s)^2 (cot^2(omega_bar) - 3)
+
+  (c) Weitzenbock form: P = 2304 ((perim_sq)^2 - 48 Area^2)  [NEW]
+      = -240*(alpha_s - 4)**2 + (alpha_s**2 - 4*alpha_s + 96)**2
+  [PASS] W7(c): NEW Weitzenbock form: P(alpha_s) = 2304 * ((perim_sq)^2 - 48 Area^2)
+
+  (d) Steiner form: P = 746496 (S'^2 - 4 P') = N_pair^10 N_color^6 * discriminant
+  [PASS] W7(d): Steiner form: P(alpha_s) = 746496 * (S'^2 - 4 P')
+
+  (e) Marden form: P = 9216 |V_3^2 - V_3 + 1|^2 = (N_pair^4 N_quark)^2 * |...|^2
+  [PASS] W7(e): Marden form: P(alpha_s) = 9216 * |V_3^2 - V_3 + 1|^2
+
+  All FIVE forms equal P(alpha_s) on the retained surface.
+  Each encodes a different classical equilateral condition:
+    (a) Raw polynomial in alpha_s.
+    (b) Brocard inequality cot^2(omega_bar) >= 3.
+    (c) Weitzenbock inequality (perim_sq)^2 >= 48 Area^2.   [NEW]
+    (d) Steiner inellipse circular limit (semi_a = semi_b).
+    (e) Marden foci coincidence (Steiner inellipse foci collapse).
+
+----------------------------------------------------------------------------------------
+W8: Algebraic equivalence -- Brocard inequality is Weitzenbock with sqrt(3)
+----------------------------------------------------------------------------------------
+  cot(omega_bar)            = perim_sq / (4 Area)            = sqrt(5)*(-alpha_s**2 + 4*alpha_s - 96)/(20*(alpha_s - 4))
+  Weitzenbock ratio         = perim_sq / (4 sqrt(3) Area)    = sqrt(15)*(-alpha_s**2 + 4*alpha_s - 96)/(60*(alpha_s - 4))
+  cot(omega_bar) / sqrt(3)  = sqrt(15)*(-alpha_s**2 + 4*alpha_s - 96)/(60*(alpha_s - 4))
+  Difference: 0
+  [PASS] W8: Weitzenbock ratio = cot(omega_bar) / sqrt(3)
+
+  Brocard inequality cot^2(omega_bar) >= 3 is equivalent to
+  Weitzenbock inequality (perim_sq)^2 >= 48 Area^2.
+  Both characterise omega_bar = pi/6 (equilateral) at equality.
+
+----------------------------------------------------------------------------------------
+P(alpha_s) root structure: complex conjugate pairs over Q[sqrt(15)]
+----------------------------------------------------------------------------------------
+  Substitute u = 4 - alpha_s:
+  P(alpha_s = 4 - u) = u**4 - 8*u**3 - 32*u**2 - 768*u + 9216
+
+  P(4 - u) factors over Q[sqrt(15)] as:
+    (u^2 - 4(1 + sqrt(15)) u + 96) * (u^2 - 4(1 - sqrt(15)) u + 96)
+  Difference: 0
+  [PASS] Root structure: P factors over Q[sqrt(15)] (15 = N_color (N_quark - 1))
+
+  Discriminant of (u^2 - 4(1 + sqrt(15)) u + 96): -128 + 32*sqrt(15)
+  Discriminant of (u^2 - 4(1 - sqrt(15)) u + 96): -128 - 32*sqrt(15)
+  Numerical: -4.0645, -251.9355
+  [PASS] Root structure: both quadratic factors have negative discriminant (no real roots)
+
+  => P(alpha_s) > 0 for ALL real alpha_s on the retained surface.
+     The unitarity triangle never reaches equilateral.
+
+----------------------------------------------------------------------------------------
+Summary of NEW retained content
+----------------------------------------------------------------------------------------
+  Inputs (retained-tier, ground-up Status verified):
+    CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA  (retained)
+    CKM_MAGNITUDES_STRUCTURAL_COUNTS         (retained)
+    CKM_CP_PHASE_STRUCTURAL_IDENTITY         (retained)
+    CKM_JARLSKOG_EXACT_NLO_CLOSED_FORM       (retained)
+
+  NEW retained closed forms:
+
+    (W1) Weitzenbock inequality on the retained CKM unitarity triangle:
+         a^2 + b^2 + c^2 >= 4 sqrt(3) Area_triangle.
+
+    (W2/W3) Weitzenbock sum and gap closed forms:
+         W_+ = ((alpha_s^2 - 4 alpha_s + 96) + 4 sqrt(15)(4 - alpha_s))/48,
+         W_- = ((alpha_s^2 - 4 alpha_s + 96) - 4 sqrt(15)(4 - alpha_s))/48.
+
+    (W4) Product factorization:
+         W_+ * W_- = P(alpha_s)/2304 = P(alpha_s)/(N_pair^8 N_color^2).
+
+    (W5) LO recovery:
+         W_+|LO * W_-|LO = (N_quark + 1)/N_color = 7/3.
+
+    (W6) Squared form: (perim_sq)^2 - 48 Area^2 = P(alpha_s)/2304.
+
+    (W7) FIVE-FORM UNIFICATION of P(alpha_s):
+         (a) Raw:        P = (alpha_s^2 - 4 alpha_s + 96)^2 - 240 (4 - alpha_s)^2.
+         (b) Brocard:    P = 80 (4 - alpha_s)^2 * (cot^2(omega_bar) - 3).
+         (c) Weitzenbock: P = 2304 ((perim_sq)^2 - 48 Area^2).               [NEW]
+         (d) Steiner:    P = 746496 (S'^2 - 4 P').
+         (e) Marden:     P = 9216 |V_3^2 - V_3 + 1|^2.
+
+    (W8) Brocard-Weitzenbock equivalence:
+         Weitzenbock ratio = cot(omega_bar)/sqrt(3),
+         so the two inequalities are algebraically equivalent.
+
+    Root structure (NEW): P(alpha_s) factors over Q[sqrt(15)] as a product
+    of two quadratics, each with NEGATIVE discriminant. So P(alpha_s) > 0
+    for ALL real alpha_s -- the retained unitarity triangle never reaches
+    equilateral on any alpha_s deformation.
+
+    sqrt(15) = sqrt(N_color (N_quark - 1)) is the natural irrationality
+    of the retained surface.
+
+========================================================================================
+TOTAL: PASS=28, FAIL=0
+========================================================================================

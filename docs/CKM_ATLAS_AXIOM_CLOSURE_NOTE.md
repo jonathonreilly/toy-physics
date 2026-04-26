@@ -11,6 +11,7 @@
 [`CKM_BARRED_TRIANGLE_PYTHAGOREAN_RHO_LAMBDA_SUM_RULE_THEOREM_NOTE_2026-04-25.md`](CKM_BARRED_TRIANGLE_PYTHAGOREAN_RHO_LAMBDA_SUM_RULE_THEOREM_NOTE_2026-04-25.md),
 [`CKM_BARRED_APEX_ANGLE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md`](CKM_BARRED_APEX_ANGLE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md),
 [`CKM_BARRED_ORTHOCENTER_EULER_LINE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md`](CKM_BARRED_ORTHOCENTER_EULER_LINE_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md),
+[`CKM_BARRED_WEITZENBOCK_BROCARD_POLYNOMIAL_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md`](CKM_BARRED_WEITZENBOCK_BROCARD_POLYNOMIAL_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md),
 [`CKM_MULTI_PROJECTION_BERNOULLI_FAMILY_THEOREM_NOTE_2026-04-25.md`](CKM_MULTI_PROJECTION_BERNOULLI_FAMILY_THEOREM_NOTE_2026-04-25.md),
 [`CKM_CLASSICAL_NUMBER_THEORY_INTEGER_CHARACTERIZATION_THEOREM_NOTE_2026-04-25.md`](CKM_CLASSICAL_NUMBER_THEORY_INTEGER_CHARACTERIZATION_THEOREM_NOTE_2026-04-25.md),
 [`CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md`](CKM_FIRST_ROW_MAGNITUDES_THEOREM_NOTE_2026-04-24.md),
@@ -182,6 +183,15 @@ The theorem package is therefore:
   `G = ((28 - alpha_s(v))/72, sqrt(5)(4 - alpha_s(v))/72)`,
   `O = (1/2, -alpha_s(v) sqrt(5)/40)`, and exact Euler relation
   `H = 3G - 2O`
+- retained Weitzenbock/Brocard polynomial unification on the same
+  protected-`gamma_bar` surface:
+  `W_+ = ((alpha_s(v)^2 - 4 alpha_s(v) + 96)
+  + 4 sqrt(15)(4 - alpha_s(v)))/48`,
+  `W_- = ((alpha_s(v)^2 - 4 alpha_s(v) + 96)
+  - 4 sqrt(15)(4 - alpha_s(v)))/48`,
+  exact product `W_+ W_- = P(alpha_s(v))/2304 = P(alpha_s(v)) /
+  (n_pair^8 n_color^2)`, and exact five-form Brocard-polynomial
+  unification with no real `alpha_s` roots
 - atlas-leading B_s phase: `phi_s,0=-alpha_s(v)sqrt(5)/6`
 - atlas-leading kaon epsilon_K CKM-bracket factorization:
   `Im(lambda_c^2)=+2J_0`, `Im(lambda_c lambda_t)=-J_0`, and

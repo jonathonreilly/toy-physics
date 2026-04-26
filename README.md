@@ -82,6 +82,9 @@ questions:
   orthocenter / centroid / circumcenter / Euler-line closure with
   `H = (rho_bar, (20 + alpha_s(v))/(24 sqrt(5)))`,
   `H - V_3 = (0, alpha_s(v) sqrt(5)/20)`, and exact `H = 3G - 2O`;
+  the same surface now also carries the exact Weitzenbock sum/gap package
+  `W_+`, `W_-` with exact product `W_+W_-=P(alpha_s(v))/2304` and
+  five-form Brocard-polynomial unification;
   and bounded
   confinement-string readout; the absolute
   lattice scale is tracked explicitly on a dedicated Planck-scale lane as the

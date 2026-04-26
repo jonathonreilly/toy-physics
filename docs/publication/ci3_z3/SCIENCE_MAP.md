@@ -132,7 +132,9 @@ Validate with:
   moduli-only area guardrail `R=4J^2`, the exact
   barred-triangle Napoleon closure `N_outer^2=W_+/6`,
   `N_inner^2=W_-/6`, and
-  `N_outer^2 N_inner^2=P(alpha_s(v))/82944`, the Brocard-polynomial
+  `N_outer^2 N_inner^2=P(alpha_s(v))/82944`, the exact Weitzenbock sum/gap
+  package `W_+`, `W_-` with `W_+W_-=P(alpha_s(v))/2304`, the
+  Weitzenbock/Brocard five-form unification, the Brocard-polynomial
   structural-integer skeleton with `p_2=2e_1^2`, the Brocard/Q
   square-channel decomposition into Jarlskog and perimeter channels, plus the
   Thales-mediated

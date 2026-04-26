@@ -63,6 +63,10 @@ For the full package-capture inventory, use:
   plus the exact barred-triangle Napoleon closure
   `N_outer^2=W_+/6`, `N_inner^2=W_-/6`, and
   `N_outer^2 N_inner^2=P(alpha_s(v))/82944`,
+  plus the exact barred-triangle Weitzenbock/Brocard package
+  `W_+=((alpha_s(v)^2-4alpha_s(v)+96)+4sqrt(15)(4-alpha_s(v)))/48`,
+  `W_-=((alpha_s(v)^2-4alpha_s(v)+96)-4sqrt(15)(4-alpha_s(v)))/48`, and
+  `W_+W_-=P(alpha_s(v))/2304`,
   plus the NLO Jarlskog closed form
   `J_bar = sqrt(5) alpha_s(v)^3(4-alpha_s(v))/288`,
   `|V_cs|_0^2 = 1 - alpha_s(v)/2 - alpha_s(v)^2/6`,

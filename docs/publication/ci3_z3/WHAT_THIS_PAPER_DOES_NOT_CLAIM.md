@@ -94,6 +94,11 @@ The paper does **not** claim:
   [CKM_BARRED_NAPOLEON_TRIANGLES_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md](../../CKM_BARRED_NAPOLEON_TRIANGLES_EXACT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md)
   are direct measured-CKM observables or extend beyond the retained NLO
   protected-`gamma_bar` surface.
+- that the CKM barred-triangle Weitzenbock/Brocard polynomial unification in
+  [CKM_BARRED_WEITZENBOCK_BROCARD_POLYNOMIAL_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md](../../CKM_BARRED_WEITZENBOCK_BROCARD_POLYNOMIAL_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md)
+  is a direct measured-CKM observable, a new physical CKM inequality beyond
+  standard Euclidean triangle geometry, or a claim beyond the retained NLO
+  protected-`gamma_bar` surface.
 - that the CKM Brocard-polynomial Vieta structural-integer skeleton in
   [CKM_BROCARD_POLYNOMIAL_VIETA_STRUCTURAL_INTEGERS_THEOREM_NOTE_2026-04-25.md](../../CKM_BROCARD_POLYNOMIAL_VIETA_STRUCTURAL_INTEGERS_THEOREM_NOTE_2026-04-25.md)
   is a direct measured-CKM observable, an all-orders CKM theorem, or a new
