@@ -25,9 +25,10 @@ Key NEW identities on the retained NLO Wolfenstein protected-gamma_bar surface:
          PedoeDeficit(alpha_s, 0) = alpha_s^2 / 48.
 
   (P5) Selection rule: Pedoe deficit depends ONLY on (alpha_s - alpha_s')^2.
-       NO mixed terms alpha_s * alpha_s' (the Pedoe excess factors as a
-       perfect square in the difference).
-       NO higher-order terms in alpha_s or alpha_s' beyond (alpha_s - alpha_s')^2.
+       NO residual dependence on alpha_s + alpha_s'. In expanded coordinates,
+       the only alpha_s * alpha_s' monomial is the fixed square coefficient
+       -1/24 required by (alpha_s - alpha_s')^2 / 48.
+       NO higher-order terms in alpha_s or alpha_s' beyond that square.
 
   (P6) Metric interpretation: define the "Pedoe distance" on the retained
        alpha_s parameter space as
@@ -311,6 +312,11 @@ def audit_p3_similarity_deficit(N: dict, S: dict) -> sp.Expr:
     check("P3 structural: 48 = N_pair^4 N_color = 16 * 3",
           48 == N_pair ** 4 * N_color)
 
+    square_certificate = sp.simplify(48 * deficit - (a_s - a_sp) ** 2)
+    print(f"  Nonnegativity certificate: 48 * deficit - (alpha_s - alpha_s')^2 = {square_certificate}")
+    check("P3 nonnegativity: 48*deficit is exactly the square (alpha_s - alpha_s')^2",
+          square_certificate == 0)
+
     return deficit
 
 
@@ -367,6 +373,24 @@ def audit_p5_selection_rule(N: dict, S: dict, deficit: sp.Expr) -> None:
           derivative_v == 0)
     check("P5: Pedoe deficit = (alpha_s - alpha_s')^2 / 48 EXACTLY (no higher orders)",
           diff == 0)
+
+    expanded = sp.Poly(sp.expand(deficit), a_s, a_sp)
+    mixed_coeff = expanded.coeff_monomial(a_s * a_sp)
+    higher_terms = [
+        (monom, coeff)
+        for monom, coeff in expanded.terms()
+        if sum(monom) > 2 and coeff != 0
+    ]
+
+    print()
+    print(f"  Expanded deficit = {sp.expand(deficit)}")
+    print(f"  coefficient(alpha_s * alpha_s') = {mixed_coeff}")
+    print(f"  higher-degree monomials = {higher_terms}")
+
+    check("P5: only mixed quadratic coefficient is the fixed square coefficient -1/24",
+          mixed_coeff == sp.Rational(-1, 24))
+    check("P5: no higher-degree monomials occur in alpha_s or alpha_s'",
+          len(higher_terms) == 0)
 
 
 def audit_p6_metric_interpretation(N: dict, S: dict, deficit: sp.Expr) -> None:
@@ -533,7 +557,8 @@ def audit_summary() -> None:
     print("    (P4) Special case (LO triangle): PedoeDeficit(alpha_s, 0) = alpha_s^2 / 48.")
     print()
     print("    (P5) Selection rule: deficit depends ONLY on (alpha_s - alpha_s')^2.")
-    print("         - NO mixed alpha_s * alpha_s' terms.")
+    print("         - NO residual dependence on alpha_s + alpha_s'.")
+    print("         - The only alpha_s * alpha_s' term is the fixed -1/24 square coefficient.")
     print("         - NO higher-order corrections in alpha_s or alpha_s'.")
     print("         - The (alpha_s - alpha_s')^2 form is EXACT, not a Taylor truncation.")
     print()
@@ -554,6 +579,31 @@ def audit_summary() -> None:
     print("         family of triangles, no two distinct members of which are similar.")
 
 
+def audit_package_wiring() -> None:
+    banner("Package wiring: Pedoe theorem is captured by repo truth surfaces")
+
+    note = "CKM_BARRED_PEDOE_SIMILARITY_DEFICIT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md"
+    runner = "frontier_ckm_barred_pedoe_similarity_deficit_closed_form.py"
+
+    surfaces = (
+        ("docs/CANONICAL_HARNESS_INDEX.md", (note, runner)),
+        ("docs/publication/ci3_z3/CLAIMS_TABLE.md", (note, runner)),
+        ("docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md", (note, runner)),
+        ("docs/publication/ci3_z3/DERIVATION_ATLAS.md", (note, runner)),
+        ("docs/publication/ci3_z3/RESULTS_INDEX.md", (note, runner)),
+        ("docs/publication/ci3_z3/PUBLICATION_MATRIX.md", (note, runner)),
+        ("docs/publication/ci3_z3/FULL_CLAIM_LEDGER.md", (note,)),
+        ("docs/publication/ci3_z3/EXTERNAL_REVIEWER_GUIDE.md", (note,)),
+        ("docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md", (note,)),
+    )
+
+    for rel_path, needles in surfaces:
+        content = read_authority(rel_path)
+        missing = [needle for needle in needles if needle not in content]
+        print(f"  {rel_path}: {'OK' if not missing else 'MISSING ' + ', '.join(missing)}")
+        check(f"Package surface wired: {rel_path}", not missing)
+
+
 def main() -> int:
     print("=" * 88)
     print("Barred unitarity-triangle Pedoe similarity-deficit EXACT closed form audit")
@@ -571,6 +621,7 @@ def main() -> int:
     audit_p7_lhs_factorization(N, S, deficit)
     audit_p8_symmetry_reflexivity(N, S, deficit)
     audit_p9_pedoe_lo_recovery(N, S)
+    audit_package_wiring()
     audit_summary()
 
     print()

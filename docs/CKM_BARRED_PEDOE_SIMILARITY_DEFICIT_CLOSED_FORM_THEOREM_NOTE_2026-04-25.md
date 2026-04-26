@@ -19,9 +19,12 @@ PedoeDeficit(alpha_s, alpha_s')  =  (alpha_s - alpha_s')^2 / 48
 i.e. the Pedoe similarity-excess between any two NLO triangles in the
 retained one-parameter family depends **only on `(α_s − α_s')²`**,
 with structural-integer denominator `N_pair⁴ N_color = 16 × 3 = 48`.
-There are NO mixed `α_s α_s'` terms, and NO higher-order corrections
-in `α_s` or `α_s'` — the closed form is EXACT, not a Taylor
-truncation.
+Equivalently, after changing coordinates to `u = α_s − α_s'` and
+`v = α_s + α_s'`, there is **no residual `v`-dependence** and no
+higher-order correction in either parameter. In the original
+coordinates the only mixed monomial is the fixed
+`-2 α_s α_s'` term required by the exact square; the closed form is
+EXACT, not a Taylor truncation.
 
 **Two consequences of striking depth:**
 
@@ -79,7 +82,9 @@ and `α_s'` give:
                                    =  alpha_s^2 / (N_pair^4 N_color).
 
 (P5)  Selection rule: deficit depends ONLY on (alpha_s - alpha_s')^2.
-        - No mixed alpha_s * alpha_s' terms.
+        - No residual dependence on alpha_s + alpha_s'.
+        - The only alpha_s * alpha_s' monomial is the fixed
+          -2 alpha_s alpha_s' term required by the square.
         - No higher-order corrections in alpha_s or alpha_s'.
         - The (alpha_s - alpha_s')^2 form is EXACT.
 
@@ -227,13 +232,15 @@ This is the headline result.
 
 ### Selection rule (P5)
 
-The reduction shows that **all `α_s α_s'` cross-terms in the linear
-slot cancel**, and the `α_s² α_s'` cross-terms cancel between the
-two triangles. The deficit thus depends **only on the symmetric
-combination `(α_s − α_s')²`** — no `α_s α_s'`, no
-`α_s³`, `α_s'³`, or higher-order terms. This is a **strong
-selection rule** on the retained surface: the protected-γ̄ structure
-forces all higher-order Pedoe-deficit corrections to vanish.
+The reduction shows that all dependence reorganizes into the single
+difference coordinate `u = α_s − α_s'`. In the complementary coordinate
+`v = α_s + α_s'`, the derivative of the deficit is exactly zero. In the
+original coordinates this means the deficit contains the fixed mixed
+coefficient `-α_s α_s'/24` required by `u²/48`, but no residual
+`v`-dependence and no higher-degree mixed corrections such as
+`α_s² α_s'`, `α_s α_s'²`, `α_s² α_s'²`, `α_s³`, or `α_s'³`. This is a
+**strong selection rule** on the retained surface: the protected-γ̄
+structure forces all higher-order Pedoe-deficit corrections to vanish.
 
 ### Metric interpretation (P6)
 
@@ -279,6 +286,7 @@ All identities verified via sympy:
 | P4 | LO special case `α_s²/48` | sympy `simplify(diff) == 0` |
 | P5 indep | `d(deficit)/d(α_s + α_s') = 0` | sympy `simplify == 0` |
 | P5 form | `deficit − (α_s − α_s')²/48 = 0` | sympy exact |
+| P5 mixed coefficient | expanded `α_s α_s'` coefficient is fixed at `-1/24` | sympy exact |
 | P6 metric | `d_Pedoe = \|α_s − α_s'\|/(4√3)` | numerical match |
 | P6 (i) | `d_Pedoe(x, x) = 0` | numerical exact |
 | P6 (ii) | `d_Pedoe(x, y) = d_Pedoe(y, x)` | numerical exact |
@@ -322,9 +330,10 @@ This note delivers:
    form** — quadratic in the difference, with structural-integer
    denominator.
 
-2. **NEW selection rule** (P5): no `α_s α_s'` mixed terms, no
-   higher-order corrections. The protected-γ̄ structure forces all
-   such corrections to vanish exactly.
+2. **NEW selection rule** (P5): no residual `α_s + α_s'` dependence
+   and no higher-order mixed corrections. The only `α_s α_s'` monomial
+   is the fixed square coefficient, and the protected-γ̄ structure
+   forces every additional correction to vanish exactly.
 
 3. **NEW metric interpretation** (P6): the retained `α_s`
    parameter space carries a Euclidean similarity-deficit metric
@@ -382,9 +391,9 @@ forces:
 
 Any framework revision moving `(rho_bar, eta_bar)` off the retained
 protected-γ̄ surface would break the exact `(α_s − α_s')²/48` form
-— most plausibly by introducing `α_s α_s'`, `α_s³`, or `α_s² α_s'`
-correction terms in the deficit. The selection rule is structurally
-rigid.
+— most plausibly by introducing residual `α_s + α_s'` dependence or
+higher-degree terms such as `α_s³`, `α_s² α_s'`, or `α_s α_s'²` in the
+deficit. The selection rule is structurally rigid.
 
 ## What This Claims
 

@@ -86,6 +86,10 @@ The paper does **not** claim:
 - that the CKM barred-circumradius or circumcenter exact closed forms extend
   the protected-`gamma_bar` NLO surface to physical NNLO or all-orders CKM
   control.
+- that the CKM barred-triangle Pedoe similarity-deficit metric in
+  [CKM_BARRED_PEDOE_SIMILARITY_DEFICIT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md](../../CKM_BARRED_PEDOE_SIMILARITY_DEFICIT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md)
+  is a direct metric on measured CKM observables or extends beyond the
+  retained NLO protected-`gamma_bar` surface.
 - that the CKM Jarlskog exact NLO closed form eliminates higher-order
   Wolfenstein corrections to the physical CKM Jarlskog beyond the retained
   protected-`gamma_bar` NLO surface.
