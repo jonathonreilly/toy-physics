@@ -303,8 +303,12 @@ The remaining flagship bridge package is:
     close the lane; the April 25 criterion theorem closes the background-zero /
     `Z`-erasure algebra for `Q`, and the April 25 canonical-descent theorem
     proves the unique trace-preserving strict-onsite descent erases reduced
-    `Z` modulo common scalar; physical source-domain selection, selected-line
-    local boundary source, and based endpoint remain theorem targets
+    `Z` modulo common scalar; the April 26 lepton gauge-ratio support note
+    adds the exact retained-source readout `L_L:(2,1) -> 2/1=2` and shows
+    that it would give `Q=2/3` if a Brannen-W2 analog identified physical
+    `c^2` with that ratio; physical source-domain selection, the Brannen-W2
+    analog, selected-line local boundary source, and based endpoint remain
+    theorem targets
 
 That is the current missing flagship prediction bridge. It does not erase the
 rest of the retained or bounded prediction surface.
