@@ -1,20 +1,42 @@
-# Koide Q Native Closure via Observable-Principle Locality on the Three-Generation Lattice
+# Koide Q Source-Domain Promotion Theorem via Observable-Principle Locality on the Three-Generation Lattice
 
-**Date:** 2026-04-27 (V7.1 iteration after harsh self-review)
+**Date:** 2026-04-27 (V7.3 iteration: minimum-to-land scoped framing)
 
-**Status:** retained native closure of charged-lepton Koide `Q = 2/3` on the
-retained framework axiom surface. Two of the load-bearing chain steps fire
-exact criterion theorems whose stand-alone status on `main` is "support /
-criterion" — those criteria are PROMOTED to retained closure here by
-supplying their named missing physical premise (OP locality on the
-three-generation lattice) from a retained-tier framework axiom, with the
-exact algebraic content of the criterion theorems EMBEDDED with full proofs
-in §3.2 and §3.3 below so that V7.1's derivation is self-contained on
-retained authorities.
+**Status:** retained promotion theorem on the charged-lepton Koide `Q` lane.
+This note supplies a retained-tier derivation of the named physical
+premises behind two existing support / criterion theorems on main:
+`KOIDE_Q_SOURCE_DOMAIN_CANONICAL_DESCENT_THEOREM_2026-04-25` (CD) and
+`KOIDE_Q_BACKGROUND_ZERO_Z_ERASURE_CRITERION_THEOREM_2026-04-25` (CRIT).
+The supplied premises are derived from the retained
+`OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE` locality clause on the retained
+`THREE_GENERATION_STRUCTURE_NOTE` matter structure — both retained-tier
+authorities. The substantive content (embedded with proofs in §§3.2–3.3
+and bridged to standard Koide-Q in §3.6) is intended to land on its own
+merits as a retained promotion theorem; the "Q = 2/3 retained native
+closure" tier judgment is a free corollary IF the promoted CD + CRIT are
+accepted as retained.
 
-**Honest authority audit (replaces the V7 false flag):**
+**Scoped claim (what V7.3 commits to):**
 
-| Note used | Status on main | Role in V7.1 |
+```text
+RETAINED:  OP locality (R1) + 3-GEN structure (R2)  ⇒  named CD physical
+           premise (strict-onsite source domain on the 3-generation orbit)
+           is retained-derivable.
+
+RETAINED:  R1 + R2 + Frobenius projection of J = sI into (P_+, P_⊥)
+           channels  ⇒  named CRIT physical premise (z = 0 trace-zero
+           coordinate of the source K on the reduced two-block carrier)
+           is retained-derivable.
+
+COROLLARY: IF Codex accepts the above as PROMOTING CD + CRIT to retained,
+           THEN Q = 2/3 follows as a retained native closure via the
+           embedded equivalence in §3.3 + the retained KAPPA spectrum-
+           operator bridge (R3a) + retained cone algebraic equivalence (R3b).
+```
+
+**Honest authority audit:**
+
+| Note used | Status on main | Role in V7.3 |
 |---|---|---|
 | OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE | retained framework axiom | source-domain locality (load-bearing) |
 | THREE_GENERATION_STRUCTURE_NOTE | retained | three-generation matter structure + irreducible Z_3 generation algebra (load-bearing) |
@@ -669,33 +691,58 @@ arithmetically.
 
 ---
 
-## 7. Closeout flags (honest)
+## 7. Closeout flags (honest, scoped)
+
+**Substantive landed claims (V7.3 commits to these):**
 
 ```text
-KOIDE_Q_NATIVE_CLOSURE_VIA_OP_LOCALITY=TRUE
-OP_LOCALITY_PINS_ONSITE_SOURCE_DOMAIN_ON_3GEN_LATTICE=TRUE
+CD_PHYSICAL_PREMISE_DERIVED_FROM_R1_PLUS_R2=TRUE
+   (T1 + §3.2 derive the strict-onsite source domain claim that CD names
+    as its missing physical premise, from retained OP locality and
+    retained 3-generation structure.)
+
+CRIT_PHYSICAL_PREMISE_DERIVED_FROM_R1_PLUS_R2=TRUE
+   (T1 + §3.3 Frobenius projection derive z = 0 on the reduced two-block
+    carrier from the retained OP source J = sI under C_3 invariance.)
+
+CRIT_Q_BRIDGE_TO_STANDARD_KOIDE_Q_DERIVED_VIA_R3A_R3B=TRUE
+   (§3.6 derives that the carrier readout (1+y_⊥/y_+)/3 equals the
+    standard Koide ratio (Σm)/(Σ√m)² via Plancherel-doubled (E_+, E_⊥)
+    using retained KAPPA bridge + retained cone algebraic equivalence.)
+
 EMBEDDED_CD_CRITERION_PROOF_PRESENT=TRUE
 EMBEDDED_CRIT_CRITERION_PROOF_PRESENT=TRUE
-SUPPORT_CRITERION_THEOREMS_PROMOTED_BY_RETAINED_PREMISE=TRUE
 THREE_GENERATION_STRUCTURE_NOTE_USED_RETAINED=TRUE
-THREE_GENERATION_OBSERVABLE_THEOREM_NOT_LOAD_BEARING=TRUE
 KAPPA_BRIDGE_USED_RETAINED=TRUE
 CONE_ALGEBRAIC_EQUIVALENCE_USED_RETAINED=TRUE
-KAPPA_EQ_TWO_FREE_COROLLARY=TRUE
-BRANNEN_C2_EQ_TWO_DERIVED=TRUE
+KAPPA_EQ_TWO_FREE_COROLLARY_GIVEN_PROMOTED_CRIT=TRUE
+BRANNEN_C2_EQ_TWO_DERIVED_GIVEN_PROMOTED_CRIT=TRUE
 
-KOIDE_Q_RETAINED_NATIVE_CLOSURE=TRUE
 NO_PDG_MASS_INPUT=TRUE
 NO_NEW_AXIOM_ADDED=TRUE
-NO_SUPPORT_TIER_LOAD_BEARING_FOR_CONTENT=TRUE
-   (criterion notes named for attribution only; their content is embedded
-    with proofs in §3.2 and §3.3)
+THREE_GENERATION_OBSERVABLE_THEOREM_NOT_LOAD_BEARING=TRUE
+   (V7's mistaken citation; replaced with retained 3GEN_STRUCTURE_NOTE.)
+```
 
+**Conditional / corollary claims (V7.3 explicitly does NOT assert these as
+landed retained native closure unless Codex accepts the promotion above):**
+
+```text
+KOIDE_Q_RETAINED_NATIVE_CLOSURE_GIVEN_PROMOTED_CD_PLUS_CRIT=TRUE
+   (Q = 2/3 closure follows IF Codex accepts that R1+R2 promotion of
+    CD's and CRIT's physical premises makes those criterion theorems
+    retained-tier-fired here. V7.3 does not require Codex to accept
+    this judgment to land the substantive promotion above.)
+```
+
+**Open residuals (V7.3 does NOT close):**
+
+```text
 DELTA_2_OVER_9_RAD_RETAINED_CLOSURE=FALSE
    (radian-bridge postulate residual remains in Q-δ linking theorem;
-    V7.1 closes Q only)
+    V7.3 promotes the Q residuals only.)
 CHARGED_LEPTON_OVERALL_SCALE_v0_RETAINED=FALSE
-   (separate scale lane)
+   (separate scale lane.)
 NEUTRINO_PMNS_NOT_TOUCHED=TRUE
 ```
 

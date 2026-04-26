@@ -595,9 +595,9 @@ check(
     detail=f"file = {v7_doc}",
 )
 check(
-    "T_DOC_V7_main_flag",
-    "KOIDE_Q_NATIVE_CLOSURE_VIA_OP_LOCALITY=TRUE" in v7_text,
-    detail="main closure flag present",
+    "T_DOC_V7_main_substantive_promotion_flag",
+    "CD_PHYSICAL_PREMISE_DERIVED_FROM_R1_PLUS_R2=TRUE" in v7_text,
+    detail="V7.3 main substantive promotion flag (CD physical premise derived)",
 )
 check(
     "T_DOC_V7_no_pdg_input_flag",
@@ -610,41 +610,48 @@ check(
     detail="no-new-axiom flag present",
 )
 check(
-    "T_DOC_V7_promotion_flag",
-    "SUPPORT_CRITERION_THEOREMS_PROMOTED_BY_RETAINED_PREMISE=TRUE" in v7_text,
-    detail="V7.1 honest promotion flag present (replaces V7's false NO_SUPPORT_TIER_LOAD_BEARING flag)",
+    "T_DOC_V7_3_substantive_promotion_flags",
+    "CD_PHYSICAL_PREMISE_DERIVED_FROM_R1_PLUS_R2=TRUE" in v7_text
+    and "CRIT_PHYSICAL_PREMISE_DERIVED_FROM_R1_PLUS_R2=TRUE" in v7_text
+    and "CRIT_Q_BRIDGE_TO_STANDARD_KOIDE_Q_DERIVED_VIA_R3A_R3B=TRUE" in v7_text,
+    detail="V7.3 substantive landed claims (CD premise, CRIT premise, CRIT-Q bridge)",
 )
 check(
     "T_DOC_V7_embedded_proofs_present_flag",
     "EMBEDDED_CD_CRITERION_PROOF_PRESENT=TRUE" in v7_text
     and "EMBEDDED_CRIT_CRITERION_PROOF_PRESENT=TRUE" in v7_text,
-    detail="V7.1 embedded-proof flags for CD and CRIT criterion content",
+    detail="V7.3 embedded-proof flags for CD and CRIT criterion content",
 )
 check(
     "T_DOC_V7_retained_3GEN_structure_flag",
     "THREE_GENERATION_STRUCTURE_NOTE_USED_RETAINED=TRUE" in v7_text,
-    detail="V7.1 retained 3GEN_STRUCTURE flag (replaces V7's support 3GEN_OBSERVABLE)",
+    detail="V7.3 retained 3GEN_STRUCTURE flag (replaces V7's support 3GEN_OBSERVABLE)",
 )
 check(
     "T_DOC_V7_3GEN_observable_not_load_bearing_flag",
     "THREE_GENERATION_OBSERVABLE_THEOREM_NOT_LOAD_BEARING=TRUE" in v7_text,
-    detail="V7.1 explicit 3GEN_OBSERVABLE not-load-bearing flag",
+    detail="V7.3 explicit 3GEN_OBSERVABLE not-load-bearing flag",
 )
 check(
-    "T_DOC_V7_retained_native_closure_flag",
-    "KOIDE_Q_RETAINED_NATIVE_CLOSURE=TRUE" in v7_text,
-    detail="retained-native-closure flag present",
+    "T_DOC_V7_3_conditional_closure_flag",
+    "KOIDE_Q_RETAINED_NATIVE_CLOSURE_GIVEN_PROMOTED_CD_PLUS_CRIT=TRUE" in v7_text,
+    detail="V7.3 conditional closure flag (Q closes IF Codex accepts the promotion)",
 )
 check(
     "T_DOC_V7_kappa_corollary_flag",
-    "KAPPA_EQ_TWO_FREE_COROLLARY=TRUE" in v7_text,
-    detail="κ = 2 free corollary flag present",
+    "KAPPA_EQ_TWO_FREE_COROLLARY_GIVEN_PROMOTED_CRIT=TRUE" in v7_text,
+    detail="V7.3 κ = 2 conditional corollary flag",
 )
-# Confirm V7's false flag is no longer present in V7.1.
+# Confirm V7's false flag is no longer present.
 check(
     "T_DOC_V7_false_flag_NO_SUPPORT_LOAD_BEARING_replaced",
     "NO_SUPPORT_TIER_LOAD_BEARING=TRUE\n" not in v7_text,
     detail="V7's false flag NO_SUPPORT_TIER_LOAD_BEARING=TRUE has been replaced by honest flags",
+)
+check(
+    "T_DOC_V7_3_unconditional_closure_NOT_asserted",
+    "KOIDE_Q_RETAINED_NATIVE_CLOSURE=TRUE\n" not in v7_text,
+    detail="V7.3 does NOT assert unconditional KOIDE_Q_RETAINED_NATIVE_CLOSURE=TRUE; only conditional version is present",
 )
 
 # ---------------------------------------------------------------------------
