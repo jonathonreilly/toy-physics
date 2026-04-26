@@ -252,6 +252,28 @@ lensing sign phases, staggered response windows, APS probes, determinant-line
 probes, and no-go controls were reviewed. They were consolidated into the
 canonical status note and harness rather than imported wholesale.
 
+### Full backlog package handoff
+
+This review branch keeps the compact status note on the canonical path and
+also imports the full signed-response backlog/harness packet for detailed
+review:
+
+- `docs/SIGNED_GRAVITY_RESPONSE_BACKLOG_2026-04-25.md`
+- `docs/SIGNED_GRAVITY_NATURALLY_HOSTED_ORIENTATION_LINE_NOTE.md`
+- `docs/SIGNED_GRAVITY_NATURE_GRADE_CLOSURE_BLOCKER_AUDIT_NOTE.md`
+
+Current signed-response verdict:
+
+```text
+SIGNED_GRAVITY_ORIENTATION_LINE_NATURALLY_HOSTED_NOT_CANONICALLY_SELECTED
+SIGNED_GRAVITY_NATURE_GRADE_HARD_BLOCKERS_REDUCED_CONDITIONALS_REMAIN
+```
+
+The determinant-line package naturally hosts an orientation line as a `Z2`
+torsor/flat local system, but it does not canonically choose `chi_eta`, does
+not force the `chi_eta rho Phi` source action, and does not promote the lane
+to a physical signed-gravity claim.
+
 ### First retained-safe statement if the lane works
 
 > The framework admits a bounded signed-response search target. A physical
