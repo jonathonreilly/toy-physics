@@ -21,6 +21,9 @@ current `main` package.
 - sharpened `nu_R` character / charge-`2` support reductions:
   [NEUTRINO_MAJORANA_NUR_CHARACTER_BOUNDARY_NOTE.md](./NEUTRINO_MAJORANA_NUR_CHARACTER_BOUNDARY_NOTE.md),
   [NEUTRINO_MAJORANA_NUR_CHARGE2_PRIMITIVE_REDUCTION_NOTE.md](./NEUTRINO_MAJORANA_NUR_CHARGE2_PRIMITIVE_REDUCTION_NOTE.md)
+- conditional Schur-boundary theorem for a future supplied Majorana/seesaw
+  block:
+  [NEUTRINO_MAJORANA_SEESAW_SCHUR_BOUNDARY_THEOREM_NOTE_2026-04-25.md](./NEUTRINO_MAJORANA_SEESAW_SCHUR_BOUNDARY_THEOREM_NOTE_2026-04-25.md)
 
 ## Current Exact Endpoint
 
@@ -31,6 +34,8 @@ On the retained current bank:
 - the three-generation retained current-stack matrix is exactly zero
 - the lower-level charge-preserving response layer does not reopen the
   anomalous Nambu block
+- if a future nonzero `D` and invertible `M_R` are supplied, the light
+  Majorana boundary operator is exactly the Schur response
 
 So the present retained Majorana endpoint is:
 
@@ -50,6 +55,8 @@ So the present retained Majorana endpoint is:
 - no theorem of impossibility for every future extension
 - no statement that Majorana reopening is impossible in principle
 - no flagship neutrino promotion
+- no derivation of `D`, `M_R`, `mu`, or the neutrino mass spectrum from the
+  Schur-boundary theorem alone
 
 ## Representative Runners
 
@@ -57,3 +64,4 @@ So the present retained Majorana endpoint is:
 - [frontier_neutrino_majorana_lower_level_pairing_nogo.py](../scripts/frontier_neutrino_majorana_lower_level_pairing_nogo.py)
 - [frontier_neutrino_majorana_nur_character_boundary.py](../scripts/frontier_neutrino_majorana_nur_character_boundary.py)
 - [frontier_neutrino_majorana_nur_charge2_primitive_reduction.py](../scripts/frontier_neutrino_majorana_nur_charge2_primitive_reduction.py)
+- [frontier_neutrino_majorana_seesaw_schur_boundary.py](../scripts/frontier_neutrino_majorana_seesaw_schur_boundary.py)

@@ -15,6 +15,8 @@ It is a curated boundary/support packet:
   and graph/commutant reduction
 - exact current-stack Majorana zero law and exact mass-lane reduction to the
   Dirac Yukawa object
+- conditional exact Schur-boundary theorem for the Majorana/seesaw lane once
+  `D` and invertible `M_R` are supplied
 - exact negative closeout of the full single-Higgs lepton PMNS route and exact
   seven-real reduction of the minimal surviving neutrino-side two-Higgs class
 - exact seven-real reduction of the minimal surviving charged-lepton-side
@@ -68,6 +70,8 @@ Primary package entry points:
   [NEUTRINO_MAJORANA_CURRENT_STACK_ZERO_LAW_NOTE.md](./NEUTRINO_MAJORANA_CURRENT_STACK_ZERO_LAW_NOTE.md)
 - exact retained-neutrino mass reduction to the Dirac lane:
   [NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md](./NEUTRINO_MASS_REDUCTION_TO_DIRAC_NOTE.md)
+- conditional exact Majorana/seesaw Schur-boundary theorem:
+  [NEUTRINO_MAJORANA_SEESAW_SCHUR_BOUNDARY_THEOREM_NOTE_2026-04-25.md](./NEUTRINO_MAJORANA_SEESAW_SCHUR_BOUNDARY_THEOREM_NOTE_2026-04-25.md)
 - exact negative full single-Higgs lepton PMNS closeout:
   [LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md](./LEPTON_SINGLE_HIGGS_PMNS_TRIVIALITY_NOTE.md)
 - exact minimal neutrino-side two-Higgs canonical reduction:
@@ -104,6 +108,8 @@ This packet does **not** claim:
 - a positive neutrino Dirac Yukawa activation law
 - a theorem-grade PMNS value-selection law from the current exact bank
 - a positive retained Majorana realization
+- supplied `D`/`M_R` Schur-boundary algebra as a derivation of `D`, `mu`,
+  Majorana activation, or the mass spectrum
 - robust point predictions for `m_1`, `m_2`, `m_β`, `m_ββ`, `Σm_ν`, or
   `Δm²_21` beyond the retained-package inequality bounds
 - promotion to the flagship retained paper surface
@@ -127,6 +133,7 @@ So the live status is:
 - [frontier_neutrino_majorana_lower_level_pairing_nogo.py](../scripts/frontier_neutrino_majorana_lower_level_pairing_nogo.py)
 - [frontier_neutrino_majorana_current_stack_zero_law.py](../scripts/frontier_neutrino_majorana_current_stack_zero_law.py)
 - [frontier_neutrino_mass_reduction_to_dirac.py](../scripts/frontier_neutrino_mass_reduction_to_dirac.py)
+- [frontier_neutrino_majorana_seesaw_schur_boundary.py](../scripts/frontier_neutrino_majorana_seesaw_schur_boundary.py)
 - [frontier_charged_lepton_two_higgs_canonical_reduction.py](../scripts/frontier_charged_lepton_two_higgs_canonical_reduction.py)
 - [frontier_pmns_sigma_zero_no_go.py](../scripts/frontier_pmns_sigma_zero_no_go.py)
 - [frontier_pmns_right_conjugacy_invariant_nogo.py](../scripts/frontier_pmns_right_conjugacy_invariant_nogo.py)

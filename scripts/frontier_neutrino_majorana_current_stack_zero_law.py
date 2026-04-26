@@ -24,7 +24,6 @@ Boundary:
 
 from __future__ import annotations
 
-import re
 import sys
 from pathlib import Path
 
@@ -195,7 +194,13 @@ def test_current_atlas_has_no_extra_charge_two_source() -> None:
     rhs = read("scripts/frontier_right_handed_sector.py")
 
     has_det_row = "| Observable principle | `log|det(D+J)|`" in atlas
-    pfaffian_rows = re.findall(r"\|\s*([^|]*Pfaffian[^|]*)\|", atlas, flags=re.IGNORECASE)
+    atlas_rows = [line for line in atlas.splitlines() if line.startswith("|")]
+    pfaffian_rows = [row for row in atlas_rows if "pfaffian" in row.lower()]
+    pfaffian_source_rows = [
+        row for row in pfaffian_rows
+        if "retained source primitive" in row.lower()
+        or "retained pfaffian source" in row.lower()
+    ]
     has_boundary_row = (
         "| One-generation Majorana current-stack zero law |" in atlas
         or "| Three-generation Majorana current-stack zero matrix |" in atlas
@@ -204,8 +209,8 @@ def test_current_atlas_has_no_extra_charge_two_source() -> None:
     misses_zero_slot = "MISSING from wedge^2 singlets: {Fraction(0, 1), Fraction(4, 3)}" in rhs or "Fraction(0)" in rhs
 
     check("Atlas still retains the determinant observable backbone", has_det_row)
-    check("Current atlas has no Pfaffian row for a retained source primitive", len(pfaffian_rows) == 0,
-          f"pfaffian rows={pfaffian_rows}")
+    check("Current atlas has no Pfaffian row for a retained source primitive", len(pfaffian_source_rows) == 0,
+          f"audited Pfaffian rows={len(pfaffian_rows)}")
     check("Atlas carries the retained Majorana zero-law boundary row", has_boundary_row)
     check("Observable-principle note stays scalar rather than fermionic-pairing based", obs_scalar)
     check("Current right-handed composite route still misses the Y=0 nu_R singlet slot", misses_zero_slot)

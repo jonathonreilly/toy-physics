@@ -156,6 +156,12 @@ The paper does **not** claim:
   running/projection lane, or implies SU(5) unification.
 - a full retained neutrino point-prediction package for the solar gap, PMNS
   angles, Majorana phases, or absolute mass sum.
+- that
+  [NEUTRINO_MAJORANA_SEESAW_SCHUR_BOUNDARY_THEOREM_NOTE_2026-04-25.md](../../NEUTRINO_MAJORANA_SEESAW_SCHUR_BOUNDARY_THEOREM_NOTE_2026-04-25.md)
+  derives `Y_nu`, the Majorana amplitude `mu`, a nonzero charge-`2`
+  primitive, Dirac-versus-Majorana selection, or a neutrino mass spectrum; it
+  only proves the exact Schur-boundary map after `D` and invertible `M_R` are
+  supplied.
 - that the charged-lepton Koide A1/radian bridge is closed by the exact
   rational `2/9` witnesses alone; the Type-B rational-to-radian observable law
   remains a primitive unless separately derived.
