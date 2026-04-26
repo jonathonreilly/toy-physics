@@ -86,6 +86,11 @@ The paper does **not** claim:
 - that the CKM barred-circumradius or circumcenter exact closed forms extend
   the protected-`gamma_bar` NLO surface to physical NNLO or all-orders CKM
   control.
+- that the CKM physical-ratio circumradius bridge is an all-orders B-mixing
+  theorem, a derivation of hadronic extraction inputs, or an
+  `alpha_s`-independent numerical constant; the compound identity cancels the
+  leading multiplicative `alpha_s(v)` factor but still equals
+  `5R_bar^2=5/4+alpha_s(v)^2/64`.
 - that the CKM barred-triangle Pedoe similarity-deficit metric in
   [CKM_BARRED_PEDOE_SIMILARITY_DEFICIT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md](../../CKM_BARRED_PEDOE_SIMILARITY_DEFICIT_CLOSED_FORM_THEOREM_NOTE_2026-04-25.md)
   is a direct metric on measured CKM observables or extends beyond the

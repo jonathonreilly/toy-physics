@@ -133,7 +133,9 @@ Validate with:
   barred-triangle Napoleon closure `N_outer^2=W_+/6`,
   `N_inner^2=W_-/6`, and
   `N_outer^2 N_inner^2=P(alpha_s(v))/82944`, the Brocard-polynomial
-  structural-integer skeleton with `p_2=2e_1^2`, plus the
+  structural-integer skeleton with `p_2=2e_1^2`, the physical-ratio
+  circumradius bridge `|V_td/V_ts|^2=(5/3)alpha_s(v)R_bar^2` and
+  compound identity `|V_us V_td/(V_cb V_ts)|^2=5R_bar^2`, plus the
   Thales-mediated
   cross-system CP ratio `phi_s / sin(2 beta_d) = -alpha_s(v)/2`
   and CP-product estimator
