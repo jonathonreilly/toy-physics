@@ -23,7 +23,7 @@ For each claim, the audit ledger records:
 
 - `independence: weak` — same model family, different session. Permitted
   but flagged in the ledger; should not be the only audit for a
-  flagship-gating claim.
+  critical claim (criticality is computed from transitive descendants).
 - `independence: cross_family` — different model family from the author.
   This is the standard for the audit lane.
 - `independence: strong` — human auditor with no prior involvement in the
@@ -99,18 +99,31 @@ The auditor answers exactly five questions per claim:
 
 Each answer is a short field in the audit ledger row. No long prose.
 
-## 4. Cross-confirmation for flagship-gating claims
+## 4. Cross-confirmation for critical claims
 
-A claim has `gates_flagship: true` if any path from it leads to a row
-tagged `flagship closed package` in `CLAIMS_TABLE.md`. For these claims:
+A claim is `criticality = critical` if its `transitive_descendants` count
+on the citation graph is at least the threshold in
+`compute_load_bearing.py` (currently 50). The audit lane intentionally
+does NOT use author-declared "flagship" status to drive criticality —
+doing so would let unratified author framing set the audit cost on
+upstream support, which is the bootstrap problem this lane exists to
+break. Criticality is graph topology only.
 
-- The first audit lands `audit_status = audit_in_progress`.
-- A second independent auditor (different session minimum, different model
-  preferred) runs the same rubric in the same context-restricted way.
-- Both must return matching `verdict` and matching `derivation_class`
-  before the row may move to `audited_clean`.
-- Disagreement promotes the claim to a third-auditor review and logs the
-  disagreement in `findings`.
+For critical claims:
+
+- The first `audited_clean` audit lands `audit_status = audit_in_progress`
+  with `blocker = awaiting_cross_confirmation`.
+- A second independent auditor must come from a different
+  `auditor_family` than the first.
+- Both must return matching `verdict` and matching
+  `load_bearing_step_class` before the row may move to `audited_clean`.
+- Disagreement on `load_bearing_step_class` promotes the claim to a
+  third-auditor review and logs the disagreement in
+  `cross_confirmation.status = disagreement`.
+
+Claims at `criticality = high` (`transitive_descendants >= 30`)
+require `independence != weak` but do not require cross-confirmation by
+default. Claims at `medium` and `leaf` follow the standard rules.
 
 ## 5. Author self-audit prohibition
 

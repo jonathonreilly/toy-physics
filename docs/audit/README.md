@@ -143,7 +143,8 @@ The agent does **not** receive the broader publication framing or the
 publication-facing claim status. That is the "fresh look" requirement. The
 agent returns a fill of the audit row.
 
-For high-stakes claims (anything gating a flagship), a second independent
+For high-stakes claims (`criticality = critical` by transitive-descendant
+count; the audit lane does not use author-declared flagship status), a second independent
 agent runs the same audit; the two must agree before `audited_clean` lands.
 
 ### Pruning phase (per decoration cluster)

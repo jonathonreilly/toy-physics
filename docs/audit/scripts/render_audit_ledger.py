@@ -155,17 +155,16 @@ def render_top_load_bearing(rows: dict[str, dict], n: int = 25) -> str:
     sortable.sort(key=lambda r: -float(r.get("load_bearing_score") or 0))
     top = sortable[:n]
     lines = [
-        "| # | claim_id | criticality | desc | flagship | score | audit_status | effective |",
-        "|---:|---|---|---:|:---:|---:|---|---|",
+        "| # | claim_id | criticality | desc | score | audit_status | effective |",
+        "|---:|---|---|---:|---:|---|---|",
     ]
     for i, r in enumerate(top, 1):
         lines.append(
-            "| {i} | `{cid}` | {crit} | {td} | {fg} | {sc:.2f} | `{a}` | {e} |".format(
+            "| {i} | `{cid}` | {crit} | {td} | {sc:.2f} | `{a}` | {e} |".format(
                 i=i,
                 cid=r.get("claim_id"),
                 crit=r.get("criticality") or "leaf",
                 td=r.get("transitive_descendants") or 0,
-                fg="Y" if r.get("gates_flagship") else "",
                 sc=float(r.get("load_bearing_score") or 0),
                 a=r.get("audit_status") or "unaudited",
                 e=render_status_badge(r.get("effective_status") or "unknown"),
@@ -218,6 +217,15 @@ def main() -> int:
         out.append(f"- runners with (D) external comparator hits: {s['runners_with_D']}")
         out.append(f"- decoration candidates (no C, no D): {s['decoration_candidates']}")
         out.append("")
+    out.append("## Top 25 by load-bearing score (topology only)")
+    out.append("")
+    out.append("Criticality and load-bearing score are computed from the citation "
+               "graph alone. The audit lane intentionally does not use "
+               "author-declared flagship status — that would let unratified "
+               "framing drive audit cost on upstream support claims.")
+    out.append("")
+    out.append(render_top_load_bearing(rows, n=25))
+    out.append("")
     out.append("## Applied audits")
     out.append("")
     out.append(render_audited_rows_table(rows))

@@ -74,7 +74,6 @@ def main() -> int:
             "criticality_rank": CRITICALITY_RANK.get(criticality, 0),
             "transitive_descendants": row.get("transitive_descendants", 0),
             "direct_in_degree": row.get("direct_in_degree", 0),
-            "gates_flagship": row.get("gates_flagship", False),
             "load_bearing_score": row.get("load_bearing_score", 0.0),
             "runner_path": row.get("runner_path"),
             "deps": list(row.get("deps", [])),
@@ -135,14 +134,14 @@ def main() -> int:
     md_lines.append("## Top 50")
     md_lines.append("")
     md_lines.append(
-        "| # | claim_id | criticality | desc | flagship | ready | indep required | runner |"
+        "| # | claim_id | criticality | desc | score | ready | indep required | runner |"
     )
-    md_lines.append("|---:|---|---|---:|:---:|:---:|---|---|")
+    md_lines.append("|---:|---|---|---:|---:|:---:|---|---|")
     for i, e in enumerate(top, 1):
         md_lines.append(
             f"| {i} | `{e['claim_id']}` | {e['criticality']} | "
             f"{e['transitive_descendants']} | "
-            f"{'Y' if e['gates_flagship'] else ''} | "
+            f"{e['load_bearing_score']:.2f} | "
             f"{'Y' if e['ready'] else ''} | "
             f"{e['audit_independence_required']} | "
             f"{'`' + e['runner_path'] + '`' if e['runner_path'] else '-'} |"

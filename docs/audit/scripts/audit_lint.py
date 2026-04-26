@@ -16,8 +16,8 @@ Checks (all hard rules from FRESH_LOOK_REQUIREMENTS.md and README.md):
        {proposed_retained, proposed_promoted} is illegal.
      - effective_status = retained requires audit_status = audited_clean
        AND every dep's effective_status = retained.
-     - independence = 'weak' is forbidden as the only audit for a flagship-
-       gating claim (gates_flagship inferred from descendants).
+     - independence = 'weak' is forbidden as the only audit for a critical
+       claim (criticality computed from transitive descendants only).
      - note_hash on row must equal current note hash on disk.
 
   3. Graph health:

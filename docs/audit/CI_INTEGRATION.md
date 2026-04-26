@@ -29,7 +29,8 @@ Run `bash docs/audit/scripts/run_pipeline.sh` on a regular cadence
 adds:
 
 - `classify_runner_passes.py` — heuristic A/B/C/D classifier.
-- `compute_load_bearing.py` — descendants, flagship reach, criticality.
+- `compute_load_bearing.py` — transitive descendants, criticality tier
+  (topology only; the audit lane does not use author-declared flagship status).
 - `invalidate_stale_audits.py` — auto-archives audits where deps changed
   or criticality bumped.
 - `compute_audit_queue.py` — sorted next-up queue.

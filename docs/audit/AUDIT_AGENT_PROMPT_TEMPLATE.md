@@ -160,10 +160,12 @@ caught downstream.
 - If JSON parsing fails or required fields are missing, the response is
   logged as `audit_status = audit_in_progress` with `blocker:
   malformed_audit_response` and the audit is re-queued.
-- For `gates_flagship: true` claims, the pipeline runs the prompt twice
-  in independent sessions and requires matching `verdict` and matching
-  `load_bearing_step_class` before landing `audited_clean`. Mismatches
-  promote to a third-auditor review.
+- For `criticality: critical` claims (by transitive-descendant count;
+  the audit lane intentionally does not use author-declared flagship
+  status), the pipeline runs the prompt twice in independent sessions
+  and requires matching `verdict` and matching `load_bearing_step_class`
+  before landing `audited_clean`. Mismatches promote to a third-auditor
+  review.
 - The auditor's session metadata (model version, session ID, timestamp)
   is recorded in the audit row's `auditor` field; `auditor_family =
   "codex-gpt-5.5"` is set automatically when this template is used.

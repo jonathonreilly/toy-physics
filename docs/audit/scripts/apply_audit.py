@@ -171,7 +171,6 @@ def apply_one(ledger: dict, audit: dict) -> tuple[bool, str]:
         "criticality": row.get("criticality"),
         "load_bearing_score": row.get("load_bearing_score"),
         "transitive_descendants": row.get("transitive_descendants"),
-        "gates_flagship": row.get("gates_flagship"),
     }
 
     rows[cid] = row
