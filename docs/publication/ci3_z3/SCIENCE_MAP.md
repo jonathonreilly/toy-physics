@@ -110,7 +110,9 @@ Validate with:
 ## Quantitative Electroweak, QCD, Yukawa, and Higgs Package
 
 - retained quantitative lanes:
-  `alpha_s(M_Z)`, EW normalization, retained YT/top transport
+  `alpha_s(M_Z)`, EW normalization, retained EW Higgs gauge-mass
+  diagonalization as the tree-level mass/charge guardrail, retained YT/top
+  transport
 - promoted quantitative flavor lane:
   CKM atlas/axiom package, including the standalone Wolfenstein structural
   identities `lambda^2 = alpha_s(v)/2`, `A^2 = 2/3`, and the CP-phase

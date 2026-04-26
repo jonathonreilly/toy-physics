@@ -124,6 +124,7 @@ generating the boundary character data of `Z_6^env`, equivalently the Perron eig
 | `g_2(v)` | `0.6480` | derived | same-surface plaquette derivative + derived `R_conn` support | EW normalization, Higgs/top support | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md) |
 | `sin^2(theta_W)(M_Z)` | `0.2306` | derived | same-surface plaquette derivative + derived `R_conn` support + running bridge | same-surface EW lane, low-energy comparison | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md) |
 | `1/alpha_EM(M_Z)` | `127.67` | derived | same-surface plaquette derivative + derived `R_conn` support + running bridge | same-surface EW lane, low-energy comparison | [YT_EW_COLOR_PROJECTION_THEOREM.md](../../YT_EW_COLOR_PROJECTION_THEOREM.md) |
+| EW Higgs gauge-mass diagonalization | `M_W^2=g^2v^2/4`; `M_Z^2=(g^2+g_Y^2)v^2/4`; `Q=T_3+Y`; `rho_tree=1` | retained / exact | one neutral `SU(2)_L` Higgs doublet with `Y_H=1/2`; tree-level mass-matrix diagonalization only | EW normalization dictionary, bounded `M_W` hygiene, tree-level Higgs-mechanism bookkeeping | [EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md](../../EW_HIGGS_GAUGE_MASS_DIAGONALIZATION_THEOREM_NOTE_2026-04-26.md) |
 | `alpha_s(M_Z)` | `0.1181` | derived | same-surface plaquette derivative + one-decade running bridge | standalone strong-coupling lane, confinement, continuum positioning | [ALPHA_S_DERIVED_NOTE.md](../../ALPHA_S_DERIVED_NOTE.md) |
 
 ## C. Closed flavor package values

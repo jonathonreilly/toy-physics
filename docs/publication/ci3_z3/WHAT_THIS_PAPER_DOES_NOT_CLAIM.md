@@ -195,6 +195,8 @@ The paper does **not** claim:
 
 - fully retained top/Yukawa closure;
 - fully retained Higgs/vacuum closure;
+- that the retained EW Higgs gauge-mass diagonalization theorem is a pole-mass,
+  loop-correction, or Higgs-mass derivation;
 - promoted cosmology closure;
 - native-axiom derivation of the `3/5` GUT normalization used in the
   `R_base = 31/9` support identity;

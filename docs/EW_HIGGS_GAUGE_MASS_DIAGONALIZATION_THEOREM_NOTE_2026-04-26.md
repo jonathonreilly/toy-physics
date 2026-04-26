@@ -10,6 +10,8 @@ same-surface notes. It does not modify, promote, or close any Higgs-mass,
 top-Yukawa, `alpha_s`, CKM, PMNS, dark-sector, cosmology, time-travel,
 teleportation, or antigravity lane.
 
+**Primary runner:** `scripts/frontier_ew_higgs_gauge_mass_diagonalization.py`
+
 ## 1. Claim
 
 Let the electroweak gauge group be
@@ -467,3 +469,17 @@ systematics.
 - `HIGGS_MASS_DERIVED_NOTE.md` -- current Higgs authority boundary.
 - `YT_EW_COLOR_PROJECTION_THEOREM.md` -- retained EW coupling normalization.
 - `W_MASS_DERIVED_NOTE.md` -- bounded same-surface `M_W` consistency probe.
+
+## 12. Reproduction
+
+```bash
+python3 scripts/frontier_ew_higgs_gauge_mass_diagonalization.py
+python3 -m py_compile scripts/frontier_ew_higgs_gauge_mass_diagonalization.py
+```
+
+Expected verifier status:
+
+```text
+TOTAL: PASS=46, FAIL=0
+VERDICT: CLOSED
+```
