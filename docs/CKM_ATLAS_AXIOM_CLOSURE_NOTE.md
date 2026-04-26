@@ -5,6 +5,7 @@
 **Script:** `scripts/frontier_ckm_atlas_axiom_closure.py`
 **Named subtheorems:** [`WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md`](WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md),
 [`CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md`](CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md),
+[`CKM_WOLFENSTEIN_ETA_INVERSE_SQUARE_GAP_THEOREM_NOTE_2026-04-26.md`](CKM_WOLFENSTEIN_ETA_INVERSE_SQUARE_GAP_THEOREM_NOTE_2026-04-26.md),
 [`CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md`](CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md),
 [`CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md`](CKM_ATLAS_TRIANGLE_RIGHT_ANGLE_THEOREM_NOTE_2026-04-24.md),
 [`CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md`](CKM_NLO_BARRED_TRIANGLE_PROTECTED_GAMMA_THEOREM_NOTE_2026-04-25.md),
@@ -156,6 +157,11 @@ The theorem package is therefore:
 - `|V_tb|_0^2 = 1 - |V_td|_0^2 - |V_ts|_0^2`
 - `rho = 1/6`
 - `eta = sqrt(5)/6`
+- retained CKM inverse-square structural reading:
+  `eta^2 = 1/N_pair^2 - 1/N_color^2 = 5/36`,
+  `rho A^2 = 1/N_color^2 = 1/9`,
+  `eta^2 + rho A^2 = 1/N_pair^2 = 1/4`, and
+  `eta^2 + 2 rho A^2 = 1/N_pair^2 + 1/N_color^2 = 13/36`
 - retained CKM Bernoulli-family corollary:
   `M(N_pair)=1/2`, `M(N_color)=A^2=2/3`, `M(N_quark)=1-rho=5/6`,
   `V(N_pair)=1/4`, `V(N_color)=2/9`, `V(N_quark)=eta^2=5/36`,

@@ -35,6 +35,8 @@ questions:
   electroweak normalization, retained top/Yukawa transport, promoted CKM
   atlas/axiom numerics including `lambda^2 = alpha_s(v)/2`,
   `A^2 = 2/3` with a retained below-`W2` quark-doublet grounding theorem,
+  the exact CKM inverse-square reading
+  `eta^2 = 1/N_pair^2 - 1/N_color^2 = 5/36`,
   `cos^2(delta_CKM) = 1/6`, and the rescaled atlas-triangle
   right-angle identity `alpha_0 = 90 deg`; the Thales-pinned
   `alpha_s`-independent ratio class now includes

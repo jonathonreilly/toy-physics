@@ -1,0 +1,150 @@
+========================================================================================
+CKM Wolfenstein eta^2 inverse-square structural reading
+See docs/CKM_WOLFENSTEIN_ETA_INVERSE_SQUARE_GAP_THEOREM_NOTE_2026-04-26.md
+========================================================================================
+
+----------------------------------------------------------------------------------------
+Ground-up verification of cited authorities from disk
+----------------------------------------------------------------------------------------
+  [LEFT_HANDED_CHARGE_MATCHING_NOTE.md]
+    role:   Q_L:(2,3) source literal
+    status: 'retained corollary on the current paper surface'
+  [PASS] Retained-tier verified for LEFT_HANDED_CHARGE_MATCHING_NOTE.md
+
+  [ONE_GENERATION_MATTER_CLOSURE_NOTE.md]
+    role:   u_R,d_R:(1,3) cross-check
+    status: 'retained'
+  [PASS] Retained-tier verified for ONE_GENERATION_MATTER_CLOSURE_NOTE.md
+
+  [CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md]
+    role:   below-W2 source theorem
+    status: 'retained CKM × Cl(3) closure theorem on retained-tier authorities.'
+  [PASS] Retained-tier verified for CKM_A_SQUARED_BELOW_W2_Y_QUANTUM_CLOSURE_THEOREM_NOTE_2026-04-25.md
+
+  [WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md]
+    role:   A^2 structural identity
+    status: 'Retained structural-identity subtheorem of the promoted CKM'
+  [PASS] Retained-tier verified for WOLFENSTEIN_LAMBDA_A_STRUCTURAL_IDENTITIES_THEOREM_NOTE_2026-04-24.md
+
+  [CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md]
+    role:   rho and eta^2 retained package
+    status: 'retained standalone structural-identity theorem on `main`.'
+  [PASS] Retained-tier verified for CKM_CP_PHASE_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md
+
+  [CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md]
+    role:   N_pair, N_color, N_quark counts
+    status: 'retained structural-identity subtheorem of the promoted CKM'
+  [PASS] Retained-tier verified for CKM_MAGNITUDES_STRUCTURAL_COUNTS_THEOREM_NOTE_2026-04-25.md
+
+  [CKM_MULTI_PROJECTION_BERNOULLI_FAMILY_THEOREM_NOTE_2026-04-25.md]
+    role:   Bernoulli comparator
+    status: 'retained CKM-structure theorem on current `main`. This note'
+  [PASS] Retained-tier verified for CKM_MULTI_PROJECTION_BERNOULLI_FAMILY_THEOREM_NOTE_2026-04-25.md
+
+
+----------------------------------------------------------------------------------------
+S1 source extraction from retained matter-content literal
+----------------------------------------------------------------------------------------
+  [PASS] Extract Q_L:(a,b) from retained doc
+  [PASS] Extract u_R:(1,3) from retained doc
+  [PASS] Extract d_R:(1,3) from retained doc
+  Q_L literal gives N_pair=2, N_color=3
+  Derived N_quark = N_pair * N_color = 6
+  Cross-check u_R=(1, 3), d_R=(1, 3)
+  [PASS] u_R color dimension matches Q_L color dimension
+  [PASS] d_R color dimension matches Q_L color dimension
+
+----------------------------------------------------------------------------------------
+Retained CKM package values
+----------------------------------------------------------------------------------------
+  rho   = 1/6 = 1/6
+  eta^2 = (6-1)/6^2 = 5/36
+  A^2   = 2/3 = 2/3
+  [PASS] Retained rho = 1/6
+  [PASS] Retained eta^2 = 5/36
+  [PASS] Retained A^2 = 2/3
+
+----------------------------------------------------------------------------------------
+W1: eta^2 as inverse-square dimension gap
+----------------------------------------------------------------------------------------
+  1/N_pair^2  = 1/4
+  1/N_color^2 = 1/9
+  W1 value     = 5/36
+  Retained eta^2 = 5/36
+  [PASS] W1 gives 5/36
+  [PASS] W1 matches retained eta^2
+
+----------------------------------------------------------------------------------------
+W2: rho A^2 factorization
+----------------------------------------------------------------------------------------
+  rho A^2      = 1/6 * 2/3 = 1/9
+  1/N_color^2  = 1/9
+  [PASS] W2 gives 1/9
+  [PASS] W2 matches 1/N_color^2
+
+----------------------------------------------------------------------------------------
+W3/W4 companion sum identities
+----------------------------------------------------------------------------------------
+  W3 = eta^2 + rho A^2 = 1/4
+  1/N_pair^2          = 1/4
+  W4 = eta^2 + 2 rho A^2 = 13/36
+  1/N_pair^2 + 1/N_color^2 = 13/36
+  [PASS] W3 gives 1/4
+  [PASS] W3 matches 1/N_pair^2
+  [PASS] W4 gives 13/36
+  [PASS] W4 matches sum of inverse squares
+
+----------------------------------------------------------------------------------------
+W5/W6 factored readouts
+----------------------------------------------------------------------------------------
+  rho from counts       = 1/6
+  eta^2 factored value  = (9 - 4)/36 = 5/36
+  [PASS] W5: rho = 1/(N_pair N_color)
+  [PASS] W6: eta^2 = (N_color^2 - N_pair^2)/N_quark^2
+
+----------------------------------------------------------------------------------------
+Bernoulli-family comparator cross-check
+----------------------------------------------------------------------------------------
+  V(N_pair) M(N_color) M(N_quark) = 1/4 * 2/3 * 5/6
+                                  = 5/36
+  [PASS] Bernoulli comparator reproduces eta^2
+
+----------------------------------------------------------------------------------------
+Audit: W2 is a generic factorization, not an SM-uniqueness claim
+----------------------------------------------------------------------------------------
+  (N_pair, N_color)=(1,2) -> rho A^2 = 1/N_color^2 ? True
+  (N_pair, N_color)=(1,3) -> rho A^2 = 1/N_color^2 ? True
+  (N_pair, N_color)=(1,4) -> rho A^2 = 1/N_color^2 ? True
+  (N_pair, N_color)=(1,5) -> rho A^2 = 1/N_color^2 ? True
+  (N_pair, N_color)=(2,2) -> rho A^2 = 1/N_color^2 ? True
+  (N_pair, N_color)=(2,3) -> rho A^2 = 1/N_color^2 ? True
+  (N_pair, N_color)=(2,4) -> rho A^2 = 1/N_color^2 ? True
+  (N_pair, N_color)=(2,5) -> rho A^2 = 1/N_color^2 ? True
+  [PASS] W2 holds identically on sampled count surface
+
+----------------------------------------------------------------------------------------
+Framing audit
+----------------------------------------------------------------------------------------
+  This theorem is a retained structural reading of eta^2 on the sourced
+  Q_L:(2,3) surface. It does not claim a new below-Wn closure.
+  It also does not claim W2 is SM-unique.
+  [PASS] Framing remains within retained-reading scope
+
+----------------------------------------------------------------------------------------
+Summary
+----------------------------------------------------------------------------------------
+  N_pair=2, N_color=3, N_quark=6
+  A^2=2/3, rho=1/6, eta^2=5/36
+  W1: eta^2 = 1/4 - 1/9 = 5/36
+  W2: rho A^2 = 1/9 = 1/9
+  W3: eta^2 + rho A^2 = 1/4 = 1/4
+  W4: eta^2 + 2 rho A^2 = 13/36
+  W5: rho = 1/(2*3) = 1/6
+  W6: eta^2 = (9-4)/36 = 5/36
+
+  ETA_SQ_INVERSE_SQUARE_GAP_VERIFIED = True
+  W2_GENERIC_FACTORIZATION_VERIFIED  = True
+
+========================================================================================
+TOTAL: PASS=28, FAIL=0
+========================================================================================
