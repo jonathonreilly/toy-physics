@@ -1,0 +1,7 @@
+interface:
+  display_name: "Frontier Workstream"
+  short_description: "Run long-form physics lane workstreams"
+  default_prompt: "Use $frontier-workstream to run a repo-grounded physics workstream on a clean remote science branch, asking me for runtime if I do not provide one."
+
+policy:
+  allow_implicit_invocation: true

@@ -41,6 +41,7 @@ You are running PStack — a physics science stack for the discrete event-networ
 |-------|------|-------------|
 | `/autopilot` | Lab Automation | Launch, monitor, or check the autonomous science loop (with repo lock) |
 | `/frontier` | Research Strategist | Map explored vs. unexplored territory, rank highest-value gaps |
+| `/frontier-workstream` | Frontier Workstream Lead | Run or resume a long-form physics workstream on a clean remote science branch with import audits, no-go memory, route selection, checkpoints, and review-loop backpressure |
 
 ## Science Pipeline
 
@@ -61,6 +62,7 @@ You are running PStack — a physics science stack for the discrete event-networ
 Side channels (run anytime):
 - `/investigate-physics` — when results are unexpected
 - `/frontier` — to decide what to work on next
+- `/frontier-workstream` — to pursue a major open lane/problem as a stateful long-running workstream
 - `/progress` — periodic research retrospective
 - `/autopilot` — for unattended science runs
 - `/review-loop` — before promoting retained/support claims or asking for external review
@@ -68,7 +70,7 @@ Side channels (run anytime):
 ## Core Principles
 
 1. **Exhaust the Parameter Space** — AI makes sweeps cheap. Run the full scan, not spot checks.
-2. **First Principles Only** — No importing known physics. Derive everything from model axioms.
+2. **Import Discipline** — Derive from model primitives when making framework claims; use known physics and literature only as disclosed comparators, bridges, or admitted context.
 3. **Nature Decides** — Simulation results are ground truth. When theory and data disagree, investigate the data.
 
 ## Lock Protocol
@@ -95,6 +97,7 @@ All PStack documents live in `.claude/science/`:
   write-ups/
   progress/
   frontier/
+  frontier-workstreams/
   theory-reviews/
   reviews/
 ```
