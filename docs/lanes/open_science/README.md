@@ -30,7 +30,7 @@ records the work that still needs to be done.
 | # | Lane | Science priority | Approachability | Status today |
 |---|---|---|---|---|
 | 1 | Hadron mass program (m_p, m_π, hadron spectroscopy) | HIGHEST | Tier B-C | confinement T=0 retained; √σ ≈ 465 MeV bounded; m_p, m_π not derived |
-| 2 | Atomic-scale predictions (Rydberg, Lamb shift, fine structure) | HIGH-VISCERAL | Tier A (post-Koide) / B (pre-Koide) | scaffold uses textbook inputs |
+| 2 | Atomic-scale predictions (Rydberg, Lamb shift, fine structure) | HIGH-VISCERAL | Tier A (post-Koide) / B (pre-Koide) | Rydberg dependency chain isolated; constants/Coulomb reduction still open |
 | 3 | Quark masses retention (5 quark masses) | HIGHEST | Tier B-C | bounded companion via threshold-local + up-type extension |
 | 4 | Neutrino quantitative closure (m_ν, Δm², Majorana phases) | HIGH | Tier B-C | "different carriers"; bounded |
 | 5 | Hubble constant H_0 derivation (cosmology matter bridge) | HIGH | Tier B | external input; structural identities retained |
@@ -88,7 +88,7 @@ status elsewhere, the canonical theorem surface wins.
 | 1 | **Quark masses (m_u, m_d, m_s, m_c, m_b)** | bounded companion only | **Active — Lane 3** |
 | 2 | **Charged-lepton masses (m_e, m_μ, m_τ)** | bounded via 3-real PDG pin; Koide closure in flight | partially via existing Koide flagship lane |
 | 3 | **Proton / hadron masses (m_p, m_π, m_K, etc.)** | bounded via confinement only | **Active — Lane 1** |
-| 4 | **Atomic-scale predictions (Rydberg / -13.6 eV)** | scaffold uses textbook inputs | **Active — Lane 2** |
+| 4 | **Atomic-scale predictions (Rydberg / -13.6 eV)** | dependency chain isolated; physical constants still open | **Active — Lane 2** |
 | 5 | **Neutrino sector quantitative (m_ν, Δm², Majorana phases)** | "different carriers" / bounded | **Active — Lane 4** |
 
 ### Tier 2 — HIGH science priority
@@ -183,9 +183,10 @@ total picture is honest rather than only listing the open items.
 
 ## Recommended priority order (subject to review)
 
-1. **Lane 2 (atomic-scale)** first as a fast-win — depends on Koide closure
-   for m_e (in flight), then becomes Tier A substitution. **Visceral defense
-   against "you can't even do hydrogen" attack.**
+1. **Lane 2 (atomic-scale)** first as a fast-win — the Rydberg dependency
+   chain is now isolated, but physical closure still depends on Koide closure
+   for m_e, a proton-mass input, α, and the retained Coulomb/Schrodinger
+   reduction. **Visceral defense against "you can't even do hydrogen" attack.**
 2. **Lane 5 (Hubble)** in parallel — has the most recent structural-identity
    landings (single-ratio inverse reconstruction, FRW kinematic reduction,
    R_base = 31/9, N_eff, matter-radiation equality). Closer to closure than

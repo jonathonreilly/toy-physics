@@ -10,6 +10,9 @@ basic quantitative checks once absolute charged-lepton scales are available.
 energy, fine-structure corrections, and Lamb/hyperfine follow-ons.
 **First parallel-worker target:** isolate the exact dependency chain from
 `m_e`, α, and retained electroweak/QED inputs to the first Rydberg theorem.
+**First-target status:** dependency chain isolated by
+[ATOMIC_RYDBERG_DEPENDENCY_COMPRESSION_THEOREM_NOTE_2026-04-26.md](../../ATOMIC_RYDBERG_DEPENDENCY_COMPRESSION_THEOREM_NOTE_2026-04-26.md);
+the constants and Coulomb/Schrodinger reduction remain open inputs.
 **Non-claim boundary:** current atomic content remains scaffold-only until
 those dependencies are retained.
 
@@ -46,11 +49,16 @@ does not close it.
 
 - ATOMIC_HYDROGEN_HELIUM_PROBE_NOTE — uses textbook m_e, e, ℏ; produces -13.6 eV
   via standard radial Schrödinger eigensolver but NOT from framework inputs
+- ATOMIC_RYDBERG_DEPENDENCY_COMPRESSION_THEOREM_NOTE_2026-04-26 — isolates
+  the exact leading Rydberg dependency chain from the nonrelativistic Coulomb
+  Hamiltonian, `alpha`, `m_e`, and the reduced-mass `m_p` correction; it is an
+  open-lane bridge, not a retained first-principles Rydberg prediction
 
 ### Absent
 
 - m_e from framework (depends on Koide closure + V_0 retention)
 - Rydberg constant from framework first principles
+- retained nonrelativistic Coulomb reduction from the discrete framework
 - Lamb shift derivation
 - Hyperfine structure
 - Muon g-2 prediction
@@ -120,6 +128,9 @@ H_2, HeH⁺, He_2, etc. via standard quantum chemistry.
 
 ## 4. Existing scaffolding to build on
 
+- [ATOMIC_RYDBERG_DEPENDENCY_COMPRESSION_THEOREM_NOTE_2026-04-26.md](../../ATOMIC_RYDBERG_DEPENDENCY_COMPRESSION_THEOREM_NOTE_2026-04-26.md) —
+  exact dependency-compression theorem for the leading hydrogenic Rydberg
+  series; validator `frontier_atomic_rydberg_dependency_compression.py`
 - [ATOMIC_HYDROGEN_HELIUM_PROBE_NOTE.md](../../ATOMIC_HYDROGEN_HELIUM_PROBE_NOTE.md) —
   existing eigensolver harness with textbook inputs
 - [BOUND_STATE_SELECTION_NOTE.md](../../BOUND_STATE_SELECTION_NOTE.md) —
