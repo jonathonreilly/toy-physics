@@ -77,6 +77,23 @@ See `docs/KOIDE_NATIVE_DIMENSIONLESS_REVIEW_PACKET_2026-04-24.md`,
 and
 `docs/KOIDE_Q_ONSITE_SOURCE_DOMAIN_NO_GO_SYNTHESIS_NOTE_2026-04-25.md`.
 
+**2026-04-26 Euclidean-rotation addendum.** The reviewed Euclidean-rotation
+branch contributes one useful exact support theorem and one non-landed
+overpromotion. What lands is the closed-form selected-line carrier identity
+
+```text
+p_1 + i p_2 = 2^(-1/2) exp(i(pi/6 - theta)),
+alpha(theta) - alpha(theta_0) = -delta.
+```
+
+Thus, if the Brannen selected-line readout is already fixed and
+`delta = 2/9`, the Euclidean rotation-angle difference is exactly `-2/9`.
+This upgrades the selected-line rotation geometry from numerical compatibility
+to a symbolic identity. It does not prove the physical selected-line
+boundary-source law, based endpoint, or Type-B rational-to-radian readout.
+See
+`docs/KOIDE_DELTA_EUCLIDEAN_ROTATION_SUPPORT_AUDIT_NOTE_2026-04-26.md`.
+
 **Executability guarantee.** Every PASS check across the runner stack is an
 actual executable computation: symbolic via sympy, numeric via PDG lepton
 masses, or direct structural checks.  The April 21 core stack reports

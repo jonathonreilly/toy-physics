@@ -36,12 +36,25 @@ The support runner verifies:
 - the physical point still satisfies `α(m_*) - α(m_0) = -2/9`;
 - the full first-branch span is exactly `π/12 = 2π/|O|` with `|O| = 24`.
 
+The April 26 Euclidean-rotation audit upgrades the first item from a
+pointwise/numerical check to the closed-form carrier identity
+
+```text
+p_1 + i p_2 = 2^(-1/2) exp(i(pi/6 - theta)),
+alpha(theta) = pi/6 - theta,
+alpha(theta) - alpha(theta_0) = -delta.
+```
+
+This says that, once the Brannen selected-line parameter is already admitted,
+its Euclidean-coordinate meaning on the first branch is exact.
+
 This is a real strengthening of the lane. It shows that the selected-line
 Brannen value sits inside an exact retained cubic/octahedral geometry rather
 than only as an unexplained numerical target.
 
 What it still does **not** prove is that the physical interior point must be
-chosen by that geometry alone.
+chosen by that geometry alone, or that the Type-B rational `2/9` must be read
+as the Euclidean radian Brannen offset.
 
 ## 2. Conditional Route-3 support
 
@@ -110,12 +123,14 @@ The new Callan-Harvey candidate route should be read the same way:
 
 - `docs/KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md`
 - `docs/KOIDE_BRANNEN_CALLAN_HARVEY_CANDIDATE_NOTE_2026-04-22.md`
+- `docs/KOIDE_DELTA_EUCLIDEAN_ROTATION_SUPPORT_AUDIT_NOTE_2026-04-26.md`
 
 ### Runners
 
 - `scripts/frontier_koide_brannen_route3_geometry_support.py`
 - `scripts/frontier_koide_brannen_dirac_support.py`
 - `scripts/frontier_koide_brannen_callan_harvey_candidate.py`
+- `scripts/frontier_koide_delta_euclidean_rotation_support_audit.py`
 
 ## 6. Bottom line
 

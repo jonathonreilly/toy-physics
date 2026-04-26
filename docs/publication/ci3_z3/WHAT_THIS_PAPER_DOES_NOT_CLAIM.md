@@ -177,6 +177,12 @@ The paper does **not** claim:
   exact support theorem proves `Q=(c^2+2)/6` and `Q=2/3 <=> c^2=2` on that
   carrier, but it does not derive the physical carrier/source law, retained
   `c^2=2`, or `delta_Brannen=2/9 rad`.
+- that the Euclidean-rotation identity closes the charged-lepton Brannen
+  phase.  The exact support audit proves
+  `p_1+i p_2=2^(-1/2) exp(i(pi/6-theta))` and
+  `alpha(theta)-alpha(theta_0)=-delta` on the selected-line carrier, but it
+  does not derive the physical boundary-source, based endpoint, or Type-B
+  rational-to-radian readout laws.
 
 The current retained claim is:
 

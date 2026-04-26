@@ -24,6 +24,7 @@ RUNNERS = [
     ("frontier_koide_equivariant_berry_aps_selector.py", 15),
     ("frontier_koide_dirac_zero_mode_phase_theorem.py", 10),
     ("frontier_koide_brannen_route3_geometry_support.py", 30),
+    ("frontier_koide_delta_euclidean_rotation_support_audit.py", 22),
     ("frontier_koide_brannen_dirac_support.py", 11),
     ("frontier_charged_lepton_radiative_yukawa_theorem.py", 11),
     ("frontier_koide_eta_lefschetz_spectral_flow.py", 8),
@@ -124,6 +125,8 @@ def main() -> int:
         print("  - zero-mode / APS  : strengthened candidate bridge to physical δ")
         print("  - Brannen geometry : exact selected-line rotation / octahedral-domain")
         print("                      support on the retained first branch")
+        print("  - delta rotation    : closed-form selected-line identity")
+        print("                      alpha(theta)-alpha(theta0)=-delta; support only")
         print("  - finite-lattice   : explicit L=3 Wilson-Dirac descent illustration")
         print("                      for the ambient 2/9 value")
         print("  - C_τ = 1 route    : explicit radiative/Yukawa support calculation")
