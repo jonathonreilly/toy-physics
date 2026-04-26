@@ -1,12 +1,13 @@
 # Planck Target 3 Cubic-Bivector Schur Boundary Source Principle Theorem
 
 **Date:** 2026-04-26
-**Status:** retained positive structural support theorem responding to
-[`review.md`](../review.md) (Codex 2026-04-26 review of
-`claude/relaxed-wu-a56584` branch tip `47e7891e`); does **not** by itself
-promote the Planck Target 3 chain to unconditional retained closure, but
-replaces the previous rank-matching assertion with object-level canonical
-retained content and protects the APS-like spectral gap
+**Status:** retained STRUCTURAL FOUNDATION for the unconditional Planck
+Target 3 closure, responding to [`review.md`](../review.md) (Codex
+2026-04-26 review of `claude/relaxed-wu-a56584` branch tip `47e7891e`).
+Both originally-open residuals (R1, R2) are now CLOSED by the companion
+[`PLANCK_TARGET3_SCHUR_SOURCE_COUPLING_IDENTITY_THEOREM_NOTE_2026-04-26.md`](PLANCK_TARGET3_SCHUR_SOURCE_COUPLING_IDENTITY_THEOREM_NOTE_2026-04-26.md)
+(R1: P_1 vs P_3 from H_first vacuum-orbit closure; R2: chi_eta*rho*Phi
+identification via closed-form Tr(|L_K|^-1) = 1).
 **Runner:** `scripts/frontier_planck_target3_cubic_bivector_schur_source_principle.py`
 (PASS=42, FAIL=0)
 **Addresses Codex review findings:** all four [P1] mechanical concerns are

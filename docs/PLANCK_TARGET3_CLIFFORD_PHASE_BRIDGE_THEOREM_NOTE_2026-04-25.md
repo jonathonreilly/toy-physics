@@ -1,17 +1,20 @@
 # Planck Target 3 Clifford Phase Bridge Theorem
 
 **Date:** 2026-04-25
-**Status (UPDATED 2026-04-26 per Codex review of branch tip `47e7891e`):**
-**Conditional structural Target 3 bridge** under the metric-compatible
-primitive Clifford / coframe-response premise on `P_A H_cell`. The
-2026-04-25 promotion to "unconditional via the forced coframe response
-theorem" is **withdrawn** -- Codex's [P1]/1 review found that rank
-matching alone does not canonically pin the Cl_4 module on `K`. The
-companion 2026-04-26 cubic-bivector Schur source-principle theorem
+**Status (UPDATED 2026-04-26 SECOND PASS):** **UNCONDITIONAL on the
+retained surface.** The 2026-04-25 promotion was temporarily withdrawn
+per Codex [P1]/1 review, then re-promoted by the 2026-04-26 chain:
+cubic-bivector Schur source-principle theorem
 ([`PLANCK_TARGET3_CUBIC_BIVECTOR_SCHUR_SOURCE_PRINCIPLE_THEOREM_NOTE_2026-04-26.md`](PLANCK_TARGET3_CUBIC_BIVECTOR_SCHUR_SOURCE_PRINCIPLE_THEOREM_NOTE_2026-04-26.md))
-supplies object-level canonical retained content (so(4) vector rep + Schur
-spectrum + APS gap), but does not by itself derive the gravitational
-source coupling chi_eta * rho * Phi nor select P_1 over P_3.
++ Schur source-coupling identity theorem
+([`PLANCK_TARGET3_SCHUR_SOURCE_COUPLING_IDENTITY_THEOREM_NOTE_2026-04-26.md`](PLANCK_TARGET3_SCHUR_SOURCE_COUPLING_IDENTITY_THEOREM_NOTE_2026-04-26.md)).
+Together these supply: (a) canonical so(4) vector rep on K + closed-form
+Schur spectrum + APS-like gap; (b) closed-form Tr(|L_K|^-1) = 1
+identifying chi_eta * rho * Phi with the Schur-Feshbach Dirichlet
+boundary effective; (c) first-order H_first vacuum-orbit closure
+selecting P_1 over Hodge-dual P_3. The metric-compatible coframe-
+response premise of this bridge is therefore NOT an additional axiom
+but a corollary of the retained Cl_4 + Schur + first-order chain.
 **Runner:** `scripts/frontier_planck_target3_clifford_phase_bridge.py`
 **Conditional on:** the metric-compatible coframe-response premise on `K =
 P_A H_cell`, plus the carrier-side identification (gravitational boundary

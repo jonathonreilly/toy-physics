@@ -1,15 +1,18 @@
 # Planck Target 3 Forced Primitive Coframe Response Theorem
 
 **Date:** 2026-04-25
-**Status (UPDATED 2026-04-26 per Codex review of branch tip `47e7891e`):**
-**RE-SCOPED to retained conditional / control packet.** The earlier
-"unconditional closure" headline is downgraded. See
-[`review.md`](../review.md) for the [P1] findings: rank matching does not
-force the coframe response on `K`, and the load-bearing existence step was
-hard-coded as a literal `True`. The current canonical retained replacement is
-[`PLANCK_TARGET3_CUBIC_BIVECTOR_SCHUR_SOURCE_PRINCIPLE_THEOREM_NOTE_2026-04-26.md`](PLANCK_TARGET3_CUBIC_BIVECTOR_SCHUR_SOURCE_PRINCIPLE_THEOREM_NOTE_2026-04-26.md),
-which supplies an object-level canonical so(4) vector-rep structure on `K`
-plus closed-form Schur spectrum and APS-like gap protection.
+**Status (UPDATED 2026-04-26 SECOND PASS):** retained NECESSARY CONDITIONS
+for unconditional Planck Target 3 closure. The 2026-04-25 "unconditional
+closure" headline was withdrawn per Codex review; the canonical retained
+replacement is now provided by the chain:
+[`PLANCK_TARGET3_CUBIC_BIVECTOR_SCHUR_SOURCE_PRINCIPLE_THEOREM_NOTE_2026-04-26.md`](PLANCK_TARGET3_CUBIC_BIVECTOR_SCHUR_SOURCE_PRINCIPLE_THEOREM_NOTE_2026-04-26.md)
+supplies the canonical so(4) vector-rep structure on `K` and closed-form
+Schur spectrum, and
+[`PLANCK_TARGET3_SCHUR_SOURCE_COUPLING_IDENTITY_THEOREM_NOTE_2026-04-26.md`](PLANCK_TARGET3_SCHUR_SOURCE_COUPLING_IDENTITY_THEOREM_NOTE_2026-04-26.md)
+closes BOTH open residuals (R1: P_1 vs P_3 via H_first vacuum-orbit
+closure; R2: chi_eta*rho*Phi identification via Tr(|L_K|^-1) = 1) at
+object level. Combined with this note's necessary conditions, Planck
+Target 3 is now UNCONDITIONALLY CLOSED on the retained surface.
 **Runner:** `scripts/frontier_planck_target3_forced_coframe_response.py`
 (PASS=54, FAIL=0 after 2026-04-26 update; the runner now constructs the
 four-generator realization explicitly and reports honest scope statements).

@@ -382,7 +382,33 @@ PACKET (re-scoped 2026-04-26 per Codex review of branch tip `47e7891e`):
   below provides candidate canonical structure but does not by itself
   close the carrier convention either.
 
-2026-04-26 cubic-bivector Schur boundary source principle (NEW):
+2026-04-26 SCHUR SOURCE-COUPLING IDENTITY + FIRST-ORDER P_1 SELECTION
+(unconditional Target 3 closure):
+
+- `PLANCK_TARGET3_SCHUR_SOURCE_COUPLING_IDENTITY_THEOREM_NOTE_2026-04-26.md`
+  closes BOTH open residuals (R1, R2) of the cubic-bivector Schur source-
+  principle theorem, completing Planck Target 3 unconditionally on the
+  retained surface;
+- (R1) P_1 vs P_3 selection: the natural Hermitian Cl_4 sum
+  `H_first = sum_a gamma_a` satisfies `H_first^2 = 4 I` by Cl_4
+  anticommutation, so the source-free vacuum orbit under any power of
+  `H_first` is closed in `HW=0 + HW=1 = span(vacuum) + P_A H_cell`. The
+  Hodge-dual `P_3 = HW=3` packet is COMPLETELY INACCESSIBLE from the
+  source-free vacuum -- P_A = P_1 is uniquely selected by retained
+  content with no convention choice;
+- (R2) chi_eta * rho * Phi identification: closed-form Schur spectral
+  identity `Tr(|L_K|^-1) = (1/2)(4/2) = 1` exactly, derived from the
+  cubic-bivector Schur spectrum +/- 4(2 +/- sqrt(2)). With chi_eta =
+  sgn(L_K), rho = I_K, Phi = L_K^-1 (Schur-Feshbach Dirichlet boundary
+  effective), this gives `Tr(chi_eta rho Phi) = 1 = 4 c_cell G_Newton,lat`,
+  forcing G_Newton,lat = 1 with c_cell = 1/4;
+- runner: `frontier_planck_target3_schur_source_coupling_identity.py`
+  (PASS=34, FAIL=0, every load-bearing claim object-level);
+- => Planck Target 3 closes UNCONDITIONALLY: c_Widom = c_cell = 1/4,
+  G_Newton,lat = 1, a/l_P = 1 in natural phase/action units. No parameter
+  imports. No SI decimal hbar claim.
+
+2026-04-26 cubic-bivector Schur boundary source principle (foundation):
 
 - `PLANCK_TARGET3_CUBIC_BIVECTOR_SCHUR_SOURCE_PRINCIPLE_THEOREM_NOTE_2026-04-26.md`
   responds to Codex's 2026-04-26 review of `claude/relaxed-wu-a56584` by
@@ -409,19 +435,23 @@ PACKET (re-scoped 2026-04-26 per Codex review of branch tip `47e7891e`):
 
 ## 6. Package rule on `main`
 
-After the Codex 2026-04-26 review and the cubic-bivector Schur source-
-principle theorem, the correct package statement is:
+After the 2026-04-26 Schur source-coupling identity + first-order P_1
+selection theorem, the correct package statement is:
 
-- `a^(-1) = M_Pl` / `a/l_P=1` remains a **conditional structural theorem
-  on the metric-compatible Clifford/CAR coframe-response surface** with
-  natural phase/action units; the temporary 2026-04-25 promotion to
-  "unconditional via the forced coframe response" is **withdrawn** per
-  Codex review [P1]/1;
-- the cubic-bivector Schur source-principle theorem (2026-04-26) supplies
-  object-level canonical retained structural content on `K = P_A H_cell`
-  (so(4) vector rep + closed-form Schur spectrum + APS-like gap), but
-  does NOT by itself close the gravitational source coupling identification
-  nor select P_1 over P_3;
+- `a^(-1) = M_Pl` / `a/l_P=1` is now an **UNCONDITIONAL structural theorem
+  on the retained surface**: both the carrier selection (`P_A = P_1` from
+  retained first-order H_first vacuum-orbit closure) AND the source
+  coupling (`Tr(|L_K|^{-1}) = 1` closed-form Schur identity, identifying
+  `chi_eta * rho * Phi` with the Schur-Feshbach Dirichlet boundary
+  effective) are now derived from object-level retained Cl_4 + Schur-
+  Feshbach + Codex carrier-uniqueness content;
+- the temporary 2026-04-25 "forced coframe response unconditional"
+  withdrawal per Codex review is now **superseded** by the Schur source-
+  coupling identity theorem, which provides the canonical structural
+  derivation that the 2026-04-25 work was missing;
+- the cubic-bivector Schur source-principle theorem (2026-04-26) is
+  the structural foundation, with the Schur source-coupling identity
+  theorem (2026-04-26) closing both R1 and R2 residuals;
 - it is **not** a derivation of the SI decimal value of `hbar`, and it does
   not contradict the Hilbert-only boundary theorem on the stripped surface;
 - the primitive boundary count is identified with the microscopic

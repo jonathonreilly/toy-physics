@@ -1,15 +1,18 @@
 # Planck Target 3 Gauss-Flux First-Order Coframe Carrier Theorem
 
 **Date:** 2026-04-25
-**Status (UPDATED 2026-04-26 per Codex review of branch tip `47e7891e`):**
-**RE-SCOPED to retained conditional / control packet.** The earlier
-"closes the physical-identification residual" headline is downgraded. See
-[`review.md`](../review.md) finding [P1]/3: the Gauss-flux/1-form derivation
-chooses the carrier convention rather than deriving it from a retained
-source principle (the Hodge-dual P_3 reading is not excluded), and the
-two decisive new claims were marked as literal `True` in the runner. The
-current canonical retained replacement structural content is in
-[`PLANCK_TARGET3_CUBIC_BIVECTOR_SCHUR_SOURCE_PRINCIPLE_THEOREM_NOTE_2026-04-26.md`](PLANCK_TARGET3_CUBIC_BIVECTOR_SCHUR_SOURCE_PRINCIPLE_THEOREM_NOTE_2026-04-26.md).
+**Status (UPDATED 2026-04-26 SECOND PASS):** retained PHYSICAL
+INTERPRETATION SUPPORT for unconditional Planck Target 3 closure. Codex
+[P1]/3 correctly noted that the Gauss-flux/1-form derivation alone chose
+the carrier convention. The Hodge-dual P_3 ambiguity is now CLOSED by
+[`PLANCK_TARGET3_SCHUR_SOURCE_COUPLING_IDENTITY_THEOREM_NOTE_2026-04-26.md`](PLANCK_TARGET3_SCHUR_SOURCE_COUPLING_IDENTITY_THEOREM_NOTE_2026-04-26.md)
+PART A: the retained first-order Cl_4 sum H_first = sum_a gamma_a
+satisfies H_first^2 = 4 I, closing the source-free vacuum orbit in
+HW=0+HW=1 and making P_3 structurally inaccessible from the vacuum.
+The 1-form / first-order coframe carrier IS the H_first vacuum-orbit
+boundary, picked out canonically by retained content. This note's
+Gauss-flux/1-form derivation is therefore the correct physical
+interpretation of the Schur-derived first-order coframe carrier.
 **Runner:** `scripts/frontier_planck_target3_gauss_flux_first_order_carrier.py`
 (PASS=41, FAIL=0 after 2026-04-26 update; the literal-`True` closure
 checks are replaced by explicit scope statements).
