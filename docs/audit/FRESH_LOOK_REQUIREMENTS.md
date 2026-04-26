@@ -16,17 +16,39 @@ For each claim, the audit ledger records:
   (extracted from git blame on the note's load-bearing section, or from the
   note's own `Date` / `Branch` metadata when blame is ambiguous).
 - `auditor` — the agent / human / session that performed the audit.
+- `auditor_family` — the model family of the auditor (e.g., `codex-gpt-5.5`,
+  `claude-opus-4.x`, `human`). Used to enforce cross-family independence.
 
-`auditor` must not equal `author`. Specifically:
+`auditor` must not equal `author`. Strength tiers:
 
-- Different LLM session ID (different conversation, different runtime).
-- Ideally different model family or version. An audit performed by the same
-  model that wrote the note is permitted but logged as `independence: weak`.
-- A human auditor with no prior involvement in the note is the strongest
-  form and is logged as `independence: strong`.
-- An external (off-repo) reviewer is logged as `independence: external` and
-  is the only form that satisfies external impact requirements; the audit
-  lane does not produce these on its own.
+- `independence: weak` — same model family, different session. Permitted
+  but flagged in the ledger; should not be the only audit for a
+  flagship-gating claim.
+- `independence: cross_family` — different model family from the author.
+  This is the standard for the audit lane.
+- `independence: strong` — human auditor with no prior involvement in the
+  note.
+- `independence: external` — off-repo reviewer with no project context.
+  This is the only form that satisfies external-impact requirements; the
+  audit lane does not produce these on its own.
+
+### Designated auditor for this repo
+
+The bulk of existing notes were produced by Claude via the autopilot
+lane (see `docs/ai_methodology/`). To satisfy `independence: cross_family`
+by construction, the audit lane uses **Codex GPT-5.5** as the designated
+independent auditor. Codex is a different model family from Claude, runs
+in a separate session with no autopilot context, and is invoked via the
+prompt template in `AUDIT_AGENT_PROMPT_TEMPLATE.md`.
+
+This does not preclude human auditors or other independent agents — those
+strengthen the audit when available and are recorded with their own
+`auditor_family` value. It establishes Codex GPT-5.5 as the baseline
+independent auditor that the mechanical pipeline routes work to.
+
+A claim audited only by Claude (any session, any version) records
+`independence: weak` and is not eligible to land `effective_status =
+retained` unless cross-confirmed by Codex or a human auditor.
 
 ## 2. Context restriction at audit time
 
@@ -101,6 +123,11 @@ This rule exists because the AI methodology lane's existing self-review
 loops, while well-intentioned, do not satisfy the independence condition;
 the same model context that generated the renaming has a measurable bias
 toward confirming it.
+
+In practice this means: a Claude-produced note (the dominant case in this
+repo) requires Codex GPT-5.5 (or a human, or any non-Claude agent) to
+satisfy the rule. A Codex-produced note requires Claude or a human. A
+human-produced note requires any independent agent or another human.
 
 ## 6. Audit re-runs
 

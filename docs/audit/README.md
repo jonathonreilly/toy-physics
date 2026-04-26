@@ -44,13 +44,21 @@ docs/audit/
     audit_lint.py                    # validate ledger consistency
 ```
 
-## Status fields
+## Status fields and the propose / ratify split
 
-Two parallel status fields per claim:
+The audit lane separates the **science work** of proposing a strong claim
+from the **sign-off work** of ratifying it. Authors propose; the audit lane
+ratifies.
 
-- `current_status` — what the source note declares (`retained`, `promoted`,
-  `bounded`, `support`, `open`).
-- `audit_status` — what the audit found:
+Three parallel fields per claim:
+
+- `current_status` — what the source note declares. Authors may set:
+  - `proposed_retained` — "I have done the science work and believe this
+    should be retained, pending audit." This is the strongest tier an
+    author may self-assign.
+  - `proposed_promoted`, `proposed_bounded` — same idea for those tiers.
+  - `support`, `open` — unchanged; these do not require audit ratification.
+- `audit_status` — what the audit found. Set only by the audit lane:
   - `unaudited` — no audit yet (default for every seeded row)
   - `audit_in_progress`
   - `audited_clean` — derivation actually closes from cited inputs
@@ -61,29 +69,48 @@ Two parallel status fields per claim:
   - `audited_failed` — derivation does not close on its own terms
   - `audited_numerical_match` — depends on a tuned numerical input rather than
     a structural identity
+- `effective_status` — derived. The publication-facing tables read this:
+  - `retained` — `current_status = proposed_retained` AND `audit_status =
+    audited_clean` AND every dependency's `effective_status = retained`.
+  - `proposed_retained` — author has proposed retained, audit not yet clean
+    (or upstream not yet ratified). Honest pending state.
+  - `support` / `bounded` / `open` — as declared, or demoted by audit verdict.
+  - `audited_<failure_mode>` — terminal state from a failed audit.
 
-And one derived field:
-
-- `effective_status` — the minimum of `current_status`, this row's
-  `audit_status`, and every dependency's `effective_status`.
+The interpretation rule for legacy notes: any pre-audit-lane note that
+declared bare `retained` is read by the audit lane as `proposed_retained`
+until audited. No mass rename of existing notes is required; the rewrite
+happens at audit-ledger seed time.
 
 ## The hard rules
 
-1. **Retained requires audited_clean.** A claim with `current_status =
-   retained` but `audit_status != audited_clean` reports as
-   `effective_status = support` to all downstream consumers.
+1. **`retained` is audit-only.** No author may directly write `retained` as
+   `current_status`. The strongest author-settable state is
+   `proposed_retained`. Only the audit lane may grant `effective_status =
+   retained`, and only when this row's `audit_status = audited_clean` AND
+   every dependency's `effective_status = retained`.
 
 2. **Inheritance is monotone-down.** A claim's `effective_status` cannot
    exceed the minimum of its dependencies' `effective_status`. One renaming
    near a root demotes everything that inherits from it.
 
-3. **No self-audit.** The auditor of a claim must not be the same agent (same
-   model session, same repo author, etc.) that produced the claim. See
-   `FRESH_LOOK_REQUIREMENTS.md`.
+3. **No self-audit.** The auditor of a claim must not share identity with
+   the claim's author. Codex GPT-5.5 is the designated independent auditor
+   for this repo (see `FRESH_LOOK_REQUIREMENTS.md`); using a different
+   model family from the one that produced most existing notes (Claude,
+   via the autopilot lane) satisfies the cross-family independence
+   condition by construction.
 
 4. **Decoration must be boxed.** Claims tagged `audited_decoration` cannot
-   appear as separate `retained` rows in the publication-facing tables; they
-   roll up under their parent claim. See `ALGEBRAIC_DECORATION_POLICY.md`.
+   appear as separate `proposed_retained` or `retained` rows in the
+   publication-facing tables; they roll up under their parent claim. See
+   `ALGEBRAIC_DECORATION_POLICY.md`.
+
+5. **Publication tables read `effective_status`.** `CLAIMS_TABLE.md`,
+   `PUBLICATION_MATRIX.md`, and `ARXIV_DRAFT.md` must render
+   `proposed_retained` distinctly from `retained` (e.g., italics + an
+   "unratified" tag). External readers should be able to see at a glance
+   which rows have passed audit and which have not.
 
 ## Workflow
 
