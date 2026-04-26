@@ -107,6 +107,11 @@ Current absolute-scale package rule:
   negatively; its positive primitive-CAR carrier route is conditional on the
   metric-compatible Clifford/CAR coframe response on `P_A H_cell`, which is a
   sharp remaining bridge premise rather than a minimal-stack retained closure
+- the 2026-04-26 `relaxed-wu` support audit adds exact CAR/vacuum, signed
+  `S_4`, and cubic-bivector Schur controls: one-tick CAR gives `P_1`, the
+  grade-1 Clifford invariant is unique, and `Tr(|L_K|^-1)=1`; it also proves
+  that `P_1` and `P_3` have identical Schur spectra, so the physical
+  source-coupling law remains open
 - authority:
   [PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md](../../PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md),
   [PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md](../../PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md),
@@ -115,6 +120,7 @@ Current absolute-scale package rule:
   [PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md](../../PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md),
   [PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md](../../PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md),
   [PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md](../../PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md),
+  [PLANCK_TARGET3_RELAXED_WU_SUPPORT_AUDIT_NOTE_2026-04-26.md](../../PLANCK_TARGET3_RELAXED_WU_SUPPORT_AUDIT_NOTE_2026-04-26.md),
   [AREA_LAW_MULTIPOCKET_SELECTOR_NO_GO_NOTE_2026-04-25.md](../../AREA_LAW_MULTIPOCKET_SELECTOR_NO_GO_NOTE_2026-04-25.md),
   [AREA_LAW_PRIMITIVE_EDGE_ENTROPY_SELECTOR_NO_GO_NOTE_2026-04-25.md](../../AREA_LAW_PRIMITIVE_EDGE_ENTROPY_SELECTOR_NO_GO_NOTE_2026-04-25.md),
   [AREA_LAW_ALGEBRAIC_SPECTRUM_ENTROPY_NO_GO_NOTE_2026-04-25.md](../../AREA_LAW_ALGEBRAIC_SPECTRUM_ENTROPY_NO_GO_NOTE_2026-04-25.md),

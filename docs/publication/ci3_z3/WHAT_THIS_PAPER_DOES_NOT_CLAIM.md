@@ -270,6 +270,10 @@ If a reviewer wants the negative boundary, use this note.
   the unique first-order coframe-slot carrier under stated hypotheses and
   recovers `c_cell=1/4`; it does not prove that physical gravitational
   boundary/action density must be identified with that carrier.
+- The `relaxed-wu` Planck support audit does not change this boundary. Its
+  CAR/vacuum, `S_4`, and Schur computations are exact controls, but the
+  physical Schur/Wald source-coupling law and `P_1` over `P_3` selector remain
+  open.
 - The primitive `c_cell = 1/4` boundary-density statement is not an
   entanglement theorem by itself. The simple-fiber Widom class is now closed
   negatively at `c_Widom <= 1/6`; the multipocket-selector, primitive

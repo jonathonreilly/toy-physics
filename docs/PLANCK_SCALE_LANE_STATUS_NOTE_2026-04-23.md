@@ -60,6 +60,12 @@ in
   [PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md](./PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md):
   carrier commutation leaves an affine hidden character `delta`, so Schur/event
   scalar equality still needs an extra law `delta = 0`.
+- the `relaxed-wu` review is now landed only as a support/control audit in
+  [PLANCK_TARGET3_RELAXED_WU_SUPPORT_AUDIT_NOTE_2026-04-26.md](./PLANCK_TARGET3_RELAXED_WU_SUPPORT_AUDIT_NOTE_2026-04-26.md):
+  the CAR/vacuum one-tick construction gives `P_1`, the signed `S_4` Clifford
+  action gives a unique grade-1 generator, and the cubic-bivector Schur
+  complement gives `Tr(|L_K|^-1)=1`, but `P_1` and `P_3` have identical Schur
+  spectra and the physical Schur/Wald source-coupling law remains open.
 
 This improves the derivation program, but it does not make the older minimal
 finite stack alone derive the SI Planck length. The public package pin remains
@@ -172,6 +178,12 @@ Current blocker:
   boundary/worldtube count is derived as the microscopic carrier of the
   gravitational boundary/action density, rather than accepted as the Planck
   package's carrier identification.
+- `relaxed-wu` adds a useful control result: within a one-tick CAR/vacuum
+  semantics, the boundary operator is exactly `P_1` and has trace coefficient
+  `1/4`; within the signed `S_4` Clifford source class, `H_first` is the unique
+  grade-1 invariant; and within the cubic-bivector Schur control, the trace
+  identity is exact. These are support constraints, not a retained physical
+  source law.
 - the finite-response-only fallback is no longer live: finite primitive-cell
   automorphisms cannot supply the required local response surface.
 - the carrier-only parent-source shortcut is no longer live: it cannot eliminate
