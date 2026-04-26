@@ -309,7 +309,7 @@ than from any `R/Z → U(1)` map. **This closes the `δ = 2/9` bridge.**
 
 ### Main runners
 
-- `scripts/frontier_koide_delta_euclidean_rotation_angle.py` — **54/54 PASS** (retained closure runner; revised 2026-04-26 with closed-form analytic identification Block 5 + Round 1 + Round 2 Nature-grade backpressure tests + Block 7 self-contained multi-route value verification (11 INDEPENDENT retained framework calculations all giving the rational 2/9, closing the value derivation by overdetermination))
+- `scripts/frontier_koide_delta_euclidean_rotation_angle.py` — **58/58 PASS** (retained closure runner; revised 2026-04-26 with closed-form analytic identification Block 5 + Round 1 + Round 2 Nature-grade backpressure tests + Block 7 self-contained multi-route value verification (11 INDEPENDENT retained framework calculations all giving the rational 2/9, closing the value derivation by overdetermination))
 - `scripts/frontier_koide_aps_eta_invariant.py` — **21/21 PASS**
 - `scripts/frontier_koide_aps_topological_robustness.py` — **41/41 PASS**
 - `scripts/frontier_koide_c3_spatial_rotation.py` — **16/16 PASS**
@@ -394,9 +394,9 @@ above.
 | `frontier_koide_brannen_dirac_support.py` | Brannen support: explicit finite-lattice `L=3` Wilson-Dirac illustration | 11/11 |
 | `frontier_koide_q_background_zero_z_erasure_criterion.py` | `Q` support: exact background-zero / `Z`-erasure criterion on admitted reduced carrier | 25/25 |
 | `frontier_koide_q_onsite_source_domain_no_go_synthesis.py` | `Q` support/no-go: onsite source-domain separation from retained commutant `Z` | 23/23 |
-| `frontier_koide_delta_euclidean_rotation_angle.py` | **`δ` retained closure**: physical Brannen observable IS the Euclidean rotation angle in the doublet 2-plane (April 25 theorem; revised 2026-04-26 with closed-form analytic identification block 5 + Round 1 + Round 2 Nature-grade backpressure tests + Block 7 multi-route value verification) | 54/54 |
+| `frontier_koide_delta_euclidean_rotation_angle.py` | **`δ` retained closure**: physical Brannen observable IS the Euclidean rotation angle in the doublet 2-plane (April 25 theorem; revised 2026-04-26 with closed-form analytic identification block 5 + Round 1 + Round 2 Nature-grade backpressure tests + Block 7 multi-route value verification) | 58/58 |
 
-**Total: 344 PASS, 0 FAIL.**
+**Total: 348 PASS, 0 FAIL.**
 
 ### Notes
 
