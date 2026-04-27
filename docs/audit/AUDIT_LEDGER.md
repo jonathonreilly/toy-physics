@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T15:01:21.576927+00:00
+**Generated:** 2026-04-27T15:03:25.108334+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 50 |
-| _proposed_retained_ | 118 |
+| _proposed_retained_ | 117 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 313 |
+| ~~audited_conditional~~ | 314 |
 | ~~audited_failed~~ | 100 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 50 |
-| `audited_conditional` | 100 |
+| `audited_conditional` | 101 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 33 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1418 |
+| `unaudited` | 1417 |
 
 | criticality | count |
 |---|---:|
@@ -212,6 +212,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_selected_line_provenance_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `koide_z3_qubit_radian_bridge_no_go_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lattice_complementarity_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `lattice_nn_distance_law_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lensing_beta_sweep_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lensing_deflection_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lensing_k_sweep_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -2508,6 +2509,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `source_status_explicitly_says_not_a_proposed_promoted_branch_claim`
   - `local_transfer_norm_not_same_harness_propagation_or_continuum_proof`
   - `runner_default_h_values_do_not_include_h_0_125_without_explicit_arguments`
+- **auditor confidence:** high
+
+### `lattice_nn_distance_law_note`
+
+- **Note:** [`LATTICE_NN_DISTANCE_LAW_NOTE.md`](../../docs/LATTICE_NN_DISTANCE_LAW_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On the raw NN barrier harness, fixed strength gives positive far-field distance-law signal at h = 0.5 and h = 0.25 with slopes -0.966 and -0.929, while alpha = 1.5 preserves the sign but flattens the decay.  _(class `C`)_
+- **chain closes:** False — The live distance-law script reproduces the note's far-field rows and fits, but the proposed-retained framing depends on the upstream Born-clean NN continuum note, which is unaudited/unknown, and the distance runner does not verify those Born/k=0 controls.
+- **rationale:** Issue: the source's live distance-law numbers reproduce, but the retained claim is explicitly on a refinement path inherited from an upstream Born-clean NN branch whose note is not audit-clean; the archived logs named by the source are also absent from this worktree, and the distance runner does not check Born or k=0. Why this blocks: a meaningful far-field distance-law fit cannot be promoted as a retained Born-safe refinement-path result until the upstream refinement controls are independently retained or included in the same runner. Repair target: audit-retain LATTICE_NN_CONTINUUM_NOTE.md or extend this runner to recompute the Born/k=0/MI/decoherence controls for the same h values and restore/register the archived logs if they remain part of the artifact chain. Claim boundary until fixed: safely claim the live runner's finite barrier-harness table: fixed strength has positive far-field signal at h=0.5 and h=0.25 with slopes near -1, alpha=1.5 keeps the far-field sign but flattens the exponent, and near-field/coarse-sign behavior remains mixed.
+- **open / conditional deps cited:**
+  - `LATTICE_NN_CONTINUUM_NOTE.md`
 - **auditor confidence:** high
 
 ### `lensing_beta_sweep_note`
