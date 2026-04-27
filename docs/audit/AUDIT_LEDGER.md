@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T14:59:46.623528+00:00
+**Generated:** 2026-04-27T15:01:21.576927+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 49 |
-| _proposed_retained_ | 119 |
+| **retained** | 50 |
+| _proposed_retained_ | 118 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 49 |
+| `audited_clean` | 50 |
 | `audited_conditional` | 100 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 33 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1419 |
+| `unaudited` | 1418 |
 
 | criticality | count |
 |---|---:|
@@ -142,6 +142,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_3d_dense_refinement_reconciliation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `lattice_3d_dense_window_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `lattice_3d_nyquist_diffraction_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `lattice_3d_tapered_refinement_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `lattice_distance_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `mirror_2d_validation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `moving_source_cross_family_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -2455,6 +2456,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The first positive-to-negative gravity-side centroid flip tracks the lattice Nyquist scale pi/h at h = 0.5 and h = 0.25, with similar flip locations across field strengths, so the effect is a bounded discrete-lattice UV artifact rather than a continuum prediction.  _(class `C`)_
 - **chain closes:** True — The live artifact reproduces the source's h = 0.5 and h = 0.25 flip tables, field-strength comparisons, mean flip ratios, and bounded safe read; the note explicitly excludes continuum and macroscopic-gravity claims.
 - **rationale:** The source claim is a finite Nyquist probe, and the live script reproduces the first-flip values 6.199467 and 6.107077 at h = 0.5, 11.932917 and 12.085990 at h = 0.25, plus the reported mean/pi-over-h ratios. The interpretation is bounded to the retained ordered-lattice harness and explicitly says the flip is a lattice artifact in the continuum limit, not a low-energy gravity law. Residual risk is limited to the declared coarse k grid and two tested h values; the audited claim should not be widened beyond that finite probe.
+- **auditor confidence:** high
+
+### `lattice_3d_tapered_refinement_note`
+
+- **Note:** [`LATTICE_3D_TAPERED_REFINEMENT_NOTE.md`](../../docs/LATTICE_3D_TAPERED_REFINEMENT_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The y-only tapered 3D branch preserves Born and k=0 controls and improves MI/decoherence under h = 0.5 refinement, but all gravity hierarchy observables remain AWAY and there is no positive distance-law support.  _(class `C`)_
+- **chain closes:** True — The live artifact reproduces the h = 1.0 and h = 0.5 table values and the negative refinement conclusion on the declared y-only tapered topology branch; the source explicitly avoids claiming dense-branch rescue or a positive distance-law theorem.
+- **rationale:** The source is a bounded negative topology-branch card, and the live script reproduces its Born, k=0, MI, d_TV, decoherence, gravity-hierarchy, and distance-support values at h = 1.0 and h = 0.5. The note's retained read is appropriately limited: the tapered branch is a real tested topology branch and a useful negative control, not a hierarchy-clean attraction result, dense-branch rescue, distance-law branch, or promoted refinement theorem. Residual risk is only the ordinary finite-harness scope of the two tested spacings.
 - **auditor confidence:** high
 
 ### `lattice_complementarity_note`

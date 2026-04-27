@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T14:59:46.438912+00:00",
-  "generated_at": "2026-04-27T14:59:44.836981+00:00",
-  "invalidation_run_at": "2026-04-27T14:59:46.391932+00:00",
+  "effective_status_computed_at": "2026-04-27T15:01:21.386176+00:00",
+  "generated_at": "2026-04-27T15:01:19.781914+00:00",
+  "invalidation_run_at": "2026-04-27T15:01:21.340090+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T14:59:46.296362+00:00",
+  "load_bearing_computed_at": "2026-04-27T15:01:21.244074+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -44724,14 +44724,21 @@
       "verdict_rationale": "The source claim is a finite Nyquist probe, and the live script reproduces the first-flip values 6.199467 and 6.107077 at h = 0.5, 11.932917 and 12.085990 at h = 0.25, plus the reported mean/pi-over-h ratios. The interpretation is bounded to the retained ordered-lattice harness and explicitly says the flip is a lattice artifact in the continuum limit, not a low-energy gravity law. Residual risk is limited to the declared coarse k grid and two tested h values; the audited claim should not be widened beyond that finite probe."
     },
     "lattice_3d_tapered_refinement_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The live artifact reproduces the h = 1.0 and h = 0.5 table values and the negative refinement conclusion on the declared y-only tapered topology branch; the source explicitly avoids claiming dense-branch rescue or a positive distance-law theorem.",
       "claim_id": "lattice_3d_tapered_refinement_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -44739,13 +44746,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The y-only tapered 3D branch preserves Born and k=0 controls and improves MI/decoherence under h = 0.5 refinement, but all gravity hierarchy observables remain AWAY and there is no positive distance-law support.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "79b5abbeadaae8a15e1f13b0bedec940d59e2c9f36c5faaaaf66c8b894428283",
@@ -44781,14 +44788,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 10,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 10
       },
       "runner_path": null,
       "title": "3D Tapered Refinement Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The source is a bounded negative topology-branch card, and the live script reproduces its Born, k=0, MI, d_TV, decoherence, gravity-hierarchy, and distance-support values at h = 1.0 and h = 0.5. The note's retained read is appropriately limited: the tapered branch is a real tested topology branch and a useful negative control, not a hierarchy-clean attraction result, dense-branch rescue, distance-law branch, or promoted refinement theorem. Residual risk is only the ordinary finite-harness scope of the two tested spacings."
     },
     "lattice_complementarity_note": {
       "audit_date": "2026-04-26",
