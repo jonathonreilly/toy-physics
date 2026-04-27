@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T21:47:14.938295+00:00
+**Generated:** 2026-04-27T21:48:51.890172+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -25,10 +25,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | bounded | 186 |
 | support | 108 |
 | open | 11 |
-| unknown | 786 |
+| unknown | 787 |
 | ~~audited_decoration~~ | 42 |
 | ~~audited_numerical_match~~ | 9 |
-| ~~audited_renaming~~ | 3 |
+| ~~audited_renaming~~ | 2 |
 | ~~audited_conditional~~ | 237 |
 | ~~audited_failed~~ | 136 |
 
@@ -40,8 +40,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_decoration` | 3 |
 | `audited_failed` | 69 |
 | `audited_numerical_match` | 4 |
-| `audited_renaming` | 3 |
-| `unaudited` | 1327 |
+| `audited_renaming` | 2 |
+| `unaudited` | 1328 |
 
 | criticality | count |
 |---|---:|
@@ -383,7 +383,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ew_coupling_derivation_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `complex_selectivity_predictor_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
-| `dm_neutrino_z3_phase_lift_mixed_bridge_note_2026-04-15` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | E | - |
 | `lattice_nn_light_cone_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 
 
@@ -1140,24 +1139,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** For the specified H_base, affine generators, and P3 pin J_*, the runner constructs H(t)=H_base+tJ_*, proves det(H(t)) is an exact cubic, checks the closed-interval extremum set {0,1,t1}, finds min det(H(t))=0.878309>0 on [0,1], and applies Sylvester inertia continuity to conclude signature(H_base+J_*)=signature(H_base)=(2,0,1).  _(class `A`)_
 - **chain closes:** True — The claim is narrowly local and the runner closes exactly that claim. It proves Hermiticity, exact cubic determinant form, atlas A0=32*sqrt(2)/9, p(1)=0.959174, closed-form critical points, positive minimum 0.878309 on the full interval, and direct signatures at H_base and the P3 pin, with PASS=11 FAIL=0. The note explicitly excludes A-BCC, sigma_hier, chamber-wide source selection, and the DM flagship closure, so those are not load-bearing requirements for this local theorem.
 - **rationale:** Clean for the narrow local theorem at the stated P3 pin. The determinant positivity certificate is not a sampling argument: the runner constructs the exact symbolic cubic p(t), solves p'(t)=0 as a quadratic, evaluates the finite extremum set on [0,1], and obtains a strictly positive minimum before invoking Sylvester's law. Direct eigenvalue checks independently match the retained signature convention (n_-, n_0, n_+)=(2,0,1) at both endpoints. This clean audit does not promote any wider physical branch-choice statement: A-BCC, sigma_hier=(2,1,0), chamber-wide source selection, and the DM flagship lane remain outside the claim and are not closed here.
-- **auditor confidence:** high
-
-### `dm_neutrino_z3_phase_lift_mixed_bridge_note_2026-04-15`
-
-- **Note:** [`DM_NEUTRINO_Z3_PHASE_LIFT_MIXED_BRIDGE_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_Z3_PHASE_LIFT_MIXED_BRIDGE_NOTE_2026-04-15.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_renaming~~
-- **effective_status:** ~~audited_renaming~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** Define K_lambda = d I + r(e^{i lambda delta_src} S + e^{-i lambda delta_src} S^2), with delta_src = 2pi/3 and a new bridge amplitude lambda, so c_odd(lambda) = r sin(lambda delta_src).  _(class `E`)_
-- **chain closes:** False — The runner verifies exact algebraic properties of the defined family: lambda=0 reproduces the even bank, nonzero lambda turns on the odd slot, and lambda=1 uses the Z3 phase. It does not derive the bridge amplitude or the mixed-sector phase lift from the retained local stack, and the source note states the exact circulant class remains a physical leptogenesis no-go.
-- **rationale:** Issue: the load-bearing bridge is introduced by defining a new K_lambda family with a free mixed-sector amplitude lambda. Why this blocks: the primary runner proves that the defined family has the desired odd-slot algebra, but it does not derive lambda, the phase-lift operation, or a physical leptogenesis texture from registered retained authorities; the note itself calls the family invented/candidate and records a later mass-basis no-go for the exact Z3-covariant circulant class. Repair target: add a retained theorem and runner deriving the residual-Z2-odd bridge or activator from the current stack, with a source-faithful lambda branch and a physical mass-basis texture that evades the no-go. Claim boundary until fixed: it is safe to use K_lambda as an algebraically controlled candidate family showing how a Z3 phase would populate the odd slot; it is not safe to claim a retained DM-neutrino mixed bridge or leptogenesis closure.
-- **open / conditional deps cited:**
-  - `exact_even_local_DM_kernel_d_r_authority_not_registered_one_hop_dependency`
-  - `weak_only_Z3_CP_source_delta_src_theorem_not_registered_one_hop_dependency`
-  - `source_faithful_lambda_branch_theorem_not_registered_one_hop_dependency`
-  - `residual_Z2_odd_bridge_or_activator_theorem_open`
-  - `mass_basis_physical_leptogenesis_texture_no_go_unresolved`
 - **auditor confidence:** high
 
 ### `dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21`

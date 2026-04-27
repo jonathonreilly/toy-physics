@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 93,
-    "high": 529,
+    "high": 530,
     "leaf": 626,
     "medium": 82
   },
-  "generated_at": "2026-04-27T21:47:14.744142+00:00",
+  "generated_at": "2026-04-27T21:48:51.705917+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -2443,12 +2443,12 @@
       "cross_confirmation_status": null,
       "current_status": "support",
       "deps": [],
-      "direct_in_degree": 2,
-      "load_bearing_score": 8.14,
+      "direct_in_degree": 3,
+      "load_bearing_score": 8.65,
       "note_path": "docs/DM_NEUTRINO_Z3_CIRCULANT_MASS_BASIS_NO_GO_NOTE_2026-04-15.md",
       "ready": true,
       "runner_path": "scripts/frontier_dm_neutrino_z3_circulant_mass_basis_nogo.py",
-      "transitive_descendants": 140
+      "transitive_descendants": 141
     },
     {
       "audit_independence_required": "cross_family",
@@ -2663,6 +2663,23 @@
       "audit_independence_required": "cross_family",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "dm_neutrino_z3_character_transfer_theorem_note_2026-04-15",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "current_status": "unknown",
+      "deps": [],
+      "direct_in_degree": 2,
+      "load_bearing_score": 8.044,
+      "note_path": "docs/DM_NEUTRINO_Z3_CHARACTER_TRANSFER_THEOREM_NOTE_2026-04-15.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_dm_neutrino_z3_character_transfer_theorem.py",
+      "transitive_descendants": 131
+    },
+    {
+      "audit_independence_required": "cross_family",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "dm_leptogenesis_ne_projected_source_law_derivation_note_2026-04-16",
       "criticality": "high",
       "criticality_rank": 2,
@@ -2674,23 +2691,6 @@
       "note_path": "docs/DM_LEPTOGENESIS_NE_PROJECTED_SOURCE_LAW_DERIVATION_NOTE_2026-04-16.md",
       "ready": true,
       "runner_path": "scripts/frontier_dm_leptogenesis_ne_projected_source_law_derivation.py",
-      "transitive_descendants": 130
-    },
-    {
-      "audit_independence_required": "cross_family",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "dm_neutrino_z3_character_transfer_theorem_note_2026-04-15",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "unknown",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 7.533,
-      "note_path": "docs/DM_NEUTRINO_Z3_CHARACTER_TRANSFER_THEOREM_NOTE_2026-04-15.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_dm_neutrino_z3_character_transfer_theorem.py",
       "transitive_descendants": 130
     },
     {
@@ -10315,6 +10315,26 @@
       "note_path": "docs/KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md",
       "ready": false,
       "runner_path": "scripts/frontier_koide_circulant_wilson_target.py",
+      "transitive_descendants": 121
+    },
+    {
+      "audit_independence_required": "cross_family",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "dm_neutrino_z3_phase_lift_mixed_bridge_note_2026-04-15",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "current_status": "bounded",
+      "deps": [
+        "dm_neutrino_z3_character_transfer_theorem_note_2026-04-15",
+        "dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15"
+      ],
+      "direct_in_degree": 1,
+      "load_bearing_score": 7.431,
+      "note_path": "docs/DM_NEUTRINO_Z3_PHASE_LIFT_MIXED_BRIDGE_NOTE_2026-04-15.md",
+      "ready": false,
+      "runner_path": "scripts/frontier_dm_neutrino_z3_phase_lift_bridge.py",
       "transitive_descendants": 121
     },
     {
@@ -27471,5 +27491,5 @@
     }
   ],
   "ready_count": 916,
-  "total_pending": 1330
+  "total_pending": 1331
 }

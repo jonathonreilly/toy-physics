@@ -3565,6 +3565,14 @@
       "to": "dm_neutrino_cp_kernel_deformation_necessity_note_2026-04-15"
     },
     {
+      "from": "dm_neutrino_z3_phase_lift_mixed_bridge_note_2026-04-15",
+      "to": "dm_neutrino_z3_character_transfer_theorem_note_2026-04-15"
+    },
+    {
+      "from": "dm_neutrino_z3_phase_lift_mixed_bridge_note_2026-04-15",
+      "to": "dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15"
+    },
+    {
       "from": "dm_pmns_cp_orientation_parity_reduction_note_2026-04-20",
       "to": "dm_pmns_upper_octant_source_cubic_selector_theorem_note_2026-04-20"
     },
@@ -17665,7 +17673,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-27T21:47:12.704698+00:00",
+  "generated_at": "2026-04-27T21:48:49.802493+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -23459,10 +23467,13 @@
     },
     "dm_neutrino_z3_phase_lift_mixed_bridge_note_2026-04-15": {
       "claim_id": "dm_neutrino_z3_phase_lift_mixed_bridge_note_2026-04-15",
-      "current_status": "proposed_retained",
-      "current_status_raw": "invented axiom-native candidate bridge family beyond the proposed_retained local bank",
-      "deps": [],
-      "note_hash": "72e70b189b445703b2d38c8f0bb4ec7f29f22e2999f17ad683838c6e7d9fe05e",
+      "current_status": "bounded",
+      "current_status_raw": "bounded candidate algebraic family \u2014 defines a one-parameter `K_\u03bb` family that algebraically populates the residual-`Z_2`-odd slot. This is **not** a derivation of the bridge amplitude `\u03bb` from primitives, **not** a leptogenesis closure, and outside the audit-ratified tier on the DM-neutrino mixed bridge.",
+      "deps": [
+        "dm_neutrino_z3_character_transfer_theorem_note_2026-04-15",
+        "dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15"
+      ],
+      "note_hash": "5203d8fc98b24b312fd31cdf93d5ac3c48d43a89cbcc6ec4b503c9e8e852d9e1",
       "path": "docs/DM_NEUTRINO_Z3_PHASE_LIFT_MIXED_BRIDGE_NOTE_2026-04-15.md",
       "runner_path": "scripts/frontier_dm_neutrino_z3_phase_lift_bridge.py",
       "title": "DM Neutrino `Z_3` Phase-Lift Mixed Bridge"
@@ -39009,7 +39020,6 @@
     "dm_neutrino_yukawa_cascade_candidate_note_2026-04-14",
     "dm_neutrino_z3_character_transfer_theorem_note_2026-04-15",
     "dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15",
-    "dm_neutrino_z3_phase_lift_mixed_bridge_note_2026-04-15",
     "dm_pmns_affine_current_coordinate_reduction_theorem_note_2026-04-21",
     "dm_pmns_asymptotic_source_no_go_note_2026-04-20",
     "dm_pmns_chamber_spectral_completeness_theorem_note_2026-04-20",
@@ -39853,16 +39863,16 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4416,
+    "edge_count": 4418,
     "leaf_count": 732,
     "node_count": 1615,
-    "root_count": 1172,
+    "root_count": 1171,
     "runners_with_path": 705,
     "status_counts": {
-      "bounded": 211,
+      "bounded": 212,
       "open": 26,
       "proposed_promoted": 6,
-      "proposed_retained": 443,
+      "proposed_retained": 442,
       "support": 133,
       "unknown": 796
     }

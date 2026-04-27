@@ -1,6 +1,6 @@
 # DM Neutrino `Z_3` Phase-Lift Mixed Bridge
 
-**Date:** 2026-04-15 (boundary narrowed 2026-04-27 per audit-lane verdict)
+**Date:** 2026-04-15 (boundary narrowed 2026-04-27 per review/audit handoff)
 **Status:** bounded candidate algebraic family — defines a one-parameter `K_λ` family that algebraically populates the residual-`Z_2`-odd slot. This is **not** a derivation of the bridge amplitude `λ` from primitives, **not** a leptogenesis closure, and outside the audit-ratified tier on the DM-neutrino mixed bridge.
 **Primary runner:** `scripts/frontier_dm_neutrino_z3_phase_lift_bridge.py`
 
@@ -16,9 +16,9 @@
 
 ## Audit boundary (2026-04-27)
 
-The audit-lane verdict
+The review/audit handoff
 ([docs/audit/worker_lanes/05_dm_neutrino_z3_phase_lift.md](audit/worker_lanes/05_dm_neutrino_z3_phase_lift.md))
-classified this note as `audited_renaming` because the load-bearing
+flagged this note because the load-bearing
 step "define `K_λ = d·I + r·(...)` with a new bridge amplitude `λ`"
 introduces a new symbol rather than deriving it from registered
 authorities. The runner verifies the algebraic properties of the
@@ -27,7 +27,7 @@ nonzero `λ` populates the odd slot — but it does not derive `λ` and
 it does not exhibit a physical mass-basis texture that evades the
 later circulant no-go.
 
-Per the audit verdict, the safe statement is the bounded one:
+Per that handoff, the safe statement is the bounded one:
 
 - it **is** safe to use `K_λ` as an **algebraically controlled
   candidate family** showing how a `Z_3` phase would populate the odd

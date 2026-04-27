@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T21:47:14.684237+00:00",
-  "generated_at": "2026-04-27T21:47:12.754157+00:00",
-  "invalidation_run_at": "2026-04-27T21:47:14.615336+00:00",
+  "effective_status_computed_at": "2026-04-27T21:48:51.652145+00:00",
+  "generated_at": "2026-04-27T21:48:49.850715+00:00",
+  "invalidation_run_at": "2026-04-27T21:48:51.595418+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T21:47:14.484946+00:00",
+  "load_bearing_computed_at": "2026-04-27T21:48:51.476582+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -23459,12 +23459,12 @@
       "current_status_raw": "exact theorem on the activation law of the invented phase-lift",
       "decoration_parent_claim_id": null,
       "deps": [],
-      "direct_in_degree": 1,
+      "direct_in_degree": 2,
       "effective_status": "unknown",
       "effective_status_reason": "self",
       "independence": null,
       "intrinsic_status": "unknown",
-      "load_bearing_score": 7.533,
+      "load_bearing_score": 8.044,
       "load_bearing_step": null,
       "load_bearing_step_class": null,
       "max_descendant_status": "bounded",
@@ -23482,7 +23482,7 @@
       },
       "runner_path": "scripts/frontier_dm_neutrino_z3_character_transfer_theorem.py",
       "title": "DM Neutrino `Z_3` Character-Transfer Theorem",
-      "transitive_descendants": 130,
+      "transitive_descendants": 131,
       "verdict_rationale": null
     },
     "dm_neutrino_z3_circulant_cp_tool_note_2026-04-15": {
@@ -23546,12 +23546,12 @@
       "current_status_raw": "exact no-go theorem on the physical leptogenesis tensor for the",
       "decoration_parent_claim_id": null,
       "deps": [],
-      "direct_in_degree": 2,
+      "direct_in_degree": 3,
       "effective_status": "support",
       "effective_status_reason": "self",
       "independence": null,
       "intrinsic_status": "support",
-      "load_bearing_score": 8.14,
+      "load_bearing_score": 8.65,
       "load_bearing_step": null,
       "load_bearing_step_class": null,
       "max_descendant_status": "bounded",
@@ -23569,11 +23569,11 @@
       },
       "runner_path": "scripts/frontier_dm_neutrino_z3_circulant_mass_basis_nogo.py",
       "title": "DM Neutrino `Z_3`-Circulant Mass-Basis No-Go",
-      "transitive_descendants": 140,
+      "transitive_descendants": 141,
       "verdict_rationale": null
     },
     "dm_neutrino_z3_phase_lift_mixed_bridge_note_2026-04-15": {
-      "audit_date": "2026-04-26",
+      "audit_date": null,
       "audit_state_snapshot": {
         "criticality": "high",
         "dep_effective_status": {},
@@ -23581,38 +23581,35 @@
         "load_bearing_score": 7.383,
         "transitive_descendants": 117
       },
-      "audit_status": "audited_renaming",
-      "auditor": "codex-audit-loop",
-      "auditor_confidence": "high",
-      "auditor_family": "codex-current",
+      "audit_status": "unaudited",
+      "auditor": null,
+      "auditor_confidence": null,
+      "auditor_family": null,
       "blocker": null,
-      "chain_closes": false,
-      "chain_closure_explanation": "The runner verifies exact algebraic properties of the defined family: lambda=0 reproduces the even bank, nonzero lambda turns on the odd slot, and lambda=1 uses the Z3 phase. It does not derive the bridge amplitude or the mixed-sector phase lift from the retained local stack, and the source note states the exact circulant class remains a physical leptogenesis no-go.",
+      "chain_closes": null,
+      "chain_closure_explanation": null,
       "claim_id": "dm_neutrino_z3_phase_lift_mixed_bridge_note_2026-04-15",
       "criticality": "high",
-      "current_status": "proposed_retained",
-      "current_status_raw": "invented axiom-native candidate bridge family beyond the proposed_retained local bank",
+      "current_status": "bounded",
+      "current_status_raw": "bounded candidate algebraic family \u2014 defines a one-parameter `K_\u03bb` family that algebraically populates the residual-`Z_2`-odd slot. This is **not** a derivation of the bridge amplitude `\u03bb` from primitives, **not** a leptogenesis closure, and outside the audit-ratified tier on the DM-neutrino mixed bridge.",
       "decoration_parent_claim_id": null,
-      "deps": [],
+      "deps": [
+        "dm_neutrino_z3_character_transfer_theorem_note_2026-04-15",
+        "dm_neutrino_z3_circulant_mass_basis_no_go_note_2026-04-15"
+      ],
       "direct_in_degree": 1,
-      "effective_status": "audited_renaming",
-      "effective_status_reason": "self",
-      "independence": "cross_family",
-      "intrinsic_status": "audited_renaming",
+      "effective_status": "unknown",
+      "effective_status_reason": "inherited_from:dm_neutrino_z3_character_transfer_theorem_note_2026-04-15",
+      "independence": null,
+      "intrinsic_status": "bounded",
       "load_bearing_score": 7.431,
-      "load_bearing_step": "Define K_lambda = d I + r(e^{i lambda delta_src} S + e^{-i lambda delta_src} S^2), with delta_src = 2pi/3 and a new bridge amplitude lambda, so c_odd(lambda) = r sin(lambda delta_src).",
-      "load_bearing_step_class": "E",
+      "load_bearing_step": null,
+      "load_bearing_step_class": null,
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
-      "note_hash": "72e70b189b445703b2d38c8f0bb4ec7f29f22e2999f17ad683838c6e7d9fe05e",
+      "note_hash": "5203d8fc98b24b312fd31cdf93d5ac3c48d43a89cbcc6ec4b503c9e8e852d9e1",
       "note_path": "docs/DM_NEUTRINO_Z3_PHASE_LIFT_MIXED_BRIDGE_NOTE_2026-04-15.md",
-      "open_dependency_paths": [
-        "exact_even_local_DM_kernel_d_r_authority_not_registered_one_hop_dependency",
-        "weak_only_Z3_CP_source_delta_src_theorem_not_registered_one_hop_dependency",
-        "source_faithful_lambda_branch_theorem_not_registered_one_hop_dependency",
-        "residual_Z2_odd_bridge_or_activator_theorem_open",
-        "mass_basis_physical_leptogenesis_texture_no_go_unresolved"
-      ],
+      "open_dependency_paths": [],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368183+00:00",
@@ -23663,19 +23660,50 @@
             "total_pass": 0
           },
           "verdict_rationale": null
+        },
+        {
+          "archived_at": "2026-04-27T21:48:49.849535+00:00",
+          "archived_for_note_hash": "72e70b189b445703b2d38c8f0bb4ec7f29f22e2999f17ad683838c6e7d9fe05e",
+          "audit_date": "2026-04-26",
+          "audit_status": "audited_renaming",
+          "auditor": "codex-audit-loop",
+          "auditor_confidence": "high",
+          "auditor_family": "codex-current",
+          "blocker": null,
+          "chain_closes": false,
+          "chain_closure_explanation": "The runner verifies exact algebraic properties of the defined family: lambda=0 reproduces the even bank, nonzero lambda turns on the odd slot, and lambda=1 uses the Z3 phase. It does not derive the bridge amplitude or the mixed-sector phase lift from the retained local stack, and the source note states the exact circulant class remains a physical leptogenesis no-go.",
+          "decoration_parent_claim_id": null,
+          "independence": "cross_family",
+          "load_bearing_step": "Define K_lambda = d I + r(e^{i lambda delta_src} S + e^{-i lambda delta_src} S^2), with delta_src = 2pi/3 and a new bridge amplitude lambda, so c_odd(lambda) = r sin(lambda delta_src).",
+          "load_bearing_step_class": "E",
+          "open_dependency_paths": [
+            "exact_even_local_DM_kernel_d_r_authority_not_registered_one_hop_dependency",
+            "weak_only_Z3_CP_source_delta_src_theorem_not_registered_one_hop_dependency",
+            "source_faithful_lambda_branch_theorem_not_registered_one_hop_dependency",
+            "residual_Z2_odd_bridge_or_activator_theorem_open",
+            "mass_basis_physical_leptogenesis_texture_no_go_unresolved"
+          ],
+          "runner_check_breakdown": {
+            "A": 8,
+            "B": 0,
+            "C": 0,
+            "D": 0,
+            "total_pass": 8
+          },
+          "verdict_rationale": "Issue: the load-bearing bridge is introduced by defining a new K_lambda family with a free mixed-sector amplitude lambda. Why this blocks: the primary runner proves that the defined family has the desired odd-slot algebra, but it does not derive lambda, the phase-lift operation, or a physical leptogenesis texture from registered retained authorities; the note itself calls the family invented/candidate and records a later mass-basis no-go for the exact Z3-covariant circulant class. Repair target: add a retained theorem and runner deriving the residual-Z2-odd bridge or activator from the current stack, with a source-faithful lambda branch and a physical mass-basis texture that evades the no-go. Claim boundary until fixed: it is safe to use K_lambda as an algebraically controlled candidate family showing how a Z3 phase would populate the odd slot; it is not safe to claim a retained DM-neutrino mixed bridge or leptogenesis closure."
         }
       ],
       "runner_check_breakdown": {
-        "A": 8,
+        "A": 0,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 8
+        "total_pass": 0
       },
       "runner_path": "scripts/frontier_dm_neutrino_z3_phase_lift_bridge.py",
       "title": "DM Neutrino `Z_3` Phase-Lift Mixed Bridge",
       "transitive_descendants": 121,
-      "verdict_rationale": "Issue: the load-bearing bridge is introduced by defining a new K_lambda family with a free mixed-sector amplitude lambda. Why this blocks: the primary runner proves that the defined family has the desired odd-slot algebra, but it does not derive lambda, the phase-lift operation, or a physical leptogenesis texture from registered retained authorities; the note itself calls the family invented/candidate and records a later mass-basis no-go for the exact Z3-covariant circulant class. Repair target: add a retained theorem and runner deriving the residual-Z2-odd bridge or activator from the current stack, with a source-faithful lambda branch and a physical mass-basis texture that evades the no-go. Claim boundary until fixed: it is safe to use K_lambda as an algebraically controlled candidate family showing how a Z3 phase would populate the odd slot; it is not safe to claim a retained DM-neutrino mixed bridge or leptogenesis closure."
+      "verdict_rationale": null
     },
     "dm_pmns_affine_current_coordinate_reduction_theorem_note_2026-04-21": {
       "audit_date": null,
