@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T13:01:12.720928+00:00",
-  "generated_at": "2026-04-27T13:01:11.134577+00:00",
-  "invalidation_run_at": "2026-04-27T13:01:12.675807+00:00",
+  "effective_status_computed_at": "2026-04-27T13:02:59.146591+00:00",
+  "generated_at": "2026-04-27T13:02:57.563343+00:00",
+  "invalidation_run_at": "2026-04-27T13:02:59.097714+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T13:01:12.582932+00:00",
+  "load_bearing_computed_at": "2026-04-27T13:02:59.002993+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -31183,14 +31183,21 @@
       "verdict_rationale": null
     },
     "gate_b_strong_field_observable_split_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The synthesis is faithful to the two cited notes, but one cited input, the complex-action falsifier, is already audited conditional because its retained-row/Born guardrail depends on bounded unaudited Gate B context. A cross-note split cannot be cleaner than that input.",
       "claim_id": "gate_b_strong_field_observable_split_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -31198,18 +31205,20 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The absorptive proxy is a real strong-field amplitude effect, while the minimal causal-memory probe is a clean no-go for propagating causality in that exact form, so the two probes are not testing the same mechanism.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "f3cd0e6f4ae9a74b7fa35c15d910d045788e1216926b12f6046a67b55e3135e7",
       "note_path": "docs/GATE_B_STRONG_FIELD_OBSERVABLE_SPLIT_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/GATE_B_COMPLEX_ACTION_FALSIFIER_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368420+00:00",
@@ -31247,7 +31256,7 @@
       "runner_path": null,
       "title": "Gate B Strong-Field Observable Split Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the split note synthesizes two upstream probes, but the absorptive/complex-action input is audited conditional while only the causal-memory no-go input is audited clean. Why this blocks: the claim that the absorptive proxy is a separate useful strong-field observable inherits the unresolved retained-row and Born-guardrail boundary from the complex-action falsifier, so the synthesis cannot be ratified as clean retained science. Repair target: audit-retain or re-scope the complex-action falsifier and its Gate B grown-row guardrail, then rerun this synthesis against two clean or explicitly bounded inputs. Claim boundary until fixed: safely claim only that the two cited finite probes test different implemented mechanisms and that the minimal causal-memory ansatz is a clean no-go; the absorptive proxy remains a bounded conditional amplitude-effect probe, not evidence for a causal field."
     },
     "gate_b_v6_nearfield_comparator_note": {
       "audit_date": null,

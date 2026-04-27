@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T13:01:12.904416+00:00
+**Generated:** 2026-04-27T13:02:59.342196+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 45 |
-| _proposed_retained_ | 148 |
+| _proposed_retained_ | 147 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 299 |
+| ~~audited_conditional~~ | 300 |
 | ~~audited_failed~~ | 89 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 45 |
-| `audited_conditional` | 86 |
+| `audited_conditional` | 87 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 22 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1448 |
+| `unaudited` | 1447 |
 
 | criticality | count |
 |---|---:|
@@ -176,6 +176,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_grown_distance_law_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gate_b_h025_distance_law_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gate_b_h025_farfield_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `gate_b_strong_field_observable_split_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `global_coherence_off_scaffold_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravitomagnetic_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -1557,6 +1558,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `GATE_B_FARFIELD_NOTE.md`
   - `GATE_B_GROWN_DISTANCE_LAW_NOTE.md`
   - `GATE_B_GROWN_JOINT_PACKAGE_NOTE.md`
+- **auditor confidence:** high
+
+### `gate_b_strong_field_observable_split_note`
+
+- **Note:** [`GATE_B_STRONG_FIELD_OBSERVABLE_SPLIT_NOTE.md`](../../docs/GATE_B_STRONG_FIELD_OBSERVABLE_SPLIT_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The absorptive proxy is a real strong-field amplitude effect, while the minimal causal-memory probe is a clean no-go for propagating causality in that exact form, so the two probes are not testing the same mechanism.  _(class `B`)_
+- **chain closes:** False — The synthesis is faithful to the two cited notes, but one cited input, the complex-action falsifier, is already audited conditional because its retained-row/Born guardrail depends on bounded unaudited Gate B context. A cross-note split cannot be cleaner than that input.
+- **rationale:** Issue: the split note synthesizes two upstream probes, but the absorptive/complex-action input is audited conditional while only the causal-memory no-go input is audited clean. Why this blocks: the claim that the absorptive proxy is a separate useful strong-field observable inherits the unresolved retained-row and Born-guardrail boundary from the complex-action falsifier, so the synthesis cannot be ratified as clean retained science. Repair target: audit-retain or re-scope the complex-action falsifier and its Gate B grown-row guardrail, then rerun this synthesis against two clean or explicitly bounded inputs. Claim boundary until fixed: safely claim only that the two cited finite probes test different implemented mechanisms and that the minimal causal-memory ansatz is a clean no-go; the absorptive proxy remains a bounded conditional amplitude-effect probe, not evidence for a causal field.
+- **open / conditional deps cited:**
+  - `GATE_B_COMPLEX_ACTION_FALSIFIER_NOTE.md`
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20`
