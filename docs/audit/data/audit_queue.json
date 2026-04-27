@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 89,
     "high": 508,
-    "leaf": 765,
+    "leaf": 764,
     "medium": 82
   },
-  "generated_at": "2026-04-27T13:14:36.963502+00:00",
+  "generated_at": "2026-04-27T13:17:40.671445+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -21049,23 +21049,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "graph_phase_diagram_scout_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/GRAPH_PHASE_DIAGRAM_SCOUT_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "graph_scalar_plus_spinor_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -29370,6 +29353,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1031,
-  "total_pending": 1444
+  "ready_count": 1030,
+  "total_pending": 1443
 }

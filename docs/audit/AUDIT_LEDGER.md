@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T13:14:37.116732+00:00
+**Generated:** 2026-04-27T13:17:40.809478+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 46 |
-| _proposed_retained_ | 141 |
+| _proposed_retained_ | 140 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 302 |
+| ~~audited_conditional~~ | 303 |
 | ~~audited_failed~~ | 92 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 46 |
-| `audited_conditional` | 89 |
+| `audited_conditional` | 90 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 25 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1441 |
+| `unaudited` | 1440 |
 
 | criticality | count |
 |---|---:|
@@ -182,6 +182,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `global_coherence_off_scaffold_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `graph_phase_diagram_scout_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravitomagnetic_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravity_clean_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `higgs_mass_retention_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
@@ -1710,6 +1711,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `scripts/global_coherence_off_scaffold.py_not_registered_as_primary_runner`
   - `runner_prints_partial_verdict_and_diagnostics_without_hard_assertions`
   - `simple_classifier_exhaustion_no_go_theorem_or_exhaustive_metric_search_missing`
+- **auditor confidence:** high
+
+### `graph_phase_diagram_scout_note`
+
+- **Note:** [`GRAPH_PHASE_DIAGRAM_SCOUT_NOTE.md`](../../docs/GRAPH_PHASE_DIAGRAM_SCOUT_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** In this bounded sweep, sign fails first at delete_70 while Born remains machine-clean; exponent fidelity survives until the sign collapse and then becomes unavailable.  _(class `C`)_
+- **chain closes:** False — The live runner reproduces the bounded scout table, but the note asks to read it through graph requirements, broken-graph robustness, and edge-deletion boundary notes whose current/effective statuses are unaudited proposed-retained, audited conditional, and unknown. The retained-family phase-diagram framing therefore does not close from audited-retained inputs.
+- **rationale:** Issue: the runner verifies the short scout ladder, but the retained-family interpretation depends on one-hop graph notes that are not audit-clean, and the edge-deletion boundary note specifically says the 0.75-1.00 replay does not support a stable sign-flip threshold. Why this blocks: the finite delete_70 sign failure is not enough to ratify a retained phase diagram or a stable first-failure boundary for the family. Repair target: audit-retain the graph-requirements and edge-deletion inputs, then run a multi-seed harsher damage ladder or a distinct graph-family sweep that determines whether the sign boundary is stable. Claim boundary until fixed: safely claim only this bounded scout result: baseline/asymmetry/jitter/sparse/delete_10-50 preserve sign, Born, and F~M, while delete_70 flips sign with Born still clean; no retained graph phase diagram or stable threshold is established.
+- **open / conditional deps cited:**
+  - `INVERSE_PROBLEM_GRAPH_REQUIREMENTS_NOTE.md`
+  - `BROKEN_GRAPH_ACTION_POWER_ROBUSTNESS_NOTE.md`
+  - `EDGE_DELETION_BOUNDARY_SWEEP_NOTE.md`
 - **auditor confidence:** high
 
 ### `gravitomagnetic_note`

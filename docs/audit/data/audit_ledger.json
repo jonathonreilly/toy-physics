@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T13:14:36.917392+00:00",
-  "generated_at": "2026-04-27T13:14:35.326216+00:00",
-  "invalidation_run_at": "2026-04-27T13:14:36.869956+00:00",
+  "effective_status_computed_at": "2026-04-27T13:17:40.623203+00:00",
+  "generated_at": "2026-04-27T13:17:39.032207+00:00",
+  "invalidation_run_at": "2026-04-27T13:17:40.577087+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T13:14:36.773285+00:00",
+  "load_bearing_computed_at": "2026-04-27T13:17:40.483100+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -33946,14 +33946,21 @@
       "verdict_rationale": null
     },
     "graph_phase_diagram_scout_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner reproduces the bounded scout table, but the note asks to read it through graph requirements, broken-graph robustness, and edge-deletion boundary notes whose current/effective statuses are unaudited proposed-retained, audited conditional, and unknown. The retained-family phase-diagram framing therefore does not close from audited-retained inputs.",
       "claim_id": "graph_phase_diagram_scout_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -33961,18 +33968,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "In this bounded sweep, sign fails first at delete_70 while Born remains machine-clean; exponent fidelity survives until the sign collapse and then becomes unavailable.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "7e9f9fc3291085eebfbe65b16581b3aa0c70254f67d7edf91db07996df5612ae",
       "note_path": "docs/GRAPH_PHASE_DIAGRAM_SCOUT_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/INVERSE_PROBLEM_GRAPH_REQUIREMENTS_NOTE.md",
+        "docs/BROKEN_GRAPH_ACTION_POWER_ROBUSTNESS_NOTE.md",
+        "docs/EDGE_DELETION_BOUNDARY_SWEEP_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368508+00:00",
@@ -34003,14 +34014,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 9,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 9
       },
       "runner_path": null,
       "title": "Graph Phase-Diagram Scout Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the runner verifies the short scout ladder, but the retained-family interpretation depends on one-hop graph notes that are not audit-clean, and the edge-deletion boundary note specifically says the 0.75-1.00 replay does not support a stable sign-flip threshold. Why this blocks: the finite delete_70 sign failure is not enough to ratify a retained phase diagram or a stable first-failure boundary for the family. Repair target: audit-retain the graph-requirements and edge-deletion inputs, then run a multi-seed harsher damage ladder or a distinct graph-family sweep that determines whether the sign boundary is stable. Claim boundary until fixed: safely claim only this bounded scout result: baseline/asymmetry/jitter/sparse/delete_10-50 preserve sign, Born, and F~M, while delete_70 flips sign with Born still clean; no retained graph phase diagram or stable threshold is established."
     },
     "graph_scalar_plus_spinor_note": {
       "audit_date": null,
