@@ -1,17 +1,63 @@
 # YT UV-to-IR Transport Master Obstruction Theorem Note
 
-**Date:** 2026-04-17
-**Status:** proposed_retained **master obstruction theorem** on the YT
-(Yukawa/top) UV-to-IR transport lane. Names the three missing primitives
+**Date:** 2026-04-17 (boundary narrowed 2026-04-27 per audit-lane verdict)
+**Status:** bounded master obstruction theorem on the YT
+(Yukawa/top) UV-to-IR transport lane. Names the three open primitives
 P1, P2, P3 that stand between the retained tree-level Ward identity
-`y_t²/g_s² = 1/(2 N_c) = 1/6` at M_Pl and a theorem-grade retained
-value for the IR observables `y_t(v)` and `m_t(pole)`. Packages a
-`~1.95 %` total residual envelope on the Ward ratio through the
-quadrature `sqrt(P1² + P2² + P3²)` with per-primitive centrals
-`P1 ≈ 1.92 %`, `P2 ≈ 0.5 %`, `P3 ≈ 0.3 %`.
+`y_t²/g_s² = 1/(2 N_c) = 1/6` at M_Pl and a theorem-grade derived
+value for the IR observables `y_t(v)` and `m_t(pole)`. The quadrature
+`sigma_YT = sqrt(P1² + P2² + P3²) ≈ 2.01 %` on the supplied
+residual centrals `P1 ≈ 1.92 %`, `P2 ≈ 0.50 %`, `P3 ≈ 0.30 %` is
+arithmetic on those inputs; **the inputs themselves are not derived
+from registered authorities on the current package surface**.
 
 **Primary runner:** `scripts/frontier_yt_uv_to_ir_transport_obstruction.py`
 **Log:** `logs/retained/yt_uv_to_ir_transport_obstruction_2026-04-17.log`
+
+**Cited authorities (one-hop deps):**
+- [YT_WARD_IDENTITY_DERIVATION_THEOREM.md](YT_WARD_IDENTITY_DERIVATION_THEOREM.md)
+  — exact tree-level Ward identity `y_t²/g_s² = 1/(2 N_c) = 1/6` at
+  M_Pl that this obstruction theorem refines.
+- [YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md)
+  — proposed_retained SU(3) color-projection lane that supplies the
+  `R_conn` matching factor entering the P1 channel.
+- [PLAQUETTE_SELF_CONSISTENCY_NOTE.md](PLAQUETTE_SELF_CONSISTENCY_NOTE.md)
+  — `⟨P⟩ = 0.5934` and the canonical-surface plaquette evaluation
+  feeding the YT transport residuals.
+
+---
+
+## Audit boundary (2026-04-27)
+
+The audit-lane verdict
+([docs/audit/worker_lanes/04_yt_uv_to_ir_first_principles.md](audit/worker_lanes/04_yt_uv_to_ir_first_principles.md))
+classified this note as `audited_numerical_match` because the per-
+primitive centrals `P1`, `P2`, `P3` are imported / heuristic / hard-
+coded rather than derived from registered one-hop authorities. The
+runner verifies the **quadrature arithmetic** after those inputs are
+supplied; it does not derive any of them. The source note itself
+states that the per-primitive centrals and the transport primitives
+remain open downstream work.
+
+Per the audit verdict, the safe statement is the bounded one:
+
+- it **is** safe to claim an organizational obstruction that direct
+  Ward-identity promotion to `y_t(v)` or `m_t(pole)` requires separate
+  UV matching, transport, and pole-conversion inputs;
+- it **is** safe to report that the supplied packaged numbers
+  arithmetically give a `~2.01 %` Ward-ratio envelope (older prose in
+  this note rounds to `~1.95 %`; both refer to the same quadrature on
+  the same supplied inputs and the runner output `2.010 %` is the
+  authoritative one);
+- it is **not** an audited retained theorem-grade quantitative
+  envelope or a first-principles YT transport result.
+
+The downstream `m_t(pole) = 172.57 ± 6.50 GeV` retention is
+correspondingly bounded on this surface, not theorem-grade. Closing
+this lane requires deriving `P1`, `P2`, `P3` from the registered
+upstream authorities (or honestly downgrading the m_t-uncertainty
+quotation accordingly). See the worker-lane handoff for the four
+sub-lanes (4a P1, 4b P2, 4c P3, 4d runner reconciliation).
 
 ---
 
