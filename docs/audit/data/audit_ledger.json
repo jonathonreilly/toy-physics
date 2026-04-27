@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T13:23:58.102346+00:00",
-  "generated_at": "2026-04-27T13:23:56.513795+00:00",
-  "invalidation_run_at": "2026-04-27T13:23:58.053455+00:00",
+  "effective_status_computed_at": "2026-04-27T13:27:55.297108+00:00",
+  "generated_at": "2026-04-27T13:27:53.709761+00:00",
+  "invalidation_run_at": "2026-04-27T13:27:55.250131+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T13:23:57.954536+00:00",
+  "load_bearing_computed_at": "2026-04-27T13:27:55.154485+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -35381,14 +35381,21 @@
       "verdict_rationale": null
     },
     "growing_graph_static_control_audit_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The live runner recomputes the growing-frontier graph distances from the seed graph, reproduces the 3.000 -> 22.000 frontier-delay increase and positive slopes, and separately recomputes the weak, non-monotone visibility-drop table against a static graph control. The source note keeps the conclusion inside that computed graph-distance/static-control boundary.",
       "claim_id": "growing_graph_static_control_audit_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -35396,13 +35403,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The review-safe conclusion is to promote the frontier-delay proxy only and keep dynamic propagation as a static-control failure, not as a transport or cosmology statement.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "cbc5ac58d424c8eb0eba322778fd5742b6b744eca237d935f15944979e305f9c",
@@ -35438,14 +35445,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 8,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 8
       },
       "runner_path": null,
       "title": "Growing Graph Static Control Audit Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The load-bearing computation is current with the live runner: frontier delay grows from 3.000 to 22.000 with frontier/RMS/width slopes +0.9325, +0.5981, and +0.2129, while the dynamic-propagation visibility drops are small and non-monotone across n_layers = 10, 15, 20. The runner constructs these quantities from graph snapshots, generated DAGs, propagation amplitudes, and frozen controls rather than hard-coding the contested conclusion. The source note's final claim is exactly the bounded safe read supported by the computation: retain graph-distance expansion and freeze dynamic-propagation repair as a no-go, with no transport, cosmology, unitarity, or field-theory extension."
     },
     "grown_transfer_basin_note": {
       "audit_date": null,
