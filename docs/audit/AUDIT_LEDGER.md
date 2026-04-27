@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T19:47:15.398969+00:00
+**Generated:** 2026-04-27T19:51:56.003477+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 72 |
-| _proposed_retained_ | 22 |
+| _proposed_retained_ | 21 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 350 |
+| ~~audited_conditional~~ | 351 |
 | ~~audited_failed~~ | 137 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 72 |
-| `audited_conditional` | 137 |
+| `audited_conditional` | 138 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1321 |
+| `unaudited` | 1320 |
 
 | criticality | count |
 |---|---:|
@@ -305,6 +305,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_generation_hierarchy_primitive_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `yt_h_unit_flavor_column_decomposition_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `yt_p1_bz_quadrature_numerical_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `yt_p1_delta_r_2_loop_extension_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `yt_p1_delta_r_sm_rge_crosscheck_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -4778,6 +4779,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `scripts/canonical_plaquette_surface.py_not_registered_one_hop_dependency`
   - `MSbar_continuum_subtraction_and_N_TASTE_normalization_theorem_not_registered`
   - `five_percent_full_PT_systematic_model_not_registered`
+- **auditor confidence:** high
+
+### `yt_p1_bz_quadrature_numerical_note_2026-04-18`
+
+- **Note:** [`YT_P1_BZ_QUADRATURE_NUMERICAL_NOTE_2026-04-18.md`](../../docs/YT_P1_BZ_QUADRATURE_NUMERICAL_NOTE_2026-04-18.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** At N = 48 offset-grid, the schematic 4D BZ quadrature yields I_v_scalar = 3.965765, I_v_gauge = 0, I_SE_gluonic = 2.321326, I_SE_fermion = 1.118792 and assembles these into Delta_R = -3.287% +/- 2.312% with a tightened [-5.60%, -0.97%] bracket.  _(class `C`)_
+- **chain closes:** False — The runner reproduces the stated schematic quadrature and algebraic Delta_R assembly, but the source explicitly does not implement the full staggered taste-diagonal Dirac-trace lattice-PT algebra. The retained/full-P1 inference also rests on one-hop authorities that are support, conditional, or still unaudited proposed parents.
+- **rationale:** Issue: the live runner evaluates a schematic 4D BZ quadrature and the source explicitly says the full staggered taste/Dirac-trace lattice-PT algebra is not implemented, while cited Ward/bridge authorities are not clean retained and the three-channel parent stack remains unaudited proposed input. Why this blocks: a schematic central value with a 25% assigned systematic can support a bounded numerical estimate, but it cannot promote a retained full lattice-PT correction or replace the prior P1 bracket as a theorem. Repair target: implement the full staggered-PT quadrature with taste matrices, Dirac traces, scheme-matched continuum subtraction/counterterms, and audited clean or retained status for the Rep-A/Rep-B, H_unit, and Delta_1/Delta_2/Delta_3 parent notes. Claim boundary until fixed: safe to claim the current runner gives an N=48 schematic BZ quadrature estimate I_v_scalar=3.966, I_v_gauge≈0, I_SE_gluonic=2.321, I_SE_fermion=1.119 and Delta_R=-3.287% +/- 2.312% under its stated schematic assumptions; not safe to claim a clean retained full lattice-PT P1 value beyond those assumptions.
+- **open / conditional deps cited:**
+  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
+  - `UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md`
 - **auditor confidence:** high
 
 ### `yt_p1_delta_r_2_loop_extension_note_2026-04-18`
