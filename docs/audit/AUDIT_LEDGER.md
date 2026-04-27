@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T06:05:07.028799+00:00
+**Generated:** 2026-04-27T06:09:09.531667+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 6 |
-| _proposed_retained_ | 241 |
+| _proposed_retained_ | 240 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
-| ~~audited_conditional~~ | 250 |
+| ~~audited_conditional~~ | 251 |
 | ~~audited_failed~~ | 59 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 6 |
-| `audited_conditional` | 48 |
+| `audited_conditional` | 49 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 2 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1534 |
+| `unaudited` | 1533 |
 
 | criticality | count |
 |---|---:|
@@ -149,6 +149,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_equation_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_radiation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_retardation_continuum_limit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `wave_retarded_gravity_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `yt_ew_color_projection_theorem` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
 | `yt_ew_delta_r_retention_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -1191,6 +1192,24 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `runner_not_registered_for_wave_retardation_continuum_limit_note`
   - `logs/2026-04-07-wave-retardation-continuum-limit.txt_not_registered_primary_output`
   - `exact_discrete_static_comparator_not_derived`
+- **auditor confidence:** high
+
+### `wave_retarded_gravity_note`
+
+- **Note:** [`WAVE_RETARDED_GRAVITY_NOTE.md`](../../docs/WAVE_RETARDED_GRAVITY_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The retarded moving-source field and the layerwise instantaneous c=infinity comparator produce different beam deflections by 22-26% across the three grown families.  _(class `C`)_
+- **chain closes:** False — The live runner verifies the finite M versus I comparison in the stated harness, but the claim inherits the imposed wave-equation/source-law setup and a selected single-velocity moving-source comparator that are not registered retained inputs.
+- **rationale:** Issue: the note promotes a single-v/c moving-source comparison on an imposed wave-equation field to a retained dynamical retardation signature. Why this blocks: the runner reproduces M-I=-0.002785 for Fam1 and 22-26% relative differences across families, but it depends on the conditionally audited wave-equation self-field law, a hand-constructed layerwise instantaneous comparator, one translation speed v/c=0.30, one source trajectory, and no derived light-travel-time or angular-retardation theorem; the live Born residual is 3.59e-16 rather than the note/log's 2.22e-15, though still machine precision. Repair target: register and clean-audit the wave equation/source coupling, prove the c=infinity comparator construction and retarded-time observable, and extend the runner to multiple velocities/trajectories with assertions for the expected scaling, Born tolerance, null, and family portability. Claim boundary until fixed: it is safe to claim that, in this frozen NL=30, W=8, S=0.004, v/c=0.30 translation harness, retarded and instantaneous moving-source fields produce reproducibly different beam deflections with M<I across the three tested families; it is not yet an audited retained general retarded-gravity law.
+- **open / conditional deps cited:**
+  - `wave_equation_self_field_note_conditionally_audited_dependency`
+  - `wave_equation_and_source_law_not_derived_from_retained_primitives`
+  - `c_infinity_instantaneous_comparator_theorem_not_registered`
+  - `single_velocity_and_single_translation_path_only`
+  - `Born_residual_headline_stale_relative_to_live_runner`
 - **auditor confidence:** high
 
 ### `yt_ew_color_projection_theorem`

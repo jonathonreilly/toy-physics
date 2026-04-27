@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T06:05:06.743861+00:00",
-  "generated_at": "2026-04-27T06:05:04.945518+00:00",
-  "invalidation_run_at": "2026-04-27T06:05:06.684960+00:00",
+  "effective_status_computed_at": "2026-04-27T06:09:09.272384+00:00",
+  "generated_at": "2026-04-27T06:09:07.297270+00:00",
+  "invalidation_run_at": "2026-04-27T06:09:09.211652+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T06:05:06.552686+00:00",
+  "load_bearing_computed_at": "2026-04-27T06:09:09.069352+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -76958,14 +76958,21 @@
       "verdict_rationale": null
     },
     "wave_retarded_gravity_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 7.383,
+        "transitive_descendants": 117
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner verifies the finite M versus I comparison in the stated harness, but the claim inherits the imposed wave-equation/source-law setup and a selected single-velocity moving-source comparator that are not registered retained inputs.",
       "claim_id": "wave_retarded_gravity_note",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -76973,18 +76980,24 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 7.383,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The retarded moving-source field and the layerwise instantaneous c=infinity comparator produce different beam deflections by 22-26% across the three grown families.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "40fe663f778dbd9f4604eb94f70408215fccb017cbbddbb771662a490cf260e7",
       "note_path": "docs/WAVE_RETARDED_GRAVITY_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "wave_equation_self_field_note_conditionally_audited_dependency",
+        "wave_equation_and_source_law_not_derived_from_retained_primitives",
+        "c_infinity_instantaneous_comparator_theorem_not_registered",
+        "single_velocity_and_single_translation_path_only",
+        "Born_residual_headline_stale_relative_to_live_runner"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.370162+00:00",
@@ -77022,7 +77035,7 @@
       "runner_path": null,
       "title": "Wave Retarded Gravity: Retarded \u2260 Instantaneous on the Wave Field",
       "transitive_descendants": 117,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the note promotes a single-v/c moving-source comparison on an imposed wave-equation field to a retained dynamical retardation signature. Why this blocks: the runner reproduces M-I=-0.002785 for Fam1 and 22-26% relative differences across families, but it depends on the conditionally audited wave-equation self-field law, a hand-constructed layerwise instantaneous comparator, one translation speed v/c=0.30, one source trajectory, and no derived light-travel-time or angular-retardation theorem; the live Born residual is 3.59e-16 rather than the note/log's 2.22e-15, though still machine precision. Repair target: register and clean-audit the wave equation/source coupling, prove the c=infinity comparator construction and retarded-time observable, and extend the runner to multiple velocities/trajectories with assertions for the expected scaling, Born tolerance, null, and family portability. Claim boundary until fixed: it is safe to claim that, in this frozen NL=30, W=8, S=0.004, v/c=0.30 translation harness, retarded and instantaneous moving-source fields produce reproducibly different beam deflections with M<I across the three tested families; it is not yet an audited retained general retarded-gravity law."
     },
     "wave_static_boundary_sensitivity_note": {
       "audit_date": null,
