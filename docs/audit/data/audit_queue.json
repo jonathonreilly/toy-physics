@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 90,
+    "critical": 89,
     "high": 569,
     "leaf": 856,
     "medium": 85
   },
-  "generated_at": "2026-04-27T02:31:54.537777+00:00",
+  "generated_at": "2026-04-27T02:34:47.373771+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -452,23 +452,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_g_bare_derivation.py",
       "transitive_descendants": 275
-    },
-    {
-      "audit_independence_required": "cross_family_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "native_gauge_closure_note",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 15,
-      "load_bearing_score": 19.603,
-      "note_path": "docs/NATIVE_GAUGE_CLOSURE_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 274
     },
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -31978,6 +31961,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1202,
-  "total_pending": 1600
+  "ready_count": 1201,
+  "total_pending": 1599
 }
