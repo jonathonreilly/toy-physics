@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T15:03:25.108334+00:00
+**Generated:** 2026-04-27T15:05:34.215475+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 50 |
-| _proposed_retained_ | 117 |
+| _proposed_retained_ | 116 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -28,7 +28,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | unknown | 720 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
-| ~~audited_renaming~~ | 2 |
+| ~~audited_renaming~~ | 3 |
 | ~~audited_conditional~~ | 314 |
 | ~~audited_failed~~ | 100 |
 
@@ -40,8 +40,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_decoration` | 3 |
 | `audited_failed` | 33 |
 | `audited_numerical_match` | 5 |
-| `audited_renaming` | 2 |
-| `unaudited` | 1417 |
+| `audited_renaming` | 3 |
+| `unaudited` | 1416 |
 
 | criticality | count |
 |---|---:|
@@ -294,6 +294,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `complex_selectivity_predictor_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 | `dm_neutrino_z3_phase_lift_mixed_bridge_note_2026-04-15` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | E | - |
+| `lattice_nn_light_cone_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 
 
 ## Audit findings (full)
@@ -2523,6 +2524,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the source's live distance-law numbers reproduce, but the retained claim is explicitly on a refinement path inherited from an upstream Born-clean NN branch whose note is not audit-clean; the archived logs named by the source are also absent from this worktree, and the distance runner does not check Born or k=0. Why this blocks: a meaningful far-field distance-law fit cannot be promoted as a retained Born-safe refinement-path result until the upstream refinement controls are independently retained or included in the same runner. Repair target: audit-retain LATTICE_NN_CONTINUUM_NOTE.md or extend this runner to recompute the Born/k=0/MI/decoherence controls for the same h values and restore/register the archived logs if they remain part of the artifact chain. Claim boundary until fixed: safely claim the live runner's finite barrier-harness table: fixed strength has positive far-field signal at h=0.5 and h=0.25 with slopes near -1, alpha=1.5 keeps the far-field sign but flattens the exponent, and near-field/coarse-sign behavior remains mixed.
 - **open / conditional deps cited:**
   - `LATTICE_NN_CONTINUUM_NOTE.md`
+- **auditor confidence:** high
+
+### `lattice_nn_light_cone_note`
+
+- **Note:** [`LATTICE_NN_LIGHT_CONE_NOTE.md`](../../docs/LATTICE_NN_LIGHT_CONE_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The NN light-cone branch is frozen as a topological causal-bound statement: influence is confined to the relevant forward causal neighborhood in the graph/DAG sense, with no emergent-relativity or physical spacetime light-cone claim retained.  _(class `F`)_
+- **chain closes:** False — After the explicit retirement of the emergent-relativity claim, the remaining proposed-retained content is a relabeling of directed-graph forward reachability; the note has no separate NN light-cone runner/log and one named fixed-mass log is absent.
+- **rationale:** Issue: the note correctly demotes the physical light-cone/emergent-relativity interpretation, but the only proposed-retained residue is the statement that the NN/DAG branch has a topological forward causal neighborhood. Why this blocks: that is a graph-reachability label, not an independent retained light-cone theorem, and the cited fixed-mass verification log is missing while the causal-field script itself is marked retracted for distance-law purposes. Repair target: either keep this as an administrative branch-freeze/support note, or add a theorem and runner that defines the graph causal cone from the propagation operator and verifies finite-support/reachability claims without using relativistic language. Claim boundary until fixed: safely claim that emergent relativity, Lorentz invariance, physical spacetime light-cone, and universal speed-law readings are not retained; the NN harness only has a topological DAG forward-reachability bound.
+- **open / conditional deps cited:**
+  - `SESSION_SUMMARY_2026-04-01_DIMENSIONAL.md`
+  - `work_history/repo/backlog/OVERNIGHT_WORK_BACKLOG.md`
 - **auditor confidence:** high
 
 ### `lensing_beta_sweep_note`
