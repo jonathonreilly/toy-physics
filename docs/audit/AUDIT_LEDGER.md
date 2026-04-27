@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T12:08:37.012545+00:00
+**Generated:** 2026-04-27T12:12:34.614939+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 38 |
-| _proposed_retained_ | 157 |
+| **retained** | 39 |
+| _proposed_retained_ | 156 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 38 |
+| `audited_clean` | 39 |
 | `audited_conditional` | 84 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 22 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1457 |
+| `unaudited` | 1456 |
 
 | criticality | count |
 |---|---:|
@@ -126,6 +126,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `fm_transfer_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `fourth_family_quadrant_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `gate_b_grown_propagating_field_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `gate_b_grown_propagating_field_v2_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `i3_zero_exact_theorem_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `independent_generators_heldout_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -1433,6 +1434,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** finite gamma does not produce a coherent detector-line phase ramp on this retained grown row, the escape ratio stays at 1.000 to three decimals, and only a tiny centroid shift survives.  _(class `C`)_
 - **chain closes:** True — The live runner recomputes the gamma=0 reduction and the full gamma sweep on the declared drift=0.2, restore=0.7 row. The negative result closes because the note only claims a bounded no-go for this minimal retarded-like field state and explicitly excludes broader field-theory, transfer, horizon, or trapping claims.
 - **rationale:** The runner directly checks the load-bearing failure mode: gamma=0 has zero field and amplitude error relative to the static baseline, while nonzero gamma leaves escape at 1.000 to three decimals and produces no coherent detector-line phase ramp. The source note scopes the result as a bounded no-go for one minimal causal-memory update, so it does not overclaim a generated-family transfer or self-consistent propagating field theory. Residual boundary: this clean verdict retains only the negative result for this particular retarded-like field ansatz on the specified grown row.
+- **auditor confidence:** high
+
+### `gate_b_grown_propagating_field_v2_note`
+
+- **Note:** [`GATE_B_GROWN_PROPAGATING_FIELD_V2_NOTE.md`](../../docs/GATE_B_GROWN_PROPAGATING_FIELD_V2_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** the stronger transport-envelope architecture does not produce a meaningful escape signal or detector-line phase ramp on the retained grown row; only a tiny centroid shift survives.  _(class `C`)_
+- **chain closes:** True — The live runner recomputes the exact gamma=0 reduction, four nonzero-gamma escape/phase rows, and F~M sanity checks on the declared moderate-drift grown row. The source note scopes the result as a bounded no-go for this specific stronger architecture and excludes generated-family transfer, horizon, trapping, or full field-theory claims.
+- **rationale:** The no-go closes on its own terms: gamma=0 exactly reduces to the static grown baseline, nonzero gamma leaves escape at 1.000 down to 0.999, detector-line phase slope/span remain tiny, and F~M stays 1.000 at gamma=0 and gamma=0.5. The source does not use this as positive evidence for a causal-field theory; it explicitly records failure of the intended causal-observable bar. Residual boundary: the retained content is only this negative result for the tested transport-envelope ansatz on the specified grown row.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20`
