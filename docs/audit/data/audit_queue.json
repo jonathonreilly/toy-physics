@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 88,
-    "high": 545,
+    "high": 544,
     "leaf": 856,
     "medium": 85
   },
-  "generated_at": "2026-04-27T03:59:02.449755+00:00",
+  "generated_at": "2026-04-27T04:01:55.109913+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -4191,23 +4191,6 @@
       "note_path": "docs/DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md",
       "ready": true,
       "runner_path": null,
-      "transitive_descendants": 117
-    },
-    {
-      "audit_independence_required": "cross_family",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "higgs_mass_retention_analysis_note_2026-04-18",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 12,
-      "load_bearing_score": 12.883,
-      "note_path": "docs/HIGGS_MASS_RETENTION_ANALYSIS_NOTE_2026-04-18.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_higgs_mass_retention_analysis.py",
       "transitive_descendants": 117
     },
     {
@@ -31534,6 +31517,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1168,
-  "total_pending": 1574
+  "ready_count": 1167,
+  "total_pending": 1573
 }

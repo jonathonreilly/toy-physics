@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T03:59:02.375649+00:00",
-  "generated_at": "2026-04-27T03:59:00.308102+00:00",
-  "invalidation_run_at": "2026-04-27T03:59:02.307048+00:00",
+  "effective_status_computed_at": "2026-04-27T04:01:55.049848+00:00",
+  "generated_at": "2026-04-27T04:01:53.272396+00:00",
+  "invalidation_run_at": "2026-04-27T04:01:54.992354+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T03:59:02.156873+00:00",
+  "load_bearing_computed_at": "2026-04-27T04:01:54.863347+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -35049,14 +35049,21 @@
       "verdict_rationale": null
     },
     "higgs_mass_retention_analysis_note_2026-04-18": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 12.883,
+        "transitive_descendants": 117
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner reproduces the stated budget arithmetic and an RGE sensitivity probe, but it consumes many unregistered inherited authorities as constants and uses a local 2-loop RGE replica while the note's central claim is the canonical 3-loop route. The audit packet therefore does not independently close the retained Higgs-band derivation or the observed-mass comparator claim.",
       "claim_id": "higgs_mass_retention_analysis_note_2026-04-18",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -35064,18 +35071,27 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 12,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 12.883,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The retained band m_H = 125.04 GeV +/- 3.17 GeV is obtained by propagating the inherited YT through-2-loop Delta_R uncertainty with A_MH=2.67 and combining it in quadrature with loop-transport, classicality-BC, and threshold-matching retention gaps.",
+      "load_bearing_step_class": "D",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "ae20e22dc6bc116d4ba22eb2230c4508c0af09d2bcc7cbbb66aeaff7ece519eb",
       "note_path": "docs/HIGGS_MASS_RETENTION_ANALYSIS_NOTE_2026-04-18.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md_not_registered_one_hop_dependency",
+        "docs/YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md_not_registered_one_hop_dependency",
+        "docs/YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md_not_registered_one_hop_dependency",
+        "docs/HIGGS_MASS_DERIVED_NOTE.md_not_registered_one_hop_dependency",
+        "docs/HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md_not_registered_one_hop_dependency",
+        "scripts/frontier_higgs_mass_full_3loop.py_not_registered_dependency_output",
+        "quadrature_independence_model_for_retention_gaps_not_registered",
+        "observed_higgs_mass_comparator_not_registered"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368693+00:00",
@@ -35105,15 +35121,15 @@
       ],
       "runner_check_breakdown": {
         "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "B": 8,
+        "C": 12,
+        "D": 18,
+        "total_pass": 38
       },
       "runner_path": "scripts/frontier_higgs_mass_retention_analysis.py",
       "title": "Higgs Mass Retention Analysis Note (\u0394_R Propagation + m_H-Specific Retention Gaps)",
       "transitive_descendants": 117,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the Higgs retention band is a propagated budget built from inherited YT Delta_R bands, canonical Higgs authority centrals, hierarchy/canonical-surface constants, loop-geometric assumptions, quadrature independence, and the observed Higgs comparator, but none of these authorities are registered as one-hop dependencies for this row. Why this blocks: the runner can verify arithmetic after those inputs are supplied, but it does not derive the YT +/-0.70% band, the 125.1/119.8 GeV Higgs authority centrals, the 3-loop canonical RGE route, the loop-tail/geometric-gap model, the lambda(M_Pl)=0 classicality correction, or the independence assumptions behind the 3.17 GeV quadrature band; moreover its local compute_mh probe is documented as a 2-loop replica, not the canonical 3-loop runner that the note cites as authority. Repair target: register the YT Delta_R stack, canonical Higgs 3-loop runner/output, 2-loop authority, canonical plaquette/hierarchy constants, loop-geometric bound, classicality-BC theorem, threshold-matching source, and observed-mass comparator as dependencies; update the primary runner to call or reproduce the canonical 3-loop implementation and assert the 3.17 GeV band from registered outputs with explicit covariance/quadrature assumptions. Claim boundary until fixed: it is safe to claim a conditional retention-budget calculation: given the supplied inherited inputs and quadrature model, the script reproduces m_H about 125.04 GeV with a roughly 3.17 GeV 1-sigma budget and includes the observed 125.25 GeV value; it is not yet an audited retained first-principles Higgs-mass precision theorem or an independent validation of the YT/Higgs authority chain."
     },
     "higgs_mechanism_note": {
       "audit_date": null,

@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T03:59:02.908400+00:00
+**Generated:** 2026-04-27T04:01:55.323084+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 3 |
-| _proposed_retained_ | 278 |
+| _proposed_retained_ | 277 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
@@ -28,16 +28,16 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | unknown | 734 |
 | ~~audited_decoration~~ | 1 |
 | ~~audited_numerical_match~~ | 3 |
-| ~~audited_conditional~~ | 279 |
+| ~~audited_conditional~~ | 280 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 3 |
-| `audited_conditional` | 20 |
+| `audited_conditional` | 21 |
 | `audited_decoration` | 1 |
 | `audited_numerical_match` | 3 |
-| `unaudited` | 1571 |
+| `unaudited` | 1570 |
 
 | criticality | count |
 |---|---:|
@@ -106,6 +106,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `electrostatics_grown_sign_law_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `emergent_lorentz_invariance_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gravity_clean_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
+| `higgs_mass_retention_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `lensing_beta_sweep_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lensing_deflection_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lensing_k_sweep_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -295,6 +296,27 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `weak_field_action_test_mass_response_not_registered`
   - `lattice_green_function_normalization_runner_not_registered`
   - `scripts/frontier_gravity_clean_derivation.py_not_registered_primary_runner`
+- **auditor confidence:** high
+
+### `higgs_mass_retention_analysis_note_2026-04-18`
+
+- **Note:** [`HIGGS_MASS_RETENTION_ANALYSIS_NOTE_2026-04-18.md`](../../docs/HIGGS_MASS_RETENTION_ANALYSIS_NOTE_2026-04-18.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The retained band m_H = 125.04 GeV +/- 3.17 GeV is obtained by propagating the inherited YT through-2-loop Delta_R uncertainty with A_MH=2.67 and combining it in quadrature with loop-transport, classicality-BC, and threshold-matching retention gaps.  _(class `D`)_
+- **chain closes:** False — The runner reproduces the stated budget arithmetic and an RGE sensitivity probe, but it consumes many unregistered inherited authorities as constants and uses a local 2-loop RGE replica while the note's central claim is the canonical 3-loop route. The audit packet therefore does not independently close the retained Higgs-band derivation or the observed-mass comparator claim.
+- **rationale:** Issue: the Higgs retention band is a propagated budget built from inherited YT Delta_R bands, canonical Higgs authority centrals, hierarchy/canonical-surface constants, loop-geometric assumptions, quadrature independence, and the observed Higgs comparator, but none of these authorities are registered as one-hop dependencies for this row. Why this blocks: the runner can verify arithmetic after those inputs are supplied, but it does not derive the YT +/-0.70% band, the 125.1/119.8 GeV Higgs authority centrals, the 3-loop canonical RGE route, the loop-tail/geometric-gap model, the lambda(M_Pl)=0 classicality correction, or the independence assumptions behind the 3.17 GeV quadrature band; moreover its local compute_mh probe is documented as a 2-loop replica, not the canonical 3-loop runner that the note cites as authority. Repair target: register the YT Delta_R stack, canonical Higgs 3-loop runner/output, 2-loop authority, canonical plaquette/hierarchy constants, loop-geometric bound, classicality-BC theorem, threshold-matching source, and observed-mass comparator as dependencies; update the primary runner to call or reproduce the canonical 3-loop implementation and assert the 3.17 GeV band from registered outputs with explicit covariance/quadrature assumptions. Claim boundary until fixed: it is safe to claim a conditional retention-budget calculation: given the supplied inherited inputs and quadrature model, the script reproduces m_H about 125.04 GeV with a roughly 3.17 GeV 1-sigma budget and includes the observed 125.25 GeV value; it is not yet an audited retained first-principles Higgs-mass precision theorem or an independent validation of the YT/Higgs authority chain.
+- **open / conditional deps cited:**
+  - `YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md_not_registered_one_hop_dependency`
+  - `YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md_not_registered_one_hop_dependency`
+  - `YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md_not_registered_one_hop_dependency`
+  - `HIGGS_MASS_DERIVED_NOTE.md_not_registered_one_hop_dependency`
+  - `HIGGS_VACUUM_EXPLICIT_SYSTEMATIC_NOTE.md_not_registered_one_hop_dependency`
+  - `scripts/frontier_higgs_mass_full_3loop.py_not_registered_dependency_output`
+  - `quadrature_independence_model_for_retention_gaps_not_registered`
+  - `observed_higgs_mass_comparator_not_registered`
 - **auditor confidence:** high
 
 ### `i3_zero_exact_theorem_note`
