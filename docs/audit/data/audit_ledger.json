@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T12:40:51.721534+00:00",
-  "generated_at": "2026-04-27T12:40:50.128632+00:00",
-  "invalidation_run_at": "2026-04-27T12:40:51.675513+00:00",
+  "effective_status_computed_at": "2026-04-27T12:45:19.476104+00:00",
+  "generated_at": "2026-04-27T12:45:17.879078+00:00",
+  "invalidation_run_at": "2026-04-27T12:45:19.430462+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T12:40:51.579772+00:00",
+  "load_bearing_computed_at": "2026-04-27T12:45:19.335022+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -30503,14 +30503,21 @@
       "verdict_rationale": "The bounded positive closes through the current runner and frozen log: eta=0 returns escape=1.000, while the aggregate escape ratio falls monotonically from 0.799 at eta=0.05 to 0.205 at eta=0.50 on the declared grown row and trap slab. The note promotes only the detector escape ratio, which is exactly the observable computed by the runner. No cited dependency is needed for this finite computation, and the note does not claim a horizon theory, generated-family transfer, or general field equation. Residual boundary: the result remains a bounded transport probe for this row, static field, trap geometry, seeds, and eta sweep."
     },
     "gate_b_grown_wavefield_companion_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The live runner recomputes the fixed-field grown-row companion scan, reproducing exact zero-source same-site and wavefield spans and low-R2 phase-ramp fits for both source layers. The source note frames the result as a bounded no-go for phase-ramp transfer and does not claim a geometry-generic or self-consistent field mechanism.",
       "claim_id": "gate_b_grown_wavefield_companion_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -30518,13 +30525,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The detector-line phase-ramp mechanism itself does not cleanly carry over on the retained grown row: the phase-ramp slopes are small and the R^2 values are low, while zero-source reduction is exact.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "a2defd49297a7915c69c19af93902516eb210bc46ff8c21949d88f1b3d16a08c",
@@ -30560,14 +30567,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 4,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 4
       },
       "runner_path": null,
       "title": "Gate B Grown Wavefield Companion Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The negative claim closes on its own terms: the current runner and frozen log agree that the zero-source guardrail is exactly zero for both same-site and wavefield updates, while the phase-ramp fits remain weak with R2 = 0.294 and 0.298 on the two tested source layers. The note's retained surface is the bounded no-go, not a transfer of the exact-lattice wavefield mechanism. The distinguishability comparator also reproduces as wave/same > 1 in both rows, but it is not promoted into a coherent phase-ramp law. Residual boundary: the result is limited to this fixed-field runner, its imported grown-row constructor, central detector-line readout, source layers, strengths, and two-seed scan."
     },
     "gate_b_h025_distance_law_note": {
       "audit_date": null,
