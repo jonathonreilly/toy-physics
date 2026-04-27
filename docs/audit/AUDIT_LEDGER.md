@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T06:23:01.189888+00:00
+**Generated:** 2026-04-27T06:27:53.704491+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 6 |
-| _proposed_retained_ | 235 |
+| _proposed_retained_ | 231 |
 | _proposed_promoted_ | 6 |
 | bounded | 184 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
-| ~~audited_conditional~~ | 258 |
+| ~~audited_conditional~~ | 262 |
 | ~~audited_failed~~ | 68 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 6 |
-| `audited_conditional` | 53 |
+| `audited_conditional` | 54 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 4 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1527 |
+| `unaudited` | 1526 |
 
 | criticality | count |
 |---|---:|
@@ -50,7 +50,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 85 |
 | `leaf` | 856 |
 
-- **Proposed claims demoted by upstream:** 130
+- **Proposed claims demoted by upstream:** 133
 - **Citation cycles detected:** 283
 
 ### Runner classification (static heuristic)
@@ -116,6 +116,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_schur_suppression_theorem_note_2026-04-15` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `electrostatics_grown_sign_law_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `emergent_lorentz_invariance_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `global_coherence_off_scaffold_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravitomagnetic_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravity_clean_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `higgs_mass_retention_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
@@ -469,6 +470,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `audit_queue_runner_path_null_for_named_primary_verifier`
   - `retained_EW_bare_coupling_bookkeeping_not_registered_one_hop_dependency`
   - `Cl3_to_SM_dimension_count_d_plus_1_d_plus_2_support_packet_not_registered_one_hop_dependency`
+- **auditor confidence:** high
+
+### `global_coherence_off_scaffold_note`
+
+- **Note:** [`GLOBAL_COHERENCE_OFF_SCAFFOLD_NOTE.md`](../../docs/GLOBAL_COHERENCE_OFF_SCAFFOLD_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The off-scaffold batch of 9 continuous-position generators is used to show that the frozen free_coh >= 7.9597e-04 rule achieves only 5/9 accuracy, exactly matching the old two-property node-level rule, while the pre-committed structural pass/fail intuition achieves 8/9.  _(class `C`)_
+- **chain closes:** False — The live source-note runner reproduces the 9-family table, the 5/9 frozen-rule accuracy, the 5/9 old-rule comparison, and the 8/9 structural-intuition count. The broader retained conclusion does not close because the executable labels the result PARTIAL, has no hard assertions, and the packet does not prove exhaustion of simple classifiers beyond this finite free_coh/old-rule card.
+- **rationale:** Issue: the runner and archived log support the finite off-scaffold negative for the frozen free_coh threshold, but the source note promotes that finite card to a decisive closure of the simple-classifier line and a statement that no single node-level or global scalar metric carries the weight off-scaffold. Why this blocks: the allowed evidence tests one frozen free_coh threshold against one old two-property rule on 9 hand-specified off-scaffold generators; it does not constitute a theorem or exhaustive computation over simple metrics, generator distributions, thresholds, or readouts, and the runner itself prints PARTIAL rather than the source note's stronger decisive framing. Repair target: register scripts/global_coherence_off_scaffold.py as the primary runner, add hard assertions for the 9-family roster, no-refit threshold, L1=4/9, L2=5/9, old-rule=5/9, L3=8/9, and the intended retained/negative verdict, then either add a no-go theorem or exhaustive metric-search computation for the broad classifier-exhaustion claim or narrow the note to the finite off-scaffold free_coh result. Claim boundary until fixed: it is safe to claim that on the specified 9-generator continuous-position off-scaffold batch, the frozen free_coh >= 7.9597e-04 rule predicts PASS for all generators and matches the battery on 5/9, the same accuracy as the old node-level rule, while the hard-coded structural pass/fail expectations match 8/9; it is not safe to claim a general no-go for all simple classifiers or a law-level off-scaffold theorem.
+- **open / conditional deps cited:**
+  - `scripts/global_coherence_off_scaffold.py_not_registered_as_primary_runner`
+  - `runner_prints_partial_verdict_and_diagnostics_without_hard_assertions`
+  - `simple_classifier_exhaustion_no_go_theorem_or_exhaustive_metric_search_missing`
 - **auditor confidence:** high
 
 ### `gravitomagnetic_note`

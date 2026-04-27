@@ -3,9 +3,9 @@
     "critical": 88,
     "high": 506,
     "leaf": 856,
-    "medium": 80
+    "medium": 79
   },
-  "generated_at": "2026-04-27T06:23:00.783108+00:00",
+  "generated_at": "2026-04-27T06:27:53.510385+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -14410,23 +14410,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "global_coherence_off_scaffold_note",
-      "criticality": "medium",
-      "criticality_rank": 1,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 3,
-      "load_bearing_score": 7.5,
-      "note_path": "docs/GLOBAL_COHERENCE_OFF_SCAFFOLD_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 3
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "bmv_entanglement_note_2026-04-11",
       "criticality": "medium",
       "criticality_rank": 1,
@@ -16549,25 +16532,6 @@
       "direct_in_degree": 1,
       "load_bearing_score": 5.5,
       "note_path": "docs/CONTINUUM_LIMIT_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "global_coherence_predictor_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "global_coherence_off_scaffold_note"
-      ],
-      "direct_in_degree": 1,
-      "load_bearing_score": 5.5,
-      "note_path": "docs/GLOBAL_COHERENCE_PREDICTOR_NOTE.md",
       "ready": true,
       "runner_path": null,
       "transitive_descendants": 1
@@ -22482,26 +22446,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "global_coherence_held_out2_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "global_coherence_off_scaffold_note",
-        "global_coherence_predictor_note"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/GLOBAL_COHERENCE_HELD_OUT2_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "graph_phase_diagram_scout_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -27998,27 +27942,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "universality_classifier_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "global_coherence_off_scaffold_note",
-        "independent_generators_heldout_note",
-        "local_zsym_predictor_note"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/UNIVERSALITY_CLASSIFIER_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "valley_linear_asymptotic_bridge_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -29394,6 +29317,25 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "global_coherence_predictor_note",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "global_coherence_off_scaffold_note"
+      ],
+      "direct_in_degree": 1,
+      "load_bearing_score": 5.5,
+      "note_path": "docs/GLOBAL_COHERENCE_PREDICTOR_NOTE.md",
+      "ready": false,
+      "runner_path": null,
+      "transitive_descendants": 1
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "kubo_continuum_limit_families_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -30220,6 +30162,26 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "global_coherence_held_out2_note",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "global_coherence_off_scaffold_note",
+        "global_coherence_predictor_note"
+      ],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/GLOBAL_COHERENCE_HELD_OUT2_NOTE.md",
+      "ready": false,
+      "runner_path": null,
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "gravitational_memory_note_2026-04-11",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -30632,6 +30594,27 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "universality_classifier_note",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "global_coherence_off_scaffold_note",
+        "independent_generators_heldout_note",
+        "local_zsym_predictor_note"
+      ],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/UNIVERSALITY_CLASSIFIER_NOTE.md",
+      "ready": false,
+      "runner_path": null,
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "wave_direct_dm_matched_history_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -30784,6 +30767,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1124,
-  "total_pending": 1530
+  "ready_count": 1120,
+  "total_pending": 1529
 }

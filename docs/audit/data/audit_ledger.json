@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T06:23:00.723423+00:00",
-  "generated_at": "2026-04-27T06:22:58.746442+00:00",
-  "invalidation_run_at": "2026-04-27T06:23:00.651876+00:00",
+  "effective_status_computed_at": "2026-04-27T06:27:53.449559+00:00",
+  "generated_at": "2026-04-27T06:27:51.572861+00:00",
+  "invalidation_run_at": "2026-04-27T06:27:53.390883+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T06:23:00.517250+00:00",
+  "load_bearing_computed_at": "2026-04-27T06:27:53.251040+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -32122,8 +32122,8 @@
         "global_coherence_predictor_note"
       ],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
-      "effective_status_reason": "self",
+      "effective_status": "audited_conditional",
+      "effective_status_reason": "inherited_from:global_coherence_off_scaffold_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 0.0,
@@ -32174,14 +32174,21 @@
       "verdict_rationale": null
     },
     "global_coherence_off_scaffold_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "medium",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 7.5,
+        "transitive_descendants": 3
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live source-note runner reproduces the 9-family table, the 5/9 frozen-rule accuracy, the 5/9 old-rule comparison, and the 8/9 structural-intuition count. The broader retained conclusion does not close because the executable labels the result PARTIAL, has no hard assertions, and the packet does not prove exhaustion of simple classifiers beyond this finite free_coh/old-rule card.",
       "claim_id": "global_coherence_off_scaffold_note",
       "criticality": "medium",
       "current_status": "proposed_retained",
@@ -32189,18 +32196,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 3,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 7.5,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The off-scaffold batch of 9 continuous-position generators is used to show that the frozen free_coh >= 7.9597e-04 rule achieves only 5/9 accuracy, exactly matching the old two-property node-level rule, while the pre-committed structural pass/fail intuition achieves 8/9.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "d3427feada74e62a696e91fb9d487bcc5e469d41d8cd05216c197732e76b4cfd",
       "note_path": "docs/GLOBAL_COHERENCE_OFF_SCAFFOLD_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "scripts/global_coherence_off_scaffold.py_not_registered_as_primary_runner",
+        "runner_prints_partial_verdict_and_diagnostics_without_hard_assertions",
+        "simple_classifier_exhaustion_no_go_theorem_or_exhaustive_metric_search_missing"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368490+00:00",
@@ -32238,7 +32249,7 @@
       "runner_path": null,
       "title": "Off-Scaffold Held-Out Test of `free_coh` \u2014 DECISIVE NEGATIVE",
       "transitive_descendants": 3,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the runner and archived log support the finite off-scaffold negative for the frozen free_coh threshold, but the source note promotes that finite card to a decisive closure of the simple-classifier line and a statement that no single node-level or global scalar metric carries the weight off-scaffold. Why this blocks: the allowed evidence tests one frozen free_coh threshold against one old two-property rule on 9 hand-specified off-scaffold generators; it does not constitute a theorem or exhaustive computation over simple metrics, generator distributions, thresholds, or readouts, and the runner itself prints PARTIAL rather than the source note's stronger decisive framing. Repair target: register scripts/global_coherence_off_scaffold.py as the primary runner, add hard assertions for the 9-family roster, no-refit threshold, L1=4/9, L2=5/9, old-rule=5/9, L3=8/9, and the intended retained/negative verdict, then either add a no-go theorem or exhaustive metric-search computation for the broad classifier-exhaustion claim or narrow the note to the finite off-scaffold free_coh result. Claim boundary until fixed: it is safe to claim that on the specified 9-generator continuous-position off-scaffold batch, the frozen free_coh >= 7.9597e-04 rule predicts PASS for all generators and matches the battery on 5/9, the same accuracy as the old node-level rule, while the hard-coded structural pass/fail expectations match 8/9; it is not safe to claim a general no-go for all simple classifiers or a law-level off-scaffold theorem."
     },
     "global_coherence_predictor_note": {
       "audit_date": null,
@@ -32258,8 +32269,8 @@
         "global_coherence_off_scaffold_note"
       ],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
-      "effective_status_reason": "self",
+      "effective_status": "audited_conditional",
+      "effective_status_reason": "inherited_from:global_coherence_off_scaffold_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 5.5,
@@ -73960,8 +73971,8 @@
         "local_zsym_predictor_note"
       ],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
-      "effective_status_reason": "self",
+      "effective_status": "audited_conditional",
+      "effective_status_reason": "inherited_from:global_coherence_off_scaffold_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 0.0,
