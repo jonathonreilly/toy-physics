@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T22:31:54.346271+00:00
+**Generated:** 2026-04-27T22:35:07.658156+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 72 |
-| _proposed_retained_ | 9 |
+| _proposed_retained_ | 8 |
 | _proposed_promoted_ | 1 |
 | bounded | 185 |
 | support | 104 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 172 |
+| ~~audited_conditional~~ | 173 |
 | ~~audited_failed~~ | 330 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 72 |
-| `audited_conditional` | 142 |
+| `audited_conditional` | 143 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 76 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1312 |
+| `unaudited` | 1311 |
 
 | criticality | count |
 |---|---:|
@@ -314,6 +314,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_p2_f_yt_loop_geometric_bound_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_p2_v_matching_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `yt_p3_k_series_geometric_bound_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `koide_q_eq_3delta_identity_note_2026-04-21` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `retained_cross_lane_consistency_support_note_2026-04-22` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | B | - |
@@ -5031,6 +5032,26 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
   - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
   - `YT_ZERO_IMPORT_CHAIN_NOTE.md`
+- **auditor confidence:** high
+
+### `yt_p3_k_series_geometric_bound_note_2026-04-17`
+
+- **Note:** [`YT_P3_K_SERIES_GEOMETRIC_BOUND_NOTE_2026-04-17.md`](../../docs/YT_P3_K_SERIES_GEOMETRIC_BOUND_NOTE_2026-04-17.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Assuming the geometric ratio bound |delta_{n+1}| <= r_bound * |delta_n| holds for all n >= 3, the residual tail after retained truncation index N = 3 is upper-bounded by delta_3 * r_bound / (1 - r_bound) = 0.001458.  _(class `B`)_
+- **chain closes:** False — The runner verifies the imported K1-K3 values, the first two observed ratios, and the finite geometric-sum arithmetic, but it does not prove the all-higher-order ratio bound for K4 and beyond. The claimed tail control therefore depends on the note's explicit geometric-decay assumption and on non-clean upstream K-series/coupling authorities.
+- **rationale:** Issue: the retained tail bound rests on the unproved assumption that |delta_{n+1}| <= r_bound * |delta_n| with r_bound = (alpha_s/pi) * C_A^2 for every n >= 3, while the runner only checks n = 1,2 ratios and then sums a geometric series. Why this blocks: a retained bound on the full MSbar-to-pole K_n tail requires a theorem or computation controlling K4 and higher terms, not an envelope selected because it covers the first two ratios. Repair target: prove a framework-native renormalon/asymptotic coefficient bound on the retained action, or extend the runner to compute/bound K4+ from retained inputs and show the ratio inequality uniformly from some n0. Claim boundary until fixed: safe to claim conditional arithmetic: given K1-K3, alpha_s(m_t)=0.1079, and the geometric-decay premise, the tail bound is 0.001457 and about 0.137% of m_t; not safe to claim audited retained closure of the P3 K-series tail or P3 coverage budget.
+- **open / conditional deps cited:**
+  - `ALPHA_S_DERIVED_NOTE.md`
+  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
+  - `YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md`
+  - `YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
+  - `YT_P3_MSBAR_TO_POLE_K2_INTEGRAL_CITATION_NOTE_2026-04-17.md`
+  - `YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
+  - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
 - **auditor confidence:** high
 
 ### `yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17`

@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T22:31:54.139118+00:00",
-  "generated_at": "2026-04-27T22:31:52.442559+00:00",
-  "invalidation_run_at": "2026-04-27T22:31:54.084102+00:00",
+  "effective_status_computed_at": "2026-04-27T22:35:07.413523+00:00",
+  "generated_at": "2026-04-27T22:35:05.700230+00:00",
+  "invalidation_run_at": "2026-04-27T22:35:07.354838+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T22:31:53.973428+00:00",
+  "load_bearing_computed_at": "2026-04-27T22:35:07.238479+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -86887,14 +86887,21 @@
       "verdict_rationale": "Issue: the proposed M closure depends on a selected mixed-scheme factorization M = sqrt(u_0) * F_yt * sqrt(8/9), a QFP 3% support envelope, and a 2-loop primary-chain value that the runner cites rather than derives. Why this blocks: a retained v-matching theorem must prove the lattice-to-SM endpoint map, color-projection factor, and RGE transport as one coherent bridge, and must compute the quantitative 2-loop closure from retained beta functions in the runner or registered clean dependencies. Repair target: clean-audit the taste-staircase, Ward/CMT, color-projection, zero-import beta-coefficient, and QFP parents, and extend this runner to perform the retained 2-loop SM-RGE integration and verify M = 1.9734 from those inputs without reading the target as a premise. Claim boundary until fixed: safe to claim conditional Path C arithmetic: given the supplied endpoint factors and 1-loop RGE, M_1-loop = 1.926 and lies within the asserted 3% QFP envelope; not safe to claim audited retained closure of the P2 v-matching coefficient."
     },
     "yt_p3_k_series_geometric_bound_note_2026-04-17": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 7.431,
+        "transitive_descendants": 121
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies the imported K1-K3 values, the first two observed ratios, and the finite geometric-sum arithmetic, but it does not prove the all-higher-order ratio bound for K4 and beyond. The claimed tail control therefore depends on the note's explicit geometric-decay assumption and on non-clean upstream K-series/coupling authorities.",
       "claim_id": "yt_p3_k_series_geometric_bound_note_2026-04-17",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -86902,18 +86909,26 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 7.431,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Assuming the geometric ratio bound |delta_{n+1}| <= r_bound * |delta_n| holds for all n >= 3, the residual tail after retained truncation index N = 3 is upper-bounded by delta_3 * r_bound / (1 - r_bound) = 0.001458.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "c33bcaf8896ce9a0eaa783cff61ce9612f1eccf42cab02866908241c122de736",
       "note_path": "docs/YT_P3_K_SERIES_GEOMETRIC_BOUND_NOTE_2026-04-17.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/ALPHA_S_DERIVED_NOTE.md",
+        "docs/YT_EW_COLOR_PROJECTION_THEOREM.md",
+        "docs/YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md",
+        "docs/YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
+        "docs/YT_P3_MSBAR_TO_POLE_K2_INTEGRAL_CITATION_NOTE_2026-04-17.md",
+        "docs/YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
+        "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.370354+00:00",
@@ -86942,16 +86957,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 18,
+        "B": 10,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 28
       },
       "runner_path": "scripts/frontier_yt_p3_k_series_geometric_bound.py",
       "title": "P3 K-Series Geometric Tail Bound on the MSbar-to-Pole Conversion",
       "transitive_descendants": 121,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the retained tail bound rests on the unproved assumption that |delta_{n+1}| <= r_bound * |delta_n| with r_bound = (alpha_s/pi) * C_A^2 for every n >= 3, while the runner only checks n = 1,2 ratios and then sums a geometric series. Why this blocks: a retained bound on the full MSbar-to-pole K_n tail requires a theorem or computation controlling K4 and higher terms, not an envelope selected because it covers the first two ratios. Repair target: prove a framework-native renormalon/asymptotic coefficient bound on the retained action, or extend the runner to compute/bound K4+ from retained inputs and show the ratio inequality uniformly from some n0. Claim boundary until fixed: safe to claim conditional arithmetic: given K1-K3, alpha_s(m_t)=0.1079, and the geometric-decay premise, the tail bound is 0.001457 and about 0.137% of m_t; not safe to claim audited retained closure of the P3 K-series tail or P3 coverage budget."
     },
     "yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17": {
       "audit_date": "2026-04-27",
