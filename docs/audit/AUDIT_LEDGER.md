@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T06:42:13.229882+00:00
+**Generated:** 2026-04-27T06:45:07.440821+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -21,7 +21,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 9 |
 | _proposed_retained_ | 226 |
-| _proposed_promoted_ | 5 |
+| _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
 | open | 11 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
 | ~~audited_conditional~~ | 263 |
-| ~~audited_failed~~ | 72 |
+| ~~audited_failed~~ | 73 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 9 |
 | `audited_conditional` | 55 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 6 |
+| `audited_failed` | 7 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1520 |
+| `unaudited` | 1519 |
 
 | criticality | count |
 |---|---:|
@@ -172,6 +172,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `lattice_3d_dense_spent_delay_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `lattice_kernel_transfer_norm_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `mirror_2d_gravity_law_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `bell_inequality_derived_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -1017,6 +1018,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `scripts/matter_inertial_closure.py_not_registered_primary_runner`
   - `logs/2026-04-07-matter-inertial-closure.txt_not_registered_primary_output`
+- **auditor confidence:** high
+
+### `mirror_2d_gravity_law_note`
+
+- **Note:** [`MIRROR_2D_GRAVITY_LAW_NOTE.md`](../../docs/MIRROR_2D_GRAVITY_LAW_NOTE.md)
+- **current_status:** _proposed_promoted_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The cleanup sweep reports that exact 2D mirror gravity-side mass and distance fits remain weak and fit-dependent, with no clean 2D mirror mass or distance law proposed for promotion.  _(class `C`)_
+- **chain closes:** False — The named cleanup runner reproduces the weak best-fit rows for N=60,80,100 and its interpretation says to keep the result bounded unless the fit is visibly clean. The audit queue row is proposed_promoted only because the source status line contains the phrase 'no clean 2D mirror law proposed_promoted', which is an explicit non-promotion statement.
+- **rationale:** Issue: the target is classified as proposed_promoted, but the source note and runner both say the cleanup found no clean promoted 2D mirror gravity law. Why this blocks: the best mass exponents are weak or deteriorating and the distance-tail fits are absent or low quality, so promoting a law would invert the actual result of the source packet. Repair target: change the Status line so the audit queue reads this as a bounded cleanup/non-promotion note, or create a separate promotion packet with a registered runner that demonstrates a stable mass or distance law with hard fit-quality thresholds. Claim boundary until fixed: it is safe to claim that the exact 2D mirror family remains a bounded coexistence pocket and that the cleanup sweep found N=60 mass-window R^2=0.923, N=60 distance-tail R^2=0.872, N=80 no review-safe distance tail, and N=100 weak mass/distance fits; it is not safe to claim a promoted 2D mirror gravity law.
+- **open / conditional deps cited:**
+  - `source_status_explicitly_says_no_clean_2d_mirror_law_proposed_promoted`
+  - `cleanup_runner_interpretation_keeps_result_bounded_not_promoted`
+  - `mass_and_distance_fits_not_review_safe_for_promotion`
 - **auditor confidence:** high
 
 ### `native_gauge_closure_note`

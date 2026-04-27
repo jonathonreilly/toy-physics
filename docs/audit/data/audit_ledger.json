@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T06:42:12.972778+00:00",
-  "generated_at": "2026-04-27T06:42:10.937809+00:00",
-  "invalidation_run_at": "2026-04-27T06:42:12.909600+00:00",
+  "effective_status_computed_at": "2026-04-27T06:45:07.178275+00:00",
+  "generated_at": "2026-04-27T06:45:05.119182+00:00",
+  "invalidation_run_at": "2026-04-27T06:45:07.112456+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T06:42:12.775608+00:00",
+  "load_bearing_computed_at": "2026-04-27T06:45:06.948247+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -47063,14 +47063,21 @@
       "verdict_rationale": null
     },
     "mirror_2d_gravity_law_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 2.822,
+        "transitive_descendants": 4
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The named cleanup runner reproduces the weak best-fit rows for N=60,80,100 and its interpretation says to keep the result bounded unless the fit is visibly clean. The audit queue row is proposed_promoted only because the source status line contains the phrase 'no clean 2D mirror law proposed_promoted', which is an explicit non-promotion statement.",
       "claim_id": "mirror_2d_gravity_law_note",
       "criticality": "leaf",
       "current_status": "proposed_promoted",
@@ -47078,18 +47085,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_promoted",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_promoted",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 2.822,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The cleanup sweep reports that exact 2D mirror gravity-side mass and distance fits remain weak and fit-dependent, with no clean 2D mirror mass or distance law proposed for promotion.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "audited_failed",
       "max_descendant_status_rank": 0,
       "note_hash": "f14a869983e9987213a3b1d949e56e36c8a184920c4d0153e527c3203804dffb",
       "note_path": "docs/MIRROR_2D_GRAVITY_LAW_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "source_status_explicitly_says_no_clean_2d_mirror_law_proposed_promoted",
+        "cleanup_runner_interpretation_keeps_result_bounded_not_promoted",
+        "mass_and_distance_fits_not_review_safe_for_promotion"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369131+00:00",
@@ -47120,14 +47131,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 3,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 3
       },
       "runner_path": null,
       "title": "Exact 2D Mirror Gravity-Law Cleanup Note",
       "transitive_descendants": 4,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the target is classified as proposed_promoted, but the source note and runner both say the cleanup found no clean promoted 2D mirror gravity law. Why this blocks: the best mass exponents are weak or deteriorating and the distance-tail fits are absent or low quality, so promoting a law would invert the actual result of the source packet. Repair target: change the Status line so the audit queue reads this as a bounded cleanup/non-promotion note, or create a separate promotion packet with a registered runner that demonstrates a stable mass or distance law with hard fit-quality thresholds. Claim boundary until fixed: it is safe to claim that the exact 2D mirror family remains a bounded coexistence pocket and that the cleanup sweep found N=60 mass-window R^2=0.923, N=60 distance-tail R^2=0.872, N=80 no review-safe distance tail, and N=100 weak mass/distance fits; it is not safe to claim a promoted 2D mirror gravity law."
     },
     "mirror_2d_validation_note": {
       "audit_date": null,
