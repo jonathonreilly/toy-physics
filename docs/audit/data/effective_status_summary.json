@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-04-27T03:38:19.456601+00:00",
+  "computed_at": "2026-04-27T03:42:47.964960+00:00",
   "cycle_examples": [
     [
       "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25",
@@ -25,18 +25,18 @@
   ],
   "cycles_detected": 283,
   "effective_status_counts": {
-    "audited_conditional": 268,
+    "audited_conditional": 271,
     "audited_decoration": 1,
     "audited_numerical_match": 2,
     "bounded": 185,
     "open": 11,
     "proposed_promoted": 6,
-    "proposed_retained": 288,
+    "proposed_retained": 286,
     "retained": 2,
     "support": 101,
-    "unknown": 737
+    "unknown": 736
   },
-  "proposed_demoted_by_upstream_count": 128,
+  "proposed_demoted_by_upstream_count": 129,
   "proposed_demoted_by_upstream_examples": [
     "alpha_s_derived_note",
     "area_law_quarter_broader_no_go_note_2026-04-25",
