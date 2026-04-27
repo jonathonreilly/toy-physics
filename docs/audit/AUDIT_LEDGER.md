@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T19:27:30.240991+00:00
+**Generated:** 2026-04-27T19:30:45.929833+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 69 |
-| _proposed_retained_ | 29 |
+| **retained** | 70 |
+| _proposed_retained_ | 28 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 69 |
+| `audited_clean` | 70 |
 | `audited_conditional` | 133 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1328 |
+| `unaudited` | 1327 |
 
 | criticality | count |
 |---|---:|
@@ -169,6 +169,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_static_direct_probe_fine_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_static_fixed_beam_boundary_sensitivity_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_static_matrixfree_fixed_beam_boundary_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `wave_static_matrixfree_moving_source_fixed_beam_boundary_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `area_law_quarter_broader_no_go_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `broad_surrogate_point_source_compare_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -4561,6 +4562,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** At shared H = 0.35 with fixed beam PW = 6.0, the matrix-free static comparator still shows material field-box sensitivity: dS moves 26.21% and rel_MS moves 46.52%.  _(class `C`)_
 - **chain closes:** True — The live matrix-free runner with the source note's retained H = 0.35 reproduces the field-box table, residuals, iteration counts, and boundary-move summary. The note explicitly does not establish the H = 0.25 run.
 - **rationale:** The audited result is a side-probe agreement, not a new continuum claim. The matrix-free engine reproduces the same fixed-beam boundary sensitivity as the direct-solve branch at H = 0.35: dS and rel_MS move materially while dM moves only 0.57%, and both matrix-free solves converge to residuals below 3e-10. This closes the note's narrow claim that the static-comparator weakness is not caused by the direct static solver implementation.
+- **auditor confidence:** high
+
+### `wave_static_matrixfree_moving_source_fixed_beam_boundary_note`
+
+- **Note:** [`WAVE_STATIC_MATRIXFREE_MOVING_SOURCE_FIXED_BEAM_BOUNDARY_NOTE.md`](../../docs/WAVE_STATIC_MATRIXFREE_MOVING_SOURCE_FIXED_BEAM_BOUNDARY_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** At H = 0.35 with fixed beam geometry, the moving-source exact static comparator remains field-box sensitive, but the 9.0 -> 12.0 large-box branch shows low rel_MS and smaller dS movement without meeting the strict stability bar.  _(class `C`)_
+- **chain closes:** True — The live runner reproduces both source-note comparisons: field PW 6.0 -> 9.0 and 9.0 -> 12.0. The note keeps the conclusion mixed and bounded, explicitly withholding continuum-quality promotion.
+- **rationale:** The note accurately preserves both sides of the runner output. The 6.0 -> 9.0 comparison is still materially box-dependent, with dS move 20.84% and rel_MS move 86.21%, while dM is stable; the 9.0 -> 12.0 comparison improves to dS move 5.52% and rel_MS 3.18% -> 2.42% but still does not pass a strict stability criterion. This closes only the stated mixed diagnostic: no boundary-stable moving-source comparator is retained yet, but the medium-H large-box branch remains a plausible stabilization candidate.
 - **auditor confidence:** high
 
 ### `weak_coupling_retention_note_2026-04-11`
