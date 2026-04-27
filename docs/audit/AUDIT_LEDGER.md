@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T13:02:59.342196+00:00
+**Generated:** 2026-04-27T13:05:07.899295+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 45 |
-| _proposed_retained_ | 147 |
+| **retained** | 46 |
+| _proposed_retained_ | 146 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 45 |
+| `audited_clean` | 46 |
 | `audited_conditional` | 87 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 22 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1447 |
+| `unaudited` | 1446 |
 
 | criticality | count |
 |---|---:|
@@ -133,6 +133,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_grown_trapping_frontier_v3_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `gate_b_grown_trapping_transport_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `gate_b_grown_wavefield_companion_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `gate_b_v6_nearfield_comparator_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `i3_zero_exact_theorem_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `independent_generators_heldout_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -1572,6 +1573,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the split note synthesizes two upstream probes, but the absorptive/complex-action input is audited conditional while only the causal-memory no-go input is audited clean. Why this blocks: the claim that the absorptive proxy is a separate useful strong-field observable inherits the unresolved retained-row and Born-guardrail boundary from the complex-action falsifier, so the synthesis cannot be ratified as clean retained science. Repair target: audit-retain or re-scope the complex-action falsifier and its Gate B grown-row guardrail, then rerun this synthesis against two clean or explicitly bounded inputs. Claim boundary until fixed: safely claim only that the two cited finite probes test different implemented mechanisms and that the minimal causal-memory ansatz is a clean no-go; the absorptive proxy remains a bounded conditional amplitude-effect probe, not evidence for a causal field.
 - **open / conditional deps cited:**
   - `GATE_B_COMPLEX_ACTION_FALSIFIER_NOTE.md`
+- **auditor confidence:** high
+
+### `gate_b_v6_nearfield_comparator_note`
+
+- **Note:** [`GATE_B_V6_NEARFIELD_COMPARATOR_NOTE.md`](../../docs/GATE_B_V6_NEARFIELD_COMPARATOR_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The v6 mixed result is not a case where the grown rule collapses while the exact grid stays clean: the ordered-lattice control is already worse on the closest bucket, and the retained grown row is better there though not universal across all seeds.  _(class `C`)_
+- **chain closes:** True — The live comparator recomputes the exact-vs-grown near-field control on the declared v6 setup, reproducing the overall counts, bucket localization, and closest-bucket seed split. The source note keeps the claim bounded and explicitly declines full Gate B closure or universal generated-row dominance.
+- **rationale:** The bounded comparator closes through the current runner: exact grid is 6/9 TOWARD with mean delta +0.000007, grown row is 33/36 TOWARD with mean delta +0.000021, and the closest y=1.0 bucket is worse on the exact grid while only one of four grown seeds flips. The observable in the note is the same detector-centroid shift and TOWARD count computed by the runner, and the note does not claim full Gate B closure or universal generated-row superiority. Residual boundary: the frozen log named by the note is missing, but the live runner fully regenerates the table and is the load-bearing artifact here.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20`
