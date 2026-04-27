@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T03:31:39.649487+00:00",
-  "generated_at": "2026-04-27T03:31:37.726451+00:00",
-  "invalidation_run_at": "2026-04-27T03:31:39.584291+00:00",
+  "effective_status_computed_at": "2026-04-27T03:34:40.556672+00:00",
+  "generated_at": "2026-04-27T03:34:38.784014+00:00",
+  "invalidation_run_at": "2026-04-27T03:34:40.501584+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T03:31:39.442175+00:00",
+  "load_bearing_computed_at": "2026-04-27T03:34:40.374952+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -44287,14 +44287,21 @@
       "verdict_rationale": null
     },
     "lensing_k_sweep_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 7.407,
+        "transitive_descendants": 119
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The diagnostic depends on numerical k-sweep tables and an eikonal comparison, but the ledger has no registered primary runner/output and no one-hop dependency for the eikonal/mechanism interpretation.",
       "claim_id": "lensing_k_sweep_note",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -44302,18 +44309,23 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 7.407,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note asserts that the mean lensing slope varies from +0.58 to about -1.43 across k*H values, with sign flips at k*H=0.5 and 5.0, so the earlier -1.40 slope at k*H=2.5 is configuration-specific rather than a geometric invariant.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "0ebc9a9e0a56bc9e44373229ccf819a25b391fccee660c393f35be27ad4db06a",
       "note_path": "docs/LENSING_K_SWEEP_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "scripts/lensing_k_sweep.py_not_registered_primary_runner",
+        "logs/2026-04-09-lensing-k-sweep.txt_not_registered_primary_output",
+        "eikonal_baseline_not_registered_one_hop",
+        "kernel_or_mode_interference_analysis_not_registered"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369032+00:00",
@@ -44351,7 +44363,7 @@
       "runner_path": null,
       "title": "Lensing Slope vs k (Phase Coupling): Strongly k-Dependent",
       "transitive_descendants": 119,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the proposed_retained diagnostic rests on a numerical k-sweep over one Fam1 setup with three seeds per k*H value, but the audit ledger registers no primary runner/output for scripts/lensing_k_sweep.py or its log. Why this blocks: a hostile auditor cannot reproduce the reported slope range, sign flips, R^2 ranges, seed spread, or eikonal-gap oscillation from registered evidence; additionally, the inference that the correction is a wave-interference mechanism is stronger than the table alone unless supported by registered kernel/mode analysis. Repair target: register the k-sweep runner and deterministic output with PASS thresholds for slopes/signs/seed spread, register the eikonal baseline and adjoint-kernel/mode analysis used to infer mechanism, and extend or explicitly bound family/H/b-range coverage. Claim boundary until fixed: it is safe to say the source note reports a conditional numerical diagnostic that the reference k*H=2.5 slope is not invariant within the tested sweep; it is not yet an audited retained theorem that lensing is a k-dependent wave-interference phenomenon."
     },
     "lensing_long_path_test_note": {
       "audit_date": null,

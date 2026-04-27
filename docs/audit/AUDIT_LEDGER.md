@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T03:31:39.922498+00:00
+**Generated:** 2026-04-27T03:34:40.794394+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 2 |
-| _proposed_retained_ | 290 |
+| _proposed_retained_ | 289 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
@@ -28,16 +28,16 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | unknown | 737 |
 | ~~audited_decoration~~ | 1 |
 | ~~audited_numerical_match~~ | 2 |
-| ~~audited_conditional~~ | 266 |
+| ~~audited_conditional~~ | 267 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 2 |
-| `audited_conditional` | 13 |
+| `audited_conditional` | 14 |
 | `audited_decoration` | 1 |
 | `audited_numerical_match` | 2 |
-| `unaudited` | 1580 |
+| `unaudited` | 1579 |
 
 | criticality | count |
 |---|---:|
@@ -105,6 +105,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `electrostatics_grown_sign_law_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravity_clean_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `lensing_beta_sweep_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `lensing_k_sweep_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `linear_response_true_kubo_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `native_gauge_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `neutrino_dirac_z3_support_trichotomy_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -299,6 +300,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `logs/2026-04-08-lensing-beta-sweep.txt_not_registered_primary_output`
   - `LENSING_ADJOINT_KERNEL_NOTE.md_not_registered_one_hop`
   - `multi_family_or_broader_H_refinement_not_registered`
+- **auditor confidence:** high
+
+### `lensing_k_sweep_note`
+
+- **Note:** [`LENSING_K_SWEEP_NOTE.md`](../../docs/LENSING_K_SWEEP_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note asserts that the mean lensing slope varies from +0.58 to about -1.43 across k*H values, with sign flips at k*H=0.5 and 5.0, so the earlier -1.40 slope at k*H=2.5 is configuration-specific rather than a geometric invariant.  _(class `C`)_
+- **chain closes:** False — The diagnostic depends on numerical k-sweep tables and an eikonal comparison, but the ledger has no registered primary runner/output and no one-hop dependency for the eikonal/mechanism interpretation.
+- **rationale:** Issue: the proposed_retained diagnostic rests on a numerical k-sweep over one Fam1 setup with three seeds per k*H value, but the audit ledger registers no primary runner/output for scripts/lensing_k_sweep.py or its log. Why this blocks: a hostile auditor cannot reproduce the reported slope range, sign flips, R^2 ranges, seed spread, or eikonal-gap oscillation from registered evidence; additionally, the inference that the correction is a wave-interference mechanism is stronger than the table alone unless supported by registered kernel/mode analysis. Repair target: register the k-sweep runner and deterministic output with PASS thresholds for slopes/signs/seed spread, register the eikonal baseline and adjoint-kernel/mode analysis used to infer mechanism, and extend or explicitly bound family/H/b-range coverage. Claim boundary until fixed: it is safe to say the source note reports a conditional numerical diagnostic that the reference k*H=2.5 slope is not invariant within the tested sweep; it is not yet an audited retained theorem that lensing is a k-dependent wave-interference phenomenon.
+- **open / conditional deps cited:**
+  - `scripts/lensing_k_sweep.py_not_registered_primary_runner`
+  - `logs/2026-04-09-lensing-k-sweep.txt_not_registered_primary_output`
+  - `eikonal_baseline_not_registered_one_hop`
+  - `kernel_or_mode_interference_analysis_not_registered`
 - **auditor confidence:** high
 
 ### `linear_response_true_kubo_note`
