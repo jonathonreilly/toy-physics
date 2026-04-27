@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T05:04:02.008838+00:00",
-  "generated_at": "2026-04-27T05:04:00.187294+00:00",
-  "invalidation_run_at": "2026-04-27T05:04:01.946293+00:00",
+  "effective_status_computed_at": "2026-04-27T05:05:40.088454+00:00",
+  "generated_at": "2026-04-27T05:05:38.094119+00:00",
+  "invalidation_run_at": "2026-04-27T05:05:40.024124+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T05:04:01.819976+00:00",
+  "load_bearing_computed_at": "2026-04-27T05:05:39.898326+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -38407,14 +38407,21 @@
       "verdict_rationale": null
     },
     "koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 7.883,
+        "transitive_descendants": 117
+      },
+      "audit_status": "audited_numerical_match",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies the numerical root structure of a chosen resolvent family and shows that one selected root enforces Q=2/3 with a strong PDG direction cosine. It does not derive the missing-axis lift, h_0=0 baseline, lambda_* law, or chamber-slack relation from registered one-hop authorities.",
       "claim_id": "koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -38422,18 +38429,25 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 2,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_numerical_match",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_numerical_match",
       "load_bearing_score": 7.883,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "For the fixed missing-axis lift W_4(h_0)=diag(h_0,H_*) at h_0=0, the scalar equation Q(abs eig Sigma_lambda(0))=2/3 has a unique small positive root lambda_* near chamber slack, and that root gives a PDG charged-lepton direction cosine above 0.996.",
+      "load_bearing_step_class": "G",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "4d8ae150c04492ac60721c03d63fcb6e05114014b6906d3cf0d29e05721bfd7c",
       "note_path": "docs/KOIDE_HIGGS_DRESSED_RESOLVENT_ROOT_THEOREM_NOTE_2026-04-20.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "scripts/frontier_higgs_dressed_propagator_v1.py_H_star_and_missing_axis_lift_authority_not_registered",
+        "missing_axis_lift_uniqueness_theorem_open",
+        "h0_zero_baseline_theorem_open",
+        "lambda_star_transport_law_from_Cl3_Z3_open",
+        "chamber_slack_to_resolvent_scalar_theorem_open",
+        "PDG_sqrt_mass_direction_comparator_not_registered_one_hop_dependency"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368799+00:00",
@@ -38487,16 +38501,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 9,
+        "B": 1,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 1,
+        "total_pass": 11
       },
       "runner_path": "scripts/frontier_koide_higgs_dressed_resolvent_root_theorem.py",
       "title": "Koide Higgs-Dressed Resolvent Root Theorem",
       "transitive_descendants": 117,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the load-bearing scalar lambda_* is selected by solving the target Koide equation Q=2/3 on a fixed imported lift, then the charged-lepton direction match is checked afterward. Why this blocks: root existence is a useful reduction of a search space, but the runner does not derive the natural missing-axis lift, prove h_0=0, compute lambda_* from a microscopic transport law, or derive its near-equality to chamber slack; exact Koide is guaranteed by construction because lambda_* is defined as a root of the Koide residual. Repair target: register the Higgs-dressed avenue/H_* authority, prove uniqueness of the missing-axis lift and h_0 baseline, and add a theorem/runner deriving lambda_* or the chamber-slack relation before imposing Q=2/3. Claim boundary until fixed: it is safe to claim that this chosen resolvent avenue reduces to isolated scalar roots and has a unique small positive root near chamber slack with strong PDG-direction cosine; it is not safe to claim a retained Koide derivation or a first-principles lambda law."
     },
     "koide_hostile_review_guard_note_2026-04-24": {
       "audit_date": null,

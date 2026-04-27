@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T05:04:02.275390+00:00
+**Generated:** 2026-04-27T05:05:40.361473+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,14 +20,14 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 6 |
-| _proposed_retained_ | 253 |
+| _proposed_retained_ | 252 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
 | open | 11 |
 | unknown | 734 |
 | ~~audited_decoration~~ | 3 |
-| ~~audited_numerical_match~~ | 3 |
+| ~~audited_numerical_match~~ | 4 |
 | ~~audited_conditional~~ | 241 |
 | ~~audited_failed~~ | 58 |
 
@@ -38,8 +38,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 39 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 1 |
-| `audited_numerical_match` | 3 |
-| `unaudited` | 1546 |
+| `audited_numerical_match` | 4 |
+| `unaudited` | 1545 |
 
 | criticality | count |
 |---|---:|
@@ -149,6 +149,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `bell_inequality_derived_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
+| `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 
 
@@ -533,6 +534,25 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `scripts/frontier_koide_pointed_origin_exhaustion_theorem.py_not_registered_runner_dependency`
   - `scripts/frontier_koide_hostile_review_guard.py_not_registered_runner_dependency`
   - `scripts/frontier_koide_q_onsite_source_domain_no_go_synthesis.py_not_registered_runner_dependency`
+- **auditor confidence:** high
+
+### `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20`
+
+- **Note:** [`KOIDE_HIGGS_DRESSED_RESOLVENT_ROOT_THEOREM_NOTE_2026-04-20.md`](../../docs/KOIDE_HIGGS_DRESSED_RESOLVENT_ROOT_THEOREM_NOTE_2026-04-20.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** For the fixed missing-axis lift W_4(h_0)=diag(h_0,H_*) at h_0=0, the scalar equation Q(abs eig Sigma_lambda(0))=2/3 has a unique small positive root lambda_* near chamber slack, and that root gives a PDG charged-lepton direction cosine above 0.996.  _(class `G`)_
+- **chain closes:** False — The runner verifies the numerical root structure of a chosen resolvent family and shows that one selected root enforces Q=2/3 with a strong PDG direction cosine. It does not derive the missing-axis lift, h_0=0 baseline, lambda_* law, or chamber-slack relation from registered one-hop authorities.
+- **rationale:** Issue: the load-bearing scalar lambda_* is selected by solving the target Koide equation Q=2/3 on a fixed imported lift, then the charged-lepton direction match is checked afterward. Why this blocks: root existence is a useful reduction of a search space, but the runner does not derive the natural missing-axis lift, prove h_0=0, compute lambda_* from a microscopic transport law, or derive its near-equality to chamber slack; exact Koide is guaranteed by construction because lambda_* is defined as a root of the Koide residual. Repair target: register the Higgs-dressed avenue/H_* authority, prove uniqueness of the missing-axis lift and h_0 baseline, and add a theorem/runner deriving lambda_* or the chamber-slack relation before imposing Q=2/3. Claim boundary until fixed: it is safe to claim that this chosen resolvent avenue reduces to isolated scalar roots and has a unique small positive root near chamber slack with strong PDG-direction cosine; it is not safe to claim a retained Koide derivation or a first-principles lambda law.
+- **open / conditional deps cited:**
+  - `scripts/frontier_higgs_dressed_propagator_v1.py_H_star_and_missing_axis_lift_authority_not_registered`
+  - `missing_axis_lift_uniqueness_theorem_open`
+  - `h0_zero_baseline_theorem_open`
+  - `lambda_star_transport_law_from_Cl3_Z3_open`
+  - `chamber_slack_to_resolvent_scalar_theorem_open`
+  - `PDG_sqrt_mass_direction_comparator_not_registered_one_hop_dependency`
 - **auditor confidence:** high
 
 ### `koide_native_dimensionless_review_packet_2026-04-24`
