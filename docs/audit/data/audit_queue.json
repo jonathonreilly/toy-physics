@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 89,
     "high": 508,
-    "leaf": 683,
+    "leaf": 682,
     "medium": 82
   },
-  "generated_at": "2026-04-27T17:57:25.453485+00:00",
+  "generated_at": "2026-04-27T17:59:13.333600+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -24126,23 +24126,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "source_resolved_transverse_propagating_green_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/SOURCE_RESOLVED_TRANSVERSE_PROPAGATING_GREEN_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "source_resolved_wavefield_escalation_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -27973,6 +27956,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 949,
-  "total_pending": 1362
+  "ready_count": 948,
+  "total_pending": 1361
 }
