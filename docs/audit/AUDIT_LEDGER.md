@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T19:55:21.165058+00:00
+**Generated:** 2026-04-27T19:57:10.000888+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 72 |
-| _proposed_retained_ | 19 |
+| _proposed_retained_ | 18 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 6 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 352 |
+| ~~audited_conditional~~ | 353 |
 | ~~audited_failed~~ | 137 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 72 |
-| `audited_conditional` | 139 |
+| `audited_conditional` | 140 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 6 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1318 |
+| `unaudited` | 1317 |
 
 | criticality | count |
 |---|---:|
@@ -307,6 +307,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `yt_p1_bz_quadrature_numerical_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `yt_p1_color_factor_retention_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `yt_p1_delta_2_bz_computation_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_p1_delta_r_2_loop_extension_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `yt_p1_delta_r_sm_rge_crosscheck_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -4826,6 +4827,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** False — The citation-bound arithmetic closes for the selected inputs, and the runner reproduces the stated bracket. It does not close as a retained framework-native BZ computation because I_v_scalar is imported from an O(1) literature bracket, the central is a rounded selected value, and the source explicitly leaves the native quadrature open.
 - **rationale:** Issue: the headline recovery of the packaged 1.92% depends on choosing the rounded literature-cluster central I_v_scalar=4 with I_v_gauge=0; the same runner reports the unrounded central I_v_scalar=4.5 gives Delta_1=+3 and 2.886%, and local-current choices can shift the sign. Why this blocks: a selected citation central and current formulation can define a useful scenario, but it cannot make the 1.92% C_F-channel value a retained structural or framework-native BZ result. Repair target: perform the framework-native 4D BZ quadrature for I_v_scalar and I_v_gauge on the retained action/current, audit the Rep-A/Rep-B and I_S parent notes, and justify any central-value selection without tuning to delta_PT. Claim boundary until fixed: safe to claim the cited conserved-current bracket Delta_1 in [0,+8] and C_F-channel contribution in [0%,7.696%], plus the arithmetic fact that the chosen Delta_1=+2 scenario equals 1.924%; not safe to claim a clean retained central 1.92% prediction.
 - **open / conditional deps cited:**
+  - `UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md`
+  - `YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md`
+  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
+- **auditor confidence:** high
+
+### `yt_p1_delta_2_bz_computation_note_2026-04-17`
+
+- **Note:** [`YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md`](../../docs/YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Using the cited ranges I_SE^{gluonic+ghost} in [1,3] and I_v_gauge in [0,3], with the retained conserved-current central I_v_gauge = 0 and I_SE = 2, Delta_2 = I_v_gauge - (5/3) I_SE = -10/3 and C_A Delta_2 alpha_LM/(4 pi) is about -7.2%.  _(class `B`)_
+- **chain closes:** False — The arithmetic closes for the cited scenarios and the runner reproduces the stated central values. The retained negative range requires the conserved-current/current-selection premise and literature inputs; the runner itself shows the local-current outer envelope reaches Delta_2=+4/3, and no framework-native BZ quadrature is performed.
+- **rationale:** Issue: the note is a citation-and-bound calculation, and its non-positive Delta_2 range depends on retaining the conserved-current surface or clipping away the runner's local-current endpoint Delta_2=+4/3. Why this blocks: without a clean retained current-selection theorem and a native BZ computation of I_SE and I_v_gauge, the claimed negative C_A-channel value is a conditional scenario, not a clean retained lattice-PT result across the stated current-definition sensitivity. Repair target: derive and audit the conserved point-split current as the unique P1 current used in the ratio, perform the framework-native 4D BZ quadrature for I_SE^{gluonic+ghost} and I_v_gauge on that retained action/current, and cleanly audit the Rep-A/Rep-B and canonical-surface parents. Claim boundary until fixed: safe to claim that under the conserved-current assumption with cited I_SE in [1,3], Delta_2 lies in [-5,-5/3] with central -10/3 and C_A contribution about -7.215%; if local-current sensitivity is included, the runner-supported outer envelope is [-5,+4/3], not strictly non-positive.
+- **open / conditional deps cited:**
+  - `PLAQUETTE_SELF_CONSISTENCY_NOTE.md`
   - `UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md`
   - `YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md`
   - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
