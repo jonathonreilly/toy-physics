@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T15:51:26.375737+00:00
+**Generated:** 2026-04-27T15:54:25.310096+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 54 |
-| _proposed_retained_ | 104 |
+| _proposed_retained_ | 103 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
 | ~~audited_conditional~~ | 316 |
-| ~~audited_failed~~ | 107 |
+| ~~audited_failed~~ | 108 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 54 |
 | `audited_conditional` | 103 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 40 |
+| `audited_failed` | 41 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1403 |
+| `unaudited` | 1402 |
 
 | criticality | count |
 |---|---:|
@@ -296,6 +296,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mesoscopic_surrogate_h025_constrained_localization_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `mesoscopic_surrogate_threshold_2d_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `minimal_absorbing_horizon_probe_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `minimal_bidirectional_trapping_probe_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `mirror_2d_gravity_law_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `staggered_backreaction_green_closure_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `structured_mirror_bornsafe_scan_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -2810,6 +2811,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The live probe shows escape_fraction(alpha) falls below 50% by alpha=0.10 while the alpha=0 weak-field recovery check gives 3/3 TOWARD and F~M=1.00 on the tested generated-geometry family.  _(class `C`)_
 - **chain closes:** False — The bounded proxy computation closes, but the queued proposed_retained claim does not: the note itself calls this a bounded moonshot trapping probe, and the absorption parameter is an inserted proxy rather than a derived horizon mechanism.
 - **rationale:** Issue: The source is explicitly a bounded moonshot trapping probe on a proposed_retained generated-geometry family, but its branch verdict says it produces a retained threshold. The live runner inserts an absorptive parameter alpha and measures escape fraction; it does not derive an absorbing horizon law or black-hole observable from retained inputs. Why this blocks: a hand-added absorption proxy with one finite family, four seeds, and three source positions cannot be ratified as a retained horizon/trapping theorem. Repair target: either correct the Status/current_status to bounded/proposed_bounded, or derive the absorption law from retained dynamics and show the threshold is a framework-native strong-field observable with clean weak-field reduction and audited dependencies. Claim boundary until fixed: it is safe to claim the live artifact reproduces alpha=0 weak-field recovery and a proxy escape threshold below 50% at alpha ~= 0.10 on this setup; it is not safe to call this a retained horizon theorem or full black-hole mechanism.
+- **auditor confidence:** high
+
+### `minimal_bidirectional_trapping_probe_note`
+
+- **Note:** [`MINIMAL_BIDIRECTIONAL_TRAPPING_PROBE_NOTE.md`](../../docs/MINIMAL_BIDIRECTIONAL_TRAPPING_PROBE_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The live bidirectional trapping probe shows escape_fraction(alpha) falls below 50% by alpha=0.10 while alpha=0 recovers 3/3 TOWARD and F~M=1.00 on the tested geometry-sector family.  _(class `C`)_
+- **chain closes:** False — The live proxy computation reproduces the table, but the named frozen log is missing and the queued proposed_retained claim overpromotes a hand-added trapping parameter into a retained no-return threshold.
+- **rationale:** Issue: The source names logs/2026-04-05-minimal-bidirectional-trapping-probe.txt, but that frozen artifact is absent, and the note's branch verdict says the proxy produces a retained threshold even though the Status calls it a bounded moonshot probe. Why this blocks: a live rerun of a hand-added alpha trapping proxy can support bounded evidence, but missing frozen output plus no derivation of the trapping law prevents retained ratification. Repair target: restore or regenerate the frozen log, correct the Status/current_status to bounded/proposed_bounded, or derive the trapping parameter from retained dynamics and audit the weak-field dependencies. Claim boundary until fixed: it is safe to claim the live runner reproduces alpha=0 weak-field recovery and escape below 50% at alpha ~= 0.10 on this finite setup; it is not safe to call this a retained no-return or black-hole threshold theorem.
 - **auditor confidence:** high
 
 ### `mirror_2d_gravity_law_note`

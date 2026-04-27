@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 89,
     "high": 508,
-    "leaf": 727,
+    "leaf": 726,
     "medium": 82
   },
-  "generated_at": "2026-04-27T15:51:26.239819+00:00",
+  "generated_at": "2026-04-27T15:54:25.169558+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -22052,23 +22052,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "minimal_bidirectional_trapping_probe_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/MINIMAL_BIDIRECTIONAL_TRAPPING_PROBE_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "minimal_source_driven_field_probe_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -28721,6 +28704,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 993,
-  "total_pending": 1406
+  "ready_count": 992,
+  "total_pending": 1405
 }
