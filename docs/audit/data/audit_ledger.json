@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T18:26:07.489222+00:00",
-  "generated_at": "2026-04-27T18:26:05.909726+00:00",
-  "invalidation_run_at": "2026-04-27T18:26:07.442498+00:00",
+  "effective_status_computed_at": "2026-04-27T18:27:24.235804+00:00",
+  "generated_at": "2026-04-27T18:27:22.674603+00:00",
+  "invalidation_run_at": "2026-04-27T18:27:24.189853+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T18:26:07.347828+00:00",
+  "load_bearing_computed_at": "2026-04-27T18:27:24.098014+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -71792,14 +71792,21 @@
       "verdict_rationale": "Issue: The gauge/current result is qualitatively reproduced, but the exact table is not current: the live runner gives J_span values 6.933e-04, 2.042e-03, 1.343e-04 for the three stress rows and 5.015e-35 for layered s29, while the note freezes 6.922e-04, 2.050e-03, 1.342e-04, and 4.769e-06. The retained side battery is also imported from the unaudited graph portability lane. Why this blocks: the closure result is plausible as a runner-level native gauge/current finding, but an audit-clean retained result needs current exact values and an audit-clean side battery. Repair target: refresh the frozen table from the current runner, add hard assertions for current span > 1e-4, residual < 1e-8, cycle/N/A status, and retained side-battery gates, and audit the graph portability parent. Claim boundary until fixed: it is safe to claim that the current runner closes native gauge/current on the three cycle-bearing stress families and identifies bipartite_growing_stress_s23_n82 as the largest-span row, with layered s29 failing gauge; it is not safe to claim audit-clean retained gauge closure from this note until the table and parent battery are cleaned."
     },
     "staggered_graph_observables_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner reproduces the table exactly, but the retained observable split depends on the unaudited staggered graph portability battery and its force/current criteria.",
       "claim_id": "staggered_graph_observables_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -71807,18 +71814,21 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The graph-observables runner classifies force/current rows as retained observables on graph families, with centroid shift and shell bias treated as secondary diagnostics, and reproduces 8/8 retained rows across the three tested families.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "b2b4d6dad91f5d2e11eec243931aee35f084bcec76e6f71e25ba570edaa14d9e",
       "note_path": "docs/STAGGERED_GRAPH_OBSERVABLES_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/STAGGERED_GRAPH_PORTABILITY_NOTE.md",
+        "docs/STAGGERED_GRAPH_GAUGE_CLOSURE_RESULTS_2026-04-10.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369844+00:00",
@@ -71856,7 +71866,7 @@
       "runner_path": null,
       "title": "Staggered Graph Observables Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The computational table is current, but the note promotes a retained observable taxonomy whose force/current side battery is inherited from the unaudited graph portability lane. Why this blocks: the runner can classify these three rows, but an audit-clean retained observable rule needs the parent force/current battery and gauge-current thresholds closed independently. Repair target: audit the graph portability note and add explicit assertions tying retained rows to force sign, F~M, achromatic force, equivalence, robustness, and gauge-current thresholds while keeping centroid/shell diagnostics secondary. Claim boundary until fixed: it is safe to claim that the current runner reproduces the three-row observable split with retained=8/8, gauge PASS on cycle-bearing graphs, gauge N/A on the layered DAG, and centroid/shell as secondary diagnostics; it is not safe to claim an audit-clean retained graph-observable taxonomy until the parent battery is clean."
     },
     "staggered_graph_portability_note": {
       "audit_date": null,

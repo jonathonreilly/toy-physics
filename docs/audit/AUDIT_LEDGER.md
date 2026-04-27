@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T18:26:07.674120+00:00
+**Generated:** 2026-04-27T18:27:24.419998+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 63 |
-| _proposed_retained_ | 47 |
+| _proposed_retained_ | 46 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 338 |
+| ~~audited_conditional~~ | 339 |
 | ~~audited_failed~~ | 133 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 63 |
-| `audited_conditional` | 125 |
+| `audited_conditional` | 126 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1346 |
+| `unaudited` | 1345 |
 
 | criticality | count |
 |---|---:|
@@ -269,6 +269,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_graph_failure_map_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_graph_gauge_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_graph_gauge_closure_results_2026-04-10` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `staggered_graph_observables_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `strong_cp_theta_zero_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `structured_chokepoint_bridge_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `symmetry_head_to_head_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -4073,6 +4074,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `STAGGERED_GRAPH_GAUGE_CLOSURE_NOTE.md`
   - `STAGGERED_GRAPH_PORTABILITY_NOTE.md`
+- **auditor confidence:** high
+
+### `staggered_graph_observables_note`
+
+- **Note:** [`STAGGERED_GRAPH_OBSERVABLES_NOTE.md`](../../docs/STAGGERED_GRAPH_OBSERVABLES_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The graph-observables runner classifies force/current rows as retained observables on graph families, with centroid shift and shell bias treated as secondary diagnostics, and reproduces 8/8 retained rows across the three tested families.  _(class `C`)_
+- **chain closes:** False — The runner reproduces the table exactly, but the retained observable split depends on the unaudited staggered graph portability battery and its force/current criteria.
+- **rationale:** Issue: The computational table is current, but the note promotes a retained observable taxonomy whose force/current side battery is inherited from the unaudited graph portability lane. Why this blocks: the runner can classify these three rows, but an audit-clean retained observable rule needs the parent force/current battery and gauge-current thresholds closed independently. Repair target: audit the graph portability note and add explicit assertions tying retained rows to force sign, F~M, achromatic force, equivalence, robustness, and gauge-current thresholds while keeping centroid/shell diagnostics secondary. Claim boundary until fixed: it is safe to claim that the current runner reproduces the three-row observable split with retained=8/8, gauge PASS on cycle-bearing graphs, gauge N/A on the layered DAG, and centroid/shell as secondary diagnostics; it is not safe to claim an audit-clean retained graph-observable taxonomy until the parent battery is clean.
+- **open / conditional deps cited:**
+  - `STAGGERED_GRAPH_PORTABILITY_NOTE.md`
+  - `STAGGERED_GRAPH_GAUGE_CLOSURE_RESULTS_2026-04-10.md`
 - **auditor confidence:** high
 
 ### `strong_cp_theta_zero_note`
