@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T10:26:29.366474+00:00",
-  "generated_at": "2026-04-27T10:26:27.173206+00:00",
-  "invalidation_run_at": "2026-04-27T10:26:29.298905+00:00",
+  "effective_status_computed_at": "2026-04-27T10:32:32.112691+00:00",
+  "generated_at": "2026-04-27T10:32:29.527769+00:00",
+  "invalidation_run_at": "2026-04-27T10:32:32.030750+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T10:26:29.154149+00:00",
+  "load_bearing_computed_at": "2026-04-27T10:32:31.895123+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -15891,14 +15891,21 @@
       "verdict_rationale": null
     },
     "distance_law_preserving_third_family_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The live direct runner recomputes the specified drift=0.50, restore=0.90 family and reproduces the sign gate, weak scaling, tail alpha/R2, and direction count stated in the note.",
       "claim_id": "distance_law_preserving_third_family_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -15906,13 +15913,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The high-drift/high-restore third family passes both gates on the direct test: exact zero and neutral controls, sign orientation, weak charge exponent 1.000, distance tail alpha = -1.150 with R^2 = 0.971, and 5/5 TOWARD.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "3c40dc13da3a73fa4a49ab6ca0d1d0e423655f6fa1dde8ae7c27c56258d389ea",
@@ -15948,14 +15955,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 3,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 3
       },
       "runner_path": null,
       "title": "Distance Law Preserving Third Family Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The clean verdict is limited to the direct high-drift/high-restore family tested by the runner. The live output gives zero = 0, neutral = 0, plus/minus antisymmetry, weak charge exponent 0.99998, tail alpha = -1.1501, R2 = 0.9714, and 5/5 TOWARD, matching the note. The distance-law portability context is not load-bearing here because it describes a different structured-family row; this note's own runner establishes the claimed direct preservation result. Residual risk is the stated scope: one family, finite seeds, and no geometry-universal theorem."
     },
     "distracted_napier_reconciliation_note": {
       "audit_date": null,
