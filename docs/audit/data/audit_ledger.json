@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T18:27:24.235804+00:00",
-  "generated_at": "2026-04-27T18:27:22.674603+00:00",
-  "invalidation_run_at": "2026-04-27T18:27:24.189853+00:00",
+  "effective_status_computed_at": "2026-04-27T18:30:59.436289+00:00",
+  "generated_at": "2026-04-27T18:30:57.827959+00:00",
+  "invalidation_run_at": "2026-04-27T18:30:59.387943+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T18:27:24.098014+00:00",
+  "load_bearing_computed_at": "2026-04-27T18:30:59.290331+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -71869,14 +71869,21 @@
       "verdict_rationale": "Issue: The computational table is current, but the note promotes a retained observable taxonomy whose force/current side battery is inherited from the unaudited graph portability lane. Why this blocks: the runner can classify these three rows, but an audit-clean retained observable rule needs the parent force/current battery and gauge-current thresholds closed independently. Repair target: audit the graph portability note and add explicit assertions tying retained rows to force sign, F~M, achromatic force, equivalence, robustness, and gauge-current thresholds while keeping centroid/shell diagnostics secondary. Claim boundary until fixed: it is safe to claim that the current runner reproduces the three-row observable split with retained=8/8, gauge PASS on cycle-bearing graphs, gauge N/A on the layered DAG, and centroid/shell as secondary diagnostics; it is not safe to claim an audit-clean retained graph-observable taxonomy until the parent battery is clean."
     },
     "staggered_graph_portability_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner reproduces the three-family battery exactly, but the note and runner only establish a bounded portability probe over constructed graph families and selected force/current readouts, not a retained graph-portability theorem.",
       "claim_id": "staggered_graph_portability_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -71884,13 +71891,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The retained staggered force battery survives on all three graph families, with gauge response on cycle-bearing families and force treated as the primary gravity observable.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "eada5d4276affd6bb7eb9cd836b725ecac2ce98247bcaafa4386a28f3e1f3c65",
@@ -71926,14 +71933,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 24,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 24
       },
       "runner_path": null,
       "title": "Staggered Graph Portability Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The runner reproduces the frozen three-family table, but the claim promotes graph portability from a constructed graph-depth force/current battery without a retained theorem tying that readout to the physical gravity observable on arbitrary non-cubic graphs. Why this blocks: a successful three-family smoke battery is not a universal portability closure; it is conditional on the named generated families, threshold choices, parity-coupled potential, and selected force/gauge readouts. Repair target: state this as bounded support, or add an audited theorem and acceptance harness deriving the graph-depth force observable and gauge-current thresholds before broadening to stress and holdout graph families. Claim boundary until fixed: safe to claim the current runner reproduces 8/8 retained-battery rows on the three named graph families with TOWARD force and gauge PASS/N/A; not safe to claim audit-clean retained portability beyond this checkpoint."
     },
     "staggered_graph_portability_stress_note": {
       "audit_date": null,
