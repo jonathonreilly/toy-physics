@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T10:02:23.810323+00:00",
-  "generated_at": "2026-04-27T10:02:21.880925+00:00",
-  "invalidation_run_at": "2026-04-27T10:02:23.746932+00:00",
+  "effective_status_computed_at": "2026-04-27T10:04:27.780833+00:00",
+  "generated_at": "2026-04-27T10:04:25.507446+00:00",
+  "invalidation_run_at": "2026-04-27T10:04:27.689349+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T10:02:23.602640+00:00",
+  "load_bearing_computed_at": "2026-04-27T10:04:27.543201+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -14772,14 +14772,21 @@
       "verdict_rationale": null
     },
     "diamond_signal_budget_hardening_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The arithmetic proxy-budget thresholds replay exactly, but they are computed from hard-coded rows imported from a bounded moving-source proxy note and do not include the transfer coefficient into real NV readout units.",
       "claim_id": "diamond_signal_budget_hardening_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -14787,18 +14794,20 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Using a conservative 3sigma readout target, the weakest retained nonzero proxy rows imply centroid-noise target <= 2.888572e-07 and phase-noise target <= 4.363583e-06 rad.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "a72f0873702bef0b1e33ba18195f47d3fca4c888db07d63c1f35822b3a1735d1",
       "note_path": "docs/DIAMOND_SIGNAL_BUDGET_HARDENING_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/MOVING_SOURCE_RETARDED_PORTABILITY_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368014+00:00",
@@ -14827,16 +14836,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 1,
+        "B": 1,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 2
       },
       "runner_path": null,
       "title": "Diamond Signal Budget Hardening Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the note hardens the diamond/NV lane by dividing the weakest nonzero proxy observables by three, but the runner hard-codes the moving-source proxy rows and the cited source note is bounded, not audited-retained. Why this blocks: a proxy-unit 3sigma threshold is not a real lab signal budget unless a theorem or calibrated input maps the proxy centroid/phase units into NV readout units and noise floor. Repair target: audit or replace the moving-source proxy input with a retained source computation, then add the missing transfer calibration from proxy units to NV X/Y/phi readout units and rerun the budget from those calibrated quantities. Claim boundary until fixed: the safe claim is a bounded proxy-budget card for the specified grown-row geometry: if the copied proxy values are taken literally, the calculator gives centroid target 2.888572e-07 and phase target 4.363583e-06 rad; it does not establish absolute detectability or a completed lab budget."
     },
     "dimension_selection_note": {
       "audit_date": null,
