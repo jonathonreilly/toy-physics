@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T06:32:32.867096+00:00",
-  "generated_at": "2026-04-27T06:32:30.965589+00:00",
-  "invalidation_run_at": "2026-04-27T06:32:32.798638+00:00",
+  "effective_status_computed_at": "2026-04-27T06:35:46.391071+00:00",
+  "generated_at": "2026-04-27T06:35:44.578416+00:00",
+  "invalidation_run_at": "2026-04-27T06:35:46.336527+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T06:32:32.666395+00:00",
+  "load_bearing_computed_at": "2026-04-27T06:35:46.208580+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -35582,14 +35582,21 @@
       "verdict_rationale": null
     },
     "higher_symmetry_joint_validation_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 2.822,
+        "transitive_descendants": 4
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The archived discovery-geometry log matches the first table, and the live validator reproduces the dense N=80/100/120 table when run with the stated dense arguments. The retained chain is still conditional because the named dense joint-validation log is absent, the validator imports the mirror joint readout as an unregistered one-hop dependency, and the scripts print diagnostics rather than asserting retained gates.",
       "claim_id": "higher_symmetry_joint_validation_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -35597,18 +35604,23 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 2.822,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note claims a bounded Z2 x Z2 higher-symmetry coexistence lane: Born-clean, k=0-clean, band-gravity-positive, and with slower decoherence decay through N=80 on the discovery geometry and through N=120 on a denser narrow probe.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "audited_failed",
       "max_descendant_status_rank": 0,
       "note_hash": "8116f03b56bad99a4fdbc2246d221f4d5a67b1df2ba3caa2301deb5a07b4fd75",
       "note_path": "docs/HIGHER_SYMMETRY_JOINT_VALIDATION_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "logs/2026-04-03-higher-symmetry-joint-validation-z2z2-dense-n80-n120.txt_missing",
+        "scripts/mirror_chokepoint_joint.py_readout_not_registered_one_hop_dependency",
+        "scripts/higher_symmetry_dag.py_generator_family_not_registered_one_hop_dependency",
+        "runner_prints_diagnostics_without_hard_retention_assertions"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368706+00:00",
@@ -35646,7 +35658,7 @@
       "runner_path": null,
       "title": "Higher-Symmetry Joint Validation Note",
       "transitive_descendants": 4,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the finite Z2 x Z2 tables are reproducible, but the source packet does not provide a registered, assertion-based primary runner/log pair for the retained N=120 joint card. Why this blocks: a hostile auditor can verify the printed finite rows, but cannot promote them to a clean retained higher-symmetry lane while the dense joint log path is missing, the mirror_chokepoint_joint readout is imported without registration as a one-hop authority, and the pass criteria for Born cleanliness, k=0, band-gravity positivity, and decoherence advantage are not hard runner gates. Repair target: register scripts/higher_symmetry_dag.py and scripts/mirror_chokepoint_joint.py or inline the audited readout assumptions, archive the dense joint-validation output at the named path, and add assertions for the family roster, seed counts, N windows, Born/k0 tolerances, band-positive counts, and exponent-fit boundaries. Claim boundary until fixed: it is safe to claim a finite diagnostic result: with the stated discovery and dense parameters, Z2 x Z2 reports machine-scale Born, zero k=0, positive mean band gravity on the tested N values, slower discovery-geometry decoherence decay than random/ring, and dense N=80/100/120 rows matching the live runner; it is not yet a clean retained asymptotic higher-symmetry theorem or gravity-law contender."
     },
     "holographic_probe_note_2026-04-11": {
       "audit_date": null,

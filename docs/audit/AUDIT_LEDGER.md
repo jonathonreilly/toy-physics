@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T06:32:33.138915+00:00
+**Generated:** 2026-04-27T06:35:46.645947+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 7 |
-| _proposed_retained_ | 229 |
+| _proposed_retained_ | 228 |
 | _proposed_promoted_ | 6 |
 | bounded | 184 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
-| ~~audited_conditional~~ | 262 |
+| ~~audited_conditional~~ | 263 |
 | ~~audited_failed~~ | 71 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 7 |
-| `audited_conditional` | 54 |
+| `audited_conditional` | 55 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 5 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1524 |
+| `unaudited` | 1523 |
 
 | criticality | count |
 |---|---:|
@@ -122,6 +122,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gravity_clean_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `higgs_mass_retention_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `higher_symmetry_joint_validation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `koide_a1_physical_bridge_attempt_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -595,6 +596,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `package_citation_chain_status_upgrade_CONDITIONAL_to_GAUGE_not_independently_verified`
   - `sigma_hier_observational_row_permutation_remains_open`
   - `branch_choice_A_BCC_or_basin_signature_condition_remains_open`
+- **auditor confidence:** high
+
+### `higher_symmetry_joint_validation_note`
+
+- **Note:** [`HIGHER_SYMMETRY_JOINT_VALIDATION_NOTE.md`](../../docs/HIGHER_SYMMETRY_JOINT_VALIDATION_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note claims a bounded Z2 x Z2 higher-symmetry coexistence lane: Born-clean, k=0-clean, band-gravity-positive, and with slower decoherence decay through N=80 on the discovery geometry and through N=120 on a denser narrow probe.  _(class `C`)_
+- **chain closes:** False — The archived discovery-geometry log matches the first table, and the live validator reproduces the dense N=80/100/120 table when run with the stated dense arguments. The retained chain is still conditional because the named dense joint-validation log is absent, the validator imports the mirror joint readout as an unregistered one-hop dependency, and the scripts print diagnostics rather than asserting retained gates.
+- **rationale:** Issue: the finite Z2 x Z2 tables are reproducible, but the source packet does not provide a registered, assertion-based primary runner/log pair for the retained N=120 joint card. Why this blocks: a hostile auditor can verify the printed finite rows, but cannot promote them to a clean retained higher-symmetry lane while the dense joint log path is missing, the mirror_chokepoint_joint readout is imported without registration as a one-hop authority, and the pass criteria for Born cleanliness, k=0, band-gravity positivity, and decoherence advantage are not hard runner gates. Repair target: register scripts/higher_symmetry_dag.py and scripts/mirror_chokepoint_joint.py or inline the audited readout assumptions, archive the dense joint-validation output at the named path, and add assertions for the family roster, seed counts, N windows, Born/k0 tolerances, band-positive counts, and exponent-fit boundaries. Claim boundary until fixed: it is safe to claim a finite diagnostic result: with the stated discovery and dense parameters, Z2 x Z2 reports machine-scale Born, zero k=0, positive mean band gravity on the tested N values, slower discovery-geometry decoherence decay than random/ring, and dense N=80/100/120 rows matching the live runner; it is not yet a clean retained asymptotic higher-symmetry theorem or gravity-law contender.
+- **open / conditional deps cited:**
+  - `logs/2026-04-03-higher-symmetry-joint-validation-z2z2-dense-n80-n120.txt_missing`
+  - `scripts/mirror_chokepoint_joint.py_readout_not_registered_one_hop_dependency`
+  - `scripts/higher_symmetry_dag.py_generator_family_not_registered_one_hop_dependency`
+  - `runner_prints_diagnostics_without_hard_retention_assertions`
 - **auditor confidence:** high
 
 ### `i3_zero_exact_theorem_note`
