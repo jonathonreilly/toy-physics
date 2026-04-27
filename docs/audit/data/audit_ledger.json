@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T13:05:07.709885+00:00",
-  "generated_at": "2026-04-27T13:05:06.123618+00:00",
-  "invalidation_run_at": "2026-04-27T13:05:07.662832+00:00",
+  "effective_status_computed_at": "2026-04-27T13:06:44.503982+00:00",
+  "generated_at": "2026-04-27T13:06:42.925057+00:00",
+  "invalidation_run_at": "2026-04-27T13:06:44.457915+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T13:05:07.568810+00:00",
+  "load_bearing_computed_at": "2026-04-27T13:06:44.363725+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -32100,14 +32100,21 @@
       "verdict_rationale": null
     },
     "gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_note_2026-04-19": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The source note's load-bearing numerical checks require the declared runner, but `scripts/frontier_gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_2026_04_19.py` is absent from the worktree. Without that executable artifact or one-hop source data constructing M, T_min, Z_min, and the diagonal fit, the stated off-diagonal norm and residuals cannot be audited.",
       "claim_id": "gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_note_2026-04-19",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -32115,18 +32122,20 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The explicit rank-one witness is not itself a factorized Wilson realization because the back-conjugated operator is non-diagonal, and the best positive conjugation-symmetric diagonal fit still misses the completed target.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "735a8e402647d7634f389c8df30db79c3bdb6424fb551143d26ea081ca48156f",
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_RANK_ONE_FACTORIZED_CLASS_BOUNDARY_NOTE_2026-04-19.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "scripts/frontier_gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_2026_04_19.py"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368449+00:00",
@@ -32189,7 +32198,7 @@
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_2026_04_19.py",
       "title": "Gauge-Vacuum Plaquette First-Sector Rank-One / Factorized-Class Boundary",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the note declares a runner and expected PASS=6, but the runner path is missing, so the off-diagonal norm 0.250338180104 and diagonal-fit residuals 0.135462193897 / 0.228465896152 are not reproducible from the allowed artifacts. Why this blocks: those numbers are the proof that the rank-one witness lies outside the canonical Wilson factorized class and that the audited diagonal family misses the completed triple; without the runner or equivalent one-hop derivation, the theorem is unsupported. Repair target: restore the exact runner or replace the note with a current executable proof that constructs M, T_min, Z_min, performs the positive conjugation-symmetric diagonal search, and reproduces PASS=6 from cited retained inputs. Claim boundary until fixed: safely claim only that the remaining Wilson target is intended to be stricter than generic transfer existence; do not claim the specific non-factorization theorem, residual bounds, or retained-sector boundary."
     },
     "gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_note_2026-04-19": {
       "audit_date": null,
