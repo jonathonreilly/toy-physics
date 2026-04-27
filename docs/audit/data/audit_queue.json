@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 88,
-    "high": 512,
+    "high": 511,
     "leaf": 856,
     "medium": 85
   },
-  "generated_at": "2026-04-27T05:37:46.045848+00:00",
+  "generated_at": "2026-04-27T05:52:40.610141+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -6399,23 +6399,6 @@
       "direct_in_degree": 1,
       "load_bearing_score": 7.383,
       "note_path": "docs/NONLINEAR_BORN_GRAVITY_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 117
-    },
-    {
-      "audit_independence_required": "cross_family",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "persistent_object_blended_readout_transfer_sweep_note_2026-04-16",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 7.383,
-      "note_path": "docs/PERSISTENT_OBJECT_BLENDED_READOUT_TRANSFER_SWEEP_NOTE_2026-04-16.md",
       "ready": true,
       "runner_path": null,
       "transitive_descendants": 117
@@ -30973,6 +30956,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1135,
-  "total_pending": 1541
+  "ready_count": 1134,
+  "total_pending": 1540
 }

@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T05:37:46.232386+00:00
+**Generated:** 2026-04-27T05:52:40.881175+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 6 |
-| _proposed_retained_ | 245 |
+| _proposed_retained_ | 244 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
-| ~~audited_conditional~~ | 246 |
+| ~~audited_conditional~~ | 247 |
 | ~~audited_failed~~ | 59 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 6 |
-| `audited_conditional` | 44 |
+| `audited_conditional` | 45 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 2 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1538 |
+| `unaudited` | 1537 |
 
 | criticality | count |
 |---|---:|
@@ -137,6 +137,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `native_gauge_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `neutrino_dirac_z3_support_trichotomy_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `omega_lambda_matter_bridge_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `persistent_object_top4_multistage_outer_transfer_sweep_note_2026-04-16` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `planck_boundary_density_extension_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -920,6 +921,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `H_inf_over_H_0_ratio_matter_content_bridge_open`
   - `Planck_2018_H0_OmegaLambda_OmegaM_observational_comparators_external`
   - `radiation_fraction_Omega_r_observational_input_not_derived`
+- **auditor confidence:** high
+
+### `persistent_object_blended_readout_transfer_sweep_note_2026-04-16`
+
+- **Note:** [`PERSISTENT_OBJECT_BLENDED_READOUT_TRANSFER_SWEEP_NOTE_2026-04-16.md`](../../docs/PERSISTENT_OBJECT_BLENDED_READOUT_TRANSFER_SWEEP_NOTE_2026-04-16.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The exact-lattice top3 object plus one retained blended readout architecture transfers across the tested nearby exact-family neighborhood.  _(class `C`)_
+- **chain closes:** False — The transfer runner reproduces the six-case finite sweep, but the retained-readout conclusion depends on a scan-selected blend, chosen gates, fixed per-case field calibration, and an unratified detector/readout-to-inertial-response interpretation.
+- **rationale:** Issue: the note elevates the scan-selected blend=0.25 readout and top3 compact object to a retained local transfer architecture after a finite nearby-family sweep. Why this blocks: the live runners reproduce the table, but they do not derive the readout blend, source kernel, field-max calibration, top3 object selection, or overlap/alpha/drift gates from retained primitives, and they do not establish a persistent inertial-mass or matter-closure observable. Repair target: provide a theorem or registered computation deriving the readout architecture and admissibility gates independently of the pass/fail scan, plus a persistence/inertial-response bridge that makes the detector shift a retained physical observable rather than a local diagnostic. Claim boundary until fixed: it is safe to claim that, in the frozen exact-lattice setup with h=0.25, Green-like source kernel, field max 0.02, three updates, and blend=0.25, top3 passes all six tested nearby cases while top2 passes only 1/6; this is a bounded local compact-object response transfer regime, not retained matter or inertial-mass closure.
 - **auditor confidence:** high
 
 ### `persistent_object_top4_multistage_outer_transfer_sweep_note_2026-04-16`

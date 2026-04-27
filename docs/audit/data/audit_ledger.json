@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T05:37:45.987752+00:00",
-  "generated_at": "2026-04-27T05:37:43.933024+00:00",
-  "invalidation_run_at": "2026-04-27T05:37:45.920119+00:00",
+  "effective_status_computed_at": "2026-04-27T05:52:40.531510+00:00",
+  "generated_at": "2026-04-27T05:52:38.520370+00:00",
+  "invalidation_run_at": "2026-04-27T05:52:40.434193+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T05:37:45.679187+00:00",
+  "load_bearing_computed_at": "2026-04-27T05:52:40.293125+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -52683,14 +52683,21 @@
       "verdict_rationale": null
     },
     "persistent_object_blended_readout_transfer_sweep_note_2026-04-16": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 7.383,
+        "transitive_descendants": 117
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The transfer runner reproduces the six-case finite sweep, but the retained-readout conclusion depends on a scan-selected blend, chosen gates, fixed per-case field calibration, and an unratified detector/readout-to-inertial-response interpretation.",
       "claim_id": "persistent_object_blended_readout_transfer_sweep_note_2026-04-16",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -52698,13 +52705,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 7.383,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The exact-lattice top3 object plus one retained blended readout architecture transfers across the tested nearby exact-family neighborhood.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "c0675dca06164c10666b5c3831e6a0781d1d80ce654338e4d7b5a1297289c9bc",
@@ -52747,7 +52754,7 @@
       "runner_path": null,
       "title": "Persistent Object Blended Readout Transfer Sweep",
       "transitive_descendants": 117,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the note elevates the scan-selected blend=0.25 readout and top3 compact object to a retained local transfer architecture after a finite nearby-family sweep. Why this blocks: the live runners reproduce the table, but they do not derive the readout blend, source kernel, field-max calibration, top3 object selection, or overlap/alpha/drift gates from retained primitives, and they do not establish a persistent inertial-mass or matter-closure observable. Repair target: provide a theorem or registered computation deriving the readout architecture and admissibility gates independently of the pass/fail scan, plus a persistence/inertial-response bridge that makes the detector shift a retained physical observable rather than a local diagnostic. Claim boundary until fixed: it is safe to claim that, in the frozen exact-lattice setup with h=0.25, Green-like source kernel, field max 0.02, three updates, and blend=0.25, top3 passes all six tested nearby cases while top2 passes only 1/6; this is a bounded local compact-object response transfer regime, not retained matter or inertial-mass closure."
     },
     "persistent_object_compact_inertial_probe_note_2026-04-16": {
       "audit_date": null,
