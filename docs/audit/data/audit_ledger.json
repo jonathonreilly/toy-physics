@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T08:27:26.775328+00:00",
-  "generated_at": "2026-04-27T08:27:24.714687+00:00",
-  "invalidation_run_at": "2026-04-27T08:27:26.715980+00:00",
+  "effective_status_computed_at": "2026-04-27T08:31:35.150761+00:00",
+  "generated_at": "2026-04-27T08:31:32.808852+00:00",
+  "invalidation_run_at": "2026-04-27T08:31:35.071241+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T08:27:26.572698+00:00",
+  "load_bearing_computed_at": "2026-04-27T08:31:34.868773+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -83049,14 +83049,21 @@
       "verdict_rationale": null
     },
     "yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 1.5,
+        "transitive_descendants": 1
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies C_F=4/3 and the 4.5837% arithmetic at alpha_s=0.108, but it simply assigns K_1=C_F and does not derive the scheme-dependent one-loop on-shell self-energy integral whose unit value is required for the coefficient.",
       "claim_id": "yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -83064,18 +83071,23 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 1.5,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note identifies the 1-loop MSbar-to-pole coefficient as K_1 = C_F because the color factor is T^A T^A = C_F and the remaining on-shell kinematic/Dirac/MSbar integral contributes +1 in the alpha_s/pi convention.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "audited_conditional",
       "max_descendant_status_rank": 10,
       "note_hash": "164f3d394d590f62c6d979135c84b95e0ccf1e113b1ae1f971c7f2f5cd1ae911",
       "note_path": "docs/YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "one_loop_MSbar_to_pole_self_energy_unit_integral_not_derived",
+        "K1_equals_CF_set_by_runner_assignment",
+        "SU3_Casimir_authorities_not_registered_one_hop_dependencies",
+        "alpha_s_mt_anchor_hardcoded_not_registered_one_hop_dependency"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.370358+00:00",
@@ -83104,16 +83116,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 3,
+        "B": 1,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 4
       },
       "runner_path": "scripts/frontier_yt_p3_msbar_to_pole_k1.py",
       "title": "P3 MSbar-to-Pole K_1 Framework-Native Derivation Note (1-loop Casimir)",
       "transitive_descendants": 1,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the framework-native claim imports the non-color part of the continuum MSbar-to-pole 1-loop self-energy calculation while the runner only checks the SU(3) Casimir and downstream arithmetic. Why this blocks: C_F=4/3 is an exact retained color factor, but the equality K_1=C_F also requires a scheme/convention-specific on-shell mass-renormalization theorem showing that the Dirac and momentum integral contributes exactly +1 in the alpha_s/pi convention; without that theorem, the result is a cited QCD input plus Casimir arithmetic, not a framework-native derivation. Repair target: add a retained one-loop self-energy computation from the framework Feynman rules through MSbar subtraction and on-shell mass readout, or explicitly cite the standard perturbative-QCD result and demote the claim boundary; also register the SU(3) Casimir and alpha_s(m_t) authorities as one-hop dependencies. Claim boundary until fixed: it is safe to claim C_F=(N_c^2-1)/(2N_c)=4/3 at SU(3), and that if the standard 1-loop MSbar-to-pole unit integral is imported then K_1(alpha_s/pi)=4.5837% at alpha_s=0.108; it is not safe to claim a fully framework-native K_1 derivation from the current packet."
     },
     "yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17": {
       "audit_date": null,
@@ -83206,7 +83218,7 @@
       ],
       "direct_in_degree": 0,
       "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:yt_ew_color_projection_theorem",
+      "effective_status_reason": "inherited_from:yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 0.0,
