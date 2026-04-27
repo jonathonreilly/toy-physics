@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T04:13:59.750898+00:00
+**Generated:** 2026-04-27T04:16:56.662401+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 3 |
-| _proposed_retained_ | 274 |
+| _proposed_retained_ | 273 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
@@ -28,16 +28,16 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | unknown | 734 |
 | ~~audited_decoration~~ | 1 |
 | ~~audited_numerical_match~~ | 3 |
-| ~~audited_conditional~~ | 283 |
+| ~~audited_conditional~~ | 284 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 3 |
-| `audited_conditional` | 24 |
+| `audited_conditional` | 25 |
 | `audited_decoration` | 1 |
 | `audited_numerical_match` | 3 |
-| `unaudited` | 1567 |
+| `unaudited` | 1566 |
 
 | criticality | count |
 |---|---:|
@@ -122,6 +122,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_retardation_continuum_limit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `yt_ew_color_projection_theorem` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
 | `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `yt_p1_delta_r_2_loop_extension_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `yt_p1_delta_r_sm_rge_crosscheck_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `bell_inequality_derived_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -618,6 +619,32 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `scripts/canonical_plaquette_surface.py_not_registered_one_hop_dependency`
   - `MSbar_continuum_subtraction_and_N_TASTE_normalization_theorem_not_registered`
   - `five_percent_full_PT_systematic_model_not_registered`
+- **auditor confidence:** high
+
+### `yt_p1_delta_r_2_loop_extension_note_2026-04-18`
+
+- **Note:** [`YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md`](../../docs/YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Applying the retained loop-geometric bound r_R=0.22126 to the retained 1-loop central Delta_R=-3.27% and assuming same-sign bound saturation gives Delta_R^{through-2-loop}=Delta_R^{1-loop}(1+r_R)=-3.99% with P1 in [3.3%, 4.7%].  _(class `A`)_
+- **chain closes:** False — The runner verifies the algebra of the color-tensor enumeration and envelope propagation, but the 1-loop central, loop-geometric bound, canonical constants, P3 analogy, m_t comparator, and same-sign/bound-saturation interpretation are imported without registered one-hop dependencies. The eight 2-loop BZ integrals are explicitly open, so the through-2-loop central is an assumed envelope scenario rather than a derived 2-loop correction.
+- **rationale:** Issue: the proposed-retained 2-loop extension turns an inherited 1-loop central and inherited loop-geometric bound into a retained through-2-loop central by assuming the unknown 2-loop term saturates the bound and has the same sign, while all eight 2-loop BZ integrals remain open and the row registers no one-hop dependencies for the 1-loop master, loop-geometric theorem, canonical surface, P3 color-template notes, or observed m_t comparator. Why this blocks: the runner confirms exact Casimir arithmetic and envelope propagation after those inputs are supplied, but it does not compute any J_X integral, derive the 2-loop sign, justify saturation as a central estimate, or reconcile authority between the older literature-cited -3.27% base and the later full-staggered -3.77% canonical cross-reference. Repair target: register and audit the 1-loop master, full-staggered 1-loop update, loop-geometric bound, Rep-A/Rep-B, Delta_i notes, P3 color-factor templates, canonical constants, and comparator sources; either compute the eight J_X BZ integrals with a runner or demote the -3.99% value to a named envelope scenario with no retained central status. Claim boundary until fixed: it is safe to claim a conditional structural envelope: given Delta_R^{1-loop}=-3.27085% and r_R=0.221264, the 2-loop magnitude is bounded by 0.7237%, the geometric tail by 0.9294%, the bound-saturated same-sign scenario gives -3.9946%, and the broad m_t lane contains 172.69 GeV; it is not yet an audited retained 2-loop Delta_R computation or first-principles P1 precision closure.
+- **open / conditional deps cited:**
+  - `YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md_not_registered_one_hop_dependency`
+  - `YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md_not_registered_one_hop_dependency`
+  - `YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md_not_registered_one_hop_dependency`
+  - `YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md_not_registered_one_hop_dependency`
+  - `YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md_not_registered_one_hop_dependency`
+  - `YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md_not_registered_one_hop_dependency`
+  - `YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md_not_registered_and_audited_conditional`
+  - `YT_P1_BZ_QUADRATURE_2_LOOP_FULL_STAGGERED_PT_NOTE_2026-04-18.md_not_registered_one_hop_dependency`
+  - `YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md_not_registered_one_hop_dependency`
+  - `scripts/canonical_plaquette_surface.py_not_registered_one_hop_dependency`
+  - `eight_two_loop_BZ_integrals_J_FF_J_FA_J_AA_J_Fl_J_Al_J_ll_J_FFh_J_Fh_open`
+  - `same_sign_bound_saturation_central_assumption_not_derived`
+  - `observed_m_t_PDG_comparator_not_registered`
 - **auditor confidence:** high
 
 ### `yt_p1_delta_r_sm_rge_crosscheck_note_2026-04-18`

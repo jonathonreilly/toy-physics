@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T04:13:59.464345+00:00",
-  "generated_at": "2026-04-27T04:13:57.512778+00:00",
-  "invalidation_run_at": "2026-04-27T04:13:59.387761+00:00",
+  "effective_status_computed_at": "2026-04-27T04:16:56.416082+00:00",
+  "generated_at": "2026-04-27T04:16:54.599107+00:00",
+  "invalidation_run_at": "2026-04-27T04:16:56.356957+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T04:13:59.268661+00:00",
+  "load_bearing_computed_at": "2026-04-27T04:16:56.220398+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -81351,14 +81351,21 @@
       "verdict_rationale": null
     },
     "yt_p1_delta_r_2_loop_extension_note_2026-04-18": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 12.383,
+        "transitive_descendants": 117
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies the algebra of the color-tensor enumeration and envelope propagation, but the 1-loop central, loop-geometric bound, canonical constants, P3 analogy, m_t comparator, and same-sign/bound-saturation interpretation are imported without registered one-hop dependencies. The eight 2-loop BZ integrals are explicitly open, so the through-2-loop central is an assumed envelope scenario rather than a derived 2-loop correction.",
       "claim_id": "yt_p1_delta_r_2_loop_extension_note_2026-04-18",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -81366,18 +81373,32 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 11,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 12.383,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Applying the retained loop-geometric bound r_R=0.22126 to the retained 1-loop central Delta_R=-3.27% and assuming same-sign bound saturation gives Delta_R^{through-2-loop}=Delta_R^{1-loop}(1+r_R)=-3.99% with P1 in [3.3%, 4.7%].",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "d886adf898943e5e058a5b2156b2b2769fc4f2858b58f7bab01cea012acdaf4b",
       "note_path": "docs/YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md_not_registered_one_hop_dependency",
+        "docs/YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md_not_registered_one_hop_dependency",
+        "docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md_not_registered_one_hop_dependency",
+        "docs/YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md_not_registered_one_hop_dependency",
+        "docs/YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md_not_registered_one_hop_dependency",
+        "docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md_not_registered_one_hop_dependency",
+        "docs/YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md_not_registered_and_audited_conditional",
+        "docs/YT_P1_BZ_QUADRATURE_2_LOOP_FULL_STAGGERED_PT_NOTE_2026-04-18.md_not_registered_one_hop_dependency",
+        "docs/YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md_not_registered_one_hop_dependency",
+        "scripts/canonical_plaquette_surface.py_not_registered_one_hop_dependency",
+        "eight_two_loop_BZ_integrals_J_FF_J_FA_J_AA_J_Fl_J_Al_J_ll_J_FFh_J_Fh_open",
+        "same_sign_bound_saturation_central_assumption_not_derived",
+        "observed_m_t_PDG_comparator_not_registered"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.370313+00:00",
@@ -81406,16 +81427,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "A": 28,
+        "B": 37,
+        "C": 11,
+        "D": 3,
+        "total_pass": 79
       },
       "runner_path": "scripts/frontier_yt_p1_delta_r_2_loop_extension.py",
       "title": "P1 \u0394_R 2-Loop Structural Extension Theorem Note (Color-Tensor Retention + Loop-Geometric Bound)",
       "transitive_descendants": 117,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the proposed-retained 2-loop extension turns an inherited 1-loop central and inherited loop-geometric bound into a retained through-2-loop central by assuming the unknown 2-loop term saturates the bound and has the same sign, while all eight 2-loop BZ integrals remain open and the row registers no one-hop dependencies for the 1-loop master, loop-geometric theorem, canonical surface, P3 color-template notes, or observed m_t comparator. Why this blocks: the runner confirms exact Casimir arithmetic and envelope propagation after those inputs are supplied, but it does not compute any J_X integral, derive the 2-loop sign, justify saturation as a central estimate, or reconcile authority between the older literature-cited -3.27% base and the later full-staggered -3.77% canonical cross-reference. Repair target: register and audit the 1-loop master, full-staggered 1-loop update, loop-geometric bound, Rep-A/Rep-B, Delta_i notes, P3 color-factor templates, canonical constants, and comparator sources; either compute the eight J_X BZ integrals with a runner or demote the -3.99% value to a named envelope scenario with no retained central status. Claim boundary until fixed: it is safe to claim a conditional structural envelope: given Delta_R^{1-loop}=-3.27085% and r_R=0.221264, the 2-loop magnitude is bounded by 0.7237%, the geometric tail by 0.9294%, the bound-saturated same-sign scenario gives -3.9946%, and the broad m_t lane contains 172.69 GeV; it is not yet an audited retained 2-loop Delta_R computation or first-principles P1 precision closure."
     },
     "yt_p1_delta_r_master_assembly_theorem_note_2026-04-18": {
       "audit_date": null,
