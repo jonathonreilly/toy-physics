@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 88,
-    "high": 562,
+    "high": 561,
     "leaf": 856,
     "medium": 85
   },
-  "generated_at": "2026-04-27T03:06:54.360055+00:00",
+  "generated_at": "2026-04-27T03:09:10.612593+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -3162,23 +3162,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_yt_exact_coarse_grained_bridge_operator.py",
       "transitive_descendants": 120
-    },
-    {
-      "audit_independence_required": "cross_family",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "planck_parent_source_hidden_character_no_go_note_2026-04-24",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 10,
-      "load_bearing_score": 15.907,
-      "note_path": "docs/PLANCK_PARENT_SOURCE_HIDDEN_CHARACTER_NO_GO_NOTE_2026-04-24.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_planck_parent_source_hidden_character_nogo.py",
-      "transitive_descendants": 119
     },
     {
       "audit_independence_required": "cross_family",
@@ -31825,6 +31808,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1188,
-  "total_pending": 1591
+  "ready_count": 1187,
+  "total_pending": 1590
 }

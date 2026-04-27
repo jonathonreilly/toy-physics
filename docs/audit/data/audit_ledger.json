@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T03:06:54.301406+00:00",
-  "generated_at": "2026-04-27T03:06:52.560697+00:00",
-  "invalidation_run_at": "2026-04-27T03:06:54.249377+00:00",
+  "effective_status_computed_at": "2026-04-27T03:09:10.550759+00:00",
+  "generated_at": "2026-04-27T03:09:08.778314+00:00",
+  "invalidation_run_at": "2026-04-27T03:09:10.495045+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T03:06:54.131969+00:00",
+  "load_bearing_computed_at": "2026-04-27T03:09:10.375597+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -53254,14 +53254,21 @@
       "verdict_rationale": null
     },
     "planck_parent_source_hidden_character_no_go_note_2026-04-24": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 15.907,
+        "transitive_descendants": 119
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The source note and runner prove the bounded no-go by an explicit two-point affine-fiber counterexample: identical carrier data produce different Schur scalars, so carrier commutation alone cannot force scalar equality.",
       "claim_id": "planck_parent_source_hidden_character_no_go_note_2026-04-24",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -53269,13 +53276,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 10,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 15.907,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Because C(c_cell, delta)=c_cell is constant on the affine hidden-character fiber while p_Schur(c_cell, delta)=c_cell+delta varies, p_Schur=p_event holds iff delta=0 and no carrier-only function can recover the Schur scalar on that fiber.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "74d54e134c8007c973b047ea4e488d06c3f9dfd38643d142ef36ad33afb92319",
@@ -53309,16 +53316,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 6,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 6
       },
       "runner_path": "scripts/frontier_planck_parent_source_hidden_character_nogo.py",
       "title": "Planck Parent-Source Hidden-Character No-Go Note",
       "transitive_descendants": 119,
-      "verdict_rationale": null
+      "verdict_rationale": "The claim is scoped as a negative no-go for the unconstrained carrier-only parent-source scalar route, not as a positive Planck coefficient derivation. The load-bearing hidden-character fiber is explicit in the source note and the runner verifies the kernel, two-parent counterexample, carrier-only non-recoverability, equivalence of scalar equality to delta=0, and normalization sensitivity. Residual boundary: this clean audit does not rule out a future no-hidden-character law or a direct gravitational carrier-identification theorem; it only closes the carrier-only route without such an extra law."
     },
     "planck_primitive_coframe_boundary_carrier_theorem_note_2026-04-25": {
       "audit_date": null,
