@@ -17665,7 +17665,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-27T21:45:32.361177+00:00",
+  "generated_at": "2026-04-27T21:47:12.704698+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -24313,13 +24313,13 @@
     },
     "equivalence_principle_note": {
       "claim_id": "equivalence_principle_note",
-      "current_status": "proposed_retained",
-      "current_status_raw": "proposed_retained positive \u2014 m_inertial = m_gravitational to 0.8%",
+      "current_status": "bounded",
+      "current_status_raw": "bounded scaffold lane \u2014 uniform-field beam deflection gives near-unity exponents. This is **not** a derivation of `m_inertial = m_gravitational`.",
       "deps": [],
-      "note_hash": "a322e5a0208d4126793553dcd161d4c05252c7ccc544b80aaed4dca48958d7d6",
+      "note_hash": "c36fa4a8ff75e0d71527758ea25c5e8570f9ddc2307109b81077438f9536da94",
       "path": "docs/EQUIVALENCE_PRINCIPLE_NOTE.md",
       "runner_path": null,
-      "title": "Equivalence Principle"
+      "title": "Equivalence Principle \u2014 Bounded Scaffold Lane"
     },
     "evanescent_barrier_amplitude_suppression_theorem_note": {
       "claim_id": "evanescent_barrier_amplitude_suppression_theorem_note",
@@ -39859,10 +39859,10 @@
     "root_count": 1172,
     "runners_with_path": 705,
     "status_counts": {
-      "bounded": 210,
+      "bounded": 211,
       "open": 26,
       "proposed_promoted": 6,
-      "proposed_retained": 444,
+      "proposed_retained": 443,
       "support": 133,
       "unknown": 796
     }

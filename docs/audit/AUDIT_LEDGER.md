@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T21:45:34.617884+00:00
+**Generated:** 2026-04-27T21:47:14.938295+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -22,7 +22,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 72 |
 | _proposed_retained_ | 24 |
 | _proposed_promoted_ | 1 |
-| bounded | 185 |
+| bounded | 186 |
 | support | 108 |
 | open | 11 |
 | unknown | 786 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 9 |
 | ~~audited_renaming~~ | 3 |
 | ~~audited_conditional~~ | 237 |
-| ~~audited_failed~~ | 137 |
+| ~~audited_failed~~ | 136 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 72 |
 | `audited_conditional` | 134 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 70 |
+| `audited_failed` | 69 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1326 |
+| `unaudited` | 1327 |
 
 | criticality | count |
 |---|---:|
@@ -318,7 +318,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `critical_exponents_topology_note_2026-04-10` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `distance_law_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
-| `equivalence_principle_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | G | - |
 | `evolving_network_prototype_v2_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `evolving_network_prototype_v3_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `fifth_family_complex_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -1274,25 +1273,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** On the fixed ordered 3D family, global amplitude rescaling leaves the detector centroid shift invariant for both valley-linear and spent-delay actions, while normalized packet shape changes the response strongly.  _(class `C`)_
 - **chain closes:** True — The live named harness reproduces the note's amplitude-invariance values and packet-shape relative spreads for both actions to the printed precision. The chain closes only for the test-particle amplitude-level statement and the explicit negative boundary that shape/composition dependence remains.
 - **rationale:** The note is careful not to claim a full equivalence principle or persistent-pattern inertial-mass law. The live runner supports the bounded result: both actions are invariant under global amplitude scaling to machine precision, and both actions show large packet-shape spreads of about 159.21% and 155.21%. The referenced frozen log is absent from this worktree, but the live finite computation closes the narrow claim and the note itself preserves the open persistent-pattern boundary.
-- **auditor confidence:** high
-
-### `equivalence_principle_note`
-
-- **Note:** [`EQUIVALENCE_PRINCIPLE_NOTE.md`](../../docs/EQUIVALENCE_PRINCIPLE_NOTE.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_failed~~
-- **effective_status:** ~~audited_failed~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** Uniform field f = g*z gives F ~ g^1.008 and F ~ M^0.998, so the note concludes m_inertial = m_gravitational to 0.8%.  _(class `G`)_
-- **chain closes:** False — The source note provides only headline numerical exponents and no registered runner, command, log, data table, fit ranges, uncertainty model, or one-hop derivation of the mass/readout identifications. The asserted equality of inertial and gravitational mass therefore cannot be audited from the allowed packet.
-- **rationale:** Issue: the proposed-retained equivalence-principle claim rests on unsupported numerical fit summaries and an unregistered physical identification of two response coefficients as inertial and gravitational mass. Why this blocks: linearity of a beam deflection with respect to field strength and source strength does not by itself establish m_inertial = m_gravitational, especially when the note also reports non-constant-acceleration layer scaling; without the runner output, fit data, force observable, packet/beam definition, source normalization, and uncertainty calculation, the stated 0.8% equality is not reproducible. Repair target: register a primary runner that generates the sweep, emits the g and M fit tables with uncertainties, defines the force/mass observables, checks independence from packet/beam parameters, and proves or registers the valley-linear action coupling S = L(1-f) as the shared source of both responses. Claim boundary until fixed: it is safe to say the note reports a beam-level uniform-field proportionality test with exponents near one; it is not safe to claim a retained equivalence principle or equality of inertial and gravitational mass.
-- **open / conditional deps cited:**
-  - `primary_equivalence_principle_runner_not_registered`
-  - `uniform_field_force_observable_definition_not_registered`
-  - `inertial_mass_extraction_theorem_not_registered`
-  - `gravitational_mass_source_normalization_theorem_not_registered`
-  - `fit_data_ranges_uncertainties_and_logs_missing`
-  - `valley_linear_action_coupling_S_equals_L_times_1_minus_f_not_registered`
 - **auditor confidence:** high
 
 ### `evolving_network_prototype_v2_note`

@@ -1,6 +1,6 @@
 # Equivalence Principle — Bounded Scaffold Lane
 
-**Date:** 2026-04-05 (downgraded 2026-04-27 per audit-lane verdict)
+**Date:** 2026-04-05 (downgraded 2026-04-27 per review/audit handoff)
 **Status:** bounded scaffold lane — uniform-field beam deflection gives near-unity exponents. This is **not** a derivation of `m_inertial = m_gravitational`.
 
 ## What this note actually contains
@@ -13,8 +13,7 @@ following measured exponents:
 - `deflection ~ layer^{1.14}` (sub-quadratic, not constant acceleration)
 
 Earlier versions of this note packaged the two near-unity exponents as
-"`m_inertial = m_gravitational` to 0.8%". The audit lane (verdict
-`audited_failed`, see
+"`m_inertial = m_gravitational` to 0.8%". The review/audit handoff (see
 [docs/audit/worker_lanes/03_equivalence_principle.md](audit/worker_lanes/03_equivalence_principle.md))
 found that this packaging does not close on its own terms:
 
