@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T17:10:24.310625+00:00
+**Generated:** 2026-04-27T17:13:58.228957+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 61 |
-| _proposed_retained_ | 76 |
+| _proposed_retained_ | 75 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 326 |
+| ~~audited_conditional~~ | 327 |
 | ~~audited_failed~~ | 118 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 61 |
-| `audited_conditional` | 113 |
+| `audited_conditional` | 114 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 51 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1375 |
+| `unaudited` | 1374 |
 
 | criticality | count |
 |---|---:|
@@ -252,6 +252,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_bimodule_norm_existence_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `retardation_discriminator_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `retarded_field_compact_refinement_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `second_grown_family_complex_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `sign_portability_invariant_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `staggered_backreaction_shell_spectral_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -3521,6 +3522,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The retarded field does not collapse to the instantaneous row on refinement, but the split is not uniformly one-directional across the compact and refined rows.  _(class `C`)_
 - **chain closes:** False — The runner reproduces a bounded two-family smoke-probe readout, but the proposed-retained surface is stronger than the evidence because the result is partial, row-sign-dependent, and not attached as an assertion runner in the ledger.
 - **rationale:** Issue: The script and frozen log support only partial survival of a retarded-vs-instantaneous centroid-shift split on two retained DAG-family parameter choices, with nonuniform row signs and sizable standard errors, while the audit queue exposes the row as proposed_retained. Why this blocks: a two-family smoke probe without assertion tolerances or a stated statistical/refinement theorem cannot establish a retained retarded-field law or a robust universal discriminator. Repair target: change the source status to bounded/support, or add a ledger-attached assertion runner plus a refinement theorem/statistical criterion showing noncollapse over a specified family class with tolerances. Claim boundary until fixed: it is safe to claim that the current script reproduces nonzero mean splits for the compact and refined families and that the refined split is not uniformly one-directional; it is not safe to claim retained universal retarded-field behavior from this probe.
+- **auditor confidence:** high
+
+### `second_grown_family_complex_note`
+
+- **Note:** [`SECOND_GROWN_FAMILY_COMPLEX_NOTE.md`](../../docs/SECOND_GROWN_FAMILY_COMPLEX_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The retained anchor row does carry the complex-action companion, while the support is selective and not family-wide.  _(class `C`)_
+- **chain closes:** False — The script reproduces the narrow anchor-row diagnostics, but the second-family provenance/sign note is unaudited and the runner prints booleans rather than enforcing an audit assertion contract.
+- **rationale:** Issue: The complex-action script and frozen log support the drift=0.20 anchor-row diagnostics, but the note relies on SECOND_GROWN_FAMILY_SIGN_NOTE for the independent second-family provenance and that dependency is currently unaudited/unknown; the runner also has no PASS/FAIL assertion contract. Why this blocks: a selective anchor-row positive cannot be promoted as retained until the family slice it rests on is audit-clean and the acceptance gates are executable assertions rather than printed diagnostics. Repair target: audit the second grown-family sign/provenance note, attach an assertion runner with tolerances for Born proxy, gamma=0, F~M, and TOWARD->AWAY gates, and state the anchor-selection rule explicitly. Claim boundary until fixed: it is safe to claim that the current script/log show the no-restore geometry-sector drift=0.20 anchor row passes the listed complex-action diagnostics; it is not safe to claim a retained second grown-family complex-action result beyond that conditional anchor slice.
+- **open / conditional deps cited:**
+  - `SECOND_GROWN_FAMILY_SIGN_NOTE.md`
 - **auditor confidence:** high
 
 ### `shapiro_delay_note`
