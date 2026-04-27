@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T17:25:57.270542+00:00",
-  "generated_at": "2026-04-27T17:25:55.675891+00:00",
-  "invalidation_run_at": "2026-04-27T17:25:57.222006+00:00",
+  "effective_status_computed_at": "2026-04-27T17:27:20.840128+00:00",
+  "generated_at": "2026-04-27T17:27:19.240405+00:00",
+  "invalidation_run_at": "2026-04-27T17:27:20.793349+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T17:25:57.125482+00:00",
+  "load_bearing_computed_at": "2026-04-27T17:27:20.695679+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -68036,14 +68036,21 @@
       "verdict_rationale": "Issue: The bridge claim identifies the Shapiro phase lag with diamond/NV proxy phasor language without a runner or audit-clean causal and diamond-unit inputs. Why this blocks: failed causal-field dependencies cannot support a proposed-retained c-dependent phase lag, and unknown diamond bridge/unit notes cannot justify even proxy-level lab-facing translation beyond notation. Repair target: repair and audit the causal phase-lag derivation, audit the diamond phase-ramp and absolute-unit bridge notes, and add a runner constructing X, Y, phi, and phase-ramp quantities from the same data pipeline. Claim boundary until fixed: it is safe to say this note proposes X/Y/phi language as a handoff vocabulary for a supplied phase-lag table; it is not safe to claim a retained Shapiro-to-diamond bridge or lab-facing causal discriminator."
     },
     "shapiro_diamond_frequency_bridge_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The note translates a supplied k-scaling claim into diamond proxy language, but the Shapiro delay is only conditional, the Shapiro-diamond bridge is failed, and the diamond phase/unit/protocol inputs are unknown, conditional, or bounded.",
       "claim_id": "shapiro_diamond_frequency_bridge_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -68051,18 +68058,25 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The retained Shapiro delay is frequency-sensitive in the same X/Y/phi and phase-ramp language as the diamond bridge card, so phi and phase-ramp slope should scale with k.",
+      "load_bearing_step_class": "F",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "e04cc1c10a300e8f5830390c1f49aded3667342420b1092bd3d5ff3c875ade96",
       "note_path": "docs/SHAPIRO_DIAMOND_FREQUENCY_BRIDGE_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/SHAPIRO_DELAY_NOTE.md",
+        "docs/SHAPIRO_DIAMOND_BRIDGE_NOTE.md",
+        "docs/DIAMOND_PHASE_RAMP_BRIDGE_CARD_NOTE.md",
+        "docs/DIAMOND_NV_PHASE_RAMP_SIGNAL_BUDGET_NOTE.md",
+        "docs/DIAMOND_SENSOR_PROTOCOL_NOTE.md",
+        "docs/DIAMOND_SENSOR_PREDICTION_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369631+00:00",
@@ -68100,7 +68114,7 @@
       "runner_path": null,
       "title": "Shapiro Diamond Frequency Bridge Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The frequency bridge depends on a conditional Shapiro-delay result, a failed Shapiro-diamond bridge, and unaudited/conditional diamond phase-ramp and signal-budget notes, with no runner constructing phi, k-scaling, or normalized phase-ramp quantities. Why this blocks: translating an unratified proxy scaling into lab-facing X/Y/phi language does not establish a retained frequency-sensitive diamond/NV prediction or a calibrated comparison surface. Repair target: audit or repair SHAPIRO_DELAY_NOTE and SHAPIRO_DIAMOND_BRIDGE_NOTE, audit the diamond phase-ramp and signal-budget notes, and add a runner that varies k at fixed geometry and verifies phi/k and slope/k collapse from generated data. Claim boundary until fixed: it is safe to say this note proposes a proxy-level frequency-bridge test to run; it is not safe to claim retained k-linear diamond/NV phase-ramp behavior."
     },
     "shapiro_experimental_card": {
       "audit_date": null,

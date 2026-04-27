@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 89,
     "high": 508,
-    "leaf": 692,
+    "leaf": 691,
     "medium": 82
   },
-  "generated_at": "2026-04-27T17:25:57.318447+00:00",
+  "generated_at": "2026-04-27T17:27:20.887441+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -23650,23 +23650,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "shapiro_diamond_frequency_bridge_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/SHAPIRO_DIAMOND_FREQUENCY_BRIDGE_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "shapiro_experimental_card",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -28126,6 +28109,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 958,
-  "total_pending": 1371
+  "ready_count": 957,
+  "total_pending": 1370
 }
