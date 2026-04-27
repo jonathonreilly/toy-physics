@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T05:32:30.100567+00:00
+**Generated:** 2026-04-27T05:34:16.717462+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 6 |
-| _proposed_retained_ | 247 |
+| _proposed_retained_ | 246 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
-| ~~audited_conditional~~ | 244 |
+| ~~audited_conditional~~ | 245 |
 | ~~audited_failed~~ | 59 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 6 |
-| `audited_conditional` | 42 |
+| `audited_conditional` | 43 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 2 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1540 |
+| `unaudited` | 1539 |
 
 | criticality | count |
 |---|---:|
@@ -119,6 +119,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gravity_clean_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `higgs_mass_retention_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `koide_a1_physical_bridge_attempt_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_dimensionless_objection_closure_review_packet_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -532,6 +533,25 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Given linear amplitude composition and quadratic probability P=|A|^2, the inclusion-exclusion expression I_3=|A+B+C|^2-|A+B|^2-|A+C|^2-|B+C|^2+|A|^2+|B|^2+|C|^2 cancels identically.  _(class `A`)_
 - **chain closes:** True — The source note is explicitly scoped to the Hilbert/Born surface, and the algebraic cancellation follows for arbitrary complex amplitudes without additional lattice assumptions.
 - **rationale:** The retained claim is the scoped exact theorem that I_3 vanishes once amplitudes add linearly and probabilities are quadratic, not a freestanding derivation of the Born rule. The runner verifies the identity for arbitrary complex amplitudes, higher Sorkin orders under the Born rule, a non-Born control, and concrete 1D/3D lattice propagator cross-checks, with 6 computed passes and no failures. Residual boundary: this audit ratifies the Hilbert-surface no-third-order-interference theorem only; it does not promote any claim that P=|A|^2 itself has been derived from the lattice axioms alone.
+- **auditor confidence:** high
+
+### `koide_a1_physical_bridge_attempt_2026-04-22`
+
+- **Note:** [`KOIDE_A1_PHYSICAL_BRIDGE_ATTEMPT_2026-04-22.md`](../../docs/KOIDE_A1_PHYSICAL_BRIDGE_ATTEMPT_2026-04-22.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** None of the tested standard mechanisms, W[J=0], Coleman-Weinberg, Gaussian max-entropy at fixed Frobenius, or continuous CV=1 max-entropy, supplies the physical source-law bridge selecting the A1/S_block extremum.  _(class `A`)_
+- **chain closes:** False — The note gives hand algebra showing four candidate bridges fail or remain incomplete, and it explicitly says the A1 physical bridge is genuinely open. There is no registered runner, no one-hop dependency packet for the review-branch theorems, and no theorem proving either exhaustion of bridge mechanisms or a retained physical law selecting S_block.
+- **rationale:** Issue: the note is a useful failed-attempt map, not a retained physical bridge for A1. Why this blocks: it confirms that several familiar mechanisms do not select the A1/Frobenius equipartition point, but the claimed internal A1 chain is referenced to unregistered review-branch material and the note offers no executable runner or exhaustive no-go theorem; its own recommendation is to adopt S_block as a new primitive, import Koide-Nishiura V(Phi), or keep researching the measure. Repair target: register the A1 internal-chain authorities and add runners for the four failed bridge attempts, then either derive a retained source law selecting S_block or explicitly demote the note to open bridge-landscape documentation. Claim boundary until fixed: it is safe to say these four attempted physical mechanisms do not currently close the A1 bridge; it is not safe to claim a proposed-retained physical derivation of A1.
+- **open / conditional deps cited:**
+  - `review_branch_KOIDE_FROBENIUS_ISOTYPE_SPLIT_UNIQUENESS_not_registered_one_hop_dependency`
+  - `review_branch_KOIDE_KAPPA_BLOCK_TOTAL_FROBENIUS_MEASURE_not_registered_one_hop_dependency`
+  - `review_branch_KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_not_registered_one_hop_dependency`
+  - `runner_for_WJ_Coleman_Weinberg_max_entropy_CV_attempts_not_registered`
+  - `physical_source_law_selecting_S_block_open`
+  - `Koide_Nishiura_VPhi_import_not_retained`
 - **auditor confidence:** high
 
 ### `koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24`
