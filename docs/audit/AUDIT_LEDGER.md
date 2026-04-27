@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T14:10:30.341447+00:00
+**Generated:** 2026-04-27T14:14:19.793374+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 47 |
-| _proposed_retained_ | 133 |
+| _proposed_retained_ | 132 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
 | ~~audited_conditional~~ | 305 |
-| ~~audited_failed~~ | 96 |
+| ~~audited_failed~~ | 97 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 47 |
 | `audited_conditional` | 92 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 29 |
+| `audited_failed` | 30 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1433 |
+| `unaudited` | 1432 |
 
 | criticality | count |
 |---|---:|
@@ -265,6 +265,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gravity_observable_hierarchy_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `grown_transfer_basin_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `h0125_failure_derivation` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `h2t_h0125_narrow_bridge_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `lattice_3d_dense_spent_delay_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `lattice_kernel_transfer_norm_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `mirror_2d_gravity_law_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -1878,6 +1879,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The h=0.125 failure is diagnosed and quantified by boundary leakage, beam-width growth, exponentially compounded probability loss, and an SNR=0.5 noise explanation of the AWAY result.  _(class `C`)_
 - **chain closes:** False — The source note has no runner, no artifact chain, and no cited authority for the transfer norms, beam widths, detector probabilities, or SNR. Its stated probability formula also fails internally: retention^nl gives about 8.18e-4, 1.14e-11, and 4.26e-34 for the three rows, not 3.7e-59, 1.1e-88, and 1.6e-136.
 - **rationale:** Issue: the note's load-bearing numerical diagnosis is unsupported by any declared runner or one-hop derivation, and the explicit formula `P_det = (retention)^nl` is inconsistent with the printed P_det table by tens to more than one hundred orders of magnitude. Why this blocks: the retained negative claim depends on those numbers to distinguish boundary leakage, beam spreading, compounded loss, and statistical-noise AWAY behavior; without a reproducible computation or internally consistent formula, the diagnosis is not auditable. Repair target: add an executable h=0.125 failure diagnostic that computes T_interior/T_corner, beam sigma, detector probability including any geometric-spreading factor, and centroid SNR from the same propagation model, then update the note so every table entry follows from that runner. Claim boundary until fixed: safely claim only that boundary leakage and beam spreading are plausible failure hypotheses and that h=0.125 has not been retained by this note; do not retain the quantified root-cause diagnosis or SNR=0.5 noise conclusion.
+- **auditor confidence:** high
+
+### `h2t_h0125_narrow_bridge_note`
+
+- **Note:** [`H2T_H0125_NARROW_BRIDGE_NOTE.md`](../../docs/H2T_H0125_NARROW_BRIDGE_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The narrow h=0.125 bridge claim does not currently survive on main: the reduced family lacks enough TOWARD points for F~M, and the bridge family reaches h=0.125 with F~M about 0.50 rather than near 1.  _(class `C`)_
+- **chain closes:** False — The live reduced-family runner reproduces the bounded negative table through h=0.125, but the source status and final verdict explicitly reject rather than retain the narrow h=0.125 bridge claim. The row is in the proposed-retained queue only because the status line mentions a proposed_retained claim that the note is auditing down.
+- **rationale:** Issue: the source is not a proposed-retained bridge result; it is explicitly a bounded negative for a proposed-retained h=0.125 bridge claim. Why this blocks: applying a retained/proposed-retained audit result would promote the opposite of the note's own final verdict, and the reproduced reduced-family runner gives AWAY/no-F~M rows rather than a retained h=0.125 bridge. Repair target: change the note status/ledger classification to bounded negative, or if a retained negative theorem is intended, declare that status and include the focused h=0.125 single-row decision artifact plus the limit-diagnosis scripts/logs in the artifact chain. Claim boundary until fixed: safely claim only the bounded negative: Born is clean where measured, the reduced family reaches h=0.125 but has no TOWARD/F~M bridge, and the focused bridge row does not meet the F~M near-1 bar.
 - **auditor confidence:** high
 
 ### `higgs_mass_retention_analysis_note_2026-04-18`
