@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T14:33:44.024913+00:00",
-  "generated_at": "2026-04-27T14:33:42.419912+00:00",
-  "invalidation_run_at": "2026-04-27T14:33:43.978810+00:00",
+  "effective_status_computed_at": "2026-04-27T14:37:35.958558+00:00",
+  "generated_at": "2026-04-27T14:37:34.372973+00:00",
+  "invalidation_run_at": "2026-04-27T14:37:35.912213+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T14:33:43.883993+00:00",
+  "load_bearing_computed_at": "2026-04-27T14:37:35.815495+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -38225,14 +38225,21 @@
       "verdict_rationale": null
     },
     "kernel_vs_gravity_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner supports the gravity-specific crossover and gamma=0.5 escape suppression, but it contradicts the source's stronger detector-escape claim for any gamma > 0: several nonzero-field rows at gamma=0.1 or 0.2 still have escape ratios above 1.",
       "claim_id": "kernel_vs_gravity_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -38240,13 +38247,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Kernel-generic absorption occurs under any nonzero field for gamma > 0, while only the localized 1/r gravity field produces the TOWARD -> AWAY deflection crossover.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "1598d5abbafbf8d6c008c9909e66aca8f6d371b562a419ba3693fcc3f6144907",
@@ -38282,14 +38289,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 2,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 2
       },
       "runner_path": null,
       "title": "Complex Action: Kernel-Generic vs Gravity-Specific",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the source conflates link-level imaginary-action damping with the detector escape observable. The factor exp(-k gamma L f) is below 1 for f > 0 and gamma > 0, but the runner's detector escape ratios are still above 1 for UNIFORM f=0.005 at gamma=0.1 and 0.2, UNIFORM f=0.01 at gamma=0.1 and 0.2, and GRAVITY at gamma=0.1 and 0.2. Why this blocks: the retained separation claim says kernel-generic absorption occurs under any nonzero field at gamma > 0, but the measured observable used by the note only shows suppression at sufficiently large gamma in this setup. Repair target: distinguish local per-link attenuation from total detector escape, or add a theorem/runner proving a thresholded escape-suppression criterion across gamma and field families. Claim boundary until fixed: safely claim only that gamma=0.5 suppresses detector escape for the tested nonzero fields, and that the 1/r gravity field uniquely shows the tested TOWARD -> AWAY centroid crossover by gamma=0.2."
     },
     "koide_a1_closure_recommendation_2026-04-22": {
       "audit_date": null,
