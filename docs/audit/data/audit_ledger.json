@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T15:44:49.142407+00:00",
-  "generated_at": "2026-04-27T15:44:47.558310+00:00",
-  "invalidation_run_at": "2026-04-27T15:44:49.095866+00:00",
+  "effective_status_computed_at": "2026-04-27T15:46:19.982682+00:00",
+  "generated_at": "2026-04-27T15:46:18.390469+00:00",
+  "invalidation_run_at": "2026-04-27T15:46:19.935508+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T15:44:48.999836+00:00",
+  "load_bearing_computed_at": "2026-04-27T15:46:19.836231+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -48428,14 +48428,21 @@
       "verdict_rationale": "Issue: The queue records this as proposed_retained because the Status line mentions the proposed_retained 3D surrogate lane, while the note itself is a narrow constrained compact-family control sweep. Why this blocks: a finite h=0.5 ordered-lattice comparison cannot be ratified as a retained theorem merely because it informs a proposed_retained lane; promoting it would inflate bounded provenance into retained physics. Repair target: rewrite the Status/current_status as bounded or proposed_bounded, or author a separate retained theorem deriving the compact-source frontier beyond this finite sweep. Claim boundary until fixed: it is safe to claim the live artifact reproduces topN 49 with capture2=1.000, score=0.9994, best compact tapered radius 2 with capture2=0.638, score=1.0000, and meaningful improvement over topN=False; it is not safe to present this note as a retained compact-source theorem."
     },
     "mesoscopic_surrogate_h025_constrained_localization_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The finite bounded-negative result closes numerically, but the row is queued as proposed_retained only because the Status line describes a final localization attempt on a proposed_retained family. The note itself does not supply a retained theorem.",
       "claim_id": "mesoscopic_surrogate_h025_constrained_localization_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -48443,13 +48450,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The h=0.25 constrained localization replay shows the best annulus remains below the broad topN=196 control under the same support/capture floors, with meaningful improvement over topN=False.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "66daab5c192f52b4e5ae8f40b92a28e4ed888f1ee8a84ce6ef150c5fa61f7187",
@@ -48485,14 +48492,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 4,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 4
       },
       "runner_path": null,
       "title": "Mesoscopic Surrogate h=0.25 Constrained Localization Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The source is a final constrained localization control sweep on one h=0.25 ordered-lattice family, but the audit queue records it as proposed_retained because the Status line mentions the proposed_retained family being tested. Why this blocks: the runner can close the bounded negative comparison, but it cannot turn a finite single-family localization sweep into a retained theorem about localized inertial sources. Repair target: correct the Status/current_status to bounded/proposed_bounded, or provide a separate retained theorem deriving the broad-source frontier beyond this finite h=0.25 sweep. Claim boundary until fixed: it is safe to claim the live artifact reproduces topN 196 as overall best admissible, annulus 1:6 as best annulus with capture2=0.916 and score=0.9947, and meaningful improvement over topN=False; it is not safe to present this note as a retained localization theorem."
     },
     "mesoscopic_surrogate_localization_frontier_note": {
       "audit_date": null,

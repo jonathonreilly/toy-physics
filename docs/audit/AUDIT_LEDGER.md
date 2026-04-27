@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T15:44:49.327415+00:00
+**Generated:** 2026-04-27T15:46:20.172213+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 54 |
-| _proposed_retained_ | 107 |
+| _proposed_retained_ | 106 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
 | ~~audited_conditional~~ | 316 |
-| ~~audited_failed~~ | 104 |
+| ~~audited_failed~~ | 105 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 54 |
 | `audited_conditional` | 103 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 37 |
+| `audited_failed` | 38 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1406 |
+| `unaudited` | 1405 |
 
 | criticality | count |
 |---|---:|
@@ -293,6 +293,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `localized_source_response_sweep_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `mesoscopic_surrogate_annular_tapered_sweep_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `mesoscopic_surrogate_compact_floor_sweep_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `mesoscopic_surrogate_h025_constrained_localization_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `mirror_2d_gravity_law_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `staggered_backreaction_green_closure_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `structured_mirror_bornsafe_scan_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -2771,6 +2772,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The compact-floor sweep shows compact Gaussian and tapered candidates can pass the floors, but the best compact survivor does not meaningfully improve on the broad topN benchmark under the same support/capture constraints.  _(class `C`)_
 - **chain closes:** False — The finite negative control-sweep result closes numerically, but the audit row is a parser/status false positive: the source describes a constrained sweep for a proposed_retained lane, not a proposed_retained theorem.
 - **rationale:** Issue: The queue records this as proposed_retained because the Status line mentions the proposed_retained 3D surrogate lane, while the note itself is a narrow constrained compact-family control sweep. Why this blocks: a finite h=0.5 ordered-lattice comparison cannot be ratified as a retained theorem merely because it informs a proposed_retained lane; promoting it would inflate bounded provenance into retained physics. Repair target: rewrite the Status/current_status as bounded or proposed_bounded, or author a separate retained theorem deriving the compact-source frontier beyond this finite sweep. Claim boundary until fixed: it is safe to claim the live artifact reproduces topN 49 with capture2=1.000, score=0.9994, best compact tapered radius 2 with capture2=0.638, score=1.0000, and meaningful improvement over topN=False; it is not safe to present this note as a retained compact-source theorem.
+- **auditor confidence:** high
+
+### `mesoscopic_surrogate_h025_constrained_localization_note`
+
+- **Note:** [`MESOSCOPIC_SURROGATE_H025_CONSTRAINED_LOCALIZATION_NOTE.md`](../../docs/MESOSCOPIC_SURROGATE_H025_CONSTRAINED_LOCALIZATION_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The h=0.25 constrained localization replay shows the best annulus remains below the broad topN=196 control under the same support/capture floors, with meaningful improvement over topN=False.  _(class `C`)_
+- **chain closes:** False — The finite bounded-negative result closes numerically, but the row is queued as proposed_retained only because the Status line describes a final localization attempt on a proposed_retained family. The note itself does not supply a retained theorem.
+- **rationale:** Issue: The source is a final constrained localization control sweep on one h=0.25 ordered-lattice family, but the audit queue records it as proposed_retained because the Status line mentions the proposed_retained family being tested. Why this blocks: the runner can close the bounded negative comparison, but it cannot turn a finite single-family localization sweep into a retained theorem about localized inertial sources. Repair target: correct the Status/current_status to bounded/proposed_bounded, or provide a separate retained theorem deriving the broad-source frontier beyond this finite h=0.25 sweep. Claim boundary until fixed: it is safe to claim the live artifact reproduces topN 196 as overall best admissible, annulus 1:6 as best annulus with capture2=0.916 and score=0.9947, and meaningful improvement over topN=False; it is not safe to present this note as a retained localization theorem.
 - **auditor confidence:** high
 
 ### `mirror_2d_gravity_law_note`
