@@ -44,6 +44,29 @@ def run(cmd: list[str], check: bool = True, capture: bool = True) -> subprocess.
     )
 
 
+def remote_ref_exists(branch: str) -> bool:
+    result = run(
+        ["git", "rev-parse", "--verify", "--quiet", f"origin/{branch}"],
+        check=False,
+    )
+    return result.returncode == 0
+
+
+def current_age_hours(branch: str) -> float | None:
+    result = run(
+        ["git", "log", "-1", "--format=%cI", f"origin/{branch}"],
+        check=False,
+    )
+    if result.returncode != 0:
+        return None
+    from datetime import datetime, timezone
+
+    dt = datetime.fromisoformat(result.stdout.strip())
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return (datetime.now(timezone.utc) - dt).total_seconds() / 3600.0
+
+
 def candidate_branches(inv: dict) -> list[dict]:
     out = []
     for b in inv["branches"]:
@@ -125,6 +148,37 @@ def main() -> int:
     # --execute path. Push tags first, then deletions. Tags first means
     # if the deletion fails, the tag still exists and the branch ref is
     # still on the remote — fully recoverable.
+    print("Refreshing origin refs and revalidating stale-branch candidates...")
+    run(["git", "fetch", "--prune", "origin"])
+    revalidated_ops = []
+    skipped = []
+    for op in ops:
+        branch = op["branch"]
+        if branch in PROTECTED:
+            skipped.append((branch, "protected branch"))
+            continue
+        if not remote_ref_exists(branch):
+            skipped.append((branch, "remote ref no longer exists"))
+            continue
+        age = current_age_hours(branch)
+        if age is None:
+            skipped.append((branch, "could not read current tip age"))
+            continue
+        if age < KEEP_AGE_HOURS:
+            skipped.append((branch, f"current tip is active ({age:.2f}h old)"))
+            continue
+        op["last_commit_age_hours"] = round(age, 2)
+        revalidated_ops.append(op)
+
+    if skipped:
+        print("Skipped during live revalidation:")
+        for branch, reason in skipped[:20]:
+            print(f"  {branch}: {reason}")
+        if len(skipped) > 20:
+            print(f"  ... and {len(skipped) - 20} more")
+        print()
+
+    ops = revalidated_ops
     print(f"EXECUTING archive + delete for {len(ops)} branches.")
     print()
 
