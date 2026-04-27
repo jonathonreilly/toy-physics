@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T06:55:59.366504+00:00
+**Generated:** 2026-04-27T07:00:09.601613+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 10 |
-| _proposed_retained_ | 224 |
+| _proposed_retained_ | 223 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
-| ~~audited_conditional~~ | 264 |
+| ~~audited_conditional~~ | 265 |
 | ~~audited_failed~~ | 73 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 10 |
-| `audited_conditional` | 56 |
+| `audited_conditional` | 57 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 7 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1517 |
+| `unaudited` | 1516 |
 
 | criticality | count |
 |---|---:|
@@ -142,6 +142,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `linear_response_true_kubo_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `matter_inertial_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `mirror_chokepoint_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `mirror_mutual_information_chokepoint_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `native_gauge_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `neutrino_dirac_z3_support_trichotomy_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `omega_lambda_matter_bridge_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -1073,6 +1074,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `logs/2026-04-03-mirror-chokepoint-boundary-n60-r5p0-N120.txt_missing`
   - `mixed_parameter_surface_not_registered_per_retained_row`
   - `runner_prints_diagnostics_without_hard_retention_assertions`
+- **auditor confidence:** high
+
+### `mirror_mutual_information_chokepoint_note`
+
+- **Note:** [`MIRROR_MUTUAL_INFORMATION_CHOKEPOINT_NOTE.md`](../../docs/MIRROR_MUTUAL_INFORMATION_CHOKEPOINT_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note claims a canonical exact-mirror mutual-information artifact chain on the proposed-retained dense chokepoint family, with a bounded mid-N mirror MI advantage over matched random but no clean asymptotic law.  _(class `C`)_
+- **chain closes:** False — The named log exists and the live runner exactly reproduces the finite N=40/60/80/100 MI, d_TV, purity, and descriptive exponent table, including the N=100 MI reversal against mirror. The retained chain is still conditional because the claim is explicitly built on the proposed-retained dense mirror-chokepoint family, whose audit remains conditional, and the runner prints diagnostics rather than enforcing the retained/mid-N boundaries as hard gates.
+- **rationale:** Issue: the finite MI table is live-reproducible, but the proposed-retained claim rests on the dense exact-mirror chokepoint family rather than an independently audited family theorem, and its canonical-line wording can be read as a whole-window mirror advantage even though the N=100 row has mirror MI 0.0408 below random MI 0.0574. Why this blocks: a hostile auditor can certify the printed mid-N diagnostic rows, but cannot promote the artifact chain to a clean retained claim while the underlying mirror-chokepoint family is conditional and the pass criteria for mid-N advantage, N=100 reversal, purity interpretation, and non-asymptotic exponent use are not assertion-gated. Repair target: make docs/MIRROR_CHOKEPOINT_NOTE.md or an equivalent family-definition packet clean, add runner assertions for N=40/60/80 mirror MI > random, N=100 non-advantage, seed counts, npl_half/connect_radius/k/layer2_prob, and descriptive-only fits, and revise the canonical retained sentence to say advantage on N=40/60/80 rather than the whole retained dense window. Claim boundary until fixed: it is safe to claim an exact finite diagnostic: for npl_half=60, connect_radius=5.0, k=5.0, 16 seeds, mirror MI exceeds matched random at N=40/60/80, loses at N=100, mirror purity is lower than random at N=60/80/100 but not N=40, and the power-law fits are descriptive only.
+- **open / conditional deps cited:**
+  - `MIRROR_CHOKEPOINT_NOTE.md_audited_conditional_family_basis`
+  - `scripts/mirror_chokepoint_joint.py_imported_generator_not_registered_as_clean_one_hop_dependency`
+  - `runner_prints_diagnostics_without_hard_mid_N_or_non_asymptotic_assertions`
+  - `canonical_dense_window_wording_overstates_N100_MI_advantage_boundary`
 - **auditor confidence:** high
 
 ### `native_gauge_closure_note`

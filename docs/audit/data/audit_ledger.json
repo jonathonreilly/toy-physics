@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T06:55:59.078027+00:00",
-  "generated_at": "2026-04-27T06:55:57.211288+00:00",
-  "invalidation_run_at": "2026-04-27T06:55:59.020282+00:00",
+  "effective_status_computed_at": "2026-04-27T07:00:09.287540+00:00",
+  "generated_at": "2026-04-27T07:00:07.395207+00:00",
+  "invalidation_run_at": "2026-04-27T07:00:09.231391+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T06:55:58.887002+00:00",
+  "load_bearing_computed_at": "2026-04-27T07:00:09.096868+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -47518,14 +47518,21 @@
       "verdict_rationale": null
     },
     "mirror_mutual_information_chokepoint_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 2.822,
+        "transitive_descendants": 4
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The named log exists and the live runner exactly reproduces the finite N=40/60/80/100 MI, d_TV, purity, and descriptive exponent table, including the N=100 MI reversal against mirror. The retained chain is still conditional because the claim is explicitly built on the proposed-retained dense mirror-chokepoint family, whose audit remains conditional, and the runner prints diagnostics rather than enforcing the retained/mid-N boundaries as hard gates.",
       "claim_id": "mirror_mutual_information_chokepoint_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -47533,18 +47540,23 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 2.822,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note claims a canonical exact-mirror mutual-information artifact chain on the proposed-retained dense chokepoint family, with a bounded mid-N mirror MI advantage over matched random but no clean asymptotic law.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "audited_failed",
       "max_descendant_status_rank": 0,
       "note_hash": "cc918e3f55f4b788dc4271e0084f2bf81248a937b5eecbf79463457fba5148fc",
       "note_path": "docs/MIRROR_MUTUAL_INFORMATION_CHOKEPOINT_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/MIRROR_CHOKEPOINT_NOTE.md_audited_conditional_family_basis",
+        "scripts/mirror_chokepoint_joint.py_imported_generator_not_registered_as_clean_one_hop_dependency",
+        "runner_prints_diagnostics_without_hard_mid_N_or_non_asymptotic_assertions",
+        "canonical_dense_window_wording_overstates_N100_MI_advantage_boundary"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369152+00:00",
@@ -47582,7 +47594,7 @@
       "runner_path": null,
       "title": "Mirror Mutual Information Chokepoint Note",
       "transitive_descendants": 4,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the finite MI table is live-reproducible, but the proposed-retained claim rests on the dense exact-mirror chokepoint family rather than an independently audited family theorem, and its canonical-line wording can be read as a whole-window mirror advantage even though the N=100 row has mirror MI 0.0408 below random MI 0.0574. Why this blocks: a hostile auditor can certify the printed mid-N diagnostic rows, but cannot promote the artifact chain to a clean retained claim while the underlying mirror-chokepoint family is conditional and the pass criteria for mid-N advantage, N=100 reversal, purity interpretation, and non-asymptotic exponent use are not assertion-gated. Repair target: make docs/MIRROR_CHOKEPOINT_NOTE.md or an equivalent family-definition packet clean, add runner assertions for N=40/60/80 mirror MI > random, N=100 non-advantage, seed counts, npl_half/connect_radius/k/layer2_prob, and descriptive-only fits, and revise the canonical retained sentence to say advantage on N=40/60/80 rather than the whole retained dense window. Claim boundary until fixed: it is safe to claim an exact finite diagnostic: for npl_half=60, connect_radius=5.0, k=5.0, 16 seeds, mirror MI exceeds matched random at N=40/60/80, loses at N=100, mirror purity is lower than random at N=60/80/100 but not N=40, and the power-law fits are descriptive only."
     },
     "mirror_mutual_information_note": {
       "audit_date": null,
