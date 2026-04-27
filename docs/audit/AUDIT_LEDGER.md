@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T18:20:35.308237+00:00
+**Generated:** 2026-04-27T18:22:02.468718+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 63 |
-| _proposed_retained_ | 51 |
+| _proposed_retained_ | 50 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
 | ~~audited_conditional~~ | 335 |
-| ~~audited_failed~~ | 132 |
+| ~~audited_failed~~ | 133 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 63 |
 | `audited_conditional` | 122 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 65 |
+| `audited_failed` | 66 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1350 |
+| `unaudited` | 1349 |
 
 | criticality | count |
 |---|---:|
@@ -351,6 +351,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_backreaction_iterative_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `staggered_backreaction_nonlocal_closure_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `staggered_backreaction_results_2026-04-10` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `staggered_backreaction_scale_closure_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `structured_mirror_bornsafe_scan_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `bell_inequality_derived_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -3991,6 +3992,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: The source note is stale relative to scripts/frontier_staggered_backreaction_prototype.py. Current output gives cycle-row R^2 values 0.9830 and 0.9864, so the runner summary reports only 1/3 families with R^2 > 0.99, not machine-precision linearity on all three; current force values are F_ext=+1.488e+00/+1.750e+00/+1.852e+00, F_solve=+5.593e-02/+6.788e-02/+2.183e-01, mean force gap 9.353e-01, and mean self-gap 2.887e-01, all materially different from the frozen table. Why this blocks: the proposed_retained prototype depends on its retained checks and exact force table, and the current artifact fails the stated all-family source-response check while moving the scale-gap numerics. Repair target: update the note from the current runner or restore the historical artifact, then add assertions for zero-source, R^2 thresholds, two-body residual, TOWARD counts, force gaps, self-gaps, and norm drift. Claim boundary until fixed: it is safe to claim that the current runner still has exact zero-source reduction, TOWARD force sign, additivity, and one-step endogenous TOWARD behavior, but with weak cycle-row source-response linearity and a large mean force gap 9.353e-01; it is not safe to retain the frozen prototype table or the all-family machine-precision linearity claim.
 - **open / conditional deps cited:**
   - `STAGGERED_BACKREACTION_NOTE.md`
+- **auditor confidence:** high
+
+### `staggered_backreaction_scale_closure_note`
+
+- **Note:** [`STAGGERED_BACKREACTION_SCALE_CLOSURE_NOTE.md`](../../docs/STAGGERED_BACKREACTION_SCALE_CLOSURE_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note claims one global scalar gain materially closes the cycle-bearing force-scale gap, with best invheat_b1p00 gain 5.374 and calibrated cycle gap 5.869e-02 while retained checks remain intact.  _(class `C`)_
+- **chain closes:** False — The live runner materially changes the best map and closure strength: current best is invheat_b3p00 with gain 0.621, calibrated cycle gap 2.053e-01, and holdout gap 7.249e+00.
+- **rationale:** Issue: The frozen scale-closure table is stale relative to scripts/frontier_staggered_backreaction_scale_closure.py. Current output gives best map invheat_b3p00, gain 0.621, raw cycle gap 4.314e-01, calibrated cycle gap 2.053e-01, improvement 4.69x, best holdout gap 7.249e+00, and source-response R^2 mean 0.9945; the note claims invheat_b1p00, gain 5.374, calibrated cycle gap 5.869e-02, improvement 15.16x, holdout 1.678e+00, and R^2 mean 0.9998. Why this blocks: the proposed_retained scale-closure claim is exactly about the best calibrated map and size of the force-scale closure, and the current runner shows a much weaker closure with a different map and severe holdout divergence. Repair target: update the note from the current runner or restore the historical artifact, then add assertions for best map identity, fitted gain, raw/calibrated cycle gaps, improvement factor, holdout gap, self-gap, R^2, two-body residual, TOWARD count, and norm drift. Claim boundary until fixed: it is safe to claim that the current runner finds a 4.69x calibrated cycle-gap reduction with checks still passing, but no universal scale closure because the best holdout gap is 7.249e+00; it is not safe to retain the frozen 15.16x invheat_b1p00 closure claim.
+- **open / conditional deps cited:**
+  - `STAGGERED_BACKREACTION_ITERATIVE_NOTE.md`
+  - `STAGGERED_BACKREACTION_RESULTS_2026-04-10.md`
+  - `STAGGERED_LAYERED_BACKREACTION_NOTE.md`
 - **auditor confidence:** high
 
 ### `staggered_backreaction_shell_spectral_note`

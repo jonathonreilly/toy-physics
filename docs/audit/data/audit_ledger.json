@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T18:20:35.117303+00:00",
-  "generated_at": "2026-04-27T18:20:33.522990+00:00",
-  "invalidation_run_at": "2026-04-27T18:20:35.070484+00:00",
+  "effective_status_computed_at": "2026-04-27T18:22:02.264364+00:00",
+  "generated_at": "2026-04-27T18:22:00.616169+00:00",
+  "invalidation_run_at": "2026-04-27T18:22:02.211011+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T18:20:34.968545+00:00",
+  "load_bearing_computed_at": "2026-04-27T18:22:02.107501+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -71240,14 +71240,21 @@
       "verdict_rationale": "Issue: The source note is stale relative to scripts/frontier_staggered_backreaction_prototype.py. Current output gives cycle-row R^2 values 0.9830 and 0.9864, so the runner summary reports only 1/3 families with R^2 > 0.99, not machine-precision linearity on all three; current force values are F_ext=+1.488e+00/+1.750e+00/+1.852e+00, F_solve=+5.593e-02/+6.788e-02/+2.183e-01, mean force gap 9.353e-01, and mean self-gap 2.887e-01, all materially different from the frozen table. Why this blocks: the proposed_retained prototype depends on its retained checks and exact force table, and the current artifact fails the stated all-family source-response check while moving the scale-gap numerics. Repair target: update the note from the current runner or restore the historical artifact, then add assertions for zero-source, R^2 thresholds, two-body residual, TOWARD counts, force gaps, self-gaps, and norm drift. Claim boundary until fixed: it is safe to claim that the current runner still has exact zero-source reduction, TOWARD force sign, additivity, and one-step endogenous TOWARD behavior, but with weak cycle-row source-response linearity and a large mean force gap 9.353e-01; it is not safe to retain the frozen prototype table or the all-family machine-precision linearity claim."
     },
     "staggered_backreaction_scale_closure_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner materially changes the best map and closure strength: current best is invheat_b3p00 with gain 0.621, calibrated cycle gap 2.053e-01, and holdout gap 7.249e+00.",
       "claim_id": "staggered_backreaction_scale_closure_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -71255,18 +71262,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note claims one global scalar gain materially closes the cycle-bearing force-scale gap, with best invheat_b1p00 gain 5.374 and calibrated cycle gap 5.869e-02 while retained checks remain intact.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "74aa65e9d7e3df85582cc47c74af88bc621dc56158acf6fbf924389ee56f9f25",
       "note_path": "docs/STAGGERED_BACKREACTION_SCALE_CLOSURE_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/STAGGERED_BACKREACTION_ITERATIVE_NOTE.md",
+        "docs/STAGGERED_BACKREACTION_RESULTS_2026-04-10.md",
+        "docs/STAGGERED_LAYERED_BACKREACTION_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369821+00:00",
@@ -71304,7 +71315,7 @@
       "runner_path": null,
       "title": "Staggered Backreaction Scale-Closure Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The frozen scale-closure table is stale relative to scripts/frontier_staggered_backreaction_scale_closure.py. Current output gives best map invheat_b3p00, gain 0.621, raw cycle gap 4.314e-01, calibrated cycle gap 2.053e-01, improvement 4.69x, best holdout gap 7.249e+00, and source-response R^2 mean 0.9945; the note claims invheat_b1p00, gain 5.374, calibrated cycle gap 5.869e-02, improvement 15.16x, holdout 1.678e+00, and R^2 mean 0.9998. Why this blocks: the proposed_retained scale-closure claim is exactly about the best calibrated map and size of the force-scale closure, and the current runner shows a much weaker closure with a different map and severe holdout divergence. Repair target: update the note from the current runner or restore the historical artifact, then add assertions for best map identity, fitted gain, raw/calibrated cycle gaps, improvement factor, holdout gap, self-gap, R^2, two-body residual, TOWARD count, and norm drift. Claim boundary until fixed: it is safe to claim that the current runner finds a 4.69x calibrated cycle-gap reduction with checks still passing, but no universal scale closure because the best holdout gap is 7.249e+00; it is not safe to retain the frozen 15.16x invheat_b1p00 closure claim."
     },
     "staggered_backreaction_shell_spectral_note": {
       "audit_date": "2026-04-26",
