@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T03:42:48.253854+00:00
+**Generated:** 2026-04-27T03:45:34.989216+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,24 +20,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 2 |
-| _proposed_retained_ | 286 |
+| _proposed_retained_ | 284 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
 | open | 11 |
-| unknown | 736 |
+| unknown | 735 |
 | ~~audited_decoration~~ | 1 |
 | ~~audited_numerical_match~~ | 2 |
-| ~~audited_conditional~~ | 271 |
+| ~~audited_conditional~~ | 274 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 2 |
-| `audited_conditional` | 16 |
+| `audited_conditional` | 17 |
 | `audited_decoration` | 1 |
 | `audited_numerical_match` | 2 |
-| `unaudited` | 1577 |
+| `unaudited` | 1576 |
 
 | criticality | count |
 |---|---:|
@@ -46,7 +46,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 85 |
 | `leaf` | 856 |
 
-- **Proposed claims demoted by upstream:** 129
+- **Proposed claims demoted by upstream:** 130
 - **Citation cycles detected:** 283
 
 ### Runner classification (static heuristic)
@@ -110,6 +110,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `linear_response_true_kubo_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `native_gauge_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `neutrino_dirac_z3_support_trichotomy_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `planck_boundary_density_extension_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `sign_portability_invariant_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `strong_cp_theta_zero_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `wave_retardation_continuum_limit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -383,6 +384,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `three_generation_matter_structure_dependency_not_registered`
   - `neutrino_dirac_lane_reduction_dependency_not_registered`
   - `single_higgs_z3_charge_condition_not_derived`
+- **auditor confidence:** high
+
+### `planck_boundary_density_extension_theorem_note_2026-04-24`
+
+- **Note:** [`PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md`](../../docs/PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Any local additive rule agreeing with c_cell = 1/4 on one primitive face must give N_A(P) = n * c_cell = c_cell * A(P) / a^2 on every finite boundary patch tiled by n primitive faces.  _(class `A`)_
+- **chain closes:** False — The finite-union additivity proof closes as algebra once locality, additivity, cubic orientation symmetry, and c_cell = 1/4 are assumed. The proposed Planck-lane conclusion still depends on the unregistered primitive-coefficient authority and the explicitly open gravitational carrier premise.
+- **rationale:** Issue: the runner verifies the finite-patch additive extension, but the source note is explicitly a support theorem inside a conditional Planck packet: it assumes c_cell = 1/4 and states that the primitive boundary/worldtube count has not yet been derived as the microscopic carrier of gravitational boundary/action density. Why this blocks: the algebra N_A(P)=n c_cell and the conditional a/l_P=1 normalization are valid only after those premises are granted; with no ledger one-hop dependency for the primitive coefficient and no retained carrier-identification theorem, the result cannot be promoted as a closed Planck-boundary density derivation. Repair target: register the primitive c_cell=1/4 theorem as a dependency, add a retained carrier-identification theorem deriving that the one-step boundary/worldtube count is the gravitational boundary/action carrier, and make the runner fail unless those inputs are present and retained. Claim boundary until fixed: it is safe to claim the exact finite-face extension: given locality, additivity, cubic-frame orientation symmetry, and primitive c_cell=1/4, every finite face-union patch has density c_cell/a^2, and if the gravitational carrier premise is later derived this extension preserves the conditional a/l_P=1 normalization.
+- **open / conditional deps cited:**
+  - `primitive_c_cell_equals_one_fourth_theorem_not_registered`
+  - `gravitational_boundary_action_carrier_identification_theorem_open`
 - **auditor confidence:** high
 
 ### `planck_parent_source_hidden_character_no_go_note_2026-04-24`
