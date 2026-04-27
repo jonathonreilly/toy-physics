@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T03:23:48.231820+00:00",
-  "generated_at": "2026-04-27T03:23:46.375679+00:00",
-  "invalidation_run_at": "2026-04-27T03:23:48.170868+00:00",
+  "effective_status_computed_at": "2026-04-27T03:26:20.265737+00:00",
+  "generated_at": "2026-04-27T03:26:18.498940+00:00",
+  "invalidation_run_at": "2026-04-27T03:26:20.208506+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T03:23:48.050513+00:00",
+  "load_bearing_computed_at": "2026-04-27T03:26:20.092773+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -12421,14 +12421,21 @@
       "verdict_rationale": null
     },
     "complex_action_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 7.407,
+        "transitive_descendants": 119
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The complex-action form and gamma parameter are imposed rather than derived, the claimed horizon interpretation is not tied to black-hole observables, and the audit ledger has no registered runner/output for the numerical tables.",
       "claim_id": "complex_action_note",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -12436,18 +12443,24 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 7.407,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note introduces the ansatz S=L(1-f)+i gamma L f, so exp(i k S)=exp(i k L(1-f)) exp(-k gamma L f), and uses a free gamma sweep to interpolate between Newtonian deflection and absorption-biased centroid shifts.",
+      "load_bearing_step_class": "E",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "713576f0610f01bc980faf04315dfbdf6fdc77f6372a0b049bdb37a789bdb21f",
       "note_path": "docs/COMPLEX_ACTION_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "complex_action_imaginary_term_derivation_not_registered",
+        "gamma_selection_theorem_not_registered",
+        "scripts/complex_action_harness.py_not_registered_primary_runner",
+        "logs/2026-04-05-complex-action-harness.txt_not_registered_primary_output",
+        "horizon_observable_bridge_not_derived"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.367934+00:00",
@@ -12485,7 +12498,7 @@
       "runner_path": null,
       "title": "Complex Action: Gravity + Horizons Unification",
       "transitive_descendants": 119,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the load-bearing step is an introduced complex-action ansatz with a free gamma parameter, not a retained derivation of a horizon term from Cl(3)/Z^3 or from the gravity chain; the registered audit packet also has no primary runner/output even though the note names a script and log. Why this blocks: Born preservation follows structurally from linearity once the kernel is accepted, and the tabulated centroid/escape behavior may be a valid model sweep, but a free imaginary coupling cannot support the retained claim that gravity and horizons are unified, nor can an absorption-biased AWAY centroid shift be identified with horizon physics without photon-sphere/Schwarzschild/Hawking or causal-horizon tests. Repair target: register scripts/complex_action_harness.py as the primary runner with deterministic output, derive gamma or the imaginary action term from retained primitives, run resolution/geometry checks around the exceptional point, and add horizon-specific observables rather than centroid-shift proxies. Claim boundary until fixed: it is safe to claim a conditional one-parameter complex-kernel model where gamma=0 reduces to the real-action propagator, linearity keeps I3 near machine zero, and positive gamma produces absorption-biased escape/centroid behavior in the listed setup; it is not yet an audited retained gravity-horizon unification theorem."
     },
     "complex_selectivity_compare_note": {
       "audit_date": null,
