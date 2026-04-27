@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T12:01:36.967241+00:00
+**Generated:** 2026-04-27T12:06:15.194593+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 37 |
-| _proposed_retained_ | 159 |
+| _proposed_retained_ | 158 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 296 |
+| ~~audited_conditional~~ | 297 |
 | ~~audited_failed~~ | 89 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 37 |
-| `audited_conditional` | 83 |
+| `audited_conditional` | 84 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 22 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1459 |
+| `unaudited` | 1458 |
 
 | criticality | count |
 |---|---:|
@@ -165,6 +165,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `fine_h_family_universality_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `four_d_distance_width_probe_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gate_b_complex_action_falsifier_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `gate_b_grown_distance_law_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `global_coherence_off_scaffold_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravitomagnetic_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -1404,6 +1405,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the runner verifies a finite detector-effect sweep, but the proposed_retained queue status is stronger than the source note's own bounded-falsifier scope, and the retained Gate B/Born guardrail is imported from docs/GATE_B_GROWN_JOINT_PACKAGE_NOTE.md, which is bounded and unaudited. Why this blocks: the audit can retain the local fact that gamma attenuates detector escape on this row, but it cannot ratify a retained complex-action branch or inherited retained-row guardrail through a bounded unaudited dependency. Repair target: either re-scope the note as bounded/support, or add a registered current runner and audited Gate B row/Born dependency that closes gamma=0, Born, and retained-row status on the same surface. Claim boundary until fixed: on the specified drift=0.2, restore=0.7 row, the live runner shows escape suppression from 0.215 at gamma=0.05 to effectively zero at gamma=0.5, with AWAY centroid shifts; no broader generated-geometry complex-action theory is established.
 - **open / conditional deps cited:**
   - `GATE_B_GROWN_JOINT_PACKAGE_NOTE.md_bounded_unaudited_guardrail`
+- **auditor confidence:** high
+
+### `gate_b_grown_distance_law_note`
+
+- **Note:** [`GATE_B_GROWN_DISTANCE_LAW_NOTE.md`](../../docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** the distance-law tail transfers from the exact grid to the retained moderate-drift grown geometry on this tested family, with both rows 20/20 TOWARD and comparable declining far-field tails  _(class `C`)_
+- **chain closes:** False — The live runner closes the finite exact-vs-grown distance-tail replay on the declared h=0.5, z=3..7 surface. Retained closure does not propagate because the source note is explicitly a bounded companion and its Gate B far-field/dynamics context is bounded or unknown in the audit ledger.
+- **rationale:** Issue: the live harness verifies the finite distance-tail replay, but the note is queued as proposed_retained while its own status and safe read describe a bounded companion, and the direct Gate B context is not audit-retained. Why this blocks: the finite comparison can support a bounded transfer statement, but cannot ratify the retained grown-geometry family or a broader Gate B closure through bounded/unknown one-hop context. Repair target: either re-scope this source as bounded/support, or audit-retain the far-field sign/F~M and Gate B grown-family dependencies and add a closure theorem for the generated-geometry parameter space. Claim boundary until fixed: on the declared h=0.5 exact-vs-grown replay, both rows are 20/20 TOWARD with comparable post-peak declining tails, exact grid b^(-0.90) and grown drift=0.2 b^(-0.83); exact Newtonian equality and full Gate B closure are not established.
+- **open / conditional deps cited:**
+  - `GATE_B_FARFIELD_NOTE.md_bounded_unaudited`
+  - `GATE_B_DYNAMICS_NOTE.md_unknown_unaudited`
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20`

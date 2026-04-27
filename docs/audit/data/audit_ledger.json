@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T12:01:36.752592+00:00",
-  "generated_at": "2026-04-27T12:01:35.001999+00:00",
-  "invalidation_run_at": "2026-04-27T12:01:36.697769+00:00",
+  "effective_status_computed_at": "2026-04-27T12:06:14.940385+00:00",
+  "generated_at": "2026-04-27T12:06:13.157693+00:00",
+  "invalidation_run_at": "2026-04-27T12:06:14.876972+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T12:01:36.592118+00:00",
+  "load_bearing_computed_at": "2026-04-27T12:06:14.763932+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -29800,14 +29800,21 @@
       "verdict_rationale": null
     },
     "gate_b_grown_distance_law_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner closes the finite exact-vs-grown distance-tail replay on the declared h=0.5, z=3..7 surface. Retained closure does not propagate because the source note is explicitly a bounded companion and its Gate B far-field/dynamics context is bounded or unknown in the audit ledger.",
       "claim_id": "gate_b_grown_distance_law_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -29815,18 +29822,21 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "the distance-law tail transfers from the exact grid to the retained moderate-drift grown geometry on this tested family, with both rows 20/20 TOWARD and comparable declining far-field tails",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "3665a4bf50e7e6007387f9afc253225c56d04b0937ad2a5f6416b96286d512e6",
       "note_path": "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/GATE_B_FARFIELD_NOTE.md_bounded_unaudited",
+        "docs/GATE_B_DYNAMICS_NOTE.md_unknown_unaudited"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368366+00:00",
@@ -29856,15 +29866,15 @@
       ],
       "runner_check_breakdown": {
         "A": 0,
-        "B": 0,
-        "C": 0,
+        "B": 2,
+        "C": 4,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 6
       },
       "runner_path": null,
       "title": "Gate B Grown-Geometry Distance-Law Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the live harness verifies the finite distance-tail replay, but the note is queued as proposed_retained while its own status and safe read describe a bounded companion, and the direct Gate B context is not audit-retained. Why this blocks: the finite comparison can support a bounded transfer statement, but cannot ratify the retained grown-geometry family or a broader Gate B closure through bounded/unknown one-hop context. Repair target: either re-scope this source as bounded/support, or audit-retain the far-field sign/F~M and Gate B grown-family dependencies and add a closure theorem for the generated-geometry parameter space. Claim boundary until fixed: on the declared h=0.5 exact-vs-grown replay, both rows are 20/20 TOWARD with comparable post-peak declining tails, exact grid b^(-0.90) and grown drift=0.2 b^(-0.83); exact Newtonian equality and full Gate B closure are not established."
     },
     "gate_b_grown_joint_package_note": {
       "audit_date": null,
