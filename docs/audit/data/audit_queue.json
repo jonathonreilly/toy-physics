@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 89,
     "high": 508,
-    "leaf": 778,
+    "leaf": 777,
     "medium": 82
   },
-  "generated_at": "2026-04-27T12:32:05.607736+00:00",
+  "generated_at": "2026-04-27T12:34:09.307919+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -20692,23 +20692,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "gate_b_grown_trapping_frontier_v2_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/GATE_B_GROWN_TRAPPING_FRONTIER_V2_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "gate_b_grown_trapping_frontier_v3_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -29591,6 +29574,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1044,
-  "total_pending": 1457
+  "ready_count": 1043,
+  "total_pending": 1456
 }
