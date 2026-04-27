@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T04:07:34.507718+00:00",
-  "generated_at": "2026-04-27T04:07:32.736255+00:00",
-  "invalidation_run_at": "2026-04-27T04:07:34.454608+00:00",
+  "effective_status_computed_at": "2026-04-27T04:10:59.033271+00:00",
+  "generated_at": "2026-04-27T04:10:57.252379+00:00",
+  "invalidation_run_at": "2026-04-27T04:10:58.969569+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T04:07:34.328954+00:00",
+  "load_bearing_computed_at": "2026-04-27T04:10:58.853457+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -13455,14 +13455,21 @@
       "verdict_rationale": null
     },
     "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 12.383,
+        "transitive_descendants": 117
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The inverse formulas close as exact algebra once the flat-FRW matter+radiation+Lambda surface and L=(H_inf/H_0)^2 bridge are assumed, but those authorities are not registered as one-hop dependencies for this audit row. The runner reads and status-checks those notes directly, so the retained/admitted surface is imported rather than supplied by the constrained audit packet.",
       "claim_id": "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -13470,18 +13477,25 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 11,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 12.383,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "On the retained/admitted flat-FRW w_Lambda=-1 surface, the four inverse reconstructions L_H(a), L_q, L_mL, and L_acc must agree and equal (H_inf/H_0)^2.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "4a47d4d4fdf70b214d2ca70022e7f128119fa62e42604f176e632c45503cf253",
       "note_path": "docs/COSMOLOGY_SINGLE_RATIO_INVERSE_RECONSTRUCTION_THEOREM_NOTE_2026-04-25.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/COSMOLOGY_FRW_KINEMATIC_REDUCTION_THEOREM_NOTE_2026-04-24.md_not_registered_one_hop_dependency",
+        "docs/OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md_not_registered_one_hop_dependency",
+        "docs/DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md_not_registered_one_hop_dependency",
+        "docs/COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md_not_registered_one_hop_dependency",
+        "flat_FRW_wLambda_minus_one_surface_is_admitted_not_independently_audited_here",
+        "matter_content_bridge_and_numerical_H_inf_over_H0_remain_open"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.367984+00:00",
@@ -13510,16 +13524,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 11,
+        "B": 19,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 30
       },
       "runner_path": "scripts/frontier_cosmology_single_ratio_inverse_reconstruction.py",
       "title": "Cosmology Single-Ratio Inverse Reconstruction Theorem",
       "transitive_descendants": 117,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the theorem's exact inverse identities are algebraically correct on a flat matter+radiation+Lambda FRW surface with w_Lambda=-1 and L=Omega_Lambda,0=(H_inf/H_0)^2, but the audit row registers no one-hop dependencies for the FRW forward theorem, matter-bridge theorem, dark-energy EOS corollary, or cosmological-constant/spectral-gap identity that define that surface. Why this blocks: the result is not an unconditional retained theorem from the source note alone; the runner's authority-status PASSes read external notes and publication wiring files outside the ledger dependency packet, and the note itself says the matter-content bridge and numerical ratio remain open. Repair target: register the FRW kinematic reduction, Omega_Lambda matter bridge, dark-energy EOS, and spectral-gap authority notes as one-hop dependencies, audit or demote their statuses explicitly, and make the runner validate the inverse identities only after loading the registered authority set and its allowed status. Claim boundary until fixed: it is safe to claim a conditional algebraic certificate: given the stated flat-FRW w_Lambda=-1 surface, fixed R, nonnegative M,L, and the L=(H_inf/H_0)^2 bridge, each listed observable reconstructs the same L and cross-consistency can falsify that surface; it is not yet an audited retained cosmology closure or independent derivation of H_inf/H_0, Omega_Lambda, Omega_m, or the matter bridge."
     },
     "coupled_field_generated_family_probe_note": {
       "audit_date": null,

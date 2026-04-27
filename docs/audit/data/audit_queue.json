@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 88,
-    "high": 543,
+    "high": 542,
     "leaf": 856,
     "medium": 85
   },
-  "generated_at": "2026-04-27T04:07:34.579772+00:00",
+  "generated_at": "2026-04-27T04:10:59.087087+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -4191,23 +4191,6 @@
       "note_path": "docs/DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md",
       "ready": true,
       "runner_path": null,
-      "transitive_descendants": 117
-    },
-    {
-      "audit_independence_required": "cross_family",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 11,
-      "load_bearing_score": 12.383,
-      "note_path": "docs/COSMOLOGY_SINGLE_RATIO_INVERSE_RECONSTRUCTION_THEOREM_NOTE_2026-04-25.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_cosmology_single_ratio_inverse_reconstruction.py",
       "transitive_descendants": 117
     },
     {
@@ -31500,6 +31483,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1166,
-  "total_pending": 1572
+  "ready_count": 1165,
+  "total_pending": 1571
 }
