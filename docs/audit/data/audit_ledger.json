@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T12:34:09.261759+00:00",
-  "generated_at": "2026-04-27T12:34:07.673189+00:00",
-  "invalidation_run_at": "2026-04-27T12:34:09.209848+00:00",
+  "effective_status_computed_at": "2026-04-27T12:38:25.370105+00:00",
+  "generated_at": "2026-04-27T12:38:23.778162+00:00",
+  "invalidation_run_at": "2026-04-27T12:38:25.324169+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T12:34:09.113813+00:00",
+  "load_bearing_computed_at": "2026-04-27T12:38:25.229045+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -30355,14 +30355,21 @@
       "verdict_rationale": "The bounded positive closes through the current runner: eta=0 reproduces the baseline, escape decreases from 0.919 to 0.557 over the nonzero eta sweep, and frontier_radius_shift increases from +0.0684 to +0.4480. The note keeps the claim on this finite transport/frontier observable and does not promote a horizon theory or generated-family transfer. Residual boundary: the frozen log path named in the note is missing, but the live runner fully recomputes the table and is the load-bearing artifact here."
     },
     "gate_b_grown_trapping_frontier_v3_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The live runner recomputes the declared eta sweep on the grown row, including the exact eta=0 reduction, monotone escape attenuation, positive frontier-radius shift, and monotone frontier-shell-contrast shift. The note limits the result to this bounded frontier probe and excludes horizon theory, generated-family transfer, bidirectional field equations, and force-law claims.",
       "claim_id": "gate_b_grown_trapping_frontier_v3_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -30370,13 +30377,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The new structural target is the shell-contrast shift, and it also rises steadily with trap coupling while eta = 0 reproduces the retained grown baseline exactly.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "19de2fda31b45e79866512b0f2c10c9d6c17fa397c4cd37099acb71f8391f0be",
@@ -30412,14 +30419,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 6,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 6
       },
       "runner_path": null,
       "title": "Gate B Grown Trapping Frontier V3 Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The bounded positive closes through the current runner: eta=0 reproduces the baseline, escape decreases monotonically across the nonzero eta sweep, frontier_radius_shift remains positive and rising, and frontier_shell_contrast_shift rises monotonically. The promoted observable in the note is the same detector-layer shell-contrast observable computed by the runner. The claim is not promoted beyond this finite shell-structure probe, and the note explicitly declines horizon theory, generated-family transfer, and force-law claims. Residual boundary: the frozen log path named in the note is missing, but the live runner fully recomputes the table and is the load-bearing artifact here."
     },
     "gate_b_grown_trapping_transport_note": {
       "audit_date": null,

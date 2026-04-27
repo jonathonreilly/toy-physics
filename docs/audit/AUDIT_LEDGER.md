@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T12:34:09.448562+00:00
+**Generated:** 2026-04-27T12:38:25.564289+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 42 |
-| _proposed_retained_ | 153 |
+| **retained** | 43 |
+| _proposed_retained_ | 152 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 42 |
+| `audited_clean` | 43 |
 | `audited_conditional` | 84 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 22 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1453 |
+| `unaudited` | 1452 |
 
 | criticality | count |
 |---|---:|
@@ -130,6 +130,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_grown_propagating_field_v3_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `gate_b_grown_trapping_frontier_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `gate_b_grown_trapping_frontier_v2_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `gate_b_grown_trapping_frontier_v3_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `i3_zero_exact_theorem_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `independent_generators_heldout_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -1485,6 +1486,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** the escape ratio falls steadily as eta grows while frontier_radius_shift rises steadily, so surviving detector mass is pushed outward on the detector shell.  _(class `C`)_
 - **chain closes:** True — The live runner recomputes the eta sweep on the declared grown row, including exact eta=0 reduction, monotone escape attenuation, and monotone outward frontier-radius shift. The source note limits the result to a bounded transport/frontier probe and excludes horizon theory, bidirectional field equations, and generated-family transfer.
 - **rationale:** The bounded positive closes through the current runner: eta=0 reproduces the baseline, escape decreases from 0.919 to 0.557 over the nonzero eta sweep, and frontier_radius_shift increases from +0.0684 to +0.4480. The note keeps the claim on this finite transport/frontier observable and does not promote a horizon theory or generated-family transfer. Residual boundary: the frozen log path named in the note is missing, but the live runner fully recomputes the table and is the load-bearing artifact here.
+- **auditor confidence:** high
+
+### `gate_b_grown_trapping_frontier_v3_note`
+
+- **Note:** [`GATE_B_GROWN_TRAPPING_FRONTIER_V3_NOTE.md`](../../docs/GATE_B_GROWN_TRAPPING_FRONTIER_V3_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The new structural target is the shell-contrast shift, and it also rises steadily with trap coupling while eta = 0 reproduces the retained grown baseline exactly.  _(class `C`)_
+- **chain closes:** True — The live runner recomputes the declared eta sweep on the grown row, including the exact eta=0 reduction, monotone escape attenuation, positive frontier-radius shift, and monotone frontier-shell-contrast shift. The note limits the result to this bounded frontier probe and excludes horizon theory, generated-family transfer, bidirectional field equations, and force-law claims.
+- **rationale:** The bounded positive closes through the current runner: eta=0 reproduces the baseline, escape decreases monotonically across the nonzero eta sweep, frontier_radius_shift remains positive and rising, and frontier_shell_contrast_shift rises monotonically. The promoted observable in the note is the same detector-layer shell-contrast observable computed by the runner. The claim is not promoted beyond this finite shell-structure probe, and the note explicitly declines horizon theory, generated-family transfer, and force-law claims. Residual boundary: the frozen log path named in the note is missing, but the live runner fully recomputes the table and is the load-bearing artifact here.
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20`
