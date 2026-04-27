@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T09:03:14.947591+00:00",
-  "generated_at": "2026-04-27T09:03:13.064235+00:00",
-  "invalidation_run_at": "2026-04-27T09:03:14.884804+00:00",
+  "effective_status_computed_at": "2026-04-27T09:08:25.787763+00:00",
+  "generated_at": "2026-04-27T09:08:23.777728+00:00",
+  "invalidation_run_at": "2026-04-27T09:08:25.726960+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T09:03:14.734434+00:00",
+  "load_bearing_computed_at": "2026-04-27T09:08:25.592800+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -6940,14 +6940,21 @@
       "verdict_rationale": "Issue: the runner cleanly verifies the five-probe broad-source versus point-source diagnostic, but the source row is only a bounded interpretive diagnostic on an upstream proposed/bounded ordered-lattice surrogate lane and has no registered dependencies for those carrier and relaunch controls. Why this blocks: a hostile physicist can accept max TV distance 0.000051 for the scripted probes without accepting a retained persistent-mass, inertial-response, or geometry-generic theorem, because the source itself says it compares two source representations rather than producing a self-maintaining object. Repair target: either demote/register this row as bounded support, or register the ordered-lattice packet reidentification and quasi-persistent relaunch notes as dependencies and state an explicit retained proposition with threshold, scale, probe-grid, and upstream carrier statuses. Claim boundary until fixed: it is safe to claim that the live runner reproduces the finite h=0.5, W=8, L=12 diagnostic in which the broad surrogate and centroid point source have max TV distance 5.1e-5 over probes z=0, +/-1, +/-2; it is not safe to retain more than that diagnostic."
     },
     "broken_graph_action_power_robustness_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner reproduces the summary-level bounded negative result, but the source note is a graph-damage replay on an upstream proposed/bounded ordered-lattice family, has a missing linked frozen log, and explicitly rejects a universal or structural uniqueness theorem.",
       "claim_id": "broken_graph_action_power_robustness_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -6955,18 +6962,24 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note's load-bearing bounded claim is that the graph-damage ladder does not crown p=1 as the most robust action power: p=1 keeps the cleanest exponent when it survives, while p=2 survives more signed-damage cases.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "d403bc0ff834c0c09fc962281bf3cdb14491ec28f22b0b5f94c6d4b79fd68340",
       "note_path": "docs/BROKEN_GRAPH_ACTION_POWER_ROBUSTNESS_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "logs/2026-04-04-broken-graph-action-power-robustness.txt_missing",
+        "docs/INVERSE_PROBLEM_NOTE.md",
+        "docs/ACTION_UNIQUENESS_NOTE.md",
+        "docs/ACTION_POWER_SCALING_SWEEP_NOTE.md",
+        "scripts/broken_graph_action_power_robustness.py_not_registered_as_runner_path"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.367675+00:00",
@@ -6997,14 +7010,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 21,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 21
       },
       "runner_path": null,
       "title": "Broken-Graph Action-Power Robustness Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the finite replay supports the bounded negative summary, but the row is not a standalone retained theorem; it is a bounded graph-damage diagnostic on an upstream proposed_retained ordered-lattice family, its cited frozen log is absent from logs/, and its relation notes are themselves bounded fixed-family controls rather than registered retained dependencies. Why this blocks: a hostile physicist can accept the live summary toward/6 counts 3, 3, and 5 and mean |F~M-p| values 0.004, 0.000, and 0.057 without accepting any project-level robustness, uniqueness, or graph theorem. Repair target: either demote/register the row as bounded support, or register the ordered-lattice/action-power dependencies and add asserted runner gates for the intended finite proposition, including damage ladder, action powers, TOWARD counts, exponent deviations, and provenance for the frozen log. Claim boundary until fixed: it is safe to claim the current script's bounded replay says p=1 is exponent-clean but not the most sign-robust under this damage ladder; it is not safe to retain a stronger robustness or uniqueness claim."
     },
     "canonical_harness_index": {
       "audit_date": null,

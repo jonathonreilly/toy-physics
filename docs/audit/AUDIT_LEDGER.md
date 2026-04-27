@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T09:03:15.214084+00:00
+**Generated:** 2026-04-27T09:08:26.061721+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 17 |
-| _proposed_retained_ | 199 |
+| _proposed_retained_ | 198 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
-| ~~audited_conditional~~ | 278 |
+| ~~audited_conditional~~ | 279 |
 | ~~audited_failed~~ | 79 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 17 |
-| `audited_conditional` | 67 |
+| `audited_conditional` | 68 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 12 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1494 |
+| `unaudited` | 1493 |
 
 | criticality | count |
 |---|---:|
@@ -120,6 +120,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `area_law_quarter_broader_no_go_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `broad_surrogate_point_source_compare_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `broken_graph_action_power_robustness_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `causal_field_canonical_chain_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `complex_action_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `confinement_string_tension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -369,6 +370,24 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_2D_NOTE.md`
   - `QUASI_PERSISTENT_RELAUNCH_PROBE_NOTE.md`
   - `scripts/broad_surrogate_point_source_compare.py_not_registered_as_runner_path`
+- **auditor confidence:** high
+
+### `broken_graph_action_power_robustness_note`
+
+- **Note:** [`BROKEN_GRAPH_ACTION_POWER_ROBUSTNESS_NOTE.md`](../../docs/BROKEN_GRAPH_ACTION_POWER_ROBUSTNESS_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note's load-bearing bounded claim is that the graph-damage ladder does not crown p=1 as the most robust action power: p=1 keeps the cleanest exponent when it survives, while p=2 survives more signed-damage cases.  _(class `C`)_
+- **chain closes:** False — The live runner reproduces the summary-level bounded negative result, but the source note is a graph-damage replay on an upstream proposed/bounded ordered-lattice family, has a missing linked frozen log, and explicitly rejects a universal or structural uniqueness theorem.
+- **rationale:** Issue: the finite replay supports the bounded negative summary, but the row is not a standalone retained theorem; it is a bounded graph-damage diagnostic on an upstream proposed_retained ordered-lattice family, its cited frozen log is absent from logs/, and its relation notes are themselves bounded fixed-family controls rather than registered retained dependencies. Why this blocks: a hostile physicist can accept the live summary toward/6 counts 3, 3, and 5 and mean |F~M-p| values 0.004, 0.000, and 0.057 without accepting any project-level robustness, uniqueness, or graph theorem. Repair target: either demote/register the row as bounded support, or register the ordered-lattice/action-power dependencies and add asserted runner gates for the intended finite proposition, including damage ladder, action powers, TOWARD counts, exponent deviations, and provenance for the frozen log. Claim boundary until fixed: it is safe to claim the current script's bounded replay says p=1 is exponent-clean but not the most sign-robust under this damage ladder; it is not safe to retain a stronger robustness or uniqueness claim.
+- **open / conditional deps cited:**
+  - `logs/2026-04-04-broken-graph-action-power-robustness.txt_missing`
+  - `INVERSE_PROBLEM_NOTE.md`
+  - `ACTION_UNIQUENESS_NOTE.md`
+  - `ACTION_POWER_SCALING_SWEEP_NOTE.md`
+  - `scripts/broken_graph_action_power_robustness.py_not_registered_as_runner_path`
 - **auditor confidence:** high
 
 ### `causal_field_canonical_chain_note`
