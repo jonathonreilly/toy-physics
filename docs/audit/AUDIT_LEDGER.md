@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T19:51:56.003477+00:00
+**Generated:** 2026-04-27T19:53:31.895274+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 72 |
-| _proposed_retained_ | 21 |
+| _proposed_retained_ | 20 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 351 |
+| ~~audited_conditional~~ | 352 |
 | ~~audited_failed~~ | 137 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 72 |
-| `audited_conditional` | 138 |
+| `audited_conditional` | 139 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1320 |
+| `unaudited` | 1319 |
 
 | criticality | count |
 |---|---:|
@@ -306,6 +306,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_h_unit_flavor_column_decomposition_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `yt_p1_bz_quadrature_numerical_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `yt_p1_color_factor_retention_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `yt_p1_delta_r_2_loop_extension_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `yt_p1_delta_r_sm_rge_crosscheck_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -4794,6 +4795,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
   - `UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md`
+- **auditor confidence:** high
+
+### `yt_p1_color_factor_retention_note_2026-04-17`
+
+- **Note:** [`YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`](../../docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Delta_R = delta_y - delta_g = C_F * Delta_1 + C_A * Delta_2 + T_F * n_f * Delta_3 with SU(3) prefactors C_F = 4/3, C_A = 3, and T_F n_f = 3.  _(class `A`)_
+- **chain closes:** False — The symbolic reassembly closes exactly after the Rep-A/Rep-B diagrammatic catalog and SU(3) color authorities are assumed. It does not independently close as a retained structural theorem because those one-hop authorities include conditional, bounded, support, numerical-match, or unaudited proposed inputs.
+- **rationale:** Issue: the runner proves an exact symbolic identity only after importing the Rep-A/Rep-B subtraction catalog and the SU(3)/Schur color-authority inputs, while the cited color, Schur, master-obstruction, and Ward authorities are not clean retained. Why this blocks: exact algebra over conditional or bounded premises can retain a conditional decomposition, but it cannot by itself promote the three-channel color-factor structure as a clean retained lattice-to-MSbar theorem. Repair target: independently audit/promote the color projection and Schur uniqueness inputs and the Rep-A/Rep-B diagrammatic catalog, or provide a runner that derives the one-loop color basis directly from the retained action and Feynman rules rather than setting the catalog terms. Claim boundary until fixed: safe to claim that the stated Rep-A/Rep-B symbolic terms algebraically reassemble into C_F Delta_1 + C_A Delta_2 + T_F n_f Delta_3 with SU(3) prefactors 4/3, 3, and 3; not safe to claim unconditional retained closure of the physical P1 color-factor theorem.
+- **open / conditional deps cited:**
+  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
+  - `YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md`
+  - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
+  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
 - **auditor confidence:** high
 
 ### `yt_p1_delta_r_2_loop_extension_note_2026-04-18`
