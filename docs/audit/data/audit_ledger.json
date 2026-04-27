@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T09:50:56.364648+00:00",
-  "generated_at": "2026-04-27T09:50:54.421362+00:00",
-  "invalidation_run_at": "2026-04-27T09:50:56.290225+00:00",
+  "effective_status_computed_at": "2026-04-27T09:59:33.540897+00:00",
+  "generated_at": "2026-04-27T09:59:31.427462+00:00",
+  "invalidation_run_at": "2026-04-27T09:59:33.471272+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T09:50:56.154419+00:00",
+  "load_bearing_computed_at": "2026-04-27T09:59:33.332589+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -13950,14 +13950,21 @@
       "verdict_rationale": "Issue: the source note's current-output table is stale relative to scripts/frontier_critical_exponents.py; the live output gives random_geometric_s8 degenerate at G_crit=1.0, random_geometric_s10 beta=0.7328 at G_crit=2.0, growing_n64 beta=0.3675 at G_crit=14.0, layered_cycle_8x8 beta=0.3348 at G_crit=5.0, and both causal-DAG rows degenerate. Why this blocks: a hostile physicist cannot retain the note's specific beta table or six-family interpretation when half the current rows are degenerate and the fit values have changed. Repair target: update the note to the live runner output, fix the runner path registration to scripts/frontier_critical_exponents.py, add assertions for fit/degenerate acceptance criteria, and rerun any intended multi-size or multi-seed checks before promoting topology-dependence beyond a scout. Claim boundary until fixed: it is safe to say the current runner is a finite-size scout with three nondegenerate fits whose beta values differ across topology labels; it is not safe to retain the stale table or any universality-class inference."
     },
     "cross_family_universality_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The named artifact scripts reproduce the seed-mean dispersion and lensing tables, but the statistical detection claim does not close because the runners do not emit per-seed slope/m_eff distributions, confidence intervals, or a formal family-effect/power test.",
       "claim_id": "cross_family_universality_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -13965,13 +13972,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "At H=0.5, the seed-mean dispersion (m_eff approx 5.9) and lensing slope (approx -1.3) show no detectable family effect across Fam1/Fam2/Fam3; the Schroedinger/KG near-tie persists in all families, though the winner flips across individual seeds.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "c3c03026645907855bd317c25c24970d931a6fa295dd56a7703ffe567ab964bb",
@@ -14007,14 +14014,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 2,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 2
       },
       "runner_path": null,
       "title": "Cross-Family Consistency: Dispersion + Lensing at H=0.5",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the live scripts reproduce the H=0.5 seed-mean values, but the proposed-retained wording says there is no detectable family effect; that detection/noise statement relies on per-seed variance and statistical power that the current runners do not report or test. Why this blocks: close seed-mean fits across five seeds show finite-runner consistency, not a closed exclusion of family effects at the sampled size, and not universality beyond the three chosen grown-DAG parameter sets. Repair target: register the two artifact scripts as runners and add a computation that outputs per-seed m_eff and lensing-slope distributions with confidence intervals or a bootstrap/ANOVA/mixed-effects family test; test Fam2/Fam3 at H=0.25 before making any fine-H statement. Claim boundary until fixed: the safe claim is that scripts/dispersion_all_families.py and scripts/lensing_all_families.py currently reproduce the seed-mean H=0.5 tables: m_eff 5.98/5.90/5.88, Schroedinger/KG delta R2 below 0.01, and lensing slopes -1.3132/-1.3085/-1.2697 for the three named grown-DAG parameter families."
     },
     "cross_sector_a_squared_koide_vcb_bridge_support_note_2026-04-25": {
       "audit_date": null,
