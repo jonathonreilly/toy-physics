@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T08:52:21.081491+00:00
+**Generated:** 2026-04-27T08:55:44.080651+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 16 |
-| _proposed_retained_ | 202 |
+| **retained** | 17 |
+| _proposed_retained_ | 201 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 16 |
+| `audited_clean` | 17 |
 | `audited_conditional` | 66 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 11 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1497 |
+| `unaudited` | 1496 |
 
 | criticality | count |
 |---|---:|
@@ -103,6 +103,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `action_power_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_fm_transfer_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `alt_connectivity_family_sign_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `i3_zero_exact_theorem_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -268,6 +269,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The note's load-bearing finite claim is that the parity-rotated alternative connectivity family preserves weak-field F~M linearity over the tested no-restore grown-slice drift/seed grid, with 15 of 15 rows passing and mean F~M = 0.999994.  _(class `C`)_
 - **chain closes:** True — The live runner rebuilds each stated drift/seed geometry, applies the alternative connectivity family, compares response at source strengths 5e-5 and 1e-4, and reproduces 15/15 passing rows with mean F~M = 0.999994. The result closes only as a finite weak-field transfer computation on the tested grid, not as an all-strength, all-seed, or geometry-generic theorem.
 - **rationale:** The runner computes the load-bearing exponent from two independently propagated weak source amplitudes on each listed drift/seed row and gates the result at |F~M - 1| < 0.05; the current output matches the source note's 15/15 count and 0.999994 mean. The conclusion is correctly bounded to weak-field linearity across the stated tested drift range and does not assert family-wide sign closure, geometry genericity, or uniqueness. Residual risk is registration hygiene rather than science closure: the queue row has no runner_path or registered deps for the sign/basin notes even though the source note names those artifacts.
+- **auditor confidence:** high
+
+### `alt_connectivity_family_sign_note`
+
+- **Note:** [`ALT_CONNECTIVITY_FAMILY_SIGN_NOTE.md`](../../docs/ALT_CONNECTIVITY_FAMILY_SIGN_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note's load-bearing finite claim is that the parity-rotated sector-transition connectivity family is a bounded positive signed-source candidate on the no-restore grown slice, with 10 of 15 drift/seed rows passing exact zero, neutral cancellation, sign orientation, and near-linear charge-response gates.  _(class `C`)_
+- **chain closes:** True — The live sign-sweep runner rebuilds the listed five-drift by three-seed grid, applies the alternative sector-transition connectivity, and reproduces 10/15 passing rows with drift coverage [0.0, 0.1, 0.2, 0.3, 0.5] and mean exponent 1.000035. The result closes only as a finite bounded positive candidate on this slice, not as seed-wide closure or a geometry-generic theorem.
+- **rationale:** The source note's bounded claim is exactly what the runner checks: zero-source response, neutral +/- cancellation, sign orientation, and a double-to-single charge exponent near one for each drift/seed row. The current output matches the archived note values, including 10/15 passing rows, the per-drift pass pattern, and mean exponent 1.000035, while the source explicitly rejects family-wide and geometry-generic closure. Residual boundary: this is a finite computational lane candidate, not an analytic classification of all structured connectivity families.
 - **auditor confidence:** high
 
 ### `area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25`
