@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T09:08:26.061721+00:00
+**Generated:** 2026-04-27T09:15:43.505740+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 17 |
-| _proposed_retained_ | 198 |
+| _proposed_retained_ | 197 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
-| ~~audited_conditional~~ | 279 |
+| ~~audited_conditional~~ | 280 |
 | ~~audited_failed~~ | 79 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 17 |
-| `audited_conditional` | 68 |
+| `audited_conditional` | 69 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 12 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1493 |
+| `unaudited` | 1492 |
 
 | criticality | count |
 |---|---:|
@@ -121,6 +121,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `area_law_quarter_broader_no_go_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `broad_surrogate_point_source_compare_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `broken_graph_action_power_robustness_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `causal_escape_window_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `causal_field_canonical_chain_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `complex_action_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `confinement_string_tension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -388,6 +389,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `ACTION_UNIQUENESS_NOTE.md`
   - `ACTION_POWER_SCALING_SWEEP_NOTE.md`
   - `scripts/broken_graph_action_power_robustness.py_not_registered_as_runner_path`
+- **auditor confidence:** high
+
+### `causal_escape_window_note`
+
+- **Note:** [`CAUSAL_ESCAPE_WINDOW_NOTE.md`](../../docs/CAUSAL_ESCAPE_WINDOW_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note's load-bearing claim is that a causal-escape regime exists: at eta=20, s=0.004, the instantaneous field traps the beam while dynamic finite-speed fields escape, and the mechanism is average-exposure reduction rather than irreducible cone geometry.  _(class `C`)_
+- **chain closes:** False — The live runner reproduces the headline instantaneous/forward/dynamic escape window and three-family portability, but it does not compute the note's boundary-law tables, four-seed robustness claim, or exposure-matched static proxy that carries the mechanism attribution.
+- **rationale:** Issue: the headline causal escape window replays, but the retained mechanism and boundary package goes beyond the current runner: exposure-matched static escape is printed as a note rather than computed, the c_crit/eta_max/s-dependence tables are not replayed, and the listed four-seed robustness gate is not present in the live script. Why this blocks: a hostile physicist can accept the finite eta=20 window values inst=0.3907, fwd=0.5631, dyn0.5=0.9006, dyn0.25=0.9743, plus three-family dynamic portability near 0.98, without accepting the broader retained claim that the mechanism and boundary law have been computed and gated. Repair target: add asserted runner sections for exposure-matched static fields, seed-robust sweeps, c_crit, eta_max(c), s-dependence, and acceptance thresholds, then register scripts/causal_escape_window.py as the row's runner_path. Claim boundary until fixed: it is safe to claim a finite scripted escape-window example and three-family portability at eta=20, s=0.004; it is not safe to retain the full mechanism and boundary-law package from this note.
+- **open / conditional deps cited:**
+  - `exposure_matched_static_proxy_not_computed_by_live_runner`
+  - `c_crit_eta_max_s_dependence_tables_not_replayed_by_live_runner`
+  - `four_seed_robustness_gate_absent_from_live_runner`
+  - `scripts/causal_escape_window.py_not_registered_as_runner_path`
 - **auditor confidence:** high
 
 ### `causal_field_canonical_chain_note`

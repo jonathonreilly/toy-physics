@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T09:08:25.787763+00:00",
-  "generated_at": "2026-04-27T09:08:23.777728+00:00",
-  "invalidation_run_at": "2026-04-27T09:08:25.726960+00:00",
+  "effective_status_computed_at": "2026-04-27T09:15:43.240779+00:00",
+  "generated_at": "2026-04-27T09:15:41.274183+00:00",
+  "invalidation_run_at": "2026-04-27T09:15:43.062670+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T09:08:25.592800+00:00",
+  "load_bearing_computed_at": "2026-04-27T09:15:42.932930+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -7392,14 +7392,21 @@
       "verdict_rationale": null
     },
     "causal_escape_window_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner reproduces the headline instantaneous/forward/dynamic escape window and three-family portability, but it does not compute the note's boundary-law tables, four-seed robustness claim, or exposure-matched static proxy that carries the mechanism attribution.",
       "claim_id": "causal_escape_window_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -7407,18 +7414,23 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note's load-bearing claim is that a causal-escape regime exists: at eta=20, s=0.004, the instantaneous field traps the beam while dynamic finite-speed fields escape, and the mechanism is average-exposure reduction rather than irreducible cone geometry.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "2c943920437066c93d92e5df32ecf61bcb6777dfe90e5f670b2d705a4fd84ef9",
       "note_path": "docs/CAUSAL_ESCAPE_WINDOW_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "exposure_matched_static_proxy_not_computed_by_live_runner",
+        "c_crit_eta_max_s_dependence_tables_not_replayed_by_live_runner",
+        "four_seed_robustness_gate_absent_from_live_runner",
+        "scripts/causal_escape_window.py_not_registered_as_runner_path"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.367683+00:00",
@@ -7449,14 +7461,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 11,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 11
       },
       "runner_path": null,
       "title": "Causal-Escape Window: Qualitative Regime",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the headline causal escape window replays, but the retained mechanism and boundary package goes beyond the current runner: exposure-matched static escape is printed as a note rather than computed, the c_crit/eta_max/s-dependence tables are not replayed, and the listed four-seed robustness gate is not present in the live script. Why this blocks: a hostile physicist can accept the finite eta=20 window values inst=0.3907, fwd=0.5631, dyn0.5=0.9006, dyn0.25=0.9743, plus three-family dynamic portability near 0.98, without accepting the broader retained claim that the mechanism and boundary law have been computed and gated. Repair target: add asserted runner sections for exposure-matched static fields, seed-robust sweeps, c_crit, eta_max(c), s-dependence, and acceptance thresholds, then register scripts/causal_escape_window.py as the row's runner_path. Claim boundary until fixed: it is safe to claim a finite scripted escape-window example and three-family portability at eta=20, s=0.004; it is not safe to retain the full mechanism and boundary-law package from this note."
     },
     "causal_field_canonical_chain_note": {
       "audit_date": "2026-04-26",
