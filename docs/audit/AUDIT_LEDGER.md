@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T14:54:18.325899+00:00
+**Generated:** 2026-04-27T14:56:12.476368+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 47 |
-| _proposed_retained_ | 122 |
+| _proposed_retained_ | 121 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 312 |
+| ~~audited_conditional~~ | 313 |
 | ~~audited_failed~~ | 100 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 47 |
-| `audited_conditional` | 99 |
+| `audited_conditional` | 100 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 33 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1422 |
+| `unaudited` | 1421 |
 
 | criticality | count |
 |---|---:|
@@ -207,6 +207,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_pointed_origin_exhaustion_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_q_delta_readout_retention_split_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_selected_line_provenance_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `koide_z3_qubit_radian_bridge_no_go_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lattice_complementarity_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lensing_beta_sweep_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lensing_deflection_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -2380,6 +2381,26 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `DM_NEUTRINO_SOURCE_SURFACE_PARITY_COMPATIBLE_OBSERVABLE_SELECTOR_THEOREM_NOTE_2026-04-17.md`
   - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_CURVATURE_23_SYMMETRIC_BASELINE_BOUNDARY_THEOREM_NOTE_2026-04-17.md`
   - `KOIDE_SELECTED_SLICE_FROZEN_BANK_DECOMPOSITION_NOTE_2026-04-18.md`
+- **auditor confidence:** high
+
+### `koide_z3_qubit_radian_bridge_no_go_note_2026-04-20`
+
+- **Note:** [`KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md`](../../docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Every retained radian on Cl(3)/Z_3 + d=3 is asserted to be a rational multiple of pi while 2/d^2 is a pure dimensionless rational, so P requires an extra radian bridge beyond the tested retained candidates.  _(class `C`)_
+- **chain closes:** False — The runner verifies that the four named candidate closures fail, but the universal no-go depends on non-clean R1-R3 inputs and on an exhaustive classification of retained radians/dimensionless ratios that is asserted and finitely sampled rather than proved.
+- **rationale:** Issue: the runner supports the diagnostic failures of candidates A-D, but the source promotes them to a retained universal no-go over all Cl(3)/Z_3 radian bridges; the exhaustive taxonomy that every retained angle is rational-times-pi and every retained count is dimensionless rational is not itself a retained theorem, and R1-R3 are non-clean. Why this blocks: a hostile reviewer can accept the four candidate failures while rejecting the stronger impossibility/minimal-input claim without an audited classification of all native angle-producing constructions. Repair target: audit-retain the Berry selected-line, bundle-obstruction, and circulant-character inputs, then add a theorem/runner that classifies all allowed retained angle and Plancherel constructions on the selected-line CP1 base; also fix the F9 summary table, which prints misleading 'matches 2/9?' labels despite correct PASS checks. Claim boundary until fixed: safely claim the runner-verified no-go for the four tested closures: per-Z3 PB gives pi/3, closed Bargmann gives pi, Pancharatnam midpoint gives pi/24, and Plancherel 2/d^2 is dimensionless; do not claim a retained exhaustive no-go for every possible Cl(3)/Z3 radian bridge.
+- **open / conditional deps cited:**
+  - `KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md`
+  - `KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md`
+  - `KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`
+  - `KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md`
+  - `KOIDE_CYCLIC_WILSON_DESCENDANT_LAW_NOTE_2026-04-18.md`
+  - `KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md`
+  - `SCALAR_SELECTOR_CYCLE1_SCIENCE_REVIEW_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `lattice_3d_dense_refinement_reconciliation_note`

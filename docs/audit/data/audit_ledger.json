@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T14:54:18.137889+00:00",
-  "generated_at": "2026-04-27T14:54:16.547724+00:00",
-  "invalidation_run_at": "2026-04-27T14:54:18.090614+00:00",
+  "effective_status_computed_at": "2026-04-27T14:56:12.292751+00:00",
+  "generated_at": "2026-04-27T14:56:10.687341+00:00",
+  "invalidation_run_at": "2026-04-27T14:56:12.246505+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T14:54:17.996103+00:00",
+  "load_bearing_computed_at": "2026-04-27T14:56:12.152034+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -42841,14 +42841,21 @@
       "verdict_rationale": null
     },
     "koide_z3_qubit_radian_bridge_no_go_note_2026-04-20": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies that the four named candidate closures fail, but the universal no-go depends on non-clean R1-R3 inputs and on an exhaustive classification of retained radians/dimensionless ratios that is asserted and finitely sampled rather than proved.",
       "claim_id": "koide_z3_qubit_radian_bridge_no_go_note_2026-04-20",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -42856,18 +42863,26 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Every retained radian on Cl(3)/Z_3 + d=3 is asserted to be a rational multiple of pi while 2/d^2 is a pure dimensionless rational, so P requires an extra radian bridge beyond the tested retained candidates.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "922e3fbdd8ee6e092d390411be6f36186b14b207e53c1c1459674dee27cef64b",
       "note_path": "docs/KOIDE_Z3_QUBIT_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/KOIDE_Q_DELTA_LINKING_RELATION_THEOREM_NOTE_2026-04-20.md",
+        "docs/KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md",
+        "docs/KOIDE_BERRY_BUNDLE_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md",
+        "docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md",
+        "docs/KOIDE_CYCLIC_WILSON_DESCENDANT_LAW_NOTE_2026-04-18.md",
+        "docs/KOIDE_CIRCULANT_WILSON_TARGET_NOTE_2026-04-18.md",
+        "docs/SCALAR_SELECTOR_CYCLE1_SCIENCE_REVIEW_NOTE_2026-04-19.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368879+00:00",
@@ -42898,14 +42913,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 23,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 23
       },
       "runner_path": "scripts/frontier_koide_z3_qubit_radian_bridge_no_go.py",
       "title": "Koide Z_3-Qubit Radian-Bridge No-Go Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the runner supports the diagnostic failures of candidates A-D, but the source promotes them to a retained universal no-go over all Cl(3)/Z_3 radian bridges; the exhaustive taxonomy that every retained angle is rational-times-pi and every retained count is dimensionless rational is not itself a retained theorem, and R1-R3 are non-clean. Why this blocks: a hostile reviewer can accept the four candidate failures while rejecting the stronger impossibility/minimal-input claim without an audited classification of all native angle-producing constructions. Repair target: audit-retain the Berry selected-line, bundle-obstruction, and circulant-character inputs, then add a theorem/runner that classifies all allowed retained angle and Plancherel constructions on the selected-line CP1 base; also fix the F9 summary table, which prints misleading 'matches 2/9?' labels despite correct PASS checks. Claim boundary until fixed: safely claim the runner-verified no-go for the four tested closures: per-Z3 PB gives pi/3, closed Bargmann gives pi, Pancharatnam midpoint gives pi/24, and Plancherel 2/d^2 is dimensionless; do not claim a retained exhaustive no-go for every possible Cl(3)/Z3 radian bridge."
     },
     "koide_z3_scalar_potential_lepton_mass_tower_note_2026-04-19": {
       "audit_date": null,
