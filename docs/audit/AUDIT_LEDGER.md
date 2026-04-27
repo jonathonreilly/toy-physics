@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T08:01:54.680182+00:00
+**Generated:** 2026-04-27T08:05:42.897653+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,28 +20,28 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 13 |
-| _proposed_retained_ | 212 |
+| _proposed_retained_ | 211 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
 | open | 11 |
-| unknown | 721 |
+| unknown | 720 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
-| ~~audited_conditional~~ | 272 |
+| ~~audited_conditional~~ | 274 |
 | ~~audited_failed~~ | 75 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 13 |
-| `audited_conditional` | 61 |
+| `audited_conditional` | 62 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 9 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1507 |
+| `unaudited` | 1506 |
 
 | criticality | count |
 |---|---:|
@@ -124,6 +124,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_schur_suppression_theorem_note_2026-04-15` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `electrostatics_grown_sign_law_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `emergent_lorentz_invariance_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `global_coherence_off_scaffold_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravitomagnetic_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravity_clean_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
@@ -567,6 +568,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The full sparse-face target Hermitian block violates Cauchy interlacing against the selected retained 4x4 Wilson block, so no real or complex 3d compression of that ambient can reproduce the full target packet exactly.  _(class `A`)_
 - **chain closes:** True — The live runner constructs the selected 4x4 block and full sparse-face target block, computes their spectra, and verifies a direct Cauchy-interlacing violation with wide margins: mu1=0.087544 exceeds lambda2=0.004214 and mu2=0.235017 exceeds lambda3=0.023920.
 - **rationale:** The no-go closes on its stated finite-matrix boundary: full packet equality would require a 3d compression of the selected Hermitian 4x4 block to have the full target Hermitian block's eigenvalues, and the runner verifies that those eigenvalues violate the necessary Cauchy interlacing bounds. The fourth runner check also rules out rescuing the selected real slice by internal U(3) dressing because unitary similarity preserves the slice spectrum. This clean verdict is narrow: it certifies the exact full-packet impossibility for the runner-constructed selected 4x4 ambient and full sparse-face target block, not the independent physical retention of the surrounding gauge-vacuum selector program.
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_REDUCED_PACKET_COMPLEX_GIVENS_SELECTOR_THEOREM_NOTE_2026-04-20.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_REDUCED_PACKET_COMPLEX_GIVENS_SELECTOR_THEOREM_NOTE_2026-04-20.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Inside the fixed selected slice, solve the reduced projected-source packet equation in the ordered complex-Givens grammar G12*G13*G23 and choose the exact solution with least Frobenius distortion to the identity basis.  _(class `C`)_
+- **chain closes:** False — The live runner finds exact reduced-packet solutions and a strict nearest-identity minimum among the found solutions, but it is a finite multi-seed numerical solve over a continuous six-angle grammar, not an exhaustive/global selector proof or a derivation that this grammar and Frobenius metric are physically forced.
+- **rationale:** Issue: the runner verifies an impressive finite solve, but the note promotes it to an exact retained-slice selector theorem without proving that the sampled exact-solution list exhausts the continuous G12*G13*G23 grammar or that least Frobenius distortion to identity is a physically forced selector. Why this blocks: a hostile physicist can accept the replayed numbers, including 40 found exact solutions, packet error 8.15e-12, live-target error 4.47e-12, and a 0.01376 nearest-identity gap among those found solutions, but cannot infer a global canonical selector law or retained physical closure from a seeded least-squares search and chosen metric. Repair target: add an analytic or interval-certified enumeration of all exact solutions on the bounded six-angle domain, prove the selected solution is the global unique Frobenius minimizer, and register a retained theorem deriving the ordered complex-Givens grammar and Frobenius-to-identity metric from the selected ambient rather than choosing them after the target is known. Claim boundary until fixed: it is safe to claim that the current runner finds many exact reduced-packet dressings on the selected slice and identifies the nearest-to-identity solution among the audited found set; it is not yet an audited retained canonical selector theorem or a full physical derivation of the reduced-packet law.
+- **open / conditional deps cited:**
+  - `global_exact_solution_enumeration_for_continuous_G12_G13_G23_domain_missing`
+  - `least_Frobenius_to_identity_selector_not_physically_derived`
+  - `ordered_complex_Givens_grammar_not_derived_as_unique_retained_grammar`
+  - `selected_slice_and_target_authorities_not_registered_one_hop_dependencies`
 - **auditor confidence:** high
 
 ### `global_coherence_off_scaffold_note`

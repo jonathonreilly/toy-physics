@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T08:01:54.400947+00:00",
-  "generated_at": "2026-04-27T08:01:52.544182+00:00",
-  "invalidation_run_at": "2026-04-27T08:01:54.344454+00:00",
+  "effective_status_computed_at": "2026-04-27T08:05:42.640065+00:00",
+  "generated_at": "2026-04-27T08:05:40.766794+00:00",
+  "invalidation_run_at": "2026-04-27T08:05:42.580416+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T08:01:54.214114+00:00",
+  "load_bearing_computed_at": "2026-04-27T08:05:42.445915+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -30652,8 +30652,8 @@
         "science_3plus1_line_law_known_limits_note_2026-04-20"
       ],
       "direct_in_degree": 0,
-      "effective_status": "unknown",
-      "effective_status_reason": "self",
+      "effective_status": "audited_conditional",
+      "effective_status_reason": "inherited_from:gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 0.0,
@@ -30801,14 +30801,21 @@
       "verdict_rationale": null
     },
     "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 1.5,
+        "transitive_descendants": 1
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner finds exact reduced-packet solutions and a strict nearest-identity minimum among the found solutions, but it is a finite multi-seed numerical solve over a continuous six-angle grammar, not an exhaustive/global selector proof or a derivation that this grammar and Frobenius metric are physically forced.",
       "claim_id": "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -30816,18 +30823,23 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 1.5,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Inside the fixed selected slice, solve the reduced projected-source packet equation in the ordered complex-Givens grammar G12*G13*G23 and choose the exact solution with least Frobenius distortion to the identity basis.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "652f4e41f78cfffd7076ec7127a2b4225deb7a1c14e0b425ec02babdf2d0239a",
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_MINIMAL_BULK_COMPLETION_3PLUS1_REDUCED_PACKET_COMPLEX_GIVENS_SELECTOR_THEOREM_NOTE_2026-04-20.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "global_exact_solution_enumeration_for_continuous_G12_G13_G23_domain_missing",
+        "least_Frobenius_to_identity_selector_not_physically_derived",
+        "ordered_complex_Givens_grammar_not_derived_as_unique_retained_grammar",
+        "selected_slice_and_target_authorities_not_registered_one_hop_dependencies"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368444+00:00",
@@ -30858,14 +30870,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 5,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 5
       },
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_2026_04_20.py",
       "title": "Gauge-Vacuum Plaquette First-Sector Minimal-Bulk Completion `3d+1` Reduced-Packet Complex-Givens Selector Theorem",
       "transitive_descendants": 1,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the runner verifies an impressive finite solve, but the note promotes it to an exact retained-slice selector theorem without proving that the sampled exact-solution list exhausts the continuous G12*G13*G23 grammar or that least Frobenius distortion to identity is a physically forced selector. Why this blocks: a hostile physicist can accept the replayed numbers, including 40 found exact solutions, packet error 8.15e-12, live-target error 4.47e-12, and a 0.01376 nearest-identity gap among those found solutions, but cannot infer a global canonical selector law or retained physical closure from a seeded least-squares search and chosen metric. Repair target: add an analytic or interval-certified enumeration of all exact solutions on the bounded six-angle domain, prove the selected solution is the global unique Frobenius minimizer, and register a retained theorem deriving the ordered complex-Givens grammar and Frobenius-to-identity metric from the selected ambient rather than choosing them after the target is known. Claim boundary until fixed: it is safe to claim that the current runner finds many exact reduced-packet dressings on the selected slice and identifies the nearest-to-identity solution among the audited found set; it is not yet an audited retained canonical selector theorem or a full physical derivation of the reduced-packet law."
     },
     "gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_principle_theorem_note_2026-04-19": {
       "audit_date": null,
