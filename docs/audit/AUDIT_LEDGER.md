@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T14:16:25.734409+00:00
+**Generated:** 2026-04-27T14:21:53.254701+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 47 |
-| _proposed_retained_ | 131 |
+| _proposed_retained_ | 130 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 305 |
+| ~~audited_conditional~~ | 306 |
 | ~~audited_failed~~ | 98 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 47 |
-| `audited_conditional` | 92 |
+| `audited_conditional` | 93 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 31 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1431 |
+| `unaudited` | 1430 |
 
 | criticality | count |
 |---|---:|
@@ -191,6 +191,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `higgs_mass_retention_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `higher_symmetry_joint_validation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `impact_parameter_lensing_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `koide_a1_physical_bridge_attempt_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1974,6 +1975,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The IF / CL route works when the topology preserves branch separation, while the old dense connected local-architecture search is closed and should not be reopened.  _(class `B`)_
 - **chain closes:** False — The note is a program-level synthesis with no declared runner, artifact chain, or cited one-hop notes/logs. The retained topology conclusion, large-N visibility caveat, seven failed emergence attempts, and IF/CL closure therefore cannot be audited from the allowed materials.
 - **rationale:** Issue: the source promotes a retained repo-facing IF/CL topology outcome, but it provides no executable artifact, no runner output, and no explicit one-hop source notes for the dense-DAG failures, modular/gap-controlled positives, large-N visibility caveat, or seven failed local emergence attempts. Why this blocks: a program-closing retained claim cannot be verified from uncited narrative summaries; a hostile reviewer cannot check whether the same observable, topology family, IF/CL machinery, and gravity/decoherence criteria are being compared consistently. Repair target: split the memo into explicit cited inputs, add or cite the runners/logs for dense-uniform failure, modular-gap positive, large-N visibility, and local-emergence failures, then state a narrower claim whose conclusion follows from those one-hop artifacts. Claim boundary until fixed: safely treat this as a planning/triage memo: IF/CL and gap-controlled topology are current working hypotheses, while broad dense-connected architecture search should not be reopened without new cited evidence.
+- **auditor confidence:** high
+
+### `impact_parameter_lensing_note`
+
+- **Note:** [`IMPACT_PARAMETER_LENSING_NOTE.md`](../../docs/IMPACT_PARAMETER_LENSING_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The strongest portable grown row has exact zero-field control, positive TOWARD deflection at every sampled impact parameter, and a near-Newtonian fit delta ~= C b^(-0.962) with R^2 = 0.870.  _(class `C`)_
+- **chain closes:** False — The live runner reproduces the finite b-sweep and zero-field control for grown family 1, but it does not establish the upstream portability selection. The source's retained portability context includes one unknown note and one audited-conditional breakpoint diagnosis, so the strongest-portable-row framing does not close from retained inputs.
+- **rationale:** Issue: the runner recomputes the one-family impact-parameter table, but the source promotes it as the strongest portable grown row using portability context that is not audit-clean: `DISTANCE_LAW_PORTABILITY_NOTE` is unknown and `DISTANCE_LAW_BREAKPOINT_NOTE` is already audited conditional. Why this blocks: a hard-coded one-family lensing probe cannot by itself ratify the row-selection claim or inherit a retained portability/breakpoint classification. Repair target: audit-retain the portability and breakpoint inputs, or replace the runner with a selector that recomputes all candidate portable grown families and proves that this row uniquely satisfies the stated impact-parameter law criteria. Claim boundary until fixed: safely claim the finite runner result only: zero-field delta is exactly zero at b=8, grown family 1 is 5/5 TOWARD on b = 5,6,7,8,10, and the fitted exponent is -0.962 with R2 = 0.870.
+- **open / conditional deps cited:**
+  - `DISTANCE_LAW_PORTABILITY_NOTE.md`
+  - `DISTANCE_LAW_BREAKPOINT_NOTE.md`
 - **auditor confidence:** high
 
 ### `independent_generators_heldout_note`
