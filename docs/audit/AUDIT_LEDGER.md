@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T04:39:16.504956+00:00
+**Generated:** 2026-04-27T04:41:02.285291+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 3 |
-| _proposed_retained_ | 265 |
+| _proposed_retained_ | 264 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
@@ -28,18 +28,18 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | unknown | 734 |
 | ~~audited_decoration~~ | 1 |
 | ~~audited_numerical_match~~ | 3 |
-| ~~audited_conditional~~ | 234 |
+| ~~audited_conditional~~ | 235 |
 | ~~audited_failed~~ | 58 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 3 |
-| `audited_conditional` | 32 |
+| `audited_conditional` | 33 |
 | `audited_decoration` | 1 |
 | `audited_failed` | 1 |
 | `audited_numerical_match` | 3 |
-| `unaudited` | 1558 |
+| `unaudited` | 1557 |
 
 | criticality | count |
 |---|---:|
@@ -123,6 +123,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `matter_inertial_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `native_gauge_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `neutrino_dirac_z3_support_trichotomy_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `omega_lambda_matter_bridge_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `planck_boundary_density_extension_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `sign_portability_invariant_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -637,6 +638,26 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `three_generation_matter_structure_dependency_not_registered`
   - `neutrino_dirac_lane_reduction_dependency_not_registered`
   - `single_higgs_z3_charge_condition_not_derived`
+- **auditor confidence:** high
+
+### `omega_lambda_matter_bridge_theorem_note_2026-04-22`
+
+- **Note:** [`OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md`](../../docs/OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The theorem identifies the de Sitter vacuum density rho_Lambda=3 H_inf^2/(8*pi*G) and present critical density rho_crit=3 H_0^2/(8*pi*G), then cancels the common factors to obtain Omega_Lambda=(H_inf/H_0)^2 and, under flat FRW, Omega_m=1-(H_inf/H_0)^2-Omega_r.  _(class `A`)_
+- **chain closes:** False — The runner verifies the symbolic cancellations and FRW algebra exactly, and its numerical Planck checks are consistent. But the proof chain imports the retained spectral-gap Lambda=3/R_Lambda^2 identity, the H_inf=c/R_Lambda scale identification, w=-1/constant-vacuum interpretation, standard flat FRW critical-density relation, H_0/Omega observational anchors, and the radiation fraction without any registered one-hop dependencies in the audit row. The note also explicitly leaves the key ratio H_inf/H_0 open, so it reduces the cosmology closure burden but does not close Omega_Lambda or Omega_m from CL3 data.
+- **rationale:** The internal algebra is correct: assuming the retained de Sitter spectral-gap radius and standard FRW definitions, Omega_Lambda=(H_inf/H_0)^2 follows immediately, and flatness gives Omega_m=1-Omega_Lambda-Omega_r. The runner passes all 9 checks, including exact SymPy identities and Planck 2018 consistency arithmetic. The blocking issue is authority, not algebra. A Nature-grade audit cannot treat this as closed on the package surface because the spectral-gap identity, scale-identification note, dark-energy EOS corollary, flat-FRW cosmology, observed H_0/Omega_Lambda/Omega_m values, and Omega_r are imported rather than registered and audited as one-hop dependencies. More importantly, the note does not derive H_inf/H_0; it states that closure of Omega_Lambda and Omega_m reduces to that one open number. Repair requires audited one-hop registration of the spectral-gap, EOS, scale-identification, and FRW-density assumptions, plus a retained matter-content or cosmology-scale theorem deriving H_inf/H_0 (and Omega_r if used beyond negligible error). What can safely be claimed is the conditional structural bridge: given the de Sitter spectral-gap and flat-FRW assumptions, Omega_Lambda is exactly the square of H_inf/H_0 and Omega_m follows algebraically; this is not a retained numerical prediction of Omega_Lambda, Omega_m, R_Lambda, or the cosmological hierarchy.
+- **open / conditional deps cited:**
+  - `COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md_not_registered_one_hop_dependency`
+  - `DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md_not_registered_one_hop_dependency`
+  - `COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md_not_registered_one_hop_dependency`
+  - `standard_flat_FRW_critical_density_and_budget_assumptions_not_CL3_registered`
+  - `H_inf_over_H_0_ratio_matter_content_bridge_open`
+  - `Planck_2018_H0_OmegaLambda_OmegaM_observational_comparators_external`
+  - `radiation_fraction_Omega_r_observational_input_not_derived`
 - **auditor confidence:** high
 
 ### `planck_boundary_density_extension_theorem_note_2026-04-24`
