@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 89,
     "high": 508,
-    "leaf": 747,
+    "leaf": 746,
     "medium": 82
   },
-  "generated_at": "2026-04-27T14:52:28.075053+00:00",
+  "generated_at": "2026-04-27T14:54:18.185800+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -21678,23 +21678,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "koide_selected_line_provenance_note_2026-04-20",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/KOIDE_SELECTED_LINE_PROVENANCE_NOTE_2026-04-20.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "koide_theta_hierarchy_open_scalar_note_2026-04-19",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -29061,6 +29044,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1013,
-  "total_pending": 1426
+  "ready_count": 1012,
+  "total_pending": 1425
 }

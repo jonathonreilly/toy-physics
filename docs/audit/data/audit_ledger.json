@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T14:52:28.029277+00:00",
-  "generated_at": "2026-04-27T14:52:26.429692+00:00",
-  "invalidation_run_at": "2026-04-27T14:52:27.982068+00:00",
+  "effective_status_computed_at": "2026-04-27T14:54:18.137889+00:00",
+  "generated_at": "2026-04-27T14:54:16.547724+00:00",
+  "invalidation_run_at": "2026-04-27T14:54:18.090614+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T14:52:27.887331+00:00",
+  "load_bearing_computed_at": "2026-04-27T14:54:17.996103+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -42412,14 +42412,21 @@
       "verdict_rationale": null
     },
     "koide_selected_line_provenance_note_2026-04-20": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The source runner derives the slot values from the stated chart and selector assumptions, but the claimed retained provenance depends on observable-principle, active-affine, half-plane, parity-baseline, selector, and frozen-bank notes that are unknown or effective-conditional rather than audit-clean.",
       "claim_id": "koide_selected_line_provenance_note_2026-04-20",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -42427,18 +42434,26 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The retained parity-compatible observable-selector theorem is used to minimize delta^2 + q_+^2 on q_+ = sqrt(8/3) - delta, yielding delta_* = q_+* = sqrt(6)/3 and therefore H_sel(m) = H(m, sqrt(6)/3, sqrt(6)/3).",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "e196c263a62633200c9604edfa1d0f934c188871c2e3ed3c0f7626f2a030dd3f",
       "note_path": "docs/KOIDE_SELECTED_LINE_PROVENANCE_NOTE_2026-04-20.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md",
+        "docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md",
+        "docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md",
+        "docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_PARITY_COMPATIBLE_DIAGONAL_BASELINE_THEOREM_NOTE_2026-04-17.md",
+        "docs/DM_NEUTRINO_SOURCE_SURFACE_PARITY_COMPATIBLE_OBSERVABLE_SELECTOR_THEOREM_NOTE_2026-04-17.md",
+        "docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_CURVATURE_23_SYMMETRIC_BASELINE_BOUNDARY_THEOREM_NOTE_2026-04-17.md",
+        "docs/KOIDE_SELECTED_SLICE_FROZEN_BANK_DECOMPOSITION_NOTE_2026-04-18.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368869+00:00",
@@ -42468,15 +42483,15 @@
       ],
       "runner_check_breakdown": {
         "A": 0,
-        "B": 0,
-        "C": 0,
+        "B": 1,
+        "C": 14,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 15
       },
       "runner_path": null,
       "title": "Koide Selected-Line Provenance: Derivation of `H_sel(m) = H(m, \u221a6/3, \u221a6/3)`",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the live runner reproduces the selected-line slot derivation, but it hard-codes the atlas constants and only checks provenance-file presence instead of importing audited theorem outputs; the one-hop provenance stack is mostly unknown or effective-conditional. Why this blocks: the note claims a complete retained-on-main provenance for the numeric slots, but retained status cannot propagate through unaudited/conditional selector, half-plane, parity-baseline, observable-principle, and frozen-bank inputs. Repair target: audit-retain the cited source-surface and observable-principle theorems, and update the provenance runner to consume their runner outputs or generated constants rather than restating them. Claim boundary until fixed: safely claim that, given the stated active-affine chart, parity-compatible baseline family, active half-plane, and quadratic selector law, the minimizer is delta_* = q_+* = sqrt(6)/3 and reconstructs H_sel(m); do not claim I3 is closed by retained provenance."
     },
     "koide_selected_slice_frozen_bank_decomposition_note_2026-04-18": {
       "audit_date": null,

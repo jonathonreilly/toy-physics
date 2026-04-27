@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T14:52:28.216601+00:00
+**Generated:** 2026-04-27T14:54:18.325899+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 47 |
-| _proposed_retained_ | 123 |
+| _proposed_retained_ | 122 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 311 |
+| ~~audited_conditional~~ | 312 |
 | ~~audited_failed~~ | 100 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 47 |
-| `audited_conditional` | 98 |
+| `audited_conditional` | 99 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 33 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1423 |
+| `unaudited` | 1422 |
 
 | criticality | count |
 |---|---:|
@@ -206,6 +206,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_p_one_clock_3plus1_transport_reduction_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_pointed_origin_exhaustion_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_q_delta_readout_retention_split_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `koide_selected_line_provenance_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lattice_complementarity_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lensing_beta_sweep_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lensing_deflection_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -2359,6 +2360,26 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `Koide_Q_support_route_value_Q_2_over_3_not_registered_one_hop_dependency`
   - `Koide_delta_APS_support_route_value_delta_2_over_9_not_registered_one_hop_dependency`
   - `same_Z3_p_equals_d_structural_bridge_not_registered_one_hop_dependency`
+- **auditor confidence:** high
+
+### `koide_selected_line_provenance_note_2026-04-20`
+
+- **Note:** [`KOIDE_SELECTED_LINE_PROVENANCE_NOTE_2026-04-20.md`](../../docs/KOIDE_SELECTED_LINE_PROVENANCE_NOTE_2026-04-20.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The retained parity-compatible observable-selector theorem is used to minimize delta^2 + q_+^2 on q_+ = sqrt(8/3) - delta, yielding delta_* = q_+* = sqrt(6)/3 and therefore H_sel(m) = H(m, sqrt(6)/3, sqrt(6)/3).  _(class `C`)_
+- **chain closes:** False — The source runner derives the slot values from the stated chart and selector assumptions, but the claimed retained provenance depends on observable-principle, active-affine, half-plane, parity-baseline, selector, and frozen-bank notes that are unknown or effective-conditional rather than audit-clean.
+- **rationale:** Issue: the live runner reproduces the selected-line slot derivation, but it hard-codes the atlas constants and only checks provenance-file presence instead of importing audited theorem outputs; the one-hop provenance stack is mostly unknown or effective-conditional. Why this blocks: the note claims a complete retained-on-main provenance for the numeric slots, but retained status cannot propagate through unaudited/conditional selector, half-plane, parity-baseline, observable-principle, and frozen-bank inputs. Repair target: audit-retain the cited source-surface and observable-principle theorems, and update the provenance runner to consume their runner outputs or generated constants rather than restating them. Claim boundary until fixed: safely claim that, given the stated active-affine chart, parity-compatible baseline family, active half-plane, and quadratic selector law, the minimizer is delta_* = q_+* = sqrt(6)/3 and reconstructs H_sel(m); do not claim I3 is closed by retained provenance.
+- **open / conditional deps cited:**
+  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_PARITY_COMPATIBLE_DIAGONAL_BASELINE_THEOREM_NOTE_2026-04-17.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_PARITY_COMPATIBLE_OBSERVABLE_SELECTOR_THEOREM_NOTE_2026-04-17.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_CURVATURE_23_SYMMETRIC_BASELINE_BOUNDARY_THEOREM_NOTE_2026-04-17.md`
+  - `KOIDE_SELECTED_SLICE_FROZEN_BANK_DECOMPOSITION_NOTE_2026-04-18.md`
 - **auditor confidence:** high
 
 ### `lattice_3d_dense_refinement_reconciliation_note`
