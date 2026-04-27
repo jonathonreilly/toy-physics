@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T11:45:15.311732+00:00",
-  "generated_at": "2026-04-27T11:45:13.544086+00:00",
-  "invalidation_run_at": "2026-04-27T11:45:15.251107+00:00",
+  "effective_status_computed_at": "2026-04-27T11:46:03.213494+00:00",
+  "generated_at": "2026-04-27T11:46:01.229234+00:00",
+  "invalidation_run_at": "2026-04-27T11:46:03.144661+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T11:45:15.129548+00:00",
+  "load_bearing_computed_at": "2026-04-27T11:46:03.025634+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -8852,14 +8852,21 @@
       "verdict_rationale": null
     },
     "charged_lepton_radiative_tau_selector_firewall_note_2026-04-26": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27T11:45:59.927627+00:00",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The no-go closes because the radiative factor is identical under generation relabeling. The note preserves the tau numerical match as support/comparator only and does not turn it into a standalone y_tau theorem.",
       "claim_id": "charged_lepton_radiative_tau_selector_firewall_note_2026-04-26",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -8867,13 +8874,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The electroweak charged-lepton Casimir vector is (1, 1, 1) across e, mu, tau, so the radiative alpha_LM/(4pi) scale is generation-blind and cannot select tau without an extra primitive.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "a972d2a9e5ce125c9f59cc4d6cdeb1c505a6db185ce1987bc754b5a89aedb3a8",
@@ -8933,15 +8940,15 @@
       ],
       "runner_check_breakdown": {
         "A": 0,
-        "B": 0,
+        "B": 4,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 8,
+        "total_pass": 17
       },
       "runner_path": "scripts/frontier_charged_lepton_radiative_tau_selector_firewall.py",
       "title": "Charged-Lepton Radiative Tau Selector Firewall",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The runner checks that the Casimir and radiative y value are identical for all three charged-lepton generations, and that applying the same rule universally cannot fit electron and muon masses. The PDG tau agreement is explicitly fenced as comparator-only. The audited-clean result is only the standalone tau-selector no-go, not charged-lepton mass closure."
     },
     "charged_lepton_selected_line_generation_selector_no_go_note_2026-04-27": {
       "audit_date": null,
