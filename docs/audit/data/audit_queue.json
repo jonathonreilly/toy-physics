@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 89,
     "high": 508,
-    "leaf": 763,
+    "leaf": 762,
     "medium": 82
   },
-  "generated_at": "2026-04-27T13:19:31.019672+00:00",
+  "generated_at": "2026-04-27T13:21:48.949580+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -21151,23 +21151,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "gravity_observable_hierarchy_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "gravity_reviewer_derivation_summary_2026-04-15",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -29333,6 +29316,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1029,
-  "total_pending": 1442
+  "ready_count": 1028,
+  "total_pending": 1441
 }

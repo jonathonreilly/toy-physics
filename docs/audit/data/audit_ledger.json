@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T13:19:30.970653+00:00",
-  "generated_at": "2026-04-27T13:19:29.377913+00:00",
-  "invalidation_run_at": "2026-04-27T13:19:30.924067+00:00",
+  "effective_status_computed_at": "2026-04-27T13:21:48.902871+00:00",
+  "generated_at": "2026-04-27T13:21:46.418344+00:00",
+  "invalidation_run_at": "2026-04-27T13:21:48.855770+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T13:19:30.827863+00:00",
+  "load_bearing_computed_at": "2026-04-27T13:21:48.760915+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -34908,14 +34908,21 @@
       "verdict_rationale": null
     },
     "gravity_observable_hierarchy_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner reproduces only five hierarchy rows, including dense 3D cases at z=3 and z=5. The source note claims and tabulates a denser z=2..6 retained window, while the cited dense-spent-delay note is already audited failed for a stale endpoint/window mismatch.",
       "claim_id": "gravity_observable_hierarchy_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -34923,18 +34930,20 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "On the current retained examples, 2D ultra-weak dense spent-delay is genuinely attractive, 3D action-power close-slit barrier is genuinely away, and 3D dense spent-delay is genuinely attractive on the retained tested z = 2..6 window.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "8c43347eb4b05a6da26a2c912181173c1a96388a279a81e974e4b78dd2da82f5",
       "note_path": "docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368547+00:00",
@@ -34965,14 +34974,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 5,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 5
       },
       "runner_path": null,
       "title": "Gravity Observable Hierarchy",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the note's load-bearing retained dense-3D attraction claim covers z=2..6, but the current runner and log report only dense z=3 and z=5, and the one cited dense-spent-delay note is itself audited failed for an endpoint/window mismatch. Why this blocks: a canonical sign-interpretation note cannot retain an example table that the executable artifact does not compute, especially when a cited source for that example has already failed audit. Repair target: update the runner to compute and assert every source-note row, including z=2,4,6 and the z=7 null boundary, or narrow the note to the five rows the current runner actually emits and repair/audit the dense-spent-delay dependency. Claim boundary until fixed: safely claim only the live five-row hierarchy output: 2D ultra-weak attraction, 2D strong-field depletion, 3D power-action away/depletion, and dense 3D attraction at z=3 and z=5; do not claim the z=2..6 retained dense window or a canonical hierarchy over all listed retained examples."
     },
     "gravity_reviewer_derivation_summary_2026-04-15": {
       "audit_date": null,
@@ -50005,11 +50014,11 @@
       "effective_status_reason": "self",
       "independence": "cross_family",
       "intrinsic_status": "retained",
-      "load_bearing_score": 5.5,
+      "load_bearing_score": 1.5,
       "load_bearing_step": "The note claims a narrow proposed-retained extension: the moving-source centroid-bias observable survives on two portable grown families under exact zero-source and matched static controls.",
       "load_bearing_step_class": "C",
-      "max_descendant_status": "proposed_retained",
-      "max_descendant_status_rank": 80,
+      "max_descendant_status": "audited_failed",
+      "max_descendant_status_rank": 0,
       "note_hash": "6a1a33a164b171bfd729ecd3538d5542fcbf2bb08161b1270cd0b58ce6f39a94",
       "note_path": "docs/MOVING_SOURCE_CROSS_FAMILY_NOTE.md",
       "open_dependency_paths": [],
@@ -76859,11 +76868,11 @@
       "effective_status_reason": "self",
       "independence": "cross_family",
       "intrinsic_status": "retained",
-      "load_bearing_score": 5.5,
+      "load_bearing_score": 1.5,
       "load_bearing_step": "The note claims a proposed-retained narrow extension: on a compact exact lattice, a bounded odd-in-v moving-source centroid response survives exact zero/static controls while the circulation-like plaquette candidate remains null.",
       "load_bearing_step_class": "C",
-      "max_descendant_status": "proposed_retained",
-      "max_descendant_status_rank": 80,
+      "max_descendant_status": "audited_failed",
+      "max_descendant_status_rank": 0,
       "note_hash": "e2780300d4823621b267e72540178668fbfe8f407c324fdb31a47e777831d141",
       "note_path": "docs/VECTOR_MAGNETIC_EXTENSION_NOTE.md",
       "open_dependency_paths": [],

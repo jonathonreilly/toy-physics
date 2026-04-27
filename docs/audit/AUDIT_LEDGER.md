@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T13:19:31.156628+00:00
+**Generated:** 2026-04-27T13:21:49.087696+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 46 |
-| _proposed_retained_ | 139 |
+| _proposed_retained_ | 138 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
 | ~~audited_conditional~~ | 303 |
-| ~~audited_failed~~ | 93 |
+| ~~audited_failed~~ | 94 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 46 |
 | `audited_conditional` | 90 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 26 |
+| `audited_failed` | 27 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1439 |
+| `unaudited` | 1438 |
 
 | criticality | count |
 |---|---:|
@@ -259,6 +259,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `geometry_superposition_dag_ensemble_note_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `gravitomagnetic_portability_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `gravity_observable_hierarchy_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `lattice_3d_dense_spent_delay_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `lattice_kernel_transfer_norm_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `mirror_2d_gravity_law_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -1779,6 +1780,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `weak_field_action_test_mass_response_not_registered`
   - `lattice_green_function_normalization_runner_not_registered`
   - `scripts/frontier_gravity_clean_derivation.py_not_registered_primary_runner`
+- **auditor confidence:** high
+
+### `gravity_observable_hierarchy_note`
+
+- **Note:** [`GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md`](../../docs/GRAVITY_OBSERVABLE_HIERARCHY_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On the current retained examples, 2D ultra-weak dense spent-delay is genuinely attractive, 3D action-power close-slit barrier is genuinely away, and 3D dense spent-delay is genuinely attractive on the retained tested z = 2..6 window.  _(class `C`)_
+- **chain closes:** False — The live runner reproduces only five hierarchy rows, including dense 3D cases at z=3 and z=5. The source note claims and tabulates a denser z=2..6 retained window, while the cited dense-spent-delay note is already audited failed for a stale endpoint/window mismatch.
+- **rationale:** Issue: the note's load-bearing retained dense-3D attraction claim covers z=2..6, but the current runner and log report only dense z=3 and z=5, and the one cited dense-spent-delay note is itself audited failed for an endpoint/window mismatch. Why this blocks: a canonical sign-interpretation note cannot retain an example table that the executable artifact does not compute, especially when a cited source for that example has already failed audit. Repair target: update the runner to compute and assert every source-note row, including z=2,4,6 and the z=7 null boundary, or narrow the note to the five rows the current runner actually emits and repair/audit the dense-spent-delay dependency. Claim boundary until fixed: safely claim only the live five-row hierarchy output: 2D ultra-weak attraction, 2D strong-field depletion, 3D power-action away/depletion, and dense 3D attraction at z=3 and z=5; do not claim the z=2..6 retained dense window or a canonical hierarchy over all listed retained examples.
+- **open / conditional deps cited:**
+  - `LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`
 - **auditor confidence:** high
 
 ### `higgs_mass_retention_analysis_note_2026-04-18`
