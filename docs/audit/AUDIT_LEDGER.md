@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T04:57:31.379052+00:00
+**Generated:** 2026-04-27T04:59:10.598340+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,13 +20,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 6 |
-| _proposed_retained_ | 257 |
+| _proposed_retained_ | 256 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
 | open | 11 |
 | unknown | 734 |
-| ~~audited_decoration~~ | 1 |
+| ~~audited_decoration~~ | 2 |
 | ~~audited_numerical_match~~ | 3 |
 | ~~audited_conditional~~ | 239 |
 | ~~audited_failed~~ | 58 |
@@ -36,10 +36,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audit_in_progress` | 3 |
 | `audited_clean` | 6 |
 | `audited_conditional` | 37 |
-| `audited_decoration` | 1 |
+| `audited_decoration` | 2 |
 | `audited_failed` | 1 |
 | `audited_numerical_match` | 3 |
-| `unaudited` | 1550 |
+| `unaudited` | 1549 |
 
 | criticality | count |
 |---|---:|
@@ -142,6 +142,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_p1_delta_r_2_loop_extension_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `yt_p1_delta_r_sm_rge_crosscheck_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
+| `koide_q_eq_3delta_identity_note_2026-04-21` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `bell_inequality_derived_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -630,6 +631,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Exactness gives fibres, not canonical splittings; the closing section is the special case a = 0, b1 = 0, b2 = 0, so that choice is exactly the missing primitive-based readout/basepoint law.  _(class `A`)_
 - **chain closes:** True — The note and primary runner prove the stated no-go at the level claimed: the retained Q and delta projections have nontrivial kernels, kernel translations preserve the retained totals, and sections form non-unique families. Therefore exactness alone names the residual directions but does not canonically select the zero representative.
 - **rationale:** The load-bearing claim is a negative exactness claim, not a positive Koide closure claim. The primary runner passes 15/15 symbolic checks: it computes ker(pi_Q)=span{Z}, ker(pi_delta)=span{selected-spectator, endpoint-exact}, verifies nonzero kernel representatives preserve the retained totals while moving the Q/delta readouts, and exhibits non-unique section families. No cited upstream physical bridge is needed for the narrow no-go that exactness alone does not pick z=0, spectator=0, c=0. The broader Koide lane regression currently fails one q_so2 phase-erasure support check, but that is not load-bearing for this exact cohomology obstruction.
+- **auditor confidence:** high
+
+### `koide_q_eq_3delta_identity_note_2026-04-21`
+
+- **Note:** [`KOIDE_Q_EQ_3DELTA_IDENTITY_NOTE_2026-04-21.md`](../../docs/KOIDE_Q_EQ_3DELTA_IDENTITY_NOTE_2026-04-21.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_decoration~~
+- **effective_status:** ~~audited_decoration~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Combining Q = 2/d, delta = 2/p^2, and p = d = 3 gives Q/delta = p^2/d = p, so Q = p * delta and numerically Q = 3 * delta.  _(class `A`)_
+- **chain closes:** False — The arithmetic identity closes exactly once the current Q=2/3, delta=2/9, and p=d=3 support-route values are supplied. As an independent proposed-retained claim, however, the runner hard-codes those upstream values and the p=d same-Z3 identification rather than deriving or registering them as one-hop authorities.
+- **rationale:** Issue: the note is an exact arithmetic corollary of the current Koide support-route values, not an independent physical theorem. Why this blocks: the runner verifies Q = 3 delta after setting Q=2/3, delta=2/9, p=3, and d=3, and it treats the same-Z3 p=d bridge as an input; there is no new observable, comparator, falsifiable prediction, or first-principles computation beyond those upstream values. Repair target: box this identity under the audited Koide Q/delta parent packet, or re-promote only if a registered theorem proves the p=d same-Z3 structural bridge and the identity materially compresses downstream claims. Claim boundary until fixed: it is safe to state that accepted Q=2/3 and delta=2/9 values obey the exact bookkeeping identity Q=3 delta; it is not safe to count this as a separate retained theorem-grade result.
+- **open / conditional deps cited:**
+  - `Koide_Q_support_route_value_Q_2_over_3_not_registered_one_hop_dependency`
+  - `Koide_delta_APS_support_route_value_delta_2_over_9_not_registered_one_hop_dependency`
+  - `same_Z3_p_equals_d_structural_bridge_not_registered_one_hop_dependency`
 - **auditor confidence:** high
 
 ### `lensing_beta_sweep_note`
