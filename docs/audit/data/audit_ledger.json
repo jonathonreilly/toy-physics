@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T04:19:16.270831+00:00",
-  "generated_at": "2026-04-27T04:19:14.466610+00:00",
-  "invalidation_run_at": "2026-04-27T04:19:16.208067+00:00",
+  "effective_status_computed_at": "2026-04-27T04:21:35.906096+00:00",
+  "generated_at": "2026-04-27T04:21:34.098181+00:00",
+  "invalidation_run_at": "2026-04-27T04:21:35.850062+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T04:19:16.087397+00:00",
+  "load_bearing_computed_at": "2026-04-27T04:21:35.727218+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -39112,14 +39112,21 @@
       "verdict_rationale": null
     },
     "koide_pointed_origin_exhaustion_theorem_note_2026-04-24": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 11.883,
+        "transitive_descendants": 117
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner proves exact algebraic/torsor countermodels inside the supplied residual atlas, but that atlas, its three fibres, the eta_APS readout, and the claim that these are the retained unpointed tests are not registered as one-hop dependencies. The theorem therefore closes conditionally inside the modeled atlas, not as an audited retained exhaustion theorem for the full Koide lane.",
       "claim_id": "koide_pointed_origin_exhaustion_theorem_note_2026-04-24",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -39127,18 +39134,29 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 10,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 11.883,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Within the residual dimensionless Koide atlas, unpointed retained tests are invariant along the Q source-translation, CP1 selected-line, and endpoint-torsor fibres while the open charged-lepton readouts change, so origin-free retained data do not force the closing representative.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "302655d0be36f24d3eece8b7f40643438ce9ac23e3ff39a010a362ef642dce6e",
       "note_path": "docs/KOIDE_POINTED_ORIGIN_EXHAUSTION_THEOREM_NOTE_2026-04-24.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "residual_dimensionless_Koide_atlas_not_registered",
+        "Q_source_response_background_translation_fibre_not_registered",
+        "CP1_selected_line_rank_two_primitive_not_registered",
+        "endpoint_torsor_readout_model_not_registered",
+        "eta_APS_Z3_1_2_equals_2_over_9_authority_not_registered",
+        "docs/KOIDE_DIMENSIONLESS_OBJECTION_CLOSURE_REVIEW_PACKET_2026-04-24.md_not_registered_and_audited_conditional",
+        "background_zero_Z_erasure_criterion_authority_not_registered",
+        "selected_line_local_boundary_source_law_not_registered",
+        "based_endpoint_section_theorem_not_registered",
+        "retained_physical_source_boundary_origin_law_open"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368834+00:00",
@@ -39167,16 +39185,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 15,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 15
       },
       "runner_path": "scripts/frontier_koide_pointed_origin_exhaustion_theorem.py",
       "title": "Koide Pointed-Origin Exhaustion Theorem",
       "transitive_descendants": 117,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the no-go/exhaustion theorem assumes a residual Koide atlas with exactly three unpointed freedoms: Q source-origin translation, CP1 selected-line source choice, and endpoint torsor translation, but the audit row registers no one-hop authority that this atlas is complete or retained. Why this blocks: the runner proves that polynomial invariants, scalar equivariant marks, and torsor-invariant data cannot choose the pointed representative in the supplied model, but it does not derive that the physical charged-lepton readout is restricted to that model or that no retained source/boundary law already selects the needed origin. Repair target: register the residual Koide atlas, source-response carrier, CP1/selected-line primitive, endpoint torsor, eta_APS readout, April 24 Koide packet, and background-zero/Z-erasure authorities as dependencies; add an exhaustion theorem showing these fibres are complete for retained unpointed data. Claim boundary until fixed: it is safe to claim conditional necessity inside the stated atlas: a pointed origin law would close Q=2/3 and delta=2/9, while unpointed invariant data admit countermodels; it is not yet an audited retained proof that all CL3 Koide dimensionless closure routes require exactly those physical source/boundary-origin laws."
     },
     "koide_positive_parent_axis_obstruction_note_2026-04-18": {
       "audit_date": null,
