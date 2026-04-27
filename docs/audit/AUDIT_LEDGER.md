@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T11:55:55.536847+00:00
+**Generated:** 2026-04-27T11:59:30.380759+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 36 |
-| _proposed_retained_ | 161 |
+| **retained** | 37 |
+| _proposed_retained_ | 160 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 36 |
+| `audited_clean` | 37 |
 | `audited_conditional` | 82 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 22 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1461 |
+| `unaudited` | 1460 |
 
 | criticality | count |
 |---|---:|
@@ -124,6 +124,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `fixed_field_family_unification_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `fixed_field_grown_transfer_scout_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `fm_transfer_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `fourth_family_quadrant_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `i3_zero_exact_theorem_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `independent_generators_heldout_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -1357,6 +1358,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `DIMENSIONAL_GRAVITY_TABLE.md_unknown_or_unaudited`
   - `logs/2026-04-04-4d-wide-distance-law.txt_frozen_companion_without_registered_current_runner`
+- **auditor confidence:** high
+
+### `fourth_family_quadrant_note`
+
+- **Note:** [`FOURTH_FAMILY_QUADRANT_NOTE.md`](../../docs/FOURTH_FAMILY_QUADRANT_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The quick diagnostic sweep gives a real but narrow basin: exact zero and neutral controls pass, sign orientation is correct on the passing rows, weak charge scaling stays near linear, and 5/9 tested rows pass.  _(class `C`)_
+- **chain closes:** True — The live --quick runner recomputes the nine-row quadrant-reflection sweep and reproduces the frozen 5/9 passing basin with exact zero/neutral controls and near-linear charge scaling. The source note explicitly excludes family-wide, seed-universal, and geometry-generic claims.
+- **rationale:** The claim is narrow enough to close: the runner constructs the quadrant-reflection connectivity rule, evaluates the declared drift/seed grid, and reproduces the finite signed-source basin rather than importing it. The exact zero-source and neutral-cancellation controls hold on all evaluated rows, while the sign gate restricts retention to the printed 5/9 narrow basin. Residual boundary: distinctness is algorithmic for this connectivity construction, not evidence for a geometry-generic or seed-universal family law.
 - **auditor confidence:** high
 
 ### `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25`
