@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T15:19:43.178391+00:00
+**Generated:** 2026-04-27T15:29:37.452896+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 54 |
-| _proposed_retained_ | 112 |
+| _proposed_retained_ | 111 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 314 |
+| ~~audited_conditional~~ | 315 |
 | ~~audited_failed~~ | 101 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 54 |
-| `audited_conditional` | 101 |
+| `audited_conditional` | 102 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 34 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1411 |
+| `unaudited` | 1410 |
 
 | criticality | count |
 |---|---:|
@@ -220,6 +220,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lensing_beta_sweep_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lensing_deflection_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lensing_k_sweep_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `linear_response_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `linear_response_true_kubo_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `local_zsym_predictor_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `matter_inertial_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -2659,6 +2660,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `logs/2026-04-09-lensing-k-sweep.txt_not_registered_primary_output`
   - `eikonal_baseline_not_registered_one_hop`
   - `kernel_or_mode_interference_analysis_not_registered`
+- **auditor confidence:** high
+
+### `linear_response_derivation_note`
+
+- **Note:** [`LINEAR_RESPONSE_DERIVATION_NOTE.md`](../../docs/LINEAR_RESPONSE_DERIVATION_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The first-moment Kubo predictor is defined as cz_weighted_by_1/|z-z_src| - cz_free and treated as a no-fit, derivation-adjacent predictor for measured d(cz)/ds across 44 families.  _(class `C`)_
+- **chain closes:** False — The live runner reproduces the reported correlations and sign agreement, but the note itself says this detector-only reweighting is not the literal first-order Kubo term <z*deltaH>_0 and omits the edge action perturbation and path-phase cross terms.
+- **rationale:** Issue: The source elevates a detector-only |amp|^2/|z-z_src| reweighting into a proposed-retained first-moment Kubo/first-principles predictor while explicitly admitting it is not the literal first-order Kubo expression <z*deltaH>_0. Why this blocks: the replayed r=0.5605 overall, r=0.7248 off-scaffold, and 36/44 sign agreement establish a no-fit heuristic correlation, but they do not derive the predictor from the propagator plus action or include the missing deltaH=kL delta f edge/path-phase terms. Repair target: provide a symbolic or numerical true-Kubo derivation that differentiates the path-sum at s=0, includes the edge action perturbation and phase cross-terms, and compares that literal first-order observable on the same 44-family set. Claim boundary until fixed: it is safe to claim the archived/live heuristic replay gives r=0.56 overall, r=0.72 off-scaffold, 81.8% no-fit sign agreement, and a 79.5% in-sample tuned threshold result; it is not yet safe to claim a retained derivation-grade or literal first-order Kubo predictor from this note alone.
 - **auditor confidence:** high
 
 ### `linear_response_true_kubo_note`

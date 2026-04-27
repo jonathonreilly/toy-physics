@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T15:19:42.994786+00:00",
-  "generated_at": "2026-04-27T15:19:41.416885+00:00",
-  "invalidation_run_at": "2026-04-27T15:19:42.948810+00:00",
+  "effective_status_computed_at": "2026-04-27T15:29:37.258828+00:00",
+  "generated_at": "2026-04-27T15:29:35.736963+00:00",
+  "invalidation_run_at": "2026-04-27T15:29:37.213251+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T15:19:42.855533+00:00",
+  "load_bearing_computed_at": "2026-04-27T15:29:37.121237+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -47010,14 +47010,21 @@
       "verdict_rationale": null
     },
     "linear_response_derivation_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner reproduces the reported correlations and sign agreement, but the note itself says this detector-only reweighting is not the literal first-order Kubo term <z*deltaH>_0 and omits the edge action perturbation and path-phase cross terms.",
       "claim_id": "linear_response_derivation_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -47025,13 +47032,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The first-moment Kubo predictor is defined as cz_weighted_by_1/|z-z_src| - cz_free and treated as a no-fit, derivation-adjacent predictor for measured d(cz)/ds across 44 families.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "a4f7f9a1939d37a77305216a40a2fc96592028f5fa498e9c1225903a9c633230",
@@ -47067,14 +47074,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 4,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 4
       },
       "runner_path": null,
       "title": "Linear-Response Derivation-Adjacent Analysis \u2014 Partial Positive",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The source elevates a detector-only |amp|^2/|z-z_src| reweighting into a proposed-retained first-moment Kubo/first-principles predictor while explicitly admitting it is not the literal first-order Kubo expression <z*deltaH>_0. Why this blocks: the replayed r=0.5605 overall, r=0.7248 off-scaffold, and 36/44 sign agreement establish a no-fit heuristic correlation, but they do not derive the predictor from the propagator plus action or include the missing deltaH=kL delta f edge/path-phase terms. Repair target: provide a symbolic or numerical true-Kubo derivation that differentiates the path-sum at s=0, includes the edge action perturbation and phase cross-terms, and compares that literal first-order observable on the same 44-family set. Claim boundary until fixed: it is safe to claim the archived/live heuristic replay gives r=0.56 overall, r=0.72 off-scaffold, 81.8% no-fit sign agreement, and a 79.5% in-sample tuned threshold result; it is not yet safe to claim a retained derivation-grade or literal first-order Kubo predictor from this note alone."
     },
     "linear_response_second_order_kubo_note": {
       "audit_date": null,
