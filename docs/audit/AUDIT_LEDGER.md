@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T11:59:30.380759+00:00
+**Generated:** 2026-04-27T12:01:36.967241+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 37 |
-| _proposed_retained_ | 160 |
+| _proposed_retained_ | 159 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 295 |
+| ~~audited_conditional~~ | 296 |
 | ~~audited_failed~~ | 89 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 37 |
-| `audited_conditional` | 82 |
+| `audited_conditional` | 83 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 22 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1460 |
+| `unaudited` | 1459 |
 
 | criticality | count |
 |---|---:|
@@ -164,6 +164,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `family_companion_compare_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `fine_h_family_universality_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `four_d_distance_width_probe_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `gate_b_complex_action_falsifier_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `global_coherence_off_scaffold_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravitomagnetic_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -1389,6 +1390,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `audit_queue_runner_path_null_for_named_primary_verifier`
   - `retained_EW_bare_coupling_bookkeeping_not_registered_one_hop_dependency`
   - `Cl3_to_SM_dimension_count_d_plus_1_d_plus_2_support_packet_not_registered_one_hop_dependency`
+- **auditor confidence:** high
+
+### `gate_b_complex_action_falsifier_note`
+
+- **Note:** [`GATE_B_COMPLEX_ACTION_FALSIFIER_NOTE.md`](../../docs/GATE_B_COMPLEX_ACTION_FALSIFIER_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** gamma = 0 reproduces the retained Gate B row exactly, while increasing gamma suppresses detector escape sharply on the same row.  _(class `C`)_
+- **chain closes:** False — The live runner reproduces the finite gamma sweep and detector-escape suppression on drift=0.2, restore=0.7. Retained closure does not propagate because the note inherits the retained-row/Born guardrail from an unaudited bounded Gate B joint-package note and itself states this is only a tiny bounded falsification probe.
+- **rationale:** Issue: the runner verifies a finite detector-effect sweep, but the proposed_retained queue status is stronger than the source note's own bounded-falsifier scope, and the retained Gate B/Born guardrail is imported from docs/GATE_B_GROWN_JOINT_PACKAGE_NOTE.md, which is bounded and unaudited. Why this blocks: the audit can retain the local fact that gamma attenuates detector escape on this row, but it cannot ratify a retained complex-action branch or inherited retained-row guardrail through a bounded unaudited dependency. Repair target: either re-scope the note as bounded/support, or add a registered current runner and audited Gate B row/Born dependency that closes gamma=0, Born, and retained-row status on the same surface. Claim boundary until fixed: on the specified drift=0.2, restore=0.7 row, the live runner shows escape suppression from 0.215 at gamma=0.05 to effectively zero at gamma=0.5, with AWAY centroid shifts; no broader generated-geometry complex-action theory is established.
+- **open / conditional deps cited:**
+  - `GATE_B_GROWN_JOINT_PACKAGE_NOTE.md_bounded_unaudited_guardrail`
 - **auditor confidence:** high
 
 ### `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20`
