@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T15:12:04.789226+00:00",
-  "generated_at": "2026-04-27T15:12:03.198014+00:00",
-  "invalidation_run_at": "2026-04-27T15:12:04.742363+00:00",
+  "effective_status_computed_at": "2026-04-27T15:19:42.994786+00:00",
+  "generated_at": "2026-04-27T15:19:41.416885+00:00",
+  "invalidation_run_at": "2026-04-27T15:19:42.948810+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T15:12:04.645584+00:00",
+  "load_bearing_computed_at": "2026-04-27T15:19:42.855533+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -46205,14 +46205,21 @@
       "verdict_rationale": null
     },
     "lensing_adjoint_kernel_reduced_model_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The source makes only a bounded negative claim about the first reduced surrogate. The live H=0.35 runner reproduces the archived exact-edge/full-harness spot-check and the layer_signed/layer_abs failures against the exact edge series, with no cited dependencies needed.",
       "claim_id": "lensing_adjoint_kernel_reduced_model_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -46220,13 +46227,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The one-term-per-layer reduction fails badly while the exact edge replay matches the first-order observable at the stated H=0.35 setup.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "d625deda7ecdd026cb20b712b72cba2476d76d38ec69d5003a57bb089dcb87a7",
@@ -46262,14 +46269,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 4,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 4
       },
       "runner_path": null,
       "title": "Lensing Adjoint Kernel Reduced Model",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The retained content is a bounded negative inside the stated harness, not a derivation of the reference lensing slope or a continuum physics claim. The live runner with --h 0.35 reproduces true_kubo=+5.972756 and exact_edge=+5.972756 at b=3 with |Delta|=4.228e-13, then shows the signed and absolute one-term-per-layer reductions miss the b=3..6 exact-edge series by about 98-100%. Because the note explicitly keeps the exact edge factorization as the reference object and rejects only the first reduced surrogate, the claim closes on its own terms."
     },
     "lensing_adjoint_kernel_shape_note": {
       "audit_date": null,

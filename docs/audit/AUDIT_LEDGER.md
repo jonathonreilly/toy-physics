@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T15:12:04.982371+00:00
+**Generated:** 2026-04-27T15:19:43.178391+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 53 |
-| _proposed_retained_ | 113 |
+| **retained** | 54 |
+| _proposed_retained_ | 112 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 53 |
+| `audited_clean` | 54 |
 | `audited_conditional` | 101 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 34 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1412 |
+| `unaudited` | 1411 |
 
 | criticality | count |
 |---|---:|
@@ -147,6 +147,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_nn_mass_response_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `lattice_weak_field_mass_scaling_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `lattice_weak_field_purity_scaling_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `lensing_adjoint_kernel_reduced_model_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `mirror_2d_validation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `moving_source_cross_family_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `planck_finite_response_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -2593,6 +2594,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** On the weak-field ordered-lattice pocket, the retained N = 30 through 100 rows are Born-clean, k=0-clean, MI/decoherence-positive, and gravity-positive, and fit 1 - pur_cl ~= 1.0467 * N^-0.222 with R^2 = 0.9683.  _(class `C`)_
 - **chain closes:** True — The live artifact reproduces the N sweep, canonical N=40 row, retained/all-row purity fits, retention counts, and bounded retained-window interpretation from the source note.
 - **rationale:** The runner recomputes the load-bearing table: N=30 through 100 are retained, all seven rows are Born-clean and positive-gravity, and the retained-row purity-complement fit matches the source coefficient, exponent, and R^2. The note correctly treats the result as a bounded scaling law on the tested weak-field pocket, with N=20 excluded and no universal/asymptotic lattice theorem claimed. The runner's final 'PROMOTED' line is clean only under that bounded retained-window meaning.
+- **auditor confidence:** high
+
+### `lensing_adjoint_kernel_reduced_model_note`
+
+- **Note:** [`LENSING_ADJOINT_KERNEL_REDUCED_MODEL_NOTE.md`](../../docs/LENSING_ADJOINT_KERNEL_REDUCED_MODEL_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The one-term-per-layer reduction fails badly while the exact edge replay matches the first-order observable at the stated H=0.35 setup.  _(class `C`)_
+- **chain closes:** True — The source makes only a bounded negative claim about the first reduced surrogate. The live H=0.35 runner reproduces the archived exact-edge/full-harness spot-check and the layer_signed/layer_abs failures against the exact edge series, with no cited dependencies needed.
+- **rationale:** The retained content is a bounded negative inside the stated harness, not a derivation of the reference lensing slope or a continuum physics claim. The live runner with --h 0.35 reproduces true_kubo=+5.972756 and exact_edge=+5.972756 at b=3 with |Delta|=4.228e-13, then shows the signed and absolute one-term-per-layer reductions miss the b=3..6 exact-edge series by about 98-100%. Because the note explicitly keeps the exact edge factorization as the reference object and rejects only the first reduced surrogate, the claim closes on its own terms.
 - **auditor confidence:** high
 
 ### `lensing_beta_sweep_note`
