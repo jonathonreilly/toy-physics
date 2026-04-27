@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T16:29:40.168301+00:00
+**Generated:** 2026-04-27T16:32:11.622529+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 60 |
-| _proposed_retained_ | 90 |
+| _proposed_retained_ | 89 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 319 |
+| ~~audited_conditional~~ | 320 |
 | ~~audited_failed~~ | 112 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 60 |
-| `audited_conditional` | 106 |
+| `audited_conditional` | 107 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1389 |
+| `unaudited` | 1388 |
 
 | criticality | count |
 |---|---:|
@@ -244,6 +244,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_hw1_source_transfer_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `pmns_selector_three_identity_support_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | G | - |
 | `poisson_3d_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `poisson_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `sign_portability_invariant_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `staggered_backreaction_shell_spectral_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -3279,6 +3280,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: The note treats the imposed 3D Poisson equation, delta-source normalization, finite-boundary solve, and static field as if they were derived scalar-field consequences of the model's axiom set. Why this blocks: the live runner verifies a finite computation after those choices are supplied, but it does not derive the Poisson law, source carrier, boundary conditions, normalization, or convergence theorem needed for retained field-derivation language. Repair target: prove or cite a retained theorem deriving the static Poisson equation and source/boundary normalization from the framework, add convergence/residual checks for the finite solve, and separate the computed finite Green-field response from the physical field-law claim. Claim boundary until fixed: it is safe to claim that, on the tested finite lattice and families, a chosen 6-point 3D Poisson stencil removes the explicit longitudinal 1/(dx+0.1) factor and reproduces TOWARD response, near-linear F versus M, Born preservation, and the s=0 null; it is not safe to claim the scalar field or 1/r law is retained as an axiom-derived theorem.
 - **open / conditional deps cited:**
   - `POISSON_SELF_FIELD_NOTE.md`
+  - `GATE_B_POISSON_SELF_GRAVITY_NOTE.md`
+- **auditor confidence:** high
+
+### `poisson_self_field_note`
+
+- **Note:** [`POISSON_SELF_FIELD_NOTE.md`](../../docs/POISSON_SELF_FIELD_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The model's transverse field is no longer an input because it is a consequence of a local 2D Poisson PDE on each layer, while the longitudinal axis remains imposed.  _(class `C`)_
+- **chain closes:** False — The live runner reproduces the finite Poisson-branch response, but the 2D Poisson equation, source normalization, boundary solve, and explicit 1/(dx+0.1) longitudinal factor are still supplied inputs rather than retained derivations.
+- **rationale:** Issue: The note presents the transverse profile as derived from a local equation, but the local 2D Poisson equation, source normalization, boundary conditions, iteration budget, and the longitudinal 1/(dx+0.1) factor are still chosen inputs. Why this blocks: the live runner verifies a finite Poisson-branch computation after those premises are supplied, but it does not derive the field law or source carrier from retained framework structure, so the retained derivation claim is conditional. Repair target: derive or cite a retained theorem for the Poisson equation and source/boundary normalization, remove the explicit longitudinal factor or prove its retained origin, and add convergence/residual checks for the solver. Claim boundary until fixed: it is safe to claim that the tested runner replaces the transverse imposed profile with a chosen 2D Poisson stencil while preserving TOWARD response, near-linear F versus M, Born behavior, and the s=0 null; it is not safe to claim the gravitational field is retained as an axiom-derived consequence.
+- **open / conditional deps cited:**
   - `GATE_B_POISSON_SELF_GRAVITY_NOTE.md`
 - **auditor confidence:** high
 

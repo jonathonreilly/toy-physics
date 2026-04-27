@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 89,
     "high": 508,
-    "leaf": 713,
+    "leaf": 712,
     "medium": 82
   },
-  "generated_at": "2026-04-27T16:29:40.015108+00:00",
+  "generated_at": "2026-04-27T16:32:11.480257+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -22919,23 +22919,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "poisson_self_field_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/POISSON_SELF_FIELD_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "poisson_self_gravity_born_audit_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -28483,6 +28466,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 979,
-  "total_pending": 1392
+  "ready_count": 978,
+  "total_pending": 1391
 }
