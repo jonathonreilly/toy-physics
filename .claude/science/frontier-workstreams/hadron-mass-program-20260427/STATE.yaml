@@ -1,0 +1,41 @@
+slug: hadron-mass-program-20260427
+goal: "retain hadron masses (m_p, m_n, m_pi initially; spectroscopy + form factors later); reduce Lane 1 to a sharp theorem plan using current confinement, alpha_s running, and Lane 3 quark-mass dependencies"
+target_status: best-honest-status
+mode: run
+runtime: 12h
+start_time_utc: "2026-04-27T05:00:00Z"
+checkpoint_interval: 30m
+branch: frontier/hadron-mass-program-20260427
+base: origin/main
+base_commit_at_start: "current origin/main HEAD (6ccbd4e5 / 6fa585cd at fetch)"
+lock_status: unavailable
+lock_note: "scripts/automation_lock.py hardcodes /Users/jonreilly/Projects/Physics paths; this worktree is on /Users/jonBridger. Skipping cooperative lock per skill optionality."
+current_phase: grounding
+cycles_completed: 0
+active_route: null
+files_touched:
+  - .claude/science/frontier-workstreams/hadron-mass-program-20260427/STATE.yaml
+  - .claude/science/frontier-workstreams/hadron-mass-program-20260427/GOAL.md
+  - .claude/science/frontier-workstreams/hadron-mass-program-20260427/ASSUMPTIONS_AND_IMPORTS.md
+  - .claude/science/frontier-workstreams/hadron-mass-program-20260427/NO_GO_LEDGER.md
+  - .claude/science/frontier-workstreams/hadron-mass-program-20260427/ROUTE_PORTFOLIO.md
+  - .claude/science/frontier-workstreams/hadron-mass-program-20260427/ARTIFACT_PLAN.md
+  - .claude/science/frontier-workstreams/hadron-mass-program-20260427/LITERATURE_BRIDGES.md
+  - .claude/science/frontier-workstreams/hadron-mass-program-20260427/REVIEW_HISTORY.md
+  - .claude/science/frontier-workstreams/hadron-mass-program-20260427/HANDOFF.md
+open_imports:
+  - "PDG quark masses (m_u, m_d, m_s, m_c, m_b) — Lane 3 dependency"
+  - "alpha_s at hadronic scale (~1 GeV) — running bridge from retained alpha_s(M_Z)"
+  - "chiral condensate Sigma — derivable from staggered-Dirac partition; not yet retained"
+  - "pion decay constant f_pi — derivable from chiral SB pattern; not yet retained"
+  - "PDG hadron mass values (m_p, m_n, m_pi, m_K, m_rho, ...) — comparators only"
+  - "standard lattice QCD methodology (Wilson/staggered actions; admitted convention)"
+no_go_routes_inherited:
+  - "BH entropy / RT ratio Widom no-go (BH_ENTROPY_RT_RATIO_WIDOM_NO_GO_NOTE) — bounded carrier reaches c_Widom ~ 1/6, not 1/4"
+  - "Area-law multipocket selector / primitive-edge entropy / algebraic-spectrum no-gos (relevant only insofar as they touch the Planck-scale program; not load-bearing for hadron masses)"
+no_go_routes_proven_in_workstream: []
+review_findings: []
+artifacts_landed: []
+claim_state_movement: []
+next_exact_action: "Execute Cycle 1 on Route R2 (Lane 3 dependency audit + Lane 1 theorem plan): per the lane file's 'first parallel-worker target', author a structural plan note that maps Lane 1 closure onto current confinement, alpha_s running, and Lane 3 quark-mass dependencies. Identifies what Lane 3 must land before Phase-1 (m_pi via GMOR; sqrt(sigma) retained promotion) can proceed."
+stop_condition: "runtime budget (12h) reached, max cycles, blocker requiring human science judgment, or honest claim-state closure achieved"
