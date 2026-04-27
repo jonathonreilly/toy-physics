@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T20:06:51.829038+00:00
+**Generated:** 2026-04-27T21:37:46.650303+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 72 |
-| _proposed_retained_ | 13 |
+| _proposed_retained_ | 12 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 6 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 356 |
+| ~~audited_conditional~~ | 357 |
 | ~~audited_failed~~ | 139 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 72 |
-| `audited_conditional` | 143 |
+| `audited_conditional` | 144 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 72 |
 | `audited_numerical_match` | 6 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1312 |
+| `unaudited` | 1311 |
 
 | criticality | count |
 |---|---:|
@@ -313,6 +313,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_p1_delta_r_master_assembly_theorem_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_p1_delta_r_sm_rge_crosscheck_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `yt_p1_i_s_lattice_pt_citation_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
@@ -4990,6 +4991,26 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md`
   - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
 - **auditor confidence:** 0.91
+
+### `yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17`
+
+- **Note:** [`YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`](../../docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note subtracts the Rep-A and Rep-B one-loop contribution catalogs, asserts I_v_scalar != I_v_gauge and nonzero I_SE/generic channel coefficients on the canonical lattice surface, then concludes definitive partial cancellation and retains the operational P1 budget.  _(class `B`)_
+- **chain closes:** False — The algebraic subtraction and exact Z_psi cancellation close only after accepting the contribution catalog, scalar-density anomalous-dimension map, sign conventions, and generic nonzero BZ-integral assumptions. The runner checks color arithmetic, the subtraction formula, and representative scenarios; it does not compute the canonical lattice BZ integrals or prove the nonzero/nonidentity claims for the actual surface.
+- **rationale:** Issue: the definitive partial-cancellation/P1-budget claim depends on unproved canonical-surface inputs: the Rep-A/Rep-B one-loop diagram catalog and signs, the MSbar scalar-density anomalous-dimension map into H_unit, and the assumptions I_v_scalar != I_v_gauge and I_SE/non-Abelian channels are nonzero rather than accidentally satisfying the cancellation identities. Why this blocks: the runner only samples representative BZ values and verifies arithmetic; it does not derive the lattice Feynman rules or compute the actual BZ coefficients, so a hostile reader can reject the claim that full cancellation is ruled out and that the cited P1 bracket is operationally retained for the real canonical surface. Repair target: derive the one-loop Rep-A/Rep-B lattice Feynman rules for C1+C2, prove the H_unit/MSbar scalar-density renormalization map and sign convention, then compute or rigorously bound I_v_scalar, I_v_gauge, I_SE, and I_leg enough to prove Delta_1, Delta_2, Delta_3 do not enforce full cancellation. Claim boundary until fixed: safe to claim the conditional color-channel formula and exact external-Z_psi cancellation if the contribution catalog is accepted; not safe to claim definitive canonical-surface partial cancellation or a retained P1 central/budget conclusion.
+- **open / conditional deps cited:**
+  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
+  - `YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
+  - `YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md`
+  - `YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md`
+  - `scripts/frontier_yt_p1_i1_lattice_pt_symbolic.py`
+  - `scripts/canonical_plaquette_surface.py`
+  - `missing framework-native BZ evaluation for I_v_scalar, I_v_gauge, I_SE, I_leg`
+- **auditor confidence:** 0.87
 
 ### `yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17`
 

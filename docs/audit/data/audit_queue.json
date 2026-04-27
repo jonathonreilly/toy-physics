@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 89,
     "high": 508,
-    "leaf": 636,
+    "leaf": 635,
     "medium": 82
   },
-  "generated_at": "2026-04-27T20:06:51.683592+00:00",
+  "generated_at": "2026-04-27T21:37:46.482988+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -25185,23 +25185,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_yt_p1_rep_ab_cancellation.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -27174,6 +27157,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 902,
-  "total_pending": 1315
+  "ready_count": 901,
+  "total_pending": 1314
 }
