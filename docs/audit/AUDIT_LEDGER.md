@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T18:50:11.219690+00:00
+**Generated:** 2026-04-27T18:55:55.360205+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 63 |
-| _proposed_retained_ | 37 |
+| _proposed_retained_ | 36 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
 | ~~audited_conditional~~ | 345 |
-| ~~audited_failed~~ | 136 |
+| ~~audited_failed~~ | 137 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 63 |
 | `audited_conditional` | 132 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 69 |
+| `audited_failed` | 70 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1336 |
+| `unaudited` | 1335 |
 
 | criticality | count |
 |---|---:|
@@ -366,6 +366,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `testable_predictions_map_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `three_family_card_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `triage_no_promotion_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `unified_basin_freeze_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `bell_inequality_derived_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -4316,6 +4317,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `GROWN_TRANSFER_BASIN_NOTE.md`
   - `EARLY_FAMILY_TRANSFER_CONNECTIVITY_DIAGNOSIS.md`
+- **auditor confidence:** high
+
+### `unified_basin_freeze_note`
+
+- **Note:** [`UNIFIED_BASIN_FREEZE_NOTE.md`](../../docs/UNIFIED_BASIN_FREEZE_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** One retained grown connectivity family supports both signed-source and complex-action couplings across a small nearby basin, with exact zero and neutral controls passing cleanly.  _(class `B`)_
+- **chain closes:** False — The signed-source basin replay passes, but the complex-action evidence is a fixed-row kernel-vs-gravity comparison rather than the same nearby basin, and the actual fixed-field complex grown basin runner reports 0/2 exact gamma=0/Born survivors.
+- **rationale:** Issue: The note combines two different surfaces as one unified basin: NONLABEL_GROWN_BASIN_TARGETED still gives 3/3 signed-source rows with exact zero/neutral controls, but complex_action_kernel_vs_gravity is a fixed-row kernel/generic-vs-gravity separation test, not a nearby basin; the actual FIXED_FIELD_COMPLEX_GROWN_BASIN runner gives exact gamma=0 + Born proxy survivors 0/2. Why this blocks: the claim that one grown connectivity family supports both couplings across a small nearby basin with exact controls is not computed by the supplied runners and is contradicted by the available complex-basin runner. Repair target: provide a single unified runner over the same drift/restore neighborhood and seed set, with explicit zero/neutral/gamma=0/Born assertions for both coupling surfaces, or split the note into separate retained/failed components. Claim boundary until fixed: safe to claim the signed-source non-label basin currently passes 3/3 at restore 0.60/0.70/0.80, and the kernel-vs-gravity fixed-row runner separates absorption from gravity-specific deflection; not safe to claim a unified two-coupling basin.
+- **open / conditional deps cited:**
+  - `KERNEL_VS_GRAVITY_NOTE.md`
 - **auditor confidence:** high
 
 ### `unpromoted_branch_retainability_audit_note`

@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T18:50:11.034345+00:00",
-  "generated_at": "2026-04-27T18:50:09.448542+00:00",
-  "invalidation_run_at": "2026-04-27T18:50:10.984414+00:00",
+  "effective_status_computed_at": "2026-04-27T18:55:55.174509+00:00",
+  "generated_at": "2026-04-27T18:55:53.590243+00:00",
+  "invalidation_run_at": "2026-04-27T18:55:55.128011+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T18:50:10.888261+00:00",
+  "load_bearing_computed_at": "2026-04-27T18:55:55.032904+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -74971,14 +74971,21 @@
       "verdict_rationale": null
     },
     "unified_basin_freeze_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The signed-source basin replay passes, but the complex-action evidence is a fixed-row kernel-vs-gravity comparison rather than the same nearby basin, and the actual fixed-field complex grown basin runner reports 0/2 exact gamma=0/Born survivors.",
       "claim_id": "unified_basin_freeze_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -74986,18 +74993,20 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "One retained grown connectivity family supports both signed-source and complex-action couplings across a small nearby basin, with exact zero and neutral controls passing cleanly.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "fb7d2f488bc87b861c194c18bf129ce4e222e994d3a01b94c53c9dc1b482f12a",
       "note_path": "docs/UNIFIED_BASIN_FREEZE_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/KERNEL_VS_GRAVITY_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369967+00:00",
@@ -75028,14 +75037,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 3,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 3
       },
       "runner_path": null,
       "title": "Unified Basin Freeze: Both Basins Pass Zero/Neutral Controls",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The note combines two different surfaces as one unified basin: NONLABEL_GROWN_BASIN_TARGETED still gives 3/3 signed-source rows with exact zero/neutral controls, but complex_action_kernel_vs_gravity is a fixed-row kernel/generic-vs-gravity separation test, not a nearby basin; the actual FIXED_FIELD_COMPLEX_GROWN_BASIN runner gives exact gamma=0 + Born proxy survivors 0/2. Why this blocks: the claim that one grown connectivity family supports both couplings across a small nearby basin with exact controls is not computed by the supplied runners and is contradicted by the available complex-basin runner. Repair target: provide a single unified runner over the same drift/restore neighborhood and seed set, with explicit zero/neutral/gamma=0/Born assertions for both coupling surfaces, or split the note into separate retained/failed components. Claim boundary until fixed: safe to claim the signed-source non-label basin currently passes 3/3 at restore 0.60/0.70/0.80, and the kernel-vs-gravity fixed-row runner separates absorption from gravity-specific deflection; not safe to claim a unified two-coupling basin."
     },
     "unified_program_note": {
       "audit_date": null,
