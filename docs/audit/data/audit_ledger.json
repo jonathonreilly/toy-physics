@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T08:59:42.910968+00:00",
-  "generated_at": "2026-04-27T08:59:40.656794+00:00",
-  "invalidation_run_at": "2026-04-27T08:59:42.790934+00:00",
+  "effective_status_computed_at": "2026-04-27T09:03:14.947591+00:00",
+  "generated_at": "2026-04-27T09:03:13.064235+00:00",
+  "invalidation_run_at": "2026-04-27T09:03:14.884804+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T08:59:42.615956+00:00",
+  "load_bearing_computed_at": "2026-04-27T09:03:14.734434+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -6860,14 +6860,21 @@
       "verdict_rationale": null
     },
     "broad_surrogate_point_source_compare_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The finite broad-vs-point comparison itself replays cleanly, but the source note is explicitly a bounded interpretive diagnostic resting on unregistered ordered-lattice and quasi-persistent relaunch controls, not a standalone retained theorem or persistent-mass claim.",
       "claim_id": "broad_surrogate_point_source_compare_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -6875,18 +6882,24 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note's load-bearing diagnostic claim is that, on the retained h=0.5, W=8, L=12 ordered-lattice family, the broad surrogate and equivalent-centroid point source give effectively identical probe-packet responses, with max TV distance 0.000051.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "6cd32bbf21c45c4df25ed323bc91e6b091f0139dbb52b1d7c1b814702fc96dc6",
       "note_path": "docs/BROAD_SURROGATE_POINT_SOURCE_COMPARE_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/ORDERED_LATTICE_PACKET_REIDENTIFICATION_NOTE.md",
+        "docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_NOTE.md",
+        "docs/ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_2D_NOTE.md",
+        "docs/QUASI_PERSISTENT_RELAUNCH_PROBE_NOTE.md",
+        "scripts/broad_surrogate_point_source_compare.py_not_registered_as_runner_path"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.367671+00:00",
@@ -6917,14 +6930,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 5,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 5
       },
       "runner_path": null,
       "title": "Broad Surrogate Point Source Compare Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the runner cleanly verifies the five-probe broad-source versus point-source diagnostic, but the source row is only a bounded interpretive diagnostic on an upstream proposed/bounded ordered-lattice surrogate lane and has no registered dependencies for those carrier and relaunch controls. Why this blocks: a hostile physicist can accept max TV distance 0.000051 for the scripted probes without accepting a retained persistent-mass, inertial-response, or geometry-generic theorem, because the source itself says it compares two source representations rather than producing a self-maintaining object. Repair target: either demote/register this row as bounded support, or register the ordered-lattice packet reidentification and quasi-persistent relaunch notes as dependencies and state an explicit retained proposition with threshold, scale, probe-grid, and upstream carrier statuses. Claim boundary until fixed: it is safe to claim that the live runner reproduces the finite h=0.5, W=8, L=12 diagnostic in which the broad surrogate and centroid point source have max TV distance 5.1e-5 over probes z=0, +/-1, +/-2; it is not safe to retain more than that diagnostic."
     },
     "broken_graph_action_power_robustness_note": {
       "audit_date": null,

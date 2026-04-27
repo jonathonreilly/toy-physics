@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T08:59:43.565732+00:00
+**Generated:** 2026-04-27T09:03:15.214084+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 17 |
-| _proposed_retained_ | 200 |
+| _proposed_retained_ | 199 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
-| ~~audited_conditional~~ | 277 |
+| ~~audited_conditional~~ | 278 |
 | ~~audited_failed~~ | 79 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 17 |
-| `audited_conditional` | 66 |
+| `audited_conditional` | 67 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 12 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1495 |
+| `unaudited` | 1494 |
 
 | criticality | count |
 |---|---:|
@@ -119,6 +119,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `area_law_quarter_broader_no_go_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `broad_surrogate_point_source_compare_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `causal_field_canonical_chain_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `complex_action_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `confinement_string_tension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -350,6 +351,24 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `retained_multi_species_matter_content_not_registered_one_hop`
   - `D5_periodic_Poisson_coupling_not_registered_one_hop`
   - `physical_G_normalization_and_continuum_limit_not_derived`
+- **auditor confidence:** high
+
+### `broad_surrogate_point_source_compare_note`
+
+- **Note:** [`BROAD_SURROGATE_POINT_SOURCE_COMPARE_NOTE.md`](../../docs/BROAD_SURROGATE_POINT_SOURCE_COMPARE_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note's load-bearing diagnostic claim is that, on the retained h=0.5, W=8, L=12 ordered-lattice family, the broad surrogate and equivalent-centroid point source give effectively identical probe-packet responses, with max TV distance 0.000051.  _(class `C`)_
+- **chain closes:** False — The finite broad-vs-point comparison itself replays cleanly, but the source note is explicitly a bounded interpretive diagnostic resting on unregistered ordered-lattice and quasi-persistent relaunch controls, not a standalone retained theorem or persistent-mass claim.
+- **rationale:** Issue: the runner cleanly verifies the five-probe broad-source versus point-source diagnostic, but the source row is only a bounded interpretive diagnostic on an upstream proposed/bounded ordered-lattice surrogate lane and has no registered dependencies for those carrier and relaunch controls. Why this blocks: a hostile physicist can accept max TV distance 0.000051 for the scripted probes without accepting a retained persistent-mass, inertial-response, or geometry-generic theorem, because the source itself says it compares two source representations rather than producing a self-maintaining object. Repair target: either demote/register this row as bounded support, or register the ordered-lattice packet reidentification and quasi-persistent relaunch notes as dependencies and state an explicit retained proposition with threshold, scale, probe-grid, and upstream carrier statuses. Claim boundary until fixed: it is safe to claim that the live runner reproduces the finite h=0.5, W=8, L=12 diagnostic in which the broad surrogate and centroid point source have max TV distance 5.1e-5 over probes z=0, +/-1, +/-2; it is not safe to retain more than that diagnostic.
+- **open / conditional deps cited:**
+  - `ORDERED_LATTICE_PACKET_REIDENTIFICATION_NOTE.md`
+  - `ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_NOTE.md`
+  - `ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_2D_NOTE.md`
+  - `QUASI_PERSISTENT_RELAUNCH_PROBE_NOTE.md`
+  - `scripts/broad_surrogate_point_source_compare.py_not_registered_as_runner_path`
 - **auditor confidence:** high
 
 ### `causal_field_canonical_chain_note`
