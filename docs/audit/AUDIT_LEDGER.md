@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T21:56:01.172303+00:00
+**Generated:** 2026-04-27T21:59:24.857244+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 72 |
-| _proposed_retained_ | 23 |
+| _proposed_retained_ | 22 |
 | _proposed_promoted_ | 1 |
 | bounded | 185 |
 | support | 104 |
@@ -29,8 +29,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 166 |
-| ~~audited_failed~~ | 323 |
+| ~~audited_conditional~~ | 165 |
+| ~~audited_failed~~ | 325 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 72 |
 | `audited_conditional` | 135 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 70 |
+| `audited_failed` | 71 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1326 |
+| `unaudited` | 1325 |
 
 | criticality | count |
 |---|---:|
@@ -380,6 +380,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `triage_no_promotion_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `unified_basin_freeze_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `bell_inequality_derived_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ew_coupling_derivation_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -4804,3 +4805,17 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md_not_registered_one_hop_dependency`
   - `color_projection_and_CMT_endpoint_factorization_theorem_not_registered`
 - **auditor confidence:** high
+
+### `yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17`
+
+- **Note:** [`YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md`](../../docs/YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The remaining kinematic + Dirac-trace integral contributes a factor of 1 on shell in the alpha_s/pi convention, so K_1 = C_F.  _(class `B`)_
+- **chain closes:** False — The source note and runner verify the SU(3) Casimir arithmetic, but they do not derive or cite a retained theorem for the on-shell MSbar one-loop self-energy finite coefficient. The runner assigns K_1 = C_F before checking it, so the contested physics bridge is not computed.
+- **rationale:** Issue: the framework-native claim depends on the assertion that the non-color one-loop heavy-quark self-energy integral equals +1 in the alpha_s/pi MSbar-to-pole convention, but the note supplies no retained theorem or computation for that integral and the runner hard-codes K_1 = C_F. Why this blocks: C_F = 4/3 is only the color factor; the physical coefficient K_1 also requires the on-shell Dirac/kinematic integral, scheme convention, mass-renormalization subtraction, and sign normalization. Repair target: add a retained one-loop on-shell MSbar self-energy theorem or runner computation deriving the finite coefficient from the Feynman rules and renormalization convention, then multiply by the independently retained SU(3) Casimir. Claim boundary until fixed: safe to claim the exact SU(3) fundamental Casimir C_F = 4/3 and the arithmetic shift (4/3)(0.108/pi) = 4.58% if alpha_s(m_t)=0.108 is supplied; not safe to claim a framework-native derivation of the MSbar-to-pole K_1 coefficient.
+- **open / conditional deps cited:**
+  - `scripts/frontier_yt_p3_msbar_to_pole_k1.py`
+- **auditor confidence:** 0.94
