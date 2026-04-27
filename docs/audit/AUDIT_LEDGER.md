@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T09:47:13.858791+00:00
+**Generated:** 2026-04-27T09:50:56.637135+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 20 |
-| _proposed_retained_ | 190 |
+| _proposed_retained_ | 189 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 2 |
 | ~~audited_conditional~~ | 281 |
-| ~~audited_failed~~ | 81 |
+| ~~audited_failed~~ | 82 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 20 |
 | `audited_conditional` | 70 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 14 |
+| `audited_failed` | 15 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1485 |
+| `unaudited` | 1484 |
 
 | criticality | count |
 |---|---:|
@@ -199,6 +199,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `causal_propagating_field_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `clifford_bimodule_ray_saturation_future_target_note_2026-04-19` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | E | - |
 | `connectivity_family_v2_elliptical_duplicate_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `critical_exponents_topology_note_2026-04-10` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `equivalence_principle_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | G | - |
 | `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `lattice_3d_dense_spent_delay_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -664,6 +665,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md_not_registered_one_hop_dependency`
   - `flat_FRW_wLambda_minus_one_surface_is_admitted_not_independently_audited_here`
   - `matter_content_bridge_and_numerical_H_inf_over_H0_remain_open`
+- **auditor confidence:** high
+
+### `critical_exponents_topology_note_2026-04-10`
+
+- **Note:** [`CRITICAL_EXPONENTS_TOPOLOGY_NOTE_2026-04-10.md`](../../docs/CRITICAL_EXPONENTS_TOPOLOGY_NOTE_2026-04-10.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note's load-bearing finite-size scout claim is the current-output table of fitted G_crit and beta values across graph topologies, used as evidence for topology-dependent localization-onset behavior.  _(class `C`)_
+- **chain closes:** False — The live runner no longer reproduces the source note's table: random_geometric_s8 and both causal-DAG rows are now degenerate, and the fitted G_crit/beta values for the remaining rows differ from the note.
+- **rationale:** Issue: the source note's current-output table is stale relative to scripts/frontier_critical_exponents.py; the live output gives random_geometric_s8 degenerate at G_crit=1.0, random_geometric_s10 beta=0.7328 at G_crit=2.0, growing_n64 beta=0.3675 at G_crit=14.0, layered_cycle_8x8 beta=0.3348 at G_crit=5.0, and both causal-DAG rows degenerate. Why this blocks: a hostile physicist cannot retain the note's specific beta table or six-family interpretation when half the current rows are degenerate and the fit values have changed. Repair target: update the note to the live runner output, fix the runner path registration to scripts/frontier_critical_exponents.py, add assertions for fit/degenerate acceptance criteria, and rerun any intended multi-size or multi-seed checks before promoting topology-dependence beyond a scout. Claim boundary until fixed: it is safe to say the current runner is a finite-size scout with three nondegenerate fits whose beta values differ across topology labels; it is not safe to retain the stale table or any universality-class inference.
+- **open / conditional deps cited:**
+  - `source_note_table_stale_against_live_runner`
+  - `runner_path_registered_without_scripts_prefix`
+  - `three_of_six_live_rows_degenerate`
+  - `finite_size_scaling_and_multiseed_robustness_open`
 - **auditor confidence:** high
 
 ### `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21`

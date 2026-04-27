@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T09:47:13.582744+00:00",
-  "generated_at": "2026-04-27T09:47:11.664117+00:00",
-  "invalidation_run_at": "2026-04-27T09:47:13.510788+00:00",
+  "effective_status_computed_at": "2026-04-27T09:50:56.364648+00:00",
+  "generated_at": "2026-04-27T09:50:54.421362+00:00",
+  "invalidation_run_at": "2026-04-27T09:50:56.290225+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T09:47:13.360565+00:00",
+  "load_bearing_computed_at": "2026-04-27T09:50:56.154419+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -13846,14 +13846,21 @@
       "verdict_rationale": null
     },
     "critical_exponents_topology_note_2026-04-10": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner no longer reproduces the source note's table: random_geometric_s8 and both causal-DAG rows are now degenerate, and the fitted G_crit/beta values for the remaining rows differ from the note.",
       "claim_id": "critical_exponents_topology_note_2026-04-10",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -13861,18 +13868,23 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note's load-bearing finite-size scout claim is the current-output table of fitted G_crit and beta values across graph topologies, used as evidence for topology-dependent localization-onset behavior.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "3b812e95feb91a13491d6817dbdf70c54e07c0be42f6265d47aa870c0e6af720",
       "note_path": "docs/CRITICAL_EXPONENTS_TOPOLOGY_NOTE_2026-04-10.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "source_note_table_stale_against_live_runner",
+        "runner_path_registered_without_scripts_prefix",
+        "three_of_six_live_rows_degenerate",
+        "finite_size_scaling_and_multiseed_robustness_open"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.367989+00:00",
@@ -13928,14 +13940,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 3,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 3
       },
       "runner_path": "frontier_critical_exponents.py",
       "title": "Critical Exponents vs Topology",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the source note's current-output table is stale relative to scripts/frontier_critical_exponents.py; the live output gives random_geometric_s8 degenerate at G_crit=1.0, random_geometric_s10 beta=0.7328 at G_crit=2.0, growing_n64 beta=0.3675 at G_crit=14.0, layered_cycle_8x8 beta=0.3348 at G_crit=5.0, and both causal-DAG rows degenerate. Why this blocks: a hostile physicist cannot retain the note's specific beta table or six-family interpretation when half the current rows are degenerate and the fit values have changed. Repair target: update the note to the live runner output, fix the runner path registration to scripts/frontier_critical_exponents.py, add assertions for fit/degenerate acceptance criteria, and rerun any intended multi-size or multi-seed checks before promoting topology-dependence beyond a scout. Claim boundary until fixed: it is safe to say the current runner is a finite-size scout with three nondegenerate fits whose beta values differ across topology labels; it is not safe to retain the stale table or any universality-class inference."
     },
     "cross_family_universality_note": {
       "audit_date": null,
