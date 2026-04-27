@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T02:55:10.502374+00:00
+**Generated:** 2026-04-27T03:00:50.081491+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,7 +19,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| _proposed_retained_ | 305 |
+| _proposed_retained_ | 301 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
@@ -27,15 +27,15 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | unknown | 739 |
 | ~~audited_decoration~~ | 1 |
 | ~~audited_numerical_match~~ | 1 |
-| ~~audited_conditional~~ | 252 |
+| ~~audited_conditional~~ | 256 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_conditional` | 5 |
+| `audited_conditional` | 6 |
 | `audited_decoration` | 1 |
 | `audited_numerical_match` | 1 |
-| `unaudited` | 1591 |
+| `unaudited` | 1590 |
 
 | criticality | count |
 |---|---:|
@@ -44,7 +44,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 85 |
 | `leaf` | 856 |
 
-- **Proposed claims demoted by upstream:** 124
+- **Proposed claims demoted by upstream:** 127
 - **Citation cycles detected:** 283
 
 ### Runner classification (static heuristic)
@@ -96,6 +96,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `s3_mass_matrix_no_go_note` | _proposed_retained_ | audit_in_progress | _proposed_retained_ | - | - | - | - |
 | `confinement_string_tension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_neutrino_schur_suppression_theorem_note_2026-04-15` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `linear_response_true_kubo_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `native_gauge_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `neutrino_dirac_z3_support_trichotomy_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_ew_color_projection_theorem` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
@@ -168,6 +169,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `gamma_1_direct_bridge_dependency_not_registered`
   - `bosonic_normalization_dependency_not_registered`
   - `dm_staircase_relation_dependency_not_registered`
+- **auditor confidence:** high
+
+### `linear_response_true_kubo_note`
+
+- **Note:** [`LINEAR_RESPONSE_TRUE_KUBO_NOTE.md`](../../docs/LINEAR_RESPONSE_TRUE_KUBO_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The first-order recurrence gives d(cz)/ds = (1/T) sum_j (z_j - cz_free) 2 Re[A_j* B_j], and the note asserts that this derivative matches measured finite-difference responses across 44 families with r=0.9716 overall, r=0.9995 off-scaffold, and 42/44 sign agreement.  _(class `A`)_
+- **chain closes:** False — The algebraic first-order recurrence can be read from the note, but the empirical 44-family finite-difference comparison is not reproducible from registered audit evidence because the ledger has no primary runner or runner output for this claim.
+- **rationale:** Issue: the source note gives a plausible first-order derivative recurrence for the specified propagator and field, but the retained claim rests on a 44-family empirical finite-difference comparison and sign-agreement battery for which the audit packet has no registered primary runner, deterministic output, or ledger-recognized log. The note names scripts/linear_response_true_kubo.py and a log, but the ledger/queue runner_path is null, so those artifacts are not available as the registered primary evidence for this audit. Why this blocks the claim: Nature-grade retention requires the stated r=0.9716 overall, r=0.9995 off-scaffold, 42/44 sign agreement, and edge-case corrections to be reproducible from registered evidence; the analytic recurrence alone does not verify that the implementation computed the same derivative, used the claimed 44 families, compared against the finite-difference battery correctly, or supports the broad compact-principle interpretation. Repair target: register scripts/linear_response_true_kubo.py as the claim's primary runner, include or regenerate the deterministic 44-family dataset/log, and make the runner independently check both the recurrence derivative and the finite-difference comparison with exact thresholds for the reported correlations, sign counts, scaffold exclusions, and residual sign cases. Claim boundary until fixed: it is safe to claim a conditional first-order response formula for the specified propagator/field, subject to the derivation assumptions in the note; the 44-family correlation/sign-agreement result is unratified numerical support, not a retained physical theorem or retained compact-principle explanation.
+- **open / conditional deps cited:**
+  - `runner_not_registered_for_linear_response_true_kubo_note`
+  - `logs/2026-04-07-linear-response-true-kubo.txt_not_registered_primary_output`
 - **auditor confidence:** high
 
 ### `native_gauge_closure_note`

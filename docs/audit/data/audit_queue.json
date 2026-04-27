@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 88,
-    "high": 565,
+    "high": 564,
     "leaf": 856,
     "medium": 85
   },
-  "generated_at": "2026-04-27T02:55:10.324691+00:00",
+  "generated_at": "2026-04-27T03:00:49.870939+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -2840,23 +2840,6 @@
       "audit_independence_required": "cross_family",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "linear_response_true_kubo_note",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 3,
-      "load_bearing_score": 12.431,
-      "note_path": "docs/LINEAR_RESPONSE_TRUE_KUBO_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 121
-    },
-    {
-      "audit_independence_required": "cross_family",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "planck_target3_clifford_phase_bridge_theorem_note_2026-04-25",
       "criticality": "high",
       "criticality_rank": 2,
@@ -3263,26 +3246,6 @@
       "note_path": "docs/CL3_COLOR_AUTOMORPHISM_THEOREM.md",
       "ready": true,
       "runner_path": "scripts/verify_cl3_sm_embedding.py",
-      "transitive_descendants": 119
-    },
-    {
-      "audit_independence_required": "cross_family",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "kubo_continuum_limit_note",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "wave_retardation_continuum_limit_note",
-        "linear_response_true_kubo_note"
-      ],
-      "direct_in_degree": 2,
-      "load_bearing_score": 11.907,
-      "note_path": "docs/KUBO_CONTINUUM_LIMIT_NOTE.md",
-      "ready": true,
-      "runner_path": null,
       "transitive_descendants": 119
     },
     {
@@ -7319,25 +7282,6 @@
       "audit_independence_required": "cross_family",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "kubo_range_of_validity_note",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "linear_response_true_kubo_note"
-      ],
-      "direct_in_degree": 1,
-      "load_bearing_score": 7.383,
-      "note_path": "docs/KUBO_RANGE_OF_VALIDITY_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 117
-    },
-    {
-      "audit_independence_required": "cross_family",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "lattice_complementarity_note",
       "criticality": "high",
       "criticality_rank": 2,
@@ -9651,6 +9595,26 @@
       "audit_independence_required": "cross_family",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "kubo_continuum_limit_note",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "wave_retardation_continuum_limit_note",
+        "linear_response_true_kubo_note"
+      ],
+      "direct_in_degree": 2,
+      "load_bearing_score": 11.907,
+      "note_path": "docs/KUBO_CONTINUUM_LIMIT_NOTE.md",
+      "ready": false,
+      "runner_path": null,
+      "transitive_descendants": 119
+    },
+    {
+      "audit_independence_required": "cross_family",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "koide_gamma_axis_covariant_full_cube_orbit_law_note_2026-04-18",
       "criticality": "high",
       "criticality_rank": 2,
@@ -10912,6 +10876,25 @@
       "note_path": "docs/DM_WILSON_TO_DWEH_STRUCTURED_MODEL_REALIZATION_THEOREM_NOTE_2026-04-18.md",
       "ready": false,
       "runner_path": "scripts/frontier_dm_wilson_to_dweh_structured_model_realization_theorem_2026_04_18.py",
+      "transitive_descendants": 117
+    },
+    {
+      "audit_independence_required": "cross_family",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "kubo_range_of_validity_note",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "linear_response_true_kubo_note"
+      ],
+      "direct_in_degree": 1,
+      "load_bearing_score": 7.383,
+      "note_path": "docs/KUBO_RANGE_OF_VALIDITY_NOTE.md",
+      "ready": false,
+      "runner_path": null,
       "transitive_descendants": 117
     },
     {
@@ -17677,45 +17660,6 @@
       "direct_in_degree": 1,
       "load_bearing_score": 5.5,
       "note_path": "docs/INDEPENDENT_GENERATORS_HELDOUT_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "kubo_continuum_limit_families_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "kubo_fam2_refinement_note",
-        "kubo_continuum_limit_note"
-      ],
-      "direct_in_degree": 1,
-      "load_bearing_score": 5.5,
-      "note_path": "docs/KUBO_CONTINUUM_LIMIT_FAMILIES_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "kubo_fam2_refinement_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "kubo_continuum_limit_families_note"
-      ],
-      "direct_in_degree": 1,
-      "load_bearing_score": 5.5,
-      "note_path": "docs/KUBO_FAM2_REFINEMENT_NOTE.md",
       "ready": true,
       "runner_path": null,
       "transitive_descendants": 1
@@ -30563,6 +30507,45 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "kubo_continuum_limit_families_note",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "kubo_fam2_refinement_note",
+        "kubo_continuum_limit_note"
+      ],
+      "direct_in_degree": 1,
+      "load_bearing_score": 5.5,
+      "note_path": "docs/KUBO_CONTINUUM_LIMIT_FAMILIES_NOTE.md",
+      "ready": false,
+      "runner_path": null,
+      "transitive_descendants": 1
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "kubo_fam2_refinement_note",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "kubo_continuum_limit_families_note"
+      ],
+      "direct_in_degree": 1,
+      "load_bearing_score": 5.5,
+      "note_path": "docs/KUBO_FAM2_REFINEMENT_NOTE.md",
+      "ready": false,
+      "runner_path": null,
+      "transitive_descendants": 1
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "branch_entanglement_robustness_note_2026-04-11",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -31876,6 +31859,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1196,
-  "total_pending": 1594
+  "ready_count": 1191,
+  "total_pending": 1593
 }
