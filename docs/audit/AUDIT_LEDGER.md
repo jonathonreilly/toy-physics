@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T06:35:46.645947+00:00
+**Generated:** 2026-04-27T06:37:52.537661+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 7 |
-| _proposed_retained_ | 228 |
+| **retained** | 8 |
+| _proposed_retained_ | 227 |
 | _proposed_promoted_ | 6 |
 | bounded | 184 |
 | support | 101 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 7 |
+| `audited_clean` | 8 |
 | `audited_conditional` | 55 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 5 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1523 |
+| `unaudited` | 1522 |
 
 | criticality | count |
 |---|---:|
@@ -104,6 +104,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `i3_zero_exact_theorem_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
+| `lattice_3d_dense_refinement_reconciliation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `planck_finite_response_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -863,6 +864,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `Koide_Q_support_route_value_Q_2_over_3_not_registered_one_hop_dependency`
   - `Koide_delta_APS_support_route_value_delta_2_over_9_not_registered_one_hop_dependency`
   - `same_Z3_p_equals_d_structural_bridge_not_registered_one_hop_dependency`
+- **auditor confidence:** high
+
+### `lattice_3d_dense_refinement_reconciliation_note`
+
+- **Note:** [`LATTICE_3D_DENSE_REFINEMENT_RECONCILIATION_NOTE.md`](../../docs/LATTICE_3D_DENSE_REFINEMENT_RECONCILIATION_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** With corrected physical indexing and fixed physical connectivity, the ordered 3D dense spent-delay h=0.5 refinement point fails to preserve the older positive-refinement narrative: the barrier read remains mixed and the no-barrier distance companion has 0/5 hierarchy-aligned attractive rows.  _(class `C`)_
+- **chain closes:** True — The named runner and archived log match the note: h=1.0 gives a mixed barrier read but 5/5 attractive no-barrier distance rows with b^(-0.94), while h=0.5 gives a mixed barrier read, no distance fit, and 0/5 attractive no-barrier distance rows. The runner verdict is explicitly FAILS for the older h=0.5 positive-refinement narrative.
+- **rationale:** The negative reconciliation closes for the stated finite comparison: the live runner verifies the corrected h mapping, span=3 at h=1.0 and span=6 at h=0.5, the barrier-card summaries, the h=1.0 distance fit, the h=0.5 absence of positive hierarchy-aligned distance rows, and the final FAILS verdict for the older refinement-positive story. This clean audit ratifies only that corrected h=1.0 versus h=0.5 finite reconciliation; it does not promote a refinement theorem, continuum theorem, 4D result, action-power result, or a broad retained theorem for the ordered 3D dense branch.
 - **auditor confidence:** high
 
 ### `lattice_3d_dense_spent_delay_note`

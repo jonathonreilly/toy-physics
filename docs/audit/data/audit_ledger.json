@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T06:35:46.391071+00:00",
-  "generated_at": "2026-04-27T06:35:44.578416+00:00",
-  "invalidation_run_at": "2026-04-27T06:35:46.336527+00:00",
+  "effective_status_computed_at": "2026-04-27T06:37:52.133779+00:00",
+  "generated_at": "2026-04-27T06:37:50.180296+00:00",
+  "invalidation_run_at": "2026-04-27T06:37:52.054788+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T06:35:46.208580+00:00",
+  "load_bearing_computed_at": "2026-04-27T06:37:51.901203+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -42486,14 +42486,21 @@
       "verdict_rationale": null
     },
     "lattice_3d_dense_refinement_reconciliation_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 2.822,
+        "transitive_descendants": 4
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The named runner and archived log match the note: h=1.0 gives a mixed barrier read but 5/5 attractive no-barrier distance rows with b^(-0.94), while h=0.5 gives a mixed barrier read, no distance fit, and 0/5 attractive no-barrier distance rows. The runner verdict is explicitly FAILS for the older h=0.5 positive-refinement narrative.",
       "claim_id": "lattice_3d_dense_refinement_reconciliation_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -42501,13 +42508,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 2.822,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "With corrected physical indexing and fixed physical connectivity, the ordered 3D dense spent-delay h=0.5 refinement point fails to preserve the older positive-refinement narrative: the barrier read remains mixed and the no-barrier distance companion has 0/5 hierarchy-aligned attractive rows.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "audited_failed",
       "max_descendant_status_rank": 0,
       "note_hash": "7eba357a5fc57ca22e474293e1aa1519948d0385149e3345eb6d109d0544c4b1",
@@ -42543,14 +42550,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 5,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 5
       },
       "runner_path": null,
       "title": "3D Dense Spent-Delay Refinement Reconciliation",
       "transitive_descendants": 4,
-      "verdict_rationale": null
+      "verdict_rationale": "The negative reconciliation closes for the stated finite comparison: the live runner verifies the corrected h mapping, span=3 at h=1.0 and span=6 at h=0.5, the barrier-card summaries, the h=1.0 distance fit, the h=0.5 absence of positive hierarchy-aligned distance rows, and the final FAILS verdict for the older refinement-positive story. This clean audit ratifies only that corrected h=1.0 versus h=0.5 finite reconciliation; it does not promote a refinement theorem, continuum theorem, 4D result, action-power result, or a broad retained theorem for the ordered 3D dense branch."
     },
     "lattice_3d_dense_spent_delay_note": {
       "audit_date": "2026-04-26",
