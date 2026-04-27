@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T04:37:18.409026+00:00",
-  "generated_at": "2026-04-27T04:37:16.601652+00:00",
-  "invalidation_run_at": "2026-04-27T04:37:18.344085+00:00",
+  "effective_status_computed_at": "2026-04-27T04:39:16.228302+00:00",
+  "generated_at": "2026-04-27T04:39:14.424685+00:00",
+  "invalidation_run_at": "2026-04-27T04:39:16.169418+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T04:37:18.226190+00:00",
+  "load_bearing_computed_at": "2026-04-27T04:39:16.047227+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -613,7 +613,7 @@
         "ai_methodology_note_2026-04-25"
       ],
       "direct_in_degree": 4,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:ai_methodology.canonical_framing_paragraph_2026-04-25",
       "independence": null,
       "intrinsic_status": "unknown",
@@ -657,7 +657,7 @@
         "ai_methodology_note_2026-04-25"
       ],
       "direct_in_degree": 3,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:ai_methodology_note_2026-04-25",
       "independence": null,
       "intrinsic_status": "unknown",
@@ -886,7 +886,7 @@
         "publication.ci3_z3.what_this_paper_does_not_claim"
       ],
       "direct_in_degree": 2,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:publication.ci3_z3.readme",
       "independence": null,
       "intrinsic_status": "unknown",
@@ -1053,7 +1053,7 @@
         "ai_methodology.raw.ai_accountability_note"
       ],
       "direct_in_degree": 0,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:ai_methodology_note_2026-04-25",
       "independence": null,
       "intrinsic_status": "unknown",
@@ -3529,8 +3529,8 @@
         "down_type_mass_ratio_ckm_dual_note"
       ],
       "direct_in_degree": 0,
-      "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:minimal_axioms_2026-04-11",
+      "effective_status": "audited_failed",
+      "effective_status_reason": "inherited_from:r_base_group_theory_derivation_theorem_note_2026-04-24",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 0.0,
@@ -3676,7 +3676,7 @@
         "ai_methodology.skills.methodology-paper-synthesizer.skill"
       ],
       "direct_in_degree": 3,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:ai_methodology.methodology_paper_source_packet_2026-04-25",
       "independence": null,
       "intrinsic_status": "unknown",
@@ -4192,7 +4192,7 @@
         "ai_methodology.llm_skill_pack_2026-04-25"
       ],
       "direct_in_degree": 5,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:publication.ci3_z3.readme",
       "independence": null,
       "intrinsic_status": "unknown",
@@ -7191,8 +7191,8 @@
         "lanes.open_science.readme"
       ],
       "direct_in_degree": 4,
-      "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:native_gauge_closure_note",
+      "effective_status": "audited_failed",
+      "effective_status_reason": "inherited_from:framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 5.7,
@@ -13307,7 +13307,7 @@
         "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25"
       ],
       "direct_in_degree": 7,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25",
       "independence": null,
       "intrinsic_status": "proposed_retained",
@@ -16542,7 +16542,7 @@
         "dm_flagship_closure_review_note_2026-04-17"
       ],
       "direct_in_degree": 9,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:dm_flagship_closure_review_note_2026-04-17",
       "independence": null,
       "intrinsic_status": "bounded",
@@ -16600,7 +16600,7 @@
         "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17"
       ],
       "direct_in_degree": 4,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:dm_neutrino_source_surface_schur_scalar_baseline_theorem_note_2026-04-17",
       "independence": null,
       "intrinsic_status": "open",
@@ -19228,8 +19228,8 @@
         "publication.ci3_z3.derivation_atlas"
       ],
       "direct_in_degree": 4,
-      "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:dm_neutrino_source_surface_z3_doublet_block_full_closure_boundary_note_2026-04-16",
+      "effective_status": "audited_failed",
+      "effective_status_reason": "inherited_from:omega_lambda_derivation_note",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 8.87,
@@ -20179,8 +20179,8 @@
         "publication.ci3_z3.derivation_atlas"
       ],
       "direct_in_degree": 2,
-      "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:dm_neutrino_postcanonical_polar_section_note_2026-04-15",
+      "effective_status": "audited_failed",
+      "effective_status_reason": "inherited_from:dm_neutrino_source_surface_quartic_isotropy_and_u2_obstruction_note_2026-04-17",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 7.87,
@@ -20377,7 +20377,7 @@
         "publication.ci3_z3.derivation_atlas"
       ],
       "direct_in_degree": 4,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:dm_neutrino_source_surface_schur_scalar_baseline_theorem_note_2026-04-17",
       "independence": null,
       "intrinsic_status": "unknown",
@@ -20518,7 +20518,7 @@
         "three_generation_observable_theorem_note"
       ],
       "direct_in_degree": 4,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:dm_neutrino_source_surface_schur_scalar_baseline_theorem_note_2026-04-17",
       "independence": null,
       "intrinsic_status": "unknown",
@@ -20655,8 +20655,8 @@
         "publication.ci3_z3.derivation_atlas"
       ],
       "direct_in_degree": 2,
-      "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:three_generation_observable_theorem_note",
+      "effective_status": "audited_failed",
+      "effective_status_reason": "inherited_from:dm_neutrino_source_surface_schur_scalar_baseline_theorem_note_2026-04-17",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 7.87,
@@ -20909,8 +20909,8 @@
         "publication.ci3_z3.derivation_atlas"
       ],
       "direct_in_degree": 5,
-      "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:dm_neutrino_source_surface_z3_doublet_block_point_selection_theorem_note_2026-04-16",
+      "effective_status": "audited_failed",
+      "effective_status_reason": "inherited_from:dm_neutrino_source_surface_schur_scalar_baseline_theorem_note_2026-04-17",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 9.37,
@@ -21031,8 +21031,8 @@
         "publication.ci3_z3.derivation_atlas"
       ],
       "direct_in_degree": 3,
-      "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:dm_neutrino_source_surface_active_affine_point_selection_boundary_note_2026-04-16",
+      "effective_status": "audited_failed",
+      "effective_status_reason": "inherited_from:dm_neutrino_source_surface_schur_scalar_baseline_theorem_note_2026-04-17",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 8.37,
@@ -21168,8 +21168,8 @@
         "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17"
       ],
       "direct_in_degree": 11,
-      "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:dm_neutrino_source_surface_scalar_baseline_active_quadratic_diagnostic_note_2026-04-17",
+      "effective_status": "audited_failed",
+      "effective_status_reason": "inherited_from:publication.ci3_z3.derivation_atlas",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 12.37,
@@ -21809,7 +21809,7 @@
         "dm_neutrino_source_surface_schur_scalar_baseline_theorem_note_2026-04-17"
       ],
       "direct_in_degree": 6,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:publication.ci3_z3.derivation_atlas",
       "independence": null,
       "intrinsic_status": "unknown",
@@ -21860,7 +21860,7 @@
         "dm_neutrino_source_surface_z3_doublet_block_current_bank_blindness_theorem_note_2026-04-16"
       ],
       "direct_in_degree": 3,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:dm_neutrino_source_surface_schur_scalar_baseline_theorem_note_2026-04-17",
       "independence": null,
       "intrinsic_status": "unknown",
@@ -22867,7 +22867,7 @@
         "dm_sigma_hier_upper_octant_selector_theorem_note_2026-04-20"
       ],
       "direct_in_degree": 1,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:dm_sigma_hier_upper_octant_selector_theorem_note_2026-04-20",
       "independence": null,
       "intrinsic_status": "support",
@@ -22979,8 +22979,8 @@
         "pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17"
       ],
       "direct_in_degree": 0,
-      "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:dm_neutrino_source_surface_active_curvature_23_symmetric_baseline_boundary_theorem_note_2026-04-17",
+      "effective_status": "audited_failed",
+      "effective_status_reason": "inherited_from:pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
       "independence": null,
       "intrinsic_status": "support",
       "load_bearing_score": 0.0,
@@ -23563,7 +23563,7 @@
         "dm_sigma_hier_upper_octant_selector_theorem_note_2026-04-20"
       ],
       "direct_in_degree": 0,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:dm_pmns_cp_orientation_parity_reduction_note_2026-04-20",
       "independence": null,
       "intrinsic_status": "unknown",
@@ -23648,7 +23648,7 @@
         "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17"
       ],
       "direct_in_degree": 2,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17",
       "independence": null,
       "intrinsic_status": "support",
@@ -27910,14 +27910,21 @@
       "verdict_rationale": null
     },
     "framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 10.383,
+        "transitive_descendants": 117
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The primary verifier named by the note returns nonzero: PASS=46, FAIL=1. The exact algebraic checks pass, including g2^2=1/4, gY^2=1/5, g_em^2=1/9, sin^2(theta_W)=4/9, alpha_3/alpha_em=9, alpha_em=1/(36*pi), and the SU(5) offset 5/72. The failing check is the authority-surface gate `EW normalization retained lane exists`, so the runner does not validate the note's required retained-EW-lane premise. The queue also has runner_path=null and no registered one-hop dependencies for the EW normalization lane or Cl(3)->SM support packet.",
       "claim_id": "framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -27925,18 +27932,25 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 7,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 10.383,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The support corollary claims that the retained EW-normalization authority surface plus the Cl(3)->SM support-count bookkeeping authorize the exact bare identity alpha_3(bare)/alpha_em(bare)=2d+3, hence 9 at d=3, as a package-consistency support result rather than a direct low-energy observable.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "1203b934537e2f59ef9c2f3cea5ba2648882106f132a363b1bb4acb298340dfb",
       "note_path": "docs/FRAMEWORK_BARE_ALPHA_3_ALPHA_EM_DIMENSION_FIXED_RATIO_SUPPORT_NOTE_2026-04-25.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "primary_verifier_fails_EW_normalization_retained_lane_exists",
+        "docs/YT_EW_COLOR_PROJECTION_THEOREM.md_retained_EW_normalization_authority_not_verified_by_runner",
+        "docs/CL3_SM_EMBEDDING_THEOREM.md_support_only_not_accepted_minimal_input_stack",
+        "audit_queue_runner_path_null_for_named_primary_verifier",
+        "retained_EW_bare_coupling_bookkeeping_not_registered_one_hop_dependency",
+        "Cl3_to_SM_dimension_count_d_plus_1_d_plus_2_support_packet_not_registered_one_hop_dependency"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368345+00:00",
@@ -27965,16 +27979,17 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 46,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "fail": 1,
+        "total_pass": 46
       },
       "runner_path": null,
       "title": "Bare alpha_3 / alpha_em Dimension-Fixed Ratio Support Note",
       "transitive_descendants": 117,
-      "verdict_rationale": null
+      "verdict_rationale": "The claim fails as a proposed_retained support corollary because its own primary verifier rejects the authority boundary. The algebraic identity is trivial and correct once the inputs g3^2=1, g2^2=1/(d+1), gY^2=1/(d+2), and d=3 are assumed: the bare electromagnetic inverse sum is 2d+3=9 and therefore alpha_3/alpha_em=9. But the note's load-bearing scientific claim is stronger than arithmetic; it asserts this identity is a support corollary on the retained EW-normalization surface while not promoting the Cl(3)->SM support packet. The verifier's failed `EW normalization retained lane exists` check means that required package authority was not established under the note's own audit gate. To repair the claim, either update/register the retained EW-normalization authority so the verifier can find the intended status and bare-coupling bookkeeping, or narrow the note to a pure conditional algebra lemma with explicit assumptions and no proposed_retained package-surface authority. Also register the primary verifier in the audit queue and add one-hop dependencies for the EW normalization lane and Cl(3)->SM support packet. What can still be safely claimed is: if the bare bookkeeping inputs are assumed, then alpha_3(bare)/alpha_em(bare)=2d+3 and equals 9 at d=3, and the bare sin^2(theta_W)=4/9 differs from SU(5)'s 3/8 by 5/72. The audit does not support retained package authority, direct low-energy alpha_3/alpha_em phenomenology, or minimal-stack promotion."
     },
     "frontier_extension_lane_opening_note_2026-04-25": {
       "audit_date": null,
@@ -41445,8 +41460,8 @@
         "lanes.open_science.readme"
       ],
       "direct_in_degree": 3,
-      "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24",
+      "effective_status": "audited_failed",
+      "effective_status_reason": "inherited_from:lanes.open_science.04_neutrino_quantitative_open_lane_2026-04-26",
       "independence": null,
       "intrinsic_status": "open",
       "load_bearing_score": 5.2,
@@ -41879,8 +41894,8 @@
         "neutrino_two_amplitude_last_mile_reduction_note"
       ],
       "direct_in_degree": 2,
-      "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:charged_lepton_koide_review_packet_2026-04-18",
+      "effective_status": "audited_failed",
+      "effective_status_reason": "inherited_from:neutrino_retained_observable_bounds_theorem_note_2026-04-24",
       "independence": null,
       "intrinsic_status": "open",
       "load_bearing_score": 4.807,
@@ -41931,7 +41946,7 @@
         "cosmology_scale_identification_and_reduction_note"
       ],
       "direct_in_degree": 2,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:publication.ci3_z3.inputs_and_qualifiers_note",
       "independence": null,
       "intrinsic_status": "open",
@@ -42033,7 +42048,7 @@
         "publication.ci3_z3.inputs_and_qualifiers_note"
       ],
       "direct_in_degree": 3,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:publication.ci3_z3.claims_table",
       "independence": null,
       "intrinsic_status": "support",
@@ -42182,7 +42197,7 @@
         "lanes.moonshots.readme"
       ],
       "direct_in_degree": 1,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:lanes.active_working_lanes_2026-04-26",
       "independence": null,
       "intrinsic_status": "unknown",
@@ -50707,8 +50722,8 @@
         "pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17"
       ],
       "direct_in_degree": 3,
-      "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:dm_neutrino_atmospheric_scale_theorem_note_2026-04-15",
+      "effective_status": "audited_failed",
+      "effective_status_reason": "inherited_from:pmns_theta23_upper_octant_chamber_closure_prediction_note_2026-04-17",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 8.37,
@@ -50897,8 +50912,8 @@
         "neutrino_majorana_retained_lane_packet_2026-04-16"
       ],
       "direct_in_degree": 13,
-      "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:dm_neutrino_atmospheric_scale_theorem_note_2026-04-15",
+      "effective_status": "audited_failed",
+      "effective_status_reason": "inherited_from:neutrino_mass_derived_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 13.37,
@@ -51699,7 +51714,7 @@
         "r_base_group_theory_derivation_theorem_note_2026-04-24"
       ],
       "direct_in_degree": 10,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:r_base_group_theory_derivation_theorem_note_2026-04-24",
       "independence": null,
       "intrinsic_status": "unknown",
@@ -54429,8 +54444,8 @@
         "dm_leptogenesis_pmns_transport_extremal_source_candidate_note_2026-04-16"
       ],
       "direct_in_degree": 7,
-      "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:dm_neutrino_source_surface_perturbative_uniqueness_theorem_note_2026-04-17",
+      "effective_status": "audited_failed",
+      "effective_status_reason": "inherited_from:dm_neutrino_observable_bank_exhaustion_theorem_note_2026-04-17",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 10.37,
@@ -55683,7 +55698,7 @@
         "dm_neutrino_source_surface_active_half_plane_theorem_note_2026-04-16"
       ],
       "direct_in_degree": 6,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:pmns_from_dm_neutrino_source_h_diagonalization_closure_theorem_note_2026-04-17",
       "independence": null,
       "intrinsic_status": "support",
@@ -56644,7 +56659,7 @@
         "higgs_mass_retention_analysis_note_2026-04-18"
       ],
       "direct_in_degree": 0,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:publication.ci3_z3.prediction_surface_2026-04-15",
       "independence": null,
       "intrinsic_status": "unknown",
@@ -56810,7 +56825,7 @@
         "publication.ci3_z3.prediction_surface_2026-04-15"
       ],
       "direct_in_degree": 16,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:publication.ci3_z3.derivation_validation_map",
       "independence": null,
       "intrinsic_status": "unknown",
@@ -57359,7 +57374,7 @@
         "universal_qg_optional_textbook_comparison_note"
       ],
       "direct_in_degree": 14,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:publication.ci3_z3.claims_table",
       "independence": null,
       "intrinsic_status": "unknown",
@@ -57669,7 +57684,7 @@
         "publication.ci3_z3.claims_table"
       ],
       "direct_in_degree": 13,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:publication.ci3_z3.publication_matrix",
       "independence": null,
       "intrinsic_status": "unknown",
@@ -57779,8 +57794,8 @@
         "publication.ci3_z3.results_index"
       ],
       "direct_in_degree": 1,
-      "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:minimal_axioms_2026-04-11",
+      "effective_status": "audited_failed",
+      "effective_status_reason": "inherited_from:publication.ci3_z3.inputs_and_qualifiers_note",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 7.37,
@@ -57822,7 +57837,7 @@
         "publication.ci3_z3.figure_plan"
       ],
       "direct_in_degree": 1,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:publication.ci3_z3.figure_plan",
       "independence": null,
       "intrinsic_status": "unknown",
@@ -57884,8 +57899,8 @@
         "work_history.ckm.jarlskog_phase_bound_note"
       ],
       "direct_in_degree": 1,
-      "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:anomaly_forces_time_theorem",
+      "effective_status": "audited_failed",
+      "effective_status_reason": "inherited_from:omega_lambda_derivation_note",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 1.5,
@@ -58225,7 +58240,7 @@
         "publication.ci3_z3.publication_matrix"
       ],
       "direct_in_degree": 3,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:publication.ci3_z3.external_reviewer_guide",
       "independence": null,
       "intrinsic_status": "unknown",
@@ -58290,8 +58305,8 @@
         "publication.ci3_z3.prediction_surface_2026-04-15"
       ],
       "direct_in_degree": 7,
-      "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:minimal_axioms_2026-04-11",
+      "effective_status": "audited_failed",
+      "effective_status_reason": "inherited_from:framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 10.37,
@@ -58421,8 +58436,8 @@
         "graviton_mass_derived_note"
       ],
       "direct_in_degree": 9,
-      "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:yt_ew_color_projection_theorem",
+      "effective_status": "audited_failed",
+      "effective_status_reason": "inherited_from:neutrino_retained_observable_bounds_theorem_note_2026-04-24",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 11.37,
@@ -58685,8 +58700,8 @@
         "koide_reviewer_stress_test_note_2026-04-21"
       ],
       "direct_in_degree": 19,
-      "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:publication.ci3_z3.quantitative_summary_table",
+      "effective_status": "audited_failed",
+      "effective_status_reason": "inherited_from:framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 16.37,
@@ -58918,7 +58933,7 @@
         "single_axiom_hilbert_note"
       ],
       "direct_in_degree": 7,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:publication.ci3_z3.prediction_surface_2026-04-15",
       "independence": null,
       "intrinsic_status": "unknown",
@@ -59032,7 +59047,7 @@
         "publication.ci3_z3.reproducibility_freeze_2026-04-14"
       ],
       "direct_in_degree": 5,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:publication.ci3_z3.derivation_validation_map",
       "independence": null,
       "intrinsic_status": "unknown",
@@ -59450,7 +59465,7 @@
         "ckm_thales_pinned_alpha_s_independent_ratios_theorem_note_2026-04-25"
       ],
       "direct_in_degree": 6,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:publication.ci3_z3.derivation_validation_map",
       "independence": null,
       "intrinsic_status": "unknown",
@@ -59546,7 +59561,7 @@
         "publication.ci3_z3.derivation_atlas"
       ],
       "direct_in_degree": 4,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:publication.ci3_z3.publication_matrix",
       "independence": null,
       "intrinsic_status": "unknown",
@@ -59727,8 +59742,8 @@
         "publication.ci3_z3.prediction_surface_2026-04-15"
       ],
       "direct_in_degree": 8,
-      "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:ckm_barred_pedoe_similarity_deficit_closed_form_theorem_note_2026-04-25",
+      "effective_status": "audited_failed",
+      "effective_status_reason": "inherited_from:publication.ci3_z3.publication_matrix",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 10.87,
@@ -61503,7 +61518,7 @@
         "native_gauge_closure_note"
       ],
       "direct_in_degree": 17,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:cosmology_from_mass_spectrum_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
@@ -61821,7 +61836,7 @@
         "work_history.repo.backlog.readme"
       ],
       "direct_in_degree": 0,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:canonical_harness_index",
       "independence": null,
       "intrinsic_status": "unknown",
@@ -61959,7 +61974,7 @@
         "repo.active_review_queue"
       ],
       "direct_in_degree": 1,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:start_here",
       "independence": null,
       "intrinsic_status": "unknown",
@@ -69261,7 +69276,7 @@
         "single_axiom_hilbert_note"
       ],
       "direct_in_degree": 1,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:publication.ci3_z3.prediction_surface_2026-04-15",
       "independence": null,
       "intrinsic_status": "unknown",
@@ -78315,7 +78330,7 @@
         "publication.ci3_z3.readme"
       ],
       "direct_in_degree": 0,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:publication.ci3_z3.readme",
       "independence": null,
       "intrinsic_status": "unknown",
@@ -78685,7 +78700,7 @@
         "publication.ci3_z3.derivation_validation_map"
       ],
       "direct_in_degree": 1,
-      "effective_status": "audited_conditional",
+      "effective_status": "audited_failed",
       "effective_status_reason": "inherited_from:canonical_harness_index",
       "independence": null,
       "intrinsic_status": "unknown",
