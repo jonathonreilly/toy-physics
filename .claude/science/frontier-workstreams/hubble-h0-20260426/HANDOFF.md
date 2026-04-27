@@ -5,7 +5,7 @@
 
 ## Current State
 
-**Cycles 1, 2, 3, and 4 complete.**
+**Cycles 1-5 complete.**
 
 **Cycle 1 (R4 — Hubble Tension Structural Lock):**
 
@@ -28,6 +28,11 @@
 
 - `docs/HUBBLE_LANE5_ETA_RETIREMENT_GATE_AUDIT_NOTE_2026-04-26.md`
 - (no runner — review of retained DM-lane material)
+
+**Cycle 5 (Lane 5 Planck `(C1)` Gate Audit):**
+
+- `docs/HUBBLE_LANE5_PLANCK_C1_GATE_AUDIT_NOTE_2026-04-26.md`
+- (no runner — review of retained Planck-lane material)
 
 Branch-local 6-criterion self-review PASS for both cycles. Cycle 1
 required one premise-tightening edit (3 → 2 premises). Cycle 2 required
@@ -71,32 +76,48 @@ Yukawa, polar-aligned-core, two-Higgs slots, `Z_3` circulant mass-basis,
 asymptotic-source / local-selector-family, Wilson-direct-descendant
 constructive-transport, strong-CP/`gamma`-transfer).
 
+**`(C1)` gate identified (Cycle 5).** The single residual structural
+premise for retaining `R_Lambda` numerically is the **metric-compatible
+primitive Clifford/CAR coframe response on `P_A H_cell` with natural
+phase/action units**. All three Planck-lane targets (gravity/action
+unit-map uniqueness, horizon-entropy `1/4` carrier, information/action
+bridge) collapse to this single conditional per the 2026-04-25
+conditional Clifford phase bridge theorem. The gate-resolving derivation
+must avoid all closed shortcut routes (finite-automorphism-only response,
+carrier-only parent-source scalar, simple-fiber Widom carrier,
+multipocket selector axioms, primitive-edge-entropy direct relabeling,
+algebraic finite-Schmidt-spectrum). The `(C1)` and `(C2)` gates are
+structurally symmetric — both are microscopic point/edge-selection laws
+on a primitive algebraic block.
+
 Neither cycle retires the `H_0` import (Lane 5 main target). They lock
 the structural form and exhaustively classify the closure pathways.
 
-## Next Exact Action (Cycle 5 candidate)
+## Next Exact Action (Cycle 6 candidate)
 
-With Cycle 4 isolating the `(C2)` gate, the symmetric candidate for
-`(C1)` is the natural next move:
+Both necessary gates `(C1)` and `(C2)` are now isolated. The natural
+next moves are:
 
-- **Cycle 5 candidate A — Planck conditional-completion audit (advances
-  `(C1)`).** Audit the gravitational boundary/action carrier
-  identification per
-  `PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md` and the
-  primitive coframe boundary-carrier theorem note 2026-04-25. Identify
-  the specific premise needed to retain `R_Lambda` numerically.
-  Symmetric to Cycle 4 on the other necessary class.
-- **Cycle 5 candidate B — direct cosmic-`L` exploration (would open
-  `(C3)`).** Survey vacuum/topology content for any retained route
-  giving `Omega_Lambda` outside the matter cascade. Likely produces a
-  no-go for easy options or identifies an unexplored premise.
-- **Cycle 5 candidate C — Cycles 1-4 consolidation note.** Single
-  status surface mapping structural lock + open-number reduction +
-  closure-pathway no-go + eta-retirement gate audit into one Lane 5
-  reading.
-- **Recommendation:** Candidate A. Symmetric to Cycle 4; together they
-  identify the gates on both necessary classes `(C1)` and `(C2)`,
-  giving the cleanest possible map of what Lane 5 closure requires.
+- **Cycle 6 candidate A — Cycles 1-5 consolidation note.** Single
+  Lane 5 status surface mapping the entire workstream output
+  (structural lock + open-number reduction + closure-pathway no-go +
+  `(C2)` gate + `(C1)` gate) into one read-first publication-friendly
+  status note. Useful for the post-workstream review-and-integration
+  step.
+- **Cycle 6 candidate B — direct cosmic-`L` vacuum/topology
+  exploration (would open `(C3)`).** Survey the framework's
+  vacuum/topology content for any retained route giving
+  `Omega_Lambda` outside the matter cascade. The only unaddressed
+  closure-pathway class. Likely produces a no-go for easy options or
+  identifies an unexplored vacuum-topology premise.
+- **Cycle 6 candidate C — cross-cycle audit.** Check for unmodeled
+  premises slipped into Cycles 1-5; verify cross-references are
+  coherent; identify any inadvertent overclaim.
+- **Recommendation:** Candidate A. With both gates isolated, a
+  consolidation note is the natural payload for the post-workstream
+  review pipeline. Candidate B is the other interesting direction
+  (`(C3)` exploration) but is more speculative; better as a
+  cycle 7+. Candidate C is hygiene work that can interleave.
 
 ## Repo-Wide Weaving (NOT to apply on this branch)
 
