@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T07:00:09.287540+00:00",
-  "generated_at": "2026-04-27T07:00:07.395207+00:00",
-  "invalidation_run_at": "2026-04-27T07:00:09.231391+00:00",
+  "effective_status_computed_at": "2026-04-27T07:05:29.184213+00:00",
+  "generated_at": "2026-04-27T07:05:27.361127+00:00",
+  "invalidation_run_at": "2026-04-27T07:05:29.124728+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T07:00:09.096868+00:00",
+  "load_bearing_computed_at": "2026-04-27T07:05:28.997221+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -70037,14 +70037,21 @@
       "verdict_rationale": "Issue: the runner supports the finite N=25,40,60 structured chokepoint card, but the note promotes that selected slice as a retained bridge pocket without a registered canonical-readout dependency or theorem selecting the graph parameters. Why this blocks: a hostile auditor can verify the printed table, but cannot infer architecture-level bridge closure, asymptotic behavior, or readout-independent survival from the current packet; the runner also prints diagnostics rather than enforcing hard assertions for Born, k=0, gravity significance, and decoherence gates. Repair target: register the canonical mirror chokepoint harness as a one-hop dependency, add hard assertions/tolerances for the retained gates, and either derive the structured placement/readout selection or state the claim strictly as a finite parameter-card result. Claim boundary until fixed: it is safe to claim the current finite card: for the specified structured placement with NPL_HALF=25, connect_radius=3.5, layer_jitter=0.25, 16 seeds, and N=25/40/60, the runner reports machine-clean Born, zero k=0, positive mean gravity, nontrivial d_TV, and N=60 pur_cl around 0.803; it is not a broader structured-architecture or asymptotic bridge theorem."
     },
     "structured_mirror_bornsafe_scan_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 2.822,
+        "transitive_descendants": 4
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The positive proposed-retained chain does not close because the source note and runner output explicitly report no retained Born-safe pocket. The broad two-seed scan measured all 540 grid rows and printed no retained pocket, and the six-seed replay of the best near-Born candidate remained at Born = 8.79e-03, far above the 1e-10 threshold.",
       "claim_id": "structured_mirror_bornsafe_scan_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -70052,18 +70059,23 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 2.822,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The queue treats the note as proposed_retained, but the source note's load-bearing result is that no proposed-retained Born-safe structured-mirror pocket was found in the scanned linear family.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "audited_failed",
       "max_descendant_status_rank": 0,
       "note_hash": "62cbc96f715a54b233e097af33650ef7983ea6bc888d9314877963052f821dc2",
       "note_path": "docs/STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "source_status_is_negative_no_proposed_retained_pocket_found",
+        "full_scan_runner_prints_RETAINED_POCKET_none_found",
+        "best_near_Born_candidate_six_seed_replay_Born_8.79e-03_above_1e-10",
+        "queue_status_parser_false_positive_on_negative_proposed_retained_phrase"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369893+00:00",
@@ -70101,7 +70113,7 @@
       "runner_path": null,
       "title": "Structured Mirror Born-Safe Scan Note",
       "transitive_descendants": 4,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: this is a parser false positive for the audit queue: the status line contains the token proposed_retained only inside the negative statement that no proposed_retained Born-safe structured-mirror pocket was found. Why this blocks: a hostile auditor cannot certify a retained structured-mirror Born-safe successor when the source note, the full two-seed grid replay, and the six-seed best-candidate replay all say the opposite; the best candidate remains Born = 8.79e-03, many orders above the 1e-10 corrected Born threshold. Repair target: either retag this note as a bounded negative-control/exhaustion result, or produce a new registered scan/log with a structured-mirror parameter card satisfying Born < 1e-10, positive gravity, pur_cl < 0.95, k=0 control, and enough seeds to rule out a fluke. Claim boundary until fixed: it is safe to claim only the negative scan result: under the stated d_growth=2 linear-propagator grid, no retained Born-safe structured-mirror pocket was found, and structured mirror growth is not currently a Born-safe replacement for the exact mirror or Z2 x Z2 lanes."
     },
     "structured_mirror_joint_validation_note": {
       "audit_date": null,
@@ -72066,7 +72078,7 @@
       ],
       "direct_in_degree": 1,
       "effective_status": "audited_failed",
-      "effective_status_reason": "inherited_from:lattice_kernel_transfer_norm_note",
+      "effective_status_reason": "inherited_from:structured_mirror_bornsafe_scan_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 2.5,

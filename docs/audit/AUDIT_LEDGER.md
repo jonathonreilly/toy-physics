@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T07:00:09.601613+00:00
+**Generated:** 2026-04-27T07:05:29.448964+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 10 |
-| _proposed_retained_ | 223 |
+| _proposed_retained_ | 222 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
 | ~~audited_conditional~~ | 265 |
-| ~~audited_failed~~ | 73 |
+| ~~audited_failed~~ | 74 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 10 |
 | `audited_conditional` | 57 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 7 |
+| `audited_failed` | 8 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1516 |
+| `unaudited` | 1515 |
 
 | criticality | count |
 |---|---:|
@@ -176,6 +176,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_3d_dense_spent_delay_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `lattice_kernel_transfer_norm_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `mirror_2d_gravity_law_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `structured_mirror_bornsafe_scan_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `bell_inequality_derived_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -1356,6 +1357,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `scripts/mirror_chokepoint_joint.py_canonical_readout_not_registered_one_hop_dependency`
   - `structured_placement_parameter_selection_not_derived`
   - `runner_prints_diagnostics_without_hard_gate_assertions`
+- **auditor confidence:** high
+
+### `structured_mirror_bornsafe_scan_note`
+
+- **Note:** [`STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md`](../../docs/STRUCTURED_MIRROR_BORNSAFE_SCAN_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The queue treats the note as proposed_retained, but the source note's load-bearing result is that no proposed-retained Born-safe structured-mirror pocket was found in the scanned linear family.  _(class `C`)_
+- **chain closes:** False — The positive proposed-retained chain does not close because the source note and runner output explicitly report no retained Born-safe pocket. The broad two-seed scan measured all 540 grid rows and printed no retained pocket, and the six-seed replay of the best near-Born candidate remained at Born = 8.79e-03, far above the 1e-10 threshold.
+- **rationale:** Issue: this is a parser false positive for the audit queue: the status line contains the token proposed_retained only inside the negative statement that no proposed_retained Born-safe structured-mirror pocket was found. Why this blocks: a hostile auditor cannot certify a retained structured-mirror Born-safe successor when the source note, the full two-seed grid replay, and the six-seed best-candidate replay all say the opposite; the best candidate remains Born = 8.79e-03, many orders above the 1e-10 corrected Born threshold. Repair target: either retag this note as a bounded negative-control/exhaustion result, or produce a new registered scan/log with a structured-mirror parameter card satisfying Born < 1e-10, positive gravity, pur_cl < 0.95, k=0 control, and enough seeds to rule out a fluke. Claim boundary until fixed: it is safe to claim only the negative scan result: under the stated d_growth=2 linear-propagator grid, no retained Born-safe structured-mirror pocket was found, and structured mirror growth is not currently a Born-safe replacement for the exact mirror or Z2 x Z2 lanes.
+- **open / conditional deps cited:**
+  - `source_status_is_negative_no_proposed_retained_pocket_found`
+  - `full_scan_runner_prints_RETAINED_POCKET_none_found`
+  - `best_near_Born_candidate_six_seed_replay_Born_8.79e-03_above_1e-10`
+  - `queue_status_parser_false_positive_on_negative_proposed_retained_phrase`
 - **auditor confidence:** high
 
 ### `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22`
