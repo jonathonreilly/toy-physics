@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T13:21:49.087696+00:00
+**Generated:** 2026-04-27T13:23:58.293293+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 46 |
-| _proposed_retained_ | 138 |
+| _proposed_retained_ | 137 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 303 |
+| ~~audited_conditional~~ | 304 |
 | ~~audited_failed~~ | 94 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 46 |
-| `audited_conditional` | 90 |
+| `audited_conditional` | 91 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 27 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1438 |
+| `unaudited` | 1437 |
 
 | criticality | count |
 |---|---:|
@@ -185,6 +185,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `graph_phase_diagram_scout_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravitomagnetic_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravity_clean_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
+| `growing_graph_frontier_architecture_transfer_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `higgs_mass_retention_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `higher_symmetry_joint_validation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -1794,6 +1795,28 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the note's load-bearing retained dense-3D attraction claim covers z=2..6, but the current runner and log report only dense z=3 and z=5, and the one cited dense-spent-delay note is itself audited failed for an endpoint/window mismatch. Why this blocks: a canonical sign-interpretation note cannot retain an example table that the executable artifact does not compute, especially when a cited source for that example has already failed audit. Repair target: update the runner to compute and assert every source-note row, including z=2,4,6 and the z=7 null boundary, or narrow the note to the five rows the current runner actually emits and repair/audit the dense-spent-delay dependency. Claim boundary until fixed: safely claim only the live five-row hierarchy output: 2D ultra-weak attraction, 2D strong-field depletion, 3D power-action away/depletion, and dense 3D attraction at z=3 and z=5; do not claim the z=2..6 retained dense window or a canonical hierarchy over all listed retained examples.
 - **open / conditional deps cited:**
   - `LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`
+- **auditor confidence:** high
+
+### `growing_graph_frontier_architecture_transfer_note`
+
+- **Note:** [`GROWING_GRAPH_FRONTIER_ARCHITECTURE_TRANSFER_NOTE.md`](../../docs/GROWING_GRAPH_FRONTIER_ARCHITECTURE_TRANSFER_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Old graph-ladder architecture applies as a connectivity-design guide, not as a rescued transport law.  _(class `B`)_
+- **chain closes:** False — The note is a cross-note synthesis with no runner of its own. Its cited inputs are bounded, unknown, unaudited proposed-retained, or audited conditional, so the proposed-retained architecture-transfer lesson cannot close through audited-retained dependencies.
+- **rationale:** Issue: the source promotes a retained architecture lesson, but it is a doc-only synthesis over graph/Gate B notes whose audit states are bounded, unknown, unaudited proposed-retained, or already conditional. Why this blocks: without audit-clean inputs or an executable synthesis check, the claim that the old graph ladder transfers to the current cleanup lane is guidance, not a retained theorem. Repair target: audit-retain the cited connectivity, graph-requirements, frontier-expansion, dynamic-limit, and graph-phase inputs, or rewrite this note as an explicitly bounded design memo. Claim boundary until fixed: safely claim only that the cited bounded notes motivate connectivity-design priorities: keep frontier delay as the promoted observable, treat dynamic propagation as a current static-control no-go, and require new connectivity rules to preserve signed far-field behavior before promotion.
+- **open / conditional deps cited:**
+  - `GATE_B_CONNECTIVITY_TOLERANCE_NOTE.md`
+  - `GATE_B_WEAK_CONNECTIVITY_NOTE.md`
+  - `GATE_B_NONLABEL_CONNECTIVITY_V1_NOTE.md`
+  - `GATE_B_NONLABEL_CONNECTIVITY_V2_NOTE.md`
+  - `GATE_B_NONLABEL_CONNECTIVITY_V3_NOTE.md`
+  - `INVERSE_PROBLEM_GRAPH_REQUIREMENTS_NOTE.md`
+  - `GROWING_GRAPH_FRONTIER_EXPANSION_PROXY_NOTE.md`
+  - `GROWING_GRAPH_DYNAMIC_LIMIT_DIAGNOSTIC_NOTE.md`
+  - `GRAPH_PHASE_DIAGRAM_SCOUT_NOTE.md`
 - **auditor confidence:** high
 
 ### `higgs_mass_retention_analysis_note_2026-04-18`

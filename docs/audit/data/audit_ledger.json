@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T13:21:48.902871+00:00",
-  "generated_at": "2026-04-27T13:21:46.418344+00:00",
-  "invalidation_run_at": "2026-04-27T13:21:48.855770+00:00",
+  "effective_status_computed_at": "2026-04-27T13:23:58.102346+00:00",
+  "generated_at": "2026-04-27T13:23:56.513795+00:00",
+  "invalidation_run_at": "2026-04-27T13:23:58.053455+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T13:21:48.760915+00:00",
+  "load_bearing_computed_at": "2026-04-27T13:23:57.954536+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -35256,14 +35256,21 @@
       "verdict_rationale": null
     },
     "growing_graph_frontier_architecture_transfer_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The note is a cross-note synthesis with no runner of its own. Its cited inputs are bounded, unknown, unaudited proposed-retained, or audited conditional, so the proposed-retained architecture-transfer lesson cannot close through audited-retained dependencies.",
       "claim_id": "growing_graph_frontier_architecture_transfer_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -35271,18 +35278,28 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Old graph-ladder architecture applies as a connectivity-design guide, not as a rescued transport law.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "75c9440e2667a3175f16b9e69a984f306a316a27c8180568db23d9d9b46d9081",
       "note_path": "docs/GROWING_GRAPH_FRONTIER_ARCHITECTURE_TRANSFER_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/GATE_B_CONNECTIVITY_TOLERANCE_NOTE.md",
+        "docs/GATE_B_WEAK_CONNECTIVITY_NOTE.md",
+        "docs/GATE_B_NONLABEL_CONNECTIVITY_V1_NOTE.md",
+        "docs/GATE_B_NONLABEL_CONNECTIVITY_V2_NOTE.md",
+        "docs/GATE_B_NONLABEL_CONNECTIVITY_V3_NOTE.md",
+        "docs/INVERSE_PROBLEM_GRAPH_REQUIREMENTS_NOTE.md",
+        "docs/GROWING_GRAPH_FRONTIER_EXPANSION_PROXY_NOTE.md",
+        "docs/GROWING_GRAPH_DYNAMIC_LIMIT_DIAGNOSTIC_NOTE.md",
+        "docs/GRAPH_PHASE_DIAGRAM_SCOUT_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368647+00:00",
@@ -35320,7 +35337,7 @@
       "runner_path": null,
       "title": "Growing Graph Frontier Architecture Transfer Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the source promotes a retained architecture lesson, but it is a doc-only synthesis over graph/Gate B notes whose audit states are bounded, unknown, unaudited proposed-retained, or already conditional. Why this blocks: without audit-clean inputs or an executable synthesis check, the claim that the old graph ladder transfers to the current cleanup lane is guidance, not a retained theorem. Repair target: audit-retain the cited connectivity, graph-requirements, frontier-expansion, dynamic-limit, and graph-phase inputs, or rewrite this note as an explicitly bounded design memo. Claim boundary until fixed: safely claim only that the cited bounded notes motivate connectivity-design priorities: keep frontier delay as the promoted observable, treat dynamic propagation as a current static-control no-go, and require new connectivity rules to preserve signed far-field behavior before promotion."
     },
     "growing_graph_frontier_expansion_proxy_note": {
       "audit_date": null,
