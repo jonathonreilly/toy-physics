@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T10:44:14.066343+00:00",
-  "generated_at": "2026-04-27T10:44:11.763067+00:00",
-  "invalidation_run_at": "2026-04-27T10:44:13.975608+00:00",
+  "effective_status_computed_at": "2026-04-27T10:46:36.213620+00:00",
+  "generated_at": "2026-04-27T10:46:34.266308+00:00",
+  "invalidation_run_at": "2026-04-27T10:46:36.145267+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T10:44:13.772240+00:00",
+  "load_bearing_computed_at": "2026-04-27T10:46:36.009507+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -23245,14 +23245,21 @@
       "verdict_rationale": null
     },
     "dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner verifies the ordered-chain algebra and nonzero current, but the graph-first frame, adjacent-chain projector system, native current readout, and reduction target are imported from support or unknown one-hop authorities.",
       "claim_id": "dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -23260,18 +23267,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "By the graph-first cycle-frame theorem and adjacent-chain path-algebra theorem, A_ord = diag(1,2,3) + (E12 + E23 + E31) is canonical and produces J_chi(A_ord) = 1 on the retained hw=1 response family.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "cfaab9df44c8e7fb1a08693aec71702ca911fc5f8468cd411207fb8c5cb091b5",
       "note_path": "docs/DM_PMNS_GRAPH_FIRST_ORDERED_CHAIN_NONZERO_CURRENT_ACTIVATION_THEOREM_NOTE_2026-04-21.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/PMNS_GRAPH_FIRST_CYCLE_FRAME_SUPPORT_NOTE.md",
+        "docs/DM_WILSON_TO_DWEH_LOCAL_CHAIN_PATH_ALGEBRA_TARGET_NOTE_2026-04-18.md",
+        "docs/DM_PMNS_NATIVE_CURRENT_LAST_MILE_REDUCTION_THEOREM_NOTE_2026-04-21.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368189+00:00",
@@ -23300,16 +23311,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 16,
+        "B": 3,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 19
       },
       "runner_path": "scripts/frontier_dm_pmns_graph_first_ordered_chain_nonzero_current_closure_2026_04_21.py",
       "title": "DM PMNS Graph-First Ordered-Chain Nonzero-Current Activation Theorem",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the runner proves that the supplied ordered-chain law has J_chi = 1 and survives response-column reconstruction, but the canonicality and 'sole-axiom' status of that law rely on imported graph-first cycle-frame, adjacent-chain path-algebra, and native last-mile-reduction notes. Why this blocks: those one-hop inputs are not audit-retained, and the runner's B-style checks partly verify that their notes contain expected strings rather than independently deriving the ordered carrier and current readout. Repair target: audit-clean or inline the graph-first cycle-frame support, adjacent-chain path algebra, native C3 current definition, and last-mile reduction theorem; then rerun this proof as an algebraic corollary over retained inputs. Claim boundary until fixed: given the imported ordered frame and current definition, it is safe to claim A_ord = diag(1,2,3)+C has J_chi = 1 and reconstructs exactly on the hw=1 response family; it is not yet a retained sole-axiom current-activation theorem."
     },
     "dm_pmns_local_selector_family_no_go_theorem_note_2026-04-20": {
       "audit_date": null,
