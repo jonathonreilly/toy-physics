@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T12:27:58.903353+00:00",
+  "generated_at": "2026-04-27T12:34:31.722239+00:00",
   "per_claim": {
     "accessible_prediction_note": {
       "assert_count": 0,
@@ -228,6 +228,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_atomic_hydrogen_helium_probe.py"
+    },
+    "atomic_rydberg_dependency_firewall_note_2026-04-27": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 4
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_atomic_rydberg_dependency_firewall.py"
     },
     "bell_inequality_derived_note": {
       "assert_count": 2,
@@ -9052,6 +9064,21 @@
         "B": 0,
         "C": 0,
         "D": 11
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_atomic_rydberg_dependency_firewall.py": {
+      "assert_count": 1,
+      "claims": [
+        "atomic_rydberg_dependency_firewall_note_2026-04-27"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 4
       },
       "decoration_candidate": false,
       "dominant_class": "D",
@@ -18782,11 +18809,11 @@
       "A": 6,
       "B": 102,
       "C": 333,
-      "D": 106,
+      "D": 107,
       "none": 141
     },
-    "runners_classified": 688,
+    "runners_classified": 689,
     "runners_with_C": 410,
-    "runners_with_D": 181
+    "runners_with_D": 182
   }
 }

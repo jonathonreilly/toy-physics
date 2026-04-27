@@ -22,3 +22,12 @@
   the Dirac route.
 - PMNS value-selection law: current retained bank leaves the nontrivial
   character current unselected.
+
+## Lane 2 Atomic Imports Added In Cycle 2
+
+| Item | Role in claim | Current class | Source surface | Load-bearing? | Needed for target status? | Retirement path | Disposition |
+|---|---|---|---|---|---|---|---|
+| Electron mass `m_e` | Sets the Rydberg energy scale linearly | observational comparator in current scaffold | `ATOMIC_HYDROGEN_HELIUM_PROBE_NOTE.md`, Lane 2 open stub | Yes | Yes | Charged-lepton/electron mass retention | Open |
+| `alpha_EM(M_Z)=1/127.67` | Existing high-energy EW coupling value | framework-derived | `USABLE_DERIVED_VALUES_INDEX.md` | Yes, but not sufficient | Bridge only | QED running / low-energy transport to `alpha(0)` | Kept with firewall |
+| Low-energy atomic `alpha(0)` | Coulomb coupling in Rydberg formula | standard comparator in current firewall | atomic standard formula | Yes | Yes | Derive or bridge from retained EW package | Open |
+| Nonrelativistic Schrodinger/Coulomb limit | Atomic Hamiltonian in physical units | scaffold import | `ATOMIC_HYDROGEN_HELIUM_PROBE_NOTE.md` | Yes | Yes | Retain physical-unit NR limit from framework substrate | Open |

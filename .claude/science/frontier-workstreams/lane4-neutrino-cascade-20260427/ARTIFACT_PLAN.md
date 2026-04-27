@@ -35,3 +35,28 @@ If Lane 4 reaches a genuine stop condition, continue in this order:
 3. Lane 3 quark mass retention;
 4. Lane 1 hadron mass program;
 5. Lane 6 charged-lepton mass retention only if a new premise is discovered.
+
+## Cycle 2: Lane 2 Rydberg Dependency Firewall
+
+Deliverables:
+
+- `docs/ATOMIC_RYDBERG_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md`
+- `scripts/frontier_atomic_rydberg_dependency_firewall.py`
+- `logs/2026-04-27-atomic-rydberg-dependency-firewall.txt`
+
+Verification:
+
+- run the new runner with `PYTHONPATH=scripts`;
+- compile the new runner;
+- rerun the existing atomic hydrogen/helium scaffold;
+- run the audit pipeline and strict lint;
+- run `git diff --check`;
+- record review-loop emulation in `REVIEW_HISTORY.md`.
+
+Expected claim movement:
+
+- no retained Rydberg closure;
+- exact dependency firewall showing `m_e` and `alpha(0)` transport are
+  load-bearing;
+- Lane 2 stop boundary unless a new charged-lepton or low-energy QED premise
+  is supplied.

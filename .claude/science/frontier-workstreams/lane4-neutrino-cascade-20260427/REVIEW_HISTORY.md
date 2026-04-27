@@ -66,3 +66,51 @@ Review-loop mode:
 ### Methodology Skill: SKIPPED
 
 - No methodology skill source was edited in this cycle.
+
+## 2026-04-27 Cycle 2 Review Results
+
+Artifact under review:
+
+- `docs/ATOMIC_RYDBERG_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md`
+- `scripts/frontier_atomic_rydberg_dependency_firewall.py`
+- generated audit queue/ledger updates from the review-only audit pipeline
+
+### Code / Runner: PASS
+
+- New Lane 2 firewall runner passes: `PASS=12 FAIL=0`.
+- New runner compiles with `py_compile`.
+- Existing atomic scaffold runner still reproduces the bounded hydrogen/helium
+  outputs from `ATOMIC_HYDROGEN_HELIUM_PROBE_NOTE.md`.
+
+### Physics Claim Boundary: OPEN / NO-GO
+
+- The note does not claim a framework-derived Rydberg constant.
+- The artifact blocks direct `alpha_EM(M_Z)` substitution as atomic
+  `alpha(0)`, quantifying a `+15.21%` hydrogen-ground-energy shift.
+- It preserves the scaffold as useful but non-evidential.
+
+### Imports / Support: DISCLOSED
+
+- Textbook `m_e`, `alpha(0)`, and Rydberg values are comparators for the
+  dependency firewall only.
+- The retained repo value used positively is `alpha_EM(M_Z)=1/127.67`, and the
+  artifact explicitly says it is not an atomic coupling closure.
+
+### Nature Retention: NO-GO
+
+- Retained atomic closure is not achieved.
+- The open gates are electron mass retention, `alpha(0)`/QED running, and the
+  physical-unit nonrelativistic limit.
+
+### Repo Governance: PASS
+
+- No lane registry, canonical harness index, publication matrix, or active
+  review queue was edited.
+- Generated audit queue/ledger files were refreshed only for parseability.
+
+### Audit Compatibility: PASS
+
+- `bash docs/audit/scripts/run_pipeline.sh`: complete.
+- `python3 docs/audit/scripts/audit_lint.py --strict`: OK, with known
+  graph-cycle warning only.
+- `git diff --check`: OK.

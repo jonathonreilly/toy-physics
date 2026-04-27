@@ -17521,7 +17521,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-27T12:27:57.624019+00:00",
+  "generated_at": "2026-04-27T12:34:30.441629+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -18988,6 +18988,16 @@
       "path": "docs/ATOMIC_HYDROGEN_HELIUM_PROBE_NOTE.md",
       "runner_path": "scripts/frontier_atomic_hydrogen_helium_probe.py",
       "title": "Atomic Hydrogen and Helium Probe --- Standard-QM Scaffold Lane"
+    },
+    "atomic_rydberg_dependency_firewall_note_2026-04-27": {
+      "claim_id": "atomic_rydberg_dependency_firewall_note_2026-04-27",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained exact negative boundary for Lane 2 dependency",
+      "deps": [],
+      "note_hash": "1a8c4a51b5a0f7b26532084ae4fc1760d97e8bb06a7d058728c7672962c193c5",
+      "path": "docs/ATOMIC_RYDBERG_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md",
+      "runner_path": "scripts/frontier_atomic_rydberg_dependency_firewall.py",
+      "title": "Atomic Rydberg Dependency Firewall"
     },
     "audited_symmetry_synthesis_note": {
       "claim_id": "audited_symmetry_synthesis_note",
@@ -38599,6 +38609,7 @@
     "asymmetry_persistence_mass_scaling_note",
     "asymmetry_persistence_mass_window_note",
     "asymmetry_persistence_pilot_note",
+    "atomic_rydberg_dependency_firewall_note_2026-04-27",
     "audited_symmetry_synthesis_note",
     "axiom_change_proposal_2026-04-10",
     "axiom_reduction_note",
@@ -39674,15 +39685,15 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4380,
-    "leaf_count": 751,
-    "node_count": 1615,
-    "root_count": 1177,
-    "runners_with_path": 703,
+    "leaf_count": 752,
+    "node_count": 1616,
+    "root_count": 1178,
+    "runners_with_path": 704,
     "status_counts": {
       "bounded": 209,
       "open": 26,
       "proposed_promoted": 6,
-      "proposed_retained": 444,
+      "proposed_retained": 445,
       "support": 134,
       "unknown": 796
     }

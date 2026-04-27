@@ -10,12 +10,12 @@ lock:
   owner: frontier-workstream-lane4-cascade
   repo_local_lock: logs/physics_worker_lock.json
 current_lane:
-  id: 4
-  name: neutrino quantitative closure
+  id: 2
+  name: atomic-scale predictions
   status: open
 cycle:
-  count: 1
-  active_route: dirac_seesaw_fork_no_go
+  count: 2
+  active_route: atomic_rydberg_dependency_firewall
   route_status: verified
 files_touched:
   - docs/NEUTRINO_LANE4_DIRAC_SEESAW_FORK_NO_GO_NOTE_2026-04-27.md
@@ -30,6 +30,9 @@ files_touched:
   - docs/audit/data/effective_status_summary.json
   - docs/audit/data/load_bearing_summary.json
   - docs/audit/data/runner_classification.json
+  - docs/ATOMIC_RYDBERG_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md
+  - scripts/frontier_atomic_rydberg_dependency_firewall.py
+  - logs/2026-04-27-atomic-rydberg-dependency-firewall.txt
   - .claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/GOAL.md
   - .claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/ASSUMPTIONS_AND_IMPORTS.md
   - .claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/ROUTE_PORTFOLIO.md
@@ -44,16 +47,21 @@ open_imports:
   - tiny Dirac Y_nu activation law
   - full off-diagonal M_R texture for Delta m2_21
   - PMNS value-selection law for J_chi
+  - retained electron mass or charged-lepton y_e activation law
+  - retained alpha(0) or QED running bridge from alpha_EM(M_Z)
+  - physical-unit nonrelativistic Schrodinger/Coulomb limit
 no_go_routes:
   - current-stack sole-axiom full neutrino closure
   - current-stack Majorana activation mu != 0
   - current-bank PMNS selector activation
   - hidden global closure by merging mu_current=0 with the diagonal seesaw benchmark
+  - direct atomic Rydberg closure by substituting alpha_EM(M_Z) for alpha(0)
 review:
   status: passed_with_notes
   findings:
     - "No retained Lane 4 closure; artifact is exact negative boundary."
     - "Existing Majorana zero-law runner needed atlas Pfaffian/Nambu scoping compatibility fix after origin/main fast-forward."
+    - "No retained Lane 2 closure; artifact is exact dependency firewall."
     - "Audit strict lint passes with known graph-cycle warning only."
 verification:
   status: passed
@@ -66,5 +74,10 @@ verification:
     - "bash docs/audit/scripts/run_pipeline.sh -> complete"
     - "python3 docs/audit/scripts/audit_lint.py --strict -> OK, known graph-cycle warning only"
     - "git diff --check -> pass"
-next_exact_action: "Commit and push the coherent Lane 4 checkpoint. Then either select a new Lane 4 dramatic-step route or cascade to Lane 2."
-stop_condition: "Not reached. Lane 4 remains open; no STOP_ALL_LANES_REQUESTED file should be created."
+    - "PYTHONPATH=scripts python3 scripts/frontier_atomic_rydberg_dependency_firewall.py -> PASS=12 FAIL=0"
+    - "python3 -m py_compile scripts/frontier_atomic_rydberg_dependency_firewall.py -> pass"
+    - "PYTHONPATH=scripts python3 scripts/frontier_atomic_hydrogen_helium_probe.py -> bounded scaffold output reproduced"
+    - "bash docs/audit/scripts/run_pipeline.sh -> complete after Lane 2 artifact"
+    - "python3 docs/audit/scripts/audit_lint.py --strict -> OK, known graph-cycle warning only after Lane 2 artifact"
+next_exact_action: "Commit and push the coherent Lane 2 checkpoint. Then cascade to Lane 5 unless a new atomic premise appears."
+stop_condition: "Not reached. Lane 2 remains open; no STOP_ALL_LANES_REQUESTED file should be created."
