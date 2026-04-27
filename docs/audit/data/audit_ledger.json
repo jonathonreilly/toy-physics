@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T14:08:00.014806+00:00",
-  "generated_at": "2026-04-27T14:07:58.421986+00:00",
-  "invalidation_run_at": "2026-04-27T14:07:59.968642+00:00",
+  "effective_status_computed_at": "2026-04-27T14:10:30.146151+00:00",
+  "generated_at": "2026-04-27T14:10:28.565330+00:00",
+  "invalidation_run_at": "2026-04-27T14:10:30.100114+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T14:07:59.873863+00:00",
+  "load_bearing_computed_at": "2026-04-27T14:10:30.005534+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -35737,14 +35737,21 @@
       "verdict_rationale": null
     },
     "h0125_failure_derivation": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The source note has no runner, no artifact chain, and no cited authority for the transfer norms, beam widths, detector probabilities, or SNR. Its stated probability formula also fails internally: retention^nl gives about 8.18e-4, 1.14e-11, and 4.26e-34 for the three rows, not 3.7e-59, 1.1e-88, and 1.6e-136.",
       "claim_id": "h0125_failure_derivation",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -35752,13 +35759,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The h=0.125 failure is diagnosed and quantified by boundary leakage, beam-width growth, exponentially compounded probability loss, and an SNR=0.5 noise explanation of the AWAY result.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "ced1c19fdf177b9fa208509ab312aba0b7ced65d3fd9f79d21ca755a089d9b40",
@@ -35801,7 +35808,7 @@
       "runner_path": null,
       "title": "Why h=0.125 Fails: Retained Derivation",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the note's load-bearing numerical diagnosis is unsupported by any declared runner or one-hop derivation, and the explicit formula `P_det = (retention)^nl` is inconsistent with the printed P_det table by tens to more than one hundred orders of magnitude. Why this blocks: the retained negative claim depends on those numbers to distinguish boundary leakage, beam spreading, compounded loss, and statistical-noise AWAY behavior; without a reproducible computation or internally consistent formula, the diagnosis is not auditable. Repair target: add an executable h=0.125 failure diagnostic that computes T_interior/T_corner, beam sigma, detector probability including any geometric-spreading factor, and centroid SNR from the same propagation model, then update the note so every table entry follows from that runner. Claim boundary until fixed: safely claim only that boundary leakage and beam spreading are plausible failure hypotheses and that h=0.125 has not been retained by this note; do not retain the quantified root-cause diagnosis or SNR=0.5 noise conclusion."
     },
     "h0125_scalable_scout_note": {
       "audit_date": null,
