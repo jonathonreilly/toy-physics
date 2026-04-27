@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T12:08:36.487442+00:00",
+  "generated_at": "2026-04-27T21:48:51.382781+00:00",
   "per_claim": {
     "accessible_prediction_note": {
       "assert_count": 0,
@@ -3541,6 +3541,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_ew_coupling_derivation.py"
     },
+    "ew_current_matching_ozi_suppression_theorem_note_2026-04-27": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 28,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_color_projection_mc.py"
+    },
     "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26": {
       "assert_count": 1,
       "counts": {
@@ -5388,6 +5400,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_n_eff_from_three_generations.py"
+    },
+    "native_gauge_closure_note": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 11,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_non_abelian_gauge.py"
     },
     "neutrino_dirac_two_higgs_canonical_reduction_note": {
       "assert_count": 1,
@@ -7849,6 +7873,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_eft_bridge.py"
     },
+    "yt_ew_color_projection_theorem": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 28,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_color_projection_mc.py"
+    },
     "yt_ew_delta_r_retention_analysis_note_2026-04-18": {
       "assert_count": 1,
       "counts": {
@@ -9948,7 +9984,9 @@
     "scripts/frontier_color_projection_mc.py": {
       "assert_count": 0,
       "claims": [
-        "rconn_derived_note"
+        "ew_current_matching_ozi_suppression_theorem_note_2026-04-27",
+        "rconn_derived_note",
+        "yt_ew_color_projection_theorem"
       ],
       "counts": {
         "A": 0,
@@ -15980,6 +16018,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_non_abelian_gauge.py": {
+      "assert_count": 0,
+      "claims": [
+        "native_gauge_closure_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 11,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_oh_schur_boundary_action.py": {
       "assert_count": 1,
       "claims": [
@@ -18754,12 +18807,12 @@
     "dominant_class_distribution": {
       "A": 6,
       "B": 102,
-      "C": 333,
+      "C": 334,
       "D": 106,
       "none": 140
     },
-    "runners_classified": 687,
-    "runners_with_C": 410,
+    "runners_classified": 688,
+    "runners_with_C": 411,
     "runners_with_D": 181
   }
 }

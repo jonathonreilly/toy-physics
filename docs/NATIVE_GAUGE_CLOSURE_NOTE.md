@@ -3,7 +3,19 @@
 **Date:** 2026-04-12
 **Status:** proposed_retained exact native `SU(2)` + proposed_retained structural `SU(3)`; bounded abelian factor (`+1/3`, `-1` on the left-handed surface)
 **Claim boundary authority:** this note
-**Scripts:** `scripts/frontier_non_abelian_gauge.py`, `scripts/frontier_graph_first_selector_derivation.py`, `scripts/frontier_graph_first_su3_integration.py`
+**Primary runner:** `scripts/frontier_non_abelian_gauge.py`
+
+This note is the publication-facing aggregator for the gauge-structure
+backbone. The two sub-claims it depends on are:
+
+- [graph-first weak-axis selector derivation](GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md)
+  (runner: `scripts/frontier_graph_first_selector_derivation.py`)
+- [graph-first `SU(3)` integration theorem](GRAPH_FIRST_SU3_INTEGRATION_NOTE.md)
+  (runner: `scripts/frontier_graph_first_su3_integration.py`)
+
+Each sub-claim has its own status, runner, and audit row. This aggregator
+inherits its `effective_status` from those dependencies plus the SU(2)
+result computed by the primary runner above.
 
 ---
 

@@ -1,11 +1,20 @@
 # Color-Singlet Projection Theorem for EW Couplings
 
 **Date:** 2026-04-14
-**Status:** DERIVED -- standalone proposed_retained EW normalization lane on `main`
-**Primary package carrier:** `scripts/frontier_complete_prediction_chain.py`
+**Status:** proposed_retained EW normalization lane on `main`
+**Primary runner:** `scripts/frontier_color_projection_mc.py`
 **Supporting derivation inputs:** `scripts/frontier_yt_zero_import_chain.py`,
-`scripts/frontier_color_projection_mc.py`
+`scripts/frontier_complete_prediction_chain.py`
 **Historical support scan:** `scripts/frontier_yt_ew_coupling_derivation.py`
+
+**Cited authorities (one-hop deps):**
+- [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md) — derivation of
+  `R_conn = (N_c²−1)/N_c²` via the `1/N_c` topological expansion.
+- [EW_CURRENT_MATCHING_OZI_SUPPRESSION_THEOREM_NOTE_2026-04-27.md](EW_CURRENT_MATCHING_OZI_SUPPRESSION_THEOREM_NOTE_2026-04-27.md)
+  — bounded large-`N_c` support for the **matching route** that selects
+  the connected color trace as the physical EW coupling readout. This
+  is corroborating support for Section 2.6, not an audit ratification
+  of the package-level `9/8` coefficient.
 
 ---
 

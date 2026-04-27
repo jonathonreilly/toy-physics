@@ -18,15 +18,25 @@ Run the repo-native physics review loop from:
    `MethodologySkillReviewer`.
 4. Fix only verified, narrow findings. Demote overclaims instead of patching
    missing science with prose.
-5. Re-review only files changed by the fix pass, plus interacting files that
+5. Enforce audit-system compatibility without running the independent audit:
+   no bare `retained` / `promoted` status lines, seed changed claims through
+   `docs/audit/scripts/run_pipeline.sh`, and require
+   `python3 docs/audit/scripts/audit_lint.py --strict` to pass.
+6. Re-review only files changed by the fix pass, plus interacting files that
    were already in the original changed-file set.
-6. End with a concise report covering imports/support status, retained/bounded
-   disposition, commits, checks, and remaining manual science.
+7. End with a concise report covering imports/support status, retained/bounded
+   disposition, audit-readiness, commits, checks, and remaining manual science.
 
 ## Non-Negotiables
 
 - Every imported or measured value must be identified.
 - Support-only results must not be promoted to retained claims.
+- Source-note `Status:` lines may not contain bare `retained` or `promoted`;
+  use `proposed_retained`, `proposed_promoted`, `support`, `bounded`, or
+  `open`. The audit lane alone grants effective retained status.
+- `/review-loop` must not apply audit verdicts. It prepares audit-clean review
+  surfaces and reports which proposed claims require the independent
+  audit worker.
 - Nature-grade retention requires derived or explicitly admitted inputs,
   decisive artifact support, clear falsifiers, and no hidden semantic bridge.
 - Live unresolved review findings belong in `docs/repo/ACTIVE_REVIEW_QUEUE.md`.
