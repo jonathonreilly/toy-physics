@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T17:27:21.029474+00:00
+**Generated:** 2026-04-27T17:31:18.705244+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 62 |
-| _proposed_retained_ | 68 |
+| _proposed_retained_ | 67 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 327 |
+| ~~audited_conditional~~ | 328 |
 | ~~audited_failed~~ | 124 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 62 |
-| `audited_conditional` | 114 |
+| `audited_conditional` | 115 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 57 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1367 |
+| `unaudited` | 1366 |
 
 | criticality | count |
 |---|---:|
@@ -255,6 +255,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `retarded_field_compact_refinement_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `second_grown_family_complex_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `shapiro_family_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `sign_portability_invariant_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `staggered_backreaction_shell_spectral_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `strong_cp_theta_zero_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
@@ -3671,6 +3672,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `DIAMOND_NV_PHASE_RAMP_SIGNAL_BUDGET_NOTE.md`
   - `DIAMOND_SENSOR_PROTOCOL_NOTE.md`
   - `DIAMOND_SENSOR_PREDICTION_NOTE.md`
+- **auditor confidence:** high
+
+### `shapiro_family_portability_note`
+
+- **Note:** [`SHAPIRO_FAMILY_PORTABILITY_NOTE.md`](../../docs/SHAPIRO_FAMILY_PORTABILITY_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The c-dependent phase lag reproduces cleanly across the three portable grown families with seed-stable values and exact zero controls.  _(class `C`)_
+- **chain closes:** False — The runner recomputes the three-family proxy phase table, but the underlying Shapiro-delay result is only audited conditional and the linked complex/diamond bridge dependencies are failed or unknown.
+- **rationale:** Issue: The script verifies portability of the proxy phase-lag table across the three chosen grown-family parameters, but the base Shapiro-delay claim is audited conditional and the associated complex/diamond bridge notes are failed or unknown. Why this blocks: family-to-family stability of a proxy computed inside the same model does not by itself ratify the causal phase-lag observable as retained physics or a lab-facing bridge. Repair target: repair/audit SHAPIRO_DELAY_NOTE as the base phase-lag theorem, remove non-load-bearing failed bridge dependencies or repair them, and add explicit assertion thresholds for family spread and zero controls. Claim boundary until fixed: it is safe to claim that the current runner reproduces a seed-stable, three-family proxy phase table with exact zero controls; it is not safe to claim a retained causal phase-lag observable or diamond/NV portability from this row alone.
+- **open / conditional deps cited:**
+  - `SHAPIRO_DELAY_NOTE.md`
+  - `SHAPIRO_COMPLEX_INTERACTION_NOTE.md`
+  - `DIAMOND_PHASE_RAMP_BRIDGE_CARD_NOTE.md`
 - **auditor confidence:** high
 
 ### `sign_portability_invariant_note`

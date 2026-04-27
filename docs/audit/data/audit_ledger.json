@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T17:27:20.840128+00:00",
-  "generated_at": "2026-04-27T17:27:19.240405+00:00",
-  "invalidation_run_at": "2026-04-27T17:27:20.793349+00:00",
+  "effective_status_computed_at": "2026-04-27T17:31:18.517425+00:00",
+  "generated_at": "2026-04-27T17:31:16.929436+00:00",
+  "invalidation_run_at": "2026-04-27T17:31:18.471269+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T17:27:20.695679+00:00",
+  "load_bearing_computed_at": "2026-04-27T17:31:18.376028+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -68158,14 +68158,21 @@
       "verdict_rationale": null
     },
     "shapiro_family_portability_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner recomputes the three-family proxy phase table, but the underlying Shapiro-delay result is only audited conditional and the linked complex/diamond bridge dependencies are failed or unknown.",
       "claim_id": "shapiro_family_portability_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -68173,18 +68180,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The c-dependent phase lag reproduces cleanly across the three portable grown families with seed-stable values and exact zero controls.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "6cbeba6348c557206f419d55a6db2f89f26cd422769c8ce8b603dfe0b9ca9d76",
       "note_path": "docs/SHAPIRO_FAMILY_PORTABILITY_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/SHAPIRO_DELAY_NOTE.md",
+        "docs/SHAPIRO_COMPLEX_INTERACTION_NOTE.md",
+        "docs/DIAMOND_PHASE_RAMP_BRIDGE_CARD_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369637+00:00",
@@ -68222,7 +68233,7 @@
       "runner_path": null,
       "title": "Shapiro Family Portability Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The script verifies portability of the proxy phase-lag table across the three chosen grown-family parameters, but the base Shapiro-delay claim is audited conditional and the associated complex/diamond bridge notes are failed or unknown. Why this blocks: family-to-family stability of a proxy computed inside the same model does not by itself ratify the causal phase-lag observable as retained physics or a lab-facing bridge. Repair target: repair/audit SHAPIRO_DELAY_NOTE as the base phase-lag theorem, remove non-load-bearing failed bridge dependencies or repair them, and add explicit assertion thresholds for family spread and zero controls. Claim boundary until fixed: it is safe to claim that the current runner reproduces a seed-stable, three-family proxy phase table with exact zero controls; it is not safe to claim a retained causal phase-lag observable or diamond/NV portability from this row alone."
     },
     "shapiro_five_family_portability_note": {
       "audit_date": null,
