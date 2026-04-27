@@ -1,9 +1,10 @@
 # Charged-Lepton Selected-Line Generation-Selector No-Go
 
 **Date:** 2026-04-27  
-**Status:** support / exact negative boundary for the selected-line/generation-label
-side of charged-lepton mass retirement; not retained charged-lepton mass
-closure  
+**Status:** proposed_retained exact negative boundary for the
+selected-line/generation-label side of charged-lepton mass retirement
+
+This is not retained charged-lepton mass closure.
 **Primary runner:**
 `scripts/frontier_charged_lepton_selected_line_generation_selector_no_go.py`
 

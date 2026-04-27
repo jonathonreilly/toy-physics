@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-26
 
-**Status:** support firewall / target-closure no-go for standalone tau
+**Status:** proposed_retained exact negative boundary for standalone tau
 selection.
 
 **Primary runner:**

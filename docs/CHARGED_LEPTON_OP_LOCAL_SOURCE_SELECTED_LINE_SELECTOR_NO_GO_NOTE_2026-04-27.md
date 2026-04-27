@@ -1,8 +1,10 @@
 # Charged-Lepton OP-Local Source / Selected-Line Selector No-Go
 
 **Date:** 2026-04-27
-**Status:** support / exact negative boundary for charged-lepton mass retirement; not
-retained charged-lepton mass closure
+**Status:** proposed_retained exact negative boundary for the OP-local source
+plus selected-line generation-selector route
+
+This is not retained charged-lepton mass closure.
 **Primary runner:**
 `scripts/frontier_charged_lepton_op_local_source_selected_line_selector_no_go.py`
 

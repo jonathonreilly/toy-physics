@@ -17337,7 +17337,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-27T11:42:16.447198+00:00",
+  "generated_at": "2026-04-27T11:44:55.090274+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -19538,10 +19538,10 @@
     },
     "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26": {
       "claim_id": "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26",
-      "current_status": "support",
-      "current_status_raw": "support / exact negative boundary / target-closure no-go. This note",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained exact negative boundary for direct top-Ward lift.",
       "deps": [],
-      "note_hash": "3ac5dc19e6568fe9b3cbe1e9bf03a7a8a550281c8c658ce0824ae9e6a252fb3a",
+      "note_hash": "d95bb620b3c26f8629dde1222b57eb0288eff1a58942bf367f57027e9f5f212d",
       "path": "docs/CHARGED_LEPTON_DIRECT_WARD_FREE_YUKAWA_NO_GO_NOTE_2026-04-26.md",
       "runner_path": "scripts/frontier_charged_lepton_direct_ward_free_yukawa_no_go.py",
       "title": "Charged-Lepton Direct Ward Free-Yukawa No-Go"
@@ -19563,10 +19563,10 @@
     },
     "charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27": {
       "claim_id": "charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27",
-      "current_status": "support",
-      "current_status_raw": "exact negative boundary / support firewall for charged-lepton mass",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained exact negative boundary / support firewall for",
       "deps": [],
-      "note_hash": "2ffcc14826c1ec70dd0034f3aeb9ef22d53079d58fc50b5de3ca89b33aa7be05",
+      "note_hash": "a55a1f4ac483c8a832bedc814d647e4942f0aced41241f5ba6a5f531db2aa51e",
       "path": "docs/CHARGED_LEPTON_KOIDE_RATIO_SOURCE_SELECTOR_FIREWALL_NOTE_2026-04-27.md",
       "runner_path": "scripts/frontier_charged_lepton_koide_ratio_source_selector_firewall.py",
       "title": "Charged-Lepton Koide Ratio/Source Selector Firewall"
@@ -19642,30 +19642,30 @@
     },
     "charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27": {
       "claim_id": "charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27",
-      "current_status": "support",
-      "current_status_raw": "support / exact negative boundary for charged-lepton mass retirement; not",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained exact negative boundary for the OP-local source",
       "deps": [],
-      "note_hash": "9890d506ed6134b188a319efa5c112aa6951e4c5dccab96a06d9105ccf20c2c3",
+      "note_hash": "1d18d30087ec880ede91fc7aaffaaf269fae55ba4b400f35279d3a5d7de60f06",
       "path": "docs/CHARGED_LEPTON_OP_LOCAL_SOURCE_SELECTED_LINE_SELECTOR_NO_GO_NOTE_2026-04-27.md",
       "runner_path": "scripts/frontier_charged_lepton_op_local_source_selected_line_selector_no_go.py",
       "title": "Charged-Lepton OP-Local Source / Selected-Line Selector No-Go"
     },
     "charged_lepton_radiative_tau_selector_firewall_note_2026-04-26": {
       "claim_id": "charged_lepton_radiative_tau_selector_firewall_note_2026-04-26",
-      "current_status": "support",
-      "current_status_raw": "support firewall / target-closure no-go for standalone tau",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained exact negative boundary for standalone tau",
       "deps": [],
-      "note_hash": "d9195a18fe7feb9e250dd5fdc27d6eb6a15f36fc23f1a23eebb939f23632c431",
+      "note_hash": "a972d2a9e5ce125c9f59cc4d6cdeb1c505a6db185ce1987bc754b5a89aedb3a8",
       "path": "docs/CHARGED_LEPTON_RADIATIVE_TAU_SELECTOR_FIREWALL_NOTE_2026-04-26.md",
       "runner_path": "scripts/frontier_charged_lepton_radiative_tau_selector_firewall.py",
       "title": "Charged-Lepton Radiative Tau Selector Firewall"
     },
     "charged_lepton_selected_line_generation_selector_no_go_note_2026-04-27": {
       "claim_id": "charged_lepton_selected_line_generation_selector_no_go_note_2026-04-27",
-      "current_status": "support",
-      "current_status_raw": "support / exact negative boundary for the selected-line/generation-label",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained exact negative boundary for the",
       "deps": [],
-      "note_hash": "223760b0bb2a898314df9bf6544e596841edbd24afabcab7f9240063d031fbf3",
+      "note_hash": "af92b989db490b4571caefbfaf2667c9284b77aa13dca9d3d159acc91280c163",
       "path": "docs/CHARGED_LEPTON_SELECTED_LINE_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md",
       "runner_path": "scripts/frontier_charged_lepton_selected_line_generation_selector_no_go.py",
       "title": "Charged-Lepton Selected-Line Generation-Selector No-Go"
@@ -19682,10 +19682,10 @@
     },
     "charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27": {
       "claim_id": "charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27",
-      "current_status": "support",
-      "current_status_raw": "support / exact negative boundary for charged-lepton mass retirement; not",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained exact negative boundary for the scalar Type-B",
       "deps": [],
-      "note_hash": "96c0e22683323cb4cf0798f6520017f9177560f2c5aab70bf9ca0a70bf45f583",
+      "note_hash": "cd2304a5199a9a6c33484fbd72539e83d51b829ffc67d7f5031e921e170ca15d",
       "path": "docs/CHARGED_LEPTON_TYPEB_RADIAN_READOUT_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md",
       "runner_path": "scripts/frontier_charged_lepton_typeb_radian_readout_generation_selector_no_go.py",
       "title": "Charged-Lepton Type-B Radian Readout Generation-Selector No-Go"
@@ -39364,8 +39364,8 @@
       "bounded": 209,
       "open": 26,
       "proposed_promoted": 6,
-      "proposed_retained": 435,
-      "support": 135,
+      "proposed_retained": 441,
+      "support": 129,
       "unknown": 796
     }
   }

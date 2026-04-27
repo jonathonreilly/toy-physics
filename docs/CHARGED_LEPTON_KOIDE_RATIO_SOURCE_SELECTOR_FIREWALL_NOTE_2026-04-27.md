@@ -1,8 +1,10 @@
 # Charged-Lepton Koide Ratio/Source Selector Firewall
 
 **Date:** 2026-04-27  
-**Status:** exact negative boundary / support firewall for charged-lepton mass
-retirement; not retained charged-lepton mass closure  
+**Status:** proposed_retained exact negative boundary / support firewall for
+charged-lepton mass retirement
+
+This is not retained charged-lepton mass closure.
 **Primary runner:**
 `scripts/frontier_charged_lepton_koide_ratio_source_selector_firewall.py`
 

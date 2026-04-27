@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T11:42:18.562529+00:00
+**Generated:** 2026-04-27T11:44:57.237903+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,10 +20,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 29 |
-| _proposed_retained_ | 163 |
+| _proposed_retained_ | 169 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
-| support | 107 |
+| support | 101 |
 | open | 11 |
 | unknown | 720 |
 | ~~audited_decoration~~ | 3 |
