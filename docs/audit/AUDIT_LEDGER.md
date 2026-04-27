@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T10:59:06.841927+00:00
+**Generated:** 2026-04-27T11:01:12.806867+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -21,7 +21,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 26 |
 | _proposed_retained_ | 172 |
-| _proposed_promoted_ | 4 |
+| _proposed_promoted_ | 3 |
 | bounded | 184 |
 | support | 101 |
 | open | 11 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 2 |
 | ~~audited_conditional~~ | 290 |
-| ~~audited_failed~~ | 84 |
+| ~~audited_failed~~ | 85 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 26 |
 | `audited_conditional` | 79 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 17 |
+| `audited_failed` | 18 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1467 |
+| `unaudited` | 1466 |
 
 | criticality | count |
 |---|---:|
@@ -218,6 +218,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `distance_law_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `equivalence_principle_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | G | - |
+| `evolving_network_prototype_v2_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `lattice_3d_dense_spent_delay_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `lattice_kernel_transfer_norm_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -1066,6 +1067,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `gravitational_mass_source_normalization_theorem_not_registered`
   - `fit_data_ranges_uncertainties_and_logs_missing`
   - `valley_linear_action_coupling_S_equals_L_times_1_minus_f_not_registered`
+- **auditor confidence:** high
+
+### `evolving_network_prototype_v2_note`
+
+- **Note:** [`EVOLVING_NETWORK_PROTOTYPE_V2_NOTE.md`](../../docs/EVOLVING_NETWORK_PROTOTYPE_V2_NOTE.md)
+- **current_status:** _proposed_promoted_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note's actual load-bearing result is that self-regulating pruning produces a measurable generated gap signal, but it does not converge to a fixed point and does not close a generated-vs-imposed Gate B dynamics theorem.  _(class `C`)_
+- **chain closes:** False — The frozen log and live runner reproduce generated gaps of about 0.88 to 4.09, but every tested row has conv = 0.00 and the same-budget imposed control has nan detector purity, so the promoted dynamics claim does not close. The source status also explicitly says this is a bounded prototype note, not a proposed_promoted dynamics theorem.
+- **rationale:** Issue: the queue's proposed_promoted status contradicts the source note and runner output; the note says this is not a promoted dynamics theorem, and the runner shows no convergence plus an undefined imposed-control purity comparator. Why this blocks: a hostile referee cannot promote Gate B dynamics from a rule that hits the removal cap, lacks a stable fixed point, and cannot produce the promised generated-vs-imposed purity comparison. Repair target: produce a deterministic runner/theorem where the local rule converges under stated thresholds, the same-budget imposed control has defined detector signal, and the promoted criterion is asserted across seeds and layer sizes; also resolve the script's band-vs-random wording mismatch for the imposed control. Claim boundary until fixed: it is safe to claim a bounded negative/prototype result in which local pruning creates a measurable post-barrier gap distinct from baseline, but not a closed Gate B dynamics solution or proposed_promoted theorem.
+- **open / conditional deps cited:**
+  - `promoted_dynamics_theorem_denied_by_source_note`
+  - `fixed_point_convergence_not_observed`
+  - `same_budget_imposed_control_detector_purity_nan`
 - **auditor confidence:** high
 
 ### `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25`

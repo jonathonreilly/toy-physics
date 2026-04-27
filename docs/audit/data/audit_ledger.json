@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T10:59:06.544963+00:00",
-  "generated_at": "2026-04-27T10:59:04.384732+00:00",
-  "invalidation_run_at": "2026-04-27T10:59:06.476196+00:00",
+  "effective_status_computed_at": "2026-04-27T11:01:12.494819+00:00",
+  "generated_at": "2026-04-27T11:01:10.517674+00:00",
+  "invalidation_run_at": "2026-04-27T11:01:12.430737+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T10:59:06.297217+00:00",
+  "load_bearing_computed_at": "2026-04-27T11:01:12.280651+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -26746,14 +26746,21 @@
       "verdict_rationale": null
     },
     "evolving_network_prototype_v2_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The frozen log and live runner reproduce generated gaps of about 0.88 to 4.09, but every tested row has conv = 0.00 and the same-budget imposed control has nan detector purity, so the promoted dynamics claim does not close. The source status also explicitly says this is a bounded prototype note, not a proposed_promoted dynamics theorem.",
       "claim_id": "evolving_network_prototype_v2_note",
       "criticality": "leaf",
       "current_status": "proposed_promoted",
@@ -26761,18 +26768,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_promoted",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_promoted",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note's actual load-bearing result is that self-regulating pruning produces a measurable generated gap signal, but it does not converge to a fixed point and does not close a generated-vs-imposed Gate B dynamics theorem.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "0bfeaa873ffe19337545a45b5fe77f6a7111959251aaa67fe0c172c12437b84a",
       "note_path": "docs/EVOLVING_NETWORK_PROTOTYPE_V2_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "promoted_dynamics_theorem_denied_by_source_note",
+        "fixed_point_convergence_not_observed",
+        "same_budget_imposed_control_detector_purity_nan"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368272+00:00",
@@ -26803,14 +26814,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 9,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 9
       },
       "runner_path": null,
       "title": "Evolving Network Prototype V2 Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the queue's proposed_promoted status contradicts the source note and runner output; the note says this is not a promoted dynamics theorem, and the runner shows no convergence plus an undefined imposed-control purity comparator. Why this blocks: a hostile referee cannot promote Gate B dynamics from a rule that hits the removal cap, lacks a stable fixed point, and cannot produce the promised generated-vs-imposed purity comparison. Repair target: produce a deterministic runner/theorem where the local rule converges under stated thresholds, the same-budget imposed control has defined detector signal, and the promoted criterion is asserted across seeds and layer sizes; also resolve the script's band-vs-random wording mismatch for the imposed control. Claim boundary until fixed: it is safe to claim a bounded negative/prototype result in which local pruning creates a measurable post-barrier gap distinct from baseline, but not a closed Gate B dynamics solution or proposed_promoted theorem."
     },
     "evolving_network_prototype_v3_note": {
       "audit_date": null,
