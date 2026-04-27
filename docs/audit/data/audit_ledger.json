@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T15:47:46.370581+00:00",
-  "generated_at": "2026-04-27T15:47:44.780533+00:00",
-  "invalidation_run_at": "2026-04-27T15:47:46.322679+00:00",
+  "effective_status_computed_at": "2026-04-27T15:51:26.194234+00:00",
+  "generated_at": "2026-04-27T15:51:24.620410+00:00",
+  "invalidation_run_at": "2026-04-27T15:51:26.148662+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T15:47:46.228199+00:00",
+  "load_bearing_computed_at": "2026-04-27T15:51:26.053846+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -48781,14 +48781,21 @@
       "verdict_rationale": null
     },
     "minimal_absorbing_horizon_probe_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The bounded proxy computation closes, but the queued proposed_retained claim does not: the note itself calls this a bounded moonshot trapping probe, and the absorption parameter is an inserted proxy rather than a derived horizon mechanism.",
       "claim_id": "minimal_absorbing_horizon_probe_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -48796,13 +48803,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The live probe shows escape_fraction(alpha) falls below 50% by alpha=0.10 while the alpha=0 weak-field recovery check gives 3/3 TOWARD and F~M=1.00 on the tested generated-geometry family.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "eff5044937f47b5c30ce471f78f72796560655fc7074268e06d71b2c47e800de",
@@ -48838,14 +48845,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 4,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 4
       },
       "runner_path": null,
       "title": "Minimal Absorbing Horizon Probe",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The source is explicitly a bounded moonshot trapping probe on a proposed_retained generated-geometry family, but its branch verdict says it produces a retained threshold. The live runner inserts an absorptive parameter alpha and measures escape fraction; it does not derive an absorbing horizon law or black-hole observable from retained inputs. Why this blocks: a hand-added absorption proxy with one finite family, four seeds, and three source positions cannot be ratified as a retained horizon/trapping theorem. Repair target: either correct the Status/current_status to bounded/proposed_bounded, or derive the absorption law from retained dynamics and show the threshold is a framework-native strong-field observable with clean weak-field reduction and audited dependencies. Claim boundary until fixed: it is safe to claim the live artifact reproduces alpha=0 weak-field recovery and a proxy escape threshold below 50% at alpha ~= 0.10 on this setup; it is not safe to call this a retained horizon theorem or full black-hole mechanism."
     },
     "minimal_axioms_2026-04-11": {
       "audit_date": null,
