@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 89,
     "high": 508,
-    "leaf": 695,
+    "leaf": 694,
     "medium": 82
   },
-  "generated_at": "2026-04-27T17:19:26.663164+00:00",
+  "generated_at": "2026-04-27T17:22:53.226242+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -23599,23 +23599,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "session_synthesis_2026-04-10_graph_axioms",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/SESSION_SYNTHESIS_2026-04-10_GRAPH_AXIOMS.md",
-      "ready": true,
-      "runner_path": "frontier_axioms_16card.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "session_synthesis_2026-04-11",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -28177,6 +28160,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 961,
-  "total_pending": 1374
+  "ready_count": 960,
+  "total_pending": 1373
 }

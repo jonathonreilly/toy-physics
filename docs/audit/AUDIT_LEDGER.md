@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T17:19:26.806651+00:00
+**Generated:** 2026-04-27T17:22:53.373534+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 62 |
-| _proposed_retained_ | 72 |
+| _proposed_retained_ | 71 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
 | ~~audited_conditional~~ | 327 |
-| ~~audited_failed~~ | 120 |
+| ~~audited_failed~~ | 121 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 62 |
 | `audited_conditional` | 114 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 53 |
+| `audited_failed` | 54 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1371 |
+| `unaudited` | 1370 |
 
 | criticality | count |
 |---|---:|
@@ -329,6 +329,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `replay_environment_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `second_grown_family_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `session_summary_2026-04-01_topology` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `session_synthesis_2026-04-10_graph_axioms` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `staggered_backreaction_green_closure_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `structured_mirror_bornsafe_scan_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -3579,6 +3580,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `HIGHER_DIMENSION_STATUS_2026-04-01.md`
   - `IF_PROGRAM_CLOSING_NOTE.md`
   - `DECOHERENCE_FAILURE_ANALYSIS.md`
+- **auditor confidence:** high
+
+### `session_synthesis_2026-04-10_graph_axioms`
+
+- **Note:** [`SESSION_SYNTHESIS_2026-04-10_GRAPH_AXIOMS.md`](../../docs/SESSION_SYNTHESIS_2026-04-10_GRAPH_AXIOMS.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** This session ended with a new axiom set that passes the full 16-row audited core card on three different graph topologies, but current proposed-retained staggered status is tracked by successor force-based cards.  _(class `B`)_
+- **chain closes:** False — The specified runner passes its legacy proxy checks, but both the note and runner state that this is historical and not a current-main evidence surface for retained status.
+- **rationale:** Issue: The row is a historical synthesis note whose declared runner is explicitly labeled a legacy proxy harness and prints 'Do not use this script as a current-main evidence surface.' Why this blocks: a 16/16 legacy proxy run cannot ratify the broad graph-axiom or current staggered proposed-retained claim, especially when the note says current status is tracked by successor cards with different semantics. Repair target: demote this file to historical synthesis/support and audit the current force-based staggered card, corrected graph-KG card, and any portability cards as separate runner-backed claims. Claim boundary until fixed: it is safe to say the legacy harness currently reproduces 16/16 proxy scores on cubic, random geometric, and growing graphs; it is not safe to cite this synthesis as retained current evidence for graph axioms or staggered physics.
+- **open / conditional deps cited:**
+  - `STAGGERED_FERMION_CARD_2026-04-10.md`
 - **auditor confidence:** high
 
 ### `shapiro_delay_note`
