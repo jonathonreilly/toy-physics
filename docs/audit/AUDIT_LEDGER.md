@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T16:23:12.408331+00:00
+**Generated:** 2026-04-27T16:24:48.296150+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 60 |
-| _proposed_retained_ | 93 |
+| _proposed_retained_ | 92 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
 | ~~audited_conditional~~ | 317 |
-| ~~audited_failed~~ | 111 |
+| ~~audited_failed~~ | 112 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 60 |
 | `audited_conditional` | 104 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 44 |
+| `audited_failed` | 45 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1392 |
+| `unaudited` | 1391 |
 
 | criticality | count |
 |---|---:|
@@ -308,6 +308,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mirror_grown_combined_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `mirror_vs_lattice_program_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `moonshot_other_testables_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `persistent_inertial_response_readiness_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `staggered_backreaction_green_closure_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `structured_mirror_bornsafe_scan_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -3101,6 +3102,33 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** No top-N class met the capture/carry/shift thresholds, so the honest read is broad-surrogate steering, not a closed persistent-mass object.  _(class `C`)_
 - **chain closes:** True — The live probe reproduces the relaunch sweep and the threshold test: every top-N row fails at least one admissibility threshold, and the leading surrogate is broad topN=361 with rel_shift_err 0.271.
 - **rationale:** The retained claim is a negative diagnostic, not a positive persistent-mass theorem. The live runner recomputes the full top-N sweep, finds no admissible class under capture >= 0.80, carry >= 0.90, and rel_shift_err <= 0.05, and identifies only a broad topN=361 surrogate with capture 0.839, carry 0.954, and rel_shift_err 0.271. Residual risk is threshold/scope risk only; this clean audit retains the no-go/broad-surrogate read and explicitly does not retain persistent inertial mass closure.
+- **auditor confidence:** high
+
+### `persistent_inertial_response_readiness_note`
+
+- **Note:** [`PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md`](../../docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The localization lane is now frozen as a bounded broad-source control result, not an open hidden-winner search, even though no persistent-mass theorem exists yet.  _(class `B`)_
+- **chain closes:** False — The note is a cross-artifact readiness synthesis with no synthesis runner, and several named support rows are unaudited, conditional, or already audited_failed.
+- **rationale:** Issue: The retained-style readiness synthesis imports a large set of surrogate, relaunch, localization, and threshold artifacts, but those named support rows are not all audit-clean; they include bounded/unaudited notes, audited_conditional rows, and audited_failed rows such as MESOSCOPIC_SURROGATE_THRESHOLD_2D_NOTE, LOCALIZED_SOURCE_RESPONSE_SWEEP_NOTE, MESOSCOPIC_SURROGATE_COMPACT_FLOOR_SWEEP_NOTE, MESOSCOPIC_SURROGATE_ANNULAR_TAPERED_SWEEP_NOTE, and MESOSCOPIC_SURROGATE_H025_CONSTRAINED_LOCALIZATION_NOTE. Why this blocks: a canonical retained readiness/frontier summary cannot be ratified from a mixed or failed support set, and there is no runner or ledger-derived computation in this note that recomputes the frontier using only audit-clean inputs. Repair target: audit or repair the named support notes first, remove failed inputs from the retained synthesis, and preferably generate the readiness table from audit_ledger effective_status so the frontier statement cannot overstate unratified rows. Claim boundary until fixed: it is safe to say the current audited record still lacks a persistent-pattern inertial-mass theorem and that packet memory plus the persistent-object no-go/broad-surrogate diagnostic are clean within their local scopes; it is not safe to retain this whole readiness synthesis or the claimed frozen localization frontier.
+- **open / conditional deps cited:**
+  - `ORDERED_LATTICE_PACKET_REIDENTIFICATION_NOTE.md`
+  - `ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_NOTE.md`
+  - `ORDERED_LATTICE_QUASI_PERSISTENT_RELAUNCH_2D_NOTE.md`
+  - `QUASI_PERSISTENT_RELAUNCH_PROBE_NOTE.md`
+  - `MESOSCOPIC_SURROGATE_BACKREACTION_NOTE.md`
+  - `BROAD_SURROGATE_POINT_SOURCE_COMPARE_NOTE.md`
+  - `MESOSCOPIC_SURROGATE_SOURCE_2D_NOTE.md`
+  - `MESOSCOPIC_SURROGATE_THRESHOLD_2D_NOTE.md`
+  - `LOCALIZED_SOURCE_RESPONSE_SWEEP_NOTE.md`
+  - `MESOSCOPIC_SURROGATE_COMPACT_FLOOR_SWEEP_NOTE.md`
+  - `MESOSCOPIC_SURROGATE_ANNULAR_TAPERED_SWEEP_NOTE.md`
+  - `MESOSCOPIC_SURROGATE_H025_CONSTRAINED_LOCALIZATION_NOTE.md`
+  - `PERSISTENT_OBJECT_BLENDED_READOUT_TRANSFER_SWEEP_NOTE_2026-04-16.md`
+  - `PERSISTENT_OBJECT_TOP4_MULTISTAGE_OUTER_TRANSFER_SWEEP_NOTE_2026-04-16.md`
 - **auditor confidence:** high
 
 ### `persistent_object_blended_readout_transfer_sweep_note_2026-04-16`
