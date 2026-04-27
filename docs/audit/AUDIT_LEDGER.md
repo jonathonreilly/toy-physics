@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T19:18:31.181293+00:00
+**Generated:** 2026-04-27T19:22:59.665813+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 66 |
-| _proposed_retained_ | 32 |
+| **retained** | 67 |
+| _proposed_retained_ | 31 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 66 |
+| `audited_clean` | 67 |
 | `audited_conditional` | 133 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1331 |
+| `unaudited` | 1330 |
 
 | criticality | count |
 |---|---:|
@@ -166,6 +166,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_amplification_near_horizon_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_retardation_lab_prediction_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_static_boundary_sensitivity_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `wave_static_direct_probe_fine_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `area_law_quarter_broader_no_go_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `broad_surrogate_point_source_compare_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -4522,6 +4523,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** At shared H = 0.5, enlarging PW from 6.0 to 9.0 moves dS by 17.54% and rel_MS by 88.41%, so the direct static comparator is not boundary-stable within 5%.  _(class `C`)_
 - **chain closes:** True — Running the named boundary-sensitivity runner at the source note's explicit H = 0.5 reproduces the frozen dM, dS, rel_MS, residual, and boundary-move values. The conclusion is limited to this off-center frozen-source boundary probe.
 - **rationale:** The runner with the source-note parameters reproduces the table: dS moves by 17.54%, rel_MS by 88.41%, dM by 18.93%, and the static residual remains near 2e-10. Because the note explicitly frames this as a narrow boundary diagnostic and does not promote the direct static comparator, the negative boundary-stability result closes on its own terms. The audit does not certify any continuum limit or boundary-stable baseline beyond this H = 0.5, PW = 6 to 9 comparison.
+- **auditor confidence:** high
+
+### `wave_static_direct_probe_fine_note`
+
+- **Note:** [`WAVE_STATIC_DIRECT_PROBE_FINE_NOTE.md`](../../docs/WAVE_STATIC_DIRECT_PROBE_FINE_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** At the moving-source fine point H = 0.25, the direct static comparator has rel_MS = 37.62%, worse than the equilibrated cached-static comparator rel_MIeq = 23.16%.  _(class `C`)_
+- **chain closes:** True — The live fine-point runner reproduces the frozen dM, dI, dIeq, dS, relative-gap values, and 2e-10 static residual. The note limits the claim to this H = 0.25 moving-source point and does not claim the exact-comparator lane is fully closed.
+- **rationale:** The source note is a narrow negative, not a broad demotion of the exact comparator lane. The fine-point runner exactly reproduces the stated values and shows that dS does not beat dIeq at H = 0.25 on the moving-source setup. Because the note preserves the frozen-source positive and boundary-tests as separate questions, this bounded fine-point negative closes on its own terms.
 - **auditor confidence:** high
 
 ### `weak_coupling_retention_note_2026-04-11`
