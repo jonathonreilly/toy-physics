@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T11:10:34.175883+00:00
+**Generated:** 2026-04-27T11:12:15.756024+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 26 |
-| _proposed_retained_ | 169 |
+| _proposed_retained_ | 168 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 101 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
 | ~~audited_conditional~~ | 291 |
-| ~~audited_failed~~ | 87 |
+| ~~audited_failed~~ | 88 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 26 |
 | `audited_conditional` | 80 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 20 |
+| `audited_failed` | 21 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1462 |
+| `unaudited` | 1461 |
 
 | criticality | count |
 |---|---:|
@@ -222,6 +222,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `evolving_network_prototype_v2_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `evolving_network_prototype_v3_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `fifth_family_complex_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `fifth_family_radial_fm_transfer_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `lattice_3d_dense_spent_delay_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `lattice_kernel_transfer_norm_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -1156,6 +1157,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the live runner for the retained fifth-family complex companion is broken by an import mismatch, so the claimed anchor-row positive cannot be reproduced from the current source. Why this blocks: a hostile referee cannot accept a retained finite-computation claim from a stale frozen log when the present runner exits before computing Born, crossover, or F~M, and the upstream radial-shell family note has not itself been audited. Repair target: update FIFTH_FAMILY_COMPLEX_TARGETED.py to the current connectivity helper API or restore the missing _field_from_sources helper, rerun the anchor-row computation with explicit PASS thresholds for Born, crossover, and F~M, and audit/register FIFTH_FAMILY_RADIAL_NOTE.md as the base family dependency. Claim boundary until fixed: it is safe only to say a historical frozen log reported one drift=0.20, seed=0 complex companion candidate; it is not currently an audited retained anchor-row positive.
 - **open / conditional deps cited:**
   - `scripts/FIFTH_FAMILY_COMPLEX_TARGETED.py_import_error_missing__field_from_sources`
+  - `FIFTH_FAMILY_RADIAL_NOTE.md_unaudited_base_family`
+  - `live_runner_output_not_reproducible`
+- **auditor confidence:** high
+
+### `fifth_family_radial_fm_transfer_note`
+
+- **Note:** [`FIFTH_FAMILY_RADIAL_FM_TRANSFER_NOTE.md`](../../docs/FIFTH_FAMILY_RADIAL_FM_TRANSFER_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note claims weak-field F~M transfer on two sampled radial-shell fifth-family rows: drift 0.05 seed 0 with F~M = 0.999040 and drift 0.30 seed 1 with F~M = 0.999839.  _(class `C`)_
+- **chain closes:** False — The frozen log reports 2/2 passing rows, but the live script fails before running because CONNECTIVITY_FAMILY_V2_QUADRANT_SWEEP.py no longer exports _build_radial_shell_connectivity. The cited radial-shell base note is unaudited, so the current source packet cannot reproduce the proposed_retained F~M transfer.
+- **rationale:** Issue: the current runner for the fifth-family radial F~M transfer is broken by an import/API mismatch, so the sampled weak-field rows cannot be recomputed from the live repo. Why this blocks: a retained finite-computation claim cannot rest only on a stale frozen log when the present script exits before calculating either F~M value, especially with the base radial-family note still unaudited. Repair target: restore or relocate _build_radial_shell_connectivity, _field_from_sources, _centroid_z, and _propagate under the imported API or update this runner to its current helper module, then rerun with explicit PASS thresholds and audit/register FIFTH_FAMILY_RADIAL_NOTE.md as the base family dependency. Claim boundary until fixed: it is safe to say the historical log reported two sampled rows with near-unit F~M; it is not currently an audited retained weak-field transfer.
+- **open / conditional deps cited:**
+  - `scripts/FIFTH_FAMILY_RADIAL_FM_TRANSFER.py_import_error_missing__build_radial_shell_connectivity`
   - `FIFTH_FAMILY_RADIAL_NOTE.md_unaudited_base_family`
   - `live_runner_output_not_reproducible`
 - **auditor confidence:** high

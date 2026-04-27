@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T11:10:33.904795+00:00",
-  "generated_at": "2026-04-27T11:10:31.967728+00:00",
-  "invalidation_run_at": "2026-04-27T11:10:33.835605+00:00",
+  "effective_status_computed_at": "2026-04-27T11:12:15.174053+00:00",
+  "generated_at": "2026-04-27T11:12:12.788798+00:00",
+  "invalidation_run_at": "2026-04-27T11:12:15.104905+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T11:10:33.700566+00:00",
+  "load_bearing_computed_at": "2026-04-27T11:12:14.963086+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -27591,14 +27591,21 @@
       "verdict_rationale": null
     },
     "fifth_family_radial_fm_transfer_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The frozen log reports 2/2 passing rows, but the live script fails before running because CONNECTIVITY_FAMILY_V2_QUADRANT_SWEEP.py no longer exports _build_radial_shell_connectivity. The cited radial-shell base note is unaudited, so the current source packet cannot reproduce the proposed_retained F~M transfer.",
       "claim_id": "fifth_family_radial_fm_transfer_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -27606,18 +27613,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note claims weak-field F~M transfer on two sampled radial-shell fifth-family rows: drift 0.05 seed 0 with F~M = 0.999040 and drift 0.30 seed 1 with F~M = 0.999839.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "5d32fac50945427cf043f6fb58423dcf6c41b0c6c7a5bb28dec950ae87f0c402",
       "note_path": "docs/FIFTH_FAMILY_RADIAL_FM_TRANSFER_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "scripts/FIFTH_FAMILY_RADIAL_FM_TRANSFER.py_import_error_missing__build_radial_shell_connectivity",
+        "docs/FIFTH_FAMILY_RADIAL_NOTE.md_unaudited_base_family",
+        "live_runner_output_not_reproducible"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368302+00:00",
@@ -27655,7 +27666,7 @@
       "runner_path": null,
       "title": "Fifth Family Radial F~M Transfer Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the current runner for the fifth-family radial F~M transfer is broken by an import/API mismatch, so the sampled weak-field rows cannot be recomputed from the live repo. Why this blocks: a retained finite-computation claim cannot rest only on a stale frozen log when the present script exits before calculating either F~M value, especially with the base radial-family note still unaudited. Repair target: restore or relocate _build_radial_shell_connectivity, _field_from_sources, _centroid_z, and _propagate under the imported API or update this runner to its current helper module, then rerun with explicit PASS thresholds and audit/register FIFTH_FAMILY_RADIAL_NOTE.md as the base family dependency. Claim boundary until fixed: it is safe to say the historical log reported two sampled rows with near-unit F~M; it is not currently an audited retained weak-field transfer."
     },
     "fifth_family_radial_note": {
       "audit_date": null,
