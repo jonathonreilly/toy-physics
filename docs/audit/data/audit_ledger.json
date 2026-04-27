@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T04:16:56.416082+00:00",
-  "generated_at": "2026-04-27T04:16:54.599107+00:00",
-  "invalidation_run_at": "2026-04-27T04:16:56.356957+00:00",
+  "effective_status_computed_at": "2026-04-27T04:19:16.270831+00:00",
+  "generated_at": "2026-04-27T04:19:14.466610+00:00",
+  "invalidation_run_at": "2026-04-27T04:19:16.208067+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T04:16:56.220398+00:00",
+  "load_bearing_computed_at": "2026-04-27T04:19:16.087397+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -36794,14 +36794,21 @@
       "verdict_rationale": null
     },
     "koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 11.883,
+        "transitive_descendants": 117
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies the rational-pi versus pure-rational arithmetic and several finite-Wilson/A1 no-go probes, but the audit packet does not register the authority that this list exhausts retained phase sources or that the selected-line Koide/Brannen target is the required observable. Thus the no-go is valid for the supplied source taxonomy, not closed as a retained framework-wide irreducibility theorem.",
       "claim_id": "koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -36809,18 +36816,29 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 10,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 11.883,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Retained periodic phase sources give only q*pi phases, while the Brannen selected-line target is the pure rational 2/9 used as a radian, so a Type-B rational-to-radian observable law remains primitive.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "88ad09bf68eeba52d1978e3ee46d3bb902c60145b929985db4518f72e2b6500a",
       "note_path": "docs/KOIDE_A1_RADIAN_BRIDGE_IRREDUCIBILITY_AUDIT_NOTE_2026-04-24.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "retained_periodic_phase_source_exhaustiveness_theorem_not_registered",
+        "Type_A_Type_B_phase_vs_rational_taxonomy_not_registered",
+        "Brannen_selected_line_delta_target_not_registered",
+        "period_1_rad_vs_2pi_rad_observable_convention_law_not_registered",
+        "docs/KOIDE_DIMENSIONLESS_OBJECTION_CLOSURE_REVIEW_PACKET_2026-04-24.md_not_registered_and_audited_conditional",
+        "APS_ABSS_eta_2_over_9_authority_not_registered",
+        "SU3_Casimir_hypercharge_charge_product_2_over_9_witness_authorities_not_registered",
+        "fractional_topology_no_go_probe_bundle_not_registered",
+        "equivariant_index_A1_no_go_authority_not_registered",
+        "minimal_heat_kernel_multitrace_no_go_authority_not_registered"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368760+00:00",
@@ -36849,16 +36867,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 36,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 36
       },
       "runner_path": "scripts/frontier_koide_a1_radian_bridge_irreducibility_audit.py",
       "title": "Koide A1 radian-bridge irreducibility audit",
       "transitive_descendants": 117,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the no-go rests on an unregistered taxonomy asserting that all retained periodic phase sources are Type-A q*pi objects, while the Koide/Brannen selected-line delta target is a Type-B pure rational 2/9 to be read as radians; the note also imports branch-local no-go probes and Type-B witnesses without one-hop dependency registration. Why this blocks: the runner proves exact arithmetic for the listed examples and the mathematical separation q*pi in Q only at zero, but it does not prove the retained source list is exhaustive, that no allowed retained observable law can set a period-1-rad convention, or that the selected-line Brannen target is the physical readout. Repair target: register the retained phase-source classification, Brannen selected-line parameterization, April 24 Koide packet, APS/ABSS eta and other 2/9 witness authorities, plus the fractional-topology no-go probes as dependencies; add an exhaustive theorem or runner showing every retained phase/readout source factors through q*pi unless a named new primitive is added. Claim boundary until fixed: it is safe to claim conditional no-go support: for the listed finite lattice/APBC/BZ/Z3/C9/Wilson/Berry phase sources, phases are q*pi and cannot equal nonzero 2/9 radians, and the listed rational witnesses do not by themselves supply a unit map; it is not yet an audited retained proof that all possible CL3 retained routes to the Koide A1 radian bridge are irreducible."
     },
     "koide_aps_block_by_block_forcing_note_2026-04-21": {
       "audit_date": null,
@@ -41355,7 +41373,7 @@
       ],
       "direct_in_degree": 3,
       "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:cross_sector_a_squared_koide_vcb_bridge_support_note_2026-04-25",
+      "effective_status_reason": "inherited_from:koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24",
       "independence": null,
       "intrinsic_status": "open",
       "load_bearing_score": 5.2,
