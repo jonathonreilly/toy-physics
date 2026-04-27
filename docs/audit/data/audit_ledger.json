@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T16:55:10.107389+00:00",
-  "generated_at": "2026-04-27T16:55:08.514963+00:00",
-  "invalidation_run_at": "2026-04-27T16:55:10.059242+00:00",
+  "effective_status_computed_at": "2026-04-27T17:09:01.039319+00:00",
+  "generated_at": "2026-04-27T17:08:59.441872+00:00",
+  "invalidation_run_at": "2026-04-27T17:09:00.992929+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T16:55:09.962817+00:00",
+  "load_bearing_computed_at": "2026-04-27T17:09:00.897223+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -65124,14 +65124,21 @@
       "verdict_rationale": "Issue: the note is a cross-lane bookkeeping and drift-detection harness, not an independent physical derivation. Why this blocks: the primary runner supplies anchors such as alpha_s(v), alpha_LM, Q_Koide, delta_Brannen, v_EW, anomaly traces, cosmological identities, and neutrino staircase values, then checks algebraic/tolerance consistency; the row has no registered one-hop authorities and the source note itself says it derives nothing new and discharges no residual. Repair target: keep it as a support/regression harness or box it under the relevant parent audit packet; re-promote only if it registers every upstream authority, all upstream lanes are audited clean, and the runner proves a genuine compression theorem rather than restating supplied constants. Claim boundary until fixed: it is safe to cite this as a useful executable coherence checklist for supplied lane values; it is not safe to count it as a separate retained theorem-grade result."
     },
     "retardation_discriminator_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "medium",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The artifact chain computes a nonzero delayed-vs-instantaneous phase difference for the implemented toy harness, but the retained/general discriminator claim is not backed by a fast assertion runner or a theorem excluding all instantaneous emulator models.",
       "claim_id": "retardation_discriminator_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -65139,13 +65146,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The retardation discriminator is a retained, portable observable that distinguishes finite-propagation-speed field response from instantaneous response to the same oscillating source.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "ea17deefdc4e13f3687a48a2bbea14c81614f7007c39670e4c8ffa0c2f917ba7",
@@ -65188,7 +65195,7 @@
       "runner_path": null,
       "title": "Retardation Discriminator: Oscillating Source",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The source and frozen log show a delayed-source toy harness with nonzero frequency- and delay-dependent phase differences, but the canonical script has no PASS/FAIL assertion contract and the live audit run did not complete the full global-delay/family/seed sections before interruption after more than ten minutes. Why this blocks: a finite parameter sweep in one implemented propagation model does not by itself prove a retained, portable observable or rule out all instantaneous responses with memory, phase offsets, or fitted transfer functions. Repair target: add a fast deterministic runner with explicit assertions for the nulls, delay law, family/seed robustness, and global-delay fit residual, and add a theorem specifying the model class in which no instantaneous/static response can reproduce the first-harmonic delayed-response observable. Claim boundary until fixed: it is safe to claim that the frozen harness output and partial live run show a delayed-vs-instantaneous phase difference for the stated oscillating-source model and parameters; it is not safe to claim a retained general finite-propagation discriminator across physical response models."
     },
     "retarded_field_causality_probe_note": {
       "audit_date": null,
