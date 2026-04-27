@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T06:40:06.464776+00:00",
-  "generated_at": "2026-04-27T06:40:04.517402+00:00",
-  "invalidation_run_at": "2026-04-27T06:40:06.389202+00:00",
+  "effective_status_computed_at": "2026-04-27T06:42:12.972778+00:00",
+  "generated_at": "2026-04-27T06:42:10.937809+00:00",
+  "invalidation_run_at": "2026-04-27T06:42:12.909600+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T06:40:06.223787+00:00",
+  "load_bearing_computed_at": "2026-04-27T06:42:12.775608+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -43371,14 +43371,21 @@
       "verdict_rationale": null
     },
     "lattice_kernel_transfer_norm_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 2.822,
+        "transitive_descendants": 4
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The named runner reproduces the finite transfer-norm ranking when invoked with the h=0.125 argument used by the archived log, but the audit queue row is proposed_promoted even though the source status line explicitly disclaims a proposed_promoted branch claim. The script itself is a local kernel-only discrimination harness and does not run same-harness propagation or prove a continuum kernel power.",
       "claim_id": "lattice_kernel_transfer_norm_note",
       "criticality": "leaf",
       "current_status": "proposed_promoted",
@@ -43386,18 +43393,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_promoted",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_promoted",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 2.822,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The local 3D transfer-norm probe reports that, after h^2 measure normalization over h=1.0,0.5,0.25,0.125, p=1.5 is closest to marginality and p=2.0 still drifts; the source note explicitly says this is a bounded discrimination probe, not a proposed_promoted branch claim.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "audited_failed",
       "max_descendant_status_rank": 0,
       "note_hash": "907d9d1fa32bb9606101b841657f11c6f361851cbe1d5eae15126e838392d6fd",
       "note_path": "docs/LATTICE_KERNEL_TRANSFER_NORM_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "source_status_explicitly_says_not_a_proposed_promoted_branch_claim",
+        "local_transfer_norm_not_same_harness_propagation_or_continuum_proof",
+        "runner_default_h_values_do_not_include_h_0_125_without_explicit_arguments"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368969+00:00",
@@ -43428,14 +43439,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 4,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 4
       },
       "runner_path": null,
       "title": "3D Kernel Transfer-Norm Probe",
       "transitive_descendants": 4,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the audit target is classified as proposed_promoted, but the source note states that this is a bounded discrimination probe and not a proposed_promoted branch claim. Why this blocks: a local outgoing transfer norm over four h values can warn that p=2.0 is not singled out, but it does not establish a promoted 3D kernel branch, a continuum limit, or same-harness propagation behavior; treating this note as a promoted branch would contradict the note's own scope. Repair target: revise the Status line so the queue does not parse this as proposed_promoted, or create a separate promotion note with a registered runner that proves the selected kernel power on same-harness propagation, Born/controls, refinement, and continuum criteria. Claim boundary until fixed: it is safe to claim only the finite local discriminator: with h^2 normalization and h={1.0,0.5,0.25,0.125}, p=1.5 has measured slope +0.102, p=2.0 has -0.204, p=2.5 has -0.598, and p=3.0 has -1.046; this is a warning signal, not a promoted law."
     },
     "lattice_nn_continuum_note": {
       "audit_date": null,
@@ -72005,7 +72016,7 @@
       ],
       "direct_in_degree": 1,
       "effective_status": "audited_failed",
-      "effective_status_reason": "inherited_from:lattice_3d_dense_spent_delay_note",
+      "effective_status_reason": "inherited_from:lattice_kernel_transfer_norm_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 2.5,

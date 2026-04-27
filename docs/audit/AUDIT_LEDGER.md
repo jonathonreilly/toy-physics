@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T06:40:06.744472+00:00
+**Generated:** 2026-04-27T06:42:13.229882+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -21,7 +21,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 9 |
 | _proposed_retained_ | 226 |
-| _proposed_promoted_ | 6 |
+| _proposed_promoted_ | 5 |
 | bounded | 184 |
 | support | 101 |
 | open | 11 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
 | ~~audited_conditional~~ | 263 |
-| ~~audited_failed~~ | 71 |
+| ~~audited_failed~~ | 72 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 9 |
 | `audited_conditional` | 55 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 5 |
+| `audited_failed` | 6 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1521 |
+| `unaudited` | 1520 |
 
 | criticality | count |
 |---|---:|
@@ -171,6 +171,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `equivalence_principle_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | G | - |
 | `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `lattice_3d_dense_spent_delay_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `lattice_kernel_transfer_norm_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `bell_inequality_derived_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -917,6 +918,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** On the ordered 2D no-barrier lattice with N=40 and half-width 20, the detector-centroid magnitude follows |delta| ~= 23.5071*b^(-1.052) with R^2=0.9850 on the far-field window b>=7, while the k=0 control is zero.  _(class `C`)_
 - **chain closes:** True — The named no-barrier runner and archived log reproduce the saved b rows, the k=0 zero control, and the far-field power-law fit. The note explicitly limits the claim to |delta| on the no-barrier ordered-lattice harness and excludes a signed attractive deflection law, the barrier geometry, and the mirror/random-connected family.
 - **rationale:** The finite ordered-lattice distance-magnitude claim closes on its own terms: the live runner exactly reproduces the seven b rows, k=0 gives +0.000000e+00, and the b>=7 fit is |delta| ~= 23.5071*b^(-1.052) with R^2=0.9850. This clean audit ratifies only the N=40, half-width-20, no-barrier ordered-lattice magnitude law and its stated scope limits; it does not ratify a signed attractive law, a barrier-harness law, a continuum theorem, or a rescue of the random-connected mirror-family distance claim.
+- **auditor confidence:** high
+
+### `lattice_kernel_transfer_norm_note`
+
+- **Note:** [`LATTICE_KERNEL_TRANSFER_NORM_NOTE.md`](../../docs/LATTICE_KERNEL_TRANSFER_NORM_NOTE.md)
+- **current_status:** _proposed_promoted_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The local 3D transfer-norm probe reports that, after h^2 measure normalization over h=1.0,0.5,0.25,0.125, p=1.5 is closest to marginality and p=2.0 still drifts; the source note explicitly says this is a bounded discrimination probe, not a proposed_promoted branch claim.  _(class `C`)_
+- **chain closes:** False — The named runner reproduces the finite transfer-norm ranking when invoked with the h=0.125 argument used by the archived log, but the audit queue row is proposed_promoted even though the source status line explicitly disclaims a proposed_promoted branch claim. The script itself is a local kernel-only discrimination harness and does not run same-harness propagation or prove a continuum kernel power.
+- **rationale:** Issue: the audit target is classified as proposed_promoted, but the source note states that this is a bounded discrimination probe and not a proposed_promoted branch claim. Why this blocks: a local outgoing transfer norm over four h values can warn that p=2.0 is not singled out, but it does not establish a promoted 3D kernel branch, a continuum limit, or same-harness propagation behavior; treating this note as a promoted branch would contradict the note's own scope. Repair target: revise the Status line so the queue does not parse this as proposed_promoted, or create a separate promotion note with a registered runner that proves the selected kernel power on same-harness propagation, Born/controls, refinement, and continuum criteria. Claim boundary until fixed: it is safe to claim only the finite local discriminator: with h^2 normalization and h={1.0,0.5,0.25,0.125}, p=1.5 has measured slope +0.102, p=2.0 has -0.204, p=2.5 has -0.598, and p=3.0 has -1.046; this is a warning signal, not a promoted law.
+- **open / conditional deps cited:**
+  - `source_status_explicitly_says_not_a_proposed_promoted_branch_claim`
+  - `local_transfer_norm_not_same_harness_propagation_or_continuum_proof`
+  - `runner_default_h_values_do_not_include_h_0_125_without_explicit_arguments`
 - **auditor confidence:** high
 
 ### `lensing_beta_sweep_note`
