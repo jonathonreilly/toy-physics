@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T06:16:19.392712+00:00
+**Generated:** 2026-04-27T06:17:51.204553+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,17 +20,17 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 6 |
-| _proposed_retained_ | 238 |
+| _proposed_retained_ | 237 |
 | _proposed_promoted_ | 6 |
 | bounded | 184 |
 | support | 101 |
 | open | 11 |
-| unknown | 731 |
+| unknown | 727 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
 | ~~audited_conditional~~ | 257 |
-| ~~audited_failed~~ | 59 |
+| ~~audited_failed~~ | 64 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 6 |
 | `audited_conditional` | 52 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 2 |
+| `audited_failed` | 3 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1530 |
+| `unaudited` | 1529 |
 
 | criticality | count |
 |---|---:|
@@ -163,6 +163,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `retained_cross_lane_consistency_support_note_2026-04-22` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | B | - |
 | `equivalence_principle_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | G | - |
 | `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
+| `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `bell_inequality_derived_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -1264,6 +1265,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `finite_graph_seed_coupling_surface_no_admissible_graph_theorem`
   - `shell_force_proxy_to_coordinate_force_or_gravity_closure_not_derived`
   - `spectral_gap_secondary_count_live_stale_relative_to_note`
+- **auditor confidence:** high
+
+### `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11`
+
+- **Note:** [`work_history/repo/review_feedback/ARCHITECTURE_PORTABILITY_AUDIT_2026-04-11.md`](../../docs/work_history/repo/review_feedback/ARCHITECTURE_PORTABILITY_AUDIT_2026-04-11.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** It demonstrates architecture portability of source-mass scaling and attraction sign across ordered 3D cubic, staggered 3D cubic, Wilson 3D cubic, and a 2D random geometric control row.  _(class `B`)_
+- **chain closes:** False — The note gives proposed safe wording, but no runner, data table, artifact chain, or registered one-hop dependencies proving the cross-architecture comparisons.
+- **rationale:** Issue: the positive architecture-portability claim is asserted without any checkable source-note computation, runner output, table, or registered dependency. Why this blocks: a hostile auditor cannot verify source-mass scaling, attraction sign, Born-rule exclusions, or architecture-specific boundaries across the ordered, staggered, Wilson, and random-geometric rows from this packet. Repair target: provide or register the underlying architecture-portability note, scripts/logs, per-architecture measurements, and explicit wording-boundary checks. Claim boundary until fixed: this file can be used only as an editorial wording caution that should not overclaim Newton closure, distance-law closure, both-masses closure, or Wilson Born measurements; it cannot itself be retained as evidence for architecture portability.
+- **open / conditional deps cited:**
+  - `ordered_3D_cubic_source_mass_scaling_and_attraction_artifact_not_registered`
+  - `staggered_3D_cubic_source_mass_scaling_and_attraction_artifact_not_registered`
+  - `Wilson_3D_cubic_source_mass_scaling_and_attraction_artifact_not_registered`
+  - `2D_random_geometric_control_row_artifact_not_registered`
 - **auditor confidence:** high
 
 ### `yt_ew_color_projection_theorem`
