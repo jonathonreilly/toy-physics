@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T22:04:05.664999+00:00",
-  "generated_at": "2026-04-27T22:04:03.954983+00:00",
-  "invalidation_run_at": "2026-04-27T22:04:05.611308+00:00",
+  "effective_status_computed_at": "2026-04-27T22:06:49.027991+00:00",
+  "generated_at": "2026-04-27T22:06:47.329336+00:00",
+  "invalidation_run_at": "2026-04-27T22:06:48.973403+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T22:04:05.486696+00:00",
+  "load_bearing_computed_at": "2026-04-27T22:06:48.861271+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -85250,15 +85250,21 @@
       "verdict_rationale": "Issue: the retained three-channel color decomposition depends on the Rep-A/Rep-B one-loop diagrammatic catalog and exact 2 C_F I_leg cancellation, but this audit row has no registered dependencies and the runner hard-codes the Rep-A and Rep-B formulae before checking the subtraction. Why this blocks: the algebraic residual being zero proves only that the claimed assembly follows from the supplied catalog; it does not prove that the catalog, H_unit/scalar-bilinear normalization, flavor count, or external-leg equality are retained framework-native inputs. Repair target: register and close the Rep-A/Rep-B cancellation theorem and SU(3)/n_f authorities as one-hop dependencies, or extend the runner to enumerate the one-loop diagrams and derive the channel coefficients and Z_psi cancellation from the framework Feynman rules. Claim boundary until fixed: safe to claim that, given the stated Rep-A/Rep-B formulas plus C_F=4/3, C_A=3, T_F=1/2, and n_f=6, the three-channel assembly and external-leg cancellation are exact; not safe to claim an independently retained framework-native P1 color-factor decomposition."
     },
     "yt_p1_delta_1_bz_computation_note_2026-04-17": {
-      "audit_date": null,
-      "audit_state_snapshot": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 7.431,
+        "transitive_descendants": 121
+      },
+      "audit_status": "audited_numerical_match",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": 0.96,
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner gives correct arithmetic once the cited bracket and selected central are supplied, but it does not perform the framework-native BZ quadrature or derive the central value. Its own back-solved midpoint is I_v_scalar=4.5, which gives Delta_1=3, while the retained central uses I_v_scalar=4 because that literature-cluster choice reproduces the packaged 1.92 percent number.",
       "claim_id": "yt_p1_delta_1_bz_computation_note_2026-04-17",
       "criticality": "high",
       "cross_confirmation": null,
@@ -85267,18 +85273,24 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_numerical_match",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_numerical_match",
       "load_bearing_score": 7.431,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "At the literature-cluster central I_v_scalar = 4 and retained I_v_gauge = 0, Delta_1 = 2 and C_F Delta_1 alpha_LM/(4 pi) reproduces the packaged 1.92 percent value.",
+      "load_bearing_step_class": "G",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "582d92b69be86789f1f9bfca58abcc5fb5412ecb91eac13689dd18267d4853c5",
       "note_path": "docs/YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md",
+        "docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md",
+        "docs/YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md",
+        "scripts/frontier_yt_p1_i1_lattice_pt_symbolic.py",
+        "scripts/frontier_yt_p1_delta_1_bz.py"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.370300+00:00",
@@ -85344,16 +85356,19 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "class_A_exact_arithmetic_or_identity": 24,
+        "class_B_dependency_or_assumption_checks": 21,
+        "class_C_first_principles_or_numeric_compute": 0,
+        "class_D_unchecked_load_bearing_steps": 0,
+        "class_G_selected_value_or_numerical_match": 10,
+        "notes": "Live runner reports PASS=55 FAIL=0. The checks mostly verify arithmetic, preserved imported constants, cited ranges, and consequences of supplied formulas. The key central match uses I_v_scalar=4 as a literature-cluster choice; the same runner reports an unrounded back-solved central I_v_scalar=4.5, which would not reproduce the packaged 1.92% value.",
+        "total_fail": 0,
+        "total_pass": 55
       },
       "runner_path": "scripts/frontier_yt_p1_delta_1_bz.py",
       "title": "P1 \u0394_1 BZ-Computation Note (C_F Channel of the Ward-Ratio 1-Loop Correction)",
       "transitive_descendants": 121,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the headline retained central Delta_1=+2 and 1.924% contribution depend on selecting I_v_scalar=4 from a cited O(1) literature bracket, even though the runner's back-solved midpoint is 4.5 and would give Delta_1=+3 and 2.886%. Why this blocks: the central/package agreement is a chosen numerical match inside an external bracket, not a framework-native computation of the Brillouin-zone integral or a theorem fixing the central value. Repair target: perform a retained 4D BZ quadrature for I_v_scalar on the stated Cl(3) x Z^3 Wilson-plaquette/staggered/tadpole-improved action, with the conserved-current I_v_gauge and scalar-bilinear normalization derived from registered one-hop inputs; alternatively demote the note to an explicit citation-bound support result with no retained central. Claim boundary until fixed: safe to claim the conditional arithmetic map Delta_1=2(I_v_scalar-I_v_gauge)-6 and, if I_v_scalar in [3,7] and I_v_gauge=0 are supplied, the range Delta_1 in [0,8] and C_F-channel contribution [0%,7.70%]; not safe to claim retained Delta_1=+2 or the 1.92% match as derived."
     },
     "yt_p1_delta_2_bz_computation_note_2026-04-17": {
       "audit_date": null,
