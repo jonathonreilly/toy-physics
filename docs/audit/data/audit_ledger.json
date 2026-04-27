@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T21:37:46.430292+00:00",
-  "generated_at": "2026-04-27T21:37:44.514028+00:00",
-  "invalidation_run_at": "2026-04-27T21:37:46.376819+00:00",
+  "effective_status_computed_at": "2026-04-27T21:39:05.546948+00:00",
+  "generated_at": "2026-04-27T21:39:03.839862+00:00",
+  "invalidation_run_at": "2026-04-27T21:39:05.490028+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T21:37:46.260694+00:00",
+  "load_bearing_computed_at": "2026-04-27T21:39:05.381728+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -85854,14 +85854,21 @@
       "verdict_rationale": "Issue: the definitive partial-cancellation/P1-budget claim depends on unproved canonical-surface inputs: the Rep-A/Rep-B one-loop diagram catalog and signs, the MSbar scalar-density anomalous-dimension map into H_unit, and the assumptions I_v_scalar != I_v_gauge and I_SE/non-Abelian channels are nonzero rather than accidentally satisfying the cancellation identities. Why this blocks: the runner only samples representative BZ values and verifies arithmetic; it does not derive the lattice Feynman rules or compute the actual BZ coefficients, so a hostile reader can reject the claim that full cancellation is ruled out and that the cited P1 bracket is operationally retained for the real canonical surface. Repair target: derive the one-loop Rep-A/Rep-B lattice Feynman rules for C1+C2, prove the H_unit/MSbar scalar-density renormalization map and sign convention, then compute or rigorously bound I_v_scalar, I_v_gauge, I_SE, and I_leg enough to prove Delta_1, Delta_2, Delta_3 do not enforce full cancellation. Claim boundary until fixed: safe to claim the conditional color-channel formula and exact external-Z_psi cancellation if the contribution catalog is accepted; not safe to claim definitive canonical-surface partial cancellation or a retained P1 central/budget conclusion."
     },
     "yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": 0.86,
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The listed structural mismatch supports the no-go if the one-loop piece taxonomy and the rule limiting D12/S2 to fixed-diagram color/Dirac rearrangements are accepted. The runner does not derive the taxonomy from the retained action or prove a formal invariant excluding all D12/S2 algebraic rewrites; it checks a hard-coded table of pieces.",
       "claim_id": "yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -85869,18 +85876,25 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "From the hard-coded Rep-A/Rep-B one-loop piece lists and the assertion that D12/S2 Fierz rearrangements preserve diagram topology and renormalization type, conclude that no shared-Fierz algebraic shortcut can collapse Delta_R and that channel-by-channel BZ evaluation is required.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "aac5d69023132226955d74c7db55228cf923f05c309475fc3888f980d94b72e0",
       "note_path": "docs/YT_P1_SHARED_FIERZ_NO_GO_SUB_THEOREM_NOTE_2026-04-17.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md",
+        "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
+        "docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md",
+        "docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
+        "docs/YT_COLOR_PROJECTION_CORRECTION_NOTE.md",
+        "docs/YT_P1_I1_LATTICE_PT_SYMBOLIC_DECOMPOSITION_NOTE_2026-04-17.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.370342+00:00",
@@ -85909,16 +85923,18 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "class_A_exact_arithmetic_or_identity": 1,
+        "class_B_dependency_or_assumption_checks": 2,
+        "class_C_scenario_or_heuristic_checks": 0,
+        "class_D_unchecked_load_bearing_steps": 1,
+        "notes": "Runner PASS=4 FAIL=0. It validates the hard-coded structural divide table but does not derive the diagram taxonomy or prove an exhaustive D12/S2 no-go invariant.",
+        "total_fail": 0,
+        "total_pass": 4
       },
       "runner_path": "scripts/frontier_yt_p1_shared_fierz_no_go.py",
       "title": "P1 Shared-Fierz Shortcut No-Go Sub-Theorem Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the definitive shared-Fierz no-go is based on a hard-coded Rep-A/Rep-B diagram taxonomy plus an unproved rule that the D12 color Fierz and S2 Clifford Fierz cannot change diagram topology or renormalization type. Why this blocks: a checklist of nonshared pieces is not a formal no-go theorem for all algebraic rearrangements of D12+S2 on the canonical lattice surface, and the runner does not derive the one-loop piece lists from the retained action. Repair target: derive the Rep-A and Rep-B one-loop diagram sets from the C1+C2 lattice Feynman rules, formalize D12 and S2 as linear maps acting within fixed color/Clifford tensor spaces, and prove invariants showing they cannot map self-energy, operator-renormalization, and vertex-integral sectors into one another. Claim boundary until fixed: safe to claim that under the stated standard one-loop catalog, only external Z_psi is exactly shared and the remaining listed channels require BZ evaluation; not safe to claim a definitive retained no-go against every D12/S2 shortcut."
     },
     "yt_p2_f_yt_loop_geometric_bound_note_2026-04-17": {
       "audit_date": null,

@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T21:37:46.650303+00:00
+**Generated:** 2026-04-27T21:39:05.769192+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 72 |
-| _proposed_retained_ | 12 |
+| _proposed_retained_ | 11 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 6 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 357 |
+| ~~audited_conditional~~ | 358 |
 | ~~audited_failed~~ | 139 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 72 |
-| `audited_conditional` | 144 |
+| `audited_conditional` | 145 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 72 |
 | `audited_numerical_match` | 6 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1311 |
+| `unaudited` | 1310 |
 
 | criticality | count |
 |---|---:|
@@ -314,6 +314,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_p1_delta_r_sm_rge_crosscheck_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `yt_p1_i_s_lattice_pt_citation_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
@@ -5011,6 +5012,25 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `scripts/canonical_plaquette_surface.py`
   - `missing framework-native BZ evaluation for I_v_scalar, I_v_gauge, I_SE, I_leg`
 - **auditor confidence:** 0.87
+
+### `yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17`
+
+- **Note:** [`YT_P1_SHARED_FIERZ_NO_GO_SUB_THEOREM_NOTE_2026-04-17.md`](../../docs/YT_P1_SHARED_FIERZ_NO_GO_SUB_THEOREM_NOTE_2026-04-17.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** From the hard-coded Rep-A/Rep-B one-loop piece lists and the assertion that D12/S2 Fierz rearrangements preserve diagram topology and renormalization type, conclude that no shared-Fierz algebraic shortcut can collapse Delta_R and that channel-by-channel BZ evaluation is required.  _(class `B`)_
+- **chain closes:** False — The listed structural mismatch supports the no-go if the one-loop piece taxonomy and the rule limiting D12/S2 to fixed-diagram color/Dirac rearrangements are accepted. The runner does not derive the taxonomy from the retained action or prove a formal invariant excluding all D12/S2 algebraic rewrites; it checks a hard-coded table of pieces.
+- **rationale:** Issue: the definitive shared-Fierz no-go is based on a hard-coded Rep-A/Rep-B diagram taxonomy plus an unproved rule that the D12 color Fierz and S2 Clifford Fierz cannot change diagram topology or renormalization type. Why this blocks: a checklist of nonshared pieces is not a formal no-go theorem for all algebraic rearrangements of D12+S2 on the canonical lattice surface, and the runner does not derive the one-loop piece lists from the retained action. Repair target: derive the Rep-A and Rep-B one-loop diagram sets from the C1+C2 lattice Feynman rules, formalize D12 and S2 as linear maps acting within fixed color/Clifford tensor spaces, and prove invariants showing they cannot map self-energy, operator-renormalization, and vertex-integral sectors into one another. Claim boundary until fixed: safe to claim that under the stated standard one-loop catalog, only external Z_psi is exactly shared and the remaining listed channels require BZ evaluation; not safe to claim a definitive retained no-go against every D12/S2 shortcut.
+- **open / conditional deps cited:**
+  - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
+  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
+  - `YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`
+  - `YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
+  - `YT_COLOR_PROJECTION_CORRECTION_NOTE.md`
+  - `YT_P1_I1_LATTICE_PT_SYMBOLIC_DECOMPOSITION_NOTE_2026-04-17.md`
+- **auditor confidence:** 0.86
 
 ### `yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17`
 
