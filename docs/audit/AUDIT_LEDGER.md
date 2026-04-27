@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T11:49:41.955019+00:00
+**Generated:** 2026-04-27T11:55:55.536847+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 36 |
-| _proposed_retained_ | 162 |
+| _proposed_retained_ | 161 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 294 |
+| ~~audited_conditional~~ | 295 |
 | ~~audited_failed~~ | 89 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 36 |
-| `audited_conditional` | 81 |
+| `audited_conditional` | 82 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 22 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1462 |
+| `unaudited` | 1461 |
 
 | criticality | count |
 |---|---:|
@@ -162,6 +162,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `emergent_lorentz_invariance_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `family_companion_compare_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `fine_h_family_universality_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `four_d_distance_width_probe_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `global_coherence_off_scaffold_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravitomagnetic_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -1341,6 +1342,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Mass-law transfer agrees within uncertainty on the retained grown-row neighborhood (drift=0.2, restore=0.7).  _(class `C`)_
 - **chain closes:** True — The live runner recomputes the fixed-lattice F~M exponent, six grown-seed F~M exponents at drift=0.2 and restore=0.7, their mean/spread, and the fixed-grown sigma comparison. The note explicitly excludes geometry-generic transfer, other drift/restore values, and other observables.
 - **rationale:** The claim is a bounded numerical computation, not a broad universality theorem: the current runner reproduces the frozen fixed exponent, all six grown-seed exponents, the grown aggregate, and the 0.3 sigma fixed-grown comparison. The source note keeps the conclusion on the specified grown row and explicitly does not claim other geometries, drift/restore values, or observables. Residual boundary: the quoted uncertainty is the finite six-seed grown spread used by the runner, so the retained content is only this finite transfer check.
+- **auditor confidence:** high
+
+### `four_d_distance_width_probe_note`
+
+- **Note:** [`FOUR_D_DISTANCE_WIDTH_PROBE_NOTE.md`](../../docs/FOUR_D_DISTANCE_WIDTH_PROBE_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** TOWARD survives across the tested widths, but the measured exponent still moves enough that the law is not yet width-stable and the width ladder is too small to close the asymptotic law.  _(class `C`)_
+- **chain closes:** False — The live runner reproduces the finite W=5..7 TOWARD counts and width-sensitive tail fits, and the frozen W=8 companion log is supportive. The row does not close a proposed-retained 4D family or asymptotic distance law because the evidence is explicitly width-limited and the dimensional-table relation is unaudited/unknown.
+- **rationale:** Issue: the source note is queued as proposed_retained, but its own load-bearing result is a bounded width-limited support chain, with W=5..7 reproduced live, W=8 present only as a frozen companion log, and the dimensional-table relation still unaudited/unknown. Why this blocks: the finite probe supports attraction in the tested window, but it cannot ratify a retained 4D valley-linear family or any asymptotic distance-law closure. Repair target: either change the source status to a bounded/support claim, or provide a registered current runner covering the heavier width ladder plus an audited dimensional-table/family theorem and a convergence criterion for width-stable tail behavior. Claim boundary until fixed: the safe claim is that W=5..7 live and W=8 frozen evidence are TOWARD on the tested window, while the 4D tail remains width-sensitive and not Newtonian/asymptotically closed.
+- **open / conditional deps cited:**
+  - `DIMENSIONAL_GRAVITY_TABLE.md_unknown_or_unaudited`
+  - `logs/2026-04-04-4d-wide-distance-law.txt_frozen_companion_without_registered_current_runner`
 - **auditor confidence:** high
 
 ### `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25`

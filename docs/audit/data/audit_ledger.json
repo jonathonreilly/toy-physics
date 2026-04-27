@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T11:49:41.695380+00:00",
-  "generated_at": "2026-04-27T11:49:39.972725+00:00",
-  "invalidation_run_at": "2026-04-27T11:49:41.632433+00:00",
+  "effective_status_computed_at": "2026-04-27T11:55:55.316075+00:00",
+  "generated_at": "2026-04-27T11:55:53.648744+00:00",
+  "invalidation_run_at": "2026-04-27T11:55:55.265312+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T11:49:41.507595+00:00",
+  "load_bearing_computed_at": "2026-04-27T11:55:55.163262+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -28779,14 +28779,21 @@
       "verdict_rationale": "The claim is a bounded numerical computation, not a broad universality theorem: the current runner reproduces the frozen fixed exponent, all six grown-seed exponents, the grown aggregate, and the 0.3 sigma fixed-grown comparison. The source note keeps the conclusion on the specified grown row and explicitly does not claim other geometries, drift/restore values, or observables. Residual boundary: the quoted uncertainty is the finite six-seed grown spread used by the runner, so the retained content is only this finite transfer check."
     },
     "four_d_distance_width_probe_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner reproduces the finite W=5..7 TOWARD counts and width-sensitive tail fits, and the frozen W=8 companion log is supportive. The row does not close a proposed-retained 4D family or asymptotic distance law because the evidence is explicitly width-limited and the dimensional-table relation is unaudited/unknown.",
       "claim_id": "four_d_distance_width_probe_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -28794,18 +28801,21 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "TOWARD survives across the tested widths, but the measured exponent still moves enough that the law is not yet width-stable and the width ladder is too small to close the asymptotic law.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "414c6dadfcfd80016fcb866119d17bcdc539b82e4c3137e908fa40fa4a8d5eaf",
       "note_path": "docs/FOUR_D_DISTANCE_WIDTH_PROBE_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/DIMENSIONAL_GRAVITY_TABLE.md_unknown_or_unaudited",
+        "logs/2026-04-04-4d-wide-distance-law.txt_frozen_companion_without_registered_current_runner"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368333+00:00",
@@ -28835,15 +28845,15 @@
       ],
       "runner_check_breakdown": {
         "A": 0,
-        "B": 0,
-        "C": 0,
+        "B": 2,
+        "C": 7,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 9
       },
       "runner_path": null,
       "title": "4D Distance Width Probe Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the source note is queued as proposed_retained, but its own load-bearing result is a bounded width-limited support chain, with W=5..7 reproduced live, W=8 present only as a frozen companion log, and the dimensional-table relation still unaudited/unknown. Why this blocks: the finite probe supports attraction in the tested window, but it cannot ratify a retained 4D valley-linear family or any asymptotic distance-law closure. Repair target: either change the source status to a bounded/support claim, or provide a registered current runner covering the heavier width ladder plus an audited dimensional-table/family theorem and a convergence criterion for width-stable tail behavior. Claim boundary until fixed: the safe claim is that W=5..7 live and W=8 frozen evidence are TOWARD on the tested window, while the 4D tail remains width-sensitive and not Newtonian/asymptotically closed."
     },
     "fourth_family_complex_boundary_note": {
       "audit_date": null,
