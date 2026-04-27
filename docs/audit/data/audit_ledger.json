@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T16:33:49.825277+00:00",
-  "generated_at": "2026-04-27T16:33:48.225758+00:00",
-  "invalidation_run_at": "2026-04-27T16:33:49.777059+00:00",
+  "effective_status_computed_at": "2026-04-27T16:35:24.845141+00:00",
+  "generated_at": "2026-04-27T16:35:23.179758+00:00",
+  "invalidation_run_at": "2026-04-27T16:35:24.786390+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T16:33:49.678756+00:00",
+  "load_bearing_computed_at": "2026-04-27T16:35:24.687569+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -58741,14 +58741,21 @@
       "verdict_rationale": "Issue: The queued proposed-retained row is not a retained mechanism claim on its own terms: the source status says control-only and not a proposed_retained self-gravity mechanism, the evidence notes it cites are unaudited or unknown, and the companion script only prints a hard-coded verdict. Why this blocks: the audit cannot ratify a proposed-retained mechanism or even a retained synthesis from unaudited support rows and a non-computational report script. Repair target: demote the source status to bounded/control-only or rebuild it as a ledger-generated synthesis after auditing POISSON_SELF_GRAVITY_LOOP_NOTE, POISSON_SELF_GRAVITY_BORN_AUDIT_NOTE, and POISSON_SELF_GRAVITY_LOOP_V3_NOTE; remove the embedded patch text from the markdown and make the runner recompute the controls. Claim boundary until fixed: it is safe to use this as an editorial control-only handoff saying no retained self-gravity mechanism has closed; it is not safe to treat it as an audit-retained self-gravity mechanism or retained mechanism synthesis."
     },
     "portable_card_extension_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner computes only the family-3 source-placement collapse; it hard-codes the retained card baseline, and the named card/portability dependencies are unaudited, conditional, or unknown.",
       "claim_id": "portable_card_extension_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -58756,18 +58763,24 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The portable package extends cleanly onto the three-family card, while the distance law remains the main holdout subset on the current family-3 probe.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "e45c64fe2b9fb8e7e1623960283ce84a33cb59f046bf8738f8c8f3baea183d0b",
       "note_path": "docs/PORTABLE_CARD_EXTENSION_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/THREE_FAMILY_CARD_NOTE.md",
+        "docs/PORTABLE_PACKAGE_EXTENSION_NOTE.md",
+        "docs/SIGN_PORTABILITY_INVARIANT_NOTE.md",
+        "docs/DISTANCE_LAW_BREAKPOINT_NOTE.md",
+        "docs/DISTANCE_LAW_PORTABILITY_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369417+00:00",
@@ -58798,14 +58811,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 1,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 1
       },
       "runner_path": null,
       "title": "Portable Card Extension Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The claimed retained extension imports the three-family card and portable package as retained authorities, but THREE_FAMILY_CARD_NOTE and PORTABLE_PACKAGE_EXTENSION_NOTE are unaudited, SIGN_PORTABILITY_INVARIANT_NOTE and DISTANCE_LAW_BREAKPOINT_NOTE are audited_conditional, DISTANCE_LAW_PORTABILITY_NOTE is unknown, and the frozen log named by the source is absent. Why this blocks: the live runner verifies only that the family-3 distance-law probe collapses to one selected source node; it does not recompute or prove the portable package core across the three-family card, so the retained extension conclusion is unsupported. Repair target: audit or repair the card and portability dependencies, restore the frozen log, and replace the hard-coded retained table with a runner that recomputes the portable-core checks from first principles for all three families. Claim boundary until fixed: it is safe to say the current family-3 distance-law harness has a source-placement coverage failure and therefore is not a physics contradiction; it is not safe to claim an audit-retained portable package extension onto the three-family card."
     },
     "portable_package_extension_note": {
       "audit_date": null,
