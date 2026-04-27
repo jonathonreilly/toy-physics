@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T04:10:59.033271+00:00",
-  "generated_at": "2026-04-27T04:10:57.252379+00:00",
-  "invalidation_run_at": "2026-04-27T04:10:58.969569+00:00",
+  "effective_status_computed_at": "2026-04-27T04:13:59.464345+00:00",
+  "generated_at": "2026-04-27T04:13:57.512778+00:00",
+  "invalidation_run_at": "2026-04-27T04:13:59.387761+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T04:10:58.853457+00:00",
+  "load_bearing_computed_at": "2026-04-27T04:13:59.268661+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -37698,14 +37698,21 @@
       "verdict_rationale": null
     },
     "koide_dimensionless_objection_closure_review_packet_2026-04-24": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 12.383,
+        "transitive_descendants": 117
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies the algebraic countermodels and conditional Q/delta closures, but the retained source carrier, Z label, APS eta value, selected-line endpoint law, and based endpoint section are imported premises rather than registered one-hop dependencies. The primary runner also does not emit every expected closeout line in the note, so the support packet is not fully closed by the registered runner output.",
       "claim_id": "koide_dimensionless_objection_closure_review_packet_2026-04-24",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -37713,18 +37720,30 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 11,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 12.383,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The packet's safe retained-support statement is that KOIDE_DIMENSIONLESS_RETAINED_CLOSURE=FALSE because traceless Z backgrounds and ambient/spectator endpoint sources remain counterdomains unless extra source-domain and boundary laws are derived.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "1b3151afd5f37ee2adf732de70e65b57983bdb8301253ce2f33f7aef60a88dcd",
       "note_path": "docs/KOIDE_DIMENSIONLESS_OBJECTION_CLOSURE_REVIEW_PACKET_2026-04-24.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "retained_two_channel_source_response_carrier_not_registered",
+        "central_projected_commutant_Z_source_grammar_not_registered",
+        "april_25_background_zero_Z_erasure_criterion_theorem_not_registered",
+        "april_25_onsite_source_domain_synthesis_not_registered",
+        "APS_eta_APS_equals_2_over_9_authority_not_registered",
+        "selected_line_local_boundary_source_law_not_registered",
+        "based_endpoint_section_theorem_not_registered",
+        "scripts/frontier_koide_q_delta_readout_retention_split_no_go.py_not_registered_runner_dependency",
+        "scripts/frontier_koide_pointed_origin_exhaustion_theorem.py_not_registered_runner_dependency",
+        "scripts/frontier_koide_hostile_review_guard.py_not_registered_runner_dependency",
+        "scripts/frontier_koide_q_onsite_source_domain_no_go_synthesis.py_not_registered_runner_dependency"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368787+00:00",
@@ -37753,16 +37772,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 21,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 21
       },
       "runner_path": "scripts/frontier_koide_dimensionless_objection_closure_review.py",
       "title": "Koide Dimensionless Objection-Closure Review Packet",
       "transitive_descendants": 117,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the packet correctly avoids claiming full dimensionless Koide closure, but its proposed-retained support/no-go status relies on unregistered authorities for the normalized two-channel source-response carrier, retained central/projected commutant source grammar with Z, the April 25 background-zero/Z-erasure and onsite-source-domain results, the APS eta_APS=2/9 value, and the physical selected-line/based-endpoint boundary setup. Why this blocks: the primary runner proves rational counterexamples inside a supplied model, not that the supplied model is the retained physical source domain or that no retained boundary law elsewhere selects the closing quotient; it also omits several expected closeout declarations from the note, including the onsite-source-domain conditional and residual source-domain line. Repair target: register the source-response, onsite-source-domain, Q/delta split no-go, pointed-origin/endpoint, APS eta, and hostile-review guard authorities as one-hop dependencies; make the primary runner or registered runner bundle assert every expected closeout line and fail if any residual authority is missing. Claim boundary until fixed: it is safe to claim conditional support/no-go evidence: within the supplied two-channel source-response and endpoint-source toy algebra, z=0 gives Q=2/3, traceless Z and ambient endpoint sources give exact counterdomains, selected-line plus based endpoint would give delta=2/9, and full retained closure remains unestablished; it is not yet an audited retained proof of the physical dimensionless Koide obstruction or of all listed residual boundaries."
     },
     "koide_dweh_cyclic_compression_note_2026-04-18": {
       "audit_date": null,

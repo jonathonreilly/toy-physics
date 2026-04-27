@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 88,
-    "high": 542,
+    "high": 541,
     "leaf": 856,
     "medium": 85
   },
-  "generated_at": "2026-04-27T04:10:59.087087+00:00",
+  "generated_at": "2026-04-27T04:13:59.526048+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -4191,23 +4191,6 @@
       "note_path": "docs/DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md",
       "ready": true,
       "runner_path": null,
-      "transitive_descendants": 117
-    },
-    {
-      "audit_independence_required": "cross_family",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "koide_dimensionless_objection_closure_review_packet_2026-04-24",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 11,
-      "load_bearing_score": 12.383,
-      "note_path": "docs/KOIDE_DIMENSIONLESS_OBJECTION_CLOSURE_REVIEW_PACKET_2026-04-24.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_koide_dimensionless_objection_closure_review.py",
       "transitive_descendants": 117
     },
     {
@@ -31483,6 +31466,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1165,
-  "total_pending": 1571
+  "ready_count": 1164,
+  "total_pending": 1570
 }
