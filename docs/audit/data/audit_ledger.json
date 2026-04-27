@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T10:55:50.441210+00:00",
-  "generated_at": "2026-04-27T10:55:48.254915+00:00",
-  "invalidation_run_at": "2026-04-27T10:55:50.372139+00:00",
+  "effective_status_computed_at": "2026-04-27T10:57:23.879058+00:00",
+  "generated_at": "2026-04-27T10:57:21.926577+00:00",
+  "invalidation_run_at": "2026-04-27T10:57:23.801462+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T10:55:50.206869+00:00",
+  "load_bearing_computed_at": "2026-04-27T10:57:23.656398+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -26161,14 +26161,21 @@
       "verdict_rationale": "Issue: the retained sign-law companion rests on frozen numerical results for one fixed grown geometry row, but the audit ledger registers no primary runner or output, and the note's artifact links are absolute local paths outside the audit packet. Why this blocks: a hostile auditor cannot reproduce the printed delta_z signs, neutral cancellation, dipole partial cancellation, or +1/+2 linearity threshold from registered evidence; moreover the note explicitly limits the result to fixed-field, no graph update, one source layer, and one final-layer centroid on a single grown row. Repair target: register scripts/ELECTROSTATICS_GROWN_SIGN_LAW.py as the claim runner with deterministic output and explicit PASS thresholds for sign, cancellation, and charge-linearity; either keep the note scoped to the single grown row or add sweeps over grown-geometry parameters, graph update, source layers, and detector definitions. Claim boundary until fixed: it is safe to say the source note reports a conditional fixed-row sign-law transfer check with neutral cancellation and approximate charge linearity; it is not yet an audited retained grown-geometry theorem or geometry-generic electrostatics result."
     },
     "electrostatics_superposition_proxy_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The live primary script reproduces the note's five printed replay cases to the shown precision: single +1, same-point +1/-1 null, symmetric +1/+1 reinforcement, +1/-1 dipole partial cancellation, and +2 source scaling. The closure is only for the explicit scalar source-superposition proxy and not for Maxwell, gauge, magnetic, or radiation structure.",
       "claim_id": "electrostatics_superposition_proxy_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -26176,13 +26183,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Using the same sign-coupled ordered-lattice propagator with an explicitly linear multi-source field, same-point opposite charges cancel, like charges reinforce, a dipole gives a reduced signed response, and doubling the source approximately doubles the response.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "aa12583a89680dd8f2ef9837791ed43087da69e03f097d002d472ce525d0e3aa",
@@ -26218,14 +26225,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 5,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 5
       },
       "runner_path": null,
       "title": "Electrostatics Superposition Proxy Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The note's load-bearing claim is a finite compatibility probe, not a derivation of electromagnetism or of linear superposition from deeper retained axioms. Within that scope, the live runner recomputes the stated source combinations and matches the printed replay: exact same-point cancellation, reinforced like-pair shift, reduced signed dipole response, and nearly doubled +2 response. Residual boundary: downstream uses must treat the linear source field and scalar sign-coupled propagator as the tested setup, not as an audited Maxwell theory."
     },
     "em_gravity_coexistence_2x2_note": {
       "audit_date": null,
