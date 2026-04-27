@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T15:09:01.014152+00:00",
-  "generated_at": "2026-04-27T15:08:59.420994+00:00",
-  "invalidation_run_at": "2026-04-27T15:09:00.968072+00:00",
+  "effective_status_computed_at": "2026-04-27T15:10:33.293803+00:00",
+  "generated_at": "2026-04-27T15:10:31.680264+00:00",
+  "invalidation_run_at": "2026-04-27T15:10:33.247891+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T15:09:00.874107+00:00",
+  "load_bearing_computed_at": "2026-04-27T15:10:33.152721+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -45875,14 +45875,21 @@
       "verdict_rationale": "Issue: the source explicitly disclaims the promoted-continuum claim that caused it to enter the proposed_promoted queue, and it provides no independent runner or artifact chain for a project-level promotion. Why this blocks: an audit cannot ratify a promoted claim that the source itself says is not being made, especially when the cited synthesis note is effective audited_failed and the underlying lattice/NN branches remain bounded or conditional. Repair target: change the status text so the audit parser does not classify this guard note as proposed_promoted, and promote only after the NN refinement/RG chain has audit-clean artifact-backed notes. Claim boundary until fixed: safely claim this as conservative synthesis guidance: mirror remains flagship, ordered lattice is a secondary bounded branch, NN refinement is a promising bounded bridge, and no blanket one-family or continuum lattice theorem is retained."
     },
     "lattice_weak_field_mass_scaling_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The live artifact reproduces the mass-proxy sweep, canonical row, tail fit, power-law fit, retention counts, and bounded sub-linear decision on the declared weak-field ordered-lattice pocket.",
       "claim_id": "lattice_weak_field_mass_scaling_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -45890,13 +45897,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "On the ordered 2D weak-field pocket, the fixed-node field-strength sweep stays Born-clean, k=0-clean, MI/decoherence-positive, and gravity-positive across all six strengths, with gravity = 2.6960 * strength^0.353 and R^2 = 0.971, so the response is positive but sub-linear rather than F proportional to M.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "a8d8f277c8c373f05a25926fbe0991038dc14d8b0d977d726d92a418d53e79b7",
@@ -45932,14 +45939,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 9,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 9
       },
       "runner_path": null,
       "title": "Lattice Weak-Field Mass-Scaling Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The runner recomputes the load-bearing sweep: all six field-strength rows are Born-clean at 4.24e-16, k=0 is zero, MI/decoherence remain nontrivial, gravity is positive, and each row is retained by the script's criteria. The fitted response exponent is 0.353 with R^2 = 0.971, and the source correctly treats that as a bounded sub-linear mass response rather than promoting F proportional to M or a one-card lattice unification theorem. Residual risk is limited to the declared weak-field pocket and fixed-node field-strength mass proxy."
     },
     "lattice_weak_field_purity_scaling_note": {
       "audit_date": null,

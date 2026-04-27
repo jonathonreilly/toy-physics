@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T15:09:01.196782+00:00
+**Generated:** 2026-04-27T15:10:33.480800+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 51 |
-| _proposed_retained_ | 115 |
+| **retained** | 52 |
+| _proposed_retained_ | 114 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 51 |
+| `audited_clean` | 52 |
 | `audited_conditional` | 101 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 34 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1414 |
+| `unaudited` | 1413 |
 
 | criticality | count |
 |---|---:|
@@ -145,6 +145,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_3d_tapered_refinement_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `lattice_distance_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `lattice_nn_mass_response_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `lattice_weak_field_mass_scaling_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `mirror_2d_validation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `moving_source_cross_family_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `planck_finite_response_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -2567,6 +2568,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the source explicitly disclaims the promoted-continuum claim that caused it to enter the proposed_promoted queue, and it provides no independent runner or artifact chain for a project-level promotion. Why this blocks: an audit cannot ratify a promoted claim that the source itself says is not being made, especially when the cited synthesis note is effective audited_failed and the underlying lattice/NN branches remain bounded or conditional. Repair target: change the status text so the audit parser does not classify this guard note as proposed_promoted, and promote only after the NN refinement/RG chain has audit-clean artifact-backed notes. Claim boundary until fixed: safely claim this as conservative synthesis guidance: mirror remains flagship, ordered lattice is a secondary bounded branch, NN refinement is a promising bounded bridge, and no blanket one-family or continuum lattice theorem is retained.
 - **open / conditional deps cited:**
   - `UNIFIED_PROGRAM_NOTE.md`
+- **auditor confidence:** high
+
+### `lattice_weak_field_mass_scaling_note`
+
+- **Note:** [`LATTICE_WEAK_FIELD_MASS_SCALING_NOTE.md`](../../docs/LATTICE_WEAK_FIELD_MASS_SCALING_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On the ordered 2D weak-field pocket, the fixed-node field-strength sweep stays Born-clean, k=0-clean, MI/decoherence-positive, and gravity-positive across all six strengths, with gravity = 2.6960 * strength^0.353 and R^2 = 0.971, so the response is positive but sub-linear rather than F proportional to M.  _(class `C`)_
+- **chain closes:** True — The live artifact reproduces the mass-proxy sweep, canonical row, tail fit, power-law fit, retention counts, and bounded sub-linear decision on the declared weak-field ordered-lattice pocket.
+- **rationale:** The runner recomputes the load-bearing sweep: all six field-strength rows are Born-clean at 4.24e-16, k=0 is zero, MI/decoherence remain nontrivial, gravity is positive, and each row is retained by the script's criteria. The fitted response exponent is 0.353 with R^2 = 0.971, and the source correctly treats that as a bounded sub-linear mass response rather than promoting F proportional to M or a one-card lattice unification theorem. Residual risk is limited to the declared weak-field pocket and fixed-node field-strength mass proxy.
 - **auditor confidence:** high
 
 ### `lensing_beta_sweep_note`
