@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T07:05:29.184213+00:00",
-  "generated_at": "2026-04-27T07:05:27.361127+00:00",
-  "invalidation_run_at": "2026-04-27T07:05:29.124728+00:00",
+  "effective_status_computed_at": "2026-04-27T07:09:25.650501+00:00",
+  "generated_at": "2026-04-27T07:09:23.637223+00:00",
+  "invalidation_run_at": "2026-04-27T07:09:25.595064+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T07:05:28.997221+00:00",
+  "load_bearing_computed_at": "2026-04-27T07:09:25.450240+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -70545,14 +70545,21 @@
       "verdict_rationale": null
     },
     "symmetry_head_to_head_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 2.822,
+        "transitive_descendants": 4
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The head-to-head script reproduces the printed finite comparison table, and a live dense Z2 x Z2 joint replay reproduces the imported N=80/100/120 values. The clean retained comparison chain does not close because the canonical mirror, mirror-MI, and higher-symmetry joint sources are audited_conditional, the gravity-probe source is bounded/unaudited rather than retained, and the head-to-head runner is a hardcoded table with no source-trace or pass/fail assertions.",
       "claim_id": "symmetry_head_to_head_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -70560,18 +70567,25 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 2.822,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note claims a review-safe apples-to-apples comparison between the proposed-retained exact mirror chokepoint lane and the retained dense Z2 x Z2 lane, ranking mirror as stronger on shared-row gravity and Z2 x Z2 as stronger on decoherence depth and retained range.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "audited_failed",
       "max_descendant_status_rank": 0,
       "note_hash": "995dc67669d77542f8e86c2fc83f6bc88cb9a5f9a146eed12396dd5d08f3b4e7",
       "note_path": "docs/SYMMETRY_HEAD_TO_HEAD_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/MIRROR_CHOKEPOINT_NOTE.md_audited_conditional",
+        "docs/MIRROR_MUTUAL_INFORMATION_CHOKEPOINT_NOTE.md_audited_conditional",
+        "docs/HIGHER_SYMMETRY_JOINT_VALIDATION_NOTE.md_audited_conditional",
+        "docs/HIGHER_SYMMETRY_GRAVITY_PROBE_NOTE.md_bounded_unaudited",
+        "logs/2026-04-03-higher-symmetry-joint-validation-z2z2-dense-n80-n120.txt_missing",
+        "scripts/symmetry_head_to_head.py_hardcoded_table_no_source_trace_assertions"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369911+00:00",
@@ -70609,7 +70623,7 @@
       "runner_path": null,
       "title": "Symmetry Head-To-Head Note",
       "transitive_descendants": 4,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the finite side-by-side numbers are reproducible, but the note presents a review-safe retained lane comparison before the cited lanes are cleanly audited. Why this blocks: a hostile auditor can verify the hardcoded head-to-head table and the live dense Z2 x Z2 replay, but cannot certify the comparison as retained while docs/MIRROR_CHOKEPOINT_NOTE.md, docs/MIRROR_MUTUAL_INFORMATION_CHOKEPOINT_NOTE.md, and docs/HIGHER_SYMMETRY_JOINT_VALIDATION_NOTE.md remain audited_conditional, docs/HIGHER_SYMMETRY_GRAVITY_PROBE_NOTE.md is only bounded/unaudited, and the comparison script does not enforce or source-check the constants. Repair target: clean or replace the upstream mirror and Z2 x Z2 validation packets, register/archive the missing dense joint log, add assertions tying each displayed number to its source runner/log and clarifying gravity@k=5 versus band-gravity conventions, and assert the comparison predicates directly. Claim boundary until fixed: it is safe to claim a finite diagnostic table: on the displayed N=80/100 rows, the hardcoded script and live dense Z2 x Z2 replay support the numeric comparison, with mirror higher on the displayed gravity@k=5 values and Z2 x Z2 lower in pur_cl and extending to N=120 in the dense replay; it is not yet a clean retained lane-ranking theorem."
     },
     "symmetry_spectrum_mirror_compare_note": {
       "audit_date": null,

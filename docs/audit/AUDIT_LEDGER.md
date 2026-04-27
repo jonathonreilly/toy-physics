@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T07:05:29.448964+00:00
+**Generated:** 2026-04-27T07:09:25.926996+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 10 |
-| _proposed_retained_ | 222 |
+| _proposed_retained_ | 221 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
-| ~~audited_conditional~~ | 265 |
+| ~~audited_conditional~~ | 266 |
 | ~~audited_failed~~ | 74 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 10 |
-| `audited_conditional` | 57 |
+| `audited_conditional` | 58 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 8 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1515 |
+| `unaudited` | 1514 |
 
 | criticality | count |
 |---|---:|
@@ -155,6 +155,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `sign_portability_invariant_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `strong_cp_theta_zero_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `structured_chokepoint_bridge_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `symmetry_head_to_head_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `unpromoted_branch_retainability_audit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `wave_equation_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -1374,6 +1375,25 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `full_scan_runner_prints_RETAINED_POCKET_none_found`
   - `best_near_Born_candidate_six_seed_replay_Born_8.79e-03_above_1e-10`
   - `queue_status_parser_false_positive_on_negative_proposed_retained_phrase`
+- **auditor confidence:** high
+
+### `symmetry_head_to_head_note`
+
+- **Note:** [`SYMMETRY_HEAD_TO_HEAD_NOTE.md`](../../docs/SYMMETRY_HEAD_TO_HEAD_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note claims a review-safe apples-to-apples comparison between the proposed-retained exact mirror chokepoint lane and the retained dense Z2 x Z2 lane, ranking mirror as stronger on shared-row gravity and Z2 x Z2 as stronger on decoherence depth and retained range.  _(class `C`)_
+- **chain closes:** False — The head-to-head script reproduces the printed finite comparison table, and a live dense Z2 x Z2 joint replay reproduces the imported N=80/100/120 values. The clean retained comparison chain does not close because the canonical mirror, mirror-MI, and higher-symmetry joint sources are audited_conditional, the gravity-probe source is bounded/unaudited rather than retained, and the head-to-head runner is a hardcoded table with no source-trace or pass/fail assertions.
+- **rationale:** Issue: the finite side-by-side numbers are reproducible, but the note presents a review-safe retained lane comparison before the cited lanes are cleanly audited. Why this blocks: a hostile auditor can verify the hardcoded head-to-head table and the live dense Z2 x Z2 replay, but cannot certify the comparison as retained while docs/MIRROR_CHOKEPOINT_NOTE.md, docs/MIRROR_MUTUAL_INFORMATION_CHOKEPOINT_NOTE.md, and docs/HIGHER_SYMMETRY_JOINT_VALIDATION_NOTE.md remain audited_conditional, docs/HIGHER_SYMMETRY_GRAVITY_PROBE_NOTE.md is only bounded/unaudited, and the comparison script does not enforce or source-check the constants. Repair target: clean or replace the upstream mirror and Z2 x Z2 validation packets, register/archive the missing dense joint log, add assertions tying each displayed number to its source runner/log and clarifying gravity@k=5 versus band-gravity conventions, and assert the comparison predicates directly. Claim boundary until fixed: it is safe to claim a finite diagnostic table: on the displayed N=80/100 rows, the hardcoded script and live dense Z2 x Z2 replay support the numeric comparison, with mirror higher on the displayed gravity@k=5 values and Z2 x Z2 lower in pur_cl and extending to N=120 in the dense replay; it is not yet a clean retained lane-ranking theorem.
+- **open / conditional deps cited:**
+  - `MIRROR_CHOKEPOINT_NOTE.md_audited_conditional`
+  - `MIRROR_MUTUAL_INFORMATION_CHOKEPOINT_NOTE.md_audited_conditional`
+  - `HIGHER_SYMMETRY_JOINT_VALIDATION_NOTE.md_audited_conditional`
+  - `HIGHER_SYMMETRY_GRAVITY_PROBE_NOTE.md_bounded_unaudited`
+  - `logs/2026-04-03-higher-symmetry-joint-validation-z2z2-dense-n80-n120.txt_missing`
+  - `scripts/symmetry_head_to_head.py_hardcoded_table_no_source_trace_assertions`
 - **auditor confidence:** high
 
 ### `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22`
