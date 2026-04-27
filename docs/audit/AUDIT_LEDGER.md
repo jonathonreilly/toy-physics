@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T03:21:25.721281+00:00
+**Generated:** 2026-04-27T03:23:48.467998+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 2 |
-| _proposed_retained_ | 294 |
+| _proposed_retained_ | 293 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
@@ -28,16 +28,16 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | unknown | 739 |
 | ~~audited_decoration~~ | 1 |
 | ~~audited_numerical_match~~ | 2 |
-| ~~audited_conditional~~ | 260 |
+| ~~audited_conditional~~ | 261 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 2 |
-| `audited_conditional` | 9 |
+| `audited_conditional` | 10 |
 | `audited_decoration` | 1 |
 | `audited_numerical_match` | 2 |
-| `unaudited` | 1584 |
+| `unaudited` | 1583 |
 
 | criticality | count |
 |---|---:|
@@ -98,6 +98,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `s3_mass_matrix_no_go_note` | _proposed_retained_ | audit_in_progress | _proposed_retained_ | - | - | - | - |
 | `i3_zero_exact_theorem_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
+| `causal_field_canonical_chain_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `confinement_string_tension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_neutrino_schur_suppression_theorem_note_2026-04-15` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gravity_clean_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
@@ -143,6 +144,25 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `retained_multi_species_matter_content_not_registered_one_hop`
   - `D5_periodic_Poisson_coupling_not_registered_one_hop`
   - `physical_G_normalization_and_continuum_limit_not_derived`
+- **auditor confidence:** high
+
+### `causal_field_canonical_chain_note`
+
+- **Note:** [`CAUSAL_FIELD_CANONICAL_CHAIN_NOTE.md`](../../docs/CAUSAL_FIELD_CANONICAL_CHAIN_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The package elevates the Shapiro phase lag and related causal-field observables as the canonical lab bridge while acknowledging that matched static cone/exposure proxies can reproduce the retained phase and escape effects and that c remains a free parameter.  _(class `B`)_
+- **chain closes:** False — The note depends on multiple artifact notes/logs and lab-bridge claims that are not registered as one-hop dependencies, has no primary runner, and explicitly lacks a unique causal discriminator or absolute lab transfer/noise budget.
+- **rationale:** Issue: the note is a proposed_retained causal-field package summary, but its numerical hierarchy and lab-facing Shapiro bridge rely on unregistered artifact scripts/logs/notes, and the source itself says the Shapiro phase and trapping escape are not uniquely causal because matched static proxies can reproduce them. Why this blocks: a retained canonical lab bridge cannot rest on a free cone speed c, missing transfer/noise/systematics budgets, no registered primary runner, and no one-hop retained support for the listed Shapiro, gravitomagnetic, escape, boundary-law, or diamond/NV bridge artifacts; the causal interpretation is underdetermined by the observable. Repair target: register the primary runners and logs for each retained observable, register the bridge notes as one-hop dependencies with their current statuses, derive or externally fix the field speed c, and add a discriminator runner comparing causal cone predictions against best matched static proxies plus a lab transfer/noise budget. Claim boundary until fixed: it is safe to treat this as a conditional inventory saying the causal-cone model naturally produces the listed phase/escape/gravitomagnetic signatures and that Shapiro phase is a shape-sensitive observable; it is not yet an audited retained causal-field lab prediction or unique causal discriminator.
+- **open / conditional deps cited:**
+  - `SHAPIRO_DELAY_NOTE.md_not_registered_one_hop`
+  - `SHAPIRO_STATIC_DISCRIMINATOR_NOTE.md_not_registered_one_hop`
+  - `GRAVITOMAGNETIC_NOTE.md_not_registered_one_hop`
+  - `CAUSAL_ESCAPE_WINDOW_NOTE.md_not_registered_one_hop`
+  - `diamond_NV_lab_bridge_notes_not_registered_one_hop`
+  - `causal_field_primary_runner_not_registered`
 - **auditor confidence:** high
 
 ### `ckm_down_type_scale_convention_support_note_2026-04-22`

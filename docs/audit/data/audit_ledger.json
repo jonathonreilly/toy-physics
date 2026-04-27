@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T03:21:25.480366+00:00",
-  "generated_at": "2026-04-27T03:21:23.724129+00:00",
-  "invalidation_run_at": "2026-04-27T03:21:25.427425+00:00",
+  "effective_status_computed_at": "2026-04-27T03:23:48.231820+00:00",
+  "generated_at": "2026-04-27T03:23:46.375679+00:00",
+  "invalidation_run_at": "2026-04-27T03:23:48.170868+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T03:21:25.311969+00:00",
+  "load_bearing_computed_at": "2026-04-27T03:23:48.050513+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -7354,14 +7354,21 @@
       "verdict_rationale": null
     },
     "causal_field_canonical_chain_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 7.907,
+        "transitive_descendants": 119
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The note depends on multiple artifact notes/logs and lab-bridge claims that are not registered as one-hop dependencies, has no primary runner, and explicitly lacks a unique causal discriminator or absolute lab transfer/noise budget.",
       "claim_id": "causal_field_canonical_chain_note",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -7369,18 +7376,25 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 2,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 7.907,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The package elevates the Shapiro phase lag and related causal-field observables as the canonical lab bridge while acknowledging that matched static cone/exposure proxies can reproduce the retained phase and escape effects and that c remains a free parameter.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "6270532ead35ab62206844c7b3437c3b0c4e44517826f3a85fa871c6b7eab6a8",
       "note_path": "docs/CAUSAL_FIELD_CANONICAL_CHAIN_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "SHAPIRO_DELAY_NOTE.md_not_registered_one_hop",
+        "SHAPIRO_STATIC_DISCRIMINATOR_NOTE.md_not_registered_one_hop",
+        "GRAVITOMAGNETIC_NOTE.md_not_registered_one_hop",
+        "CAUSAL_ESCAPE_WINDOW_NOTE.md_not_registered_one_hop",
+        "diamond_NV_lab_bridge_notes_not_registered_one_hop",
+        "causal_field_primary_runner_not_registered"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.367687+00:00",
@@ -7418,7 +7432,7 @@
       "runner_path": null,
       "title": "Causal Field: Canonical Retained Chain",
       "transitive_descendants": 119,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the note is a proposed_retained causal-field package summary, but its numerical hierarchy and lab-facing Shapiro bridge rely on unregistered artifact scripts/logs/notes, and the source itself says the Shapiro phase and trapping escape are not uniquely causal because matched static proxies can reproduce them. Why this blocks: a retained canonical lab bridge cannot rest on a free cone speed c, missing transfer/noise/systematics budgets, no registered primary runner, and no one-hop retained support for the listed Shapiro, gravitomagnetic, escape, boundary-law, or diamond/NV bridge artifacts; the causal interpretation is underdetermined by the observable. Repair target: register the primary runners and logs for each retained observable, register the bridge notes as one-hop dependencies with their current statuses, derive or externally fix the field speed c, and add a discriminator runner comparing causal cone predictions against best matched static proxies plus a lab transfer/noise budget. Claim boundary until fixed: it is safe to treat this as a conditional inventory saying the causal-cone model naturally produces the listed phase/escape/gravitomagnetic signatures and that Shapiro phase is a shape-sensitive observable; it is not yet an audited retained causal-field lab prediction or unique causal discriminator."
     },
     "causal_field_portability_note": {
       "audit_date": null,
