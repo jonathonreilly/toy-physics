@@ -13,6 +13,7 @@ Scores use the frontier-workstream dramatic-step scale: `0` low value,
 | Literature comparator refresh | literature bridge | 0 | 0 | 2 | -1 | 1 | Not needed for first cycle |
 | Lane 2 Rydberg dependency firewall | no-go / import-retirement audit | 2 | 2 | 3 | -0 | 7 | Executed cycle 2 |
 | Lane 5 two-gate Hubble dependency firewall | no-go / closure-pathway audit | 2 | 2 | 3 | -0 | 7 | Executed cycle 3 |
+| Lane 3 bounded-companion retention firewall | no-go / bounded-vs-retained audit | 2 | 2 | 3 | -0 | 7 | Executed cycle 4 |
 
 ## Selected Cycle 1 Route
 
@@ -50,3 +51,16 @@ guardrail:
   derivation;
 - it identifies the exact cascade handoff: Lane 5 remains open unless `(C1)`
   and `(C2)` land, or a genuinely fresh `(C3)` route appears.
+
+## Selected Cycle 4 Route
+
+Execute the Lane 3 bounded-companion retention firewall because the quark
+package has many strong numerical supports but the lane target is five-mass
+retention:
+
+- it separates CKM closure from quark mass closure;
+- it prevents bounded down-type ratio matches from becoming absolute mass
+  claims;
+- it keeps the up-type branch open at the partition/scalar law;
+- it records the species-uniform `m_b` Ward extension as a negative boundary,
+  not a retained bottom-mass theorem.

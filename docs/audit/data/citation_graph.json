@@ -17521,7 +17521,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-27T12:42:21.860569+00:00",
+  "generated_at": "2026-04-27T12:51:14.431375+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -33508,6 +33508,16 @@
       "runner_path": null,
       "title": "Quark JTS Residue"
     },
+    "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27": {
+      "claim_id": "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained exact negative boundary for Lane 3 dependency",
+      "deps": [],
+      "note_hash": "49747844f67230e67ba7ccb86608f3af2485533153259179b90fda65322af95f",
+      "path": "docs/QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md",
+      "runner_path": "scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py",
+      "title": "Quark Lane 3 Bounded-Companion Retention Firewall"
+    },
     "quark_mass_ratio_full_solve_note_2026-04-18": {
       "claim_id": "quark_mass_ratio_full_solve_note_2026-04-18",
       "current_status": "bounded",
@@ -39353,6 +39363,7 @@
     "quark_jts_affine_physical_carrier_theorem_note_2026-04-19",
     "quark_jts_physical_point_closure_theorem_note_2026-04-19",
     "quark_jts_residue_note_2026-04-19",
+    "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27",
     "quark_route2_exact_readout_map_note_2026-04-19",
     "quark_strc_observable_principle_note_2026-04-19",
     "quark_up_amplitude_provenance_audit_note_2026-04-19",
@@ -39696,15 +39707,15 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4380,
-    "leaf_count": 753,
-    "node_count": 1617,
-    "root_count": 1179,
-    "runners_with_path": 705,
+    "leaf_count": 754,
+    "node_count": 1618,
+    "root_count": 1180,
+    "runners_with_path": 706,
     "status_counts": {
       "bounded": 209,
       "open": 26,
       "proposed_promoted": 6,
-      "proposed_retained": 446,
+      "proposed_retained": 447,
       "support": 134,
       "unknown": 796
     }

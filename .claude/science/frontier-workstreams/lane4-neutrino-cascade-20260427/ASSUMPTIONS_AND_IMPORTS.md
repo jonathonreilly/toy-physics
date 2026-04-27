@@ -42,3 +42,13 @@
 | `(C3)` direct cosmic-`L` route | Alternative dimensionless route to `L` | no active route | `HUBBLE_LANE5_C3_VACUUM_TOPOLOGY_NO_ACTIVE_ROUTE_NOTE_2026-04-27.md` | Yes if opened | Yes, as alternative to `(C2)` | Fresh vacuum/topology or inflation-history premise | Empty/open |
 | Structural lock `H(a)=H_0 E(a;L,R)` | Late-time falsifier and consistency relation | proposed-retained support | `HUBBLE_TENSION_STRUCTURAL_LOCK_THEOREM_NOTE_2026-04-26.md` | Yes for falsifier, no for numerical closure | No | Keep separate from numerical `H_0` derivation | Guarded |
 | Planck 2018 comparator triple | Numerical family demonstration only | comparator | existing Hubble runners/status notes | No | No | Keep out of derivation chain | Comparator only |
+
+## Lane 3 Quark Imports Added In Cycle 4
+
+| Item | Role in claim | Current class | Source surface | Load-bearing? | Needed for target status? | Retirement path | Disposition |
+|---|---|---|---|---|---|---|---|
+| retained `m_t` and `y_t/g_s = 1/sqrt(6)` | Top-channel retained anchor and Ward template | retained | `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`, Lane 3 open stub | Yes | Yes | Already retained for top only | Reuse with top-only scope |
+| Down-type CKM-dual ratios | Strong down-type ratio support | bounded bridge | `DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md` | Yes | Yes | Retain GST, `5/6` bridge, and scale selection | Open |
+| Up-type partition/scalar support | Up-sector ratio support | bounded candidate grammar | `QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md`, review packet | Yes | Yes | Derive partition or scalar amplitude law from retained core | Open |
+| Species-uniform b-Yukawa scope analysis | Negative boundary for uniform Ward reuse | retention-analysis no-go | `YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md` | Yes | Yes | Derive species-differentiated Yukawa Ward primitive | Open |
+| PDG quark mass values | Comparator/sensitivity only | observational comparator | existing quark runners | No | No | Keep out of derivation chain | Comparator only |

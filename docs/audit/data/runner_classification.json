@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T12:42:23.132141+00:00",
+  "generated_at": "2026-04-27T12:51:15.737808+00:00",
   "per_claim": {
     "accessible_prediction_note": {
       "assert_count": 0,
@@ -6708,6 +6708,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/frontier_quark_jts_physical_point_closure_theorem.py"
+    },
+    "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 14
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py"
     },
     "quark_mass_ratio_full_solve_note_2026-04-18": {
       "assert_count": 2,
@@ -16948,6 +16960,21 @@
       "dominant_class": null,
       "exists": true
     },
+    "scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py": {
+      "assert_count": 1,
+      "claims": [
+        "quark_lane3_bounded_companion_retention_firewall_note_2026-04-27"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "D": 14
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_quark_mass_ratio_full_solve.py": {
       "assert_count": 2,
       "claims": [
@@ -18836,11 +18863,11 @@
       "A": 6,
       "B": 102,
       "C": 333,
-      "D": 108,
+      "D": 109,
       "none": 141
     },
-    "runners_classified": 690,
-    "runners_with_C": 410,
-    "runners_with_D": 183
+    "runners_classified": 691,
+    "runners_with_C": 411,
+    "runners_with_D": 184
   }
 }

@@ -1,9 +1,9 @@
 # Handoff
 
 **Branch:** `frontier/lane4-neutrino-cascade-20260427`
-**Updated:** 2026-04-27T12:42:32Z
-**Current lane:** Lane 5 Hubble constant derivation
-**Current status:** cycle 3 verified; commit/push pending
+**Updated:** 2026-04-27T12:51:30Z
+**Current lane:** Lane 3 quark mass retention
+**Current status:** cycle 4 verified; commit/push pending
 
 ## What Changed
 
@@ -92,22 +92,51 @@ Verification:
 - `python3 docs/audit/scripts/audit_lint.py --strict`
   -> OK, known graph-cycle warning only
 
+## Lane 3 Cycle 4
+
+Added a quark bounded-companion retention firewall:
+
+- the top mass remains the only retained quark mass;
+- down-type CKM-dual ratios are bounded support, not absolute `m_d`, `m_s`,
+  `m_b` retention;
+- up-type support remains partition/scalar-law bounded;
+- species-uniform physical reuse of the top Ward identity overshoots `m_b` by
+  about `35x`, so a species-differentiated primitive is required;
+- CKM closure is a mixing theorem, not a five-mass closure theorem.
+
+Verification:
+
+- `PYTHONPATH=scripts python3 scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py`
+  -> `PASS=17 FAIL=0`
+- `python3 -m py_compile scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py`
+  -> pass
+- `PYTHONPATH=scripts python3 scripts/frontier_quark_mass_ratio_review.py`
+  -> `PASS=46 FAIL=0`
+- `PYTHONPATH=scripts python3 scripts/frontier_yt_bottom_yukawa_retention.py`
+  -> `PASS=52 FAIL=0`
+- `PYTHONPATH=scripts python3 scripts/frontier_yt_ward_identity_derivation.py`
+  -> `PASS=45 FAIL=0`
+- `bash docs/audit/scripts/run_pipeline.sh`
+  -> complete
+- `python3 docs/audit/scripts/audit_lint.py --strict`
+  -> OK, known graph-cycle warning only
+
 ## Next Exact Action
 
-Run `git diff --check`, then commit the coherent Lane 5 checkpoint and push the
+Run `git diff --check`, then commit the coherent Lane 3 checkpoint and push the
 branch:
 
 ```bash
 git add ...
-git commit -m "Add Lane 5 Hubble two-gate dependency firewall"
+git commit -m "Add Lane 3 quark bounded-companion firewall"
 git push origin frontier/lane4-neutrino-cascade-20260427
 ```
 
-After the checkpoint, Lane 5 remains open at the two-gate boundary. Continue
-to Lane 3 quark mass retention unless a new Hubble premise appears.
+After the checkpoint, Lane 3 remains open at the bounded-companion boundary.
+Continue to Lane 1 hadron mass program unless a new quark-mass premise appears.
 
 ## Stop Condition
 
-Do not stop all lanes merely because Lane 4, Lane 2, or Lane 5 remains open.
-Cycles 1-3 sharpened blockers rather than closing retained targets. Continue
-the cascade to Lane 3 after the Lane 5 checkpoint is pushed.
+Do not stop all lanes merely because Lane 4, Lane 2, Lane 5, or Lane 3 remains
+open. Cycles 1-4 sharpened blockers rather than closing retained targets.
+Continue the cascade to Lane 1 after the Lane 3 checkpoint is pushed.

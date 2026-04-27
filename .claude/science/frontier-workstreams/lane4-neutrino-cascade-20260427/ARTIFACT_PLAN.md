@@ -88,3 +88,30 @@ Expected claim movement:
   derivation;
 - Lane 5 stop boundary unless `(C1)` and `(C2)` land or a fresh `(C3)` route
   appears.
+
+## Cycle 4: Lane 3 Quark Bounded-Companion Retention Firewall
+
+Deliverables:
+
+- `docs/QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md`
+- `scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py`
+- `logs/2026-04-27-quark-lane3-bounded-companion-retention-firewall.txt`
+
+Verification:
+
+- run the new runner with `PYTHONPATH=scripts`;
+- compile the new runner;
+- rerun the quark mass-ratio review packet;
+- rerun the b-Yukawa retention-analysis runner;
+- rerun the y_t Ward identity runner;
+- run the audit pipeline and strict lint;
+- run `git diff --check`;
+- record review-loop emulation in `REVIEW_HISTORY.md`.
+
+Expected claim movement:
+
+- no retained five-mass quark closure;
+- exact firewall separating bounded companion matches from retained mass
+  claims;
+- explicit open gates for `5/6` bridge/scale selection, up-type scalar or
+  partition law, and species-differentiated Yukawa Ward identities.

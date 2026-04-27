@@ -10,12 +10,12 @@ lock:
   owner: frontier-workstream-lane4-cascade
   repo_local_lock: logs/physics_worker_lock.json
 current_lane:
-  id: 5
-  name: Hubble constant derivation
+  id: 3
+  name: quark mass retention
   status: open
 cycle:
-  count: 3
-  active_route: hubble_two_gate_dependency_firewall
+  count: 4
+  active_route: quark_bounded_companion_retention_firewall
   route_status: verified
 files_touched:
   - docs/NEUTRINO_LANE4_DIRAC_SEESAW_FORK_NO_GO_NOTE_2026-04-27.md
@@ -28,6 +28,9 @@ files_touched:
   - docs/HUBBLE_LANE5_TWO_GATE_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md
   - scripts/frontier_hubble_lane5_two_gate_dependency_firewall.py
   - logs/2026-04-27-hubble-lane5-two-gate-dependency-firewall.txt
+  - docs/QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md
+  - scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py
+  - logs/2026-04-27-quark-lane3-bounded-companion-retention-firewall.txt
   - docs/audit/AUDIT_LEDGER.md
   - docs/audit/AUDIT_QUEUE.md
   - docs/audit/data/audit_ledger.json
@@ -57,6 +60,9 @@ open_imports:
   - Lane 5 C2 right-sensitive Z3 doublet-block selector and bounded-cascade dependencies
   - Lane 5 C3 direct cosmic-L route, currently no active route
   - admitted T_CMB radiation readout for current bounded cosmology surface
+  - Lane 3 non-perturbative theorem-core proof of the 5/6 bridge and scale selection
+  - Lane 3 up-type partition/scalar amplitude law
+  - Lane 3 generation-stratified or species-differentiated Yukawa Ward identities
 no_go_routes:
   - current-stack sole-axiom full neutrino closure
   - current-stack Majorana activation mu != 0
@@ -64,6 +70,7 @@ no_go_routes:
   - hidden global closure by merging mu_current=0 with the diagonal seesaw benchmark
   - direct atomic Rydberg closure by substituting alpha_EM(M_Z) for alpha(0)
   - numerical H_0 closure from a single Lane 5 gate or from the structural lock alone
+  - five non-top quark mass retention from bounded CKM/quark companion support alone
 review:
   status: passed_with_notes
   findings:
@@ -71,6 +78,7 @@ review:
     - "Existing Majorana zero-law runner needed atlas Pfaffian/Nambu scoping compatibility fix after origin/main fast-forward."
     - "No retained Lane 2 closure; artifact is exact dependency firewall."
     - "No retained Lane 5 closure; artifact is exact two-gate dependency firewall."
+    - "No retained Lane 3 five-mass closure; artifact is exact bounded-companion retention firewall."
     - "Audit strict lint passes with known graph-cycle warning only."
 verification:
   status: passed
@@ -94,5 +102,12 @@ verification:
     - "PYTHONPATH=scripts python3 scripts/frontier_hubble_tension_structural_lock.py -> PASS=5 FAIL=0"
     - "bash docs/audit/scripts/run_pipeline.sh -> complete after Lane 5 artifact"
     - "python3 docs/audit/scripts/audit_lint.py --strict -> OK, known graph-cycle warning only after Lane 5 artifact"
-next_exact_action: "Run git diff --check, commit and push the coherent Lane 5 checkpoint, then cascade to Lane 3 quark mass retention unless a new Hubble premise appears."
-stop_condition: "Not reached. Lane 5 remains open at the two-gate boundary; no STOP_ALL_LANES_REQUESTED file should be created."
+    - "PYTHONPATH=scripts python3 scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py -> PASS=17 FAIL=0"
+    - "python3 -m py_compile scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py -> pass"
+    - "PYTHONPATH=scripts python3 scripts/frontier_quark_mass_ratio_review.py -> PASS=46 FAIL=0"
+    - "PYTHONPATH=scripts python3 scripts/frontier_yt_bottom_yukawa_retention.py -> PASS=52 FAIL=0"
+    - "PYTHONPATH=scripts python3 scripts/frontier_yt_ward_identity_derivation.py -> PASS=45 FAIL=0"
+    - "bash docs/audit/scripts/run_pipeline.sh -> complete after Lane 3 artifact"
+    - "python3 docs/audit/scripts/audit_lint.py --strict -> OK, known graph-cycle warning only after Lane 3 artifact"
+next_exact_action: "Run git diff --check, commit and push the coherent Lane 3 checkpoint, then cascade to Lane 1 hadron mass program unless a new quark-mass premise appears."
+stop_condition: "Not reached. Lane 3 remains open at the bounded-companion boundary; no STOP_ALL_LANES_REQUESTED file should be created."
