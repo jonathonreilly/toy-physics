@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T16:26:40.766381+00:00
+**Generated:** 2026-04-27T16:29:40.168301+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 60 |
-| _proposed_retained_ | 91 |
+| _proposed_retained_ | 90 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 318 |
+| ~~audited_conditional~~ | 319 |
 | ~~audited_failed~~ | 112 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 60 |
-| `audited_conditional` | 105 |
+| `audited_conditional` | 106 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 45 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1390 |
+| `unaudited` | 1389 |
 
 | criticality | count |
 |---|---:|
@@ -243,6 +243,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `pmns_hw1_source_transfer_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `pmns_selector_three_identity_support_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | G | - |
+| `poisson_3d_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `sign_portability_invariant_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `staggered_backreaction_shell_spectral_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -3264,6 +3265,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: The PMNS selector package depends on two proposed selector equations, delta * q_+ = Q_Koide and det(H) = E2, plus a bounded numerical uniqueness search; the runner then checks that the recovered point fits NuFit bands. Why this blocks: a retained PMNS selector theorem cannot rest on unproved candidate laws or heuristic one-cluster evidence, even though the numerical packet is reproducible. Repair target: derive both selector equations from retained framework structure, prove basin uniqueness analytically on the relevant chamber, and then rerun the PMNS observable comparison without treating the selector laws as assumptions. Claim boundary until fixed: it is safe to keep this as a support proposal with exact chart identities, a reproducible candidate point, and a strong numerical PMNS fit; it is not safe to claim retained PMNS selector closure.
 - **open / conditional deps cited:**
   - `PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_PROPOSAL_README_2026-04-21.md`
+- **auditor confidence:** high
+
+### `poisson_3d_self_field_note`
+
+- **Note:** [`POISSON_3D_SELF_FIELD_NOTE.md`](../../docs/POISSON_3D_SELF_FIELD_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The scalar field is now fully a consequence of one local PDE on the lattice, not a starting assumption in any axis, and the 1/r profile, gravity TOWARD result, F proportional to M, and Born preservation all emerge from the same single equation.  _(class `C`)_
+- **chain closes:** False — The runner solves a chosen finite 6-point static Poisson problem and reproduces the tested responses, but the Poisson equation, source normalization, boundary problem, and static-field interpretation are imposed rather than derived from retained axioms.
+- **rationale:** Issue: The note treats the imposed 3D Poisson equation, delta-source normalization, finite-boundary solve, and static field as if they were derived scalar-field consequences of the model's axiom set. Why this blocks: the live runner verifies a finite computation after those choices are supplied, but it does not derive the Poisson law, source carrier, boundary conditions, normalization, or convergence theorem needed for retained field-derivation language. Repair target: prove or cite a retained theorem deriving the static Poisson equation and source/boundary normalization from the framework, add convergence/residual checks for the finite solve, and separate the computed finite Green-field response from the physical field-law claim. Claim boundary until fixed: it is safe to claim that, on the tested finite lattice and families, a chosen 6-point 3D Poisson stencil removes the explicit longitudinal 1/(dx+0.1) factor and reproduces TOWARD response, near-linear F versus M, Born preservation, and the s=0 null; it is not safe to claim the scalar field or 1/r law is retained as an axiom-derived theorem.
+- **open / conditional deps cited:**
+  - `POISSON_SELF_FIELD_NOTE.md`
+  - `GATE_B_POISSON_SELF_GRAVITY_NOTE.md`
 - **auditor confidence:** high
 
 ### `retained_cross_lane_consistency_support_note_2026-04-22`
