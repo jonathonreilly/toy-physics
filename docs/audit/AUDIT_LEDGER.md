@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T18:24:55.202441+00:00
+**Generated:** 2026-04-27T18:26:07.674120+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 63 |
-| _proposed_retained_ | 48 |
+| _proposed_retained_ | 47 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 337 |
+| ~~audited_conditional~~ | 338 |
 | ~~audited_failed~~ | 133 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 63 |
-| `audited_conditional` | 124 |
+| `audited_conditional` | 125 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1347 |
+| `unaudited` | 1346 |
 
 | criticality | count |
 |---|---:|
@@ -268,6 +268,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_backreaction_shell_spectral_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_graph_failure_map_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_graph_gauge_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `staggered_graph_gauge_closure_results_2026-04-10` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `strong_cp_theta_zero_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `structured_chokepoint_bridge_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `symmetry_head_to_head_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -4056,6 +4057,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: The note is marked proposed_retained but contains expected readout and closure criteria, not the actual measured gauge/current closure table or best-geometry result. Why this blocks: a retained closure claim must state the observed family, current span, residual, and side-battery status in the source note being audited; otherwise the note only defines the acceptance test. Repair target: either demote this card to support/harness status or merge in the frozen runner table and best-geometry readout from the results note, with assertions for current span, residual, cycle/N/A status, and retained side-battery checks. Claim boundary until fixed: it is safe to claim that this note defines the native flux-threaded persistent-current closure criterion and that the current runner can be used to evaluate it; it is not safe to treat this harness note alone as a retained gauge/current closure result.
 - **open / conditional deps cited:**
   - `STAGGERED_GRAPH_GAUGE_CLOSURE_RESULTS_2026-04-10.md`
+  - `STAGGERED_GRAPH_PORTABILITY_NOTE.md`
+- **auditor confidence:** high
+
+### `staggered_graph_gauge_closure_results_2026-04-10`
+
+- **Note:** [`STAGGERED_GRAPH_GAUGE_CLOSURE_RESULTS_2026-04-10.md`](../../docs/STAGGERED_GRAPH_GAUGE_CLOSURE_RESULTS_2026-04-10.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The native flux-threaded staggered graph runner shows nontrivial persistent-current span with periodic residual closure on the cycle-bearing stress families, while DAG-compatible gauge rows are N/A or fail when the current span is below threshold.  _(class `C`)_
+- **chain closes:** False — The live runner preserves the closure conclusion, but the source freezes stale exact current-span/residual values and the retained side battery comes from the unaudited graph portability machinery.
+- **rationale:** Issue: The gauge/current result is qualitatively reproduced, but the exact table is not current: the live runner gives J_span values 6.933e-04, 2.042e-03, 1.343e-04 for the three stress rows and 5.015e-35 for layered s29, while the note freezes 6.922e-04, 2.050e-03, 1.342e-04, and 4.769e-06. The retained side battery is also imported from the unaudited graph portability lane. Why this blocks: the closure result is plausible as a runner-level native gauge/current finding, but an audit-clean retained result needs current exact values and an audit-clean side battery. Repair target: refresh the frozen table from the current runner, add hard assertions for current span > 1e-4, residual < 1e-8, cycle/N/A status, and retained side-battery gates, and audit the graph portability parent. Claim boundary until fixed: it is safe to claim that the current runner closes native gauge/current on the three cycle-bearing stress families and identifies bipartite_growing_stress_s23_n82 as the largest-span row, with layered s29 failing gauge; it is not safe to claim audit-clean retained gauge closure from this note until the table and parent battery are cleaned.
+- **open / conditional deps cited:**
+  - `STAGGERED_GRAPH_GAUGE_CLOSURE_NOTE.md`
   - `STAGGERED_GRAPH_PORTABILITY_NOTE.md`
 - **auditor confidence:** high
 
