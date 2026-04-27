@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T02:43:49.784618+00:00",
-  "generated_at": "2026-04-27T02:43:48.055646+00:00",
-  "invalidation_run_at": "2026-04-27T02:43:49.731453+00:00",
+  "effective_status_computed_at": "2026-04-27T02:46:40.501470+00:00",
+  "generated_at": "2026-04-27T02:46:38.655867+00:00",
+  "invalidation_run_at": "2026-04-27T02:46:40.448258+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T02:43:49.615600+00:00",
+  "load_bearing_computed_at": "2026-04-27T02:46:40.235947+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -4218,14 +4218,21 @@
       "verdict_rationale": null
     },
     "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27T02:46:29.877759+00:00",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 17.926,
+        "transitive_descendants": 171
+      },
+      "audit_status": "audited_decoration",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The identity follows exactly from the coupling definitions stated in the source note, but it is only an algebraic restatement of the accepted coupling chain and has no independent comparator or physical observable.",
       "claim_id": "alpha_lm_geometric_mean_identity_theorem_note_2026-04-24",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -4233,18 +4240,20 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 13,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_decoration",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_decoration",
       "load_bearing_score": 17.926,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "By the retained definitions, alpha_LM^2 = (alpha_bare / u_0)^2 = alpha_bare^2 / u_0^2 = alpha_bare * (alpha_bare / u_0^2) = alpha_bare * alpha_s(v).",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "4d27a4224e509f4378a1a7b8b9617c5ef1939b4946c3d5bed2b1624f05600dc1",
       "note_path": "docs/ALPHA_LM_GEOMETRIC_MEAN_IDENTITY_THEOREM_NOTE_2026-04-24.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "accepted_plaquette_coupling_chain_parent_not_registered"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.367590+00:00",
@@ -4282,7 +4291,7 @@
       "runner_path": null,
       "title": "alpha_LM Geometric-Mean Identity Theorem",
       "transitive_descendants": 171,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The load-bearing step is exact algebra from the definitions alpha_LM = alpha_bare/u_0 and alpha_s(v) = alpha_bare/u_0^2, but the row presents this bookkeeping corollary as a separate proposed-retained theorem and registers no parent dependency or primary runner. Why this blocks: A definition-level geometric-mean identity adds no independent observable, comparator, falsifiability, or new physical bridge beyond the upstream plaquette/coupling surface, so it should not inflate the retained claim surface as a standalone theorem. Repair target: Box this identity under the retained plaquette/coupling-chain parent, or re-promote only if it is shown to be genuine compression used load-bearing by downstream claims with an explicit parent dependency. Claim boundary until fixed: It is safe to state the exact identity as a bookkeeping corollary of the accepted coupling definitions and to use it to avoid double-counting alpha_LM and alpha_s(v) as independent knobs."
     },
     "alpha_s_derived_note": {
       "audit_date": null,
