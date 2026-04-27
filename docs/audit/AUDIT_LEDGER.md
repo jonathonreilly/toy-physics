@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T13:10:44.605323+00:00
+**Generated:** 2026-04-27T13:12:40.138831+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 46 |
-| _proposed_retained_ | 143 |
+| _proposed_retained_ | 142 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 301 |
+| ~~audited_conditional~~ | 302 |
 | ~~audited_failed~~ | 91 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 46 |
-| `audited_conditional` | 88 |
+| `audited_conditional` | 89 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 24 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1443 |
+| `unaudited` | 1442 |
 
 | criticality | count |
 |---|---:|
@@ -180,6 +180,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_strong_field_observable_split_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `global_coherence_off_scaffold_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravitomagnetic_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravity_clean_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
@@ -1661,6 +1662,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_MINIMAL_POSITIVE_COMPLETION_NOTE_2026-04-19.md`
   - `GAUGE_VACUUM_PLAQUETTE_SOURCE_SECTOR_MATRIX_ELEMENT_FACTORIZATION_NOTE.md`
   - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md`
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_ZERO_EXTENSION_FACTORIZED_CLASS_THEOREM_NOTE_2026-04-19.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_ZERO_EXTENSION_FACTORIZED_CLASS_THEOREM_NOTE_2026-04-19.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Extending rho_ret by zero outside the retained first-symmetric weights gives a nonnegative conjugation-symmetric full coefficient sequence whose factorized operator is self-adjoint, conjugation-symmetric, positive semidefinite, and still reconstructs the retained completed triple.  _(class `A`)_
+- **chain closes:** False — The live runner reproduces PASS=6, but it depends on a conditional truncated-packet input, a support character-measure input, an unknown completion input, and a boundary note now audited failed. The zero-extension algebra is current, but the retained theorem does not close through audit-retained dependencies.
+- **rationale:** Issue: the runner verifies the zero-extension construction, but the rho_ret packet is imported from an audited-conditional truncated-packet theorem, the canonical character-measure class is still support, the completion input is unknown, and the runner's final seam check cites a boundary note that is audited failed because its runner is missing. Why this blocks: the local matrix algebra can show a PSD zero-extension only after accepting those upstream objects, so it cannot be promoted as a retained Wilson factorized-class theorem. Repair target: audit-retain the completion, character-measure, truncated-packet, and factorized-class boundary inputs or make this runner construct them from retained authorities without relying on failed/support notes. Claim boundary until fixed: conditionally, given rho_ret and the canonical factorized-class definitions, the zero extension has symmetry errors below 1e-15, min eigenvalue -2.038e-16, and reconstructs Z_min with gap 1.777e-16; the actual beta=6 environment packet and retained class-existence claim remain unratified.
+- **open / conditional deps cited:**
+  - `GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_TRUNCATED_ENVIRONMENT_PACKET_NOTE_2026-04-19.md`
+  - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md`
+  - `GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_MINIMAL_POSITIVE_COMPLETION_NOTE_2026-04-19.md`
+  - `GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_RANK_ONE_FACTORIZED_CLASS_BOUNDARY_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `global_coherence_off_scaffold_note`
