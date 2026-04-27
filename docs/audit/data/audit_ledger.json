@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T02:37:08.996529+00:00",
-  "generated_at": "2026-04-27T02:37:07.432801+00:00",
-  "invalidation_run_at": "2026-04-27T02:37:08.952289+00:00",
+  "effective_status_computed_at": "2026-04-27T02:39:45.101381+00:00",
+  "generated_at": "2026-04-27T02:39:43.532270+00:00",
+  "invalidation_run_at": "2026-04-27T02:39:45.056806+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T02:37:08.860697+00:00",
+  "load_bearing_computed_at": "2026-04-27T02:39:44.966959+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -32177,15 +32177,26 @@
     },
     "graph_first_selector_derivation_note": {
       "audit_date": null,
-      "audit_status": "unaudited",
+      "audit_status": "audit_in_progress",
       "auditor": null,
       "auditor_confidence": null,
       "auditor_family": null,
-      "blocker": null,
+      "blocker": "awaiting_cross_confirmation",
       "chain_closes": null,
       "chain_closure_explanation": null,
       "claim_id": "graph_first_selector_derivation_note",
       "criticality": "critical",
+      "cross_confirmation": {
+        "first_audit": {
+          "audit_date": "2026-04-27T02:39:33.479872+00:00",
+          "auditor": "codex-audit-loop",
+          "auditor_family": "codex-current",
+          "load_bearing_step_class": "C",
+          "verdict": "audited_clean"
+        },
+        "second_audit": null,
+        "status": "awaiting_second"
+      },
       "current_status": "proposed_retained",
       "current_status_raw": "BOUNDED-proposed_retained SUPPORTING THEOREM -- the weak-axis selector is derived on the canonical graph-shift surface",
       "decoration_parent_claim_id": null,
