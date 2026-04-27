@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T15:40:02.859497+00:00",
-  "generated_at": "2026-04-27T15:40:01.262352+00:00",
-  "invalidation_run_at": "2026-04-27T15:40:02.813539+00:00",
+  "effective_status_computed_at": "2026-04-27T15:41:53.726149+00:00",
+  "generated_at": "2026-04-27T15:41:52.151661+00:00",
+  "invalidation_run_at": "2026-04-27T15:41:53.680730+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T15:40:02.717257+00:00",
+  "load_bearing_computed_at": "2026-04-27T15:41:53.585651+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -47396,14 +47396,21 @@
       "verdict_rationale": "Issue: the runner supports rejecting local_z_asym as the missing third predictor, but the source promotes that finite rejection to closure of the simple-classifier line of attack. Why this blocks: a hostile physicist can verify the distributions, the vacuous z_sym >= 0 third clause, and unchanged 6/9 cross-generator accuracy, but cannot infer an exhaustive no-go over other node-level metrics, thresholds, Boolean forms, multi-metric rules, or global path/spectral summaries from this one 3-property AND search. Repair target: either narrow the note to the local_z_asym negative, or add an exhaustive classifier-search theorem/computation specifying the metric universe, Boolean grammar, train/held-out protocol, and multiple-testing control that rules out the claimed simple-classifier class. Claim boundary until fixed: it is safe to claim that local_z_asym fails to improve the frozen classifier program on the 26-family swept set and nine independent generators; it is not safe to claim theorem-grade exhaustion of simple classifiers."
     },
     "localized_source_response_sweep_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The bounded numerical result closes, but the audit row is a parser false positive: the source Status line declares a bounded sweep on a proposed_retained family, not a proposed_retained claim.",
       "claim_id": "localized_source_response_sweep_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -47411,13 +47418,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The live sweep shows no smaller source-response family beats the broad topN=196 control under the stated support/capture floors on the single h=0.25 ordered-lattice setup.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "99522e0ab264de5324faa0a08942ff6a234972bccfb2548eab459d6a92476084",
@@ -47453,14 +47460,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 4,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 4
       },
       "runner_path": null,
       "title": "Localized Source-Response Sweep Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The audit queue treats this note as proposed_retained because the Status line says it is a bounded sweep on the proposed_retained 3D h=0.25 family, but the note's actual claim is explicitly bounded and negative. Why this blocks: the audit lane cannot ratify a retained claim that the source note does not make; doing so would promote a single-family source-response control sweep into retained physics. Repair target: rewrite the Status line so the parser records this as bounded/proposed_bounded, or author a separate proposed_retained theorem with a load-bearing derivation beyond this single h=0.25 sweep. Claim boundary until fixed: it is safe to claim the live artifact reproduces the bounded result that topN=169 remains admissible but does not beat broad topN=196, and that localized persistent-inertial response remains open; it is not safe to present this note as a retained source-response theorem."
     },
     "lorentz_boost_covariance_2d_theorem_note": {
       "audit_date": null,
