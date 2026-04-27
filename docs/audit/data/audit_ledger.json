@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T11:05:31.396334+00:00",
-  "generated_at": "2026-04-27T11:05:29.271579+00:00",
-  "invalidation_run_at": "2026-04-27T11:05:31.333573+00:00",
+  "effective_status_computed_at": "2026-04-27T11:07:56.067519+00:00",
+  "generated_at": "2026-04-27T11:07:54.104136+00:00",
+  "invalidation_run_at": "2026-04-27T11:07:55.994347+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T11:05:31.196250+00:00",
+  "load_bearing_computed_at": "2026-04-27T11:07:55.839060+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -27308,14 +27308,21 @@
       "verdict_rationale": null
     },
     "family_companion_compare_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live script reproduces the comparison table, but it is a hard-coded renderer and does not verify the three source families from registered one-hop runner outputs. Two cited source notes remain unaudited proposed_retained in the ledger, and the second-family row is explicitly on a different control surface.",
       "claim_id": "family_companion_compare_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -27323,18 +27330,26 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note infers a shared fixed-companion weak-field law across the grown transfer basin, the alternative connectivity basin, and the second grown-family complex anchor, while isolating that the second-family branch uses a gamma=0/crossover control surface rather than the same zero/neutral signed-source surface.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "8abbd4c985e2486c2ddc8474fbf7d52b58a5c65bc718efc1512f6c1124feff79",
       "note_path": "docs/FAMILY_COMPANION_COMPARE_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/GROWN_TRANSFER_BASIN_NOTE.md_unaudited_source",
+        "docs/SECOND_GROWN_FAMILY_COMPLEX_NOTE.md_unaudited_source",
+        "docs/FIXED_FIELD_GROWN_TRANSFER_SCOUT_NOTE.md_not_registered_one_hop",
+        "docs/ALT_CONNECTIVITY_FAMILY_FM_TRANSFER_NOTE.md_not_registered_one_hop",
+        "docs/SECOND_GROWN_FAMILY_SIGN_NOTE.md_not_registered_one_hop",
+        "logs/2026-04-06-family-companion-compare.txt_missing_frozen_output",
+        "control_surface_mismatch_for_second_family_complex"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368292+00:00",
@@ -27364,15 +27379,15 @@
       ],
       "runner_check_breakdown": {
         "A": 0,
-        "B": 0,
+        "B": 3,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 3
       },
       "runner_path": null,
       "title": "Family Companion Compare Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the retained cross-family comparison rests on a static summary of source notes, not on an audit-registered dependency chain or a runner that recomputes the controls and F~M values. Why this blocks: a hostile referee cannot accept a retained shared-law claim while two cited families are still unaudited proposed_retained and the second-family complex branch is compared by gamma=0/crossover rather than the same zero/neutral signed-source observable. Repair target: audit/register the grown-transfer and second-family source notes as one-hop dependencies, add the fixed-field/FM-transfer/sign companion notes named by the renderer, and replace the static comparison script with thresholded checks that ingest or recompute each row's controls and weak-field linearity. Claim boundary until fixed: it is safe to use this as a conditional comparison map saying the named accepted source notes report weak-field linearity and an isolated control-surface mismatch; it is not yet an audited retained cross-family law."
     },
     "field_equation_derivation_note": {
       "audit_date": null,

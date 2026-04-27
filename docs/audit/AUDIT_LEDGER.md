@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T11:05:31.669869+00:00
+**Generated:** 2026-04-27T11:07:56.347251+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 26 |
-| _proposed_retained_ | 171 |
+| _proposed_retained_ | 170 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 290 |
+| ~~audited_conditional~~ | 291 |
 | ~~audited_failed~~ | 86 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 26 |
-| `audited_conditional` | 79 |
+| `audited_conditional` | 80 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 19 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1464 |
+| `unaudited` | 1463 |
 
 | criticality | count |
 |---|---:|
@@ -150,6 +150,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `early_family_transfer_connectivity_diagnosis` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `electrostatics_grown_sign_law_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `emergent_lorentz_invariance_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `family_companion_compare_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `global_coherence_off_scaffold_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravitomagnetic_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -1120,6 +1121,26 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `su2_nonperturbative_matching_open`
   - `higgs_lambda_from_g5_condensate_open`
   - `source_note_stale_relative_to_registered_runner`
+- **auditor confidence:** high
+
+### `family_companion_compare_note`
+
+- **Note:** [`FAMILY_COMPANION_COMPARE_NOTE.md`](../../docs/FAMILY_COMPANION_COMPARE_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note infers a shared fixed-companion weak-field law across the grown transfer basin, the alternative connectivity basin, and the second grown-family complex anchor, while isolating that the second-family branch uses a gamma=0/crossover control surface rather than the same zero/neutral signed-source surface.  _(class `B`)_
+- **chain closes:** False — The live script reproduces the comparison table, but it is a hard-coded renderer and does not verify the three source families from registered one-hop runner outputs. Two cited source notes remain unaudited proposed_retained in the ledger, and the second-family row is explicitly on a different control surface.
+- **rationale:** Issue: the retained cross-family comparison rests on a static summary of source notes, not on an audit-registered dependency chain or a runner that recomputes the controls and F~M values. Why this blocks: a hostile referee cannot accept a retained shared-law claim while two cited families are still unaudited proposed_retained and the second-family complex branch is compared by gamma=0/crossover rather than the same zero/neutral signed-source observable. Repair target: audit/register the grown-transfer and second-family source notes as one-hop dependencies, add the fixed-field/FM-transfer/sign companion notes named by the renderer, and replace the static comparison script with thresholded checks that ingest or recompute each row's controls and weak-field linearity. Claim boundary until fixed: it is safe to use this as a conditional comparison map saying the named accepted source notes report weak-field linearity and an isolated control-surface mismatch; it is not yet an audited retained cross-family law.
+- **open / conditional deps cited:**
+  - `GROWN_TRANSFER_BASIN_NOTE.md_unaudited_source`
+  - `SECOND_GROWN_FAMILY_COMPLEX_NOTE.md_unaudited_source`
+  - `FIXED_FIELD_GROWN_TRANSFER_SCOUT_NOTE.md_not_registered_one_hop`
+  - `ALT_CONNECTIVITY_FAMILY_FM_TRANSFER_NOTE.md_not_registered_one_hop`
+  - `SECOND_GROWN_FAMILY_SIGN_NOTE.md_not_registered_one_hop`
+  - `logs/2026-04-06-family-companion-compare.txt_missing_frozen_output`
+  - `control_surface_mismatch_for_second_family_complex`
 - **auditor confidence:** high
 
 ### `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25`
