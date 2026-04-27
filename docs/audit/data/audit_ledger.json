@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T18:22:02.264364+00:00",
-  "generated_at": "2026-04-27T18:22:00.616169+00:00",
-  "invalidation_run_at": "2026-04-27T18:22:02.211011+00:00",
+  "effective_status_computed_at": "2026-04-27T18:23:37.523130+00:00",
+  "generated_at": "2026-04-27T18:23:35.932155+00:00",
+  "invalidation_run_at": "2026-04-27T18:23:37.475804+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T18:22:02.107501+00:00",
+  "load_bearing_computed_at": "2026-04-27T18:23:37.378656+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -71561,14 +71561,21 @@
       "verdict_rationale": null
     },
     "staggered_graph_failure_map_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner reproduces the frozen boundary map, but the retained staggered portability battery it reuses is unaudited and the structural-break labels are assumption-violation classifications rather than empirical battery failures.",
       "claim_id": "staggered_graph_failure_map_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -71576,18 +71583,21 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The failure-map runner injects odd-cycle/parity defects, dense shortcuts, and high-degree contamination, then classifies same-color parity violations as structural breaks and shortcut/hub cases as graceful degradation when the retained battery remains 8/8.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "23717f06f49793d369c8560f5b83ca57ab36e7f1b5023d191cf6d40e00b18744",
       "note_path": "docs/STAGGERED_GRAPH_FAILURE_MAP_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/STAGGERED_GRAPH_PORTABILITY_NOTE.md",
+        "docs/GRAPH_DIRAC_REQUIREMENTS_2026-04-10.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369832+00:00",
@@ -71625,7 +71635,7 @@
       "runner_path": null,
       "title": "Staggered Graph Failure Map Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The table is current, but the claim imports the staggered graph portability battery as a retained authority while that parent remains unaudited; additionally, the odd-cycle and parity-wrap rows are labeled structural_break despite retained=8/8 because they violate bipartite/parity assumptions, not because the measured battery fails. Why this blocks: a retained adversarial boundary map must separate empirical battery failure from assumption-boundary classification and must rest on an audit-clean portability battery. Repair target: audit the graph portability note and the graph-Dirac requirements/bipartite parity assumptions, then add explicit assertions distinguishing same-color-edge structural invalidity from retained-battery pass/fail. Claim boundary until fixed: it is safe to claim that the current runner reproduces the five-row map with odd-cycle and parity-wrap defects flagged as assumption-level structural breaks, dense shortcuts and hub contamination as graceful degradation, and all rows retained=8/8; it is not safe to claim an audit-clean retained portability boundary without the parent battery audit."
     },
     "staggered_graph_gauge_closure_note": {
       "audit_date": null,
