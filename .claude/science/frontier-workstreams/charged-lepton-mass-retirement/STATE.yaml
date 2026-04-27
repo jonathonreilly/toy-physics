@@ -1,0 +1,51 @@
+slug: charged-lepton-mass-retirement
+goal: "retire charged-lepton mass imports"
+target_status: retained
+mode: run
+runtime: 10h
+start_time_utc: "2026-04-26T16:14:51Z"
+checkpoint_interval: 30m
+branch: frontier/charged-lepton-mass-retirement-20260426
+base: origin/main
+lock_status: unavailable
+lock_note: "scripts/automation_lock.py status failed with permission denied for /Users/jonreilly, even with escalation."
+current_phase: cycle_3_ratio_source_selector_firewall_complete
+cycles_completed: 3
+active_route: koide_ratio_source_selector_firewall_closed
+supervisor:
+  requested_runtime: 10h
+  launch_mode: detached_codex_exec_loop
+  status_path: .claude/science/frontier-workstreams/charged-lepton-mass-retirement/supervisor_status.json
+  log_path: .claude/science/frontier-workstreams/charged-lepton-mass-retirement/supervisor.log
+  stop_file: .claude/science/frontier-workstreams/charged-lepton-mass-retirement/STOP_REQUESTED
+files_touched:
+  - .claude/science/frontier-workstreams/charged-lepton-mass-retirement/STATE.yaml
+  - .claude/science/frontier-workstreams/charged-lepton-mass-retirement/ASSUMPTIONS_AND_IMPORTS.md
+  - .claude/science/frontier-workstreams/charged-lepton-mass-retirement/NO_GO_LEDGER.md
+  - .claude/science/frontier-workstreams/charged-lepton-mass-retirement/GOAL.md
+  - .claude/science/frontier-workstreams/charged-lepton-mass-retirement/REVIEW_HISTORY.md
+  - .claude/science/frontier-workstreams/charged-lepton-mass-retirement/LITERATURE_BRIDGES.md
+  - .claude/science/frontier-workstreams/charged-lepton-mass-retirement/ARTIFACT_PLAN.md
+  - .claude/science/frontier-workstreams/charged-lepton-mass-retirement/HANDOFF.md
+  - .claude/science/frontier-workstreams/charged-lepton-mass-retirement/ROUTE_PORTFOLIO.md
+  - docs/CHARGED_LEPTON_DIRECT_WARD_FREE_YUKAWA_NO_GO_NOTE_2026-04-26.md
+  - docs/CHARGED_LEPTON_RADIATIVE_TAU_SELECTOR_FIREWALL_NOTE_2026-04-26.md
+  - docs/CHARGED_LEPTON_KOIDE_RATIO_SOURCE_SELECTOR_FIREWALL_NOTE_2026-04-27.md
+  - scripts/frontier_charged_lepton_direct_ward_free_yukawa_no_go.py
+  - scripts/frontier_charged_lepton_radiative_tau_selector_firewall.py
+  - scripts/frontier_charged_lepton_koide_ratio_source_selector_firewall.py
+open_imports:
+  - "PDG charged-lepton masses used as a 3-real observational pin in the bounded package"
+  - "overall charged-lepton scale V_0"
+  - "tau-generation charged-lepton Ward identity y_tau"
+  - "Koide Q source-domain physical-selection primitive"
+  - "Brannen delta physical endpoint/readout primitive"
+  - "non-observational generation label or tau-scale selector"
+no_go_routes:
+  - "direct top-Ward lift from one-Higgs gauge selection to charged-lepton y_tau"
+  - "standalone radiative alpha_LM/(4pi) tau selector without generation/source primitive"
+  - "Koide Q plus selected-line/Brannen phase as a standalone generation/tau-scale selector"
+review_findings:
+  - "cycle_3_review_loop_emulated: PASS WITH BOUNDED/NO-GO CLAIMS; artifact keeps PDG masses comparator-only and does not promote Q/delta support to mass retention"
+next_exact_action: "If continuing, attack only a genuinely new physical-source premise: derive or refute retained charged-lepton source selection as strict-onsite and C3-fixed, or derive a based selected-line endpoint/generation law. Do not repeat Q/delta value matching."
+stop_condition: "runtime reached, retained closure achieved, or blocker requiring human science judgment"
