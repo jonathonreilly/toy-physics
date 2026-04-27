@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T06:47:38.463846+00:00
+**Generated:** 2026-04-27T06:55:59.366504+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 10 |
-| _proposed_retained_ | 225 |
+| _proposed_retained_ | 224 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
-| ~~audited_conditional~~ | 263 |
+| ~~audited_conditional~~ | 264 |
 | ~~audited_failed~~ | 73 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 10 |
-| `audited_conditional` | 55 |
+| `audited_conditional` | 56 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 7 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1518 |
+| `unaudited` | 1517 |
 
 | criticality | count |
 |---|---:|
@@ -141,6 +141,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lensing_k_sweep_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `linear_response_true_kubo_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `matter_inertial_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `mirror_chokepoint_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `native_gauge_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `neutrino_dirac_z3_support_trichotomy_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `omega_lambda_matter_bridge_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -1047,6 +1048,31 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The exact 2D mirror family gives a bounded coexistence pocket over N=25,40,60,80,100, with the strongest row at N=60: MI=0.756118, 1-pur_min=0.4420, d_TV=0.8572, gravity=+2.5687, Born=1.08e-15, and k=0=0.  _(class `C`)_
 - **chain closes:** True — The named validator and archived log reproduce the retained rows, the matched random baseline, the Born and k=0 controls, and the weak gravity-law follow-up fits. Running the validator with the note's N window reproduces the table exactly; the script default includes an extra N=15 row, which is outside the note's retained window and does not change the retained claim.
 - **rationale:** The bounded exact-2D mirror pocket closes on its own terms: the runner verifies machine-scale Born residuals, zero k=0 response, positive gravity, and substantially stronger MI/decoherence/d_TV than the matched random baseline on the reported N window. The same runner also verifies that the mass-window and distance-tail fits are weak, so this clean audit ratifies only the bounded coexistence pocket, strongest at N=60; it does not ratify a promoted mass law, distance law, continuum law, or flagship replacement.
+- **auditor confidence:** high
+
+### `mirror_chokepoint_note`
+
+- **Note:** [`MIRROR_CHOKEPOINT_NOTE.md`](../../docs/MIRROR_CHOKEPOINT_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note claims a retained bounded mirror chokepoint pocket through N = 100, with Born-clean and k=0-clean rows, positive gravity, decoherence advantage, and N = 120 losing gravity.  _(class `C`)_
+- **chain closes:** False — The live runner supports a finite bounded mirror pocket and reproduces the dense NPL_HALF=60, connect_radius=5.0 N=80/N=100 rows plus N=120 gravity collapse, but the retained table is stitched across parameter surfaces and the cited primary logs for several rows are absent. A clean chain would need a registered per-row parameter card or archived logs and hard pass/fail gates for the retained criteria.
+- **rationale:** Issue: the finite mirror-chokepoint pocket is partly reproducible, but the proposed-retained packet depends on a stitched table whose N=40/N=60 values are not recovered by the strict NPL_HALF=25 radius-4.0 baseline or by NPL_HALF=25 radius-5.0, and several cited log files for the joint, scaling, sparse-rescue, and boundary scans are missing. Why this blocks: a hostile auditor can verify N=15/N=25 on the strict baseline and the dense NPL_HALF=60 radius-5.0 N=40/60/80/100 positive-gravity window with N=120 collapse, but cannot certify the exact retained table or the through-N=100 retention story as a single closed claim without knowing which archived parameter surface supports each row and without assertion-gated retention criteria. Repair target: register one primary runner/log packet or per-row parameter-card table, archive the named logs, and add hard checks for seed counts, NPL_HALF/connect_radius/layer2_prob, Born tolerance, k=0, gravity positivity/significance, decoherence ceiling, and N=120 failure. Claim boundary until fixed: it is safe to claim a finite diagnostic pocket: strict NPL_HALF=25 radius-4.0 reproduces retained N=15/N=25, dense NPL_HALF=60 radius-5.0 reproduces positive-gravity Born-clean k=0-clean mirror rows through N=100 and zero-gravity collapse at N=120; it is not yet a clean retained asymptotic or single-surface mirror-chokepoint theorem.
+- **open / conditional deps cited:**
+  - `logs/2026-04-03-mirror-chokepoint-joint.txt_missing`
+  - `logs/2026-04-03-mirror-chokepoint-scale-r5p0-n50.txt_missing`
+  - `logs/2026-04-03-mirror-chokepoint-scale-r5p0-p2p02-n50.txt_missing`
+  - `logs/2026-04-03-mirror-chokepoint-boundary-n45-r5p0.txt_missing`
+  - `logs/2026-04-03-mirror-chokepoint-boundary-n50-r5p2.txt_missing`
+  - `logs/2026-04-03-mirror-chokepoint-boundary-n55-r5p0.txt_missing`
+  - `logs/2026-04-03-mirror-chokepoint-boundary-n55-r5p0-N100.txt_missing`
+  - `logs/2026-04-03-mirror-chokepoint-boundary-n55-r5p2-N100.txt_missing`
+  - `logs/2026-04-03-mirror-chokepoint-boundary-n60-r5p0-N100.txt_missing`
+  - `logs/2026-04-03-mirror-chokepoint-boundary-n60-r5p0-N120.txt_missing`
+  - `mixed_parameter_surface_not_registered_per_retained_row`
+  - `runner_prints_diagnostics_without_hard_retention_assertions`
 - **auditor confidence:** high
 
 ### `native_gauge_closure_note`
