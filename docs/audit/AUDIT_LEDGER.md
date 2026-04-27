@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T11:46:03.476759+00:00
+**Generated:** 2026-04-27T11:46:14.869042+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 31 |
-| _proposed_retained_ | 167 |
+| **retained** | 32 |
+| _proposed_retained_ | 166 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 101 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 31 |
+| `audited_clean` | 32 |
 | `audited_conditional` | 81 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 22 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1460 |
+| `unaudited` | 1459 |
 
 | criticality | count |
 |---|---:|
@@ -105,6 +105,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `alt_connectivity_family_fm_transfer_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_sign_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
+| `charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `charged_lepton_radiative_tau_selector_firewall_note_2026-04-26` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `claude_complex_action_carryover_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `claude_complex_action_grown_companion_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -511,6 +512,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The gauge-allowed charged-lepton operator contains an arbitrary complex 3 x 3 Y_e matrix, so one-Higgs gauge selection does not determine y_tau or any charged-lepton eigenvalue.  _(class `A`)_
 - **chain closes:** True — The negative claim closes as gauge bookkeeping: the allowed monomial is generation-blind and every Y_e entry remains gauge invariant. The note does not promote a mass theorem or import PDG masses as proof inputs.
 - **rationale:** The no-go is narrow and supported by the runner: wrong-Higgs rejection is checked, arbitrary diagonal/off-diagonal Y_e entries remain allowed, and the top Ward 1/sqrt(6) normalization is shown to be tied to the Q_L color x isospin surface rather than the colorless charged-lepton monomial. PDG masses are comparator-only. This clean audit applies only to the negative boundary, not to charged-lepton mass closure.
+- **auditor confidence:** high
+
+### `charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27`
+
+- **Note:** [`CHARGED_LEPTON_KOIDE_RATIO_SOURCE_SELECTOR_FIREWALL_NOTE_2026-04-27.md`](../../docs/CHARGED_LEPTON_KOIDE_RATIO_SOURCE_SELECTOR_FIREWALL_NOTE_2026-04-27.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On the Brannen carrier Q=(c^2+2)/6 is independent of delta, and cyclic relabelings preserve Q and unordered ratios while moving the largest slot label.  _(class `A`)_
+- **chain closes:** True — The negative firewall closes: even granting the Q and Brannen support values, the data do not select a physical generation or tau-scale label. The note explicitly leaves Q source selection, selected-line endpoint/readout, and generation selection as residuals.
+- **rationale:** The runner verifies phase-erasure of Q, conditional status of the source and endpoint support, cyclic relabeling of the largest slot, and comparator-only use of PDG masses. That is sufficient for the no-go that Q plus Brannen phase support is not a standalone generation/tau-scale selector. It does not audit or retain native Q closure or delta/radian closure.
 - **auditor confidence:** high
 
 ### `charged_lepton_radiative_tau_selector_firewall_note_2026-04-26`
