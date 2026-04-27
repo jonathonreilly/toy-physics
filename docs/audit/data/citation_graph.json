@@ -3905,6 +3905,14 @@
       "to": "star_supported_bridge_class_note"
     },
     {
+      "from": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27",
+      "to": "rconn_derived_note"
+    },
+    {
+      "from": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27",
+      "to": "yt_ew_color_projection_theorem"
+    },
+    {
       "from": "ew_lattice_cos_sq_theta_w_complement_bridge_theorem_note_2026-04-26",
       "to": "yt_ew_color_projection_theorem"
     },
@@ -5047,6 +5055,14 @@
     {
       "from": "minimal_axioms_2026-04-11",
       "to": "higgs_vacuum_explicit_systematic_note"
+    },
+    {
+      "from": "native_gauge_closure_note",
+      "to": "graph_first_selector_derivation_note"
+    },
+    {
+      "from": "native_gauge_closure_note",
+      "to": "graph_first_su3_integration_note"
     },
     {
       "from": "neutrino_dirac_pmns_retained_lane_packet_2026-04-16",
@@ -6661,6 +6677,18 @@
       "to": "quark_up_amplitude_native_expression_scan_note_2026-04-19"
     },
     {
+      "from": "rconn_derived_note",
+      "to": "yt_ew_color_projection_theorem"
+    },
+    {
+      "from": "rconn_derived_note",
+      "to": "yukawa_color_projection_theorem"
+    },
+    {
+      "from": "rconn_derived_note",
+      "to": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27"
+    },
+    {
       "from": "restricted_strong_field_closure_note",
       "to": "evanescent_barrier_amplitude_suppression_theorem_note"
     },
@@ -7749,6 +7777,14 @@
       "to": "yt_boundary_theorem"
     },
     {
+      "from": "yt_ew_color_projection_theorem",
+      "to": "rconn_derived_note"
+    },
+    {
+      "from": "yt_ew_color_projection_theorem",
+      "to": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27"
+    },
+    {
       "from": "yt_exact_schur_normal_form_uniqueness_note",
       "to": "yt_exact_coarse_grained_bridge_operator_note"
     },
@@ -7799,6 +7835,114 @@
     {
       "from": "yt_p3_msbar_to_pole_k2_integral_citation_note_2026-04-17",
       "to": "yt_exact_schur_normal_form_uniqueness_note"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_ward_identity_derivation_theorem"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "charged_lepton_mass_hierarchy_review_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_color_factor_retention_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_i_s_lattice_pt_citation_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_i_s_revision_verification_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_h_unit_renormalization_framework_native_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_loop_geometric_bound_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_delta_1_bz_computation_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_delta_2_bz_computation_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_delta_3_bz_computation_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_delta_r_master_assembly_theorem_note_2026-04-18"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_delta_r_2_loop_extension_note_2026-04-18"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p2_taste_staircase_transport_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p2_v_matching_theorem_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p2_taste_staircase_beta_functions_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p2_f_yt_loop_geometric_bound_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p3_msbar_to_pole_k2_integral_citation_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p3_k_series_geometric_bound_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_ew_color_projection_theorem"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_exact_schur_normal_form_uniqueness_note"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "plaquette_self_consistency_note"
     },
     {
       "from": "yt_vertex_power_derivation",
@@ -17521,7 +17665,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-27T14:14:17.993605+00:00",
+  "generated_at": "2026-04-27T21:45:32.361177+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -24263,6 +24407,19 @@
       "runner_path": "scripts/frontier_yt_ew_coupling_derivation.py",
       "title": "Electroweak Coupling Derivation: g_1(v), g_2(v), lambda(v)"
     },
+    "ew_current_matching_ozi_suppression_theorem_note_2026-04-27": {
+      "claim_id": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27",
+      "current_status": "bounded",
+      "current_status_raw": "bounded support theorem for EW current matching on the standard 1/N_c expansion surface",
+      "deps": [
+        "rconn_derived_note",
+        "yt_ew_color_projection_theorem"
+      ],
+      "note_hash": "3f39d8f68c97dc11168c0843974ef6670514990014fbb6e390a05622cbf83ab5",
+      "path": "docs/EW_CURRENT_MATCHING_OZI_SUPPRESSION_THEOREM_NOTE_2026-04-27.md",
+      "runner_path": "scripts/frontier_color_projection_mc.py",
+      "title": "EW Current Matching via OZI / Disconnected-Trace Suppression Theorem"
+    },
     "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26": {
       "claim_id": "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26",
       "current_status": "unknown",
@@ -28917,10 +29074,13 @@
       "claim_id": "native_gauge_closure_note",
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained exact native `SU(2)` + proposed_retained structural `SU(3)`; bounded abelian factor (`+1/3`, `-1` on the left-handed surface)",
-      "deps": [],
-      "note_hash": "8e079e359cbc4c6f6aea39a5f98a0fdffabc5a2e06278b32609b6528e65ec1f7",
+      "deps": [
+        "graph_first_selector_derivation_note",
+        "graph_first_su3_integration_note"
+      ],
+      "note_hash": "f8ec18a4bf64410e9fe9d5e0c6c794f82a7c9f4ed3a83e109aef8cc11add1bab",
       "path": "docs/NATIVE_GAUGE_CLOSURE_NOTE.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_non_abelian_gauge.py",
       "title": "Native Gauge Closure Note: Graph-First Gauge Closure on Z^3"
     },
     "nature_discovery_directions_2026-04-11": {
@@ -33785,10 +33945,14 @@
     },
     "rconn_derived_note": {
       "claim_id": "rconn_derived_note",
-      "current_status": "support",
-      "current_status_raw": "DERIVED (leading order in 1/N_c) + VERIFIED (MC)",
-      "deps": [],
-      "note_hash": "c273897e988edd68462ddf3b99efa407a5473b5ec1ad2a8f8eca3b99839a3f46",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained leading-order `1/N_c` derivation with bounded `O(1/N_c\u2074)` correction; MC-verified",
+      "deps": [
+        "yt_ew_color_projection_theorem",
+        "yukawa_color_projection_theorem",
+        "ew_current_matching_ozi_suppression_theorem_note_2026-04-27"
+      ],
+      "note_hash": "0caf09f59ae9c2739d77621f01cf6fe3dce15b4365035cbfbd4c749277bd46af",
       "path": "docs/RCONN_DERIVED_NOTE.md",
       "runner_path": "scripts/frontier_color_projection_mc.py",
       "title": "R_conn Derivation from the 1/N_c Expansion"
@@ -37936,11 +38100,14 @@
     "yt_ew_color_projection_theorem": {
       "claim_id": "yt_ew_color_projection_theorem",
       "current_status": "proposed_retained",
-      "current_status_raw": "DERIVED -- standalone proposed_retained EW normalization lane on `main`",
-      "deps": [],
-      "note_hash": "4f5b3aa7850ed4874f8061865f021805b62d40031fe088181c5067febda513b8",
+      "current_status_raw": "proposed_retained EW normalization lane on `main`",
+      "deps": [
+        "rconn_derived_note",
+        "ew_current_matching_ozi_suppression_theorem_note_2026-04-27"
+      ],
+      "note_hash": "fe339c5e80e1b6719104ad6e93ea73defe45885fac159f661399d832fd1451e0",
       "path": "docs/YT_EW_COLOR_PROJECTION_THEOREM.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_color_projection_mc.py",
       "title": "Color-Singlet Projection Theorem for EW Couplings"
     },
     "yt_ew_coupling_bridge_note": {
@@ -38404,8 +38571,36 @@
       "claim_id": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained **master obstruction theorem** on the YT",
-      "deps": [],
-      "note_hash": "535225544d8b222b457a8b09817ecea2b2f3c1155990a297ee8b8727ebf667df",
+      "deps": [
+        "yt_ward_identity_derivation_theorem",
+        "charged_lepton_mass_hierarchy_review_note_2026-04-17",
+        "yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17",
+        "yt_p1_color_factor_retention_note_2026-04-17",
+        "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17",
+        "yt_p1_i_s_lattice_pt_citation_note_2026-04-17",
+        "yt_p1_i_s_revision_verification_note_2026-04-17",
+        "yt_p1_h_unit_renormalization_framework_native_note_2026-04-17",
+        "yt_p1_loop_geometric_bound_note_2026-04-17",
+        "yt_p1_delta_1_bz_computation_note_2026-04-17",
+        "yt_p1_delta_2_bz_computation_note_2026-04-17",
+        "yt_p1_delta_3_bz_computation_note_2026-04-17",
+        "yt_p1_delta_r_master_assembly_theorem_note_2026-04-18",
+        "yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18",
+        "yt_p1_delta_r_2_loop_extension_note_2026-04-18",
+        "yt_p2_taste_staircase_transport_note_2026-04-17",
+        "yt_p2_v_matching_theorem_note_2026-04-17",
+        "yt_p2_taste_staircase_beta_functions_note_2026-04-17",
+        "yt_p2_f_yt_loop_geometric_bound_note_2026-04-17",
+        "yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17",
+        "yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17",
+        "yt_p3_msbar_to_pole_k2_integral_citation_note_2026-04-17",
+        "yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17",
+        "yt_p3_k_series_geometric_bound_note_2026-04-17",
+        "yt_ew_color_projection_theorem",
+        "yt_exact_schur_normal_form_uniqueness_note",
+        "plaquette_self_consistency_note"
+      ],
+      "note_hash": "5d0d34df7c76d0f56f48b7b70983261af05a9c308865d8229f6b7606ad9aa7f3",
       "path": "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_yt_uv_to_ir_transport_obstruction.py",
       "title": "YT UV-to-IR Transport Master Obstruction Theorem Note"
@@ -39194,7 +39389,6 @@
     "moving_source_cross_family_replay_note",
     "moving_source_retarded_portability_note",
     "multipole_tidal_response_note",
-    "native_gauge_closure_note",
     "nature_discovery_directions_2026-04-11",
     "nature_ranked_directions_2026-04-11",
     "neutrino_dirac_two_higgs_canonical_reduction_note",
@@ -39326,7 +39520,6 @@
     "quark_up_amplitude_rpsr_conditional_theorem_note_2026-04-19",
     "quark_up_amplitude_sqrt7_counterexample_simplification_note_2026-04-19",
     "quasi_persistent_relaunch_probe_note",
-    "rconn_derived_note",
     "reopened_lane_checklist",
     "replay_environment_note",
     "repo_submission_consolidation_plan_2026-04-12",
@@ -39614,7 +39807,6 @@
     "yt_class_7_spontaneous_c3_breaking_note_2026-04-18",
     "yt_color_projection_correction_note",
     "yt_constructive_uv_bridge_note",
-    "yt_ew_color_projection_theorem",
     "yt_ew_coupling_bridge_note",
     "yt_ew_delta_r_retention_analysis_note_2026-04-18",
     "yt_exact_coarse_grained_bridge_operator_note",
@@ -39655,24 +39847,23 @@
     "yt_right_handed_species_dependence_note_2026-04-18",
     "yt_schur_stability_gap_note",
     "yt_ssb_matching_gap_analysis_note_2026-04-18",
-    "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
     "yt_zero_import_chain_note",
     "yukawa_color_projection_theorem",
     "z2_hw1_mass_matrix_parametrization_note"
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4380,
-    "leaf_count": 750,
-    "node_count": 1614,
-    "root_count": 1176,
-    "runners_with_path": 702,
+    "edge_count": 4416,
+    "leaf_count": 732,
+    "node_count": 1615,
+    "root_count": 1172,
+    "runners_with_path": 705,
     "status_counts": {
-      "bounded": 209,
+      "bounded": 210,
       "open": 26,
       "proposed_promoted": 6,
-      "proposed_retained": 443,
-      "support": 134,
+      "proposed_retained": 444,
+      "support": 133,
       "unknown": 796
     }
   }
