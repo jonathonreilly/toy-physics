@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-04-27T21:44:19.132302+00:00",
+  "computed_at": "2026-04-27T21:45:34.267968+00:00",
   "cycle_examples": [
     [
       "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25",
@@ -23,22 +23,22 @@
       "wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24"
     ]
   ],
-  "cycles_detected": 287,
+  "cycles_detected": 288,
   "effective_status_counts": {
-    "audited_conditional": 247,
+    "audited_conditional": 237,
     "audited_decoration": 42,
-    "audited_failed": 140,
-    "audited_numerical_match": 11,
+    "audited_failed": 137,
+    "audited_numerical_match": 9,
     "audited_renaming": 3,
     "bounded": 185,
     "open": 11,
     "proposed_promoted": 1,
-    "proposed_retained": 10,
+    "proposed_retained": 24,
     "retained": 72,
-    "support": 107,
+    "support": 108,
     "unknown": 786
   },
-  "proposed_demoted_by_upstream_count": 139,
+  "proposed_demoted_by_upstream_count": 140,
   "proposed_demoted_by_upstream_examples": [
     "alpha_s_derived_note",
     "atomic_hydrogen_helium_probe_note",

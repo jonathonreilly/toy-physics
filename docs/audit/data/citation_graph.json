@@ -7837,6 +7837,114 @@
       "to": "yt_exact_schur_normal_form_uniqueness_note"
     },
     {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_ward_identity_derivation_theorem"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "charged_lepton_mass_hierarchy_review_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_color_factor_retention_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_i_s_lattice_pt_citation_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_i_s_revision_verification_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_h_unit_renormalization_framework_native_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_loop_geometric_bound_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_delta_1_bz_computation_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_delta_2_bz_computation_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_delta_3_bz_computation_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_delta_r_master_assembly_theorem_note_2026-04-18"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p1_delta_r_2_loop_extension_note_2026-04-18"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p2_taste_staircase_transport_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p2_v_matching_theorem_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p2_taste_staircase_beta_functions_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p2_f_yt_loop_geometric_bound_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p3_msbar_to_pole_k2_integral_citation_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_p3_k_series_geometric_bound_note_2026-04-17"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_ew_color_projection_theorem"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "yt_exact_schur_normal_form_uniqueness_note"
+    },
+    {
+      "from": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+      "to": "plaquette_self_consistency_note"
+    },
+    {
       "from": "yt_vertex_power_derivation",
       "to": "alpha_s_derived_note"
     },
@@ -17557,7 +17665,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-27T21:44:17.190197+00:00",
+  "generated_at": "2026-04-27T21:45:32.361177+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -38463,8 +38571,36 @@
       "claim_id": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
       "current_status": "proposed_retained",
       "current_status_raw": "proposed_retained **master obstruction theorem** on the YT",
-      "deps": [],
-      "note_hash": "535225544d8b222b457a8b09817ecea2b2f3c1155990a297ee8b8727ebf667df",
+      "deps": [
+        "yt_ward_identity_derivation_theorem",
+        "charged_lepton_mass_hierarchy_review_note_2026-04-17",
+        "yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17",
+        "yt_p1_color_factor_retention_note_2026-04-17",
+        "yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17",
+        "yt_p1_i_s_lattice_pt_citation_note_2026-04-17",
+        "yt_p1_i_s_revision_verification_note_2026-04-17",
+        "yt_p1_h_unit_renormalization_framework_native_note_2026-04-17",
+        "yt_p1_loop_geometric_bound_note_2026-04-17",
+        "yt_p1_delta_1_bz_computation_note_2026-04-17",
+        "yt_p1_delta_2_bz_computation_note_2026-04-17",
+        "yt_p1_delta_3_bz_computation_note_2026-04-17",
+        "yt_p1_delta_r_master_assembly_theorem_note_2026-04-18",
+        "yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18",
+        "yt_p1_delta_r_2_loop_extension_note_2026-04-18",
+        "yt_p2_taste_staircase_transport_note_2026-04-17",
+        "yt_p2_v_matching_theorem_note_2026-04-17",
+        "yt_p2_taste_staircase_beta_functions_note_2026-04-17",
+        "yt_p2_f_yt_loop_geometric_bound_note_2026-04-17",
+        "yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17",
+        "yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17",
+        "yt_p3_msbar_to_pole_k2_integral_citation_note_2026-04-17",
+        "yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17",
+        "yt_p3_k_series_geometric_bound_note_2026-04-17",
+        "yt_ew_color_projection_theorem",
+        "yt_exact_schur_normal_form_uniqueness_note",
+        "plaquette_self_consistency_note"
+      ],
+      "note_hash": "5d0d34df7c76d0f56f48b7b70983261af05a9c308865d8229f6b7606ad9aa7f3",
       "path": "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md",
       "runner_path": "scripts/frontier_yt_uv_to_ir_transport_obstruction.py",
       "title": "YT UV-to-IR Transport Master Obstruction Theorem Note"
@@ -39711,17 +39847,16 @@
     "yt_right_handed_species_dependence_note_2026-04-18",
     "yt_schur_stability_gap_note",
     "yt_ssb_matching_gap_analysis_note_2026-04-18",
-    "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
     "yt_zero_import_chain_note",
     "yukawa_color_projection_theorem",
     "z2_hw1_mass_matrix_parametrization_note"
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4389,
-    "leaf_count": 750,
+    "edge_count": 4416,
+    "leaf_count": 732,
     "node_count": 1615,
-    "root_count": 1173,
+    "root_count": 1172,
     "runners_with_path": 705,
     "status_counts": {
       "bounded": 210,
