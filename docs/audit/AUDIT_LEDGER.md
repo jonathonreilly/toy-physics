@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T10:57:24.164586+00:00
+**Generated:** 2026-04-27T10:59:06.841927+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 25 |
-| _proposed_retained_ | 173 |
+| **retained** | 26 |
+| _proposed_retained_ | 172 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 25 |
+| `audited_clean` | 26 |
 | `audited_conditional` | 79 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 17 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1468 |
+| `unaudited` | 1467 |
 
 | criticality | count |
 |---|---:|
@@ -113,6 +113,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `electric_sign_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `electrostatics_card_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `electrostatics_superposition_proxy_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `equivalence_principle_harness_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `i3_zero_exact_theorem_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `independent_generators_heldout_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -1034,6 +1035,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `CPT_EXACT_NOTE.md_not_registered_one_hop_dependency`
   - `parity_operator_basis_dimension5_LV_no_go_theorem_not_registered`
   - `hierarchy_scale_a_equals_planck_length_theorem_not_registered`
+- **auditor confidence:** high
+
+### `equivalence_principle_harness_note`
+
+- **Note:** [`EQUIVALENCE_PRINCIPLE_HARNESS_NOTE.md`](../../docs/EQUIVALENCE_PRINCIPLE_HARNESS_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On the fixed ordered 3D family, global amplitude rescaling leaves the detector centroid shift invariant for both valley-linear and spent-delay actions, while normalized packet shape changes the response strongly.  _(class `C`)_
+- **chain closes:** True — The live named harness reproduces the note's amplitude-invariance values and packet-shape relative spreads for both actions to the printed precision. The chain closes only for the test-particle amplitude-level statement and the explicit negative boundary that shape/composition dependence remains.
+- **rationale:** The note is careful not to claim a full equivalence principle or persistent-pattern inertial-mass law. The live runner supports the bounded result: both actions are invariant under global amplitude scaling to machine precision, and both actions show large packet-shape spreads of about 159.21% and 155.21%. The referenced frozen log is absent from this worktree, but the live finite computation closes the narrow claim and the note itself preserves the open persistent-pattern boundary.
 - **auditor confidence:** high
 
 ### `equivalence_principle_note`

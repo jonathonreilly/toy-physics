@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T10:57:23.879058+00:00",
-  "generated_at": "2026-04-27T10:57:21.926577+00:00",
-  "invalidation_run_at": "2026-04-27T10:57:23.801462+00:00",
+  "effective_status_computed_at": "2026-04-27T10:59:06.544963+00:00",
+  "generated_at": "2026-04-27T10:59:04.384732+00:00",
+  "invalidation_run_at": "2026-04-27T10:59:06.476196+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T10:57:23.656398+00:00",
+  "load_bearing_computed_at": "2026-04-27T10:59:06.297217+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -26477,14 +26477,21 @@
       "verdict_rationale": null
     },
     "equivalence_principle_harness_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The live named harness reproduces the note's amplitude-invariance values and packet-shape relative spreads for both actions to the printed precision. The chain closes only for the test-particle amplitude-level statement and the explicit negative boundary that shape/composition dependence remains.",
       "claim_id": "equivalence_principle_harness_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -26492,13 +26499,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "On the fixed ordered 3D family, global amplitude rescaling leaves the detector centroid shift invariant for both valley-linear and spent-delay actions, while normalized packet shape changes the response strongly.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "0bf777ec0bec4458088828592cec76f91c1b9f2cae9d4647268b807962060d05",
@@ -26534,14 +26541,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 4,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 4
       },
       "runner_path": null,
       "title": "Equivalence Principle Harness Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The note is careful not to claim a full equivalence principle or persistent-pattern inertial-mass law. The live runner supports the bounded result: both actions are invariant under global amplitude scaling to machine precision, and both actions show large packet-shape spreads of about 159.21% and 155.21%. The referenced frozen log is absent from this worktree, but the live finite computation closes the narrow claim and the note itself preserves the open persistent-pattern boundary."
     },
     "equivalence_principle_note": {
       "audit_date": "2026-04-26",
