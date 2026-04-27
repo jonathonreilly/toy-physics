@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T18:48:31.390284+00:00",
-  "generated_at": "2026-04-27T18:48:29.825468+00:00",
-  "invalidation_run_at": "2026-04-27T18:48:31.343270+00:00",
+  "effective_status_computed_at": "2026-04-27T18:50:11.034345+00:00",
+  "generated_at": "2026-04-27T18:50:09.448542+00:00",
+  "invalidation_run_at": "2026-04-27T18:50:10.984414+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T18:48:31.245126+00:00",
+  "load_bearing_computed_at": "2026-04-27T18:50:10.888261+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -74597,14 +74597,21 @@
       "verdict_rationale": null
     },
     "triage_no_promotion_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The note relies on an ephemeral dirty/untracked stack with no manifest or runner, and its cited baseline includes items now audited failed or conditional, so the no-promotion claim cannot be verified from repo-contained inputs.",
       "claim_id": "triage_no_promotion_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -74612,18 +74619,21 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "No draft in the current dirty stack clearly clears the retained bar beyond the basin and unification wins already on main.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "26dafee2d0e6f1b50231356894882ee4a50f41c89f3469694fda665c2bfb8bde",
       "note_path": "docs/TRIAGE_NO_PROMOTION_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/GROWN_TRANSFER_BASIN_NOTE.md",
+        "docs/EARLY_FAMILY_TRANSFER_CONNECTIVITY_DIAGNOSIS.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369956+00:00",
@@ -74661,7 +74671,7 @@
       "runner_path": null,
       "title": "Triage No-Promotion Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The note's central claim is a process judgment over a 'current dirty / untracked stack' that is not preserved as a repo manifest, runner, or reproducible input set, and the cited retained baseline now includes GROWN_TRANSFER_BASIN_NOTE as audited_failed and EARLY_FAMILY_TRANSFER_CONNECTIVITY_DIAGNOSIS as audited_conditional. Why this blocks: an audit cannot verify that no dirty draft cleared the bar, nor can it rely on a baseline whose own retained status is not clean. Repair target: replace the note with a reproducible triage manifest listing every draft artifact, its runner/log, and the exact promotion criterion, or demote it to a historical process memo outside retained science. Claim boundary until fixed: safe to say this was a dated editorial no-promotion snapshot; not safe to cite it as an audited retained conclusion about the current stack or about science promotion status."
     },
     "triple_stack_collapse_scaling_note": {
       "audit_date": null,
