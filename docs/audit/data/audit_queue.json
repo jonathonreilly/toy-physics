@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 88,
-    "high": 530,
+    "high": 529,
     "leaf": 856,
     "medium": 85
   },
-  "generated_at": "2026-04-27T04:43:09.153966+00:00",
+  "generated_at": "2026-04-27T04:45:12.770007+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -4752,23 +4752,6 @@
       "note_path": "docs/GRAV_DECOHERENCE_DERIVED_NOTE.md",
       "ready": true,
       "runner_path": "scripts/frontier_grav_decoherence_derived.py",
-      "transitive_descendants": 117
-    },
-    {
-      "audit_independence_required": "cross_family",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 5,
-      "load_bearing_score": 9.383,
-      "note_path": "docs/HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_higgs_z3_charge_pmns_gauge_redundancy_theorem.py",
       "transitive_descendants": 117
     },
     {
@@ -31279,6 +31262,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1153,
-  "total_pending": 1559
+  "ready_count": 1152,
+  "total_pending": 1558
 }

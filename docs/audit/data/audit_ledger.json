@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T04:43:09.093196+00:00",
-  "generated_at": "2026-04-27T04:43:07.220029+00:00",
-  "invalidation_run_at": "2026-04-27T04:43:09.024646+00:00",
+  "effective_status_computed_at": "2026-04-27T04:45:12.705042+00:00",
+  "generated_at": "2026-04-27T04:45:10.907534+00:00",
+  "invalidation_run_at": "2026-04-27T04:45:12.643458+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T04:43:08.902855+00:00",
+  "load_bearing_computed_at": "2026-04-27T04:45:12.515247+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -35291,14 +35291,21 @@
       "verdict_rationale": null
     },
     "higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 9.383,
+        "transitive_descendants": 117
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The primary runner passes 73/73 checks and verifies the advertised support masks, diagonal Y_eY_e^dagger structure, branch-wise PMNS modulus invariance on representative coupling choices, and explicit right-handed cyclic absorption. The chain does not close at retained theorem grade because the runner and note import the conjugate Z3 triplets, the retained Z3 support trichotomy, and the PMNS convention U_PMNS=U_nu^dagger U_e without registered one-hop dependencies; one of those upstream inputs has already been audited only conditionally. The final status-upgrade checks are also literal True summary assertions, not independent verification that the package citation chain has been repaired.",
       "claim_id": "higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -35306,18 +35313,26 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 5,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 9.383,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The theorem demotes q_H=0 from a physical PMNS conditional to a gauge representative by showing that the q_H=0,+1,-1 Z3-trichotomy supports are right-handed cyclic column relabelings, so Y_e Y_e^dagger is identical on the same left-handed axes and PMNS moduli are insensitive to q_H up to the separately tracked sigma_hier row permutation.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "7250fb79f24a243583b4941ecaa4c8da9152c09f8036dcd01d062a72073adda3",
       "note_path": "docs/HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md_not_registered_one_hop_dependency",
+        "docs/NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md_not_registered_or_prior_audited_conditional",
+        "docs/CHARGED_LEPTON_UE_IDENTITY_VIA_Z3_TRICHOTOMY_NOTE_2026-04-17.md_not_registered_one_hop_dependency",
+        "single_Higgs_definite_Z3_charge_premise_not_independently_audited_here",
+        "package_citation_chain_status_upgrade_CONDITIONAL_to_GAUGE_not_independently_verified",
+        "sigma_hier_observational_row_permutation_remains_open",
+        "branch_choice_A_BCC_or_basin_signature_condition_remains_open"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368700+00:00",
@@ -35347,15 +35362,15 @@
       ],
       "runner_check_breakdown": {
         "A": 0,
-        "B": 0,
-        "C": 0,
+        "B": 6,
+        "C": 67,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 73
       },
       "runner_path": "scripts/frontier_higgs_z3_charge_pmns_gauge_redundancy_theorem.py",
       "title": "Higgs `Z_3` Charge Gauge-Redundancy Theorem for PMNS",
       "transitive_descendants": 117,
-      "verdict_rationale": null
+      "verdict_rationale": "The linear-algebra mechanism is credible: for the stated Z3 triplet charges and single-Higgs definite charge, the three allowed charged-lepton Yukawa supports are diagonal/forward-cyclic/backward-cyclic, and the cyclic branches are right-multiplications of the diagonal branch by e_R permutation matrices. That makes Y_eY_e^dagger and hence the left-handed PMNS contribution insensitive to q_H. The runner passes every numerical and structural check. The blocker is authority and scope. The audit row has no registered one-hop dependencies for the three retained inputs the note explicitly relies on, and the status claim that q_H=0 is now GAUGE(retained) in the DM flagship closure chain is asserted by the runner rather than audited against a registered citation-chain state. To repair the claim, register and audit the three-generation Z3 triplets, the Z3 support trichotomy, and the charged-lepton U_e/PMNS convention as one-hop dependencies; add a symbolic universal check or proof over arbitrary complex y_i rather than only representative samples; and separately verify the package-state update that removes q_H from the flagship conditionals. What can safely be claimed now is conditional: assuming the retained trichotomy and PMNS convention, q_H branches are PMNS-equivalent under right-handed basis relabeling, while sigma_hier, branch-choice/A-BCC, Yukawa magnitudes, and the flagship closure remain open or separate."
     },
     "higher_dimension_status_2026-04-01": {
       "audit_date": null,

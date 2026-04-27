@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T04:43:09.352920+00:00
+**Generated:** 2026-04-27T04:45:12.968601+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 4 |
-| _proposed_retained_ | 263 |
+| _proposed_retained_ | 262 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
@@ -28,18 +28,18 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | unknown | 734 |
 | ~~audited_decoration~~ | 1 |
 | ~~audited_numerical_match~~ | 3 |
-| ~~audited_conditional~~ | 235 |
+| ~~audited_conditional~~ | 236 |
 | ~~audited_failed~~ | 58 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 4 |
-| `audited_conditional` | 33 |
+| `audited_conditional` | 34 |
 | `audited_decoration` | 1 |
 | `audited_failed` | 1 |
 | `audited_numerical_match` | 3 |
-| `unaudited` | 1556 |
+| `unaudited` | 1555 |
 
 | criticality | count |
 |---|---:|
@@ -113,6 +113,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `emergent_lorentz_invariance_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gravity_clean_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `higgs_mass_retention_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
+| `higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_dimensionless_objection_closure_review_packet_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_native_dimensionless_review_packet_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -426,6 +427,26 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `scripts/frontier_higgs_mass_full_3loop.py_not_registered_dependency_output`
   - `quadrature_independence_model_for_retention_gaps_not_registered`
   - `observed_higgs_mass_comparator_not_registered`
+- **auditor confidence:** high
+
+### `higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17`
+
+- **Note:** [`HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17.md`](../../docs/HIGGS_Z3_CHARGE_PMNS_GAUGE_REDUNDANCY_THEOREM_NOTE_2026-04-17.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The theorem demotes q_H=0 from a physical PMNS conditional to a gauge representative by showing that the q_H=0,+1,-1 Z3-trichotomy supports are right-handed cyclic column relabelings, so Y_e Y_e^dagger is identical on the same left-handed axes and PMNS moduli are insensitive to q_H up to the separately tracked sigma_hier row permutation.  _(class `C`)_
+- **chain closes:** False — The primary runner passes 73/73 checks and verifies the advertised support masks, diagonal Y_eY_e^dagger structure, branch-wise PMNS modulus invariance on representative coupling choices, and explicit right-handed cyclic absorption. The chain does not close at retained theorem grade because the runner and note import the conjugate Z3 triplets, the retained Z3 support trichotomy, and the PMNS convention U_PMNS=U_nu^dagger U_e without registered one-hop dependencies; one of those upstream inputs has already been audited only conditionally. The final status-upgrade checks are also literal True summary assertions, not independent verification that the package citation chain has been repaired.
+- **rationale:** The linear-algebra mechanism is credible: for the stated Z3 triplet charges and single-Higgs definite charge, the three allowed charged-lepton Yukawa supports are diagonal/forward-cyclic/backward-cyclic, and the cyclic branches are right-multiplications of the diagonal branch by e_R permutation matrices. That makes Y_eY_e^dagger and hence the left-handed PMNS contribution insensitive to q_H. The runner passes every numerical and structural check. The blocker is authority and scope. The audit row has no registered one-hop dependencies for the three retained inputs the note explicitly relies on, and the status claim that q_H=0 is now GAUGE(retained) in the DM flagship closure chain is asserted by the runner rather than audited against a registered citation-chain state. To repair the claim, register and audit the three-generation Z3 triplets, the Z3 support trichotomy, and the charged-lepton U_e/PMNS convention as one-hop dependencies; add a symbolic universal check or proof over arbitrary complex y_i rather than only representative samples; and separately verify the package-state update that removes q_H from the flagship conditionals. What can safely be claimed now is conditional: assuming the retained trichotomy and PMNS convention, q_H branches are PMNS-equivalent under right-handed basis relabeling, while sigma_hier, branch-choice/A-BCC, Yukawa magnitudes, and the flagship closure remain open or separate.
+- **open / conditional deps cited:**
+  - `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md_not_registered_one_hop_dependency`
+  - `NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md_not_registered_or_prior_audited_conditional`
+  - `CHARGED_LEPTON_UE_IDENTITY_VIA_Z3_TRICHOTOMY_NOTE_2026-04-17.md_not_registered_one_hop_dependency`
+  - `single_Higgs_definite_Z3_charge_premise_not_independently_audited_here`
+  - `package_citation_chain_status_upgrade_CONDITIONAL_to_GAUGE_not_independently_verified`
+  - `sigma_hier_observational_row_permutation_remains_open`
+  - `branch_choice_A_BCC_or_basin_signature_condition_remains_open`
 - **auditor confidence:** high
 
 ### `i3_zero_exact_theorem_note`
