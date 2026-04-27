@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T09:27:27.891946+00:00
+**Generated:** 2026-04-27T09:30:14.675306+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 19 |
-| _proposed_retained_ | 195 |
+| _proposed_retained_ | 194 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
 | ~~audited_conditional~~ | 280 |
-| ~~audited_failed~~ | 79 |
+| ~~audited_failed~~ | 80 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 19 |
 | `audited_conditional` | 69 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 12 |
+| `audited_failed` | 13 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1490 |
+| `unaudited` | 1489 |
 
 | criticality | count |
 |---|---:|
@@ -195,6 +195,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `backreaction_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `causal_field_reconciliation_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `causal_propagating_field_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `clifford_bimodule_ray_saturation_future_target_note_2026-04-19` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | E | - |
 | `equivalence_principle_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | G | - |
 | `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `lattice_3d_dense_spent_delay_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -504,6 +505,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The note's load-bearing narrow claim is that the exact-lattice complex-action carryover survives on the retained grown row: gamma=0 reduction is exact, the Born proxy is machine-clean, weak-field F~M stays 1.000, and the gamma sweep has a TOWARD-to-AWAY crossover.  _(class `C`)_
 - **chain closes:** True — The live runner reproduces the retained grown-row replay in the source note, including seed-0 gamma=0 delta +2.460475e-01, Born proxy 1.456e-15, F~M = 1.000 for all checked gammas, and the two-seed gamma crossover between 0.10 and 0.20. The result is scoped only to drift=0.2, restore=0.7, seeds 0 and 1 on this runner-defined grown row.
 - **rationale:** The source note is intentionally narrow and the current runner recomputes each load-bearing quantity on the grown row rather than importing the table: exact gamma=0 reduction, one Born proxy, six weak-field F~M readouts, and six gamma-sweep rows match the note. The note explicitly excludes geometry-generic, continuum, and self-gravity-mechanism claims, so the clean result retains only the finite grown-row companion. Residual boundary: the Born check is a proxy on the grown graph and the runner path is not registered in the queue row.
+- **auditor confidence:** high
+
+### `clifford_bimodule_ray_saturation_future_target_note_2026-04-19`
+
+- **Note:** [`CLIFFORD_BIMODULE_RAY_SATURATION_FUTURE_TARGET_NOTE_2026-04-19.md`](../../docs/CLIFFORD_BIMODULE_RAY_SATURATION_FUTURE_TARGET_NOTE_2026-04-19.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The source note explicitly says the ray-saturation theorem is a future mathematical target, not a proposed_retained theorem, and that no retention is claimed.  _(class `E`)_
+- **chain closes:** False — There is no theorem, proof, runner, or retained result to audit; the queued proposed_retained status contradicts the source note's explicit status and honest-status sections.
+- **rationale:** Issue: the queue presents this row as proposed_retained, but the source note repeatedly states it is a future target, not a theorem, not proposed_retained, and not part of the current publishable claim. Why this blocks: a hostile physicist cannot audit or retain a theorem that the source explicitly says has not been proven and is only a named research target for possibly deriving STRC later. Repair target: demote this row to open/future-target/support metadata, or replace it with an actual theorem note containing a proof or runner that derives STRC-LO from the stated Clifford bimodule inputs. Claim boundary until fixed: it is safe to cite this note only as a pre-registered research target and gap statement for Scenario C; it is not safe to treat it as retained, proposed_retained, or theorem-grade evidence.
+- **open / conditional deps cited:**
+  - `source_status_explicitly_not_proposed_retained`
+  - `no_proof_or_runner_for_ray_saturation_theorem`
+  - `STRC_remains_observable_principle_under_current_state`
 - **auditor confidence:** high
 
 ### `complex_action_note`

@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T09:27:27.634021+00:00",
-  "generated_at": "2026-04-27T09:27:25.772623+00:00",
-  "invalidation_run_at": "2026-04-27T09:27:27.570724+00:00",
+  "effective_status_computed_at": "2026-04-27T09:30:14.395901+00:00",
+  "generated_at": "2026-04-27T09:30:12.513156+00:00",
+  "invalidation_run_at": "2026-04-27T09:30:14.332148+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T09:27:27.433474+00:00",
+  "load_bearing_computed_at": "2026-04-27T09:30:14.204489+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -12469,14 +12469,21 @@
       "verdict_rationale": "The source note is intentionally narrow and the current runner recomputes each load-bearing quantity on the grown row rather than importing the table: exact gamma=0 reduction, one Born proxy, six weak-field F~M readouts, and six gamma-sweep rows match the note. The note explicitly excludes geometry-generic, continuum, and self-gravity-mechanism claims, so the clean result retains only the finite grown-row companion. Residual boundary: the Born check is a proxy on the grown graph and the runner path is not registered in the queue row."
     },
     "clifford_bimodule_ray_saturation_future_target_note_2026-04-19": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "There is no theorem, proof, runner, or retained result to audit; the queued proposed_retained status contradicts the source note's explicit status and honest-status sections.",
       "claim_id": "clifford_bimodule_ray_saturation_future_target_note_2026-04-19",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -12484,18 +12491,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The source note explicitly says the ray-saturation theorem is a future mathematical target, not a proposed_retained theorem, and that no retention is claimed.",
+      "load_bearing_step_class": "E",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "9a35e1487c4df4c559ccb38cf60d1bd8fd6eed95b32e7a7d9b568ecebc2bebe6",
       "note_path": "docs/CLIFFORD_BIMODULE_RAY_SATURATION_FUTURE_TARGET_NOTE_2026-04-19.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "source_status_explicitly_not_proposed_retained",
+        "no_proof_or_runner_for_ray_saturation_theorem",
+        "STRC_remains_observable_principle_under_current_state"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.367930+00:00",
@@ -12533,7 +12544,7 @@
       "runner_path": null,
       "title": "Clifford Bimodule Ray-Saturation Theorem \u2014 Future Target",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the queue presents this row as proposed_retained, but the source note repeatedly states it is a future target, not a theorem, not proposed_retained, and not part of the current publishable claim. Why this blocks: a hostile physicist cannot audit or retain a theorem that the source explicitly says has not been proven and is only a named research target for possibly deriving STRC later. Repair target: demote this row to open/future-target/support metadata, or replace it with an actual theorem note containing a proof or runner that derives STRC-LO from the stated Clifford bimodule inputs. Claim boundary until fixed: it is safe to cite this note only as a pre-registered research target and gap statement for Scenario C; it is not safe to treat it as retained, proposed_retained, or theorem-grade evidence."
     },
     "complete_prediction_chain_2026_04_15": {
       "audit_date": null,
