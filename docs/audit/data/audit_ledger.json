@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T15:46:19.982682+00:00",
-  "generated_at": "2026-04-27T15:46:18.390469+00:00",
-  "invalidation_run_at": "2026-04-27T15:46:19.935508+00:00",
+  "effective_status_computed_at": "2026-04-27T15:47:46.370581+00:00",
+  "generated_at": "2026-04-27T15:47:44.780533+00:00",
+  "invalidation_run_at": "2026-04-27T15:47:46.322679+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T15:46:19.836231+00:00",
+  "load_bearing_computed_at": "2026-04-27T15:47:46.228199+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -48666,14 +48666,21 @@
       "verdict_rationale": null
     },
     "mesoscopic_surrogate_threshold_2d_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The bounded control result closes numerically, but the note explicitly says it remains a bounded control and not a persistent-mass theorem; the proposed_retained queue status is a parser/status false positive.",
       "claim_id": "mesoscopic_surrogate_threshold_2d_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -48681,13 +48688,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The 2D threshold sweep shows every scanned topN from 1 through 81 remains stable, so support shrinkage does not expose a sharp two-stage sourced-response threshold in this retained 2D family.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "525344a61ea8c93368a6cb269e71481f7725fcbf4a3a43e857dd8bde909738e6",
@@ -48723,14 +48730,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 4,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 4
       },
       "runner_path": null,
       "title": "Mesoscopic Surrogate Threshold 2D Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The source Status begins with 'bounded control note' and later states the test remains a bounded control, not a persistent-mass theorem, but the audit queue records it as proposed_retained because the Status line also mentions a proposed_retained 2D support sweep. Why this blocks: the live runner verifies a finite support sweep, not a retained theorem about localized persistent mass or inertial response. Repair target: correct the Status/current_status to bounded/proposed_bounded, or provide a separate retained theorem deriving a persistent-mass object from the sweep. Claim boundary until fixed: it is safe to claim the live artifact reproduces all scanned topN values stable, first stable topN=1, and no sharp support threshold in this 2D companion family; it is not safe to present this note as a retained persistent-mass or localization theorem."
     },
     "mesoscopic_surrogate_two_stage_2d_note": {
       "audit_date": null,
