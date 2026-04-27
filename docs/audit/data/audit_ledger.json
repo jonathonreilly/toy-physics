@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T03:34:40.556672+00:00",
-  "generated_at": "2026-04-27T03:34:38.784014+00:00",
-  "invalidation_run_at": "2026-04-27T03:34:40.501584+00:00",
+  "effective_status_computed_at": "2026-04-27T03:38:19.444931+00:00",
+  "generated_at": "2026-04-27T03:38:17.665073+00:00",
+  "invalidation_run_at": "2026-04-27T03:38:19.383753+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T03:34:40.374952+00:00",
+  "load_bearing_computed_at": "2026-04-27T03:38:19.269611+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -65321,14 +65321,21 @@
       "verdict_rationale": null
     },
     "sign_portability_invariant_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 7.407,
+        "transitive_descendants": 119
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The synthesis depends on multiple family notes, a comparison script/log, and a holdout package, but the ledger lists no one-hop dependencies and no registered primary runner/output for this claim.",
       "claim_id": "sign_portability_invariant_note",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -65336,18 +65343,24 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 7.407,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note infers a portable signed-control fixed point across retained sign-law basins from exact zero-source/neutral cancellation, plus-minus antisymmetry, and weak-field exponents near 1.0 in multiple family notes and a comparison runner.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "648632f19e0b10c8ba1f2650a812609d5f7a77ee95c045abd513e4962484d57b",
       "note_path": "docs/SIGN_PORTABILITY_INVARIANT_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "scripts/SIGN_PORTABILITY_INVARIANT_COMPARE.py_not_registered_primary_runner",
+        "logs/2026-04-06-sign-portability-invariant.txt_not_registered_primary_output",
+        "retained_sign_family_notes_not_registered_one_hop",
+        "fifth_family_holdout_notes_not_registered_one_hop",
+        "common_threshold_protocol_not_registered"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369655+00:00",
@@ -65385,7 +65398,7 @@
       "runner_path": null,
       "title": "Sign Portability Invariant Note",
       "transitive_descendants": 119,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the proposed_retained portability invariant is a cross-family comparison, but the audit packet provides no registered one-hop family notes and no primary runner/output for SIGN_PORTABILITY_INVARIANT_COMPARE.py. Why this blocks: a hostile auditor cannot verify that the named families are themselves retained, that their exact controls and weak-field exponents use compatible protocols, or that the claimed signed-control fixed point is independent of basin width/seed selectivity rather than a summary label imposed after filtering passing rows. Repair target: register the comparison runner/log, add the family and holdout notes as one-hop dependencies with their current audit statuses, and make the runner assert common thresholds for zero-source cancellation, neutral same-point cancellation, antisymmetry, unit-slope tolerance, and basin/seed exclusions. Claim boundary until fixed: it is safe to say the source note proposes a conditional comparison invariant across reported sign-law families; it is not yet an audited retained portability theorem or independent order parameter."
     },
     "single_axiom_hilbert_note": {
       "audit_date": null,
