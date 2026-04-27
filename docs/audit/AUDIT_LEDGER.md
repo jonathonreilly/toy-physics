@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T05:57:42.866516+00:00
+**Generated:** 2026-04-27T06:05:07.028799+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 6 |
-| _proposed_retained_ | 242 |
+| _proposed_retained_ | 241 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
-| ~~audited_conditional~~ | 249 |
+| ~~audited_conditional~~ | 250 |
 | ~~audited_failed~~ | 59 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 6 |
-| `audited_conditional` | 47 |
+| `audited_conditional` | 48 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 2 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1535 |
+| `unaudited` | 1534 |
 
 | criticality | count |
 |---|---:|
@@ -147,6 +147,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `strong_cp_theta_zero_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `wave_equation_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `wave_radiation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_retardation_continuum_limit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `yt_ew_color_projection_theorem` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
 | `yt_ew_delta_r_retention_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
@@ -1155,6 +1156,24 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `3D_Poisson_static_result_not_registered_one_hop_dependency`
   - `physical_field_observable_bridge_not_registered`
   - `multi_source_superposition_and_backreaction_explicitly_untested`
+  - `Born_residual_headline_stale_relative_to_live_runner`
+- **auditor confidence:** high
+
+### `wave_radiation_note`
+
+- **Note:** [`WAVE_RADIATION_NOTE.md`](../../docs/WAVE_RADIATION_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The model's wave equation has true radiating solutions: an oscillating source emits a propagating field with the textbook 2+1D amplitude falloff, drive-frequency dominance, exact null, and preserved beam-side diagnostics.  _(class `C`)_
+- **chain closes:** False — The live runner computes the finite scalar-wave radiation harness, but the promoted radiation law depends on an imposed 2+1D PDE, selected source/readout, finite-domain fit window, and the conditionally audited wave-equation self-field lane.
+- **rationale:** Issue: the note promotes a finite oscillating-source scalar-wave computation to a retained radiation-law result for the model. Why this blocks: the runner reproduces the -0.469 log-log slope, frequency-peak dominance, exact S0=0 null, and family F~M table, but it starts from an imposed 2+1D wave equation and selected monopole drive, distance window, detector metric, and finite domain; it also relies on the Lane-5 lightcone result while its own sinusoidal first-arrival rows fail the strict dt=r check, and the live Born residual is 5.21e-16 rather than the note/log's 3.20e-15. Repair target: derive or register the scalar wave equation/source law and lightcone theorem as retained dependencies, add runner assertions with tolerances for slope, DFT peak dominance, null, Born, and finite-domain/reflection controls, and either prove the fit window is asymptotic or label it as a finite-window radiation proxy. Claim boundary until fixed: it is safe to claim that this specific 2+1D scalar-wave harness with S0=0.04, f in the tested range, NL=60, W=12 shows a reproducible finite-window amplitude slope near -0.5, drive-frequency-dominated detector time series, exact null, and machine-precision Born residual; it is not yet an audited retained framework-derived radiation law or GR/tensor radiation result.
+- **open / conditional deps cited:**
+  - `wave_equation_and_source_law_not_derived_from_retained_primitives`
+  - `wave_equation_self_field_note_conditionally_audited_dependency`
+  - `strict_lightcone_evidence_imported_from_Lane_5_not_registered_dependency`
+  - `finite_domain_reflection_and_asymptotic_fit_window_not_proven`
   - `Born_residual_headline_stale_relative_to_live_runner`
 - **auditor confidence:** high
 
