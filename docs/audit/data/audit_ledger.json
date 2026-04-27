@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T11:22:52.866128+00:00",
-  "generated_at": "2026-04-27T11:22:50.837051+00:00",
-  "invalidation_run_at": "2026-04-27T11:22:52.809587+00:00",
+  "effective_status_computed_at": "2026-04-27T11:26:03.602381+00:00",
+  "generated_at": "2026-04-27T11:26:01.399220+00:00",
+  "invalidation_run_at": "2026-04-27T11:26:03.539859+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T11:22:52.674091+00:00",
+  "load_bearing_computed_at": "2026-04-27T11:26:03.414135+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -27942,14 +27942,21 @@
       "verdict_rationale": "The claim is intentionally tiny and the live runner recomputes the disputed finite surface rather than only rendering a static table. It confirms the center-row Born proxy, center and nearby weak-field F~M gates, and nearby crossover survival, while the source note explicitly excludes family-wide or geometry-generic transfer. Residual boundary: the result is a two-row basin around the audited grown-row companion, not a broad grown-family theorem."
     },
     "fixed_field_family_unification_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The live runner reproduces the frozen row: zero and neutral sign-source controls are exactly 0, plus/minus signs are opposite, the charge exponent is 0.999833, and the complex branch gives the stated gamma=0 baseline, negative gamma=0.2/gamma=0.5 deltas, and escape values. The conclusion is restricted to the single retained grown row and does not claim geometry-generic or continuum unification.",
       "claim_id": "fixed_field_family_unification_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -27957,13 +27964,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "On the same retained grown row at drift 0.2 restore 0.7 seed 0, the runner checks both the signed-source branch with exact zero/neutral controls and near-linear charge response, and the complex-action branch with the gamma=0 baseline plus absorptive gamma=0.2 and gamma=0.5 responses.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "d65c8e41cb00e0e6c7c06dce0874af3842728fa1effbcb8ea43f406a3264a778",
@@ -27999,14 +28006,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 6,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 6
       },
       "runner_path": null,
       "title": "Fixed-Field Family Unification Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The artifact is a direct same-row computation rather than a static synthesis: it recomputes the sign-law controls and the complex-action responses under the same grown-row parameters. The source note keeps the claim compact and explicitly excludes geometry-generic and continuum extensions, so the chain closes at that finite comparison surface. Residual boundary: the cited sign-transfer companion note is not itself audited retained in the ledger, but this row's load-bearing sign-law quantities are recomputed directly here rather than imported."
     },
     "fixed_field_grown_transfer_scout_note": {
       "audit_date": null,
