@@ -79,23 +79,51 @@ step per skill delivery policy.
 - **Disposition:** Cycle 2 accepted. (B2) identified as the single
   load-bearing residual for `sqrt(sigma)` retention.
 
-## Cycle 3+ — pending evaluation
+## Cycle 3 — R7 chiral condensate Sigma scoping audit
 
-With the theorem plan (Cycle 1) and `sqrt(sigma)` gate isolated
-(Cycle 2), remaining single-cycle Lane-1-internal candidates:
+- **Date:** 2026-04-27
+- **Artifact:**
+  `docs/HADRON_LANE1_CHIRAL_CONDENSATE_BANKS_CASHER_SCOPING_NOTE_2026-04-27.md`
+  (Banks-Casher route scoping audit-no-go; no runner).
+- **Review mode:** branch-local 6-criterion self-review.
+- **Findings:**
+  1. **CodeRunnerReviewer (PASS).** No runner; structural audit.
+  2. **PhysicsClaimReviewer (PASS).** Banks-Casher relation
+     `Sigma = pi * rho_Dirac(0)` correctly stated with chiral-
+     thermodynamic limit ordering. Existing g_bare-obstruction-note
+     lattice data (`L = 4, 6`, `beta in [1, 30]`, `rho(0)` values)
+     accurately cited. chRMT universality discussion accurately
+     noted as not delivering retained `Sigma`.
+  3. **ImportSupportReviewer (PASS).** All admitted conventions
+     explicit (Banks-Casher, chRMT). No silent imports.
+  4. **NatureRetentionReviewer (PASS).** Scoped as audit-no-go on
+     current framework content; explicitly does not claim Sigma
+     unrederivable in principle. Two hypothetical opening paths
+     (P1, P2) named.
+  5. **RepoGovernanceReviewer (PASS).** Naming convention
+     `*_BANKS_CASHER_SCOPING_NOTE_*` matches scoping-audit pattern.
+  6. **MethodologySkillReviewer (PASS).** Cycle 3 qualifies as
+     "no-go proven" (R7 class-bounding negative on current framework
+     content) plus "blocker isolation" (P1 / P2 opening paths).
+     Mirrors hubble-h0 (C3)-class audit-no-go pattern.
+- **Disposition:** Cycle 3 accepted. R7 route is not productive for
+  single-cycle Lane-1-internal work under current framework content.
 
-- **Route R7 — Chiral condensate Sigma structural attempt** (Tier
-  B-C; Lane-1-internal): direct attack on the `m_pi` entry point
-  via Banks-Casher on the staggered-Dirac partition. Could partially
-  unblock 3A even before Lane 3.
-- **Cross-cycle hygiene audit** (after R7): mirrors hubble-h0
-  Cycle 7 — check coherence of the four artifacts (theorem plan
-  + retention gate + Sigma scoping + any follow-on).
-- **Lane 3 progress checkpoint:** monitor whether Lane 3 has retained
-  `m_u + m_d` since this branch was created (would unblock Phase-2
-  3A in the theorem plan).
+## Cycle 4+ — pending evaluation
 
-Recommended Cycle 3: R7 scoping. If a clean Banks-Casher structural
-path exists, attempt; if not, produce a no-go for the easy options.
+After Cycles 1-3, the natural Lane-1-internal claim-state movement
+is winding down. Remaining single-cycle candidates:
+
+- **Cross-cycle hygiene audit** (mirrors hubble-h0 Cycle 7): check
+  coherence of the four artifacts (theorem plan + sqrt(sigma) gate
+  + Sigma scoping + this review history).
+- **Workstream consolidation note** (mirrors hubble-h0 Cycle 6):
+  single Lane 1 status surface synthesizing Cycles 1-3.
+- **Lane 3 progress checkpoint:** check whether Lane 3 has retained
+  `m_u + m_d` since this branch was created (would unblock
+  Phase-2 3A m_pi in the theorem plan).
+
+Recommended Cycle 4: workstream consolidation note (mirrors hubble-h0
+Cycle 6). Useful payload for the post-workstream review pipeline.
 
 Loop continues per ScheduleWakeup.
