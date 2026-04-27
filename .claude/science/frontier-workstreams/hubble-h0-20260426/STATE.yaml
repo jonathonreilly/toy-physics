@@ -9,8 +9,8 @@ branch: frontier/hubble-h0-20260426
 base: origin/main
 lock_status: unavailable
 lock_note: "scripts/automation_lock.py hardcodes /Users/jonreilly/Projects/Physics paths; this worktree is on /Users/jonBridger. Skipping cooperative lock per skill optionality."
-current_phase: cycle-1-complete
-cycles_completed: 1
+current_phase: cycle-2-complete
+cycles_completed: 2
 active_route: null
 files_touched:
   - .claude/science/frontier-workstreams/hubble-h0-20260426/STATE.yaml
@@ -25,6 +25,9 @@ files_touched:
   - docs/HUBBLE_TENSION_STRUCTURAL_LOCK_THEOREM_NOTE_2026-04-26.md
   - scripts/frontier_hubble_tension_structural_lock.py
   - logs/2026-04-26-hubble-tension-structural-lock.txt
+  - docs/COSMOLOGY_OPEN_NUMBER_REDUCTION_THEOREM_NOTE_2026-04-26.md
+  - scripts/frontier_cosmology_open_number_reduction.py
+  - logs/2026-04-26-cosmology-open-number-reduction.txt
 open_imports:
   - "H_0 = 67.4 km/s/Mpc — primary retirement target; Cycle 1 did NOT retire this; Cycle 1 locked the structural form of late-time H_0 measurement"
   - "T_CMB = 2.7255 K — observational pin for Omega_r,0"
@@ -40,13 +43,18 @@ no_go_routes_inherited:
 no_go_routes_proven_in_workstream: []
 review_findings:
   - "Cycle 1 review (branch-local, 6 reviewer-criterion self-review): all PASS after one tightening edit (premises 3 -> 2 in §0)."
-  - "Sub-finding (CodeRunnerReviewer): initial flatness inconsistency in comparator triple fixed by deriving Omega_Lambda from 1 - Omega_m - Omega_r."
+  - "Cycle 1 sub-finding (CodeRunnerReviewer): initial flatness inconsistency in comparator triple fixed by deriving Omega_Lambda from 1 - Omega_m - Omega_r."
+  - "Cycle 2 review (branch-local, 6 reviewer-criterion self-review): all PASS after two corrections — R_Lambda numerical expected range was wrong (~5.4 Gpc, not Hubble radius); z_mLambda formula in note was inverted (correct: (L/M)^(1/3))."
 artifacts_landed:
   - "docs/HUBBLE_TENSION_STRUCTURAL_LOCK_THEOREM_NOTE_2026-04-26.md (theorem note)"
   - "scripts/frontier_hubble_tension_structural_lock.py (sympy + numpy verifier; 5/5 PASS)"
   - "logs/2026-04-26-hubble-tension-structural-lock.txt (paired log)"
+  - "docs/COSMOLOGY_OPEN_NUMBER_REDUCTION_THEOREM_NOTE_2026-04-26.md (theorem note)"
+  - "scripts/frontier_cosmology_open_number_reduction.py (sympy + numpy verifier; 5/5 PASS)"
+  - "logs/2026-04-26-cosmology-open-number-reduction.txt (paired log)"
 claim_state_movement:
   - "Lane 5 Phase 1 (5C: Hubble tension explicit stance) advanced from 'Tier A planning' to 'theorem-note grade with explicit operational falsifier (no late-time H_0 drift)' on the workstream branch."
   - "Late-time-only resolutions of Hubble tension are now structurally ruled out on the retained surface."
-next_exact_action: "Evaluate Cycle 2 launch. Per ROUTE_PORTFOLIO.md, the natural next route is R3 (Open-Number Reduction theorem) which formalizes the (H_0, L) parameter count Cycle 1 implicitly used. Alternatively R5 (eta retirement audit) advances 5A. User should pick or auto-pick on resume."
+  - "Cosmology open-number-count established as |open structural numbers in S| = 2 (the pair (H_0, L)). Lane 5 closure pathways now exhaustively classified: retain L (sub-lane 5A), retain H_0 (sub-lane 5B), or retain R_Lambda + one of (L, H_0). No fourth derivation class."
+next_exact_action: "Evaluate Cycle 3 launch. Strongest remaining single-cycle candidates per ROUTE_PORTFOLIO.md: R5 (eta retirement audit; advances 5A) or R7 (minimal-axiom no-go; program-bounding negative). Both are Tier B and would benefit from a fresh session. User should pick or auto-pick on resume."
 stop_condition: "runtime budget (10h) reached, max cycles, blocker requiring human science judgment, or honest claim-state closure achieved"

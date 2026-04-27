@@ -79,6 +79,59 @@ produced in the workstream.
   to branch. Edit applied to tighten premise count from 3 to 2.
 - **Next:** STATE.yaml checkpoint, branch push, then evaluate continuation.
 
-## Cycle 2+ — pending evaluation
+## Cycle 2 — R3 Cosmology Open-Number Reduction theorem
 
-(To be populated if Cycle 2 is launched.)
+- **Date:** 2026-04-26
+- **Artifacts:**
+  - `docs/COSMOLOGY_OPEN_NUMBER_REDUCTION_THEOREM_NOTE_2026-04-26.md`
+  - `scripts/frontier_cosmology_open_number_reduction.py`
+  - `logs/2026-04-26-cosmology-open-number-reduction.txt`
+- **Review mode:** same branch-local 6-criterion self-review as Cycle 1.
+- **Findings:**
+  1. **CodeRunnerReviewer (PASS after 2 fixes).**
+     - Initial run had `R_Lambda` numerical sub-check FAIL because the
+       expected range was set to ~14 Gpc (a misremembered Hubble-radius
+       value). Correct value `R_Lambda = c/H_inf ≈ 5.4 Gpc` per the
+       2026-04-22 matter-bridge note. Range corrected to 5000-5800 Mpc.
+     - Initial theorem-note table had `1 + z_mLambda = ((1 - L - R)/L)^{1/3}`
+       which is the inverse of the correct formula. The runner symbolic
+       check matched the correct version `(L / (1 - L - R))^{1/3}`.
+       Theorem note updated to match.
+  2. **PhysicsClaimReviewer (PASS).** Theorem packages prior retained
+     identities (matter-bridge 2026-04-22, single-ratio inverse
+     reconstruction 2026-04-25, structural lock 2026-04-26) into one
+     parameter-count statement. Statement matches proof. The "no fourth
+     class of derivation" §3.2 is the program-bounding component.
+  3. **ImportSupportReviewer (PASS).** No new imports beyond the retained
+     surface and Cycle-1 theorem.
+  4. **NatureRetentionReviewer (PASS, borderline).** The theorem is more
+     a parameter-count statement than a strongly falsifiable prediction;
+     §3.2 ("no fourth derivation class") provides the operational
+     program-bounding content. Scoping language matches Cycle 1
+     ("retained structural-identity theorem on `main`-compatible surface,
+     landed branch-locally").
+  5. **RepoGovernanceReviewer (PASS).** Same conventions as Cycle 1.
+  6. **MethodologySkillReviewer (PASS).** Cycle 2 follows logically from
+     Cycle 1, builds on retained items, adds a real claim
+     (`|open numbers in S| = 2`), not pure prose.
+- **Disposition:** Cycle 2 accepted. Theorem note + runner + log
+  committed to branch.
+
+## Cycle 3+ — pending evaluation
+
+Strongest single-cycle candidates remaining:
+
+- **R5 — eta retirement audit** (Tier B): identify the minimal selector/
+  normalization closure required to promote the surviving DM
+  leptogenesis branches (`eta/eta_obs = 0.1888` exact one-flavor;
+  `eta/eta_obs = 1.0` reduced-surface PMNS) to retained, retiring `eta`
+  from the bounded `Omega_b` cascade. Requires reading DM lane notes
+  outside this branch's existing context.
+
+- **R7 — minimal-axiom cosmology no-go** (Tier B): prove that on the
+  minimal accepted axiom stack alone, the open ratio `L` cannot be
+  derived without an additional structural premise. Program-bounding
+  negative.
+
+Both warrant a fresh session for clean grounding.
+

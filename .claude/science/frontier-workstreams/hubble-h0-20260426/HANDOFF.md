@@ -5,52 +5,71 @@
 
 ## Current State
 
-**Cycle 1 complete.** Hubble Tension Structural Lock theorem (route R4)
-landed on the science branch:
+**Cycles 1 and 2 complete.**
+
+**Cycle 1 (R4 — Hubble Tension Structural Lock):**
 
 - `docs/HUBBLE_TENSION_STRUCTURAL_LOCK_THEOREM_NOTE_2026-04-26.md`
-- `scripts/frontier_hubble_tension_structural_lock.py` — 5/5 checks PASS
-- `logs/2026-04-26-hubble-tension-structural-lock.txt` — paired log
+- `scripts/frontier_hubble_tension_structural_lock.py` — 5/5 PASS
+- `logs/2026-04-26-hubble-tension-structural-lock.txt`
 
-Branch-local self-review (6 reviewer criteria) PASS after one tightening
-edit (premise count reduced from 3 to 2 in theorem §0). Findings recorded
-in `REVIEW_HISTORY.md`.
+**Cycle 2 (R3 — Cosmology Open-Number Reduction):**
 
-`STATE.yaml` is the single-source-of-truth resume surface. Pack files
-unchanged from scaffold except `REVIEW_HISTORY.md`, `STATE.yaml`, and this
-file.
+- `docs/COSMOLOGY_OPEN_NUMBER_REDUCTION_THEOREM_NOTE_2026-04-26.md`
+- `scripts/frontier_cosmology_open_number_reduction.py` — 5/5 PASS
+- `logs/2026-04-26-cosmology-open-number-reduction.txt`
+
+Branch-local 6-criterion self-review PASS for both cycles. Cycle 1
+required one premise-tightening edit (3 → 2 premises). Cycle 2 required
+two corrections: a wrong expected range in the runner (R_Lambda is
+~5.4 Gpc, not the Hubble radius) and an inverted formula in the theorem
+note table (`1 + z_mLambda = (L/M)^(1/3)`, not the inverse).
+
+`STATE.yaml` is the single-source-of-truth resume surface.
 
 ## Claim-state movement achieved
 
-**Lane 5 Phase 1 (5C — Hubble tension explicit stance)**: advanced from
-"Tier A planning, ~1 week" (lane file framing) to **theorem-note grade with
-an explicit operational falsifier** (no late-time `H_0` drift on the
-retained surface). Late-time-only resolutions of any genuine Hubble tension
-are now structurally forbidden on the retained surface; resolution must
-come from pre-recombination physics or measurement systematics.
+**Lane 5 Phase 1 (5C — Hubble tension explicit stance):** advanced from
+"Tier A planning, ~1 week" (lane file framing) to **theorem-note grade
+with an explicit operational falsifier** (no late-time `H_0` drift on the
+retained surface). Late-time-only resolutions of any genuine Hubble
+tension are now structurally forbidden on the retained surface;
+resolution must come from pre-recombination physics or measurement
+systematics.
 
-This does NOT retire the `H_0` import. It locks the structural form of
-late-time `H_0` measurements.
+**New: Cosmology open-number-count theorem.** The late-time bounded
+cosmology surface has exactly 2 open structural numbers: `(H_0, L)`. All
+of `{H_inf, R_Lambda, Omega_Lambda, Omega_m, q_0, z_*, z_mLambda, H(a)}`
+are exact closed-form functions of the pair. **No fourth class of
+derivation** retires the cosmology surface beyond {derive `L`,
+derive `H_0`, derive `R_Lambda` + one of `(L, H_0)`}.
 
-## Next Exact Action (Cycle 2 candidate)
+Neither cycle retires the `H_0` import (Lane 5 main target). They lock
+the structural form and exhaustively classify the closure pathways.
 
-Per `ROUTE_PORTFOLIO.md` scoring:
+## Next Exact Action (Cycle 3 candidate)
 
-- **Cycle 2 candidate A — Route R3 (Open-Number Reduction theorem).**
-  Formalize the parameter-count statement: every late-time bounded
-  cosmology row is an exact function of `(H_0, L)` where
-  `L = Omega_Lambda = (H_inf/H_0)^2`. This packages the matter-bridge
-  theorem + inverse reconstruction theorem + structural lock theorem into
-  one open-number-count statement. Tier A. No blockers.
-- **Cycle 2 candidate B — Route R5 (eta retirement audit).** Survey the
+Per `ROUTE_PORTFOLIO.md` scoring, the strongest remaining single-cycle
+candidates are:
+
+- **Cycle 3 candidate A — Route R5 (eta retirement audit).** Survey the
   surviving DM leptogenesis branches (`eta/eta_obs = 0.1888` exact
   one-flavor; `1.0` reduced-surface PMNS) and identify the minimal
   selector/normalization closure that retires `eta` from the bounded
-  `Omega_b` cascade. Tier B. Cross-lane dependency.
-- **Recommendation:** R3 first (Tier A, single-cycle achievable, no
-  blockers, completes the cosmology open-number-count story). R5 is the
-  better second step toward `Omega_m` closure but warrants a separate
-  session.
+  `Omega_b` cascade. Tier B. Cross-lane dependency: requires reading
+  DM-leptogenesis lane notes outside this branch's existing context.
+- **Cycle 3 candidate B — Route R7 (minimal-axiom cosmology no-go).**
+  Prove that on the minimal accepted axiom stack alone, `L` cannot be
+  derived without an additional structural premise (e.g., an absolute-
+  scale axiom or a separate dimensionless ratio). Program-bounding
+  negative — would isolate the gap that Lane 5 needs an additional
+  structural premise to close.
+- **Recommendation:** both are Tier B and warrant a fresh session for
+  clean grounding (Cycle-1/2 context is heavy with cosmology theorem
+  detail; switching to DM-lane content for R5, or to careful axiom-stack
+  formulation for R7, is best done with a clean reader). Either can be
+  started by re-invoking `/frontier-workstream --mode resume --workstream
+  hubble-h0-20260426`.
 
 ## Repo-Wide Weaving (NOT to apply on this branch)
 
