@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 91,
+    "critical": 90,
     "high": 569,
     "leaf": 856,
     "medium": 85
   },
-  "generated_at": "2026-04-27T02:00:05.010583+00:00",
+  "generated_at": "2026-04-27T02:17:58.912648+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -383,23 +383,6 @@
       "note_path": "docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md",
       "ready": true,
       "runner_path": "scripts/frontier_hierarchy_observable_principle_from_axiom.py",
-      "transitive_descendants": 276
-    },
-    {
-      "audit_independence_required": "cross_family_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "yt_ew_color_projection_theorem",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 21,
-      "load_bearing_score": 22.614,
-      "note_path": "docs/YT_EW_COLOR_PROJECTION_THEOREM.md",
-      "ready": true,
-      "runner_path": null,
       "transitive_descendants": 276
     },
     {
@@ -30300,30 +30283,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "yt_p3_msbar_to_pole_k2_integral_citation_note_2026-04-17",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17",
-        "yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17",
-        "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
-        "yt_color_projection_correction_note",
-        "yt_ew_color_projection_theorem",
-        "yt_exact_schur_normal_form_uniqueness_note"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/YT_P3_MSBAR_TO_POLE_K2_INTEGRAL_CITATION_NOTE_2026-04-17.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_yt_p3_k2_integrals.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -31993,8 +31952,32 @@
       "ready": false,
       "runner_path": null,
       "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "yt_p3_msbar_to_pole_k2_integral_citation_note_2026-04-17",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17",
+        "yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17",
+        "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
+        "yt_color_projection_correction_note",
+        "yt_ew_color_projection_theorem",
+        "yt_exact_schur_normal_form_uniqueness_note"
+      ],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/YT_P3_MSBAR_TO_POLE_K2_INTEGRAL_CITATION_NOTE_2026-04-17.md",
+      "ready": false,
+      "runner_path": "scripts/frontier_yt_p3_k2_integrals.py",
+      "transitive_descendants": 0
     }
   ],
-  "ready_count": 1204,
-  "total_pending": 1601
+  "ready_count": 1202,
+  "total_pending": 1600
 }
