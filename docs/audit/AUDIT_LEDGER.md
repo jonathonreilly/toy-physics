@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T11:07:56.347251+00:00
+**Generated:** 2026-04-27T11:10:34.175883+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 26 |
-| _proposed_retained_ | 170 |
+| _proposed_retained_ | 169 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 101 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
 | ~~audited_conditional~~ | 291 |
-| ~~audited_failed~~ | 86 |
+| ~~audited_failed~~ | 87 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 26 |
 | `audited_conditional` | 80 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 19 |
+| `audited_failed` | 20 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1463 |
+| `unaudited` | 1462 |
 
 | criticality | count |
 |---|---:|
@@ -221,6 +221,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `equivalence_principle_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | G | - |
 | `evolving_network_prototype_v2_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `evolving_network_prototype_v3_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `fifth_family_complex_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `lattice_3d_dense_spent_delay_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `lattice_kernel_transfer_norm_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -1141,6 +1142,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `SECOND_GROWN_FAMILY_SIGN_NOTE.md_not_registered_one_hop`
   - `logs/2026-04-06-family-companion-compare.txt_missing_frozen_output`
   - `control_surface_mismatch_for_second_family_complex`
+- **auditor confidence:** high
+
+### `fifth_family_complex_note`
+
+- **Note:** [`FIFTH_FAMILY_COMPLEX_NOTE.md`](../../docs/FIFTH_FAMILY_COMPLEX_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note claims that the radial-shell fifth-family anchor row at drift 0.20, seed 0 carries a narrow complex-action companion with Born proxy 0, TOWARD-to-AWAY crossover, and weak-field F~M = 1.000 at gamma = 0 and gamma = 0.5.  _(class `C`)_
+- **chain closes:** False — The frozen log reports one passing anchor row, but the live targeted script fails before running because it imports _field_from_sources from CONNECTIVITY_FAMILY_V2_QUADRANT_SWEEP.py and that symbol is absent in the current repo. The cited radial-shell base note is also unaudited, so the current audit packet cannot reproduce the retained anchor-row claim.
+- **rationale:** Issue: the live runner for the retained fifth-family complex companion is broken by an import mismatch, so the claimed anchor-row positive cannot be reproduced from the current source. Why this blocks: a hostile referee cannot accept a retained finite-computation claim from a stale frozen log when the present runner exits before computing Born, crossover, or F~M, and the upstream radial-shell family note has not itself been audited. Repair target: update FIFTH_FAMILY_COMPLEX_TARGETED.py to the current connectivity helper API or restore the missing _field_from_sources helper, rerun the anchor-row computation with explicit PASS thresholds for Born, crossover, and F~M, and audit/register FIFTH_FAMILY_RADIAL_NOTE.md as the base family dependency. Claim boundary until fixed: it is safe only to say a historical frozen log reported one drift=0.20, seed=0 complex companion candidate; it is not currently an audited retained anchor-row positive.
+- **open / conditional deps cited:**
+  - `scripts/FIFTH_FAMILY_COMPLEX_TARGETED.py_import_error_missing__field_from_sources`
+  - `FIFTH_FAMILY_RADIAL_NOTE.md_unaudited_base_family`
+  - `live_runner_output_not_reproducible`
 - **auditor confidence:** high
 
 ### `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25`

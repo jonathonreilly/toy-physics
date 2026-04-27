@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T11:07:56.067519+00:00",
-  "generated_at": "2026-04-27T11:07:54.104136+00:00",
-  "invalidation_run_at": "2026-04-27T11:07:55.994347+00:00",
+  "effective_status_computed_at": "2026-04-27T11:10:33.904795+00:00",
+  "generated_at": "2026-04-27T11:10:31.967728+00:00",
+  "invalidation_run_at": "2026-04-27T11:10:33.835605+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T11:07:55.839060+00:00",
+  "load_bearing_computed_at": "2026-04-27T11:10:33.700566+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -27472,14 +27472,21 @@
       "verdict_rationale": null
     },
     "fifth_family_complex_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The frozen log reports one passing anchor row, but the live targeted script fails before running because it imports _field_from_sources from CONNECTIVITY_FAMILY_V2_QUADRANT_SWEEP.py and that symbol is absent in the current repo. The cited radial-shell base note is also unaudited, so the current audit packet cannot reproduce the retained anchor-row claim.",
       "claim_id": "fifth_family_complex_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -27487,18 +27494,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note claims that the radial-shell fifth-family anchor row at drift 0.20, seed 0 carries a narrow complex-action companion with Born proxy 0, TOWARD-to-AWAY crossover, and weak-field F~M = 1.000 at gamma = 0 and gamma = 0.5.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "14cb34568c80cf36b96722a4c3b34945d2e6b53c4862741e4d7edeb6e882835a",
       "note_path": "docs/FIFTH_FAMILY_COMPLEX_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "scripts/FIFTH_FAMILY_COMPLEX_TARGETED.py_import_error_missing__field_from_sources",
+        "docs/FIFTH_FAMILY_RADIAL_NOTE.md_unaudited_base_family",
+        "live_runner_output_not_reproducible"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368297+00:00",
@@ -27536,7 +27547,7 @@
       "runner_path": null,
       "title": "Fifth Family Complex Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the live runner for the retained fifth-family complex companion is broken by an import mismatch, so the claimed anchor-row positive cannot be reproduced from the current source. Why this blocks: a hostile referee cannot accept a retained finite-computation claim from a stale frozen log when the present runner exits before computing Born, crossover, or F~M, and the upstream radial-shell family note has not itself been audited. Repair target: update FIFTH_FAMILY_COMPLEX_TARGETED.py to the current connectivity helper API or restore the missing _field_from_sources helper, rerun the anchor-row computation with explicit PASS thresholds for Born, crossover, and F~M, and audit/register FIFTH_FAMILY_RADIAL_NOTE.md as the base family dependency. Claim boundary until fixed: it is safe only to say a historical frozen log reported one drift=0.20, seed=0 complex companion candidate; it is not currently an audited retained anchor-row positive."
     },
     "fifth_family_radial_boundary_note": {
       "audit_date": null,
