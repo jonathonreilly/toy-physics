@@ -10,6 +10,7 @@ Scores use 0-3, with overclaim risk subtracted qualitatively.
 | Brannen selected-line endpoint closure | constructive/literature bridge | 3 | 2 | 1 | high: prior topology routes no-go | audited in cycle 3 as conditional support, not closure |
 | Koide `Q` + Brannen phase as generation selector | no-go / support firewall | 2 | 2 | 3 | low if framed as no-go | completed: standalone selector closed |
 | Unbased selected-line orbit as generation selector | no-go / endpoint-source firewall | 2 | 2 | 3 | low if framed as a basedness obstruction | completed: unbased orbit selector closed |
+| OP-local `C3`-fixed Q source plus selected-line phase as generation selector | no-go / source-endpoint firewall | 2 | 2 | 3 | low if framed as a no-go under granted source support | completed: source-symmetric unbased selector closed |
 | Full absolute mass chain note from existing support | packaging | 1 | 1 | 3 | high: could promote support-only work | reject as first move |
 | Literature-only Koide/tau mass synthesis | literature bridge | 1 | 0 | 3 | medium: not a derivation | use only for context |
 
@@ -106,3 +107,25 @@ physical endpoint/source/generation primitive.
 The next route must derive or refute an actual based endpoint/source law or a
 non-observational tau-scale/generation selector. Repeating `Q = 2/3`,
 `delta = 2/9`, or unbased-orbit value matching is now closed.
+
+## Cycle 5 Outcome
+
+The OP-local source plus selected-line audit was produced and verified:
+
+```text
+python3 scripts/frontier_charged_lepton_op_local_source_selected_line_selector_no_go.py
+TOTAL: PASS=48, FAIL=0
+```
+
+This cycle named the new premise that was unavailable to the original broad
+ratio/source route: the conditional OP-local support
+`P_SOURCE => z=0 => Q=2/3`. Granting that premise still does not produce a
+retained generation/tau-scale selector. A `C3`-fixed onsite source is a common
+scalar, so it cannot supply a distinguished generation label or a selected-line
+basepoint. The combined data still require a based endpoint/source law or a
+non-observational tau-scale selector.
+
+Do not repeat OP-local source support plus unbased selected-line matching as a
+new route. The remaining viable route must add a genuinely physical basepoint,
+endpoint readout, source-domain exclusion of commutant `Z` with a base, or
+generation/tau-scale law.

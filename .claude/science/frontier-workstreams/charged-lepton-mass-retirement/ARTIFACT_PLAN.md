@@ -128,3 +128,35 @@ Safe status: exact negative boundary. Granting the current non-PDG `Q` and
 selected-line support values still leaves the physical generation selector
 open because unbased free `C3` orbit data have no invariant single-label
 selector.
+
+## Cycle 5 Candidate
+
+Audit the strongest named new ratio/source premise now available:
+
+```text
+OP-local strict-onsite + C3-fixed undeformed source
+  => z=0
+  => Q=2/3.
+```
+
+Combine that granted premise with the selected-line/Brannen phase support and
+test whether it supplies a retained physical generation selector without PDG
+charged-lepton masses.
+
+**Status:** complete as an exact negative boundary, not a promotion.
+
+```text
+docs/CHARGED_LEPTON_OP_LOCAL_SOURCE_SELECTED_LINE_SELECTOR_NO_GO_NOTE_2026-04-27.md
+scripts/frontier_charged_lepton_op_local_source_selected_line_selector_no_go.py
+```
+
+Verification:
+
+```text
+python3 scripts/frontier_charged_lepton_op_local_source_selected_line_selector_no_go.py
+TOTAL: PASS=48, FAIL=0
+```
+
+Safe status: exact negative boundary. The OP-local source support erases the
+`Q` source coordinate, but the source is a common scalar and does not base the
+selected-line orbit or label the tau generation.

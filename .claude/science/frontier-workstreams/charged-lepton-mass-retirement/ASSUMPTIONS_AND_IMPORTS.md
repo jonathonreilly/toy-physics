@@ -17,6 +17,7 @@ currently used by the bounded package.
 | Brannen phase / selected-line parameter | Second relation needed for the three ratios | support/open | `KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md` | yes for full ratio vector | yes | physical endpoint/readout theorem | open blocker |
 | Koide `Q` plus Brannen phase as generation/tau-scale selector | Candidate route to assign ratio vector and radiative scale without PDG masses | exact negative boundary / support firewall | `CHARGED_LEPTON_KOIDE_RATIO_SOURCE_SELECTOR_FIREWALL_NOTE_2026-04-27.md` | no standalone proof | no, route is closed without new primitive | requires a new physical source/endpoint/generation law; value matching is insufficient | no-go for standalone selector |
 | Unbased selected-line/Brannen orbit as physical generation selector | Candidate route from ratio/phase support to a tau/e/mu label | exact negative boundary | `CHARGED_LEPTON_SELECTED_LINE_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md` | no standalone proof | no, route is closed without a basepoint/source law | derive a retained based endpoint/source law or non-observational generation selector | no-go for unbased orbit selector |
+| OP-local `C3`-fixed source plus selected-line/Brannen support as generation selector | Strongest current non-PDG `Q` premise combined with phase support | exact negative boundary under granted source support | `CHARGED_LEPTON_OP_LOCAL_SOURCE_SELECTED_LINE_SELECTOR_NO_GO_NOTE_2026-04-27.md`; `KOIDE_Q_OP_LOCALITY_C3_FIXED_SOURCE_SUPPORT_NOTE_2026-04-27.md` | no standalone proof | no, route is closed without a based endpoint/source/tau-scale law | derive an actual physical basepoint/source/generation theorem, not just `z=0` source erasure | no-go for source-symmetric unbased selector |
 | Non-observational generation label / tau-scale selector | Needed to attach the retained/support scale to a charged-lepton eigenvalue | open primitive | `CHARGED_LEPTON_RADIATIVE_TAU_SELECTOR_FIREWALL_NOTE_2026-04-26.md`; `CHARGED_LEPTON_KOIDE_RATIO_SOURCE_SELECTOR_FIREWALL_NOTE_2026-04-27.md` | yes | yes | derive from source-domain, endpoint, or generation-label theorem | open blocker |
 | Top Ward identity template `y_t/g_s = 1/sqrt(6)` | Candidate pattern for charged-lepton `y_tau` | retained for top sector only | `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`; `CHARGED_LEPTON_DIRECT_WARD_FREE_YUKAWA_NO_GO_NOTE_2026-04-26.md` | no direct lepton proof | no unless lifted | direct lift tested and closed; only a new primitive could reopen a lepton-scale theorem | no-go for direct lift |
 | Literature Koide formula | External context for charged-lepton mass relation | background context | Koide 1983 PRD via OSTI/APS DOI | no as derivation input | no | comparator/history only | disclosed literature |
@@ -57,3 +58,11 @@ selector: no generation label is fixed by all cyclic relabelings, and the only
 nonempty invariant label subset is the full generation orbit. Based
 equivariant selectors exist, but the basepoint choice is exactly the still-open
 physical endpoint/source/generation law.
+
+The fifth execution cycle granted the strongest current OP-local `Q` support:
+strict-onsite plus `C3`-fixed undeformed source implies `z = 0` and therefore
+`Q = 2/3` on the admitted criterion carrier. This still does not supply a
+generation selector. The source is a common scalar, so combining it with the
+selected-line/Brannen phase leaves the same unbased orbit obstruction: cyclic
+relabeling preserves the quotient data while moving every single generation
+label.

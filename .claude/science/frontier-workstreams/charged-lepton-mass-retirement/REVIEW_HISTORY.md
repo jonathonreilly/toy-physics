@@ -118,3 +118,47 @@ new runner replayed with `FAIL=0`.
 
 **Residual risk:** based endpoint/source/generation laws remain open. This
 cycle closes only the unbased selected-line orbit route.
+
+## Cycle 5 Self-Check
+
+**Artifact:** OP-local source plus selected-line generation-selector no-go.
+
+**Runner:**
+`scripts/frontier_charged_lepton_op_local_source_selected_line_selector_no_go.py`
+
+**Result:** `PASS=48, FAIL=0`.
+
+**Review pressure applied:** review-loop emulated locally with the required
+reviewer stances.
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: NO-GO under granted source support
+Imports / Support: DISCLOSED
+Nature Retention: NO-GO for source-symmetric unbased generation selector; OPEN for mass retirement
+Repo Governance: PASS for branch-local science artifact
+```
+
+**Findings and disposition:**
+
+- CodeRunnerReviewer found two brittle text checks in the first runner draft:
+  one expected a literal `Status:` token despite markdown bolding, and one
+  required an extra radiative-firewall phrase not present in the cited note.
+  Both were fixed; rerun passed.
+- PhysicsClaimReviewer found no retained-closure overclaim after the fix. The
+  note explicitly grants only conditional OP-local `Q` support and lands an
+  exact negative boundary for generation selection.
+- ImportSupportReviewer found PDG charged-lepton masses only in the comparator
+  block; they are not proof-input keys.
+- NatureRetentionReviewer disposition is `NO-GO` for OP-local source support
+  plus unbased selected-line support as a generation selector and `OPEN` for
+  charged-lepton mass retirement.
+- RepoGovernanceReviewer found no repo-wide authority-surface edits. Proposed
+  weaving remains deferred to later review/integration.
+
+**Smoketest:** new Python artifact compiled with `python3 -m py_compile`; the
+new runner replayed with `FAIL=0`.
+
+**Residual risk:** the physical source-domain law itself remains open, and a
+future based endpoint/source/tau-scale theorem could still move the lane. This
+cycle closes only the source-symmetric unbased selected-line selector route.

@@ -9,9 +9,9 @@ branch: frontier/charged-lepton-mass-retirement-20260426
 base: origin/main
 lock_status: unavailable
 lock_note: "scripts/automation_lock.py status failed with permission denied for /Users/jonreilly, even with escalation."
-current_phase: cycle_4_selected_line_generation_selector_no_go_complete
-cycles_completed: 4
-active_route: selected_line_unbased_generation_selector_no_go
+current_phase: cycle_5_op_local_source_selected_line_selector_no_go_complete
+cycles_completed: 5
+active_route: op_local_source_plus_selected_line_generation_selector_no_go
 supervisor:
   requested_runtime: 10h
   launch_mode: detached_codex_exec_loop
@@ -32,10 +32,12 @@ files_touched:
   - docs/CHARGED_LEPTON_RADIATIVE_TAU_SELECTOR_FIREWALL_NOTE_2026-04-26.md
   - docs/CHARGED_LEPTON_KOIDE_RATIO_SOURCE_SELECTOR_FIREWALL_NOTE_2026-04-27.md
   - docs/CHARGED_LEPTON_SELECTED_LINE_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md
+  - docs/CHARGED_LEPTON_OP_LOCAL_SOURCE_SELECTED_LINE_SELECTOR_NO_GO_NOTE_2026-04-27.md
   - scripts/frontier_charged_lepton_direct_ward_free_yukawa_no_go.py
   - scripts/frontier_charged_lepton_radiative_tau_selector_firewall.py
   - scripts/frontier_charged_lepton_koide_ratio_source_selector_firewall.py
   - scripts/frontier_charged_lepton_selected_line_generation_selector_no_go.py
+  - scripts/frontier_charged_lepton_op_local_source_selected_line_selector_no_go.py
 open_imports:
   - "PDG charged-lepton masses used as a 3-real observational pin in the bounded package"
   - "overall charged-lepton scale V_0"
@@ -48,8 +50,10 @@ no_go_routes:
   - "standalone radiative alpha_LM/(4pi) tau selector without generation/source primitive"
   - "Koide Q plus selected-line/Brannen phase as a standalone generation/tau-scale selector"
   - "unbased selected-line/Brannen phase orbit as a physical generation/tau-scale selector"
+  - "OP-local C3-fixed Q source support plus unbased selected-line/Brannen phase as a physical generation/tau-scale selector"
 review_findings:
   - "cycle_3_review_loop_emulated: PASS WITH BOUNDED/NO-GO CLAIMS; artifact keeps PDG masses comparator-only and does not promote Q/delta support to mass retention"
   - "cycle_4_review_loop_emulated: PASS WITH NO-GO CLAIM; artifact grants non-PDG Q/delta support but proves unbased C3 orbit data cannot select a single physical generation label without a based endpoint/source law"
-next_exact_action: "If continuing, derive or refute an actual new based endpoint/source/generation premise: a retained selected-line basepoint law, a Type-B-to-radian readout with physical basepoint, or a non-observational tau-scale/generation selector. Do not repeat Q=2/3, delta=2/9, or unbased-orbit value matching."
+  - "cycle_5_review_loop_emulated: PASS WITH NO-GO CLAIM; artifact grants OP-local C3-fixed source support for Q=2/3 and still proves the combined source-plus-selected-line data cannot select one generation label without a based endpoint/source/tau-scale law"
+next_exact_action: "If continuing, derive or refute an actual based endpoint/source/generation premise: a retained selected-line basepoint law, a Type-B-to-radian readout with physical basepoint, a physical source-domain theorem that excludes commutant Z as undeformed data and supplies a base, or a non-observational tau-scale selector. Do not repeat Q=2/3, delta=2/9, OP-local source support, or unbased-orbit value matching."
 stop_condition: "runtime reached, retained closure achieved, or blocker requiring human science judgment"

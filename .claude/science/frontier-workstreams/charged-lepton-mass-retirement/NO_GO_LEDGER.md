@@ -21,6 +21,7 @@ new.
 | Standalone radiative `alpha_LM/(4pi)` tau selector | no-go for tau selection; support retained | `CHARGED_LEPTON_RADIATIVE_TAU_SELECTOR_FIREWALL_NOTE_2026-04-26.md` | electroweak charged-lepton Casimir is `(1, 1, 1)` across generations; assigning the scale to tau requires a separate retained generation/source law |
 | Koide `Q` plus selected-line/Brannen phase as standalone generation selector | no-go for generation/tau-scale selection; ratio support retained | `CHARGED_LEPTON_KOIDE_RATIO_SOURCE_SELECTOR_FIREWALL_NOTE_2026-04-27.md` | `Q` erases the selected-line phase, the `Q` source route and Brannen endpoint are conditional, and cyclic relabelings preserve unordered ratios while moving the largest slot label |
 | Unbased selected-line/Brannen orbit as physical generation selector | no-go for physical generation/tau-scale labeling; based routes remain open | `CHARGED_LEPTON_SELECTED_LINE_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md` | a free unbased `C3` orbit has no invariant single-label selector; based equivariant selectors require an extra endpoint/source/generation law |
+| OP-local `C3`-fixed `Q` source support plus selected-line/Brannen phase as physical generation selector | no-go for physical generation/tau-scale labeling; source support retained only conditionally | `CHARGED_LEPTON_OP_LOCAL_SOURCE_SELECTED_LINE_SELECTOR_NO_GO_NOTE_2026-04-27.md` | granting `P_SOURCE => z=0 => Q=2/3` still leaves a common scalar source and an unbased selected-line orbit; no `C3`-natural single generation label exists without a based endpoint/source/tau-scale law |
 
 ## Closed Cycle 1 Question
 
@@ -59,3 +60,16 @@ Answer: no. The unbased orbit quotient is fixed by cyclic relabeling, while
 the single generation labels form a free `C3` orbit. No label is fixed by all
 relabelings, and the only nonempty invariant label subset is the full
 generation orbit. A based endpoint/source/generation law is still required.
+
+## Closed Cycle 5 Question
+
+Can the strongest current OP-local source support, namely strict-onsite plus
+`C3`-fixed undeformed source implying `z=0` and `Q=2/3`, combine with the
+selected-line/Brannen phase support to select a physical charged-lepton
+generation label without PDG masses?
+
+Answer: no. The granted source premise is `C3`-trivial: it yields a common
+scalar source. It erases the `Q` source coordinate but does not base the
+selected-line orbit. The product data still have no invariant single-label
+selector; based equivariant selectors require an additional physical
+basepoint/source/tau-scale law.
