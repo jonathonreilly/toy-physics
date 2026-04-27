@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T12:08:36.777759+00:00",
-  "generated_at": "2026-04-27T12:08:34.812269+00:00",
-  "invalidation_run_at": "2026-04-27T12:08:36.720163+00:00",
+  "effective_status_computed_at": "2026-04-27T12:12:34.355360+00:00",
+  "generated_at": "2026-04-27T12:12:32.456110+00:00",
+  "invalidation_run_at": "2026-04-27T12:12:34.296650+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T12:08:36.602307+00:00",
+  "load_bearing_computed_at": "2026-04-27T12:12:34.163716+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -30033,14 +30033,21 @@
       "verdict_rationale": null
     },
     "gate_b_grown_propagating_field_v2_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The live runner recomputes the exact gamma=0 reduction, four nonzero-gamma escape/phase rows, and F~M sanity checks on the declared moderate-drift grown row. The source note scopes the result as a bounded no-go for this specific stronger architecture and excludes generated-family transfer, horizon, trapping, or full field-theory claims.",
       "claim_id": "gate_b_grown_propagating_field_v2_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -30048,13 +30055,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "the stronger transport-envelope architecture does not produce a meaningful escape signal or detector-line phase ramp on the retained grown row; only a tiny centroid shift survives.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "1a1968891592ce04f5470d5e786af64bf816e90279f711f928428b6c7b11082a",
@@ -30090,14 +30097,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 8,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 8
       },
       "runner_path": null,
       "title": "Gate B Grown Propagating Field v2 Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The no-go closes on its own terms: gamma=0 exactly reduces to the static grown baseline, nonzero gamma leaves escape at 1.000 down to 0.999, detector-line phase slope/span remain tiny, and F~M stays 1.000 at gamma=0 and gamma=0.5. The source does not use this as positive evidence for a causal-field theory; it explicitly records failure of the intended causal-observable bar. Residual boundary: the retained content is only this negative result for the tested transport-envelope ansatz on the specified grown row."
     },
     "gate_b_grown_propagating_field_v3_note": {
       "audit_date": null,
