@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T20:00:30.064470+00:00
+**Generated:** 2026-04-27T20:02:16.217582+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 72 |
-| _proposed_retained_ | 16 |
+| _proposed_retained_ | 15 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 6 |
 | ~~audited_renaming~~ | 3 |
 | ~~audited_conditional~~ | 355 |
-| ~~audited_failed~~ | 137 |
+| ~~audited_failed~~ | 138 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 72 |
 | `audited_conditional` | 142 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 70 |
+| `audited_failed` | 71 |
 | `audited_numerical_match` | 6 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1315 |
+| `unaudited` | 1314 |
 
 | criticality | count |
 |---|---:|
@@ -387,6 +387,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `triage_no_promotion_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `unified_basin_freeze_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `yt_p1_h_unit_renormalization_framework_native_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `bell_inequality_derived_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ew_coupling_derivation_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -4933,6 +4934,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md_not_registered_one_hop_dependency`
   - `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md_not_registered_one_hop_dependency`
   - `color_projection_and_CMT_endpoint_factorization_theorem_not_registered`
+- **auditor confidence:** high
+
+### `yt_p1_h_unit_renormalization_framework_native_note_2026-04-17`
+
+- **Note:** [`YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md`](../../docs/YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The retained framework-native envelope bound is |I_S^{framework}| <= 16 * |1 - 1/<P>|^{-1} = 23.35, so the cited I_S in [4,10] is structurally compatible with the retained H_unit reduction.  _(class `B`)_
+- **chain closes:** False — The runner verifies symbolic Feynman-rule forms and computes the proposed envelope formula, but it does not prove that the tadpole-subtracted singular BZ integrand is bounded by that formula. Several direct authorities for the action, plaquette, vertex-power/tadpole rule, and Ward identity are also support, unknown, or conditional.
+- **rationale:** Issue: the claimed retained envelope |I_S^{framework}| <= 23.35 is asserted from u_0 and <P>, but neither the note nor the runner derives an inequality bounding the tadpole-subtracted BZ integral; the source itself lists D_psi and D_g zeros, and the runner only evaluates the proposed closed form and checks that [4,10] lies inside it. Why this blocks: a magnitude envelope is the load-bearing retained claim, and without an analytic bound or numerical quadrature with the singular pieces subtracted, the framework-native retention does not follow from the provided inputs. Repair target: prove a regulator/MSbar-subtracted BZ-integrand bound from the retained propagators and D14 tadpole split, or run a framework-native 4D quadrature of I_S^{taste}, I_S^{Wilson}, and I_S^{mix}; also cleanly audit the minimal-action, plaquette, vertex-power, and Ward parents. Claim boundary until fixed: safe to claim a symbolic inventory of the H_unit one-loop diagrams/Feynman-rule forms and the arithmetic fact that the proposed envelope formula equals 23.3507 and contains the cited [4,10] interval; not safe to claim a retained framework-native bound on I_S^{framework}.
+- **open / conditional deps cited:**
+  - `MINIMAL_AXIOMS_2026-04-11.md`
+  - `PLAQUETTE_SELF_CONSISTENCY_NOTE.md`
+  - `YT_VERTEX_POWER_DERIVATION.md`
+  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
 - **auditor confidence:** high
 
 ### `yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17`
