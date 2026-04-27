@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T18:32:42.591300+00:00
+**Generated:** 2026-04-27T18:34:05.986468+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 63 |
-| _proposed_retained_ | 44 |
+| _proposed_retained_ | 43 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 341 |
+| ~~audited_conditional~~ | 342 |
 | ~~audited_failed~~ | 133 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 63 |
-| `audited_conditional` | 128 |
+| `audited_conditional` | 129 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1343 |
+| `unaudited` | 1342 |
 
 | criticality | count |
 |---|---:|
@@ -272,6 +272,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_graph_observables_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_graph_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_graph_portability_stress_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `staggered_layered_gauge_engineering_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `strong_cp_theta_zero_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `structured_chokepoint_bridge_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `symmetry_head_to_head_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -4115,6 +4116,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The retained staggered force battery survives the larger, more irregular bipartite families, with no retained-row failure in the stress run.  _(class `C`)_
 - **chain closes:** False — The runner preserves all PASS/N/A row statuses on the four stress families, but this is a stress probe built from the same conditional graph-depth force/current readout as the baseline portability note, not a standalone retained portability theorem.
 - **rationale:** Issue: The stress runner has no retained-row failures, but the claim strengthens portability by reusing the baseline graph-depth force/current battery before that battery has a retained derivation as the physical gravity observable on arbitrary non-cubic graphs; additionally, the live gauge magnitudes drift slightly from the frozen table while keeping PASS status. Why this blocks: larger stress families test robustness of a selected probe, but they do not close the missing observable/readout theorem or turn finite-family evidence into audit-clean retained portability. Repair target: first audit-clean the baseline graph force/current observable and thresholds, then make the stress note an asserted holdout battery with exact current output or toleranced assertions. Claim boundary until fixed: safe to claim the current stress runner gives 8/8 retained-row PASS/N/A on the four named stress graph families, with current gauge values about 6.193e-04, 1.861e-03, 1.176e-04, and N/A; not safe to claim clean retained graph-portability closure from this stress run alone.
+- **open / conditional deps cited:**
+  - `STAGGERED_GRAPH_PORTABILITY_NOTE.md`
+- **auditor confidence:** high
+
+### `staggered_layered_gauge_engineering_note`
+
+- **Note:** [`STAGGERED_LAYERED_GAUGE_ENGINEERING_NOTE.md`](../../docs/STAGGERED_LAYERED_GAUGE_ENGINEERING_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Native gauge/current closure is possible on a layered graph when the loop geometry is made explicit and well-conditioned.  _(class `C`)_
+- **chain closes:** False — The live runner preserves the N/A/FAIL/PASS/PASS gauge classification and engineered brickwall closure, but the frozen exact current table is stale and the retained force side battery is reused from the conditional graph-portability lane.
+- **rationale:** Issue: The qualitative engineered-gauge conclusion reproduces, but the note's exact current table is stale for the sparse layered holdout: the live runner gives J_span about 5.015e-35 rather than 4.769e-06, and the force side battery is imported from the conditional staggered graph portability probe. Why this blocks: an audit-clean retained claim cannot freeze incorrect exact numerics or promote a gauge/current engineering result while the underlying graph force/current readout remains conditional. Repair target: update the note to the current runner output with toleranced assertions, and close or explicitly bound the inherited graph-portability observable theorem. Claim boundary until fixed: safe to claim the current runner classifies the acyclic control as N/A, the sparse cycle holdout as gauge FAIL, and the two engineered brickwall geometries as gauge PASS with current spans about 2.279e-03 and 2.151e-03; not safe to claim clean retained gauge engineering with the frozen exact table as written.
 - **open / conditional deps cited:**
   - `STAGGERED_GRAPH_PORTABILITY_NOTE.md`
 - **auditor confidence:** high

@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 89,
     "high": 508,
-    "leaf": 667,
+    "leaf": 666,
     "medium": 82
   },
-  "generated_at": "2026-04-27T18:32:42.451023+00:00",
+  "generated_at": "2026-04-27T18:34:05.832779+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -24245,23 +24245,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "staggered_layered_gauge_engineering_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/STAGGERED_LAYERED_GAUGE_ENGINEERING_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "staggered_layered_gauge_phase_diagram_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -27701,6 +27684,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 933,
-  "total_pending": 1346
+  "ready_count": 932,
+  "total_pending": 1345
 }
