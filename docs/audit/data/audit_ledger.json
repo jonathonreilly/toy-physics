@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T09:39:40.707731+00:00",
-  "generated_at": "2026-04-27T09:39:38.498224+00:00",
-  "invalidation_run_at": "2026-04-27T09:39:40.642127+00:00",
+  "effective_status_computed_at": "2026-04-27T09:47:13.582744+00:00",
+  "generated_at": "2026-04-27T09:47:11.664117+00:00",
+  "invalidation_run_at": "2026-04-27T09:47:13.510788+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T09:39:40.479197+00:00",
+  "load_bearing_computed_at": "2026-04-27T09:47:13.360565+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -13023,14 +13023,21 @@
       "verdict_rationale": "Issue: The failed step is claiming retained confinement/string-tension closure from graph-first SU(3), alpha_s(M_Z), Wilson confinement, Sommer-scale lattice inputs, and quark-screening corrections while none of those load-bearing authorities are registered one-hop dependencies for this row; several runner PASS lines are hard-coded `True` physical premises or external comparator checks. Why this blocks: The current packet demonstrates a bounded consistency story, not a derivation that the framework gauge sector is the relevant SU(3) YM theory with a computed string tension; the numerical match depends on imported lattice/EFT constants and a screening factor. Repair target: Register clean dependencies for graph-first SU(3), g_bare/beta normalization, the alpha_s lane, and the lattice/EFT string-tension bridge, and replace hard-coded True checks with a runner that computes only the bridge quantities from declared inputs while labeling external comparators separately. Claim boundary until fixed: It is safe to say that, conditional on the framework gauge sector being SU(3) YM at beta = 6.0 and on the standard lattice/EFT bridge, the numbers are consistent with confinement and a 435-484 MeV string-tension range; it is not audit-retained as a zero-parameter confinement theorem."
     },
     "connectivity_family_v2_elliptical_duplicate_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The source note explicitly denies a new proposed_retained family, and the live basin runner supports that boundary read: it finds a finite 12/18 signed-control surface inside the portable sign-law invariant, with sign-orientation failures on nearby rows.",
       "claim_id": "connectivity_family_v2_elliptical_duplicate_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -13038,18 +13045,23 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The source note's load-bearing conclusion is that the parity-tapered elliptical-shell rule is a diagnostic duplicate of the portable sign-law fixed point, not a new proposed_retained family.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "471aea7f4e3ca4f821c0eac641a94cb6c0d7cb35eefc487902b7b3665bc45f1b",
       "note_path": "docs/CONNECTIVITY_FAMILY_V2_ELLIPTICAL_DUPLICATE_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "source_status_explicitly_not_new_proposed_retained_family",
+        "sign_portability_invariant_note",
+        "logs/2026-04-06-connectivity-family-v2-elliptical-targeted.txt_missing",
+        "scripts/CONNECTIVITY_FAMILY_V2_BASIN.py_not_registered_as_runner_path"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.367956+00:00",
@@ -13080,14 +13092,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 18,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 18
       },
       "runner_path": null,
       "title": "Connectivity Family V2 Elliptical Duplicate Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the queued proposed_retained status contradicts the source note, which states this is a diagnostic duplicate and not a new retained family; the live runner likewise says the elliptical-shell slice sits inside the portable sign-law invariant and is not counted as a new retained family. Why this blocks: a hostile physicist can accept the finite controls and 12/18 passing rows without accepting independent retained-family status, because the result is explicitly downstream of the already retained/conditional sign-portability invariant and adds no new order parameter. Repair target: demote or classify this row as duplicate/bounded diagnostic support, or produce a new theorem/runner showing an independent invariant or family-wide surface distinct from sign portability. Claim boundary until fixed: it is safe to claim the current basin runner finds exact zero/neutral controls, sign-law passes on 12/18 rows, mean exponent 0.999972 among passes, and sign-orientation boundary failures; it is not safe to call this a new proposed_retained family."
     },
     "continuum_bridge_note": {
       "audit_date": null,

@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T09:39:40.980617+00:00
+**Generated:** 2026-04-27T09:47:13.858791+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 20 |
-| _proposed_retained_ | 191 |
+| _proposed_retained_ | 190 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 2 |
 | ~~audited_conditional~~ | 281 |
-| ~~audited_failed~~ | 80 |
+| ~~audited_failed~~ | 81 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 20 |
 | `audited_conditional` | 70 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 13 |
+| `audited_failed` | 14 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1486 |
+| `unaudited` | 1485 |
 
 | criticality | count |
 |---|---:|
@@ -198,6 +198,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `causal_field_reconciliation_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `causal_propagating_field_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `clifford_bimodule_ray_saturation_future_target_note_2026-04-19` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | E | - |
+| `connectivity_family_v2_elliptical_duplicate_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `equivalence_principle_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | G | - |
 | `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `lattice_3d_dense_spent_delay_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -608,6 +609,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`
   - `scripts/canonical_plaquette_surface.py`
   - `standard_lattice_qcd_sommer_and_string_tension_inputs`
+- **auditor confidence:** high
+
+### `connectivity_family_v2_elliptical_duplicate_note`
+
+- **Note:** [`CONNECTIVITY_FAMILY_V2_ELLIPTICAL_DUPLICATE_NOTE.md`](../../docs/CONNECTIVITY_FAMILY_V2_ELLIPTICAL_DUPLICATE_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The source note's load-bearing conclusion is that the parity-tapered elliptical-shell rule is a diagnostic duplicate of the portable sign-law fixed point, not a new proposed_retained family.  _(class `C`)_
+- **chain closes:** False — The source note explicitly denies a new proposed_retained family, and the live basin runner supports that boundary read: it finds a finite 12/18 signed-control surface inside the portable sign-law invariant, with sign-orientation failures on nearby rows.
+- **rationale:** Issue: the queued proposed_retained status contradicts the source note, which states this is a diagnostic duplicate and not a new retained family; the live runner likewise says the elliptical-shell slice sits inside the portable sign-law invariant and is not counted as a new retained family. Why this blocks: a hostile physicist can accept the finite controls and 12/18 passing rows without accepting independent retained-family status, because the result is explicitly downstream of the already retained/conditional sign-portability invariant and adds no new order parameter. Repair target: demote or classify this row as duplicate/bounded diagnostic support, or produce a new theorem/runner showing an independent invariant or family-wide surface distinct from sign portability. Claim boundary until fixed: it is safe to claim the current basin runner finds exact zero/neutral controls, sign-law passes on 12/18 rows, mean exponent 0.999972 among passes, and sign-orientation boundary failures; it is not safe to call this a new proposed_retained family.
+- **open / conditional deps cited:**
+  - `source_status_explicitly_not_new_proposed_retained_family`
+  - `sign_portability_invariant_note`
+  - `logs/2026-04-06-connectivity-family-v2-elliptical-targeted.txt_missing`
+  - `scripts/CONNECTIVITY_FAMILY_V2_BASIN.py_not_registered_as_runner_path`
 - **auditor confidence:** high
 
 ### `continuum_limit_note`
