@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T18:14:18.226765+00:00
+**Generated:** 2026-04-27T18:16:27.757085+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 63 |
-| _proposed_retained_ | 55 |
+| _proposed_retained_ | 54 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
 | ~~audited_conditional~~ | 335 |
-| ~~audited_failed~~ | 128 |
+| ~~audited_failed~~ | 129 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 63 |
 | `audited_conditional` | 122 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 61 |
+| `audited_failed` | 62 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1354 |
+| `unaudited` | 1353 |
 
 | criticality | count |
 |---|---:|
@@ -346,6 +346,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `shapiro_scaling_direct_replay_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `source_resolved_retarded_green_pocket_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `source_resolved_transverse_propagating_green_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `staggered_backreaction_capture_closure_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `staggered_backreaction_green_closure_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `structured_mirror_bornsafe_scan_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -3908,6 +3909,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `SOURCE_RESOLVED_WAVEFIELD_GREEN_POCKET_NOTE.md`
   - `SOURCE_RESOLVED_PROPAGATING_GREEN_POCKET_NOTE.md`
   - `MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md`
+- **auditor confidence:** high
+
+### `staggered_backreaction_capture_closure_note`
+
+- **Note:** [`STAGGERED_BACKREACTION_CAPTURE_CLOSURE_NOTE.md`](../../docs/STAGGERED_BACKREACTION_CAPTURE_CLOSURE_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The capture-closure rule is claimed to preserve the retained cycle battery while moving the endogenous closed force much closer to the external-kernel force scale, with cycle mean gap improvement 4.03x and a layered holdout improvement 5.15x.  _(class `C`)_
+- **chain closes:** False — The current runner materially disagrees with the frozen result: cycle mean gap improves only 2.08x, random_geometric closed gap is 41.5% rather than 6.88%, growing closed gap is 53.2% rather than 41.78%, and the holdout improvement is 2.02x rather than 5.15x.
+- **rationale:** Issue: The source note's load-bearing force/gap/gain table is stale relative to scripts/frontier_staggered_backreaction_capture_closure_harness.py. Current output gives random_geometric F_closed=+6.443e-01, F_ext=+1.101e+00, closed gap 41.5%, gain 15.221; growing F_closed=+3.304e-01, F_ext=+7.062e-01, closed gap 53.2%, gain 27.734; cycle mean gap 9.828e-01 -> 4.734e-01 (2.08x); holdout gap 9.191e-01 -> 4.559e-01 (2.02x). Why this blocks: the proposed_retained closure depends on the claimed near-capture of the external-kernel force scale, but the live runner shows a much weaker and numerically different closure than the note freezes. Repair target: determine whether the note or runner drifted, rerun the intended artifact, update the frozen table, and add assertion gates for closed gap, improvement factor, gains, R^2, score, and holdout gap before any retained closure claim. Claim boundary until fixed: it is safe to claim that the current runner preserves the two 9/9 cycle-battery scores, zero-source controls, additivity, TOWARD sign, and high linearity while improving force-scale gaps by about 2x; it is not safe to claim the frozen 4.03x/5.15x closure or a retained near-capture of the external-kernel scale.
+- **open / conditional deps cited:**
+  - `STAGGERED_BACKREACTION_ITERATIVE_NOTE.md`
+  - `STAGGERED_LAYERED_BACKREACTION_NOTE.md`
+  - `STAGGERED_GRAPH_GAUGE_CLOSURE_NOTE.md`
+  - `STAGGERED_BACKREACTION_SCALE_CLOSURE_NOTE.md`
 - **auditor confidence:** high
 
 ### `staggered_backreaction_green_closure_note`

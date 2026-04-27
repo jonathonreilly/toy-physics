@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T18:14:18.040738+00:00",
-  "generated_at": "2026-04-27T18:14:16.448194+00:00",
-  "invalidation_run_at": "2026-04-27T18:14:17.992083+00:00",
+  "effective_status_computed_at": "2026-04-27T18:16:27.570981+00:00",
+  "generated_at": "2026-04-27T18:16:25.983209+00:00",
+  "invalidation_run_at": "2026-04-27T18:16:27.523069+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T18:14:17.894604+00:00",
+  "load_bearing_computed_at": "2026-04-27T18:16:27.426655+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -70810,14 +70810,21 @@
       "verdict_rationale": null
     },
     "staggered_backreaction_capture_closure_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The current runner materially disagrees with the frozen result: cycle mean gap improves only 2.08x, random_geometric closed gap is 41.5% rather than 6.88%, growing closed gap is 53.2% rather than 41.78%, and the holdout improvement is 2.02x rather than 5.15x.",
       "claim_id": "staggered_backreaction_capture_closure_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -70825,18 +70832,23 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The capture-closure rule is claimed to preserve the retained cycle battery while moving the endogenous closed force much closer to the external-kernel force scale, with cycle mean gap improvement 4.03x and a layered holdout improvement 5.15x.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "a99f6a393a836d36d84edd02d6e848cace3d80e49606e5e42816d9aee14a781a",
       "note_path": "docs/STAGGERED_BACKREACTION_CAPTURE_CLOSURE_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/STAGGERED_BACKREACTION_ITERATIVE_NOTE.md",
+        "docs/STAGGERED_LAYERED_BACKREACTION_NOTE.md",
+        "docs/STAGGERED_GRAPH_GAUGE_CLOSURE_NOTE.md",
+        "docs/STAGGERED_BACKREACTION_SCALE_CLOSURE_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369715+00:00",
@@ -70874,7 +70886,7 @@
       "runner_path": null,
       "title": "Staggered Backreaction Capture-Closure Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The source note's load-bearing force/gap/gain table is stale relative to scripts/frontier_staggered_backreaction_capture_closure_harness.py. Current output gives random_geometric F_closed=+6.443e-01, F_ext=+1.101e+00, closed gap 41.5%, gain 15.221; growing F_closed=+3.304e-01, F_ext=+7.062e-01, closed gap 53.2%, gain 27.734; cycle mean gap 9.828e-01 -> 4.734e-01 (2.08x); holdout gap 9.191e-01 -> 4.559e-01 (2.02x). Why this blocks: the proposed_retained closure depends on the claimed near-capture of the external-kernel force scale, but the live runner shows a much weaker and numerically different closure than the note freezes. Repair target: determine whether the note or runner drifted, rerun the intended artifact, update the frozen table, and add assertion gates for closed gap, improvement factor, gains, R^2, score, and holdout gap before any retained closure claim. Claim boundary until fixed: it is safe to claim that the current runner preserves the two 9/9 cycle-battery scores, zero-source controls, additivity, TOWARD sign, and high linearity while improving force-scale gaps by about 2x; it is not safe to claim the frozen 4.03x/5.15x closure or a retained near-capture of the external-kernel scale."
     },
     "staggered_backreaction_green_closure_note": {
       "audit_date": "2026-04-26",
