@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T22:27:09.081184+00:00
+**Generated:** 2026-04-27T22:28:59.486470+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 72 |
-| _proposed_retained_ | 11 |
+| _proposed_retained_ | 10 |
 | _proposed_promoted_ | 1 |
 | bounded | 185 |
 | support | 104 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 170 |
+| ~~audited_conditional~~ | 171 |
 | ~~audited_failed~~ | 330 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 72 |
-| `audited_conditional` | 140 |
+| `audited_conditional` | 141 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 76 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1314 |
+| `unaudited` | 1313 |
 
 | criticality | count |
 |---|---:|
@@ -312,6 +312,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_p1_i_s_lattice_pt_citation_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_p1_loop_geometric_bound_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `yt_p2_f_yt_loop_geometric_bound_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `koide_q_eq_3delta_identity_note_2026-04-21` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `retained_cross_lane_consistency_support_note_2026-04-22` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | B | - |
@@ -4991,6 +4992,25 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`
   - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
   - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
+- **auditor confidence:** high
+
+### `yt_p2_f_yt_loop_geometric_bound_note_2026-04-17`
+
+- **Note:** [`YT_P2_F_YT_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md`](../../docs/YT_P2_F_YT_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note assumes |delta_M_{n+1}| <= r_M |delta_M_n| for all n >= 2 with r_M = (alpha_LM/pi) b_0 = 0.22126, then sums the geometric tail to claim |tail(N=2)| <= 0.01335 and a 0.677% fractional m_t residual.  _(class `B`)_
+- **chain closes:** False — The runner verifies retained constants, carried M values, the observed 1-to-2 loop ratio, and the geometric-sum arithmetic. It does not derive or compute the higher-loop integrated SM-RGE shifts needed to establish the ratio bound for n >= 2.
+- **rationale:** Issue: the retained P2 tail bound rests on an unproved geometric-decay assumption for the integrated coupled SM-RGE shifts, |delta_M_{n+1}| <= r_M |delta_M_n| for all n >= 2; the runner only checks that r_M exceeds the observed 1-to-2 ratio and then performs the geometric sum. Why this blocks: closing the P2 loop-expansion axis requires a theorem or computation controlling the actual 3-loop and higher integrated contributions to M, not just a b_0-motivated analogy to P1 plus carried 1-loop/2-loop values. Repair target: prove a renormalon/geometric-growth bound for the integrated SM RGE on the retained canonical surface, or compute enough higher-loop integrated shifts to establish the ratio inequality; make the runner consume those derived shifts or proof certificates. Claim boundary until fixed: safe to claim that, if r_M = 0.22126 bounds all higher loop-shift ratios, the tail arithmetic gives |tail(N=2)| = 0.01335 and 0.677%; not safe to claim an audited retained framework-native P2 loop-tail closure from this note alone.
+- **open / conditional deps cited:**
+  - `UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md`
+  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
+  - `YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md`
+  - `YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md`
+  - `YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md`
+  - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
 - **auditor confidence:** high
 
 ### `yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17`

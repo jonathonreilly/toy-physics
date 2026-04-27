@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T22:27:08.837789+00:00",
-  "generated_at": "2026-04-27T22:27:07.084510+00:00",
-  "invalidation_run_at": "2026-04-27T22:27:08.775773+00:00",
+  "effective_status_computed_at": "2026-04-27T22:28:59.260111+00:00",
+  "generated_at": "2026-04-27T22:28:57.546205+00:00",
+  "invalidation_run_at": "2026-04-27T22:28:59.203534+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T22:27:08.652439+00:00",
+  "load_bearing_computed_at": "2026-04-27T22:28:59.094060+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -86554,15 +86554,21 @@
       "verdict_rationale": "Issue: the shared-Fierz no-go is valid only conditional on the supplied Rep-A/Rep-B one-loop diagram catalogs and on the premise that D12/S2 Fierz operations cannot change diagram topology or renormalization type; the runner encodes those catalogs rather than deriving them from the retained lattice action. Why this blocks: a definitive retained no-go must rule out the shortcut from retained inputs, not from a pre-labeled dictionary of what Fierz is allowed to touch. Repair target: derive the complete Rep-A and Rep-B 1-loop piece lists from the canonical action/Feynman rules, prove the allowed action of D12 and S2 on those fixed diagrams, and make the runner construct the catalogs rather than hard-code them. Claim boundary until fixed: safe to claim that, given the supplied catalogs, only external Z_psi is shared and the remaining listed pieces require channel-by-channel BZ evaluation; not safe to claim an audited retained definitive shared-Fierz no-go from this note alone."
     },
     "yt_p2_f_yt_loop_geometric_bound_note_2026-04-17": {
-      "audit_date": null,
-      "audit_state_snapshot": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 7.431,
+        "transitive_descendants": 121
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies retained constants, carried M values, the observed 1-to-2 loop ratio, and the geometric-sum arithmetic. It does not derive or compute the higher-loop integrated SM-RGE shifts needed to establish the ratio bound for n >= 2.",
       "claim_id": "yt_p2_f_yt_loop_geometric_bound_note_2026-04-17",
       "criticality": "high",
       "cross_confirmation": null,
@@ -86571,18 +86577,25 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 7.431,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note assumes |delta_M_{n+1}| <= r_M |delta_M_n| for all n >= 2 with r_M = (alpha_LM/pi) b_0 = 0.22126, then sums the geometric tail to claim |tail(N=2)| <= 0.01335 and a 0.677% fractional m_t residual.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "69a993465aa64edafb45ac22088b4e0d68960ed608baab29d3cfaee010c45de3",
       "note_path": "docs/YT_P2_F_YT_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md",
+        "docs/YT_EW_COLOR_PROJECTION_THEOREM.md",
+        "docs/YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md",
+        "docs/YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md",
+        "docs/YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md",
+        "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.370346+00:00",
@@ -86656,16 +86669,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 29,
+        "B": 19,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 48
       },
       "runner_path": "scripts/frontier_yt_p2_f_yt_loop_geometric_bound.py",
       "title": "P2 F_yt Loop-Expansion Geometric Tail Bound on the v-Matching Coefficient M",
       "transitive_descendants": 121,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the retained P2 tail bound rests on an unproved geometric-decay assumption for the integrated coupled SM-RGE shifts, |delta_M_{n+1}| <= r_M |delta_M_n| for all n >= 2; the runner only checks that r_M exceeds the observed 1-to-2 ratio and then performs the geometric sum. Why this blocks: closing the P2 loop-expansion axis requires a theorem or computation controlling the actual 3-loop and higher integrated contributions to M, not just a b_0-motivated analogy to P1 plus carried 1-loop/2-loop values. Repair target: prove a renormalon/geometric-growth bound for the integrated SM RGE on the retained canonical surface, or compute enough higher-loop integrated shifts to establish the ratio inequality; make the runner consume those derived shifts or proof certificates. Claim boundary until fixed: safe to claim that, if r_M = 0.22126 bounds all higher loop-shift ratios, the tail arithmetic gives |tail(N=2)| = 0.01335 and 0.677%; not safe to claim an audited retained framework-native P2 loop-tail closure from this note alone."
     },
     "yt_p2_taste_staircase_beta_functions_note_2026-04-17": {
       "audit_date": null,
