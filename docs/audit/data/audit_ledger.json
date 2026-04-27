@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T11:46:14.455573+00:00",
-  "generated_at": "2026-04-27T11:46:12.024178+00:00",
-  "invalidation_run_at": "2026-04-27T11:46:14.381055+00:00",
+  "effective_status_computed_at": "2026-04-27T11:46:24.139286+00:00",
+  "generated_at": "2026-04-27T11:46:21.711378+00:00",
+  "invalidation_run_at": "2026-04-27T11:46:24.048520+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T11:46:14.179619+00:00",
+  "load_bearing_computed_at": "2026-04-27T11:46:23.872189+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -8958,14 +8958,21 @@
       "verdict_rationale": "The runner checks that the Casimir and radiative y value are identical for all three charged-lepton generations, and that applying the same rule universally cannot fit electron and muon masses. The PDG tau agreement is explicitly fenced as comparator-only. The audited-clean result is only the standalone tau-selector no-go, not charged-lepton mass closure."
     },
     "charged_lepton_selected_line_generation_selector_no_go_note_2026-04-27": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27T11:46:20.337294+00:00",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The no-go closes as finite C3 action algebra: unbased selected-line data can determine a sorted orbit but not a physical generation label. Based selectors exist only after extra basepoint/source/generation data are supplied.",
       "claim_id": "charged_lepton_selected_line_generation_selector_no_go_note_2026-04-27",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -8973,13 +8980,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "A natural single-label selector from the unbased C3 quotient would need a C3-fixed label, but the C3 action on the three labels is free and no fixed singleton exists.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "af92b989db490b4571caefbfaf2667c9284b77aa13dca9d3d159acc91280c163",
@@ -9064,15 +9071,15 @@
       ],
       "runner_check_breakdown": {
         "A": 0,
-        "B": 0,
+        "B": 1,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 7,
+        "total_pass": 38
       },
       "runner_path": "scripts/frontier_charged_lepton_selected_line_generation_selector_no_go.py",
       "title": "Charged-Lepton Selected-Line Generation-Selector No-Go",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The runner checks that Q and unordered ratios survive cyclic relabeling while the largest slot moves through all labels, and it enumerates invariant subsets to show no singleton selector exists. PDG masses are comparator-only. The clean verdict is limited to the unbased selected-line generation-selector no-go."
     },
     "charged_lepton_two_higgs_canonical_reduction_note": {
       "audit_date": null,
