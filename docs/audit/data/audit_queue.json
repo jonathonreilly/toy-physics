@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 92,
+    "critical": 93,
     "high": 507,
     "leaf": 633,
     "medium": 82
   },
-  "generated_at": "2026-04-27T21:41:40.668552+00:00",
+  "generated_at": "2026-04-27T21:43:06.058028+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -473,12 +473,12 @@
       "cross_confirmation_status": "awaiting_second",
       "current_status": "proposed_retained",
       "deps": [],
-      "direct_in_degree": 22,
-      "load_bearing_score": 23.119,
+      "direct_in_degree": 23,
+      "load_bearing_score": 23.624,
       "note_path": "docs/GRAPH_FIRST_SU3_INTEGRATION_NOTE.md",
       "ready": true,
       "runner_path": "scripts/frontier_graph_first_su3_integration.py",
-      "transitive_descendants": 277
+      "transitive_descendants": 278
     },
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -499,6 +499,25 @@
     },
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
+      "audit_status": "audit_in_progress",
+      "blocker": "awaiting_cross_confirmation",
+      "claim_id": "graph_first_selector_derivation_note",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": "awaiting_second",
+      "current_status": "proposed_retained",
+      "deps": [
+        "graph_first_su3_integration_note"
+      ],
+      "direct_in_degree": 4,
+      "load_bearing_score": 14.119,
+      "note_path": "docs/GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_graph_first_selector_derivation.py",
+      "transitive_descendants": 277
+    },
+    {
+      "audit_independence_required": "cross_family_with_cross_confirmation",
       "audit_status": "unaudited",
       "blocker": null,
       "claim_id": "g_bare_derivation_note",
@@ -513,6 +532,26 @@
       "ready": true,
       "runner_path": "scripts/frontier_g_bare_derivation.py",
       "transitive_descendants": 277
+    },
+    {
+      "audit_independence_required": "cross_family_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "native_gauge_closure_note",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "graph_first_selector_derivation_note",
+        "graph_first_su3_integration_note"
+      ],
+      "direct_in_degree": 15,
+      "load_bearing_score": 19.614,
+      "note_path": "docs/NATIVE_GAUGE_CLOSURE_NOTE.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_non_abelian_gauge.py",
+      "transitive_descendants": 276
     },
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -614,25 +653,6 @@
       "note_path": "docs/YT_EXPLICIT_SYSTEMATIC_BUDGET_NOTE.md",
       "ready": true,
       "runner_path": "scripts/frontier_yt_explicit_systematic_budget.py",
-      "transitive_descendants": 276
-    },
-    {
-      "audit_independence_required": "cross_family_with_cross_confirmation",
-      "audit_status": "audit_in_progress",
-      "blocker": "awaiting_cross_confirmation",
-      "claim_id": "graph_first_selector_derivation_note",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": "awaiting_second",
-      "current_status": "proposed_retained",
-      "deps": [
-        "graph_first_su3_integration_note"
-      ],
-      "direct_in_degree": 3,
-      "load_bearing_score": 13.614,
-      "note_path": "docs/GRAPH_FIRST_SELECTOR_DERIVATION_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_graph_first_selector_derivation.py",
       "transitive_descendants": 276
     },
     {
@@ -27167,6 +27187,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 901,
-  "total_pending": 1314
+  "ready_count": 902,
+  "total_pending": 1315
 }

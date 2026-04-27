@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T21:41:40.862657+00:00
+**Generated:** 2026-04-27T21:43:06.245787+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,28 +20,28 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 72 |
-| _proposed_retained_ | 10 |
+| _proposed_retained_ | 11 |
 | _proposed_promoted_ | 1 |
 | bounded | 185 |
 | support | 107 |
 | open | 11 |
-| unknown | 721 |
-| ~~audited_decoration~~ | 3 |
-| ~~audited_numerical_match~~ | 6 |
+| unknown | 786 |
+| ~~audited_decoration~~ | 42 |
+| ~~audited_numerical_match~~ | 11 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 356 |
+| ~~audited_conditional~~ | 246 |
 | ~~audited_failed~~ | 140 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 72 |
-| `audited_conditional` | 144 |
+| `audited_conditional` | 143 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 73 |
 | `audited_numerical_match` | 6 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1311 |
+| `unaudited` | 1312 |
 
 | criticality | count |
 |---|---:|
@@ -55,8 +55,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 ### Runner classification (static heuristic)
 
-- runners classified: 687
-- runners with (C) first-principles compute hits: 410
+- runners classified: 688
+- runners with (C) first-principles compute hits: 411
 - runners with (D) external comparator hits: 181
 - decoration candidates (no C, no D): 71
 
@@ -66,31 +66,31 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 
 | # | claim_id | criticality | desc | score | audit_status | effective |
 |---:|---|---|---:|---:|---|---|
-| 1 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 172 | 33.94 | `unaudited` | ~~audited_conditional~~ |
-| 2 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 172 | 33.44 | `unaudited` | ~~audited_conditional~~ |
+| 1 | `ckm_cp_phase_structural_identity_theorem_note_2026-04-24` | critical | 172 | 33.94 | `unaudited` | unknown |
+| 2 | `wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24` | critical | 172 | 33.44 | `unaudited` | ~~audited_decoration~~ |
 | 3 | `alpha_s_derived_note` | critical | 277 | 32.62 | `unaudited` | unknown |
 | 4 | `observable_principle_from_axiom_note` | critical | 278 | 28.62 | `unaudited` | unknown |
-| 5 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 172 | 28.43 | `unaudited` | ~~audited_conditional~~ |
-| 6 | `ckm_atlas_axiom_closure_note` | critical | 172 | 25.93 | `unaudited` | ~~audited_conditional~~ |
+| 5 | `ckm_magnitudes_structural_counts_theorem_note_2026-04-25` | critical | 172 | 28.43 | `unaudited` | ~~audited_decoration~~ |
+| 6 | `ckm_atlas_axiom_closure_note` | critical | 172 | 25.93 | `unaudited` | ~~audited_decoration~~ |
 | 7 | `ckm_atlas_triangle_right_angle_theorem_note_2026-04-24` | critical | 172 | 25.43 | `unaudited` | _proposed_promoted_ |
-| 8 | `three_generation_structure_note` | critical | 275 | 25.11 | `unaudited` | ~~audited_conditional~~ |
-| 9 | `one_generation_matter_closure_note` | critical | 275 | 24.61 | `unaudited` | ~~audited_conditional~~ |
-| 10 | `three_generation_observable_theorem_note` | critical | 275 | 24.61 | `unaudited` | ~~audited_conditional~~ |
-| 11 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 172 | 24.43 | `unaudited` | ~~audited_conditional~~ |
+| 8 | `three_generation_structure_note` | critical | 275 | 25.11 | `unaudited` | unknown |
+| 9 | `one_generation_matter_closure_note` | critical | 275 | 24.61 | `unaudited` | unknown |
+| 10 | `three_generation_observable_theorem_note` | critical | 275 | 24.61 | `unaudited` | unknown |
+| 11 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 172 | 24.43 | `unaudited` | ~~audited_decoration~~ |
 | 12 | `yt_ew_color_projection_theorem` | critical | 281 | 23.64 | `unaudited` | support |
-| 13 | `graph_first_su3_integration_note` | critical | 277 | 23.12 | `audit_in_progress` | _proposed_retained_ |
-| 14 | `yt_ward_identity_derivation_theorem` | critical | 275 | 23.11 | `unaudited` | ~~audited_conditional~~ |
-| 15 | `anomaly_forces_time_theorem` | critical | 275 | 22.61 | `unaudited` | ~~audited_conditional~~ |
-| 16 | `minimal_axioms_2026-04-11` | critical | 275 | 22.11 | `unaudited` | ~~audited_conditional~~ |
+| 13 | `graph_first_su3_integration_note` | critical | 278 | 23.62 | `audit_in_progress` | _proposed_retained_ |
+| 14 | `yt_ward_identity_derivation_theorem` | critical | 275 | 23.11 | `unaudited` | unknown |
+| 15 | `anomaly_forces_time_theorem` | critical | 275 | 22.61 | `unaudited` | unknown |
+| 16 | `minimal_axioms_2026-04-11` | critical | 275 | 22.11 | `unaudited` | unknown |
 | 17 | `ckm_third_row_magnitudes_theorem_note_2026-04-24` | critical | 172 | 21.93 | `unaudited` | unknown |
-| 18 | `left_handed_charge_matching_note` | critical | 275 | 21.11 | `unaudited` | ~~audited_conditional~~ |
-| 19 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | critical | 275 | 20.61 | `unaudited` | ~~audited_conditional~~ |
+| 18 | `left_handed_charge_matching_note` | critical | 275 | 21.11 | `unaudited` | unknown |
+| 19 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | critical | 275 | 20.61 | `unaudited` | unknown |
 | 20 | `higgs_mass_derived_note` | critical | 278 | 20.12 | `unaudited` | unknown |
-| 21 | `physical_lattice_necessity_note` | critical | 275 | 20.11 | `unaudited` | ~~audited_conditional~~ |
-| 22 | `ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25` | critical | 172 | 19.93 | `unaudited` | ~~audited_conditional~~ |
+| 21 | `physical_lattice_necessity_note` | critical | 275 | 20.11 | `unaudited` | unknown |
+| 22 | `ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25` | critical | 172 | 19.93 | `unaudited` | ~~audited_decoration~~ |
 | 23 | `ckm_first_row_magnitudes_theorem_note_2026-04-24` | critical | 172 | 19.93 | `unaudited` | unknown |
 | 24 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | high | 121 | 19.93 | `audited_clean` | **retained** |
-| 25 | `native_gauge_closure_note` | critical | 276 | 19.61 | `audited_conditional` | ~~audited_conditional~~ |
+| 25 | `native_gauge_closure_note` | critical | 276 | 19.61 | `unaudited` | _proposed_retained_ |
 
 
 ## Applied audits
@@ -245,7 +245,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `matter_inertial_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `mirror_chokepoint_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `mirror_mutual_information_chokepoint_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
-| `native_gauge_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `neutrino_dirac_z3_support_trichotomy_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `newton_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `omega_lambda_matter_bridge_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -3066,22 +3065,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The centered quadrupole keeps the centroid essentially pinned but opens a real width/tidal channel, and the width response grows with quadrupole separation.  _(class `C`)_
 - **chain closes:** True — The live probe reproduces the frozen controls and finite quadrupole rows: same-site and neutral controls are zero, the dipole mainly shifts centroid, and the centered quadrupoles give near-zero centroid change with positive width response at a = 1.0 and a = 2.0. The source explicitly excludes full tensor gravity and a general multipole theory.
 - **rationale:** The retained content is a narrow finite-runner claim, not a physical tidal-field theorem: the current runner recomputes the same-site cancellation, q_test = 0 inert control, dipole baseline, and two centered quadrupole width responses. The quadrupole rows support the stated shape-sensitive width channel while the note explicitly disclaims full tensor gravity, relativistic tidal fields, and a general multipole expansion. Residual risk is only finite-configuration scope, plus a harmless rounded-ratio mismatch where the prose says 1.969 and the live runner prints +1.968; the audit does not retain anything beyond the tested ordered-lattice configuration.
-- **auditor confidence:** high
-
-### `native_gauge_closure_note`
-
-- **Note:** [`NATIVE_GAUGE_CLOSURE_NOTE.md`](../../docs/NATIVE_GAUGE_CLOSURE_NOTE.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** Use this note as the publication-facing claim boundary for the CI(3) / Z^3 gauge lane on main: exact native Cl(3) / SU(2) algebra, derived graph-first weak-axis selector, and structural graph-first su(3) closure.  _(class `B`)_
-- **chain closes:** False — The note aggregates SU(2), graph-first selector, and SU(3) integration results, but the audit row has no one-hop dependencies and no registered primary runner, so the claimed publication boundary does not close from the allowed audit packet.
-- **rationale:** Issue: The failed step is treating this boundary note as retained authority for exact native SU(2), the derived graph-first selector, and structural SU(3) closure while the row supplies no one-hop dependency notes and no primary runner; the note only names scripts/results rather than making them auditable inputs. Why this blocks: A retained publication-facing gauge-lane boundary cannot be ratified from a summary note whose load-bearing algebra and computations are outside the allowed packet, especially when the SU(3) integration result is itself awaiting critical cross-confirmation. Repair target: Register the SU(2), selector, and SU(3) integration notes as explicit dependencies with clean effective statuses, attach a primary runner or split this boundary into separate auditable claims, and rerun the audit after the dependency graph exposes the proof chain. Claim boundary until fixed: It is safe to use this note as a bounded map of intended gauge-lane claims and to say the listed components have supporting scripts, but not to treat the combined gauge-structure backbone as audit-retained.
-- **open / conditional deps cited:**
-  - `scripts/frontier_non_abelian_gauge.py`
-  - `scripts/frontier_graph_first_selector_derivation.py`
-  - `scripts/frontier_graph_first_su3_integration.py`
 - **auditor confidence:** high
 
 ### `neutrino_dirac_z3_support_trichotomy_note`

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T21:41:40.321865+00:00",
+  "generated_at": "2026-04-27T21:43:05.717782+00:00",
   "per_claim": {
     "accessible_prediction_note": {
       "assert_count": 0,
@@ -5400,6 +5400,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_n_eff_from_three_generations.py"
+    },
+    "native_gauge_closure_note": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 11,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_non_abelian_gauge.py"
     },
     "neutrino_dirac_two_higgs_canonical_reduction_note": {
       "assert_count": 1,
@@ -16006,6 +16018,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_non_abelian_gauge.py": {
+      "assert_count": 0,
+      "claims": [
+        "native_gauge_closure_note"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 11,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "exists": true
+    },
     "scripts/frontier_oh_schur_boundary_action.py": {
       "assert_count": 1,
       "claims": [
@@ -18780,12 +18807,12 @@
     "dominant_class_distribution": {
       "A": 6,
       "B": 102,
-      "C": 333,
+      "C": 334,
       "D": 106,
       "none": 140
     },
-    "runners_classified": 687,
-    "runners_with_C": 410,
+    "runners_classified": 688,
+    "runners_with_C": 411,
     "runners_with_D": 181
   }
 }
