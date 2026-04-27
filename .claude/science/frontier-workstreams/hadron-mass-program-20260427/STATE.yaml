@@ -10,7 +10,7 @@ base: origin/main
 base_commit_at_start: "current origin/main HEAD (6ccbd4e5 / 6fa585cd at fetch)"
 lock_status: unavailable
 lock_note: "scripts/automation_lock.py hardcodes /Users/jonreilly/Projects/Physics paths; this worktree is on /Users/jonBridger. Skipping cooperative lock per skill optionality."
-current_phase: cycle-4-complete
+current_phase: workstream-complete-honest-stop
 cycles_completed: 4
 active_route: null
 files_touched:
@@ -27,6 +27,7 @@ files_touched:
   - docs/HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_NOTE_2026-04-27.md
   - docs/HADRON_LANE1_CHIRAL_CONDENSATE_BANKS_CASHER_SCOPING_NOTE_2026-04-27.md
   - docs/HADRON_LANE1_WORKSTREAM_STATUS_NOTE_2026-04-27.md
+  - docs/HADRON_LANE1_WORKSTREAM_CLOSEOUT_NOTE_2026-04-27.md
 open_imports:
   - "PDG quark masses (m_u, m_d, m_s, m_c, m_b) — Lane 3 dependency"
   - "alpha_s at hadronic scale (~1 GeV) — running bridge from retained alpha_s(M_Z)"
@@ -54,5 +55,6 @@ claim_state_movement:
   - "sqrt(sigma) retention gate isolated (Cycle 2): the 5.6% gap (465 vs 440 MeV) decomposes as ~1% B1 alpha_s precision propagation (already at retained-input residual) + ~5% B2 quenched-to-dynamical screening (rough ×0.96 factor — load-bearing open item) + B3 absorbed via Method 2 + B4 resolved by Method-2 selection + B5 structural identification residual. Closing (B2) via a proper N_f=2+1 lattice calculation at beta=6.0 promotes sqrt(sigma) from bounded to retained-with-explicit-budget."
   - "Banks-Casher Sigma route audited as no-active-route (Cycle 3): existing L=4,6 framework lattice data is in finite-volume lattice-free regime, not Banks-Casher chiral-thermodynamic regime; framework lacks a structural identity pinning rho_Dirac(0) from Cl(3)/Z^3 action parameters. Two hypothetical opening paths (P1 large-volume lattice; P2 new structural identity) named, neither currently active. R7 route therefore not productive for single-cycle Lane-1-internal work. Mirrors hubble-h0 (C3)-class audit-no-go pattern."
   - "Workstream consolidated (Cycle 4): three-cycle output synthesized into single read-first Lane 1 status surface. Highest-leverage Lane-3 sub-target identified as combined m_u + m_d retention; highest-leverage Lane-1-internal target identified as (B2) sqrt(sigma) screening closure. Manuscript-surface weaves enumerated for post-workstream review-and-integration pipeline."
-next_exact_action: "Evaluate Cycle 5 launch. With theorem plan (Cycle 1) + sqrt(sigma) gate (Cycle 2) + Sigma audit-no-go (Cycle 3) + consolidation (Cycle 4) landed, the natural Lane-1-internal moves are nearly exhausted. Remaining candidates: (a) cross-cycle hygiene audit (mirrors hubble-h0 Cycle 7) — close-out before workstream stop; (b) Lane 3 progress checkpoint — fetch latest origin/main and check if Lane 3 has retained m_u + m_d since branch creation, which would change the next-cycle action; (c) honest stop and hand off if no route passes the dramatic-step gate. Loop continues per ScheduleWakeup."
+next_exact_action: "Cycle 5 evaluation: workstream stops honestly. Hygiene audit clean (all references resolve). Lane 3 progress checkpoint: 41 new commits on origin/main since branch creation, none touching quark masses; Phase-2 3A m_pi remains blocked. Sister workstream observation: hubble-h0 Cycle 1 theorem already integrated upstream (a8dd7918 cosmology: land Hubble structural lock lane) — pipeline working. Per the skill: 'stop cleanly when no route passes the dramatic-step gate'. Resumable when Lane 3 retains m_u + m_d, when an off-workstream lattice run produces measured sqrt(sigma) at beta=6.0/N_f=2+1, or when a new structural Sigma/f_pi identity is articulated."
+stop_condition_triggered: "no route passes the dramatic-step gate"
 stop_condition: "runtime budget (12h) reached, max cycles, blocker requiring human science judgment, or honest claim-state closure achieved"
