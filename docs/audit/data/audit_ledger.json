@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T17:24:32.601500+00:00",
-  "generated_at": "2026-04-27T17:24:30.992888+00:00",
-  "invalidation_run_at": "2026-04-27T17:24:32.555291+00:00",
+  "effective_status_computed_at": "2026-04-27T17:25:57.270542+00:00",
+  "generated_at": "2026-04-27T17:25:55.675891+00:00",
+  "invalidation_run_at": "2026-04-27T17:25:57.222006+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T17:24:32.461643+00:00",
+  "load_bearing_computed_at": "2026-04-27T17:25:57.125482+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -67957,14 +67957,21 @@
       "verdict_rationale": "Issue: the source note treats the hard-coded c-dependent phase-lag table as a retained portable Shapiro-delay observable. Why this blocks: the live runner only replays fixed rows and does not recompute phase lag from the causal cone, grown-family seeds, complex-action crossover, or diamond phase-ramp bridge; the one-hop notes also state that the cone is imposed and that the NV/phase-ramp interpretation is proxy-level with missing absolute calibration. Repair target: register the artifact-chain notes as explicit dependencies and add a runner that derives the phase rows from the causal-field setup across seeds/families, proves the zero control, and supplies a theorem mapping the proxy phase lag to the claimed Shapiro-delay observable. Claim boundary until fixed: it is safe to claim that the current replay table contains an exact inst-null row and the listed c-dependent proxy phase-lag rows with <=2e-4 rad family spread; it is not yet an audited retained derivation of a physical Shapiro-delay observable or calibrated NV readout."
     },
     "shapiro_diamond_bridge_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The note translates a supplied causal phase-lag table into proxy phasor language, but the causal-field dependencies are audited failed and the diamond bridge/unit dependencies are unknown and unaudited.",
       "claim_id": "shapiro_diamond_bridge_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -67972,18 +67979,23 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The Shapiro-style phase lag should be read as the same class of proxy phasor observable in X/Y/phi and phase-ramp language as the diamond/NV bridge card.",
+      "load_bearing_step_class": "F",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "688bc8146a193d7ace6831064172c84427dbf74a1a12b074a5478ba4adfa4e76",
       "note_path": "docs/SHAPIRO_DIAMOND_BRIDGE_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/DIAMOND_PHASE_RAMP_BRIDGE_CARD_NOTE.md",
+        "docs/DIAMOND_ABSOLUTE_UNIT_BRIDGE_NOTE.md",
+        "docs/CAUSAL_PROPAGATING_FIELD_NOTE.md",
+        "docs/CAUSAL_FIELD_RECONCILIATION_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369626+00:00",
@@ -68021,7 +68033,7 @@
       "runner_path": null,
       "title": "Shapiro Diamond Bridge Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The bridge claim identifies the Shapiro phase lag with diamond/NV proxy phasor language without a runner or audit-clean causal and diamond-unit inputs. Why this blocks: failed causal-field dependencies cannot support a proposed-retained c-dependent phase lag, and unknown diamond bridge/unit notes cannot justify even proxy-level lab-facing translation beyond notation. Repair target: repair and audit the causal phase-lag derivation, audit the diamond phase-ramp and absolute-unit bridge notes, and add a runner constructing X, Y, phi, and phase-ramp quantities from the same data pipeline. Claim boundary until fixed: it is safe to say this note proposes X/Y/phi language as a handoff vocabulary for a supplied phase-lag table; it is not safe to claim a retained Shapiro-to-diamond bridge or lab-facing causal discriminator."
     },
     "shapiro_diamond_frequency_bridge_note": {
       "audit_date": null,
