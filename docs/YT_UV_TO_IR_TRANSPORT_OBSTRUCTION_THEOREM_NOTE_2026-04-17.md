@@ -29,14 +29,14 @@ budgets without changing its overall three-primitive decomposition.
 This note does **not** modify:
 
 - the retained Ward-identity tree-level theorem
-  (`docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md`), which attaches no
+  ([`docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](YT_WARD_IDENTITY_DERIVATION_THEOREM.md)), which attaches no
   precision claim and stands independent of the 1-loop and multi-scale
   transport questions addressed here;
 - any publication-surface file (`CLAIMS_TABLE`,
   `PUBLICATION_MATRIX`, `DERIVATION_ATLAS`, the m_t(pole) retention
   table);
 - any Standard Model matter-content retention
-  (`docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md`);
+  ([`docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md`](CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md));
 - any prior per-primitive retention sub-theorem — this note is the
   authority from which all of them inherit.
 
@@ -54,104 +54,104 @@ decomposition itself is fixed by this master theorem.
 ### Downstream P1 sub-theorems (refining the P1 primitive)
 
 - **Shortcut no-go** (structural):
-  `docs/YT_P1_SHARED_FIERZ_NO_GO_SUB_THEOREM_NOTE_2026-04-17.md` —
+  [`docs/YT_P1_SHARED_FIERZ_NO_GO_SUB_THEOREM_NOTE_2026-04-17.md`](YT_P1_SHARED_FIERZ_NO_GO_SUB_THEOREM_NOTE_2026-04-17.md) —
   no algebraic shortcut between Rep-A and Rep-B sides of Δ_R via a
   shared Fierz identity. Closes Δ_R as a genuine lattice-PT
   computation.
 - **Color-factor retention** (structural):
-  `docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md` — retained
+  [`docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`](YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md) — retained
   three-channel decomposition
   `Δ_R = (α_LM/(4π)) · [C_F Δ_1 + C_A Δ_2 + T_F n_f Δ_3]`.
 - **Rep-A/Rep-B partial cancellation** (structural):
-  `docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md` —
+  [`docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`](YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md) —
   external quark Z_ψ cancels exactly on the ratio; three channels
   generically nonzero.
 - **I_1 symbolic decomposition**:
-  `docs/YT_P1_I1_LATTICE_PT_SYMBOLIC_DECOMPOSITION_NOTE_2026-04-17.md`
+  [`docs/YT_P1_I1_LATTICE_PT_SYMBOLIC_DECOMPOSITION_NOTE_2026-04-17.md`](YT_P1_I1_LATTICE_PT_SYMBOLIC_DECOMPOSITION_NOTE_2026-04-17.md)
   — Ward conserved-current reduction `I_V = 0` on the retained
   point-split staggered vector current.
 - **I_S citation layer**:
-  `docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md` —
+  [`docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md`](YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md) —
   literature bracket `I_S ∈ [4, 10]` with central `I_S ≃ 6`.
 - **I_S revision verification**:
-  `docs/YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md` —
+  [`docs/YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md`](YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md) —
   records the 3× upward revision from packaged `1.92 %` to cited
   `5.77 %` at single-channel (C_F-only) reading.
 - **H-unit renormalization**:
-  `docs/YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md`
+  [`docs/YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md`](YT_P1_H_UNIT_RENORMALIZATION_FRAMEWORK_NATIVE_NOTE_2026-04-17.md)
   — framework-native tadpole-improvement convention on the staggered
   surface.
 - **Loop-geometric bound**:
-  `docs/YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md` — retained
+  [`docs/YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md`](YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md) — retained
   geometric envelope `r_R = (α_LM/π) · b_0 = 0.22126` on the loop
   tail; `|Δ_R^{total}| ≤ 7.41 %` at cited central.
 - **Δ_1 BZ computation** (C_F channel):
-  `docs/YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md` — central
+  [`docs/YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md`](YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md) — central
   `Δ_1 ≃ +2`, range `[0, +8]`.
 - **Δ_2 BZ computation** (C_A channel):
-  `docs/YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md` — central
+  [`docs/YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md`](YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md) — central
   `Δ_2 ≃ −10/3`, range `[−5, 0]`.
 - **Δ_3 BZ computation** (T_F n_f channel):
-  `docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md` — central
+  [`docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md`](YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md) — central
   `Δ_3 ≃ +0.933`, range `[+0.667, +2.000]`.
 - **Δ_R master assembly**:
-  `docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md` —
+  [`docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md`](YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md) —
   three-channel central `Δ_R = −3.271 %`.
 - **BZ quadrature full staggered-PT**:
-  `docs/YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md` —
+  [`docs/YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md`](YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md) —
   framework-native central `Δ_R = −3.77 % ± 0.45 %`.
 - **Δ_R 2-loop extension**:
-  `docs/YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md` —
+  [`docs/YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md`](YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md) —
   through-2-loop central `Δ_R ≃ −3.99 % ± 0.70 %`.
 
 ### Downstream P2 sub-theorems (refining the P2 primitive)
 
 - **Taste-staircase transport** (partial):
-  `docs/YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md` —
+  [`docs/YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md`](YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md) —
   17-decade transport reduced to a single open matching coefficient
   `M = 1.9734`.
 - **v-matching theorem**:
-  `docs/YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md` —
+  [`docs/YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md`](YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md) —
   `M = √u_0 · F_yt · √(8/9)`, 1-loop `M = 1.926` (within 2.4 % of
   target).
 - **Per-step β NO-GO**:
-  `docs/YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE_2026-04-17.md` —
+  [`docs/YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE_2026-04-17.md`](YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE_2026-04-17.md) —
   16-step taste staircase is non-perturbative at canonical coupling.
 - **F_yt loop-geometric bound**:
-  `docs/YT_P2_F_YT_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md` —
+  [`docs/YT_P2_F_YT_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md`](YT_P2_F_YT_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md) —
   3-loop-and-beyond tail residual 0.15 %.
 
 ### Downstream P3 sub-theorems (refining the P3 primitive)
 
 - **K_1 framework-native**:
-  `docs/YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md`
+  [`docs/YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md`](YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md)
   — `K_1 = C_F = 4/3` exact rational.
 - **K_2 color-factor retention** (4-tensor):
-  `docs/YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
+  [`docs/YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`](YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md)
   — retained 4-tensor color skeleton.
 - **K_2 two-loop integral citation**:
-  `docs/YT_P3_MSBAR_TO_POLE_K2_INTEGRAL_CITATION_NOTE_2026-04-17.md`
+  [`docs/YT_P3_MSBAR_TO_POLE_K2_INTEGRAL_CITATION_NOTE_2026-04-17.md`](YT_P3_MSBAR_TO_POLE_K2_INTEGRAL_CITATION_NOTE_2026-04-17.md)
   — cited literature central `K_2(n_l=5) = 10.9405`.
 - **K_3 color-factor retention** (10-tensor):
-  `docs/YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
+  [`docs/YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`](YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md)
   — cumulative retention through K_3 ≈ 98.69 %.
 - **K-series geometric bound**:
-  `docs/YT_P3_K_SERIES_GEOMETRIC_BOUND_NOTE_2026-04-17.md` —
+  [`docs/YT_P3_K_SERIES_GEOMETRIC_BOUND_NOTE_2026-04-17.md`](YT_P3_K_SERIES_GEOMETRIC_BOUND_NOTE_2026-04-17.md) —
   fractional tail on m_t ≤ 0.137 %.
 
 ### Upstream retained foundations
 
 - **Tree-level Ward identity**:
-  `docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md` — exact identity
+  [`docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](YT_WARD_IDENTITY_DERIVATION_THEOREM.md) — exact identity
   `y_t_bare² = g_bare²/(2 N_c)` from D16 + D17 + D12 + S2.
 - **Color projection theorem**:
-  `docs/YT_EW_COLOR_PROJECTION_THEOREM.md` — retained SU(3)
+  [`docs/YT_EW_COLOR_PROJECTION_THEOREM.md`](YT_EW_COLOR_PROJECTION_THEOREM.md) — retained SU(3)
   Casimirs `C_F = 4/3`, `C_A = 3`, `T_F = 1/2`.
 - **Schur normal form uniqueness**:
-  `docs/YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md` — gauge
+  [`docs/YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md`](YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md) — gauge
   group uniqueness.
 - **Canonical-surface anchors**:
-  `docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md` — `⟨P⟩ = 0.5934`,
+  [`docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md`](PLAQUETTE_SELF_CONSISTENCY_NOTE.md) — `⟨P⟩ = 0.5934`,
   `u_0 = 0.87768`, `α_LM = 0.09067`.
 
 ---
@@ -167,7 +167,7 @@ stand between:
 - **Upstream authority (retained, exact):** the Ward tree-level
   identity `y_t_bare² = g_bare²/(2 N_c) = 1/6` at M_Pl on the
   canonical lattice surface (from
-  `docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md`, D16 + D17 + D12 + S2);
+  [`docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](YT_WARD_IDENTITY_DERIVATION_THEOREM.md), D16 + D17 + D12 + S2);
 - **Downstream observables (open at retained precision):**
   `y_t(v) = 0.994` and `m_t(pole) = 172.69 GeV` (PDG 2024 central).
 
@@ -234,7 +234,7 @@ three-primitive decomposition.
 ### 1.1 Upstream Ward identity (tree level)
 
 The retained Ward-identity tree-level theorem
-(`docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md`, D16 + D17 + D12 + S2)
+([`docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md`](YT_WARD_IDENTITY_DERIVATION_THEOREM.md), D16 + D17 + D12 + S2)
 establishes the exact identity
 
 ```
@@ -269,7 +269,7 @@ P3 are defined as the gaps between (W) and the observable
 ```
 
 These are inherited from the retained plaquette self-consistency note
-(`docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md`) and the canonical
+([`docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md`](PLAQUETTE_SELF_CONSISTENCY_NOTE.md)) and the canonical
 plaquette surface script (`scripts/canonical_plaquette_surface.py`).
 
 ### 1.3 SU(3) Casimirs and SM flavor content
@@ -393,7 +393,7 @@ where the three channel coefficients are:
 ```
 
 (Derived in Rep-A/Rep-B cancellation theorem,
-`docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`.)
+[`docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`](YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md).)
 
 **Packaged central:** at `I_S_packaged = 2` (continuum vertex-correction
 magnitude heuristic in the C_F channel alone, no C_A or T_F n_f
@@ -416,7 +416,7 @@ accounting):
 ```
 
 (Derived in Δ_R master assembly,
-`docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md`.)
+[`docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md`](YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md).)
 
 **Retained framework-native refinement** (full staggered-PT BZ
 quadrature):
@@ -426,7 +426,7 @@ quadrature):
 ```
 
 (Derived in
-`docs/YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md`.)
+[`docs/YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md`](YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md).)
 
 **Retained through-2-loop refinement:**
 
@@ -435,13 +435,13 @@ quadrature):
 ```
 
 (Derived in
-`docs/YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md`.)
+[`docs/YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md`](YT_P1_DELTA_R_2_LOOP_EXTENSION_NOTE_2026-04-18.md).)
 
 **Role in master theorem.** The packaged `P1 ~= 1.92 %` is the
 **master packaged central**; all downstream refinements
 (`-3.27 %`, `-3.77 %`, `-3.99 %`) sit inside the packaged loop-
 geometric bound `|Delta_R^total| <= 7.41 %` from
-`docs/YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md`. The master
+[`docs/YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md`](YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md). The master
 theorem's packaged `1.92 %` is retained as the floor-level single-
 channel magnitude; the downstream three-channel refinement to
 `3.27 %` is an internal reorganization that does not modify the
@@ -469,7 +469,7 @@ where:
 The 1-loop evaluation gives `M = 1.926`, within 2.4 % of the
 3-loop SM RGE target `M = 1.9734`, bounded by the packaged P2 residual
 envelope `~0.5 %`. (Derived in v-matching theorem,
-`docs/YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md`.)
+[`docs/YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md`](YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md).)
 
 **Retained refinement** (F_yt loop-geometric bound):
 
@@ -479,14 +479,14 @@ envelope `~0.5 %`. (Derived in v-matching theorem,
 
 This is below the packaged `0.50 %` central, so the retained refinement
 sits inside the packaged budget. (Derived in F_yt loop-geometric bound,
-`docs/YT_P2_F_YT_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md`.)
+[`docs/YT_P2_F_YT_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md`](YT_P2_F_YT_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md).)
 
 **Per-step β NO-GO caveat.** Per-step 1-loop perturbative β-function
 integration across the 16-step taste staircase is **non-perturbative**
 at the canonical coupling. The PARTIAL closure of P2 via the v-matching
 + F_yt-bound route leaves a residual non-perturbative `alpha_LM^{16}`
 factor that is outside the current retention scope by design. (See
-`docs/YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE_2026-04-17.md`.)
+[`docs/YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE_2026-04-17.md`](YT_P2_TASTE_STAIRCASE_BETA_FUNCTIONS_NOTE_2026-04-17.md).)
 
 ### 3.3 P3: MSbar -> pole mass conversion at mu = m_t
 
@@ -505,14 +505,14 @@ retained coefficients are:
 
 - **K_1** = C_F = 4/3 (exact rational, framework-native from retained
   SU(3) fundamental Casimir; see
-  `docs/YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md`).
+  [`docs/YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md`](YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md)).
 - **K_2(n_l=5)** = 10.9405 (cited, structural 4-tensor color
   decomposition; see
-  `docs/YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
-  and `docs/YT_P3_MSBAR_TO_POLE_K2_INTEGRAL_CITATION_NOTE_2026-04-17.md`).
+  [`docs/YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`](YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md)
+  and [`docs/YT_P3_MSBAR_TO_POLE_K2_INTEGRAL_CITATION_NOTE_2026-04-17.md`](YT_P3_MSBAR_TO_POLE_K2_INTEGRAL_CITATION_NOTE_2026-04-17.md)).
 - **K_3(n_l=5)** = 80.405 (cited, structural 10-tensor color
   decomposition; see
-  `docs/YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`).
+  [`docs/YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`](YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md)).
 
 **Cumulative shifts at retained `alpha_s(m_t) / pi = 0.03435`:**
 
@@ -532,7 +532,7 @@ the fractional tail on m_t is `<= 0.137 %`. Packaged operationally at
 ```
 
 (Derived in K-series geometric bound,
-`docs/YT_P3_K_SERIES_GEOMETRIC_BOUND_NOTE_2026-04-17.md`.)
+[`docs/YT_P3_K_SERIES_GEOMETRIC_BOUND_NOTE_2026-04-17.md`](YT_P3_K_SERIES_GEOMETRIC_BOUND_NOTE_2026-04-17.md).)
 
 **Framework-native fraction.** At α_s(m_t) ≈ 0.1079, the K_1 contribution
 alone is `~4.58 %` of the `~6.19 %` total MSbar-to-pole shift. This is
