@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T18:34:05.786470+00:00",
-  "generated_at": "2026-04-27T18:34:04.187183+00:00",
-  "invalidation_run_at": "2026-04-27T18:34:05.735579+00:00",
+  "effective_status_computed_at": "2026-04-27T18:35:26.918775+00:00",
+  "generated_at": "2026-04-27T18:35:25.317353+00:00",
+  "invalidation_run_at": "2026-04-27T18:35:26.870048+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T18:34:05.638968+00:00",
+  "load_bearing_computed_at": "2026-04-27T18:35:26.772150+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -72136,14 +72136,21 @@
       "verdict_rationale": "Issue: The qualitative engineered-gauge conclusion reproduces, but the note's exact current table is stale for the sparse layered holdout: the live runner gives J_span about 5.015e-35 rather than 4.769e-06, and the force side battery is imported from the conditional staggered graph portability probe. Why this blocks: an audit-clean retained claim cannot freeze incorrect exact numerics or promote a gauge/current engineering result while the underlying graph force/current readout remains conditional. Repair target: update the note to the current runner output with toleranced assertions, and close or explicitly bound the inherited graph-portability observable theorem. Claim boundary until fixed: safe to claim the current runner classifies the acyclic control as N/A, the sparse cycle holdout as gauge FAIL, and the two engineered brickwall geometries as gauge PASS with current spans about 2.279e-03 and 2.151e-03; not safe to claim clean retained gauge engineering with the frozen exact table as written."
     },
     "staggered_layered_gauge_phase_diagram_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner preserves the finite PASS/FAIL/N/A classification, but the exact current-span table is stale and the promoted geometry criterion is an empirical finite-sweep rule over the conditional graph-current readout, not a retained theorem.",
       "claim_id": "staggered_layered_gauge_phase_diagram_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -72151,18 +72158,21 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The practical pass/fail boundary is that nearest-neighbor layered brickwall/plaquette graphs pass, sparse layered holdouts and most long-shift layered loops fail, and acyclic DAG controls are N/A.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "c194325c72d0d3f711f4016a7b5262940b07a61fa6e9103526491514f01ca6df",
       "note_path": "docs/STAGGERED_LAYERED_GAUGE_PHASE_DIAGRAM_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/STAGGERED_GRAPH_PORTABILITY_NOTE.md",
+        "docs/STAGGERED_LAYERED_GAUGE_ENGINEERING_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369861+00:00",
@@ -72193,14 +72203,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 26,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 26
       },
       "runner_path": null,
       "title": "Staggered Layered Gauge Phase Diagram Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The current runner reproduces the qualitative phase map, but many frozen J_span values are stale, the sparse holdout is now about 5.015e-35 rather than 4.769e-06, and the claimed plaquette-quality criterion is a finite empirical classification over a conditional graph-current observable. Why this blocks: a proposed_retained phase-diagram criterion needs either exact current output and toleranced assertions, or a theorem deriving the boundary; the runner shows PASS rows with square-plaquette density 0.00 and FAIL rows with density up to 0.25, so the scalar criterion is not closed as stated. Repair target: update the table to live output, define the actual graph feature used by the criterion, and prove or assert-test the boundary on holdouts after the graph force/current observable is audited clean. Claim boundary until fixed: safe to claim the live runner gives 15 PASS, 10 FAIL, and 1 N/A rows, with all step-1 brickwall/defect rows passing and step-2 rows failing; not safe to claim an audit-clean retained geometry criterion from this sweep alone."
     },
     "staggered_layered_loop_threshold_note": {
       "audit_date": null,

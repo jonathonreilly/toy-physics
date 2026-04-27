@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T18:34:05.986468+00:00
+**Generated:** 2026-04-27T18:35:27.111363+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 63 |
-| _proposed_retained_ | 43 |
+| _proposed_retained_ | 42 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 342 |
+| ~~audited_conditional~~ | 343 |
 | ~~audited_failed~~ | 133 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 63 |
-| `audited_conditional` | 129 |
+| `audited_conditional` | 130 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1342 |
+| `unaudited` | 1341 |
 
 | criticality | count |
 |---|---:|
@@ -273,6 +273,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_graph_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_graph_portability_stress_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_layered_gauge_engineering_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `staggered_layered_gauge_phase_diagram_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `strong_cp_theta_zero_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `structured_chokepoint_bridge_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `symmetry_head_to_head_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -4132,6 +4133,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: The qualitative engineered-gauge conclusion reproduces, but the note's exact current table is stale for the sparse layered holdout: the live runner gives J_span about 5.015e-35 rather than 4.769e-06, and the force side battery is imported from the conditional staggered graph portability probe. Why this blocks: an audit-clean retained claim cannot freeze incorrect exact numerics or promote a gauge/current engineering result while the underlying graph force/current readout remains conditional. Repair target: update the note to the current runner output with toleranced assertions, and close or explicitly bound the inherited graph-portability observable theorem. Claim boundary until fixed: safe to claim the current runner classifies the acyclic control as N/A, the sparse cycle holdout as gauge FAIL, and the two engineered brickwall geometries as gauge PASS with current spans about 2.279e-03 and 2.151e-03; not safe to claim clean retained gauge engineering with the frozen exact table as written.
 - **open / conditional deps cited:**
   - `STAGGERED_GRAPH_PORTABILITY_NOTE.md`
+- **auditor confidence:** high
+
+### `staggered_layered_gauge_phase_diagram_note`
+
+- **Note:** [`STAGGERED_LAYERED_GAUGE_PHASE_DIAGRAM_NOTE.md`](../../docs/STAGGERED_LAYERED_GAUGE_PHASE_DIAGRAM_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The practical pass/fail boundary is that nearest-neighbor layered brickwall/plaquette graphs pass, sparse layered holdouts and most long-shift layered loops fail, and acyclic DAG controls are N/A.  _(class `C`)_
+- **chain closes:** False — The live runner preserves the finite PASS/FAIL/N/A classification, but the exact current-span table is stale and the promoted geometry criterion is an empirical finite-sweep rule over the conditional graph-current readout, not a retained theorem.
+- **rationale:** Issue: The current runner reproduces the qualitative phase map, but many frozen J_span values are stale, the sparse holdout is now about 5.015e-35 rather than 4.769e-06, and the claimed plaquette-quality criterion is a finite empirical classification over a conditional graph-current observable. Why this blocks: a proposed_retained phase-diagram criterion needs either exact current output and toleranced assertions, or a theorem deriving the boundary; the runner shows PASS rows with square-plaquette density 0.00 and FAIL rows with density up to 0.25, so the scalar criterion is not closed as stated. Repair target: update the table to live output, define the actual graph feature used by the criterion, and prove or assert-test the boundary on holdouts after the graph force/current observable is audited clean. Claim boundary until fixed: safe to claim the live runner gives 15 PASS, 10 FAIL, and 1 N/A rows, with all step-1 brickwall/defect rows passing and step-2 rows failing; not safe to claim an audit-clean retained geometry criterion from this sweep alone.
+- **open / conditional deps cited:**
+  - `STAGGERED_GRAPH_PORTABILITY_NOTE.md`
+  - `STAGGERED_LAYERED_GAUGE_ENGINEERING_NOTE.md`
 - **auditor confidence:** high
 
 ### `strong_cp_theta_zero_note`
