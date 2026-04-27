@@ -50,21 +50,52 @@ step per skill delivery policy.
 - **Disposition:** Cycle 1 accepted. Lane 1 closure roadmap landed
   branch-locally.
 
-## Cycle 2+ — pending evaluation
+## Cycle 2 — R6 sqrt(sigma) retention gate audit
 
-The theorem plan identifies two Lane-1-internal routes that proceed
-in parallel with Lane 3:
+- **Date:** 2026-04-27
+- **Artifact:**
+  `docs/HADRON_LANE1_SQRT_SIGMA_RETENTION_GATE_AUDIT_NOTE_2026-04-27.md`
+  (EFT-bridge decomposition audit; no runner).
+- **Review mode:** branch-local 6-criterion self-review.
+- **Findings:**
+  1. **CodeRunnerReviewer (PASS).** No runner; structural audit.
+  2. **PhysicsClaimReviewer (PASS).** Decomposition of the 5.6%
+     gap into 5 EFT-bridge contributions matches the source
+     `CONFINEMENT_STRING_TENSION_NOTE.md` content. Sensitivity
+     `delta_sigma/sigma ≈ 6 * delta_alpha_s/alpha_s` correctly
+     stated. Method 1 / Method 2 dispositions accurate. Identifies
+     (B2) as load-bearing.
+  3. **ImportSupportReviewer (PASS).** All admitted conventions
+     explicit (two-loop QCD running, Sommer scale, Creutz ratio).
+  4. **NatureRetentionReviewer (PASS).** Scoped as "retained branch-
+     local audit note", does not promote `sqrt(sigma)` from bounded
+     to retained.
+  5. **RepoGovernanceReviewer (PASS).** Naming convention
+     `*_RETENTION_GATE_AUDIT_NOTE_*` matches the gate-audit pattern
+     established in the hubble-h0 workstream (Cycles 4, 5).
+  6. **MethodologySkillReviewer (PASS).** Cycle 2 qualifies as
+     "major blocker isolated" under the dramatic-step gate; mirrors
+     the `(C1)`/`(C2)` gate-isolation cycles from hubble-h0.
+- **Disposition:** Cycle 2 accepted. (B2) identified as the single
+  load-bearing residual for `sqrt(sigma)` retention.
 
-- **Route R6 — Confinement / sqrt(sigma) EFT bridge audit** (Tier B,
-  no Lane-3 blocker): cleanest single-cycle Tier-B target. Identifies
-  the EFT operators contributing to the residual 5.6% gap and
-  produces a retention budget analogous to YT-lane.
-- **Route R7 — Chiral condensate Sigma structural attempt**
-  (Tier B-C, no Lane-3 blocker): direct attack on the m_pi entry
-  point via the Banks-Casher identity on the staggered-Dirac
-  partition. Could partially unblock 3A even before Lane 3.
+## Cycle 3+ — pending evaluation
 
-Recommended Cycle 2: R6 (sharper claim-state movement; a clean
-retention budget would tighten the lane).
+With the theorem plan (Cycle 1) and `sqrt(sigma)` gate isolated
+(Cycle 2), remaining single-cycle Lane-1-internal candidates:
+
+- **Route R7 — Chiral condensate Sigma structural attempt** (Tier
+  B-C; Lane-1-internal): direct attack on the `m_pi` entry point
+  via Banks-Casher on the staggered-Dirac partition. Could partially
+  unblock 3A even before Lane 3.
+- **Cross-cycle hygiene audit** (after R7): mirrors hubble-h0
+  Cycle 7 — check coherence of the four artifacts (theorem plan
+  + retention gate + Sigma scoping + any follow-on).
+- **Lane 3 progress checkpoint:** monitor whether Lane 3 has retained
+  `m_u + m_d` since this branch was created (would unblock Phase-2
+  3A in the theorem plan).
+
+Recommended Cycle 3: R7 scoping. If a clean Banks-Casher structural
+path exists, attempt; if not, produce a no-go for the easy options.
 
 Loop continues per ScheduleWakeup.
