@@ -42,6 +42,18 @@ adds no new point input; `q_0`, `z_*`, `z_{mLambda}`, and asymptotic `H_inf`
 remain functions of the same open `H_inf/H_0` ratio, with listed cosmology
 numbers used only as comparators.
 
+The Hubble structural-lock theorem adds a sharp late-time stance without
+adding a point input: on the retained `w_Lambda=-1` plus admitted flat-FRW
+surface, every correctly reduced late-time `H(z)` probe implies the same
+scalar `H_0`. It does not derive that scalar. It rules out late-time-only
+Hubble-tension resolutions inside the current surface and leaves any genuine
+tension to pre-recombination physics or measurement/systematics.
+
+The open-number reduction theorem then packages the late-time bounded
+cosmology surface as two structural degrees of freedom at fixed admitted
+`Omega_r,0`: `H_0` and `L=(H_inf/H_0)^2`. That is a closure map, not a
+numerical cosmology derivation.
+
 The matter-radiation equality identity adds no new native density derivation:
 `1 + z_mr = Omega_m,0/Omega_r,0` is exact on the admitted FRW/EOS surface, but
 the readout `z_mr ~= 3423` uses supplied `Omega_m,0` and observational

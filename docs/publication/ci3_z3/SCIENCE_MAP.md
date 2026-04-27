@@ -300,7 +300,9 @@ Validate with:
   `R_base = 31/9` group-theory support identity for the bounded
   DM/cosmology cascade, and the FRW kinematic reduction of `q_0`, `z_*`,
   `z_{mLambda}`, and asymptotic `H_inf` to the same open `H_inf/H_0` ratio,
-  plus its inverse reconstruction/cross-consistency certificate,
+  plus its inverse reconstruction/cross-consistency certificate, the
+  late-time Hubble structural lock, and the two-degree open-number reduction
+  at fixed radiation readout,
   plus the early-time matter-radiation equality identity
   `1 + z_mr = Omega_m,0/Omega_r,0` and active-neutrino-count support for
   standard `N_eff = 3.046`
@@ -318,6 +320,8 @@ Start with:
 - [OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md](../../OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md)
 - [COSMOLOGY_FRW_KINEMATIC_REDUCTION_THEOREM_NOTE_2026-04-24.md](../../COSMOLOGY_FRW_KINEMATIC_REDUCTION_THEOREM_NOTE_2026-04-24.md)
 - [COSMOLOGY_SINGLE_RATIO_INVERSE_RECONSTRUCTION_THEOREM_NOTE_2026-04-25.md](../../COSMOLOGY_SINGLE_RATIO_INVERSE_RECONSTRUCTION_THEOREM_NOTE_2026-04-25.md)
+- [HUBBLE_TENSION_STRUCTURAL_LOCK_THEOREM_NOTE_2026-04-26.md](../../HUBBLE_TENSION_STRUCTURAL_LOCK_THEOREM_NOTE_2026-04-26.md)
+- [COSMOLOGY_OPEN_NUMBER_REDUCTION_THEOREM_NOTE_2026-04-26.md](../../COSMOLOGY_OPEN_NUMBER_REDUCTION_THEOREM_NOTE_2026-04-26.md)
 - [MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md](../../MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
 - [N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md](../../N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md)
 - [GRAVITON_SPECTRAL_TOWER_THEOREM_NOTE_2026-04-24.md](../../GRAVITON_SPECTRAL_TOWER_THEOREM_NOTE_2026-04-24.md)
@@ -332,6 +336,8 @@ Validate with:
 - `python3 scripts/frontier_omega_lambda_matter_bridge.py`
 - `python3 scripts/frontier_cosmology_frw_kinematic_reduction.py`
 - `python3 scripts/frontier_cosmology_single_ratio_inverse_reconstruction.py`
+- `python3 scripts/frontier_hubble_tension_structural_lock.py`
+- `python3 scripts/frontier_cosmology_open_number_reduction.py`
 - `python3 scripts/frontier_matter_radiation_equality_structural_identity.py`
 - `python3 scripts/frontier_n_eff_from_three_generations.py`
 - `python3 scripts/frontier_graviton_spectral_tower.py`

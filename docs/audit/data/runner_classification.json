@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T11:30:06.086903+00:00",
+  "generated_at": "2026-04-27T11:44:49.347831+00:00",
   "per_claim": {
     "accessible_prediction_note": {
       "assert_count": 0,
@@ -289,6 +289,30 @@
       "dominant_class": null,
       "runner": "lattice_2d3d_continuum_check.py"
     },
+    "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 0,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_charged_lepton_direct_ward_free_yukawa_no_go.py"
+    },
+    "charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 7
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_charged_lepton_koide_ratio_source_selector_firewall.py"
+    },
     "charged_lepton_mass_hierarchy_review_note_2026-04-17": {
       "assert_count": 0,
       "counts": {
@@ -301,6 +325,42 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_charged_lepton_observable_curvature.py"
     },
+    "charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 8
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_charged_lepton_op_local_source_selected_line_selector_no_go.py"
+    },
+    "charged_lepton_radiative_tau_selector_firewall_note_2026-04-26": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 4,
+        "C": 0,
+        "D": 8
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_charged_lepton_radiative_tau_selector_firewall.py"
+    },
+    "charged_lepton_selected_line_generation_selector_no_go_note_2026-04-27": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 7
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_charged_lepton_selected_line_generation_selector_no_go.py"
+    },
     "charged_lepton_two_higgs_canonical_reduction_note": {
       "assert_count": 1,
       "counts": {
@@ -312,6 +372,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_charged_lepton_two_higgs_canonical_reduction.py"
+    },
+    "charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 8
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_charged_lepton_typeb_radian_readout_generation_selector_no_go.py"
     },
     "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17": {
       "assert_count": 0,
@@ -960,6 +1032,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_cosmology_frw_kinematic_reduction.py"
+    },
+    "cosmology_open_number_reduction_theorem_note_2026-04-26": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_cosmology_open_number_reduction.py"
     },
     "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25": {
       "assert_count": 1,
@@ -4236,6 +4320,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_koide_cone_variational_principle_survey.py"
+    },
+    "hubble_tension_structural_lock_theorem_note_2026-04-26": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_hubble_tension_structural_lock.py"
     },
     "hypercharge_squared_trace_catalog_theorem_note_2026-04-25": {
       "assert_count": 1,
@@ -9039,6 +9135,36 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_charged_lepton_direct_ward_free_yukawa_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 3,
+        "C": 0,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
+    "scripts/frontier_charged_lepton_koide_ratio_source_selector_firewall.py": {
+      "assert_count": 1,
+      "claims": [
+        "charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 7
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_charged_lepton_observable_curvature.py": {
       "assert_count": 0,
       "claims": [
@@ -9049,6 +9175,51 @@
         "B": 0,
         "C": 0,
         "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_charged_lepton_op_local_source_selected_line_selector_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 8
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_charged_lepton_radiative_tau_selector_firewall.py": {
+      "assert_count": 1,
+      "claims": [
+        "charged_lepton_radiative_tau_selector_firewall_note_2026-04-26"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 4,
+        "C": 0,
+        "D": 8
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_charged_lepton_selected_line_generation_selector_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "charged_lepton_selected_line_generation_selector_no_go_note_2026-04-27"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 7
       },
       "decoration_candidate": false,
       "dominant_class": "D",
@@ -9067,6 +9238,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_charged_lepton_typeb_radian_readout_generation_selector_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 2,
+        "C": 0,
+        "D": 8
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/frontier_charged_lepton_ue_identity_via_z3_trichotomy.py": {
@@ -9844,6 +10030,21 @@
         "B": 5,
         "C": 0,
         "D": 19
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
+    "scripts/frontier_cosmology_open_number_reduction.py": {
+      "assert_count": 1,
+      "claims": [
+        "cosmology_open_number_reduction_theorem_note_2026-04-26"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1
       },
       "decoration_candidate": false,
       "dominant_class": "D",
@@ -13766,6 +13967,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_hubble_tension_structural_lock.py": {
+      "assert_count": 1,
+      "claims": [
+        "hubble_tension_structural_lock_theorem_note_2026-04-26"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/frontier_hypercharge_squared_trace_catalog.py": {
@@ -18537,13 +18753,13 @@
     "decoration_candidates": 71,
     "dominant_class_distribution": {
       "A": 6,
-      "B": 101,
+      "B": 102,
       "C": 333,
-      "D": 99,
+      "D": 106,
       "none": 140
     },
-    "runners_classified": 679,
+    "runners_classified": 687,
     "runners_with_C": 410,
-    "runners_with_D": 173
+    "runners_with_D": 181
   }
 }

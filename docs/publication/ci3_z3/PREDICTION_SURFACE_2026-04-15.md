@@ -289,6 +289,14 @@ space. The retained surface now carries:
   `z_*`, matter-Lambda equality `z_{mLambda}`, and asymptotic `H_inf` to the
   same open ratio `H_inf/H_0`; these are structural relations, not point
   predictions
+- the late-time Hubble structural lock:
+  on the retained `w=-1` plus admitted flat-FRW surface, all correctly
+  reduced late-time `H(z)` probes imply the same scalar `H_0`; this rules out
+  late-time-only tension fixes inside the current surface but does not predict
+  numerical `H_0`
+- the late-time open-number reduction:
+  at fixed admitted `Omega_r,0`, the bounded cosmology surface has two
+  structural degrees of freedom `(H_0, L)` with `L=(H_inf/H_0)^2`
 - the early-time matter-radiation equality identity
   `1 + z_mr = Omega_m,0/Omega_r,0`; the comparator readout `z_mr ~= 3423`
   requires supplied `Omega_m,0` and observational `Omega_r,0`

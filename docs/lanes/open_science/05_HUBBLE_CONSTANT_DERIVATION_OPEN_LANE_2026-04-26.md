@@ -7,8 +7,9 @@ promotion
 debate. Currently external input.
 **Approachability:** Tier B (1–4 months — substantial recent structural-identity
 landings have made this materially closer)
-**Primary closure targets:** retained `H_0`, internal matter-density bridge,
-and a clear framework position on the low/high Hubble tension values.
+**Primary closure targets:** retained `H_0` and internal matter-density bridge.
+The late-time Hubble-tension stance is now landed as a proposed-retained /
+admitted-surface structural support theorem.
 **First parallel-worker target:** isolate which existing Λ, H_inf, Ω_Λ, N_eff,
 and matter-radiation-equality identities can load-bear an internal `H_0`
 derivation.
@@ -25,7 +26,7 @@ The framework currently records
 > distinguishes H_0 from H_inf via Ω_Λ = (H_inf/H_0)², so the framework cares
 > about the value of H_0. So why not derive it?"
 
-Plus:
+Plus the now-landed structural question:
 - "What does the framework predict about the Hubble tension (67.4 vs 73)?"
 - "Where does the matter content Ω_m come from internally?"
 - "Why is Ω_Λ ≈ 0.69 today specifically?"
@@ -35,11 +36,17 @@ Plus:
 genuine prediction — it rules out late-time tension-resolution proposals. But
 it's not the same as predicting H_0 from first principles.
 
-The framework has substantial recent structural-identity landings:
+The Hubble-tension structural-lock theorem now makes the late-time stance
+explicit: on the retained `w_Lambda = -1` plus admitted flat-FRW surface,
+late-time `H_0(z)` running is forbidden. A genuine Hubble tension must be
+early-time physics or measurement/systematics, not a late-time dark-energy or
+modified-gravity fix inside the current surface.
+
+The framework also has substantial recent structural-identity landings:
 R_base = 31/9, FRW kinematic reduction, matter-radiation equality, N_eff
 support, neutrino observable bounds, single-ratio inverse reconstruction
-(2026-04-25). **These together are very close to closing the cosmology matter
-bridge that gates the H_0 derivation.**
+(2026-04-25), Hubble structural lock, and late-time open-number reduction.
+**These sharpen the bridge but do not close the numerical H_0 derivation.**
 
 ## 2. Current state of repo content
 
@@ -66,12 +73,12 @@ bridge that gates the H_0 derivation.**
 - T_CMB = 2.7255 K
 - H_0 = 67.4 km/s/Mpc
 
-### Absent
+### Still open
 
 - H_0 derivation from framework
-- Ω_m internal closure (the matter bridge)
-- Hubble tension resolution stance (commit to early-time mechanism vs
-  systematic vs unresolved)
+- Omega_m internal closure (the matter bridge)
+- unconditional Planck-scale absolute normalization
+- eta / alpha_GUT retirement in the bounded matter cascade
 
 ## 3. Derivation targets
 
@@ -86,9 +93,11 @@ structure, without taking it as observational input.
 - A structural identity connecting Ω_b to retained quantities (cosmological
   constant scale, FRW reduction, matter-radiation equality)
 
-**Existing scaffolding:** the 5 recent structural identities (R_base, FRW,
-m-r equality, N_eff, single-ratio inverse reconstruction) provide most of
-the bridge content; the missing object is the closure step.
+**Existing scaffolding:** the recent structural identities (R_base, FRW,
+m-r equality, N_eff, single-ratio inverse reconstruction, open-number
+reduction) provide the bridge grammar. The missing objects are still the
+closure premises: eta and alpha_GUT retirement, or an independent direct
+cosmic-`L` route.
 
 **Approachability:** Tier B. The bridge is materially shorter than 2 weeks
 ago.
@@ -109,15 +118,18 @@ or by retained N_eff + photon-temperature relation, and Ω_m comes from 5A.
 ### 5C. Hubble tension explicit stance
 
 **Target:** retain a paper-grade statement on the framework's commitment to
-ΛCDM at late times, with the implication that any genuine H_0 tension must
-arise from pre-recombination physics (early dark energy, modified
-recombination, extra relativistic species before CMB release) — NOT from
-late-time modifications.
+LambdaCDM at late times, with the implication that any genuine H_0 tension
+must arise from pre-recombination physics (early dark energy, modified
+recombination, extra relativistic species before CMB release) or
+measurement/systematics — not from late-time modifications.
 
-**Existing scaffolding:** w = -1 retained, Λ structural retained, no modified
-gravity at cosmological scales. The commitment is already implicit.
+**Current disposition:** landed as
+[HUBBLE_TENSION_STRUCTURAL_LOCK_THEOREM_NOTE_2026-04-26.md](../../HUBBLE_TENSION_STRUCTURAL_LOCK_THEOREM_NOTE_2026-04-26.md),
+pending audit ratification. The theorem is structural; it does not derive a
+numerical `H_0`.
 
-**Approachability:** Tier A. This is largely a manuscript-surface clarification.
+**Status:** Phase 1 complete as a proposed-retained/admitted-surface
+structural support result.
 
 ### 5D. Cosmological neutrino constraint Σm_ν integration
 
@@ -145,6 +157,13 @@ this lane.
 - [MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md](../../MATTER_RADIATION_EQUALITY_STRUCTURAL_IDENTITY_THEOREM_NOTE_2026-04-24.md)
 - [N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md](../../N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md)
 - [COSMOLOGY_SINGLE_RATIO_INVERSE_RECONSTRUCTION_THEOREM_NOTE_2026-04-25.md](../../COSMOLOGY_SINGLE_RATIO_INVERSE_RECONSTRUCTION_THEOREM_NOTE_2026-04-25.md)
+- [HUBBLE_TENSION_STRUCTURAL_LOCK_THEOREM_NOTE_2026-04-26.md](../../HUBBLE_TENSION_STRUCTURAL_LOCK_THEOREM_NOTE_2026-04-26.md)
+- [COSMOLOGY_OPEN_NUMBER_REDUCTION_THEOREM_NOTE_2026-04-26.md](../../COSMOLOGY_OPEN_NUMBER_REDUCTION_THEOREM_NOTE_2026-04-26.md)
+- [HUBBLE_LANE5_COSMIC_HISTORY_RATIO_NECESSITY_NO_GO_NOTE_2026-04-26.md](../../HUBBLE_LANE5_COSMIC_HISTORY_RATIO_NECESSITY_NO_GO_NOTE_2026-04-26.md)
+- [HUBBLE_LANE5_ETA_RETIREMENT_GATE_AUDIT_NOTE_2026-04-26.md](../../HUBBLE_LANE5_ETA_RETIREMENT_GATE_AUDIT_NOTE_2026-04-26.md)
+- [HUBBLE_LANE5_PLANCK_C1_GATE_AUDIT_NOTE_2026-04-26.md](../../HUBBLE_LANE5_PLANCK_C1_GATE_AUDIT_NOTE_2026-04-26.md)
+- [HUBBLE_LANE5_C3_VACUUM_TOPOLOGY_NO_ACTIVE_ROUTE_NOTE_2026-04-27.md](../../HUBBLE_LANE5_C3_VACUUM_TOPOLOGY_NO_ACTIVE_ROUTE_NOTE_2026-04-27.md)
+- [HUBBLE_LANE5_WORKSTREAM_STATUS_NOTE_2026-04-27.md](../../HUBBLE_LANE5_WORKSTREAM_STATUS_NOTE_2026-04-27.md)
 - [GRAVITY_COSMOLOGY_TOWER_LAMBDA_SPECTRAL_BRIDGE_THEOREM_NOTE_2026-04-25.md](../../GRAVITY_COSMOLOGY_TOWER_LAMBDA_SPECTRAL_BRIDGE_THEOREM_NOTE_2026-04-25.md)
 - [COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md](../../COSMOLOGY_SCALE_IDENTIFICATION_AND_REDUCTION_NOTE.md)
 - DM closed package (R = Ω_DM/Ω_b retained)
@@ -153,14 +172,17 @@ this lane.
 
 **Phase 1 (fast):**
 
-1. **5C: Hubble tension explicit stance.** Manuscript-surface clarification.
-   Tier A. ~1 week.
+1. **5C: Hubble tension explicit stance.** Landed pending audit. Keep it
+   visible as a structural falsifier, not as numerical `H_0` closure.
 
 **Phase 2:**
 
-2. **5A: Ω_m internal closure.** Connect the 5 recent structural identities
-   to derive Ω_m. Tier B. The single most important step.
-3. **5B: H_0 derivation from Ω_m.** Automatic chain once 5A lands. Tier A.
+2. **5A: Omega_m / L internal closure.** Practical route is `(C2)`: retire
+   eta and alpha_GUT in the bounded matter cascade. Hypothetical alternative
+   is `(C3)`: direct cosmic-`L` derivation; no active route currently exists.
+3. **5B: H_0 derivation from Omega_m / L plus absolute scale.** Requires
+   `(C1)` Planck-scale absolute normalization in addition to `(C2)` or `(C3)`.
+   No single gate is sufficient.
 
 **Phase 3:**
 
@@ -176,8 +198,8 @@ this lane.
   initial scope (it remains an external input for cosmology rows).
 - This lane does NOT address inflation in initial scope (deferred to 5E).
 - This lane does NOT propose to resolve the Hubble tension by fitting either
-  end (67.4 vs 73). It commits to ΛCDM at late times structurally and lets
-  the tension resolution be early-time-only.
+  end (67.4 vs 73). It commits to LambdaCDM at late times structurally and
+  leaves any genuine tension to early-time physics or measurement/systematics.
 - This lane does NOT address dark-energy detection or modified-gravity
   alternatives.
 

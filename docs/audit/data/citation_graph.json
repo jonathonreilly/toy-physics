@@ -822,6 +822,14 @@
     },
     {
       "from": "canonical_harness_index",
+      "to": "hubble_tension_structural_lock_theorem_note_2026-04-26"
+    },
+    {
+      "from": "canonical_harness_index",
+      "to": "cosmology_open_number_reduction_theorem_note_2026-04-26"
+    },
+    {
+      "from": "canonical_harness_index",
       "to": "matter_radiation_equality_structural_identity_theorem_note_2026-04-24"
     },
     {
@@ -2515,6 +2523,46 @@
     {
       "from": "cosmology_frw_kinematic_reduction_theorem_note_2026-04-24",
       "to": "dark_energy_eos_retained_corollary_theorem_note"
+    },
+    {
+      "from": "cosmology_open_number_reduction_theorem_note_2026-04-26",
+      "to": "cosmological_constant_spectral_gap_identity_theorem_note"
+    },
+    {
+      "from": "cosmology_open_number_reduction_theorem_note_2026-04-26",
+      "to": "dark_energy_eos_retained_corollary_theorem_note"
+    },
+    {
+      "from": "cosmology_open_number_reduction_theorem_note_2026-04-26",
+      "to": "cosmology_scale_identification_and_reduction_note"
+    },
+    {
+      "from": "cosmology_open_number_reduction_theorem_note_2026-04-26",
+      "to": "omega_lambda_matter_bridge_theorem_note_2026-04-22"
+    },
+    {
+      "from": "cosmology_open_number_reduction_theorem_note_2026-04-26",
+      "to": "cosmology_frw_kinematic_reduction_theorem_note_2026-04-24"
+    },
+    {
+      "from": "cosmology_open_number_reduction_theorem_note_2026-04-26",
+      "to": "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25"
+    },
+    {
+      "from": "cosmology_open_number_reduction_theorem_note_2026-04-26",
+      "to": "hubble_tension_structural_lock_theorem_note_2026-04-26"
+    },
+    {
+      "from": "cosmology_open_number_reduction_theorem_note_2026-04-26",
+      "to": "r_base_group_theory_derivation_theorem_note_2026-04-24"
+    },
+    {
+      "from": "cosmology_open_number_reduction_theorem_note_2026-04-26",
+      "to": "matter_radiation_equality_structural_identity_theorem_note_2026-04-24"
+    },
+    {
+      "from": "cosmology_open_number_reduction_theorem_note_2026-04-26",
+      "to": "n_eff_from_three_generations_theorem_note_2026-04-24"
     },
     {
       "from": "cross_sector_a_squared_koide_vcb_bridge_support_note_2026-04-25",
@@ -4275,6 +4323,34 @@
     {
       "from": "higher_order_structural_theorems_note",
       "to": "structural_no_go_survey_note"
+    },
+    {
+      "from": "hubble_tension_structural_lock_theorem_note_2026-04-26",
+      "to": "minimal_axioms_2026-04-11"
+    },
+    {
+      "from": "hubble_tension_structural_lock_theorem_note_2026-04-26",
+      "to": "cosmological_constant_spectral_gap_identity_theorem_note"
+    },
+    {
+      "from": "hubble_tension_structural_lock_theorem_note_2026-04-26",
+      "to": "dark_energy_eos_retained_corollary_theorem_note"
+    },
+    {
+      "from": "hubble_tension_structural_lock_theorem_note_2026-04-26",
+      "to": "cosmology_scale_identification_and_reduction_note"
+    },
+    {
+      "from": "hubble_tension_structural_lock_theorem_note_2026-04-26",
+      "to": "omega_lambda_matter_bridge_theorem_note_2026-04-22"
+    },
+    {
+      "from": "hubble_tension_structural_lock_theorem_note_2026-04-26",
+      "to": "cosmology_frw_kinematic_reduction_theorem_note_2026-04-24"
+    },
+    {
+      "from": "hubble_tension_structural_lock_theorem_note_2026-04-26",
+      "to": "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25"
     },
     {
       "from": "hw1_second_order_return_shape_theorem_note",
@@ -8522,6 +8598,10 @@
     },
     {
       "from": "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26",
+      "to": "hubble_tension_structural_lock_theorem_note_2026-04-26"
+    },
+    {
+      "from": "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26",
       "to": "primordial_spectrum_note"
     },
     {
@@ -8547,6 +8627,30 @@
     {
       "from": "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26",
       "to": "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25"
+    },
+    {
+      "from": "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26",
+      "to": "cosmology_open_number_reduction_theorem_note_2026-04-26"
+    },
+    {
+      "from": "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26",
+      "to": "hubble_lane5_cosmic_history_ratio_necessity_no_go_note_2026-04-26"
+    },
+    {
+      "from": "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26",
+      "to": "hubble_lane5_eta_retirement_gate_audit_note_2026-04-26"
+    },
+    {
+      "from": "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26",
+      "to": "hubble_lane5_planck_c1_gate_audit_note_2026-04-26"
+    },
+    {
+      "from": "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26",
+      "to": "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27"
+    },
+    {
+      "from": "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26",
+      "to": "hubble_lane5_workstream_status_note_2026-04-27"
     },
     {
       "from": "lanes.open_science.05_hubble_constant_derivation_open_lane_2026-04-26",
@@ -9203,6 +9307,14 @@
     {
       "from": "publication.ci3_z3.claims_table",
       "to": "cosmology_frw_kinematic_reduction_theorem_note_2026-04-24"
+    },
+    {
+      "from": "publication.ci3_z3.claims_table",
+      "to": "hubble_tension_structural_lock_theorem_note_2026-04-26"
+    },
+    {
+      "from": "publication.ci3_z3.claims_table",
+      "to": "cosmology_open_number_reduction_theorem_note_2026-04-26"
     },
     {
       "from": "publication.ci3_z3.claims_table",
@@ -10790,6 +10902,18 @@
     },
     {
       "from": "publication.ci3_z3.derivation_atlas",
+      "to": "hubble_tension_structural_lock_theorem_note_2026-04-26"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "cosmology_open_number_reduction_theorem_note_2026-04-26"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
+      "to": "hubble_lane5_workstream_status_note_2026-04-27"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_atlas",
       "to": "matter_radiation_equality_structural_identity_theorem_note_2026-04-24"
     },
     {
@@ -11759,6 +11883,14 @@
     {
       "from": "publication.ci3_z3.derivation_validation_map",
       "to": "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_validation_map",
+      "to": "hubble_tension_structural_lock_theorem_note_2026-04-26"
+    },
+    {
+      "from": "publication.ci3_z3.derivation_validation_map",
+      "to": "cosmology_open_number_reduction_theorem_note_2026-04-26"
     },
     {
       "from": "publication.ci3_z3.derivation_validation_map",
@@ -12995,6 +13127,18 @@
     {
       "from": "publication.ci3_z3.full_claim_ledger",
       "to": "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25"
+    },
+    {
+      "from": "publication.ci3_z3.full_claim_ledger",
+      "to": "hubble_tension_structural_lock_theorem_note_2026-04-26"
+    },
+    {
+      "from": "publication.ci3_z3.full_claim_ledger",
+      "to": "cosmology_open_number_reduction_theorem_note_2026-04-26"
+    },
+    {
+      "from": "publication.ci3_z3.full_claim_ledger",
+      "to": "hubble_lane5_workstream_status_note_2026-04-27"
     },
     {
       "from": "publication.ci3_z3.full_claim_ledger",
@@ -14306,6 +14450,18 @@
     },
     {
       "from": "publication.ci3_z3.publication_matrix",
+      "to": "hubble_tension_structural_lock_theorem_note_2026-04-26"
+    },
+    {
+      "from": "publication.ci3_z3.publication_matrix",
+      "to": "cosmology_open_number_reduction_theorem_note_2026-04-26"
+    },
+    {
+      "from": "publication.ci3_z3.publication_matrix",
+      "to": "hubble_lane5_workstream_status_note_2026-04-27"
+    },
+    {
+      "from": "publication.ci3_z3.publication_matrix",
       "to": "matter_radiation_equality_structural_identity_theorem_note_2026-04-24"
     },
     {
@@ -15002,6 +15158,14 @@
     },
     {
       "from": "publication.ci3_z3.readme",
+      "to": "hubble_tension_structural_lock_theorem_note_2026-04-26"
+    },
+    {
+      "from": "publication.ci3_z3.readme",
+      "to": "cosmology_open_number_reduction_theorem_note_2026-04-26"
+    },
+    {
+      "from": "publication.ci3_z3.readme",
       "to": "publication.ci3_z3.gravity_publication_package_summary_2026-04-15"
     },
     {
@@ -15695,6 +15859,14 @@
     {
       "from": "publication.ci3_z3.results_index",
       "to": "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25"
+    },
+    {
+      "from": "publication.ci3_z3.results_index",
+      "to": "hubble_tension_structural_lock_theorem_note_2026-04-26"
+    },
+    {
+      "from": "publication.ci3_z3.results_index",
+      "to": "cosmology_open_number_reduction_theorem_note_2026-04-26"
     },
     {
       "from": "publication.ci3_z3.results_index",
@@ -16598,6 +16770,14 @@
     },
     {
       "from": "publication.ci3_z3.science_map",
+      "to": "hubble_tension_structural_lock_theorem_note_2026-04-26"
+    },
+    {
+      "from": "publication.ci3_z3.science_map",
+      "to": "cosmology_open_number_reduction_theorem_note_2026-04-26"
+    },
+    {
+      "from": "publication.ci3_z3.science_map",
       "to": "matter_radiation_equality_structural_identity_theorem_note_2026-04-24"
     },
     {
@@ -17006,6 +17186,10 @@
     },
     {
       "from": "publication.ci3_z3.what_this_paper_does_not_claim",
+      "to": "hubble_tension_structural_lock_theorem_note_2026-04-26"
+    },
+    {
+      "from": "publication.ci3_z3.what_this_paper_does_not_claim",
       "to": "dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25"
     },
     {
@@ -17337,7 +17521,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-27T11:30:04.640596+00:00",
+  "generated_at": "2026-04-27T11:44:47.785573+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -19222,6 +19406,8 @@
         "omega_lambda_derivation_note",
         "cosmology_frw_kinematic_reduction_theorem_note_2026-04-24",
         "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25",
+        "hubble_tension_structural_lock_theorem_note_2026-04-26",
+        "cosmology_open_number_reduction_theorem_note_2026-04-26",
         "matter_radiation_equality_structural_identity_theorem_note_2026-04-24",
         "n_eff_from_three_generations_theorem_note_2026-04-24",
         "dark_energy_eos_retained_corollary_theorem_note",
@@ -19324,7 +19510,7 @@
         "chronology_protection_operational_no_past_signaling_theorem_note_2026-04-25",
         "lanes.open_science.readme"
       ],
-      "note_hash": "74b12b24a8583695f338b65848472b0598d4095905c46fc3109bb7794e510626",
+      "note_hash": "99744a93b4e9a1efc86ede74623278ecf3b1778bf09487ab0b8b410312fbc22f",
       "path": "docs/CANONICAL_HARNESS_INDEX.md",
       "runner_path": null,
       "title": "Canonical Harness Index"
@@ -19536,6 +19722,16 @@
       "runner_path": null,
       "title": "Central-Band Mass Window Note"
     },
+    "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26": {
+      "claim_id": "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26",
+      "current_status": "proposed_retained",
+      "current_status_raw": "exact negative boundary / proposed_retained objective no-go. This note",
+      "deps": [],
+      "note_hash": "ddeacd91e28d6c477deba0118f2fb62fe217c2decaa77627f3fdcbb3f70de059",
+      "path": "docs/CHARGED_LEPTON_DIRECT_WARD_FREE_YUKAWA_NO_GO_NOTE_2026-04-26.md",
+      "runner_path": "scripts/frontier_charged_lepton_direct_ward_free_yukawa_no_go.py",
+      "title": "Charged-Lepton Direct Ward Free-Yukawa No-Go"
+    },
     "charged_lepton_koide_cone_algebraic_equivalence_note": {
       "claim_id": "charged_lepton_koide_cone_algebraic_equivalence_note",
       "current_status": "proposed_retained",
@@ -19550,6 +19746,16 @@
       "path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
       "runner_path": null,
       "title": "Charged-Lepton Koide-Cone Algebraic Equivalence"
+    },
+    "charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27": {
+      "claim_id": "charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27",
+      "current_status": "support",
+      "current_status_raw": "exact negative boundary / support firewall for charged-lepton mass",
+      "deps": [],
+      "note_hash": "2ffcc14826c1ec70dd0034f3aeb9ef22d53079d58fc50b5de3ca89b33aa7be05",
+      "path": "docs/CHARGED_LEPTON_KOIDE_RATIO_SOURCE_SELECTOR_FIREWALL_NOTE_2026-04-27.md",
+      "runner_path": "scripts/frontier_charged_lepton_koide_ratio_source_selector_firewall.py",
+      "title": "Charged-Lepton Koide Ratio/Source Selector Firewall"
     },
     "charged_lepton_koide_review_packet_2026-04-18": {
       "claim_id": "charged_lepton_koide_review_packet_2026-04-18",
@@ -19620,6 +19826,36 @@
       "runner_path": "scripts/frontier_charged_lepton_observable_curvature.py",
       "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework"
     },
+    "charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27": {
+      "claim_id": "charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary for charged-lepton mass retirement; not",
+      "deps": [],
+      "note_hash": "071cc0b66b254ef3fbc229afed5656ea9915fa6738c505a08fcced3d9d00772d",
+      "path": "docs/CHARGED_LEPTON_OP_LOCAL_SOURCE_SELECTED_LINE_SELECTOR_NO_GO_NOTE_2026-04-27.md",
+      "runner_path": "scripts/frontier_charged_lepton_op_local_source_selected_line_selector_no_go.py",
+      "title": "Charged-Lepton OP-Local Source / Selected-Line Selector No-Go"
+    },
+    "charged_lepton_radiative_tau_selector_firewall_note_2026-04-26": {
+      "claim_id": "charged_lepton_radiative_tau_selector_firewall_note_2026-04-26",
+      "current_status": "proposed_retained",
+      "current_status_raw": "support firewall / proposed_retained objective no-go for standalone tau",
+      "deps": [],
+      "note_hash": "6569438f336f8c6b42702301a916e24291b59a0e625770c147a452aceeccf0af",
+      "path": "docs/CHARGED_LEPTON_RADIATIVE_TAU_SELECTOR_FIREWALL_NOTE_2026-04-26.md",
+      "runner_path": "scripts/frontier_charged_lepton_radiative_tau_selector_firewall.py",
+      "title": "Charged-Lepton Radiative Tau Selector Firewall"
+    },
+    "charged_lepton_selected_line_generation_selector_no_go_note_2026-04-27": {
+      "claim_id": "charged_lepton_selected_line_generation_selector_no_go_note_2026-04-27",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary for the selected-line/generation-label",
+      "deps": [],
+      "note_hash": "86a0bac37106427217c01480f7a562b24a97e60987286f00646c38842643c0e1",
+      "path": "docs/CHARGED_LEPTON_SELECTED_LINE_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md",
+      "runner_path": "scripts/frontier_charged_lepton_selected_line_generation_selector_no_go.py",
+      "title": "Charged-Lepton Selected-Line Generation-Selector No-Go"
+    },
     "charged_lepton_two_higgs_canonical_reduction_note": {
       "claim_id": "charged_lepton_two_higgs_canonical_reduction_note",
       "current_status": "unknown",
@@ -19629,6 +19865,16 @@
       "path": "docs/CHARGED_LEPTON_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md",
       "runner_path": "scripts/frontier_charged_lepton_two_higgs_canonical_reduction.py",
       "title": "Charged-Lepton Two-Higgs Canonical Reduction Theorem"
+    },
+    "charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27": {
+      "claim_id": "charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary for charged-lepton mass retirement; not",
+      "deps": [],
+      "note_hash": "24c63a7d55c30d639e0fe987b284ba7e357458da2c3c1565fdaec02528c4e1fe",
+      "path": "docs/CHARGED_LEPTON_TYPEB_RADIAN_READOUT_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md",
+      "runner_path": "scripts/frontier_charged_lepton_typeb_radian_readout_generation_selector_no_go.py",
+      "title": "Charged-Lepton Type-B Radian Readout Generation-Selector No-Go"
     },
     "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17": {
       "claim_id": "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17",
@@ -20736,6 +20982,27 @@
       "path": "docs/COSMOLOGY_FRW_KINEMATIC_REDUCTION_THEOREM_NOTE_2026-04-24.md",
       "runner_path": "scripts/frontier_cosmology_frw_kinematic_reduction.py",
       "title": "FRW Late-Time Kinematic Reduction Theorem"
+    },
+    "cosmology_open_number_reduction_theorem_note_2026-04-26": {
+      "claim_id": "cosmology_open_number_reduction_theorem_note_2026-04-26",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained/admitted-surface structural-support theorem on",
+      "deps": [
+        "cosmological_constant_spectral_gap_identity_theorem_note",
+        "dark_energy_eos_retained_corollary_theorem_note",
+        "cosmology_scale_identification_and_reduction_note",
+        "omega_lambda_matter_bridge_theorem_note_2026-04-22",
+        "cosmology_frw_kinematic_reduction_theorem_note_2026-04-24",
+        "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25",
+        "hubble_tension_structural_lock_theorem_note_2026-04-26",
+        "r_base_group_theory_derivation_theorem_note_2026-04-24",
+        "matter_radiation_equality_structural_identity_theorem_note_2026-04-24",
+        "n_eff_from_three_generations_theorem_note_2026-04-24"
+      ],
+      "note_hash": "e7474cd8bfca8d7398da5c0ca6e3674481a4bdd0a13f145422a20c311aa7e79c",
+      "path": "docs/COSMOLOGY_OPEN_NUMBER_REDUCTION_THEOREM_NOTE_2026-04-26.md",
+      "runner_path": "scripts/frontier_cosmology_open_number_reduction.py",
+      "title": "Cosmology Open-Number Reduction Theorem: The Late-Time Bounded Surface Has Two Structural Degrees Of Freedom At Fixed Radiation Readout"
     },
     "cosmology_scale_identification_and_reduction_note": {
       "claim_id": "cosmology_scale_identification_and_reduction_note",
@@ -25830,6 +26097,74 @@
       "runner_path": null,
       "title": "Holographic Boundary-Law Probe (Bounded Companion Note)"
     },
+    "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27": {
+      "claim_id": "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27",
+      "current_status": "support",
+      "current_status_raw": "support audit-no-go on `main`. Tightens Cycle 3's \"no active",
+      "deps": [],
+      "note_hash": "7f42c97e282c9e8fb9ae89cc1ac70596ebeda11f16a27b21aa8ce9ae417ca226",
+      "path": "docs/HUBBLE_LANE5_C3_VACUUM_TOPOLOGY_NO_ACTIVE_ROUTE_NOTE_2026-04-27.md",
+      "runner_path": null,
+      "title": "Lane 5 `(C3)` Class: No Active Vacuum/Topology Route \u2014 Audit-No-Go"
+    },
+    "hubble_lane5_cosmic_history_ratio_necessity_no_go_note_2026-04-26": {
+      "claim_id": "hubble_lane5_cosmic_history_ratio_necessity_no_go_note_2026-04-26",
+      "current_status": "support",
+      "current_status_raw": "support no-go / program-boundary note on `main`. Bounds the",
+      "deps": [],
+      "note_hash": "072c841b3250625c234efcfce65f944ea9da5be8db7391c4d810d7463c1fbb40",
+      "path": "docs/HUBBLE_LANE5_COSMIC_HISTORY_RATIO_NECESSITY_NO_GO_NOTE_2026-04-26.md",
+      "runner_path": null,
+      "title": "Lane 5 Cosmic-History-Ratio Necessity No-Go: `H_0` and `L` Cannot Be Derived From The Minimal Accepted Axiom Stack Alone"
+    },
+    "hubble_lane5_eta_retirement_gate_audit_note_2026-04-26": {
+      "claim_id": "hubble_lane5_eta_retirement_gate_audit_note_2026-04-26",
+      "current_status": "support",
+      "current_status_raw": "support gate-audit note on `main`. Identifies the precise residual",
+      "deps": [],
+      "note_hash": "02baf341e64f4b127046fa79a221351e6d717b559f92b6077d44aa721451be83",
+      "path": "docs/HUBBLE_LANE5_ETA_RETIREMENT_GATE_AUDIT_NOTE_2026-04-26.md",
+      "runner_path": null,
+      "title": "Lane 5 `eta` Retirement Gate Audit: The Single Microscopic Selector That Retires `eta` From The Bounded Cosmology Cascade"
+    },
+    "hubble_lane5_planck_c1_gate_audit_note_2026-04-26": {
+      "claim_id": "hubble_lane5_planck_c1_gate_audit_note_2026-04-26",
+      "current_status": "support",
+      "current_status_raw": "support gate-audit note on `main`. Identifies the precise residual",
+      "deps": [],
+      "note_hash": "134cc2810320d4c5be77a10144b9e41556e2e92504e4d8049b5f18d1dcec47e9",
+      "path": "docs/HUBBLE_LANE5_PLANCK_C1_GATE_AUDIT_NOTE_2026-04-26.md",
+      "runner_path": null,
+      "title": "Lane 5 Planck `(C1)` Gate Audit: The Metric-Compatible Primitive Clifford/CAR Coframe Response Is The Single Residual Premise For Retaining `R_Lambda` Numerically"
+    },
+    "hubble_lane5_workstream_status_note_2026-04-27": {
+      "claim_id": "hubble_lane5_workstream_status_note_2026-04-27",
+      "current_status": "support",
+      "current_status_raw": "support lane-status note on `main`. Single read-first Lane 5",
+      "deps": [],
+      "note_hash": "3ffd075756ba154dc4c0fc90577d38624389c234a237f406963abb3e4129dab2",
+      "path": "docs/HUBBLE_LANE5_WORKSTREAM_STATUS_NOTE_2026-04-27.md",
+      "runner_path": null,
+      "title": "Lane 5 Workstream Status: Hubble-H0 Structural Lock And Two-Gate Closure Map"
+    },
+    "hubble_tension_structural_lock_theorem_note_2026-04-26": {
+      "claim_id": "hubble_tension_structural_lock_theorem_note_2026-04-26",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained/admitted-surface structural-support theorem on",
+      "deps": [
+        "minimal_axioms_2026-04-11",
+        "cosmological_constant_spectral_gap_identity_theorem_note",
+        "dark_energy_eos_retained_corollary_theorem_note",
+        "cosmology_scale_identification_and_reduction_note",
+        "omega_lambda_matter_bridge_theorem_note_2026-04-22",
+        "cosmology_frw_kinematic_reduction_theorem_note_2026-04-24",
+        "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25"
+      ],
+      "note_hash": "3078e2789f5446e805b50afc4906f6c6e5dd2a42e026ae4ca1a66bc5fea530ca",
+      "path": "docs/HUBBLE_TENSION_STRUCTURAL_LOCK_THEOREM_NOTE_2026-04-26.md",
+      "runner_path": "scripts/frontier_hubble_tension_structural_lock.py",
+      "title": "Hubble Tension Structural Lock Theorem: Late-Time `H_0` Is a Single Scalar on the Retained Surface"
+    },
     "hw1_second_order_return_shape_theorem_note": {
       "claim_id": "hw1_second_order_return_shape_theorem_note",
       "current_status": "unknown",
@@ -27144,7 +27479,7 @@
         "ai_methodology.raw.readme",
         "lanes.open_science.readme"
       ],
-      "note_hash": "f63ce5f8439b2541a456abdc229982ee54450d652c0aebf14fe9f3e732f785b4",
+      "note_hash": "bdff4601bca9a577e226f69ed1cd2c5dce72b12ae00cc631252f734b34d32c0e",
       "path": "docs/lanes/ACTIVE_WORKING_LANES_2026-04-26.md",
       "runner_path": null,
       "title": "Active Working Lanes"
@@ -27284,6 +27619,7 @@
       "current_status_raw": "ACCEPTED CRITICAL OPEN SCIENCE LANE on `main`; no theorem or claim",
       "deps": [
         "publication.ci3_z3.inputs_and_qualifiers_note",
+        "hubble_tension_structural_lock_theorem_note_2026-04-26",
         "primordial_spectrum_note",
         "cosmological_constant_spectral_gap_identity_theorem_note",
         "cosmology_frw_kinematic_reduction_theorem_note_2026-04-24",
@@ -27291,10 +27627,16 @@
         "matter_radiation_equality_structural_identity_theorem_note_2026-04-24",
         "n_eff_from_three_generations_theorem_note_2026-04-24",
         "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25",
+        "cosmology_open_number_reduction_theorem_note_2026-04-26",
+        "hubble_lane5_cosmic_history_ratio_necessity_no_go_note_2026-04-26",
+        "hubble_lane5_eta_retirement_gate_audit_note_2026-04-26",
+        "hubble_lane5_planck_c1_gate_audit_note_2026-04-26",
+        "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27",
+        "hubble_lane5_workstream_status_note_2026-04-27",
         "gravity_cosmology_tower_lambda_spectral_bridge_theorem_note_2026-04-25",
         "cosmology_scale_identification_and_reduction_note"
       ],
-      "note_hash": "54489110ac7d8ddb8d28e4d9709a7901c6782161b1480f571e66db8bfefadb8a",
+      "note_hash": "548592a830d78bb507b70d205af737f2e60da403849788b7562ef04b284e77bb",
       "path": "docs/lanes/open_science/05_HUBBLE_CONSTANT_DERIVATION_OPEN_LANE_2026-04-26.md",
       "runner_path": null,
       "title": "Lane 5 \u2014 Hubble Constant H_0 Derivation"
@@ -30769,6 +31111,8 @@
         "dm_eta_freezeout_bypass_quantitative_theorem_note_2026-04-25",
         "dm_su3_gauge_loop_obstruction_note_2026-04-25",
         "cosmology_frw_kinematic_reduction_theorem_note_2026-04-24",
+        "hubble_tension_structural_lock_theorem_note_2026-04-26",
+        "cosmology_open_number_reduction_theorem_note_2026-04-26",
         "matter_radiation_equality_structural_identity_theorem_note_2026-04-24",
         "n_eff_from_three_generations_theorem_note_2026-04-24",
         "cosmology_scale_identification_and_reduction_note",
@@ -30776,7 +31120,7 @@
         "dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25",
         "publication.ci3_z3.prediction_surface_2026-04-15"
       ],
-      "note_hash": "8875e060aae3969806a613bcfa6a7224b5c949466f3703d8d89afbc6cd7eba6a",
+      "note_hash": "f40e7d4a95bfa697c6489b2392945c3992d61237e1f87e844782fc06610f3149",
       "path": "docs/publication/ci3_z3/CLAIMS_TABLE.md",
       "runner_path": null,
       "title": "Manuscript Claims Surface"
@@ -31176,6 +31520,9 @@
         "cosmology_scale_identification_and_reduction_note",
         "cosmology_frw_kinematic_reduction_theorem_note_2026-04-24",
         "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25",
+        "hubble_tension_structural_lock_theorem_note_2026-04-26",
+        "cosmology_open_number_reduction_theorem_note_2026-04-26",
+        "hubble_lane5_workstream_status_note_2026-04-27",
         "matter_radiation_equality_structural_identity_theorem_note_2026-04-24",
         "n_eff_from_three_generations_theorem_note_2026-04-24",
         "tensor_scalar_ratio_consolidation_theorem_note_2026-04-22",
@@ -31268,7 +31615,7 @@
         "lattice_complementarity_note",
         "universal_qg_optional_textbook_comparison_note"
       ],
-      "note_hash": "79cc5e066d41feff9d205e1d27e4ccfd414cd3a694f532162658c55e68406e54",
+      "note_hash": "430757207bec00b834c8d02019a046561037c21d2ac22c6d45051fa173249405",
       "path": "docs/publication/ci3_z3/DERIVATION_ATLAS.md",
       "runner_path": null,
       "title": "Derivation Atlas"
@@ -31430,6 +31777,8 @@
         "cosmology_frw_kinematic_reduction_theorem_note_2026-04-24",
         "omega_lambda_matter_bridge_theorem_note_2026-04-22",
         "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25",
+        "hubble_tension_structural_lock_theorem_note_2026-04-26",
+        "cosmology_open_number_reduction_theorem_note_2026-04-26",
         "matter_radiation_equality_structural_identity_theorem_note_2026-04-24",
         "n_eff_from_three_generations_theorem_note_2026-04-24",
         "neutrino_mass_derived_note",
@@ -31547,7 +31896,7 @@
         "charged_lepton_two_higgs_canonical_reduction_note",
         "publication.ci3_z3.claims_table"
       ],
-      "note_hash": "ca6859c26c709428cd99b44f460361dbe7afcfffa67b8b50e0060a971245d47b",
+      "note_hash": "62597d35bb23e35c21d575157af05d1436e36d977a0167da3cd0c16adb600e11",
       "path": "docs/publication/ci3_z3/DERIVATION_VALIDATION_MAP.md",
       "runner_path": null,
       "title": "Derivation / Validation Map"
@@ -31783,6 +32132,9 @@
         "cosmology_frw_kinematic_reduction_theorem_note_2026-04-24",
         "omega_lambda_matter_bridge_theorem_note_2026-04-22",
         "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25",
+        "hubble_tension_structural_lock_theorem_note_2026-04-26",
+        "cosmology_open_number_reduction_theorem_note_2026-04-26",
+        "hubble_lane5_workstream_status_note_2026-04-27",
         "matter_radiation_equality_structural_identity_theorem_note_2026-04-24",
         "n_eff_from_three_generations_theorem_note_2026-04-24",
         "primordial_spectrum_note",
@@ -31899,7 +32251,7 @@
         "koide_q_onsite_source_domain_no_go_synthesis_note_2026-04-25",
         "koide_q_source_domain_canonical_descent_theorem_note_2026-04-25"
       ],
-      "note_hash": "3b8ccb5e02f564ed9797ae5045050a4c074a3bf5176bbfdc853458bb0d396cae",
+      "note_hash": "4bd38a02f0d2a63448cf04c2e3cef2222bc4e53fb8650ea2af1bbc70dbac41d5",
       "path": "docs/publication/ci3_z3/FULL_CLAIM_LEDGER.md",
       "runner_path": null,
       "title": "Full Claim Ledger"
@@ -31956,7 +32308,7 @@
         "publication.ci3_z3.publication_matrix",
         "publication.ci3_z3.prediction_surface_2026-04-15"
       ],
-      "note_hash": "fb542d807c756ae2e5e37b25c5040db395a82390e1ada411f0a3d66ced1d873b",
+      "note_hash": "fd43a021e94af270729258723c83f7d869785d0f9e0e531920b1da882a49c9f2",
       "path": "docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md",
       "runner_path": null,
       "title": "Inputs And Qualifiers"
@@ -32025,7 +32377,7 @@
         "dark_energy_eos_note",
         "graviton_mass_derived_note"
       ],
-      "note_hash": "e4b6458bbc05468b74cddb1fb4531c3e8d1f4695c7b2996af153ec2f28f6ef86",
+      "note_hash": "4c023924d9da09d4f2765f1bb7e37dcbdaf81633eea9cbde092a95267f38244b",
       "path": "docs/publication/ci3_z3/PREDICTION_SURFACE_2026-04-15.md",
       "runner_path": null,
       "title": "Prediction Surface"
@@ -32165,6 +32517,9 @@
         "cosmology_scale_identification_and_reduction_note",
         "cosmology_frw_kinematic_reduction_theorem_note_2026-04-24",
         "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25",
+        "hubble_tension_structural_lock_theorem_note_2026-04-26",
+        "cosmology_open_number_reduction_theorem_note_2026-04-26",
+        "hubble_lane5_workstream_status_note_2026-04-27",
         "matter_radiation_equality_structural_identity_theorem_note_2026-04-24",
         "n_eff_from_three_generations_theorem_note_2026-04-24",
         "ckm_atlas_axiom_closure_note",
@@ -32258,7 +32613,7 @@
         "gw_echo_null_result_note",
         "koide_reviewer_stress_test_note_2026-04-21"
       ],
-      "note_hash": "e341ae4c1d7747baa128719b0c54310734ba0dbdabf339ad31e5b761778d8e45",
+      "note_hash": "1f063fc084134d90c7ec5a6357944be87cd9ef508b8d044b841188e185168280",
       "path": "docs/publication/ci3_z3/PUBLICATION_MATRIX.md",
       "runner_path": null,
       "title": "Publication Matrix"
@@ -32361,6 +32716,8 @@
         "publication.ci3_z3.full_claim_ledger",
         "publication.ci3_z3.publication_matrix",
         "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25",
+        "hubble_tension_structural_lock_theorem_note_2026-04-26",
+        "cosmology_open_number_reduction_theorem_note_2026-04-26",
         "publication.ci3_z3.gravity_publication_package_summary_2026-04-15",
         "publication.ci3_z3.usable_derived_values_index",
         "planck_scale_lane_status_note_2026-04-23",
@@ -32377,7 +32734,7 @@
         "single_axiom_information_note",
         "single_axiom_hilbert_note"
       ],
-      "note_hash": "24015fd1d26be0b4e9b9e4b3054e45aa612f1f50186634aa362c96da893b41a8",
+      "note_hash": "0a8f5bd3d25997e60d92b41a5535da34bd13b38b4dd537fd8aafab95edd677a3",
       "path": "docs/publication/ci3_z3/README.md",
       "runner_path": null,
       "title": "Cl(3) / Z^3 Publication Package"
@@ -32403,7 +32760,7 @@
         "publication.ci3_z3.results_index",
         "publication.ci3_z3.reproducibility_freeze_2026-04-14"
       ],
-      "note_hash": "52a230ae10d3e1dfc8e3b5a01152ba857c2b69d9ea6c9349a56a9bbc5ed6c606",
+      "note_hash": "f2431cff287e3ab1a15b76fa8dc069c5e22f758656bb916943a19aeccdf934fc",
       "path": "docs/publication/ci3_z3/REPRODUCE.md",
       "runner_path": null,
       "title": "Reproduce Guide"
@@ -32578,6 +32935,8 @@
         "omega_lambda_matter_bridge_theorem_note_2026-04-22",
         "cosmology_frw_kinematic_reduction_theorem_note_2026-04-24",
         "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25",
+        "hubble_tension_structural_lock_theorem_note_2026-04-26",
+        "cosmology_open_number_reduction_theorem_note_2026-04-26",
         "matter_radiation_equality_structural_identity_theorem_note_2026-04-24",
         "n_eff_from_three_generations_theorem_note_2026-04-24",
         "retained_cross_lane_consistency_support_note_2026-04-22",
@@ -32759,7 +33118,7 @@
         "ckm_atlas_axiom_closure_note",
         "ckm_thales_pinned_alpha_s_independent_ratios_theorem_note_2026-04-25"
       ],
-      "note_hash": "a8ac939bc24517fb48d7ccfbaf38eae95b1d63e80f99e5114f6e29c0e1b00a59",
+      "note_hash": "7dce308317faf7675e013a1f935b1de5c03d8b30815bdbef7b6e9f02733dc6d8",
       "path": "docs/publication/ci3_z3/RESULTS_INDEX.md",
       "runner_path": null,
       "title": "Results Index"
@@ -32814,6 +33173,8 @@
         "omega_lambda_matter_bridge_theorem_note_2026-04-22",
         "cosmology_frw_kinematic_reduction_theorem_note_2026-04-24",
         "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25",
+        "hubble_tension_structural_lock_theorem_note_2026-04-26",
+        "cosmology_open_number_reduction_theorem_note_2026-04-26",
         "matter_radiation_equality_structural_identity_theorem_note_2026-04-24",
         "n_eff_from_three_generations_theorem_note_2026-04-24",
         "graviton_spectral_tower_theorem_note_2026-04-24",
@@ -32824,7 +33185,7 @@
         "publication.ci3_z3.release_environment",
         "publication.ci3_z3.derivation_atlas"
       ],
-      "note_hash": "b321bbce9999aad21410e91c3891f659a606f1ba5c875ab130a292bed20ff165",
+      "note_hash": "8576f1d27c9f2bea645635a52fdc22f28644ed80ab9c65b2b9a77b5a0376455f",
       "path": "docs/publication/ci3_z3/SCIENCE_MAP.md",
       "runner_path": null,
       "title": "Science Map"
@@ -32938,12 +33299,13 @@
         "ckm_brocard_polynomial_vieta_structural_integers_theorem_note_2026-04-25",
         "ckm_moduli_only_unitarity_jarlskog_area_certificate_theorem_note_2026-04-26",
         "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25",
+        "hubble_tension_structural_lock_theorem_note_2026-04-26",
         "dm_wilson_direct_descendant_schur_feshbach_boundary_variational_theorem_note_2026-04-25",
         "publication.ci3_z3.claims_table",
         "publication.ci3_z3.publication_matrix",
         "publication.ci3_z3.prediction_surface_2026-04-15"
       ],
-      "note_hash": "7893373d8664857e98d1a59cb8f5a609c0965029a52f3fd4422e2cb8f5a82b92",
+      "note_hash": "3034177a17a2d045b0cb40c0e6d60ffa96623eca8612ce4ec4435a234c97fb18",
       "path": "docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md",
       "runner_path": null,
       "title": "What This Paper Does Not Claim"
@@ -38264,7 +38626,13 @@
     "central_band_dense_largen_note",
     "central_band_layernorm_note",
     "central_band_mass_window_note",
+    "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26",
+    "charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27",
+    "charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27",
+    "charged_lepton_radiative_tau_selector_firewall_note_2026-04-26",
+    "charged_lepton_selected_line_generation_selector_no_go_note_2026-04-27",
     "charged_lepton_two_higgs_canonical_reduction_note",
+    "charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27",
     "chiral_3plus1d_boundary_phase_note",
     "chiral_3plus1d_coupled_coin_note",
     "chiral_3plus1d_mixing_period_note",
@@ -38646,6 +39014,11 @@
     "higher_symmetry_gravity_probe_note",
     "higher_symmetry_joint_validation_note",
     "holographic_probe_note_2026-04-11",
+    "hubble_lane5_c3_vacuum_topology_no_active_route_note_2026-04-27",
+    "hubble_lane5_cosmic_history_ratio_necessity_no_go_note_2026-04-26",
+    "hubble_lane5_eta_retirement_gate_audit_note_2026-04-26",
+    "hubble_lane5_planck_c1_gate_audit_note_2026-04-26",
+    "hubble_lane5_workstream_status_note_2026-04-27",
     "i3_zero_exact_theorem_note",
     "if_program_closing_note",
     "impact_parameter_lensing_note",
@@ -39289,18 +39662,18 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4334,
-    "leaf_count": 744,
-    "node_count": 1601,
-    "root_count": 1165,
-    "runners_with_path": 694,
+    "edge_count": 4380,
+    "leaf_count": 750,
+    "node_count": 1614,
+    "root_count": 1176,
+    "runners_with_path": 702,
     "status_counts": {
       "bounded": 209,
       "open": 26,
       "proposed_promoted": 6,
-      "proposed_retained": 435,
-      "support": 129,
-      "unknown": 796
+      "proposed_retained": 439,
+      "support": 135,
+      "unknown": 799
     }
   }
 }
