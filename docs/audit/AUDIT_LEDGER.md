@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T08:41:51.853546+00:00
+**Generated:** 2026-04-27T08:48:22.834680+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 14 |
-| _proposed_retained_ | 204 |
+| **retained** | 15 |
+| _proposed_retained_ | 203 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 14 |
+| `audited_clean` | 15 |
 | `audited_conditional` | 66 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 11 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1499 |
+| `unaudited` | 1498 |
 
 | criticality | count |
 |---|---:|
@@ -101,6 +101,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `graph_first_su3_integration_note` | _proposed_retained_ | audit_in_progress | _proposed_retained_ | - | - | - | - |
 | `s3_mass_matrix_no_go_note` | _proposed_retained_ | audit_in_progress | _proposed_retained_ | - | - | - | - |
 | `action_power_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `alt_connectivity_family_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `i3_zero_exact_theorem_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -242,6 +243,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: The load-bearing step is exact algebra from the definitions alpha_LM = alpha_bare/u_0 and alpha_s(v) = alpha_bare/u_0^2, but the row presents this bookkeeping corollary as a separate proposed-retained theorem and registers no parent dependency or primary runner. Why this blocks: A definition-level geometric-mean identity adds no independent observable, comparator, falsifiability, or new physical bridge beyond the upstream plaquette/coupling surface, so it should not inflate the retained claim surface as a standalone theorem. Repair target: Box this identity under the retained plaquette/coupling-chain parent, or re-promote only if it is shown to be genuine compression used load-bearing by downstream claims with an explicit parent dependency. Claim boundary until fixed: It is safe to state the exact identity as a bookkeeping corollary of the accepted coupling definitions and to use it to avoid double-counting alpha_LM and alpha_s(v) as independent knobs.
 - **open / conditional deps cited:**
   - `accepted_plaquette_coupling_chain_parent_not_registered`
+- **auditor confidence:** high
+
+### `alt_connectivity_family_basin_note`
+
+- **Note:** [`ALT_CONNECTIVITY_FAMILY_BASIN_NOTE.md`](../../docs/ALT_CONNECTIVITY_FAMILY_BASIN_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note's load-bearing finite claim is that the parity-rotated sector-transition family has a bounded basin on the no-restore grown slice, with 32 of 45 drift/seed rows passing exact zero, neutral-cancellation, sign-orientation, and near-linear charge-scaling gates.  _(class `C`)_
+- **chain closes:** True — The live basin runner reproduces the 9-drift by 5-seed sweep and the 32/45 passing-row count, and the printed row table shows exact zero/neutral controls plus near-linear exponents on the passing rows. The conclusion is narrow: it covers only this runner-defined alternative connectivity family on the tested no-restore grown slice, not seed-wide closure or a geometry-generic theorem.
+- **rationale:** The source note is deliberately bounded and the live runner computes the disputed finite surface rather than importing the 32/45 result: it builds each drift/seed geometry, applies the parity-rotated connectivity, propagates zero, plus, minus, neutral, and double-charge sources, and gates rows on zero response, neutral cancellation, sign orientation, and exponent closeness to one. The safe conclusion follows as a finite computational basin statement and explicitly excludes seed-wide closure, a geometry-generic theorem, and uniqueness of the surviving family. Residual risk: the runner's final printed aggregate mean-exponent line uses the neutral column and prints 0.000000, but the per-row exponents and ok predicate carry the note's near-linear scaling statement.
 - **auditor confidence:** high
 
 ### `area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25`

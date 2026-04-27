@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T08:41:51.552564+00:00",
-  "generated_at": "2026-04-27T08:41:49.565121+00:00",
-  "invalidation_run_at": "2026-04-27T08:41:51.480957+00:00",
+  "effective_status_computed_at": "2026-04-27T08:48:22.003861+00:00",
+  "generated_at": "2026-04-27T08:48:19.190435+00:00",
+  "invalidation_run_at": "2026-04-27T08:48:21.906831+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T08:41:51.284356+00:00",
+  "load_bearing_computed_at": "2026-04-27T08:48:21.693212+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -4381,14 +4381,21 @@
       "verdict_rationale": null
     },
     "alt_connectivity_family_basin_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The live basin runner reproduces the 9-drift by 5-seed sweep and the 32/45 passing-row count, and the printed row table shows exact zero/neutral controls plus near-linear exponents on the passing rows. The conclusion is narrow: it covers only this runner-defined alternative connectivity family on the tested no-restore grown slice, not seed-wide closure or a geometry-generic theorem.",
       "claim_id": "alt_connectivity_family_basin_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -4396,13 +4403,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note's load-bearing finite claim is that the parity-rotated sector-transition family has a bounded basin on the no-restore grown slice, with 32 of 45 drift/seed rows passing exact zero, neutral-cancellation, sign-orientation, and near-linear charge-scaling gates.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "cb4afe8b657bf32a2700a05967dd893bf44cde67c5d510ec21c817cc81529533",
@@ -4438,14 +4445,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 32,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 32
       },
       "runner_path": null,
       "title": "ALT Connectivity Family Basin Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The source note is deliberately bounded and the live runner computes the disputed finite surface rather than importing the 32/45 result: it builds each drift/seed geometry, applies the parity-rotated connectivity, propagates zero, plus, minus, neutral, and double-charge sources, and gates rows on zero response, neutral cancellation, sign orientation, and exponent closeness to one. The safe conclusion follows as a finite computational basin statement and explicitly excludes seed-wide closure, a geometry-generic theorem, and uniqueness of the surviving family. Residual risk: the runner's final printed aggregate mean-exponent line uses the neutral column and prints 0.000000, but the per-row exponents and ok predicate carry the note's near-linear scaling statement."
     },
     "alt_connectivity_family_complex_failure_note": {
       "audit_date": null,

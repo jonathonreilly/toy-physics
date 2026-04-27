@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 88,
     "high": 506,
-    "leaf": 830,
+    "leaf": 829,
     "medium": 78
   },
-  "generated_at": "2026-04-27T08:41:51.623281+00:00",
+  "generated_at": "2026-04-27T08:48:22.358008+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -17800,23 +17800,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "alt_connectivity_family_basin_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/ALT_CONNECTIVITY_FAMILY_BASIN_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "alt_connectivity_family_complex_failure_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -30308,6 +30291,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1091,
-  "total_pending": 1502
+  "ready_count": 1090,
+  "total_pending": 1501
 }
