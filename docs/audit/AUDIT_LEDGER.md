@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T08:36:05.953569+00:00
+**Generated:** 2026-04-27T08:41:51.853546+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 14 |
-| _proposed_retained_ | 205 |
+| _proposed_retained_ | 204 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
 | ~~audited_conditional~~ | 277 |
-| ~~audited_failed~~ | 77 |
+| ~~audited_failed~~ | 78 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 14 |
 | `audited_conditional` | 66 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 10 |
+| `audited_failed` | 11 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1500 |
+| `unaudited` | 1499 |
 
 | criticality | count |
 |---|---:|
@@ -183,6 +183,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `koide_q_eq_3delta_identity_note_2026-04-21` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `retained_cross_lane_consistency_support_note_2026-04-22` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | B | - |
+| `ai_methodology.raw.prompts_session_ebae4639_jonreilly` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `causal_field_reconciliation_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `causal_propagating_field_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `equivalence_principle_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | G | - |
@@ -212,6 +213,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** For the axiom-fork action S = L*|f|^0.5, the canonical harness supports a bounded 3D close-slit barrier card for Born/k=0/MI/d_TV/decoherence, a same-family no-barrier distance and mass-response companion, and a bounded negative for 3D barrier attraction on the ordered-family sweeps.  _(class `C`)_
 - **chain closes:** True — The registered/source-note canonical harness reproduces the 2D and 3D action-power tables, and the source-note gravity-sign closure runner reproduces the 0/14 strength, 0/3 density, and 0/8 jitter negative sweeps. The source note explicitly scopes the result as an axiom fork and excludes same-harness Newtonian closure, 3D barrier attraction, continuum limits, and multi-spacing robustness.
 - **rationale:** The bounded finite claim closes on its own terms: the action-power harness reproduces Born-clean and k=0-clean 3D barrier values, MI/d_TV/decoherence diagnostics, the no-barrier distance exponent about -1.84 with F proportional to M near 1.00, and the live gravity-sign closure reproduces the all-away ordered-family sweeps. This clean audit ratifies only the finite axiom-fork card and its stated negative boundary, not a replacement for the spent-delay flagship, not attraction on the barrier card, and not a continuum or robustness theorem. Residual boundary: the later dimensional-interpretation comparison row for the 3D spent-delay exponent is not needed for the retained action-power card and should not be treated as the audited result; the canonical runner's current spent-delay 3D no-barrier output is +0.74.
+- **auditor confidence:** high
+### `ai_methodology.raw.prompts_session_ebae4639_jonreilly`
+
+- **Note:** [`ai_methodology/raw/prompts_session_ebae4639_jonreilly.md`](../../docs/ai_methodology/raw/prompts_session_ebae4639_jonreilly.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The raw prompt transcript records the ISSR1/BICAC/JTS chain and runner as proposed-retained support for quark endpoint closure.  _(class `B`)_
+- **chain closes:** False — The queued source is a raw methodology transcript, not a canonical theorem note; it contains stale and contradictory embedded statuses for the ISSR1/JTS chain, while the live runner supports a different current theorem packet.
+- **rationale:** Issue: the audited source artifact is a raw prompt transcript that quotes multiple inconsistent states of the ISSR1/BICAC/JTS work, including stale PASS=41/JTS-residue language and later task text asking for JTS proof work, whereas the live runner now reports PASS=13 for a separate current theorem packet. Why this blocks: a hostile physicist cannot ratify a stable proposed-retained theorem from a raw conversation transcript whose embedded status disagrees with the current runner and whose real theorem content lives in canonical QUARK_* notes outside this queue row. Repair target: remove or demote raw prompt transcripts from the proposed_retained audit queue, then register and audit docs/QUARK_ISSR1_BICAC_FORCING_THEOREM_NOTE_2026-04-19.md with its JTS and shell-normalization dependencies as the canonical claim. Claim boundary until fixed: it is safe to say the live ISSR1 runner verifies its finite affine-carrier/JTS/BICAC algebra with PASS=13 FAIL=0; it is not safe to retain this raw transcript as a scientific theorem.
+- **open / conditional deps cited:**
+  - `ai_methodology/raw/prompts_session_ebae4639_jonreilly.md is raw transcript rather than canonical theorem note`
+  - `stale embedded PASS=41/JTS-residue transcript state conflicts with live PASS=13/JTS-derived runner state`
+  - `canonical ISSR1/JTS theorem notes are not registered as this row's one-hop dependencies`
 - **auditor confidence:** high
 
 ### `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24`
