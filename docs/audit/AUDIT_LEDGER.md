@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T22:23:15.038714+00:00
+**Generated:** 2026-04-27T22:25:21.839719+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 72 |
-| _proposed_retained_ | 13 |
+| _proposed_retained_ | 12 |
 | _proposed_promoted_ | 1 |
 | bounded | 185 |
 | support | 104 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
 | ~~audited_conditional~~ | 169 |
-| ~~audited_failed~~ | 329 |
+| ~~audited_failed~~ | 330 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 72 |
 | `audited_conditional` | 139 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 75 |
+| `audited_failed` | 76 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1316 |
+| `unaudited` | 1315 |
 
 | criticality | count |
 |---|---:|
@@ -387,6 +387,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_p1_delta_2_bz_computation_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `yt_p1_delta_r_master_assembly_theorem_note_2026-04-18` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `yt_p1_h_unit_renormalization_framework_native_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `bell_inequality_derived_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -4952,6 +4953,25 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
   - `YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md`
   - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
+- **auditor confidence:** high
+
+### `yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17`
+
+- **Note:** [`YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`](../../docs/YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note claims a definitive PARTIAL CANCELLATION verdict: external Z_psi cancels exactly, full cancellation is rejected, and the ratio retains generically nonzero C_F, C_A, and T_F n_f channel coefficients so the cited P1 bracket remains operational.  _(class `B`)_
+- **chain closes:** False — The runner establishes symbolic cancellation of the shared external-leg term, but it does not compute or bound the actual BZ integrals I_v_scalar, I_v_gauge, and I_SE. Its rejection of full cancellation uses representative scenarios, not the retained-surface integral values needed to rule out accidental channel or total cancellation.
+- **rationale:** Issue: the exact external Z_psi cancellation is shown, but the load-bearing claim that full cancellation is definitively rejected and that the P1 bracket remains operational is supported only by symbolic channel formulas plus hand-picked representative BZ scenarios; the actual retained-surface values of I_v_scalar, I_v_gauge, and I_SE are not computed or bounded. Why this blocks: whether the Ward ratio has nonzero channel coefficients or a nonzero total correction is decided by those BZ integrals, and a generic/scenario argument cannot close a Nature-grade cancellation theorem. Repair target: perform the framework-native 1-loop BZ evaluation, or prove identities/inequalities for I_v_scalar - I_v_gauge and I_SE that rule out full channel cancellation and quantify the ratio correction; then make the runner consume those computed/bounded integrals. Claim boundary until fixed: safe to claim exact cancellation of the common external-quark Z_psi term and the displayed symbolic difference formula conditional on the contribution catalog; not safe to claim a definitive partial-cancellation theorem, nonzero ratio correction, or retained operational P1 bracket from this note alone.
+- **open / conditional deps cited:**
+  - `UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md`
+  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
+  - `YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
+  - `YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md`
+  - `YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md`
+  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
 - **auditor confidence:** high
 
 ### `yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17`
