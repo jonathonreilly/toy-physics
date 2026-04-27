@@ -109,21 +109,39 @@ step per skill delivery policy.
 - **Disposition:** Cycle 3 accepted. R7 route is not productive for
   single-cycle Lane-1-internal work under current framework content.
 
-## Cycle 4+ — pending evaluation
+## Cycle 4 — workstream consolidation
 
-After Cycles 1-3, the natural Lane-1-internal claim-state movement
-is winding down. Remaining single-cycle candidates:
+- **Date:** 2026-04-27
+- **Artifact:**
+  `docs/HADRON_LANE1_WORKSTREAM_STATUS_NOTE_2026-04-27.md`
+  (consolidation status note; no runner).
+- **Review mode:** branch-local 6-criterion self-review.
+- **Findings:** all PASS. Editorial consolidation; no new claim
+  introduced. Identifies single highest-leverage Lane-3 sub-target
+  (`m_u + m_d` combined retention) and single highest-leverage
+  Lane-1-internal target (`(B2)` closure for `sqrt(sigma)`
+  retained-with-budget). Recommended manuscript-surface weaves
+  enumerated for post-workstream integration. Mirrors hubble-h0
+  Cycle 6 pattern.
+- **Disposition:** Cycle 4 accepted. Workstream now has a single
+  navigation surface for the post-workstream review pipeline.
+
+## Cycle 5+ — pending evaluation
+
+The natural Lane-1-internal claim-state movement is now nearly
+exhausted (mirrors hubble-h0 trajectory through 8 cycles + close-out).
+Remaining single-cycle candidates:
 
 - **Cross-cycle hygiene audit** (mirrors hubble-h0 Cycle 7): check
-  coherence of the four artifacts (theorem plan + sqrt(sigma) gate
-  + Sigma scoping + this review history).
-- **Workstream consolidation note** (mirrors hubble-h0 Cycle 6):
-  single Lane 1 status surface synthesizing Cycles 1-3.
-- **Lane 3 progress checkpoint:** check whether Lane 3 has retained
-  `m_u + m_d` since this branch was created (would unblock
-  Phase-2 3A m_pi in the theorem plan).
+  coherence of the four artifacts; one-edit close-out.
+- **Lane 3 progress checkpoint**: `git fetch origin` and inspect
+  whether Lane 3 has retained `m_u + m_d` since this branch was
+  created. If yes, Phase-2 3A becomes the new active target.
+- **Honest stop and hand off**: per the skill's stop conditions
+  ("stop cleanly when no route passes the dramatic-step gate").
 
-Recommended Cycle 4: workstream consolidation note (mirrors hubble-h0
-Cycle 6). Useful payload for the post-workstream review pipeline.
+Recommended Cycle 5: cross-cycle hygiene audit + Lane 3 progress
+checkpoint combined into one cycle, then honest stop if Lane 3
+hasn't advanced.
 
 Loop continues per ScheduleWakeup.
