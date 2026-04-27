@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T12:29:44.320766+00:00",
-  "generated_at": "2026-04-27T12:29:42.788534+00:00",
-  "invalidation_run_at": "2026-04-27T12:29:44.274723+00:00",
+  "effective_status_computed_at": "2026-04-27T12:32:05.562335+00:00",
+  "generated_at": "2026-04-27T12:32:03.988070+00:00",
+  "invalidation_run_at": "2026-04-27T12:32:05.517379+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T12:29:44.182822+00:00",
+  "load_bearing_computed_at": "2026-04-27T12:32:05.423418+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -30207,14 +30207,21 @@
       "verdict_rationale": "The no-go closes on its own terms: chi=0 exactly reproduces the matched trap/control baseline, all matched shifts vanish at chi=0, nonzero chi produces only tiny matched shell and phase shifts, and F~M at chi=0.5 is essentially flat rather than a useful mass-scaling signal. The source explicitly treats this as a bounded failure of the frontier-echo architecture, not as a retained causal-field theory. Residual boundary: the retained content is only the negative result for this tested matched-null frontier-echo ansatz on the specified grown row."
     },
     "gate_b_grown_trapping_frontier_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The live runner recomputes the declared eta sweep on the drift=0.2, restore=0.7 row, including exact eta=0 reduction, falling escape, and monotone frontier-bias increase. The note explicitly limits the result to a bounded transport observable and excludes horizon theory, bidirectional field equations, and generated-family transfer.",
       "claim_id": "gate_b_grown_trapping_frontier_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -30222,13 +30229,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "the detector-layer frontier bias rises steadily with eta while eta = 0 reproduces the grown baseline exactly, so the trap is doing more than simple attenuation on the tested row.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "f1100ad9ea721194f8e20ec09c9cdb0d1b48dcacd2bd137c00dfd0f3e56e4a9b",
@@ -30264,14 +30271,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 6,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 6
       },
       "runner_path": null,
       "title": "Gate B Grown Trapping Frontier Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The finite bounded positive closes through the current runner: eta=0 is the baseline by construction, escape falls monotonically from 0.919 to 0.557 over the nonzero eta sweep, and frontier_bias rises monotonically from +0.0227 to +0.1509. The source does not claim a horizon theory, generated-family transfer, or general field equation, so the retained content is only this transport/frontier observable on the specified grown row. Residual boundary: the frozen log path named in the note is missing from the repo, but the live runner fully recomputes the table and is the load-bearing artifact here."
     },
     "gate_b_grown_trapping_frontier_v2_note": {
       "audit_date": null,
