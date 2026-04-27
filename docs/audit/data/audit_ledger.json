@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T14:14:19.611597+00:00",
-  "generated_at": "2026-04-27T14:14:18.037514+00:00",
-  "invalidation_run_at": "2026-04-27T14:14:19.566447+00:00",
+  "effective_status_computed_at": "2026-04-27T14:16:25.551418+00:00",
+  "generated_at": "2026-04-27T14:16:23.971247+00:00",
+  "invalidation_run_at": "2026-04-27T14:16:25.505566+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T14:14:19.472514+00:00",
+  "load_bearing_computed_at": "2026-04-27T14:16:25.409241+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -37591,14 +37591,21 @@
       "verdict_rationale": "The retained claim is the scoped exact theorem that I_3 vanishes once amplitudes add linearly and probabilities are quadratic, not a freestanding derivation of the Born rule. The runner verifies the identity for arbitrary complex amplitudes, higher Sorkin orders under the Born rule, a non-Born control, and concrete 1D/3D lattice propagator cross-checks, with 6 computed passes and no failures. Residual boundary: this audit ratifies the Hilbert-surface no-third-order-interference theorem only; it does not promote any claim that P=|A|^2 itself has been derived from the lattice axioms alone."
     },
     "if_program_closing_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The note is a program-level synthesis with no declared runner, artifact chain, or cited one-hop notes/logs. The retained topology conclusion, large-N visibility caveat, seven failed emergence attempts, and IF/CL closure therefore cannot be audited from the allowed materials.",
       "claim_id": "if_program_closing_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -37606,13 +37613,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The IF / CL route works when the topology preserves branch separation, while the old dense connected local-architecture search is closed and should not be reopened.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "b0cd97b49e8b43ad10a7e96bdbbe12bba0199f3e4e956326acf08b66d7a07f8c",
@@ -37655,7 +37662,7 @@
       "runner_path": null,
       "title": "IF Decoherence Program: Uniform-DAG Closure and Topology Outcome",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the source promotes a retained repo-facing IF/CL topology outcome, but it provides no executable artifact, no runner output, and no explicit one-hop source notes for the dense-DAG failures, modular/gap-controlled positives, large-N visibility caveat, or seven failed local emergence attempts. Why this blocks: a program-closing retained claim cannot be verified from uncited narrative summaries; a hostile reviewer cannot check whether the same observable, topology family, IF/CL machinery, and gravity/decoherence criteria are being compared consistently. Repair target: split the memo into explicit cited inputs, add or cite the runners/logs for dense-uniform failure, modular-gap positive, large-N visibility, and local-emergence failures, then state a narrower claim whose conclusion follows from those one-hop artifacts. Claim boundary until fixed: safely treat this as a planning/triage memo: IF/CL and gap-controlled topology are current working hypotheses, while broad dense-connected architecture search should not be reopened without new cited evidence."
     },
     "impact_parameter_lensing_note": {
       "audit_date": null,
