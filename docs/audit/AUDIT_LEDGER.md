@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T15:07:17.844616+00:00
+**Generated:** 2026-04-27T15:09:01.196782+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -21,7 +21,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 51 |
 | _proposed_retained_ | 115 |
-| _proposed_promoted_ | 2 |
+| _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
 | open | 11 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
 | ~~audited_conditional~~ | 314 |
-| ~~audited_failed~~ | 100 |
+| ~~audited_failed~~ | 101 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 51 |
 | `audited_conditional` | 101 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 33 |
+| `audited_failed` | 34 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1415 |
+| `unaudited` | 1414 |
 
 | criticality | count |
 |---|---:|
@@ -284,6 +284,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `kernel_vs_gravity_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `lattice_3d_dense_spent_delay_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `lattice_kernel_transfer_norm_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `lattice_synthesis_guard_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `mirror_2d_gravity_law_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `staggered_backreaction_green_closure_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `structured_mirror_bornsafe_scan_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -2552,6 +2553,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The NN fixed-node field-strength mass-response table stays positive on the deterministic Born-safe refinement path after h = 0.5, and the alpha-scaled probe makes the h = 0.5 to h = 0.25 response less spacing-sensitive without promoting F proportional to M.  _(class `C`)_
 - **chain closes:** True — The live mass-response script recomputes the deterministic refinement table, Born values, alpha-scaled gravity rows, and Born spot-check from the canonical harnesses; the note keeps the conclusion bounded and explicitly rejects an F proportional to M continuum claim.
 - **rationale:** The live runner reproduces the source table: deterministic h = 1.0 through 0.0625 has machine-precision Born values, MI and d_TV rising toward 1, and positive gravity after h = 0.5 while shrinking toward zero. It also reproduces the alpha-scaled probe, where alpha = 1.0 and 1.5 are less spacing-sensitive and remain Born-clean on the checked rows. The source does not overstate this as F proportional to M or a continuum theorem, so the finite bounded mass-response claim closes; the missing archived log is a reproducibility hygiene issue, not a blocker because the live runner reproduces the artifact.
+- **auditor confidence:** high
+
+### `lattice_synthesis_guard_note`
+
+- **Note:** [`LATTICE_SYNTHESIS_GUARD_NOTE.md`](../../docs/LATTICE_SYNTHESIS_GUARD_NOTE.md)
+- **current_status:** _proposed_promoted_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note says the NN refinement branch is a bounded bridge and explicitly not a proposed_promoted continuum theorem; further promotion requires a canonical NN refinement/RG artifact chain.  _(class `B`)_
+- **chain closes:** False — The queued proposed_promoted status is a parser false positive from the phrase 'not a proposed_promoted continuum theorem'; the note itself is a conservative synthesis guard, has no runner, and cites UNIFIED_PROGRAM_NOTE.md, whose effective status is audited_failed.
+- **rationale:** Issue: the source explicitly disclaims the promoted-continuum claim that caused it to enter the proposed_promoted queue, and it provides no independent runner or artifact chain for a project-level promotion. Why this blocks: an audit cannot ratify a promoted claim that the source itself says is not being made, especially when the cited synthesis note is effective audited_failed and the underlying lattice/NN branches remain bounded or conditional. Repair target: change the status text so the audit parser does not classify this guard note as proposed_promoted, and promote only after the NN refinement/RG chain has audit-clean artifact-backed notes. Claim boundary until fixed: safely claim this as conservative synthesis guidance: mirror remains flagship, ordered lattice is a secondary bounded branch, NN refinement is a promising bounded bridge, and no blanket one-family or continuum lattice theorem is retained.
+- **open / conditional deps cited:**
+  - `UNIFIED_PROGRAM_NOTE.md`
 - **auditor confidence:** high
 
 ### `lensing_beta_sweep_note`

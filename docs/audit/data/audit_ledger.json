@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T15:07:17.659896+00:00",
-  "generated_at": "2026-04-27T15:07:16.078533+00:00",
-  "invalidation_run_at": "2026-04-27T15:07:17.613395+00:00",
+  "effective_status_computed_at": "2026-04-27T15:09:01.014152+00:00",
+  "generated_at": "2026-04-27T15:08:59.420994+00:00",
+  "invalidation_run_at": "2026-04-27T15:09:00.968072+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T15:07:17.518774+00:00",
+  "load_bearing_computed_at": "2026-04-27T15:09:00.874107+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -45799,14 +45799,21 @@
       "verdict_rationale": null
     },
     "lattice_synthesis_guard_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The queued proposed_promoted status is a parser false positive from the phrase 'not a proposed_promoted continuum theorem'; the note itself is a conservative synthesis guard, has no runner, and cites UNIFIED_PROGRAM_NOTE.md, whose effective status is audited_failed.",
       "claim_id": "lattice_synthesis_guard_note",
       "criticality": "leaf",
       "current_status": "proposed_promoted",
@@ -45814,18 +45821,20 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_promoted",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_promoted",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note says the NN refinement branch is a bounded bridge and explicitly not a proposed_promoted continuum theorem; further promotion requires a canonical NN refinement/RG artifact chain.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "03bc81ef4edbfa6d0bcf542a5cfc56ac141dcf313f952897de45def4cf8d5d03",
       "note_path": "docs/LATTICE_SYNTHESIS_GUARD_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/UNIFIED_PROGRAM_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368989+00:00",
@@ -45863,7 +45872,7 @@
       "runner_path": null,
       "title": "Lattice Synthesis Guard Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the source explicitly disclaims the promoted-continuum claim that caused it to enter the proposed_promoted queue, and it provides no independent runner or artifact chain for a project-level promotion. Why this blocks: an audit cannot ratify a promoted claim that the source itself says is not being made, especially when the cited synthesis note is effective audited_failed and the underlying lattice/NN branches remain bounded or conditional. Repair target: change the status text so the audit parser does not classify this guard note as proposed_promoted, and promote only after the NN refinement/RG chain has audit-clean artifact-backed notes. Claim boundary until fixed: safely claim this as conservative synthesis guidance: mirror remains flagship, ordered lattice is a secondary bounded branch, NN refinement is a promising bounded bridge, and no blanket one-family or continuum lattice theorem is retained."
     },
     "lattice_weak_field_mass_scaling_note": {
       "audit_date": null,
