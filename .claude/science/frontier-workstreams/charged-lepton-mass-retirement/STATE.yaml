@@ -1,0 +1,64 @@
+slug: charged-lepton-mass-retirement
+goal: "retire charged-lepton mass imports"
+target_status: retained
+mode: run
+runtime: 10h
+start_time_utc: "2026-04-26T16:14:51Z"
+checkpoint_interval: 30m
+branch: frontier/charged-lepton-mass-retirement-20260426
+base: origin/main
+lock_status: unavailable
+lock_note: "scripts/automation_lock.py status was unavailable in the workstream environment; no cooperative lock was acquired."
+current_phase: cycle_6_typeb_radian_readout_generation_selector_no_go_complete
+cycles_completed: 6
+active_route: typeb_radian_readout_plus_source_generation_selector_no_go
+supervisor:
+  requested_runtime: 10h
+  launch_mode: detached_codex_exec_loop
+  status_path: .claude/science/frontier-workstreams/charged-lepton-mass-retirement/supervisor_status.json
+  log_path: .claude/science/frontier-workstreams/charged-lepton-mass-retirement/supervisor.log
+  stop_file: .claude/science/frontier-workstreams/charged-lepton-mass-retirement/STOP_REQUESTED
+files_touched:
+  - .claude/science/frontier-workstreams/charged-lepton-mass-retirement/STATE.yaml
+  - .claude/science/frontier-workstreams/charged-lepton-mass-retirement/ASSUMPTIONS_AND_IMPORTS.md
+  - .claude/science/frontier-workstreams/charged-lepton-mass-retirement/NO_GO_LEDGER.md
+  - .claude/science/frontier-workstreams/charged-lepton-mass-retirement/GOAL.md
+  - .claude/science/frontier-workstreams/charged-lepton-mass-retirement/REVIEW_HISTORY.md
+  - .claude/science/frontier-workstreams/charged-lepton-mass-retirement/LITERATURE_BRIDGES.md
+  - .claude/science/frontier-workstreams/charged-lepton-mass-retirement/ARTIFACT_PLAN.md
+  - .claude/science/frontier-workstreams/charged-lepton-mass-retirement/HANDOFF.md
+  - .claude/science/frontier-workstreams/charged-lepton-mass-retirement/ROUTE_PORTFOLIO.md
+  - docs/CHARGED_LEPTON_DIRECT_WARD_FREE_YUKAWA_NO_GO_NOTE_2026-04-26.md
+  - docs/CHARGED_LEPTON_RADIATIVE_TAU_SELECTOR_FIREWALL_NOTE_2026-04-26.md
+  - docs/CHARGED_LEPTON_KOIDE_RATIO_SOURCE_SELECTOR_FIREWALL_NOTE_2026-04-27.md
+  - docs/CHARGED_LEPTON_SELECTED_LINE_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md
+  - docs/CHARGED_LEPTON_OP_LOCAL_SOURCE_SELECTED_LINE_SELECTOR_NO_GO_NOTE_2026-04-27.md
+  - docs/CHARGED_LEPTON_TYPEB_RADIAN_READOUT_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md
+  - scripts/frontier_charged_lepton_direct_ward_free_yukawa_no_go.py
+  - scripts/frontier_charged_lepton_radiative_tau_selector_firewall.py
+  - scripts/frontier_charged_lepton_koide_ratio_source_selector_firewall.py
+  - scripts/frontier_charged_lepton_selected_line_generation_selector_no_go.py
+  - scripts/frontier_charged_lepton_op_local_source_selected_line_selector_no_go.py
+  - scripts/frontier_charged_lepton_typeb_radian_readout_generation_selector_no_go.py
+  - outputs/frontier_charged_lepton_typeb_radian_readout_generation_selector_no_go_2026-04-27.txt
+open_imports:
+  - "PDG charged-lepton masses used as a 3-real observational pin in the bounded package"
+  - "overall charged-lepton scale V_0"
+  - "tau-generation charged-lepton Ward identity y_tau"
+  - "Koide Q source-domain physical-selection primitive"
+  - "Brannen delta based endpoint/readout primitive after scalar Type-B-to-radian readout no-go"
+  - "non-observational generation label or tau-scale selector"
+no_go_routes:
+  - "direct top-Ward lift from one-Higgs gauge selection to charged-lepton y_tau"
+  - "standalone radiative alpha_LM/(4pi) tau selector without generation/source primitive"
+  - "Koide Q plus selected-line/Brannen phase as a standalone generation/tau-scale selector"
+  - "unbased selected-line/Brannen phase orbit as a physical generation/tau-scale selector"
+  - "OP-local C3-fixed Q source support plus unbased selected-line/Brannen phase as a physical generation/tau-scale selector"
+  - "Type-B-to-radian scalar readout plus OP-local Q source support as a physical generation/tau-scale selector"
+review_findings:
+  - "cycle_3_review_loop_emulated: PASS WITH BOUNDED/NO-GO CLAIMS; artifact keeps PDG masses comparator-only and does not promote Q/delta support to mass retention"
+  - "cycle_4_review_loop_emulated: PASS WITH NO-GO CLAIM; artifact grants non-PDG Q/delta support but proves unbased C3 orbit data cannot select a single physical generation label without a based endpoint/source law"
+  - "cycle_5_review_loop_emulated: PASS WITH NO-GO CLAIM; artifact grants OP-local C3-fixed source support for Q=2/3 and still proves the combined source-plus-selected-line data cannot select one generation label without a based endpoint/source/tau-scale law"
+  - "cycle_6_review_loop_emulated: PASS WITH NO-GO CLAIM; artifact grants a scalar Type-B-to-radian readout plus OP-local Q source support and still proves no C3-natural generation selector exists without a based endpoint/source/tau-scale law"
+next_exact_action: "Stop requested for this unattended loop unless a new premise is supplied. The next scientific action is to derive an actual based endpoint/source/generation theorem: a selected-line basepoint law, a Type-B-to-radian readout with physical basepoint, a source-domain theorem that excludes commutant Z and supplies a base, or a non-observational tau-scale selector. Do not repeat Q=2/3, delta=2/9, scalar radian readout, OP-local source support, or unbased-orbit value matching."
+stop_condition: "STOP_REQUESTED after cycle 6 because no remaining repo-native ratio/source route passes the dramatic-step gate without a new based physical law"
