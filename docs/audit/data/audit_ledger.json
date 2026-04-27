@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T11:03:12.195470+00:00",
-  "generated_at": "2026-04-27T11:03:10.283316+00:00",
-  "invalidation_run_at": "2026-04-27T11:03:12.120235+00:00",
+  "effective_status_computed_at": "2026-04-27T11:05:31.396334+00:00",
+  "generated_at": "2026-04-27T11:05:29.271579+00:00",
+  "invalidation_run_at": "2026-04-27T11:05:31.333573+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T11:03:11.975795+00:00",
+  "load_bearing_computed_at": "2026-04-27T11:05:31.196250+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -27026,14 +27026,21 @@
       "verdict_rationale": null
     },
     "ew_coupling_derivation_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_numerical_match",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner reproduces its own near-match to sin^2(theta_W), but it does so after a target scan over taste_weight and states that taste_weight = 0.390 still requires a physical derivation. The source note itself is superseded, has stale coupling numbers relative to the runner, and explicitly says g_2(v) and lambda(v) are not derived.",
       "claim_id": "ew_coupling_derivation_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -27041,18 +27048,24 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_numerical_match",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_numerical_match",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The registered runner closes the weak-angle gap only by scanning an effective taste_weight and choosing about 0.390 to match observed sin^2(theta_W), while the source note is superseded and leaves g_2(v) and lambda(v) bounded rather than derived.",
+      "load_bearing_step_class": "G",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "e38af095b484e0b6e74ba92c0605a84879480fee0d78ac41c36c9bad3e2dab3f",
       "note_path": "docs/EW_COUPLING_DERIVATION_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/COMPLETE_PREDICTION_CHAIN_2026_04_15.md_superseding_authority_not_registered",
+        "taste_weight_physical_derivation_missing",
+        "su2_nonperturbative_matching_open",
+        "higgs_lambda_from_g5_condensate_open",
+        "source_note_stale_relative_to_registered_runner"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368283+00:00",
@@ -27083,14 +27096,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "C": 4,
+        "D": 6,
+        "total_pass": 10
       },
       "runner_path": "scripts/frontier_yt_ew_coupling_derivation.py",
       "title": "Electroweak Coupling Derivation: g_1(v), g_2(v), lambda(v)",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the proposed_retained EW-coupling derivation is not a closed derivation from retained inputs; the runner selects a fitted taste_weight against the observed weak angle, and the note says the packet is superseded support work with g_2 and lambda still bounded/open. Why this blocks: a hostile referee cannot treat a scanned value, a 12.22% miss in 1/alpha_EM, and open SU(2)/Higgs matching as a retained derivation of g_1(v), g_2(v), or lambda(v). Repair target: derive the taste-gauge coupling/taste_weight from registered lattice representation theory or Monte Carlo, register the superseding complete-chain note as the governing one-hop authority, and update the runner so it predicts sin^2(theta_W), g_1, g_2, and lambda without fitting to the target. Claim boundary until fixed: it is safe to claim a support scan showing that bare geometric couplings plus a tuned taste-threshold parameter can numerically match sin^2(theta_W) and that EW imports remain important; it is not safe to claim a retained EW-coupling derivation."
     },
     "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26": {
       "audit_date": null,

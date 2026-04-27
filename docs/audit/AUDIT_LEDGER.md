@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T11:03:12.482507+00:00
+**Generated:** 2026-04-27T11:05:31.669869+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,14 +20,14 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 26 |
-| _proposed_retained_ | 172 |
+| _proposed_retained_ | 171 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 101 |
 | open | 11 |
 | unknown | 720 |
 | ~~audited_decoration~~ | 3 |
-| ~~audited_numerical_match~~ | 4 |
+| ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
 | ~~audited_conditional~~ | 290 |
 | ~~audited_failed~~ | 86 |
@@ -39,9 +39,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 79 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 19 |
-| `audited_numerical_match` | 4 |
+| `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1465 |
+| `unaudited` | 1464 |
 
 | criticality | count |
 |---|---:|
@@ -229,6 +229,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `bell_inequality_derived_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
+| `ew_coupling_derivation_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `complex_selectivity_predictor_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
@@ -1101,6 +1102,24 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `imposed_detector_purity_nan`
   - `fixed_point_convergence_not_observed`
   - `generated_vs_imposed_positive_comparator_not_established`
+- **auditor confidence:** high
+
+### `ew_coupling_derivation_note`
+
+- **Note:** [`EW_COUPLING_DERIVATION_NOTE.md`](../../docs/EW_COUPLING_DERIVATION_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The registered runner closes the weak-angle gap only by scanning an effective taste_weight and choosing about 0.390 to match observed sin^2(theta_W), while the source note is superseded and leaves g_2(v) and lambda(v) bounded rather than derived.  _(class `G`)_
+- **chain closes:** False — The live runner reproduces its own near-match to sin^2(theta_W), but it does so after a target scan over taste_weight and states that taste_weight = 0.390 still requires a physical derivation. The source note itself is superseded, has stale coupling numbers relative to the runner, and explicitly says g_2(v) and lambda(v) are not derived.
+- **rationale:** Issue: the proposed_retained EW-coupling derivation is not a closed derivation from retained inputs; the runner selects a fitted taste_weight against the observed weak angle, and the note says the packet is superseded support work with g_2 and lambda still bounded/open. Why this blocks: a hostile referee cannot treat a scanned value, a 12.22% miss in 1/alpha_EM, and open SU(2)/Higgs matching as a retained derivation of g_1(v), g_2(v), or lambda(v). Repair target: derive the taste-gauge coupling/taste_weight from registered lattice representation theory or Monte Carlo, register the superseding complete-chain note as the governing one-hop authority, and update the runner so it predicts sin^2(theta_W), g_1, g_2, and lambda without fitting to the target. Claim boundary until fixed: it is safe to claim a support scan showing that bare geometric couplings plus a tuned taste-threshold parameter can numerically match sin^2(theta_W) and that EW imports remain important; it is not safe to claim a retained EW-coupling derivation.
+- **open / conditional deps cited:**
+  - `COMPLETE_PREDICTION_CHAIN_2026_04_15.md_superseding_authority_not_registered`
+  - `taste_weight_physical_derivation_missing`
+  - `su2_nonperturbative_matching_open`
+  - `higgs_lambda_from_g5_condensate_open`
+  - `source_note_stale_relative_to_registered_runner`
 - **auditor confidence:** high
 
 ### `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25`
