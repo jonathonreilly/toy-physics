@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T03:48:46.605004+00:00
+**Generated:** 2026-04-27T03:51:38.454755+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 2 |
-| _proposed_retained_ | 283 |
+| _proposed_retained_ | 281 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
@@ -28,16 +28,16 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | unknown | 735 |
 | ~~audited_decoration~~ | 1 |
 | ~~audited_numerical_match~~ | 3 |
-| ~~audited_conditional~~ | 274 |
+| ~~audited_conditional~~ | 276 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 2 |
-| `audited_conditional` | 17 |
+| `audited_conditional` | 18 |
 | `audited_decoration` | 1 |
 | `audited_numerical_match` | 3 |
-| `unaudited` | 1575 |
+| `unaudited` | 1574 |
 
 | criticality | count |
 |---|---:|
@@ -46,7 +46,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 85 |
 | `leaf` | 856 |
 
-- **Proposed claims demoted by upstream:** 130
+- **Proposed claims demoted by upstream:** 131
 - **Citation cycles detected:** 283
 
 ### Runner classification (static heuristic)
@@ -108,6 +108,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lensing_beta_sweep_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lensing_k_sweep_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `linear_response_true_kubo_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `matter_inertial_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `native_gauge_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `neutrino_dirac_z3_support_trichotomy_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `planck_boundary_density_extension_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -352,6 +353,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `runner_not_registered_for_linear_response_true_kubo_note`
   - `logs/2026-04-07-linear-response-true-kubo.txt_not_registered_primary_output`
+- **auditor confidence:** high
+
+### `matter_inertial_closure_note`
+
+- **Note:** [`MATTER_INERTIAL_CLOSURE_NOTE.md`](../../docs/MATTER_INERTIAL_CLOSURE_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Gaussian packets under the same uniform linear force give Newton-linear delta_z(g) per packet but equivalence-principle slopes differing by 123% across packets, so generator-invariant inertial mass fails at the persistent-object level.  _(class `C`)_
+- **chain closes:** False — The retained negative depends on numerical packet-propagator measurements, but the audit ledger registers no primary runner or runner output for this claim. The source note's quoted slopes, R^2 values, spread ratios, and family-portability numbers are therefore not reproducible from the audit packet.
+- **rationale:** Issue: the source note reports a concrete numerical negative for Gaussian-packet matter closure, but the load-bearing values -- slopes -73.5, -7.05, -18.3; R^2 > 0.96; 123% slope spread; persistence ratios; and Fam1/2/3 portability -- are backed only by an artifact chain named in the note, while the ledger runner_path is null. Why this blocks: a Nature-grade audit cannot verify that the same grown-DAG propagator, packet definitions, force coupling, baseline subtraction, and slope fits produced the quoted failure; the qualitative 'fields but no matter' conclusion depends on those exact computations rather than on an analytic theorem in the note. Repair target: register scripts/matter_inertial_closure.py as the primary runner, preserve or regenerate logs/2026-04-07-matter-inertial-closure.txt, and make the runner assert the null response, per-packet R^2 thresholds, slope table, 123% equivalence failure metric, persistence ratios, and Fam1/2/3 portability thresholds deterministically. Claim boundary until fixed: it is safe to say that the source note reports a conditional negative for the specific Gaussian-packet plus uniform-linear-force closure attempt; it is not yet an audited retained theorem that the grown-DAG propagator lacks generator-invariant inertial mass, and it does not exclude other persistent-object definitions or modified actions.
+- **open / conditional deps cited:**
+  - `scripts/matter_inertial_closure.py_not_registered_primary_runner`
+  - `logs/2026-04-07-matter-inertial-closure.txt_not_registered_primary_output`
 - **auditor confidence:** high
 
 ### `native_gauge_closure_note`
