@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T04:59:10.347812+00:00",
-  "generated_at": "2026-04-27T04:59:08.443149+00:00",
-  "invalidation_run_at": "2026-04-27T04:59:10.286268+00:00",
+  "effective_status_computed_at": "2026-04-27T05:00:44.595936+00:00",
+  "generated_at": "2026-04-27T05:00:42.592058+00:00",
+  "invalidation_run_at": "2026-04-27T05:00:44.523627+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T04:59:10.160898+00:00",
+  "load_bearing_computed_at": "2026-04-27T05:00:44.356727+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -54723,14 +54723,21 @@
       "verdict_rationale": null
     },
     "pmns_hw1_source_transfer_boundary_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 8.383,
+        "transitive_descendants": 117
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies a finite interface theorem: supplied transfer/source-response data recover the active/passive blocks and expose that transfer-only data are blind to the five-real active corner source. It does not derive the actual hw=1 source/transfer observables from Cl(3) on Z^3 or register the retained PMNS pair/readout authorities as one-hop dependencies.",
       "claim_id": "pmns_hw1_source_transfer_boundary_note",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -54738,18 +54745,23 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 3,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 8.383,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "If the hw=1 source/transfer pack is supplied, the retained PMNS lane closes exactly; if only the sole axiom is supplied, the current exact bank still does not select the nontrivial source/transfer pack.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "8b70fb887d534f6be37f5e1cbd6c01f5e66b8c1c788a97b1633fa4c402835b0c",
       "note_path": "docs/PMNS_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "Cl3_Z3_to_hw1_source_transfer_pack_derivation_not_registered",
+        "retained_PMNS_pair_readout_authority_not_registered_one_hop_dependency",
+        "physical_active_passive_source_transfer_observables_authority_not_registered",
+        "lower_level_source_transfer_observables_to_PMNS_readout_theorem_not_registered"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369378+00:00",
@@ -54803,16 +54815,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 15,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 15
       },
       "runner_path": "scripts/frontier_pmns_hw1_source_transfer_boundary.py",
       "title": "PMNS HW1 Source-Transfer Boundary",
       "transitive_descendants": 117,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the proof closes only at the supplied-interface level; the source/transfer pack itself remains an external input to the runner. Why this blocks: the runner constructs synthetic neutral/charge sector fixtures, recovers blocks from response columns, and checks downstream closure by comparing the same closure routine against itself; it demonstrates that the interface is sufficient and that transfer-only summaries are insufficient, but it does not construct the physical hw=1 source/transfer observables from Cl(3) on Z^3 or independently identify the retained PMNS pair. Repair target: add a retained theorem and runner deriving the nontrivial hw=1 source/transfer pack from the sole axiom and registering the retained active/passive PMNS readout authorities as one-hop dependencies. Claim boundary until fixed: it is safe to claim a sharp conditional boundary that supplied hw=1 source/transfer columns remove the interface ambiguity while transfer-only data do not; it is not safe to claim retained PMNS closure from the sole axiom."
     },
     "pmns_intrinsic_completion_boundary_note": {
       "audit_date": null,

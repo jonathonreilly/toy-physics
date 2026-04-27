@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 88,
-    "high": 523,
+    "high": 522,
     "leaf": 856,
     "medium": 85
   },
-  "generated_at": "2026-04-27T04:59:10.413193+00:00",
+  "generated_at": "2026-04-27T05:00:44.814996+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -5160,23 +5160,6 @@
       "note_path": "docs/PMNS_COMMUTANT_EIGENOPERATOR_SELECTOR_NOTE.md",
       "ready": true,
       "runner_path": "scripts/frontier_pmns_commutant_eigenoperator_selector.py",
-      "transitive_descendants": 117
-    },
-    {
-      "audit_independence_required": "cross_family",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "pmns_hw1_source_transfer_boundary_note",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 3,
-      "load_bearing_score": 8.383,
-      "note_path": "docs/PMNS_HW1_SOURCE_TRANSFER_BOUNDARY_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_pmns_hw1_source_transfer_boundary.py",
       "transitive_descendants": 117
     },
     {
@@ -31160,6 +31143,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1146,
-  "total_pending": 1552
+  "ready_count": 1145,
+  "total_pending": 1551
 }
