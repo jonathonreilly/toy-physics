@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T17:31:18.705244+00:00
+**Generated:** 2026-04-27T17:36:11.579251+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 62 |
-| _proposed_retained_ | 67 |
+| _proposed_retained_ | 66 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
 | ~~audited_conditional~~ | 328 |
-| ~~audited_failed~~ | 124 |
+| ~~audited_failed~~ | 125 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 62 |
 | `audited_conditional` | 115 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 57 |
+| `audited_failed` | 58 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1366 |
+| `unaudited` | 1365 |
 
 | criticality | count |
 |---|---:|
@@ -334,6 +334,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `shapiro_complex_interaction_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `shapiro_diamond_bridge_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | F | - |
 | `shapiro_diamond_frequency_bridge_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | F | - |
+| `shapiro_five_family_portability_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `staggered_backreaction_green_closure_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `structured_mirror_bornsafe_scan_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -3688,6 +3689,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `SHAPIRO_DELAY_NOTE.md`
   - `SHAPIRO_COMPLEX_INTERACTION_NOTE.md`
   - `DIAMOND_PHASE_RAMP_BRIDGE_CARD_NOTE.md`
+- **auditor confidence:** high
+
+### `shapiro_five_family_portability_note`
+
+- **Note:** [`SHAPIRO_FIVE_FAMILY_PORTABILITY_NOTE.md`](../../docs/SHAPIRO_FIVE_FAMILY_PORTABILITY_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Exact zero-source control stays exact on all five families and the c-dependent phase lag extends onto the additional retained quadrant and radial families.  _(class `C`)_
+- **chain closes:** False — The frozen log is missing and the current runner contradicts the note's zero-control gate, printing zero lags around 0.065-0.071 rad while labeling them exact.
+- **rationale:** Issue: The note claims exact zero-source control on all five families, but the current runner reports zero lags of about 0.065-0.071 rad for every family, and the cited frozen log is absent. Why this blocks: the zero control is the stated first gate for portability; if it fails or is miscomputed, the few-milliradian cross-family spread table cannot be interpreted as a retained causal phase-lag extension, especially with the three-family core only conditional and the fifth-family radial dependency already failed. Repair target: fix the zero-control computation and labeling, restore a frozen log, add PASS/FAIL assertions for zero controls and family spread, and re-audit the sign/fourth/fifth-family dependencies before reasserting five-family portability. Claim boundary until fixed: it is safe to say the current script prints similar c-dependent phase rows for five sampled families; it is not safe to claim exact controls or retained five-family Shapiro portability.
+- **open / conditional deps cited:**
+  - `SHAPIRO_FAMILY_PORTABILITY_NOTE.md`
+  - `SIGN_PORTABILITY_INVARIANT_NOTE.md`
+  - `FOURTH_FAMILY_QUADRANT_NOTE.md`
+  - `FIFTH_FAMILY_RADIAL_NOTE.md`
 - **auditor confidence:** high
 
 ### `sign_portability_invariant_note`
