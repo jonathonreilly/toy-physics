@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T22:35:07.413523+00:00",
-  "generated_at": "2026-04-27T22:35:05.700230+00:00",
-  "invalidation_run_at": "2026-04-27T22:35:07.354838+00:00",
+  "effective_status_computed_at": "2026-04-27T22:37:15.358590+00:00",
+  "generated_at": "2026-04-27T22:37:13.646202+00:00",
+  "invalidation_run_at": "2026-04-27T22:37:15.302147+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T22:35:07.238479+00:00",
+  "load_bearing_computed_at": "2026-04-27T22:37:15.190810+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -87278,14 +87278,21 @@
       "verdict_rationale": null
     },
     "yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 7.431,
+        "transitive_descendants": 121
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies SU(3) tensor arithmetic and then constructs an accommodation witness after importing the target K_3 value. It does not derive the complete three-loop topology/color basis, the primitive integral values, or an independent reconstruction of K_3.",
       "claim_id": "yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -87293,18 +87300,24 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 7.431,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Because all ten prefactors are non-zero rationals, the functional maps surjectively onto R: for any real target T there exist real vectors K such that the sum equals T; in particular K_3(n_l = 5) = 80.405 is structurally admissible.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "cffe37f8aa95247d0df5df6a75dfe37e7e208fa646cf40b9b879e837a912c8fb",
       "note_path": "docs/YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
+        "docs/YT_EW_COLOR_PROJECTION_THEOREM.md",
+        "docs/YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md",
+        "docs/YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
+        "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.370371+00:00",
@@ -87333,16 +87346,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 12,
+        "B": 5,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 1,
+        "total_pass": 18
       },
       "runner_path": "scripts/frontier_yt_p3_msbar_to_pole_k3.py",
       "title": "P3 MSbar-to-Pole K_3 Color-Tensor Retention Theorem (3-loop structural skeleton)",
       "transitive_descendants": 121,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the claimed retained K_3 color-tensor skeleton is supported by exact Casimir arithmetic plus a vacuous accommodation argument: since the ten coefficients are nonzero, a back-filled vector can reproduce any supplied target, including the imported K_3(n_l=5)=80.405. Why this blocks: retention of a physical three-loop MSbar-to-pole coefficient skeleton requires proving that these are all and only the contributing color structures and reconstructing K_3 from independently specified primitive integrals; an underconstrained witness does not establish the skeleton or the 98.69% coverage claim. Repair target: add a retained three-loop Feynman-topology/color-reduction theorem and a runner that enumerates the diagrams, reduces their color factors to the ten tensors, proves absence of missing tensors, and reconstructs K_3 from independent K_FFF...K_Fhh inputs rather than from the final target. Claim boundary until fixed: safe to claim the listed SU(3) tensor-product arithmetic and that the displayed linear form can be made to equal 80.405 if unconstrained primitive coefficients are chosen; not safe to claim a retained complete K_3 color-tensor skeleton or retained cumulative K-series coverage through three loops."
     },
     "yt_qfp_insensitivity_support_note": {
       "audit_date": null,

@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T22:35:07.658156+00:00
+**Generated:** 2026-04-27T22:37:15.586154+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 72 |
-| _proposed_retained_ | 8 |
+| _proposed_retained_ | 7 |
 | _proposed_promoted_ | 1 |
 | bounded | 185 |
 | support | 104 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
 | ~~audited_conditional~~ | 173 |
-| ~~audited_failed~~ | 330 |
+| ~~audited_failed~~ | 331 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 72 |
 | `audited_conditional` | 143 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 76 |
+| `audited_failed` | 77 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1311 |
+| `unaudited` | 1310 |
 
 | criticality | count |
 |---|---:|
@@ -394,6 +394,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `bell_inequality_derived_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ew_coupling_derivation_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -5082,3 +5083,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `YT_P3_MSBAR_TO_POLE_K2_INTEGRAL_CITATION_NOTE_2026-04-17.md`
   - `scripts/frontier_yt_p3_msbar_to_pole_k2.py`
 - **auditor confidence:** 0.95
+
+### `yt_p3_msbar_to_pole_k3_color_factor_retention_note_2026-04-17`
+
+- **Note:** [`YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`](../../docs/YT_P3_MSBAR_TO_POLE_K3_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Because all ten prefactors are non-zero rationals, the functional maps surjectively onto R: for any real target T there exist real vectors K such that the sum equals T; in particular K_3(n_l = 5) = 80.405 is structurally admissible.  _(class `B`)_
+- **chain closes:** False — The runner verifies SU(3) tensor arithmetic and then constructs an accommodation witness after importing the target K_3 value. It does not derive the complete three-loop topology/color basis, the primitive integral values, or an independent reconstruction of K_3.
+- **rationale:** Issue: the claimed retained K_3 color-tensor skeleton is supported by exact Casimir arithmetic plus a vacuous accommodation argument: since the ten coefficients are nonzero, a back-filled vector can reproduce any supplied target, including the imported K_3(n_l=5)=80.405. Why this blocks: retention of a physical three-loop MSbar-to-pole coefficient skeleton requires proving that these are all and only the contributing color structures and reconstructing K_3 from independently specified primitive integrals; an underconstrained witness does not establish the skeleton or the 98.69% coverage claim. Repair target: add a retained three-loop Feynman-topology/color-reduction theorem and a runner that enumerates the diagrams, reduces their color factors to the ten tensors, proves absence of missing tensors, and reconstructs K_3 from independent K_FFF...K_Fhh inputs rather than from the final target. Claim boundary until fixed: safe to claim the listed SU(3) tensor-product arithmetic and that the displayed linear form can be made to equal 80.405 if unconstrained primitive coefficients are chosen; not safe to claim a retained complete K_3 color-tensor skeleton or retained cumulative K-series coverage through three loops.
+- **open / conditional deps cited:**
+  - `CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md`
+  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
+  - `YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md`
+  - `YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
+  - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
+- **auditor confidence:** high
