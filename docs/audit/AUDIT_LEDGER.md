@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T18:30:59.627298+00:00
+**Generated:** 2026-04-27T18:32:42.591300+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 63 |
-| _proposed_retained_ | 45 |
+| _proposed_retained_ | 44 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 340 |
+| ~~audited_conditional~~ | 341 |
 | ~~audited_failed~~ | 133 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 63 |
-| `audited_conditional` | 127 |
+| `audited_conditional` | 128 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1344 |
+| `unaudited` | 1343 |
 
 | criticality | count |
 |---|---:|
@@ -271,6 +271,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_graph_gauge_closure_results_2026-04-10` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_graph_observables_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_graph_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `staggered_graph_portability_stress_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `strong_cp_theta_zero_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `structured_chokepoint_bridge_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `symmetry_head_to_head_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -4102,6 +4103,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The retained staggered force battery survives on all three graph families, with gauge response on cycle-bearing families and force treated as the primary gravity observable.  _(class `C`)_
 - **chain closes:** False — The runner reproduces the three-family battery exactly, but the note and runner only establish a bounded portability probe over constructed graph families and selected force/current readouts, not a retained graph-portability theorem.
 - **rationale:** Issue: The runner reproduces the frozen three-family table, but the claim promotes graph portability from a constructed graph-depth force/current battery without a retained theorem tying that readout to the physical gravity observable on arbitrary non-cubic graphs. Why this blocks: a successful three-family smoke battery is not a universal portability closure; it is conditional on the named generated families, threshold choices, parity-coupled potential, and selected force/gauge readouts. Repair target: state this as bounded support, or add an audited theorem and acceptance harness deriving the graph-depth force observable and gauge-current thresholds before broadening to stress and holdout graph families. Claim boundary until fixed: safe to claim the current runner reproduces 8/8 retained-battery rows on the three named graph families with TOWARD force and gauge PASS/N/A; not safe to claim audit-clean retained portability beyond this checkpoint.
+- **auditor confidence:** high
+
+### `staggered_graph_portability_stress_note`
+
+- **Note:** [`STAGGERED_GRAPH_PORTABILITY_STRESS_NOTE.md`](../../docs/STAGGERED_GRAPH_PORTABILITY_STRESS_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The retained staggered force battery survives the larger, more irregular bipartite families, with no retained-row failure in the stress run.  _(class `C`)_
+- **chain closes:** False — The runner preserves all PASS/N/A row statuses on the four stress families, but this is a stress probe built from the same conditional graph-depth force/current readout as the baseline portability note, not a standalone retained portability theorem.
+- **rationale:** Issue: The stress runner has no retained-row failures, but the claim strengthens portability by reusing the baseline graph-depth force/current battery before that battery has a retained derivation as the physical gravity observable on arbitrary non-cubic graphs; additionally, the live gauge magnitudes drift slightly from the frozen table while keeping PASS status. Why this blocks: larger stress families test robustness of a selected probe, but they do not close the missing observable/readout theorem or turn finite-family evidence into audit-clean retained portability. Repair target: first audit-clean the baseline graph force/current observable and thresholds, then make the stress note an asserted holdout battery with exact current output or toleranced assertions. Claim boundary until fixed: safe to claim the current stress runner gives 8/8 retained-row PASS/N/A on the four named stress graph families, with current gauge values about 6.193e-04, 1.861e-03, 1.176e-04, and N/A; not safe to claim clean retained graph-portability closure from this stress run alone.
+- **open / conditional deps cited:**
+  - `STAGGERED_GRAPH_PORTABILITY_NOTE.md`
 - **auditor confidence:** high
 
 ### `strong_cp_theta_zero_note`

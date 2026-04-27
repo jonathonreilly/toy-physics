@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T18:30:59.436289+00:00",
-  "generated_at": "2026-04-27T18:30:57.827959+00:00",
-  "invalidation_run_at": "2026-04-27T18:30:59.387943+00:00",
+  "effective_status_computed_at": "2026-04-27T18:32:42.403769+00:00",
+  "generated_at": "2026-04-27T18:32:40.815955+00:00",
+  "invalidation_run_at": "2026-04-27T18:32:42.357267+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T18:30:59.290331+00:00",
+  "load_bearing_computed_at": "2026-04-27T18:32:42.261858+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -71943,14 +71943,21 @@
       "verdict_rationale": "Issue: The runner reproduces the frozen three-family table, but the claim promotes graph portability from a constructed graph-depth force/current battery without a retained theorem tying that readout to the physical gravity observable on arbitrary non-cubic graphs. Why this blocks: a successful three-family smoke battery is not a universal portability closure; it is conditional on the named generated families, threshold choices, parity-coupled potential, and selected force/gauge readouts. Repair target: state this as bounded support, or add an audited theorem and acceptance harness deriving the graph-depth force observable and gauge-current thresholds before broadening to stress and holdout graph families. Claim boundary until fixed: safe to claim the current runner reproduces 8/8 retained-battery rows on the three named graph families with TOWARD force and gauge PASS/N/A; not safe to claim audit-clean retained portability beyond this checkpoint."
     },
     "staggered_graph_portability_stress_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner preserves all PASS/N/A row statuses on the four stress families, but this is a stress probe built from the same conditional graph-depth force/current readout as the baseline portability note, not a standalone retained portability theorem.",
       "claim_id": "staggered_graph_portability_stress_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -71958,18 +71965,20 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The retained staggered force battery survives the larger, more irregular bipartite families, with no retained-row failure in the stress run.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "b2ddce0e6b8d4f4c3e5e807ddcc9e233f1f26d7b15f7e87b77339272e1f3fa4a",
       "note_path": "docs/STAGGERED_GRAPH_PORTABILITY_STRESS_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/STAGGERED_GRAPH_PORTABILITY_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369852+00:00",
@@ -72000,14 +72009,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 32,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 32
       },
       "runner_path": null,
       "title": "Staggered Graph Portability Stress Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The stress runner has no retained-row failures, but the claim strengthens portability by reusing the baseline graph-depth force/current battery before that battery has a retained derivation as the physical gravity observable on arbitrary non-cubic graphs; additionally, the live gauge magnitudes drift slightly from the frozen table while keeping PASS status. Why this blocks: larger stress families test robustness of a selected probe, but they do not close the missing observable/readout theorem or turn finite-family evidence into audit-clean retained portability. Repair target: first audit-clean the baseline graph force/current observable and thresholds, then make the stress note an asserted holdout battery with exact current output or toleranced assertions. Claim boundary until fixed: safe to claim the current stress runner gives 8/8 retained-row PASS/N/A on the four named stress graph families, with current gauge values about 6.193e-04, 1.861e-03, 1.176e-04, and N/A; not safe to claim clean retained graph-portability closure from this stress run alone."
     },
     "staggered_layered_backreaction_note": {
       "audit_date": null,
