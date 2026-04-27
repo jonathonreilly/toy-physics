@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 88,
     "high": 506,
-    "leaf": 793,
+    "leaf": 792,
     "medium": 78
   },
-  "generated_at": "2026-04-27T11:44:57.047658+00:00",
+  "generated_at": "2026-04-27T11:45:15.374853+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -18380,23 +18380,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/CHARGED_LEPTON_DIRECT_WARD_FREE_YUKAWA_NO_GO_NOTE_2026-04-26.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_charged_lepton_direct_ward_free_yukawa_no_go.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -29679,6 +29662,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1054,
-  "total_pending": 1465
+  "ready_count": 1053,
+  "total_pending": 1464
 }

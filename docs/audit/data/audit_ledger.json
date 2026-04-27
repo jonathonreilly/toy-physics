@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T11:44:56.982748+00:00",
-  "generated_at": "2026-04-27T11:44:55.148040+00:00",
-  "invalidation_run_at": "2026-04-27T11:44:56.918563+00:00",
+  "effective_status_computed_at": "2026-04-27T11:45:15.311732+00:00",
+  "generated_at": "2026-04-27T11:45:13.544086+00:00",
+  "invalidation_run_at": "2026-04-27T11:45:15.251107+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T11:44:56.801773+00:00",
+  "load_bearing_computed_at": "2026-04-27T11:45:15.129548+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -8315,7 +8315,7 @@
       "verdict_rationale": null
     },
     "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26": {
-      "audit_date": null,
+      "audit_date": "2026-04-27T11:45:12.589733+00:00",
       "audit_state_snapshot": {
         "criticality": "leaf",
         "dep_effective_status": {},
@@ -8323,13 +8323,13 @@
         "load_bearing_score": 0.0,
         "transitive_descendants": 0
       },
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The negative claim closes as gauge bookkeeping: the allowed monomial is generation-blind and every Y_e entry remains gauge invariant. The note does not promote a mass theorem or import PDG masses as proof inputs.",
       "claim_id": "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -8337,13 +8337,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The gauge-allowed charged-lepton operator contains an arbitrary complex 3 x 3 Y_e matrix, so one-Higgs gauge selection does not determine y_tau or any charged-lepton eigenvalue.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "d95bb620b3c26f8629dde1222b57eb0288eff1a58942bf367f57027e9f5f212d",
@@ -8428,15 +8428,15 @@
       ],
       "runner_check_breakdown": {
         "A": 0,
-        "B": 0,
+        "B": 3,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 3,
+        "total_pass": 26
       },
       "runner_path": "scripts/frontier_charged_lepton_direct_ward_free_yukawa_no_go.py",
       "title": "Charged-Lepton Direct Ward Free-Yukawa No-Go",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The no-go is narrow and supported by the runner: wrong-Higgs rejection is checked, arbitrary diagonal/off-diagonal Y_e entries remain allowed, and the top Ward 1/sqrt(6) normalization is shown to be tied to the Q_L color x isospin surface rather than the colorless charged-lepton monomial. PDG masses are comparator-only. This clean audit applies only to the negative boundary, not to charged-lepton mass closure."
     },
     "charged_lepton_koide_cone_algebraic_equivalence_note": {
       "audit_date": null,
@@ -85013,8 +85013,8 @@
   "schema_version": 1,
   "stats": {
     "dropped_missing_notes": 0,
-    "preserved_existing": 1605,
-    "re_audit_required": 2,
+    "preserved_existing": 1607,
+    "re_audit_required": 0,
     "row_count": 1607,
     "seeded_new": 0
   }
