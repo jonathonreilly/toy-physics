@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T13:17:40.809478+00:00
+**Generated:** 2026-04-27T13:19:31.156628+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 46 |
-| _proposed_retained_ | 140 |
+| _proposed_retained_ | 139 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
 | ~~audited_conditional~~ | 303 |
-| ~~audited_failed~~ | 92 |
+| ~~audited_failed~~ | 93 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 46 |
 | `audited_conditional` | 90 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 25 |
+| `audited_failed` | 26 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1440 |
+| `unaudited` | 1439 |
 
 | criticality | count |
 |---|---:|
@@ -258,6 +258,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_note_2026-04-19` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `geometry_superposition_dag_ensemble_note_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `gravitomagnetic_portability_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `lattice_3d_dense_spent_delay_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `lattice_kernel_transfer_norm_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `mirror_2d_gravity_law_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -1746,6 +1747,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `causal_field_cone_and_phase_readout_theorem_not_registered`
   - `self_consistent_moving_source_dynamics_open`
   - `tensor_gravitomagnetic_frame_dragging_bridge_open_or_explicitly_out_of_scope`
+- **auditor confidence:** high
+
+### `gravitomagnetic_portability_note`
+
+- **Note:** [`GRAVITOMAGNETIC_PORTABILITY_NOTE.md`](../../docs/GRAVITOMAGNETIC_PORTABILITY_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The odd-in-v phase correction is portable across the three retained grown families, with antisymmetry residual below 4% of the peak-to-peak odd signal.  _(class `C`)_
+- **chain closes:** False — The two cited dependencies are audit-clean but narrower than this claim. The declared runner does not recompute moving-source propagation or the three-family portability table; it hard-codes the family rows and renders them, so the load-bearing third-family portability result is not checked by the allowed artifacts.
+- **rationale:** Issue: `scripts/gravitomagnetic_portability.py` is a static report renderer with hard-coded delta(+v), delta(-v), odd-component, and residual values; it does not construct the three grown families, run zero/static controls, or propagate the signed moving-source observable. Why this blocks: the headline portability claim depends on exactly those computed rows, especially the third family that is not covered by the two clean dependencies, so the runner cannot distinguish a real portability result from copied constants. Repair target: replace the renderer with an executable probe that builds all three drift/restore families, recomputes exact zero and v=0 controls, runs +v/-v moving-source propagation, and derives the odd/residual table from live amplitudes. Claim boundary until fixed: the clean dependencies support only their own bounded signed-response results; this note may be treated as a static summary of alleged values, not as an audited three-family gravitomagnetic portability positive.
+- **open / conditional deps cited:**
+  - `scripts/gravitomagnetic_portability.py`
 - **auditor confidence:** high
 
 ### `gravity_clean_derivation_note`

@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T13:17:40.623203+00:00",
-  "generated_at": "2026-04-27T13:17:39.032207+00:00",
-  "invalidation_run_at": "2026-04-27T13:17:40.577087+00:00",
+  "effective_status_computed_at": "2026-04-27T13:19:30.970653+00:00",
+  "generated_at": "2026-04-27T13:19:29.377913+00:00",
+  "invalidation_run_at": "2026-04-27T13:19:30.924067+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T13:17:40.483100+00:00",
+  "load_bearing_computed_at": "2026-04-27T13:19:30.827863+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -34354,14 +34354,27 @@
       "verdict_rationale": "Issue: the note establishes a finite proxy replay of an odd-in-v phase delay, not a retained gravitomagnetic theorem. Why this blocks: the live runner's phase values support the source-note table, but the runner's delta column is stale/bugged for negative velocities because it prints zero before the static baseline is seen, and it never asserts antisymmetry, portability, monotonicity, or threshold residuals; the source trajectory is imposed and the source/readout/action authorities are not registered as one-hop dependencies. Repair target: register the primary runner, fix the delta computation to compare every row against v=0 after all phases are known, emit explicit PASS assertions for antisymmetry and cross-family portability, and add retained source-motion/phase-readout theorems if the claim is to be promoted beyond a proxy. Claim boundary until fixed: it is safe to claim a bounded numerical proxy in which the mean Shapiro phase varies oddly with imposed source velocity across three grown families; it is not safe to claim a retained gravitomagnetic effect or GR frame-dragging analogue."
     },
     "gravitomagnetic_portability_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {
+          "moving_source_cross_family_note": "retained",
+          "vector_magnetic_extension_note": "retained"
+        },
+        "deps": [
+          "moving_source_cross_family_note",
+          "vector_magnetic_extension_note"
+        ],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The two cited dependencies are audit-clean but narrower than this claim. The declared runner does not recompute moving-source propagation or the three-family portability table; it hard-codes the family rows and renders them, so the load-bearing third-family portability result is not checked by the allowed artifacts.",
       "claim_id": "gravitomagnetic_portability_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -34372,18 +34385,20 @@
         "vector_magnetic_extension_note"
       ],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The odd-in-v phase correction is portable across the three retained grown families, with antisymmetry residual below 4% of the peak-to-peak odd signal.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "4d55fd404debbc6c41523d9e51714ce982fda26c84fa7d5df70b161186c7447e",
       "note_path": "docs/GRAVITOMAGNETIC_PORTABILITY_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "scripts/gravitomagnetic_portability.py"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368520+00:00",
@@ -34421,7 +34436,7 @@
       "runner_path": null,
       "title": "Gravitomagnetic Portability Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: `scripts/gravitomagnetic_portability.py` is a static report renderer with hard-coded delta(+v), delta(-v), odd-component, and residual values; it does not construct the three grown families, run zero/static controls, or propagate the signed moving-source observable. Why this blocks: the headline portability claim depends on exactly those computed rows, especially the third family that is not covered by the two clean dependencies, so the runner cannot distinguish a real portability result from copied constants. Repair target: replace the renderer with an executable probe that builds all three drift/restore families, recomputes exact zero and v=0 controls, runs +v/-v moving-source propagation, and derives the odd/residual table from live amplitudes. Claim boundary until fixed: the clean dependencies support only their own bounded signed-response results; this note may be treated as a static summary of alleged values, not as an audited three-family gravitomagnetic portability positive."
     },
     "graviton_mass_derived_note": {
       "audit_date": null,
