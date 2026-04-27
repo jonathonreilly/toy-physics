@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T16:24:48.099716+00:00",
-  "generated_at": "2026-04-27T16:24:46.521610+00:00",
-  "invalidation_run_at": "2026-04-27T16:24:48.053717+00:00",
+  "effective_status_computed_at": "2026-04-27T16:26:40.582228+00:00",
+  "generated_at": "2026-04-27T16:26:38.992909+00:00",
+  "invalidation_run_at": "2026-04-27T16:26:40.536311+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T16:24:47.962132+00:00",
+  "load_bearing_computed_at": "2026-04-27T16:26:40.443763+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -57896,14 +57896,21 @@
       "verdict_rationale": null
     },
     "pmns_selector_three_identity_support_note_2026-04-21": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies the candidate point and fit, but the two selector equations delta * q_+ = Q_Koide and det(H) = E2 are explicitly proposed laws rather than retained derivations, and uniqueness is only bounded multi-start evidence.",
       "claim_id": "pmns_selector_three_identity_support_note_2026-04-21",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -57911,18 +57918,20 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The proposed three-equation system Tr(H) = Q_Koide, delta * q_+ = Q_Koide, and det(H) = E2 recovers one interior point whose PMNS observables lie in the runner's NuFit 5.3 normal-ordering 1 sigma bands.",
+      "load_bearing_step_class": "G",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "8b75a900f7e1e7408230c8ae7ad8cbab72e734669b8f0032864149697d3b757b",
       "note_path": "docs/PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_NOTE_2026-04-21.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_PROPOSAL_README_2026-04-21.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369392+00:00",
@@ -57951,16 +57960,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 5,
         "B": 0,
-        "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "C": 8,
+        "D": 6,
+        "total_pass": 19
       },
       "runner_path": null,
       "title": "PMNS Selector Three-Identity Support Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The PMNS selector package depends on two proposed selector equations, delta * q_+ = Q_Koide and det(H) = E2, plus a bounded numerical uniqueness search; the runner then checks that the recovered point fits NuFit bands. Why this blocks: a retained PMNS selector theorem cannot rest on unproved candidate laws or heuristic one-cluster evidence, even though the numerical packet is reproducible. Repair target: derive both selector equations from retained framework structure, prove basin uniqueness analytically on the relevant chamber, and then rerun the PMNS observable comparison without treating the selector laws as assumptions. Claim boundary until fixed: it is safe to keep this as a support proposal with exact chart identities, a reproducible candidate point, and a strong numerical PMNS fit; it is not safe to claim retained PMNS selector closure."
     },
     "pmns_selector_three_identity_support_proposal_readme_2026-04-21": {
       "audit_date": null,
