@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T08:19:33.034845+00:00
+**Generated:** 2026-04-27T08:23:16.959022+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 14 |
-| _proposed_retained_ | 209 |
+| _proposed_retained_ | 208 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -29,8 +29,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
-| ~~audited_conditional~~ | 275 |
-| ~~audited_failed~~ | 75 |
+| ~~audited_conditional~~ | 274 |
+| ~~audited_failed~~ | 77 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 14 |
 | `audited_conditional` | 63 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 9 |
+| `audited_failed` | 10 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1504 |
+| `unaudited` | 1503 |
 
 | criticality | count |
 |---|---:|
@@ -187,6 +187,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_3d_dense_spent_delay_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `lattice_kernel_transfer_norm_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `mirror_2d_gravity_law_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `staggered_backreaction_green_closure_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `structured_mirror_bornsafe_scan_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `bell_inequality_derived_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -1443,6 +1444,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `retained_sign_family_notes_not_registered_one_hop`
   - `fifth_family_holdout_notes_not_registered_one_hop`
   - `common_threshold_protocol_not_registered`
+- **auditor confidence:** high
+
+### `staggered_backreaction_green_closure_note`
+
+- **Note:** [`STAGGERED_BACKREACTION_GREEN_CLOSURE_NOTE.md`](../../docs/STAGGERED_BACKREACTION_GREEN_CLOSURE_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note promotes resistance_yukawa as a graph-native Green map that closes the cycle-bearing force-scale gap by nearly an order of magnitude and transfers cleanly to the layered holdout without blow-up.  _(class `C`)_
+- **chain closes:** False — The current runner does not reproduce the source note's load-bearing numbers: resistance_yukawa now reports gain 1.517, raw cycle gap 3.425e-01, calibrated cycle gap 1.059e-01, raw holdout gap 1.534e-02, and calibrated holdout gap 5.371e-01, not the note's 0.980, 9.889e-02, 9.688e-02, 1.680e-02, and 3.714e-03.
+- **rationale:** Issue: the archived source note is stale relative to the live Green-closure runner, and the stale fields are exactly the claimed force-scale closure and holdout-transfer numbers. Why this blocks: a hostile physicist can no longer claim nearly order-of-magnitude cycle closure or clean calibrated holdout transfer, because the current runner gives only a 2.81x raw cycle improvement over screened_poisson and the calibrated layered holdout gap blows up to 5.371e-01 rather than 3.714e-03. Repair target: either restore the old runner/environment that generated the note's table, or update the note to the current runner output and rerun the comparison with hard assertions for the intended acceptance gates, including raw/calibrated cycle gaps, raw/calibrated holdout gaps, gain, retained checks, and self-gap. Claim boundary until fixed: it is safe to claim only that the current resistance_yukawa runner is the best of the three frozen maps by its balance score, preserves source-linearity/additivity/TOWARD/norm checks, improves the raw cycle gap from 9.618e-01 to 3.425e-01, and has a small raw holdout gap of 1.534e-02; it is not safe to retain the note's stronger Green-closure or clean calibrated-holdout claim.
+- **open / conditional deps cited:**
+  - `source_note_numbers_stale_against_live_runner`
+  - `calibrated_holdout_gap_now_5.371e-01_not_3.714e-03`
+  - `raw_cycle_improvement_now_2.81x_not_9.00x`
+  - `acceptance_gates_not_asserted_in_runner`
 - **auditor confidence:** high
 
 ### `strong_cp_theta_zero_note`
