@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T14:48:32.383568+00:00
+**Generated:** 2026-04-27T14:50:55.639156+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 47 |
-| _proposed_retained_ | 125 |
+| _proposed_retained_ | 124 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 309 |
+| ~~audited_conditional~~ | 310 |
 | ~~audited_failed~~ | 100 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 47 |
-| `audited_conditional` | 96 |
+| `audited_conditional` | 97 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 33 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1425 |
+| `unaudited` | 1424 |
 
 | criticality | count |
 |---|---:|
@@ -199,6 +199,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_dimensionless_objection_closure_review_packet_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_kappa_block_total_frobenius_measure_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_native_dimensionless_review_packet_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_native_zero_section_closure_route_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_native_zero_section_nature_review_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -2184,6 +2185,27 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `KOIDE_KAPPA_SPECTRUM_OPERATOR_BRIDGE_THEOREM_NOTE_2026-04-19.md`
   - `KOIDE_CYCLIC_PROJECTOR_BLOCK_DEMOCRACY_NOTE_2026-04-18.md`
   - `KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md`
+- **auditor confidence:** high
+
+### `koide_kappa_spectrum_operator_bridge_theorem_note_2026-04-19`
+
+- **Note:** [`KOIDE_KAPPA_SPECTRUM_OPERATOR_BRIDGE_THEOREM_NOTE_2026-04-19.md`](../../docs/KOIDE_KAPPA_SPECTRUM_OPERATOR_BRIDGE_THEOREM_NOTE_2026-04-19.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The exact identity a_0^2 - 2|z|^2 = 3(a^2 - 2|b|^2) is used to make spectrum-side Koide Q = 2/3 equivalent to operator-side kappa = 2 under the cyclic-compression bridge.  _(class `A`)_
+- **chain closes:** False — The symbolic bridge identity closes, but the retained operator-side closure claim imports spectrum-side Koide closure, P1 sqrt-mass identification, and cyclic-response/Berry bridge inputs that are unaudited or already conditional.
+- **rationale:** Issue: the runner verifies the zero-residual algebraic bridge on Herm_circ(3), but the note promotes the bridge into retained operator-side kappa = 2 closure while depending on non-clean spectrum-side Koide, P1 square-root, selected-line/Berry, and companion MRU inputs. Why this blocks: an exact equivalence transfers closure only if the physical sqrt-mass vector, cyclic-compression readout, and spectrum-side Q = 2/3 condition are themselves retained; the bridge does not derive or audit-retain those inputs. Repair target: audit-retain the spectrum-side Q/sigma theorem, P1 square-root amplitude/readout, selected-line cyclic-response bridge, and Berry/Brannen phase route, or narrow this note to a conditional bridge theorem. Claim boundary until fixed: safely claim the runner-verified identity a_0 = sqrt(3)a, |z|^2 = 3|b|^2, and a_0^2 - 2|z|^2 = 3(a^2 - 2|b|^2) on Herm_circ(3), plus PDG consistency; do not claim retained physical operator-side closure from Koide until the upstream physical inputs are clean.
+- **open / conditional deps cited:**
+  - `KOIDE_MRU_WEIGHT_CLASS_OBSTRUCTION_THEOREM_NOTE_2026-04-19.md`
+  - `KOIDE_MOMENT_RATIO_UNIFORMITY_THEOREM_NOTE_2026-04-19.md`
+  - `KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md`
+  - `KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md`
+  - `KOIDE_SQRTM_AMPLITUDE_PRINCIPLE_NOTE_2026-04-18.md`
+  - `CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md`
+  - `KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md`
+  - `KOIDE_KAPPA_BLOCK_TOTAL_FROBENIUS_MEASURE_THEOREM_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `koide_native_dimensionless_review_packet_2026-04-24`
