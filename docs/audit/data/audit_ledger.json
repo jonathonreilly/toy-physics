@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T04:21:35.906096+00:00",
-  "generated_at": "2026-04-27T04:21:34.098181+00:00",
-  "invalidation_run_at": "2026-04-27T04:21:35.850062+00:00",
+  "effective_status_computed_at": "2026-04-27T04:24:31.357891+00:00",
+  "generated_at": "2026-04-27T04:24:29.307391+00:00",
+  "invalidation_run_at": "2026-04-27T04:24:31.294008+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T04:21:35.727218+00:00",
+  "load_bearing_computed_at": "2026-04-27T04:24:31.002175+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -5166,14 +5166,21 @@
       "verdict_rationale": null
     },
     "area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 11.383,
+        "transitive_descendants": 117
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies the finite-cell entropy arithmetic and the tunable gapped-edge counterexample, but the primitive cell, Planck Target 2 entropy requirement, and claimed exhaustiveness of the allowed finite primitive-edge entropy class are not registered one-hop dependencies. The no-go therefore closes for the supplied standard entropy constructions, not as a retained framework-wide Target 2 obstruction.",
       "claim_id": "area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -5181,18 +5188,26 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 9,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 11.383,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Within the finite primitive-edge class with H_cell=C^16, rho=I_16/16, rank(P_A)=4, locality/additivity, and standard von Neumann or binary entropy, none of the canonical entropy constructions gives the coefficient 1/4, and a gapped edge needs an extra Schmidt-spectrum selector.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "f718ef50a088bef293ddf20d2005b8dc3db67a9543d4fc69ad46c7eb58e65d8f",
       "note_path": "docs/AREA_LAW_PRIMITIVE_EDGE_ENTROPY_SELECTOR_NO_GO_NOTE_2026-04-25.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "Planck_conditional_packet_primitive_trace_c_cell_equals_1_over_4_not_registered",
+        "finite_boundary_density_extension_theorem_not_registered_or_audited_conditional",
+        "source_free_C16_primitive_cell_and_rank_four_projector_authority_not_registered",
+        "Planck_Target_2_entanglement_entropy_carrier_definition_not_registered",
+        "canonical_primitive_edge_entropy_functional_class_exhaustiveness_not_registered",
+        "gapped_edge_Schmidt_spectrum_selector_open",
+        "operational_primitive_boundary_entropy_theorem_open"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.367623+00:00",
@@ -5221,16 +5236,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 26,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 26
       },
       "runner_path": "scripts/frontier_area_law_primitive_edge_entropy_selector_no_go.py",
       "title": "Area-Law Primitive-Edge Entropy Selector No-Go Note",
       "transitive_descendants": 117,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the note correctly separates the primitive trace 4/16 from several standard von Neumann/binary entropy values, but it relies on unregistered authority for the source-free C^16 primitive cell, the rank-four boundary projector, the Planck Target 2 entanglement-entropy interpretation, and the claim that the listed finite-cell entropy constructions exhaust the canonical primitive-edge class. Why this blocks: the runner proves the arithmetic for the listed constructions and shows a same-gap two-level edge can be tuned through entropy 1/4, but it does not derive the physical entropy carrier, prove that no other retained entropy/readout functional is allowed, or register the finite-boundary density/action-side 1/4 authority it is distinguishing from entanglement entropy. Repair target: register the Planck conditional packet, finite-boundary density extension/primitive trace theorem, Target 2 entropy-carrier definition, and any allowed entropy functional class as dependencies; add an exhaustion theorem or runner proving that every retained primitive-edge entropy candidate reduces to the checked cases unless a named selector is supplied. Claim boundary until fixed: it is safe to claim a conditional no-go: for the stated C^16/rank-4 primitive data and standard entropy choices, the canonical entropies are log16, log4, log2, H(1/4), or 1/2, not 1/4, and hitting 1/4 in a gapped edge requires an additional Schmidt-spectrum selector; it is not yet an audited retained proof that Target 2 cannot be closed by any CL3 primitive-edge entropy construction."
     },
     "area_law_primitive_parity_gate_carrier_theorem_note_2026-04-25": {
       "audit_date": null,
