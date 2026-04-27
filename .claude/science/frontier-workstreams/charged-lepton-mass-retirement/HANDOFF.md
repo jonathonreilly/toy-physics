@@ -7,7 +7,7 @@
 
 ## Current State
 
-Cycles 1-3 are complete. The cooperative lock script is unavailable due to a
+Cycles 1-4 are complete. The cooperative lock script is unavailable due to a
 `/Users/jonreilly` permission error, so the run is isolated on the dedicated
 science branch.
 
@@ -47,10 +47,23 @@ endpoint remain conditional, cyclic relabelings preserve unordered ratios
 while moving the largest slot label, and PDG charged-lepton masses are only
 comparators.
 
+The fourth completed artifact is a selected-line/generation-selector no-go:
+
+- `docs/CHARGED_LEPTON_SELECTED_LINE_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md`
+- `scripts/frontier_charged_lepton_selected_line_generation_selector_no_go.py`
+
+It grants the current non-PDG `Q` and selected-line support values and proves
+the remaining basedness obstruction. An unbased free `C3` orbit has no
+invariant single-label selector: cyclic relabeling fixes the quotient data but
+moves every single generation label. Based equivariant selectors exist only
+after choosing one of three basepoints, which is exactly the missing physical
+endpoint/source/generation law. PDG charged-lepton masses remain
+comparator-only.
+
 ## Verification
 
 ```text
-python3 -m py_compile scripts/frontier_charged_lepton_direct_ward_free_yukawa_no_go.py scripts/frontier_charged_lepton_radiative_tau_selector_firewall.py scripts/frontier_charged_lepton_koide_ratio_source_selector_firewall.py
+python3 -m py_compile scripts/frontier_charged_lepton_direct_ward_free_yukawa_no_go.py scripts/frontier_charged_lepton_radiative_tau_selector_firewall.py scripts/frontier_charged_lepton_koide_ratio_source_selector_firewall.py scripts/frontier_charged_lepton_selected_line_generation_selector_no_go.py
 PASS
 
 python3 scripts/frontier_charged_lepton_direct_ward_free_yukawa_no_go.py
@@ -61,10 +74,14 @@ TOTAL: PASS=17, FAIL=0
 
 python3 scripts/frontier_charged_lepton_koide_ratio_source_selector_firewall.py
 TOTAL: PASS=35, FAIL=0
+
+python3 scripts/frontier_charged_lepton_selected_line_generation_selector_no_go.py
+TOTAL: PASS=38, FAIL=0
 ```
 
-Review-loop was emulated for cycle 3 and recorded in `REVIEW_HISTORY.md`.
-Disposition: `PASS WITH BOUNDED/NO-GO CLAIMS`; mass retirement remains open.
+Review-loop was emulated for cycles 3 and 4 and recorded in
+`REVIEW_HISTORY.md`. Cycle 4 disposition: `PASS WITH NO-GO CLAIM`; mass
+retirement remains open.
 
 ## Next Exact Action
 
@@ -78,5 +95,6 @@ to derive or refute one of:
 - a non-observational generation/tau-scale selector ties the ratio vector to
   the radiative scale support.
 
-Do not repeat `Q = 2/3` or `delta = 2/9` value-matching without one of those
-new premises. Retained charged-lepton mass closure is not achieved.
+Do not repeat `Q = 2/3`, `delta = 2/9`, or unbased-orbit value matching
+without one of those new premises. Retained charged-lepton mass closure is not
+achieved.

@@ -76,3 +76,45 @@ workstream runners replayed with `FAIL=0`.
 and Brannen/selected-line phase support are treated as a generation/tau-scale
 selector. A genuinely new physical source, endpoint, or generation-label
 premise could still move the lane.
+
+## Cycle 4 Self-Check
+
+**Artifact:** selected-line generation-selector no-go.
+
+**Runner:**
+`scripts/frontier_charged_lepton_selected_line_generation_selector_no_go.py`
+
+**Result:** `PASS=38, FAIL=0`.
+
+**Review pressure applied:** review-loop emulated locally with the required
+reviewer stances.
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: NO-GO
+Imports / Support: DISCLOSED
+Nature Retention: NO-GO for unbased generation selector; OPEN for mass retirement
+Repo Governance: PASS for branch-local science artifact
+```
+
+**Findings and disposition:**
+
+- CodeRunnerReviewer found one rotation-convention bug in the first runner
+  draft for the heaviest-slot check. Fixed by checking the convention-free
+  invariant, namely that the heaviest slot ranges over all three labels.
+- PhysicsClaimReviewer found no retained-closure overclaim after the fix. The
+  note grants the non-PDG support values only to prove the unbased selector
+  obstruction.
+- ImportSupportReviewer found PDG charged-lepton masses only in the comparator
+  block; they are not proof-input keys.
+- NatureRetentionReviewer disposition is `NO-GO` for the attempted unbased
+  selected-line generation selector and `OPEN` for retained charged-lepton
+  mass retirement.
+- RepoGovernanceReviewer found no repo-wide authority-surface edits. Proposed
+  weaving remains deferred to later review/integration.
+
+**Smoketest:** new Python artifact compiled with `python3 -m py_compile`; the
+new runner replayed with `FAIL=0`.
+
+**Residual risk:** based endpoint/source/generation laws remain open. This
+cycle closes only the unbased selected-line orbit route.

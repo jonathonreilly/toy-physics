@@ -9,6 +9,7 @@ Scores use 0-3, with overclaim risk subtracted qualitatively.
 | Koide `Q` physical source-domain closure | constructive theorem | 3 | 2 | 2 | high: existing no-go ledger is dense | audited in cycle 3 as conditional support, not closure |
 | Brannen selected-line endpoint closure | constructive/literature bridge | 3 | 2 | 1 | high: prior topology routes no-go | audited in cycle 3 as conditional support, not closure |
 | Koide `Q` + Brannen phase as generation selector | no-go / support firewall | 2 | 2 | 3 | low if framed as no-go | completed: standalone selector closed |
+| Unbased selected-line orbit as generation selector | no-go / endpoint-source firewall | 2 | 2 | 3 | low if framed as a basedness obstruction | completed: unbased orbit selector closed |
 | Full absolute mass chain note from existing support | packaging | 1 | 1 | 3 | high: could promote support-only work | reject as first move |
 | Literature-only Koide/tau mass synthesis | literature bridge | 1 | 0 | 3 | medium: not a derivation | use only for context |
 
@@ -86,3 +87,22 @@ The next route must name a genuinely new premise, such as a retained theorem
 that the undeformed charged-lepton source is strict-onsite and `C3`-fixed, or
 a based selected-line endpoint/generation law. Further value-matching on
 `Q = 2/3` or `delta = 2/9` is rejected as low-value churn.
+
+## Cycle 4 Outcome
+
+The selected-line basedness audit was produced and verified:
+
+```text
+python3 scripts/frontier_charged_lepton_selected_line_generation_selector_no_go.py
+TOTAL: PASS=38, FAIL=0
+```
+
+The result is a narrower no-go under granted non-PDG support values. An
+unbased free `C3` orbit cannot select one physical generation label in a
+`C3`-natural way. Based equivariant selectors exist, but there are three of
+them, one for each basepoint choice, so choosing one is precisely the missing
+physical endpoint/source/generation primitive.
+
+The next route must derive or refute an actual based endpoint/source law or a
+non-observational tau-scale/generation selector. Repeating `Q = 2/3`,
+`delta = 2/9`, or unbased-orbit value matching is now closed.

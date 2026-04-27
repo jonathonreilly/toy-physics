@@ -108,3 +108,23 @@ Only proceed if a genuinely new physical premise is named. Candidate targets:
 
 Do not produce another `Q = 2/3` or `delta = 2/9` value-match packet without a
 new source, endpoint, or generation-selection premise.
+
+**Status:** complete as a selected-line/generation-selector no-go, not a
+promotion.
+
+```text
+docs/CHARGED_LEPTON_SELECTED_LINE_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md
+scripts/frontier_charged_lepton_selected_line_generation_selector_no_go.py
+```
+
+Verification:
+
+```text
+python3 scripts/frontier_charged_lepton_selected_line_generation_selector_no_go.py
+TOTAL: PASS=38, FAIL=0
+```
+
+Safe status: exact negative boundary. Granting the current non-PDG `Q` and
+selected-line support values still leaves the physical generation selector
+open because unbased free `C3` orbit data have no invariant single-label
+selector.

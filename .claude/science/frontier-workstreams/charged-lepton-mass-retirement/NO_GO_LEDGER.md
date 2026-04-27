@@ -20,6 +20,7 @@ new.
 | Direct top-Ward lift to charged-lepton `y_tau` | no-go | `CHARGED_LEPTON_DIRECT_WARD_FREE_YUKAWA_NO_GO_NOTE_2026-04-26.md` | top `1/sqrt(6)` needs the color x isospin `Q_L` surface; charged leptons need a new generation/loop/source primitive |
 | Standalone radiative `alpha_LM/(4pi)` tau selector | no-go for tau selection; support retained | `CHARGED_LEPTON_RADIATIVE_TAU_SELECTOR_FIREWALL_NOTE_2026-04-26.md` | electroweak charged-lepton Casimir is `(1, 1, 1)` across generations; assigning the scale to tau requires a separate retained generation/source law |
 | Koide `Q` plus selected-line/Brannen phase as standalone generation selector | no-go for generation/tau-scale selection; ratio support retained | `CHARGED_LEPTON_KOIDE_RATIO_SOURCE_SELECTOR_FIREWALL_NOTE_2026-04-27.md` | `Q` erases the selected-line phase, the `Q` source route and Brannen endpoint are conditional, and cyclic relabelings preserve unordered ratios while moving the largest slot label |
+| Unbased selected-line/Brannen orbit as physical generation selector | no-go for physical generation/tau-scale labeling; based routes remain open | `CHARGED_LEPTON_SELECTED_LINE_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md` | a free unbased `C3` orbit has no invariant single-label selector; based equivariant selectors require an extra endpoint/source/generation law |
 
 ## Closed Cycle 1 Question
 
@@ -47,3 +48,14 @@ Answer: no. The combination remains useful ratio/phase support, but it does
 not select the physical source-free `Q` representative, the based selected-
 line endpoint/radian readout, or a non-observational generation/tau-scale
 label. A new physical source/endpoint/generation law is required.
+
+## Closed Cycle 4 Question
+
+Can the unbased selected-line/Brannen orbit, after granting the current
+non-PDG `Q` and `delta` support values, select a physical charged-lepton
+generation label?
+
+Answer: no. The unbased orbit quotient is fixed by cyclic relabeling, while
+the single generation labels form a free `C3` orbit. No label is fixed by all
+relabelings, and the only nonempty invariant label subset is the full
+generation orbit. A based endpoint/source/generation law is still required.

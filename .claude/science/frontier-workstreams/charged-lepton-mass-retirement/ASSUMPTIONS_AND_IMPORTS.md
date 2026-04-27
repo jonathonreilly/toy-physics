@@ -16,6 +16,7 @@ currently used by the bounded package.
 | Charged-lepton Koide `Q = 2/3` | Ratio constraint on mass-square-root vector | support/open | `KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md` | yes for `m_e/m_mu/m_tau` ratios | yes | source-domain physical-selection theorem | open blocker |
 | Brannen phase / selected-line parameter | Second relation needed for the three ratios | support/open | `KOIDE_Q_DELTA_CLOSURE_PACKAGE_README_2026-04-21.md` | yes for full ratio vector | yes | physical endpoint/readout theorem | open blocker |
 | Koide `Q` plus Brannen phase as generation/tau-scale selector | Candidate route to assign ratio vector and radiative scale without PDG masses | exact negative boundary / support firewall | `CHARGED_LEPTON_KOIDE_RATIO_SOURCE_SELECTOR_FIREWALL_NOTE_2026-04-27.md` | no standalone proof | no, route is closed without new primitive | requires a new physical source/endpoint/generation law; value matching is insufficient | no-go for standalone selector |
+| Unbased selected-line/Brannen orbit as physical generation selector | Candidate route from ratio/phase support to a tau/e/mu label | exact negative boundary | `CHARGED_LEPTON_SELECTED_LINE_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md` | no standalone proof | no, route is closed without a basepoint/source law | derive a retained based endpoint/source law or non-observational generation selector | no-go for unbased orbit selector |
 | Non-observational generation label / tau-scale selector | Needed to attach the retained/support scale to a charged-lepton eigenvalue | open primitive | `CHARGED_LEPTON_RADIATIVE_TAU_SELECTOR_FIREWALL_NOTE_2026-04-26.md`; `CHARGED_LEPTON_KOIDE_RATIO_SOURCE_SELECTOR_FIREWALL_NOTE_2026-04-27.md` | yes | yes | derive from source-domain, endpoint, or generation-label theorem | open blocker |
 | Top Ward identity template `y_t/g_s = 1/sqrt(6)` | Candidate pattern for charged-lepton `y_tau` | retained for top sector only | `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`; `CHARGED_LEPTON_DIRECT_WARD_FREE_YUKAWA_NO_GO_NOTE_2026-04-26.md` | no direct lepton proof | no unless lifted | direct lift tested and closed; only a new primitive could reopen a lepton-scale theorem | no-go for direct lift |
 | Literature Koide formula | External context for charged-lepton mass relation | background context | Koide 1983 PRD via OSTI/APS DOI | no as derivation input | no | comparator/history only | disclosed literature |
@@ -49,3 +50,10 @@ the `Q` source route is conditional on a still-open physical source premise,
 the Brannen endpoint/radian readout remains open, and cyclic relabelings keep
 the unordered ratio vector fixed while moving the largest slot label. PDG
 charged-lepton masses remain comparator-only.
+
+The fourth execution cycle sharpened the selected-line side. Even granting the
+non-PDG support values, an unbased free `C3` orbit has no natural single-label
+selector: no generation label is fixed by all cyclic relabelings, and the only
+nonempty invariant label subset is the full generation orbit. Based
+equivariant selectors exist, but the basepoint choice is exactly the still-open
+physical endpoint/source/generation law.
