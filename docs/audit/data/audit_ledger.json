@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T11:01:12.494819+00:00",
-  "generated_at": "2026-04-27T11:01:10.517674+00:00",
-  "invalidation_run_at": "2026-04-27T11:01:12.430737+00:00",
+  "effective_status_computed_at": "2026-04-27T11:03:12.195470+00:00",
+  "generated_at": "2026-04-27T11:03:10.283316+00:00",
+  "invalidation_run_at": "2026-04-27T11:03:12.120235+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T11:01:12.280651+00:00",
+  "load_bearing_computed_at": "2026-04-27T11:03:11.975795+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -26824,14 +26824,21 @@
       "verdict_rationale": "Issue: the queue's proposed_promoted status contradicts the source note and runner output; the note says this is not a promoted dynamics theorem, and the runner shows no convergence plus an undefined imposed-control purity comparator. Why this blocks: a hostile referee cannot promote Gate B dynamics from a rule that hits the removal cap, lacks a stable fixed point, and cannot produce the promised generated-vs-imposed purity comparison. Repair target: produce a deterministic runner/theorem where the local rule converges under stated thresholds, the same-budget imposed control has defined detector signal, and the promoted criterion is asserted across seeds and layer sizes; also resolve the script's band-vs-random wording mismatch for the imposed control. Claim boundary until fixed: it is safe to claim a bounded negative/prototype result in which local pruning creates a measurable post-barrier gap distinct from baseline, but not a closed Gate B dynamics solution or proposed_promoted theorem."
     },
     "evolving_network_prototype_v3_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The frozen log and live runner reproduce the methodological improvement, including finite imposed gaps and spine_ok = 1.00, but every row still has conv = 0.00 and imposed_pur = nan. The source status explicitly says this is a public control audit, not a proposed_promoted dynamics result.",
       "claim_id": "evolving_network_prototype_v3_note",
       "criticality": "leaf",
       "current_status": "proposed_promoted",
@@ -26839,18 +26846,23 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_promoted",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_promoted",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The v3 note shows a fairer backbone-preserving imposed control with spine_ok = 1.00, but the imposed detector purity remains nan and the Gate B generated-vs-imposed dynamics comparison remains negative or inconclusive.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "7c9d64342d5cea2769f5a875709f0a6459a2e2861d109896dff8186a6a4f21c8",
       "note_path": "docs/EVOLVING_NETWORK_PROTOTYPE_V3_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "promoted_dynamics_result_denied_by_source_note",
+        "imposed_detector_purity_nan",
+        "fixed_point_convergence_not_observed",
+        "generated_vs_imposed_positive_comparator_not_established"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368276+00:00",
@@ -26881,14 +26893,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 9,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 9
       },
       "runner_path": null,
       "title": "Evolving Network Prototype V3 Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the queued proposed_promoted status is contradicted by the source note and by the v3 runner; the control is cleaner, but the detector-side purity comparison is still undefined and the self-regulating rule still does not converge. Why this blocks: a promoted Gate B dynamics result requires a measurable generated-vs-imposed comparator and stable rule behavior, while this packet only shows that the imposed control preserves a backbone corridor before losing finite detector purity. Repair target: produce a runner/theorem with finite imposed_pur, explicit generated-vs-imposed pass thresholds, convergence or a justified non-convergence criterion, and seed/layer robustness under the same-budget control. Claim boundary until fixed: it is safe to claim v3 improves the control discipline and preserves a source-to-detector backbone while generated pruning produces finite gap signals; it is not safe to claim Gate B is solved or that v3 is a proposed_promoted dynamics result."
     },
     "evolving_network_prototype_v4_note": {
       "audit_date": null,

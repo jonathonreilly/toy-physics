@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T11:01:12.806867+00:00
+**Generated:** 2026-04-27T11:03:12.482507+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -21,7 +21,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 |---|---:|
 | **retained** | 26 |
 | _proposed_retained_ | 172 |
-| _proposed_promoted_ | 3 |
+| _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 101 |
 | open | 11 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 2 |
 | ~~audited_conditional~~ | 290 |
-| ~~audited_failed~~ | 85 |
+| ~~audited_failed~~ | 86 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 26 |
 | `audited_conditional` | 79 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 18 |
+| `audited_failed` | 19 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1466 |
+| `unaudited` | 1465 |
 
 | criticality | count |
 |---|---:|
@@ -219,6 +219,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `equivalence_principle_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | G | - |
 | `evolving_network_prototype_v2_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `evolving_network_prototype_v3_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `lattice_3d_dense_spent_delay_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `lattice_kernel_transfer_norm_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -1083,6 +1084,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `promoted_dynamics_theorem_denied_by_source_note`
   - `fixed_point_convergence_not_observed`
   - `same_budget_imposed_control_detector_purity_nan`
+- **auditor confidence:** high
+
+### `evolving_network_prototype_v3_note`
+
+- **Note:** [`EVOLVING_NETWORK_PROTOTYPE_V3_NOTE.md`](../../docs/EVOLVING_NETWORK_PROTOTYPE_V3_NOTE.md)
+- **current_status:** _proposed_promoted_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The v3 note shows a fairer backbone-preserving imposed control with spine_ok = 1.00, but the imposed detector purity remains nan and the Gate B generated-vs-imposed dynamics comparison remains negative or inconclusive.  _(class `C`)_
+- **chain closes:** False — The frozen log and live runner reproduce the methodological improvement, including finite imposed gaps and spine_ok = 1.00, but every row still has conv = 0.00 and imposed_pur = nan. The source status explicitly says this is a public control audit, not a proposed_promoted dynamics result.
+- **rationale:** Issue: the queued proposed_promoted status is contradicted by the source note and by the v3 runner; the control is cleaner, but the detector-side purity comparison is still undefined and the self-regulating rule still does not converge. Why this blocks: a promoted Gate B dynamics result requires a measurable generated-vs-imposed comparator and stable rule behavior, while this packet only shows that the imposed control preserves a backbone corridor before losing finite detector purity. Repair target: produce a runner/theorem with finite imposed_pur, explicit generated-vs-imposed pass thresholds, convergence or a justified non-convergence criterion, and seed/layer robustness under the same-budget control. Claim boundary until fixed: it is safe to claim v3 improves the control discipline and preserves a source-to-detector backbone while generated pruning produces finite gap signals; it is not safe to claim Gate B is solved or that v3 is a proposed_promoted dynamics result.
+- **open / conditional deps cited:**
+  - `promoted_dynamics_result_denied_by_source_note`
+  - `imposed_detector_purity_nan`
+  - `fixed_point_convergence_not_observed`
+  - `generated_vs_imposed_positive_comparator_not_established`
 - **auditor confidence:** high
 
 ### `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25`
