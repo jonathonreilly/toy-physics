@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T10:41:52.030617+00:00
+**Generated:** 2026-04-27T10:44:14.444324+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 22 |
-| _proposed_retained_ | 179 |
+| _proposed_retained_ | 178 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 287 |
+| ~~audited_conditional~~ | 288 |
 | ~~audited_failed~~ | 84 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 22 |
-| `audited_conditional` | 76 |
+| `audited_conditional` | 77 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 17 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1474 |
+| `unaudited` | 1473 |
 
 | criticality | count |
 |---|---:|
@@ -140,6 +140,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `distance_law_frontier_audit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_abcc_chamber_bound_derivation_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `dm_neutrino_bosonic_normalization_theorem_note_2026-04-15` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_neutrino_schur_suppression_theorem_note_2026-04-15` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `electrostatics_grown_sign_law_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `emergent_lorentz_invariance_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -862,6 +863,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `retained_affine_Hermitian_source_family_and_H_base_J_basin_coordinates_not_registered`
   - `five_route_assumptions_audit_boundary_for_pure_algebraic_A_BCC_not_registered_here`
   - `right_sensitive_microscopic_selector_law_later_same_day_stack_not_audited_in_this_claim`
+- **auditor confidence:** high
+
+### `dm_neutrino_bosonic_normalization_theorem_note_2026-04-15`
+
+- **Note:** [`DM_NEUTRINO_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md`](../../docs/DM_NEUTRINO_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Physical local scalar observables must be source-response coefficients of the unique additive CPT-even generator W[J], so the physical normalization surface is Gamma_1 rather than the raw chiral bridge Y.  _(class `B`)_
+- **chain closes:** False — The runner verifies the determinant and trace algebra, but the physical observable principle and retained local Higgs-family selection are imported as unregistered premises rather than proved or supplied as one-hop authorities.
+- **rationale:** Issue: the algebraic checks close after accepting the observable-principle premise, but the note does not register or reproduce the theorem that physical local scalar observables are exactly W[J] source-response coefficients on the retained local Higgs family. Why this blocks: without that physical selection theorem, the runner only shows that Y has zero log-det response and Gamma_1 has nonzero even response; it does not by itself prove that the active-space ratio 1 is inadmissible or that 1/sqrt(2) is the physical normalization. Repair target: cite and audit-clean the observable-principle/local-Higgs-family theorem, or derive the admissibility criterion directly from retained primitives inside this note. Claim boundary until fixed: it is safe to claim the C^16 algebra, nilpotency, determinant response, and trace-ratio facts, including full-space ratio 1/sqrt(2) versus active-space ratio 1; the physical selection of 1/sqrt(2) remains conditional on the observable principle.
+- **open / conditional deps cited:**
+  - `observable_principle_unique_additive_CPT_even_generator_not_registered`
+  - `retained_local_Higgs_family_not_registered`
 - **auditor confidence:** high
 
 ### `dm_neutrino_schur_suppression_theorem_note_2026-04-15`

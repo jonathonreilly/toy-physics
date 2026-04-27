@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T10:41:51.672000+00:00",
-  "generated_at": "2026-04-27T10:41:49.502357+00:00",
-  "invalidation_run_at": "2026-04-27T10:41:51.557987+00:00",
+  "effective_status_computed_at": "2026-04-27T10:44:14.066343+00:00",
+  "generated_at": "2026-04-27T10:44:11.763067+00:00",
+  "invalidation_run_at": "2026-04-27T10:44:13.975608+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T10:41:51.314876+00:00",
+  "load_bearing_computed_at": "2026-04-27T10:44:13.772240+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -18925,14 +18925,21 @@
       "verdict_rationale": null
     },
     "dm_neutrino_bosonic_normalization_theorem_note_2026-04-15": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies the determinant and trace algebra, but the physical observable principle and retained local Higgs-family selection are imported as unregistered premises rather than proved or supplied as one-hop authorities.",
       "claim_id": "dm_neutrino_bosonic_normalization_theorem_note_2026-04-15",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -18940,18 +18947,21 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Physical local scalar observables must be source-response coefficients of the unique additive CPT-even generator W[J], so the physical normalization surface is Gamma_1 rather than the raw chiral bridge Y.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "e2c1a5e18dcc1cd2fa1aeea5022f69cd7f9fff68302973ba74845701cf924a75",
       "note_path": "docs/DM_NEUTRINO_BOSONIC_NORMALIZATION_THEOREM_NOTE_2026-04-15.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "observable_principle_unique_additive_CPT_even_generator_not_registered",
+        "retained_local_Higgs_family_not_registered"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368111+00:00",
@@ -19005,16 +19015,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 12,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 12
       },
       "runner_path": "scripts/frontier_dm_neutrino_bosonic_normalization_theorem.py",
       "title": "DM Neutrino Bosonic Normalization Theorem",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the algebraic checks close after accepting the observable-principle premise, but the note does not register or reproduce the theorem that physical local scalar observables are exactly W[J] source-response coefficients on the retained local Higgs family. Why this blocks: without that physical selection theorem, the runner only shows that Y has zero log-det response and Gamma_1 has nonzero even response; it does not by itself prove that the active-space ratio 1 is inadmissible or that 1/sqrt(2) is the physical normalization. Repair target: cite and audit-clean the observable-principle/local-Higgs-family theorem, or derive the admissibility criterion directly from retained primitives inside this note. Claim boundary until fixed: it is safe to claim the C^16 algebra, nilpotency, determinant response, and trace-ratio facts, including full-space ratio 1/sqrt(2) versus active-space ratio 1; the physical selection of 1/sqrt(2) remains conditional on the observable principle."
     },
     "dm_neutrino_breaking_triplet_axiom_law_attempt_note_2026-04-15": {
       "audit_date": null,
