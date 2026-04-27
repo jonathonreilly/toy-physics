@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T08:55:43.796227+00:00",
-  "generated_at": "2026-04-27T08:55:41.708872+00:00",
-  "invalidation_run_at": "2026-04-27T08:55:43.728384+00:00",
+  "effective_status_computed_at": "2026-04-27T08:59:42.910968+00:00",
+  "generated_at": "2026-04-27T08:59:40.656794+00:00",
+  "invalidation_run_at": "2026-04-27T08:59:42.790934+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T08:55:43.578828+00:00",
+  "load_bearing_computed_at": "2026-04-27T08:59:42.615956+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -5976,14 +5976,21 @@
       "verdict_rationale": null
     },
     "backreaction_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The current Poisson runner does not reproduce the source-note threshold table: at G=0.010 the live escape is 1.0502, not 1.002, the first listed sub-unity escape is at G=0.050 with 0.9631, and the runner no longer samples the note's G=0.011/0.012/0.020 rows or field-strength-dependence check.",
       "claim_id": "backreaction_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -5991,18 +5998,23 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note's load-bearing claim is that Poisson self-gravity produces a gravitational absorption threshold at G_crit ~ 0.011, with TOWARD deflection preserved and escape decreasing smoothly from above one to below one.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "95f97d6b8a07bb7a6297ec176dd2753040975023c6299e6884b2e2f245cd027a",
       "note_path": "docs/BACKREACTION_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "source_note_threshold_table_stale_against_scripts/backreaction_poisson.py",
+        "Gcrit_0.011_not_sampled_or_reproduced_by_live_runner",
+        "field_strength_dependence_rows_s_0.001_and_s_0.016_not_present_in_current_runner",
+        "high_G_live_runner_shows_unstable_away_behavior_not_smooth_threshold_table"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.367645+00:00",
@@ -6040,7 +6052,7 @@
       "runner_path": null,
       "title": "Self-Consistent Back-Reaction: Horizons from Geometry",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the source note's quantitative absorption-threshold claim is stale against the live Poisson/self-consistency runners; the current Poisson output gives escape 1.0498 at G=0.005, 1.0502 at G=0.010, 0.9631 at G=0.050, and 0.7547 at G=0.100, not the note's 1.025, 1.002, 0.751, and 0.486 trend with G_crit ~ 0.011. Why this blocks: a hostile physicist cannot retain a claimed horizon-like threshold at G_crit ~ 0.011 or a smooth table-driven collapse transition when the current computation places the first listed sub-unity escape much later and shows unstable/away behavior at larger G. Repair target: restore the exact runner/version and sweep grid that generated the note, or update the note with a live asserted sweep including G=0.011, 0.012, 0.020, the field-strength-dependence rows, convergence gates, escape monotonicity checks, and Born checks on the same converged field. Claim boundary until fixed: it is safe to claim only that the current Poisson runner shows TOWARD deflection for G <= 0.1, escape below one by G=0.050 at s_ext=0.004, and a linear fixed-field Born check of 2.45e-16 in the separate self-consistency script; it is not safe to retain the note's G_crit ~ 0.011 gravitational-collapse threshold or its exact table."
     },
     "bell_inequality_derived_note": {
       "audit_date": "2026-04-26",
