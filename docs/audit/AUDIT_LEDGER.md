@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T10:04:28.100949+00:00
+**Generated:** 2026-04-27T10:08:29.818436+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 20 |
-| _proposed_retained_ | 186 |
+| **retained** | 21 |
+| _proposed_retained_ | 185 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 20 |
+| `audited_clean` | 21 |
 | `audited_conditional` | 73 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 15 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1481 |
+| `unaudited` | 1480 |
 
 | criticality | count |
 |---|---:|
@@ -107,6 +107,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `claude_complex_action_carryover_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `claude_complex_action_grown_companion_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `composite_source_additivity_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `distance_law_3d_64_closure_note_2026-04-11` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `i3_zero_exact_theorem_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -729,6 +730,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the note hardens the diamond/NV lane by dividing the weakest nonzero proxy observables by three, but the runner hard-codes the moving-source proxy rows and the cited source note is bounded, not audited-retained. Why this blocks: a proxy-unit 3sigma threshold is not a real lab signal budget unless a theorem or calibrated input maps the proxy centroid/phase units into NV readout units and noise floor. Repair target: audit or replace the moving-source proxy input with a retained source computation, then add the missing transfer calibration from proxy units to NV X/Y/phi readout units and rerun the budget from those calibrated quantities. Claim boundary until fixed: the safe claim is a bounded proxy-budget card for the specified grown-row geometry: if the copied proxy values are taken literally, the calculator gives centroid target 2.888572e-07 and phase target 4.363583e-06 rad; it does not establish absolute detectability or a completed lab budget.
 - **open / conditional deps cited:**
   - `MOVING_SOURCE_RETARDED_PORTABILITY_NOTE.md`
+- **auditor confidence:** high
+
+### `distance_law_3d_64_closure_note_2026-04-11`
+
+- **Note:** [`DISTANCE_LAW_3D_64_CLOSURE_NOTE_2026-04-11.md`](../../docs/DISTANCE_LAW_3D_64_CLOSURE_NOTE_2026-04-11.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The retained signal is the 31^3 through 64^3 grid sweep with largest-grid far-field exponent alpha = -1.023 +/- 0.012, finite-size extrapolation alpha_inf = -0.976 +/- 0.019, and largest-grid mass-linearity spread below 0.1%.  _(class `C`)_
+- **chain closes:** True — The named runner directly recomputes the Poisson field, path-sum deflections, far-field fits, finite-size extrapolation, and largest-grid mass scaling, and its live output reproduces the note's bounded numerical values.
+- **rationale:** The clean verdict is narrow. The live runner reproduces alpha(64^3) = -1.0233 +/- 0.0115, alpha_inf = -0.9762 +/- 0.0193, and delta/M spread 0.0010 on the specified Dirichlet 3D path-sum setup. The note explicitly limits the claim to a bounded numerical continuation and states that it is not full Newton closure, not architecture portability, and not a two-body M1 M2 theorem. Residual risk is therefore scope-bound: the result should only be cited for this finite path-sum surface and its stated convergence trend.
 - **auditor confidence:** high
 
 ### `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21`
