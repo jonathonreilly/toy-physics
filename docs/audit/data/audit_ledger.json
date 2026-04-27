@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T06:37:52.133779+00:00",
-  "generated_at": "2026-04-27T06:37:50.180296+00:00",
-  "invalidation_run_at": "2026-04-27T06:37:52.054788+00:00",
+  "effective_status_computed_at": "2026-04-27T06:40:06.464776+00:00",
+  "generated_at": "2026-04-27T06:40:04.517402+00:00",
+  "invalidation_run_at": "2026-04-27T06:40:06.389202+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T06:37:51.901203+00:00",
+  "load_bearing_computed_at": "2026-04-27T06:40:06.223787+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -43036,14 +43036,21 @@
       "verdict_rationale": "Issue: the note promotes a bounded complementarity sweet spot from a finite N=40, half_width=20 slit-gap sweep with chosen centroid, mass-placement, distance-fit, and threshold guards, while Born cleanliness is checked only on a same-family companion aperture. Why this blocks: those choices demonstrate an internally reproducible scenario, but they do not by themselves establish a retained lattice complementarity theorem or same-card coexistence of Born, which-slit/decoherence, distance-law quality, and attractive gravity. Repair target: provide a theorem or registered runner proving the observable/readout and guard selection from retained primitives, and compute Born plus the distance-law/decoherence observables on the same aperture card or explicitly prove the companion-aperture transfer. Claim boundary until fixed: the current runner safely supports the reported canonical finite sweep, the monotone MI/d_TV rise, the R^2 degradation, the gap=2 thresholded sweet-spot row, clean companion Born residuals, zero k=0 response, and away-signed same-card gravity."
     },
     "lattice_distance_law_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 2.822,
+        "transitive_descendants": 4
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The named no-barrier runner and archived log reproduce the saved b rows, the k=0 zero control, and the far-field power-law fit. The note explicitly limits the claim to |delta| on the no-barrier ordered-lattice harness and excludes a signed attractive deflection law, the barrier geometry, and the mirror/random-connected family.",
       "claim_id": "lattice_distance_law_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -43051,13 +43058,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 2.822,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "On the ordered 2D no-barrier lattice with N=40 and half-width 20, the detector-centroid magnitude follows |delta| ~= 23.5071*b^(-1.052) with R^2=0.9850 on the far-field window b>=7, while the k=0 control is zero.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "audited_failed",
       "max_descendant_status_rank": 0,
       "note_hash": "839494cf59aa08eb5d2930066fe8a4c258b37bd577181543dadf7951300b3235",
@@ -43093,14 +43100,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 3,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 3
       },
       "runner_path": null,
       "title": "Lattice Distance-Law Note",
       "transitive_descendants": 4,
-      "verdict_rationale": null
+      "verdict_rationale": "The finite ordered-lattice distance-magnitude claim closes on its own terms: the live runner exactly reproduces the seven b rows, k=0 gives +0.000000e+00, and the b>=7 fit is |delta| ~= 23.5071*b^(-1.052) with R^2=0.9850. This clean audit ratifies only the N=40, half-width-20, no-barrier ordered-lattice magnitude law and its stated scope limits; it does not ratify a signed attractive law, a barrier-harness law, a continuum theorem, or a rescue of the random-connected mirror-family distance claim."
     },
     "lattice_family_validation_note": {
       "audit_date": null,
