@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T04:45:12.705042+00:00",
-  "generated_at": "2026-04-27T04:45:10.907534+00:00",
-  "invalidation_run_at": "2026-04-27T04:45:12.643458+00:00",
+  "effective_status_computed_at": "2026-04-27T04:46:58.025191+00:00",
+  "generated_at": "2026-04-27T04:46:56.218011+00:00",
+  "invalidation_run_at": "2026-04-27T04:46:57.967542+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T04:45:12.515247+00:00",
+  "load_bearing_computed_at": "2026-04-27T04:46:57.844985+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -53965,14 +53965,21 @@
       "verdict_rationale": null
     },
     "planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 9.383,
+        "transitive_descendants": 117
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The runner passes 27/27 checks and closes the stated boundary claim. It verifies phase periodicity, dependence only on S/kappa, rescaling invariance, inverse H/t scaling, scalar-action global phases, finite commutator trace obstruction, a valid two-mode CAR realization on C^4, Clifford/Majorana generation of M_4(C), CAR parity grading, and explicit non-CAR two-qubit and ququart semantics on the same rank-four Hilbert block with the same allowed unitary flow. These countermodels establish the no-go/boundary theorem without requiring a positive Target 2 or Target 3 closure.",
       "claim_id": "planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -53980,13 +53987,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 5,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 9.383,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The boundary theorem shows that finite Hilbert/unitary flow supplies only U(1) phase data, is invariant under common action/action-quantum rescalings, and that the same rank-four active block supports both CAR/Majorana and non-CAR two-qubit or ququart semantics, so Hilbert flow alone cannot force an absolute action unit or primitive CAR edge statistics.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "701054bee248fe8193e94d3c6b5f2e40eaceb5ee62d7e15caf8cb9bbbe12101e",
@@ -54020,16 +54027,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 1,
         "B": 0,
-        "C": 0,
+        "C": 26,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 27
       },
       "runner_path": "scripts/frontier_planck_target3_phase_unit_edge_statistics.py",
       "title": "Planck Target 3 Phase-Unit / Edge-Statistics Boundary Note",
       "transitive_descendants": 117,
-      "verdict_rationale": null
+      "verdict_rationale": "Clean for the bounded Target 3 statement. The positive part is exactly the native dimensionless U(1) phase unit. The negative parts are established by invariance and counterexample: amplitudes depend only on S/kappa, finite matrices cannot realize a nonzero exact canonical commutator by trace, and the rank-four block admits both CAR and non-CAR semantics while satisfying the same Hilbert-flow axioms. This clean audit does not derive hbar, a physical dimensional action unit, primitive CAR statistics, Target 2 c=1/4 unconditionality, or the later Clifford/coframe bridge; it only certifies that the current one-axiom Hilbert-flow surface is insufficient without additional edge-statistics/action-unit structure."
     },
     "plaquette_self_consistency_note": {
       "audit_date": null,
