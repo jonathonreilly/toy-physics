@@ -5,7 +5,7 @@
 
 ## Current State
 
-**Cycles 1-7 complete.**
+**Cycles 1-8 complete.**
 
 **Cycle 1 (R4 — Hubble Tension Structural Lock):**
 
@@ -46,6 +46,15 @@
   references; updated to full path `docs/publication/ci3_z3/`
 - All other audit categories (broken refs, unmodeled premises,
   overclaim, import drift, table accuracy, runner-log fidelity) clean
+
+**Cycle 8 (`(C3)`-class audit-no-go):**
+
+- `docs/HUBBLE_LANE5_C3_VACUUM_TOPOLOGY_NO_ACTIVE_ROUTE_NOTE_2026-04-27.md`
+- Five `(C3)` candidates audited: S^3 topology, direct vacuum-energy,
+  holographic, Lambda spectral tower, inflation. All currently
+  inactive. `(C3)` class is empty in current framework content.
+- Three hypothetical `(C3)` opening routes enumerated (C3a, C3b, C3c),
+  each requiring a fresh structural premise.
 
 Branch-local 6-criterion self-review PASS for both cycles. Cycle 1
 required one premise-tightening edit (3 → 2 premises). Cycle 2 required
@@ -106,36 +115,40 @@ on a primitive algebraic block.
 Neither cycle retires the `H_0` import (Lane 5 main target). They lock
 the structural form and exhaustively classify the closure pathways.
 
-## Next Exact Action (Cycle 8 — dramatic-step-gate evaluation)
+## Next Exact Action (Cycle 9 — dramatic-step-gate evaluation)
 
-After 7 cycles, the workstream's claim-state movement options are
-thin:
+The natural Lane-5-internal claim-state movement is now exhausted:
 
-- **Cycle 8 candidate A — direct cosmic-`L` vacuum/topology
-  exploration** (would open `(C3)`): speculative; most likely
-  produces a no-go for easy options, which is itself useful but
-  borderline at the dramatic-step gate.
-- **Cycle 8 candidate B — tension-reconstruction comparator runner**
-  (extends Cycle 1): runner-grade numerical SH0ES vs Planck
-  `L`-reconstruction comparison; pure support; does not retire any
-  input.
-- **Cycle 8 candidate C — honest stop and hand off**: with both
-  `(C1)` and `(C2)` gates explicitly isolated, the natural
-  Lane-5-internal moves are exhausted; remaining work belongs to the
-  DM-leptogenesis lane (resolves `(C2)`) or the Planck-scale lane
-  (resolves `(C1)`), neither of which is Lane 5 work proper. The
-  skill explicitly stops "when no route passes the dramatic-step
-  gate".
+- `(C1)` gate isolated (Cycle 5)
+- `(C2)` gate isolated (Cycle 4)
+- `(C3)` class empty (Cycle 8)
+- workstream consolidated (Cycle 6)
+- hygiene clean (Cycle 7)
 
-**Recommendation:** Cycle 8 should evaluate the dramatic-step gate
-carefully. If Candidate A can produce a real `(C3)` no-go that names
-a structurally new premise, run it. Otherwise (most likely), Candidate
-C — honest stop, write a clean handoff, and let the loop wind down.
+Remaining work belongs to other lanes:
 
-The Lane 5 workstream's primary contributions — Cycles 1-3 (theorem
-content) plus Cycles 4-7 (gate isolation, consolidation, hygiene) —
-already constitute substantial structural progress that the
-post-workstream review-and-integration pipeline can act on.
+- DM-leptogenesis lane (resolves `(C2)`)
+- Planck-scale lane (resolves `(C1)`)
+- Fresh `(C3)` premise opening (no active route at present)
+
+**Cycle 9 candidates:**
+
+- **Cycle 9 candidate A — tension-reconstruction comparator runner**
+  (extends Cycle 1): pure support; runner-grade numerical SH0ES vs
+  Planck `L`-reconstruction. Borderline at dramatic-step gate.
+- **Cycle 9 candidate B — honest stop and hand off.** Per the skill,
+  stop cleanly when no route passes the dramatic-step gate. The
+  workstream's primary structural contributions are landed: 3 theorem
+  cycles (1, 2, 3) + 2 gate-isolation cycles (4, 5) + 1 consolidation
+  (6) + 1 hygiene audit (7) + 1 `(C3)` audit-no-go (8). Further
+  Lane-5-internal cycles would be churn or pure support.
+
+**Recommendation:** Candidate B. Stop the workstream. The loop will
+continue firing per ScheduleWakeup, but each iteration should find no
+honest dramatic-step-gate-passing route and re-schedule with the
+workstream marked complete. The post-workstream review-and-integration
+pipeline can now begin consuming the eight cycle artifacts plus the
+consolidation status note.
 
 ## Repo-Wide Weaving (NOT to apply on this branch)
 
