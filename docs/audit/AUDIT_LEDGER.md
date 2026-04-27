@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T17:52:23.659629+00:00
+**Generated:** 2026-04-27T17:55:03.293498+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 63 |
-| _proposed_retained_ | 62 |
+| _proposed_retained_ | 61 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 330 |
+| ~~audited_conditional~~ | 331 |
 | ~~audited_failed~~ | 126 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 63 |
-| `audited_conditional` | 117 |
+| `audited_conditional` | 118 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1361 |
+| `unaudited` | 1360 |
 
 | criticality | count |
 |---|---:|
@@ -260,6 +260,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `sign_portability_invariant_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `sixth_family_distance_law_third_vs_sixth_quick_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `source_resolved_generated_support_recovery_basin_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `source_resolved_propagating_green_pocket_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_backreaction_shell_spectral_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `strong_cp_theta_zero_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `structured_chokepoint_bridge_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -3787,6 +3788,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `SOURCE_RESOLVED_GENERATED_SUPPORT_RECOVERY_NOTE.md`
   - `SOURCE_RESOLVED_GENERATED_FAMILY_PROBE_NOTE.md`
   - `SOURCE_RESOLVED_GENERATED_SUPPORT_MASS_SCALING_NOTE.md`
+- **auditor confidence:** high
+
+### `source_resolved_propagating_green_pocket_note`
+
+- **Note:** [`SOURCE_RESOLVED_PROPAGATING_GREEN_POCKET_NOTE.md`](../../docs/SOURCE_RESOLVED_PROPAGATING_GREEN_POCKET_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The exact-lattice same-site-memory Green recurrence with mix=0.9 preserves zero-source reduction, 4/4 TOWARD sign, near-linear source scaling, and nonzero offsets versus instantaneous and static Green controls on the tested source ladder.  _(class `C`)_
+- **chain closes:** False — The runner reproduces the frozen exact-lattice table, but the retained interpretation depends on a selected same-site memory recurrence, fixed mix/calibration, and bounded/unaudited exact-lattice control probes rather than a closed field-evolution theorem.
+- **rationale:** Issue: The executable artifact verifies the stated same-site-memory pocket, but the load-bearing memory rule, mix=0.9 choice, calibration to target max |f|=0.02, and static Green control are selected inputs from bounded/unaudited field-probe scaffolding rather than retained derived physics. Why this blocks: the note may retain the deterministic row-level computation, but it cannot promote a proposed_retained propagating Green field result from an arbitrary same-site recurrence and calibration without an independent theorem fixing the carrier, update rule, and normalization. Repair target: derive the same-site memory recurrence and mix/normalization from retained lattice field dynamics, audit the exact Green/source-driven control notes, and add assertion gates for zero-source reduction, sign count, mass exponent, and ratio bands. Claim boundary until fixed: it is safe to claim that this script, with the stated exact lattice, source cluster, gain, and mix, gives zero-source shift 0, 4/4 TOWARD rows, propagating F~M exponent 1.00, mean |prop/inst| 1.420, and mean |prop/green| 1.149; it is not safe to claim a retained propagating-field mechanism beyond this conditional pocket.
+- **open / conditional deps cited:**
+  - `MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md`
+  - `SOURCE_RESOLVED_EXACT_GREEN_POCKET_NOTE.md`
 - **auditor confidence:** high
 
 ### `staggered_backreaction_green_closure_note`
