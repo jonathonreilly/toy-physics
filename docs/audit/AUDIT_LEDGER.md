@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T14:50:55.639156+00:00
+**Generated:** 2026-04-27T14:52:28.216601+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 47 |
-| _proposed_retained_ | 124 |
+| _proposed_retained_ | 123 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 310 |
+| ~~audited_conditional~~ | 311 |
 | ~~audited_failed~~ | 100 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 47 |
-| `audited_conditional` | 97 |
+| `audited_conditional` | 98 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 33 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1424 |
+| `unaudited` | 1423 |
 
 | criticality | count |
 |---|---:|
@@ -203,6 +203,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_native_dimensionless_review_packet_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_native_zero_section_closure_route_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_native_zero_section_nature_review_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `koide_p_one_clock_3plus1_transport_reduction_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_pointed_origin_exhaustion_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_q_delta_readout_retention_split_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `lattice_complementarity_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -2273,6 +2274,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `rank_one_CP1_language_vs_real_primitive_endpoint_residual_open`
   - `zero_source_charged_lepton_scalar_readout_identification_not_closed_here`
   - `frontier_koide_lane_regression.py_rc_1_due_to_frontier_koide_q_so2_phase_erasure_support_22_of_23`
+- **auditor confidence:** high
+
+### `koide_p_one_clock_3plus1_transport_reduction_note_2026-04-20`
+
+- **Note:** [`KOIDE_P_ONE_CLOCK_3PLUS1_TRANSPORT_REDUCTION_NOTE_2026-04-20.md`](../../docs/KOIDE_P_ONE_CLOCK_3PLUS1_TRANSPORT_REDUCTION_NOTE_2026-04-20.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Assuming R1-R4, any framework-native closure of P must be branch-global/ambient in the one-clock 3+1 grammar, or use extra retained Wilson/lattice phase data; no intrinsic local selected-line law can close P.  _(class `B`)_
+- **chain closes:** False — The runner verifies the selected-line target point and local-packet no-go calculations, but the reduction depends on Berry, selected-line bridge, local no-go, and anomaly-forced-time inputs that are support, unaudited, or already conditional.
+- **rationale:** Issue: the reduction theorem is explicitly built from R1-R4, but those cited inputs are not audit-clean: Berry is conditional, the selected-line cyclic-response bridge is unaudited, the local radian no-go is support, and anomaly-forces-time is effective conditional; the runner also checks the anomaly input by doc-string presence and marks the final ambient-category consequence with a hard-coded True. Why this blocks: the note can only inherit the status of its assumptions, and a branch-global/ambient exclusion theorem cannot be retained until the local no-go and 3+1 one-clock ambient grammar are themselves retained computations. Repair target: audit-retain R1, R2, R3, and R4, and replace the doc-string/True consequence checks with runners that execute or import the audited theorem outputs and mechanically verify the exclusion/taxonomy. Claim boundary until fixed: safely claim that, conditional on R1-R4, the live runner finds a unique first-branch point with delta = 2/9 and shows the tested local selected-line packet is constant while delta varies; do not claim a retained one-clock 3+1 transport reduction of P.
+- **open / conditional deps cited:**
+  - `KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md`
+  - `KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md`
+  - `KOIDE_SELECTED_LINE_LOCAL_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md`
+  - `ANOMALY_FORCES_TIME_THEOREM.md`
 - **auditor confidence:** high
 
 ### `koide_pointed_origin_exhaustion_theorem_note_2026-04-24`

@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T14:50:55.457956+00:00",
-  "generated_at": "2026-04-27T14:50:53.854944+00:00",
-  "invalidation_run_at": "2026-04-27T14:50:55.412582+00:00",
+  "effective_status_computed_at": "2026-04-27T14:52:28.029277+00:00",
+  "generated_at": "2026-04-27T14:52:26.429692+00:00",
+  "invalidation_run_at": "2026-04-27T14:52:27.982068+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T14:50:55.316205+00:00",
+  "load_bearing_computed_at": "2026-04-27T14:52:27.887331+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -41018,14 +41018,21 @@
       "verdict_rationale": null
     },
     "koide_p_one_clock_3plus1_transport_reduction_note_2026-04-20": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies the selected-line target point and local-packet no-go calculations, but the reduction depends on Berry, selected-line bridge, local no-go, and anomaly-forced-time inputs that are support, unaudited, or already conditional.",
       "claim_id": "koide_p_one_clock_3plus1_transport_reduction_note_2026-04-20",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -41033,18 +41040,23 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Assuming R1-R4, any framework-native closure of P must be branch-global/ambient in the one-clock 3+1 grammar, or use extra retained Wilson/lattice phase data; no intrinsic local selected-line law can close P.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "b2627416c4b24480fe5579e05e6bcad11da5728b3d2eb7c7ef0f3557dae5582e",
       "note_path": "docs/KOIDE_P_ONE_CLOCK_3PLUS1_TRANSPORT_REDUCTION_NOTE_2026-04-20.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md",
+        "docs/KOIDE_SELECTED_LINE_CYCLIC_RESPONSE_BRIDGE_NOTE_2026-04-18.md",
+        "docs/KOIDE_SELECTED_LINE_LOCAL_RADIAN_BRIDGE_NO_GO_NOTE_2026-04-20.md",
+        "docs/ANOMALY_FORCES_TIME_THEOREM.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368830+00:00",
@@ -41073,16 +41085,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
+        "A": 1,
+        "B": 3,
+        "C": 11,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 15
       },
       "runner_path": "scripts/frontier_koide_p_one_clock_3plus1_transport_reduction_2026_04_20.py",
       "title": "Koide `P` One-Clock `3+1` Transport Reduction",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the reduction theorem is explicitly built from R1-R4, but those cited inputs are not audit-clean: Berry is conditional, the selected-line cyclic-response bridge is unaudited, the local radian no-go is support, and anomaly-forces-time is effective conditional; the runner also checks the anomaly input by doc-string presence and marks the final ambient-category consequence with a hard-coded True. Why this blocks: the note can only inherit the status of its assumptions, and a branch-global/ambient exclusion theorem cannot be retained until the local no-go and 3+1 one-clock ambient grammar are themselves retained computations. Repair target: audit-retain R1, R2, R3, and R4, and replace the doc-string/True consequence checks with runners that execute or import the audited theorem outputs and mechanically verify the exclusion/taxonomy. Claim boundary until fixed: safely claim that, conditional on R1-R4, the live runner finds a unique first-branch point with delta = 2/9 and shows the tested local selected-line packet is constant while delta varies; do not claim a retained one-clock 3+1 transport reduction of P."
     },
     "koide_pointed_origin_exhaustion_theorem_note_2026-04-24": {
       "audit_date": "2026-04-26",

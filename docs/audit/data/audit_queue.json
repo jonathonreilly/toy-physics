@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 89,
     "high": 508,
-    "leaf": 748,
+    "leaf": 747,
     "medium": 82
   },
-  "generated_at": "2026-04-27T14:50:55.503531+00:00",
+  "generated_at": "2026-04-27T14:52:28.075053+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -21644,23 +21644,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "koide_p_one_clock_3plus1_transport_reduction_note_2026-04-20",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/KOIDE_P_ONE_CLOCK_3PLUS1_TRANSPORT_REDUCTION_NOTE_2026-04-20.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_koide_p_one_clock_3plus1_transport_reduction_2026_04_20.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "koide_q_delta_linking_relation_theorem_note_2026-04-20",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -29078,6 +29061,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1014,
-  "total_pending": 1427
+  "ready_count": 1013,
+  "total_pending": 1426
 }
