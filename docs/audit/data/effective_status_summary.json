@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-04-27T04:24:31.381110+00:00",
+  "computed_at": "2026-04-27T04:28:50.311406+00:00",
   "cycle_examples": [
     [
       "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25",
@@ -25,13 +25,13 @@
   ],
   "cycles_detected": 283,
   "effective_status_counts": {
-    "audited_conditional": 287,
+    "audited_conditional": 288,
     "audited_decoration": 1,
     "audited_numerical_match": 3,
     "bounded": 185,
     "open": 11,
     "proposed_promoted": 6,
-    "proposed_retained": 270,
+    "proposed_retained": 269,
     "retained": 3,
     "support": 101,
     "unknown": 734

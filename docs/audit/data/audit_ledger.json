@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T04:24:31.357891+00:00",
-  "generated_at": "2026-04-27T04:24:29.307391+00:00",
-  "invalidation_run_at": "2026-04-27T04:24:31.294008+00:00",
+  "effective_status_computed_at": "2026-04-27T04:28:50.294662+00:00",
+  "generated_at": "2026-04-27T04:28:48.411603+00:00",
+  "invalidation_run_at": "2026-04-27T04:28:50.230550+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T04:24:31.002175+00:00",
+  "load_bearing_computed_at": "2026-04-27T04:28:50.091243+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -53750,14 +53750,21 @@
       "verdict_rationale": null
     },
     "planck_source_unit_normalization_support_theorem_note_2026-04-25": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 11.383,
+        "transitive_descendants": 117
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies the algebra of the source-unit family, the 4*pi conversion, the old bare-source mismatch, and the Planck-unit map after lambda=1. However, the audit has no registered one-hop dependency establishing the primitive boundary/Wald carrier identification, the exterior-observable additive source-charge theorem, the lattice Green theorem authority, or the Target 3 coframe-response bridge as audited clean. The note itself labels the result as a support theorem on a conditional Planck packet, so the chain remains conditional rather than closed.",
       "claim_id": "planck_source_unit_normalization_support_theorem_note_2026-04-25",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -53765,18 +53772,26 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 9,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 11.383,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The theorem converts the retained bare Green coefficient G_kernel=1/(4*pi) into a physical lattice Newton coefficient G_Newton,lat=1 by asserting that the primitive boundary/Wald area carrier identifies c_cell=1/4 with 1/(4G_lambda)=lambda/4, thereby fixing the exterior monopole mass scale lambda=1.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "a8af307cfcf3d5a5d42672fadee2f48edbb46ac4dda672881ba2384af2f5da6f",
       "note_path": "docs/PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md_audited_conditional_not_clean",
+        "docs/PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md_not_registered_or_not_audited_clean",
+        "docs/PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md_not_registered_or_not_audited_clean",
+        "retained_lattice_Green_kernel_asymptotic_theorem_not_registered_as_one_hop_dependency",
+        "Gauss_asymptotic_monopole_readout_and_exterior_observability_additivity_source_charge_theorem_not_registered",
+        "primitive_boundary_Wald_carrier_identification_c_cell_equals_1_over_4_to_1_over_4G_lambda_not_registered_as_audited_clean",
+        "conventional_lP_squared_equals_Gphys_target_definition_external_not_a_CL3_derivation"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369351+00:00",
@@ -53805,16 +53820,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 14,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 14
       },
       "runner_path": "scripts/frontier_planck_source_unit_normalization_support_theorem.py",
       "title": "Planck Source-Unit Normalization Support Theorem",
       "transitive_descendants": 117,
-      "verdict_rationale": null
+      "verdict_rationale": "The internal calculation is coherent and the runner passes 14/14 checks: treating 1/(4*pi) as the bare unit-delta Green coefficient, parameterizing physical active mass as M_lambda=lambda C, matching c_cell=1/4 to lambda/4, and then obtaining q_bare=4*pi M_phys, G_Newton,lat=1, EH=c_cell/(4*pi), and a/l_P=1. The blocker is not arithmetic; it is the unproved load-bearing identification of the primitive cell count with the gravitational boundary/Wald area carrier and the unregistered exterior-source readout that gives the one-parameter mass family. Without those inputs, the audit can only say that the conditional Planck support packet is internally normalized. To repair the claim, register and audit a theorem proving that the primitive boundary/Wald carrier is the gravitational area/action carrier, register and audit the exterior-observable additive monopole source-charge theorem, and close or audit the Target 3 Clifford/coframe bridge that supplies the carrier route. What remains safe is the conditional statement: if the primitive boundary/Wald carrier premise and exterior source-charge theorem are accepted, then lambda=1 uniquely, the physical Newton coefficient in lattice units is one, and the previous 2*sqrt(pi) result is specifically the bare-source mislabeling failure mode. The audit does not support a standalone derivation of a=l_P, M_Pl, SI constants, hbar, or the primitive carrier itself."
     },
     "planck_target3_clifford_phase_bridge_theorem_note_2026-04-25": {
       "audit_date": null,

@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T04:24:31.659531+00:00
+**Generated:** 2026-04-27T04:28:50.600693+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 3 |
-| _proposed_retained_ | 270 |
+| _proposed_retained_ | 269 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
@@ -28,16 +28,16 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | unknown | 734 |
 | ~~audited_decoration~~ | 1 |
 | ~~audited_numerical_match~~ | 3 |
-| ~~audited_conditional~~ | 287 |
+| ~~audited_conditional~~ | 288 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 3 |
-| `audited_conditional` | 28 |
+| `audited_conditional` | 29 |
 | `audited_decoration` | 1 |
 | `audited_numerical_match` | 3 |
-| `unaudited` | 1563 |
+| `unaudited` | 1562 |
 
 | criticality | count |
 |---|---:|
@@ -120,6 +120,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `native_gauge_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `neutrino_dirac_z3_support_trichotomy_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `planck_boundary_density_extension_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `planck_source_unit_normalization_support_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `sign_portability_invariant_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `strong_cp_theta_zero_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `wave_retardation_continuum_limit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -600,6 +601,26 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Because C(c_cell, delta)=c_cell is constant on the affine hidden-character fiber while p_Schur(c_cell, delta)=c_cell+delta varies, p_Schur=p_event holds iff delta=0 and no carrier-only function can recover the Schur scalar on that fiber.  _(class `A`)_
 - **chain closes:** True — The source note and runner prove the bounded no-go by an explicit two-point affine-fiber counterexample: identical carrier data produce different Schur scalars, so carrier commutation alone cannot force scalar equality.
 - **rationale:** The claim is scoped as a negative no-go for the unconstrained carrier-only parent-source scalar route, not as a positive Planck coefficient derivation. The load-bearing hidden-character fiber is explicit in the source note and the runner verifies the kernel, two-parent counterexample, carrier-only non-recoverability, equivalence of scalar equality to delta=0, and normalization sensitivity. Residual boundary: this clean audit does not rule out a future no-hidden-character law or a direct gravitational carrier-identification theorem; it only closes the carrier-only route without such an extra law.
+- **auditor confidence:** high
+
+### `planck_source_unit_normalization_support_theorem_note_2026-04-25`
+
+- **Note:** [`PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md`](../../docs/PLANCK_SOURCE_UNIT_NORMALIZATION_SUPPORT_THEOREM_NOTE_2026-04-25.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The theorem converts the retained bare Green coefficient G_kernel=1/(4*pi) into a physical lattice Newton coefficient G_Newton,lat=1 by asserting that the primitive boundary/Wald area carrier identifies c_cell=1/4 with 1/(4G_lambda)=lambda/4, thereby fixing the exterior monopole mass scale lambda=1.  _(class `A`)_
+- **chain closes:** False — The runner verifies the algebra of the source-unit family, the 4*pi conversion, the old bare-source mismatch, and the Planck-unit map after lambda=1. However, the audit has no registered one-hop dependency establishing the primitive boundary/Wald carrier identification, the exterior-observable additive source-charge theorem, the lattice Green theorem authority, or the Target 3 coframe-response bridge as audited clean. The note itself labels the result as a support theorem on a conditional Planck packet, so the chain remains conditional rather than closed.
+- **rationale:** The internal calculation is coherent and the runner passes 14/14 checks: treating 1/(4*pi) as the bare unit-delta Green coefficient, parameterizing physical active mass as M_lambda=lambda C, matching c_cell=1/4 to lambda/4, and then obtaining q_bare=4*pi M_phys, G_Newton,lat=1, EH=c_cell/(4*pi), and a/l_P=1. The blocker is not arithmetic; it is the unproved load-bearing identification of the primitive cell count with the gravitational boundary/Wald area carrier and the unregistered exterior-source readout that gives the one-parameter mass family. Without those inputs, the audit can only say that the conditional Planck support packet is internally normalized. To repair the claim, register and audit a theorem proving that the primitive boundary/Wald carrier is the gravitational area/action carrier, register and audit the exterior-observable additive monopole source-charge theorem, and close or audit the Target 3 Clifford/coframe bridge that supplies the carrier route. What remains safe is the conditional statement: if the primitive boundary/Wald carrier premise and exterior source-charge theorem are accepted, then lambda=1 uniquely, the physical Newton coefficient in lattice units is one, and the previous 2*sqrt(pi) result is specifically the bare-source mislabeling failure mode. The audit does not support a standalone derivation of a=l_P, M_Pl, SI constants, hbar, or the primitive carrier itself.
+- **open / conditional deps cited:**
+  - `PLANCK_BOUNDARY_DENSITY_EXTENSION_THEOREM_NOTE_2026-04-24.md_audited_conditional_not_clean`
+  - `PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md_not_registered_or_not_audited_clean`
+  - `PLANCK_TARGET3_CLIFFORD_PHASE_BRIDGE_THEOREM_NOTE_2026-04-25.md_not_registered_or_not_audited_clean`
+  - `retained_lattice_Green_kernel_asymptotic_theorem_not_registered_as_one_hop_dependency`
+  - `Gauss_asymptotic_monopole_readout_and_exterior_observability_additivity_source_charge_theorem_not_registered`
+  - `primitive_boundary_Wald_carrier_identification_c_cell_equals_1_over_4_to_1_over_4G_lambda_not_registered_as_audited_clean`
+  - `conventional_lP_squared_equals_Gphys_target_definition_external_not_a_CL3_derivation`
 - **auditor confidence:** high
 
 ### `sign_portability_invariant_note`
