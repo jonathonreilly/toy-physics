@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T03:54:04.681750+00:00
+**Generated:** 2026-04-27T03:56:13.224802+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,24 +20,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 3 |
-| _proposed_retained_ | 280 |
+| _proposed_retained_ | 279 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
 | open | 11 |
-| unknown | 735 |
+| unknown | 734 |
 | ~~audited_decoration~~ | 1 |
 | ~~audited_numerical_match~~ | 3 |
-| ~~audited_conditional~~ | 276 |
+| ~~audited_conditional~~ | 278 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 3 |
-| `audited_conditional` | 18 |
+| `audited_conditional` | 19 |
 | `audited_decoration` | 1 |
 | `audited_numerical_match` | 3 |
-| `unaudited` | 1573 |
+| `unaudited` | 1572 |
 
 | criticality | count |
 |---|---:|
@@ -85,8 +85,8 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 21 | `physical_lattice_necessity_note` | critical | 273 | 20.10 | `unaudited` | ~~audited_conditional~~ |
 | 22 | `ckm_bs_mixing_phase_derivation_theorem_note_2026-04-25` | critical | 170 | 19.92 | `unaudited` | ~~audited_conditional~~ |
 | 23 | `ckm_first_row_magnitudes_theorem_note_2026-04-24` | critical | 170 | 19.92 | `unaudited` | unknown |
-| 24 | `native_gauge_closure_note` | critical | 274 | 19.60 | `audited_conditional` | ~~audited_conditional~~ |
-| 25 | `ckm_bernoulli_two_ninths_koide_bridge_support_note_2026-04-25` | critical | 170 | 19.42 | `unaudited` | ~~audited_conditional~~ |
+| 24 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | high | 119 | 19.91 | `audited_clean` | **retained** |
+| 25 | `native_gauge_closure_note` | critical | 274 | 19.60 | `audited_conditional` | ~~audited_conditional~~ |
 
 
 ## Applied audits
@@ -107,6 +107,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `emergent_lorentz_invariance_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gravity_clean_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `lensing_beta_sweep_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `lensing_deflection_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lensing_k_sweep_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `linear_response_true_kubo_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `matter_inertial_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -322,6 +323,25 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `logs/2026-04-08-lensing-beta-sweep.txt_not_registered_primary_output`
   - `LENSING_ADJOINT_KERNEL_NOTE.md_not_registered_one_hop`
   - `multi_family_or_broader_H_refinement_not_registered`
+- **auditor confidence:** high
+
+### `lensing_deflection_note`
+
+- **Note:** [`LENSING_DEFLECTION_NOTE.md`](../../docs/LENSING_DEFLECTION_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** At H=0.25 on b in {3,4,5,6}, kubo_true(b) follows a clean power law with slope about -1.43 and R^2 = 0.998, so the retained gravity-side result is a non-standard power law rather than Newton/Einstein 1/b lensing.  _(class `C`)_
+- **chain closes:** False — The claim rests on numerical lensing sweeps, fine single-b runs, and combined log-log fits, but the ledger registers no primary runner or runner output. The quoted slopes, R^2 values, H-refinement drift, and b=3 reference match cannot be reproduced from the audit packet.
+- **rationale:** Issue: the retained partial positive depends on a numerical Lane L/L+ sweep -- H=0.25 fine b in {3,4,5,6}, kubo_true slope -1.4335, dM slope -1.5162, R^2 near 0.998/0.995, and a b=3 match to the Lane-alpha reference -- but the ledger runner_path is null even though the note names multiple scripts and logs. Why this blocks: without a registered deterministic runner and output, a hostile auditor cannot verify the grown-DAG setup, b/H sampling, OOM workaround, fit subset choices, Kubo/finite-difference agreement, reference-point comparison, or the downgrade from 1/b to a steeper non-standard exponent. Repair target: register the primary lensing-deflection runner or a deterministic L+ aggregate runner, include the fine-single outputs and combined-analysis log as primary outputs, and make the runner assert the per-b table, slope/R^2 fits, H-drift table, b=3 reference agreement, and the failure of the -1 exponent under explicit thresholds. Claim boundary until fixed: it is safe to say the source note reports a conditional non-standard power-law signal in the tested Fam1 lensing harness and downgrades the old 1/b headline; it is not yet an audited retained gravity-side functional-form theorem or continuum-stable lensing prediction.
+- **open / conditional deps cited:**
+  - `scripts/lensing_deflection_sweep.py_not_registered_primary_runner`
+  - `scripts/lensing_deflection_fine_single.py_not_registered_primary_runner`
+  - `scripts/lensing_deflection_lane_lplus.py_not_registered_primary_runner`
+  - `logs/2026-04-07-lensing-deflection-sweep.txt_not_registered_primary_output`
+  - `logs/2026-04-07-lensing-fine-asymptotic.txt_not_registered_primary_output`
+  - `logs/2026-04-07-lensing-deflection-lane-lplus.txt_not_registered_primary_output`
 - **auditor confidence:** high
 
 ### `lensing_k_sweep_note`
