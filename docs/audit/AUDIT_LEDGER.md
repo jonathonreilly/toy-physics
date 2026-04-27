@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T09:59:33.849822+00:00
+**Generated:** 2026-04-27T10:02:24.129275+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 20 |
-| _proposed_retained_ | 188 |
+| _proposed_retained_ | 187 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 282 |
+| ~~audited_conditional~~ | 283 |
 | ~~audited_failed~~ | 82 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 20 |
-| `audited_conditional` | 71 |
+| `audited_conditional` | 72 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 15 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1483 |
+| `unaudited` | 1482 |
 
 | criticality | count |
 |---|---:|
@@ -132,6 +132,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `continuum_limit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `cross_family_universality_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `diamond_nv_phase_ramp_signal_budget_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_neutrino_schur_suppression_theorem_note_2026-04-15` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `electrostatics_grown_sign_law_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -695,6 +696,24 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** At H=0.5, the seed-mean dispersion (m_eff approx 5.9) and lensing slope (approx -1.3) show no detectable family effect across Fam1/Fam2/Fam3; the Schroedinger/KG near-tie persists in all families, though the winner flips across individual seeds.  _(class `C`)_
 - **chain closes:** False — The named artifact scripts reproduce the seed-mean dispersion and lensing tables, but the statistical detection claim does not close because the runners do not emit per-seed slope/m_eff distributions, confidence intervals, or a formal family-effect/power test.
 - **rationale:** Issue: the live scripts reproduce the H=0.5 seed-mean values, but the proposed-retained wording says there is no detectable family effect; that detection/noise statement relies on per-seed variance and statistical power that the current runners do not report or test. Why this blocks: close seed-mean fits across five seeds show finite-runner consistency, not a closed exclusion of family effects at the sampled size, and not universality beyond the three chosen grown-DAG parameter sets. Repair target: register the two artifact scripts as runners and add a computation that outputs per-seed m_eff and lensing-slope distributions with confidence intervals or a bootstrap/ANOVA/mixed-effects family test; test Fam2/Fam3 at H=0.25 before making any fine-H statement. Claim boundary until fixed: the safe claim is that scripts/dispersion_all_families.py and scripts/lensing_all_families.py currently reproduce the seed-mean H=0.5 tables: m_eff 5.98/5.90/5.88, Schroedinger/KG delta R2 below 0.01, and lensing slopes -1.3132/-1.3085/-1.2697 for the three named grown-DAG parameter families.
+- **auditor confidence:** high
+
+### `diamond_nv_phase_ramp_signal_budget_note`
+
+- **Note:** [`DIAMOND_NV_PHASE_RAMP_SIGNAL_BUDGET_NOTE.md`](../../docs/DIAMOND_NV_PHASE_RAMP_SIGNAL_BUDGET_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The retained phase-sensitive / retarded / wavefield lane predicts a nonzero quadrature channel Y, a nonzero phase lag phi, and, in widefield readout, a coherent spatial phase ramp.  _(class `F`)_
+- **chain closes:** False — The note bridges a framework phase-ramp proxy to real NV lock-in observables, but its own one-hop inputs include bounded or unaudited supports and the note explicitly says the validated map to a real NV coupling strength is still missing.
+- **rationale:** Issue: the note presents a diamond/NV quadrature and spatial phase-ramp prediction by identifying the retained wavefield phase-ramp proxy with NV lock-in observables, but no runner or theorem constructs the NV forward model or the coupling-strength map. Why this blocks: without that physical-observable bridge, a nonzero framework phase ramp does not by itself imply measurable NV Y, phi, or widefield phase gradient, and the one-hop support includes unaudited proposed wavefield/unification notes plus bounded diamond protocol notes. Repair target: provide an ideal-detector forward model that maps the same driven source history to X, Y, phi, and spatial phase profile, with an explicit NV coupling theorem or calibrated input and with the wavefield/unification dependencies audited clean. Claim boundary until fixed: the safe claim is a bounded lab protocol proposal and discriminator design: measure lock-in quadrature and spatial phase profile, use the listed null/control stack, and do not claim absolute detectability or a closed NV prediction.
+- **open / conditional deps cited:**
+  - `SOURCE_RESOLVED_WAVEFIELD_MECHANISM_NOTE.md`
+  - `SOURCE_RESOLVED_WAVEFIELD_ESCALATION_NOTE.md`
+  - `PROPAGATOR_FAMILY_UNIFICATION_NOTE.md`
+  - `DIAMOND_SENSOR_PROTOCOL_NOTE.md`
+  - `DIAMOND_SENSOR_PREDICTION_NOTE.md`
 - **auditor confidence:** high
 
 ### `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21`
