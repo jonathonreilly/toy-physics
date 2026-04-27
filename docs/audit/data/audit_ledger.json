@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T14:57:53.756192+00:00",
-  "generated_at": "2026-04-27T14:57:52.161985+00:00",
-  "invalidation_run_at": "2026-04-27T14:57:53.710522+00:00",
+  "effective_status_computed_at": "2026-04-27T14:59:46.438912+00:00",
+  "generated_at": "2026-04-27T14:59:44.836981+00:00",
+  "invalidation_run_at": "2026-04-27T14:59:46.391932+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T14:57:53.613992+00:00",
+  "load_bearing_computed_at": "2026-04-27T14:59:46.296362+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -44650,14 +44650,21 @@
       "verdict_rationale": null
     },
     "lattice_3d_nyquist_diffraction_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The live artifact reproduces the source's h = 0.5 and h = 0.25 flip tables, field-strength comparisons, mean flip ratios, and bounded safe read; the note explicitly excludes continuum and macroscopic-gravity claims.",
       "claim_id": "lattice_3d_nyquist_diffraction_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -44665,13 +44672,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The first positive-to-negative gravity-side centroid flip tracks the lattice Nyquist scale pi/h at h = 0.5 and h = 0.25, with similar flip locations across field strengths, so the effect is a bounded discrete-lattice UV artifact rather than a continuum prediction.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "dc10d791dc2b235dc3563f9e32b0d74d467aba68862caa96d01b4047eb33c009",
@@ -44707,14 +44714,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 6,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 6
       },
       "runner_path": null,
       "title": "Lattice 3D Nyquist Diffraction Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The source claim is a finite Nyquist probe, and the live script reproduces the first-flip values 6.199467 and 6.107077 at h = 0.5, 11.932917 and 12.085990 at h = 0.25, plus the reported mean/pi-over-h ratios. The interpretation is bounded to the retained ordered-lattice harness and explicitly says the flip is a lattice artifact in the continuum limit, not a low-energy gravity law. Residual risk is limited to the declared coarse k grid and two tested h values; the audited claim should not be widened beyond that finite probe."
     },
     "lattice_3d_tapered_refinement_note": {
       "audit_date": null,
