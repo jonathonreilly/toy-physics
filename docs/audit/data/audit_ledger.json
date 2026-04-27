@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T15:10:33.293803+00:00",
-  "generated_at": "2026-04-27T15:10:31.680264+00:00",
-  "invalidation_run_at": "2026-04-27T15:10:33.247891+00:00",
+  "effective_status_computed_at": "2026-04-27T15:12:04.789226+00:00",
+  "generated_at": "2026-04-27T15:12:03.198014+00:00",
+  "invalidation_run_at": "2026-04-27T15:12:04.742363+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T15:10:33.152721+00:00",
+  "load_bearing_computed_at": "2026-04-27T15:12:04.645584+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -45949,14 +45949,21 @@
       "verdict_rationale": "The runner recomputes the load-bearing sweep: all six field-strength rows are Born-clean at 4.24e-16, k=0 is zero, MI/decoherence remain nontrivial, gravity is positive, and each row is retained by the script's criteria. The fitted response exponent is 0.353 with R^2 = 0.971, and the source correctly treats that as a bounded sub-linear mass response rather than promoting F proportional to M or a one-card lattice unification theorem. Residual risk is limited to the declared weak-field pocket and fixed-node field-strength mass proxy."
     },
     "lattice_weak_field_purity_scaling_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The live artifact reproduces the N sweep, canonical N=40 row, retained/all-row purity fits, retention counts, and bounded retained-window interpretation from the source note.",
       "claim_id": "lattice_weak_field_purity_scaling_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -45964,13 +45971,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "On the weak-field ordered-lattice pocket, the retained N = 30 through 100 rows are Born-clean, k=0-clean, MI/decoherence-positive, and gravity-positive, and fit 1 - pur_cl ~= 1.0467 * N^-0.222 with R^2 = 0.9683.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "cfe1e325af0bd56669a0f18ca490013771693b808df2ed0de6b350dcb574f157",
@@ -46006,14 +46013,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 11,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 11
       },
       "runner_path": null,
       "title": "Lattice Weak-Field Purity Scaling Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The runner recomputes the load-bearing table: N=30 through 100 are retained, all seven rows are Born-clean and positive-gravity, and the retained-row purity-complement fit matches the source coefficient, exponent, and R^2. The note correctly treats the result as a bounded scaling law on the tested weak-field pocket, with N=20 excluded and no universal/asymptotic lattice theorem claimed. The runner's final 'PROMOTED' line is clean only under that bounded retained-window meaning."
     },
     "left_handed_charge_matching_note": {
       "audit_date": null,
