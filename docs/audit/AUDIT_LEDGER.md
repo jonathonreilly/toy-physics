@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T14:21:53.254701+00:00
+**Generated:** 2026-04-27T14:29:58.068674+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 47 |
-| _proposed_retained_ | 130 |
+| _proposed_retained_ | 129 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 306 |
+| ~~audited_conditional~~ | 307 |
 | ~~audited_failed~~ | 98 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 47 |
-| `audited_conditional` | 93 |
+| `audited_conditional` | 94 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 31 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1430 |
+| `unaudited` | 1429 |
 
 | criticality | count |
 |---|---:|
@@ -192,6 +192,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `higher_symmetry_joint_validation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `impact_parameter_lensing_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `impact_parameter_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `koide_a1_physical_bridge_attempt_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1990,6 +1991,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `DISTANCE_LAW_PORTABILITY_NOTE.md`
   - `DISTANCE_LAW_BREAKPOINT_NOTE.md`
+- **auditor confidence:** high
+
+### `impact_parameter_portability_note`
+
+- **Note:** [`IMPACT_PARAMETER_PORTABILITY_NOTE.md`](../../docs/IMPACT_PARAMETER_PORTABILITY_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The retained impact-parameter law ports cleanly onto the second grown family: both tested portable rows have exact null controls, 5/5 TOWARD b-sweeps, and near-Newtonian exponents alpha = -0.962 and -0.947.  _(class `C`)_
+- **chain closes:** False — The live runner reproduces the two-family finite table, but the retained portability framing depends on upstream context that is not audit-clean: the one-family lensing note is audited conditional, the portable-card extension is unaudited proposed-retained, and the impact-parameter portability extension is unknown.
+- **rationale:** Issue: the runner recomputes the two hard-coded grown-family b-sweeps, but the source frames them as retained portable grown families using context that is conditional, unaudited, or unknown. Why this blocks: a two-row runner can establish the finite table for those two parameter rows, but it cannot by itself ratify the retained lensing parent, the portable-card family classification, or the family-3 holdout boundary. Repair target: audit-retain `IMPACT_PARAMETER_LENSING_NOTE`, `PORTABLE_CARD_EXTENSION_NOTE`, and `IMPACT_PARAMETER_PORTABILITY_EXTENSION_NOTE`, or replace this runner with a self-contained selector/comparator over the candidate portable families and explicit holdout criteria. Claim boundary until fixed: safely claim only the finite result: both tested rows have zero-field delta exactly zero at b=8, both are 5/5 TOWARD, the fitted exponents are -0.962 and -0.947 with R2 = 0.870 and 0.875, and the two-row alpha span is 0.015.
+- **open / conditional deps cited:**
+  - `IMPACT_PARAMETER_LENSING_NOTE.md`
+  - `PORTABLE_CARD_EXTENSION_NOTE.md`
+  - `IMPACT_PARAMETER_PORTABILITY_EXTENSION_NOTE.md`
 - **auditor confidence:** high
 
 ### `independent_generators_heldout_note`

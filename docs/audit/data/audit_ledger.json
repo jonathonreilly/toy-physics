@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T14:21:53.072438+00:00",
-  "generated_at": "2026-04-27T14:21:51.498783+00:00",
-  "invalidation_run_at": "2026-04-27T14:21:53.026563+00:00",
+  "effective_status_computed_at": "2026-04-27T14:29:57.883786+00:00",
+  "generated_at": "2026-04-27T14:29:56.300103+00:00",
+  "invalidation_run_at": "2026-04-27T14:29:57.838374+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T14:21:52.933610+00:00",
+  "load_bearing_computed_at": "2026-04-27T14:29:57.742687+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -37783,14 +37783,21 @@
       "verdict_rationale": null
     },
     "impact_parameter_portability_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner reproduces the two-family finite table, but the retained portability framing depends on upstream context that is not audit-clean: the one-family lensing note is audited conditional, the portable-card extension is unaudited proposed-retained, and the impact-parameter portability extension is unknown.",
       "claim_id": "impact_parameter_portability_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -37798,18 +37805,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The retained impact-parameter law ports cleanly onto the second grown family: both tested portable rows have exact null controls, 5/5 TOWARD b-sweeps, and near-Newtonian exponents alpha = -0.962 and -0.947.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "07411ceaeecc732536c60243af7e6214e58994abd267226abdd44a0fb4a6cda2",
       "note_path": "docs/IMPACT_PARAMETER_PORTABILITY_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/IMPACT_PARAMETER_LENSING_NOTE.md",
+        "docs/PORTABLE_CARD_EXTENSION_NOTE.md",
+        "docs/IMPACT_PARAMETER_PORTABILITY_EXTENSION_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368729+00:00",
@@ -37840,14 +37851,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 14,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 14
       },
       "runner_path": null,
       "title": "Impact-Parameter Portability Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the runner recomputes the two hard-coded grown-family b-sweeps, but the source frames them as retained portable grown families using context that is conditional, unaudited, or unknown. Why this blocks: a two-row runner can establish the finite table for those two parameter rows, but it cannot by itself ratify the retained lensing parent, the portable-card family classification, or the family-3 holdout boundary. Repair target: audit-retain `IMPACT_PARAMETER_LENSING_NOTE`, `PORTABLE_CARD_EXTENSION_NOTE`, and `IMPACT_PARAMETER_PORTABILITY_EXTENSION_NOTE`, or replace this runner with a self-contained selector/comparator over the candidate portable families and explicit holdout criteria. Claim boundary until fixed: safely claim only the finite result: both tested rows have zero-field delta exactly zero at b=8, both are 5/5 TOWARD, the fitted exponents are -0.962 and -0.947 with R2 = 0.870 and 0.875, and the two-row alpha span is 0.015."
     },
     "independent_generators_heldout_note": {
       "audit_date": "2026-04-26",
