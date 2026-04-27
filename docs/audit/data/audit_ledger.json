@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T05:52:40.531510+00:00",
-  "generated_at": "2026-04-27T05:52:38.520370+00:00",
-  "invalidation_run_at": "2026-04-27T05:52:40.434193+00:00",
+  "effective_status_computed_at": "2026-04-27T05:54:54.381318+00:00",
+  "generated_at": "2026-04-27T05:54:52.559412+00:00",
+  "invalidation_run_at": "2026-04-27T05:54:54.312902+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T05:52:40.293125+00:00",
+  "load_bearing_computed_at": "2026-04-27T05:54:54.193494+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -65118,14 +65118,21 @@
       "verdict_rationale": null
     },
     "shapiro_delay_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 7.383,
+        "transitive_descendants": 117
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner is a canonical replay of hard-coded phase rows, not a derivation from the causal-field machinery; the Shapiro-delay and NV/phase-ramp bridge remains explicitly proxy-level in the one-hop notes.",
       "claim_id": "shapiro_delay_note",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -65133,18 +65140,25 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 7.383,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The retained c-dependent phase lag is a portable, seed-stable discrete Shapiro-delay observable with an exact zero control and family spread below 2e-4 rad.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "dc90c528266969a1fb90c077d42e8e36cc581d715ae45d63d5e716c110716339",
       "note_path": "docs/SHAPIRO_DELAY_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/SHAPIRO_COMPLEX_INTERACTION_NOTE.md_not_registered_one_hop_dependency",
+        "docs/SHAPIRO_DIAMOND_BRIDGE_NOTE.md_proxy_level_bridge",
+        "docs/DIAMOND_PHASE_RAMP_BRIDGE_CARD_NOTE.md_proxy_level_no_absolute_NV_claim",
+        "docs/CAUSAL_PROPAGATING_FIELD_NOTE.md_imposed_cone_not_self_consistent_field",
+        "docs/CAUSAL_FIELD_RECONCILIATION_NOTE.md_fixed_anchor_portability_boundary",
+        "scripts/shapiro_phase_lag_probe.py_hard_coded_replay_not_derivation"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369622+00:00",
@@ -65182,7 +65196,7 @@
       "runner_path": null,
       "title": "Shapiro Delay Note",
       "transitive_descendants": 117,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the source note treats the hard-coded c-dependent phase-lag table as a retained portable Shapiro-delay observable. Why this blocks: the live runner only replays fixed rows and does not recompute phase lag from the causal cone, grown-family seeds, complex-action crossover, or diamond phase-ramp bridge; the one-hop notes also state that the cone is imposed and that the NV/phase-ramp interpretation is proxy-level with missing absolute calibration. Repair target: register the artifact-chain notes as explicit dependencies and add a runner that derives the phase rows from the causal-field setup across seeds/families, proves the zero control, and supplies a theorem mapping the proxy phase lag to the claimed Shapiro-delay observable. Claim boundary until fixed: it is safe to claim that the current replay table contains an exact inst-null row and the listed c-dependent proxy phase-lag rows with <=2e-4 rad family spread; it is not yet an audited retained derivation of a physical Shapiro-delay observable or calibrated NV readout."
     },
     "shapiro_diamond_bridge_note": {
       "audit_date": null,

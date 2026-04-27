@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T05:52:40.881175+00:00
+**Generated:** 2026-04-27T05:54:54.653269+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 6 |
-| _proposed_retained_ | 244 |
+| _proposed_retained_ | 243 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
-| ~~audited_conditional~~ | 247 |
+| ~~audited_conditional~~ | 248 |
 | ~~audited_failed~~ | 59 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 6 |
-| `audited_conditional` | 45 |
+| `audited_conditional` | 46 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 2 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1537 |
+| `unaudited` | 1536 |
 
 | criticality | count |
 |---|---:|
@@ -142,6 +142,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_boundary_density_extension_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `planck_source_unit_normalization_support_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `pmns_hw1_source_transfer_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `sign_portability_invariant_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `strong_cp_theta_zero_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1064,6 +1065,25 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md_not_registered_one_hop_dependency`
   - `NEUTRINO_MASS_DERIVED_NOTE.md_not_registered_one_hop_dependency`
   - `KOIDE_Q_EQ_3DELTA_IDENTITY_NOTE_2026-04-21.md_not_registered_one_hop_dependency`
+- **auditor confidence:** high
+
+### `shapiro_delay_note`
+
+- **Note:** [`SHAPIRO_DELAY_NOTE.md`](../../docs/SHAPIRO_DELAY_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The retained c-dependent phase lag is a portable, seed-stable discrete Shapiro-delay observable with an exact zero control and family spread below 2e-4 rad.  _(class `B`)_
+- **chain closes:** False — The runner is a canonical replay of hard-coded phase rows, not a derivation from the causal-field machinery; the Shapiro-delay and NV/phase-ramp bridge remains explicitly proxy-level in the one-hop notes.
+- **rationale:** Issue: the source note treats the hard-coded c-dependent phase-lag table as a retained portable Shapiro-delay observable. Why this blocks: the live runner only replays fixed rows and does not recompute phase lag from the causal cone, grown-family seeds, complex-action crossover, or diamond phase-ramp bridge; the one-hop notes also state that the cone is imposed and that the NV/phase-ramp interpretation is proxy-level with missing absolute calibration. Repair target: register the artifact-chain notes as explicit dependencies and add a runner that derives the phase rows from the causal-field setup across seeds/families, proves the zero control, and supplies a theorem mapping the proxy phase lag to the claimed Shapiro-delay observable. Claim boundary until fixed: it is safe to claim that the current replay table contains an exact inst-null row and the listed c-dependent proxy phase-lag rows with <=2e-4 rad family spread; it is not yet an audited retained derivation of a physical Shapiro-delay observable or calibrated NV readout.
+- **open / conditional deps cited:**
+  - `SHAPIRO_COMPLEX_INTERACTION_NOTE.md_not_registered_one_hop_dependency`
+  - `SHAPIRO_DIAMOND_BRIDGE_NOTE.md_proxy_level_bridge`
+  - `DIAMOND_PHASE_RAMP_BRIDGE_CARD_NOTE.md_proxy_level_no_absolute_NV_claim`
+  - `CAUSAL_PROPAGATING_FIELD_NOTE.md_imposed_cone_not_self_consistent_field`
+  - `CAUSAL_FIELD_RECONCILIATION_NOTE.md_fixed_anchor_portability_boundary`
+  - `scripts/shapiro_phase_lag_probe.py_hard_coded_replay_not_derivation`
 - **auditor confidence:** high
 
 ### `sign_portability_invariant_note`
