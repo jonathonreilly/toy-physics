@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T15:43:26.413612+00:00",
-  "generated_at": "2026-04-27T15:43:24.835596+00:00",
-  "invalidation_run_at": "2026-04-27T15:43:26.368045+00:00",
+  "effective_status_computed_at": "2026-04-27T15:44:49.142407+00:00",
+  "generated_at": "2026-04-27T15:44:47.558310+00:00",
+  "invalidation_run_at": "2026-04-27T15:44:49.095866+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T15:43:26.273879+00:00",
+  "load_bearing_computed_at": "2026-04-27T15:44:48.999836+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -48354,14 +48354,21 @@
       "verdict_rationale": null
     },
     "mesoscopic_surrogate_compact_floor_sweep_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The finite negative control-sweep result closes numerically, but the audit row is a parser/status false positive: the source describes a constrained sweep for a proposed_retained lane, not a proposed_retained theorem.",
       "claim_id": "mesoscopic_surrogate_compact_floor_sweep_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -48369,13 +48376,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The compact-floor sweep shows compact Gaussian and tapered candidates can pass the floors, but the best compact survivor does not meaningfully improve on the broad topN benchmark under the same support/capture constraints.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "f3ecb1bf5529e192dc4d28fba460941920dabff799b7b048657c7bff2b72ddf9",
@@ -48411,14 +48418,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 4,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 4
       },
       "runner_path": null,
       "title": "Mesoscopic Surrogate Compact Floor Sweep Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The queue records this as proposed_retained because the Status line mentions the proposed_retained 3D surrogate lane, while the note itself is a narrow constrained compact-family control sweep. Why this blocks: a finite h=0.5 ordered-lattice comparison cannot be ratified as a retained theorem merely because it informs a proposed_retained lane; promoting it would inflate bounded provenance into retained physics. Repair target: rewrite the Status/current_status as bounded or proposed_bounded, or author a separate retained theorem deriving the compact-source frontier beyond this finite sweep. Claim boundary until fixed: it is safe to claim the live artifact reproduces topN 49 with capture2=1.000, score=0.9994, best compact tapered radius 2 with capture2=0.638, score=1.0000, and meaningful improvement over topN=False; it is not safe to present this note as a retained compact-source theorem."
     },
     "mesoscopic_surrogate_h025_constrained_localization_note": {
       "audit_date": null,
