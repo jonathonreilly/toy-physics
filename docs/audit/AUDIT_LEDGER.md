@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T22:37:15.586154+00:00
+**Generated:** 2026-04-27T22:39:11.774406+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 72 |
-| _proposed_retained_ | 7 |
+| _proposed_retained_ | 6 |
 | _proposed_promoted_ | 1 |
 | bounded | 185 |
 | support | 104 |
@@ -28,7 +28,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | unknown | 721 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
-| ~~audited_renaming~~ | 2 |
+| ~~audited_renaming~~ | 3 |
 | ~~audited_conditional~~ | 173 |
 | ~~audited_failed~~ | 331 |
 
@@ -40,8 +40,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_decoration` | 3 |
 | `audited_failed` | 77 |
 | `audited_numerical_match` | 5 |
-| `audited_renaming` | 2 |
-| `unaudited` | 1310 |
+| `audited_renaming` | 3 |
+| `unaudited` | 1309 |
 
 | criticality | count |
 |---|---:|
@@ -402,6 +402,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_p1_delta_1_bz_computation_note_2026-04-17` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `complex_selectivity_predictor_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 | `lattice_nn_light_cone_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
+| `yt_ssb_matching_gap_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 
 
 ## Audit findings (full)
@@ -5100,4 +5101,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `YT_P3_MSBAR_TO_POLE_K1_FRAMEWORK_NATIVE_DERIVATION_NOTE_2026-04-17.md`
   - `YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
   - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
+- **auditor confidence:** high
+
+### `yt_ssb_matching_gap_analysis_note_2026-04-18`
+
+- **Note:** [`YT_SSB_MATCHING_GAP_ANALYSIS_NOTE_2026-04-18.md`](../../docs/YT_SSB_MATCHING_GAP_ANALYSIS_NOTE_2026-04-18.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The Ward 4-fermion channel and the physical trilinear are both matrix elements of H_unit; they share the 1/sqrt(6) coefficient by construction.  _(class `F`)_
+- **chain closes:** False — The note identifies the Ward four-fermion matrix element and the physical trilinear coefficient by assigning both to the same H_unit normalization. The runner then sets y_t_phys = 1/sqrt(6) and checks arithmetic, but it does not derive the SSB operator matching, source/VEV normalization, chirality projection, or functional trilinear vertex from the retained action.
+- **rationale:** Issue: the matching closure equates a Ward 4-fermion Q_L x Q_L* matrix element with a physical Qbar_L-H-u_R trilinear coefficient by declaring that both read the same H_unit normalization factor 1/sqrt(6). Why this blocks: these are different Green-function/readout structures, and a retained matching theorem must derive the HS/source normalization, SSB VEV division, chirality projection, LSZ or external-state normalization, and absence of extra factors rather than identifying the symbols after the fact. Repair target: add a retained tree-level operator-matching theorem and runner that starts from the retained action with an auxiliary/composite H field, computes the relevant functional derivatives before and after SSB, and obtains the trilinear coefficient without pre-setting y_t_phys = 1/sqrt(6). Claim boundary until fixed: safe to claim the H_unit normalization arithmetic and that two quantities defined as the same H_unit component overlap both equal 1/sqrt(6); not safe to claim the SSB matching gap is closed for the physical Yukawa trilinear.
+- **open / conditional deps cited:**
+  - `ANOMALY_FORCES_TIME_THEOREM.md`
+  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md`
+  - `YT_CLASS_5_NON_QL_YUKAWA_VERTEX_NOTE_2026-04-18.md`
+  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
+  - `YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md`
 - **auditor confidence:** high

@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T22:37:15.358590+00:00",
-  "generated_at": "2026-04-27T22:37:13.646202+00:00",
-  "invalidation_run_at": "2026-04-27T22:37:15.302147+00:00",
+  "effective_status_computed_at": "2026-04-27T22:39:11.563488+00:00",
+  "generated_at": "2026-04-27T22:39:09.867371+00:00",
+  "invalidation_run_at": "2026-04-27T22:39:11.510197+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T22:37:15.190810+00:00",
+  "load_bearing_computed_at": "2026-04-27T22:39:11.401251+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -87563,14 +87563,21 @@
       "verdict_rationale": null
     },
     "yt_ssb_matching_gap_analysis_note_2026-04-18": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_renaming",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The note identifies the Ward four-fermion matrix element and the physical trilinear coefficient by assigning both to the same H_unit normalization. The runner then sets y_t_phys = 1/sqrt(6) and checks arithmetic, but it does not derive the SSB operator matching, source/VEV normalization, chirality projection, or functional trilinear vertex from the retained action.",
       "claim_id": "yt_ssb_matching_gap_analysis_note_2026-04-18",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -87578,18 +87585,24 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_renaming",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_renaming",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The Ward 4-fermion channel and the physical trilinear are both matrix elements of H_unit; they share the 1/sqrt(6) coefficient by construction.",
+      "load_bearing_step_class": "F",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "7c6fefe5e4d02d56056dcfa4ea94e30cc510379a83426d7445b01ce755f185a4",
       "note_path": "docs/YT_SSB_MATCHING_GAP_ANALYSIS_NOTE_2026-04-18.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/ANOMALY_FORCES_TIME_THEOREM.md",
+        "docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md",
+        "docs/YT_CLASS_5_NON_QL_YUKAWA_VERTEX_NOTE_2026-04-18.md",
+        "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
+        "docs/YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.370378+00:00",
@@ -87618,16 +87631,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 13,
+        "B": 12,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 25
       },
       "runner_path": "scripts/frontier_yt_ssb_matching_gap.py",
       "title": "Yukawa SSB Matching-Gap Analysis Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the matching closure equates a Ward 4-fermion Q_L x Q_L* matrix element with a physical Qbar_L-H-u_R trilinear coefficient by declaring that both read the same H_unit normalization factor 1/sqrt(6). Why this blocks: these are different Green-function/readout structures, and a retained matching theorem must derive the HS/source normalization, SSB VEV division, chirality projection, LSZ or external-state normalization, and absence of extra factors rather than identifying the symbols after the fact. Repair target: add a retained tree-level operator-matching theorem and runner that starts from the retained action with an auxiliary/composite H field, computes the relevant functional derivatives before and after SSB, and obtains the trilinear coefficient without pre-setting y_t_phys = 1/sqrt(6). Claim boundary until fixed: safe to claim the H_unit normalization arithmetic and that two quantities defined as the same H_unit component overlap both equal 1/sqrt(6); not safe to claim the SSB matching gap is closed for the physical Yukawa trilinear."
     },
     "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17": {
       "audit_date": null,
