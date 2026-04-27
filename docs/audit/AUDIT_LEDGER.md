@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T03:28:54.275980+00:00
+**Generated:** 2026-04-27T03:31:39.922498+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,24 +20,24 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 2 |
-| _proposed_retained_ | 291 |
+| _proposed_retained_ | 290 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
 | open | 11 |
-| unknown | 739 |
+| unknown | 737 |
 | ~~audited_decoration~~ | 1 |
 | ~~audited_numerical_match~~ | 2 |
-| ~~audited_conditional~~ | 263 |
+| ~~audited_conditional~~ | 266 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 2 |
-| `audited_conditional` | 12 |
+| `audited_conditional` | 13 |
 | `audited_decoration` | 1 |
 | `audited_numerical_match` | 2 |
-| `unaudited` | 1581 |
+| `unaudited` | 1580 |
 
 | criticality | count |
 |---|---:|
@@ -104,6 +104,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_schur_suppression_theorem_note_2026-04-15` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `electrostatics_grown_sign_law_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravity_clean_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
+| `lensing_beta_sweep_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `linear_response_true_kubo_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `native_gauge_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `neutrino_dirac_z3_support_trichotomy_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -281,6 +282,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Given linear amplitude composition and quadratic probability P=|A|^2, the inclusion-exclusion expression I_3=|A+B+C|^2-|A+B|^2-|A+C|^2-|B+C|^2+|A|^2+|B|^2+|C|^2 cancels identically.  _(class `A`)_
 - **chain closes:** True — The source note is explicitly scoped to the Hilbert/Born surface, and the algebraic cancellation follows for arbitrary complex amplitudes without additional lattice assumptions.
 - **rationale:** The retained claim is the scoped exact theorem that I_3 vanishes once amplitudes add linearly and probabilities are quadratic, not a freestanding derivation of the Born rule. The runner verifies the identity for arbitrary complex amplitudes, higher Sorkin orders under the Born rule, a non-Born control, and concrete 1D/3D lattice propagator cross-checks, with 6 computed passes and no failures. Residual boundary: this audit ratifies the Hilbert-surface no-third-order-interference theorem only; it does not promote any claim that P=|A|^2 itself has been derived from the lattice axioms alone.
+- **auditor confidence:** high
+
+### `lensing_beta_sweep_note`
+
+- **Note:** [`LENSING_BETA_SWEEP_NOTE.md`](../../docs/LENSING_BETA_SWEEP_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note asserts that beta=5 at H=0.5 is an isolated near-1/b coarse-grid spike because beta=7 and beta=10 leave it and the beta=5 refinement at H=0.35 flips sign with slope -0.7930.  _(class `C`)_
+- **chain closes:** False — The falsification depends on numerical sweep/refinement tables, but the ledger has no registered primary runner or output and the note gives only absolute local artifact paths.
+- **rationale:** Issue: the proposed_retained negative rests on a beta sweep and H-refinement numerical battery, but the audit ledger registers no primary runner/output, and the source note's artifacts are absolute local paths outside the audit packet. Why this blocks: a hostile auditor cannot reproduce the key beta=5 coarse slope, the beta=7/10 sign/shape departures, or the H=0.35 sign flip/slope -0.7930 from registered evidence; the result is also scoped to Fam1 b={3,4,5,6} and does not register the adjoint-kernel authority it uses for interpretation. Repair target: register scripts/lensing_beta_sweep.py and the deterministic log as primary evidence, add explicit PASS thresholds for slopes/sign patterns/shape spread, extend or explicitly bound the beta-neighborhood and H-refinement checks, and register the adjoint-kernel note if it remains interpretive support. Claim boundary until fixed: it is safe to say the source note reports a conditional numerical negative that the beta=5 coarse-grid near-1/b point did not survive nearby beta checks or one H=0.35 refinement; it is not yet an audited retained closure of the narrow-beam/ray-optics rescue.
+- **open / conditional deps cited:**
+  - `scripts/lensing_beta_sweep.py_not_registered_primary_runner`
+  - `logs/2026-04-08-lensing-beta-sweep.txt_not_registered_primary_output`
+  - `LENSING_ADJOINT_KERNEL_NOTE.md_not_registered_one_hop`
+  - `multi_family_or_broader_H_refinement_not_registered`
 - **auditor confidence:** high
 
 ### `linear_response_true_kubo_note`
