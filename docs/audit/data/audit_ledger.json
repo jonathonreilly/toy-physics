@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T11:46:24.139286+00:00",
-  "generated_at": "2026-04-27T11:46:21.711378+00:00",
-  "invalidation_run_at": "2026-04-27T11:46:24.048520+00:00",
+  "effective_status_computed_at": "2026-04-27T11:46:33.506539+00:00",
+  "generated_at": "2026-04-27T11:46:30.998682+00:00",
+  "invalidation_run_at": "2026-04-27T11:46:33.394259+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T11:46:23.872189+00:00",
+  "load_bearing_computed_at": "2026-04-27T11:46:33.206685+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -8767,14 +8767,21 @@
       "verdict_rationale": null
     },
     "charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27T11:46:29.702695+00:00",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The negative result closes: even under the granted OP-local source premise, the source is generation-symmetric and cannot base the selected-line orbit. The note does not derive the physical source premise or claim mass closure.",
       "claim_id": "charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -8782,13 +8789,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The granted C3-fixed onsite source is J=sI, a common scalar with no label coordinate, so adding it to the unbased selected-line orbit still supplies no C3-natural generation selector.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "1d18d30087ec880ede91fc7aaffaaf269fae55ba4b400f35279d3a5d7de60f06",
@@ -8848,15 +8855,15 @@
       ],
       "runner_check_breakdown": {
         "A": 0,
-        "B": 0,
+        "B": 2,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 8,
+        "total_pass": 48
       },
       "runner_path": "scripts/frontier_charged_lepton_op_local_source_selected_line_selector_no_go.py",
       "title": "Charged-Lepton OP-Local Source / Selected-Line Selector No-Go",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The runner verifies J=sI, z=0, Q(z=0)=2/3 under the granted premise, then separately verifies that the source scalar plus selected-line orbit lacks a fixed singleton label. PDG masses remain comparator-only. This ratifies only the stronger-premise generation-selector no-go, not native Koide Q closure."
     },
     "charged_lepton_radiative_tau_selector_firewall_note_2026-04-26": {
       "audit_date": "2026-04-27T11:45:59.927627+00:00",

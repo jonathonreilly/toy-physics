@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 88,
     "high": 506,
-    "leaf": 789,
+    "leaf": 788,
     "medium": 78
   },
-  "generated_at": "2026-04-27T11:46:24.244779+00:00",
+  "generated_at": "2026-04-27T11:46:33.751618+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -18380,23 +18380,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/CHARGED_LEPTON_OP_LOCAL_SOURCE_SELECTED_LINE_SELECTOR_NO_GO_NOTE_2026-04-27.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_charged_lepton_op_local_source_selected_line_selector_no_go.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -29611,6 +29594,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1050,
-  "total_pending": 1461
+  "ready_count": 1049,
+  "total_pending": 1460
 }
