@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T14:37:35.958558+00:00",
-  "generated_at": "2026-04-27T14:37:34.372973+00:00",
-  "invalidation_run_at": "2026-04-27T14:37:35.912213+00:00",
+  "effective_status_computed_at": "2026-04-27T14:41:51.988511+00:00",
+  "generated_at": "2026-04-27T14:41:50.377188+00:00",
+  "invalidation_run_at": "2026-04-27T14:41:51.940728+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T14:37:35.815495+00:00",
+  "load_bearing_computed_at": "2026-04-27T14:41:51.846367+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -38860,14 +38860,21 @@
       "verdict_rationale": null
     },
     "koide_berry_phase_theorem_note_2026-04-19": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner verifies the exact selected-line Berry geometry and scalar-phase bridge with 24 PASS and 0 FAIL. The clean mathematical route does not yet close as a retained physical Brannen-phase claim because the note itself states that the current package has not adopted this theorem stack and that the physical Brannen-phase bridge remains open.",
       "claim_id": "koide_berry_phase_theorem_note_2026-04-19",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -38875,13 +38882,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "On the exact charged-lepton selected line, the physical phase offset delta(m) is the tautological CP^1 Berry holonomy of the projective C3 doublet ray from the unique unphased point, so solving delta = 2/9 fixes the first-branch point and kappa_sel.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "55bad816c93e3ee41a082e92dd015374b986c713b9a3e72af4689e6a78a83092",
@@ -38917,14 +38924,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 24,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 24
       },
       "runner_path": "scripts/frontier_koide_berry_phase_theorem.py",
       "title": "Koide Berry-Holonomy Theorem: Actual-Route Closure of the Brannen-Zenczykowski phase offset",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the runner closes the selected-line Berry theorem as an exact mathematical construction, but the source still conditions physical closure on an unretained Brannen-phase bridge and current-main adoption of the theorem stack. Why this blocks: a Berry holonomy equality on the constructed selected route is not by itself a retained physical charged-lepton phase theorem unless the selected route and Brannen phase observable are themselves retained as the physical carrier. Repair target: audit-retain the selected-line physical bridge and the Brannen phase observable mapping, or reclassify this note explicitly as mathematical/provenance support rather than proposed-retained physical closure. Claim boundary until fixed: safely claim the runner-verified exact route facts: the ambient S2 monopole closure is false, the actual selected-line projective C3 doublet has tautological connection A=dtheta, the holonomy from m0 equals delta, delta=2/9 gives m_Berry=-1.160443440065, and the old H_* witness is only near-coincident compatibility data."
     },
     "koide_brannen_callan_harvey_candidate_note_2026-04-22": {
       "audit_date": null,

@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T14:37:36.161251+00:00
+**Generated:** 2026-04-27T14:41:52.186905+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 47 |
-| _proposed_retained_ | 127 |
+| _proposed_retained_ | 126 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 307 |
+| ~~audited_conditional~~ | 308 |
 | ~~audited_failed~~ | 100 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 47 |
-| `audited_conditional` | 94 |
+| `audited_conditional` | 95 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 33 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1427 |
+| `unaudited` | 1426 |
 
 | criticality | count |
 |---|---:|
@@ -195,6 +195,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `impact_parameter_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `koide_a1_physical_bridge_attempt_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_a1_radian_bridge_irreducibility_audit_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `koide_berry_phase_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_dimensionless_objection_closure_review_packet_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_native_dimensionless_review_packet_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -2091,6 +2092,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `fractional_topology_no_go_probe_bundle_not_registered`
   - `equivariant_index_A1_no_go_authority_not_registered`
   - `minimal_heat_kernel_multitrace_no_go_authority_not_registered`
+- **auditor confidence:** high
+
+### `koide_berry_phase_theorem_note_2026-04-19`
+
+- **Note:** [`KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md`](../../docs/KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On the exact charged-lepton selected line, the physical phase offset delta(m) is the tautological CP^1 Berry holonomy of the projective C3 doublet ray from the unique unphased point, so solving delta = 2/9 fixes the first-branch point and kappa_sel.  _(class `C`)_
+- **chain closes:** False — The live runner verifies the exact selected-line Berry geometry and scalar-phase bridge with 24 PASS and 0 FAIL. The clean mathematical route does not yet close as a retained physical Brannen-phase claim because the note itself states that the current package has not adopted this theorem stack and that the physical Brannen-phase bridge remains open.
+- **rationale:** Issue: the runner closes the selected-line Berry theorem as an exact mathematical construction, but the source still conditions physical closure on an unretained Brannen-phase bridge and current-main adoption of the theorem stack. Why this blocks: a Berry holonomy equality on the constructed selected route is not by itself a retained physical charged-lepton phase theorem unless the selected route and Brannen phase observable are themselves retained as the physical carrier. Repair target: audit-retain the selected-line physical bridge and the Brannen phase observable mapping, or reclassify this note explicitly as mathematical/provenance support rather than proposed-retained physical closure. Claim boundary until fixed: safely claim the runner-verified exact route facts: the ambient S2 monopole closure is false, the actual selected-line projective C3 doublet has tautological connection A=dtheta, the holonomy from m0 equals delta, delta=2/9 gives m_Berry=-1.160443440065, and the old H_* witness is only near-coincident compatibility data.
 - **auditor confidence:** high
 
 ### `koide_delta_marked_relative_cobordism_no_go_note_2026-04-24`

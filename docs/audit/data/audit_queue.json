@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 89,
     "high": 508,
-    "leaf": 751,
+    "leaf": 750,
     "medium": 82
   },
-  "generated_at": "2026-04-27T14:37:36.006080+00:00",
+  "generated_at": "2026-04-27T14:41:52.034298+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -21559,23 +21559,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "koide_berry_phase_theorem_note_2026-04-19",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/KOIDE_BERRY_PHASE_THEOREM_NOTE_2026-04-19.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_koide_berry_phase_theorem.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "koide_brannen_phase_reduction_theorem_note_2026-04-20",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -29129,6 +29112,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1017,
-  "total_pending": 1430
+  "ready_count": 1016,
+  "total_pending": 1429
 }
