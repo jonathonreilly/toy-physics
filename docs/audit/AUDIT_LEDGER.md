@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T21:59:24.857244+00:00
+**Generated:** 2026-04-27T22:01:54.712851+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 72 |
-| _proposed_retained_ | 22 |
+| _proposed_retained_ | 21 |
 | _proposed_promoted_ | 1 |
 | bounded | 185 |
 | support | 104 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 2 |
 | ~~audited_conditional~~ | 165 |
-| ~~audited_failed~~ | 325 |
+| ~~audited_failed~~ | 326 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 72 |
 | `audited_conditional` | 135 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 71 |
+| `audited_failed` | 72 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1325 |
+| `unaudited` | 1324 |
 
 | criticality | count |
 |---|---:|
@@ -381,6 +381,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `unified_basin_freeze_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `bell_inequality_derived_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ew_coupling_derivation_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -4819,3 +4820,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `scripts/frontier_yt_p3_msbar_to_pole_k1.py`
 - **auditor confidence:** 0.94
+
+### `yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17`
+
+- **Note:** [`YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`](../../docs/YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The four color tensors {C_F^2, C_F C_A, C_F T_F n_l, C_F T_F} are linearly independent and form the complete 2-loop on-shell heavy-quark color-tensor subspace, so K_2 decomposes into exactly those four channels.  _(class `B`)_
+- **chain closes:** False — The note and runner verify arithmetic after assuming the four-channel color basis; they do not derive the two-loop topology/color-basis completeness from retained inputs. The numerical reconstruction is also circular: the runner constructs the n_l-independent constant from the literature target K_2(5) and then reproduces that target exactly.
+- **rationale:** Issue: the retained K_2 skeleton rests on an asserted complete two-loop color-basis theorem, but the source note provides no retained derivation of the on-shell two-loop topology classification and the runner defines K_2_sym to be the claimed four-term expression before checking it. Why this blocks: exact SU(3) prefactor arithmetic does not prove that these are all and only the allowed two-loop mass-conversion color channels, and the advertised K_2(5)=10.9405 reconstruction is not independent because C_0 is back-solved from the target. Repair target: add a retained two-loop Feynman-topology/color-reduction theorem or runner that enumerates the contributing diagrams, reduces their color factors to the four tensors, proves absence of other tensors at two loops, and reconstructs K_2 from independently supplied J_FF, J_FA, J_Fl, and J_Fh values rather than from the final target. Claim boundary until fixed: safe to claim arithmetic prefactors {16/9, 4, 10/3, 2/3} if C_F=4/3, C_A=3, T_F=1/2, and n_l=5 are supplied; not safe to claim a retained complete K_2 color-tensor skeleton or an independent K_2 numerical reconstruction.
+- **open / conditional deps cited:**
+  - `YT_P3_MSBAR_TO_POLE_K2_INTEGRAL_CITATION_NOTE_2026-04-17.md`
+  - `scripts/frontier_yt_p3_msbar_to_pole_k2.py`
+- **auditor confidence:** 0.95
