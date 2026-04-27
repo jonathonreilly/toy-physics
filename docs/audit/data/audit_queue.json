@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 89,
     "high": 508,
-    "leaf": 722,
+    "leaf": 721,
     "medium": 82
   },
-  "generated_at": "2026-04-27T16:06:02.400764+00:00",
+  "generated_at": "2026-04-27T16:08:14.809291+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -22341,23 +22341,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "multipole_tidal_response_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/MULTIPOLE_TIDAL_RESPONSE_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "nature_discovery_directions_2026-04-11",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -28636,6 +28619,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 988,
-  "total_pending": 1401
+  "ready_count": 987,
+  "total_pending": 1400
 }

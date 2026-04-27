@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T16:06:02.353685+00:00",
-  "generated_at": "2026-04-27T16:06:00.766061+00:00",
-  "invalidation_run_at": "2026-04-27T16:06:02.305934+00:00",
+  "effective_status_computed_at": "2026-04-27T16:08:14.763062+00:00",
+  "generated_at": "2026-04-27T16:08:13.160281+00:00",
+  "invalidation_run_at": "2026-04-27T16:08:14.717099+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T16:06:02.211654+00:00",
+  "load_bearing_computed_at": "2026-04-27T16:08:14.620920+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -50532,14 +50532,21 @@
       "verdict_rationale": null
     },
     "multipole_tidal_response_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The live probe reproduces the frozen controls and finite quadrupole rows: same-site and neutral controls are zero, the dipole mainly shifts centroid, and the centered quadrupoles give near-zero centroid change with positive width response at a = 1.0 and a = 2.0. The source explicitly excludes full tensor gravity and a general multipole theory.",
       "claim_id": "multipole_tidal_response_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -50547,13 +50554,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The centered quadrupole keeps the centroid essentially pinned but opens a real width/tidal channel, and the width response grows with quadrupole separation.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "daa15f2f4ab610ae66adda25ab7f89940cb33afcbf0fa51deaa765b7eb89b904",
@@ -50587,16 +50594,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 2,
         "B": 0,
-        "C": 0,
+        "C": 3,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 5
       },
       "runner_path": null,
       "title": "Multipole Tidal Response Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The retained content is a narrow finite-runner claim, not a physical tidal-field theorem: the current runner recomputes the same-site cancellation, q_test = 0 inert control, dipole baseline, and two centered quadrupole width responses. The quadrupole rows support the stated shape-sensitive width channel while the note explicitly disclaims full tensor gravity, relativistic tidal fields, and a general multipole expansion. Residual risk is only finite-configuration scope, plus a harmless rounded-ratio mismatch where the prose says 1.969 and the live runner prints +1.968; the audit does not retain anything beyond the tested ordered-lattice configuration."
     },
     "n_eff_from_three_generations_theorem_note_2026-04-24": {
       "audit_date": null,
