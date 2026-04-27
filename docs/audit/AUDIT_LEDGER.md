@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T11:14:18.327620+00:00
+**Generated:** 2026-04-27T11:18:14.498361+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 26 |
-| _proposed_retained_ | 167 |
+| _proposed_retained_ | 166 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 291 |
+| ~~audited_conditional~~ | 292 |
 | ~~audited_failed~~ | 89 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 26 |
-| `audited_conditional` | 80 |
+| `audited_conditional` | 81 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 22 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1460 |
+| `unaudited` | 1459 |
 
 | criticality | count |
 |---|---:|
@@ -151,6 +151,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `electrostatics_grown_sign_law_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `emergent_lorentz_invariance_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `family_companion_compare_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `fine_h_family_universality_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `global_coherence_off_scaffold_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravitomagnetic_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -253,7 +254,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The registered/source-note canonical harness reproduces the 2D and 3D action-power tables, and the source-note gravity-sign closure runner reproduces the 0/14 strength, 0/3 density, and 0/8 jitter negative sweeps. The source note explicitly scopes the result as an axiom fork and excludes same-harness Newtonian closure, 3D barrier attraction, continuum limits, and multi-spacing robustness.
 - **rationale:** The bounded finite claim closes on its own terms: the action-power harness reproduces Born-clean and k=0-clean 3D barrier values, MI/d_TV/decoherence diagnostics, the no-barrier distance exponent about -1.84 with F proportional to M near 1.00, and the live gravity-sign closure reproduces the all-away ordered-family sweeps. This clean audit ratifies only the finite axiom-fork card and its stated negative boundary, not a replacement for the spent-delay flagship, not attraction on the barrier card, and not a continuum or robustness theorem. Residual boundary: the later dimensional-interpretation comparison row for the 3D spent-delay exponent is not needed for the retained action-power card and should not be treated as the audited result; the canonical runner's current spent-delay 3D no-barrier output is +0.74.
 - **auditor confidence:** high
-
 ### `ai_methodology.raw.prompts_session_ebae4639_jonreilly`
 
 - **Note:** [`ai_methodology/raw/prompts_session_ebae4639_jonreilly.md`](../../docs/ai_methodology/raw/prompts_session_ebae4639_jonreilly.md)
@@ -1195,6 +1195,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `live_runner_output_not_reproducible`
 - **auditor confidence:** high
 
+### `fine_h_family_universality_note`
+
+- **Note:** [`FINE_H_FAMILY_UNIVERSALITY_NOTE.md`](../../docs/FINE_H_FAMILY_UNIVERSALITY_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note claims bounded three-family portability of the H=0.25 lensing slope, with all 15 seed fits in the -1.38 to -1.43 band, all R^2 > 0.997, and a borderline Fam2-vs-Fam3 family-mean offset at t = 2.37.  _(class `C`)_
+- **chain closes:** False — The source note gives a detailed finite-sweep table, but the cited raw log is missing from the worktree and the only listed runner is a slow per-family/seed batch tool rather than an aggregate replay of the 15-seed statistics. A live audit run did not complete even the first family/seed within the audit window, so the current packet does not provide reproducible runner output for the table or the t-tests.
+- **rationale:** Issue: the proposed_retained portability claim rests on a finite numerical sweep whose raw output is not present and whose listed runner does not provide a practical aggregate replay of the reported slopes, R^2 values, gap statistics, and family-mean significance tests. Why this blocks: a hostile referee cannot verify the 15 per-seed slopes, the grand sigma = 0.036, or the Fam2/Fam3 t = 2.37 result from source text alone, and the note title still says universality even though the note correctly narrows the claim to three-family portability. Repair target: add the missing raw log or a deterministic aggregate runner that executes/caches all 15 family/seed cases, computes the slopes, R^2 values, eikonal gaps, population/sample statistics, and t-tests, and emits explicit PASS thresholds for the bounded portability claim. Claim boundary until fixed: it is safe to say the source note reports a bounded H=0.25 three-family portability table and explicitly disclaims universality/kernel-independence; it is not yet an audited retained portability result.
+- **open / conditional deps cited:**
+  - `logs/2026-04-09-lensing-fine-h-families.txt_missing_raw_output`
+  - `aggregate_15_seed_replay_runner_missing`
+  - `live_runner_output_not_completed_in_audit_window`
+  - `title_uses_universality_while_claim_disclaims_universality`
+- **auditor confidence:** medium
 ### `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25`
 
 - **Note:** [`FRAMEWORK_BARE_ALPHA_3_ALPHA_EM_DIMENSION_FIXED_RATIO_SUPPORT_NOTE_2026-04-25.md`](../../docs/FRAMEWORK_BARE_ALPHA_3_ALPHA_EM_DIMENSION_FIXED_RATIO_SUPPORT_NOTE_2026-04-25.md)

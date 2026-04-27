@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T11:14:17.785813+00:00",
-  "generated_at": "2026-04-27T11:14:15.234838+00:00",
-  "invalidation_run_at": "2026-04-27T11:14:17.701301+00:00",
+  "effective_status_computed_at": "2026-04-27T11:18:14.231793+00:00",
+  "generated_at": "2026-04-27T11:18:12.189495+00:00",
+  "invalidation_run_at": "2026-04-27T11:18:14.165379+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T11:14:17.502049+00:00",
+  "load_bearing_computed_at": "2026-04-27T11:18:14.023431+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -27748,14 +27748,21 @@
       "verdict_rationale": "Issue: the current radial-shell fifth-family artifact chain is broken by a shared helper import mismatch across the sweep, basin, and F~M transfer scripts. Why this blocks: a retained finite basin cannot be audited from stale frozen logs when the present scripts exit before checking zero-source control, neutral cancellation, sign orientation, or F~M, and downstream companion notes already fail for the same reason. Repair target: restore or move the radial-shell helper API used by these scripts, or update the scripts to import the current implementation, then rerun the sweep, basin, and F~M transfer with explicit PASS thresholds for the two retained rows and the boundary row. Claim boundary until fixed: it is safe only to say historical logs reported a narrow sampled radial-shell basin; it is not currently an audited retained fifth structured family."
     },
     "fine_h_family_universality_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "medium",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The source note gives a detailed finite-sweep table, but the cited raw log is missing from the worktree and the only listed runner is a slow per-family/seed batch tool rather than an aggregate replay of the 15-seed statistics. A live audit run did not complete even the first family/seed within the audit window, so the current packet does not provide reproducible runner output for the table or the t-tests.",
       "claim_id": "fine_h_family_universality_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -27763,18 +27770,23 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note claims bounded three-family portability of the H=0.25 lensing slope, with all 15 seed fits in the -1.38 to -1.43 band, all R^2 > 0.997, and a borderline Fam2-vs-Fam3 family-mean offset at t = 2.37.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "04e70121e41bfc0900dcea49a1e2c1c6cde352a903df3671b927a04275012832",
       "note_path": "docs/FINE_H_FAMILY_UNIVERSALITY_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "logs/2026-04-09-lensing-fine-h-families.txt_missing_raw_output",
+        "aggregate_15_seed_replay_runner_missing",
+        "live_runner_output_not_completed_in_audit_window",
+        "title_uses_universality_while_claim_disclaims_universality"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368310+00:00",
@@ -27812,7 +27824,7 @@
       "runner_path": null,
       "title": "Fine-H (H=0.25) Lensing: Three-Family Portability",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the proposed_retained portability claim rests on a finite numerical sweep whose raw output is not present and whose listed runner does not provide a practical aggregate replay of the reported slopes, R^2 values, gap statistics, and family-mean significance tests. Why this blocks: a hostile referee cannot verify the 15 per-seed slopes, the grand sigma = 0.036, or the Fam2/Fam3 t = 2.37 result from source text alone, and the note title still says universality even though the note correctly narrows the claim to three-family portability. Repair target: add the missing raw log or a deterministic aggregate runner that executes/caches all 15 family/seed cases, computes the slopes, R^2 values, eikonal gaps, population/sample statistics, and t-tests, and emits explicit PASS thresholds for the bounded portability claim. Claim boundary until fixed: it is safe to say the source note reports a bounded H=0.25 three-family portability table and explicitly disclaims universality/kernel-independence; it is not yet an audited retained portability result."
     },
     "finite_rank_source_to_metric_theorem_note": {
       "audit_date": null,
