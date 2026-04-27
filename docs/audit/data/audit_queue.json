@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 88,
-    "high": 513,
+    "high": 512,
     "leaf": 856,
     "medium": 85
   },
-  "generated_at": "2026-04-27T05:34:16.443451+00:00",
+  "generated_at": "2026-04-27T05:37:46.045848+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -6365,23 +6365,6 @@
       "direct_in_degree": 1,
       "load_bearing_score": 7.383,
       "note_path": "docs/KOIDE_Z3_SCALAR_POTENTIAL_LEPTON_MASS_TOWER_NOTE_2026-04-19.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 117
-    },
-    {
-      "audit_independence_required": "cross_family",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "lattice_complementarity_note",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 7.383,
-      "note_path": "docs/LATTICE_COMPLEMENTARITY_NOTE.md",
       "ready": true,
       "runner_path": null,
       "transitive_descendants": 117
@@ -30990,6 +30973,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1136,
-  "total_pending": 1542
+  "ready_count": 1135,
+  "total_pending": 1541
 }
