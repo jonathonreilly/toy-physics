@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T10:08:29.818436+00:00
+**Generated:** 2026-04-27T10:11:04.183100+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 21 |
-| _proposed_retained_ | 185 |
+| _proposed_retained_ | 184 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 284 |
+| ~~audited_conditional~~ | 285 |
 | ~~audited_failed~~ | 82 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 21 |
-| `audited_conditional` | 73 |
+| `audited_conditional` | 74 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 15 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1480 |
+| `unaudited` | 1479 |
 
 | criticality | count |
 |---|---:|
@@ -135,6 +135,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `cross_family_universality_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `diamond_nv_phase_ramp_signal_budget_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
 | `diamond_signal_budget_hardening_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `distance_law_breakpoint_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_neutrino_schur_suppression_theorem_note_2026-04-15` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `electrostatics_grown_sign_law_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -742,6 +743,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The retained signal is the 31^3 through 64^3 grid sweep with largest-grid far-field exponent alpha = -1.023 +/- 0.012, finite-size extrapolation alpha_inf = -0.976 +/- 0.019, and largest-grid mass-linearity spread below 0.1%.  _(class `C`)_
 - **chain closes:** True — The named runner directly recomputes the Poisson field, path-sum deflections, far-field fits, finite-size extrapolation, and largest-grid mass scaling, and its live output reproduces the note's bounded numerical values.
 - **rationale:** The clean verdict is narrow. The live runner reproduces alpha(64^3) = -1.0233 +/- 0.0115, alpha_inf = -0.9762 +/- 0.0193, and delta/M spread 0.0010 on the specified Dirichlet 3D path-sum setup. The note explicitly limits the claim to a bounded numerical continuation and states that it is not full Newton closure, not architecture portability, and not a two-body M1 M2 theorem. Residual risk is therefore scope-bound: the result should only be cited for this finite path-sum surface and its stated convergence trend.
+- **auditor confidence:** high
+
+### `distance_law_breakpoint_note`
+
+- **Note:** [`DISTANCE_LAW_BREAKPOINT_NOTE.md`](../../docs/DISTANCE_LAW_BREAKPOINT_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The distance tail survives only in open directed transport families; shell-locking, reflection closure, and deep branch routing break or flatten it.  _(class `B`)_
+- **chain closes:** False — The runner prints a hard-coded comparison table and feature classifier; it does not recompute the alpha/direction rows or perform ablations that isolate the listed architecture features.
+- **rationale:** Issue: the note turns a static breakpoint table into a causal architecture-feature diagnosis, but the runner only reprints hard-coded alpha/direction rows and labels. Why this blocks: the conclusion that open directed transport preserves the tail while shell routing, reflection closure, or deep branch routing break it requires either clean upstream rows or matched ablation computations; the cited distance-law portability note is unknown and the sign-invariant context is already conditional. Repair target: register and audit the upstream row computations, then add an ablation runner that toggles shell routing, dense fallback, reflection symmetry, branch depth, and radial confinement on matched geometries while recomputing alpha and direction. Claim boundary until fixed: it is safe to present the printed six-row comparison as a bounded diagnostic table; it is not an audited retained theorem that the named architecture features are the causal order parameters for distance-tail preservation.
+- **open / conditional deps cited:**
+  - `DISTANCE_LAW_PORTABILITY_NOTE.md`
+  - `SIGN_PORTABILITY_INVARIANT_NOTE.md`
 - **auditor confidence:** high
 
 ### `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21`
