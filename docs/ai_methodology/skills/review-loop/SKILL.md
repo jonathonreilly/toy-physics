@@ -1,6 +1,6 @@
 ---
 name: review-loop
-description: Use when an LLM agent needs to run `/review-loop`, review branch changes, run parallel physics-specific reviewers, identify overclaims/imported values/support-only material, apply narrow honest fixes, and re-review only files changed by those fixes.
+description: Use when an LLM agent needs to run `/review-loop`, review branch changes, run parallel physics-specific reviewers, identify overclaims/imported values/support-only material, apply narrow honest fixes, verify audit-system compatibility without applying audit verdicts, and re-review only files changed by those fixes.
 ---
 
 # Review Loop
@@ -9,6 +9,10 @@ Run a local review/fix/re-review loop for this physics repo. This is not a
 generic software review. Its job is to protect the live claim boundary:
 retained/Nature-grade claims must have artifact support, imported values must
 be explicit, and support-only results must not be promoted by prose.
+
+This skill is **review only**. It may make branch/package hygiene changes that
+allow the independent audit system to parse and queue claims, but it must not
+apply audit verdicts, write `audited_clean`, or run the audit worker.
 
 ## Arguments
 
@@ -26,6 +30,7 @@ Parse:
    - `docs/repo/ACTIVE_REVIEW_QUEUE.md`
    - `docs/repo/CONTROLLED_VOCABULARY.md`
    - `docs/CANONICAL_HARNESS_INDEX.md`
+   - `docs/audit/README.md`
    - `docs/publication/ci3_z3/` when publication-facing files changed
    - `docs/publication/ci3_z3/USABLE_DERIVED_VALUES_INDEX.md` when
      quantitative or imported-value claims changed
@@ -99,8 +104,9 @@ locally and report that limitation.
   Check placement and authority surfaces. Ensure live findings route through
   `docs/repo/ACTIVE_REVIEW_QUEUE.md`, long packets go under
   `docs/work_history/repo/review_feedback/`, publication edits update the
-  relevant `docs/publication/ci3_z3/` surfaces, and status wording follows
-  `docs/repo/CONTROLLED_VOCABULARY.md`.
+  relevant `docs/publication/ci3_z3/` surfaces, status wording follows
+  `docs/repo/CONTROLLED_VOCABULARY.md`, and changed claim notes are compatible
+  with the audit lane's propose/ratify split.
 
 ### Optional Reviewer
 
@@ -133,7 +139,7 @@ Context:
 - Iteration: <N> of <max>
 - Already reviewed and unchanged: <reviewed_files>
 - Repo review surfaces: REVIEW_FEEDBACK_WORKFLOW, ACTIVE_REVIEW_QUEUE,
-  CONTROLLED_VOCABULARY, CANONICAL_HARNESS_INDEX
+  CONTROLLED_VOCABULARY, CANONICAL_HARNESS_INDEX, docs/audit/README.md
 
 Rules:
 - Findings must cite file/line when possible.
@@ -142,6 +148,8 @@ Rules:
 - Do not require new science for wording problems.
 - Do not approve retained/Nature-grade language if an import or bridge remains
   hidden.
+- Do not apply audit verdicts. Review only whether the branch is ready for the
+  independent audit worker.
 ````
 
 ## Consolidate Findings
@@ -156,6 +164,7 @@ Present one iteration summary:
 ### Imports / Support: CLEAN | DISCLOSED | DEMOTE | FAIL
 ### Nature Retention: RETAINED | RETAINED SUPPORT | BOUNDED | OPEN | NO-GO | REJECT
 ### Repo Governance: PASS | FIX | QUEUE | ARCHIVE
+### Audit Compatibility: PASS | FIX | BLOCKED | NOT APPLICABLE
 ### Methodology Skill: PASS | FIX | SKIPPED
 ```
 
@@ -168,6 +177,7 @@ Classify every finding:
 - `MISSING_ARTIFACT`
 - `SEMANTIC_BRIDGE`
 - `REPO_GOVERNANCE`
+- `AUDIT_COMPATIBILITY`
 - `NIT`
 
 Stop immediately when all applicable reviewers are clean.
@@ -185,8 +195,11 @@ Otherwise apply the narrowest honest fix:
 3. Mark imported values explicitly; distinguish derived, admitted, fitted,
    measured, literature, boundary-condition, and insensitive nuisance inputs.
 4. Add or repair paired runner/note references only when the artifact exists.
-5. Update `docs/repo/ACTIVE_REVIEW_QUEUE.md` for live unresolved findings.
-6. Route detailed resolved packets to
+5. Make audit-system hygiene fixes only when they do not change the science:
+   status-line tier labels, machine-local path removal, stale runner transcript
+   refreshes, generated audit queue/ledger seeding, and discoverability wiring.
+6. Update `docs/repo/ACTIVE_REVIEW_QUEUE.md` for live unresolved findings.
+7. Route detailed resolved packets to
    `docs/work_history/repo/review_feedback/` only when a long packet is needed.
 
 Skip:
@@ -197,6 +210,68 @@ Skip:
 - attempts to paper over missing theorem steps with confident prose;
 - broad refactors unrelated to the finding.
 
+## Audit-System Compatibility Gate
+
+This gate is mandatory when a branch adds or edits source notes, runners,
+claim tables, lane stubs, or publication/control-plane files.
+
+The review loop must enforce the audit lane's propose/ratify split without
+performing the independent audit:
+
+1. Source-note `Status:` lines must not contain bare `retained` or `promoted`.
+   Valid author-facing tiers are `proposed_retained`, `proposed_promoted`,
+   `support`, `bounded`, `open`, and existing repo-recognized equivalents.
+2. If a no-go/firewall is intended to be theorem-grade, status the no-go as
+   `proposed_retained exact negative boundary ...`; do not status it as
+   `support` and then expect audit ratification.
+3. Keep disclaimers such as "This is not charged-lepton mass closure" outside
+   the `Status:` line, because strict audit lint scans that line literally.
+4. Run the audit pipeline after review fixes:
+
+```bash
+bash docs/audit/scripts/run_pipeline.sh
+python3 docs/audit/scripts/audit_lint.py --strict
+git diff --check
+```
+
+The known graph-cycle warning is acceptable. Any strict-lint error blocks a
+review-loop PASS.
+
+The review loop must not run `docs/audit/scripts/apply_audit.py` and must not
+write `audit_status`, `audited_clean`, or other audit verdicts. If the branch
+introduces `proposed_retained` / `proposed_promoted` rows, report those claim
+IDs in the final report as requiring the independent audit worker.
+
+Useful review-only inventory:
+
+```bash
+python3 - <<'PY'
+import json, subprocess
+changed = set()
+for cmd in (
+    ["git", "diff", "--name-only", "HEAD"],
+    ["git", "diff", "--name-only", "--cached"],
+):
+    changed.update(subprocess.check_output(cmd, text=True).splitlines())
+try:
+    changed.update(subprocess.check_output(
+        ["git", "diff", "--name-only", "origin/main...HEAD"], text=True
+    ).splitlines())
+except Exception:
+    pass
+rows=json.load(open("docs/audit/data/audit_ledger.json"))["rows"]
+for cid,row in rows.items():
+    if row.get("note_path") in changed:
+        print(cid, row.get("current_status"), row.get("audit_status"),
+              row.get("effective_status"), row.get("note_path"))
+PY
+```
+
+If generated audit files conflict while integrating current `origin/main`, do
+not hand-merge generated JSON/Markdown. Resolve source files, prefer the
+current remote generated audit files, then rerun `run_pipeline.sh` and strict
+lint so the generated surface is rebuilt from source.
+
 ## Smoketest
 
 After fixes, run the smallest relevant checks:
@@ -206,6 +281,9 @@ After fixes, run the smallest relevant checks:
 - any reproduction commands named in changed notes when practical;
 - publication/control-plane consistency checks by reading changed tables and
   nearby authority surfaces.
+- `bash docs/audit/scripts/run_pipeline.sh` and
+  `python3 docs/audit/scripts/audit_lint.py --strict` when claim notes or
+  governance/publication surfaces changed.
 
 If a runner is long, stochastic, or requires unavailable data, do not fake the
 check. Report it as not run with the reason.
@@ -234,6 +312,7 @@ Report:
 - total findings, fixed findings, skipped findings;
 - import/support inventory summary;
 - final claim-strength disposition;
+- audit-compatibility status and proposed claim IDs needing independent audit;
 - commits created;
 - checks run and checks skipped;
 - remaining issues with disposition;
