@@ -11,9 +11,10 @@
 - [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md) — derivation of
   `R_conn = (N_c²−1)/N_c²` via the `1/N_c` topological expansion.
 - [EW_CURRENT_MATCHING_OZI_SUPPRESSION_THEOREM_NOTE_2026-04-27.md](EW_CURRENT_MATCHING_OZI_SUPPRESSION_THEOREM_NOTE_2026-04-27.md)
-  — derivation of the **matching rule** that selects the connected
-  color trace as the physical EW coupling readout (closes the audit
-  lane gap previously flagged on Section 2.6 of this note).
+  — bounded large-`N_c` support for the **matching route** that selects
+  the connected color trace as the physical EW coupling readout. This
+  is corroborating support for Section 2.6, not an audit ratification
+  of the package-level `9/8` coefficient.
 
 ---
 

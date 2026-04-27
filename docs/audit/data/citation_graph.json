@@ -3905,6 +3905,14 @@
       "to": "star_supported_bridge_class_note"
     },
     {
+      "from": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27",
+      "to": "rconn_derived_note"
+    },
+    {
+      "from": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27",
+      "to": "yt_ew_color_projection_theorem"
+    },
+    {
       "from": "ew_lattice_cos_sq_theta_w_complement_bridge_theorem_note_2026-04-26",
       "to": "yt_ew_color_projection_theorem"
     },
@@ -6661,6 +6669,18 @@
       "to": "quark_up_amplitude_native_expression_scan_note_2026-04-19"
     },
     {
+      "from": "rconn_derived_note",
+      "to": "yt_ew_color_projection_theorem"
+    },
+    {
+      "from": "rconn_derived_note",
+      "to": "yukawa_color_projection_theorem"
+    },
+    {
+      "from": "rconn_derived_note",
+      "to": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27"
+    },
+    {
       "from": "restricted_strong_field_closure_note",
       "to": "evanescent_barrier_amplitude_suppression_theorem_note"
     },
@@ -7747,6 +7767,14 @@
     {
       "from": "yt_eft_bridge_theorem",
       "to": "yt_boundary_theorem"
+    },
+    {
+      "from": "yt_ew_color_projection_theorem",
+      "to": "rconn_derived_note"
+    },
+    {
+      "from": "yt_ew_color_projection_theorem",
+      "to": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27"
     },
     {
       "from": "yt_exact_schur_normal_form_uniqueness_note",
@@ -17521,7 +17549,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-27T14:10:28.520534+00:00",
+  "generated_at": "2026-04-27T21:39:23.474625+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -24262,6 +24290,19 @@
       "path": "docs/EW_COUPLING_DERIVATION_NOTE.md",
       "runner_path": "scripts/frontier_yt_ew_coupling_derivation.py",
       "title": "Electroweak Coupling Derivation: g_1(v), g_2(v), lambda(v)"
+    },
+    "ew_current_matching_ozi_suppression_theorem_note_2026-04-27": {
+      "claim_id": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27",
+      "current_status": "bounded",
+      "current_status_raw": "bounded support theorem for EW current matching on the standard 1/N_c expansion surface",
+      "deps": [
+        "rconn_derived_note",
+        "yt_ew_color_projection_theorem"
+      ],
+      "note_hash": "3f39d8f68c97dc11168c0843974ef6670514990014fbb6e390a05622cbf83ab5",
+      "path": "docs/EW_CURRENT_MATCHING_OZI_SUPPRESSION_THEOREM_NOTE_2026-04-27.md",
+      "runner_path": "scripts/frontier_color_projection_mc.py",
+      "title": "EW Current Matching via OZI / Disconnected-Trace Suppression Theorem"
     },
     "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26": {
       "claim_id": "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26",
@@ -33785,10 +33826,14 @@
     },
     "rconn_derived_note": {
       "claim_id": "rconn_derived_note",
-      "current_status": "support",
-      "current_status_raw": "DERIVED (leading order in 1/N_c) + VERIFIED (MC)",
-      "deps": [],
-      "note_hash": "c273897e988edd68462ddf3b99efa407a5473b5ec1ad2a8f8eca3b99839a3f46",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained leading-order `1/N_c` derivation with bounded `O(1/N_c\u2074)` correction; MC-verified",
+      "deps": [
+        "yt_ew_color_projection_theorem",
+        "yukawa_color_projection_theorem",
+        "ew_current_matching_ozi_suppression_theorem_note_2026-04-27"
+      ],
+      "note_hash": "0caf09f59ae9c2739d77621f01cf6fe3dce15b4365035cbfbd4c749277bd46af",
       "path": "docs/RCONN_DERIVED_NOTE.md",
       "runner_path": "scripts/frontier_color_projection_mc.py",
       "title": "R_conn Derivation from the 1/N_c Expansion"
@@ -37936,11 +37981,14 @@
     "yt_ew_color_projection_theorem": {
       "claim_id": "yt_ew_color_projection_theorem",
       "current_status": "proposed_retained",
-      "current_status_raw": "DERIVED -- standalone proposed_retained EW normalization lane on `main`",
-      "deps": [],
-      "note_hash": "4f5b3aa7850ed4874f8061865f021805b62d40031fe088181c5067febda513b8",
+      "current_status_raw": "proposed_retained EW normalization lane on `main`",
+      "deps": [
+        "rconn_derived_note",
+        "ew_current_matching_ozi_suppression_theorem_note_2026-04-27"
+      ],
+      "note_hash": "fe339c5e80e1b6719104ad6e93ea73defe45885fac159f661399d832fd1451e0",
       "path": "docs/YT_EW_COLOR_PROJECTION_THEOREM.md",
-      "runner_path": null,
+      "runner_path": "scripts/frontier_color_projection_mc.py",
       "title": "Color-Singlet Projection Theorem for EW Couplings"
     },
     "yt_ew_coupling_bridge_note": {
@@ -39326,7 +39374,6 @@
     "quark_up_amplitude_rpsr_conditional_theorem_note_2026-04-19",
     "quark_up_amplitude_sqrt7_counterexample_simplification_note_2026-04-19",
     "quasi_persistent_relaunch_probe_note",
-    "rconn_derived_note",
     "reopened_lane_checklist",
     "replay_environment_note",
     "repo_submission_consolidation_plan_2026-04-12",
@@ -39614,7 +39661,6 @@
     "yt_class_7_spontaneous_c3_breaking_note_2026-04-18",
     "yt_color_projection_correction_note",
     "yt_constructive_uv_bridge_note",
-    "yt_ew_color_projection_theorem",
     "yt_ew_coupling_bridge_note",
     "yt_ew_delta_r_retention_analysis_note_2026-04-18",
     "yt_exact_coarse_grained_bridge_operator_note",
@@ -39662,17 +39708,17 @@
   ],
   "schema_version": 1,
   "stats": {
-    "edge_count": 4380,
+    "edge_count": 4387,
     "leaf_count": 750,
-    "node_count": 1614,
-    "root_count": 1176,
-    "runners_with_path": 702,
+    "node_count": 1615,
+    "root_count": 1174,
+    "runners_with_path": 704,
     "status_counts": {
-      "bounded": 209,
+      "bounded": 210,
       "open": 26,
       "proposed_promoted": 6,
-      "proposed_retained": 443,
-      "support": 134,
+      "proposed_retained": 444,
+      "support": 133,
       "unknown": 796
     }
   }

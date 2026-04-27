@@ -1,7 +1,7 @@
 # EW Current Matching via OZI / Disconnected-Trace Suppression Theorem
 
 **Date:** 2026-04-27
-**Status:** proposed_retained matching theorem on the standard 1/N_c expansion surface
+**Status:** bounded support theorem for EW current matching on the standard 1/N_c expansion surface
 **Primary runner:** `scripts/frontier_color_projection_mc.py`
 **Depends on:**
 [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md),
@@ -11,7 +11,7 @@
 
 ## Statement
 
-**Theorem (EW current matching at leading order in 1/N_c).**
+**Support theorem (EW disconnected-current suppression at leading order in 1/N_c).**
 On the unified `Cl(3) / Z^3` lattice with `N_c = 3` quarks in the
 fundamental representation, the physical (continuum-matched) EW vacuum
 polarization equals the **connected** color trace plus corrections of
@@ -21,23 +21,27 @@ order `1/N_c^2`:
 
 The disconnected piece — quark-antiquark annihilation through a pure-
 gluon (colorless) intermediate state — is **OZI-suppressed by `1/N_c^2`**
-relative to the connected piece, by the same topological mechanism that
-gives `R_conn = (N_c^2 - 1)/N_c^2 + O(1/N_c^4)`.
+relative to the connected piece. This is the same large-`N_c` topology
+family that supports the connected-channel ratio
+`R_conn = (N_c^2 - 1)/N_c^2 + O(1/N_c^4)`, but it does not by itself
+fix the non-perturbative disconnected coefficient.
 
 Equivalently: at leading order in `1/N_c`, the physical EW coupling
-extracted from `Pi_EW^{phys}` reads off the connected color trace
-`N_c (N_c^2 - 1) / N_c^2 = (N_c^2 - 1)/N_c`, **not** the total color
-trace `N_c`. The matching factor is therefore:
+extracted from `Pi_EW^{phys}` is bounded toward the connected color
+trace rather than the total color trace. The canonical package readout
+uses the sibling `R_conn` value:
 
     alpha_EW^{phys} / alpha_EW^{lattice} = N_c^2 / (N_c^2 - 1) = 9/8 at N_c = 3
 
-with bounded corrections `O(1/N_c^4) ~ 1.2%`.
+as a bounded matching model, not as an exact coefficient derived by this
+note alone.
 
-This closes the gap flagged by the audit-lane `audited_conditional`
-verdict on
+This addresses the matching-rule gap flagged on
 [YT_EW_COLOR_PROJECTION_THEOREM.md](YT_EW_COLOR_PROJECTION_THEOREM.md):
-the matching rule that selects the connected color trace as the
-physical EW coupling readout is now derived, not asserted.
+the connected-trace route now has an explicit large-`N_c` support
+argument. It remains a bounded support input until an independent
+derivation fixes the disconnected coefficient required for exact
+`9/8` matching.
 
 ## Why this is needed
 
@@ -55,9 +59,11 @@ in YT_EW_COLOR_PROJECTION_THEOREM.md Section 2.6 ("The physical claim:
 the 9/8 correction arises if the physical EW current uses the connected
 color trace") without an independent derivation.
 
-This note fills that third step. The matching rule follows from the
-same 1/N_c topological mechanism that gives R_conn, applied to the
-EW vacuum polarization directly rather than to the q-qbar propagator.
+This note fills part of that third step. The connected-trace preference
+follows from the same 1/N_c topological mechanism that gives R_conn,
+applied to the EW vacuum polarization directly rather than to the
+q-qbar propagator. The exact coefficient identification with `1/R_conn`
+remains an additional package assumption.
 
 ## Derivation
 
@@ -133,46 +139,46 @@ is:
                                      = 1 / (1 + O(1/N_c^2))
                                      = 1 - O(1/N_c^2)
 
-To match the lattice readout to the continuum coupling, multiply by
-`N_c^2 / (N_c^2 - 1) = 9/8` at `N_c = 3`. The factor is exactly the
-inverse of `R_conn`, by construction: the same `1/N_c^2` suppression
-appears in both the q-qbar adjoint-channel weight (`R_conn`) and the
-EW disconnected-piece weight (this matching).
+The package-level `9/8` correction is obtained if the disconnected
+coefficient is identified with the sibling `R_conn` complement. The
+large-`N_c` argument here supports that route parametrically; it does
+not prove the coefficient equality. Therefore this note is a bounded
+support input for the EW matching lane, not a stand-alone closure of
+the physical matching factor.
 
 ### 4. Consistency check against MC
 
 The runner [`scripts/frontier_color_projection_mc.py`](../scripts/frontier_color_projection_mc.py)
 measures `R_conn = 0.887 ± 0.008` on a 4^4 lattice at β = 6, in
-agreement with `8/9 = 0.8889` to 0.2%. By construction (this theorem),
-the EW matching factor equals `1/R_conn` to `O(1/N_c^4)`. The same MC
-result therefore validates both `R_conn` (in RCONN_DERIVED_NOTE.md) and
-the matching rule (this note). No additional runner is required for
-this matching theorem because the OZI / disconnected-suppression
-argument and the `R_conn` derivation are the same `1/N_c` mechanism
-applied to the same observable.
+agreement with `8/9 = 0.8889` to 0.2%. That validates the sibling
+`R_conn` channel. This note uses the same large-`N_c` suppression
+logic for the EW disconnected topology, but a dedicated physical
+matching theorem or runner would still be required to turn the
+parametric suppression argument into an exact `1/R_conn` coefficient
+claim.
 
 ## Claim boundary
 
-This theorem proves the matching rule **at leading order in `1/N_c`**,
-with bounded corrections `O(1/N_c^4) ~ 1.2%`. It does **not** prove:
+This theorem proves a **bounded support route** for connected-trace EW
+matching at leading order in `1/N_c`. It does **not** prove:
 
-- An exact (genus-2-vanishing) matching identity. Promoting to
-  `audit_status = audited_clean` at the *exact* level would require
-  showing the disconnected piece vanishes identically, which is
-  false (glueball intermediate states exist).
+- An exact (genus-2-vanishing) matching identity. Exact matching would
+  require showing the disconnected piece vanishes identically, which
+  is false (glueball intermediate states exist), or deriving its
+  coefficient from an independent physical matching condition.
 - A first-principles derivation independent of the `1/N_c` expansion.
   The matching uses the same topological mechanism as R_conn; an
   independent derivation route would strengthen the result but is
-  not required for `audited_clean` at the leading-order claim.
-- Specific values of the disconnected `O(1/N_c^4)` coefficient.
-  The MC bound `|c_2| < 0.8` (2-sigma) on `R_conn` propagates here
-  as a similar bound on the matching-factor correction.
+  not present here.
+- Specific values of the disconnected coefficient. The MC bound on
+  `R_conn` is relevant corroboration for the sibling color channel,
+  not a direct measurement of the EW disconnected topology.
 
 ## What this lane does NOT change
 
 - `g_1`, `g_2`, `sin²θ_W`, `1/α_EM(M_Z)` numerical agreements with PDG
-  remain as-is. This theorem provides the missing derivation step;
-  the comparator values are unchanged.
+  remain as-is. This theorem supplies bounded support for the
+  matching route; the comparator values are unchanged.
 - `R_conn = 8/9` itself remains a separate theorem in
   [RCONN_DERIVED_NOTE.md](RCONN_DERIVED_NOTE.md), with its own audit
   row and its own MC verification.

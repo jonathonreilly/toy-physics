@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T14:10:30.146151+00:00",
-  "generated_at": "2026-04-27T14:10:28.565330+00:00",
-  "invalidation_run_at": "2026-04-27T14:10:30.100114+00:00",
+  "effective_status_computed_at": "2026-04-27T21:39:25.270917+00:00",
+  "generated_at": "2026-04-27T21:39:23.528877+00:00",
+  "invalidation_run_at": "2026-04-27T21:39:25.209807+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T14:10:30.005534+00:00",
+  "load_bearing_computed_at": "2026-04-27T21:39:25.097663+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -27705,6 +27705,50 @@
       "transitive_descendants": 0,
       "verdict_rationale": "Issue: the proposed_retained EW-coupling derivation is not a closed derivation from retained inputs; the runner selects a fitted taste_weight against the observed weak angle, and the note says the packet is superseded support work with g_2 and lambda still bounded/open. Why this blocks: a hostile referee cannot treat a scanned value, a 12.22% miss in 1/alpha_EM, and open SU(2)/Higgs matching as a retained derivation of g_1(v), g_2(v), or lambda(v). Repair target: derive the taste-gauge coupling/taste_weight from registered lattice representation theory or Monte Carlo, register the superseding complete-chain note as the governing one-hop authority, and update the runner so it predicts sin^2(theta_W), g_1, g_2, and lambda without fitting to the target. Claim boundary until fixed: it is safe to claim a support scan showing that bare geometric couplings plus a tuned taste-threshold parameter can numerically match sin^2(theta_W) and that EW imports remain important; it is not safe to claim a retained EW-coupling derivation."
     },
+    "ew_current_matching_ozi_suppression_theorem_note_2026-04-27": {
+      "audit_date": null,
+      "audit_status": "unaudited",
+      "auditor": null,
+      "auditor_confidence": null,
+      "auditor_family": null,
+      "blocker": null,
+      "chain_closes": null,
+      "chain_closure_explanation": null,
+      "claim_id": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27",
+      "criticality": "critical",
+      "current_status": "bounded",
+      "current_status_raw": "bounded support theorem for EW current matching on the standard 1/N_c expansion surface",
+      "decoration_parent_claim_id": null,
+      "deps": [
+        "rconn_derived_note",
+        "yt_ew_color_projection_theorem"
+      ],
+      "direct_in_degree": 2,
+      "effective_status": "bounded",
+      "effective_status_reason": "self",
+      "independence": null,
+      "intrinsic_status": "bounded",
+      "load_bearing_score": 13.14,
+      "load_bearing_step": null,
+      "load_bearing_step_class": null,
+      "max_descendant_status": "proposed_retained",
+      "max_descendant_status_rank": 80,
+      "note_hash": "3f39d8f68c97dc11168c0843974ef6670514990014fbb6e390a05622cbf83ab5",
+      "note_path": "docs/EW_CURRENT_MATCHING_OZI_SUPPRESSION_THEOREM_NOTE_2026-04-27.md",
+      "open_dependency_paths": [],
+      "previous_audits": [],
+      "runner_check_breakdown": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "total_pass": 0
+      },
+      "runner_path": "scripts/frontier_color_projection_mc.py",
+      "title": "EW Current Matching via OZI / Disconnected-Trace Suppression Theorem",
+      "transitive_descendants": 281,
+      "verdict_rationale": null
+    },
     "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26": {
       "audit_date": null,
       "audit_status": "unaudited",
@@ -27775,7 +27819,7 @@
       ],
       "direct_in_degree": 9,
       "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:yt_ew_color_projection_theorem",
+      "effective_status_reason": "inherited_from:wolfenstein_lambda_a_structural_identities_theorem_note_2026-04-24",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 11.407,
@@ -63979,24 +64023,54 @@
       "chain_closure_explanation": null,
       "claim_id": "rconn_derived_note",
       "criticality": "critical",
-      "current_status": "support",
-      "current_status_raw": "DERIVED (leading order in 1/N_c) + VERIFIED (MC)",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained leading-order `1/N_c` derivation with bounded `O(1/N_c\u2074)` correction; MC-verified",
       "decoration_parent_claim_id": null,
-      "deps": [],
-      "direct_in_degree": 12,
+      "deps": [
+        "yt_ew_color_projection_theorem",
+        "yukawa_color_projection_theorem",
+        "ew_current_matching_ozi_suppression_theorem_note_2026-04-27"
+      ],
+      "direct_in_degree": 14,
       "effective_status": "support",
-      "effective_status_reason": "self",
+      "effective_status_reason": "inherited_from:yukawa_color_projection_theorem",
       "independence": null,
-      "intrinsic_status": "support",
-      "load_bearing_score": 18.119,
+      "intrinsic_status": "proposed_retained",
+      "load_bearing_score": 19.14,
       "load_bearing_step": null,
       "load_bearing_step_class": null,
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
-      "note_hash": "c273897e988edd68462ddf3b99efa407a5473b5ec1ad2a8f8eca3b99839a3f46",
+      "note_hash": "0caf09f59ae9c2739d77621f01cf6fe3dce15b4365035cbfbd4c749277bd46af",
       "note_path": "docs/RCONN_DERIVED_NOTE.md",
       "open_dependency_paths": [],
-      "previous_audits": [],
+      "previous_audits": [
+        {
+          "archived_at": "2026-04-27T21:39:23.528261+00:00",
+          "archived_for_note_hash": "c273897e988edd68462ddf3b99efa407a5473b5ec1ad2a8f8eca3b99839a3f46",
+          "audit_date": null,
+          "audit_status": "unaudited",
+          "auditor": null,
+          "auditor_confidence": null,
+          "auditor_family": null,
+          "blocker": null,
+          "chain_closes": null,
+          "chain_closure_explanation": null,
+          "decoration_parent_claim_id": null,
+          "independence": null,
+          "load_bearing_step": null,
+          "load_bearing_step_class": null,
+          "open_dependency_paths": [],
+          "runner_check_breakdown": {
+            "A": 0,
+            "B": 0,
+            "C": 0,
+            "D": 0,
+            "total_pass": 0
+          },
+          "verdict_rationale": null
+        }
+      ],
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
@@ -64006,7 +64080,7 @@
       },
       "runner_path": "scripts/frontier_color_projection_mc.py",
       "title": "R_conn Derivation from the 1/N_c Expansion",
-      "transitive_descendants": 277,
+      "transitive_descendants": 281,
       "verdict_rationale": null
     },
     "reopened_lane_checklist": {
@@ -76398,7 +76472,7 @@
       ],
       "direct_in_degree": 1,
       "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:yt_ew_color_projection_theorem",
+      "effective_status_reason": "inherited_from:minimal_axioms_2026-04-11",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 12.609,
@@ -77056,8 +77130,8 @@
         "alpha_s_derived_note"
       ],
       "direct_in_degree": 8,
-      "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:yt_ew_color_projection_theorem",
+      "effective_status": "unknown",
+      "effective_status_reason": "inherited_from:observable_principle_from_axiom_note",
       "independence": null,
       "intrinsic_status": "bounded",
       "load_bearing_score": 10.907,
@@ -82931,7 +83005,7 @@
       "verdict_rationale": null
     },
     "yt_ew_color_projection_theorem": {
-      "audit_date": "2026-04-27T02:17:53.072452+00:00",
+      "audit_date": null,
       "audit_state_snapshot": {
         "criticality": "critical",
         "dep_effective_status": {},
@@ -82939,34 +83013,35 @@
         "load_bearing_score": 22.614,
         "transitive_descendants": 276
       },
-      "audit_status": "audited_conditional",
-      "auditor": "codex-audit-loop",
-      "auditor_confidence": "high",
-      "auditor_family": "codex-current",
+      "audit_status": "unaudited",
+      "auditor": null,
+      "auditor_confidence": null,
+      "auditor_family": null,
       "blocker": null,
-      "chain_closes": false,
-      "chain_closure_explanation": "The source note gives the Fierz identity and shows CMT is color-blind, but it does not derive the physical lattice-to-continuum EW-current matching rule that selects the connected trace as the coupling readout.",
+      "chain_closes": null,
+      "chain_closure_explanation": null,
       "claim_id": "yt_ew_color_projection_theorem",
       "criticality": "critical",
       "current_status": "proposed_retained",
-      "current_status_raw": "DERIVED -- standalone proposed_retained EW normalization lane on `main`",
+      "current_status_raw": "proposed_retained EW normalization lane on `main`",
       "decoration_parent_claim_id": null,
-      "deps": [],
-      "direct_in_degree": 21,
-      "effective_status": "audited_conditional",
-      "effective_status_reason": "self",
-      "independence": "cross_family",
-      "intrinsic_status": "audited_conditional",
-      "load_bearing_score": 22.624,
-      "load_bearing_step": "The physical EW coupling (matched to the continuum where the SU(3) and EW sectors are factored) should use the connected color trace N_c(N_c^2-1)/N_c^2 = (N_c^2-1)/N_c.",
-      "load_bearing_step_class": "F",
+      "deps": [
+        "rconn_derived_note",
+        "ew_current_matching_ozi_suppression_theorem_note_2026-04-27"
+      ],
+      "direct_in_degree": 23,
+      "effective_status": "support",
+      "effective_status_reason": "inherited_from:rconn_derived_note",
+      "independence": null,
+      "intrinsic_status": "proposed_retained",
+      "load_bearing_score": 23.64,
+      "load_bearing_step": null,
+      "load_bearing_step_class": null,
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
-      "note_hash": "4f5b3aa7850ed4874f8061865f021805b62d40031fe088181c5067febda513b8",
+      "note_hash": "fe339c5e80e1b6719104ad6e93ea73defe45885fac159f661399d832fd1451e0",
       "note_path": "docs/YT_EW_COLOR_PROJECTION_THEOREM.md",
-      "open_dependency_paths": [
-        "docs/RCONN_DERIVED_NOTE.md"
-      ],
+      "open_dependency_paths": [],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.370264+00:00",
@@ -82992,6 +83067,33 @@
             "total_pass": 0
           },
           "verdict_rationale": null
+        },
+        {
+          "archived_at": "2026-04-27T21:39:23.528750+00:00",
+          "archived_for_note_hash": "4f5b3aa7850ed4874f8061865f021805b62d40031fe088181c5067febda513b8",
+          "audit_date": "2026-04-27T02:17:53.072452+00:00",
+          "audit_status": "audited_conditional",
+          "auditor": "codex-audit-loop",
+          "auditor_confidence": "high",
+          "auditor_family": "codex-current",
+          "blocker": null,
+          "chain_closes": false,
+          "chain_closure_explanation": "The source note gives the Fierz identity and shows CMT is color-blind, but it does not derive the physical lattice-to-continuum EW-current matching rule that selects the connected trace as the coupling readout.",
+          "decoration_parent_claim_id": null,
+          "independence": "cross_family",
+          "load_bearing_step": "The physical EW coupling (matched to the continuum where the SU(3) and EW sectors are factored) should use the connected color trace N_c(N_c^2-1)/N_c^2 = (N_c^2-1)/N_c.",
+          "load_bearing_step_class": "F",
+          "open_dependency_paths": [
+            "docs/RCONN_DERIVED_NOTE.md"
+          ],
+          "runner_check_breakdown": {
+            "A": 0,
+            "B": 0,
+            "C": 0,
+            "D": 0,
+            "total_pass": 0
+          },
+          "verdict_rationale": "Issue: The failed step is the assertion that the physical EW coupling extraction should replace the total color trace N_c by the connected color trace N_c(N_c^2-1)/N_c^2; no one-hop retained theorem or registered runner derives that matching/readout rule, and the source note's R_conn input is stated as leading-order 1/N_c with O(1/N_c^4) corrections. Why this blocks: A proposed_retained universal 9/8 correction to physical EW couplings cannot follow from an asserted normalization convention or from a leading-order corrected quantity; the exact Fierz and CMT algebra leave the connected-trace value and the physical readout selection as independent premises. Repair target: Add a retained theorem deriving the lattice-to-continuum EW current matching from Cl(3)/Z^3 primitives, register the R_conn authority as a one-hop dependency if it remains load-bearing, and provide a runner that computes the connected two-vertex observable/matching factor rather than applying 8/9. Claim boundary until fixed: It is safe to claim that CMT alone cannot produce 9/8, that 8/9 is a motivated connected-color-trace/large-N_c matching ansatz with controlled corrections, and that applying it improves the quoted g_1 and g_2 numerics."
         }
       ],
       "runner_check_breakdown": {
@@ -83001,10 +83103,10 @@
         "D": 0,
         "total_pass": 0
       },
-      "runner_path": null,
+      "runner_path": "scripts/frontier_color_projection_mc.py",
       "title": "Color-Singlet Projection Theorem for EW Couplings",
-      "transitive_descendants": 278,
-      "verdict_rationale": "Issue: The failed step is the assertion that the physical EW coupling extraction should replace the total color trace N_c by the connected color trace N_c(N_c^2-1)/N_c^2; no one-hop retained theorem or registered runner derives that matching/readout rule, and the source note's R_conn input is stated as leading-order 1/N_c with O(1/N_c^4) corrections. Why this blocks: A proposed_retained universal 9/8 correction to physical EW couplings cannot follow from an asserted normalization convention or from a leading-order corrected quantity; the exact Fierz and CMT algebra leave the connected-trace value and the physical readout selection as independent premises. Repair target: Add a retained theorem deriving the lattice-to-continuum EW current matching from Cl(3)/Z^3 primitives, register the R_conn authority as a one-hop dependency if it remains load-bearing, and provide a runner that computes the connected two-vertex observable/matching factor rather than applying 8/9. Claim boundary until fixed: It is safe to claim that CMT alone cannot produce 9/8, that 8/9 is a motivated connected-color-trace/large-N_c matching ansatz with controlled corrections, and that applying it improves the quoted g_1 and g_2 numerics."
+      "transitive_descendants": 281,
+      "verdict_rationale": null
     },
     "yt_ew_coupling_bridge_note": {
       "audit_date": null,
@@ -85844,21 +85946,21 @@
       "chain_closes": null,
       "chain_closure_explanation": null,
       "claim_id": "yukawa_color_projection_theorem",
-      "criticality": "high",
+      "criticality": "critical",
       "current_status": "support",
       "current_status_raw": "DERIVED -- R_conn = 8/9 derived from 1/N_c expansion (RCONN_DERIVED_NOTE.md)",
       "decoration_parent_claim_id": null,
       "deps": [],
-      "direct_in_degree": 3,
+      "direct_in_degree": 4,
       "effective_status": "support",
       "effective_status_reason": "self",
       "independence": null,
       "intrinsic_status": "support",
-      "load_bearing_score": 8.407,
+      "load_bearing_score": 14.145,
       "load_bearing_step": null,
       "load_bearing_step_class": null,
-      "max_descendant_status": "bounded",
-      "max_descendant_status_rank": 60,
+      "max_descendant_status": "proposed_retained",
+      "max_descendant_status_rank": 80,
       "note_hash": "3f2580c217dddc126afc4d33742fa7a1a760ad2e79b227df64e6017b332dff03",
       "note_path": "docs/YUKAWA_COLOR_PROJECTION_THEOREM.md",
       "open_dependency_paths": [],
@@ -85872,7 +85974,7 @@
       },
       "runner_path": "scripts/frontier_yt_color_projection_correction.py",
       "title": "Yukawa Color-Singlet Projection Theorem",
-      "transitive_descendants": 119,
+      "transitive_descendants": 282,
       "verdict_rationale": null
     },
     "z2_hw1_mass_matrix_parametrization_note": {
@@ -85920,9 +86022,9 @@
   "schema_version": 1,
   "stats": {
     "dropped_missing_notes": 0,
-    "preserved_existing": 1614,
-    "re_audit_required": 0,
-    "row_count": 1614,
-    "seeded_new": 0
+    "preserved_existing": 1612,
+    "re_audit_required": 2,
+    "row_count": 1615,
+    "seeded_new": 1
   }
 }

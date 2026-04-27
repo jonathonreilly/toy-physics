@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T14:10:30.341447+00:00
+**Generated:** 2026-04-27T21:39:25.577557+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -22,36 +22,36 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | **retained** | 47 |
 | _proposed_retained_ | 133 |
 | _proposed_promoted_ | 2 |
-| bounded | 184 |
-| support | 106 |
+| bounded | 185 |
+| support | 107 |
 | open | 11 |
-| unknown | 720 |
+| unknown | 721 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 305 |
+| ~~audited_conditional~~ | 303 |
 | ~~audited_failed~~ | 96 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 47 |
-| `audited_conditional` | 92 |
+| `audited_conditional` | 91 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 29 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1433 |
+| `unaudited` | 1435 |
 
 | criticality | count |
 |---|---:|
-| `critical` | 92 |
-| `high` | 571 |
+| `critical` | 94 |
+| `high` | 570 |
 | `medium` | 89 |
 | `leaf` | 862 |
 
-- **Proposed claims demoted by upstream:** 137
-- **Citation cycles detected:** 284
+- **Proposed claims demoted by upstream:** 139
+- **Citation cycles detected:** 287
 
 ### Runner classification (static heuristic)
 
@@ -77,9 +77,9 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | 9 | `one_generation_matter_closure_note` | critical | 275 | 24.61 | `unaudited` | ~~audited_conditional~~ |
 | 10 | `three_generation_observable_theorem_note` | critical | 275 | 24.61 | `unaudited` | ~~audited_conditional~~ |
 | 11 | `ckm_nlo_barred_triangle_protected_gamma_theorem_note_2026-04-25` | critical | 172 | 24.43 | `unaudited` | ~~audited_conditional~~ |
-| 12 | `graph_first_su3_integration_note` | critical | 277 | 23.12 | `audit_in_progress` | _proposed_retained_ |
-| 13 | `yt_ward_identity_derivation_theorem` | critical | 275 | 23.11 | `unaudited` | ~~audited_conditional~~ |
-| 14 | `yt_ew_color_projection_theorem` | critical | 278 | 22.62 | `audited_conditional` | ~~audited_conditional~~ |
+| 12 | `yt_ew_color_projection_theorem` | critical | 281 | 23.64 | `unaudited` | support |
+| 13 | `graph_first_su3_integration_note` | critical | 277 | 23.12 | `audit_in_progress` | _proposed_retained_ |
+| 14 | `yt_ward_identity_derivation_theorem` | critical | 275 | 23.11 | `unaudited` | ~~audited_conditional~~ |
 | 15 | `anomaly_forces_time_theorem` | critical | 275 | 22.61 | `unaudited` | ~~audited_conditional~~ |
 | 16 | `minimal_axioms_2026-04-11` | critical | 275 | 22.11 | `unaudited` | ~~audited_conditional~~ |
 | 17 | `ckm_third_row_magnitudes_theorem_note_2026-04-24` | critical | 172 | 21.93 | `unaudited` | unknown |
@@ -232,7 +232,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_retardation_continuum_limit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_retarded_gravity_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `weak_coupling_retention_note_2026-04-11` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
-| `yt_ew_color_projection_theorem` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
 | `yt_ew_delta_r_retention_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `yt_p1_delta_r_2_loop_extension_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -2975,20 +2974,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `staggered_3D_cubic_source_mass_scaling_and_attraction_artifact_not_registered`
   - `Wilson_3D_cubic_source_mass_scaling_and_attraction_artifact_not_registered`
   - `2D_random_geometric_control_row_artifact_not_registered`
-- **auditor confidence:** high
-
-### `yt_ew_color_projection_theorem`
-
-- **Note:** [`YT_EW_COLOR_PROJECTION_THEOREM.md`](../../docs/YT_EW_COLOR_PROJECTION_THEOREM.md)
-- **current_status:** _proposed_retained_
-- **audit_status:** ~~audited_conditional~~
-- **effective_status:** ~~audited_conditional~~  (reason: `self`)
-- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
-- **load-bearing step:** The physical EW coupling (matched to the continuum where the SU(3) and EW sectors are factored) should use the connected color trace N_c(N_c^2-1)/N_c^2 = (N_c^2-1)/N_c.  _(class `F`)_
-- **chain closes:** False — The source note gives the Fierz identity and shows CMT is color-blind, but it does not derive the physical lattice-to-continuum EW-current matching rule that selects the connected trace as the coupling readout.
-- **rationale:** Issue: The failed step is the assertion that the physical EW coupling extraction should replace the total color trace N_c by the connected color trace N_c(N_c^2-1)/N_c^2; no one-hop retained theorem or registered runner derives that matching/readout rule, and the source note's R_conn input is stated as leading-order 1/N_c with O(1/N_c^4) corrections. Why this blocks: A proposed_retained universal 9/8 correction to physical EW couplings cannot follow from an asserted normalization convention or from a leading-order corrected quantity; the exact Fierz and CMT algebra leave the connected-trace value and the physical readout selection as independent premises. Repair target: Add a retained theorem deriving the lattice-to-continuum EW current matching from Cl(3)/Z^3 primitives, register the R_conn authority as a one-hop dependency if it remains load-bearing, and provide a runner that computes the connected two-vertex observable/matching factor rather than applying 8/9. Claim boundary until fixed: It is safe to claim that CMT alone cannot produce 9/8, that 8/9 is a motivated connected-color-trace/large-N_c matching ansatz with controlled corrections, and that applying it improves the quoted g_1 and g_2 numerics.
-- **open / conditional deps cited:**
-  - `RCONN_DERIVED_NOTE.md`
 - **auditor confidence:** high
 
 ### `yt_ew_delta_r_retention_analysis_note_2026-04-18`
