@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T14:02:05.761518+00:00",
+  "generated_at": "2026-04-27T21:41:40.321865+00:00",
   "per_claim": {
     "accessible_prediction_note": {
       "assert_count": 0,
@@ -3540,6 +3540,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_ew_coupling_derivation.py"
+    },
+    "ew_current_matching_ozi_suppression_theorem_note_2026-04-27": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 28,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_color_projection_mc.py"
     },
     "ew_higgs_gauge_mass_diagonalization_theorem_note_2026-04-26": {
       "assert_count": 1,
@@ -7849,6 +7861,18 @@
       "dominant_class": "D",
       "runner": "scripts/frontier_yt_eft_bridge.py"
     },
+    "yt_ew_color_projection_theorem": {
+      "assert_count": 0,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 28,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "C",
+      "runner": "scripts/frontier_color_projection_mc.py"
+    },
     "yt_ew_delta_r_retention_analysis_note_2026-04-18": {
       "assert_count": 1,
       "counts": {
@@ -9948,7 +9972,9 @@
     "scripts/frontier_color_projection_mc.py": {
       "assert_count": 0,
       "claims": [
-        "rconn_derived_note"
+        "ew_current_matching_ozi_suppression_theorem_note_2026-04-27",
+        "rconn_derived_note",
+        "yt_ew_color_projection_theorem"
       ],
       "counts": {
         "A": 0,

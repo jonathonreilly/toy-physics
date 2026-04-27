@@ -1,13 +1,13 @@
 {
-  "computed_at": "2026-04-27T14:02:05.858026+00:00",
+  "computed_at": "2026-04-27T21:41:40.440052+00:00",
   "criticality_counts": {
-    "critical": 92,
-    "high": 571,
+    "critical": 94,
+    "high": 570,
     "leaf": 862,
     "medium": 89
   },
   "flagship_signal_used": false,
-  "node_count": 1614,
+  "node_count": 1615,
   "thresholds": {
     "critical_descendants": 250,
     "critical_in_degree": 15,
@@ -84,6 +84,12 @@
       "transitive_descendants": 172
     },
     {
+      "claim_id": "yt_ew_color_projection_theorem",
+      "criticality": "critical",
+      "load_bearing_score": 23.64,
+      "transitive_descendants": 281
+    },
+    {
       "claim_id": "graph_first_su3_integration_note",
       "criticality": "critical",
       "load_bearing_score": 23.119,
@@ -94,12 +100,6 @@
       "criticality": "critical",
       "load_bearing_score": 23.109,
       "transitive_descendants": 275
-    },
-    {
-      "claim_id": "yt_ew_color_projection_theorem",
-      "criticality": "critical",
-      "load_bearing_score": 22.624,
-      "transitive_descendants": 278
     },
     {
       "claim_id": "anomaly_forces_time_theorem",
