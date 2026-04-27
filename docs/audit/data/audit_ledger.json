@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T13:08:23.375994+00:00",
-  "generated_at": "2026-04-27T13:08:21.790533+00:00",
-  "invalidation_run_at": "2026-04-27T13:08:23.330023+00:00",
+  "effective_status_computed_at": "2026-04-27T13:10:44.404944+00:00",
+  "generated_at": "2026-04-27T13:10:42.804998+00:00",
+  "invalidation_run_at": "2026-04-27T13:10:44.358881+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T13:08:23.235866+00:00",
+  "load_bearing_computed_at": "2026-04-27T13:10:44.264476+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -32302,14 +32302,21 @@
       "verdict_rationale": "Issue: the note declares an exact runner and expected PASS=6, but the runner path is missing, so the two-extension underdetermination construction is not reproducible from the allowed artifacts. Why this blocks: the theorem requires verifying exact agreement on the retained packet and triple while showing different Perron states and Perron/Jacobi packets; prose alone does not establish those equalities and separations. Repair target: restore the runner or replace it with a current executable proof that constructs the zero extension and positive decaying tail extension, checks retained-packet/triple equality, and prints the Perron/Perron-Jacobi separation checks. Claim boundary until fixed: safely claim only that tail completion is posed as the remaining framework-point seam; do not claim a retained underdetermination theorem or explicit inequivalent extension pair."
     },
     "gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner reproduces PASS=6 and the algebraic reconstruction gap, but it imports the completed-sector data and checks canonical environment language from one-hop notes whose audit/effective states are unknown or support. The retained theorem therefore depends on upstream inputs that are not audit-retained.",
       "claim_id": "gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -32317,18 +32324,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Normalizing the completed first-sector coefficient vector by its trivial-channel coefficient gives rho_ret = (1, 0.267139565315, 0.267139565315, 0), and z00_min E_3 rho_ret reconstructs Z_min exactly.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "1749b008562024ada81c3672f9f235e36e8b8b94790a415162f0a402696d2256",
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_TRUNCATED_ENVIRONMENT_PACKET_NOTE_2026-04-19.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_MINIMAL_POSITIVE_COMPLETION_NOTE_2026-04-19.md",
+        "docs/GAUGE_VACUUM_PLAQUETTE_SOURCE_SECTOR_MATRIX_ELEMENT_FACTORIZATION_NOTE.md",
+        "docs/GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368458+00:00",
@@ -32382,16 +32393,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 4,
+        "B": 2,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 6
       },
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_truncated_environment_packet_theorem_2026_04_19.py",
       "title": "Gauge-Vacuum Plaquette First-Sector Truncated Environment Packet",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the runner verifies the normalization and reconstruction algebra, but the completion vector v_min/Z_min comes from an unaudited unknown note and the canonical environment description comes from support notes rather than retained/audited-clean inputs. Why this blocks: the claim that the completed triple determines a retained diagonal/environment packet cannot be stronger than the upstream completion and environment-identification theorems it imports. Repair target: audit-retain the minimal positive completion note and the source-sector factorization / spatial environment character-measure inputs, or make this runner construct those inputs directly from retained authorities. Claim boundary until fixed: conditionally, given v_min and the canonical environment definitions, rho_ret is normalized, nonnegative, conjugation-symmetric, and reconstructs Z_min with gap 1.777e-16; the full beta=6 environment extension remains open."
     },
     "gauge_vacuum_plaquette_first_sector_zero_extension_factorized_class_theorem_note_2026-04-19": {
       "audit_date": null,
