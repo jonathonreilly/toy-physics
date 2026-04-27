@@ -156,20 +156,45 @@ produced in the workstream.
      axiomatic no-gos per the skill.
 - **Disposition:** Cycle 3 accepted. No-go theorem committed to branch.
 
-## Cycle 4+ — pending evaluation
+## Cycle 4 — Lane 5 eta Retirement Gate Audit (R5)
 
-With the closure-pathway taxonomy `{(C1), (C2), (C3)}` established,
-strongest single-cycle candidates are now:
+- **Date:** 2026-04-26
+- **Artifact:**
+  `docs/HUBBLE_LANE5_ETA_RETIREMENT_GATE_AUDIT_NOTE_2026-04-26.md`
+  (audit / gate-identification note; no runner).
+- **Review mode:** branch-local 6-criterion self-review.
+- **Findings:**
+  1. **CodeRunnerReviewer (PASS).** No runner; audit-only.
+  2. **PhysicsClaimReviewer (PASS).** Gate identified explicitly:
+     right-sensitive 2-real `Z_3` doublet-block point-selection law on
+     `dW_e^H = Schur_{E_e}(D_-)`. Constraints (§4) list the closed
+     routes the selector must avoid.
+  3. **ImportSupportReviewer (PASS).** No new imports.
+  4. **NatureRetentionReviewer (PASS).** Scoped as "retained branch-
+     local audit note", not theorem-grade.
+  5. **RepoGovernanceReviewer (PASS).** Naming convention
+     `*_AUDIT_NOTE_*` matches existing audit notes.
+  6. **MethodologySkillReviewer (PASS).** Qualifies as "major blocker
+     isolated" under the skill's dramatic-step gate; not pure prose.
+- **Disposition:** Cycle 4 accepted. `(C2)` pathway gate now isolated.
 
-- **eta retirement gate audit** (advances `(C2)`): identify the minimal
-  selector/normalization closure for the surviving DM leptogenesis
-  branches.
-- **Planck conditional-completion review** (advances `(C1)`
-  understanding): audit the gravitational boundary/action carrier
-  identification gate.
-- **Direct cosmic-`L` proposal exploration** (would open `(C3)`): assess
-  whether any framework-internal vacuum/topology argument could give
-  `L = Omega_Lambda` without going through the matter cascade.
+## Cycle 5+ — pending evaluation
+
+With the `(C2)` gate identified, the symmetric candidate for `(C1)` is
+strong:
+
+- **Planck conditional-completion audit** (advances `(C1)`): audit the
+  gravitational boundary/action carrier identification per
+  `PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md` and the
+  primitive coframe boundary-carrier theorem note. Identifies the
+  premise needed to retain `R_Lambda` numerically.
+
+Plus:
+
+- **Direct cosmic-`L` vacuum/topology exploration** (would open `(C3)`).
+- **Cycles 1-4 consolidation note** linking the structural lock,
+  open-number reduction, no-go, and gate audit into one Lane 5 status
+  surface.
 
 Loop continues per ScheduleWakeup.
 

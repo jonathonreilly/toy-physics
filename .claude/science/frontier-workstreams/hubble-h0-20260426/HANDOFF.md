@@ -5,7 +5,7 @@
 
 ## Current State
 
-**Cycles 1, 2, and 3 complete.**
+**Cycles 1, 2, 3, and 4 complete.**
 
 **Cycle 1 (R4 — Hubble Tension Structural Lock):**
 
@@ -23,6 +23,11 @@
 
 - `docs/HUBBLE_LANE5_COSMIC_HISTORY_RATIO_NECESSITY_NO_GO_NOTE_2026-04-26.md`
 - (no runner — structural case-analysis on `A_min`)
+
+**Cycle 4 (R5 — Lane 5 eta Retirement Gate Audit):**
+
+- `docs/HUBBLE_LANE5_ETA_RETIREMENT_GATE_AUDIT_NOTE_2026-04-26.md`
+- (no runner — review of retained DM-lane material)
 
 Branch-local 6-criterion self-review PASS for both cycles. Cycle 1
 required one premise-tightening edit (3 → 2 premises). Cycle 2 required
@@ -55,38 +60,43 @@ derivation`}`. No single class is sufficient. The bounded cascade
 explicit `(C2)` pathway; the Planck conditional-completion is the
 explicit `(C1)` pathway; no active `(C3)` pathway.
 
+**`(C2)` gate identified (Cycle 4).** The single residual gate for `eta`
+retirement is the **right-sensitive 2-real `Z_3` doublet-block
+point-selection law on `dW_e^H = Schur_{E_e}(D_-)`**. Closing this gate
+promotes the reduced-surface PMNS support branch
+(`eta/eta_obs = 1.0` exact constructive point) to retained, retiring
+`eta` from the bounded cascade and supplying the `(C2)` premise. The
+gate-resolving selector must avoid all closed-route classes (universal-
+Yukawa, polar-aligned-core, two-Higgs slots, `Z_3` circulant mass-basis,
+asymptotic-source / local-selector-family, Wilson-direct-descendant
+constructive-transport, strong-CP/`gamma`-transfer).
+
 Neither cycle retires the `H_0` import (Lane 5 main target). They lock
 the structural form and exhaustively classify the closure pathways.
 
-## Next Exact Action (Cycle 4 candidate)
+## Next Exact Action (Cycle 5 candidate)
 
-With `(C1), (C2), (C3)` taxonomy established, the strongest single-cycle
-candidates for the next loop iteration are:
+With Cycle 4 isolating the `(C2)` gate, the symmetric candidate for
+`(C1)` is the natural next move:
 
-- **Cycle 4 candidate A — eta retirement gate audit (advances `(C2)`).**
-  Survey the surviving DM leptogenesis branches (`eta/eta_obs = 0.1888`
-  exact one-flavor; `eta/eta_obs = 1.0` reduced-surface PMNS) and
-  identify the minimal selector/normalization closure that retires
-  `eta` from the bounded `Omega_b -> R -> Omega_m -> Omega_Lambda`
-  cascade. Cross-lane dependency: requires reading DM-leptogenesis
-  notes (`DM_LEPTOGENESIS_*`, `DM_PMNS_*` series).
-- **Cycle 4 candidate B — Planck conditional-completion audit (advances
-  `(C1)` understanding).** Audit the gravitational boundary/action
-  carrier identification gate (per
+- **Cycle 5 candidate A — Planck conditional-completion audit (advances
+  `(C1)`).** Audit the gravitational boundary/action carrier
+  identification per
   `PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md` and the
-  2026-04-25 primitive coframe boundary-carrier theorem note).
-  Identify what specifically is needed to promote the conditional packet
-  to retained `R_Lambda` / absolute scale.
-- **Cycle 4 candidate C — direct cosmic-`L` exploration (would open
-  `(C3)`).** Survey the framework's vacuum/topology content for any
-  retained route that gives `Omega_Lambda` without going through the
-  matter cascade. Likely produces a no-go for the easy options or
-  identifies an unexplored vacuum-topology premise.
-- **Recommendation:** Candidate A. The bounded cascade is the most
-  developed `(C2)` pathway and has live support routes; identifying the
-  promotion gate is the single most actionable next move for retiring
-  `H_0`'s entry into the framework input ledger. The loop's next
-  iteration will resume from `STATE.yaml` and pick this up.
+  primitive coframe boundary-carrier theorem note 2026-04-25. Identify
+  the specific premise needed to retain `R_Lambda` numerically.
+  Symmetric to Cycle 4 on the other necessary class.
+- **Cycle 5 candidate B — direct cosmic-`L` exploration (would open
+  `(C3)`).** Survey vacuum/topology content for any retained route
+  giving `Omega_Lambda` outside the matter cascade. Likely produces a
+  no-go for easy options or identifies an unexplored premise.
+- **Cycle 5 candidate C — Cycles 1-4 consolidation note.** Single
+  status surface mapping structural lock + open-number reduction +
+  closure-pathway no-go + eta-retirement gate audit into one Lane 5
+  reading.
+- **Recommendation:** Candidate A. Symmetric to Cycle 4; together they
+  identify the gates on both necessary classes `(C1)` and `(C2)`,
+  giving the cleanest possible map of what Lane 5 closure requires.
 
 ## Repo-Wide Weaving (NOT to apply on this branch)
 
