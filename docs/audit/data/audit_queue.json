@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 88,
     "high": 506,
-    "leaf": 834,
+    "leaf": 833,
     "medium": 78
   },
-  "generated_at": "2026-04-27T08:23:16.729564+00:00",
+  "generated_at": "2026-04-27T08:27:26.828478+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -16540,23 +16540,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "staggered_backreaction_shell_spectral_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 1.5,
-      "note_path": "docs/STAGGERED_BACKREACTION_SHELL_SPECTRAL_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "staggered_fermion_card_2026-04-10",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -30376,6 +30359,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1095,
-  "total_pending": 1506
+  "ready_count": 1094,
+  "total_pending": 1505
 }

@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T08:23:16.657483+00:00",
-  "generated_at": "2026-04-27T08:23:14.618846+00:00",
-  "invalidation_run_at": "2026-04-27T08:23:16.601800+00:00",
+  "effective_status_computed_at": "2026-04-27T08:27:26.775328+00:00",
+  "generated_at": "2026-04-27T08:27:24.714687+00:00",
+  "invalidation_run_at": "2026-04-27T08:27:26.715980+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T08:23:16.454385+00:00",
+  "load_bearing_computed_at": "2026-04-27T08:27:26.572698+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -68194,8 +68194,8 @@
       "load_bearing_score": 1.5,
       "load_bearing_step": "The note promotes resistance_yukawa as a graph-native Green map that closes the cycle-bearing force-scale gap by nearly an order of magnitude and transfers cleanly to the layered holdout without blow-up.",
       "load_bearing_step_class": "C",
-      "max_descendant_status": "audited_conditional",
-      "max_descendant_status_rank": 10,
+      "max_descendant_status": "audited_failed",
+      "max_descendant_status_rank": 0,
       "note_hash": "c806516498ec51610ef221b938b71bf6c0c57341ad6366ed0e67b9e8e047de7f",
       "note_path": "docs/STAGGERED_BACKREACTION_GREEN_CLOSURE_NOTE.md",
       "open_dependency_paths": [
@@ -68553,14 +68553,21 @@
       "verdict_rationale": null
     },
     "staggered_backreaction_shell_spectral_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 1.5,
+        "transitive_descendants": 1
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner reproduces the shell/spectral over-smoothing diagnosis, including shell span ratios 0.123 and 0.229 and solved/external low-mode fractions 0.958/0.453 and 0.809/0.355, but the note's exact force readouts are stale against current output.",
       "claim_id": "staggered_backreaction_shell_spectral_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -68568,18 +68575,23 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 1.5,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
-      "max_descendant_status": "audited_conditional",
-      "max_descendant_status_rank": 10,
+      "load_bearing_step": "The note diagnoses the staggered source-to-field miss as structural over-smoothing: phi_solved has much smaller depth span and stronger low-mode concentration than the external-kernel control while the force remains positive but too weak.",
+      "load_bearing_step_class": "C",
+      "max_descendant_status": "audited_failed",
+      "max_descendant_status_rank": 0,
       "note_hash": "ab82ead460aefc453a7826d197d102a7eb7cfe1331aa8203417eeb75636cf073",
       "note_path": "docs/STAGGERED_BACKREACTION_SHELL_SPECTRAL_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "force_readouts_stale_against_live_runner",
+        "cycle_force_gap_now_9.624e-01_not_8.767e-01",
+        "layered_force_gap_now_8.822e-01_not_8.759e-01",
+        "runner_has_no_assertions_for_exact_diagnostics"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369825+00:00",
@@ -68610,14 +68622,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 3,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 3
       },
       "runner_path": null,
       "title": "Staggered Backreaction Shell / Spectral Note",
       "transitive_descendants": 1,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the structural shell/spectral diagnosis survives, but the source note's exact force numbers no longer match the live runner. Why this blocks: a hostile physicist can accept the over-smoothing readout, but cannot cite the note's cycle-family F_ext=+3.247e-01, F_solve=+4.002e-02, gap=8.767e-01 or layered F_ext=+1.714e+00, F_solve=+2.127e-01, gap=8.759e-01 when the current runner reports +1.488e+00, +5.593e-02, 9.624e-01 and +1.852e+00, +2.183e-01, 8.822e-01. Repair target: update the note and archived output to the current force readouts, or restore the old runner state; add assertions for the shell span ratios, low-mode fractions, spectral centroids, force gaps, and norm drift so future drift is caught. Claim boundary until fixed: it is safe to claim that the current runner diagnoses screened graph-Poisson over-smoothing by depth-shell and spectral measures on the two named families; it is not safe to retain the stale exact force table as written."
     },
     "staggered_dag_note_2026-04-10": {
       "audit_date": null,
@@ -77919,8 +77931,8 @@
       "load_bearing_score": 1.5,
       "load_bearing_step": null,
       "load_bearing_step_class": null,
-      "max_descendant_status": "audited_conditional",
-      "max_descendant_status_rank": 10,
+      "max_descendant_status": "audited_failed",
+      "max_descendant_status_rank": 0,
       "note_hash": "d22e8e415a94a893ff9f14e296f5c6224734f193ed2d1e20c445cdaf2243900a",
       "note_path": "docs/WEAK_COUPLING_SIGN_SENSITIVITY_NOTE_2026-04-11.md",
       "open_dependency_paths": [],

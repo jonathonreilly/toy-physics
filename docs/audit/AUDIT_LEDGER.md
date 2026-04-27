@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T08:23:16.959022+00:00
+**Generated:** 2026-04-27T08:27:27.057847+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 14 |
-| _proposed_retained_ | 208 |
+| _proposed_retained_ | 207 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
-| ~~audited_conditional~~ | 274 |
+| ~~audited_conditional~~ | 275 |
 | ~~audited_failed~~ | 77 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 14 |
-| `audited_conditional` | 63 |
+| `audited_conditional` | 64 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 10 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1503 |
+| `unaudited` | 1502 |
 
 | criticality | count |
 |---|---:|
@@ -160,6 +160,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_hw1_source_transfer_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `sign_portability_invariant_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `staggered_backreaction_shell_spectral_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `strong_cp_theta_zero_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `structured_chokepoint_bridge_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `symmetry_head_to_head_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -1461,6 +1462,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `calibrated_holdout_gap_now_5.371e-01_not_3.714e-03`
   - `raw_cycle_improvement_now_2.81x_not_9.00x`
   - `acceptance_gates_not_asserted_in_runner`
+- **auditor confidence:** high
+
+### `staggered_backreaction_shell_spectral_note`
+
+- **Note:** [`STAGGERED_BACKREACTION_SHELL_SPECTRAL_NOTE.md`](../../docs/STAGGERED_BACKREACTION_SHELL_SPECTRAL_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note diagnoses the staggered source-to-field miss as structural over-smoothing: phi_solved has much smaller depth span and stronger low-mode concentration than the external-kernel control while the force remains positive but too weak.  _(class `C`)_
+- **chain closes:** False — The live runner reproduces the shell/spectral over-smoothing diagnosis, including shell span ratios 0.123 and 0.229 and solved/external low-mode fractions 0.958/0.453 and 0.809/0.355, but the note's exact force readouts are stale against current output.
+- **rationale:** Issue: the structural shell/spectral diagnosis survives, but the source note's exact force numbers no longer match the live runner. Why this blocks: a hostile physicist can accept the over-smoothing readout, but cannot cite the note's cycle-family F_ext=+3.247e-01, F_solve=+4.002e-02, gap=8.767e-01 or layered F_ext=+1.714e+00, F_solve=+2.127e-01, gap=8.759e-01 when the current runner reports +1.488e+00, +5.593e-02, 9.624e-01 and +1.852e+00, +2.183e-01, 8.822e-01. Repair target: update the note and archived output to the current force readouts, or restore the old runner state; add assertions for the shell span ratios, low-mode fractions, spectral centroids, force gaps, and norm drift so future drift is caught. Claim boundary until fixed: it is safe to claim that the current runner diagnoses screened graph-Poisson over-smoothing by depth-shell and spectral measures on the two named families; it is not safe to retain the stale exact force table as written.
+- **open / conditional deps cited:**
+  - `force_readouts_stale_against_live_runner`
+  - `cycle_force_gap_now_9.624e-01_not_8.767e-01`
+  - `layered_force_gap_now_8.822e-01_not_8.759e-01`
+  - `runner_has_no_assertions_for_exact_diagnostics`
 - **auditor confidence:** high
 
 ### `strong_cp_theta_zero_note`
