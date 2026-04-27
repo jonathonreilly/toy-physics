@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T04:46:58.025191+00:00",
-  "generated_at": "2026-04-27T04:46:56.218011+00:00",
-  "invalidation_run_at": "2026-04-27T04:46:57.967542+00:00",
+  "effective_status_computed_at": "2026-04-27T04:49:47.662208+00:00",
+  "generated_at": "2026-04-27T04:49:45.862955+00:00",
+  "invalidation_run_at": "2026-04-27T04:49:47.601089+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T04:46:57.844985+00:00",
+  "load_bearing_computed_at": "2026-04-27T04:49:47.482377+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -39029,14 +39029,21 @@
       "verdict_rationale": null
     },
     "koide_native_zero_section_nature_review_note_2026-04-24": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 8.883,
+        "transitive_descendants": 117
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The primary runner passes 12/12 and emits KOIDE_NATIVE_ZERO_SECTION_NATURE_REVIEW=PASS_AS_ROUTE, KOIDE_NATIVE_ZERO_SECTION_RETAINED_CLOSURE=FALSE, and NATIVE_ROUTE_IMPLIES_VALUES_CONDITIONALLY=TRUE. The additional verification commands named by the note show the route runner and hostile guard passing, but the full Koide lane regression exits rc=1 with 380/381 checks because frontier_koide_q_so2_phase_erasure_support.py has 22/23. More importantly, the note itself identifies the missing retained theorems: real-primitive Brannen endpoint identification and a unit-preserving open determinant-line readout. Therefore the route is not a closed retained/native theorem.",
       "claim_id": "koide_native_zero_section_nature_review_note_2026-04-24",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -39044,18 +39051,28 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 4,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 8.883,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The review note accepts the native zero-section route only conditionally: if the physical Brannen endpoint is the whole real nontrivial Z3 primitive and the open determinant endpoint readout is unit-preserving/based, then the spectator and endpoint offset vanish, giving delta=2/9 alongside the Q zero-source route; without those identification theorems, retained/native Koide closure remains false.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "a6d575728bb48c38bbe9a1d5a4bcd8953a45ded97f7cbc71edb10e7f90870ff7",
       "note_path": "docs/KOIDE_NATIVE_ZERO_SECTION_NATURE_REVIEW_NOTE_2026-04-24.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/KOIDE_NATIVE_ZERO_SECTION_CLOSURE_ROUTE_NOTE_2026-04-24.md_not_registered_one_hop_dependency",
+        "scripts/frontier_koide_native_zero_section_closure_route.py_route_runner_not_registered_one_hop_dependency",
+        "docs/KOIDE_BRANNEN_GEOMETRY_DIRAC_SUPPORT_NOTE_2026-04-22.md_not_registered_one_hop_dependency",
+        "docs/KOIDE_BRANNEN_PHASE_REDUCTION_THEOREM_NOTE_2026-04-20.md_not_registered_one_hop_dependency",
+        "Brannen_endpoint_real_nontrivial_Z3_primitive_identification_theorem_open",
+        "unit_preserving_open_determinant_line_readout_theorem_open",
+        "rank_one_CP1_language_vs_real_primitive_endpoint_residual_open",
+        "zero_source_charged_lepton_scalar_readout_identification_not_closed_here",
+        "frontier_koide_lane_regression.py_rc_1_due_to_frontier_koide_q_so2_phase_erasure_support_22_of_23"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368826+00:00",
@@ -39085,15 +39102,15 @@
       ],
       "runner_check_breakdown": {
         "A": 0,
-        "B": 0,
+        "B": 12,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 12
       },
       "runner_path": "scripts/frontier_koide_native_zero_section_nature_review.py",
       "title": "Koide native zero-section Nature review",
       "transitive_descendants": 117,
-      "verdict_rationale": null
+      "verdict_rationale": "The review is useful and correctly scoped. Its primary runner confirms that the route passes as a route, not as closure: it checks the native route artifacts, verifies the route runner closeout, confirms Q and delta are implied under the stated hypotheses, identifies retained real-doublet support plus rank-one/CP1 tension, and records the remaining objections as identification theorems. The blockers are explicit. A Nature-grade audit cannot retain closure until a theorem derives that the physical Brannen endpoint is the real nontrivial Z3 primitive rather than a rank-one CP1 selector, and another theorem derives a based/unit-preserving open determinant endpoint readout rather than an unbased torsor coordinate. The broader lane regression also currently fails one check in q_so2 phase erasure support, so the note's full verification list is not green. Repair requires those two identification theorems, a fixed/understood lane regression, and registered one-hop dependencies for the route packet, Brannen geometry support, phase-reduction support, hostile guard, and any Q-side source-response theorem. What can safely be claimed is conditional: this is the strongest native route found so far and it implies the Koide Q/delta values if the real-primitive endpoint and unit endpoint readout are accepted; it does not close the full dimensionless Koide lane as retained/native theorem today."
     },
     "koide_one_scalar_obstruction_triangulation_theorem_note_2026-04-18": {
       "audit_date": null,
