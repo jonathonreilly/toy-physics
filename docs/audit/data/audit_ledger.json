@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T12:52:50.746375+00:00",
-  "generated_at": "2026-04-27T12:52:49.167925+00:00",
-  "invalidation_run_at": "2026-04-27T12:52:50.701252+00:00",
+  "effective_status_computed_at": "2026-04-27T13:01:12.720928+00:00",
+  "generated_at": "2026-04-27T13:01:11.134577+00:00",
+  "invalidation_run_at": "2026-04-27T13:01:12.675807+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T12:52:50.606422+00:00",
+  "load_bearing_computed_at": "2026-04-27T13:01:12.582932+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -30654,14 +30654,21 @@
       "verdict_rationale": "Issue: the live runner reproduces the finite h=0.25 distance-tail table, but the source's transfer wording depends on Gate B far-field and grown-joint companion context that is bounded/unaudited rather than retained/audited clean. Why this blocks: a compact two-seed W=6 replay cannot by itself ratify the proposed-retained generated-geometry family or promote the distance-law transfer as retained upstream physics. Repair target: audit or prove the cited Gate B far-field and grown-joint generated-family inputs as retained, then rerun an h=0.25 transfer computation whose claim is explicitly scoped to those ratified inputs. Claim boundary until fixed: safely claim only that this runner reproduces a bounded compact h=0.25 replay with exact grid 10/10 TOWARD tail b^(-0.42) and grown drift=0.2 10/10 TOWARD tail b^(-0.54), not full Gate B closure or retained-family transfer."
     },
     "gate_b_h025_farfield_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner closes the finite h=0.25 far-field replay, but the source frames it as survival of a retained generated-geometry package and cites Gate B companion context that is bounded, unaudited, or already audited conditional. That dependency boundary prevents clean retained propagation.",
       "claim_id": "gate_b_h025_farfield_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -30669,18 +30676,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The exact grid and grown drift=0.2 rows both return 12/12 TOWARD with F~M = 1.00 at h = 0.25, so the grown-geometry far-field package survives the refinement on this bounded family.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "6527f96155f89124ac91a1a097c1bf16a6bfda50a9f5115b77f0efb86a59814a",
       "note_path": "docs/GATE_B_H025_FARFIELD_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/GATE_B_FARFIELD_NOTE.md",
+        "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
+        "docs/GATE_B_GROWN_JOINT_PACKAGE_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368408+00:00",
@@ -30711,14 +30722,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 2,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 2
       },
       "runner_path": null,
       "title": "Gate B h=0.25 Far-Field Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the current runner reproduces the h=0.25 far-field table, but the note's refinement-survival wording depends on Gate B far-field, h=0.5 grown distance-law, and grown-joint companion context that is bounded/unaudited or already conditional. Why this blocks: the finite 4-seed W=6 replay verifies a compact check, but it does not independently ratify the generated-geometry family as retained or close the broader Gate B package. Repair target: first audit-retain the cited Gate B far-field, grown distance-law, and grown-joint inputs or replace the transfer framing with a theorem scoped only to this h=0.25 runner. Claim boundary until fixed: safely claim only that this live harness reproduces a bounded h=0.25 replay with exact grid 12/12 TOWARD, grown drift=0.2 12/12 TOWARD, and F~M = 1.00 in both rows."
     },
     "gate_b_h025_joint_package_note": {
       "audit_date": null,

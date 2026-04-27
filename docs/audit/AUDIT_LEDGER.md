@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T12:52:50.928873+00:00
+**Generated:** 2026-04-27T13:01:12.904416+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 45 |
-| _proposed_retained_ | 149 |
+| _proposed_retained_ | 148 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 298 |
+| ~~audited_conditional~~ | 299 |
 | ~~audited_failed~~ | 89 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 45 |
-| `audited_conditional` | 85 |
+| `audited_conditional` | 86 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 22 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1449 |
+| `unaudited` | 1448 |
 
 | criticality | count |
 |---|---:|
@@ -175,6 +175,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gate_b_complex_action_falsifier_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gate_b_grown_distance_law_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gate_b_h025_distance_law_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `gate_b_h025_farfield_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `global_coherence_off_scaffold_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravitomagnetic_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -1539,6 +1540,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the live runner reproduces the finite h=0.25 distance-tail table, but the source's transfer wording depends on Gate B far-field and grown-joint companion context that is bounded/unaudited rather than retained/audited clean. Why this blocks: a compact two-seed W=6 replay cannot by itself ratify the proposed-retained generated-geometry family or promote the distance-law transfer as retained upstream physics. Repair target: audit or prove the cited Gate B far-field and grown-joint generated-family inputs as retained, then rerun an h=0.25 transfer computation whose claim is explicitly scoped to those ratified inputs. Claim boundary until fixed: safely claim only that this runner reproduces a bounded compact h=0.25 replay with exact grid 10/10 TOWARD tail b^(-0.42) and grown drift=0.2 10/10 TOWARD tail b^(-0.54), not full Gate B closure or retained-family transfer.
 - **open / conditional deps cited:**
   - `GATE_B_FARFIELD_NOTE.md`
+  - `GATE_B_GROWN_JOINT_PACKAGE_NOTE.md`
+- **auditor confidence:** high
+
+### `gate_b_h025_farfield_note`
+
+- **Note:** [`GATE_B_H025_FARFIELD_NOTE.md`](../../docs/GATE_B_H025_FARFIELD_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The exact grid and grown drift=0.2 rows both return 12/12 TOWARD with F~M = 1.00 at h = 0.25, so the grown-geometry far-field package survives the refinement on this bounded family.  _(class `C`)_
+- **chain closes:** False — The live runner closes the finite h=0.25 far-field replay, but the source frames it as survival of a retained generated-geometry package and cites Gate B companion context that is bounded, unaudited, or already audited conditional. That dependency boundary prevents clean retained propagation.
+- **rationale:** Issue: the current runner reproduces the h=0.25 far-field table, but the note's refinement-survival wording depends on Gate B far-field, h=0.5 grown distance-law, and grown-joint companion context that is bounded/unaudited or already conditional. Why this blocks: the finite 4-seed W=6 replay verifies a compact check, but it does not independently ratify the generated-geometry family as retained or close the broader Gate B package. Repair target: first audit-retain the cited Gate B far-field, grown distance-law, and grown-joint inputs or replace the transfer framing with a theorem scoped only to this h=0.25 runner. Claim boundary until fixed: safely claim only that this live harness reproduces a bounded h=0.25 replay with exact grid 12/12 TOWARD, grown drift=0.2 12/12 TOWARD, and F~M = 1.00 in both rows.
+- **open / conditional deps cited:**
+  - `GATE_B_FARFIELD_NOTE.md`
+  - `GATE_B_GROWN_DISTANCE_LAW_NOTE.md`
   - `GATE_B_GROWN_JOINT_PACKAGE_NOTE.md`
 - **auditor confidence:** high
 
