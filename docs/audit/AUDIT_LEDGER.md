@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T16:47:23.667874+00:00
+**Generated:** 2026-04-27T16:52:09.349359+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 61 |
-| _proposed_retained_ | 81 |
+| _proposed_retained_ | 80 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 323 |
+| ~~audited_conditional~~ | 324 |
 | ~~audited_failed~~ | 116 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 61 |
-| `audited_conditional` | 110 |
+| `audited_conditional` | 111 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 49 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1380 |
+| `unaudited` | 1379 |
 
 | criticality | count |
 |---|---:|
@@ -249,6 +249,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `propagator_family_unification_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `quantum_horizon_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `quark_bimodule_lo_shell_normalization_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
+| `quark_bimodule_norm_existence_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `sign_portability_invariant_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `staggered_backreaction_shell_spectral_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -3419,6 +3420,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** Because the shell slot is the common unit LO channel, the retained down amplitude a_d = rho forces the physical LO down action D_LO(x) = rho x and therefore kappa = 1.  _(class `F`)_
 - **chain closes:** False — The runner verifies the algebra after identifying the exact shell carrier coefficient with the physical LO down amplitude rho, but the carrier/readout map and rho provenance rows are not audit-clean retained inputs.
 - **rationale:** Issue: The proof selects kappa = 1 by requiring the shell-normalized carrier coefficient to equal the retained physical down amplitude rho, but the physical bridge from the exact Route-2 carrier/readout map to the LO down action is not itself audit-retained, and rho provenance is imported from non-clean rows. Why this blocks: the runner checks exact algebra after the identification is supplied; it does not independently derive that the shell coefficient is the physical down-amplitude readout, nor does it close the unaudited/conditional CKM and quark projector inputs. Repair target: audit or repair CKM_ATLAS_AXIOM_CLOSURE_NOTE, QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE, and QUARK_ROUTE2_EXACT_READOUT_MAP_NOTE, and add a theorem deriving the shell-carrier-to-physical-down-action map before promoting BICAC closure. Claim boundary until fixed: it is safe to say that, given the stated shell carrier and rho readout premise, only kappa = 1 preserves the shell coefficient and yields STRC-LO; it is not safe to claim retained physical BICAC derivation from the current audited inputs.
+- **open / conditional deps cited:**
+  - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
+  - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
+  - `QUARK_ROUTE2_EXACT_READOUT_MAP_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `quark_bimodule_norm_existence_theorem_note_2026-04-19`
+
+- **Note:** [`QUARK_BIMODULE_NORM_EXISTENCE_THEOREM_NOTE_2026-04-19.md`](../../docs/QUARK_BIMODULE_NORM_EXISTENCE_THEOREM_NOTE_2026-04-19.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** For any retained kappa in [sqrt(6/7), 1], define D_kappa := rho*kappa*Id_I and U_kappa := (1 - rho*kappa)*Id_I, so U_kappa + D_kappa = Id_I and U_kappa(Im(p)) reproduces a_u(kappa).  _(class `A`)_
+- **chain closes:** False — The one-dimensional scalar-map construction closes algebraically, but the source note imports the retained CKM projector ray, rho, and physical bridge/readout family without an audit-clean cited chain.
+- **rationale:** Issue: The proof constructs complementary scalar endomorphisms on I once the CKM projector ray, rho, and bridge family a_u(kappa) are supplied, but those physical inputs and the readout identifying the scalar maps with LO quark ownership response are not closed by audit-clean dependencies in this note. Why this blocks: the runner verifies algebra after the bridge family and channel/readout interpretation have been supplied; it does not derive that I = R*Im(p), rho = 1/sqrt(42), or the kappa interval are retained physical inputs for an LO bimodule law. Repair target: add or cite an audit-clean theorem deriving the CKM projector/rho data and the Route-2 carrier/readout map into the LO bimodule channel, then rerun the NORM-existence runner as a consequence of those inputs. Claim boundary until fixed: it is safe to claim that, conditional on the stated one-dimensional channel and bridge-family premises, the displayed D_kappa and U_kappa are complementary positive contractions and reproduce the three scalar amplitudes; it is not safe to claim retained physical LO split-law existence from the current audited chain.
 - **open / conditional deps cited:**
   - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
   - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
