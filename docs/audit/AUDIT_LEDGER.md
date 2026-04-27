@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T18:02:05.870055+00:00
+**Generated:** 2026-04-27T18:04:07.989570+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 63 |
-| _proposed_retained_ | 58 |
+| _proposed_retained_ | 57 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 332 |
+| ~~audited_conditional~~ | 333 |
 | ~~audited_failed~~ | 128 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 63 |
-| `audited_conditional` | 119 |
+| `audited_conditional` | 120 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 61 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1357 |
+| `unaudited` | 1356 |
 
 | criticality | count |
 |---|---:|
@@ -262,6 +262,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `source_resolved_generated_support_recovery_basin_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `source_resolved_propagating_green_pocket_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `source_resolved_wavefield_escalation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `source_resolved_wavefield_green_pocket_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_backreaction_shell_spectral_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `strong_cp_theta_zero_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `structured_chokepoint_bridge_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -3852,6 +3853,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: The executable artifact supports a runner-specific wavefield escalation, but the proposed_retained claim rests on a hand-selected local update rule and parameter set rather than an audited field-dynamics theorem; additionally, the frozen column labeled wave/same is computed as wave_delta / inst_delta, with true wave/same about 45-49 instead of 56-61. Why this blocks: a coherent phase ramp in one calibrated exact-lattice update is not enough to retain a physical wavefield mechanism unless the update rule, normalization, and comparator are fixed by retained inputs and the same-site ratio is reported correctly. Repair target: audit the compact wavefield parent, derive or independently justify WAVE_LAG_BLEND, WAVE_SPEED2, WAVE_DAMP, WAVE_SOURCE_BLEND, and FIELD_TARGET_MAX, and correct the runner/note to report wave/inst and wave/same separately with assertion gates for ramp slope, R^2, span, overlap, sign, and exponent. Claim boundary until fixed: it is safe to claim that the current runner gives zero-source shifts 0, 4/4 TOWARD rows, wavefield F~M exponent 0.98, mean ramp R^2 0.961, mean ramp span 3.330 rad, and wave/same ratios still large at about 45-49; it is not safe to claim a retained wavefield mechanism beyond this conditional exact-lattice escalation.
 - **open / conditional deps cited:**
   - `SOURCE_RESOLVED_WAVEFIELD_GREEN_POCKET_NOTE.md`
+  - `SOURCE_RESOLVED_PROPAGATING_GREEN_POCKET_NOTE.md`
+  - `SOURCE_RESOLVED_EXACT_GREEN_POCKET_NOTE.md`
+  - `MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md`
+- **auditor confidence:** high
+
+### `source_resolved_wavefield_green_pocket_note`
+
+- **Note:** [`SOURCE_RESOLVED_WAVEFIELD_GREEN_POCKET_NOTE.md`](../../docs/SOURCE_RESOLVED_WAVEFIELD_GREEN_POCKET_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The compact exact-lattice wavefield runner preserves zero-source reduction, 4/4 TOWARD sign, near-linear scaling, and a measurable detector phase/overlap difference relative to same-site memory.  _(class `C`)_
+- **chain closes:** False — The current runner reproduces the main table, but the finite-speed wavefield update and parameter set are selected rather than derived, and the wave/same column is actually wave/instantaneous.
+- **rationale:** Issue: The executable supports a specific compact exact-lattice wavefield pocket, but the proposed_retained physical reading depends on hand-selected wavefield parameters and calibrated normalization; the table also labels wave_delta / inst_delta as wave/same, while true wave/same from the printed rows is about 33-34. Why this blocks: a retained finite-speed wavefield mechanism requires an audited derivation of the local update rule, carrier, parameter choices, and normalization, not just one calibrated runner pocket with a mislabeled comparator column. Repair target: derive or independently justify WAVE_LAG_BLEND, WAVE_SPEED2, WAVE_DAMP, WAVE_SOURCE_BLEND, and FIELD_TARGET_MAX from retained field dynamics, fix the runner/note to report wave/inst and wave/same separately, and add assertion gates for zero-source reduction, sign, exponent, phase lag, overlap, and comparator ratios. Claim boundary until fixed: it is safe to claim that the current runner gives zero-source shifts 0, 4/4 TOWARD rows, wavefield F~M exponent 0.99, mean phase lag -0.249 rad, mean overlap 0.827, and true wave/same ratios about 33-34; it is not safe to claim a retained finite-speed wavefield mechanism beyond this conditional exact-lattice pocket.
+- **open / conditional deps cited:**
   - `SOURCE_RESOLVED_PROPAGATING_GREEN_POCKET_NOTE.md`
   - `SOURCE_RESOLVED_EXACT_GREEN_POCKET_NOTE.md`
   - `MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md`
