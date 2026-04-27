@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T16:35:24.845141+00:00",
-  "generated_at": "2026-04-27T16:35:23.179758+00:00",
-  "invalidation_run_at": "2026-04-27T16:35:24.786390+00:00",
+  "effective_status_computed_at": "2026-04-27T16:36:37.984737+00:00",
+  "generated_at": "2026-04-27T16:36:36.391190+00:00",
+  "invalidation_run_at": "2026-04-27T16:36:37.934379+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T16:35:24.687569+00:00",
+  "load_bearing_computed_at": "2026-04-27T16:36:37.834588+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -58821,14 +58821,21 @@
       "verdict_rationale": "Issue: The claimed retained extension imports the three-family card and portable package as retained authorities, but THREE_FAMILY_CARD_NOTE and PORTABLE_PACKAGE_EXTENSION_NOTE are unaudited, SIGN_PORTABILITY_INVARIANT_NOTE and DISTANCE_LAW_BREAKPOINT_NOTE are audited_conditional, DISTANCE_LAW_PORTABILITY_NOTE is unknown, and the frozen log named by the source is absent. Why this blocks: the live runner verifies only that the family-3 distance-law probe collapses to one selected source node; it does not recompute or prove the portable package core across the three-family card, so the retained extension conclusion is unsupported. Repair target: audit or repair the card and portability dependencies, restore the frozen log, and replace the hard-coded retained table with a runner that recomputes the portable-core checks from first principles for all three families. Claim boundary until fixed: it is safe to say the current family-3 distance-law harness has a source-placement coverage failure and therefore is not a physics contradiction; it is not safe to claim an audit-retained portable package extension onto the three-family card."
     },
     "portable_package_extension_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner is a static summary table and does not recompute the sign, distance, or complex-action rows; the named authorities are conditional, unaudited, or unknown.",
       "claim_id": "portable_package_extension_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -58836,18 +58843,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The portable fixed-field package extends beyond the first two grown families, but only the sign-law core is broadly portable while the distance law and complex-action branches are stricter subsets.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "99a7060c0a109585755e0a3c0a45930f593202bc760f914148c6139d12ca3257",
       "note_path": "docs/PORTABLE_PACKAGE_EXTENSION_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/SIGN_PORTABILITY_INVARIANT_NOTE.md",
+        "docs/DISTANCE_LAW_PORTABILITY_NOTE.md",
+        "docs/COMPLEX_SELECTIVITY_COMPARE_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369420+00:00",
@@ -58885,7 +58896,7 @@
       "runner_path": null,
       "title": "Portable Package Extension Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The retained comparison treats sign portability, distance-law portability, and complex-action selectivity as already established across multiple families, but the cited authorities are not audit-clean: SIGN_PORTABILITY_INVARIANT_NOTE is audited_conditional, DISTANCE_LAW_PORTABILITY_NOTE and COMPLEX_SELECTIVITY_COMPARE_NOTE are unknown/unaudited, and the runner only prints a hard-coded comparison table. Why this blocks: a retained cross-family package extension requires computed or audited-clean support for every family row, not a static table over unratified inputs. Repair target: audit or repair the sign, distance-law, and complex-action source notes, then replace the static table with a runner that recomputes the zero/neutral/sign/slope, distance-tail, and complex-action checks for each listed family. Claim boundary until fixed: it is safe to present this as an editorial portability taxonomy or worklist; it is not safe to claim an audit-retained portable fixed-field package extension beyond the first two grown families."
     },
     "portable_package_hierarchy_classifier_note": {
       "audit_date": null,
