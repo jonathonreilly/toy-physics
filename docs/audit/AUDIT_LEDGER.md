@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T22:01:54.712851+00:00
+**Generated:** 2026-04-27T22:04:05.878167+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 72 |
-| _proposed_retained_ | 21 |
+| _proposed_retained_ | 20 |
 | _proposed_promoted_ | 1 |
 | bounded | 185 |
 | support | 104 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 165 |
+| ~~audited_conditional~~ | 166 |
 | ~~audited_failed~~ | 326 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 72 |
-| `audited_conditional` | 135 |
+| `audited_conditional` | 136 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 72 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1324 |
+| `unaudited` | 1323 |
 
 | criticality | count |
 |---|---:|
@@ -305,6 +305,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_h_unit_flavor_column_decomposition_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `yt_p1_bz_quadrature_numerical_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `yt_p1_color_factor_retention_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_p1_delta_r_2_loop_extension_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `yt_p1_delta_r_sm_rge_crosscheck_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
@@ -4760,6 +4761,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
   - `UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md`
 - **auditor confidence:** high
+
+### `yt_p1_color_factor_retention_note_2026-04-17`
+
+- **Note:** [`YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`](../../docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The three-channel decomposition is the unique assembly of the Rep-A/Rep-B one-loop diagrammatic catalog after exact cancellation of the external quark Z_psi term.  _(class `B`)_
+- **chain closes:** False — The runner exactly checks the algebra after the Rep-A and Rep-B formulas are supplied, but it does not derive the diagrammatic catalog, the equal external-leg term, or the SU(3)/n_f inputs. The ledger row has no registered one-hop deps, so the upstream catalog status cannot propagate into this retained claim.
+- **rationale:** Issue: the retained three-channel color decomposition depends on the Rep-A/Rep-B one-loop diagrammatic catalog and exact 2 C_F I_leg cancellation, but this audit row has no registered dependencies and the runner hard-codes the Rep-A and Rep-B formulae before checking the subtraction. Why this blocks: the algebraic residual being zero proves only that the claimed assembly follows from the supplied catalog; it does not prove that the catalog, H_unit/scalar-bilinear normalization, flavor count, or external-leg equality are retained framework-native inputs. Repair target: register and close the Rep-A/Rep-B cancellation theorem and SU(3)/n_f authorities as one-hop dependencies, or extend the runner to enumerate the one-loop diagrams and derive the channel coefficients and Z_psi cancellation from the framework Feynman rules. Claim boundary until fixed: safe to claim that, given the stated Rep-A/Rep-B formulas plus C_F=4/3, C_A=3, T_F=1/2, and n_f=6, the three-channel assembly and external-leg cancellation are exact; not safe to claim an independently retained framework-native P1 color-factor decomposition.
+- **open / conditional deps cited:**
+  - `YT_P1_REP_A_REP_B_CANCELLATION_THEOREM_NOTE_2026-04-17.md`
+  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
+  - `YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md`
+  - `scripts/frontier_yt_p1_color_factor_retention.py`
+- **auditor confidence:** 0.93
 
 ### `yt_p1_delta_r_2_loop_extension_note_2026-04-18`
 
