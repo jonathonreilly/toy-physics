@@ -1,12 +1,12 @@
 # Audit Queue
 
-**Generated:** 2026-04-27T03:26:20.326376+00:00
-**Total pending:** 1585
-**Ready (all deps already at a stable tier):** 1182
+**Generated:** 2026-04-27T03:28:54.106272+00:00
+**Total pending:** 1584
+**Ready (all deps already at a stable tier):** 1181
 
 By criticality:
 - `critical`: 88
-- `high`: 556
+- `high`: 555
 - `medium`: 85
 - `leaf`: 856
 

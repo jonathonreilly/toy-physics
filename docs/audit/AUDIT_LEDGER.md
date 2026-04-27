@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T03:26:20.542441+00:00
+**Generated:** 2026-04-27T03:28:54.275980+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 2 |
-| _proposed_retained_ | 292 |
+| _proposed_retained_ | 291 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
@@ -28,16 +28,16 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | unknown | 739 |
 | ~~audited_decoration~~ | 1 |
 | ~~audited_numerical_match~~ | 2 |
-| ~~audited_conditional~~ | 262 |
+| ~~audited_conditional~~ | 263 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 2 |
-| `audited_conditional` | 11 |
+| `audited_conditional` | 12 |
 | `audited_decoration` | 1 |
 | `audited_numerical_match` | 2 |
-| `unaudited` | 1582 |
+| `unaudited` | 1581 |
 
 | criticality | count |
 |---|---:|
@@ -102,6 +102,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `complex_action_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `confinement_string_tension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_neutrino_schur_suppression_theorem_note_2026-04-15` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `electrostatics_grown_sign_law_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravity_clean_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `linear_response_true_kubo_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `native_gauge_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -233,6 +234,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `gamma_1_direct_bridge_dependency_not_registered`
   - `bosonic_normalization_dependency_not_registered`
   - `dm_staircase_relation_dependency_not_registered`
+- **auditor confidence:** high
+
+### `electrostatics_grown_sign_law_note`
+
+- **Note:** [`ELECTROSTATICS_GROWN_SIGN_LAW_NOTE.md`](../../docs/ELECTROSTATICS_GROWN_SIGN_LAW_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On the fixed retained grown row drift=0.2, restore=0.7, the tabulated single-source, neutral-pair, like-pair, dipole, and double-charge cases have the expected sign response and a +1 to +2 charge exponent of 1.000.  _(class `C`)_
+- **chain closes:** False — The claim is a narrow numerical grown-geometry compute, but the ledger has no registered runner/output and the artifact paths in the note are absolute external paths rather than audit-registered evidence.
+- **rationale:** Issue: the retained sign-law companion rests on frozen numerical results for one fixed grown geometry row, but the audit ledger registers no primary runner or output, and the note's artifact links are absolute local paths outside the audit packet. Why this blocks: a hostile auditor cannot reproduce the printed delta_z signs, neutral cancellation, dipole partial cancellation, or +1/+2 linearity threshold from registered evidence; moreover the note explicitly limits the result to fixed-field, no graph update, one source layer, and one final-layer centroid on a single grown row. Repair target: register scripts/ELECTROSTATICS_GROWN_SIGN_LAW.py as the claim runner with deterministic output and explicit PASS thresholds for sign, cancellation, and charge-linearity; either keep the note scoped to the single grown row or add sweeps over grown-geometry parameters, graph update, source layers, and detector definitions. Claim boundary until fixed: it is safe to say the source note reports a conditional fixed-row sign-law transfer check with neutral cancellation and approximate charge linearity; it is not yet an audited retained grown-geometry theorem or geometry-generic electrostatics result.
+- **open / conditional deps cited:**
+  - `scripts/ELECTROSTATICS_GROWN_SIGN_LAW.py_not_registered_primary_runner`
+  - `logs/2026-04-05-electrostatics-grown-sign-law.txt_not_registered_primary_output`
+  - `grown_geometry_parameter_sweep_not_performed`
+  - `graph_update_case_not_tested`
 - **auditor confidence:** high
 
 ### `gravity_clean_derivation_note`
