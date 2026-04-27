@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T04:55:48.576596+00:00
+**Generated:** 2026-04-27T04:57:31.379052+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 6 |
-| _proposed_retained_ | 258 |
+| _proposed_retained_ | 257 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
@@ -28,18 +28,18 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | unknown | 734 |
 | ~~audited_decoration~~ | 1 |
 | ~~audited_numerical_match~~ | 3 |
-| ~~audited_conditional~~ | 238 |
+| ~~audited_conditional~~ | 239 |
 | ~~audited_failed~~ | 58 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 6 |
-| `audited_conditional` | 36 |
+| `audited_conditional` | 37 |
 | `audited_decoration` | 1 |
 | `audited_failed` | 1 |
 | `audited_numerical_match` | 3 |
-| `unaudited` | 1551 |
+| `unaudited` | 1550 |
 
 | criticality | count |
 |---|---:|
@@ -122,6 +122,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `koide_native_dimensionless_review_packet_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `koide_native_zero_section_nature_review_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `koide_pointed_origin_exhaustion_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `koide_q_delta_readout_retention_split_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `lensing_beta_sweep_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lensing_deflection_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `lensing_k_sweep_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -600,6 +601,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `selected_line_local_boundary_source_law_not_registered`
   - `based_endpoint_section_theorem_not_registered`
   - `retained_physical_source_boundary_origin_law_open`
+- **auditor confidence:** high
+
+### `koide_q_delta_readout_retention_split_no_go_note_2026-04-24`
+
+- **Note:** [`KOIDE_Q_DELTA_READOUT_RETENTION_SPLIT_NO_GO_NOTE_2026-04-24.md`](../../docs/KOIDE_Q_DELTA_READOUT_RETENTION_SPLIT_NO_GO_NOTE_2026-04-24.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Source-response coefficients are zero-probe coefficients around a chosen background, so the current retained packet does not prove that the physical charged-lepton background source is zero; closed APS readout also leaves eta_APS = delta_open + tau with the selected open endpoint split free.  _(class `B`)_
+- **chain closes:** False — The runner verifies the conditional algebra: zero-background source-response gives K_TL=0 and Q=2/3, while closed APS fixes eta_APS=2/9 but not the open endpoint split. The chain does not close as retained-only because the runner imports unregistered source-response notes and still requires a physical background-zero/Z-erasure theorem plus a closed-APS-to-open-endpoint functor.
+- **rationale:** Issue: the note establishes conditional support, not retained closure: the Q side only closes if the physical charged-lepton background source is zero, and the delta side still needs a functor from closed APS holonomy to the selected open endpoint coordinate. Why this blocks: the primary runner reads OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md and HIERARCHY_BOSONIC_BILINEAR_SELECTOR_NOTE.md directly even though the audit row has no registered one-hop dependencies, then proves downstream algebra under the zero-background condition; it does not derive the physical background-zero law or the closed-to-open endpoint bridge. Repair target: register the source-response and hierarchy authorities, add a theorem/runner deriving physical background-source zero equivalently to Z-erasure, and add a theorem/runner deriving the closed APS to open selected-line endpoint functor. Claim boundary until fixed: it is safe to claim that strict source-response readout conditionally gives Q=2/3 at zero background and that closed APS alone leaves the delta split free; it is not safe to claim proposed-retained full Koide readout closure.
+- **open / conditional deps cited:**
+  - `OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md_not_registered_one_hop_dependency`
+  - `HIERARCHY_BOSONIC_BILINEAR_SELECTOR_NOTE.md_not_registered_one_hop_dependency`
+  - `derive_physical_background_source_zero_equiv_Z_erasure`
+  - `closed_APS_to_open_selected_line_endpoint_functor_or_descent_theorem`
 - **auditor confidence:** high
 
 ### `koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24`

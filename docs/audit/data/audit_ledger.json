@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T04:55:48.245956+00:00",
-  "generated_at": "2026-04-27T04:55:46.448771+00:00",
-  "invalidation_run_at": "2026-04-27T04:55:48.186881+00:00",
+  "effective_status_computed_at": "2026-04-27T04:57:31.010394+00:00",
+  "generated_at": "2026-04-27T04:57:29.017586+00:00",
+  "invalidation_run_at": "2026-04-27T04:57:30.945096+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T04:55:48.063780+00:00",
+  "load_bearing_computed_at": "2026-04-27T04:57:30.816648+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -39636,14 +39636,21 @@
       "verdict_rationale": null
     },
     "koide_q_delta_readout_retention_split_no_go_note_2026-04-24": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 8.383,
+        "transitive_descendants": 117
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies the conditional algebra: zero-background source-response gives K_TL=0 and Q=2/3, while closed APS fixes eta_APS=2/9 but not the open endpoint split. The chain does not close as retained-only because the runner imports unregistered source-response notes and still requires a physical background-zero/Z-erasure theorem plus a closed-APS-to-open-endpoint functor.",
       "claim_id": "koide_q_delta_readout_retention_split_no_go_note_2026-04-24",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -39651,18 +39658,23 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 3,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 8.383,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Source-response coefficients are zero-probe coefficients around a chosen background, so the current retained packet does not prove that the physical charged-lepton background source is zero; closed APS readout also leaves eta_APS = delta_open + tau with the selected open endpoint split free.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "d7d318c30bf4b52f575262a04ed8172a75477d701ecb934eb8f04b77ea3aa117",
       "note_path": "docs/KOIDE_Q_DELTA_READOUT_RETENTION_SPLIT_NO_GO_NOTE_2026-04-24.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md_not_registered_one_hop_dependency",
+        "docs/HIERARCHY_BOSONIC_BILINEAR_SELECTOR_NOTE.md_not_registered_one_hop_dependency",
+        "derive_physical_background_source_zero_equiv_Z_erasure",
+        "closed_APS_to_open_selected_line_endpoint_functor_or_descent_theorem"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368844+00:00",
@@ -39691,16 +39703,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 9,
+        "B": 1,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 10
       },
       "runner_path": "scripts/frontier_koide_q_delta_readout_retention_split_no_go.py",
       "title": "Koide Q/delta readout-retention split audit",
       "transitive_descendants": 117,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the note establishes conditional support, not retained closure: the Q side only closes if the physical charged-lepton background source is zero, and the delta side still needs a functor from closed APS holonomy to the selected open endpoint coordinate. Why this blocks: the primary runner reads OBSERVABLE_PRINCIPLE_FROM_AXIOM_NOTE.md and HIERARCHY_BOSONIC_BILINEAR_SELECTOR_NOTE.md directly even though the audit row has no registered one-hop dependencies, then proves downstream algebra under the zero-background condition; it does not derive the physical background-zero law or the closed-to-open endpoint bridge. Repair target: register the source-response and hierarchy authorities, add a theorem/runner deriving physical background-source zero equivalently to Z-erasure, and add a theorem/runner deriving the closed APS to open selected-line endpoint functor. Claim boundary until fixed: it is safe to claim that strict source-response readout conditionally gives Q=2/3 at zero background and that closed APS alone leaves the delta split free; it is not safe to claim proposed-retained full Koide readout closure."
     },
     "koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24": {
       "audit_date": "2026-04-26",
