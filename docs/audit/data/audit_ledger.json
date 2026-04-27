@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T04:49:47.662208+00:00",
-  "generated_at": "2026-04-27T04:49:45.862955+00:00",
-  "invalidation_run_at": "2026-04-27T04:49:47.601089+00:00",
+  "effective_status_computed_at": "2026-04-27T04:53:36.066322+00:00",
+  "generated_at": "2026-04-27T04:53:34.105810+00:00",
+  "invalidation_run_at": "2026-04-27T04:53:35.999533+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T04:49:47.482377+00:00",
+  "load_bearing_computed_at": "2026-04-27T04:53:35.864220+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -39690,14 +39690,21 @@
       "verdict_rationale": null
     },
     "koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 8.883,
+        "transitive_descendants": 117
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The note and primary runner prove the stated no-go at the level claimed: the retained Q and delta projections have nontrivial kernels, kernel translations preserve the retained totals, and sections form non-unique families. Therefore exactness alone names the residual directions but does not canonically select the zero representative.",
       "claim_id": "koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -39705,13 +39712,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 4,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 8.883,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Exactness gives fibres, not canonical splittings; the closing section is the special case a = 0, b1 = 0, b2 = 0, so that choice is exactly the missing primitive-based readout/basepoint law.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "063399454ae705383b67f4230df07810a8c42b067c44ce01f87b70f5a517de9e",
@@ -39745,16 +39752,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 15,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 15
       },
       "runner_path": "scripts/frontier_koide_q_delta_residual_cohomology_obstruction_no_go.py",
       "title": "Koide Q/delta residual cohomology obstruction no-go",
       "transitive_descendants": 117,
-      "verdict_rationale": null
+      "verdict_rationale": "The load-bearing claim is a negative exactness claim, not a positive Koide closure claim. The primary runner passes 15/15 symbolic checks: it computes ker(pi_Q)=span{Z}, ker(pi_delta)=span{selected-spectator, endpoint-exact}, verifies nonzero kernel representatives preserve the retained totals while moving the Q/delta readouts, and exhibits non-unique section families. No cited upstream physical bridge is needed for the narrow no-go that exactness alone does not pick z=0, spectator=0, c=0. The broader Koide lane regression currently fails one q_so2 phase-erasure support check, but that is not load-bearing for this exact cohomology obstruction."
     },
     "koide_q_eq_3delta_identity_note_2026-04-21": {
       "audit_date": null,

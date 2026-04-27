@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T04:49:47.911496+00:00
+**Generated:** 2026-04-27T04:53:36.348527+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 5 |
-| _proposed_retained_ | 260 |
+| **retained** | 6 |
+| _proposed_retained_ | 259 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
@@ -34,12 +34,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 5 |
+| `audited_clean` | 6 |
 | `audited_conditional` | 35 |
 | `audited_decoration` | 1 |
 | `audited_failed` | 1 |
 | `audited_numerical_match` | 3 |
-| `unaudited` | 1553 |
+| `unaudited` | 1552 |
 
 | criticality | count |
 |---|---:|
@@ -100,6 +100,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `s3_mass_matrix_no_go_note` | _proposed_retained_ | audit_in_progress | _proposed_retained_ | - | - | - | - |
 | `dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `i3_zero_exact_theorem_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
+| `koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `planck_finite_response_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -580,6 +581,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `selected_line_local_boundary_source_law_not_registered`
   - `based_endpoint_section_theorem_not_registered`
   - `retained_physical_source_boundary_origin_law_open`
+- **auditor confidence:** high
+
+### `koide_q_delta_residual_cohomology_obstruction_no_go_note_2026-04-24`
+
+- **Note:** [`KOIDE_Q_DELTA_RESIDUAL_COHOMOLOGY_OBSTRUCTION_NO_GO_NOTE_2026-04-24.md`](../../docs/KOIDE_Q_DELTA_RESIDUAL_COHOMOLOGY_OBSTRUCTION_NO_GO_NOTE_2026-04-24.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Exactness gives fibres, not canonical splittings; the closing section is the special case a = 0, b1 = 0, b2 = 0, so that choice is exactly the missing primitive-based readout/basepoint law.  _(class `A`)_
+- **chain closes:** True — The note and primary runner prove the stated no-go at the level claimed: the retained Q and delta projections have nontrivial kernels, kernel translations preserve the retained totals, and sections form non-unique families. Therefore exactness alone names the residual directions but does not canonically select the zero representative.
+- **rationale:** The load-bearing claim is a negative exactness claim, not a positive Koide closure claim. The primary runner passes 15/15 symbolic checks: it computes ker(pi_Q)=span{Z}, ker(pi_delta)=span{selected-spectator, endpoint-exact}, verifies nonzero kernel representatives preserve the retained totals while moving the Q/delta readouts, and exhibits non-unique section families. No cited upstream physical bridge is needed for the narrow no-go that exactness alone does not pick z=0, spectator=0, c=0. The broader Koide lane regression currently fails one q_so2 phase-erasure support check, but that is not load-bearing for this exact cohomology obstruction.
 - **auditor confidence:** high
 
 ### `lensing_beta_sweep_note`
