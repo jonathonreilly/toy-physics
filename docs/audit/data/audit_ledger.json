@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T05:24:31.459290+00:00",
-  "generated_at": "2026-04-27T05:24:29.521446+00:00",
-  "invalidation_run_at": "2026-04-27T05:24:31.387548+00:00",
+  "effective_status_computed_at": "2026-04-27T05:32:29.845176+00:00",
+  "generated_at": "2026-04-27T05:32:28.032160+00:00",
+  "invalidation_run_at": "2026-04-27T05:32:29.777404+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T05:24:31.241223+00:00",
+  "load_bearing_computed_at": "2026-04-27T05:32:29.649271+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -32944,14 +32944,21 @@
       "verdict_rationale": null
     },
     "gravitomagnetic_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 7.383,
+        "transitive_descendants": 117
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The source-note runner reproduces the mean phase table, from which the odd-in-v deltas can be manually reconstructed. It does not close as a retained gravitomagnetic law because the runner is not registered in the audit row, emits an incorrect zero delta column for negative velocities, has no PASS assertions or threshold checks, and uses an imposed moving source/proxy phase readout rather than a derived self-consistent tensor field.",
       "claim_id": "gravitomagnetic_note",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -32959,18 +32966,25 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 7.383,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The phase delay table at c=0.5, s=0.004, z0=3.0 shows an odd-in-v correction relative to the static v=0 row that is portable across three grown families.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "fead708294fd730677f896dbe4ba0f310904ca5dde3062ea8dc1f25fe2f749ef",
       "note_path": "docs/GRAVITOMAGNETIC_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "scripts/gravitomagnetic_portable.py_runner_not_registered_in_audit_queue",
+        "logs/2026-04-06-gravitomagnetic-portable.txt_runner_delta_column_bug_for_negative_velocities",
+        "static_Shapiro_delay_authority_not_registered_one_hop_dependency",
+        "causal_field_cone_and_phase_readout_theorem_not_registered",
+        "self_consistent_moving_source_dynamics_open",
+        "tensor_gravitomagnetic_frame_dragging_bridge_open_or_explicitly_out_of_scope"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368516+00:00",
@@ -33001,14 +33015,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 15,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 15
       },
       "runner_path": null,
       "title": "Gravitomagnetic Effect: Velocity-Dependent Shapiro Correction",
       "transitive_descendants": 117,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the note establishes a finite proxy replay of an odd-in-v phase delay, not a retained gravitomagnetic theorem. Why this blocks: the live runner's phase values support the source-note table, but the runner's delta column is stale/bugged for negative velocities because it prints zero before the static baseline is seen, and it never asserts antisymmetry, portability, monotonicity, or threshold residuals; the source trajectory is imposed and the source/readout/action authorities are not registered as one-hop dependencies. Repair target: register the primary runner, fix the delta computation to compare every row against v=0 after all phases are known, emit explicit PASS assertions for antisymmetry and cross-family portability, and add retained source-motion/phase-readout theorems if the claim is to be promoted beyond a proxy. Claim boundary until fixed: it is safe to claim a bounded numerical proxy in which the mean Shapiro phase varies oddly with imposed source velocity across three grown families; it is not safe to claim a retained gravitomagnetic effect or GR frame-dragging analogue."
     },
     "gravitomagnetic_portability_note": {
       "audit_date": null,
