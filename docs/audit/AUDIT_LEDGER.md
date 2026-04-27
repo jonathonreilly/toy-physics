@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T07:20:14.961035+00:00
+**Generated:** 2026-04-27T07:40:24.867626+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 10 |
-| _proposed_retained_ | 220 |
+| _proposed_retained_ | 218 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
-| ~~audited_conditional~~ | 268 |
+| ~~audited_conditional~~ | 270 |
 | ~~audited_failed~~ | 74 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 10 |
-| `audited_conditional` | 59 |
+| `audited_conditional` | 60 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 8 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1513 |
+| `unaudited` | 1512 |
 
 | criticality | count |
 |---|---:|
@@ -50,7 +50,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 85 |
 | `leaf` | 856 |
 
-- **Proposed claims demoted by upstream:** 133
+- **Proposed claims demoted by upstream:** 134
 - **Citation cycles detected:** 283
 
 ### Runner classification (static heuristic)
@@ -115,6 +115,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `causal_field_canonical_chain_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `complex_action_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `confinement_string_tension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `continuum_limit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_neutrino_schur_suppression_theorem_note_2026-04-15` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -352,6 +353,25 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `GRAPH_FIRST_SU3_INTEGRATION_NOTE.md`
   - `scripts/canonical_plaquette_surface.py`
   - `standard_lattice_qcd_sommer_and_string_tension_inputs`
+- **auditor confidence:** high
+
+### `continuum_limit_note`
+
+- **Note:** [`CONTINUUM_LIMIT_NOTE.md`](../../docs/CONTINUUM_LIMIT_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note claims a proposed-retained positive continuum-limit result for the h^2+T normalized dense 3D lattice: weak-field deflection changes only about 3% from h=0.25 to h=0.125 and F~M brackets 1.000.  _(class `C`)_
+- **chain closes:** False — The live primary runner reproduces the finite h ladder, including T = 4.2735, 5.0807, 5.8019, 6.4683; F~M = 0.979, 0.991, 0.998, 1.018; and weak-field deflection +1.369007e-02 to +1.406306e-02 from h=0.25 to h=0.125. The clean continuum-limit chain does not close because P_det underflows toward zero, Born is skipped at h=0.25 and h=0.125, the final convergence step is a finite two-point diagnostic rather than an asymptotic proof, and the runner has no hard pass/fail assertions.
+- **rationale:** Issue: the h^2+T replay is a strong finite refinement diagnostic, but the note overreads it as a well-defined continuum limit. Why this blocks: a hostile auditor can verify the four h rows and the +2.7% weak-field final-step change, but cannot certify a continuum limit while detector probability decays from 9.31e-20 to 1.30e-137, fine-h Born checks are skipped, strong-field gravity is nonmonotone, T grows logarithmically rather than converging, and the note itself says boundary leakage and <1% refinement remain unresolved. Repair target: implement the per-node T normalization or another boundary-leakage repair, rerun at least one finer h with stable P_det, add a fine-h Born/linearity proof or computation, include uncertainty/extrapolation for the weak-field limit, and make the runner assert the exact retained gates. Claim boundary until fixed: it is safe to claim a finite h^2+T weak-field convergence diagnostic on h=1, 0.5, 0.25, 0.125 with TOWARD sign, k=0 zero, F~M bracketing 1, and final weak-field deflection change about +2.7%; it is not yet a clean retained continuum-limit theorem.
+- **open / conditional deps cited:**
+  - `P_det_underflows_to_1.30e-137_at_h0.125`
+  - `Born_skipped_at_h0.25_and_h0.125`
+  - `only_four_h_values_and_final_two_point_2.7_percent_convergence_diagnostic`
+  - `strong_field_gravity_nonmonotone_across_h`
+  - `per_node_T_boundary_leakage_repair_not_implemented`
+  - `runner_prints_SAFE_READ_without_hard_assertions`
 - **auditor confidence:** high
 
 ### `cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25`
