@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T18:04:07.790835+00:00",
-  "generated_at": "2026-04-27T18:04:06.206434+00:00",
-  "invalidation_run_at": "2026-04-27T18:04:07.742979+00:00",
+  "effective_status_computed_at": "2026-04-27T18:11:26.072854+00:00",
+  "generated_at": "2026-04-27T18:11:24.473944+00:00",
+  "invalidation_run_at": "2026-04-27T18:11:26.025064+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T18:04:07.642791+00:00",
+  "load_bearing_computed_at": "2026-04-27T18:11:25.925298+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -70488,14 +70488,21 @@
       "verdict_rationale": "Issue: The executable supports a specific compact exact-lattice wavefield pocket, but the proposed_retained physical reading depends on hand-selected wavefield parameters and calibrated normalization; the table also labels wave_delta / inst_delta as wave/same, while true wave/same from the printed rows is about 33-34. Why this blocks: a retained finite-speed wavefield mechanism requires an audited derivation of the local update rule, carrier, parameter choices, and normalization, not just one calibrated runner pocket with a mislabeled comparator column. Repair target: derive or independently justify WAVE_LAG_BLEND, WAVE_SPEED2, WAVE_DAMP, WAVE_SOURCE_BLEND, and FIELD_TARGET_MAX from retained field dynamics, fix the runner/note to report wave/inst and wave/same separately, and add assertion gates for zero-source reduction, sign, exponent, phase lag, overlap, and comparator ratios. Claim boundary until fixed: it is safe to claim that the current runner gives zero-source shifts 0, 4/4 TOWARD rows, wavefield F~M exponent 0.99, mean phase lag -0.249 rad, mean overlap 0.827, and true wave/same ratios about 33-34; it is not safe to claim a retained finite-speed wavefield mechanism beyond this conditional exact-lattice pocket."
     },
     "source_resolved_wavefield_mechanism_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The current runner reproduces the source-depth table, but the mechanism claim depends on the exact-lattice wavefield lane and its selected update parameters, whose parent cards are only audited conditional.",
       "claim_id": "source_resolved_wavefield_mechanism_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -70503,18 +70510,23 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The larger exact-lattice source-depth scan shows coherent phase-ramp slopes whose magnitude increases monotonically as source depth decreases, while zero-source reduction and near-linear weak-field scaling persist.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "74000f9faef37e5fcefd1d1449a425f2dc542462dce2cda51529c404b42e3fd2",
       "note_path": "docs/SOURCE_RESOLVED_WAVEFIELD_MECHANISM_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/SOURCE_RESOLVED_WAVEFIELD_ESCALATION_NOTE.md",
+        "docs/SOURCE_RESOLVED_WAVEFIELD_GREEN_POCKET_NOTE.md",
+        "docs/SOURCE_RESOLVED_PROPAGATING_GREEN_POCKET_NOTE.md",
+        "docs/MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369705+00:00",
@@ -70552,7 +70564,7 @@
       "runner_path": null,
       "title": "Source-Resolved Wavefield Mechanism Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The source-depth scan is reproducible, but it imports the wavefield escalation machinery as a retained wavefield lane even though the compact and larger wavefield parent cards remain conditional and the finite-speed update rule/normalization are not derived from retained field dynamics. Why this blocks: monotone depth dependence of a runner-specific phase-ramp coefficient is evidence for a conditional mechanism probe, not a retained causal-field mechanism, until the wavefield carrier, parameters, and parent observable are audit-clean. Repair target: first close or demote the wavefield green pocket and escalation notes; then add assertion gates for monotone ramp slope versus depth, ramp R^2, depth exponents, zero-source reduction, TOWARD sign, and F~M exponents, all using correctly separated wave/same and wave/instantaneous comparators. Claim boundary until fixed: it is safe to claim that this runner finds zero-source shifts 0, source-layer mean ramp slopes -0.2422, -0.2718, -0.2989, -0.3226 with R^2 about 0.965-0.969, wave/same ratios 36.092-44.431, and depth exponents -2.77 and -2.65; it is not safe to claim a retained exact-lattice wavefield mechanism beyond this conditional depth probe."
     },
     "source_resolved_wavefield_v2_note": {
       "audit_date": null,
