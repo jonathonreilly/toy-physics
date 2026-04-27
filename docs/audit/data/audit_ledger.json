@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T21:40:54.879903+00:00",
-  "generated_at": "2026-04-27T21:40:53.136155+00:00",
-  "invalidation_run_at": "2026-04-27T21:40:54.821223+00:00",
+  "effective_status_computed_at": "2026-04-27T21:41:40.604027+00:00",
+  "generated_at": "2026-04-27T21:41:38.831391+00:00",
+  "invalidation_run_at": "2026-04-27T21:41:40.549574+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T21:40:54.692320+00:00",
+  "load_bearing_computed_at": "2026-04-27T21:41:40.416558+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -64554,7 +64554,7 @@
       "open_dependency_paths": [],
       "previous_audits": [
         {
-          "archived_at": "2026-04-27T21:40:53.135548+00:00",
+          "archived_at": "2026-04-27T21:41:38.830384+00:00",
           "archived_for_note_hash": "c273897e988edd68462ddf3b99efa407a5473b5ec1ad2a8f8eca3b99839a3f46",
           "audit_date": null,
           "audit_status": "unaudited",
@@ -84102,7 +84102,7 @@
           "verdict_rationale": null
         },
         {
-          "archived_at": "2026-04-27T21:40:53.136023+00:00",
+          "archived_at": "2026-04-27T21:41:38.831206+00:00",
           "archived_for_note_hash": "4f5b3aa7850ed4874f8061865f021805b62d40031fe088181c5067febda513b8",
           "audit_date": "2026-04-27T02:17:53.072452+00:00",
           "audit_status": "audited_conditional",
@@ -86039,14 +86039,21 @@
       "verdict_rationale": "Issue: the definitive shared-Fierz no-go is based on a hard-coded Rep-A/Rep-B diagram taxonomy plus an unproved rule that the D12 color Fierz and S2 Clifford Fierz cannot change diagram topology or renormalization type. Why this blocks: a checklist of nonshared pieces is not a formal no-go theorem for all algebraic rearrangements of D12+S2 on the canonical lattice surface, and the runner does not derive the one-loop piece lists from the retained action. Repair target: derive the Rep-A and Rep-B one-loop diagram sets from the C1+C2 lattice Feynman rules, formalize D12 and S2 as linear maps acting within fixed color/Clifford tensor spaces, and prove invariants showing they cannot map self-energy, operator-renormalization, and vertex-integral sectors into one another. Claim boundary until fixed: safe to claim that under the stated standard one-loop catalog, only external Z_psi is exactly shared and the remaining listed channels require BZ evaluation; not safe to claim a definitive retained no-go against every D12/S2 shortcut."
     },
     "yt_p2_f_yt_loop_geometric_bound_note_2026-04-17": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": 0.93,
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies retained-input arithmetic, the observed 1->2 shift, the chosen r_M envelope, and the geometric sum. It does not compute any 3-loop/higher integrated SM-RGE contribution or prove the all-orders geometric ratio bound for the coupled RGE series; the source note explicitly labels the extension to n>=3 as a structural assumption.",
       "claim_id": "yt_p2_f_yt_loop_geometric_bound_note_2026-04-17",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -86054,18 +86061,28 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Assuming |delta_M_(n+1)| <= r_M |delta_M_n| for all n>=2 with r_M=(alpha_LM/pi)b_0, sum a geometric tail from the observed two-loop shift delta_M_2=0.047 and conclude the P2 loop-expansion axis is closed at 0.677%.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "69a993465aa64edafb45ac22088b4e0d68960ed608baab29d3cfaee010c45de3",
       "note_path": "docs/YT_P2_F_YT_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md",
+        "docs/YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md",
+        "docs/YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md",
+        "docs/YT_P3_K_SERIES_GEOMETRIC_BOUND_NOTE_2026-04-17.md",
+        "docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md",
+        "docs/YT_EW_COLOR_PROJECTION_THEOREM.md",
+        "docs/YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md",
+        "docs/UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md",
+        "missing retained 3-loop/higher SM-RGE tail computation or theorem"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.370346+00:00",
@@ -86094,16 +86111,18 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "class_A_exact_arithmetic_or_identity": 28,
+        "class_B_dependency_or_assumption_checks": 19,
+        "class_C_scenario_or_heuristic_checks": 0,
+        "class_D_unchecked_load_bearing_steps": 1,
+        "notes": "Runner PASS=48 FAIL=0. The unchecked load-bearing step is the all-orders geometric ratio bound for the actual coupled SM-RGE integrated M shifts; runner validates arithmetic after assuming the envelope.",
+        "total_fail": 0,
+        "total_pass": 48
       },
       "runner_path": "scripts/frontier_yt_p2_f_yt_loop_geometric_bound.py",
       "title": "P2 F_yt Loop-Expansion Geometric Tail Bound on the v-Matching Coefficient M",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the claimed P2 loop-expansion closure rests on the explicit assumption |delta_M_(n+1)| <= r_M |delta_M_n| for all n>=2, and the runner only checks that r_M=(alpha_LM/pi)b_0 envelopes the observed 1->2 shift before summing a geometric series. The note also blurs the loop variable by stating M=prefactor*F_yt while using an aggregate M^(2)-M^(1)=0.047 that is far larger than the stated pure F_yt^(2)-F_yt^(1)=0.0003. Why this blocks: an assumed all-orders bound on the coupled SM-RGE transport cannot close the P2 loop-expansion axis, and the M/F_yt definition must be precise before a tail on M can be assigned to a tail on F_yt and m_t. Repair target: run or prove the retained 3-loop SM-RGE transport, or prove an all-orders Borel/renormalon/geometric remainder theorem for the actual coupled (y_t,g_3,g_2,g_1) integration, with a single unambiguous definition of M^(n), F_yt^(n), and delta_M_n. Claim boundary until fixed: safe to claim the observed 1->2 shift, r_M=0.22126 arithmetic, and the conditional tail 0.01335 (0.677%) if the geometric bound and aggregate-M definition are accepted; not safe to claim the P2 loop-expansion axis is framework-natively closed."
     },
     "yt_p2_taste_staircase_beta_functions_note_2026-04-17": {
       "audit_date": null,

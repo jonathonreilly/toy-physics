@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T21:40:55.142533+00:00
+**Generated:** 2026-04-27T21:41:40.862657+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 72 |
-| _proposed_retained_ | 11 |
+| _proposed_retained_ | 10 |
 | _proposed_promoted_ | 1 |
 | bounded | 185 |
 | support | 107 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 6 |
 | ~~audited_renaming~~ | 3 |
 | ~~audited_conditional~~ | 356 |
-| ~~audited_failed~~ | 139 |
+| ~~audited_failed~~ | 140 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 72 |
 | `audited_conditional` | 144 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 72 |
+| `audited_failed` | 73 |
 | `audited_numerical_match` | 6 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1312 |
+| `unaudited` | 1311 |
 
 | criticality | count |
 |---|---:|
@@ -391,6 +391,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `yt_p1_h_unit_renormalization_framework_native_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `yt_p1_loop_geometric_bound_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `yt_p2_f_yt_loop_geometric_bound_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `bell_inequality_derived_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ew_coupling_derivation_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -5016,6 +5017,28 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `YT_COLOR_PROJECTION_CORRECTION_NOTE.md`
   - `YT_P1_I1_LATTICE_PT_SYMBOLIC_DECOMPOSITION_NOTE_2026-04-17.md`
 - **auditor confidence:** 0.86
+
+### `yt_p2_f_yt_loop_geometric_bound_note_2026-04-17`
+
+- **Note:** [`YT_P2_F_YT_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md`](../../docs/YT_P2_F_YT_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Assuming |delta_M_(n+1)| <= r_M |delta_M_n| for all n>=2 with r_M=(alpha_LM/pi)b_0, sum a geometric tail from the observed two-loop shift delta_M_2=0.047 and conclude the P2 loop-expansion axis is closed at 0.677%.  _(class `B`)_
+- **chain closes:** False — The runner verifies retained-input arithmetic, the observed 1->2 shift, the chosen r_M envelope, and the geometric sum. It does not compute any 3-loop/higher integrated SM-RGE contribution or prove the all-orders geometric ratio bound for the coupled RGE series; the source note explicitly labels the extension to n>=3 as a structural assumption.
+- **rationale:** Issue: the claimed P2 loop-expansion closure rests on the explicit assumption |delta_M_(n+1)| <= r_M |delta_M_n| for all n>=2, and the runner only checks that r_M=(alpha_LM/pi)b_0 envelopes the observed 1->2 shift before summing a geometric series. The note also blurs the loop variable by stating M=prefactor*F_yt while using an aggregate M^(2)-M^(1)=0.047 that is far larger than the stated pure F_yt^(2)-F_yt^(1)=0.0003. Why this blocks: an assumed all-orders bound on the coupled SM-RGE transport cannot close the P2 loop-expansion axis, and the M/F_yt definition must be precise before a tail on M can be assigned to a tail on F_yt and m_t. Repair target: run or prove the retained 3-loop SM-RGE transport, or prove an all-orders Borel/renormalon/geometric remainder theorem for the actual coupled (y_t,g_3,g_2,g_1) integration, with a single unambiguous definition of M^(n), F_yt^(n), and delta_M_n. Claim boundary until fixed: safe to claim the observed 1->2 shift, r_M=0.22126 arithmetic, and the conditional tail 0.01335 (0.677%) if the geometric bound and aggregate-M definition are accepted; not safe to claim the P2 loop-expansion axis is framework-natively closed.
+- **open / conditional deps cited:**
+  - `YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md`
+  - `YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md`
+  - `YT_P1_LOOP_GEOMETRIC_BOUND_NOTE_2026-04-17.md`
+  - `YT_P3_K_SERIES_GEOMETRIC_BOUND_NOTE_2026-04-17.md`
+  - `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`
+  - `YT_EW_COLOR_PROJECTION_THEOREM.md`
+  - `YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md`
+  - `UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md`
+  - `missing retained 3-loop/higher SM-RGE tail computation or theorem`
+- **auditor confidence:** 0.93
 
 ### `yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17`
 
