@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T11:26:03.833031+00:00
+**Generated:** 2026-04-27T11:30:06.512586+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 28 |
-| _proposed_retained_ | 164 |
+| **retained** | 29 |
+| _proposed_retained_ | 163 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 101 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 28 |
+| `audited_clean` | 29 |
 | `audited_conditional` | 81 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 22 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1457 |
+| `unaudited` | 1456 |
 
 | criticality | count |
 |---|---:|
@@ -116,6 +116,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `equivalence_principle_harness_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `fixed_field_complex_grown_basin_v2_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `fixed_field_family_unification_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `fixed_field_grown_transfer_scout_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `i3_zero_exact_theorem_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `independent_generators_heldout_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -1237,6 +1238,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** On the same retained grown row at drift 0.2 restore 0.7 seed 0, the runner checks both the signed-source branch with exact zero/neutral controls and near-linear charge response, and the complex-action branch with the gamma=0 baseline plus absorptive gamma=0.2 and gamma=0.5 responses.  _(class `C`)_
 - **chain closes:** True — The live runner reproduces the frozen row: zero and neutral sign-source controls are exactly 0, plus/minus signs are opposite, the charge exponent is 0.999833, and the complex branch gives the stated gamma=0 baseline, negative gamma=0.2/gamma=0.5 deltas, and escape values. The conclusion is restricted to the single retained grown row and does not claim geometry-generic or continuum unification.
 - **rationale:** The artifact is a direct same-row computation rather than a static synthesis: it recomputes the sign-law controls and the complex-action responses under the same grown-row parameters. The source note keeps the claim compact and explicitly excludes geometry-generic and continuum extensions, so the chain closes at that finite comparison surface. Residual boundary: the cited sign-transfer companion note is not itself audited retained in the ledger, but this row's load-bearing sign-law quantities are recomputed directly here rather than imported.
+- **auditor confidence:** high
+
+### `fixed_field_grown_transfer_scout_note`
+
+- **Note:** [`FIXED_FIELD_GROWN_TRANSFER_SCOUT_NOTE.md`](../../docs/FIXED_FIELD_GROWN_TRANSFER_SCOUT_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** the retained grown row preserves the scalar sign response in the fixed-field scout; zero-source and neutral same-point controls reduce to printed zero; the single-source response is approximately linear in source charge  _(class `C`)_
+- **chain closes:** True — The live runner recomputes the finite grown-row signed-source table, exact zero/neutral controls, and charge-linearity exponent from the specified row rather than importing the table. The source note explicitly limits the claim to drift=0.2, restore=0.7 fixed-field propagation and excludes geometry-generic or Maxwell-level claims.
+- **rationale:** The load-bearing claim is a bounded finite computation: on the specified grown row, the runner reproduces zero-source and neutral cancellation, opposite signs for +1 and -1 sources, like/dipole controls, and near-linear +1 to +2 scaling. The companion grown-geometry control values are consistent with the one-hop companion note already audited clean, while the present source note does not use them to derive a geometry-generic theorem. Residual boundary: the source cites a stale companion replay log filename, but the signed-source claim itself closes through the current scout runner and the available companion artifact.
 - **auditor confidence:** high
 
 ### `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25`

@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 88,
     "high": 506,
-    "leaf": 788,
+    "leaf": 787,
     "medium": 78
   },
-  "generated_at": "2026-04-27T11:26:03.667569+00:00",
+  "generated_at": "2026-04-27T11:30:06.367002+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -20386,23 +20386,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "fixed_field_grown_transfer_scout_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/FIXED_FIELD_GROWN_TRANSFER_SCOUT_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "flagship_paper_contribution_statement_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -29594,6 +29577,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1049,
-  "total_pending": 1460
+  "ready_count": 1048,
+  "total_pending": 1459
 }
