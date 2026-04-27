@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T18:47:03.480907+00:00",
-  "generated_at": "2026-04-27T18:47:01.885617+00:00",
-  "invalidation_run_at": "2026-04-27T18:47:03.433194+00:00",
+  "effective_status_computed_at": "2026-04-27T18:48:31.390284+00:00",
+  "generated_at": "2026-04-27T18:48:29.825468+00:00",
+  "invalidation_run_at": "2026-04-27T18:48:31.343270+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T18:47:03.336946+00:00",
+  "load_bearing_computed_at": "2026-04-27T18:48:31.245126+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -74303,14 +74303,21 @@
       "verdict_rationale": "Issue: The current runner confirms the reported bounded basin, but the note's retained interpretation depends on an unaudited boundary note and on treating five passing drift/seed rows as a real basin rather than a finite sampled pocket. Why this blocks: exact controls and sign orientation close for the passing rows, but they do not prove a stable family-level basin or an independent geometry theorem beyond the tested grid. Repair target: audit the boundary note and add a holdout/tolerance harness or theorem defining the basin over a drift interval and seed family, not just the sampled rows. Claim boundary until fixed: safe to claim the live sweep has 5/15 passing rows, exact zero and neutral controls on the table, drift coverage 0.1/0.2/0.3 among passes, and mean exponent 0.999842; not safe to claim audit-clean retained third-grown-family closure beyond that finite bounded pocket."
     },
     "three_family_card_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The source table itself leaves Family 3 Distance alpha as '(not yet)', and no runner is provided to recompute the 9-property comparison, so the headline 9/9 three-family match does not close.",
       "claim_id": "three_family_card_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -74318,13 +74325,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Three independent grown families produce quantitatively identical physics on all 9 measurable properties to within 5%.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "24670b4ad521f05c8b58506f3eaaed05759005045617f03ca52a1505d4208379",
@@ -74367,7 +74374,7 @@
       "runner_path": null,
       "title": "Three Independent Grown Families: 9/9 Properties Match",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The note claims three families match on all 9 measurable properties, but the table explicitly has Family 3 Distance alpha marked '(not yet)' and the note provides no runner or log artifact to verify the cross-family card. Why this blocks: the load-bearing 9/9 statement is false on the face of the supplied table, and the broader inference that observables are geometry-independent cannot follow from a partial, hand-entered comparison. Repair target: add a runner that recomputes every listed property for all three families, including Family 3 Distance alpha, with explicit <5% assertions and at least one holdout check. Claim boundary until fixed: safe to cite this as a partial comparison of three selected drift/restore rows with eight populated properties and distance-alpha data only for Families 1 and 2; not safe to claim 9/9 three-family equality or geometry-independence."
     },
     "three_generation_chirality_boundary_note": {
       "audit_date": null,
