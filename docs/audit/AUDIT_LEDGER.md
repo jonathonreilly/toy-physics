@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T11:44:49.969886+00:00
+**Generated:** 2026-04-27T11:48:38.065727+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 29 |
-| _proposed_retained_ | 165 |
+| **retained** | 30 |
+| _proposed_retained_ | 164 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 107 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 29 |
+| `audited_clean` | 30 |
 | `audited_conditional` | 81 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 22 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1469 |
+| `unaudited` | 1468 |
 
 | criticality | count |
 |---|---:|
@@ -117,6 +117,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `fixed_field_complex_grown_basin_v2_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `fixed_field_family_unification_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `fixed_field_grown_transfer_scout_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `fm_transfer_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `i3_zero_exact_theorem_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `independent_generators_heldout_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -1250,6 +1251,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** the retained grown row preserves the scalar sign response in the fixed-field scout; zero-source and neutral same-point controls reduce to printed zero; the single-source response is approximately linear in source charge  _(class `C`)_
 - **chain closes:** True — The live runner recomputes the finite grown-row signed-source table, exact zero/neutral controls, and charge-linearity exponent from the specified row rather than importing the table. The source note explicitly limits the claim to drift=0.2, restore=0.7 fixed-field propagation and excludes geometry-generic or Maxwell-level claims.
 - **rationale:** The load-bearing claim is a bounded finite computation: on the specified grown row, the runner reproduces zero-source and neutral cancellation, opposite signs for +1 and -1 sources, like/dipole controls, and near-linear +1 to +2 scaling. The companion grown-geometry control values are consistent with the one-hop companion note already audited clean, while the present source note does not use them to derive a geometry-generic theorem. Residual boundary: the source cites a stale companion replay log filename, but the signed-source claim itself closes through the current scout runner and the available companion artifact.
+- **auditor confidence:** high
+
+### `fm_transfer_note`
+
+- **Note:** [`FM_TRANSFER_NOTE.md`](../../docs/FM_TRANSFER_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Mass-law transfer agrees within uncertainty on the retained grown-row neighborhood (drift=0.2, restore=0.7).  _(class `C`)_
+- **chain closes:** True — The live runner recomputes the fixed-lattice F~M exponent, six grown-seed F~M exponents at drift=0.2 and restore=0.7, their mean/spread, and the fixed-grown sigma comparison. The note explicitly excludes geometry-generic transfer, other drift/restore values, and other observables.
+- **rationale:** The claim is a bounded numerical computation, not a broad universality theorem: the current runner reproduces the frozen fixed exponent, all six grown-seed exponents, the grown aggregate, and the 0.3 sigma fixed-grown comparison. The source note keeps the conclusion on the specified grown row and explicitly does not claim other geometries, drift/restore values, or observables. Residual boundary: the quoted uncertainty is the finite six-seed grown spread used by the runner, so the retained content is only this finite transfer check.
 - **auditor confidence:** high
 
 ### `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25`
