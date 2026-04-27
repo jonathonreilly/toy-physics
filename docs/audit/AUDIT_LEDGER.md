@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T07:54:52.892289+00:00
+**Generated:** 2026-04-27T07:58:31.583788+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 12 |
-| _proposed_retained_ | 214 |
+| _proposed_retained_ | 213 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
 | ~~audited_conditional~~ | 272 |
-| ~~audited_failed~~ | 74 |
+| ~~audited_failed~~ | 75 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 12 |
 | `audited_conditional` | 61 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 8 |
+| `audited_failed` | 9 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1509 |
+| `unaudited` | 1508 |
 
 | criticality | count |
 |---|---:|
@@ -176,6 +176,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `koide_q_eq_3delta_identity_note_2026-04-21` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `retained_cross_lane_consistency_support_note_2026-04-22` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | B | - |
+| `causal_field_reconciliation_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `causal_propagating_field_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `equivalence_principle_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | G | - |
 | `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
@@ -287,6 +288,24 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `CAUSAL_ESCAPE_WINDOW_NOTE.md_not_registered_one_hop`
   - `diamond_NV_lab_bridge_notes_not_registered_one_hop`
   - `causal_field_primary_runner_not_registered`
+- **auditor confidence:** high
+
+### `causal_field_reconciliation_note`
+
+- **Note:** [`CAUSAL_FIELD_RECONCILIATION_NOTE.md`](../../docs/CAUSAL_FIELD_RECONCILIATION_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note concludes that the low-SNR fixed-anchor cross-family replay diagnoses a harness boundary and is not a refutation of the retained center-family causal-field result.  _(class `C`)_
+- **chain closes:** False — The live portability runner reproduces the fixed-anchor exact-null and family-boundary table, but the retained center-family result is not replayable from its cited runner and the reconciliation diagnostic logs needed for source-placement and field-strength-scan claims are absent.
+- **rationale:** Issue: the reconciliation note preserves a proposed-retained center-family causal-field result while the cited causal-field runner emits no executable verification, and the cited reconciliation diagnostic logs for source-node shifts and field-strength scans are missing from the audit packet. Why this blocks: a hostile physicist can replay the portability runner and accept the exact-null control plus fixed-anchor family-boundary table, but cannot verify the original 0.45 center-family dynamic-cone observable, its claimed seed/strength stability, or the diagnosis that source placement rather than another artifact causes the mismatch. Repair target: restore an executable center-family causal-field runner with archived output and hard assertions for instantaneous/forward/dynamic ratios and seed/strength stability; restore or recreate the reconciliation diagnostic runner/log showing selected source-node shifts and the field-strength scan; then register the causal-field and portability notes as explicit one-hop dependencies. Claim boundary until fixed: it is safe to claim that the current fixed-anchor portability runner has exact zero-source control and shows nonportable forward/dynamic ratios across three grown families; it is not safe to retain the center-family causal-field result or the reconciliation diagnosis as an audited retained conclusion.
+- **open / conditional deps cited:**
+  - `CAUSAL_PROPAGATING_FIELD_NOTE.md_center_family_result_not_replayable`
+  - `scripts/causal_propagating_field.py_contains_no_executable_computation`
+  - `logs/2026-04-06-causal-field-portability-probe.txt_missing`
+  - `logs/2026-04-06-causal-field-reconciliation-diagnostic.txt_missing`
+  - `source_placement_and_field_strength_scan_diagnosis_not_reproducible`
 - **auditor confidence:** high
 
 ### `causal_propagating_field_note`
