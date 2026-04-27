@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T06:20:17.841650+00:00
+**Generated:** 2026-04-27T06:23:01.189888+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 6 |
-| _proposed_retained_ | 236 |
+| _proposed_retained_ | 235 |
 | _proposed_promoted_ | 6 |
 | bounded | 184 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
-| ~~audited_conditional~~ | 257 |
+| ~~audited_conditional~~ | 258 |
 | ~~audited_failed~~ | 68 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 6 |
-| `audited_conditional` | 52 |
+| `audited_conditional` | 53 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 4 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1528 |
+| `unaudited` | 1527 |
 
 | criticality | count |
 |---|---:|
@@ -146,6 +146,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `sign_portability_invariant_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `strong_cp_theta_zero_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
+| `structured_chokepoint_bridge_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `unpromoted_branch_retainability_audit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `wave_equation_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -1156,6 +1157,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `retained_action_surface_no_theta_slot_theorem_not_registered`
   - `positive_real_quark_mass_orientation_theorem_not_registered`
   - `theta_free_surface_selection_not_dynamical_theta_minimization`
+- **auditor confidence:** high
+
+### `structured_chokepoint_bridge_note`
+
+- **Note:** [`STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md`](../../docs/STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The structured bridge pocket is Born-clean at machine precision and keeps positive gravity across the narrow probe set.  _(class `C`)_
+- **chain closes:** False — The live runner reproduces the finite table, but the retained bridge claim depends on a selected structured-placement slice and an imported canonical mirror readout that are not registered as audited dependencies or asserted as hard gates.
+- **rationale:** Issue: the runner supports the finite N=25,40,60 structured chokepoint card, but the note promotes that selected slice as a retained bridge pocket without a registered canonical-readout dependency or theorem selecting the graph parameters. Why this blocks: a hostile auditor can verify the printed table, but cannot infer architecture-level bridge closure, asymptotic behavior, or readout-independent survival from the current packet; the runner also prints diagnostics rather than enforcing hard assertions for Born, k=0, gravity significance, and decoherence gates. Repair target: register the canonical mirror chokepoint harness as a one-hop dependency, add hard assertions/tolerances for the retained gates, and either derive the structured placement/readout selection or state the claim strictly as a finite parameter-card result. Claim boundary until fixed: it is safe to claim the current finite card: for the specified structured placement with NPL_HALF=25, connect_radius=3.5, layer_jitter=0.25, 16 seeds, and N=25/40/60, the runner reports machine-clean Born, zero k=0, positive mean gravity, nontrivial d_TV, and N=60 pur_cl around 0.803; it is not a broader structured-architecture or asymptotic bridge theorem.
+- **open / conditional deps cited:**
+  - `scripts/mirror_chokepoint_joint.py_canonical_readout_not_registered_one_hop_dependency`
+  - `structured_placement_parameter_selection_not_derived`
+  - `runner_prints_diagnostics_without_hard_gate_assertions`
 - **auditor confidence:** high
 
 ### `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22`
