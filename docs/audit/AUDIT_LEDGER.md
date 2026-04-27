@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T09:15:43.505740+00:00
+**Generated:** 2026-04-27T09:20:23.982512+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 17 |
-| _proposed_retained_ | 197 |
+| **retained** | 18 |
+| _proposed_retained_ | 196 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 17 |
+| `audited_clean` | 18 |
 | `audited_conditional` | 69 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 12 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1492 |
+| `unaudited` | 1491 |
 
 | criticality | count |
 |---|---:|
@@ -104,6 +104,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `alt_connectivity_family_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_fm_transfer_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_sign_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `claude_complex_action_carryover_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `i3_zero_exact_theorem_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -478,6 +479,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `ALPHA_S_DERIVED_NOTE.md`
   - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
   - `PDG_2024_mass_and_alpha_s_inputs`
+- **auditor confidence:** high
+
+### `claude_complex_action_carryover_note`
+
+- **Note:** [`CLAUDE_COMPLEX_ACTION_CARRYOVER_NOTE.md`](../../docs/CLAUDE_COMPLEX_ACTION_CARRYOVER_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note's load-bearing narrow claim is that the branch exact-lattice complex-action harness carries over on main: gamma=0 exactly reduces to the baseline, Born remains machine-clean on the frozen field, and increasing gamma drives a TOWARD-to-AWAY crossover while escape falls.  _(class `C`)_
+- **chain closes:** True — The live runner reproduces the exact-lattice h=0.5, W=6, L=30 table in the source note, including gamma=0 delta +9.339748e-02, Born values 2.409e-15/3.941e-16/1.236e-16, and the gamma crossover between 0.05 and 0.10. The result is narrow to this exact-lattice frozen-field harness and does not imply geometry independence, continuum closure, or a self-gravity effective-theory derivation.
+- **rationale:** The source note deliberately scopes the claim to a finite exact-lattice carryover, and the live runner computes all load-bearing quantities rather than importing the table: the gamma=0 reduction, three Born tests, and six gamma sweep rows all match the note. The note explicitly excludes geometry-generic, continuum, and Poisson-self-gravity effective-theory claims, so the retained result is only the narrow harness replay. Residual risk is provenance hygiene: the linked frozen log is absent from logs/, but the current runner output reproduces the frozen result.
 - **auditor confidence:** high
 
 ### `complex_action_note`
