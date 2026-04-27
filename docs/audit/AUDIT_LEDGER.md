@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T07:44:24.279020+00:00
+**Generated:** 2026-04-27T07:47:39.067313+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 11 |
-| _proposed_retained_ | 217 |
+| **retained** | 12 |
+| _proposed_retained_ | 216 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 11 |
+| `audited_clean` | 12 |
 | `audited_conditional` | 60 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 8 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1511 |
+| `unaudited` | 1510 |
 
 | criticality | count |
 |---|---:|
@@ -111,6 +111,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `planck_finite_response_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `area_law_quarter_broader_no_go_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `causal_field_canonical_chain_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -1488,6 +1489,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md_unknown_unaudited`
   - `asymptotic_bridge_slice_dependence_open`
   - `4D_tail_law_transfer_norm_Gate_B_and_UV_completion_open`
+- **auditor confidence:** high
+
+### `vector_magnetic_extension_note`
+
+- **Note:** [`VECTOR_MAGNETIC_EXTENSION_NOTE.md`](../../docs/VECTOR_MAGNETIC_EXTENSION_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note claims a proposed-retained narrow extension: on a compact exact lattice, a bounded odd-in-v moving-source centroid response survives exact zero/static controls while the circulation-like plaquette candidate remains null.  _(class `C`)_
+- **chain closes:** True — The live runner exactly reproduces the source-note card: zero-source static, zero-source moving, and zero-source plaquette-circulation controls are all 0.000e+00; the v=0 matched static lane has delta_y vs static +0.000000e+00; nonzero velocities give symmetric signed responses, with v=+1.00 at +2.084652e-05 and v=-1.00 at -2.084652e-05; all probed circulation phases remain +0.000e+00.
+- **rationale:** The finite proxy claim closes on its own terms: the runner builds the compact exact-lattice card, applies exact zero and matched static controls, verifies a 4/4 odd-sign moving-source centroid response, and verifies null final-layer plaquette circulation. This clean audit is narrow: it certifies only the displayed compact-family moving-source signed response and null circulation candidate; it does not certify full electromagnetism, magnetic induction, gauge-field structure, a vector-field theory, or portability beyond this compact exact-lattice card.
 - **auditor confidence:** high
 
 ### `wave_equation_self_field_note`
