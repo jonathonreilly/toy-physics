@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T14:29:57.883786+00:00",
-  "generated_at": "2026-04-27T14:29:56.300103+00:00",
-  "invalidation_run_at": "2026-04-27T14:29:57.838374+00:00",
+  "effective_status_computed_at": "2026-04-27T14:33:44.024913+00:00",
+  "generated_at": "2026-04-27T14:33:42.419912+00:00",
+  "invalidation_run_at": "2026-04-27T14:33:43.978810+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T14:29:57.742687+00:00",
+  "load_bearing_computed_at": "2026-04-27T14:33:43.883993+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -37976,14 +37976,21 @@
       "verdict_rationale": null
     },
     "inverse_problem_graph_requirements_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner reproduces the finite mixed perturbation table, including baseline/asymmetry/jitter/sparse TOWARD rows and a heavy_delete_70 AWAY row. That closes a bounded harness result, but not the proposed-retained queue interpretation or a retained inverse-problem theorem.",
       "claim_id": "inverse_problem_graph_requirements_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -37991,18 +37998,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The retained family is robust to several natural perturbations, but heavy 70% edge deletion is too much and can reverse the sign, so the graph requirement is a bounded tested-perturbation statement rather than a universal theorem.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "b5313db5bb6b61eadd53b1a31d2be3e5304df9d7b68fd560ca6d7b83f57c2f9e",
       "note_path": "docs/INVERSE_PROBLEM_GRAPH_REQUIREMENTS_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/NEWTON_DERIVATION_NOTE.md",
+        "docs/ACTION_UNIQUENESS_NOTE.md",
+        "docs/PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368738+00:00",
@@ -38033,14 +38044,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 5,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 5
       },
       "runner_path": null,
       "title": "Inverse Problem Graph Requirements Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the source status is explicitly `bounded graph-requirements harness`, and the live runner is mixed: heavy 70% edge deletion flips AWAY even though Born and controls remain clean. Why this blocks: the queued proposed-retained interpretation would promote a graph-requirements theorem, but the source and runner only support a bounded perturbation-slice result, with one tested perturbation failing. Repair target: change the row status/classification to bounded, or produce a theorem/runner that states the exact graph-perturbation class for which Newton+Born survive and audits the cited derivation inputs. Claim boundary until fixed: safely claim only the finite harness output: baseline, asym_zpos_removed, jitter_0.5h, and sparse_nn_only are TOWARD; heavy_delete_70 is AWAY; Born is machine-clean and k=0/no-field controls are zero on all tested rows."
     },
     "inverse_problem_note": {
       "audit_date": null,

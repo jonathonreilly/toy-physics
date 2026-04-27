@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T14:29:58.068674+00:00
+**Generated:** 2026-04-27T14:33:44.224698+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 47 |
-| _proposed_retained_ | 129 |
+| _proposed_retained_ | 128 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
 | ~~audited_conditional~~ | 307 |
-| ~~audited_failed~~ | 98 |
+| ~~audited_failed~~ | 99 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 47 |
 | `audited_conditional` | 94 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 31 |
+| `audited_failed` | 32 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1429 |
+| `unaudited` | 1428 |
 
 | criticality | count |
 |---|---:|
@@ -269,6 +269,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `h0125_failure_derivation` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `h2t_h0125_narrow_bridge_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `if_program_closing_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `inverse_problem_graph_requirements_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `lattice_3d_dense_spent_delay_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `lattice_kernel_transfer_norm_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `mirror_2d_gravity_law_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -2019,6 +2020,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The in-sample classifier rule (avg_deg >= 10.415 and reach_frac >= 0.859) is applied without refit to nine scripted independent generator families, yielding only 2/9 full-battery passes, 4/9 hard-coded prediction accuracy, and 6/9 no-refit rule accuracy.  _(class `C`)_
 - **chain closes:** True — The live runner rebuilds the nine named generator families, applies the same five-condition battery and frozen rule, and reproduces the negative table: only E1_er_p005 and E2_er_p020 pass, hard-coded predictions score 4/9, and the no-refit classifier rule scores 6/9.
 - **rationale:** The finite negative result closes on its own terms: the checked-in runner contains the nine generator constructors, the hard-coded prediction dictionary, the five-condition battery, and the frozen avg_deg/reach_frac rule, and live replay matches the source note's pass/fail and accuracy claims. The decisive rule failures R1, R3, and X1 all satisfy the frozen structural thresholds but fail the actual battery, while only the two Erdős-Rényi families pass the full package. This clean verdict is narrow: it certifies this deterministic nine-family held-out replay and the checked-in prediction table, not an exhaustive statistical theorem over all independent generator laws or independent timestamp proof beyond the artifact chain.
+- **auditor confidence:** high
+
+### `inverse_problem_graph_requirements_note`
+
+- **Note:** [`INVERSE_PROBLEM_GRAPH_REQUIREMENTS_NOTE.md`](../../docs/INVERSE_PROBLEM_GRAPH_REQUIREMENTS_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The retained family is robust to several natural perturbations, but heavy 70% edge deletion is too much and can reverse the sign, so the graph requirement is a bounded tested-perturbation statement rather than a universal theorem.  _(class `C`)_
+- **chain closes:** False — The live runner reproduces the finite mixed perturbation table, including baseline/asymmetry/jitter/sparse TOWARD rows and a heavy_delete_70 AWAY row. That closes a bounded harness result, but not the proposed-retained queue interpretation or a retained inverse-problem theorem.
+- **rationale:** Issue: the source status is explicitly `bounded graph-requirements harness`, and the live runner is mixed: heavy 70% edge deletion flips AWAY even though Born and controls remain clean. Why this blocks: the queued proposed-retained interpretation would promote a graph-requirements theorem, but the source and runner only support a bounded perturbation-slice result, with one tested perturbation failing. Repair target: change the row status/classification to bounded, or produce a theorem/runner that states the exact graph-perturbation class for which Newton+Born survive and audits the cited derivation inputs. Claim boundary until fixed: safely claim only the finite harness output: baseline, asym_zpos_removed, jitter_0.5h, and sparse_nn_only are TOWARD; heavy_delete_70 is AWAY; Born is machine-clean and k=0/no-field controls are zero on all tested rows.
+- **open / conditional deps cited:**
+  - `NEWTON_DERIVATION_NOTE.md`
+  - `ACTION_UNIQUENESS_NOTE.md`
+  - `PERSISTENT_INERTIAL_RESPONSE_READINESS_NOTE.md`
 - **auditor confidence:** high
 
 ### `koide_a1_physical_bridge_attempt_2026-04-22`
