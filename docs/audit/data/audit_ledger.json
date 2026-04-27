@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T07:09:25.650501+00:00",
-  "generated_at": "2026-04-27T07:09:23.637223+00:00",
-  "invalidation_run_at": "2026-04-27T07:09:25.595064+00:00",
+  "effective_status_computed_at": "2026-04-27T07:20:14.677599+00:00",
+  "generated_at": "2026-04-27T07:20:12.822631+00:00",
+  "invalidation_run_at": "2026-04-27T07:20:14.602525+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T07:09:25.450240+00:00",
+  "load_bearing_computed_at": "2026-04-27T07:20:14.450791+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -41616,8 +41616,8 @@
         "dimensional_gravity_table"
       ],
       "direct_in_degree": 1,
-      "effective_status": "unknown",
-      "effective_status_reason": "inherited_from:dimensional_gravity_table",
+      "effective_status": "audited_conditional",
+      "effective_status_reason": "inherited_from:valley_linear_continuum_synthesis_note",
       "independence": null,
       "intrinsic_status": "bounded",
       "load_bearing_score": 2.085,
@@ -74521,14 +74521,21 @@
       "verdict_rationale": null
     },
     "valley_linear_continuum_synthesis_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 2.5,
+        "transitive_descendants": 3
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The primary same-harness replay reproduces the bounded valley-linear comparison, and the decoherence replay verifies exact action-independence on the tested zero-field family. The synthesis chain does not close cleanly because the analytic derivation is not registered/audited, the cited lattice notes are bounded or unknown and unaudited, and the note explicitly leaves the asymptotic bridge, 4D tail, transfer-norm, Gate B, and UV-completion reading open.",
       "claim_id": "valley_linear_continuum_synthesis_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -74536,18 +74543,27 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 2.5,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note synthesizes a continuum valley-linear 1/b derivation with bounded lattice artifacts, claiming a real ordered-lattice action fork with near-Newtonian 3D finite-lattice behavior, action-independent decoherence on the tested family, and remaining open 4D/Gate-B/asymptotic questions.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "1fa18a23f24ea90bcc64e94d2345525fba586ab1585f5f0e14b847dcbc5b7152",
       "note_path": "docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        ".claude/science/derivations/valley-linear-distance-law-2026-04-04.md_not_registered_or_audited",
+        "docs/VALLEY_LINEAR_ACTION_NOTE.md_bounded_unaudited",
+        "docs/VALLEY_LINEAR_ROBUSTNESS_NOTE.md_bounded_unaudited",
+        "docs/VALLEY_LINEAR_ASYMPTOTIC_BRIDGE_NOTE.md_bounded_unaudited",
+        "docs/DIMENSIONAL_GRAVITY_TABLE.md_unknown_unaudited",
+        "docs/DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md_unknown_unaudited",
+        "asymptotic_bridge_slice_dependence_open",
+        "4D_tail_law_transfer_norm_Gate_B_and_UV_completion_open"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.370030+00:00",
@@ -74585,7 +74601,7 @@
       "runner_path": null,
       "title": "Valley-Linear Continuum Synthesis Note",
       "transitive_descendants": 3,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the bounded synthesis is plausible as a finite artifact summary, but it is not a clean proposed-retained continuum theorem because every load-bearing upstream packet is either bounded/unknown, unaudited, or explicitly open. Why this blocks: a hostile auditor can replay the same-family comparison (Born 4.20e-15, k=0 zero, valley-linear F~M 1.00, tail -0.93) and the decoherence identity (zero deltas across actions at h=1.0, 0.5, 0.25), but cannot promote the synthesis while the continuum derivation lives outside the audit ledger, the asymptotic bridge remains slice-dependent, dimensional and decoherence notes have unknown audit status, and the note itself says the 4D, Gate B, transfer-norm, and UV-completion readings are open. Repair target: register/audit the analytic derivation, audit VALLEY_LINEAR_ACTION_NOTE, VALLEY_LINEAR_ROBUSTNESS_NOTE, VALLEY_LINEAR_ASYMPTOTIC_BRIDGE_NOTE, DIMENSIONAL_GRAVITY_TABLE, and DECOHERENCE_ACTION_INDEPENDENCE_NOTE, add a synthesis runner that asserts the exact finite rows and the open boundaries, and resolve whether the derivation is a theorem or only an effective continuum approximation. Claim boundary until fixed: it is safe to claim a bounded ordered-lattice action-fork summary: the live runners support the finite h=0.25 same-family comparison and tested zero-field decoherence identity, but not a universal continuum theorem, 4D law, Gate-B transfer, or final closure claim."
     },
     "valley_linear_mirror_transfer_note": {
       "audit_date": null,

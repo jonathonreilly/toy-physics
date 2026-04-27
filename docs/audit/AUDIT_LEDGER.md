@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T07:09:25.926996+00:00
+**Generated:** 2026-04-27T07:20:14.961035+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,28 +20,28 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 10 |
-| _proposed_retained_ | 221 |
+| _proposed_retained_ | 220 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
 | open | 11 |
-| unknown | 722 |
+| unknown | 721 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
-| ~~audited_conditional~~ | 266 |
+| ~~audited_conditional~~ | 268 |
 | ~~audited_failed~~ | 74 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 10 |
-| `audited_conditional` | 58 |
+| `audited_conditional` | 59 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 8 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1514 |
+| `unaudited` | 1513 |
 
 | criticality | count |
 |---|---:|
@@ -158,6 +158,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `symmetry_head_to_head_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `unpromoted_branch_retainability_audit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `valley_linear_continuum_synthesis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_equation_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_radiation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_retardation_continuum_limit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -1433,6 +1434,27 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `GATE_B_NONLABEL_SIGN_GROWN_TRANSFER_NOTE.md_not_registered_one_hop_dependency`
   - `GROWING_GRAPH_FRONTIER_EXPANSION_PROXY_NOTE.md_not_registered_one_hop_dependency`
   - `scripts/persistent_object_localization_escalation.py_not_registered_one_hop_dependency`
+- **auditor confidence:** high
+
+### `valley_linear_continuum_synthesis_note`
+
+- **Note:** [`VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md`](../../docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note synthesizes a continuum valley-linear 1/b derivation with bounded lattice artifacts, claiming a real ordered-lattice action fork with near-Newtonian 3D finite-lattice behavior, action-independent decoherence on the tested family, and remaining open 4D/Gate-B/asymptotic questions.  _(class `C`)_
+- **chain closes:** False — The primary same-harness replay reproduces the bounded valley-linear comparison, and the decoherence replay verifies exact action-independence on the tested zero-field family. The synthesis chain does not close cleanly because the analytic derivation is not registered/audited, the cited lattice notes are bounded or unknown and unaudited, and the note explicitly leaves the asymptotic bridge, 4D tail, transfer-norm, Gate B, and UV-completion reading open.
+- **rationale:** Issue: the bounded synthesis is plausible as a finite artifact summary, but it is not a clean proposed-retained continuum theorem because every load-bearing upstream packet is either bounded/unknown, unaudited, or explicitly open. Why this blocks: a hostile auditor can replay the same-family comparison (Born 4.20e-15, k=0 zero, valley-linear F~M 1.00, tail -0.93) and the decoherence identity (zero deltas across actions at h=1.0, 0.5, 0.25), but cannot promote the synthesis while the continuum derivation lives outside the audit ledger, the asymptotic bridge remains slice-dependent, dimensional and decoherence notes have unknown audit status, and the note itself says the 4D, Gate B, transfer-norm, and UV-completion readings are open. Repair target: register/audit the analytic derivation, audit VALLEY_LINEAR_ACTION_NOTE, VALLEY_LINEAR_ROBUSTNESS_NOTE, VALLEY_LINEAR_ASYMPTOTIC_BRIDGE_NOTE, DIMENSIONAL_GRAVITY_TABLE, and DECOHERENCE_ACTION_INDEPENDENCE_NOTE, add a synthesis runner that asserts the exact finite rows and the open boundaries, and resolve whether the derivation is a theorem or only an effective continuum approximation. Claim boundary until fixed: it is safe to claim a bounded ordered-lattice action-fork summary: the live runners support the finite h=0.25 same-family comparison and tested zero-field decoherence identity, but not a universal continuum theorem, 4D law, Gate-B transfer, or final closure claim.
+- **open / conditional deps cited:**
+  - `.claude/science/derivations/valley-linear-distance-law-2026-04-04.md_not_registered_or_audited`
+  - `VALLEY_LINEAR_ACTION_NOTE.md_bounded_unaudited`
+  - `VALLEY_LINEAR_ROBUSTNESS_NOTE.md_bounded_unaudited`
+  - `VALLEY_LINEAR_ASYMPTOTIC_BRIDGE_NOTE.md_bounded_unaudited`
+  - `DIMENSIONAL_GRAVITY_TABLE.md_unknown_unaudited`
+  - `DECOHERENCE_ACTION_INDEPENDENCE_NOTE.md_unknown_unaudited`
+  - `asymptotic_bridge_slice_dependence_open`
+  - `4D_tail_law_transfer_norm_Gate_B_and_UV_completion_open`
 - **auditor confidence:** high
 
 ### `wave_equation_self_field_note`

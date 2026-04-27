@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 88,
     "high": 506,
-    "leaf": 845,
+    "leaf": 844,
     "medium": 78
   },
-  "generated_at": "2026-04-27T07:09:25.727438+00:00",
+  "generated_at": "2026-04-27T07:20:14.742791+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -16302,23 +16302,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "valley_linear_continuum_synthesis_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 2.5,
-      "note_path": "docs/VALLEY_LINEAR_CONTINUUM_SYNTHESIS_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 3
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "continuum_limit_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -30563,6 +30546,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1108,
-  "total_pending": 1517
+  "ready_count": 1107,
+  "total_pending": 1516
 }
