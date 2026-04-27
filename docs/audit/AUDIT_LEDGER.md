@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T16:08:14.959956+00:00
+**Generated:** 2026-04-27T16:10:14.606697+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 56 |
-| _proposed_retained_ | 98 |
+| _proposed_retained_ | 97 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 316 |
+| ~~audited_conditional~~ | 317 |
 | ~~audited_failed~~ | 111 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 56 |
-| `audited_conditional` | 103 |
+| `audited_conditional` | 104 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 44 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1397 |
+| `unaudited` | 1396 |
 
 | criticality | count |
 |---|---:|
@@ -231,6 +231,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mirror_mutual_information_chokepoint_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `native_gauge_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `neutrino_dirac_z3_support_trichotomy_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `newton_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `omega_lambda_matter_bridge_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `persistent_object_blended_readout_transfer_sweep_note_2026-04-16` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `persistent_object_top4_multistage_outer_transfer_sweep_note_2026-04-16` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -3012,6 +3013,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `three_generation_matter_structure_dependency_not_registered`
   - `neutrino_dirac_lane_reduction_dependency_not_registered`
   - `single_higgs_z3_charge_condition_not_derived`
+- **auditor confidence:** high
+
+### `newton_derivation_note`
+
+- **Note:** [`NEWTON_DERIVATION_NOTE.md`](../../docs/NEWTON_DERIVATION_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** If the inertial quantity of a persistent pattern is an extensive quantity attached to the same composition law as the field-source parameter s, then m is proportional to s and momentum conservation selects p = 1.  _(class `A`)_
+- **chain closes:** False — The p = 1 selection is algebraic once m is proportional to s is assumed, but the source and support runners explicitly leave the persistent-pattern inertial-mass identification open.
+- **rationale:** Issue: The Newtonian selection step still depends on Principle 3: a persistent-pattern inertial quantity must be extensive under the same composition law as the field-source parameter s. Why this blocks: the live support runners close only amplitude invariance and test-particle source additivity, and the source note itself says no persistent-pattern inertial object has been produced, so the mass map m proportional to s is an explicit conditional premise rather than a retained theorem. Repair target: construct a persistent or quasi-persistent localized lattice state, measure its inertial response and sourced field parameter under the same composition law, and show that the same extensive quantity controls both before rerunning the p = 1 momentum-selection argument. Claim boundary until fixed: it is safe to retain the conditional algebra that linear propagation, phase valley, extensive m proportional to s, and momentum conservation select p = 1 on the ordered-lattice family; it is not safe to claim a closed Newtonian mass-scaling derivation from current inputs.
+- **open / conditional deps cited:**
+  - `EQUIVALENCE_PRINCIPLE_HARNESS_NOTE.md`
+  - `COMPOSITE_SOURCE_ADDITIVITY_NOTE.md`
+  - `COMPOSITE_SOURCE_ADDITIVITY_2D_NOTE.md`
 - **auditor confidence:** high
 
 ### `omega_lambda_matter_bridge_theorem_note_2026-04-22`

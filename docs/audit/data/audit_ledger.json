@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T16:08:14.763062+00:00",
-  "generated_at": "2026-04-27T16:08:13.160281+00:00",
-  "invalidation_run_at": "2026-04-27T16:08:14.717099+00:00",
+  "effective_status_computed_at": "2026-04-27T16:10:14.419795+00:00",
+  "generated_at": "2026-04-27T16:10:12.822976+00:00",
+  "invalidation_run_at": "2026-04-27T16:10:14.373185+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T16:08:14.620920+00:00",
+  "load_bearing_computed_at": "2026-04-27T16:10:14.277848+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -53457,14 +53457,21 @@
       "verdict_rationale": null
     },
     "newton_derivation_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The p = 1 selection is algebraic once m is proportional to s is assumed, but the source and support runners explicitly leave the persistent-pattern inertial-mass identification open.",
       "claim_id": "newton_derivation_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -53472,18 +53479,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "If the inertial quantity of a persistent pattern is an extensive quantity attached to the same composition law as the field-source parameter s, then m is proportional to s and momentum conservation selects p = 1.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "83a571dcc1c0e21bd7f918d94f859f95f349bcc210fb8f182cd7917be7f3582b",
       "note_path": "docs/NEWTON_DERIVATION_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/EQUIVALENCE_PRINCIPLE_HARNESS_NOTE.md",
+        "docs/COMPOSITE_SOURCE_ADDITIVITY_NOTE.md",
+        "docs/COMPOSITE_SOURCE_ADDITIVITY_2D_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369264+00:00",
@@ -53512,16 +53523,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 1,
         "B": 0,
-        "C": 0,
+        "C": 3,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 4
       },
       "runner_path": null,
       "title": "Newtonian Mass Scaling from Four Principles (bounded family-law note)",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The Newtonian selection step still depends on Principle 3: a persistent-pattern inertial quantity must be extensive under the same composition law as the field-source parameter s. Why this blocks: the live support runners close only amplitude invariance and test-particle source additivity, and the source note itself says no persistent-pattern inertial object has been produced, so the mass map m proportional to s is an explicit conditional premise rather than a retained theorem. Repair target: construct a persistent or quasi-persistent localized lattice state, measure its inertial response and sourced field parameter under the same composition law, and show that the same extensive quantity controls both before rerunning the p = 1 momentum-selection argument. Claim boundary until fixed: it is safe to retain the conditional algebra that linear propagation, phase valley, extensive m proportional to s, and momentum conservation select p = 1 on the ordered-lattice family; it is not safe to claim a closed Newtonian mass-scaling derivation from current inputs."
     },
     "newton_law_derived_note": {
       "audit_date": null,
