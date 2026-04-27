@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T13:12:40.138831+00:00
+**Generated:** 2026-04-27T13:14:37.116732+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 46 |
-| _proposed_retained_ | 142 |
+| _proposed_retained_ | 141 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
 | ~~audited_conditional~~ | 302 |
-| ~~audited_failed~~ | 91 |
+| ~~audited_failed~~ | 92 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 46 |
 | `audited_conditional` | 89 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 24 |
+| `audited_failed` | 25 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1442 |
+| `unaudited` | 1441 |
 
 | criticality | count |
 |---|---:|
@@ -256,6 +256,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_note_2026-04-19` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
+| `geometry_superposition_dag_ensemble_note_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `lattice_3d_dense_spent_delay_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `lattice_kernel_transfer_norm_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `mirror_2d_gravity_law_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -1679,6 +1680,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `GAUGE_VACUUM_PLAQUETTE_SPATIAL_ENVIRONMENT_CHARACTER_MEASURE_THEOREM_NOTE.md`
   - `GAUGE_VACUUM_PLAQUETTE_FIRST_SYMMETRIC_THREE_SAMPLE_MINIMAL_POSITIVE_COMPLETION_NOTE_2026-04-19.md`
   - `GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_RANK_ONE_FACTORIZED_CLASS_BOUNDARY_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `geometry_superposition_dag_ensemble_note_2026-04-11`
+
+- **Note:** [`GEOMETRY_SUPERPOSITION_DAG_ENSEMBLE_NOTE_2026-04-11.md`](../../docs/GEOMETRY_SUPERPOSITION_DAG_ENSEMBLE_NOTE_2026-04-11.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** This is a real bounded path-sum geometry-superposition signal, but it is not a staggered proposed_retained result and not part of the current staggered headline package.  _(class `C`)_
+- **chain closes:** False — The source note explicitly disclaims proposed-retained status, while the audit queue classified it as proposed_retained because the phrase appears in a negative sentence. The declared runner path `frontier_geometry_superposition.py` is also stale; only a moved script under `scripts/` reproduces the bounded exploratory numbers.
+- **rationale:** Issue: the source status says this is an exploratory DAG-ensemble path-sum result, not a staggered proposed_retained result, and the runner path recorded in the note/ledger does not exist at the declared location. Why this blocks: a claim that explicitly disclaims retained status and lacks its registered runner cannot be audit-ratified as proposed_retained, even though a moved script reproduces the bounded exploratory output. Repair target: re-scope the note/queue as bounded or support, update the runner path to `scripts/frontier_geometry_superposition.py`, preserve a current log, and build a separate staggered geometry-superposition harness before any retained promotion. Claim boundary until fixed: safely claim only the toy DAG path-sum signal from the moved script: normalized contrast 3.93%, centroid shift 0.0574, width change 0.0211, and detector phase differences up to about 0.323 rad; do not claim a retained staggered or BMV-style closure.
+- **open / conditional deps cited:**
+  - `frontier_geometry_superposition.py`
 - **auditor confidence:** high
 
 ### `global_coherence_off_scaffold_note`

@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 89,
     "high": 508,
-    "leaf": 766,
+    "leaf": 765,
     "medium": 82
   },
-  "generated_at": "2026-04-27T13:12:40.002886+00:00",
+  "generated_at": "2026-04-27T13:14:36.963502+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -21049,23 +21049,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "geometry_superposition_dag_ensemble_note_2026-04-11",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/GEOMETRY_SUPERPOSITION_DAG_ENSEMBLE_NOTE_2026-04-11.md",
-      "ready": true,
-      "runner_path": "frontier_geometry_superposition.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "graph_phase_diagram_scout_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -29387,6 +29370,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1032,
-  "total_pending": 1445
+  "ready_count": 1031,
+  "total_pending": 1444
 }

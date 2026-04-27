@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T13:12:39.957145+00:00",
-  "generated_at": "2026-04-27T13:12:38.378254+00:00",
-  "invalidation_run_at": "2026-04-27T13:12:39.911251+00:00",
+  "effective_status_computed_at": "2026-04-27T13:14:36.917392+00:00",
+  "generated_at": "2026-04-27T13:14:35.326216+00:00",
+  "invalidation_run_at": "2026-04-27T13:14:36.869956+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T13:12:39.816704+00:00",
+  "load_bearing_computed_at": "2026-04-27T13:14:36.773285+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -33322,14 +33322,21 @@
       "verdict_rationale": null
     },
     "geometry_superposition_dag_ensemble_note_2026-04-11": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The source note explicitly disclaims proposed-retained status, while the audit queue classified it as proposed_retained because the phrase appears in a negative sentence. The declared runner path `frontier_geometry_superposition.py` is also stale; only a moved script under `scripts/` reproduces the bounded exploratory numbers.",
       "claim_id": "geometry_superposition_dag_ensemble_note_2026-04-11",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -33337,18 +33344,20 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "This is a real bounded path-sum geometry-superposition signal, but it is not a staggered proposed_retained result and not part of the current staggered headline package.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "d3a374b73beb151022c20890747de8978b5b3345b8085b4dcc5c39f6113c520b",
       "note_path": "docs/GEOMETRY_SUPERPOSITION_DAG_ENSEMBLE_NOTE_2026-04-11.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "frontier_geometry_superposition.py"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368482+00:00",
@@ -33386,7 +33395,7 @@
       "runner_path": "frontier_geometry_superposition.py",
       "title": "Geometry Superposition on a DAG Ensemble",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the source status says this is an exploratory DAG-ensemble path-sum result, not a staggered proposed_retained result, and the runner path recorded in the note/ledger does not exist at the declared location. Why this blocks: a claim that explicitly disclaims retained status and lacks its registered runner cannot be audit-ratified as proposed_retained, even though a moved script reproduces the bounded exploratory output. Repair target: re-scope the note/queue as bounded or support, update the runner path to `scripts/frontier_geometry_superposition.py`, preserve a current log, and build a separate staggered geometry-superposition harness before any retained promotion. Claim boundary until fixed: safely claim only the toy DAG path-sum signal from the moved script: normalized contrast 3.93%, centroid shift 0.0574, width change 0.0211, and detector phase differences up to about 0.323 rad; do not claim a retained staggered or BMV-style closure."
     },
     "global_coherence_held_out2_note": {
       "audit_date": null,
