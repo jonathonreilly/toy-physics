@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T16:52:09.161078+00:00",
-  "generated_at": "2026-04-27T16:52:07.532651+00:00",
-  "invalidation_run_at": "2026-04-27T16:52:09.114572+00:00",
+  "effective_status_computed_at": "2026-04-27T16:53:57.172811+00:00",
+  "generated_at": "2026-04-27T16:53:55.575077+00:00",
+  "invalidation_run_at": "2026-04-27T16:53:57.126547+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T16:52:09.021312+00:00",
+  "load_bearing_computed_at": "2026-04-27T16:53:57.029907+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -63797,14 +63797,21 @@
       "verdict_rationale": null
     },
     "quark_strc_observable_principle_note_2026-04-19": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The note explicitly frames STRC as an observable principle rather than a theorem and says it is superseded route history; the runner assumes a_u_LO = sin_d*(1-rho) before checking STRC and RPSR consequences.",
       "claim_id": "quark_strc_observable_principle_note_2026-04-19",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -63812,18 +63819,24 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Retention of STRC as an observable principle is the minimal path to closing the quark up-amplitude gate, with a_u + rho*sin(delta_std) = sin(delta_std) taken as the STRC-LO relation.",
+      "load_bearing_step_class": "E",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "e1c734e2a7eb913b4004158406419255941276bb1916eb83dbcde5c91268ac5d",
       "note_path": "docs/QUARK_STRC_OBSERVABLE_PRINCIPLE_NOTE_2026-04-19.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md",
+        "docs/QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md",
+        "docs/QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md",
+        "docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md",
+        "docs/SCALAR_TENSOR_RAY_MAGNITUDE_BRIDGE_NOTE_2026-04-19.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369516+00:00",
@@ -63852,16 +63865,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 19,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 19
       },
       "runner_path": "scripts/frontier_quark_strc_observable_principle.py",
       "title": "Scalar-Tensor Ray Complementarity (STRC) \u2014 Historical Observable-Principle Framing (SUPERSEDED)",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The proposed-retained claim is a superseded route-history observable-principle framing, and its runner hard-codes a_u_LO = sin_d*(1-rho) before verifying STRC and RPSR identities. Why this blocks: finite rule-outs of several candidate sources plus algebraic consequences of an assumed relation do not derive the STRC relation or justify retaining this note as the primary source, and the note itself directs readers to a separate collinearity theorem for derivation. Repair target: demote this note to route-history/support, or audit and promote an explicit theorem such as STRC_LO_COLLINEARITY_THEOREM_NOTE with audit-clean CKM/projector/scalar-ray inputs and a runner that derives a_u rather than setting it. Claim boundary until fixed: it is safe to say that if STRC-LO is assumed then the displayed identities, RPSR closure, and finite candidate rule-outs in the runner hold; it is not safe to claim this note retains or derives STRC as a physical observable principle."
     },
     "quark_up_amplitude_affine_support_scan_note_2026-04-19": {
       "audit_date": null,

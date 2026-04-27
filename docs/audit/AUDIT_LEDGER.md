@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T16:52:09.349359+00:00
+**Generated:** 2026-04-27T16:53:57.369931+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 61 |
-| _proposed_retained_ | 80 |
+| _proposed_retained_ | 79 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
 | ~~audited_conditional~~ | 324 |
-| ~~audited_failed~~ | 116 |
+| ~~audited_failed~~ | 117 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 61 |
 | `audited_conditional` | 111 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 49 |
+| `audited_failed` | 50 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1379 |
+| `unaudited` | 1378 |
 
 | criticality | count |
 |---|---:|
@@ -321,6 +321,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `portable_card_extension_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `portable_package_extension_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `qnm_control_hardening_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `quark_strc_observable_principle_note_2026-04-19` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | E | - |
 | `staggered_backreaction_green_closure_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `structured_mirror_bornsafe_scan_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -3440,6 +3441,24 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
   - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
   - `QUARK_ROUTE2_EXACT_READOUT_MAP_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `quark_strc_observable_principle_note_2026-04-19`
+
+- **Note:** [`QUARK_STRC_OBSERVABLE_PRINCIPLE_NOTE_2026-04-19.md`](../../docs/QUARK_STRC_OBSERVABLE_PRINCIPLE_NOTE_2026-04-19.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Retention of STRC as an observable principle is the minimal path to closing the quark up-amplitude gate, with a_u + rho*sin(delta_std) = sin(delta_std) taken as the STRC-LO relation.  _(class `E`)_
+- **chain closes:** False — The note explicitly frames STRC as an observable principle rather than a theorem and says it is superseded route history; the runner assumes a_u_LO = sin_d*(1-rho) before checking STRC and RPSR consequences.
+- **rationale:** Issue: The proposed-retained claim is a superseded route-history observable-principle framing, and its runner hard-codes a_u_LO = sin_d*(1-rho) before verifying STRC and RPSR identities. Why this blocks: finite rule-outs of several candidate sources plus algebraic consequences of an assumed relation do not derive the STRC relation or justify retaining this note as the primary source, and the note itself directs readers to a separate collinearity theorem for derivation. Repair target: demote this note to route-history/support, or audit and promote an explicit theorem such as STRC_LO_COLLINEARITY_THEOREM_NOTE with audit-clean CKM/projector/scalar-ray inputs and a runner that derives a_u rather than setting it. Claim boundary until fixed: it is safe to say that if STRC-LO is assumed then the displayed identities, RPSR closure, and finite candidate rule-outs in the runner hold; it is not safe to claim this note retains or derives STRC as a physical observable principle.
+- **open / conditional deps cited:**
+  - `STRC_LO_COLLINEARITY_THEOREM_NOTE_2026-04-19.md`
+  - `QUARK_UP_AMPLITUDE_RPSR_CONDITIONAL_THEOREM_NOTE_2026-04-19.md`
+  - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
+  - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
+  - `SCALAR_TENSOR_RAY_MAGNITUDE_BRIDGE_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `retained_cross_lane_consistency_support_note_2026-04-22`
