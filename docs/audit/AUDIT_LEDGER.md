@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T16:19:22.552997+00:00
+**Generated:** 2026-04-27T16:21:47.049097+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 58 |
-| _proposed_retained_ | 95 |
+| **retained** | 59 |
+| _proposed_retained_ | 94 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 58 |
+| `audited_clean` | 59 |
 | `audited_conditional` | 104 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 44 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1394 |
+| `unaudited` | 1393 |
 
 | criticality | count |
 |---|---:|
@@ -154,6 +154,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `multipole_tidal_response_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `nonlabel_grown_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `nonlabel_grown_drift_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `packet_memory_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `planck_finite_response_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -3075,6 +3076,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `H_inf_over_H_0_ratio_matter_content_bridge_open`
   - `Planck_2018_H0_OmegaLambda_OmegaM_observational_comparators_external`
   - `radiation_fraction_Omega_r_observational_input_not_derived`
+- **auditor confidence:** high
+
+### `packet_memory_note`
+
+- **Note:** [`PACKET_MEMORY_NOTE.md`](../../docs/PACKET_MEMORY_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The model supports detector-readable packet memory: separated initial packets remain distinguishable at the detector, and packet identity changes the gravitational deflection, while persistent inertial response remains open.  _(class `C`)_
+- **chain closes:** True — The live harness reproduces the frozen overlap-vs-offset, overlap-vs-NL, gravity-by-packet, and width/centroid rows. The note explicitly keeps Tier C inertial response open and does not claim persistent localized objects.
+- **rationale:** The retained surface is a finite computational memory claim: at the tested NL values and packet offsets, detector overlaps remain distinguishable, packet identity changes the imposed-field deflection, and width/centroid rows reproduce the stated partial shape result. The live runner matches the frozen source numbers, and the source explicitly excludes Tier C inertial response and persistent localized-object closure. Residual risk is finite-configuration and asymptotic-scope risk only; this clean audit does not retain the unsupported NL-to-infinity extrapolation as a theorem or any claim of persistent inertial mass.
 - **auditor confidence:** high
 
 ### `persistent_object_blended_readout_transfer_sweep_note_2026-04-16`
