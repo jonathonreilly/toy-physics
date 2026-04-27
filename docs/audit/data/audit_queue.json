@@ -1,11 +1,11 @@
 {
   "by_criticality": {
-    "critical": 93,
+    "critical": 92,
     "high": 530,
     "leaf": 626,
     "medium": 82
   },
-  "generated_at": "2026-04-27T21:48:51.705917+00:00",
+  "generated_at": "2026-04-27T21:51:22.080253+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -108,47 +108,6 @@
       "ready": true,
       "runner_path": "scripts/frontier_yt_color_projection_correction.py",
       "transitive_descendants": 283
-    },
-    {
-      "audit_independence_required": "cross_family_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "yt_ew_color_projection_theorem",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "rconn_derived_note",
-        "ew_current_matching_ozi_suppression_theorem_note_2026-04-27"
-      ],
-      "direct_in_degree": 24,
-      "load_bearing_score": 24.145,
-      "note_path": "docs/YT_EW_COLOR_PROJECTION_THEOREM.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_color_projection_mc.py",
-      "transitive_descendants": 282
-    },
-    {
-      "audit_independence_required": "cross_family_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "rconn_derived_note",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "yt_ew_color_projection_theorem",
-        "yukawa_color_projection_theorem",
-        "ew_current_matching_ozi_suppression_theorem_note_2026-04-27"
-      ],
-      "direct_in_degree": 14,
-      "load_bearing_score": 19.145,
-      "note_path": "docs/RCONN_DERIVED_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_color_projection_mc.py",
-      "transitive_descendants": 282
     },
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -413,26 +372,6 @@
       "audit_independence_required": "cross_family_with_cross_confirmation",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [
-        "rconn_derived_note",
-        "yt_ew_color_projection_theorem"
-      ],
-      "direct_in_degree": 2,
-      "load_bearing_score": 13.145,
-      "note_path": "docs/EW_CURRENT_MATCHING_OZI_SUPPRESSION_THEOREM_NOTE_2026-04-27.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_color_projection_mc.py",
-      "transitive_descendants": 282
-    },
-    {
-      "audit_independence_required": "cross_family_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "taste_scalar_isotropy_theorem_note",
       "criticality": "critical",
       "criticality_rank": 3,
@@ -676,6 +615,27 @@
       "audit_independence_required": "cross_family_with_cross_confirmation",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "rconn_derived_note",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "yt_ew_color_projection_theorem",
+        "yukawa_color_projection_theorem",
+        "ew_current_matching_ozi_suppression_theorem_note_2026-04-27"
+      ],
+      "direct_in_degree": 14,
+      "load_bearing_score": 19.145,
+      "note_path": "docs/RCONN_DERIVED_NOTE.md",
+      "ready": false,
+      "runner_path": "scripts/frontier_color_projection_mc.py",
+      "transitive_descendants": 282
+    },
+    {
+      "audit_independence_required": "cross_family_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "gauge_vacuum_plaquette_bridge_support_note",
       "criticality": "critical",
       "criticality_rank": 3,
@@ -691,6 +651,26 @@
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_BRIDGE_SUPPORT_NOTE.md",
       "ready": false,
       "runner_path": null,
+      "transitive_descendants": 282
+    },
+    {
+      "audit_independence_required": "cross_family_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "current_status": "bounded",
+      "deps": [
+        "rconn_derived_note",
+        "yt_ew_color_projection_theorem"
+      ],
+      "direct_in_degree": 2,
+      "load_bearing_score": 13.145,
+      "note_path": "docs/EW_CURRENT_MATCHING_OZI_SUPPRESSION_THEOREM_NOTE_2026-04-27.md",
+      "ready": false,
+      "runner_path": "scripts/frontier_color_projection_mc.py",
       "transitive_descendants": 282
     },
     {
@@ -18562,25 +18542,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "assumption_derivation_ledger",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "bounded",
-      "deps": [
-        "rconn_derived_note"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/ASSUMPTION_DERIVATION_LEDGER.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "asymmetry_persistence_born_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -26538,6 +26499,25 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "assumption_derivation_ledger",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "bounded",
+      "deps": [
+        "rconn_derived_note"
+      ],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/ASSUMPTION_DERIVATION_LEDGER.md",
+      "ready": false,
+      "runner_path": null,
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "causal_distance_tail_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -27490,6 +27470,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 916,
-  "total_pending": 1331
+  "ready_count": 912,
+  "total_pending": 1330
 }
