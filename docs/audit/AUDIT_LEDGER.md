@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T17:43:55.046514+00:00
+**Generated:** 2026-04-27T17:47:31.530871+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 63 |
-| _proposed_retained_ | 64 |
+| _proposed_retained_ | 63 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 328 |
+| ~~audited_conditional~~ | 329 |
 | ~~audited_failed~~ | 126 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 63 |
-| `audited_conditional` | 115 |
+| `audited_conditional` | 116 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 59 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1363 |
+| `unaudited` | 1362 |
 
 | criticality | count |
 |---|---:|
@@ -258,6 +258,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `shapiro_family_portability_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `sign_portability_invariant_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `sixth_family_distance_law_third_vs_sixth_quick_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_backreaction_shell_spectral_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `strong_cp_theta_zero_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `structured_chokepoint_bridge_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -3753,6 +3754,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `retained_sign_family_notes_not_registered_one_hop`
   - `fifth_family_holdout_notes_not_registered_one_hop`
   - `common_threshold_protocol_not_registered`
+- **auditor confidence:** high
+
+### `sixth_family_distance_law_third_vs_sixth_quick_note`
+
+- **Note:** [`SIXTH_FAMILY_DISTANCE_LAW_THIRD_VS_SIXTH_QUICK_NOTE.md`](../../docs/SIXTH_FAMILY_DISTANCE_LAW_THIRD_VS_SIXTH_QUICK_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The sixth-family row preserves the near-Newtonian tail on the sampled retained row, while the third-family interior row misses the tail and remains consistent with the breakpoint classifier.  _(class `C`)_
+- **chain closes:** False — The runner reproduces the two-row contrast, but the sixth-family sheared-basin provenance is unaudited/unknown and the breakpoint classifier dependency is only audited conditional.
+- **rationale:** Issue: The script verifies the targeted row comparison, but the claim labels both rows as retained family rows while the sixth sheared-basin provenance remains unaudited/unknown and the distance-law breakpoint classifier is conditional. Why this blocks: a reproducible spot check can establish this script's row-level outcome, but it cannot promote sixth-family tail survival as retained until the family and classifier inputs are audit-clean. Repair target: audit the sixth-family sheared family notes and the distance-law breakpoint classifier, then add assertion thresholds for alpha, R^2, and toward counts in this quick runner. Claim boundary until fixed: it is safe to claim that this runner finds alpha=-1.077, R^2=0.911, 5/5 toward for the sampled sixth row and alpha=-2.158 for the sampled third row; it is not safe to claim retained sixth-family distance-law survival beyond this conditional spot check.
+- **open / conditional deps cited:**
+  - `SIXTH_FAMILY_SHEARED_NOTE.md`
+  - `SIXTH_FAMILY_SHEARED_BOUNDARY_NOTE.md`
+  - `DISTANCE_LAW_BREAKPOINT_NOTE.md`
 - **auditor confidence:** high
 
 ### `staggered_backreaction_green_closure_note`

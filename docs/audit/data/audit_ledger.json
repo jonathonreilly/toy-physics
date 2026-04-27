@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T17:43:54.839467+00:00",
-  "generated_at": "2026-04-27T17:43:53.185483+00:00",
-  "invalidation_run_at": "2026-04-27T17:43:54.792153+00:00",
+  "effective_status_computed_at": "2026-04-27T17:47:31.338255+00:00",
+  "generated_at": "2026-04-27T17:47:29.748029+00:00",
+  "invalidation_run_at": "2026-04-27T17:47:31.292157+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T17:43:54.694343+00:00",
+  "load_bearing_computed_at": "2026-04-27T17:47:31.197799+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -68876,14 +68876,21 @@
       "verdict_rationale": null
     },
     "sixth_family_distance_law_third_vs_sixth_quick_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner reproduces the two-row contrast, but the sixth-family sheared-basin provenance is unaudited/unknown and the breakpoint classifier dependency is only audited conditional.",
       "claim_id": "sixth_family_distance_law_third_vs_sixth_quick_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -68891,18 +68898,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The sixth-family row preserves the near-Newtonian tail on the sampled retained row, while the third-family interior row misses the tail and remains consistent with the breakpoint classifier.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "47f4754329ad9bfa9a043e55e76b03250af1775be4b22449237c99c073f805e5",
       "note_path": "docs/SIXTH_FAMILY_DISTANCE_LAW_THIRD_VS_SIXTH_QUICK_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/SIXTH_FAMILY_SHEARED_NOTE.md",
+        "docs/SIXTH_FAMILY_SHEARED_BOUNDARY_NOTE.md",
+        "docs/DISTANCE_LAW_BREAKPOINT_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369661+00:00",
@@ -68940,7 +68951,7 @@
       "runner_path": null,
       "title": "Quick Third Vs Sixth Distance Law Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The script verifies the targeted row comparison, but the claim labels both rows as retained family rows while the sixth sheared-basin provenance remains unaudited/unknown and the distance-law breakpoint classifier is conditional. Why this blocks: a reproducible spot check can establish this script's row-level outcome, but it cannot promote sixth-family tail survival as retained until the family and classifier inputs are audit-clean. Repair target: audit the sixth-family sheared family notes and the distance-law breakpoint classifier, then add assertion thresholds for alpha, R^2, and toward counts in this quick runner. Claim boundary until fixed: it is safe to claim that this runner finds alpha=-1.077, R^2=0.911, 5/5 toward for the sampled sixth row and alpha=-2.158 for the sampled third row; it is not safe to claim retained sixth-family distance-law survival beyond this conditional spot check."
     },
     "sixth_family_sheared_boundary_note": {
       "audit_date": null,

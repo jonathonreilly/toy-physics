@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 89,
     "high": 508,
-    "leaf": 687,
+    "leaf": 686,
     "medium": 82
   },
-  "generated_at": "2026-04-27T17:43:54.888699+00:00",
+  "generated_at": "2026-04-27T17:47:31.390626+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -23718,23 +23718,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "sixth_family_distance_law_third_vs_sixth_quick_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/SIXTH_FAMILY_DISTANCE_LAW_THIRD_VS_SIXTH_QUICK_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "sixth_family_sheared_boundary_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -28041,6 +28024,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 953,
-  "total_pending": 1366
+  "ready_count": 952,
+  "total_pending": 1365
 }
