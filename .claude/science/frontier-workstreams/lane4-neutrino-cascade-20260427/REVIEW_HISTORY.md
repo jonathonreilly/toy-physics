@@ -114,6 +114,58 @@ Artifact under review:
 - `python3 docs/audit/scripts/audit_lint.py --strict`: OK, with known
   graph-cycle warning only.
 
+## 2026-04-27 Cycle 5 Review Results
+
+Artifact under review:
+
+- `docs/HADRON_LANE1_CONFINEMENT_TO_MASS_FIREWALL_NOTE_2026-04-27.md`
+- `scripts/frontier_hadron_lane1_confinement_to_mass_firewall.py`
+- `.claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/STOP_ALL_LANES_REQUESTED`
+- generated audit queue/ledger updates from the review-only audit pipeline
+
+### Code / Runner: PASS
+
+- New Lane 1 firewall runner passes: `PASS=16 FAIL=0`.
+- New runner compiles with `py_compile`.
+- Existing confinement/string-tension support runner still passes:
+  `PASS=30 FAIL=0`.
+
+### Physics Claim Boundary: OPEN / NO-GO
+
+- The note does not claim retained `m_pi`, `m_p`, `m_n`, or hadron spectrum
+  closure.
+- The artifact blocks retained confinement plus bounded `sqrt(sigma)` from
+  being promoted into hadron masses.
+- It preserves confinement/string tension as support and identifies the
+  retained inputs still needed for GMOR and nucleon spectroscopy.
+
+### Imports / Support: DISCLOSED
+
+- Standard pion/proton/neutron masses are used only for dimensionless
+  coefficient sensitivity examples.
+- Load-bearing inputs are repo-local support surfaces: confinement/string
+  tension, Lane 3 light-quark dependency boundary, and Lane 1 chiral/correlator
+  targets.
+
+### Nature Retention: NO-GO
+
+- Retained hadron mass closure is not achieved.
+- The open gates are light-quark masses, chiral condensate and `f_pi`,
+  hadronic-scale matching, and correlator/spectral extraction.
+
+### Repo Governance: PASS
+
+- No lane registry, canonical harness index, publication matrix, or active
+  review queue was edited.
+- Generated audit queue/ledger files were refreshed only for parseability.
+- Stop-all marker is justified only after the full viable queue was processed.
+
+### Audit Compatibility: PASS
+
+- `bash docs/audit/scripts/run_pipeline.sh`: complete.
+- `python3 docs/audit/scripts/audit_lint.py --strict`: OK, with known
+  graph-cycle warning only.
+
 ## 2026-04-27 Cycle 4 Review Results
 
 Artifact under review:

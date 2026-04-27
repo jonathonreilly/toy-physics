@@ -10,12 +10,12 @@ lock:
   owner: frontier-workstream-lane4-cascade
   repo_local_lock: logs/physics_worker_lock.json
 current_lane:
-  id: 3
-  name: quark mass retention
+  id: 1
+  name: hadron mass program
   status: open
 cycle:
-  count: 4
-  active_route: quark_bounded_companion_retention_firewall
+  count: 5
+  active_route: hadron_confinement_to_mass_firewall
   route_status: verified
 files_touched:
   - docs/NEUTRINO_LANE4_DIRAC_SEESAW_FORK_NO_GO_NOTE_2026-04-27.md
@@ -31,6 +31,10 @@ files_touched:
   - docs/QUARK_LANE3_BOUNDED_COMPANION_RETENTION_FIREWALL_NOTE_2026-04-27.md
   - scripts/frontier_quark_lane3_bounded_companion_retention_firewall.py
   - logs/2026-04-27-quark-lane3-bounded-companion-retention-firewall.txt
+  - docs/HADRON_LANE1_CONFINEMENT_TO_MASS_FIREWALL_NOTE_2026-04-27.md
+  - scripts/frontier_hadron_lane1_confinement_to_mass_firewall.py
+  - logs/2026-04-27-hadron-lane1-confinement-to-mass-firewall.txt
+  - .claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/STOP_ALL_LANES_REQUESTED
   - docs/audit/AUDIT_LEDGER.md
   - docs/audit/AUDIT_QUEUE.md
   - docs/audit/data/audit_ledger.json
@@ -63,6 +67,9 @@ open_imports:
   - Lane 3 non-perturbative theorem-core proof of the 5/6 bridge and scale selection
   - Lane 3 up-type partition/scalar amplitude law
   - Lane 3 generation-stratified or species-differentiated Yukawa Ward identities
+  - Lane 1 retained light-quark masses for GMOR and nucleon inputs
+  - Lane 1 retained chiral condensate Sigma and pion decay constant f_pi
+  - Lane 1 hadronic-scale running/matching and lattice-QCD-equivalent correlator extraction
 no_go_routes:
   - current-stack sole-axiom full neutrino closure
   - current-stack Majorana activation mu != 0
@@ -71,6 +78,7 @@ no_go_routes:
   - direct atomic Rydberg closure by substituting alpha_EM(M_Z) for alpha(0)
   - numerical H_0 closure from a single Lane 5 gate or from the structural lock alone
   - five non-top quark mass retention from bounded CKM/quark companion support alone
+  - hadron mass retention from confinement and bounded sqrt(sigma) alone
 review:
   status: passed_with_notes
   findings:
@@ -79,6 +87,7 @@ review:
     - "No retained Lane 2 closure; artifact is exact dependency firewall."
     - "No retained Lane 5 closure; artifact is exact two-gate dependency firewall."
     - "No retained Lane 3 five-mass closure; artifact is exact bounded-companion retention firewall."
+    - "No retained Lane 1 hadron-mass closure; artifact is exact confinement-to-mass firewall."
     - "Audit strict lint passes with known graph-cycle warning only."
 verification:
   status: passed
@@ -109,5 +118,10 @@ verification:
     - "PYTHONPATH=scripts python3 scripts/frontier_yt_ward_identity_derivation.py -> PASS=45 FAIL=0"
     - "bash docs/audit/scripts/run_pipeline.sh -> complete after Lane 3 artifact"
     - "python3 docs/audit/scripts/audit_lint.py --strict -> OK, known graph-cycle warning only after Lane 3 artifact"
-next_exact_action: "Run git diff --check, commit and push the coherent Lane 3 checkpoint, then cascade to Lane 1 hadron mass program unless a new quark-mass premise appears."
-stop_condition: "Not reached. Lane 3 remains open at the bounded-companion boundary; no STOP_ALL_LANES_REQUESTED file should be created."
+    - "PYTHONPATH=scripts python3 scripts/frontier_hadron_lane1_confinement_to_mass_firewall.py -> PASS=16 FAIL=0"
+    - "python3 -m py_compile scripts/frontier_hadron_lane1_confinement_to_mass_firewall.py -> pass"
+    - "PYTHONPATH=scripts python3 scripts/frontier_confinement_string_tension.py -> PASS=30 FAIL=0"
+    - "bash docs/audit/scripts/run_pipeline.sh -> complete after Lane 1 artifact"
+    - "python3 docs/audit/scripts/audit_lint.py --strict -> OK, known graph-cycle warning only after Lane 1 artifact"
+next_exact_action: "Run git diff --check, commit and push the coherent Lane 1 checkpoint with STOP_ALL_LANES_REQUESTED."
+stop_condition: "Reached after cycle 5: every viable queued lane has an exact dependency boundary requiring new science premise or human-judgment selection; Lane 6 has no new charged-lepton premise and remains recently exhausted."

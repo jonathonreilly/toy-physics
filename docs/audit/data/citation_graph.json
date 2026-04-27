@@ -17521,7 +17521,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-27T12:51:14.431375+00:00",
+  "generated_at": "2026-04-27T12:57:00.747840+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -25880,6 +25880,16 @@
       "path": "docs/H2T_H0125_NARROW_BRIDGE_NOTE.md",
       "runner_path": null,
       "title": "3D `1/L^2 + h^2` Narrow `h=0.125` Bridge Note"
+    },
+    "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27": {
+      "claim_id": "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained exact negative boundary for Lane 1 dependency",
+      "deps": [],
+      "note_hash": "cd246d1683df46595e89ee4fdd0a2f865fffb30af0399524b48469aa87a1bfed",
+      "path": "docs/HADRON_LANE1_CONFINEMENT_TO_MASS_FIREWALL_NOTE_2026-04-27.md",
+      "runner_path": "scripts/frontier_hadron_lane1_confinement_to_mass_firewall.py",
+      "title": "Hadron Lane 1 Confinement-To-Mass Firewall"
     },
     "hard_geometry_gravity_window_note": {
       "claim_id": "hard_geometry_gravity_window_note",
@@ -39039,6 +39049,7 @@
     "h0125_wider_w4_note",
     "h0125_wider_w4_probe_note",
     "h2t_h0125_narrow_bridge_note",
+    "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27",
     "hard_geometry_gravity_window_note",
     "hard_geometry_head_to_head_note",
     "hard_geometry_local_note",
@@ -39707,15 +39718,15 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4380,
-    "leaf_count": 754,
-    "node_count": 1618,
-    "root_count": 1180,
-    "runners_with_path": 706,
+    "leaf_count": 755,
+    "node_count": 1619,
+    "root_count": 1181,
+    "runners_with_path": 707,
     "status_counts": {
       "bounded": 209,
       "open": 26,
       "proposed_promoted": 6,
-      "proposed_retained": 447,
+      "proposed_retained": 448,
       "support": 134,
       "unknown": 796
     }

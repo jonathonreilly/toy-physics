@@ -14,6 +14,7 @@ Scores use the frontier-workstream dramatic-step scale: `0` low value,
 | Lane 2 Rydberg dependency firewall | no-go / import-retirement audit | 2 | 2 | 3 | -0 | 7 | Executed cycle 2 |
 | Lane 5 two-gate Hubble dependency firewall | no-go / closure-pathway audit | 2 | 2 | 3 | -0 | 7 | Executed cycle 3 |
 | Lane 3 bounded-companion retention firewall | no-go / bounded-vs-retained audit | 2 | 2 | 3 | -0 | 7 | Executed cycle 4 |
+| Lane 1 confinement-to-mass firewall | no-go / prerequisite-vs-closure audit | 2 | 2 | 3 | -0 | 7 | Executed cycle 5 |
 
 ## Selected Cycle 1 Route
 
@@ -64,3 +65,15 @@ retention:
 - it keeps the up-type branch open at the partition/scalar law;
 - it records the species-uniform `m_b` Ward extension as a negative boundary,
   not a retained bottom-mass theorem.
+
+## Selected Cycle 5 Route
+
+Execute the Lane 1 confinement-to-mass firewall because the hadron lane is
+blocked by prerequisite-vs-closure drift:
+
+- it preserves retained confinement as real support without promoting it to
+  hadron-spectrum closure;
+- it separates bounded `sqrt(sigma)` from `m_pi`, `m_p`, and `m_n`;
+- it exposes GMOR's light-quark and chiral-input dependencies;
+- it identifies the ab-initio proton/neutron gates before stopping the
+  all-lane cascade.

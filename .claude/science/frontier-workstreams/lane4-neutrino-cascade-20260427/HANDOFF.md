@@ -1,9 +1,9 @@
 # Handoff
 
 **Branch:** `frontier/lane4-neutrino-cascade-20260427`
-**Updated:** 2026-04-27T12:51:30Z
-**Current lane:** Lane 3 quark mass retention
-**Current status:** cycle 4 verified; commit/push pending
+**Updated:** 2026-04-27T12:57:24Z
+**Current lane:** Lane 1 hadron mass program
+**Current status:** cycle 5 verified; commit/push pending; all-lane stop marker requested
 
 ## What Changed
 
@@ -121,22 +121,62 @@ Verification:
 - `python3 docs/audit/scripts/audit_lint.py --strict`
   -> OK, known graph-cycle warning only
 
+## Lane 1 Cycle 5
+
+Added a hadron confinement-to-mass firewall:
+
+- retained confinement and bounded `sqrt(sigma)` are prerequisites, not
+  `m_pi`, `m_p`, `m_n`, or spectrum closure;
+- a single bounded scale leaves unretained dimensionless spectral coefficients
+  `c_H = m_H / sqrt(sigma)`;
+- GMOR still requires retained `m_u`, `m_d`, `Sigma`, and `f_pi`;
+- proton/neutron masses require light-quark masses, hadronic-scale matching,
+  and correlator/spectral-coefficient extraction.
+
+Verification:
+
+- `PYTHONPATH=scripts python3 scripts/frontier_hadron_lane1_confinement_to_mass_firewall.py`
+  -> `PASS=16 FAIL=0`
+- `python3 -m py_compile scripts/frontier_hadron_lane1_confinement_to_mass_firewall.py`
+  -> pass
+- `PYTHONPATH=scripts python3 scripts/frontier_confinement_string_tension.py`
+  -> `PASS=30 FAIL=0`
+- `bash docs/audit/scripts/run_pipeline.sh`
+  -> complete
+- `python3 docs/audit/scripts/audit_lint.py --strict`
+  -> OK, known graph-cycle warning only
+
 ## Next Exact Action
 
-Run `git diff --check`, then commit the coherent Lane 3 checkpoint and push the
-branch:
+Run `git diff --check`, then commit the coherent Lane 1 checkpoint with
+`STOP_ALL_LANES_REQUESTED` and push the branch:
 
 ```bash
 git add ...
-git commit -m "Add Lane 3 quark bounded-companion firewall"
+git commit -m "Add Lane 1 hadron confinement-to-mass firewall"
 git push origin frontier/lane4-neutrino-cascade-20260427
 ```
 
-After the checkpoint, Lane 3 remains open at the bounded-companion boundary.
-Continue to Lane 1 hadron mass program unless a new quark-mass premise appears.
+After the checkpoint, stop this cascade. Do not continue to Lane 6 unless a
+new charged-lepton premise is actually discovered.
 
 ## Stop Condition
 
-Do not stop all lanes merely because Lane 4, Lane 2, Lane 5, or Lane 3 remains
-open. Cycles 1-4 sharpened blockers rather than closing retained targets.
-Continue the cascade to Lane 1 after the Lane 3 checkpoint is pushed.
+All-lane stopping is justified now, not because Lane 4 closed, but because the
+full requested viable queue has been processed:
+
+- Lane 4 remains blocked on nonzero Majorana activation or a tiny Dirac
+  activation law.
+- Lane 2 remains blocked on retained `m_e`, `alpha(0)`/QED running, and the
+  physical-unit nonrelativistic limit.
+- Lane 5 remains blocked on `(C1)` plus `(C2)` or a fresh `(C3)`.
+- Lane 3 remains blocked on the `5/6` bridge/scale-selection proof, up-type
+  scalar/partition law, and species-differentiated Ward identities.
+- Lane 1 remains blocked on light-quark masses, chiral inputs, hadronic-scale
+  matching, and correlator/spectrum extraction.
+- Lane 6 has no newly discovered premise; treat it as recently exhausted at
+  `origin/frontier/charged-lepton-mass-retirement-20260426`.
+
+The marker
+`.claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/STOP_ALL_LANES_REQUESTED`
+is present for the supervisor.

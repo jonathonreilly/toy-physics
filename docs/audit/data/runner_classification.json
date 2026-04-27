@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T12:51:15.737808+00:00",
+  "generated_at": "2026-04-27T12:57:02.025630+00:00",
   "per_claim": {
     "accessible_prediction_note": {
       "assert_count": 0,
@@ -4212,6 +4212,18 @@
       "decoration_candidate": false,
       "dominant_class": null,
       "runner": "scripts/frontier_echo_null_result.py"
+    },
+    "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "runner": "scripts/frontier_hadron_lane1_confinement_to_mass_firewall.py"
     },
     "hierarchy_bosonic_bilinear_selector_note": {
       "assert_count": 0,
@@ -13896,6 +13908,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_hadron_lane1_confinement_to_mass_firewall.py": {
+      "assert_count": 1,
+      "claims": [
+        "hadron_lane1_confinement_to_mass_firewall_note_2026-04-27"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "B",
+      "exists": true
+    },
     "scripts/frontier_hierarchy_bosonic_bilinear_selector.py": {
       "assert_count": 0,
       "claims": [
@@ -18861,13 +18888,13 @@
     "decoration_candidates": 71,
     "dominant_class_distribution": {
       "A": 6,
-      "B": 102,
+      "B": 103,
       "C": 333,
       "D": 109,
       "none": 141
     },
-    "runners_classified": 691,
+    "runners_classified": 692,
     "runners_with_C": 411,
-    "runners_with_D": 184
+    "runners_with_D": 185
   }
 }

@@ -115,3 +115,29 @@ Expected claim movement:
   claims;
 - explicit open gates for `5/6` bridge/scale selection, up-type scalar or
   partition law, and species-differentiated Yukawa Ward identities.
+
+## Cycle 5: Lane 1 Hadron Confinement-To-Mass Firewall
+
+Deliverables:
+
+- `docs/HADRON_LANE1_CONFINEMENT_TO_MASS_FIREWALL_NOTE_2026-04-27.md`
+- `scripts/frontier_hadron_lane1_confinement_to_mass_firewall.py`
+- `logs/2026-04-27-hadron-lane1-confinement-to-mass-firewall.txt`
+- `STOP_ALL_LANES_REQUESTED` marker in this workstream pack
+
+Verification:
+
+- run the new runner with `PYTHONPATH=scripts`;
+- compile the new runner;
+- rerun the confinement/string-tension support runner;
+- run the audit pipeline and strict lint;
+- run `git diff --check`;
+- record review-loop emulation in `REVIEW_HISTORY.md`.
+
+Expected claim movement:
+
+- no retained hadron mass closure;
+- exact firewall separating confinement/string-tension support from hadron
+  masses;
+- all viable cascade lanes now checkpointed at exact dependency boundaries,
+  so the stop marker is justified.

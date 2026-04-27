@@ -52,3 +52,14 @@
 | Up-type partition/scalar support | Up-sector ratio support | bounded candidate grammar | `QUARK_UP_AMPLITUDE_CANDIDATE_SCAN_NOTE_2026-04-19.md`, review packet | Yes | Yes | Derive partition or scalar amplitude law from retained core | Open |
 | Species-uniform b-Yukawa scope analysis | Negative boundary for uniform Ward reuse | retention-analysis no-go | `YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md` | Yes | Yes | Derive species-differentiated Yukawa Ward primitive | Open |
 | PDG quark mass values | Comparator/sensitivity only | observational comparator | existing quark runners | No | No | Keep out of derivation chain | Comparator only |
+
+## Lane 1 Hadron Imports Added In Cycle 5
+
+| Item | Role in claim | Current class | Source surface | Load-bearing? | Needed for target status? | Retirement path | Disposition |
+|---|---|---|---|---|---|---|---|
+| Confinement at `T=0` | Structural prerequisite for bound hadrons | retained structural theorem | `CONFINEMENT_STRING_TENSION_NOTE.md` | Yes | Yes | Already retained as confinement, not mass closure | Reuse with firewall |
+| `sqrt(sigma) ~= 465 MeV` | Bounded scale support | bounded bridge | `CONFINEMENT_STRING_TENSION_NOTE.md` | Yes | Yes as scale support | Tighten EFT/screening bridge to retained | Open/bounded |
+| Light-quark masses | GMOR and nucleon mass inputs | open dependency | Lane 3 firewall | Yes | Yes | Retain Lane 3 light-quark masses | Open |
+| Chiral condensate `Sigma` and `f_pi` | GMOR pion-mass closure inputs | open dependency | Lane 1 open stub | Yes | Yes | Derive chiral-SB inputs from staggered-Dirac partition | Open |
+| Hadronic-scale matching and correlator extraction | Proton/neutron/spectrum closure | open methodology bridge | Lane 1 open stub | Yes | Yes | Instantiate lattice-QCD-equivalent calculation on framework substrate | Open |
+| Observed hadron masses | Spectral-coefficient sensitivity examples | comparator | standard hadron values | No | No | Keep out of derivation chain | Comparator only |
