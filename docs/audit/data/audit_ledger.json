@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T08:31:35.150761+00:00",
-  "generated_at": "2026-04-27T08:31:32.808852+00:00",
-  "invalidation_run_at": "2026-04-27T08:31:35.071241+00:00",
+  "effective_status_computed_at": "2026-04-27T08:36:05.654479+00:00",
+  "generated_at": "2026-04-27T08:36:03.563773+00:00",
+  "invalidation_run_at": "2026-04-27T08:36:05.589594+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T08:31:34.868773+00:00",
+  "load_bearing_computed_at": "2026-04-27T08:36:05.431617+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -83128,14 +83128,21 @@
       "verdict_rationale": "Issue: the framework-native claim imports the non-color part of the continuum MSbar-to-pole 1-loop self-energy calculation while the runner only checks the SU(3) Casimir and downstream arithmetic. Why this blocks: C_F=4/3 is an exact retained color factor, but the equality K_1=C_F also requires a scheme/convention-specific on-shell mass-renormalization theorem showing that the Dirac and momentum integral contributes exactly +1 in the alpha_s/pi convention; without that theorem, the result is a cited QCD input plus Casimir arithmetic, not a framework-native derivation. Repair target: add a retained one-loop self-energy computation from the framework Feynman rules through MSbar subtraction and on-shell mass readout, or explicitly cite the standard perturbative-QCD result and demote the claim boundary; also register the SU(3) Casimir and alpha_s(m_t) authorities as one-hop dependencies. Claim boundary until fixed: it is safe to claim C_F=(N_c^2-1)/(2N_c)=4/3 at SU(3), and that if the standard 1-loop MSbar-to-pole unit integral is imported then K_1(alpha_s/pi)=4.5837% at alpha_s=0.108; it is not safe to claim a fully framework-native K_1 derivation from the current packet."
     },
     "yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 1.5,
+        "transitive_descendants": 1
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies the SU(3) prefactor arithmetic and a symbolic formula after the four-channel topology decomposition is assumed, but it does not derive that topology basis or the integral primitives; its numerical reconstruction is pinned from the cited K_2 target and literature n_l slope.",
       "claim_id": "yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -83143,18 +83150,23 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 1.5,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note retains the two-loop K_2 color-tensor skeleton K_2 = C_F^2 J_FF + C_F C_A J_FA + C_F T_F n_l J_Fl + C_F T_F J_Fh, with exact SU(3) prefactors and cited integral primitives.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "audited_conditional",
       "max_descendant_status_rank": 10,
       "note_hash": "ed7767a8defcecf262827b481d50c386b8d9f1a3b22e03647a34705fc16c9103",
       "note_path": "docs/YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "two_loop_topology_basis_not_derived_from_framework_rules",
+        "J_FF_J_FA_J_Fl_J_Fh_integral_values_cited_not_computed",
+        "numerical_reconstruction_pinned_from_K2_target_and_dK2_dnl",
+        "SU3_Casimir_and_n_l_authorities_not_registered_one_hop_dependencies"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.370362+00:00",
@@ -83183,16 +83195,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 4,
+        "B": 2,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 6
       },
       "runner_path": "scripts/frontier_yt_p3_msbar_to_pole_k2.py",
       "title": "P3 MSbar-to-Pole K_2 Color-Tensor Retention Theorem (2-loop structural skeleton)",
       "transitive_descendants": 1,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the note cleanly separates cited integrals from retained color factors, but the claimed retained K_2 skeleton still imports the standard two-loop on-shell self-energy topology basis and uses a tautological target-pinned numerical reconstruction. Why this blocks: a hostile physicist can verify C_F^2=16/9, C_F C_A=4, C_F T_F n_l=10/3, and C_F T_F=2/3 once SU(3), n_l=5, and the four-channel formula are supplied, but cannot infer from this runner that those are the complete two-loop framework-native topologies or that the cited J_FF/J_FA/J_Fl/J_Fh values have been independently checked. Repair target: add a retained diagram/color-factor enumeration from the framework Feynman rules proving the four-channel basis is complete at two loops, register the integral-citation note as a one-hop dependency or compute the integrals, and replace the C0-from-target reconstruction with an explicit per-integral reconstruction. Claim boundary until fixed: it is safe to claim exact SU(3) Casimir prefactors for the standard imported four-channel K_2 decomposition; it is not safe to call the full K_2 structural skeleton framework-native from the current packet."
     },
     "yt_p3_msbar_to_pole_k2_integral_citation_note_2026-04-17": {
       "audit_date": null,
@@ -83218,7 +83230,7 @@
       ],
       "direct_in_degree": 0,
       "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17",
+      "effective_status_reason": "inherited_from:yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 0.0,

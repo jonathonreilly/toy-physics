@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T08:31:35.557204+00:00
+**Generated:** 2026-04-27T08:36:05.953569+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 14 |
-| _proposed_retained_ | 206 |
+| _proposed_retained_ | 205 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
-| ~~audited_conditional~~ | 276 |
+| ~~audited_conditional~~ | 277 |
 | ~~audited_failed~~ | 77 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 14 |
-| `audited_conditional` | 65 |
+| `audited_conditional` | 66 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 10 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1501 |
+| `unaudited` | 1500 |
 
 | criticality | count |
 |---|---:|
@@ -179,6 +179,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_p1_delta_r_2_loop_extension_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `yt_p1_delta_r_sm_rge_crosscheck_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `koide_q_eq_3delta_identity_note_2026-04-21` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `retained_cross_lane_consistency_support_note_2026-04-22` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | B | - |
@@ -1868,6 +1869,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `K1_equals_CF_set_by_runner_assignment`
   - `SU3_Casimir_authorities_not_registered_one_hop_dependencies`
   - `alpha_s_mt_anchor_hardcoded_not_registered_one_hop_dependency`
+- **auditor confidence:** high
+
+### `yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17`
+
+- **Note:** [`YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`](../../docs/YT_P3_MSBAR_TO_POLE_K2_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note retains the two-loop K_2 color-tensor skeleton K_2 = C_F^2 J_FF + C_F C_A J_FA + C_F T_F n_l J_Fl + C_F T_F J_Fh, with exact SU(3) prefactors and cited integral primitives.  _(class `B`)_
+- **chain closes:** False — The runner verifies the SU(3) prefactor arithmetic and a symbolic formula after the four-channel topology decomposition is assumed, but it does not derive that topology basis or the integral primitives; its numerical reconstruction is pinned from the cited K_2 target and literature n_l slope.
+- **rationale:** Issue: the note cleanly separates cited integrals from retained color factors, but the claimed retained K_2 skeleton still imports the standard two-loop on-shell self-energy topology basis and uses a tautological target-pinned numerical reconstruction. Why this blocks: a hostile physicist can verify C_F^2=16/9, C_F C_A=4, C_F T_F n_l=10/3, and C_F T_F=2/3 once SU(3), n_l=5, and the four-channel formula are supplied, but cannot infer from this runner that those are the complete two-loop framework-native topologies or that the cited J_FF/J_FA/J_Fl/J_Fh values have been independently checked. Repair target: add a retained diagram/color-factor enumeration from the framework Feynman rules proving the four-channel basis is complete at two loops, register the integral-citation note as a one-hop dependency or compute the integrals, and replace the C0-from-target reconstruction with an explicit per-integral reconstruction. Claim boundary until fixed: it is safe to claim exact SU(3) Casimir prefactors for the standard imported four-channel K_2 decomposition; it is not safe to call the full K_2 structural skeleton framework-native from the current packet.
+- **open / conditional deps cited:**
+  - `two_loop_topology_basis_not_derived_from_framework_rules`
+  - `J_FF_J_FA_J_Fl_J_Fh_integral_values_cited_not_computed`
+  - `numerical_reconstruction_pinned_from_K2_target_and_dK2_dnl`
+  - `SU3_Casimir_and_n_l_authorities_not_registered_one_hop_dependencies`
 - **auditor confidence:** high
 
 ### `yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17`
