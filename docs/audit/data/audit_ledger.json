@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T02:49:22.390103+00:00",
-  "generated_at": "2026-04-27T02:49:20.625704+00:00",
-  "invalidation_run_at": "2026-04-27T02:49:22.335691+00:00",
+  "effective_status_computed_at": "2026-04-27T02:52:12.228123+00:00",
+  "generated_at": "2026-04-27T02:52:10.507810+00:00",
+  "invalidation_run_at": "2026-04-27T02:52:12.174635+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T02:49:22.217115+00:00",
+  "load_bearing_computed_at": "2026-04-27T02:52:12.056907+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -10396,14 +10396,21 @@
       "verdict_rationale": null
     },
     "ckm_down_type_scale_convention_support_note_2026-04-22": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27T02:52:00.983045+00:00",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 9.489,
+        "transitive_descendants": 126
+      },
+      "audit_status": "audited_numerical_match",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies a coherent numerical relation among PDG scale conventions, but the threshold-local comparator and the 5/6 bridge are explicitly not derived by this note.",
       "claim_id": "ckm_down_type_scale_convention_support_note_2026-04-22",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -10411,18 +10418,24 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 5,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_numerical_match",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_numerical_match",
       "load_bearing_score": 9.489,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The bounded lane's current live support uses threshold-local because R_pred matches R_thresh at +0.20% but is +15.0% above R_common; the scale split is exactly the transport factor.",
+      "load_bearing_step_class": "G",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "3583734de9fcd076468fc8a0679b8350d56572e92e62ec6136c49a240d6feb05",
       "note_path": "docs/CKM_DOWN_TYPE_SCALE_CONVENTION_SUPPORT_NOTE_2026-04-22.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md",
+        "docs/CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md",
+        "docs/ALPHA_S_DERIVED_NOTE.md",
+        "docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md",
+        "PDG_2024_mass_and_alpha_s_inputs"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.367839+00:00",
@@ -10451,16 +10464,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 3,
+        "B": 5,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 6,
+        "total_pass": 14
       },
       "runner_path": "scripts/frontier_ckm_down_type_scale_convention_support.py",
       "title": "CKM Down-Type Mass-Ratio Scale-Convention Support Note",
       "transitive_descendants": 126,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The load-bearing support comes from choosing the threshold-local mass-ratio comparator, where the framework prediction is +0.20%, while the common-scale comparator gives a +15% mismatch; the note explicitly says the 5/6 bridge and the natural scale convention remain open. Why this blocks: A proposed-retained support claim cannot be ratified as structural closure when the sharp evidence depends on a selected comparator scale plus PDG running inputs, and no one-hop dependencies for alpha_s(v), CKM atlas, the 5/6 bridge, or the down-type lane are registered. Repair target: Derive the 5/6 bridge and a framework-natural scale-convention theorem, register those as clean dependencies, and keep the runner's exact transport identity separate from PDG comparator checks. Claim boundary until fixed: It is safe to claim that the threshold-local and common-scale comparisons differ by the QCD transport factor and that the threshold-local comparison gives a sub-percent numerical support check; it is not a retained theorem-grade down-type mass-ratio closure."
     },
     "ckm_egyptian_bernoulli_closures_koide_bridge_support_note_2026-04-25": {
       "audit_date": null,

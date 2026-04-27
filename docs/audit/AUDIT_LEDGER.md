@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T02:49:22.759013+00:00
+**Generated:** 2026-04-27T02:52:12.457844+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,13 +19,14 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| _proposed_retained_ | 307 |
+| _proposed_retained_ | 306 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
 | open | 11 |
 | unknown | 744 |
 | ~~audited_decoration~~ | 1 |
+| ~~audited_numerical_match~~ | 1 |
 | ~~audited_conditional~~ | 246 |
 
 | audit_status | count |
@@ -33,7 +34,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audit_in_progress` | 3 |
 | `audited_conditional` | 4 |
 | `audited_decoration` | 1 |
-| `unaudited` | 1593 |
+| `audited_numerical_match` | 1 |
+| `unaudited` | 1592 |
 
 | criticality | count |
 |---|---:|
@@ -97,6 +99,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `native_gauge_closure_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_ew_color_projection_theorem` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
+| `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 
 
 ## Audit findings (full)
@@ -113,6 +116,24 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: The load-bearing step is exact algebra from the definitions alpha_LM = alpha_bare/u_0 and alpha_s(v) = alpha_bare/u_0^2, but the row presents this bookkeeping corollary as a separate proposed-retained theorem and registers no parent dependency or primary runner. Why this blocks: A definition-level geometric-mean identity adds no independent observable, comparator, falsifiability, or new physical bridge beyond the upstream plaquette/coupling surface, so it should not inflate the retained claim surface as a standalone theorem. Repair target: Box this identity under the retained plaquette/coupling-chain parent, or re-promote only if it is shown to be genuine compression used load-bearing by downstream claims with an explicit parent dependency. Claim boundary until fixed: It is safe to state the exact identity as a bookkeeping corollary of the accepted coupling definitions and to use it to avoid double-counting alpha_LM and alpha_s(v) as independent knobs.
 - **open / conditional deps cited:**
   - `accepted_plaquette_coupling_chain_parent_not_registered`
+- **auditor confidence:** high
+
+### `ckm_down_type_scale_convention_support_note_2026-04-22`
+
+- **Note:** [`CKM_DOWN_TYPE_SCALE_CONVENTION_SUPPORT_NOTE_2026-04-22.md`](../../docs/CKM_DOWN_TYPE_SCALE_CONVENTION_SUPPORT_NOTE_2026-04-22.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The bounded lane's current live support uses threshold-local because R_pred matches R_thresh at +0.20% but is +15.0% above R_common; the scale split is exactly the transport factor.  _(class `G`)_
+- **chain closes:** False — The runner verifies a coherent numerical relation among PDG scale conventions, but the threshold-local comparator and the 5/6 bridge are explicitly not derived by this note.
+- **rationale:** Issue: The load-bearing support comes from choosing the threshold-local mass-ratio comparator, where the framework prediction is +0.20%, while the common-scale comparator gives a +15% mismatch; the note explicitly says the 5/6 bridge and the natural scale convention remain open. Why this blocks: A proposed-retained support claim cannot be ratified as structural closure when the sharp evidence depends on a selected comparator scale plus PDG running inputs, and no one-hop dependencies for alpha_s(v), CKM atlas, the 5/6 bridge, or the down-type lane are registered. Repair target: Derive the 5/6 bridge and a framework-natural scale-convention theorem, register those as clean dependencies, and keep the runner's exact transport identity separate from PDG comparator checks. Claim boundary until fixed: It is safe to claim that the threshold-local and common-scale comparisons differ by the QCD transport factor and that the threshold-local comparison gives a sub-percent numerical support check; it is not a retained theorem-grade down-type mass-ratio closure.
+- **open / conditional deps cited:**
+  - `DOWN_TYPE_MASS_RATIO_CKM_DUAL_NOTE.md`
+  - `CKM_FIVE_SIXTHS_BRIDGE_SUPPORT_NOTE.md`
+  - `ALPHA_S_DERIVED_NOTE.md`
+  - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
+  - `PDG_2024_mass_and_alpha_s_inputs`
 - **auditor confidence:** high
 
 ### `confinement_string_tension_note`
