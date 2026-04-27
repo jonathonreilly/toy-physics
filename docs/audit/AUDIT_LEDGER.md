@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T05:23:00.020311+00:00
+**Generated:** 2026-04-27T05:24:31.743020+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 6 |
-| _proposed_retained_ | 249 |
+| _proposed_retained_ | 248 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
 | ~~audited_conditional~~ | 243 |
-| ~~audited_failed~~ | 58 |
+| ~~audited_failed~~ | 59 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 6 |
 | `audited_conditional` | 41 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 1 |
+| `audited_failed` | 2 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1542 |
+| `unaudited` | 1541 |
 
 | criticality | count |
 |---|---:|
@@ -150,6 +150,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `koide_q_eq_3delta_identity_note_2026-04-21` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `retained_cross_lane_consistency_support_note_2026-04-22` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | B | - |
+| `equivalence_principle_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | G | - |
 | `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `bell_inequality_derived_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -402,6 +403,25 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `CPT_EXACT_NOTE.md_not_registered_one_hop_dependency`
   - `parity_operator_basis_dimension5_LV_no_go_theorem_not_registered`
   - `hierarchy_scale_a_equals_planck_length_theorem_not_registered`
+- **auditor confidence:** high
+
+### `equivalence_principle_note`
+
+- **Note:** [`EQUIVALENCE_PRINCIPLE_NOTE.md`](../../docs/EQUIVALENCE_PRINCIPLE_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Uniform field f = g*z gives F ~ g^1.008 and F ~ M^0.998, so the note concludes m_inertial = m_gravitational to 0.8%.  _(class `G`)_
+- **chain closes:** False — The source note provides only headline numerical exponents and no registered runner, command, log, data table, fit ranges, uncertainty model, or one-hop derivation of the mass/readout identifications. The asserted equality of inertial and gravitational mass therefore cannot be audited from the allowed packet.
+- **rationale:** Issue: the proposed-retained equivalence-principle claim rests on unsupported numerical fit summaries and an unregistered physical identification of two response coefficients as inertial and gravitational mass. Why this blocks: linearity of a beam deflection with respect to field strength and source strength does not by itself establish m_inertial = m_gravitational, especially when the note also reports non-constant-acceleration layer scaling; without the runner output, fit data, force observable, packet/beam definition, source normalization, and uncertainty calculation, the stated 0.8% equality is not reproducible. Repair target: register a primary runner that generates the sweep, emits the g and M fit tables with uncertainties, defines the force/mass observables, checks independence from packet/beam parameters, and proves or registers the valley-linear action coupling S = L(1-f) as the shared source of both responses. Claim boundary until fixed: it is safe to say the note reports a beam-level uniform-field proportionality test with exponents near one; it is not safe to claim a retained equivalence principle or equality of inertial and gravitational mass.
+- **open / conditional deps cited:**
+  - `primary_equivalence_principle_runner_not_registered`
+  - `uniform_field_force_observable_definition_not_registered`
+  - `inertial_mass_extraction_theorem_not_registered`
+  - `gravitational_mass_source_normalization_theorem_not_registered`
+  - `fit_data_ranges_uncertainties_and_logs_missing`
+  - `valley_linear_action_coupling_S_equals_L_times_1_minus_f_not_registered`
 - **auditor confidence:** high
 
 ### `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25`
