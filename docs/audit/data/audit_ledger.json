@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T18:17:55.589271+00:00",
-  "generated_at": "2026-04-27T18:17:54.001840+00:00",
-  "invalidation_run_at": "2026-04-27T18:17:55.539353+00:00",
+  "effective_status_computed_at": "2026-04-27T18:19:16.898372+00:00",
+  "generated_at": "2026-04-27T18:19:15.305357+00:00",
+  "invalidation_run_at": "2026-04-27T18:19:16.852212+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T18:17:55.442894+00:00",
+  "load_bearing_computed_at": "2026-04-27T18:19:16.756434+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -71045,14 +71045,21 @@
       "verdict_rationale": "Issue: The exact numerical result in the note is stale relative to scripts/frontier_staggered_backreaction_iterative.py. Current output gives baseline cycle-bearing mean gap 9.618e-01, best mean gap 4.314e-01 at invheat_b3p00, improvement 2.23x, baseline self-gap mean 3.822e-01, and best-map self-gap mean 1.581e+01; the note instead freezes baseline 8.899e-01, best 6.099e-01 at invheat_b2p00, improvement 1.46x, and best-map self-gap 2.275e+00. Why this blocks: the retained negative readout depends on the exact source-map ranking and gap table, and those values now identify a different best map and much larger self-update failure. Repair target: update the note from the current runner or restore the intended artifact, then add assertions for baseline gap, best-map identity, best gap, improvement factor, R^2, two-body residual, TOWARD counts, norm drift, and self-gap. Claim boundary until fixed: it is safe to claim that the current runner still finds no clean cycle-bearing closure from linear source preconditioning, with all rows TOWARD and stable but best self-gap exploding to 1.581e+01; it is not safe to retain the frozen invheat_b2p00 table or the stated 1.46x no-go numerics."
     },
     "staggered_backreaction_nonlocal_closure_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner contradicts both the best nonlocal point and the conclusion: current best is alpha=0.40 with cycle gap 1.620e-02, while the layered holdout gap is 7.035e-01, not 5.964e-02.",
       "claim_id": "staggered_backreaction_nonlocal_closure_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -71060,18 +71067,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note claims the fractional-Green nonlocal source sector improves over the local screened baseline but does not materially beat the prior calibrated linear benchmark, with best alpha=0.00 cycle gap 8.590e-02 and holdout gap 5.964e-02.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "07064275a439d716ec662dc946f207e1ce1364c2bb7f12441d50365a8467b00e",
       "note_path": "docs/STAGGERED_BACKREACTION_NONLOCAL_CLOSURE_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/STAGGERED_BACKREACTION_ITERATIVE_NOTE.md",
+        "docs/STAGGERED_BACKREACTION_SHELL_SPECTRAL_NOTE.md",
+        "docs/STAGGERED_LAYERED_BACKREACTION_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369813+00:00",
@@ -71109,7 +71120,7 @@
       "runner_path": null,
       "title": "Staggered Backreaction Nonlocal Closure Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The source note is stale relative to scripts/frontier_staggered_backreaction_nonlocal_closure.py and the drift changes the claim. Current output gives baseline alpha=1.00 cycle gap 3.881e-02, best alpha=0.40 cycle gap 1.620e-02, improvement 2.40x, best holdout gap 7.035e-01, and best shell-fit R^2 values 0.7857/0.8291; the note freezes alpha=0.00 best gap 8.590e-02, holdout 5.964e-02, and concludes no material improvement over the prior calibrated linear benchmark. Why this blocks: the retained negative claim says the nonlocal family does not beat the calibrated linear map, but the current runner says it beats the frozen prior benchmark on cycle-bearing rows while failing the holdout much more severely. Repair target: reconcile the runner and note, define the comparator benchmark from current audited data, update the alpha/gain/gap table and holdout/spectral summaries, and add assertions for best alpha, cycle gap, holdout gap, improvement factor, R^2, additivity, norm drift, and shell/spectral metrics. Claim boundary until fixed: it is safe to claim that the current runner finds a calibrated cycle-bearing improvement at alpha=0.40 with all TOWARD/linearity/additivity/norm checks intact, but a poor layered holdout and continued low-mode bias; it is not safe to claim the frozen alpha=0.00 negative readout or the stated holdout success."
     },
     "staggered_backreaction_note": {
       "audit_date": null,
