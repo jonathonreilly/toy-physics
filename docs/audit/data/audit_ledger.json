@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T02:52:12.228123+00:00",
-  "generated_at": "2026-04-27T02:52:10.507810+00:00",
-  "invalidation_run_at": "2026-04-27T02:52:12.174635+00:00",
+  "effective_status_computed_at": "2026-04-27T02:55:10.264468+00:00",
+  "generated_at": "2026-04-27T02:55:08.541670+00:00",
+  "invalidation_run_at": "2026-04-27T02:55:10.211733+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T02:52:12.056907+00:00",
+  "load_bearing_computed_at": "2026-04-27T02:55:10.102916+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -20867,8 +20867,8 @@
         "dm_neutrino_dirac_bridge_theorem_note_2026-04-15"
       ],
       "direct_in_degree": 5,
-      "effective_status": "unknown",
-      "effective_status_reason": "inherited_from:dm_neutrino_dirac_bridge_theorem_note_2026-04-15",
+      "effective_status": "audited_conditional",
+      "effective_status_reason": "inherited_from:neutrino_dirac_z3_support_trichotomy_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 9.419,
@@ -24063,8 +24063,8 @@
         "dm_wilson_direct_descendant_positive_branch_compatibility_and_insufficiency_theorem_note_2026-04-18"
       ],
       "direct_in_degree": 0,
-      "effective_status": "unknown",
-      "effective_status_reason": "self",
+      "effective_status": "audited_conditional",
+      "effective_status_reason": "inherited_from:dm_wilson_direct_descendant_projected_source_branch_discriminant_theorem_note_2026-04-18",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 0.0,
@@ -24535,8 +24535,8 @@
         "dm_wilson_direct_descendant_projected_source_branch_discriminant_theorem_note_2026-04-18"
       ],
       "direct_in_degree": 1,
-      "effective_status": "unknown",
-      "effective_status_reason": "self",
+      "effective_status": "audited_conditional",
+      "effective_status_reason": "inherited_from:dm_wilson_direct_descendant_projected_source_branch_discriminant_theorem_note_2026-04-18",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 1.5,
@@ -24580,8 +24580,8 @@
         "dm_leptogenesis_ne_projected_source_triplet_sign_theorem_note_2026-04-16"
       ],
       "direct_in_degree": 2,
-      "effective_status": "unknown",
-      "effective_status_reason": "self",
+      "effective_status": "audited_conditional",
+      "effective_status_reason": "inherited_from:dm_neutrino_source_surface_perturbative_uniqueness_theorem_note_2026-04-17",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 2.585,
@@ -48314,14 +48314,21 @@
       "verdict_rationale": null
     },
     "neutrino_dirac_z3_support_trichotomy_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27T02:54:52.610686+00:00",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 10.454,
+        "transitive_descendants": 123
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies the Z_3 support trichotomy once the left/right generation charges and single-Higgs q_H condition are supplied, but those retained atlas inputs are not registered as one-hop dependencies for this row.",
       "claim_id": "neutrino_dirac_z3_support_trichotomy_note",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -48329,18 +48336,23 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 7,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 10.454,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Assume the retained three-generation matter structure, the retained reduction of neutrino mass to the Dirac lane, and a single Higgs doublet with definite generation Z_3 charge q_H; then the allowed support of Y_nu is exactly one of three permutation patterns.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "dbe2f786aede7cf1a9fc08714e52782c7dc9ed0cd372f6ffd53c183674af7919",
       "note_path": "docs/NEUTRINO_DIRAC_Z3_SUPPORT_TRICHOTOMY_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "one_generation_matter_closure_dependency_not_registered",
+        "three_generation_matter_structure_dependency_not_registered",
+        "neutrino_dirac_lane_reduction_dependency_not_registered",
+        "single_higgs_z3_charge_condition_not_derived"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369196+00:00",
@@ -48369,16 +48381,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 23,
+        "B": 3,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 26
       },
       "runner_path": "scripts/frontier_neutrino_dirac_z3_support_trichotomy.py",
       "title": "Neutrino Dirac `Z_3` Support Trichotomy",
       "transitive_descendants": 123,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The exact support classification depends on unregistered upstream inputs: one-generation matter closure, three-generation matter structure, reduction to the Dirac neutrino lane, and the explicit single-Higgs definite-Z_3-charge condition. Why this blocks: The matrix-support trichotomy is valid algebra after those charges are supplied, but the audit packet does not establish the charges, the Dirac-lane reduction, or the Higgs charge bridge as clean retained dependencies, so the proposed-retained lane cannot close from this row alone. Repair target: Register clean dependency notes for the generation charges and Dirac-lane reduction, and either derive or keep explicitly bounded the single-Higgs q_H assumption; make the runner read those declared charges rather than hard-coding them as retained. Claim boundary until fixed: It is safe to claim the conditional theorem that given q_L=(0,+1,-1), q_R=(0,-1,+1), and one definite q_H, Y_nu support reduces from nine entries to one of three three-entry permutation patterns."
     },
     "neutrino_majorana_adjacent_singlet_placement_theorem_note": {
       "audit_date": null,
@@ -50487,8 +50499,8 @@
         "charged_lepton_two_higgs_canonical_reduction_note"
       ],
       "direct_in_degree": 9,
-      "effective_status": "unknown",
-      "effective_status_reason": "inherited_from:lepton_single_higgs_pmns_triviality_note",
+      "effective_status": "audited_conditional",
+      "effective_status_reason": "inherited_from:neutrino_dirac_z3_support_trichotomy_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 11.395,
@@ -54095,7 +54107,7 @@
       ],
       "direct_in_degree": 7,
       "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17",
+      "effective_status_reason": "inherited_from:dm_neutrino_source_surface_perturbative_uniqueness_theorem_note_2026-04-17",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 10.37,
