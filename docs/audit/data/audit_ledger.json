@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T16:38:09.533778+00:00",
-  "generated_at": "2026-04-27T16:38:07.926415+00:00",
-  "invalidation_run_at": "2026-04-27T16:38:09.487282+00:00",
+  "effective_status_computed_at": "2026-04-27T16:39:25.830786+00:00",
+  "generated_at": "2026-04-27T16:39:24.239349+00:00",
+  "invalidation_run_at": "2026-04-27T16:39:25.784000+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T16:38:09.387206+00:00",
+  "load_bearing_computed_at": "2026-04-27T16:39:25.686461+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -62615,14 +62615,21 @@
       "verdict_rationale": null
     },
     "qnm_control_hardening_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The source is a roadmap/checklist with no runner, no cited audited controls, and an explicit statement that there is no proposed-retained spectral claim yet.",
       "claim_id": "qnm_control_hardening_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -62630,18 +62637,20 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "QNM remains a hardening target, not a retained spectral claim, until the listed control program is frozen.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "a5ba29938152bf65491fff1810a42030b9a49c5e791d2187d3d6dea920b40494",
       "note_path": "docs/QNM_CONTROL_HARDENING_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/QNM_HARDENING_FEASIBILITY_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369483+00:00",
@@ -62679,7 +62688,7 @@
       "runner_path": null,
       "title": "QNM Control Hardening Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The queued row is proposed_retained only because the status line contains that token in a negation; the note itself says this is a bounded control program only and not a proposed_retained spectral claim. Why this blocks: there is no runner, frozen null, matched control, Born audit, Nyquist exclusion, or refinement/threshold stability result to audit as a retained QNM claim. Repair target: demote the source status to bounded/open roadmap language, then add the five named controls and a runner that computes them before proposing a spectral claim. Claim boundary until fixed: it is safe to cite this as a QNM hardening checklist and as evidence that the branch-side QNM story remains blocked; it is not safe to treat it as an audit-retained QNM result or retained spectral-control theorem."
     },
     "qnm_hardening_feasibility_note": {
       "audit_date": null,

@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T16:38:09.721754+00:00
+**Generated:** 2026-04-27T16:39:26.029301+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 60 |
-| _proposed_retained_ | 85 |
+| _proposed_retained_ | 84 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
 | ~~audited_conditional~~ | 321 |
-| ~~audited_failed~~ | 115 |
+| ~~audited_failed~~ | 116 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 60 |
 | `audited_conditional` | 108 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 48 |
+| `audited_failed` | 49 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1384 |
+| `unaudited` | 1383 |
 
 | criticality | count |
 |---|---:|
@@ -316,6 +316,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `poisson_self_gravity_mechanism_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `portable_card_extension_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `portable_package_extension_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `qnm_control_hardening_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `staggered_backreaction_green_closure_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `structured_mirror_bornsafe_scan_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -3363,6 +3364,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: The unification note imports SOURCE_RESOLVED_WAVEFIELD_MECHANISM_NOTE as a retained wavefield authority, but that source row is still unaudited while the synthesis has no runner or ledger-derived table. Why this blocks: the common-propagator taxonomy may be plausible, but a retained unification claim cannot depend on an unaudited load-bearing lane. Repair target: audit or repair the source-resolved wavefield mechanism note, then rebuild this synthesis from audit_ledger effective_status or add a small runner/table that only includes audit-clean lanes. Claim boundary until fixed: it is safe to say the already clean complex-action and electrostatics lanes share a fixed-propagator/scalar-coupling pattern, and that the source-resolved wavefield lane is a candidate member; it is not safe to retain the full three-lane propagator-family unification.
 - **open / conditional deps cited:**
   - `SOURCE_RESOLVED_WAVEFIELD_MECHANISM_NOTE.md`
+- **auditor confidence:** high
+
+### `qnm_control_hardening_note`
+
+- **Note:** [`QNM_CONTROL_HARDENING_NOTE.md`](../../docs/QNM_CONTROL_HARDENING_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** QNM remains a hardening target, not a retained spectral claim, until the listed control program is frozen.  _(class `B`)_
+- **chain closes:** False — The source is a roadmap/checklist with no runner, no cited audited controls, and an explicit statement that there is no proposed-retained spectral claim yet.
+- **rationale:** Issue: The queued row is proposed_retained only because the status line contains that token in a negation; the note itself says this is a bounded control program only and not a proposed_retained spectral claim. Why this blocks: there is no runner, frozen null, matched control, Born audit, Nyquist exclusion, or refinement/threshold stability result to audit as a retained QNM claim. Repair target: demote the source status to bounded/open roadmap language, then add the five named controls and a runner that computes them before proposing a spectral claim. Claim boundary until fixed: it is safe to cite this as a QNM hardening checklist and as evidence that the branch-side QNM story remains blocked; it is not safe to treat it as an audit-retained QNM result or retained spectral-control theorem.
+- **open / conditional deps cited:**
+  - `QNM_HARDENING_FEASIBILITY_NOTE.md`
 - **auditor confidence:** high
 
 ### `retained_cross_lane_consistency_support_note_2026-04-22`
