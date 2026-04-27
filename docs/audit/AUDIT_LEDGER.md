@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T22:11:50.314534+00:00
+**Generated:** 2026-04-27T22:14:59.296806+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 72 |
-| _proposed_retained_ | 17 |
+| _proposed_retained_ | 16 |
 | _proposed_promoted_ | 1 |
 | bounded | 185 |
 | support | 104 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
 | ~~audited_conditional~~ | 167 |
-| ~~audited_failed~~ | 327 |
+| ~~audited_failed~~ | 328 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 72 |
 | `audited_conditional` | 137 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 73 |
+| `audited_failed` | 74 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1320 |
+| `unaudited` | 1319 |
 
 | criticality | count |
 |---|---:|
@@ -383,6 +383,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `unified_basin_freeze_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `yt_p1_delta_2_bz_computation_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `yt_p1_delta_r_master_assembly_theorem_note_2026-04-18` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `bell_inequality_derived_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -4858,6 +4859,24 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `same_sign_bound_saturation_central_assumption_not_derived`
   - `observed_m_t_PDG_comparator_not_registered`
 - **auditor confidence:** high
+
+### `yt_p1_delta_r_master_assembly_theorem_note_2026-04-18`
+
+- **Note:** [`YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md`](../../docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note preserves the literature-cited three-channel assembly Delta_R=-3.27% but declares the canonical retained central superseded by the full-staggered-PT value Delta_R=-3.77% +/- 0.45%.  _(class `B`)_
+- **chain closes:** False — The source note's current canonical claim is not what the primary runner verifies: the live runner still declares the older literature-cited -3.2709% assembly as the definitive result and says the framework-native BZ quadratures remain open. The source's superseding full-staggered-PT central is delegated to another note/runner and is not checked by this primary runner or registered as a dependency in this row.
+- **rationale:** Issue: the audited source has a canonical-central supersession notice, but the attached runner validates only the old literature-cited -3.27% roll-up and ends with that value as the definitive result; it does not verify the claimed canonical -3.77% +/- 0.45% full-staggered-PT central and even prints that framework-native BZ quadratures remain open. Why this blocks: a proposed_retained master assembly cannot simultaneously claim canonical retained supersession while its primary runner checks the superseded calculation, and the old roll-up inherits cited/channel inputs and ranges rather than independently retained canonical values. Repair target: either split this row into a conditional literature-cited assembly with no canonical retained language, or update the primary runner and registered one-hop dependencies so this claim directly verifies the full-staggered-PT integrals, the -3.77% +/- 0.45% assembly, and the supersession relationship. Claim boundary until fixed: safe to claim the arithmetic old roll-up -3.2709% from the supplied per-channel central values (+2, -10/3, +0.933); not safe to claim this row establishes the canonical retained Delta_R central, P1 band, or m_t lane.
+- **open / conditional deps cited:**
+  - `YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md`
+  - `YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md`
+  - `YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md`
+  - `YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md`
+  - `scripts/frontier_yt_p1_delta_r_master_assembly.py`
+- **auditor confidence:** 0.96
 
 ### `yt_p1_delta_r_sm_rge_crosscheck_note_2026-04-18`
 

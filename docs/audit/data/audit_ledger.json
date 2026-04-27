@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T22:11:50.104043+00:00",
-  "generated_at": "2026-04-27T22:11:48.411774+00:00",
-  "invalidation_run_at": "2026-04-27T22:11:50.048814+00:00",
+  "effective_status_computed_at": "2026-04-27T22:14:59.085330+00:00",
+  "generated_at": "2026-04-27T22:14:57.381786+00:00",
+  "invalidation_run_at": "2026-04-27T22:14:59.025450+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T22:11:49.933706+00:00",
+  "load_bearing_computed_at": "2026-04-27T22:14:58.917242+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -85696,15 +85696,21 @@
       "verdict_rationale": "Issue: the proposed-retained 2-loop extension turns an inherited 1-loop central and inherited loop-geometric bound into a retained through-2-loop central by assuming the unknown 2-loop term saturates the bound and has the same sign, while all eight 2-loop BZ integrals remain open and the row registers no one-hop dependencies for the 1-loop master, loop-geometric theorem, canonical surface, P3 color-template notes, or observed m_t comparator. Why this blocks: the runner confirms exact Casimir arithmetic and envelope propagation after those inputs are supplied, but it does not compute any J_X integral, derive the 2-loop sign, justify saturation as a central estimate, or reconcile authority between the older literature-cited -3.27% base and the later full-staggered -3.77% canonical cross-reference. Repair target: register and audit the 1-loop master, full-staggered 1-loop update, loop-geometric bound, Rep-A/Rep-B, Delta_i notes, P3 color-factor templates, canonical constants, and comparator sources; either compute the eight J_X BZ integrals with a runner or demote the -3.99% value to a named envelope scenario with no retained central status. Claim boundary until fixed: it is safe to claim a conditional structural envelope: given Delta_R^{1-loop}=-3.27085% and r_R=0.221264, the 2-loop magnitude is bounded by 0.7237%, the geometric tail by 0.9294%, the bound-saturated same-sign scenario gives -3.9946%, and the broad m_t lane contains 172.69 GeV; it is not yet an audited retained 2-loop Delta_R computation or first-principles P1 precision closure."
     },
     "yt_p1_delta_r_master_assembly_theorem_note_2026-04-18": {
-      "audit_date": null,
-      "audit_state_snapshot": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 7.431,
+        "transitive_descendants": 121
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": 0.96,
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The source note's current canonical claim is not what the primary runner verifies: the live runner still declares the older literature-cited -3.2709% assembly as the definitive result and says the framework-native BZ quadratures remain open. The source's superseding full-staggered-PT central is delegated to another note/runner and is not checked by this primary runner or registered as a dependency in this row.",
       "claim_id": "yt_p1_delta_r_master_assembly_theorem_note_2026-04-18",
       "criticality": "high",
       "cross_confirmation": null,
@@ -85713,18 +85719,24 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 7.431,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note preserves the literature-cited three-channel assembly Delta_R=-3.27% but declares the canonical retained central superseded by the full-staggered-PT value Delta_R=-3.77% +/- 0.45%.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "d5fa40be7748cc7ed96180d89ba1ed010f0dfb2c5c79e1f5d20d1f75973cbb12",
       "note_path": "docs/YT_P1_DELTA_R_MASTER_ASSEMBLY_THEOREM_NOTE_2026-04-18.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/YT_P1_BZ_QUADRATURE_FULL_STAGGERED_PT_NOTE_2026-04-18.md",
+        "docs/YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md",
+        "docs/YT_P1_DELTA_2_BZ_COMPUTATION_NOTE_2026-04-17.md",
+        "docs/YT_P1_DELTA_3_BZ_COMPUTATION_NOTE_2026-04-17.md",
+        "scripts/frontier_yt_p1_delta_r_master_assembly.py"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.370317+00:00",
@@ -85797,16 +85809,18 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "class_A_exact_arithmetic_or_identity": 42,
+        "class_B_dependency_or_assumption_checks": 22,
+        "class_C_first_principles_or_numeric_compute": 0,
+        "class_D_unchecked_load_bearing_steps": 4,
+        "notes": "Live runner reports PASS=68 FAIL=0. It verifies the superseded literature-cited assembly at -3.2709%, broad uncertainty arithmetic, and m_t lane containment, but does not execute the full-staggered-PT runner or verify the source note's canonical -3.77% +/- 0.45% superseding central.",
+        "total_fail": 0,
+        "total_pass": 68
       },
       "runner_path": "scripts/frontier_yt_p1_delta_r_master_assembly.py",
       "title": "P1 \u0394_R Master Assembly Theorem Note (Three-Channel Ratio Correction Roll-Up)",
       "transitive_descendants": 121,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the audited source has a canonical-central supersession notice, but the attached runner validates only the old literature-cited -3.27% roll-up and ends with that value as the definitive result; it does not verify the claimed canonical -3.77% +/- 0.45% full-staggered-PT central and even prints that framework-native BZ quadratures remain open. Why this blocks: a proposed_retained master assembly cannot simultaneously claim canonical retained supersession while its primary runner checks the superseded calculation, and the old roll-up inherits cited/channel inputs and ranges rather than independently retained canonical values. Repair target: either split this row into a conditional literature-cited assembly with no canonical retained language, or update the primary runner and registered one-hop dependencies so this claim directly verifies the full-staggered-PT integrals, the -3.77% +/- 0.45% assembly, and the supersession relationship. Claim boundary until fixed: safe to claim the arithmetic old roll-up -3.2709% from the supplied per-channel central values (+2, -10/3, +0.933); not safe to claim this row establishes the canonical retained Delta_R central, P1 band, or m_t lane."
     },
     "yt_p1_delta_r_sm_rge_crosscheck_note_2026-04-18": {
       "audit_date": "2026-04-26",
