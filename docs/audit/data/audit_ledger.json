@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T16:53:57.172811+00:00",
-  "generated_at": "2026-04-27T16:53:55.575077+00:00",
-  "invalidation_run_at": "2026-04-27T16:53:57.126547+00:00",
+  "effective_status_computed_at": "2026-04-27T16:55:10.107389+00:00",
+  "generated_at": "2026-04-27T16:55:08.514963+00:00",
+  "invalidation_run_at": "2026-04-27T16:55:10.059242+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T16:53:57.029907+00:00",
+  "load_bearing_computed_at": "2026-04-27T16:55:09.962817+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -64559,14 +64559,21 @@
       "verdict_rationale": null
     },
     "replay_environment_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The note is a host-specific reproducibility convention, not a retained physics result, and it has no runner or audit-clean environment check proving the interpreter/numpy claims are stable across replay contexts.",
       "claim_id": "replay_environment_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -64574,13 +64581,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Retained numpy replay scripts on this machine should either be launched with /usr/bin/python3 or call scripts/numpy_replay_bootstrap.py before importing numpy-heavy modules.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "14f9af05f68e4d4f05caea36e84323d90c94b691e4242c960782d81a6801f004",
@@ -64623,7 +64630,7 @@
       "runner_path": null,
       "title": "Replay Environment Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The row is parsed as proposed_retained from a note whose own content says the scientific claims do not change and records a local machine interpreter convention rather than a physics theorem. Why this blocks: a host-specific PATH/numpy observation without a runner, lockfile, or CI check cannot carry retained-claim status in the audit ledger, and retaining it would confuse operational reproducibility guidance with scientific evidence. Repair target: demote the note to support/replay documentation, or add a deterministic environment-check runner plus a pinned replay environment contract if a retained reproducibility artifact is actually intended. Claim boundary until fixed: it is safe to say that on the documented machine the replay convention is to use /usr/bin/python3 or the bootstrap helper; it is not safe to claim this note as retained physics or retained scientific support beyond local replay hygiene."
     },
     "repo.active_review_queue": {
       "audit_date": null,

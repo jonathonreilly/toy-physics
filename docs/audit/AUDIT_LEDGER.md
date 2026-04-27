@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T16:53:57.369931+00:00
+**Generated:** 2026-04-27T16:55:10.292235+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 61 |
-| _proposed_retained_ | 79 |
+| _proposed_retained_ | 78 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
 | ~~audited_conditional~~ | 324 |
-| ~~audited_failed~~ | 117 |
+| ~~audited_failed~~ | 118 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 61 |
 | `audited_conditional` | 111 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 50 |
+| `audited_failed` | 51 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1378 |
+| `unaudited` | 1377 |
 
 | criticality | count |
 |---|---:|
@@ -322,6 +322,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `portable_package_extension_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `qnm_control_hardening_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `quark_strc_observable_principle_note_2026-04-19` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | E | - |
+| `replay_environment_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `staggered_backreaction_green_closure_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `structured_mirror_bornsafe_scan_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -3459,6 +3460,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
   - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
   - `SCALAR_TENSOR_RAY_MAGNITUDE_BRIDGE_NOTE_2026-04-19.md`
+- **auditor confidence:** high
+
+### `replay_environment_note`
+
+- **Note:** [`REPLAY_ENVIRONMENT_NOTE.md`](../../docs/REPLAY_ENVIRONMENT_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Retained numpy replay scripts on this machine should either be launched with /usr/bin/python3 or call scripts/numpy_replay_bootstrap.py before importing numpy-heavy modules.  _(class `B`)_
+- **chain closes:** False — The note is a host-specific reproducibility convention, not a retained physics result, and it has no runner or audit-clean environment check proving the interpreter/numpy claims are stable across replay contexts.
+- **rationale:** Issue: The row is parsed as proposed_retained from a note whose own content says the scientific claims do not change and records a local machine interpreter convention rather than a physics theorem. Why this blocks: a host-specific PATH/numpy observation without a runner, lockfile, or CI check cannot carry retained-claim status in the audit ledger, and retaining it would confuse operational reproducibility guidance with scientific evidence. Repair target: demote the note to support/replay documentation, or add a deterministic environment-check runner plus a pinned replay environment contract if a retained reproducibility artifact is actually intended. Claim boundary until fixed: it is safe to say that on the documented machine the replay convention is to use /usr/bin/python3 or the bootstrap helper; it is not safe to claim this note as retained physics or retained scientific support beyond local replay hygiene.
 - **auditor confidence:** high
 
 ### `retained_cross_lane_consistency_support_note_2026-04-22`
