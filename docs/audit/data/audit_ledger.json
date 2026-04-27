@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T19:15:40.289710+00:00",
-  "generated_at": "2026-04-27T19:15:38.704600+00:00",
-  "invalidation_run_at": "2026-04-27T19:15:40.242995+00:00",
+  "effective_status_computed_at": "2026-04-27T19:18:30.979426+00:00",
+  "generated_at": "2026-04-27T19:18:29.388559+00:00",
+  "invalidation_run_at": "2026-04-27T19:18:30.933629+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T19:15:40.148628+00:00",
+  "load_bearing_computed_at": "2026-04-27T19:18:30.835567+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -80282,14 +80282,21 @@
       "verdict_rationale": "Issue: the note promotes a single-v/c moving-source comparison on an imposed wave-equation field to a retained dynamical retardation signature. Why this blocks: the runner reproduces M-I=-0.002785 for Fam1 and 22-26% relative differences across families, but it depends on the conditionally audited wave-equation self-field law, a hand-constructed layerwise instantaneous comparator, one translation speed v/c=0.30, one source trajectory, and no derived light-travel-time or angular-retardation theorem; the live Born residual is 3.59e-16 rather than the note/log's 2.22e-15, though still machine precision. Repair target: register and clean-audit the wave equation/source coupling, prove the c=infinity comparator construction and retarded-time observable, and extend the runner to multiple velocities/trajectories with assertions for the expected scaling, Born tolerance, null, and family portability. Claim boundary until fixed: it is safe to claim that, in this frozen NL=30, W=8, S=0.004, v/c=0.30 translation harness, retarded and instantaneous moving-source fields produce reproducibly different beam deflections with M<I across the three tested families; it is not yet an audited retained general retarded-gravity law."
     },
     "wave_static_boundary_sensitivity_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "Running the named boundary-sensitivity runner at the source note's explicit H = 0.5 reproduces the frozen dM, dS, rel_MS, residual, and boundary-move values. The conclusion is limited to this off-center frozen-source boundary probe.",
       "claim_id": "wave_static_boundary_sensitivity_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -80297,13 +80304,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "At shared H = 0.5, enlarging PW from 6.0 to 9.0 moves dS by 17.54% and rel_MS by 88.41%, so the direct static comparator is not boundary-stable within 5%.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "844f2e716d8cb5a1a0c43a5edde8c14a4ac1a4b8b3614f58645dcda49f9b23ae",
@@ -80339,14 +80346,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 4,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 4
       },
       "runner_path": null,
       "title": "Wave Static Boundary Sensitivity",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The runner with the source-note parameters reproduces the table: dS moves by 17.54%, rel_MS by 88.41%, dM by 18.93%, and the static residual remains near 2e-10. Because the note explicitly frames this as a narrow boundary diagnostic and does not promote the direct static comparator, the negative boundary-stability result closes on its own terms. The audit does not certify any continuum limit or boundary-stable baseline beyond this H = 0.5, PW = 6 to 9 comparison."
     },
     "wave_static_direct_probe_fine_note": {
       "audit_date": null,
