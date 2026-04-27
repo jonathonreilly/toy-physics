@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T18:55:55.174509+00:00",
-  "generated_at": "2026-04-27T18:55:53.590243+00:00",
-  "invalidation_run_at": "2026-04-27T18:55:55.128011+00:00",
+  "effective_status_computed_at": "2026-04-27T19:10:18.370421+00:00",
+  "generated_at": "2026-04-27T19:10:16.746790+00:00",
+  "invalidation_run_at": "2026-04-27T19:10:18.319166+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T18:55:55.032904+00:00",
+  "load_bearing_computed_at": "2026-04-27T19:10:18.219660+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -77911,14 +77911,21 @@
       "verdict_rationale": "The finite proxy claim closes on its own terms: the runner builds the compact exact-lattice card, applies exact zero and matched static controls, verifies a 4/4 odd-sign moving-source centroid response, and verifies null final-layer plaquette circulation. This clean audit is narrow: it certifies only the displayed compact-family moving-source signed response and null circulation candidate; it does not certify full electromagnetism, magnetic induction, gauge-field structure, a vector-field theory, or portability beyond this compact exact-lattice card."
     },
     "vector_sector_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner reproduces the phase-locked harmonic/nulled protocol, but the note does not close the bridge from that selected lock-in readout to an unqualified retained vector-sector observable; the current runner output also does not independently report the claimed matched scalar exposure table.",
       "claim_id": "vector_sector_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -77926,13 +77933,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The vector sector is a phase-locked first-harmonic handedness signal with 1H amplitude 0.018 and near-zero DC, requiring lock-in detection.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "8b2735f8e6ee7d76fa629176d39f5616ba28b292b364acc99378251a429524a2",
@@ -77968,14 +77975,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 7,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 7
       },
       "runner_path": null,
       "title": "Vector Sector: Circular Orbit Handedness",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the runner supports a phase-referenced first-harmonic handedness signal, but the retained claim depends on a selected lock-in phase/readout and on matched scalar exposure that is asserted in the note but not emitted as an audited runner check. Why this blocks: a nonzero 1H coefficient over the named orbit protocol is not by itself a retained vector-sector or magnetic-like force law, especially when the DC handedness averages to nearly zero and start-phase dependence is acknowledged. Repair target: add an audited observable theorem or acceptance harness that fixes the lock-in reference phase, reports/proves the scalar-exposure equality used to rule out scalar confounding, and states the family/parameter domain with tolerances. Claim boundary until fixed: safe to claim the current circular-orbit harness produces a bounded phase-locked 1H handedness signal with exact nulls, f-oddness, near-zero DC, and 3/3 family portability; not safe to claim a clean retained vector-sector physical observable beyond that protocol."
     },
     "w_mass_derived_note": {
       "audit_date": null,

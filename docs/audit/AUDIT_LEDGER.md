@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T18:55:55.360205+00:00
+**Generated:** 2026-04-27T19:10:18.561412+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 63 |
-| _proposed_retained_ | 36 |
+| _proposed_retained_ | 35 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 345 |
+| ~~audited_conditional~~ | 346 |
 | ~~audited_failed~~ | 137 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 63 |
-| `audited_conditional` | 132 |
+| `audited_conditional` | 133 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1335 |
+| `unaudited` | 1334 |
 
 | criticality | count |
 |---|---:|
@@ -282,6 +282,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `third_grown_family_sign_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `unpromoted_branch_retainability_audit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `valley_linear_continuum_synthesis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `vector_sector_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_3plus1d_promotions_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_equation_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_radiation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -4384,6 +4385,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The note claims a proposed-retained narrow extension: on a compact exact lattice, a bounded odd-in-v moving-source centroid response survives exact zero/static controls while the circulation-like plaquette candidate remains null.  _(class `C`)_
 - **chain closes:** True — The live runner exactly reproduces the source-note card: zero-source static, zero-source moving, and zero-source plaquette-circulation controls are all 0.000e+00; the v=0 matched static lane has delta_y vs static +0.000000e+00; nonzero velocities give symmetric signed responses, with v=+1.00 at +2.084652e-05 and v=-1.00 at -2.084652e-05; all probed circulation phases remain +0.000e+00.
 - **rationale:** The finite proxy claim closes on its own terms: the runner builds the compact exact-lattice card, applies exact zero and matched static controls, verifies a 4/4 odd-sign moving-source centroid response, and verifies null final-layer plaquette circulation. This clean audit is narrow: it certifies only the displayed compact-family moving-source signed response and null circulation candidate; it does not certify full electromagnetism, magnetic induction, gauge-field structure, a vector-field theory, or portability beyond this compact exact-lattice card.
+- **auditor confidence:** high
+
+### `vector_sector_note`
+
+- **Note:** [`VECTOR_SECTOR_NOTE.md`](../../docs/VECTOR_SECTOR_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The vector sector is a phase-locked first-harmonic handedness signal with 1H amplitude 0.018 and near-zero DC, requiring lock-in detection.  _(class `C`)_
+- **chain closes:** False — The live runner reproduces the phase-locked harmonic/nulled protocol, but the note does not close the bridge from that selected lock-in readout to an unqualified retained vector-sector observable; the current runner output also does not independently report the claimed matched scalar exposure table.
+- **rationale:** Issue: the runner supports a phase-referenced first-harmonic handedness signal, but the retained claim depends on a selected lock-in phase/readout and on matched scalar exposure that is asserted in the note but not emitted as an audited runner check. Why this blocks: a nonzero 1H coefficient over the named orbit protocol is not by itself a retained vector-sector or magnetic-like force law, especially when the DC handedness averages to nearly zero and start-phase dependence is acknowledged. Repair target: add an audited observable theorem or acceptance harness that fixes the lock-in reference phase, reports/proves the scalar-exposure equality used to rule out scalar confounding, and states the family/parameter domain with tolerances. Claim boundary until fixed: safe to claim the current circular-orbit harness produces a bounded phase-locked 1H handedness signal with exact nulls, f-oddness, near-zero DC, and 3/3 family portability; not safe to claim a clean retained vector-sector physical observable beyond that protocol.
 - **auditor confidence:** high
 
 ### `wave_3plus1d_promotions_note`
