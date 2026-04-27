@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T16:36:37.984737+00:00",
-  "generated_at": "2026-04-27T16:36:36.391190+00:00",
-  "invalidation_run_at": "2026-04-27T16:36:37.934379+00:00",
+  "effective_status_computed_at": "2026-04-27T16:38:09.533778+00:00",
+  "generated_at": "2026-04-27T16:38:07.926415+00:00",
+  "invalidation_run_at": "2026-04-27T16:38:09.487282+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T16:36:37.834588+00:00",
+  "load_bearing_computed_at": "2026-04-27T16:38:09.387206+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -58981,14 +58981,21 @@
       "verdict_rationale": null
     },
     "propagator_family_unification_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The synthesis depends on SOURCE_RESOLVED_WAVEFIELD_MECHANISM_NOTE, which is still unaudited, and there is no synthesis runner that recomputes the common skeleton only from audit-clean inputs.",
       "claim_id": "propagator_family_unification_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -58996,18 +59003,20 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The retained wavefield, complex-action, and electrostatics results all share a common fixed-propagator skeleton with scalar edge-level coupling laws.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "62d8aad72f13a3540eb579d07702bba2c0ce75da6a019918468add83b429124d",
       "note_path": "docs/PROPAGATOR_FAMILY_UNIFICATION_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/SOURCE_RESOLVED_WAVEFIELD_MECHANISM_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369425+00:00",
@@ -59045,7 +59054,7 @@
       "runner_path": null,
       "title": "Propagator Family Unification Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The unification note imports SOURCE_RESOLVED_WAVEFIELD_MECHANISM_NOTE as a retained wavefield authority, but that source row is still unaudited while the synthesis has no runner or ledger-derived table. Why this blocks: the common-propagator taxonomy may be plausible, but a retained unification claim cannot depend on an unaudited load-bearing lane. Repair target: audit or repair the source-resolved wavefield mechanism note, then rebuild this synthesis from audit_ledger effective_status or add a small runner/table that only includes audit-clean lanes. Claim boundary until fixed: it is safe to say the already clean complex-action and electrostatics lanes share a fixed-propagator/scalar-coupling pattern, and that the source-resolved wavefield lane is a candidate member; it is not safe to retain the full three-lane propagator-family unification."
     },
     "proton_lifetime_derived_note": {
       "audit_date": null,
