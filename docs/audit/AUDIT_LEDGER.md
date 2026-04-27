@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T11:46:34.038670+00:00
+**Generated:** 2026-04-27T11:46:42.587115+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 34 |
-| _proposed_retained_ | 164 |
+| **retained** | 35 |
+| _proposed_retained_ | 163 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 101 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 34 |
+| `audited_clean` | 35 |
 | `audited_conditional` | 81 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 22 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1457 |
+| `unaudited` | 1456 |
 
 | criticality | count |
 |---|---:|
@@ -109,6 +109,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `charged_lepton_radiative_tau_selector_firewall_note_2026-04-26` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `charged_lepton_selected_line_generation_selector_no_go_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
+| `charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `claude_complex_action_carryover_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `claude_complex_action_grown_companion_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `composite_source_additivity_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -562,6 +563,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** A natural single-label selector from the unbased C3 quotient would need a C3-fixed label, but the C3 action on the three labels is free and no fixed singleton exists.  _(class `A`)_
 - **chain closes:** True — The no-go closes as finite C3 action algebra: unbased selected-line data can determine a sorted orbit but not a physical generation label. Based selectors exist only after extra basepoint/source/generation data are supplied.
 - **rationale:** The runner checks that Q and unordered ratios survive cyclic relabeling while the largest slot moves through all labels, and it enumerates invariant subsets to show no singleton selector exists. PDG masses are comparator-only. The clean verdict is limited to the unbased selected-line generation-selector no-go.
+- **auditor confidence:** high
+
+### `charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27`
+
+- **Note:** [`CHARGED_LEPTON_TYPEB_RADIAN_READOUT_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md`](../../docs/CHARGED_LEPTON_TYPEB_RADIAN_READOUT_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Granting scalar P_RADIAN and P_SOURCE data fixes Q, delta, and z as C3-invariant quotient data, but no label is fixed by the free C3 action, so no natural generation selector exists without a basepoint.  _(class `A`)_
+- **chain closes:** True — The no-go closes because the stronger scalar readout premise remains label-free. The runner shows based endpoint-to-label maps exist only after choosing extra physical basepoint data.
+- **rationale:** The runner grants the scalar Type-B-to-radian readout and z=0 support, then checks that cyclic relabeling preserves scalar data while moving the heaviest slot and leaving no invariant singleton. PDG masses are comparator-only. This clean audit ratifies the scalar-readout generation-selector no-go, not delta/radian closure or mass retention.
 - **auditor confidence:** high
 
 ### `ckm_down_type_scale_convention_support_note_2026-04-22`

@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T11:46:33.506539+00:00",
-  "generated_at": "2026-04-27T11:46:30.998682+00:00",
-  "invalidation_run_at": "2026-04-27T11:46:33.394259+00:00",
+  "effective_status_computed_at": "2026-04-27T11:46:42.307569+00:00",
+  "generated_at": "2026-04-27T11:46:40.065752+00:00",
+  "invalidation_run_at": "2026-04-27T11:46:42.187646+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T11:46:33.206685+00:00",
+  "load_bearing_computed_at": "2026-04-27T11:46:42.067428+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -9130,14 +9130,21 @@
       "verdict_rationale": null
     },
     "charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27T11:46:38.993486+00:00",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The no-go closes because the stronger scalar readout premise remains label-free. The runner shows based endpoint-to-label maps exist only after choosing extra physical basepoint data.",
       "claim_id": "charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -9145,13 +9152,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Granting scalar P_RADIAN and P_SOURCE data fixes Q, delta, and z as C3-invariant quotient data, but no label is fixed by the free C3 action, so no natural generation selector exists without a basepoint.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "cd2304a5199a9a6c33484fbd72539e83d51b829ffc67d7f5031e921e170ca15d",
@@ -9211,15 +9218,15 @@
       ],
       "runner_check_breakdown": {
         "A": 0,
-        "B": 0,
+        "B": 2,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 8,
+        "total_pass": 43
       },
       "runner_path": "scripts/frontier_charged_lepton_typeb_radian_readout_generation_selector_no_go.py",
       "title": "Charged-Lepton Type-B Radian Readout Generation-Selector No-Go",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The runner grants the scalar Type-B-to-radian readout and z=0 support, then checks that cyclic relabeling preserves scalar data while moving the heaviest slot and leaving no invariant singleton. PDG masses are comparator-only. This clean audit ratifies the scalar-readout generation-selector no-go, not delta/radian closure or mass retention."
     },
     "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17": {
       "audit_date": null,
