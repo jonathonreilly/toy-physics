@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T10:32:32.112691+00:00",
-  "generated_at": "2026-04-27T10:32:29.527769+00:00",
-  "invalidation_run_at": "2026-04-27T10:32:32.030750+00:00",
+  "effective_status_computed_at": "2026-04-27T10:39:34.070214+00:00",
+  "generated_at": "2026-04-27T10:39:31.860615+00:00",
+  "invalidation_run_at": "2026-04-27T10:39:34.000216+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T10:32:31.895123+00:00",
+  "load_bearing_computed_at": "2026-04-27T10:39:33.864970+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -16047,14 +16047,21 @@
       "verdict_rationale": null
     },
     "dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner reproduces PASS=30/FAIL=0, but the global exclusion is empirical multistart evidence, not a certified covering proof: it uses random far-field sampling, a 99.5-percentile finite-difference Lipschitz estimate, and an unproved comparable-attractor assumption for unknown basins.",
       "claim_id": "dm_abcc_basin_enumeration_completeness_theorem_note_2026-04-20",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -16062,18 +16069,24 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Every chi2=0 chart point in the active chamber under any retained sigma lies within chart distance 0.15 of one of the five retained basins, so no additional chi2=0 chart point exists in the enclosure to the stated tolerance.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "d056b8e843a458328eda1bb4d821d9f0b965c7b255e6508b2f73731c92ad748c",
       "note_path": "docs/DM_ABCC_BASIN_ENUMERATION_COMPLETENESS_THEOREM_NOTE_2026-04-20.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/DM_ABCC_CLOSURE_VIA_CHAMBER_BOUND_AND_DPLE_F4_NOTE_2026-04-19.md",
+        "docs/DM_PNS_ATTACK_CASCADE_NOTE_2026-04-19.md",
+        "docs/DM_ABCC_SIGNATURE_FORCING_THEOREM_NOTE_2026-04-19.md",
+        "docs/SIGMA_HIER_UNIQUENESS_THEOREM_NOTE_2026-04-19.md",
+        "docs/DM_ABCC_FIVE_BASIN_CHAMBER_DPLE_SUPPORT_THEOREM_NOTE_2026-04-21.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368052+00:00",
@@ -16104,14 +16117,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 30,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 30
       },
       "runner_path": "scripts/frontier_dm_abcc_basin_enumeration_completeness.py",
       "title": "DM A-BCC Basin-Enumeration Completeness Theorem (Computational Certificate)",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the runner verifies a large finite search and reproduces 30 PASS stamps, but the note promotes that search to a theorem-grade exhaustiveness certificate. Why this blocks: a dense grid plus Nelder-Mead can miss a narrow basin between seeds; the empirical 99.5-percentile Lipschitz estimate is not a worst-case bound, the far-field exclusion is random sampling rather than an analytic lower bound, and the claim that any unknown candidate basin would be reached analogously is exactly the missing theorem. Repair target: replace the heuristic certificate with an interval/branch-and-bound proof over the R=50 box, or a computer-algebra/root-isolation enumeration with certified eigenvalue-gap/Lipschitz bounds and a deterministic far-field asymptotic exclusion. Claim boundary until fixed: it is safe to claim that the current runner found only Basin 1, Basin 2, and Basin X in the active chamber under the retained sigma set, clustered them to the five-basin chart, and found no additional basin in this finite multistart/random-sampling scan; it is not an audited retained completeness theorem."
     },
     "dm_abcc_chamber_bound_derivation_note_2026-04-20": {
       "audit_date": null,
