@@ -290,27 +290,70 @@ produced in the workstream.
 - **Disposition:** Cycle 8 accepted. `(C3)` class explicitly empty in
   current framework content; honest opening requires a fresh premise.
 
-## Cycle 9+ — pending evaluation
+## Cycle 9 — honest workstream stop
 
-The natural Lane-5-internal claim-state movement is now exhausted:
+- **Date:** 2026-04-27
+- **Action:** evaluate the dramatic-step gate against remaining
+  candidates. Outcome: no route passes.
+- **Considered:**
+  - Tension-reconstruction comparator runner (extends Cycle 1):
+    pure numerical evaluation of the existing inverse-reconstruction
+    theorem against SH0ES vs Planck data. Does not retire any input,
+    does not add new structural support, does not prove a no-go, does
+    not isolate a new blocker, does not introduce novel structure.
+    **Below the dramatic-step gate.**
+  - Direct cosmic-`L` `(C3)` exploration: Cycle 8 already audited the
+    five visible candidates as inactive. Going deeper would be churn.
+    **Below the dramatic-step gate.**
+  - Manuscript-surface weaving of the 8 cycle artifacts: skill
+    explicitly reserves repo-wide weaving for the post-workstream
+    review-and-integration step. **Out of scope for the science run.**
+- **Disposition:** **workstream stops honestly.** Per the skill's
+  stop conditions ("stop cleanly when no route passes the
+  dramatic-step gate"), this is a clean stop, not a partial closure.
+  The Lane 5 closure pathway is now sharply mapped to the explicit
+  two-gate landing requirement; further movement requires gate
+  resolution in the DM-leptogenesis lane and the Planck-scale lane,
+  neither of which is Lane 5 work proper.
+- **Resumable:** if a future framework development supplies a new
+  Lane-5-internal premise (e.g., a fresh `(C3)` opening, or a Lane-5-
+  side analysis of a new DM/Planck-side artifact), `/frontier-
+  workstream --mode resume --workstream hubble-h0-20260426` can
+  re-enter the same pack.
 
-- `(C1)` gate isolated (Cycle 5)
-- `(C2)` gate isolated (Cycle 4)
-- `(C3)` class empty (Cycle 8)
-- workstream consolidated (Cycle 6)
-- hygiene clean (Cycle 7)
+## Workstream summary
 
-Remaining work belongs to:
+8 cycles, 9 commits on `frontier/hubble-h0-20260426`:
 
-- the DM-leptogenesis lane (resolves `(C2)`)
-- the Planck-scale lane (resolves `(C1)`)
-- a fresh `(C3)` premise opening (currently no active route)
+1. (`4062b253`) pack scaffold
+2. (`dad4e360`) Cycle 1 — Hubble Tension Structural Lock theorem
+   (theorem + sympy/numpy runner 5/5 PASS + log)
+3. (`58060e95`) Cycle 2 — Cosmology Open-Number Reduction theorem
+   (theorem + sympy/numpy runner 5/5 PASS + log)
+4. (`31308825`) Cycle 3 — Cosmic-History-Ratio Necessity No-Go
+   (theorem; structural case-analysis)
+5. (`b46ba1d0`) Cycle 4 — `(C2)` eta Retirement Gate Audit
+6. (`0e42d669`) Cycle 5 — `(C1)` Planck Clifford Coframe Gate Audit
+7. (`61ff81c1`) Cycle 6 — Workstream Consolidation Status Note
+8. (`7f7a0ab4`) Cycle 7 — Cross-Cycle Hygiene Audit
+9. (`3226970b`) Cycle 8 — `(C3)`-Class Audit-No-Go
 
-None of these is Lane 5 work proper. Per the skill's stop conditions
-("stop cleanly when no route passes the dramatic-step gate"), Cycle 9
-should evaluate honestly. The loop may continue per ScheduleWakeup,
-but iterations are likely to find no honest route and stop the
-workstream.
+Plus Cycle 9 close-out commit pending.
+
+Net structural contribution: Lane 5 closure path reframed from a
+five-target list (5A-5E) to a sharp two-gate landing requirement —
+**`(C1)` Planck Clifford coframe response on `P_A H_cell` AND
+`(C2)` DM `Z_3` doublet-block point-selection law on
+`dW_e^H = Schur_{E_e}(D_-)`**. `(C3)` is empty in current framework
+content. Phase 1 (5C: Hubble tension explicit stance) landed
+branch-locally as manuscript-grade structural commitment with
+explicit operational falsifier.
+
+Net inputs retired: zero. The workstream is structural, not
+quantitative.
+
+Manuscript-surface weaves proposed in `HANDOFF.md` for the
+post-workstream review-and-integration pipeline.
 
 With both gates isolated, the workstream consolidated, and hygiene
 clean, the remaining single-cycle candidates are increasingly

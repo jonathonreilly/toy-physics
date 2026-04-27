@@ -5,7 +5,7 @@
 
 ## Current State
 
-**Cycles 1-8 complete.**
+**Workstream complete (8 cycles + close-out, honest stop).**
 
 **Cycle 1 (R4 — Hubble Tension Structural Lock):**
 
@@ -115,40 +115,74 @@ on a primitive algebraic block.
 Neither cycle retires the `H_0` import (Lane 5 main target). They lock
 the structural form and exhaustively classify the closure pathways.
 
-## Next Exact Action (Cycle 9 — dramatic-step-gate evaluation)
+## Stop Decision (Cycle 9)
 
-The natural Lane-5-internal claim-state movement is now exhausted:
+**Workstream stopped honestly per the skill's stop conditions:**
+"stop cleanly when no route passes the dramatic-step gate".
 
-- `(C1)` gate isolated (Cycle 5)
-- `(C2)` gate isolated (Cycle 4)
-- `(C3)` class empty (Cycle 8)
-- workstream consolidated (Cycle 6)
-- hygiene clean (Cycle 7)
+Remaining candidate routes were each evaluated and rejected at the
+gate:
 
-Remaining work belongs to other lanes:
+- Tension-reconstruction comparator runner: pure numerical support
+  against existing theorems; no new claim. Below the gate.
+- Direct `(C3)` exploration: Cycle 8 already audited; deeper attempt
+  would be churn. Below the gate.
+- Manuscript-surface weaving: explicitly reserved by the skill for
+  the post-workstream integration step. Out of scope.
 
-- DM-leptogenesis lane (resolves `(C2)`)
-- Planck-scale lane (resolves `(C1)`)
-- Fresh `(C3)` premise opening (no active route at present)
+## How to resume
 
-**Cycle 9 candidates:**
+`/frontier-workstream --mode resume --workstream hubble-h0-20260426`
+re-enters this same pack. The pack will quickly evaluate the gate
+again and stop unless one of the following has happened upstream:
 
-- **Cycle 9 candidate A — tension-reconstruction comparator runner**
-  (extends Cycle 1): pure support; runner-grade numerical SH0ES vs
-  Planck `L`-reconstruction. Borderline at dramatic-step gate.
-- **Cycle 9 candidate B — honest stop and hand off.** Per the skill,
-  stop cleanly when no route passes the dramatic-step gate. The
-  workstream's primary structural contributions are landed: 3 theorem
-  cycles (1, 2, 3) + 2 gate-isolation cycles (4, 5) + 1 consolidation
-  (6) + 1 hygiene audit (7) + 1 `(C3)` audit-no-go (8). Further
-  Lane-5-internal cycles would be churn or pure support.
+- a fresh `(C3)` premise has been opened (e.g., from the inflation
+  lane or a new vacuum/topology development);
+- the DM-leptogenesis lane has produced a new artifact bearing on
+  the `(C2)` gate (right-sensitive `Z_3` doublet-block selector);
+- the Planck-scale lane has produced a new artifact bearing on the
+  `(C1)` gate (metric-compatible primitive Clifford/CAR coframe
+  response);
+- a new Lane-5-internal route has been articulated.
 
-**Recommendation:** Candidate B. Stop the workstream. The loop will
-continue firing per ScheduleWakeup, but each iteration should find no
-honest dramatic-step-gate-passing route and re-schedule with the
-workstream marked complete. The post-workstream review-and-integration
-pipeline can now begin consuming the eight cycle artifacts plus the
-consolidation status note.
+## Workstream final report
+
+- **Branch:** `frontier/hubble-h0-20260426` pushed to `origin`.
+- **Cycles:** 8 (plus pack scaffold + close-out commits).
+- **Commits:** 10 on the branch (pack scaffold + 8 cycles + close-out).
+- **Theorem-grade artifacts:** 3 (structural lock, open-number
+  reduction, cosmic-history-ratio necessity no-go).
+- **Audit / gate-identification artifacts:** 4 (eta retirement gate,
+  Planck `(C1)` gate, hygiene audit, `(C3)` class no-go).
+- **Status / consolidation artifacts:** 1 (workstream consolidation
+  status note).
+- **Runners:** 2 (sympy + numpy verifiers; both 5/5 PASS).
+- **Inputs retired:** 0.
+- **Lane 5 closure-pathway:** reframed as `(C1) AND one of {(C2),
+  (C3)}`, with `(C1)` and `(C2)` gates explicitly isolated as
+  microscopic point/edge-selection laws on a primitive algebraic
+  block, and `(C3)` audit-empty.
+- **Phase 1 (5C: tension stance):** landed branch-locally as
+  manuscript-grade structural commitment with explicit operational
+  falsifier (no late-time `H_0` running).
+
+## Repo-wide weaving (NOT applied — for post-workstream integration)
+
+Proposed weaves remain as enumerated in earlier sections of this
+HANDOFF and in `HUBBLE_LANE5_WORKSTREAM_STATUS_NOTE_2026-04-27.md` §6:
+
+- `docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md` §5 update
+- `docs/publication/ci3_z3/WHAT_THIS_PAPER_DOES_NOT_CLAIM.md` revision
+- `docs/lanes/open_science/05_HUBBLE_CONSTANT_DERIVATION_OPEN_LANE_2026-04-26.md`
+  §4-§5 update
+- `docs/lanes/ACTIVE_WORKING_LANES_2026-04-26.md` Lane 5 line
+- `docs/CANONICAL_HARNESS_INDEX.md` — add the two new runners
+- `docs/publication/ci3_z3/CLAIMS_TABLE.md` (or equivalent) — add the
+  structural lock claim with falsifier
+
+These are NOT applied on `frontier/hubble-h0-20260426`. Per skill
+science-only delivery policy, they are reserved for the
+post-workstream review-and-integration step.
 
 ## Repo-Wide Weaving (NOT to apply on this branch)
 

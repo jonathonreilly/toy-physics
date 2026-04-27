@@ -9,7 +9,7 @@ branch: frontier/hubble-h0-20260426
 base: origin/main
 lock_status: unavailable
 lock_note: "scripts/automation_lock.py hardcodes /Users/jonreilly/Projects/Physics paths; this worktree is on /Users/jonBridger. Skipping cooperative lock per skill optionality."
-current_phase: cycle-8-complete
+current_phase: workstream-complete-honest-stop
 cycles_completed: 8
 active_route: null
 files_touched:
@@ -84,5 +84,6 @@ claim_state_movement:
   - "Workstream consolidated (Cycle 6): Cycles 1-5 synthesized into a single Lane 5 status surface (HUBBLE_LANE5_WORKSTREAM_STATUS_NOTE_2026-04-27.md). Reframes Lane 5 closure from a five-target list to a sharp two-gate statement: (C1) (Planck Clifford coframe response) AND one of {(C2) (DM Z_3 doublet-block selector), (C3) (direct cosmic-L derivation, no active route)}. Useful for the post-workstream review-and-integration pipeline."
   - "Workstream hygiene-audited (Cycle 7): one cross-reference bug fixed in Cycle 3 (bare-name INPUTS_AND_QUALIFIERS_NOTE → full path); all other audit categories pass. Workstream ready for post-workstream review-and-integration."
   - "(C3) class tightened to audit-no-go (Cycle 8): the framework's currently retained vacuum/topology content has no active (C3) route. Practical Lane 5 closure path is now explicit two-gate landing: (C1) Planck Clifford coframe response AND (C2) DM Z_3 doublet-block selector. (C3) reduced to hypothetical alternative requiring a fresh structural premise (C3a, C3b, or C3c)."
-next_exact_action: "Evaluate Cycle 9 launch. With (C1) gate isolated, (C2) gate isolated, (C3) class audit-no-go landed, workstream consolidated, and hygiene clean: the natural Lane-5-internal moves are exhausted. Remaining work belongs to the DM-leptogenesis lane and Planck-scale lane proper, not Lane 5. Per the skill's stop conditions ('stop cleanly when no route passes the dramatic-step gate'), Cycle 9 should evaluate honestly and likely stop the workstream. Loop continues per ScheduleWakeup but iterations may wind down."
+next_exact_action: "Cycle 9 evaluation: workstream stops honestly. With (C1) gate isolated, (C2) gate isolated, (C3) class audit-empty, workstream consolidated, hygiene clean — no route passes the dramatic-step gate. Remaining open premises (Planck Clifford coframe response, DM Z_3 doublet-block selector, fresh (C3) opening) all belong to other lanes (Planck-scale lane, DM-leptogenesis lane) or require new structural premises outside Lane 5 itself. Per the skill: 'stop cleanly when no route passes the dramatic-step gate'. Resumable via /frontier-workstream --mode resume if a future framework development supplies a new Lane-5-internal premise."
+stop_condition_triggered: "no route passes the dramatic-step gate"
 stop_condition: "runtime budget (10h) reached, max cycles, blocker requiring human science judgment, or honest claim-state closure achieved"
