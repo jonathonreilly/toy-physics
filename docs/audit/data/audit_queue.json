@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 89,
     "high": 508,
-    "leaf": 688,
+    "leaf": 687,
     "medium": 82
   },
-  "generated_at": "2026-04-27T17:38:23.938903+00:00",
+  "generated_at": "2026-04-27T17:43:54.888699+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -23701,23 +23701,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "shapiro_static_discriminator_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/SHAPIRO_STATIC_DISCRIMINATOR_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "sixth_family_complex_boundary_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -28058,6 +28041,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 954,
-  "total_pending": 1367
+  "ready_count": 953,
+  "total_pending": 1366
 }
