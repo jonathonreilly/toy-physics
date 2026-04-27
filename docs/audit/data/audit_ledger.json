@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T10:11:03.332616+00:00",
-  "generated_at": "2026-04-27T10:11:00.590136+00:00",
-  "invalidation_run_at": "2026-04-27T10:11:03.254659+00:00",
+  "effective_status_computed_at": "2026-04-27T10:13:06.921869+00:00",
+  "generated_at": "2026-04-27T10:13:04.962091+00:00",
+  "invalidation_run_at": "2026-04-27T10:13:06.837971+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T10:11:03.053509+00:00",
+  "load_bearing_computed_at": "2026-04-27T10:13:06.703316+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -15698,14 +15698,21 @@
       "verdict_rationale": null
     },
     "distance_law_frontier_audit_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The note is a cross-note frontier summary with no runner of its own, and its cited distance-law frontier inputs are unaudited proposed-retained rows rather than audit-retained authorities.",
       "claim_id": "distance_law_frontier_audit_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -15713,18 +15720,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The honest current frontier is compact grown-geometry transfer plus the independently replayed wide-lattice ordered h^2+T far-tail replay, both retained on main.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "67184b4d6f6e1edb5b3d2aa3502f3d819382c343213b80124431eac2e76f95e9",
       "note_path": "docs/DISTANCE_LAW_FRONTIER_AUDIT_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/GATE_B_GROWN_DISTANCE_LAW_NOTE.md",
+        "docs/GATE_B_H025_DISTANCE_LAW_NOTE.md",
+        "docs/WIDE_LATTICE_H2T_DISTANCE_LAW_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368038+00:00",
@@ -15762,7 +15773,7 @@
       "runner_path": null,
       "title": "Distance Law Frontier Audit",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the note claims the compact grown-geometry and wide-lattice distance-law pieces are the retained current frontier, but it provides no runner and depends entirely on three unaudited proposed-retained source notes. Why this blocks: an audit-lane retained summary cannot outrank its inputs; until the cited distance-law notes are audited clean, this note can only summarize proposed frontier candidates. Repair target: audit the Gate B grown, Gate B h=0.25, and wide-lattice h^2+T notes clean, or add a registered runner that independently recomputes the frontier comparison from those artifacts. Claim boundary until fixed: it is safe to say the note is a roadmap/synthesis identifying compact grown transfer and wide-lattice h^2+T replay as proposed distance-law frontier pieces, not that both are audit-retained."
     },
     "distance_law_note": {
       "audit_date": null,

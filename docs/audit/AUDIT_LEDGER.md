@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T10:11:04.183100+00:00
+**Generated:** 2026-04-27T10:13:07.198217+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 21 |
-| _proposed_retained_ | 184 |
+| _proposed_retained_ | 183 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 285 |
+| ~~audited_conditional~~ | 286 |
 | ~~audited_failed~~ | 82 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 21 |
-| `audited_conditional` | 74 |
+| `audited_conditional` | 75 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 15 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1479 |
+| `unaudited` | 1478 |
 
 | criticality | count |
 |---|---:|
@@ -136,6 +136,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `diamond_nv_phase_ramp_signal_budget_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
 | `diamond_signal_budget_hardening_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `distance_law_breakpoint_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `distance_law_frontier_audit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_neutrino_schur_suppression_theorem_note_2026-04-15` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `electrostatics_grown_sign_law_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -758,6 +759,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **open / conditional deps cited:**
   - `DISTANCE_LAW_PORTABILITY_NOTE.md`
   - `SIGN_PORTABILITY_INVARIANT_NOTE.md`
+- **auditor confidence:** high
+
+### `distance_law_frontier_audit_note`
+
+- **Note:** [`DISTANCE_LAW_FRONTIER_AUDIT_NOTE.md`](../../docs/DISTANCE_LAW_FRONTIER_AUDIT_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The honest current frontier is compact grown-geometry transfer plus the independently replayed wide-lattice ordered h^2+T far-tail replay, both retained on main.  _(class `B`)_
+- **chain closes:** False — The note is a cross-note frontier summary with no runner of its own, and its cited distance-law frontier inputs are unaudited proposed-retained rows rather than audit-retained authorities.
+- **rationale:** Issue: the note claims the compact grown-geometry and wide-lattice distance-law pieces are the retained current frontier, but it provides no runner and depends entirely on three unaudited proposed-retained source notes. Why this blocks: an audit-lane retained summary cannot outrank its inputs; until the cited distance-law notes are audited clean, this note can only summarize proposed frontier candidates. Repair target: audit the Gate B grown, Gate B h=0.25, and wide-lattice h^2+T notes clean, or add a registered runner that independently recomputes the frontier comparison from those artifacts. Claim boundary until fixed: it is safe to say the note is a roadmap/synthesis identifying compact grown transfer and wide-lattice h^2+T replay as proposed distance-law frontier pieces, not that both are audit-retained.
+- **open / conditional deps cited:**
+  - `GATE_B_GROWN_DISTANCE_LAW_NOTE.md`
+  - `GATE_B_H025_DISTANCE_LAW_NOTE.md`
+  - `WIDE_LATTICE_H2T_DISTANCE_LAW_NOTE.md`
 - **auditor confidence:** high
 
 ### `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21`
