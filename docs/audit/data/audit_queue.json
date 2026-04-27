@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 89,
     "high": 508,
-    "leaf": 696,
+    "leaf": 695,
     "medium": 82
   },
-  "generated_at": "2026-04-27T17:17:45.210432+00:00",
+  "generated_at": "2026-04-27T17:19:26.663164+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -23565,23 +23565,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "session_summary_2026-04-01_topology",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/SESSION_SUMMARY_2026-04-01_TOPOLOGY.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "session_summary_2026-04-04",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -28194,6 +28177,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 962,
-  "total_pending": 1375
+  "ready_count": 961,
+  "total_pending": 1374
 }

@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T17:17:45.350052+00:00
+**Generated:** 2026-04-27T17:19:26.806651+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 62 |
-| _proposed_retained_ | 73 |
+| _proposed_retained_ | 72 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
 | ~~audited_conditional~~ | 327 |
-| ~~audited_failed~~ | 119 |
+| ~~audited_failed~~ | 120 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 62 |
 | `audited_conditional` | 114 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 52 |
+| `audited_failed` | 53 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1372 |
+| `unaudited` | 1371 |
 
 | criticality | count |
 |---|---:|
@@ -328,6 +328,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `quark_strc_observable_principle_note_2026-04-19` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | E | - |
 | `replay_environment_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `second_grown_family_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `session_summary_2026-04-01_topology` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `staggered_backreaction_green_closure_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `structured_mirror_bornsafe_scan_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -3562,6 +3563,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** This simple entropy observable does not currently support an area-law claim; it is capped at ln(2) and controlled primarily by the mass split p_A rather than boundary complexity.  _(class `C`)_
 - **chain closes:** True — The runner reproduces the exact table values and the cautious negative readout: boundary correlations are inconsistent across families and the observable is a binary single-particle occupancy entropy capped by ln(2).
 - **rationale:** The claim is a negative/inconclusive boundary, not a positive area-law theorem. The current runner reproduces the note's entropy shifts and mixed boundary correlations, and the note explicitly limits the conclusion to topology-sensitive occupancy entropy with no robust boundary-controlled scaling. Residual risk is only that the broader self-gravity lane remains a model context; the audited claim here is the narrower no-area-law diagnostic for this simple observable.
+- **auditor confidence:** high
+
+### `session_summary_2026-04-01_topology`
+
+- **Note:** [`SESSION_SUMMARY_2026-04-01_TOPOLOGY.md`](../../docs/SESSION_SUMMARY_2026-04-01_TOPOLOGY.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Both gravity and decoherence work on the same graph family, with a broad joint modular window and soft-pruning emergence closed asymptotically.  _(class `B`)_
+- **chain closes:** False — The file is a broad session-summary synthesis over many scripts/logs, has no runner, and points to unaudited or failed companion notes rather than audit-clean dependencies.
+- **rationale:** Issue: The proposed-retained architecture result is a session summary aggregating many gravity, decoherence, topology, pruning, and emergence claims without a single retained theorem, runner, frozen assertion surface, or audit-clean dependency chain. Why this blocks: a synthesis note that even flags optimistic standard-error wording and provisional follow-ups cannot itself establish the broad claim that gravity and decoherence work on the same graph family or that emergence lanes are closed. Repair target: split the summary into auditable claim notes, each with its own runner/log and explicit dependencies, then retain only the scoped results that survive audit; leave this file as session history. Claim boundary until fixed: it is safe to use this note as a dated roadmap and index of scripts/logs from the topology-pivot session; it is not safe to cite it as retained evidence for the architecture claims.
+- **open / conditional deps cited:**
+  - `HIGHER_DIMENSION_STATUS_2026-04-01.md`
+  - `IF_PROGRAM_CLOSING_NOTE.md`
+  - `DECOHERENCE_FAILURE_ANALYSIS.md`
 - **auditor confidence:** high
 
 ### `shapiro_delay_note`
