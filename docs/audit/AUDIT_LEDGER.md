@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T03:45:34.989216+00:00
+**Generated:** 2026-04-27T03:48:46.605004+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,14 +20,14 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 2 |
-| _proposed_retained_ | 284 |
+| _proposed_retained_ | 283 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
 | open | 11 |
 | unknown | 735 |
 | ~~audited_decoration~~ | 1 |
-| ~~audited_numerical_match~~ | 2 |
+| ~~audited_numerical_match~~ | 3 |
 | ~~audited_conditional~~ | 274 |
 
 | audit_status | count |
@@ -36,8 +36,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 2 |
 | `audited_conditional` | 17 |
 | `audited_decoration` | 1 |
-| `audited_numerical_match` | 2 |
-| `unaudited` | 1576 |
+| `audited_numerical_match` | 3 |
+| `unaudited` | 1575 |
 
 | criticality | count |
 |---|---:|
@@ -118,6 +118,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `bell_inequality_derived_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
+| `yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 
 
 ## Audit findings (full)
@@ -475,4 +476,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: The failed step is the assertion that the physical EW coupling extraction should replace the total color trace N_c by the connected color trace N_c(N_c^2-1)/N_c^2; no one-hop retained theorem or registered runner derives that matching/readout rule, and the source note's R_conn input is stated as leading-order 1/N_c with O(1/N_c^4) corrections. Why this blocks: A proposed_retained universal 9/8 correction to physical EW couplings cannot follow from an asserted normalization convention or from a leading-order corrected quantity; the exact Fierz and CMT algebra leave the connected-trace value and the physical readout selection as independent premises. Repair target: Add a retained theorem deriving the lattice-to-continuum EW current matching from Cl(3)/Z^3 primitives, register the R_conn authority as a one-hop dependency if it remains load-bearing, and provide a runner that computes the connected two-vertex observable/matching factor rather than applying 8/9. Claim boundary until fixed: It is safe to claim that CMT alone cannot produce 9/8, that 8/9 is a motivated connected-color-trace/large-N_c matching ansatz with controlled corrections, and that applying it improves the quoted g_1 and g_2 numerics.
 - **open / conditional deps cited:**
   - `RCONN_DERIVED_NOTE.md`
+- **auditor confidence:** high
+
+### `yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17`
+
+- **Note:** [`YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`](../../docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The packaged residuals (P1, P2, P3) = (1.92%, 0.50%, 0.30%) are combined in quadrature as sigma_YT = sqrt(P1^2 + P2^2 + P3^2) ~= 1.95% to define the retained master envelope on the Ward ratio.  _(class `G`)_
+- **chain closes:** False — The runner reproduces the arithmetic of the packaged envelope and the qualitative P1/P2/P3 partition, but the residual centrals are imported, heuristic, or hard-coded rather than derived from registered one-hop authorities. The source note also states that the per-primitive central values and transport primitives remain open downstream work.
+- **rationale:** Issue: the master obstruction's quantitative retention rests on the packaged residual inputs P1=1.92%, P2=0.50%, and P3=0.30%; P2 and P3 are heuristic/hard-coded tails, P1 is a selected single-channel packaged magnitude, and the note itself says the per-primitive centrals are not derived from first principles on the retained canonical surface. Why this blocks: the runner verifies the quadrature arithmetic and broad scale partition after those numbers are supplied, but it does not derive the P1 lattice-to-MSbar correction, the P2 UV-to-IR transport residual, the P3 K-series tail, or the independence/correlation assumptions needed for the envelope; the current output also gives sigma_YT=2.010% and Delta m_t=3.47 GeV while the text rounds this as ~1.95% and ~3.4 GeV. Repair target: register the Ward, color-projection, plaquette/canonical-surface, P1/P2/P3 residual, and comparator authorities as one-hop dependencies; replace the hard-coded residuals with runner computations or cited retained outputs, and make the runner assert the current rounded envelope and m_t uncertainty from those inputs with explicit correlation rules. Claim boundary until fixed: it is safe to claim an organizational obstruction that a direct Ward-identity promotion to y_t(v) or m_t(pole) requires separate UV matching, transport, and pole-conversion inputs, and that the supplied packaged numbers arithmetically give about a 2.01% Ward-ratio envelope; it is not an audited retained theorem-grade quantitative envelope or first-principles YT transport result.
+- **open / conditional deps cited:**
+  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md_not_registered_one_hop_dependency`
+  - `YT_EW_COLOR_PROJECTION_THEOREM.md_not_registered_one_hop_dependency`
+  - `PLAQUETTE_SELF_CONSISTENCY_NOTE.md_not_registered_one_hop_dependency`
+  - `P1_lattice_to_MSbar_residual_theorem_not_registered`
+  - `P2_UV_to_IR_transport_residual_theorem_open_or_not_registered`
+  - `P3_K_series_tail_residual_theorem_open_or_not_registered`
 - **auditor confidence:** high

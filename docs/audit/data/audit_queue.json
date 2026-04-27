@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 88,
-    "high": 550,
+    "high": 549,
     "leaf": 856,
     "medium": 85
   },
-  "generated_at": "2026-04-27T03:45:34.812261+00:00",
+  "generated_at": "2026-04-27T03:48:46.373424+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -3479,42 +3479,6 @@
       "audit_independence_required": "cross_family",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "planck_finite_response_no_go_note_2026-04-24",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "planck_parent_source_hidden_character_no_go_note_2026-04-24"
-      ],
-      "direct_in_degree": 9,
-      "load_bearing_score": 15.395,
-      "note_path": "docs/PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_planck_finite_response_nogo.py",
-      "transitive_descendants": 118
-    },
-    {
-      "audit_independence_required": "cross_family",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 13,
-      "load_bearing_score": 13.395,
-      "note_path": "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_yt_uv_to_ir_transport_obstruction.py",
-      "transitive_descendants": 118
-    },
-    {
-      "audit_independence_required": "cross_family",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "matter_inertial_closure_note",
       "criticality": "high",
       "criticality_rank": 2,
@@ -3526,6 +3490,25 @@
       "note_path": "docs/MATTER_INERTIAL_CLOSURE_NOTE.md",
       "ready": true,
       "runner_path": null,
+      "transitive_descendants": 118
+    },
+    {
+      "audit_independence_required": "cross_family",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "planck_finite_response_no_go_note_2026-04-24",
+      "criticality": "high",
+      "criticality_rank": 2,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "planck_parent_source_hidden_character_no_go_note_2026-04-24"
+      ],
+      "direct_in_degree": 9,
+      "load_bearing_score": 11.395,
+      "note_path": "docs/PLANCK_FINITE_RESPONSE_NO_GO_NOTE_2026-04-24.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_planck_finite_response_nogo.py",
       "transitive_descendants": 118
     },
     {
@@ -31621,6 +31604,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1174,
-  "total_pending": 1579
+  "ready_count": 1173,
+  "total_pending": 1578
 }
