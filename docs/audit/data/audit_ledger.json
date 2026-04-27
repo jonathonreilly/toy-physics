@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T03:18:54.293808+00:00",
-  "generated_at": "2026-04-27T03:18:52.523647+00:00",
-  "invalidation_run_at": "2026-04-27T03:18:54.234346+00:00",
+  "effective_status_computed_at": "2026-04-27T03:21:25.480366+00:00",
+  "generated_at": "2026-04-27T03:21:23.724129+00:00",
+  "invalidation_run_at": "2026-04-27T03:21:25.427425+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T03:18:54.122929+00:00",
+  "load_bearing_computed_at": "2026-04-27T03:21:25.311969+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -33129,14 +33129,21 @@
       "verdict_rationale": null
     },
     "gravity_clean_derivation_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 9.907,
+        "transitive_descendants": 119
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The decisive closure condition L^{-1}=G_0, the source law rho=|psi|^2 as mass density, and the test-mass/action response are physical premises in the note, not derived or registered one-hop retained inputs; no primary runner is registered for the claim.",
       "claim_id": "gravity_clean_derivation_note",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -33144,18 +33151,24 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 6,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 9.907,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Self-consistency is imposed as L^{-1}=G_0; since G_0=(-Delta_lat)^{-1}, the field operator is set to L=G_0^{-1}=-Delta_lat, yielding the Poisson equation and then Newton's 1/r^2 law.",
+      "load_bearing_step_class": "E",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "aac957e736cacf83ffb9c2201402e041c1f16d720a845b63ebed4166b650dd50",
       "note_path": "docs/GRAVITY_CLEAN_DERIVATION_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "self_consistency_L_inverse_equals_G0_theorem_not_registered",
+        "rho_equals_abs_psi_squared_mass_density_bridge_not_registered",
+        "weak_field_action_test_mass_response_not_registered",
+        "lattice_green_function_normalization_runner_not_registered",
+        "scripts/frontier_gravity_clean_derivation.py_not_registered_primary_runner"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368536+00:00",
@@ -33193,7 +33206,7 @@
       "runner_path": null,
       "title": "Clean Derivation: Cl(3) on Z^3 to Newton's Inverse-Square Law",
       "transitive_descendants": 119,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the note advertises a zero-free-parameter derivation of Newton gravity from Cl(3) on Z^3, but the load-bearing step is the imposed physical closure condition L^{-1}=G_0, followed by unregistered identifications of rho=|psi|^2 as gravitational mass density and test-mass response via S=L(1-phi). Why this blocks: the algebra L=G_0^{-1} is valid once the closure condition is granted, and the Z^3 Green-function asymptotic is standard mathematics, but the audit packet does not derive or register the physical law that the gravitational field operator must have the same Green function as the propagator, nor the source/readout/mass-coupling maps needed to turn the Poisson equation into F=G_N M_1 M_2/r^2; the ledger also has no registered runner despite the note naming a command. Repair target: register a primary gravity-clean runner and one-hop retained theorems deriving the self-consistency condition, the Born/mass-density source map, the weak-field action/test-mass response, and the lattice Green-function normalization/asymptotic with controlled finite-lattice checks. Claim boundary until fixed: it is safe to claim a conditional weak-field chain: if the framework imposes L^{-1}=G_0 and the stated source/response maps, then the Z^3 Laplacian Green function gives a Newtonian 1/r potential and inverse-square force in lattice units; it is not yet an audited retained derivation of Newton gravity from the single axiom alone."
     },
     "gravity_cosmology_tower_lambda_spectral_bridge_theorem_note_2026-04-25": {
       "audit_date": null,

@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 88,
-    "high": 559,
+    "high": 558,
     "leaf": 856,
     "medium": 85
   },
-  "generated_at": "2026-04-27T03:18:54.361353+00:00",
+  "generated_at": "2026-04-27T03:21:25.551423+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -3295,23 +3295,6 @@
       "direct_in_degree": 7,
       "load_bearing_score": 10.407,
       "note_path": "docs/UNIVERSAL_QG_UV_FINITE_PARTITION_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 119
-    },
-    {
-      "audit_independence_required": "cross_family",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "gravity_clean_derivation_note",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 6,
-      "load_bearing_score": 9.907,
-      "note_path": "docs/GRAVITY_CLEAN_DERIVATION_NOTE.md",
       "ready": true,
       "runner_path": null,
       "transitive_descendants": 119
@@ -31774,6 +31757,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1185,
-  "total_pending": 1588
+  "ready_count": 1184,
+  "total_pending": 1587
 }
