@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T19:12:36.870816+00:00
+**Generated:** 2026-04-27T19:15:40.475048+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 64 |
-| _proposed_retained_ | 34 |
+| **retained** | 65 |
+| _proposed_retained_ | 33 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 64 |
+| `audited_clean` | 65 |
 | `audited_conditional` | 133 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1333 |
+| `unaudited` | 1332 |
 
 | criticality | count |
 |---|---:|
@@ -164,6 +164,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `shapiro_static_discriminator_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `vector_magnetic_extension_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_amplification_near_horizon_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `wave_retardation_lab_prediction_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `area_law_quarter_broader_no_go_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `broad_surrogate_point_source_compare_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -4478,6 +4479,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `runner_not_registered_for_wave_retardation_continuum_limit_note`
   - `logs/2026-04-07-wave-retardation-continuum-limit.txt_not_registered_primary_output`
   - `exact_discrete_static_comparator_not_derived`
+- **auditor confidence:** high
+
+### `wave_retardation_lab_prediction_note`
+
+- **Note:** [`WAVE_RETARDATION_LAB_PREDICTION_NOTE.md`](../../docs/WAVE_RETARDATION_LAB_PREDICTION_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Two velocity sweeps show the M - I gap is configuration-dependent and non-monotonic in v/c, so no simple v/c power law supports a lab prediction card.  _(class `C`)_
+- **chain closes:** True — The live runner reproduces the range-coupled sweep, the trajectory-fixed sweep, and the reported log-log slopes. The source note limits the conclusion to blocking the simple lab translation rather than proving or disproving the upstream wave-retardation lanes.
+- **rationale:** The retained object is a negative guardrail: the easy lab-card extrapolation is blocked by the two computed sweeps. The runner output matches the frozen tables, including the range-coupled decrease to zero at v/c = 0.40, the trajectory-fixed non-monotonic gap with a minimum near v/c = 0.40, and the sign-flipped low-velocity row. This audit certifies only that bounded no-clean-v/c-scaling result; it does not independently certify the upstream Lane 4-8b physics mentioned as unaffected.
 - **auditor confidence:** high
 
 ### `wave_retarded_gravity_note`
