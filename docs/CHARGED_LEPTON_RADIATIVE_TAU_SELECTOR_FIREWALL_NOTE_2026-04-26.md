@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-26
 
-**Status:** support firewall / retained-objective no-go for standalone tau
+**Status:** support firewall / target-closure no-go for standalone tau
 selection.
 
 **Primary runner:**

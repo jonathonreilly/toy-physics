@@ -17337,7 +17337,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-27T11:30:04.640596+00:00",
+  "generated_at": "2026-04-27T11:40:12.639502+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -19536,6 +19536,16 @@
       "runner_path": null,
       "title": "Central-Band Mass Window Note"
     },
+    "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26": {
+      "claim_id": "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26",
+      "current_status": "support",
+      "current_status_raw": "exact negative boundary / target-closure no-go. This note",
+      "deps": [],
+      "note_hash": "f0b0da9cba4b691213daa7f891d0a7d8e38478147bd288c7862e7dcf93d13c34",
+      "path": "docs/CHARGED_LEPTON_DIRECT_WARD_FREE_YUKAWA_NO_GO_NOTE_2026-04-26.md",
+      "runner_path": "scripts/frontier_charged_lepton_direct_ward_free_yukawa_no_go.py",
+      "title": "Charged-Lepton Direct Ward Free-Yukawa No-Go"
+    },
     "charged_lepton_koide_cone_algebraic_equivalence_note": {
       "claim_id": "charged_lepton_koide_cone_algebraic_equivalence_note",
       "current_status": "proposed_retained",
@@ -19550,6 +19560,16 @@
       "path": "docs/CHARGED_LEPTON_KOIDE_CONE_ALGEBRAIC_EQUIVALENCE_NOTE.md",
       "runner_path": null,
       "title": "Charged-Lepton Koide-Cone Algebraic Equivalence"
+    },
+    "charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27": {
+      "claim_id": "charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27",
+      "current_status": "support",
+      "current_status_raw": "exact negative boundary / support firewall for charged-lepton mass",
+      "deps": [],
+      "note_hash": "2ffcc14826c1ec70dd0034f3aeb9ef22d53079d58fc50b5de3ca89b33aa7be05",
+      "path": "docs/CHARGED_LEPTON_KOIDE_RATIO_SOURCE_SELECTOR_FIREWALL_NOTE_2026-04-27.md",
+      "runner_path": "scripts/frontier_charged_lepton_koide_ratio_source_selector_firewall.py",
+      "title": "Charged-Lepton Koide Ratio/Source Selector Firewall"
     },
     "charged_lepton_koide_review_packet_2026-04-18": {
       "claim_id": "charged_lepton_koide_review_packet_2026-04-18",
@@ -19620,6 +19640,36 @@
       "runner_path": "scripts/frontier_charged_lepton_observable_curvature.py",
       "title": "Charged-Lepton Mass Hierarchy and Koide's Relation on the Cl(3)/Z^3 Framework"
     },
+    "charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27": {
+      "claim_id": "charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary for charged-lepton mass retirement; not",
+      "deps": [],
+      "note_hash": "071cc0b66b254ef3fbc229afed5656ea9915fa6738c505a08fcced3d9d00772d",
+      "path": "docs/CHARGED_LEPTON_OP_LOCAL_SOURCE_SELECTED_LINE_SELECTOR_NO_GO_NOTE_2026-04-27.md",
+      "runner_path": "scripts/frontier_charged_lepton_op_local_source_selected_line_selector_no_go.py",
+      "title": "Charged-Lepton OP-Local Source / Selected-Line Selector No-Go"
+    },
+    "charged_lepton_radiative_tau_selector_firewall_note_2026-04-26": {
+      "claim_id": "charged_lepton_radiative_tau_selector_firewall_note_2026-04-26",
+      "current_status": "support",
+      "current_status_raw": "support firewall / target-closure no-go for standalone tau",
+      "deps": [],
+      "note_hash": "d9195a18fe7feb9e250dd5fdc27d6eb6a15f36fc23f1a23eebb939f23632c431",
+      "path": "docs/CHARGED_LEPTON_RADIATIVE_TAU_SELECTOR_FIREWALL_NOTE_2026-04-26.md",
+      "runner_path": "scripts/frontier_charged_lepton_radiative_tau_selector_firewall.py",
+      "title": "Charged-Lepton Radiative Tau Selector Firewall"
+    },
+    "charged_lepton_selected_line_generation_selector_no_go_note_2026-04-27": {
+      "claim_id": "charged_lepton_selected_line_generation_selector_no_go_note_2026-04-27",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary for the selected-line/generation-label",
+      "deps": [],
+      "note_hash": "86a0bac37106427217c01480f7a562b24a97e60987286f00646c38842643c0e1",
+      "path": "docs/CHARGED_LEPTON_SELECTED_LINE_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md",
+      "runner_path": "scripts/frontier_charged_lepton_selected_line_generation_selector_no_go.py",
+      "title": "Charged-Lepton Selected-Line Generation-Selector No-Go"
+    },
     "charged_lepton_two_higgs_canonical_reduction_note": {
       "claim_id": "charged_lepton_two_higgs_canonical_reduction_note",
       "current_status": "unknown",
@@ -19629,6 +19679,16 @@
       "path": "docs/CHARGED_LEPTON_TWO_HIGGS_CANONICAL_REDUCTION_NOTE.md",
       "runner_path": "scripts/frontier_charged_lepton_two_higgs_canonical_reduction.py",
       "title": "Charged-Lepton Two-Higgs Canonical Reduction Theorem"
+    },
+    "charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27": {
+      "claim_id": "charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27",
+      "current_status": "unknown",
+      "current_status_raw": "exact negative boundary for charged-lepton mass retirement; not",
+      "deps": [],
+      "note_hash": "24c63a7d55c30d639e0fe987b284ba7e357458da2c3c1565fdaec02528c4e1fe",
+      "path": "docs/CHARGED_LEPTON_TYPEB_RADIAN_READOUT_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md",
+      "runner_path": "scripts/frontier_charged_lepton_typeb_radian_readout_generation_selector_no_go.py",
+      "title": "Charged-Lepton Type-B Radian Readout Generation-Selector No-Go"
     },
     "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17": {
       "claim_id": "charged_lepton_ue_identity_via_z3_trichotomy_note_2026-04-17",
@@ -38264,7 +38324,13 @@
     "central_band_dense_largen_note",
     "central_band_layernorm_note",
     "central_band_mass_window_note",
+    "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26",
+    "charged_lepton_koide_ratio_source_selector_firewall_note_2026-04-27",
+    "charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27",
+    "charged_lepton_radiative_tau_selector_firewall_note_2026-04-26",
+    "charged_lepton_selected_line_generation_selector_no_go_note_2026-04-27",
     "charged_lepton_two_higgs_canonical_reduction_note",
+    "charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27",
     "chiral_3plus1d_boundary_phase_note",
     "chiral_3plus1d_coupled_coin_note",
     "chiral_3plus1d_mixing_period_note",
@@ -39290,17 +39356,17 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4334,
-    "leaf_count": 744,
-    "node_count": 1601,
-    "root_count": 1165,
-    "runners_with_path": 694,
+    "leaf_count": 750,
+    "node_count": 1607,
+    "root_count": 1171,
+    "runners_with_path": 700,
     "status_counts": {
       "bounded": 209,
       "open": 26,
       "proposed_promoted": 6,
       "proposed_retained": 435,
-      "support": 129,
-      "unknown": 796
+      "support": 132,
+      "unknown": 799
     }
   }
 }

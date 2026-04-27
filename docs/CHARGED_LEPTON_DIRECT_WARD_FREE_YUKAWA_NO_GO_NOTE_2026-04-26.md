@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-26
 
-**Status:** exact negative boundary / retained-objective no-go. This note
+**Status:** exact negative boundary / target-closure no-go. This note
 blocks a direct lift of the retained top Ward identity to a charged-lepton
 `y_tau` theorem using only one-Higgs gauge selection and the existing top
 Ward template. It does not claim charged-lepton mass closure, Koide closure,

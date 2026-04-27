@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T11:30:06.512586+00:00
+**Generated:** 2026-04-27T11:40:14.778671+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -23,9 +23,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | _proposed_retained_ | 163 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
-| support | 101 |
+| support | 104 |
 | open | 11 |
-| unknown | 720 |
+| unknown | 723 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
@@ -41,23 +41,23 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_failed` | 22 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1456 |
+| `unaudited` | 1462 |
 
 | criticality | count |
 |---|---:|
 | `critical` | 91 |
 | `high` | 569 |
 | `medium` | 85 |
-| `leaf` | 856 |
+| `leaf` | 862 |
 
 - **Proposed claims demoted by upstream:** 135
 - **Citation cycles detected:** 283
 
 ### Runner classification (static heuristic)
 
-- runners classified: 679
+- runners classified: 685
 - runners with (C) first-principles compute hits: 410
-- runners with (D) external comparator hits: 173
+- runners with (D) external comparator hits: 179
 - decoration candidates (no C, no D): 71
 
 ## Top 25 by load-bearing score (topology only)
@@ -257,7 +257,6 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **chain closes:** True — The registered/source-note canonical harness reproduces the 2D and 3D action-power tables, and the source-note gravity-sign closure runner reproduces the 0/14 strength, 0/3 density, and 0/8 jitter negative sweeps. The source note explicitly scopes the result as an axiom fork and excludes same-harness Newtonian closure, 3D barrier attraction, continuum limits, and multi-spacing robustness.
 - **rationale:** The bounded finite claim closes on its own terms: the action-power harness reproduces Born-clean and k=0-clean 3D barrier values, MI/d_TV/decoherence diagnostics, the no-barrier distance exponent about -1.84 with F proportional to M near 1.00, and the live gravity-sign closure reproduces the all-away ordered-family sweeps. This clean audit ratifies only the finite axiom-fork card and its stated negative boundary, not a replacement for the spent-delay flagship, not attraction on the barrier card, and not a continuum or robustness theorem. Residual boundary: the later dimensional-interpretation comparison row for the 3D spent-delay exponent is not needed for the retained action-power card and should not be treated as the audited result; the canonical runner's current spent-delay 3D no-barrier output is +0.74.
 - **auditor confidence:** high
-
 ### `ai_methodology.raw.prompts_session_ebae4639_jonreilly`
 
 - **Note:** [`ai_methodology/raw/prompts_session_ebae4639_jonreilly.md`](../../docs/ai_methodology/raw/prompts_session_ebae4639_jonreilly.md)
