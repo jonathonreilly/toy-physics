@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T05:00:45.095348+00:00
+**Generated:** 2026-04-27T05:02:23.818796+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,13 +20,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 6 |
-| _proposed_retained_ | 255 |
+| _proposed_retained_ | 254 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
 | open | 11 |
 | unknown | 734 |
-| ~~audited_decoration~~ | 2 |
+| ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 3 |
 | ~~audited_conditional~~ | 240 |
 | ~~audited_failed~~ | 58 |
@@ -36,10 +36,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audit_in_progress` | 3 |
 | `audited_clean` | 6 |
 | `audited_conditional` | 38 |
-| `audited_decoration` | 2 |
+| `audited_decoration` | 3 |
 | `audited_failed` | 1 |
 | `audited_numerical_match` | 3 |
-| `unaudited` | 1548 |
+| `unaudited` | 1547 |
 
 | criticality | count |
 |---|---:|
@@ -144,6 +144,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_p1_delta_r_sm_rge_crosscheck_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `koide_q_eq_3delta_identity_note_2026-04-21` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
+| `retained_cross_lane_consistency_support_note_2026-04-22` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | B | - |
 | `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `bell_inequality_derived_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -872,6 +873,29 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `retained_PMNS_pair_readout_authority_not_registered_one_hop_dependency`
   - `physical_active_passive_source_transfer_observables_authority_not_registered`
   - `lower_level_source_transfer_observables_to_PMNS_readout_theorem_not_registered`
+- **auditor confidence:** high
+
+### `retained_cross_lane_consistency_support_note_2026-04-22`
+
+- **Note:** [`RETAINED_CROSS_LANE_CONSISTENCY_SUPPORT_NOTE_2026-04-22.md`](../../docs/RETAINED_CROSS_LANE_CONSISTENCY_SUPPORT_NOTE_2026-04-22.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_decoration~~
+- **effective_status:** ~~audited_decoration~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The support runner cross-checks 26 proposed_retained numerical and algebraic identities across eight separately proposed_retained lanes in a single executable, but does not derive anything new.  _(class `B`)_
+- **chain closes:** False — The runner passes 26/26 as a regression harness over supplied lane anchors. It hard-codes numerical and algebraic inputs from multiple lanes, registers no one-hop dependencies, and includes tolerance/True checks, so it does not close as an independent proposed-retained theorem.
+- **rationale:** Issue: the note is a cross-lane bookkeeping and drift-detection harness, not an independent physical derivation. Why this blocks: the primary runner supplies anchors such as alpha_s(v), alpha_LM, Q_Koide, delta_Brannen, v_EW, anomaly traces, cosmological identities, and neutrino staircase values, then checks algebraic/tolerance consistency; the row has no registered one-hop authorities and the source note itself says it derives nothing new and discharges no residual. Repair target: keep it as a support/regression harness or box it under the relevant parent audit packet; re-promote only if it registers every upstream authority, all upstream lanes are audited clean, and the runner proves a genuine compression theorem rather than restating supplied constants. Claim boundary until fixed: it is safe to cite this as a useful executable coherence checklist for supplied lane values; it is not safe to count it as a separate retained theorem-grade result.
+- **open / conditional deps cited:**
+  - `ALPHA_S_DERIVED_NOTE.md_not_registered_one_hop_dependency`
+  - `PLAQUETTE_SELF_CONSISTENCY_NOTE.md_not_registered_one_hop_dependency`
+  - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md_not_registered_one_hop_dependency`
+  - `KOIDE_SELECTED_LINE_PROVENANCE_NOTE_2026-04-20.md_not_registered_one_hop_dependency`
+  - `PMNS_SELECTOR_THREE_IDENTITY_SUPPORT_NOTE_2026-04-21.md_not_registered_one_hop_dependency`
+  - `ANOMALY_FORCES_TIME_THEOREM.md_not_registered_one_hop_dependency`
+  - `COSMOLOGICAL_CONSTANT_SPECTRAL_GAP_IDENTITY_THEOREM_NOTE.md_not_registered_one_hop_dependency`
+  - `DARK_ENERGY_EOS_RETAINED_COROLLARY_THEOREM_NOTE.md_not_registered_one_hop_dependency`
+  - `NEUTRINO_MASS_DERIVED_NOTE.md_not_registered_one_hop_dependency`
+  - `KOIDE_Q_EQ_3DELTA_IDENTITY_NOTE_2026-04-21.md_not_registered_one_hop_dependency`
 - **auditor confidence:** high
 
 ### `sign_portability_invariant_note`
