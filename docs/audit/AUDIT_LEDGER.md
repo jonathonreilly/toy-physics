@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T16:39:26.029301+00:00
+**Generated:** 2026-04-27T16:44:06.008958+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 60 |
-| _proposed_retained_ | 84 |
+| _proposed_retained_ | 83 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 321 |
+| ~~audited_conditional~~ | 322 |
 | ~~audited_failed~~ | 116 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 60 |
-| `audited_conditional` | 108 |
+| `audited_conditional` | 109 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 49 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1383 |
+| `unaudited` | 1382 |
 
 | criticality | count |
 |---|---:|
@@ -246,6 +246,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `poisson_3d_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `poisson_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `propagator_family_unification_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `quantum_horizon_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `sign_portability_invariant_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `staggered_backreaction_shell_spectral_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -3378,6 +3379,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: The queued row is proposed_retained only because the status line contains that token in a negation; the note itself says this is a bounded control program only and not a proposed_retained spectral claim. Why this blocks: there is no runner, frozen null, matched control, Born audit, Nyquist exclusion, or refinement/threshold stability result to audit as a retained QNM claim. Repair target: demote the source status to bounded/open roadmap language, then add the five named controls and a runner that computes them before proposing a spectral claim. Claim boundary until fixed: it is safe to cite this as a QNM hardening checklist and as evidence that the branch-side QNM story remains blocked; it is not safe to treat it as an audit-retained QNM result or retained spectral-control theorem.
 - **open / conditional deps cited:**
   - `QNM_HARDENING_FEASIBILITY_NOTE.md`
+- **auditor confidence:** high
+
+### `quantum_horizon_note`
+
+- **Note:** [`QUANTUM_HORIZON_NOTE.md`](../../docs/QUANTUM_HORIZON_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On this horizon observable, alpha_crit is nearly flat in k, so the retained family does not support a strong wavelength-dependent horizon shift.  _(class `C`)_
+- **chain closes:** False — The live k-sweep closes as a finite proxy no-go, but it inherits the absorbing-horizon proxy from MINIMAL_ABSORBING_HORIZON_PROBE_NOTE, which is audited_failed as a retained horizon/trapping theorem.
+- **rationale:** Issue: The k-sweep verifies flat alpha_crit only for the hand-inserted absorbing proxy inherited from the minimal absorbing-horizon probe, whose retained horizon/trapping interpretation has already failed audit. Why this blocks: the result can kill a stronger wavelength-dependent story for this proxy observable, but it cannot be retained as a quantum-horizon or retained-absorbing-family statement until the underlying absorption law and family claim are repaired. Repair target: either demote this note to a bounded proxy no-go, or first derive and audit the absorption/horizon law in the minimal probe, then rerun the k-sweep as a retained-family observable. Claim boundary until fixed: it is safe to say the live proxy sweep gives alpha_crit around 0.08 to 0.09 with exponent about 0.03 across the tested k values; it is not safe to claim a retained quantum-horizon law or retained absorbing-horizon mechanism.
+- **open / conditional deps cited:**
+  - `MINIMAL_ABSORBING_HORIZON_PROBE_NOTE.md`
 - **auditor confidence:** high
 
 ### `retained_cross_lane_consistency_support_note_2026-04-22`
