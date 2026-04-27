@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T11:46:41.978411+00:00",
+  "generated_at": "2026-04-27T11:48:06.428366+00:00",
   "per_claim": {
     "accessible_prediction_note": {
       "assert_count": 0,
@@ -1032,6 +1032,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_cosmology_frw_kinematic_reduction.py"
+    },
+    "cosmology_open_number_reduction_theorem_note_2026-04-26": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_cosmology_open_number_reduction.py"
     },
     "cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25": {
       "assert_count": 1,
@@ -4308,6 +4320,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_koide_cone_variational_principle_survey.py"
+    },
+    "hubble_tension_structural_lock_theorem_note_2026-04-26": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_hubble_tension_structural_lock.py"
     },
     "hypercharge_squared_trace_catalog_theorem_note_2026-04-25": {
       "assert_count": 1,
@@ -10011,6 +10035,21 @@
       "dominant_class": "D",
       "exists": true
     },
+    "scripts/frontier_cosmology_open_number_reduction.py": {
+      "assert_count": 1,
+      "claims": [
+        "cosmology_open_number_reduction_theorem_note_2026-04-26"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 1
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_cosmology_single_ratio_inverse_reconstruction.py": {
       "assert_count": 1,
       "claims": [
@@ -13928,6 +13967,21 @@
       },
       "decoration_candidate": false,
       "dominant_class": "C",
+      "exists": true
+    },
+    "scripts/frontier_hubble_tension_structural_lock.py": {
+      "assert_count": 1,
+      "claims": [
+        "hubble_tension_structural_lock_theorem_note_2026-04-26"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 3
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
       "exists": true
     },
     "scripts/frontier_hypercharge_squared_trace_catalog.py": {
@@ -18701,11 +18755,11 @@
       "A": 6,
       "B": 102,
       "C": 333,
-      "D": 104,
+      "D": 106,
       "none": 140
     },
-    "runners_classified": 685,
+    "runners_classified": 687,
     "runners_with_C": 410,
-    "runners_with_D": 179
+    "runners_with_D": 181
   }
 }

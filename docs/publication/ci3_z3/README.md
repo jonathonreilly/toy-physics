@@ -109,6 +109,8 @@ For the full package-capture inventory, use:
   group-theory support for the bounded DM/cosmology cascade, the FRW kinematic
   reduction of late-time cosmology observables to the open `H_inf/H_0` ratio,
   the [single-ratio inverse reconstruction certificate](../../COSMOLOGY_SINGLE_RATIO_INVERSE_RECONSTRUCTION_THEOREM_NOTE_2026-04-25.md),
+  the [late-time Hubble structural lock](../../HUBBLE_TENSION_STRUCTURAL_LOCK_THEOREM_NOTE_2026-04-26.md)
+  and [two-degree open-number reduction](../../COSMOLOGY_OPEN_NUMBER_REDUCTION_THEOREM_NOTE_2026-04-26.md),
   the matter-radiation equality identity `1 + z_mr = Omega_m,0/Omega_r,0`,
   the retained active-neutrino-count support for standard `N_eff = 3.046`,
   and the retained scalar, vector, and TT compactness spectral towers on `S^3`,
