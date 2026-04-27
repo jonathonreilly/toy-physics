@@ -1,0 +1,70 @@
+slug: lane4-neutrino-cascade-20260427
+branch: frontier/lane4-neutrino-cascade-20260427
+mode: run/resume
+target: best-honest-status
+runtime:
+  requested_hours: 12
+  hard_deadline_utc: "2026-04-28T00:19:36Z"
+  supervisor_loop: 1
+lock:
+  owner: frontier-workstream-lane4-cascade
+  repo_local_lock: logs/physics_worker_lock.json
+current_lane:
+  id: 4
+  name: neutrino quantitative closure
+  status: open
+cycle:
+  count: 1
+  active_route: dirac_seesaw_fork_no_go
+  route_status: verified
+files_touched:
+  - docs/NEUTRINO_LANE4_DIRAC_SEESAW_FORK_NO_GO_NOTE_2026-04-27.md
+  - scripts/frontier_neutrino_lane4_dirac_seesaw_fork_no_go.py
+  - scripts/frontier_neutrino_majorana_current_stack_zero_law.py
+  - logs/2026-04-27-neutrino-lane4-dirac-seesaw-fork-no-go.txt
+  - docs/audit/AUDIT_LEDGER.md
+  - docs/audit/AUDIT_QUEUE.md
+  - docs/audit/data/audit_ledger.json
+  - docs/audit/data/audit_queue.json
+  - docs/audit/data/citation_graph.json
+  - docs/audit/data/effective_status_summary.json
+  - docs/audit/data/load_bearing_summary.json
+  - docs/audit/data/runner_classification.json
+  - .claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/GOAL.md
+  - .claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/ASSUMPTIONS_AND_IMPORTS.md
+  - .claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/ROUTE_PORTFOLIO.md
+  - .claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/NO_GO_LEDGER.md
+  - .claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/LITERATURE_BRIDGES.md
+  - .claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/ARTIFACT_PLAN.md
+  - .claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/REVIEW_HISTORY.md
+  - .claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/HANDOFF.md
+  - .claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/STATE.yaml
+open_imports:
+  - nonzero charge-2 Majorana primitive or equivalent admitted extension
+  - tiny Dirac Y_nu activation law
+  - full off-diagonal M_R texture for Delta m2_21
+  - PMNS value-selection law for J_chi
+no_go_routes:
+  - current-stack sole-axiom full neutrino closure
+  - current-stack Majorana activation mu != 0
+  - current-bank PMNS selector activation
+  - hidden global closure by merging mu_current=0 with the diagonal seesaw benchmark
+review:
+  status: passed_with_notes
+  findings:
+    - "No retained Lane 4 closure; artifact is exact negative boundary."
+    - "Existing Majorana zero-law runner needed atlas Pfaffian/Nambu scoping compatibility fix after origin/main fast-forward."
+    - "Audit strict lint passes with known graph-cycle warning only."
+verification:
+  status: passed
+  commands:
+    - "PYTHONPATH=scripts python3 scripts/frontier_neutrino_lane4_dirac_seesaw_fork_no_go.py -> PASS=10 FAIL=0"
+    - "python3 -m py_compile scripts/frontier_neutrino_lane4_dirac_seesaw_fork_no_go.py scripts/frontier_neutrino_majorana_current_stack_zero_law.py -> pass"
+    - "PYTHONPATH=scripts python3 scripts/frontier_neutrino_majorana_current_stack_zero_law.py -> PASS=13 FAIL=0"
+    - "PYTHONPATH=scripts python3 scripts/frontier_neutrino_mass_derived.py -> PASS=19 FAIL=0"
+    - "PYTHONPATH=scripts python3 scripts/frontier_neutrino_retained_observable_bounds.py -> PASS=35 FAIL=0"
+    - "bash docs/audit/scripts/run_pipeline.sh -> complete"
+    - "python3 docs/audit/scripts/audit_lint.py --strict -> OK, known graph-cycle warning only"
+    - "git diff --check -> pass"
+next_exact_action: "Commit and push the coherent Lane 4 checkpoint. Then either select a new Lane 4 dramatic-step route or cascade to Lane 2."
+stop_condition: "Not reached. Lane 4 remains open; no STOP_ALL_LANES_REQUESTED file should be created."

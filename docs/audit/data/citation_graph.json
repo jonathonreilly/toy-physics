@@ -17521,7 +17521,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-27T12:12:32.400135+00:00",
+  "generated_at": "2026-04-27T12:27:57.624019+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -18606,7 +18606,7 @@
       "current_status": "unknown",
       "current_status_raw": null,
       "deps": [],
-      "note_hash": "2064510110c25e69f67124ac1e0c64fecda0031ef13e13b483ec67543ea7cd5c",
+      "note_hash": "c947109c1577b24f57206b965e3b96f9cf07252ef3b6dc6f2e45262d859a17b7",
       "path": "docs/ai_methodology/skills/review-loop/SKILL.md",
       "runner_path": null,
       "title": "Review Loop"
@@ -28991,6 +28991,16 @@
       "runner_path": "scripts/frontier_neutrino_dirac_z3_support_trichotomy.py",
       "title": "Neutrino Dirac `Z_3` Support Trichotomy"
     },
+    "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27": {
+      "claim_id": "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained exact negative boundary for Lane 4 claim",
+      "deps": [],
+      "note_hash": "3013eab6814007da2c698f302fb60b1e43ef111e985e379c315619f3de935d04",
+      "path": "docs/NEUTRINO_LANE4_DIRAC_SEESAW_FORK_NO_GO_NOTE_2026-04-27.md",
+      "runner_path": "scripts/frontier_neutrino_lane4_dirac_seesaw_fork_no_go.py",
+      "title": "Lane 4 Neutrino Dirac/Seesaw Fork No-Go"
+    },
     "neutrino_majorana_adjacent_singlet_placement_theorem_note": {
       "claim_id": "neutrino_majorana_adjacent_singlet_placement_theorem_note",
       "current_status": "unknown",
@@ -39199,6 +39209,7 @@
     "nature_ranked_directions_2026-04-11",
     "neutrino_dirac_two_higgs_canonical_reduction_note",
     "neutrino_dirac_z3_support_trichotomy_note",
+    "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27",
     "neutrino_majorana_current_stack_exhaustion_note",
     "neutrino_majorana_lower_level_pairing_nogo_note",
     "neutrino_majorana_nur_character_boundary_note",
@@ -39663,15 +39674,15 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4380,
-    "leaf_count": 750,
-    "node_count": 1614,
-    "root_count": 1176,
-    "runners_with_path": 702,
+    "leaf_count": 751,
+    "node_count": 1615,
+    "root_count": 1177,
+    "runners_with_path": 703,
     "status_counts": {
       "bounded": 209,
       "open": 26,
       "proposed_promoted": 6,
-      "proposed_retained": 443,
+      "proposed_retained": 444,
       "support": 134,
       "unknown": 796
     }

@@ -1,0 +1,71 @@
+========================================================================================
+LANE 4 NEUTRINO DIRAC/SEESAW FORK NO-GO
+========================================================================================
+
+Question:
+  Can current-stack mu=0, the diagonal seesaw benchmark, and y_nu^eff
+  be treated as one global quantitative neutrino closure?
+
+Answer:
+  No. They live on a forked claim surface unless an extra activation law
+  is supplied.
+
+----------------------------------------------------------------------------------------
+Part 1: current-stack zero law vs type-I seesaw invertibility
+----------------------------------------------------------------------------------------
+  Current-stack Majorana input: mu_current = 0.
+  Type-I seesaw input: an invertible nonzero right-handed Majorana matrix.
+
+  Benchmark heavy masses: M1=5.323014e+10 GeV, M2=5.828558e+10 GeV, M3=6.149685e+11 GeV
+  [PASS] current-stack Majorana matrix is non-invertible  (det(M_R,current)=0)
+  [PASS] diagonal seesaw benchmark uses an invertible nonzero M_R  (det(M_R,bench)=1.908e+33 GeV^3)
+  [PASS] there is no algebraic path from M_R,current=0 to the benchmark inverse  (seesaw inversion requires an added nonzero charge-2 surface)
+
+----------------------------------------------------------------------------------------
+Part 2: retained local coefficient is not a one-Higgs Dirac mass
+----------------------------------------------------------------------------------------
+  y_nu^eff = g_weak^2/64 = 0.006662640625
+  v_EW = 246.282818 GeV
+
+  Direct Dirac mass y v:        1.640894e+09 eV
+  SM convention y v/sqrt(2):    1.160287e+09 eV
+  Seesaw atmospheric benchmark: 5.058286e-02 eV
+  SM Dirac Yukawa needed for that mass: 2.904586e-13
+  [PASS] direct one-Higgs Dirac reading overshoots the meV scale by many orders  ((y v/sqrt2)/m3=2.294e+10)
+  [PASS] a pure Dirac closure would require a new tiny Yukawa activation law  (y_Dirac(m3)=2.905e-13)
+  [PASS] retained y_nu^eff and pure-Dirac y_Dirac(m3) are not the same object  (ratio=2.294e+10)
+
+----------------------------------------------------------------------------------------
+Part 3: atmospheric benchmark value and honest status
+----------------------------------------------------------------------------------------
+  m3(seesaw benchmark)       = 5.058286e-02 eV
+  Delta m31^2(seesaw diag)   = 2.539456e-03 eV^2
+  This is the existing useful benchmark surface.
+
+  The no-go is only against silently upgrading that surface to global
+  Lane 4 closure while also retaining M_R,current = 0.
+  [PASS] seesaw benchmark reproduces the retained atmospheric-scale target  (m3=5.058286e-02 eV)
+  [PASS] diagonal atmospheric splitting reproduces the retained benchmark  (Delta m31^2=2.539456e-03 eV^2)
+  [PASS] benchmark usefulness does not remove the Dirac/seesaw fork  (nonzero M_R extension or new tiny Dirac law still required)
+
+----------------------------------------------------------------------------------------
+Part 4: claim-state consequence
+----------------------------------------------------------------------------------------
+  Exact negative boundary:
+    The current Lane 4 stack has no hidden one-surface quantitative
+    closure obtained by combining mu_current=0, y_nu^eff, and the
+    diagonal seesaw benchmark.
+
+  Remaining positive routes:
+    1. Majorana/seesaw route: derive a nonzero charge-2 primitive and
+       then repair the full M_R texture, including the solar gap.
+    2. Dirac route: derive the tiny Y_nu activation law on the minimal
+       surviving Dirac lane, not y_nu^eff reused as a Dirac eigenvalue.
+
+  Therefore Lane 4 remains open after this no-go. The artifact retires
+  a hidden-closure conflation, not the neutrino problem.
+  [PASS] Lane 4 status after this artifact is open, not retained closure  (fork isolated; positive activation law still missing)
+
+========================================================================================
+PASS=10 FAIL=0
+========================================================================================

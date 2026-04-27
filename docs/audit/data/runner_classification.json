@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T12:12:34.054153+00:00",
+  "generated_at": "2026-04-27T12:27:58.903353+00:00",
   "per_claim": {
     "accessible_prediction_note": {
       "assert_count": 0,
@@ -5412,6 +5412,18 @@
       "decoration_candidate": false,
       "dominant_class": "C",
       "runner": "scripts/frontier_neutrino_dirac_z3_support_trichotomy.py"
+    },
+    "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "runner": "scripts/frontier_neutrino_lane4_dirac_seesaw_fork_no_go.py"
     },
     "neutrino_majorana_adjacent_singlet_placement_theorem_note": {
       "assert_count": 1,
@@ -15320,6 +15332,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_neutrino_lane4_dirac_seesaw_fork_no_go.py": {
+      "assert_count": 1,
+      "claims": [
+        "neutrino_lane4_dirac_seesaw_fork_no_go_note_2026-04-27"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0
+      },
+      "decoration_candidate": false,
+      "dominant_class": null,
+      "exists": true
+    },
     "scripts/frontier_neutrino_majorana_adjacent_singlet_placement_theorem.py": {
       "assert_count": 1,
       "claims": [
@@ -18756,9 +18783,9 @@
       "B": 102,
       "C": 333,
       "D": 106,
-      "none": 140
+      "none": 141
     },
-    "runners_classified": 687,
+    "runners_classified": 688,
     "runners_with_C": 410,
     "runners_with_D": 181
   }

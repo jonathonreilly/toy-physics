@@ -1,0 +1,24 @@
+# Assumptions And Imports
+
+| Item | Role in claim | Current class | Source surface | Load-bearing? | Needed for target status? | Retirement path | Disposition |
+|---|---|---|---|---|---|---|---|
+| `Cl(3)` on `Z^3` framework axiom | Base structural surface | zero-input structural | repo retained framework notes and atlas | Yes | Yes | Already retained upstream | Reuse only |
+| Three generations and active neutrino count | Neutrino sector cardinality and `N_eff` support | retained support | `THREE_GENERATION_STRUCTURE_NOTE.md`, `N_EFF_FROM_THREE_GENERATIONS_THEOREM_NOTE_2026-04-24.md` | Yes | Yes | Already retained upstream | Reuse only |
+| `alpha_LM`, `v_EW`, plaquette-derived constants | Quantitative mass-scale inputs | framework-derived | `USABLE_DERIVED_VALUES_INDEX.md`, `NEUTRINO_MASS_DERIVED_NOTE.md` | Yes | Yes | Retire only by upstream plaquette/EW closure, not in Lane 4 | Reuse with qualifier |
+| `y_nu^eff = g_weak^2/64` | Local coefficient in atmospheric benchmark | retained support | `NEUTRINO_MASS_DERIVED_NOTE.md` | Yes | Yes for benchmark, no for pure Dirac closure | Distinguish local/seesaw use from direct Dirac mass use | Kept, guarded |
+| `mu_current = 0` | Current-stack Majorana zero law | exact current-stack theorem | `NEUTRINO_MAJORANA_CURRENT_STACK_ZERO_LAW_NOTE.md` | Yes | Yes for Dirac/Majorana fork | A nonzero charge-2 primitive would change the surface | Kept as fork boundary |
+| Diagonal right-handed Majorana benchmark | Atmospheric-scale support route | bounded/support Majorana extension surface | `DM_NEUTRINO_ATMOSPHERIC_SCALE_THEOREM_NOTE_2026-04-15.md` | Yes | Not enough for global closure | Derive nonzero charge-2 primitive and full `M_R` texture | Open |
+| Normal ordering | Observable-bound input | retained support | `NEUTRINO_MASS_DERIVED_NOTE.md`, `NEUTRINO_RETAINED_OBSERVABLE_BOUNDS_THEOREM_NOTE_2026-04-24.md` | Yes | Yes for bounds | Already retained as structural prediction on current package | Reuse with qualifier |
+| PMNS unitarity | Bound on `m_beta` and `m_betabeta` | zero-input structural / SM convention | neutrino observable bounds note | Yes | Yes for bounds | Standard structural input | Reuse |
+| Observed neutrino splittings and PMNS angles | Comparators only | observational comparator | NuFit/PDG values cited in existing notes | No for new no-go | No | Keep out of derivation chain | Comparator only |
+| One-Higgs Dirac mass convention `m = y v/sqrt(2)` | Guard against direct-Dirac misuse | retained/exact SM gauge-selection convention | `SM_ONE_HIGGS_YUKAWA_GAUGE_SELECTION_THEOREM_NOTE_2026-04-26.md` | Yes for fork no-go | Yes | Already retained upstream | Reuse |
+
+## Open Load-Bearing Imports
+
+- Nonzero Majorana/seesaw activation: not derived on the current retained
+  stack.
+- Full off-diagonal `M_R` texture: not derived; needed for `Delta m^2_21`.
+- Tiny Dirac `Y_nu` activation law: not derived; needed if the lane chooses
+  the Dirac route.
+- PMNS value-selection law: current retained bank leaves the nontrivial
+  character current unselected.
