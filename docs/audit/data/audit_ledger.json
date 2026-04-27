@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T11:18:14.231793+00:00",
-  "generated_at": "2026-04-27T11:18:12.189495+00:00",
-  "invalidation_run_at": "2026-04-27T11:18:14.165379+00:00",
+  "effective_status_computed_at": "2026-04-27T11:22:52.866128+00:00",
+  "generated_at": "2026-04-27T11:22:50.837051+00:00",
+  "invalidation_run_at": "2026-04-27T11:22:52.809587+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T11:18:14.023431+00:00",
+  "load_bearing_computed_at": "2026-04-27T11:22:52.674091+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -27868,14 +27868,21 @@
       "verdict_rationale": null
     },
     "fixed_field_complex_grown_basin_v2_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The live V2 runner reproduces the frozen two-row table, with center Born proxy 1.456e-15, F~M = 1.000 on both rows at gamma=0 and gamma=0.5, and t01=1/t05=0 crossover on both rows. The cited grown companion parent is already audited clean, and the conclusion is restricted to the center row plus one immediate neighbor.",
       "claim_id": "fixed_field_complex_grown_basin_v2_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -27883,13 +27890,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note claims that the retained grown-row complex-action anchor at drift 0.20 restore 0.70 and one nearby row at drift 0.20 restore 0.60 preserve the tiny-basin package: center Born proxy, center and neighbor weak-field F~M near 1, and TOWARD-to-AWAY crossover.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "98b52f3a1f0dd4d8a78b6dd4233e8c54403925a15507c74b5e2f374deb21b0c9",
@@ -27925,14 +27932,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 5,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 5
       },
       "runner_path": null,
       "title": "Fixed-Field Complex Grown Basin V2 Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The claim is intentionally tiny and the live runner recomputes the disputed finite surface rather than only rendering a static table. It confirms the center-row Born proxy, center and nearby weak-field F~M gates, and nearby crossover survival, while the source note explicitly excludes family-wide or geometry-generic transfer. Residual boundary: the result is a two-row basin around the audited grown-row companion, not a broad grown-family theorem."
     },
     "fixed_field_family_unification_note": {
       "audit_date": null,

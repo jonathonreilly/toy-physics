@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 88,
     "high": 506,
-    "leaf": 790,
+    "leaf": 789,
     "medium": 78
   },
-  "generated_at": "2026-04-27T11:18:14.294174+00:00",
+  "generated_at": "2026-04-27T11:22:52.928418+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -20386,23 +20386,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "fixed_field_complex_grown_basin_v2_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/FIXED_FIELD_COMPLEX_GROWN_BASIN_V2_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "fixed_field_family_unification_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -29628,6 +29611,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1051,
-  "total_pending": 1462
+  "ready_count": 1050,
+  "total_pending": 1461
 }
