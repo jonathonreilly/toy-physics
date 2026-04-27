@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T19:30:45.739076+00:00",
-  "generated_at": "2026-04-27T19:30:44.140015+00:00",
-  "invalidation_run_at": "2026-04-27T19:30:45.690693+00:00",
+  "effective_status_computed_at": "2026-04-27T19:35:31.063381+00:00",
+  "generated_at": "2026-04-27T19:35:29.462361+00:00",
+  "invalidation_run_at": "2026-04-27T19:35:31.013222+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T19:30:45.593120+00:00",
+  "load_bearing_computed_at": "2026-04-27T19:35:30.916184+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -80652,14 +80652,21 @@
       "verdict_rationale": "The note accurately preserves both sides of the runner output. The 6.0 -> 9.0 comparison is still materially box-dependent, with dS move 20.84% and rel_MS move 86.21%, while dM is stable; the 9.0 -> 12.0 comparison improves to dS move 5.52% and rel_MS 3.18% -> 2.42% but still does not pass a strict stability criterion. This closes only the stated mixed diagnostic: no boundary-stable moving-source comparator is retained yet, but the medium-H large-box branch remains a plausible stabilization candidate."
     },
     "wave_static_matrixfree_shared_geometry_compare_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner reproduces the two numerical comparison tables, but it does not define or pass a drop-in-replacement acceptance criterion; its own printed verdict says the matrix-free result is close but not yet proven identical.",
       "claim_id": "wave_static_matrixfree_shared_geometry_compare_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -80667,13 +80674,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "At H = 0.35 and H = 0.25, the direct and matrix-free static solvers agree extremely closely, so matrix-free is a strong drop-in replacement on the shared geometries tested.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "883c74229b5f5fd65410a80696edd3d0c7de650db8e0cb8556d41437082badeb",
@@ -80709,14 +80716,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 10,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 10
       },
       "runner_path": null,
       "title": "Wave Static Matrix-Free Shared Geometry Compare",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the note promotes the matrix-free solver as a strong drop-in replacement, but the runner only demonstrates small finite mismatches at two geometries and explicitly reports that identity is not proven. Why this blocks: without a stated tolerance or convergence/equivalence theorem, the audit can certify numerical closeness but cannot certify replacement status as a retained engine equivalence. Repair target: add an audited acceptance criterion for drop-in replacement, such as field and propagated-response tolerances tied to solver residuals, or prove both algorithms converge to the same finite-grid Poisson solution with a runner pass/fail threshold. Claim boundary until fixed: safe to claim that at H = 0.35 and H = 0.25 the direct and matrix-free fields agree to roughly 1e-5 relative field mismatch and propagated dS agrees to roughly 1e-6; not safe to claim unconditional retained drop-in replacement beyond those numerical tests."
     },
     "wave_static_single_source_compare_note": {
       "audit_date": null,
