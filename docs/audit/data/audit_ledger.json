@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T03:51:38.203752+00:00",
-  "generated_at": "2026-04-27T03:51:36.343315+00:00",
-  "invalidation_run_at": "2026-04-27T03:51:38.140569+00:00",
+  "effective_status_computed_at": "2026-04-27T03:54:04.430847+00:00",
+  "generated_at": "2026-04-27T03:54:02.639743+00:00",
+  "invalidation_run_at": "2026-04-27T03:54:04.374620+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T03:51:38.032953+00:00",
+  "load_bearing_computed_at": "2026-04-27T03:54:04.245054+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -45566,11 +45566,11 @@
       "effective_status_reason": "self",
       "independence": "cross_family",
       "intrinsic_status": "audited_conditional",
-      "load_bearing_score": 11.895,
+      "load_bearing_score": 7.895,
       "load_bearing_step": "Gaussian packets under the same uniform linear force give Newton-linear delta_z(g) per packet but equivalence-principle slopes differing by 123% across packets, so generator-invariant inertial mass fails at the persistent-object level.",
       "load_bearing_step_class": "C",
-      "max_descendant_status": "proposed_retained",
-      "max_descendant_status_rank": 80,
+      "max_descendant_status": "bounded",
+      "max_descendant_status_rank": 60,
       "note_hash": "da6562b71bcdccccfd4d3ed6814a87cb67ef076393a800381b93dd196ee41c90",
       "note_path": "docs/MATTER_INERTIAL_CLOSURE_NOTE.md",
       "open_dependency_paths": [
@@ -53311,14 +53311,25 @@
       "verdict_rationale": "Issue: the runner verifies the finite-patch additive extension, but the source note is explicitly a support theorem inside a conditional Planck packet: it assumes c_cell = 1/4 and states that the primitive boundary/worldtube count has not yet been derived as the microscopic carrier of gravitational boundary/action density. Why this blocks: the algebra N_A(P)=n c_cell and the conditional a/l_P=1 normalization are valid only after those premises are granted; with no ledger one-hop dependency for the primitive coefficient and no retained carrier-identification theorem, the result cannot be promoted as a closed Planck-boundary density derivation. Repair target: register the primitive c_cell=1/4 theorem as a dependency, add a retained carrier-identification theorem deriving that the one-step boundary/worldtube count is the gravitational boundary/action carrier, and make the runner fail unless those inputs are present and retained. Claim boundary until fixed: it is safe to claim the exact finite-face extension: given locality, additivity, cubic-frame orientation symmetry, and primitive c_cell=1/4, every finite face-union patch has density c_cell/a^2, and if the gravitational carrier premise is later derived this extension preserves the conditional a/l_P=1 normalization."
     },
     "planck_finite_response_no_go_note_2026-04-24": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {
+          "planck_parent_source_hidden_character_no_go_note_2026-04-24": "retained"
+        },
+        "deps": [
+          "planck_parent_source_hidden_character_no_go_note_2026-04-24"
+        ],
+        "load_bearing_score": 11.395,
+        "transitive_descendants": 118
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The note is scoped to a finite-automorphism-only no-go, and the source plus runner give an exact group-theoretic identity-gap/tangent-dimension obstruction. The retained parent-source hidden-character no-go is already audited clean and is cited only as an independent remaining-route boundary, not as a missing premise for this finite-response no-go.",
       "claim_id": "planck_finite_response_no_go_note_2026-04-24",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -53328,13 +53339,13 @@
         "planck_parent_source_hidden_character_no_go_note_2026-04-24"
       ],
       "direct_in_degree": 9,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 11.395,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The signed-permutation finite frame B_4 has min_{g != I} ||g-I||_F = 2 and therefore zero infinitesimal tangent, while linearized metric/coframe response requires nonzero Sym^2(R^4) directions of dimension 10.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "b2c8c75cb369789960bba8708c810ca1efba1b05c418533767caaa22e6367956",
@@ -53368,16 +53379,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 7,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 7
       },
       "runner_path": "scripts/frontier_planck_finite_response_nogo.py",
       "title": "Planck Finite-Response No-Go Note",
       "transitive_descendants": 118,
-      "verdict_rationale": null
+      "verdict_rationale": "The claim is a bounded negative theorem about the finite-automorphism-only Planck route, not a positive Planck-scale derivation. The runner explicitly enumerates B_4, verifies |B_4|=384, proves the nearest nonidentity element is Frobenius distance 2, checks the empty infinitesimal neighborhood, contrasts zero finite-group tangent with the 10-dimensional symmetric metric-response space, and confirms the finite-dimensional trace obstruction for canonical commutators. Residual boundary: this clean audit only closes the finite automorphism route; it does not derive the gravitational carrier identification or rule out realified/canonical response surfaces."
     },
     "planck_parent_source_hidden_character_no_go_note_2026-04-24": {
       "audit_date": "2026-04-26",
