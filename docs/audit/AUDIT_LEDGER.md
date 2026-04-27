@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T22:19:00.351233+00:00
+**Generated:** 2026-04-27T22:21:00.768731+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 72 |
-| _proposed_retained_ | 15 |
+| _proposed_retained_ | 14 |
 | _proposed_promoted_ | 1 |
 | bounded | 185 |
 | support | 104 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 167 |
+| ~~audited_conditional~~ | 168 |
 | ~~audited_failed~~ | 329 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 72 |
-| `audited_conditional` | 137 |
+| `audited_conditional` | 138 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 75 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1318 |
+| `unaudited` | 1317 |
 
 | criticality | count |
 |---|---:|
@@ -309,6 +309,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_p1_delta_3_bz_computation_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_p1_delta_r_2_loop_extension_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `yt_p1_delta_r_sm_rge_crosscheck_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
+| `yt_p1_i_s_lattice_pt_citation_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `koide_q_eq_3delta_identity_note_2026-04-21` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
 | `retained_cross_lane_consistency_support_note_2026-04-22` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | B | - |
@@ -4913,6 +4914,24 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `MINIMAL_AXIOMS_2026-04-11.md`
   - `PLAQUETTE_SELF_CONSISTENCY_NOTE.md`
   - `YT_VERTEX_POWER_DERIVATION.md`
+  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
+- **auditor confidence:** high
+
+### `yt_p1_i_s_lattice_pt_citation_note_2026-04-17`
+
+- **Note:** [`YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md`](../../docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note adopts the cited tadpole-improved staggered scalar-density bracket I_S in [4,10] with central I_S ~= 6 and maps it through P1 = (alpha_LM/(4 pi)) C_F I_S to P1 in [3.848%,9.620%] with central 5.772%.  _(class `B`)_
+- **chain closes:** False — The runner reproduces the arithmetic from the cited bracket and logs that the cited I_S is not framework-native. The bracket, color-factor reduction, Ward/current reduction, plaquette constants, and bridge/obstruction comparison are inherited from external or non-clean authorities.
+- **rationale:** Issue: the P1 revision is a citation-and-bound calculation over a hard-coded external analogue bracket I_S in [4,10] and central I_S ~= 6, while the note explicitly does not derive I_S on the retained Cl(3) x Z^3 canonical action. Why this blocks: the arithmetic maps the adopted bracket to P1, but a proposed-retained framework-specific P1 revision needs the native H_unit Brillouin-zone integral and clean color/current/canonical-surface bridge inputs, not only an external staggered-scalar analogue. Repair target: perform and audit the framework-native 1-loop BZ integration for the composite H_unit scalar bilinear, and separately clean-audit the color-factor, Ward/current, plaquette/tadpole, bridge, and obstruction parents. Claim boundary until fixed: safe to claim that, conditional on adopting the cited analogue bracket I_S in [4,10], the arithmetic gives P1 in [3.848%,9.620%] with central 5.772%; not safe to claim an audited retained native P1 revision from this note alone.
+- **open / conditional deps cited:**
+  - `PLAQUETTE_SELF_CONSISTENCY_NOTE.md`
+  - `UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md`
+  - `YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md`
+  - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
   - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
 - **auditor confidence:** high
 

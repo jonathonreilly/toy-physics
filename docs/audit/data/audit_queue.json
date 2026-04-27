@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 91,
-    "high": 522,
+    "high": 521,
     "leaf": 626,
     "medium": 82
   },
-  "generated_at": "2026-04-27T22:19:00.192261+00:00",
+  "generated_at": "2026-04-27T22:21:00.598716+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -6862,23 +6862,6 @@
       "note_path": "docs/YT_MICROSCOPIC_SCHUR_CLASS_ADMISSIBILITY_NOTE.md",
       "ready": true,
       "runner_path": "scripts/frontier_yt_microscopic_schur_class_admissibility.py",
-      "transitive_descendants": 121
-    },
-    {
-      "audit_independence_required": "cross_family",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "yt_p1_i_s_lattice_pt_citation_note_2026-04-17",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 7.431,
-      "note_path": "docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_yt_p1_i_s_lattice_pt_citation.py",
       "transitive_descendants": 121
     },
     {
@@ -27314,6 +27297,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 903,
-  "total_pending": 1321
+  "ready_count": 902,
+  "total_pending": 1320
 }

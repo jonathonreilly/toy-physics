@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T22:19:00.139333+00:00",
-  "generated_at": "2026-04-27T22:18:58.444050+00:00",
-  "invalidation_run_at": "2026-04-27T22:19:00.086633+00:00",
+  "effective_status_computed_at": "2026-04-27T22:21:00.547964+00:00",
+  "generated_at": "2026-04-27T22:20:58.839701+00:00",
+  "invalidation_run_at": "2026-04-27T22:21:00.492733+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T22:18:59.975622+00:00",
+  "load_bearing_computed_at": "2026-04-27T22:21:00.380013+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -86023,15 +86023,21 @@
       "verdict_rationale": "Issue: the load-bearing retained envelope |I_S^{framework}| <= 23.35 is asserted from u_0 and <P>, but neither the note nor the runner proves that this formula bounds the singular tadpole-subtracted Brillouin-zone integral; the runner only computes the proposed closed form and checks that the cited [4,10] interval lies inside it. Why this blocks: a framework-native retained bound on I_S requires either an analytic bound after the D14 tadpole subtraction and MSbar subtraction, or an explicit 4D quadrature of I_S^{taste}, I_S^{Wilson}, and I_S^{mix}; interval containment under an assumed envelope is not a derivation. Repair target: prove the regulator-subtracted BZ-integrand inequality from the retained propagators, tadpole split, and canonical plaquette input, or replace the envelope with a runner that performs the framework-native quadrature and uncertainty control; also audit the cited action, plaquette, tadpole, and Ward parents. Claim boundary until fixed: safe to claim symbolic diagram/Feynman-rule bookkeeping and the arithmetic fact that the proposed formula evaluates to 23.3507 and contains [4,10]; not safe to claim a retained framework-native bound or closed H_unit 1-loop renormalization."
     },
     "yt_p1_i_s_lattice_pt_citation_note_2026-04-17": {
-      "audit_date": null,
-      "audit_state_snapshot": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 7.431,
+        "transitive_descendants": 121
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner reproduces the arithmetic from the cited bracket and logs that the cited I_S is not framework-native. The bracket, color-factor reduction, Ward/current reduction, plaquette constants, and bridge/obstruction comparison are inherited from external or non-clean authorities.",
       "claim_id": "yt_p1_i_s_lattice_pt_citation_note_2026-04-17",
       "criticality": "high",
       "cross_confirmation": null,
@@ -86040,18 +86046,24 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 7.431,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note adopts the cited tadpole-improved staggered scalar-density bracket I_S in [4,10] with central I_S ~= 6 and maps it through P1 = (alpha_LM/(4 pi)) C_F I_S to P1 in [3.848%,9.620%] with central 5.772%.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "ebe0786b62d6ee37c6b512d8457c8fe9b9fd8d7dd6c3bb44ddf9cf8ca294d7d1",
       "note_path": "docs/YT_P1_I_S_LATTICE_PT_CITATION_NOTE_2026-04-17.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/PLAQUETTE_SELF_CONSISTENCY_NOTE.md",
+        "docs/UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md",
+        "docs/YT_P1_COLOR_FACTOR_RETENTION_NOTE_2026-04-17.md",
+        "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md",
+        "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.370329+00:00",
@@ -86119,16 +86131,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 18,
+        "B": 15,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 33
       },
       "runner_path": "scripts/frontier_yt_p1_i_s_lattice_pt_citation.py",
       "title": "P1 I_S Lattice-PT Citation and Bound Note (Composite H_unit Scalar-Bilinear Matching)",
       "transitive_descendants": 121,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the P1 revision is a citation-and-bound calculation over a hard-coded external analogue bracket I_S in [4,10] and central I_S ~= 6, while the note explicitly does not derive I_S on the retained Cl(3) x Z^3 canonical action. Why this blocks: the arithmetic maps the adopted bracket to P1, but a proposed-retained framework-specific P1 revision needs the native H_unit Brillouin-zone integral and clean color/current/canonical-surface bridge inputs, not only an external staggered-scalar analogue. Repair target: perform and audit the framework-native 1-loop BZ integration for the composite H_unit scalar bilinear, and separately clean-audit the color-factor, Ward/current, plaquette/tadpole, bridge, and obstruction parents. Claim boundary until fixed: safe to claim that, conditional on adopting the cited analogue bracket I_S in [4,10], the arithmetic gives P1 in [3.848%,9.620%] with central 5.772%; not safe to claim an audited retained native P1 revision from this note alone."
     },
     "yt_p1_i_s_revision_verification_note_2026-04-17": {
       "audit_date": null,
