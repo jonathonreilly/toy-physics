@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T12:12:34.355360+00:00",
-  "generated_at": "2026-04-27T12:12:32.456110+00:00",
-  "invalidation_run_at": "2026-04-27T12:12:34.296650+00:00",
+  "effective_status_computed_at": "2026-04-27T12:29:44.320766+00:00",
+  "generated_at": "2026-04-27T12:29:42.788534+00:00",
+  "invalidation_run_at": "2026-04-27T12:29:44.274723+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T12:12:34.163716+00:00",
+  "load_bearing_computed_at": "2026-04-27T12:29:44.182822+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -4118,10 +4118,36 @@
       "load_bearing_step_class": null,
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
-      "note_hash": "2064510110c25e69f67124ac1e0c64fecda0031ef13e13b483ec67543ea7cd5c",
+      "note_hash": "c947109c1577b24f57206b965e3b96f9cf07252ef3b6dc6f2e45262d859a17b7",
       "note_path": "docs/ai_methodology/skills/review-loop/SKILL.md",
       "open_dependency_paths": [],
-      "previous_audits": [],
+      "previous_audits": [
+        {
+          "archived_at": "2026-04-27T12:29:17.433379+00:00",
+          "archived_for_note_hash": "2064510110c25e69f67124ac1e0c64fecda0031ef13e13b483ec67543ea7cd5c",
+          "audit_date": null,
+          "audit_status": "unaudited",
+          "auditor": null,
+          "auditor_confidence": null,
+          "auditor_family": null,
+          "blocker": null,
+          "chain_closes": null,
+          "chain_closure_explanation": null,
+          "decoration_parent_claim_id": null,
+          "independence": null,
+          "load_bearing_step": null,
+          "load_bearing_step_class": null,
+          "open_dependency_paths": [],
+          "runner_check_breakdown": {
+            "A": 0,
+            "B": 0,
+            "C": 0,
+            "D": 0,
+            "total_pass": 0
+          },
+          "verdict_rationale": null
+        }
+      ],
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
@@ -30107,14 +30133,21 @@
       "verdict_rationale": "The no-go closes on its own terms: gamma=0 exactly reduces to the static grown baseline, nonzero gamma leaves escape at 1.000 down to 0.999, detector-line phase slope/span remain tiny, and F~M stays 1.000 at gamma=0 and gamma=0.5. The source does not use this as positive evidence for a causal-field theory; it explicitly records failure of the intended causal-observable bar. Residual boundary: the retained content is only this negative result for the tested transport-envelope ansatz on the specified grown row."
     },
     "gate_b_grown_propagating_field_v3_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The live runner recomputes the chi=0 matched-null reduction, five nonzero-chi matched escape/shell/phase rows, residuals, and weak-field sanity check on the declared grown row. The source note scopes the result as a bounded no-go for this frontier-echo architecture and does not claim a general propagating-field sector.",
       "claim_id": "gate_b_grown_propagating_field_v3_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -30122,13 +30155,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "the exact matched-null reduction is real, but the frontier-echo feedback does not produce a meaningful causal observable beyond a tiny transport modulation.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "ad05255cf5a7f8061f66a62081321b753c1e9fc4ef5fed3deffe6ebc6b29ae51",
@@ -30164,14 +30197,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 9,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 9
       },
       "runner_path": null,
       "title": "Gate B Grown Propagating Field V3 Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The no-go closes on its own terms: chi=0 exactly reproduces the matched trap/control baseline, all matched shifts vanish at chi=0, nonzero chi produces only tiny matched shell and phase shifts, and F~M at chi=0.5 is essentially flat rather than a useful mass-scaling signal. The source explicitly treats this as a bounded failure of the frontier-echo architecture, not as a retained causal-field theory. Residual boundary: the retained content is only the negative result for this tested matched-null frontier-echo ansatz on the specified grown row."
     },
     "gate_b_grown_trapping_frontier_note": {
       "audit_date": null,
