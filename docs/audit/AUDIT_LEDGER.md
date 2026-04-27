@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T17:22:53.373534+00:00
+**Generated:** 2026-04-27T17:24:32.798530+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 62 |
-| _proposed_retained_ | 71 |
+| _proposed_retained_ | 70 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
 | ~~audited_conditional~~ | 327 |
-| ~~audited_failed~~ | 121 |
+| ~~audited_failed~~ | 122 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 62 |
 | `audited_conditional` | 114 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 54 |
+| `audited_failed` | 55 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1370 |
+| `unaudited` | 1369 |
 
 | criticality | count |
 |---|---:|
@@ -330,6 +330,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `second_grown_family_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `session_summary_2026-04-01_topology` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `session_synthesis_2026-04-10_graph_axioms` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `shapiro_complex_interaction_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `staggered_backreaction_green_closure_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `structured_mirror_bornsafe_scan_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -3594,6 +3595,25 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: The row is a historical synthesis note whose declared runner is explicitly labeled a legacy proxy harness and prints 'Do not use this script as a current-main evidence surface.' Why this blocks: a 16/16 legacy proxy run cannot ratify the broad graph-axiom or current staggered proposed-retained claim, especially when the note says current status is tracked by successor cards with different semantics. Repair target: demote this file to historical synthesis/support and audit the current force-based staggered card, corrected graph-KG card, and any portability cards as separate runner-backed claims. Claim boundary until fixed: it is safe to say the legacy harness currently reproduces 16/16 proxy scores on cubic, random geometric, and growing graphs; it is not safe to cite this synthesis as retained current evidence for graph axioms or staggered physics.
 - **open / conditional deps cited:**
   - `STAGGERED_FERMION_CARD_2026-04-10.md`
+- **auditor confidence:** high
+
+### `shapiro_complex_interaction_note`
+
+- **Note:** [`SHAPIRO_COMPLEX_INTERACTION_NOTE.md`](../../docs/SHAPIRO_COMPLEX_INTERACTION_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The complex-action factor is a real attenuation term, so it does not rotate the phase phasor, and the retained causal phase lag survives the complex-action crossover.  _(class `A`)_
+- **chain closes:** False — The phasor statement is algebraic given a supplied real attenuation factor, but the runner hard-codes the phase and complex-action rows and the causal phase-lag dependencies are failed, renaming, unknown, or unaudited.
+- **rationale:** Issue: The script is a static renderer with hard-coded phase rows, complex-action rows, and summary booleans; it does not derive the Shapiro phase lag, the complex-action crossover, or their interaction from audit-clean inputs. Why this blocks: the retained bridge claim depends on causal/diamond/selector notes that are failed, renaming, unknown, or unaudited, so the fact that a real scalar attenuation would preserve a supplied phase angle cannot promote the phase lag to a retained broad causal observable. Repair target: audit or repair the Shapiro/causal phase-lag chain and the complex-action selector chain, then add a runner that constructs the phase observable and applies the complex-action operator rather than rendering stored numbers. Claim boundary until fixed: it is safe to say that if the listed phase rows are supplied and the complex-action factor is strictly real positive, the phase angle is algebraically unchanged; it is not safe to claim retained survival of a causal phase-lag observable through the current complex-action architecture.
+- **open / conditional deps cited:**
+  - `SHAPIRO_DIAMOND_BRIDGE_NOTE.md`
+  - `CAUSAL_PROPAGATING_FIELD_NOTE.md`
+  - `CAUSAL_FIELD_RECONCILIATION_NOTE.md`
+  - `CAUSAL_MOVING_UNIFICATION_NOTE.md`
+  - `COMPLEX_SELECTIVITY_PREDICTOR_NOTE.md`
+  - `DIAMOND_PHASE_RAMP_BRIDGE_CARD_NOTE.md`
 - **auditor confidence:** high
 
 ### `shapiro_delay_note`
