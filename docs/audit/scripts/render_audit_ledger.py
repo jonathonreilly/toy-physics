@@ -232,7 +232,7 @@ def main() -> int:
     out.append("")
     out.append("## Audit findings (full)")
     out.append("")
-    out.append(render_audited_findings(rows))
+    out.append(render_audited_findings(rows).rstrip())
 
     while out and out[-1] == "":
         out.pop()

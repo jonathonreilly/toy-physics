@@ -17337,7 +17337,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-27T11:40:12.639502+00:00",
+  "generated_at": "2026-04-27T11:42:16.447198+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -19539,9 +19539,9 @@
     "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26": {
       "claim_id": "charged_lepton_direct_ward_free_yukawa_no_go_note_2026-04-26",
       "current_status": "support",
-      "current_status_raw": "exact negative boundary / target-closure no-go. This note",
+      "current_status_raw": "support / exact negative boundary / target-closure no-go. This note",
       "deps": [],
-      "note_hash": "f0b0da9cba4b691213daa7f891d0a7d8e38478147bd288c7862e7dcf93d13c34",
+      "note_hash": "3ac5dc19e6568fe9b3cbe1e9bf03a7a8a550281c8c658ce0824ae9e6a252fb3a",
       "path": "docs/CHARGED_LEPTON_DIRECT_WARD_FREE_YUKAWA_NO_GO_NOTE_2026-04-26.md",
       "runner_path": "scripts/frontier_charged_lepton_direct_ward_free_yukawa_no_go.py",
       "title": "Charged-Lepton Direct Ward Free-Yukawa No-Go"
@@ -19642,10 +19642,10 @@
     },
     "charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27": {
       "claim_id": "charged_lepton_op_local_source_selected_line_selector_no_go_note_2026-04-27",
-      "current_status": "unknown",
-      "current_status_raw": "exact negative boundary for charged-lepton mass retirement; not",
+      "current_status": "support",
+      "current_status_raw": "support / exact negative boundary for charged-lepton mass retirement; not",
       "deps": [],
-      "note_hash": "071cc0b66b254ef3fbc229afed5656ea9915fa6738c505a08fcced3d9d00772d",
+      "note_hash": "9890d506ed6134b188a319efa5c112aa6951e4c5dccab96a06d9105ccf20c2c3",
       "path": "docs/CHARGED_LEPTON_OP_LOCAL_SOURCE_SELECTED_LINE_SELECTOR_NO_GO_NOTE_2026-04-27.md",
       "runner_path": "scripts/frontier_charged_lepton_op_local_source_selected_line_selector_no_go.py",
       "title": "Charged-Lepton OP-Local Source / Selected-Line Selector No-Go"
@@ -19662,10 +19662,10 @@
     },
     "charged_lepton_selected_line_generation_selector_no_go_note_2026-04-27": {
       "claim_id": "charged_lepton_selected_line_generation_selector_no_go_note_2026-04-27",
-      "current_status": "unknown",
-      "current_status_raw": "exact negative boundary for the selected-line/generation-label",
+      "current_status": "support",
+      "current_status_raw": "support / exact negative boundary for the selected-line/generation-label",
       "deps": [],
-      "note_hash": "86a0bac37106427217c01480f7a562b24a97e60987286f00646c38842643c0e1",
+      "note_hash": "223760b0bb2a898314df9bf6544e596841edbd24afabcab7f9240063d031fbf3",
       "path": "docs/CHARGED_LEPTON_SELECTED_LINE_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md",
       "runner_path": "scripts/frontier_charged_lepton_selected_line_generation_selector_no_go.py",
       "title": "Charged-Lepton Selected-Line Generation-Selector No-Go"
@@ -19682,10 +19682,10 @@
     },
     "charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27": {
       "claim_id": "charged_lepton_typeb_radian_readout_generation_selector_no_go_note_2026-04-27",
-      "current_status": "unknown",
-      "current_status_raw": "exact negative boundary for charged-lepton mass retirement; not",
+      "current_status": "support",
+      "current_status_raw": "support / exact negative boundary for charged-lepton mass retirement; not",
       "deps": [],
-      "note_hash": "24c63a7d55c30d639e0fe987b284ba7e357458da2c3c1565fdaec02528c4e1fe",
+      "note_hash": "96c0e22683323cb4cf0798f6520017f9177560f2c5aab70bf9ca0a70bf45f583",
       "path": "docs/CHARGED_LEPTON_TYPEB_RADIAN_READOUT_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md",
       "runner_path": "scripts/frontier_charged_lepton_typeb_radian_readout_generation_selector_no_go.py",
       "title": "Charged-Lepton Type-B Radian Readout Generation-Selector No-Go"
@@ -39365,8 +39365,8 @@
       "open": 26,
       "proposed_promoted": 6,
       "proposed_retained": 435,
-      "support": 132,
-      "unknown": 799
+      "support": 135,
+      "unknown": 796
     }
   }
 }

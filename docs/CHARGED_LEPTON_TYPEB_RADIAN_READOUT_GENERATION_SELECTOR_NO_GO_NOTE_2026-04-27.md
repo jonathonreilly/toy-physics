@@ -1,7 +1,7 @@
 # Charged-Lepton Type-B Radian Readout Generation-Selector No-Go
 
 **Date:** 2026-04-27
-**Status:** exact negative boundary for charged-lepton mass retirement; not
+**Status:** support / exact negative boundary for charged-lepton mass retirement; not
 retained charged-lepton mass closure
 **Primary runner:**
 `scripts/frontier_charged_lepton_typeb_radian_readout_generation_selector_no_go.py`
