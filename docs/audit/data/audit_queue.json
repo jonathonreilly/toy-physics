@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 89,
     "high": 508,
-    "leaf": 649,
+    "leaf": 648,
     "medium": 82
   },
-  "generated_at": "2026-04-27T19:37:02.717875+00:00",
+  "generated_at": "2026-04-27T19:40:58.431317+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -24806,23 +24806,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "wide_lattice_h2t_distance_law_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/WIDE_LATTICE_H2T_DISTANCE_LAW_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "wide_lattice_h2t_skeptic_audit_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -27395,6 +27378,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 915,
-  "total_pending": 1328
+  "ready_count": 914,
+  "total_pending": 1327
 }

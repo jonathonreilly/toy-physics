@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T19:37:02.857340+00:00
+**Generated:** 2026-04-27T19:40:58.571108+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 71 |
-| _proposed_retained_ | 26 |
+| **retained** | 72 |
+| _proposed_retained_ | 25 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 71 |
+| `audited_clean` | 72 |
 | `audited_conditional` | 134 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1325 |
+| `unaudited` | 1324 |
 
 | criticality | count |
 |---|---:|
@@ -171,6 +171,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `wave_static_matrixfree_fixed_beam_boundary_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_static_matrixfree_moving_source_fixed_beam_boundary_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `wave_static_single_source_compare_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `wide_lattice_h2t_distance_law_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `area_law_primitive_edge_entropy_selector_no_go_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `area_law_quarter_broader_no_go_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `broad_surrogate_point_source_compare_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -4617,6 +4618,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `finite_graph_seed_coupling_surface_no_admissible_graph_theorem`
   - `shell_force_proxy_to_coordinate_force_or_gravity_closure_not_derived`
   - `spectral_gap_secondary_count_live_stale_relative_to_note`
+- **auditor confidence:** high
+
+### `wide_lattice_h2t_distance_law_note`
+
+- **Note:** [`WIDE_LATTICE_H2T_DISTANCE_LAW_NOTE.md`](../../docs/WIDE_LATTICE_H2T_DISTANCE_LAW_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The independent wide-lattice replay at h = 0.25, W = 12, L = 12 gives 10/10 TOWARD distance support, far-tail b^(-1.05) with R^2 = 0.990, and F~M exponent 1.000.  _(class `C`)_
+- **chain closes:** True — The live replay reproduces the frozen sanity checks, distance rows, peak/far-tail fits, and mass-scaling sweep. The note explicitly limits the result to a finite-lattice frontier replay and disclaims a continuum theorem or exact exponent proof.
+- **rationale:** The runner supports the retained frontier claim as scoped. It independently computes the wide ordered-3D h^2+T replay on main and reproduces Born approximately 4.82e-15, k=0 zero, 10/10 attractive distance rows, peak-tail exponent -0.95, far-tail exponent -1.05, and linear F~M scaling. This audit certifies only that finite-lattice replay, not an exact Newtonian exponent or continuum-limit theorem.
 - **auditor confidence:** high
 
 ### `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11`

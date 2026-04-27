@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T19:37:02.671244+00:00",
-  "generated_at": "2026-04-27T19:37:01.076904+00:00",
-  "invalidation_run_at": "2026-04-27T19:37:02.624203+00:00",
+  "effective_status_computed_at": "2026-04-27T19:40:58.384592+00:00",
+  "generated_at": "2026-04-27T19:40:56.780804+00:00",
+  "invalidation_run_at": "2026-04-27T19:40:58.337960+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T19:37:02.527653+00:00",
+  "load_bearing_computed_at": "2026-04-27T19:40:58.241257+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -80961,14 +80961,21 @@
       "verdict_rationale": null
     },
     "wide_lattice_h2t_distance_law_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The live replay reproduces the frozen sanity checks, distance rows, peak/far-tail fits, and mass-scaling sweep. The note explicitly limits the result to a finite-lattice frontier replay and disclaims a continuum theorem or exact exponent proof.",
       "claim_id": "wide_lattice_h2t_distance_law_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -80976,13 +80983,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The independent wide-lattice replay at h = 0.25, W = 12, L = 12 gives 10/10 TOWARD distance support, far-tail b^(-1.05) with R^2 = 0.990, and F~M exponent 1.000.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "4763bd4a2d43ea7803869755e32cbbf6aa11e02d0016af97dc3adab2fca1042f",
@@ -81018,14 +81025,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 20,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 20
       },
       "runner_path": null,
       "title": "Wide-Lattice h^2+T Distance-Law Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The runner supports the retained frontier claim as scoped. It independently computes the wide ordered-3D h^2+T replay on main and reproduces Born approximately 4.82e-15, k=0 zero, 10/10 attractive distance rows, peak-tail exponent -0.95, far-tail exponent -1.05, and linear F~M scaling. This audit certifies only that finite-lattice replay, not an exact Newtonian exponent or continuum-limit theorem."
     },
     "wide_lattice_h2t_skeptic_audit_note": {
       "audit_date": null,
