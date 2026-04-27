@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T14:02:05.988178+00:00",
-  "generated_at": "2026-04-27T14:02:04.403806+00:00",
-  "invalidation_run_at": "2026-04-27T14:02:05.942651+00:00",
+  "effective_status_computed_at": "2026-04-27T14:08:00.014806+00:00",
+  "generated_at": "2026-04-27T14:07:58.421986+00:00",
+  "invalidation_run_at": "2026-04-27T14:07:59.968642+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T14:02:05.844159+00:00",
+  "load_bearing_computed_at": "2026-04-27T14:07:59.873863+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -35576,14 +35576,21 @@
       "verdict_rationale": null
     },
     "grown_wavefield_failure_diagnosis_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner closes the grown-row no-go table itself, but the causal diagnosis compares that table to exact-lattice wavefield controls that are still unaudited and not held in a paired same-parameter geometry-isolation runner. The evidence supports a grown-row phase-ramp failure, not yet a retained causal attribution to geometry-induced dephasing.",
       "claim_id": "grown_wavefield_failure_diagnosis_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -35591,18 +35598,21 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The strongest retained diagnosis is geometry-induced phase dephasing on the detector line: the grown geometry preserves amplitude response but does not preserve the linear phase accumulation needed for a coherent ramp.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "f1cf97ae621f8ad6b5e729e82a62dae77aa32d012e1f86878c21b59a846540e6",
       "note_path": "docs/GROWN_WAVEFIELD_FAILURE_DIAGNOSIS_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/SOURCE_RESOLVED_WAVEFIELD_GREEN_POCKET_NOTE.md",
+        "docs/SOURCE_RESOLVED_WAVEFIELD_ESCALATION_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368661+00:00",
@@ -35632,15 +35642,15 @@
       ],
       "runner_check_breakdown": {
         "A": 0,
-        "B": 0,
-        "C": 0,
+        "B": 1,
+        "C": 2,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 3
       },
       "runner_path": null,
       "title": "Grown Wavefield Failure Diagnosis Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the source upgrades the clean grown-row no-go table into a retained diagnosis that the failure is caused by geometry-induced dephasing, but the allowed runner recomputes only the grown row and the exact-lattice comparison notes remain unaudited controls with different lattice/source/readout settings. Why this blocks: low grown-row ramp R2 values show that the phase-ramp observable fails on the retained grown row, but they do not by themselves isolate geometry as the causal variable or ratify the exact-lattice phase-ramp benchmark. Repair target: audit-retain the exact-lattice wavefield controls and add a paired exact-vs-grown comparator that holds the wavefield update, source placement, strengths, detector line, and ramp metric fixed while changing only the geometry family. Claim boundary until fixed: safely claim the already computed grown-row no-go: zero-source reduction survives, wave/same remains large, and ramp_R2 is low at 0.294 and 0.298; treat the geometry-dephasing explanation as a conditional diagnosis."
     },
     "guard_reconciliation_note": {
       "audit_date": null,

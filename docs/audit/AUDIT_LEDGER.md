@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T14:02:06.172178+00:00
+**Generated:** 2026-04-27T14:08:00.205176+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 47 |
-| _proposed_retained_ | 135 |
+| _proposed_retained_ | 134 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 304 |
+| ~~audited_conditional~~ | 305 |
 | ~~audited_failed~~ | 95 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 47 |
-| `audited_conditional` | 91 |
+| `audited_conditional` | 92 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 28 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1435 |
+| `unaudited` | 1434 |
 
 | criticality | count |
 |---|---:|
@@ -187,6 +187,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `gravitomagnetic_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `gravity_clean_derivation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `growing_graph_frontier_architecture_transfer_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `grown_wavefield_failure_diagnosis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `higgs_mass_retention_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `higgs_z3_charge_pmns_gauge_redundancy_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `higher_symmetry_joint_validation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -1849,6 +1850,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `GATE_B_NONLABEL_CONNECTIVITY_V1_NOTE.md`
   - `GATE_B_NONLABEL_CONNECTIVITY_V2_NOTE.md`
   - `GATE_B_NONLABEL_CONNECTIVITY_V3_NOTE.md`
+- **auditor confidence:** high
+
+### `grown_wavefield_failure_diagnosis_note`
+
+- **Note:** [`GROWN_WAVEFIELD_FAILURE_DIAGNOSIS_NOTE.md`](../../docs/GROWN_WAVEFIELD_FAILURE_DIAGNOSIS_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The strongest retained diagnosis is geometry-induced phase dephasing on the detector line: the grown geometry preserves amplitude response but does not preserve the linear phase accumulation needed for a coherent ramp.  _(class `B`)_
+- **chain closes:** False — The live runner closes the grown-row no-go table itself, but the causal diagnosis compares that table to exact-lattice wavefield controls that are still unaudited and not held in a paired same-parameter geometry-isolation runner. The evidence supports a grown-row phase-ramp failure, not yet a retained causal attribution to geometry-induced dephasing.
+- **rationale:** Issue: the source upgrades the clean grown-row no-go table into a retained diagnosis that the failure is caused by geometry-induced dephasing, but the allowed runner recomputes only the grown row and the exact-lattice comparison notes remain unaudited controls with different lattice/source/readout settings. Why this blocks: low grown-row ramp R2 values show that the phase-ramp observable fails on the retained grown row, but they do not by themselves isolate geometry as the causal variable or ratify the exact-lattice phase-ramp benchmark. Repair target: audit-retain the exact-lattice wavefield controls and add a paired exact-vs-grown comparator that holds the wavefield update, source placement, strengths, detector line, and ramp metric fixed while changing only the geometry family. Claim boundary until fixed: safely claim the already computed grown-row no-go: zero-source reduction survives, wave/same remains large, and ramp_R2 is low at 0.294 and 0.298; treat the geometry-dephasing explanation as a conditional diagnosis.
+- **open / conditional deps cited:**
+  - `SOURCE_RESOLVED_WAVEFIELD_GREEN_POCKET_NOTE.md`
+  - `SOURCE_RESOLVED_WAVEFIELD_ESCALATION_NOTE.md`
 - **auditor confidence:** high
 
 ### `higgs_mass_retention_analysis_note_2026-04-18`
