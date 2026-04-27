@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T10:39:34.359769+00:00
+**Generated:** 2026-04-27T10:41:52.030617+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 22 |
-| _proposed_retained_ | 180 |
+| _proposed_retained_ | 179 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 286 |
+| ~~audited_conditional~~ | 287 |
 | ~~audited_failed~~ | 84 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 22 |
-| `audited_conditional` | 75 |
+| `audited_conditional` | 76 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 17 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1475 |
+| `unaudited` | 1474 |
 
 | criticality | count |
 |---|---:|
@@ -138,6 +138,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `diamond_signal_budget_hardening_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `distance_law_breakpoint_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `distance_law_frontier_audit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `dm_abcc_chamber_bound_derivation_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `dm_neutrino_schur_suppression_theorem_note_2026-04-15` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `electrostatics_grown_sign_law_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -820,6 +821,24 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `DM_ABCC_SIGNATURE_FORCING_THEOREM_NOTE_2026-04-19.md`
   - `SIGMA_HIER_UNIQUENESS_THEOREM_NOTE_2026-04-19.md`
   - `DM_ABCC_FIVE_BASIN_CHAMBER_DPLE_SUPPORT_THEOREM_NOTE_2026-04-21.md`
+- **auditor confidence:** high
+
+### `dm_abcc_chamber_bound_derivation_note_2026-04-20`
+
+- **Note:** [`DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md`](../../docs/DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The source-oriented-sheet branch of the carrier normal form fixes s = +sqrt(r31^2 - 1/4) >= 0, hence q_+ + delta >= sqrt(8/3).  _(class `B`)_
+- **chain closes:** False — The algebraic implication from s >= 0 to the chamber bound is correct and the runner reproduces PASS=15/FAIL=0, but the sign/branch selection s >= 0 is imported from unaudited or already-conditional source-surface/carrier-normal-form notes.
+- **rationale:** Issue: the proof's algebra is fine after the live branch is assumed, but the load-bearing choice of the positive branch s = +sqrt(r31^2 - 1/4) is delegated to source-oriented-sheet and carrier-normal-form authorities that are not audit-retained. Why this blocks: without an audited theorem fixing that branch orientation and excluding the mirror branch, the modulus identity r31^2 = s^2 + 1/4 only gives |s|, not q_+ + delta >= sqrt(8/3). Repair target: audit-clean the active affine/source-surface, active half-plane, Z3 doublet-block, intrinsic-slot, and slot-torsion boundary inputs, or reproduce the branch-selection proof fully here from retained primitives. Claim boundary until fixed: it is safe to claim the runner verifies the constants, chamber arithmetic on the listed basins, and the algebraic consequence s >= 0 => q_+ + delta >= sqrt(8/3); the structural chamber bound remains conditional on the branch-selection theorem.
+- **open / conditional deps cited:**
+  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_POINT_SELECTION_THEOREM_NOTE_2026-04-16.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_INTRINSIC_SLOT_THEOREM_NOTE_2026-04-16.md`
+  - `DM_NEUTRINO_SOURCE_SURFACE_SLOT_TORSION_BOUNDARY_THEOREM_NOTE_2026-04-16.md`
 - **auditor confidence:** high
 
 ### `dm_abcc_retained_measurement_closure_theorem_note_2026-04-21`

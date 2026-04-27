@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 88,
     "high": 506,
-    "leaf": 806,
+    "leaf": 805,
     "medium": 78
   },
-  "generated_at": "2026-04-27T10:39:34.142456+00:00",
+  "generated_at": "2026-04-27T10:41:51.793570+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -18924,23 +18924,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "dm_abcc_chamber_bound_derivation_note_2026-04-20",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "dm_abcc_closure_via_chamber_bound_and_dple_f4_note_2026-04-19",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -29900,6 +29883,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1067,
-  "total_pending": 1478
+  "ready_count": 1066,
+  "total_pending": 1477
 }

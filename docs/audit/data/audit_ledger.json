@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T10:39:34.070214+00:00",
-  "generated_at": "2026-04-27T10:39:31.860615+00:00",
-  "invalidation_run_at": "2026-04-27T10:39:34.000216+00:00",
+  "effective_status_computed_at": "2026-04-27T10:41:51.672000+00:00",
+  "generated_at": "2026-04-27T10:41:49.502357+00:00",
+  "invalidation_run_at": "2026-04-27T10:41:51.557987+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T10:39:33.864970+00:00",
+  "load_bearing_computed_at": "2026-04-27T10:41:51.314876+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -16127,14 +16127,21 @@
       "verdict_rationale": "Issue: the runner verifies a large finite search and reproduces 30 PASS stamps, but the note promotes that search to a theorem-grade exhaustiveness certificate. Why this blocks: a dense grid plus Nelder-Mead can miss a narrow basin between seeds; the empirical 99.5-percentile Lipschitz estimate is not a worst-case bound, the far-field exclusion is random sampling rather than an analytic lower bound, and the claim that any unknown candidate basin would be reached analogously is exactly the missing theorem. Repair target: replace the heuristic certificate with an interval/branch-and-bound proof over the R=50 box, or a computer-algebra/root-isolation enumeration with certified eigenvalue-gap/Lipschitz bounds and a deterministic far-field asymptotic exclusion. Claim boundary until fixed: it is safe to claim that the current runner found only Basin 1, Basin 2, and Basin X in the active chamber under the retained sigma set, clustered them to the five-basin chart, and found no additional basin in this finite multistart/random-sampling scan; it is not an audited retained completeness theorem."
     },
     "dm_abcc_chamber_bound_derivation_note_2026-04-20": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The algebraic implication from s >= 0 to the chamber bound is correct and the runner reproduces PASS=15/FAIL=0, but the sign/branch selection s >= 0 is imported from unaudited or already-conditional source-surface/carrier-normal-form notes.",
       "claim_id": "dm_abcc_chamber_bound_derivation_note_2026-04-20",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -16142,18 +16149,24 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The source-oriented-sheet branch of the carrier normal form fixes s = +sqrt(r31^2 - 1/4) >= 0, hence q_+ + delta >= sqrt(8/3).",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "ecac71f0a51043d1a71fb62c691719a2d8b902f722886cb57e4ca2a3c5a826eb",
       "note_path": "docs/DM_ABCC_CHAMBER_BOUND_DERIVATION_NOTE_2026-04-20.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_AFFINE_POINT_SELECTION_BOUNDARY_NOTE_2026-04-16.md",
+        "docs/DM_NEUTRINO_SOURCE_SURFACE_ACTIVE_HALF_PLANE_THEOREM_NOTE_2026-04-16.md",
+        "docs/DM_NEUTRINO_SOURCE_SURFACE_Z3_DOUBLET_BLOCK_POINT_SELECTION_THEOREM_NOTE_2026-04-16.md",
+        "docs/DM_NEUTRINO_SOURCE_SURFACE_INTRINSIC_SLOT_THEOREM_NOTE_2026-04-16.md",
+        "docs/DM_NEUTRINO_SOURCE_SURFACE_SLOT_TORSION_BOUNDARY_THEOREM_NOTE_2026-04-16.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368055+00:00",
@@ -16182,16 +16195,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 15,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 15
       },
       "runner_path": null,
       "title": "Inline Derivation of the Active Affine Chamber Bound `q_+ + \u03b4 \u2265 \u221a(8/3)`",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the proof's algebra is fine after the live branch is assumed, but the load-bearing choice of the positive branch s = +sqrt(r31^2 - 1/4) is delegated to source-oriented-sheet and carrier-normal-form authorities that are not audit-retained. Why this blocks: without an audited theorem fixing that branch orientation and excluding the mirror branch, the modulus identity r31^2 = s^2 + 1/4 only gives |s|, not q_+ + delta >= sqrt(8/3). Repair target: audit-clean the active affine/source-surface, active half-plane, Z3 doublet-block, intrinsic-slot, and slot-torsion boundary inputs, or reproduce the branch-selection proof fully here from retained primitives. Claim boundary until fixed: it is safe to claim the runner verifies the constants, chamber arithmetic on the listed basins, and the algebraic consequence s >= 0 => q_+ + delta >= sqrt(8/3); the structural chamber bound remains conditional on the branch-selection theorem."
     },
     "dm_abcc_closure_via_chamber_bound_and_dple_f4_note_2026-04-19": {
       "audit_date": null,
