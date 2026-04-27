@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T15:05:34.029141+00:00",
-  "generated_at": "2026-04-27T15:05:32.435455+00:00",
-  "invalidation_run_at": "2026-04-27T15:05:33.982504+00:00",
+  "effective_status_computed_at": "2026-04-27T15:07:17.659896+00:00",
+  "generated_at": "2026-04-27T15:07:16.078533+00:00",
+  "invalidation_run_at": "2026-04-27T15:07:17.613395+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T15:05:33.885267+00:00",
+  "load_bearing_computed_at": "2026-04-27T15:07:17.518774+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -45561,14 +45561,21 @@
       "verdict_rationale": "Issue: the note correctly demotes the physical light-cone/emergent-relativity interpretation, but the only proposed-retained residue is the statement that the NN/DAG branch has a topological forward causal neighborhood. Why this blocks: that is a graph-reachability label, not an independent retained light-cone theorem, and the cited fixed-mass verification log is missing while the causal-field script itself is marked retracted for distance-law purposes. Repair target: either keep this as an administrative branch-freeze/support note, or add a theorem and runner that defines the graph causal cone from the propagation operator and verifies finite-support/reachability claims without using relativistic language. Claim boundary until fixed: safely claim that emergent relativity, Lorentz invariance, physical spacetime light-cone, and universal speed-law readings are not retained; the NN harness only has a topological DAG forward-reachability bound."
     },
     "lattice_nn_mass_response_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The live mass-response script recomputes the deterministic refinement table, Born values, alpha-scaled gravity rows, and Born spot-check from the canonical harnesses; the note keeps the conclusion bounded and explicitly rejects an F proportional to M continuum claim.",
       "claim_id": "lattice_nn_mass_response_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -45576,13 +45583,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The NN fixed-node field-strength mass-response table stays positive on the deterministic Born-safe refinement path after h = 0.5, and the alpha-scaled probe makes the h = 0.5 to h = 0.25 response less spacing-sensitive without promoting F proportional to M.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "ca869a38c8dc89b0d73bb35e8d91799432c1aff84fd04efeb63cc9d252e93027",
@@ -45618,14 +45625,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 10,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 10
       },
       "runner_path": null,
       "title": "NN Lattice Mass-Response Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The live runner reproduces the source table: deterministic h = 1.0 through 0.0625 has machine-precision Born values, MI and d_TV rising toward 1, and positive gravity after h = 0.5 while shrinking toward zero. It also reproduces the alpha-scaled probe, where alpha = 1.0 and 1.5 are less spacing-sensitive and remain Born-clean on the checked rows. The source does not overstate this as F proportional to M or a continuum theorem, so the finite bounded mass-response claim closes; the missing archived log is a reproducibility hygiene issue, not a blocker because the live runner reproduces the artifact."
     },
     "lattice_nn_rg_alpha_sweep_note": {
       "audit_date": null,

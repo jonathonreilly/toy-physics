@@ -1,5 +1,5 @@
 {
-  "computed_at": "2026-04-27T15:05:34.041934+00:00",
+  "computed_at": "2026-04-27T15:07:17.672896+00:00",
   "cycle_examples": [
     [
       "ai_methodology.ai_accountability_and_disclosure_note_2026-04-25",
@@ -33,8 +33,8 @@
     "bounded": 184,
     "open": 11,
     "proposed_promoted": 2,
-    "proposed_retained": 116,
-    "retained": 50,
+    "proposed_retained": 115,
+    "retained": 51,
     "support": 106,
     "unknown": 720
   },
