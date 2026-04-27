@@ -235,21 +235,56 @@ produced in the workstream.
 - **Disposition:** Cycle 6 accepted. Workstream now has a single
   navigation surface for the post-workstream review pipeline.
 
-## Cycle 7+ — pending evaluation
+## Cycle 7 — Cross-Cycle Hygiene Audit
 
-With both gates isolated and the workstream consolidated, the
-remaining single-cycle candidates are speculative or hygiene:
+- **Date:** 2026-04-27
+- **Artifact:**
+  `docs/HUBBLE_LANE5_WORKSTREAM_HYGIENE_AUDIT_NOTE_2026-04-27.md`
+  (hygiene-audit note; no runner). Plus a cross-reference fix to
+  Cycle 3's `INPUTS_AND_QUALIFIERS_NOTE.md` references.
+- **Review mode:** branch-local 6-criterion self-review.
+- **Findings:**
+  1. **CodeRunnerReviewer (PASS).** No runner; hygiene auditing is
+     editorial.
+  2. **PhysicsClaimReviewer (PASS).** The audit's only structural
+     action is the Cycle 3 path fix. No new claim is introduced.
+  3. **ImportSupportReviewer (PASS).** No new imports.
+  4. **NatureRetentionReviewer (PASS).** Scoped as "retained
+     branch-local hygiene-audit note", consistent with other audit
+     cycles.
+  5. **RepoGovernanceReviewer (PASS).** Naming convention
+     `*_HYGIENE_AUDIT_NOTE_*`. The Cycle 3 path fix is a
+     forward-only edit; no semantic content changed.
+  6. **MethodologySkillReviewer (PASS).** Hygiene audit qualifies as
+     legitimate post-execution review activity. Catches a real
+     reference bug; documents what was checked and what passed.
+- **Disposition:** Cycle 7 accepted. One real finding fixed; all
+  other audit categories clean. Workstream artifacts now coherent
+  and ready for post-workstream review-and-integration.
+
+## Cycle 8+ — pending evaluation
+
+With both gates isolated, the workstream consolidated, and hygiene
+clean, the remaining single-cycle candidates are increasingly
+speculative or pure support:
 
 - **Direct cosmic-`L` vacuum/topology exploration** (would open the
-  unaddressed `(C3)` class): speculative; likely produces a no-go for
-  easy options.
-- **Cross-cycle audit**: hygiene — check for unmodeled premises
-  slipped into Cycles 1-5; verify cross-references are coherent.
-- **Tension-reconstruction comparator** (extends Cycle 1): runner-
-  grade numerical comparison of SH0ES H_0 → implied L vs Planck
-  H_0 → implied L on the structural lock surface. Tier A; pure
-  support, but operationally useful for the manuscript-surface
-  tension stance.
+  unaddressed `(C3)` class): speculative — most likely produces a
+  no-go for easy options or identifies an unexplored vacuum-topology
+  premise. Borderline dramatic-step gate.
+- **Tension-reconstruction comparator runner** (extends Cycle 1):
+  runner-grade numerical comparison of SH0ES `H_0 → L` vs Planck
+  `H_0 → L` on the structural lock surface. Pure support; useful for
+  the manuscript-surface tension stance but does not retire any
+  input.
+- **Honest stop and hand off:** the skill explicitly stops "when no
+  route passes the dramatic-step gate". With both `(C1)` and `(C2)`
+  gates isolated, the natural Lane-5-internal moves are exhausted;
+  remaining work belongs to the DM-leptogenesis lane or the
+  Planck-scale lane (not Lane 5 itself). Future cycles in this
+  workstream would need a fresh science premise to be honest.
 
-Loop continues per ScheduleWakeup.
+Loop will continue per ScheduleWakeup, but Cycle 8 should evaluate
+the dramatic-step gate carefully. If no honest route remains, stop
+and hand off.
 

@@ -76,13 +76,13 @@ No fourth class exists, and no single class is sufficient on its own.
 | `Omega_Lambda = (H_inf/H_0)^2` matter-bridge identity | `OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md` |
 | Open-number reduction: `S` is a function of `(H_0, L)` | `COSMOLOGY_OPEN_NUMBER_REDUCTION_THEOREM_NOTE_2026-04-26.md` (Cycle 2) |
 | Bounded cosmology cascade `eta -> Omega_b -> R -> Omega_DM -> Omega_m -> Omega_Lambda` | `OMEGA_LAMBDA_DERIVATION_NOTE.md` |
-| Planck-scale absolute-scale lane status (`a^(-1) = M_Pl` not yet derived from minimal stack) | `INPUTS_AND_QUALIFIERS_NOTE.md` §3, `PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md` |
+| Planck-scale absolute-scale lane status (`a^(-1) = M_Pl` not yet derived from minimal stack) | `docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md` §3, `PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md` |
 
 ## 2. Proof of absolute-time necessity
 
 `H_0` has units of inverse time `[T^{-1}]`. On `A_min` the only physical
 scale carried by the stack is the bare lattice spacing `a` (a length scale
-on `Z^3`). Per `INPUTS_AND_QUALIFIERS_NOTE.md` §3:
+on `Z^3`). Per `docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md` §3:
 
 > "on the accepted physical-lattice reading, the package currently carries
 > `a^{-1} = M_Pl` as an explicit Planck-scale pin; that pin is not yet
@@ -222,7 +222,8 @@ pathway. There is currently no active `(C3)` pathway.
 ## 8. Cross-references
 
 - `MINIMAL_AXIOMS_2026-04-11.md` — `A_min` definition.
-- `INPUTS_AND_QUALIFIERS_NOTE.md` — current input ledger; absolute-scale pin.
+- `docs/publication/ci3_z3/INPUTS_AND_QUALIFIERS_NOTE.md` — current input
+  ledger; absolute-scale pin.
 - `PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md`,
   `PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md`,
   `PLANCK_PRIMITIVE_COFRAME_BOUNDARY_CARRIER_THEOREM_NOTE_2026-04-25.md`

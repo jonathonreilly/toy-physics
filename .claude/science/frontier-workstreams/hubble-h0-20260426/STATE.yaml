@@ -9,8 +9,8 @@ branch: frontier/hubble-h0-20260426
 base: origin/main
 lock_status: unavailable
 lock_note: "scripts/automation_lock.py hardcodes /Users/jonreilly/Projects/Physics paths; this worktree is on /Users/jonBridger. Skipping cooperative lock per skill optionality."
-current_phase: cycle-6-complete
-cycles_completed: 6
+current_phase: cycle-7-complete
+cycles_completed: 7
 active_route: null
 files_touched:
   - .claude/science/frontier-workstreams/hubble-h0-20260426/STATE.yaml
@@ -32,6 +32,7 @@ files_touched:
   - docs/HUBBLE_LANE5_ETA_RETIREMENT_GATE_AUDIT_NOTE_2026-04-26.md
   - docs/HUBBLE_LANE5_PLANCK_C1_GATE_AUDIT_NOTE_2026-04-26.md
   - docs/HUBBLE_LANE5_WORKSTREAM_STATUS_NOTE_2026-04-27.md
+  - docs/HUBBLE_LANE5_WORKSTREAM_HYGIENE_AUDIT_NOTE_2026-04-27.md
 open_imports:
   - "H_0 = 67.4 km/s/Mpc — primary retirement target; Cycle 1 did NOT retire this; Cycle 1 locked the structural form of late-time H_0 measurement"
   - "T_CMB = 2.7255 K — observational pin for Omega_r,0"
@@ -56,6 +57,7 @@ review_findings:
   - "Cycle 4 review (branch-local, 6 reviewer-criterion self-review): all PASS. Audit-only artifact identifying the right-sensitive 2-real Z_3 doublet-block point-selection law as the single residual gate for eta retirement. No new imports; cites DM_LEPTOGENESIS_TRANSPORT_STATUS_NOTE_2026-04-16.md as primary authority."
   - "Cycle 5 review (branch-local, 6 reviewer-criterion self-review): all PASS. Audit-only artifact identifying the metric-compatible primitive Clifford/CAR coframe response on P_A H_cell as the single residual (C1) gate. All three Planck-lane targets (gravity/action unit-map, horizon-entropy 1/4 carrier, information/action bridge) collapse to this one conditional. Symmetric to Cycle 4's (C2) gate. Primary authority: PLANCK_SCALE_LANE_STATUS_NOTE_2026-04-23.md (with 2026-04-25 update)."
   - "Cycle 6 review (branch-local, 6 reviewer-criterion self-review): all PASS. Editorial consolidation note synthesizing Cycles 1-5 into one Lane 5 status surface. No new theorem content; reorganization for the post-workstream review-and-integration pipeline. Includes side-by-side (C1)/(C2) gate symmetry map, per-cycle imports-retired-vs-clarified-vs-open table, and recommended manuscript-surface weaves."
+  - "Cycle 7 hygiene audit: one real finding fixed (Cycle 3 had 3 bare-name INPUTS_AND_QUALIFIERS_NOTE references; updated to full path docs/publication/ci3_z3/). All other categories (broken cross-refs, unmodeled premises, overclaim, import-ledger drift, consolidation-table accuracy, runner-log fidelity) PASS. Workstream artifacts coherent and ready for post-workstream review-and-integration."
 artifacts_landed:
   - "docs/HUBBLE_TENSION_STRUCTURAL_LOCK_THEOREM_NOTE_2026-04-26.md (theorem note)"
   - "scripts/frontier_hubble_tension_structural_lock.py (sympy + numpy verifier; 5/5 PASS)"
@@ -67,6 +69,7 @@ artifacts_landed:
   - "docs/HUBBLE_LANE5_ETA_RETIREMENT_GATE_AUDIT_NOTE_2026-04-26.md (gate-identification audit; no runner — review of retained DM lane material)"
   - "docs/HUBBLE_LANE5_PLANCK_C1_GATE_AUDIT_NOTE_2026-04-26.md (gate-identification audit; no runner — review of retained Planck-lane material)"
   - "docs/HUBBLE_LANE5_WORKSTREAM_STATUS_NOTE_2026-04-27.md (consolidation status note; no runner — read-first surface synthesizing Cycles 1-5)"
+  - "docs/HUBBLE_LANE5_WORKSTREAM_HYGIENE_AUDIT_NOTE_2026-04-27.md (cross-cycle hygiene audit; no runner — editorial review, one fix applied to Cycle 3)"
 claim_state_movement:
   - "Lane 5 Phase 1 (5C: Hubble tension explicit stance) advanced from 'Tier A planning' to 'theorem-note grade with explicit operational falsifier (no late-time H_0 drift)' on the workstream branch."
   - "Late-time-only resolutions of Hubble tension are now structurally ruled out on the retained surface."
@@ -75,5 +78,6 @@ claim_state_movement:
   - "Eta retirement gate identified (Cycle 4): the single residual gate for eta retirement is the right-sensitive 2-real Z_3 doublet-block point-selection law on dW_e^H = Schur_{E_e}(D_-). Closing this gate would promote the reduced-surface PMNS support branch (eta/eta_obs = 1.0 exact constructive point) to retained, retiring eta from the bounded cascade and advancing (C2)."
   - "Planck (C1) gate identified (Cycle 5): the single residual structural premise for retaining R_Lambda numerically is the metric-compatible primitive Clifford/CAR coframe response on P_A H_cell with natural phase/action units. All three Planck-lane targets (gravity/action unit-map, horizon-entropy 1/4 carrier, information/action bridge) collapse to this one conditional. The (C1) gate is structurally symmetric to Cycle 4's (C2) gate — both are microscopic point/edge-selection laws on a primitive algebraic block."
   - "Workstream consolidated (Cycle 6): Cycles 1-5 synthesized into a single Lane 5 status surface (HUBBLE_LANE5_WORKSTREAM_STATUS_NOTE_2026-04-27.md). Reframes Lane 5 closure from a five-target list to a sharp two-gate statement: (C1) (Planck Clifford coframe response) AND one of {(C2) (DM Z_3 doublet-block selector), (C3) (direct cosmic-L derivation, no active route)}. Useful for the post-workstream review-and-integration pipeline."
-next_exact_action: "Evaluate Cycle 7 launch. Remaining candidates: (a) direct cosmic-L vacuum/topology exploration (would open (C3) class — only unaddressed pathway; speculative); (b) cross-cycle audit checking for unmodeled premises slipped into Cycles 1-5 (hygiene); (c) extend Cycle 1's structural lock with a runner-grade tension-reconstruction comparator (numerical SH0ES vs Planck L-reconstruction). Loop continues per ScheduleWakeup."
+  - "Workstream hygiene-audited (Cycle 7): one cross-reference bug fixed in Cycle 3 (bare-name INPUTS_AND_QUALIFIERS_NOTE → full path); all other audit categories pass. Workstream ready for post-workstream review-and-integration."
+next_exact_action: "Evaluate Cycle 8 launch. With closure-pathway gates isolated and hygiene clean, claim-state movement options are now thin. Candidates: (a) direct cosmic-L vacuum/topology exploration (would open (C3); speculative — likely produces a no-go for easy options); (b) tension-reconstruction comparator runner extending Cycle 1 (numerical SH0ES vs Planck L on the structural lock surface; pure support but operationally useful for manuscript-surface tension stance); (c) honest stop and hand off — if no route can pass the dramatic-step gate, the skill says stop cleanly. Recommend evaluating dramatic-step gate carefully; loop may organically wind down."
 stop_condition: "runtime budget (10h) reached, max cycles, blocker requiring human science judgment, or honest claim-state closure achieved"
