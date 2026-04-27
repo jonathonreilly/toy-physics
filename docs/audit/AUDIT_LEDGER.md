@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T19:53:31.895274+00:00
+**Generated:** 2026-04-27T19:55:21.165058+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,14 +20,14 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 72 |
-| _proposed_retained_ | 20 |
+| _proposed_retained_ | 19 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
 | open | 11 |
 | unknown | 720 |
 | ~~audited_decoration~~ | 3 |
-| ~~audited_numerical_match~~ | 5 |
+| ~~audited_numerical_match~~ | 6 |
 | ~~audited_renaming~~ | 3 |
 | ~~audited_conditional~~ | 352 |
 | ~~audited_failed~~ | 137 |
@@ -39,9 +39,9 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_conditional` | 139 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 70 |
-| `audited_numerical_match` | 5 |
+| `audited_numerical_match` | 6 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1319 |
+| `unaudited` | 1318 |
 
 | criticality | count |
 |---|---:|
@@ -388,6 +388,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ew_coupling_derivation_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
+| `yt_p1_delta_1_bz_computation_note_2026-04-17` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `complex_selectivity_predictor_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 | `dm_neutrino_z3_phase_lift_mixed_bridge_note_2026-04-15` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | E | - |
@@ -4811,6 +4812,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `YT_EW_COLOR_PROJECTION_THEOREM.md`
   - `YT_EXACT_SCHUR_NORMAL_FORM_UNIQUENESS_NOTE.md`
   - `YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md`
+  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
+- **auditor confidence:** high
+
+### `yt_p1_delta_1_bz_computation_note_2026-04-17`
+
+- **Note:** [`YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md`](../../docs/YT_P1_DELTA_1_BZ_COMPUTATION_NOTE_2026-04-17.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_numerical_match~~
+- **effective_status:** ~~audited_numerical_match~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** At the literature-cluster central I_v_scalar = 4 and retained conserved-current I_v_gauge = 0, Delta_1 = 2 * 4 - 6 = +2, so C_F * Delta_1 * alpha_LM/(4 pi) = 1.924%, matching the packaged delta_PT value.  _(class `G`)_
+- **chain closes:** False — The citation-bound arithmetic closes for the selected inputs, and the runner reproduces the stated bracket. It does not close as a retained framework-native BZ computation because I_v_scalar is imported from an O(1) literature bracket, the central is a rounded selected value, and the source explicitly leaves the native quadrature open.
+- **rationale:** Issue: the headline recovery of the packaged 1.92% depends on choosing the rounded literature-cluster central I_v_scalar=4 with I_v_gauge=0; the same runner reports the unrounded central I_v_scalar=4.5 gives Delta_1=+3 and 2.886%, and local-current choices can shift the sign. Why this blocks: a selected citation central and current formulation can define a useful scenario, but it cannot make the 1.92% C_F-channel value a retained structural or framework-native BZ result. Repair target: perform the framework-native 4D BZ quadrature for I_v_scalar and I_v_gauge on the retained action/current, audit the Rep-A/Rep-B and I_S parent notes, and justify any central-value selection without tuning to delta_PT. Claim boundary until fixed: safe to claim the cited conserved-current bracket Delta_1 in [0,+8] and C_F-channel contribution in [0%,7.696%], plus the arithmetic fact that the chosen Delta_1=+2 scenario equals 1.924%; not safe to claim a clean retained central 1.92% prediction.
+- **open / conditional deps cited:**
+  - `UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md`
+  - `YT_P1_I_S_REVISION_VERIFICATION_NOTE_2026-04-17.md`
   - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
 - **auditor confidence:** high
 
