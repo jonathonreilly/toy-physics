@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T03:03:26.143700+00:00",
-  "generated_at": "2026-04-27T03:03:24.410688+00:00",
-  "invalidation_run_at": "2026-04-27T03:03:26.091418+00:00",
+  "effective_status_computed_at": "2026-04-27T03:06:54.301406+00:00",
+  "generated_at": "2026-04-27T03:06:52.560697+00:00",
+  "invalidation_run_at": "2026-04-27T03:06:54.249377+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T03:03:25.974654+00:00",
+  "load_bearing_computed_at": "2026-04-27T03:06:54.131969+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -11331,7 +11331,7 @@
       ],
       "direct_in_degree": 12,
       "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:ckm_atlas_axiom_closure_note",
+      "effective_status_reason": "inherited_from:strong_cp_theta_zero_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 16.895,
@@ -16383,7 +16383,7 @@
       ],
       "direct_in_degree": 1,
       "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:dm_wilson_parent_correctness_audit_note_2026-04-18",
+      "effective_status_reason": "inherited_from:strong_cp_theta_zero_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 7.37,
@@ -24754,7 +24754,7 @@
       ],
       "direct_in_degree": 3,
       "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:dm_wilson_to_dweh_hermitian_source_family_current_bank_boundary_note_2026-04-18",
+      "effective_status_reason": "inherited_from:strong_cp_theta_zero_note",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 8.37,
@@ -69002,14 +69002,21 @@
       "verdict_rationale": null
     },
     "strong_cp_theta_zero_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 17.407,
+        "transitive_descendants": 119
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies many consistency checks on the \u03b8-free Wilson-plus-staggered scalar-mass surface, but the absence of a CP-odd F tilde F/\u03b8 operator and the positive real quark-mass surface are selected as retained action-class premises rather than derived from registered one-hop authorities.",
       "claim_id": "strong_cp_theta_zero_note",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -69017,18 +69024,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 13,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 17.407,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note sets the retained action class to S_ret = S_Wilson + psi_bar(D[U]+m)psi with no bare \u03b8 slot, so \u03b8_bare = 0 by the retained action-surface definition and arg det(M_u M_d)=0 on an explicit positive-mass surface gives \u03b8_eff = 0.",
+      "load_bearing_step_class": "E",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "4e407fadb13ef9d9dd55c3d9e30170ba4a7175e5aeb318d5c0aad6b3e81f9ece",
       "note_path": "docs/STRONG_CP_THETA_ZERO_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "retained_action_surface_no_theta_slot_theorem_not_registered",
+        "positive_real_quark_mass_orientation_theorem_not_registered",
+        "theta_free_surface_selection_not_dynamical_theta_minimization"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369877+00:00",
@@ -69057,16 +69068,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 13,
         "B": 0,
-        "C": 0,
+        "C": 30,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 43
       },
       "runner_path": "scripts/frontier_strong_cp_theta_zero.py",
       "title": "Strong CP / \u03b8 = 0 Retained Action-Surface Closure",
       "transitive_descendants": 119,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the decisive step is not a computed strong-CP cancellation but the retained-action-surface selection: the runner/support text takes 'no bare \u03b8 slot' and \u03b8_bare = 0 from the action-class definition, and it uses an explicit positive real quark-mass surface for arg det(M_u M_d)=0. Why this blocks: the 13 theorem and 30 retained-surface compute passes show internal consistency of that restricted \u03b8-free Wilson-plus-staggered scalar-mass surface, but they do not derive from the provided audit packet that the physical Cl(3)/Z^3 action forbids an allowed CP-odd F tilde F term, fixes the real-mass orientation, or dynamically selects \u03b8=0 rather than merely evaluating the \u03b8-free surface; the sampled topological positivity check also demonstrates the triangle-inequality minimum, not a derivation of the missing action-slot theorem. Repair target: add a retained operator-basis/action-surface theorem deriving from Cl(3)/Z^3 primitives and canonical normalization that no gauge-invariant CP-odd \u03b8 term is an admissible slot, register the positive real quark-mass orientation/arg-det theorem as a dependency, and update the runner so it constructs the allowed action basis and fails if an F tilde F term or complex mass phase is admitted. Claim boundary until fixed: it is safe to claim that on the explicitly \u03b8-free Wilson-plus-staggered scalar-mass surface, the implemented determinant, axial-grid, effective-action, and sampled positive-weight checks find no generated strong-sector phase; it is not yet an audited retained solution of strong CP beyond that selected action surface."
     },
     "structural_no_go_survey_note": {
       "audit_date": null,
