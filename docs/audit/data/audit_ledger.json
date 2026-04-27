@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T18:37:07.241872+00:00",
-  "generated_at": "2026-04-27T18:37:05.635196+00:00",
-  "invalidation_run_at": "2026-04-27T18:37:07.194665+00:00",
+  "effective_status_computed_at": "2026-04-27T18:38:46.169337+00:00",
+  "generated_at": "2026-04-27T18:38:44.570039+00:00",
+  "invalidation_run_at": "2026-04-27T18:38:46.122158+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T18:37:07.097284+00:00",
+  "load_bearing_computed_at": "2026-04-27T18:38:46.025103+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -74022,14 +74022,21 @@
       "verdict_rationale": null
     },
     "testable_predictions_map_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The source-note catalog does not close against its one-hop cited authorities: several entries marked as already retained are bounded, conditional, or still unaudited, and the final ranking is internally inconsistent with the numbered ranking.",
       "claim_id": "testable_predictions_map_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -74037,18 +74044,26 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "This note is a compact, adversarial map of the best current testable predictions across the retained science on main, with each entry recording what is already retained.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "ea33ed8958f4532986b9c47d92feb82b483d9dce3c8f6a986844793bd4b84cc8",
       "note_path": "docs/TESTABLE_PREDICTIONS_MAP_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/DIAMOND_SENSOR_PREDICTION_NOTE.md",
+        "docs/DIAMOND_SENSOR_PROTOCOL_NOTE.md",
+        "docs/DIAMOND_NV_PHASE_RAMP_SIGNAL_BUDGET_NOTE.md",
+        "docs/SOURCE_RESOLVED_WAVEFIELD_ESCALATION_NOTE.md",
+        "docs/GROWING_GRAPH_EXPANSION_CARD_NOTE.md",
+        "docs/SOURCE_RESOLVED_GENERATED_NEW_FAMILY_V2_NOTE.md",
+        "docs/WIDE_LATTICE_H2T_DISTANCE_LAW_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369925+00:00",
@@ -74086,7 +74101,7 @@
       "runner_path": null,
       "title": "Testable Predictions Map",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The map claims to rank current proposed_retained testables and to record what is already retained, but its cited authorities include bounded or conditional notes such as the diamond protocol/prediction lane, the wavefield escalation note, the growing-graph expansion card, and the generated-family bridge; the note also lists seven ranked entries but the later current ranking drops the grown-trapping and growing-expansion entries and reorders the list. Why this blocks: a retained catalog cannot assert current retained status or a stable ranking when the one-hop sources and the note's own ranking sections disagree. Repair target: regenerate the map from the audit ledger, separating audited-clean/retained, conditional, bounded, and unaudited items, and make the numbered ranking, top-3, and bottom-line sections mechanically consistent. Claim boundary until fixed: safe to treat this as a stale editorial snapshot of candidate testable lanes; not safe to cite it as a retained current map of audit-clean testable predictions."
     },
     "third_grown_family_boundary_note": {
       "audit_date": null,

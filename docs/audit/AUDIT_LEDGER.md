@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T18:37:07.436584+00:00
+**Generated:** 2026-04-27T18:38:46.355093+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 63 |
-| _proposed_retained_ | 41 |
+| _proposed_retained_ | 40 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
 | ~~audited_conditional~~ | 344 |
-| ~~audited_failed~~ | 133 |
+| ~~audited_failed~~ | 134 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 63 |
 | `audited_conditional` | 131 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 66 |
+| `audited_failed` | 67 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1340 |
+| `unaudited` | 1339 |
 
 | criticality | count |
 |---|---:|
@@ -362,6 +362,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_backreaction_results_2026-04-10` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `staggered_backreaction_scale_closure_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `structured_mirror_bornsafe_scan_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `testable_predictions_map_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `bell_inequality_derived_note` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
@@ -4251,6 +4252,26 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `higher_order_tensor_scalar_ratio_corrections_open`
   - `graph_growth_inflaton_field_potential_mapping_open`
   - `current_CMB_r_bounds_and_projected_sensitivities_observational_status_not_registered`
+- **auditor confidence:** high
+
+### `testable_predictions_map_note`
+
+- **Note:** [`TESTABLE_PREDICTIONS_MAP_NOTE.md`](../../docs/TESTABLE_PREDICTIONS_MAP_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** This note is a compact, adversarial map of the best current testable predictions across the retained science on main, with each entry recording what is already retained.  _(class `B`)_
+- **chain closes:** False — The source-note catalog does not close against its one-hop cited authorities: several entries marked as already retained are bounded, conditional, or still unaudited, and the final ranking is internally inconsistent with the numbered ranking.
+- **rationale:** Issue: The map claims to rank current proposed_retained testables and to record what is already retained, but its cited authorities include bounded or conditional notes such as the diamond protocol/prediction lane, the wavefield escalation note, the growing-graph expansion card, and the generated-family bridge; the note also lists seven ranked entries but the later current ranking drops the grown-trapping and growing-expansion entries and reorders the list. Why this blocks: a retained catalog cannot assert current retained status or a stable ranking when the one-hop sources and the note's own ranking sections disagree. Repair target: regenerate the map from the audit ledger, separating audited-clean/retained, conditional, bounded, and unaudited items, and make the numbered ranking, top-3, and bottom-line sections mechanically consistent. Claim boundary until fixed: safe to treat this as a stale editorial snapshot of candidate testable lanes; not safe to cite it as a retained current map of audit-clean testable predictions.
+- **open / conditional deps cited:**
+  - `DIAMOND_SENSOR_PREDICTION_NOTE.md`
+  - `DIAMOND_SENSOR_PROTOCOL_NOTE.md`
+  - `DIAMOND_NV_PHASE_RAMP_SIGNAL_BUDGET_NOTE.md`
+  - `SOURCE_RESOLVED_WAVEFIELD_ESCALATION_NOTE.md`
+  - `GROWING_GRAPH_EXPANSION_CARD_NOTE.md`
+  - `SOURCE_RESOLVED_GENERATED_NEW_FAMILY_V2_NOTE.md`
+  - `WIDE_LATTICE_H2T_DISTANCE_LAW_NOTE.md`
 - **auditor confidence:** high
 
 ### `unpromoted_branch_retainability_audit_note`
