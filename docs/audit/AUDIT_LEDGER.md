@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T18:35:27.111363+00:00
+**Generated:** 2026-04-27T18:37:07.436584+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 63 |
-| _proposed_retained_ | 42 |
+| _proposed_retained_ | 41 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 343 |
+| ~~audited_conditional~~ | 344 |
 | ~~audited_failed~~ | 133 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 63 |
-| `audited_conditional` | 130 |
+| `audited_conditional` | 131 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 66 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1341 |
+| `unaudited` | 1340 |
 
 | criticality | count |
 |---|---:|
@@ -275,6 +275,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `staggered_layered_gauge_engineering_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `staggered_layered_gauge_phase_diagram_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `strong_cp_theta_zero_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
+| `structured_chokepoint_bridge_extension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `structured_chokepoint_bridge_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `symmetry_head_to_head_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
@@ -4164,6 +4165,21 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `retained_action_surface_no_theta_slot_theorem_not_registered`
   - `positive_real_quark_mass_orientation_theorem_not_registered`
   - `theta_free_surface_selection_not_dynamical_theta_minimization`
+- **auditor confidence:** high
+
+### `structured_chokepoint_bridge_extension_note`
+
+- **Note:** [`STRUCTURED_CHOKEPOINT_BRIDGE_EXTENSION_NOTE.md`](../../docs/STRUCTURED_CHOKEPOINT_BRIDGE_EXTENSION_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The larger-N replay widened the retained pocket on the same structured family while keeping the canonical mirror readout fixed.  _(class `C`)_
+- **chain closes:** False — The runner reproduces the N=60,80,100 table exactly, but the extension depends on the base structured chokepoint bridge and canonical mirror readout, both currently conditional rather than audit-clean retained inputs.
+- **rationale:** Issue: The live runner matches the frozen larger-N replay, but the claim is an extension of the structured chokepoint bridge pocket, whose base bridge and canonical mirror chokepoint readout remain audited_conditional. Why this blocks: the extension can show that the same harness continues to give Born-clean, k=0-pinned, positive-gravity rows at N=60,80,100, but it cannot promote the underlying bridge/readout to a clean retained physical result. Repair target: close the base structured chokepoint bridge and mirror chokepoint readout as audited-clean inputs, or restate this note as bounded support conditional on those harness definitions. Claim boundary until fixed: safe to claim the current runner exactly reproduces the three larger-N rows with 16/16 usable seeds, zero Born/k=0 readouts, and positive gravity through N=100; not safe to claim an audit-clean widened retained bridge independent of the conditional parent pocket.
+- **open / conditional deps cited:**
+  - `STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md`
+  - `MIRROR_CHOKEPOINT_NOTE.md`
 - **auditor confidence:** high
 
 ### `structured_chokepoint_bridge_note`

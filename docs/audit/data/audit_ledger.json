@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T18:35:26.918775+00:00",
-  "generated_at": "2026-04-27T18:35:25.317353+00:00",
-  "invalidation_run_at": "2026-04-27T18:35:26.870048+00:00",
+  "effective_status_computed_at": "2026-04-27T18:37:07.241872+00:00",
+  "generated_at": "2026-04-27T18:37:05.635196+00:00",
+  "invalidation_run_at": "2026-04-27T18:37:07.194665+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T18:35:26.772150+00:00",
+  "load_bearing_computed_at": "2026-04-27T18:37:07.097284+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -72828,14 +72828,21 @@
       "verdict_rationale": null
     },
     "structured_chokepoint_bridge_extension_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner reproduces the N=60,80,100 table exactly, but the extension depends on the base structured chokepoint bridge and canonical mirror readout, both currently conditional rather than audit-clean retained inputs.",
       "claim_id": "structured_chokepoint_bridge_extension_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -72843,18 +72850,21 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The larger-N replay widened the retained pocket on the same structured family while keeping the canonical mirror readout fixed.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "10fdb06cc5e20c755a775e34694cb525a6f2ff22c9cae5c4650067a949631611",
       "note_path": "docs/STRUCTURED_CHOKEPOINT_BRIDGE_EXTENSION_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/STRUCTURED_CHOKEPOINT_BRIDGE_NOTE.md",
+        "docs/MIRROR_CHOKEPOINT_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369885+00:00",
@@ -72885,14 +72895,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 9,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 9
       },
       "runner_path": null,
       "title": "Structured Chokepoint Bridge Extension Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The live runner matches the frozen larger-N replay, but the claim is an extension of the structured chokepoint bridge pocket, whose base bridge and canonical mirror chokepoint readout remain audited_conditional. Why this blocks: the extension can show that the same harness continues to give Born-clean, k=0-pinned, positive-gravity rows at N=60,80,100, but it cannot promote the underlying bridge/readout to a clean retained physical result. Repair target: close the base structured chokepoint bridge and mirror chokepoint readout as audited-clean inputs, or restate this note as bounded support conditional on those harness definitions. Claim boundary until fixed: safe to claim the current runner exactly reproduces the three larger-N rows with 16/16 usable seeds, zero Born/k=0 readouts, and positive gravity through N=100; not safe to claim an audit-clean widened retained bridge independent of the conditional parent pocket."
     },
     "structured_chokepoint_bridge_note": {
       "audit_date": "2026-04-26",
