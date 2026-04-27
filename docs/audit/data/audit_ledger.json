@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T13:27:55.297108+00:00",
-  "generated_at": "2026-04-27T13:27:53.709761+00:00",
-  "invalidation_run_at": "2026-04-27T13:27:55.250131+00:00",
+  "effective_status_computed_at": "2026-04-27T14:02:05.988178+00:00",
+  "generated_at": "2026-04-27T14:02:04.403806+00:00",
+  "invalidation_run_at": "2026-04-27T14:02:05.942651+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T13:27:55.154485+00:00",
+  "load_bearing_computed_at": "2026-04-27T14:02:05.844159+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -35455,14 +35455,21 @@
       "verdict_rationale": "The load-bearing computation is current with the live runner: frontier delay grows from 3.000 to 22.000 with frontier/RMS/width slopes +0.9325, +0.5981, and +0.2129, while the dynamic-propagation visibility drops are small and non-monotone across n_layers = 10, 15, 20. The runner constructs these quantities from graph snapshots, generated DAGs, propagation amplitudes, and frozen controls rather than hard-coding the contested conclusion. The source note's final claim is exactly the bounded safe read supported by the computation: retain graph-distance expansion and freeze dynamic-propagation repair as a no-go, with no transport, cosmology, unitarity, or field-theory extension."
     },
     "grown_transfer_basin_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The one-row diagnostic supports the new middle row under the corrected criterion, but a declared targeted basin runner still applies the rejected gamma0-zero criterion and emits the opposite SAFE READ: 0/4 nearby rows survive. The artifact chain is therefore stale/internally inconsistent for the plural basin promotion.",
       "claim_id": "grown_transfer_basin_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -35470,18 +35477,24 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The nearby grown rows preserve both the signed-source sign law and the complex-action TOWARD -> AWAY crossover plus near-linear F~M, so the narrow grown-row basin is retained.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "3986b795d18b617f8c8d88c6d066c2e1f4fa66360b270b89b9d839239f2b56e9",
       "note_path": "docs/GROWN_TRANSFER_BASIN_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/GATE_B_CONNECTIVITY_TOLERANCE_NOTE.md",
+        "docs/INVERSE_PROBLEM_GRAPH_REQUIREMENTS_NOTE.md",
+        "docs/GATE_B_NONLABEL_CONNECTIVITY_V1_NOTE.md",
+        "docs/GATE_B_NONLABEL_CONNECTIVITY_V2_NOTE.md",
+        "docs/GATE_B_NONLABEL_CONNECTIVITY_V3_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368657+00:00",
@@ -35512,14 +35525,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 1,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 1
       },
       "runner_path": null,
       "title": "Grown Transfer Basin Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: `scripts/GROWN_TRANSFER_BASIN_TARGETED.py` still requires `abs(row.action_gamma0) < 1e-12`, the exact complex-action survival criterion that the source note says is wrong. Its live output for the four declared nearby rows prints zero/neutral controls, charge exponent 1.000, F0/F05 = 1.000, and toward = (3, 0), but then reports `nearby rows surviving both observables: 0/4` and `the retained positives do not survive this nearby basin`. Why this blocks: the headline retained basin claim depends on the same-row signed-source plus complex-action survival decision, and the declared artifact chain currently gives a contradictory pass/fail verdict for that decision rather than a clean regenerated basin log. Repair target: patch the targeted basin checker to use the source note's stated criterion, require same-row intersection of signed-source and complex-action survival, rerun/archive the targeted and full basin outputs, and update the note only after the executable SAFE READ matches the retained claim. Claim boundary until fixed: safely claim that the central retained grown row and the single middle diagnostic row at drift=0.20, restore=0.60 pass the corrected signed-source and complex-action checks; do not claim a retained nearby basin or graph-ladder transfer beyond that repaired runner output."
     },
     "grown_wavefield_companion_note": {
       "audit_date": null,

@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T13:27:55.500296+00:00
+**Generated:** 2026-04-27T14:02:06.172178+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 47 |
-| _proposed_retained_ | 136 |
+| _proposed_retained_ | 135 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
 | ~~audited_conditional~~ | 304 |
-| ~~audited_failed~~ | 94 |
+| ~~audited_failed~~ | 95 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 47 |
 | `audited_conditional` | 91 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 27 |
+| `audited_failed` | 28 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1436 |
+| `unaudited` | 1435 |
 
 | criticality | count |
 |---|---:|
@@ -262,6 +262,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `geometry_superposition_dag_ensemble_note_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `gravitomagnetic_portability_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `gravity_observable_hierarchy_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `grown_transfer_basin_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `lattice_3d_dense_spent_delay_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `lattice_kernel_transfer_norm_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `mirror_2d_gravity_law_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -1830,6 +1831,24 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The review-safe conclusion is to promote the frontier-delay proxy only and keep dynamic propagation as a static-control failure, not as a transport or cosmology statement.  _(class `C`)_
 - **chain closes:** True — The live runner recomputes the growing-frontier graph distances from the seed graph, reproduces the 3.000 -> 22.000 frontier-delay increase and positive slopes, and separately recomputes the weak, non-monotone visibility-drop table against a static graph control. The source note keeps the conclusion inside that computed graph-distance/static-control boundary.
 - **rationale:** The load-bearing computation is current with the live runner: frontier delay grows from 3.000 to 22.000 with frontier/RMS/width slopes +0.9325, +0.5981, and +0.2129, while the dynamic-propagation visibility drops are small and non-monotone across n_layers = 10, 15, 20. The runner constructs these quantities from graph snapshots, generated DAGs, propagation amplitudes, and frozen controls rather than hard-coding the contested conclusion. The source note's final claim is exactly the bounded safe read supported by the computation: retain graph-distance expansion and freeze dynamic-propagation repair as a no-go, with no transport, cosmology, unitarity, or field-theory extension.
+- **auditor confidence:** high
+
+### `grown_transfer_basin_note`
+
+- **Note:** [`GROWN_TRANSFER_BASIN_NOTE.md`](../../docs/GROWN_TRANSFER_BASIN_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The nearby grown rows preserve both the signed-source sign law and the complex-action TOWARD -> AWAY crossover plus near-linear F~M, so the narrow grown-row basin is retained.  _(class `C`)_
+- **chain closes:** False — The one-row diagnostic supports the new middle row under the corrected criterion, but a declared targeted basin runner still applies the rejected gamma0-zero criterion and emits the opposite SAFE READ: 0/4 nearby rows survive. The artifact chain is therefore stale/internally inconsistent for the plural basin promotion.
+- **rationale:** Issue: `scripts/GROWN_TRANSFER_BASIN_TARGETED.py` still requires `abs(row.action_gamma0) < 1e-12`, the exact complex-action survival criterion that the source note says is wrong. Its live output for the four declared nearby rows prints zero/neutral controls, charge exponent 1.000, F0/F05 = 1.000, and toward = (3, 0), but then reports `nearby rows surviving both observables: 0/4` and `the retained positives do not survive this nearby basin`. Why this blocks: the headline retained basin claim depends on the same-row signed-source plus complex-action survival decision, and the declared artifact chain currently gives a contradictory pass/fail verdict for that decision rather than a clean regenerated basin log. Repair target: patch the targeted basin checker to use the source note's stated criterion, require same-row intersection of signed-source and complex-action survival, rerun/archive the targeted and full basin outputs, and update the note only after the executable SAFE READ matches the retained claim. Claim boundary until fixed: safely claim that the central retained grown row and the single middle diagnostic row at drift=0.20, restore=0.60 pass the corrected signed-source and complex-action checks; do not claim a retained nearby basin or graph-ladder transfer beyond that repaired runner output.
+- **open / conditional deps cited:**
+  - `GATE_B_CONNECTIVITY_TOLERANCE_NOTE.md`
+  - `INVERSE_PROBLEM_GRAPH_REQUIREMENTS_NOTE.md`
+  - `GATE_B_NONLABEL_CONNECTIVITY_V1_NOTE.md`
+  - `GATE_B_NONLABEL_CONNECTIVITY_V2_NOTE.md`
+  - `GATE_B_NONLABEL_CONNECTIVITY_V3_NOTE.md`
 - **auditor confidence:** high
 
 ### `higgs_mass_retention_analysis_note_2026-04-18`
