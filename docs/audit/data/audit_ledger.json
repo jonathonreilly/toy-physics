@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T06:09:09.272384+00:00",
-  "generated_at": "2026-04-27T06:09:07.297270+00:00",
-  "invalidation_run_at": "2026-04-27T06:09:09.211652+00:00",
+  "effective_status_computed_at": "2026-04-27T06:12:07.546145+00:00",
+  "generated_at": "2026-04-27T06:12:05.726943+00:00",
+  "invalidation_run_at": "2026-04-27T06:12:07.484239+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T06:09:09.069352+00:00",
+  "load_bearing_computed_at": "2026-04-27T06:12:07.358452+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -5291,14 +5291,25 @@
       "verdict_rationale": null
     },
     "area_law_quarter_broader_no_go_note_2026-04-25": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {
+          "bh_entropy_derived_note": "bounded"
+        },
+        "deps": [
+          "bh_entropy_derived_note"
+        ],
+        "load_bearing_score": 12.37,
+        "transitive_descendants": 116
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The local coarea/fiber-count no-go proof closes within the stated simple-fiber Widom assumptions, but the row's registered one-hop dependency is the bounded BH entropy lane, so retained propagation is not closed through the audit graph.",
       "claim_id": "area_law_quarter_broader_no_go_note_2026-04-25",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -5308,18 +5319,20 @@
         "bh_entropy_derived_note"
       ],
       "direct_in_degree": 11,
-      "effective_status": "bounded",
-      "effective_status_reason": "inherited_from:bh_entropy_derived_note",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "effective_status": "audited_conditional",
+      "effective_status_reason": "self",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 12.37,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Under the single-interval fiber hypothesis, N_Gamma(q) <= 2 almost everywhere, so I_x <= 2(2*pi)^(d-1) and c_Widom <= 1/6; c_Widom = 1/4 would require average crossing count 3.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "64f8ac9fd39256c9599098cbdadfb3cfa1b7cb68c251341f8860b62b6e2db398",
       "note_path": "docs/AREA_LAW_QUARTER_BROADER_NO_GO_NOTE_2026-04-25.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/BH_ENTROPY_DERIVED_NOTE.md_registered_dependency_effective_status_bounded"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.367630+00:00",
@@ -5348,16 +5361,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 7,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 24
       },
       "runner_path": "scripts/frontier_area_law_quarter_broader_no_go.py",
       "title": "Area-Law Quarter Broader No-Go Note",
       "transitive_descendants": 116,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the simple-fiber no-go algebra is correct, but the claim is registered as depending on `bh_entropy_derived_note`, whose current/effective status is bounded rather than retained. Why this blocks: the audit graph cannot ratify this proposed-retained row as clean while its only registered one-hop dependency remains a bounded companion lane, even though the local fiber-count theorem itself excludes 1/4 inside the stated class. Repair target: either register and clean-audit the actual retained Widom/no-go and boundary-rank normalization authorities needed by this theorem, or remove the bounded BH companion from the load-bearing dependency set if it is only contextual. Claim boundary until fixed: it is safe to claim an exact conditional no-go for flat-cut simple-fiber Widom carriers and Schur/direct-sum descendants under consistent boundary-rank normalization: they have c_Widom <= 1/6 and cannot yield 1/4; the result does not rule out multi-pocket/multi-band, non-Fermi-liquid, gapped horizon-sector, or separately derived primitive-boundary carriers."
     },
     "assumption_derivation_ledger": {
       "audit_date": null,
