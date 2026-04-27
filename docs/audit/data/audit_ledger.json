@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T17:55:03.107676+00:00",
-  "generated_at": "2026-04-27T17:55:01.511982+00:00",
-  "invalidation_run_at": "2026-04-27T17:55:03.060088+00:00",
+  "effective_status_computed_at": "2026-04-27T17:57:25.406294+00:00",
+  "generated_at": "2026-04-27T17:57:23.816473+00:00",
+  "invalidation_run_at": "2026-04-27T17:57:25.359490+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T17:55:02.958450+00:00",
+  "load_bearing_computed_at": "2026-04-27T17:57:25.263641+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -70093,14 +70093,21 @@
       "verdict_rationale": null
     },
     "source_resolved_retarded_green_pocket_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The current runner reproduces the note, but the column labeled ret/same is actually computed as ret/instantaneous; the true ret/same ratio is about 1.026, and the support-fraction delta is exactly 0.000e+00.",
       "claim_id": "source_resolved_retarded_green_pocket_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -70108,18 +70115,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The finite-lag retarded-like update is claimed to be a small positive correction relative to the same-site-memory control, with the frozen table reporting a ret/same ratio near 1.20 plus positive ret-minus-same and small spread changes.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "f933c32b29027ca592f0ca98e09866bf0a1e89ec6bd7c3622b62f3906a8f0543",
       "note_path": "docs/SOURCE_RESOLVED_RETARDED_GREEN_POCKET_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/SOURCE_RESOLVED_PROPAGATING_GREEN_POCKET_NOTE.md",
+        "docs/SOURCE_RESOLVED_EXACT_GREEN_POCKET_NOTE.md",
+        "docs/MINIMAL_SOURCE_DRIVEN_FIELD_PROBE_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369687+00:00",
@@ -70157,7 +70168,7 @@
       "runner_path": null,
       "title": "Source-Resolved Retarded Green Pocket",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The load-bearing same-site comparison is misidentified: scripts/source_resolved_retarded_green_pocket.py prints a column labeled ret/same but fills it with ret_delta / inst_delta, and the source note freezes those same mislabeled values around 1.20. The true retarded/same-site ratio from the printed rows is about 1.026, while mean ret support - same support is 0.000e+00. Why this blocks: a claim whose main observable is improvement relative to same-site memory cannot be retained when the headline ratio is against the instantaneous comparator and the stated support broadening is only an N_eff nudge, not support-fraction broadening. Repair target: correct the runner and note to compute and label ret/same, ret/inst, ret-same, support_frac delta, and N_eff delta separately, then add assertion thresholds for which of those observables constitutes a finite-lag positive. Claim boundary until fixed: it is safe to claim that the current rows have zero-source shifts 0, 4/4 TOWARD, linear fitted exponents, positive ret-same differences of 6.32e-05 to 5.09e-04, true ret/same about 1.026, unchanged support fraction, and mean N_eff increase +4.493e-02; it is not safe to claim the frozen ret/same ~1.20 same-site improvement or a retained retarded-pocket result."
     },
     "source_resolved_self_consistent_generated_transfer_note": {
       "audit_date": null,
