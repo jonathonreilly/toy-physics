@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T16:03:21.979721+00:00
+**Generated:** 2026-04-27T16:06:02.540904+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 55 |
-| _proposed_retained_ | 100 |
+| _proposed_retained_ | 99 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
 | ~~audited_conditional~~ | 316 |
-| ~~audited_failed~~ | 110 |
+| ~~audited_failed~~ | 111 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 55 |
 | `audited_conditional` | 103 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 43 |
+| `audited_failed` | 44 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1399 |
+| `unaudited` | 1398 |
 
 | criticality | count |
 |---|---:|
@@ -301,6 +301,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mirror_2d_gravity_law_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `mirror_grown_combined_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `mirror_vs_lattice_program_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
+| `moonshot_other_testables_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `staggered_backreaction_green_closure_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `structured_mirror_bornsafe_scan_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -2941,6 +2942,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`
   - `LATTICE_NN_CONTINUUM_NOTE.md`
   - `LATTICE_SYNTHESIS_GUARD_NOTE.md`
+- **auditor confidence:** high
+
+### `moonshot_other_testables_note`
+
+- **Note:** [`MOONSHOT_OTHER_TESTABLES_NOTE.md`](../../docs/MOONSHOT_OTHER_TESTABLES_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The best non-diamond moonshot is the interferometric / waveguide phase-ramp analog because it maps directly onto the strongest retained phase-sensitive observable.  _(class `B`)_
+- **chain closes:** False — The source note names retained connections and an R^2 ~ 0.96 phase-ramp result, but supplies no one-hop cited authority or runner that verifies those inputs or derives the ranking criterion.
+- **rationale:** Issue: The retained shortlist/ranking imports unnamed retained artifacts and an R^2 ~ 0.96 phase-ramp result, then declares the interferometric / waveguide analog the best non-diamond testable without a cited authority set, ranking metric, or runner. Why this blocks: the audit input contains no dependency theorem or computation from which the top-testable conclusion follows, so the proposed_retained claim cannot be verified from the allowed source context. Repair target: add explicit audited-retained one-hop citations for each retained connection, define the ranking criteria, and provide a table or runner that recomputes the ordering from those inputs; otherwise demote the note to open brainstorming. Claim boundary until fixed: it is safe to present these as possible non-diamond analog directions and the waveguide phase-ramp as an author-prioritized candidate, but not as an audit-retained best testable grounded in retained science.
 - **auditor confidence:** high
 
 ### `moving_source_cross_family_note`
