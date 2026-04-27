@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T12:38:25.370105+00:00",
-  "generated_at": "2026-04-27T12:38:23.778162+00:00",
-  "invalidation_run_at": "2026-04-27T12:38:25.324169+00:00",
+  "effective_status_computed_at": "2026-04-27T12:40:51.721534+00:00",
+  "generated_at": "2026-04-27T12:40:50.128632+00:00",
+  "invalidation_run_at": "2026-04-27T12:40:51.675513+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T12:38:25.229045+00:00",
+  "load_bearing_computed_at": "2026-04-27T12:40:51.579772+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -30429,14 +30429,21 @@
       "verdict_rationale": "The bounded positive closes through the current runner: eta=0 reproduces the baseline, escape decreases monotonically across the nonzero eta sweep, frontier_radius_shift remains positive and rising, and frontier_shell_contrast_shift rises monotonically. The promoted observable in the note is the same detector-layer shell-contrast observable computed by the runner. The claim is not promoted beyond this finite shell-structure probe, and the note explicitly declines horizon theory, generated-family transfer, and force-law claims. Residual boundary: the frozen log path named in the note is missing, but the live runner fully recomputes the table and is the load-bearing artifact here."
     },
     "gate_b_grown_trapping_transport_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The live runner recomputes the declared grown-row eta sweep, reproducing eta=0 escape exactly and the monotone fall in detector escape across the five nonzero trap couplings. The source note limits the result to a bounded trap-sensitive transport probe and explicitly excludes horizon theory, a general bidirectional field equation, and generated-family transfer.",
       "claim_id": "gate_b_grown_trapping_transport_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -30444,13 +30451,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The exact zero-coupling reduction passes, and the escape observable is bounded and monotone in the tested sweep.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "f86dbc2e53059892b62b56bbe9d6ee9e89cb0b9a1bd47f7439c3a46074736619",
@@ -30486,14 +30493,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 6,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 6
       },
       "runner_path": null,
       "title": "Gate B Grown Trapping Transport Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The bounded positive closes through the current runner and frozen log: eta=0 returns escape=1.000, while the aggregate escape ratio falls monotonically from 0.799 at eta=0.05 to 0.205 at eta=0.50 on the declared grown row and trap slab. The note promotes only the detector escape ratio, which is exactly the observable computed by the runner. No cited dependency is needed for this finite computation, and the note does not claim a horizon theory, generated-family transfer, or general field equation. Residual boundary: the result remains a bounded transport probe for this row, static field, trap geometry, seeds, and eta sweep."
     },
     "gate_b_grown_wavefield_companion_note": {
       "audit_date": null,
