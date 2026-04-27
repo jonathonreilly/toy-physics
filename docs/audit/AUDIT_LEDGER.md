@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T05:02:23.818796+00:00
+**Generated:** 2026-04-27T05:04:02.275390+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 6 |
-| _proposed_retained_ | 254 |
+| _proposed_retained_ | 253 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
@@ -28,18 +28,18 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | unknown | 734 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 3 |
-| ~~audited_conditional~~ | 240 |
+| ~~audited_conditional~~ | 241 |
 | ~~audited_failed~~ | 58 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 6 |
-| `audited_conditional` | 38 |
+| `audited_conditional` | 39 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 1 |
 | `audited_numerical_match` | 3 |
-| `unaudited` | 1547 |
+| `unaudited` | 1546 |
 
 | criticality | count |
 |---|---:|
@@ -136,6 +136,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `pmns_hw1_source_transfer_boundary_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `sign_portability_invariant_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `strong_cp_theta_zero_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
+| `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `wave_retardation_continuum_limit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `yt_ew_color_projection_theorem` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
 | `yt_ew_delta_r_retention_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
@@ -930,6 +931,25 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `retained_action_surface_no_theta_slot_theorem_not_registered`
   - `positive_real_quark_mass_orientation_theorem_not_registered`
   - `theta_free_surface_selection_not_dynamical_theta_minimization`
+- **auditor confidence:** high
+
+### `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22`
+
+- **Note:** [`TENSOR_SCALAR_RATIO_CONSOLIDATION_THEOREM_NOTE_2026-04-22.md`](../../docs/TENSOR_SCALAR_RATIO_CONSOLIDATION_THEOREM_NOTE_2026-04-22.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** On the graph-growth primordial spectrum surface r = d^2/N_e^2, and ANOMALY_FORCES_TIME supplies d = 3, so the structural form reduces to r = 9/N_e^2; at bounded-observational N_e = 60 this gives r = 0.0025.  _(class `B`)_
+- **chain closes:** False — The runner verifies the arithmetic and source-note comparator statements once the spectrum formula, d=3 input, and N_e=60 value are supplied. It does not derive r=d^2/N_e^2, does not audit ANOMALY_FORCES_TIME as a one-hop dependency, and explicitly leaves N_e bounded-observational rather than axiom-native.
+- **rationale:** Issue: the theorem-grade claim depends on unregistered upstream authorities and on the bounded observational choice N_e=60. Why this blocks: the primary runner sets d=3 and N_e=60, accepts the graph-growth formula r=d^2/N_e^2 as a retained input, and checks arithmetic plus observational-bound comparisons; it does not derive the spectrum formula from the supplied audit packet, prove d=3 from ANOMALY_FORCES_TIME inside the runner, or derive N_e from Cl(3)/Z^3 and pre-inflation seed size. Repair target: register PRIMORDIAL_SPECTRUM_NOTE.md and ANOMALY_FORCES_TIME_THEOREM.md as one-hop dependencies with clean audits, add a retained computation of N_e or explicitly demote the numerical r forecast to bounded, and update comparator bounds through a current retained/observational-status note. Claim boundary until fixed: it is safe to claim the conditional structural arithmetic r=9/N_e^2 if the spectrum formula and d=3 theorem are accepted, and r=0.0025 at N_e=60; it is not safe to claim a fully retained tensor-to-scalar prediction from the sole axiom.
+- **open / conditional deps cited:**
+  - `PRIMORDIAL_SPECTRUM_NOTE.md_not_registered_one_hop_dependency`
+  - `ANOMALY_FORCES_TIME_THEOREM.md_not_registered_one_hop_dependency`
+  - `N_e_from_Cl3_Z3_preinflation_seed_size_retained_derivation_open`
+  - `higher_order_tensor_scalar_ratio_corrections_open`
+  - `graph_growth_inflaton_field_potential_mapping_open`
+  - `current_CMB_r_bounds_and_projected_sensitivities_observational_status_not_registered`
 - **auditor confidence:** high
 
 ### `wave_retardation_continuum_limit_note`

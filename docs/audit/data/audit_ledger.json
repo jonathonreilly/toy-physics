@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T05:02:23.554316+00:00",
-  "generated_at": "2026-04-27T05:02:21.617734+00:00",
-  "invalidation_run_at": "2026-04-27T05:02:23.488679+00:00",
+  "effective_status_computed_at": "2026-04-27T05:04:02.008838+00:00",
+  "generated_at": "2026-04-27T05:04:00.187294+00:00",
+  "invalidation_run_at": "2026-04-27T05:04:01.946293+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T05:02:23.370702+00:00",
+  "load_bearing_computed_at": "2026-04-27T05:04:01.819976+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -70610,14 +70610,21 @@
       "verdict_rationale": null
     },
     "tensor_scalar_ratio_consolidation_theorem_note_2026-04-22": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 8.383,
+        "transitive_descendants": 117
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies the arithmetic and source-note comparator statements once the spectrum formula, d=3 input, and N_e=60 value are supplied. It does not derive r=d^2/N_e^2, does not audit ANOMALY_FORCES_TIME as a one-hop dependency, and explicitly leaves N_e bounded-observational rather than axiom-native.",
       "claim_id": "tensor_scalar_ratio_consolidation_theorem_note_2026-04-22",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -70625,18 +70632,25 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 3,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 8.383,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "On the graph-growth primordial spectrum surface r = d^2/N_e^2, and ANOMALY_FORCES_TIME supplies d = 3, so the structural form reduces to r = 9/N_e^2; at bounded-observational N_e = 60 this gives r = 0.0025.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "d9143a90cc8a16ad5802794b0b4ea1f4a27da092050a4271ff00ebd65d42d530",
       "note_path": "docs/TENSOR_SCALAR_RATIO_CONSOLIDATION_THEOREM_NOTE_2026-04-22.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/PRIMORDIAL_SPECTRUM_NOTE.md_not_registered_one_hop_dependency",
+        "docs/ANOMALY_FORCES_TIME_THEOREM.md_not_registered_one_hop_dependency",
+        "N_e_from_Cl3_Z3_preinflation_seed_size_retained_derivation_open",
+        "higher_order_tensor_scalar_ratio_corrections_open",
+        "graph_growth_inflaton_field_potential_mapping_open",
+        "current_CMB_r_bounds_and_projected_sensitivities_observational_status_not_registered"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369920+00:00",
@@ -70665,16 +70679,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 3,
+        "B": 3,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 3,
+        "total_pass": 9
       },
       "runner_path": "scripts/frontier_tensor_scalar_ratio_consolidation.py",
       "title": "Tensor-to-Scalar Ratio Consolidation Theorem",
       "transitive_descendants": 117,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the theorem-grade claim depends on unregistered upstream authorities and on the bounded observational choice N_e=60. Why this blocks: the primary runner sets d=3 and N_e=60, accepts the graph-growth formula r=d^2/N_e^2 as a retained input, and checks arithmetic plus observational-bound comparisons; it does not derive the spectrum formula from the supplied audit packet, prove d=3 from ANOMALY_FORCES_TIME inside the runner, or derive N_e from Cl(3)/Z^3 and pre-inflation seed size. Repair target: register PRIMORDIAL_SPECTRUM_NOTE.md and ANOMALY_FORCES_TIME_THEOREM.md as one-hop dependencies with clean audits, add a retained computation of N_e or explicitly demote the numerical r forecast to bounded, and update comparator bounds through a current retained/observational-status note. Claim boundary until fixed: it is safe to claim the conditional structural arithmetic r=9/N_e^2 if the spectrum formula and d=3 theorem are accepted, and r=0.0025 at N_e=60; it is not safe to claim a fully retained tensor-to-scalar prediction from the sole axiom."
     },
     "tensor_source_map_eta_note": {
       "audit_date": null,
