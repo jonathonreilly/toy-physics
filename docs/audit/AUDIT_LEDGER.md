@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T10:46:36.476981+00:00
+**Generated:** 2026-04-27T10:49:03.927233+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 22 |
-| _proposed_retained_ | 177 |
+| _proposed_retained_ | 176 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 289 |
+| ~~audited_conditional~~ | 290 |
 | ~~audited_failed~~ | 84 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 22 |
-| `audited_conditional` | 78 |
+| `audited_conditional` | 79 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 17 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1472 |
+| `unaudited` | 1471 |
 
 | criticality | count |
 |---|---:|
@@ -143,6 +143,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `dm_neutrino_bosonic_normalization_theorem_note_2026-04-15` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_neutrino_schur_suppression_theorem_note_2026-04-15` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `dm_pmns_graph_first_ordered_chain_nonzero_current_activation_theorem_note_2026-04-21` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `early_family_transfer_connectivity_diagnosis` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `electrostatics_grown_sign_law_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `emergent_lorentz_invariance_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_reduced_packet_complex_givens_selector_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -942,6 +943,24 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `PMNS_GRAPH_FIRST_CYCLE_FRAME_SUPPORT_NOTE.md`
   - `DM_WILSON_TO_DWEH_LOCAL_CHAIN_PATH_ALGEBRA_TARGET_NOTE_2026-04-18.md`
   - `DM_PMNS_NATIVE_CURRENT_LAST_MILE_REDUCTION_THEOREM_NOTE_2026-04-21.md`
+- **auditor confidence:** high
+
+### `early_family_transfer_connectivity_diagnosis`
+
+- **Note:** [`EARLY_FAMILY_TRANSFER_CONNECTIVITY_DIAGNOSIS.md`](../../docs/EARLY_FAMILY_TRANSFER_CONNECTIVITY_DIAGNOSIS.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The origin architecture transfers as a connectivity design prior, not a broad geometry-generic transport law; the surviving comparison is position-based sector matching on a retained grown row.  _(class `B`)_
+- **chain closes:** False — The note is a synthesis over prior family/connectivity diagnostics with no runner of its own, and its one-hop support includes unknown, bounded, and unaudited proposed notes.
+- **rationale:** Issue: the note promotes a cross-note interpretation of old family architecture as a retained connectivity-design guide, but it does not compute the comparison and its cited support is not audit-clean. Why this blocks: a synthesis cannot be retained while its inputs include unknown and bounded rows, and the causal diagnosis 'position-based sector matching survives' requires either clean upstream artifacts or a direct runner comparing the named architectures. Repair target: audit-clean the fixed-field grown transfer, nonlabel sign transfer, weak/connectivity controls, and generated-geometry synthesis, or add a direct runner that reproduces the table and tests the connectivity-design diagnosis. Claim boundary until fixed: it is safe to present this as a bounded historical synthesis: the listed notes suggest structured sector matching matters and weak rewiring fails; it is not an audited retained transfer-positive theorem.
+- **open / conditional deps cited:**
+  - `GATE_B_NONLABEL_SIGN_GROWN_TRANSFER_NOTE.md`
+  - `FIXED_FIELD_GROWN_TRANSFER_SCOUT_NOTE.md`
+  - `GATE_B_NONLABEL_CONNECTIVITY_V1_NOTE.md`
+  - `GATE_B_WEAK_CONNECTIVITY_NOTE.md`
+  - `GENERATED_GEOMETRY_SYNTHESIS_NOTE.md`
 - **auditor confidence:** high
 
 ### `electrostatics_grown_sign_law_note`

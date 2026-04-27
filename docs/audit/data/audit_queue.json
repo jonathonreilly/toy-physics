@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 88,
     "high": 506,
-    "leaf": 803,
+    "leaf": 802,
     "medium": 78
   },
-  "generated_at": "2026-04-27T10:46:36.273556+00:00",
+  "generated_at": "2026-04-27T10:49:03.722743+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -20131,23 +20131,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "early_family_transfer_connectivity_diagnosis",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/EARLY_FAMILY_TRANSFER_CONNECTIVITY_DIAGNOSIS.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "edge_deletion_boundary_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -29849,6 +29832,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1064,
-  "total_pending": 1475
+  "ready_count": 1063,
+  "total_pending": 1474
 }
