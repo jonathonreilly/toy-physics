@@ -1,11 +1,11 @@
 # Audit Queue
 
-**Generated:** 2026-04-27T02:39:45.145254+00:00
-**Total pending:** 1599
-**Ready (all deps already at a stable tier):** 1201
+**Generated:** 2026-04-27T02:43:49.841655+00:00
+**Total pending:** 1598
+**Ready (all deps already at a stable tier):** 1200
 
 By criticality:
-- `critical`: 89
+- `critical`: 88
 - `high`: 569
 - `medium`: 85
 - `leaf`: 856
@@ -50,21 +50,21 @@ Auditor (Codex GPT-5.5 by default) should pull from the top of this list. Critic
 | 32 | `yt_explicit_systematic_budget_note` | critical | 274 | 14.10 | Y | cross_family_with_cross_confirmation | `scripts/frontier_yt_explicit_systematic_budget.py` |
 | 33 | `graph_first_selector_derivation_note` | critical | 274 | 13.60 | Y | cross_family_with_cross_confirmation | `scripts/frontier_graph_first_selector_derivation.py` |
 | 34 | `higgs_mass_from_axiom_note` | critical | 274 | 13.10 | Y | cross_family_with_cross_confirmation | - |
-| 35 | `confinement_string_tension_note` | critical | 118 | 14.39 | Y | cross_family_with_cross_confirmation | `scripts/frontier_confinement_string_tension.py` |
-| 36 | `gauge_vacuum_plaquette_bridge_support_note` | critical | 278 | 14.62 |  | cross_family_with_cross_confirmation | - |
-| 37 | `plaquette_self_consistency_note` | critical | 277 | 15.62 |  | cross_family_with_cross_confirmation | `scripts/frontier_plaquette_self_consistency.py` |
-| 38 | `higgs_mass_derived_note` | critical | 276 | 20.11 |  | cross_family_with_cross_confirmation | - |
-| 39 | `higgs_mechanism_note` | critical | 276 | 13.11 |  | cross_family_with_cross_confirmation | `scripts/frontier_higgs_mass_derived.py` |
-| 40 | `higgs_from_lattice_note` | critical | 276 | 12.61 |  | cross_family_with_cross_confirmation | `scripts/frontier_higgs_mass_derived.py` |
-| 41 | `alpha_s_derived_note` | critical | 275 | 32.61 |  | cross_family_with_cross_confirmation | - |
-| 42 | `g_bare_dynamical_fixation_obstruction_note_2026-04-18` | critical | 274 | 14.10 |  | cross_family_with_cross_confirmation | `scripts/frontier_g_bare_critical_feature_scan.py` |
-| 43 | `three_generation_structure_note` | critical | 273 | 25.10 |  | cross_family_with_cross_confirmation | - |
-| 44 | `one_generation_matter_closure_note` | critical | 273 | 24.60 |  | cross_family_with_cross_confirmation | - |
-| 45 | `three_generation_observable_theorem_note` | critical | 273 | 24.60 |  | cross_family_with_cross_confirmation | `scripts/frontier_three_generation_observable_theorem.py` |
-| 46 | `yt_ward_identity_derivation_theorem` | critical | 273 | 23.10 |  | cross_family_with_cross_confirmation | `scripts/frontier_yt_ward_identity_derivation.py` |
-| 47 | `anomaly_forces_time_theorem` | critical | 273 | 22.60 |  | cross_family_with_cross_confirmation | - |
-| 48 | `minimal_axioms_2026-04-11` | critical | 273 | 21.60 |  | cross_family_with_cross_confirmation | - |
-| 49 | `left_handed_charge_matching_note` | critical | 273 | 21.10 |  | cross_family_with_cross_confirmation | `scripts/frontier_graph_first_su3_integration.py` |
-| 50 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | critical | 273 | 20.60 |  | cross_family_with_cross_confirmation | `scripts/frontier_sm_hypercharge_uniqueness.py` |
+| 35 | `gauge_vacuum_plaquette_bridge_support_note` | critical | 278 | 14.62 |  | cross_family_with_cross_confirmation | - |
+| 36 | `plaquette_self_consistency_note` | critical | 277 | 15.62 |  | cross_family_with_cross_confirmation | `scripts/frontier_plaquette_self_consistency.py` |
+| 37 | `higgs_mass_derived_note` | critical | 276 | 20.11 |  | cross_family_with_cross_confirmation | - |
+| 38 | `higgs_mechanism_note` | critical | 276 | 13.11 |  | cross_family_with_cross_confirmation | `scripts/frontier_higgs_mass_derived.py` |
+| 39 | `higgs_from_lattice_note` | critical | 276 | 12.61 |  | cross_family_with_cross_confirmation | `scripts/frontier_higgs_mass_derived.py` |
+| 40 | `alpha_s_derived_note` | critical | 275 | 32.61 |  | cross_family_with_cross_confirmation | - |
+| 41 | `g_bare_dynamical_fixation_obstruction_note_2026-04-18` | critical | 274 | 14.10 |  | cross_family_with_cross_confirmation | `scripts/frontier_g_bare_critical_feature_scan.py` |
+| 42 | `three_generation_structure_note` | critical | 273 | 25.10 |  | cross_family_with_cross_confirmation | - |
+| 43 | `one_generation_matter_closure_note` | critical | 273 | 24.60 |  | cross_family_with_cross_confirmation | - |
+| 44 | `three_generation_observable_theorem_note` | critical | 273 | 24.60 |  | cross_family_with_cross_confirmation | `scripts/frontier_three_generation_observable_theorem.py` |
+| 45 | `yt_ward_identity_derivation_theorem` | critical | 273 | 23.10 |  | cross_family_with_cross_confirmation | `scripts/frontier_yt_ward_identity_derivation.py` |
+| 46 | `anomaly_forces_time_theorem` | critical | 273 | 22.60 |  | cross_family_with_cross_confirmation | - |
+| 47 | `minimal_axioms_2026-04-11` | critical | 273 | 21.60 |  | cross_family_with_cross_confirmation | - |
+| 48 | `left_handed_charge_matching_note` | critical | 273 | 21.10 |  | cross_family_with_cross_confirmation | `scripts/frontier_graph_first_su3_integration.py` |
+| 49 | `standard_model_hypercharge_uniqueness_theorem_note_2026-04-24` | critical | 273 | 20.60 |  | cross_family_with_cross_confirmation | `scripts/frontier_sm_hypercharge_uniqueness.py` |
+| 50 | `physical_lattice_necessity_note` | critical | 273 | 20.10 |  | cross_family_with_cross_confirmation | `scripts/frontier_physical_lattice_necessity.py` |
 
 Full queue lives in `data/audit_queue.json`.

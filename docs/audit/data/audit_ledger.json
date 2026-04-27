@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T02:39:45.101381+00:00",
-  "generated_at": "2026-04-27T02:39:43.532270+00:00",
-  "invalidation_run_at": "2026-04-27T02:39:45.056806+00:00",
+  "effective_status_computed_at": "2026-04-27T02:43:49.784618+00:00",
+  "generated_at": "2026-04-27T02:43:48.055646+00:00",
+  "invalidation_run_at": "2026-04-27T02:43:49.731453+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T02:39:44.966959+00:00",
+  "load_bearing_computed_at": "2026-04-27T02:43:49.615600+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -12682,14 +12682,21 @@
       "verdict_rationale": null
     },
     "confinement_string_tension_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27T02:43:33.438907+00:00",
+      "audit_state_snapshot": {
+        "criticality": "critical",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 14.395,
+        "transitive_descendants": 118
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The note and runner combine unregistered upstream framework claims with external lattice-QCD and EFT inputs; the runner checks consistency after setting those premises rather than deriving the physical bridge from the allowed audit packet.",
       "claim_id": "confinement_string_tension_note",
       "criticality": "critical",
       "current_status": "proposed_retained",
@@ -12697,18 +12704,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 15,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 14.395,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The framework's graph-first SU(3) gauge sector is SU(3) Yang-Mills at beta = 6.0, SU(3) YM confines at T = 0, and the string tension follows from the framework alpha_s(M_Z) = 0.1181 through standard lattice/EFT inputs.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "280eab4aa8c631b71a1a4c8188d6abdc78c2052b1460c0025c7de96973a2aa5d",
       "note_path": "docs/CONFINEMENT_STRING_TENSION_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/GRAPH_FIRST_SU3_INTEGRATION_NOTE.md",
+        "scripts/canonical_plaquette_surface.py",
+        "standard_lattice_qcd_sommer_and_string_tension_inputs"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.367952+00:00",
@@ -12737,16 +12748,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 2,
+        "B": 12,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 16,
+        "total_pass": 30
       },
       "runner_path": "scripts/frontier_confinement_string_tension.py",
       "title": "Confinement and String Tension Theorem",
       "transitive_descendants": 118,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The failed step is claiming retained confinement/string-tension closure from graph-first SU(3), alpha_s(M_Z), Wilson confinement, Sommer-scale lattice inputs, and quark-screening corrections while none of those load-bearing authorities are registered one-hop dependencies for this row; several runner PASS lines are hard-coded `True` physical premises or external comparator checks. Why this blocks: The current packet demonstrates a bounded consistency story, not a derivation that the framework gauge sector is the relevant SU(3) YM theory with a computed string tension; the numerical match depends on imported lattice/EFT constants and a screening factor. Repair target: Register clean dependencies for graph-first SU(3), g_bare/beta normalization, the alpha_s lane, and the lattice/EFT string-tension bridge, and replace hard-coded True checks with a runner that computes only the bridge quantities from declared inputs while labeling external comparators separately. Claim boundary until fixed: It is safe to say that, conditional on the framework gauge sector being SU(3) YM at beta = 6.0 and on the standard lattice/EFT bridge, the numbers are consistent with confinement and a 435-484 MeV string-tension range; it is not audit-retained as a zero-parameter confinement theorem."
     },
     "connectivity_family_v2_elliptical_duplicate_note": {
       "audit_date": null,
@@ -13980,7 +13991,7 @@
       ],
       "direct_in_degree": 10,
       "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:ckm_neutron_edm_bound_note",
+      "effective_status_reason": "inherited_from:confinement_string_tension_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 11.87,
@@ -41471,7 +41482,7 @@
       ],
       "direct_in_degree": 2,
       "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:quark_mass_ratio_review_packet_2026-04-18",
+      "effective_status_reason": "inherited_from:confinement_string_tension_note",
       "independence": null,
       "intrinsic_status": "open",
       "load_bearing_score": 4.807,
@@ -58442,7 +58453,7 @@
       ],
       "direct_in_degree": 9,
       "effective_status": "audited_conditional",
-      "effective_status_reason": "inherited_from:yt_ew_color_projection_theorem",
+      "effective_status_reason": "inherited_from:confinement_string_tension_note",
       "independence": null,
       "intrinsic_status": "unknown",
       "load_bearing_score": 11.37,
