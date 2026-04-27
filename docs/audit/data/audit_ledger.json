@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T18:23:37.523130+00:00",
-  "generated_at": "2026-04-27T18:23:35.932155+00:00",
-  "invalidation_run_at": "2026-04-27T18:23:37.475804+00:00",
+  "effective_status_computed_at": "2026-04-27T18:24:55.017465+00:00",
+  "generated_at": "2026-04-27T18:24:53.393203+00:00",
+  "invalidation_run_at": "2026-04-27T18:24:54.970387+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T18:23:37.378656+00:00",
+  "load_bearing_computed_at": "2026-04-27T18:24:54.876231+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -71638,14 +71638,21 @@
       "verdict_rationale": "Issue: The table is current, but the claim imports the staggered graph portability battery as a retained authority while that parent remains unaudited; additionally, the odd-cycle and parity-wrap rows are labeled structural_break despite retained=8/8 because they violate bipartite/parity assumptions, not because the measured battery fails. Why this blocks: a retained adversarial boundary map must separate empirical battery failure from assumption-boundary classification and must rest on an audit-clean portability battery. Repair target: audit the graph portability note and the graph-Dirac requirements/bipartite parity assumptions, then add explicit assertions distinguishing same-color-edge structural invalidity from retained-battery pass/fail. Claim boundary until fixed: it is safe to claim that the current runner reproduces the five-row map with odd-cycle and parity-wrap defects flagged as assumption-level structural breaks, dense shortcuts and hub contamination as graceful degradation, and all rows retained=8/8; it is not safe to claim an audit-clean retained portability boundary without the parent battery audit."
     },
     "staggered_graph_gauge_closure_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The source note is a harness/criteria card and does not freeze the measured closure rows or best geometry; the live runner and separate results note carry that evidence.",
       "claim_id": "staggered_graph_gauge_closure_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -71653,18 +71660,21 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note defines a native gauge/current closure criterion: a cycle-bearing graph must show nontrivial persistent-current span and periodic residual closure under flux threaded through the detected cycle edge.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "33ec3f74aa46dee7ee8216fab8dea947c22ca04945b0cbf477a2af7e3bbeee85",
       "note_path": "docs/STAGGERED_GRAPH_GAUGE_CLOSURE_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/STAGGERED_GRAPH_GAUGE_CLOSURE_RESULTS_2026-04-10.md",
+        "docs/STAGGERED_GRAPH_PORTABILITY_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369836+00:00",
@@ -71702,7 +71712,7 @@
       "runner_path": null,
       "title": "Staggered Graph Gauge Closure Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The note is marked proposed_retained but contains expected readout and closure criteria, not the actual measured gauge/current closure table or best-geometry result. Why this blocks: a retained closure claim must state the observed family, current span, residual, and side-battery status in the source note being audited; otherwise the note only defines the acceptance test. Repair target: either demote this card to support/harness status or merge in the frozen runner table and best-geometry readout from the results note, with assertions for current span, residual, cycle/N/A status, and retained side-battery checks. Claim boundary until fixed: it is safe to claim that this note defines the native flux-threaded persistent-current closure criterion and that the current runner can be used to evaluate it; it is not safe to treat this harness note alone as a retained gauge/current closure result."
     },
     "staggered_graph_gauge_closure_results_2026-04-10": {
       "audit_date": null,
