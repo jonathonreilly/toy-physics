@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T07:47:38.745199+00:00",
-  "generated_at": "2026-04-27T07:47:36.799114+00:00",
-  "invalidation_run_at": "2026-04-27T07:47:38.689262+00:00",
+  "effective_status_computed_at": "2026-04-27T07:54:52.592092+00:00",
+  "generated_at": "2026-04-27T07:54:50.578457+00:00",
+  "invalidation_run_at": "2026-04-27T07:54:52.517368+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T07:47:38.559359+00:00",
+  "load_bearing_computed_at": "2026-04-27T07:54:52.355155+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -75048,14 +75048,21 @@
       "verdict_rationale": null
     },
     "wave_3plus1d_promotions_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 5.5,
+        "transitive_descendants": 1
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner reproduces the finite lightcone and M-vs-I tables, but the literal instantaneous/c=infinity interpretation does not close: the I branch is a stitched finite-time frozen c=1 wave-solve comparator, not a derived elliptic Poisson or c->infinity solution.",
       "claim_id": "wave_3plus1d_promotions_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -75063,18 +75070,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 5.5,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note identifies the M branch as standard retarded (3+1)D wave evolution and the I branch as an instantaneous, c=infinity comparator stitched layer-by-layer from cached late-time static solves, then claims a 26-31% retarded-vs-instantaneous gap across three grown families.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "proposed_retained",
       "max_descendant_status_rank": 80,
       "note_hash": "31d316d6e29fc7f4ea19b06190f852bb4af4c60b94eefe6cb8c477e8817791d9",
       "note_path": "docs/WAVE_3PLUS1D_PROMOTIONS_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "instantaneous_c_infinity_comparator_not_derived_from_Poisson_or_c_limit",
+        "docs/WAVE_3PLUS1D_RADIATION_NOTE.md_combined_three_signature_closure_not_audited_in_this_claim",
+        "runner_prints_thresholds_without_hard_assertions"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.370050+00:00",
@@ -75105,14 +75116,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 3,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 3
       },
       "runner_path": null,
       "title": "(3+1)D Promotions of Lane 5 (Lightcone) and Lane 6 (Retarded vs Instantaneous)",
       "transitive_descendants": 1,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the runner supports the displayed finite computation, but the source labels the stitched frozen-source branch as an instantaneous c=infinity comparator without proving that this NL=30 late-time finite-c wave slice equals the instantaneous field. Why this blocks: a hostile physicist can accept first_dt=r for r=2..8 and a 26-31% difference between retarded moving-source evolution and the frozen-slice comparator, but cannot infer the literal retarded-vs-instantaneous wave claim or the all-three scalar-wave closure from this runner alone. Repair target: replace the I branch with an actual layerwise elliptic/Poisson instantaneous solve, or prove and numerically bound convergence of the frozen-wave late-time slice to the c->infinity comparator; then add hard assertions for the lightcone and gap gates and audit the Lane 8 radiation lane separately for the combined three-signature statement. Claim boundary until fixed: it is safe to claim a strict finite (3+1)D lattice lightcone to r=8 and a reproducible 26-31% gap between retarded moving-source wave evolution and this specific stitched frozen-source c=1 static-slice comparator on three grown families at v/c=0.23."
     },
     "wave_3plus1d_radiation_note": {
       "audit_date": null,
@@ -75132,8 +75143,8 @@
         "wave_3plus1d_promotions_note"
       ],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
-      "effective_status_reason": "self",
+      "effective_status": "audited_conditional",
+      "effective_status_reason": "inherited_from:wave_3plus1d_promotions_note",
       "independence": null,
       "intrinsic_status": "proposed_retained",
       "load_bearing_score": 0.0,

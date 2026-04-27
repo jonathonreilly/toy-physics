@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 88,
     "high": 506,
-    "leaf": 841,
+    "leaf": 840,
     "medium": 78
   },
-  "generated_at": "2026-04-27T07:47:38.808978+00:00",
+  "generated_at": "2026-04-27T07:54:52.649444+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -16302,23 +16302,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "wave_3plus1d_promotions_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 5.5,
-      "note_path": "docs/WAVE_3PLUS1D_PROMOTIONS_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 1
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "ai_methodology.raw.ai_accountability_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -27736,25 +27719,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "wave_3plus1d_radiation_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [
-        "wave_3plus1d_promotions_note"
-      ],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/WAVE_3PLUS1D_RADIATION_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "wave_amplification_near_horizon_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -30343,6 +30307,25 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
+      "claim_id": "wave_3plus1d_radiation_note",
+      "criticality": "leaf",
+      "criticality_rank": 0,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "wave_3plus1d_promotions_note"
+      ],
+      "direct_in_degree": 0,
+      "load_bearing_score": 0.0,
+      "note_path": "docs/WAVE_3PLUS1D_RADIATION_NOTE.md",
+      "ready": false,
+      "runner_path": null,
+      "transitive_descendants": 0
+    },
+    {
+      "audit_independence_required": "any_non_self",
+      "audit_status": "unaudited",
+      "blocker": null,
       "claim_id": "wave_direct_dm_matched_history_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -30495,6 +30478,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1103,
-  "total_pending": 1513
+  "ready_count": 1101,
+  "total_pending": 1512
 }

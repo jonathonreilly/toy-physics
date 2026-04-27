@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T07:47:39.067313+00:00
+**Generated:** 2026-04-27T07:54:52.892289+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 12 |
-| _proposed_retained_ | 216 |
+| _proposed_retained_ | 214 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
-| ~~audited_conditional~~ | 270 |
+| ~~audited_conditional~~ | 272 |
 | ~~audited_failed~~ | 74 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 12 |
-| `audited_conditional` | 60 |
+| `audited_conditional` | 61 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 8 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1510 |
+| `unaudited` | 1509 |
 
 | criticality | count |
 |---|---:|
@@ -50,7 +50,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `medium` | 85 |
 | `leaf` | 856 |
 
-- **Proposed claims demoted by upstream:** 134
+- **Proposed claims demoted by upstream:** 135
 - **Citation cycles detected:** 283
 
 ### Runner classification (static heuristic)
@@ -162,6 +162,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `unpromoted_branch_retainability_audit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `valley_linear_continuum_synthesis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `wave_3plus1d_promotions_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_equation_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_radiation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_retardation_continuum_limit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -1501,6 +1502,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The note claims a proposed-retained narrow extension: on a compact exact lattice, a bounded odd-in-v moving-source centroid response survives exact zero/static controls while the circulation-like plaquette candidate remains null.  _(class `C`)_
 - **chain closes:** True — The live runner exactly reproduces the source-note card: zero-source static, zero-source moving, and zero-source plaquette-circulation controls are all 0.000e+00; the v=0 matched static lane has delta_y vs static +0.000000e+00; nonzero velocities give symmetric signed responses, with v=+1.00 at +2.084652e-05 and v=-1.00 at -2.084652e-05; all probed circulation phases remain +0.000e+00.
 - **rationale:** The finite proxy claim closes on its own terms: the runner builds the compact exact-lattice card, applies exact zero and matched static controls, verifies a 4/4 odd-sign moving-source centroid response, and verifies null final-layer plaquette circulation. This clean audit is narrow: it certifies only the displayed compact-family moving-source signed response and null circulation candidate; it does not certify full electromagnetism, magnetic induction, gauge-field structure, a vector-field theory, or portability beyond this compact exact-lattice card.
+- **auditor confidence:** high
+
+### `wave_3plus1d_promotions_note`
+
+- **Note:** [`WAVE_3PLUS1D_PROMOTIONS_NOTE.md`](../../docs/WAVE_3PLUS1D_PROMOTIONS_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note identifies the M branch as standard retarded (3+1)D wave evolution and the I branch as an instantaneous, c=infinity comparator stitched layer-by-layer from cached late-time static solves, then claims a 26-31% retarded-vs-instantaneous gap across three grown families.  _(class `C`)_
+- **chain closes:** False — The live runner reproduces the finite lightcone and M-vs-I tables, but the literal instantaneous/c=infinity interpretation does not close: the I branch is a stitched finite-time frozen c=1 wave-solve comparator, not a derived elliptic Poisson or c->infinity solution.
+- **rationale:** Issue: the runner supports the displayed finite computation, but the source labels the stitched frozen-source branch as an instantaneous c=infinity comparator without proving that this NL=30 late-time finite-c wave slice equals the instantaneous field. Why this blocks: a hostile physicist can accept first_dt=r for r=2..8 and a 26-31% difference between retarded moving-source evolution and the frozen-slice comparator, but cannot infer the literal retarded-vs-instantaneous wave claim or the all-three scalar-wave closure from this runner alone. Repair target: replace the I branch with an actual layerwise elliptic/Poisson instantaneous solve, or prove and numerically bound convergence of the frozen-wave late-time slice to the c->infinity comparator; then add hard assertions for the lightcone and gap gates and audit the Lane 8 radiation lane separately for the combined three-signature statement. Claim boundary until fixed: it is safe to claim a strict finite (3+1)D lattice lightcone to r=8 and a reproducible 26-31% gap between retarded moving-source wave evolution and this specific stitched frozen-source c=1 static-slice comparator on three grown families at v/c=0.23.
+- **open / conditional deps cited:**
+  - `instantaneous_c_infinity_comparator_not_derived_from_Poisson_or_c_limit`
+  - `WAVE_3PLUS1D_RADIATION_NOTE.md_combined_three_signature_closure_not_audited_in_this_claim`
+  - `runner_prints_thresholds_without_hard_assertions`
 - **auditor confidence:** high
 
 ### `wave_equation_self_field_note`
