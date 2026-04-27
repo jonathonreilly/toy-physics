@@ -60,3 +60,31 @@ Expected claim movement:
   load-bearing;
 - Lane 2 stop boundary unless a new charged-lepton or low-energy QED premise
   is supplied.
+
+## Cycle 3: Lane 5 Hubble Two-Gate Dependency Firewall
+
+Deliverables:
+
+- `docs/HUBBLE_LANE5_TWO_GATE_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md`
+- `scripts/frontier_hubble_lane5_two_gate_dependency_firewall.py`
+- `logs/2026-04-27-hubble-lane5-two-gate-dependency-firewall.txt`
+
+Verification:
+
+- run the new runner with `PYTHONPATH=scripts`;
+- compile the new runner;
+- rerun the Hubble open-number reduction runner;
+- rerun the Hubble structural-lock runner;
+- run the audit pipeline and strict lint;
+- run `git diff --check`;
+- record review-loop emulation in `REVIEW_HISTORY.md`.
+
+Expected claim movement:
+
+- no retained `H_0` closure;
+- exact dependency firewall showing both `(C1)` and `(C2)`/`(C3)` remain
+  load-bearing;
+- structural lock guarded as a late-time falsifier, not a numerical
+  derivation;
+- Lane 5 stop boundary unless `(C1)` and `(C2)` land or a fresh `(C3)` route
+  appears.

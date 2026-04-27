@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-27T12:34:31.722239+00:00",
+  "generated_at": "2026-04-27T12:42:23.132141+00:00",
   "per_claim": {
     "accessible_prediction_note": {
       "assert_count": 0,
@@ -4332,6 +4332,18 @@
       "decoration_candidate": false,
       "dominant_class": "D",
       "runner": "scripts/frontier_koide_cone_variational_principle_survey.py"
+    },
+    "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27": {
+      "assert_count": 1,
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "runner": "scripts/frontier_hubble_lane5_two_gate_dependency_firewall.py"
     },
     "hubble_tension_structural_lock_theorem_note_2026-04-26": {
       "assert_count": 1,
@@ -14008,6 +14020,21 @@
       "dominant_class": "C",
       "exists": true
     },
+    "scripts/frontier_hubble_lane5_two_gate_dependency_firewall.py": {
+      "assert_count": 1,
+      "claims": [
+        "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27"
+      ],
+      "counts": {
+        "A": 0,
+        "B": 1,
+        "C": 0,
+        "D": 2
+      },
+      "decoration_candidate": false,
+      "dominant_class": "D",
+      "exists": true
+    },
     "scripts/frontier_hubble_tension_structural_lock.py": {
       "assert_count": 1,
       "claims": [
@@ -18809,11 +18836,11 @@
       "A": 6,
       "B": 102,
       "C": 333,
-      "D": 107,
+      "D": 108,
       "none": 141
     },
-    "runners_classified": 689,
+    "runners_classified": 690,
     "runners_with_C": 410,
-    "runners_with_D": 182
+    "runners_with_D": 183
   }
 }

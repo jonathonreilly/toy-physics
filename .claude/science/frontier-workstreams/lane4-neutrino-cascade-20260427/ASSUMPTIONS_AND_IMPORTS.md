@@ -31,3 +31,14 @@
 | `alpha_EM(M_Z)=1/127.67` | Existing high-energy EW coupling value | framework-derived | `USABLE_DERIVED_VALUES_INDEX.md` | Yes, but not sufficient | Bridge only | QED running / low-energy transport to `alpha(0)` | Kept with firewall |
 | Low-energy atomic `alpha(0)` | Coulomb coupling in Rydberg formula | standard comparator in current firewall | atomic standard formula | Yes | Yes | Derive or bridge from retained EW package | Open |
 | Nonrelativistic Schrodinger/Coulomb limit | Atomic Hamiltonian in physical units | scaffold import | `ATOMIC_HYDROGEN_HELIUM_PROBE_NOTE.md` | Yes | Yes | Retain physical-unit NR limit from framework substrate | Open |
+
+## Lane 5 Hubble Imports Added In Cycle 3
+
+| Item | Role in claim | Current class | Source surface | Load-bearing? | Needed for target status? | Retirement path | Disposition |
+|---|---|---|---|---|---|---|---|
+| `L = (H_inf/H_0)^2` | Exact bridge exposing the two required degrees | retained structural identity | `OMEGA_LAMBDA_MATTER_BRIDGE_THEOREM_NOTE_2026-04-22.md`, `COSMOLOGY_OPEN_NUMBER_REDUCTION_THEOREM_NOTE_2026-04-26.md` | Yes | Yes | Already retained as structural bridge, not numerical closure | Reuse with firewall |
+| `(C1)` primitive Clifford/CAR coframe response | Absolute-scale premise for numerical `H_inf`/`R_Lambda` | open gate | `HUBBLE_LANE5_PLANCK_C1_GATE_AUDIT_NOTE_2026-04-26.md` | Yes | Yes | Derive metric-compatible primitive Clifford/CAR coframe response with natural phase/action units | Open |
+| `(C2)` right-sensitive `Z_3` doublet-block selector | Dimensionless cosmic-history-ratio route through bounded cascade | open gate | `HUBBLE_LANE5_ETA_RETIREMENT_GATE_AUDIT_NOTE_2026-04-26.md` | Yes | Yes, unless `(C3)` lands | Derive right-sensitive selector and retire surrounding cascade dependencies | Open |
+| `(C3)` direct cosmic-`L` route | Alternative dimensionless route to `L` | no active route | `HUBBLE_LANE5_C3_VACUUM_TOPOLOGY_NO_ACTIVE_ROUTE_NOTE_2026-04-27.md` | Yes if opened | Yes, as alternative to `(C2)` | Fresh vacuum/topology or inflation-history premise | Empty/open |
+| Structural lock `H(a)=H_0 E(a;L,R)` | Late-time falsifier and consistency relation | proposed-retained support | `HUBBLE_TENSION_STRUCTURAL_LOCK_THEOREM_NOTE_2026-04-26.md` | Yes for falsifier, no for numerical closure | No | Keep separate from numerical `H_0` derivation | Guarded |
+| Planck 2018 comparator triple | Numerical family demonstration only | comparator | existing Hubble runners/status notes | No | No | Keep out of derivation chain | Comparator only |

@@ -10,18 +10,24 @@ lock:
   owner: frontier-workstream-lane4-cascade
   repo_local_lock: logs/physics_worker_lock.json
 current_lane:
-  id: 2
-  name: atomic-scale predictions
+  id: 5
+  name: Hubble constant derivation
   status: open
 cycle:
-  count: 2
-  active_route: atomic_rydberg_dependency_firewall
+  count: 3
+  active_route: hubble_two_gate_dependency_firewall
   route_status: verified
 files_touched:
   - docs/NEUTRINO_LANE4_DIRAC_SEESAW_FORK_NO_GO_NOTE_2026-04-27.md
   - scripts/frontier_neutrino_lane4_dirac_seesaw_fork_no_go.py
   - scripts/frontier_neutrino_majorana_current_stack_zero_law.py
   - logs/2026-04-27-neutrino-lane4-dirac-seesaw-fork-no-go.txt
+  - docs/ATOMIC_RYDBERG_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md
+  - scripts/frontier_atomic_rydberg_dependency_firewall.py
+  - logs/2026-04-27-atomic-rydberg-dependency-firewall.txt
+  - docs/HUBBLE_LANE5_TWO_GATE_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md
+  - scripts/frontier_hubble_lane5_two_gate_dependency_firewall.py
+  - logs/2026-04-27-hubble-lane5-two-gate-dependency-firewall.txt
   - docs/audit/AUDIT_LEDGER.md
   - docs/audit/AUDIT_QUEUE.md
   - docs/audit/data/audit_ledger.json
@@ -30,9 +36,6 @@ files_touched:
   - docs/audit/data/effective_status_summary.json
   - docs/audit/data/load_bearing_summary.json
   - docs/audit/data/runner_classification.json
-  - docs/ATOMIC_RYDBERG_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md
-  - scripts/frontier_atomic_rydberg_dependency_firewall.py
-  - logs/2026-04-27-atomic-rydberg-dependency-firewall.txt
   - .claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/GOAL.md
   - .claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/ASSUMPTIONS_AND_IMPORTS.md
   - .claude/science/frontier-workstreams/lane4-neutrino-cascade-20260427/ROUTE_PORTFOLIO.md
@@ -50,18 +53,24 @@ open_imports:
   - retained electron mass or charged-lepton y_e activation law
   - retained alpha(0) or QED running bridge from alpha_EM(M_Z)
   - physical-unit nonrelativistic Schrodinger/Coulomb limit
+  - Lane 5 C1 primitive Clifford/CAR coframe response with natural phase/action units
+  - Lane 5 C2 right-sensitive Z3 doublet-block selector and bounded-cascade dependencies
+  - Lane 5 C3 direct cosmic-L route, currently no active route
+  - admitted T_CMB radiation readout for current bounded cosmology surface
 no_go_routes:
   - current-stack sole-axiom full neutrino closure
   - current-stack Majorana activation mu != 0
   - current-bank PMNS selector activation
   - hidden global closure by merging mu_current=0 with the diagonal seesaw benchmark
   - direct atomic Rydberg closure by substituting alpha_EM(M_Z) for alpha(0)
+  - numerical H_0 closure from a single Lane 5 gate or from the structural lock alone
 review:
   status: passed_with_notes
   findings:
     - "No retained Lane 4 closure; artifact is exact negative boundary."
     - "Existing Majorana zero-law runner needed atlas Pfaffian/Nambu scoping compatibility fix after origin/main fast-forward."
     - "No retained Lane 2 closure; artifact is exact dependency firewall."
+    - "No retained Lane 5 closure; artifact is exact two-gate dependency firewall."
     - "Audit strict lint passes with known graph-cycle warning only."
 verification:
   status: passed
@@ -79,5 +88,11 @@ verification:
     - "PYTHONPATH=scripts python3 scripts/frontier_atomic_hydrogen_helium_probe.py -> bounded scaffold output reproduced"
     - "bash docs/audit/scripts/run_pipeline.sh -> complete after Lane 2 artifact"
     - "python3 docs/audit/scripts/audit_lint.py --strict -> OK, known graph-cycle warning only after Lane 2 artifact"
-next_exact_action: "Commit and push the coherent Lane 2 checkpoint. Then cascade to Lane 5 unless a new atomic premise appears."
-stop_condition: "Not reached. Lane 2 remains open; no STOP_ALL_LANES_REQUESTED file should be created."
+    - "PYTHONPATH=scripts python3 scripts/frontier_hubble_lane5_two_gate_dependency_firewall.py -> PASS=18 FAIL=0"
+    - "python3 -m py_compile scripts/frontier_hubble_lane5_two_gate_dependency_firewall.py -> pass"
+    - "PYTHONPATH=scripts python3 scripts/frontier_cosmology_open_number_reduction.py -> PASS=5 FAIL=0"
+    - "PYTHONPATH=scripts python3 scripts/frontier_hubble_tension_structural_lock.py -> PASS=5 FAIL=0"
+    - "bash docs/audit/scripts/run_pipeline.sh -> complete after Lane 5 artifact"
+    - "python3 docs/audit/scripts/audit_lint.py --strict -> OK, known graph-cycle warning only after Lane 5 artifact"
+next_exact_action: "Run git diff --check, commit and push the coherent Lane 5 checkpoint, then cascade to Lane 3 quark mass retention unless a new Hubble premise appears."
+stop_condition: "Not reached. Lane 5 remains open at the two-gate boundary; no STOP_ALL_LANES_REQUESTED file should be created."

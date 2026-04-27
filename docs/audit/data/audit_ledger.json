@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T12:34:31.969152+00:00",
-  "generated_at": "2026-04-27T12:34:30.488867+00:00",
-  "invalidation_run_at": "2026-04-27T12:34:31.909796+00:00",
+  "effective_status_computed_at": "2026-04-27T12:42:23.374997+00:00",
+  "generated_at": "2026-04-27T12:42:21.907460+00:00",
+  "invalidation_run_at": "2026-04-27T12:42:23.316840+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T12:34:31.790645+00:00",
+  "load_bearing_computed_at": "2026-04-27T12:42:23.199327+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -37050,6 +37050,47 @@
       "runner_path": null,
       "title": "Lane 5 Planck `(C1)` Gate Audit: The Metric-Compatible Primitive Clifford/CAR Coframe Response Is The Single Residual Premise For Retaining `R_Lambda` Numerically",
       "transitive_descendants": 14,
+      "verdict_rationale": null
+    },
+    "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27": {
+      "audit_date": null,
+      "audit_status": "unaudited",
+      "auditor": null,
+      "auditor_confidence": null,
+      "auditor_family": null,
+      "blocker": null,
+      "chain_closes": null,
+      "chain_closure_explanation": null,
+      "claim_id": "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27",
+      "criticality": "leaf",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained exact negative boundary for Lane 5 dependency",
+      "decoration_parent_claim_id": null,
+      "deps": [],
+      "direct_in_degree": 0,
+      "effective_status": "proposed_retained",
+      "effective_status_reason": "self",
+      "independence": null,
+      "intrinsic_status": "proposed_retained",
+      "load_bearing_score": 0.0,
+      "load_bearing_step": null,
+      "load_bearing_step_class": null,
+      "max_descendant_status": "unknown",
+      "max_descendant_status_rank": 30,
+      "note_hash": "07de43c5e620a17f8f9fdd9b7c3f0802eef903922e7318e2643428ab3c3bf301",
+      "note_path": "docs/HUBBLE_LANE5_TWO_GATE_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md",
+      "open_dependency_paths": [],
+      "previous_audits": [],
+      "runner_check_breakdown": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "total_pass": 0
+      },
+      "runner_path": "scripts/frontier_hubble_lane5_two_gate_dependency_firewall.py",
+      "title": "Hubble Lane 5 Two-Gate Dependency Firewall",
+      "transitive_descendants": 0,
       "verdict_rationale": null
     },
     "hubble_lane5_workstream_status_note_2026-04-27": {
@@ -85784,9 +85825,9 @@
   "schema_version": 1,
   "stats": {
     "dropped_missing_notes": 0,
-    "preserved_existing": 1615,
+    "preserved_existing": 1616,
     "re_audit_required": 0,
-    "row_count": 1616,
+    "row_count": 1617,
     "seeded_new": 1
   }
 }

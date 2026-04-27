@@ -17521,7 +17521,7 @@
       "to": "work_history.yt.yt_explicit_systematic_reduction_options_2026-04-15"
     }
   ],
-  "generated_at": "2026-04-27T12:34:30.441629+00:00",
+  "generated_at": "2026-04-27T12:42:21.860569+00:00",
   "nodes": {
     "3d_correction_master_note": {
       "claim_id": "3d_correction_master_note",
@@ -26146,6 +26146,16 @@
       "path": "docs/HUBBLE_LANE5_PLANCK_C1_GATE_AUDIT_NOTE_2026-04-26.md",
       "runner_path": null,
       "title": "Lane 5 Planck `(C1)` Gate Audit: The Metric-Compatible Primitive Clifford/CAR Coframe Response Is The Single Residual Premise For Retaining `R_Lambda` Numerically"
+    },
+    "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27": {
+      "claim_id": "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27",
+      "current_status": "proposed_retained",
+      "current_status_raw": "proposed_retained exact negative boundary for Lane 5 dependency",
+      "deps": [],
+      "note_hash": "07de43c5e620a17f8f9fdd9b7c3f0802eef903922e7318e2643428ab3c3bf301",
+      "path": "docs/HUBBLE_LANE5_TWO_GATE_DEPENDENCY_FIREWALL_NOTE_2026-04-27.md",
+      "runner_path": "scripts/frontier_hubble_lane5_two_gate_dependency_firewall.py",
+      "title": "Hubble Lane 5 Two-Gate Dependency Firewall"
     },
     "hubble_lane5_workstream_status_note_2026-04-27": {
       "claim_id": "hubble_lane5_workstream_status_note_2026-04-27",
@@ -39039,6 +39049,7 @@
     "hubble_lane5_cosmic_history_ratio_necessity_no_go_note_2026-04-26",
     "hubble_lane5_eta_retirement_gate_audit_note_2026-04-26",
     "hubble_lane5_planck_c1_gate_audit_note_2026-04-26",
+    "hubble_lane5_two_gate_dependency_firewall_note_2026-04-27",
     "hubble_lane5_workstream_status_note_2026-04-27",
     "i3_zero_exact_theorem_note",
     "if_program_closing_note",
@@ -39685,15 +39696,15 @@
   "schema_version": 1,
   "stats": {
     "edge_count": 4380,
-    "leaf_count": 752,
-    "node_count": 1616,
-    "root_count": 1178,
-    "runners_with_path": 704,
+    "leaf_count": 753,
+    "node_count": 1617,
+    "root_count": 1179,
+    "runners_with_path": 705,
     "status_counts": {
       "bounded": 209,
       "open": 26,
       "proposed_promoted": 6,
-      "proposed_retained": 445,
+      "proposed_retained": 446,
       "support": 134,
       "unknown": 796
     }
