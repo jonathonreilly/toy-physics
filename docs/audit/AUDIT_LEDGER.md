@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T09:30:14.675306+00:00
+**Generated:** 2026-04-27T09:33:00.817824+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 19 |
-| _proposed_retained_ | 194 |
+| _proposed_retained_ | 193 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -28,7 +28,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | unknown | 720 |
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
-| ~~audited_renaming~~ | 1 |
+| ~~audited_renaming~~ | 2 |
 | ~~audited_conditional~~ | 280 |
 | ~~audited_failed~~ | 80 |
 
@@ -40,8 +40,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_decoration` | 3 |
 | `audited_failed` | 13 |
 | `audited_numerical_match` | 4 |
-| `audited_renaming` | 1 |
-| `unaudited` | 1489 |
+| `audited_renaming` | 2 |
+| `unaudited` | 1488 |
 
 | criticality | count |
 |---|---:|
@@ -208,6 +208,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `ckm_down_type_scale_convention_support_note_2026-04-22` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `koide_higgs_dressed_resolvent_root_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
 | `yt_uv_to_ir_transport_obstruction_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_numerical_match~~ | ~~audited_numerical_match~~ | cross_family | codex-current | G | - |
+| `complex_selectivity_predictor_note` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | F | - |
 | `dm_neutrino_z3_phase_lift_mixed_bridge_note_2026-04-15` | _proposed_retained_ | ~~audited_renaming~~ | ~~audited_renaming~~ | cross_family | codex-current | E | - |
 
 
@@ -539,6 +540,27 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `scripts/complex_action_harness.py_not_registered_primary_runner`
   - `logs/2026-04-05-complex-action-harness.txt_not_registered_primary_output`
   - `horizon_observable_bridge_not_derived`
+- **auditor confidence:** high
+
+### `complex_selectivity_predictor_note`
+
+- **Note:** [`COMPLEX_SELECTIVITY_PREDICTOR_NOTE.md`](../../docs/COMPLEX_SELECTIVITY_PREDICTOR_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_renaming~~
+- **effective_status:** ~~audited_renaming~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note's load-bearing claim is that complex-action survival requires an anchor-local TOWARD-to-AWAY crossover and that coarser basin geometry does not predict survival.  _(class `F`)_
+- **chain closes:** False — The script renders a hard-coded table of six family labels and identifies survival with the same anchor-local crossover used to decide whether the complex-action companion survived; it does not compute an independent predictor from held-out features or audited dependencies.
+- **rationale:** Issue: the proposed predictor is not independent of the target label; it equates complex-action survival with the anchor-local TOWARD-to-AWAY crossover that defines the retained complex companion in the cited family cards, and the runner merely prints hard-coded rows rather than recomputing or validating them. Why this blocks: a hostile physicist can accept the table as a summary of six prior cards without accepting a retained predictor, because the discriminator includes the outcome it is meant to predict and depends on unregistered, mixed-status source notes. Repair target: register the family cards as dependencies, recompute their features and labels from runners, pre-specify predictor features that exclude the survival-defining crossover or test the crossover on held-out families, and restore/generate the cited log. Claim boundary until fixed: it is safe to say this static table summarizes that the currently retained complex-positive examples have local crossovers and the diagnosed boundaries do not; it is not safe to call that an independent retained predictor.
+- **open / conditional deps cited:**
+  - `logs/2026-04-06-complex-selectivity-predictor.txt_missing`
+  - `GROWN_TRANSFER_BASIN_NOTE.md`
+  - `SECOND_GROWN_FAMILY_COMPLEX_NOTE.md`
+  - `ALT_CONNECTIVITY_FAMILY_COMPLEX_FAILURE_NOTE.md`
+  - `THIRD_GROWN_FAMILY_COMPLEX_BOUNDARY_NOTE.md`
+  - `FOURTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md`
+  - `FIFTH_FAMILY_COMPLEX_NOTE.md`
+  - `FIFTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md`
 - **auditor confidence:** high
 
 ### `confinement_string_tension_note`

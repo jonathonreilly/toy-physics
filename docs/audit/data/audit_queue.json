@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 88,
     "high": 506,
-    "leaf": 820,
+    "leaf": 819,
     "medium": 78
   },
-  "generated_at": "2026-04-27T09:30:14.465579+00:00",
+  "generated_at": "2026-04-27T09:33:00.607094+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -18482,23 +18482,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "complex_selectivity_predictor_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/COMPLEX_SELECTIVITY_PREDICTOR_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "composite_source_additivity_2d_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -30138,6 +30121,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1081,
-  "total_pending": 1492
+  "ready_count": 1080,
+  "total_pending": 1491
 }

@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T09:30:14.395901+00:00",
-  "generated_at": "2026-04-27T09:30:12.513156+00:00",
-  "invalidation_run_at": "2026-04-27T09:30:14.332148+00:00",
+  "effective_status_computed_at": "2026-04-27T09:33:00.541169+00:00",
+  "generated_at": "2026-04-27T09:32:58.547292+00:00",
+  "invalidation_run_at": "2026-04-27T09:33:00.475143+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T09:30:14.204489+00:00",
+  "load_bearing_computed_at": "2026-04-27T09:33:00.314282+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -12709,14 +12709,21 @@
       "verdict_rationale": null
     },
     "complex_selectivity_predictor_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_renaming",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The script renders a hard-coded table of six family labels and identifies survival with the same anchor-local crossover used to decide whether the complex-action companion survived; it does not compute an independent predictor from held-out features or audited dependencies.",
       "claim_id": "complex_selectivity_predictor_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -12724,18 +12731,27 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_renaming",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_renaming",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note's load-bearing claim is that complex-action survival requires an anchor-local TOWARD-to-AWAY crossover and that coarser basin geometry does not predict survival.",
+      "load_bearing_step_class": "F",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "f8f26a44512124d3e207ff1b4dd12d24fc4a9269e5c355e8014d947f415b8713",
       "note_path": "docs/COMPLEX_SELECTIVITY_PREDICTOR_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "logs/2026-04-06-complex-selectivity-predictor.txt_missing",
+        "docs/GROWN_TRANSFER_BASIN_NOTE.md",
+        "docs/SECOND_GROWN_FAMILY_COMPLEX_NOTE.md",
+        "docs/ALT_CONNECTIVITY_FAMILY_COMPLEX_FAILURE_NOTE.md",
+        "docs/THIRD_GROWN_FAMILY_COMPLEX_BOUNDARY_NOTE.md",
+        "docs/FOURTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md",
+        "docs/FIFTH_FAMILY_COMPLEX_NOTE.md",
+        "docs/FIFTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.367939+00:00",
@@ -12773,7 +12789,7 @@
       "runner_path": null,
       "title": "Complex Selectivity Predictor Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the proposed predictor is not independent of the target label; it equates complex-action survival with the anchor-local TOWARD-to-AWAY crossover that defines the retained complex companion in the cited family cards, and the runner merely prints hard-coded rows rather than recomputing or validating them. Why this blocks: a hostile physicist can accept the table as a summary of six prior cards without accepting a retained predictor, because the discriminator includes the outcome it is meant to predict and depends on unregistered, mixed-status source notes. Repair target: register the family cards as dependencies, recompute their features and labels from runners, pre-specify predictor features that exclude the survival-defining crossover or test the crossover on held-out families, and restore/generate the cited log. Claim boundary until fixed: it is safe to say this static table summarizes that the currently retained complex-positive examples have local crossovers and the diagnosed boundaries do not; it is not safe to call that an independent retained predictor."
     },
     "composite_source_additivity_2d_note": {
       "audit_date": null,
