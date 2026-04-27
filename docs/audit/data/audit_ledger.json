@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T19:43:31.161904+00:00",
-  "generated_at": "2026-04-27T19:43:29.558061+00:00",
-  "invalidation_run_at": "2026-04-27T19:43:31.112393+00:00",
+  "effective_status_computed_at": "2026-04-27T19:45:28.775373+00:00",
+  "generated_at": "2026-04-27T19:45:27.173539+00:00",
+  "invalidation_run_at": "2026-04-27T19:45:28.727196+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T19:43:31.012482+00:00",
+  "load_bearing_computed_at": "2026-04-27T19:45:28.628903+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -84467,14 +84467,21 @@
       "verdict_rationale": null
     },
     "yt_generation_hierarchy_primitive_analysis_note_2026-04-18": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner passes all 51 checks, but the note imports support/conditional/unknown one-hop authorities and explicitly leaves A1 and P1 non-retained. The narrow algebraic no-go and Fourier-spectrum correction close as computations; the retained generation-hierarchy primitive does not close on the current retained surface.",
       "claim_id": "yt_generation_hierarchy_primitive_analysis_note_2026-04-18",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -84482,18 +84489,29 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The retained surface gives a narrow position-basis no-go for generation-asymmetric diagonal content, while the amended positive Fourier-basis circulant spectrum still requires non-retained A1 equipartition and P1 sqrt(m) identification for the hierarchy claim.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "0f64263af2e5033df6144cfaa52941308426434357d58eee61d27c0174f22c9b",
       "note_path": "docs/YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md",
+        "docs/THREE_GENERATION_STRUCTURE_NOTE.md",
+        "docs/S3_TASTE_CUBE_DECOMPOSITION_NOTE.md",
+        "docs/SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md",
+        "docs/Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md",
+        "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
+        "docs/YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md",
+        "docs/CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md",
+        "docs/STRUCTURAL_NO_GO_SURVEY_NOTE.md",
+        "docs/KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.370278+00:00",
@@ -84522,16 +84540,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 44,
         "B": 0,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 7,
+        "total_pass": 51
       },
       "runner_path": "scripts/frontier_yt_generation_hierarchy_primitive.py",
       "title": "Generation-Hierarchy Primitive Retention Analysis Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the refined note combines a passed narrow position-basis no-go with a positive circulant-spectrum mechanism whose physical hierarchy bridge depends on non-retained A1 equipartition, P1 sqrt(m) identification, and multiple one-hop authorities that are support, conditional, or unknown. Why this blocks: the runner establishes algebraic facts and comparator failures, but it does not derive the missing hierarchy primitives or promote the imported foundation stack. Repair target: split the retained algebraic no-go from the candidate extension, audit/promote the one-hop authorities, and add retained derivations or pass/fail runners for A1, P1, the overall scale, and the delta/unit bridge. Claim boundary until fixed: safe to claim the 51/51 runner supports the position-basis no-go, the failure of the tested retained-surface candidates, and the existence of distinct Fourier-basis circulant eigenvalues; not safe to claim a clean retained generation-hierarchy primitive or a retained Koide/fermion-mass mechanism beyond those conditional inputs."
     },
     "yt_h_unit_flavor_column_decomposition_note_2026-04-18": {
       "audit_date": null,

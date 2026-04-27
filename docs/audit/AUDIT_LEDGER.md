@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T19:43:31.350507+00:00
+**Generated:** 2026-04-27T19:45:28.973819+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 72 |
-| _proposed_retained_ | 24 |
+| _proposed_retained_ | 23 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 348 |
+| ~~audited_conditional~~ | 349 |
 | ~~audited_failed~~ | 137 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 72 |
-| `audited_conditional` | 135 |
+| `audited_conditional` | 136 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1323 |
+| `unaudited` | 1322 |
 
 | criticality | count |
 |---|---:|
@@ -302,6 +302,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_class_6_c3_breaking_operator_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `yt_ew_color_projection_theorem` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
 | `yt_ew_delta_r_retention_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
+| `yt_generation_hierarchy_primitive_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `yt_p1_delta_r_2_loop_extension_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `yt_p1_delta_r_sm_rge_crosscheck_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
@@ -4709,6 +4710,29 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `PDG_observed_g1_g2_sin2thetaW_alphaEM_comparators_external_inputs`
   - `internal_sin2thetaW_uncertainty_inconsistency_0_0038_vs_0_0005_or_0_0006`
   - `obsolete_safe_boundary_Delta_R_values_minus_0_45_percent_and_minus_0_25_percent_inconsistent_with_runner`
+- **auditor confidence:** high
+
+### `yt_generation_hierarchy_primitive_analysis_note_2026-04-18`
+
+- **Note:** [`YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md`](../../docs/YT_GENERATION_HIERARCHY_PRIMITIVE_ANALYSIS_NOTE_2026-04-18.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The retained surface gives a narrow position-basis no-go for generation-asymmetric diagonal content, while the amended positive Fourier-basis circulant spectrum still requires non-retained A1 equipartition and P1 sqrt(m) identification for the hierarchy claim.  _(class `A`)_
+- **chain closes:** False — The runner passes all 51 checks, but the note imports support/conditional/unknown one-hop authorities and explicitly leaves A1 and P1 non-retained. The narrow algebraic no-go and Fourier-spectrum correction close as computations; the retained generation-hierarchy primitive does not close on the current retained surface.
+- **rationale:** Issue: the refined note combines a passed narrow position-basis no-go with a positive circulant-spectrum mechanism whose physical hierarchy bridge depends on non-retained A1 equipartition, P1 sqrt(m) identification, and multiple one-hop authorities that are support, conditional, or unknown. Why this blocks: the runner establishes algebraic facts and comparator failures, but it does not derive the missing hierarchy primitives or promote the imported foundation stack. Repair target: split the retained algebraic no-go from the candidate extension, audit/promote the one-hop authorities, and add retained derivations or pass/fail runners for A1, P1, the overall scale, and the delta/unit bridge. Claim boundary until fixed: safe to claim the 51/51 runner supports the position-basis no-go, the failure of the tested retained-surface candidates, and the existence of distinct Fourier-basis circulant eigenvalues; not safe to claim a clean retained generation-hierarchy primitive or a retained Koide/fermion-mass mechanism beyond those conditional inputs.
+- **open / conditional deps cited:**
+  - `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`
+  - `THREE_GENERATION_STRUCTURE_NOTE.md`
+  - `S3_TASTE_CUBE_DECOMPOSITION_NOTE.md`
+  - `SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md`
+  - `Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md`
+  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
+  - `YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md`
+  - `CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md`
+  - `STRUCTURAL_NO_GO_SURVEY_NOTE.md`
+  - `KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md`
 - **auditor confidence:** high
 
 ### `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18`
