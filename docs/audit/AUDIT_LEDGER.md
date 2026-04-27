@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T04:41:02.285291+00:00
+**Generated:** 2026-04-27T04:43:09.352920+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 3 |
-| _proposed_retained_ | 264 |
+| **retained** | 4 |
+| _proposed_retained_ | 263 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
@@ -34,12 +34,12 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 3 |
+| `audited_clean` | 4 |
 | `audited_conditional` | 33 |
 | `audited_decoration` | 1 |
 | `audited_failed` | 1 |
 | `audited_numerical_match` | 3 |
-| `unaudited` | 1557 |
+| `unaudited` | 1556 |
 
 | criticality | count |
 |---|---:|
@@ -98,6 +98,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `graph_first_selector_derivation_note` | _proposed_retained_ | audit_in_progress | _proposed_retained_ | - | - | - | - |
 | `graph_first_su3_integration_note` | _proposed_retained_ | audit_in_progress | _proposed_retained_ | - | - | - | - |
 | `s3_mass_matrix_no_go_note` | _proposed_retained_ | audit_in_progress | _proposed_retained_ | - | - | - | - |
+| `dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `i3_zero_exact_theorem_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `planck_finite_response_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -322,6 +323,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `gamma_1_direct_bridge_dependency_not_registered`
   - `bosonic_normalization_dependency_not_registered`
   - `dm_staircase_relation_dependency_not_registered`
+- **auditor confidence:** high
+
+### `dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18`
+
+- **Note:** [`DM_NEUTRINO_SOURCE_SURFACE_P3_SYLVESTER_LINEAR_PATH_SIGNATURE_THEOREM_NOTE_2026-04-18.md`](../../docs/DM_NEUTRINO_SOURCE_SURFACE_P3_SYLVESTER_LINEAR_PATH_SIGNATURE_THEOREM_NOTE_2026-04-18.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** For the specified H_base, affine generators, and P3 pin J_*, the runner constructs H(t)=H_base+tJ_*, proves det(H(t)) is an exact cubic, checks the closed-interval extremum set {0,1,t1}, finds min det(H(t))=0.878309>0 on [0,1], and applies Sylvester inertia continuity to conclude signature(H_base+J_*)=signature(H_base)=(2,0,1).  _(class `A`)_
+- **chain closes:** True — The claim is narrowly local and the runner closes exactly that claim. It proves Hermiticity, exact cubic determinant form, atlas A0=32*sqrt(2)/9, p(1)=0.959174, closed-form critical points, positive minimum 0.878309 on the full interval, and direct signatures at H_base and the P3 pin, with PASS=11 FAIL=0. The note explicitly excludes A-BCC, sigma_hier, chamber-wide source selection, and the DM flagship closure, so those are not load-bearing requirements for this local theorem.
+- **rationale:** Clean for the narrow local theorem at the stated P3 pin. The determinant positivity certificate is not a sampling argument: the runner constructs the exact symbolic cubic p(t), solves p'(t)=0 as a quadratic, evaluates the finite extremum set on [0,1], and obtains a strictly positive minimum before invoking Sylvester's law. Direct eigenvalue checks independently match the retained signature convention (n_-, n_0, n_+)=(2,0,1) at both endpoints. This clean audit does not promote any wider physical branch-choice statement: A-BCC, sigma_hier=(2,1,0), chamber-wide source selection, and the DM flagship lane remain outside the claim and are not closed here.
 - **auditor confidence:** high
 
 ### `electrostatics_grown_sign_law_note`
