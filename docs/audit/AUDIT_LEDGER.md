@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T16:45:41.375020+00:00
+**Generated:** 2026-04-27T16:47:23.667874+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 61 |
-| _proposed_retained_ | 82 |
+| _proposed_retained_ | 81 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 322 |
+| ~~audited_conditional~~ | 323 |
 | ~~audited_failed~~ | 116 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 61 |
-| `audited_conditional` | 109 |
+| `audited_conditional` | 110 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 49 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1381 |
+| `unaudited` | 1380 |
 
 | criticality | count |
 |---|---:|
@@ -248,6 +248,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `poisson_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `propagator_family_unification_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `quantum_horizon_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
+| `quark_bimodule_lo_shell_normalization_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
 | `shapiro_delay_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `sign_portability_invariant_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `staggered_backreaction_shell_spectral_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -3406,6 +3407,22 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The current retained ray/support packet leaves kappa unfixed because the same packet identities remain true at sqrt(6/7), 48/49, and 1, giving a positive-width bridge interval rather than forcing the BICAC endpoint.  _(class `A`)_
 - **chain closes:** True — The source theorem is exact algebra over its stated packet atoms, and the live runner verifies all twelve identities: support endpoint, target point, BICAC endpoint, ordering, positive interval width, and kappa-independence of the packet invariants.
 - **rationale:** The claim is a negative algebraic obstruction, not a positive BICAC derivation. Given the stated packet atoms p, r, a_d, supp, and delta_A1, the runner verifies three distinct exact kappa points and shows the retained packet invariants do not select among them. Residual risk is limited to provenance of the packet atoms outside this note; this audit retains only the obstruction that the present ray/support packet does not force kappa = 1.
+- **auditor confidence:** high
+
+### `quark_bimodule_lo_shell_normalization_theorem_note_2026-04-19`
+
+- **Note:** [`QUARK_BIMODULE_LO_SHELL_NORMALIZATION_THEOREM_NOTE_2026-04-19.md`](../../docs/QUARK_BIMODULE_LO_SHELL_NORMALIZATION_THEOREM_NOTE_2026-04-19.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Because the shell slot is the common unit LO channel, the retained down amplitude a_d = rho forces the physical LO down action D_LO(x) = rho x and therefore kappa = 1.  _(class `F`)_
+- **chain closes:** False — The runner verifies the algebra after identifying the exact shell carrier coefficient with the physical LO down amplitude rho, but the carrier/readout map and rho provenance rows are not audit-clean retained inputs.
+- **rationale:** Issue: The proof selects kappa = 1 by requiring the shell-normalized carrier coefficient to equal the retained physical down amplitude rho, but the physical bridge from the exact Route-2 carrier/readout map to the LO down action is not itself audit-retained, and rho provenance is imported from non-clean rows. Why this blocks: the runner checks exact algebra after the identification is supplied; it does not independently derive that the shell coefficient is the physical down-amplitude readout, nor does it close the unaudited/conditional CKM and quark projector inputs. Repair target: audit or repair CKM_ATLAS_AXIOM_CLOSURE_NOTE, QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE, and QUARK_ROUTE2_EXACT_READOUT_MAP_NOTE, and add a theorem deriving the shell-carrier-to-physical-down-action map before promoting BICAC closure. Claim boundary until fixed: it is safe to say that, given the stated shell carrier and rho readout premise, only kappa = 1 preserves the shell coefficient and yields STRC-LO; it is not safe to claim retained physical BICAC derivation from the current audited inputs.
+- **open / conditional deps cited:**
+  - `CKM_ATLAS_AXIOM_CLOSURE_NOTE.md`
+  - `QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md`
+  - `QUARK_ROUTE2_EXACT_READOUT_MAP_NOTE_2026-04-19.md`
 - **auditor confidence:** high
 
 ### `retained_cross_lane_consistency_support_note_2026-04-22`

@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T16:45:41.172662+00:00",
-  "generated_at": "2026-04-27T16:45:39.550591+00:00",
-  "invalidation_run_at": "2026-04-27T16:45:41.126366+00:00",
+  "effective_status_computed_at": "2026-04-27T16:47:23.483587+00:00",
+  "generated_at": "2026-04-27T16:47:21.901600+00:00",
+  "invalidation_run_at": "2026-04-27T16:47:23.436459+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T16:45:41.033078+00:00",
+  "load_bearing_computed_at": "2026-04-27T16:47:23.342776+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -62882,14 +62882,21 @@
       "verdict_rationale": "The claim is a negative algebraic obstruction, not a positive BICAC derivation. Given the stated packet atoms p, r, a_d, supp, and delta_A1, the runner verifies three distinct exact kappa points and shows the retained packet invariants do not select among them. Residual risk is limited to provenance of the packet atoms outside this note; this audit retains only the obstruction that the present ray/support packet does not force kappa = 1."
     },
     "quark_bimodule_lo_shell_normalization_theorem_note_2026-04-19": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner verifies the algebra after identifying the exact shell carrier coefficient with the physical LO down amplitude rho, but the carrier/readout map and rho provenance rows are not audit-clean retained inputs.",
       "claim_id": "quark_bimodule_lo_shell_normalization_theorem_note_2026-04-19",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -62897,18 +62904,22 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Because the shell slot is the common unit LO channel, the retained down amplitude a_d = rho forces the physical LO down action D_LO(x) = rho x and therefore kappa = 1.",
+      "load_bearing_step_class": "F",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "f059f93fa8ba5e7365fedcedd258376da09a93ff1321a1a8bfd129dc0195df9b",
       "note_path": "docs/QUARK_BIMODULE_LO_SHELL_NORMALIZATION_THEOREM_NOTE_2026-04-19.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/CKM_ATLAS_AXIOM_CLOSURE_NOTE.md",
+        "docs/QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE_2026-04-19.md",
+        "docs/QUARK_ROUTE2_EXACT_READOUT_MAP_NOTE_2026-04-19.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369496+00:00",
@@ -62937,16 +62948,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 10,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 10
       },
       "runner_path": "scripts/frontier_quark_bimodule_lo_shell_normalization_theorem.py",
       "title": "Quark Bimodule LO Shell-Normalization Theorem",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The proof selects kappa = 1 by requiring the shell-normalized carrier coefficient to equal the retained physical down amplitude rho, but the physical bridge from the exact Route-2 carrier/readout map to the LO down action is not itself audit-retained, and rho provenance is imported from non-clean rows. Why this blocks: the runner checks exact algebra after the identification is supplied; it does not independently derive that the shell coefficient is the physical down-amplitude readout, nor does it close the unaudited/conditional CKM and quark projector inputs. Repair target: audit or repair CKM_ATLAS_AXIOM_CLOSURE_NOTE, QUARK_PROJECTOR_PARAMETER_AUDIT_NOTE, and QUARK_ROUTE2_EXACT_READOUT_MAP_NOTE, and add a theorem deriving the shell-carrier-to-physical-down-action map before promoting BICAC closure. Claim boundary until fixed: it is safe to say that, given the stated shell carrier and rho readout premise, only kappa = 1 preserves the shell coefficient and yields STRC-LO; it is not safe to claim retained physical BICAC derivation from the current audited inputs."
     },
     "quark_bimodule_norm_existence_theorem_note_2026-04-19": {
       "audit_date": null,
