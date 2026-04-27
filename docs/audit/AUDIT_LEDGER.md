@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T06:14:30.123302+00:00
+**Generated:** 2026-04-27T06:16:19.392712+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 6 |
-| _proposed_retained_ | 239 |
+| _proposed_retained_ | 238 |
 | _proposed_promoted_ | 6 |
 | bounded | 184 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
-| ~~audited_conditional~~ | 256 |
+| ~~audited_conditional~~ | 257 |
 | ~~audited_failed~~ | 59 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 6 |
-| `audited_conditional` | 51 |
+| `audited_conditional` | 52 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 2 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1531 |
+| `unaudited` | 1530 |
 
 | criticality | count |
 |---|---:|
@@ -147,6 +147,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `sign_portability_invariant_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `strong_cp_theta_zero_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `unpromoted_branch_retainability_audit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `wave_equation_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_radiation_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_retardation_continuum_limit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -1156,6 +1157,26 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `higher_order_tensor_scalar_ratio_corrections_open`
   - `graph_growth_inflaton_field_potential_mapping_open`
   - `current_CMB_r_bounds_and_projected_sensitivities_observational_status_not_registered`
+- **auditor confidence:** high
+
+### `unpromoted_branch_retainability_audit_note`
+
+- **Note:** [`UNPROMOTED_BRANCH_RETAINABILITY_AUDIT_NOTE.md`](../../docs/UNPROMOTED_BRANCH_RETAINABILITY_AUDIT_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** No mistaken closure is required on the tested rows; the overreach risk is in generalizing beyond the retained row-level results or treating a retained proxy as a family-wide law.  _(class `B`)_
+- **chain closes:** False — The note is a cross-note retainability inventory with no registered dependencies and no runner, so its boundary conclusions cannot be independently checked from the audit packet alone.
+- **rationale:** Issue: the proposed-retained row summarizes promotion boundaries across wider-family, grown-transfer, graph-frontier, and persistent-object lanes, but registers no one-hop dependencies and provides no runner or machine-checkable status/output inventory. Why this blocks: a hostile auditor cannot verify from the source note alone that the referenced rows, logs, statuses, and boundary claims are current or correctly characterized, even though the conservative no-overpromotion advice is plausible and safe. Repair target: register the cited notes/scripts/logs as explicit dependencies or add a status-audit runner that checks each referenced artifact, current status, runner output, and permitted wording boundary. Claim boundary until fixed: it is safe to treat this as a conservative branch-to-main editorial handoff saying not to broaden finite row-level positives into family-wide, continuum, cosmology, detector-localization, or persistent-mass claims; it is not an independently audited retained physics theorem.
+- **open / conditional deps cited:**
+  - `H0125_WIDER_W4_NOTE.md_not_registered_one_hop_dependency`
+  - `H0125_WIDER_REPLAY_NOTE.md_not_registered_one_hop_dependency`
+  - `GATE_B_GROWN_JOINT_PACKAGE_NOTE.md_not_registered_one_hop_dependency`
+  - `GATE_B_GROWN_DISTANCE_LAW_NOTE.md_not_registered_one_hop_dependency`
+  - `GATE_B_NONLABEL_SIGN_GROWN_TRANSFER_NOTE.md_not_registered_one_hop_dependency`
+  - `GROWING_GRAPH_FRONTIER_EXPANSION_PROXY_NOTE.md_not_registered_one_hop_dependency`
+  - `scripts/persistent_object_localization_escalation.py_not_registered_one_hop_dependency`
 - **auditor confidence:** high
 
 ### `wave_equation_self_field_note`
