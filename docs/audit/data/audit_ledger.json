@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T18:38:46.169337+00:00",
-  "generated_at": "2026-04-27T18:38:44.570039+00:00",
-  "invalidation_run_at": "2026-04-27T18:38:46.122158+00:00",
+  "effective_status_computed_at": "2026-04-27T18:47:03.480907+00:00",
+  "generated_at": "2026-04-27T18:47:01.885617+00:00",
+  "invalidation_run_at": "2026-04-27T18:47:03.433194+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T18:38:46.025103+00:00",
+  "load_bearing_computed_at": "2026-04-27T18:47:03.336946+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -74227,14 +74227,21 @@
       "verdict_rationale": null
     },
     "third_grown_family_sign_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner reproduces the 5/15 bounded-basin result exactly, but the boundary note is unaudited and the claim remains a finite sampled basin over selected drifts/seeds rather than a closed family-wide theorem.",
       "claim_id": "third_grown_family_sign_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -74242,18 +74249,20 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The family has a real bounded basin: 5/15 rows pass with exact zero and neutral controls, correct sign orientation on retained rows, and near-linear charge scaling.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "76508c7d99853cc8c8c636ebfc4ec5fc3aa0d60cc78b121b7cd1e5fa890a4a33",
       "note_path": "docs/THIRD_GROWN_FAMILY_SIGN_NOTE.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/THIRD_GROWN_FAMILY_BOUNDARY_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.369931+00:00",
@@ -74284,14 +74293,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 5,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 5
       },
       "runner_path": null,
       "title": "Third Grown Family Sign Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The current runner confirms the reported bounded basin, but the note's retained interpretation depends on an unaudited boundary note and on treating five passing drift/seed rows as a real basin rather than a finite sampled pocket. Why this blocks: exact controls and sign orientation close for the passing rows, but they do not prove a stable family-level basin or an independent geometry theorem beyond the tested grid. Repair target: audit the boundary note and add a holdout/tolerance harness or theorem defining the basin over a drift interval and seed family, not just the sampled rows. Claim boundary until fixed: safe to claim the live sweep has 5/15 passing rows, exact zero and neutral controls on the table, drift coverage 0.1/0.2/0.3 among passes, and mean exponent 0.999842; not safe to claim audit-clean retained third-grown-family closure beyond that finite bounded pocket."
     },
     "three_family_card_note": {
       "audit_date": null,

@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T18:38:46.355093+00:00
+**Generated:** 2026-04-27T18:47:03.667078+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 63 |
-| _proposed_retained_ | 40 |
+| _proposed_retained_ | 39 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 344 |
+| ~~audited_conditional~~ | 345 |
 | ~~audited_failed~~ | 134 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 63 |
-| `audited_conditional` | 131 |
+| `audited_conditional` | 132 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 67 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1339 |
+| `unaudited` | 1338 |
 
 | criticality | count |
 |---|---:|
@@ -279,6 +279,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `structured_chokepoint_bridge_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `symmetry_head_to_head_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `third_grown_family_sign_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `unpromoted_branch_retainability_audit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `valley_linear_continuum_synthesis_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_3plus1d_promotions_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
@@ -4272,6 +4273,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `GROWING_GRAPH_EXPANSION_CARD_NOTE.md`
   - `SOURCE_RESOLVED_GENERATED_NEW_FAMILY_V2_NOTE.md`
   - `WIDE_LATTICE_H2T_DISTANCE_LAW_NOTE.md`
+- **auditor confidence:** high
+
+### `third_grown_family_sign_note`
+
+- **Note:** [`THIRD_GROWN_FAMILY_SIGN_NOTE.md`](../../docs/THIRD_GROWN_FAMILY_SIGN_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The family has a real bounded basin: 5/15 rows pass with exact zero and neutral controls, correct sign orientation on retained rows, and near-linear charge scaling.  _(class `C`)_
+- **chain closes:** False — The live runner reproduces the 5/15 bounded-basin result exactly, but the boundary note is unaudited and the claim remains a finite sampled basin over selected drifts/seeds rather than a closed family-wide theorem.
+- **rationale:** Issue: The current runner confirms the reported bounded basin, but the note's retained interpretation depends on an unaudited boundary note and on treating five passing drift/seed rows as a real basin rather than a finite sampled pocket. Why this blocks: exact controls and sign orientation close for the passing rows, but they do not prove a stable family-level basin or an independent geometry theorem beyond the tested grid. Repair target: audit the boundary note and add a holdout/tolerance harness or theorem defining the basin over a drift interval and seed family, not just the sampled rows. Claim boundary until fixed: safe to claim the live sweep has 5/15 passing rows, exact zero and neutral controls on the table, drift coverage 0.1/0.2/0.3 among passes, and mean exponent 0.999842; not safe to claim audit-clean retained third-grown-family closure beyond that finite bounded pocket.
+- **open / conditional deps cited:**
+  - `THIRD_GROWN_FAMILY_BOUNDARY_NOTE.md`
 - **auditor confidence:** high
 
 ### `unpromoted_branch_retainability_audit_note`
