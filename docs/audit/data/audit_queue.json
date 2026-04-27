@@ -1,12 +1,70 @@
 {
   "by_criticality": {
-    "critical": 89,
-    "high": 508,
+    "critical": 92,
+    "high": 507,
     "leaf": 633,
     "medium": 82
   },
-  "generated_at": "2026-04-27T21:40:30.992404+00:00",
+  "generated_at": "2026-04-27T21:41:40.668552+00:00",
   "queue": [
+    {
+      "audit_independence_required": "cross_family_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "yukawa_color_projection_theorem",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "current_status": "support",
+      "deps": [],
+      "direct_in_degree": 4,
+      "load_bearing_score": 14.145,
+      "note_path": "docs/YUKAWA_COLOR_PROJECTION_THEOREM.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_yt_color_projection_correction.py",
+      "transitive_descendants": 282
+    },
+    {
+      "audit_independence_required": "cross_family_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "yt_ew_color_projection_theorem",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "rconn_derived_note",
+        "ew_current_matching_ozi_suppression_theorem_note_2026-04-27"
+      ],
+      "direct_in_degree": 23,
+      "load_bearing_score": 23.64,
+      "note_path": "docs/YT_EW_COLOR_PROJECTION_THEOREM.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_color_projection_mc.py",
+      "transitive_descendants": 281
+    },
+    {
+      "audit_independence_required": "cross_family_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "rconn_derived_note",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "current_status": "proposed_retained",
+      "deps": [
+        "yt_ew_color_projection_theorem",
+        "yukawa_color_projection_theorem",
+        "ew_current_matching_ozi_suppression_theorem_note_2026-04-27"
+      ],
+      "direct_in_degree": 14,
+      "load_bearing_score": 19.14,
+      "note_path": "docs/RCONN_DERIVED_NOTE.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_color_projection_mc.py",
+      "transitive_descendants": 281
+    },
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
       "audit_status": "unaudited",
@@ -90,6 +148,26 @@
       "note_path": "docs/SCALAR_3PLUS1_TEMPORAL_RATIO_NOTE.md",
       "ready": true,
       "runner_path": "scripts/frontier_scalar_3plus1_temporal_ratio.py",
+      "transitive_descendants": 281
+    },
+    {
+      "audit_independence_required": "cross_family_with_cross_confirmation",
+      "audit_status": "unaudited",
+      "blocker": null,
+      "claim_id": "ew_current_matching_ozi_suppression_theorem_note_2026-04-27",
+      "criticality": "critical",
+      "criticality_rank": 3,
+      "cross_confirmation_status": null,
+      "current_status": "bounded",
+      "deps": [
+        "rconn_derived_note",
+        "yt_ew_color_projection_theorem"
+      ],
+      "direct_in_degree": 2,
+      "load_bearing_score": 13.14,
+      "note_path": "docs/EW_CURRENT_MATCHING_OZI_SUPPRESSION_THEOREM_NOTE_2026-04-27.md",
+      "ready": true,
+      "runner_path": "scripts/frontier_color_projection_mc.py",
       "transitive_descendants": 281
     },
     {
@@ -400,23 +478,6 @@
       "note_path": "docs/GRAPH_FIRST_SU3_INTEGRATION_NOTE.md",
       "ready": true,
       "runner_path": "scripts/frontier_graph_first_su3_integration.py",
-      "transitive_descendants": 277
-    },
-    {
-      "audit_independence_required": "cross_family_with_cross_confirmation",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "rconn_derived_note",
-      "criticality": "critical",
-      "criticality_rank": 3,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 12,
-      "load_bearing_score": 18.119,
-      "note_path": "docs/RCONN_DERIVED_NOTE.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_color_projection_mc.py",
       "transitive_descendants": 277
     },
     {
@@ -5240,23 +5301,6 @@
       "note_path": "docs/publication/ci3_z3/RELEASE_ENVIRONMENT.md",
       "ready": true,
       "runner_path": null,
-      "transitive_descendants": 119
-    },
-    {
-      "audit_independence_required": "cross_family",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "yukawa_color_projection_theorem",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "support",
-      "deps": [],
-      "direct_in_degree": 3,
-      "load_bearing_score": 8.407,
-      "note_path": "docs/YUKAWA_COLOR_PROJECTION_THEOREM.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_yt_color_projection_correction.py",
       "transitive_descendants": 119
     },
     {
@@ -27123,6 +27167,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 899,
-  "total_pending": 1312
+  "ready_count": 901,
+  "total_pending": 1314
 }
