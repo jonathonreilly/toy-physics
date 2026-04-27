@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T15:59:44.268183+00:00",
-  "generated_at": "2026-04-27T15:59:42.675491+00:00",
-  "invalidation_run_at": "2026-04-27T15:59:44.220511+00:00",
+  "effective_status_computed_at": "2026-04-27T16:01:35.745280+00:00",
+  "generated_at": "2026-04-27T16:01:34.160524+00:00",
+  "invalidation_run_at": "2026-04-27T16:01:35.699618+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T15:59:44.125779+00:00",
+  "load_bearing_computed_at": "2026-04-27T16:01:35.606272+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -49384,14 +49384,21 @@
       "verdict_rationale": null
     },
     "mirror_grown_combined_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The exploratory negative result closes numerically, but the audit row is a parser false positive: the source Status explicitly says exploratory only and does not approximate the proposed_retained higher-symmetry benefit.",
       "claim_id": "mirror_grown_combined_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -49399,13 +49406,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The grown Z2 mirror scaffold remains Born-safe where it runs but does not reproduce the retained mirror chokepoint pocket or approximate the retained Z2xZ2 joint benefit.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "382ce62f64c63aebac1045bb7f0dad4d7fafcee954b96202a53d6ceabfd15bf1",
@@ -49441,14 +49448,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 4,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 4
       },
       "runner_path": null,
       "title": "Mirror + Grown Combined Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: The queue records this as proposed_retained because the Status line mentions the proposed_retained higher-symmetry benefit, but the source explicitly states 'exploratory only' and concludes this grown mirror scaffold is not the successor lane. Why this blocks: an exploratory negative control cannot be ratified as retained; doing so would invert the source's conclusion. Repair target: correct the Status/current_status to exploratory, bounded, or support, or author a separate retained grown-symmetry theorem with a runner that actually reproduces the mirror/Z2xZ2 benefit. Claim boundary until fixed: it is safe to claim the live runner reproduces the weak scout table and the negative conclusion that grown mirror does not approximate the retained benefit; it is not safe to present this note as a retained long-term vector."
     },
     "mirror_mutual_information_canonical_families_note": {
       "audit_date": null,

@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T15:59:44.469903+00:00
+**Generated:** 2026-04-27T16:01:35.949930+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 55 |
-| _proposed_retained_ | 102 |
+| _proposed_retained_ | 101 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
 | ~~audited_conditional~~ | 316 |
-| ~~audited_failed~~ | 108 |
+| ~~audited_failed~~ | 109 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 55 |
 | `audited_conditional` | 103 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 41 |
+| `audited_failed` | 42 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1401 |
+| `unaudited` | 1400 |
 
 | criticality | count |
 |---|---:|
@@ -299,6 +299,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `minimal_absorbing_horizon_probe_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `minimal_bidirectional_trapping_probe_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `mirror_2d_gravity_law_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `mirror_grown_combined_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `staggered_backreaction_green_closure_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `structured_mirror_bornsafe_scan_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -2889,6 +2890,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `logs/2026-04-03-mirror-chokepoint-boundary-n60-r5p0-N120.txt_missing`
   - `mixed_parameter_surface_not_registered_per_retained_row`
   - `runner_prints_diagnostics_without_hard_retention_assertions`
+- **auditor confidence:** high
+
+### `mirror_grown_combined_note`
+
+- **Note:** [`MIRROR_GROWN_COMBINED_NOTE.md`](../../docs/MIRROR_GROWN_COMBINED_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The grown Z2 mirror scaffold remains Born-safe where it runs but does not reproduce the retained mirror chokepoint pocket or approximate the retained Z2xZ2 joint benefit.  _(class `C`)_
+- **chain closes:** False — The exploratory negative result closes numerically, but the audit row is a parser false positive: the source Status explicitly says exploratory only and does not approximate the proposed_retained higher-symmetry benefit.
+- **rationale:** Issue: The queue records this as proposed_retained because the Status line mentions the proposed_retained higher-symmetry benefit, but the source explicitly states 'exploratory only' and concludes this grown mirror scaffold is not the successor lane. Why this blocks: an exploratory negative control cannot be ratified as retained; doing so would invert the source's conclusion. Repair target: correct the Status/current_status to exploratory, bounded, or support, or author a separate retained grown-symmetry theorem with a runner that actually reproduces the mirror/Z2xZ2 benefit. Claim boundary until fixed: it is safe to claim the live runner reproduces the weak scout table and the negative conclusion that grown mirror does not approximate the retained benefit; it is not safe to present this note as a retained long-term vector.
 - **auditor confidence:** high
 
 ### `mirror_mutual_information_chokepoint_note`
