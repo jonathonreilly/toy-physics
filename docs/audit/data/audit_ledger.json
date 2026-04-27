@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T09:36:26.357691+00:00",
-  "generated_at": "2026-04-27T09:36:24.478624+00:00",
-  "invalidation_run_at": "2026-04-27T09:36:26.290224+00:00",
+  "effective_status_computed_at": "2026-04-27T09:39:40.707731+00:00",
+  "generated_at": "2026-04-27T09:39:38.498224+00:00",
+  "invalidation_run_at": "2026-04-27T09:39:40.642127+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T09:36:26.149870+00:00",
+  "load_bearing_computed_at": "2026-04-27T09:39:40.479197+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -12871,14 +12871,21 @@
       "verdict_rationale": "Issue: the runner verifies the finite 2D additivity comparison, but the source row is a bounded support probe, not a standalone retained theorem; it depends on an unregistered proposed_retained 2D ordered-lattice/continuum lane and the 3D additivity note, and it explicitly leaves persistent-pattern inertia open. Why this blocks: a hostile physicist can accept the five valley-linear relative errors (0.04%, 0.04%, 0.08%, 0.00%, 0.01%) and five spent-delay deviations (about 25-29%) without accepting a first-principles Newton or inertial-mass closure. Repair target: register the 2D ordered-lattice lane and 3D additivity note as dependencies, register the runner path, and state the retained proposition as a bounded test-particle additivity theorem with explicit error thresholds and no persistent-mass implication. Claim boundary until fixed: it is safe to claim the current runner's finite 2D cross-family additivity support for valley-linear and non-additivity for spent-delay; it is not safe to retain a broader source/mass derivation."
     },
     "composite_source_additivity_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The live runner reproduces all five valley-linear additivity checks at 0.00% printed relative error and all five spent-delay non-additivity checks at about 24-29% relative error. The conclusion is restricted to the fixed weak-field test-particle family and explicitly does not derive persistent-pattern inertial mass or one-parameter mass closure.",
       "claim_id": "composite_source_additivity_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -12886,13 +12893,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note's load-bearing narrow claim is that on the fixed weak-field 3D ordered-lattice test-particle family, valley-linear is genuinely additive under same-site source-strength and disjoint-source field composition while spent-delay is not.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "258bc5c839f3129afe1d05f903c3c8ebf89bd1a4062270608a724bd741e21e27",
@@ -12928,14 +12935,14 @@
       "runner_check_breakdown": {
         "A": 0,
         "B": 0,
-        "C": 0,
+        "C": 10,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 10
       },
       "runner_path": null,
       "title": "Composite-Source Additivity Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The runner computes the disputed finite comparisons directly on the stated 3D ordered-lattice family: three same-site strength-additivity rows and two disjoint-source field-additivity rows for both valley-linear and spent-delay. The source note keeps the retained statement narrow to test-particle source-response additivity and explicitly excludes persistent-pattern inertial mass and beyond-family one-parameter mass closure, so the chain closes only at that bounded surface. Residual boundary: downstream Newton or inertial-response claims must still carry their own open-step audits."
     },
     "confinement_string_tension_note": {
       "audit_date": "2026-04-27T02:43:33.438907+00:00",

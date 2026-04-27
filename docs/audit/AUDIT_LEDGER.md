@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T09:36:26.630933+00:00
+**Generated:** 2026-04-27T09:39:40.980617+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 19 |
-| _proposed_retained_ | 192 |
+| **retained** | 20 |
+| _proposed_retained_ | 191 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 19 |
+| `audited_clean` | 20 |
 | `audited_conditional` | 70 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 13 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1487 |
+| `unaudited` | 1486 |
 
 | criticality | count |
 |---|---:|
@@ -106,6 +106,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `alt_connectivity_family_sign_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `claude_complex_action_carryover_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `claude_complex_action_grown_companion_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `composite_source_additivity_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `i3_zero_exact_theorem_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -579,6 +580,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `proposed_retained_2D_ordered_lattice_lane_not_registered_as_dependency`
   - `scripts/composite_source_additivity_2d_cross_family.py_not_registered_as_runner_path`
   - `persistent_pattern_inertia_explicitly_open`
+- **auditor confidence:** high
+
+### `composite_source_additivity_note`
+
+- **Note:** [`COMPOSITE_SOURCE_ADDITIVITY_NOTE.md`](../../docs/COMPOSITE_SOURCE_ADDITIVITY_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note's load-bearing narrow claim is that on the fixed weak-field 3D ordered-lattice test-particle family, valley-linear is genuinely additive under same-site source-strength and disjoint-source field composition while spent-delay is not.  _(class `C`)_
+- **chain closes:** True — The live runner reproduces all five valley-linear additivity checks at 0.00% printed relative error and all five spent-delay non-additivity checks at about 24-29% relative error. The conclusion is restricted to the fixed weak-field test-particle family and explicitly does not derive persistent-pattern inertial mass or one-parameter mass closure.
+- **rationale:** The runner computes the disputed finite comparisons directly on the stated 3D ordered-lattice family: three same-site strength-additivity rows and two disjoint-source field-additivity rows for both valley-linear and spent-delay. The source note keeps the retained statement narrow to test-particle source-response additivity and explicitly excludes persistent-pattern inertial mass and beyond-family one-parameter mass closure, so the chain closes only at that bounded surface. Residual boundary: downstream Newton or inertial-response claims must still carry their own open-step audits.
 - **auditor confidence:** high
 
 ### `confinement_string_tension_note`
