@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T16:01:35.949930+00:00
+**Generated:** 2026-04-27T16:03:21.979721+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 55 |
-| _proposed_retained_ | 101 |
+| _proposed_retained_ | 100 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
 | ~~audited_conditional~~ | 316 |
-| ~~audited_failed~~ | 109 |
+| ~~audited_failed~~ | 110 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 55 |
 | `audited_conditional` | 103 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 42 |
+| `audited_failed` | 43 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1400 |
+| `unaudited` | 1399 |
 
 | criticality | count |
 |---|---:|
@@ -300,6 +300,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `minimal_bidirectional_trapping_probe_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `mirror_2d_gravity_law_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `mirror_grown_combined_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
+| `mirror_vs_lattice_program_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
 | `staggered_backreaction_green_closure_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `structured_mirror_bornsafe_scan_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `work_history.repo.review_feedback.architecture_portability_audit_2026-04-11` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | B | - |
@@ -2919,6 +2920,27 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `scripts/mirror_chokepoint_joint.py_imported_generator_not_registered_as_clean_one_hop_dependency`
   - `runner_prints_diagnostics_without_hard_mid_N_or_non_asymptotic_assertions`
   - `canonical_dense_window_wording_overstates_N100_MI_advantage_boundary`
+- **auditor confidence:** high
+
+### `mirror_vs_lattice_program_note`
+
+- **Note:** [`MIRROR_VS_LATTICE_PROGRAM_NOTE.md`](../../docs/MIRROR_VS_LATTICE_PROGRAM_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note ranks mirror as the flagship coexistence lane, ordered lattice as the strongest secondary law-side branch, and NN refinement as a bounded continuum-side frontier using the named canonical references.  _(class `B`)_
+- **chain closes:** False — The comparison depends on cited program notes whose current audit/effective statuses are unaudited, conditional, or failed, and there is no runner or ledger-derived check that recomputes the ranking from clean retained inputs.
+- **rationale:** Issue: The retained comparison imports multiple named authorities that are not audit-clean, including unaudited/unknown synthesis and lattice notes, a conditional mirror MI note, and failed lattice-side notes such as LATTICE_3D_DENSE_SPENT_DELAY_NOTE and LATTICE_SYNTHESIS_GUARD_NOTE. Why this blocks: the note's flagship/secondary/frontier ranking is a cross-note synthesis, so it cannot be retained while load-bearing source rows are unaudited, conditional, or failed. Repair target: first audit or repair the cited authorities, remove failed inputs from the retained comparison, and ideally generate the comparison table from audit_ledger effective_status so only retained dependencies can support retained wording. Claim boundary until fixed: it is safe to use this as a provisional editorial map of intended program lanes, with mirror_2D_validation and lattice_distance_law called out as clean where applicable; it is not safe to present the whole mirror-vs-lattice ranking as an audit-retained canonical comparison.
+- **open / conditional deps cited:**
+  - `AUDITED_SYMMETRY_SYNTHESIS_NOTE.md`
+  - `UNIFIED_PROGRAM_NOTE.md`
+  - `MIRROR_MUTUAL_INFORMATION_CHOKEPOINT_NOTE.md`
+  - `LATTICE_FAMILY_VALIDATION_NOTE.md`
+  - `LATTICE_FIELD_STRENGTH_UNIFICATION_NOTE.md`
+  - `LATTICE_3D_DENSE_SPENT_DELAY_NOTE.md`
+  - `LATTICE_NN_CONTINUUM_NOTE.md`
+  - `LATTICE_SYNTHESIS_GUARD_NOTE.md`
 - **auditor confidence:** high
 
 ### `moving_source_cross_family_note`
