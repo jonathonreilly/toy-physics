@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 89,
     "high": 508,
-    "leaf": 646,
+    "leaf": 645,
     "medium": 82
   },
-  "generated_at": "2026-04-27T19:45:28.828885+00:00",
+  "generated_at": "2026-04-27T19:47:15.259733+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -25151,23 +25151,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "yt_h_unit_flavor_column_decomposition_note_2026-04-18",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/YT_H_UNIT_FLAVOR_COLUMN_DECOMPOSITION_NOTE_2026-04-18.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_yt_h_unit_flavor_column.py",
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "yt_p1_bz_quadrature_2_loop_full_staggered_pt_note_2026-04-18",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -27344,6 +27327,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 912,
-  "total_pending": 1325
+  "ready_count": 911,
+  "total_pending": 1324
 }

@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T19:45:28.973819+00:00
+**Generated:** 2026-04-27T19:47:15.398969+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 72 |
-| _proposed_retained_ | 23 |
+| _proposed_retained_ | 22 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 349 |
+| ~~audited_conditional~~ | 350 |
 | ~~audited_failed~~ | 137 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 72 |
-| `audited_conditional` | 136 |
+| `audited_conditional` | 137 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 70 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1322 |
+| `unaudited` | 1321 |
 
 | criticality | count |
 |---|---:|
@@ -303,6 +303,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_ew_color_projection_theorem` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
 | `yt_ew_delta_r_retention_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
 | `yt_generation_hierarchy_primitive_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
+| `yt_h_unit_flavor_column_decomposition_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `yt_p1_delta_r_2_loop_extension_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
 | `yt_p1_delta_r_sm_rge_crosscheck_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
@@ -4733,6 +4734,26 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `CHARGED_LEPTON_MASS_HIERARCHY_REVIEW_NOTE_2026-04-17.md`
   - `STRUCTURAL_NO_GO_SURVEY_NOTE.md`
   - `KOIDE_CIRCULANT_CHARACTER_DERIVATION_NOTE_2026-04-18.md`
+- **auditor confidence:** high
+
+### `yt_h_unit_flavor_column_decomposition_note_2026-04-18`
+
+- **Note:** [`YT_H_UNIT_FLAVOR_COLUMN_DECOMPOSITION_NOTE_2026-04-18.md`](../../docs/YT_H_UNIT_FLAVOR_COLUMN_DECOMPOSITION_NOTE_2026-04-18.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Flavor-column decompositions of H_unit fail because up/down sub-block projectors are impure (1,1)+(3,1) mixtures with Z^2 = 3 != 6, generation-indexed projectors remain uniform with Z^2 = 6, and SU(2)_L forbids (1,1)-(3,1) mixing at M_Pl.  _(class `A`)_
+- **chain closes:** False — The live runner passes all 79 checks for the class #1 no-go, but the result imports Ward/D17, b-quark, gauge, and generation authorities whose current ledger statuses are support, conditional, or unknown. The no-go is therefore supported as a conditional retention analysis rather than a clean retained theorem.
+- **rationale:** Issue: the runner-supported class #1 no-go depends on D17/Block 6 Ward uniqueness, the b-quark Outcome A setup, exact SU(2)_L/gauge inputs, and three-generation inputs that are not all retained in the current audit ledger. Why this blocks: an algebraic decomposition of P_up/P_down can close only relative to those imported authority surfaces; if D17, N_iso/N_c, or the b-quark setup remains support/conditional/unknown, the retained no-go cannot propagate cleanly. Repair target: audit/promote the Ward-identity theorem, bottom-Yukawa retention analysis, native gauge closure, one-generation/three-generation inputs, and Z2/site-phase companion notes, or rewrite this note as a strictly conditional class #1 exclusion over named assumptions. Claim boundary until fixed: safe to claim the 79/79 runner shows H_unit flavor-column decomposition is excluded under the stated Ward/D17 and SU(2)_L assumptions; not safe to claim an unconditional retained no-go for class #1 on the fully retained surface.
+- **open / conditional deps cited:**
+  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
+  - `YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md`
+  - `THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md`
+  - `ONE_GENERATION_MATTER_CLOSURE_NOTE.md`
+  - `Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md`
+  - `SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md`
+  - `NATIVE_GAUGE_CLOSURE_NOTE.md`
 - **auditor confidence:** high
 
 ### `yt_p1_bz_quadrature_full_staggered_pt_note_2026-04-18`

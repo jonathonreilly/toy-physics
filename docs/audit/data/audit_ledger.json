@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T19:45:28.775373+00:00",
-  "generated_at": "2026-04-27T19:45:27.173539+00:00",
-  "invalidation_run_at": "2026-04-27T19:45:28.727196+00:00",
+  "effective_status_computed_at": "2026-04-27T19:47:15.213171+00:00",
+  "generated_at": "2026-04-27T19:47:13.627408+00:00",
+  "invalidation_run_at": "2026-04-27T19:47:15.166725+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T19:45:28.628903+00:00",
+  "load_bearing_computed_at": "2026-04-27T19:47:15.068125+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -84552,14 +84552,21 @@
       "verdict_rationale": "Issue: the refined note combines a passed narrow position-basis no-go with a positive circulant-spectrum mechanism whose physical hierarchy bridge depends on non-retained A1 equipartition, P1 sqrt(m) identification, and multiple one-hop authorities that are support, conditional, or unknown. Why this blocks: the runner establishes algebraic facts and comparator failures, but it does not derive the missing hierarchy primitives or promote the imported foundation stack. Repair target: split the retained algebraic no-go from the candidate extension, audit/promote the one-hop authorities, and add retained derivations or pass/fail runners for A1, P1, the overall scale, and the delta/unit bridge. Claim boundary until fixed: safe to claim the 51/51 runner supports the position-basis no-go, the failure of the tested retained-surface candidates, and the existence of distinct Fourier-basis circulant eigenvalues; not safe to claim a clean retained generation-hierarchy primitive or a retained Koide/fermion-mass mechanism beyond those conditional inputs."
     },
     "yt_h_unit_flavor_column_decomposition_note_2026-04-18": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The live runner passes all 79 checks for the class #1 no-go, but the result imports Ward/D17, b-quark, gauge, and generation authorities whose current ledger statuses are support, conditional, or unknown. The no-go is therefore supported as a conditional retention analysis rather than a clean retained theorem.",
       "claim_id": "yt_h_unit_flavor_column_decomposition_note_2026-04-18",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -84567,18 +84574,26 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Flavor-column decompositions of H_unit fail because up/down sub-block projectors are impure (1,1)+(3,1) mixtures with Z^2 = 3 != 6, generation-indexed projectors remain uniform with Z^2 = 6, and SU(2)_L forbids (1,1)-(3,1) mixing at M_Pl.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "3b3b2fa7f61e22c22983d9baa8b6da3fd811d871d0be5fc024b2acaddca7912f",
       "note_path": "docs/YT_H_UNIT_FLAVOR_COLUMN_DECOMPOSITION_NOTE_2026-04-18.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
+        "docs/YT_BOTTOM_YUKAWA_RETENTION_ANALYSIS_NOTE_2026-04-18.md",
+        "docs/THREE_GENERATION_OBSERVABLE_THEOREM_NOTE.md",
+        "docs/ONE_GENERATION_MATTER_CLOSURE_NOTE.md",
+        "docs/Z2_HW1_MASS_MATRIX_PARAMETRIZATION_NOTE.md",
+        "docs/SITE_PHASE_CUBE_SHIFT_INTERTWINER_NOTE.md",
+        "docs/NATIVE_GAUGE_CLOSURE_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.370282+00:00",
@@ -84607,16 +84622,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 65,
         "B": 0,
         "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "D": 14,
+        "total_pass": 79
       },
       "runner_path": "scripts/frontier_yt_h_unit_flavor_column.py",
       "title": "H_unit Flavor-Column Decomposition Retention Analysis Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the runner-supported class #1 no-go depends on D17/Block 6 Ward uniqueness, the b-quark Outcome A setup, exact SU(2)_L/gauge inputs, and three-generation inputs that are not all retained in the current audit ledger. Why this blocks: an algebraic decomposition of P_up/P_down can close only relative to those imported authority surfaces; if D17, N_iso/N_c, or the b-quark setup remains support/conditional/unknown, the retained no-go cannot propagate cleanly. Repair target: audit/promote the Ward-identity theorem, bottom-Yukawa retention analysis, native gauge closure, one-generation/three-generation inputs, and Z2/site-phase companion notes, or rewrite this note as a strictly conditional class #1 exclusion over named assumptions. Claim boundary until fixed: safe to claim the 79/79 runner shows H_unit flavor-column decomposition is excluded under the stated Ward/D17 and SU(2)_L assumptions; not safe to claim an unconditional retained no-go for class #1 on the fully retained surface."
     },
     "yt_interacting_bridge_locality_note": {
       "audit_date": null,
