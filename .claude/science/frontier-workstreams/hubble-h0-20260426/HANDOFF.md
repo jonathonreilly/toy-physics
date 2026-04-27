@@ -5,7 +5,7 @@
 
 ## Current State
 
-**Cycles 1-5 complete.**
+**Cycles 1-6 complete.**
 
 **Cycle 1 (R4 — Hubble Tension Structural Lock):**
 
@@ -33,6 +33,11 @@
 
 - `docs/HUBBLE_LANE5_PLANCK_C1_GATE_AUDIT_NOTE_2026-04-26.md`
 - (no runner — review of retained Planck-lane material)
+
+**Cycle 6 (Lane 5 Workstream Consolidation):**
+
+- `docs/HUBBLE_LANE5_WORKSTREAM_STATUS_NOTE_2026-04-27.md`
+- (no runner — editorial consolidation / status surface)
 
 Branch-local 6-criterion self-review PASS for both cycles. Cycle 1
 required one premise-tightening edit (3 → 2 premises). Cycle 2 required
@@ -93,31 +98,30 @@ on a primitive algebraic block.
 Neither cycle retires the `H_0` import (Lane 5 main target). They lock
 the structural form and exhaustively classify the closure pathways.
 
-## Next Exact Action (Cycle 6 candidate)
+## Next Exact Action (Cycle 7 candidate)
 
-Both necessary gates `(C1)` and `(C2)` are now isolated. The natural
-next moves are:
+With both gates isolated and the workstream consolidated, the
+remaining single-cycle candidates are speculative or hygiene:
 
-- **Cycle 6 candidate A — Cycles 1-5 consolidation note.** Single
-  Lane 5 status surface mapping the entire workstream output
-  (structural lock + open-number reduction + closure-pathway no-go +
-  `(C2)` gate + `(C1)` gate) into one read-first publication-friendly
-  status note. Useful for the post-workstream review-and-integration
-  step.
-- **Cycle 6 candidate B — direct cosmic-`L` vacuum/topology
+- **Cycle 7 candidate A — direct cosmic-`L` vacuum/topology
   exploration (would open `(C3)`).** Survey the framework's
   vacuum/topology content for any retained route giving
   `Omega_Lambda` outside the matter cascade. The only unaddressed
   closure-pathway class. Likely produces a no-go for easy options or
   identifies an unexplored vacuum-topology premise.
-- **Cycle 6 candidate C — cross-cycle audit.** Check for unmodeled
-  premises slipped into Cycles 1-5; verify cross-references are
-  coherent; identify any inadvertent overclaim.
-- **Recommendation:** Candidate A. With both gates isolated, a
-  consolidation note is the natural payload for the post-workstream
-  review pipeline. Candidate B is the other interesting direction
-  (`(C3)` exploration) but is more speculative; better as a
-  cycle 7+. Candidate C is hygiene work that can interleave.
+- **Cycle 7 candidate B — cross-cycle audit (hygiene).** Check for
+  unmodeled premises slipped into Cycles 1-6; verify cross-references
+  are coherent; identify any inadvertent overclaim.
+- **Cycle 7 candidate C — tension-reconstruction comparator (extends
+  Cycle 1).** Runner-grade numerical comparison of SH0ES `H_0 -> L`
+  vs Planck `H_0 -> L` on the structural lock surface. Tier A; pure
+  support but operationally useful for the manuscript-surface tension
+  stance.
+- **Recommendation:** Candidate B. After a five-cycle structural
+  workstream, a hygiene audit is high-value: catches drift, ensures
+  cross-references are coherent, and is the natural close-out before
+  the post-workstream review-and-integration pipeline. Candidate A
+  is speculative; Candidate C is support-grade.
 
 ## Repo-Wide Weaving (NOT to apply on this branch)
 

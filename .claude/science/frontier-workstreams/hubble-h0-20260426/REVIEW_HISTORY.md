@@ -205,22 +205,51 @@ produced in the workstream.
 - **Disposition:** Cycle 5 accepted. Both Lane 5 closure-pathway gates
   now isolated: `(C1)` (Cycle 5) and `(C2)` (Cycle 4).
 
-## Cycle 6+ — pending evaluation
+## Cycle 6 — Lane 5 Workstream Consolidation
 
-With both `(C1)` and `(C2)` gates explicitly isolated, the natural
-next moves are:
+- **Date:** 2026-04-27
+- **Artifact:**
+  `docs/HUBBLE_LANE5_WORKSTREAM_STATUS_NOTE_2026-04-27.md`
+  (consolidation / status note; no runner).
+- **Review mode:** branch-local 6-criterion self-review.
+- **Findings:**
+  1. **CodeRunnerReviewer (PASS).** No runner; consolidation is
+     editorial / navigational over existing cycle artifacts.
+  2. **PhysicsClaimReviewer (PASS).** No new claim introduced;
+     reorganizes Cycles 1-5 into one status surface. Side-by-side
+     `(C1)`/`(C2)` symmetric two-gate map and per-cycle import
+     accounting are accurate to the cycle artifacts.
+  3. **ImportSupportReviewer (PASS).** No new imports.
+  4. **NatureRetentionReviewer (PASS).** Scoped as "retained branch-
+     local consolidation note", not theorem-grade. The "Headline" §0
+     correctly attributes claim-state to each cycle's authority note
+     rather than to the consolidation note itself.
+  5. **RepoGovernanceReviewer (PASS).** Naming convention
+     `*_WORKSTREAM_STATUS_NOTE_*`. Manuscript-surface weave proposals
+     in §6 mirror the per-cycle HANDOFF.md proposals.
+  6. **MethodologySkillReviewer (PASS).** Editorial consolidation
+     after a multi-cycle workstream qualifies as legitimate
+     post-execution synthesis. Not low-value churn — it produces a
+     reviewer/integrator-friendly read-first surface that the
+     individual cycle notes do not.
+- **Disposition:** Cycle 6 accepted. Workstream now has a single
+  navigation surface for the post-workstream review pipeline.
 
-- **Cycles 1-5 consolidation note**: single Lane 5 status surface
-  mapping the entire workstream output (structural lock + open-number
-  reduction + closure-pathway no-go + `(C2)` gate + `(C1)` gate) into
-  one read-first publication-friendly status note.
-- **Direct cosmic-`L` vacuum/topology exploration**: the only
-  unaddressed closure-pathway class is `(C3)`. Audit whether any
-  framework-internal vacuum/topology argument could give
-  `Omega_Lambda` outside the matter cascade. Likely produces a no-go
-  for easy options or identifies an unexplored vacuum-topology premise.
-- **Cross-cycle audit**: check for unmodeled premises slipped into
-  Cycles 1-5; verify cross-references are coherent.
+## Cycle 7+ — pending evaluation
+
+With both gates isolated and the workstream consolidated, the
+remaining single-cycle candidates are speculative or hygiene:
+
+- **Direct cosmic-`L` vacuum/topology exploration** (would open the
+  unaddressed `(C3)` class): speculative; likely produces a no-go for
+  easy options.
+- **Cross-cycle audit**: hygiene — check for unmodeled premises
+  slipped into Cycles 1-5; verify cross-references are coherent.
+- **Tension-reconstruction comparator** (extends Cycle 1): runner-
+  grade numerical comparison of SH0ES H_0 → implied L vs Planck
+  H_0 → implied L on the structural lock surface. Tier A; pure
+  support, but operationally useful for the manuscript-surface
+  tension stance.
 
 Loop continues per ScheduleWakeup.
 
