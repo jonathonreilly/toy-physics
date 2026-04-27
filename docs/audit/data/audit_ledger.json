@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T05:05:40.088454+00:00",
-  "generated_at": "2026-04-27T05:05:38.094119+00:00",
-  "invalidation_run_at": "2026-04-27T05:05:40.024124+00:00",
+  "effective_status_computed_at": "2026-04-27T05:07:35.221815+00:00",
+  "generated_at": "2026-04-27T05:07:33.429277+00:00",
+  "invalidation_run_at": "2026-04-27T05:07:35.155199+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T05:05:39.898326+00:00",
+  "load_bearing_computed_at": "2026-04-27T05:07:35.033443+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -38989,14 +38989,21 @@
       "verdict_rationale": "The hostile audit agrees with the packet's bounded conclusion, not with any native closure claim. The runner set verifies exact residual-kernel/no-go statements, pointed-origin exhaustion, objection-closure review, native-zero-section conditional route, nature-review boundary flags, A1 radian-bridge irreducibility, and hostile-review guards. Those outputs support KOIDE_DIMENSIONLESS_NATIVE_CLOSURE=FALSE and NATIVE_ROUTE_IMPLIES_VALUES_CONDITIONALLY=TRUE. The blocker is that this is an integration/review packet with no primary runner registered in the audit queue and no one-hop dependency list in the ledger, even though it relies on ten separate runners and several underlying Koide theorems; some of those component claims are already only conditional. The note also has a verification-text mismatch for the residual-cohomology full-lane flag. To repair the claim, register the review packet's ten verification runners or their theorem notes as one-hop dependencies with audited statuses, fix the expected flag name, and provide clean retained theorems for the named residuals: physical background source zero equivalent to Z-erasure, selected-line local boundary source law, and based open-endpoint section. What can safely be claimed now is the negative/conditional boundary: the reviewed data do not close the dimensionless Koide lane; Q is reduced to a physical source-free reduced-carrier selection problem, delta remains conditional on selected-line and endpoint-source laws, and the native zero-section route is a next theorem target rather than current retained closure."
     },
     "koide_native_zero_section_closure_route_note_2026-04-24": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 7.883,
+        "transitive_descendants": 117
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner passes 17/17 and proves the algebraic consequences of the proposed native identifications. It explicitly labels the route conditional and does not derive the physical Brannen endpoint as the whole real Z3 primitive, the unit-preserving determinant-line endpoint readout, or the charged-lepton zero-source scalar readout.",
       "claim_id": "koide_native_zero_section_closure_route_note_2026-04-24",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -39004,18 +39011,24 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 2,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 7.883,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Under the native zero-section identifications z = 0, spectator = 0, and c = 0, the runner verifies Q = 2/3 and delta_open = eta_APS = 2/9.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "a51c30079c2515be62ae317fea9a76f1de2b3b8c96aec216a188d437b4728d79",
       "note_path": "docs/KOIDE_NATIVE_ZERO_SECTION_CLOSURE_ROUTE_NOTE_2026-04-24.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "native_zero_source_charged_lepton_scalar_readout_theorem_open",
+        "Brannen_endpoint_is_real_Z3_primitive_not_rank_one_line_theorem_open",
+        "unit_preserving_determinant_line_endpoint_readout_theorem_open",
+        "APS_eta_fixed_point_authority_not_registered_one_hop_dependency",
+        "frontier_koide_lane_regression.py_rc_1_due_to_frontier_koide_q_so2_phase_erasure_support_22_of_23"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368822+00:00",
@@ -39044,16 +39057,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 14,
+        "B": 3,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 17
       },
       "runner_path": "scripts/frontier_koide_native_zero_section_closure_route.py",
       "title": "Koide native zero-section closure route",
       "transitive_descendants": 117,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the route closes only after assuming the three zero-section identifications z=0, spectator=0, and c=0. Why this blocks: the primary runner proves exact representation and endpoint algebra once the native real-primitive endpoint, based determinant-line readout, and zero-source scalar readout are accepted, but it does not derive those physical identifications from registered retained authorities; the source note also states that retained-only closure is not claimed, and the broader Koide lane regression currently fails one q_so2 phase-erasure support check. Repair target: add retained theorems/runners deriving the charged-lepton zero-source scalar readout, proving the Brannen endpoint is the whole real nontrivial Z3 primitive rather than a rank-one line, and proving the determinant-line endpoint readout is unit-preserving/based. Claim boundary until fixed: it is safe to claim this exact conditional native route and its representation-theoretic no-spectator consequence; it is not safe to claim proposed-retained-only Koide closure."
     },
     "koide_native_zero_section_nature_review_note_2026-04-24": {
       "audit_date": "2026-04-26",

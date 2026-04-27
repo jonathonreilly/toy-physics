@@ -1,11 +1,11 @@
 {
   "by_criticality": {
     "critical": 88,
-    "high": 519,
+    "high": 518,
     "leaf": 856,
     "medium": 85
   },
-  "generated_at": "2026-04-27T05:05:40.156483+00:00",
+  "generated_at": "2026-04-27T05:07:35.294467+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -5534,23 +5534,6 @@
       "note_path": "docs/KOIDE_EIGENVALUE_Q23_SURFACE_THEOREM_NOTE_2026-04-20.md",
       "ready": true,
       "runner_path": "scripts/frontier_koide_eigenvalue_q23_surface_theorem.py",
-      "transitive_descendants": 117
-    },
-    {
-      "audit_independence_required": "cross_family",
-      "audit_status": "unaudited",
-      "blocker": null,
-      "claim_id": "koide_native_zero_section_closure_route_note_2026-04-24",
-      "criticality": "high",
-      "criticality_rank": 2,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 2,
-      "load_bearing_score": 7.883,
-      "note_path": "docs/KOIDE_NATIVE_ZERO_SECTION_CLOSURE_ROUTE_NOTE_2026-04-24.md",
-      "ready": true,
-      "runner_path": "scripts/frontier_koide_native_zero_section_closure_route.py",
       "transitive_descendants": 117
     },
     {
@@ -31092,6 +31075,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1142,
-  "total_pending": 1548
+  "ready_count": 1141,
+  "total_pending": 1547
 }
