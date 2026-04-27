@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T13:06:44.689751+00:00
+**Generated:** 2026-04-27T13:08:23.575068+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 46 |
-| _proposed_retained_ | 145 |
+| _proposed_retained_ | 144 |
 | _proposed_promoted_ | 2 |
 | bounded | 184 |
 | support | 106 |
@@ -30,7 +30,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_numerical_match~~ | 5 |
 | ~~audited_renaming~~ | 2 |
 | ~~audited_conditional~~ | 300 |
-| ~~audited_failed~~ | 90 |
+| ~~audited_failed~~ | 91 |
 
 | audit_status | count |
 |---|---:|
@@ -38,10 +38,10 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | `audited_clean` | 46 |
 | `audited_conditional` | 87 |
 | `audited_decoration` | 3 |
-| `audited_failed` | 23 |
+| `audited_failed` | 24 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1445 |
+| `unaudited` | 1444 |
 
 | criticality | count |
 |---|---:|
@@ -253,6 +253,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `fifth_family_radial_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `framework_bare_alpha_3_alpha_em_dimension_fixed_ratio_support_note_2026-04-25` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_note_2026-04-19` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
+| `gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_note_2026-04-19` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | A | - |
 | `lattice_3d_dense_spent_delay_note` | _proposed_retained_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `lattice_kernel_transfer_norm_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
 | `mirror_2d_gravity_law_note` | _proposed_promoted_ | ~~audited_failed~~ | ~~audited_failed~~ | cross_family | codex-current | C | - |
@@ -1629,6 +1630,20 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **rationale:** Issue: the note declares a runner and expected PASS=6, but the runner path is missing, so the off-diagonal norm 0.250338180104 and diagonal-fit residuals 0.135462193897 / 0.228465896152 are not reproducible from the allowed artifacts. Why this blocks: those numbers are the proof that the rank-one witness lies outside the canonical Wilson factorized class and that the audited diagonal family misses the completed triple; without the runner or equivalent one-hop derivation, the theorem is unsupported. Repair target: restore the exact runner or replace the note with a current executable proof that constructs M, T_min, Z_min, performs the positive conjugation-symmetric diagonal search, and reproduces PASS=6 from cited retained inputs. Claim boundary until fixed: safely claim only that the remaining Wilson target is intended to be stricter than generic transfer existence; do not claim the specific non-factorization theorem, residual bounds, or retained-sector boundary.
 - **open / conditional deps cited:**
   - `scripts/frontier_gauge_vacuum_plaquette_first_sector_rank_one_factorized_class_boundary_2026_04_19.py`
+- **auditor confidence:** high
+
+### `gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_note_2026-04-19`
+
+- **Note:** [`GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_TAIL_UNDERDETERMINATION_THEOREM_NOTE_2026-04-19.md`](../../docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_TAIL_UNDERDETERMINATION_THEOREM_NOTE_2026-04-19.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_failed~~
+- **effective_status:** ~~audited_failed~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Two full extensions agree exactly on the retained first-sector packet and reconstruct the same retained three-sample triple, but induce different Perron states and different Perron/Jacobi packets for the same source operator J.  _(class `A`)_
+- **chain closes:** False — The source note's underdetermination theorem depends on the declared PASS=6 runner, but `scripts/frontier_gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_2026_04_19.py` is absent from the worktree. Without that executable construction or one-hop source data for both extensions and their Perron/Jacobi packets, the claimed inequivalence cannot be audited.
+- **rationale:** Issue: the note declares an exact runner and expected PASS=6, but the runner path is missing, so the two-extension underdetermination construction is not reproducible from the allowed artifacts. Why this blocks: the theorem requires verifying exact agreement on the retained packet and triple while showing different Perron states and Perron/Jacobi packets; prose alone does not establish those equalities and separations. Repair target: restore the runner or replace it with a current executable proof that constructs the zero extension and positive decaying tail extension, checks retained-packet/triple equality, and prints the Perron/Perron-Jacobi separation checks. Claim boundary until fixed: safely claim only that tail completion is posed as the remaining framework-point seam; do not claim a retained underdetermination theorem or explicit inequivalent extension pair.
+- **open / conditional deps cited:**
+  - `scripts/frontier_gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_2026_04_19.py`
 - **auditor confidence:** high
 
 ### `global_coherence_off_scaffold_note`

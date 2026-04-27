@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T13:06:44.503982+00:00",
-  "generated_at": "2026-04-27T13:06:42.925057+00:00",
-  "invalidation_run_at": "2026-04-27T13:06:44.457915+00:00",
+  "effective_status_computed_at": "2026-04-27T13:08:23.375994+00:00",
+  "generated_at": "2026-04-27T13:08:21.790533+00:00",
+  "invalidation_run_at": "2026-04-27T13:08:23.330023+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T13:06:44.363725+00:00",
+  "load_bearing_computed_at": "2026-04-27T13:08:23.235866+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -32201,14 +32201,21 @@
       "verdict_rationale": "Issue: the note declares a runner and expected PASS=6, but the runner path is missing, so the off-diagonal norm 0.250338180104 and diagonal-fit residuals 0.135462193897 / 0.228465896152 are not reproducible from the allowed artifacts. Why this blocks: those numbers are the proof that the rank-one witness lies outside the canonical Wilson factorized class and that the audited diagonal family misses the completed triple; without the runner or equivalent one-hop derivation, the theorem is unsupported. Repair target: restore the exact runner or replace the note with a current executable proof that constructs M, T_min, Z_min, performs the positive conjugation-symmetric diagonal search, and reproduces PASS=6 from cited retained inputs. Claim boundary until fixed: safely claim only that the remaining Wilson target is intended to be stricter than generic transfer existence; do not claim the specific non-factorization theorem, residual bounds, or retained-sector boundary."
     },
     "gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_note_2026-04-19": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_failed",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The source note's underdetermination theorem depends on the declared PASS=6 runner, but `scripts/frontier_gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_2026_04_19.py` is absent from the worktree. Without that executable construction or one-hop source data for both extensions and their Perron/Jacobi packets, the claimed inequivalence cannot be audited.",
       "claim_id": "gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_note_2026-04-19",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -32216,18 +32223,20 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_failed",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_failed",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Two full extensions agree exactly on the retained first-sector packet and reconstruct the same retained three-sample triple, but induce different Perron states and different Perron/Jacobi packets for the same source operator J.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "b2fc6204e4355d718e8b2915414453d977eada8db73e8561a939e116d9b76b34",
       "note_path": "docs/GAUGE_VACUUM_PLAQUETTE_FIRST_SECTOR_TAIL_UNDERDETERMINATION_THEOREM_NOTE_2026-04-19.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "scripts/frontier_gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_2026_04_19.py"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.368454+00:00",
@@ -32290,7 +32299,7 @@
       "runner_path": "scripts/frontier_gauge_vacuum_plaquette_first_sector_tail_underdetermination_theorem_2026_04_19.py",
       "title": "Gauge-Vacuum Plaquette First-Sector Tail Underdetermination Theorem",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the note declares an exact runner and expected PASS=6, but the runner path is missing, so the two-extension underdetermination construction is not reproducible from the allowed artifacts. Why this blocks: the theorem requires verifying exact agreement on the retained packet and triple while showing different Perron states and Perron/Jacobi packets; prose alone does not establish those equalities and separations. Repair target: restore the runner or replace it with a current executable proof that constructs the zero extension and positive decaying tail extension, checks retained-packet/triple equality, and prints the Perron/Perron-Jacobi separation checks. Claim boundary until fixed: safely claim only that tail completion is posed as the remaining framework-point seam; do not claim a retained underdetermination theorem or explicit inequivalent extension pair."
     },
     "gauge_vacuum_plaquette_first_sector_truncated_environment_packet_note_2026-04-19": {
       "audit_date": null,
