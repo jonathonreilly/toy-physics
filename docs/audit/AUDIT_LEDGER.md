@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T09:33:00.817824+00:00
+**Generated:** 2026-04-27T09:36:26.630933+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 19 |
-| _proposed_retained_ | 193 |
+| _proposed_retained_ | 192 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 2 |
-| ~~audited_conditional~~ | 280 |
+| ~~audited_conditional~~ | 281 |
 | ~~audited_failed~~ | 80 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 19 |
-| `audited_conditional` | 69 |
+| `audited_conditional` | 70 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 13 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 2 |
-| `unaudited` | 1488 |
+| `unaudited` | 1487 |
 
 | criticality | count |
 |---|---:|
@@ -126,6 +126,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `causal_escape_window_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `causal_field_canonical_chain_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `complex_action_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
+| `composite_source_additivity_2d_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `confinement_string_tension_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `continuum_limit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `cosmology_single_ratio_inverse_reconstruction_theorem_note_2026-04-25` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | A | - |
@@ -561,6 +562,23 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `FOURTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md`
   - `FIFTH_FAMILY_COMPLEX_NOTE.md`
   - `FIFTH_FAMILY_COMPLEX_BOUNDARY_NOTE.md`
+- **auditor confidence:** high
+
+### `composite_source_additivity_2d_note`
+
+- **Note:** [`COMPOSITE_SOURCE_ADDITIVITY_2D_NOTE.md`](../../docs/COMPOSITE_SOURCE_ADDITIVITY_2D_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note's load-bearing bounded claim is that on the 2D ordered-lattice family, valley-linear remains source-additive to printed precision while spent-delay shows large non-additive deviations.  _(class `C`)_
+- **chain closes:** False — The finite 2D additivity replay closes, but the source note is a bounded test-particle cross-family support card on an upstream proposed_retained 2D ordered-lattice lane and explicitly does not close persistent-pattern or inertial-mass derivation.
+- **rationale:** Issue: the runner verifies the finite 2D additivity comparison, but the source row is a bounded support probe, not a standalone retained theorem; it depends on an unregistered proposed_retained 2D ordered-lattice/continuum lane and the 3D additivity note, and it explicitly leaves persistent-pattern inertia open. Why this blocks: a hostile physicist can accept the five valley-linear relative errors (0.04%, 0.04%, 0.08%, 0.00%, 0.01%) and five spent-delay deviations (about 25-29%) without accepting a first-principles Newton or inertial-mass closure. Repair target: register the 2D ordered-lattice lane and 3D additivity note as dependencies, register the runner path, and state the retained proposition as a bounded test-particle additivity theorem with explicit error thresholds and no persistent-mass implication. Claim boundary until fixed: it is safe to claim the current runner's finite 2D cross-family additivity support for valley-linear and non-additivity for spent-delay; it is not safe to retain a broader source/mass derivation.
+- **open / conditional deps cited:**
+  - `COMPOSITE_SOURCE_ADDITIVITY_NOTE.md`
+  - `proposed_retained_2D_ordered_lattice_lane_not_registered_as_dependency`
+  - `scripts/composite_source_additivity_2d_cross_family.py_not_registered_as_runner_path`
+  - `persistent_pattern_inertia_explicitly_open`
 - **auditor confidence:** high
 
 ### `confinement_string_tension_note`
