@@ -160,3 +160,35 @@ TOTAL: PASS=48, FAIL=0
 Safe status: exact negative boundary. The OP-local source support erases the
 `Q` source coordinate, but the source is a common scalar and does not base the
 selected-line orbit or label the tau generation.
+
+## Cycle 6 Candidate
+
+Audit the strongest Brannen-side scalar premise left on the ratio/source side:
+
+```text
+P_RADIAN:
+  Type-B rational 2/9 is physically read as delta = 2/9 rad.
+```
+
+Combine that granted premise with OP-local `z=0 => Q=2/3` support and test
+whether scalar readout plus source support supplies a retained physical
+generation selector without PDG charged-lepton masses.
+
+**Status:** complete as an exact negative boundary, not a promotion.
+
+```text
+docs/CHARGED_LEPTON_TYPEB_RADIAN_READOUT_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md
+scripts/frontier_charged_lepton_typeb_radian_readout_generation_selector_no_go.py
+outputs/frontier_charged_lepton_typeb_radian_readout_generation_selector_no_go_2026-04-27.txt
+```
+
+Verification:
+
+```text
+python3 scripts/frontier_charged_lepton_typeb_radian_readout_generation_selector_no_go.py
+TOTAL: PASS=43, FAIL=0
+```
+
+Safe status: exact negative boundary. A scalar Type-B-to-radian readout narrows
+the unit problem but still does not choose a selected-line basepoint or label
+the tau generation.

@@ -162,3 +162,47 @@ new runner replayed with `FAIL=0`.
 **Residual risk:** the physical source-domain law itself remains open, and a
 future based endpoint/source/tau-scale theorem could still move the lane. This
 cycle closes only the source-symmetric unbased selected-line selector route.
+
+## Cycle 6 Self-Check
+
+**Artifact:** Type-B radian readout generation-selector no-go.
+
+**Runner:**
+`scripts/frontier_charged_lepton_typeb_radian_readout_generation_selector_no_go.py`
+
+**Output:**
+`outputs/frontier_charged_lepton_typeb_radian_readout_generation_selector_no_go_2026-04-27.txt`
+
+**Result:** `PASS=43, FAIL=0`.
+
+**Review pressure applied:** review-loop emulated locally with the required
+reviewer stances.
+
+```text
+Code / Runner: PASS
+Physics Claim Boundary: NO-GO under granted scalar readout/source support
+Imports / Support: DISCLOSED
+Nature Retention: NO-GO for scalar readout as generation selector; OPEN for mass retirement
+Repo Governance: PASS for branch-local science artifact
+```
+
+**Findings and disposition:**
+
+- CodeRunnerReviewer found no failing checks after the runner and note were
+  aligned to the replayed `PASS=43, FAIL=0` count.
+- PhysicsClaimReviewer found no retained-closure overclaim. The note explicitly
+  grants `P_RADIAN` only to prove that scalar readout still lacks a basepoint.
+- ImportSupportReviewer found PDG charged-lepton masses only in the comparator
+  block; they are not proof-input keys.
+- NatureRetentionReviewer disposition is `NO-GO` for scalar Type-B-to-radian
+  readout plus OP-local source support as a generation selector and `OPEN` for
+  charged-lepton mass retirement.
+- RepoGovernanceReviewer found no repo-wide authority-surface edits. Proposed
+  weaving remains deferred to later review/integration.
+
+**Smoketest:** all six workstream Python artifacts compiled with
+`python3 -m py_compile`; all six replayed with `FAIL=0`.
+
+**Residual risk:** a future based endpoint/source/generation theorem could
+still move the lane. This cycle closes only the scalar readout route; it does
+not kill a physical basepoint law.

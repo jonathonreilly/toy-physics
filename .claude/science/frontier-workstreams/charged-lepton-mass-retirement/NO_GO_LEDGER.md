@@ -22,6 +22,7 @@ new.
 | Koide `Q` plus selected-line/Brannen phase as standalone generation selector | no-go for generation/tau-scale selection; ratio support retained | `CHARGED_LEPTON_KOIDE_RATIO_SOURCE_SELECTOR_FIREWALL_NOTE_2026-04-27.md` | `Q` erases the selected-line phase, the `Q` source route and Brannen endpoint are conditional, and cyclic relabelings preserve unordered ratios while moving the largest slot label |
 | Unbased selected-line/Brannen orbit as physical generation selector | no-go for physical generation/tau-scale labeling; based routes remain open | `CHARGED_LEPTON_SELECTED_LINE_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md` | a free unbased `C3` orbit has no invariant single-label selector; based equivariant selectors require an extra endpoint/source/generation law |
 | OP-local `C3`-fixed `Q` source support plus selected-line/Brannen phase as physical generation selector | no-go for physical generation/tau-scale labeling; source support retained only conditionally | `CHARGED_LEPTON_OP_LOCAL_SOURCE_SELECTED_LINE_SELECTOR_NO_GO_NOTE_2026-04-27.md` | granting `P_SOURCE => z=0 => Q=2/3` still leaves a common scalar source and an unbased selected-line orbit; no `C3`-natural single generation label exists without a based endpoint/source/tau-scale law |
+| Type-B-to-radian scalar readout plus OP-local `Q` source support as physical generation selector | no-go for physical generation/tau-scale labeling; scalar readout support is not a basepoint | `CHARGED_LEPTON_TYPEB_RADIAN_READOUT_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md` | granting scalar `P_RADIAN: delta=2/9 rad` and `P_SOURCE => Q=2/3` still gives only `C3`-fixed quotient data; no `C3`-natural single generation label exists without a based endpoint/source/tau-scale law |
 
 ## Closed Cycle 1 Question
 
@@ -73,3 +74,15 @@ scalar source. It erases the `Q` source coordinate but does not base the
 selected-line orbit. The product data still have no invariant single-label
 selector; based equivariant selectors require an additional physical
 basepoint/source/tau-scale law.
+
+## Closed Cycle 6 Question
+
+If the Brannen-side Type-B-to-radian scalar readout is granted as a stronger
+premise, can scalar `delta = 2/9 rad` plus OP-local `Q` source support select a
+physical charged-lepton generation label without PDG masses?
+
+Answer: no. The scalar radian readout fixes a unit/readout number, not a
+selected-line basepoint. Combined with `z=0 => Q=2/3`, it remains invariant
+quotient data under cyclic relabeling. Since the generation labels form a free
+`C3` orbit, no natural single-label selector exists. A based
+endpoint/source/tau-scale law is still required.

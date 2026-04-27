@@ -7,7 +7,7 @@
 
 ## Current State
 
-Cycles 1-5 are complete. The cooperative lock script is unavailable due to a
+Cycles 1-6 are complete. The cooperative lock script is unavailable due to a
 `/Users/jonreilly` permission error, so the run is isolated on the dedicated
 science branch.
 
@@ -73,10 +73,24 @@ strict-onsite `C3`-fixed source is a common scalar and does not base the
 selected-line orbit or label the tau generation. PDG masses remain
 comparator-only.
 
+The sixth completed artifact is a stronger-premise scalar readout no-go:
+
+- `docs/CHARGED_LEPTON_TYPEB_RADIAN_READOUT_GENERATION_SELECTOR_NO_GO_NOTE_2026-04-27.md`
+- `scripts/frontier_charged_lepton_typeb_radian_readout_generation_selector_no_go.py`
+- `outputs/frontier_charged_lepton_typeb_radian_readout_generation_selector_no_go_2026-04-27.txt`
+
+It grants a Brannen-side scalar premise that prior cycles had not granted:
+`P_RADIAN`, the physical reading of the Type-B rational `2/9` as
+`delta = 2/9 rad`. It also grants OP-local `z=0 => Q=2/3` support. The result
+is still negative for generation selection: scalar quotient/readout data are
+`C3`-fixed and do not choose a selected-line basepoint or attach the
+heavy/middle/light profile to the physical `e`, `mu`, `tau` labels. PDG masses
+remain comparator-only.
+
 ## Verification
 
 ```text
-python3 -m py_compile scripts/frontier_charged_lepton_direct_ward_free_yukawa_no_go.py scripts/frontier_charged_lepton_radiative_tau_selector_firewall.py scripts/frontier_charged_lepton_koide_ratio_source_selector_firewall.py scripts/frontier_charged_lepton_selected_line_generation_selector_no_go.py scripts/frontier_charged_lepton_op_local_source_selected_line_selector_no_go.py
+python3 -m py_compile scripts/frontier_charged_lepton_direct_ward_free_yukawa_no_go.py scripts/frontier_charged_lepton_radiative_tau_selector_firewall.py scripts/frontier_charged_lepton_koide_ratio_source_selector_firewall.py scripts/frontier_charged_lepton_selected_line_generation_selector_no_go.py scripts/frontier_charged_lepton_op_local_source_selected_line_selector_no_go.py scripts/frontier_charged_lepton_typeb_radian_readout_generation_selector_no_go.py
 PASS
 
 python3 scripts/frontier_charged_lepton_direct_ward_free_yukawa_no_go.py
@@ -93,24 +107,29 @@ TOTAL: PASS=38, FAIL=0
 
 python3 scripts/frontier_charged_lepton_op_local_source_selected_line_selector_no_go.py
 TOTAL: PASS=48, FAIL=0
+
+python3 scripts/frontier_charged_lepton_typeb_radian_readout_generation_selector_no_go.py
+TOTAL: PASS=43, FAIL=0
 ```
 
 Review-loop was emulated for cycles 3, 4, and 5 and recorded in
-`REVIEW_HISTORY.md`. Cycle 5 disposition: `PASS WITH NO-GO CLAIM`; mass
-retirement remains open.
+`REVIEW_HISTORY.md`; cycle 6 was also emulated there. Cycle 6 disposition:
+`PASS WITH NO-GO CLAIM`; mass retirement remains open.
 
 ## Next Exact Action
 
-Only continue with a genuinely new physical premise. The next exact action is
-to derive or refute one of:
+Stop was requested for this unattended loop because no remaining repo-native
+ratio/source route passes the dramatic-step gate without a genuinely new
+physical law. Only continue with a new premise. The next exact action is to
+derive or refute one of:
 
 - the physical charged-lepton undeformed scalar source is strict-onsite and
-  `C3`-fixed;
+  `C3`-fixed, while also supplying a physical base;
 - the selected-line Brannen endpoint has a based/unit-preserving
   Type-B-to-radian readout;
 - a non-observational generation/tau-scale selector ties the ratio vector to
   the radiative scale support.
 
-Do not repeat `Q = 2/3`, `delta = 2/9`, OP-local source support, or
-unbased-orbit value matching without one of those new premises. Retained
-charged-lepton mass closure is not achieved.
+Do not repeat `Q = 2/3`, `delta = 2/9`, scalar Type-B-to-radian readout,
+OP-local source support, or unbased-orbit value matching without one of those
+new premises. Retained charged-lepton mass closure is not achieved.

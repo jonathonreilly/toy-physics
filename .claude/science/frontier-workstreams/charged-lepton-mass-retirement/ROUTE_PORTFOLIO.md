@@ -11,6 +11,7 @@ Scores use 0-3, with overclaim risk subtracted qualitatively.
 | Koide `Q` + Brannen phase as generation selector | no-go / support firewall | 2 | 2 | 3 | low if framed as no-go | completed: standalone selector closed |
 | Unbased selected-line orbit as generation selector | no-go / endpoint-source firewall | 2 | 2 | 3 | low if framed as a basedness obstruction | completed: unbased orbit selector closed |
 | OP-local `C3`-fixed Q source plus selected-line phase as generation selector | no-go / source-endpoint firewall | 2 | 2 | 3 | low if framed as a no-go under granted source support | completed: source-symmetric unbased selector closed |
+| Type-B-to-radian scalar readout plus OP-local Q source as generation selector | no-go / endpoint-source firewall | 2 | 2 | 3 | low if framed as a stronger-premise no-go | completed: scalar radian readout generation selector closed |
 | Full absolute mass chain note from existing support | packaging | 1 | 1 | 3 | high: could promote support-only work | reject as first move |
 | Literature-only Koide/tau mass synthesis | literature bridge | 1 | 0 | 3 | medium: not a derivation | use only for context |
 
@@ -129,3 +130,24 @@ Do not repeat OP-local source support plus unbased selected-line matching as a
 new route. The remaining viable route must add a genuinely physical basepoint,
 endpoint readout, source-domain exclusion of commutant `Z` with a base, or
 generation/tau-scale law.
+
+## Cycle 6 Outcome
+
+The Type-B-to-radian stronger-premise audit was produced and verified:
+
+```text
+python3 scripts/frontier_charged_lepton_typeb_radian_readout_generation_selector_no_go.py
+TOTAL: PASS=43, FAIL=0
+```
+
+This cycle granted a scalar Brannen-side premise that prior cycles had not:
+`P_RADIAN`, the physical reading of the Type-B rational `2/9` as
+`delta = 2/9 rad`. It also granted OP-local `z=0 => Q=2/3` support. The result
+is still negative for generation selection. A scalar unit/readout law is
+`C3`-fixed quotient data; it does not choose a selected-line basepoint or attach
+the ratio profile to `e`, `mu`, `tau`.
+
+No further repo-native ratio/source route passes the dramatic-step gate without
+a genuinely new based physical law. Do not repeat scalar radian readout,
+`Q=2/3`, `delta=2/9`, OP-local source support, or unbased-orbit value matching
+as a new route.
