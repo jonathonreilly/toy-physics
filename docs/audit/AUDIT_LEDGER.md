@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T16:10:14.606697+00:00
+**Generated:** 2026-04-27T16:13:14.967774+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 56 |
-| _proposed_retained_ | 97 |
+| **retained** | 57 |
+| _proposed_retained_ | 96 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 56 |
+| `audited_clean` | 57 |
 | `audited_conditional` | 104 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 44 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1396 |
+| `unaudited` | 1395 |
 
 | criticality | count |
 |---|---:|
@@ -152,6 +152,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `mirror_chokepoint_boundary_fit_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `moving_source_cross_family_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `multipole_tidal_response_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `nonlabel_grown_basin_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `planck_finite_response_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `planck_target3_phase_unit_edge_statistics_boundary_note_2026-04-25` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
@@ -3029,6 +3030,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `EQUIVALENCE_PRINCIPLE_HARNESS_NOTE.md`
   - `COMPOSITE_SOURCE_ADDITIVITY_NOTE.md`
   - `COMPOSITE_SOURCE_ADDITIVITY_2D_NOTE.md`
+- **auditor confidence:** high
+
+### `nonlabel_grown_basin_note`
+
+- **Note:** [`NONLABEL_GROWN_BASIN_NOTE.md`](../../docs/NONLABEL_GROWN_BASIN_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The geometry-sector / non-label architecture survives the nearest restore neighborhood at fixed drift = 0.2 with zero-source and neutral controls, correct sign orientation, and linear charge response.  _(class `C`)_
+- **chain closes:** True — The live targeted runner reproduces the frozen seed-0 restore sweep at drift = 0.2: all three rows have zero baseline, neutral cancellation, opposite single-source signs, and charge exponent approximately 1.0.
+- **rationale:** The source makes a bounded finite-runner claim: a tiny positive basin at drift = 0.2 for restore values 0.60, 0.70, and 0.80 on seed 0. The current runner recomputes the zero-source baseline, neutral +1/-1 cancellation, sign orientation, double-charge response, and exponent checks for those rows, and all three rows pass. Residual risk is fixed-configuration scope only; this clean audit does not retain a general grown-graph basin, a label-independent theory, or any claim beyond the tested restore neighborhood.
 - **auditor confidence:** high
 
 ### `omega_lambda_matter_bridge_theorem_note_2026-04-22`
