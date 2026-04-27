@@ -123,5 +123,5 @@ verification:
     - "PYTHONPATH=scripts python3 scripts/frontier_confinement_string_tension.py -> PASS=30 FAIL=0"
     - "bash docs/audit/scripts/run_pipeline.sh -> complete after Lane 1 artifact"
     - "python3 docs/audit/scripts/audit_lint.py --strict -> OK, known graph-cycle warning only after Lane 1 artifact"
-next_exact_action: "Run git diff --check, commit and push the coherent Lane 1 checkpoint with STOP_ALL_LANES_REQUESTED."
+next_exact_action: "Stop the cascade; branch frontier/lane4-neutrino-cascade-20260427 is pushed with STOP_ALL_LANES_REQUESTED."
 stop_condition: "Reached after cycle 5: every viable queued lane has an exact dependency boundary requiring new science premise or human-judgment selection; Lane 6 has no new charged-lepton premise and remains recently exhausted."

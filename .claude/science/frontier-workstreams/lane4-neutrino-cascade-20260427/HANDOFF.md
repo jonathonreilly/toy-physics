@@ -3,7 +3,7 @@
 **Branch:** `frontier/lane4-neutrino-cascade-20260427`
 **Updated:** 2026-04-27T12:57:24Z
 **Current lane:** Lane 1 hadron mass program
-**Current status:** cycle 5 verified; commit/push pending; all-lane stop marker requested
+**Current status:** cycle 5 verified and pushed; all-lane stop marker present
 
 ## What Changed
 
@@ -148,17 +148,9 @@ Verification:
 
 ## Next Exact Action
 
-Run `git diff --check`, then commit the coherent Lane 1 checkpoint with
-`STOP_ALL_LANES_REQUESTED` and push the branch:
-
-```bash
-git add ...
-git commit -m "Add Lane 1 hadron confinement-to-mass firewall"
-git push origin frontier/lane4-neutrino-cascade-20260427
-```
-
-After the checkpoint, stop this cascade. Do not continue to Lane 6 unless a
-new charged-lepton premise is actually discovered.
+Stop this cascade. The branch has been pushed with the Lane 1 checkpoint and
+`STOP_ALL_LANES_REQUESTED`. Do not continue to Lane 6 unless a new
+charged-lepton premise is actually discovered.
 
 ## Stop Condition
 
