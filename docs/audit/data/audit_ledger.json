@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T22:28:59.260111+00:00",
-  "generated_at": "2026-04-27T22:28:57.546205+00:00",
-  "invalidation_run_at": "2026-04-27T22:28:59.203534+00:00",
+  "effective_status_computed_at": "2026-04-27T22:31:54.139118+00:00",
+  "generated_at": "2026-04-27T22:31:52.442559+00:00",
+  "invalidation_run_at": "2026-04-27T22:31:54.084102+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T22:28:59.094060+00:00",
+  "load_bearing_computed_at": "2026-04-27T22:31:53.973428+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -86763,15 +86763,21 @@
       "verdict_rationale": null
     },
     "yt_p2_v_matching_theorem_note_2026-04-17": {
-      "audit_date": null,
-      "audit_state_snapshot": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 7.431,
+        "transitive_descendants": 121
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner reproduces the Path C algebra and 1-loop SM-RGE integration, but the mixed lattice/SM endpoint factorization, color projection, Ward/CMT inputs, QFP envelope, and 2-loop primary-chain closure are all inherited. The runner does not independently derive the 2-loop M target from retained inputs.",
       "claim_id": "yt_p2_v_matching_theorem_note_2026-04-17",
       "criticality": "high",
       "cross_confirmation": null,
@@ -86780,18 +86786,25 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 1,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 7.431,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The note claims the v-matching coefficient closes in decomposed form as M = sqrt(u_0) * F_yt * sqrt(8/9), with 1-loop M = 1.926 inside the QFP 3% envelope and 2-loop quantitative closure supplied by the primary chain at M = 1.9734.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "4cc36860f822b2ff46b0a2a5f25b3aaa43edf1bdc2c918e5420a8ff025eca993",
       "note_path": "docs/YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/YT_COLOR_PROJECTION_CORRECTION_NOTE.md",
+        "docs/YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md",
+        "docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md",
+        "docs/YT_UV_TO_IR_TRANSPORT_OBSTRUCTION_THEOREM_NOTE_2026-04-17.md",
+        "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
+        "docs/YT_ZERO_IMPORT_CHAIN_NOTE.md"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.370351+00:00",
@@ -86862,16 +86875,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
+        "A": 5,
+        "B": 7,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 12
       },
       "runner_path": "scripts/frontier_yt_p2_v_matching.py",
       "title": "P2 v-Matching Theorem: Framework-Native Decomposition of M",
       "transitive_descendants": 121,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the proposed M closure depends on a selected mixed-scheme factorization M = sqrt(u_0) * F_yt * sqrt(8/9), a QFP 3% support envelope, and a 2-loop primary-chain value that the runner cites rather than derives. Why this blocks: a retained v-matching theorem must prove the lattice-to-SM endpoint map, color-projection factor, and RGE transport as one coherent bridge, and must compute the quantitative 2-loop closure from retained beta functions in the runner or registered clean dependencies. Repair target: clean-audit the taste-staircase, Ward/CMT, color-projection, zero-import beta-coefficient, and QFP parents, and extend this runner to perform the retained 2-loop SM-RGE integration and verify M = 1.9734 from those inputs without reading the target as a premise. Claim boundary until fixed: safe to claim conditional Path C arithmetic: given the supplied endpoint factors and 1-loop RGE, M_1-loop = 1.926 and lies within the asserted 3% QFP envelope; not safe to claim audited retained closure of the P2 v-matching coefficient."
     },
     "yt_p3_k_series_geometric_bound_note_2026-04-17": {
       "audit_date": null,
