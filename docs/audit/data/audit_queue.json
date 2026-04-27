@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 88,
     "high": 506,
-    "leaf": 856,
+    "leaf": 855,
     "medium": 78
   },
-  "generated_at": "2026-04-27T06:29:47.271631+00:00",
+  "generated_at": "2026-04-27T06:32:32.929249+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -15741,23 +15741,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "action_power_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 1,
-      "load_bearing_score": 2.822,
-      "note_path": "docs/ACTION_POWER_NOTE.md",
-      "ready": true,
-      "runner_path": "action_power_canonical_harness.py",
-      "transitive_descendants": 4
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "b_independence_mechanism_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -30750,6 +30733,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1119,
-  "total_pending": 1528
+  "ready_count": 1118,
+  "total_pending": 1527
 }
