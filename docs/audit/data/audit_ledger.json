@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T03:09:10.550759+00:00",
-  "generated_at": "2026-04-27T03:09:08.778314+00:00",
-  "invalidation_run_at": "2026-04-27T03:09:10.495045+00:00",
+  "effective_status_computed_at": "2026-04-27T03:11:14.383365+00:00",
+  "generated_at": "2026-04-27T03:11:12.627734+00:00",
+  "invalidation_run_at": "2026-04-27T03:11:14.329898+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T03:09:10.375597+00:00",
+  "load_bearing_computed_at": "2026-04-27T03:11:14.213210+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -35596,14 +35596,21 @@
       "verdict_rationale": null
     },
     "i3_zero_exact_theorem_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-26",
+      "audit_state_snapshot": {
+        "criticality": "high",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 10.407,
+        "transitive_descendants": 119
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The source note is explicitly scoped to the Hilbert/Born surface, and the algebraic cancellation follows for arbitrary complex amplitudes without additional lattice assumptions.",
       "claim_id": "i3_zero_exact_theorem_note",
       "criticality": "high",
       "current_status": "proposed_retained",
@@ -35611,13 +35618,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 7,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 10.407,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Given linear amplitude composition and quadratic probability P=|A|^2, the inclusion-exclusion expression I_3=|A+B+C|^2-|A+B|^2-|A+C|^2-|B+C|^2+|A|^2+|B|^2+|C|^2 cancels identically.",
+      "load_bearing_step_class": "A",
       "max_descendant_status": "bounded",
       "max_descendant_status_rank": 60,
       "note_hash": "3c698e6af004f6372e5dfb0d9e750b4d364f8b37ce1c630f42c8cbab24a2be90",
@@ -35676,16 +35683,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 6,
         "B": 0,
         "C": 0,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 6
       },
       "runner_path": "scripts/frontier_born_rule_derived.py",
       "title": "`I_3 = 0` Exact Theorem",
       "transitive_descendants": 119,
-      "verdict_rationale": null
+      "verdict_rationale": "The retained claim is the scoped exact theorem that I_3 vanishes once amplitudes add linearly and probabilities are quadratic, not a freestanding derivation of the Born rule. The runner verifies the identity for arbitrary complex amplitudes, higher Sorkin orders under the Born rule, a non-Born control, and concrete 1D/3D lattice propagator cross-checks, with 6 computed passes and no failures. Residual boundary: this audit ratifies the Hilbert-surface no-third-order-interference theorem only; it does not promote any claim that P=|A|^2 itself has been derived from the lattice axioms alone."
     },
     "if_program_closing_note": {
       "audit_date": null,
