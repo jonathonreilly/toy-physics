@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T21:41:40.862657+00:00
+**Generated:** 2026-04-27T21:42:56.327083+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 72 |
-| _proposed_retained_ | 10 |
+| _proposed_retained_ | 9 |
 | _proposed_promoted_ | 1 |
 | bounded | 185 |
 | support | 107 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 6 |
 | ~~audited_renaming~~ | 3 |
-| ~~audited_conditional~~ | 356 |
+| ~~audited_conditional~~ | 357 |
 | ~~audited_failed~~ | 140 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 72 |
-| `audited_conditional` | 144 |
+| `audited_conditional` | 145 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 73 |
 | `audited_numerical_match` | 6 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1311 |
+| `unaudited` | 1310 |
 
 | criticality | count |
 |---|---:|
@@ -314,6 +314,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `yt_p1_i_s_lattice_pt_citation_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_p1_rep_a_rep_b_cancellation_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_p1_shared_fierz_no_go_sub_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `yt_p2_v_matching_theorem_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `yt_p3_msbar_to_pole_k2_color_factor_retention_note_2026-04-17` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `alpha_lm_geometric_mean_identity_theorem_note_2026-04-24` | _proposed_retained_ | ~~audited_decoration~~ | ~~audited_decoration~~ | cross_family | codex-current | A | - |
@@ -5039,6 +5040,25 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `UV_GAUGE_TO_YUKAWA_BRIDGE_SC_VS_PERT_NOTE.md`
   - `missing retained 3-loop/higher SM-RGE tail computation or theorem`
 - **auditor confidence:** 0.93
+
+### `yt_p2_v_matching_theorem_note_2026-04-17`
+
+- **Note:** [`YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md`](../../docs/YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Use the CMT endpoint ratio sqrt(u_0), the color-projection factor sqrt(8/9), and the SM-RGE transport F_yt to assert M=sqrt(u_0)*F_yt*sqrt(8/9), then close the 2.4% 1-loop residual by importing the QFP 3% envelope and the primary-chain 2-loop value.  _(class `B`)_
+- **chain closes:** False — The runner does perform a 1-loop SM-RGE integration and verifies the stated arithmetic M_1-loop=1.926. It does not independently derive or audit the CMT/color/Ward/QFP bridge inputs, and its 2-loop closure is a hard-coded primary-chain value rather than a computed 2-loop integration in this runner.
+- **rationale:** Issue: the v-matching closure depends on unclean bridge inputs and imported closure: the CMT endpoint map, the sqrt(8/9) color-projection factor, Ward scheme transfer into the SM RGE, the QFP 3% envelope, and the primary-chain 2-loop y_t(v)=0.9734 value. Why this blocks: the runner validates the 1-loop arithmetic but does not independently prove the lattice-to-SM scheme map or compute the 2-loop closure; moreover the target M is itself read from the same primary-chain SM-side values, so the 2-loop match is not an independent test inside this note. Repair target: clean the CMT endpoint, color-projection, Ward/QFP, and zero-import-chain authorities as explicit dependencies, and extend this runner to perform the retained 2-loop coupled SM-RGE integration from the stated boundary data rather than hard-coding y_t(v). Claim boundary until fixed: safe to claim that Path C gives M_1-loop=1.926 from the stated constants and 1-loop RGE and is within the assumed 3% QFP envelope; not safe to claim independent retained P2 v-matching closure.
+- **open / conditional deps cited:**
+  - `YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md`
+  - `YT_COLOR_PROJECTION_CORRECTION_NOTE.md`
+  - `YT_WARD_IDENTITY_DERIVATION_THEOREM.md`
+  - `YT_ZERO_IMPORT_CHAIN_NOTE.md`
+  - `YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md`
+  - `missing in-runner retained 2-loop coupled SM-RGE integration`
+- **auditor confidence:** 0.88
 
 ### `yt_p3_msbar_to_pole_k1_framework_native_derivation_note_2026-04-17`
 

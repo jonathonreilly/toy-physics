@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T21:41:40.604027+00:00",
-  "generated_at": "2026-04-27T21:41:38.831391+00:00",
-  "invalidation_run_at": "2026-04-27T21:41:40.549574+00:00",
+  "effective_status_computed_at": "2026-04-27T21:42:56.111269+00:00",
+  "generated_at": "2026-04-27T21:42:54.291780+00:00",
+  "invalidation_run_at": "2026-04-27T21:42:56.054259+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T21:41:40.416558+00:00",
+  "load_bearing_computed_at": "2026-04-27T21:42:55.933115+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -86207,14 +86207,21 @@
       "verdict_rationale": null
     },
     "yt_p2_v_matching_theorem_note_2026-04-17": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_conditional",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": 0.88,
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": false,
+      "chain_closure_explanation": "The runner does perform a 1-loop SM-RGE integration and verifies the stated arithmetic M_1-loop=1.926. It does not independently derive or audit the CMT/color/Ward/QFP bridge inputs, and its 2-loop closure is a hard-coded primary-chain value rather than a computed 2-loop integration in this runner.",
       "claim_id": "yt_p2_v_matching_theorem_note_2026-04-17",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -86222,18 +86229,25 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "audited_conditional",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "audited_conditional",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "Use the CMT endpoint ratio sqrt(u_0), the color-projection factor sqrt(8/9), and the SM-RGE transport F_yt to assert M=sqrt(u_0)*F_yt*sqrt(8/9), then close the 2.4% 1-loop residual by importing the QFP 3% envelope and the primary-chain 2-loop value.",
+      "load_bearing_step_class": "B",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "4cc36860f822b2ff46b0a2a5f25b3aaa43edf1bdc2c918e5420a8ff025eca993",
       "note_path": "docs/YT_P2_V_MATCHING_THEOREM_NOTE_2026-04-17.md",
-      "open_dependency_paths": [],
+      "open_dependency_paths": [
+        "docs/YT_P2_TASTE_STAIRCASE_TRANSPORT_NOTE_2026-04-17.md",
+        "docs/YT_COLOR_PROJECTION_CORRECTION_NOTE.md",
+        "docs/YT_WARD_IDENTITY_DERIVATION_THEOREM.md",
+        "docs/YT_ZERO_IMPORT_CHAIN_NOTE.md",
+        "docs/YT_QFP_INSENSITIVITY_SUPPORT_NOTE.md",
+        "missing in-runner retained 2-loop coupled SM-RGE integration"
+      ],
       "previous_audits": [
         {
           "archived_at": "2026-04-27T01:58:35.370351+00:00",
@@ -86262,16 +86276,18 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
-        "B": 0,
-        "C": 0,
-        "D": 0,
-        "total_pass": 0
+        "class_A_exact_arithmetic_or_identity": 5,
+        "class_B_dependency_or_assumption_checks": 4,
+        "class_C_first_principles_or_numeric_compute": 2,
+        "class_D_unchecked_load_bearing_steps": 1,
+        "notes": "Runner PASS=12 FAIL=0. It computes the 1-loop RGE path but imports the QFP bound and hard-codes the primary-chain 2-loop value used for closure.",
+        "total_fail": 0,
+        "total_pass": 12
       },
       "runner_path": "scripts/frontier_yt_p2_v_matching.py",
       "title": "P2 v-Matching Theorem: Framework-Native Decomposition of M",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "Issue: the v-matching closure depends on unclean bridge inputs and imported closure: the CMT endpoint map, the sqrt(8/9) color-projection factor, Ward scheme transfer into the SM RGE, the QFP 3% envelope, and the primary-chain 2-loop y_t(v)=0.9734 value. Why this blocks: the runner validates the 1-loop arithmetic but does not independently prove the lattice-to-SM scheme map or compute the 2-loop closure; moreover the target M is itself read from the same primary-chain SM-side values, so the 2-loop match is not an independent test inside this note. Repair target: clean the CMT endpoint, color-projection, Ward/QFP, and zero-import-chain authorities as explicit dependencies, and extend this runner to perform the retained 2-loop coupled SM-RGE integration from the stated boundary data rather than hard-coding y_t(v). Claim boundary until fixed: safe to claim that Path C gives M_1-loop=1.926 from the stated constants and 1-loop RGE and is within the assumed 3% QFP envelope; not safe to claim independent retained P2 v-matching closure."
     },
     "yt_p3_k_series_geometric_bound_note_2026-04-17": {
       "audit_date": null,
@@ -87253,9 +87269,9 @@
   "schema_version": 1,
   "stats": {
     "dropped_missing_notes": 0,
-    "preserved_existing": 1612,
-    "re_audit_required": 2,
+    "preserved_existing": 1615,
+    "re_audit_required": 0,
     "row_count": 1615,
-    "seeded_new": 1
+    "seeded_new": 0
   }
 }
