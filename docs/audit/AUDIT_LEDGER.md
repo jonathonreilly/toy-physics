@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T09:20:23.982512+00:00
+**Generated:** 2026-04-27T09:27:27.891946+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 18 |
-| _proposed_retained_ | 196 |
+| **retained** | 19 |
+| _proposed_retained_ | 195 |
 | _proposed_promoted_ | 4 |
 | bounded | 184 |
 | support | 101 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 18 |
+| `audited_clean` | 19 |
 | `audited_conditional` | 69 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 12 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1491 |
+| `unaudited` | 1490 |
 
 | criticality | count |
 |---|---:|
@@ -105,6 +105,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `alt_connectivity_family_fm_transfer_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `alt_connectivity_family_sign_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `claude_complex_action_carryover_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `claude_complex_action_grown_companion_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `dm_neutrino_source_surface_p3_sylvester_linear_path_signature_theorem_note_2026-04-18` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `gauge_vacuum_plaquette_first_sector_minimal_bulk_completion_3plus1_full_packet_no_go_theorem_note_2026-04-20` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `i3_zero_exact_theorem_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -491,6 +492,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The note's load-bearing narrow claim is that the branch exact-lattice complex-action harness carries over on main: gamma=0 exactly reduces to the baseline, Born remains machine-clean on the frozen field, and increasing gamma drives a TOWARD-to-AWAY crossover while escape falls.  _(class `C`)_
 - **chain closes:** True — The live runner reproduces the exact-lattice h=0.5, W=6, L=30 table in the source note, including gamma=0 delta +9.339748e-02, Born values 2.409e-15/3.941e-16/1.236e-16, and the gamma crossover between 0.05 and 0.10. The result is narrow to this exact-lattice frozen-field harness and does not imply geometry independence, continuum closure, or a self-gravity effective-theory derivation.
 - **rationale:** The source note deliberately scopes the claim to a finite exact-lattice carryover, and the live runner computes all load-bearing quantities rather than importing the table: the gamma=0 reduction, three Born tests, and six gamma sweep rows all match the note. The note explicitly excludes geometry-generic, continuum, and Poisson-self-gravity effective-theory claims, so the retained result is only the narrow harness replay. Residual risk is provenance hygiene: the linked frozen log is absent from logs/, but the current runner output reproduces the frozen result.
+- **auditor confidence:** high
+
+### `claude_complex_action_grown_companion_note`
+
+- **Note:** [`CLAUDE_COMPLEX_ACTION_GROWN_COMPANION_NOTE.md`](../../docs/CLAUDE_COMPLEX_ACTION_GROWN_COMPANION_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The note's load-bearing narrow claim is that the exact-lattice complex-action carryover survives on the retained grown row: gamma=0 reduction is exact, the Born proxy is machine-clean, weak-field F~M stays 1.000, and the gamma sweep has a TOWARD-to-AWAY crossover.  _(class `C`)_
+- **chain closes:** True — The live runner reproduces the retained grown-row replay in the source note, including seed-0 gamma=0 delta +2.460475e-01, Born proxy 1.456e-15, F~M = 1.000 for all checked gammas, and the two-seed gamma crossover between 0.10 and 0.20. The result is scoped only to drift=0.2, restore=0.7, seeds 0 and 1 on this runner-defined grown row.
+- **rationale:** The source note is intentionally narrow and the current runner recomputes each load-bearing quantity on the grown row rather than importing the table: exact gamma=0 reduction, one Born proxy, six weak-field F~M readouts, and six gamma-sweep rows match the note. The note explicitly excludes geometry-generic, continuum, and self-gravity-mechanism claims, so the clean result retains only the finite grown-row companion. Residual boundary: the Born check is a proxy on the grown graph and the runner path is not registered in the queue row.
 - **auditor confidence:** high
 
 ### `complex_action_note`
