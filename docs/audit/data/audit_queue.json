@@ -2,10 +2,10 @@
   "by_criticality": {
     "critical": 88,
     "high": 506,
-    "leaf": 809,
+    "leaf": 808,
     "medium": 78
   },
-  "generated_at": "2026-04-27T10:13:06.985914+00:00",
+  "generated_at": "2026-04-27T10:26:29.422383+00:00",
   "queue": [
     {
       "audit_independence_required": "cross_family_with_cross_confirmation",
@@ -18873,23 +18873,6 @@
       "audit_independence_required": "any_non_self",
       "audit_status": "unaudited",
       "blocker": null,
-      "claim_id": "distance_law_note",
-      "criticality": "leaf",
-      "criticality_rank": 0,
-      "cross_confirmation_status": null,
-      "current_status": "proposed_retained",
-      "deps": [],
-      "direct_in_degree": 0,
-      "load_bearing_score": 0.0,
-      "note_path": "docs/DISTANCE_LAW_NOTE.md",
-      "ready": true,
-      "runner_path": null,
-      "transitive_descendants": 0
-    },
-    {
-      "audit_independence_required": "any_non_self",
-      "audit_status": "unaudited",
-      "blocker": null,
       "claim_id": "distance_law_portability_note",
       "criticality": "leaf",
       "criticality_rank": 0,
@@ -29951,6 +29934,6 @@
       "transitive_descendants": 0
     }
   ],
-  "ready_count": 1070,
-  "total_pending": 1481
+  "ready_count": 1069,
+  "total_pending": 1480
 }
