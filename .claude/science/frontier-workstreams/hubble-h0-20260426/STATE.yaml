@@ -1,0 +1,39 @@
+slug: hubble-h0-20260426
+goal: "retire H_0 from external input; close Lane 5 (Hubble constant H_0 derivation) at the strongest honest claim-state"
+target_status: best-honest-status
+mode: run
+runtime: 10h
+start_time_utc: "2026-04-27T01:50:00Z"
+checkpoint_interval: 30m
+branch: frontier/hubble-h0-20260426
+base: origin/main
+lock_status: unavailable
+lock_note: "scripts/automation_lock.py hardcodes /Users/jonreilly/Projects/Physics paths; this worktree is on /Users/jonBridger. Skipping cooperative lock per skill optionality."
+current_phase: grounding-complete
+cycles_completed: 0
+active_route: null
+files_touched:
+  - .claude/science/frontier-workstreams/hubble-h0-20260426/STATE.yaml
+  - .claude/science/frontier-workstreams/hubble-h0-20260426/GOAL.md
+  - .claude/science/frontier-workstreams/hubble-h0-20260426/ASSUMPTIONS_AND_IMPORTS.md
+  - .claude/science/frontier-workstreams/hubble-h0-20260426/NO_GO_LEDGER.md
+  - .claude/science/frontier-workstreams/hubble-h0-20260426/ROUTE_PORTFOLIO.md
+  - .claude/science/frontier-workstreams/hubble-h0-20260426/ARTIFACT_PLAN.md
+  - .claude/science/frontier-workstreams/hubble-h0-20260426/LITERATURE_BRIDGES.md
+  - .claude/science/frontier-workstreams/hubble-h0-20260426/REVIEW_HISTORY.md
+  - .claude/science/frontier-workstreams/hubble-h0-20260426/HANDOFF.md
+open_imports:
+  - "H_0 = 67.4 km/s/Mpc — primary retirement target"
+  - "T_CMB = 2.7255 K — observational pin for Omega_r,0"
+  - "eta = 6.12e-10 — BBN baryon asymmetry; entry to bounded Omega_b cascade"
+  - "alpha_GUT in [0.03, 0.05] — Sommerfeld correction to bounded R = Omega_DM/Omega_b"
+  - "R_Lambda — de Sitter radius / spectral-gap radius; ties to Planck-scale matching lane"
+  - "Planck 2018 cosmology numbers (Omega_Lambda=0.685, Omega_m=0.315, Omega_b=0.0493) — comparators only"
+no_go_routes_inherited:
+  - "Planck finite-response no-go (cell automorphisms have no infinitesimal metric/coframe response tangent)"
+  - "Planck parent-source carrier-only scalar no-go (hidden affine character delta; no scalar equality)"
+  - "Simple-fiber Widom entropy carrier (c_Widom <= 1/6, not 1/4)"
+  - "Area-law multipocket-selector / primitive-edge-entropy / algebraic-spectrum no-gos"
+review_findings: []
+next_exact_action: "Execute Cycle 1 on Route R4: produce Hubble Tension Structural Lock theorem note + symbolic runner + paired log. Per ROUTE_PORTFOLIO.md scoring."
+stop_condition: "runtime budget (10h) reached, max cycles, blocker requiring human science judgment, or honest claim-state closure achieved"
