@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T05:54:54.653269+00:00
+**Generated:** 2026-04-27T05:57:42.866516+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -20,7 +20,7 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | effective_status | count |
 |---|---:|
 | **retained** | 6 |
-| _proposed_retained_ | 243 |
+| _proposed_retained_ | 242 |
 | _proposed_promoted_ | 6 |
 | bounded | 185 |
 | support | 101 |
@@ -29,19 +29,19 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | ~~audited_decoration~~ | 3 |
 | ~~audited_numerical_match~~ | 4 |
 | ~~audited_renaming~~ | 1 |
-| ~~audited_conditional~~ | 248 |
+| ~~audited_conditional~~ | 249 |
 | ~~audited_failed~~ | 59 |
 
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
 | `audited_clean` | 6 |
-| `audited_conditional` | 46 |
+| `audited_conditional` | 47 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 2 |
 | `audited_numerical_match` | 4 |
 | `audited_renaming` | 1 |
-| `unaudited` | 1536 |
+| `unaudited` | 1535 |
 
 | criticality | count |
 |---|---:|
@@ -146,6 +146,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `sign_portability_invariant_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
 | `strong_cp_theta_zero_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | E | - |
 | `tensor_scalar_ratio_consolidation_theorem_note_2026-04-22` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | B | - |
+| `wave_equation_self_field_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `wave_retardation_continuum_limit_note` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | C | - |
 | `yt_ew_color_projection_theorem` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | F | - |
 | `yt_ew_delta_r_retention_analysis_note_2026-04-18` | _proposed_retained_ | ~~audited_conditional~~ | ~~audited_conditional~~ | cross_family | codex-current | D | - |
@@ -1137,6 +1138,24 @@ Criticality and load-bearing score are computed from the citation graph alone. T
   - `higher_order_tensor_scalar_ratio_corrections_open`
   - `graph_growth_inflaton_field_potential_mapping_open`
   - `current_CMB_r_bounds_and_projected_sensitivities_observational_status_not_registered`
+- **auditor confidence:** high
+
+### `wave_equation_self_field_note`
+
+- **Note:** [`WAVE_EQUATION_SELF_FIELD_NOTE.md`](../../docs/WAVE_EQUATION_SELF_FIELD_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_conditional~~
+- **effective_status:** ~~audited_conditional~~  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** Five independent observables (F~M, Born, gravity sign, null, finite-c retardation) all hold simultaneously on the same wave-equation field, making this the GR-style local field law promotion of the Poisson 3D result.  _(class `C`)_
+- **chain closes:** False — The runner computes the stated finite wave-equation harness, but the wave equation, source law, and readout-to-field-law promotion are introduced as the model rather than derived from registered retained primitives.
+- **rationale:** Issue: the note promotes an imposed discrete wave equation plus S=L(1-f) coupling to a retained local self-field law because several internal diagnostics pass. Why this blocks: the live runner does compute F~M near 0.998, TOWARD gravity on 3/3 families, a null at s=0, and exact first-arrival retardation, but it does not derive the PDE, source law, coupling, boundary conditions, or physical field observable from retained CL3 inputs; it also prints Born=4.01e-16 while the note/log freeze 1.08e-15, so the exact headline number is stale even though the machine-precision claim survives. Repair target: provide a retained theorem deriving the wave equation and source coupling from the framework primitives, register the static Poisson authority as a one-hop dependency, and add runner assertions comparing the static limit, Born residual tolerance, lightcone speed, and physical readout under derived boundary conditions. Claim boundary until fixed: it is safe to claim that this specific discrete wave-equation harness has a finite-c lightcone, exact null, TOWARD sign on the three tested families, F~M about 0.997-0.998, and machine-precision Born residual; it is not yet an audited retained GR-style self-field law or matter-closure field equation.
+- **open / conditional deps cited:**
+  - `wave_equation_and_source_coupling_not_derived_from_retained_primitives`
+  - `3D_Poisson_static_result_not_registered_one_hop_dependency`
+  - `physical_field_observable_bridge_not_registered`
+  - `multi_source_superposition_and_backreaction_explicitly_untested`
+  - `Born_residual_headline_stale_relative_to_live_runner`
 - **auditor confidence:** high
 
 ### `wave_retardation_continuum_limit_note`
