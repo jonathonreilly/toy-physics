@@ -5,7 +5,7 @@
 
 ## Current State
 
-**Cycles 1 and 2 complete.**
+**Cycles 1, 2, and 3 complete.**
 
 **Cycle 1 (R4 — Hubble Tension Structural Lock):**
 
@@ -18,6 +18,11 @@
 - `docs/COSMOLOGY_OPEN_NUMBER_REDUCTION_THEOREM_NOTE_2026-04-26.md`
 - `scripts/frontier_cosmology_open_number_reduction.py` — 5/5 PASS
 - `logs/2026-04-26-cosmology-open-number-reduction.txt`
+
+**Cycle 3 (R7 — Lane 5 Cosmic-History-Ratio Necessity No-Go):**
+
+- `docs/HUBBLE_LANE5_COSMIC_HISTORY_RATIO_NECESSITY_NO_GO_NOTE_2026-04-26.md`
+- (no runner — structural case-analysis on `A_min`)
 
 Branch-local 6-criterion self-review PASS for both cycles. Cycle 1
 required one premise-tightening edit (3 → 2 premises). Cycle 2 required
@@ -37,39 +42,51 @@ tension are now structurally forbidden on the retained surface;
 resolution must come from pre-recombination physics or measurement
 systematics.
 
-**New: Cosmology open-number-count theorem.** The late-time bounded
-cosmology surface has exactly 2 open structural numbers: `(H_0, L)`. All
-of `{H_inf, R_Lambda, Omega_Lambda, Omega_m, q_0, z_*, z_mLambda, H(a)}`
-are exact closed-form functions of the pair. **No fourth class of
-derivation** retires the cosmology surface beyond {derive `L`,
-derive `H_0`, derive `R_Lambda` + one of `(L, H_0)`}.
+**Cosmology open-number-count theorem.** The late-time bounded cosmology
+surface has exactly 2 open structural numbers: `(H_0, L)`. All of
+`{H_inf, R_Lambda, Omega_Lambda, Omega_m, q_0, z_*, z_mLambda, H(a)}`
+are exact closed-form functions of the pair.
+
+**Cosmic-history-ratio necessity no-go (Cycle 3).** Lane 5 closure
+requires premises from two classes: `(C1)` absolute-scale axiom AND one
+of `{(C2)` cosmic-history-ratio retirement, `(C3)` direct cosmic-`L`
+derivation`}`. No single class is sufficient. The bounded cascade
+(`eta -> Omega_b -> R -> Omega_DM -> Omega_m -> Omega_Lambda`) is the
+explicit `(C2)` pathway; the Planck conditional-completion is the
+explicit `(C1)` pathway; no active `(C3)` pathway.
 
 Neither cycle retires the `H_0` import (Lane 5 main target). They lock
 the structural form and exhaustively classify the closure pathways.
 
-## Next Exact Action (Cycle 3 candidate)
+## Next Exact Action (Cycle 4 candidate)
 
-Per `ROUTE_PORTFOLIO.md` scoring, the strongest remaining single-cycle
-candidates are:
+With `(C1), (C2), (C3)` taxonomy established, the strongest single-cycle
+candidates for the next loop iteration are:
 
-- **Cycle 3 candidate A — Route R5 (eta retirement audit).** Survey the
-  surviving DM leptogenesis branches (`eta/eta_obs = 0.1888` exact
-  one-flavor; `1.0` reduced-surface PMNS) and identify the minimal
-  selector/normalization closure that retires `eta` from the bounded
-  `Omega_b` cascade. Tier B. Cross-lane dependency: requires reading
-  DM-leptogenesis lane notes outside this branch's existing context.
-- **Cycle 3 candidate B — Route R7 (minimal-axiom cosmology no-go).**
-  Prove that on the minimal accepted axiom stack alone, `L` cannot be
-  derived without an additional structural premise (e.g., an absolute-
-  scale axiom or a separate dimensionless ratio). Program-bounding
-  negative — would isolate the gap that Lane 5 needs an additional
-  structural premise to close.
-- **Recommendation:** both are Tier B and warrant a fresh session for
-  clean grounding (Cycle-1/2 context is heavy with cosmology theorem
-  detail; switching to DM-lane content for R5, or to careful axiom-stack
-  formulation for R7, is best done with a clean reader). Either can be
-  started by re-invoking `/frontier-workstream --mode resume --workstream
-  hubble-h0-20260426`.
+- **Cycle 4 candidate A — eta retirement gate audit (advances `(C2)`).**
+  Survey the surviving DM leptogenesis branches (`eta/eta_obs = 0.1888`
+  exact one-flavor; `eta/eta_obs = 1.0` reduced-surface PMNS) and
+  identify the minimal selector/normalization closure that retires
+  `eta` from the bounded `Omega_b -> R -> Omega_m -> Omega_Lambda`
+  cascade. Cross-lane dependency: requires reading DM-leptogenesis
+  notes (`DM_LEPTOGENESIS_*`, `DM_PMNS_*` series).
+- **Cycle 4 candidate B — Planck conditional-completion audit (advances
+  `(C1)` understanding).** Audit the gravitational boundary/action
+  carrier identification gate (per
+  `PLANCK_SCALE_CONDITIONAL_COMPLETION_NOTE_2026-04-24.md` and the
+  2026-04-25 primitive coframe boundary-carrier theorem note).
+  Identify what specifically is needed to promote the conditional packet
+  to retained `R_Lambda` / absolute scale.
+- **Cycle 4 candidate C — direct cosmic-`L` exploration (would open
+  `(C3)`).** Survey the framework's vacuum/topology content for any
+  retained route that gives `Omega_Lambda` without going through the
+  matter cascade. Likely produces a no-go for the easy options or
+  identifies an unexplored vacuum-topology premise.
+- **Recommendation:** Candidate A. The bounded cascade is the most
+  developed `(C2)` pathway and has live support routes; identifying the
+  promotion gate is the single most actionable next move for retiring
+  `H_0`'s entry into the framework input ledger. The loop's next
+  iteration will resume from `STATE.yaml` and pick this up.
 
 ## Repo-Wide Weaving (NOT to apply on this branch)
 

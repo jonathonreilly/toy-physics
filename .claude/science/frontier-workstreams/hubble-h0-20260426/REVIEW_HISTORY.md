@@ -117,21 +117,59 @@ produced in the workstream.
 - **Disposition:** Cycle 2 accepted. Theorem note + runner + log
   committed to branch.
 
-## Cycle 3+ — pending evaluation
+## Cycle 3 — R7 Lane 5 Cosmic-History-Ratio Necessity No-Go
 
-Strongest single-cycle candidates remaining:
+- **Date:** 2026-04-26
+- **Artifacts:**
+  - `docs/HUBBLE_LANE5_COSMIC_HISTORY_RATIO_NECESSITY_NO_GO_NOTE_2026-04-26.md`
+  - (no runner — structural case-analysis on `A_min` and the retained
+    cosmology stack)
+- **Review mode:** branch-local 6-criterion self-review.
+- **Findings:**
+  1. **CodeRunnerReviewer (PASS).** No runner authored. The skill allows
+     note-only artifacts for no-gos when the proof is structural. The
+     case-analysis in §2 (dimensional argument) and §3 (cosmic-history
+     enumeration) is verified by inspection.
+  2. **PhysicsClaimReviewer (PASS after one strengthening edit).** The
+     initial closure-pathway corollary said Lane 5 closure requires "at
+     least one premise from `{(C1), (C2), (C3)}`". Strengthened to
+     "`(C1)` AND one of `{(C2), (C3)}`" — neither alone is sufficient
+     because `(C1)` fixes scale but not `L`, while `(C2)/(C3)` fix `L`
+     but not the absolute time scale. §0 statement and §4 corollary
+     both updated.
+  3. **ImportSupportReviewer (PASS).** All cited identities are on the
+     retained surface or landed Cycle-1/Cycle-2 branch-locally. No new
+     external imports.
+  4. **NatureRetentionReviewer (PASS).** Scoped as
+     "retained no-go theorem on `main`-compatible surface, landed
+     branch-locally". Falsifier explicit (existential — exhibit a
+     counterexample). Boundary §9 explicitly notes the no-go does not
+     claim any of `(C1)`, `(C2)`, `(C3)` is impossible.
+  5. **RepoGovernanceReviewer (PASS).** Note placed in `docs/` with
+     `*_NO_GO_NOTE_2026-04-26.md` suffix matching the 50+ existing
+     no-go notes. No repo-wide authority weave; proposed weaves go to
+     `HANDOFF.md`.
+  6. **MethodologySkillReviewer (PASS).** Cycle 3 follows logically from
+     Cycle 2 by formalizing the "no fourth class of derivation"
+     program-bounding statement. Real claim-state movement (no-go
+     proven, taxonomy established). Note-only is appropriate for
+     axiomatic no-gos per the skill.
+- **Disposition:** Cycle 3 accepted. No-go theorem committed to branch.
 
-- **R5 — eta retirement audit** (Tier B): identify the minimal selector/
-  normalization closure required to promote the surviving DM
-  leptogenesis branches (`eta/eta_obs = 0.1888` exact one-flavor;
-  `eta/eta_obs = 1.0` reduced-surface PMNS) to retained, retiring `eta`
-  from the bounded `Omega_b` cascade. Requires reading DM lane notes
-  outside this branch's existing context.
+## Cycle 4+ — pending evaluation
 
-- **R7 — minimal-axiom cosmology no-go** (Tier B): prove that on the
-  minimal accepted axiom stack alone, the open ratio `L` cannot be
-  derived without an additional structural premise. Program-bounding
-  negative.
+With the closure-pathway taxonomy `{(C1), (C2), (C3)}` established,
+strongest single-cycle candidates are now:
 
-Both warrant a fresh session for clean grounding.
+- **eta retirement gate audit** (advances `(C2)`): identify the minimal
+  selector/normalization closure for the surviving DM leptogenesis
+  branches.
+- **Planck conditional-completion review** (advances `(C1)`
+  understanding): audit the gravitational boundary/action carrier
+  identification gate.
+- **Direct cosmic-`L` proposal exploration** (would open `(C3)`): assess
+  whether any framework-internal vacuum/topology argument could give
+  `L = Omega_Lambda` without going through the matter cascade.
+
+Loop continues per ScheduleWakeup.
 
