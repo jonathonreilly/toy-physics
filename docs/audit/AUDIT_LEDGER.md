@@ -1,6 +1,6 @@
 # Audit Ledger
 
-**Generated:** 2026-04-27T15:54:25.310096+00:00
+**Generated:** 2026-04-27T15:59:44.469903+00:00
 **Source of truth:** `data/audit_ledger.json`
 **Schema:** see [README.md](README.md), [FRESH_LOOK_REQUIREMENTS.md](FRESH_LOOK_REQUIREMENTS.md), and [ALGEBRAIC_DECORATION_POLICY.md](ALGEBRAIC_DECORATION_POLICY.md).
 
@@ -19,8 +19,8 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 
 | effective_status | count |
 |---|---:|
-| **retained** | 54 |
-| _proposed_retained_ | 103 |
+| **retained** | 55 |
+| _proposed_retained_ | 102 |
 | _proposed_promoted_ | 1 |
 | bounded | 184 |
 | support | 106 |
@@ -35,13 +35,13 @@ Publication-facing tables MUST read `effective_status`, not `current_status`.
 | audit_status | count |
 |---|---:|
 | `audit_in_progress` | 3 |
-| `audited_clean` | 54 |
+| `audited_clean` | 55 |
 | `audited_conditional` | 103 |
 | `audited_decoration` | 3 |
 | `audited_failed` | 41 |
 | `audited_numerical_match` | 5 |
 | `audited_renaming` | 3 |
-| `unaudited` | 1402 |
+| `unaudited` | 1401 |
 
 | criticality | count |
 |---|---:|
@@ -149,6 +149,7 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 | `lattice_weak_field_purity_scaling_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `lensing_adjoint_kernel_reduced_model_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `mirror_2d_validation_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
+| `mirror_chokepoint_boundary_fit_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `moving_source_cross_family_note` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | C | - |
 | `planck_finite_response_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
 | `planck_parent_source_hidden_character_no_go_note_2026-04-24` | _proposed_retained_ | ~~audited_clean~~ | **retained** | cross_family | codex-current | A | - |
@@ -2851,6 +2852,18 @@ Criticality and load-bearing score are computed from the citation graph alone. T
 - **load-bearing step:** The exact 2D mirror family gives a bounded coexistence pocket over N=25,40,60,80,100, with the strongest row at N=60: MI=0.756118, 1-pur_min=0.4420, d_TV=0.8572, gravity=+2.5687, Born=1.08e-15, and k=0=0.  _(class `C`)_
 - **chain closes:** True — The named validator and archived log reproduce the retained rows, the matched random baseline, the Born and k=0 controls, and the weak gravity-law follow-up fits. Running the validator with the note's N window reproduces the table exactly; the script default includes an extra N=15 row, which is outside the note's retained window and does not change the retained claim.
 - **rationale:** The bounded exact-2D mirror pocket closes on its own terms: the runner verifies machine-scale Born residuals, zero k=0 response, positive gravity, and substantially stronger MI/decoherence/d_TV than the matched random baseline on the reported N window. The same runner also verifies that the mass-window and distance-tail fits are weak, so this clean audit ratifies only the bounded coexistence pocket, strongest at N=60; it does not ratify a promoted mass law, distance law, continuum law, or flagship replacement.
+- **auditor confidence:** high
+
+### `mirror_chokepoint_boundary_fit_note`
+
+- **Note:** [`MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md`](../../docs/MIRROR_CHOKEPOINT_BOUNDARY_FIT_NOTE.md)
+- **current_status:** _proposed_retained_
+- **audit_status:** ~~audited_clean~~
+- **effective_status:** **retained**  (reason: `self`)
+- **auditor:** `codex-audit-loop`  (codex-current; independence=cross_family)
+- **load-bearing step:** The canonical NPL_HALF=60, connect_radius=5.0 mirror chokepoint replay is Born-clean and gravity-positive through N=100, has a gravity wall at N=120, and its retained-row decoherence fit is only a weak descriptive fit with no asymptotic claim.  _(class `C`)_
+- **chain closes:** True — The live canonical runner reproduces the frozen retained-window table, including Born and k=0 controls, and direct arithmetic on the retained rows reproduces the weak fit coefficient, exponent, R2, and illustrative extrapolations. The source explicitly refuses a robust asymptotic law.
+- **rationale:** The claim is finite and descriptive: a Born-clean, gravity-positive mirror boundary pocket through N=100, a gravity wall at N=120 for this fixed configuration, and a weak non-monotone decoherence fit. The live runner matches the canonical table and the fit recomputation gives coefficient 0.3901, exponent -0.245, and R2=0.126. Because the note explicitly says the fit is not a clean asymptotic law, the retained content closes within the stated bounded scope; residual risk is only ordinary finite-window generalization risk, which the note does not overclaim.
 - **auditor confidence:** high
 
 ### `mirror_chokepoint_note`

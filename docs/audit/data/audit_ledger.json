@@ -1,9 +1,9 @@
 {
-  "effective_status_computed_at": "2026-04-27T15:54:25.123455+00:00",
-  "generated_at": "2026-04-27T15:54:23.527983+00:00",
-  "invalidation_run_at": "2026-04-27T15:54:25.077393+00:00",
+  "effective_status_computed_at": "2026-04-27T15:59:44.268183+00:00",
+  "generated_at": "2026-04-27T15:59:42.675491+00:00",
+  "invalidation_run_at": "2026-04-27T15:59:44.220511+00:00",
   "last_invalidations": [],
-  "load_bearing_computed_at": "2026-04-27T15:54:24.981637+00:00",
+  "load_bearing_computed_at": "2026-04-27T15:59:44.125779+00:00",
   "rows": {
     "3d_correction_master_note": {
       "audit_date": null,
@@ -49182,14 +49182,21 @@
       "verdict_rationale": "The bounded exact-2D mirror pocket closes on its own terms: the runner verifies machine-scale Born residuals, zero k=0 response, positive gravity, and substantially stronger MI/decoherence/d_TV than the matched random baseline on the reported N window. The same runner also verifies that the mass-window and distance-tail fits are weak, so this clean audit ratifies only the bounded coexistence pocket, strongest at N=60; it does not ratify a promoted mass law, distance law, continuum law, or flagship replacement."
     },
     "mirror_chokepoint_boundary_fit_note": {
-      "audit_date": null,
-      "audit_status": "unaudited",
-      "auditor": null,
-      "auditor_confidence": null,
-      "auditor_family": null,
+      "audit_date": "2026-04-27",
+      "audit_state_snapshot": {
+        "criticality": "leaf",
+        "dep_effective_status": {},
+        "deps": [],
+        "load_bearing_score": 0.0,
+        "transitive_descendants": 0
+      },
+      "audit_status": "audited_clean",
+      "auditor": "codex-audit-loop",
+      "auditor_confidence": "high",
+      "auditor_family": "codex-current",
       "blocker": null,
-      "chain_closes": null,
-      "chain_closure_explanation": null,
+      "chain_closes": true,
+      "chain_closure_explanation": "The live canonical runner reproduces the frozen retained-window table, including Born and k=0 controls, and direct arithmetic on the retained rows reproduces the weak fit coefficient, exponent, R2, and illustrative extrapolations. The source explicitly refuses a robust asymptotic law.",
       "claim_id": "mirror_chokepoint_boundary_fit_note",
       "criticality": "leaf",
       "current_status": "proposed_retained",
@@ -49197,13 +49204,13 @@
       "decoration_parent_claim_id": null,
       "deps": [],
       "direct_in_degree": 0,
-      "effective_status": "proposed_retained",
+      "effective_status": "retained",
       "effective_status_reason": "self",
-      "independence": null,
-      "intrinsic_status": "proposed_retained",
+      "independence": "cross_family",
+      "intrinsic_status": "retained",
       "load_bearing_score": 0.0,
-      "load_bearing_step": null,
-      "load_bearing_step_class": null,
+      "load_bearing_step": "The canonical NPL_HALF=60, connect_radius=5.0 mirror chokepoint replay is Born-clean and gravity-positive through N=100, has a gravity wall at N=120, and its retained-row decoherence fit is only a weak descriptive fit with no asymptotic claim.",
+      "load_bearing_step_class": "C",
       "max_descendant_status": "unknown",
       "max_descendant_status_rank": 30,
       "note_hash": "f2f183a168cfec6464ae8389dff3f7c1f109d18ba871604f4da2f5270a4bbcc0",
@@ -49237,16 +49244,16 @@
         }
       ],
       "runner_check_breakdown": {
-        "A": 0,
+        "A": 1,
         "B": 0,
-        "C": 0,
+        "C": 4,
         "D": 0,
-        "total_pass": 0
+        "total_pass": 5
       },
       "runner_path": null,
       "title": "Mirror Chokepoint Boundary Fit Note",
       "transitive_descendants": 0,
-      "verdict_rationale": null
+      "verdict_rationale": "The claim is finite and descriptive: a Born-clean, gravity-positive mirror boundary pocket through N=100, a gravity wall at N=120 for this fixed configuration, and a weak non-monotone decoherence fit. The live runner matches the canonical table and the fit recomputation gives coefficient 0.3901, exponent -0.245, and R2=0.126. Because the note explicitly says the fit is not a clean asymptotic law, the retained content closes within the stated bounded scope; residual risk is only ordinary finite-window generalization risk, which the note does not overclaim."
     },
     "mirror_chokepoint_note": {
       "audit_date": "2026-04-26",
